@@ -145,6 +145,26 @@ SELECT DISTINCT ?i ?iFr ?inv ?invFr ?invDesc ?date ?sl WHERE {
   OPTIONAL { ?inv schema:description ?invDesc FILTER(lang(?invDesc) = "fr") }
   OPTIONAL { ?i wdt:P575 ?date }
 }`,
+  // ── Thèmes (0.7) : espace, reliefs, acteurs
+  moons: `
+SELECT ?m ?mFr ?p ?pFr ?sl WHERE {
+  VALUES ?p { wd:Q111 wd:Q319 wd:Q193 wd:Q324 wd:Q332 wd:Q2 }
+  ?m wdt:P397 ?p; wdt:P31/wdt:P279* wd:Q2537; wikibase:sitelinks ?sl FILTER(?sl >= 55)
+  ${label('m')} ${label('p')}
+}`,
+  peaks: `
+SELECT ?c ?h ?hFr ?elev ?hsl WHERE {
+  ?c wdt:P463 wd:Q1065; wdt:P31 wd:Q3624078; wdt:P610 ?h. ?h wikibase:sitelinks ?hsl.
+  ${label('h')}
+  OPTIONAL { ?h wdt:P2044 ?elev }
+}`,
+  cast: `
+SELECT ?w ?wFr ?a ?aFr ?date ?sl ?asl WHERE {
+  ?w wdt:P31 wd:Q11424; wikibase:sitelinks ?sl FILTER(?sl >= 70)
+  ?w wdt:P161 ?a. ?a wikibase:sitelinks ?asl FILTER(?asl >= 70)
+  ${label('w')} ${label('a')}
+  OPTIONAL { ?w wdt:P577 ?date }
+}`,
 };
 
 // Node n'utilise pas le proxy HTTPS de l'environnement : on passe par curl.

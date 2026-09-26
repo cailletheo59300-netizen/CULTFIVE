@@ -1,0 +1,1507 @@
+[
+ {
+  "key": "sci-302",
+  "concept": "science.physics.boiling_point",
+  "label": "Ébullition",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "À quelle température l'eau pure bout-elle, au niveau de la mer ?",
+  "options": [
+   "100 °C*",
+   "90 °C",
+   "120 °C",
+   "80 °C"
+  ],
+  "explanation": "100 °C sous la pression atmosphérique normale. En altitude, elle bout plus bas."
+ },
+ {
+  "key": "sci-303",
+  "concept": "science.physics.newton_unit",
+  "label": "Unité de force",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est l'unité de mesure de la force ?",
+  "options": [
+   "Le newton*",
+   "Le joule",
+   "Le watt",
+   "Le pascal"
+  ],
+  "explanation": "Le newton (N). Le joule mesure l'énergie, le watt la puissance, le pascal la pression."
+ },
+ {
+  "key": "sci-304",
+  "concept": "science.physics.sound_vacuum",
+  "label": "Son dans le vide",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Le son peut-il se propager dans le vide ?",
+  "options": [
+   "Non, il lui faut un milieu (air, eau…)*",
+   "Oui, plus vite que dans l'air",
+   "Oui, à la même vitesse",
+   "Seulement les sons aigus"
+  ],
+  "explanation": "Le son est une vibration de la matière : dans l'espace, aucune explosion ne s'entend."
+ },
+ {
+  "key": "sci-305",
+  "concept": "science.physics.speed_of_sound",
+  "label": "Vitesse du son",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Environ combien de mètres par seconde parcourt le son dans l'air ?",
+  "answer": 340,
+  "explanation": "Environ 340 m/s à 15 °C. Compter les secondes entre l'éclair et le tonnerre puis diviser par 3 donne la distance de l'orage en km.",
+  "unit": "m/s",
+  "tolerance": 20
+ },
+ {
+  "key": "sci-306",
+  "concept": "science.physics.gravity_feather",
+  "label": "Plume et marteau",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans le vide, qu'est-ce qui tombe le plus vite : une plume ou un marteau ?",
+  "options": [
+   "Ils tombent à la même vitesse*",
+   "Le marteau",
+   "La plume",
+   "Ça dépend de la hauteur"
+  ],
+  "explanation": "Sans air, tout tombe à la même vitesse. L'astronaute David Scott l'a montré sur la Lune en 1971."
+ },
+ {
+  "key": "sci-307",
+  "concept": "science.physics.absolute_zero",
+  "label": "Zéro absolu",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À quelle température correspond le zéro absolu ?",
+  "options": [
+   "−273,15 °C*",
+   "−100 °C",
+   "0 °C",
+   "−459 °C"
+  ],
+  "explanation": "C'est 0 kelvin, la température la plus basse possible. (−459,67 est sa valeur en degrés Fahrenheit.)"
+ },
+ {
+  "key": "sci-308",
+  "concept": "science.physics.rainbow_colors",
+  "label": "Arc-en-ciel",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Combien de couleurs distingue-t-on traditionnellement dans un arc-en-ciel ?",
+  "options": [
+   "7*",
+   "5",
+   "6",
+   "9"
+  ],
+  "explanation": "Rouge, orange, jaune, vert, bleu, indigo, violet : la liste de Newton. En réalité, le spectre est continu."
+ },
+ {
+  "key": "sci-309",
+  "concept": "science.physics.magnet_poles",
+  "label": "Aimants",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Deux pôles nord de deux aimants mis face à face…",
+  "options": [
+   "Se repoussent*",
+   "S'attirent",
+   "S'annulent",
+   "Chauffent"
+  ],
+  "explanation": "Des pôles de même nom se repoussent, des pôles opposés s'attirent."
+ },
+ {
+  "key": "sci-310",
+  "concept": "science.physics.einstein_formula",
+  "label": "E = mc²",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans E = mc², que représente la lettre c ?",
+  "options": [
+   "La vitesse de la lumière*",
+   "La chaleur",
+   "La charge électrique",
+   "Le carbone"
+  ],
+  "explanation": "Énergie = masse × (vitesse de la lumière)². Une toute petite masse contient une énergie énorme."
+ },
+ {
+  "key": "sci-311",
+  "concept": "science.physics.watt_unit",
+  "label": "Le watt",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que le watt mesure ?",
+  "options": [
+   "Une puissance*",
+   "Une tension électrique",
+   "Une intensité",
+   "Une résistance"
+  ],
+  "explanation": "Le watt mesure la puissance. La tension est en volts, l'intensité en ampères, la résistance en ohms."
+ },
+ {
+  "key": "sci-312",
+  "concept": "science.physics.ice_floats",
+  "label": "La glace flotte",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "La glace est moins dense que l'eau liquide.",
+  "answer": true,
+  "explanation": "C'est pour ça que les glaçons flottent et que les lacs gèlent par le dessus, protégeant la vie en dessous."
+ },
+ {
+  "key": "sci-313",
+  "concept": "science.physics.prism",
+  "label": "Le prisme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a montré, avec un prisme, que la lumière blanche contient toutes les couleurs ?",
+  "options": [
+   "Isaac Newton*",
+   "Galilée",
+   "Albert Einstein",
+   "Nicolas Copernic"
+  ],
+  "explanation": "Newton a décomposé la lumière du Soleil avec un prisme vers 1666."
+ },
+ {
+  "key": "sci-314",
+  "concept": "science.physics.lightning_thunder",
+  "label": "Éclair et tonnerre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi voit-on l'éclair avant d'entendre le tonnerre ?",
+  "options": [
+   "La lumière va bien plus vite que le son*",
+   "Le tonnerre part après l'éclair",
+   "L'œil est plus rapide que l'oreille",
+   "Le son est freiné par la pluie"
+  ],
+  "explanation": "Les deux naissent en même temps, mais la lumière va près d'un million de fois plus vite que le son."
+ },
+ {
+  "key": "sci-315",
+  "concept": "science.physics.pressure_unit",
+  "label": "Pression",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle unité exprime-t-on souvent la pression atmosphérique en météo ?",
+  "options": [
+   "L'hectopascal*",
+   "Le kilowatt",
+   "Le décibel",
+   "Le lux"
+  ],
+  "explanation": "Environ 1 013 hPa au niveau de la mer. Le décibel mesure le son, le lux l'éclairement."
+ },
+ {
+  "key": "sci-316",
+  "concept": "science.physics.metal_conducts",
+  "label": "Conducteurs",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Les métaux conduisent l'électricité.",
+  "answer": true,
+  "explanation": "Oui : leurs électrons se déplacent librement. Le cuivre est le plus utilisé dans les câbles."
+ },
+ {
+  "key": "sci-317",
+  "concept": "science.biology.cell_unit",
+  "label": "La cellule",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle est la plus petite unité du vivant ?",
+  "options": [
+   "La cellule*",
+   "L'atome",
+   "L'organe",
+   "Le tissu"
+  ],
+  "explanation": "Tout être vivant est fait d'au moins une cellule. Nous en avons des dizaines de milliers de milliards."
+ },
+ {
+  "key": "sci-318",
+  "concept": "science.biology.dna_location",
+  "label": "Où est l'ADN ?",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où se trouve principalement l'ADN dans une cellule humaine ?",
+  "options": [
+   "Dans le noyau*",
+   "Dans la membrane",
+   "Dans le sang",
+   "Dans les ribosomes"
+  ],
+  "explanation": "L'ADN est rangé dans le noyau, sous forme de chromosomes. Un peu se trouve aussi dans les mitochondries."
+ },
+ {
+  "key": "sci-321",
+  "concept": "science.biology.darwin",
+  "label": "Darwin",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle théorie est associée à Charles Darwin ?",
+  "options": [
+   "L'évolution par la sélection naturelle*",
+   "La relativité",
+   "La gravitation",
+   "La génétique"
+  ],
+  "explanation": "Il la publie en 1859 dans « L'Origine des espèces »."
+ },
+ {
+  "key": "sci-322",
+  "concept": "science.biology.photosynthesis_place",
+  "label": "Photosynthèse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle partie de la cellule végétale a lieu la photosynthèse ?",
+  "options": [
+   "Le chloroplaste*",
+   "Le noyau",
+   "La vacuole",
+   "La paroi"
+  ],
+  "explanation": "Les chloroplastes contiennent la chlorophylle qui capte la lumière."
+ },
+ {
+  "key": "sci-323",
+  "concept": "science.biology.mendel",
+  "label": "Mendel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Sur quelle plante Gregor Mendel a-t-il découvert les lois de l'hérédité ?",
+  "options": [
+   "Le petit pois*",
+   "La rose",
+   "Le blé",
+   "La tomate"
+  ],
+  "explanation": "En croisant des petits pois dans son monastère, Mendel pose les bases de la génétique dans les années 1860."
+ },
+ {
+  "key": "sci-324",
+  "concept": "science.biology.virus_antibiotic",
+  "label": "Virus et antibiotiques",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Les antibiotiques sont efficaces contre…",
+  "options": [
+   "Les bactéries*",
+   "Les virus",
+   "Les deux",
+   "Aucun des deux"
+  ],
+  "explanation": "Ils n'agissent pas sur les virus : un rhume ou une grippe ne se soigne pas aux antibiotiques."
+ },
+ {
+  "key": "sci-325",
+  "concept": "science.biology.fleming",
+  "label": "La pénicilline",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a découvert la pénicilline, en 1928 ?",
+  "options": [
+   "Alexander Fleming*",
+   "Louis Pasteur",
+   "Marie Curie",
+   "Robert Koch"
+  ],
+  "explanation": "Fleming remarque qu'une moisissure tue les bactéries de sa boîte de culture : c'est le premier antibiotique."
+ },
+ {
+  "key": "sci-326",
+  "concept": "science.biology.dna_letters",
+  "label": "Les lettres de l'ADN",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de « lettres » (bases) différentes composent l'ADN ?",
+  "options": [
+   "4*",
+   "2",
+   "20",
+   "26"
+  ],
+  "explanation": "A, T, C et G : adénine, thymine, cytosine et guanine."
+ },
+ {
+  "key": "sci-327",
+  "concept": "science.biology.bacteria_everywhere",
+  "label": "Bactéries",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Notre corps contient à peu près autant de bactéries que de cellules humaines.",
+  "answer": true,
+  "explanation": "Les estimations récentes donnent un ordre de grandeur comparable, surtout dans l'intestin."
+ },
+ {
+  "key": "sci-328",
+  "concept": "science.biology.pasteur",
+  "label": "Pasteur",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Contre quelle maladie Louis Pasteur a-t-il mis au point un vaccin en 1885 ?",
+  "options": [
+   "La rage*",
+   "La variole",
+   "La tuberculose",
+   "La polio"
+  ],
+  "explanation": "Le jeune Joseph Meister, mordu par un chien enragé, est le premier humain sauvé par ce vaccin."
+ },
+ {
+  "key": "sci-329",
+  "concept": "science.biology.carnivore_herbivore",
+  "label": "Régimes",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on un animal qui mange à la fois des végétaux et de la viande ?",
+  "options": [
+   "Omnivore*",
+   "Herbivore",
+   "Carnivore",
+   "Insectivore"
+  ],
+  "explanation": "L'ours, le cochon et l'humain sont omnivores."
+ },
+ {
+  "key": "sci-330",
+  "concept": "science.biology.metamorphosis",
+  "label": "Métamorphose",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel animal passe par le stade de têtard ?",
+  "options": [
+   "La grenouille*",
+   "Le lézard",
+   "La tortue",
+   "Le papillon"
+  ],
+  "explanation": "Le têtard vit dans l'eau et respire par des branchies avant de devenir grenouille."
+ },
+ {
+  "key": "sci-331",
+  "concept": "science.biology.caterpillar",
+  "label": "Chenille",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que devient une chenille après sa métamorphose ?",
+  "options": [
+   "Un papillon*",
+   "Une abeille",
+   "Une libellule",
+   "Un scarabée"
+  ],
+  "explanation": "Dans sa chrysalide, son corps se réorganise complètement."
+ },
+ {
+  "key": "sci-332",
+  "concept": "science.biology.plants_breathe",
+  "label": "Les plantes respirent",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les plantes respirent aussi : elles consomment du dioxygène.",
+  "answer": true,
+  "explanation": "Oui, jour et nuit. Mais le jour, la photosynthèse produit bien plus de dioxygène qu'elles n'en consomment."
+ },
+ {
+  "key": "sci-333",
+  "concept": "science.biology.largest_cell",
+  "label": "Plus grosse cellule",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est la plus grosse cellule connue ?",
+  "options": [
+   "Le jaune d'un œuf d'autruche*",
+   "Un neurone de baleine",
+   "Un globule rouge",
+   "Un ovule humain"
+  ],
+  "explanation": "Le jaune d'œuf non fécondé est une seule cellule : celui de l'autruche est le plus gros."
+ },
+ {
+  "key": "sci-334",
+  "concept": "science.human_body.bones",
+  "label": "Os du squelette",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien d'os compte le squelette d'un adulte ?",
+  "answer": 206,
+  "explanation": "206 os. Un bébé en a davantage (environ 300) : certains se soudent en grandissant."
+ },
+ {
+  "key": "sci-335",
+  "concept": "science.human_body.largest_organ",
+  "label": "Le plus grand organe",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le plus grand organe du corps humain ?",
+  "options": [
+   "La peau*",
+   "Le foie",
+   "L'intestin",
+   "Les poumons"
+  ],
+  "explanation": "La peau couvre près de 2 m² chez l'adulte."
+ },
+ {
+  "key": "sci-336",
+  "concept": "science.human_body.smallest_bone",
+  "label": "Le plus petit os",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Où se trouve le plus petit os du corps humain ?",
+  "options": [
+   "Dans l'oreille*",
+   "Dans le pied",
+   "Dans la main",
+   "Dans le nez"
+  ],
+  "explanation": "L'étrier, dans l'oreille moyenne, mesure environ 3 mm."
+ },
+ {
+  "key": "sci-338",
+  "concept": "science.human_body.blood_red",
+  "label": "Globules rouges",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le rôle principal des globules rouges ?",
+  "options": [
+   "Transporter l'oxygène*",
+   "Combattre les microbes",
+   "Coaguler le sang",
+   "Digérer"
+  ],
+  "explanation": "Grâce à l'hémoglobine. Les globules blancs défendent le corps, les plaquettes aident à coaguler."
+ },
+ {
+  "key": "sci-339",
+  "concept": "science.human_body.insulin",
+  "label": "Insuline",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel organe produit l'insuline ?",
+  "options": [
+   "Le pancréas*",
+   "Le foie",
+   "Les reins",
+   "L'estomac"
+  ],
+  "explanation": "L'insuline régule le taux de sucre dans le sang. Son défaut provoque le diabète."
+ },
+ {
+  "key": "sci-340",
+  "concept": "science.human_body.teeth",
+  "label": "Dents d'adulte",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de dents compte la denture complète d'un adulte (dents de sagesse comprises) ?",
+  "answer": 32,
+  "explanation": "32 dents, dont 4 dents de sagesse. Un enfant a 20 dents de lait."
+ },
+ {
+  "key": "sci-341",
+  "concept": "science.human_body.heartbeat",
+  "label": "Battements du cœur",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Environ combien de fois bat le cœur d'un adulte au repos, par minute ?",
+  "options": [
+   "60 à 100 fois*",
+   "20 à 30 fois",
+   "150 à 200 fois",
+   "10 fois"
+  ],
+  "explanation": "Entre 60 et 100 battements par minute ; moins chez les sportifs entraînés."
+ },
+ {
+  "key": "sci-342",
+  "concept": "science.human_body.lungs_exchange",
+  "label": "Poumons",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel gaz rejetons-nous en expirant, en plus de l'air non utilisé ?",
+  "options": [
+   "Du dioxyde de carbone*",
+   "De l'hélium",
+   "De l'hydrogène",
+   "De l'ozone"
+  ],
+  "explanation": "Nos cellules produisent du CO₂, évacué par les poumons."
+ },
+ {
+  "key": "sci-343",
+  "concept": "science.human_body.kidneys",
+  "label": "Les reins",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le rôle principal des reins ?",
+  "options": [
+   "Filtrer le sang et produire l'urine*",
+   "Produire la bile",
+   "Pomper le sang",
+   "Digérer les graisses"
+  ],
+  "explanation": "Ils filtrent environ 180 litres de sang par jour."
+ },
+ {
+  "key": "sci-344",
+  "concept": "science.human_body.muscles_count",
+  "label": "Muscles",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien le corps humain compte-t-il de muscles, environ ?",
+  "options": [
+   "Plus de 600*",
+   "Environ 100",
+   "Environ 200",
+   "Plus de 5 000"
+  ],
+  "explanation": "Plus de 600 muscles squelettiques. Le plus puissant pour sa taille est le masséter, qui sert à mâcher."
+ },
+ {
+  "key": "sci-345",
+  "concept": "science.human_body.blood_types",
+  "label": "Groupe universel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel groupe sanguin est donneur universel pour les globules rouges ?",
+  "options": [
+   "O négatif*",
+   "AB positif",
+   "A positif",
+   "B négatif"
+  ],
+  "explanation": "O− peut être transfusé à presque tout le monde. AB+ est receveur universel."
+ },
+ {
+  "key": "sci-346",
+  "concept": "science.human_body.brain_ten_percent",
+  "label": "10 % du cerveau",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Nous n'utilisons que 10 % de notre cerveau.",
+  "answer": false,
+  "explanation": "C'est un mythe : l'imagerie montre que toutes les zones du cerveau servent, pas en même temps."
+ },
+ {
+  "key": "sci-347",
+  "concept": "science.human_body.liver",
+  "label": "Le foie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel organe est capable de se régénérer en partie après une ablation ?",
+  "options": [
+   "Le foie*",
+   "Le cœur",
+   "Le cerveau",
+   "Le pancréas"
+  ],
+  "explanation": "Le foie peut retrouver sa taille après l'ablation d'une grande partie : c'est ce qui permet les greffes à partir de donneurs vivants."
+ },
+ {
+  "key": "sci-348",
+  "concept": "science.human_body.senses",
+  "label": "Les sens",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Combien de sens compte-t-on traditionnellement chez l'humain ?",
+  "options": [
+   "5*",
+   "3",
+   "7",
+   "10"
+  ],
+  "explanation": "La vue, l'ouïe, le toucher, le goût et l'odorat. On y ajoute aujourd'hui l'équilibre ou la perception du corps."
+ },
+ {
+  "key": "sci-349",
+  "concept": "science.human_body.vitamin_d",
+  "label": "Vitamine D",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qui permet à notre peau de fabriquer de la vitamine D ?",
+  "options": [
+   "Le soleil*",
+   "L'eau",
+   "Le sommeil",
+   "Le froid"
+  ],
+  "explanation": "Les rayons UV déclenchent sa production. Elle aide à fixer le calcium dans les os."
+ },
+ {
+  "key": "sci-350",
+  "concept": "science.human_body.body_temp",
+  "label": "Température du corps",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quelle est la température normale du corps humain, en °C (arrondie) ?",
+  "answer": 37,
+  "explanation": "Autour de 37 °C, avec de petites variations dans la journée.",
+  "unit": "°C"
+ },
+ {
+  "key": "sci-351",
+  "concept": "science.human_body.stomach_acid",
+  "label": "Acide de l'estomac",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel acide notre estomac produit-il pour digérer ?",
+  "options": [
+   "L'acide chlorhydrique*",
+   "L'acide citrique",
+   "L'acide sulfurique",
+   "L'acide lactique"
+  ],
+  "explanation": "Très acide, il est pourtant sans danger pour l'estomac, protégé par une couche de mucus."
+ },
+ {
+  "key": "sci-352",
+  "concept": "science.space.closest_star",
+  "label": "L'étoile la plus proche",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle est l'étoile la plus proche de la Terre ?",
+  "options": [
+   "Le Soleil*",
+   "Proxima du Centaure",
+   "Sirius",
+   "L'étoile polaire"
+  ],
+  "explanation": "Le Soleil ! Après lui vient Proxima du Centaure, à 4,2 années-lumière."
+ },
+ {
+  "key": "sci-353",
+  "concept": "science.space.hottest_planet",
+  "label": "Planète la plus chaude",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle est la planète la plus chaude du Système solaire ?",
+  "options": [
+   "Vénus*",
+   "Mercure",
+   "Mars",
+   "Jupiter"
+  ],
+  "explanation": "Vénus, et non Mercure : son épaisse atmosphère de CO₂ provoque un effet de serre extrême (environ 460 °C)."
+ },
+ {
+  "key": "sci-355",
+  "concept": "science.space.gagarin",
+  "label": "Premier humain dans l'espace",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a été le premier humain dans l'espace, en 1961 ?",
+  "options": [
+   "Youri Gagarine*",
+   "Neil Armstrong",
+   "Valentina Terechkova",
+   "John Glenn"
+  ],
+  "explanation": "Le Soviétique Youri Gagarine, le 12 avril 1961, à bord de Vostok 1."
+ },
+ {
+  "key": "sci-356",
+  "concept": "science.space.planets_count",
+  "label": "Planètes",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de planètes compte le Système solaire ?",
+  "answer": 8,
+  "explanation": "Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune. Pluton est une planète naine depuis 2006."
+ },
+ {
+  "key": "sci-358",
+  "concept": "science.space.light_year",
+  "label": "Année-lumière",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'une année-lumière ?",
+  "options": [
+   "Une distance*",
+   "Une durée",
+   "Une vitesse",
+   "Une luminosité"
+  ],
+  "explanation": "La distance parcourue par la lumière en un an : environ 9 460 milliards de km."
+ },
+ {
+  "key": "sci-359",
+  "concept": "science.space.moon_light",
+  "label": "La lumière de la Lune",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "D'où vient la lumière de la Lune ?",
+  "options": [
+   "Du Soleil, qu'elle réfléchit*",
+   "D'elle-même",
+   "De la Terre",
+   "Des étoiles"
+  ],
+  "explanation": "La Lune ne brille pas par elle-même : elle renvoie la lumière du Soleil."
+ },
+ {
+  "key": "hist-301",
+  "concept": "history.antiquity.pyramids_country",
+  "label": "Pyramides de Gizeh",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quel pays se trouvent les pyramides de Gizeh ?",
+  "options": [
+   "En Égypte*",
+   "Au Mexique",
+   "En Irak",
+   "Au Soudan"
+  ],
+  "explanation": "Près du Caire. La grande pyramide de Khéops a environ 4 500 ans."
+ },
+ {
+  "key": "hist-305",
+  "concept": "history.antiquity.alexander",
+  "label": "Alexandre le Grand",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel roi, élève d'Aristote, a conquis un empire jusqu'à l'Inde ?",
+  "options": [
+   "Alexandre le Grand*",
+   "Darius Ier",
+   "Ramsès II",
+   "Hannibal"
+  ],
+  "explanation": "Roi de Macédoine, il meurt à 32 ans à Babylone en 323 av. J.-C."
+ },
+ {
+  "key": "hist-306",
+  "concept": "history.antiquity.hannibal",
+  "label": "Hannibal",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec quels animaux Hannibal a-t-il franchi les Alpes pour attaquer Rome ?",
+  "options": [
+   "Des éléphants*",
+   "Des chameaux",
+   "Des chevaux uniquement",
+   "Des taureaux"
+  ],
+  "explanation": "En 218 av. J.-C., le général carthaginois traverse les Alpes avec des éléphants de guerre."
+ },
+ {
+  "key": "hist-307",
+  "concept": "history.antiquity.olympics_ancient",
+  "label": "Jeux olympiques antiques",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle cité se tenaient les Jeux olympiques de l'Antiquité ?",
+  "options": [
+   "Olympie*",
+   "Athènes",
+   "Sparte",
+   "Delphes"
+  ],
+  "explanation": "À Olympie, en l'honneur de Zeus, dès 776 av. J.-C. selon la tradition."
+ },
+ {
+  "key": "hist-308",
+  "concept": "history.antiquity.rome_founding",
+  "label": "Fondation de Rome",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Selon la légende, qui a fondé Rome ?",
+  "options": [
+   "Romulus*",
+   "Énée",
+   "Jules César",
+   "Auguste"
+  ],
+  "explanation": "En 753 av. J.-C., selon la légende, Romulus fonde Rome après avoir tué son jumeau Rémus."
+ },
+ {
+  "key": "hist-309",
+  "concept": "history.antiquity.hieroglyphs",
+  "label": "Hiéroglyphes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a déchiffré les hiéroglyphes égyptiens en 1822 ?",
+  "options": [
+   "Jean-François Champollion*",
+   "Howard Carter",
+   "Napoléon Bonaparte",
+   "Auguste Mariette"
+  ],
+  "explanation": "Grâce à la pierre de Rosette, qui porte un même texte en grec et en égyptien."
+ },
+ {
+  "key": "hist-310",
+  "concept": "history.antiquity.first_emperor",
+  "label": "Premier empereur romain",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui est le premier empereur romain ?",
+  "options": [
+   "Auguste*",
+   "Jules César",
+   "Néron",
+   "Romulus"
+  ],
+  "explanation": "Octave, petit-neveu de César, devient Auguste en 27 av. J.-C. César n'a jamais porté le titre d'empereur."
+ },
+ {
+  "key": "hist-311",
+  "concept": "history.antiquity.great_wall",
+  "label": "Grande Muraille",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel pays se trouve la Grande Muraille ?",
+  "options": [
+   "En Chine*",
+   "Au Japon",
+   "En Mongolie",
+   "En Inde"
+  ],
+  "explanation": "Commencée dès le VIIᵉ siècle av. J.-C., elle a été prolongée pendant des siècles."
+ },
+ {
+  "key": "hist-312",
+  "concept": "history.antiquity.socrates",
+  "label": "Socrate",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment Socrate est-il mort en 399 av. J.-C. ?",
+  "options": [
+   "En buvant de la ciguë*",
+   "Au combat",
+   "Dans un naufrage",
+   "De vieillesse"
+  ],
+  "explanation": "Condamné à mort par Athènes, il boit le poison plutôt que de fuir."
+ },
+ {
+  "key": "hist-313",
+  "concept": "history.antiquity.cuneiform",
+  "label": "Écriture cunéiforme",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Où l'écriture cunéiforme, l'une des plus anciennes, est-elle apparue ?",
+  "options": [
+   "En Mésopotamie*",
+   "En Égypte",
+   "En Chine",
+   "En Grèce"
+  ],
+  "explanation": "Vers 3 300 av. J.-C., dans l'actuel Irak, sur des tablettes d'argile."
+ },
+ {
+  "key": "hist-314",
+  "concept": "history.antiquity.spartacus",
+  "label": "Spartacus",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui était Spartacus ?",
+  "options": [
+   "Un esclave révolté contre Rome*",
+   "Un empereur romain",
+   "Un roi de Sparte",
+   "Un philosophe grec"
+  ],
+  "explanation": "Gladiateur thrace, il mène une grande révolte d'esclaves entre 73 et 71 av. J.-C."
+ },
+ {
+  "key": "hist-315",
+  "concept": "history.antiquity.fall_rome",
+  "label": "Chute de Rome",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "L'Empire romain d'Occident prend fin en 476.",
+  "answer": true,
+  "explanation": "Le dernier empereur d'Occident, Romulus Augustule, est déposé en 476. L'Empire d'Orient dure jusqu'en 1453."
+ },
+ {
+  "key": "arts-301",
+  "concept": "arts.architecture.eiffel",
+  "label": "Tour Eiffel",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel ingénieur a donné son nom à la tour construite à Paris en 1889 ?",
+  "options": [
+   "Gustave Eiffel*",
+   "Georges-Eugène Haussmann",
+   "Le Corbusier",
+   "Jean Nouvel"
+  ],
+  "explanation": "L'entreprise de Gustave Eiffel l'a construite pour l'Exposition universelle de 1889."
+ },
+ {
+  "key": "arts-302",
+  "concept": "arts.architecture.gaudi",
+  "label": "Sagrada Família",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel architecte a conçu la Sagrada Família à Barcelone ?",
+  "options": [
+   "Antoni Gaudí*",
+   "Le Corbusier",
+   "Frank Gehry",
+   "Renzo Piano"
+  ],
+  "explanation": "Commencée en 1882, elle n'est toujours pas terminée. Gaudí y a travaillé plus de 40 ans."
+ },
+ {
+  "key": "arts-303",
+  "concept": "arts.architecture.guggenheim",
+  "label": "Guggenheim Bilbao",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel architecte a conçu le musée Guggenheim de Bilbao ?",
+  "options": [
+   "Frank Gehry*",
+   "I. M. Pei",
+   "Zaha Hadid",
+   "Norman Foster"
+  ],
+  "explanation": "Inauguré en 1997, recouvert de titane, il a transformé l'image de la ville."
+ },
+ {
+  "key": "arts-304",
+  "concept": "arts.architecture.pompidou",
+  "label": "Centre Pompidou",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a conçu le Centre Pompidou, à Paris ?",
+  "options": [
+   "Renzo Piano et Richard Rogers*",
+   "Jean Nouvel",
+   "Le Corbusier",
+   "Frank Gehry"
+  ],
+  "explanation": "Inauguré en 1977, il montre à l'extérieur ce qu'on cache d'habitude : tuyaux, escaliers, gaines."
+ },
+ {
+  "key": "arts-305",
+  "concept": "arts.architecture.taj_mahal",
+  "label": "Taj Mahal",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi le Taj Mahal a-t-il été construit ?",
+  "options": [
+   "C'est un mausolée pour l'épouse de l'empereur*",
+   "C'est un palais royal",
+   "C'est une mosquée",
+   "C'est une forteresse"
+  ],
+  "explanation": "L'empereur moghol Shah Jahan le fait bâtir au XVIIᵉ siècle en mémoire de son épouse Mumtaz Mahal."
+ },
+ {
+  "key": "arts-306",
+  "concept": "arts.architecture.gothic",
+  "label": "Style gothique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel élément caractérise l'architecture gothique ?",
+  "options": [
+   "L'arc brisé et les grands vitraux*",
+   "Les coupoles dorées",
+   "Les colonnes grecques",
+   "Le béton armé"
+  ],
+  "explanation": "L'arc brisé et les arcs-boutants permettent des murs plus hauts et percés de vitraux, comme à Chartres."
+ },
+ {
+  "key": "arts-307",
+  "concept": "arts.architecture.parthenon",
+  "label": "Parthénon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quelle déesse le Parthénon d'Athènes était-il dédié ?",
+  "options": [
+   "Athéna*",
+   "Aphrodite",
+   "Héra",
+   "Artémis"
+  ],
+  "explanation": "Construit au Vᵉ siècle av. J.-C. sur l'Acropole, en l'honneur d'Athéna, protectrice de la cité."
+ },
+ {
+  "key": "arts-308",
+  "concept": "arts.architecture.le_corbusier",
+  "label": "Le Corbusier",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle ville indienne a été en grande partie dessinée par Le Corbusier ?",
+  "options": [
+   "Chandigarh*",
+   "New Delhi",
+   "Bombay",
+   "Jaipur"
+  ],
+  "explanation": "Dans les années 1950, Le Corbusier en conçoit le plan et les bâtiments officiels."
+ },
+ {
+  "key": "arts-309",
+  "concept": "arts.architecture.burj_khalifa",
+  "label": "Plus haute tour",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle ville se trouve la Burj Khalifa, plus haute tour du monde ?",
+  "options": [
+   "Dubaï*",
+   "Shanghai",
+   "Riyad",
+   "Doha"
+  ],
+  "explanation": "828 mètres, inaugurée en 2010."
+ },
+ {
+  "key": "arts-310",
+  "concept": "arts.architecture.versailles",
+  "label": "Château de Versailles",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel roi a fait de Versailles sa résidence principale ?",
+  "options": [
+   "Louis XIV*",
+   "Louis XVI",
+   "François Iᵉʳ",
+   "Henri IV"
+  ],
+  "explanation": "Louis XIV y installe la cour en 1682. Le château est agrandi par Le Vau puis Hardouin-Mansart."
+ },
+ {
+  "key": "arts-311",
+  "concept": "arts.architecture.colosseum",
+  "label": "Colisée",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle ville se trouve le Colisée ?",
+  "options": [
+   "Rome*",
+   "Athènes",
+   "Vérone",
+   "Naples"
+  ],
+  "explanation": "Inauguré en 80, cet amphithéâtre pouvait accueillir environ 50 000 spectateurs."
+ },
+ {
+  "key": "arts-312",
+  "concept": "arts.architecture.sydney_opera",
+  "label": "Opéra de Sydney",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel architecte a conçu l'opéra de Sydney ?",
+  "options": [
+   "Jørn Utzon*",
+   "Frank Lloyd Wright",
+   "Oscar Niemeyer",
+   "Renzo Piano"
+  ],
+  "explanation": "Le Danois Jørn Utzon remporte le concours en 1957 ; l'opéra est inauguré en 1973."
+ },
+ {
+  "key": "arts-313",
+  "concept": "arts.architecture.brasilia",
+  "label": "Brasília",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel architecte a dessiné les grands bâtiments de Brasília ?",
+  "options": [
+   "Oscar Niemeyer*",
+   "Le Corbusier",
+   "Antoni Gaudí",
+   "Jørn Utzon"
+  ],
+  "explanation": "La nouvelle capitale du Brésil est inaugurée en 1960 ; Niemeyer y signe la cathédrale et le Congrès."
+ },
+ {
+  "key": "arts-314",
+  "concept": "arts.architecture.pisa",
+  "label": "Tour de Pise",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi la tour de Pise penche-t-elle ?",
+  "options": [
+   "Son sol est trop meuble*",
+   "Elle a été construite ainsi exprès",
+   "Un tremblement de terre",
+   "Un bombardement"
+  ],
+  "explanation": "Le terrain argileux a cédé dès le début des travaux, au XIIᵉ siècle."
+ },
+ {
+  "key": "arts-315",
+  "concept": "arts.architecture.notre_dame",
+  "label": "Notre-Dame de Paris",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "En quelle année la flèche de Notre-Dame de Paris s'est-elle effondrée dans un incendie ?",
+  "options": [
+   "2019*",
+   "2015",
+   "2021",
+   "2009"
+  ],
+  "explanation": "Le 15 avril 2019. La cathédrale a rouvert en décembre 2024 après sa restauration."
+ },
+ {
+  "key": "arts-316",
+  "concept": "arts.architecture.hagia_sophia",
+  "label": "Sainte-Sophie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quelle ville se trouve Sainte-Sophie ?",
+  "options": [
+   "Istanbul*",
+   "Athènes",
+   "Rome",
+   "Jérusalem"
+  ],
+  "explanation": "Construite au VIᵉ siècle à Constantinople, elle a été église, mosquée, musée, puis de nouveau mosquée."
+ },
+ {
+  "key": "arts-317",
+  "concept": "arts.architecture.machu_picchu",
+  "label": "Machu Picchu",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel peuple a bâti Machu Picchu ?",
+  "options": [
+   "Les Incas*",
+   "Les Aztèques",
+   "Les Mayas",
+   "Les Olmèques"
+  ],
+  "explanation": "Au XVᵉ siècle, dans les Andes péruviennes, à 2 430 m d'altitude."
+ },
+ {
+  "key": "arts-318",
+  "concept": "arts.architecture.louvre_museum",
+  "label": "Le Louvre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Avant d'être un musée, qu'était le Louvre ?",
+  "options": [
+   "Une forteresse puis un palais royal*",
+   "Une cathédrale",
+   "Une gare",
+   "Un hôpital"
+  ],
+  "explanation": "Forteresse de Philippe Auguste vers 1200, puis palais des rois de France, avant de devenir musée en 1793."
+ },
+ {
+  "key": "arts-319",
+  "concept": "arts.mythology.zeus",
+  "label": "Roi des dieux grecs",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qui est le roi des dieux dans la mythologie grecque ?",
+  "options": [
+   "Zeus*",
+   "Poséidon",
+   "Hadès",
+   "Apollon"
+  ],
+  "explanation": "Zeus règne sur l'Olympe et la foudre. Ses frères Poséidon et Hadès règnent sur la mer et les Enfers."
+ },
+ {
+  "key": "arts-320",
+  "concept": "arts.mythology.greek_roman",
+  "label": "Dieux grecs et romains",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque dieu grec à son équivalent romain.",
+  "pairs": [
+   [
+    "Zeus",
+    "Jupiter"
+   ],
+   [
+    "Aphrodite",
+    "Vénus"
+   ],
+   [
+    "Arès",
+    "Mars"
+   ],
+   [
+    "Hermès",
+    "Mercure"
+   ]
+  ],
+  "explanation": "Les Romains ont repris les dieux grecs sous d'autres noms, qu'on retrouve dans les planètes."
+ },
+ {
+  "key": "arts-321",
+  "concept": "arts.mythology.medusa",
+  "label": "Méduse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que se passe-t-il quand on regarde Méduse dans les yeux ?",
+  "options": [
+   "On est changé en pierre*",
+   "On devient aveugle",
+   "On s'endort",
+   "On devient fou"
+  ],
+  "explanation": "Persée la tue en la regardant dans le reflet de son bouclier."
+ },
+ {
+  "key": "arts-322",
+  "concept": "arts.mythology.hercules_labors",
+  "label": "Travaux d'Héraclès",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de travaux Héraclès (Hercule) a-t-il dû accomplir ?",
+  "options": [
+   "12*",
+   "7",
+   "10",
+   "3"
+  ],
+  "explanation": "Dont tuer le lion de Némée et l'hydre de Lerne, et capturer Cerbère."
+ },
+ {
+  "key": "arts-323",
+  "concept": "arts.mythology.achilles",
+  "label": "Talon d'Achille",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel était le point faible d'Achille ?",
+  "options": [
+   "Son talon*",
+   "Son genou",
+   "Son cœur",
+   "Ses yeux"
+  ],
+  "explanation": "Sa mère l'avait plongé dans le Styx en le tenant par le talon, seul endroit non protégé."
+ },
+ {
+  "key": "arts-324",
+  "concept": "arts.mythology.trojan_horse",
+  "label": "Cheval de Troie",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui étaient cachés dans le cheval de Troie ?",
+  "options": [
+   "Des soldats grecs*",
+   "Des soldats troyens",
+   "Des dieux",
+   "Des trésors"
+  ],
+  "explanation": "La ruse d'Ulysse permet aux Grecs d'entrer dans Troie après dix ans de siège."
+ },
+ {
+  "key": "arts-325",
+  "concept": "arts.mythology.odin",
+  "label": "Odin",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle mythologie Odin est-il le dieu principal ?",
+  "options": [
+   "Nordique*",
+   "Grecque",
+   "Égyptienne",
+   "Celte"
+  ],
+  "explanation": "Père de Thor, il sacrifie un œil pour obtenir la sagesse."
+ },
+ {
+  "key": "arts-326",
+  "concept": "arts.mythology.ra",
+  "label": "Râ",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le dieu du Soleil dans l'Égypte antique ?",
+  "options": [
+   "Râ*",
+   "Osiris",
+   "Anubis",
+   "Horus"
+  ],
+  "explanation": "Râ traverse le ciel sur sa barque le jour et le monde souterrain la nuit."
+ },
+ {
+  "key": "arts-327",
+  "concept": "arts.mythology.anubis",
+  "label": "Anubis",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sous quelle forme représente-t-on Anubis ?",
+  "options": [
+   "Un homme à tête de chacal*",
+   "Un homme à tête de faucon",
+   "Un lion",
+   "Un crocodile"
+  ],
+  "explanation": "Dieu des morts et de l'embaumement. Horus, lui, a une tête de faucon."
+ },
+ {
+  "key": "arts-328",
+  "concept": "arts.mythology.pandora",
+  "label": "Boîte de Pandore",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qui reste au fond de la boîte de Pandore une fois ouverte ?",
+  "options": [
+   "L'espérance*",
+   "L'amour",
+   "La sagesse",
+   "La mort"
+  ],
+  "explanation": "Pandore libère tous les maux sur l'humanité ; seule l'espérance reste à l'intérieur."
+ },
+ {
+  "key": "arts-329",
+  "concept": "arts.mythology.icarus",
+  "label": "Icare",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi Icare tombe-t-il dans la mer ?",
+  "options": [
+   "Il vole trop près du soleil*",
+   "Un orage le frappe",
+   "Zeus le foudroie",
+   "Ses plumes se mouillent"
+  ],
+  "explanation": "La cire de ses ailes fond. Son père Dédale l'avait pourtant prévenu."
+ },
+ {
+  "key": "arts-330",
+  "concept": "arts.mythology.poseidon_trident",
+  "label": "Le trident",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel dieu porte un trident ?",
+  "options": [
+   "Poséidon*",
+   "Zeus",
+   "Apollon",
+   "Hermès"
+  ],
+  "explanation": "Dieu des mers, des tremblements de terre et des chevaux (Neptune chez les Romains)."
+ },
+ {
+  "key": "arts-331",
+  "concept": "arts.mythology.minotaur",
+  "label": "Le Minotaure",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où était enfermé le Minotaure ?",
+  "options": [
+   "Dans un labyrinthe*",
+   "Dans une tour",
+   "Sous un volcan",
+   "Dans une grotte marine"
+  ],
+  "explanation": "En Crète, dans le labyrinthe de Dédale. Thésée le tue et ressort grâce au fil d'Ariane."
+ },
+ {
+  "key": "arts-332",
+  "concept": "arts.mythology.thor_hammer",
+  "label": "Le marteau de Thor",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment s'appelle le marteau de Thor ?",
+  "options": [
+   "Mjöllnir*",
+   "Excalibur",
+   "Gungnir",
+   "Durandal"
+  ],
+  "explanation": "Gungnir est la lance d'Odin, Excalibur l'épée du roi Arthur, Durandal celle de Roland."
+ },
+ {
+  "key": "arts-333",
+  "concept": "arts.mythology.ulysses_return",
+  "label": "Ulysse",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien d'années Ulysse met-il à rentrer chez lui après la guerre de Troie ?",
+  "options": [
+   "10 ans*",
+   "1 an",
+   "3 ans",
+   "20 ans"
+  ],
+  "explanation": "Dix ans d'errance, racontés dans l'Odyssée d'Homère. Avec les dix ans de guerre, il est absent vingt ans."
+ },
+ {
+  "key": "arts-334",
+  "concept": "arts.mythology.narcissus",
+  "label": "Narcisse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De qui Narcisse tombe-t-il amoureux ?",
+  "options": [
+   "De son propre reflet*",
+   "D'une nymphe",
+   "D'une déesse",
+   "D'une sirène"
+  ],
+  "explanation": "Il se contemple dans l'eau jusqu'à en mourir ; il laisse son nom à une fleur et au narcissisme."
+ },
+ {
+  "key": "arts-335",
+  "concept": "arts.mythology.prometheus",
+  "label": "Prométhée",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'a volé Prométhée aux dieux pour le donner aux hommes ?",
+  "options": [
+   "Le feu*",
+   "L'ambroisie",
+   "La foudre",
+   "L'or"
+  ],
+  "explanation": "Zeus le punit en l'enchaînant à un rocher, où un aigle lui dévore le foie chaque jour."
+ },
+ {
+  "key": "arts-336",
+  "concept": "arts.mythology.cerberus",
+  "label": "Cerbère",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Combien de têtes a Cerbère, le chien qui garde les Enfers ?",
+  "options": [
+   "3*",
+   "2",
+   "7",
+   "9"
+  ],
+  "explanation": "Trois têtes. L'hydre de Lerne, elle, en a plusieurs qui repoussent quand on les coupe."
+ },
+ {
+  "key": "arts-337",
+  "concept": "arts.mythology.valhalla",
+  "label": "Le Valhalla",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans la mythologie nordique, qui va au Valhalla ?",
+  "options": [
+   "Les guerriers morts au combat*",
+   "Tous les défunts",
+   "Les rois uniquement",
+   "Les dieux"
+  ],
+  "explanation": "Choisis par les Valkyries, ils y festoient en attendant la bataille finale, le Ragnarök."
+ },
+ {
+  "key": "arts-338",
+  "concept": "arts.mythology.muses",
+  "label": "Les Muses",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien y a-t-il de Muses dans la mythologie grecque ?",
+  "options": [
+   "9*",
+   "3",
+   "7",
+   "12"
+  ],
+  "explanation": "Les neuf filles de Zeus et Mnémosyne inspirent les arts : Calliope, Clio, Érato…"
+ }
+]

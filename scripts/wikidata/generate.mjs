@@ -32,6 +32,8 @@ const NOT_AUTHORS = new Set(['Jésus-Christ', 'Dieu', 'Moïse', 'Mahomet', 'Hom�
 /** Description sans parenthèse finale (dates redondantes). */
 const cleanDesc = (d) => (d ?? '').replace(/\s*\([^()]*\)\s*$/, '').trim();
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+/** Période historique (thèmes de l'Histoire) : Antiquité < 476, Moyen Âge < 1492, Temps modernes < 1789, puis époque contemporaine. */
+const eraOf = (year) => (year < 476 ? 'antiquity' : year < 1492 ? 'middle_ages' : year < 1789 ? 'modern' : 'contemporary');
 
 // ─────────────── Déduplication avec la banque curée (même énoncé ou même titre cité)
 const curatedText = readdirSync(join(root, 'content/questions'))
@@ -52,6 +54,7 @@ const FAMILY = {
   'famille instrument': 'instrument', 'groupe pays': 'band', 'groupe décennie': 'band',
   'coupe du monde vainqueur': 'world_cup', 'coupe du monde hôte': 'world_cup', 'jo ville': 'olympics',
   'invention inventeur': 'invention', 'inventeur invention': 'invention',
+  'lune planète': 'moon', 'plus haut sommet': 'peak', 'film décennie': 'film_year', 'film acteur': 'film_cast',
 };
 /** Plusieurs formulations pour un même modèle, choisies de façon stable. */
 const vary = (seed, variants) => variants[Math.floor(rng(`vary-${seed}`)() * variants.length)];
@@ -158,7 +161,7 @@ for (const c of countryList) {
     const rand = rng(`cont-${c.id}`);
     const verb = f.gender === 'p' ? 'se trouvent' : 'se trouve';
     add('geography', 'continent', {
-      key: `wd-cont-${c.id}`, concept: `geography.location.continent_${key}`, label: `Continent ${f.of}`, type: 'mcq',
+      key: `wd-cont-${c.id}`, concept: `geography.countries.continent_${key}`, label: `Continent ${f.of}`, type: 'mcq',
       difficulty: Math.round(clamp(fame - 6, 18, 75)),
       prompt: `Sur quel continent ${verb} ${f.the} ?`, options: [`${cont}*`, ...shuffle(all, rand).slice(0, 3)],
       explanation: `${cap(f.the)} ${verb} en ${cont === 'Océanie' ? 'Océanie' : cont}${c.caps.size === 1 ? ` ; ${[...c.caps.values()][0]} en est la capitale` : ''}.`,
@@ -179,7 +182,7 @@ for (const city of cities) {
   const others = nearestByFame(country, pool, 3, rand).map((o) => o.name);
   const de = /^[AEIOUÉÈÎaeiouéèî]/.test(city.name) ? `d'${city.name}` : `de ${city.name}`;
   add('geography', 'ville', {
-    key: `wd-city-${city.id}`, concept: `geography.location.city_${slug(city.en)}`, label: `Pays de ${city.name}`, type: 'mcq',
+    key: `wd-city-${city.id}`, concept: `geography.countries.city_${slug(city.en)}`, label: `Pays de ${city.name}`, type: 'mcq',
     difficulty: Math.round(clamp(100 - 12 * Math.log(city.sl) + (CONT_OFFSET[continentOf(country)] ?? 0) / 2, 22, 78)),
     prompt: vary(city.id, [`Dans quel pays se trouve la ville ${de} ?`, `La ville ${de} se trouve dans quel pays ?`, `${city.name} : dans quel pays ?`]),
     options: [`${country.name}*`, ...others],
@@ -239,7 +242,7 @@ for (const p of peopleList) {
   const ne = p.female ? 'née' : 'né';
   const mort = p.female ? 'morte' : 'mort';
   add('history', 'siècle de naissance', {
-    key: `wd-cent-${p.id}`, concept: `history.figures.century_${slug(p.name)}`, label: `Époque de ${p.name}`, type: 'mcq',
+    key: `wd-cent-${p.id}`, concept: `history.${eraOf(p.birth)}.century_${slug(p.name)}`, label: `Époque de ${p.name}`, type: 'mcq',
     keep_order: true, difficulty: Math.round(clamp(100 - 12 * Math.log(p.sl) + 6, 25, 80)),
     prompt: vary(p.id, [`En quel siècle est ${ne} ${p.name} ?`, `${p.name} est ${ne} au…`, `À quel siècle remonte la naissance ${deName(p.name)} ?`]),
     options,
@@ -257,7 +260,7 @@ for (const p of peopleList) {
     pick.forEach((p) => used.add(p.id));
     n++;
     add('history', 'classement naissances', {
-      key: `wd-births-${pick.map((p) => p.id).join('-')}`, concept: `history.figures.births_set_${n}`,
+      key: `wd-births-${pick.map((p) => p.id).join('-')}`, concept: `history.${eraOf(pick[1].birth)}.births_set_${n}`,
       label: `Naissances : ${pick.map((p) => p.name).join(', ')}`, type: 'ordering', difficulty: 55,
       prompt: 'Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).',
       items: pick.map((p) => p.name),
@@ -286,7 +289,7 @@ for (const p of peopleList) {
     const options = [...years, year].sort((a, b) => a - b).map((y) => `${y}${y === year ? '*' : ''}`);
     const date = frenchDate(iso);
     add('history', 'bataille', {
-      key: `wd-battle-${r.e}`, concept: `history.dates.${slug(label)}`, label: cap(label), type: 'mcq', keep_order: true,
+      key: `wd-battle-${r.e}`, concept: `history.${eraOf(year)}.${slug(label)}`, label: cap(label), type: 'mcq', keep_order: true,
       difficulty: Math.round(clamp(100 - 12 * Math.log(Number(r.sl)) + 10, 35, 85)),
       prompt: vary(r.e, [`En quelle année a eu lieu la ${label} ?`, `La ${label} s'est déroulée en…`, `Quand a eu lieu la ${label} ?`]),
       options,
@@ -400,7 +403,7 @@ works('films', 'cinema', 'film réalisateur', 'cinema.directors.film',
     const f = countryForms(c.name);
     const others = chosen.map((o) => [...o.caps.values()][0]);
     add('geography', 'carte', {
-      key: `wd-map-${c.id}`, concept: `geography.location.map_${slug(c.en)}`, label: `Situer ${capName}`, type: 'map_pick',
+      key: `wd-map-${c.id}`, concept: `geography.countries.map_${slug(c.en)}`, label: `Situer ${capName}`, type: 'map_pick',
       difficulty: Math.round(clamp(countryFame(c) + 6, 25, 85)),
       prompt: vary(`map-${c.id}`, [`Touche l'emplacement de ${capName}.`, `Où se trouve ${capName} ? Touche le bon point.`]),
       region: { lat: Math.round(lat * 100) / 100, lon: Math.round(lon * 100) / 100, span: Math.round(span * 10) / 10 },
@@ -727,6 +730,131 @@ works('films', 'cinema', 'film réalisateur', 'cinema.directors.film',
       prompt: `Qu'a inventé ${inv.name}${inv.desc ? `, ${inv.desc},` : ''} ?`.replace(', ?', ' ?'),
       options: [`${cap(it.name)}*`, ...otherItems],
       explanation: `${inv.name} a inventé ${what}${year ? ` vers ${year}` : ''}.`,
+    });
+  }
+}
+
+
+// ─────────────── Sciences : lunes → planète
+{
+  const PLANETS = ['Terre', 'Mars', 'Jupiter', 'Saturne', 'Uranus', 'Neptune'];
+  const seenMoon = new Set();
+  for (const r of load('moons').rows) {
+    if (seenMoon.has(r.m) || /\d/.test(r.mFr) || r.mFr === 'Lune' || Number(r.sl) < 70) continue;
+    seenMoon.add(r.m);
+    const planet = r.pFr;
+    if (!PLANETS.includes(planet)) continue;
+    const rand = rng(`moon-${r.m}`);
+    const others = shuffle(PLANETS.filter((p) => p !== planet && p !== 'Terre'), rand).slice(0, 3);
+    const famous = ['Titan', 'Europe', 'Io', 'Ganymède', 'Callisto', 'Phobos', 'Déimos', 'Triton', 'Encelade'].includes(r.mFr);
+    add('science', 'lune planète', {
+      key: `wd-moon-${r.m}`, concept: `science.space.moon_${slug(r.mFr)}`, label: `Lune ${r.mFr}`, type: 'mcq',
+      difficulty: famous ? 45 : Math.round(clamp(100 - 12 * Math.log(Number(r.sl)) + 20, 55, 85)),
+      prompt: vary(`moon-${r.m}`, [`Autour de quelle planète tourne la lune ${r.mFr} ?`, `${r.mFr} est un satellite naturel de…`]),
+      options: [`${planet}*`, ...others],
+      explanation: `${r.mFr} est un satellite naturel ${deName(planet)}.${planet === 'Uranus' ? " Les lunes d'Uranus portent des noms de personnages de Shakespeare et de Pope." : planet === 'Jupiter' ? ' Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).' : ''}`,
+    });
+  }
+}
+
+// ─────────────── Géographie : plus haut sommet du pays
+{
+  const peaks = new Map();
+  for (const r of load('peaks').rows) {
+    const c = countries.get(r.c);
+    if (!c || /^Q\d+$/.test(r.hFr)) continue;
+    const e = peaks.get(r.c) ?? { country: c, names: new Set(), elev: 0, sl: Number(r.hsl) };
+    e.names.add(r.hFr);
+    e.elev = Math.max(e.elev, Math.round(Number(r.elev ?? 0)));
+    peaks.set(r.c, e);
+  }
+  const list = [...peaks.values()].filter((p) => p.names.size === 1 && p.elev > 0);
+  for (const p of list) {
+    const c = p.country;
+    const name = [...p.names][0];
+    const cont = continentOf(c);
+    if (!cont || c.pop < 2e6) continue;
+    // Le nom du sommet donnerait la réponse (mont Cameroun).
+    if (name.toLowerCase().includes(c.name.toLowerCase().split(' ')[0])) continue;
+    const pool = list.filter((o) => o !== p && continentOf(o.country) === cont && [...o.names][0] !== name);
+    if (pool.length < 3) continue;
+    const top = [...new Set(pool.sort((a, b) => b.sl - a.sl).map((o) => cap([...o.names][0])))].slice(0, 7);
+    const others = shuffle(top, rng(`peak-${c.id}`)).slice(0, 3);
+    const withArticle = /^(mont|pic|signal|djebel|cerro|puy)\b/i.test(name) ? `le ${name}` : /^pointe\b/i.test(name) ? `la ${name}` : name;
+    const f = countryForms(c.name);
+    add('geography', 'plus haut sommet', {
+      key: `wd-peak-${c.id}`, concept: `geography.relief.highest_${slug(c.en)}`, label: `Point culminant ${f.of}`, type: 'mcq',
+      difficulty: Math.round(clamp(countryFame(c) + 18 - Math.log(p.sl) * 3, 25, 85)),
+      prompt: vary(`peak-${c.id}`, [`Quel est le point culminant ${f.of} ?`, `Quel est le plus haut sommet ${f.of} ?`]),
+      options: [`${cap(name)}*`, ...others],
+      explanation: `Le point culminant ${f.of} est ${withArticle}, à ${p.elev.toLocaleString('fr-FR').replace(/ /g, ' ')} m d'altitude.`,
+    });
+  }
+}
+
+// ─────────────── Cinéma : décennie de sortie, acteurs
+{
+  const films = new Map();
+  for (const r of load('films').rows) {
+    const year = yearOf(r.date);
+    if (!year || /^Q\d+$/.test(r.wFr)) continue;
+    const f = films.get(r.w) ?? { id: r.w, title: r.wFr, director: r.authorFr, year, sl: Number(r.sl), dirs: new Set() };
+    f.dirs.add(r.author);
+    f.year = Math.min(f.year, year);
+    films.set(r.w, f);
+  }
+  const titles = new Map();
+  for (const f of films.values()) titles.set(f.title, (titles.get(f.title) ?? 0) + 1);
+  for (const f of films.values()) {
+    if (titles.get(f.title) > 1 || f.dirs.size !== 1 || f.year < 1920 || alreadyCovered(f.title)) continue;
+    const d = Math.floor(f.year / 10) * 10;
+    const decades = [d - 20, d - 10, d + 10, d + 20].filter((x) => x >= 1920 && x <= 2020);
+    const pick = shuffle(decades, rng(`filmd-${f.id}`)).slice(0, 3);
+    add('cinema', 'film décennie', {
+      key: `wd-filmd-${f.id}`, concept: `cinema.films.year_${slug(f.title).slice(0, 30)}_${f.id.toLowerCase()}`, label: `Sortie de « ${f.title} »`,
+      type: 'mcq', keep_order: true, difficulty: Math.round(clamp(100 - 12 * Math.log(f.sl) + 16, 25, 80)),
+      prompt: `Dans quelle décennie est sorti le film « ${f.title} », de ${f.director} ?`,
+      options: [...pick, d].sort((a, b) => a - b).map((x) => `Années ${x}${x === d ? '*' : ''}`),
+      explanation: `« ${f.title} » de ${f.director} est sorti en ${f.year}.`,
+    });
+  }
+
+  const cast = new Map();
+  for (const r of load('cast').rows) {
+    if (/^Q\d+$/.test(r.wFr) || /^Q\d+$/.test(r.aFr)) continue;
+    const f = cast.get(r.w) ?? { id: r.w, title: r.wFr, year: yearOf(r.date), sl: Number(r.sl), actors: new Map() };
+    const y = yearOf(r.date);
+    if (y && (!f.year || y < f.year)) f.year = y;
+    f.actors.set(r.a, { name: r.aFr, sl: Number(r.asl) });
+    cast.set(r.w, f);
+  }
+  // Caméos et non-acteurs (réalisateurs, musiciens de passage) : ni vedette ni leurre.
+  const CAMEO = new Set(['Stan Lee', 'Alfred Hitchcock', 'Steven Spielberg', 'Keith Richards', 'Joan Rivers', 'Martin Scorsese', 'Quentin Tarantino']);
+  for (const f of cast.values()) for (const [id, a] of [...f.actors]) if (CAMEO.has(a.name)) f.actors.delete(id);
+  const allActors = new Map();
+  for (const f of cast.values()) for (const [id, a] of f.actors) {
+    const prev = allActors.get(id) ?? { ...a, years: [] };
+    if (f.year) prev.years.push(f.year);
+    allActors.set(id, prev);
+  }
+  const titleCount = new Map();
+  for (const f of cast.values()) titleCount.set(f.title, (titleCount.get(f.title) ?? 0) + 1);
+  for (const f of cast.values()) {
+    if (titleCount.get(f.title) > 1 || !f.year || alreadyCovered(f.title)) continue;
+    const star = [...f.actors.entries()].sort((a, b) => b[1].sl - a[1].sl)[0];
+    if (!star) continue;
+    const era = (a) => a.years.length ? a.years.reduce((x, y) => x + y, 0) / a.years.length : 1990;
+    const pool = [...allActors.entries()].filter(([id]) => !f.actors.has(id))
+      .sort((a, b) => Math.abs(era(a[1]) - f.year) - Math.abs(era(b[1]) - f.year)).slice(0, 12).map(([, a]) => a.name);
+    const others = shuffle(pool, rng(`cast-${f.id}`)).slice(0, 3);
+    if (others.length < 3) continue;
+    add('cinema', 'film acteur', {
+      key: `wd-cast-${f.id}`, concept: `cinema.actors.${slug(f.title).slice(0, 30)}_${f.id.toLowerCase()}`, label: `Casting de « ${f.title} »`,
+      type: 'mcq', difficulty: Math.round(clamp(100 - 12 * Math.log(f.sl) + 12, 25, 80)),
+      prompt: vary(`cast-${f.id}`, [`Lequel de ces acteurs joue dans « ${f.title} » (${f.year}) ?`, `Qui fait partie de la distribution de « ${f.title} » (${f.year}) ?`]),
+      options: [`${star[1].name}*`, ...others],
+      explanation: `${star[1].name} joue dans « ${f.title} », sorti en ${f.year}.`
+        + (f.actors.size > 1 ? ` On y voit aussi ${[...f.actors.values()].filter((a) => a.name !== star[1].name).slice(0, 2).map((a) => a.name).join(' et ')}.` : ''),
     });
   }
 }

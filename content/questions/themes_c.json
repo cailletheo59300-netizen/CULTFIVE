@@ -1,0 +1,1777 @@
+[
+ {
+  "key": "cine-301",
+  "concept": "cinema.animation.toy_story",
+  "label": "Toy Story",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le premier long métrage entièrement réalisé en images de synthèse ?",
+  "options": [
+   "Toy Story*",
+   "Shrek",
+   "Le Monde de Nemo",
+   "Fourmiz"
+  ],
+  "explanation": "Toy Story, du studio Pixar, sorti en 1995."
+ },
+ {
+  "key": "cine-302",
+  "concept": "cinema.animation.miyazaki",
+  "label": "Hayao Miyazaki",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel film de Hayao Miyazaki a remporté l'Oscar du meilleur film d'animation en 2003 ?",
+  "options": [
+   "Le Voyage de Chihiro*",
+   "Mon voisin Totoro",
+   "Princesse Mononoké",
+   "Le Château ambulant"
+  ],
+  "explanation": "Le Voyage de Chihiro (2001), produit par le studio Ghibli."
+ },
+ {
+  "key": "cine-303",
+  "concept": "cinema.animation.ghibli_country",
+  "label": "Studio Ghibli",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays vient le studio Ghibli ?",
+  "options": [
+   "Du Japon*",
+   "De Corée du Sud",
+   "De Chine",
+   "Des États-Unis"
+  ],
+  "explanation": "Fondé en 1985 par Hayao Miyazaki et Isao Takahata."
+ },
+ {
+  "key": "cine-304",
+  "concept": "cinema.animation.lion_king",
+  "label": "Le Roi lion",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le lionceau héros du Roi lion ?",
+  "options": [
+   "Simba*",
+   "Mufasa",
+   "Scar",
+   "Nala"
+  ],
+  "explanation": "Mufasa est son père, Scar son oncle, Nala son amie d'enfance."
+ },
+ {
+  "key": "cine-305",
+  "concept": "cinema.animation.shrek_species",
+  "label": "Shrek",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce que Shrek ?",
+  "options": [
+   "Un ogre*",
+   "Un troll",
+   "Un géant",
+   "Un lutin"
+  ],
+  "explanation": "Un ogre vert qui vit dans un marais. Le film de DreamWorks sort en 2001."
+ },
+ {
+  "key": "cine-306",
+  "concept": "cinema.animation.nemo_fish",
+  "label": "Le Monde de Nemo",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel poisson est Nemo ?",
+  "options": [
+   "Un poisson-clown*",
+   "Un poisson-chirurgien",
+   "Un poisson rouge",
+   "Un mérou"
+  ],
+  "explanation": "Un poisson-clown ; son amie Dory est un poisson-chirurgien bleu."
+ },
+ {
+  "key": "cine-307",
+  "concept": "cinema.animation.pixar_lamp",
+  "label": "La lampe de Pixar",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel objet sautille dans le logo animé de Pixar ?",
+  "options": [
+   "Une lampe de bureau*",
+   "Une balle",
+   "Un robot",
+   "Un jouet"
+  ],
+  "explanation": "Luxo Jr., héros d'un court métrage de 1986, écrase la lettre I du logo."
+ },
+ {
+  "key": "cine-308",
+  "concept": "cinema.animation.frozen_song",
+  "label": "La Reine des neiges",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle la chanson phare de La Reine des neiges en français ?",
+  "options": [
+   "« Libérée, délivrée »*",
+   "« Hakuna Matata »",
+   "« Ce rêve bleu »",
+   "« Je voudrais déjà être roi »"
+  ],
+  "explanation": "Chantée par Elsa. « Hakuna Matata » vient du Roi lion, « Ce rêve bleu » d'Aladdin."
+ },
+ {
+  "key": "cine-309",
+  "concept": "cinema.animation.wall_e",
+  "label": "WALL-E",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le métier du robot WALL-E ?",
+  "options": [
+   "Il compacte les déchets*",
+   "Il cultive des plantes",
+   "Il répare des vaisseaux",
+   "Il fait le ménage"
+  ],
+  "explanation": "Il est resté seul sur une Terre abandonnée, couverte d'ordures."
+ },
+ {
+  "key": "cine-310",
+  "concept": "cinema.animation.ratatouille",
+  "label": "Ratatouille",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle ville se déroule Ratatouille ?",
+  "options": [
+   "Paris*",
+   "Lyon",
+   "Rome",
+   "New York"
+  ],
+  "explanation": "Le rat Rémy rêve de devenir chef dans un grand restaurant parisien."
+ },
+ {
+  "key": "cine-311",
+  "concept": "cinema.animation.minions_color",
+  "label": "Les Minions",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "De quelle couleur sont les Minions ?",
+  "options": [
+   "Jaunes*",
+   "Verts",
+   "Bleus",
+   "Orange"
+  ],
+  "explanation": "Apparus dans Moi, moche et méchant (2010), studio Illumination, créé par un Français, Pierre Coffin prêtant sa voix aux Minions."
+ },
+ {
+  "key": "cine-312",
+  "concept": "cinema.animation.snow_white",
+  "label": "Blanche-Neige",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de nains accompagnent Blanche-Neige ?",
+  "options": [
+   "7*",
+   "5",
+   "6",
+   "12"
+  ],
+  "explanation": "Blanche-Neige et les Sept Nains (1937) est le premier long métrage de Disney."
+ },
+ {
+  "key": "cine-313",
+  "concept": "cinema.animation.asterix_studio",
+  "label": "Astérix",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a créé le personnage d'Astérix, adapté ensuite au cinéma ?",
+  "options": [
+   "Goscinny et Uderzo*",
+   "Hergé",
+   "Morris",
+   "Franquin"
+  ],
+  "explanation": "René Goscinny au scénario et Albert Uderzo au dessin, en 1959."
+ },
+ {
+  "key": "cine-314",
+  "concept": "cinema.animation.tintin_spielberg",
+  "label": "Tintin au cinéma",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a réalisé Les Aventures de Tintin : Le Secret de la Licorne (2011) ?",
+  "options": [
+   "Steven Spielberg*",
+   "Peter Jackson",
+   "James Cameron",
+   "Robert Zemeckis"
+  ],
+  "explanation": "Spielberg, avec Peter Jackson à la production, en capture de mouvement."
+ },
+ {
+  "key": "cine-315",
+  "concept": "cinema.animation.kirikou",
+  "label": "Kirikou",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a réalisé Kirikou et la Sorcière (1998) ?",
+  "options": [
+   "Michel Ocelot*",
+   "Sylvain Chomet",
+   "Jean-François Laguionie",
+   "René Laloux"
+  ],
+  "explanation": "Inspiré de contes d'Afrique de l'Ouest, le film a été un grand succès en France."
+ },
+ {
+  "key": "cine-316",
+  "concept": "cinema.animation.stop_motion",
+  "label": "Stop motion",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle technique d'animation utilise des figurines photographiées image par image ?",
+  "options": [
+   "Le stop motion*",
+   "La rotoscopie",
+   "L'animation 3D",
+   "Le dessin animé sur celluloïd"
+  ],
+  "explanation": "Comme dans Wallace et Gromit ou L'Étrange Noël de monsieur Jack."
+ },
+ {
+  "key": "cine-317",
+  "concept": "cinema.animation.coco",
+  "label": "Coco",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle fête mexicaine est au cœur du film Coco ?",
+  "options": [
+   "Le Jour des morts*",
+   "Le Carnaval",
+   "Noël",
+   "La fête de l'indépendance"
+  ],
+  "explanation": "El Día de los Muertos, où l'on honore les défunts."
+ },
+ {
+  "key": "cine-318",
+  "concept": "cinema.animation.buzz",
+  "label": "Toy Story",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le cri de ralliement de Buzz l'Éclair ?",
+  "options": [
+   "« Vers l'infini et au-delà ! »*",
+   "« À l'attaque ! »",
+   "« Hakuna Matata ! »",
+   "« Je suis ton père ! »"
+  ],
+  "explanation": "Buzz se croit un vrai ranger de l'espace."
+ },
+ {
+  "key": "cine-319",
+  "concept": "cinema.animation.spider_verse",
+  "label": "Spider-Man",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel Spider-Man est le héros de Spider-Man : New Generation (2018) ?",
+  "options": [
+   "Miles Morales*",
+   "Peter Parker",
+   "Gwen Stacy",
+   "Miguel O'Hara"
+  ],
+  "explanation": "Le film a remporté l'Oscar du meilleur film d'animation."
+ },
+ {
+  "key": "cine-320",
+  "concept": "cinema.animation.pinocchio",
+  "label": "Pinocchio",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que se passe-t-il quand Pinocchio ment ?",
+  "options": [
+   "Son nez s'allonge*",
+   "Il rougit",
+   "Ses oreilles bougent",
+   "Il devient bois"
+  ],
+  "explanation": "Le conte de Collodi (1883) a été adapté par Disney en 1940."
+ },
+ {
+  "key": "sport-301",
+  "concept": "sport.champions.federer",
+  "label": "Roger Federer",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays est le joueur de tennis Roger Federer ?",
+  "options": [
+   "La Suisse*",
+   "L'Autriche",
+   "L'Allemagne",
+   "La Suède"
+  ],
+  "explanation": "Il a remporté 20 tournois du Grand Chelem, dont 8 fois Wimbledon."
+ },
+ {
+  "key": "sport-302",
+  "concept": "sport.champions.nadal_rg",
+  "label": "Rafael Nadal",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien de fois Rafael Nadal a-t-il remporté Roland-Garros ?",
+  "options": [
+   "14*",
+   "9",
+   "11",
+   "18"
+  ],
+  "explanation": "Un record absolu pour un tournoi du Grand Chelem, entre 2005 et 2022."
+ },
+ {
+  "key": "sport-303",
+  "concept": "sport.champions.phelps",
+  "label": "Michael Phelps",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel sport Michael Phelps détient-il le record de médailles olympiques ?",
+  "options": [
+   "La natation*",
+   "L'athlétisme",
+   "La gymnastique",
+   "L'aviron"
+  ],
+  "explanation": "28 médailles olympiques, dont 23 en or, entre 2004 et 2016."
+ },
+ {
+  "key": "sport-304",
+  "concept": "sport.champions.jordan",
+  "label": "Michael Jordan",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel sport s'est illustré Michael Jordan ?",
+  "options": [
+   "Le basket-ball*",
+   "Le baseball",
+   "Le football américain",
+   "Le golf"
+  ],
+  "explanation": "Six titres NBA avec les Chicago Bulls. Il a aussi brièvement tenté le baseball."
+ },
+ {
+  "key": "sport-305",
+  "concept": "sport.champions.zidane_1998",
+  "label": "Zinédine Zidane",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En finale de la Coupe du monde 1998, combien de buts Zidane marque-t-il ?",
+  "options": [
+   "2*",
+   "1",
+   "3",
+   "0"
+  ],
+  "explanation": "Deux buts de la tête contre le Brésil ; Emmanuel Petit ajoute le troisième (3-0)."
+ },
+ {
+  "key": "sport-306",
+  "concept": "sport.champions.senna",
+  "label": "Ayrton Senna",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel sport Ayrton Senna était-il champion ?",
+  "options": [
+   "La Formule 1*",
+   "Le rallye",
+   "La moto",
+   "Le cyclisme"
+  ],
+  "explanation": "Triple champion du monde, il meurt en course à Imola en 1994."
+ },
+ {
+  "key": "sport-307",
+  "concept": "sport.champions.riner",
+  "label": "Teddy Riner",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quel sport Teddy Riner a-t-il été plusieurs fois champion olympique ?",
+  "options": [
+   "Le judo*",
+   "La lutte",
+   "La boxe",
+   "Le karaté"
+  ],
+  "explanation": "Champion olympique en 2012, 2016, 2024, et avec l'équipe de France en 2021 et 2024."
+ },
+ {
+  "key": "sport-308",
+  "concept": "sport.champions.hinault",
+  "label": "Bernard Hinault",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de Tours de France Bernard Hinault a-t-il gagnés ?",
+  "options": [
+   "5*",
+   "3",
+   "4",
+   "7"
+  ],
+  "explanation": "Cinq, comme Jacques Anquetil, Eddy Merckx et Miguel Indurain."
+ },
+ {
+  "key": "sport-309",
+  "concept": "sport.champions.messi_country",
+  "label": "Lionel Messi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pour quelle sélection nationale joue Lionel Messi ?",
+  "options": [
+   "L'Argentine*",
+   "L'Espagne",
+   "Le Portugal",
+   "L'Uruguay"
+  ],
+  "explanation": "Champion du monde avec l'Argentine en 2022."
+ },
+ {
+  "key": "sport-310",
+  "concept": "sport.champions.serena",
+  "label": "Serena Williams",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien de titres du Grand Chelem en simple Serena Williams a-t-elle remportés ?",
+  "options": [
+   "23*",
+   "18",
+   "20",
+   "24"
+  ],
+  "explanation": "23, record de l'ère Open. Margaret Court en compte 24, dont une partie avant 1968."
+ },
+ {
+  "key": "sport-311",
+  "concept": "sport.champions.fourcade",
+  "label": "Martin Fourcade",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quel sport Martin Fourcade a-t-il remporté cinq titres olympiques ?",
+  "options": [
+   "Le biathlon*",
+   "Le ski alpin",
+   "Le saut à ski",
+   "Le patinage"
+  ],
+  "explanation": "Le biathlon mêle ski de fond et tir à la carabine."
+ },
+ {
+  "key": "sport-312",
+  "concept": "sport.champions.parker",
+  "label": "Tony Parker",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle équipe NBA Tony Parker a-t-il remporté quatre titres ?",
+  "options": [
+   "Les San Antonio Spurs*",
+   "Les Chicago Bulls",
+   "Les Los Angeles Lakers",
+   "Les Boston Celtics"
+  ],
+  "explanation": "Entre 2003 et 2014, aux côtés de Tim Duncan et Manu Ginóbili."
+ },
+ {
+  "key": "sport-313",
+  "concept": "sport.champions.pele",
+  "label": "Pelé",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien de Coupes du monde Pelé a-t-il remportées avec le Brésil ?",
+  "options": [
+   "3*",
+   "1",
+   "2",
+   "4"
+  ],
+  "explanation": "En 1958, 1962 et 1970 : un record."
+ },
+ {
+  "key": "sport-314",
+  "concept": "sport.champions.comaneci",
+  "label": "Nadia Comăneci",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle note historique Nadia Comăneci a-t-elle obtenue aux JO de 1976 ?",
+  "options": [
+   "Le premier 10 parfait en gymnastique*",
+   "Un zéro",
+   "Un 9,9 record",
+   "Un 20 sur 20"
+  ],
+  "explanation": "À 14 ans, à Montréal. Le tableau d'affichage, prévu pour trois chiffres, a affiché « 1.00 »."
+ },
+ {
+  "key": "sport-315",
+  "concept": "sport.champions.mbappe",
+  "label": "Kylian Mbappé",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "À quel âge Kylian Mbappé est-il devenu champion du monde ?",
+  "options": [
+   "19 ans*",
+   "21 ans",
+   "23 ans",
+   "17 ans"
+  ],
+  "explanation": "En 2018, en marquant en finale, comme Pelé avant lui au même âge."
+ },
+ {
+  "key": "sport-316",
+  "concept": "sport.champions.ali",
+  "label": "Mohamed Ali",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel sport pratiquait Mohamed Ali ?",
+  "options": [
+   "La boxe*",
+   "La lutte",
+   "Le karaté",
+   "Le judo"
+  ],
+  "explanation": "« Vole comme le papillon, pique comme l'abeille » : triple champion du monde des lourds."
+ },
+ {
+  "key": "sport-317",
+  "concept": "sport.champions.bolt_country",
+  "label": "Usain Bolt",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "De quel pays est le sprinteur Usain Bolt ?",
+  "options": [
+   "La Jamaïque*",
+   "Les États-Unis",
+   "Trinité-et-Tobago",
+   "Le Canada"
+  ],
+  "explanation": "Huit fois champion olympique, recordman du monde du 100 m et du 200 m."
+ },
+ {
+  "key": "sport-318",
+  "concept": "sport.champions.dupont",
+  "label": "Antoine Dupont",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quel poste joue Antoine Dupont avec le XV de France ?",
+  "options": [
+   "Demi de mêlée*",
+   "Pilier",
+   "Arrière",
+   "Talonneur"
+  ],
+  "explanation": "Élu meilleur joueur du monde en 2021, il a aussi été champion olympique de rugby à sept en 2024."
+ },
+ {
+  "key": "sport-319",
+  "concept": "sport.rules.offside",
+  "label": "Hors-jeu",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel sport la règle du hors-jeu n'existe-t-elle pas ?",
+  "options": [
+   "Le basket-ball*",
+   "Le football",
+   "Le rugby",
+   "Le hockey sur glace"
+  ],
+  "explanation": "Au basket, il existe d'autres règles (retour en zone), mais pas de hors-jeu."
+ },
+ {
+  "key": "sport-321",
+  "concept": "sport.rules.basket_three",
+  "label": "Tir à 3 points",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Au basket, combien vaut un panier marqué derrière la ligne la plus éloignée ?",
+  "options": [
+   "3 points*",
+   "2 points",
+   "4 points",
+   "1 point"
+  ],
+  "explanation": "Un panier à l'intérieur vaut 2 points, un lancer franc 1 point."
+ },
+ {
+  "key": "sport-322",
+  "concept": "sport.rules.tennis_grand_slam",
+  "label": "Grand Chelem",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de tournois composent le Grand Chelem au tennis ?",
+  "options": [
+   "4*",
+   "3",
+   "5",
+   "6"
+  ],
+  "explanation": "Open d'Australie, Roland-Garros, Wimbledon et US Open."
+ },
+ {
+  "key": "sport-323",
+  "concept": "sport.rules.golf_holes",
+  "label": "Parcours de golf",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien de trous compte un parcours de golf standard ?",
+  "options": [
+   "18*",
+   "9",
+   "12",
+   "24"
+  ],
+  "explanation": "Un parcours complet compte 18 trous ; certains petits parcours n'en ont que 9."
+ },
+ {
+  "key": "sport-324",
+  "concept": "sport.rules.volley_sets",
+  "label": "Volley-ball",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de sets faut-il gagner pour remporter un match de volley-ball en salle ?",
+  "options": [
+   "3*",
+   "2",
+   "4",
+   "5"
+  ],
+  "explanation": "Les matchs se jouent au meilleur des cinq sets."
+ },
+ {
+  "key": "music-301",
+  "concept": "music.classical.magic_flute",
+  "label": "La Flûte enchantée",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a composé l'opéra La Flûte enchantée ?",
+  "options": [
+   "Mozart*",
+   "Verdi",
+   "Wagner",
+   "Puccini"
+  ],
+  "explanation": "Wolfgang Amadeus Mozart, en 1791, quelques semaines avant sa mort."
+ },
+ {
+  "key": "music-302",
+  "concept": "music.classical.carmen",
+  "label": "Carmen",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a composé l'opéra Carmen ?",
+  "options": [
+   "Georges Bizet*",
+   "Giuseppe Verdi",
+   "Jules Massenet",
+   "Charles Gounod"
+  ],
+  "explanation": "Créé à Paris en 1875 : l'air « L'amour est un oiseau rebelle » est célèbre dans le monde entier."
+ },
+ {
+  "key": "music-303",
+  "concept": "music.classical.swan_lake",
+  "label": "Le Lac des cygnes",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a composé le ballet Le Lac des cygnes ?",
+  "options": [
+   "Tchaïkovski*",
+   "Stravinsky",
+   "Prokofiev",
+   "Rachmaninov"
+  ],
+  "explanation": "Piotr Ilitch Tchaïkovski, créé à Moscou en 1877. On lui doit aussi Casse-Noisette."
+ },
+ {
+  "key": "music-304",
+  "concept": "music.classical.moonlight",
+  "label": "Sonate au clair de lune",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a composé la Sonate au clair de lune ?",
+  "options": [
+   "Beethoven*",
+   "Chopin",
+   "Mozart",
+   "Liszt"
+  ],
+  "explanation": "Ludwig van Beethoven, en 1801. Le surnom lui a été donné après sa mort."
+ },
+ {
+  "key": "music-305",
+  "concept": "music.classical.chopin_instrument",
+  "label": "Chopin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pour quel instrument Frédéric Chopin a-t-il écrit presque toute son œuvre ?",
+  "options": [
+   "Le piano*",
+   "Le violon",
+   "L'orgue",
+   "Le violoncelle"
+  ],
+  "explanation": "Né en Pologne, installé à Paris, il a composé nocturnes, valses et polonaises."
+ },
+ {
+  "key": "music-306",
+  "concept": "music.classical.bach_country",
+  "label": "Jean-Sébastien Bach",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays était Jean-Sébastien Bach ?",
+  "options": [
+   "Allemagne*",
+   "Autriche",
+   "Italie",
+   "Pays-Bas"
+  ],
+  "explanation": "Né en 1685 à Eisenach, il a passé la fin de sa vie à Leipzig."
+ },
+ {
+  "key": "music-307",
+  "concept": "music.classical.nutcracker",
+  "label": "Casse-Noisette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quelle fête est associé le ballet Casse-Noisette ?",
+  "options": [
+   "Noël*",
+   "Pâques",
+   "Le Nouvel An chinois",
+   "Halloween"
+  ],
+  "explanation": "L'histoire commence un soir de Noël. Musique de Tchaïkovski, 1892."
+ },
+ {
+  "key": "music-308",
+  "concept": "music.classical.verdi",
+  "label": "Verdi",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel opéra doit-on à Giuseppe Verdi ?",
+  "options": [
+   "La Traviata*",
+   "Tosca",
+   "La Bohème",
+   "Madame Butterfly"
+  ],
+  "explanation": "Verdi a aussi écrit Aida et Rigoletto. Tosca, La Bohème et Madame Butterfly sont de Puccini."
+ },
+ {
+  "key": "music-309",
+  "concept": "music.classical.orchestra_conductor",
+  "label": "Le chef d'orchestre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que tient souvent le chef d'orchestre dans sa main ?",
+  "options": [
+   "Une baguette*",
+   "Un archet",
+   "Un diapason",
+   "Une plume"
+  ],
+  "explanation": "Elle marque le tempo et les départs des musiciens."
+ },
+ {
+  "key": "music-310",
+  "concept": "music.classical.debussy",
+  "label": "Clair de lune",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a composé la pièce pour piano Clair de lune, dans la Suite bergamasque ?",
+  "options": [
+   "Claude Debussy*",
+   "Erik Satie",
+   "Maurice Ravel",
+   "Gabriel Fauré"
+  ],
+  "explanation": "À ne pas confondre avec la Sonate au clair de lune de Beethoven."
+ },
+ {
+  "key": "tech-301",
+  "concept": "tech.brands.samsung",
+  "label": "Samsung",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel pays vient l'entreprise Samsung ?",
+  "options": [
+   "Corée du Sud*",
+   "Japon",
+   "Chine",
+   "Taïwan"
+  ],
+  "explanation": "Fondée en 1938 à Daegu, c'est aujourd'hui le premier groupe du pays."
+ },
+ {
+  "key": "tech-302",
+  "concept": "tech.brands.nokia",
+  "label": "Nokia",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays vient Nokia, longtemps leader mondial du téléphone portable ?",
+  "options": [
+   "Finlande*",
+   "Suède",
+   "Danemark",
+   "Norvège"
+  ],
+  "explanation": "Nokia a d'abord fabriqué du papier et des bottes en caoutchouc."
+ },
+ {
+  "key": "tech-303",
+  "concept": "tech.brands.ikea",
+  "label": "Ikea",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays vient Ikea ?",
+  "options": [
+   "Suède*",
+   "Norvège",
+   "Danemark",
+   "Pays-Bas"
+  ],
+  "explanation": "Fondé en 1943 par Ingvar Kamprad ; les initiales I et K sont les siennes."
+ },
+ {
+  "key": "tech-304",
+  "concept": "tech.brands.lego",
+  "label": "Lego",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays viennent les briques Lego ?",
+  "options": [
+   "Danemark*",
+   "Suède",
+   "Allemagne",
+   "Pays-Bas"
+  ],
+  "explanation": "« Leg godt » signifie « joue bien » en danois."
+ },
+ {
+  "key": "tech-305",
+  "concept": "tech.brands.sony_playstation",
+  "label": "PlayStation",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle entreprise fabrique la PlayStation ?",
+  "options": [
+   "Sony*",
+   "Nintendo",
+   "Microsoft",
+   "Sega"
+  ],
+  "explanation": "La première PlayStation est sortie en 1994 au Japon."
+ },
+ {
+  "key": "tech-306",
+  "concept": "tech.brands.nintendo_mario",
+  "label": "Mario",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle entreprise a créé le personnage de Mario ?",
+  "options": [
+   "Nintendo*",
+   "Sega",
+   "Sony",
+   "Atari"
+  ],
+  "explanation": "Imaginé par Shigeru Miyamoto, Mario apparaît en 1981 dans Donkey Kong."
+ },
+ {
+  "key": "tech-307",
+  "concept": "tech.brands.tesla_musk",
+  "label": "Tesla",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel type de véhicules Tesla a rendu populaires ?",
+  "options": [
+   "Les voitures électriques*",
+   "Les motos",
+   "Les avions",
+   "Les camions à hydrogène"
+  ],
+  "explanation": "L'entreprise porte le nom du physicien Nikola Tesla."
+ },
+ {
+  "key": "tech-308",
+  "concept": "tech.brands.michelin",
+  "label": "Michelin",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'a d'abord fabriqué l'entreprise française Michelin ?",
+  "options": [
+   "Des pneus*",
+   "Des guides touristiques",
+   "Des voitures",
+   "Des cartes routières"
+  ],
+  "explanation": "Les guides et leurs étoiles sont nés pour donner envie aux automobilistes de rouler… et d'user leurs pneus."
+ },
+ {
+  "key": "tech-309",
+  "concept": "tech.brands.huawei",
+  "label": "Huawei",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel pays vient Huawei ?",
+  "options": [
+   "Chine*",
+   "Corée du Sud",
+   "Japon",
+   "Singapour"
+  ],
+  "explanation": "Fondée en 1987 à Shenzhen."
+ },
+ {
+  "key": "tech-310",
+  "concept": "tech.brands.google_name",
+  "label": "Nom de Google",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quel mot vient le nom « Google » ?",
+  "options": [
+   "Googol, le nombre 10 puissance 100*",
+   "D'un personnage de dessin animé",
+   "Du nom d'un fondateur",
+   "D'une ville"
+  ],
+  "explanation": "Un « googol » s'écrit 1 suivi de 100 zéros : l'idée d'une quantité immense d'informations."
+ },
+ {
+  "key": "tech-311",
+  "concept": "tech.brands.amazon_start",
+  "label": "Amazon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que vendait Amazon à ses débuts, en 1995 ?",
+  "options": [
+   "Des livres*",
+   "Des vêtements",
+   "Des ordinateurs",
+   "De la musique"
+  ],
+  "explanation": "Jeff Bezos a lancé Amazon comme une librairie en ligne."
+ },
+ {
+  "key": "tech-312",
+  "concept": "tech.brands.apple_logo",
+  "label": "Le logo d'Apple",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que représente le logo d'Apple ?",
+  "options": [
+   "Une pomme croquée*",
+   "Une poire",
+   "Une cerise",
+   "Une pomme entière"
+  ],
+  "explanation": "Une pomme avec une bouchée en moins, dessinée par Rob Janoff en 1977."
+ },
+ {
+  "key": "tech-313",
+  "concept": "tech.brands.airbus",
+  "label": "Airbus",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où se trouve le siège d'Airbus pour la fabrication des avions de ligne ?",
+  "options": [
+   "À Toulouse*",
+   "À Paris",
+   "À Hambourg",
+   "À Madrid"
+  ],
+  "explanation": "Airbus est né d'une coopération européenne en 1970 ; ses chaînes principales sont à Toulouse et Hambourg."
+ },
+ {
+  "key": "tech-314",
+  "concept": "tech.brands.instagram",
+  "label": "Instagram",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle entreprise a racheté Instagram en 2012 ?",
+  "options": [
+   "Facebook (Meta)*",
+   "Google",
+   "Twitter",
+   "Apple"
+  ],
+  "explanation": "Pour environ un milliard de dollars, deux ans après son lancement."
+ },
+ {
+  "key": "tech-315",
+  "concept": "tech.brands.youtube",
+  "label": "YouTube",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle entreprise possède YouTube depuis 2006 ?",
+  "options": [
+   "Google*",
+   "Microsoft",
+   "Meta",
+   "Amazon"
+  ],
+  "explanation": "Google l'a racheté un an et demi après sa création."
+ },
+ {
+  "key": "tech-316",
+  "concept": "tech.brands.tiktok",
+  "label": "TikTok",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel pays vient l'entreprise qui a créé TikTok ?",
+  "options": [
+   "Chine*",
+   "États-Unis",
+   "Corée du Sud",
+   "Singapour"
+  ],
+  "explanation": "TikTok appartient à ByteDance, fondée à Pékin en 2012."
+ },
+ {
+  "key": "tech-317",
+  "concept": "tech.brands.renault",
+  "label": "Renault",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a fondé l'entreprise automobile Renault en 1899 ?",
+  "options": [
+   "Les frères Renault*",
+   "Louis Blériot",
+   "André Citroën",
+   "Armand Peugeot"
+  ],
+  "explanation": "Louis, Marcel et Fernand Renault, à Boulogne-Billancourt."
+ },
+ {
+  "key": "tech-318",
+  "concept": "tech.brands.spacex",
+  "label": "SpaceX",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel domaine travaille l'entreprise SpaceX ?",
+  "options": [
+   "Le transport spatial*",
+   "Les réseaux sociaux",
+   "Les voitures électriques",
+   "Les jeux vidéo"
+  ],
+  "explanation": "Fondée par Elon Musk en 2002, elle a développé des fusées réutilisables."
+ },
+ {
+  "key": "tech-319",
+  "concept": "tech.brands.whatsapp",
+  "label": "WhatsApp",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle entreprise possède WhatsApp ?",
+  "options": [
+   "Meta*",
+   "Google",
+   "Apple",
+   "Microsoft"
+  ],
+  "explanation": "Facebook (devenu Meta) l'a racheté en 2014 pour environ 19 milliards de dollars."
+ },
+ {
+  "key": "tech-320",
+  "concept": "tech.brands.windows",
+  "label": "Windows",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle entreprise édite le système d'exploitation Windows ?",
+  "options": [
+   "Microsoft*",
+   "Apple",
+   "IBM",
+   "Google"
+  ],
+  "explanation": "La première version sort en 1985."
+ },
+ {
+  "key": "nat-301",
+  "concept": "nature.marine.blue_whale_size",
+  "label": "Baleine bleue",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle longueur peut atteindre une baleine bleue ?",
+  "options": [
+   "Environ 30 m*",
+   "Environ 10 m",
+   "Environ 50 m",
+   "Environ 5 m"
+  ],
+  "explanation": "Jusqu'à 30 m et 150 tonnes : c'est le plus gros animal ayant jamais vécu."
+ },
+ {
+  "key": "nat-302",
+  "concept": "nature.marine.coral",
+  "label": "Le corail",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que le corail ?",
+  "options": [
+   "Un animal*",
+   "Une plante",
+   "Une roche",
+   "Une algue"
+  ],
+  "explanation": "Des colonies de minuscules animaux, les polypes, qui fabriquent un squelette calcaire."
+ },
+ {
+  "key": "nat-303",
+  "concept": "nature.marine.great_barrier",
+  "label": "Grande Barrière de corail",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Au large de quel pays se trouve la Grande Barrière de corail ?",
+  "options": [
+   "L'Australie*",
+   "L'Indonésie",
+   "Les Philippines",
+   "Le Brésil"
+  ],
+  "explanation": "Plus de 2 300 km de récifs, visibles depuis l'espace."
+ },
+ {
+  "key": "nat-304",
+  "concept": "nature.marine.starfish_arms",
+  "label": "Étoile de mer",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Combien de bras ont la plupart des étoiles de mer ?",
+  "options": [
+   "5*",
+   "4",
+   "6",
+   "8"
+  ],
+  "explanation": "Cinq en général ; certaines espèces en ont bien plus. Un bras perdu peut repousser."
+ },
+ {
+  "key": "nat-305",
+  "concept": "nature.marine.jellyfish",
+  "label": "Méduses",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle particularité a la méduse Turritopsis dohrnii ?",
+  "options": [
+   "Elle peut rajeunir*",
+   "Elle brille dans le noir",
+   "Elle vit hors de l'eau",
+   "Elle n'a pas de tentacules"
+  ],
+  "explanation": "Surnommée « méduse immortelle », elle peut retourner à son stade de jeune polype."
+ },
+ {
+  "key": "nat-306",
+  "concept": "nature.marine.fastest_fish",
+  "label": "Poisson le plus rapide",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel poisson est réputé le plus rapide ?",
+  "options": [
+   "L'espadon voilier*",
+   "Le requin blanc",
+   "Le thon rouge",
+   "Le saumon"
+  ],
+  "explanation": "L'espadon voilier dépasserait 100 km/h en pointe selon certaines mesures."
+ },
+ {
+  "key": "nat-307",
+  "concept": "nature.marine.octopus_ink",
+  "label": "L'encre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi la pieuvre projette-t-elle de l'encre ?",
+  "options": [
+   "Pour échapper à un prédateur*",
+   "Pour chasser",
+   "Pour communiquer",
+   "Pour pondre"
+  ],
+  "explanation": "Le nuage d'encre masque sa fuite et trouble l'odorat du prédateur."
+ },
+ {
+  "key": "nat-308",
+  "concept": "nature.marine.whale_shark",
+  "label": "Le plus gros poisson",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le plus gros poisson du monde ?",
+  "options": [
+   "Le requin-baleine*",
+   "La baleine bleue",
+   "Le grand requin blanc",
+   "La raie manta"
+  ],
+  "explanation": "Jusqu'à une douzaine de mètres. La baleine bleue est un mammifère, pas un poisson."
+ },
+ {
+  "key": "nat-309",
+  "concept": "nature.marine.dolphin_sleep",
+  "label": "Sommeil du dauphin",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le dauphin dort avec une moitié du cerveau éveillée.",
+  "answer": true,
+  "explanation": "Il repose un hémisphère à la fois, pour continuer à respirer et surveiller les alentours."
+ },
+ {
+  "key": "nat-310",
+  "concept": "nature.marine.salmon",
+  "label": "Le saumon",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où le saumon va-t-il pondre ?",
+  "options": [
+   "Dans la rivière où il est né*",
+   "En pleine mer",
+   "Dans les lacs de montagne",
+   "Dans les estuaires"
+  ],
+  "explanation": "Il remonte les rivières sur des centaines de kilomètres pour retrouver son lieu de naissance."
+ },
+ {
+  "key": "nat-311",
+  "concept": "nature.marine.oceans_share",
+  "label": "Surface des océans",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle part de la surface de la Terre les océans recouvrent-ils ?",
+  "options": [
+   "Environ 70 %*",
+   "Environ 50 %",
+   "Environ 90 %",
+   "Environ 30 %"
+  ],
+  "explanation": "Environ 71 %, d'où le surnom de « planète bleue »."
+ },
+ {
+  "key": "nat-312",
+  "concept": "nature.marine.deepest",
+  "label": "Point le plus profond",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'appelle le point le plus profond des océans ?",
+  "options": [
+   "La fosse des Mariannes*",
+   "Le Grand Canyon",
+   "La dorsale atlantique",
+   "Le triangle des Bermudes"
+  ],
+  "explanation": "Près de 11 000 m de profondeur, dans le Pacifique."
+ },
+ {
+  "key": "nat-313",
+  "concept": "nature.marine.sea_turtle",
+  "label": "Tortues marines",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où les tortues marines pondent-elles leurs œufs ?",
+  "options": [
+   "Sur les plages*",
+   "En pleine mer",
+   "Sur les rochers",
+   "Dans les récifs"
+  ],
+  "explanation": "La femelle creuse un nid dans le sable, souvent sur la plage où elle est née."
+ },
+ {
+  "key": "nat-314",
+  "concept": "nature.marine.clownfish_anemone",
+  "label": "Poisson-clown",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Avec quel animal le poisson-clown vit-il en association ?",
+  "options": [
+   "L'anémone de mer*",
+   "La méduse",
+   "Le requin",
+   "L'étoile de mer"
+  ],
+  "explanation": "Protégé par un mucus, il vit entre les tentacules urticants de l'anémone, qui éloignent ses prédateurs."
+ },
+ {
+  "key": "nat-315",
+  "concept": "nature.marine.shark_bones",
+  "label": "Requin",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le requin doit nager en permanence pour respirer, pour la plupart des espèces.",
+  "answer": true,
+  "explanation": "Beaucoup de requins doivent avancer pour faire circuler l'eau dans leurs branchies ; certains peuvent toutefois se poser."
+ },
+ {
+  "key": "nat-316",
+  "concept": "nature.marine.narwhal",
+  "label": "Le narval",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que la « corne » du narval ?",
+  "options": [
+   "Une dent*",
+   "Un os du crâne",
+   "Une corne",
+   "Une nageoire"
+  ],
+  "explanation": "Une défense, qui est une dent pouvant dépasser 2 m. On l'a longtemps crue corne de licorne."
+ },
+ {
+  "key": "nat-317",
+  "concept": "nature.earth.volcano_lava",
+  "label": "Lave",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment appelle-t-on la roche en fusion sous la surface, avant une éruption ?",
+  "options": [
+   "Le magma*",
+   "La lave",
+   "Le basalte",
+   "La cendre"
+  ],
+  "explanation": "On parle de lave une fois qu'elle a atteint la surface."
+ },
+ {
+  "key": "nat-318",
+  "concept": "nature.earth.richter",
+  "label": "Tremblements de terre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que l'échelle de Richter mesure ?",
+  "options": [
+   "La magnitude des séismes*",
+   "La force du vent",
+   "La hauteur des vagues",
+   "La température des volcans"
+  ],
+  "explanation": "Créée en 1935 par Charles Richter. On utilise aujourd'hui surtout la magnitude de moment, mais le principe est le même."
+ },
+ {
+  "key": "nat-319",
+  "concept": "nature.earth.largest_desert",
+  "label": "Plus grand désert chaud",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le plus grand désert chaud du monde ?",
+  "options": [
+   "Le Sahara*",
+   "Le Gobi",
+   "Le Kalahari",
+   "L'Atacama"
+  ],
+  "explanation": "Plus de 9 millions de km². Si l'on compte les déserts froids, l'Antarctique est encore plus vaste."
+ },
+ {
+  "key": "nat-320",
+  "concept": "nature.earth.greenhouse_gas",
+  "label": "Effet de serre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel gaz, émis par la combustion du pétrole et du charbon, renforce le plus l'effet de serre ?",
+  "options": [
+   "Le dioxyde de carbone*",
+   "L'oxygène",
+   "L'azote",
+   "L'hélium"
+  ],
+  "explanation": "Le CO₂ est le principal gaz à effet de serre lié aux activités humaines ; le méthane joue aussi un grand rôle."
+ },
+ {
+  "key": "nat-321",
+  "concept": "nature.earth.seasons",
+  "label": "Les saisons",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qui cause les saisons sur Terre ?",
+  "options": [
+   "L'inclinaison de l'axe de la Terre*",
+   "La distance entre la Terre et le Soleil",
+   "La rotation de la Lune",
+   "Les courants marins"
+  ],
+  "explanation": "L'axe penché d'environ 23° expose chaque hémisphère plus ou moins au Soleil. D'ailleurs, la Terre est au plus près du Soleil… en janvier."
+ },
+ {
+  "key": "nat-322",
+  "concept": "nature.earth.hurricane",
+  "label": "Ouragan",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment appelle-t-on un cyclone tropical dans le Pacifique nord-ouest (Asie) ?",
+  "options": [
+   "Un typhon*",
+   "Une tornade",
+   "Un blizzard",
+   "Une mousson"
+  ],
+  "explanation": "C'est le même phénomène : ouragan dans l'Atlantique, typhon en Asie, cyclone dans l'océan Indien."
+ },
+ {
+  "key": "nat-323",
+  "concept": "nature.earth.layers",
+  "label": "Couches de la Terre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est la couche la plus profonde de la Terre ?",
+  "options": [
+   "Le noyau interne*",
+   "Le manteau",
+   "La croûte",
+   "Le noyau externe"
+  ],
+  "explanation": "Le noyau interne, solide et fait surtout de fer, est aussi chaud que la surface du Soleil."
+ },
+ {
+  "key": "nat-324",
+  "concept": "nature.earth.rainbow",
+  "label": "L'arc-en-ciel",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quoi a-t-on besoin pour voir un arc-en-ciel ?",
+  "options": [
+   "Du soleil et des gouttes d'eau*",
+   "De la neige",
+   "D'un orage sans pluie",
+   "De la lune"
+  ],
+  "explanation": "Les gouttes décomposent la lumière du Soleil, qui doit être dans notre dos."
+ },
+ {
+  "key": "nat-325",
+  "concept": "nature.earth.tallest_mountain",
+  "label": "Plus haut sommet",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le plus haut sommet du monde ?",
+  "options": [
+   "L'Everest*",
+   "Le K2",
+   "Le Kilimandjaro",
+   "Le mont Blanc"
+  ],
+  "explanation": "8 849 m, à la frontière du Népal et de la Chine."
+ },
+ {
+  "key": "nat-326",
+  "concept": "nature.earth.ozone",
+  "label": "La couche d'ozone",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Contre quoi la couche d'ozone nous protège-t-elle ?",
+  "options": [
+   "Les rayons ultraviolets*",
+   "Les météorites",
+   "Le froid",
+   "Les ondes radio"
+  ],
+  "explanation": "Elle filtre une grande partie des UV du Soleil. Le protocole de Montréal (1987) a interdit les gaz qui la détruisaient."
+ },
+ {
+  "key": "nat-327",
+  "concept": "nature.earth.glacier_water",
+  "label": "Eau douce",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Où se trouve la plus grande partie de l'eau douce de la planète ?",
+  "options": [
+   "Dans les glaciers et calottes glaciaires*",
+   "Dans les lacs",
+   "Dans les rivières",
+   "Dans l'atmosphère"
+  ],
+  "explanation": "Environ 70 % de l'eau douce est gelée, surtout en Antarctique et au Groenland."
+ },
+ {
+  "key": "nat-328",
+  "concept": "nature.earth.lightning",
+  "label": "La foudre",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle est, à peu près, la température d'un éclair ?",
+  "options": [
+   "Environ 30 000 °C*",
+   "Environ 300 °C",
+   "Environ 3 000 °C",
+   "Environ 1 000 000 °C"
+  ],
+  "explanation": "Cinq fois plus que la surface du Soleil, pendant une fraction de seconde."
+ },
+ {
+  "key": "nat-329",
+  "concept": "nature.earth.tsunami",
+  "label": "Tsunami",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui provoque le plus souvent un tsunami ?",
+  "options": [
+   "Un séisme sous la mer*",
+   "Une tempête",
+   "La marée",
+   "Le vent"
+  ],
+  "explanation": "Le fond marin se soulève brusquement et déplace une énorme masse d'eau."
+ },
+ {
+  "key": "nat-330",
+  "concept": "nature.earth.pangaea",
+  "label": "La Pangée",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment appelle-t-on le supercontinent qui réunissait les terres il y a 250 millions d'années ?",
+  "options": [
+   "La Pangée*",
+   "L'Atlantide",
+   "Gondwana",
+   "Laurasie"
+  ],
+  "explanation": "Il s'est ensuite divisé en Laurasie au nord et Gondwana au sud."
+ },
+ {
+  "key": "nat-331",
+  "concept": "nature.plants.sunflower_seeds",
+  "label": "Tournesol",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que tire-t-on principalement des graines de tournesol ?",
+  "options": [
+   "De l'huile*",
+   "Du sucre",
+   "De la farine",
+   "Du café"
+  ],
+  "explanation": "L'huile de tournesol est l'une des plus consommées en France."
+ },
+ {
+  "key": "nat-332",
+  "concept": "nature.plants.oldest_tree",
+  "label": "Arbres très anciens",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle espèce d'arbre compte certains des plus vieux individus connus, près de 5 000 ans ?",
+  "options": [
+   "Le pin Bristlecone*",
+   "Le chêne",
+   "Le baobab",
+   "L'olivier"
+  ],
+  "explanation": "Un pin de Californie, Mathusalem, a plus de 4 800 ans."
+ },
+ {
+  "key": "nat-333",
+  "concept": "nature.plants.poison_plant",
+  "label": "Plante toxique",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Laquelle de ces plantes est très toxique ?",
+  "options": [
+   "La digitale*",
+   "La menthe",
+   "Le basilic",
+   "La lavande"
+  ],
+  "explanation": "La digitale contient des substances qui agissent sur le cœur : elle sert aussi, à dose contrôlée, de médicament."
+ },
+ {
+  "key": "nat-334",
+  "concept": "nature.plants.coffee_origin",
+  "label": "Le caféier",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quelle région le caféier est-il originaire ?",
+  "options": [
+   "L'Éthiopie*",
+   "Le Brésil",
+   "La Colombie",
+   "L'Indonésie"
+  ],
+  "explanation": "La légende parle d'un berger éthiopien dont les chèvres s'agitaient après avoir mangé ses baies."
+ },
+ {
+  "key": "nat-335",
+  "concept": "nature.plants.pollination",
+  "label": "Pollinisation",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel insecte est le plus important pollinisateur des cultures ?",
+  "options": [
+   "L'abeille*",
+   "La fourmi",
+   "Le moustique",
+   "La coccinelle"
+  ],
+  "explanation": "Les abeilles transportent le pollen de fleur en fleur ; une grande partie de nos cultures en dépend."
+ },
+ {
+  "key": "nat-336",
+  "concept": "nature.plants.leaf_autumn",
+  "label": "Feuilles d'automne",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi les feuilles jaunissent-elles en automne ?",
+  "options": [
+   "La chlorophylle se dégrade*",
+   "Elles gèlent",
+   "Elles manquent d'eau",
+   "Le soleil les brûle"
+  ],
+  "explanation": "En disparaissant, le vert laisse voir les pigments jaunes et orangés déjà présents."
+ },
+ {
+  "key": "nat-337",
+  "concept": "nature.marine.orca",
+  "label": "L'orque",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quelle famille appartient l'orque (épaulard) ?",
+  "options": [
+   "Aux dauphins*",
+   "Aux baleines à fanons",
+   "Aux requins",
+   "Aux phoques"
+  ],
+  "explanation": "C'est le plus grand membre de la famille des dauphins."
+ },
+ {
+  "key": "nat-338",
+  "concept": "nature.marine.seahorse_father",
+  "label": "L'hippocampe père",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Chez l'hippocampe, qui porte les petits jusqu'à la naissance ?",
+  "options": [
+   "Le mâle*",
+   "La femelle",
+   "Les deux à tour de rôle",
+   "Personne, les œufs flottent"
+  ],
+  "explanation": "La femelle dépose les œufs dans la poche ventrale du mâle."
+ },
+ {
+  "key": "nat-339",
+  "concept": "nature.marine.krill",
+  "label": "Le krill",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quoi se nourrit principalement la baleine bleue ?",
+  "options": [
+   "Du krill*",
+   "De thons",
+   "De phoques",
+   "D'algues"
+  ],
+  "explanation": "De minuscules crustacés : elle peut en avaler plusieurs tonnes par jour, filtrés par ses fanons."
+ },
+ {
+  "key": "nat-340",
+  "concept": "nature.marine.pearl",
+  "label": "Les perles",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel animal fabrique les perles ?",
+  "options": [
+   "L'huître*",
+   "La moule d'eau douce uniquement",
+   "Le crabe",
+   "L'oursin"
+  ],
+  "explanation": "L'huître enrobe de nacre un corps étranger. Certaines moules en produisent aussi."
+ },
+ {
+  "key": "nat-341",
+  "concept": "nature.earth.equator_length",
+  "label": "L'équateur",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle est la longueur approximative de l'équateur ?",
+  "options": [
+   "40 000 km*",
+   "10 000 km",
+   "100 000 km",
+   "25 000 km"
+  ],
+  "explanation": "Environ 40 075 km. Le mètre avait d'ailleurs été défini à partir du tour de la Terre."
+ },
+ {
+  "key": "nat-342",
+  "concept": "nature.earth.coldest",
+  "label": "Le lieu le plus froid",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Où a-t-on mesuré les températures les plus basses sur Terre ?",
+  "options": [
+   "En Antarctique*",
+   "En Sibérie",
+   "Au Groenland",
+   "Au pôle Nord"
+  ],
+  "explanation": "Près de −90 °C à la station russe Vostok, en Antarctique."
+ },
+ {
+  "key": "nat-343",
+  "concept": "nature.earth.aurora",
+  "label": "Aurores polaires",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qui provoque les aurores boréales ?",
+  "options": [
+   "Des particules venues du Soleil*",
+   "La réflexion de la lune sur la glace",
+   "Des éclairs lointains",
+   "Des gaz volcaniques"
+  ],
+  "explanation": "Le vent solaire, guidé par le champ magnétique terrestre, fait briller la haute atmosphère."
+ },
+ {
+  "key": "nat-344",
+  "concept": "nature.earth.amazon_forest",
+  "label": "Forêt amazonienne",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Sur quel continent se trouve la forêt amazonienne ?",
+  "options": [
+   "Amérique du Sud*",
+   "Afrique",
+   "Asie",
+   "Océanie"
+  ],
+  "explanation": "Elle s'étend surtout au Brésil, mais aussi dans huit autres pays."
+ },
+ {
+  "key": "nat-345",
+  "concept": "nature.earth.fog",
+  "label": "Le brouillard",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que le brouillard ?",
+  "options": [
+   "Un nuage au ras du sol*",
+   "De la fumée",
+   "De la pollution",
+   "De la neige fondue"
+  ],
+  "explanation": "Ce sont de fines gouttelettes d'eau en suspension, comme dans un nuage."
+ },
+ {
+  "key": "nat-346",
+  "concept": "nature.earth.active_volcano_fr",
+  "label": "Volcan actif français",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel volcan actif se trouve sur l'île de La Réunion ?",
+  "options": [
+   "Le piton de la Fournaise*",
+   "La montagne Pelée",
+   "Le puy de Dôme",
+   "L'Etna"
+  ],
+  "explanation": "L'un des volcans les plus actifs du monde. La montagne Pelée est en Martinique."
+ }
+]

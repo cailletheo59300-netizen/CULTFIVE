@@ -1,0 +1,432 @@
+[
+ {
+  "key": "glog-001",
+  "concept": "logic.sequences.gen_arith_1",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 8, 11, 14, 17, 20, … ?",
+  "answer": 23,
+  "explanation": "On ajoute 3 à chaque fois : 20 + 3 = 23."
+ },
+ {
+  "key": "glog-002",
+  "concept": "logic.sequences.gen_arith_2",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 4, 10, 16, 22, 28, … ?",
+  "answer": 34,
+  "explanation": "On ajoute 6 à chaque fois : 28 + 6 = 34."
+ },
+ {
+  "key": "glog-003",
+  "concept": "logic.sequences.gen_arith_3",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 40, 49, 58, 67, 76, … ?",
+  "answer": 85,
+  "explanation": "On ajoute 9 à chaque fois : 76 + 9 = 85."
+ },
+ {
+  "key": "glog-004",
+  "concept": "logic.sequences.gen_arith_4",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre suit : 129, 126, 123, 120, 117, … ?",
+  "answer": 114,
+  "explanation": "On retire 3 à chaque fois : 117 − 3 = 114."
+ },
+ {
+  "key": "glog-005",
+  "concept": "logic.sequences.gen_arith_5",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 38, 49, 60, 71, 82, … ?",
+  "answer": 93,
+  "explanation": "On ajoute 11 à chaque fois : 82 + 11 = 93."
+ },
+ {
+  "key": "glog-006",
+  "concept": "logic.sequences.gen_arith_6",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 21, 28, 35, 42, 49, … ?",
+  "answer": 56,
+  "explanation": "On ajoute 7 à chaque fois : 49 + 7 = 56."
+ },
+ {
+  "key": "glog-007",
+  "concept": "logic.sequences.gen_arith_7",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 15, 24, 33, 42, 51, … ?",
+  "answer": 60,
+  "explanation": "On ajoute 9 à chaque fois : 51 + 9 = 60."
+ },
+ {
+  "key": "glog-008",
+  "concept": "logic.sequences.gen_arith_8",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre suit : 109, 102, 95, 88, 81, … ?",
+  "answer": 74,
+  "explanation": "On retire 7 à chaque fois : 81 − 7 = 74."
+ },
+ {
+  "key": "glog-009",
+  "concept": "logic.sequences.gen_arith_9",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 19, 25, 31, 37, 43, … ?",
+  "answer": 49,
+  "explanation": "On ajoute 6 à chaque fois : 43 + 6 = 49."
+ },
+ {
+  "key": "glog-010",
+  "concept": "logic.sequences.gen_arith_10",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 20, 29, 38, 47, 56, … ?",
+  "answer": 65,
+  "explanation": "On ajoute 9 à chaque fois : 56 + 9 = 65."
+ },
+ {
+  "key": "glog-011",
+  "concept": "logic.sequences.gen_arith_11",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 37, 52, 67, 82, 97, … ?",
+  "answer": 112,
+  "explanation": "On ajoute 15 à chaque fois : 97 + 15 = 112."
+ },
+ {
+  "key": "glog-012",
+  "concept": "logic.sequences.gen_arith_12",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre suit : 121, 112, 103, 94, 85, … ?",
+  "answer": 76,
+  "explanation": "On retire 9 à chaque fois : 85 − 9 = 76."
+ },
+ {
+  "key": "glog-013",
+  "concept": "logic.sequences.gen_geom_13",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 36,
+  "prompt": "Quel nombre suit : 2, 4, 8, 16, … ?",
+  "answer": 32,
+  "explanation": "On multiplie par 2 : 16 × 2 = 32."
+ },
+ {
+  "key": "glog-014",
+  "concept": "logic.sequences.gen_geom_14",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 39,
+  "prompt": "Quel nombre suit : 2, 6, 18, 54, … ?",
+  "answer": 162,
+  "explanation": "On multiplie par 3 : 54 × 3 = 162."
+ },
+ {
+  "key": "glog-015",
+  "concept": "logic.sequences.gen_geom_15",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 42,
+  "prompt": "Quel nombre suit : 3, 12, 48, 192, … ?",
+  "answer": 768,
+  "explanation": "On multiplie par 4 : 192 × 4 = 768."
+ },
+ {
+  "key": "glog-016",
+  "concept": "logic.sequences.gen_geom_16",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 2, 10, 50, 250, … ?",
+  "answer": 1250,
+  "explanation": "On multiplie par 5 : 250 × 5 = 1250."
+ },
+ {
+  "key": "glog-017",
+  "concept": "logic.sequences.gen_geom_17",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 36,
+  "prompt": "Quel nombre suit : 5, 10, 20, 40, … ?",
+  "answer": 80,
+  "explanation": "On multiplie par 2 : 40 × 2 = 80."
+ },
+ {
+  "key": "glog-018",
+  "concept": "logic.sequences.gen_geom_18",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 39,
+  "prompt": "Quel nombre suit : 4, 12, 36, 108, … ?",
+  "answer": 324,
+  "explanation": "On multiplie par 3 : 108 × 3 = 324."
+ },
+ {
+  "key": "glog-021",
+  "concept": "logic.sequences.gen_growing_21",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 7, 11, 16, 22, 29, … ?",
+  "answer": 37,
+  "explanation": "Les écarts augmentent de 1 à chaque fois : +4, +5, +6, +7, puis +8. 29 + 8 = 37."
+ },
+ {
+  "key": "glog-022",
+  "concept": "logic.sequences.gen_growing_22",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 7, 9, 12, 16, 21, … ?",
+  "answer": 27,
+  "explanation": "Les écarts augmentent de 1 à chaque fois : +2, +3, +4, +5, puis +6. 21 + 6 = 27."
+ },
+ {
+  "key": "glog-023",
+  "concept": "logic.sequences.gen_growing_23",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 1, 5, 12, 22, 35, … ?",
+  "answer": 51,
+  "explanation": "Les écarts augmentent de 3 à chaque fois : +4, +7, +10, +13, puis +16. 35 + 16 = 51."
+ },
+ {
+  "key": "glog-024",
+  "concept": "logic.sequences.gen_growing_24",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 12, 16, 21, 27, 34, … ?",
+  "answer": 42,
+  "explanation": "Les écarts augmentent de 1 à chaque fois : +4, +5, +6, +7, puis +8. 34 + 8 = 42."
+ },
+ {
+  "key": "glog-025",
+  "concept": "logic.sequences.gen_growing_25",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 17, 18, 21, 26, 33, … ?",
+  "answer": 42,
+  "explanation": "Les écarts augmentent de 2 à chaque fois : +1, +3, +5, +7, puis +9. 33 + 9 = 42."
+ },
+ {
+  "key": "glog-026",
+  "concept": "logic.sequences.gen_growing_26",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 4, 5, 8, 13, 20, … ?",
+  "answer": 29,
+  "explanation": "Les écarts augmentent de 2 à chaque fois : +1, +3, +5, +7, puis +9. 20 + 9 = 29."
+ },
+ {
+  "key": "glog-027",
+  "concept": "logic.sequences.gen_growing_27",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 12, 15, 21, 30, 42, … ?",
+  "answer": 57,
+  "explanation": "Les écarts augmentent de 3 à chaque fois : +3, +6, +9, +12, puis +15. 42 + 15 = 57."
+ },
+ {
+  "key": "glog-028",
+  "concept": "logic.sequences.gen_growing_28",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 18, 20, 24, 30, 38, … ?",
+  "answer": 48,
+  "explanation": "Les écarts augmentent de 2 à chaque fois : +2, +4, +6, +8, puis +10. 38 + 10 = 48."
+ },
+ {
+  "key": "glog-029",
+  "concept": "logic.sequences.gen_interleaved_29",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 6, 34, 9, 28, 12, 22, … ?",
+  "answer": 15,
+  "explanation": "Deux suites alternent : 6, 9, 12… (+3) et 34, 28, 22… (−6). Le suivant appartient à la première : 15."
+ },
+ {
+  "key": "glog-030",
+  "concept": "logic.sequences.gen_interleaved_30",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 3, 48, 7, 43, 11, 38, … ?",
+  "answer": 15,
+  "explanation": "Deux suites alternent : 3, 7, 11… (+4) et 48, 43, 38… (−5). Le suivant appartient à la première : 15."
+ },
+ {
+  "key": "glog-031",
+  "concept": "logic.sequences.gen_interleaved_31",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 7, 27, 10, 25, 13, 23, … ?",
+  "answer": 16,
+  "explanation": "Deux suites alternent : 7, 10, 13… (+3) et 27, 25, 23… (−2). Le suivant appartient à la première : 16."
+ },
+ {
+  "key": "glog-032",
+  "concept": "logic.sequences.gen_interleaved_32",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 1, 40, 3, 36, 5, 32, … ?",
+  "answer": 7,
+  "explanation": "Deux suites alternent : 1, 3, 5… (+2) et 40, 36, 32… (−4). Le suivant appartient à la première : 7."
+ },
+ {
+  "key": "glog-033",
+  "concept": "logic.sequences.gen_interleaved_33",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 3, 28, 8, 22, 13, 16, … ?",
+  "answer": 18,
+  "explanation": "Deux suites alternent : 3, 8, 13… (+5) et 28, 22, 16… (−6). Le suivant appartient à la première : 18."
+ },
+ {
+  "key": "glog-034",
+  "concept": "logic.sequences.gen_interleaved_34",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 9, 33, 11, 29, 13, 25, … ?",
+  "answer": 15,
+  "explanation": "Deux suites alternent : 9, 11, 13… (+2) et 33, 29, 25… (−4). Le suivant appartient à la première : 15."
+ },
+ {
+  "key": "glog-035",
+  "concept": "logic.sequences.gen_double_35",
+  "label": "Doubler et ajuster",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 2, 5, 11, 23, 47, … ?",
+  "answer": 95,
+  "explanation": "On double puis on ajoute 1 : 47 × 2 + 1 = 95."
+ },
+ {
+  "key": "glog-036",
+  "concept": "logic.sequences.gen_double_36",
+  "label": "Doubler et ajuster",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 3, 8, 18, 38, 78, … ?",
+  "answer": 158,
+  "explanation": "On double puis on ajoute 2 : 78 × 2 + 2 = 158."
+ },
+ {
+  "key": "glog-037",
+  "concept": "logic.sequences.gen_double_37",
+  "label": "Doubler et ajuster",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 1, 5, 13, 29, 61, … ?",
+  "answer": 125,
+  "explanation": "On double puis on ajoute 3 : 61 × 2 + 3 = 125."
+ },
+ {
+  "key": "glog-038",
+  "concept": "logic.sequences.gen_double_38",
+  "label": "Doubler et ajuster",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 1, 1, 1, 1, 1, … ?",
+  "answer": 1,
+  "explanation": "On double puis on retire 1 : 1 × 2 − 1 = 1."
+ },
+ {
+  "key": "glog-039",
+  "concept": "logic.sequences.gen_double_39",
+  "label": "Doubler et ajuster",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 5, 11, 23, 47, 95, … ?",
+  "answer": 191,
+  "explanation": "On double puis on ajoute 1 : 95 × 2 + 1 = 191."
+ },
+ {
+  "key": "glog-040",
+  "concept": "logic.sequences.gen_double_40",
+  "label": "Doubler et ajuster",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 6, 14, 30, 62, 126, … ?",
+  "answer": 254,
+  "explanation": "On double puis on ajoute 2 : 126 × 2 + 2 = 254."
+ },
+ {
+  "key": "glog-041",
+  "concept": "logic.sequences.gen_squares_41",
+  "label": "Carrés décalés",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Quel nombre suit : 22, 31, 42, 55, 70, … ?",
+  "answer": 87,
+  "explanation": "Ce sont les carrés plus 6 : 4², 5²… donc 9² + 6 = 87."
+ },
+ {
+  "key": "glog-042",
+  "concept": "logic.sequences.gen_squares_42",
+  "label": "Carrés décalés",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Quel nombre suit : 5, 12, 21, 32, 45, … ?",
+  "answer": 60,
+  "explanation": "Ce sont les carrés moins 4 : 3², 4²… donc 8² − 4 = 60."
+ },
+ {
+  "key": "glog-043",
+  "concept": "logic.sequences.gen_squares_43",
+  "label": "Carrés décalés",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Quel nombre suit : 16, 23, 32, 43, 56, … ?",
+  "answer": 71,
+  "explanation": "Ce sont les carrés plus 7 : 3², 4²… donc 8² + 7 = 71."
+ },
+ {
+  "key": "glog-044",
+  "concept": "logic.sequences.gen_squares_44",
+  "label": "Carrés décalés",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Quel nombre suit : 22, 33, 46, 61, 78, … ?",
+  "answer": 97,
+  "explanation": "Ce sont les carrés moins 3 : 5², 6²… donc 10² − 3 = 97."
+ },
+ {
+  "key": "glog-045",
+  "concept": "logic.sequences.gen_squares_45",
+  "label": "Carrés décalés",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Quel nombre suit : 10, 15, 22, 31, 42, … ?",
+  "answer": 55,
+  "explanation": "Ce sont les carrés plus 6 : 2², 3²… donc 7² + 6 = 55."
+ }
+]

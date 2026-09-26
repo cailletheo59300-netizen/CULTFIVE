@@ -1,0 +1,587 @@
+[
+ {
+  "key": "nat-401",
+  "concept": "nature.animals.class_crocodile",
+  "label": "Classe : le crocodile",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Le crocodile est…",
+  "options": [
+   "Reptile*",
+   "Amphibien",
+   "Mammifère",
+   "Poisson"
+  ],
+  "explanation": "Écailles, œufs pondus à terre, sang froid : un reptile, cousin lointain des oiseaux."
+ },
+ {
+  "key": "nat-402",
+  "concept": "nature.animals.class_ostrich",
+  "label": "Classe : l'autruche",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "L'autruche est…",
+  "options": [
+   "Oiseau*",
+   "Mammifère",
+   "Reptile",
+   "Insecte"
+  ],
+  "explanation": "Un oiseau qui ne vole pas, mais court très vite."
+ },
+ {
+  "key": "nat-403",
+  "concept": "nature.animals.class_toad",
+  "label": "Classe : le crapaud",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Le crapaud est…",
+  "options": [
+   "Amphibien*",
+   "Reptile",
+   "Mammifère",
+   "Insecte"
+  ],
+  "explanation": "Comme la grenouille : peau nue, têtards dans l'eau."
+ },
+ {
+  "key": "nat-404",
+  "concept": "nature.animals.class_shark",
+  "label": "Classe : le requin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Le requin est…",
+  "options": [
+   "Poisson*",
+   "Mammifère",
+   "Reptile",
+   "Amphibien"
+  ],
+  "explanation": "Un poisson cartilagineux, qui respire avec des branchies."
+ },
+ {
+  "key": "nat-405",
+  "concept": "nature.animals.class_ant",
+  "label": "Classe : la fourmi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "La fourmi est…",
+  "options": [
+   "Insecte*",
+   "Arachnide",
+   "Crustacé",
+   "Mollusque"
+  ],
+  "explanation": "Six pattes et un corps en trois parties : tête, thorax, abdomen."
+ },
+ {
+  "key": "nat-406",
+  "concept": "nature.animals.class_scorpion",
+  "label": "Classe : le scorpion",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le scorpion est…",
+  "options": [
+   "Arachnide*",
+   "Insecte",
+   "Crustacé",
+   "Reptile"
+  ],
+  "explanation": "Huit pattes comme l'araignée : c'est un arachnide, pas un insecte."
+ },
+ {
+  "key": "nat-407",
+  "concept": "nature.animals.class_crab",
+  "label": "Classe : le crabe",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Le crabe est…",
+  "options": [
+   "Crustacé*",
+   "Insecte",
+   "Mollusque",
+   "Arachnide"
+  ],
+  "explanation": "Comme la crevette et le homard : carapace et dix pattes."
+ },
+ {
+  "key": "nat-408",
+  "concept": "nature.animals.class_snake",
+  "label": "Classe : le serpent",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Le serpent est…",
+  "options": [
+   "Reptile*",
+   "Amphibien",
+   "Mammifère",
+   "Poisson"
+  ],
+  "explanation": "Un reptile sans pattes, qui mue en changeant de peau."
+ },
+ {
+  "key": "nat-409",
+  "concept": "nature.animals.class_hedgehog",
+  "label": "Classe : le hérisson",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Le hérisson est…",
+  "options": [
+   "Mammifère*",
+   "Reptile",
+   "Oiseau",
+   "Insecte"
+  ],
+  "explanation": "Ses piquants sont des poils durcis. Il allaite ses petits."
+ },
+ {
+  "key": "nat-410",
+  "concept": "nature.animals.class_kiwi_bird",
+  "label": "Classe : le kiwi (de Nouvelle-Zélande)",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le kiwi (de Nouvelle-Zélande) est…",
+  "options": [
+   "Oiseau*",
+   "Mammifère",
+   "Reptile",
+   "Insecte"
+  ],
+  "explanation": "Un petit oiseau qui ne vole pas, emblème de la Nouvelle-Zélande."
+ },
+ {
+  "key": "nat-411",
+  "concept": "nature.animals.marsupial",
+  "label": "Marsupiaux",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Lequel de ces animaux est un marsupial ?",
+  "options": [
+   "Le kangourou*",
+   "Le panda",
+   "Le lémurien",
+   "Le paresseux"
+  ],
+  "explanation": "Les marsupiaux, comme le kangourou et le koala, portent leurs petits dans une poche."
+ },
+ {
+  "key": "nat-412",
+  "concept": "nature.animals.nocturnal",
+  "label": "Animal nocturne",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Lequel de ces animaux vit surtout la nuit ?",
+  "options": [
+   "La chouette*",
+   "L'aigle",
+   "Le pigeon",
+   "Le moineau"
+  ],
+  "explanation": "Ses grands yeux et son ouïe très fine lui permettent de chasser dans le noir."
+ },
+ {
+  "key": "nat-413",
+  "concept": "nature.animals.hibernation",
+  "label": "Hibernation",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Lequel de ces animaux hiberne en hiver ?",
+  "options": [
+   "La marmotte*",
+   "Le renard",
+   "Le cerf",
+   "Le loup"
+  ],
+  "explanation": "La marmotte peut dormir jusqu'à six mois, son cœur ralentissant fortement."
+ },
+ {
+  "key": "nat-414",
+  "concept": "nature.animals.giraffe_tongue",
+  "label": "La girafe",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quelle couleur est la langue de la girafe ?",
+  "options": [
+   "Bleu-noir*",
+   "Rose",
+   "Rouge vif",
+   "Blanche"
+  ],
+  "explanation": "Longue d'environ 50 cm, sa couleur foncée la protégerait des coups de soleil."
+ },
+ {
+  "key": "nat-415",
+  "concept": "nature.animals.elephant_trunk",
+  "label": "La trompe",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "La trompe de l'éléphant est à la fois…",
+  "options": [
+   "Son nez et sa lèvre supérieure*",
+   "Sa langue",
+   "Une dent",
+   "Une oreille"
+  ],
+  "explanation": "Elle contient des dizaines de milliers de muscles et sert à respirer, boire et saisir."
+ },
+ {
+  "key": "nat-416",
+  "concept": "nature.animals.bat_echolocation",
+  "label": "Écholocalisation",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment la chauve-souris se repère-t-elle dans le noir ?",
+  "options": [
+   "Par écholocalisation*",
+   "Grâce à ses yeux uniquement",
+   "À l'odorat",
+   "Grâce aux étoiles"
+  ],
+  "explanation": "Elle émet des ultrasons et écoute leur écho pour localiser obstacles et proies."
+ },
+ {
+  "key": "nat-417",
+  "concept": "nature.animals.lion_group",
+  "label": "Groupe de lions",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment appelle-t-on un groupe de lions ?",
+  "options": [
+   "Une troupe*",
+   "Une meute",
+   "Un banc",
+   "Un essaim"
+  ],
+  "explanation": "On parle de troupe de lions, de meute de loups, de banc de poissons et d'essaim d'abeilles."
+ },
+ {
+  "key": "nat-418",
+  "concept": "nature.animals.sloth",
+  "label": "Le paresseux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi appelle-t-on le paresseux ainsi ?",
+  "options": [
+   "Il se déplace très lentement*",
+   "Il dort 23 h par jour",
+   "Il ne mange jamais",
+   "Il ne sort pas de son terrier"
+  ],
+  "explanation": "Il économise son énergie : ses feuilles sont peu nourrissantes. Il dort environ 15 h par jour."
+ },
+ {
+  "key": "nat-419",
+  "concept": "nature.animals.penguin_home",
+  "label": "Manchots",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quel hémisphère vivent presque tous les manchots ?",
+  "options": [
+   "L'hémisphère sud*",
+   "L'hémisphère nord",
+   "Les deux autant",
+   "À l'équateur seulement"
+  ],
+  "explanation": "Surtout en Antarctique et dans les mers froides du Sud. Il n'y en a pas au pôle Nord."
+ },
+ {
+  "key": "nat-420",
+  "concept": "nature.animals.polar_bear_skin",
+  "label": "Ours polaire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quelle couleur est la peau de l'ours polaire, sous sa fourrure ?",
+  "options": [
+   "Noire*",
+   "Blanche",
+   "Rose",
+   "Grise"
+  ],
+  "explanation": "Sa peau noire absorbe la chaleur ; ses poils sont transparents et creux."
+ },
+ {
+  "key": "fr-401",
+  "concept": "french.vocabulary.ubiquite",
+  "label": "Ubiquité",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que signifie « avoir le don d'ubiquité » ?",
+  "options": [
+   "Être à plusieurs endroits à la fois*",
+   "Tout savoir",
+   "Parler plusieurs langues",
+   "Ne jamais dormir"
+  ],
+  "explanation": "Du latin ubique, « partout »."
+ },
+ {
+  "key": "fr-402",
+  "concept": "french.vocabulary.philanthrope",
+  "label": "Philanthrope",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'un philanthrope ?",
+  "options": [
+   "Une personne qui aide les autres*",
+   "Un collectionneur de timbres",
+   "Un amoureux des livres",
+   "Un ennemi de l'humanité"
+  ],
+  "explanation": "Du grec philos (qui aime) et anthrôpos (homme). Le misanthrope est l'inverse."
+ },
+ {
+  "key": "fr-403",
+  "concept": "french.vocabulary.oxymore",
+  "label": "Oxymore",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est un exemple d'oxymore ?",
+  "options": [
+   "« Une obscure clarté »*",
+   "« Un pied de table »",
+   "« Monter en haut »",
+   "« Rapide comme l'éclair »"
+  ],
+  "explanation": "L'oxymore associe deux mots contraires. « Monter en haut » est un pléonasme, « rapide comme l'éclair » une comparaison."
+ },
+ {
+  "key": "fr-404",
+  "concept": "french.vocabulary.pleonasme",
+  "label": "Pléonasme",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Laquelle de ces expressions est un pléonasme ?",
+  "options": [
+   "« Descendre en bas »*",
+   "« Descendre l'escalier »",
+   "« Monter la garde »",
+   "« Tomber de haut »"
+  ],
+  "explanation": "Descendre, c'est déjà aller en bas : le mot « en bas » répète l'idée inutilement."
+ },
+ {
+  "key": "fr-405",
+  "concept": "french.vocabulary.cacophonie",
+  "label": "Cacophonie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'une cacophonie ?",
+  "options": [
+   "Un mélange de sons désagréables*",
+   "Une belle mélodie",
+   "Un silence total",
+   "Un chant d'oiseau"
+  ],
+  "explanation": "Du grec kakos (mauvais) et phônê (voix, son)."
+ },
+ {
+  "key": "fr-406",
+  "concept": "french.vocabulary.hippodrome",
+  "label": "Hippodrome",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que fait-on dans un hippodrome ?",
+  "options": [
+   "Des courses de chevaux*",
+   "Des spectacles d'hippopotames",
+   "Du patin à glace",
+   "Des concerts"
+  ],
+  "explanation": "Du grec hippos, le cheval. On le retrouve dans hippopotame, « cheval du fleuve »."
+ },
+ {
+  "key": "fr-407",
+  "concept": "french.vocabulary.polyglotte",
+  "label": "Polyglotte",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'une personne polyglotte ?",
+  "options": [
+   "Qui parle plusieurs langues*",
+   "Qui a beaucoup d'amis",
+   "Qui voyage beaucoup",
+   "Qui mange de tout"
+  ],
+  "explanation": "Du grec polus (nombreux) et glôtta (langue)."
+ },
+ {
+  "key": "fr-408",
+  "concept": "french.vocabulary.chronophage",
+  "label": "Chronophage",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Une activité « chronophage »…",
+  "options": [
+   "Prend beaucoup de temps*",
+   "Coûte cher",
+   "Fatigue les yeux",
+   "Se fait la nuit"
+  ],
+  "explanation": "Du grec khronos (temps) et phagein (manger) : elle « mange » du temps."
+ },
+ {
+  "key": "fr-409",
+  "concept": "french.synonyms.antonym_optimiste",
+  "label": "Contraire d'optimiste",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le contraire de « optimiste » ?",
+  "options": [
+   "Pessimiste*",
+   "Réaliste",
+   "Enthousiaste",
+   "Joyeux"
+  ],
+  "explanation": "Le pessimiste voit le mauvais côté des choses."
+ },
+ {
+  "key": "fr-410",
+  "concept": "french.synonyms.intrepide",
+  "label": "Intrépide",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est un synonyme de « intrépide » ?",
+  "options": [
+   "Courageux*",
+   "Peureux",
+   "Maladroit",
+   "Silencieux"
+  ],
+  "explanation": "Intrépide : qui ne craint pas le danger."
+ },
+ {
+  "key": "fr-411",
+  "concept": "french.synonyms.antonym_modeste",
+  "label": "Contraire de modeste",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le contraire de « modeste » ?",
+  "options": [
+   "Vaniteux*",
+   "Humble",
+   "Discret",
+   "Simple"
+  ],
+  "explanation": "Humble, discret et simple sont proches de modeste."
+ },
+ {
+  "key": "fr-412",
+  "concept": "french.synonyms.onereux",
+  "label": "Onéreux",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que signifie « onéreux » ?",
+  "options": [
+   "Coûteux*",
+   "Lourd",
+   "Honorable",
+   "Ennuyeux"
+  ],
+  "explanation": "Un voyage onéreux coûte cher. À ne pas confondre avec « honorable »."
+ },
+ {
+  "key": "fr-413",
+  "concept": "french.synonyms.antonym_abondant",
+  "label": "Contraire d'abondant",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le contraire de « abondant » ?",
+  "options": [
+   "Rare*",
+   "Nombreux",
+   "Copieux",
+   "Fréquent"
+  ],
+  "explanation": "Rare : qui existe en petite quantité."
+ },
+ {
+  "key": "fr-414",
+  "concept": "french.synonyms.vehement",
+  "label": "Véhément",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est un synonyme de « véhément » ?",
+  "options": [
+   "Emporté*",
+   "Rapide",
+   "Discret",
+   "Poli"
+  ],
+  "explanation": "Un discours véhément est plein de passion et de force."
+ },
+ {
+  "key": "fr-415",
+  "concept": "french.spelling.accueil",
+  "label": "Orthographe : accueil",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle est l'orthographe correcte ?",
+  "options": [
+   "Accueil*",
+   "Acceuil",
+   "Accueuil",
+   "Acueil"
+  ],
+  "explanation": "Après c ou g, on écrit « ue » pour garder le son dur : accueil, cueillir, orgueil."
+ },
+ {
+  "key": "fr-417",
+  "concept": "french.spelling.au_temps_pour_moi",
+  "label": "Au temps pour moi",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle est l'orthographe traditionnelle de l'expression qui reconnaît une erreur ?",
+  "options": [
+   "Au temps pour moi*",
+   "Autant pour moi",
+   "Au tant pour moi",
+   "Autemps pour moi"
+  ],
+  "explanation": "Elle viendrait du commandement militaire « au temps ! » (reprenez le mouvement). « Autant pour moi » est toutefois accepté par beaucoup de dictionnaires."
+ },
+ {
+  "key": "fr-418",
+  "concept": "french.expressions.poudre_aux_yeux",
+  "label": "Jeter de la poudre aux yeux",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que veut dire « jeter de la poudre aux yeux » ?",
+  "options": [
+   "Chercher à éblouir, à faire illusion*",
+   "Aveugler quelqu'un",
+   "Pleurer",
+   "Se maquiller"
+  ],
+  "explanation": "Chercher à impressionner par des apparences trompeuses."
+ },
+ {
+  "key": "fr-419",
+  "concept": "french.expressions.revenons_a_nos_moutons",
+  "label": "Revenons à nos moutons",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que veut dire « revenons à nos moutons » ?",
+  "options": [
+   "Revenons au sujet*",
+   "Rentrons à la ferme",
+   "Comptons les participants",
+   "Allons dormir"
+  ],
+  "explanation": "L'expression vient de la Farce de maître Pathelin, au XVᵉ siècle."
+ },
+ {
+  "key": "fr-420",
+  "concept": "french.expressions.coute_les_yeux",
+  "label": "Coûter les yeux de la tête",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « coûter les yeux de la tête » ?",
+  "options": [
+   "Coûter très cher*",
+   "Fatiguer les yeux",
+   "Faire peur",
+   "Être invisible"
+  ],
+  "explanation": "Ce qui coûte si cher qu'on donnerait ses yeux pour l'obtenir."
+ }
+]

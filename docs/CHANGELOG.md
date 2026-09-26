@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0 — thèmes et contenu
+- Thèmes réorganisés : 3 à 5 par domaine, chacun ≥ ~20 questions. Histoire par époques (date → période), Géographie en 5 thèmes, Logique + Énigmes, nouveaux thèmes Mythologie, Architecture, Champions, Acteurs, Animation, Entreprises & marques, Vie marine, Planète & climat.
+- +727 questions : Wikidata (lunes, points culminants, décennies de films, castings), 43 suites logiques calculées, ~400 questions écrites à la main. Banque : 3 870.
+- Démo : 8 questions par thème, liste des thèmes à jour.
+
 ## 0.6.0 — le jeu normal, cohérent
 - Toucher un domaine ouvre le **choix de partie** : **partie classée** (10 questions adaptées, le niveau bouge) ou **entraînement libre** (5/10/20/30 questions, chrono 20 s optionnel, difficulté Mon niveau/Débutant/Intermédiaire/Expert, niveau inchangé, moitié d'XP, pas de graines, erreurs suivies).
 - **Thèmes** : tout mélanger, un seul ou plusieurs (sous-thèmes jouables uniquement, ≥ 5 questions).

@@ -1,284 +1,296 @@
 [
- {
-  "id": "arts.painting",
-  "name": "Peinture",
-  "sort": 0,
-  "domain_id": "arts"
- },
- {
-  "id": "arts.literature",
-  "name": "Littérature",
-  "sort": 1,
-  "domain_id": "arts"
- },
- {
-  "id": "arts.architecture",
-  "name": "Architecture",
-  "sort": 2,
-  "domain_id": "arts"
- },
- {
-  "id": "calc.mental",
-  "name": "Calcul mental",
-  "sort": 0,
-  "domain_id": "calc"
- },
- {
-  "id": "calc.percent",
-  "name": "Pourcentages",
-  "sort": 1,
-  "domain_id": "calc"
- },
- {
-  "id": "calc.fractions",
-  "name": "Fractions",
-  "sort": 2,
-  "domain_id": "calc"
- },
- {
-  "id": "calc.conversions",
-  "name": "Conversions",
-  "sort": 3,
-  "domain_id": "calc"
- },
- {
-  "id": "calc.number_logic",
-  "name": "Logique numérique",
-  "sort": 4,
-  "domain_id": "calc"
- },
- {
-  "id": "cinema.films",
-  "name": "Films",
-  "sort": 0,
-  "domain_id": "cinema"
- },
- {
-  "id": "cinema.directors",
-  "name": "Réalisateurs",
-  "sort": 1,
-  "domain_id": "cinema"
- },
- {
-  "id": "french.vocabulary",
-  "name": "Vocabulaire",
-  "sort": 0,
-  "domain_id": "french"
- },
- {
-  "id": "french.synonyms",
-  "name": "Synonymes",
-  "sort": 1,
-  "domain_id": "french"
- },
- {
-  "id": "french.antonyms",
-  "name": "Antonymes",
-  "sort": 2,
-  "domain_id": "french"
- },
- {
-  "id": "french.spelling",
-  "name": "Orthographe",
-  "sort": 3,
-  "domain_id": "french"
- },
- {
-  "id": "french.expressions",
-  "name": "Expressions",
-  "sort": 4,
-  "domain_id": "french"
- },
- {
-  "id": "french.grammar",
-  "name": "Grammaire",
-  "sort": 5,
-  "domain_id": "french"
- },
- {
-  "id": "geography.capitals",
-  "name": "Capitales",
-  "sort": 0,
-  "domain_id": "geography"
- },
- {
-  "id": "geography.flags",
-  "name": "Drapeaux",
-  "sort": 1,
-  "domain_id": "geography"
- },
- {
-  "id": "geography.location",
-  "name": "Localisation",
-  "sort": 2,
-  "domain_id": "geography"
- },
- {
-  "id": "geography.countries",
-  "name": "Pays",
-  "sort": 3,
-  "domain_id": "geography"
- },
- {
-  "id": "geography.borders",
-  "name": "Frontières",
-  "sort": 4,
-  "domain_id": "geography"
- },
- {
-  "id": "geography.relief",
-  "name": "Reliefs",
-  "sort": 5,
-  "domain_id": "geography"
- },
- {
-  "id": "geography.oceans",
-  "name": "Océans & fleuves",
-  "sort": 6,
-  "domain_id": "geography"
- },
- {
-  "id": "geography.monuments",
-  "name": "Monuments",
-  "sort": 7,
-  "domain_id": "geography"
- },
- {
-  "id": "history.antiquity",
-  "name": "Antiquité",
-  "sort": 0,
-  "domain_id": "history"
- },
- {
-  "id": "history.middle_ages",
-  "name": "Moyen Âge",
-  "sort": 1,
-  "domain_id": "history"
- },
- {
-  "id": "history.modern",
-  "name": "Temps modernes",
-  "sort": 2,
-  "domain_id": "history"
- },
- {
-  "id": "history.contemporary",
-  "name": "Époque contemporaine",
-  "sort": 3,
-  "domain_id": "history"
- },
- {
-  "id": "history.figures",
-  "name": "Personnages",
-  "sort": 4,
-  "domain_id": "history"
- },
- {
-  "id": "history.dates",
-  "name": "Dates",
-  "sort": 5,
-  "domain_id": "history"
- },
- {
-  "id": "logic.sequences",
-  "name": "Suites",
-  "sort": 0,
-  "domain_id": "logic"
- },
- {
-  "id": "logic.reasoning",
-  "name": "Raisonnement",
-  "sort": 1,
-  "domain_id": "logic"
- },
- {
-  "id": "music.classical",
-  "name": "Classique",
-  "sort": 0,
-  "domain_id": "music"
- },
- {
-  "id": "music.popular",
-  "name": "Musiques populaires",
-  "sort": 1,
-  "domain_id": "music"
- },
- {
-  "id": "music.instruments",
-  "name": "Instruments",
-  "sort": 2,
-  "domain_id": "music"
- },
- {
-  "id": "nature.animals",
-  "name": "Animaux",
-  "sort": 0,
-  "domain_id": "nature"
- },
- {
-  "id": "nature.plants",
-  "name": "Plantes",
-  "sort": 1,
-  "domain_id": "nature"
- },
- {
-  "id": "science.physics",
-  "name": "Physique",
-  "sort": 0,
-  "domain_id": "science"
- },
- {
-  "id": "science.chemistry",
-  "name": "Chimie",
-  "sort": 1,
-  "domain_id": "science"
- },
- {
-  "id": "science.biology",
-  "name": "Biologie",
-  "sort": 2,
-  "domain_id": "science"
- },
- {
-  "id": "science.space",
-  "name": "Espace",
-  "sort": 3,
-  "domain_id": "science"
- },
- {
-  "id": "science.human_body",
-  "name": "Corps humain",
-  "sort": 4,
-  "domain_id": "science"
- },
- {
-  "id": "sport.football",
-  "name": "Football",
-  "sort": 0,
-  "domain_id": "sport"
- },
- {
-  "id": "sport.olympics",
-  "name": "Jeux olympiques",
-  "sort": 1,
-  "domain_id": "sport"
- },
- {
-  "id": "sport.rules",
-  "name": "Règles & records",
-  "sort": 2,
-  "domain_id": "sport"
- },
- {
-  "id": "tech.computing",
-  "name": "Informatique",
-  "sort": 0,
-  "domain_id": "tech"
- },
- {
-  "id": "tech.inventions",
-  "name": "Inventions",
-  "sort": 1,
-  "domain_id": "tech"
- }
+    {
+        "id": "arts.painting",
+        "name": "Peinture",
+        "sort": 0,
+        "domain_id": "arts"
+    },
+    {
+        "id": "arts.literature",
+        "name": "Littérature",
+        "sort": 1,
+        "domain_id": "arts"
+    },
+    {
+        "id": "arts.architecture",
+        "name": "Architecture",
+        "sort": 2,
+        "domain_id": "arts"
+    },
+    {
+        "id": "arts.mythology",
+        "name": "Mythologie",
+        "sort": 3,
+        "domain_id": "arts"
+    },
+    {
+        "id": "calc.mental",
+        "name": "Calcul mental",
+        "sort": 0,
+        "domain_id": "calc"
+    },
+    {
+        "id": "calc.percent",
+        "name": "Pourcentages",
+        "sort": 1,
+        "domain_id": "calc"
+    },
+    {
+        "id": "calc.fractions",
+        "name": "Fractions",
+        "sort": 2,
+        "domain_id": "calc"
+    },
+    {
+        "id": "calc.conversions",
+        "name": "Conversions",
+        "sort": 3,
+        "domain_id": "calc"
+    },
+    {
+        "id": "calc.number_logic",
+        "name": "Logique numérique",
+        "sort": 4,
+        "domain_id": "calc"
+    },
+    {
+        "id": "cinema.films",
+        "name": "Films",
+        "sort": 0,
+        "domain_id": "cinema"
+    },
+    {
+        "id": "cinema.directors",
+        "name": "Réalisateurs",
+        "sort": 1,
+        "domain_id": "cinema"
+    },
+    {
+        "id": "cinema.actors",
+        "name": "Acteurs & actrices",
+        "sort": 2,
+        "domain_id": "cinema"
+    },
+    {
+        "id": "cinema.animation",
+        "name": "Animation",
+        "sort": 3,
+        "domain_id": "cinema"
+    },
+    {
+        "id": "french.vocabulary",
+        "name": "Vocabulaire",
+        "sort": 0,
+        "domain_id": "french"
+    },
+    {
+        "id": "french.synonyms",
+        "name": "Synonymes & contraires",
+        "sort": 1,
+        "domain_id": "french"
+    },
+    {
+        "id": "french.spelling",
+        "name": "Orthographe",
+        "sort": 2,
+        "domain_id": "french"
+    },
+    {
+        "id": "french.expressions",
+        "name": "Expressions",
+        "sort": 3,
+        "domain_id": "french"
+    },
+    {
+        "id": "french.grammar",
+        "name": "Grammaire",
+        "sort": 4,
+        "domain_id": "french"
+    },
+    {
+        "id": "geography.capitals",
+        "name": "Capitales",
+        "sort": 0,
+        "domain_id": "geography"
+    },
+    {
+        "id": "geography.flags",
+        "name": "Drapeaux",
+        "sort": 1,
+        "domain_id": "geography"
+    },
+    {
+        "id": "geography.countries",
+        "name": "Pays & villes",
+        "sort": 2,
+        "domain_id": "geography"
+    },
+    {
+        "id": "geography.relief",
+        "name": "Fleuves, mers & reliefs",
+        "sort": 3,
+        "domain_id": "geography"
+    },
+    {
+        "id": "geography.monuments",
+        "name": "Monuments & patrimoine",
+        "sort": 4,
+        "domain_id": "geography"
+    },
+    {
+        "id": "history.antiquity",
+        "name": "Antiquité",
+        "sort": 0,
+        "domain_id": "history"
+    },
+    {
+        "id": "history.middle_ages",
+        "name": "Moyen Âge",
+        "sort": 1,
+        "domain_id": "history"
+    },
+    {
+        "id": "history.modern",
+        "name": "Temps modernes",
+        "sort": 2,
+        "domain_id": "history"
+    },
+    {
+        "id": "history.contemporary",
+        "name": "Époque contemporaine",
+        "sort": 3,
+        "domain_id": "history"
+    },
+    {
+        "id": "logic.sequences",
+        "name": "Suites",
+        "sort": 0,
+        "domain_id": "logic"
+    },
+    {
+        "id": "logic.reasoning",
+        "name": "Raisonnement",
+        "sort": 1,
+        "domain_id": "logic"
+    },
+    {
+        "id": "logic.puzzles",
+        "name": "Énigmes",
+        "sort": 2,
+        "domain_id": "logic"
+    },
+    {
+        "id": "music.classical",
+        "name": "Classique",
+        "sort": 0,
+        "domain_id": "music"
+    },
+    {
+        "id": "music.popular",
+        "name": "Musiques populaires",
+        "sort": 1,
+        "domain_id": "music"
+    },
+    {
+        "id": "music.instruments",
+        "name": "Instruments",
+        "sort": 2,
+        "domain_id": "music"
+    },
+    {
+        "id": "nature.animals",
+        "name": "Animaux",
+        "sort": 0,
+        "domain_id": "nature"
+    },
+    {
+        "id": "nature.plants",
+        "name": "Plantes",
+        "sort": 1,
+        "domain_id": "nature"
+    },
+    {
+        "id": "nature.marine",
+        "name": "Vie marine",
+        "sort": 2,
+        "domain_id": "nature"
+    },
+    {
+        "id": "nature.earth",
+        "name": "Planète & climat",
+        "sort": 3,
+        "domain_id": "nature"
+    },
+    {
+        "id": "science.physics",
+        "name": "Physique",
+        "sort": 0,
+        "domain_id": "science"
+    },
+    {
+        "id": "science.chemistry",
+        "name": "Chimie",
+        "sort": 1,
+        "domain_id": "science"
+    },
+    {
+        "id": "science.biology",
+        "name": "Biologie",
+        "sort": 2,
+        "domain_id": "science"
+    },
+    {
+        "id": "science.space",
+        "name": "Espace",
+        "sort": 3,
+        "domain_id": "science"
+    },
+    {
+        "id": "science.human_body",
+        "name": "Corps humain",
+        "sort": 4,
+        "domain_id": "science"
+    },
+    {
+        "id": "sport.football",
+        "name": "Football",
+        "sort": 0,
+        "domain_id": "sport"
+    },
+    {
+        "id": "sport.olympics",
+        "name": "Jeux olympiques",
+        "sort": 1,
+        "domain_id": "sport"
+    },
+    {
+        "id": "sport.rules",
+        "name": "Règles & records",
+        "sort": 2,
+        "domain_id": "sport"
+    },
+    {
+        "id": "sport.champions",
+        "name": "Champions",
+        "sort": 3,
+        "domain_id": "sport"
+    },
+    {
+        "id": "tech.computing",
+        "name": "Informatique",
+        "sort": 0,
+        "domain_id": "tech"
+    },
+    {
+        "id": "tech.inventions",
+        "name": "Inventions",
+        "sort": 1,
+        "domain_id": "tech"
+    },
+    {
+        "id": "tech.brands",
+        "name": "Entreprises & marques",
+        "sort": 2,
+        "domain_id": "tech"
+    }
 ]

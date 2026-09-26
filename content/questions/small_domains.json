@@ -91,7 +91,7 @@
  },
  {
   "key": "logic-209",
-  "concept": "logic.reasoning.clock_three",
+  "concept": "logic.puzzles.clock_three",
   "label": "Angle à 3 h",
   "type": "numeric",
   "difficulty": 30,
@@ -102,7 +102,7 @@
  },
  {
   "key": "logic-210",
-  "concept": "logic.reasoning.clock_quarter",
+  "concept": "logic.puzzles.clock_quarter",
   "label": "Angle à 3 h 15",
   "type": "mcq",
   "difficulty": 72,
@@ -117,7 +117,7 @@
  },
  {
   "key": "logic-211",
-  "concept": "logic.reasoning.age_double",
+  "concept": "logic.puzzles.age_double",
   "label": "Âge double",
   "type": "numeric",
   "difficulty": 55,
@@ -128,7 +128,7 @@
  },
  {
   "key": "logic-213",
-  "concept": "logic.reasoning.snail_well",
+  "concept": "logic.puzzles.snail_well",
   "label": "L'escargot dans le puits",
   "type": "numeric",
   "difficulty": 65,
@@ -159,7 +159,7 @@
  },
  {
   "key": "logic-216",
-  "concept": "logic.reasoning.fifth_daughter",
+  "concept": "logic.puzzles.fifth_daughter",
   "label": "La 5e fille",
   "type": "mcq",
   "difficulty": 30,
@@ -174,7 +174,7 @@
  },
  {
   "key": "logic-217",
-  "concept": "logic.reasoning.squares_grid",
+  "concept": "logic.puzzles.squares_grid",
   "label": "Carrés dans une grille",
   "type": "numeric",
   "difficulty": 60,
@@ -184,7 +184,7 @@
  },
  {
   "key": "logic-218",
-  "concept": "logic.reasoning.machines",
+  "concept": "logic.puzzles.machines",
   "label": "Machines et gadgets",
   "type": "numeric",
   "difficulty": 60,
@@ -576,21 +576,6 @@
    "Avec des branchies et des poumons"
   ],
   "explanation": "Le dauphin est un mammifère : il remonte respirer à la surface par l'évent, sur le dessus de sa tête."
- },
- {
-  "key": "nat-230",
-  "concept": "nature.plants.photosynthesis_oxygen",
-  "label": "Photosynthèse",
-  "type": "mcq",
-  "difficulty": 25,
-  "prompt": "Quel gaz les plantes rejettent-elles grâce à la photosynthèse ?",
-  "options": [
-   "Le dioxygène*",
-   "Le dioxyde de carbone",
-   "L'azote",
-   "L'hélium"
-  ],
-  "explanation": "Avec la lumière, la plante transforme l'eau et le CO₂ en sucres, et rejette du dioxygène."
  },
  {
   "key": "nat-231",

@@ -19,7 +19,6 @@
 
 Écrites à la main plutôt que générées : **nature** (Wikidata donne des noms latins et classe les oiseaux parmi les reptiles au sens cladistique — piège pour un quiz), **logique**, informatique, règles du sport, musique classique (`content/questions/small_domains.json`, 96 questions).
 
-État : **3 143 questions** (2 694 générées + 449 curées). Par domaine : géographie 1 544 · histoire 499 · arts 301 · musique 207 · sport 110 · sciences 92 · calcul 88 · français 86 · tech 81 · cinéma 59 · nature 46 · logique 30.
 
 ## Format (auteur)
 ```json
@@ -52,3 +51,11 @@ Règles éditoriales :
 1. Plus de types non-QCM en Français et Histoire (variété du Daily).
 2. ≥ 60 questions par pilier avant le lancement (le Daily évite la réutilisation à 180 j ; avec ~25/pilier, la variété est garantie ~1 mois puis se relâche proprement).
 3. Doublons de concepts (mêmes connaissances, formulations différentes) pour « Mes erreurs ».
+
+## Thèmes (0.7)
+Chaque domaine a 3 à 5 thèmes d'au moins ~20 questions (taxonomie `content/taxonomy.json`) :
+Calcul (calcul mental, pourcentages, fractions, conversions, logique numérique) · Français (vocabulaire, synonymes & contraires, orthographe, expressions, grammaire) · Géographie (capitales, drapeaux, pays & villes, fleuves/mers/reliefs, monuments) · Histoire (Antiquité, Moyen Âge, Temps modernes, époque contemporaine — classement par date : `eraOf` dans le générateur) · Sciences (physique, chimie, biologie, espace, corps humain) · Logique (suites, raisonnement, énigmes) · Arts (peinture, littérature, architecture, mythologie) · Sport (football, JO, règles, champions) · Cinéma (films, réalisateurs, acteurs, animation) · Musique (classique, populaires, instruments) · Tech (informatique, inventions, entreprises & marques) · Nature (animaux, plantes, vie marine, planète & climat).
+
+Sources ajoutées : Wikidata (lunes → planète, point culminant des pays, décennie de sortie des films, castings — caméos exclus), suites logiques calculées (`scripts/gen-logic.mjs`), et ~400 questions écrites et relues (`themes_*.json`). Écartés de Wikidata faute de fiabilité : architectes (attributions erronées), œuvres musicales (musiques de films mêlées), sportifs (requêtes instables) — écrits à la main.
+
+État : **3 870 questions**. Par domaine : géographie 1 680 · histoire 511 · arts 339 · cinéma 272 · musique 217 · sciences 172 · sport 133 · français 122 · nature 111 · calcul 110 · logique 103 · tech 101.

@@ -19,7 +19,7 @@
   {"key":"logic-101","concept":"logic.sequences.squares","label":"Suite des carrés","type":"numeric","difficulty":35,
    "prompt":"Quel nombre suit : 1, 4, 9, 16, 25, … ?","answer":36,
    "explanation":"Ce sont les carrés : 1², 2², 3², 4², 5², puis 6² = 36."},
-  {"key":"logic-102","concept":"logic.reasoning.socks","label":"Les chaussettes","type":"numeric","difficulty":55,
+  {"key":"logic-102","concept":"logic.puzzles.socks","label":"Les chaussettes","type":"numeric","difficulty":55,
    "prompt":"Un tiroir contient des chaussettes noires et blanches, mélangées. Dans le noir, combien faut-il en prendre au minimum pour être sûr d'avoir une paire de la même couleur ?","answer":3,
    "explanation":"Avec 2 chaussettes, on peut tomber sur une noire et une blanche. La 3e forme forcément une paire avec l'une des deux."},
   {"key":"logic-103","concept":"logic.reasoning.days_after","label":"Jour de la semaine","type":"mcq","difficulty":50,

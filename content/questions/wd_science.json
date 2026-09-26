@@ -1330,5 +1330,473 @@
   "family": "element",
   "source": "Wikidata",
   "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q15034",
+  "concept": "science.space.moon_mimas",
+  "label": "Lune Mimas",
+  "type": "mcq",
+  "difficulty": 67,
+  "prompt": "Autour de quelle planète tourne la lune Mimas ?",
+  "options": [
+   "Saturne*",
+   "Jupiter",
+   "Neptune",
+   "Mars"
+  ],
+  "explanation": "Mimas est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q15037",
+  "concept": "science.space.moon_hyperion",
+  "label": "Lune Hypérion",
+  "type": "mcq",
+  "difficulty": 69,
+  "prompt": "Hypérion est un satellite naturel de…",
+  "options": [
+   "Saturne*",
+   "Jupiter",
+   "Uranus",
+   "Mars"
+  ],
+  "explanation": "Hypérion est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q15040",
+  "concept": "science.space.moon_dione",
+  "label": "Lune Dioné",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Autour de quelle planète tourne la lune Dioné ?",
+  "options": [
+   "Saturne*",
+   "Neptune",
+   "Jupiter",
+   "Mars"
+  ],
+  "explanation": "Dioné est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q15047",
+  "concept": "science.space.moon_tethys",
+  "label": "Lune Téthys",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Téthys est un satellite naturel de…",
+  "options": [
+   "Saturne*",
+   "Uranus",
+   "Mars",
+   "Neptune"
+  ],
+  "explanation": "Téthys est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q15050",
+  "concept": "science.space.moon_rhea",
+  "label": "Lune Rhéa",
+  "type": "mcq",
+  "difficulty": 67,
+  "prompt": "Rhéa est un satellite naturel de…",
+  "options": [
+   "Saturne*",
+   "Uranus",
+   "Neptune",
+   "Mars"
+  ],
+  "explanation": "Rhéa est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q16076",
+  "concept": "science.space.moon_nereide",
+  "label": "Lune Néréide",
+  "type": "mcq",
+  "difficulty": 69,
+  "prompt": "Néréide est un satellite naturel de…",
+  "options": [
+   "Neptune*",
+   "Jupiter",
+   "Mars",
+   "Saturne"
+  ],
+  "explanation": "Néréide est un satellite naturel de Neptune.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q16081",
+  "concept": "science.space.moon_protee",
+  "label": "Lune Protée",
+  "type": "mcq",
+  "difficulty": 69,
+  "prompt": "Protée est un satellite naturel de…",
+  "options": [
+   "Neptune*",
+   "Saturne",
+   "Mars",
+   "Uranus"
+  ],
+  "explanation": "Protée est un satellite naturel de Neptune.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q16755",
+  "concept": "science.space.moon_metis",
+  "label": "Lune Métis",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Métis est un satellite naturel de…",
+  "options": [
+   "Jupiter*",
+   "Mars",
+   "Uranus",
+   "Neptune"
+  ],
+  "explanation": "Métis est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q16757",
+  "concept": "science.space.moon_adrastee",
+  "label": "Lune Adrastée",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Adrastée est un satellite naturel de…",
+  "options": [
+   "Jupiter*",
+   "Saturne",
+   "Uranus",
+   "Neptune"
+  ],
+  "explanation": "Adrastée est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q16765",
+  "concept": "science.space.moon_thebe",
+  "label": "Lune Thébé",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Thébé est un satellite naturel de…",
+  "options": [
+   "Jupiter*",
+   "Saturne",
+   "Uranus",
+   "Neptune"
+  ],
+  "explanation": "Thébé est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q17958",
+  "concept": "science.space.moon_japet",
+  "label": "Lune Japet",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Autour de quelle planète tourne la lune Japet ?",
+  "options": [
+   "Saturne*",
+   "Neptune",
+   "Jupiter",
+   "Uranus"
+  ],
+  "explanation": "Japet est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q2565",
+  "concept": "science.space.moon_titan",
+  "label": "Lune Titan",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Titan est un satellite naturel de…",
+  "options": [
+   "Saturne*",
+   "Uranus",
+   "Jupiter",
+   "Mars"
+  ],
+  "explanation": "Titan est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3123",
+  "concept": "science.space.moon_io",
+  "label": "Lune Io",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Io est un satellite naturel de…",
+  "options": [
+   "Jupiter*",
+   "Uranus",
+   "Mars",
+   "Neptune"
+  ],
+  "explanation": "Io est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3134",
+  "concept": "science.space.moon_callisto",
+  "label": "Lune Callisto",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Autour de quelle planète tourne la lune Callisto ?",
+  "options": [
+   "Jupiter*",
+   "Neptune",
+   "Saturne",
+   "Uranus"
+  ],
+  "explanation": "Callisto est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3143",
+  "concept": "science.space.moon_europe",
+  "label": "Lune Europe",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Autour de quelle planète tourne la lune Europe ?",
+  "options": [
+   "Jupiter*",
+   "Neptune",
+   "Mars",
+   "Saturne"
+  ],
+  "explanation": "Europe est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3169",
+  "concept": "science.space.moon_ganymede",
+  "label": "Lune Ganymède",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Ganymède est un satellite naturel de…",
+  "options": [
+   "Jupiter*",
+   "Neptune",
+   "Mars",
+   "Uranus"
+  ],
+  "explanation": "Ganymède est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3257",
+  "concept": "science.space.moon_amalthee",
+  "label": "Lune Amalthée",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Autour de quelle planète tourne la lune Amalthée ?",
+  "options": [
+   "Jupiter*",
+   "Mars",
+   "Uranus",
+   "Saturne"
+  ],
+  "explanation": "Amalthée est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3303",
+  "concept": "science.space.moon_encelade",
+  "label": "Lune Encelade",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Encelade est un satellite naturel de…",
+  "options": [
+   "Saturne*",
+   "Uranus",
+   "Jupiter",
+   "Mars"
+  ],
+  "explanation": "Encelade est un satellite naturel de Saturne.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3322",
+  "concept": "science.space.moon_titania",
+  "label": "Lune Titania",
+  "type": "mcq",
+  "difficulty": 67,
+  "prompt": "Autour de quelle planète tourne la lune Titania ?",
+  "options": [
+   "Uranus*",
+   "Neptune",
+   "Saturne",
+   "Jupiter"
+  ],
+  "explanation": "Titania est un satellite naturel d'Uranus. Les lunes d'Uranus portent des noms de personnages de Shakespeare et de Pope.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3332",
+  "concept": "science.space.moon_oberon",
+  "label": "Lune Obéron",
+  "type": "mcq",
+  "difficulty": 67,
+  "prompt": "Obéron est un satellite naturel de…",
+  "options": [
+   "Uranus*",
+   "Saturne",
+   "Mars",
+   "Neptune"
+  ],
+  "explanation": "Obéron est un satellite naturel d'Uranus. Les lunes d'Uranus portent des noms de personnages de Shakespeare et de Pope.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3338",
+  "concept": "science.space.moon_umbriel",
+  "label": "Lune Umbriel",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Umbriel est un satellite naturel de…",
+  "options": [
+   "Uranus*",
+   "Jupiter",
+   "Neptune",
+   "Saturne"
+  ],
+  "explanation": "Umbriel est un satellite naturel d'Uranus. Les lunes d'Uranus portent des noms de personnages de Shakespeare et de Pope.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3343",
+  "concept": "science.space.moon_ariel",
+  "label": "Lune Ariel",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Autour de quelle planète tourne la lune Ariel ?",
+  "options": [
+   "Uranus*",
+   "Jupiter",
+   "Neptune",
+   "Mars"
+  ],
+  "explanation": "Ariel est un satellite naturel d'Uranus. Les lunes d'Uranus portent des noms de personnages de Shakespeare et de Pope.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3352",
+  "concept": "science.space.moon_miranda",
+  "label": "Lune Miranda",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Autour de quelle planète tourne la lune Miranda ?",
+  "options": [
+   "Uranus*",
+   "Neptune",
+   "Jupiter",
+   "Saturne"
+  ],
+  "explanation": "Miranda est un satellite naturel d'Uranus. Les lunes d'Uranus portent des noms de personnages de Shakespeare et de Pope.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q3359",
+  "concept": "science.space.moon_triton",
+  "label": "Lune Triton",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Triton est un satellite naturel de…",
+  "options": [
+   "Neptune*",
+   "Mars",
+   "Uranus",
+   "Saturne"
+  ],
+  "explanation": "Triton est un satellite naturel de Neptune.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q7547",
+  "concept": "science.space.moon_phobos",
+  "label": "Lune Phobos",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Phobos est un satellite naturel de…",
+  "options": [
+   "Mars*",
+   "Jupiter",
+   "Neptune",
+   "Saturne"
+  ],
+  "explanation": "Phobos est un satellite naturel de Mars.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-moon-Q7548",
+  "concept": "science.space.moon_deimos",
+  "label": "Lune Déimos",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Autour de quelle planète tourne la lune Déimos ?",
+  "options": [
+   "Mars*",
+   "Jupiter",
+   "Neptune",
+   "Saturne"
+  ],
+  "explanation": "Déimos est un satellite naturel de Mars.",
+  "family": "moon",
+  "source": "Wikidata",
+  "origin": "import"
  }
 ]

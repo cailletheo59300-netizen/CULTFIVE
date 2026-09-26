@@ -1,0 +1,854 @@
+[
+ {
+  "key": "calc-301",
+  "concept": "calc.percent.twenty_of_150",
+  "label": "20 % de 150",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien font 20 % de 150 ?",
+  "answer": 30,
+  "explanation": "20 %, c'est un cinquième : 150 ÷ 5 = 30."
+ },
+ {
+  "key": "calc-302",
+  "concept": "calc.percent.discount_80",
+  "label": "Soldes -25 %",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Un pull coûte 80 €. Avec une remise de 25 %, combien le paies-tu ?",
+  "answer": 60,
+  "explanation": "25 % de 80 = 20 € de remise, donc 80 − 20 = 60 €.",
+  "unit": "€"
+ },
+ {
+  "key": "calc-303",
+  "concept": "calc.percent.increase_then_decrease",
+  "label": "Hausse puis baisse",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Un prix de 100 € augmente de 10 %, puis baisse de 10 %. Quel est le nouveau prix ?",
+  "answer": 99,
+  "explanation": "100 → 110 € (+10 %), puis 110 − 11 = 99 € : la baisse s'applique à un montant plus grand.",
+  "unit": "€"
+ },
+ {
+  "key": "calc-304",
+  "concept": "calc.percent.what_percent",
+  "label": "Quel pourcentage ?",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "15 élèves sur 60 portent des lunettes. Quel pourcentage cela représente-t-il ?",
+  "answer": 25,
+  "explanation": "15 ÷ 60 = 0,25, soit 25 %.",
+  "unit": "%"
+ },
+ {
+  "key": "calc-305",
+  "concept": "calc.percent.vat",
+  "label": "Prix TTC",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un objet coûte 50 € hors taxes. Avec une TVA de 20 %, quel est son prix TTC ?",
+  "options": [
+   "60 €*",
+   "55 €",
+   "70 €",
+   "52 €"
+  ],
+  "explanation": "50 × 1,2 = 60 €."
+ },
+ {
+  "key": "calc-306",
+  "concept": "calc.percent.double_discount",
+  "label": "Deux remises",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Deux remises successives de 50 % sur un article à 200 €. Quel est le prix final ?",
+  "answer": 50,
+  "explanation": "200 → 100 €, puis 100 → 50 € : deux fois 50 % ne font pas 100 %.",
+  "unit": "€"
+ },
+ {
+  "key": "calc-307",
+  "concept": "calc.fractions.half_plus_quarter",
+  "label": "1/2 + 1/4",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien font 1/2 + 1/4, en écriture décimale ?",
+  "answer": 0.75,
+  "explanation": "1/2 = 2/4, donc 2/4 + 1/4 = 3/4 = 0,75."
+ },
+ {
+  "key": "calc-308",
+  "concept": "calc.fractions.compare",
+  "label": "Comparer des fractions",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle fraction est la plus grande ?",
+  "options": [
+   "3/4*",
+   "2/3",
+   "5/8",
+   "7/12"
+  ],
+  "explanation": "En décimal : 3/4 = 0,75 ; 2/3 ≈ 0,67 ; 5/8 = 0,625 ; 7/12 ≈ 0,58."
+ },
+ {
+  "key": "calc-309",
+  "concept": "calc.fractions.third_of_90",
+  "label": "Un tiers de 90",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien vaut le tiers de 90 ?",
+  "answer": 30,
+  "explanation": "90 ÷ 3 = 30."
+ },
+ {
+  "key": "calc-310",
+  "concept": "calc.fractions.two_fifths",
+  "label": "Deux cinquièmes",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien font les 2/5 de 45 ?",
+  "answer": 18,
+  "explanation": "Un cinquième de 45 = 9, donc deux cinquièmes = 18."
+ },
+ {
+  "key": "calc-312",
+  "concept": "calc.fractions.pizza",
+  "label": "Parts de pizza",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Une pizza est coupée en 8 parts. Tu en manges 3, ton ami 2. Combien de parts restent ?",
+  "answer": 3,
+  "explanation": "8 − 3 − 2 = 3 parts, soit 3/8 de la pizza."
+ },
+ {
+  "key": "calc-313",
+  "concept": "calc.fractions.decimal_0_2",
+  "label": "0,2 en fraction",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quelle fraction correspond 0,2 ?",
+  "options": [
+   "1/5*",
+   "1/2",
+   "2/5",
+   "1/20"
+  ],
+  "explanation": "0,2 = 2/10 = 1/5."
+ },
+ {
+  "key": "calc-314",
+  "concept": "calc.fractions.divide_by_fraction",
+  "label": "Diviser par une fraction",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien font 6 ÷ 1/3 ?",
+  "answer": 18,
+  "explanation": "Diviser par 1/3, c'est multiplier par 3 : 6 × 3 = 18."
+ },
+ {
+  "key": "calc-315",
+  "concept": "calc.fractions.half_of_half",
+  "label": "La moitié de la moitié",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "La moitié de la moitié, c'est le quart.",
+  "answer": true,
+  "explanation": "1/2 × 1/2 = 1/4."
+ },
+ {
+  "key": "calc-316",
+  "concept": "calc.conversions.km_m",
+  "label": "Kilomètres en mètres",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de mètres dans 2,5 km ?",
+  "answer": 2500,
+  "explanation": "1 km = 1 000 m, donc 2,5 km = 2 500 m.",
+  "unit": "m"
+ },
+ {
+  "key": "calc-317",
+  "concept": "calc.conversions.hours_minutes",
+  "label": "Heures en minutes",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de minutes dans 2 h 15 ?",
+  "answer": 135,
+  "explanation": "2 × 60 + 15 = 135 minutes.",
+  "unit": "minutes"
+ },
+ {
+  "key": "calc-318",
+  "concept": "calc.conversions.liters_cl",
+  "label": "Litres en centilitres",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de centilitres dans 1,5 litre ?",
+  "answer": 150,
+  "explanation": "1 L = 100 cL, donc 1,5 L = 150 cL.",
+  "unit": "cL"
+ },
+ {
+  "key": "calc-319",
+  "concept": "calc.conversions.seconds_day",
+  "label": "Secondes dans une journée",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de secondes compte une journée de 24 heures ?",
+  "answer": 86400,
+  "explanation": "24 × 60 × 60 = 86 400 secondes.",
+  "unit": "s"
+ },
+ {
+  "key": "calc-320",
+  "concept": "calc.conversions.m2_ha",
+  "label": "L'hectare",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À combien de mètres carrés correspond un hectare ?",
+  "options": [
+   "10 000 m²*",
+   "1 000 m²",
+   "100 m²",
+   "100 000 m²"
+  ],
+  "explanation": "Un hectare, c'est un carré de 100 m de côté : 100 × 100 = 10 000 m²."
+ },
+ {
+  "key": "calc-321",
+  "concept": "calc.conversions.kmh_ms",
+  "label": "km/h en m/s",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Une voiture roule à 36 km/h. Combien de mètres parcourt-elle en une seconde ?",
+  "answer": 10,
+  "explanation": "36 000 m en 3 600 s, soit 10 m/s. Astuce : on divise les km/h par 3,6.",
+  "unit": "m"
+ },
+ {
+  "key": "calc-322",
+  "concept": "calc.number_logic.even_times_odd",
+  "label": "Pair × impair",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Le produit d'un nombre pair et d'un nombre impair est toujours…",
+  "options": [
+   "Pair*",
+   "Impair",
+   "Premier",
+   "Un carré"
+  ],
+  "explanation": "Un facteur 2 suffit : 4 × 3 = 12, 6 × 5 = 30."
+ },
+ {
+  "key": "calc-323",
+  "concept": "calc.number_logic.sum_1_to_100",
+  "label": "Somme de 1 à 100",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien fait 1 + 2 + 3 + … + 100 ?",
+  "answer": 5050,
+  "explanation": "On regroupe 1 + 100, 2 + 99… : 50 paires de 101 = 5 050 (l'astuce attribuée au jeune Gauss)."
+ },
+ {
+  "key": "fr-301",
+  "concept": "french.synonyms.laconique",
+  "label": "Laconique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est un synonyme de « laconique » ?",
+  "options": [
+   "Bref*",
+   "Bavard",
+   "Lent",
+   "Triste"
+  ],
+  "explanation": "Laconique : qui s'exprime en peu de mots, comme les Laconiens de Sparte, réputés pour leur concision."
+ },
+ {
+  "key": "fr-302",
+  "concept": "french.synonyms.perspicace",
+  "label": "Perspicace",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est un synonyme de « perspicace » ?",
+  "options": [
+   "Clairvoyant*",
+   "Obstiné",
+   "Maladroit",
+   "Distrait"
+  ],
+  "explanation": "Est perspicace celui qui comprend vite ce qui échappe aux autres."
+ },
+ {
+  "key": "fr-303",
+  "concept": "french.synonyms.antonym_timide",
+  "label": "Contraire de timide",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le contraire de « timide » ?",
+  "options": [
+   "Audacieux*",
+   "Réservé",
+   "Discret",
+   "Craintif"
+  ],
+  "explanation": "Réservé, discret et craintif sont proches de timide ; audacieux en est l'opposé."
+ },
+ {
+  "key": "fr-304",
+  "concept": "french.synonyms.antonym_generosity",
+  "label": "Contraire de généreux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le contraire de « généreux » ?",
+  "options": [
+   "Avare*",
+   "Prodigue",
+   "Charitable",
+   "Altruiste"
+  ],
+  "explanation": "Prodigue, charitable et altruiste vont dans le sens de généreux ; avare est l'inverse."
+ },
+ {
+  "key": "fr-305",
+  "concept": "french.synonyms.desuet",
+  "label": "Désuet",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est un synonyme de « désuet » ?",
+  "options": [
+   "Démodé*",
+   "Désert",
+   "Désolé",
+   "Déçu"
+  ],
+  "explanation": "Désuet : qui n'est plus en usage, passé de mode."
+ },
+ {
+  "key": "fr-306",
+  "concept": "french.synonyms.antonym_concave",
+  "label": "Contraire de concave",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le contraire de « concave » ?",
+  "options": [
+   "Convexe*",
+   "Creux",
+   "Plat",
+   "Oblong"
+  ],
+  "explanation": "Concave : creusé vers l'intérieur (comme un bol). Convexe : bombé vers l'extérieur."
+ },
+ {
+  "key": "fr-307",
+  "concept": "french.synonyms.fortuit",
+  "label": "Fortuit",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est un synonyme de « fortuit » ?",
+  "options": [
+   "Accidentel*",
+   "Fort",
+   "Riche",
+   "Prévu"
+  ],
+  "explanation": "Fortuit : qui arrive par hasard. Le contraire serait « prévu »."
+ },
+ {
+  "key": "fr-308",
+  "concept": "french.expressions.poser_un_lapin",
+  "label": "Poser un lapin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire « poser un lapin » ?",
+  "options": [
+   "Ne pas venir à un rendez-vous*",
+   "Offrir un cadeau",
+   "Partir en courant",
+   "Faire une blague"
+  ],
+  "explanation": "L'expression, du XIXᵉ siècle, désignait d'abord le fait de ne pas payer une faveur."
+ },
+ {
+  "key": "fr-309",
+  "concept": "french.expressions.tomber_dans_les_pommes",
+  "label": "Tomber dans les pommes",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire « tomber dans les pommes » ?",
+  "options": [
+   "S'évanouir*",
+   "Se tromper",
+   "Avoir de la chance",
+   "Tomber amoureux"
+  ],
+  "explanation": "On la rattache souvent à « être dans les pâmes » (pâmoison), déformé en « pommes »."
+ },
+ {
+  "key": "fr-311",
+  "concept": "french.expressions.mettre_la_main_a_la_pate",
+  "label": "Mettre la main à la pâte",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire « mettre la main à la pâte » ?",
+  "options": [
+   "Participer au travail*",
+   "Cuisiner un gâteau",
+   "Voler quelque chose",
+   "Se salir"
+  ],
+  "explanation": "Image du boulanger qui pétrit lui-même : on aide concrètement."
+ },
+ {
+  "key": "fr-312",
+  "concept": "french.expressions.pleuvoir_des_cordes",
+  "label": "Il pleut des cordes",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « il pleut des cordes » ?",
+  "options": [
+   "Il pleut très fort*",
+   "Il pleut un peu",
+   "Il va pleuvoir",
+   "Il grêle"
+  ],
+  "explanation": "Les filets de pluie sont si serrés qu'on dirait des cordes."
+ },
+ {
+  "key": "fr-313",
+  "concept": "french.expressions.avoir_un_poil_dans_la_main",
+  "label": "Un poil dans la main",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que veut dire « avoir un poil dans la main » ?",
+  "options": [
+   "Être paresseux*",
+   "Être très poilu",
+   "Être habile",
+   "Être frileux"
+  ],
+  "explanation": "La main qui ne travaille jamais aurait le temps d'y laisser pousser un poil."
+ },
+ {
+  "key": "fr-314",
+  "concept": "french.expressions.faire_la_grasse_matinee",
+  "label": "Grasse matinée",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « faire la grasse matinée » ?",
+  "options": [
+   "Dormir tard le matin*",
+   "Manger copieusement",
+   "Se lever tôt",
+   "Travailler le matin"
+  ],
+  "explanation": "« Gras » avait autrefois le sens de confortable, abondant."
+ },
+ {
+  "key": "fr-315",
+  "concept": "french.expressions.chercher_la_petite_bete",
+  "label": "Chercher la petite bête",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que veut dire « chercher la petite bête » ?",
+  "options": [
+   "Chercher le moindre défaut*",
+   "Aller à la pêche",
+   "Avoir peur des insectes",
+   "Chercher un animal perdu"
+  ],
+  "explanation": "On traque le plus petit détail qui cloche."
+ },
+ {
+  "key": "fr-316",
+  "concept": "french.expressions.en_faire_tout_un_fromage",
+  "label": "En faire tout un fromage",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que veut dire « en faire tout un fromage » ?",
+  "options": [
+   "Exagérer l'importance d'une chose*",
+   "Cuisiner",
+   "Se réjouir",
+   "Partager"
+  ],
+  "explanation": "Transformer un peu de lait en fromage demande beaucoup d'efforts : on fait une histoire de peu de chose."
+ },
+ {
+  "key": "fr-317",
+  "concept": "french.grammar.leur_leurs",
+  "label": "Leur ou leurs",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle phrase est correcte ?",
+  "options": [
+   "Je leur ai donné leurs cadeaux.*",
+   "Je leurs ai donné leur cadeaux.",
+   "Je leurs ai donné leurs cadeaux.",
+   "Je leur ai donné leur cadeaux."
+  ],
+  "explanation": "Devant un verbe, « leur » (pronom) est invariable. Devant un nom pluriel, « leurs » (déterminant) prend un s."
+ },
+ {
+  "key": "fr-318",
+  "concept": "french.grammar.participe_avoir",
+  "label": "Accord avec avoir",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle phrase est correcte ?",
+  "options": [
+   "Les pommes que j'ai mangées étaient bonnes.*",
+   "Les pommes que j'ai mangé étaient bonnes.",
+   "Les pommes que j'ai mangés étaient bonnes.",
+   "Les pommes que j'ai mangées était bonnes."
+  ],
+  "explanation": "Avec avoir, le participe s'accorde avec le complément d'objet direct placé avant : « que » = les pommes."
+ },
+ {
+  "key": "logic-301",
+  "concept": "logic.sequences.plus_seven",
+  "label": "Suite +7",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre suit : 3, 10, 17, 24, … ?",
+  "answer": 31,
+  "explanation": "On ajoute 7 à chaque fois : 24 + 7 = 31."
+ },
+ {
+  "key": "logic-302",
+  "concept": "logic.sequences.alternating",
+  "label": "Suite alternée",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 1, 10, 2, 20, 3, 30, … ?",
+  "answer": 4,
+  "explanation": "Deux suites entrelacées : 1, 2, 3, 4… et 10, 20, 30…"
+ },
+ {
+  "key": "logic-303",
+  "concept": "logic.sequences.fibonacci_like",
+  "label": "Somme des deux précédents",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 2, 3, 5, 8, 13, … ?",
+  "answer": 21,
+  "explanation": "Chaque terme est la somme des deux précédents : 8 + 13 = 21."
+ },
+ {
+  "key": "logic-304",
+  "concept": "logic.sequences.triangular",
+  "label": "Nombres triangulaires",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 1, 3, 6, 10, 15, … ?",
+  "answer": 21,
+  "explanation": "On ajoute 2, 3, 4, 5, puis 6 : ce sont les nombres triangulaires."
+ },
+ {
+  "key": "logic-305",
+  "concept": "logic.sequences.months_letters",
+  "label": "J, F, M, A, M…",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle lettre suit : J, F, M, A, M, J, J, … ?",
+  "options": [
+   "A*",
+   "S",
+   "O",
+   "J"
+  ],
+  "explanation": "Initiales des mois : janvier… juillet, puis août."
+ },
+ {
+  "key": "logic-306",
+  "concept": "logic.sequences.times_three",
+  "label": "Suite ×3",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Quel nombre suit : 2, 6, 18, 54, … ?",
+  "answer": 162,
+  "explanation": "On multiplie par 3 : 54 × 3 = 162."
+ },
+ {
+  "key": "logic-307",
+  "concept": "logic.sequences.minus_growing",
+  "label": "Soustractions croissantes",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre suit : 100, 99, 97, 94, 90, … ?",
+  "answer": 85,
+  "explanation": "On retire 1, 2, 3, 4, puis 5 : 90 − 5 = 85."
+ },
+ {
+  "key": "logic-308",
+  "concept": "logic.sequences.letters_skip",
+  "label": "Lettres sautées",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle lettre suit : B, E, H, K, … ?",
+  "options": [
+   "N*",
+   "M",
+   "L",
+   "O"
+  ],
+  "explanation": "On avance de 3 lettres à chaque fois : K + 3 = N."
+ },
+ {
+  "key": "logic-309",
+  "concept": "logic.sequences.squares_minus_one",
+  "label": "Carrés moins un",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 0, 3, 8, 15, 24, … ?",
+  "answer": 35,
+  "explanation": "n² − 1 : 1−1, 4−1, 9−1, 16−1, 25−1, puis 36−1 = 35."
+ },
+ {
+  "key": "logic-310",
+  "concept": "logic.sequences.double_minus",
+  "label": "Suite ×2 − 1",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 2, 3, 5, 9, 17, … ?",
+  "answer": 33,
+  "explanation": "On double et on retire 1 : 17 × 2 − 1 = 33."
+ },
+ {
+  "key": "logic-311",
+  "concept": "logic.reasoning.all_some",
+  "label": "Tous et certains",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Si tous les A sont des B, alors tous les B sont des A.",
+  "answer": false,
+  "explanation": "Non : tous les chiens sont des animaux, mais tous les animaux ne sont pas des chiens."
+ },
+ {
+  "key": "logic-312",
+  "concept": "logic.reasoning.contrapositive",
+  "label": "Contraposée",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« S'il pleut, le sol est mouillé. » Donc : si le sol n'est pas mouillé, il ne pleut pas.",
+  "answer": true,
+  "explanation": "C'est la contraposée, toujours valable. En revanche, un sol mouillé ne prouve pas qu'il pleut (arrosage…)."
+ },
+ {
+  "key": "logic-313",
+  "concept": "logic.reasoning.converse_error",
+  "label": "Réciproque",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« S'il pleut, le sol est mouillé. » Le sol est mouillé, donc il pleut.",
+  "answer": false,
+  "explanation": "Faux : c'est l'erreur de la réciproque. Le sol peut être mouillé pour une autre raison."
+ },
+ {
+  "key": "logic-314",
+  "concept": "logic.reasoning.tallest",
+  "label": "Qui est le plus grand ?",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Anna est plus grande que Léo. Léo est plus grand que Sami. Qui est le plus petit ?",
+  "options": [
+   "Sami*",
+   "Léo",
+   "Anna",
+   "Impossible à savoir"
+  ],
+  "explanation": "Anna > Léo > Sami : Sami est le plus petit."
+ },
+ {
+  "key": "logic-315",
+  "concept": "logic.reasoning.race_position",
+  "label": "La course",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans une course, tu doubles le deuxième. À quelle place es-tu ?",
+  "options": [
+   "Deuxième*",
+   "Premier",
+   "Troisième",
+   "Ça dépend"
+  ],
+  "explanation": "Tu prends sa place : deuxième. Le premier est toujours devant toi."
+ },
+ {
+  "key": "logic-316",
+  "concept": "logic.reasoning.odd_word",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est l'intrus : chien, chat, aigle, cheval ?",
+  "options": [
+   "Aigle*",
+   "Chien",
+   "Chat",
+   "Cheval"
+  ],
+  "explanation": "Les trois autres sont des mammifères ; l'aigle est un oiseau."
+ },
+ {
+  "key": "logic-317",
+  "concept": "logic.reasoning.none_some",
+  "label": "Aucun",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Aucun oiseau n'est un mammifère » veut dire la même chose que « aucun mammifère n'est un oiseau ».",
+  "answer": true,
+  "explanation": "Oui : « aucun A n'est B » se retourne sans changer de sens, contrairement à « tous les A sont B »."
+ },
+ {
+  "key": "logic-318",
+  "concept": "logic.reasoning.liar",
+  "label": "Le menteur",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Paul dit toujours la vérité ou ment toujours. Il dit : « Je mens. » Que peut-on en conclure ?",
+  "options": [
+   "Cette phrase est impossible pour lui*",
+   "Il ment",
+   "Il dit la vérité",
+   "Il ment une fois sur deux"
+  ],
+  "explanation": "S'il disait vrai, il mentirait ; s'il mentait, il dirait vrai. C'est le paradoxe du menteur : aucune des deux options n'est cohérente."
+ },
+ {
+  "key": "logic-319",
+  "concept": "logic.reasoning.siblings",
+  "label": "Frères et sœurs",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Julie a 3 frères. Chacun de ses frères a 2 sœurs. Combien y a-t-il de filles dans la famille ?",
+  "options": [
+   "2*",
+   "3",
+   "1",
+   "6"
+  ],
+  "explanation": "Les frères ont 2 sœurs : Julie et une autre fille. Il y a donc 2 filles."
+ },
+ {
+  "key": "logic-320",
+  "concept": "logic.reasoning.weekday_logic",
+  "label": "Avant-hier",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Si avant-hier était jeudi, quel jour serons-nous après-demain ?",
+  "options": [
+   "Lundi*",
+   "Dimanche",
+   "Samedi",
+   "Mardi"
+  ],
+  "explanation": "Avant-hier jeudi → aujourd'hui samedi → après-demain lundi."
+ },
+ {
+  "key": "logic-321",
+  "concept": "logic.reasoning.necessary",
+  "label": "Condition nécessaire",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« Pour avoir le permis, il faut avoir 18 ans. » Donc toute personne de 18 ans a le permis.",
+  "answer": false,
+  "explanation": "Avoir 18 ans est nécessaire, pas suffisant : il faut aussi réussir l'examen."
+ },
+ {
+  "key": "logic-322",
+  "concept": "logic.puzzles.birthday_twins",
+  "label": "Anniversaires",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de personnes faut-il au minimum dans une pièce pour être sûr que deux sont nées le même mois ?",
+  "answer": 13,
+  "explanation": "Avec 12 personnes, chacune peut avoir un mois différent. La 13ᵉ tombe forcément sur un mois déjà pris (principe des tiroirs)."
+ },
+ {
+  "key": "logic-323",
+  "concept": "logic.puzzles.cut_rope",
+  "label": "Couper une corde",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de coupes faut-il pour découper une corde en 5 morceaux ?",
+  "answer": 4,
+  "explanation": "Chaque coupe ajoute un morceau : 4 coupes donnent 5 morceaux."
+ },
+ {
+  "key": "logic-324",
+  "concept": "logic.puzzles.fence_posts",
+  "label": "Les piquets",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Une clôture droite de 20 m a un piquet tous les 2 m, y compris aux deux bouts. Combien de piquets ?",
+  "answer": 11,
+  "explanation": "20 ÷ 2 = 10 intervalles, donc 11 piquets (on compte les deux extrémités)."
+ },
+ {
+  "key": "logic-325",
+  "concept": "logic.puzzles.half_empty_bottle",
+  "label": "Bouteille qui double",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Des bactéries doublent chaque minute et remplissent un bocal en 60 minutes. À quelle minute le bocal est-il à moitié plein ?",
+  "answer": 59,
+  "explanation": "Elles doublent chaque minute : à la minute 59, le bocal est à moitié plein.",
+  "unit": "minute"
+ },
+ {
+  "key": "logic-326",
+  "concept": "logic.puzzles.stairs",
+  "label": "L'escalier",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Il faut 30 secondes pour monter du 1ᵉʳ au 3ᵉ étage. Combien de secondes pour monter du 1ᵉʳ au 6ᵉ, au même rythme ?",
+  "answer": 75,
+  "explanation": "Du 1ᵉʳ au 3ᵉ, on monte 2 étages (pas 3) : 15 s par étage. Du 1ᵉʳ au 6ᵉ, 5 étages : 75 s.",
+  "unit": "s"
+ },
+ {
+  "key": "logic-327",
+  "concept": "logic.puzzles.coins",
+  "label": "Pièces de monnaie",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Avec des pièces de 2 € et de 1 €, j'ai 7 pièces pour 10 €. Combien de pièces de 2 € ?",
+  "answer": 3,
+  "explanation": "3 × 2 € + 4 × 1 € = 10 €, avec 3 + 4 = 7 pièces."
+ },
+ {
+  "key": "logic-328",
+  "concept": "logic.puzzles.legs_farm",
+  "label": "Poules et lapins",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Dans une ferme, il y a 10 têtes et 28 pattes, entre poules et lapins. Combien de lapins ?",
+  "answer": 4,
+  "explanation": "Si tout était poules : 20 pattes. Il manque 8 pattes, 2 de plus par lapin : 4 lapins (et 6 poules)."
+ },
+ {
+  "key": "logic-329",
+  "concept": "logic.puzzles.page_numbers",
+  "label": "Pages d'un livre",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de chiffres faut-il pour numéroter les pages d'un livre de 100 pages ?",
+  "answer": 192,
+  "explanation": "Pages 1 à 9 : 9 chiffres ; 10 à 99 : 90 × 2 = 180 ; page 100 : 3. Total 192."
+ },
+ {
+  "key": "logic-330",
+  "concept": "logic.puzzles.minutes_clock",
+  "label": "Horloge qui retarde",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Une montre retarde de 2 minutes par jour. Combien de minutes aura-t-elle de retard au bout d'une semaine ?",
+  "answer": 14,
+  "explanation": "7 × 2 = 14 minutes.",
+  "unit": "minutes"
+ }
+]

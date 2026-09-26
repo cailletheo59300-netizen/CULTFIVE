@@ -4,29 +4,29 @@
       ["mental", "Calcul mental"], ["percent", "Pourcentages"], ["fractions", "Fractions"],
       ["conversions", "Conversions"], ["number_logic", "Logique numérique"] ] },
     { "id": "french", "name": "Français", "daily_slot": "french", "subdomains": [
-      ["vocabulary", "Vocabulaire"], ["synonyms", "Synonymes"], ["antonyms", "Antonymes"],
+      ["vocabulary", "Vocabulaire"], ["synonyms", "Synonymes & contraires"],
       ["spelling", "Orthographe"], ["expressions", "Expressions"], ["grammar", "Grammaire"] ] },
     { "id": "geography", "name": "Géographie", "daily_slot": "geo", "subdomains": [
-      ["capitals", "Capitales"], ["flags", "Drapeaux"], ["location", "Localisation"], ["countries", "Pays"],
-      ["borders", "Frontières"], ["relief", "Reliefs"], ["oceans", "Océans & fleuves"], ["monuments", "Monuments"] ] },
+      ["capitals", "Capitales"], ["flags", "Drapeaux"], ["countries", "Pays & villes"],
+      ["relief", "Fleuves, mers & reliefs"], ["monuments", "Monuments & patrimoine"] ] },
     { "id": "history", "name": "Histoire", "daily_slot": "history", "subdomains": [
       ["antiquity", "Antiquité"], ["middle_ages", "Moyen Âge"], ["modern", "Temps modernes"],
-      ["contemporary", "Époque contemporaine"], ["figures", "Personnages"], ["dates", "Dates"] ] },
+      ["contemporary", "Époque contemporaine"] ] },
     { "id": "science", "name": "Sciences", "daily_slot": null, "subdomains": [
       ["physics", "Physique"], ["chemistry", "Chimie"], ["biology", "Biologie"], ["space", "Espace"], ["human_body", "Corps humain"] ] },
     { "id": "logic", "name": "Logique", "daily_slot": null, "subdomains": [
-      ["sequences", "Suites"], ["reasoning", "Raisonnement"] ] },
+      ["sequences", "Suites"], ["reasoning", "Raisonnement"], ["puzzles", "Énigmes"] ] },
     { "id": "arts", "name": "Arts & culture", "daily_slot": null, "subdomains": [
-      ["painting", "Peinture"], ["literature", "Littérature"], ["architecture", "Architecture"] ] },
+      ["painting", "Peinture"], ["literature", "Littérature"], ["architecture", "Architecture"], ["mythology", "Mythologie"] ] },
     { "id": "sport", "name": "Sport", "daily_slot": null, "subdomains": [
-      ["football", "Football"], ["olympics", "Jeux olympiques"], ["rules", "Règles & records"] ] },
+      ["football", "Football"], ["olympics", "Jeux olympiques"], ["rules", "Règles & records"], ["champions", "Champions"] ] },
     { "id": "cinema", "name": "Cinéma", "daily_slot": null, "subdomains": [
-      ["films", "Films"], ["directors", "Réalisateurs"] ] },
+      ["films", "Films"], ["directors", "Réalisateurs"], ["actors", "Acteurs & actrices"], ["animation", "Animation"] ] },
     { "id": "music", "name": "Musique", "daily_slot": null, "subdomains": [
       ["classical", "Classique"], ["popular", "Musiques populaires"], ["instruments", "Instruments"] ] },
     { "id": "tech", "name": "Technologie", "daily_slot": null, "subdomains": [
-      ["computing", "Informatique"], ["inventions", "Inventions"] ] },
+      ["computing", "Informatique"], ["inventions", "Inventions"], ["brands", "Entreprises & marques"] ] },
     { "id": "nature", "name": "Nature & animaux", "daily_slot": null, "subdomains": [
-      ["animals", "Animaux"], ["plants", "Plantes"] ] }
+      ["animals", "Animaux"], ["plants", "Plantes"], ["marine", "Vie marine"], ["earth", "Planète & climat"] ] }
   ]
 }
