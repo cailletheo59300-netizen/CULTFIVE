@@ -119,7 +119,7 @@ struct ProfileView: View {
             Text("Ce que tu sais").font(.cfHeadline)
             // Les niveaux fiables (≥ 10 réponses) d'abord, puis par niveau.
             let played = skills.filter { $0.answered > 0 }.sorted {
-                ($0.answered >= 10, $0.level) > ($1.answered >= 10, $1.level)
+                ($0.answered >= 10 ? 1 : 0, $0.level) > ($1.answered >= 10 ? 1 : 0, $1.level)
             }
             if played.isEmpty {
                 Text("Joue quelques parties : ton profil de connaissances se dessinera ici.")
