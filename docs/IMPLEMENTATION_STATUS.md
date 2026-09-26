@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : session 1 — 2026-09-26_
+_Dernière mise à jour : session 2 — 2026-09-26_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -12,7 +12,8 @@ _Dernière mise à jour : session 1 — 2026-09-26_
 | Daily serveur (génération, service, verdict, temps, série, jokers, percentile, revue, expiration, minuit, fuseaux, double soumission) | ✅ | `10_daily.sql` |
 | Adaptatif (compétences domaine/sous-domaine, calibration bornée, élargissement, questions problématiques, sélection par bandes, erreurs & maîtrise) | ✅ | `20_adaptive.sql` |
 | Économie (ledger, plafonds, aides), pseudo, amis, parrainage anti-abus, ligues, suppression de compte | ✅ | `30_social_economy.sql` |
-| Contenu (153 questions validées → seed) | ✅ | `build-seed.mjs` en CI |
+| Contenu (273 questions validées → seed) | ✅ | `build-seed.mjs` en CI |
+| Mode démo + captures + build Appetize | ✅ | workflow « Captures d'écran », `docs/screenshots` |
 | `CultFiveCore` (modèles, contrat JSON sur fixtures réelles, évaluateur = SQL, pavé numérique, client Auth/RPC, refresh unique, file hors-ligne) | ✅ | `swift test` en CI |
 | App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | ✅ build + tests unitaires en CI (macOS 15) · 🟡 **pas encore essayée sur appareil** avec un vrai projet Supabase | job CI `ios` |
 
@@ -39,7 +40,7 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 
 ## Prochaines étapes
 1. **Propriétaire** : créer le projet Supabase (Auth anonyme + Apple + e-mail), `db push`, seed, renseigner `Secrets.xcconfig`, lancer sur iPhone → retours.
-2. Contenu : passer à ≥ 60 questions par pilier, plus de types non-QCM.
+2. Contenu : viser ≥ 150 par pilier et étoffer les domaines surprise (outil IA + validation).
 3. Admin web (RPC prêtes) + Edge Function de génération IA (lots en `review`).
 4. Polish après retours (animations, micro-copies, accessibilité VoiceOver sur appareil).
 5. App Store : pages légales, AASA, métadonnées, captures.

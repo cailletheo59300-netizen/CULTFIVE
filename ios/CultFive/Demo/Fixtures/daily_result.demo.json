@@ -3,54 +3,54 @@
  "date": "2026-09-25",
  "score": 4,
  "seeds": 10,
- "run_id": "dd7354a1-d33d-43f6-81e1-32470b5fd598",
+ "run_id": "eac47f02-5581-4b8f-9cab-372d042c9a08",
  "status": "finished",
  "streak": 21,
  "answers": [
   {
    "position": 1,
-   "domain_id": "history",
-   "counted_ms": 18000,
+   "domain_id": "french",
+   "counted_ms": 6000,
    "is_correct": true,
-   "domain_after": 55.7,
-   "domain_before": 55.4
+   "domain_after": 60.8,
+   "domain_before": 60.5
   },
   {
    "position": 2,
-   "domain_id": "cinema",
-   "counted_ms": 10000,
-   "is_correct": false,
-   "domain_after": 45.4,
-   "domain_before": 48.6
+   "domain_id": "calc",
+   "counted_ms": 6000,
+   "is_correct": true,
+   "domain_after": 54.4,
+   "domain_before": 54.1
   },
   {
    "position": 3,
-   "domain_id": "calc",
-   "counted_ms": 13000,
+   "domain_id": "logic",
+   "counted_ms": 12000,
    "is_correct": true,
-   "domain_after": 58.2,
-   "domain_before": 58
+   "domain_after": 60.7,
+   "domain_before": 60
   },
   {
    "position": 4,
-   "domain_id": "geography",
-   "counted_ms": 18000,
-   "is_correct": true,
-   "domain_after": 53.9,
-   "domain_before": 53.3
+   "domain_id": "history",
+   "counted_ms": 17000,
+   "is_correct": false,
+   "domain_after": 49.3,
+   "domain_before": 50.2
   },
   {
    "position": 5,
-   "domain_id": "french",
-   "counted_ms": 14000,
+   "domain_id": "geography",
+   "counted_ms": 18000,
    "is_correct": true,
-   "domain_after": 45.1,
-   "domain_before": 44.8
+   "domain_after": 60.8,
+   "domain_before": 60.4
   }
  ],
- "total_ms": 73000,
+ "total_ms": 59000,
  "percentile": {
-  "top": 43,
+  "top": 33,
   "source": "estimate",
   "participants": 5
  },

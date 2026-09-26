@@ -1,98 +1,98 @@
 [
  {
   "name": "Histoire",
-  "level": 56,
-  "correct": 46,
-  "answered": 56,
+  "level": 49,
+  "correct": 35,
+  "answered": 55,
   "domain_id": "history",
-  "reliability": 0.6
+  "reliability": 0.63
+ },
+ {
+  "name": "Calcul",
+  "level": 54,
+  "correct": 35,
+  "answered": 48,
+  "domain_id": "calc",
+  "reliability": 0.62
+ },
+ {
+  "name": "Français",
+  "level": 61,
+  "correct": 35,
+  "answered": 48,
+  "domain_id": "french",
+  "reliability": 0.62
  },
  {
   "name": "Géographie",
-  "level": 54,
-  "correct": 38,
-  "answered": 50,
+  "level": 61,
+  "correct": 36,
+  "answered": 47,
   "domain_id": "geography",
   "reliability": 0.59
  },
  {
-  "name": "Calcul",
-  "level": 56,
-  "correct": 37,
-  "answered": 48,
-  "domain_id": "calc",
-  "reliability": 0.59
- },
- {
-  "name": "Français",
-  "level": 45,
-  "correct": 28,
-  "answered": 47,
-  "domain_id": "french",
-  "reliability": 0.61
- },
- {
   "name": "Sciences",
-  "level": 51,
-  "correct": 26,
-  "answered": 32,
+  "level": 49,
+  "correct": 27,
+  "answered": 39,
   "domain_id": "science",
-  "reliability": 0.5
+  "reliability": 0.58
  },
  {
   "name": "Sport",
-  "level": 49,
-  "correct": 15,
-  "answered": 20,
+  "level": 35,
+  "correct": 12,
+  "answered": 23,
   "domain_id": "sport",
-  "reliability": 0.43
- },
- {
-  "name": "Arts & culture",
-  "level": 49,
-  "correct": 13,
-  "answered": 19,
-  "domain_id": "arts",
-  "reliability": 0.42
- },
- {
-  "name": "Logique",
-  "level": 49,
-  "correct": 11,
-  "answered": 18,
-  "domain_id": "logic",
   "reliability": 0.46
  },
  {
-  "name": "Cinéma",
-  "level": 45,
-  "correct": 4,
-  "answered": 8,
-  "domain_id": "cinema",
-  "reliability": 0.32
+  "name": "Arts & culture",
+  "level": 48,
+  "correct": 15,
+  "answered": 22,
+  "domain_id": "arts",
+  "reliability": 0.44
  },
  {
-  "name": "Musique",
-  "level": 44,
-  "correct": 3,
+  "name": "Logique",
+  "level": 61,
+  "correct": 17,
+  "answered": 20,
+  "domain_id": "logic",
+  "reliability": 0.44
+ },
+ {
+  "name": "Cinéma",
+  "level": 56,
+  "correct": 5,
   "answered": 6,
-  "domain_id": "music",
-  "reliability": 0.21
+  "domain_id": "cinema",
+  "reliability": 0.24
  },
  {
   "name": "Technologie",
-  "level": 58,
-  "correct": 5,
-  "answered": 5,
+  "level": 42,
+  "correct": 2,
+  "answered": 6,
   "domain_id": "tech",
-  "reliability": 0.18
+  "reliability": 0.24
+ },
+ {
+  "name": "Musique",
+  "level": 53,
+  "correct": 4,
+  "answered": 5,
+  "domain_id": "music",
+  "reliability": 0.2
  },
  {
   "name": "Nature & animaux",
-  "level": 53,
-  "correct": 4,
-  "answered": 4,
+  "level": 50,
+  "correct": 3,
+  "answered": 5,
   "domain_id": "nature",
-  "reliability": 0.08
+  "reliability": 0.18
  }
 ]

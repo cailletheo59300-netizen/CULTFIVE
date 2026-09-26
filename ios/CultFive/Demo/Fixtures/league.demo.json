@@ -1,40 +1,27 @@
 {
- "id": "2f866ed6-b5eb-4fe6-a4e0-f7fd2c7d0bc7",
+ "id": "d3eb9838-396c-48a6-8f48-33c3b64b99be",
  "name": "Les Curieux du jeudi",
  "period": "week",
  "end_date": "2026-09-27",
  "is_owner": true,
  "standings": [
   {
-   "id": "09ea80a5-23f6-445d-9381-d0d3552c820e",
-   "days": 6,
-   "rank": 1,
-   "is_me": false,
-   "avatar": {
-    "pose": "rest",
-    "color": "chloro"
-   },
-   "handle": "leo_b",
-   "points": 21,
-   "total_ms": 378000
-  },
-  {
-   "id": "8a6b3243-786c-4925-95b3-4c6bf5796c8e",
+   "id": "1a38f677-56ce-41eb-956f-73b5ae4db3dd",
    "days": 5,
-   "rank": 2,
+   "rank": 1,
    "is_me": true,
    "avatar": {
     "pose": "rest",
     "color": "chloro"
    },
    "handle": "Theo",
-   "points": 18,
-   "total_ms": 279000
+   "points": 20,
+   "total_ms": 320000
   },
   {
-   "id": "52d24e99-0b3f-4f2b-929b-5ebf92b7b157",
+   "id": "69d95a40-7752-437b-9965-3fceb48924c8",
    "days": 5,
-   "rank": 3,
+   "rank": 2,
    "is_me": false,
    "avatar": {
     "pose": "rest",
@@ -42,11 +29,24 @@
    },
    "handle": "Margaux",
    "points": 16,
-   "total_ms": 280000
+   "total_ms": 306000
   },
   {
-   "id": "a4bfc641-d6a0-4185-bd5a-b7ff15a89695",
+   "id": "9989e59c-148f-4db4-a56d-4e13f4e466f5",
    "days": 4,
+   "rank": 3,
+   "is_me": false,
+   "avatar": {
+    "pose": "rest",
+    "color": "chloro"
+   },
+   "handle": "leo_b",
+   "points": 15,
+   "total_ms": 226000
+  },
+  {
+   "id": "e7310bcd-8174-4bbf-8d45-c0fa62d67a16",
+   "days": 5,
    "rank": 4,
    "is_me": false,
    "avatar": {
@@ -54,8 +54,8 @@
     "color": "chloro"
    },
    "handle": "Yanis_59",
-   "points": 15,
-   "total_ms": 251000
+   "points": 14,
+   "total_ms": 296000
   }
  ],
  "start_date": "2026-09-21",

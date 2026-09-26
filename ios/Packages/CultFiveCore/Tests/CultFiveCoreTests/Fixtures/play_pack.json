@@ -2,29 +2,84 @@
  "mode": "quick",
  "questions": [
   {
-   "id": "ce6e6d7b-4b60-4a72-be14-6f0dda3a5fca",
+   "id": "54772f8e-195d-43e9-b7a9-dfde71686d83",
    "type": "numeric",
    "answer": {
-    "value": 600,
+    "value": 36,
     "tolerance": 0
    },
-   "prompt": "Combien font 25 × 24 ?",
+   "prompt": "Quel nombre suit : 1, 4, 9, 16, 25, … ?",
    "source": null,
    "payload": {
     "decimals": 0,
     "allow_negative": false
    },
    "has_hint": false,
-   "takeaway": "Multiplier par 25, c'est multiplier par 100 puis diviser par 4.",
-   "domain_id": "calc",
-   "concept_id": "calc.mental.mult_25x24",
+   "takeaway": null,
+   "domain_id": "logic",
+   "concept_id": "logic.sequences.squares",
    "fact_as_of": null,
-   "explanation": "25 × 4 = 100, et 24 = 4 × 6. Donc 25 × 24 = 100 × 6 = 600.",
+   "explanation": "Ce sont les carrés : 1², 2², 3², 4², 5², puis 6² = 36.",
    "has_context": false,
-   "subdomain_id": "calc.mental"
+   "subdomain_id": "logic.sequences"
   },
   {
-   "id": "a669eb31-ac5b-4c87-8c27-24306a5cfaed",
+   "id": "01e28e22-9774-454d-84ef-6e8eae4a09f0",
+   "type": "mcq",
+   "answer": {
+    "option_id": "4d0a2b8a"
+   },
+   "prompt": "Qui est à l'origine de la renaissance des Jeux olympiques modernes ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "87b2211a",
+      "text": "Jules Rimet"
+     },
+     {
+      "id": "9308b6a4",
+      "text": "Jean Jaurès"
+     },
+     {
+      "id": "4d0a2b8a",
+      "text": "Pierre de Coubertin"
+     },
+     {
+      "id": "f4ac63c6",
+      "text": "Gustave Eiffel"
+     }
+    ]
+   },
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "sport",
+   "concept_id": "sport.olympics.coubertin",
+   "fact_as_of": null,
+   "explanation": "Le baron Pierre de Coubertin fonde le Comité international olympique en 1894. Jules Rimet, lui, a créé la Coupe du monde de football.",
+   "has_context": false,
+   "subdomain_id": "sport.olympics"
+  },
+  {
+   "id": "2b9a6023-f109-4c17-84e4-82df8cfc4cea",
+   "type": "true_false",
+   "answer": {
+    "value": true
+   },
+   "prompt": "La chauve-souris est un mammifère.",
+   "source": null,
+   "payload": {},
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "nature",
+   "concept_id": "nature.animals.bat_mammal",
+   "fact_as_of": null,
+   "explanation": "Elle allaite ses petits. C'est le seul mammifère capable d'un vrai vol battu.",
+   "has_context": false,
+   "subdomain_id": "nature.animals"
+  },
+  {
+   "id": "2be6ea4b-b8f6-46d0-85d4-7836feab3811",
    "type": "mcq",
    "answer": {
     "option_id": "edd83b9a"
@@ -38,16 +93,16 @@
       "text": "Le violon"
      },
      {
-      "id": "b56a8a4d",
-      "text": "Le violoncelle"
+      "id": "ff06eff5",
+      "text": "L'alto"
      },
      {
       "id": "edd83b9a",
       "text": "La contrebasse"
      },
      {
-      "id": "ff06eff5",
-      "text": "L'alto"
+      "id": "b56a8a4d",
+      "text": "Le violoncelle"
      }
     ]
    },
@@ -61,123 +116,79 @@
    "subdomain_id": "music.instruments"
   },
   {
-   "id": "d30198be-3774-4a6e-8c1d-64357c33ef30",
-   "type": "numeric",
+   "id": "e2345e7e-4e96-4934-9e49-98265e12093a",
+   "type": "mcq",
    "answer": {
-    "value": 29,
-    "tolerance": 0
+    "option_id": "79929421"
    },
-   "prompt": "Un nénuphar double de surface chaque jour et couvre l'étang en 30 jours. En combien de jours en couvre-t-il la moitié ?",
+   "prompt": "« Donner du fil à retordre » à quelqu'un, c'est…",
    "source": null,
    "payload": {
-    "decimals": 0,
-    "allow_negative": false
+    "options": [
+     {
+      "id": "79929421",
+      "text": "lui causer des difficultés"
+     },
+     {
+      "id": "0c2719c7",
+      "text": "lui faire un cadeau"
+     },
+     {
+      "id": "cc2d9a26",
+      "text": "lui apprendre la couture"
+     },
+     {
+      "id": "8983f238",
+      "text": "le tromper"
+     }
+    ]
+   },
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "french",
+   "concept_id": "french.expressions.fil_a_retordre",
+   "fact_as_of": null,
+   "explanation": "Retordre le fil (le tordre à nouveau pour le renforcer) était un travail long et pénible.",
+   "has_context": false,
+   "subdomain_id": "french.expressions"
+  },
+  {
+   "id": "8ba3e008-b6b0-4689-a485-2825f38de291",
+   "type": "mcq",
+   "answer": {
+    "option_id": "91443988"
+   },
+   "prompt": "Si aujourd'hui est mardi, quel jour serons-nous dans 100 jours ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "91443988",
+      "text": "Jeudi"
+     },
+     {
+      "id": "fcd915ae",
+      "text": "Mercredi"
+     },
+     {
+      "id": "bdea30d9",
+      "text": "Mardi"
+     },
+     {
+      "id": "721755c7",
+      "text": "Lundi"
+     }
+    ]
    },
    "has_hint": false,
    "takeaway": null,
    "domain_id": "logic",
-   "concept_id": "logic.reasoning.lily_pad",
+   "concept_id": "logic.reasoning.days_after",
    "fact_as_of": null,
-   "explanation": "S'il double chaque jour, la veille du jour où il couvre tout l'étang, il en couvrait la moitié : le 29e jour.",
+   "explanation": "100 = 14 × 7 + 2. Dans 98 jours, on sera encore mardi ; deux jours plus tard, jeudi.",
    "has_context": false,
    "subdomain_id": "logic.reasoning"
-  },
-  {
-   "id": "5819717b-f4af-417a-8d31-fcedf7aff260",
-   "type": "mcq",
-   "answer": {
-    "option_id": "a39536d5"
-   },
-   "prompt": "Quel est le plus haut sommet d'Afrique ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "cce70b1c",
-      "text": "Mont Kenya"
-     },
-     {
-      "id": "de88c07d",
-      "text": "Toubkal"
-     },
-     {
-      "id": "a39536d5",
-      "text": "Kilimandjaro"
-     },
-     {
-      "id": "3620264d",
-      "text": "Ruwenzori"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.relief.africa_highest",
-   "fact_as_of": null,
-   "explanation": "Le Kilimandjaro, en Tanzanie, culmine à 5 895 m. C'est un volcan isolé, et non une chaîne de montagnes.",
-   "has_context": false,
-   "subdomain_id": "geography.relief"
-  },
-  {
-   "id": "d331d5e7-d8b4-4df7-8a8d-63d3a60e7524",
-   "type": "mcq",
-   "answer": {
-    "option_id": "1861c99d"
-   },
-   "prompt": "Quelle est, environ, la vitesse de la lumière dans le vide ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "8ad4b7c7",
-      "text": "30 000 km/s"
-     },
-     {
-      "id": "b8736b1e",
-      "text": "3 000 km/s"
-     },
-     {
-      "id": "7c9505b3",
-      "text": "3 000 000 km/s"
-     },
-     {
-      "id": "1861c99d",
-      "text": "300 000 km/s"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "science",
-   "concept_id": "science.physics.light_speed",
-   "fact_as_of": null,
-   "explanation": "Exactement 299 792 458 m/s. La lumière du Soleil met environ 8 minutes à nous parvenir.",
-   "has_context": false,
-   "subdomain_id": "science.physics"
-  },
-  {
-   "id": "c40e461a-dfd6-4eb1-b593-3669fb9ca1e6",
-   "type": "numeric",
-   "answer": {
-    "value": 243,
-    "tolerance": 0
-   },
-   "prompt": "Quel nombre suit : 3, 9, 27, 81, … ?",
-   "source": null,
-   "payload": {
-    "decimals": 0,
-    "allow_negative": false
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "logic",
-   "concept_id": "logic.sequences.powers_3",
-   "fact_as_of": null,
-   "explanation": "On multiplie par 3 à chaque étape : 81 × 3 = 243.",
-   "has_context": false,
-   "subdomain_id": "logic.sequences"
   }
  ],
- "session_id": "0539cfe4-60b2-400b-a478-6e9640fbb23b"
+ "session_id": "c1da41dd-7a01-4350-a7d5-772219ac57aa"
 }

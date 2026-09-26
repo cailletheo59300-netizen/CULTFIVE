@@ -1,17 +1,17 @@
 {
  "friends": [
   {
-   "id": "d042e154-0508-4ce7-a369-85cfc7f60dc8",
+   "id": "e10010cb-0620-41a3-b53d-b81f6200c097",
    "today": null,
    "avatar": {
     "pose": "rest",
     "color": "chloro"
    },
    "handle": "Camille",
-   "streak": 20
+   "streak": 2
   },
   {
-   "id": "09ea80a5-23f6-445d-9381-d0d3552c820e",
+   "id": "9989e59c-148f-4db4-a56d-4e13f4e466f5",
    "today": {
     "score": 4,
     "status": "finished",
@@ -22,28 +22,28 @@
      true,
      true
     ],
-    "total_ms": 57000
+    "total_ms": 63000
    },
    "avatar": {
     "pose": "rest",
     "color": "chloro"
    },
    "handle": "leo_b",
-   "streak": 8
+   "streak": 3
   },
   {
-   "id": "52d24e99-0b3f-4f2b-929b-5ebf92b7b157",
+   "id": "69d95a40-7752-437b-9965-3fceb48924c8",
    "today": {
-    "score": 3,
+    "score": 4,
     "status": "finished",
     "answers": [
+     true,
      false,
      true,
      true,
-     false,
      true
     ],
-    "total_ms": 54000
+    "total_ms": 60000
    },
    "avatar": {
     "pose": "rest",
@@ -53,26 +53,26 @@
    "streak": 4
   },
   {
-   "id": "a4bfc641-d6a0-4185-bd5a-b7ff15a89695",
+   "id": "e7310bcd-8174-4bbf-8d45-c0fa62d67a16",
    "today": null,
    "avatar": {
     "pose": "rest",
     "color": "chloro"
    },
    "handle": "Yanis_59",
-   "streak": 2
+   "streak": 18
   }
  ],
  "incoming": [
   {
-   "id": "03f00b3a-42e1-4273-ae44-2bc7b683bbc7",
+   "id": "d48cd936-b74f-46df-aad0-0cd685749f12",
    "avatar": {
     "pose": "rest",
     "color": "chloro"
    },
    "handle": "Nours",
    "created_at": "2026-09-04T18:00:00+00:00",
-   "friendship_id": "7cfdec20-3acc-43a9-a57a-dbadcb74dbfc"
+   "friendship_id": "7757ab77-78f3-424c-84d5-f6a2a27cacaa"
   }
  ],
  "outgoing": []

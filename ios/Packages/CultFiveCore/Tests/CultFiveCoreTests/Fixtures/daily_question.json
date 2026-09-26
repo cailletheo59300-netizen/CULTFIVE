@@ -1,29 +1,29 @@
 {
- "id": "818c7141-49e7-4a6e-bc77-cb4b8ded98c0",
+ "id": "6c0f3e8c-b97e-4117-ac21-829f74d8f53d",
  "type": "mcq",
  "total": 5,
- "prompt": "Quelle est la capitale du Maroc ?",
+ "prompt": "Dans quelle ville naît Napoléon Bonaparte, en 1769 ?",
  "payload": {
   "options": [
    {
-    "id": "8a757b0d",
-    "text": "Fès"
+    "id": "3065f003",
+    "text": "Ajaccio"
    },
    {
-    "id": "c2808cc2",
-    "text": "Marrakech"
+    "id": "d8127695",
+    "text": "Calvi"
    },
    {
-    "id": "2a5dea63",
-    "text": "Casablanca"
+    "id": "42fa876d",
+    "text": "Corte"
    },
    {
-    "id": "6a9c9087",
-    "text": "Rabat"
+    "id": "6554b948",
+    "text": "Bastia"
    }
   ]
  },
  "position": 1,
- "domain_id": "geography",
- "subdomain_id": "geography.capitals"
+ "domain_id": "history",
+ "subdomain_id": "history.figures"
 }

@@ -2,7 +2,7 @@
 
 | # | Sujet | Détail | Piste |
 |---|---|---|---|
-| K-1 | Banque encore petite | 153 questions ; ~25 par pilier. Variété parfaite du Daily ≈ 1 semaine pour les types, ~1 mois pour la non-réutilisation (les replis restent sans doublon à 14 j). | Écrire ≥ 60/pilier, plus de types non-QCM (FR, Histoire). |
+| K-1 | Banque encore moyenne | 273 questions ; ~50 par pilier. Non-réutilisation du Daily garantie ~2 mois, puis replis sans doublon à 14 j. Domaines « surprise » encore minces (7–18). | Viser ≥ 150/pilier et ≥ 40 par domaine surprise ; outil de génération IA + validation. |
 | K-2 | Pas d'admin web | Les RPC `admin_*` existent ; pas encore d'interface. Supabase Studio + SQL en attendant. | Phase dédiée (Next.js privé ou page artefact). |
 | K-3 | Génération IA non branchée | Schéma et garde-fous prêts (`generation_batches`, statut `review` forcé). Pas d'Edge Function d'appel au modèle. | Edge Function `generate-questions` (clé API côté serveur). |
 | K-4 | Liens universels | `applinks:cultfive.app` déclaré ; le fichier `apple-app-site-association` du domaine reste à publier. Le schéma `cultfive://` fonctionne. | Héberger AASA. |

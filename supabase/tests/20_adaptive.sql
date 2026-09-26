@@ -110,7 +110,8 @@ begin
 
   pack := public.play_pack('training', 'geography', 'geography.capitals', 20);
   perform tst.ok((select bool_and(x ->> 'subdomain_id' = 'geography.capitals') from jsonb_array_elements(pack -> 'questions') x), 'filtre sous-domaine');
-  perform tst.ok(jsonb_array_length(pack -> 'questions') <= 7, 'sous-domaine épuisé : pas de remplissage hors filtre');
+  perform tst.ok(jsonb_array_length(pack -> 'questions') <= (select count(distinct concept_id) from public.questions
+                   where subdomain_id = 'geography.capitals' and status = 'published'), 'sous-domaine épuisé : pas de remplissage hors filtre');
 
   pack := public.play_pack('quick', null, null, 10);
   perform tst.ok(jsonb_array_length(pack -> 'questions') = 10, 'partie rapide multi-domaines');

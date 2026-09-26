@@ -5,7 +5,7 @@
 
 ## Élément signature : le **trait de cinq** (tally mark)
 Le « 5 » de CULT FIVE est dessiné comme une marque de comptage : quatre traits verticaux barrés d'une diagonale.
-- Onglet central : le trait de cinq, sur pastille d'encre. Quand le Daily est disponible, la diagonale est en chlorophylle ; une fois terminé, les traits reflètent le résultat (traits pleins = bonnes réponses, traits creux = ratées).
+- Onglet central : le trait de cinq, sur pastille d'encre. Quand le Daily est disponible, la diagonale est en chlorophylle ; une fois terminé, les traits reflètent le résultat (traits pleins = bonnes réponses, trait court et estompé = raté (forme + couleur)).
 - Progression dans le Daily : chaque question remplit un trait.
 - Résultat et cartes de partage : le trait de cinq *est* le score.
 Composant : `TallyMark(results:, style:)`.

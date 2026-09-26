@@ -2,44 +2,136 @@
  "mode": "training",
  "questions": [
   {
-   "id": "1559747a-1999-411f-9edb-82e16f13090c",
+   "id": "58f4725b-b8f6-4cb3-9e52-5b9d076c0f02",
    "type": "mcq",
    "answer": {
-    "option_id": "bc3cda00"
+    "option_id": "ae69fe28"
    },
-   "prompt": "Quelle est la capitale du Canada ?",
+   "prompt": "Lequel de ces pays n'a PAS de frontière avec le Brésil ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "bef295a6",
-      "text": "Montréal"
+      "id": "cb58d95b",
+      "text": "Guyane (France)"
      },
      {
-      "id": "5248514a",
-      "text": "Vancouver"
+      "id": "15b8f5f9",
+      "text": "Colombie"
      },
      {
-      "id": "834cc36b",
-      "text": "Toronto"
+      "id": "ae69fe28",
+      "text": "Chili"
      },
      {
-      "id": "bc3cda00",
-      "text": "Ottawa"
+      "id": "32b899e8",
+      "text": "Pérou"
      }
     ]
    },
    "has_hint": false,
    "takeaway": null,
    "domain_id": "geography",
-   "concept_id": "geography.capitals.canada",
+   "concept_id": "geography.borders.brazil_neighbours",
    "fact_as_of": null,
-   "explanation": "Ottawa, en Ontario, à la limite du Québec, a été choisie en 1857 par la reine Victoria.",
+   "explanation": "Le Brésil touche tous les pays d'Amérique du Sud sauf le Chili et l'Équateur. Sa plus longue frontière avec la France passe par la Guyane.",
    "has_context": false,
-   "subdomain_id": "geography.capitals"
+   "subdomain_id": "geography.borders"
   },
   {
-   "id": "f72431b8-bc2e-4569-bb4b-da8776817092",
+   "id": "e776ebd1-0c9a-43af-b0c8-09e5661a8da1",
+   "type": "mcq",
+   "answer": {
+    "option_id": "9ae4edec"
+   },
+   "prompt": "À quel pays appartient ce drapeau ? 🇰🇪",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "9ae4edec",
+      "text": "Kenya"
+     },
+     {
+      "id": "bdb9c60b",
+      "text": "Tanzanie"
+     },
+     {
+      "id": "f7622c89",
+      "text": "Éthiopie"
+     },
+     {
+      "id": "6f3353d2",
+      "text": "Ouganda"
+     }
+    ]
+   },
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "geography",
+   "concept_id": "geography.flags.kenya",
+   "fact_as_of": null,
+   "explanation": "Le drapeau kényan porte un bouclier massaï et deux lances croisées au centre de bandes noire, rouge et verte.",
+   "has_context": false,
+   "subdomain_id": "geography.flags"
+  },
+  {
+   "id": "b7263fc6-dd1a-4fd4-93e2-273c633b04ef",
+   "type": "mcq",
+   "answer": {
+    "option_id": "85f2def0"
+   },
+   "prompt": "Dans quelle ville se trouve l'Alhambra ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "48489831",
+      "text": "Tolède"
+     },
+     {
+      "id": "d1a75bdc",
+      "text": "Séville"
+     },
+     {
+      "id": "85f2def0",
+      "text": "Grenade"
+     },
+     {
+      "id": "b6b7372a",
+      "text": "Cordoue"
+     }
+    ]
+   },
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "geography",
+   "concept_id": "geography.monuments.alhambra",
+   "fact_as_of": null,
+   "explanation": "L'Alhambra, palais-forteresse des souverains nasrides, domine Grenade en Andalousie.",
+   "has_context": false,
+   "subdomain_id": "geography.monuments"
+  },
+  {
+   "id": "30643805-f71f-40bb-a6ce-9f017acf3b09",
+   "type": "true_false",
+   "answer": {
+    "value": true
+   },
+   "prompt": "La France partage une frontière terrestre avec le Brésil.",
+   "source": null,
+   "payload": {},
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "geography",
+   "concept_id": "geography.borders.france_brazil_border",
+   "fact_as_of": null,
+   "explanation": "Par la Guyane française : environ 730 km le long du fleuve Oyapock. C'est la plus longue frontière terrestre de la France.",
+   "has_context": false,
+   "subdomain_id": "geography.borders"
+  },
+  {
+   "id": "168544cb-7454-47bd-904f-0f0d3938802a",
    "type": "mcq",
    "answer": {
     "option_id": "b5745f9d"
@@ -49,16 +141,16 @@
    "payload": {
     "options": [
      {
-      "id": "7ece7a00",
-      "text": "Italie"
-     },
-     {
       "id": "b5745f9d",
       "text": "Irlande"
      },
      {
       "id": "c389ac20",
       "text": "Inde"
+     },
+     {
+      "id": "7ece7a00",
+      "text": "Italie"
      },
      {
       "id": "7ed8620a",
@@ -76,227 +168,97 @@
    "subdomain_id": "geography.flags"
   },
   {
-   "id": "4a4add26-0b01-4507-b254-f1ac437fd9f5",
-   "type": "mcq",
+   "id": "874ec80b-56c2-420c-8c62-948e6de6ac55",
+   "type": "true_false",
    "answer": {
-    "option_id": "850044c9"
+    "value": true
    },
-   "prompt": "Dans quel pays se trouve le Machu Picchu ?",
+   "prompt": "La mer Caspienne est la plus grande étendue d'eau fermée (sans accès à l'océan) du monde.",
    "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "5c0d9d0d",
-      "text": "Chili"
-     },
-     {
-      "id": "850044c9",
-      "text": "Pérou"
-     },
-     {
-      "id": "c19e8d04",
-      "text": "Mexique"
-     },
-     {
-      "id": "c47a4176",
-      "text": "Bolivie"
-     }
-    ]
-   },
+   "payload": {},
    "has_hint": false,
    "takeaway": null,
    "domain_id": "geography",
-   "concept_id": "geography.monuments.machu_picchu",
+   "concept_id": "geography.oceans.caspian_lake",
    "fact_as_of": null,
-   "explanation": "Cette cité inca du XVe siècle est perchée à environ 2 400 m dans les Andes péruviennes.",
-   "has_context": false,
-   "subdomain_id": "geography.monuments"
-  },
-  {
-   "id": "57969242-03fc-4443-970f-7ce1f5bf992d",
-   "type": "mcq",
-   "answer": {
-    "option_id": "e3bfa90f"
-   },
-   "prompt": "Lequel de ces pays n'a PAS de frontière avec l'Allemagne ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "b3687997",
-      "text": "Autriche"
-     },
-     {
-      "id": "d19a472e",
-      "text": "Danemark"
-     },
-     {
-      "id": "e3bfa90f",
-      "text": "Hongrie"
-     },
-     {
-      "id": "254c55f6",
-      "text": "Pologne"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.borders.germany_neighbours",
-   "fact_as_of": null,
-   "explanation": "L'Allemagne a neuf voisins : Danemark, Pologne, Tchéquie, Autriche, Suisse, France, Luxembourg, Belgique, Pays-Bas. La Hongrie n'en fait pas partie.",
-   "has_context": false,
-   "subdomain_id": "geography.borders"
-  },
-  {
-   "id": "0ece6574-aa5c-4c85-b9e7-5729e8c7b3f2",
-   "type": "mcq",
-   "answer": {
-    "option_id": "e9911d86"
-   },
-   "prompt": "Quel est le plus vaste océan du monde ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "c48545fe",
-      "text": "Indien"
-     },
-     {
-      "id": "4ef02ee0",
-      "text": "Atlantique"
-     },
-     {
-      "id": "7d629da2",
-      "text": "Arctique"
-     },
-     {
-      "id": "e9911d86",
-      "text": "Pacifique"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.oceans.largest_ocean",
-   "fact_as_of": null,
-   "explanation": "Le Pacifique couvre environ un tiers de la surface de la Terre, plus que toutes les terres émergées réunies.",
+   "explanation": "Avec environ 370 000 km², elle est plus grande que l'Allemagne. On la classe souvent comme le plus grand lac du monde.",
    "has_context": false,
    "subdomain_id": "geography.oceans"
   },
   {
-   "id": "f1efc556-b432-46c2-ad66-7c975ee8fed6",
+   "id": "a59ab422-aebb-4b06-9839-156c5c527167",
    "type": "mcq",
    "answer": {
-    "option_id": "dc967aae"
+    "option_id": "f3585126"
    },
-   "prompt": "Quelle est la capitale de la Turquie ?",
+   "prompt": "Lequel de ces pays d'Amérique du Sud n'a pas d'accès à la mer ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "dc967aae",
-      "text": "Ankara"
+      "id": "f3585126",
+      "text": "Paraguay"
      },
      {
-      "id": "ef96db6f",
-      "text": "Antalya"
+      "id": "114d7ffe",
+      "text": "Uruguay"
      },
      {
-      "id": "177c4f0e",
-      "text": "Istanbul"
+      "id": "33a341c8",
+      "text": "Équateur"
      },
      {
-      "id": "71c14c55",
-      "text": "Izmir"
+      "id": "9db981b5",
+      "text": "Colombie"
      }
     ]
    },
    "has_hint": false,
    "takeaway": null,
    "domain_id": "geography",
-   "concept_id": "geography.capitals.turkey",
+   "concept_id": "geography.countries.landlocked_bolivia",
    "fact_as_of": null,
-   "explanation": "Mustafa Kemal Atatürk a fait d'Ankara la capitale en 1923. Istanbul reste la plus grande ville du pays.",
+   "explanation": "Le Paraguay et la Bolivie sont les deux seuls pays enclavés d'Amérique du Sud.",
+   "has_context": false,
+   "subdomain_id": "geography.countries"
+  },
+  {
+   "id": "c4bd73f1-cb39-40bf-abe6-fde1531ecfc5",
+   "type": "mcq",
+   "answer": {
+    "option_id": "8a419200"
+   },
+   "prompt": "Quelle ville est le siège des autorités fédérales suisses ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "e6a50f93",
+      "text": "Zurich"
+     },
+     {
+      "id": "b708e3a7",
+      "text": "Lausanne"
+     },
+     {
+      "id": "b43aa8ef",
+      "text": "Genève"
+     },
+     {
+      "id": "8a419200",
+      "text": "Berne"
+     }
+    ]
+   },
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "geography",
+   "concept_id": "geography.capitals.switzerland",
+   "fact_as_of": null,
+   "explanation": "La Suisse n'a pas de « capitale » officielle dans sa Constitution, mais Berne est la ville fédérale, siège du gouvernement et du Parlement.",
    "has_context": false,
    "subdomain_id": "geography.capitals"
-  },
-  {
-   "id": "2a9b3b71-d2b0-4b8c-9da8-a8c3d39ac06f",
-   "type": "mcq",
-   "answer": {
-    "option_id": "ef722bee"
-   },
-   "prompt": "À quel pays appartient ce drapeau ? 🇯🇵",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "ef722bee",
-      "text": "Japon"
-     },
-     {
-      "id": "dd55cf6c",
-      "text": "Chine"
-     },
-     {
-      "id": "e3834bb3",
-      "text": "Corée du Sud"
-     },
-     {
-      "id": "5b5be640",
-      "text": "Bangladesh"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.flags.japan",
-   "fact_as_of": null,
-   "explanation": "Le Hinomaru, disque rouge sur fond blanc, représente le soleil. Le Bangladesh a un disque rouge sur fond vert.",
-   "has_context": false,
-   "subdomain_id": "geography.flags"
-  },
-  {
-   "id": "edb28ceb-bb2f-4306-8466-186e3c34581a",
-   "type": "mcq",
-   "answer": {
-    "option_id": "a39536d5"
-   },
-   "prompt": "Quel est le plus haut sommet d'Afrique ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "3620264d",
-      "text": "Ruwenzori"
-     },
-     {
-      "id": "a39536d5",
-      "text": "Kilimandjaro"
-     },
-     {
-      "id": "cce70b1c",
-      "text": "Mont Kenya"
-     },
-     {
-      "id": "de88c07d",
-      "text": "Toubkal"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.relief.africa_highest",
-   "fact_as_of": null,
-   "explanation": "Le Kilimandjaro, en Tanzanie, culmine à 5 895 m. C'est un volcan isolé, et non une chaîne de montagnes.",
-   "has_context": false,
-   "subdomain_id": "geography.relief"
   }
  ],
- "session_id": "8cc0bba5-0663-4fbf-a990-c55b25b097f3"
+ "session_id": "f3900a96-b18c-4b1e-9ccd-cc0719ea9cbe"
 }

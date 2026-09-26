@@ -1,29 +1,13 @@
 {
- "id": "311343ff-a62c-470a-9264-db425d2b387f",
- "type": "mcq",
+ "id": "4aff5fec-f5ab-4606-9b7d-8bcc678aa8c2",
+ "type": "numeric",
  "total": 5,
- "prompt": "Qui a peint « Guernica » (1937) ?",
+ "prompt": "Combien vaut 2¹⁰ ?",
  "payload": {
-  "options": [
-   {
-    "id": "034969b4",
-    "text": "Pablo Picasso"
-   },
-   {
-    "id": "837d859b",
-    "text": "Joan Miró"
-   },
-   {
-    "id": "ca7a9e38",
-    "text": "Salvador Dalí"
-   },
-   {
-    "id": "fe4b20d6",
-    "text": "Francisco de Goya"
-   }
-  ]
+  "decimals": 0,
+  "allow_negative": false
  },
  "position": 1,
- "domain_id": "arts",
- "subdomain_id": "arts.painting"
+ "domain_id": "calc",
+ "subdomain_id": "calc.mental"
 }

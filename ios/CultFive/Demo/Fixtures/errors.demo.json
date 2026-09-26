@@ -1,131 +1,243 @@
 {
  "active": [
   {
-   "label": "Secondes dans une heure",
+   "label": "Priorité avec soustraction",
    "since": "2026-09-25T17:00:00+00:00",
    "state": "failed",
    "domain_id": "calc",
-   "concept_id": "calc.conversions.seconds_hour",
+   "concept_id": "calc.mental.priority_ops_2",
    "times_failed": 2
   },
   {
-   "label": "km en m",
-   "since": "2026-09-25T17:00:00+00:00",
+   "label": "Imprimerie",
+   "since": "2026-09-25T06:30:41+00:00",
    "state": "failed",
-   "domain_id": "calc",
-   "concept_id": "calc.conversions.km_to_m",
-   "times_failed": 1
+   "domain_id": "history",
+   "concept_id": "history.modern.printing_press",
+   "times_failed": 2
   },
   {
-   "label": "2001, l'Odyssée de l'espace",
-   "since": "2026-09-25T06:30:28+00:00",
-   "state": "failed",
-   "domain_id": "cinema",
-   "concept_id": "cinema.directors.kubrick_2001",
-   "times_failed": 1
-  },
-  {
-   "label": "Avoir le cafard",
+   "label": "Accent circonflexe",
    "since": "2026-09-24T17:00:00+00:00",
    "state": "failed",
    "domain_id": "french",
-   "concept_id": "french.expressions.avoir_cafard",
-   "times_failed": 2
+   "concept_id": "french.spelling.accent_circonflexe",
+   "times_failed": 1
   },
   {
-   "label": "Pays le plus peuplé",
-   "since": "2026-09-24T06:30:43+00:00",
+   "label": "Quoi que / quoique",
+   "since": "2026-09-24T17:00:00+00:00",
    "state": "failed",
-   "domain_id": "geography",
-   "concept_id": "geography.countries.most_populous",
-   "times_failed": 2
+   "domain_id": "french",
+   "concept_id": "french.grammar.quoi_que",
+   "times_failed": 1
   },
   {
-   "label": "Os le plus long",
+   "label": "Symbole de l'or",
    "since": "2026-09-23T17:00:00+00:00",
    "state": "failed",
    "domain_id": "science",
-   "concept_id": "science.human_body.longest_bone",
-   "times_failed": 1
-  },
-  {
-   "label": "Fin de la guerre en Europe",
-   "since": "2026-09-23T17:00:00+00:00",
-   "state": "failed",
-   "domain_id": "history",
-   "concept_id": "history.contemporary.ww2_end_europe",
-   "times_failed": 1
-  },
-  {
-   "label": "Édit de Nantes",
-   "since": "2026-09-23T06:30:47+00:00",
-   "state": "failed",
-   "domain_id": "history",
-   "concept_id": "history.modern.edict_nantes",
+   "concept_id": "science.chemistry.gold_symbol",
    "times_failed": 2
   },
   {
-   "label": "Se rendre compte",
-   "since": "2026-09-23T06:30:21+00:00",
+   "label": "Planètes par taille",
+   "since": "2026-09-23T17:00:00+00:00",
    "state": "failed",
-   "domain_id": "french",
-   "concept_id": "french.spelling.se_rendre_compte",
+   "domain_id": "science",
+   "concept_id": "science.space.planets_size_order",
    "times_failed": 1
   },
   {
    "label": "Drapeau de l'Irlande",
-   "since": "2026-09-23T06:30:15+00:00",
+   "since": "2026-09-23T06:31:19+00:00",
    "state": "failed",
    "domain_id": "geography",
    "concept_id": "geography.flags.ireland",
+   "times_failed": 1
+  },
+  {
+   "label": "0,125 en fraction",
+   "since": "2026-09-23T06:30:47+00:00",
+   "state": "failed",
+   "domain_id": "calc",
+   "concept_id": "calc.fractions.decimal_0125",
+   "times_failed": 1
+  },
+  {
+   "label": "Voisins du Brésil",
+   "since": "2026-09-22T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "geography",
+   "concept_id": "geography.borders.brazil_neighbours",
+   "times_failed": 1
+  },
+  {
+   "label": "Frontière France-Brésil",
+   "since": "2026-09-22T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "geography",
+   "concept_id": "geography.borders.france_brazil_border",
    "times_failed": 2
   },
   {
-   "label": "Hectare en m²",
-   "since": "2026-09-21T06:30:38+00:00",
+   "label": "La chauve-souris",
+   "since": "2026-09-22T06:30:41+00:00",
    "state": "failed",
-   "domain_id": "calc",
-   "concept_id": "calc.conversions.hectare",
+   "domain_id": "nature",
+   "concept_id": "nature.animals.bat_mammal",
    "times_failed": 1
   },
   {
-   "label": "Syllogisme",
+   "label": "Peste noire",
+   "since": "2026-09-21T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.middle_ages.black_death",
+   "times_failed": 1
+  },
+  {
+   "label": "Indépendance américaine",
+   "since": "2026-09-21T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.dates.us_independence",
+   "times_failed": 1
+  },
+  {
+   "label": "Reddition de Vercingétorix",
+   "since": "2026-09-21T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.antiquity.alesia",
+   "times_failed": 1
+  },
+  {
+   "label": "Sacre de Napoléon",
+   "since": "2026-09-21T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.dates.napoleon_coronation",
+   "times_failed": 1
+  },
+  {
+   "label": "Capitales : Égypte, Argentine, Corée du Sud, Hongrie",
+   "since": "2026-09-21T06:31:13+00:00",
+   "state": "failed",
+   "domain_id": "geography",
+   "concept_id": "geography.capitals.pairs_set2",
+   "times_failed": 1
+  },
+  {
+   "label": "La batte et la balle",
    "since": "2026-09-20T17:00:00+00:00",
    "state": "failed",
    "domain_id": "logic",
-   "concept_id": "logic.reasoning.syllogism_bloups",
-   "times_failed": 3
-  },
-  {
-   "label": "Lignes de la portée",
-   "since": "2026-09-20T06:30:30+00:00",
-   "state": "failed",
-   "domain_id": "music",
-   "concept_id": "music.instruments.staff_lines",
+   "concept_id": "logic.reasoning.bat_ball",
    "times_failed": 1
   },
   {
-   "label": "Hymne à la joie",
+   "label": "Premier iPhone",
+   "since": "2026-09-20T06:30:48+00:00",
+   "state": "failed",
+   "domain_id": "tech",
+   "concept_id": "tech.inventions.iphone_2007",
+   "times_failed": 1
+  },
+  {
+   "label": "L'Alhambra",
+   "since": "2026-09-20T06:30:29+00:00",
+   "state": "failed",
+   "domain_id": "geography",
+   "concept_id": "geography.monuments.alhambra",
+   "times_failed": 1
+  },
+  {
+   "label": "Joueurs au football",
+   "since": "2026-09-19T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "sport",
+   "concept_id": "sport.football.players_count",
+   "times_failed": 1
+  },
+  {
+   "label": "Premiers JO modernes",
+   "since": "2026-09-19T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "sport",
+   "concept_id": "sport.olympics.athens_1896",
+   "times_failed": 1
+  },
+  {
+   "label": "Le Cri",
+   "since": "2026-09-18T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "arts",
+   "concept_id": "arts.painting.scream",
+   "times_failed": 1
+  },
+  {
+   "label": "Guernica",
+   "since": "2026-09-18T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "arts",
+   "concept_id": "arts.painting.guernica",
+   "times_failed": 1
+  },
+  {
+   "label": "Maillots du Tour de France",
+   "since": "2026-09-18T06:30:45+00:00",
+   "state": "failed",
+   "domain_id": "sport",
+   "concept_id": "sport.rules.tour_de_france_jerseys",
+   "times_failed": 1
+  },
+  {
+   "label": "PGCD",
    "since": "2026-09-17T17:00:00+00:00",
    "state": "failed",
-   "domain_id": "music",
-   "concept_id": "music.classical.ode_to_joy",
+   "domain_id": "calc",
+   "concept_id": "calc.number_logic.gcd",
    "times_failed": 1
   },
   {
-   "label": "Ubuesque",
-   "since": "2026-09-15T06:31:08+00:00",
+   "label": "Participe passé d'acquérir",
+   "since": "2026-09-17T06:30:51+00:00",
    "state": "failed",
    "domain_id": "french",
-   "concept_id": "french.vocabulary.ubuesque",
+   "concept_id": "french.spelling.acquerir_pp",
    "times_failed": 1
   },
   {
-   "label": "Surface de Roland-Garros",
+   "label": "Pyramide du Louvre",
+   "since": "2026-09-14T06:31:02+00:00",
+   "state": "failed",
+   "domain_id": "arts",
+   "concept_id": "arts.architecture.louvre_pyramid",
+   "times_failed": 1
+  },
+  {
+   "label": "Les Andes",
+   "since": "2026-09-12T06:30:35+00:00",
+   "state": "failed",
+   "domain_id": "geography",
+   "concept_id": "geography.relief.andes_longest",
+   "times_failed": 2
+  },
+  {
+   "label": "Corde frottée la plus grave",
+   "since": "2026-09-11T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "music",
+   "concept_id": "music.instruments.double_bass",
+   "times_failed": 1
+  },
+  {
+   "label": "Valeur d'un essai",
    "since": "2026-09-11T17:00:00+00:00",
    "state": "failed",
    "domain_id": "sport",
-   "concept_id": "sport.rules.roland_garros_surface",
+   "concept_id": "sport.rules.rugby_try",
    "times_failed": 1
   },
   {
@@ -137,14 +249,94 @@
    "times_failed": 1
   },
   {
-   "label": "Pusillanime",
+   "label": "Trois quarts de 60",
+   "since": "2026-09-09T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "calc",
+   "concept_id": "calc.fractions.of_quantity",
+   "times_failed": 1
+  },
+  {
+   "label": "Personnages et réalisations",
+   "since": "2026-09-09T06:30:44+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.figures.achievements_pairs",
+   "times_failed": 1
+  },
+  {
+   "label": "Fonction de « lui »",
    "since": "2026-09-08T17:00:00+00:00",
    "state": "failed",
    "domain_id": "french",
-   "concept_id": "french.vocabulary.pusillanime",
+   "concept_id": "french.grammar.coi_lui",
+   "times_failed": 1
+  },
+  {
+   "label": "Muraille de Chine vue de la Lune",
+   "since": "2026-09-07T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "science",
+   "concept_id": "science.space.great_wall_moon",
+   "times_failed": 1
+  },
+  {
+   "label": "Symboles chimiques",
+   "since": "2026-09-07T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "science",
+   "concept_id": "science.chemistry.elements_pairs",
+   "times_failed": 1
+  },
+  {
+   "label": "km/h en m/s",
+   "since": "2026-09-07T06:31:04+00:00",
+   "state": "failed",
+   "domain_id": "calc",
+   "concept_id": "calc.conversions.kmh_ms",
+   "times_failed": 1
+  },
+  {
+   "label": "Berceau de la démocratie",
+   "since": "2026-09-05T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.antiquity.democracy_athens",
+   "times_failed": 1
+  },
+  {
+   "label": "HTTP",
+   "since": "2026-09-05T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "tech",
+   "concept_id": "tech.computing.http",
+   "times_failed": 1
+  },
+  {
+   "label": "Fin de la guerre en Europe",
+   "since": "2026-09-05T17:00:00+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.contemporary.ww2_end_europe",
+   "times_failed": 1
+  },
+  {
+   "label": "Suite 2, 6, 12, 20…",
+   "since": "2026-09-05T06:30:47+00:00",
+   "state": "failed",
+   "domain_id": "calc",
+   "concept_id": "calc.number_logic.seq_pronic",
+   "times_failed": 1
+  },
+  {
+   "label": "Magna Carta",
+   "since": "2026-09-05T06:30:23+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.middle_ages.magna_carta",
    "times_failed": 1
   }
  ],
- "mastered_total": 21,
- "corrected_total": 46
+ "mastered_total": 6,
+ "corrected_total": 42
 }

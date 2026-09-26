@@ -1,188 +1,173 @@
 [
  {
-  "id": "c7f24246-d94d-4cf3-a0a1-b63ba84e8e78",
+  "id": "ab13f0d0-add1-41ee-a89d-ebe8843f8038",
   "type": "mcq",
   "given": {
-   "option_id": "62f55fe7"
+   "option_id": "67c0763e"
   },
   "answer": {
-   "option_id": "62f55fe7"
+   "option_id": "67c0763e"
   },
-  "prompt": "À quel siècle la Peste noire ravage-t-elle l'Europe ?",
+  "prompt": "Quel est le synonyme de « loquace » ?",
   "source": null,
   "payload": {
    "options": [
     {
-     "id": "23dee782",
-     "text": "Xe siècle"
+     "id": "67c0763e",
+     "text": "bavard"
     },
     {
-     "id": "80dae8d9",
-     "text": "XIIe siècle"
+     "id": "8a55ee26",
+     "text": "rapide"
     },
     {
-     "id": "785efd97",
-     "text": "XVIe siècle"
+     "id": "e8884c1b",
+     "text": "silencieux"
     },
     {
-     "id": "62f55fe7",
-     "text": "XIVe siècle"
+     "id": "9e59d02f",
+     "text": "généreux"
     }
    ]
   },
   "position": 1,
   "takeaway": null,
-  "domain_id": "history",
-  "counted_ms": 18000,
+  "domain_id": "french",
+  "counted_ms": 6000,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "De 1347 à 1352, elle tue entre le tiers et la moitié de la population européenne.",
-  "subdomain_id": "history.middle_ages"
+  "explanation": "Loquace (du latin loqui, « parler ») : qui parle volontiers et beaucoup.",
+  "subdomain_id": "french.synonyms"
  },
  {
-  "id": "747f55c6-3460-4d5a-881a-6a5ba6f700bc",
-  "type": "mcq",
-  "given": {
-   "value": -999999,
-   "option_id": "nope"
-  },
-  "answer": {
-   "option_id": "4063e92b"
-  },
-  "prompt": "Qui a réalisé « 2001, l'Odyssée de l'espace » (1968) ?",
-  "source": null,
-  "payload": {
-   "options": [
-    {
-     "id": "1cf3a92e",
-     "text": "Steven Spielberg"
-    },
-    {
-     "id": "617d9fdd",
-     "text": "George Lucas"
-    },
-    {
-     "id": "543da34d",
-     "text": "Ridley Scott"
-    },
-    {
-     "id": "4063e92b",
-     "text": "Stanley Kubrick"
-    }
-   ]
-  },
-  "position": 2,
-  "takeaway": null,
-  "domain_id": "cinema",
-  "counted_ms": 10000,
-  "fact_as_of": null,
-  "is_correct": false,
-  "explanation": "Kubrick a coécrit le scénario avec l'auteur de science-fiction Arthur C. Clarke.",
-  "subdomain_id": "cinema.directors"
- },
- {
-  "id": "cbc65d90-2385-4c63-8425-20660d26dbb1",
+  "id": "523216be-9682-494a-8c68-e4aa832135ad",
   "type": "numeric",
   "given": {
-   "value": 102
+   "value": 14
   },
   "answer": {
-   "value": 102,
+   "value": 14,
    "tolerance": 0
   },
-  "prompt": "Combien font 17 × 6 ?",
+  "prompt": "Combien font 2 + 3 × 4 ?",
+  "source": null,
+  "payload": {
+   "decimals": 0,
+   "allow_negative": false
+  },
+  "position": 2,
+  "takeaway": "× et ÷ avant + et −, sauf parenthèses.",
+  "domain_id": "calc",
+  "counted_ms": 6000,
+  "fact_as_of": null,
+  "is_correct": true,
+  "explanation": "La multiplication passe avant l'addition : 3 × 4 = 12, puis 2 + 12 = 14 (et non 20).",
+  "subdomain_id": "calc.mental"
+ },
+ {
+  "id": "f74ceea9-ec54-4ce3-a14a-59db453ff588",
+  "type": "numeric",
+  "given": {
+   "value": 3
+  },
+  "answer": {
+   "value": 3,
+   "tolerance": 0
+  },
+  "prompt": "Un tiroir contient des chaussettes noires et blanches, mélangées. Dans le noir, combien faut-il en prendre au minimum pour être sûr d'avoir une paire de la même couleur ?",
   "source": null,
   "payload": {
    "decimals": 0,
    "allow_negative": false
   },
   "position": 3,
-  "takeaway": "Décomposer un facteur en dizaines + unités rend la multiplication mentale facile.",
-  "domain_id": "calc",
-  "counted_ms": 13000,
+  "takeaway": null,
+  "domain_id": "logic",
+  "counted_ms": 12000,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "17 × 6 = 10 × 6 + 7 × 6 = 60 + 42 = 102.",
-  "subdomain_id": "calc.mental"
+  "explanation": "Avec 2 chaussettes, on peut tomber sur une noire et une blanche. La 3e forme forcément une paire avec l'une des deux.",
+  "subdomain_id": "logic.reasoning"
  },
  {
-  "id": "03fcb9f4-0e2c-453e-a285-9a5c0ce2220e",
+  "id": "e2e8fe2c-e095-4506-917e-d666498d163c",
   "type": "mcq",
   "given": {
-   "option_id": "a9e1e5e5"
+   "value": -999999,
+   "option_id": "nope"
   },
   "answer": {
-   "option_id": "a9e1e5e5"
+   "option_id": "bbdefa12"
   },
-  "prompt": "Quelle est l'altitude officielle du mont Everest ?",
-  "source": "Mesure conjointe Chine–Népal",
-  "payload": {
-   "options": [
-    {
-     "id": "bf515e0e",
-     "text": "8 091 m"
-    },
-    {
-     "id": "a9e1e5e5",
-     "text": "8 849 m"
-    },
-    {
-     "id": "d18cabc5",
-     "text": "7 546 m"
-    },
-    {
-     "id": "2f55bba8",
-     "text": "9 312 m"
-    }
-   ]
-  },
-  "position": 4,
-  "takeaway": "L'Everest dépasse de peu les 8 800 m.",
-  "domain_id": "geography",
-  "counted_ms": 18000,
-  "fact_as_of": "2020-12-08",
-  "is_correct": true,
-  "explanation": "En 2020, la Chine et le Népal ont annoncé ensemble une mesure de 8 848,86 m.",
-  "subdomain_id": "geography.relief"
- },
- {
-  "id": "1c22305d-b1bf-47fc-8518-4be9ba5d9ed9",
-  "type": "mcq",
-  "given": {
-   "option_id": "85b872f5"
-  },
-  "answer": {
-   "option_id": "85b872f5"
-  },
-  "prompt": "Quel est le pluriel de « un chou » ?",
+  "prompt": "Qui met au point l'imprimerie à caractères mobiles en Europe, vers 1450 ?",
   "source": null,
   "payload": {
    "options": [
     {
-     "id": "85b872f5",
-     "text": "des choux"
+     "id": "bbdefa12",
+     "text": "Gutenberg"
     },
     {
-     "id": "95169388",
-     "text": "des chous"
+     "id": "e342a57f",
+     "text": "Léonard de Vinci"
     },
     {
-     "id": "970e64d6",
-     "text": "des chouxs"
+     "id": "3370f166",
+     "text": "Érasme"
     },
     {
-     "id": "36a32c99",
-     "text": "des chou"
+     "id": "2b8c6c7b",
+     "text": "Copernic"
+    }
+   ]
+  },
+  "position": 4,
+  "takeaway": null,
+  "domain_id": "history",
+  "counted_ms": 17000,
+  "fact_as_of": null,
+  "is_correct": false,
+  "explanation": "À Mayence, Johannes Gutenberg imprime notamment une Bible vers 1455. Des caractères mobiles existaient déjà en Chine et en Corée.",
+  "subdomain_id": "history.modern"
+ },
+ {
+  "id": "11a121bd-2755-4d78-8328-47d578f21659",
+  "type": "mcq",
+  "given": {
+   "option_id": "6a9c9087"
+  },
+  "answer": {
+   "option_id": "6a9c9087"
+  },
+  "prompt": "Quelle est la capitale du Maroc ?",
+  "source": null,
+  "payload": {
+   "options": [
+    {
+     "id": "8a757b0d",
+     "text": "Fès"
+    },
+    {
+     "id": "6a9c9087",
+     "text": "Rabat"
+    },
+    {
+     "id": "2a5dea63",
+     "text": "Casablanca"
+    },
+    {
+     "id": "c2808cc2",
+     "text": "Marrakech"
     }
    ]
   },
   "position": 5,
   "takeaway": null,
-  "domain_id": "french",
-  "counted_ms": 14000,
+  "domain_id": "geography",
+  "counted_ms": 18000,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Sept noms en -ou prennent un x au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou.",
-  "subdomain_id": "french.spelling"
+  "explanation": "Rabat est la capitale politique ; Casablanca est la plus grande ville et le poumon économique du pays.",
+  "subdomain_id": "geography.capitals"
  }
 ]

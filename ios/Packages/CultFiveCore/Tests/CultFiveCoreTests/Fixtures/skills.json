@@ -1,51 +1,51 @@
 [
  {
-  "name": "Calcul",
-  "level": 54,
-  "correct": 2,
-  "answered": 2,
-  "domain_id": "calc",
-  "reliability": 0.13
- },
- {
-  "name": "Géographie",
-  "level": 54,
-  "correct": 2,
-  "answered": 2,
-  "domain_id": "geography",
-  "reliability": 0.12
- },
- {
-  "name": "Sciences",
-  "level": 48,
-  "correct": 1,
-  "answered": 2,
-  "domain_id": "science",
-  "reliability": 0.14
- },
- {
   "name": "Logique",
-  "level": 56,
+  "level": 50,
   "correct": 2,
-  "answered": 2,
+  "answered": 3,
   "domain_id": "logic",
-  "reliability": 0.13
+  "reliability": 0.2
  },
  {
   "name": "Français",
+  "level": 55,
+  "correct": 2,
+  "answered": 2,
+  "domain_id": "french",
+  "reliability": 0.11
+ },
+ {
+  "name": "Calcul",
   "level": 52,
   "correct": 1,
   "answered": 1,
-  "domain_id": "french",
-  "reliability": 0.06
+  "domain_id": "calc",
+  "reliability": 0.08
  },
  {
-  "name": "Histoire",
+  "name": "Géographie",
   "level": 46,
   "correct": 0,
   "answered": 1,
+  "domain_id": "geography",
+  "reliability": 0.09
+ },
+ {
+  "name": "Histoire",
+  "level": 51,
+  "correct": 1,
+  "answered": 1,
   "domain_id": "history",
-  "reliability": 0.03
+  "reliability": 0.05
+ },
+ {
+  "name": "Sport",
+  "level": 52,
+  "correct": 1,
+  "answered": 1,
+  "domain_id": "sport",
+  "reliability": 0.07
  },
  {
   "name": "Musique",
@@ -53,7 +53,23 @@
   "correct": 1,
   "answered": 1,
   "domain_id": "music",
-  "reliability": 0.07
+  "reliability": 0.08
+ },
+ {
+  "name": "Nature & animaux",
+  "level": 51,
+  "correct": 1,
+  "answered": 1,
+  "domain_id": "nature",
+  "reliability": 0.05
+ },
+ {
+  "name": "Sciences",
+  "level": 50,
+  "correct": 0,
+  "answered": 0,
+  "domain_id": "science",
+  "reliability": 0.0
  },
  {
   "name": "Arts & culture",
@@ -61,14 +77,6 @@
   "correct": 0,
   "answered": 0,
   "domain_id": "arts",
-  "reliability": 0.0
- },
- {
-  "name": "Sport",
-  "level": 50,
-  "correct": 0,
-  "answered": 0,
-  "domain_id": "sport",
   "reliability": 0.0
  },
  {
@@ -85,14 +93,6 @@
   "correct": 0,
   "answered": 0,
   "domain_id": "tech",
-  "reliability": 0.0
- },
- {
-  "name": "Nature & animaux",
-  "level": 50,
-  "correct": 0,
-  "answered": 0,
-  "domain_id": "nature",
   "reliability": 0.0
  }
 ]

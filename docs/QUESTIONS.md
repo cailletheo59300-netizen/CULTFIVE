@@ -5,7 +5,7 @@
 - `content/questions/*.json` : questions curées. Un fichier par pilier (`calc`, `french`, `geography`, `history`) + `surprise.json` (autres domaines).
 - `node scripts/build-seed.mjs` valide tout (échec au moindre défaut) et génère `supabase/seed.sql`. `--check` : validation seule. La CI vérifie que le seed est à jour.
 
-État session 1 : **153 questions** (calc 23 · français 21 · géographie 28 · histoire 22 · sciences 13 · logique 6 · arts 8 · sport 7 · cinéma 6 · musique 6 · techno 6 · nature 7).
+État session 2 : **273 questions** (calcul 48 · français 46 · géographie 53 · histoire 47 · sciences 18 · logique 9 · arts 11 · sport 9 · cinéma 8 · musique 8 · techno 7 · nature 9). Fichiers `*_2.json` = vague 2, riche en types non-QCM (classements, associations, vrai/faux, calcul).
 
 ## Format (auteur)
 ```json

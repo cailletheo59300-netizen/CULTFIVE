@@ -40,8 +40,10 @@ struct TallyMark: View {
             ZStack {
                 ForEach(0..<5, id: \.self) { index in
                     TallyStrokeShape(index: index)
+                        // Raté : un trait « manqué », plus court et estompé (forme + couleur, jamais la couleur seule).
+                        .trim(from: strokes[index] == .wrong ? 0.3 : 0, to: strokes[index] == .wrong ? 0.7 : 1)
                         .stroke(color(for: strokes[index], index: index),
-                                style: StrokeStyle(lineWidth: width, lineCap: .round, dash: dash(for: strokes[index], width: width)))
+                                style: StrokeStyle(lineWidth: width, lineCap: .round))
                         .opacity(strokes[index] == .current ? (pulse ? 1 : 0.35) : 1)
                 }
             }
@@ -66,10 +68,6 @@ struct TallyMark: View {
         }
     }
 
-    /// Les ratés sont pointillés : l'information ne repose jamais sur la seule couleur.
-    private func dash(for stroke: TallyStroke, width: CGFloat) -> [CGFloat] {
-        stroke == .wrong ? [width * 0.2, width * 1.6] : []
-    }
 
     private var accessibilityText: String {
         let correct = strokes.filter { $0 == .correct }.count
