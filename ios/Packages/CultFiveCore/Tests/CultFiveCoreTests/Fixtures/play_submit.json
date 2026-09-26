@@ -1,0 +1,53 @@
+{
+ "xp": 40,
+ "seeds": 2,
+ "balance": 32,
+ "correct": 6,
+ "results": [
+  {
+   "is_correct": true,
+   "question_id": "ce6e6d7b-4b60-4a72-be14-6f0dda3a5fca",
+   "domain_after": 54.2,
+   "domain_before": 52.2,
+   "error_transition": null
+  },
+  {
+   "is_correct": true,
+   "question_id": "a669eb31-ac5b-4c87-8c27-24306a5cfaed",
+   "domain_after": 52.2,
+   "domain_before": 50.0,
+   "error_transition": null
+  },
+  {
+   "is_correct": true,
+   "question_id": "d30198be-3774-4a6e-8c1d-64357c33ef30",
+   "domain_after": 54.0,
+   "domain_before": 50.0,
+   "error_transition": null
+  },
+  {
+   "is_correct": true,
+   "question_id": "5819717b-f4af-417a-8d31-fcedf7aff260",
+   "domain_after": 54.5,
+   "domain_before": 53.4,
+   "error_transition": null
+  },
+  {
+   "is_correct": true,
+   "question_id": "d331d5e7-d8b4-4df7-8a8d-63d3a60e7524",
+   "domain_after": 48.4,
+   "domain_before": 46.0,
+   "error_transition": null
+  },
+  {
+   "is_correct": true,
+   "question_id": "c40e461a-dfd6-4eb1-b593-3669fb9ca1e6",
+   "domain_after": 55.5,
+   "domain_before": 54.0,
+   "error_transition": null
+  }
+ ],
+ "recorded": 6,
+ "corrected": [],
+ "achievements": []
+}

@@ -1,0 +1,603 @@
+import Foundation
+
+// Modèles des réponses RPC. Clés explicites (snake_case serveur) : aucune conversion automatique,
+// pour ne jamais altérer les clés des payloads JSON (identifiants d'options, paires…).
+
+// MARK: - Daily
+
+public enum DailyState: String, Codable, Sendable {
+    case available
+    case inProgress = "in_progress"
+    case done
+}
+
+public struct DailyStatus: Codable, Hashable, Sendable {
+    public let date: String
+    public let state: DailyState
+    public let runId: UUID?
+    public let nextPosition: Int?
+    public let score: Int?
+    public let answers: [Bool]
+    public let streak: Int
+    public let streakFreezes: Int
+    public let secondsUntilNext: Int
+
+    enum CodingKeys: String, CodingKey {
+        case date, state, score, answers, streak
+        case runId = "run_id"
+        case nextPosition = "next_position"
+        case streakFreezes = "streak_freezes"
+        case secondsUntilNext = "seconds_until_next"
+    }
+
+    public init(date: String, state: DailyState, runId: UUID? = nil, nextPosition: Int? = nil, score: Int? = nil,
+                answers: [Bool] = [], streak: Int = 0, streakFreezes: Int = 0, secondsUntilNext: Int = 0) {
+        self.date = date
+        self.state = state
+        self.runId = runId
+        self.nextPosition = nextPosition
+        self.score = score
+        self.answers = answers
+        self.streak = streak
+        self.streakFreezes = streakFreezes
+        self.secondsUntilNext = secondsUntilNext
+    }
+}
+
+public struct DailyStart: Codable, Hashable, Sendable {
+    public let runId: UUID
+    public let date: String
+    public let status: String
+    public let nextPosition: Int?
+    public let total: Int
+
+    enum CodingKeys: String, CodingKey {
+        case date, status, total
+        case runId = "run_id"
+        case nextPosition = "next_position"
+    }
+}
+
+/// Réponse de `daily_question` : une question, ou `expired` si le délai est dépassé.
+public struct DailyQuestionResponse: Decodable, Sendable {
+    public let question: Question?
+    public let expired: Bool
+
+    public init(from decoder: Decoder) throws {
+        let json = try JSONValue(from: decoder)
+        if json["expired"]?.boolValue == true {
+            question = nil
+            expired = true
+        } else {
+            question = try Question(from: decoder)
+            expired = false
+        }
+    }
+}
+
+public struct DailyVerdict: Codable, Hashable, Sendable {
+    public let position: Int
+    public let isCorrect: Bool?
+    public let duplicate: Bool?
+    public let countedMs: Int?
+    public let errorTransition: String?
+    public let domainId: String?
+    public let domainBefore: Double?
+    public let domainAfter: Double?
+    public let finished: Bool?
+    public let expired: Bool?
+    public let answer: CorrectAnswer?
+    public let explanation: String?
+    public let takeaway: String?
+    public let source: String?
+
+    enum CodingKeys: String, CodingKey {
+        case position, duplicate, finished, expired, answer, explanation, takeaway, source
+        case isCorrect = "is_correct"
+        case countedMs = "counted_ms"
+        case errorTransition = "error_transition"
+        case domainId = "domain_id"
+        case domainBefore = "domain_before"
+        case domainAfter = "domain_after"
+    }
+
+    public var reveal: Reveal? {
+        guard let answer, let explanation else { return nil }
+        return Reveal(answer: answer, explanation: explanation, takeaway: takeaway, source: source)
+    }
+}
+
+public struct Percentile: Codable, Hashable, Sendable {
+    public enum Source: String, Codable, Sendable { case live, estimate }
+    public let top: Int?
+    public let source: Source
+    public let participants: Int
+}
+
+public struct AchievementRef: Codable, Hashable, Identifiable, Sendable {
+    public let id: String
+    public let name: String
+    public let description: String
+    public let unlockedAt: Date?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, description
+        case unlockedAt = "unlocked_at"
+    }
+}
+
+public struct DailyResult: Codable, Hashable, Sendable {
+    public struct Answer: Codable, Hashable, Sendable {
+        public let position: Int
+        public let isCorrect: Bool
+        public let countedMs: Int?
+        public let domainId: String
+        public let domainBefore: Double?
+        public let domainAfter: Double?
+
+        enum CodingKeys: String, CodingKey {
+            case position
+            case isCorrect = "is_correct"
+            case countedMs = "counted_ms"
+            case domainId = "domain_id"
+            case domainBefore = "domain_before"
+            case domainAfter = "domain_after"
+        }
+    }
+
+    public let runId: UUID
+    public let date: String
+    public let status: String
+    public let score: Int
+    public let totalMs: Int
+    public let xp: Int
+    public let seeds: Int
+    public let streak: Int
+    public let achievements: [AchievementRef]
+    public let answers: [Answer]
+    public let percentile: Percentile?
+
+    enum CodingKeys: String, CodingKey {
+        case date, status, score, xp, seeds, streak, achievements, answers, percentile
+        case runId = "run_id"
+        case totalMs = "total_ms"
+    }
+}
+
+public struct ReviewItem: Codable, Hashable, Identifiable, Sendable {
+    public let question: Question
+    public let given: GivenAnswer?
+    public let isCorrect: Bool
+    public let countedMs: Int?
+    public var id: UUID { question.id }
+
+    enum CodingKeys: String, CodingKey {
+        case given
+        case isCorrect = "is_correct"
+        case countedMs = "counted_ms"
+    }
+
+    public init(from decoder: Decoder) throws {
+        question = try Question(from: decoder)
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        given = try? c.decodeIfPresent(GivenAnswer.self, forKey: .given)
+        isCorrect = try c.decode(Bool.self, forKey: .isCorrect)
+        countedMs = try c.decodeIfPresent(Int.self, forKey: .countedMs)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        try question.encode(to: encoder)
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encodeIfPresent(given, forKey: .given)
+        try c.encode(isCorrect, forKey: .isCorrect)
+        try c.encodeIfPresent(countedMs, forKey: .countedMs)
+    }
+}
+
+public struct DailyHistoryEntry: Codable, Hashable, Sendable {
+    public let date: String
+    public let status: String
+    public let score: Int?
+    public let totalMs: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case date, status, score
+        case totalMs = "total_ms"
+    }
+}
+
+// MARK: - Jouer
+
+public enum PlayMode: String, Codable, Sendable, CaseIterable {
+    case quick, training, surprise, errors, challenge
+}
+
+public struct PlayPack: Codable, Hashable, Sendable {
+    public let sessionId: UUID
+    public let mode: String?
+    public let questions: [Question]
+
+    enum CodingKeys: String, CodingKey {
+        case mode, questions
+        case sessionId = "session_id"
+    }
+}
+
+public struct PlayAttempt: Codable, Hashable, Sendable {
+    public let clientAttemptId: UUID
+    public let questionId: UUID
+    public let given: GivenAnswer?
+    public let responseMs: Int
+
+    enum CodingKeys: String, CodingKey {
+        case given
+        case clientAttemptId = "client_attempt_id"
+        case questionId = "question_id"
+        case responseMs = "response_ms"
+    }
+
+    public init(clientAttemptId: UUID = UUID(), questionId: UUID, given: GivenAnswer?, responseMs: Int) {
+        self.clientAttemptId = clientAttemptId
+        self.questionId = questionId
+        self.given = given
+        self.responseMs = responseMs
+    }
+}
+
+public struct PlaySubmitResult: Codable, Hashable, Sendable {
+    public struct Item: Codable, Hashable, Sendable {
+        public let questionId: UUID
+        public let isCorrect: Bool?
+        public let errorTransition: String?
+        public let domainBefore: Double?
+        public let domainAfter: Double?
+
+        enum CodingKeys: String, CodingKey {
+            case questionId = "question_id"
+            case isCorrect = "is_correct"
+            case errorTransition = "error_transition"
+            case domainBefore = "domain_before"
+            case domainAfter = "domain_after"
+        }
+    }
+
+    public let recorded: Int
+    public let correct: Int
+    public let xp: Int
+    public let seeds: Int
+    public let corrected: [UUID]
+    public let results: [Item]
+    public let achievements: [String]
+    public let balance: Int
+}
+
+public enum HelpKind: String, Codable, Sendable, CaseIterable {
+    case fiftyFifty = "fifty_fifty"
+    case hint
+    case context
+
+    public var cost: Int {
+        switch self {
+        case .fiftyFifty: return 15
+        case .hint: return 10
+        case .context: return 5
+        }
+    }
+}
+
+public struct HelpContent: Codable, Hashable, Sendable {
+    public let remove: [String]?
+    public let hint: String?
+    public let context: String?
+    public let balance: Int
+}
+
+// MARK: - Profil, compétences
+
+public struct Profile: Codable, Hashable, Sendable {
+    public let id: UUID
+    public let handle: String
+    public let avatar: JSONValue?
+    public let ageRange: String?
+    public let timezone: String
+    public let challengePrior: Double
+    public let interests: [String]
+    public let xpTotal: Int
+    public let seeds: Int
+    public let streak: Int
+    public let streakBest: Int
+    public let streakFreezes: Int
+    public let questionsAnswered: Int
+    public let questionsCorrect: Int
+    public let errorsCorrected: Int
+    public let activeErrors: Int
+    public let referralCode: String
+    public let notifDaily: Bool
+    public let notifDailyTime: String
+    public let notifReminder: Bool
+    public let onboarded: Bool
+    public let isAnonymous: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case id, handle, avatar, timezone, interests, seeds, streak, onboarded
+        case ageRange = "age_range"
+        case challengePrior = "challenge_prior"
+        case xpTotal = "xp_total"
+        case streakBest = "streak_best"
+        case streakFreezes = "streak_freezes"
+        case questionsAnswered = "questions_answered"
+        case questionsCorrect = "questions_correct"
+        case errorsCorrected = "errors_corrected"
+        case activeErrors = "active_errors"
+        case referralCode = "referral_code"
+        case notifDaily = "notif_daily"
+        case notifDailyTime = "notif_daily_time"
+        case notifReminder = "notif_reminder"
+        case isAnonymous = "is_anonymous"
+    }
+}
+
+public struct HandleAvailability: Codable, Hashable, Sendable {
+    public let available: Bool
+    public let reason: String?
+}
+
+public struct SkillSummary: Codable, Hashable, Identifiable, Sendable {
+    public let domainId: String
+    public let name: String
+    public let level: Int
+    public let reliability: Double
+    public let answered: Int
+    public let correct: Int
+    public var id: String { domainId }
+
+    enum CodingKeys: String, CodingKey {
+        case name, level, reliability, answered, correct
+        case domainId = "domain_id"
+    }
+}
+
+public struct DomainStats: Codable, Hashable, Sendable {
+    public struct Subdomain: Codable, Hashable, Identifiable, Sendable {
+        public let id: String
+        public let name: String
+        public let level: Int
+        public let reliability: Double
+        public let answered: Int
+        public let correct: Int
+        public let available: Int
+
+        public init(id: String, name: String, level: Int, reliability: Double, answered: Int, correct: Int, available: Int) {
+            self.id = id
+            self.name = name
+            self.level = level
+            self.reliability = reliability
+            self.answered = answered
+            self.correct = correct
+            self.available = available
+        }
+    }
+
+    public struct HistoryPoint: Codable, Hashable, Sendable {
+        public let day: String
+        public let level: Double
+    }
+
+    public struct DifficultyBand: Codable, Hashable, Sendable {
+        public let band: String
+        public let answered: Int
+        public let correct: Int
+    }
+
+    public struct RecentError: Codable, Hashable, Identifiable, Sendable {
+        public let conceptId: String
+        public let label: String
+        public let state: String
+        public var id: String { conceptId }
+
+        enum CodingKeys: String, CodingKey {
+            case label, state
+            case conceptId = "concept_id"
+        }
+    }
+
+    public let domainId: String
+    public let level: Int
+    public let reliability: Double
+    public let answered: Int
+    public let correct: Int
+    public let avgMs: Int?
+    public let conceptsMastered: Int
+    public let history: [HistoryPoint]
+    public let subdomains: [Subdomain]
+    public let byDifficulty: [DifficultyBand]
+    public let recentErrors: [RecentError]
+
+    enum CodingKeys: String, CodingKey {
+        case level, reliability, answered, correct, history, subdomains
+        case domainId = "domain_id"
+        case avgMs = "avg_ms"
+        case conceptsMastered = "concepts_mastered"
+        case byDifficulty = "by_difficulty"
+        case recentErrors = "recent_errors"
+    }
+}
+
+public struct ErrorsOverview: Codable, Hashable, Sendable {
+    public struct Item: Codable, Hashable, Identifiable, Sendable {
+        public let conceptId: String
+        public let label: String
+        public let domainId: String
+        public let state: String
+        public let timesFailed: Int
+        public var id: String { conceptId }
+
+        enum CodingKeys: String, CodingKey {
+            case label, state
+            case conceptId = "concept_id"
+            case domainId = "domain_id"
+            case timesFailed = "times_failed"
+        }
+    }
+
+    public let active: [Item]
+    public let correctedTotal: Int
+    public let masteredTotal: Int
+
+    enum CodingKeys: String, CodingKey {
+        case active
+        case correctedTotal = "corrected_total"
+        case masteredTotal = "mastered_total"
+    }
+}
+
+// MARK: - Social
+
+public struct FriendToday: Codable, Hashable, Sendable {
+    public let score: Int?
+    public let totalMs: Int?
+    public let status: String?
+    public let answers: [Bool]?
+
+    enum CodingKeys: String, CodingKey {
+        case score, status, answers
+        case totalMs = "total_ms"
+    }
+}
+
+public struct Friend: Codable, Hashable, Identifiable, Sendable {
+    public let id: UUID
+    public let handle: String
+    public let avatar: JSONValue?
+    public let streak: Int
+    public let today: FriendToday?
+}
+
+public struct FriendRequest: Codable, Hashable, Identifiable, Sendable {
+    public let friendshipId: UUID
+    public let userId: UUID
+    public let handle: String
+    public var id: UUID { friendshipId }
+
+    enum CodingKeys: String, CodingKey {
+        case handle
+        case friendshipId = "friendship_id"
+        case userId = "id"
+    }
+}
+
+public struct FriendsOverview: Codable, Hashable, Sendable {
+    public let friends: [Friend]
+    public let incoming: [FriendRequest]
+    public let outgoing: [FriendRequest]
+}
+
+public struct HandleSearchResult: Codable, Hashable, Identifiable, Sendable {
+    public let id: UUID
+    public let handle: String
+    public let relation: String
+    public let incoming: Bool?
+}
+
+public struct FriendRequestResult: Codable, Hashable, Sendable {
+    public let status: String
+}
+
+public struct ReferralClaimResult: Codable, Hashable, Sendable {
+    public let status: String
+    public let reason: String?
+    public let seeds: Int?
+    public let inviter: String?
+}
+
+public struct ReferralOverview: Codable, Hashable, Sendable {
+    public let code: String
+    public let qualified: Int
+    public let pending: Int
+    public let tiers: [Int]
+}
+
+public enum LeaguePeriod: String, Codable, Sendable, CaseIterable {
+    case week, month
+}
+
+public struct LeagueSummary: Codable, Hashable, Identifiable, Sendable {
+    public let id: UUID
+    public let name: String
+    public let period: LeaguePeriod
+    public let members: Int
+    public let inviteCode: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, period, members
+        case inviteCode = "invite_code"
+    }
+}
+
+public struct LeagueStandings: Codable, Hashable, Sendable {
+    public struct Row: Codable, Hashable, Identifiable, Sendable {
+        public let rank: Int
+        public let id: UUID
+        public let handle: String
+        public let points: Int
+        public let days: Int
+        public let totalMs: Int
+        public let isMe: Bool
+
+        enum CodingKeys: String, CodingKey {
+            case rank, id, handle, points, days
+            case totalMs = "total_ms"
+            case isMe = "is_me"
+        }
+    }
+
+    public let id: UUID
+    public let name: String
+    public let period: LeaguePeriod
+    public let inviteCode: String
+    public let isOwner: Bool
+    public let startDate: String
+    public let endDate: String
+    public let standings: [Row]
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, period, standings
+        case inviteCode = "invite_code"
+        case isOwner = "is_owner"
+        case startDate = "start_date"
+        case endDate = "end_date"
+    }
+}
+
+// MARK: - Référentiel
+
+public struct DomainInfo: Codable, Hashable, Identifiable, Sendable {
+    public let id: String
+    public let name: String
+    public let dailySlot: String?
+    public let sort: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, sort
+        case dailySlot = "daily_slot"
+    }
+
+    public init(id: String, name: String, dailySlot: String?, sort: Int) {
+        self.id = id
+        self.name = name
+        self.dailySlot = dailySlot
+        self.sort = sort
+    }
+}
+
+public struct SubdomainInfo: Codable, Hashable, Identifiable, Sendable {
+    public let id: String
+    public let domainId: String
+    public let name: String
+    public let sort: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, sort
+        case domainId = "domain_id"
+    }
+}

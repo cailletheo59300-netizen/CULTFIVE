@@ -1,0 +1,102 @@
+{
+ "level": 54,
+ "avg_ms": 2900,
+ "correct": 2,
+ "history": [
+  {
+   "day": "2027-03-01",
+   "level": 54.5
+  }
+ ],
+ "answered": 2,
+ "domain_id": "geography",
+ "subdomains": [
+  {
+   "id": "geography.capitals",
+   "name": "Capitales",
+   "level": 53,
+   "correct": 1,
+   "answered": 1,
+   "available": 7,
+   "reliability": 0.08
+  },
+  {
+   "id": "geography.flags",
+   "name": "Drapeaux",
+   "level": 54,
+   "correct": 0,
+   "answered": 0,
+   "available": 4,
+   "reliability": 0.12
+  },
+  {
+   "id": "geography.location",
+   "name": "Localisation",
+   "level": 54,
+   "correct": 0,
+   "answered": 0,
+   "available": 3,
+   "reliability": 0.12
+  },
+  {
+   "id": "geography.countries",
+   "name": "Pays",
+   "level": 54,
+   "correct": 0,
+   "answered": 0,
+   "available": 2,
+   "reliability": 0.12
+  },
+  {
+   "id": "geography.borders",
+   "name": "Frontières",
+   "level": 54,
+   "correct": 0,
+   "answered": 0,
+   "available": 3,
+   "reliability": 0.12
+  },
+  {
+   "id": "geography.relief",
+   "name": "Reliefs",
+   "level": 54,
+   "correct": 1,
+   "answered": 1,
+   "available": 3,
+   "reliability": 0.12
+  },
+  {
+   "id": "geography.oceans",
+   "name": "Océans & fleuves",
+   "level": 54,
+   "correct": 0,
+   "answered": 0,
+   "available": 3,
+   "reliability": 0.12
+  },
+  {
+   "id": "geography.monuments",
+   "name": "Monuments",
+   "level": 54,
+   "correct": 0,
+   "answered": 0,
+   "available": 3,
+   "reliability": 0.12
+  }
+ ],
+ "reliability": 0.12,
+ "by_difficulty": [
+  {
+   "band": "easy",
+   "correct": 1,
+   "answered": 1
+  },
+  {
+   "band": "medium",
+   "correct": 1,
+   "answered": 1
+  }
+ ],
+ "recent_errors": [],
+ "concepts_mastered": 0
+}

@@ -1,0 +1,22 @@
+{
+ "active": [
+  {
+   "label": "Muraille de Chine vue de la Lune",
+   "since": "2027-03-01T08:00:26+00:00",
+   "state": "failed",
+   "domain_id": "science",
+   "concept_id": "science.space.great_wall_moon",
+   "times_failed": 1
+  },
+  {
+   "label": "Colomb en Amérique",
+   "since": "2027-03-01T08:00:10+00:00",
+   "state": "failed",
+   "domain_id": "history",
+   "concept_id": "history.modern.columbus_1492",
+   "times_failed": 1
+  }
+ ],
+ "mastered_total": 0,
+ "corrected_total": 0
+}

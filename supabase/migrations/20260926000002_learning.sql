@@ -68,9 +68,9 @@ create or replace function public._c(p_key text) returns real
 language sql immutable as $$
   select case p_key
     when 'S'            then 10     -- points par logit
-    when 'user_var0'    then 144    -- σ₀ = 12
+    when 'user_var0'    then 100    -- σ₀ = 10
     when 'user_var_min' then 9      -- σ ≥ 3
-    when 'user_step'    then 6      -- variation max par réponse
+    when 'user_step'    then 4      -- variation max par réponse
     when 'q_var_min'    then 4      -- σ_b ≥ 2
     when 'q_step'       then 4
     when 'reinflate'    then 0.5    -- σ² ajouté par jour d'inactivité
@@ -129,7 +129,7 @@ begin
   end if;
   if position('.' in p_scope) > 0 then
     select d.mu, d.var into mu, var from public._skill_peek(p_user, split_part(p_scope, '.', 1)) d;
-    var := greatest(var, 100);
+    var := greatest(var, 64);
   else
     select p.challenge_prior into mu from public.profiles p where p.id = p_user;
     mu := coalesce(mu, 50);

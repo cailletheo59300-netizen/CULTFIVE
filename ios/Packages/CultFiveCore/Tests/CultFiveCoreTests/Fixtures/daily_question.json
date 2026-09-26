@@ -1,0 +1,29 @@
+{
+ "id": "818c7141-49e7-4a6e-bc77-cb4b8ded98c0",
+ "type": "mcq",
+ "total": 5,
+ "prompt": "Quelle est la capitale du Maroc ?",
+ "payload": {
+  "options": [
+   {
+    "id": "8a757b0d",
+    "text": "Fès"
+   },
+   {
+    "id": "c2808cc2",
+    "text": "Marrakech"
+   },
+   {
+    "id": "2a5dea63",
+    "text": "Casablanca"
+   },
+   {
+    "id": "6a9c9087",
+    "text": "Rabat"
+   }
+  ]
+ },
+ "position": 1,
+ "domain_id": "geography",
+ "subdomain_id": "geography.capitals"
+}

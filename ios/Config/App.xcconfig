@@ -1,0 +1,7 @@
+// Configuration commune. Les valeurs propres à chaque développeur vont dans Secrets.xcconfig (non versionné).
+APP_DISPLAY_NAME = CULT FIVE
+SUPABASE_URL =
+SUPABASE_ANON_KEY =
+CULTFIVE_TEAM_ID =
+
+#include? "Secrets.xcconfig"

@@ -1,0 +1,83 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  database:
+    name: Base de données (migrations + tests SQL)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PGHOST: localhost
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Contenu valide et seed à jour
+        run: |
+          node scripts/build-seed.mjs
+          git diff --exit-code supabase/seed.sql
+      - name: Migrations + tests SQL
+        run: scripts/test-db.sh
+
+  core:
+    name: CultFiveCore (swift test)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tests du package
+        run: swift test --package-path ios/Packages/CultFiveCore
+
+  ios:
+    name: App iOS (build + tests)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: XcodeGen
+        run: |
+          brew install xcodegen
+          cd ios && xcodegen generate
+      - name: Choix du simulateur
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          devices = json.load(sys.stdin)["devices"]
+          ios = sorted((k for k in devices if "iOS" in k), reverse=True)
+          for runtime in ios:
+              for d in devices[runtime]:
+                  if d["name"].startswith("iPhone"):
+                      print(d["udid"]); raise SystemExit
+          ')
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - name: Build et tests
+        run: |
+          status=0
+          xcodebuild test \
+            -project ios/CultFive.xcodeproj \
+            -scheme CultFive \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            CODE_SIGNING_ALLOWED=NO > build.log 2>&1 || status=$?
+          grep -E "error:|Test Case .* (passed|failed)|Executed|BUILD (SUCCEEDED|FAILED)|TEST (SUCCEEDED|FAILED)" build.log | tail -120
+          exit $status
+      - name: Journal de build
+        if: failure()
+        run: grep -E "error:" -A3 build.log | head -200

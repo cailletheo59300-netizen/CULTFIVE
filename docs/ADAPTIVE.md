@@ -30,9 +30,9 @@ Symétriquement pour la question (avec `E_q = 1 − E`, et `g(σ²_user)` : les 
 ### Garde-fous (exigences du cahier des charges)
 | Règle | Valeur |
 |---|---|
-| Prior utilisateur (domaine) | μ₀ selon le choix d'onboarding : Découverte 38 · Équilibre 50 · Challenge 60 · Expert 70 ; σ₀ = 12 |
-| Prior sous-domaine | μ du domaine au moment de la création, σ = max(σ_domaine, 10) |
-| Variation max par réponse | ±6 points |
+| Prior utilisateur (domaine) | μ₀ selon le choix d'onboarding : Découverte 38 · Équilibre 50 · Challenge 60 · Expert 70 ; σ₀ = 10 |
+| Prior sous-domaine | μ du domaine au moment de la création, σ = max(σ_domaine, 8) |
+| Variation max par réponse | ±4 points |
 | Plancher d'incertitude | σ ≥ 3 (le niveau reste capable d'évoluer) |
 | Réinflation | σ² += 0,5/jour d'inactivité dans le domaine, plafonné à σ₀² |
 | Prior question | b₀ = difficulté initiale ; σ_b = 10 (humaine), 12 (IA) |
@@ -41,7 +41,9 @@ Symétriquement pour la question (avec `E_q = 1 − E`, et `g(σ²_user)` : les 
 | Élargissement de plage | seulement si n ≥ 300 réponses **et** `b_observed` hors plage de plus de 2σ_b : la borne bouge de 5 points, au plus une fois par tranche de 100 réponses |
 | Question à revoir (admin) | n ≥ 50 et taux de réussite < 5 % ou > 99 %, ou élargissement demandé 3 fois |
 
-Premières réponses d'un nouvel utilisateur (σ=12, E=0,5) : ≈ +5 points pour une bonne réponse, puis ≈ +4, +3,5… Après ~30 réponses, σ ≈ 4 : une réponse bouge le niveau de ~1 point.
+Premières réponses d'un nouvel utilisateur (σ=10, E=0,5) : ≈ +4 points pour une bonne réponse, puis ≈ +3,5, +3… ; une question très facile réussie ne rapporte presque rien. Après ~30 réponses, σ ≈ 4 : une réponse bouge le niveau de ~1 point.
+
+> Réglage (session 1) : σ₀ = 12 et ±6 donnaient +6 dès la première réponse difficile réussie — jugé trop brutal. Ramené à σ₀ = 10, ±4.
 
 ## Fiabilité affichée
 `fiabilité = 1 − σ/σ₀` ∈ [0,1], affichée en mots : « à affiner » (<0,35), « correcte » (<0,65), « solide ».

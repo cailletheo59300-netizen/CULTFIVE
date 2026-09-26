@@ -1,0 +1,64 @@
+{
+ "xp": 60,
+ "date": "2027-03-01",
+ "score": 3,
+ "seeds": 10,
+ "run_id": "a4168e8f-d11a-427a-ab7d-4a4516045cca",
+ "status": "finished",
+ "streak": 1,
+ "answers": [
+  {
+   "position": 1,
+   "domain_id": "geography",
+   "counted_ms": 3800,
+   "is_correct": true,
+   "domain_after": 53.4,
+   "domain_before": 50
+  },
+  {
+   "position": 2,
+   "domain_id": "history",
+   "counted_ms": 5100,
+   "is_correct": false,
+   "domain_after": 46,
+   "domain_before": 50
+  },
+  {
+   "position": 3,
+   "domain_id": "calc",
+   "counted_ms": 6400,
+   "is_correct": true,
+   "domain_after": 52.2,
+   "domain_before": 50
+  },
+  {
+   "position": 4,
+   "domain_id": "science",
+   "counted_ms": 8200,
+   "is_correct": false,
+   "domain_after": 46,
+   "domain_before": 50
+  },
+  {
+   "position": 5,
+   "domain_id": "french",
+   "counted_ms": 4300,
+   "is_correct": true,
+   "domain_after": 51.6,
+   "domain_before": 50
+  }
+ ],
+ "total_ms": 27800,
+ "percentile": {
+  "top": 65,
+  "source": "estimate",
+  "participants": 1
+ },
+ "achievements": [
+  {
+   "id": "first_daily",
+   "name": "Premier rendez-vous",
+   "description": "Terminer ton premier 5 du jour."
+  }
+ ]
+}

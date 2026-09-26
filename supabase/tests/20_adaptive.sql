@@ -14,7 +14,7 @@ begin
     perform public._record_attempt(u, q.id, tst.correct_given(q.id), 3000, 'training', null, gen_random_uuid());
     select mu into cur from public.user_skills where user_id = u and scope_id = 'geography';
     step := cur - prev;
-    perform tst.ok(step >= 0 and step <= 6.0001, 'progression bornée à 6 points, obtenu ' || step);
+    perform tst.ok(step >= 0 and step <= 4.0001, 'progression bornée à 4 points, obtenu ' || step);
     if i = 1 then first_step := step; end if;
     last_step := step;
     prev := cur;
@@ -22,7 +22,7 @@ begin
   perform tst.ok(first_step between 0.1 and 3, 'une bonne réponse à une question facile bouge peu : ' || first_step);
   perform tst.ok(last_step < first_step, 'les pas diminuent avec la confiance');
   select * into s from public.user_skills where user_id = u and scope_id = 'geography';
-  perform tst.ok(s.var < 144, 'incertitude réduite');
+  perform tst.ok(s.var < 100, 'incertitude réduite');
   perform tst.ok(s.n = 25 and s.correct = 25, 'compteurs');
   perform tst.ok(exists (select 1 from public.user_skills where user_id = u and scope_id = 'geography.countries'), 'sous-domaine suivi');
 
@@ -35,7 +35,7 @@ begin
   -- Réinflation après inactivité (bornée par le prior)
   perform tst.tick('100 days');
   perform tst.ok((select var from public._skill_peek(u, 'geography')) > s.var, 'incertitude remonte après inactivité');
-  perform tst.ok((select var from public._skill_peek(u, 'geography')) <= 144, 'réinflation plafonnée');
+  perform tst.ok((select var from public._skill_peek(u, 'geography')) <= 100, 'réinflation plafonnée');
 end $$;
 
 -- Onboarding : le choix de challenge est un prior, puis remplacé par les données.

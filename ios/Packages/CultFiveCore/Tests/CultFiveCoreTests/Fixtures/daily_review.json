@@ -1,0 +1,157 @@
+[
+ {
+  "id": "818c7141-49e7-4a6e-bc77-cb4b8ded98c0",
+  "type": "mcq",
+  "given": {
+   "option_id": "6a9c9087"
+  },
+  "answer": {
+   "option_id": "6a9c9087"
+  },
+  "prompt": "Quelle est la capitale du Maroc ?",
+  "source": null,
+  "payload": {
+   "options": [
+    {
+     "id": "8a757b0d",
+     "text": "Fès"
+    },
+    {
+     "id": "c2808cc2",
+     "text": "Marrakech"
+    },
+    {
+     "id": "2a5dea63",
+     "text": "Casablanca"
+    },
+    {
+     "id": "6a9c9087",
+     "text": "Rabat"
+    }
+   ]
+  },
+  "position": 1,
+  "takeaway": null,
+  "domain_id": "geography",
+  "counted_ms": 3800,
+  "fact_as_of": null,
+  "is_correct": true,
+  "explanation": "Rabat est la capitale politique ; Casablanca est la plus grande ville et le poumon économique du pays.",
+  "subdomain_id": "geography.capitals"
+ },
+ {
+  "id": "dd992938-f9f5-4337-8dee-db8f735d599d",
+  "type": "numeric",
+  "given": {
+   "value": -999999,
+   "option_id": "nope"
+  },
+  "answer": {
+   "value": 1492,
+   "tolerance": 0
+  },
+  "prompt": "En quelle année Christophe Colomb atteint-il l'Amérique ?",
+  "source": null,
+  "payload": {
+   "decimals": 0,
+   "allow_negative": false
+  },
+  "position": 2,
+  "takeaway": null,
+  "domain_id": "history",
+  "counted_ms": 5100,
+  "fact_as_of": null,
+  "is_correct": false,
+  "explanation": "Le 12 octobre 1492, il débarque aux Bahamas, convaincu d'avoir atteint les Indes.",
+  "subdomain_id": "history.modern"
+ },
+ {
+  "id": "37453272-676d-40b4-a9b9-1b8c9ac981ab",
+  "type": "numeric",
+  "given": {
+   "value": 117
+  },
+  "answer": {
+   "value": 117,
+   "tolerance": 0
+  },
+  "prompt": "Combien font 9 × 13 ?",
+  "source": null,
+  "payload": {
+   "decimals": 0,
+   "allow_negative": false
+  },
+  "position": 3,
+  "takeaway": "× 9 = × 10 puis on retire une fois le nombre.",
+  "domain_id": "calc",
+  "counted_ms": 6400,
+  "fact_as_of": null,
+  "is_correct": true,
+  "explanation": "9 × 13 = 10 × 13 − 13 = 130 − 13 = 117.",
+  "subdomain_id": "calc.mental"
+ },
+ {
+  "id": "067310e4-efd4-4cd3-b05a-6a24ed66a016",
+  "type": "true_false",
+  "given": {
+   "order": [
+    "a",
+    "b"
+   ]
+  },
+  "answer": {
+   "value": false
+  },
+  "prompt": "La Grande Muraille de Chine est visible à l'œil nu depuis la Lune.",
+  "source": null,
+  "payload": {},
+  "position": 4,
+  "takeaway": null,
+  "domain_id": "science",
+  "counted_ms": 8200,
+  "fact_as_of": null,
+  "is_correct": false,
+  "explanation": "C'est une légende : large de quelques mètres, la muraille est invisible depuis la Lune, à 384 000 km.",
+  "subdomain_id": "science.space"
+ },
+ {
+  "id": "de8afe51-2b5a-484c-8ad8-d8ac788e0ac7",
+  "type": "mcq",
+  "given": {
+   "option_id": "e730e3cf"
+  },
+  "answer": {
+   "option_id": "e730e3cf"
+  },
+  "prompt": "Dans « Il chante bien », quelle est la nature de « bien » ?",
+  "source": null,
+  "payload": {
+   "options": [
+    {
+     "id": "c069e1be",
+     "text": "préposition"
+    },
+    {
+     "id": "fbdd212b",
+     "text": "nom"
+    },
+    {
+     "id": "c1abc783",
+     "text": "adjectif"
+    },
+    {
+     "id": "e730e3cf",
+     "text": "adverbe"
+    }
+   ]
+  },
+  "position": 5,
+  "takeaway": null,
+  "domain_id": "french",
+  "counted_ms": 4300,
+  "fact_as_of": null,
+  "is_correct": true,
+  "explanation": "« Bien » précise la manière de chanter : il modifie un verbe, c'est un adverbe.",
+  "subdomain_id": "french.grammar"
+ }
+]

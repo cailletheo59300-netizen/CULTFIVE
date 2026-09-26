@@ -120,7 +120,7 @@ language sql security definer set search_path = public, pg_temp as $$
   select coalesce(jsonb_agg(jsonb_build_object(
       'domain_id', d.id, 'name', d.name,
       'level', round(k.mu::numeric, 0),
-      'reliability', round(greatest(0, 1 - sqrt(k.var) / 12)::numeric, 2),
+      'reliability', round(greatest(0, 1 - sqrt(k.var) / 10)::numeric, 2),
       'answered', coalesce(s.n, 0), 'correct', coalesce(s.correct, 0))
     order by coalesce(s.n, 0) desc, d.sort), '[]'::jsonb)
   from public.domains d
@@ -137,7 +137,7 @@ begin
   return jsonb_build_object(
     'domain_id', p_domain,
     'level', (select round(mu::numeric, 0) from public._skill_peek(v_user, p_domain)),
-    'reliability', (select round(greatest(0, 1 - sqrt(var) / 12)::numeric, 2) from public._skill_peek(v_user, p_domain)),
+    'reliability', (select round(greatest(0, 1 - sqrt(var) / 10)::numeric, 2) from public._skill_peek(v_user, p_domain)),
     'answered', coalesce((select n from public.user_skills where user_id = v_user and scope_id = p_domain), 0),
     'correct', coalesce((select correct from public.user_skills where user_id = v_user and scope_id = p_domain), 0),
     'avg_ms', (select case when n > 0 then total_ms / n end from public.user_skills where user_id = v_user and scope_id = p_domain),
@@ -150,7 +150,7 @@ begin
     'subdomains', (select coalesce(jsonb_agg(jsonb_build_object(
                       'id', sd.id, 'name', sd.name,
                       'level', round(k.mu::numeric, 0),
-                      'reliability', round(greatest(0, 1 - sqrt(k.var) / 12)::numeric, 2),
+                      'reliability', round(greatest(0, 1 - sqrt(k.var) / 10)::numeric, 2),
                       'answered', coalesce(us.n, 0), 'correct', coalesce(us.correct, 0),
                       'available', (select count(*) from public.questions q where q.subdomain_id = sd.id and q.status = 'published'))
                     order by sd.sort), '[]'::jsonb)
