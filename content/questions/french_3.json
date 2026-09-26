@@ -1,0 +1,721 @@
+[
+ {
+  "key": "fr-201",
+  "concept": "french.spelling.accord_leur",
+  "label": "Leur ou leurs",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Complète : « Je ___ ai donné ___ cahiers. »",
+  "options": [
+   "leur / leurs*",
+   "leurs / leur",
+   "leur / leur",
+   "leurs / leurs"
+  ],
+  "explanation": "Devant un verbe, « leur » (= à eux) est invariable. Devant un nom au pluriel, « leurs » s'accorde : leurs cahiers."
+ },
+ {
+  "key": "fr-202",
+  "concept": "french.spelling.ces_ses",
+  "label": "Ces ou ses",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « Il a oublié ___ clés chez lui. »",
+  "options": [
+   "ses*",
+   "ces",
+   "c'est",
+   "s'est"
+  ],
+  "explanation": "« Ses » marque la possession (les siennes). « Ces » montre quelque chose (ces clés-là)."
+ },
+ {
+  "key": "fr-203",
+  "concept": "french.spelling.ou_accent",
+  "label": "Où ou ou",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Dans « Tu viens ou tu restes ? », « ou » s'écrit sans accent.",
+  "answer": true,
+  "explanation": "« Ou » sans accent signifie « ou bien ». « Où » avec accent indique le lieu ou le temps : « Où vas-tu ? »."
+ },
+ {
+  "key": "fr-204",
+  "concept": "french.spelling.participe_avoir",
+  "label": "Accord avec avoir",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Complète : « Les fleurs que j'ai ___ sont fanées. »",
+  "options": [
+   "cueillies*",
+   "cueilli",
+   "cueillis",
+   "cueillie"
+  ],
+  "explanation": "Avec avoir, le participe s'accorde avec le COD s'il est placé avant : « que » reprend « les fleurs », féminin pluriel."
+ },
+ {
+  "key": "fr-205",
+  "concept": "french.spelling.tout_invariable",
+  "label": "Tout adverbe",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Complète : « Elles sont ___ contentes. »",
+  "options": [
+   "toutes*",
+   "tout",
+   "toute",
+   "touts"
+  ],
+  "explanation": "« Tout » adverbe (= tout à fait) est invariable, sauf devant un adjectif féminin qui commence par une consonne ou un h aspiré : il s'accorde alors pour l'oreille. On écrit donc « toutes contentes », mais « tout heureuses ».",
+  "takeaway": "Tout + adjectif féminin commençant par une consonne : il s'accorde (toute petite, toutes contentes)."
+ },
+ {
+  "key": "fr-206",
+  "concept": "french.spelling.double_consonnes",
+  "label": "Consonnes doubles",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle orthographe est correcte ?",
+  "options": [
+   "développement*",
+   "dévelopement",
+   "dévellopement",
+   "développemment"
+  ],
+  "explanation": "Un seul l et deux p : développer, développement."
+ },
+ {
+  "key": "fr-207",
+  "concept": "french.spelling.mots_pieges_pairs",
+  "label": "Mots pièges",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque début de mot à sa bonne fin.",
+  "pairs": [
+   [
+    "Accue…",
+    "…il"
+   ],
+   [
+    "Rythm…",
+    "…e"
+   ],
+   [
+    "Dilem…",
+    "…me"
+   ],
+   [
+    "Abîm…",
+    "…er"
+   ]
+  ],
+  "explanation": "On écrit accueil (u avant e), rythme (y et h), dilemme (deux m) et abîmer (accent circonflexe sur le i)."
+ },
+ {
+  "key": "fr-208",
+  "concept": "french.spelling.acquis_acquit",
+  "label": "Par acquit de conscience",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Complète : « Je vérifie par ___ de conscience. »",
+  "options": [
+   "acquit*",
+   "acquis",
+   "acquie",
+   "aquit"
+  ],
+  "explanation": "« Acquit » (avec t) vient d'acquitter : se libérer d'une obligation. « Acquis » est le participe d'acquérir."
+ },
+ {
+  "key": "fr-209",
+  "concept": "french.vocabulary.levels_pairs",
+  "label": "Registres de langue",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque mot familier à son équivalent courant.",
+  "pairs": [
+   [
+    "Bagnole",
+    "Voiture"
+   ],
+   [
+    "Boulot",
+    "Travail"
+   ],
+   [
+    "Fric",
+    "Argent"
+   ],
+   [
+    "Bouquin",
+    "Livre"
+   ]
+  ],
+  "explanation": "Même sens, registre différent : familier à l'oral entre proches, courant dans la plupart des situations."
+ },
+ {
+  "key": "fr-210",
+  "concept": "french.vocabulary.onomatopee",
+  "label": "Onomatopée",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'une onomatopée ?",
+  "options": [
+   "Un mot qui imite un son*",
+   "Un mot de sens contraire",
+   "Un mot emprunté à l'anglais",
+   "Un mot très long"
+  ],
+  "explanation": "Plouf, tic-tac, miaou, boum : le mot imite le bruit qu'il désigne."
+ },
+ {
+  "key": "fr-211",
+  "concept": "french.vocabulary.homophones_pairs",
+  "label": "Homophones",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque homophone à son sens.",
+  "pairs": [
+   [
+    "Cygne",
+    "Oiseau"
+   ],
+   [
+    "Signe",
+    "Geste ou symbole"
+   ],
+   [
+    "Chêne",
+    "Arbre"
+   ],
+   [
+    "Chaîne",
+    "Suite d'anneaux"
+   ]
+  ],
+  "explanation": "Les homophones se prononcent de la même façon mais s'écrivent et se comprennent différemment."
+ },
+ {
+  "key": "fr-212",
+  "concept": "french.vocabulary.empathie",
+  "label": "Empathie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Avoir de l'empathie, c'est…",
+  "options": [
+   "savoir se mettre à la place des autres*",
+   "être toujours d'accord",
+   "avoir peur du vide",
+   "parler plusieurs langues"
+  ],
+  "explanation": "L'empathie est la capacité à ressentir et comprendre ce que vit autrui."
+ },
+ {
+  "key": "fr-213",
+  "concept": "french.vocabulary.truculent",
+  "label": "Truculent",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Un personnage « truculent » est…",
+  "options": [
+   "haut en couleur, pittoresque*",
+   "cruel et violent",
+   "très discret",
+   "malhonnête"
+  ],
+  "explanation": "Truculent qualifie aujourd'hui quelqu'un de savoureux, qui s'exprime avec verve et pittoresque. Le mot latin d'origine signifiait « cruel », d'où le piège."
+ },
+ {
+  "key": "fr-214",
+  "concept": "french.vocabulary.sinecure",
+  "label": "Sinécure",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Ce n'est pas une sinécure » signifie…",
+  "options": [
+   "ce n'est pas de tout repos*",
+   "ce n'est pas sûr",
+   "ce n'est pas soigné",
+   "ce n'est pas honnête"
+  ],
+  "explanation": "Une sinécure est une charge rémunérée qui ne demande presque aucun travail. Du latin sine cura, « sans souci »."
+ },
+ {
+  "key": "fr-215",
+  "concept": "french.vocabulary.chronologie_temps_pairs",
+  "label": "Préfixes de nombre",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque mot à ce qu'il compte.",
+  "pairs": [
+   [
+    "Bicentenaire",
+    "200 ans"
+   ],
+   [
+    "Trimestre",
+    "3 mois"
+   ],
+   [
+    "Décennie",
+    "10 ans"
+   ],
+   [
+    "Millénaire",
+    "1 000 ans"
+   ]
+  ],
+  "explanation": "Bi- (deux), tri- (trois), déc- (dix), mill- (mille)."
+ },
+ {
+  "key": "fr-216",
+  "concept": "french.synonyms.adjectives_pairs",
+  "label": "Synonymes d'adjectifs",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque adjectif à son synonyme.",
+  "pairs": [
+   [
+    "Hilare",
+    "Rieur"
+   ],
+   [
+    "Morose",
+    "Triste"
+   ],
+   [
+    "Intrépide",
+    "Courageux"
+   ],
+   [
+    "Frugal",
+    "Sobre"
+   ]
+  ],
+  "explanation": "Hilare : qui rit franchement. Morose : d'humeur sombre. Intrépide : qui ne craint pas le danger. Frugal : qui se contente de peu."
+ },
+ {
+  "key": "fr-217",
+  "concept": "french.synonyms.dithyrambique",
+  "label": "Dithyrambique",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Une critique « dithyrambique » est…",
+  "options": [
+   "très élogieuse*",
+   "très sévère",
+   "très longue",
+   "très confuse"
+  ],
+  "explanation": "Le dithyrambe était un chant en l'honneur de Dionysos. Par extension : un éloge enthousiaste, parfois excessif."
+ },
+ {
+  "key": "fr-218",
+  "concept": "french.antonyms.pairs_set1",
+  "label": "Contraires",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque mot à son contraire.",
+  "pairs": [
+   [
+    "Optimiste",
+    "Pessimiste"
+   ],
+   [
+    "Généreux",
+    "Avare"
+   ],
+   [
+    "Concis",
+    "Prolixe"
+   ],
+   [
+    "Humble",
+    "Orgueilleux"
+   ]
+  ],
+  "explanation": "Optimiste/pessimiste, généreux/avare, concis/prolixe, humble/orgueilleux."
+ },
+ {
+  "key": "fr-219",
+  "concept": "french.antonyms.acceptable",
+  "label": "Contraire de licite",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le contraire de « licite » ?",
+  "options": [
+   "illicite*",
+   "explicite",
+   "implicite",
+   "lucide"
+  ],
+  "explanation": "Licite : permis par la loi. Illicite : interdit. Explicite et implicite n'ont rien à voir."
+ },
+ {
+  "key": "fr-220",
+  "concept": "french.expressions.animals_pairs",
+  "label": "Expressions animales",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque expression à son sens.",
+  "pairs": [
+   [
+    "Avoir une mémoire d'éléphant",
+    "Se souvenir de tout"
+   ],
+   [
+    "Être muet comme une carpe",
+    "Ne rien dire"
+   ],
+   [
+    "Poser un lapin",
+    "Ne pas venir"
+   ],
+   [
+    "Avoir un chat dans la gorge",
+    "Être enroué"
+   ]
+  ],
+  "explanation": "Le français aime les animaux dans ses expressions : éléphant pour la mémoire, carpe pour le silence."
+ },
+ {
+  "key": "fr-221",
+  "concept": "french.expressions.coup_de_theatre",
+  "label": "Coup de théâtre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Un « coup de théâtre » est…",
+  "options": [
+   "un rebondissement inattendu*",
+   "une pièce ratée",
+   "une dispute violente",
+   "un applaudissement"
+  ],
+  "explanation": "Emprunté au théâtre, où un événement imprévu change brusquement le cours de l'intrigue."
+ },
+ {
+  "key": "fr-222",
+  "concept": "french.expressions.croix_banniere",
+  "label": "C'est la croix et la bannière",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "« C'est la croix et la bannière » signifie…",
+  "options": [
+   "c'est très compliqué*",
+   "c'est une fête religieuse",
+   "c'est un combat perdu",
+   "c'est un secret"
+  ],
+  "explanation": "Allusion aux processions religieuses, longues et solennelles à organiser : on dit cela de ce qui demande beaucoup d'efforts."
+ },
+ {
+  "key": "fr-223",
+  "concept": "french.expressions.sur_les_chapeaux_de_roue",
+  "label": "Sur les chapeaux de roue",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Partir « sur les chapeaux de roues », c'est partir…",
+  "options": [
+   "à toute vitesse*",
+   "en retard",
+   "sans bagages",
+   "en voiture de luxe"
+  ],
+  "explanation": "Le chapeau de roue est l'enjoliveur : dans un virage pris très vite, la voiture semble rouler dessus."
+ },
+ {
+  "key": "fr-224",
+  "concept": "french.grammar.conditionnel_si",
+  "label": "Si + imparfait",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Complète : « Si j'___ le temps, je viendrais. »",
+  "options": [
+   "avais*",
+   "aurais",
+   "aurai",
+   "ai"
+  ],
+  "explanation": "Après « si » exprimant une condition, on n'emploie jamais le conditionnel : si + imparfait, puis conditionnel dans la principale.",
+  "takeaway": "« Les si n'aiment pas les -rais. »"
+ },
+ {
+  "key": "fr-225",
+  "concept": "french.grammar.imperatif_s",
+  "label": "Impératif sans s",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Complète : « ___ ta chambre ! » (ranger)",
+  "options": [
+   "Range*",
+   "Ranges",
+   "Rangez-toi",
+   "Rangeais"
+  ],
+  "explanation": "À l'impératif, les verbes en -er ne prennent pas de s à la 2e personne du singulier, sauf devant « en » et « y » : « Manges-en »."
+ },
+ {
+  "key": "fr-226",
+  "concept": "french.grammar.fonction_attribut",
+  "label": "Attribut du sujet",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans « Le ciel devient gris », quelle est la fonction de « gris » ?",
+  "options": [
+   "Attribut du sujet*",
+   "Complément d'objet direct",
+   "Épithète",
+   "Complément circonstanciel"
+  ],
+  "explanation": "« Devenir » est un verbe d'état : l'adjectif qui suit qualifie le sujet à travers le verbe. C'est un attribut."
+ },
+ {
+  "key": "fr-227",
+  "concept": "french.grammar.temps_order",
+  "label": "Temps de l'indicatif",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces formes du passé le plus lointain au futur.",
+  "items": [
+   "j'avais mangé",
+   "je mangeais",
+   "je mange",
+   "je mangerai"
+  ],
+  "explanation": "Plus-que-parfait (action antérieure dans le passé), imparfait, présent, futur."
+ },
+ {
+  "key": "fr-228",
+  "concept": "french.grammar.pluriel_composes",
+  "label": "Pluriel des noms composés",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le pluriel de « un chou-fleur » ?",
+  "options": [
+   "des choux-fleurs*",
+   "des chou-fleurs",
+   "des choux-fleur",
+   "des chous-fleurs"
+  ],
+  "explanation": "Deux noms : chacun prend la marque du pluriel. Chou fait choux, fleur fait fleurs."
+ },
+ {
+  "key": "fr-229",
+  "concept": "french.grammar.genre_mots_pieges",
+  "label": "Genre des mots",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Lequel de ces noms est féminin ?",
+  "options": [
+   "une espèce*",
+   "un espèce",
+   "un astérisque",
+   "un tentacule"
+  ],
+  "explanation": "On dit une espèce, mais un astérisque et un tentacule : trois pièges fréquents du genre en français."
+ },
+ {
+  "key": "fr-230",
+  "concept": "french.grammar.conjugaison_pairs",
+  "label": "Temps de conjugaison",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque forme à son temps.",
+  "pairs": [
+   [
+    "Nous chantâmes",
+    "Passé simple"
+   ],
+   [
+    "Nous chanterions",
+    "Conditionnel présent"
+   ],
+   [
+    "Que nous chantions",
+    "Subjonctif présent"
+   ],
+   [
+    "Nous avions chanté",
+    "Plus-que-parfait"
+   ]
+  ],
+  "explanation": "Le passé simple en -âmes, le conditionnel en -rions, le subjonctif précédé de « que », le plus-que-parfait avec l'auxiliaire à l'imparfait."
+ },
+ {
+  "key": "fr-231",
+  "concept": "french.vocabulary.suffixes_pairs",
+  "label": "Suffixes",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque suffixe à son sens.",
+  "pairs": [
+   [
+    "-phobe",
+    "Qui craint"
+   ],
+   [
+    "-cide",
+    "Qui tue"
+   ],
+   [
+    "-vore",
+    "Qui mange"
+   ],
+   [
+    "-phile",
+    "Qui aime"
+   ]
+  ],
+  "explanation": "Claustrophobe, insecticide, herbivore, cinéphile."
+ },
+ {
+  "key": "fr-232",
+  "concept": "french.spelling.nombres_vingt",
+  "label": "Accord de vingt",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle écriture est correcte ?",
+  "options": [
+   "quatre-vingts euros*",
+   "quatre-vingt euros",
+   "quatres-vingts euros",
+   "quatre-vingt-s euros"
+  ],
+  "explanation": "Vingt et cent prennent un s quand ils sont multipliés et ne sont pas suivis d'un autre nombre : quatre-vingts, mais quatre-vingt-un."
+ },
+ {
+  "key": "fr-233",
+  "concept": "french.vocabulary.faux_amis",
+  "label": "Faux amis",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Actually » en anglais veut dire « actuellement » en français.",
+  "answer": false,
+  "explanation": "C'est un faux ami : « actually » signifie « en fait ». « Actuellement » se dit « currently »."
+ },
+ {
+  "key": "fr-234",
+  "concept": "french.vocabulary.anglicismes_pairs",
+  "label": "Anglicismes",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque anglicisme à son équivalent français recommandé.",
+  "pairs": [
+   [
+    "Email",
+    "Courriel"
+   ],
+   [
+    "Deadline",
+    "Date limite"
+   ],
+   [
+    "Feedback",
+    "Retour"
+   ],
+   [
+    "Brainstorming",
+    "Remue-méninges"
+   ]
+  ],
+  "explanation": "Ces équivalents sont recommandés par les instances de terminologie francophones."
+ },
+ {
+  "key": "fr-235",
+  "concept": "french.grammar.adverbe_ment",
+  "label": "Adverbes en -ment",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est l'adverbe formé sur « évident » ?",
+  "options": [
+   "évidemment*",
+   "évidament",
+   "évidamment",
+   "évidemmant"
+  ],
+  "explanation": "Adjectif en -ent → adverbe en -emment (évident → évidemment). En -ant → -amment (courant → couramment)."
+ },
+ {
+  "key": "fr-236",
+  "concept": "french.vocabulary.lieux_pairs",
+  "label": "Habitants",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque ville à ses habitants.",
+  "pairs": [
+   [
+    "Saint-Étienne",
+    "Stéphanois"
+   ],
+   [
+    "Monaco",
+    "Monégasques"
+   ],
+   [
+    "Pont-à-Mousson",
+    "Mussipontains"
+   ],
+   [
+    "Bordeaux",
+    "Bordelais"
+   ]
+  ],
+  "explanation": "Certains gentilés viennent du latin : Stephanus pour Étienne, Mussipons pour Pont-à-Mousson."
+ },
+ {
+  "key": "fr-237",
+  "concept": "french.spelling.a_part",
+  "label": "À part",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "On écrit « à part » en deux mots, avec un accent sur le à.",
+  "answer": true,
+  "explanation": "« À part » s'écrit en deux mots. « Apart » n'existe pas en français (c'est de l'anglais)."
+ },
+ {
+  "key": "fr-238",
+  "concept": "french.grammar.que_qu_il",
+  "label": "Qu'il ou qui l'",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Complète : « Je ne sais pas ce ___ faut faire. »",
+  "options": [
+   "qu'il*",
+   "qui l'",
+   "qui",
+   "qu'il l'"
+  ],
+  "explanation": "Le verbe falloir se conjugue toujours avec « il » : il faut. D'où « ce qu'il faut faire ». « Qui l' » n'a pas de sens ici."
+ },
+ {
+  "key": "fr-239",
+  "concept": "french.vocabulary.palindromes",
+  "label": "Palindrome",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Lequel de ces mots est un palindrome (il se lit de la même façon dans les deux sens) ?",
+  "options": [
+   "kayak*",
+   "canoë",
+   "radeau",
+   "barque"
+  ],
+  "explanation": "K-A-Y-A-K se lit pareil de gauche à droite et de droite à gauche. Comme « ressasser » ou « Laval »."
+ },
+ {
+  "key": "fr-240",
+  "concept": "french.grammar.comparatif",
+  "label": "Plus bon ou meilleur",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « Ce gâteau est ___ que l'autre. »",
+  "options": [
+   "meilleur*",
+   "plus bon",
+   "plus meilleur",
+   "mieux bon"
+  ],
+  "explanation": "Le comparatif de supériorité de « bon » est « meilleur ». « Plus meilleur » est un pléonasme."
+ }
+]

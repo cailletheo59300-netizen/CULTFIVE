@@ -16,7 +16,7 @@
 - Niveau initial : notoriété (liens Wikipédia, population, continent) ; plage ±10, recalibrée par les réponses des joueurs.
 - `origin = 'import'`, source « Wikidata ».
 
-État : **1 886 questions** (1 613 Wikidata + 273 curées).
+État : **1 958 questions** (1 605 Wikidata + 353 curées ; Calcul 88, Français 86).
 
 ## Format (auteur)
 ```json

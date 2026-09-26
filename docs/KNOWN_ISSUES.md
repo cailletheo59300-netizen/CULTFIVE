@@ -2,7 +2,7 @@
 
 | # | Sujet | Détail | Piste |
 |---|---|---|---|
-| K-1 | Banque déséquilibrée | 1 886 questions, mais Calcul (48) et Français (46) restent minces face à Géographie (784) et Histoire (504) ; le créneau « Surprise » du Daily est dominé par Arts (311). | Rééquilibrer le tirage « Surprise » par domaine ; écrire du Calcul/Français (peu adaptés à Wikidata). |
+| K-1 | Banque encore déséquilibrée | 1 958 questions ; Calcul (88) et Français (86) restent plus minces que Géographie (784). Le « Surprise » du Daily tire désormais un domaine uniforme (migration 0009). Domaines sport, musique, techno, nature, logique : < 10 questions. | Continuer Calcul/Français à la main ; étoffer les petits domaines. |
 | K-11 | Questions générées : style répétitif | Les modèles Wikidata produisent des énoncés similaires (« Quelle est la capitale… »). Explications courtes. | Enrichir les explications (faits complémentaires), varier les formulations. |
 | K-2 | Pas d'admin web | Les RPC `admin_*` existent ; pas encore d'interface. Supabase Studio + SQL en attendant. | Phase dédiée (Next.js privé ou page artefact). |
 | K-3 | Génération IA non branchée | Schéma et garde-fous prêts (`generation_batches`, statut `review` forcé). Pas d'Edge Function d'appel au modèle. | Edge Function `generate-questions` (clé API côté serveur). |

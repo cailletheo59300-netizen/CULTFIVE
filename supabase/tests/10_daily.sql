@@ -170,3 +170,15 @@ begin
       on a.question_id = b.question_id and a.daily_date < b.daily_date and b.daily_date - a.daily_date <= 14
     where a.daily_date >= '2027-01-01'), 'aucune question réutilisée à moins de 14 jours');
 end $$;
+
+-- Équilibre du créneau Surprise : aucun domaine ne domine sur 60 jours.
+do $$
+declare v_max numeric; v_domains int;
+begin
+  for i in 0 .. 59 loop perform public._ensure_daily_set('2028-01-01'::date + i); end loop;
+  select max(n)::numeric / 60, count(*) into v_max, v_domains from (
+    select q.domain_id, count(*) n from public.daily_set_items i join public.questions q on q.id = i.question_id
+    where i.daily_date between '2028-01-01' and '2028-02-29' and i.slot = 'surprise' group by 1) t;
+  perform tst.ok(v_domains >= 6, 'au moins 6 domaines différents en Surprise : ' || v_domains);
+  perform tst.ok(v_max <= 0.3, 'aucun domaine au-delà de 30 % des Surprise : ' || round(v_max * 100) || ' %');
+end $$;

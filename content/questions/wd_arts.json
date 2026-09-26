@@ -10,9 +10,9 @@
    "Jules César*",
    "Plutarque",
    "Chânakya",
-   "Platon"
+   "Turold"
   ],
-  "explanation": "« Commentaires sur la Guerre des Gaules » est une œuvre de Jules César, parue en -57.",
+  "explanation": "« Commentaires sur la Guerre des Gaules » est une œuvre de Jules César (général et homme d'État romain), parue en -57.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -25,9 +25,9 @@
   "prompt": "Qui a écrit « Yoga-sûtra » ?",
   "options": [
    "Patanjali*",
-   "Hésiode",
-   "Paul de Tarse",
-   "Jean de Patmos"
+   "Dante Alighieri",
+   "L. Frank Baum",
+   "Paul de Tarse"
   ],
   "explanation": "« Yoga-sûtra » est une œuvre de Patanjali.",
   "source": "Wikidata",
@@ -43,10 +43,10 @@
   "options": [
    "Mouammar Kadhafi*",
    "Alexandre Soljenitsyne",
-   "Umberto Eco",
-   "Kurt Vonnegut"
+   "J. R. R. Tolkien",
+   "Umberto Eco"
   ],
-  "explanation": "« Le Livre vert » est une œuvre de Mouammar Kadhafi, parue en 1975.",
+  "explanation": "« Le Livre vert » est une œuvre de Mouammar Kadhafi (militaire et homme d'État libyen), parue en 1975.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -63,7 +63,7 @@
    "Ayn Rand",
    "George Orwell"
   ],
-  "explanation": "« Le Mythe de Sisyphe » est une œuvre d'Albert Camus, parue en 1942.",
+  "explanation": "« Le Mythe de Sisyphe » est une œuvre d'Albert Camus (écrivain, philosophe et journaliste français), parue en 1942.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -76,11 +76,11 @@
   "prompt": "Qui a écrit « Pensées pour moi-même » ?",
   "options": [
    "Marc Aurèle*",
-   "Jésus-Christ",
-   "anonyme",
-   "Snorri Sturluson"
+   "Boccace",
+   "Jean de Patmos",
+   "Tite-Live"
   ],
-  "explanation": "« Pensées pour moi-même » est une œuvre de Marc Aurèle.",
+  "explanation": "« Pensées pour moi-même » est une œuvre de Marc Aurèle (empereur romain de 161 à 180 et philosophe stoïcien).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -93,11 +93,11 @@
   "prompt": "Qui a écrit « Ab Urbe condita libri » ?",
   "options": [
    "Tite-Live*",
-   "Pedro Calderón de la Barca",
-   "Virgile",
-   "Vyāsa"
+   "Snorri Sturluson",
+   "Ben Sira",
+   "Fuxi"
   ],
-  "explanation": "« Ab Urbe condita libri » est une œuvre de Tite-Live.",
+  "explanation": "« Ab Urbe condita libri » est une œuvre de Tite-Live (historien latin de la Rome antique).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -111,10 +111,10 @@
   "options": [
    "Suzanne Collins*",
    "Stephenie Meyer",
-   "E. L. James",
-   "John Green"
+   "Khaled Hosseini",
+   "E. L. James"
   ],
-  "explanation": "« Hunger Games » est une œuvre de Suzanne Collins, parue en 2008.",
+  "explanation": "« Hunger Games » est une œuvre de Suzanne Collins (écrivaine et auteure américaine), parue en 2008.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -128,10 +128,10 @@
   "options": [
    "Fiodor Dostoïevski*",
    "Charlotte Brontë",
-   "Emily Brontë",
-   "Friedrich Engels"
+   "Edgar Allan Poe",
+   "Emily Brontë"
   ],
-  "explanation": "« Les Pauvres Gens » est une œuvre de Fiodor Dostoïevski, parue en 1846.",
+  "explanation": "« Les Pauvres Gens » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1846.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -146,9 +146,9 @@
    "Hans Christian Andersen*",
    "Nicolas Gogol",
    "Honoré de Balzac",
-   "Edgar Allan Poe"
+   "Charles Dickens"
   ],
-  "explanation": "« La Petite Sirène » est une œuvre d'Hans Christian Andersen, parue en 1837.",
+  "explanation": "« La Petite Sirène » est une œuvre d'Hans Christian Andersen (romancier, dramaturge, conteur et poète danois), parue en 1837.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -163,9 +163,9 @@
    "Hans Christian Andersen*",
    "Nicolas Gogol",
    "Honoré de Balzac",
-   "Edgar Allan Poe"
+   "Charles Dickens"
   ],
-  "explanation": "« Les Habits neufs de l'empereur » est une œuvre d'Hans Christian Andersen, parue en 1837.",
+  "explanation": "« Les Habits neufs de l'empereur » est une œuvre d'Hans Christian Andersen (romancier, dramaturge, conteur et poète danois), parue en 1837.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -178,11 +178,11 @@
   "prompt": "Qui a écrit « Le Vilain Petit Canard » ?",
   "options": [
    "Hans Christian Andersen*",
-   "Virgile",
-   "Marc Aurèle",
-   "Salomon"
+   "Jésus-Christ",
+   "Vâtsyâyana",
+   "Augustin d’Hippone"
   ],
-  "explanation": "« Le Vilain Petit Canard » est une œuvre d'Hans Christian Andersen.",
+  "explanation": "« Le Vilain Petit Canard » est une œuvre d'Hans Christian Andersen (romancier, dramaturge, conteur et poète danois).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -199,7 +199,7 @@
    "Nicolas Gogol",
    "Stendhal"
   ],
-  "explanation": "« Poucette » est une œuvre d'Hans Christian Andersen, parue en 1835.",
+  "explanation": "« Poucette » est une œuvre d'Hans Christian Andersen (romancier, dramaturge, conteur et poète danois), parue en 1835.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -212,11 +212,11 @@
   "prompt": "Qui a écrit « La Petite Fille aux allumettes » ?",
   "options": [
    "Hans Christian Andersen*",
+   "Edgar Allan Poe",
    "Alexandre Dumas",
-   "Charlotte Brontë",
    "Emily Brontë"
   ],
-  "explanation": "« La Petite Fille aux allumettes » est une œuvre d'Hans Christian Andersen, parue en 1845.",
+  "explanation": "« La Petite Fille aux allumettes » est une œuvre d'Hans Christian Andersen (romancier, dramaturge, conteur et poète danois), parue en 1845.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -231,9 +231,9 @@
    "Hans Christian Andersen*",
    "Alexandre Dumas",
    "Edgar Allan Poe",
-   "Emily Brontë"
+   "Charles Dickens"
   ],
-  "explanation": "« La Reine des neiges » est une œuvre d'Hans Christian Andersen, parue en 1844.",
+  "explanation": "« La Reine des neiges » est une œuvre d'Hans Christian Andersen (romancier, dramaturge, conteur et poète danois), parue en 1844.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -246,11 +246,11 @@
   "prompt": "Qui a écrit « Les Enfants du capitaine Grant » ?",
   "options": [
    "Jules Verne*",
-   "Ivan Tourgueniev",
-   "Louisa May Alcott",
-   "Charles Dickens"
+   "Lewis Carroll",
+   "Fiodor Dostoïevski",
+   "Ivan Tourgueniev"
   ],
-  "explanation": "« Les Enfants du capitaine Grant » est une œuvre de Jules Verne, parue en 1864.",
+  "explanation": "« Les Enfants du capitaine Grant » est une œuvre de Jules Verne (écrivain français), parue en 1864.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -263,11 +263,11 @@
   "prompt": "Qui a écrit « Le Tour du monde en quatre-vingts jours » ?",
   "options": [
    "Jules Verne*",
-   "Fiodor Dostoïevski",
-   "Lewis Carroll",
+   "Louisa May Alcott",
+   "Mark Twain",
    "Léon Tolstoï"
   ],
-  "explanation": "« Le Tour du monde en quatre-vingts jours » est une œuvre de Jules Verne, parue en 1872.",
+  "explanation": "« Le Tour du monde en quatre-vingts jours » est une œuvre de Jules Verne (écrivain français), parue en 1872.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -282,9 +282,9 @@
    "Platon*",
    "Mao Zedong",
    "Anthony Burgess",
-   "Stanisław Lem"
+   "Joseph Heller"
   ],
-  "explanation": "« La République » est une œuvre de Platon, parue en 1963.",
+  "explanation": "« La République » est une œuvre de Platon (philosophe grec du IVe siècle avant notre ère), parue en 1963.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -297,11 +297,11 @@
   "prompt": "Qui a écrit « Deuxième épître aux Corinthiens » ?",
   "options": [
    "Paul de Tarse*",
-   "Dante Alighieri",
-   "Homère",
-   "Vâlmîki"
+   "Nizami",
+   "Lao Tseu",
+   "Murasaki Shikibu"
   ],
-  "explanation": "« Deuxième épître aux Corinthiens » est une œuvre de Paul de Tarse.",
+  "explanation": "« Deuxième épître aux Corinthiens » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -314,11 +314,11 @@
   "prompt": "Qui a écrit « Lolita » ?",
   "options": [
    "Vladimir Nabokov*",
-   "J. R. R. Tolkien",
-   "C. S. Lewis",
-   "William Golding"
+   "William Golding",
+   "Dr. Seuss",
+   "Boris Pasternak"
   ],
-  "explanation": "« Lolita » est une œuvre de Vladimir Nabokov, parue en 1955.",
+  "explanation": "« Lolita » est une œuvre de Vladimir Nabokov (écrivain russe naturalisé américain), parue en 1955.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -335,7 +335,7 @@
    "Jules César",
    "Chânakya"
   ],
-  "explanation": "« Épître aux Galates » est une œuvre de Paul de Tarse, parue en 48.",
+  "explanation": "« Épître aux Galates » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens), parue en 48.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -348,11 +348,11 @@
   "prompt": "Qui a écrit « Au cœur des ténèbres » ?",
   "options": [
    "Joseph Conrad*",
-   "Virgile",
-   "Nizami",
-   "Paul de Tarse"
+   "Murasaki Shikibu",
+   "Scriptores Historiae Augustae",
+   "Dante Alighieri"
   ],
-  "explanation": "« Au cœur des ténèbres » est une œuvre de Joseph Conrad, parue en 1899.",
+  "explanation": "« Au cœur des ténèbres » est une œuvre de Joseph Conrad (écrivain anglais d’origine polonaise), parue en 1899.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -365,11 +365,11 @@
   "prompt": "Qui a écrit « Le Magicien d'Oz » ?",
   "options": [
    "L. Frank Baum*",
+   "Marc",
    "Boccace",
-   "anonyme",
-   "Murasaki Shikibu"
+   "Scriptores Historiae Augustae"
   ],
-  "explanation": "« Le Magicien d'Oz » est une œuvre de L. Frank Baum, parue en 1900.",
+  "explanation": "« Le Magicien d'Oz » est une œuvre de L. Frank Baum (écrivain, acteur et réalisateur américain), parue en 1900.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -382,11 +382,11 @@
   "prompt": "Qui a écrit « Épître à Philémon » ?",
   "options": [
    "Paul de Tarse*",
-   "Moïse",
-   "Fuxi",
-   "Claude Ptolémée"
+   "Marc",
+   "Ésope",
+   "Vyāsa"
   ],
-  "explanation": "« Épître à Philémon » est une œuvre de Paul de Tarse.",
+  "explanation": "« Épître à Philémon » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -399,11 +399,11 @@
   "prompt": "Qui a écrit « Deuxième épître aux Thessaloniciens » ?",
   "options": [
    "Paul de Tarse*",
-   "Snorri Sturluson",
-   "Lao Tseu",
-   "Scriptores Historiae Augustae"
+   "Virgile",
+   "L. Frank Baum",
+   "Boccace"
   ],
-  "explanation": "« Deuxième épître aux Thessaloniciens » est une œuvre de Paul de Tarse.",
+  "explanation": "« Deuxième épître aux Thessaloniciens » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -416,11 +416,11 @@
   "prompt": "Qui a écrit « Première épître aux Thessaloniciens » ?",
   "options": [
    "Paul de Tarse*",
-   "anonyme",
-   "Boccace",
-   "Patanjali"
+   "Marc",
+   "AA.VV.",
+   "Jésus-Christ"
   ],
-  "explanation": "« Première épître aux Thessaloniciens » est une œuvre de Paul de Tarse.",
+  "explanation": "« Première épître aux Thessaloniciens » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -437,7 +437,7 @@
    "Wu Cheng'en",
    "Miguel de Cervantes"
   ],
-  "explanation": "« Le Prince » est une œuvre de Nicolas Machiavel, parue en 1532.",
+  "explanation": "« Le Prince » est une œuvre de Nicolas Machiavel (philosophe florentin), parue en 1532.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -450,11 +450,11 @@
   "prompt": "Qui a écrit « Martin Eden » ?",
   "options": [
    "Jack London*",
-   "Kenneth Grahame",
    "Gaston Leroux",
-   "Lucy Maud Montgomery"
+   "Lucy Maud Montgomery",
+   "Kenneth Grahame"
   ],
-  "explanation": "« Martin Eden » est une œuvre de Jack London, parue en 1909.",
+  "explanation": "« Martin Eden » est une œuvre de Jack London (écrivain américain), parue en 1909.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -467,11 +467,11 @@
   "prompt": "Qui a écrit « Dao de jing » ?",
   "options": [
    "Lao Tseu*",
-   "Pedro Calderón de la Barca",
-   "Vichnou-Sarma",
-   "Vâtsyâyana"
+   "Salomon",
+   "Fuxi",
+   "Boccace"
   ],
-  "explanation": "« Dao de jing » est une œuvre de Lao Tseu.",
+  "explanation": "« Dao de jing » est une œuvre de Lao Tseu (philosophe chinois, fondateur du taoïsme).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -484,11 +484,11 @@
   "prompt": "Qui a écrit « La vie est un songe » ?",
   "options": [
    "Pedro Calderón de la Barca*",
-   "Vyāsa",
-   "Moïse",
-   "AA.VV."
+   "Ésope",
+   "Marc",
+   "Nizami"
   ],
-  "explanation": "« La vie est un songe » est une œuvre de Pedro Calderón de la Barca.",
+  "explanation": "« La vie est un songe » est une œuvre de Pedro Calderón de la Barca (auteur et poète dramatique espagnol).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -501,11 +501,11 @@
   "prompt": "Qui a écrit « La Ferme des animaux » ?",
   "options": [
    "George Orwell*",
-   "Ayn Rand",
    "Anne Frank",
+   "Ayn Rand",
    "Antoine de Saint-Exupéry"
   ],
-  "explanation": "« La Ferme des animaux » est une œuvre de George Orwell, parue en 1945.",
+  "explanation": "« La Ferme des animaux » est une œuvre de George Orwell (écrivain britannique), parue en 1945.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -518,8 +518,8 @@
   "prompt": "Qui a écrit « Les Trois Mousquetaires » ?",
   "options": [
    "Alexandre Dumas*",
+   "Charles Dickens",
    "Edgar Allan Poe",
-   "Charlotte Brontë",
    "Emily Brontë"
   ],
   "explanation": "« Les Trois Mousquetaires » est une œuvre d'Alexandre Dumas, parue en 1844.",
@@ -537,9 +537,9 @@
    "Léon Tolstoï*",
    "Mark Twain",
    "Johanna Spyri",
-   "Jules Verne"
+   "Robert Louis Stevenson"
   ],
-  "explanation": "« Anna Karénine » est une œuvre de Léon Tolstoï, parue en 1877.",
+  "explanation": "« Anna Karénine » est une œuvre de Léon Tolstoï (écrivain russe, XIXe - début XXe s.), parue en 1877.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -554,9 +554,9 @@
    "Mary Shelley*",
    "Walter Scott",
    "Jane Austen",
-   "James Fenimore Cooper"
+   "frères Grimm"
   ],
-  "explanation": "« Frankenstein ou le Prométhée moderne » est une œuvre de Mary Shelley, parue en 1818.",
+  "explanation": "« Frankenstein ou le Prométhée moderne » est une œuvre de Mary Shelley (romancière et autrice dramatique britannique), parue en 1818.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -590,7 +590,7 @@
    "Kenneth Grahame",
    "Lucy Maud Montgomery"
   ],
-  "explanation": "« Croc-Blanc » est une œuvre de Jack London, parue en 1906.",
+  "explanation": "« Croc-Blanc » est une œuvre de Jack London (écrivain américain), parue en 1906.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -604,8 +604,8 @@
   "options": [
    "J. R. R. Tolkien*",
    "William Golding",
-   "Vladimir Nabokov",
-   "C. S. Lewis"
+   "Ray Bradbury",
+   "Vladimir Nabokov"
   ],
   "explanation": "« Le Seigneur des anneaux » est une œuvre de J. R. R. Tolkien, parue en 1954.",
   "source": "Wikidata",
@@ -620,11 +620,11 @@
   "prompt": "Qui a écrit « La Servante écarlate » ?",
   "options": [
    "Margaret Atwood*",
-   "Milan Kundera",
    "Stephen King",
+   "Milan Kundera",
    "Haruki Murakami"
   ],
-  "explanation": "« La Servante écarlate » est une œuvre de Margaret Atwood, parue en 1985.",
+  "explanation": "« La Servante écarlate » est une œuvre de Margaret Atwood (écrivaine canadienne), parue en 1985.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -637,11 +637,11 @@
   "prompt": "Qui a écrit « Almageste » ?",
   "options": [
    "Claude Ptolémée*",
-   "Vâlmîki",
-   "Paul de Tarse",
-   "Scriptores Historiae Augustae"
+   "Aristote",
+   "AA.VV.",
+   "Marc Aurèle"
   ],
-  "explanation": "« Almageste » est une œuvre de Claude Ptolémée.",
+  "explanation": "« Almageste » est une œuvre de Claude Ptolémée (astronome, astrologue, mathématicien et géographe grec).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -654,11 +654,11 @@
   "prompt": "Qui a écrit « Siracide » ?",
   "options": [
    "Ben Sira*",
-   "Vâlmîki",
-   "Murasaki Shikibu",
-   "Boccace"
+   "Nizami",
+   "Marc",
+   "Virgile"
   ],
-  "explanation": "« Siracide » est une œuvre de Ben Sira.",
+  "explanation": "« Siracide » est une œuvre de Ben Sira (érudit juif auteur d'un livre de l'Ancien Testament).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -671,11 +671,11 @@
   "prompt": "Qui a écrit « Théogonie » ?",
   "options": [
    "Hésiode*",
-   "Patanjali",
-   "Fuxi",
-   "Moïse"
+   "Scriptores Historiae Augustae",
+   "Luc",
+   "AA.VV."
   ],
-  "explanation": "« Théogonie » est une œuvre d'Hésiode.",
+  "explanation": "« Théogonie » est une œuvre d'Hésiode (poète grec des VIII-VIIe s. av. J.-C.).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -692,7 +692,7 @@
    "Daniel Defoe",
    "Jonathan Swift"
   ],
-  "explanation": "« La Barbe bleue » est une œuvre de Charles Perrault, parue en 1697.",
+  "explanation": "« La Barbe bleue » est une œuvre de Charles Perrault (homme de lettres français), parue en 1697.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -705,11 +705,11 @@
   "prompt": "Qui a écrit « Guerre et Paix » ?",
   "options": [
    "Léon Tolstoï*",
+   "Jules Verne",
    "Louisa May Alcott",
-   "Lewis Carroll",
    "Fiodor Dostoïevski"
   ],
-  "explanation": "« Guerre et Paix » est une œuvre de Léon Tolstoï, parue en 1869.",
+  "explanation": "« Guerre et Paix » est une œuvre de Léon Tolstoï (écrivain russe, XIXe - début XXe s.), parue en 1869.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -722,9 +722,9 @@
   "prompt": "Qui a écrit « Décaméron » ?",
   "options": [
    "Boccace*",
-   "Nizami",
-   "Snorri Sturluson",
-   "Vichnou-Sarma"
+   "Pedro Calderón de la Barca",
+   "Paul de Tarse",
+   "L. Frank Baum"
   ],
   "explanation": "« Décaméron » est une œuvre de Boccace.",
   "source": "Wikidata",
@@ -743,7 +743,7 @@
    "Nicolas Gogol",
    "Honoré de Balzac"
   ],
-  "explanation": "« Oliver Twist » est une œuvre de Charles Dickens, parue en 1838.",
+  "explanation": "« Oliver Twist » est une œuvre de Charles Dickens (romancier, dramaturge et journaliste anglais), parue en 1838.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -756,11 +756,11 @@
   "prompt": "Qui a écrit « Crime et châtiment » ?",
   "options": [
    "Fiodor Dostoïevski*",
+   "Lewis Carroll",
    "Louisa May Alcott",
-   "Léon Tolstoï",
-   "Ivan Tourgueniev"
+   "Jules Verne"
   ],
-  "explanation": "« Crime et châtiment » est une œuvre de Fiodor Dostoïevski, parue en 1866.",
+  "explanation": "« Crime et châtiment » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1866.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -774,10 +774,10 @@
   "options": [
    "Jane Austen*",
    "frères Grimm",
-   "Mary Shelley",
-   "Walter Scott"
+   "Johann Wolfgang von Goethe",
+   "Mary Shelley"
   ],
-  "explanation": "« Orgueil et Préjugés » est une œuvre de Jane Austen, parue en 1813.",
+  "explanation": "« Orgueil et Préjugés » est une œuvre de Jane Austen (romancière et femme de lettres anglaise), parue en 1813.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -790,8 +790,8 @@
   "prompt": "Qui a écrit « Le Nom de la rose » ?",
   "options": [
    "Umberto Eco*",
+   "J. R. R. Tolkien",
    "Milan Kundera",
-   "Margaret Atwood",
    "Mouammar Kadhafi"
   ],
   "explanation": "« Le Nom de la rose » est une œuvre d'Umberto Eco, parue en 1980.",
@@ -811,7 +811,7 @@
    "Nathaniel Hawthorne",
    "James Halliwell-Phillipps"
   ],
-  "explanation": "« Moby Dick » est une œuvre d'Herman Melville, parue en 1851.",
+  "explanation": "« Moby Dick » est une œuvre d'Herman Melville (romancier, essayiste et poète américain), parue en 1851.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -828,7 +828,7 @@
    "Marcel Proust",
    "Jostein Gaarder"
   ],
-  "explanation": "« A Game of Thrones » est une œuvre de George R. R. Martin, parue en 1996.",
+  "explanation": "« A Game of Thrones » est une œuvre de George R. R. Martin (écrivain américain de science-fiction et de fantasy), parue en 1996.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -845,7 +845,7 @@
    "Haruki Murakami",
    "Stephen King"
   ],
-  "explanation": "« L'Alchimiste » est une œuvre de Paulo Coelho, parue en 1988.",
+  "explanation": "« L'Alchimiste » est une œuvre de Paulo Coelho (écrivain brésilien), parue en 1988.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -862,7 +862,7 @@
    "Charles Perrault",
    "John Bunyan"
   ],
-  "explanation": "« Les Voyages de Gulliver » est une œuvre de Jonathan Swift, parue en 1726.",
+  "explanation": "« Les Voyages de Gulliver » est une œuvre de Jonathan Swift (écrivain, satiriste, essayiste, pamphlétaire anglo-irlandais), parue en 1726.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -875,11 +875,11 @@
   "prompt": "Qui a écrit « Classique des mutations » ?",
   "options": [
    "Fuxi*",
-   "Pedro Calderón de la Barca",
-   "Murasaki Shikibu",
-   "Scriptores Historiae Augustae"
+   "Vyāsa",
+   "Scriptores Historiae Augustae",
+   "Tite-Live"
   ],
-  "explanation": "« Classique des mutations » est une œuvre de Fuxi.",
+  "explanation": "« Classique des mutations » est une œuvre de Fuxi (personnage mythique de la mythologie chinoise).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -894,9 +894,9 @@
    "Dan Brown*",
    "Marcel Proust",
    "Yann Martel",
-   "Christopher Paolini"
+   "George R. R. Martin"
   ],
-  "explanation": "« Anges et Démons » est une œuvre de Dan Brown, parue en 2000.",
+  "explanation": "« Anges et Démons » est une œuvre de Dan Brown (romancier américain), parue en 2000.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -910,10 +910,10 @@
   "options": [
    "Charlotte Brontë*",
    "Emily Brontë",
-   "Alexandre Dumas",
-   "Friedrich Engels"
+   "Friedrich Engels",
+   "Alexandre Dumas"
   ],
-  "explanation": "« Jane Eyre » est une œuvre de Charlotte Brontë, parue en 1847.",
+  "explanation": "« Jane Eyre » est une œuvre de Charlotte Brontë (écrivaine britannique), parue en 1847.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -927,10 +927,10 @@
   "options": [
    "Fiodor Dostoïevski*",
    "Johanna Spyri",
-   "Carlo Collodi",
-   "Robert Louis Stevenson"
+   "Robert Louis Stevenson",
+   "Carlo Collodi"
   ],
-  "explanation": "« Les Frères Karamazov » est une œuvre de Fiodor Dostoïevski, parue en 1880.",
+  "explanation": "« Les Frères Karamazov » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1880.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -943,11 +943,11 @@
   "prompt": "Qui a écrit « Vingt Mille Lieues sous les mers » ?",
   "options": [
    "Jules Verne*",
-   "Léon Tolstoï",
    "Louisa May Alcott",
+   "Fiodor Dostoïevski",
    "Lewis Carroll"
   ],
-  "explanation": "« Vingt Mille Lieues sous les mers » est une œuvre de Jules Verne, parue en 1869.",
+  "explanation": "« Vingt Mille Lieues sous les mers » est une œuvre de Jules Verne (écrivain français), parue en 1869.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -960,11 +960,11 @@
   "prompt": "Qui a écrit « L'Attrape-cœurs » ?",
   "options": [
    "J. D. Salinger*",
-   "John Steinbeck",
-   "E. B. White",
-   "Samuel Beckett"
+   "C. S. Lewis",
+   "Samuel Beckett",
+   "E. B. White"
   ],
-  "explanation": "« L'Attrape-cœurs » est une œuvre de J. D. Salinger, parue en 1951.",
+  "explanation": "« L'Attrape-cœurs » est une œuvre de J. D. Salinger (écrivain américain), parue en 1951.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -977,11 +977,11 @@
   "prompt": "Qui a écrit « La Métamorphose » ?",
   "options": [
    "Franz Kafka*",
-   "Thomas Mann",
-   "James Joyce",
-   "Gaston Leroux"
+   "Hermann Hesse",
+   "Gaston Leroux",
+   "Jaroslav Hašek"
   ],
-  "explanation": "« La Métamorphose » est une œuvre de Franz Kafka, parue en 1915.",
+  "explanation": "« La Métamorphose » est une œuvre de Franz Kafka (écrivain pragois de langue allemande), parue en 1915.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -996,9 +996,9 @@
    "Robert Louis Stevenson*",
    "Carlo Collodi",
    "Johanna Spyri",
-   "Mark Twain"
+   "Léon Tolstoï"
   ],
-  "explanation": "« l'Île au trésor » est une œuvre de Robert Louis Stevenson, parue en 1883.",
+  "explanation": "« l'Île au trésor » est une œuvre de Robert Louis Stevenson (romancier écossais, essayiste et écrivain du voyage), parue en 1883.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1015,7 +1015,7 @@
    "Chota Roustavéli",
    "Nestor"
   ],
-  "explanation": "« Chanson de Roland » est une œuvre de Turold, parue en 1100.",
+  "explanation": "« Chanson de Roland » est une œuvre de Turold (trouvère normand, auteur possible de la Chanson de Roland), parue en 1100.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1028,11 +1028,11 @@
   "prompt": "Qui a écrit « Eragon » ?",
   "options": [
    "Christopher Paolini*",
-   "Khaled Hosseini",
+   "Dan Brown",
    "Yann Martel",
    "Marcel Proust"
   ],
-  "explanation": "« Eragon » est une œuvre de Christopher Paolini, parue en 2003.",
+  "explanation": "« Eragon » est une œuvre de Christopher Paolini (écrivain américain), parue en 2003.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1047,9 +1047,9 @@
    "Mikhaïl Boulgakov*",
    "D. H. Lawrence",
    "Erich Maria Remarque",
-   "Ernest Hemingway"
+   "Franz Kafka"
   ],
-  "explanation": "« Le Maître et Marguerite » est une œuvre de Mikhaïl Boulgakov, parue en 1928.",
+  "explanation": "« Le Maître et Marguerite » est une œuvre de Mikhaïl Boulgakov (médecin et écrivain soviétique d'origine ukrainienne), parue en 1928.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1062,11 +1062,11 @@
   "prompt": "Qui a écrit « Fascination » ?",
   "options": [
    "Stephenie Meyer*",
+   "Dan Brown",
    "Christopher Paolini",
-   "Khaled Hosseini",
-   "Suzanne Collins"
+   "Khaled Hosseini"
   ],
-  "explanation": "« Fascination » est une œuvre de Stephenie Meyer, parue en 2005.",
+  "explanation": "« Fascination » est une œuvre de Stephenie Meyer (écrivaine américaine), parue en 2005.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1081,9 +1081,9 @@
    "Charles Dickens*",
    "Nathaniel Hawthorne",
    "Herman Melville",
-   "Friedrich Engels"
+   "Alexandre Dumas"
   ],
-  "explanation": "« David Copperfield » est une œuvre de Charles Dickens, parue en 1850.",
+  "explanation": "« David Copperfield » est une œuvre de Charles Dickens (romancier, dramaturge et journaliste anglais), parue en 1850.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1096,11 +1096,11 @@
   "prompt": "Qui a écrit « Tentation » ?",
   "options": [
    "Stephenie Meyer*",
-   "Suzanne Collins",
    "Khaled Hosseini",
+   "Suzanne Collins",
    "Christopher Paolini"
   ],
-  "explanation": "« Tentation » est une œuvre de Stephenie Meyer, parue en 2006.",
+  "explanation": "« Tentation » est une œuvre de Stephenie Meyer (écrivaine américaine), parue en 2006.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1117,7 +1117,7 @@
    "Luo Guanzhong",
    "Érasme"
   ],
-  "explanation": "« Les Contes de Cantorbéry » est une œuvre de Geoffrey Chaucer, parue en 1387.",
+  "explanation": "« Les Contes de Cantorbéry » est une œuvre de Geoffrey Chaucer (écrivain, auteur, philosophe, diplomate et poète anglais), parue en 1387.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1130,8 +1130,8 @@
   "prompt": "Qui a écrit « Le Comte de Monte-Cristo » ?",
   "options": [
    "Alexandre Dumas*",
+   "Charles Dickens",
    "Edgar Allan Poe",
-   "Charlotte Brontë",
    "Emily Brontë"
   ],
   "explanation": "« Le Comte de Monte-Cristo » est une œuvre d'Alexandre Dumas, parue en 1844.",
@@ -1149,9 +1149,9 @@
    "Aldous Huxley*",
    "Louis-Ferdinand Céline",
    "Mikhaïl Boulgakov",
-   "Erich Maria Remarque"
+   "D. H. Lawrence"
   ],
-  "explanation": "« Le Meilleur des mondes » est une œuvre d'Aldous Huxley, parue en 1932.",
+  "explanation": "« Le Meilleur des mondes » est une œuvre d'Aldous Huxley (écrivain, romancier et philosophe britannique), parue en 1932.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1168,7 +1168,7 @@
    "Geoffroy de Monmouth",
    "Turold"
   ],
-  "explanation": "« Chronique des temps passés » est une œuvre de Nestor, parue en 1200.",
+  "explanation": "« Chronique des temps passés » est une œuvre de Nestor (moine et historien), parue en 1200.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1181,11 +1181,11 @@
   "prompt": "Qui a écrit « Le Rouge et le Noir » ?",
   "options": [
    "Stendhal*",
-   "Honoré de Balzac",
    "Alexandre Pouchkine",
+   "Honoré de Balzac",
    "James Fenimore Cooper"
   ],
-  "explanation": "« Le Rouge et le Noir » est une œuvre de Stendhal, parue en 1830.",
+  "explanation": "« Le Rouge et le Noir » est une œuvre de Stendhal (écrivain français), parue en 1830.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1199,10 +1199,10 @@
   "options": [
    "Gustave Flaubert*",
    "Charles Baudelaire",
-   "Charles Dickens",
-   "Xénophon"
+   "Xénophon",
+   "Henry David Thoreau"
   ],
-  "explanation": "« Madame Bovary » est une œuvre de Gustave Flaubert, parue en 1857.",
+  "explanation": "« Madame Bovary » est une œuvre de Gustave Flaubert (romancier et auteur dramatique français), parue en 1857.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1215,9 +1215,9 @@
   "prompt": "Qui a écrit « Ancien Testament » ?",
   "options": [
    "AA.VV.*",
-   "Dante Alighieri",
+   "Jésus-Christ",
    "Augustin d’Hippone",
-   "Salomon"
+   "Hésiode"
   ],
   "explanation": "« Ancien Testament » est une œuvre d'AA.VV..",
   "source": "Wikidata",
@@ -1232,11 +1232,11 @@
   "prompt": "Qui a écrit « En attendant Godot » ?",
   "options": [
    "Samuel Beckett*",
-   "John Steinbeck",
+   "Ernest Hemingway",
    "E. B. White",
-   "Ray Bradbury"
+   "C. S. Lewis"
   ],
-  "explanation": "« En attendant Godot » est une œuvre de Samuel Beckett, parue en 1952.",
+  "explanation": "« En attendant Godot » est une œuvre de Samuel Beckett (écrivain, poète et dramaturge irlandais), parue en 1952.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1249,11 +1249,11 @@
   "prompt": "Qui a écrit « Pour qui sonne le glas » ?",
   "options": [
    "Ernest Hemingway*",
-   "Ayn Rand",
+   "Albert Camus",
    "Antoine de Saint-Exupéry",
-   "Margaret Mitchell"
+   "Ayn Rand"
   ],
-  "explanation": "« Pour qui sonne le glas » est une œuvre d'Ernest Hemingway, parue en 1940.",
+  "explanation": "« Pour qui sonne le glas » est une œuvre d'Ernest Hemingway (écrivain, journaliste et correspondant de guerre américain), parue en 1940.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1266,11 +1266,11 @@
   "prompt": "Qui a écrit « Fahrenheit 451 » ?",
   "options": [
    "Ray Bradbury*",
-   "Samuel Beckett",
+   "Ernest Hemingway",
    "E. B. White",
-   "John Steinbeck"
+   "Samuel Beckett"
   ],
-  "explanation": "« Fahrenheit 451 » est une œuvre de Ray Bradbury, parue en 1953.",
+  "explanation": "« Fahrenheit 451 » est une œuvre de Ray Bradbury (écrivain américain), parue en 1953.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1285,9 +1285,9 @@
    "Dan Brown*",
    "Yann Martel",
    "Marcel Proust",
-   "Khaled Hosseini"
+   "Christopher Paolini"
   ],
-  "explanation": "« Deception Point » est une œuvre de Dan Brown, parue en 2001.",
+  "explanation": "« Deception Point » est une œuvre de Dan Brown (romancier américain), parue en 2001.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1304,7 +1304,7 @@
    "Friedrich Engels",
    "Alexandre Dumas"
   ],
-  "explanation": "« Les Hauts de Hurlevent » est une œuvre d'Emily Brontë, parue en 1847.",
+  "explanation": "« Les Hauts de Hurlevent » est une œuvre d'Emily Brontë (écrivaine britannique), parue en 1847.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1321,7 +1321,7 @@
    "Geoffroy de Monmouth",
    "Turold"
   ],
-  "explanation": "« Le Chevalier à la peau de panthère » est une œuvre de Chota Roustavéli, parue en 1180.",
+  "explanation": "« Le Chevalier à la peau de panthère » est une œuvre de Chota Roustavéli (poète géorgien), parue en 1180.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1334,11 +1334,11 @@
   "prompt": "Qui a écrit « Edda de Snorri » ?",
   "options": [
    "Snorri Sturluson*",
-   "Claude Ptolémée",
-   "Boccace",
-   "Jacopone da Todi"
+   "Homère",
+   "Jacopone da Todi",
+   "Lao Tseu"
   ],
-  "explanation": "« Edda de Snorri » est une œuvre de Snorri Sturluson.",
+  "explanation": "« Edda de Snorri » est une œuvre de Snorri Sturluson (homme politique et écrivain islandais).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1351,11 +1351,11 @@
   "prompt": "Qui a écrit « Le Docteur Jivago » ?",
   "options": [
    "Boris Pasternak*",
-   "Dr. Seuss",
    "Jack Kerouac",
-   "C. S. Lewis"
+   "Dr. Seuss",
+   "Vladimir Nabokov"
   ],
-  "explanation": "« Le Docteur Jivago » est une œuvre de Boris Pasternak, parue en 1957.",
+  "explanation": "« Le Docteur Jivago » est une œuvre de Boris Pasternak (écrivain russe), parue en 1957.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1372,7 +1372,7 @@
    "Mikhaïl Boulgakov",
    "Franz Kafka"
   ],
-  "explanation": "« À l'Ouest, rien de nouveau » est une œuvre d'Erich Maria Remarque, parue en 1928.",
+  "explanation": "« À l'Ouest, rien de nouveau » est une œuvre d'Erich Maria Remarque (écrivain allemand naturalisé américain), parue en 1928.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1386,8 +1386,8 @@
   "options": [
    "J. R. R. Tolkien*",
    "William Golding",
-   "Vladimir Nabokov",
-   "C. S. Lewis"
+   "Ray Bradbury",
+   "Vladimir Nabokov"
   ],
   "explanation": "« La Communauté de l'anneau » est une œuvre de J. R. R. Tolkien, parue en 1954.",
   "source": "Wikidata",
@@ -1402,11 +1402,11 @@
   "prompt": "Qui a écrit « 1984 » ?",
   "options": [
    "George Orwell*",
-   "Albert Camus",
+   "C. S. Lewis",
    "Anne Frank",
    "J. D. Salinger"
   ],
-  "explanation": "« 1984 » est une œuvre de George Orwell, parue en 1949.",
+  "explanation": "« 1984 » est une œuvre de George Orwell (écrivain britannique), parue en 1949.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1419,11 +1419,11 @@
   "prompt": "Qui a écrit « Le Brave Soldat Chvéïk » ?",
   "options": [
    "Jaroslav Hašek*",
-   "Hermann Hesse",
    "James Joyce",
-   "F. Scott Fitzgerald"
+   "Hermann Hesse",
+   "Franz Kafka"
   ],
-  "explanation": "« Le Brave Soldat Chvéïk » est une œuvre de Jaroslav Hašek, parue en 1921.",
+  "explanation": "« Le Brave Soldat Chvéïk » est une œuvre de Jaroslav Hašek (romancier, un humoriste et un journaliste d'origine tchèque), parue en 1921.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1436,11 +1436,11 @@
   "prompt": "Qui a écrit « Stabat Mater » ?",
   "options": [
    "Jacopone da Todi*",
-   "Boccace",
-   "Vichnou-Sarma",
+   "Salomon",
+   "Vâtsyâyana",
    "Vyāsa"
   ],
-  "explanation": "« Stabat Mater » est une œuvre de Jacopone da Todi.",
+  "explanation": "« Stabat Mater » est une œuvre de Jacopone da Todi (poète franciscain italien).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1453,11 +1453,11 @@
   "prompt": "Qui a écrit « L'Idiot » ?",
   "options": [
    "Fiodor Dostoïevski*",
-   "Léon Tolstoï",
+   "Jules Verne",
    "Louisa May Alcott",
    "Lewis Carroll"
   ],
-  "explanation": "« L'Idiot » est une œuvre de Fiodor Dostoïevski, parue en 1869.",
+  "explanation": "« L'Idiot » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1869.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1470,11 +1470,11 @@
   "prompt": "Qui a écrit « Le Symbole perdu » ?",
   "options": [
    "Dan Brown*",
-   "Suzanne Collins",
    "Stephenie Meyer",
-   "E. L. James"
+   "Suzanne Collins",
+   "Khaled Hosseini"
   ],
-  "explanation": "« Le Symbole perdu » est une œuvre de Dan Brown, parue en 2009.",
+  "explanation": "« Le Symbole perdu » est une œuvre de Dan Brown (romancier américain), parue en 2009.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1487,9 +1487,9 @@
   "prompt": "Qui a écrit « La Cité de Dieu » ?",
   "options": [
    "Augustin d’Hippone*",
-   "Luc",
-   "Hésiode",
-   "anonyme"
+   "anonyme",
+   "Tite-Live",
+   "Snorri Sturluson"
   ],
   "explanation": "« La Cité de Dieu » est une œuvre d'Augustin d’Hippone.",
   "source": "Wikidata",
@@ -1508,7 +1508,7 @@
    "Joseph Heller",
    "Anthony Burgess"
   ],
-  "explanation": "« Ne tirez pas sur l'oiseau moqueur » est une œuvre d'Harper Lee, parue en 1960.",
+  "explanation": "« Ne tirez pas sur l'oiseau moqueur » est une œuvre d'Harper Lee (écrivaine américaine), parue en 1960.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1521,11 +1521,11 @@
   "prompt": "Qui a écrit « Hésitation » ?",
   "options": [
    "Stephenie Meyer*",
-   "Suzanne Collins",
    "Khaled Hosseini",
+   "Suzanne Collins",
    "Christopher Paolini"
   ],
-  "explanation": "« Hésitation » est une œuvre de Stephenie Meyer, parue en 2007.",
+  "explanation": "« Hésitation » est une œuvre de Stephenie Meyer (écrivaine américaine), parue en 2007.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1539,8 +1539,8 @@
   "options": [
    "Thomas Mann*",
    "F. Scott Fitzgerald",
-   "Ernest Hemingway",
-   "Hermann Hesse"
+   "Franz Kafka",
+   "James Joyce"
   ],
   "explanation": "« La Montagne magique » est une œuvre de Thomas Mann, parue en 1924.",
   "source": "Wikidata",
@@ -1572,11 +1572,11 @@
   "prompt": "Qui a écrit « Gatsby le Magnifique » ?",
   "options": [
    "F. Scott Fitzgerald*",
-   "Ernest Hemingway",
    "Franz Kafka",
-   "Erich Maria Remarque"
+   "James Joyce",
+   "D. H. Lawrence"
   ],
-  "explanation": "« Gatsby le Magnifique » est une œuvre de F. Scott Fitzgerald, parue en 1925.",
+  "explanation": "« Gatsby le Magnifique » est une œuvre de F. Scott Fitzgerald (écrivain américain), parue en 1925.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1589,11 +1589,11 @@
   "prompt": "Qui a écrit « Les Aventures de Huckleberry Finn » ?",
   "options": [
    "Mark Twain*",
-   "Robert Louis Stevenson",
    "Carlo Collodi",
+   "Robert Louis Stevenson",
    "Johanna Spyri"
   ],
-  "explanation": "« Les Aventures de Huckleberry Finn » est une œuvre de Mark Twain, parue en 1884.",
+  "explanation": "« Les Aventures de Huckleberry Finn » est une œuvre de Mark Twain (romancier, journaliste et humoriste américain), parue en 1884.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1606,11 +1606,11 @@
   "prompt": "Qui a écrit « Les Raisins de la colère » ?",
   "options": [
    "John Steinbeck*",
+   "Albert Camus",
    "Margaret Mitchell",
-   "Ayn Rand",
-   "Antoine de Saint-Exupéry"
+   "Ayn Rand"
   ],
-  "explanation": "« Les Raisins de la colère » est une œuvre de John Steinbeck, parue en 1939.",
+  "explanation": "« Les Raisins de la colère » est une œuvre de John Steinbeck (écrivain américain), parue en 1939.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1623,9 +1623,9 @@
   "prompt": "Qui a écrit « Souda » ?",
   "options": [
    "AA.VV.*",
-   "Ésope",
-   "Vichnou-Sarma",
-   "Marc"
+   "Paul de Tarse",
+   "anonyme",
+   "Vichnou-Sarma"
   ],
   "explanation": "« Souda » est une œuvre d'AA.VV..",
   "source": "Wikidata",
@@ -1642,9 +1642,9 @@
    "Charles Baudelaire*",
    "Gustave Flaubert",
    "Xénophon",
-   "Charles Dickens"
+   "Henry David Thoreau"
   ],
-  "explanation": "« Les Fleurs du mal » est une œuvre de Charles Baudelaire, parue en 1857.",
+  "explanation": "« Les Fleurs du mal » est une œuvre de Charles Baudelaire (poète français), parue en 1857.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1657,11 +1657,11 @@
   "prompt": "Qui a écrit « Le Loup des steppes » ?",
   "options": [
    "Hermann Hesse*",
+   "Erich Maria Remarque",
    "Mikhaïl Boulgakov",
-   "Ernest Hemingway",
    "D. H. Lawrence"
   ],
-  "explanation": "« Le Loup des steppes » est une œuvre d'Hermann Hesse, parue en 1927.",
+  "explanation": "« Le Loup des steppes » est une œuvre d'Hermann Hesse (romancier, poète, peintre et essayiste allemand-suisse), parue en 1927.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1678,7 +1678,7 @@
    "Oscar Wilde",
    "Johanna Spyri"
   ],
-  "explanation": "« L'Étrange Cas du docteur Jekyll et de M. Hyde » est une œuvre de Robert Louis Stevenson, parue en 1886.",
+  "explanation": "« L'Étrange Cas du docteur Jekyll et de M. Hyde » est une œuvre de Robert Louis Stevenson (romancier écossais, essayiste et écrivain du voyage), parue en 1886.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1692,10 +1692,10 @@
   "options": [
    "C. S. Lewis*",
    "J. D. Salinger",
-   "John Steinbeck",
+   "Samuel Beckett",
    "E. B. White"
   ],
-  "explanation": "« Le Prince Caspian » est une œuvre de C. S. Lewis, parue en 1951.",
+  "explanation": "« Le Prince Caspian » est une œuvre de C. S. Lewis (écrivain et universitaire britannique), parue en 1951.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1708,11 +1708,11 @@
   "prompt": "Qui a écrit « Voyage au centre de la Terre » ?",
   "options": [
    "Jules Verne*",
-   "Ivan Tourgueniev",
-   "Louisa May Alcott",
-   "Xénophon"
+   "Lewis Carroll",
+   "Fiodor Dostoïevski",
+   "Ivan Tourgueniev"
   ],
-  "explanation": "« Voyage au centre de la Terre » est une œuvre de Jules Verne, parue en 1864.",
+  "explanation": "« Voyage au centre de la Terre » est une œuvre de Jules Verne (écrivain français), parue en 1864.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1727,9 +1727,9 @@
    "Charles Dickens*",
    "Ivan Tourgueniev",
    "Xénophon",
-   "Charles Baudelaire"
+   "Lewis Carroll"
   ],
-  "explanation": "« Les Grandes Espérances » est une œuvre de Charles Dickens, parue en 1861.",
+  "explanation": "« Les Grandes Espérances » est une œuvre de Charles Dickens (romancier, dramaturge et journaliste anglais), parue en 1861.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1742,9 +1742,9 @@
   "prompt": "Qui a écrit « De l'autre côté du miroir » ?",
   "options": [
    "Lewis Carroll*",
-   "Fiodor Dostoïevski",
    "Jules Verne",
-   "Léon Tolstoï"
+   "Louisa May Alcott",
+   "Fiodor Dostoïevski"
   ],
   "explanation": "« De l'autre côté du miroir » est une œuvre de Lewis Carroll, parue en 1871.",
   "source": "Wikidata",
@@ -1759,9 +1759,9 @@
   "prompt": "Qui a écrit « La Case de l'oncle Tom » ?",
   "options": [
    "Harriet Beecher Stowe*",
-   "James Halliwell-Phillipps",
    "Herman Melville",
-   "Nathaniel Hawthorne"
+   "James Halliwell-Phillipps",
+   "Henry David Thoreau"
   ],
   "explanation": "« La Case de l'oncle Tom » est une œuvre d'Harriet Beecher Stowe, parue en 1852.",
   "source": "Wikidata",
@@ -1777,10 +1777,10 @@
   "options": [
    "Fiodor Dostoïevski*",
    "Louisa May Alcott",
-   "Léon Tolstoï",
-   "Lewis Carroll"
+   "Lewis Carroll",
+   "Jules Verne"
   ],
-  "explanation": "« Le Joueur » est une œuvre de Fiodor Dostoïevski, parue en 1867.",
+  "explanation": "« Le Joueur » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1867.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1793,11 +1793,11 @@
   "prompt": "Qui a écrit « Emma » ?",
   "options": [
    "Jane Austen*",
-   "Mary Shelley",
    "frères Grimm",
+   "Mary Shelley",
    "Walter Scott"
   ],
-  "explanation": "« Emma » est une œuvre de Jane Austen, parue en 1815.",
+  "explanation": "« Emma » est une œuvre de Jane Austen (romancière et femme de lettres anglaise), parue en 1815.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1811,10 +1811,10 @@
   "options": [
    "Edgar Allan Poe*",
    "Alexandre Dumas",
-   "Emily Brontë",
-   "Charlotte Brontë"
+   "Charlotte Brontë",
+   "Charles Dickens"
   ],
-  "explanation": "« Le Corbeau » est une œuvre d'Edgar Allan Poe, parue en 1845.",
+  "explanation": "« Le Corbeau » est une œuvre d'Edgar Allan Poe (écrivain américain), parue en 1845.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1831,7 +1831,7 @@
    "Jules César",
    "Plutarque"
   ],
-  "explanation": "« allégorie de la caverne » est une œuvre de Platon, parue en -400.",
+  "explanation": "« allégorie de la caverne » est une œuvre de Platon (philosophe grec du IVe siècle avant notre ère), parue en -400.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1844,11 +1844,11 @@
   "prompt": "Qui a écrit « Pañchatantra » ?",
   "options": [
    "Vichnou-Sarma*",
-   "Pedro Calderón de la Barca",
-   "Moïse",
-   "Patanjali"
+   "L. Frank Baum",
+   "Paul de Tarse",
+   "Pedro Calderón de la Barca"
   ],
-  "explanation": "« Pañchatantra » est une œuvre de Vichnou-Sarma.",
+  "explanation": "« Pañchatantra » est une œuvre de Vichnou-Sarma (écrivain indien).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1861,11 +1861,11 @@
   "prompt": "Qui a écrit « L'Adieu aux armes » ?",
   "options": [
    "Ernest Hemingway*",
-   "Erich Maria Remarque",
+   "Mikhaïl Boulgakov",
    "D. H. Lawrence",
-   "Mikhaïl Boulgakov"
+   "Erich Maria Remarque"
   ],
-  "explanation": "« L'Adieu aux armes » est une œuvre d'Ernest Hemingway, parue en 1929.",
+  "explanation": "« L'Adieu aux armes » est une œuvre d'Ernest Hemingway (écrivain, journaliste et correspondant de guerre américain), parue en 1929.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1882,7 +1882,7 @@
    "Chota Roustavéli",
    "Nestor"
   ],
-  "explanation": "« Histoire des rois de Bretagne » est une œuvre de Geoffroy de Monmouth, parue en 1136.",
+  "explanation": "« Histoire des rois de Bretagne » est une œuvre de Geoffroy de Monmouth (historiographe gallois et évêque de St Asaph), parue en 1136.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1916,7 +1916,7 @@
    "Alexandre Soljenitsyne",
    "Mao Zedong"
   ],
-  "explanation": "« Le Parrain » est une œuvre de Mario Puzo, parue en 1969.",
+  "explanation": "« Le Parrain » est une œuvre de Mario Puzo (écrivain américain), parue en 1969.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1930,10 +1930,10 @@
   "options": [
    "Antoine de Saint-Exupéry*",
    "Ayn Rand",
-   "George Orwell",
-   "Albert Camus"
+   "Albert Camus",
+   "George Orwell"
   ],
-  "explanation": "« Le Petit Prince » est une œuvre d'Antoine de Saint-Exupéry, parue en 1943.",
+  "explanation": "« Le Petit Prince » est une œuvre d'Antoine de Saint-Exupéry (écrivain et aviateur français), parue en 1943.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1947,8 +1947,8 @@
   "options": [
    "Stanisław Lem*",
    "Joseph Heller",
-   "Anthony Burgess",
-   "Harper Lee"
+   "Harper Lee",
+   "Anthony Burgess"
   ],
   "explanation": "« Solaris » est une œuvre de Stanisław Lem, parue en 1961.",
   "source": "Wikidata",
@@ -1963,11 +1963,11 @@
   "prompt": "Qui a écrit « Le Vieil Homme et la Mer » ?",
   "options": [
    "Ernest Hemingway*",
-   "John Steinbeck",
    "Samuel Beckett",
-   "E. B. White"
+   "E. B. White",
+   "J. D. Salinger"
   ],
-  "explanation": "« Le Vieil Homme et la Mer » est une œuvre d'Ernest Hemingway, parue en 1952.",
+  "explanation": "« Le Vieil Homme et la Mer » est une œuvre d'Ernest Hemingway (écrivain, journaliste et correspondant de guerre américain), parue en 1952.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1984,7 +1984,7 @@
    "Alexandre Soljenitsyne",
    "Mao Zedong"
   ],
-  "explanation": "« Abattoir 5 ou la Croisade des enfants » est une œuvre de Kurt Vonnegut, parue en 1969.",
+  "explanation": "« Abattoir 5 ou la Croisade des enfants » est une œuvre de Kurt Vonnegut (écrivain américain), parue en 1969.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2001,7 +2001,7 @@
    "Jules César",
    "Plutarque"
   ],
-  "explanation": "« Criton » est une œuvre de Platon, parue en -400.",
+  "explanation": "« Criton » est une œuvre de Platon (philosophe grec du IVe siècle avant notre ère), parue en -400.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2018,7 +2018,7 @@
    "Charles Perrault",
    "Daniel Defoe"
   ],
-  "explanation": "« Le Voyage du pèlerin » est une œuvre de John Bunyan, parue en 1678.",
+  "explanation": "« Le Voyage du pèlerin » est une œuvre de John Bunyan (pasteur baptiste, auteur de textes mystiques), parue en 1678.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2031,11 +2031,11 @@
   "prompt": "Qui a écrit « Heidi » ?",
   "options": [
    "Johanna Spyri*",
-   "Robert Louis Stevenson",
+   "Léon Tolstoï",
    "Carlo Collodi",
-   "Mark Twain"
+   "Robert Louis Stevenson"
   ],
-  "explanation": "« Heidi » est une œuvre de Johanna Spyri, parue en 1880.",
+  "explanation": "« Heidi » est une œuvre de Johanna Spyri (écrivaine suisse), parue en 1880.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2048,11 +2048,11 @@
   "prompt": "Qui a écrit « Sa Majesté des mouches » ?",
   "options": [
    "William Golding*",
+   "Vladimir Nabokov",
    "Ray Bradbury",
-   "C. S. Lewis",
-   "J. R. R. Tolkien"
+   "Ernest Hemingway"
   ],
-  "explanation": "« Sa Majesté des mouches » est une œuvre de William Golding, parue en 1954.",
+  "explanation": "« Sa Majesté des mouches » est une œuvre de William Golding (écrivain britannique), parue en 1954.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2065,11 +2065,11 @@
   "prompt": "Qui a écrit « Le Fantôme de l'Opéra » ?",
   "options": [
    "Gaston Leroux*",
-   "Jack London",
-   "Thomas Mann",
-   "Kenneth Grahame"
+   "Lucy Maud Montgomery",
+   "Kenneth Grahame",
+   "Jack London"
   ],
-  "explanation": "« Le Fantôme de l'Opéra » est une œuvre de Gaston Leroux, parue en 1910.",
+  "explanation": "« Le Fantôme de l'Opéra » est une œuvre de Gaston Leroux (romancier et journaliste français), parue en 1910.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2083,10 +2083,10 @@
   "options": [
    "Jane Austen*",
    "frères Grimm",
-   "Mary Shelley",
-   "Walter Scott"
+   "Johann Wolfgang von Goethe",
+   "Mary Shelley"
   ],
-  "explanation": "« Raison et Sentiments » est une œuvre de Jane Austen, parue en 1811.",
+  "explanation": "« Raison et Sentiments » est une œuvre de Jane Austen (romancière et femme de lettres anglaise), parue en 1811.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2099,11 +2099,11 @@
   "prompt": "Qui a écrit « Entretiens de Confucius » ?",
   "options": [
    "anonyme*",
-   "Ésope",
-   "Luc",
-   "Homère"
+   "Salomon",
+   "Hésiode",
+   "Pedro Calderón de la Barca"
   ],
-  "explanation": "« Entretiens de Confucius » est une œuvre d'anonyme.",
+  "explanation": "« Entretiens de Confucius » est une œuvre d'anonyme (auteur non identifié).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2120,7 +2120,7 @@
    "Anthony Burgess",
    "Harper Lee"
   ],
-  "explanation": "« Catch 22 » est une œuvre de Joseph Heller, parue en 1961.",
+  "explanation": "« Catch 22 » est une œuvre de Joseph Heller (écrivain américain), parue en 1961.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2133,11 +2133,11 @@
   "prompt": "Qui a écrit « Autant en emporte le vent » ?",
   "options": [
    "Margaret Mitchell*",
-   "Aldous Huxley",
+   "John Steinbeck",
    "Louis-Ferdinand Céline",
-   "Ayn Rand"
+   "Aldous Huxley"
   ],
-  "explanation": "« Autant en emporte le vent » est une œuvre de Margaret Mitchell, parue en 1936.",
+  "explanation": "« Autant en emporte le vent » est une œuvre de Margaret Mitchell (journaliste et romancière américaine), parue en 1936.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2154,7 +2154,7 @@
    "Charles Perrault",
    "Daniel Defoe"
   ],
-  "explanation": "« Le Paradis perdu » est une œuvre de John Milton, parue en 1667.",
+  "explanation": "« Le Paradis perdu » est une œuvre de John Milton (poète, essayiste, pamphlétaire et fonctionnaire anglais), parue en 1667.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2167,11 +2167,11 @@
   "prompt": "Qui a écrit « Pères et Fils » ?",
   "options": [
    "Ivan Tourgueniev*",
+   "Lewis Carroll",
    "Xénophon",
-   "Charles Dickens",
-   "Gustave Flaubert"
+   "Fiodor Dostoïevski"
   ],
-  "explanation": "« Pères et Fils » est une œuvre d'Ivan Tourgueniev, parue en 1862.",
+  "explanation": "« Pères et Fils » est une œuvre d'Ivan Tourgueniev (écrivain et dramaturge russe), parue en 1862.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2205,7 +2205,7 @@
    "Chuck Palahniuk",
    "Yann Martel"
   ],
-  "explanation": "« A Clash of Kings » est une œuvre de George R. R. Martin, parue en 1998.",
+  "explanation": "« A Clash of Kings » est une œuvre de George R. R. Martin (écrivain américain de science-fiction et de fantasy), parue en 1998.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2222,7 +2222,7 @@
    "Gustave Flaubert",
    "Charles Baudelaire"
   ],
-  "explanation": "« Le Conte de deux cités » est une œuvre de Charles Dickens, parue en 1859.",
+  "explanation": "« Le Conte de deux cités » est une œuvre de Charles Dickens (romancier, dramaturge et journaliste anglais), parue en 1859.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2235,11 +2235,11 @@
   "prompt": "Qui a écrit « Arthashâstra » ?",
   "options": [
    "Chânakya*",
-   "Platon",
    "Jules César",
-   "Plutarque"
+   "Plutarque",
+   "Turold"
   ],
-  "explanation": "« Arthashâstra » est une œuvre de Chânakya, parue en -300.",
+  "explanation": "« Arthashâstra » est une œuvre de Chânakya (philosophe indien), parue en -300.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2252,9 +2252,9 @@
   "prompt": "Qui a écrit « Les Buddenbrook » ?",
   "options": [
    "Thomas Mann*",
-   "Fuxi",
-   "Virgile",
-   "Patanjali"
+   "Marc",
+   "Tite-Live",
+   "Vyāsa"
   ],
   "explanation": "« Les Buddenbrook » est une œuvre de Thomas Mann, parue en 1901.",
   "source": "Wikidata",
@@ -2269,28 +2269,11 @@
   "prompt": "Qui a écrit « Les Aventures de Tom Sawyer » ?",
   "options": [
    "Mark Twain*",
+   "Léon Tolstoï",
    "Johanna Spyri",
-   "Jules Verne",
-   "Fiodor Dostoïevski"
+   "Jules Verne"
   ],
-  "explanation": "« Les Aventures de Tom Sawyer » est une œuvre de Mark Twain, parue en 1876.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q329342",
-  "concept": "arts.literature.book_hymnes_homeriques_q329342",
-  "label": "Auteur de « Hymnes homériques »",
-  "type": "mcq",
-  "difficulty": 62,
-  "prompt": "Qui a écrit « Hymnes homériques » ?",
-  "options": [
-   "Homère*",
-   "Moïse",
-   "Vyāsa",
-   "Salomon"
-  ],
-  "explanation": "« Hymnes homériques » est une œuvre d'Homère.",
+  "explanation": "« Les Aventures de Tom Sawyer » est une œuvre de Mark Twain (romancier, journaliste et humoriste américain), parue en 1876.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2303,11 +2286,11 @@
   "prompt": "Qui a écrit « Les Démons » ?",
   "options": [
    "Fiodor Dostoïevski*",
-   "Lewis Carroll",
    "Jules Verne",
-   "Léon Tolstoï"
+   "Louisa May Alcott",
+   "Mark Twain"
   ],
-  "explanation": "« Les Démons » est une œuvre de Fiodor Dostoïevski, parue en 1871.",
+  "explanation": "« Les Démons » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1871.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2322,7 +2305,7 @@
    "J. R. R. Tolkien*",
    "William Golding",
    "Vladimir Nabokov",
-   "C. S. Lewis"
+   "Ray Bradbury"
   ],
   "explanation": "« Les Deux Tours » est une œuvre de J. R. R. Tolkien, parue en 1954.",
   "source": "Wikidata",
@@ -2338,8 +2321,8 @@
   "options": [
    "J. R. R. Tolkien*",
    "Vladimir Nabokov",
-   "C. S. Lewis",
-   "William Golding"
+   "William Golding",
+   "Boris Pasternak"
   ],
   "explanation": "« Le Retour du roi » est une œuvre de J. R. R. Tolkien, parue en 1955.",
   "source": "Wikidata",
@@ -2358,7 +2341,7 @@
    "Walter Scott",
    "frères Grimm"
   ],
-  "explanation": "« Persuasion » est une œuvre de Jane Austen, parue en 1817.",
+  "explanation": "« Persuasion » est une œuvre de Jane Austen (romancière et femme de lettres anglaise), parue en 1817.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2380,23 +2363,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q34990",
-  "concept": "arts.literature.book_torah_q34990",
-  "label": "Auteur de « Torah »",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Qui a écrit « Torah » ?",
-  "options": [
-   "Moïse*",
-   "Tite-Live",
-   "L. Frank Baum",
-   "Patanjali"
-  ],
-  "explanation": "« Torah » est une œuvre de Moïse.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q36097",
   "concept": "arts.literature.book_le_proces_q36097",
   "label": "Auteur de « Le Procès »",
@@ -2406,10 +2372,10 @@
   "options": [
    "Franz Kafka*",
    "F. Scott Fitzgerald",
-   "Ernest Hemingway",
+   "James Joyce",
    "Erich Maria Remarque"
   ],
-  "explanation": "« Le Procès » est une œuvre de Franz Kafka, parue en 1925.",
+  "explanation": "« Le Procès » est une œuvre de Franz Kafka (écrivain pragois de langue allemande), parue en 1925.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2422,9 +2388,9 @@
   "prompt": "Qui a écrit « Petit Livre rouge » ?",
   "options": [
    "Mao Zedong*",
+   "Platon",
    "Anthony Burgess",
-   "Joseph Heller",
-   "Stanisław Lem"
+   "Joseph Heller"
   ],
   "explanation": "« Petit Livre rouge » est une œuvre de Mao Zedong, parue en 1964.",
   "source": "Wikidata",
@@ -2440,7 +2406,7 @@
   "options": [
    "Alexandre Soljenitsyne*",
    "Mouammar Kadhafi",
-   "Kurt Vonnegut",
+   "J. R. R. Tolkien",
    "Mario Puzo"
   ],
   "explanation": "« L'Archipel du Goulag » est une œuvre d'Alexandre Soljenitsyne, parue en 1973.",
@@ -2456,9 +2422,9 @@
   "prompt": "Qui a écrit « Ramayana » ?",
   "options": [
    "Vâlmîki*",
-   "Ésope",
-   "Paul de Tarse",
-   "AA.VV."
+   "Dante Alighieri",
+   "Nizami",
+   "Vyāsa"
   ],
   "explanation": "« Ramayana » est une œuvre de Vâlmîki.",
   "source": "Wikidata",
@@ -2473,9 +2439,9 @@
   "prompt": "Qui a écrit « Les Confessions » ?",
   "options": [
    "Augustin d’Hippone*",
-   "Luc",
-   "Scriptores Historiae Augustae",
-   "Patanjali"
+   "Vichnou-Sarma",
+   "Vâtsyâyana",
+   "Pedro Calderón de la Barca"
   ],
   "explanation": "« Les Confessions » est une œuvre d'Augustin d’Hippone.",
   "source": "Wikidata",
@@ -2491,8 +2457,8 @@
   "options": [
    "Ayn Rand*",
    "Jack Kerouac",
-   "Dr. Seuss",
-   "Boris Pasternak"
+   "Boris Pasternak",
+   "Dr. Seuss"
   ],
   "explanation": "« La Grève » est une œuvre d'Ayn Rand, parue en 1957.",
   "source": "Wikidata",
@@ -2508,10 +2474,10 @@
   "options": [
    "Yann Martel*",
    "Marcel Proust",
-   "Khaled Hosseini",
-   "Christopher Paolini"
+   "Christopher Paolini",
+   "Dan Brown"
   ],
-  "explanation": "« L'Histoire de Pi » est une œuvre de Yann Martel, parue en 2001.",
+  "explanation": "« L'Histoire de Pi » est une œuvre de Yann Martel (écrivain canadien), parue en 2001.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2524,11 +2490,11 @@
   "prompt": "Qui a écrit « La Divine Comédie » ?",
   "options": [
    "Dante Alighieri*",
-   "Hésiode",
-   "Pedro Calderón de la Barca",
-   "Vichnou-Sarma"
+   "Claude Ptolémée",
+   "L. Frank Baum",
+   "Vyāsa"
   ],
-  "explanation": "« La Divine Comédie » est une œuvre de Dante Alighieri.",
+  "explanation": "« La Divine Comédie » est une œuvre de Dante Alighieri (poète, homme politique et écrivain florentin).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2541,11 +2507,11 @@
   "prompt": "Qui a écrit « Actes des Apôtres » ?",
   "options": [
    "Luc*",
-   "anonyme",
-   "Augustin d’Hippone",
-   "Virgile"
+   "Boccace",
+   "Vyāsa",
+   "Aristote"
   ],
-  "explanation": "« Actes des Apôtres » est une œuvre de Luc.",
+  "explanation": "« Actes des Apôtres » est une œuvre de Luc (évangéliste du Nouveau Testament).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2559,10 +2525,10 @@
   "options": [
    "Friedrich Engels*",
    "Alexandre Dumas",
-   "Charlotte Brontë",
-   "Emily Brontë"
+   "Emily Brontë",
+   "Charlotte Brontë"
   ],
-  "explanation": "« Manifeste du Parti communiste » est une œuvre de Friedrich Engels, parue en 1848.",
+  "explanation": "« Manifeste du Parti communiste » est une œuvre de Friedrich Engels (philosophe, sociologue et théoricien socialiste allemand), parue en 1848.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2576,8 +2542,8 @@
   "options": [
    "Bram Stoker*",
    "Henryk Sienkiewicz",
-   "H. G. Wells",
-   "Joseph Conrad"
+   "Joseph Conrad",
+   "H. G. Wells"
   ],
   "explanation": "« Dracula » est une œuvre de Bram Stoker, parue en 1897.",
   "source": "Wikidata",
@@ -2592,9 +2558,9 @@
   "prompt": "Qui a écrit « Apocalypse » ?",
   "options": [
    "Jean de Patmos*",
-   "Tite-Live",
-   "Scriptores Historiae Augustae",
-   "Vâtsyâyana"
+   "Vichnou-Sarma",
+   "Marc Aurèle",
+   "anonyme"
   ],
   "explanation": "« Apocalypse » est une œuvre de Jean de Patmos.",
   "source": "Wikidata",
@@ -2609,11 +2575,11 @@
   "prompt": "Qui a écrit « Siddhartha » ?",
   "options": [
    "Hermann Hesse*",
+   "James Joyce",
    "Jaroslav Hašek",
-   "F. Scott Fitzgerald",
    "Franz Kafka"
   ],
-  "explanation": "« Siddhartha » est une œuvre d'Hermann Hesse, parue en 1922.",
+  "explanation": "« Siddhartha » est une œuvre d'Hermann Hesse (romancier, poète, peintre et essayiste allemand-suisse), parue en 1922.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2627,10 +2593,10 @@
   "options": [
    "E. B. White*",
    "Samuel Beckett",
-   "John Steinbeck",
-   "Ray Bradbury"
+   "Ernest Hemingway",
+   "J. D. Salinger"
   ],
-  "explanation": "« La Toile de Charlotte » est une œuvre d'E. B. White, parue en 1952.",
+  "explanation": "« La Toile de Charlotte » est une œuvre d'E. B. White (écrivain américain), parue en 1952.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2643,11 +2609,11 @@
   "prompt": "Qui a écrit « Livre des Proverbes » ?",
   "options": [
    "Salomon*",
-   "Augustin d’Hippone",
-   "Claude Ptolémée",
-   "Paul de Tarse"
+   "Pedro Calderón de la Barca",
+   "Dante Alighieri",
+   "Tite-Live"
   ],
-  "explanation": "« Livre des Proverbes » est une œuvre de Salomon.",
+  "explanation": "« Livre des Proverbes » est une œuvre de Salomon (personnage biblique, troisième roi d'Israël, fils de David).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2661,10 +2627,10 @@
   "options": [
    "John Steinbeck*",
    "Margaret Mitchell",
-   "Louis-Ferdinand Céline",
-   "Aldous Huxley"
+   "Aldous Huxley",
+   "Louis-Ferdinand Céline"
   ],
-  "explanation": "« Des souris et des hommes » est une œuvre de John Steinbeck, parue en 1937.",
+  "explanation": "« Des souris et des hommes » est une œuvre de John Steinbeck (écrivain américain), parue en 1937.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2677,9 +2643,9 @@
   "prompt": "Qui a écrit « Les Gens de Dublin » ?",
   "options": [
    "James Joyce*",
-   "Thomas Mann",
    "Gaston Leroux",
-   "Jack London"
+   "Hermann Hesse",
+   "Kenneth Grahame"
   ],
   "explanation": "« Les Gens de Dublin » est une œuvre de James Joyce, parue en 1914.",
   "source": "Wikidata",
@@ -2695,10 +2661,10 @@
   "options": [
    "Marcel Proust*",
    "Yann Martel",
-   "Christopher Paolini",
-   "Khaled Hosseini"
+   "George R. R. Martin",
+   "Dan Brown"
   ],
-  "explanation": "« À la recherche du temps perdu » est une œuvre de Marcel Proust, parue en 2000.",
+  "explanation": "« À la recherche du temps perdu » est une œuvre de Marcel Proust (écrivain, critique et essayiste français), parue en 2000.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2711,9 +2677,9 @@
   "prompt": "Qui a écrit « Classique des vers » ?",
   "options": [
    "AA.VV.*",
-   "Jean de Patmos",
-   "Scriptores Historiae Augustae",
-   "Salomon"
+   "Vichnou-Sarma",
+   "Augustin d’Hippone",
+   "Nizami"
   ],
   "explanation": "« Classique des vers » est une œuvre d'AA.VV..",
   "source": "Wikidata",
@@ -2728,28 +2694,11 @@
   "prompt": "Qui a écrit « Portrait de l'artiste en jeune homme » ?",
   "options": [
    "James Joyce*",
-   "Jaroslav Hašek",
    "Hermann Hesse",
-   "Thomas Mann"
+   "Jaroslav Hašek",
+   "F. Scott Fitzgerald"
   ],
   "explanation": "« Portrait de l'artiste en jeune homme » est une œuvre de James Joyce, parue en 1918.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q46802",
-  "concept": "arts.literature.book_bhagavad_gita_q46802",
-  "label": "Auteur de « Bhagavad-Gītā »",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Qui a écrit « Bhagavad-Gītā » ?",
-  "options": [
-   "Vyāsa*",
-   "Homère",
-   "Nizami",
-   "Boccace"
-  ],
-  "explanation": "« Bhagavad-Gītā » est une œuvre de Vyāsa.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2763,10 +2712,10 @@
   "options": [
    "Jules Verne*",
    "Oscar Wilde",
-   "Robert Louis Stevenson",
-   "Carlo Collodi"
+   "Carlo Collodi",
+   "Robert Louis Stevenson"
   ],
-  "explanation": "« L'Île mystérieuse » est une œuvre de Jules Verne, parue en 1888.",
+  "explanation": "« L'Île mystérieuse » est une œuvre de Jules Verne (écrivain français), parue en 1888.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2783,7 +2732,7 @@
    "Hans Christian Andersen",
    "Stendhal"
   ],
-  "explanation": "« Le Revizor » est une œuvre de Nicolas Gogol, parue en 1836.",
+  "explanation": "« Le Revizor » est une œuvre de Nicolas Gogol (écrivain russe d’origine ukrainienne), parue en 1836.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2800,7 +2749,7 @@
    "Haruki Murakami",
    "Stephen King"
   ],
-  "explanation": "« Une brève histoire du temps » est une œuvre de Stephen Hawking, parue en 1988.",
+  "explanation": "« Une brève histoire du temps » est une œuvre de Stephen Hawking (physicien théoricien et cosmologiste britannique), parue en 1988.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2813,11 +2762,11 @@
   "prompt": "Qui a écrit « Kâmasûtra » ?",
   "options": [
    "Vâtsyâyana*",
-   "Boccace",
-   "Luc",
-   "Snorri Sturluson"
+   "Salomon",
+   "Homère",
+   "Moïse"
   ],
-  "explanation": "« Kâmasûtra » est une œuvre de Vâtsyâyana.",
+  "explanation": "« Kâmasûtra » est une œuvre de Vâtsyâyana (poète brahmane indien, Ve siècle).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2830,11 +2779,11 @@
   "prompt": "Qui a écrit « Éthique à Nicomaque » ?",
   "options": [
    "Aristote*",
-   "Ben Sira",
-   "Patanjali",
-   "Virgile"
+   "Moïse",
+   "Claude Ptolémée",
+   "Augustin d’Hippone"
   ],
-  "explanation": "« Éthique à Nicomaque » est une œuvre d'Aristote.",
+  "explanation": "« Éthique à Nicomaque » est une œuvre d'Aristote (philosophe grec de l'Antiquité).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2847,11 +2796,11 @@
   "prompt": "Qui a écrit « L'Appel de la forêt » ?",
   "options": [
    "Jack London*",
-   "Homère",
-   "Salomon",
-   "Moïse"
+   "Thomas Mann",
+   "Augustin d’Hippone",
+   "Pedro Calderón de la Barca"
   ],
-  "explanation": "« L'Appel de la forêt » est une œuvre de Jack London, parue en 1903.",
+  "explanation": "« L'Appel de la forêt » est une œuvre de Jack London (écrivain américain), parue en 1903.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2865,10 +2814,10 @@
   "options": [
    "C. S. Lewis*",
    "Vladimir Nabokov",
-   "J. R. R. Tolkien",
-   "William Golding"
+   "William Golding",
+   "Boris Pasternak"
   ],
-  "explanation": "« Le Neveu du magicien » est une œuvre de C. S. Lewis, parue en 1955.",
+  "explanation": "« Le Neveu du magicien » est une œuvre de C. S. Lewis (écrivain et universitaire britannique), parue en 1955.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2883,9 +2832,9 @@
    "Miguel de Cervantes*",
    "Wu Cheng'en",
    "John Milton",
-   "Nicolas Machiavel"
+   "John Bunyan"
   ],
-  "explanation": "« Don Quichotte » est une œuvre de Miguel de Cervantes, parue en 1605.",
+  "explanation": "« Don Quichotte » est une œuvre de Miguel de Cervantes (romancier, poète et dramaturge espagnol), parue en 1605.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2898,11 +2847,11 @@
   "prompt": "Qui a écrit « Épître aux Romains » ?",
   "options": [
    "Paul de Tarse*",
-   "Dante Alighieri",
-   "Boccace",
-   "Scriptores Historiae Augustae"
+   "Vichnou-Sarma",
+   "Snorri Sturluson",
+   "Vâtsyâyana"
   ],
-  "explanation": "« Épître aux Romains » est une œuvre de Paul de Tarse.",
+  "explanation": "« Épître aux Romains » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2919,7 +2868,7 @@
    "Charles Perrault",
    "John Bunyan"
   ],
-  "explanation": "« Robinson Crusoé » est une œuvre de Daniel Defoe, parue en 1719.",
+  "explanation": "« Robinson Crusoé » est une œuvre de Daniel Defoe (écrivain britannique), parue en 1719.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2934,9 +2883,9 @@
    "Dan Brown*",
    "John Green",
    "E. L. James",
-   "Stephenie Meyer"
+   "Suzanne Collins"
   ],
-  "explanation": "« Inferno » est une œuvre de Dan Brown, parue en 2013.",
+  "explanation": "« Inferno » est une œuvre de Dan Brown (romancier américain), parue en 2013.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2951,9 +2900,9 @@
    "C. S. Lewis*",
    "J. D. Salinger",
    "E. B. White",
-   "John Steinbeck"
+   "Ernest Hemingway"
   ],
-  "explanation": "« Le Lion, la Sorcière blanche et l'Armoire magique » est une œuvre de C. S. Lewis, parue en 1950.",
+  "explanation": "« Le Lion, la Sorcière blanche et l'Armoire magique » est une œuvre de C. S. Lewis (écrivain et universitaire britannique), parue en 1950.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2970,7 +2919,7 @@
    "Walter Scott",
    "Mary Shelley"
   ],
-  "explanation": "« Le Dernier des Mohicans » est une œuvre de James Fenimore Cooper, parue en 1824.",
+  "explanation": "« Le Dernier des Mohicans » est une œuvre de James Fenimore Cooper (écrivain américain), parue en 1824.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2983,11 +2932,11 @@
   "prompt": "Qui a écrit « Le soleil se lève aussi » ?",
   "options": [
    "Ernest Hemingway*",
-   "Franz Kafka",
    "F. Scott Fitzgerald",
-   "Mikhaïl Boulgakov"
+   "Franz Kafka",
+   "Erich Maria Remarque"
   ],
-  "explanation": "« Le soleil se lève aussi » est une œuvre d'Ernest Hemingway, parue en 1926.",
+  "explanation": "« Le soleil se lève aussi » est une œuvre d'Ernest Hemingway (écrivain, journaliste et correspondant de guerre américain), parue en 1926.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3004,7 +2953,7 @@
    "Stendhal",
    "Walter Scott"
   ],
-  "explanation": "« Eugène Onéguine » est une œuvre d'Alexandre Pouchkine, parue en 1825.",
+  "explanation": "« Eugène Onéguine » est une œuvre d'Alexandre Pouchkine (poète, dramaturge et romancier russe), parue en 1825.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3017,28 +2966,11 @@
   "prompt": "Qui a écrit « Épître aux Philippiens » ?",
   "options": [
    "Paul de Tarse*",
-   "Ben Sira",
-   "Salomon",
-   "Ésope"
+   "Boccace",
+   "Homère",
+   "Patanjali"
   ],
-  "explanation": "« Épître aux Philippiens » est une œuvre de Paul de Tarse.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q51643",
-  "concept": "arts.literature.book_beatitudes_q51643",
-  "label": "Auteur de « Béatitudes »",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "Qui a écrit « Béatitudes » ?",
-  "options": [
-   "Jésus-Christ*",
-   "Luc",
-   "Dante Alighieri",
-   "Salomon"
-  ],
-  "explanation": "« Béatitudes » est une œuvre de Jésus-Christ.",
+  "explanation": "« Épître aux Philippiens » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3051,11 +2983,11 @@
   "prompt": "Qui a écrit « Les Quatre Filles du docteur March » ?",
   "options": [
    "Louisa May Alcott*",
-   "Léon Tolstoï",
+   "Jules Verne",
    "Fiodor Dostoïevski",
    "Lewis Carroll"
   ],
-  "explanation": "« Les Quatre Filles du docteur March » est une œuvre de Louisa May Alcott, parue en 1868.",
+  "explanation": "« Les Quatre Filles du docteur March » est une œuvre de Louisa May Alcott (romancière et nouvelliste américaine), parue en 1868.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3069,10 +3001,10 @@
   "options": [
    "Stephenie Meyer*",
    "Suzanne Collins",
-   "E. L. James",
-   "John Green"
+   "Khaled Hosseini",
+   "E. L. James"
   ],
-  "explanation": "« Révélation » est une œuvre de Stephenie Meyer, parue en 2008.",
+  "explanation": "« Révélation » est une œuvre de Stephenie Meyer (écrivaine américaine), parue en 2008.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3086,10 +3018,10 @@
   "options": [
    "E. L. James*",
    "John Green",
-   "Dan Brown",
-   "Stephenie Meyer"
+   "Stephenie Meyer",
+   "Suzanne Collins"
   ],
-  "explanation": "« Cinquante nuances de Grey » est une œuvre d'E. L. James, parue en 2011.",
+  "explanation": "« Cinquante nuances de Grey » est une œuvre d'E. L. James (écrivaine britannique), parue en 2011.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3103,10 +3035,10 @@
   "options": [
    "Lucy Maud Montgomery*",
    "Kenneth Grahame",
-   "Jack London",
-   "Selma Lagerlöf"
+   "Selma Lagerlöf",
+   "Jack London"
   ],
-  "explanation": "« Anne… la maison aux pignons verts » est une œuvre de Lucy Maud Montgomery, parue en 1908.",
+  "explanation": "« Anne… la maison aux pignons verts » est une œuvre de Lucy Maud Montgomery (romancière et novelliste canadienne), parue en 1908.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3123,7 +3055,7 @@
    "Wu Cheng'en",
    "Miguel de Cervantes"
   ],
-  "explanation": "« Éloge de la Folie » est une œuvre d'Érasme, parue en 1511.",
+  "explanation": "« Éloge de la Folie » est une œuvre d'Érasme (écrivain humaniste et théologien néerlandais), parue en 1511.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3140,7 +3072,7 @@
    "Friedrich Engels",
    "Emily Brontë"
   ],
-  "explanation": "« Les Nuits blanches » est une œuvre de Fiodor Dostoïevski, parue en 1848.",
+  "explanation": "« Les Nuits blanches » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1848.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3153,11 +3085,11 @@
   "prompt": "Qui a écrit « Énéide » ?",
   "options": [
    "Virgile*",
-   "Jean de Patmos",
+   "Paul de Tarse",
    "Claude Ptolémée",
-   "Jésus-Christ"
+   "Homère"
   ],
-  "explanation": "« Énéide » est une œuvre de Virgile.",
+  "explanation": "« Énéide » est une œuvre de Virgile (poète romain).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3170,11 +3102,11 @@
   "prompt": "Qui a écrit « Ça » ?",
   "options": [
    "Stephen King*",
-   "Margaret Atwood",
    "Haruki Murakami",
-   "Milan Kundera"
+   "Margaret Atwood",
+   "Paulo Coelho"
   ],
-  "explanation": "« Ça » est une œuvre de Stephen King, parue en 1986.",
+  "explanation": "« Ça » est une œuvre de Stephen King (écrivain américain), parue en 1986.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3188,8 +3120,8 @@
   "options": [
    "Ayn Rand*",
    "Antoine de Saint-Exupéry",
-   "George Orwell",
-   "Anne Frank"
+   "Albert Camus",
+   "George Orwell"
   ],
   "explanation": "« La Source vive » est une œuvre d'Ayn Rand, parue en 1943.",
   "source": "Wikidata",
@@ -3204,11 +3136,11 @@
   "prompt": "Qui a écrit « Le Monde de Sophie » ?",
   "options": [
    "Jostein Gaarder*",
-   "Stephen Hawking",
    "Paulo Coelho",
+   "Stephen Hawking",
    "Haruki Murakami"
   ],
-  "explanation": "« Le Monde de Sophie » est une œuvre de Jostein Gaarder, parue en 1991.",
+  "explanation": "« Le Monde de Sophie » est une œuvre de Jostein Gaarder (écrivain et philosophe norvégien), parue en 1991.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3238,11 +3170,11 @@
   "prompt": "Qui a écrit « Un chant de Noël » ?",
   "options": [
    "Charles Dickens*",
-   "Edgar Allan Poe",
    "Alexandre Dumas",
+   "Edgar Allan Poe",
    "Emily Brontë"
   ],
-  "explanation": "« Un chant de Noël » est une œuvre de Charles Dickens, parue en 1843.",
+  "explanation": "« Un chant de Noël » est une œuvre de Charles Dickens (romancier, dramaturge et journaliste anglais), parue en 1843.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3255,11 +3187,11 @@
   "prompt": "Qui a écrit « Les Cerfs-volants de Kaboul » ?",
   "options": [
    "Khaled Hosseini*",
+   "Dan Brown",
    "Christopher Paolini",
-   "Yann Martel",
-   "Marcel Proust"
+   "Yann Martel"
   ],
-  "explanation": "« Les Cerfs-volants de Kaboul » est une œuvre de Khaled Hosseini, parue en 2003.",
+  "explanation": "« Les Cerfs-volants de Kaboul » est une œuvre de Khaled Hosseini (écrivain américain), parue en 2003.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3272,11 +3204,11 @@
   "prompt": "Qui a écrit « Les Âmes mortes » ?",
   "options": [
    "Nicolas Gogol*",
-   "Edgar Allan Poe",
+   "Charles Dickens",
    "Alexandre Dumas",
-   "Hans Christian Andersen"
+   "Edgar Allan Poe"
   ],
-  "explanation": "« Les Âmes mortes » est une œuvre de Nicolas Gogol, parue en 1842.",
+  "explanation": "« Les Âmes mortes » est une œuvre de Nicolas Gogol (écrivain russe d’origine ukrainienne), parue en 1842.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3289,9 +3221,9 @@
   "prompt": "Qui a écrit « Ulysse » ?",
   "options": [
    "James Joyce*",
-   "Hermann Hesse",
    "Jaroslav Hašek",
-   "F. Scott Fitzgerald"
+   "F. Scott Fitzgerald",
+   "Franz Kafka"
   ],
   "explanation": "« Ulysse » est une œuvre de James Joyce, parue en 1922.",
   "source": "Wikidata",
@@ -3306,11 +3238,11 @@
   "prompt": "Qui a écrit « Les Trois Petits Cochons » ?",
   "options": [
    "James Halliwell-Phillipps*",
-   "Henry David Thoreau",
    "Harriet Beecher Stowe",
+   "Henry David Thoreau",
    "Herman Melville"
   ],
-  "explanation": "« Les Trois Petits Cochons » est une œuvre de James Halliwell-Phillipps, parue en 1853.",
+  "explanation": "« Les Trois Petits Cochons » est une œuvre de James Halliwell-Phillipps (critique littéraire britannique), parue en 1853.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3324,10 +3256,10 @@
   "options": [
    "John Green*",
    "E. L. James",
-   "Dan Brown",
-   "Suzanne Collins"
+   "Suzanne Collins",
+   "Stephenie Meyer"
   ],
-  "explanation": "« Nos Étoiles contraires » est une œuvre de John Green, parue en 2012.",
+  "explanation": "« Nos Étoiles contraires » est une œuvre de John Green (écrivain américain et vlogger), parue en 2012.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3340,11 +3272,11 @@
   "prompt": "Qui a écrit « Les Travaux et les Jours » ?",
   "options": [
    "Hésiode*",
-   "Ben Sira",
-   "Jésus-Christ",
-   "Boccace"
+   "Jean de Patmos",
+   "AA.VV.",
+   "Fuxi"
   ],
-  "explanation": "« Les Travaux et les Jours » est une œuvre d'Hésiode.",
+  "explanation": "« Les Travaux et les Jours » est une œuvre d'Hésiode (poète grec des VIII-VIIe s. av. J.-C.).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3357,9 +3289,9 @@
   "prompt": "Qui a écrit « Jātaka » ?",
   "options": [
    "AA.VV.*",
-   "Vâlmîki",
-   "Homère",
-   "Jacopone da Todi"
+   "Boccace",
+   "L. Frank Baum",
+   "Scriptores Historiae Augustae"
   ],
   "explanation": "« Jātaka » est une œuvre d'AA.VV..",
   "source": "Wikidata",
@@ -3374,11 +3306,11 @@
   "prompt": "Qui a écrit « Majnoun et Leila » ?",
   "options": [
    "Nizami*",
+   "Pedro Calderón de la Barca",
    "Patanjali",
-   "Homère",
-   "Murasaki Shikibu"
+   "Boccace"
   ],
-  "explanation": "« Majnoun et Leila » est une œuvre de Nizami.",
+  "explanation": "« Majnoun et Leila » est une œuvre de Nizami (poète et mystique persan).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3391,11 +3323,11 @@
   "prompt": "Qui a écrit « Géorgiques » ?",
   "options": [
    "Virgile*",
-   "Nizami",
-   "Vâlmîki",
-   "Boccace"
+   "Boccace",
+   "Aristote",
+   "Murasaki Shikibu"
   ],
-  "explanation": "« Géorgiques » est une œuvre de Virgile.",
+  "explanation": "« Géorgiques » est une œuvre de Virgile (poète romain).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3408,28 +3340,11 @@
   "prompt": "Qui a écrit « Le Château » ?",
   "options": [
    "Franz Kafka*",
-   "Ernest Hemingway",
    "F. Scott Fitzgerald",
+   "Mikhaïl Boulgakov",
    "Erich Maria Remarque"
   ],
-  "explanation": "« Le Château » est une œuvre de Franz Kafka, parue en 1926.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q682958",
-  "concept": "arts.literature.book_bhagavata_purana_q682958",
-  "label": "Auteur de « Bhâgavata Purâna »",
-  "type": "mcq",
-  "difficulty": 60,
-  "prompt": "Qui a écrit « Bhâgavata Purâna » ?",
-  "options": [
-   "Vyāsa*",
-   "Hésiode",
-   "Vâlmîki",
-   "Ésope"
-  ],
-  "explanation": "« Bhâgavata Purâna » est une œuvre de Vyāsa.",
+  "explanation": "« Le Château » est une œuvre de Franz Kafka (écrivain pragois de langue allemande), parue en 1926.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3442,11 +3357,11 @@
   "prompt": "Qui a écrit « L'Orange mécanique » ?",
   "options": [
    "Anthony Burgess*",
-   "Joseph Heller",
    "Stanisław Lem",
-   "Harper Lee"
+   "Platon",
+   "Joseph Heller"
   ],
-  "explanation": "« L'Orange mécanique » est une œuvre d'Anthony Burgess, parue en 1962.",
+  "explanation": "« L'Orange mécanique » est une œuvre d'Anthony Burgess (écrivain britannique), parue en 1962.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3459,11 +3374,11 @@
   "prompt": "Qui a écrit « Les Carnets du sous-sol » ?",
   "options": [
    "Fiodor Dostoïevski*",
+   "Lewis Carroll",
    "Ivan Tourgueniev",
-   "Louisa May Alcott",
-   "Charles Dickens"
+   "Louisa May Alcott"
   ],
-  "explanation": "« Les Carnets du sous-sol » est une œuvre de Fiodor Dostoïevski, parue en 1864.",
+  "explanation": "« Les Carnets du sous-sol » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1864.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3497,7 +3412,7 @@
    "Nicolas Machiavel",
    "John Milton"
   ],
-  "explanation": "« La Pérégrination vers l'Ouest » est une œuvre de Wu Cheng'en, parue en 1592.",
+  "explanation": "« La Pérégrination vers l'Ouest » est une œuvre de Wu Cheng'en (écrivain chinois de la dynastie Ming), parue en 1592.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3514,7 +3429,7 @@
    "Shi Nai'an",
    "Nestor"
   ],
-  "explanation": "« Les Trois Royaumes » est une œuvre de Luo Guanzhong, parue en 1350.",
+  "explanation": "« Les Trois Royaumes » est une œuvre de Luo Guanzhong (écrivain chinois de la fin des Yuan et du début des Ming), parue en 1350.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3531,7 +3446,7 @@
    "Luo Guanzhong",
    "Érasme"
   ],
-  "explanation": "« Au bord de l'eau » est une œuvre de Shi Nai'an, parue en 1400.",
+  "explanation": "« Au bord de l'eau » est une œuvre de Shi Nai'an (romancier chinois), parue en 1400.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3544,11 +3459,11 @@
   "prompt": "Qui a écrit « Histoire Auguste » ?",
   "options": [
    "Scriptores Historiae Augustae*",
-   "Tite-Live",
-   "anonyme",
-   "Vâtsyâyana"
+   "Aristote",
+   "Claude Ptolémée",
+   "anonyme"
   ],
-  "explanation": "« Histoire Auguste » est une œuvre de Scriptores Historiae Augustae.",
+  "explanation": "« Histoire Auguste » est une œuvre de Scriptores Historiae Augustae (auteurs fictifs des biographies de l'Histoire Auguste).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3561,11 +3476,11 @@
   "prompt": "Qui a écrit « Le Merveilleux Voyage de Nils Holgersson à travers la Suède » ?",
   "options": [
    "Selma Lagerlöf*",
+   "Jack London",
    "Lucy Maud Montgomery",
-   "Kenneth Grahame",
-   "Jack London"
+   "Kenneth Grahame"
   ],
-  "explanation": "« Le Merveilleux Voyage de Nils Holgersson à travers la Suède » est une œuvre de Selma Lagerlöf, parue en 1906.",
+  "explanation": "« Le Merveilleux Voyage de Nils Holgersson à travers la Suède » est une œuvre de Selma Lagerlöf (écrivaine suédoise), parue en 1906.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3578,9 +3493,9 @@
   "prompt": "Qui a écrit « Rig-Véda » ?",
   "options": [
    "AA.VV.*",
-   "Vichnou-Sarma",
-   "Moïse",
-   "Jésus-Christ"
+   "Patanjali",
+   "Boccace",
+   "Vâlmîki"
   ],
   "explanation": "« Rig-Véda » est une œuvre d'AA.VV..",
   "source": "Wikidata",
@@ -3595,11 +3510,11 @@
   "prompt": "Qui a écrit « Anabase » ?",
   "options": [
    "Xénophon*",
-   "Charles Dickens",
    "Charles Baudelaire",
-   "Gustave Flaubert"
+   "Gustave Flaubert",
+   "Ivan Tourgueniev"
   ],
-  "explanation": "« Anabase » est une œuvre de Xénophon, parue en 1859.",
+  "explanation": "« Anabase » est une œuvre de Xénophon (historien, militaire et philosophe grec), parue en 1859.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3612,8 +3527,8 @@
   "prompt": "Qui a écrit « Le Hobbit » ?",
   "options": [
    "J. R. R. Tolkien*",
+   "John Steinbeck",
    "Margaret Mitchell",
-   "Louis-Ferdinand Céline",
    "Aldous Huxley"
   ],
   "explanation": "« Le Hobbit » est une œuvre de J. R. R. Tolkien, parue en 1937.",
@@ -3631,9 +3546,9 @@
    "Jack Kerouac*",
    "Boris Pasternak",
    "Dr. Seuss",
-   "C. S. Lewis"
+   "Vladimir Nabokov"
   ],
-  "explanation": "« Sur la route » est une œuvre de Jack Kerouac, parue en 1957.",
+  "explanation": "« Sur la route » est une œuvre de Jack Kerouac (écrivain et poète américain), parue en 1957.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3648,9 +3563,9 @@
    "D. H. Lawrence*",
    "Erich Maria Remarque",
    "Mikhaïl Boulgakov",
-   "Ernest Hemingway"
+   "F. Scott Fitzgerald"
   ],
-  "explanation": "« L'Amant de lady Chatterley » est une œuvre de D. H. Lawrence, parue en 1928.",
+  "explanation": "« L'Amant de lady Chatterley » est une œuvre de D. H. Lawrence (écrivain britannique), parue en 1928.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3663,11 +3578,11 @@
   "prompt": "Qui a écrit « La Ballade de l'impossible » ?",
   "options": [
    "Haruki Murakami*",
-   "Stephen King",
+   "Stephen Hawking",
    "Paulo Coelho",
-   "Stephen Hawking"
+   "Stephen King"
   ],
-  "explanation": "« La Ballade de l'impossible » est une œuvre d'Haruki Murakami, parue en 1987.",
+  "explanation": "« La Ballade de l'impossible » est une œuvre d'Haruki Murakami (écrivain japonais), parue en 1987.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3680,11 +3595,11 @@
   "prompt": "Qui a écrit « Le Cœur révélateur » ?",
   "options": [
    "Edgar Allan Poe*",
+   "Charles Dickens",
    "Alexandre Dumas",
-   "Emily Brontë",
-   "Charlotte Brontë"
+   "Emily Brontë"
   ],
-  "explanation": "« Le Cœur révélateur » est une œuvre d'Edgar Allan Poe, parue en 1843.",
+  "explanation": "« Le Cœur révélateur » est une œuvre d'Edgar Allan Poe (écrivain américain), parue en 1843.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3698,10 +3613,10 @@
   "options": [
    "Louis-Ferdinand Céline*",
    "Aldous Huxley",
-   "Mikhaïl Boulgakov",
-   "Erich Maria Remarque"
+   "Erich Maria Remarque",
+   "Mikhaïl Boulgakov"
   ],
-  "explanation": "« Voyage au bout de la nuit » est une œuvre de Louis-Ferdinand Céline, parue en 1932.",
+  "explanation": "« Voyage au bout de la nuit » est une œuvre de Louis-Ferdinand Céline (écrivain et médecin français), parue en 1932.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3731,11 +3646,11 @@
   "prompt": "Qui a écrit « Première épître aux Corinthiens » ?",
   "options": [
    "Paul de Tarse*",
-   "Tite-Live",
-   "Marc Aurèle",
+   "Ésope",
+   "Vâlmîki",
    "Dante Alighieri"
   ],
-  "explanation": "« Première épître aux Corinthiens » est une œuvre de Paul de Tarse.",
+  "explanation": "« Première épître aux Corinthiens » est une œuvre de Paul de Tarse (apôtre et missionnaire des premiers chrétiens).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3750,9 +3665,9 @@
    "Carlo Collodi*",
    "Robert Louis Stevenson",
    "Johanna Spyri",
-   "Mark Twain"
+   "Léon Tolstoï"
   ],
-  "explanation": "« Les Aventures de Pinocchio » est une œuvre de Carlo Collodi, parue en 1883.",
+  "explanation": "« Les Aventures de Pinocchio » est une œuvre de Carlo Collodi (journaliste et écrivain italien), parue en 1883.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3765,11 +3680,11 @@
   "prompt": "Qui a écrit « Da Vinci Code » ?",
   "options": [
    "Dan Brown*",
-   "Khaled Hosseini",
    "Christopher Paolini",
-   "Yann Martel"
+   "Yann Martel",
+   "Marcel Proust"
   ],
-  "explanation": "« Da Vinci Code » est une œuvre de Dan Brown, parue en 2003.",
+  "explanation": "« Da Vinci Code » est une œuvre de Dan Brown (romancier américain), parue en 2003.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3784,9 +3699,9 @@
    "Oscar Wilde*",
    "H. G. Wells",
    "Henryk Sienkiewicz",
-   "Carlo Collodi"
+   "Robert Louis Stevenson"
   ],
-  "explanation": "« Le Portrait de Dorian Gray » est une œuvre d'Oscar Wilde, parue en 1890.",
+  "explanation": "« Le Portrait de Dorian Gray » est une œuvre d'Oscar Wilde (écrivain irlandais), parue en 1890.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3799,9 +3714,9 @@
   "prompt": "Qui a écrit « Les Mille et Une Nuits » ?",
   "options": [
    "AA.VV.*",
-   "Vichnou-Sarma",
+   "Snorri Sturluson",
    "Claude Ptolémée",
-   "Patanjali"
+   "Jacopone da Todi"
   ],
   "explanation": "« Les Mille et Une Nuits » est une œuvre d'AA.VV..",
   "source": "Wikidata",
@@ -3833,45 +3748,11 @@
   "prompt": "Qui a écrit « Le Dit du Genji » ?",
   "options": [
    "Murasaki Shikibu*",
-   "Vichnou-Sarma",
-   "Luc",
-   "Hésiode"
-  ],
-  "explanation": "« Le Dit du Genji » est une œuvre de Murasaki Shikibu.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q8275",
-  "concept": "arts.literature.book_iliade_q8275",
-  "label": "Auteur de « Iliade »",
-  "type": "mcq",
-  "difficulty": 46,
-  "prompt": "Qui a écrit « Iliade » ?",
-  "options": [
-   "Homère*",
    "Vâtsyâyana",
-   "Jacopone da Todi",
-   "Augustin d’Hippone"
+   "anonyme",
+   "Virgile"
   ],
-  "explanation": "« Iliade » est une œuvre d'Homère.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q8276",
-  "concept": "arts.literature.book_mahabharata_q8276",
-  "label": "Auteur de « Mahâbhârata »",
-  "type": "mcq",
-  "difficulty": 46,
-  "prompt": "Qui a écrit « Mahâbhârata » ?",
-  "options": [
-   "Vyāsa*",
-   "Jean de Patmos",
-   "Aristote",
-   "Murasaki Shikibu"
-  ],
-  "explanation": "« Mahâbhârata » est une œuvre de Vyāsa.",
+  "explanation": "« Le Dit du Genji » est une œuvre de Murasaki Shikibu (femme de lettres et poétesse japonaise de l’époque de Heian).",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3885,7 +3766,7 @@
   "options": [
    "Thomas Mann*",
    "Gaston Leroux",
-   "Jack London",
+   "Lucy Maud Montgomery",
    "Kenneth Grahame"
   ],
   "explanation": "« La Mort à Venise » est une œuvre de Thomas Mann, parue en 1912.",
@@ -3903,9 +3784,9 @@
    "Chuck Palahniuk*",
    "George R. R. Martin",
    "Marcel Proust",
-   "Jostein Gaarder"
+   "Yann Martel"
   ],
-  "explanation": "« Fight Club » est une œuvre de Chuck Palahniuk, parue en 1996.",
+  "explanation": "« Fight Club » est une œuvre de Chuck Palahniuk (écrivain américain), parue en 1996.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3919,10 +3800,10 @@
   "options": [
    "Walter Scott*",
    "Mary Shelley",
-   "Jane Austen",
-   "James Fenimore Cooper"
+   "James Fenimore Cooper",
+   "Jane Austen"
   ],
-  "explanation": "« Ivanhoé » est une œuvre de Walter Scott, parue en 1819.",
+  "explanation": "« Ivanhoé » est une œuvre de Walter Scott (poète, écrivain et historien écossais), parue en 1819.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3937,9 +3818,9 @@
    "Plutarque*",
    "Jules César",
    "Chânakya",
-   "Platon"
+   "Turold"
   ],
-  "explanation": "« Vies parallèles » est une œuvre de Plutarque, parue en 110.",
+  "explanation": "« Vies parallèles » est une œuvre de Plutarque (philosophe, biographe et moraliste grec de la Rome antique), parue en 110.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3953,10 +3834,10 @@
   "options": [
    "John Steinbeck*",
    "E. B. White",
-   "Samuel Beckett",
-   "Ray Bradbury"
+   "Ernest Hemingway",
+   "Samuel Beckett"
   ],
-  "explanation": "« À l'est d'Éden » est une œuvre de John Steinbeck, parue en 1952.",
+  "explanation": "« À l'est d'Éden » est une œuvre de John Steinbeck (écrivain américain), parue en 1952.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3969,11 +3850,11 @@
   "prompt": "Qui a écrit « Demian » ?",
   "options": [
    "Hermann Hesse*",
-   "James Joyce",
    "Jaroslav Hašek",
-   "F. Scott Fitzgerald"
+   "James Joyce",
+   "Franz Kafka"
   ],
-  "explanation": "« Demian » est une œuvre d'Hermann Hesse, parue en 1919.",
+  "explanation": "« Demian » est une œuvre d'Hermann Hesse (romancier, poète, peintre et essayiste allemand-suisse), parue en 1919.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3988,9 +3869,9 @@
    "Khaled Hosseini*",
    "Suzanne Collins",
    "Stephenie Meyer",
-   "E. L. James"
+   "Christopher Paolini"
   ],
-  "explanation": "« Mille soleils splendides » est une œuvre de Khaled Hosseini, parue en 2007.",
+  "explanation": "« Mille soleils splendides » est une œuvre de Khaled Hosseini (écrivain américain), parue en 2007.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4021,8 +3902,8 @@
   "options": [
    "Alexandre Dumas*",
    "Friedrich Engels",
-   "Charlotte Brontë",
-   "Emily Brontë"
+   "Emily Brontë",
+   "Charlotte Brontë"
   ],
   "explanation": "« La Dame aux camélias » est une œuvre d'Alexandre Dumas, parue en 1848.",
   "source": "Wikidata",
@@ -4038,10 +3919,10 @@
   "options": [
    "Nathaniel Hawthorne*",
    "Herman Melville",
-   "Alexandre Dumas",
-   "Friedrich Engels"
+   "Harriet Beecher Stowe",
+   "Alexandre Dumas"
   ],
-  "explanation": "« La Lettre écarlate » est une œuvre de Nathaniel Hawthorne, parue en 1850.",
+  "explanation": "« La Lettre écarlate » est une œuvre de Nathaniel Hawthorne (écrivain américain), parue en 1850.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4063,23 +3944,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q9184",
-  "concept": "arts.literature.book_la_genese_q9184",
-  "label": "Auteur de « La Genèse »",
-  "type": "mcq",
-  "difficulty": 46,
-  "prompt": "Qui a écrit « La Genèse » ?",
-  "options": [
-   "Moïse*",
-   "Murasaki Shikibu",
-   "Jacopone da Todi",
-   "Jean de Patmos"
-  ],
-  "explanation": "« La Genèse » est une œuvre de Moïse.",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q92640",
   "concept": "arts.literature.book_les_aventures_d_alice_au_pays__q92640",
   "label": "Auteur de « Les Aventures d'Alice au pays des merveilles »",
@@ -4088,9 +3952,9 @@
   "prompt": "Qui a écrit « Les Aventures d'Alice au pays des merveilles » ?",
   "options": [
    "Lewis Carroll*",
-   "Ivan Tourgueniev",
+   "Fiodor Dostoïevski",
    "Louisa May Alcott",
-   "Léon Tolstoï"
+   "Ivan Tourgueniev"
   ],
   "explanation": "« Les Aventures d'Alice au pays des merveilles » est une œuvre de Lewis Carroll, parue en 1865.",
   "source": "Wikidata",
@@ -4106,10 +3970,10 @@
   "options": [
    "Kenneth Grahame*",
    "Lucy Maud Montgomery",
-   "Jack London",
-   "Gaston Leroux"
+   "Gaston Leroux",
+   "Jack London"
   ],
-  "explanation": "« Le Vent dans les saules » est une œuvre de Kenneth Grahame, parue en 1908.",
+  "explanation": "« Le Vent dans les saules » est une œuvre de Kenneth Grahame (écrivain britannique), parue en 1908.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4124,9 +3988,9 @@
    "Dr. Seuss*",
    "Jack Kerouac",
    "Boris Pasternak",
-   "J. R. R. Tolkien"
+   "Vladimir Nabokov"
   ],
-  "explanation": "« Le Chat chapeauté » est une œuvre de Dr. Seuss, parue en 1957.",
+  "explanation": "« Le Chat chapeauté » est une œuvre de Dr. Seuss (écrivain et illustrateur américain), parue en 1957.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4139,11 +4003,11 @@
   "prompt": "Qui a peint « Terrasse du café le soir » ?",
   "options": [
    "Vincent van Gogh*",
-   "Ilia Répine",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir",
+   "Claude Monet"
   ],
-  "explanation": "« Terrasse du café le soir » a été peint par Vincent van Gogh vers 1888.",
+  "explanation": "« Terrasse du café le soir » a été peint par Vincent van Gogh (peintre néerlandais) vers 1888.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4156,11 +4020,11 @@
   "prompt": "Qui a peint « Un dimanche après-midi à l'Île de la Grande Jatte » ?",
   "options": [
    "Georges Seurat*",
-   "Édouard Manet",
    "Vincent van Gogh",
-   "Ilia Répine"
+   "Auguste Renoir",
+   "Claude Monet"
   ],
-  "explanation": "« Un dimanche après-midi à l'Île de la Grande Jatte » a été peint par Georges Seurat vers 1884.",
+  "explanation": "« Un dimanche après-midi à l'Île de la Grande Jatte » a été peint par Georges Seurat (peintre français) vers 1884.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4173,11 +4037,11 @@
   "prompt": "Qui a peint « La Neuvième Vague » ?",
   "options": [
    "Ivan Aïvazovski*",
+   "Édouard Manet",
    "Gustave Courbet",
-   "Eugène Delacroix",
-   "Claude Monet"
+   "Eugène Delacroix"
   ],
-  "explanation": "« La Neuvième Vague » a été peint par Ivan Aïvazovski vers 1850.",
+  "explanation": "« La Neuvième Vague » a été peint par Ivan Aïvazovski (peintre russe) vers 1850.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4194,7 +4058,7 @@
    "Théodore Géricault",
    "Eugène Delacroix"
   ],
-  "explanation": "« Tres de mayo » a été peint par Francisco de Goya vers 1814.",
+  "explanation": "« Tres de mayo » a été peint par Francisco de Goya (peintre et graveur espagnol) vers 1814.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4211,7 +4075,7 @@
    "Johannes Vermeer",
    "Pieter Brueghel l'Ancien"
   ],
-  "explanation": "« La Reddition de Bréda » a été peint par Diego Vélasquez vers 1634.",
+  "explanation": "« La Reddition de Bréda » a été peint par Diego Vélasquez (peintre espagnol) vers 1634.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4245,7 +4109,7 @@
    "Caspar David Friedrich",
    "Eugène Delacroix"
   ],
-  "explanation": "« Saturne dévorant un de ses enfants » a été peint par Francisco de Goya vers 1820.",
+  "explanation": "« Saturne dévorant un de ses enfants » a été peint par Francisco de Goya (peintre et graveur espagnol) vers 1820.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4262,7 +4126,7 @@
    "Grant Wood",
    "Salvador Dalí"
   ],
-  "explanation": "« Carré noir sur fond blanc » a été peint par Kasimir Malevitch vers 1915.",
+  "explanation": "« Carré noir sur fond blanc » a été peint par Kasimir Malevitch (peintre, dessinateur, sculpteur et théoricien soviétique) vers 1915.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4275,11 +4139,11 @@
   "prompt": "Qui a peint « L'Église d'Auvers-sur-Oise » ?",
   "options": [
    "Vincent van Gogh*",
-   "Ilia Répine",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir",
+   "Gustav Klimt"
   ],
-  "explanation": "« L'Église d'Auvers-sur-Oise » a été peint par Vincent van Gogh vers 1890.",
+  "explanation": "« L'Église d'Auvers-sur-Oise » a été peint par Vincent van Gogh (peintre néerlandais) vers 1890.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4296,7 +4160,7 @@
    "Théodore Géricault",
    "Francisco de Goya"
   ],
-  "explanation": "« Le Sacre de Napoléon » a été peint par Jacques-Louis David vers 1807.",
+  "explanation": "« Le Sacre de Napoléon » a été peint par Jacques-Louis David (peintre français du mouvement néo-classique) vers 1807.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4313,7 +4177,7 @@
    "Auguste Renoir",
    "Vincent van Gogh"
   ],
-  "explanation": "« Un bar aux Folies Bergère » a été peint par Édouard Manet vers 1882.",
+  "explanation": "« Un bar aux Folies Bergère » a été peint par Édouard Manet (peintre et graveur français) vers 1882.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4347,7 +4211,7 @@
    "Léonard de Vinci",
    "Giorgione"
   ],
-  "explanation": "« La Naissance de Vénus » a été peint par Sandro Botticelli vers 1485.",
+  "explanation": "« La Naissance de Vénus » a été peint par Sandro Botticelli (peintre italien) vers 1485.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4361,10 +4225,10 @@
   "options": [
    "Édouard Manet*",
    "Gustave Courbet",
-   "Claude Monet",
-   "Ivan Aïvazovski"
+   "Ilia Répine",
+   "Claude Monet"
   ],
-  "explanation": "« Le Déjeuner sur l'herbe » a été peint par Édouard Manet vers 1863.",
+  "explanation": "« Le Déjeuner sur l'herbe » a été peint par Édouard Manet (peintre et graveur français) vers 1863.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4381,7 +4245,7 @@
    "Caspar David Friedrich",
    "Théodore Géricault"
   ],
-  "explanation": "« La Maja nue » a été peint par Francisco de Goya vers 1795.",
+  "explanation": "« La Maja nue » a été peint par Francisco de Goya (peintre et graveur espagnol) vers 1795.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4395,10 +4259,10 @@
   "options": [
    "Vincent van Gogh*",
    "Georges Seurat",
-   "Édouard Manet",
-   "Ilia Répine"
+   "Auguste Renoir",
+   "Claude Monet"
   ],
-  "explanation": "« Les Mangeurs de pommes de terre » a été peint par Vincent van Gogh vers 1885.",
+  "explanation": "« Les Mangeurs de pommes de terre » a été peint par Vincent van Gogh (peintre néerlandais) vers 1885.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4415,7 +4279,7 @@
    "Rembrandt",
    "Pieter Brueghel l'Ancien"
   ],
-  "explanation": "« La Laitière » a été peint par Johannes Vermeer vers 1660.",
+  "explanation": "« La Laitière » a été peint par Johannes Vermeer (peintre néerlandais) vers 1660.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4428,11 +4292,11 @@
   "prompt": "Qui a peint « La Mort de Socrate » ?",
   "options": [
    "Jacques-Louis David*",
+   "Francisco de Goya",
    "Thomas Gainsborough",
-   "Caspar David Friedrich",
-   "Théodore Géricault"
+   "Caspar David Friedrich"
   ],
-  "explanation": "« La Mort de Socrate » a été peint par Jacques-Louis David vers 1787.",
+  "explanation": "« La Mort de Socrate » a été peint par Jacques-Louis David (peintre français du mouvement néo-classique) vers 1787.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4449,7 +4313,7 @@
    "Gustave Courbet",
    "Auguste Renoir"
   ],
-  "explanation": "« Les Bateliers de la Volga » a été peint par Ilia Répine vers 1870.",
+  "explanation": "« Les Bateliers de la Volga » a été peint par Ilia Répine (artiste-peintre russe) vers 1870.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4466,7 +4330,7 @@
    "Rembrandt",
    "Pieter Brueghel l'Ancien"
   ],
-  "explanation": "« La Jeune Fille à la perle » a été peint par Johannes Vermeer vers 1665.",
+  "explanation": "« La Jeune Fille à la perle » a été peint par Johannes Vermeer (peintre néerlandais) vers 1665.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4479,11 +4343,11 @@
   "prompt": "Qui a peint « La Vigne rouge » ?",
   "options": [
    "Vincent van Gogh*",
-   "Ilia Répine",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir",
+   "Claude Monet"
   ],
-  "explanation": "« La Vigne rouge » a été peint par Vincent van Gogh vers 1888.",
+  "explanation": "« La Vigne rouge » a été peint par Vincent van Gogh (peintre néerlandais) vers 1888.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4500,7 +4364,7 @@
    "Rembrandt",
    "Pieter Brueghel l'Ancien"
   ],
-  "explanation": "« Les Ménines » a été peint par Diego Vélasquez vers 1656.",
+  "explanation": "« Les Ménines » a été peint par Diego Vélasquez (peintre espagnol) vers 1656.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4513,11 +4377,11 @@
   "prompt": "Qui a peint « Le Radeau de la Méduse » ?",
   "options": [
    "Théodore Géricault*",
-   "Francisco de Goya",
    "Caspar David Friedrich",
-   "Eugène Delacroix"
+   "Eugène Delacroix",
+   "Francisco de Goya"
   ],
-  "explanation": "« Le Radeau de la Méduse » a été peint par Théodore Géricault vers 1819.",
+  "explanation": "« Le Radeau de la Méduse » a été peint par Théodore Géricault (peintre français) vers 1819.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4534,7 +4398,7 @@
    "Johannes Vermeer",
    "Pieter Brueghel l'Ancien"
   ],
-  "explanation": "« La Ronde de nuit » a été peint par Rembrandt vers 1642.",
+  "explanation": "« La Ronde de nuit » a été peint par Rembrandt (peintre et graveur néerlandais) vers 1642.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4547,11 +4411,11 @@
   "prompt": "Qui a peint « La Maison jaune » ?",
   "options": [
    "Vincent van Gogh*",
-   "Ilia Répine",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir",
+   "Claude Monet"
   ],
-  "explanation": "« La Maison jaune » a été peint par Vincent van Gogh vers 1888.",
+  "explanation": "« La Maison jaune » a été peint par Vincent van Gogh (peintre néerlandais) vers 1888.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4564,11 +4428,11 @@
   "prompt": "Qui a peint « Les Époux Arnolfini » ?",
   "options": [
    "Jan van Eyck*",
-   "Léonard de Vinci",
    "Sandro Botticelli",
-   "Jérôme Bosch"
+   "Jérôme Bosch",
+   "Léonard de Vinci"
   ],
-  "explanation": "« Les Époux Arnolfini » a été peint par Jan van Eyck vers 1434.",
+  "explanation": "« Les Époux Arnolfini » a été peint par Jan van Eyck (peintre flamand) vers 1434.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4581,11 +4445,11 @@
   "prompt": "Qui a peint « Iris » ?",
   "options": [
    "Vincent van Gogh*",
-   "Ilia Répine",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir",
+   "Claude Monet"
   ],
-  "explanation": "« Iris » a été peint par Vincent van Gogh vers 1889.",
+  "explanation": "« Iris » a été peint par Vincent van Gogh (peintre néerlandais) vers 1889.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4602,7 +4466,7 @@
    "Edward Hopper",
    "Kasimir Malevitch"
   ],
-  "explanation": "« La Persistance de la mémoire » a été peint par Salvador Dalí vers 1931.",
+  "explanation": "« La Persistance de la mémoire » a été peint par Salvador Dalí (peintre, sculpteur, graveur, scénariste et écrivain espagnol) vers 1931.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4615,11 +4479,11 @@
   "prompt": "Qui a peint « La Liberté guidant le peuple » ?",
   "options": [
    "Eugène Delacroix*",
-   "Francisco de Goya",
    "Théodore Géricault",
-   "Caspar David Friedrich"
+   "Caspar David Friedrich",
+   "Ivan Aïvazovski"
   ],
-  "explanation": "« La Liberté guidant le peuple » a été peint par Eugène Delacroix vers 1830.",
+  "explanation": "« La Liberté guidant le peuple » a été peint par Eugène Delacroix (peintre français) vers 1830.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4633,10 +4497,10 @@
   "options": [
    "Caspar David Friedrich*",
    "Théodore Géricault",
-   "Francisco de Goya",
-   "Eugène Delacroix"
+   "Eugène Delacroix",
+   "Francisco de Goya"
   ],
-  "explanation": "« Le Voyageur contemplant une mer de nuages » a été peint par Caspar David Friedrich vers 1818.",
+  "explanation": "« Le Voyageur contemplant une mer de nuages » a été peint par Caspar David Friedrich (peintre, dessinateur et graveur allemand) vers 1818.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4653,7 +4517,7 @@
    "Léonard de Vinci",
    "Giorgione"
   ],
-  "explanation": "« Le Jardin des délices » a été peint par Jérôme Bosch vers 1490.",
+  "explanation": "« Le Jardin des délices » a été peint par Jérôme Bosch (peintre et dessinateur néerlandais) vers 1490.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4667,10 +4531,10 @@
   "options": [
    "Raphaël*",
    "Giorgione",
-   "Jérôme Bosch",
-   "Titien"
+   "Léonard de Vinci",
+   "Jérôme Bosch"
   ],
-  "explanation": "« La Madone Sixtine » a été peint par Raphaël vers 1512.",
+  "explanation": "« La Madone Sixtine » a été peint par Raphaël (peintre et architecte italien de la Renaissance) vers 1512.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4683,11 +4547,11 @@
   "prompt": "Qui a peint « Impression, Soleil levant » ?",
   "options": [
    "Claude Monet*",
+   "Ilia Répine",
    "Auguste Renoir",
-   "Gustave Courbet",
-   "Édouard Manet"
+   "Gustave Courbet"
   ],
-  "explanation": "« Impression, Soleil levant » a été peint par Claude Monet vers 1872.",
+  "explanation": "« Impression, Soleil levant » a été peint par Claude Monet (peintre impressionniste français) vers 1872.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4700,11 +4564,11 @@
   "prompt": "Qui a peint « L'Origine du monde » ?",
   "options": [
    "Gustave Courbet*",
-   "Claude Monet",
-   "Auguste Renoir",
-   "Ivan Aïvazovski"
+   "Édouard Manet",
+   "Ilia Répine",
+   "Claude Monet"
   ],
-  "explanation": "« L'Origine du monde » a été peint par Gustave Courbet vers 1866.",
+  "explanation": "« L'Origine du monde » a été peint par Gustave Courbet (peintre français) vers 1866.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4718,10 +4582,10 @@
   "options": [
    "Gustav Klimt*",
    "Kasimir Malevitch",
-   "Ilia Répine",
-   "Vincent van Gogh"
+   "Vincent van Gogh",
+   "Grant Wood"
   ],
-  "explanation": "« Portrait d'Adele Bloch-Bauer I » a été peint par Gustav Klimt vers 1907.",
+  "explanation": "« Portrait d'Adele Bloch-Bauer I » a été peint par Gustav Klimt (peintre autrichien) vers 1907.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4738,7 +4602,7 @@
    "Edward Hopper",
    "Kasimir Malevitch"
   ],
-  "explanation": "« American Gothic » a été peint par Grant Wood vers 1930.",
+  "explanation": "« American Gothic » a été peint par Grant Wood (peintre américain) vers 1930.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4768,11 +4632,11 @@
   "prompt": "Qui a peint « Le Serment des Horaces » ?",
   "options": [
    "Jacques-Louis David*",
+   "Francisco de Goya",
    "Thomas Gainsborough",
-   "Caspar David Friedrich",
-   "Théodore Géricault"
+   "Caspar David Friedrich"
   ],
-  "explanation": "« Le Serment des Horaces » a été peint par Jacques-Louis David vers 1784.",
+  "explanation": "« Le Serment des Horaces » a été peint par Jacques-Louis David (peintre français du mouvement néo-classique) vers 1784.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4787,9 +4651,9 @@
    "Ilia Répine*",
    "Vincent van Gogh",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir"
   ],
-  "explanation": "« Les Cosaques zaporogues écrivant une lettre au sultan de Turquie » a été peint par Ilia Répine vers 1890.",
+  "explanation": "« Les Cosaques zaporogues écrivant une lettre au sultan de Turquie » a été peint par Ilia Répine (artiste-peintre russe) vers 1890.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4806,7 +4670,7 @@
    "Raphaël",
    "Giorgione"
   ],
-  "explanation": "« Chasseurs dans la neige » a été peint par Pieter Brueghel l'Ancien vers 1565.",
+  "explanation": "« Chasseurs dans la neige » a été peint par Pieter Brueghel l'Ancien (peintre et graveur brabançon) vers 1565.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4823,7 +4687,7 @@
    "Rembrandt",
    "Pieter Brueghel l'Ancien"
   ],
-  "explanation": "« Vue de Delft » a été peint par Johannes Vermeer vers 1661.",
+  "explanation": "« Vue de Delft » a été peint par Johannes Vermeer (peintre néerlandais) vers 1661.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4840,7 +4704,7 @@
    "Raphaël",
    "Giorgione"
   ],
-  "explanation": "« Les Proverbes flamands » a été peint par Pieter Brueghel l'Ancien vers 1559.",
+  "explanation": "« Les Proverbes flamands » a été peint par Pieter Brueghel l'Ancien (peintre et graveur brabançon) vers 1559.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4853,11 +4717,11 @@
   "prompt": "Qui a peint « Le Printemps » ?",
   "options": [
    "Sandro Botticelli*",
-   "Léonard de Vinci",
    "Jérôme Bosch",
+   "Léonard de Vinci",
    "Giorgione"
   ],
-  "explanation": "« Le Printemps » a été peint par Sandro Botticelli vers 1480.",
+  "explanation": "« Le Printemps » a été peint par Sandro Botticelli (peintre italien) vers 1480.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4888,10 +4752,10 @@
   "options": [
    "Thomas Gainsborough*",
    "Jacques-Louis David",
-   "Caspar David Friedrich",
-   "Théodore Géricault"
+   "Francisco de Goya",
+   "Caspar David Friedrich"
   ],
-  "explanation": "« L'Enfant bleu » a été peint par Thomas Gainsborough vers 1770.",
+  "explanation": "« L'Enfant bleu » a été peint par Thomas Gainsborough (peintre et graveur anglais) vers 1770.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4904,11 +4768,11 @@
   "prompt": "Qui a peint « Champ de blé aux corbeaux » ?",
   "options": [
    "Vincent van Gogh*",
-   "Ilia Répine",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir",
+   "Gustav Klimt"
   ],
-  "explanation": "« Champ de blé aux corbeaux » a été peint par Vincent van Gogh vers 1890.",
+  "explanation": "« Champ de blé aux corbeaux » a été peint par Vincent van Gogh (peintre néerlandais) vers 1890.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4921,11 +4785,11 @@
   "prompt": "Qui a peint « La Mort de Marat » ?",
   "options": [
    "Jacques-Louis David*",
+   "Francisco de Goya",
    "Thomas Gainsborough",
-   "Caspar David Friedrich",
-   "Théodore Géricault"
+   "Caspar David Friedrich"
   ],
-  "explanation": "« La Mort de Marat » a été peint par Jacques-Louis David vers 1793.",
+  "explanation": "« La Mort de Marat » a été peint par Jacques-Louis David (peintre français du mouvement néo-classique) vers 1793.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4939,8 +4803,8 @@
   "options": [
    "Léonard de Vinci*",
    "Jérôme Bosch",
-   "Sandro Botticelli",
-   "Giorgione"
+   "Giorgione",
+   "Sandro Botticelli"
   ],
   "explanation": "« La Belle Ferronnière » a été peint par Léonard de Vinci vers 1495.",
   "source": "Wikidata",
@@ -4959,7 +4823,7 @@
    "Johannes Vermeer",
    "Pieter Brueghel l'Ancien"
   ],
-  "explanation": "« La Leçon d'anatomie du docteur Tulp » a été peint par Rembrandt vers 1632.",
+  "explanation": "« La Leçon d'anatomie du docteur Tulp » a été peint par Rembrandt (peintre et graveur néerlandais) vers 1632.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4972,11 +4836,11 @@
   "prompt": "Qui a peint « Le Café de nuit » ?",
   "options": [
    "Vincent van Gogh*",
-   "Ilia Répine",
    "Georges Seurat",
-   "Édouard Manet"
+   "Auguste Renoir",
+   "Claude Monet"
   ],
-  "explanation": "« Le Café de nuit » a été peint par Vincent van Gogh vers 1888.",
+  "explanation": "« Le Café de nuit » a été peint par Vincent van Gogh (peintre néerlandais) vers 1888.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4990,10 +4854,10 @@
   "options": [
    "Auguste Renoir*",
    "Claude Monet",
-   "Édouard Manet",
+   "Ilia Répine",
    "Georges Seurat"
   ],
-  "explanation": "« Bal du moulin de la Galette » a été peint par Auguste Renoir vers 1876.",
+  "explanation": "« Bal du moulin de la Galette » a été peint par Auguste Renoir (peintre et sculpteur français) vers 1876.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5007,10 +4871,10 @@
   "options": [
    "Gustav Klimt*",
    "Kasimir Malevitch",
-   "Ilia Répine",
-   "Vincent van Gogh"
+   "Vincent van Gogh",
+   "Grant Wood"
   ],
-  "explanation": "« Le Baiser » a été peint par Gustav Klimt vers 1907.",
+  "explanation": "« Le Baiser » a été peint par Gustav Klimt (peintre autrichien) vers 1907.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5027,7 +4891,7 @@
    "Pieter Brueghel l'Ancien",
    "Giorgione"
   ],
-  "explanation": "« Vénus d'Urbin » a été peint par Titien vers 1538.",
+  "explanation": "« Vénus d'Urbin » a été peint par Titien (peintre et graveur vénitien) vers 1538.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5041,10 +4905,10 @@
   "options": [
    "Édouard Manet*",
    "Gustave Courbet",
-   "Claude Monet",
-   "Auguste Renoir"
+   "Ilia Répine",
+   "Claude Monet"
   ],
-  "explanation": "« Olympia » a été peint par Édouard Manet vers 1863.",
+  "explanation": "« Olympia » a été peint par Édouard Manet (peintre et graveur français) vers 1863.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5059,7 +4923,7 @@
    "Léonard de Vinci*",
    "Raphaël",
    "Giorgione",
-   "Titien"
+   "Jérôme Bosch"
   ],
   "explanation": "« Saint Jean-Baptiste » a été peint par Léonard de Vinci vers 1514.",
   "source": "Wikidata",
@@ -5078,7 +4942,7 @@
    "Grant Wood",
    "Kasimir Malevitch"
   ],
-  "explanation": "« Nighthawks » a été peint par Edward Hopper vers 1942.",
+  "explanation": "« Nighthawks » a été peint par Edward Hopper (peintre et graveur américain) vers 1942.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5091,11 +4955,11 @@
   "prompt": "Qui a peint « La Tempête » ?",
   "options": [
    "Giorgione*",
+   "Léonard de Vinci",
    "Raphaël",
-   "Jérôme Bosch",
-   "Sandro Botticelli"
+   "Jérôme Bosch"
   ],
-  "explanation": "« La Tempête » a été peint par Giorgione vers 1506.",
+  "explanation": "« La Tempête » a été peint par Giorgione (peintre du Cinquecento italien) vers 1506.",
   "source": "Wikidata",
   "origin": "import"
  }

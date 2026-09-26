@@ -8,11 +8,11 @@
   "prompt": "Qui a réalisé le film « Harry Potter et la Coupe de feu » (2005) ?",
   "options": [
    "Mike Newell*",
-   "James McTeigue",
+   "George Lucas",
    "Ang Lee",
-   "Gore Verbinski"
+   "James McTeigue"
   ],
-  "explanation": "« Harry Potter et la Coupe de feu » a été réalisé par Mike Newell et est sorti en 2005.",
+  "explanation": "« Harry Potter et la Coupe de feu » a été réalisé par Mike Newell (réalisateur britannique) et est sorti en 2005.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -26,10 +26,10 @@
   "options": [
    "David Yates*",
    "Gore Verbinski",
-   "Zack Snyder",
-   "Martin Scorsese"
+   "Martin Scorsese",
+   "Zack Snyder"
   ],
-  "explanation": "« Harry Potter et l'Ordre du Phénix » a été réalisé par David Yates et est sorti en 2007.",
+  "explanation": "« Harry Potter et l'Ordre du Phénix » a été réalisé par David Yates (réalisateur britannique) et est sorti en 2007.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -42,11 +42,11 @@
   "prompt": "Qui a réalisé le film « Harry Potter et la Chambre des secrets » (2002) ?",
   "options": [
    "Chris Columbus*",
-   "Peter Jackson",
    "Sam Raimi",
+   "Peter Jackson",
    "Ron Howard"
   ],
-  "explanation": "« Harry Potter et la Chambre des secrets » a été réalisé par Chris Columbus et est sorti en 2002.",
+  "explanation": "« Harry Potter et la Chambre des secrets » a été réalisé par Chris Columbus (cinéaste américain) et est sorti en 2002.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -63,7 +63,7 @@
    "Peter Jackson",
    "Sam Raimi"
   ],
-  "explanation": "« Harry Potter à l'école des sorciers » a été réalisé par Chris Columbus et est sorti en 2001.",
+  "explanation": "« Harry Potter à l'école des sorciers » a été réalisé par Chris Columbus (cinéaste américain) et est sorti en 2001.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -77,10 +77,10 @@
   "options": [
    "Alfonso Cuarón*",
    "James McTeigue",
-   "Ang Lee",
+   "George Lucas",
    "Mike Newell"
   ],
-  "explanation": "« Harry Potter et le Prisonnier d'Azkaban » a été réalisé par Alfonso Cuarón et est sorti en 2004.",
+  "explanation": "« Harry Potter et le Prisonnier d'Azkaban » a été réalisé par Alfonso Cuarón (réalisateur, scénariste et producteur mexicain) et est sorti en 2004.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -97,7 +97,7 @@
    "Irvin Kershner",
    "Richard Marquand"
   ],
-  "explanation": "« Alien » a été réalisé par Ridley Scott et est sorti en 1979.",
+  "explanation": "« Alien » a été réalisé par Ridley Scott (réalisateur et producteur britannique) et est sorti en 1979.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -110,11 +110,11 @@
   "prompt": "Qui a réalisé le film « Maman, j'ai raté l'avion ! » (1990) ?",
   "options": [
    "Chris Columbus*",
-   "Peter Weir",
    "Jonathan Demme",
-   "Frank Darabont"
+   "Peter Weir",
+   "Steven Spielberg"
   ],
-  "explanation": "« Maman, j'ai raté l'avion ! » a été réalisé par Chris Columbus et est sorti en 1990.",
+  "explanation": "« Maman, j'ai raté l'avion ! » a été réalisé par Chris Columbus (cinéaste américain) et est sorti en 1990.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -127,11 +127,11 @@
   "prompt": "Qui a réalisé le film « Le Cercle des poètes disparus » (1989) ?",
   "options": [
    "Peter Weir*",
-   "Chris Columbus",
    "Jonathan Demme",
-   "Robert Zemeckis"
+   "Robert Zemeckis",
+   "Steven Spielberg"
   ],
-  "explanation": "« Le Cercle des poètes disparus » a été réalisé par Peter Weir et est sorti en 1989.",
+  "explanation": "« Le Cercle des poètes disparus » a été réalisé par Peter Weir (réalisateur australien) et est sorti en 1989.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -162,10 +162,10 @@
   "options": [
    "Peter Jackson*",
    "Ron Howard",
-   "Sam Raimi",
-   "Lilly Wachowski"
+   "Chris Columbus",
+   "Sam Raimi"
   ],
-  "explanation": "« Le Seigneur des anneaux : La Communauté de l'anneau » a été réalisé par Peter Jackson et est sorti en 2001.",
+  "explanation": "« Le Seigneur des anneaux : La Communauté de l'anneau » a été réalisé par Peter Jackson (réalisateur, scénariste et producteur néo-zélandais) et est sorti en 2001.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -178,11 +178,11 @@
   "prompt": "Qui a réalisé le film « Gladiator » (2000) ?",
   "options": [
    "Ridley Scott*",
-   "Ron Howard",
-   "David Fincher",
-   "George Lucas"
+   "Chris Columbus",
+   "Lilly Wachowski",
+   "Ron Howard"
   ],
-  "explanation": "« Gladiator » a été réalisé par Ridley Scott et est sorti en 2000.",
+  "explanation": "« Gladiator » a été réalisé par Ridley Scott (réalisateur et producteur britannique) et est sorti en 2000.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -195,11 +195,11 @@
   "prompt": "Qui a réalisé le film « Le Seigneur des anneaux : Le Retour du roi » (2003) ?",
   "options": [
    "Peter Jackson*",
-   "Alfonso Cuarón",
    "Sam Raimi",
-   "Ron Howard"
+   "Alfonso Cuarón",
+   "Ang Lee"
   ],
-  "explanation": "« Le Seigneur des anneaux : Le Retour du roi » a été réalisé par Peter Jackson et est sorti en 2003.",
+  "explanation": "« Le Seigneur des anneaux : Le Retour du roi » a été réalisé par Peter Jackson (réalisateur, scénariste et producteur néo-zélandais) et est sorti en 2003.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -212,11 +212,11 @@
   "prompt": "Qui a réalisé le film « Le Silence des agneaux » (1991) ?",
   "options": [
    "Jonathan Demme*",
-   "Chris Columbus",
    "Peter Weir",
+   "Steven Spielberg",
    "Frank Darabont"
   ],
-  "explanation": "« Le Silence des agneaux » a été réalisé par Jonathan Demme et est sorti en 1991.",
+  "explanation": "« Le Silence des agneaux » a été réalisé par Jonathan Demme (réalisateur américain) et est sorti en 1991.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -231,7 +231,7 @@
    "Joss Whedon*",
    "Bong Joon-ho",
    "David Yates",
-   "Zack Snyder"
+   "Gore Verbinski"
   ],
   "explanation": "« Avengers : L'Ère d'Ultron » a été réalisé par Joss Whedon et est sorti en 2015.",
   "source": "Wikidata",
@@ -247,10 +247,10 @@
   "options": [
    "Ang Lee*",
    "Mike Newell",
-   "James McTeigue",
-   "Alfonso Cuarón"
+   "George Lucas",
+   "James McTeigue"
   ],
-  "explanation": "« Le Secret de Brokeback Mountain » a été réalisé par Ang Lee et est sorti en 2005.",
+  "explanation": "« Le Secret de Brokeback Mountain » a été réalisé par Ang Lee (cinéaste taïwanais) et est sorti en 2005.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -263,11 +263,11 @@
   "prompt": "Qui a réalisé le film « Pirates des Caraïbes : Le Secret du coffre maudit » (2006) ?",
   "options": [
    "Gore Verbinski*",
-   "Martin Scorsese",
    "Zack Snyder",
-   "Mike Newell"
+   "Martin Scorsese",
+   "George Lucas"
   ],
-  "explanation": "« Pirates des Caraïbes : Le Secret du coffre maudit » a été réalisé par Gore Verbinski et est sorti en 2006.",
+  "explanation": "« Pirates des Caraïbes : Le Secret du coffre maudit » a été réalisé par Gore Verbinski (réalisateur américain) et est sorti en 2006.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -280,11 +280,11 @@
   "prompt": "Qui a réalisé le film « Harry Potter et les Reliques de la Mort, partie 1 » (2010) ?",
   "options": [
    "David Yates*",
-   "Martin Scorsese",
-   "Zack Snyder",
-   "Gore Verbinski"
+   "Joss Whedon",
+   "Gore Verbinski",
+   "Zack Snyder"
   ],
-  "explanation": "« Harry Potter et les Reliques de la Mort, partie 1 » a été réalisé par David Yates et est sorti en 2010.",
+  "explanation": "« Harry Potter et les Reliques de la Mort, partie 1 » a été réalisé par David Yates (réalisateur britannique) et est sorti en 2010.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -297,11 +297,11 @@
   "prompt": "Qui a réalisé le film « Harry Potter et le Prince de sang-mêlé » (2009) ?",
   "options": [
    "David Yates*",
-   "Martin Scorsese",
    "Gore Verbinski",
-   "Zack Snyder"
+   "Martin Scorsese",
+   "Joss Whedon"
   ],
-  "explanation": "« Harry Potter et le Prince de sang-mêlé » a été réalisé par David Yates et est sorti en 2009.",
+  "explanation": "« Harry Potter et le Prince de sang-mêlé » a été réalisé par David Yates (réalisateur britannique) et est sorti en 2009.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -315,8 +315,8 @@
   "options": [
    "Mel Gibson*",
    "Frank Darabont",
-   "Roberto Benigni",
-   "Steven Spielberg"
+   "Steven Spielberg",
+   "Roberto Benigni"
   ],
   "explanation": "« Braveheart » a été réalisé par Mel Gibson et est sorti en 1995.",
   "source": "Wikidata",
@@ -331,11 +331,11 @@
   "prompt": "Qui a réalisé le film « Un homme d'exception » (2001) ?",
   "options": [
    "Ron Howard*",
+   "Chris Columbus",
    "Peter Jackson",
-   "Sam Raimi",
-   "Lilly Wachowski"
+   "Sam Raimi"
   ],
-  "explanation": "« Un homme d'exception » a été réalisé par Ron Howard et est sorti en 2001.",
+  "explanation": "« Un homme d'exception » a été réalisé par Ron Howard (acteur, réalisateur et producteur américain) et est sorti en 2001.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -349,10 +349,10 @@
   "options": [
    "Peter Jackson*",
    "Sam Raimi",
-   "Ron Howard",
-   "Alfonso Cuarón"
+   "Chris Columbus",
+   "Ron Howard"
   ],
-  "explanation": "« Le Seigneur des anneaux : Les Deux Tours » a été réalisé par Peter Jackson et est sorti en 2002.",
+  "explanation": "« Le Seigneur des anneaux : Les Deux Tours » a été réalisé par Peter Jackson (réalisateur, scénariste et producteur néo-zélandais) et est sorti en 2002.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -367,9 +367,9 @@
    "George Lucas*",
    "Lilly Wachowski",
    "David Fincher",
-   "Steven Spielberg"
+   "Ron Howard"
   ],
-  "explanation": "« Star Wars, épisode I : La Menace fantôme » a été réalisé par George Lucas et est sorti en 1999.",
+  "explanation": "« Star Wars, épisode I : La Menace fantôme » a été réalisé par George Lucas (cinéaste et producteur américain) et est sorti en 1999.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -382,11 +382,11 @@
   "prompt": "Qui a réalisé le film « Il faut sauver le soldat Ryan » (1998) ?",
   "options": [
    "Steven Spielberg*",
-   "Lilly Wachowski",
+   "David Fincher",
    "Roberto Benigni",
-   "George Lucas"
+   "Lilly Wachowski"
   ],
-  "explanation": "« Il faut sauver le soldat Ryan » a été réalisé par Steven Spielberg et est sorti en 1998.",
+  "explanation": "« Il faut sauver le soldat Ryan » a été réalisé par Steven Spielberg (réalisateur, scénariste et producteur de cinéma américain) et est sorti en 1998.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -400,10 +400,10 @@
   "options": [
    "Steven Spielberg*",
    "Frank Darabont",
-   "Mel Gibson",
-   "Jonathan Demme"
+   "Jonathan Demme",
+   "Mel Gibson"
   ],
-  "explanation": "« Jurassic Park » a été réalisé par Steven Spielberg et est sorti en 1993.",
+  "explanation": "« Jurassic Park » a été réalisé par Steven Spielberg (réalisateur, scénariste et producteur de cinéma américain) et est sorti en 1993.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -417,10 +417,10 @@
   "options": [
    "Frank Darabont*",
    "Mel Gibson",
-   "Roberto Benigni",
-   "Jonathan Demme"
+   "Steven Spielberg",
+   "Roberto Benigni"
   ],
-  "explanation": "« Les Évadés » a été réalisé par Frank Darabont et est sorti en 1994.",
+  "explanation": "« Les Évadés » a été réalisé par Frank Darabont (cinéaste américain) et est sorti en 1994.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -433,11 +433,11 @@
   "prompt": "Qui a réalisé le film « Les Infiltrés » (2006) ?",
   "options": [
    "Martin Scorsese*",
-   "Gore Verbinski",
    "Zack Snyder",
+   "George Lucas",
    "Mike Newell"
   ],
-  "explanation": "« Les Infiltrés » a été réalisé par Martin Scorsese et est sorti en 2006.",
+  "explanation": "« Les Infiltrés » a été réalisé par Martin Scorsese (cinéaste américain) et est sorti en 2006.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -450,11 +450,11 @@
   "prompt": "Qui a réalisé le film « Les Aventuriers de l'arche perdue » (1981) ?",
   "options": [
    "Steven Spielberg*",
+   "Ridley Scott",
    "Irvin Kershner",
-   "Francis Ford Coppola",
-   "Richard Marquand"
+   "Francis Ford Coppola"
   ],
-  "explanation": "« Les Aventuriers de l'arche perdue » a été réalisé par Steven Spielberg et est sorti en 1981.",
+  "explanation": "« Les Aventuriers de l'arche perdue » a été réalisé par Steven Spielberg (réalisateur, scénariste et producteur de cinéma américain) et est sorti en 1981.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -468,10 +468,10 @@
   "options": [
    "George Lucas*",
    "Francis Ford Coppola",
-   "Ridley Scott",
-   "Irvin Kershner"
+   "Irvin Kershner",
+   "Ridley Scott"
   ],
-  "explanation": "« La Guerre des étoiles » a été réalisé par George Lucas et est sorti en 1977.",
+  "explanation": "« La Guerre des étoiles » a été réalisé par George Lucas (cinéaste et producteur américain) et est sorti en 1977.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -485,10 +485,10 @@
   "options": [
    "George Lucas*",
    "Sam Raimi",
-   "Peter Jackson",
+   "Chris Columbus",
    "Ron Howard"
   ],
-  "explanation": "« Star Wars, épisode II : L’Attaque des clones » a été réalisé par George Lucas et est sorti en 2002.",
+  "explanation": "« Star Wars, épisode II : L’Attaque des clones » a été réalisé par George Lucas (cinéaste et producteur américain) et est sorti en 2002.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -505,7 +505,7 @@
    "Ridley Scott",
    "Richard Marquand"
   ],
-  "explanation": "« Star Wars, épisode V : L'Empire contre-attaque » a été réalisé par Irvin Kershner et est sorti en 1980.",
+  "explanation": "« Star Wars, épisode V : L'Empire contre-attaque » a été réalisé par Irvin Kershner (réalisateur américain) et est sorti en 1980.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -518,11 +518,11 @@
   "prompt": "Qui a réalisé le film « Star Wars, épisode VI : Le Retour du Jedi » (1983) ?",
   "options": [
    "Richard Marquand*",
+   "Ridley Scott",
    "Robert Zemeckis",
-   "Irvin Kershner",
-   "Francis Ford Coppola"
+   "Irvin Kershner"
   ],
-  "explanation": "« Star Wars, épisode VI : Le Retour du Jedi » a été réalisé par Richard Marquand et est sorti en 1983.",
+  "explanation": "« Star Wars, épisode VI : Le Retour du Jedi » a été réalisé par Richard Marquand (réalisateur britannique) et est sorti en 1983.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -552,11 +552,11 @@
   "prompt": "Qui a réalisé le film « Apocalypse Now » (1979) ?",
   "options": [
    "Francis Ford Coppola*",
-   "Ridley Scott",
    "Irvin Kershner",
+   "Ridley Scott",
    "Richard Marquand"
   ],
-  "explanation": "« Apocalypse Now » a été réalisé par Francis Ford Coppola et est sorti en 1979.",
+  "explanation": "« Apocalypse Now » a été réalisé par Francis Ford Coppola (réalisateur américain) et est sorti en 1979.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -569,11 +569,11 @@
   "prompt": "Qui a réalisé le film « Le Parrain 2 » (1974) ?",
   "options": [
    "Francis Ford Coppola*",
-   "Ridley Scott",
+   "Stanley Kubrick",
    "Irvin Kershner",
-   "Stanley Kubrick"
+   "Ridley Scott"
   ],
-  "explanation": "« Le Parrain 2 » a été réalisé par Francis Ford Coppola et est sorti en 1974.",
+  "explanation": "« Le Parrain 2 » a été réalisé par Francis Ford Coppola (réalisateur américain) et est sorti en 1974.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -588,9 +588,9 @@
    "Ridley Scott*",
    "Richard Marquand",
    "Irvin Kershner",
-   "Robert Zemeckis"
+   "Francis Ford Coppola"
   ],
-  "explanation": "« Blade Runner » a été réalisé par Ridley Scott et est sorti en 1982.",
+  "explanation": "« Blade Runner » a été réalisé par Ridley Scott (réalisateur et producteur britannique) et est sorti en 1982.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -603,11 +603,11 @@
   "prompt": "Qui a réalisé le film « Fight Club » (1999) ?",
   "options": [
    "David Fincher*",
-   "George Lucas",
    "Lilly Wachowski",
-   "Steven Spielberg"
+   "Chris Columbus",
+   "Roberto Benigni"
   ],
-  "explanation": "« Fight Club » a été réalisé par David Fincher et est sorti en 1999.",
+  "explanation": "« Fight Club » a été réalisé par David Fincher (réalisateur et producteur américain) et est sorti en 1999.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -637,11 +637,11 @@
   "prompt": "Qui a réalisé le film « La vie est belle » (1997) ?",
   "options": [
    "Roberto Benigni*",
-   "Steven Spielberg",
-   "David Fincher",
-   "George Lucas"
+   "Lilly Wachowski",
+   "Mel Gibson",
+   "David Fincher"
   ],
-  "explanation": "« La vie est belle » a été réalisé par Roberto Benigni et est sorti en 1997.",
+  "explanation": "« La vie est belle » a été réalisé par Roberto Benigni (acteur, réalisateur et scénariste italien) et est sorti en 1997.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -658,7 +658,7 @@
    "Gore Verbinski",
    "Zack Snyder"
   ],
-  "explanation": "« Harry Potter et les Reliques de la Mort, partie 2 » a été réalisé par David Yates et est sorti en 2011.",
+  "explanation": "« Harry Potter et les Reliques de la Mort, partie 2 » a été réalisé par David Yates (réalisateur britannique) et est sorti en 2011.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -675,7 +675,7 @@
    "Charlie Chaplin",
    "Billy Wilder"
   ],
-  "explanation": "« Citizen Kane » a été réalisé par Orson Welles et est sorti en 1941.",
+  "explanation": "« Citizen Kane » a été réalisé par Orson Welles (réalisateur, acteur, producteur et scénariste américain) et est sorti en 1941.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -690,9 +690,9 @@
    "Sergio Leone*",
    "Stanley Kubrick",
    "Billy Wilder",
-   "Ridley Scott"
+   "Francis Ford Coppola"
   ],
-  "explanation": "« Le Bon, la Brute et le Truand » a été réalisé par Sergio Leone et est sorti en 1966.",
+  "explanation": "« Le Bon, la Brute et le Truand » a été réalisé par Sergio Leone (réalisateur et scénariste italien) et est sorti en 1966.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -705,11 +705,11 @@
   "prompt": "Qui a réalisé le film « Star Wars, épisode III : La Revanche des Sith » (2005) ?",
   "options": [
    "George Lucas*",
+   "Ang Lee",
    "James McTeigue",
-   "Mike Newell",
-   "Ang Lee"
+   "Mike Newell"
   ],
-  "explanation": "« Star Wars, épisode III : La Revanche des Sith » a été réalisé par George Lucas et est sorti en 2005.",
+  "explanation": "« Star Wars, épisode III : La Revanche des Sith » a été réalisé par George Lucas (cinéaste et producteur américain) et est sorti en 2005.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -723,10 +723,10 @@
   "options": [
    "Gore Verbinski*",
    "Sam Raimi",
-   "Peter Jackson",
-   "Alfonso Cuarón"
+   "Alfonso Cuarón",
+   "James McTeigue"
   ],
-  "explanation": "« Pirates des Caraïbes : La Malédiction du Black Pearl » a été réalisé par Gore Verbinski et est sorti en 2003.",
+  "explanation": "« Pirates des Caraïbes : La Malédiction du Black Pearl » a été réalisé par Gore Verbinski (réalisateur américain) et est sorti en 2003.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -741,9 +741,9 @@
    "Francis Ford Coppola*",
    "Stanley Kubrick",
    "Sergio Leone",
-   "Ridley Scott"
+   "Irvin Kershner"
   ],
-  "explanation": "« Le Parrain » a été réalisé par Francis Ford Coppola et est sorti en 1972.",
+  "explanation": "« Le Parrain » a été réalisé par Francis Ford Coppola (réalisateur américain) et est sorti en 1972.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -760,7 +760,7 @@
    "Mel Gibson",
    "Jonathan Demme"
   ],
-  "explanation": "« La Liste de Schindler » a été réalisé par Steven Spielberg et est sorti en 1993.",
+  "explanation": "« La Liste de Schindler » a été réalisé par Steven Spielberg (réalisateur, scénariste et producteur de cinéma américain) et est sorti en 1993.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -773,11 +773,11 @@
   "prompt": "Qui a réalisé le film « Spider-Man » (2002) ?",
   "options": [
    "Sam Raimi*",
+   "Chris Columbus",
    "Peter Jackson",
-   "Ron Howard",
-   "Alfonso Cuarón"
+   "Ron Howard"
   ],
-  "explanation": "« Spider-Man » a été réalisé par Sam Raimi et est sorti en 2002.",
+  "explanation": "« Spider-Man » a été réalisé par Sam Raimi (réalisateur, producteur et scénariste américain) et est sorti en 2002.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -794,7 +794,7 @@
    "Zack Snyder",
    "Mike Newell"
   ],
-  "explanation": "« Pirates des Caraïbes : Jusqu'au bout du monde » a été réalisé par Gore Verbinski et est sorti en 2007.",
+  "explanation": "« Pirates des Caraïbes : Jusqu'au bout du monde » a été réalisé par Gore Verbinski (réalisateur américain) et est sorti en 2007.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -807,11 +807,11 @@
   "prompt": "Qui a réalisé le film « V pour Vendetta » (2005) ?",
   "options": [
    "James McTeigue*",
-   "Ang Lee",
    "Mike Newell",
-   "Gore Verbinski"
+   "Ang Lee",
+   "George Lucas"
   ],
-  "explanation": "« V pour Vendetta » a été réalisé par James McTeigue et est sorti en 2005.",
+  "explanation": "« V pour Vendetta » a été réalisé par James McTeigue (cinéaste) et est sorti en 2005.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -826,9 +826,9 @@
    "Bong Joon-ho*",
    "Joss Whedon",
    "David Yates",
-   "Martin Scorsese"
+   "Gore Verbinski"
   ],
-  "explanation": "« Parasite » a été réalisé par Bong Joon-ho et est sorti en 2019.",
+  "explanation": "« Parasite » a été réalisé par Bong Joon-ho (réalisateur et scénariste sud-coréen) et est sorti en 2019.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -842,10 +842,10 @@
   "options": [
    "Lilly Wachowski*",
    "David Fincher",
-   "George Lucas",
-   "Steven Spielberg"
+   "Ron Howard",
+   "Peter Jackson"
   ],
-  "explanation": "« Matrix » a été réalisé par Lilly Wachowski et est sorti en 1999.",
+  "explanation": "« Matrix » a été réalisé par Lilly Wachowski (réalisatrice américaine) et est sorti en 1999.",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -859,10 +859,10 @@
   "options": [
    "Robert Zemeckis*",
    "Richard Marquand",
-   "Peter Weir",
-   "Chris Columbus"
+   "Ridley Scott",
+   "Peter Weir"
   ],
-  "explanation": "« Retour vers le futur » a été réalisé par Robert Zemeckis et est sorti en 1985.",
+  "explanation": "« Retour vers le futur » a été réalisé par Robert Zemeckis (cinéaste américain) et est sorti en 1985.",
   "source": "Wikidata",
   "origin": "import"
  }

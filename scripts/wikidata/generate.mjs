@@ -26,6 +26,11 @@ const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const areaText = (a) => (a >= 1e6 ? `${(a / 1e6).toFixed(1).replace('.', ',').replace(',0', '')} million${a >= 2e6 ? 's' : ''} de km²`
   : `${(a >= 10000 ? Math.round(a / 1000) * 1000 : Math.round(a / 10) * 10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} km²`);
 const deName = (name) => (/^[AEIOUÉÈÊÎÔHaeiouéèêîôh]/.test(name) ? `d'${name}` : `de ${name}`);
+const habitants = (n) => (n >= 1e6 ? `${roundedPopulation(n)} d'habitants` : `${roundedPopulation(n)} habitants`);
+// Auteurs qui ne sont pas des auteurs au sens littéraire (textes religieux, attributions traditionnelles).
+const NOT_AUTHORS = new Set(['Jésus-Christ', 'Dieu', 'Moïse', 'Mahomet', 'Homère', 'Vyāsa', 'Vyasa', 'Valmiki']);
+/** Description sans parenthèse finale (dates redondantes). */
+const cleanDesc = (d) => (d ?? '').replace(/\s*\([^()]*\)\s*$/, '').trim();
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 // ─────────────── Déduplication avec la banque curée (même énoncé ou même titre cité)
@@ -101,7 +106,8 @@ for (const c of countryList) {
       add('geography', 'capitale', {
         key: `wd-cap-${c.id}`, concept: `geography.capitals.${key}`, label: `Capitale ${f.of}`, type: 'mcq', difficulty,
         prompt: `Quelle est la capitale ${f.of} ?`, options: [`${capName}*`, ...others],
-        explanation: `${capName} est la capitale ${f.of}.${trap}`,
+        explanation: `${capName} est la capitale ${f.of}${cont ? `, en ${cont}` : ''}. Le pays compte environ ${habitants(c.pop)}.${trap}`,
+        fact_as_of: fetchedOn,
       });
       if (c.pop >= 3e6) {
         const otherCountries = nearestByFame(c, neighbours, 3, rng(`capr-${c.id}`)).map((o) => o.name);
@@ -264,7 +270,8 @@ for (const p of peopleList) {
       key: `wd-battle-${r.e}`, concept: `history.dates.${slug(label)}`, label: cap(label), type: 'mcq', keep_order: true,
       difficulty: Math.round(clamp(100 - 12 * Math.log(Number(r.sl)) + 10, 35, 85)),
       prompt: `En quelle année a eu lieu la ${label} ?`, options,
-      explanation: `La ${label} a eu lieu ${/^\d+$/.test(date) ? `en ${date}` : `le ${date}`}.`,
+      explanation: `La ${label} a eu lieu ${/^\d+$/.test(date) ? `en ${date}` : `le ${date}`}.`
+        + (r.desc && !cleanDesc(r.desc).toLowerCase().startsWith(label.toLowerCase()) && cleanDesc(r.desc).length < 140 ? ` Contexte : ${cleanDesc(r.desc)}.` : ''),
     });
   }
 }
@@ -313,12 +320,13 @@ function works(file, bucket, template, conceptPrefix, promptOf, explain, extraDi
     const year = yearOf(r.date);
     const prev = items.get(r.w);
     if (!prev || (year && (!prev.year || year < prev.year))) {
-      items.set(r.w, { id: r.w, title: r.wFr, author: r.authorFr, authorId: r.author, year, sl: Number(r.sl) });
+      items.set(r.w, { id: r.w, title: r.wFr, author: r.authorFr, authorId: r.author, year, sl: Number(r.sl),
+        authorDesc: r.authorDesc && cleanDesc(r.authorDesc).length <= 60 ? cleanDesc(r.authorDesc) : null });
     }
   }
   const list = [...items.values()].filter((w) => !alreadyCovered(w.title));
   for (const w of list) {
-    if (w.title.toLowerCase().includes(w.author.toLowerCase())) continue;
+    if (w.title.toLowerCase().includes(w.author.toLowerCase()) || NOT_AUTHORS.has(w.author)) continue;
     const rand = rng(`${template}-${w.id}`);
     const pool = [...new Map([...items.values()].filter((o) => o.authorId !== w.authorId).map((o) => [o.authorId, o])).values()];
     const close = shuffle(pool, rand).sort((a, b) => Math.abs((a.year ?? 1900) - (w.year ?? 1900)) - Math.abs((b.year ?? 1900) - (w.year ?? 1900)));
@@ -333,13 +341,13 @@ function works(file, bucket, template, conceptPrefix, promptOf, explain, extraDi
 }
 works('books', 'arts', 'livre auteur', 'arts.literature.book',
   (w) => `Qui a écrit « ${w.title} » ?`,
-  (w) => `« ${w.title} » est une œuvre ${deName(w.author)}${w.year ? `, parue en ${w.year}` : ''}.`, 8);
+  (w) => `« ${w.title} » est une œuvre ${deName(w.author)}${w.authorDesc ? ` (${w.authorDesc})` : ''}${w.year ? `, parue en ${w.year}` : ''}.`, 8);
 works('paintings', 'arts', 'tableau peintre', 'arts.painting.work',
   (w) => `Qui a peint « ${w.title} » ?`,
-  (w) => `« ${w.title} » a été peint par ${w.author}${w.year ? ` vers ${w.year}` : ''}.`, 4);
+  (w) => `« ${w.title} » a été peint par ${w.author}${w.authorDesc ? ` (${w.authorDesc})` : ''}${w.year ? ` vers ${w.year}` : ''}.`, 4);
 works('films', 'cinema', 'film réalisateur', 'cinema.directors.film',
   (w) => `Qui a réalisé le film « ${w.title} »${w.year ? ` (${w.year})` : ''} ?`,
-  (w) => `« ${w.title} » a été réalisé par ${w.author}${w.year ? ` et est sorti en ${w.year}` : ''}.`, 2);
+  (w) => `« ${w.title} » a été réalisé par ${w.author}${w.authorDesc ? ` (${w.authorDesc})` : ''}${w.year ? ` et est sorti en ${w.year}` : ''}.`, 2);
 
 // ─────────────── Écriture
 for (const [bucket, list] of Object.entries(out)) {

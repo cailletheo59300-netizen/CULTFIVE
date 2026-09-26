@@ -47,9 +47,10 @@ SELECT ?city ?cityFr ?cityEn ?country ?pop ?sl WHERE {
   philosophers: people('Q4964182', 110),
   explorers: people('Q11900058', 60),
   battles: `
-SELECT ?e ?eFr ?date ?start ?place ?placeFr ?sl WHERE {
+SELECT ?e ?eFr ?desc ?date ?start ?place ?placeFr ?sl WHERE {
   ?e wdt:P31 wd:Q178561; wikibase:sitelinks ?sl FILTER(?sl >= 40)
   ${label('e')}
+  OPTIONAL { ?e schema:description ?desc FILTER(lang(?desc) = "fr") }
   OPTIONAL { ?e wdt:P585 ?date }
   OPTIONAL { ?e wdt:P580 ?start }
   OPTIONAL { ?e wdt:P276 ?place. ${label('place')} }
@@ -66,22 +67,25 @@ SELECT ?e ?eFr ?sym ?z ?sl WHERE {
   ${label('e')}
 }`,
   books: `
-SELECT ?w ?wFr ?author ?authorFr ?date ?sl WHERE {
+SELECT ?w ?wFr ?author ?authorFr ?authorDesc ?date ?sl WHERE {
   ?w wdt:P31 wd:Q7725634; wdt:P50 ?author; wikibase:sitelinks ?sl FILTER(?sl >= 45)
   ${label('w')} ?author rdfs:label ?authorFr FILTER(lang(?authorFr) = "fr")
   OPTIONAL { ?w wdt:P577 ?date }
+  OPTIONAL { ?author schema:description ?authorDesc FILTER(lang(?authorDesc) = "fr") }
 }`,
   paintings: `
-SELECT ?w ?wFr ?author ?authorFr ?date ?sl WHERE {
+SELECT ?w ?wFr ?author ?authorFr ?authorDesc ?date ?sl WHERE {
   ?w wdt:P31 wd:Q3305213; wdt:P170 ?author; wikibase:sitelinks ?sl FILTER(?sl >= 35)
   ${label('w')} ?author rdfs:label ?authorFr FILTER(lang(?authorFr) = "fr")
   OPTIONAL { ?w wdt:P571 ?date }
+  OPTIONAL { ?author schema:description ?authorDesc FILTER(lang(?authorDesc) = "fr") }
 }`,
   films: `
-SELECT ?w ?wFr ?author ?authorFr ?date ?sl WHERE {
+SELECT ?w ?wFr ?author ?authorFr ?authorDesc ?date ?sl WHERE {
   ?w wdt:P31 wd:Q11424; wdt:P57 ?author; wikibase:sitelinks ?sl FILTER(?sl >= 80)
   ${label('w')} ?author rdfs:label ?authorFr FILTER(lang(?authorFr) = "fr")
   OPTIONAL { ?w wdt:P577 ?date }
+  OPTIONAL { ?author schema:description ?authorDesc FILTER(lang(?authorDesc) = "fr") }
 }`,
 };
 

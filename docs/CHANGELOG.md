@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1
+- Daily : le créneau « Surprise » tire d'abord un domaine au hasard (migration 0009, testé sur 60 jours).
+- Explications Wikidata enrichies (contexte des batailles, présentation des auteurs, pays et population pour les capitales).
+- +80 questions écrites à la main (Calcul 40, Français 40), types variés. Banque : 1 958.
+
 ## 0.3.0 — session 2 (suite)
 - Générateur Wikidata (CC0) : 1 613 questions (géographie, histoire, sciences, arts, cinéma), cache versionné, règles de français, garde-fous, relecture par échantillons. Banque : 1 886 questions.
 - `CLAUDE.md` : règles de travail (validation des étapes avant de coder, captures sur demande uniquement).
