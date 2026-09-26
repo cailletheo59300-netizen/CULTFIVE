@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1 — petits domaines
+- Musique, sport, technologie enrichis via Wikidata : familles d'instruments, origine et décennie des groupes, Coupes du monde (vainqueur, hôte), villes des JO d'été et d'hiver, inventeurs ↔ inventions (listes relues).
+- 96 questions écrites à la main : nature (classes d'animaux, petits et cris, plantes), logique (suites, horloges, âges, syllogismes), informatique, règles du sport, musique classique.
+- Banque : 3 143 questions (musique 207, sport 110, tech 81, nature 46, logique 30).
+
 ## 0.5.0 — design « Pop »
 - Nouvelle identité : fond clair lavande, violet électrique + jaune soleil, couleur vive et pictogramme par domaine, SF Pro Rounded gras, tout arrondi (cartes, pilules), boutons « jouet » qui s'enfoncent, rebonds, secousse sur une erreur, confettis. Nouvelle icône.
 - Léon redessiné (rond, grands yeux, joues roses) et animé : attrape la bonne réponse avec sa langue, grisaille sur une erreur, arc-en-ciel sur un sans-faute, queue qui s'enroule avec la série, salue à l'accueil avec une bulle.

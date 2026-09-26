@@ -1,0 +1,1046 @@
+[
+ {
+  "key": "wd-inv-Q101674",
+  "concept": "tech.inventions.aspirateur",
+  "label": "Inventeur : aspirateur",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Qui a inventé l'aspirateur ?",
+  "options": [
+   "Hubert Cecil Booth*",
+   "George Washington Gale Ferris, Jr.",
+   "Alfred Nobel",
+   "Ferdinand Braun"
+  ],
+  "explanation": "On doit l'aspirateur à Hubert Cecil Booth (ingénieur britannique), vers 1901.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q101761",
+  "concept": "tech.inventions.fermeture_eclair",
+  "label": "Inventeur : fermeture éclair",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "À qui doit-on la fermeture éclair ?",
+  "options": [
+   "Whitcomb Judson*",
+   "Léon Foucault",
+   "Georges Claude",
+   "Ferdinand Braun"
+  ],
+  "explanation": "On doit la fermeture éclair à Whitcomb Judson, vers 1893.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q1051265",
+  "concept": "tech.inventions.nouilles_instantanees",
+  "label": "Inventeur : nouilles instantanées",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "À qui doit-on les nouilles instantanées ?",
+  "options": [
+   "Momofuku Ando*",
+   "René Laennec",
+   "Douglas Engelbart",
+   "George de Mestral"
+  ],
+  "explanation": "On doit les nouilles instantanées à Momofuku Ando, vers 1958.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q116434",
+  "concept": "tech.inventions.phonographe",
+  "label": "Inventeur : phonographe",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "À qui doit-on le phonographe ?",
+  "options": [
+   "Thomas Edison*",
+   "René Laennec",
+   "Walter Hunt",
+   "Alfred Nobel"
+  ],
+  "explanation": "On doit le phonographe à Thomas Edison, vers 1877.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q12203",
+  "concept": "tech.inventions.code_qr",
+  "label": "Inventeur : code QR",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "À qui doit-on le code QR ?",
+  "options": [
+   "Masahiro Hara*",
+   "George de Mestral",
+   "Johann Christoph Denner",
+   "Benjamin Franklin"
+  ],
+  "explanation": "On doit le code QR à Masahiro Hara (ingénieur japonais), vers 1994.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q127956",
+  "concept": "tech.inventions.four_a_micro_ondes",
+  "label": "Inventeur : four à micro-ondes",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "À qui doit-on le four à micro-ondes ?",
+  "options": [
+   "Percy Spencer*",
+   "René Laennec",
+   "Johannes Gutenberg",
+   "Christopher Cockerell"
+  ],
+  "explanation": "On doit le four à micro-ondes à Percy Spencer, vers 1945.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q144334",
+  "concept": "tech.inventions.presse_typographique",
+  "label": "Inventeur : presse typographique",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "Qui a inventé la presse typographique ?",
+  "options": [
+   "Johannes Gutenberg*",
+   "Ray Tomlinson",
+   "Léon Foucault",
+   "Christian Hülsmeyer"
+  ],
+  "explanation": "On doit la presse typographique à Johannes Gutenberg, vers 1450.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q15411420",
+  "concept": "tech.inventions.fermeture_autoagrippante",
+  "label": "Inventeur : fermeture autoagrippante",
+  "type": "mcq",
+  "difficulty": 67,
+  "prompt": "À qui doit-on la fermeture autoagrippante ?",
+  "options": [
+   "George de Mestral*",
+   "René Laennec",
+   "Georges Claude",
+   "Percy Spencer"
+  ],
+  "explanation": "On doit la fermeture autoagrippante à George de Mestral.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q162339",
+  "concept": "tech.inventions.stethoscope",
+  "label": "Inventeur : stéthoscope",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a inventé le stéthoscope ?",
+  "options": [
+   "René Laennec*",
+   "Alfred Nobel",
+   "Alessandro Volta",
+   "Walter Hunt"
+  ],
+  "explanation": "On doit le stéthoscope à René Laennec, vers 1816.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q163829",
+  "concept": "tech.inventions.synthetiseur",
+  "label": "Inventeur : synthétiseur",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "À qui doit-on le synthétiseur ?",
+  "options": [
+   "Robert Moog*",
+   "Thomas Edison",
+   "Douglas Engelbart",
+   "Johannes Gutenberg"
+  ],
+  "explanation": "On doit le synthétiseur à Robert Moog.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q17517",
+  "concept": "tech.inventions.telephone_mobile",
+  "label": "Inventeur : téléphone mobile",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a inventé le téléphone mobile ?",
+  "options": [
+   "Martin Cooper*",
+   "Percy Spencer",
+   "George Washington Gale Ferris, Jr.",
+   "Walter Hunt"
+  ],
+  "explanation": "On doit le téléphone mobile à Martin Cooper (ingénieur américain), vers 1973.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q185757",
+  "concept": "tech.inventions.aeroglisseur",
+  "label": "Inventeur : aéroglisseur",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "À qui doit-on l'aéroglisseur ?",
+  "options": [
+   "Christopher Cockerell*",
+   "Christian Hülsmeyer",
+   "Léon Foucault",
+   "Emile Berliner"
+  ],
+  "explanation": "On doit l'aéroglisseur à Christopher Cockerell, vers 1955.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q186263",
+  "concept": "tech.inventions.lave_vaisselle",
+  "label": "Inventeur : lave-vaisselle",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "À qui doit-on le lave-vaisselle ?",
+  "options": [
+   "Josephine Cochrane*",
+   "René Laennec",
+   "Ferdinand Braun",
+   "Hubert Cecil Booth"
+  ],
+  "explanation": "On doit le lave-vaisselle à Josephine Cochrane.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q202570",
+  "concept": "tech.inventions.grande_roue",
+  "label": "Inventeur : grande roue",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "À qui doit-on la grande roue ?",
+  "options": [
+   "George Washington Gale Ferris, Jr.*",
+   "Walter Hunt",
+   "Masahiro Hara",
+   "Alfred Nobel"
+  ],
+  "explanation": "On doit la grande roue à George Washington Gale Ferris, Jr., vers 1893.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q267298",
+  "concept": "tech.inventions.pile_electrique",
+  "label": "Inventeur : pile électrique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a inventé la pile électrique ?",
+  "options": [
+   "Alessandro Volta*",
+   "Josephine Cochrane",
+   "Georges Claude",
+   "Johann Christoph Denner"
+  ],
+  "explanation": "On doit la pile électrique à Alessandro Volta, vers 1800.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q39531",
+  "concept": "tech.inventions.bluetooth",
+  "label": "Inventeur : Bluetooth",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Qui a inventé le Bluetooth ?",
+  "options": [
+   "Jaap Haartsen*",
+   "J. P. Knight",
+   "Alfred Nobel",
+   "Léon Foucault"
+  ],
+  "explanation": "On doit le Bluetooth à Jaap Haartsen (ingénieur néerlandais).",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q47528",
+  "concept": "tech.inventions.radar",
+  "label": "Inventeur : radar",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À qui doit-on le radar ?",
+  "options": [
+   "Christian Hülsmeyer*",
+   "Percy Spencer",
+   "Masahiro Hara",
+   "J. P. Knight"
+  ],
+  "explanation": "On doit le radar à Christian Hülsmeyer.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q483400",
+  "concept": "tech.inventions.gyroscope",
+  "label": "Inventeur : gyroscope",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "À qui doit-on le gyroscope ?",
+  "options": [
+   "Léon Foucault*",
+   "Benjamin Franklin",
+   "Percy Spencer",
+   "Johann Christoph Denner"
+  ],
+  "explanation": "On doit le gyroscope à Léon Foucault (physicien et astronome français), vers 1852.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q622970",
+  "concept": "tech.inventions.lampe_neon",
+  "label": "Inventeur : lampe néon",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "À qui doit-on la lampe néon ?",
+  "options": [
+   "Georges Claude*",
+   "Evangelista Torricelli",
+   "Alessandro Volta",
+   "Momofuku Ando"
+  ],
+  "explanation": "On doit la lampe néon à Georges Claude.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q7112808",
+  "concept": "tech.inventions.gramophone",
+  "label": "Inventeur : gramophone",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À qui doit-on le gramophone ?",
+  "options": [
+   "Emile Berliner*",
+   "Jaap Haartsen",
+   "Hubert Cecil Booth",
+   "Percy Spencer"
+  ],
+  "explanation": "On doit le gramophone à Emile Berliner.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q7973",
+  "concept": "tech.inventions.paratonnerre",
+  "label": "Inventeur : paratonnerre",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "À qui doit-on le paratonnerre ?",
+  "options": [
+   "Benjamin Franklin*",
+   "Christopher Cockerell",
+   "Emile Berliner",
+   "Martin Cooper"
+  ],
+  "explanation": "On doit le paratonnerre à Benjamin Franklin, vers 1752.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q79757",
+  "concept": "tech.inventions.barometre",
+  "label": "Inventeur : baromètre",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "À qui doit-on le baromètre ?",
+  "options": [
+   "Evangelista Torricelli*",
+   "Emile Berliner",
+   "Douglas Engelbart",
+   "Ray Tomlinson"
+  ],
+  "explanation": "On doit le baromètre à Evangelista Torricelli (physicien et mathématicien italien), vers 1643.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q7987",
+  "concept": "tech.inventions.souris",
+  "label": "Inventeur : souris",
+  "type": "mcq",
+  "difficulty": 53,
+  "prompt": "À qui doit-on la souris ?",
+  "options": [
+   "Douglas Engelbart*",
+   "Johann Christoph Denner",
+   "Christian Hülsmeyer",
+   "J. P. Knight"
+  ],
+  "explanation": "On doit la souris à Douglas Engelbart.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q8004",
+  "concept": "tech.inventions.feu_de_circulation",
+  "label": "Inventeur : feu de circulation",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "À qui doit-on le feu de circulation ?",
+  "options": [
+   "J. P. Knight*",
+   "Percy Spencer",
+   "Léon Foucault",
+   "Christopher Cockerell"
+  ],
+  "explanation": "On doit le feu de circulation à J. P. Knight (ingénieur britannique).",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q80728",
+  "concept": "tech.inventions.dynamite",
+  "label": "Inventeur : dynamite",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "À qui doit-on la dynamite ?",
+  "options": [
+   "Alfred Nobel*",
+   "George Washington Gale Ferris, Jr.",
+   "Masahiro Hara",
+   "Johann Christoph Denner"
+  ],
+  "explanation": "On doit la dynamite à Alfred Nobel (chimiste, industriel et fabricant d'armes suédois), vers 1867.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q8343",
+  "concept": "tech.inventions.clarinette",
+  "label": "Inventeur : clarinette",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "À qui doit-on la clarinette ?",
+  "options": [
+   "Johann Christoph Denner*",
+   "Momofuku Ando",
+   "Douglas Engelbart",
+   "Walter Hunt"
+  ],
+  "explanation": "On doit la clarinette à Johann Christoph Denner (fabricant d'instruments allemand).",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q83913",
+  "concept": "tech.inventions.tube_cathodique",
+  "label": "Inventeur : tube cathodique",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "À qui doit-on le tube cathodique ?",
+  "options": [
+   "Ferdinand Braun*",
+   "Benjamin Franklin",
+   "Johann Christoph Denner",
+   "Thomas Edison"
+  ],
+  "explanation": "On doit le tube cathodique à Ferdinand Braun (physicien allemand).",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q840333",
+  "concept": "tech.inventions.epingle_de_surete",
+  "label": "Inventeur : épingle de sûreté",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Qui a inventé l'épingle de sûreté ?",
+  "options": [
+   "Walter Hunt*",
+   "J. P. Knight",
+   "Thomas Edison",
+   "Ferdinand Braun"
+  ],
+  "explanation": "On doit l'épingle de sûreté à Walter Hunt.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-inv-Q9158",
+  "concept": "tech.inventions.courrier_electronique",
+  "label": "Inventeur : courrier électronique",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À qui doit-on le courrier électronique ?",
+  "options": [
+   "Ray Tomlinson*",
+   "Jaap Haartsen",
+   "Christopher Cockerell",
+   "Masahiro Hara"
+  ],
+  "explanation": "On doit le courrier électronique à Ray Tomlinson (programmeur américain), vers 1971.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q101674",
+  "concept": "tech.inventions.aspirateur",
+  "label": "Inventeur : aspirateur",
+  "type": "mcq",
+  "difficulty": 53,
+  "prompt": "Qu'a inventé Hubert Cecil Booth, ingénieur britannique ?",
+  "options": [
+   "Aspirateur*",
+   "Synthétiseur",
+   "Bluetooth",
+   "Gyroscope"
+  ],
+  "explanation": "Hubert Cecil Booth a inventé l'aspirateur vers 1901.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q101761",
+  "concept": "tech.inventions.fermeture_eclair",
+  "label": "Inventeur : fermeture éclair",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'a inventé Whitcomb Judson ?",
+  "options": [
+   "Fermeture éclair*",
+   "Paratonnerre",
+   "Gyroscope",
+   "Courrier électronique"
+  ],
+  "explanation": "Whitcomb Judson a inventé la fermeture éclair vers 1893.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q1051265",
+  "concept": "tech.inventions.nouilles_instantanees",
+  "label": "Inventeur : nouilles instantanées",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Qu'a inventé Momofuku Ando ?",
+  "options": [
+   "Nouilles instantanées*",
+   "Bluetooth",
+   "Épingle de sûreté",
+   "Lampe néon"
+  ],
+  "explanation": "Momofuku Ando a inventé les nouilles instantanées vers 1958.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q116434",
+  "concept": "tech.inventions.phonographe",
+  "label": "Inventeur : phonographe",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Qu'a inventé Thomas Edison ?",
+  "options": [
+   "Phonographe*",
+   "Bluetooth",
+   "Code QR",
+   "Paratonnerre"
+  ],
+  "explanation": "Thomas Edison a inventé le phonographe vers 1877.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q12203",
+  "concept": "tech.inventions.code_qr",
+  "label": "Inventeur : code QR",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'a inventé Masahiro Hara, ingénieur japonais ?",
+  "options": [
+   "Code QR*",
+   "Baromètre",
+   "Feu de circulation",
+   "Four à micro-ondes"
+  ],
+  "explanation": "Masahiro Hara a inventé le code QR vers 1994.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q127956",
+  "concept": "tech.inventions.four_a_micro_ondes",
+  "label": "Inventeur : four à micro-ondes",
+  "type": "mcq",
+  "difficulty": 54,
+  "prompt": "Qu'a inventé Percy Spencer ?",
+  "options": [
+   "Four à micro-ondes*",
+   "Pile électrique",
+   "Téléphone mobile",
+   "Fermeture autoagrippante"
+  ],
+  "explanation": "Percy Spencer a inventé le four à micro-ondes vers 1945.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q144334",
+  "concept": "tech.inventions.presse_typographique",
+  "label": "Inventeur : presse typographique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'a inventé Johannes Gutenberg ?",
+  "options": [
+   "Presse typographique*",
+   "Feu de circulation",
+   "Pile électrique",
+   "Stéthoscope"
+  ],
+  "explanation": "Johannes Gutenberg a inventé la presse typographique vers 1450.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q15411420",
+  "concept": "tech.inventions.fermeture_autoagrippante",
+  "label": "Inventeur : fermeture autoagrippante",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Qu'a inventé George de Mestral ?",
+  "options": [
+   "Fermeture autoagrippante*",
+   "Grande roue",
+   "Clarinette",
+   "Radar"
+  ],
+  "explanation": "George de Mestral a inventé la fermeture autoagrippante.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q162339",
+  "concept": "tech.inventions.stethoscope",
+  "label": "Inventeur : stéthoscope",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Qu'a inventé René Laennec ?",
+  "options": [
+   "Stéthoscope*",
+   "Lampe néon",
+   "Nouilles instantanées",
+   "Feu de circulation"
+  ],
+  "explanation": "René Laennec a inventé le stéthoscope vers 1816.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q163829",
+  "concept": "tech.inventions.synthetiseur",
+  "label": "Inventeur : synthétiseur",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Qu'a inventé Robert Moog ?",
+  "options": [
+   "Synthétiseur*",
+   "Courrier électronique",
+   "Nouilles instantanées",
+   "Lave-vaisselle"
+  ],
+  "explanation": "Robert Moog a inventé le synthétiseur.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q17517",
+  "concept": "tech.inventions.telephone_mobile",
+  "label": "Inventeur : téléphone mobile",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Qu'a inventé Martin Cooper, ingénieur américain ?",
+  "options": [
+   "Téléphone mobile*",
+   "Code QR",
+   "Courrier électronique",
+   "Bluetooth"
+  ],
+  "explanation": "Martin Cooper a inventé le téléphone mobile vers 1973.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q185757",
+  "concept": "tech.inventions.aeroglisseur",
+  "label": "Inventeur : aéroglisseur",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Qu'a inventé Christopher Cockerell ?",
+  "options": [
+   "Aéroglisseur*",
+   "Fermeture éclair",
+   "Presse typographique",
+   "Gyroscope"
+  ],
+  "explanation": "Christopher Cockerell a inventé l'aéroglisseur vers 1955.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q186263",
+  "concept": "tech.inventions.lave_vaisselle",
+  "label": "Inventeur : lave-vaisselle",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Qu'a inventé Josephine Cochrane ?",
+  "options": [
+   "Lave-vaisselle*",
+   "Presse typographique",
+   "Four à micro-ondes",
+   "Gyroscope"
+  ],
+  "explanation": "Josephine Cochrane a inventé le lave-vaisselle.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q202570",
+  "concept": "tech.inventions.grande_roue",
+  "label": "Inventeur : grande roue",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "Qu'a inventé George Washington Gale Ferris, Jr. ?",
+  "options": [
+   "Grande roue*",
+   "Baromètre",
+   "Souris",
+   "Aéroglisseur"
+  ],
+  "explanation": "George Washington Gale Ferris, Jr. a inventé la grande roue vers 1893.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q267298",
+  "concept": "tech.inventions.pile_electrique",
+  "label": "Inventeur : pile électrique",
+  "type": "mcq",
+  "difficulty": 51,
+  "prompt": "Qu'a inventé Alessandro Volta ?",
+  "options": [
+   "Pile électrique*",
+   "Épingle de sûreté",
+   "Feu de circulation",
+   "Paratonnerre"
+  ],
+  "explanation": "Alessandro Volta a inventé la pile électrique vers 1800.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q39531",
+  "concept": "tech.inventions.bluetooth",
+  "label": "Inventeur : Bluetooth",
+  "type": "mcq",
+  "difficulty": 53,
+  "prompt": "Qu'a inventé Jaap Haartsen, ingénieur néerlandais ?",
+  "options": [
+   "Bluetooth*",
+   "Tube cathodique",
+   "Synthétiseur",
+   "Téléphone mobile"
+  ],
+  "explanation": "Jaap Haartsen a inventé le Bluetooth.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q47528",
+  "concept": "tech.inventions.radar",
+  "label": "Inventeur : radar",
+  "type": "mcq",
+  "difficulty": 51,
+  "prompt": "Qu'a inventé Christian Hülsmeyer ?",
+  "options": [
+   "Radar*",
+   "Lampe néon",
+   "Téléphone mobile",
+   "Fermeture autoagrippante"
+  ],
+  "explanation": "Christian Hülsmeyer a inventé le radar.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q483400",
+  "concept": "tech.inventions.gyroscope",
+  "label": "Inventeur : gyroscope",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'a inventé Léon Foucault, physicien et astronome français ?",
+  "options": [
+   "Gyroscope*",
+   "Lampe néon",
+   "Presse typographique",
+   "Paratonnerre"
+  ],
+  "explanation": "Léon Foucault a inventé le gyroscope vers 1852.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q622970",
+  "concept": "tech.inventions.lampe_neon",
+  "label": "Inventeur : lampe néon",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Qu'a inventé Georges Claude ?",
+  "options": [
+   "Lampe néon*",
+   "Aéroglisseur",
+   "Paratonnerre",
+   "Fermeture autoagrippante"
+  ],
+  "explanation": "Georges Claude a inventé la lampe néon.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q7112808",
+  "concept": "tech.inventions.gramophone",
+  "label": "Inventeur : gramophone",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Qu'a inventé Emile Berliner ?",
+  "options": [
+   "Gramophone*",
+   "Téléphone mobile",
+   "Nouilles instantanées",
+   "Aspirateur"
+  ],
+  "explanation": "Emile Berliner a inventé le gramophone.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q7973",
+  "concept": "tech.inventions.paratonnerre",
+  "label": "Inventeur : paratonnerre",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Qu'a inventé Benjamin Franklin ?",
+  "options": [
+   "Paratonnerre*",
+   "Épingle de sûreté",
+   "Synthétiseur",
+   "Fermeture autoagrippante"
+  ],
+  "explanation": "Benjamin Franklin a inventé le paratonnerre vers 1752.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q79757",
+  "concept": "tech.inventions.barometre",
+  "label": "Inventeur : baromètre",
+  "type": "mcq",
+  "difficulty": 54,
+  "prompt": "Qu'a inventé Evangelista Torricelli, physicien et mathématicien italien ?",
+  "options": [
+   "Baromètre*",
+   "Code QR",
+   "Stéthoscope",
+   "Courrier électronique"
+  ],
+  "explanation": "Evangelista Torricelli a inventé le baromètre vers 1643.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q7987",
+  "concept": "tech.inventions.souris",
+  "label": "Inventeur : souris",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qu'a inventé Douglas Engelbart ?",
+  "options": [
+   "Souris*",
+   "Lampe néon",
+   "Grande roue",
+   "Épingle de sûreté"
+  ],
+  "explanation": "Douglas Engelbart a inventé la souris.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q8004",
+  "concept": "tech.inventions.feu_de_circulation",
+  "label": "Inventeur : feu de circulation",
+  "type": "mcq",
+  "difficulty": 53,
+  "prompt": "Qu'a inventé J. P. Knight, ingénieur britannique ?",
+  "options": [
+   "Feu de circulation*",
+   "Gramophone",
+   "Épingle de sûreté",
+   "Courrier électronique"
+  ],
+  "explanation": "J. P. Knight a inventé le feu de circulation.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q80728",
+  "concept": "tech.inventions.dynamite",
+  "label": "Inventeur : dynamite",
+  "type": "mcq",
+  "difficulty": 53,
+  "prompt": "Qu'a inventé Alfred Nobel, chimiste, industriel et fabricant d'armes suédois ?",
+  "options": [
+   "Dynamite*",
+   "Feu de circulation",
+   "Code QR",
+   "Bluetooth"
+  ],
+  "explanation": "Alfred Nobel a inventé la dynamite vers 1867.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q8343",
+  "concept": "tech.inventions.clarinette",
+  "label": "Inventeur : clarinette",
+  "type": "mcq",
+  "difficulty": 52,
+  "prompt": "Qu'a inventé Johann Christoph Denner, fabricant d'instruments allemand ?",
+  "options": [
+   "Clarinette*",
+   "Lampe néon",
+   "Aéroglisseur",
+   "Radar"
+  ],
+  "explanation": "Johann Christoph Denner a inventé la clarinette.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q83913",
+  "concept": "tech.inventions.tube_cathodique",
+  "label": "Inventeur : tube cathodique",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Qu'a inventé Ferdinand Braun, physicien allemand ?",
+  "options": [
+   "Tube cathodique*",
+   "Téléphone mobile",
+   "Stéthoscope",
+   "Synthétiseur"
+  ],
+  "explanation": "Ferdinand Braun a inventé le tube cathodique.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q840333",
+  "concept": "tech.inventions.epingle_de_surete",
+  "label": "Inventeur : épingle de sûreté",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'a inventé Walter Hunt ?",
+  "options": [
+   "Épingle de sûreté*",
+   "Nouilles instantanées",
+   "Courrier électronique",
+   "Téléphone mobile"
+  ],
+  "explanation": "Walter Hunt a inventé l'épingle de sûreté.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-invr-Q9158",
+  "concept": "tech.inventions.courrier_electronique",
+  "label": "Inventeur : courrier électronique",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Qu'a inventé Ray Tomlinson, programmeur américain ?",
+  "options": [
+   "Courrier électronique*",
+   "Téléphone mobile",
+   "Four à micro-ondes",
+   "Grande roue"
+  ],
+  "explanation": "Ray Tomlinson a inventé le courrier électronique vers 1971.",
+  "family": "invention",
+  "source": "Wikidata",
+  "origin": "import"
+ }
+]

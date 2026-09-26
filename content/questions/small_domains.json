@@ -1,0 +1,1334 @@
+[
+ {
+  "key": "logic-201",
+  "concept": "logic.sequences.pronic",
+  "label": "Suite 2, 6, 12, 20",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 2, 6, 12, 20, 30, … ?",
+  "answer": 42,
+  "explanation": "On ajoute 4, 6, 8, 10, puis 12 : 30 + 12 = 42. Ce sont aussi les produits n × (n + 1) : 6 × 7 = 42."
+ },
+ {
+  "key": "logic-202",
+  "concept": "logic.sequences.factorials",
+  "label": "Factorielles",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 1, 1, 2, 6, 24, … ?",
+  "answer": 120,
+  "explanation": "Chaque terme est multiplié par le rang suivant : ×1, ×2, ×3, ×4, puis ×5. 24 × 5 = 120 (c'est « 5 factorielle »)."
+ },
+ {
+  "key": "logic-203",
+  "concept": "logic.sequences.double_plus_one",
+  "label": "Suite 3, 7, 15, 31",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 3, 7, 15, 31, … ?",
+  "answer": 63,
+  "explanation": "On double et on ajoute 1 : 31 × 2 + 1 = 63. Chaque terme vaut une puissance de 2 moins 1."
+ },
+ {
+  "key": "logic-204",
+  "concept": "logic.sequences.primes",
+  "label": "Nombres premiers",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Quel nombre suit : 2, 3, 5, 7, 11, 13, … ?",
+  "answer": 17,
+  "explanation": "Ce sont les nombres premiers, divisibles seulement par 1 et par eux-mêmes. Après 13 vient 17 (14, 15 et 16 ne sont pas premiers)."
+ },
+ {
+  "key": "logic-205",
+  "concept": "logic.sequences.cubes",
+  "label": "Suite des cubes",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 1, 8, 27, 64, … ?",
+  "answer": 125,
+  "explanation": "Ce sont les cubes : 1³, 2³, 3³, 4³, puis 5³ = 125."
+ },
+ {
+  "key": "logic-206",
+  "concept": "logic.sequences.divide_by_3",
+  "label": "Suite ÷ 3",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Quel nombre suit : 81, 27, 9, 3, … ?",
+  "answer": 1,
+  "explanation": "On divise par 3 à chaque fois : 3 ÷ 3 = 1."
+ },
+ {
+  "key": "logic-207",
+  "concept": "logic.sequences.letters_gaps",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle lettre suit : A, C, F, J, … ?",
+  "options": [
+   "O*",
+   "N",
+   "P",
+   "M"
+  ],
+  "explanation": "Les écarts grandissent : +2 (C), +3 (F), +4 (J), puis +5 : O."
+ },
+ {
+  "key": "logic-208",
+  "concept": "logic.sequences.weekdays",
+  "label": "L, M, M, J, V, S…",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle lettre suit : L, M, M, J, V, S, … ?",
+  "options": [
+   "D*",
+   "L",
+   "S",
+   "M"
+  ],
+  "explanation": "Ce sont les initiales des jours de la semaine : lundi… samedi, dimanche."
+ },
+ {
+  "key": "logic-209",
+  "concept": "logic.reasoning.clock_three",
+  "label": "Angle à 3 h",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel angle forment les aiguilles d'une horloge à 3 h pile ?",
+  "answer": 90,
+  "explanation": "La grande aiguille est sur 12, la petite sur 3 : un quart de tour, soit 90°.",
+  "unit": "°"
+ },
+ {
+  "key": "logic-210",
+  "concept": "logic.reasoning.clock_quarter",
+  "label": "Angle à 3 h 15",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel angle forment les aiguilles d'une horloge à 3 h 15 ?",
+  "options": [
+   "7,5°*",
+   "0°",
+   "15°",
+   "5°"
+  ],
+  "explanation": "À 3 h 15, la grande aiguille est pile sur le 3, mais la petite a avancé d'un quart de l'intervalle entre 3 et 4 (30° ÷ 4) : 7,5°."
+ },
+ {
+  "key": "logic-211",
+  "concept": "logic.reasoning.age_double",
+  "label": "Âge double",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Dans 5 ans, Léa aura le double de l'âge qu'elle avait il y a 5 ans. Quel âge a-t-elle aujourd'hui ?",
+  "answer": 15,
+  "explanation": "Si elle a x ans : x + 5 = 2 × (x − 5), donc x = 15. Vérification : 20 ans dans 5 ans, 10 ans il y a 5 ans.",
+  "unit": "ans"
+ },
+ {
+  "key": "logic-213",
+  "concept": "logic.reasoning.snail_well",
+  "label": "L'escargot dans le puits",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Un escargot est au fond d'un puits de 10 m. Il monte de 3 m le jour et glisse de 2 m la nuit. Au bout de combien de jours sort-il ?",
+  "answer": 8,
+  "explanation": "Après 7 jours et 7 nuits, il est à 7 m. Le 8e jour, il monte de 3 m et atteint 10 m : il sort avant de glisser.",
+  "unit": "jours"
+ },
+ {
+  "key": "logic-214",
+  "concept": "logic.reasoning.syllogism_cats",
+  "label": "Syllogisme des chats",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Tous les chats sont des mammifères. Certains mammifères volent. Donc certains chats volent. » Ce raisonnement est-il valide ?",
+  "answer": false,
+  "explanation": "Non : les mammifères qui volent (les chauves-souris) ne sont pas forcément des chats. La conclusion ne découle pas des prémisses."
+ },
+ {
+  "key": "logic-215",
+  "concept": "logic.reasoning.syllogism_fish",
+  "label": "Syllogisme du saumon",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "« Aucun poisson ne marche. Le saumon est un poisson. Donc le saumon ne marche pas. » Ce raisonnement est-il valide ?",
+  "answer": true,
+  "explanation": "Oui : si la règle vaut pour tous les poissons, elle vaut pour le saumon. C'est un syllogisme valide."
+ },
+ {
+  "key": "logic-216",
+  "concept": "logic.reasoning.fifth_daughter",
+  "label": "La 5e fille",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Le père de Marie a cinq filles : Nana, Nene, Nini, Nono… Comment s'appelle la cinquième ?",
+  "options": [
+   "Marie*",
+   "Nunu",
+   "Nyny",
+   "Impossible à savoir"
+  ],
+  "explanation": "L'énoncé le dit d'entrée : c'est le père de Marie. La cinquième fille, c'est Marie."
+ },
+ {
+  "key": "logic-217",
+  "concept": "logic.reasoning.squares_grid",
+  "label": "Carrés dans une grille",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de carrés, de toutes tailles, compte une grille de 3 × 3 cases ?",
+  "answer": 14,
+  "explanation": "9 petits carrés, 4 carrés de 2 × 2 et 1 grand carré de 3 × 3 : 9 + 4 + 1 = 14."
+ },
+ {
+  "key": "logic-218",
+  "concept": "logic.reasoning.machines",
+  "label": "Machines et gadgets",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "5 machines fabriquent 5 gadgets en 5 minutes. Combien de minutes faut-il à 100 machines pour fabriquer 100 gadgets ?",
+  "answer": 5,
+  "explanation": "Chaque machine fabrique un gadget en 5 minutes. 100 machines en fabriquent donc 100 en 5 minutes.",
+  "unit": "minutes"
+ },
+ {
+  "key": "logic-219",
+  "concept": "logic.reasoning.durations",
+  "label": "Classer des durées",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces durées de la plus courte à la plus longue.",
+  "items": [
+   "1 000 secondes",
+   "100 minutes",
+   "7 000 secondes",
+   "2 heures"
+  ],
+  "explanation": "1 000 s ≈ 17 min ; 100 min ; 7 000 s ≈ 1 h 57 ; 2 h = 120 min."
+ },
+ {
+  "key": "logic-220",
+  "concept": "logic.reasoning.reverse_operation",
+  "label": "Nombre mystère",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Je multiplie un nombre par 3, j'ajoute 4 et j'obtiens 25. Quel est ce nombre ?",
+  "answer": 7,
+  "explanation": "On remonte les opérations : 25 − 4 = 21, puis 21 ÷ 3 = 7."
+ },
+ {
+  "key": "logic-221",
+  "concept": "logic.reasoning.odd_one_primes",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est l'intrus : 2, 3, 9, 11 ?",
+  "options": [
+   "9*",
+   "2",
+   "3",
+   "11"
+  ],
+  "explanation": "2, 3 et 11 sont des nombres premiers ; 9 = 3 × 3 ne l'est pas. (2 est le seul premier pair, mais il reste premier.)"
+ },
+ {
+  "key": "logic-222",
+  "concept": "logic.reasoning.divisible_6_3",
+  "label": "Divisible par 6",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Si un nombre est divisible par 6, il est forcément divisible par 3.",
+  "answer": true,
+  "explanation": "Oui : 6 = 2 × 3. Tout multiple de 6 est donc un multiple de 3 (et de 2)."
+ },
+ {
+  "key": "nat-202",
+  "concept": "nature.animals.class_bat",
+  "label": "Classe : la chauve-souris",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "La chauve-souris est…",
+  "options": [
+   "Mammifère*",
+   "Oiseau",
+   "Reptile",
+   "Insecte"
+  ],
+  "explanation": "C'est un mammifère, le seul capable d'un vrai vol battu. Elle allaite ses petits."
+ },
+ {
+  "key": "nat-203",
+  "concept": "nature.animals.class_penguin",
+  "label": "Classe : le manchot",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Le manchot est…",
+  "options": [
+   "Oiseau*",
+   "Mammifère",
+   "Poisson",
+   "Reptile"
+  ],
+  "explanation": "Le manchot est un oiseau qui ne vole pas : ses ailes sont devenues des nageoires."
+ },
+ {
+  "key": "nat-204",
+  "concept": "nature.animals.class_salamander",
+  "label": "Classe : la salamandre",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "La salamandre est…",
+  "options": [
+   "Amphibien*",
+   "Reptile",
+   "Mammifère",
+   "Poisson"
+  ],
+  "explanation": "Comme les grenouilles, la salamandre est un amphibien : peau nue et humide, larves aquatiques."
+ },
+ {
+  "key": "nat-205",
+  "concept": "nature.animals.class_seahorse",
+  "label": "Classe : l'hippocampe",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "L'hippocampe est…",
+  "options": [
+   "Poisson*",
+   "Mammifère",
+   "Reptile",
+   "Amphibien"
+  ],
+  "explanation": "L'hippocampe est bien un poisson, malgré sa tête de cheval. Particularité : c'est le mâle qui porte les petits."
+ },
+ {
+  "key": "nat-206",
+  "concept": "nature.animals.class_axolotl",
+  "label": "Classe : l'axolotl",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "L'axolotl est…",
+  "options": [
+   "Amphibien*",
+   "Poisson",
+   "Reptile",
+   "Mammifère"
+  ],
+  "explanation": "L'axolotl est un amphibien qui reste toute sa vie à l'état larvaire, dans l'eau. Il peut régénérer ses membres."
+ },
+ {
+  "key": "nat-207",
+  "concept": "nature.animals.class_turtle",
+  "label": "Classe : la tortue",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "La tortue est…",
+  "options": [
+   "Reptile*",
+   "Amphibien",
+   "Mammifère",
+   "Poisson"
+  ],
+  "explanation": "La tortue est un reptile : écailles, respiration pulmonaire, œufs pondus à terre."
+ },
+ {
+  "key": "nat-208",
+  "concept": "nature.animals.platypus_eggs",
+  "label": "Ornithorynque",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "L'ornithorynque est un mammifère qui pond des œufs.",
+  "answer": true,
+  "explanation": "Oui : avec les échidnés, c'est l'un des rares mammifères ovipares (les monotrèmes). Il allaite ensuite ses petits."
+ },
+ {
+  "key": "nat-209",
+  "concept": "nature.animals.spider_insect",
+  "label": "Araignée et insectes",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "L'araignée est un insecte.",
+  "answer": false,
+  "explanation": "Non : c'est un arachnide, avec 8 pattes. Les insectes en ont 6 et un corps en trois parties."
+ },
+ {
+  "key": "nat-210",
+  "concept": "nature.animals.insect_legs",
+  "label": "Pattes d'insecte",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien de pattes a un insecte ?",
+  "answer": 6,
+  "explanation": "Tous les insectes adultes ont 6 pattes, attachées au thorax."
+ },
+ {
+  "key": "nat-212",
+  "concept": "nature.animals.snail_mollusc",
+  "label": "L'escargot",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "L'escargot est…",
+  "options": [
+   "Un mollusque*",
+   "Un insecte",
+   "Un ver",
+   "Un crustacé"
+  ],
+  "explanation": "L'escargot est un mollusque gastéropode, comme la limace, cousin de la moule et de la pieuvre."
+ },
+ {
+  "key": "nat-214",
+  "concept": "nature.animals.largest_bird",
+  "label": "Le plus grand oiseau",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le plus grand oiseau vivant ?",
+  "options": [
+   "L'autruche*",
+   "L'albatros",
+   "Le condor",
+   "L'aigle royal"
+  ],
+  "explanation": "L'autruche peut mesurer 2,5 m et peser plus de 100 kg. Elle ne vole pas mais court à 70 km/h."
+ },
+ {
+  "key": "nat-215",
+  "concept": "nature.animals.elephant_gestation",
+  "label": "Gestation de l'éléphant",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de temps dure la gestation d'une éléphante ?",
+  "options": [
+   "Environ 22 mois*",
+   "Environ 9 mois",
+   "Environ 12 mois",
+   "Environ 36 mois"
+  ],
+  "explanation": "Près de deux ans : c'est la plus longue gestation des mammifères terrestres."
+ },
+ {
+  "key": "nat-217",
+  "concept": "nature.animals.young_names",
+  "label": "Les petits des animaux",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque animal au nom de son petit.",
+  "pairs": [
+   [
+    "Chèvre",
+    "Chevreau"
+   ],
+   [
+    "Jument",
+    "Poulain"
+   ],
+   [
+    "Biche",
+    "Faon"
+   ],
+   [
+    "Lièvre",
+    "Levraut"
+   ]
+  ],
+  "explanation": "Le chevreau, le poulain, le faon et le levraut. Le petit du lapin, lui, est le lapereau."
+ },
+ {
+  "key": "nat-218",
+  "concept": "nature.animals.animal_cries",
+  "label": "Cris des animaux",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque animal à son cri.",
+  "pairs": [
+   [
+    "Cheval",
+    "Hennit"
+   ],
+   [
+    "Éléphant",
+    "Barrit"
+   ],
+   [
+    "Loup",
+    "Hurle"
+   ],
+   [
+    "Cerf",
+    "Brame"
+   ]
+  ],
+  "explanation": "Le cheval hennit, l'éléphant barrit, le loup hurle et le cerf brame (en automne, à la saison des amours)."
+ },
+ {
+  "key": "nat-219",
+  "concept": "nature.animals.giraffe_vertebrae",
+  "label": "Vertèbres de la girafe",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de vertèbres cervicales (dans le cou) a une girafe ?",
+  "answer": 7,
+  "explanation": "Sept, comme l'humain et presque tous les mammifères : les siennes sont simplement très longues."
+ },
+ {
+  "key": "nat-220",
+  "concept": "nature.animals.hummingbird_backwards",
+  "label": "Colibri",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le colibri peut voler en marche arrière.",
+  "answer": true,
+  "explanation": "Oui : ses ailes battent jusqu'à 80 fois par seconde et pivotent, ce qui lui permet le vol stationnaire et même le recul."
+ },
+ {
+  "key": "nat-221",
+  "concept": "nature.animals.chameleon_colors",
+  "label": "Couleurs du caméléon",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le caméléon change de couleur surtout pour se camoufler.",
+  "answer": false,
+  "explanation": "Non : il change surtout de couleur pour communiquer (humeur, parade) et réguler sa température. Le camouflage est secondaire."
+ },
+ {
+  "key": "nat-222",
+  "concept": "nature.animals.shark_skeleton",
+  "label": "Squelette du requin",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quoi est fait le squelette d'un requin ?",
+  "options": [
+   "De cartilage*",
+   "D'os",
+   "De corne",
+   "De calcaire"
+  ],
+  "explanation": "Le requin est un poisson cartilagineux, comme la raie : son squelette est souple, comme notre nez ou nos oreilles."
+ },
+ {
+  "key": "nat-223",
+  "concept": "nature.animals.bee_dance",
+  "label": "La danse des abeilles",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment une abeille indique-t-elle aux autres où trouver des fleurs ?",
+  "options": [
+   "Par une danse*",
+   "Par un chant",
+   "Par la couleur de ses ailes",
+   "Elle ne peut pas"
+  ],
+  "explanation": "Par une « danse frétillante » dont l'angle et la durée indiquent la direction et la distance, décrite par Karl von Frisch."
+ },
+ {
+  "key": "nat-224",
+  "concept": "nature.animals.weights",
+  "label": "Du plus léger au plus lourd",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Classe ces animaux adultes du plus léger au plus lourd.",
+  "items": [
+   "Colibri",
+   "Chat",
+   "Gorille",
+   "Hippopotame"
+  ],
+  "explanation": "Quelques grammes pour le colibri, environ 4 kg pour le chat, jusqu'à 200 kg pour un gorille mâle, 1,5 tonne ou plus pour l'hippopotame."
+ },
+ {
+  "key": "nat-225",
+  "concept": "nature.animals.owl_rotation",
+  "label": "Tête de la chouette",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Une chouette peut tourner la tête d'environ trois quarts de tour.",
+  "answer": true,
+  "explanation": "Oui, jusqu'à environ 270°, grâce à 14 vertèbres cervicales (deux fois plus que nous). Ses yeux, eux, ne bougent pas."
+ },
+ {
+  "key": "nat-226",
+  "concept": "nature.animals.panda_diet",
+  "label": "Le panda géant",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle plante constitue l'essentiel de l'alimentation du panda géant ?",
+  "options": [
+   "Le bambou*",
+   "L'eucalyptus",
+   "Le riz",
+   "Les algues"
+  ],
+  "explanation": "Le panda passe jusqu'à 14 heures par jour à manger du bambou, alors que son système digestif est celui d'un carnivore."
+ },
+ {
+  "key": "nat-227",
+  "concept": "nature.animals.dolphin_breath",
+  "label": "Respiration du dauphin",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment respire un dauphin ?",
+  "options": [
+   "Avec des poumons, par un évent*",
+   "Avec des branchies",
+   "Par la peau",
+   "Avec des branchies et des poumons"
+  ],
+  "explanation": "Le dauphin est un mammifère : il remonte respirer à la surface par l'évent, sur le dessus de sa tête."
+ },
+ {
+  "key": "nat-230",
+  "concept": "nature.plants.photosynthesis_oxygen",
+  "label": "Photosynthèse",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel gaz les plantes rejettent-elles grâce à la photosynthèse ?",
+  "options": [
+   "Le dioxygène*",
+   "Le dioxyde de carbone",
+   "L'azote",
+   "L'hélium"
+  ],
+  "explanation": "Avec la lumière, la plante transforme l'eau et le CO₂ en sucres, et rejette du dioxygène."
+ },
+ {
+  "key": "nat-231",
+  "concept": "nature.plants.chlorophyll",
+  "label": "Pigment vert",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel pigment donne leur couleur verte aux feuilles ?",
+  "options": [
+   "La chlorophylle*",
+   "La mélanine",
+   "Le carotène",
+   "L'hémoglobine"
+  ],
+  "explanation": "La chlorophylle capte la lumière pour la photosynthèse. À l'automne, elle se dégrade et laisse voir les pigments jaunes et orangés."
+ },
+ {
+  "key": "nat-232",
+  "concept": "nature.plants.tomato_fruit",
+  "label": "La tomate",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Pour un botaniste, la tomate est un fruit.",
+  "answer": true,
+  "explanation": "Oui : elle se forme à partir de la fleur et contient les graines. En cuisine, on la range pourtant parmi les légumes."
+ },
+ {
+  "key": "nat-233",
+  "concept": "nature.plants.strawberry_achenes",
+  "label": "La fraise",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Les petits grains à la surface de la fraise sont ses vrais fruits.",
+  "answer": true,
+  "explanation": "Oui : ce sont des akènes, chacun contenant une graine. La partie rouge et charnue est le réceptacle de la fleur."
+ },
+ {
+  "key": "nat-234",
+  "concept": "nature.plants.bamboo_grass",
+  "label": "Le bambou",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le bambou est une herbe, pas un arbre.",
+  "answer": true,
+  "explanation": "Oui : c'est une graminée géante, de la même famille que le blé. Certaines espèces poussent de près d'un mètre par jour."
+ },
+ {
+  "key": "nat-235",
+  "concept": "nature.plants.tallest_tree",
+  "label": "L'arbre le plus haut",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel arbre détient le record de hauteur ?",
+  "options": [
+   "Un séquoia*",
+   "Un baobab",
+   "Un chêne",
+   "Un palmier"
+  ],
+  "explanation": "Un séquoia à feuilles d'if de Californie, surnommé Hyperion, mesure environ 116 m."
+ },
+ {
+  "key": "nat-236",
+  "concept": "nature.plants.cactus_water",
+  "label": "Le cactus",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où le cactus stocke-t-il son eau ?",
+  "options": [
+   "Dans sa tige*",
+   "Dans ses épines",
+   "Dans ses fleurs",
+   "Dans des bulles sous le sable"
+  ],
+  "explanation": "Sa tige charnue gonfle comme une éponge. Ses épines sont des feuilles transformées, qui limitent l'évaporation."
+ },
+ {
+  "key": "nat-237",
+  "concept": "nature.plants.deciduous",
+  "label": "Feuilles caduques",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment appelle-t-on les arbres qui perdent leurs feuilles en hiver ?",
+  "options": [
+   "Caducs*",
+   "Persistants",
+   "Résineux",
+   "Vivaces"
+  ],
+  "explanation": "On parle d'arbres à feuilles caduques (chêne, érable, hêtre). Les sapins, à feuillage persistant, gardent leurs aiguilles."
+ },
+ {
+  "key": "nat-238",
+  "concept": "nature.plants.tree_rings",
+  "label": "Âge d'un arbre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment connaître l'âge d'un arbre abattu ?",
+  "options": [
+   "En comptant ses cernes*",
+   "En mesurant sa hauteur",
+   "En comptant ses branches",
+   "En pesant son tronc"
+  ],
+  "explanation": "Chaque année, le tronc fabrique un anneau de bois : un cerne. On lit aussi dans leur épaisseur les années sèches ou humides."
+ },
+ {
+  "key": "nat-239",
+  "concept": "nature.plants.potato_tuber",
+  "label": "La pomme de terre",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Botaniquement, la pomme de terre est…",
+  "options": [
+   "Un tubercule*",
+   "Une racine",
+   "Un fruit",
+   "Une graine"
+  ],
+  "explanation": "C'est un renflement de tige souterraine qui stocke de l'amidon. Preuve : ses « yeux » sont des bourgeons."
+ },
+ {
+  "key": "nat-240",
+  "concept": "nature.plants.vanilla_orchid",
+  "label": "La vanille",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "La vanille est le fruit…",
+  "options": [
+   "D'une orchidée*",
+   "D'un arbre",
+   "D'un cactus",
+   "D'une fougère"
+  ],
+  "explanation": "La gousse de vanille est le fruit d'une orchidée grimpante originaire du Mexique. Hors de son pays d'origine, on la pollinise à la main."
+ },
+ {
+  "key": "nat-241",
+  "concept": "nature.plants.carnivorous",
+  "label": "Plante carnivore",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Laquelle de ces plantes est carnivore ?",
+  "options": [
+   "La dionée*",
+   "La fougère",
+   "Le lierre",
+   "L'ortie"
+  ],
+  "explanation": "La dionée, ou attrape-mouche, referme ses feuilles en une fraction de seconde sur les insectes qui touchent ses poils."
+ },
+ {
+  "key": "nat-242",
+  "concept": "nature.plants.fungi_not_plants",
+  "label": "Les champignons",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les champignons sont des plantes.",
+  "answer": false,
+  "explanation": "Non : ils forment un règne à part. Ils ne font pas de photosynthèse et sont, génétiquement, plus proches des animaux que des plantes."
+ },
+ {
+  "key": "nat-243",
+  "concept": "nature.plants.cocoa_origin",
+  "label": "Le cacaoyer",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "D'où le cacaoyer est-il originaire ?",
+  "options": [
+   "D'Amérique centrale et du Sud*",
+   "D'Afrique de l'Ouest",
+   "D'Asie du Sud-Est",
+   "D'Australie"
+  ],
+  "explanation": "Il vient d'Amérique tropicale, où les Mayas et les Aztèques buvaient déjà du cacao. Aujourd'hui, il est surtout cultivé en Afrique de l'Ouest."
+ },
+ {
+  "key": "tech-202",
+  "concept": "tech.computing.binary_1010",
+  "label": "Binaire",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien vaut 1010 écrit en binaire, en nombre décimal ?",
+  "answer": 10,
+  "explanation": "En binaire, les rangs valent 8, 4, 2, 1 : 1010 = 8 + 2 = 10."
+ },
+ {
+  "key": "tech-203",
+  "concept": "tech.computing.byte_values",
+  "label": "Valeurs d'un octet",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de valeurs différentes peut-on coder avec un octet ?",
+  "answer": 256,
+  "explanation": "8 bits, chacun à 0 ou 1 : 2⁸ = 256 valeurs, de 0 à 255."
+ },
+ {
+  "key": "tech-204",
+  "concept": "tech.computing.www",
+  "label": "WWW",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que signifie « WWW » ?",
+  "options": [
+   "World Wide Web*",
+   "World Wide Wireless",
+   "Web World Window",
+   "Wide Web Works"
+  ],
+  "explanation": "Le World Wide Web, la « toile d'araignée mondiale », a été conçu par Tim Berners-Lee au CERN à partir de 1989."
+ },
+ {
+  "key": "tech-205",
+  "concept": "tech.computing.cpu",
+  "label": "Le CPU",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans un ordinateur, le « CPU », c'est…",
+  "options": [
+   "Le processeur*",
+   "La mémoire vive",
+   "Le disque dur",
+   "La carte graphique"
+  ],
+  "explanation": "Central Processing Unit : le processeur exécute les instructions des programmes."
+ },
+ {
+  "key": "tech-206",
+  "concept": "tech.computing.ram_volatile",
+  "label": "Mémoire vive",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "La mémoire vive (RAM) garde ses données quand on éteint l'ordinateur.",
+  "answer": false,
+  "explanation": "Non : la RAM est volatile, elle se vide à l'extinction. Les fichiers durables sont sur le disque ou le SSD."
+ },
+ {
+  "key": "tech-208",
+  "concept": "tech.computing.apple_founders",
+  "label": "Fondation d'Apple",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Avec qui Steve Jobs a-t-il fondé Apple en 1976 ?",
+  "options": [
+   "Steve Wozniak*",
+   "Bill Gates",
+   "Paul Allen",
+   "Larry Page"
+  ],
+  "explanation": "Apple est née en 1976 de Steve Jobs et Steve Wozniak (avec Ronald Wayne, parti très vite). Wozniak a conçu l'Apple I."
+ },
+ {
+  "key": "tech-209",
+  "concept": "tech.computing.founders_pairs",
+  "label": "Fondateurs",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque entreprise à l'un de ses fondateurs.",
+  "pairs": [
+   [
+    "Microsoft",
+    "Bill Gates"
+   ],
+   [
+    "Amazon",
+    "Jeff Bezos"
+   ],
+   [
+    "Facebook",
+    "Mark Zuckerberg"
+   ],
+   [
+    "Google",
+    "Larry Page"
+   ]
+  ],
+  "explanation": "Microsoft (1975, avec Paul Allen), Amazon (1994), Facebook (2004), Google (1998, avec Sergey Brin)."
+ },
+ {
+  "key": "tech-210",
+  "concept": "tech.computing.linux",
+  "label": "Linux",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a créé le noyau Linux en 1991 ?",
+  "options": [
+   "Linus Torvalds*",
+   "Richard Stallman",
+   "Bill Gates",
+   "Steve Wozniak"
+  ],
+  "explanation": "Linus Torvalds, alors étudiant à Helsinki. Linux fait aujourd'hui tourner la plupart des serveurs et Android."
+ },
+ {
+  "key": "tech-211",
+  "concept": "tech.computing.python",
+  "label": "Python",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a créé le langage de programmation Python ?",
+  "options": [
+   "Guido van Rossum*",
+   "Linus Torvalds",
+   "Dennis Ritchie",
+   "James Gosling"
+  ],
+  "explanation": "Guido van Rossum, au début des années 1990. Le nom rend hommage aux Monty Python."
+ },
+ {
+  "key": "tech-213",
+  "concept": "tech.computing.turing_enigma",
+  "label": "Enigma",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel mathématicien a joué un rôle clé pour casser le code Enigma pendant la Seconde Guerre mondiale ?",
+  "options": [
+   "Alan Turing*",
+   "Albert Einstein",
+   "John von Neumann",
+   "Blaise Pascal"
+  ],
+  "explanation": "Alan Turing, à Bletchley Park, en s'appuyant sur les travaux des mathématiciens polonais. Il est aussi un père de l'informatique."
+ },
+ {
+  "key": "tech-214",
+  "concept": "tech.computing.moore_law",
+  "label": "Loi de Moore",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que prédit la « loi de Moore » ?",
+  "options": [
+   "Le nombre de transistors d'une puce double environ tous les deux ans*",
+   "La vitesse d'Internet double chaque année",
+   "Le prix des ordinateurs baisse de moitié chaque mois",
+   "Les batteries durent deux fois plus longtemps chaque année"
+  ],
+  "explanation": "Formulée par Gordon Moore (cofondateur d'Intel) en 1965, puis ajustée en 1975, elle s'est vérifiée pendant des décennies."
+ },
+ {
+  "key": "tech-215",
+  "concept": "tech.computing.https",
+  "label": "HTTPS",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que signifie le « S » de « HTTPS » ?",
+  "options": [
+   "Secure (sécurisé)*",
+   "Server (serveur)",
+   "Speed (vitesse)",
+   "System (système)"
+  ],
+  "explanation": "La connexion est chiffrée : les données échangées avec le site ne peuvent pas être lues en chemin."
+ },
+ {
+  "key": "tech-216",
+  "concept": "tech.computing.emoji_japan",
+  "label": "Les émojis",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quel pays sont nés les émojis ?",
+  "options": [
+   "Au Japon*",
+   "Aux États-Unis",
+   "En Corée du Sud",
+   "En Finlande"
+  ],
+  "explanation": "Les premiers émojis ont été dessinés au Japon en 1999 par Shigetaka Kurita pour un service de téléphonie mobile. « E-moji » signifie « image-caractère »."
+ },
+ {
+  "key": "tech-217",
+  "concept": "tech.computing.timeline",
+  "label": "Chronologie numérique",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe du plus ancien au plus récent.",
+  "items": [
+   "Le Minitel",
+   "Le World Wide Web",
+   "Le moteur de recherche Google",
+   "Le premier iPhone"
+  ],
+  "explanation": "Minitel (début des années 1980), Web (1989-1991), Google (1998), iPhone (2007)."
+ },
+ {
+  "key": "tech-218",
+  "concept": "tech.computing.azerty",
+  "label": "Clavier français",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle disposition de clavier est la plus utilisée en France ?",
+  "options": [
+   "AZERTY*",
+   "QWERTY",
+   "QWERTZ",
+   "DVORAK"
+  ],
+  "explanation": "L'AZERTY, dérivé du QWERTY américain. Le QWERTZ est courant en Allemagne et en Suisse."
+ },
+ {
+  "key": "tech-219",
+  "concept": "tech.computing.hertz",
+  "label": "Fréquence du processeur",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "En quelle unité mesure-t-on la fréquence d'un processeur ?",
+  "options": [
+   "En hertz (GHz)*",
+   "En octets (Go)",
+   "En watts (W)",
+   "En pixels (px)"
+  ],
+  "explanation": "Un processeur à 3 GHz effectue 3 milliards de cycles par seconde."
+ },
+ {
+  "key": "sport-201",
+  "concept": "sport.rules.sport_origins",
+  "label": "Berceaux des sports",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque sport à son pays d'origine.",
+  "pairs": [
+   [
+    "Judo",
+    "Japon"
+   ],
+   [
+    "Cricket",
+    "Angleterre"
+   ],
+   [
+    "Basket-ball",
+    "États-Unis"
+   ],
+   [
+    "Pétanque",
+    "France"
+   ]
+  ],
+  "explanation": "Le judo (Jigoro Kano, 1882), le cricket (Angleterre, XVIᵉ siècle), le basket-ball (James Naismith, 1891) et la pétanque (La Ciotat, 1907)."
+ },
+ {
+  "key": "sport-202",
+  "concept": "sport.rules.ice_hockey_origin",
+  "label": "Hockey sur glace",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel pays le hockey sur glace moderne est-il né ?",
+  "options": [
+   "Au Canada*",
+   "En Russie",
+   "En Suède",
+   "Aux États-Unis"
+  ],
+  "explanation": "Le premier match organisé s'est joué à Montréal en 1875."
+ },
+ {
+  "key": "sport-203",
+  "concept": "sport.rules.capoeira",
+  "label": "Capoeira",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays est originaire la capoeira, entre art martial et danse ?",
+  "options": [
+   "Du Brésil*",
+   "Du Portugal",
+   "De Cuba",
+   "D'Angola"
+  ],
+  "explanation": "Elle est née au Brésil chez les esclaves venus d'Afrique. Elle est inscrite au patrimoine immatériel de l'UNESCO."
+ },
+ {
+  "key": "sport-204",
+  "concept": "sport.rules.team_sizes",
+  "label": "Joueurs par équipe",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque sport au nombre de joueurs d'une équipe sur le terrain.",
+  "pairs": [
+   [
+    "Basket-ball",
+    "5"
+   ],
+   [
+    "Volley-ball",
+    "6"
+   ],
+   [
+    "Handball",
+    "7"
+   ],
+   [
+    "Football",
+    "11"
+   ]
+  ],
+  "explanation": "5 au basket, 6 au volley, 7 au handball (gardien compris) et 11 au football."
+ },
+ {
+  "key": "sport-206",
+  "concept": "sport.rules.tennis_scoring",
+  "label": "Points au tennis",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Au tennis, après 15 et 30, le point suivant se compte…",
+  "options": [
+   "40*",
+   "45",
+   "35",
+   "50"
+  ],
+  "explanation": "15, 30, puis 40. On pense que le « 45 » a été raccourci en 40, plus rapide à annoncer."
+ },
+ {
+  "key": "sport-207",
+  "concept": "sport.rules.polka_dot_jersey",
+  "label": "Maillot à pois",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Sur le Tour de France, qui porte le maillot à pois ?",
+  "options": [
+   "Le meilleur grimpeur*",
+   "Le leader du classement général",
+   "Le meilleur jeune",
+   "Le meilleur sprinteur"
+  ],
+  "explanation": "Le maillot à pois récompense le meilleur grimpeur. Le jaune va au leader, le vert au meilleur sprinteur, le blanc au meilleur jeune."
+ },
+ {
+  "key": "sport-208",
+  "concept": "sport.rules.birdie",
+  "label": "Birdie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Au golf, que signifie un « birdie » ?",
+  "options": [
+   "Un coup de moins que le par*",
+   "Un trou en un coup",
+   "Un coup de plus que le par",
+   "Deux coups de moins que le par"
+  ],
+  "explanation": "Birdie : 1 sous le par ; eagle : 2 sous le par ; bogey : 1 au-dessus."
+ },
+ {
+  "key": "sport-211",
+  "concept": "sport.rules.basket_height",
+  "label": "Hauteur du panier",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quelle hauteur est fixé un panier de basket ?",
+  "options": [
+   "3,05 m*",
+   "2,50 m",
+   "3,50 m",
+   "2,75 m"
+  ],
+  "explanation": "3,05 m, soit 10 pieds : la hauteur choisie par James Naismith en 1891."
+ },
+ {
+  "key": "sport-212",
+  "concept": "sport.rules.chess_pieces",
+  "label": "Pièces d'échecs",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de pièces a chaque joueur au début d'une partie d'échecs ?",
+  "answer": 16,
+  "explanation": "8 pions, 2 tours, 2 cavaliers, 2 fous, 1 dame et 1 roi."
+ },
+ {
+  "key": "sport-213",
+  "concept": "sport.rules.bolt_100m",
+  "label": "Record du 100 m",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le record du monde masculin du 100 m, détenu par Usain Bolt ?",
+  "options": [
+   "9,58 s*",
+   "9,69 s",
+   "9,79 s",
+   "9,85 s"
+  ],
+  "explanation": "9,58 s, établi aux championnats du monde de Berlin en 2009."
+ },
+ {
+  "key": "sport-215",
+  "concept": "sport.football.match_length",
+  "label": "Durée d'un match",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de minutes dure un match de football, hors arrêts de jeu et prolongations ?",
+  "answer": 90,
+  "explanation": "Deux mi-temps de 45 minutes.",
+  "unit": "minutes"
+ },
+ {
+  "key": "music-201",
+  "concept": "music.classical.scale_notes",
+  "label": "Notes de la gamme",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de notes différentes compte la gamme do, ré, mi… ?",
+  "answer": 7,
+  "explanation": "Do, ré, mi, fa, sol, la, si : sept notes. Le do suivant commence l'octave."
+ },
+ {
+  "key": "music-202",
+  "concept": "music.classical.staff_lines",
+  "label": "Lignes de la portée",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de lignes compte une portée musicale ?",
+  "answer": 5,
+  "explanation": "Cinq lignes. Les notes se placent sur les lignes ou dans les interlignes."
+ },
+ {
+  "key": "music-203",
+  "concept": "music.instruments.sax_woodwind",
+  "label": "Saxophone",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le saxophone fait partie de la famille des cuivres.",
+  "answer": false,
+  "explanation": "Non : bien qu'il soit en métal, c'est un bois, car le son naît d'une anche en roseau, comme pour la clarinette. Il a été inventé par Adolphe Sax."
+ },
+ {
+  "key": "music-204",
+  "concept": "music.classical.beethoven_deaf",
+  "label": "Beethoven",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Beethoven a composé une partie de ses œuvres alors qu'il était devenu sourd.",
+  "answer": true,
+  "explanation": "Oui : sa surdité s'aggrave dès la fin des années 1790. Il compose sa 9ᵉ symphonie en étant presque totalement sourd."
+ },
+ {
+  "key": "music-205",
+  "concept": "music.classical.beethoven_symphonies",
+  "label": "Symphonies de Beethoven",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de symphonies Beethoven a-t-il achevées ?",
+  "answer": 9,
+  "explanation": "Neuf. La dernière, avec son « Hymne à la joie », est devenue l'hymne de l'Union européenne."
+ },
+ {
+  "key": "music-206",
+  "concept": "music.classical.mozart_birthplace",
+  "label": "Mozart",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle ville est né Mozart ?",
+  "options": [
+   "Salzbourg*",
+   "Vienne",
+   "Prague",
+   "Munich"
+  ],
+  "explanation": "Wolfgang Amadeus Mozart est né à Salzbourg en 1756. Il a ensuite fait l'essentiel de sa carrière à Vienne."
+ },
+ {
+  "key": "music-207",
+  "concept": "music.classical.marseillaise",
+  "label": "La Marseillaise",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a composé La Marseillaise ?",
+  "options": [
+   "Rouget de Lisle*",
+   "Hector Berlioz",
+   "Jean-Baptiste Lully",
+   "Georges Bizet"
+  ],
+  "explanation": "Claude Joseph Rouget de Lisle, à Strasbourg en 1792. Chantée par les soldats marseillais montant à Paris, elle a pris leur nom."
+ },
+ {
+  "key": "music-209",
+  "concept": "music.classical.bolero",
+  "label": "Le Boléro",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a composé le Boléro ?",
+  "options": [
+   "Maurice Ravel*",
+   "Claude Debussy",
+   "Erik Satie",
+   "Georges Bizet"
+  ],
+  "explanation": "Maurice Ravel, en 1928 : un même thème répété avec un crescendo continu."
+ },
+ {
+  "key": "music-211",
+  "concept": "music.instruments.violin_strings",
+  "label": "Cordes du violon",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de cordes a un violon ?",
+  "answer": 4,
+  "explanation": "Quatre cordes, accordées sol, ré, la, mi."
+ },
+ {
+  "key": "music-212",
+  "concept": "music.popular.musicians_instruments",
+  "label": "Musiciens et instruments",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque musicien à son instrument.",
+  "pairs": [
+   [
+    "Jimi Hendrix",
+    "Guitare"
+   ],
+   [
+    "Miles Davis",
+    "Trompette"
+   ],
+   [
+    "Ringo Starr",
+    "Batterie"
+   ],
+   [
+    "Yo-Yo Ma",
+    "Violoncelle"
+   ]
+  ],
+  "explanation": "Hendrix a révolutionné la guitare électrique, Miles Davis le jazz à la trompette, Ringo Starr était le batteur des Beatles, Yo-Yo Ma est un grand violoncelliste."
+ },
+ {
+  "key": "music-213",
+  "concept": "music.classical.piano_meaning",
+  "label": "« Piano » en musique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Sur une partition, que signifie l'indication « piano » ?",
+  "options": [
+   "Doucement*",
+   "Lentement",
+   "Fort",
+   "Rapidement"
+  ],
+  "explanation": "Piano (p) veut dire « doucement », forte (f) « fort ». Le piano s'appelait d'ailleurs « pianoforte » : il peut jouer les deux."
+ }
+]

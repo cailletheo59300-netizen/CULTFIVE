@@ -1444,289 +1444,289 @@
   "origin": "import"
  },
  {
-  "key": "wd-births-Q1290-Q675-Q37103-Q1253",
-  "concept": "history.figures.births_set_14",
-  "label": "Naissances : Blaise Pascal, André-Marie Ampère, Florence Nightingale, Ban Ki-moon",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Blaise Pascal",
-   "André-Marie Ampère",
-   "Florence Nightingale",
-   "Ban Ki-moon"
-  ],
-  "explanation": "Blaise Pascal (1623), André-Marie Ampère (1775), Florence Nightingale (1820), Ban Ki-moon (1944).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q131018-Q50020-Q80900-Q44461",
-  "concept": "history.figures.births_set_4",
-  "label": "Naissances : François Rabelais, John Stuart Mill, Pearl Buck, Richard Dawkins",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "François Rabelais",
-   "John Stuart Mill",
-   "Pearl Buck",
-   "Richard Dawkins"
-  ],
-  "explanation": "François Rabelais (1494), John Stuart Mill (1806), Pearl Buck (1892), Richard Dawkins (1941).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q1339-Q16867-Q1512-Q892",
-  "concept": "history.figures.births_set_13",
-  "label": "Naissances : Jean-Sébastien Bach, Edgar Allan Poe, Robert Louis Stevenson, J. R. R. Tolkien",
+  "key": "wd-births-Q1339-Q47152-Q493-Q855252",
+  "concept": "history.figures.births_set_3",
+  "label": "Naissances : Jean-Sébastien Bach, Mary Shelley, Arthur Rimbaud, Rama IX",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
    "Jean-Sébastien Bach",
-   "Edgar Allan Poe",
-   "Robert Louis Stevenson",
-   "J. R. R. Tolkien"
-  ],
-  "explanation": "Jean-Sébastien Bach (1685), Edgar Allan Poe (1809), Robert Louis Stevenson (1850), J. R. R. Tolkien (1892).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q1401-Q79025-Q15948-Q5588",
-  "concept": "history.figures.births_set_8",
-  "label": "Naissances : Pétrarque, Walter Scott, Émile Durkheim, Frida Kahlo",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Pétrarque",
-   "Walter Scott",
-   "Émile Durkheim",
-   "Frida Kahlo"
-  ],
-  "explanation": "Pétrarque (1304), Walter Scott (1771), Émile Durkheim (1858), Frida Kahlo (1907).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q1402-Q33550-Q35648-Q855252",
-  "concept": "history.figures.births_set_6",
-  "label": "Naissances : Boccace, Frédéric II de Prusse, William Howard Taft, Rama IX",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Boccace",
-   "Frédéric II de Prusse",
-   "William Howard Taft",
+   "Mary Shelley",
+   "Arthur Rimbaud",
    "Rama IX"
   ],
-  "explanation": "Boccace (1313), Frédéric II de Prusse (1712), William Howard Taft (1857), Rama IX (1927).",
+  "explanation": "Jean-Sébastien Bach (1685), Mary Shelley (1797), Arthur Rimbaud (1854), Rama IX (1927).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q22670-Q81438-Q47478-Q989",
-  "concept": "history.figures.births_set_7",
-  "label": "Naissances : Friedrich Schiller, Walt Whitman, Vivekananda, Jean-Paul II",
+  "key": "wd-births-Q1399-Q255-Q49325-Q1276",
+  "concept": "history.figures.births_set_4",
+  "label": "Naissances : Nicolas Machiavel, Ludwig van Beethoven, Albert Schweitzer, Leonard Cohen",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
-   "Friedrich Schiller",
-   "Walt Whitman",
-   "Vivekananda",
-   "Jean-Paul II"
+   "Nicolas Machiavel",
+   "Ludwig van Beethoven",
+   "Albert Schweitzer",
+   "Leonard Cohen"
   ],
-  "explanation": "Friedrich Schiller (1759), Walt Whitman (1819), Vivekananda (1863), Jean-Paul II (1920).",
+  "explanation": "Nicolas Machiavel (1469), Ludwig van Beethoven (1770), Albert Schweitzer (1875), Leonard Cohen (1934).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q37388-Q6694-Q4605-Q4573",
-  "concept": "history.figures.births_set_9",
-  "label": "Naissances : Francis Bacon, Alexander von Humboldt, Sarah Bernhardt, Sean Connery",
+  "key": "wd-births-Q35900-Q23380-Q9106-Q8753",
+  "concept": "history.figures.births_set_15",
+  "label": "Naissances : Omar Khayyam, Jean-Auguste-Dominique Ingres, Dmitri Mendeleïev, Enrico Fermi",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
-   "Francis Bacon",
+   "Omar Khayyam",
+   "Jean-Auguste-Dominique Ingres",
+   "Dmitri Mendeleïev",
+   "Enrico Fermi"
+  ],
+  "explanation": "Omar Khayyam (1048), Jean-Auguste-Dominique Ingres (1780), Dmitri Mendeleïev (1834), Enrico Fermi (1901).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q36330-Q46096-Q79969-Q1203",
+  "concept": "history.figures.births_set_16",
+  "label": "Naissances : Giordano Bruno, Félix Mendelssohn Bartholdy, Emma Goldman, John Lennon",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Giordano Bruno",
+   "Félix Mendelssohn Bartholdy",
+   "Emma Goldman",
+   "John Lennon"
+  ],
+  "explanation": "Giordano Bruno (1548), Félix Mendelssohn Bartholdy (1809), Emma Goldman (1869), John Lennon (1940).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q36517-Q81438-Q40213-Q5603",
+  "concept": "history.figures.births_set_5",
+  "label": "Naissances : Francis Drake, Walt Whitman, William Butler Yeats, Andy Warhol",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Francis Drake",
+   "Walt Whitman",
+   "William Butler Yeats",
+   "Andy Warhol"
+  ],
+  "explanation": "Francis Drake (1540), Walt Whitman (1819), William Butler Yeats (1865), Andy Warhol (1928).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q39837-Q6101-Q5679-Q25973",
+  "concept": "history.figures.births_set_14",
+  "label": "Naissances : Averroès, Marco Polo, Lord Byron, Hermann Hesse",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Averroès",
+   "Marco Polo",
+   "Lord Byron",
+   "Hermann Hesse"
+  ],
+  "explanation": "Averroès (1126), Marco Polo (1254), Lord Byron (1788), Hermann Hesse (1877).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q41166-Q134958-Q33866-Q38757",
+  "concept": "history.figures.births_set_12",
+  "label": "Naissances : Jonathan Swift, Taras Chevtchenko, Theodore Roosevelt, Bertolt Brecht",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Jonathan Swift",
+   "Taras Chevtchenko",
+   "Theodore Roosevelt",
+   "Bertolt Brecht"
+  ],
+  "explanation": "Jonathan Swift (1667), Taras Chevtchenko (1814), Theodore Roosevelt (1858), Bertolt Brecht (1898).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q43347-Q9312-Q6694-Q1779",
+  "concept": "history.figures.births_set_6",
+  "label": "Naissances : Djalâl ad-Dîn Rûmî, Emmanuel Kant, Alexander von Humboldt, Louis Armstrong",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Djalâl ad-Dîn Rûmî",
+   "Emmanuel Kant",
    "Alexander von Humboldt",
-   "Sarah Bernhardt",
+   "Louis Armstrong"
+  ],
+  "explanation": "Djalâl ad-Dîn Rûmî (1207), Emmanuel Kant (1724), Alexander von Humboldt (1769), Louis Armstrong (1901).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q5598-Q11813-Q7351-Q23685",
+  "concept": "history.figures.births_set_8",
+  "label": "Naissances : Rembrandt, James Madison, Robert Schumann, Jimmy Carter",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Rembrandt",
+   "James Madison",
+   "Robert Schumann",
+   "Jimmy Carter"
+  ],
+  "explanation": "Rembrandt (1606), James Madison (1751), Robert Schumann (1810), Jimmy Carter (1924).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q676555-Q8772-Q4985-Q80900",
+  "concept": "history.figures.births_set_10",
+  "label": "Naissances : François d'Assise, Joseph Fourier, Herman Melville, Pearl Buck",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "François d'Assise",
+   "Joseph Fourier",
+   "Herman Melville",
+   "Pearl Buck"
+  ],
+  "explanation": "François d'Assise (1182), Joseph Fourier (1768), Herman Melville (1819), Pearl Buck (1892).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q7326-Q8962-Q7304-Q34851",
+  "concept": "history.figures.births_set_13",
+  "label": "Naissances : Hernán Cortés, James Prescott Joule, Gustav Mahler, Elizabeth Taylor",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Hernán Cortés",
+   "James Prescott Joule",
+   "Gustav Mahler",
+   "Elizabeth Taylor"
+  ],
+  "explanation": "Hernán Cortés (1485), James Prescott Joule (1818), Gustav Mahler (1860), Elizabeth Taylor (1932).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q7331-Q33477-Q47478-Q2494",
+  "concept": "history.figures.births_set_2",
+  "label": "Naissances : Ibn Battuta, Eugène Delacroix, Vivekananda, Benoît XVI",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Ibn Battuta",
+   "Eugène Delacroix",
+   "Vivekananda",
+   "Benoît XVI"
+  ],
+  "explanation": "Ibn Battuta (1304), Eugène Delacroix (1798), Vivekananda (1863), Benoît XVI (1927).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q7604-Q93343-Q42985-Q909",
+  "concept": "history.figures.births_set_1",
+  "label": "Naissances : Leonhard Euler, Percy Bysshe Shelley, Ivan Pavlov, Jorge Luis Borges",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Leonhard Euler",
+   "Percy Bysshe Shelley",
+   "Ivan Pavlov",
+   "Jorge Luis Borges"
+  ],
+  "explanation": "Leonhard Euler (1707), Percy Bysshe Shelley (1792), Ivan Pavlov (1849), Jorge Luis Borges (1899).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q8763-Q37621-Q164047-Q905",
+  "concept": "history.figures.births_set_7",
+  "label": "Naissances : Leonardo Fibonacci, Thomas Hobbes, Alexander Pope, Franz Kafka",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Leonardo Fibonacci",
+   "Thomas Hobbes",
+   "Alexander Pope",
+   "Franz Kafka"
+  ],
+  "explanation": "Leonardo Fibonacci (1170), Thomas Hobbes (1588), Alexander Pope (1688), Franz Kafka (1883).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q9294-Q5879-Q27645-Q7374",
+  "concept": "history.figures.births_set_11",
+  "label": "Naissances : Ibn Khaldoun, Johann Wolfgang von Goethe, Mikhaïl Bakounine, Alfred Hitchcock",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Ibn Khaldoun",
+   "Johann Wolfgang von Goethe",
+   "Mikhaïl Bakounine",
+   "Alfred Hitchcock"
+  ],
+  "explanation": "Ibn Khaldoun (1332), Johann Wolfgang von Goethe (1749), Mikhaïl Bakounine (1814), Alfred Hitchcock (1899).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q9438-Q183266-Q9327-Q4573",
+  "concept": "history.figures.births_set_9",
+  "label": "Naissances : Thomas d’Aquin, Samuel Johnson, Guy de Maupassant, Sean Connery",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Thomas d’Aquin",
+   "Samuel Johnson",
+   "Guy de Maupassant",
    "Sean Connery"
   ],
-  "explanation": "Francis Bacon (1561), Alexander von Humboldt (1769), Sarah Bernhardt (1844), Sean Connery (1930).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q3816-Q23441-Q231690-Q39803",
-  "concept": "history.figures.births_set_5",
-  "label": "Naissances : George Sand, Octave Mirbeau, Bhimrao Ramji Ambedkar, Mario Vargas Llosa",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "George Sand",
-   "Octave Mirbeau",
-   "Bhimrao Ramji Ambedkar",
-   "Mario Vargas Llosa"
-  ],
-  "explanation": "George Sand (1804), Octave Mirbeau (1848), Bhimrao Ramji Ambedkar (1891), Mario Vargas Llosa (1936).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q39607-Q47152-Q4700-Q392",
-  "concept": "history.figures.births_set_1",
-  "label": "Naissances : Antoine Lavoisier, Mary Shelley, Claude Debussy, Bob Dylan",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Antoine Lavoisier",
-   "Mary Shelley",
-   "Claude Debussy",
-   "Bob Dylan"
-  ],
-  "explanation": "Antoine Lavoisier (1743), Mary Shelley (1797), Claude Debussy (1862), Bob Dylan (1941).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q41568-Q5679-Q7304-Q132524",
-  "concept": "history.figures.births_set_12",
-  "label": "Naissances : Michel de Montaigne, Lord Byron, Gustav Mahler, Ayn Rand",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Michel de Montaigne",
-   "Lord Byron",
-   "Gustav Mahler",
-   "Ayn Rand"
-  ],
-  "explanation": "Michel de Montaigne (1533), Lord Byron (1788), Gustav Mahler (1860), Ayn Rand (1905).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q448-Q33477-Q12706-Q46795",
-  "concept": "history.figures.births_set_11",
-  "label": "Naissances : Denis Diderot, Eugène Delacroix, Maxime Gorki, Wangari Muta Maathai",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Denis Diderot",
-   "Eugène Delacroix",
-   "Maxime Gorki",
-   "Wangari Muta Maathai"
-  ],
-  "explanation": "Denis Diderot (1713), Eugène Delacroix (1798), Maxime Gorki (1868), Wangari Muta Maathai (1940).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q5580-Q35802-Q5879-Q2908",
-  "concept": "history.figures.births_set_3",
-  "label": "Naissances : Albrecht Dürer, Baruch Spinoza, Johann Wolfgang von Goethe, Antoine de Saint-Exupéry",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Albrecht Dürer",
-   "Baruch Spinoza",
-   "Johann Wolfgang von Goethe",
-   "Antoine de Saint-Exupéry"
-  ],
-  "explanation": "Albrecht Dürer (1471), Baruch Spinoza (1632), Johann Wolfgang von Goethe (1749), Antoine de Saint-Exupéry (1900).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q5682-Q38082-Q38203-Q34981",
-  "concept": "history.figures.births_set_15",
-  "label": "Naissances : Miguel de Cervantes, Lewis Carroll, Helen Keller, Isaac Asimov",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Miguel de Cervantes",
-   "Lewis Carroll",
-   "Helen Keller",
-   "Isaac Asimov"
-  ],
-  "explanation": "Miguel de Cervantes (1547), Lewis Carroll (1832), Helen Keller (1880), Isaac Asimov (1920).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q6101-Q307-Q91-Q9327",
-  "concept": "history.figures.births_set_10",
-  "label": "Naissances : Marco Polo, Galilée, Abraham Lincoln, Guy de Maupassant",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Marco Polo",
-   "Galilée",
-   "Abraham Lincoln",
-   "Guy de Maupassant"
-  ],
-  "explanation": "Marco Polo (1254), Galilée (1564), Abraham Lincoln (1809), Guy de Maupassant (1850).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q8963-Q41166-Q37030-Q57336",
-  "concept": "history.figures.births_set_16",
-  "label": "Naissances : Johannes Kepler, Jonathan Swift, Thomas Mann, Ali Khamenei",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Johannes Kepler",
-   "Jonathan Swift",
-   "Thomas Mann",
-   "Ali Khamenei"
-  ],
-  "explanation": "Johannes Kepler (1572), Jonathan Swift (1667), Thomas Mann (1875), Ali Khamenei (1939).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q9554-Q41513-Q127332-Q9204",
-  "concept": "history.figures.births_set_2",
-  "label": "Naissances : Martin Luther, William Blake, Charlotte Brontë, C. S. Lewis",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Martin Luther",
-   "William Blake",
-   "Charlotte Brontë",
-   "C. S. Lewis"
-  ],
-  "explanation": "Martin Luther (1483), William Blake (1757), Charlotte Brontë (1816), C. S. Lewis (1898).",
+  "explanation": "Thomas d’Aquin (1225), Samuel Johnson (1709), Guy de Maupassant (1850), Sean Connery (1930).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -1879,44 +1879,6 @@
    "XIVe siècle"
   ],
   "explanation": "Dante Alighieri, poète, homme politique et écrivain florentin, est né en 1265 et mort en 1321.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q1151",
-  "concept": "history.figures.century_hector_berlioz",
-  "label": "Époque de Hector Berlioz",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 47,
-  "prompt": "En quel siècle est né Hector Berlioz ?",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Hector Berlioz, compositeur et critique musical français, est né en 1803 et mort en 1869.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q1178",
-  "concept": "history.figures.century_maurice_ravel",
-  "label": "Époque de Maurice Ravel",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 50,
-  "prompt": "Maurice Ravel est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Maurice Ravel, compositeur français, est né en 1875 et mort en 1937.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -2259,25 +2221,6 @@
    "XIXe siècle"
   ],
   "explanation": "Vitus Béring, explorateur danois, est né en 1681 et mort en 1741.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q1290",
-  "concept": "history.figures.century_blaise_pascal",
-  "label": "Époque de Blaise Pascal",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 43,
-  "prompt": "À quel siècle remonte la naissance de Blaise Pascal ?",
-  "options": [
-   "XVe siècle",
-   "XVIe siècle",
-   "XVIIe siècle*",
-   "XVIIIe siècle"
-  ],
-  "explanation": "Blaise Pascal, mathématicien, physicien, inventeur, écrivain et philosophe chrétien français, est né en 1623 et mort en 1662.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -5722,25 +5665,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cent-Q4700",
-  "concept": "history.figures.century_claude_debussy",
-  "label": "Époque de Claude Debussy",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 47,
-  "prompt": "Claude Debussy est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Claude Debussy, compositeur français, est né en 1862 et mort en 1918.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cent-Q47152",
   "concept": "history.figures.century_mary_shelley",
   "label": "Époque de Mary Shelley",
@@ -6344,25 +6268,6 @@
    "XXe siècle"
   ],
   "explanation": "Frank Lloyd Wright, architecte et concepteur américain, est né en 1867 et mort en 1959.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q56158",
-  "concept": "history.figures.century_georges_bizet",
-  "label": "Époque de Georges Bizet",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 50,
-  "prompt": "À quel siècle remonte la naissance de Georges Bizet ?",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Georges Bizet, compositeur français, est né en 1838 et mort en 1875.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"

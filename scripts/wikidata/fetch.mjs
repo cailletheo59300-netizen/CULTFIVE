@@ -106,6 +106,45 @@ SELECT ?w ?wFr ?author ?authorFr ?authorDesc ?date ?sl WHERE {
   OPTIONAL { ?w wdt:P577 ?date }
   OPTIONAL { ?author schema:description ?authorDesc FILTER(lang(?authorDesc) = "fr") }
 }`,
+  // ── Domaines « petits » (0.6) : musique, sport, technologie
+  instruments: `
+SELECT ?i ?iFr ?fam ?sl WHERE {
+  VALUES ?fam { wd:Q1798603 wd:Q173453 wd:Q133163 wd:Q52954 }
+  ?i wdt:P279+ ?fam; wikibase:sitelinks ?sl FILTER(?sl >= 40)
+  ${label('i')}
+}`,
+  bands: `
+SELECT ?b ?bFr ?country ?countryFr ?start ?sl WHERE {
+  ?b wdt:P31 wd:Q215380; wikibase:sitelinks ?sl FILTER(?sl >= 50)
+  ?b wdt:P495 ?country. ${label('country')}
+  OPTIONAL { ?b wdt:P571 ?start }
+  ${label('b')}
+}`,
+  worldcups: `
+SELECT ?e ?eFr ?date ?host ?hostFr ?winner ?winnerFr WHERE {
+  ?e wdt:P3450 wd:Q19317. ${label('e')}
+  OPTIONAL { ?e wdt:P580 ?date }
+  OPTIONAL { ?e wdt:P17 ?host. ${label('host')} }
+  OPTIONAL { ?e wdt:P1346 ?winner. ${label('winner')} }
+}`,
+  olympics: `
+SELECT ?e ?eFr ?cls ?date ?city ?cityFr ?country ?countryFr WHERE {
+  VALUES ?cls { wd:Q159821 wd:Q82414 }
+  ?e wdt:P3450 ?cls. ${label('e')}
+  OPTIONAL { ?e wdt:P580 ?date }
+  OPTIONAL { ?e wdt:P276 ?city. ${label('city')} }
+  OPTIONAL { ?e wdt:P17 ?country. ${label('country')} }
+}`,
+  inventions: `
+SELECT DISTINCT ?i ?iFr ?inv ?invFr ?invDesc ?date ?sl WHERE {
+  ?i wdt:P61 ?inv; wikibase:sitelinks ?sl FILTER(?sl >= 40)
+  ?inv wdt:P31 wd:Q5.
+  ?i wdt:P31|wdt:P279 ?cls. ?cls wdt:P279* ?root.
+  VALUES ?root { wd:Q39546 wd:Q1183543 wd:Q11019 wd:Q42889 wd:Q1414135 wd:Q49848 wd:Q2095 }
+  ${label('i')} ${label('inv')}
+  OPTIONAL { ?inv schema:description ?invDesc FILTER(lang(?invDesc) = "fr") }
+  OPTIONAL { ?i wdt:P575 ?date }
+}`,
 };
 
 // Node n'utilise pas le proxy HTTPS de l'environnement : on passe par curl.

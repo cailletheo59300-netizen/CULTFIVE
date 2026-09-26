@@ -40,7 +40,7 @@ const curatedText = readdirSync(join(root, 'content/questions'))
   .map((q) => `${q.prompt} ${(q.options ?? []).join(' ')}`.toLowerCase());
 const alreadyCovered = (needle) => curatedText.some((t) => t.includes(needle.toLowerCase()));
 
-const out = { geography: [], history: [], science: [], arts: [], cinema: [] };
+const out = { geography: [], history: [], science: [], arts: [], cinema: [], music: [], sport: [], tech: [] };
 const stats = {};
 // Famille = « même moule » de question. Le serveur évite d'en enchaîner deux de la même famille.
 const FAMILY = {
@@ -49,6 +49,9 @@ const FAMILY = {
   'classement naissances': 'person_era', 'bataille': 'battle', 'symbole chimique': 'element', 'élément du symbole': 'element',
   'livre auteur': 'book', 'tableau peintre': 'painting', 'film réalisateur': 'film', 'carte': 'map', 'monnaie': 'currency',
   'langue': 'language', 'unesco': 'monument', 'silhouette': 'shape',
+  'famille instrument': 'instrument', 'groupe pays': 'band', 'groupe décennie': 'band',
+  'coupe du monde vainqueur': 'world_cup', 'coupe du monde hôte': 'world_cup', 'jo ville': 'olympics',
+  'invention inventeur': 'invention', 'inventeur invention': 'invention',
 };
 /** Plusieurs formulations pour un même modèle, choisies de façon stable. */
 const vary = (seed, variants) => variants[Math.floor(rng(`vary-${seed}`)() * variants.length)];
@@ -516,6 +519,214 @@ works('films', 'cinema', 'film réalisateur', 'cinema.directors.film',
       prompt: vary(`shape-${c.id}`, ['Quel pays a cette forme ?', 'À quel pays correspond cette silhouette ?']),
       options: [`${c.name}*`, ...others], shape: { paths: shape.paths },
       explanation: `C'est la silhouette ${f.of} (${cont}), sans ses territoires éloignés. Contours : Natural Earth.`,
+    });
+  }
+}
+
+
+// ─────────────── Musique : familles d'instruments
+{
+  const FAM = { Q1798603: 'à cordes', Q173453: 'à vent', Q133163: 'de percussion' };
+  // Hors sujet ou classement discutable (instruments à clavier, catégories, marques, objets).
+  const SKIP = new Set(['instrument à cordes frottées', 'instrument à cordes pincées', 'cuivre', 'bois', 'diapason', 'Fender Stratocaster',
+    'harmonica', 'accordéon', 'bandonéon', 'piano', 'guimbarde', 'cloche', 'sifflet', 'vuvuzela', 'chophar', 'guitare acoustique',
+    'cymbalum', 'guitare classique', 'guitare électrique', 'guitare basse', 'batterie', 'orgue de Barbarie', 'tin whistle']);
+  const fams = new Map();
+  for (const r of load('instruments').rows) {
+    if (/^Q\d+$/.test(r.iFr)) continue;
+    fams.set(r.iFr, new Set([...(fams.get(r.iFr) ?? []), r.fam]));
+  }
+  const sl = new Map(load('instruments').rows.map((r) => [r.iFr, Number(r.sl)]));
+  for (const [name, set] of fams) {
+    if (SKIP.has(name) || set.size !== 1 || !FAM[[...set][0]]) continue;
+    const fam = FAM[[...set][0]];
+    const FEM = ['guitare', 'harpe', 'flûte', 'harpe', 'contrebasse', 'clarinette', 'trompette', 'mandoline', 'caisse claire', 'grosse caisse', 'cornemuse', 'viole de gambe',
+      'flûte à bec', 'flûte de Pan', 'lyre', 'vielle à roue', 'maraca', 'bandoura', 'dombra', 'cithare', 'kora', 'balalaïka'];
+    const H_ASPIRE = ['harpe', 'hautbois'];
+    const PLURAL = ['timbales', 'castagnettes'];
+    const art = PLURAL.includes(name) ? 'Les ' : /^[aeiouéèêh]/i.test(name) && !H_ASPIRE.includes(name) ? "L'" : FEM.includes(name) ? 'La ' : 'Le ';
+    const verb = art === 'Les ' ? 'sont des instruments' : 'est un instrument';
+    add('music', 'famille instrument', {
+      key: `wd-instr-${slug(name)}`, concept: `music.instruments.family_${slug(name)}`, label: `Famille : ${name}`, type: 'mcq',
+      difficulty: Math.round(clamp(100 - 12 * Math.log(sl.get(name) ?? 40) + 8, 18, 70)),
+      prompt: `${art}${name} ${verb}…`,
+      options: ['à cordes', 'à vent', 'de percussion'].map((f) => (f === fam ? `${f}*` : f)).concat(['à clavier']),
+      keep_order: true,
+      explanation: `${art}${name} ${verb} ${fam}${fam === 'à vent' ? ' : le son naît du souffle' : fam === 'à cordes' ? ' : le son naît de cordes pincées, frottées ou frappées' : ' : le son naît d\'un choc ou d\'une secousse'}.`,
+    });
+  }
+}
+
+// ─────────────── Musique : groupes → pays, décennie de formation
+{
+  const NORMALIZE = { Angleterre: 'Royaume-Uni', 'Écosse': 'Royaume-Uni', "Allemagne de l'Ouest": 'Allemagne' };
+  const bands = new Map();
+  for (const r of load('bands').rows) {
+    if (/^Q\d+$/.test(r.bFr) || Number(r.sl) < 55) continue;
+    const b = bands.get(r.b) ?? { id: r.b, name: r.bFr, countries: new Set(), year: yearOf(r.start), sl: Number(r.sl) };
+    b.countries.add(NORMALIZE[r.countryFr] ?? r.countryFr);
+    bands.set(r.b, b);
+  }
+  const list = [...bands.values()].filter((b) => b.countries.size === 1 && !['Union soviétique'].includes([...b.countries][0]));
+  const COUNTRIES = ['États-Unis', 'Royaume-Uni', 'Suède', 'Allemagne', 'Canada', 'Australie', 'Irlande', 'France', 'Japon', 'Corée du Sud', 'Finlande', 'Norvège', 'Italie', 'Pays-Bas', 'Brésil'];
+  const NEAR = { 'États-Unis': ['Royaume-Uni', 'Canada', 'Australie'], 'Royaume-Uni': ['États-Unis', 'Irlande', 'Australie'],
+    Canada: ['États-Unis', 'Royaume-Uni', 'Australie'], Australie: ['Royaume-Uni', 'Nouvelle-Zélande', 'États-Unis'], Irlande: ['Royaume-Uni', 'États-Unis', 'Écosse'],
+    'Suède': ['Norvège', 'Danemark', 'Finlande'], 'Norvège': ['Suède', 'Danemark', 'Finlande'], Finlande: ['Suède', 'Norvège', 'Danemark'],
+    'Corée du Sud': ['Japon', 'Chine', 'Taïwan'], Japon: ['Corée du Sud', 'Chine', 'États-Unis'], Allemagne: ['Autriche', 'Pays-Bas', 'Suède'] };
+  for (const b of list) {
+    const country = [...b.countries][0];
+    if (alreadyCovered(b.name)) continue;
+    const rand = rng(`band-${b.id}`);
+    const others = (NEAR[country] ?? shuffle(COUNTRIES.filter((c) => c !== country), rand)).filter((c) => c !== country).slice(0, 3);
+    if (!COUNTRIES.includes(country) && !NEAR[country]) continue;
+    add('music', 'groupe pays', {
+      key: `wd-band-${b.id}`, concept: `music.popular.band_${slug(b.name)}_${b.id.toLowerCase()}`, label: `Groupe ${b.name}`, type: 'mcq',
+      difficulty: Math.round(clamp(100 - 12 * Math.log(b.sl) + 14, 25, 80)),
+      prompt: vary(b.id, [`De quel pays vient le groupe ${b.name} ?`, `Le groupe ${b.name} est originaire de quel pays ?`]),
+      options: [`${country}*`, ...others],
+      explanation: `${b.name} est un groupe originaire ${countryForms(country).of}.`,
+    });
+    if (b.year && b.year >= 1950 && b.sl >= 80) {
+      const d = Math.floor(b.year / 10) * 10;
+      const decades = [d - 20, d - 10, d, d + 10, d + 20].filter((x) => x >= 1950 && x <= 2020);
+      const pick = shuffle(decades.filter((x) => x !== d), rng(`bandd-${b.id}`)).slice(0, 3);
+      add('music', 'groupe décennie', {
+        key: `wd-bandd-${b.id}`, concept: `music.popular.band_${slug(b.name)}_${b.id.toLowerCase()}`, label: `Groupe ${b.name}`, type: 'mcq',
+        keep_order: true, difficulty: Math.round(clamp(100 - 12 * Math.log(b.sl) + 22, 30, 80)),
+        prompt: `Dans quelle décennie le groupe ${b.name} s'est-il formé ?`,
+        options: [...pick, d].sort((a, b2) => a - b2).map((x) => `Années ${x}${x === d ? '*' : ''}`),
+        explanation: `${b.name} s'est formé en ${b.year}.`,
+      });
+    }
+  }
+}
+
+// ─────────────── Sport : Coupe du monde de football (éditions jouées jusqu'en 2022)
+{
+  const eds = new Map();
+  for (const r of load('worldcups').rows) {
+    const m = /^Coupe du monde de football (\d{4})$/.exec(r.eFr);
+    if (!m || Number(m[1]) > 2022) continue;
+    const e = eds.get(m[1]) ?? { year: Number(m[1]), hosts: new Set(), winners: new Set() };
+    if (r.hostFr) e.hosts.add(r.hostFr === 'Royaume-Uni' && m[1] === '1966' ? 'Angleterre' : r.hostFr);
+    if (r.winnerFr) e.winners.add(r.winnerFr.replace(/^équipe (d'|de |du |des )/, (x) => '').replace(/ de football$/, ''));
+    eds.set(m[1], e);
+  }
+  const team = (w) => ({ Uruguay: 'Uruguay', Italie: 'Italie', Allemagne: 'Allemagne', Brésil: 'Brésil', Angleterre: 'Angleterre', Argentine: 'Argentine',
+    France: 'France', Espagne: 'Espagne' }[w] ?? w);
+  const list = [...eds.values()].filter((e) => e.winners.size === 1 && e.hosts.size >= 1).sort((a, b) => a.year - b.year);
+  const CONTENDERS = ['Brésil', 'Allemagne', 'Italie', 'Argentine', 'France', 'Uruguay', 'Angleterre', 'Espagne', 'Pays-Bas', 'Croatie', 'Hongrie', 'Tchécoslovaquie', 'Suède'];
+  const hostsText = (e) => [...e.hosts].join(' et ');
+  for (const e of list) {
+    const winner = team([...e.winners][0]);
+    const rand = rng(`wc-${e.year}`);
+    const others = shuffle(CONTENDERS.filter((c) => c !== winner), rand).slice(0, 3);
+    const recent = e.year >= 1990;
+    add('sport', 'coupe du monde vainqueur', {
+      key: `wd-wcw-${e.year}`, concept: `sport.football.world_cup_${e.year}`, label: `Coupe du monde ${e.year}`, type: 'mcq',
+      difficulty: e.year === 2018 || e.year === 1998 || e.year === 2022 ? 22 : recent ? 42 : 62,
+      prompt: vary(`wc-${e.year}`, [`Quelle équipe a remporté la Coupe du monde de football ${e.year} ?`, `Qui a gagné la Coupe du monde de football ${e.year} ?`]),
+      options: [`${winner}*`, ...others],
+      explanation: `En ${e.year}, la Coupe du monde, organisée par ${[...e.hosts].map((h) => countryForms(h).the).join(' et ')}, a été remportée par ${countryForms(winner).the}.`,
+    });
+    if (e.hosts.size === 1) {
+      const host = [...e.hosts][0];
+      const hostPool = [...new Set(list.flatMap((x) => [...x.hosts]))].filter((h) => h !== host);
+      const nearHosts = shuffle(hostPool, rng(`wch-${e.year}`)).slice(0, 3);
+      add('sport', 'coupe du monde hôte', {
+        key: `wd-wch-${e.year}`, concept: `sport.football.world_cup_host_${e.year}`, label: `Pays hôte ${e.year}`, type: 'mcq',
+        difficulty: e.year >= 1998 ? 38 : 60,
+        prompt: `Quel pays a accueilli la Coupe du monde de football ${e.year} ?`,
+        options: [`${host}*`, ...nearHosts],
+        explanation: `La Coupe du monde ${e.year} s'est jouée ${countryForms(host).in} ; elle a été remportée par ${countryForms(winner).the}.`,
+      });
+    }
+  }
+}
+
+// ─────────────── Sport : villes des Jeux olympiques (table relue : Wikidata mélange villes et stades)
+{
+  const SUMMER = { 1896: 'Athènes', 1900: 'Paris', 1904: 'Saint-Louis', 1908: 'Londres', 1912: 'Stockholm', 1920: 'Anvers', 1924: 'Paris',
+    1928: 'Amsterdam', 1932: 'Los Angeles', 1936: 'Berlin', 1948: 'Londres', 1952: 'Helsinki', 1956: 'Melbourne', 1960: 'Rome', 1964: 'Tokyo',
+    1968: 'Mexico', 1972: 'Munich', 1976: 'Montréal', 1980: 'Moscou', 1984: 'Los Angeles', 1988: 'Séoul', 1992: 'Barcelone', 1996: 'Atlanta',
+    2000: 'Sydney', 2004: 'Athènes', 2008: 'Pékin', 2012: 'Londres', 2016: 'Rio de Janeiro', 2020: 'Tokyo', 2024: 'Paris' };
+  const WINTER = { 1924: 'Chamonix', 1928: 'Saint-Moritz', 1932: 'Lake Placid', 1936: 'Garmisch-Partenkirchen', 1948: 'Saint-Moritz', 1952: 'Oslo',
+    1956: "Cortina d'Ampezzo", 1960: 'Squaw Valley', 1964: 'Innsbruck', 1968: 'Grenoble', 1972: 'Sapporo', 1976: 'Innsbruck', 1980: 'Lake Placid',
+    1984: 'Sarajevo', 1988: 'Calgary', 1992: 'Albertville', 1994: 'Lillehammer', 1998: 'Nagano', 2002: 'Salt Lake City', 2006: 'Turin',
+    2010: 'Vancouver', 2014: 'Sotchi', 2018: 'Pyeongchang', 2022: 'Pékin' };
+  // Contrôle croisé : chaque édition doit exister dans Wikidata avec ce lieu ou ce pays.
+  const wd = load('olympics').rows;
+  const seen = new Set(wd.filter((r) => r.date).map((r) => `${/hiver/.test(r.eFr) ? 'W' : 'S'}${yearOf(r.date)}`));
+  for (const [season, table] of [['S', SUMMER], ['W', WINTER]]) {
+    const years = Object.keys(table).map(Number);
+    for (const y of years) {
+      if (!seen.has(`${season}${y}`)) continue;
+      const city = table[y];
+      if (y < 1948 && season === 'W') continue;
+      const nearby = years.filter((x) => x !== y && table[x] !== city).sort((a, b) => Math.abs(a - y) - Math.abs(b - y));
+      const others = [...new Set(nearby.map((x) => table[x]))].slice(0, 3);
+      const label = season === 'S' ? "d'été" : "d'hiver";
+      const famous = season === 'S' && y >= 1984;
+      add('sport', 'jo ville', {
+        key: `wd-jo-${season}${y}`, concept: `sport.olympics.host_${season === 'S' ? 'summer' : 'winter'}_${y}`, label: `JO ${label} ${y}`, type: 'mcq',
+        difficulty: y === 2024 ? 12 : famous ? 38 : season === 'S' ? 58 : 66,
+        prompt: vary(`jo-${season}${y}`, [`Quelle ville a accueilli les Jeux olympiques ${label} de ${y} ?`, `Les Jeux olympiques ${label} de ${y} se sont tenus à…`]),
+        options: [`${city}*`, ...others],
+        explanation: `Les Jeux olympiques ${label} de ${y} ont eu lieu à ${city}.${[...years].filter((x) => x !== y && table[x] === city).length ? ` La ville les a aussi accueillis en ${years.filter((x) => x !== y && table[x] === city).join(' et ')}.` : ''}`,
+      });
+    }
+  }
+}
+
+// ─────────────── Technologie : inventions (liste relue : l'attribution Wikidata est parfois discutable)
+{
+  // Les inventions qui portent le nom de leur inventeur (moteur Diesel, cage de Faraday…) sont écartées : réponse donnée.
+  const KEEP = new Set(['clarinette', 'pile électrique', 'phonographe', 'gramophone', 'lave-vaisselle',
+    'souris', 'courrier électronique', 'grande roue', 'gyroscope', 'dynamite', 'presse typographique', 'baromètre',
+    'paratonnerre', 'stéthoscope', 'téléphone mobile', 'fermeture autoagrippante', 'machine à écrire',
+    'four à micro-ondes', 'aéroglisseur', 'épingle de sûreté', 'lampe néon', 'aspirateur', 'Bluetooth', 'code QR', 'nouilles instantanées',
+    'télescope', 'feu de circulation', 'fermeture éclair', 'synthétiseur',
+    'compteur Geiger', 'tube cathodique', 'radar', 'lampe à incandescence', 'turboréacteur', 'téléphone', 'code Morse']);
+  // Plusieurs inventeurs revendiqués : on ne pose pas « qui a inventé ».
+  const byItem = new Map();
+  for (const r of load('inventions').rows) {
+    if (!KEEP.has(r.iFr)) continue;
+    const it = byItem.get(r.i) ?? { id: r.i, name: r.iFr, inventors: new Map(), year: null, sl: Number(r.sl) };
+    // Une description qui cite l'invention donnerait la réponse.
+    const desc = r.invDesc && cleanDesc(r.invDesc).length <= 60 && !/invent|pionnier/i.test(r.invDesc) && !r.invDesc.toLowerCase().includes(r.iFr.toLowerCase()) ? cleanDesc(r.invDesc) : null;
+    it.inventors.set(r.inv, { name: r.invFr, desc });
+    const y = yearOf(r.date);
+    if (y && (!it.year || y < it.year)) it.year = y;
+    byItem.set(r.i, it);
+  }
+  const single = [...byItem.values()].filter((it) => it.inventors.size === 1);
+  const inventorPool = [...new Set(single.map((it) => [...it.inventors.values()][0].name))];
+  const YEARS = { 'pile électrique': 1800, phonographe: 1877, 'moteur Diesel': 1893, dynamite: 1867, 'presse typographique': 1450, baromètre: 1643,
+    paratonnerre: 1752, stéthoscope: 1816, 'téléphone mobile': 1973, 'four à micro-ondes': 1945, 'aéroglisseur': 1955, 'courrier électronique': 1971,
+    'grande roue': 1893, gyroscope: 1852, 'fermeture éclair': 1893, 'code QR': 1994, 'nouilles instantanées': 1958, pascaline: 1642, 'aspirateur': 1901 };
+  const def = (name) => (['HTML', 'Bluetooth'].includes(name) ? `le ${name}` : /^[aeiouéèêh]/i.test(name) ? `l'${name}` : ['pile électrique', 'pascaline', 'souris', 'grande roue', 'lentille de Fresnel', 'dynamite',
+    'presse typographique', 'machine à écrire', 'épingle de sûreté', 'lampe néon', 'fermeture autoagrippante', 'fermeture éclair', 'cage de Faraday', 'clarinette',
+    'lampe à incandescence'].includes(name) ? `la ${name}` : ['nouilles instantanées'].includes(name) ? `les ${name}` : `le ${name}`);
+  for (const it of single) {
+    const inv = [...it.inventors.values()][0];
+    const rand = rng(`inv-${it.id}`);
+    const others = shuffle(inventorPool.filter((n) => n !== inv.name), rand).slice(0, 3);
+    const year = YEARS[it.name] ?? null;
+    const what = def(it.name);
+    add('tech', 'invention inventeur', {
+      key: `wd-inv-${it.id}`, concept: `tech.inventions.${slug(it.name)}`, label: `Inventeur : ${it.name}`, type: 'mcq',
+      difficulty: Math.round(clamp(100 - 12 * Math.log(it.sl) + 12, 25, 80)),
+      prompt: vary(it.id, [`Qui a inventé ${what} ?`, `À qui doit-on ${what} ?`]),
+      options: [`${inv.name}*`, ...others],
+      explanation: `On doit ${what} à ${inv.name}${inv.desc ? ` (${inv.desc})` : ''}${year ? `, vers ${year}` : ''}.`,
+    });
+    const otherItems = shuffle(single.filter((o) => o.id !== it.id), rng(`invr-${it.id}`)).slice(0, 3).map((o) => cap(o.name));
+    add('tech', 'inventeur invention', {
+      key: `wd-invr-${it.id}`, concept: `tech.inventions.${slug(it.name)}`, label: `Inventeur : ${it.name}`, type: 'mcq',
+      difficulty: Math.round(clamp(100 - 12 * Math.log(it.sl) + 8, 22, 78)),
+      prompt: `Qu'a inventé ${inv.name}${inv.desc ? `, ${inv.desc},` : ''} ?`.replace(', ?', ' ?'),
+      options: [`${cap(it.name)}*`, ...otherItems],
+      explanation: `${inv.name} a inventé ${what}${year ? ` vers ${year}` : ''}.`,
     });
   }
 }

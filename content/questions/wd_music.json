@@ -1,0 +1,3470 @@
+[
+ {
+  "key": "wd-band-Q102385",
+  "concept": "music.popular.band_the_pussycat_dolls_q102385",
+  "label": "Groupe The Pussycat Dolls",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe The Pussycat Dolls est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The Pussycat Dolls est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q106648",
+  "concept": "music.popular.band_fleetwood_mac_q106648",
+  "label": "Groupe Fleetwood Mac",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Fleetwood Mac est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Fleetwood Mac est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q10708",
+  "concept": "music.popular.band_red_hot_chili_peppers_q10708",
+  "label": "Groupe Red Hot Chili Peppers",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Le groupe Red Hot Chili Peppers est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Red Hot Chili Peppers est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q11036",
+  "concept": "music.popular.band_the_rolling_stones_q11036",
+  "label": "Groupe The Rolling Stones",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le groupe The Rolling Stones est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "The Rolling Stones est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q11647",
+  "concept": "music.popular.band_nine_inch_nails_q11647",
+  "label": "Groupe Nine Inch Nails",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe Nine Inch Nails est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Nine Inch Nails est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q11649",
+  "concept": "music.popular.band_nirvana_q11649",
+  "label": "Groupe Nirvana",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "De quel pays vient le groupe Nirvana ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Nirvana est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q11895",
+  "concept": "music.popular.band_guns_n_roses_q11895",
+  "label": "Groupe Guns N’ Roses",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le groupe Guns N’ Roses est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Guns N’ Roses est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q124179",
+  "concept": "music.popular.band_kiss_q124179",
+  "label": "Groupe Kiss",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Le groupe Kiss est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Kiss est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q125603",
+  "concept": "music.popular.band_the_clash_q125603",
+  "label": "Groupe The Clash",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "De quel pays vient le groupe The Clash ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "The Clash est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q126826",
+  "concept": "music.popular.band_aerosmith_q126826",
+  "label": "Groupe Aerosmith",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "De quel pays vient le groupe Aerosmith ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Aerosmith est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q134233",
+  "concept": "music.popular.band_jonas_brothers_q134233",
+  "label": "Groupe Jonas Brothers",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe Jonas Brothers est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Jonas Brothers est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q134541",
+  "concept": "music.popular.band_black_eyed_peas_q134541",
+  "label": "Groupe Black Eyed Peas",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe Black Eyed Peas est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Black Eyed Peas est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q13580495",
+  "concept": "music.popular.band_bts_q13580495",
+  "label": "Groupe BTS",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Le groupe BTS est originaire de quel pays ?",
+  "options": [
+   "Corée du Sud*",
+   "Japon",
+   "Chine",
+   "Taïwan"
+  ],
+  "explanation": "BTS est un groupe originaire de la Corée du Sud.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q136591",
+  "concept": "music.popular.band_zz_top_q136591",
+  "label": "Groupe ZZ Top",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe ZZ Top ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "ZZ Top est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q1438730",
+  "concept": "music.popular.band_onerepublic_q1438730",
+  "label": "Groupe OneRepublic",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe OneRepublic est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "OneRepublic est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q146027",
+  "concept": "music.popular.band_one_direction_q146027",
+  "label": "Groupe One Direction",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "De quel pays vient le groupe One Direction ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "One Direction est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q151012",
+  "concept": "music.popular.band_genesis_q151012",
+  "label": "Groupe Genesis",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Genesis est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Genesis est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q153056",
+  "concept": "music.popular.band_destiny_s_child_q153056",
+  "label": "Groupe Destiny's Child",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Destiny's Child est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Destiny's Child est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q156298",
+  "concept": "music.popular.band_boney_m_q156298",
+  "label": "Groupe Boney M.",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Boney M. ?",
+  "options": [
+   "Allemagne*",
+   "Autriche",
+   "Pays-Bas",
+   "Suède"
+  ],
+  "explanation": "Boney M. est un groupe originaire de l'Allemagne.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q157041",
+  "concept": "music.popular.band_the_offspring_q157041",
+  "label": "Groupe The Offspring",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe The Offspring ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The Offspring est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q158462",
+  "concept": "music.popular.band_lynyrd_skynyrd_q158462",
+  "label": "Groupe Lynyrd Skynyrd",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Lynyrd Skynyrd est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Lynyrd Skynyrd est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q15920",
+  "concept": "music.popular.band_metallica_q15920",
+  "label": "Groupe Metallica",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Le groupe Metallica est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Metallica est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q162586",
+  "concept": "music.popular.band_dream_theater_q162586",
+  "label": "Groupe Dream Theater",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Dream Theater ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Dream Theater est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q165193",
+  "concept": "music.popular.band_avenged_sevenfold_q165193",
+  "label": "Groupe Avenged Sevenfold",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Avenged Sevenfold est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Avenged Sevenfold est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q170599",
+  "concept": "music.popular.band_arctic_monkeys_q170599",
+  "label": "Groupe Arctic Monkeys",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe Arctic Monkeys est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Arctic Monkeys est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q17140",
+  "concept": "music.popular.band_backstreet_boys_q17140",
+  "label": "Groupe Backstreet Boys",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le groupe Backstreet Boys est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Backstreet Boys est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q171718",
+  "concept": "music.popular.band_children_of_bodom_q171718",
+  "label": "Groupe Children of Bodom",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Children of Bodom est originaire de quel pays ?",
+  "options": [
+   "Finlande*",
+   "Suède",
+   "Norvège",
+   "Danemark"
+  ],
+  "explanation": "Children of Bodom est un groupe originaire de la Finlande.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q172763",
+  "concept": "music.popular.band_joy_division_q172763",
+  "label": "Groupe Joy Division",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe Joy Division est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Joy Division est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q173180",
+  "concept": "music.popular.band_franz_ferdinand_q173180",
+  "label": "Groupe Franz Ferdinand",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Franz Ferdinand ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Franz Ferdinand est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q173790",
+  "concept": "music.popular.band_roxette_q173790",
+  "label": "Groupe Roxette",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Roxette ?",
+  "options": [
+   "Suède*",
+   "Norvège",
+   "Danemark",
+   "Finlande"
+  ],
+  "explanation": "Roxette est un groupe originaire de la Suède.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q180880",
+  "concept": "music.popular.band_pantera_q180880",
+  "label": "Groupe Pantera",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Pantera est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Pantera est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q182223",
+  "concept": "music.popular.band_maroon_5_q182223",
+  "label": "Groupe Maroon 5",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le groupe Maroon 5 est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Maroon 5 est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q18233",
+  "concept": "music.popular.band_abba_q18233",
+  "label": "Groupe ABBA",
+  "type": "mcq",
+  "difficulty": 53,
+  "prompt": "Le groupe ABBA est originaire de quel pays ?",
+  "options": [
+   "Suède*",
+   "Norvège",
+   "Danemark",
+   "Finlande"
+  ],
+  "explanation": "ABBA est un groupe originaire de la Suède.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q182890",
+  "concept": "music.popular.band_def_leppard_q182890",
+  "label": "Groupe Def Leppard",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Def Leppard ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Def Leppard est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q183048",
+  "concept": "music.popular.band_the_beach_boys_q183048",
+  "label": "Groupe The Beach Boys",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Le groupe The Beach Boys est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The Beach Boys est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q184386",
+  "concept": "music.popular.band_yes_q184386",
+  "label": "Groupe Yes",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Yes ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Yes est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q184827",
+  "concept": "music.popular.band_tool_q184827",
+  "label": "Groupe Tool",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Tool est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Tool est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q185828",
+  "concept": "music.popular.band_daft_punk_q185828",
+  "label": "Groupe Daft Punk",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe Daft Punk est originaire de quel pays ?",
+  "options": [
+   "France*",
+   "Canada",
+   "Royaume-Uni",
+   "Australie"
+  ],
+  "explanation": "Daft Punk est un groupe originaire de la France.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q188407",
+  "concept": "music.popular.band_snow_patrol_q188407",
+  "label": "Groupe Snow Patrol",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Snow Patrol est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Snow Patrol est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q188626",
+  "concept": "music.popular.band_sonic_youth_q188626",
+  "label": "Groupe Sonic Youth",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Sonic Youth ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Sonic Youth est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q188713",
+  "concept": "music.popular.band_the_kinks_q188713",
+  "label": "Groupe The Kinks",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe The Kinks est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "The Kinks est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q189635",
+  "concept": "music.popular.band_eagles_q189635",
+  "label": "Groupe Eagles",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Le groupe Eagles est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Eagles est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q189991",
+  "concept": "music.popular.band_gorillaz_q189991",
+  "label": "Groupe Gorillaz",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Gorillaz ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Gorillaz est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q190155",
+  "concept": "music.popular.band_van_halen_q190155",
+  "label": "Groupe Van Halen",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Van Halen est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Van Halen est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q192463",
+  "concept": "music.popular.band_creedence_clearwater_revival_q192463",
+  "label": "Groupe Creedence Clearwater Revival",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Creedence Clearwater Revival est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Creedence Clearwater Revival est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q192609",
+  "concept": "music.popular.band_clannad_q192609",
+  "label": "Groupe Clannad",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Clannad est originaire de quel pays ?",
+  "options": [
+   "Irlande*",
+   "Royaume-Uni",
+   "États-Unis",
+   "Écosse"
+  ],
+  "explanation": "Clannad est un groupe originaire de l'Irlande.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q193172",
+  "concept": "music.popular.band_burzum_q193172",
+  "label": "Groupe Burzum",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Burzum ?",
+  "options": [
+   "Norvège*",
+   "Suède",
+   "Danemark",
+   "Finlande"
+  ],
+  "explanation": "Burzum est un groupe originaire de la Norvège.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q202741",
+  "concept": "music.popular.band_blondie_q202741",
+  "label": "Groupe Blondie",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Blondie ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Blondie est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q205001",
+  "concept": "music.popular.band_talking_heads_q205001",
+  "label": "Groupe Talking Heads",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Le groupe Talking Heads est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Talking Heads est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q214039",
+  "concept": "music.popular.band_beastie_boys_q214039",
+  "label": "Groupe Beastie Boys",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Beastie Boys est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Beastie Boys est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q216856",
+  "concept": "music.popular.band_n_w_a_q216856",
+  "label": "Groupe N.W.A",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "De quel pays vient le groupe N.W.A ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "N.W.A est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q220730",
+  "concept": "music.popular.band_the_killers_q220730",
+  "label": "Groupe The Killers",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe The Killers est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The Killers est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q223495",
+  "concept": "music.popular.band_the_carpenters_q223495",
+  "label": "Groupe The Carpenters",
+  "type": "mcq",
+  "difficulty": 51,
+  "prompt": "De quel pays vient le groupe The Carpenters ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The Carpenters est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q23471",
+  "concept": "music.popular.band_lordi_q23471",
+  "label": "Groupe Lordi",
+  "type": "mcq",
+  "difficulty": 54,
+  "prompt": "Le groupe Lordi est originaire de quel pays ?",
+  "options": [
+   "Finlande*",
+   "Suède",
+   "Norvège",
+   "Danemark"
+  ],
+  "explanation": "Lordi est un groupe originaire de la Finlande.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q239074",
+  "concept": "music.popular.band_sepultura_q239074",
+  "label": "Groupe Sepultura",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Sepultura ?",
+  "options": [
+   "Brésil*",
+   "Pays-Bas",
+   "Suède",
+   "Finlande"
+  ],
+  "explanation": "Sepultura est un groupe originaire du Brésil.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q240767",
+  "concept": "music.popular.band_limp_bizkit_q240767",
+  "label": "Groupe Limp Bizkit",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Limp Bizkit ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Limp Bizkit est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q25177",
+  "concept": "music.popular.band_rammstein_q25177",
+  "label": "Groupe Rammstein",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel pays vient le groupe Rammstein ?",
+  "options": [
+   "Allemagne*",
+   "Autriche",
+   "Pays-Bas",
+   "Suède"
+  ],
+  "explanation": "Rammstein est un groupe originaire de l'Allemagne.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q254138",
+  "concept": "music.popular.band_slipknot_q254138",
+  "label": "Groupe Slipknot",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "De quel pays vient le groupe Slipknot ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Slipknot est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q259254",
+  "concept": "music.popular.band_bon_jovi_q259254",
+  "label": "Groupe Bon Jovi",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Le groupe Bon Jovi est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Bon Jovi est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q261",
+  "concept": "music.popular.band_linkin_park_q261",
+  "label": "Groupe Linkin Park",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "De quel pays vient le groupe Linkin Park ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Linkin Park est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q268160",
+  "concept": "music.popular.band_the_white_stripes_q268160",
+  "label": "Groupe The White Stripes",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe The White Stripes ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The White Stripes est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q27417",
+  "concept": "music.popular.band_modern_talking_q27417",
+  "label": "Groupe Modern Talking",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "De quel pays vient le groupe Modern Talking ?",
+  "options": [
+   "Allemagne*",
+   "Autriche",
+   "Pays-Bas",
+   "Suède"
+  ],
+  "explanation": "Modern Talking est un groupe originaire de l'Allemagne.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q27593",
+  "concept": "music.popular.band_ac_dc_q27593",
+  "label": "Groupe AC/DC",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Le groupe AC/DC est originaire de quel pays ?",
+  "options": [
+   "Australie*",
+   "Royaume-Uni",
+   "Nouvelle-Zélande",
+   "États-Unis"
+  ],
+  "explanation": "AC/DC est un groupe originaire de l'Australie.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q282104",
+  "concept": "music.popular.band_big_bang_q282104",
+  "label": "Groupe Big Bang",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Big Bang est originaire de quel pays ?",
+  "options": [
+   "Corée du Sud*",
+   "Japon",
+   "Chine",
+   "Taïwan"
+  ],
+  "explanation": "Big Bang est un groupe originaire de la Corée du Sud.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q386216",
+  "concept": "music.popular.band_tokio_hotel_q386216",
+  "label": "Groupe Tokio Hotel",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe Tokio Hotel est originaire de quel pays ?",
+  "options": [
+   "Allemagne*",
+   "Autriche",
+   "Pays-Bas",
+   "Suède"
+  ],
+  "explanation": "Tokio Hotel est un groupe originaire de l'Allemagne.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q391348",
+  "concept": "music.popular.band_imagine_dragons_q391348",
+  "label": "Groupe Imagine Dragons",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Imagine Dragons est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Imagine Dragons est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q396",
+  "concept": "music.popular.band_u2_q396",
+  "label": "Groupe U2",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Le groupe U2 est originaire de quel pays ?",
+  "options": [
+   "Irlande*",
+   "Royaume-Uni",
+   "États-Unis",
+   "Écosse"
+  ],
+  "explanation": "U2 est un groupe originaire de l'Irlande.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q40585",
+  "concept": "music.popular.band_30_seconds_to_mars_q40585",
+  "label": "Groupe 30 Seconds to Mars",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "De quel pays vient le groupe 30 Seconds to Mars ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "30 Seconds to Mars est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q42482",
+  "concept": "music.popular.band_iron_maiden_q42482",
+  "label": "Groupe Iron Maiden",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "De quel pays vient le groupe Iron Maiden ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Iron Maiden est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q43267",
+  "concept": "music.popular.band_the_jackson_5_q43267",
+  "label": "Groupe The Jackson 5",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe The Jackson 5 ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The Jackson 5 est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q43510",
+  "concept": "music.popular.band_nightwish_q43510",
+  "label": "Groupe Nightwish",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "De quel pays vient le groupe Nightwish ?",
+  "options": [
+   "Finlande*",
+   "Suède",
+   "Norvège",
+   "Danemark"
+  ],
+  "explanation": "Nightwish est un groupe originaire de la Finlande.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q44190",
+  "concept": "music.popular.band_radiohead_q44190",
+  "label": "Groupe Radiohead",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel pays vient le groupe Radiohead ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Radiohead est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q44892",
+  "concept": "music.popular.band_kraftwerk_q44892",
+  "label": "Groupe Kraftwerk",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Kraftwerk ?",
+  "options": [
+   "Allemagne*",
+   "Autriche",
+   "Pays-Bas",
+   "Suède"
+  ],
+  "explanation": "Kraftwerk est un groupe originaire de l'Allemagne.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q45165",
+  "concept": "music.popular.band_system_of_a_down_q45165",
+  "label": "Groupe System of a Down",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le groupe System of a Down est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "System of a Down est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q45188",
+  "concept": "music.popular.band_coldplay_q45188",
+  "label": "Groupe Coldplay",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Le groupe Coldplay est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Coldplay est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q45354",
+  "concept": "music.popular.band_the_doors_q45354",
+  "label": "Groupe The Doors",
+  "type": "mcq",
+  "difficulty": 51,
+  "prompt": "Le groupe The Doors est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "The Doors est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q46134670",
+  "concept": "music.popular.band_stray_kids_q46134670",
+  "label": "Groupe Stray Kids",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Le groupe Stray Kids est originaire de quel pays ?",
+  "options": [
+   "Corée du Sud*",
+   "Japon",
+   "Chine",
+   "Taïwan"
+  ],
+  "explanation": "Stray Kids est un groupe originaire de la Corée du Sud.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q46573",
+  "concept": "music.popular.band_lacuna_coil_q46573",
+  "label": "Groupe Lacuna Coil",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le groupe Lacuna Coil est originaire de quel pays ?",
+  "options": [
+   "Italie*",
+   "Norvège",
+   "Australie",
+   "Allemagne"
+  ],
+  "explanation": "Lacuna Coil est un groupe originaire de l'Italie.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q482477",
+  "concept": "music.popular.band_blink_182_q482477",
+  "label": "Groupe Blink-182",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "De quel pays vient le groupe Blink-182 ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Blink-182 est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q482964",
+  "concept": "music.popular.band_depeche_mode_q482964",
+  "label": "Groupe Depeche Mode",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "De quel pays vient le groupe Depeche Mode ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Depeche Mode est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q483285",
+  "concept": "music.popular.band_my_chemical_romance_q483285",
+  "label": "Groupe My Chemical Romance",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "De quel pays vient le groupe My Chemical Romance ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "My Chemical Romance est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q483407",
+  "concept": "music.popular.band_ramones_q483407",
+  "label": "Groupe Ramones",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le groupe Ramones est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Ramones est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q483558",
+  "concept": "music.popular.band_sum_41_q483558",
+  "label": "Groupe Sum 41",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Sum 41 ?",
+  "options": [
+   "Canada*",
+   "États-Unis",
+   "Royaume-Uni",
+   "Australie"
+  ],
+  "explanation": "Sum 41 est un groupe originaire du Canada.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q484255",
+  "concept": "music.popular.band_alice_in_chains_q484255",
+  "label": "Groupe Alice in Chains",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "De quel pays vient le groupe Alice in Chains ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Alice in Chains est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q484311",
+  "concept": "music.popular.band_keane_q484311",
+  "label": "Groupe Keane",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "De quel pays vient le groupe Keane ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Keane est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q484421",
+  "concept": "music.popular.band_apocalyptica_q484421",
+  "label": "Groupe Apocalyptica",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "De quel pays vient le groupe Apocalyptica ?",
+  "options": [
+   "Finlande*",
+   "Suède",
+   "Norvège",
+   "Danemark"
+  ],
+  "explanation": "Apocalyptica est un groupe originaire de la Finlande.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q484427",
+  "concept": "music.popular.band_the_cure_q484427",
+  "label": "Groupe The Cure",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "De quel pays vient le groupe The Cure ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "The Cure est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q484839",
+  "concept": "music.popular.band_placebo_q484839",
+  "label": "Groupe Placebo",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Placebo est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Placebo est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q485116",
+  "concept": "music.popular.band_mayhem_q485116",
+  "label": "Groupe Mayhem",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Mayhem ?",
+  "options": [
+   "Norvège*",
+   "Suède",
+   "Danemark",
+   "Finlande"
+  ],
+  "explanation": "Mayhem est un groupe originaire de la Norvège.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q485673",
+  "concept": "music.popular.band_garbage_q485673",
+  "label": "Groupe Garbage",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le groupe Garbage est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Garbage est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q485811",
+  "concept": "music.popular.band_fall_out_boy_q485811",
+  "label": "Groupe Fall Out Boy",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Le groupe Fall Out Boy est originaire de quel pays ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Fall Out Boy est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q485820",
+  "concept": "music.popular.band_blur_q485820",
+  "label": "Groupe Blur",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le groupe Blur est originaire de quel pays ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Blur est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q488260",
+  "concept": "music.popular.band_jefferson_airplane_q488260",
+  "label": "Groupe Jefferson Airplane",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Jefferson Airplane ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Jefferson Airplane est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q50040",
+  "concept": "music.popular.band_dire_straits_q50040",
+  "label": "Groupe Dire Straits",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "De quel pays vient le groupe Dire Straits ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Dire Straits est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q51118",
+  "concept": "music.popular.band_akb48_q51118",
+  "label": "Groupe AKB48",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le groupe AKB48 est originaire de quel pays ?",
+  "options": [
+   "Japon*",
+   "Corée du Sud",
+   "Chine",
+   "États-Unis"
+  ],
+  "explanation": "AKB48 est un groupe originaire du Japon.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q56884561",
+  "concept": "music.popular.band_maneskin_q56884561",
+  "label": "Groupe Måneskin",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "De quel pays vient le groupe Måneskin ?",
+  "options": [
+   "Italie*",
+   "Finlande",
+   "Allemagne",
+   "Irlande"
+  ],
+  "explanation": "Måneskin est un groupe originaire de l'Italie.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q57138",
+  "concept": "music.popular.band_within_temptation_q57138",
+  "label": "Groupe Within Temptation",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "De quel pays vient le groupe Within Temptation ?",
+  "options": [
+   "Pays-Bas*",
+   "Brésil",
+   "France",
+   "Suède"
+  ],
+  "explanation": "Within Temptation est un groupe originaire des Pays-Bas.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q58381",
+  "concept": "music.popular.band_duran_duran_q58381",
+  "label": "Groupe Duran Duran",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel pays vient le groupe Duran Duran ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "Duran Duran est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q72092",
+  "concept": "music.popular.band_rage_against_the_machine_q72092",
+  "label": "Groupe Rage Against the Machine",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "De quel pays vient le groupe Rage Against the Machine ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Rage Against the Machine est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q7256860",
+  "concept": "music.popular.band_the_prodigy_q7256860",
+  "label": "Groupe The Prodigy",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "De quel pays vient le groupe The Prodigy ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "The Prodigy est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q740159",
+  "concept": "music.popular.band_sabaton_q740159",
+  "label": "Groupe Sabaton",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Le groupe Sabaton est originaire de quel pays ?",
+  "options": [
+   "Suède*",
+   "Norvège",
+   "Danemark",
+   "Finlande"
+  ],
+  "explanation": "Sabaton est un groupe originaire de la Suède.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q7857806",
+  "concept": "music.popular.band_twenty_one_pilots_q7857806",
+  "label": "Groupe Twenty One Pilots",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient le groupe Twenty One Pilots ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Twenty One Pilots est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q80304",
+  "concept": "music.popular.band_korn_q80304",
+  "label": "Groupe Korn",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "De quel pays vient le groupe Korn ?",
+  "options": [
+   "États-Unis*",
+   "Royaume-Uni",
+   "Canada",
+   "Australie"
+  ],
+  "explanation": "Korn est un groupe originaire des États-Unis.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-band-Q93346",
+  "concept": "music.popular.band_the_who_q93346",
+  "label": "Groupe The Who",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel pays vient le groupe The Who ?",
+  "options": [
+   "Royaume-Uni*",
+   "États-Unis",
+   "Irlande",
+   "Australie"
+  ],
+  "explanation": "The Who est un groupe originaire du Royaume-Uni.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q10708",
+  "concept": "music.popular.band_red_hot_chili_peppers_q10708",
+  "label": "Groupe Red Hot Chili Peppers",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 66,
+  "prompt": "Dans quelle décennie le groupe Red Hot Chili Peppers s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1980*",
+   "Années 1990",
+   "Années 2000"
+  ],
+  "explanation": "Red Hot Chili Peppers s'est formé en 1982.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q11036",
+  "concept": "music.popular.band_the_rolling_stones_q11036",
+  "label": "Groupe The Rolling Stones",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 63,
+  "prompt": "Dans quelle décennie le groupe The Rolling Stones s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960*",
+   "Années 1970",
+   "Années 1980"
+  ],
+  "explanation": "The Rolling Stones s'est formé en 1962.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q11649",
+  "concept": "music.popular.band_nirvana_q11649",
+  "label": "Groupe Nirvana",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 65,
+  "prompt": "Dans quelle décennie le groupe Nirvana s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1970",
+   "Années 1980*",
+   "Années 2000"
+  ],
+  "explanation": "Nirvana s'est formé en 1987.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q11895",
+  "concept": "music.popular.band_guns_n_roses_q11895",
+  "label": "Groupe Guns N’ Roses",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 68,
+  "prompt": "Dans quelle décennie le groupe Guns N’ Roses s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1980*",
+   "Années 1990",
+   "Années 2000"
+  ],
+  "explanation": "Guns N’ Roses s'est formé en 1985.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q124179",
+  "concept": "music.popular.band_kiss_q124179",
+  "label": "Groupe Kiss",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 69,
+  "prompt": "Dans quelle décennie le groupe Kiss s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1970*",
+   "Années 1980",
+   "Années 1990"
+  ],
+  "explanation": "Kiss s'est formé en 1973.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q13580495",
+  "concept": "music.popular.band_bts_q13580495",
+  "label": "Groupe BTS",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 64,
+  "prompt": "Dans quelle décennie le groupe BTS s'est-il formé ?",
+  "options": [
+   "Années 1990",
+   "Années 2000",
+   "Années 2010*",
+   "Années 2020"
+  ],
+  "explanation": "BTS s'est formé en 2013.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q146027",
+  "concept": "music.popular.band_one_direction_q146027",
+  "label": "Groupe One Direction",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 67,
+  "prompt": "Dans quelle décennie le groupe One Direction s'est-il formé ?",
+  "options": [
+   "Années 1990",
+   "Années 2000",
+   "Années 2010*",
+   "Années 2020"
+  ],
+  "explanation": "One Direction s'est formé en 2010.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q15920",
+  "concept": "music.popular.band_metallica_q15920",
+  "label": "Groupe Metallica",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 64,
+  "prompt": "Dans quelle décennie le groupe Metallica s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1970",
+   "Années 1980*",
+   "Années 2000"
+  ],
+  "explanation": "Metallica s'est formé en 1981.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q18233",
+  "concept": "music.popular.band_abba_q18233",
+  "label": "Groupe ABBA",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 61,
+  "prompt": "Dans quelle décennie le groupe ABBA s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1970*",
+   "Années 1980",
+   "Années 1990"
+  ],
+  "explanation": "ABBA s'est formé en 1970.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q183048",
+  "concept": "music.popular.band_the_beach_boys_q183048",
+  "label": "Groupe The Beach Boys",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 69,
+  "prompt": "Dans quelle décennie le groupe The Beach Boys s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960*",
+   "Années 1970",
+   "Années 1980"
+  ],
+  "explanation": "The Beach Boys s'est formé en 1961.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q189635",
+  "concept": "music.popular.band_eagles_q189635",
+  "label": "Groupe Eagles",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 69,
+  "prompt": "Dans quelle décennie le groupe Eagles s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960",
+   "Années 1970*",
+   "Années 1980"
+  ],
+  "explanation": "Eagles s'est formé en 1971.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q223495",
+  "concept": "music.popular.band_the_carpenters_q223495",
+  "label": "Groupe The Carpenters",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 59,
+  "prompt": "Dans quelle décennie le groupe The Carpenters s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960*",
+   "Années 1970",
+   "Années 1980"
+  ],
+  "explanation": "The Carpenters s'est formé en 1969.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q23471",
+  "concept": "music.popular.band_lordi_q23471",
+  "label": "Groupe Lordi",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 62,
+  "prompt": "Dans quelle décennie le groupe Lordi s'est-il formé ?",
+  "options": [
+   "Années 1970",
+   "Années 1980",
+   "Années 1990*",
+   "Années 2010"
+  ],
+  "explanation": "Lordi s'est formé en 1992.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q25177",
+  "concept": "music.popular.band_rammstein_q25177",
+  "label": "Groupe Rammstein",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 68,
+  "prompt": "Dans quelle décennie le groupe Rammstein s'est-il formé ?",
+  "options": [
+   "Années 1980",
+   "Années 1990*",
+   "Années 2000",
+   "Années 2010"
+  ],
+  "explanation": "Rammstein s'est formé en 1994.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q259254",
+  "concept": "music.popular.band_bon_jovi_q259254",
+  "label": "Groupe Bon Jovi",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 69,
+  "prompt": "Dans quelle décennie le groupe Bon Jovi s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1970",
+   "Années 1980*",
+   "Années 2000"
+  ],
+  "explanation": "Bon Jovi s'est formé en 1983.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q261",
+  "concept": "music.popular.band_linkin_park_q261",
+  "label": "Groupe Linkin Park",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 65,
+  "prompt": "Dans quelle décennie le groupe Linkin Park s'est-il formé ?",
+  "options": [
+   "Années 1980",
+   "Années 1990*",
+   "Années 2000",
+   "Années 2010"
+  ],
+  "explanation": "Linkin Park s'est formé en 1996.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q27593",
+  "concept": "music.popular.band_ac_dc_q27593",
+  "label": "Groupe AC/DC",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 66,
+  "prompt": "Dans quelle décennie le groupe AC/DC s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960",
+   "Années 1970*",
+   "Années 1990"
+  ],
+  "explanation": "AC/DC s'est formé en 1973.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q396",
+  "concept": "music.popular.band_u2_q396",
+  "label": "Groupe U2",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 65,
+  "prompt": "Dans quelle décennie le groupe U2 s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1970*",
+   "Années 1980",
+   "Années 1990"
+  ],
+  "explanation": "U2 s'est formé en 1976.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q40585",
+  "concept": "music.popular.band_30_seconds_to_mars_q40585",
+  "label": "Groupe 30 Seconds to Mars",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 67,
+  "prompt": "Dans quelle décennie le groupe 30 Seconds to Mars s'est-il formé ?",
+  "options": [
+   "Années 1980",
+   "Années 1990*",
+   "Années 2000",
+   "Années 2010"
+  ],
+  "explanation": "30 Seconds to Mars s'est formé en 1998.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q42482",
+  "concept": "music.popular.band_iron_maiden_q42482",
+  "label": "Groupe Iron Maiden",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 66,
+  "prompt": "Dans quelle décennie le groupe Iron Maiden s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960",
+   "Années 1970*",
+   "Années 1980"
+  ],
+  "explanation": "Iron Maiden s'est formé en 1975.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q43510",
+  "concept": "music.popular.band_nightwish_q43510",
+  "label": "Groupe Nightwish",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 66,
+  "prompt": "Dans quelle décennie le groupe Nightwish s'est-il formé ?",
+  "options": [
+   "Années 1980",
+   "Années 1990*",
+   "Années 2000",
+   "Années 2010"
+  ],
+  "explanation": "Nightwish s'est formé en 1996.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q44190",
+  "concept": "music.popular.band_radiohead_q44190",
+  "label": "Groupe Radiohead",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 68,
+  "prompt": "Dans quelle décennie le groupe Radiohead s'est-il formé ?",
+  "options": [
+   "Années 1970",
+   "Années 1980*",
+   "Années 1990",
+   "Années 2000"
+  ],
+  "explanation": "Radiohead s'est formé en 1985.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q45188",
+  "concept": "music.popular.band_coldplay_q45188",
+  "label": "Groupe Coldplay",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 66,
+  "prompt": "Dans quelle décennie le groupe Coldplay s'est-il formé ?",
+  "options": [
+   "Années 1980",
+   "Années 1990*",
+   "Années 2000",
+   "Années 2010"
+  ],
+  "explanation": "Coldplay s'est formé en 1999.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q45354",
+  "concept": "music.popular.band_the_doors_q45354",
+  "label": "Groupe The Doors",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 59,
+  "prompt": "Dans quelle décennie le groupe The Doors s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960*",
+   "Années 1970",
+   "Années 1980"
+  ],
+  "explanation": "The Doors s'est formé en 1965.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q482964",
+  "concept": "music.popular.band_depeche_mode_q482964",
+  "label": "Groupe Depeche Mode",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 69,
+  "prompt": "Dans quelle décennie le groupe Depeche Mode s'est-il formé ?",
+  "options": [
+   "Années 1960",
+   "Années 1970",
+   "Années 1980*",
+   "Années 2000"
+  ],
+  "explanation": "Depeche Mode s'est formé en 1980.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q50040",
+  "concept": "music.popular.band_dire_straits_q50040",
+  "label": "Groupe Dire Straits",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 69,
+  "prompt": "Dans quelle décennie le groupe Dire Straits s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960",
+   "Années 1970*",
+   "Années 1990"
+  ],
+  "explanation": "Dire Straits s'est formé en 1977.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q58381",
+  "concept": "music.popular.band_duran_duran_q58381",
+  "label": "Groupe Duran Duran",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 68,
+  "prompt": "Dans quelle décennie le groupe Duran Duran s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1970*",
+   "Années 1980",
+   "Années 1990"
+  ],
+  "explanation": "Duran Duran s'est formé en 1978.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-bandd-Q93346",
+  "concept": "music.popular.band_the_who_q93346",
+  "label": "Groupe The Who",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 68,
+  "prompt": "Dans quelle décennie le groupe The Who s'est-il formé ?",
+  "options": [
+   "Années 1950",
+   "Années 1960*",
+   "Années 1970",
+   "Années 1980"
+  ],
+  "explanation": "The Who s'est formé en 1964.",
+  "family": "band",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-alto",
+  "concept": "music.instruments.family_alto",
+  "label": "Famille : alto",
+  "type": "mcq",
+  "difficulty": 54,
+  "prompt": "L'alto est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "L'alto est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-bandoura",
+  "concept": "music.instruments.family_bandoura",
+  "label": "Famille : bandoura",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "La bandoura est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La bandoura est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-banjo",
+  "concept": "music.instruments.family_banjo",
+  "label": "Famille : banjo",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Le banjo est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le banjo est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-basson",
+  "concept": "music.instruments.family_basson",
+  "label": "Famille : basson",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Le basson est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le basson est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-bugle",
+  "concept": "music.instruments.family_bugle",
+  "label": "Famille : bugle",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le bugle est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le bugle est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-caisse_claire",
+  "concept": "music.instruments.family_caisse_claire",
+  "label": "Famille : caisse claire",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "La caisse claire est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La caisse claire est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-castagnettes",
+  "concept": "music.instruments.family_castagnettes",
+  "label": "Famille : castagnettes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Les castagnettes sont des instruments…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Les castagnettes sont des instruments de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-clarinette",
+  "concept": "music.instruments.family_clarinette",
+  "label": "Famille : clarinette",
+  "type": "mcq",
+  "difficulty": 52,
+  "prompt": "La clarinette est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La clarinette est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-contrebasse",
+  "concept": "music.instruments.family_contrebasse",
+  "label": "Famille : contrebasse",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "La contrebasse est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La contrebasse est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-contrebasson",
+  "concept": "music.instruments.family_contrebasson",
+  "label": "Famille : contrebasson",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le contrebasson est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le contrebasson est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-cor_anglais",
+  "concept": "music.instruments.family_cor_anglais",
+  "label": "Famille : cor anglais",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Le cor anglais est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le cor anglais est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-cor_d_harmonie",
+  "concept": "music.instruments.family_cor_d_harmonie",
+  "label": "Famille : cor d'harmonie",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Le cor d'harmonie est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le cor d'harmonie est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-cornemuse",
+  "concept": "music.instruments.family_cornemuse",
+  "label": "Famille : cornemuse",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "La cornemuse est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La cornemuse est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-didjeridoo",
+  "concept": "music.instruments.family_didjeridoo",
+  "label": "Famille : didjeridoo",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le didjeridoo est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le didjeridoo est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-djembe",
+  "concept": "music.instruments.family_djembe",
+  "label": "Famille : djembé",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le djembé est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le djembé est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-dombra",
+  "concept": "music.instruments.family_dombra",
+  "label": "Famille : dombra",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "La dombra est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La dombra est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-duduk",
+  "concept": "music.instruments.family_duduk",
+  "label": "Famille : duduk",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le duduk est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le duduk est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-erhu",
+  "concept": "music.instruments.family_erhu",
+  "label": "Famille : erhu",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "L'erhu est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "L'erhu est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-euphonium",
+  "concept": "music.instruments.family_euphonium",
+  "label": "Famille : euphonium",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "L'euphonium est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "L'euphonium est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-flute",
+  "concept": "music.instruments.family_flute",
+  "label": "Famille : flûte",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "La flûte est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La flûte est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-flute_a_bec",
+  "concept": "music.instruments.family_flute_a_bec",
+  "label": "Famille : flûte à bec",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "La flûte à bec est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La flûte à bec est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-flute_de_pan",
+  "concept": "music.instruments.family_flute_de_pan",
+  "label": "Famille : flûte de Pan",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "La flûte de Pan est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La flûte de Pan est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-glockenspiel",
+  "concept": "music.instruments.family_glockenspiel",
+  "label": "Famille : glockenspiel",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le glockenspiel est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le glockenspiel est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-gong",
+  "concept": "music.instruments.family_gong",
+  "label": "Famille : gong",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Le gong est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le gong est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-grosse_caisse",
+  "concept": "music.instruments.family_grosse_caisse",
+  "label": "Famille : grosse caisse",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "La grosse caisse est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La grosse caisse est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-guitare",
+  "concept": "music.instruments.family_guitare",
+  "label": "Famille : guitare",
+  "type": "mcq",
+  "difficulty": 44,
+  "prompt": "La guitare est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La guitare est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-harpe",
+  "concept": "music.instruments.family_harpe",
+  "label": "Famille : harpe",
+  "type": "mcq",
+  "difficulty": 52,
+  "prompt": "La harpe est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La harpe est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-hautbois",
+  "concept": "music.instruments.family_hautbois",
+  "label": "Famille : hautbois",
+  "type": "mcq",
+  "difficulty": 54,
+  "prompt": "Le hautbois est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le hautbois est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-kantele",
+  "concept": "music.instruments.family_kantele",
+  "label": "Famille : kantele",
+  "type": "mcq",
+  "difficulty": 64,
+  "prompt": "Le kantele est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le kantele est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-koto",
+  "concept": "music.instruments.family_koto",
+  "label": "Famille : koto",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Le koto est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le koto est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-luth",
+  "concept": "music.instruments.family_luth",
+  "label": "Famille : luth",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Le luth est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le luth est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-lyre",
+  "concept": "music.instruments.family_lyre",
+  "label": "Famille : lyre",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "La lyre est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La lyre est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-mandoline",
+  "concept": "music.instruments.family_mandoline",
+  "label": "Famille : mandoline",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "La mandoline est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La mandoline est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-maraca",
+  "concept": "music.instruments.family_maraca",
+  "label": "Famille : maraca",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "La maraca est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La maraca est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-ocarina",
+  "concept": "music.instruments.family_ocarina",
+  "label": "Famille : ocarina",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "L'ocarina est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "L'ocarina est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-oud",
+  "concept": "music.instruments.family_oud",
+  "label": "Famille : oud",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "L'oud est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "L'oud est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-piccolo",
+  "concept": "music.instruments.family_piccolo",
+  "label": "Famille : piccolo",
+  "type": "mcq",
+  "difficulty": 59,
+  "prompt": "Le piccolo est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le piccolo est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-pipa",
+  "concept": "music.instruments.family_pipa",
+  "label": "Famille : pipa",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le pipa est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le pipa est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-saxophone",
+  "concept": "music.instruments.family_saxophone",
+  "label": "Famille : saxophone",
+  "type": "mcq",
+  "difficulty": 52,
+  "prompt": "Le saxophone est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le saxophone est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-saz",
+  "concept": "music.instruments.family_saz",
+  "label": "Famille : saz",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "Le saz est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le saz est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-sitar",
+  "concept": "music.instruments.family_sitar",
+  "label": "Famille : sitar",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Le sitar est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le sitar est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-soubassophone",
+  "concept": "music.instruments.family_soubassophone",
+  "label": "Famille : soubassophone",
+  "type": "mcq",
+  "difficulty": 63,
+  "prompt": "Le soubassophone est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le soubassophone est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-tambour",
+  "concept": "music.instruments.family_tambour",
+  "label": "Famille : tambour",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Le tambour est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le tambour est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-tambourin",
+  "concept": "music.instruments.family_tambourin",
+  "label": "Famille : tambourin",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "Le tambourin est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le tambourin est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-timbales",
+  "concept": "music.instruments.family_timbales",
+  "label": "Famille : timbales",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Les timbales sont des instruments…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Les timbales sont des instruments de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-triangle",
+  "concept": "music.instruments.family_triangle",
+  "label": "Famille : triangle",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le triangle est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le triangle est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-trombone",
+  "concept": "music.instruments.family_trombone",
+  "label": "Famille : trombone",
+  "type": "mcq",
+  "difficulty": 54,
+  "prompt": "Le trombone est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le trombone est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-trompette",
+  "concept": "music.instruments.family_trompette",
+  "label": "Famille : trompette",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "La trompette est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La trompette est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-tuba",
+  "concept": "music.instruments.family_tuba",
+  "label": "Famille : tuba",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le tuba est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le tuba est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-ukulele",
+  "concept": "music.instruments.family_ukulele",
+  "label": "Famille : ukulélé",
+  "type": "mcq",
+  "difficulty": 57,
+  "prompt": "L'ukulélé est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "L'ukulélé est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-vielle_a_roue",
+  "concept": "music.instruments.family_vielle_a_roue",
+  "label": "Famille : vielle à roue",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "La vielle à roue est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La vielle à roue est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-viole_de_gambe",
+  "concept": "music.instruments.family_viole_de_gambe",
+  "label": "Famille : viole de gambe",
+  "type": "mcq",
+  "difficulty": 61,
+  "prompt": "La viole de gambe est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "La viole de gambe est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-violon",
+  "concept": "music.instruments.family_violon",
+  "label": "Famille : violon",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Le violon est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le violon est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-violoncelle",
+  "concept": "music.instruments.family_violoncelle",
+  "label": "Famille : violoncelle",
+  "type": "mcq",
+  "difficulty": 52,
+  "prompt": "Le violoncelle est un instrument…",
+  "options": [
+   "à cordes*",
+   "à vent",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le violoncelle est un instrument à cordes : le son naît de cordes pincées, frottées ou frappées.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-xylophone",
+  "concept": "music.instruments.family_xylophone",
+  "label": "Famille : xylophone",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le xylophone est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent",
+   "de percussion*",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le xylophone est un instrument de percussion : le son naît d'un choc ou d'une secousse.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-instr-zurna",
+  "concept": "music.instruments.family_zurna",
+  "label": "Famille : zurna",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Le zurna est un instrument…",
+  "options": [
+   "à cordes",
+   "à vent*",
+   "de percussion",
+   "à clavier"
+  ],
+  "keep_order": true,
+  "explanation": "Le zurna est un instrument à vent : le son naît du souffle.",
+  "family": "instrument",
+  "source": "Wikidata",
+  "origin": "import"
+ }
+]
