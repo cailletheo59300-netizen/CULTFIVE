@@ -21,6 +21,25 @@ enum Demo {
     }
 }
 
+/// Réponses du 5 du jour données pendant la démo : le résultat reflète ce que le joueur a vraiment répondu.
+final class DemoDailyRecorder: @unchecked Sendable {
+    static let shared = DemoDailyRecorder()
+    private let lock = NSLock()
+    private var answers: [Int: (correct: Bool, ms: Int)] = [:]
+
+    func record(position: Int, correct: Bool, ms: Int) {
+        lock.lock(); defer { lock.unlock() }
+        if answers[position] == nil { answers[position] = (correct, ms) }
+    }
+
+    /// Les 5 réponses, dans l'ordre, une fois la série complète.
+    var completed: [(correct: Bool, ms: Int)]? {
+        lock.lock(); defer { lock.unlock() }
+        let list = (1...5).compactMap { answers[$0] }
+        return list.count == 5 ? list : nil
+    }
+}
+
 struct DemoGameService: GameService {
     let screen: Demo.Screen
 
@@ -39,10 +58,12 @@ struct DemoGameService: GameService {
 
     // MARK: Daily
 
+    private var playedDaily: Bool { DemoDailyRecorder.shared.completed != nil }
+
     func dailyStatus() async throws -> DailyStatus {
         let status: DailyStatus = try fixture("daily_status")
-        guard screen == .result || screen == .share else { return status }
-        let result: DailyResult = try fixture("daily_result")
+        guard screen == .result || screen == .share || playedDaily else { return status }
+        let result = try await dailyResult(date: nil)
         return DailyStatus(date: status.date, state: .done, runId: result.runId, score: result.score,
                            answers: result.answers.map(\.isCorrect), streak: status.streak + 1,
                            streakFreezes: status.streakFreezes, secondsUntilNext: status.secondsUntilNext)
@@ -50,7 +71,7 @@ struct DemoGameService: GameService {
 
     func dailyStart() async throws -> DailyStart {
         let start: DailyStart = try fixture("daily_start")
-        guard screen == .result || screen == .share else { return start }
+        guard screen == .result || screen == .share || playedDaily else { return start }
         return try decode(.object(["run_id": .string(start.runId.uuidString), "date": .string(start.date),
                                    "status": .string("finished"), "total": .number(5)]))
     }
@@ -70,17 +91,40 @@ struct DemoGameService: GameService {
     func dailyAnswer(run: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict {
         let item = reviewItems[max(0, min(position - 1, reviewItems.count - 1))]
         let correct = AnswerEvaluator.isCorrect(given, for: item.question) ?? false
+        let ms = min(max(clientMs ?? 6000, 300), 120_000)
+        DemoDailyRecorder.shared.record(position: position, correct: correct, ms: ms)
         let reveal = try XCTUnwrapDemo(item.question.reveal)
         var dict: [String: JSONValue] = [
             "position": .number(Double(position)), "is_correct": .bool(correct), "duplicate": .bool(false),
-            "counted_ms": .number(Double(clientMs ?? 6000)), "finished": .bool(position >= 5),
+            "counted_ms": .number(Double(ms)), "finished": .bool(position >= 5),
             "explanation": .string(reveal.explanation), "answer": try decode(JSONValue.self, from: reveal.answer),
         ]
         if let takeaway = reveal.takeaway { dict["takeaway"] = .string(takeaway) }
         return try decode(.object(dict))
     }
 
-    func dailyResult(date: String?) async throws -> DailyResult { try fixture("daily_result") }
+    /// Résultat enregistré (percentile, série, graines d'exemple), recalculé sur les réponses réellement données.
+    func dailyResult(date: String?) async throws -> DailyResult {
+        guard let played = DemoDailyRecorder.shared.completed else { return try fixture("daily_result") }
+        var json: JSONValue = try fixture("daily_result")
+        let status: DailyStatus = try fixture("daily_status")
+        guard case .object(var dict) = json, case .array(let answers)? = dict["answers"] else { return try decode(json) }
+        dict["answers"] = .array(answers.enumerated().map { (index, answer) -> JSONValue in
+            guard case .object(var a) = answer, index < played.count else { return answer }
+            let before = a["domain_before"]?.doubleValue ?? 50
+            a["is_correct"] = .bool(played[index].correct)
+            a["counted_ms"] = .number(Double(played[index].ms))
+            a["domain_after"] = .number(((before + (played[index].correct ? 0.4 : -0.9)) * 10).rounded() / 10)
+            return .object(a)
+        })
+        let score = played.filter(\.correct).count
+        dict["score"] = .number(Double(score))
+        dict["total_ms"] = .number(Double(played.reduce(0) { $0 + $1.ms }))
+        dict["date"] = .string(status.date)
+        dict["xp"] = .number(Double(20 + 10 * score))
+        json = .object(dict)
+        return try decode(json)
+    }
     func dailyReview(date: String?) async throws -> [ReviewItem] { reviewItems }
     func dailyHistory(days: Int) async throws -> [DailyHistoryEntry] { try fixture("history") }
 
