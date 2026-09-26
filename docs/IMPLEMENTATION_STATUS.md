@@ -14,7 +14,7 @@ _Dernière mise à jour : session 1 — 2026-09-26_
 | Économie (ledger, plafonds, aides), pseudo, amis, parrainage anti-abus, ligues, suppression de compte | ✅ | `30_social_economy.sql` |
 | Contenu (153 questions validées → seed) | ✅ | `build-seed.mjs` en CI |
 | `CultFiveCore` (modèles, contrat JSON sur fixtures réelles, évaluateur = SQL, pavé numérique, client Auth/RPC, refresh unique, file hors-ligne) | ✅ | `swift test` en CI |
-| App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | 🟡 compile en CI, **pas encore testée à la main** | job CI `ios` |
+| App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | ✅ build + tests unitaires en CI (macOS 15) · 🟡 **pas encore essayée sur appareil** avec un vrai projet Supabase | job CI `ios` |
 
 ## App iOS — écrans
 Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (rapide, surprise, défi, erreurs, par domaine/sous-domaine) · Domaine (niveau, sous-domaines, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (pseudo, notifications, âge, compte, suppression) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles, Daily et profil).
