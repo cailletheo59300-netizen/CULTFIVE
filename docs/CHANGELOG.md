@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 — le jeu normal, cohérent
+- Toucher un domaine ouvre le **choix de partie** : **partie classée** (10 questions adaptées, le niveau bouge) ou **entraînement libre** (5/10/20/30 questions, chrono 20 s optionnel, difficulté Mon niveau/Débutant/Intermédiaire/Expert, niveau inchangé, moitié d'XP, pas de graines, erreurs suivies).
+- **Thèmes** : tout mélanger, un seul ou plusieurs (sous-thèmes jouables uniquement, ≥ 5 questions).
+- Partie : écran d'intro aux couleurs du domaine, anneau de chrono, série « 🔥 3 d'affilée », bilan avec « Ce que tu as appris » (questions ratées + bonne réponse), Rejouer / Corriger mes erreurs / Autre domaine.
+- Serveur (migration 0011) : `play_pack(…, p_ranked, p_level, p_subdomains)`, `_record_attempt(…, p_ranked)` (niveau et calibration intacts hors classé), une question par famille et par partie tant que possible. Tests `50_play_modes.sql`.
+- Démo fidèle : vraie banque par domaine (`play_bank.demo.json`, `scripts/gen-demo-bank.sh`), jamais deux fois la même question dans la séance, difficulté, erreurs, aides, niveaux et stats par domaine simulés.
+- Build Appetize : un seul zip (l'artefact contient directement `CultFive.app`).
+
 ## 0.5.1 — petits domaines
 - Musique, sport, technologie enrichis via Wikidata : familles d'instruments, origine et décennie des groupes, Coupes du monde (vainqueur, hôte), villes des JO d'été et d'hiver, inventeurs ↔ inventions (listes relues).
 - 96 questions écrites à la main : nature (classes d'animaux, petits et cris, plantes), logique (suites, horloges, âges, syllogismes), informatique, règles du sport, musique classique.

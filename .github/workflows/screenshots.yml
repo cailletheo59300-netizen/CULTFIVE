@@ -24,14 +24,11 @@ jobs:
           xcodebuild build -project CultFive.xcodeproj -scheme CultFive -configuration Debug \
             -sdk iphonesimulator -derivedDataPath build CODE_SIGNING_ALLOWED=NO > build.log 2>&1 \
             || (grep -E "error:" -A3 build.log | head -80; exit 1)
-      - name: Archive pour Appetize.io (app de démo, simulateur)
-        run: |
-          cd ios/build/Build/Products/Debug-iphonesimulator
-          zip -qr "$GITHUB_WORKSPACE/CultFive-demo-simulateur.zip" CultFive.app
+      # L'artefact téléchargé depuis GitHub est déjà un zip contenant CultFive.app : à déposer tel quel sur Appetize.io.
       - uses: actions/upload-artifact@v4
         with:
-          name: CultFive-demo-simulateur
-          path: CultFive-demo-simulateur.zip
+          name: CultFive-demo-appetize
+          path: ios/build/Build/Products/Debug-iphonesimulator/*.app
           retention-days: 30
       - name: Simulateur
         id: sim

@@ -258,7 +258,8 @@ struct UnavailableService: GameService {
     func dailyReview(date: String?) async throws -> [ReviewItem] { try fail() }
     func dailyHistory(days: Int) async throws -> [DailyHistoryEntry] { try fail() }
     func onboardingPack() async throws -> PlayPack { try fail() }
-    func playPack(mode: PlayMode, domain: String?, subdomain: String?, count: Int) async throws -> PlayPack { try fail() }
+    func playPack(mode: PlayMode, domain: String?, subdomains: [String], count: Int, ranked: Bool,
+                  level: PlayLevel) async throws -> PlayPack { try fail() }
     func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult { try fail() }
     func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent { try fail() }
     func profile() async throws -> Profile { try fail() }

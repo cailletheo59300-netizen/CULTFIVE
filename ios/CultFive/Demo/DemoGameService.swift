@@ -136,21 +136,63 @@ struct DemoGameService: GameService {
                                    "questions": try decode(JSONValue.self, from: Array(pack.questions.prefix(3)))]))
     }
 
-    func playPack(mode: PlayMode, domain: String?, subdomain: String?, count: Int) async throws -> PlayPack {
-        try fixture("play_pack")
+    /// Moteur de jeu prêt (banque chargée, niveaux et erreurs d'exemple).
+    private func engine() throws -> DemoPlayEngine {
+        let engine = DemoPlayEngine.shared
+        let skills: [SkillSummary] = (try? fixture("skills")) ?? []
+        let profile: Profile? = try? fixture("profile")
+        engine.prepare(skills: skills, activeErrors: profile?.activeErrors ?? 0) {
+            (try? fixture("play_bank", as: [DemoPlayEngine.Entry].self)) ?? []
+        }
+        return engine
+    }
+
+    func playPack(mode: PlayMode, domain: String?, subdomains: [String], count: Int, ranked: Bool,
+                  level: PlayLevel) async throws -> PlayPack {
+        try engine().pack(mode: mode, domain: domain, subdomains: subdomains, count: count, ranked: ranked, level: level)
     }
 
     func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult {
-        try decode(.object(["recorded": .number(Double(attempts.count)), "correct": .number(0), "xp": .number(40),
-                            "seeds": .number(2), "corrected": .array([]), "results": .array([]),
-                            "achievements": .array([]), "balance": .number(546)]))
+        let engine = try engine()
+        var result = engine.submit(session: session, attempts: attempts)
+        let profile = try await self.profile()
+        result["balance"] = .number(Double(profile.seeds))
+        return try decode(.object(result))
     }
 
-    func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent { throw BackendError.offline }
+    func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent {
+        let engine = try engine()
+        guard let entry = engine.entry(question) else { throw BackendError.decoding("question inconnue") }
+        var content: [String: JSONValue] = [:]
+        switch kind {
+        case .fiftyFifty:
+            let wrong = (entry.question.payload.options ?? []).map(\.id).filter { $0 != entry.question.reveal?.answer.optionId }
+            content["remove"] = .array(wrong.shuffled().prefix(max(wrong.count - 1, 0)).map(JSONValue.string))
+        case .hint:
+            guard let hint = entry.hint else { throw BackendError.decoding("pas d'indice") }
+            content["hint"] = .string(hint)
+        case .context:
+            guard let context = entry.context else { throw BackendError.decoding("pas de contexte") }
+            content["context"] = .string(context)
+        }
+        engine.spendSeeds(kind.cost)
+        content["balance"] = .number(Double(try await profile().seeds))
+        return try decode(.object(content))
+    }
 
     // MARK: Profil
 
-    func profile() async throws -> Profile { try fixture("profile") }
+    /// Profil d'exemple, avec les graines et les erreurs de la séance de démo.
+    func profile() async throws -> Profile {
+        let engine = try engine()
+        var json: JSONValue = try fixture("profile")
+        if case .object(var dict) = json {
+            dict["active_errors"] = .number(Double(engine.activeErrors))
+            dict["seeds"] = .number(Double((dict["seeds"]?.doubleValue ?? 0) + Double(engine.seeds)))
+            json = .object(dict)
+        }
+        return try decode(json)
+    }
     func handleAvailable(_ handle: String) async throws -> HandleAvailability {
         try decode(.object(["available": .bool(true)]))
     }
@@ -159,8 +201,46 @@ struct DemoGameService: GameService {
     func completeOnboarding(level: String, interests: [String]) async throws -> Profile { try await profile() }
     func setTimezone(_ identifier: String) async throws {}
     func registerDevice(hash: String) async throws {}
-    func skills() async throws -> [SkillSummary] { try fixture("skills") }
-    func domainStats(_ domain: String) async throws -> DomainStats { try fixture("domain_stats") }
+    func skills() async throws -> [SkillSummary] {
+        let engine = try engine()
+        let skills: [SkillSummary] = try fixture("skills")
+        return skills.map { s in
+            guard let level = engine.level(s.domainId) else { return s }
+            return (try? decode(JSONValue.object(["domain_id": .string(s.domainId), "name": .string(s.name),
+                                                   "level": .number(level.rounded()), "reliability": .number(s.reliability),
+                                                   "answered": .number(Double(s.answered)), "correct": .number(Double(s.correct))]))) ?? s
+        }
+    }
+
+    /// Statistiques d'exemple ramenées au domaine demandé (niveau, thèmes, courbe).
+    func domainStats(_ domain: String) async throws -> DomainStats {
+        let engine = try engine()
+        var json: JSONValue = try fixture("domain_stats")
+        guard case .object(var dict) = json else { return try decode(json) }
+        let skill = try await skills().first { $0.domainId == domain }
+        let level = Double(skill?.level ?? 50)
+        let shift = level - (dict["level"]?.doubleValue ?? level)
+        dict["domain_id"] = .string(domain)
+        dict["level"] = .number(level)
+        dict["answered"] = .number(Double(skill?.answered ?? 0))
+        dict["correct"] = .number(Double(skill?.correct ?? 0))
+        if case .array(let points)? = dict["history"] {
+            dict["history"] = .array(points.map { p -> JSONValue in
+                guard case .object(var point) = p else { return p }
+                point["level"] = .number((((point["level"]?.doubleValue ?? level) + shift) * 10).rounded() / 10)
+                return .object(point)
+            })
+        }
+        let subs: [SubdomainInfo] = try fixture("subdomains")
+        dict["subdomains"] = .array(subs.filter { $0.domainId == domain }.enumerated().map { (i, sub) -> JSONValue in
+            .object(["id": .string(sub.id), "name": .string(sub.name), "level": .number(level + Double(i % 3 * 4 - 4)),
+                     "reliability": .number(0.5), "answered": .number(Double(skill?.answered ?? 0) / 3), "correct": .number(0),
+                     "available": .number(Double(engine.available(subdomain: sub.id)))])
+        })
+        dict["recent_errors"] = .array([])
+        json = .object(dict)
+        return try decode(json)
+    }
     func errors() async throws -> ErrorsOverview { try fixture("errors") }
     func achievements() async throws -> [AchievementRef] { try fixture("achievements") }
     func deleteAccount() async throws {}

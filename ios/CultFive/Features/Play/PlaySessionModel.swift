@@ -6,16 +6,46 @@ struct PlayConfig: Identifiable, Hashable {
     let id = UUID()
     var mode: PlayMode
     var domain: String? = nil
-    var subdomain: String? = nil
+    /// Sous-thèmes choisis ; vide = tout le domaine.
+    var subdomains: [String] = []
     var count: Int = 10
+    /// Partie classée (adaptative, fait bouger le niveau) ou entraînement libre.
+    var ranked = true
+    var level: PlayLevel = .adaptive
+    /// Secondes par question (entraînement libre) ; nil = sans chrono.
+    var timer: Int? = nil
 
     var title: String {
         switch mode {
         case .quick: return "Partie rapide"
-        case .training: return "Entraînement"
+        case .training: return ranked ? "Partie classée" : "Entraînement libre"
         case .surprise: return "Mix surprise"
         case .errors: return "Mes erreurs"
         case .challenge: return "Défi"
+        }
+    }
+
+    /// Ligne de réglages affichée à l'intro : « 10 questions · Débutant · 20 s ».
+    var settingsLine: String {
+        var parts = ["\(count) questions"]
+        if !ranked { parts.append(PlayLevelText.name(level)) }
+        if let timer { parts.append("\(timer) s par question") }
+        return parts.joined(separator: " · ")
+    }
+
+    /// Même réglages, nouvelle partie (nouvel identifiant).
+    func again() -> PlayConfig {
+        PlayConfig(mode: mode, domain: domain, subdomains: subdomains, count: count, ranked: ranked, level: level, timer: timer)
+    }
+}
+
+enum PlayLevelText {
+    static func name(_ level: PlayLevel) -> String {
+        switch level {
+        case .adaptive: return "Mon niveau"
+        case .beginner: return "Débutant"
+        case .intermediate: return "Intermédiaire"
+        case .expert: return "Expert"
         }
     }
 }
@@ -27,6 +57,8 @@ struct PlayConfig: Identifiable, Hashable {
 final class PlaySessionModel {
     enum Stage: Equatable {
         case loading
+        /// Écran d'annonce : domaine, type de partie, réglages.
+        case intro
         case playing
         case summary(PlaySummary)
         case empty(String)
@@ -42,6 +74,10 @@ final class PlaySessionModel {
         var achievements: [String]
         var synced: Bool
         var domainMoves: [String: (Double, Double)] = [:]
+        var ranked = true
+        /// Questions ratées, avec leur bonne réponse : « ce que tu as appris ».
+        var missed: [Question] = []
+        var bestStreak = 0
 
         static func == (lhs: PlaySummary, rhs: PlaySummary) -> Bool {
             lhs.correct == rhs.correct && lhs.total == rhs.total && lhs.xp == rhs.xp && lhs.seeds == rhs.seeds
@@ -59,6 +95,8 @@ final class PlaySessionModel {
     private(set) var helpText: String?
     private(set) var seedsBalance: Int?
     private(set) var helpError: String?
+    /// Fin du temps imparti pour la question en cours (entraînement chronométré).
+    private(set) var deadline: Date?
 
     private let service: GameService
     private let queue: OfflineAttemptQueue
@@ -83,7 +121,8 @@ final class PlaySessionModel {
     func start() async {
         stage = .loading
         do {
-            let pack = try await service.playPack(mode: config.mode, domain: config.domain, subdomain: config.subdomain, count: config.count)
+            let pack = try await service.playPack(mode: config.mode, domain: config.domain, subdomains: config.subdomains,
+                                                  count: config.count, ranked: config.ranked, level: config.level)
             begin(pack)
             if config.mode == .quick { Task { await prefetchOfflinePack() } }
         } catch BackendError.offline {
@@ -109,24 +148,59 @@ final class PlaySessionModel {
         }
         index = 0
         results = []
+        attempts = []
         phase = .answering
+        stage = .intro
+    }
+
+    /// L'intro est passée : la première question s'affiche.
+    func play() {
+        guard stage == .intro else { return }
         stage = .playing
+    }
+
+    /// Série de bonnes réponses en cours.
+    var streak: Int {
+        var n = 0
+        for correct in results.reversed() { if correct { n += 1 } else { break } }
+        return n
+    }
+
+    private var bestStreak: Int {
+        var best = 0, run = 0
+        for correct in results { run = correct ? run + 1 : 0; best = max(best, run) }
+        return best
     }
 
     /// Un pack de secours pour jouer sans réseau (métro, avion). Les questions du Daily n'y figurent jamais.
     private func prefetchOfflinePack() async {
         guard cache.load("offline-pack", as: PlayPack.self) == nil,
-              let pack = try? await service.playPack(mode: .quick, domain: nil, subdomain: nil, count: 10) else { return }
+              let pack = try? await service.playPack(mode: .quick, domain: nil, count: 10) else { return }
         cache.save(pack, key: "offline-pack")
     }
 
-    func questionDisplayed() { stopwatch.start() }
+    func questionDisplayed() {
+        stopwatch.start()
+        if let timer = config.timer, phase.isAnswering { deadline = Date().addingTimeInterval(TimeInterval(timer)) }
+    }
+
+    /// Temps écoulé : la question compte comme ratée.
+    func timeUp() {
+        guard phase.isAnswering, let question = current, let reveal = question.reveal else { return }
+        stopwatch.pause()
+        deadline = nil
+        attempts.append(PlayAttempt(questionId: question.id, given: nil, responseMs: stopwatch.elapsedMilliseconds))
+        results.append(false)
+        Haptics.error()
+        phase = .revealed(given: nil, isCorrect: false, reveal: reveal)
+    }
     func pause() { stopwatch.pause() }
     func resume() { if stage == .playing && phase.isAnswering { stopwatch.start() } }
 
     func submit(_ given: GivenAnswer) {
         guard phase.isAnswering, let question = current, let reveal = question.reveal else { return }
         stopwatch.pause()
+        deadline = nil
         let correct = AnswerEvaluator.isCorrect(given, for: question) ?? false
         attempts.append(PlayAttempt(questionId: question.id, given: given, responseMs: stopwatch.elapsedMilliseconds))
         results.append(correct)
@@ -136,8 +210,9 @@ final class PlaySessionModel {
 
     /// Badge immédiat en mode Erreurs : une bonne réponse corrige l'erreur.
     var badge: String? {
-        guard config.mode == .errors, case .revealed(_, true, _) = phase else { return nil }
-        return "Erreur corrigée ✓"
+        guard case .revealed(_, true, _) = phase else { return nil }
+        if config.mode == .errors { return "Erreur corrigée ✓" }
+        return streak >= 3 ? "🔥 \(streak) d'affilée" : nil
     }
 
     func next() async {
@@ -159,6 +234,9 @@ final class PlaySessionModel {
         let correct = results.filter { $0 }.count
         var summary = PlaySummary(correct: correct, total: results.count, xp: nil, seeds: nil,
                                   corrected: 0, achievements: [], synced: false)
+        summary.ranked = config.ranked
+        summary.bestStreak = bestStreak
+        summary.missed = zip(questions, results).filter { !$0.1 }.map { $0.0 }
         guard !attempts.isEmpty else {
             stage = .summary(summary)
             return
@@ -171,7 +249,7 @@ final class PlaySessionModel {
             summary.corrected = result.corrected.count
             summary.achievements = result.achievements
             summary.synced = true
-            for item in result.results {
+            for item in result.results where config.ranked {
                 guard let domain = questions.first(where: { $0.id == item.questionId })?.domainId,
                       let before = item.domainBefore, let after = item.domainAfter else { continue }
                 let first = summary.domainMoves[domain]?.0 ?? before

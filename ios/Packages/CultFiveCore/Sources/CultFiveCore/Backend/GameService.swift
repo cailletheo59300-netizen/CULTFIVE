@@ -13,7 +13,8 @@ public protocol GameService: Sendable {
 
     // Jouer
     func onboardingPack() async throws -> PlayPack
-    func playPack(mode: PlayMode, domain: String?, subdomain: String?, count: Int) async throws -> PlayPack
+    /// `subdomains` : sous-thèmes choisis (vide = tout le domaine). `ranked = false` : entraînement libre à difficulté `level`.
+    func playPack(mode: PlayMode, domain: String?, subdomains: [String], count: Int, ranked: Bool, level: PlayLevel) async throws -> PlayPack
     func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult
     func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent
 
@@ -101,9 +102,12 @@ public struct LiveGameService: GameService {
 
     public func onboardingPack() async throws -> PlayPack { try await api.rpc("onboarding_pack") }
 
-    public func playPack(mode: PlayMode, domain: String?, subdomain: String?, count: Int) async throws -> PlayPack {
+    public func playPack(mode: PlayMode, domain: String?, subdomains: [String], count: Int, ranked: Bool,
+                         level: PlayLevel) async throws -> PlayPack {
         try await api.rpc("play_pack", ["p_mode": .string(mode.rawValue), "p_domain": optional(domain),
-                                        "p_subdomain": optional(subdomain), "p_count": .number(Double(count))])
+                                        "p_subdomains": subdomains.isEmpty ? .null : .array(subdomains.map(JSONValue.string)),
+                                        "p_count": .number(Double(count)), "p_ranked": .bool(ranked),
+                                        "p_level": .string(level.rawValue)])
     }
 
     public func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult {
@@ -212,5 +216,12 @@ public struct LiveGameService: GameService {
     public func subdomains() async throws -> [SubdomainInfo] {
         try await api.select("subdomains", query: [URLQueryItem(name: "select", value: "id,domain_id,name,sort"),
                                                    URLQueryItem(name: "order", value: "sort")])
+    }
+}
+
+public extension GameService {
+    /// Partie classée, adaptative, sur tout le domaine (ou multi-domaines).
+    func playPack(mode: PlayMode, domain: String?, count: Int) async throws -> PlayPack {
+        try await playPack(mode: mode, domain: domain, subdomains: [], count: count, ranked: true, level: .adaptive)
     }
 }

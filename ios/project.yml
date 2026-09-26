@@ -61,7 +61,7 @@ targets:
       configs:
         Release:
           # Le mode démo (données enregistrées) n'existe que dans les builds Debug.
-          EXCLUDED_SOURCE_FILE_NAMES: "*.demo.json DemoGameService.swift"
+          EXCLUDED_SOURCE_FILE_NAMES: "*.demo.json DemoGameService.swift DemoPlayEngine.swift"
   CultFiveTests:
     type: bundle.unit-test
     platform: iOS

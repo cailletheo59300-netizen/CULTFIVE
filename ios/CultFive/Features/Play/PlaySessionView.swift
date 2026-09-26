@@ -2,12 +2,16 @@ import SwiftUI
 import CultFiveCore
 
 struct PlaySessionView: View {
-    let config: PlayConfig
-
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
     @State private var model: PlaySessionModel?
+    /// Réglages de la partie en cours (« Rejouer » et « Mes erreurs » enchaînent sans refermer l'écran).
+    @State private var config: PlayConfig
+
+    init(config: PlayConfig) {
+        _config = State(initialValue: config)
+    }
 
     var body: some View {
         ZStack {
@@ -18,8 +22,7 @@ struct PlaySessionView: View {
                 ProgressView()
             }
         }
-        .task {
-            guard model == nil else { return }
+        .task(id: config.id) {
             let session = PlaySessionModel(config: config, service: app.service, queue: app.queue, cache: app.cache,
                                            seeds: app.profile?.seeds)
             model = session
@@ -44,6 +47,10 @@ struct PlaySessionView: View {
                 Spacer()
             }
             .padding(Space.gutter)
+        case .intro:
+            PlayIntroView(config: config, domainName: config.domain.map { app.domainName($0) },
+                          count: model.questions.count, onGo: { model.play() }, onClose: { close() })
+                .transition(.opacity)
         case .playing:
             if let question = model.current {
                 QuestionScreen(
@@ -61,10 +68,20 @@ struct PlaySessionView: View {
                 )
                 .id(question.id)
                 .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
+                // Chrono : à l'échéance, la question compte comme ratée.
+                .task(id: model.deadline) {
+                    guard let deadline = model.deadline else { return }
+                    let wait = deadline.timeIntervalSinceNow
+                    if wait > 0 { try? await Task.sleep(nanoseconds: UInt64(wait * 1_000_000_000)) }
+                    guard !Task.isCancelled, model.deadline == deadline else { return }
+                    model.timeUp()
+                }
             }
         case .summary(let summary):
             PlaySummaryView(config: config, summary: summary,
-                            onAgain: { Task { await model.start() } },
+                            onAgain: { restart(config.again()) },
+                            showErrors: config.mode != .errors && ((app.profile?.activeErrors ?? 0) > 0 || summary.correct < summary.total),
+                            onErrors: { restart(PlayConfig(mode: .errors)) },
                             onClose: { close() })
         }
     }
@@ -77,8 +94,16 @@ struct PlaySessionView: View {
         model.current.map { DomainPalette.color($0.domainId) } ?? accent
     }
 
+    private func restart(_ next: PlayConfig) {
+        model = nil
+        config = next
+    }
+
     private func header(_ model: PlaySessionModel) -> some View {
         HStack(spacing: Space.m) {
+            if let deadline = model.deadline, let total = config.timer {
+                TimerRing(deadline: deadline, total: TimeInterval(total), color: accent(for: model))
+            }
             if model.isOffline {
                 Image(systemName: "wifi.slash").foregroundStyle(Color.inkSoft).accessibilityLabel("Hors ligne")
             }
@@ -159,6 +184,8 @@ struct PlaySummaryView: View {
     let config: PlayConfig
     let summary: PlaySessionModel.PlaySummary
     var onAgain: () -> Void
+    var showErrors = false
+    var onErrors: () -> Void = {}
     var onClose: () -> Void
 
     @Environment(AppModel.self) private var app
@@ -179,6 +206,7 @@ struct PlaySummaryView: View {
             VStack(alignment: .leading, spacing: Space.l) {
                 HStack {
                     DomainTag(domainId: config.domain ?? "", name: config.domain.map { app.domainName($0) } ?? config.title)
+                    Text(config.title).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
                     Spacer()
                     Button(action: onClose) { CloseCircle() }
                         .accessibilityLabel("Fermer")
@@ -193,6 +221,10 @@ struct PlaySummaryView: View {
                     }
                     Text(perfect ? "Sans faute !" : rate >= 0.7 ? "Belle partie !" : rate >= 0.4 ? "Pas mal du tout." : "Chaque erreur t'apprend quelque chose.")
                         .font(.cfHeadline).multilineTextAlignment(.center)
+                    if summary.bestStreak >= 3 {
+                        Label("Meilleure série : \(summary.bestStreak) d'affilée", systemImage: "flame.fill")
+                            .font(.cfFootnote.weight(.bold)).foregroundStyle(Color(hex: 0xF76707))
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 .accessibilityElement(children: .combine)
@@ -206,6 +238,11 @@ struct PlaySummaryView: View {
                         Spacer()
                     }
                 }
+                if !summary.ranked {
+                    Label("Entraînement libre : ton niveau ne change pas. Tes erreurs sont notées pour que tu les retravailles.",
+                          systemImage: "slider.horizontal.3")
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                }
                 if summary.corrected > 0 {
                     CelebrationCard(kind: .corrected,
                                     title: "\(summary.corrected) erreur\(summary.corrected > 1 ? "s" : "") corrigée\(summary.corrected > 1 ? "s" : "")",
@@ -217,9 +254,9 @@ struct PlaySummaryView: View {
                 ForEach(summary.achievements, id: \.self) { name in
                     CelebrationCard(kind: .trophy, title: name)
                 }
-                if summary.synced, !summary.domainMoves.isEmpty {
+                if summary.synced, summary.ranked, !summary.domainMoves.isEmpty {
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("Ce que ça change").labelCaps()
+                        Text("Ton niveau").labelCaps()
                         ForEach(summary.domainMoves.sorted { $0.key < $1.key }, id: \.key) { domain, move in
                             HStack {
                                 DomainTag(domainId: domain, name: app.domainName(domain))
@@ -237,9 +274,15 @@ struct PlaySummaryView: View {
                     Label("Hors ligne : ta partie sera enregistrée dès le retour du réseau.", systemImage: "wifi.slash")
                         .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 }
+                if !summary.missed.isEmpty { learned }
                 VStack(spacing: Space.s) {
-                    Button("Rejouer", action: onAgain).buttonStyle(InkButtonStyle(fill: accent, text: config.domain.map(DomainPalette.onColor) ?? .white))
-                    Button("Terminer", action: onClose).buttonStyle(.textLink)
+                    Button(action: onAgain) { Label("Rejouer", systemImage: "arrow.clockwise") }
+                        .buttonStyle(InkButtonStyle(fill: accent, text: config.domain.map(DomainPalette.onColor) ?? .white))
+                    if showErrors {
+                        Button(action: onErrors) { Label("Corriger mes erreurs", systemImage: "arrow.uturn.backward") }
+                            .buttonStyle(InkButtonStyle(fill: .paperRaised, text: .ink))
+                    }
+                    Button(config.domain == nil ? "Terminer" : "Choisir un autre domaine", action: onClose).buttonStyle(.textLink)
                 }
                 .padding(.top, Space.s)
             }
@@ -257,11 +300,128 @@ struct PlaySummaryView: View {
         }
     }
 
+    /// « Ce que tu as appris » : chaque question ratée avec sa bonne réponse.
+    private var learned: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Ce que tu as appris").labelCaps()
+            ForEach(summary.missed) { question in
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(question.prompt).font(.cfCallout).foregroundStyle(Color.ink)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if let reveal = question.reveal {
+                        if let answer = AnswerText.correct(for: question, answer: reveal.answer) {
+                            Label(answer, systemImage: "checkmark.circle.fill")
+                                .font(.system(.callout, design: .rounded).weight(.heavy)).foregroundStyle(Color.correct)
+                        }
+                        Text(reveal.takeaway ?? reveal.explanation).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            .lineLimit(3)
+                    }
+                }
+                .popCard(padding: 12, radius: Radius.s)
+            }
+        }
+    }
+
     private func chip(_ content: some View, tint: Color) -> some View {
         content
             .font(.system(.callout, design: .rounded).weight(.heavy))
             .foregroundStyle(tint)
             .padding(.horizontal, 14).padding(.vertical, 8)
             .background(tint.opacity(0.12), in: Capsule())
+    }
+}
+
+/// Annonce de la partie : domaine, type (classée / entraînement), réglages. Un temps pour se concentrer.
+struct PlayIntroView: View {
+    let config: PlayConfig
+    let domainName: String?
+    let count: Int
+    var onGo: () -> Void
+    var onClose: () -> Void
+
+    @State private var appeared = false
+
+    private var color: Color { config.domain.map(DomainPalette.color) ?? .brand }
+    private var onColor: Color { config.domain.map(DomainPalette.onColor) ?? .white }
+
+    var body: some View {
+        ZStack {
+            Rectangle().fill(config.domain == nil ? AnyShapeStyle(Color.popGradient) : AnyShapeStyle(color)).ignoresSafeArea()
+            if let domain = config.domain {
+                Image(systemName: DomainPalette.symbol(domain))
+                    .font(.system(size: 260, weight: .black))
+                    .foregroundStyle(onColor.opacity(0.1))
+                    .rotationEffect(.degrees(-14))
+                    .offset(x: 110, y: -170)
+                    .accessibilityHidden(true)
+            }
+            VStack(alignment: .leading, spacing: Space.m) {
+                HStack {
+                    Spacer()
+                    Button(action: onClose) {
+                        Image(systemName: "xmark").font(.system(.footnote, design: .rounded).weight(.heavy))
+                            .foregroundStyle(onColor)
+                            .frame(width: 34, height: 34)
+                            .background(onColor.opacity(0.18), in: Circle())
+                            .frame(width: 44, height: 44)
+                    }
+                    .accessibilityLabel("Fermer")
+                }
+                Spacer()
+                Text(config.title.uppercased()).font(.cfLabel).tracking(1).foregroundStyle(onColor.opacity(0.8))
+                Text(domainName ?? config.title)
+                    .font(.system(size: 44, weight: .black, design: .rounded))
+                    .foregroundStyle(onColor)
+                    .minimumScaleFactor(0.6).lineLimit(2)
+                VStack(alignment: .leading, spacing: 8) {
+                    line(icon: "number", "\(count) question\(count > 1 ? "s" : "")")
+                    if config.mode == .training {
+                        line(icon: config.ranked ? "chart.line.uptrend.xyaxis" : "slider.horizontal.3",
+                             config.ranked ? "Adaptée à ton niveau · compte pour ta progression" : "Difficulté : \(PlayLevelText.name(config.level)) · sans effet sur ton niveau")
+                    }
+                    if let timer = config.timer { line(icon: "stopwatch.fill", "\(timer) secondes par question") }
+                    if !config.subdomains.isEmpty { line(icon: "square.grid.2x2.fill", "\(config.subdomains.count) thème\(config.subdomains.count > 1 ? "s" : "") choisi\(config.subdomains.count > 1 ? "s" : "")") }
+                }
+                Spacer()
+                Button("Go !", action: onGo)
+                    .buttonStyle(InkButtonStyle(fill: .white, text: config.domain == nil ? Color(hex: 0x3A1FB8) : color))
+            }
+            .padding(Space.gutter)
+            .opacity(appeared ? 1 : 0)
+            .offset(y: appeared ? 0 : 16)
+        }
+        .onAppear { withAnimation(Motion.moment) { appeared = true } }
+    }
+
+    private func line(icon: String, _ text: String) -> some View {
+        Label(text, systemImage: icon)
+            .font(.system(.callout, design: .rounded).weight(.bold))
+            .foregroundStyle(onColor.opacity(0.9))
+    }
+}
+
+/// Anneau de chrono : se vide jusqu'à l'échéance, vire au rouge sur les 5 dernières secondes.
+struct TimerRing: View {
+    let deadline: Date
+    let total: TimeInterval
+    var color: Color = .brand
+
+    var body: some View {
+        TimelineView(.animation(minimumInterval: 0.1)) { timeline in
+            let left = max(0, deadline.timeIntervalSince(timeline.date))
+            let urgent = left <= 5
+            ZStack {
+                Circle().stroke((urgent ? Color.wrong : color).opacity(0.18), lineWidth: 4)
+                Circle().trim(from: 0, to: left / total)
+                    .stroke(urgent ? Color.wrong : color, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                    .rotationEffect(.degrees(-90))
+                Text("\(Int(left.rounded(.up)))")
+                    .font(.system(.caption, design: .rounded).weight(.heavy)).monospacedDigit()
+                    .foregroundStyle(urgent ? Color.wrong : Color.ink)
+            }
+            .frame(width: 34, height: 34)
+            .accessibilityElement()
+            .accessibilityLabel("\(Int(left.rounded(.up))) secondes restantes")
+        }
     }
 }

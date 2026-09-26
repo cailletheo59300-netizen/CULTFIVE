@@ -2,7 +2,7 @@ import SwiftUI
 import Charts
 import CultFiveCore
 
-/// Un domaine : la couleur prend de la place, les statistiques mènent à des actions (« Capitales faible → S'entraîner »).
+/// Un domaine : la couleur prend de la place ; « Jouer » ouvre le choix de partie, chaque thème y mène présélectionné.
 struct DomainView: View {
     let domainId: String
 
@@ -10,6 +10,8 @@ struct DomainView: View {
     @State private var stats: DomainStats?
     @State private var playConfig: PlayConfig?
     @State private var loadError: String?
+    @State private var setup: PlaySetupRequest?
+    @State private var pendingConfig: PlayConfig?
 
     private var color: Color { DomainPalette.color(domainId) }
 
@@ -18,8 +20,8 @@ struct DomainView: View {
             VStack(alignment: .leading, spacing: 0) {
                 header
                 VStack(alignment: .leading, spacing: Space.xl) {
-                    Button("S'entraîner sur tout le domaine") {
-                        playConfig = PlayConfig(mode: .training, domain: domainId)
+                    Button { setup = PlaySetupRequest(domainId: domainId) } label: {
+                        Label("Jouer", systemImage: "play.fill")
                     }
                     .buttonStyle(.domain(domainId))
 
@@ -46,6 +48,11 @@ struct DomainView: View {
         .toolbarColorScheme(domainId == "music" ? .light : .dark, for: .navigationBar)
         .fullScreenCover(item: $playConfig, onDismiss: { Task { await load() } }) { config in
             PlaySessionView(config: config)
+        }
+        .sheet(item: $setup, onDismiss: {
+            if let config = pendingConfig { pendingConfig = nil; playConfig = config }
+        }) { request in
+            PlaySetupSheet(domainId: request.domainId, preselected: request.preselected, onStart: { pendingConfig = $0 })
         }
         .task { await load() }
     }
@@ -96,15 +103,16 @@ struct DomainView: View {
 
     private var subdomains: some View {
         VStack(alignment: .leading, spacing: Space.s) {
-            Text("Sous-domaines").labelCaps()
+            Text("Thèmes").labelCaps()
             VStack(spacing: 10) {
                 let rows: [DomainStats.Subdomain] = stats?.subdomains ?? app.subdomains(of: domainId).map {
                     DomainStats.Subdomain(id: $0.id, name: $0.name, level: 0, reliability: 0, answered: 0, correct: 0, available: 1)
                 }
                 let weakest = rows.filter { $0.answered >= 3 }.min { $0.level < $1.level }?.id
-                ForEach(rows) { sub in
+                // Thèmes jouables uniquement (assez de questions pour une partie).
+                ForEach(rows.filter { $0.available >= 5 }) { sub in
                     Button {
-                        playConfig = PlayConfig(mode: .training, domain: domainId, subdomain: sub.id)
+                        setup = PlaySetupRequest(domainId: domainId, preselected: [sub.id])
                     } label: {
                         VStack(alignment: .leading, spacing: 6) {
                             HStack {
@@ -126,8 +134,7 @@ struct DomainView: View {
                         .popCard(padding: 14)
                     }
                     .buttonStyle(.row)
-                    .disabled(sub.available == 0)
-                    .opacity(sub.available == 0 ? 0.4 : 1)
+
                 }
             }
         }

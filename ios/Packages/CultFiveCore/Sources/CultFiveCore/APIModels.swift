@@ -212,14 +212,30 @@ public enum PlayMode: String, Codable, Sendable, CaseIterable {
     case quick, training, surprise, errors, challenge
 }
 
+/// Difficulté d'un entraînement libre. `adaptive` = selon le niveau du joueur (seul choix en partie classée).
+public enum PlayLevel: String, Codable, Sendable, CaseIterable {
+    case adaptive, beginner, intermediate, expert
+}
+
 public struct PlayPack: Codable, Hashable, Sendable {
     public let sessionId: UUID
     public let mode: String?
     public let questions: [Question]
+    /// Partie classée (le niveau bouge) ou entraînement libre.
+    public let ranked: Bool?
+    public let level: String?
 
     enum CodingKeys: String, CodingKey {
-        case mode, questions
+        case mode, questions, ranked, level
         case sessionId = "session_id"
+    }
+
+    public init(sessionId: UUID, mode: String?, questions: [Question], ranked: Bool? = nil, level: String? = nil) {
+        self.sessionId = sessionId
+        self.mode = mode
+        self.questions = questions
+        self.ranked = ranked
+        self.level = level
     }
 }
 

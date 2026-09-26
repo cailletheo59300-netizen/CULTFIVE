@@ -7,6 +7,10 @@ struct PlayHomeView: View {
     @State private var skills: [SkillSummary] = []
     @State private var playConfig: PlayConfig?
     @State private var path: [String] = []
+    @State private var setup: PlaySetupRequest?
+    /// Choix fait dans la feuille : lancé à sa fermeture.
+    @State private var pendingConfig: PlayConfig?
+    @State private var pendingStats: String?
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -35,6 +39,13 @@ struct PlayHomeView: View {
         }
         .fullScreenCover(item: $playConfig) { config in
             PlaySessionView(config: config)
+        }
+        .sheet(item: $setup, onDismiss: {
+            if let config = pendingConfig { pendingConfig = nil; playConfig = config }
+            if let domain = pendingStats { pendingStats = nil; path.append(domain) }
+        }) { request in
+            PlaySetupSheet(domainId: request.domainId, preselected: request.preselected,
+                           onStart: { pendingConfig = $0 }, onStats: { pendingStats = request.domainId })
         }
         .task {
             await load()
@@ -73,13 +84,19 @@ struct PlayHomeView: View {
 
     private var domainsIndex: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Par domaine").font(.cfHeadline)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Par domaine").font(.cfHeadline)
+                Text("Partie classée ou entraînement libre, à toi de choisir.").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            }
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
                 ForEach(orderedDomains) { domain in
-                    NavigationLink(value: domain.id) {
+                    Button { setup = PlaySetupRequest(domainId: domain.id) } label: {
                         DomainTile(domain: domain, skill: skills.first { $0.domainId == domain.id })
                     }
                     .buttonStyle(.row)
+                    .contextMenu {
+                        Button("Voir mes stats", systemImage: "chart.bar") { path.append(domain.id) }
+                    }
                 }
             }
         }
