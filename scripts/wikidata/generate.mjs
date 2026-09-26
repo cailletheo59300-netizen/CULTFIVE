@@ -1,0 +1,350 @@
+#!/usr/bin/env node
+// Génère des questions à partir du cache Wikidata (CC0) → content/questions/wd_*.json.
+// Déterministe (graine = identifiant de la question). Relecture humaine : scripts/wikidata/rejects.json liste les clés écartées.
+// Usage : node scripts/wikidata/generate.mjs
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { countryForms, partitiveOf, centuryLabel, frenchDate, yearOf, roundedPopulation, slug, DISPLAY, EXCLUDED_COUNTRIES } from './french.mjs';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const root = join(here, '..', '..');
+const load = (name) => JSON.parse(readFileSync(join(here, 'cache', `${name}.json`), 'utf8'));
+const rejects = new Set(JSON.parse(readFileSync(join(here, 'rejects.json'), 'utf8')));
+
+// ─────────────── Aléatoire déterministe
+function rng(seed) {
+  let h = 1779033703 ^ seed.length;
+  for (let i = 0; i < seed.length; i++) { h = Math.imul(h ^ seed.charCodeAt(i), 3432918353); h = (h << 13) | (h >>> 19); }
+  return () => {
+    h = Math.imul(h ^ (h >>> 16), 2246822507); h = Math.imul(h ^ (h >>> 13), 3266489909);
+    return ((h ^= h >>> 16) >>> 0) / 4294967296;
+  };
+}
+const shuffle = (arr, rand) => arr.map((v) => [rand(), v]).sort((a, b) => a[0] - b[0]).map((x) => x[1]);
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+const areaText = (a) => (a >= 1e6 ? `${(a / 1e6).toFixed(1).replace('.', ',').replace(',0', '')} million${a >= 2e6 ? 's' : ''} de km²`
+  : `${(a >= 10000 ? Math.round(a / 1000) * 1000 : Math.round(a / 10) * 10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} km²`);
+const deName = (name) => (/^[AEIOUÉÈÊÎÔHaeiouéèêîôh]/.test(name) ? `d'${name}` : `de ${name}`);
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+// ─────────────── Déduplication avec la banque curée (même énoncé ou même titre cité)
+const curatedText = readdirSync(join(root, 'content/questions'))
+  .filter((f) => f.endsWith('.json') && !f.startsWith('wd_'))
+  .flatMap((f) => JSON.parse(readFileSync(join(root, 'content/questions', f), 'utf8')))
+  .map((q) => `${q.prompt} ${(q.options ?? []).join(' ')}`.toLowerCase());
+const alreadyCovered = (needle) => curatedText.some((t) => t.includes(needle.toLowerCase()));
+
+const out = { geography: [], history: [], science: [], arts: [], cinema: [] };
+const stats = {};
+function add(bucket, template, q) {
+  if (rejects.has(q.key)) { stats[`${template} (rejetées)`] = (stats[`${template} (rejetées)`] ?? 0) + 1; return; }
+  q.source = 'Wikidata';
+  q.origin = 'import';
+  out[bucket].push(q);
+  stats[template] = (stats[template] ?? 0) + 1;
+}
+
+// ─────────────── Pays
+const countryRows = load('countries');
+const fetchedOn = countryRows.fetched;
+const countries = new Map();
+for (const r of countryRows.rows) {
+  const name = DISPLAY.get(r.cFr) ?? r.cFr;
+  if (EXCLUDED_COUNTRIES.has(name)) continue;
+  const c = countries.get(r.c) ?? { id: r.c, name, en: r.cEn, iso: r.iso, caps: new Map(), conts: new Set(), pop: 0, area: 0, sl: Number(r.sl) };
+  if (r.cap && r.capFr) c.caps.set(r.cap, r.capFr);
+  if (r.contFr) c.conts.add(r.contFr);
+  c.pop = Math.max(c.pop, Number(r.pop ?? 0));
+  c.area = Math.max(c.area, Number(r.area ?? 0));
+  countries.set(r.c, c);
+}
+const countryList = [...countries.values()].filter((c) => c.pop > 0);
+const continentOf = (c) => (c.conts.size === 1 ? [...c.conts][0] : null);
+const CONT_OFFSET = { Europe: -8, 'Amérique du Nord': -4, 'Amérique du Sud': 0, Asie: 3, Afrique: 8, Océanie: 6 };
+const CONTESTED_CAPITAL = new Set(['Israël', 'Guinée équatoriale', 'Nauru']);
+// Continent discutable (pays transcontinentaux ou classement contre-intuitif).
+const AMBIGUOUS_CONTINENT = new Set(['Chypre', 'Turquie', 'Russie', 'Arménie', 'Géorgie', 'Azerbaïdjan', 'Kazakhstan', 'Égypte', 'Indonésie', 'Papouasie-Nouvelle-Guinée', 'Timor oriental']);
+const countryFame = (c) => 88 - 7 * Math.log10(Math.max(c.pop, 1000)) + (CONT_OFFSET[continentOf(c)] ?? 4);
+
+const cities = load('cities').rows.map((r) => ({ id: r.city, name: r.cityFr, en: r.cityEn, country: r.country, pop: Number(r.pop), sl: Number(r.sl) }));
+const citiesByCountry = new Map();
+for (const city of cities) {
+  if (!citiesByCountry.has(city.country) || citiesByCountry.get(city.country).every((c) => c.id !== city.id)) {
+    citiesByCountry.set(city.country, [...(citiesByCountry.get(city.country) ?? []), city]);
+  }
+}
+
+const sameContinent = (c) => countryList.filter((o) => o.id !== c.id && continentOf(o) && continentOf(o) === continentOf(c));
+const nearestByFame = (c, pool, n, rand) =>
+  shuffle(pool, rand).sort((a, b) => Math.abs(countryFame(a) - countryFame(c)) - Math.abs(countryFame(b) - countryFame(c))).slice(0, n);
+
+for (const c of countryList) {
+  const f = countryForms(c.name);
+  const cont = continentOf(c);
+  const key = slug(c.en);
+  const fame = countryFame(c);
+  const neighbours = cont ? sameContinent(c).filter((o) => o.caps.size === 1 && !CONTESTED_CAPITAL.has(o.name)) : [];
+
+  // Capitale (un seul chef-lieu, sinon ambigu ; statuts contestés exclus)
+  if (c.caps.size === 1 && neighbours.length >= 3 && !CONTESTED_CAPITAL.has(c.name)) {
+    const [capId, capName] = [...c.caps.entries()][0];
+    const rand = rng(`cap-${c.id}`);
+    const others = nearestByFame(c, neighbours, 3, rand).map((o) => [...o.caps.values()][0]);
+    const capCity = cities.find((x) => x.id === capId);
+    const bigger = (citiesByCountry.get(c.id) ?? []).filter((x) => x.id !== capId && capCity && x.pop > capCity.pop * 1.1)
+      .sort((a, b) => b.pop - a.pop)[0];
+    const trap = bigger ? ` Ce n'est pas la plus grande ville du pays : ${bigger.name} est plus peuplée.` : '';
+    const difficulty = Math.round(clamp(fame + (bigger ? 8 : 0), 18, 80));
+    const sameName = capName.toLowerCase().includes(c.name.toLowerCase().split(' ')[0]) || c.name.toLowerCase().includes(capName.toLowerCase());
+    if (!sameName && !new Set(others).has(capName) && new Set(others).size === 3) {
+      add('geography', 'capitale', {
+        key: `wd-cap-${c.id}`, concept: `geography.capitals.${key}`, label: `Capitale ${f.of}`, type: 'mcq', difficulty,
+        prompt: `Quelle est la capitale ${f.of} ?`, options: [`${capName}*`, ...others],
+        explanation: `${capName} est la capitale ${f.of}.${trap}`,
+      });
+      if (c.pop >= 3e6) {
+        const otherCountries = nearestByFame(c, neighbours, 3, rng(`capr-${c.id}`)).map((o) => o.name);
+        add('geography', 'capitale inverse', {
+          key: `wd-capr-${c.id}`, concept: `geography.capitals.${key}`, label: `Capitale ${f.of}`, type: 'mcq',
+          difficulty: Math.round(clamp(difficulty - 4, 15, 80)),
+          prompt: `De quel pays ${capName} est-elle la capitale ?`, options: [`${c.name}*`, ...otherCountries],
+          explanation: `${capName} est la capitale ${f.of}.${trap}`,
+        });
+      }
+    }
+  }
+
+  // Drapeau (émoji à partir du code ISO)
+  if (cont && neighbours.length >= 3 && /^[A-Z]{2}$/.test(c.iso)) {
+    const emoji = String.fromCodePoint(...[...c.iso].map((ch) => 0x1f1e6 + ch.charCodeAt(0) - 65));
+    const rand = rng(`flag-${c.id}`);
+    const others = nearestByFame(c, sameContinent(c), 3, rand).map((o) => o.name);
+    const capName = c.caps.size === 1 ? [...c.caps.values()][0] : null;
+    add('geography', 'drapeau', {
+      key: `wd-flag-${c.id}`, concept: `geography.flags.${key}`, label: `Drapeau ${f.of}`, type: 'mcq',
+      difficulty: Math.round(clamp(fame + 6, 18, 85)),
+      prompt: `À quel pays appartient ce drapeau ? ${emoji}`, options: [`${c.name}*`, ...others],
+      explanation: `C'est le drapeau ${f.of}${capName ? `, dont la capitale est ${capName}` : ''} (${cont}).`,
+    });
+  }
+
+  // Continent (seulement pour les pays qui ne sont pas évidents)
+  if (cont && CONT_OFFSET[cont] !== undefined && fame >= 30 && cont !== 'Amérique du Nord' && !AMBIGUOUS_CONTINENT.has(c.name)) {
+    const all = ['Afrique', 'Asie', 'Europe', 'Amérique du Sud', 'Océanie'].filter((x) => x !== cont);
+    const rand = rng(`cont-${c.id}`);
+    const verb = f.gender === 'p' ? 'se trouvent' : 'se trouve';
+    add('geography', 'continent', {
+      key: `wd-cont-${c.id}`, concept: `geography.location.continent_${key}`, label: `Continent ${f.of}`, type: 'mcq',
+      difficulty: Math.round(clamp(fame - 6, 18, 75)),
+      prompt: `Sur quel continent ${verb} ${f.the} ?`, options: [`${cont}*`, ...shuffle(all, rand).slice(0, 3)],
+      explanation: `${cap(f.the)} ${verb} en ${cont === 'Océanie' ? 'Océanie' : cont}${c.caps.size === 1 ? ` ; ${[...c.caps.values()][0]} en est la capitale` : ''}.`,
+    });
+  }
+}
+
+// Grandes villes (hors capitales) → pays
+const capitalIds = new Set(countryList.flatMap((c) => [...c.caps.keys()]));
+for (const city of cities) {
+  const country = countries.get(city.country);
+  if (!country || capitalIds.has(city.id) || !continentOf(country)) continue;
+  if (cities.filter((x) => x.name === city.name).length > 1) continue;
+  const pool = sameContinent(country);
+  if (pool.length < 3) continue;
+  const f = countryForms(country.name);
+  const rand = rng(`city-${city.id}`);
+  const others = nearestByFame(country, pool, 3, rand).map((o) => o.name);
+  const de = /^[AEIOUÉÈÎaeiouéèî]/.test(city.name) ? `d'${city.name}` : `de ${city.name}`;
+  add('geography', 'ville', {
+    key: `wd-city-${city.id}`, concept: `geography.location.city_${slug(city.en)}`, label: `Pays de ${city.name}`, type: 'mcq',
+    difficulty: Math.round(clamp(100 - 12 * Math.log(city.sl) + (CONT_OFFSET[continentOf(country)] ?? 0) / 2, 22, 78)),
+    prompt: `Dans quel pays se trouve la ville ${de} ?`, options: [`${country.name}*`, ...others],
+    explanation: `${city.name} se trouve ${f.in}. La ville compte environ ${roundedPopulation(city.pop)} d'habitants (hors agglomération).`,
+    fact_as_of: fetchedOn,
+  });
+}
+
+// Classements : population et superficie (écarts nets pour rester vrais malgré les mises à jour)
+function orderingSets(metric, minRatio, count, seed) {
+  const sets = [];
+  const pool = countryList.filter((c) => c[metric] > 0 && countryFame(c) < 45);
+  const rand = rng(seed);
+  for (let attempt = 0; attempt < 4000 && sets.length < count; attempt++) {
+    const pick = shuffle(pool, rand).slice(0, 4).sort((a, b) => b[metric] - a[metric]);
+    if (pick.every((c, i) => i === 0 || pick[i - 1][metric] / c[metric] >= minRatio)
+        && !sets.some((s) => s.some((c) => pick.includes(c)))) {
+      sets.push(pick);
+    }
+  }
+  return sets;
+}
+orderingSets('pop', 1.6, 14, 'pop').forEach((set, i) => add('geography', 'classement population', {
+  key: `wd-popord-${set.map((c) => c.id).join('-')}`, concept: `geography.countries.population_set_${i + 1}`,
+  label: `Population : ${set.map((c) => c.name).join(', ')}`, type: 'ordering', difficulty: 58,
+  prompt: 'Classe ces pays du plus peuplé au moins peuplé.', items: set.map((c) => c.name),
+  explanation: `Populations approximatives : ${set.map((c) => `${c.name} ≈ ${roundedPopulation(c.pop)}`).join(' ; ')}.`,
+  fact_as_of: fetchedOn,
+}));
+orderingSets('area', 1.6, 12, 'area').forEach((set, i) => add('geography', 'classement superficie', {
+  key: `wd-areaord-${set.map((c) => c.id).join('-')}`, concept: `geography.countries.area_set_${i + 1}`,
+  label: `Superficie : ${set.map((c) => c.name).join(', ')}`, type: 'ordering', difficulty: 60,
+  prompt: 'Classe ces pays du plus grand au plus petit (superficie).', items: set.map((c) => c.name),
+  explanation: `Superficies approximatives : ${set.map((c) => `${c.name} ≈ ${areaText(c.area)}`).join(' ; ')}.`,
+}));
+
+// ─────────────── Personnalités : siècle de naissance, classements chronologiques
+const peopleFiles = ['painters', 'writers', 'composers', 'scientists', 'philosophers', 'explorers'];
+const people = new Map();
+for (const file of peopleFiles) {
+  for (const r of load(file).rows) {
+    const birth = yearOf(r.birth);
+    if (!birth || birth < 1000 || birth > 1950 || /^Q\d+$/.test(r.pFr)) continue;
+    const prev = people.get(r.p);
+    people.set(r.p, { id: r.p, name: r.pFr, desc: r.desc, birth, death: yearOf(r.death), female: r.sex === 'Q6581072', sl: Number(r.sl) });
+    if (prev && prev.birth !== birth) people.delete(r.p);  // dates contradictoires : on écarte
+  }
+}
+const peopleList = [...people.values()].filter((p) => !alreadyCovered(p.name));
+for (const p of peopleList) {
+  const c = Math.floor((p.birth - 1) / 100) + 1;
+  const rand = rng(`cent-${p.id}`);
+  const candidates = [c - 2, c - 1, c + 1, c + 2].filter((x) => x >= 11 && x <= 20);
+  const others = shuffle(candidates, rand).slice(0, 3).sort((a, b) => a - b);
+  if (others.length < 3) continue;
+  const options = [...others, c].sort((a, b) => a - b).map((x) => `${centuryLabel(x * 100)}${x === c ? '*' : ''}`);
+  const ne = p.female ? 'née' : 'né';
+  const mort = p.female ? 'morte' : 'mort';
+  add('history', 'siècle de naissance', {
+    key: `wd-cent-${p.id}`, concept: `history.figures.century_${slug(p.name)}`, label: `Époque de ${p.name}`, type: 'mcq',
+    keep_order: true, difficulty: Math.round(clamp(100 - 12 * Math.log(p.sl) + 6, 25, 80)),
+    prompt: `En quel siècle est ${ne} ${p.name} ?`, options,
+    explanation: `${p.name}${p.desc ? `, ${p.desc.replace(/\s*\(.*\)$/, '')},` : ''} est ${ne} en ${p.birth}${p.death ? ` et ${mort} en ${p.death}` : ''}.`,
+  });
+}
+{
+  const rand = rng('births');
+  const pool = peopleList.filter((p) => p.sl >= 120);
+  const used = new Set();
+  let n = 0;
+  for (let attempt = 0; attempt < 5000 && n < 16; attempt++) {
+    const pick = shuffle(pool.filter((p) => !used.has(p.id)), rand).slice(0, 4).sort((a, b) => a.birth - b.birth);
+    if (pick.length < 4 || !pick.every((p, i) => i === 0 || p.birth - pick[i - 1].birth >= 40)) continue;
+    pick.forEach((p) => used.add(p.id));
+    n++;
+    add('history', 'classement naissances', {
+      key: `wd-births-${pick.map((p) => p.id).join('-')}`, concept: `history.figures.births_set_${n}`,
+      label: `Naissances : ${pick.map((p) => p.name).join(', ')}`, type: 'ordering', difficulty: 55,
+      prompt: 'Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).',
+      items: pick.map((p) => p.name),
+      explanation: `${pick.map((p) => `${p.name} (${p.birth})`).join(', ')}.`,
+    });
+  }
+}
+
+// ─────────────── Batailles : année
+{
+  const rows = load('battles').rows;
+  const byLabel = new Map();
+  for (const r of rows) byLabel.set(r.eFr, new Set([...(byLabel.get(r.eFr) ?? []), r.e]));
+  const seen = new Set();
+  for (const r of rows) {
+    const label = r.eFr;
+    const iso = r.date ?? r.start;
+    const year = yearOf(iso);
+    if (seen.has(r.e) || !label.startsWith('bataille ') || label.includes('(') || byLabel.get(label).size > 1 || !year || year < 1000 || year > 1945) continue;
+    if (alreadyCovered(label.replace('bataille ', ''))) continue;
+    seen.add(r.e);
+    const rand = rng(`battle-${r.e}`);
+    const offsets = shuffle([-40, -25, -15, -9, -5, -3, 3, 5, 9, 15, 25, 40], rand);
+    const years = [];
+    for (const o of offsets) if (years.length < 3 && year + o <= 2020 && years.every((y) => Math.abs(y - (year + o)) >= 3)) years.push(year + o);
+    const options = [...years, year].sort((a, b) => a - b).map((y) => `${y}${y === year ? '*' : ''}`);
+    const date = frenchDate(iso);
+    add('history', 'bataille', {
+      key: `wd-battle-${r.e}`, concept: `history.dates.${slug(label)}`, label: cap(label), type: 'mcq', keep_order: true,
+      difficulty: Math.round(clamp(100 - 12 * Math.log(Number(r.sl)) + 10, 35, 85)),
+      prompt: `En quelle année a eu lieu la ${label} ?`, options,
+      explanation: `La ${label} a eu lieu ${/^\d+$/.test(date) ? `en ${date}` : `le ${date}`}.`,
+    });
+  }
+}
+
+// ─────────────── Éléments chimiques : symbole
+{
+  const LATIN = { Fe: 'ferrum', Na: 'natrium', K: 'kalium', Cu: 'cuprum', Ag: 'argentum', Sn: 'stannum', Hg: 'hydrargyrum', Pb: 'plumbum', W: 'wolfram', Sb: 'stibium' };
+  const COMMON = ['H', 'He', 'Li', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca', 'Ti', 'Cr', 'Mn',
+    'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Br', 'Ag', 'Sn', 'Sb', 'I', 'W', 'Pt', 'Hg', 'Pb', 'Ra', 'U'];
+  const elements = new Map();
+  for (const r of load('elements').rows) if (COMMON.includes(r.sym)) elements.set(r.sym, { sym: r.sym, name: r.eFr, z: Number(r.z) });
+  const list = [...elements.values()];
+  for (const e of list) {
+    const rand = rng(`elem-${e.sym}`);
+    const similar = list.filter((o) => o.sym !== e.sym).sort((a, b) =>
+      (b.sym[0] === e.sym[0]) - (a.sym[0] === e.sym[0]) || (b.name[0] === e.name[0]) - (a.name[0] === e.name[0]) || rand() - 0.5);
+    const latin = LATIN[e.sym] ? ` Il vient du latin ${LATIN[e.sym]}.` : '';
+    const difficulty = LATIN[e.sym] ? 55 : e.z <= 20 ? 35 : 48;
+    add('science', 'symbole chimique', {
+      key: `wd-elem-${e.sym}`, concept: `science.chemistry.symbol_${e.sym.toLowerCase()}`, label: `Symbole ${partitiveOf(e.name)}`,
+      type: 'mcq', difficulty,
+      prompt: `Quel est le symbole chimique ${partitiveOf(e.name)} ?`, options: [`${e.sym}*`, ...similar.slice(0, 3).map((o) => o.sym)],
+      explanation: `Le symbole ${partitiveOf(e.name)} est ${e.sym}, et son numéro atomique est ${e.z}.${latin}`,
+    });
+    add('science', 'élément du symbole', {
+      key: `wd-elemr-${e.sym}`, concept: `science.chemistry.symbol_${e.sym.toLowerCase()}`, label: `Symbole ${partitiveOf(e.name)}`,
+      type: 'mcq', difficulty: Math.max(difficulty - 5, 25),
+      prompt: `Quel élément chimique a pour symbole ${e.sym} ?`, options: [`${cap(e.name)}*`, ...similar.slice(0, 3).map((o) => cap(o.name))],
+      explanation: `${e.sym} est le symbole ${partitiveOf(e.name)} (numéro atomique ${e.z}).${latin}`,
+    });
+  }
+}
+
+// ─────────────── Œuvres : livres, tableaux, films → auteur
+function works(file, bucket, template, conceptPrefix, promptOf, explain, extraDifficulty) {
+  const rows = load(file).rows;
+  const authorsOf = new Map();
+  const labelCount = new Map();
+  for (const r of rows) {
+    authorsOf.set(r.w, new Set([...(authorsOf.get(r.w) ?? []), r.author]));
+    labelCount.set(r.wFr, new Set([...(labelCount.get(r.wFr) ?? []), r.w]));
+  }
+  const items = new Map();
+  for (const r of rows) {
+    if (authorsOf.get(r.w).size !== 1 || labelCount.get(r.wFr).size !== 1 || /^Q\d+$/.test(r.wFr) || /^Q\d+$/.test(r.authorFr)) continue;
+    const year = yearOf(r.date);
+    const prev = items.get(r.w);
+    if (!prev || (year && (!prev.year || year < prev.year))) {
+      items.set(r.w, { id: r.w, title: r.wFr, author: r.authorFr, authorId: r.author, year, sl: Number(r.sl) });
+    }
+  }
+  const list = [...items.values()].filter((w) => !alreadyCovered(w.title));
+  for (const w of list) {
+    if (w.title.toLowerCase().includes(w.author.toLowerCase())) continue;
+    const rand = rng(`${template}-${w.id}`);
+    const pool = [...new Map([...items.values()].filter((o) => o.authorId !== w.authorId).map((o) => [o.authorId, o])).values()];
+    const close = shuffle(pool, rand).sort((a, b) => Math.abs((a.year ?? 1900) - (w.year ?? 1900)) - Math.abs((b.year ?? 1900) - (w.year ?? 1900)));
+    const others = [...new Set(close.map((o) => o.author))].slice(0, 3);
+    if (others.length < 3) continue;
+    add(bucket, template, {
+      key: `wd-${template.split(' ')[0]}-${w.id}`, concept: `${conceptPrefix}_${slug(w.title).slice(0, 30)}_${w.id.toLowerCase()}`, label: `Auteur de « ${w.title} »`,
+      type: 'mcq', difficulty: Math.round(clamp(100 - 12 * Math.log(w.sl) + extraDifficulty, 22, 82)),
+      prompt: promptOf(w), options: [`${w.author}*`, ...others], explanation: explain(w),
+    });
+  }
+}
+works('books', 'arts', 'livre auteur', 'arts.literature.book',
+  (w) => `Qui a écrit « ${w.title} » ?`,
+  (w) => `« ${w.title} » est une œuvre ${deName(w.author)}${w.year ? `, parue en ${w.year}` : ''}.`, 8);
+works('paintings', 'arts', 'tableau peintre', 'arts.painting.work',
+  (w) => `Qui a peint « ${w.title} » ?`,
+  (w) => `« ${w.title} » a été peint par ${w.author}${w.year ? ` vers ${w.year}` : ''}.`, 4);
+works('films', 'cinema', 'film réalisateur', 'cinema.directors.film',
+  (w) => `Qui a réalisé le film « ${w.title} »${w.year ? ` (${w.year})` : ''} ?`,
+  (w) => `« ${w.title} » a été réalisé par ${w.author}${w.year ? ` et est sorti en ${w.year}` : ''}.`, 2);
+
+// ─────────────── Écriture
+for (const [bucket, list] of Object.entries(out)) {
+  list.sort((a, b) => a.key.localeCompare(b.key));
+  writeFileSync(join(root, 'content/questions', `wd_${bucket}.json`), JSON.stringify(list, null, 1) + '\n');
+}
+console.log('Questions générées par modèle :', stats);
+console.log('Total :', Object.values(out).reduce((n, l) => n + l.length, 0));

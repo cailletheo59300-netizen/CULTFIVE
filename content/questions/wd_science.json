@@ -1,0 +1,1260 @@
+[
+ {
+  "key": "wd-elem-Ag",
+  "concept": "science.chemistry.symbol_ag",
+  "label": "Symbole de l'argent",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique de l'argent ?",
+  "options": [
+   "Ag*",
+   "Al",
+   "Ar",
+   "Sb"
+  ],
+  "explanation": "Le symbole de l'argent est Ag, et son numéro atomique est 47. Il vient du latin argentum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Al",
+  "concept": "science.chemistry.symbol_al",
+  "label": "Symbole de l'aluminium",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique de l'aluminium ?",
+  "options": [
+   "Al*",
+   "Ar",
+   "Ag",
+   "N"
+  ],
+  "explanation": "Le symbole de l'aluminium est Al, et son numéro atomique est 13.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Ar",
+  "concept": "science.chemistry.symbol_ar",
+  "label": "Symbole de l'argon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique de l'argon ?",
+  "options": [
+   "Ar*",
+   "Al",
+   "Ag",
+   "N"
+  ],
+  "explanation": "Le symbole de l'argon est Ar, et son numéro atomique est 18.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Br",
+  "concept": "science.chemistry.symbol_br",
+  "label": "Symbole du brome",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du brome ?",
+  "options": [
+   "Br*",
+   "H",
+   "K",
+   "He"
+  ],
+  "explanation": "Le symbole du brome est Br, et son numéro atomique est 35.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-C",
+  "concept": "science.chemistry.symbol_c",
+  "label": "Symbole du carbone",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du carbone ?",
+  "options": [
+   "C*",
+   "Cu",
+   "Cl",
+   "Cr"
+  ],
+  "explanation": "Le symbole du carbone est C, et son numéro atomique est 6.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Ca",
+  "concept": "science.chemistry.symbol_ca",
+  "label": "Symbole du calcium",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du calcium ?",
+  "options": [
+   "Ca*",
+   "C",
+   "Cu",
+   "Cl"
+  ],
+  "explanation": "Le symbole du calcium est Ca, et son numéro atomique est 20.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Cl",
+  "concept": "science.chemistry.symbol_cl",
+  "label": "Symbole du chlore",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du chlore ?",
+  "options": [
+   "Cl*",
+   "C",
+   "Co",
+   "Cu"
+  ],
+  "explanation": "Le symbole du chlore est Cl, et son numéro atomique est 17.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Co",
+  "concept": "science.chemistry.symbol_co",
+  "label": "Symbole du cobalt",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du cobalt ?",
+  "options": [
+   "Co*",
+   "C",
+   "Ca",
+   "Cl"
+  ],
+  "explanation": "Le symbole du cobalt est Co, et son numéro atomique est 27.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Cr",
+  "concept": "science.chemistry.symbol_cr",
+  "label": "Symbole du chrome",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du chrome ?",
+  "options": [
+   "Cr*",
+   "Cu",
+   "C",
+   "Cl"
+  ],
+  "explanation": "Le symbole du chrome est Cr, et son numéro atomique est 24.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Cu",
+  "concept": "science.chemistry.symbol_cu",
+  "label": "Symbole du cuivre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique du cuivre ?",
+  "options": [
+   "Cu*",
+   "Cr",
+   "Cl",
+   "Ca"
+  ],
+  "explanation": "Le symbole du cuivre est Cu, et son numéro atomique est 29. Il vient du latin cuprum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-F",
+  "concept": "science.chemistry.symbol_f",
+  "label": "Symbole du fluor",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du fluor ?",
+  "options": [
+   "F*",
+   "Fe",
+   "Ra",
+   "Cu"
+  ],
+  "explanation": "Le symbole du fluor est F, et son numéro atomique est 9.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Fe",
+  "concept": "science.chemistry.symbol_fe",
+  "label": "Symbole du fer",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique du fer ?",
+  "options": [
+   "Fe*",
+   "F",
+   "Ag",
+   "Cr"
+  ],
+  "explanation": "Le symbole du fer est Fe, et son numéro atomique est 26. Il vient du latin ferrum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-H",
+  "concept": "science.chemistry.symbol_h",
+  "label": "Symbole de l'hydrogène",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique de l'hydrogène ?",
+  "options": [
+   "H*",
+   "He",
+   "Hg",
+   "Na"
+  ],
+  "explanation": "Le symbole de l'hydrogène est H, et son numéro atomique est 1.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-He",
+  "concept": "science.chemistry.symbol_he",
+  "label": "Symbole de l'hélium",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique de l'hélium ?",
+  "options": [
+   "He*",
+   "H",
+   "Hg",
+   "Co"
+  ],
+  "explanation": "Le symbole de l'hélium est He, et son numéro atomique est 2.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Hg",
+  "concept": "science.chemistry.symbol_hg",
+  "label": "Symbole du mercure",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique du mercure ?",
+  "options": [
+   "Hg*",
+   "He",
+   "H",
+   "Mg"
+  ],
+  "explanation": "Le symbole du mercure est Hg, et son numéro atomique est 80. Il vient du latin hydrargyrum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-I",
+  "concept": "science.chemistry.symbol_i",
+  "label": "Symbole de l'iode",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique de l'iode ?",
+  "options": [
+   "I*",
+   "H",
+   "P",
+   "He"
+  ],
+  "explanation": "Le symbole de l'iode est I, et son numéro atomique est 53.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-K",
+  "concept": "science.chemistry.symbol_k",
+  "label": "Symbole du potassium",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique du potassium ?",
+  "options": [
+   "K*",
+   "Pb",
+   "P",
+   "Pt"
+  ],
+  "explanation": "Le symbole du potassium est K, et son numéro atomique est 19. Il vient du latin kalium.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Li",
+  "concept": "science.chemistry.symbol_li",
+  "label": "Symbole du lithium",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du lithium ?",
+  "options": [
+   "Li*",
+   "H",
+   "F",
+   "Ra"
+  ],
+  "explanation": "Le symbole du lithium est Li, et son numéro atomique est 3.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Mg",
+  "concept": "science.chemistry.symbol_mg",
+  "label": "Symbole du magnésium",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du magnésium ?",
+  "options": [
+   "Mg*",
+   "Mn",
+   "Hg",
+   "Ca"
+  ],
+  "explanation": "Le symbole du magnésium est Mg, et son numéro atomique est 12.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Mn",
+  "concept": "science.chemistry.symbol_mn",
+  "label": "Symbole du manganèse",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du manganèse ?",
+  "options": [
+   "Mn*",
+   "Mg",
+   "Hg",
+   "H"
+  ],
+  "explanation": "Le symbole du manganèse est Mn, et son numéro atomique est 25.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-N",
+  "concept": "science.chemistry.symbol_n",
+  "label": "Symbole de l'azote",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique de l'azote ?",
+  "options": [
+   "N*",
+   "Ne",
+   "Na",
+   "Ni"
+  ],
+  "explanation": "Le symbole de l'azote est N, et son numéro atomique est 7.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Na",
+  "concept": "science.chemistry.symbol_na",
+  "label": "Symbole du sodium",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique du sodium ?",
+  "options": [
+   "Na*",
+   "Ni",
+   "Ne",
+   "N"
+  ],
+  "explanation": "Le symbole du sodium est Na, et son numéro atomique est 11. Il vient du latin natrium.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Ne",
+  "concept": "science.chemistry.symbol_ne",
+  "label": "Symbole du néon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du néon ?",
+  "options": [
+   "Ne*",
+   "Ni",
+   "Na",
+   "N"
+  ],
+  "explanation": "Le symbole du néon est Ne, et son numéro atomique est 10.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Ni",
+  "concept": "science.chemistry.symbol_ni",
+  "label": "Symbole du nickel",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du nickel ?",
+  "options": [
+   "Ni*",
+   "Ne",
+   "Na",
+   "N"
+  ],
+  "explanation": "Le symbole du nickel est Ni, et son numéro atomique est 28.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-O",
+  "concept": "science.chemistry.symbol_o",
+  "label": "Symbole de l'oxygène",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique de l'oxygène ?",
+  "options": [
+   "O*",
+   "Si",
+   "Cr",
+   "Li"
+  ],
+  "explanation": "Le symbole de l'oxygène est O, et son numéro atomique est 8.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-P",
+  "concept": "science.chemistry.symbol_p",
+  "label": "Symbole du phosphore",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du phosphore ?",
+  "options": [
+   "P*",
+   "Pb",
+   "Pt",
+   "K"
+  ],
+  "explanation": "Le symbole du phosphore est P, et son numéro atomique est 15.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Pb",
+  "concept": "science.chemistry.symbol_pb",
+  "label": "Symbole du plomb",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique du plomb ?",
+  "options": [
+   "Pb*",
+   "Pt",
+   "P",
+   "K"
+  ],
+  "explanation": "Le symbole du plomb est Pb, et son numéro atomique est 82. Il vient du latin plumbum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Pt",
+  "concept": "science.chemistry.symbol_pt",
+  "label": "Symbole du platine",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du platine ?",
+  "options": [
+   "Pt*",
+   "Pb",
+   "P",
+   "K"
+  ],
+  "explanation": "Le symbole du platine est Pt, et son numéro atomique est 78.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Ra",
+  "concept": "science.chemistry.symbol_ra",
+  "label": "Symbole du radium",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du radium ?",
+  "options": [
+   "Ra*",
+   "F",
+   "Si",
+   "Mn"
+  ],
+  "explanation": "Le symbole du radium est Ra, et son numéro atomique est 88.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-S",
+  "concept": "science.chemistry.symbol_s",
+  "label": "Symbole du soufre",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du soufre ?",
+  "options": [
+   "S*",
+   "Si",
+   "Sb",
+   "Sn"
+  ],
+  "explanation": "Le symbole du soufre est S, et son numéro atomique est 16.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Sb",
+  "concept": "science.chemistry.symbol_sb",
+  "label": "Symbole de l'antimoine",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique de l'antimoine ?",
+  "options": [
+   "Sb*",
+   "Si",
+   "S",
+   "Sn"
+  ],
+  "explanation": "Le symbole de l'antimoine est Sb, et son numéro atomique est 51. Il vient du latin stibium.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Si",
+  "concept": "science.chemistry.symbol_si",
+  "label": "Symbole du silicium",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le symbole chimique du silicium ?",
+  "options": [
+   "Si*",
+   "S",
+   "Sn",
+   "Sb"
+  ],
+  "explanation": "Le symbole du silicium est Si, et son numéro atomique est 14.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Sn",
+  "concept": "science.chemistry.symbol_sn",
+  "label": "Symbole de l'étain",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique de l'étain ?",
+  "options": [
+   "Sn*",
+   "Si",
+   "S",
+   "Sb"
+  ],
+  "explanation": "Le symbole de l'étain est Sn, et son numéro atomique est 50. Il vient du latin stannum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Ti",
+  "concept": "science.chemistry.symbol_ti",
+  "label": "Symbole du titane",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du titane ?",
+  "options": [
+   "Ti*",
+   "W",
+   "Sb",
+   "Mn"
+  ],
+  "explanation": "Le symbole du titane est Ti, et son numéro atomique est 22.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-U",
+  "concept": "science.chemistry.symbol_u",
+  "label": "Symbole de l'uranium",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique de l'uranium ?",
+  "options": [
+   "U*",
+   "H",
+   "Ni",
+   "Li"
+  ],
+  "explanation": "Le symbole de l'uranium est U, et son numéro atomique est 92.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-W",
+  "concept": "science.chemistry.symbol_w",
+  "label": "Symbole du tungstène",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le symbole chimique du tungstène ?",
+  "options": [
+   "W*",
+   "Ti",
+   "Ar",
+   "Ni"
+  ],
+  "explanation": "Le symbole du tungstène est W, et son numéro atomique est 74. Il vient du latin wolfram.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elem-Zn",
+  "concept": "science.chemistry.symbol_zn",
+  "label": "Symbole du zinc",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel est le symbole chimique du zinc ?",
+  "options": [
+   "Zn*",
+   "U",
+   "Fe",
+   "Na"
+  ],
+  "explanation": "Le symbole du zinc est Zn, et son numéro atomique est 30.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Ag",
+  "concept": "science.chemistry.symbol_ag",
+  "label": "Symbole de l'argent",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Ag ?",
+  "options": [
+   "Argent*",
+   "Aluminium",
+   "Argon",
+   "Antimoine"
+  ],
+  "explanation": "Ag est le symbole de l'argent (numéro atomique 47). Il vient du latin argentum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Al",
+  "concept": "science.chemistry.symbol_al",
+  "label": "Symbole de l'aluminium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Al ?",
+  "options": [
+   "Aluminium*",
+   "Argon",
+   "Argent",
+   "Azote"
+  ],
+  "explanation": "Al est le symbole de l'aluminium (numéro atomique 13).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Ar",
+  "concept": "science.chemistry.symbol_ar",
+  "label": "Symbole de l'argon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Ar ?",
+  "options": [
+   "Argon*",
+   "Aluminium",
+   "Argent",
+   "Azote"
+  ],
+  "explanation": "Ar est le symbole de l'argon (numéro atomique 18).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Br",
+  "concept": "science.chemistry.symbol_br",
+  "label": "Symbole du brome",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Br ?",
+  "options": [
+   "Brome*",
+   "Hydrogène",
+   "Potassium",
+   "Hélium"
+  ],
+  "explanation": "Br est le symbole du brome (numéro atomique 35).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-C",
+  "concept": "science.chemistry.symbol_c",
+  "label": "Symbole du carbone",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole C ?",
+  "options": [
+   "Carbone*",
+   "Cuivre",
+   "Chlore",
+   "Chrome"
+  ],
+  "explanation": "C est le symbole du carbone (numéro atomique 6).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Ca",
+  "concept": "science.chemistry.symbol_ca",
+  "label": "Symbole du calcium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Ca ?",
+  "options": [
+   "Calcium*",
+   "Carbone",
+   "Cuivre",
+   "Chlore"
+  ],
+  "explanation": "Ca est le symbole du calcium (numéro atomique 20).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Cl",
+  "concept": "science.chemistry.symbol_cl",
+  "label": "Symbole du chlore",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Cl ?",
+  "options": [
+   "Chlore*",
+   "Carbone",
+   "Cobalt",
+   "Cuivre"
+  ],
+  "explanation": "Cl est le symbole du chlore (numéro atomique 17).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Co",
+  "concept": "science.chemistry.symbol_co",
+  "label": "Symbole du cobalt",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Co ?",
+  "options": [
+   "Cobalt*",
+   "Carbone",
+   "Calcium",
+   "Chlore"
+  ],
+  "explanation": "Co est le symbole du cobalt (numéro atomique 27).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Cr",
+  "concept": "science.chemistry.symbol_cr",
+  "label": "Symbole du chrome",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Cr ?",
+  "options": [
+   "Chrome*",
+   "Cuivre",
+   "Carbone",
+   "Chlore"
+  ],
+  "explanation": "Cr est le symbole du chrome (numéro atomique 24).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Cu",
+  "concept": "science.chemistry.symbol_cu",
+  "label": "Symbole du cuivre",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Cu ?",
+  "options": [
+   "Cuivre*",
+   "Chrome",
+   "Chlore",
+   "Calcium"
+  ],
+  "explanation": "Cu est le symbole du cuivre (numéro atomique 29). Il vient du latin cuprum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-F",
+  "concept": "science.chemistry.symbol_f",
+  "label": "Symbole du fluor",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole F ?",
+  "options": [
+   "Fluor*",
+   "Fer",
+   "Radium",
+   "Cuivre"
+  ],
+  "explanation": "F est le symbole du fluor (numéro atomique 9).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Fe",
+  "concept": "science.chemistry.symbol_fe",
+  "label": "Symbole du fer",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Fe ?",
+  "options": [
+   "Fer*",
+   "Fluor",
+   "Argent",
+   "Chrome"
+  ],
+  "explanation": "Fe est le symbole du fer (numéro atomique 26). Il vient du latin ferrum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-H",
+  "concept": "science.chemistry.symbol_h",
+  "label": "Symbole de l'hydrogène",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole H ?",
+  "options": [
+   "Hydrogène*",
+   "Hélium",
+   "Mercure",
+   "Sodium"
+  ],
+  "explanation": "H est le symbole de l'hydrogène (numéro atomique 1).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-He",
+  "concept": "science.chemistry.symbol_he",
+  "label": "Symbole de l'hélium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole He ?",
+  "options": [
+   "Hélium*",
+   "Hydrogène",
+   "Mercure",
+   "Cobalt"
+  ],
+  "explanation": "He est le symbole de l'hélium (numéro atomique 2).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Hg",
+  "concept": "science.chemistry.symbol_hg",
+  "label": "Symbole du mercure",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Hg ?",
+  "options": [
+   "Mercure*",
+   "Hélium",
+   "Hydrogène",
+   "Magnésium"
+  ],
+  "explanation": "Hg est le symbole du mercure (numéro atomique 80). Il vient du latin hydrargyrum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-I",
+  "concept": "science.chemistry.symbol_i",
+  "label": "Symbole de l'iode",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole I ?",
+  "options": [
+   "Iode*",
+   "Hydrogène",
+   "Phosphore",
+   "Hélium"
+  ],
+  "explanation": "I est le symbole de l'iode (numéro atomique 53).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-K",
+  "concept": "science.chemistry.symbol_k",
+  "label": "Symbole du potassium",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole K ?",
+  "options": [
+   "Potassium*",
+   "Plomb",
+   "Phosphore",
+   "Platine"
+  ],
+  "explanation": "K est le symbole du potassium (numéro atomique 19). Il vient du latin kalium.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Li",
+  "concept": "science.chemistry.symbol_li",
+  "label": "Symbole du lithium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Li ?",
+  "options": [
+   "Lithium*",
+   "Hydrogène",
+   "Fluor",
+   "Radium"
+  ],
+  "explanation": "Li est le symbole du lithium (numéro atomique 3).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Mg",
+  "concept": "science.chemistry.symbol_mg",
+  "label": "Symbole du magnésium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Mg ?",
+  "options": [
+   "Magnésium*",
+   "Manganèse",
+   "Mercure",
+   "Calcium"
+  ],
+  "explanation": "Mg est le symbole du magnésium (numéro atomique 12).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Mn",
+  "concept": "science.chemistry.symbol_mn",
+  "label": "Symbole du manganèse",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Mn ?",
+  "options": [
+   "Manganèse*",
+   "Magnésium",
+   "Mercure",
+   "Hydrogène"
+  ],
+  "explanation": "Mn est le symbole du manganèse (numéro atomique 25).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-N",
+  "concept": "science.chemistry.symbol_n",
+  "label": "Symbole de l'azote",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole N ?",
+  "options": [
+   "Azote*",
+   "Néon",
+   "Sodium",
+   "Nickel"
+  ],
+  "explanation": "N est le symbole de l'azote (numéro atomique 7).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Na",
+  "concept": "science.chemistry.symbol_na",
+  "label": "Symbole du sodium",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Na ?",
+  "options": [
+   "Sodium*",
+   "Nickel",
+   "Néon",
+   "Azote"
+  ],
+  "explanation": "Na est le symbole du sodium (numéro atomique 11). Il vient du latin natrium.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Ne",
+  "concept": "science.chemistry.symbol_ne",
+  "label": "Symbole du néon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Ne ?",
+  "options": [
+   "Néon*",
+   "Nickel",
+   "Sodium",
+   "Azote"
+  ],
+  "explanation": "Ne est le symbole du néon (numéro atomique 10).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Ni",
+  "concept": "science.chemistry.symbol_ni",
+  "label": "Symbole du nickel",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Ni ?",
+  "options": [
+   "Nickel*",
+   "Néon",
+   "Sodium",
+   "Azote"
+  ],
+  "explanation": "Ni est le symbole du nickel (numéro atomique 28).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-O",
+  "concept": "science.chemistry.symbol_o",
+  "label": "Symbole de l'oxygène",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole O ?",
+  "options": [
+   "Oxygène*",
+   "Silicium",
+   "Chrome",
+   "Lithium"
+  ],
+  "explanation": "O est le symbole de l'oxygène (numéro atomique 8).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-P",
+  "concept": "science.chemistry.symbol_p",
+  "label": "Symbole du phosphore",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole P ?",
+  "options": [
+   "Phosphore*",
+   "Plomb",
+   "Platine",
+   "Potassium"
+  ],
+  "explanation": "P est le symbole du phosphore (numéro atomique 15).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Pb",
+  "concept": "science.chemistry.symbol_pb",
+  "label": "Symbole du plomb",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Pb ?",
+  "options": [
+   "Plomb*",
+   "Platine",
+   "Phosphore",
+   "Potassium"
+  ],
+  "explanation": "Pb est le symbole du plomb (numéro atomique 82). Il vient du latin plumbum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Pt",
+  "concept": "science.chemistry.symbol_pt",
+  "label": "Symbole du platine",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Pt ?",
+  "options": [
+   "Platine*",
+   "Plomb",
+   "Phosphore",
+   "Potassium"
+  ],
+  "explanation": "Pt est le symbole du platine (numéro atomique 78).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Ra",
+  "concept": "science.chemistry.symbol_ra",
+  "label": "Symbole du radium",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Ra ?",
+  "options": [
+   "Radium*",
+   "Fluor",
+   "Silicium",
+   "Manganèse"
+  ],
+  "explanation": "Ra est le symbole du radium (numéro atomique 88).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-S",
+  "concept": "science.chemistry.symbol_s",
+  "label": "Symbole du soufre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole S ?",
+  "options": [
+   "Soufre*",
+   "Silicium",
+   "Antimoine",
+   "Étain"
+  ],
+  "explanation": "S est le symbole du soufre (numéro atomique 16).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Sb",
+  "concept": "science.chemistry.symbol_sb",
+  "label": "Symbole de l'antimoine",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Sb ?",
+  "options": [
+   "Antimoine*",
+   "Silicium",
+   "Soufre",
+   "Étain"
+  ],
+  "explanation": "Sb est le symbole de l'antimoine (numéro atomique 51). Il vient du latin stibium.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Si",
+  "concept": "science.chemistry.symbol_si",
+  "label": "Symbole du silicium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément chimique a pour symbole Si ?",
+  "options": [
+   "Silicium*",
+   "Soufre",
+   "Étain",
+   "Antimoine"
+  ],
+  "explanation": "Si est le symbole du silicium (numéro atomique 14).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Sn",
+  "concept": "science.chemistry.symbol_sn",
+  "label": "Symbole de l'étain",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole Sn ?",
+  "options": [
+   "Étain*",
+   "Silicium",
+   "Soufre",
+   "Antimoine"
+  ],
+  "explanation": "Sn est le symbole de l'étain (numéro atomique 50). Il vient du latin stannum.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Ti",
+  "concept": "science.chemistry.symbol_ti",
+  "label": "Symbole du titane",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Ti ?",
+  "options": [
+   "Titane*",
+   "Tungstène",
+   "Antimoine",
+   "Manganèse"
+  ],
+  "explanation": "Ti est le symbole du titane (numéro atomique 22).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-U",
+  "concept": "science.chemistry.symbol_u",
+  "label": "Symbole de l'uranium",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole U ?",
+  "options": [
+   "Uranium*",
+   "Hydrogène",
+   "Nickel",
+   "Lithium"
+  ],
+  "explanation": "U est le symbole de l'uranium (numéro atomique 92).",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-W",
+  "concept": "science.chemistry.symbol_w",
+  "label": "Symbole du tungstène",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel élément chimique a pour symbole W ?",
+  "options": [
+   "Tungstène*",
+   "Titane",
+   "Argon",
+   "Nickel"
+  ],
+  "explanation": "W est le symbole du tungstène (numéro atomique 74). Il vient du latin wolfram.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-elemr-Zn",
+  "concept": "science.chemistry.symbol_zn",
+  "label": "Symbole du zinc",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Quel élément chimique a pour symbole Zn ?",
+  "options": [
+   "Zinc*",
+   "Uranium",
+   "Fer",
+   "Sodium"
+  ],
+  "explanation": "Zn est le symbole du zinc (numéro atomique 30).",
+  "source": "Wikidata",
+  "origin": "import"
+ }
+]

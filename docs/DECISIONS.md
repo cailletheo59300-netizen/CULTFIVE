@@ -55,3 +55,6 @@ Pourquoi : relecture en PR, import idempotent (`external_key`). L'admin web écr
 
 ### D-018 · Ordre des phases ajusté : backend (phase 4) avant Daily UI (phase 3)
 Pourquoi : « pas de mocks » — un Daily sans serveur aurait été factice. Tout a été posé en une première passe, testé côté SQL, compilé côté iOS par la CI.
+
+### D-019 · 2026-09-26 · Banques externes : Wikidata uniquement (pas OpenQuizzDB ni Open Trivia DB)
+Pourquoi : Wikidata est CC0 (aucune obligation de citation ni de partage à l'identique), factuel et structuré — idéal pour des questions vérifiables et des concepts propres. OpenQuizzDB (CC BY-SA, ~7 000 questions FR) impose le partage à l'identique et sa qualité est inégale ; Open Trivia DB est anglophone. Conséquence : générateur maison à modèles, relu par échantillons ; les questions « d'anecdote » restent écrites à la main.

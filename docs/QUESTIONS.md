@@ -7,6 +7,17 @@
 
 État session 2 : **273 questions** (calcul 48 · français 46 · géographie 53 · histoire 47 · sciences 18 · logique 9 · arts 11 · sport 9 · cinéma 8 · musique 8 · techno 7 · nature 9). Fichiers `*_2.json` = vague 2, riche en types non-QCM (classements, associations, vrai/faux, calcul).
 
+## Questions générées depuis Wikidata (CC0)
+- `scripts/wikidata/fetch.mjs` : requêtes SPARQL → cache versionné `scripts/wikidata/cache/*.json` (reproductible sans réseau ; `node scripts/wikidata/fetch.mjs` pour rafraîchir).
+- `scripts/wikidata/generate.mjs` : modèles de questions → `content/questions/wd_*.json` (déterministe). `scripts/wikidata/french.mjs` : articles et prépositions des noms de pays (règles + exceptions relues).
+- `scripts/wikidata/rejects.json` : clés écartées à la relecture.
+- Modèles : capitale (et inverse), drapeau, continent, grande ville → pays, classements population/superficie, siècle de naissance, classements de naissances, année de bataille (≤ 1945), symbole chimique (et inverse), auteur de livre, peintre de tableau, réalisateur de film.
+- Garde-fous : un seul chef-lieu, capitales contestées exclues (Israël, Guinée équatoriale, Nauru), continents ambigus exclus, titres homonymes exclus, œuvres à plusieurs auteurs exclues, écarts nets dans les classements, dédoublonnage avec la banque curée.
+- Niveau initial : notoriété (liens Wikipédia, population, continent) ; plage ±10, recalibrée par les réponses des joueurs.
+- `origin = 'import'`, source « Wikidata ».
+
+État : **1 886 questions** (1 613 Wikidata + 273 curées).
+
 ## Format (auteur)
 ```json
 {"key":"geo-001", "concept":"geography.capitals.australia", "label":"Capitale de l'Australie",

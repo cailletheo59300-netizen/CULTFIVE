@@ -1,0 +1,869 @@
+[
+ {
+  "key": "wd-film-Q102225",
+  "concept": "cinema.directors.film_harry_potter_et_la_coupe_de_fe_q102225",
+  "label": "Auteur de « Harry Potter et la Coupe de feu »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Harry Potter et la Coupe de feu » (2005) ?",
+  "options": [
+   "Mike Newell*",
+   "James McTeigue",
+   "Ang Lee",
+   "Gore Verbinski"
+  ],
+  "explanation": "« Harry Potter et la Coupe de feu » a été réalisé par Mike Newell et est sorti en 2005.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q102235",
+  "concept": "cinema.directors.film_harry_potter_et_l_ordre_du_phe_q102235",
+  "label": "Auteur de « Harry Potter et l'Ordre du Phénix »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Harry Potter et l'Ordre du Phénix » (2007) ?",
+  "options": [
+   "David Yates*",
+   "Gore Verbinski",
+   "Zack Snyder",
+   "Martin Scorsese"
+  ],
+  "explanation": "« Harry Potter et l'Ordre du Phénix » a été réalisé par David Yates et est sorti en 2007.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q102244",
+  "concept": "cinema.directors.film_harry_potter_et_la_chambre_des_q102244",
+  "label": "Auteur de « Harry Potter et la Chambre des secrets »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Harry Potter et la Chambre des secrets » (2002) ?",
+  "options": [
+   "Chris Columbus*",
+   "Peter Jackson",
+   "Sam Raimi",
+   "Ron Howard"
+  ],
+  "explanation": "« Harry Potter et la Chambre des secrets » a été réalisé par Chris Columbus et est sorti en 2002.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q102438",
+  "concept": "cinema.directors.film_harry_potter_a_l_ecole_des_sor_q102438",
+  "label": "Auteur de « Harry Potter à l'école des sorciers »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Harry Potter à l'école des sorciers » (2001) ?",
+  "options": [
+   "Chris Columbus*",
+   "Ron Howard",
+   "Peter Jackson",
+   "Sam Raimi"
+  ],
+  "explanation": "« Harry Potter à l'école des sorciers » a été réalisé par Chris Columbus et est sorti en 2001.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q102448",
+  "concept": "cinema.directors.film_harry_potter_et_le_prisonnier__q102448",
+  "label": "Auteur de « Harry Potter et le Prisonnier d'Azkaban »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Harry Potter et le Prisonnier d'Azkaban » (2004) ?",
+  "options": [
+   "Alfonso Cuarón*",
+   "James McTeigue",
+   "Ang Lee",
+   "Mike Newell"
+  ],
+  "explanation": "« Harry Potter et le Prisonnier d'Azkaban » a été réalisé par Alfonso Cuarón et est sorti en 2004.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q103569",
+  "concept": "cinema.directors.film_alien_q103569",
+  "label": "Auteur de « Alien »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Alien » (1979) ?",
+  "options": [
+   "Ridley Scott*",
+   "Francis Ford Coppola",
+   "Irvin Kershner",
+   "Richard Marquand"
+  ],
+  "explanation": "« Alien » a été réalisé par Ridley Scott et est sorti en 1979.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q105031",
+  "concept": "cinema.directors.film_maman_j_ai_rate_l_avion_q105031",
+  "label": "Auteur de « Maman, j'ai raté l'avion ! »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Maman, j'ai raté l'avion ! » (1990) ?",
+  "options": [
+   "Chris Columbus*",
+   "Peter Weir",
+   "Jonathan Demme",
+   "Frank Darabont"
+  ],
+  "explanation": "« Maman, j'ai raté l'avion ! » a été réalisé par Chris Columbus et est sorti en 1990.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q106316",
+  "concept": "cinema.directors.film_le_cercle_des_poetes_disparus_q106316",
+  "label": "Auteur de « Le Cercle des poètes disparus »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Le Cercle des poètes disparus » (1989) ?",
+  "options": [
+   "Peter Weir*",
+   "Chris Columbus",
+   "Jonathan Demme",
+   "Robert Zemeckis"
+  ],
+  "explanation": "« Le Cercle des poètes disparus » a été réalisé par Peter Weir et est sorti en 1989.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q109116",
+  "concept": "cinema.directors.film_le_dictateur_q109116",
+  "label": "Auteur de « Le Dictateur »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Le Dictateur » (1940) ?",
+  "options": [
+   "Charlie Chaplin*",
+   "Orson Welles",
+   "Michael Curtiz",
+   "Billy Wilder"
+  ],
+  "explanation": "« Le Dictateur » a été réalisé par Charlie Chaplin et est sorti en 1940.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q127367",
+  "concept": "cinema.directors.film_le_seigneur_des_anneaux_la_com_q127367",
+  "label": "Auteur de « Le Seigneur des anneaux : La Communauté de l'anneau »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Le Seigneur des anneaux : La Communauté de l'anneau » (2001) ?",
+  "options": [
+   "Peter Jackson*",
+   "Ron Howard",
+   "Sam Raimi",
+   "Lilly Wachowski"
+  ],
+  "explanation": "« Le Seigneur des anneaux : La Communauté de l'anneau » a été réalisé par Peter Jackson et est sorti en 2001.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q128518",
+  "concept": "cinema.directors.film_gladiator_q128518",
+  "label": "Auteur de « Gladiator »",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Qui a réalisé le film « Gladiator » (2000) ?",
+  "options": [
+   "Ridley Scott*",
+   "Ron Howard",
+   "David Fincher",
+   "George Lucas"
+  ],
+  "explanation": "« Gladiator » a été réalisé par Ridley Scott et est sorti en 2000.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q131074",
+  "concept": "cinema.directors.film_le_seigneur_des_anneaux_le_ret_q131074",
+  "label": "Auteur de « Le Seigneur des anneaux : Le Retour du roi »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Le Seigneur des anneaux : Le Retour du roi » (2003) ?",
+  "options": [
+   "Peter Jackson*",
+   "Alfonso Cuarón",
+   "Sam Raimi",
+   "Ron Howard"
+  ],
+  "explanation": "« Le Seigneur des anneaux : Le Retour du roi » a été réalisé par Peter Jackson et est sorti en 2003.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q133654",
+  "concept": "cinema.directors.film_le_silence_des_agneaux_q133654",
+  "label": "Auteur de « Le Silence des agneaux »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Le Silence des agneaux » (1991) ?",
+  "options": [
+   "Jonathan Demme*",
+   "Chris Columbus",
+   "Peter Weir",
+   "Frank Darabont"
+  ],
+  "explanation": "« Le Silence des agneaux » a été réalisé par Jonathan Demme et est sorti en 1991.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q14171368",
+  "concept": "cinema.directors.film_avengers_l_ere_d_ultron_q14171368",
+  "label": "Auteur de « Avengers : L'Ère d'Ultron »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Avengers : L'Ère d'Ultron » (2015) ?",
+  "options": [
+   "Joss Whedon*",
+   "Bong Joon-ho",
+   "David Yates",
+   "Zack Snyder"
+  ],
+  "explanation": "« Avengers : L'Ère d'Ultron » a été réalisé par Joss Whedon et est sorti en 2015.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q160618",
+  "concept": "cinema.directors.film_le_secret_de_brokeback_mountai_q160618",
+  "label": "Auteur de « Le Secret de Brokeback Mountain »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Le Secret de Brokeback Mountain » (2005) ?",
+  "options": [
+   "Ang Lee*",
+   "Mike Newell",
+   "James McTeigue",
+   "Alfonso Cuarón"
+  ],
+  "explanation": "« Le Secret de Brokeback Mountain » a été réalisé par Ang Lee et est sorti en 2005.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q161087",
+  "concept": "cinema.directors.film_pirates_des_caraibes_le_secret_q161087",
+  "label": "Auteur de « Pirates des Caraïbes : Le Secret du coffre maudit »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Pirates des Caraïbes : Le Secret du coffre maudit » (2006) ?",
+  "options": [
+   "Gore Verbinski*",
+   "Martin Scorsese",
+   "Zack Snyder",
+   "Mike Newell"
+  ],
+  "explanation": "« Pirates des Caraïbes : Le Secret du coffre maudit » a été réalisé par Gore Verbinski et est sorti en 2006.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q161678",
+  "concept": "cinema.directors.film_harry_potter_et_les_reliques_d_q161678",
+  "label": "Auteur de « Harry Potter et les Reliques de la Mort, partie 1 »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Harry Potter et les Reliques de la Mort, partie 1 » (2010) ?",
+  "options": [
+   "David Yates*",
+   "Martin Scorsese",
+   "Zack Snyder",
+   "Gore Verbinski"
+  ],
+  "explanation": "« Harry Potter et les Reliques de la Mort, partie 1 » a été réalisé par David Yates et est sorti en 2010.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q161687",
+  "concept": "cinema.directors.film_harry_potter_et_le_prince_de_s_q161687",
+  "label": "Auteur de « Harry Potter et le Prince de sang-mêlé »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Harry Potter et le Prince de sang-mêlé » (2009) ?",
+  "options": [
+   "David Yates*",
+   "Martin Scorsese",
+   "Gore Verbinski",
+   "Zack Snyder"
+  ],
+  "explanation": "« Harry Potter et le Prince de sang-mêlé » a été réalisé par David Yates et est sorti en 2009.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q162729",
+  "concept": "cinema.directors.film_braveheart_q162729",
+  "label": "Auteur de « Braveheart »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Braveheart » (1995) ?",
+  "options": [
+   "Mel Gibson*",
+   "Frank Darabont",
+   "Roberto Benigni",
+   "Steven Spielberg"
+  ],
+  "explanation": "« Braveheart » a été réalisé par Mel Gibson et est sorti en 1995.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q164103",
+  "concept": "cinema.directors.film_un_homme_d_exception_q164103",
+  "label": "Auteur de « Un homme d'exception »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Un homme d'exception » (2001) ?",
+  "options": [
+   "Ron Howard*",
+   "Peter Jackson",
+   "Sam Raimi",
+   "Lilly Wachowski"
+  ],
+  "explanation": "« Un homme d'exception » a été réalisé par Ron Howard et est sorti en 2001.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q164963",
+  "concept": "cinema.directors.film_le_seigneur_des_anneaux_les_de_q164963",
+  "label": "Auteur de « Le Seigneur des anneaux : Les Deux Tours »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Le Seigneur des anneaux : Les Deux Tours » (2002) ?",
+  "options": [
+   "Peter Jackson*",
+   "Sam Raimi",
+   "Ron Howard",
+   "Alfonso Cuarón"
+  ],
+  "explanation": "« Le Seigneur des anneaux : Les Deux Tours » a été réalisé par Peter Jackson et est sorti en 2002.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q165713",
+  "concept": "cinema.directors.film_star_wars_episode_i_la_menace__q165713",
+  "label": "Auteur de « Star Wars, épisode I : La Menace fantôme »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Star Wars, épisode I : La Menace fantôme » (1999) ?",
+  "options": [
+   "George Lucas*",
+   "Lilly Wachowski",
+   "David Fincher",
+   "Steven Spielberg"
+  ],
+  "explanation": "« Star Wars, épisode I : La Menace fantôme » a été réalisé par George Lucas et est sorti en 1999.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q165817",
+  "concept": "cinema.directors.film_il_faut_sauver_le_soldat_ryan_q165817",
+  "label": "Auteur de « Il faut sauver le soldat Ryan »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Il faut sauver le soldat Ryan » (1998) ?",
+  "options": [
+   "Steven Spielberg*",
+   "Lilly Wachowski",
+   "Roberto Benigni",
+   "George Lucas"
+  ],
+  "explanation": "« Il faut sauver le soldat Ryan » a été réalisé par Steven Spielberg et est sorti en 1998.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q167726",
+  "concept": "cinema.directors.film_jurassic_park_q167726",
+  "label": "Auteur de « Jurassic Park »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Jurassic Park » (1993) ?",
+  "options": [
+   "Steven Spielberg*",
+   "Frank Darabont",
+   "Mel Gibson",
+   "Jonathan Demme"
+  ],
+  "explanation": "« Jurassic Park » a été réalisé par Steven Spielberg et est sorti en 1993.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q172241",
+  "concept": "cinema.directors.film_les_evades_q172241",
+  "label": "Auteur de « Les Évadés »",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Qui a réalisé le film « Les Évadés » (1994) ?",
+  "options": [
+   "Frank Darabont*",
+   "Mel Gibson",
+   "Roberto Benigni",
+   "Jonathan Demme"
+  ],
+  "explanation": "« Les Évadés » a été réalisé par Frank Darabont et est sorti en 1994.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q172975",
+  "concept": "cinema.directors.film_les_infiltres_q172975",
+  "label": "Auteur de « Les Infiltrés »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Les Infiltrés » (2006) ?",
+  "options": [
+   "Martin Scorsese*",
+   "Gore Verbinski",
+   "Zack Snyder",
+   "Mike Newell"
+  ],
+  "explanation": "« Les Infiltrés » a été réalisé par Martin Scorsese et est sorti en 2006.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q174284",
+  "concept": "cinema.directors.film_les_aventuriers_de_l_arche_per_q174284",
+  "label": "Auteur de « Les Aventuriers de l'arche perdue »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Les Aventuriers de l'arche perdue » (1981) ?",
+  "options": [
+   "Steven Spielberg*",
+   "Irvin Kershner",
+   "Francis Ford Coppola",
+   "Richard Marquand"
+  ],
+  "explanation": "« Les Aventuriers de l'arche perdue » a été réalisé par Steven Spielberg et est sorti en 1981.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q17738",
+  "concept": "cinema.directors.film_la_guerre_des_etoiles_q17738",
+  "label": "Auteur de « La Guerre des étoiles »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « La Guerre des étoiles » (1977) ?",
+  "options": [
+   "George Lucas*",
+   "Francis Ford Coppola",
+   "Ridley Scott",
+   "Irvin Kershner"
+  ],
+  "explanation": "« La Guerre des étoiles » a été réalisé par George Lucas et est sorti en 1977.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q181069",
+  "concept": "cinema.directors.film_star_wars_episode_ii_l_attaque_q181069",
+  "label": "Auteur de « Star Wars, épisode II : L’Attaque des clones »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Star Wars, épisode II : L’Attaque des clones » (2002) ?",
+  "options": [
+   "George Lucas*",
+   "Sam Raimi",
+   "Peter Jackson",
+   "Ron Howard"
+  ],
+  "explanation": "« Star Wars, épisode II : L’Attaque des clones » a été réalisé par George Lucas et est sorti en 2002.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q181795",
+  "concept": "cinema.directors.film_star_wars_episode_v_l_empire_c_q181795",
+  "label": "Auteur de « Star Wars, épisode V : L'Empire contre-attaque »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Star Wars, épisode V : L'Empire contre-attaque » (1980) ?",
+  "options": [
+   "Irvin Kershner*",
+   "Francis Ford Coppola",
+   "Ridley Scott",
+   "Richard Marquand"
+  ],
+  "explanation": "« Star Wars, épisode V : L'Empire contre-attaque » a été réalisé par Irvin Kershner et est sorti en 1980.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q181803",
+  "concept": "cinema.directors.film_star_wars_episode_vi_le_retour_q181803",
+  "label": "Auteur de « Star Wars, épisode VI : Le Retour du Jedi »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Star Wars, épisode VI : Le Retour du Jedi » (1983) ?",
+  "options": [
+   "Richard Marquand*",
+   "Robert Zemeckis",
+   "Irvin Kershner",
+   "Francis Ford Coppola"
+  ],
+  "explanation": "« Star Wars, épisode VI : Le Retour du Jedi » a été réalisé par Richard Marquand et est sorti en 1983.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q182218",
+  "concept": "cinema.directors.film_avengers_q182218",
+  "label": "Auteur de « Avengers »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Avengers » (2012) ?",
+  "options": [
+   "Joss Whedon*",
+   "David Yates",
+   "Gore Verbinski",
+   "Zack Snyder"
+  ],
+  "explanation": "« Avengers » a été réalisé par Joss Whedon et est sorti en 2012.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q182692",
+  "concept": "cinema.directors.film_apocalypse_now_q182692",
+  "label": "Auteur de « Apocalypse Now »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Apocalypse Now » (1979) ?",
+  "options": [
+   "Francis Ford Coppola*",
+   "Ridley Scott",
+   "Irvin Kershner",
+   "Richard Marquand"
+  ],
+  "explanation": "« Apocalypse Now » a été réalisé par Francis Ford Coppola et est sorti en 1979.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q184768",
+  "concept": "cinema.directors.film_le_parrain_2_q184768",
+  "label": "Auteur de « Le Parrain 2 »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Le Parrain 2 » (1974) ?",
+  "options": [
+   "Francis Ford Coppola*",
+   "Ridley Scott",
+   "Irvin Kershner",
+   "Stanley Kubrick"
+  ],
+  "explanation": "« Le Parrain 2 » a été réalisé par Francis Ford Coppola et est sorti en 1974.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q184843",
+  "concept": "cinema.directors.film_blade_runner_q184843",
+  "label": "Auteur de « Blade Runner »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Blade Runner » (1982) ?",
+  "options": [
+   "Ridley Scott*",
+   "Richard Marquand",
+   "Irvin Kershner",
+   "Robert Zemeckis"
+  ],
+  "explanation": "« Blade Runner » a été réalisé par Ridley Scott et est sorti en 1982.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q190050",
+  "concept": "cinema.directors.film_fight_club_q190050",
+  "label": "Auteur de « Fight Club »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Fight Club » (1999) ?",
+  "options": [
+   "David Fincher*",
+   "George Lucas",
+   "Lilly Wachowski",
+   "Steven Spielberg"
+  ],
+  "explanation": "« Fight Club » a été réalisé par David Fincher et est sorti en 1999.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q190086",
+  "concept": "cinema.directors.film_certains_l_aiment_chaud_q190086",
+  "label": "Auteur de « Certains l'aiment chaud »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Certains l'aiment chaud » (1959) ?",
+  "options": [
+   "Billy Wilder*",
+   "Sergio Leone",
+   "Stanley Kubrick",
+   "Michael Curtiz"
+  ],
+  "explanation": "« Certains l'aiment chaud » a été réalisé par Billy Wilder et est sorti en 1959.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q19355",
+  "concept": "cinema.directors.film_la_vie_est_belle_q19355",
+  "label": "Auteur de « La vie est belle »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « La vie est belle » (1997) ?",
+  "options": [
+   "Roberto Benigni*",
+   "Steven Spielberg",
+   "David Fincher",
+   "George Lucas"
+  ],
+  "explanation": "« La vie est belle » a été réalisé par Roberto Benigni et est sorti en 1997.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q232009",
+  "concept": "cinema.directors.film_harry_potter_et_les_reliques_d_q232009",
+  "label": "Auteur de « Harry Potter et les Reliques de la Mort, partie 2 »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Harry Potter et les Reliques de la Mort, partie 2 » (2011) ?",
+  "options": [
+   "David Yates*",
+   "Joss Whedon",
+   "Gore Verbinski",
+   "Zack Snyder"
+  ],
+  "explanation": "« Harry Potter et les Reliques de la Mort, partie 2 » a été réalisé par David Yates et est sorti en 2011.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q24815",
+  "concept": "cinema.directors.film_citizen_kane_q24815",
+  "label": "Auteur de « Citizen Kane »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Citizen Kane » (1941) ?",
+  "options": [
+   "Orson Welles*",
+   "Michael Curtiz",
+   "Charlie Chaplin",
+   "Billy Wilder"
+  ],
+  "explanation": "« Citizen Kane » a été réalisé par Orson Welles et est sorti en 1941.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q41483",
+  "concept": "cinema.directors.film_le_bon_la_brute_et_le_truand_q41483",
+  "label": "Auteur de « Le Bon, la Brute et le Truand »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « Le Bon, la Brute et le Truand » (1966) ?",
+  "options": [
+   "Sergio Leone*",
+   "Stanley Kubrick",
+   "Billy Wilder",
+   "Ridley Scott"
+  ],
+  "explanation": "« Le Bon, la Brute et le Truand » a été réalisé par Sergio Leone et est sorti en 1966.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q42051",
+  "concept": "cinema.directors.film_star_wars_episode_iii_la_revan_q42051",
+  "label": "Auteur de « Star Wars, épisode III : La Revanche des Sith »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Star Wars, épisode III : La Revanche des Sith » (2005) ?",
+  "options": [
+   "George Lucas*",
+   "James McTeigue",
+   "Mike Newell",
+   "Ang Lee"
+  ],
+  "explanation": "« Star Wars, épisode III : La Revanche des Sith » a été réalisé par George Lucas et est sorti en 2005.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q46717",
+  "concept": "cinema.directors.film_pirates_des_caraibes_la_maledi_q46717",
+  "label": "Auteur de « Pirates des Caraïbes : La Malédiction du Black Pearl »",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Qui a réalisé le film « Pirates des Caraïbes : La Malédiction du Black Pearl » (2003) ?",
+  "options": [
+   "Gore Verbinski*",
+   "Sam Raimi",
+   "Peter Jackson",
+   "Alfonso Cuarón"
+  ],
+  "explanation": "« Pirates des Caraïbes : La Malédiction du Black Pearl » a été réalisé par Gore Verbinski et est sorti en 2003.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q47703",
+  "concept": "cinema.directors.film_le_parrain_q47703",
+  "label": "Auteur de « Le Parrain »",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "Qui a réalisé le film « Le Parrain » (1972) ?",
+  "options": [
+   "Francis Ford Coppola*",
+   "Stanley Kubrick",
+   "Sergio Leone",
+   "Ridley Scott"
+  ],
+  "explanation": "« Le Parrain » a été réalisé par Francis Ford Coppola et est sorti en 1972.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q483941",
+  "concept": "cinema.directors.film_la_liste_de_schindler_q483941",
+  "label": "Auteur de « La Liste de Schindler »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « La Liste de Schindler » (1993) ?",
+  "options": [
+   "Steven Spielberg*",
+   "Frank Darabont",
+   "Mel Gibson",
+   "Jonathan Demme"
+  ],
+  "explanation": "« La Liste de Schindler » a été réalisé par Steven Spielberg et est sorti en 1993.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q484442",
+  "concept": "cinema.directors.film_spider_man_q484442",
+  "label": "Auteur de « Spider-Man »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Spider-Man » (2002) ?",
+  "options": [
+   "Sam Raimi*",
+   "Peter Jackson",
+   "Ron Howard",
+   "Alfonso Cuarón"
+  ],
+  "explanation": "« Spider-Man » a été réalisé par Sam Raimi et est sorti en 2002.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q54274",
+  "concept": "cinema.directors.film_pirates_des_caraibes_jusqu_au__q54274",
+  "label": "Auteur de « Pirates des Caraïbes : Jusqu'au bout du monde »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Pirates des Caraïbes : Jusqu'au bout du monde » (2007) ?",
+  "options": [
+   "Gore Verbinski*",
+   "Martin Scorsese",
+   "Zack Snyder",
+   "Mike Newell"
+  ],
+  "explanation": "« Pirates des Caraïbes : Jusqu'au bout du monde » a été réalisé par Gore Verbinski et est sorti en 2007.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q5890",
+  "concept": "cinema.directors.film_v_pour_vendetta_q5890",
+  "label": "Auteur de « V pour Vendetta »",
+  "type": "mcq",
+  "difficulty": 47,
+  "prompt": "Qui a réalisé le film « V pour Vendetta » (2005) ?",
+  "options": [
+   "James McTeigue*",
+   "Ang Lee",
+   "Mike Newell",
+   "Gore Verbinski"
+  ],
+  "explanation": "« V pour Vendetta » a été réalisé par James McTeigue et est sorti en 2005.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q61448040",
+  "concept": "cinema.directors.film_parasite_q61448040",
+  "label": "Auteur de « Parasite »",
+  "type": "mcq",
+  "difficulty": 49,
+  "prompt": "Qui a réalisé le film « Parasite » (2019) ?",
+  "options": [
+   "Bong Joon-ho*",
+   "Joss Whedon",
+   "David Yates",
+   "Martin Scorsese"
+  ],
+  "explanation": "« Parasite » a été réalisé par Bong Joon-ho et est sorti en 2019.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q83495",
+  "concept": "cinema.directors.film_matrix_q83495",
+  "label": "Auteur de « Matrix »",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a réalisé le film « Matrix » (1999) ?",
+  "options": [
+   "Lilly Wachowski*",
+   "David Fincher",
+   "George Lucas",
+   "Steven Spielberg"
+  ],
+  "explanation": "« Matrix » a été réalisé par Lilly Wachowski et est sorti en 1999.",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q91540",
+  "concept": "cinema.directors.film_retour_vers_le_futur_q91540",
+  "label": "Auteur de « Retour vers le futur »",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Qui a réalisé le film « Retour vers le futur » (1985) ?",
+  "options": [
+   "Robert Zemeckis*",
+   "Richard Marquand",
+   "Peter Weir",
+   "Chris Columbus"
+  ],
+  "explanation": "« Retour vers le futur » a été réalisé par Robert Zemeckis et est sorti en 1985.",
+  "source": "Wikidata",
+  "origin": "import"
+ }
+]

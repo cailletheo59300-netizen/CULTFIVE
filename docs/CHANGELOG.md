@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 — session 2 (suite)
+- Générateur Wikidata (CC0) : 1 613 questions (géographie, histoire, sciences, arts, cinéma), cache versionné, règles de français, garde-fous, relecture par échantillons. Banque : 1 886 questions.
+- `CLAUDE.md` : règles de travail (validation des étapes avant de coder, captures sur demande uniquement).
+
 ## 0.2.0 — session 2 (2026-09-26)
 - Mode démo (Debug uniquement) sur réponses RPC réelles enregistrées ; build simulateur pour Appetize.io ; 16 captures automatiques (clair/sombre) dans `docs/screenshots`.
 - Contenu : +120 questions (273), vague 2 riche en classements, associations, vrai/faux et calcul.

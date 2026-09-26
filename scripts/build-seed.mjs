@@ -23,7 +23,8 @@ function convert(q) {
   const base = {
     external_key: k, concept_id: q.concept, concept_label: q.label, type: q.type, prompt: q.prompt,
     explanation: q.explanation, takeaway: q.takeaway, hint: q.hint, context_note: q.context,
-    source: q.source, fact_as_of: q.fact_as_of, difficulty: q.difficulty, status: 'published',
+    source: q.source, fact_as_of: q.fact_as_of, difficulty: q.difficulty, status: q.status ?? 'published',
+    origin: q.origin ?? 'human',
   };
   if (!/^[a-z_]+\.[a-z_]+\.[a-z0-9_]+$/.test(q.concept ?? '')) fail(k, `concept invalide « ${q.concept} »`);
   else if (!subdomains.has(q.concept.split('.').slice(0, 2).join('.'))) fail(k, `sous-domaine inconnu pour ${q.concept}`);
@@ -108,7 +109,10 @@ taxonomy.domains.forEach((d, i) => {
   on conflict (id) do update set name = excluded.name, sort = excluded.sort;`);
   });
 });
-lines.push(`select public._upsert_question(q, 'human', null) from jsonb_array_elements(${lit(JSON.stringify(questions))}::jsonb) q;`);
+for (const origin of ['human', 'import']) {
+  const group = questions.filter((q) => q.origin === origin).map(({ origin: _o, ...q }) => q);
+  if (group.length) lines.push(`select public._upsert_question(q, '${origin}', null) from jsonb_array_elements(${lit(JSON.stringify(group))}::jsonb) q;`);
+}
 lines.push('commit;', '');
 
 if (process.argv.includes('--check')) {

@@ -2,7 +2,8 @@
 
 | # | Sujet | Détail | Piste |
 |---|---|---|---|
-| K-1 | Banque encore moyenne | 273 questions ; ~50 par pilier. Non-réutilisation du Daily garantie ~2 mois, puis replis sans doublon à 14 j. Domaines « surprise » encore minces (7–18). | Viser ≥ 150/pilier et ≥ 40 par domaine surprise ; outil de génération IA + validation. |
+| K-1 | Banque déséquilibrée | 1 886 questions, mais Calcul (48) et Français (46) restent minces face à Géographie (784) et Histoire (504) ; le créneau « Surprise » du Daily est dominé par Arts (311). | Rééquilibrer le tirage « Surprise » par domaine ; écrire du Calcul/Français (peu adaptés à Wikidata). |
+| K-11 | Questions générées : style répétitif | Les modèles Wikidata produisent des énoncés similaires (« Quelle est la capitale… »). Explications courtes. | Enrichir les explications (faits complémentaires), varier les formulations. |
 | K-2 | Pas d'admin web | Les RPC `admin_*` existent ; pas encore d'interface. Supabase Studio + SQL en attendant. | Phase dédiée (Next.js privé ou page artefact). |
 | K-3 | Génération IA non branchée | Schéma et garde-fous prêts (`generation_batches`, statut `review` forcé). Pas d'Edge Function d'appel au modèle. | Edge Function `generate-questions` (clé API côté serveur). |
 | K-4 | Liens universels | `applinks:cultfive.app` déclaré ; le fichier `apple-app-site-association` du domaine reste à publier. Le schéma `cultfive://` fonctionne. | Héberger AASA. |
