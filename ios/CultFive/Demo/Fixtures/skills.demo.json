@@ -1,0 +1,98 @@
+[
+ {
+  "name": "Histoire",
+  "level": 56,
+  "correct": 46,
+  "answered": 56,
+  "domain_id": "history",
+  "reliability": 0.6
+ },
+ {
+  "name": "Géographie",
+  "level": 54,
+  "correct": 38,
+  "answered": 50,
+  "domain_id": "geography",
+  "reliability": 0.59
+ },
+ {
+  "name": "Calcul",
+  "level": 56,
+  "correct": 37,
+  "answered": 48,
+  "domain_id": "calc",
+  "reliability": 0.59
+ },
+ {
+  "name": "Français",
+  "level": 45,
+  "correct": 28,
+  "answered": 47,
+  "domain_id": "french",
+  "reliability": 0.61
+ },
+ {
+  "name": "Sciences",
+  "level": 51,
+  "correct": 26,
+  "answered": 32,
+  "domain_id": "science",
+  "reliability": 0.5
+ },
+ {
+  "name": "Sport",
+  "level": 49,
+  "correct": 15,
+  "answered": 20,
+  "domain_id": "sport",
+  "reliability": 0.43
+ },
+ {
+  "name": "Arts & culture",
+  "level": 49,
+  "correct": 13,
+  "answered": 19,
+  "domain_id": "arts",
+  "reliability": 0.42
+ },
+ {
+  "name": "Logique",
+  "level": 49,
+  "correct": 11,
+  "answered": 18,
+  "domain_id": "logic",
+  "reliability": 0.46
+ },
+ {
+  "name": "Cinéma",
+  "level": 45,
+  "correct": 4,
+  "answered": 8,
+  "domain_id": "cinema",
+  "reliability": 0.32
+ },
+ {
+  "name": "Musique",
+  "level": 44,
+  "correct": 3,
+  "answered": 6,
+  "domain_id": "music",
+  "reliability": 0.21
+ },
+ {
+  "name": "Technologie",
+  "level": 58,
+  "correct": 5,
+  "answered": 5,
+  "domain_id": "tech",
+  "reliability": 0.18
+ },
+ {
+  "name": "Nature & animaux",
+  "level": 53,
+  "correct": 4,
+  "answered": 4,
+  "domain_id": "nature",
+  "reliability": 0.08
+ }
+]

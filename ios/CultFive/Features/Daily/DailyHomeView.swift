@@ -31,7 +31,12 @@ struct DailyHomeView: View {
         .fullScreenCover(item: $playConfig) { config in
             PlaySessionView(config: config)
         }
-        .task { await reload() }
+        .task {
+            await reload()
+            #if DEBUG
+            if let screen = Demo.screen, [.question, .reveal, .result, .share].contains(screen) { showDaily = true }
+            #endif
+        }
     }
 
     private func reload() async {

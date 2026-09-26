@@ -24,6 +24,13 @@ struct DailySessionView: View {
                 let session = DailySessionModel(service: app.service)
                 model = session
                 await session.start()
+                #if DEBUG
+                if Demo.screen == .reveal, let option = session.question?.payload.options?.first {
+                    try? await Task.sleep(nanoseconds: 600_000_000)
+                    session.submit(.option(option.id))
+                }
+                if Demo.screen == .share, case .finished = session.stage { showShare = true }
+                #endif
             }
         }
         .onChange(of: scenePhase) { _, phase in

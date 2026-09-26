@@ -30,6 +30,14 @@ struct OnboardingFlow: View {
             }
         }
         .animation(Motion.standard, value: step)
+        .task {
+            #if DEBUG
+            if Demo.screen == .onboardingQuestion {
+                step = .questions
+                await loadPack()
+            }
+            #endif
+        }
     }
 
     // MARK: 1. Accueil

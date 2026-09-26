@@ -67,7 +67,12 @@ struct FriendsView: View {
             Button("Rejoindre") { Task { await join(code: joinCode) } }
             Button("Annuler", role: .cancel) {}
         }
-        .task { await load() }
+        .task {
+            await load()
+            #if DEBUG
+            if Demo.screen == .league, let first = leagues.first { path.append(first.id) }
+            #endif
+        }
         .task(id: app.pendingLeagueCode) {
             if let code = app.pendingLeagueCode {
                 app.pendingLeagueCode = nil

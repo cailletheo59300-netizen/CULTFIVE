@@ -1,0 +1,188 @@
+[
+ {
+  "id": "c7f24246-d94d-4cf3-a0a1-b63ba84e8e78",
+  "type": "mcq",
+  "given": {
+   "option_id": "62f55fe7"
+  },
+  "answer": {
+   "option_id": "62f55fe7"
+  },
+  "prompt": "À quel siècle la Peste noire ravage-t-elle l'Europe ?",
+  "source": null,
+  "payload": {
+   "options": [
+    {
+     "id": "23dee782",
+     "text": "Xe siècle"
+    },
+    {
+     "id": "80dae8d9",
+     "text": "XIIe siècle"
+    },
+    {
+     "id": "785efd97",
+     "text": "XVIe siècle"
+    },
+    {
+     "id": "62f55fe7",
+     "text": "XIVe siècle"
+    }
+   ]
+  },
+  "position": 1,
+  "takeaway": null,
+  "domain_id": "history",
+  "counted_ms": 18000,
+  "fact_as_of": null,
+  "is_correct": true,
+  "explanation": "De 1347 à 1352, elle tue entre le tiers et la moitié de la population européenne.",
+  "subdomain_id": "history.middle_ages"
+ },
+ {
+  "id": "747f55c6-3460-4d5a-881a-6a5ba6f700bc",
+  "type": "mcq",
+  "given": {
+   "value": -999999,
+   "option_id": "nope"
+  },
+  "answer": {
+   "option_id": "4063e92b"
+  },
+  "prompt": "Qui a réalisé « 2001, l'Odyssée de l'espace » (1968) ?",
+  "source": null,
+  "payload": {
+   "options": [
+    {
+     "id": "1cf3a92e",
+     "text": "Steven Spielberg"
+    },
+    {
+     "id": "617d9fdd",
+     "text": "George Lucas"
+    },
+    {
+     "id": "543da34d",
+     "text": "Ridley Scott"
+    },
+    {
+     "id": "4063e92b",
+     "text": "Stanley Kubrick"
+    }
+   ]
+  },
+  "position": 2,
+  "takeaway": null,
+  "domain_id": "cinema",
+  "counted_ms": 10000,
+  "fact_as_of": null,
+  "is_correct": false,
+  "explanation": "Kubrick a coécrit le scénario avec l'auteur de science-fiction Arthur C. Clarke.",
+  "subdomain_id": "cinema.directors"
+ },
+ {
+  "id": "cbc65d90-2385-4c63-8425-20660d26dbb1",
+  "type": "numeric",
+  "given": {
+   "value": 102
+  },
+  "answer": {
+   "value": 102,
+   "tolerance": 0
+  },
+  "prompt": "Combien font 17 × 6 ?",
+  "source": null,
+  "payload": {
+   "decimals": 0,
+   "allow_negative": false
+  },
+  "position": 3,
+  "takeaway": "Décomposer un facteur en dizaines + unités rend la multiplication mentale facile.",
+  "domain_id": "calc",
+  "counted_ms": 13000,
+  "fact_as_of": null,
+  "is_correct": true,
+  "explanation": "17 × 6 = 10 × 6 + 7 × 6 = 60 + 42 = 102.",
+  "subdomain_id": "calc.mental"
+ },
+ {
+  "id": "03fcb9f4-0e2c-453e-a285-9a5c0ce2220e",
+  "type": "mcq",
+  "given": {
+   "option_id": "a9e1e5e5"
+  },
+  "answer": {
+   "option_id": "a9e1e5e5"
+  },
+  "prompt": "Quelle est l'altitude officielle du mont Everest ?",
+  "source": "Mesure conjointe Chine–Népal",
+  "payload": {
+   "options": [
+    {
+     "id": "bf515e0e",
+     "text": "8 091 m"
+    },
+    {
+     "id": "a9e1e5e5",
+     "text": "8 849 m"
+    },
+    {
+     "id": "d18cabc5",
+     "text": "7 546 m"
+    },
+    {
+     "id": "2f55bba8",
+     "text": "9 312 m"
+    }
+   ]
+  },
+  "position": 4,
+  "takeaway": "L'Everest dépasse de peu les 8 800 m.",
+  "domain_id": "geography",
+  "counted_ms": 18000,
+  "fact_as_of": "2020-12-08",
+  "is_correct": true,
+  "explanation": "En 2020, la Chine et le Népal ont annoncé ensemble une mesure de 8 848,86 m.",
+  "subdomain_id": "geography.relief"
+ },
+ {
+  "id": "1c22305d-b1bf-47fc-8518-4be9ba5d9ed9",
+  "type": "mcq",
+  "given": {
+   "option_id": "85b872f5"
+  },
+  "answer": {
+   "option_id": "85b872f5"
+  },
+  "prompt": "Quel est le pluriel de « un chou » ?",
+  "source": null,
+  "payload": {
+   "options": [
+    {
+     "id": "85b872f5",
+     "text": "des choux"
+    },
+    {
+     "id": "95169388",
+     "text": "des chous"
+    },
+    {
+     "id": "970e64d6",
+     "text": "des chouxs"
+    },
+    {
+     "id": "36a32c99",
+     "text": "des chou"
+    }
+   ]
+  },
+  "position": 5,
+  "takeaway": null,
+  "domain_id": "french",
+  "counted_ms": 14000,
+  "fact_as_of": null,
+  "is_correct": true,
+  "explanation": "Sept noms en -ou prennent un x au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou.",
+  "subdomain_id": "french.spelling"
+ }
+]

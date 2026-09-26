@@ -58,6 +58,10 @@ targets:
         DEVELOPMENT_TEAM: $(CULTFIVE_TEAM_ID)
         LOCALIZATION_PREFERS_STRING_CATALOGS: YES
         SWIFT_EMIT_LOC_STRINGS: YES
+      configs:
+        Release:
+          # Le mode démo (données enregistrées) n'existe que dans les builds Debug.
+          EXCLUDED_SOURCE_FILE_NAMES: "*.demo.json DemoGameService.swift"
   CultFiveTests:
     type: bundle.unit-test
     platform: iOS

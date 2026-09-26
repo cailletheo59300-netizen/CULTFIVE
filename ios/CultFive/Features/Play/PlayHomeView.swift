@@ -6,9 +6,10 @@ struct PlayHomeView: View {
     @Environment(AppModel.self) private var app
     @State private var skills: [SkillSummary] = []
     @State private var playConfig: PlayConfig?
+    @State private var path: [String] = []
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.xl) {
                     VStack(alignment: .leading, spacing: Space.s) {
@@ -35,7 +36,12 @@ struct PlayHomeView: View {
         .fullScreenCover(item: $playConfig) { config in
             PlaySessionView(config: config)
         }
-        .task { await load() }
+        .task {
+            await load()
+            #if DEBUG
+            if Demo.screen == .domain { path = ["geography"] }
+            #endif
+        }
     }
 
     private func load() async {

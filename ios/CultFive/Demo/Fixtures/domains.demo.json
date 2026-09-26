@@ -1,0 +1,74 @@
+[
+ {
+  "id": "calc",
+  "name": "Calcul",
+  "sort": 0,
+  "daily_slot": "calc"
+ },
+ {
+  "id": "french",
+  "name": "Français",
+  "sort": 1,
+  "daily_slot": "french"
+ },
+ {
+  "id": "geography",
+  "name": "Géographie",
+  "sort": 2,
+  "daily_slot": "geo"
+ },
+ {
+  "id": "history",
+  "name": "Histoire",
+  "sort": 3,
+  "daily_slot": "history"
+ },
+ {
+  "id": "science",
+  "name": "Sciences",
+  "sort": 4,
+  "daily_slot": null
+ },
+ {
+  "id": "logic",
+  "name": "Logique",
+  "sort": 5,
+  "daily_slot": null
+ },
+ {
+  "id": "arts",
+  "name": "Arts & culture",
+  "sort": 6,
+  "daily_slot": null
+ },
+ {
+  "id": "sport",
+  "name": "Sport",
+  "sort": 7,
+  "daily_slot": null
+ },
+ {
+  "id": "cinema",
+  "name": "Cinéma",
+  "sort": 8,
+  "daily_slot": null
+ },
+ {
+  "id": "music",
+  "name": "Musique",
+  "sort": 9,
+  "daily_slot": null
+ },
+ {
+  "id": "tech",
+  "name": "Technologie",
+  "sort": 10,
+  "daily_slot": null
+ },
+ {
+  "id": "nature",
+  "name": "Nature & animaux",
+  "sort": 11,
+  "daily_slot": null
+ }
+]

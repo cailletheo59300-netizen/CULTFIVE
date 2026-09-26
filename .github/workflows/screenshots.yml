@@ -1,0 +1,73 @@
+name: Captures d'écran
+
+# Lance l'app (build Debug, mode démo) dans le simulateur et enregistre des captures dans docs/screenshots.
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["ios/**", ".github/workflows/screenshots.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  screenshots:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build (simulateur, Debug)
+        run: |
+          brew install xcodegen
+          cd ios && xcodegen generate
+          xcodebuild build -project CultFive.xcodeproj -scheme CultFive -configuration Debug \
+            -sdk iphonesimulator -derivedDataPath build CODE_SIGNING_ALLOWED=NO > build.log 2>&1 \
+            || (grep -E "error:" -A3 build.log | head -80; exit 1)
+      - name: Simulateur
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          devices = json.load(sys.stdin)["devices"]
+          for runtime in sorted((k for k in devices if "iOS" in k), reverse=True):
+              for name in ("iPhone 16 Pro", "iPhone 16", "iPhone 15 Pro"):
+                  for d in devices[runtime]:
+                      if d["name"] == name:
+                          print(d["udid"]); raise SystemExit
+          ')
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularBars 4 --wifiBars 3
+          xcrun simctl install "$UDID" ios/build/Build/Products/Debug-iphonesimulator/CultFive.app
+      - name: Captures
+        env:
+          UDID: ${{ steps.sim.outputs.udid }}
+        run: |
+          mkdir -p docs/screenshots
+          shoot() {  # $1 écran, $2 apparence, $3 nom de fichier
+            xcrun simctl ui "$UDID" appearance "$2"
+            xcrun simctl launch --terminate-running-process "$UDID" app.cultfive.ios -demo -demoScreen "$1" > /dev/null
+            sleep 7
+            xcrun simctl io "$UDID" screenshot "docs/screenshots/$3.png" > /dev/null
+            echo "✓ $3"
+          }
+          i=1
+          for s in onboarding onboarding-question home question reveal result share play domain friends league profile; do
+            shoot "$s" light "$(printf '%02d' $i)-$s"; i=$((i+1))
+          done
+          for s in home question result profile; do
+            shoot "$s" dark "$(printf '%02d' $i)-$s-sombre"; i=$((i+1))
+          done
+      - name: Enregistrer les captures
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/screenshots
+          git diff --cached --quiet && exit 0
+          git commit -m "Captures d'écran (mode démo) [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

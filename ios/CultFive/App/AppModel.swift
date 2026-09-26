@@ -41,6 +41,11 @@ final class AppModel {
     }
 
     static func live() -> AppModel {
+        #if DEBUG
+        if let screen = Demo.screen {
+            return AppModel(service: DemoGameService(screen: screen), api: nil, queue: OfflineAttemptQueue(fileURL: nil))
+        }
+        #endif
         let queue = OfflineAttemptQueue(fileURL: DiskCache.queueURL)
         guard let config = AppConfig.backend else {
             let model = AppModel(service: UnavailableService(), api: nil, queue: queue)
@@ -56,6 +61,12 @@ final class AppModel {
     private var bootstrapAttempts = 0
 
     func bootstrap() async {
+        #if DEBUG
+        if let screen = Demo.screen {
+            await bootstrapDemo(screen)
+            return
+        }
+        #endif
         guard let api else { return }
         bootstrapAttempts += 1
         do {
@@ -84,6 +95,23 @@ final class AppModel {
             }
         }
     }
+
+    #if DEBUG
+    /// Mode démo : données enregistrées, aucun réseau. Ouvre directement l'écran demandé.
+    private func bootstrapDemo(_ screen: Demo.Screen) async {
+        profile = try? await service.profile()
+        domains = (try? await service.domains()) ?? []
+        subdomains = (try? await service.subdomains()) ?? []
+        daily = try? await service.dailyStatus()
+        switch screen {
+        case .onboarding, .onboardingQuestion: phase = .onboarding
+        case .play, .domain: phase = .main; tab = .play
+        case .friends, .league: phase = .main; tab = .friends
+        case .profile: phase = .main; tab = .profile
+        default: phase = .main; tab = .daily
+        }
+    }
+    #endif
 
     func retryLaunch() async {
         phase = .launching

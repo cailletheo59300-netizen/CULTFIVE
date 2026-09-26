@@ -1,0 +1,195 @@
+{
+ "level": 54,
+ "avg_ms": 8154,
+ "correct": 38,
+ "history": [
+  {
+   "day": "2026-09-05",
+   "level": 52.9
+  },
+  {
+   "day": "2026-09-06",
+   "level": 47.7
+  },
+  {
+   "day": "2026-09-07",
+   "level": 46.8
+  },
+  {
+   "day": "2026-09-08",
+   "level": 48.2
+  },
+  {
+   "day": "2026-09-09",
+   "level": 46.7
+  },
+  {
+   "day": "2026-09-10",
+   "level": 47.8
+  },
+  {
+   "day": "2026-09-11",
+   "level": 48.6
+  },
+  {
+   "day": "2026-09-12",
+   "level": 49.1
+  },
+  {
+   "day": "2026-09-13",
+   "level": 47.7
+  },
+  {
+   "day": "2026-09-14",
+   "level": 50.3
+  },
+  {
+   "day": "2026-09-15",
+   "level": 50.7
+  },
+  {
+   "day": "2026-09-16",
+   "level": 51.0
+  },
+  {
+   "day": "2026-09-17",
+   "level": 51.1
+  },
+  {
+   "day": "2026-09-18",
+   "level": 51.2
+  },
+  {
+   "day": "2026-09-19",
+   "level": 51.3
+  },
+  {
+   "day": "2026-09-20",
+   "level": 51.3
+  },
+  {
+   "day": "2026-09-21",
+   "level": 51.7
+  },
+  {
+   "day": "2026-09-22",
+   "level": 55.5
+  },
+  {
+   "day": "2026-09-23",
+   "level": 54.4
+  },
+  {
+   "day": "2026-09-24",
+   "level": 53.3
+  },
+  {
+   "day": "2026-09-25",
+   "level": 53.9
+  }
+ ],
+ "answered": 50,
+ "domain_id": "geography",
+ "subdomains": [
+  {
+   "id": "geography.capitals",
+   "name": "Capitales",
+   "level": 53,
+   "correct": 10,
+   "answered": 15,
+   "available": 7,
+   "reliability": 0.42
+  },
+  {
+   "id": "geography.flags",
+   "name": "Drapeaux",
+   "level": 48,
+   "correct": 4,
+   "answered": 6,
+   "available": 4,
+   "reliability": 0.32
+  },
+  {
+   "id": "geography.location",
+   "name": "Localisation",
+   "level": 52,
+   "correct": 1,
+   "answered": 1,
+   "available": 3,
+   "reliability": 0.21
+  },
+  {
+   "id": "geography.countries",
+   "name": "Pays",
+   "level": 48,
+   "correct": 3,
+   "answered": 5,
+   "available": 2,
+   "reliability": 0.21
+  },
+  {
+   "id": "geography.borders",
+   "name": "Frontières",
+   "level": 53,
+   "correct": 4,
+   "answered": 4,
+   "available": 3,
+   "reliability": 0.26
+  },
+  {
+   "id": "geography.relief",
+   "name": "Reliefs",
+   "level": 51,
+   "correct": 4,
+   "answered": 4,
+   "available": 3,
+   "reliability": 0.28
+  },
+  {
+   "id": "geography.oceans",
+   "name": "Océans & fleuves",
+   "level": 50,
+   "correct": 5,
+   "answered": 5,
+   "available": 3,
+   "reliability": 0.25
+  },
+  {
+   "id": "geography.monuments",
+   "name": "Monuments",
+   "level": 50,
+   "correct": 7,
+   "answered": 10,
+   "available": 3,
+   "reliability": 0.37
+  }
+ ],
+ "reliability": 0.59,
+ "by_difficulty": [
+  {
+   "band": "easy",
+   "correct": 22,
+   "answered": 22
+  },
+  {
+   "band": "medium",
+   "correct": 16,
+   "answered": 28
+  }
+ ],
+ "recent_errors": [
+  {
+   "label": "Pays le plus peuplé",
+   "since": "2026-09-24T06:30:43+00:00",
+   "state": "failed",
+   "concept_id": "geography.countries.most_populous"
+  },
+  {
+   "label": "Drapeau de l'Irlande",
+   "since": "2026-09-23T06:30:15+00:00",
+   "state": "failed",
+   "concept_id": "geography.flags.ireland"
+  }
+ ],
+ "concepts_mastered": 12
+}
