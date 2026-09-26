@@ -1,11 +1,9 @@
 name: Captures d'écran
 
 # Lance l'app (build Debug, mode démo) dans le simulateur et enregistre des captures dans docs/screenshots.
+# Déclenchement manuel uniquement (Actions → Captures d'écran → Run workflow), à la demande du propriétaire.
 on:
   workflow_dispatch:
-  push:
-    branches: ["claude/**"]
-    paths: ["ios/**", ".github/workflows/screenshots.yml"]
 
 permissions:
   contents: write
