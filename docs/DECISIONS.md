@@ -30,7 +30,7 @@ Pourquoi : pas de pay-to-win sur un classement. Les aides (50/50 15, indice 10, 
 Cohérente avec « Cultive ce que tu sais ». Une seule monnaie, ledger avec clé d'idempotence, solde en cache tenu par trigger.
 
 ### D-010 · Mascotte : Léon, un caméléon
-Il prend la couleur du domaine : métaphore directe de l'adaptation, jamais scolaire (pas de chapeau, livre, ampoule). Dessiné en code (`Canvas`), sans asset. Rare.
+Il prend la couleur du domaine : métaphore directe de l'adaptation, jamais scolaire (pas de chapeau, livre, ampoule). Dessiné en code (`Canvas`), sans asset. **Révisé par D-021** : redessiné en version Pop et doté d'un rôle (réactions aux réponses, série).
 
 ### D-011 · Client Supabase maison (≈ 300 lignes) au lieu de `supabase-swift`
 Pourquoi : on n'utilise que Auth (anonyme, Apple id_token avec liaison, OTP e-mail, refresh) et les RPC ; zéro dépendance, surface stable, testable par transport simulé et fixtures. Alternative : SDK officiel (API qui bouge, dépendance lourde). Conséquence : si Realtime/Storage deviennent nécessaires, réévaluer le SDK.
@@ -61,3 +61,6 @@ Pourquoi : Wikidata est CC0 (aucune obligation de citation ni de partage à l'id
 
 ### D-020 · 2026-09-27 · Anti-répétition par « familles » ; silhouettes en QCM
 Pourquoi : la génération produit des centaines de questions du même moule ; sans contrainte, une partie enchaîne « Quelle est la capitale… ». Colonne `questions.family`, contraintes dans `_select_questions` (pas deux fois de suite, ≤ 2 par série) et `_generate_daily_set` (une par Daily). Les silhouettes réutilisent le type `mcq` avec `payload.shape` (pas de nouveau type SQL ni d'évaluateur) ; contours Natural Earth 1:110m (domaine public), territoires éloignés retirés, micro-États exclus.
+
+### D-021 · 2026-09-26 · Direction visuelle « Pop » (remplace « éditorial papier/encre »)
+Pourquoi : le propriétaire trouvait l'app vieillotte (formes carrées, couleurs ternes) et veut des visuels qui accrochent en pub TikTok. Choix parmi trois pistes (Pop, néon sombre, éditorial modernisé) : **Pop** — fond clair, violet + jaune, couleurs vives par domaine, SF Pro Rounded, tout arrondi, rebonds. Léon, jugé inutile, est gardé à condition d'être attrayant et utile : redessiné rond et animé, il réagit aux réponses (après la réponse, jamais pendant), suit la série. S'il ne convainc pas à l'usage, il se retire sans toucher au reste (`Leon`/`LeonSays` isolés). Conséquence : les noms de tokens `paper`/`ink` restent (sens : fond/texte), `chloro` devient `sun` + `brand`.

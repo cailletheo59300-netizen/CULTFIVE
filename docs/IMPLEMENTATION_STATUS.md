@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : session 2 — 2026-09-26_
+_Dernière mise à jour : session 2 — 2026-09-26 (design Pop, 0.5.0)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -19,7 +19,7 @@ _Dernière mise à jour : session 2 — 2026-09-26_
 | App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | ✅ build + tests unitaires en CI (macOS 15) · 🟡 **pas encore essayée sur appareil** avec un vrai projet Supabase | job CI `ios` |
 
 ## App iOS — écrans
-Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (rapide, surprise, défi, erreurs, par domaine/sous-domaine) · Domaine (niveau, sous-domaines, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (pseudo, notifications, âge, compte, suppression) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles, Daily et profil).
+Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (rapide, surprise, défi, erreurs, par domaine/sous-domaine) · Domaine (niveau, sous-domaines, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (pseudo, notifications, âge, compte, suppression) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles ; Daily, profil avec radar, question du jour). Design « Pop » (voir `DESIGN_SYSTEM.md`) : 🟡 compilé en CI, rendu à valider à l'œil sur Appetize.
 
 ## Phases (plan du cahier des charges)
 | Phase | État |

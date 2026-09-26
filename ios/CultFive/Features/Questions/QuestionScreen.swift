@@ -1,7 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Écran de question : concentration. Catégorie discrète, progression, énoncé, interaction — rien d'autre.
+/// Écran de question : concentration. Pastille du domaine, progression, énoncé, réponses en pastilles.
+/// Un voile de la couleur du domaine en haut d'écran donne l'ambiance sans gêner la lecture.
 /// Partagé par le Daily, Jouer et l'onboarding ; chaque mode fournit sa progression et ses aides.
 struct QuestionScreen<Trailing: View, Help: View>: View {
     let question: Question
@@ -70,14 +71,22 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
                 .padding(.bottom, Space.s)
             } else if phase.revealed != nil {
                 Button(continueTitle, action: onContinue)
-                    .buttonStyle(.ink)
+                    .buttonStyle(.domain(question.domainId))
                     .padding(.horizontal, Space.gutter)
                     .padding(.vertical, Space.s)
             } else if case .submitting = phase {
                 ProgressView().frame(height: 56).padding(.vertical, Space.s)
             }
         }
-        .background(Color.paper)
+        .background(alignment: .top) {
+            ZStack(alignment: .top) {
+                Color.paper
+                LinearGradient(colors: [DomainPalette.color(question.domainId).opacity(0.16), .clear],
+                               startPoint: .top, endPoint: .bottom)
+                    .frame(height: 280)
+            }
+            .ignoresSafeArea()
+        }
         .onAppear {
             entry = NumericEntry(maxDecimals: max(question.payload.decimals ?? 0, 3),
                                  allowNegative: question.payload.allowNegative ?? false)
@@ -91,10 +100,13 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
         case .mcq:
             if let shape = question.payload.shape {
                 CountryShapeView(shape: shape, color: DomainPalette.color(question.domainId))
-                    .frame(height: 210)
+                    .frame(height: 200)
+                    .padding(Space.m)
+                    .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
                     .padding(.horizontal, Space.gutter)
             }
-            ChoiceAnswerView(options: question.payload.options ?? [], phase: phase, removed: removedOptions, onSubmit: onSubmit)
+            ChoiceAnswerView(options: question.payload.options ?? [], phase: phase, removed: removedOptions,
+                             accent: DomainPalette.color(question.domainId), onSubmit: onSubmit)
         case .trueFalse:
             TrueFalseAnswerView(phase: phase, onSubmit: onSubmit)
         case .numeric:
@@ -134,7 +146,7 @@ extension QuestionScreen where Help == EmptyView {
     }
 }
 
-/// Verdict + explication. La bonne réponse est identifiable immédiatement ; l'explication est courte.
+/// Verdict + explication. Léon réagit (langue sur une bonne réponse, gris sur une mauvaise), puis l'explication en carte.
 struct RevealPanel: View {
     let question: Question
     let isCorrect: Bool
@@ -144,45 +156,57 @@ struct RevealPanel: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: Space.m) {
-            HStack(spacing: Space.s) {
-                Image(systemName: isCorrect ? "checkmark" : "xmark").font(.body.weight(.bold))
-                Text(isCorrect ? "Juste" : "Raté").font(.system(.title3, design: .serif).weight(.bold))
-                Spacer()
-                if let badge {
-                    Text(badge).labelCaps(.correct)
-                }
-            }
-            .foregroundStyle(isCorrect ? Color.correct : Color.wrong)
-            .accessibilityElement(children: .combine)
-
-            if let answerText = AnswerText.correct(for: question, answer: reveal.answer), !isCorrect || question.type == .numeric {
-                (Text("Réponse : ").foregroundStyle(Color.inkSoft) + Text(answerText).bold().foregroundStyle(Color.ink))
-                    .font(.system(.body))
-            }
-
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Pourquoi ?").labelCaps()
-                Text(reveal.explanation)
-                    .font(.cfBodySerif)
-                    .foregroundStyle(Color.ink)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-
-            if let takeaway = reveal.takeaway {
-                HStack(alignment: .top, spacing: Space.m) {
-                    Rectangle().fill(DomainPalette.color(question.domainId)).frame(width: 3)
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("À retenir").labelCaps()
-                        Text(takeaway).font(.system(.callout).weight(.medium)).foregroundStyle(Color.ink)
-                            .fixedSize(horizontal: false, vertical: true)
+            HStack(alignment: .center, spacing: Space.s) {
+                Leon(color: DomainPalette.color(question.domainId), pose: isCorrect ? .tongue : .sad)
+                    .frame(width: 78)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(isCorrect ? "Juste !" : "Raté…")
+                        .font(.system(.title, design: .rounded).weight(.black))
+                        .foregroundStyle(isCorrect ? Color.correct : Color.wrong)
+                    if let badge {
+                        Text(badge)
+                            .font(.system(.caption, design: .rounded).weight(.heavy))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 10).padding(.vertical, 4)
+                            .background(Color.correct, in: Capsule())
                     }
                 }
-                .fixedSize(horizontal: false, vertical: true)
+                Spacer()
             }
+            .accessibilityElement(children: .combine)
 
-            if let source = reveal.source {
-                Text(sourceLine(source)).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            VStack(alignment: .leading, spacing: Space.m) {
+                if let answerText = AnswerText.correct(for: question, answer: reveal.answer), !isCorrect || question.type == .numeric {
+                    HStack(spacing: Space.s) {
+                        Text("Réponse").labelCaps()
+                        Text(answerText)
+                            .font(.system(.body, design: .rounded).weight(.heavy))
+                            .foregroundStyle(Color.correct)
+                    }
+                }
+
+                Text(reveal.explanation)
+                    .font(.cfReading)
+                    .foregroundStyle(Color.ink)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                if let takeaway = reveal.takeaway {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Label("À retenir", systemImage: "lightbulb.fill").labelCaps(DomainPalette.color(question.domainId))
+                        Text(takeaway).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .padding(12)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(DomainPalette.color(question.domainId).opacity(0.12),
+                                in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+                }
+
+                if let source = reveal.source {
+                    Text(sourceLine(source)).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                }
             }
+            .popCard()
         }
         .padding(.horizontal, Space.gutter)
         .padding(.top, Space.s)

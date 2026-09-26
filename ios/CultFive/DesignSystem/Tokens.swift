@@ -4,18 +4,29 @@ import UIKit
 // Tokens du design system. Toute couleur de l'app passe par ici (voir docs/DESIGN_SYSTEM.md).
 
 extension Color {
-    static let paper = Color(light: 0xF5F1E8, dark: 0x14120F)
-    static let paperRaised = Color(light: 0xFFFDF8, dark: 0x1E1B17)
-    static let ink = Color(light: 0x16140F, dark: 0xF2EDE3)
-    static let inkSoft = Color(light: 0x5E574C, dark: 0xA39B8D)
-    static let hairline = Color(light: 0xE3DCCD, dark: 0x2E2A24)
-    /// Couleur de marque : uniquement sur fond encre, ou en aplat avec texte encre.
-    static let chloro = Color(light: 0xC6F432, dark: 0xC6F432)
-    static let correct = Color(light: 0x1E7A4C, dark: 0x5BC48A)
-    static let wrong = Color(light: 0xB8382A, dark: 0xF07A6A)
-    /// Encre fixe (ne s'inverse pas en mode sombre) : écrans « plein encre » comme le résultat.
-    static let inkFixed = Color(hex: 0x16140F)
-    static let paperFixed = Color(hex: 0xF5F1E8)
+    /// Fond d'écran : blanc très légèrement lavande (les cartes blanches s'en détachent).
+    static let paper = Color(light: 0xF6F5FB, dark: 0x0E0D16)
+    /// Surface des cartes.
+    static let paperRaised = Color(light: 0xFFFFFF, dark: 0x1C1A2A)
+    static let ink = Color(light: 0x1A1830, dark: 0xF4F3FA)
+    static let inkSoft = Color(light: 0x6E6B85, dark: 0xA3A0B8)
+    static let hairline = Color(light: 0xE9E7F2, dark: 0x2C2940)
+    /// Couleur de marque : violet électrique. Boutons principaux, écrans de moment fort.
+    static let brand = Color(light: 0x6A4CFF, dark: 0x8469FF)
+    static let brandDeep = Color(hex: 0x3A1FB8)
+    /// Accent « soleil » : score, surlignages sur fond violet. Toujours avec du texte foncé.
+    static let sun = Color(hex: 0xFFD23F)
+    static let correct = Color(light: 0x12B76A, dark: 0x3DDC97)
+    static let wrong = Color(light: 0xFF4D5E, dark: 0xFF6B7A)
+    /// Joues de Léon, confettis.
+    static let blush = Color(hex: 0xFF8FB1)
+    /// Encre fixe (ne s'inverse pas en mode sombre) : textes sur fond clair fixe, fonds de cartes de partage.
+    static let inkFixed = Color(hex: 0x1A1830)
+    static let paperFixed = Color(hex: 0xFFFFFF)
+
+    /// Dégradé des moments forts (résultat, accueil, cartes de partage).
+    static let popGradient = LinearGradient(colors: [Color(hex: 0x7B5CFF), Color(hex: 0x3A1FB8)],
+                                            startPoint: .topLeading, endPoint: .bottomTrailing)
 
     init(hex: UInt32) {
         self.init(uiColor: UIColor(hex: hex))
@@ -37,23 +48,51 @@ extension UIColor {
     }
 }
 
-/// Couleurs de domaine : aplats sobres. La couleur n'envahit l'écran qu'à l'intérieur d'un domaine.
+/// Couleurs de domaine : vives, une par domaine. Les grandes surfaces colorées portent un texte `onColor`.
 enum DomainPalette {
     static func color(_ domainId: String) -> Color {
+        Color(hex: hex(domainId))
+    }
+
+    /// Texte lisible sur l'aplat du domaine.
+    static func onColor(_ domainId: String) -> Color {
+        domainId == "music" ? .inkFixed : .white
+    }
+
+    static func hex(_ domainId: String) -> UInt32 {
         switch domainId {
-        case "calc": return Color(hex: 0x2F4BD8)
-        case "french": return Color(hex: 0x8E2A43)
-        case "geography": return Color(hex: 0xC8612F)
-        case "history": return Color(hex: 0xB8872B)
-        case "science": return Color(hex: 0x1F6F78)
-        case "logic": return Color(hex: 0x4A4E57)
-        case "arts": return Color(hex: 0xC0567E)
-        case "sport": return Color(hex: 0x3B8B3F)
-        case "cinema": return Color(hex: 0x5B3A6E)
-        case "music": return Color(hex: 0x34357A)
-        case "tech": return Color(hex: 0x3F6E9A)
-        case "nature": return Color(hex: 0x6C7F2E)
-        default: return .inkSoft
+        case "calc": return 0x2F6BFF
+        case "french": return 0xF0588F
+        case "geography": return 0x0CA678
+        case "history": return 0xF76707
+        case "science": return 0x1098AD
+        case "logic": return 0x845EF7
+        case "arts": return 0xD6336C
+        case "sport": return 0xE5383B
+        case "cinema": return 0x5F3DC4
+        case "music": return 0xFCC419
+        case "tech": return 0x1C7ED6
+        case "nature": return 0x37B24D
+        default: return 0x6E6B85
+        }
+    }
+
+    /// Pictogramme SF Symbols du domaine (tuiles, cartes).
+    static func symbol(_ domainId: String) -> String {
+        switch domainId {
+        case "calc": return "plus.forwardslash.minus"
+        case "french": return "character.book.closed.fill"
+        case "geography": return "globe.europe.africa.fill"
+        case "history": return "building.columns.fill"
+        case "science": return "atom"
+        case "logic": return "puzzlepiece.fill"
+        case "arts": return "paintpalette.fill"
+        case "sport": return "figure.run"
+        case "cinema": return "film.fill"
+        case "music": return "music.note"
+        case "tech": return "cpu.fill"
+        case "nature": return "leaf.fill"
+        default: return "sparkles"
         }
     }
 
@@ -88,10 +127,19 @@ enum Space {
     static let gutter: CGFloat = 20
 }
 
+/// Rayons : tout est arrondi, rien n'est carré.
+enum Radius {
+    static let s: CGFloat = 14
+    static let m: CGFloat = 20
+    static let l: CGFloat = 28
+}
+
 enum Motion {
-    static let press = Animation.easeOut(duration: 0.18)
-    static let standard = Animation.spring(response: 0.32, dampingFraction: 0.86)
-    static let moment = Animation.spring(response: 0.6, dampingFraction: 0.82)
+    static let press = Animation.spring(response: 0.22, dampingFraction: 0.6)
+    static let standard = Animation.spring(response: 0.34, dampingFraction: 0.78)
+    static let moment = Animation.spring(response: 0.55, dampingFraction: 0.68)
+    /// Rebond franc (verdict, apparition d'un chiffre).
+    static let bounce = Animation.spring(response: 0.4, dampingFraction: 0.5)
 
     /// Respecte « Réduire les animations » : fondu court à la place du mouvement.
     static func adaptive(_ animation: Animation, reduceMotion: Bool) -> Animation {

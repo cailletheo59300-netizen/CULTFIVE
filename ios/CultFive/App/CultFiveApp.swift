@@ -11,7 +11,7 @@ struct CultFiveApp: App {
         WindowGroup {
             RootView()
                 .environment(model)
-                .tint(Color.ink)
+                .tint(Color.brand)
                 .onOpenURL { model.handle(url: $0) }
                 .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in
                     if let url = activity.webpageURL { model.handle(url: url) }
@@ -57,11 +57,11 @@ struct RootView: View {
 private struct LaunchView: View {
     var body: some View {
         VStack(spacing: Space.l) {
-            TallyMark(strokes: [.correct, .correct, .correct, .correct, .empty]).frame(width: 72)
-            Text(Brand.name).font(.system(.title3, design: .serif).weight(.bold)).tracking(3)
+            TallyMark(strokes: [.correct, .correct, .correct, .correct, .ready], onInk: true).frame(width: 72)
+            Text(Brand.name).font(.system(.title2, design: .rounded).weight(.black)).foregroundStyle(.white)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.paper)
+        .background(Color.popGradient.ignoresSafeArea())
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Chargement")
     }
@@ -74,7 +74,7 @@ private struct UnavailableView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Space.l) {
             Spacer()
-            Leon(color: .hairline, pose: .curious).frame(width: 140)
+            Leon(pose: .sad).frame(width: 150)
             Text("Impossible de joindre \(Brand.name).").font(.cfHeadline)
             Text(message).font(.cfBody).foregroundStyle(Color.inkSoft)
             Button("Réessayer") { Task { await model.retryLaunch() } }

@@ -39,9 +39,18 @@ struct CultTabBar: View {
             item(.profile, title: "Profil", symbol: "person.crop.circle", selectedSymbol: "person.crop.circle.fill")
         }
         .padding(.horizontal, Space.s)
-        .padding(.top, Space.s)
-        .background(Color.paper.ignoresSafeArea(edges: .bottom))
-        .overlay(alignment: .top) { Hairline() }
+        .padding(.vertical, 6)
+        .background(Color.paperRaised, in: Capsule())
+        .shadow(color: Color(hex: 0x3A1FB8).opacity(0.12), radius: 18, y: 8)
+        .padding(.horizontal, Space.m)
+        .padding(.bottom, 4)
+        .background(alignment: .bottom) {
+            // Fondu sous la barre flottante pour que le contenu ne s'y heurte pas.
+            LinearGradient(colors: [Color.paper.opacity(0), Color.paper], startPoint: .top, endPoint: .bottom)
+                .frame(height: 70)
+                .ignoresSafeArea(edges: .bottom)
+                .allowsHitTesting(false)
+        }
     }
 
     private func item(_ tab: AppModel.Tab, title: String, symbol: String, selectedSymbol: String) -> some View {
@@ -50,40 +59,42 @@ struct CultTabBar: View {
             Haptics.selection()
             selection = tab
         } label: {
-            VStack(spacing: 4) {
+            VStack(spacing: 3) {
                 Image(systemName: selection == tab ? selectedSymbol : symbol)
-                    .font(.system(size: 19, weight: .medium))
+                    .font(.system(size: 19, weight: .bold, design: .rounded))
                     .frame(height: 24)
-                Text(title).font(.system(.caption2).weight(.semibold))
+                    .symbolEffect(.bounce, value: selection == tab)
+                Text(title).font(.system(.caption2, design: .rounded).weight(.heavy))
             }
-            .foregroundStyle(selection == tab ? Color.ink : Color.inkSoft)
-            .frame(maxWidth: .infinity, minHeight: 50)
+            .foregroundStyle(selection == tab ? Color.brand : Color.inkSoft.opacity(0.8))
+            .frame(maxWidth: .infinity, minHeight: 52)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .accessibilityAddTraits(selection == tab ? .isSelected : [])
     }
 
-    /// Le « 5 » : pastille d'encre portant le trait de cinq, légèrement surélevée.
+    /// Le « 5 » : bulle violette portant le trait de cinq, qui dépasse de la barre.
     private var centerItem: some View {
         Button {
             Haptics.soft()
             selection = .daily
         } label: {
-            VStack(spacing: 4) {
+            VStack(spacing: 3) {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(Color.inkFixed)
-                        .frame(width: 64, height: 56)
-                        .shadow(color: Color.black.opacity(0.18), radius: 10, y: 4)
-                    TallyMark(strokes: centerStrokes, onInk: true, lineWidth: 3)
-                        .frame(width: 30)
+                    Circle()
+                        .fill(Color.popGradient)
+                        .frame(width: 62, height: 62)
+                        .overlay(Circle().stroke(Color.paperRaised, lineWidth: 4))
+                        .shadow(color: Color.brand.opacity(0.4), radius: 10, y: 5)
+                    TallyMark(strokes: centerStrokes, onInk: true, lineWidth: 3.5)
+                        .frame(width: 28)
                 }
-                .offset(y: -10)
-                .padding(.bottom, -10)
+                .offset(y: -22)
+                .padding(.bottom, -22)
                 Text(daily?.state == .done ? "Fait" : Brand.dailyName)
-                    .font(.system(.caption2).weight(.semibold))
-                    .foregroundStyle(selection == .daily ? Color.ink : Color.inkSoft)
+                    .font(.system(.caption2, design: .rounded).weight(.heavy))
+                    .foregroundStyle(selection == .daily ? Color.brand : Color.inkSoft.opacity(0.8))
             }
             .frame(maxWidth: .infinity)
             .contentShape(Rectangle())

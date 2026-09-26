@@ -1,7 +1,7 @@
 import SwiftUI
 import CultFiveCore
 
-/// Silhouette d'un pays (contours Natural Earth normalisés). Aplat de la couleur du domaine, filet d'encre.
+/// Silhouette d'un pays (contours Natural Earth normalisés). Aplat de la couleur du domaine, liseré blanc, ombre portée.
 struct CountryShapeView: View {
     let shape: CountryShape
     var color: Color = DomainPalette.color("geography")
@@ -18,8 +18,11 @@ struct CountryShapeView: View {
                 }
                 path.closeSubpath()
             }
+            var shadow = context
+            shadow.translateBy(x: 0, y: 5)
+            shadow.fill(path, with: .color(Color.black.opacity(0.12)))
             context.fill(path, with: .color(color))
-            context.stroke(path, with: .color(Color.ink.opacity(0.8)), style: StrokeStyle(lineWidth: 1.2, lineJoin: .round))
+            context.stroke(path, with: .color(.white), style: StrokeStyle(lineWidth: 2, lineJoin: .round))
         }
         .accessibilityElement()
         .accessibilityLabel("Silhouette d'un pays")

@@ -7,12 +7,12 @@ enum TallyStroke: Equatable {
     case current    // question en cours
     case correct
     case wrong
-    case ready      // Daily disponible : diagonale en chlorophylle
+    case ready      // Daily disponible : diagonale jaune soleil
 }
 
 struct TallyMark: View {
     var strokes: [TallyStroke]
-    /// Palette : sur papier (encre) ou sur fond encre (papier / chlorophylle).
+    /// Palette : sur fond clair (violet de marque) ou sur fond coloré (blanc / soleil).
     var onInk: Bool = false
     var lineWidth: CGFloat? = nil
 
@@ -36,7 +36,7 @@ struct TallyMark: View {
 
     var body: some View {
         GeometryReader { proxy in
-            let width = lineWidth ?? max(proxy.size.width * 0.075, 2)
+            let width = lineWidth ?? max(proxy.size.width * 0.1, 3)
             ZStack {
                 ForEach(0..<5, id: \.self) { index in
                     TallyStrokeShape(index: index)
@@ -58,13 +58,13 @@ struct TallyMark: View {
     }
 
     private func color(for stroke: TallyStroke, index: Int) -> Color {
-        let base: Color = onInk ? .paperFixed : .ink
+        let base: Color = onInk ? .paperFixed : .brand
         switch stroke {
-        case .empty: return onInk ? Color.paperFixed.opacity(0.18) : Color.hairline
+        case .empty: return onInk ? Color.paperFixed.opacity(0.2) : Color.brand.opacity(0.14)
         case .current: return base
-        case .correct: return index == 4 && onInk ? .chloro : base
-        case .wrong: return base.opacity(onInk ? 0.35 : 0.3)
-        case .ready: return onInk ? .chloro : base
+        case .correct: return index == 4 ? (onInk ? .sun : Color.correct) : base
+        case .wrong: return onInk ? Color.paperFixed.opacity(0.35) : Color.wrong.opacity(0.55)
+        case .ready: return onInk ? .sun : Color(hex: 0xFFB020)
         }
     }
 

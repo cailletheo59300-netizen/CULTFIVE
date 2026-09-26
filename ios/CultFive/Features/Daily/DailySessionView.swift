@@ -42,7 +42,7 @@ struct DailySessionView: View {
     private func content(_ model: DailySessionModel) -> some View {
         switch model.stage {
         case .loading:
-            ProgressView().tint(Color.ink)
+            ProgressView().tint(Color.brand)
         case .failed(let message):
             VStack(alignment: .leading, spacing: Space.l) {
                 Text(message).font(.cfHeadline)
@@ -62,13 +62,8 @@ struct DailySessionView: View {
                     onDisplayed: { model.questionDisplayed() }
                 ) {
                     HStack(spacing: Space.m) {
-                        Text("\(model.position) / 5")
-                            .font(.cfNumber)
-                            .foregroundStyle(Color.inkSoft)
-                        Button { close() } label: {
-                            Image(systemName: "xmark").font(.body.weight(.semibold)).foregroundStyle(Color.inkSoft)
-                                .frame(width: 44, height: 44)
-                        }
+                        ProgressPills(current: model.position, total: 5, color: DomainPalette.color(question.domainId))
+                        Button { close() } label: { CloseCircle() }
                         .accessibilityLabel("Quitter (tu pourras reprendre)")
                     }
                 }
@@ -77,11 +72,11 @@ struct DailySessionView: View {
                 .overlay(alignment: .bottom) {
                     if model.isRetrying {
                         VStack(spacing: Space.s) {
-                            Text("Connexion perdue. Ta réponse est gardée.").font(.cfCallout).foregroundStyle(Color.paper)
-                            Button("Renvoyer") { model.retry() }.buttonStyle(.chloro)
+                            Text("Connexion perdue. Ta réponse est gardée.").font(.cfCallout).foregroundStyle(.white)
+                            Button("Renvoyer") { model.retry() }.buttonStyle(.sun)
                         }
                         .padding(Space.m)
-                        .background(Color.ink, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .background(Color.brandDeep, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
                         .padding(Space.gutter)
                     }
                 }

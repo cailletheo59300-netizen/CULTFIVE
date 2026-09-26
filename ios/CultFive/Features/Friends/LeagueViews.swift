@@ -148,27 +148,28 @@ struct LeagueView: View {
                     }
                     .pickerStyle(.segmented)
 
-                    VStack(spacing: 0) {
+                    VStack(spacing: 8) {
                         ForEach(standings.standings) { row in
                             HStack(spacing: Space.m) {
                                 Text("\(row.rank)")
-                                    .font(.system(.title2, design: .serif).weight(.bold))
+                                    .font(.system(.headline, design: .rounded).weight(.black))
                                     .monospacedDigit()
-                                    .frame(width: 36, alignment: .leading)
-                                    .foregroundStyle(row.rank == 1 && row.points > 0 ? Color.ink : Color.inkSoft)
+                                    .foregroundStyle(row.rank <= 3 && row.points > 0 ? Color.inkFixed : Color.inkSoft)
+                                    .frame(width: 36, height: 36)
+                                    .background(medal(row.rank, points: row.points), in: Circle())
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(row.handle).font(.cfTitle3).fontWeight(row.isMe ? .bold : .semibold)
                                     Text("\(row.days) jour\(row.days > 1 ? "s" : "") · \(DurationFormat.clock(milliseconds: row.totalMs))")
                                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                                 }
                                 Spacer()
-                                Text("\(row.points)").font(.system(.title3, design: .serif).weight(.bold)).monospacedDigit()
+                                Text("\(row.points)").font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
                             }
-                            .padding(.vertical, 12)
-                            .padding(.horizontal, row.isMe ? Space.s : 0)
-                            .background(row.isMe ? Color.chloro.opacity(0.4) : Color.clear,
-                                        in: RoundedRectangle(cornerRadius: 6, style: .continuous))
-                            .overlay(alignment: .bottom) { Hairline() }
+                            .padding(12)
+                            .background(row.isMe ? Color.brand.opacity(0.12) : Color.paperRaised,
+                                        in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous)
+                                .strokeBorder(row.isMe ? Color.brand : .clear, lineWidth: 2))
                             .accessibilityElement(children: .combine)
                         }
                     }
@@ -205,5 +206,16 @@ struct LeagueView: View {
                 }
             }
         }
+    }
+}
+
+/// Or, argent, bronze pour le podium ; neutre ensuite.
+private func medal(_ rank: Int, points: Int) -> Color {
+    guard points > 0 else { return .hairline }
+    switch rank {
+    case 1: return .sun
+    case 2: return Color(hex: 0xD9DCE8)
+    case 3: return Color(hex: 0xF2B489)
+    default: return .hairline
     }
 }

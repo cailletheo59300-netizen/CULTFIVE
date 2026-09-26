@@ -21,7 +21,7 @@ struct DomainView: View {
                     Button("S'entraîner sur tout le domaine") {
                         playConfig = PlayConfig(mode: .training, domain: domainId)
                     }
-                    .buttonStyle(InkButtonStyle(fill: color, text: .paperFixed))
+                    .buttonStyle(.domain(domainId))
 
                     subdomains
                     if let stats, stats.answered > 0 {
@@ -43,7 +43,7 @@ struct DomainView: View {
         .background(Color.paper)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(color, for: .navigationBar)
-        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarColorScheme(domainId == "music" ? .light : .dark, for: .navigationBar)
         .fullScreenCover(item: $playConfig, onDismiss: { Task { await load() } }) { config in
             PlaySessionView(config: config)
         }
@@ -62,31 +62,42 @@ struct DomainView: View {
         VStack(alignment: .leading, spacing: Space.s) {
             Text(app.domainName(domainId))
                 .font(.cfDisplay)
-                .foregroundStyle(Color.paperFixed)
+                .foregroundStyle(DomainPalette.onColor(domainId))
             if let stats {
                 HStack(alignment: .lastTextBaseline, spacing: Space.s) {
-                    Text("\(stats.level)").numeral(size: 64).foregroundStyle(Color.paperFixed)
+                    Text("\(stats.level)").numeral(size: 64).foregroundStyle(DomainPalette.onColor(domainId))
                     VStack(alignment: .leading, spacing: 0) {
                         Text("niveau").font(.cfFootnote)
                         Text("fiabilité \(Reliability(stats.reliability).label)").font(.cfFootnote)
                     }
-                    .foregroundStyle(Color.paperFixed.opacity(0.75))
+                    .foregroundStyle(DomainPalette.onColor(domainId).opacity(0.8))
                 }
             } else if let loadError {
-                Text(loadError).font(.cfCallout).foregroundStyle(Color.paperFixed.opacity(0.8))
+                Text(loadError).font(.cfCallout).foregroundStyle(DomainPalette.onColor(domainId).opacity(0.8))
             }
         }
         .padding(.horizontal, Space.gutter)
         .padding(.top, Space.m)
         .padding(.bottom, Space.l)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(color)
+        .background(alignment: .topTrailing) {
+            ZStack(alignment: .topTrailing) {
+                color
+                Image(systemName: DomainPalette.symbol(domainId))
+                    .font(.system(size: 130, weight: .black))
+                    .foregroundStyle(DomainPalette.onColor(domainId).opacity(0.14))
+                    .rotationEffect(.degrees(-12))
+                    .offset(x: 24, y: 10)
+            }
+            .clipShape(UnevenRoundedRectangle(bottomLeadingRadius: Radius.l, bottomTrailingRadius: Radius.l, style: .continuous))
+            .ignoresSafeArea(edges: .top)
+        }
     }
 
     private var subdomains: some View {
         VStack(alignment: .leading, spacing: Space.s) {
             Text("Sous-domaines").labelCaps()
-            VStack(spacing: 0) {
+            VStack(spacing: 10) {
                 let rows: [DomainStats.Subdomain] = stats?.subdomains ?? app.subdomains(of: domainId).map {
                     DomainStats.Subdomain(id: $0.id, name: $0.name, level: 0, reliability: 0, answered: 0, correct: 0, available: 1)
                 }
@@ -112,8 +123,7 @@ struct DomainView: View {
                                 SkillBar(level: sub.level, reliability: sub.reliability, color: color)
                             }
                         }
-                        .padding(.vertical, 14)
-                        .overlay(alignment: .bottom) { Hairline() }
+                        .popCard(padding: 14)
                     }
                     .buttonStyle(.row)
                     .disabled(sub.available == 0)
@@ -156,7 +166,7 @@ struct DomainView: View {
 
     private func figure(_ value: String, _ label: String) -> some View {
         VStack(alignment: .leading, spacing: 2) {
-            Text(value).font(.system(.title3, design: .serif).weight(.bold)).monospacedDigit()
+            Text(value).font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
                 .minimumScaleFactor(0.7).lineLimit(1)
             Text(label).font(.cfFootnote).foregroundStyle(Color.inkSoft)
         }
@@ -199,8 +209,7 @@ struct DomainView: View {
                         Spacer()
                         Text(error.state == "to_review" ? "à revoir" : "ratée").font(.cfFootnote).foregroundStyle(Color.wrong)
                     }
-                    .padding(.vertical, 6)
-                    .overlay(alignment: .bottom) { Hairline() }
+                    .popCard(padding: 12, radius: Radius.s)
                 }
                 Button("Corriger mes erreurs") { playConfig = PlayConfig(mode: .errors) }
                     .buttonStyle(.textLink)

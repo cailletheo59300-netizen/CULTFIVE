@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 — design « Pop »
+- Nouvelle identité : fond clair lavande, violet électrique + jaune soleil, couleur vive et pictogramme par domaine, SF Pro Rounded gras, tout arrondi (cartes, pilules), boutons « jouet » qui s'enfoncent, rebonds, secousse sur une erreur, confettis. Nouvelle icône.
+- Léon redessiné (rond, grands yeux, joues roses) et animé : attrape la bonne réponse avec sa langue, grisaille sur une erreur, arc-en-ciel sur un sans-faute, queue qui s'enroule avec la série, salue à l'accueil avec une bulle.
+- Écrans refaits : question (voile de couleur du domaine, pastilles, progression en pilules), résultat du Daily (dégradé violet, score qui monte, célébrations), accueil (grande carte du jour), Jouer (cartes de modes, tuiles de domaines), domaine, profil (radar de culture), onboarding (ronde de domaines), barre d'onglets flottante, amis, ligues (podium).
+- Célébrations : trophée, erreur corrigée, niveau passé (Daily et parties).
+- Partage : modèles Violet / Soleil / Blanc ; nouvelles cartes « radar de culture » et « question du jour » (sans la réponse, depuis la revue).
+
 ## 0.4.0
 - Nouveaux formats de géographie : localiser une capitale sur la carte, monnaie, langue officielle, site UNESCO → pays, silhouette du pays (nouvel affichage dans l'app).
 - Anti-répétition : familles de questions (migration 0010), variantes de formulation. Banque : 2 716 questions.

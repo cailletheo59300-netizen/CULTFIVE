@@ -1,7 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Profil : un portrait, pas un tableau de bord. Léon, le pseudo, puis « Ce que tu sais » comme un sommaire.
+/// Profil : un portrait, pas un tableau de bord. Léon aux couleurs de ton meilleur domaine, le radar de culture,
+/// puis « Ce que tu sais » en cartes.
 struct ProfileView: View {
     @Environment(AppModel.self) private var app
     @State private var skills: [SkillSummary] = []
@@ -13,7 +14,7 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: Space.xl) {
+                VStack(alignment: .leading, spacing: Space.l) {
                     portrait
                     if app.isAnonymous { AccountNudge() }
                     numbers
@@ -56,15 +57,12 @@ struct ProfileView: View {
         VStack(alignment: .leading, spacing: Space.m) {
             HStack {
                 Spacer()
-                Button { showShare = true } label: { Image(systemName: "square.and.arrow.up") }
+                Button { showShare = true } label: { roundIcon("square.and.arrow.up") }
                     .accessibilityLabel("Partager mon profil")
-                Button { showSettings = true } label: { Image(systemName: "gearshape") }
+                Button { showSettings = true } label: { roundIcon("gearshape.fill") }
                     .accessibilityLabel("Réglages")
-                    .padding(.leading, Space.m)
             }
-            .font(.title3)
-            .foregroundStyle(Color.ink)
-            .padding(.top, Space.m)
+            .padding(.top, Space.s)
 
             HStack(alignment: .bottom, spacing: Space.m) {
                 VStack(alignment: .leading, spacing: Space.xs) {
@@ -72,51 +70,68 @@ struct ProfileView: View {
                     if let profile = app.profile {
                         let level = XPLevel(totalXP: profile.xpTotal)
                         Text("Niveau \(level.level) · \(profile.xpTotal) XP").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                        ProgressView(value: level.progress)
-                            .tint(Color.ink)
+                        SkillBar(level: Int(level.progress * 100), reliability: 1, color: .brand)
                             .frame(maxWidth: 180)
                             .accessibilityLabel("Progression vers le niveau \(level.level + 1)")
                     }
                 }
                 Spacer()
-                Leon(color: favoriteColor, pose: .rest).frame(width: 110)
+                Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
+                    .frame(width: 120)
             }
         }
+    }
+
+    private func roundIcon(_ symbol: String) -> some View {
+        Image(systemName: symbol)
+            .font(.system(.body, design: .rounded).weight(.bold))
+            .foregroundStyle(Color.ink)
+            .frame(width: 42, height: 42)
+            .background(Color.paperRaised, in: Circle())
     }
 
     /// La couleur de Léon suit ton domaine le plus fort.
     private var favoriteColor: Color {
-        guard let best = skills.filter({ $0.answered >= 5 }).max(by: { $0.level < $1.level }) else { return .chloro }
+        guard let best = skills.filter({ $0.answered >= 5 }).max(by: { $0.level < $1.level }) else { return .brand }
         return DomainPalette.color(best.domainId)
     }
 
     private var numbers: some View {
-        HStack(alignment: .top, spacing: 0) {
-            number("\(app.profile?.streak ?? 0)", "série", symbol: "flame.fill")
-            number("\(app.profile?.questionsAnswered ?? 0)", "réponses")
-            number("\(app.profile?.errorsCorrected ?? 0)", "erreurs corrigées")
-            number("\(app.profile?.seeds ?? 0)", Brand.currencyPlural, symbol: "leaf.fill")
+        LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
+            number("\(app.profile?.streak ?? 0)", "jours de série", symbol: "flame.fill", tint: Color(hex: 0xF76707))
+            number("\(app.profile?.questionsAnswered ?? 0)", "réponses", symbol: "checkmark.circle.fill", tint: .brand)
+            number("\(app.profile?.errorsCorrected ?? 0)", "erreurs corrigées", symbol: "checkmark.seal.fill", tint: .correct)
+            number("\(app.profile?.seeds ?? 0)", Brand.currencyPlural, symbol: "leaf.fill", tint: Color(hex: 0x37B24D))
         }
-        .padding(.vertical, Space.m)
-        .overlay(alignment: .top) { Hairline() }
-        .overlay(alignment: .bottom) { Hairline() }
     }
 
-    private func number(_ value: String, _ label: String, symbol: String? = nil) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
-            HStack(spacing: 3) {
-                if let symbol { Image(systemName: symbol).font(.caption) }
-                Text(value).font(.system(.title3, design: .serif).weight(.bold)).monospacedDigit()
+    private func number(_ value: String, _ label: String, symbol: String, tint: Color) -> some View {
+        HStack(spacing: 10) {
+            Image(systemName: symbol)
+                .font(.system(.callout, design: .rounded).weight(.bold))
+                .foregroundStyle(tint)
+                .frame(width: 36, height: 36)
+                .background(tint.opacity(0.14), in: Circle())
+            VStack(alignment: .leading, spacing: 0) {
+                Text(value).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
+                    .lineLimit(1).minimumScaleFactor(0.6)
+                Text(label).font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1).minimumScaleFactor(0.8)
             }
-            Text(label).font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(2)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .popCard(padding: 12)
         .accessibilityElement(children: .combine)
     }
 
     private var knowledge: some View {
         VStack(alignment: .leading, spacing: Space.s) {
             Text("Ce que tu sais").font(.cfHeadline)
+            if skills.contains(where: { $0.answered > 0 }) {
+                KnowledgeRadar(axes: skills.map { KnowledgeRadar.Axis(domainId: $0.domainId, level: $0.answered > 0 ? Double($0.level) : 0) },
+                               fill: favoriteColor)
+                    .frame(maxWidth: 300)
+                    .frame(maxWidth: .infinity)
+                    .popCard()
+            }
             // Les niveaux fiables (≥ 10 réponses) d'abord, puis par niveau.
             let played = skills.filter { $0.answered > 0 }.sorted {
                 ($0.answered >= 10 ? 1 : 0, $0.level) > ($1.answered >= 10 ? 1 : 0, $1.level)
@@ -131,14 +146,14 @@ struct ProfileView: View {
                         HStack(alignment: .firstTextBaseline) {
                             Text(skill.name).font(.cfTitle3).foregroundStyle(Color.ink)
                             Spacer()
-                            Text("\(skill.level)").font(.system(.title3, design: .serif).weight(.bold)).monospacedDigit()
+                            Text("\(skill.level)").font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
                                 .foregroundStyle(Color.ink)
                         }
                         SkillBar(level: skill.level, reliability: skill.reliability, color: DomainPalette.color(skill.domainId))
                         Text("\(skill.answered) réponses · fiabilité \(Reliability(skill.reliability).label)")
                             .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                     }
-                    .padding(.vertical, Space.s)
+                    .popCard(padding: 14)
                 }
                 .buttonStyle(.row)
             }
@@ -148,19 +163,19 @@ struct ProfileView: View {
     /// Les 5 dernières semaines du 5 du jour : un trait par jour joué.
     private var calendar: some View {
         VStack(alignment: .leading, spacing: Space.s) {
-            Text("Tes rendez-vous").labelCaps()
+            Text("Tes rendez-vous").font(.cfHeadline)
             let byDate = Dictionary(uniqueKeysWithValues: history.map { ($0.date, $0) })
             let days = (0..<35).reversed().compactMap { Calendar.current.date(byAdding: .day, value: -$0, to: Date()) }
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 7), spacing: 6) {
                 ForEach(days, id: \.self) { day in
                     let entry = byDate[isoDate(day)]
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
+                    RoundedRectangle(cornerRadius: 8, style: .continuous)
                         .fill(fill(for: entry))
                         .aspectRatio(1, contentMode: .fit)
                         .overlay {
                             if let score = entry?.score, entry?.status == "finished" {
-                                Text("\(score)").font(.system(.caption2, design: .serif).weight(.bold))
-                                    .foregroundStyle(score >= 4 ? Color.inkFixed : Color.paper)
+                                Text("\(score)").font(.system(.caption2, design: .rounded).weight(.bold))
+                                    .foregroundStyle(score >= 4 ? Color.inkFixed : .white)
                             }
                         }
                         .accessibilityLabel(entry?.score.map { "\(isoDate(day)) : \($0) sur 5" } ?? "\(isoDate(day)) : non joué")
@@ -171,7 +186,7 @@ struct ProfileView: View {
 
     private func fill(for entry: DailyHistoryEntry?) -> Color {
         guard let entry, entry.status == "finished", let score = entry.score else { return .hairline }
-        return score >= 4 ? .chloro : Color.ink.opacity(0.35 + Double(score) * 0.12)
+        return score >= 4 ? .sun : Color.brand.opacity(0.35 + Double(score) * 0.12)
     }
 
     private func isoDate(_ date: Date) -> String {
@@ -183,22 +198,25 @@ struct ProfileView: View {
 
     private var trophies: some View {
         VStack(alignment: .leading, spacing: Space.s) {
-            Text("Trophées").labelCaps()
+            Text("Trophées").font(.cfHeadline)
             let unlocked = achievements.filter { $0.unlockedAt != nil }
             Text("\(unlocked.count) sur \(achievements.count)").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             ForEach(achievements) { achievement in
                 HStack(spacing: Space.m) {
-                    Image(systemName: achievement.unlockedAt != nil ? "seal.fill" : "seal")
-                        .foregroundStyle(achievement.unlockedAt != nil ? Color.ink : Color.hairline)
-                        .font(.title3)
+                    Image(systemName: achievement.unlockedAt != nil ? "trophy.fill" : "lock.fill")
+                        .font(.system(.callout, design: .rounded).weight(.bold))
+                        .foregroundStyle(achievement.unlockedAt != nil ? Color.inkFixed : Color.inkSoft.opacity(0.5))
+                        .frame(width: 40, height: 40)
+                        .background(achievement.unlockedAt != nil ? Color.sun : Color.hairline, in: Circle())
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(achievement.name).font(.system(.body).weight(.semibold))
+                        Text(achievement.name).font(.system(.body, design: .rounded).weight(.semibold))
                             .foregroundStyle(achievement.unlockedAt != nil ? Color.ink : Color.inkSoft)
                         Text(achievement.description).font(.cfFootnote).foregroundStyle(Color.inkSoft)
                     }
                     Spacer()
                 }
-                .padding(.vertical, 6)
+                .popCard(padding: 12)
+                .opacity(achievement.unlockedAt != nil ? 1 : 0.7)
                 .accessibilityElement(children: .combine)
                 .accessibilityValue(achievement.unlockedAt != nil ? "débloqué" : "à débloquer")
             }

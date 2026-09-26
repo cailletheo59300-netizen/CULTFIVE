@@ -21,7 +21,7 @@ Une app iOS native de culture générale : on joue, on apprend de chaque répons
 | **Graines** | L'unique monnaie virtuelle. Cohérente avec « Cultive ce que tu sais ». |
 | **Série** | Streak du 5 du jour. |
 | **Joker de série** | Protecteur de série, max 2 en stock. |
-| **Léon** | La mascotte : un caméléon. Il prend la couleur du domaine — métaphore directe de l'adaptation. Rare : onboarding, résultats, états vides, trophées, invitations. |
+| **Léon** | La mascotte : un caméléon tout rond, animé. Il prend la couleur du domaine, attrape les bonnes réponses avec sa langue, grisaille sur une erreur, passe à l'arc-en-ciel sur un sans-faute ; sa queue s'enroule avec la série. Jamais pendant qu'on répond. |
 | **Ligue** | Classement privé entre amis sur une période (semaine / mois). |
 
 ## Domaines initiaux

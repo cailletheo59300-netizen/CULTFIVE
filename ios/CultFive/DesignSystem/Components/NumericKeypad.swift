@@ -7,12 +7,11 @@ struct NumericKeypad: View {
     var onSubmit: () -> Void
 
     private let decimalSeparator = Locale.current.decimalSeparator ?? ","
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 0), count: 3)
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: Space.s), count: 3)
 
     var body: some View {
-        VStack(spacing: Space.s) {
-            Hairline()
-            LazyVGrid(columns: columns, spacing: 0) {
+        VStack(spacing: Space.m) {
+            LazyVGrid(columns: columns, spacing: Space.s) {
                 ForEach(1...9, id: \.self) { digit in
                     key(Text("\(digit)"), label: "\(digit)") { entry.append(digit: digit) }
                 }
@@ -24,6 +23,7 @@ struct NumericKeypad: View {
                 key(Text("0"), label: "0") { entry.append(digit: 0) }
                 key(Image(systemName: "delete.left"), label: "Effacer") { entry.backspace() }
             }
+            .padding(.horizontal, Space.gutter)
             HStack(spacing: Space.s) {
                 if entry.allowNegative {
                     Button {
@@ -31,9 +31,10 @@ struct NumericKeypad: View {
                         Haptics.soft()
                     } label: {
                         Text(decimalSeparator)
-                            .font(.system(.title2, design: .serif))
+                            .font(.system(.title2, design: .rounded))
                             .foregroundStyle(Color.ink)
-                            .frame(width: 56, height: 56)
+                            .frame(width: 58, height: 58)
+                            .background(Color.paperRaised, in: Circle())
                     }
                     .buttonStyle(.row)
                     .accessibilityLabel("Virgule")
@@ -52,9 +53,11 @@ struct NumericKeypad: View {
             Haptics.soft()
         } label: {
             content
-                .font(.system(.title, design: .serif).weight(.regular))
+                .font(.system(.title2, design: .rounded).weight(.bold))
                 .foregroundStyle(Color.ink)
-                .frame(maxWidth: .infinity, minHeight: 58)
+                .frame(maxWidth: .infinity, minHeight: 54)
+                .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+                .shadow(color: Color(hex: 0x3A1FB8).opacity(0.06), radius: 4, y: 2)
         }
         .buttonStyle(.row)
         .accessibilityLabel(label)
@@ -69,8 +72,8 @@ struct NumericDisplay: View {
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: Space.s) {
             Text(entry.isEmpty ? "?" : entry.display(decimalSeparator: Locale.current.decimalSeparator ?? ","))
-                .numeral(size: 52, weight: .semibold)
-                .foregroundStyle(entry.isEmpty ? Color.inkSoft.opacity(0.4) : Color.ink)
+                .numeral(size: 56)
+                .foregroundStyle(entry.isEmpty ? Color.inkSoft.opacity(0.4) : Color.brand)
                 .contentTransition(.numericText())
                 .animation(Motion.press, value: entry)
             if let unit {

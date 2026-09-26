@@ -1,72 +1,76 @@
-# Design system — CULT FIVE
+# Design system — CULT FIVE (direction « Pop », 0.5.0)
 
 ## Intention
-Éditorial, chaud, tactile, mature. Un magazine de culture qui se touche. Beaucoup de papier, de l'encre, une seule couleur vive. Pas de cartes empilées, pas de dégradés, pas de glassmorphism, pas d'icônes « IA ».
+Joyeux, vif, tactile, qui donne envie en deux secondes de vidéo TikTok. Fond clair, couleurs franches par domaine,
+formes très arrondies, gros chiffres, petites animations qui rebondissent. Jamais criard sur les écrans de lecture :
+la couleur habille, le texte reste lisible. Pas de carrés, pas d'aplats gris ternes. (Remplace la direction « éditoriale papier/encre » de 0.1–0.4, jugée vieillotte : D-021.)
 
 ## Élément signature : le **trait de cinq** (tally mark)
-Le « 5 » de CULT FIVE est dessiné comme une marque de comptage : quatre traits verticaux barrés d'une diagonale.
-- Onglet central : le trait de cinq, sur pastille d'encre. Quand le Daily est disponible, la diagonale est en chlorophylle ; une fois terminé, les traits reflètent le résultat (traits pleins = bonnes réponses, trait court et estompé = raté (forme + couleur)).
-- Progression dans le Daily : chaque question remplit un trait.
-- Résultat et cartes de partage : le trait de cinq *est* le score.
-Composant : `TallyMark(results:, style:)`.
+Le « 5 » de CULT FIVE : quatre traits verticaux barrés d'une diagonale. C'est aussi l'icône de l'app (blanc et jaune sur dégradé violet).
+- Onglet central : bulle violette qui dépasse de la barre, trait de cinq blanc ; diagonale jaune soleil quand le Daily est disponible ; ensuite, les traits reflètent le résultat (trait plein = juste, trait court et estompé = raté : forme + couleur).
+- Carte du jour à l'accueil, résultat, cartes de partage : le trait de cinq *est* le score.
+Composant : `TallyMark(strokes:)` / `TallyMark(results:)`, `onInk: true` sur fond coloré.
 
 ## Couleurs (tokens, `DesignSystem/Tokens.swift`)
 | Token | Clair | Sombre | Usage |
 |---|---|---|---|
-| `paper` | #F5F1E8 | #14120F | fond principal |
-| `paperRaised` | #FFFDF8 | #1E1B17 | zones surélevées (rares) |
-| `ink` | #16140F | #F2EDE3 | texte, pastilles fortes |
-| `inkSoft` | #5E574C | #A39B8D | texte secondaire |
-| `hairline` | #E3DCCD | #2E2A24 | filets de séparation |
-| `chloro` | #C6F432 | #C6F432 | couleur de marque — **uniquement sur fond encre** ou comme aplat avec texte encre |
-| `correct` | #1E7A4C | #5BC48A | juste (+ icône ✓ + mot « Juste ») |
-| `wrong` | #B8382A | #F07A6A | raté (+ icône ✕ + mot « Raté ») |
+| `paper` | #F6F5FB | #0E0D16 | fond d'écran (blanc lavande) |
+| `paperRaised` | #FFFFFF | #1C1A2A | cartes |
+| `ink` | #1A1830 | #F4F3FA | texte |
+| `inkSoft` | #6E6B85 | #A3A0B8 | texte secondaire |
+| `hairline` | #E9E7F2 | #2C2940 | bordures légères |
+| `brand` | #6A4CFF | #8469FF | violet électrique : boutons principaux, onglets actifs |
+| `popGradient` | #7B5CFF → #3A1FB8 | idem | moments forts : carte du jour, résultat, onboarding, partage |
+| `sun` | #FFD23F | idem | score, surlignage sur violet — toujours avec texte foncé |
+| `correct` | #12B76A | #3DDC97 | juste |
+| `wrong` | #FF4D5E | #FF6B7A | raté |
+| `blush` | #FF8FB1 | idem | joues et langue de Léon, confettis |
 
-Couleurs de domaine (aplats sobres, jamais en dégradé) — la couleur n'envahit l'écran qu'**à l'intérieur** d'un domaine (entraînement, stats) :
-Calcul #2F4BD8 · Français #8E2A43 · Géographie #C8612F · Histoire #B8872B · Sciences #1F6F78 · Logique #4A4E57 · Arts & culture #C0567E · Sport #3B8B3F · Cinéma #5B3A6E · Musique #34357A · Technologie #3F6E9A · Nature #6C7F2E.
+**Domaines** (`DomainPalette`) : une couleur vive par domaine + `onColor` (texte blanc, sauf Musique en jaune → texte foncé) + un pictogramme SF Symbols (`symbol`).
+Calcul #2F6BFF · Français #F0588F · Géographie #0CA678 · Histoire #F76707 · Sciences #1098AD · Logique #845EF7 · Arts #D6336C · Sport #E5383B · Cinéma #5F3DC4 · Musique #FCC419 · Tech #1C7ED6 · Nature #37B24D.
+En question, un voile de la couleur du domaine descend du haut de l'écran ; les réponses, la jauge de progression et le bouton « Continuer » prennent la couleur du domaine.
 
-Règle : l'information n'est jamais portée par la couleur seule (icône + mot).
+## Typographie (`Typography.swift`)
+SF Pro **Rounded** partout, gras à très gras. Tout en text styles (Dynamic Type).
+| Rôle | Style |
+|---|---|
+| `cfDisplay` | largeTitle, heavy |
+| `cfQuestion` / `cfHeadline` | title2, bold |
+| `cfTitle3` | title3, bold |
+| `cfReading` | body, medium (explications) |
+| `cfLabel` (`labelCaps`) | caption, heavy, capitales |
+| `numeral(size:)` | arrondi heavy, chiffres à chasse fixe, 40–150 pt |
 
-## Typographie
-- **Display / questions** : New York (`Font.system(.., design: .serif)`) — la voix éditoriale.
-- **Interface** : SF Pro (`.default`).
-- **Chiffres** : SF Pro `monospacedDigit()` ; scores géants en New York Bold.
-- **Étiquettes** : SF Pro semibold, petites capitales simulées (`.uppercased()` + tracking 1,2).
-Tous les styles passent par `Typography.swift` et s'appuient sur les text styles (Dynamic Type).
+## Formes et relief
+- `Radius` : s 14 · m 20 · l 28. Tout est `continuous`. Aucune forme carrée.
+- `popCard()` : carte blanche arrondie, ombre douce teintée violet. Remplace les listes à filets.
+- Boutons (`InkButtonStyle`) : pilule pleine, texte heavy centré, ombre colorée, petit liseré plus sombre dessous qui « s'écrase » à l'appui (effet jouet). Variantes : `.ink` (violet), `.sun` (jaune, sur violet), `.inverted` (blanc), `.domain(id)`.
+- `TextLinkStyle` : texte gras coloré, sans soulignement.
+- `DomainTag` : pilule colorée du domaine, texte blanc.
+- `ProgressPills` : progression d'une série (la pilule en cours s'allonge).
 
-| Style | Base | Taille (Large) |
-|---|---|---|
-| `display` | serif bold | 44 (largeTitle scaled) |
-| `question` | serif medium | 28 (title) |
-| `headline` | serif semibold | 22 |
-| `body` | sans regular | 17 |
-| `label` | sans semibold, caps, tracking | 12 |
-| `numeral` | serif bold, mono digits | 64–160 |
+## Mouvement (`Motion`)
+`press` (ressort court), `standard`, `moment`, `bounce` (rebond franc). Bonne réponse : la pastille passe au vert et grossit un instant ; mauvaise : corail + secousse (`Shake`). Score du résultat qui monte cran par cran. Confettis (`Confetti`) une seule salve : sans-faute, trophée, niveau passé. Tout se réduit à un fondu avec « Réduire les animations ».
 
-## Espacements & formes
-Grille de 4 : `xs 4 · s 8 · m 16 · l 24 · xl 40 · xxl 64`. Marges latérales 20.
-Rayons : 6 (boutons de réponse), 14 (sheets internes), 999 (pastilles). Pas d'ombres portées sauf l'onglet central (ombre douce unique).
+## Léon (mascotte, `Leon.swift`)
+Caméléon tout rond, grands yeux brillants, joues roses, queue en spirale. Dessiné en code (`Canvas` + `TimelineView`), aucun asset.
+- Poses : `rest`, `curious`, `wave` (la queue s'agite), `tongue` (attrape la bonne réponse), `sad` (gris, paupière tombante), `proud` (yeux plissés, étoiles) ; `rainbow` sur un sans-faute.
+- `curl` : la queue s'enroule avec la série de jours.
+- Respiration, clignements ; `animated: false` pour les rendus d'image (partage).
+- **Jamais pendant qu'on répond.** Il apparaît après la réponse (panneau d'explication), à l'accueil (`LeonSays` + bulle), au résultat, dans le bilan, l'onboarding, le profil, les cartes de partage et les états vides.
 
-## Composants
-- `AnswerRow` : ligne pleine largeur, lettre-clé (A B C D) en New York, filet en dessous ; pressé = aplat encre, texte papier ; résultat = icône + mot.
-- `NumericKeypad` : pavé interne 3×4, touches sans bordure sur papier, retour haptique léger, virgule locale.
-- `InkButton` : bouton primaire = texte + flèche sur aplat encre, pas de CTA géant arrondi.
-- `TextLink` : action secondaire soulignée.
-- `DomainTag` : pastille de couleur + libellé en capitales.
-- `SkillBar` : barre fine (2 pt) + chiffre ; zone d'incertitude en hachures claires.
-- `TallyMark`.
-- `Léon` (mascotte) : caméléon vectoriel dessiné en `Shape` SwiftUI, 3 poses (repos, curieux, fier). Prend la couleur du domaine. Apparitions rares.
+## Écrans
+- **Accueil** : date + pastilles série/graines ; Léon qui parle ; grande carte « 5 du jour » en dégradé violet (trait de cinq, bouton soleil) ; cartes série / erreurs / terrain à conquérir / ligue.
+- **Question** : pastille domaine + pilules de progression ; énoncé gros et gras ; réponses en pastilles blanches (lettre dans une bulle colorée) ; Vrai/Faux en deux grandes tuiles ; silhouettes de pays dans une carte blanche ; explication en carte avec Léon.
+- **Résultat du Daily** : plein écran dégradé violet, score géant jaune qui monte, Léon (fier / salue / dépité ; arc-en-ciel sur 5/5), chiffres en cartes translucides, célébrations, bouton « Partager » soleil.
+- **Jouer** : 4 modes en cartes dégradées 2×2, domaines en tuiles blanches (pictogramme coloré, niveau, jauge).
+- **Domaine** : bandeau couleur du domaine à coins arrondis, grand pictogramme en filigrane.
+- **Profil** : Léon aux couleurs du meilleur domaine, 4 chiffres en cartes, **radar de culture** (`KnowledgeRadar`), domaines en cartes, calendrier, trophées.
+- **Onboarding** : premier écran violet, Léon qui salue au centre d'une ronde de domaines.
+- **Barre d'onglets** : capsule blanche flottante, icônes qui rebondissent, bulle centrale « 5 du jour ».
 
-## Mouvement & haptique
-- Durées : 0,18 s (press), 0,28 s (transition), 0,6 s max (moment résultat). Ressorts amortis, jamais de rebond cartoon.
-- `accessibilityReduceMotion` → fondus uniquement.
-- Haptique : `.selection` au choix, `.success` / `.error` au verdict, `.impact(.soft)` au pavé.
+## Partage (9:16, 1080×1920)
+Trois modèles : Violet, Soleil, Blanc. Trois cartes : résultat du Daily, profil (radar de culture), **question du jour** (sans la réponse, depuis la revue : « Défier mes amis »).
 
-## Compositions par écran (chacun a sa forme)
-- **Accueil / 5 du jour** : papier ; salut en serif ; le trait de cinq en grand, décentré à gauche ; « Ton rendez-vous est prêt. » ; une seule action. En dessous, une colonne éditoriale (pas de cartes) : série, erreurs à revoir, ligue — séparées par des filets.
-- **Question** : concentration. Rien d'autre que catégorie (petite), progression (trait), question (grande), réponses.
-- **Explication** : bande de verdict pleine largeur (icône + mot), bonne réponse en gras, « Pourquoi ? », « À retenir » en marge avec filet vertical de la couleur du domaine.
-- **Résultat** : plein écran encre. Score géant en chlorophylle, trait de cinq, TOP %, temps, série. XP/graines en ligne discrète. Partager / Revoir / Continuer.
-- **Jouer** : exploration — liste typographique des domaines (grands titres serif colorés), pas de grille de tuiles.
-- **Profil** : portrait — Léon, pseudo, puis « Ce que tu sais » : barres de niveau par domaine façon sommaire de magazine.
-- **Amis** : conversation — liste de personnes avec leur trait de cinq du jour.
+## Accessibilité
+Contraste : texte blanc sur les couleurs de domaine (Musique en texte foncé). Juste/raté jamais par la couleur seule (icône ✓/✗, forme du trait). Cibles ≥ 44 pt. Dynamic Type sur tous les textes, chiffres géants plafonnés à ×1,4. Léon et confettis masqués à VoiceOver ou décrits sobrement.

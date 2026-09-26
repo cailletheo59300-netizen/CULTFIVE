@@ -33,20 +33,23 @@ struct ChoiceAnswerView: View {
     let options: [Choice]
     let phase: AnswerPhase
     var removed: Set<String> = []
+    var accent: Color = .brand
     let onSubmit: (GivenAnswer) -> Void
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 10) {
             ForEach(Array(options.enumerated()), id: \.element.id) { index, option in
                 AnswerRow(key: ["A", "B", "C", "D", "E", "F"][min(index, 5)],
                           text: option.text ?? "",
                           state: state(for: option),
+                          accent: accent,
                           isDisabled: !phase.isAnswering || removed.contains(option.id)) {
                     onSubmit(.option(option.id))
                 }
                 .opacity(removed.contains(option.id) ? 0.25 : 1)
             }
         }
+        .padding(.horizontal, Space.gutter)
     }
 
     private func state(for option: Choice) -> AnswerRow.RowState {
@@ -61,73 +64,116 @@ struct ChoiceAnswerView: View {
     }
 }
 
-/// Ligne de réponse éditoriale : lettre-clé en serif, filet dessous. Pressée = aplat encre.
+/// Réponse en pastille : lettre dans une bulle colorée, carte blanche arrondie.
+/// Choisie = aplat couleur ; juste = vert qui rebondit ; fausse = corail qui secoue.
 struct AnswerRow: View {
     enum RowState { case idle, selected, correct, wrong, dimmed }
 
     let key: String
     let text: String
     let state: RowState
+    var accent: Color = .brand
     var isDisabled = false
     let action: () -> Void
+
+    @State private var shakes: CGFloat = 0
+    @State private var pop = false
 
     var body: some View {
         Button {
             Haptics.selection()
             action()
         } label: {
-            HStack(alignment: .firstTextBaseline, spacing: Space.m) {
-                Text(key)
-                    .font(.system(.title3, design: .serif).weight(.semibold))
-                    .foregroundStyle(keyColor)
-                    .frame(width: 22, alignment: .leading)
+            HStack(alignment: .center, spacing: 14) {
+                ZStack {
+                    Circle().fill(keyFill)
+                    if state == .correct || state == .wrong {
+                        Image(systemName: state == .correct ? "checkmark" : "xmark")
+                            .font(.system(.callout, design: .rounded).weight(.black))
+                            .transition(.scale.combined(with: .opacity))
+                    } else {
+                        Text(key).font(.system(.callout, design: .rounded).weight(.heavy))
+                    }
+                }
+                .foregroundStyle(keyText)
+                .frame(width: 34, height: 34)
                 Text(text)
-                    .font(.system(.title3))
+                    .font(.system(.body, design: .rounded).weight(.bold))
                     .foregroundStyle(textColor)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                verdictMark
             }
-            .padding(.vertical, 18)
-            .padding(.horizontal, Space.gutter)
-            .background(background)
-            .overlay(alignment: .bottom) { Hairline() }
+            .padding(.vertical, 14)
+            .padding(.horizontal, 14)
+            .frame(minHeight: 62)
+            .background(background, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(border, lineWidth: 2))
+            .shadow(color: shadow, radius: 10, y: 5)
         }
         .buttonStyle(AnswerPressStyle())
         .disabled(isDisabled)
-        .accessibilityLabel(accessibilityText)
-    }
-
-    @ViewBuilder private var verdictMark: some View {
-        switch state {
-        case .correct:
-            Label("Juste", systemImage: "checkmark").labelStyle(.iconOnly).foregroundStyle(Color.correct).font(.body.weight(.bold))
-        case .wrong:
-            Label("Raté", systemImage: "xmark").labelStyle(.iconOnly).foregroundStyle(Color.wrong).font(.body.weight(.bold))
-        default:
-            EmptyView()
+        .scaleEffect(pop ? 1.04 : 1)
+        .modifier(Shake(animatableData: shakes))
+        .opacity(state == .dimmed ? 0.45 : 1)
+        .animation(Motion.bounce, value: state)
+        .onChange(of: state) { _, new in
+            switch new {
+            case .correct:
+                withAnimation(Motion.bounce) { pop = true }
+                withAnimation(Motion.bounce.delay(0.18)) { pop = false }
+            case .wrong:
+                withAnimation(.linear(duration: 0.4)) { shakes += 1 }
+            default: break
+            }
         }
+        .accessibilityLabel(accessibilityText)
     }
 
     private var background: Color {
         switch state {
-        case .selected: return .ink
-        case .correct: return Color.correct.opacity(0.1)
-        case .wrong: return Color.wrong.opacity(0.08)
+        case .selected: return accent
+        case .correct: return .correct
+        case .wrong: return .wrong
+        default: return .paperRaised
+        }
+    }
+
+    private var border: Color {
+        switch state {
+        case .idle, .dimmed: return .hairline
         default: return .clear
+        }
+    }
+
+    private var shadow: Color {
+        switch state {
+        case .correct: return Color.correct.opacity(0.35)
+        case .wrong: return Color.wrong.opacity(0.3)
+        case .selected: return accent.opacity(0.3)
+        default: return Color(hex: 0x3A1FB8).opacity(0.05)
+        }
+    }
+
+    private var keyFill: Color {
+        switch state {
+        case .idle, .dimmed: return accent.opacity(0.14)
+        default: return .white.opacity(0.25)
+        }
+    }
+
+    private var keyText: Color {
+        switch state {
+        case .idle, .dimmed: return accent
+        default: return .white
         }
     }
 
     private var textColor: Color {
         switch state {
-        case .selected: return .paper
+        case .selected, .correct, .wrong: return .white
         case .dimmed: return .inkSoft
-        default: return .ink
+        case .idle: return .ink
         }
-    }
-
-    private var keyColor: Color {
-        state == .selected ? .paper : .inkSoft
     }
 
     private var accessibilityText: String {
@@ -142,7 +188,7 @@ struct AnswerRow: View {
 private struct AnswerPressStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .background(Color.ink.opacity(configuration.isPressed ? 0.08 : 0))
+            .scaleEffect(configuration.isPressed ? 0.96 : 1)
             .animation(Motion.press, value: configuration.isPressed)
     }
 }
@@ -154,53 +200,42 @@ struct TrueFalseAnswerView: View {
     let onSubmit: (GivenAnswer) -> Void
 
     var body: some View {
-        HStack(spacing: Space.s) {
-            choice(true, title: "Vrai")
-            choice(false, title: "Faux")
+        HStack(spacing: 12) {
+            choice(true, title: "Vrai", symbol: "hand.thumbsup.fill", tint: .correct)
+            choice(false, title: "Faux", symbol: "hand.thumbsdown.fill", tint: .wrong)
         }
         .padding(.horizontal, Space.gutter)
     }
 
-    private func choice(_ value: Bool, title: String) -> some View {
+    private func choice(_ value: Bool, title: String, symbol: String, tint: Color) -> some View {
         let chosen = phase.given == .bool(value)
         let correct = phase.revealed?.reveal.answer.value?.boolValue
         let isRight = correct == value
+        let revealed = phase.revealed != nil
+        let filled = revealed ? (isRight || chosen) : chosen
+        let fill: Color = revealed ? (isRight ? .correct : (chosen ? .wrong : .paperRaised)) : (chosen ? tint : .paperRaised)
         return Button {
             Haptics.selection()
             onSubmit(.bool(value))
         } label: {
             VStack(spacing: Space.s) {
-                Text(title).font(.system(.title, design: .serif).weight(.semibold))
-                if phase.revealed != nil && (isRight || chosen) {
-                    Image(systemName: isRight ? "checkmark" : "xmark").font(.body.weight(.bold))
-                }
+                Image(systemName: revealed && (isRight || chosen) ? (isRight ? "checkmark" : "xmark") : symbol)
+                    .font(.system(size: 30, weight: .black, design: .rounded))
+                    .foregroundStyle(filled ? .white : tint)
+                Text(title).font(.system(.title2, design: .rounded).weight(.heavy))
+                    .foregroundStyle(filled ? .white : Color.ink)
             }
-            .foregroundStyle(foreground(chosen: chosen, isRight: isRight))
-            .frame(maxWidth: .infinity, minHeight: 120)
-            .background(fill(chosen: chosen, isRight: isRight), in: RoundedRectangle(cornerRadius: 6, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 6, style: .continuous).stroke(Color.ink.opacity(0.9), lineWidth: 1.5))
+            .frame(maxWidth: .infinity, minHeight: 130)
+            .background(fill, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Radius.l, style: .continuous)
+                .strokeBorder(filled ? Color.clear : tint.opacity(0.35), lineWidth: 2.5))
+            .shadow(color: filled ? fill.opacity(0.35) : .clear, radius: 12, y: 6)
+            .opacity(revealed && !isRight && !chosen ? 0.45 : 1)
         }
         .buttonStyle(AnswerPressStyle())
         .disabled(!phase.isAnswering)
+        .animation(Motion.bounce, value: phase)
         .accessibilityLabel(title)
-    }
-
-    private func fill(chosen: Bool, isRight: Bool) -> Color {
-        if phase.revealed != nil {
-            if isRight { return Color.correct.opacity(0.12) }
-            if chosen { return Color.wrong.opacity(0.1) }
-            return .clear
-        }
-        return chosen ? .ink : .clear
-    }
-
-    private func foreground(chosen: Bool, isRight: Bool) -> Color {
-        if phase.revealed != nil {
-            if isRight { return .correct }
-            if chosen { return .wrong }
-            return .inkSoft
-        }
-        return chosen ? .paper : .ink
     }
 }
 
@@ -214,7 +249,7 @@ struct OrderingAnswerView: View {
     @State private var order: [String] = []
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 10) {
             ForEach(items) { item in
                 let rank = order.firstIndex(of: item.id).map { $0 + 1 }
                 Button {
@@ -227,25 +262,31 @@ struct OrderingAnswerView: View {
                 } label: {
                     HStack(spacing: Space.m) {
                         ZStack {
-                            Circle().stroke(Color.ink, lineWidth: 1.5)
+                            Circle().fill(rank == nil ? Color.brand.opacity(0.12) : Color.brand)
                             if let rank {
-                                Circle().fill(Color.ink)
-                                Text("\(rank)").font(.system(.callout, design: .serif).weight(.bold)).foregroundStyle(Color.paper)
+                                Text("\(rank)").font(.system(.callout, design: .rounded).weight(.heavy)).foregroundStyle(.white)
+                                    .transition(.scale)
                             }
                         }
-                        .frame(width: 30, height: 30)
-                        Text(item.text ?? "").font(.system(.body)).foregroundStyle(Color.ink)
+                        .frame(width: 34, height: 34)
+                        Text(item.text ?? "").font(.system(.body, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         if let correctRank = correctRank(of: item.id) {
                             Text("\(correctRank)")
-                                .font(.system(.callout, design: .serif).weight(.bold))
-                                .foregroundStyle(correctRank == rank ? Color.correct : Color.wrong)
+                                .font(.system(.callout, design: .rounded).weight(.heavy))
+                                .foregroundStyle(.white)
+                                .frame(width: 30, height: 30)
+                                .background(correctRank == rank ? Color.correct : Color.wrong, in: Circle())
                                 .accessibilityLabel("Position correcte : \(correctRank)")
                         }
                     }
-                    .padding(.vertical, 14)
+                    .padding(14)
+                    .frame(minHeight: 62)
+                    .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous)
+                        .strokeBorder(rank == nil ? Color.hairline : Color.brand.opacity(0.5), lineWidth: 2))
                     .padding(.horizontal, Space.gutter)
-                    .overlay(alignment: .bottom) { Hairline() }
+                    .animation(Motion.bounce, value: rank)
                 }
                 .buttonStyle(AnswerPressStyle())
                 .disabled(!phase.isAnswering)
@@ -345,6 +386,11 @@ struct PairsAnswerView: View {
         return index + 1
     }
 
+    /// Une couleur par paire formée : on voit d'un coup d'œil qui va avec qui.
+    private func pairColor(_ index: Int) -> Color {
+        [Color.brand, Color(hex: 0xF76707), Color(hex: 0x0CA678), Color(hex: 0xF0588F), Color(hex: 0x1C7ED6), Color(hex: 0x845EF7)][(index - 1) % 6]
+    }
+
     private func cell(_ text: String, badge: Int?, highlighted: Bool, action: @escaping () -> Void) -> some View {
         Button {
             Haptics.selection()
@@ -353,20 +399,23 @@ struct PairsAnswerView: View {
             HStack(spacing: 6) {
                 if let badge {
                     Text("\(badge)")
-                        .font(.system(.caption, design: .serif).weight(.bold))
-                        .foregroundStyle(Color.paper)
-                        .frame(width: 20, height: 20)
-                        .background(Color.ink, in: Circle())
+                        .font(.system(.caption, design: .rounded).weight(.heavy))
+                        .foregroundStyle(.white)
+                        .frame(width: 22, height: 22)
+                        .background(pairColor(badge), in: Circle())
+                        .transition(.scale)
                 }
-                Text(text).font(.system(.callout)).foregroundStyle(Color.ink)
+                Text(text).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(12)
             .frame(maxWidth: .infinity, minHeight: 52)
-            .background(highlighted ? Color.chloro.opacity(0.55) : Color.paperRaised,
-                        in: RoundedRectangle(cornerRadius: 6, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 6, style: .continuous).stroke(Color.hairline, lineWidth: 1))
+            .background(highlighted ? Color.sun.opacity(0.6) : Color.paperRaised,
+                        in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Radius.s, style: .continuous)
+                .strokeBorder(badge.map(pairColor) ?? Color.hairline, lineWidth: 2))
+            .animation(Motion.bounce, value: badge)
         }
         .buttonStyle(AnswerPressStyle())
         .disabled(!phase.isAnswering)
@@ -395,21 +444,23 @@ struct MapPickAnswerView: View {
         // Imagerie sans libellés : la carte ne donne pas la réponse.
         .mapStyle(.imagery(elevation: .flat))
         .frame(height: 340)
-        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+        .shadow(color: Color(hex: 0x3A1FB8).opacity(0.12), radius: 12, y: 6)
         .padding(.horizontal, Space.gutter)
     }
 
     private func pin(_ option: Choice) -> some View {
         let chosen = phase.given == .option(option.id)
         let isAnswer = phase.revealed?.reveal.answer.optionId == option.id
-        let color: Color = phase.revealed != nil ? (isAnswer ? .correct : (chosen ? .wrong : .inkFixed)) : (chosen ? .chloro : .paperFixed)
+        let color: Color = phase.revealed != nil ? (isAnswer ? .correct : (chosen ? .wrong : .inkFixed)) : (chosen ? .sun : .paperFixed)
         return Button {
             Haptics.selection()
             onSubmit(.option(option.id))
         } label: {
             ZStack {
                 Circle().fill(color).frame(width: 28, height: 28)
-                Circle().stroke(Color.inkFixed, lineWidth: 2).frame(width: 28, height: 28)
+                Circle().stroke(Color.white, lineWidth: 3).frame(width: 28, height: 28)
+                    .shadow(color: .black.opacity(0.3), radius: 3, y: 1)
                 if phase.revealed != nil && (isAnswer || chosen) {
                     Image(systemName: isAnswer ? "checkmark" : "xmark")
                         .font(.caption.weight(.heavy))

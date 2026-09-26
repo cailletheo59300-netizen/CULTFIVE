@@ -42,24 +42,41 @@ struct OnboardingFlow: View {
 
     // MARK: 1. Accueil
 
+    /// Premier écran : fond violet, Léon qui salue au milieu d'une ronde de domaines. Fait pour donner envie en 2 secondes.
     private var welcome: some View {
-        VStack(alignment: .leading, spacing: Space.l) {
-            Spacer()
-            Leon(color: .chloro, pose: .curious).frame(width: 190)
-            Text(Brand.name)
-                .font(.system(size: 44, weight: .black, design: .serif))
-                .tracking(2)
-            Text(Brand.onboardingHook)
-                .font(.system(.title, design: .serif).italic())
-                .foregroundStyle(Color.inkSoft)
-            Spacer()
-            Button("Commencer") {
-                step = .questions
-                Task { await loadPack() }
+        ZStack {
+            Color.popGradient.ignoresSafeArea()
+            VStack(spacing: Space.l) {
+                Spacer()
+                ZStack {
+                    FloatingDomains()
+                    Leon(color: .sun, pose: .wave, curl: 0.7).frame(width: 190)
+                }
+                .frame(height: 280)
+                VStack(spacing: Space.s) {
+                    Text(Brand.name)
+                        .font(.system(size: 48, weight: .black, design: .rounded))
+                        .foregroundStyle(.white)
+                    Text(Brand.onboardingHook)
+                        .font(.system(.title3, design: .rounded).weight(.bold))
+                        .foregroundStyle(Color.sun)
+                        .multilineTextAlignment(.center)
+                    Text("5 questions par jour. Tout le monde les mêmes.\nQui en sait le plus ?")
+                        .font(.cfCallout)
+                        .foregroundStyle(.white.opacity(0.8))
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 4)
+                }
+                Spacer()
+                Button("C'est parti !") {
+                    step = .questions
+                    Task { await loadPack() }
+                }
+                .buttonStyle(.sun)
             }
-            .buttonStyle(.ink)
+            .padding(Space.gutter)
         }
-        .padding(Space.gutter)
+        .preferredColorScheme(.dark)
     }
 
     // MARK: 2–3. Trois vraies questions
@@ -140,7 +157,7 @@ struct OnboardingFlow: View {
             Text("Quel niveau de défi ?").font(.cfDisplay).padding(.top, Space.xl)
             Text("Un point de départ. Ensuite, \(Brand.name) s'ajuste à tes réponses.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft)
-            VStack(spacing: 0) {
+            VStack(spacing: 10) {
                 levelRow("discovery", "Découverte", "Des questions accessibles pour commencer.")
                 levelRow("balanced", "Équilibre", "Un peu de tout, ni trop simple ni trop dur.")
                 levelRow("challenge", "Challenge", "Tu aimes être poussé.")
@@ -158,17 +175,19 @@ struct OnboardingFlow: View {
             level = id
         } label: {
             HStack(spacing: Space.m) {
-                Image(systemName: level == id ? "largecircle.fill.circle" : "circle")
-                    .font(.title3)
-                    .foregroundStyle(Color.ink)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(title).font(.cfTitle3).foregroundStyle(Color.ink)
-                    Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    Text(title).font(.cfTitle3).foregroundStyle(level == id ? .white : Color.ink)
+                    Text(detail).font(.cfFootnote).foregroundStyle(level == id ? .white.opacity(0.85) : Color.inkSoft)
                 }
                 Spacer()
+                Image(systemName: level == id ? "checkmark.circle.fill" : "circle")
+                    .font(.title2.weight(.bold))
+                    .foregroundStyle(level == id ? .white : Color.hairline)
             }
-            .padding(.vertical, 14)
-            .overlay(alignment: .bottom) { Hairline() }
+            .padding(Space.m)
+            .background(level == id ? Color.brand : Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+            .shadow(color: level == id ? Color.brand.opacity(0.3) : .clear, radius: 10, y: 5)
+            .animation(Motion.bounce, value: level)
         }
         .buttonStyle(.row)
         .accessibilityAddTraits(level == id ? .isSelected : [])
@@ -189,17 +208,20 @@ struct OnboardingFlow: View {
                         if selected { interests.remove(domain.id) } else { interests.insert(domain.id) }
                     } label: {
                         HStack(spacing: 6) {
-                            Circle().fill(DomainPalette.color(domain.id)).frame(width: 8, height: 8)
+                            Image(systemName: selected ? "checkmark" : DomainPalette.symbol(domain.id))
+                                .foregroundStyle(selected ? DomainPalette.onColor(domain.id) : DomainPalette.color(domain.id))
                             Text(domain.name)
                         }
-                        .font(.system(.callout).weight(.medium))
-                        .padding(.horizontal, 14)
-                        .frame(minHeight: 40)
-                        .foregroundStyle(selected ? Color.paper : Color.ink)
-                        .background(selected ? Color.ink : Color.clear, in: Capsule())
-                        .overlay(Capsule().stroke(Color.ink.opacity(selected ? 0 : 0.25), lineWidth: 1))
+                        .font(.system(.callout, design: .rounded).weight(.heavy))
+                        .padding(.horizontal, 16)
+                        .frame(minHeight: 46)
+                        .foregroundStyle(selected ? DomainPalette.onColor(domain.id) : Color.ink)
+                        .background(selected ? DomainPalette.color(domain.id) : Color.paperRaised, in: Capsule())
+                        .shadow(color: selected ? DomainPalette.color(domain.id).opacity(0.35) : .clear, radius: 8, y: 4)
+                        .scaleEffect(selected ? 1.04 : 1)
+                        .animation(Motion.bounce, value: selected)
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(.row)
                     .accessibilityAddTraits(selected ? .isSelected : [])
                 }
             }
@@ -237,7 +259,7 @@ struct OnboardingFlow: View {
     private var accountStep: some View {
         VStack(alignment: .leading, spacing: Space.l) {
             Spacer()
-            Leon(color: .chloro, pose: .proud).frame(width: 150)
+            Leon(color: .brand, pose: .proud).frame(width: 150)
             Text("Garde ta progression.").font(.cfDisplay)
             Text("Crée ton compte en un geste pour retrouver ta série et tes amis partout. Tu peux aussi le faire plus tard.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft)
@@ -282,16 +304,19 @@ private struct HandleStep: View {
             Text("Ton pseudo").font(.cfDisplay).padding(.top, Space.xl)
             Text("C'est ainsi que tes amis te verront dans leurs ligues.").font(.cfCallout).foregroundStyle(Color.inkSoft)
             TextField("pseudo", text: $handle)
-                .font(.system(.title, design: .serif))
+                .font(.system(.title2, design: .rounded).weight(.bold))
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
-                .padding(.vertical, Space.s)
-                .overlay(alignment: .bottom) { Hairline(color: .ink) }
+                .padding(.horizontal, Space.m)
+                .frame(minHeight: 60)
+                .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous)
+                    .strokeBorder(status == nil ? Color.hairline : (available ? Color.correct : Color.wrong), lineWidth: 2))
             if let status {
                 Text(status).font(.cfFootnote).foregroundStyle(available ? Color.correct : Color.wrong)
             }
             Spacer()
-            Button("C'est parti") { save() }
+            Button("Valider mon pseudo") { save() }
                 .buttonStyle(.ink)
                 .disabled(busy || !available || handle.count < 3)
         }
@@ -323,6 +348,41 @@ private struct HandleStep: View {
             busy = false
             onDone()
         }
+    }
+}
+
+/// Pastilles de domaines qui flottent autour de Léon sur l'écran d'accueil.
+private struct FloatingDomains: View {
+    private let domains = ["geography", "history", "science", "arts", "sport", "cinema", "music", "french"]
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var body: some View {
+        TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion)) { timeline in
+            let t = timeline.date.timeIntervalSinceReferenceDate
+            GeometryReader { proxy in
+                ForEach(Array(domains.enumerated()), id: \.offset) { index, id in
+                    Image(systemName: DomainPalette.symbol(id))
+                        .font(.system(size: 17, weight: .bold))
+                        .foregroundStyle(DomainPalette.onColor(id))
+                        .frame(width: 44, height: 44)
+                        .background(DomainPalette.color(id), in: Circle())
+                        .shadow(color: .black.opacity(0.2), radius: 6, y: 3)
+                        .position(position(index: index, time: t, size: proxy.size))
+                }
+            }
+        }
+        .accessibilityHidden(true)
+    }
+
+    /// Ronde elliptique qui tourne lentement, chaque pastille flottant un peu.
+    private func position(index: Int, time: Double, size: CGSize) -> CGPoint {
+        let turning = reduceMotion ? 0 : time * 0.12
+        let angle = Double(index) / Double(domains.count) * 2 * Double.pi + turning
+        let radiusX = min(Double(size.width) / 2 - 34, 150)
+        let radiusY = Double(size.height) / 2 - 22
+        let bob = reduceMotion ? 0 : sin(time * 2 + Double(index)) * 4
+        return CGPoint(x: Double(size.width) / 2 + radiusX * cos(angle),
+                       y: Double(size.height) / 2 + radiusY * sin(angle) + bob)
     }
 }
 

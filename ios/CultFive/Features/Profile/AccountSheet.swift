@@ -24,7 +24,7 @@ struct AccountSheet: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     Text("Ton compte").font(.cfDisplay)
                     Text("Garde ta progression, ta série et tes amis sur tous tes appareils.")
-                        .font(.cfBodySerif).foregroundStyle(Color.inkSoft)
+                        .font(.cfReading).foregroundStyle(Color.inkSoft)
 
                     SignInWithAppleButton(.continue) { request in
                         nonce = Nonce.random()
@@ -35,7 +35,7 @@ struct AccountSheet: View {
                     }
                     .signInWithAppleButtonStyle(.black)
                     .frame(height: 54)
-                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
 
                     HStack {
                         Hairline()

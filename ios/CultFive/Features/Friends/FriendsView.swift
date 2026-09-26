@@ -22,7 +22,7 @@ struct FriendsView: View {
                         Text("Amis").font(.cfDisplay)
                         Spacer()
                         Button { showSearch = true } label: {
-                            Label("Ajouter", systemImage: "plus").font(.system(.callout).weight(.semibold))
+                            Label("Ajouter", systemImage: "plus").font(.system(.callout, design: .rounded).weight(.semibold))
                         }
                         .buttonStyle(.textLink)
                     }
@@ -116,8 +116,7 @@ struct FriendsView: View {
                             .buttonStyle(InkButtonStyle(arrow: false))
                             .fixedSize()
                     }
-                    .padding(.vertical, Space.s)
-                    .overlay(alignment: .bottom) { Hairline() }
+                    .popCard(padding: 14)
                 }
             }
         }
@@ -137,7 +136,7 @@ struct FriendsView: View {
             Text("Le \(Brand.dailyName) de tes amis").labelCaps()
             if friends.isEmpty {
                 HStack(alignment: .center, spacing: Space.m) {
-                    Leon(color: .chloro, pose: .curious).frame(width: 90)
+                    Leon(color: .brand, pose: .curious).frame(width: 90)
                     Text("Personne pour l'instant. Invite quelqu'un qui aime avoir raison.")
                         .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 }
@@ -191,7 +190,7 @@ struct FriendsView: View {
             VStack(alignment: .leading, spacing: Space.m) {
                 Text("Inviter").labelCaps()
                 Text("Ton ami reçoit 100 \(Brand.currencyPlural). Toi, 150 quand il termine son premier \(Brand.dailyName).")
-                    .font(.cfBodySerif)
+                    .font(.cfReading)
                     .fixedSize(horizontal: false, vertical: true)
                 if let referral, referral.qualified > 0 {
                     Text("\(referral.qualified) ami\(referral.qualified > 1 ? "s" : "") déjà arrivé\(referral.qualified > 1 ? "s" : "") grâce à toi.")
@@ -233,8 +232,7 @@ private struct FriendRow: View {
                 Text("pas encore joué").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
         }
-        .padding(.vertical, Space.s)
-        .overlay(alignment: .bottom) { Hairline() }
+        .popCard(padding: 14)
         .contextMenu {
             Button("Retirer des amis", systemImage: "person.badge.minus", action: onRemove)
             Button("Bloquer", systemImage: "hand.raised", role: .destructive, action: onBlock)
@@ -260,7 +258,7 @@ struct AccountNudge: View {
             }
             .foregroundStyle(Color.ink)
             .padding(Space.m)
-            .background(Color.chloro.opacity(0.45), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .background(Color.sun.opacity(0.45), in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
         }
         .buttonStyle(.plain)
         .sheet(isPresented: $showAccount) {

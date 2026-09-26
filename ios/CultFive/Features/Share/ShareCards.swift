@@ -1,20 +1,22 @@
 import SwiftUI
 import CultFiveCore
 
-/// Contenu partageable. Chaque carte est pensée pour les stories (9:16) : lisible en un coup d'œil, sans gros filigrane.
+/// Contenu partageable. Chaque carte est pensée pour les stories (9:16) : lisible en un coup d'œil, colorée, sans gros filigrane.
 enum ShareContent {
     case daily(DailyResult, handle: String)
     case profile(Profile, skills: [SkillSummary])
+    /// Une question du Daily, sans la réponse : « Et toi, tu aurais trouvé ? »
+    case question(Question, date: String?)
 }
 
 enum ShareTemplate: String, CaseIterable, Identifiable {
-    case ink, paper, tally
+    case violet, sun, white
     var id: String { rawValue }
     var title: String {
         switch self {
-        case .ink: return "Encre"
-        case .paper: return "Papier"
-        case .tally: return "Trait"
+        case .violet: return "Violet"
+        case .sun: return "Soleil"
+        case .white: return "Blanc"
         }
     }
 }
@@ -23,8 +25,7 @@ struct ShareSheetView: View {
     let content: ShareContent
 
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.displayScale) private var displayScale
-    @State private var template: ShareTemplate = .ink
+    @State private var template: ShareTemplate = .violet
     @State private var rendered: Image?
 
     var body: some View {
@@ -32,19 +33,32 @@ struct ShareSheetView: View {
             VStack(spacing: Space.l) {
                 card
                     .frame(width: 270, height: 480)
-                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                    .shadow(color: .black.opacity(0.15), radius: 16, y: 8)
+                    .clipShape(RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                    .shadow(color: Color.brand.opacity(0.25), radius: 20, y: 10)
                     .accessibilityElement(children: .combine)
 
-                Picker("Modèle", selection: $template) {
-                    ForEach(ShareTemplate.allCases) { Text($0.title).tag($0) }
+                HStack(spacing: Space.s) {
+                    ForEach(ShareTemplate.allCases) { option in
+                        Button {
+                            Haptics.selection()
+                            template = option
+                        } label: {
+                            Circle()
+                                .fill(swatch(option))
+                                .frame(width: 38, height: 38)
+                                .overlay(Circle().strokeBorder(Color.hairline, lineWidth: option == .white ? 1.5 : 0))
+                                .padding(4)
+                                .overlay(Circle().strokeBorder(template == option ? Color.brand : .clear, lineWidth: 3))
+                        }
+                        .buttonStyle(.row)
+                        .accessibilityLabel(option.title)
+                        .accessibilityAddTraits(template == option ? .isSelected : [])
+                    }
                 }
-                .pickerStyle(.segmented)
-                .padding(.horizontal, Space.gutter)
 
                 if let rendered {
                     ShareLink(item: rendered, preview: SharePreview(Brand.name, image: rendered)) {
-                        Text("Partager l'image")
+                        Label("Partager l'image", systemImage: "square.and.arrow.up")
                     }
                     .buttonStyle(.ink)
                     .padding(.horizontal, Space.gutter)
@@ -60,18 +74,28 @@ struct ShareSheetView: View {
         }
     }
 
+    private func swatch(_ template: ShareTemplate) -> AnyShapeStyle {
+        switch template {
+        case .violet: return AnyShapeStyle(Color.popGradient)
+        case .sun: return AnyShapeStyle(Color.sun)
+        case .white: return AnyShapeStyle(Color.paperFixed)
+        }
+    }
+
     @ViewBuilder private var card: some View {
         switch content {
         case .daily(let result, let handle):
             DailyShareCard(result: result, handle: handle, template: template)
         case .profile(let profile, let skills):
             ProfileShareCard(profile: profile, skills: skills, template: template)
+        case .question(let question, let date):
+            QuestionShareCard(question: question, date: date, template: template)
         }
     }
 
     /// Rendu 1080 × 1920 (base 270 × 480 × 4).
     @MainActor private func render() {
-        let renderer = ImageRenderer(content: card.frame(width: 270, height: 480))
+        let renderer = ImageRenderer(content: card.frame(width: 270, height: 480).environment(\.colorScheme, .light))
         renderer.scale = 4
         if let image = renderer.uiImage {
             rendered = Image(uiImage: image)
@@ -79,19 +103,64 @@ struct ShareSheetView: View {
     }
 }
 
+/// Couleurs d'une carte selon le modèle. Couleurs fixes : la carte est identique en mode clair ou sombre.
 private struct CardPalette {
-    let background: Color
+    let background: AnyShapeStyle
     let text: Color
     let soft: Color
+    /// Chiffre héros.
     let accent: Color
+    /// Fond des pastilles.
+    let chip: Color
+    let onInk: Bool
+    let leon: Color
 
     init(_ template: ShareTemplate) {
+        let deep = Color(hex: 0x3A1FB8)
         switch template {
-        case .ink, .tally:
-            background = .inkFixed; text = .paperFixed; soft = Color.paperFixed.opacity(0.55); accent = .chloro
-        case .paper:
-            background = .paperFixed; text = .inkFixed; soft = Color.inkFixed.opacity(0.55); accent = .inkFixed
+        case .violet:
+            background = AnyShapeStyle(Color.popGradient); text = .white; soft = .white.opacity(0.7)
+            accent = .sun; chip = .white.opacity(0.16); onInk = true; leon = .sun
+        case .sun:
+            background = AnyShapeStyle(Color.sun); text = .inkFixed; soft = Color.inkFixed.opacity(0.6)
+            accent = deep; chip = Color.inkFixed.opacity(0.08); onInk = false; leon = Color(hex: 0x6A4CFF)
+        case .white:
+            background = AnyShapeStyle(Color.paperFixed); text = .inkFixed; soft = Color.inkFixed.opacity(0.55)
+            accent = Color(hex: 0x6A4CFF); chip = Color(hex: 0x6A4CFF).opacity(0.1); onInk = false; leon = Color(hex: 0x6A4CFF)
         }
+    }
+}
+
+/// Bandeau haut commun : marque + date.
+private struct CardHeader: View {
+    let palette: CardPalette
+    var date: String?
+
+    var body: some View {
+        HStack {
+            Text(Brand.name).font(.system(size: 14, weight: .black, design: .rounded)).foregroundStyle(palette.text)
+            Spacer()
+            if let date {
+                Text(DateText.long(date)).font(.system(size: 10, weight: .heavy, design: .rounded))
+                    .foregroundStyle(palette.text)
+                    .padding(.horizontal, 9).padding(.vertical, 4)
+                    .background(palette.chip, in: Capsule())
+            }
+        }
+    }
+}
+
+private struct CardChip: View {
+    let text: String
+    let symbol: String
+    let palette: CardPalette
+
+    var body: some View {
+        Label(text, systemImage: symbol)
+            .font(.system(size: 12, weight: .heavy, design: .rounded).monospacedDigit())
+            .foregroundStyle(palette.text)
+            .padding(.horizontal, 10).padding(.vertical, 6)
+            .background(palette.chip, in: Capsule())
     }
 }
 
@@ -102,49 +171,44 @@ struct DailyShareCard: View {
 
     var body: some View {
         let palette = CardPalette(template)
-        ZStack(alignment: .topLeading) {
-            palette.background
-            VStack(alignment: .leading, spacing: 14) {
-                Text(Brand.name).font(.system(size: 13, weight: .black, design: .serif)).tracking(2.5).foregroundStyle(palette.text)
-                Text(DateText.long(result.date)).font(.system(size: 10, weight: .semibold)).textCase(.uppercase).tracking(1)
+        ZStack {
+            Rectangle().fill(palette.background)
+            Circle().fill(palette.text.opacity(0.06)).frame(width: 260).offset(x: 110, y: -170)
+            VStack(alignment: .leading, spacing: 12) {
+                CardHeader(palette: palette, date: result.date)
+                Spacer()
+                Leon(color: palette.leon, pose: result.score >= 4 ? .proud : (result.score >= 2 ? .wave : .sad), animated: false)
+                    .frame(width: 120)
+                Text(Brand.dailyName.uppercased()).font(.system(size: 11, weight: .heavy, design: .rounded)).tracking(1)
                     .foregroundStyle(palette.soft)
-                Spacer()
-                if template == .tally {
-                    TallyMark(results: result.answers.map(\.isCorrect), onInk: true, lineWidth: 9)
-                        .frame(width: 190)
-                    Text("\(result.score)/5").font(.system(size: 44, weight: .bold, design: .serif)).foregroundStyle(palette.accent)
-                } else {
-                    HStack(alignment: .lastTextBaseline, spacing: 0) {
-                        Text("\(result.score)").font(.system(size: 140, weight: .bold, design: .serif))
-                            .foregroundStyle(template == .paper ? palette.text : palette.accent)
-                        Text("/5").font(.system(size: 44, weight: .semibold, design: .serif)).foregroundStyle(palette.soft)
-                    }
-                    TallyMark(results: result.answers.map(\.isCorrect), onInk: template != .paper, lineWidth: 5).frame(width: 84)
+                HStack(alignment: .lastTextBaseline, spacing: 0) {
+                    Text("\(result.score)").font(.system(size: 120, weight: .black, design: .rounded))
+                        .foregroundStyle(palette.accent)
+                    Text("/5").font(.system(size: 40, weight: .heavy, design: .rounded)).foregroundStyle(palette.soft)
                 }
+                .padding(.vertical, -18)
+                TallyMark(results: result.answers.map(\.isCorrect), onInk: palette.onInk, lineWidth: 6).frame(width: 78)
                 Spacer()
-                VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 6) {
                     if let top = result.percentile?.top {
-                        Text("TOP \(top) %").font(.system(size: 26, weight: .bold, design: .serif)).foregroundStyle(palette.text)
+                        CardChip(text: "Top \(top) %", symbol: "chart.bar.fill", palette: palette)
                     }
-                    HStack(spacing: 14) {
-                        Label(DurationFormat.clock(milliseconds: result.totalMs), systemImage: "stopwatch")
-                        Label("\(result.streak) j", systemImage: "flame.fill")
-                    }
-                    .font(.system(size: 14, weight: .semibold).monospacedDigit())
-                    .foregroundStyle(palette.text)
+                    CardChip(text: DurationFormat.clock(milliseconds: result.totalMs), symbol: "stopwatch.fill", palette: palette)
+                    CardChip(text: "\(result.streak) j", symbol: "flame.fill", palette: palette)
                 }
                 HStack {
-                    Text(handle).font(.system(size: 11, weight: .semibold))
+                    Text(Brand.onboardingHook).font(.system(size: 12, weight: .heavy, design: .rounded))
                     Spacer()
-                    Text(Brand.dailyName).font(.system(size: 11, weight: .semibold))
+                    Text(handle).font(.system(size: 11, weight: .bold, design: .rounded)).foregroundStyle(palette.soft)
                 }
-                .foregroundStyle(palette.soft)
+                .foregroundStyle(palette.text)
             }
-            .padding(24)
+            .padding(22)
         }
     }
 }
 
+/// Profil : radar des connaissances + meilleurs domaines.
 struct ProfileShareCard: View {
     let profile: Profile
     let skills: [SkillSummary]
@@ -152,35 +216,108 @@ struct ProfileShareCard: View {
 
     var body: some View {
         let palette = CardPalette(template)
-        let top = skills.filter { $0.answered > 0 }.sorted { $0.level > $1.level }.prefix(5)
-        ZStack(alignment: .topLeading) {
-            palette.background
-            VStack(alignment: .leading, spacing: 16) {
-                Text(Brand.name).font(.system(size: 13, weight: .black, design: .serif)).tracking(2.5).foregroundStyle(palette.text)
-                Spacer()
-                Leon(color: top.first.map { DomainPalette.color($0.domainId) } ?? .chloro, pose: .proud).frame(width: 110)
-                Text(profile.handle).font(.system(size: 30, weight: .bold, design: .serif)).foregroundStyle(palette.text)
-                Text("Ce que je sais").font(.system(size: 10, weight: .semibold)).textCase(.uppercase).tracking(1).foregroundStyle(palette.soft)
-                VStack(alignment: .leading, spacing: 9) {
+        let top = skills.filter { $0.answered > 0 }.sorted { $0.level > $1.level }.prefix(3)
+        ZStack {
+            Rectangle().fill(palette.background)
+            VStack(alignment: .leading, spacing: 12) {
+                CardHeader(palette: palette)
+                Text(profile.handle).font(.system(size: 28, weight: .black, design: .rounded)).foregroundStyle(palette.text)
+                    .lineLimit(1).minimumScaleFactor(0.6)
+                Text("Mon radar de culture").font(.system(size: 11, weight: .heavy, design: .rounded)).textCase(.uppercase)
+                    .foregroundStyle(palette.soft)
+                KnowledgeRadar(axes: skills.map { KnowledgeRadar.Axis(domainId: $0.domainId, level: $0.answered > 0 ? Double($0.level) : 0) },
+                               fill: palette.accent, grid: palette.text.opacity(0.18))
+                    .frame(maxWidth: .infinity)
+                VStack(alignment: .leading, spacing: 7) {
                     ForEach(Array(top)) { skill in
-                        HStack {
-                            Circle().fill(DomainPalette.color(skill.domainId)).frame(width: 7, height: 7)
-                            Text(skill.name).font(.system(size: 14, weight: .medium))
+                        HStack(spacing: 8) {
+                            Image(systemName: DomainPalette.symbol(skill.domainId))
+                                .font(.system(size: 10, weight: .bold))
+                                .foregroundStyle(DomainPalette.onColor(skill.domainId))
+                                .frame(width: 22, height: 22)
+                                .background(DomainPalette.color(skill.domainId), in: Circle())
+                            Text(skill.name).font(.system(size: 13, weight: .bold, design: .rounded))
                             Spacer()
-                            Text("\(skill.level)").font(.system(size: 16, weight: .bold, design: .serif)).monospacedDigit()
+                            Text("\(skill.level)").font(.system(size: 16, weight: .black, design: .rounded)).monospacedDigit()
                         }
                         .foregroundStyle(palette.text)
                     }
                 }
-                Spacer()
-                HStack(spacing: 14) {
-                    Label("\(profile.streak) j", systemImage: "flame.fill")
-                    Label("\(profile.questionsAnswered)", systemImage: "checkmark.circle")
+                Spacer(minLength: 0)
+                HStack(spacing: 6) {
+                    CardChip(text: "\(profile.streak) j", symbol: "flame.fill", palette: palette)
+                    CardChip(text: "\(profile.questionsAnswered)", symbol: "checkmark.circle.fill", palette: palette)
                 }
-                .font(.system(size: 13, weight: .semibold).monospacedDigit())
-                .foregroundStyle(palette.soft)
             }
-            .padding(24)
+            .padding(22)
+        }
+    }
+}
+
+/// Une question du jour, sans la réponse. Le défi lancé aux amis.
+struct QuestionShareCard: View {
+    let question: Question
+    let date: String?
+    let template: ShareTemplate
+
+    var body: some View {
+        let palette = CardPalette(template)
+        let color = DomainPalette.color(question.domainId)
+        ZStack {
+            Rectangle().fill(palette.background)
+            VStack(alignment: .leading, spacing: 14) {
+                CardHeader(palette: palette, date: date)
+                Spacer(minLength: 0)
+                Text("Tu aurais trouvé ?").font(.system(size: 13, weight: .heavy, design: .rounded)).foregroundStyle(palette.accent)
+                DomainTag(domainId: question.domainId, name: DomainPalette.fallbackName(question.domainId))
+                if let shape = question.payload.shape {
+                    CountryShapeView(shape: shape, color: color).frame(height: 110)
+                }
+                Text(question.prompt)
+                    .font(.system(size: 21, weight: .heavy, design: .rounded))
+                    .foregroundStyle(palette.text)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .minimumScaleFactor(0.7)
+                options(palette: palette, color: color)
+                Spacer(minLength: 0)
+                HStack(alignment: .center) {
+                    Leon(color: palette.leon, pose: .curious, animated: false).frame(width: 64)
+                    Text("La réponse est dans \(Brand.name).").font(.system(size: 12, weight: .heavy, design: .rounded))
+                        .foregroundStyle(palette.text)
+                }
+            }
+            .padding(22)
+        }
+    }
+
+    @ViewBuilder private func options(palette: CardPalette, color: Color) -> some View {
+        switch question.type {
+        case .mcq:
+            VStack(spacing: 7) {
+                ForEach(Array((question.payload.options ?? []).prefix(4).enumerated()), id: \.offset) { index, option in
+                    HStack(spacing: 8) {
+                        Text(["A", "B", "C", "D"][index]).font(.system(size: 11, weight: .black, design: .rounded))
+                            .foregroundStyle(color)
+                            .frame(width: 22, height: 22)
+                            .background(color.opacity(0.15), in: Circle())
+                        Text(option.text ?? "").font(.system(size: 13, weight: .bold, design: .rounded))
+                            .foregroundStyle(Color.inkFixed).lineLimit(2)
+                        Spacer(minLength: 0)
+                    }
+                    .padding(8)
+                    .background(Color.paperFixed, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                }
+            }
+        case .trueFalse:
+            HStack(spacing: 8) {
+                ForEach(["Vrai", "Faux"], id: \.self) { title in
+                    Text(title).font(.system(size: 15, weight: .black, design: .rounded)).foregroundStyle(Color.inkFixed)
+                        .frame(maxWidth: .infinity, minHeight: 42)
+                        .background(Color.paperFixed, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                }
+            }
+        default:
+            EmptyView()
         }
     }
 }

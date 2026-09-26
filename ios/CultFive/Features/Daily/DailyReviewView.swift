@@ -9,17 +9,20 @@ struct DailyReviewView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var items: [ReviewItem] = []
     @State private var error: String?
+    @State private var sharing: Question?
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack(alignment: .leading, spacing: 0) {
+                LazyVStack(alignment: .leading, spacing: 12) {
                     ForEach(items) { item in
-                        ReviewRow(item: item, domainName: app.domainName(item.question.domainId))
-                        Hairline()
+                        ReviewRow(item: item, domainName: app.domainName(item.question.domainId)) {
+                            sharing = item.question
+                        }
                     }
                 }
-                .padding(.bottom, Space.xl)
+                .padding(.horizontal, Space.gutter)
+                .padding(.vertical, Space.m)
             }
             .overlay {
                 if items.isEmpty {
@@ -39,6 +42,9 @@ struct DailyReviewView: View {
                 }
             }
         }
+        .sheet(item: $sharing) { question in
+            ShareSheetView(content: .question(question, date: date))
+        }
         .task {
             do {
                 items = try await app.service.dailyReview(date: date)
@@ -52,6 +58,7 @@ struct DailyReviewView: View {
 private struct ReviewRow: View {
     let item: ReviewItem
     let domainName: String
+    var onShare: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: Space.m) {
@@ -59,8 +66,10 @@ private struct ReviewRow: View {
                 DomainTag(domainId: item.question.domainId, name: domainName)
                 Spacer()
                 Label(item.isCorrect ? "Juste" : "Raté", systemImage: item.isCorrect ? "checkmark" : "xmark")
-                    .font(.system(.footnote).weight(.bold))
-                    .foregroundStyle(item.isCorrect ? Color.correct : Color.wrong)
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 10).padding(.vertical, 5)
+                    .background(item.isCorrect ? Color.correct : Color.wrong, in: Capsule())
             }
             Text(item.question.prompt).font(.cfTitle3).foregroundStyle(Color.ink)
                 .fixedSize(horizontal: false, vertical: true)
@@ -83,18 +92,25 @@ private struct ReviewRow: View {
                     }
                     .font(.cfCallout).foregroundStyle(Color.ink)
                 }
-                Text(reveal.explanation).font(.cfBodySerif).foregroundStyle(Color.ink)
+                Text(reveal.explanation).font(.cfReading).foregroundStyle(Color.ink)
                     .fixedSize(horizontal: false, vertical: true)
                 if let takeaway = reveal.takeaway {
-                    HStack(alignment: .top, spacing: Space.s) {
-                        Rectangle().fill(DomainPalette.color(item.question.domainId)).frame(width: 3)
-                        Text(takeaway).font(.system(.callout).weight(.medium))
-                    }
-                    .fixedSize(horizontal: false, vertical: true)
+                    Text(takeaway).font(.system(.callout, design: .rounded).weight(.bold))
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(12)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(DomainPalette.color(item.question.domainId).opacity(0.12),
+                                    in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
                 }
             }
+            if item.question.type == .mcq || item.question.type == .trueFalse {
+                Button(action: onShare) {
+                    Label("Défier mes amis avec cette question", systemImage: "paperplane.fill")
+                }
+                .buttonStyle(.textLink)
+            }
         }
-        .padding(Space.gutter)
+        .popCard()
     }
 }
 

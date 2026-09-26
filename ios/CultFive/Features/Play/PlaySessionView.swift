@@ -38,7 +38,7 @@ struct PlaySessionView: View {
         case .failed(let message), .empty(let message):
             VStack(alignment: .leading, spacing: Space.l) {
                 Spacer()
-                Leon(color: accent, pose: .curious).frame(width: 150)
+                Leon(color: accent, pose: .curious).frame(width: 160)
                 Text(message).font(.cfHeadline).fixedSize(horizontal: false, vertical: true)
                 Button("Fermer") { close() }.buttonStyle(.ink)
                 Spacer()
@@ -70,7 +70,11 @@ struct PlaySessionView: View {
     }
 
     private var accent: Color {
-        config.domain.map(DomainPalette.color) ?? .chloro
+        config.domain.map(DomainPalette.color) ?? .brand
+    }
+
+    private func accent(for model: PlaySessionModel) -> Color {
+        model.current.map { DomainPalette.color($0.domainId) } ?? accent
     }
 
     private func header(_ model: PlaySessionModel) -> some View {
@@ -78,13 +82,16 @@ struct PlaySessionView: View {
             if model.isOffline {
                 Image(systemName: "wifi.slash").foregroundStyle(Color.inkSoft).accessibilityLabel("Hors ligne")
             }
-            Text("\(model.index + 1) / \(model.questions.count)").font(.cfNumber).foregroundStyle(Color.inkSoft)
+            if model.questions.count <= 12 {
+                ProgressPills(current: model.index + 1, total: model.questions.count, color: accent(for: model))
+            } else {
+                Text("\(model.index + 1) / \(model.questions.count)").font(.cfNumber).foregroundStyle(Color.inkSoft)
+            }
             Menu {
                 Button("Terminer la partie") { Task { await model.finish() } }
                 Button("Quitter sans enregistrer", role: .destructive) { close() }
             } label: {
-                Image(systemName: "xmark").font(.body.weight(.semibold)).foregroundStyle(Color.inkSoft)
-                    .frame(width: 44, height: 44)
+                CloseCircle()
             }
             .accessibilityLabel("Options de partie")
         }
@@ -96,9 +103,10 @@ struct PlaySessionView: View {
         VStack(alignment: .leading, spacing: Space.s) {
             if let text = model.helpText {
                 HStack(alignment: .top, spacing: Space.s) {
-                    Image(systemName: "lightbulb.min").foregroundStyle(Color.inkSoft).accessibilityHidden(true)
+                    Image(systemName: "lightbulb.fill").foregroundStyle(Color(hex: 0xFFB020)).accessibilityHidden(true)
                     Text(text).font(.cfCallout).foregroundStyle(Color.ink)
                 }
+                .popCard(padding: 12, radius: Radius.s)
             }
             if !helps.isEmpty {
                 HStack(spacing: Space.m) {
@@ -110,12 +118,13 @@ struct PlaySessionView: View {
                                 Text(title(kind))
                                 SeedsAmount(amount: kind.cost, color: .inkSoft)
                             }
-                            .font(.cfFootnote.weight(.medium))
-                            .padding(.horizontal, 10)
-                            .frame(minHeight: 36)
-                            .overlay(Capsule().stroke(Color.hairline, lineWidth: 1))
+                            .font(.system(.footnote, design: .rounded).weight(.heavy))
+                            .padding(.horizontal, 14)
+                            .frame(minHeight: 40)
+                            .background(Color.paperRaised, in: Capsule())
+                            .shadow(color: Color(hex: 0x3A1FB8).opacity(0.08), radius: 6, y: 3)
                         }
-                        .buttonStyle(.plain)
+                        .buttonStyle(.row)
                         .foregroundStyle(Color.ink)
                         .disabled((model.seedsBalance ?? 0) < kind.cost)
                     }
@@ -153,62 +162,106 @@ struct PlaySummaryView: View {
     var onClose: () -> Void
 
     @Environment(AppModel.self) private var app
+    @State private var appeared = false
+
+    private var accent: Color { config.domain.map(DomainPalette.color) ?? .brand }
+    private var rate: Double { summary.total > 0 ? Double(summary.correct) / Double(summary.total) : 0 }
+    private var perfect: Bool { summary.total > 0 && summary.correct == summary.total }
+    /// Le profil n'est rafraîchi qu'à la fermeture : il porte encore l'XP d'avant la partie.
+    private var levelUp: Int? {
+        guard let before = app.profile?.xpTotal, let xp = summary.xp, xp > 0 else { return nil }
+        let old = XPLevel(totalXP: before).level, new = XPLevel(totalXP: before + xp).level
+        return new > old ? new : nil
+    }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Space.l) {
                 HStack {
-                    Text(config.domain.map { app.domainName($0) } ?? config.title).labelCaps()
+                    DomainTag(domainId: config.domain ?? "", name: config.domain.map { app.domainName($0) } ?? config.title)
                     Spacer()
-                    Button(action: onClose) {
-                        Image(systemName: "xmark").font(.body.weight(.semibold)).foregroundStyle(Color.inkSoft).frame(width: 44, height: 44)
+                    Button(action: onClose) { CloseCircle() }
+                        .accessibilityLabel("Fermer")
+                }
+                VStack(spacing: Space.s) {
+                    Leon(color: accent, pose: rate >= 0.7 ? .proud : (rate >= 0.4 ? .wave : .curious), rainbow: perfect)
+                        .frame(width: 150)
+                    HStack(alignment: .lastTextBaseline, spacing: 2) {
+                        Text("\(summary.correct)").numeral(size: 96).foregroundStyle(accent)
+                            .scaleEffect(appeared ? 1 : 0.4)
+                        Text("/\(summary.total)").numeral(size: 40).foregroundStyle(Color.inkSoft)
                     }
-                    .accessibilityLabel("Fermer")
+                    Text(perfect ? "Sans faute !" : rate >= 0.7 ? "Belle partie !" : rate >= 0.4 ? "Pas mal du tout." : "Chaque erreur t'apprend quelque chose.")
+                        .font(.cfHeadline).multilineTextAlignment(.center)
                 }
-                HStack(alignment: .lastTextBaseline, spacing: 2) {
-                    Text("\(summary.correct)").numeral(size: 110)
-                    Text("/\(summary.total)").numeral(size: 44, weight: .semibold).foregroundStyle(Color.inkSoft)
-                    Spacer()
-                    Leon(color: config.domain.map(DomainPalette.color) ?? .chloro,
-                         pose: summary.total > 0 && Double(summary.correct) / Double(summary.total) >= 0.7 ? .proud : .rest)
-                        .frame(width: 96)
-                }
-                if summary.corrected > 0 {
-                    Label("\(summary.corrected) erreur\(summary.corrected > 1 ? "s" : "") corrigée\(summary.corrected > 1 ? "s" : "") ✓",
-                          systemImage: "checkmark")
-                        .font(.system(.headline)).foregroundStyle(Color.correct)
-                }
-                Hairline()
+                .frame(maxWidth: .infinity)
+                .accessibilityElement(children: .combine)
+
                 if summary.synced {
-                    HStack(spacing: Space.m) {
-                        Text("+\(summary.xp ?? 0) XP").monospacedDigit()
-                        if let seeds = summary.seeds, seeds > 0 { SeedsAmount(amount: seeds, signed: true) }
+                    HStack(spacing: Space.s) {
+                        chip(Text("+\(summary.xp ?? 0) XP").monospacedDigit(), tint: .brand)
+                        if let seeds = summary.seeds, seeds > 0 {
+                            chip(SeedsAmount(amount: seeds, signed: true, color: .correct), tint: .correct)
+                        }
                         Spacer()
                     }
-                    .font(.system(.callout).weight(.semibold))
-                    ForEach(summary.domainMoves.sorted { $0.key < $1.key }, id: \.key) { domain, move in
-                        HStack {
-                            Circle().fill(DomainPalette.color(domain)).frame(width: 8, height: 8)
-                            Text(app.domainName(domain))
-                            Spacer()
-                            Text("\(Int(move.0.rounded())) → \(Int(move.1.rounded()))").monospacedDigit()
-                                .foregroundStyle(move.1 >= move.0 ? Color.ink : Color.inkSoft)
+                }
+                if summary.corrected > 0 {
+                    CelebrationCard(kind: .corrected,
+                                    title: "\(summary.corrected) erreur\(summary.corrected > 1 ? "s" : "") corrigée\(summary.corrected > 1 ? "s" : "")",
+                                    detail: "Elles sortent de ta liste à revoir.")
+                }
+                if let levelUp {
+                    CelebrationCard(kind: .levelUp, title: "Niveau \(levelUp)", detail: "Ton XP grimpe, continue comme ça.")
+                }
+                ForEach(summary.achievements, id: \.self) { name in
+                    CelebrationCard(kind: .trophy, title: name)
+                }
+                if summary.synced, !summary.domainMoves.isEmpty {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Ce que ça change").labelCaps()
+                        ForEach(summary.domainMoves.sorted { $0.key < $1.key }, id: \.key) { domain, move in
+                            HStack {
+                                DomainTag(domainId: domain, name: app.domainName(domain))
+                                Spacer()
+                                Text("\(Int(move.0.rounded()))").foregroundStyle(Color.inkSoft)
+                                Image(systemName: move.1 >= move.0 ? "arrow.up.right" : "arrow.down.right")
+                                    .foregroundStyle(move.1 >= move.0 ? Color.correct : Color.wrong)
+                                Text("\(Int(move.1.rounded()))").foregroundStyle(Color.ink)
+                            }
+                            .font(.system(.callout, design: .rounded).weight(.heavy).monospacedDigit())
                         }
-                        .font(.cfCallout)
                     }
-                } else if summary.total > 0 {
+                    .popCard()
+                } else if !summary.synced, summary.total > 0 {
                     Label("Hors ligne : ta partie sera enregistrée dès le retour du réseau.", systemImage: "wifi.slash")
                         .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 }
-                VStack(alignment: .leading, spacing: Space.s) {
-                    Button("Rejouer", action: onAgain).buttonStyle(.ink)
+                VStack(spacing: Space.s) {
+                    Button("Rejouer", action: onAgain).buttonStyle(InkButtonStyle(fill: accent, text: config.domain.map(DomainPalette.onColor) ?? .white))
                     Button("Terminer", action: onClose).buttonStyle(.textLink)
                 }
-                .padding(.top, Space.m)
+                .padding(.top, Space.s)
             }
             .padding(.horizontal, Space.gutter)
             .padding(.bottom, Space.xl)
         }
+        .scrollIndicators(.hidden)
         .background(Color.paper)
+        .overlay {
+            if perfect || levelUp != nil || !summary.achievements.isEmpty { Confetti().ignoresSafeArea() }
+        }
+        .onAppear {
+            withAnimation(Motion.bounce.delay(0.1)) { appeared = true }
+            rate >= 0.7 ? Haptics.success() : Haptics.soft()
+        }
+    }
+
+    private func chip(_ content: some View, tint: Color) -> some View {
+        content
+            .font(.system(.callout, design: .rounded).weight(.heavy))
+            .foregroundStyle(tint)
+            .padding(.horizontal, 14).padding(.vertical, 8)
+            .background(tint.opacity(0.12), in: Capsule())
     }
 }
