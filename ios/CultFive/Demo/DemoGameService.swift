@@ -11,7 +11,9 @@ enum Demo {
         case play, domain, friends, league, profile
     }
 
-    static var isActive: Bool { ProcessInfo.processInfo.arguments.contains("-demo") }
+    /// Actif avec l'argument `-demo`, ou automatiquement quand aucun serveur n'est configuré
+    /// (build de démonstration : simulateur, Appetize.io).
+    static var isActive: Bool { ProcessInfo.processInfo.arguments.contains("-demo") || AppConfig.backend == nil }
 
     static var screen: Screen? {
         guard isActive else { return nil }
