@@ -111,6 +111,9 @@ taxonomy.domains.forEach((d, i) => {
   on conflict (id) do update set name = excluded.name, sort = excluded.sort;`);
   });
 });
+// Thèmes retirés de la taxonomie : conservés (historique des joueurs) mais inactifs.
+const activeSubdomains = taxonomy.domains.flatMap((d) => d.subdomains.map(([s]) => lit(`${d.id}.${s}`)));
+lines.push(`update public.subdomains set is_active = (id in (${activeSubdomains.join(', ')}));`);
 for (const origin of ['human', 'import']) {
   const group = questions.filter((q) => q.origin === origin).map(({ origin: _o, ...q }) => q);
   if (group.length) lines.push(`select public._upsert_question(q, '${origin}', null) from jsonb_array_elements(${lit(JSON.stringify(group))}::jsonb) q;`);

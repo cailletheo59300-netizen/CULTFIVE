@@ -81,3 +81,30 @@ begin
                     group by q.family) t) <= 1, 'une question par famille');
   end loop;
 end $$;
+
+-- Signalements : la question passe « à revoir », une seule fois par joueur ; l'admin clôt.
+do $$
+declare u uuid := tst.new_user(); a uuid := tst.new_user(); q uuid; res jsonb;
+begin
+  perform tst.clock('2026-11-12 10:00:00+01');
+  perform tst.login(u);
+  select id into q from public.questions where status = 'published' and not needs_review limit 1;
+  perform public.report_question(q, 'wrong_answer', 'La capitale a changé');
+  perform public.report_question(q, 'typo', null);  -- doublon ignoré
+  perform tst.ok((select count(*) from public.question_reports where question_id = q) = 1, 'un signalement par joueur');
+  perform tst.ok((select needs_review from public.questions where id = q), 'question à revoir');
+  perform tst.throws(format('select public.report_question(%L, ''nope'')', q), 'invalid_reason');
+  perform tst.throws(format('select public.admin_resolve_reports(%L)', q), 'forbidden');
+
+  insert into public.app_admins (user_id) values (a);
+  perform tst.login(a);
+  res := public.admin_questions('{"reported": true, "sort": "reports"}'::jsonb, 10, 0);
+  perform tst.ok((res -> 'items' -> 0 ->> 'id')::uuid = q and (res -> 'items' -> 0 ->> 'open_reports')::int = 1, 'admin : liste des signalées');
+  perform tst.ok(jsonb_array_length(public.admin_question_reports(q)) = 1, 'admin : détail');
+  perform public.admin_resolve_reports(q);
+  perform tst.ok(not (select needs_review from public.questions where id = q), 'admin : clos');
+  res := public.admin_questions('{"domain_id": "geography", "sort": "hardest"}'::jsonb, 5, 0);
+  perform tst.ok((res -> 'items' -> 0 ->> 'difficulty_effective')::real >= (res -> 'items' -> 4 ->> 'difficulty_effective')::real, 'tri par difficulté');
+  perform tst.ok((public.admin_dashboard() ->> 'open_reports')::int = 0, 'tableau de bord');
+  perform tst.ok((select bool_and(is_active) from public.subdomains), 'thèmes de la taxonomie actifs');
+end $$;

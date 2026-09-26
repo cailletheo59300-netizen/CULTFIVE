@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CULT FIVE · Admin</title>
+<style>
+  :root {
+    --bg: #F6F5FB; --card: #FFFFFF; --ink: #1A1830; --soft: #6E6B85; --line: #E9E7F2;
+    --brand: #6A4CFF; --brand-deep: #3A1FB8; --sun: #FFD23F; --ok: #12B76A; --bad: #FF4D5E; --warn: #F79009;
+    --radius: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0E0D16; --card: #1C1A2A; --ink: #F4F3FA; --soft: #A3A0B8; --line: #2C2940; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; align-items: center; gap: 16px; padding: 14px 24px; background: linear-gradient(135deg, #7B5CFF, var(--brand-deep)); color: #fff; position: sticky; top: 0; z-index: 5; }
+  header h1 { font-size: 18px; margin: 0; font-weight: 900; letter-spacing: .5px; }
+  header nav { display: flex; gap: 6px; flex-wrap: wrap; }
+  header nav button { background: rgba(255,255,255,.15); color: #fff; border: 0; border-radius: 999px; padding: 7px 14px; font-weight: 800; cursor: pointer; }
+  header nav button.on { background: var(--sun); color: #1A1830; }
+  header .me { margin-left: auto; font-size: 13px; opacity: .85; }
+  main { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+  .card { background: var(--card); border-radius: var(--radius); padding: 18px; box-shadow: 0 6px 18px rgba(58,31,184,.06); margin-bottom: 16px; }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+  .stat b { display: block; font-size: 28px; font-weight: 900; }
+  .stat span { color: var(--soft); font-size: 13px; font-weight: 700; }
+  h2 { font-size: 20px; margin: 0 0 12px; font-weight: 900; }
+  h3 { font-size: 15px; margin: 16px 0 8px; font-weight: 900; }
+  label { font-size: 12px; font-weight: 800; color: var(--soft); text-transform: uppercase; letter-spacing: .5px; display: block; margin-bottom: 4px; }
+  input, select, textarea { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: 8px 10px; }
+  textarea { min-height: 70px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--brand); }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: end; }
+  .row > * { flex: 1 1 150px; }
+  button.btn { border: 0; border-radius: 999px; padding: 10px 18px; font: inherit; font-weight: 900; cursor: pointer; background: var(--brand); color: #fff; }
+  button.btn.ghost { background: var(--bg); color: var(--ink); border: 2px solid var(--line); }
+  button.btn.ok { background: var(--ok); } button.btn.bad { background: var(--bad); } button.btn.sun { background: var(--sun); color: #1A1830; }
+  button.btn:disabled { opacity: .4; cursor: default; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 12px; color: var(--soft); text-transform: uppercase; padding: 8px; border-bottom: 2px solid var(--line); }
+  td { padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr.click { cursor: pointer; } tr.click:hover td { background: rgba(106,76,255,.06); }
+  .chip { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 800; color: #fff; white-space: nowrap; }
+  .pill { display: inline-block; border-radius: 999px; padding: 2px 8px; font-size: 12px; font-weight: 800; background: var(--bg); border: 1px solid var(--line); }
+  .pill.bad { background: var(--bad); color: #fff; border: 0; } .pill.warn { background: var(--warn); color: #fff; border: 0; } .pill.ok { background: var(--ok); color: #fff; border: 0; }
+  .muted { color: var(--soft); } .small { font-size: 13px; }
+  .modal { position: fixed; inset: 0; background: rgba(14,13,22,.55); display: flex; align-items: flex-start; justify-content: center; overflow: auto; padding: 30px 12px; z-index: 10; }
+  .modal .card { width: min(860px, 100%); }
+  .opt { display: flex; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .opt input[type=radio] { width: auto; } .opt input[type=text] { flex: 1; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--brand); color: #fff; border-radius: 999px; padding: 10px 18px; font-weight: 800; z-index: 20; }
+  .toast.bad { background: var(--bad); }
+  .bar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--brand); }
+  .hidden { display: none !important; }
+  .center { max-width: 420px; margin: 60px auto; }
+  pre { white-space: pre-wrap; font-size: 12px; background: var(--bg); padding: 8px; border-radius: 10px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CULT FIVE · Admin</h1>
+  <nav id="nav" class="hidden">
+    <button data-view="dashboard">Tableau de bord</button>
+    <button data-view="questions">Questions</button>
+    <button data-view="reports">Signalements</button>
+    <button data-view="daily">5 du jour</button>
+    <button data-view="new">Nouvelle question</button>
+  </nav>
+  <div class="me" id="me"></div>
+</header>
+<main id="app"></main>
+
+<script>
+'use strict';
+// Outil d'administration de CULT FIVE : page autonome (aucune dépendance), qui parle directement à Supabase
+// (Auth par code e-mail + RPC admin_*). Accès réservé aux comptes présents dans la table app_admins.
+
+const DOMAIN_COLORS = { calc: '#2F6BFF', french: '#F0588F', geography: '#0CA678', history: '#F76707', science: '#1098AD',
+  logic: '#845EF7', arts: '#D6336C', sport: '#E5383B', cinema: '#5F3DC4', music: '#E0A800', tech: '#1C7ED6', nature: '#37B24D' };
+const TYPES = { mcq: 'QCM', true_false: 'Vrai/faux', numeric: 'Nombre', ordering: 'Classement', pairs: 'Associations', map_pick: 'Carte' };
+const STATUS = { draft: 'Brouillon', review: 'À relire', published: 'Publiée', disabled: 'Désactivée' };
+const REASONS = { wrong_answer: 'Réponse fausse', ambiguous: 'Ambiguë', typo: 'Faute', outdated: 'Plus à jour', other: 'Autre' };
+const MIN_PER_THEME = 20;
+
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem('cf-admin-' + k)); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem('cf-admin-' + k, JSON.stringify(v)); } catch {} },
+  del(k) { try { localStorage.removeItem('cf-admin-' + k); } catch {} },
+};
+const state = { config: store.get('config'), session: store.get('session'), domains: [], subdomains: [], view: 'dashboard',
+  filter: { sort: 'recent' }, page: 0 };
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const app = $('#app');
+
+function toast(msg, bad = false) {
+  const t = document.createElement('div');
+  t.className = 'toast' + (bad ? ' bad' : '');
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2800);
+}
+
+// ───────────────────────── Supabase (REST + Auth)
+async function http(path, { method = 'GET', body, auth = true, headers = {} } = {}) {
+  const res = await fetch(state.config.url.replace(/\/$/, '') + path, {
+    method,
+    headers: { apikey: state.config.key, 'Content-Type': 'application/json',
+               ...(auth && state.session ? { Authorization: 'Bearer ' + state.session.access_token } : {}), ...headers },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  if (res.status === 401 && auth && state.session?.refresh_token && !path.startsWith('/auth')) {
+    if (await refresh()) return http(path, { method, body, auth, headers });
+  }
+  const text = await res.text();
+  const data = text ? JSON.parse(text) : null;
+  if (!res.ok) throw new Error(data?.message || data?.msg || data?.error_description || `Erreur ${res.status}`);
+  return data;
+}
+async function refresh() {
+  try {
+    const s = await http('/auth/v1/token?grant_type=refresh_token', { method: 'POST', body: { refresh_token: state.session.refresh_token }, auth: false });
+    state.session = s; store.set('session', s); return true;
+  } catch { logout(); return false; }
+}
+const rpc = (fn, params = {}) => http('/rest/v1/rpc/' + fn, { method: 'POST', body: params });
+const select = (table, query) => http(`/rest/v1/${table}?${query}`);
+function logout() { state.session = null; store.del('session'); render(); }
+
+// ───────────────────────── Écrans d'accès
+function renderConfig() {
+  app.innerHTML = `<div class="card center">
+    <h2>Connexion au projet</h2>
+    <p class="muted small">L'URL et la clé « anon » (publique) du projet Supabase, dans Project Settings → API. Elles restent dans ce navigateur.</p>
+    <label>URL du projet</label><input id="cfgUrl" placeholder="https://xxxx.supabase.co" value="${esc(state.config?.url)}">
+    <label style="margin-top:10px">Clé anon</label><input id="cfgKey" value="${esc(state.config?.key)}">
+    <p><button class="btn" id="cfgSave">Continuer</button></p></div>`;
+  $('#cfgSave').onclick = () => {
+    const url = $('#cfgUrl').value.trim(), key = $('#cfgKey').value.trim();
+    if (!/^https?:\/\//.test(url) || key.length < 20) return toast('URL ou clé invalide', true);
+    state.config = { url, key }; store.set('config', state.config); render();
+  };
+}
+function renderLogin() {
+  app.innerHTML = `<div class="card center">
+    <h2>Connexion admin</h2>
+    <label>E-mail</label><input id="email" type="email" value="${esc(store.get('email'))}">
+    <p><button class="btn" id="send">Recevoir un code</button></p>
+    <div id="codeBox" class="hidden"><label>Code reçu par e-mail</label><input id="code" inputmode="numeric" maxlength="8">
+    <p><button class="btn" id="verify">Se connecter</button></p></div>
+    <p class="small"><a href="#" id="resetCfg">Changer de projet</a></p></div>`;
+  $('#resetCfg').onclick = (e) => { e.preventDefault(); state.config = null; store.del('config'); render(); };
+  $('#send').onclick = async () => {
+    const email = $('#email').value.trim();
+    try { await http('/auth/v1/otp', { method: 'POST', body: { email, create_user: false }, auth: false });
+      store.set('email', email); $('#codeBox').classList.remove('hidden'); toast('Code envoyé'); }
+    catch (e) { toast(e.message, true); }
+  };
+  $('#verify').onclick = async () => {
+    try {
+      const s = await http('/auth/v1/verify', { method: 'POST', auth: false, body: { type: 'email', email: $('#email').value.trim(), token: $('#code').value.trim() } });
+      state.session = s; store.set('session', s); render();
+    } catch (e) { toast(e.message, true); }
+  };
+}
+
+// ───────────────────────── Référentiel
+async function loadTaxonomy() {
+  if (state.domains.length) return;
+  state.domains = await select('domains', 'select=id,name,sort&order=sort');
+  state.subdomains = await select('subdomains', 'select=id,domain_id,name,sort,is_active&order=sort');
+}
+const domainName = (id) => state.domains.find((d) => d.id === id)?.name ?? id;
+const themeName = (id) => state.subdomains.find((s) => s.id === id)?.name ?? id;
+const chip = (domain) => `<span class="chip" style="background:${DOMAIN_COLORS[domain] ?? '#6E6B85'}">${esc(domainName(domain))}</span>`;
+const statusPill = (s) => `<span class="pill ${s === 'published' ? 'ok' : s === 'disabled' ? 'bad' : s === 'review' ? 'warn' : ''}">${STATUS[s] ?? s}</span>`;
+const pct = (x) => x == null ? '—' : Math.round(x * 100) + ' %';
+
+// ───────────────────────── Tableau de bord
+async function renderDashboard() {
+  const d = await rpc('admin_dashboard');
+  const byTheme = d.published_by_subdomain ?? {};
+  const themes = state.subdomains.filter((s) => s.is_active !== false);
+  app.innerHTML = `
+    <div class="grid">
+      ${[['Joueurs', d.users], ['5 du jour terminés aujourd\'hui', d.daily_players_today], ['Réponses (7 jours)', d.answers_7d],
+         ['Signalements ouverts', d.open_reports], ['Questions à revoir', d.needs_review],
+         ['Questions publiées', d.questions_by_status?.published ?? 0]]
+        .map(([l, v]) => `<div class="card stat"><b>${v ?? 0}</b><span>${l}</span></div>`).join('')}
+    </div>
+    <div class="card"><h2>Contenu par thème</h2>
+      <p class="muted small">Objectif : au moins ${MIN_PER_THEME} questions publiées par thème (en orange en dessous).</p>
+      ${state.domains.map((dom) => `<h3>${chip(dom.id)} <span class="muted small">${d.published_by_domain?.[dom.id] ?? 0} questions</span></h3>
+        <table>${themes.filter((t) => t.domain_id === dom.id).map((t) => { const n = byTheme[t.id] ?? 0; return `
+          <tr><td style="width:35%">${esc(t.name)}</td><td style="width:15%"><span class="pill ${n < MIN_PER_THEME ? 'warn' : ''}">${n}</span></td>
+          <td><div class="bar"><i style="width:${Math.min(100, n / 2)}%"></i></div></td></tr>`; }).join('')}</table>`).join('')}
+    </div>
+    <div class="card"><h2>5 du jour prévus</h2><p>${(d.upcoming_dailies ?? []).map((x) => `<span class="pill">${x}</span>`).join(' ') || '<span class="muted">Aucun</span>'}</p></div>`;
+}
+
+// ───────────────────────── Liste des questions
+function filterBar(prefix = '') {
+  const f = state.filter;
+  return `<div class="card"><div class="row">
+    <div><label>Domaine</label><select id="fDomain"><option value="">Tous</option>${state.domains.map((d) => `<option value="${d.id}" ${f.domain_id === d.id ? 'selected' : ''}>${esc(d.name)}</option>`).join('')}</select></div>
+    <div><label>Thème</label><select id="fTheme"><option value="">Tous</option>${state.subdomains.filter((s) => s.is_active !== false && (!f.domain_id || s.domain_id === f.domain_id)).map((s) => `<option value="${s.id}" ${f.subdomain_id === s.id ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></div>
+    <div><label>Statut</label><select id="fStatus"><option value="">Tous</option>${Object.entries(STATUS).map(([k, v]) => `<option value="${k}" ${f.status === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+    <div><label>Type</label><select id="fType"><option value="">Tous</option>${Object.entries(TYPES).map(([k, v]) => `<option value="${k}" ${f.type === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+    <div><label>Tri</label><select id="fSort">${[['recent', 'Plus récentes'], ['hardest', 'Plus difficiles'], ['easiest', 'Plus faciles'], ['lowest_success', 'Taux de réussite le plus bas'], ['most_answered', 'Plus jouées'], ['reports', 'Plus signalées']].map(([k, v]) => `<option value="${k}" ${f.sort === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+  </div><div class="row" style="margin-top:10px">
+    <div style="flex:3"><label>Recherche (énoncé ou clé)</label><input id="fSearch" value="${esc(f.search)}"></div>
+    <div><label>&nbsp;</label><label style="text-transform:none;font-size:14px;color:var(--ink)"><input type="checkbox" id="fReview" style="width:auto" ${f.needs_review ? 'checked' : ''}> À revoir seulement</label></div>
+    <div><label>&nbsp;</label><button class="btn" id="fGo">Filtrer</button></div>
+  </div></div>`;
+}
+function readFilter() {
+  const v = (id) => $(id).value || undefined;
+  state.filter = { domain_id: v('#fDomain'), subdomain_id: v('#fTheme'), status: v('#fStatus'), type: v('#fType'), sort: v('#fSort'),
+                   search: v('#fSearch'), needs_review: $('#fReview').checked ? true : undefined, reported: state.filter.reported };
+  state.page = 0;
+}
+async function renderQuestions({ reported = false } = {}) {
+  if (reported) state.filter = { reported: true, sort: 'reports' };
+  const clean = Object.fromEntries(Object.entries(state.filter).filter(([, x]) => x !== undefined && x !== ''));
+  const res = await rpc('admin_questions', { p_filter: clean, p_limit: 50, p_offset: state.page * 50 });
+  app.innerHTML = (reported ? `<div class="card"><h2>Signalements ouverts</h2><p class="muted small">Questions signalées par des joueurs. Corrige-les puis clos les signalements.</p></div>` : filterBar()) + `
+    <div class="card"><div class="row"><div><b>${res.total}</b> question${res.total > 1 ? 's' : ''}</div>
+      <div style="flex:0"><button class="btn ghost" id="prev" ${state.page === 0 ? 'disabled' : ''}>←</button></div>
+      <div style="flex:0" class="muted small">page ${state.page + 1}/${Math.max(1, Math.ceil(res.total / 50))}</div>
+      <div style="flex:0"><button class="btn ghost" id="next" ${(state.page + 1) * 50 >= res.total ? 'disabled' : ''}>→</button></div></div>
+    <table><thead><tr><th>Question</th><th>Thème</th><th>Type</th><th>Difficulté</th><th>Réussite</th><th>Signal.</th><th>Statut</th></tr></thead><tbody>
+    ${res.items.map((q) => `<tr class="click" data-id="${q.id}">
+      <td>${esc(q.prompt)}${q.needs_review ? `<div class="small" style="color:var(--warn)">⚠ ${esc(q.review_reason ?? 'à revoir')}</div>` : ''}</td>
+      <td>${chip(q.domain_id)}<div class="small muted">${esc(themeName(q.subdomain_id))}</div></td>
+      <td class="small">${TYPES[q.type]}</td><td>${Math.round(q.difficulty_effective)}</td>
+      <td>${pct(q.success_rate)}<div class="small muted">${q.answer_count} rép.</div></td>
+      <td>${q.open_reports ? `<span class="pill bad">${q.open_reports}</span>` : ''}</td><td>${statusPill(q.status)}</td></tr>`).join('')}
+    </tbody></table></div>`;
+  if (!reported) {
+    $('#fDomain').onchange = () => { readFilter(); state.filter.subdomain_id = undefined; renderQuestions(); };
+    $('#fGo').onclick = () => { readFilter(); renderQuestions(); };
+    $('#fSearch').onkeydown = (e) => { if (e.key === 'Enter') { readFilter(); renderQuestions(); } };
+  }
+  $('#prev').onclick = () => { state.page--; renderQuestions({ reported }); };
+  $('#next').onclick = () => { state.page++; renderQuestions({ reported }); };
+  const byId = Object.fromEntries(res.items.map((q) => [q.id, q]));
+  app.querySelectorAll('tr.click').forEach((tr) => tr.onclick = () => openEditor(byId[tr.dataset.id], () => renderQuestions({ reported })));
+}
+
+// ───────────────────────── Éditeur
+const newId = () => Array.from(crypto.getRandomValues(new Uint8Array(6)), (b) => b.toString(16).padStart(2, '0')).join('');
+const slug = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '').slice(0, 40);
+
+function answerEditor(q) {
+  const p = q.payload ?? {}, a = q.answer ?? {};
+  switch (q.type) {
+    case 'mcq': {
+      const opts = p.options?.length ? p.options : [{ id: newId(), text: '' }, { id: newId(), text: '' }, { id: newId(), text: '' }, { id: newId(), text: '' }];
+      return `<label>Options (coche la bonne réponse)</label><div id="opts">${opts.map((o) => optRow(o, o.id === a.option_id)).join('')}</div>
+        <button class="btn ghost" id="addOpt" type="button">+ option</button>`;
+    }
+    case 'true_false':
+      return `<label>Bonne réponse</label><select id="tf"><option value="true" ${a.value === true ? 'selected' : ''}>Vrai</option><option value="false" ${a.value === false ? 'selected' : ''}>Faux</option></select>`;
+    case 'numeric':
+      return `<div class="row"><div><label>Réponse</label><input id="numVal" type="number" step="any" value="${esc(a.value)}"></div>
+        <div><label>Tolérance ±</label><input id="numTol" type="number" step="any" value="${esc(a.tolerance ?? 0)}"></div>
+        <div><label>Unité</label><input id="numUnit" value="${esc(p.unit)}"></div></div>`;
+    case 'ordering': {
+      const items = (a.order ?? []).map((id) => p.items?.find((i) => i.id === id)).filter(Boolean);
+      return `<label>Éléments, dans le bon ordre (un par ligne)</label><textarea id="ordItems">${esc(items.map((i) => i.text).join('\n'))}</textarea>`;
+    }
+    case 'pairs': {
+      const rows = (p.left ?? []).map((l) => `${l.text} = ${p.right?.find((r) => r.id === a.pairs?.[l.id])?.text ?? ''}`);
+      return `<label>Associations (une par ligne : gauche = droite)</label><textarea id="pairItems">${esc(rows.join('\n'))}</textarea>`;
+    }
+    default:
+      return `<label>Payload (JSON)</label><textarea id="rawPayload" style="min-height:120px">${esc(JSON.stringify(p, null, 1))}</textarea>
+        <label>Réponse (JSON)</label><textarea id="rawAnswer">${esc(JSON.stringify(a))}</textarea>`;
+  }
+}
+const optRow = (o, on) => `<div class="opt" data-id="${esc(o.id)}"><input type="radio" name="good" ${on ? 'checked' : ''}><input type="text" value="${esc(o.text)}"><button class="btn ghost" type="button" data-rm>✕</button></div>`;
+
+function collectAnswer(q, box) {
+  const t = q.type, p = { ...(q.payload ?? {}) };
+  if (t === 'mcq') {
+    const rows = [...box.querySelectorAll('.opt')].map((r) => ({ id: r.dataset.id, text: r.querySelector('input[type=text]').value.trim(), good: r.querySelector('input[type=radio]').checked }))
+      .filter((r) => r.text);
+    if (rows.length < 2) throw new Error('Au moins deux options');
+    const good = rows.find((r) => r.good); if (!good) throw new Error('Coche la bonne réponse');
+    if (new Set(rows.map((r) => r.text.toLowerCase())).size !== rows.length) throw new Error('Options en double');
+    p.options = rows.map(({ id, text }) => ({ id, text }));
+    return { payload: p, answer: { option_id: good.id } };
+  }
+  if (t === 'true_false') return { payload: p, answer: { value: $('#tf', box).value === 'true' } };
+  if (t === 'numeric') {
+    const v = Number($('#numVal', box).value); if (!Number.isFinite(v)) throw new Error('Réponse numérique invalide');
+    const unit = $('#numUnit', box).value.trim();
+    const decimals = (String($('#numVal', box).value).split(/[.,]/)[1] ?? '').length;
+    return { payload: { ...p, decimals, allow_negative: v < 0, ...(unit ? { unit } : { unit: undefined }) },
+             answer: { value: v, tolerance: Number($('#numTol', box).value) || 0 } };
+  }
+  if (t === 'ordering') {
+    const texts = $('#ordItems', box).value.split('\n').map((s) => s.trim()).filter(Boolean);
+    if (texts.length < 3) throw new Error('Au moins trois éléments');
+    const items = texts.map((text) => ({ id: p.items?.find((i) => i.text === text)?.id ?? newId(), text }));
+    return { payload: { ...p, items: [...items].sort(() => Math.random() - 0.5) }, answer: { order: items.map((i) => i.id) } };
+  }
+  if (t === 'pairs') {
+    const rows = $('#pairItems', box).value.split('\n').map((s) => s.split('=').map((x) => x.trim())).filter((r) => r.length === 2 && r[0] && r[1]);
+    if (rows.length < 3) throw new Error('Au moins trois associations');
+    const left = rows.map(([l]) => ({ id: p.left?.find((i) => i.text === l)?.id ?? newId(), text: l }));
+    const right = rows.map(([, r]) => ({ id: p.right?.find((i) => i.text === r)?.id ?? newId(), text: r }));
+    return { payload: { ...p, left, right: [...right].sort(() => Math.random() - 0.5) },
+             answer: { pairs: Object.fromEntries(left.map((l, i) => [l.id, right[i].id])) } };
+  }
+  return { payload: JSON.parse($('#rawPayload', box).value), answer: JSON.parse($('#rawAnswer', box).value) };
+}
+
+function openEditor(q, onClose) {
+  const isNew = !q.id;
+  q = { type: 'mcq', status: 'draft', payload: {}, answer: {}, difficulty_min: 40, difficulty_max: 60, ...q };
+  const theme = q.subdomain_id && q.subdomain_id !== '-' ? q.subdomain_id : (q.concept_id ?? '').split('.').slice(0, 2).join('.');
+  const m = document.createElement('div');
+  m.className = 'modal';
+  m.innerHTML = `<div class="card">
+    <div class="row"><h2 style="flex:3">${isNew ? 'Nouvelle question' : 'Modifier la question'}</h2>
+      <div style="flex:0">${isNew ? '' : statusPill(q.status)}</div><div style="flex:0"><button class="btn ghost" data-close>Fermer</button></div></div>
+    ${q.external_key ? `<p class="small muted">Clé : ${esc(q.external_key)} · ${q.answer_count ?? 0} réponses · réussite ${pct(q.success_rate)} · difficulté ${Math.round(q.difficulty_effective ?? 50)}</p>` : ''}
+    <div class="row">
+      <div><label>Thème</label><select id="eTheme">${state.domains.map((d) => `<optgroup label="${esc(d.name)}">${state.subdomains.filter((s) => s.domain_id === d.id && s.is_active !== false).map((s) => `<option value="${s.id}" ${s.id === theme ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</optgroup>`).join('')}</select></div>
+      <div><label>Type</label><select id="eType" ${isNew ? '' : 'disabled'}>${Object.entries(TYPES).map(([k, v]) => `<option value="${k}" ${q.type === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+      <div><label>Difficulté min</label><input id="eMin" type="number" min="0" max="100" value="${Math.round(q.difficulty_min)}"></div>
+      <div><label>Difficulté max</label><input id="eMax" type="number" min="0" max="100" value="${Math.round(q.difficulty_max)}"></div>
+    </div>
+    <label style="margin-top:10px">Énoncé</label><textarea id="ePrompt">${esc(q.prompt)}</textarea>
+    <div id="ans" style="margin-top:10px">${answerEditor(q)}</div>
+    <label style="margin-top:10px">Explication (affichée après la réponse)</label><textarea id="eExpl">${esc(q.explanation)}</textarea>
+    <div class="row" style="margin-top:10px">
+      <div><label>À retenir</label><input id="eTake" value="${esc(q.takeaway)}"></div>
+      <div><label>Indice (aide payante)</label><input id="eHint" value="${esc(q.hint)}"></div>
+      <div><label>Source</label><input id="eSource" value="${esc(q.source)}"></div>
+    </div>
+    <div id="reports"></div>
+    <div class="row" style="margin-top:16px">
+      <div style="flex:0"><button class="btn" id="eSave">Enregistrer</button></div>
+      ${isNew ? '' : `<div style="flex:0"><button class="btn ok" data-status="published">Publier</button></div>
+      <div style="flex:0"><button class="btn bad" data-status="disabled">Désactiver</button></div>`}
+    </div></div>`;
+  document.body.appendChild(m);
+  const close = () => { m.remove(); onClose?.(); };
+  m.querySelector('[data-close]').onclick = close;
+  const wireOpts = () => {
+    m.querySelectorAll('[data-rm]').forEach((b) => b.onclick = () => b.parentElement.remove());
+    const add = $('#addOpt', m); if (add) add.onclick = () => { $('#opts', m).insertAdjacentHTML('beforeend', optRow({ id: newId(), text: '' }, false)); wireOpts(); };
+  };
+  wireOpts();
+  $('#eType', m).onchange = () => { q.type = $('#eType', m).value; q.payload = {}; q.answer = {}; $('#ans', m).innerHTML = answerEditor(q); wireOpts(); };
+
+  if (!isNew) rpc('admin_question_reports', { p_question: q.id }).then((reps) => {
+    if (!reps.length) return;
+    const open = reps.filter((r) => !r.resolved_at);
+    $('#reports', m).innerHTML = `<h3>Signalements (${open.length} ouvert${open.length > 1 ? 's' : ''})</h3>
+      <table>${reps.map((r) => `<tr><td><span class="pill ${r.resolved_at ? '' : 'bad'}">${REASONS[r.reason] ?? r.reason}</span></td><td>${esc(r.note ?? '')}</td>
+        <td class="small muted">${esc(r.handle)} · ${new Date(r.created_at).toLocaleDateString('fr-FR')}</td></tr>`).join('')}</table>
+      ${open.length ? '<p><button class="btn sun" id="resolve">Clore les signalements</button></p>' : ''}`;
+    const b = $('#resolve', m); if (b) b.onclick = async () => { await rpc('admin_resolve_reports', { p_question: q.id }); toast('Signalements clos'); close(); };
+  }).catch(() => {});
+
+  $('#eSave', m).onclick = async () => {
+    try {
+      const prompt = $('#ePrompt', m).value.trim(), explanation = $('#eExpl', m).value.trim();
+      if (prompt.length < 5) throw new Error('Énoncé trop court');
+      if (explanation.length < 10) throw new Error('Explication trop courte');
+      const min = Number($('#eMin', m).value), max = Number($('#eMax', m).value);
+      if (!(min >= 0 && max <= 100 && min <= max)) throw new Error('Difficulté min/max invalides');
+      const { payload, answer } = collectAnswer(q, m);
+      const themeId = $('#eTheme', m).value;
+      const concept = isNew || !q.concept_id?.startsWith(themeId + '.') ? `${themeId}.${slug(prompt)}_${newId().slice(0, 4)}` : q.concept_id;
+      const body = { id: q.id, concept_id: concept, concept_label: prompt.slice(0, 80), type: q.type, prompt, explanation, payload, answer,
+        takeaway: $('#eTake', m).value.trim() || null, hint: $('#eHint', m).value.trim() || null, source: $('#eSource', m).value.trim() || null,
+        difficulty_min: min, difficulty_max: max, status: q.status };
+      if (isNew) { body.difficulty = Math.round((min + max) / 2); delete body.id; }
+      const id = await rpc('admin_question_upsert', { p: body });
+      q.id = q.id ?? id;
+      toast(isNew ? 'Question créée (brouillon)' : 'Enregistré');
+      if (isNew) { close(); openEditor({ ...body, id }, onClose); }
+    } catch (e) { toast(e.message, true); }
+  };
+  m.querySelectorAll('[data-status]').forEach((b) => b.onclick = async () => {
+    try { await rpc('admin_question_set_status', { p_id: q.id, p_status: b.dataset.status }); toast(STATUS[b.dataset.status]); close(); }
+    catch (e) { toast(e.message, true); }
+  });
+}
+
+// ───────────────────────── 5 du jour
+async function renderDaily(date = new Date().toISOString().slice(0, 10)) {
+  let d = await rpc('admin_daily_get', { p_date: date });
+  app.innerHTML = `<div class="card"><div class="row">
+      <div><label>Date</label><input id="dDate" type="date" value="${date}"></div>
+      <div style="flex:0"><button class="btn ghost" id="dGen">Générer si absent</button></div></div>
+      <p class="muted small">${d.runs_started ?? 0} partie(s) commencée(s) ce jour. Remplacer une question après le début est déconseillé (équité) et demande une confirmation.</p></div>
+    <div class="card"><h2>Questions du ${new Date(date + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' })}</h2>
+    ${(d.items ?? []).length ? `<table>${d.items.map((i) => `<tr><td style="width:40px"><b>${i.position}</b></td>
+      <td>${chip(i.question.domain_id)} <span class="small muted">${esc(i.slot)}</span><div>${esc(i.question.prompt)}</div>
+        <div class="small muted">difficulté ${Math.round(i.question.difficulty_effective)}${i.replaced_at ? ' · remplacée' : ''}</div></td>
+      <td style="width:120px"><button class="btn ghost" data-pos="${i.position}" data-domain="${i.question.domain_id}">Remplacer</button></td></tr>`).join('')}</table>`
+      : '<p class="muted">Pas encore de série pour cette date.</p>'}</div>`;
+  $('#dDate').onchange = () => renderDaily($('#dDate').value);
+  $('#dGen').onclick = async () => { await rpc('admin_daily_generate', { p_date: $('#dDate').value }); renderDaily($('#dDate').value); };
+  app.querySelectorAll('[data-pos]').forEach((b) => b.onclick = () => pickReplacement(date, Number(b.dataset.pos), b.dataset.domain, d.runs_started > 0));
+}
+async function pickReplacement(date, position, domain, started) {
+  const m = document.createElement('div');
+  m.className = 'modal';
+  m.innerHTML = `<div class="card"><div class="row"><h2 style="flex:3">Remplacer la question ${position}</h2><div style="flex:0"><button class="btn ghost" data-close>Fermer</button></div></div>
+    <div class="row"><div style="flex:3"><input id="rSearch" placeholder="Rechercher une question publiée…"></div><div style="flex:0"><button class="btn" id="rGo">Chercher</button></div></div>
+    <div id="rList" style="margin-top:12px"></div></div>`;
+  document.body.appendChild(m);
+  m.querySelector('[data-close]').onclick = () => m.remove();
+  const search = async () => {
+    const res = await rpc('admin_questions', { p_filter: { status: 'published', domain_id: domain, search: $('#rSearch', m).value || undefined }, p_limit: 30, p_offset: 0 });
+    $('#rList', m).innerHTML = `<table>${res.items.map((q) => `<tr class="click" data-id="${q.id}"><td>${esc(q.prompt)}</td><td>${Math.round(q.difficulty_effective)}</td></tr>`).join('')}</table>`;
+    m.querySelectorAll('tr.click').forEach((tr) => tr.onclick = async () => {
+      if (started && !confirm('Des joueurs ont déjà commencé ce 5 du jour. Remplacer quand même ?')) return;
+      try { await rpc('admin_daily_replace', { p_date: date, p_position: position, p_question: tr.dataset.id, p_force: started }); toast('Question remplacée'); m.remove(); renderDaily(date); }
+      catch (e) { toast(e.message, true); }
+    });
+  };
+  $('#rGo', m).onclick = search;
+  search();
+}
+
+// ───────────────────────── Navigation
+async function render() {
+  $('#nav').classList.toggle('hidden', !state.session);
+  $('#me').innerHTML = state.session ? `${esc(state.session.user?.email ?? '')} · <a href="#" id="out" style="color:#fff">Déconnexion</a>` : '';
+  if (state.session) $('#out').onclick = (e) => { e.preventDefault(); logout(); };
+  if (!state.config) return renderConfig();
+  if (!state.session) return renderLogin();
+  document.querySelectorAll('#nav button').forEach((b) => b.classList.toggle('on', b.dataset.view === state.view));
+  app.innerHTML = '<p class="muted">Chargement…</p>';
+  try {
+    if (!(await rpc('is_admin'))) { app.innerHTML = `<div class="card center"><h2>Accès refusé</h2><p>Ce compte n'est pas administrateur. Ajoute-le dans la table <code>app_admins</code>.</p></div>`; return; }
+    await loadTaxonomy();
+    if (state.view === 'dashboard') await renderDashboard();
+    else if (state.view === 'questions') await renderQuestions();
+    else if (state.view === 'reports') await renderQuestions({ reported: true });
+    else if (state.view === 'daily') await renderDaily();
+    else if (state.view === 'new') { app.innerHTML = '<div class="card"><p class="muted">Nouvelle question : elle est créée en brouillon, puis publiée depuis l\'éditeur.</p></div>'; openEditor({}, () => { state.view = 'questions'; render(); }); }
+  } catch (e) { app.innerHTML = `<div class="card"><h2>Erreur</h2><pre>${esc(e.message)}</pre></div>`; }
+}
+document.querySelectorAll('#nav button').forEach((b) => b.onclick = () => { state.view = b.dataset.view; if (b.dataset.view !== 'reports') state.filter.reported = undefined; render(); });
+render();
+</script>
+</body>
+</html>

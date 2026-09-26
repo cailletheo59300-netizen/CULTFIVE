@@ -17,6 +17,8 @@ public protocol GameService: Sendable {
     func playPack(mode: PlayMode, domain: String?, subdomains: [String], count: Int, ranked: Bool, level: PlayLevel) async throws -> PlayPack
     func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult
     func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent
+    /// Signalement d'une question (réponse fausse, ambiguë, faute, plus à jour, autre).
+    func reportQuestion(_ question: UUID, reason: String, note: String?) async throws
 
     // Profil & progression
     func profile() async throws -> Profile
@@ -108,6 +110,11 @@ public struct LiveGameService: GameService {
                                         "p_subdomains": subdomains.isEmpty ? .null : .array(subdomains.map(JSONValue.string)),
                                         "p_count": .number(Double(count)), "p_ranked": .bool(ranked),
                                         "p_level": .string(level.rawValue)])
+    }
+
+    public func reportQuestion(_ question: UUID, reason: String, note: String?) async throws {
+        try await api.rpcVoid("report_question", ["p_question": .string(question.uuidString),
+                                                  "p_reason": .string(reason), "p_note": optional(note)])
     }
 
     public func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult {
@@ -215,6 +222,7 @@ public struct LiveGameService: GameService {
 
     public func subdomains() async throws -> [SubdomainInfo] {
         try await api.select("subdomains", query: [URLQueryItem(name: "select", value: "id,domain_id,name,sort"),
+                                                   URLQueryItem(name: "is_active", value: "eq.true"),
                                                    URLQueryItem(name: "order", value: "sort")])
     }
 }

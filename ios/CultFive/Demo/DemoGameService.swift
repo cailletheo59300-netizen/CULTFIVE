@@ -180,6 +180,8 @@ struct DemoGameService: GameService {
         return try decode(.object(content))
     }
 
+    func reportQuestion(_ question: UUID, reason: String, note: String?) async throws {}
+
     // MARK: Profil
 
     /// Profil d'exemple, avec les graines et les erreurs de la séance de démo.

@@ -1,6 +1,8 @@
 # Changelog
 
 ## 0.7.0 — thèmes et contenu
+- **Admin web** (`admin/index.html`) : tableau de bord par thème, liste filtrable et triable (difficulté, réussite, signalements), éditeur par type de question, publication/désactivation, 5 du jour (générer, remplacer), signalements.
+- **Signaler une question** dans l'app (réponse fausse, ambiguë, plus à jour, faute, autre) → « à revoir » côté admin. Migration 0012 (`question_reports`, `report_question`, `admin_questions` triable, `admin_resolve_reports`, thèmes retirés inactifs).
 - Thèmes réorganisés : 3 à 5 par domaine, chacun ≥ ~20 questions. Histoire par époques (date → période), Géographie en 5 thèmes, Logique + Énigmes, nouveaux thèmes Mythologie, Architecture, Champions, Acteurs, Animation, Entreprises & marques, Vie marine, Planète & climat.
 - +727 questions : Wikidata (lunes, points culminants, décennies de films, castings), 43 suites logiques calculées, ~400 questions écrites à la main. Banque : 3 870.
 - Démo : 8 questions par thème, liste des thèmes à jour.

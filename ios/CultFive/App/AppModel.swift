@@ -262,6 +262,7 @@ struct UnavailableService: GameService {
                   level: PlayLevel) async throws -> PlayPack { try fail() }
     func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult { try fail() }
     func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent { try fail() }
+    func reportQuestion(_ question: UUID, reason: String, note: String?) async throws { try fail() as Void }
     func profile() async throws -> Profile { try fail() }
     func handleAvailable(_ handle: String) async throws -> HandleAvailability { try fail() }
     func setHandle(_ handle: String) async throws -> Profile { try fail() }

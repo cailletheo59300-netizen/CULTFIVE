@@ -154,6 +154,9 @@ struct RevealPanel: View {
     let given: GivenAnswer?
     var badge: String?
 
+    @State private var reporting = false
+    @State private var reported = false
+
     var body: some View {
         VStack(alignment: .leading, spacing: Space.m) {
             HStack(alignment: .center, spacing: Space.s) {
@@ -202,14 +205,27 @@ struct RevealPanel: View {
                                 in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
                 }
 
-                if let source = reveal.source {
-                    Text(sourceLine(source)).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                HStack(alignment: .firstTextBaseline) {
+                    if let source = reveal.source {
+                        Text(sourceLine(source)).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    }
+                    Spacer()
+                    Button { reporting = true } label: {
+                        Label(reported ? "Merci !" : "Signaler", systemImage: reported ? "checkmark" : "flag")
+                            .font(.cfFootnote.weight(.bold))
+                    }
+                    .buttonStyle(TextLinkStyle(color: .inkSoft))
+                    .disabled(reported)
+                    .accessibilityLabel("Signaler une erreur dans cette question")
                 }
             }
             .popCard()
         }
         .padding(.horizontal, Space.gutter)
         .padding(.top, Space.s)
+        .sheet(isPresented: $reporting) {
+            ReportSheet(questionId: question.id) { reported = true }
+        }
     }
 
     private func sourceLine(_ source: String) -> String {
@@ -232,6 +248,82 @@ enum AnswerText {
             return question.payload.unit.map { "\(text) \($0)" } ?? text
         case .ordering, .pairs, .mapPick:
             return nil
+        }
+    }
+}
+
+/// Signalement d'une question : motif en un toucher, précision facultative. La question passe « à revoir » côté admin.
+struct ReportSheet: View {
+    let questionId: UUID
+    var onDone: () -> Void
+
+    @Environment(AppModel.self) private var app
+    @Environment(\.dismiss) private var dismiss
+    @State private var reason: String?
+    @State private var note = ""
+    @State private var sending = false
+    @State private var error: String?
+
+    private let reasons: [(String, String, String)] = [
+        ("wrong_answer", "La réponse est fausse", "xmark.octagon"),
+        ("ambiguous", "Plusieurs réponses possibles", "questionmark.circle"),
+        ("outdated", "Ce n'est plus à jour", "clock.arrow.circlepath"),
+        ("typo", "Une faute ou une coquille", "textformat"),
+        ("other", "Autre chose", "ellipsis.bubble"),
+    ]
+
+    var body: some View {
+        NavigationStack {
+            VStack(alignment: .leading, spacing: Space.m) {
+                Text("Qu'est-ce qui ne va pas ?").font(.cfHeadline)
+                VStack(spacing: 8) {
+                    ForEach(reasons, id: \.0) { item in
+                        Button { reason = item.0 } label: {
+                            HStack {
+                                Image(systemName: item.2).frame(width: 26)
+                                Text(item.1).font(.system(.body, design: .rounded).weight(.bold))
+                                Spacer()
+                                if reason == item.0 { Image(systemName: "checkmark.circle.fill") }
+                            }
+                            .foregroundStyle(reason == item.0 ? Color.white : Color.ink)
+                            .padding(14)
+                            .background(reason == item.0 ? Color.brand : Color.paperRaised,
+                                        in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+                        }
+                        .buttonStyle(.row)
+                    }
+                }
+                TextField("Précision (facultatif)", text: $note, axis: .vertical)
+                    .lineLimit(2...4)
+                    .padding(12)
+                    .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+                if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
+                Spacer()
+                Button("Envoyer") { send() }
+                    .buttonStyle(.ink)
+                    .disabled(reason == nil || sending)
+            }
+            .padding(Space.gutter)
+            .background(Color.paper)
+            .navigationTitle("Signaler")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar { ToolbarItem(placement: .cancellationAction) { Button("Annuler") { dismiss() } } }
+        }
+        .presentationDetents([.large])
+    }
+
+    private func send() {
+        guard let reason else { return }
+        sending = true
+        Task {
+            do {
+                try await app.service.reportQuestion(questionId, reason: reason, note: note.isEmpty ? nil : String(note.prefix(300)))
+                onDone()
+                dismiss()
+            } catch {
+                self.error = (error as? LocalizedError)?.errorDescription ?? "Envoi impossible. Réessaie plus tard."
+            }
+            sending = false
         }
     }
 }
