@@ -89,6 +89,11 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
     @ViewBuilder private var answerArea: some View {
         switch question.type {
         case .mcq:
+            if let shape = question.payload.shape {
+                CountryShapeView(shape: shape, color: DomainPalette.color(question.domainId))
+                    .frame(height: 210)
+                    .padding(.horizontal, Space.gutter)
+            }
             ChoiceAnswerView(options: question.payload.options ?? [], phase: phase, removed: removedOptions, onSubmit: onSubmit)
         case .trueFalse:
             TrueFalseAnswerView(phase: phase, onSubmit: onSubmit)

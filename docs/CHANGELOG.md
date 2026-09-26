@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+- Nouveaux formats de géographie : localiser une capitale sur la carte, monnaie, langue officielle, site UNESCO → pays, silhouette du pays (nouvel affichage dans l'app).
+- Anti-répétition : familles de questions (migration 0010), variantes de formulation. Banque : 2 716 questions.
+
 ## 0.3.1
 - Daily : le créneau « Surprise » tire d'abord un domaine au hasard (migration 0009, testé sur 60 jours).
 - Explications Wikidata enrichies (contexte des batailles, présentation des auteurs, pays et population pour les capitales).

@@ -6,7 +6,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 59,
-  "prompt": "En quelle année a eu lieu la bataille de Verdun ?",
+  "prompt": "La bataille de Verdun s'est déroulée en…",
   "options": [
    "1891",
    "1916*",
@@ -14,6 +14,7 @@
    "1956"
   ],
   "explanation": "La bataille de Verdun a eu lieu le 21 février 1916. Contexte : bataille de la Première Guerre mondiale en 1916.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -24,7 +25,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 58,
-  "prompt": "En quelle année a eu lieu la bataille de Koursk ?",
+  "prompt": "La bataille de Koursk s'est déroulée en…",
   "options": [
    "1940",
    "1943*",
@@ -32,6 +33,7 @@
    "1958"
   ],
   "explanation": "La bataille de Koursk a eu lieu en 1943. Contexte : bataille de la Seconde Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -50,6 +52,7 @@
    "1925"
   ],
   "explanation": "La bataille de la Somme a eu lieu le 1er juillet 1916. Contexte : bataille de la Première Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -60,7 +63,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 58,
-  "prompt": "En quelle année a eu lieu la bataille d'Austerlitz ?",
+  "prompt": "La bataille d'Austerlitz s'est déroulée en…",
   "options": [
    "1802",
    "1805*",
@@ -68,6 +71,7 @@
    "1820"
   ],
   "explanation": "La bataille d'Austerlitz a eu lieu le 2 décembre 1805. Contexte : bataille entre l'Empire français et la Troisième Coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -78,7 +82,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille du lac Peïpous ?",
+  "prompt": "La bataille du lac Peïpous s'est déroulée en…",
   "options": [
    "1227",
    "1237",
@@ -86,6 +90,7 @@
    "1257"
   ],
   "explanation": "La bataille du lac Peïpous a eu lieu le 12 avril 1242. Contexte : bataille des guerres teutoniques.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -104,6 +109,7 @@
    "1838"
   ],
   "explanation": "La bataille de Leipzig a eu lieu le 16 octobre 1813. Contexte : importante bataille de la guerre de la Sixième Coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -114,7 +120,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille de Moscou ?",
+  "prompt": "Quand a eu lieu la bataille de Moscou ?",
   "options": [
    "1932",
    "1941*",
@@ -122,6 +128,7 @@
    "1950"
   ],
   "explanation": "La bataille de Moscou a eu lieu en 1941. Contexte : bataille de la Seconde Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -132,7 +139,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille de Poltava ?",
+  "prompt": "La bataille de Poltava s'est déroulée en…",
   "options": [
    "1669",
    "1684",
@@ -140,6 +147,7 @@
    "1712"
   ],
   "explanation": "La bataille de Poltava a eu lieu le 8 juillet 1709. Contexte : bataille de la grande guerre du Nord en 1709.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -150,7 +158,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Crète ?",
+  "prompt": "Quand a eu lieu la bataille de Crète ?",
   "options": [
    "1916",
    "1926",
@@ -158,6 +166,7 @@
    "1944"
   ],
   "explanation": "La bataille de Crète a eu lieu le 20 mai 1941. Contexte : bataille de la Seconde Guerre mondiale, du 20 au 31 mai 1941.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -168,7 +177,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille de Tannenberg ?",
+  "prompt": "Quand a eu lieu la bataille de Tannenberg ?",
   "options": [
    "1889",
    "1905",
@@ -176,6 +185,7 @@
    "1929"
   ],
   "explanation": "La bataille de Tannenberg a eu lieu le 23 août 1914. Contexte : bataille de la Première Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -186,7 +196,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille d'Iéna ?",
+  "prompt": "La bataille d'Iéna s'est déroulée en…",
   "options": [
    "1781",
    "1806*",
@@ -194,6 +204,7 @@
    "1831"
   ],
   "explanation": "La bataille d'Iéna a eu lieu le 14 octobre 1806. Contexte : bataille décisive des guerres napoléoniennes, permettant à la Grande Armée française d'occuper la Prusse.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -212,6 +223,7 @@
    "1729"
   ],
   "explanation": "La bataille de Höchstädt a eu lieu le 13 août 1704. Contexte : bataille de la guerre de Succession d'Espagne.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -222,7 +234,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Narva ?",
+  "prompt": "Quand a eu lieu la bataille de Narva ?",
   "options": [
    "1660",
    "1700*",
@@ -230,6 +242,7 @@
    "1740"
   ],
   "explanation": "La bataille de Narva a eu lieu le 30 novembre 1700. Contexte : bataille de la grande guerre du Nord.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -240,7 +253,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille de Sedan ?",
+  "prompt": "Quand a eu lieu la bataille de Sedan ?",
   "options": [
    "1830",
    "1855",
@@ -248,6 +261,7 @@
    "1870*"
   ],
   "explanation": "La bataille de Sedan a eu lieu le 1er septembre 1870. Contexte : bataille de la guerre franco-allemande de 1870.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -258,7 +272,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Legnica ?",
+  "prompt": "Quand a eu lieu la bataille de Legnica ?",
   "options": [
    "1201",
    "1216",
@@ -266,6 +280,7 @@
    "1250"
   ],
   "explanation": "La bataille de Legnica a eu lieu le 16 avril 1241. Contexte : bataille près de Legnica, Basse-Silésie, entre Turco-Mongols et Polonais, XIIIe siècle.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -276,7 +291,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Kiev ?",
+  "prompt": "Quand a eu lieu la bataille de Kiev ?",
   "options": [
    "1926",
    "1932",
@@ -284,6 +299,7 @@
    "1941*"
   ],
   "explanation": "La bataille de Kiev a eu lieu en 1941. Contexte : prise de Kiev par l'Allemagne nazie, 1941.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -302,6 +318,7 @@
    "1944"
   ],
   "explanation": "La bataille de Smolensk a eu lieu en 1941. Contexte : bataille du front de l'Est, Seconde Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -312,7 +329,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille de Mohács ?",
+  "prompt": "La bataille de Mohács s'est déroulée en…",
   "options": [
    "1526*",
    "1529",
@@ -320,6 +337,7 @@
    "1551"
   ],
   "explanation": "La bataille de Mohács a eu lieu le 29 août 1526. Contexte : victoire de l'Empire ottoman en 1526.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -330,7 +348,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 61,
-  "prompt": "En quelle année a eu lieu la bataille de Kosovo Polje ?",
+  "prompt": "Quand a eu lieu la bataille de Kosovo Polje ?",
   "options": [
    "1349",
    "1364",
@@ -338,6 +356,7 @@
    "1404"
   ],
   "explanation": "La bataille de Kosovo Polje a eu lieu le 6 juillet 1389. Contexte : bataille de 1389 opposant les Ottomans aux peuples des Balkans.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -348,7 +367,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille d'Iwo Jima ?",
+  "prompt": "La bataille d'Iwo Jima s'est déroulée en…",
   "options": [
    "1940",
    "1945*",
@@ -356,6 +375,7 @@
    "1985"
   ],
   "explanation": "La bataille d'Iwo Jima a eu lieu le 8 février 1945. Contexte : engagement terrestre allié majeur de 1945, campagne des archipels Ogasawa et Ryūkyū, guerre du Pacifique.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -366,7 +386,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille de la Moskova ?",
+  "prompt": "Quand a eu lieu la bataille de la Moskova ?",
   "options": [
    "1812*",
    "1821",
@@ -374,6 +394,7 @@
    "1837"
   ],
   "explanation": "La bataille de la Moskova a eu lieu le 7 septembre 1812. Contexte : bataille de la guerre de la Sixième Coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -384,7 +405,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille d'Azincourt ?",
+  "prompt": "Quand a eu lieu la bataille d'Azincourt ?",
   "options": [
    "1375",
    "1410",
@@ -392,6 +413,7 @@
    "1440"
   ],
   "explanation": "La bataille d'Azincourt a eu lieu le 3 novembre 1415. Contexte : bataille de la guerre de Cent Ans.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -410,6 +432,7 @@
    "1954"
   ],
   "explanation": "La bataille de Halhin Gol a eu lieu le 11 mai 1939. Contexte : engagement militaire important de 1939 entre l'Union Soviétique et l'Empire du Japon.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -420,7 +443,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 61,
-  "prompt": "En quelle année a eu lieu la bataille d'Okinawa ?",
+  "prompt": "La bataille d'Okinawa s'est déroulée en…",
   "options": [
    "1945*",
    "1950",
@@ -428,6 +451,7 @@
    "1985"
   ],
   "explanation": "La bataille d'Okinawa a eu lieu en 1945. Contexte : engagement terrestre majeur allié, campagne des archipels Ogasawa et Ryūkyū (1945), guerre du Pacifique.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -438,7 +462,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille de Manzikert ?",
+  "prompt": "Quand a eu lieu la bataille de Manzikert ?",
   "options": [
    "1062",
    "1071*",
@@ -446,6 +470,7 @@
    "1086"
   ],
   "explanation": "La bataille de Manzikert a eu lieu le 1er septembre 1071. Contexte : bataille opposant les Byzantins aux Seldjoukides en 1071.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -456,7 +481,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille de Vienne ?",
+  "prompt": "Quand a eu lieu la bataille de Vienne ?",
   "options": [
    "1674",
    "1683*",
@@ -464,6 +489,7 @@
    "1698"
   ],
   "explanation": "La bataille de Vienne a eu lieu le 12 septembre 1683. Contexte : bataille de la grande guerre turque.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -474,7 +500,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 62,
-  "prompt": "En quelle année a eu lieu la bataille de Stamford Bridge ?",
+  "prompt": "Quand a eu lieu la bataille de Stamford Bridge ?",
   "options": [
    "1051",
    "1057",
@@ -482,6 +508,7 @@
    "1071"
   ],
   "explanation": "La bataille de Stamford Bridge a eu lieu le 25 septembre 1066. Contexte : bataille de 1066.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -492,7 +519,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 61,
-  "prompt": "En quelle année a eu lieu la bataille de Plassey ?",
+  "prompt": "La bataille de Plassey s'est déroulée en…",
   "options": [
    "1742",
    "1757*",
@@ -500,6 +527,7 @@
    "1782"
   ],
   "explanation": "La bataille de Plassey a eu lieu le 23 juin 1757.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -510,7 +538,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille de Little Bighorn ?",
+  "prompt": "La bataille de Little Bighorn s'est déroulée en…",
   "options": [
    "1836",
    "1867",
@@ -518,6 +546,7 @@
    "1876*"
   ],
   "explanation": "La bataille de Little Bighorn a eu lieu le 25 juin 1876. Contexte : bataille de la guerre des Black Hills.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -536,6 +565,7 @@
    "1955"
   ],
   "explanation": "La bataille de Dunkerque a eu lieu le 26 mai 1940. Contexte : bataille de la Seconde Guerre mondiale, 1940.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -546,7 +576,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 62,
-  "prompt": "En quelle année a eu lieu la bataille d'Ankara ?",
+  "prompt": "La bataille d'Ankara s'est déroulée en…",
   "options": [
    "1397",
    "1402*",
@@ -554,6 +584,7 @@
    "1411"
   ],
   "explanation": "La bataille d'Ankara a eu lieu le 29 juillet 1402. Contexte : bataille turco-mongole.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -564,7 +595,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 62,
-  "prompt": "En quelle année a eu lieu la bataille de Koulikovo ?",
+  "prompt": "La bataille de Koulikovo s'est déroulée en…",
   "options": [
    "1355",
    "1375",
@@ -572,6 +603,7 @@
    "1405"
   ],
   "explanation": "La bataille de Koulikovo a eu lieu le 16 septembre 1380. Contexte : bataille entre les Mongols et les russes en 1380.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -582,7 +614,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Nicopolis ?",
+  "prompt": "La bataille de Nicopolis s'est déroulée en…",
   "options": [
    "1387",
    "1396*",
@@ -590,6 +622,7 @@
    "1411"
   ],
   "explanation": "La bataille de Nicopolis a eu lieu le 25 septembre 1396. Contexte : bataille opposant les Ottomans à une coalition chrétienne.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -600,7 +633,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Las Navas de Tolosa ?",
+  "prompt": "Quand a eu lieu la bataille de Las Navas de Tolosa ?",
   "options": [
    "1197",
    "1212*",
@@ -608,6 +641,7 @@
    "1237"
   ],
   "explanation": "La bataille de Las Navas de Tolosa a eu lieu le 23 juillet 1212. Contexte : En 1212, bataille entre les armées chrétiennes de la péninsule ibérique et les armées musulmanes de l'empire almohade.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -618,7 +652,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Bosworth ?",
+  "prompt": "La bataille de Bosworth s'est déroulée en…",
   "options": [
    "1445",
    "1476",
@@ -626,6 +660,7 @@
    "1485*"
   ],
   "explanation": "La bataille de Bosworth a eu lieu le 22 août 1485. Contexte : bataille de la guerre des Deux-Roses.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -636,7 +671,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille de Bannockburn ?",
+  "prompt": "Quand a eu lieu la bataille de Bannockburn ?",
   "options": [
    "1289",
    "1311",
@@ -644,6 +679,7 @@
    "1354"
   ],
   "explanation": "La bataille de Bannockburn a eu lieu le 1er juillet 1314. Contexte : bataille des guerres d'indépendance de l'Écosse.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -654,7 +690,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 60,
-  "prompt": "En quelle année a eu lieu la bataille de Hattin ?",
+  "prompt": "Quand a eu lieu la bataille de Hattin ?",
   "options": [
    "1178",
    "1187*",
@@ -662,6 +698,7 @@
    "1196"
   ],
   "explanation": "La bataille de Hattin a eu lieu le 10 juillet 1187. Contexte : victoire de Saladin contre les États croisés, 1187.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -680,6 +717,7 @@
    "1609"
   ],
   "explanation": "La bataille de Sekigahara a eu lieu le 21 octobre 1600. Contexte : événement majeur de l’histoire du Japon.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -690,7 +728,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Friedland ?",
+  "prompt": "Quand a eu lieu la bataille de Friedland ?",
   "options": [
    "1782",
    "1798",
@@ -698,6 +736,7 @@
    "1822"
   ],
   "explanation": "La bataille de Friedland a eu lieu le 14 juin 1807. Contexte : bataille de la guerre de la Quatrième Coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -716,6 +755,7 @@
    "1917*"
   ],
   "explanation": "La bataille de Caporetto a eu lieu le 24 octobre 1917. Contexte : bataille de la Première Guerre mondiale dans le nord de l'Italie, 1917.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -726,7 +766,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille d'Aïn Djalout ?",
+  "prompt": "La bataille d'Aïn Djalout s'est déroulée en…",
   "options": [
    "1220",
    "1245",
@@ -734,6 +774,7 @@
    "1260*"
   ],
   "explanation": "La bataille d'Aïn Djalout a eu lieu le 10 septembre 1260. Contexte : bataille des invasions mongoles en Syrie.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -744,7 +785,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille des Pays-Bas ?",
+  "prompt": "La bataille des Pays-Bas s'est déroulée en…",
   "options": [
    "1915",
    "1931",
@@ -752,6 +793,7 @@
    "1955"
   ],
   "explanation": "La bataille des Pays-Bas a eu lieu le 14 mai 1940. Contexte : invasion du territoire néerlandais par les forces allemandes en 1940.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -770,6 +812,7 @@
    "1815"
   ],
   "explanation": "La bataille de Marengo a eu lieu le 14 juin 1800. Contexte : victoire française décisive lors de la deuxième coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -788,6 +831,7 @@
    "1386"
   ],
   "explanation": "La bataille de Crécy a eu lieu le 3 septembre 1346. Contexte : bataille de la guerre de Cent Ans.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -798,7 +842,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Singapour ?",
+  "prompt": "La bataille de Singapour s'est déroulée en…",
   "options": [
    "1937",
    "1942*",
@@ -806,6 +850,7 @@
    "1967"
   ],
   "explanation": "La bataille de Singapour a eu lieu le 8 février 1942. Contexte : opération militaire japonaise majeure, invasion et occupation (1942), Théâtre du Sud-Est asiatique, guerre du Pacifique.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -816,7 +861,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille d'Adoua ?",
+  "prompt": "Quand a eu lieu la bataille d'Adoua ?",
   "options": [
    "1881",
    "1893",
@@ -824,6 +869,7 @@
    "1936"
   ],
   "explanation": "La bataille d'Adoua a eu lieu le 1er mars 1896. Contexte : bataille de la première guerre italo-éthiopienne, 1896.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -842,6 +888,7 @@
    "1868"
   ],
   "explanation": "La bataille de Solférino a eu lieu le 24 juin 1859. Contexte : bataille de la campagne d'Italie de 1859.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -852,7 +899,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille d'Aix-la-Chapelle ?",
+  "prompt": "La bataille d'Aix-la-Chapelle s'est déroulée en…",
   "options": [
    "1944*",
    "1949",
@@ -860,6 +907,7 @@
    "1959"
   ],
   "explanation": "La bataille d'Aix-la-Chapelle a eu lieu le 2 octobre 1944. Contexte : bataille de la Seconde Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -878,6 +926,7 @@
    "1447"
   ],
   "explanation": "La bataille de Varna a eu lieu le 10 novembre 1444. Contexte : bataille opposant l'armée ottomane aux croisés.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -888,7 +937,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 61,
-  "prompt": "En quelle année a eu lieu la bataille de Gettysburg ?",
+  "prompt": "Quand a eu lieu la bataille de Gettysburg ?",
   "options": [
    "1863*",
    "1868",
@@ -896,6 +945,7 @@
    "1903"
   ],
   "explanation": "La bataille de Gettysburg a eu lieu le 1er juillet 1863. Contexte : bataille de la guerre de Sécession.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -906,7 +956,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille d'Eylau ?",
+  "prompt": "La bataille d'Eylau s'est déroulée en…",
   "options": [
    "1798",
    "1804",
@@ -914,6 +964,7 @@
    "1810"
   ],
   "explanation": "La bataille d'Eylau a eu lieu le 7 février 1807. Contexte : bataille de la guerre de la Quatrième Coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -932,6 +983,7 @@
    "1838"
   ],
   "explanation": "La bataille des Pyramides a eu lieu le 21 juillet 1798. Contexte : bataille de la campagne d'Égypte.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -942,7 +994,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille du Monte Cassino ?",
+  "prompt": "La bataille du Monte Cassino s'est déroulée en…",
   "options": [
    "1904",
    "1935",
@@ -950,6 +1002,7 @@
    "1969"
   ],
   "explanation": "La bataille du Monte Cassino a eu lieu le 17 janvier 1944. Contexte : bataille de la Seconde Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -960,7 +1013,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 59,
-  "prompt": "En quelle année a eu lieu la bataille de Grunwald ?",
+  "prompt": "Quand a eu lieu la bataille de Grunwald ?",
   "options": [
    "1405",
    "1410*",
@@ -968,6 +1021,7 @@
    "1435"
   ],
   "explanation": "La bataille de Grunwald a eu lieu le 24 juillet 1410. Contexte : bataille ayant opposé en 1410 le royaume de Pologne allié au grand-duché de Lituanie, à l’ordre Teutonique.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -986,6 +1040,7 @@
    "1298"
   ],
   "explanation": "La bataille de Bagdad a eu lieu le 5 février 1258. Contexte : victoire à Bagdad en 1258 de l'armée mongole du chef Houlagou Khan.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1004,6 +1059,7 @@
    "1957"
   ],
   "explanation": "La bataille de Stalingrad a eu lieu le 23 août 1942. Contexte : bataille majeure et décisive de la Seconde Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1022,6 +1078,7 @@
    "1091"
   ],
   "explanation": "La bataille de Sagrajas a eu lieu le 23 octobre 1086.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1032,7 +1089,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Passchendaele ?",
+  "prompt": "La bataille de Passchendaele s'est déroulée en…",
   "options": [
    "1912",
    "1917*",
@@ -1040,6 +1097,7 @@
    "1942"
   ],
   "explanation": "La bataille de Passchendaele a eu lieu le 31 juillet 1917. Contexte : bataille de la Première Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1050,7 +1108,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille de la Montagne-Blanche ?",
+  "prompt": "La bataille de la Montagne-Blanche s'est déroulée en…",
   "options": [
    "1605",
    "1620*",
@@ -1058,6 +1116,7 @@
    "1660"
   ],
   "explanation": "La bataille de la Montagne-Blanche a eu lieu le 8 novembre 1620. Contexte : bataille de la guerre de Trente Ans.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1076,6 +1135,7 @@
    "1801"
   ],
   "explanation": "La bataille de Valmy a eu lieu le 20 septembre 1792. Contexte : bataille des guerres de la Révolution française.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1086,7 +1146,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 66,
-  "prompt": "En quelle année a eu lieu la bataille de Courtrai ?",
+  "prompt": "La bataille de Courtrai s'est déroulée en…",
   "options": [
    "1287",
    "1293",
@@ -1094,6 +1154,7 @@
    "1302*"
   ],
   "explanation": "La bataille de Courtrai a eu lieu le 19 juillet 1302. Contexte : bataille de la guerre de Flandre.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1104,7 +1165,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Yorktown ?",
+  "prompt": "La bataille de Yorktown s'est déroulée en…",
   "options": [
    "1756",
    "1766",
@@ -1112,6 +1173,7 @@
    "1806"
   ],
   "explanation": "La bataille de Yorktown a eu lieu en 1781. Contexte : bataille opposant en 1781 les insurgés américains et leurs alliés français aux Britanniques.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1130,6 +1192,7 @@
    "1859"
   ],
   "explanation": "La bataille de Balaklava a eu lieu le 25 octobre 1854. Contexte : bataille de la guerre de Crimée.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1140,7 +1203,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Wagram ?",
+  "prompt": "Quand a eu lieu la bataille de Wagram ?",
   "options": [
    "1784",
    "1794",
@@ -1148,6 +1211,7 @@
    "1849"
   ],
   "explanation": "La bataille de Wagram a eu lieu le 5 juillet 1809. Contexte : bataille de la guerre de la Cinquième Coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1166,6 +1230,7 @@
    "1824"
   ],
   "explanation": "La bataille de Waterloo a eu lieu le 18 juin 1815. Contexte : bataille de la guerre de la Septième Coalition.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1184,6 +1249,7 @@
    "1297*"
   ],
   "explanation": "La bataille du pont de Stirling a eu lieu le 11 septembre 1297. Contexte : bataille de la première guerre d'indépendance de l'Écosse.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1202,6 +1268,7 @@
    "1249"
   ],
   "explanation": "La bataille de la Neva a eu lieu le 22 juillet 1240. Contexte : bataille médiévale opposant Novgorod et la Suède.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1212,7 +1279,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de fort Sumter ?",
+  "prompt": "La bataille de fort Sumter s'est déroulée en…",
   "options": [
    "1861*",
    "1864",
@@ -1220,6 +1287,7 @@
    "1876"
   ],
   "explanation": "La bataille de fort Sumter a eu lieu en 1861. Contexte : bataille qui a déclenché la guerre de secession.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1230,7 +1298,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 63,
-  "prompt": "En quelle année a eu lieu la bataille de la Kalka ?",
+  "prompt": "Quand a eu lieu la bataille de la Kalka ?",
   "options": [
    "1223*",
    "1228",
@@ -1238,6 +1306,7 @@
    "1238"
   ],
   "explanation": "La bataille de la Kalka a eu lieu le 7 juin 1223.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1248,7 +1317,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Falkirk ?",
+  "prompt": "Quand a eu lieu la bataille de Falkirk ?",
   "options": [
    "1258",
    "1295",
@@ -1256,6 +1325,7 @@
    "1338"
   ],
   "explanation": "La bataille de Falkirk a eu lieu le 29 juillet 1298. Contexte : bataille de la première guerre d'indépendance de l'Écosse.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1266,7 +1336,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Culloden ?",
+  "prompt": "Quand a eu lieu la bataille de Culloden ?",
   "options": [
    "1737",
    "1743",
@@ -1274,6 +1344,7 @@
    "1749"
   ],
   "explanation": "La bataille de Culloden a eu lieu le 27 avril 1746. Contexte : dernière bataille (1746) de la seconde rébellion jacobite.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1284,7 +1355,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Cambrai ?",
+  "prompt": "La bataille de Cambrai s'est déroulée en…",
   "options": [
    "1892",
    "1917*",
@@ -1292,6 +1363,7 @@
    "1957"
   ],
   "explanation": "La bataille de Cambrai a eu lieu le 20 novembre 1917. Contexte : affrontement militaire de la Première Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1302,7 +1374,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Liège ?",
+  "prompt": "La bataille de Liège s'est déroulée en…",
   "options": [
    "1874",
    "1909",
@@ -1310,6 +1382,7 @@
    "1954"
   ],
   "explanation": "La bataille de Liège a eu lieu le 4 août 1914. Contexte : bataille de la Première Guerre mondiale.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1328,6 +1401,7 @@
    "1877"
   ],
   "explanation": "La bataille d'Antietam a eu lieu le 17 septembre 1862. Contexte : bataille de la guerre de Sécession.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1338,7 +1412,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 65,
-  "prompt": "En quelle année a eu lieu la bataille de Tchaldiran ?",
+  "prompt": "Quand a eu lieu la bataille de Tchaldiran ?",
   "options": [
    "1505",
    "1514*",
@@ -1346,6 +1420,7 @@
    "1539"
   ],
   "explanation": "La bataille de Tchaldiran a eu lieu le 2 septembre 1514.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1356,7 +1431,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 64,
-  "prompt": "En quelle année a eu lieu la bataille de Varsovie ?",
+  "prompt": "Quand a eu lieu la bataille de Varsovie ?",
   "options": [
    "1880",
    "1895",
@@ -1364,6 +1439,7 @@
    "1935"
   ],
   "explanation": "La bataille de Varsovie a eu lieu en 1920. Contexte : bataille de la guerre russo-polonaise.",
+  "family": "battle",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1381,6 +1457,7 @@
    "Ban Ki-moon"
   ],
   "explanation": "Blaise Pascal (1623), André-Marie Ampère (1775), Florence Nightingale (1820), Ban Ki-moon (1944).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1398,6 +1475,7 @@
    "Richard Dawkins"
   ],
   "explanation": "François Rabelais (1494), John Stuart Mill (1806), Pearl Buck (1892), Richard Dawkins (1941).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1415,6 +1493,7 @@
    "J. R. R. Tolkien"
   ],
   "explanation": "Jean-Sébastien Bach (1685), Edgar Allan Poe (1809), Robert Louis Stevenson (1850), J. R. R. Tolkien (1892).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1432,6 +1511,7 @@
    "Frida Kahlo"
   ],
   "explanation": "Pétrarque (1304), Walter Scott (1771), Émile Durkheim (1858), Frida Kahlo (1907).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1449,6 +1529,7 @@
    "Rama IX"
   ],
   "explanation": "Boccace (1313), Frédéric II de Prusse (1712), William Howard Taft (1857), Rama IX (1927).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1466,6 +1547,7 @@
    "Jean-Paul II"
   ],
   "explanation": "Friedrich Schiller (1759), Walt Whitman (1819), Vivekananda (1863), Jean-Paul II (1920).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1483,6 +1565,7 @@
    "Sean Connery"
   ],
   "explanation": "Francis Bacon (1561), Alexander von Humboldt (1769), Sarah Bernhardt (1844), Sean Connery (1930).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1500,6 +1583,7 @@
    "Mario Vargas Llosa"
   ],
   "explanation": "George Sand (1804), Octave Mirbeau (1848), Bhimrao Ramji Ambedkar (1891), Mario Vargas Llosa (1936).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1517,6 +1601,7 @@
    "Bob Dylan"
   ],
   "explanation": "Antoine Lavoisier (1743), Mary Shelley (1797), Claude Debussy (1862), Bob Dylan (1941).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1534,6 +1619,7 @@
    "Ayn Rand"
   ],
   "explanation": "Michel de Montaigne (1533), Lord Byron (1788), Gustav Mahler (1860), Ayn Rand (1905).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1551,6 +1637,7 @@
    "Wangari Muta Maathai"
   ],
   "explanation": "Denis Diderot (1713), Eugène Delacroix (1798), Maxime Gorki (1868), Wangari Muta Maathai (1940).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1568,6 +1655,7 @@
    "Antoine de Saint-Exupéry"
   ],
   "explanation": "Albrecht Dürer (1471), Baruch Spinoza (1632), Johann Wolfgang von Goethe (1749), Antoine de Saint-Exupéry (1900).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1585,6 +1673,7 @@
    "Isaac Asimov"
   ],
   "explanation": "Miguel de Cervantes (1547), Lewis Carroll (1832), Helen Keller (1880), Isaac Asimov (1920).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1602,6 +1691,7 @@
    "Guy de Maupassant"
   ],
   "explanation": "Marco Polo (1254), Galilée (1564), Abraham Lincoln (1809), Guy de Maupassant (1850).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1619,6 +1709,7 @@
    "Ali Khamenei"
   ],
   "explanation": "Johannes Kepler (1572), Jonathan Swift (1667), Thomas Mann (1875), Ali Khamenei (1939).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1636,6 +1727,7 @@
    "C. S. Lewis"
   ],
   "explanation": "Martin Luther (1483), William Blake (1757), Charlotte Brontë (1816), C. S. Lewis (1898).",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1646,7 +1738,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 38,
-  "prompt": "En quel siècle est né Mohandas Karamchand Gandhi ?",
+  "prompt": "Mohandas Karamchand Gandhi est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -1654,6 +1746,7 @@
    "XXe siècle"
   ],
   "explanation": "Mohandas Karamchand Gandhi, leader politique et religieux indien, est né en 1869 et mort en 1948.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1664,7 +1757,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est née Mary Wollstonecraft ?",
+  "prompt": "À quel siècle remonte la naissance de Mary Wollstonecraft ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -1672,6 +1765,7 @@
    "XIXe siècle"
   ],
   "explanation": "Mary Wollstonecraft, enseignante d’école primaire, autrice, philosophe et féministe anglaise, est née en 1759 et morte en 1797.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1690,6 +1784,7 @@
    "XXe siècle"
   ],
   "explanation": "Robert Falcon Scott, explorateur polaire britannique, est né en 1868 et mort en 1912.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1708,6 +1803,7 @@
    "XXe siècle"
   ],
   "explanation": "Johann Gottlieb Fichte, philosophe allemand, est né en 1762 et mort en 1814.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1718,7 +1814,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né José Martí ?",
+  "prompt": "José Martí est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -1726,6 +1822,7 @@
    "XXe siècle"
   ],
   "explanation": "José Martí, homme politique, philosophe, penseur, journaliste et poète cubain, est né en 1853 et mort en 1895.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1736,7 +1833,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Carl von Linné ?",
+  "prompt": "À quel siècle remonte la naissance de Carl von Linné ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -1744,6 +1841,7 @@
    "XXe siècle"
   ],
   "explanation": "Carl von Linné, naturaliste suédois, est né en 1707 et mort en 1778.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1762,6 +1860,7 @@
    "XIXe siècle"
   ],
   "explanation": "Caspar David Friedrich, peintre, dessinateur et graveur allemand, est né en 1774 et mort en 1840.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1772,7 +1871,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 39,
-  "prompt": "En quel siècle est né Dante Alighieri ?",
+  "prompt": "Dante Alighieri est né au…",
   "options": [
    "XIe siècle",
    "XIIe siècle",
@@ -1780,6 +1879,7 @@
    "XIVe siècle"
   ],
   "explanation": "Dante Alighieri, poète, homme politique et écrivain florentin, est né en 1265 et mort en 1321.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1798,6 +1898,7 @@
    "XXe siècle"
   ],
   "explanation": "Hector Berlioz, compositeur et critique musical français, est né en 1803 et mort en 1869.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1808,7 +1909,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Maurice Ravel ?",
+  "prompt": "Maurice Ravel est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -1816,6 +1917,7 @@
    "XXe siècle"
   ],
   "explanation": "Maurice Ravel, compositeur français, est né en 1875 et mort en 1937.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1826,7 +1928,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né John Adams ?",
+  "prompt": "John Adams est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -1834,6 +1936,7 @@
    "XXe siècle"
   ],
   "explanation": "John Adams, avocat, diplomate et homme d'État américain, est né en 1735 et mort en 1826.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1844,7 +1947,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 41,
-  "prompt": "En quel siècle est né Thomas Jefferson ?",
+  "prompt": "À quel siècle remonte la naissance de Thomas Jefferson ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -1852,6 +1955,7 @@
    "XXe siècle"
   ],
   "explanation": "Thomas Jefferson, philosophe politique, diplomate, architecte et homme d'État américain, est né en 1743 et mort en 1826.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1870,6 +1974,7 @@
    "XXe siècle"
   ],
   "explanation": "James Madison, théoricien politique et homme d'État américain, est né en 1751 et mort en 1836.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1880,7 +1985,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né James Monroe ?",
+  "prompt": "James Monroe est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -1888,6 +1993,7 @@
    "XXe siècle"
   ],
   "explanation": "James Monroe, diplomate et homme d'État américain, est né en 1758 et mort en 1831.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1898,7 +2004,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né John Quincy Adams ?",
+  "prompt": "À quel siècle remonte la naissance de John Quincy Adams ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -1906,6 +2012,7 @@
    "XXe siècle"
   ],
   "explanation": "John Quincy Adams, diplomate et homme d'État américain, est né en 1767 et mort en 1848.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1924,6 +2031,7 @@
    "XIXe siècle"
   ],
   "explanation": "Martin Van Buren, homme d'État américain, est né en 1782 et mort en 1862.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1942,6 +2050,7 @@
    "XXe siècle"
   ],
   "explanation": "Stefania Turkewich, compositrice ukrainienne, est née en 1898 et morte en 1977.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1960,6 +2069,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Ulrich Zwingli, réformateur protestant suisse, est né en 1484 et mort en 1531.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1970,7 +2080,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est née Isabelle de Charrière ?",
+  "prompt": "À quel siècle remonte la naissance d'Isabelle de Charrière ?",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -1978,6 +2088,7 @@
    "XXe siècle"
   ],
   "explanation": "Isabelle de Charrière, écrivain et compositrice neuchâteloise d’origine néerlandaise et d’expression française, est née en 1740 et morte en 1805.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -1988,7 +2099,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 55,
-  "prompt": "En quel siècle est né Richard Francis Burton ?",
+  "prompt": "Richard Francis Burton est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -1996,6 +2107,7 @@
    "XXe siècle"
   ],
   "explanation": "Richard Francis Burton, explorateur, aventurier, écrivain et orientaliste britannique, est né en 1821 et mort en 1890.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2014,6 +2126,7 @@
    "XXe siècle"
   ],
   "explanation": "William James, psychologue et philosophe américain, est né en 1842 et mort en 1910.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2024,7 +2137,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Thomas Paine ?",
+  "prompt": "Thomas Paine est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -2032,6 +2145,7 @@
    "XIXe siècle"
   ],
   "explanation": "Thomas Paine, intellectuel, pamphlétaire, révolutionnaire britannique, américain puis français, est né en 1737 et mort en 1809.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2050,6 +2164,7 @@
    "XXe siècle"
   ],
   "explanation": "Wilhelm Ostwald, physico-chimiste germano-balte, est né en 1853 et mort en 1932.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2060,7 +2175,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Frédéric Chopin ?",
+  "prompt": "Frédéric Chopin est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2068,6 +2183,7 @@
    "XXe siècle"
   ],
   "explanation": "Frédéric Chopin, compositeur et pianiste franco-polonais, est né en 1810 et mort en 1849.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2078,7 +2194,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Maxime Gorki ?",
+  "prompt": "Maxime Gorki est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2086,6 +2202,7 @@
    "XXe siècle"
   ],
   "explanation": "Maxime Gorki, romancier et dramaturge russe, est né en 1868 et mort en 1936.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2104,6 +2221,7 @@
    "XIXe siècle"
   ],
   "explanation": "Auguste Comte, philosophe français, est né en 1798 et mort en 1857.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2114,7 +2232,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est née Charlotte Brontë ?",
+  "prompt": "Charlotte Brontë est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2122,6 +2240,7 @@
    "XXe siècle"
   ],
   "explanation": "Charlotte Brontë, écrivaine britannique, est née en 1816 et morte en 1855.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2140,6 +2259,7 @@
    "XIXe siècle"
   ],
   "explanation": "Vitus Béring, explorateur danois, est né en 1681 et mort en 1741.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2150,7 +2270,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Blaise Pascal ?",
+  "prompt": "À quel siècle remonte la naissance de Blaise Pascal ?",
   "options": [
    "XVe siècle",
    "XVIe siècle",
@@ -2158,6 +2278,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Blaise Pascal, mathématicien, physicien, inventeur, écrivain et philosophe chrétien français, est né en 1623 et mort en 1662.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2168,7 +2289,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né Verner von Heidenstam ?",
+  "prompt": "À quel siècle remonte la naissance de Verner von Heidenstam ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2176,6 +2297,7 @@
    "XXe siècle"
   ],
   "explanation": "Verner von Heidenstam, écrivain suédois, est né en 1859 et mort en 1940.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2186,7 +2308,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 53,
-  "prompt": "En quel siècle est né Bartolomeu Dias ?",
+  "prompt": "Bartolomeu Dias est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle",
@@ -2194,6 +2316,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Bartolomeu Dias, explorateur portugais du XVe siècle, est né en 1467 et mort en 1500.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2204,7 +2327,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Jérôme Bosch ?",
+  "prompt": "Jérôme Bosch est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle",
@@ -2212,6 +2335,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Jérôme Bosch, peintre et dessinateur néerlandais, est né en 1450 et mort en 1516.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2230,6 +2354,7 @@
    "XVIIe siècle"
   ],
   "explanation": "François Rabelais, écrivain français humaniste de la Renaissance, est né en 1494 et mort en 1553.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2240,7 +2365,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Henry David Thoreau ?",
+  "prompt": "Henry David Thoreau est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2248,6 +2373,7 @@
    "XXe siècle"
   ],
   "explanation": "Henry David Thoreau, essayiste, enseignant, philosophe, naturaliste et poète américain, est né en 1817 et mort en 1862.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2258,7 +2384,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est née George Eliot ?",
+  "prompt": "À quel siècle remonte la naissance de George Eliot ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2266,6 +2392,7 @@
    "XXe siècle"
   ],
   "explanation": "George Eliot, romancière, essayiste et poète britannique, est née en 1819 et morte en 1880.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2284,6 +2411,7 @@
    "XXe siècle"
   ],
   "explanation": "John Dewey, philosophe américain, est né en 1859 et mort en 1952.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2302,6 +2430,7 @@
    "XXe siècle"
   ],
   "explanation": "Sergueï Rachmaninov, compositeur, pianiste et chef d'orchestre russo-américain, est né en 1873 et mort en 1943.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2312,7 +2441,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Friedrich Hayek ?",
+  "prompt": "Friedrich Hayek est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2320,6 +2449,7 @@
    "XXe siècle"
   ],
   "explanation": "Friedrich Hayek, philosophe et économiste autrichien, est né en 1899 et mort en 1992.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2338,6 +2468,7 @@
    "XXe siècle"
   ],
   "explanation": "Vladimir Maïakovski, poète et dramaturge futuriste soviétique, est né en 1893 et mort en 1930.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2348,7 +2479,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 54,
-  "prompt": "En quel siècle est né Willem Barentsz ?",
+  "prompt": "À quel siècle remonte la naissance de Willem Barentsz ?",
   "options": [
    "XVe siècle",
    "XVIe siècle*",
@@ -2356,6 +2487,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Willem Barentsz, explorateur néerlandais, est né en 1550 et mort en 1597.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2366,7 +2498,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 39,
-  "prompt": "En quel siècle est né Jean-Sébastien Bach ?",
+  "prompt": "Jean-Sébastien Bach est né au…",
   "options": [
    "XVe siècle",
    "XVIe siècle",
@@ -2374,6 +2506,7 @@
    "XIXe siècle"
   ],
   "explanation": "Jean-Sébastien Bach, claveciniste, organiste et compositeur allemand, est né en 1685 et mort en 1750.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2392,6 +2525,7 @@
    "XXe siècle"
   ],
   "explanation": "Taras Chevtchenko, peintre, poète et ethnographe ukrainien, est né en 1814 et mort en 1861.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2402,7 +2536,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Richard Strauss ?",
+  "prompt": "À quel siècle remonte la naissance de Richard Strauss ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2410,6 +2544,7 @@
    "XXe siècle"
   ],
   "explanation": "Richard Strauss, compositeur allemand, est né en 1864 et mort en 1949.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2428,6 +2563,7 @@
    "XVIe siècle"
   ],
   "explanation": "Nicolas Machiavel, philosophe florentin, est né en 1469 et mort en 1527.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2446,6 +2582,7 @@
    "XVIe siècle"
   ],
   "explanation": "Pétrarque, poète et humaniste florentin, est né en 1304 et mort en 1374.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2456,7 +2593,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Boccace ?",
+  "prompt": "Boccace est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle*",
@@ -2464,6 +2601,7 @@
    "XVIe siècle"
   ],
   "explanation": "Boccace, poète et romancier italien, ministre plénipotentiaire de la République de Florence, est né en 1313 et mort en 1375.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2474,7 +2612,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Luigi Pirandello ?",
+  "prompt": "À quel siècle remonte la naissance de Luigi Pirandello ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2482,6 +2620,7 @@
    "XXe siècle"
   ],
   "explanation": "Luigi Pirandello, écrivain, poète, nouvelliste, romancier et dramaturge italien, est né en 1867 et mort en 1936.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2492,7 +2631,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Alexis de Tocqueville ?",
+  "prompt": "Alexis de Tocqueville est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2500,6 +2639,7 @@
    "XXe siècle"
   ],
   "explanation": "Alexis de Tocqueville, philosophe politique, homme politique, historien, précurseur de la sociologie et écrivain français, est né en 1805 et mort en 1859.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2510,7 +2650,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né William Herschel ?",
+  "prompt": "À quel siècle remonte la naissance de William Herschel ?",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -2518,6 +2658,7 @@
    "XXe siècle"
   ],
   "explanation": "William Herschel, compositeur et astronome germano-britannique, est né en 1738 et mort en 1822.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2528,7 +2669,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Herbert Spencer ?",
+  "prompt": "Herbert Spencer est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2536,6 +2677,7 @@
    "XXe siècle"
   ],
   "explanation": "Herbert Spencer, philosophe et sociologue anglais, est né en 1820 et mort en 1903.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2546,7 +2688,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Fernand de Magellan ?",
+  "prompt": "Fernand de Magellan est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle",
@@ -2554,6 +2696,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Fernand de Magellan, navigateur et explorateur portugais au service de l'Espagne, fin du XVe - début du XVIe siècle, est né en 1480 et mort en 1521.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2564,7 +2707,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Ernst Theodor Amadeus Hoffmann ?",
+  "prompt": "Ernst Theodor Amadeus Hoffmann est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -2572,6 +2715,7 @@
    "XXe siècle"
   ],
   "explanation": "Ernst Theodor Amadeus Hoffmann, écrivain, compositeur, dessinateur et juriste allemand, est né en 1776 et mort en 1822.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2590,6 +2734,7 @@
    "XXe siècle"
   ],
   "explanation": "Richard Wagner, compositeur, directeur de théâtre, écrivain, chef d'orchestre et polémiste allemand de la période romantique, est né en 1813 et mort en 1883.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2608,6 +2753,7 @@
    "XXe siècle"
   ],
   "explanation": "Robert Louis Stevenson, romancier écossais, essayiste et écrivain du voyage, est né en 1850 et mort en 1894.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2618,7 +2764,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Thomas Carlyle ?",
+  "prompt": "Thomas Carlyle est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -2626,6 +2772,7 @@
    "XIXe siècle"
   ],
   "explanation": "Thomas Carlyle, romancier, historien et essayiste écossais, est né en 1795 et mort en 1881.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2636,7 +2783,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Carl Gustaf Emil Mannerheim ?",
+  "prompt": "Carl Gustaf Emil Mannerheim est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2644,6 +2791,7 @@
    "XXe siècle"
   ],
   "explanation": "Carl Gustaf Emil Mannerheim, militaire et homme d'État finlandais, est né en 1867 et mort en 1951.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2654,7 +2802,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Jean Le Rond d'Alembert ?",
+  "prompt": "Jean Le Rond d'Alembert est né au…",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -2662,6 +2810,7 @@
    "XXe siècle"
   ],
   "explanation": "Jean Le Rond d'Alembert, mathématicien et philosophe français, est né en 1717 et mort en 1783.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2680,6 +2829,7 @@
    "XXe siècle"
   ],
   "explanation": "Adelbert von Chamisso, poète et botaniste franco-allemand, est né en 1781 et mort en 1838.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2698,6 +2848,7 @@
    "XXe siècle"
   ],
   "explanation": "Karel Čapek, écrivain, dramaturge et critique tchèque, est né en 1890 et mort en 1938.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2708,7 +2859,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 56,
-  "prompt": "En quel siècle est né Peter Simon Pallas ?",
+  "prompt": "À quel siècle remonte la naissance de Peter Simon Pallas ?",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -2716,6 +2867,7 @@
    "XXe siècle"
   ],
   "explanation": "Peter Simon Pallas, naturaliste allemand, est né en 1741 et mort en 1811.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2734,6 +2886,7 @@
    "XXe siècle"
   ],
   "explanation": "Émile Durkheim, sociologue français, est né en 1858 et mort en 1917.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2744,7 +2897,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né Prosper Mérimée ?",
+  "prompt": "À quel siècle remonte la naissance de Prosper Mérimée ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2752,6 +2905,7 @@
    "XXe siècle"
   ],
   "explanation": "Prosper Mérimée, écrivain, historien et archéologue français, est né en 1803 et mort en 1870.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2770,6 +2924,7 @@
    "XXe siècle"
   ],
   "explanation": "Alfred Russel Wallace, naturaliste, géographe et anthropologue britannique, est né en 1823 et mort en 1913.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2780,7 +2935,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Ezra Pound ?",
+  "prompt": "À quel siècle remonte la naissance d'Ezra Pound ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2788,6 +2943,7 @@
    "XXe siècle"
   ],
   "explanation": "Ezra Pound, poète et critique américain, est né en 1885 et mort en 1972.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2798,7 +2954,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né François Xavier ?",
+  "prompt": "À quel siècle remonte la naissance de François Xavier ?",
   "options": [
    "XIVe siècle",
    "XVIe siècle*",
@@ -2806,6 +2962,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "François Xavier, missionnaire jésuite navarrais, cofondateur de la Compagnie de Jésus avec Ignace de Loyola, est né en 1506 et mort en 1552.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2816,7 +2973,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Alexandre Borodine ?",
+  "prompt": "Alexandre Borodine est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2824,6 +2981,7 @@
    "XXe siècle"
   ],
   "explanation": "Alexandre Borodine, compositeur, chimiste et médecin russe, est né en 1833 et mort en 1887.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2834,7 +2992,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Alexander Pope ?",
+  "prompt": "À quel siècle remonte la naissance d'Alexander Pope ?",
   "options": [
    "XVe siècle",
    "XVIe siècle",
@@ -2842,6 +3000,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Alexander Pope, poète britannique, est né en 1688 et mort en 1744.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2852,7 +3011,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Edmund Burke ?",
+  "prompt": "À quel siècle remonte la naissance d'Edmund Burke ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -2860,6 +3019,7 @@
    "XIXe siècle"
   ],
   "explanation": "Edmund Burke, homme politique et philosophe irlandais, est né en 1729 et mort en 1797.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2878,6 +3038,7 @@
    "XXe siècle"
   ],
   "explanation": "Edgar Allan Poe, écrivain américain, est né en 1809 et mort en 1849.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2896,6 +3057,7 @@
    "XXe siècle"
   ],
   "explanation": "Henry Morton Stanley, journaliste et explorateur britannique, est né en 1841 et mort en 1904.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2906,7 +3068,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Giacomo Leopardi ?",
+  "prompt": "Giacomo Leopardi est né au…",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -2914,6 +3076,7 @@
    "XXe siècle"
   ],
   "explanation": "Giacomo Leopardi, aristocrate, moraliste, poète et philosophe italien, est né en 1798 et mort en 1837.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2932,6 +3095,7 @@
    "XXe siècle"
   ],
   "explanation": "Ilia Répine, artiste-peintre russe, est né en 1844 et mort en 1930.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2942,7 +3106,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 53,
-  "prompt": "En quel siècle est né Pedro Álvares Cabral ?",
+  "prompt": "À quel siècle remonte la naissance de Pedro Álvares Cabral ?",
   "options": [
    "XIIIe siècle",
    "XVe siècle*",
@@ -2950,6 +3114,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Pedro Álvares Cabral, explorateur portugais, est né en 1467 et mort en 1520.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2960,7 +3125,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né John Ruskin ?",
+  "prompt": "John Ruskin est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -2968,6 +3133,7 @@
    "XXe siècle"
   ],
   "explanation": "John Ruskin, auteur, poète, artiste et critique d’art britannique, est né en 1819 et mort en 1900.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -2978,7 +3144,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 55,
-  "prompt": "En quel siècle est né Henry Hudson ?",
+  "prompt": "Henry Hudson est né au…",
   "options": [
    "XVe siècle",
    "XVIe siècle*",
@@ -2986,6 +3152,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Henry Hudson, navigateur et explorateur anglais, est né en 1565 et mort en 1611.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3004,6 +3171,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Giovanni Pierluigi da Palestrina, compositeur, est né en 1525 et mort en 1594.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3014,7 +3182,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Râmakrishna ?",
+  "prompt": "À quel siècle remonte la naissance de Râmakrishna ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3022,6 +3190,7 @@
    "XXe siècle"
   ],
   "explanation": "Râmakrishna, moine et philosophe hindou indien, est né en 1836 et mort en 1886.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3032,7 +3201,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né G. K. Chesterton ?",
+  "prompt": "À quel siècle remonte la naissance de G. K. Chesterton ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3040,6 +3209,7 @@
    "XXe siècle"
   ],
   "explanation": "G. K. Chesterton, écrivain, journaliste, poète, illustrateur, apologiste catholique et biographe anglais, est né en 1874 et mort en 1936.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3058,6 +3228,7 @@
    "XIXe siècle"
   ],
   "explanation": "Samuel Johnson, écrivain anglais, poète, essayiste, biographe, lexicographe, est né en 1709 et mort en 1784.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3068,7 +3239,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Théophile Gautier ?",
+  "prompt": "Théophile Gautier est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3076,6 +3247,7 @@
    "XXe siècle"
   ],
   "explanation": "Théophile Gautier, écrivain français, est né en 1811 et mort en 1872.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3094,6 +3266,7 @@
    "XXe siècle"
   ],
   "explanation": "Henri Barbusse, écrivain français, est né en 1873 et mort en 1935.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3112,6 +3285,7 @@
    "XXe siècle"
   ],
   "explanation": "Thomas Henry Huxley, biologiste, paléontologue et philosophe britannique, est né en 1825 et mort en 1895.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3122,7 +3296,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 54,
-  "prompt": "En quel siècle est né Alexandre Koltchak ?",
+  "prompt": "À quel siècle remonte la naissance d'Alexandre Koltchak ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3130,6 +3304,7 @@
    "XXe siècle"
   ],
   "explanation": "Alexandre Koltchak, militaire et explorateur russe, est né en 1874 et mort en 1920.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3148,6 +3323,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Juan Ponce de León, conquistador espagnol, est né en 1460 et mort en 1521.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3158,7 +3334,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 56,
-  "prompt": "En quel siècle est né Robert Peary ?",
+  "prompt": "À quel siècle remonte la naissance de Robert Peary ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3166,6 +3342,7 @@
    "XXe siècle"
   ],
   "explanation": "Robert Peary, explorateur polaire américain, est né en 1856 et mort en 1920.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3176,7 +3353,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né Henry Miller ?",
+  "prompt": "Henry Miller est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3184,6 +3361,7 @@
    "XXe siècle"
   ],
   "explanation": "Henry Miller, écrivain américain, est né en 1891 et mort en 1980.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3202,6 +3380,7 @@
    "XVIe siècle"
   ],
   "explanation": "Vasco Núñez de Balboa, conquistador espagnol, est né en 1475 et mort en 1519.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3212,7 +3391,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 55,
-  "prompt": "En quel siècle est né Francis Galton ?",
+  "prompt": "À quel siècle remonte la naissance de Francis Galton ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3220,6 +3399,7 @@
    "XXe siècle"
   ],
   "explanation": "Francis Galton, anthropologue, explorateur, géographe, inventeur, météorologue, proto-généticien, psychométricien et statisticien, est né en 1822 et mort en 1911.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3238,6 +3418,7 @@
    "XXe siècle"
   ],
   "explanation": "Nikolaï Mikhaïlovitch Prjevalski, officier, explorateur et naturaliste russe, est né en 1839 et mort en 1888.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3256,6 +3437,7 @@
    "XXe siècle"
   ],
   "explanation": "Cecil Rhodes, homme d'affaires et homme politique britannique, est né en 1853 et mort en 1902.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3266,7 +3448,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 56,
-  "prompt": "En quel siècle est né Evliya Çelebi ?",
+  "prompt": "À quel siècle remonte la naissance d'Evliya Çelebi ?",
   "options": [
    "XVe siècle",
    "XVIe siècle",
@@ -3274,6 +3456,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Evliya Çelebi, écrivain et explorateur ottoman, est né en 1611 et mort en 1682.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3284,7 +3467,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 55,
-  "prompt": "En quel siècle est né Afonso de Albuquerque ?",
+  "prompt": "Afonso de Albuquerque est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle",
@@ -3292,6 +3475,7 @@
    "XVIe siècle"
   ],
   "explanation": "Afonso de Albuquerque, navigateur portugais, est né en 1453 et mort en 1515.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3302,7 +3486,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 55,
-  "prompt": "En quel siècle est né Nicolas Roerich ?",
+  "prompt": "Nicolas Roerich est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3310,6 +3494,7 @@
    "XXe siècle"
   ],
   "explanation": "Nicolas Roerich, polymathe russe des XIXe-XXe siècles, est né en 1874 et mort en 1947.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3328,6 +3513,7 @@
    "XXe siècle"
   ],
   "explanation": "Nikolaï Vavilov, botaniste, agronome, généticien et phytogéographe russe, est né en 1887 et mort en 1943.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3338,7 +3524,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Friedrich Schiller ?",
+  "prompt": "Friedrich Schiller est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -3346,6 +3532,7 @@
    "XXe siècle"
   ],
   "explanation": "Friedrich Schiller, poète, dramaturge, esthète et historien allemand, est né en 1759 et mort en 1805.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3356,7 +3543,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Bhimrao Ramji Ambedkar ?",
+  "prompt": "Bhimrao Ramji Ambedkar est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3364,6 +3551,7 @@
    "XXe siècle"
   ],
   "explanation": "Bhimrao Ramji Ambedkar, juriste et homme politique indien, est né en 1891 et mort en 1956.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3382,6 +3570,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Matteo Ricci, prêtre jésuite italien et missionnaire en Chine, est né en 1552 et mort en 1610.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3400,6 +3589,7 @@
    "XXe siècle"
   ],
   "explanation": "Jean-Auguste-Dominique Ingres, peintre français, est né en 1780 et mort en 1867.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3418,6 +3608,7 @@
    "XXe siècle"
   ],
   "explanation": "Ernest Hemingway, écrivain, journaliste et correspondant de guerre américain, est né en 1899 et mort en 1961.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3428,7 +3619,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Octave Mirbeau ?",
+  "prompt": "Octave Mirbeau est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3436,6 +3627,7 @@
    "XXe siècle"
   ],
   "explanation": "Octave Mirbeau, romancier, essayiste et dramaturge, journaliste et critique d'art français, est né en 1848 et mort en 1917.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3454,6 +3646,7 @@
    "XXe siècle"
   ],
   "explanation": "Alfred Nobel, chimiste, industriel et fabricant d'armes suédois, est né en 1833 et mort en 1896.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3464,7 +3657,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 39,
-  "prompt": "En quel siècle est né Ludwig van Beethoven ?",
+  "prompt": "Ludwig van Beethoven est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -3472,6 +3665,7 @@
    "XXe siècle"
   ],
   "explanation": "Ludwig van Beethoven, compositeur classique et romantique allemand, est né en 1770 et mort en 1827.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3482,7 +3676,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Hermann Hesse ?",
+  "prompt": "À quel siècle remonte la naissance d'Hermann Hesse ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3490,6 +3684,7 @@
    "XXe siècle"
   ],
   "explanation": "Hermann Hesse, romancier, poète, peintre et essayiste allemand-suisse, est né en 1877 et mort en 1962.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3500,7 +3695,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Guillaume II ?",
+  "prompt": "Guillaume II est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3508,6 +3703,7 @@
    "XXe siècle"
   ],
   "explanation": "Guillaume II, empereur allemand et roi de Prusse, est né en 1859 et mort en 1941.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3518,7 +3714,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 56,
-  "prompt": "En quel siècle est né George Curzon ?",
+  "prompt": "George Curzon est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3526,6 +3722,7 @@
    "XXe siècle"
   ],
   "explanation": "George Curzon, personnalité politique britannique, est né en 1859 et mort en 1925.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3536,7 +3733,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Mikhaïl Bakounine ?",
+  "prompt": "À quel siècle remonte la naissance de Mikhaïl Bakounine ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3544,6 +3741,7 @@
    "XXe siècle"
   ],
   "explanation": "Mikhaïl Bakounine, révolutionnaire russe, théoricien et philosophe de l’anarchisme, est né en 1814 et mort en 1876.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3554,7 +3752,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Antoine de Saint-Exupéry ?",
+  "prompt": "Antoine de Saint-Exupéry est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3562,6 +3760,7 @@
    "XXe siècle"
   ],
   "explanation": "Antoine de Saint-Exupéry, écrivain et aviateur français, est né en 1900 et mort en 1944.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3572,7 +3771,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Diego Vélasquez ?",
+  "prompt": "Diego Vélasquez est né au…",
   "options": [
    "XIVe siècle",
    "XVIe siècle*",
@@ -3580,6 +3779,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Diego Vélasquez, peintre espagnol, est né en 1599 et mort en 1660.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3590,7 +3790,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Le Greco ?",
+  "prompt": "Le Greco est né au…",
   "options": [
    "XIVe siècle",
    "XVe siècle",
@@ -3598,6 +3798,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Le Greco, peintre, sculpteur et architecte du XVIe siècle principalement actif en Espagne, est né en 1541 et mort en 1614.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3608,7 +3809,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 39,
-  "prompt": "En quel siècle est né Galilée ?",
+  "prompt": "À quel siècle remonte la naissance de Galilée ?",
   "options": [
    "XIVe siècle",
    "XVe siècle",
@@ -3616,6 +3817,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Galilée, physicien, philosophe et astronome italien, est né en 1564 et mort en 1642.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3626,7 +3828,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Auguste Rodin ?",
+  "prompt": "À quel siècle remonte la naissance d'Auguste Rodin ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3634,6 +3836,7 @@
    "XXe siècle"
   ],
   "explanation": "Auguste Rodin, sculpteur français, est né en 1840 et mort en 1917.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3644,7 +3847,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 41,
-  "prompt": "En quel siècle est né Oscar Wilde ?",
+  "prompt": "Oscar Wilde est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3652,6 +3855,7 @@
    "XXe siècle"
   ],
   "explanation": "Oscar Wilde, écrivain irlandais, est né en 1854 et mort en 1900.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3670,6 +3874,7 @@
    "XXe siècle"
   ],
   "explanation": "Léon Trotski, révolutionnaire et homme politique russo-soviétique, est né en 1879 et mort en 1940.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3680,7 +3885,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Eugène Delacroix ?",
+  "prompt": "Eugène Delacroix est né au…",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -3688,6 +3893,7 @@
    "XXe siècle"
   ],
   "explanation": "Eugène Delacroix, peintre français, est né en 1798 et mort en 1863.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3698,7 +3904,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Frédéric II de Prusse ?",
+  "prompt": "À quel siècle remonte la naissance de Frédéric II de Prusse ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -3706,6 +3912,7 @@
    "XXe siècle"
   ],
   "explanation": "Frédéric II de Prusse, troisième roi de Prusse, est né en 1712 et mort en 1786.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3716,7 +3923,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Bertrand Russell ?",
+  "prompt": "À quel siècle remonte la naissance de Bertrand Russell ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3724,6 +3931,7 @@
    "XXe siècle"
   ],
   "explanation": "Bertrand Russell, mathématicien, logicien, philosophe, épistémologue et homme politique britannique, est né en 1872 et mort en 1970.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3734,7 +3942,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Theodore Roosevelt ?",
+  "prompt": "Theodore Roosevelt est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3742,6 +3950,7 @@
    "XXe siècle"
   ],
   "explanation": "Theodore Roosevelt, homme d'État américain, est né en 1858 et mort en 1919.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3752,7 +3961,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Jules Verne ?",
+  "prompt": "À quel siècle remonte la naissance de Jules Verne ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3760,6 +3969,7 @@
    "XXe siècle"
   ],
   "explanation": "Jules Verne, écrivain français, est né en 1828 et mort en 1905.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3770,7 +3980,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Woodrow Wilson ?",
+  "prompt": "À quel siècle remonte la naissance de Woodrow Wilson ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3778,6 +3988,7 @@
    "XXe siècle"
   ],
   "explanation": "Woodrow Wilson, homme d'État américain, est né en 1856 et mort en 1924.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3788,7 +3999,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né James Abram Garfield ?",
+  "prompt": "À quel siècle remonte la naissance de James Abram Garfield ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3796,6 +4007,7 @@
    "XXe siècle"
   ],
   "explanation": "James Abram Garfield, homme d'État américain, est né en 1831 et mort en 1881.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3814,6 +4026,7 @@
    "XXe siècle"
   ],
   "explanation": "Friedrich Engels, philosophe, sociologue et théoricien socialiste allemand, est né en 1820 et mort en 1895.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3824,7 +4037,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Ulysses S. Grant ?",
+  "prompt": "À quel siècle remonte la naissance d'Ulysses S. Grant ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3832,6 +4045,7 @@
    "XXe siècle"
   ],
   "explanation": "Ulysses S. Grant, militaire et homme d'État américain, est né en 1822 et mort en 1885.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3850,6 +4064,7 @@
    "XIXe siècle"
   ],
   "explanation": "Benjamin Franklin, père fondateur des États-Unis d'Amérique, politicien, écrivain, philosophe, physicien, publiciste et imprimeur américain, est né en 1706 et mort en 1790.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3860,7 +4075,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né D. H. Lawrence ?",
+  "prompt": "À quel siècle remonte la naissance de D. H. Lawrence ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3868,6 +4083,7 @@
    "XXe siècle"
   ],
   "explanation": "D. H. Lawrence, écrivain britannique, est né en 1885 et mort en 1930.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3878,7 +4094,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Wilhelm Röntgen ?",
+  "prompt": "Wilhelm Röntgen est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3886,6 +4102,7 @@
    "XXe siècle"
   ],
   "explanation": "Wilhelm Röntgen, physicien allemand, est né en 1845 et mort en 1923.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3896,7 +4113,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Grover Cleveland ?",
+  "prompt": "À quel siècle remonte la naissance de Grover Cleveland ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3904,6 +4121,7 @@
    "XXe siècle"
   ],
   "explanation": "Grover Cleveland, homme d'État américain, est né en 1837 et mort en 1908.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3914,7 +4132,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Herbert Hoover ?",
+  "prompt": "Herbert Hoover est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3922,6 +4140,7 @@
    "XXe siècle"
   ],
   "explanation": "Herbert Hoover, homme d'État américain, est né en 1874 et mort en 1964.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3932,7 +4151,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né William Howard Taft ?",
+  "prompt": "William Howard Taft est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3940,6 +4159,7 @@
    "XXe siècle"
   ],
   "explanation": "William Howard Taft, homme d'État et juriste américain, est né en 1857 et mort en 1930.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3950,7 +4170,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Benjamin Harrison ?",
+  "prompt": "À quel siècle remonte la naissance de Benjamin Harrison ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -3958,6 +4178,7 @@
    "XXe siècle"
   ],
   "explanation": "Benjamin Harrison, homme d'État américain, est né en 1833 et mort en 1901.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3968,7 +4189,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Baruch Spinoza ?",
+  "prompt": "Baruch Spinoza est né au…",
   "options": [
    "XVe siècle",
    "XVIIe siècle*",
@@ -3976,6 +4197,7 @@
    "XIXe siècle"
   ],
   "explanation": "Baruch Spinoza, philosophe néerlandais du XVIIe siècle, est né en 1632 et mort en 1677.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -3994,6 +4216,7 @@
    "XXe siècle"
   ],
   "explanation": "Jane Austen, romancière et femme de lettres anglaise, est née en 1775 et morte en 1817.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4012,6 +4235,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Giordano Bruno, frère dominicain, astronome, philosophe et théologien italien, est né en 1548 et mort en 1600.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4022,7 +4246,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Francis Drake ?",
+  "prompt": "Francis Drake est né au…",
   "options": [
    "XIVe siècle",
    "XVIe siècle*",
@@ -4030,6 +4254,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Francis Drake, corsaire, explorateur et homme politique anglais du XVIe siècle, est né en 1540 et mort en 1596.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4048,6 +4273,7 @@
    "XXe siècle"
   ],
   "explanation": "Vladimir Nabokov, écrivain russe naturalisé américain, est né en 1899 et mort en 1977.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4066,6 +4292,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Tycho Brahe, astronome, alchimiste, cartographe et imprimeur danois, est né en 1546 et mort en 1601.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4076,7 +4303,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Henrik Ibsen ?",
+  "prompt": "Henrik Ibsen est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4084,6 +4311,7 @@
    "XXe siècle"
   ],
   "explanation": "Henrik Ibsen, dramaturge norvégien, est né en 1828 et mort en 1906.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4094,7 +4322,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Thomas Mann ?",
+  "prompt": "Thomas Mann est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4102,6 +4330,7 @@
    "XXe siècle"
   ],
   "explanation": "Thomas Mann, romancier allemand, lauréat du prix Nobel de littérature 1929, est né en 1875 et mort en 1955.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4112,7 +4341,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est née Florence Nightingale ?",
+  "prompt": "À quel siècle remonte la naissance de Florence Nightingale ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4120,6 +4349,7 @@
    "XXe siècle"
   ],
   "explanation": "Florence Nightingale, infirmière britannique, est née en 1820 et morte en 1910.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4130,7 +4360,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né David Hume ?",
+  "prompt": "À quel siècle remonte la naissance de David Hume ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -4138,6 +4368,7 @@
    "XIXe siècle"
   ],
   "explanation": "David Hume, philosophe écossais, économiste et historien, est né en 1711 et mort en 1776.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4148,7 +4379,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Robert Koch ?",
+  "prompt": "Robert Koch est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4156,6 +4387,7 @@
    "XXe siècle"
   ],
   "explanation": "Robert Koch, médecin et bactériologiste allemand, est né en 1843 et mort en 1910.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4174,6 +4406,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Francis Bacon, homme d’État et philosophe anglais, est né en 1561 et mort en 1626.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4184,7 +4417,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Donatello ?",
+  "prompt": "Donatello est né au…",
   "options": [
    "XIIe siècle",
    "XIIIe siècle",
@@ -4192,6 +4425,7 @@
    "XVe siècle"
   ],
   "explanation": "Donatello, sculpteur italien du quattrocento, est né en 1386 et mort en 1466.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4210,6 +4444,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Jean Calvin, réformateur protestant français fondateur du courant calviniste, est né en 1509 et mort en 1564.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4220,7 +4455,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Thomas Hobbes ?",
+  "prompt": "À quel siècle remonte la naissance de Thomas Hobbes ?",
   "options": [
    "XIVe siècle",
    "XVe siècle",
@@ -4228,6 +4463,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Thomas Hobbes, philosophe anglais, est né en 1588 et mort en 1679.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4238,7 +4474,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né T. S. Eliot ?",
+  "prompt": "À quel siècle remonte la naissance de T. S. Eliot ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4246,6 +4482,7 @@
    "XXe siècle"
   ],
   "explanation": "T. S. Eliot, poète, dramaturge, essayiste et critique littéraire américain naturalisé britannique, est né en 1888 et mort en 1965.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4256,7 +4493,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 57,
-  "prompt": "En quel siècle est né John Muir ?",
+  "prompt": "À quel siècle remonte la naissance de John Muir ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4264,6 +4501,7 @@
    "XXe siècle"
   ],
   "explanation": "John Muir, écrivain et naturaliste écossais-américain, est né en 1838 et mort en 1914.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4274,7 +4512,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Gregor Mendel ?",
+  "prompt": "À quel siècle remonte la naissance de Gregor Mendel ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4282,6 +4520,7 @@
    "XXe siècle"
   ],
   "explanation": "Gregor Mendel, moine, naturaliste et biologiste morave, fondateur des lois de l'hérédité, est né en 1822 et mort en 1884.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4292,7 +4531,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Lewis Carroll ?",
+  "prompt": "Lewis Carroll est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4300,6 +4539,7 @@
    "XXe siècle"
   ],
   "explanation": "Lewis Carroll, romancier, essayiste, photographe et mathématicien britannique, est né en 1832 et mort en 1898.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4318,6 +4558,7 @@
    "XXe siècle"
   ],
   "explanation": "George Sand, romancière et dramaturge française, est née en 1804 et morte en 1876.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4328,7 +4569,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Arthur Schopenhauer ?",
+  "prompt": "Arthur Schopenhauer est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -4336,6 +4577,7 @@
    "XXe siècle"
   ],
   "explanation": "Arthur Schopenhauer, philosophe allemand, est né en 1788 et mort en 1860.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4346,7 +4588,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est née Helen Keller ?",
+  "prompt": "À quel siècle remonte la naissance d'Helen Keller ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4354,6 +4596,7 @@
    "XXe siècle"
   ],
   "explanation": "Helen Keller, écrivaine et militante politique américaine, est née en 1880 et morte en 1968.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4364,7 +4607,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Henri VIII ?",
+  "prompt": "Henri VIII est né au…",
   "options": [
    "XIIIe siècle",
    "XVe siècle*",
@@ -4372,6 +4615,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Henri VIII, roi d'Angleterre et d'Irlande de 1509 à 1547, est né en 1491 et mort en 1547.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4382,7 +4626,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né William Faulkner ?",
+  "prompt": "À quel siècle remonte la naissance de William Faulkner ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4390,6 +4634,7 @@
    "XXe siècle"
   ],
   "explanation": "William Faulkner, écrivain américain, est né en 1897 et mort en 1962.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4400,7 +4645,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Bertolt Brecht ?",
+  "prompt": "Bertolt Brecht est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4408,6 +4653,7 @@
    "XXe siècle"
   ],
   "explanation": "Bertolt Brecht, dramaturge, metteur en scène, critique théâtral et poète allemand, est né en 1898 et mort en 1956.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4418,7 +4664,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Christian Huygens ?",
+  "prompt": "À quel siècle remonte la naissance de Christian Huygens ?",
   "options": [
    "XVe siècle",
    "XVIe siècle",
@@ -4426,6 +4672,7 @@
    "XIXe siècle"
   ],
   "explanation": "Christian Huygens, mathématicien, physicien et astronome néerlandais, est né en 1629 et mort en 1695.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4436,7 +4683,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Antoine Lavoisier ?",
+  "prompt": "À quel siècle remonte la naissance d'Antoine Lavoisier ?",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -4444,6 +4691,7 @@
    "XXe siècle"
   ],
   "explanation": "Antoine Lavoisier, chimiste, physicien et économiste français, est né en 1743 et mort en 1794.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4454,7 +4702,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Averroès ?",
+  "prompt": "Averroès est né au…",
   "options": [
    "XIe siècle",
    "XIIe siècle*",
@@ -4462,6 +4710,7 @@
    "XIVe siècle"
   ],
   "explanation": "Averroès, philosophe, théologien islamique, juriste, mathématicien et médecin arabe, est né en 1126 et mort en 1198.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4472,7 +4721,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Auguste Renoir ?",
+  "prompt": "Auguste Renoir est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4480,6 +4729,7 @@
    "XXe siècle"
   ],
   "explanation": "Auguste Renoir, peintre et sculpteur français, est né en 1841 et mort en 1919.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4490,7 +4740,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Nostradamus ?",
+  "prompt": "Nostradamus est né au…",
   "options": [
    "XVe siècle",
    "XVIe siècle*",
@@ -4498,6 +4748,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Nostradamus, médecin, botaniste et astrologue français, auteur de célèbres prophéties, est né en 1503 et mort en 1566.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4516,6 +4767,7 @@
    "XXe siècle"
   ],
   "explanation": "William Butler Yeats, poète et dramaturge irlandais, est né en 1865 et mort en 1939.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4526,7 +4778,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Édouard Manet ?",
+  "prompt": "Édouard Manet est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4534,6 +4786,7 @@
    "XXe siècle"
   ],
   "explanation": "Édouard Manet, peintre et graveur français, est né en 1832 et mort en 1883.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4544,7 +4797,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Knut Hamsun ?",
+  "prompt": "À quel siècle remonte la naissance de Knut Hamsun ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4552,6 +4805,7 @@
    "XXe siècle"
   ],
   "explanation": "Knut Hamsun, écrivain norvégien, est né en 1859 et mort en 1952.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4562,7 +4816,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Edward Jenner ?",
+  "prompt": "À quel siècle remonte la naissance d'Edward Jenner ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -4570,6 +4824,7 @@
    "XXe siècle"
   ],
   "explanation": "Edward Jenner, scientifique et médecin anglais, pionnier de la vaccination, est né en 1749 et mort en 1823.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4580,7 +4835,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est née Virginia Woolf ?",
+  "prompt": "À quel siècle remonte la naissance de Virginia Woolf ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4588,6 +4843,7 @@
    "XXe siècle"
   ],
   "explanation": "Virginia Woolf, femme de lettres britannique, est née en 1882 et morte en 1941.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4598,7 +4854,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Daniel Defoe ?",
+  "prompt": "Daniel Defoe est né au…",
   "options": [
    "XVe siècle",
    "XVIIe siècle*",
@@ -4606,6 +4862,7 @@
    "XIXe siècle"
   ],
   "explanation": "Daniel Defoe, écrivain britannique, est né en 1660 et mort en 1731.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4624,6 +4881,7 @@
    "XIXe siècle"
   ],
   "explanation": "Jonathan Swift, écrivain, satiriste, essayiste, pamphlétaire anglo-irlandais, est né en 1667 et mort en 1745.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4634,7 +4892,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Boris Pasternak ?",
+  "prompt": "Boris Pasternak est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4642,6 +4900,7 @@
    "XXe siècle"
   ],
   "explanation": "Boris Pasternak, écrivain russe, est né en 1890 et mort en 1960.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4652,7 +4911,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Heinrich Rudolf Hertz ?",
+  "prompt": "Heinrich Rudolf Hertz est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4660,6 +4919,7 @@
    "XXe siècle"
   ],
   "explanation": "Heinrich Rudolf Hertz, physicien allemand du XIXe siècle, est né en 1857 et mort en 1894.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4678,6 +4938,7 @@
    "XIXe siècle"
   ],
   "explanation": "Johannes Vermeer, peintre néerlandais, est né en 1632 et mort en 1675.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4696,6 +4957,7 @@
    "XXe siècle"
   ],
   "explanation": "Henri Becquerel, physicien français, est né en 1852 et mort en 1908.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4714,6 +4976,7 @@
    "XXe siècle"
   ],
   "explanation": "John Dalton, chimiste et physicien britannique, est né en 1766 et mort en 1844.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4732,6 +4995,7 @@
    "XXe siècle"
   ],
   "explanation": "Franz Liszt, compositeur et pianiste hongrois, est né en 1811 et mort en 1886.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4742,7 +5006,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Federico García Lorca ?",
+  "prompt": "À quel siècle remonte la naissance de Federico García Lorca ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4750,6 +5014,7 @@
    "XXe siècle"
   ],
   "explanation": "Federico García Lorca, poète, dramaturge, peintre, pianiste et compositeur espagnol, est né en 1898 et mort en 1936.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4760,7 +5025,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Henryk Sienkiewicz ?",
+  "prompt": "À quel siècle remonte la naissance d'Henryk Sienkiewicz ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4768,6 +5033,7 @@
    "XXe siècle"
   ],
   "explanation": "Henryk Sienkiewicz, écrivain polonais, lauréat du prix Nobel de littérature en 1905, est né en 1846 et mort en 1916.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4786,6 +5052,7 @@
    "XXe siècle"
   ],
   "explanation": "William Blake, peintre, graveur et poète britannique, est né en 1757 et mort en 1827.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4804,6 +5071,7 @@
    "XXe siècle"
   ],
   "explanation": "Carl Gustav Jung, médecin psychiatre suisse, est né en 1875 et mort en 1961.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4822,6 +5090,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Nicolas Poussin, peintre français du XVIIe siècle représentant du classicisme pictural, est né en 1594 et mort en 1665.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4840,6 +5109,7 @@
    "XXe siècle"
   ],
   "explanation": "Jacques Offenbach, compositeur franco-allemand du XIXe siècle, est né en 1819 et mort en 1880.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4858,6 +5128,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Michel de Montaigne, écrivain français, philosophe, humaniste, qui fut maire de Bordeaux, est né en 1533 et mort en 1592.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4876,6 +5147,7 @@
    "XXe siècle"
   ],
   "explanation": "David Hilbert, mathématicien allemand, est né en 1862 et mort en 1943.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4886,7 +5158,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Hendrik Lorentz ?",
+  "prompt": "Hendrik Lorentz est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4894,6 +5166,7 @@
    "XXe siècle"
   ],
   "explanation": "Hendrik Lorentz, physicien néerlandais, est né en 1853 et mort en 1928.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4904,7 +5177,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Henri Bergson ?",
+  "prompt": "Henri Bergson est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4912,6 +5185,7 @@
    "XXe siècle"
   ],
   "explanation": "Henri Bergson, philosophe français, est né en 1859 et mort en 1941.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4930,6 +5204,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Abel Tasman, navigateur et explorateur néerlandais, est né en 1603 et mort en 1659.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4940,7 +5215,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Le Caravage ?",
+  "prompt": "À quel siècle remonte la naissance de Le Caravage ?",
   "options": [
    "XIVe siècle",
    "XVe siècle",
@@ -4948,6 +5223,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Le Caravage, peintre italien, est né en 1571 et mort en 1610.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4966,6 +5242,7 @@
    "XXe siècle"
   ],
   "explanation": "Sully Prudhomme, poète français, est né en 1839 et mort en 1907.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4976,7 +5253,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Bernhard Riemann ?",
+  "prompt": "Bernhard Riemann est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -4984,6 +5261,7 @@
    "XXe siècle"
   ],
   "explanation": "Bernhard Riemann, mathématicien allemand, est né en 1826 et mort en 1866.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -4994,7 +5272,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Anatole France ?",
+  "prompt": "Anatole France est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5002,6 +5280,7 @@
    "XXe siècle"
   ],
   "explanation": "Anatole France, écrivain, biographe, journaliste et critique littéraire français, est né en 1844 et mort en 1924.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5012,7 +5291,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né H. G. Wells ?",
+  "prompt": "À quel siècle remonte la naissance d'H. G. Wells ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5020,6 +5299,7 @@
    "XXe siècle"
   ],
   "explanation": "H. G. Wells, écrivain britannique des XIXe et XXe s., connu pour ses romans de science-fiction, est né en 1866 et mort en 1946.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5038,6 +5318,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Thomas More, philosophe, humaniste et théologien anglais, est né en 1478 et mort en 1535.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5056,6 +5337,7 @@
    "XXe siècle"
   ],
   "explanation": "Ivan Tourgueniev, écrivain et dramaturge russe, est né en 1818 et mort en 1883.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5074,6 +5356,7 @@
    "XXe siècle"
   ],
   "explanation": "Ivan Pavlov, médecin et un physiologiste russe, connu notamment pour ses travaux sur les réflexes conditionnels, est né en 1849 et mort en 1936.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5084,7 +5367,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Pieter Brueghel l'Ancien ?",
+  "prompt": "Pieter Brueghel l'Ancien est né au…",
   "options": [
    "XVe siècle",
    "XVIe siècle*",
@@ -5092,6 +5375,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Pieter Brueghel l'Ancien, peintre et graveur brabançon, est né en 1525 et mort en 1569.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5102,7 +5386,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Djalâl ad-Dîn Rûmî ?",
+  "prompt": "À quel siècle remonte la naissance de Djalâl ad-Dîn Rûmî ?",
   "options": [
    "XIIe siècle",
    "XIIIe siècle*",
@@ -5110,6 +5394,7 @@
    "XVe siècle"
   ],
   "explanation": "Djalâl ad-Dîn Rûmî, poète et mystique persan, est né en 1207 et mort en 1273.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5120,7 +5405,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Robert Boyle ?",
+  "prompt": "À quel siècle remonte la naissance de Robert Boyle ?",
   "options": [
    "XVe siècle",
    "XVIIe siècle*",
@@ -5128,6 +5413,7 @@
    "XIXe siècle"
   ],
   "explanation": "Robert Boyle, physicien et chimiste irlandais, est né en 1627 et mort en 1691.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5146,6 +5432,7 @@
    "XXe siècle"
   ],
   "explanation": "Gustave Flaubert, romancier et auteur dramatique français, est né en 1821 et mort en 1880.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5156,7 +5443,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Nicolas Gogol ?",
+  "prompt": "Nicolas Gogol est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5164,6 +5451,7 @@
    "XXe siècle"
   ],
   "explanation": "Nicolas Gogol, écrivain russe d’origine ukrainienne, est né en 1809 et mort en 1852.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5174,7 +5462,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Heinrich Heine ?",
+  "prompt": "Heinrich Heine est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -5182,6 +5470,7 @@
    "XXe siècle"
   ],
   "explanation": "Heinrich Heine, écrivain allemand, est né en 1797 et mort en 1856.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5192,7 +5481,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est née Emily Dickinson ?",
+  "prompt": "Emily Dickinson est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5200,6 +5489,7 @@
    "XXe siècle"
   ],
   "explanation": "Emily Dickinson, poétesse américaine, est née en 1830 et morte en 1886.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5210,7 +5500,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Pierre-Simon de Laplace ?",
+  "prompt": "À quel siècle remonte la naissance de Pierre-Simon de Laplace ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -5218,6 +5508,7 @@
    "XXe siècle"
   ],
   "explanation": "Pierre-Simon de Laplace, mathématicien et astronome français, est né en 1749 et mort en 1827.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5228,7 +5519,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est née Selma Lagerlöf ?",
+  "prompt": "À quel siècle remonte la naissance de Selma Lagerlöf ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5236,6 +5527,7 @@
    "XXe siècle"
   ],
   "explanation": "Selma Lagerlöf, écrivaine suédoise, est née en 1858 et morte en 1940.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5246,7 +5538,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Denis Diderot ?",
+  "prompt": "Denis Diderot est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -5254,6 +5546,7 @@
    "XXe siècle"
   ],
   "explanation": "Denis Diderot, écrivain, philosophe et encyclopédiste français, est né en 1713 et mort en 1784.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5272,6 +5565,7 @@
    "XXe siècle"
   ],
   "explanation": "William Wordsworth, poète romantique britannique, est né en 1770 et mort en 1850.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5282,7 +5576,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Jean Sibelius ?",
+  "prompt": "Jean Sibelius est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5290,6 +5584,7 @@
    "XXe siècle"
   ],
   "explanation": "Jean Sibelius, compositeur finlandais de musique classique, est né en 1865 et mort en 1957.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5300,7 +5595,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Jack London ?",
+  "prompt": "À quel siècle remonte la naissance de Jack London ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5308,6 +5603,7 @@
    "XXe siècle"
   ],
   "explanation": "Jack London, écrivain américain, est né en 1876 et mort en 1916.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5318,7 +5614,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est née Sarah Bernhardt ?",
+  "prompt": "Sarah Bernhardt est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5326,6 +5622,7 @@
    "XXe siècle"
   ],
   "explanation": "Sarah Bernhardt, peintre, sculptrice et comédienne française, est née en 1844 et morte en 1923.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5336,7 +5633,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Félix Mendelssohn Bartholdy ?",
+  "prompt": "Félix Mendelssohn Bartholdy est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5344,6 +5641,7 @@
    "XXe siècle"
   ],
   "explanation": "Félix Mendelssohn Bartholdy, compositeur, chef d'orchestre et pianiste allemand, est né en 1809 et mort en 1847.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5354,7 +5652,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Edgar Degas ?",
+  "prompt": "À quel siècle remonte la naissance d'Edgar Degas ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5362,6 +5660,7 @@
    "XXe siècle"
   ],
   "explanation": "Edgar Degas, peintre et graveur français, est né en 1834 et mort en 1917.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5372,7 +5671,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est née Georgia O'Keeffe ?",
+  "prompt": "Georgia O'Keeffe est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5380,6 +5679,7 @@
    "XXe siècle"
   ],
   "explanation": "Georgia O'Keeffe, peintre américaine, est née en 1887 et morte en 1986.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5390,7 +5690,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Mikhaïl Lermontov ?",
+  "prompt": "Mikhaïl Lermontov est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5398,6 +5698,7 @@
    "XXe siècle"
   ],
   "explanation": "Mikhaïl Lermontov, poète, peintre, romancier et dramaturge russe, est né en 1814 et mort en 1841.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5408,7 +5709,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Charles Babbage ?",
+  "prompt": "À quel siècle remonte la naissance de Charles Babbage ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -5416,6 +5717,7 @@
    "XXe siècle"
   ],
   "explanation": "Charles Babbage, mathématicien britannique, est né en 1791 et mort en 1871.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5426,7 +5728,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Claude Debussy ?",
+  "prompt": "Claude Debussy est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5434,6 +5736,7 @@
    "XXe siècle"
   ],
   "explanation": "Claude Debussy, compositeur français, est né en 1862 et mort en 1918.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5452,6 +5755,7 @@
    "XXe siècle"
   ],
   "explanation": "Mary Shelley, romancière et autrice dramatique britannique, est née en 1797 et morte en 1851.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5462,7 +5766,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Romain Rolland ?",
+  "prompt": "À quel siècle remonte la naissance de Romain Rolland ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5470,6 +5774,7 @@
    "XXe siècle"
   ],
   "explanation": "Romain Rolland, écrivain français, est né en 1866 et mort en 1944.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5480,7 +5785,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Joseph John Thomson ?",
+  "prompt": "Joseph John Thomson est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5488,6 +5793,7 @@
    "XXe siècle"
   ],
   "explanation": "Joseph John Thomson, physicien britannique, est né en 1856 et mort en 1940.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5498,7 +5804,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Vivekananda ?",
+  "prompt": "Vivekananda est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5506,6 +5812,7 @@
    "XXe siècle"
   ],
   "explanation": "Vivekananda, moine hindou et indien, est né en 1863 et mort en 1902.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5516,7 +5823,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Titien ?",
+  "prompt": "Titien est né au…",
   "options": [
    "XIIIe siècle",
    "XVe siècle*",
@@ -5524,6 +5831,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Titien, peintre et graveur vénitien, est né en 1490 et mort en 1576.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5534,7 +5842,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Amerigo Vespucci ?",
+  "prompt": "À quel siècle remonte la naissance d'Amerigo Vespucci ?",
   "options": [
    "XIIIe siècle",
    "XVe siècle*",
@@ -5542,6 +5850,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Amerigo Vespucci, navigateur florentin, est né en 1454 et mort en 1512.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5560,6 +5869,7 @@
    "XXe siècle"
   ],
   "explanation": "Khalil Gibran, poète et peintre libanais, est né en 1883 et mort en 1931.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5570,7 +5880,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est née Cixi ?",
+  "prompt": "Cixi est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5578,6 +5888,7 @@
    "XXe siècle"
   ],
   "explanation": "Cixi, impératrice de Chine, est née en 1835 et morte en 1908.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5588,7 +5899,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Bedřich Smetana ?",
+  "prompt": "À quel siècle remonte la naissance de Bedřich Smetana ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5596,6 +5907,7 @@
    "XXe siècle"
   ],
   "explanation": "Bedřich Smetana, compositeur tchèque, est né en 1824 et mort en 1884.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5606,7 +5918,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Ralph Waldo Emerson ?",
+  "prompt": "À quel siècle remonte la naissance de Ralph Waldo Emerson ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5614,6 +5926,7 @@
    "XXe siècle"
   ],
   "explanation": "Ralph Waldo Emerson, philosophe, essayiste et poète américain, est né en 1803 et mort en 1882.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5624,7 +5937,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Ernst Haeckel ?",
+  "prompt": "Ernst Haeckel est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5632,6 +5945,7 @@
    "XXe siècle"
   ],
   "explanation": "Ernst Haeckel, biologiste, zoologiste, philosophe et artiste allemand, est né en 1834 et mort en 1919.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5642,7 +5956,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né David Livingstone ?",
+  "prompt": "David Livingstone est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5650,6 +5964,7 @@
    "XXe siècle"
   ],
   "explanation": "David Livingstone, médecin, missionnaire protestant et explorateur écossais, est né en 1813 et mort en 1873.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5660,7 +5975,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Mohamed Iqbal ?",
+  "prompt": "Mohamed Iqbal est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5668,6 +5983,7 @@
    "XXe siècle"
   ],
   "explanation": "Mohamed Iqbal, écrivain, poète et philosophe musulman de l'Inde britannique, est né en 1877 et mort en 1938.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5686,6 +6002,7 @@
    "XXe siècle"
   ],
   "explanation": "Arthur Rimbaud, poète français, est né en 1854 et mort en 1891.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5704,6 +6021,7 @@
    "XXe siècle"
   ],
   "explanation": "Albert Schweitzer, théologien, philosophe, organiste et médecin alsacien, est né en 1875 et mort en 1965.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5722,6 +6040,7 @@
    "XXe siècle"
   ],
   "explanation": "Serge Prokofiev, compositeur russe, est né en 1891 et mort en 1953.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5740,6 +6059,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Jean de La Fontaine, poète, fabuliste et conteur français, est né en 1621 et mort en 1695.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5758,6 +6078,7 @@
    "XXe siècle"
   ],
   "explanation": "Maurice Maeterlinck, poète, dramaturge et essayiste belge, est né en 1862 et mort en 1949.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5768,7 +6089,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Herman Melville ?",
+  "prompt": "À quel siècle remonte la naissance d'Herman Melville ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5776,6 +6097,7 @@
    "XXe siècle"
   ],
   "explanation": "Herman Melville, romancier, essayiste et poète américain, est né en 1819 et mort en 1891.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5786,7 +6108,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né John Stuart Mill ?",
+  "prompt": "À quel siècle remonte la naissance de John Stuart Mill ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5794,6 +6116,7 @@
    "XXe siècle"
   ],
   "explanation": "John Stuart Mill, philosophe, logicien et économiste britannique, est né en 1806 et mort en 1873.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5804,7 +6127,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Charles Baudelaire ?",
+  "prompt": "Charles Baudelaire est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5812,6 +6135,7 @@
    "XXe siècle"
   ],
   "explanation": "Charles Baudelaire, poète français, est né en 1821 et mort en 1867.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5822,7 +6146,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Stendhal ?",
+  "prompt": "Stendhal est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -5830,6 +6154,7 @@
    "XXe siècle"
   ],
   "explanation": "Stendhal, écrivain français, est né en 1783 et mort en 1842.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5848,6 +6173,7 @@
    "XXe siècle"
   ],
   "explanation": "Mustafa Kemal Atatürk, fondateur et premier président de la République de Turquie de 1923 à 1938, est né en 1881 et mort en 1938.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5866,6 +6192,7 @@
    "XXe siècle"
   ],
   "explanation": "Luis Buñuel, réalisateur et scénariste mexicain, d'origine espagnole, est né en 1900 et mort en 1983.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5876,7 +6203,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Louis Pasteur ?",
+  "prompt": "Louis Pasteur est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -5884,6 +6211,7 @@
    "XXe siècle"
   ],
   "explanation": "Louis Pasteur, chimiste et biologiste français, fondateur de la microbiologie, est né en 1822 et mort en 1895.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5894,7 +6222,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Albrecht Dürer ?",
+  "prompt": "Albrecht Dürer est né au…",
   "options": [
    "XIVe siècle",
    "XVe siècle*",
@@ -5902,6 +6230,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Albrecht Dürer, peintre, graveur et mathématicien allemand, est né en 1471 et mort en 1528.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5920,6 +6249,7 @@
    "XXe siècle"
   ],
   "explanation": "Hokusai, peintre, dessinateur et graveur japonais, est né en 1760 et mort en 1849.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5938,6 +6268,7 @@
    "XXe siècle"
   ],
   "explanation": "Henri Matisse, peintre, dessinateur, sculpteur et graveur français, est né en 1869 et mort en 1954.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5948,7 +6279,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 39,
-  "prompt": "En quel siècle est né Michel-Ange Buronarroti ?",
+  "prompt": "Michel-Ange Buronarroti est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle",
@@ -5956,6 +6287,7 @@
    "XVIe siècle"
   ],
   "explanation": "Michel-Ange Buronarroti, peintre, sculpteur, poète et architecte italien du XVIe siècle, est né en 1475 et mort en 1564.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5966,7 +6298,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Rembrandt ?",
+  "prompt": "À quel siècle remonte la naissance de Rembrandt ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle*",
@@ -5974,6 +6306,7 @@
    "XIXe siècle"
   ],
   "explanation": "Rembrandt, peintre et graveur néerlandais, est né en 1606 et mort en 1669.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -5992,6 +6325,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Pierre Paul Rubens, peintre flamand, est né en 1577 et mort en 1640.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6010,6 +6344,7 @@
    "XXe siècle"
   ],
   "explanation": "Frank Lloyd Wright, architecte et concepteur américain, est né en 1867 et mort en 1959.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6020,7 +6355,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Georges Bizet ?",
+  "prompt": "À quel siècle remonte la naissance de Georges Bizet ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6028,6 +6363,7 @@
    "XXe siècle"
   ],
   "explanation": "Georges Bizet, compositeur français, est né en 1838 et mort en 1875.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6038,7 +6374,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Sandro Botticelli ?",
+  "prompt": "À quel siècle remonte la naissance de Sandro Botticelli ?",
   "options": [
    "XIVe siècle",
    "XVe siècle*",
@@ -6046,6 +6382,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Sandro Botticelli, peintre italien, est né en 1445 et mort en 1510.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6064,6 +6401,7 @@
    "XXe siècle"
   ],
   "explanation": "Hans Christian Andersen, romancier, dramaturge, conteur et poète danois, est né en 1805 et mort en 1875.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6074,7 +6412,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Matsuo Bashō ?",
+  "prompt": "Matsuo Bashō est né au…",
   "options": [
    "XVe siècle",
    "XVIe siècle",
@@ -6082,6 +6420,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Matsuo Bashō, poète japonais, est né en 1644 et mort en 1694.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6092,7 +6431,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 41,
-  "prompt": "En quel siècle est né Lord Byron ?",
+  "prompt": "Lord Byron est né au…",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -6100,6 +6439,7 @@
    "XXe siècle"
   ],
   "explanation": "Lord Byron, poète britannique, est né en 1788 et mort en 1824.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6110,7 +6450,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 40,
-  "prompt": "En quel siècle est né Miguel de Cervantes ?",
+  "prompt": "À quel siècle remonte la naissance de Miguel de Cervantes ?",
   "options": [
    "XIVe siècle",
    "XVIe siècle*",
@@ -6118,6 +6458,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Miguel de Cervantes, romancier, poète et dramaturge espagnol, est né en 1547 et mort en 1616.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6128,7 +6469,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Geoffrey Chaucer ?",
+  "prompt": "Geoffrey Chaucer est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle*",
@@ -6136,6 +6477,7 @@
    "XVIe siècle"
   ],
   "explanation": "Geoffrey Chaucer, écrivain, auteur, philosophe, diplomate et poète anglais, est né en 1343 et mort en 1400.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6146,7 +6488,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 40,
-  "prompt": "En quel siècle est né Anton Tchekhov ?",
+  "prompt": "Anton Tchekhov est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6154,6 +6496,7 @@
    "XXe siècle"
   ],
   "explanation": "Anton Tchekhov, écrivain et dramaturge russe, est né en 1860 et mort en 1904.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6172,6 +6515,7 @@
    "XXe siècle"
   ],
   "explanation": "Charles Dickens, romancier, dramaturge et journaliste anglais, est né en 1812 et mort en 1870.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6182,7 +6526,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Pierre Kropotkine ?",
+  "prompt": "À quel siècle remonte la naissance de Pierre Kropotkine ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6190,6 +6534,7 @@
    "XXe siècle"
   ],
   "explanation": "Pierre Kropotkine, théoricien anarcho-communiste, géographe et scientifique russe, est né en 1842 et mort en 1921.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6200,7 +6545,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 41,
-  "prompt": "En quel siècle est né Mao Zedong ?",
+  "prompt": "À quel siècle remonte la naissance de Mao Zedong ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6208,6 +6553,7 @@
    "XXe siècle"
   ],
   "explanation": "Mao Zedong, homme d'État chinois et fondateur de la république populaire de Chine, est né en 1893 et mort en 1976.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6226,6 +6572,7 @@
    "XXe siècle"
   ],
   "explanation": "Mikhaïl Lomonossov, chimiste, physicien, astronome, historien, poète, dramaturge, linguiste, slaviste, pédagogue et mosaïste russe, est né en 1711 et mort en 1765.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6244,6 +6591,7 @@
    "XIXe siècle"
   ],
   "explanation": "Johann Wolfgang von Goethe, poète, romancier, dramaturge, théoricien de l’art et homme d’État allemand, est né en 1749 et mort en 1832.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6254,7 +6602,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Max Born ?",
+  "prompt": "Max Born est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6262,6 +6610,7 @@
    "XXe siècle"
   ],
   "explanation": "Max Born, mathématicien et physicien germano-britannique détenteur du prix Nobel de physique, est né en 1882 et mort en 1970.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6272,7 +6621,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Marcel Duchamp ?",
+  "prompt": "Marcel Duchamp est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6280,6 +6629,7 @@
    "XXe siècle"
   ],
   "explanation": "Marcel Duchamp, peintre, plasticien et homme de lettres français, est né en 1887 et mort en 1968.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6290,7 +6640,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 55,
-  "prompt": "En quel siècle est né Hernando de Soto ?",
+  "prompt": "Hernando de Soto est né au…",
   "options": [
    "XIVe siècle",
    "XVe siècle*",
@@ -6298,6 +6648,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Hernando de Soto, conquistador et explorateur espagnol, est né en 1500 et mort en 1542.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6308,7 +6659,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Chandrashekhara Venkata Râman ?",
+  "prompt": "À quel siècle remonte la naissance de Chandrashekhara Venkata Râman ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6316,6 +6667,7 @@
    "XXe siècle"
   ],
   "explanation": "Chandrashekhara Venkata Râman, physicien indien, est né en 1888 et mort en 1970.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6334,6 +6686,7 @@
    "XIXe siècle"
   ],
   "explanation": "Novalis, poète et romancier allemand, est né en 1772 et mort en 1801.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6352,6 +6705,7 @@
    "XVe siècle"
   ],
   "explanation": "Marco Polo, explorateur et marchand vénitien, est né en 1254 et mort en 1324.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6362,7 +6716,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Vassily Kandinsky ?",
+  "prompt": "À quel siècle remonte la naissance de Vassily Kandinsky ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6370,6 +6724,7 @@
    "XXe siècle"
   ],
   "explanation": "Vassily Kandinsky, peintre russe, naturalisé allemand puis français, est né en 1866 et mort en 1944.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6380,7 +6735,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Nicolas Copernic ?",
+  "prompt": "À quel siècle remonte la naissance de Nicolas Copernic ?",
   "options": [
    "XIIIe siècle",
    "XIVe siècle",
@@ -6388,6 +6743,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Nicolas Copernic, astronome polonais, également chanoine, médecin et mathématicien, est né en 1473 et mort en 1543.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6398,7 +6754,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Hafez ?",
+  "prompt": "À quel siècle remonte la naissance d'Hafez ?",
   "options": [
    "XIIe siècle",
    "XIVe siècle*",
@@ -6406,6 +6762,7 @@
    "XVIe siècle"
   ],
   "explanation": "Hafez, poète, philosophe et mystique persan, est né en 1325 et mort en 1389.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6424,6 +6781,7 @@
    "XXe siècle"
   ],
   "explanation": "Søren Kierkegaard, écrivain, théologien protestant et philosophe danois, est né en 1813 et mort en 1855.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6434,7 +6792,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Niccolò Paganini ?",
+  "prompt": "Niccolò Paganini est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -6442,6 +6800,7 @@
    "XIXe siècle"
   ],
   "explanation": "Niccolò Paganini, compositeur et violoniste, est né en 1782 et mort en 1840.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6452,7 +6811,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Alexander von Humboldt ?",
+  "prompt": "À quel siècle remonte la naissance d'Alexander von Humboldt ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -6460,6 +6819,7 @@
    "XXe siècle"
   ],
   "explanation": "Alexander von Humboldt, naturaliste, géographe et explorateur allemand, est né en 1769 et mort en 1859.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6470,7 +6830,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Carl Friedrich Gauss ?",
+  "prompt": "Carl Friedrich Gauss est né au…",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -6478,6 +6838,7 @@
    "XXe siècle"
   ],
   "explanation": "Carl Friedrich Gauss, mathématicien, astronome et physicien allemand, est né en 1777 et mort en 1855.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6496,6 +6857,7 @@
    "XXe siècle"
   ],
   "explanation": "André-Marie Ampère, mathématicien, physicien, chimiste et philosophe français, est né en 1775 et mort en 1836.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6514,6 +6876,7 @@
    "XIVe siècle"
   ],
   "explanation": "François d'Assise, saint catholique et fondateur de l'ordre franciscain, fin XIIe - début XIIIe siècle, est né en 1182 et mort en 1226.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6532,6 +6895,7 @@
    "XIXe siècle"
   ],
   "explanation": "Alessandro Volta, physicien italien, inventeur de la pile électrique, est né en 1745 et mort en 1827.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6542,7 +6906,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 41,
-  "prompt": "En quel siècle est né Molière ?",
+  "prompt": "À quel siècle remonte la naissance de Molière ?",
   "options": [
    "XVe siècle",
    "XVIIe siècle*",
@@ -6550,6 +6914,7 @@
    "XIXe siècle"
   ],
   "explanation": "Molière, dramaturge et acteur français, est né en 1622 et mort en 1673.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6560,7 +6925,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né James Joyce ?",
+  "prompt": "James Joyce est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6568,6 +6933,7 @@
    "XXe siècle"
   ],
   "explanation": "James Joyce, romancier, auteur dramatique, poète, critique et professeur irlandais, est né en 1882 et mort en 1941.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6578,7 +6944,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Marcel Proust ?",
+  "prompt": "Marcel Proust est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6586,6 +6952,7 @@
    "XXe siècle"
   ],
   "explanation": "Marcel Proust, écrivain, critique et essayiste français, est né en 1871 et mort en 1922.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6604,6 +6971,7 @@
    "XIXe siècle"
   ],
   "explanation": "Alexandre Pouchkine, poète, dramaturge et romancier russe, est né en 1799 et mort en 1837.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6614,7 +6982,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est née Rosa Luxemburg ?",
+  "prompt": "Rosa Luxemburg est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6622,6 +6990,7 @@
    "XXe siècle"
   ],
   "explanation": "Rosa Luxemburg, militante communiste et révolutionnaire allemande, est née en 1871 et morte en 1919.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6632,7 +7001,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 40,
-  "prompt": "En quel siècle est né Rabîndranâth Tagore ?",
+  "prompt": "Rabîndranâth Tagore est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6640,6 +7009,7 @@
    "XXe siècle"
   ],
   "explanation": "Rabîndranâth Tagore, compositeur, écrivain, dramaturge, peintre et philosophe indien, est né en 1861 et mort en 1941.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6658,6 +7028,7 @@
    "XXe siècle"
   ],
   "explanation": "Léon Tolstoï, écrivain russe, XIXe - début XXe s., est né en 1828 et mort en 1910.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6668,7 +7039,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 40,
-  "prompt": "En quel siècle est né Mark Twain ?",
+  "prompt": "À quel siècle remonte la naissance de Mark Twain ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6676,6 +7047,7 @@
    "XXe siècle"
   ],
   "explanation": "Mark Twain, romancier, journaliste et humoriste américain, est né en 1835 et mort en 1910.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6686,7 +7058,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Johannes Brahms ?",
+  "prompt": "Johannes Brahms est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6694,6 +7066,7 @@
    "XXe siècle"
   ],
   "explanation": "Johannes Brahms, compositeur, pianiste et chef d'orchestre allemand, est né en 1833 et mort en 1897.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6712,6 +7085,7 @@
    "XXe siècle"
   ],
   "explanation": "Antonín Dvořák, compositeur tchèque, est né en 1841 et mort en 1904.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6722,7 +7096,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Georg Friedrich Haendel ?",
+  "prompt": "Georg Friedrich Haendel est né au…",
   "options": [
    "XVe siècle",
    "XVIe siècle",
@@ -6730,6 +7104,7 @@
    "XIXe siècle"
   ],
   "explanation": "Georg Friedrich Haendel, compositeur allemand puis britannique, est né en 1685 et mort en 1759.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6740,7 +7115,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Gustav Mahler ?",
+  "prompt": "Gustav Mahler est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6748,6 +7123,7 @@
    "XXe siècle"
   ],
   "explanation": "Gustav Mahler, compositeur et chef d'orchestre autrichien, est né en 1860 et mort en 1911.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6758,7 +7134,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Giacomo Puccini ?",
+  "prompt": "À quel siècle remonte la naissance de Giacomo Puccini ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6766,6 +7142,7 @@
    "XXe siècle"
   ],
   "explanation": "Giacomo Puccini, compositeur italien, est né en 1858 et mort en 1924.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6776,7 +7153,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Franz Schubert ?",
+  "prompt": "Franz Schubert est né au…",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -6784,6 +7161,7 @@
    "XXe siècle"
   ],
   "explanation": "Franz Schubert, compositeur autrichien, est né en 1797 et mort en 1828.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6794,7 +7172,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Igor Stravinsky ?",
+  "prompt": "À quel siècle remonte la naissance d'Igor Stravinsky ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6802,6 +7180,7 @@
    "XXe siècle"
   ],
   "explanation": "Igor Stravinsky, pianiste et compositeur russe naturalisé français, puis américain, est né en 1882 et mort en 1971.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6820,6 +7199,7 @@
    "XXe siècle"
   ],
   "explanation": "Piotr Ilitch Tchaïkovski, compositeur russe, est né en 1840 et mort en 1893.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6830,7 +7210,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Giuseppe Verdi ?",
+  "prompt": "Giuseppe Verdi est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6838,6 +7218,7 @@
    "XXe siècle"
   ],
   "explanation": "Giuseppe Verdi, compositeur italien de l'ère romantique, est né en 1813 et mort en 1901.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6848,7 +7229,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Jacques Cartier ?",
+  "prompt": "Jacques Cartier est né au…",
   "options": [
    "XIIIe siècle",
    "XIVe siècle",
@@ -6856,6 +7237,7 @@
    "XVIe siècle"
   ],
   "explanation": "Jacques Cartier, explorateur, navigateur et homme d'État français, est né en 1492 et mort en 1557.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6874,6 +7256,7 @@
    "XXe siècle"
   ],
   "explanation": "James Cook, navigateur, cartographe et explorateur britannique, est né en 1728 et mort en 1779.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6884,7 +7267,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Hernán Cortés ?",
+  "prompt": "À quel siècle remonte la naissance d'Hernán Cortés ?",
   "options": [
    "XIVe siècle",
    "XVe siècle*",
@@ -6892,6 +7275,7 @@
    "XVIIe siècle"
   ],
   "explanation": "Hernán Cortés, conquistador espagnol, est né en 1485 et mort en 1547.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6902,7 +7286,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Ibn Battuta ?",
+  "prompt": "Ibn Battuta est né au…",
   "options": [
    "XIIe siècle",
    "XIIIe siècle",
@@ -6910,6 +7294,7 @@
    "XVe siècle"
   ],
   "explanation": "Ibn Battuta, érudit et explorateur berbère du XIVe siècle, est né en 1304 et mort en 1368.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6920,7 +7305,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Zheng He ?",
+  "prompt": "À quel siècle remonte la naissance de Zheng He ?",
   "options": [
    "XIIe siècle",
    "XIIIe siècle",
@@ -6928,6 +7313,7 @@
    "XVIe siècle"
   ],
   "explanation": "Zheng He, marin, explorateur et diplomate chinois, est né en 1371 et mort en 1433.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6946,6 +7332,7 @@
    "XXe siècle"
   ],
   "explanation": "Robert Schumann, compositeur allemand, est né en 1810 et mort en 1856.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6956,7 +7343,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Alfred Hitchcock ?",
+  "prompt": "À quel siècle remonte la naissance d'Alfred Hitchcock ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6964,6 +7351,7 @@
    "XXe siècle"
   ],
   "explanation": "Alfred Hitchcock, cinéaste britannique, est né en 1899 et mort en 1980.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6974,7 +7362,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est née Irène Joliot-Curie ?",
+  "prompt": "À quel siècle remonte la naissance d'Irène Joliot-Curie ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -6982,6 +7370,7 @@
    "XXe siècle"
   ],
   "explanation": "Irène Joliot-Curie, physicienne et chimiste française, est née en 1897 et morte en 1956.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -6992,7 +7381,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Pierre de Fermat ?",
+  "prompt": "À quel siècle remonte la naissance de Pierre de Fermat ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle*",
@@ -7000,6 +7389,7 @@
    "XIXe siècle"
   ],
   "explanation": "Pierre de Fermat, mathématicien et magistrat français, est né en 1607 et mort en 1665.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7010,7 +7400,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né Samuel Morse ?",
+  "prompt": "À quel siècle remonte la naissance de Samuel Morse ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -7018,6 +7408,7 @@
    "XXe siècle"
   ],
   "explanation": "Samuel Morse, scientifique américain, développeur d'un télégraphe électrique, est né en 1791 et mort en 1872.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7036,6 +7427,7 @@
    "XIXe siècle"
   ],
   "explanation": "Leonhard Euler, mathématicien, physicien, ingénieur et philosophe suisse, est né en 1707 et mort en 1783.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7046,7 +7438,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Alfred Wegener ?",
+  "prompt": "À quel siècle remonte la naissance d'Alfred Wegener ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7054,6 +7446,7 @@
    "XXe siècle"
   ],
   "explanation": "Alfred Wegener, astronome et météorologue allemand, est né en 1880 et mort en 1930.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7064,7 +7457,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 49,
-  "prompt": "En quel siècle est né Georg Cantor ?",
+  "prompt": "À quel siècle remonte la naissance de Georg Cantor ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7072,6 +7465,7 @@
    "XXe siècle"
   ],
   "explanation": "Georg Cantor, mathématicien allemand, est né en 1845 et mort en 1918.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7090,6 +7484,7 @@
    "XXe siècle"
   ],
   "explanation": "Ludwig Feuerbach, philosophe allemand, est né en 1804 et mort en 1872.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7100,7 +7495,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Rainer Maria Rilke ?",
+  "prompt": "Rainer Maria Rilke est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7108,6 +7503,7 @@
    "XXe siècle"
   ],
   "explanation": "Rainer Maria Rilke, poète autrichien, est né en 1875 et mort en 1926.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7118,7 +7514,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 57,
-  "prompt": "En quel siècle est né Fabian Gottlieb von Bellingshausen ?",
+  "prompt": "À quel siècle remonte la naissance de Fabian Gottlieb von Bellingshausen ?",
   "options": [
    "XVIe siècle",
    "XVIIIe siècle*",
@@ -7126,6 +7522,7 @@
    "XXe siècle"
   ],
   "explanation": "Fabian Gottlieb von Bellingshausen, amiral de la flotte impériale russe, est né en 1778 et mort en 1852.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7144,6 +7541,7 @@
    "XXe siècle"
   ],
   "explanation": "August Strindberg, écrivain, dramaturge et peintre suédois, est né en 1849 et mort en 1912.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7154,7 +7552,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né Giotto ?",
+  "prompt": "Giotto est né au…",
   "options": [
    "XIe siècle",
    "XIIe siècle",
@@ -7162,6 +7560,7 @@
    "XVe siècle"
   ],
   "explanation": "Giotto, peintre, sculpteur et architecte italien, est né en 1276 et mort en 1337.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7172,7 +7571,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 51,
-  "prompt": "En quel siècle est né René Magritte ?",
+  "prompt": "René Magritte est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7180,6 +7579,7 @@
    "XXe siècle"
   ],
   "explanation": "René Magritte, peintre surréaliste belge, est né en 1898 et mort en 1967.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7190,7 +7590,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Walter Scott ?",
+  "prompt": "Walter Scott est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -7198,6 +7598,7 @@
    "XXe siècle"
   ],
   "explanation": "Walter Scott, poète, écrivain et historien écossais, est né en 1771 et mort en 1832.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7216,6 +7617,7 @@
    "XXe siècle"
   ],
   "explanation": "Emma Goldman, anarchiste et féministe d’origine lituanienne, est née en 1869 et morte en 1940.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7226,7 +7628,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est née Emily Brontë ?",
+  "prompt": "Emily Brontë est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7234,6 +7636,7 @@
    "XXe siècle"
   ],
   "explanation": "Emily Brontë, écrivaine britannique, est née en 1818 et morte en 1848.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7252,6 +7655,7 @@
    "XXe siècle"
   ],
   "explanation": "Edvard Grieg, pianiste et compositeur norvégien, est né en 1843 et mort en 1907.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7262,7 +7666,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est née Anne Boleyn ?",
+  "prompt": "Anne Boleyn est née au…",
   "options": [
    "XIVe siècle",
    "XVIe siècle*",
@@ -7270,6 +7674,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Anne Boleyn, reine d'Angleterre, est née en 1501 et morte en 1536.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7280,7 +7685,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est née Pearl Buck ?",
+  "prompt": "À quel siècle remonte la naissance de Pearl Buck ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7288,6 +7693,7 @@
    "XXe siècle"
   ],
   "explanation": "Pearl Buck, écrivaine américaine, lauréate du prix Nobel de littérature en 1938, est née en 1892 et morte en 1973.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7298,7 +7704,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Walt Whitman ?",
+  "prompt": "À quel siècle remonte la naissance de Walt Whitman ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7306,6 +7712,7 @@
    "XXe siècle"
   ],
   "explanation": "Walt Whitman, poète, romancier, journaliste, éditeur américain, est né en 1819 et mort en 1892.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7316,7 +7723,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Aldous Huxley ?",
+  "prompt": "À quel siècle remonte la naissance d'Aldous Huxley ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7324,6 +7731,7 @@
    "XXe siècle"
   ],
   "explanation": "Aldous Huxley, écrivain, romancier et philosophe britannique, est né en 1894 et mort en 1963.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7334,7 +7742,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Anton Bruckner ?",
+  "prompt": "À quel siècle remonte la naissance d'Anton Bruckner ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7342,6 +7750,7 @@
    "XXe siècle"
   ],
   "explanation": "Anton Bruckner, compositeur autrichien, est né en 1824 et mort en 1896.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7352,7 +7761,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né George Berkeley ?",
+  "prompt": "À quel siècle remonte la naissance de George Berkeley ?",
   "options": [
    "XVe siècle",
    "XVIIe siècle*",
@@ -7360,6 +7769,7 @@
    "XIXe siècle"
   ],
   "explanation": "George Berkeley, philosophe irlandais, est né en 1685 et mort en 1753.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7370,7 +7780,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né John Keats ?",
+  "prompt": "John Keats est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -7378,6 +7788,7 @@
    "XIXe siècle"
   ],
   "explanation": "John Keats, poète romantique britannique, est né en 1795 et mort en 1821.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7388,7 +7799,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Jean-Baptiste de Lamarck ?",
+  "prompt": "Jean-Baptiste de Lamarck est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -7396,6 +7807,7 @@
    "XIXe siècle"
   ],
   "explanation": "Jean-Baptiste de Lamarck, officier, naturaliste et professeur de zoologie français, est né en 1744 et mort en 1829.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7414,6 +7826,7 @@
    "XXe siècle"
   ],
   "explanation": "Samuel Taylor Coleridge, poète et philosophe anglais, est né en 1772 et mort en 1834.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7432,6 +7845,7 @@
    "XXe siècle"
   ],
   "explanation": "Henri de Toulouse-Lautrec, peintre, dessinateur, lithographe, affichiste et illustrateur français, est né en 1864 et mort en 1901.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7450,6 +7864,7 @@
    "XXe siècle"
   ],
   "explanation": "Antonio Gramsci, écrivain et théoricien politique italien, est né en 1891 et mort en 1937.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7468,6 +7883,7 @@
    "XXe siècle"
   ],
   "explanation": "Jacques-Louis David, peintre français du mouvement néo-classique, est né en 1748 et mort en 1825.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7478,7 +7894,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Jean Cocteau ?",
+  "prompt": "Jean Cocteau est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7486,6 +7902,7 @@
    "XXe siècle"
   ],
   "explanation": "Jean Cocteau, poète, peintre, dessinateur, dramaturge et cinéaste français, est né en 1889 et mort en 1963.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7496,7 +7913,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Srinivasa Ramanujan ?",
+  "prompt": "Srinivasa Ramanujan est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7504,6 +7921,7 @@
    "XXe siècle"
   ],
   "explanation": "Srinivasa Ramanujan, mathématicien indien, est né en 1887 et mort en 1920.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7514,7 +7932,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Johann Strauss II ?",
+  "prompt": "À quel siècle remonte la naissance de Johann Strauss II ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7522,6 +7940,7 @@
    "XXe siècle"
   ],
   "explanation": "Johann Strauss II, compositeur, chef d'orchestre et violoniste autrichien, est né en 1825 et mort en 1899.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7532,7 +7951,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Béla Bartók ?",
+  "prompt": "À quel siècle remonte la naissance de Béla Bartók ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7540,6 +7959,7 @@
    "XXe siècle"
   ],
   "explanation": "Béla Bartók, compositeur, pianiste et musicologue hongrois, est né en 1881 et mort en 1945.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7550,7 +7970,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est née Eleanor Roosevelt ?",
+  "prompt": "Eleanor Roosevelt est née au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7558,6 +7978,7 @@
    "XXe siècle"
   ],
   "explanation": "Eleanor Roosevelt, première Dame des États-Unis, personnalité politique , militante au sein des mouvements de défense des droits civique, est née en 1884 et morte en 1962.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7576,6 +7997,7 @@
    "XXe siècle"
   ],
   "explanation": "Otto von Bismarck, homme d'État allemand, est né en 1815 et mort en 1898.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7586,7 +8008,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Sun Yat-sen ?",
+  "prompt": "Sun Yat-sen est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7594,6 +8016,7 @@
    "XXe siècle"
   ],
   "explanation": "Sun Yat-sen, politicien et révolutionnaire chinois, co-fondateur avec Song Jiaoren du Tongmenghui, est né en 1866 et mort en 1925.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7604,7 +8027,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Michael Faraday ?",
+  "prompt": "À quel siècle remonte la naissance de Michael Faraday ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -7612,6 +8035,7 @@
    "XXe siècle"
   ],
   "explanation": "Michael Faraday, physicien et chimiste britannique, est né en 1791 et mort en 1867.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7622,7 +8046,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Leonardo Fibonacci ?",
+  "prompt": "À quel siècle remonte la naissance de Leonardo Fibonacci ?",
   "options": [
    "XIe siècle",
    "XIIe siècle*",
@@ -7630,6 +8054,7 @@
    "XIVe siècle"
   ],
   "explanation": "Leonardo Fibonacci, mathématicien italien, est né en 1170 et mort en 1240.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7640,7 +8065,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Henry Ford ?",
+  "prompt": "Henry Ford est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7648,6 +8073,7 @@
    "XXe siècle"
   ],
   "explanation": "Henry Ford, entrepreneur américain fondateur du constructeur automobile Ford, est né en 1863 et mort en 1947.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7658,7 +8084,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né Joseph Fourier ?",
+  "prompt": "Joseph Fourier est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -7666,6 +8092,7 @@
    "XXe siècle"
   ],
   "explanation": "Joseph Fourier, mathématicien et physicien français, est né en 1768 et mort en 1830.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7684,6 +8111,7 @@
    "XXe siècle"
   ],
   "explanation": "Charlie Chaplin, acteur, réalisateur, scénariste, producteur et compositeur britannique, est né en 1889 et mort en 1977.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7694,7 +8122,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né J. R. R. Tolkien ?",
+  "prompt": "À quel siècle remonte la naissance de J. R. R. Tolkien ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7702,6 +8130,7 @@
    "XXe siècle"
   ],
   "explanation": "J. R. R. Tolkien, écrivain, poète, philologue et professeur d’université anglais, est né en 1892 et mort en 1973.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7712,7 +8141,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 47,
-  "prompt": "En quel siècle est né James Prescott Joule ?",
+  "prompt": "À quel siècle remonte la naissance de James Prescott Joule ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7720,6 +8149,7 @@
    "XXe siècle"
   ],
   "explanation": "James Prescott Joule, physicien britannique, est né en 1818 et mort en 1889.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7730,7 +8160,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Johannes Kepler ?",
+  "prompt": "Johannes Kepler est né au…",
   "options": [
    "XIVe siècle",
    "XVIe siècle*",
@@ -7738,6 +8168,7 @@
    "XVIIIe siècle"
   ],
   "explanation": "Johannes Kepler, astronome allemand, est né en 1572 et mort en 1630.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7748,7 +8179,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Max Planck ?",
+  "prompt": "Max Planck est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7756,6 +8187,7 @@
    "XXe siècle"
   ],
   "explanation": "Max Planck, physicien allemand, est né en 1858 et mort en 1947.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7766,7 +8198,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né James Watt ?",
+  "prompt": "James Watt est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -7774,6 +8206,7 @@
    "XXe siècle"
   ],
   "explanation": "James Watt, ingénieur écossais, est né en 1736 et mort en 1819.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7784,7 +8217,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 42,
-  "prompt": "En quel siècle est né Gottfried Wilhelm Leibniz ?",
+  "prompt": "Gottfried Wilhelm Leibniz est né au…",
   "options": [
    "XVe siècle",
    "XVIIe siècle*",
@@ -7792,6 +8225,7 @@
    "XIXe siècle"
   ],
   "explanation": "Gottfried Wilhelm Leibniz, philosophe, mathématicien et scientifique allemand, est né en 1646 et mort en 1716.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7802,7 +8236,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 40,
-  "prompt": "En quel siècle est né Franz Kafka ?",
+  "prompt": "Franz Kafka est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7810,6 +8244,7 @@
    "XXe siècle"
   ],
   "explanation": "Franz Kafka, écrivain pragois de langue allemande, est né en 1883 et mort en 1924.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7820,7 +8255,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Jorge Luis Borges ?",
+  "prompt": "À quel siècle remonte la naissance de Jorge Luis Borges ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7828,6 +8263,7 @@
    "XXe siècle"
   ],
   "explanation": "Jorge Luis Borges, écrivain argentin, est né en 1899 et mort en 1986.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7838,7 +8274,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né James Clerk Maxwell ?",
+  "prompt": "James Clerk Maxwell est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7846,6 +8282,7 @@
    "XXe siècle"
   ],
   "explanation": "James Clerk Maxwell, physicien et mathématicien écossais, est né en 1831 et mort en 1879.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7856,7 +8293,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 38,
-  "prompt": "En quel siècle est né Abraham Lincoln ?",
+  "prompt": "À quel siècle remonte la naissance d'Abraham Lincoln ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7864,6 +8301,7 @@
    "XXe siècle"
   ],
   "explanation": "Abraham Lincoln, homme d'État américain, est né en 1809 et mort en 1865.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7874,7 +8312,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 44,
-  "prompt": "En quel siècle est né Dmitri Mendeleïev ?",
+  "prompt": "À quel siècle remonte la naissance de Dmitri Mendeleïev ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7882,6 +8320,7 @@
    "XXe siècle"
   ],
   "explanation": "Dmitri Mendeleïev, chimiste russe, est né en 1834 et mort en 1907.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7900,6 +8339,7 @@
    "XXe siècle"
   ],
   "explanation": "Ernest Rutherford, physicien et chimiste britannique, est né en 1871 et mort en 1937.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7910,7 +8350,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Erwin Schrödinger ?",
+  "prompt": "À quel siècle remonte la naissance d'Erwin Schrödinger ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7918,6 +8358,7 @@
    "XXe siècle"
   ],
   "explanation": "Erwin Schrödinger, physicien et théoricien scientifique autrichien, est né en 1887 et mort en 1961.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7936,6 +8377,7 @@
    "XXe siècle"
   ],
   "explanation": "C. S. Lewis, écrivain et universitaire britannique, est né en 1898 et mort en 1963.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7946,7 +8388,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 43,
-  "prompt": "En quel siècle est né Roald Amundsen ?",
+  "prompt": "À quel siècle remonte la naissance de Roald Amundsen ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -7954,6 +8396,7 @@
    "XXe siècle"
   ],
   "explanation": "Roald Amundsen, marin et explorateur polaire norvégien, est né en 1872 et mort en 1928.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7972,6 +8415,7 @@
    "XVIe siècle"
   ],
   "explanation": "Ibn Khaldoun, philosophe, sociologue, historiographe et historien tunisien du XIVe siècle, est né en 1332 et mort en 1406.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -7982,7 +8426,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 40,
-  "prompt": "En quel siècle est né Emmanuel Kant ?",
+  "prompt": "À quel siècle remonte la naissance d'Emmanuel Kant ?",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -7990,6 +8434,7 @@
    "XIXe siècle"
   ],
   "explanation": "Emmanuel Kant, philosophe allemand, est né en 1724 et mort en 1804.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8000,7 +8445,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 52,
-  "prompt": "En quel siècle est né Nikolaï Rimski-Korsakov ?",
+  "prompt": "Nikolaï Rimski-Korsakov est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -8008,6 +8453,7 @@
    "XXe siècle"
   ],
   "explanation": "Nikolaï Rimski-Korsakov, compositeur russe, est né en 1844 et mort en 1908.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8018,7 +8464,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 45,
-  "prompt": "En quel siècle est né Guy de Maupassant ?",
+  "prompt": "Guy de Maupassant est né au…",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -8026,6 +8472,7 @@
    "XXe siècle"
   ],
   "explanation": "Guy de Maupassant, écrivain et journaliste littéraire français, est né en 1850 et mort en 1893.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8036,7 +8483,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Marc Chagall ?",
+  "prompt": "À quel siècle remonte la naissance de Marc Chagall ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -8044,6 +8491,7 @@
    "XXe siècle"
   ],
   "explanation": "Marc Chagall, peintre et graveur français, est né en 1887 et mort en 1985.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8054,7 +8502,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 46,
-  "prompt": "En quel siècle est né Percy Bysshe Shelley ?",
+  "prompt": "Percy Bysshe Shelley est né au…",
   "options": [
    "XVIe siècle",
    "XVIIe siècle",
@@ -8062,6 +8510,7 @@
    "XXe siècle"
   ],
   "explanation": "Percy Bysshe Shelley, poète et dramaturge britannique, est né en 1792 et mort en 1822.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8072,7 +8521,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 37,
-  "prompt": "En quel siècle est né Isaac Newton ?",
+  "prompt": "Isaac Newton est né au…",
   "options": [
    "XVe siècle",
    "XVIIe siècle*",
@@ -8080,6 +8529,7 @@
    "XIXe siècle"
   ],
   "explanation": "Isaac Newton, philosophe, mathématicien, physicien, alchimiste, astronome et théologien anglais, est né en 1643 et mort en 1727.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8090,7 +8540,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 48,
-  "prompt": "En quel siècle est né Zhu Xi ?",
+  "prompt": "À quel siècle remonte la naissance de Zhu Xi ?",
   "options": [
    "XIe siècle",
    "XIIe siècle*",
@@ -8098,6 +8548,7 @@
    "XIVe siècle"
   ],
   "explanation": "Zhu Xi, lettré de la Dynastie Song, est né en 1130 et mort en 1200.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8116,6 +8567,7 @@
    "XVe siècle"
   ],
   "explanation": "Thomas d’Aquin, religieux de l’ordre dominicain, théologien, philosophe, docteur de l'Église, est né en 1225 et mort en 1274.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8134,6 +8586,7 @@
    "XVIe siècle"
   ],
   "explanation": "Martin Luther, théologien allemand, père du protestantisme, est né en 1483 et mort en 1546.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8144,7 +8597,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 54,
-  "prompt": "En quel siècle est né Ernest Shackleton ?",
+  "prompt": "À quel siècle remonte la naissance d'Ernest Shackleton ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle",
@@ -8152,6 +8605,7 @@
    "XXe siècle"
   ],
   "explanation": "Ernest Shackleton, explorateur anglo-irlandais, est né en 1874 et mort en 1922.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8162,7 +8616,7 @@
   "type": "mcq",
   "keep_order": true,
   "difficulty": 50,
-  "prompt": "En quel siècle est né Gioachino Rossini ?",
+  "prompt": "À quel siècle remonte la naissance de Gioachino Rossini ?",
   "options": [
    "XVIIe siècle",
    "XVIIIe siècle*",
@@ -8170,6 +8624,7 @@
    "XXe siècle"
   ],
   "explanation": "Gioachino Rossini, compositeur italien, est né en 1792 et mort en 1868.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8188,6 +8643,7 @@
    "XXe siècle"
   ],
   "explanation": "Fiodor Dostoïevski, écrivain russe, est né en 1821 et mort en 1881.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
@@ -8206,6 +8662,7 @@
    "XXe siècle"
   ],
   "explanation": "Dwight David Eisenhower, militaire et homme d'État américain, est né en 1890 et mort en 1969.",
+  "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  }

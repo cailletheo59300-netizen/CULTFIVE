@@ -182,3 +182,12 @@ begin
   perform tst.ok(v_domains >= 6, 'au moins 6 domaines différents en Surprise : ' || v_domains);
   perform tst.ok(v_max <= 0.3, 'aucun domaine au-delà de 30 % des Surprise : ' || round(v_max * 100) || ' %');
 end $$;
+
+-- Daily : jamais deux questions de la même famille.
+do $$
+begin
+  perform tst.ok(not exists (
+    select 1 from public.daily_set_items i join public.questions q on q.id = i.question_id
+    where i.daily_date between '2028-01-01' and '2028-02-29' and q.family is not null
+    group by i.daily_date, q.family having count(*) > 1), 'une famille au plus par Daily');
+end $$;

@@ -35,10 +35,29 @@ SELECT ?c ?cFr ?cEn ?iso ?cap ?capFr ?cont ?contFr ?pop ?area ?sl WHERE {
   OPTIONAL { ?c wdt:P2046 ?area }
 }`,
   cities: `
-SELECT ?city ?cityFr ?cityEn ?country ?pop ?sl WHERE {
+SELECT ?city ?cityFr ?cityEn ?country ?pop ?coord ?sl WHERE {
   ?city wdt:P31 wd:Q1549591; wdt:P17 ?country; wdt:P1082 ?pop; wikibase:sitelinks ?sl
+  OPTIONAL { ?city wdt:P625 ?coord }
   FILTER(?sl >= 100 && ?pop >= 1000000)
   ${label('city')} ?city rdfs:label ?cityEn FILTER(lang(?cityEn) = "en")
+}`,
+  capitalsGeo: `
+SELECT ?c ?cap ?coord WHERE {
+  ?c wdt:P463 wd:Q1065; wdt:P31 wd:Q3624078; wdt:P36 ?cap. ?cap wdt:P625 ?coord.
+}`,
+  currencies: `
+SELECT ?c ?cur ?curFr WHERE {
+  ?c wdt:P463 wd:Q1065; wdt:P31 wd:Q3624078; wdt:P38 ?cur. ${label('cur')}
+}`,
+  languages: `
+SELECT ?c ?lang ?langFr WHERE {
+  ?c wdt:P463 wd:Q1065; wdt:P31 wd:Q3624078; wdt:P37 ?lang. ${label('lang')}
+}`,
+  unesco: `
+SELECT ?s ?sFr ?desc ?country ?sl WHERE {
+  ?s wdt:P1435 wd:Q9259; wdt:P17 ?country; wikibase:sitelinks ?sl FILTER(?sl >= 45)
+  ${label('s')}
+  OPTIONAL { ?s schema:description ?desc FILTER(lang(?desc) = "fr") }
 }`,
   painters: people('Q1028181', 90),
   writers: people('Q36180', 130),
@@ -104,8 +123,50 @@ function sparql(query) {
   ])));
 }
 
-const names = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(QUERIES);
+// Silhouettes : Natural Earth 1:110m (domaine public), simplifiées et normalisées (0…1) pour tenir dans une question.
+function fetchShapes() {
+  const raw = JSON.parse(execFileSync('curl', ['-sS', '-m', '120',
+    'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson'],
+    { maxBuffer: 64 * 1024 * 1024 }).toString());
+  const shapes = {};
+  for (const f of raw.features) {
+    const iso = f.properties.ISO_A2_EH;
+    if (!iso || iso === '-99') continue;
+    const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+    // Anneaux extérieurs uniquement ; on garde les morceaux significatifs (≥ 8 % de l'aire du plus grand).
+    const rings = polys.map((p) => p[0]);
+    const area = (r) => Math.abs(r.reduce((a, [x1, y1], i) => { const [x2, y2] = r[(i + 1) % r.length]; return a + x1 * y2 - x2 * y1; }, 0) / 2);
+    const biggest = Math.max(...rings.map(area));
+    const main = rings.find((r) => area(r) === biggest);
+    const bbox = (r) => [Math.min(...r.map(([x]) => x)), Math.min(...r.map(([, y]) => y)), Math.max(...r.map(([x]) => x)), Math.max(...r.map(([, y]) => y))];
+    const [mx1, my1, mx2, my2] = bbox(main);
+    // Morceaux significatifs ET proches du territoire principal (pas de Guyane pour la France, pas d'Alaska pour les États-Unis).
+    const kept = rings.filter((r) => {
+      if (area(r) < biggest * 0.08) return false;
+      const [x1, y1, x2, y2] = bbox(r);
+      return x1 < mx2 + 3 && x2 > mx1 - 3 && y1 < my2 + 3 && y2 > my1 - 3;
+    });
+    // Pas de coupe par l'antiméridien (Russie, Fidji…) : on ignore ces pays.
+    const lons = kept.flat().map(([x]) => x);
+    if (Math.max(...lons) - Math.min(...lons) > 180) continue;
+    const midLat = kept.flat().reduce((a, [, y]) => a + y, 0) / kept.flat().length;
+    const k = Math.cos((midLat * Math.PI) / 180);
+    const proj = kept.map((r) => r.map(([x, y]) => [x * k, -y]));
+    const xs = proj.flat().map(([x]) => x), ys = proj.flat().map(([, y]) => y);
+    const [minX, minY] = [Math.min(...xs), Math.min(...ys)];
+    const size = Math.max(Math.max(...xs) - minX, Math.max(...ys) - minY) || 1;
+    shapes[iso] = {
+      area: biggest,
+      paths: proj.map((r) => r.map(([x, y]) => [Math.round(((x - minX) / size) * 1000) / 1000, Math.round(((y - minY) / size) * 1000) / 1000])),
+    };
+  }
+  writeFileSync(join(cacheDir, 'shapes.json'), JSON.stringify({ fetched: new Date().toISOString().slice(0, 10), source: 'Natural Earth 1:110m (domaine public)', shapes }));
+  console.log(`✓ shapes : ${Object.keys(shapes).length} pays`);
+}
+
+const names = process.argv.slice(2).length ? process.argv.slice(2) : [...Object.keys(QUERIES), 'shapes'];
 for (const name of names) {
+  if (name === 'shapes') { fetchShapes(); continue; }
   const rows = sparql(QUERIES[name]);
   writeFileSync(join(cacheDir, `${name}.json`), JSON.stringify({ fetched: new Date().toISOString().slice(0, 10), rows }, null, 0));
   console.log(`✓ ${name} : ${rows.length} lignes`);

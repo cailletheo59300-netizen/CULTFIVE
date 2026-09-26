@@ -44,3 +44,12 @@ final class AnswerEvaluatorTests: XCTestCase {
         XCTAssertEqual(bool, .bool(true))
     }
 }
+
+final class ShapeDecodingTests: XCTestCase {
+    func testQuestionWithSilhouetteDecodes() throws {
+        let json = #"{"id":"6f1a2b3c-0000-4000-8000-000000000001","type":"mcq","domain_id":"geography","subdomain_id":"geography.countries","prompt":"Quel pays a cette forme ?","payload":{"options":[{"id":"a","text":"Italie"},{"id":"b","text":"Grèce"}],"shape":{"paths":[[[0.1,0.2],[0.5,0.9],[0.8,0.3]]]}}}"#
+        let question = try JSONDecoder().decode(Question.self, from: Data(json.utf8))
+        XCTAssertEqual(question.payload.shape?.paths.first?.count, 3)
+        XCTAssertEqual(question.payload.options?.count, 2)
+    }
+}

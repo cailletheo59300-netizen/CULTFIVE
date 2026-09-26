@@ -58,3 +58,6 @@ Pourquoi : « pas de mocks » — un Daily sans serveur aurait été factice. To
 
 ### D-019 · 2026-09-26 · Banques externes : Wikidata uniquement (pas OpenQuizzDB ni Open Trivia DB)
 Pourquoi : Wikidata est CC0 (aucune obligation de citation ni de partage à l'identique), factuel et structuré — idéal pour des questions vérifiables et des concepts propres. OpenQuizzDB (CC BY-SA, ~7 000 questions FR) impose le partage à l'identique et sa qualité est inégale ; Open Trivia DB est anglophone. Conséquence : générateur maison à modèles, relu par échantillons ; les questions « d'anecdote » restent écrites à la main.
+
+### D-020 · 2026-09-27 · Anti-répétition par « familles » ; silhouettes en QCM
+Pourquoi : la génération produit des centaines de questions du même moule ; sans contrainte, une partie enchaîne « Quelle est la capitale… ». Colonne `questions.family`, contraintes dans `_select_questions` (pas deux fois de suite, ≤ 2 par série) et `_generate_daily_set` (une par Daily). Les silhouettes réutilisent le type `mcq` avec `payload.shape` (pas de nouveau type SQL ni d'évaluateur) ; contours Natural Earth 1:110m (domaine public), territoires éloignés retirés, micro-États exclus.

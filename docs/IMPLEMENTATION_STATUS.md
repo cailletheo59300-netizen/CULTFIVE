@@ -12,7 +12,8 @@ _Dernière mise à jour : session 2 — 2026-09-26_
 | Daily serveur (génération, service, verdict, temps, série, jokers, percentile, revue, expiration, minuit, fuseaux, double soumission) | ✅ | `10_daily.sql` |
 | Adaptatif (compétences domaine/sous-domaine, calibration bornée, élargissement, questions problématiques, sélection par bandes, erreurs & maîtrise) | ✅ | `20_adaptive.sql` |
 | Économie (ledger, plafonds, aides), pseudo, amis, parrainage anti-abus, ligues, suppression de compte | ✅ | `30_social_economy.sql` |
-| Contenu (1 886 questions : 273 curées + 1 613 Wikidata) | ✅ | `build-seed.mjs` en CI, `scripts/wikidata/` |
+| Contenu (2 716 questions : 353 curées + 2 363 générées Wikidata/Natural Earth) | ✅ | `build-seed.mjs` en CI, `scripts/wikidata/` |
+| Anti-répétition (familles) + équilibre Surprise | ✅ | migrations 0009-0010, tests SQL |
 | Mode démo + captures + build Appetize | ✅ | workflow « Captures d'écran », `docs/screenshots` |
 | `CultFiveCore` (modèles, contrat JSON sur fixtures réelles, évaluateur = SQL, pavé numérique, client Auth/RPC, refresh unique, file hors-ligne) | ✅ | `swift test` en CI |
 | App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | ✅ build + tests unitaires en CI (macOS 15) · 🟡 **pas encore essayée sur appareil** avec un vrai projet Supabase | job CI `ios` |

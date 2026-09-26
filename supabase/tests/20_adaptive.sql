@@ -200,3 +200,20 @@ begin
           'client_attempt_id', gen_random_uuid(), 'question_id', (select id from public.questions where external_key = 'calc-001'), 'given', '{}', 'response_ms', 3000)));
   perform tst.ok((s2 ->> 'recorded')::int = 0 or (pack -> 'questions') @> jsonb_build_array(jsonb_build_object('id', (select id from public.questions where external_key = 'calc-001'))), 'question hors session ignorée');
 end $$;
+
+-- Anti-répétition : pas deux fois la même famille d'affilée, au plus deux par partie.
+do $$
+declare u uuid := tst.new_user(); pack jsonb; fams text[];
+begin
+  perform tst.clock('2026-11-20 10:00:00+01');
+  perform tst.login(u);
+  for k in 1 .. 5 loop
+    pack := public.play_pack('training', 'geography', null, 10);
+    select array_agg(q.family order by x.ord) into fams
+    from jsonb_array_elements(pack -> 'questions') with ordinality x(v, ord) join public.questions q on q.id = (x.v ->> 'id')::uuid;
+    perform tst.ok(not exists (select 1 from generate_subscripts(fams, 1) i where i > 1 and fams[i] is not null and fams[i] = fams[i - 1]),
+                   'pas deux familles identiques consécutives : ' || array_to_string(fams, ','));
+    perform tst.ok(not exists (select 1 from unnest(fams) f where f is not null group by f having count(*) > 2),
+                   'au plus deux questions par famille : ' || array_to_string(fams, ','));
+  end loop;
+end $$;

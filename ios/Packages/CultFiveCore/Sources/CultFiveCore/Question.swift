@@ -24,6 +24,15 @@ public struct Choice: Codable, Hashable, Identifiable, Sendable {
     }
 }
 
+/// Silhouette d'un pays : contours normalisés dans [0, 1] (x vers la droite, y vers le bas).
+public struct CountryShape: Codable, Hashable, Sendable {
+    public let paths: [[[Double]]]
+
+    public init(paths: [[[Double]]]) {
+        self.paths = paths
+    }
+}
+
 public struct MapRegion: Codable, Hashable, Sendable {
     public let lat: Double
     public let lon: Double
@@ -41,15 +50,18 @@ public struct QuestionPayload: Codable, Hashable, Sendable {
     public var decimals: Int?
     public var allowNegative: Bool?
     public var keepOrder: Bool?
+    /// Silhouette à reconnaître (QCM « Quel pays a cette forme ? »).
+    public var shape: CountryShape?
 
     enum CodingKeys: String, CodingKey {
-        case options, items, left, right, region, unit, decimals
+        case options, items, left, right, region, unit, decimals, shape
         case allowNegative = "allow_negative"
         case keepOrder = "keep_order"
     }
 
     public init(options: [Choice]? = nil, items: [Choice]? = nil, left: [Choice]? = nil, right: [Choice]? = nil,
-                region: MapRegion? = nil, unit: String? = nil, decimals: Int? = nil, allowNegative: Bool? = nil) {
+                region: MapRegion? = nil, unit: String? = nil, decimals: Int? = nil, allowNegative: Bool? = nil,
+                shape: CountryShape? = nil) {
         self.options = options
         self.items = items
         self.left = left
@@ -58,6 +70,7 @@ public struct QuestionPayload: Codable, Hashable, Sendable {
         self.unit = unit
         self.decimals = decimals
         self.allowNegative = allowNegative
+        self.shape = shape
     }
 }
 

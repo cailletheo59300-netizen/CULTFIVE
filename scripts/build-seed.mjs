@@ -24,8 +24,9 @@ function convert(q) {
     external_key: k, concept_id: q.concept, concept_label: q.label, type: q.type, prompt: q.prompt,
     explanation: q.explanation, takeaway: q.takeaway, hint: q.hint, context_note: q.context,
     source: q.source, fact_as_of: q.fact_as_of, difficulty: q.difficulty, status: q.status ?? 'published',
-    origin: q.origin ?? 'human',
+    origin: q.origin ?? 'human', family: q.family,
   };
+  if (q.family && !/^[a-z_]+$/.test(q.family)) fail(k, `famille invalide « ${q.family} »`);
   if (!/^[a-z_]+\.[a-z_]+\.[a-z0-9_]+$/.test(q.concept ?? '')) fail(k, `concept invalide « ${q.concept} »`);
   else if (!subdomains.has(q.concept.split('.').slice(0, 2).join('.'))) fail(k, `sous-domaine inconnu pour ${q.concept}`);
   if (!(q.difficulty >= 5 && q.difficulty <= 95)) fail(k, 'difficulté hors [5, 95]');
@@ -39,7 +40,8 @@ function convert(q) {
       if (q.options.length < 2 || q.options.length > 4) fail(k, '2 à 4 options');
       const options = q.options.map((o) => ({ id: oid(k, o.replace(/\*$/, '')), text: o.replace(/\*$/, '') }));
       if (new Set(options.map((o) => o.text)).size !== options.length) fail(k, 'options en double');
-      return { ...base, payload: { options, ...(q.keep_order ? { keep_order: true } : {}) },
+      if (q.shape && !(Array.isArray(q.shape.paths) && q.shape.paths.every((p) => Array.isArray(p) && p.length >= 3))) fail(k, 'silhouette invalide');
+      return { ...base, payload: { options, ...(q.keep_order ? { keep_order: true } : {}), ...(q.shape ? { shape: q.shape } : {}) },
                answer: { option_id: oid(k, correct[0]?.replace(/\*$/, '')) } };
     }
     case 'true_false':

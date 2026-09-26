@@ -11,12 +11,13 @@
 - `scripts/wikidata/fetch.mjs` : requêtes SPARQL → cache versionné `scripts/wikidata/cache/*.json` (reproductible sans réseau ; `node scripts/wikidata/fetch.mjs` pour rafraîchir).
 - `scripts/wikidata/generate.mjs` : modèles de questions → `content/questions/wd_*.json` (déterministe). `scripts/wikidata/french.mjs` : articles et prépositions des noms de pays (règles + exceptions relues).
 - `scripts/wikidata/rejects.json` : clés écartées à la relecture.
-- Modèles : capitale (et inverse), drapeau, continent, grande ville → pays, classements population/superficie, siècle de naissance, classements de naissances, année de bataille (≤ 1945), symbole chimique (et inverse), auteur de livre, peintre de tableau, réalisateur de film.
+- Modèles : capitale (et inverse), drapeau, continent, grande ville → pays, classements population/superficie, siècle de naissance, classements de naissances, année de bataille (≤ 1945), symbole chimique (et inverse), auteur de livre, peintre de tableau, réalisateur de film, **localisation sur carte** (capitale parmi 4 points), **monnaie**, **langue officielle**, **site UNESCO → pays**, **silhouette du pays** (contours Natural Earth, domaine public, dans `payload.shape` d'un QCM).
+- **Familles** (`family`) : chaque modèle a une famille (capital, flag, map, shape…). Le serveur n'enchaîne jamais deux questions de la même famille en Jouer (≤ 2 par partie) et n'en met qu'une par Daily (migration 0010). Plusieurs formulations par modèle (`vary`).
 - Garde-fous : un seul chef-lieu, capitales contestées exclues (Israël, Guinée équatoriale, Nauru), continents ambigus exclus, titres homonymes exclus, œuvres à plusieurs auteurs exclues, écarts nets dans les classements, dédoublonnage avec la banque curée.
 - Niveau initial : notoriété (liens Wikipédia, population, continent) ; plage ±10, recalibrée par les réponses des joueurs.
 - `origin = 'import'`, source « Wikidata ».
 
-État : **1 958 questions** (1 605 Wikidata + 353 curées ; Calcul 88, Français 86).
+État : **2 716 questions** (2 363 générées + 353 curées).
 
 ## Format (auteur)
 ```json
