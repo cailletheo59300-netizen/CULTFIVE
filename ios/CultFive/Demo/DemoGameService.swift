@@ -110,9 +110,9 @@ struct DemoGameService: GameService {
     func handleAvailable(_ handle: String) async throws -> HandleAvailability {
         try decode(.object(["available": .bool(true)]))
     }
-    func setHandle(_ handle: String) async throws -> Profile { try profile() }
-    func updateProfile(_ fields: [String: JSONValue]) async throws -> Profile { try profile() }
-    func completeOnboarding(level: String, interests: [String]) async throws -> Profile { try profile() }
+    func setHandle(_ handle: String) async throws -> Profile { try await profile() }
+    func updateProfile(_ fields: [String: JSONValue]) async throws -> Profile { try await profile() }
+    func completeOnboarding(level: String, interests: [String]) async throws -> Profile { try await profile() }
     func setTimezone(_ identifier: String) async throws {}
     func registerDevice(hash: String) async throws {}
     func skills() async throws -> [SkillSummary] { try fixture("skills") }
