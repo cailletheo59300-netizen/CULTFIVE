@@ -617,3 +617,69 @@ public struct SubdomainInfo: Codable, Hashable, Identifiable, Sendable {
         case domainId = "domain_id"
     }
 }
+
+// MARK: - Duels
+
+/// Duel entre deux joueurs sur les mêmes 5 questions. Le score adverse n'est connu qu'une fois sa propre partie finie.
+public struct Duel: Codable, Hashable, Identifiable, Sendable {
+    public struct Opponent: Codable, Hashable, Sendable {
+        public let id: UUID?
+        public let handle: String?
+        public let answered: Int
+        public let score: Int?
+        public let totalMs: Int?
+
+        enum CodingKeys: String, CodingKey {
+            case id, handle, answered, score
+            case totalMs = "total_ms"
+        }
+    }
+
+    public struct Mine: Codable, Hashable, Sendable {
+        public let answered: Int
+        public let score: Int
+        public let totalMs: Int
+
+        enum CodingKeys: String, CodingKey {
+            case answered, score
+            case totalMs = "total_ms"
+        }
+    }
+
+    public struct Mark: Codable, Hashable, Sendable {
+        public let position: Int
+        public let isCorrect: Bool?
+        public let countedMs: Int?
+
+        enum CodingKeys: String, CodingKey {
+            case position
+            case isCorrect = "is_correct"
+            case countedMs = "counted_ms"
+        }
+    }
+
+    public let id: UUID
+    public let code: String
+    /// open (lien, personne n'a rejoint) · active · finished · declined · expired
+    public let status: String
+    public let expiresAt: String?
+    public let iAmChallenger: Bool
+    public let opponent: Opponent?
+    public let me: Mine
+    public let myTurn: Bool
+    /// me · opponent · draw (duel terminé)
+    public let winner: String?
+    public let myAnswers: [Mark]?
+    public let theirAnswers: [Mark]?
+
+    enum CodingKeys: String, CodingKey {
+        case id, code, status, opponent, me, winner
+        case expiresAt = "expires_at"
+        case iAmChallenger = "i_am_challenger"
+        case myTurn = "my_turn"
+        case myAnswers = "my_answers"
+        case theirAnswers = "their_answers"
+    }
+
+    public var isFinished: Bool { status == "finished" }
+}

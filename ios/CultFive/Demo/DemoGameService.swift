@@ -182,6 +182,50 @@ struct DemoGameService: GameService {
 
     func reportQuestion(_ question: UUID, reason: String, note: String?) async throws {}
 
+    // MARK: Duels (adversaire simulé)
+
+    private func duelEngine() throws -> DemoDuelEngine {
+        let engine = DemoDuelEngine.shared
+        let friends = ((try? fixture("friends", as: FriendsOverview.self))?.friends ?? []).map { ($0.id, $0.handle) }
+        engine.prepare(friends: friends, bank: try self.engine().bank)
+        return engine
+    }
+
+    func duels() async throws -> [Duel] { try decode(.array(try duelEngine().list())) }
+
+    func duelCreate(friend: UUID?) async throws -> Duel {
+        let engine = try duelEngine()
+        let friends = ((try? fixture("friends", as: FriendsOverview.self))?.friends ?? [])
+        let opponent = friend.flatMap { id in friends.first { $0.id == id }.map { ($0.id, $0.handle) } }
+        return try decode(.object(engine.create(opponent: opponent, bank: try self.engine().bank)))
+    }
+
+    func duelJoin(code: String) async throws -> Duel { throw BackendError.decoding("Les liens de défi ne marchent pas en démo.") }
+
+    func duelDecline(_ duel: UUID) async throws { try duelEngine().decline(duel) }
+
+    func duelQuestion(duel: UUID, position: Int) async throws -> DailyQuestionResponse {
+        guard let question = try duelEngine().question(duel, position: position) else { return try decode(.object(["expired": .bool(true)])) }
+        var json = try decode(JSONValue.self, from: question)
+        if case .object(var dict) = json {
+            ["answer", "explanation", "takeaway", "source", "fact_as_of"].forEach { dict[$0] = nil }
+            json = .object(dict)
+        }
+        return try decode(json)
+    }
+
+    func duelAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict {
+        guard let verdict = try duelEngine().answer(duel, position: position, given: given, clientMs: clientMs) else {
+            throw BackendError.decoding("duel introuvable")
+        }
+        return try decode(.object(verdict))
+    }
+
+    func duelResult(_ duel: UUID) async throws -> Duel {
+        guard let result = try duelEngine().result(duel) else { throw BackendError.decoding("duel introuvable") }
+        return try decode(.object(result))
+    }
+
     // MARK: Profil
 
     /// Profil d'exemple, avec les graines et les erreurs de la séance de démo.

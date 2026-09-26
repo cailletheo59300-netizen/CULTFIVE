@@ -67,3 +67,6 @@ Pourquoi : le propriétaire trouvait l'app vieillotte (formes carrées, couleurs
 
 ### D-022 · 2026-09-26 · Jouer : partie classée vs entraînement libre ; thèmes multiples
 Pourquoi : le propriétaire veut un jeu normal lisible — « jouer pour progresser » ou « s'entraîner comme je veux ». Classé = adaptatif, 10 questions, met à jour niveau et calibration. Libre = difficulté/nombre/chrono au choix, **niveau et calibration intacts** (échantillon biaisé par le choix), XP réduite et pas de graines (sinon farm en Débutant), erreurs suivies (utile pour réviser). Sous-thèmes conservés en choix multiple (vide = tout le domaine), seuls les thèmes à ≥ 5 questions sont proposés. Le mode « Mes erreurs » reste classé.
+
+### D-023 · 2026-09-26 · Duels asynchrones, mêmes règles que le Daily
+Pourquoi : levier viral (un défi se partage) sans imposer d'être connectés en même temps. Même série pour les deux (5 domaines, difficulté 35–65, jamais une question d'un Daily protégé), temps officiel serveur, questions dans l'ordre, score adverse révélé seulement après sa propre partie (pas d'avantage à jouer second). Expiration 48 h : celui qui a joué gagne. Les réponses comptent pour le niveau (ce sont de vraies réponses), contexte « challenge ». Défi par lien : le premier qui l'ouvre devient l'adversaire.

@@ -36,6 +36,15 @@ public protocol GameService: Sendable {
 
     // Social
     func friends() async throws -> FriendsOverview
+    // Duels
+    func duels() async throws -> [Duel]
+    /// `friend` nil : défi ouvert, à partager par lien.
+    func duelCreate(friend: UUID?) async throws -> Duel
+    func duelJoin(code: String) async throws -> Duel
+    func duelDecline(_ duel: UUID) async throws
+    func duelQuestion(duel: UUID, position: Int) async throws -> DailyQuestionResponse
+    func duelAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict
+    func duelResult(_ duel: UUID) async throws -> Duel
     func searchHandles(_ query: String) async throws -> [HandleSearchResult]
     func requestFriend(handle: String) async throws -> FriendRequestResult
     func respondFriend(friendship: UUID, accept: Bool) async throws
@@ -168,6 +177,30 @@ public struct LiveGameService: GameService {
     // MARK: Social
 
     public func friends() async throws -> FriendsOverview { try await api.rpc("friends_overview") }
+
+    public func duels() async throws -> [Duel] { try await api.rpc("duels_mine") }
+
+    public func duelCreate(friend: UUID?) async throws -> Duel {
+        try await api.rpc("duel_create", ["p_friend": friend.map { .string($0.uuidString) } ?? .null])
+    }
+
+    public func duelJoin(code: String) async throws -> Duel { try await api.rpc("duel_join", ["p_code": .string(code)]) }
+
+    public func duelDecline(_ duel: UUID) async throws {
+        try await api.rpcVoid("duel_decline", ["p_duel": .string(duel.uuidString)])
+    }
+
+    public func duelQuestion(duel: UUID, position: Int) async throws -> DailyQuestionResponse {
+        try await api.rpc("duel_question", ["p_duel": .string(duel.uuidString), "p_position": .number(Double(position))])
+    }
+
+    public func duelAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict {
+        try await api.rpc("duel_answer", ["p_duel": .string(duel.uuidString), "p_position": .number(Double(position)),
+                                          "p_given": given?.json ?? .null,
+                                          "p_client_ms": clientMs.map { .number(Double($0)) } ?? .null])
+    }
+
+    public func duelResult(_ duel: UUID) async throws -> Duel { try await api.rpc("duel_result", ["p_duel": .string(duel.uuidString)]) }
 
     public func searchHandles(_ query: String) async throws -> [HandleSearchResult] {
         try await api.rpc("search_handles", ["p_query": .string(query)])

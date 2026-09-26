@@ -17,12 +17,14 @@ enum Brand {
     static let urlScheme = "cultfive"
     static let inviteBaseURL = URL(string: "https://cultfive.app/i/")!
     static let leagueBaseURL = URL(string: "https://cultfive.app/l/")!
+    static let duelBaseURL = URL(string: "https://cultfive.app/d/")!
     static let privacyURL = URL(string: "https://cultfive.app/confidentialite")!
     static let termsURL = URL(string: "https://cultfive.app/conditions")!
     static let supportEmail = "bonjour@cultfive.app"
 
     static func inviteURL(code: String) -> URL { inviteBaseURL.appendingPathComponent(code) }
     static func leagueURL(code: String) -> URL { leagueBaseURL.appendingPathComponent(code) }
+    static func duelURL(code: String) -> URL { duelBaseURL.appendingPathComponent(code) }
 
     static func currency(_ amount: Int) -> String {
         "\(amount) \(abs(amount) > 1 ? currencyPlural : currencySingular)"

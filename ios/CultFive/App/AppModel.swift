@@ -25,6 +25,8 @@ final class AppModel {
     /// Code d'invitation reçu par lien, réclamé dès que le compte n'est plus anonyme.
     var pendingInvite: String?
     var pendingLeagueCode: String?
+    /// Défi reçu par lien (…/d/CODE), rejoint depuis l'onglet Amis.
+    var pendingDuelCode: String?
 
     let service: GameService
     let api: SupabaseAPI?
@@ -206,7 +208,7 @@ final class AppModel {
 
     // MARK: Liens
 
-    /// cultfive://i/CODE, https://cultfive.app/i/CODE (invitation) ; …/l/CODE (ligue).
+    /// cultfive://i/CODE, https://cultfive.app/i/CODE (invitation) ; …/l/CODE (ligue) ; …/d/CODE (duel).
     func handle(url: URL) {
         let parts = (url.host.map { [$0] } ?? []) + url.pathComponents.filter { $0 != "/" }
         let meaningful = parts.filter { $0 != "cultfive.app" && $0 != "www.cultfive.app" }
@@ -219,6 +221,9 @@ final class AppModel {
             Task { await claimPendingInviteIfPossible() }
         case "l":
             pendingLeagueCode = code
+            tab = .friends
+        case "d":
+            pendingDuelCode = code
             tab = .friends
         default:
             break
@@ -263,6 +268,13 @@ struct UnavailableService: GameService {
     func playSubmit(session: UUID, attempts: [PlayAttempt]) async throws -> PlaySubmitResult { try fail() }
     func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent { try fail() }
     func reportQuestion(_ question: UUID, reason: String, note: String?) async throws { try fail() as Void }
+    func duels() async throws -> [Duel] { try fail() }
+    func duelCreate(friend: UUID?) async throws -> Duel { try fail() }
+    func duelJoin(code: String) async throws -> Duel { try fail() }
+    func duelDecline(_ duel: UUID) async throws { try fail() as Void }
+    func duelQuestion(duel: UUID, position: Int) async throws -> DailyQuestionResponse { try fail() }
+    func duelAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict { try fail() }
+    func duelResult(_ duel: UUID) async throws -> Duel { try fail() }
     func profile() async throws -> Profile { try fail() }
     func handleAvailable(_ handle: String) async throws -> HandleAvailability { try fail() }
     func setHandle(_ handle: String) async throws -> Profile { try fail() }

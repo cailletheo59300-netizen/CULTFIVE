@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.7.0 — thèmes et contenu
+- **Duels** : défier un ami (éclair à côté de son nom) ou n'importe qui par lien (`cultfive.app/d/CODE`), sur les mêmes 5 questions de 5 domaines ; chacun joue quand il veut (48 h) ; temps officiel serveur ; score adverse caché tant qu'on n'a pas joué ; vainqueur au score puis au temps (+20 XP, +5 graines). Écrans face-à-face, résultat « VS », section Duels dans Amis. Migration 0013, tests `60_duels.sql`. Démo : adversaire simulé.
 - **Admin web** (`admin/index.html`) : tableau de bord par thème, liste filtrable et triable (difficulté, réussite, signalements), éditeur par type de question, publication/désactivation, 5 du jour (générer, remplacer), signalements.
 - **Signaler une question** dans l'app (réponse fausse, ambiguë, plus à jour, faute, autre) → « à revoir » côté admin. Migration 0012 (`question_reports`, `report_question`, `admin_questions` triable, `admin_resolve_reports`, thèmes retirés inactifs).
 - Thèmes réorganisés : 3 à 5 par domaine, chacun ≥ ~20 questions. Histoire par époques (date → période), Géographie en 5 thèmes, Logique + Énigmes, nouveaux thèmes Mythologie, Architecture, Champions, Acteurs, Animation, Entreprises & marques, Vie marine, Planète & climat.

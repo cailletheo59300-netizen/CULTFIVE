@@ -13,6 +13,8 @@ struct FriendsView: View {
     @State private var showJoin = false
     @State private var path: [UUID] = []
     @State private var error: String?
+    @State private var duels: [Duel] = []
+    @State private var activeDuel: DuelLaunch?
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -32,6 +34,9 @@ struct FriendsView: View {
                         AccountNudge()
                     }
                     requests
+                    DuelsBlock(duels: duels, onOpen: { activeDuel = DuelLaunch(id: $0.id) },
+                               onDecline: { duel in Task { try? await app.service.duelDecline(duel.id); await load() } },
+                               onChallengeByLink: { challenge(nil) })
                     friendsList
                     leaguesBlock
                     invite
@@ -73,6 +78,21 @@ struct FriendsView: View {
             if Demo.screen == .league, let first = leagues.first { path.append(first.id) }
             #endif
         }
+        .fullScreenCover(item: $activeDuel, onDismiss: { Task { await load() } }) { launch in
+            DuelSessionView(duelId: launch.id)
+        }
+        .task(id: app.pendingDuelCode) {
+            if let code = app.pendingDuelCode {
+                app.pendingDuelCode = nil
+                do {
+                    let duel = try await app.service.duelJoin(code: code)
+                    await load()
+                    activeDuel = DuelLaunch(id: duel.id)
+                } catch {
+                    self.error = (error as? LocalizedError)?.errorDescription ?? "Ce défi n'est plus disponible."
+                }
+            }
+        }
         .task(id: app.pendingLeagueCode) {
             if let code = app.pendingLeagueCode {
                 app.pendingLeagueCode = nil
@@ -86,9 +106,25 @@ struct FriendsView: View {
         async let friends = try? service.friends()
         async let mine = try? service.leagues()
         async let referralInfo = try? service.referralOverview()
+        async let myDuels = try? service.duels()
+        duels = await myDuels ?? []
         overview = await friends
         leagues = await mine ?? []
         referral = await referralInfo
+    }
+
+    /// Nouveau duel contre un ami (ou ouvert, par lien) : on joue tout de suite.
+    private func challenge(_ friend: UUID?) {
+        Task {
+            do {
+                let duel = try await app.service.duelCreate(friend: friend)
+                Haptics.soft()
+                await load()
+                activeDuel = DuelLaunch(id: duel.id)
+            } catch {
+                self.error = (error as? LocalizedError)?.errorDescription ?? "Impossible de créer le défi."
+            }
+        }
     }
 
     private func join(code: String) async {
@@ -143,7 +179,7 @@ struct FriendsView: View {
                 .padding(.vertical, Space.s)
             } else {
                 ForEach(friends) { friend in
-                    FriendRow(friend: friend) {
+                    FriendRow(friend: friend, onChallenge: { challenge(friend.id) }) {
                         Task {
                             try? await app.service.removeFriend(friend.id)
                             await load()
@@ -212,6 +248,7 @@ struct FriendsView: View {
 
 private struct FriendRow: View {
     let friend: Friend
+    var onChallenge: () -> Void
     var onRemove: () -> Void
     var onBlock: () -> Void
 
@@ -231,13 +268,22 @@ private struct FriendRow: View {
             } else {
                 Text("pas encore joué").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
+            Button(action: onChallenge) {
+                Image(systemName: "bolt.fill")
+                    .font(.system(.callout, design: .rounded).weight(.bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 38, height: 38)
+                    .background(Color.brand, in: Circle())
+            }
+            .buttonStyle(.row)
+            .accessibilityLabel("Défier \(friend.handle) en duel")
         }
         .popCard(padding: 14)
         .contextMenu {
             Button("Retirer des amis", systemImage: "person.badge.minus", action: onRemove)
             Button("Bloquer", systemImage: "hand.raised", role: .destructive, action: onBlock)
         }
-        .accessibilityElement(children: .combine)
+        .accessibilityElement(children: .contain)
         .accessibilityHint("Maintiens pour retirer ou bloquer")
     }
 }
