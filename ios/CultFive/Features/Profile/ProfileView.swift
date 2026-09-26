@@ -117,7 +117,10 @@ struct ProfileView: View {
     private var knowledge: some View {
         VStack(alignment: .leading, spacing: Space.s) {
             Text("Ce que tu sais").font(.cfHeadline)
-            let played = skills.filter { $0.answered > 0 }.sorted { $0.level > $1.level }
+            // Les niveaux fiables (≥ 10 réponses) d'abord, puis par niveau.
+            let played = skills.filter { $0.answered > 0 }.sorted {
+                ($0.answered >= 10, $0.level) > ($1.answered >= 10, $1.level)
+            }
             if played.isEmpty {
                 Text("Joue quelques parties : ton profil de connaissances se dessinera ici.")
                     .font(.cfCallout).foregroundStyle(Color.inkSoft)
