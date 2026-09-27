@@ -1,0 +1,1493 @@
+[
+ {
+  "key": "exp-001",
+  "concept": "calc.mental.expert_48x52",
+  "label": "48 × 52",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Combien font 48 × 52 ?",
+  "answer": 2496,
+  "explanation": "48 × 52 = (50 − 2)(50 + 2) = 50² − 2² = 2 500 − 4 = 2 496."
+ },
+ {
+  "key": "exp-002",
+  "concept": "calc.mental.expert_125x88",
+  "label": "125 × 88",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien font 125 × 88 ?",
+  "answer": 11000,
+  "explanation": "125 × 8 = 1 000, et 88 = 8 × 11. Donc 125 × 88 = 1 000 × 11 = 11 000."
+ },
+ {
+  "key": "exp-003",
+  "concept": "calc.percent.expert_back_after_25",
+  "label": "Revenir après +25 %",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Un prix augmente de 25 %. De combien doit-il baisser pour revenir à son niveau de départ ?",
+  "options": [
+   "20 %*",
+   "25 %",
+   "30 %",
+   "15 %"
+  ],
+  "explanation": "100 → 125. Pour revenir à 100, on retire 25 sur 125, soit 25 ÷ 125 = 20 %."
+ },
+ {
+  "key": "exp-004",
+  "concept": "calc.percent.expert_up50_down50",
+  "label": "+50 % puis −50 %",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Une action gagne 50 %, puis perd 50 %. Quel pourcentage de sa valeur de départ a-t-elle perdu ?",
+  "answer": 25,
+  "explanation": "100 → 150 → 75 : la baisse s'applique à un montant plus grand. Il manque 25 % de la valeur de départ.",
+  "unit": "%"
+ },
+ {
+  "key": "exp-005",
+  "concept": "calc.fractions.expert_divide",
+  "label": "2/3 ÷ 4/9",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien font 2/3 ÷ 4/9 ?",
+  "options": [
+   "3/2*",
+   "8/27",
+   "2/3",
+   "6/12"
+  ],
+  "explanation": "Diviser par une fraction, c'est multiplier par son inverse : 2/3 × 9/4 = 18/12 = 3/2."
+ },
+ {
+  "key": "exp-006",
+  "concept": "calc.fractions.expert_0375",
+  "label": "0,375 en fraction",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quelle fraction est égale à 0,375 ?",
+  "options": [
+   "3/8*",
+   "3/7",
+   "5/12",
+   "7/16"
+  ],
+  "explanation": "0,375 = 375/1 000 = 3/8 (car 1/8 = 0,125)."
+ },
+ {
+  "key": "exp-007",
+  "concept": "calc.conversions.expert_seconds_day",
+  "label": "Secondes dans une journée",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien de secondes y a-t-il dans une journée ?",
+  "answer": 86400,
+  "explanation": "24 h × 60 min × 60 s = 86 400 secondes.",
+  "unit": "s"
+ },
+ {
+  "key": "exp-008",
+  "concept": "calc.conversions.expert_kmh_ms",
+  "label": "36 km/h en m/s",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Une voiture roule à 36 km/h. Combien de mètres parcourt-elle en une seconde ?",
+  "answer": 10,
+  "explanation": "36 000 m en 3 600 s, soit 10 m/s. Astuce : on divise les km/h par 3,6.",
+  "unit": "m"
+ },
+ {
+  "key": "exp-009",
+  "concept": "calc.conversions.expert_nautical_mile",
+  "label": "Mille marin",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Combien de mètres mesure un mille marin ?",
+  "answer": 1852,
+  "explanation": "Le mille marin vaut 1 852 m : c'est la longueur d'une minute d'arc de latitude.",
+  "unit": "m"
+ },
+ {
+  "key": "exp-010",
+  "concept": "calc.number_logic.expert_lcm_6",
+  "label": "Divisible par 1 à 6",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Quel est le plus petit nombre entier positif divisible par 1, 2, 3, 4, 5 et 6 ?",
+  "answer": 60,
+  "explanation": "Le PPCM de 1 à 6 : 4 × 3 × 5 = 60."
+ },
+ {
+  "key": "exp-011",
+  "concept": "calc.number_logic.expert_zeros_25",
+  "label": "Zéros de 25 !",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Par combien de zéros se termine 25 ! (1 × 2 × 3 × … × 25) ?",
+  "answer": 6,
+  "explanation": "Chaque zéro vient d'un 5 associé à un 2. Multiples de 5 jusqu'à 25 : 5 nombres, plus un 5 de plus dans 25 = 5 × 5. Total : 6."
+ },
+ {
+  "key": "exp-012",
+  "concept": "french.vocabulary.expert_thuriferaire",
+  "label": "Thuriféraire",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Au sens figuré, qu'est-ce qu'un « thuriféraire » ?",
+  "options": [
+   "Un flatteur zélé*",
+   "Un marchand ambulant",
+   "Un conteur itinérant",
+   "Un voleur de chevaux"
+  ],
+  "explanation": "Le thuriféraire porte l'encensoir à l'église ; au figuré, c'est celui qui encense quelqu'un, un flatteur."
+ },
+ {
+  "key": "exp-013",
+  "concept": "french.vocabulary.expert_ubuesque",
+  "label": "Ubuesque",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Que signifie « ubuesque » ?",
+  "options": [
+   "Absurde et grotesque*",
+   "Présent partout à la fois",
+   "D'une grande générosité",
+   "Très ancien"
+  ],
+  "explanation": "D'après Ubu roi, d'Alfred Jarry (1896) : une situation absurde jusqu'au ridicule. « Partout à la fois », c'est l'ubiquité."
+ },
+ {
+  "key": "exp-014",
+  "concept": "french.vocabulary.expert_abscons",
+  "label": "Abscons",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Que signifie « abscons » ?",
+  "options": [
+   "Difficile à comprendre*",
+   "Absent sans raison",
+   "Coupé en deux",
+   "Qui s'abstient de boire"
+  ],
+  "explanation": "Un texte abscons est obscur, difficile à comprendre. Ne pas confondre avec « abstème », qui ne boit pas d'alcool."
+ },
+ {
+  "key": "exp-015",
+  "concept": "french.synonyms.expert_prolixe",
+  "label": "Contraire de prolixe",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel est le contraire de « prolixe » ?",
+  "options": [
+   "Concis*",
+   "Bavard",
+   "Prolifique",
+   "Fertile"
+  ],
+  "explanation": "Prolixe : qui s'étend trop en paroles. Son contraire : concis, laconique."
+ },
+ {
+  "key": "exp-016",
+  "concept": "french.synonyms.expert_velleitaire",
+  "label": "Velléitaire",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel mot est le plus proche de « velléitaire » ?",
+  "options": [
+   "Indécis*",
+   "Violent",
+   "Envieux",
+   "Rapide"
+  ],
+  "explanation": "Le velléitaire a des intentions (des velléités) mais ne passe jamais à l'acte."
+ },
+ {
+  "key": "exp-017",
+  "concept": "french.synonyms.expert_pusillanime_contraire",
+  "label": "Contraire de pusillanime",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel est le contraire de « pusillanime » ?",
+  "options": [
+   "Magnanime*",
+   "Unanime",
+   "Anonyme",
+   "Pessimiste"
+  ],
+  "explanation": "Pusillanime : qui manque de courage (« petite âme »). Magnanime : « grande âme », généreux et courageux."
+ },
+ {
+  "key": "exp-018",
+  "concept": "french.spelling.expert_remunerer",
+  "label": "Rémunérer",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quelle orthographe est correcte ?",
+  "options": [
+   "Rémunérer*",
+   "Rénumérer",
+   "Rémunnérer",
+   "Rémmunérer"
+  ],
+  "explanation": "Rémunérer vient du latin « munus », le cadeau : rÉ-MU-NÉrer, comme « munificence »."
+ },
+ {
+  "key": "exp-019",
+  "concept": "french.spelling.expert_se_sont_partage",
+  "label": "Se sont partagé",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Complète : « Les deux sœurs se sont ___ les bonbons. »",
+  "options": [
+   "partagé*",
+   "partagées",
+   "partagés",
+   "partagée"
+  ],
+  "explanation": "Verbe pronominal suivi de son complément d'objet direct (« les bonbons ») : pas d'accord avec le sujet."
+ },
+ {
+  "key": "exp-020",
+  "concept": "french.spelling.expert_occurrence",
+  "label": "Occurrence",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel mot est correctement orthographié ?",
+  "options": [
+   "Occurrence*",
+   "Occurence",
+   "Ocurrence",
+   "Occurrance"
+  ],
+  "explanation": "Deux c, deux r, et -ence : occurrence, comme « concurrence »."
+ },
+ {
+  "key": "exp-021",
+  "concept": "french.expressions.expert_monnaie_singe",
+  "label": "Monnaie de singe",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Que signifie « payer en monnaie de singe » ?",
+  "options": [
+   "Payer en belles paroles, pas en argent*",
+   "Payer en petite monnaie",
+   "Payer beaucoup trop cher",
+   "Payer avec du retard"
+  ],
+  "explanation": "Au Moyen Âge, les montreurs de singes étaient dispensés de péage sur le Petit-Pont de Paris s'ils faisaient faire des tours à leur animal."
+ },
+ {
+  "key": "exp-022",
+  "concept": "french.expressions.expert_faire_flores",
+  "label": "Faire florès",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Que signifie « faire florès » ?",
+  "options": [
+   "Obtenir un grand succès*",
+   "Faire faillite",
+   "Se vanter",
+   "Offrir des fleurs"
+  ],
+  "explanation": "Faire florès : réussir de façon éclatante, être en vogue."
+ },
+ {
+  "key": "exp-023",
+  "concept": "french.grammar.expert_quelque_adverbe",
+  "label": "Quelque + adjectif",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Complète : « ___ intelligents qu'ils soient, ils échoueront. »",
+  "options": [
+   "Quelque*",
+   "Quelques",
+   "Quel que",
+   "Quels que"
+  ],
+  "explanation": "Devant un adjectif, « quelque » est un adverbe (= si) : il est invariable."
+ },
+ {
+  "key": "exp-024",
+  "concept": "french.grammar.expert_resolurent",
+  "label": "Passé simple de résoudre",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Au passé simple : « Ils ___ le problème. » (résoudre)",
+  "options": [
+   "résolurent*",
+   "résolvèrent",
+   "résoudirent",
+   "résolvirent"
+  ],
+  "explanation": "Résoudre au passé simple : je résolus, ils résolurent."
+ },
+ {
+  "key": "exp-025",
+  "concept": "geography.capitals.expert_northernmost",
+  "label": "Capitale la plus au nord",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Laquelle de ces capitales est la plus au nord ?",
+  "options": [
+   "Reykjavik*",
+   "Helsinki",
+   "Oslo",
+   "Tallinn"
+  ],
+  "explanation": "Reykjavik est vers 64° N ; Helsinki, Oslo et Tallinn autour de 60° N."
+ },
+ {
+  "key": "exp-026",
+  "concept": "geography.capitals.expert_danube",
+  "label": "Capitales du Danube",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Combien de capitales européennes le Danube traverse-t-il ?",
+  "answer": 4,
+  "explanation": "Vienne, Bratislava, Budapest et Belgrade : c'est le fleuve qui arrose le plus de capitales au monde."
+ },
+ {
+  "key": "exp-027",
+  "concept": "geography.flags.expert_two_sided",
+  "label": "Drapeau à deux faces",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel pays a un drapeau national différent au recto et au verso ?",
+  "options": [
+   "Paraguay*",
+   "Népal",
+   "Suisse",
+   "Bhoutan"
+  ],
+  "explanation": "Le drapeau du Paraguay porte les armoiries d'un côté et le sceau du Trésor de l'autre."
+ },
+ {
+  "key": "exp-028",
+  "concept": "geography.flags.expert_brazil_stars",
+  "label": "Étoiles du drapeau brésilien",
+  "type": "numeric",
+  "difficulty": 82,
+  "prompt": "Combien d'étoiles compte le drapeau du Brésil ?",
+  "answer": 27,
+  "explanation": "Une étoile par État fédéré et pour le district fédéral : 27, dans le ciel de Rio au matin du 15 novembre 1889."
+ },
+ {
+  "key": "exp-029",
+  "concept": "geography.countries.expert_time_zones",
+  "label": "Record de fuseaux horaires",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel pays compte le plus de fuseaux horaires, territoires d'outre-mer compris ?",
+  "options": [
+   "France*",
+   "Russie",
+   "États-Unis",
+   "Royaume-Uni"
+  ],
+  "explanation": "Grâce à l'outre-mer (Polynésie, Antilles, Réunion…), la France couvre 12 fuseaux horaires, 13 avec la Terre Adélie."
+ },
+ {
+  "key": "exp-030",
+  "concept": "geography.countries.expert_lesotho",
+  "label": "Enclavé dans l'Afrique du Sud",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel pays est entièrement entouré par l'Afrique du Sud ?",
+  "options": [
+   "Lesotho*",
+   "Eswatini",
+   "Botswana",
+   "Namibie"
+  ],
+  "explanation": "Le Lesotho est enclavé dans l'Afrique du Sud. L'Eswatini touche aussi le Mozambique."
+ },
+ {
+  "key": "exp-031",
+  "concept": "geography.relief.expert_volga",
+  "label": "Plus long fleuve d'Europe",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le plus long fleuve d'Europe ?",
+  "options": [
+   "La Volga*",
+   "Le Danube",
+   "Le Rhin",
+   "Le Dniepr"
+  ],
+  "explanation": "La Volga, en Russie, mesure environ 3 530 km. Le Danube, deuxième, environ 2 850 km."
+ },
+ {
+  "key": "exp-032",
+  "concept": "geography.relief.expert_danube_countries",
+  "label": "Fleuve aux dix pays",
+  "type": "mcq",
+  "difficulty": 76,
+  "prompt": "Quel fleuve traverse ou longe le plus de pays ?",
+  "options": [
+   "Le Danube*",
+   "Le Nil",
+   "Le Rhin",
+   "Le Mékong"
+  ],
+  "explanation": "Le Danube concerne dix pays, de l'Allemagne à la Roumanie et l'Ukraine."
+ },
+ {
+  "key": "exp-033",
+  "concept": "geography.monuments.expert_mezquita",
+  "label": "Mosquée-cathédrale",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quelle ville se trouve la célèbre mosquée-cathédrale (la Mezquita) ?",
+  "options": [
+   "Cordoue*",
+   "Séville",
+   "Grenade",
+   "Tolède"
+  ],
+  "explanation": "Grande mosquée omeyyade du VIIIe siècle, transformée en cathédrale après 1236."
+ },
+ {
+  "key": "exp-034",
+  "concept": "geography.monuments.expert_moai",
+  "label": "Moaï",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À quel pays appartient l'île de Pâques, célèbre pour ses moaï ?",
+  "options": [
+   "Chili*",
+   "Pérou",
+   "France",
+   "Nouvelle-Zélande"
+  ],
+  "explanation": "L'île de Pâques (Rapa Nui), à 3 700 km des côtes, est chilienne depuis 1888."
+ },
+ {
+  "key": "exp-035",
+  "concept": "history.antiquity.expert_actium",
+  "label": "Bataille d'Actium",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle bataille navale voit Octave vaincre Antoine et Cléopâtre en 31 av. J.-C. ?",
+  "options": [
+   "Actium*",
+   "Salamine",
+   "Lépante",
+   "Mylae"
+  ],
+  "explanation": "Actium ouvre la voie à Octave, qui devient Auguste, premier empereur romain, en 27 av. J.-C."
+ },
+ {
+  "key": "exp-036",
+  "concept": "history.antiquity.expert_alexander_father",
+  "label": "Père d'Alexandre le Grand",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Qui était le père d'Alexandre le Grand ?",
+  "options": [
+   "Philippe II de Macédoine*",
+   "Darius III",
+   "Périclès",
+   "Léonidas"
+  ],
+  "explanation": "Philippe II unifie la Grèce sous la Macédoine ; il est assassiné en 336 av. J.-C."
+ },
+ {
+  "key": "exp-037",
+  "concept": "history.antiquity.expert_carthage",
+  "label": "Fondateurs de Carthage",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel peuple a fondé Carthage ?",
+  "options": [
+   "Les Phéniciens*",
+   "Les Grecs",
+   "Les Romains",
+   "Les Égyptiens"
+  ],
+  "explanation": "Des colons phéniciens venus de Tyr fondent Carthage vers 814 av. J.-C., selon la tradition."
+ },
+ {
+  "key": "exp-038",
+  "concept": "history.middle_ages.expert_bouvines",
+  "label": "Bataille de Bouvines",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle bataille voit Philippe Auguste vaincre l'empereur Otton IV en 1214 ?",
+  "options": [
+   "Bouvines*",
+   "Crécy",
+   "Poitiers",
+   "Azincourt"
+  ],
+  "explanation": "Bouvines renforce le pouvoir capétien. Crécy, Poitiers et Azincourt sont des défaites françaises de la guerre de Cent Ans."
+ },
+ {
+  "key": "exp-039",
+  "concept": "history.middle_ages.expert_verdun_843",
+  "label": "Traité de Verdun",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel traité partage l'empire de Charlemagne entre ses petits-fils en 843 ?",
+  "options": [
+   "Verdun*",
+   "Aix-la-Chapelle",
+   "Troyes",
+   "Meerssen"
+  ],
+  "explanation": "Le traité de Verdun crée la Francie occidentale, la Lotharingie et la Francie orientale."
+ },
+ {
+  "key": "exp-040",
+  "concept": "history.modern.expert_westphalia",
+  "label": "Traités de Westphalie",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quels traités mettent fin à la guerre de Trente Ans, en 1648 ?",
+  "options": [
+   "Westphalie*",
+   "Utrecht",
+   "Pyrénées",
+   "Nimègue"
+  ],
+  "explanation": "Signés à Münster et Osnabrück, ils posent les bases de l'équilibre européen entre États souverains."
+ },
+ {
+  "key": "exp-041",
+  "concept": "history.modern.expert_fouquet",
+  "label": "Arrestation de Fouquet",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel surintendant des finances Louis XIV fait-il arrêter en 1661 ?",
+  "options": [
+   "Nicolas Fouquet*",
+   "Colbert",
+   "Mazarin",
+   "Louvois"
+  ],
+  "explanation": "Après la fête fastueuse de Vaux-le-Vicomte, Fouquet est arrêté par d'Artagnan et finit ses jours emprisonné."
+ },
+ {
+  "key": "exp-042",
+  "concept": "history.contemporary.expert_felix_faure",
+  "label": "Mort à l'Élysée",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel président de la République est mort à l'Élysée en 1899 ?",
+  "options": [
+   "Félix Faure*",
+   "Sadi Carnot",
+   "Jules Grévy",
+   "Paul Doumer"
+  ],
+  "explanation": "Félix Faure meurt à l'Élysée en février 1899. Sadi Carnot et Paul Doumer ont été assassinés."
+ },
+ {
+  "key": "exp-043",
+  "concept": "history.contemporary.expert_berlin_wall_built",
+  "label": "Construction du mur de Berlin",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En quelle année le mur de Berlin est-il construit ?",
+  "options": [
+   "1961*",
+   "1949",
+   "1953",
+   "1968"
+  ],
+  "explanation": "Dans la nuit du 12 au 13 août 1961, la RDA ferme la frontière ; le mur tombe le 9 novembre 1989."
+ },
+ {
+  "key": "exp-044",
+  "concept": "science.physics.expert_farad",
+  "label": "Unité de capacité",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle est l'unité de la capacité électrique ?",
+  "options": [
+   "Le farad*",
+   "Le henry",
+   "Le tesla",
+   "Le weber"
+  ],
+  "explanation": "Le farad (F), d'après Michael Faraday. Henry : inductance ; tesla : champ magnétique ; weber : flux."
+ },
+ {
+  "key": "exp-045",
+  "concept": "science.physics.expert_higgs",
+  "label": "Boson de Higgs",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quelle particule a été mise en évidence au CERN en 2012 ?",
+  "options": [
+   "Le boson de Higgs*",
+   "Le neutrino",
+   "Le positon",
+   "Le quark top"
+  ],
+  "explanation": "Prédit en 1964, le boson de Higgs explique la masse des particules. Le quark top a été découvert en 1995 aux États-Unis."
+ },
+ {
+  "key": "exp-046",
+  "concept": "science.chemistry.expert_argon",
+  "label": "Gaz noble de l'air",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel gaz noble est le plus abondant dans l'air ?",
+  "options": [
+   "L'argon*",
+   "Le néon",
+   "L'hélium",
+   "Le krypton"
+  ],
+  "explanation": "L'argon représente près de 1 % de l'air, bien plus que le CO₂ (0,04 %)."
+ },
+ {
+  "key": "exp-047",
+  "concept": "science.chemistry.expert_glucose_atoms",
+  "label": "Atomes du glucose",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Combien d'atomes compte une molécule de glucose, C₆H₁₂O₆ ?",
+  "answer": 24,
+  "explanation": "6 carbones + 12 hydrogènes + 6 oxygènes = 24 atomes."
+ },
+ {
+  "key": "exp-048",
+  "concept": "science.biology.expert_uracil",
+  "label": "Base de l'ARN",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans l'ARN, quelle base remplace la thymine de l'ADN ?",
+  "options": [
+   "L'uracile*",
+   "L'adénine",
+   "La cytosine",
+   "La guanine"
+  ],
+  "explanation": "ADN : A, T, C, G. ARN : A, U, C, G."
+ },
+ {
+  "key": "exp-049",
+  "concept": "science.biology.expert_meiosis",
+  "label": "Méiose",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Comment s'appelle la division cellulaire qui produit les gamètes ?",
+  "options": [
+   "La méiose*",
+   "La mitose",
+   "La scissiparité",
+   "L'osmose"
+  ],
+  "explanation": "La méiose divise par deux le nombre de chromosomes : 23 dans un gamète humain au lieu de 46."
+ },
+ {
+  "key": "exp-050",
+  "concept": "science.space.expert_venus_day",
+  "label": "Jour de Vénus",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Sur quelle planète un jour dure-t-il plus longtemps qu'une année ?",
+  "options": [
+   "Vénus*",
+   "Mercure",
+   "Mars",
+   "Neptune"
+  ],
+  "explanation": "Vénus tourne sur elle-même en 243 jours terrestres et autour du Soleil en 225."
+ },
+ {
+  "key": "exp-051",
+  "concept": "science.space.expert_olympus_mons",
+  "label": "Plus grand volcan",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Où se trouve Olympus Mons, le plus grand volcan connu du Système solaire ?",
+  "options": [
+   "Sur Mars*",
+   "Sur Vénus",
+   "Sur Io",
+   "Sur la Lune"
+  ],
+  "explanation": "Olympus Mons s'élève à plus de 20 km : plus de deux fois l'Everest."
+ },
+ {
+  "key": "exp-052",
+  "concept": "science.human_body.expert_bile",
+  "label": "Production de la bile",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel organe produit la bile ?",
+  "options": [
+   "Le foie*",
+   "La vésicule biliaire",
+   "Le pancréas",
+   "La rate"
+  ],
+  "explanation": "Le foie produit la bile ; la vésicule biliaire ne fait que la stocker."
+ },
+ {
+  "key": "exp-053",
+  "concept": "science.human_body.expert_femur",
+  "label": "Plus long os",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Quel est l'os le plus long du corps humain ?",
+  "options": [
+   "Le fémur*",
+   "Le tibia",
+   "L'humérus",
+   "Le péroné"
+  ],
+  "explanation": "Le fémur, l'os de la cuisse, mesure environ un quart de la taille d'un adulte."
+ },
+ {
+  "key": "exp-054",
+  "concept": "logic.sequences.expert_look_and_say",
+  "label": "Suite de Conway",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Quel nombre suit : 1, 11, 21, 1211, 111221, … ?",
+  "answer": 312211,
+  "explanation": "Chaque terme décrit le précédent : 111221 = « trois 1, deux 2, un 1 » → 312211."
+ },
+ {
+  "key": "exp-055",
+  "concept": "logic.sequences.expert_n_power_n",
+  "label": "Suite n puissance n",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Quel nombre suit : 1, 4, 27, 256, … ?",
+  "answer": 3125,
+  "explanation": "1¹, 2², 3³, 4⁴… puis 5⁵ = 3 125."
+ },
+ {
+  "key": "exp-056",
+  "concept": "logic.reasoning.expert_syllogism",
+  "label": "Syllogisme",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Aucun A n'est B, et certains C sont A. Que peut-on conclure ?",
+  "options": [
+   "Certains C ne sont pas B*",
+   "Aucun C n'est B",
+   "Tous les C sont B",
+   "Certains B sont C"
+  ],
+  "explanation": "Les C qui sont A ne peuvent pas être B. On ne sait rien des autres C."
+ },
+ {
+  "key": "exp-057",
+  "concept": "logic.reasoning.expert_three_boxes",
+  "label": "Trois boîtes mal étiquetées",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Trois boîtes sont étiquetées « Pommes », « Oranges » et « Mélange », et toutes les étiquettes sont fausses. Dans quelle boîte tirer un seul fruit pour tout réétiqueter ?",
+  "options": [
+   "« Mélange »*",
+   "« Pommes »",
+   "« Oranges »",
+   "Impossible avec un seul fruit"
+  ],
+  "explanation": "La boîte « Mélange » contient un seul type de fruit. Si c'est une pomme, c'est la boîte de pommes ; les deux autres s'en déduisent."
+ },
+ {
+  "key": "exp-058",
+  "concept": "logic.puzzles.expert_overtake_second",
+  "label": "Doubler le deuxième",
+  "type": "numeric",
+  "difficulty": 66,
+  "prompt": "Dans une course, tu doubles le coureur en deuxième position. À quelle place es-tu ?",
+  "answer": 2,
+  "explanation": "Tu prends sa place : deuxième. Le premier est toujours devant toi."
+ },
+ {
+  "key": "exp-059",
+  "concept": "logic.puzzles.expert_machines",
+  "label": "5 machines, 5 minutes",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Si 5 machines font 5 objets en 5 minutes, combien de minutes faut-il à 100 machines pour faire 100 objets ?",
+  "answer": 5,
+  "explanation": "Chaque machine fait un objet en 5 minutes. 100 machines font donc 100 objets dans le même temps.",
+  "unit": "min"
+ },
+ {
+  "key": "exp-060",
+  "concept": "arts.painting.expert_caravaggio",
+  "label": "Vocation de saint Matthieu",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel peintre a réalisé « La Vocation de saint Matthieu », célèbre pour son clair-obscur ?",
+  "options": [
+   "Le Caravage*",
+   "Titien",
+   "Raphaël",
+   "Botticelli"
+  ],
+  "explanation": "Peinte vers 1600 pour Saint-Louis-des-Français, à Rome."
+ },
+ {
+  "key": "exp-061",
+  "concept": "arts.painting.expert_dejeuner_herbe",
+  "label": "Le Déjeuner sur l'herbe",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a peint « Le Déjeuner sur l'herbe », scandale du Salon des refusés en 1863 ?",
+  "options": [
+   "Édouard Manet*",
+   "Claude Monet",
+   "Gustave Courbet",
+   "Auguste Renoir"
+  ],
+  "explanation": "Manet, à ne pas confondre avec Monet, qui a aussi peint un Déjeuner sur l'herbe deux ans plus tard."
+ },
+ {
+  "key": "exp-062",
+  "concept": "arts.literature.expert_stendhal_name",
+  "label": "Vrai nom de Stendhal",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel est le vrai nom de Stendhal ?",
+  "options": [
+   "Henri Beyle*",
+   "François-Marie Arouet",
+   "Jean-Baptiste Poquelin",
+   "Aurore Dupin"
+  ],
+  "explanation": "Arouet est Voltaire, Poquelin est Molière, Aurore Dupin est George Sand."
+ },
+ {
+  "key": "exp-063",
+  "concept": "arts.literature.expert_proust_first_word",
+  "label": "Premier mot de la Recherche",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel est le premier mot d'« À la recherche du temps perdu » ?",
+  "options": [
+   "Longtemps*",
+   "Aujourd'hui",
+   "Il",
+   "Mme"
+  ],
+  "explanation": "« Longtemps, je me suis couché de bonne heure. » Aujourd'hui ouvre L'Étranger de Camus."
+ },
+ {
+  "key": "exp-064",
+  "concept": "arts.architecture.expert_villa_savoye",
+  "label": "Villa Savoye",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel architecte a conçu la villa Savoye, à Poissy ?",
+  "options": [
+   "Le Corbusier*",
+   "Auguste Perret",
+   "Jean Nouvel",
+   "Robert Mallet-Stevens"
+  ],
+  "explanation": "Achevée en 1931, elle illustre ses « cinq points de l'architecture moderne »."
+ },
+ {
+  "key": "exp-065",
+  "concept": "arts.architecture.expert_saint_denis",
+  "label": "Berceau du gothique",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel style est né, selon la tradition, avec le chœur de la basilique de Saint-Denis vers 1140 ?",
+  "options": [
+   "Le gothique*",
+   "Le roman",
+   "Le baroque",
+   "La Renaissance"
+  ],
+  "explanation": "L'abbé Suger y fait bâtir un chœur lumineux, voûté sur croisées d'ogives."
+ },
+ {
+  "key": "exp-066",
+  "concept": "arts.mythology.expert_thetis",
+  "label": "Mère d'Achille",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans la mythologie grecque, qui est la mère d'Achille ?",
+  "options": [
+   "Thétis*",
+   "Héra",
+   "Athéna",
+   "Déméter"
+  ],
+  "explanation": "La nymphe Thétis plonge son fils dans le Styx en le tenant par le talon, son seul point faible."
+ },
+ {
+  "key": "exp-067",
+  "concept": "arts.mythology.expert_sleipnir",
+  "label": "Cheval d'Odin",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Comment s'appelle le cheval à huit jambes d'Odin ?",
+  "options": [
+   "Sleipnir*",
+   "Fenrir",
+   "Hugin",
+   "Ratatosk"
+  ],
+  "explanation": "Fenrir est un loup, Hugin un corbeau d'Odin, Ratatosk un écureuil."
+ },
+ {
+  "key": "exp-068",
+  "concept": "sport.football.expert_just_fontaine",
+  "label": "Record de buts en une Coupe du monde",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui détient le record de buts marqués en une seule Coupe du monde (13 en 1958) ?",
+  "options": [
+   "Just Fontaine*",
+   "Pelé",
+   "Miroslav Klose",
+   "Gerd Müller"
+  ],
+  "explanation": "Le Français Just Fontaine marque 13 buts en Suède en 1958. Klose détient le record sur l'ensemble des Coupes (16)."
+ },
+ {
+  "key": "exp-069",
+  "concept": "sport.football.expert_om_1993",
+  "label": "Première Ligue des champions",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel club remporte la première édition sous le nom de Ligue des champions, en 1993 ?",
+  "options": [
+   "L'Olympique de Marseille*",
+   "L'AC Milan",
+   "Le FC Barcelone",
+   "L'Ajax Amsterdam"
+  ],
+  "explanation": "L'OM bat l'AC Milan 1-0 à Munich, sur une tête de Basile Boli."
+ },
+ {
+  "key": "exp-070",
+  "concept": "sport.olympics.expert_women_1900",
+  "label": "Premières femmes aux JO",
+  "type": "numeric",
+  "difficulty": 78,
+  "prompt": "En quelle année des femmes participent-elles pour la première fois aux Jeux olympiques ?",
+  "answer": 1900,
+  "explanation": "Aux Jeux de Paris en 1900, en tennis, golf, voile, croquet et équitation. Charlotte Cooper devient la première championne olympique."
+ },
+ {
+  "key": "exp-071",
+  "concept": "sport.olympics.expert_grenoble",
+  "label": "JO d'hiver 1968",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle ville a accueilli les Jeux olympiques d'hiver de 1968 ?",
+  "options": [
+   "Grenoble*",
+   "Albertville",
+   "Chamonix",
+   "Innsbruck"
+  ],
+  "explanation": "Jean-Claude Killy y remporte les trois épreuves de ski alpin. Chamonix : 1924 ; Albertville : 1992."
+ },
+ {
+  "key": "exp-072",
+  "concept": "sport.rules.expert_albatros",
+  "label": "Albatros au golf",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Au golf, comment appelle-t-on un trou réussi en trois coups sous le par ?",
+  "options": [
+   "Un albatros*",
+   "Un eagle",
+   "Un birdie",
+   "Un bogey"
+  ],
+  "explanation": "Birdie : −1. Eagle : −2. Albatros : −3. Bogey : +1."
+ },
+ {
+  "key": "exp-073",
+  "concept": "sport.rules.expert_rugby_drop",
+  "label": "Points d'un drop",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Au rugby à XV, combien de points rapporte un drop ?",
+  "options": [
+   "3*",
+   "2",
+   "5",
+   "7"
+  ],
+  "explanation": "Drop et pénalité : 3 points. Essai : 5. Transformation : 2."
+ },
+ {
+  "key": "exp-074",
+  "concept": "sport.champions.expert_anquetil",
+  "label": "Anquetil",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel cycliste français remporte le Tour de France quatre fois de suite, de 1961 à 1964 ?",
+  "options": [
+   "Jacques Anquetil*",
+   "Bernard Hinault",
+   "Louison Bobet",
+   "Laurent Fignon"
+  ],
+  "explanation": "Premier quintuple vainqueur du Tour (1957, 1961 à 1964)."
+ },
+ {
+  "key": "exp-075",
+  "concept": "sport.champions.expert_margaret_court",
+  "label": "Record de Grand Chelem",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quelle joueuse détient le record de titres du Grand Chelem en simple (24) ?",
+  "options": [
+   "Margaret Court*",
+   "Serena Williams",
+   "Steffi Graf",
+   "Martina Navratilova"
+  ],
+  "explanation": "L'Australienne Margaret Court : 24 titres. Serena Williams : 23 ; Steffi Graf : 22."
+ },
+ {
+  "key": "exp-076",
+  "concept": "cinema.films.expert_first_palme",
+  "label": "Première Palme d'or",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quel film reçoit la toute première Palme d'or, en 1955 ?",
+  "options": [
+   "Marty*",
+   "Le Troisième Homme",
+   "Orfeu Negro",
+   "La Dolce Vita"
+  ],
+  "explanation": "Avant 1955, le prix s'appelait Grand Prix du Festival. Marty, de Delbert Mann, gagne aussi l'Oscar du meilleur film."
+ },
+ {
+  "key": "exp-077",
+  "concept": "cinema.films.expert_jazz_singer",
+  "label": "Premier film parlant",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel film de 1927 est considéré comme le premier long métrage parlant ?",
+  "options": [
+   "Le Chanteur de jazz*",
+   "Metropolis",
+   "Les Temps modernes",
+   "Le Kid"
+  ],
+  "explanation": "Al Jolson y lance : « Vous n'avez encore rien entendu ! »"
+ },
+ {
+  "key": "exp-078",
+  "concept": "cinema.directors.expert_haneke",
+  "label": "Deux Palmes d'or",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel réalisateur a remporté la Palme d'or pour « Le Ruban blanc » puis pour « Amour » ?",
+  "options": [
+   "Michael Haneke*",
+   "Ken Loach",
+   "Lars von Trier",
+   "Jacques Audiard"
+  ],
+  "explanation": "Haneke, Autrichien : 2009 et 2012. Ken Loach a aussi deux Palmes, pour d'autres films."
+ },
+ {
+  "key": "exp-079",
+  "concept": "cinema.directors.expert_metropolis",
+  "label": "Metropolis",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a réalisé « Metropolis » (1927) ?",
+  "options": [
+   "Fritz Lang*",
+   "F. W. Murnau",
+   "Sergueï Eisenstein",
+   "Robert Wiene"
+  ],
+  "explanation": "Chef-d'œuvre de l'expressionnisme allemand. Murnau a signé Nosferatu, Wiene Le Cabinet du docteur Caligari."
+ },
+ {
+  "key": "exp-080",
+  "concept": "cinema.actors.expert_hepburn",
+  "label": "Quatre Oscars",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quelle actrice détient le record de quatre Oscars de la meilleure actrice ?",
+  "options": [
+   "Katharine Hepburn*",
+   "Meryl Streep",
+   "Frances McDormand",
+   "Ingrid Bergman"
+  ],
+  "explanation": "Katharine Hepburn : 1934, 1968, 1969 et 1982."
+ },
+ {
+  "key": "exp-081",
+  "concept": "cinema.actors.expert_dujardin",
+  "label": "The Artist",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Quel acteur français a reçu l'Oscar du meilleur acteur pour « The Artist » ?",
+  "options": [
+   "Jean Dujardin*",
+   "Omar Sy",
+   "Vincent Cassel",
+   "Gérard Depardieu"
+  ],
+  "explanation": "En 2012, premier Français récompensé dans cette catégorie."
+ },
+ {
+  "key": "exp-082",
+  "concept": "cinema.animation.expert_chomet",
+  "label": "Les Triplettes de Belleville",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Qui a réalisé « Les Triplettes de Belleville » (2003) ?",
+  "options": [
+   "Sylvain Chomet*",
+   "Michel Ocelot",
+   "Jean-François Laguionie",
+   "René Laloux"
+  ],
+  "explanation": "Michel Ocelot a signé Kirikou ; René Laloux, La Planète sauvage."
+ },
+ {
+  "key": "exp-083",
+  "concept": "cinema.animation.expert_beauty_beast_nomination",
+  "label": "Animation nommée au meilleur film",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel film d'animation est le premier nommé à l'Oscar du meilleur film ?",
+  "options": [
+   "La Belle et la Bête*",
+   "Le Roi lion",
+   "Toy Story",
+   "Blanche-Neige"
+  ],
+  "explanation": "La Belle et la Bête de Disney, pour la cérémonie de 1992."
+ },
+ {
+  "key": "exp-084",
+  "concept": "music.classical.expert_prete_roux",
+  "label": "Le Prêtre roux",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel compositeur était surnommé « le Prêtre roux » ?",
+  "options": [
+   "Antonio Vivaldi*",
+   "Franz Liszt",
+   "Jean-Philippe Rameau",
+   "Arcangelo Corelli"
+  ],
+  "explanation": "Ordonné prêtre en 1703, Vivaldi avait les cheveux roux."
+ },
+ {
+  "key": "exp-085",
+  "concept": "music.classical.expert_bolero",
+  "label": "Boléro",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Quelle œuvre de Ravel répète un seul thème dans un long crescendo ?",
+  "options": [
+   "Le Boléro*",
+   "La Pavane pour une infante défunte",
+   "Gaspard de la nuit",
+   "Daphnis et Chloé"
+  ],
+  "explanation": "Créé en 1928, le Boléro devait être un ballet."
+ },
+ {
+  "key": "exp-086",
+  "concept": "music.popular.expert_please_please_me",
+  "label": "Premier album des Beatles",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel est le premier album des Beatles ?",
+  "options": [
+   "Please Please Me*",
+   "Abbey Road",
+   "Help!",
+   "Revolver"
+  ],
+  "explanation": "Sorti en 1963, enregistré en une seule journée ou presque."
+ },
+ {
+  "key": "exp-087",
+  "concept": "music.popular.expert_freddie_mercury",
+  "label": "Vrai nom de Freddie Mercury",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel est le vrai nom de Freddie Mercury ?",
+  "options": [
+   "Farrokh Bulsara*",
+   "Reginald Dwight",
+   "David Jones",
+   "Gordon Sumner"
+  ],
+  "explanation": "Reginald Dwight est Elton John, David Jones est David Bowie, Gordon Sumner est Sting."
+ },
+ {
+  "key": "exp-088",
+  "concept": "music.instruments.expert_harpsichord",
+  "label": "Clavecin",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Quel instrument à clavier pince ses cordes au lieu de les frapper ?",
+  "options": [
+   "Le clavecin*",
+   "Le piano",
+   "Le célesta",
+   "L'orgue"
+  ],
+  "explanation": "Le clavecin pince les cordes avec des becs ; le piano les frappe avec des marteaux."
+ },
+ {
+  "key": "exp-089",
+  "concept": "music.instruments.expert_saxophone_family",
+  "label": "Famille du saxophone",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "À quelle famille d'instruments appartient le saxophone, pourtant en métal ?",
+  "options": [
+   "Les bois*",
+   "Les cuivres",
+   "Les percussions",
+   "Les cordes"
+  ],
+  "explanation": "Le son vient d'une anche en roseau, comme la clarinette : c'est un bois."
+ },
+ {
+  "key": "exp-090",
+  "concept": "tech.computing.expert_kibibyte",
+  "label": "Kibioctet",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien d'octets y a-t-il dans un kibioctet (Kio) ?",
+  "answer": 1024,
+  "explanation": "Kibi = 2¹⁰ = 1 024. Le kilooctet (ko), lui, vaut 1 000 octets.",
+  "unit": "octets"
+ },
+ {
+  "key": "exp-091",
+  "concept": "tech.computing.expert_python",
+  "label": "Créateur de Python",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel langage de programmation a été créé par Guido van Rossum ?",
+  "options": [
+   "Python*",
+   "Java",
+   "Ruby",
+   "C++"
+  ],
+  "explanation": "Python, en 1991, nommé d'après les Monty Python."
+ },
+ {
+  "key": "exp-092",
+  "concept": "tech.computing.expert_first_browser",
+  "label": "Premier navigateur",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Comment s'appelait le premier navigateur web, créé par Tim Berners-Lee ?",
+  "options": [
+   "WorldWideWeb*",
+   "Mosaic",
+   "Netscape",
+   "Lynx"
+  ],
+  "explanation": "Écrit en 1990 au CERN, il fut rebaptisé Nexus. Mosaic (1993) popularisa le Web."
+ },
+ {
+  "key": "exp-093",
+  "concept": "tech.inventions.expert_gunpowder",
+  "label": "Invention de la poudre",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Dans quel pays la poudre noire a-t-elle été inventée ?",
+  "options": [
+   "En Chine*",
+   "En Inde",
+   "En Perse",
+   "En Grèce"
+  ],
+  "explanation": "Des alchimistes chinois la découvrent vers le IXe siècle."
+ },
+ {
+  "key": "exp-094",
+  "concept": "tech.inventions.expert_pascaline",
+  "label": "Pascaline",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a inventé la Pascaline, une des premières machines à calculer (1642) ?",
+  "options": [
+   "Blaise Pascal*",
+   "Gottfried Leibniz",
+   "René Descartes",
+   "Charles Babbage"
+  ],
+  "explanation": "Pascal a 19 ans et veut aider son père, collecteur d'impôts."
+ },
+ {
+  "key": "exp-095",
+  "concept": "tech.brands.expert_backrub",
+  "label": "Premier nom de Google",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Quel était le nom du projet qui est devenu Google, en 1996 ?",
+  "options": [
+   "BackRub*",
+   "PageRank",
+   "Googol",
+   "Stanford Search"
+  ],
+  "explanation": "BackRub analysait les liens « retour » entre pages. Google vient de « googol », 10 puissance 100."
+ },
+ {
+  "key": "exp-096",
+  "concept": "tech.brands.expert_lego",
+  "label": "Origine du nom Lego",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "D'où vient le nom Lego ?",
+  "options": [
+   "Du danois « leg godt », « joue bien »*",
+   "Du latin « lego », « j'assemble »",
+   "Des initiales du fondateur",
+   "Du grec « logos »"
+  ],
+  "explanation": "Le fondateur danois Ole Kirk Christiansen choisit le nom en 1934. La coïncidence avec le latin est fortuite."
+ },
+ {
+  "key": "exp-097",
+  "concept": "tech.brands.expert_nokia",
+  "label": "Pays de Nokia",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "De quel pays vient Nokia ?",
+  "options": [
+   "Finlande*",
+   "Suède",
+   "Norvège",
+   "Danemark"
+  ],
+  "explanation": "Nokia est née en 1865 en Finlande, comme papeterie. Ericsson est suédoise."
+ },
+ {
+  "key": "exp-098",
+  "concept": "nature.animals.expert_platypus",
+  "label": "Mammifère qui pond",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Lequel de ces mammifères pond des œufs ?",
+  "options": [
+   "L'ornithorynque*",
+   "Le kangourou",
+   "Le paresseux",
+   "Le tatou"
+  ],
+  "explanation": "C'est un monotrème, comme l'échidné. Le kangourou est un marsupial."
+ },
+ {
+  "key": "exp-099",
+  "concept": "nature.animals.expert_cow_stomach",
+  "label": "Estomac de la vache",
+  "type": "numeric",
+  "difficulty": 66,
+  "prompt": "En combien de poches se divise l'estomac d'une vache ?",
+  "answer": 4,
+  "explanation": "Panse, bonnet, feuillet et caillette : c'est un ruminant."
+ },
+ {
+  "key": "exp-100",
+  "concept": "nature.plants.expert_vanilla",
+  "label": "La vanille",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "La vanille est le fruit de quelle plante ?",
+  "options": [
+   "Une orchidée*",
+   "Un palmier",
+   "Une liane de poivrier",
+   "Un arbuste de la famille du café"
+  ],
+  "explanation": "Le vanillier est une orchidée grimpante, pollinisée à la main hors du Mexique."
+ },
+ {
+  "key": "exp-101",
+  "concept": "nature.plants.expert_saffron",
+  "label": "Le safran",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Le safran provient de quelle fleur ?",
+  "options": [
+   "Un crocus*",
+   "Une tulipe",
+   "Un souci",
+   "Une rose"
+  ],
+  "explanation": "On récolte à la main les stigmates du crocus à safran : 150 fleurs environ par gramme."
+ },
+ {
+  "key": "exp-102",
+  "concept": "nature.marine.expert_immortal_jellyfish",
+  "label": "Animal « immortel »",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel animal marin peut revenir à un stade juvénile et est parfois dit « immortel » ?",
+  "options": [
+   "Une méduse*",
+   "Un corail",
+   "Un homard",
+   "Une tortue"
+  ],
+  "explanation": "La méduse Turritopsis dohrnii peut redevenir polype après avoir été adulte."
+ },
+ {
+  "key": "exp-103",
+  "concept": "nature.marine.expert_whale_shark",
+  "label": "Plus grand poisson",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Quel est le plus grand poisson du monde ?",
+  "options": [
+   "Le requin-baleine*",
+   "La baleine bleue",
+   "Le grand requin blanc",
+   "Le poisson-lune"
+  ],
+  "explanation": "La baleine bleue est plus grande, mais c'est un mammifère. Le requin-baleine dépasse 12 m."
+ },
+ {
+  "key": "exp-104",
+  "concept": "nature.earth.expert_stratosphere",
+  "label": "Couche d'ozone",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Dans quelle couche de l'atmosphère se trouve la couche d'ozone ?",
+  "options": [
+   "La stratosphère*",
+   "La troposphère",
+   "La mésosphère",
+   "La thermosphère"
+  ],
+  "explanation": "Entre 15 et 35 km d'altitude environ, elle filtre les UV du Soleil."
+ },
+ {
+  "key": "exp-105",
+  "concept": "nature.earth.expert_largest_desert",
+  "label": "Plus grand désert",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel est le plus grand désert du monde ?",
+  "options": [
+   "L'Antarctique*",
+   "Le Sahara",
+   "Le désert de Gobi",
+   "L'Arctique"
+  ],
+  "explanation": "Un désert se définit par ses faibles précipitations, pas par la chaleur. L'Antarctique fait 14 millions de km²."
+ }
+]

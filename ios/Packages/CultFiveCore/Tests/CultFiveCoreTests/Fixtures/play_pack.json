@@ -1,194 +1,237 @@
 {
  "mode": "quick",
+ "level": "adaptive",
+ "ranked": true,
  "questions": [
   {
-   "id": "54772f8e-195d-43e9-b7a9-dfde71686d83",
+   "id": "f5344b0a-cda2-463d-8ca8-d9c0926a373f",
+   "type": "mcq",
+   "answer": {
+    "option_id": "18e1a53a"
+   },
+   "prompt": "Quelle est la monnaie de l'Ouganda ?",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "b0408e8e",
+      "text": "Shilling kényan"
+     },
+     {
+      "id": "88515aca",
+      "text": "Livre sud-soudanaise"
+     },
+     {
+      "id": "18e1a53a",
+      "text": "Shilling ougandais"
+     },
+     {
+      "id": "d1251c30",
+      "text": "Franc Djibouti"
+     }
+    ]
+   },
+   "expected": 0.42,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "geography",
+   "concept_id": "geography.countries.currency_uganda",
+   "difficulty": 50,
+   "fact_as_of": "2026-09-26",
+   "explanation": "En Ouganda, on paie en shilling ougandais.",
+   "has_context": false,
+   "subdomain_id": "geography.countries"
+  },
+  {
+   "id": "31162f78-f1e8-4232-a264-076fd43531c7",
+   "type": "mcq",
+   "answer": {
+    "option_id": "dc94ebfc"
+   },
+   "prompt": "Quel groupe sanguin est donneur universel pour les globules rouges ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "ac2e1749",
+      "text": "A positif"
+     },
+     {
+      "id": "34960c2f",
+      "text": "B négatif"
+     },
+     {
+      "id": "1e6e7145",
+      "text": "AB positif"
+     },
+     {
+      "id": "dc94ebfc",
+      "text": "O négatif"
+     }
+    ]
+   },
+   "expected": 0.46,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "science",
+   "concept_id": "science.human_body.blood_types",
+   "difficulty": 55,
+   "fact_as_of": null,
+   "explanation": "O− peut être transfusé à presque tout le monde. AB+ est receveur universel.",
+   "has_context": false,
+   "subdomain_id": "science.human_body"
+  },
+  {
+   "id": "ba8ada06-c36a-4c0b-aaf2-50926183e707",
    "type": "numeric",
    "answer": {
-    "value": 36,
+    "value": 85,
     "tolerance": 0
    },
-   "prompt": "Quel nombre suit : 1, 4, 9, 16, 25, … ?",
+   "prompt": "Quel nombre suit : 100, 99, 97, 94, 90, … ?",
    "source": null,
    "payload": {
     "decimals": 0,
     "allow_negative": false
    },
+   "expected": 0.5,
    "has_hint": false,
    "takeaway": null,
    "domain_id": "logic",
-   "concept_id": "logic.sequences.squares",
+   "concept_id": "logic.sequences.minus_growing",
+   "difficulty": 50,
    "fact_as_of": null,
-   "explanation": "Ce sont les carrés : 1², 2², 3², 4², 5², puis 6² = 36.",
+   "explanation": "On retire 1, 2, 3, 4, puis 5 : 90 − 5 = 85.",
    "has_context": false,
    "subdomain_id": "logic.sequences"
   },
   {
-   "id": "01e28e22-9774-454d-84ef-6e8eae4a09f0",
+   "id": "33e5e2e7-56a9-446f-bf77-4df78dc8be44",
    "type": "mcq",
    "answer": {
-    "option_id": "4d0a2b8a"
+    "option_id": "debb7ca4"
    },
-   "prompt": "Qui est à l'origine de la renaissance des Jeux olympiques modernes ?",
+   "prompt": "À quel siècle remonte la naissance de Florence Nightingale ?",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "aec39a74",
+      "text": "XVIIe siècle"
+     },
+     {
+      "id": "515e708f",
+      "text": "XVIIIe siècle"
+     },
+     {
+      "id": "debb7ca4",
+      "text": "XIXe siècle"
+     },
+     {
+      "id": "774580ff",
+      "text": "XXe siècle"
+     }
+    ],
+    "keep_order": true
+   },
+   "expected": 0.51,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "history",
+   "concept_id": "history.contemporary.century_florence_nightingale",
+   "difficulty": 45,
+   "fact_as_of": null,
+   "explanation": "Florence Nightingale, infirmière britannique, est née en 1820 et morte en 1910.",
+   "has_context": false,
+   "subdomain_id": "history.contemporary"
+  },
+  {
+   "id": "7cc2b884-0c65-4ba4-8e7a-d46ec60f283a",
+   "type": "mcq",
+   "answer": {
+    "option_id": "0573ea29"
+   },
+   "prompt": "De quel pays viennent les briques Lego ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "87b2211a",
-      "text": "Jules Rimet"
+      "id": "e10b3fb9",
+      "text": "Allemagne"
      },
      {
-      "id": "9308b6a4",
-      "text": "Jean Jaurès"
+      "id": "18428a74",
+      "text": "Pays-Bas"
      },
      {
-      "id": "4d0a2b8a",
-      "text": "Pierre de Coubertin"
+      "id": "8b09500e",
+      "text": "Suède"
      },
      {
-      "id": "f4ac63c6",
-      "text": "Gustave Eiffel"
+      "id": "0573ea29",
+      "text": "Danemark"
      }
     ]
    },
+   "expected": 0.71,
    "has_hint": false,
    "takeaway": null,
-   "domain_id": "sport",
-   "concept_id": "sport.olympics.coubertin",
+   "domain_id": "tech",
+   "concept_id": "tech.brands.lego",
+   "difficulty": 40,
    "fact_as_of": null,
-   "explanation": "Le baron Pierre de Coubertin fonde le Comité international olympique en 1894. Jules Rimet, lui, a créé la Coupe du monde de football.",
+   "explanation": "« Leg godt » signifie « joue bien » en danois.",
    "has_context": false,
-   "subdomain_id": "sport.olympics"
+   "subdomain_id": "tech.brands"
   },
   {
-   "id": "2b9a6023-f109-4c17-84e4-82df8cfc4cea",
-   "type": "true_false",
+   "id": "99371443-112f-4c2d-9e93-ebe71dcba8cf",
+   "type": "map_pick",
    "answer": {
-    "value": true
+    "option_id": "b4974e88"
    },
-   "prompt": "La chauve-souris est un mammifère.",
-   "source": null,
-   "payload": {},
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "nature",
-   "concept_id": "nature.animals.bat_mammal",
-   "fact_as_of": null,
-   "explanation": "Elle allaite ses petits. C'est le seul mammifère capable d'un vrai vol battu.",
-   "has_context": false,
-   "subdomain_id": "nature.animals"
-  },
-  {
-   "id": "2be6ea4b-b8f6-46d0-85d4-7836feab3811",
-   "type": "mcq",
-   "answer": {
-    "option_id": "edd83b9a"
-   },
-   "prompt": "Quel est l'instrument à cordes frottées le plus grave de l'orchestre symphonique ?",
-   "source": null,
+   "prompt": "Touche l'emplacement de Bandar Seri Begawan.",
+   "source": "Wikidata",
    "payload": {
+    "region": {
+     "lat": 11.16,
+     "lon": 107.72,
+     "span": 33.6
+    },
     "options": [
      {
-      "id": "4a72581d",
-      "text": "Le violon"
+      "id": "b4974e88",
+      "lat": 4.916666666,
+      "lon": 114.916666666
      },
      {
-      "id": "ff06eff5",
-      "text": "L'alto"
+      "id": "249bc308",
+      "lat": 1.3,
+      "lon": 103.8
      },
      {
-      "id": "edd83b9a",
-      "text": "La contrebasse"
+      "id": "ad8bd795",
+      "lat": 13.75,
+      "lon": 100.516666666
      },
      {
-      "id": "b56a8a4d",
-      "text": "Le violoncelle"
+      "id": "b5988535",
+      "lat": 21.0245,
+      "lon": 105.84117
      }
     ]
    },
+   "expected": 0.28,
    "has_hint": false,
    "takeaway": null,
-   "domain_id": "music",
-   "concept_id": "music.instruments.double_bass",
+   "domain_id": "geography",
+   "concept_id": "geography.countries.map_brunei",
+   "difficulty": 57,
    "fact_as_of": null,
-   "explanation": "Du plus aigu au plus grave : violon, alto, violoncelle, contrebasse.",
+   "explanation": "Bandar Seri Begawan est la capitale de Brunei. Les autres points : Singapour, Bangkok et Hanoï.",
    "has_context": false,
-   "subdomain_id": "music.instruments"
-  },
-  {
-   "id": "e2345e7e-4e96-4934-9e49-98265e12093a",
-   "type": "mcq",
-   "answer": {
-    "option_id": "79929421"
-   },
-   "prompt": "« Donner du fil à retordre » à quelqu'un, c'est…",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "79929421",
-      "text": "lui causer des difficultés"
-     },
-     {
-      "id": "0c2719c7",
-      "text": "lui faire un cadeau"
-     },
-     {
-      "id": "cc2d9a26",
-      "text": "lui apprendre la couture"
-     },
-     {
-      "id": "8983f238",
-      "text": "le tromper"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "french",
-   "concept_id": "french.expressions.fil_a_retordre",
-   "fact_as_of": null,
-   "explanation": "Retordre le fil (le tordre à nouveau pour le renforcer) était un travail long et pénible.",
-   "has_context": false,
-   "subdomain_id": "french.expressions"
-  },
-  {
-   "id": "8ba3e008-b6b0-4689-a485-2825f38de291",
-   "type": "mcq",
-   "answer": {
-    "option_id": "91443988"
-   },
-   "prompt": "Si aujourd'hui est mardi, quel jour serons-nous dans 100 jours ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "91443988",
-      "text": "Jeudi"
-     },
-     {
-      "id": "fcd915ae",
-      "text": "Mercredi"
-     },
-     {
-      "id": "bdea30d9",
-      "text": "Mardi"
-     },
-     {
-      "id": "721755c7",
-      "text": "Lundi"
-     }
-    ]
-   },
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "logic",
-   "concept_id": "logic.reasoning.days_after",
-   "fact_as_of": null,
-   "explanation": "100 = 14 × 7 + 2. Dans 98 jours, on sera encore mardi ; deux jours plus tard, jeudi.",
-   "has_context": false,
-   "subdomain_id": "logic.reasoning"
+   "subdomain_id": "geography.countries"
   }
  ],
- "session_id": "c1da41dd-7a01-4350-a7d5-772219ac57aa"
+ "session_id": "3d899063-1d92-4c3e-b3d9-155b134b24b2"
 }

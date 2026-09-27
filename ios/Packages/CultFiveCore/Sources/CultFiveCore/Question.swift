@@ -132,9 +132,12 @@ public struct Question: Codable, Hashable, Identifiable, Sendable {
     public let hasContext: Bool?
     /// Présent dans les packs Jouer et la revue du Daily ; absent pendant le Daily.
     public let reveal: Reveal?
+    /// Packs Jouer : difficulté absolue (0–100) et chances de réussite estimées pour ce joueur (0–1).
+    public var difficulty: Double?
+    public var expected: Double?
 
     enum CodingKeys: String, CodingKey {
-        case id, type, prompt, payload, position, answer, explanation
+        case id, type, prompt, payload, position, answer, explanation, difficulty, expected
         case domainId = "domain_id"
         case subdomainId = "subdomain_id"
         case conceptId = "concept_id"
@@ -144,7 +147,8 @@ public struct Question: Codable, Hashable, Identifiable, Sendable {
 
     public init(id: UUID, type: QuestionType, domainId: String, subdomainId: String, prompt: String,
                 payload: QuestionPayload, conceptId: String? = nil, position: Int? = nil,
-                hasHint: Bool? = nil, hasContext: Bool? = nil, reveal: Reveal? = nil) {
+                hasHint: Bool? = nil, hasContext: Bool? = nil, reveal: Reveal? = nil,
+                difficulty: Double? = nil, expected: Double? = nil) {
         self.id = id
         self.type = type
         self.domainId = domainId
@@ -156,6 +160,8 @@ public struct Question: Codable, Hashable, Identifiable, Sendable {
         self.hasHint = hasHint
         self.hasContext = hasContext
         self.reveal = reveal
+        self.difficulty = difficulty
+        self.expected = expected
     }
 
     public init(from decoder: Decoder) throws {
@@ -170,6 +176,8 @@ public struct Question: Codable, Hashable, Identifiable, Sendable {
         position = try c.decodeIfPresent(Int.self, forKey: .position)
         hasHint = try c.decodeIfPresent(Bool.self, forKey: .hasHint)
         hasContext = try c.decodeIfPresent(Bool.self, forKey: .hasContext)
+        difficulty = try c.decodeIfPresent(Double.self, forKey: .difficulty)
+        expected = try c.decodeIfPresent(Double.self, forKey: .expected)
         // La révélation est « à plat » dans le même objet JSON.
         if c.contains(.answer), c.contains(.explanation) {
             reveal = try Reveal(from: decoder)
@@ -190,6 +198,8 @@ public struct Question: Codable, Hashable, Identifiable, Sendable {
         try c.encodeIfPresent(position, forKey: .position)
         try c.encodeIfPresent(hasHint, forKey: .hasHint)
         try c.encodeIfPresent(hasContext, forKey: .hasContext)
+        try c.encodeIfPresent(difficulty, forKey: .difficulty)
+        try c.encodeIfPresent(expected, forKey: .expected)
         try reveal?.encode(to: encoder)
     }
 }

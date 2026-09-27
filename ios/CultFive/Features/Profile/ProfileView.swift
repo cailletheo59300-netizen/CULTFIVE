@@ -17,6 +17,7 @@ struct ProfileView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     portrait
                     if app.isAnonymous { AccountNudge() }
+                    coteCard
                     numbers
                     knowledge
                     calendar
@@ -96,6 +97,47 @@ struct ProfileView: View {
         return DomainPalette.color(best.domainId)
     }
 
+    /// Cote CULT globale : moyenne des domaines pondérée par les réponses, rang et progression vers le rang suivant.
+    private var coteCard: some View {
+        let global = CoteCULT.global(skills)
+        return HStack(spacing: Space.m) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Cote CULT").labelCaps(.white.opacity(0.8))
+                if let global, global.placed {
+                    Text(global.formatted).numeral(size: 52).foregroundStyle(Color.white)
+                    Text(global.rank.name).font(.cfHeadline).foregroundStyle(Color.sun)
+                    if let next = global.toNextRank, let rank = global.rank.next {
+                        ProgressView(value: next.progress).tint(.sun)
+                            .frame(maxWidth: 200)
+                            .accessibilityLabel("\(next.missing) points avant \(rank.name)")
+                        Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote).foregroundStyle(.white.opacity(0.8))
+                    }
+                } else {
+                    let answered = global?.answered ?? 0
+                    Text("En placement").font(.system(.title2, design: .rounded).weight(.black)).foregroundStyle(Color.white)
+                    ProgressView(value: Double(min(answered, CoteCULT.placementAnswers)), total: Double(CoteCULT.placementAnswers))
+                        .tint(.sun).frame(maxWidth: 200)
+                    Text("\(min(answered, CoteCULT.placementAnswers))/\(CoteCULT.placementAnswers) réponses classées avant de découvrir ta cote.")
+                        .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            Spacer(minLength: 0)
+            VStack(alignment: .trailing, spacing: 3) {
+                ForEach(CoteCULT.Rank.allCases.reversed(), id: \.self) { rank in
+                    let current = global?.placed == true && global?.rank == rank
+                    Text(rank.name)
+                        .font(.system(.caption2, design: .rounded).weight(current ? .black : .semibold))
+                        .foregroundStyle(current ? Color.sun : .white.opacity(0.55))
+                }
+            }
+            .accessibilityHidden(true)
+        }
+        .padding(Space.m)
+        .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+
     private var numbers: some View {
         LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
             number("\(app.profile?.streak ?? 0)", "jours de série", symbol: "flame.fill", tint: Color(hex: 0xF76707))
@@ -132,9 +174,9 @@ struct ProfileView: View {
                     .frame(maxWidth: .infinity)
                     .popCard()
             }
-            // Les niveaux fiables (≥ 10 réponses) d'abord, puis par niveau.
+            // Les cotes placées d'abord, puis par niveau.
             let played = skills.filter { $0.answered > 0 }.sorted {
-                ($0.answered >= 10 ? 1 : 0, $0.level) > ($1.answered >= 10 ? 1 : 0, $1.level)
+                ($0.rating.placed ? 1 : 0, $0.level) > ($1.rating.placed ? 1 : 0, $1.level)
             }
             if played.isEmpty {
                 Text("Joue quelques parties : ton profil de connaissances se dessinera ici.")
@@ -146,11 +188,15 @@ struct ProfileView: View {
                         HStack(alignment: .firstTextBaseline) {
                             Text(skill.name).font(.cfTitle3).foregroundStyle(Color.ink)
                             Spacer()
-                            Text("\(skill.level)").font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
-                                .foregroundStyle(Color.ink)
+                            if skill.rating.placed {
+                                Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
+                                    .foregroundStyle(Color.ink)
+                            } else {
+                                PlacementDots(done: skill.rating.placementGames, color: DomainPalette.color(skill.domainId), compact: true)
+                            }
                         }
                         SkillBar(level: skill.level, reliability: skill.reliability, color: DomainPalette.color(skill.domainId))
-                        Text("\(skill.answered) réponses · fiabilité \(Reliability(skill.reliability).label)")
+                        Text(skill.rating.placed ? "\(skill.rating.rank.name) · \(skill.answered) réponses" : "\(skill.answered) réponses · placement en cours")
                             .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                     }
                     .popCard(padding: 14)

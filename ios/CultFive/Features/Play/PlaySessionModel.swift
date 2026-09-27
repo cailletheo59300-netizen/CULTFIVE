@@ -73,11 +73,17 @@ final class PlaySessionModel {
         var corrected: Int
         var achievements: [String]
         var synced: Bool
-        var domainMoves: [String: (Double, Double)] = [:]
         var ranked = true
         /// Questions ratées, avec leur bonne réponse : « ce que tu as appris ».
         var missed: [Question] = []
         var bestStreak = 0
+        /// Points de la partie (serveur ; estimation locale hors ligne).
+        var points = 0
+        /// Variation de cote par domaine (partie classée synchronisée).
+        var ratings: [PlaySubmitResult.RatingChange] = []
+
+        /// Réponses de la partie par domaine (pour savoir si le placement vient de se terminer).
+        var answeredByDomain: [String: Int] = [:]
 
         static func == (lhs: PlaySummary, rhs: PlaySummary) -> Bool {
             lhs.correct == rhs.correct && lhs.total == rhs.total && lhs.xp == rhs.xp && lhs.seeds == rhs.seeds
@@ -97,6 +103,10 @@ final class PlaySessionModel {
     private(set) var helpError: String?
     /// Fin du temps imparti pour la question en cours (entraînement chronométré).
     private(set) var deadline: Date?
+    /// Points cumulés pendant la partie (même règle que le serveur).
+    private(set) var points = 0
+    /// Points de la dernière réponse, pour le badge « +140 ».
+    private(set) var lastPoints = 0
 
     private let service: GameService
     private let queue: OfflineAttemptQueue
@@ -115,6 +125,12 @@ final class PlaySessionModel {
     }
 
     var current: Question? { questions.indices.contains(index) ? questions[index] : nil }
+
+    /// Difficulté ressentie de la question en cours (packs Jouer, hors mode Erreurs).
+    var currentDifficulty: RelativeDifficulty? {
+        guard config.mode != .errors, let p = current?.expected else { return nil }
+        return RelativeDifficulty(expected: p)
+    }
     var isLast: Bool { index >= questions.count - 1 }
     var isOffline: Bool { usedOfflinePack }
 
@@ -149,6 +165,8 @@ final class PlaySessionModel {
         index = 0
         results = []
         attempts = []
+        points = 0
+        lastPoints = 0
         phase = .answering
         stage = .intro
     }
@@ -163,6 +181,13 @@ final class PlaySessionModel {
     var streak: Int {
         var n = 0
         for correct in results.reversed() { if correct { n += 1 } else { break } }
+        return n
+    }
+
+    /// Série d'erreurs en cours.
+    private var wrongStreak: Int {
+        var n = 0
+        for correct in results.reversed() { if !correct { n += 1 } else { break } }
         return n
     }
 
@@ -191,6 +216,7 @@ final class PlaySessionModel {
         deadline = nil
         attempts.append(PlayAttempt(questionId: question.id, given: nil, responseMs: stopwatch.elapsedMilliseconds))
         results.append(false)
+        lastPoints = 0
         Haptics.error()
         phase = .revealed(given: nil, isCorrect: false, reveal: reveal)
     }
@@ -204,6 +230,8 @@ final class PlaySessionModel {
         let correct = AnswerEvaluator.isCorrect(given, for: question) ?? false
         attempts.append(PlayAttempt(questionId: question.id, given: given, responseMs: stopwatch.elapsedMilliseconds))
         results.append(correct)
+        lastPoints = GamePoints.points(correct: correct, expected: question.expected, responseMs: stopwatch.elapsedMilliseconds)
+        points += lastPoints
         correct ? Haptics.success() : Haptics.error()
         phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
     }
@@ -212,13 +240,16 @@ final class PlaySessionModel {
     var badge: String? {
         guard case .revealed(_, true, _) = phase else { return nil }
         if config.mode == .errors { return "Erreur corrigée ✓" }
-        return streak >= 3 ? "🔥 \(streak) d'affilée" : nil
+        let gained = lastPoints > 0 ? "+\(lastPoints) pts" : nil
+        if streak >= 3 { return [gained, "🔥 \(streak) d'affilée"].compactMap { $0 }.joined(separator: " · ") }
+        return gained
     }
 
     func next() async {
         if isLast {
             await finish()
         } else {
+            adaptNextQuestion()
             index += 1
             phase = .answering
             removedOptions = []
@@ -226,6 +257,16 @@ final class PlaySessionModel {
             helpError = nil
             stopwatch.reset()
         }
+    }
+
+    /// Ordre adaptatif (hors mode Erreurs) : après une série de 3, la question restante la plus dure passe devant ;
+    /// après 2 erreurs de suite, la plus accessible. Seules les questions pas encore jouées sont réordonnées.
+    private func adaptNextQuestion() {
+        guard config.mode != .errors, index + 1 < questions.count else { return }
+        let remaining = Array(questions[(index + 1)...])
+        let pick = AdaptiveOrder.nextIndex(remaining: remaining, correctStreak: streak, wrongStreak: wrongStreak)
+        guard pick > 0 else { return }
+        questions.swapAt(index + 1, index + 1 + pick)
     }
 
     /// Terminer plus tôt : ce qui a été joué compte.
@@ -237,6 +278,8 @@ final class PlaySessionModel {
         summary.ranked = config.ranked
         summary.bestStreak = bestStreak
         summary.missed = zip(questions, results).filter { !$0.1 }.map { $0.0 }
+        summary.points = points
+        for question in questions.prefix(results.count) { summary.answeredByDomain[question.domainId, default: 0] += 1 }
         guard !attempts.isEmpty else {
             stage = .summary(summary)
             return
@@ -249,12 +292,8 @@ final class PlaySessionModel {
             summary.corrected = result.corrected.count
             summary.achievements = result.achievements
             summary.synced = true
-            for item in result.results where config.ranked {
-                guard let domain = questions.first(where: { $0.id == item.questionId })?.domainId,
-                      let before = item.domainBefore, let after = item.domainAfter else { continue }
-                let first = summary.domainMoves[domain]?.0 ?? before
-                summary.domainMoves[domain] = (first, after)
-            }
+            if let serverPoints = result.points { summary.points = serverPoints }
+            summary.ratings = config.ranked ? (result.ratings ?? []) : []
             seedsBalance = result.balance
         } catch {
             await queue.enqueue(session: sessionId, attempts: attempts)

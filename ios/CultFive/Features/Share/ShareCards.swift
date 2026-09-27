@@ -216,13 +216,17 @@ struct ProfileShareCard: View {
 
     var body: some View {
         let palette = CardPalette(template)
-        let top = skills.filter { $0.answered > 0 }.sorted { $0.level > $1.level }.prefix(3)
+        let top = skills.filter { $0.answered > 0 }.sorted { ($0.rating.placed ? 1 : 0, $0.level) > ($1.rating.placed ? 1 : 0, $1.level) }.prefix(3)
         ZStack {
             Rectangle().fill(palette.background)
             VStack(alignment: .leading, spacing: 12) {
                 CardHeader(palette: palette)
                 Text(profile.handle).font(.system(size: 28, weight: .black, design: .rounded)).foregroundStyle(palette.text)
                     .lineLimit(1).minimumScaleFactor(0.6)
+                if let global = CoteCULT.global(skills), global.placed {
+                    Text("Cote CULT \(global.formatted) · \(global.rank.name)")
+                        .font(.system(size: 15, weight: .black, design: .rounded)).foregroundStyle(palette.accent)
+                }
                 Text("Mon radar de culture").font(.system(size: 11, weight: .heavy, design: .rounded)).textCase(.uppercase)
                     .foregroundStyle(palette.soft)
                 KnowledgeRadar(axes: skills.map { KnowledgeRadar.Axis(domainId: $0.domainId, level: $0.answered > 0 ? Double($0.level) : 0) },
@@ -238,7 +242,8 @@ struct ProfileShareCard: View {
                                 .background(DomainPalette.color(skill.domainId), in: Circle())
                             Text(skill.name).font(.system(size: 13, weight: .bold, design: .rounded))
                             Spacer()
-                            Text("\(skill.level)").font(.system(size: 16, weight: .black, design: .rounded)).monospacedDigit()
+                            Text(skill.rating.placed ? skill.rating.formatted : "—")
+                                .font(.system(size: 16, weight: .black, design: .rounded)).monospacedDigit()
                         }
                         .foregroundStyle(palette.text)
                     }

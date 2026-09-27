@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.0 — Cote CULT
+- **Cote CULT** par domaine et globale (1000 = niveau médian, rangs Curieux → Encyclopédie). Cachée pendant **5 parties de placement** (« Placement 2/5 »), puis dévoilée avec célébration ; nouveau rang célébré. Affichée sur les tuiles Jouer, la page domaine (courbe en cote), le profil (carte Cote CULT), la feuille de choix, le résultat du Daily et la carte de partage.
+- **Parties plus exigeantes** : parties classées visées à ~55 % de réussite (au lieu de ~70 %), Défi ~40 %. Placement plus rapide (pas doublé sur les 50 premières réponses).
+- En partie : pastille de difficulté (Facile · Moyen · Difficile · Très difficile), **ordre adaptatif** (plus dur après 3 bonnes réponses, plus accessible après 2 erreurs), **points** par question (difficulté + vitesse, « +140 pts »), total et variation de cote au bilan (« 1 342 +18 · Érudit »).
+- Serveur (migration 0014) : `_cote`, `_rating_json`, bandes plus exigeantes, `play_pack` enrichi (`difficulty`, `expected`), `play_submit` avec `points` et `ratings`, `skills_overview`/`domain_stats` avec cote et placement. Tests `70_rating.sql` avec **simulation** de trois joueurs (convergence vérifiée).
+- Contenu : 105 questions **expertes** (66–85) sur tous les thèmes ; thèmes Wikidata trop resserrés étalés ; rapport `docs/CALIBRATION.md`. Banque : 3 975.
+- Démo : cote, placement et points simulés (Calcul, Français et Géographie sont à 4/5 : la prochaine partie classée dévoile la cote).
+
 ## 0.7.0 — thèmes et contenu
 - **Duels** : défier un ami (éclair à côté de son nom) ou n'importe qui par lien (`cultfive.app/d/CODE`), sur les mêmes 5 questions de 5 domaines ; chacun joue quand il veut (48 h) ; temps officiel serveur ; score adverse caché tant qu'on n'a pas joué ; vainqueur au score puis au temps (+20 XP, +5 graines). Écrans face-à-face, résultat « VS », section Duels dans Amis. Migration 0013, tests `60_duels.sql`. Démo : adversaire simulé.
 - **Admin web** (`admin/index.html`) : tableau de bord par thème, liste filtrable et triable (difficulté, réussite, signalements), éditeur par type de question, publication/désactivation, 5 du jour (générer, remplacer), signalements.

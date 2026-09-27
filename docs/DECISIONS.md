@@ -70,3 +70,7 @@ Pourquoi : le propriétaire veut un jeu normal lisible — « jouer pour progres
 
 ### D-023 · 2026-09-26 · Duels asynchrones, mêmes règles que le Daily
 Pourquoi : levier viral (un défi se partage) sans imposer d'être connectés en même temps. Même série pour les deux (5 domaines, difficulté 35–65, jamais une question d'un Daily protégé), temps officiel serveur, questions dans l'ordre, score adverse révélé seulement après sa propre partie (pas d'avantage à jouer second). Expiration 48 h : celui qui a joué gagne. Les réponses comptent pour le niveau (ce sont de vraies réponses), contexte « challenge ». Défi par lien : le premier qui l'ouvre devient l'adversaire.
+
+### D-024 · 2026-09-27 · Cote CULT, placement et parties plus exigeantes
+Pourquoi : le propriétaire veut « une vraie note cohérente selon le niveau, pas une appli trop simple ». Le niveau 0–100 ressemblait à une note sur 100 et les parties visaient ~70 % de réussite. Cote façon échecs (1000 = médian, 400 points = 10 contre 1), rangs nommés, cote cachée pendant 5 parties de placement (pas doublé) pour ne jamais afficher un chiffre peu fiable ; parties classées visées à ~55 % (Défi ~40 %). Le μ interne ne change pas (calibrage, sélection, radar) : la cote n'en est qu'une lecture, donc aucune migration de données. Validé par simulation SQL. Points de partie (difficulté + vitesse) pour donner une récompense immédiate même quand le taux de réussite baisse.
+

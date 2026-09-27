@@ -49,15 +49,46 @@ Premières réponses d'un nouvel utilisateur (σ=10, E=0,5) : ≈ +4 points pour
 `fiabilité = 1 − σ/σ₀` ∈ [0,1], affichée en mots : « à affiner » (<0,35), « correcte » (<0,65), « solide ».
 
 ## Sélection des questions (Jouer, Défi, Erreurs)
-Pour chaque question à servir, on tire une **bande** :
+Pour chaque question à servir, on tire une **bande** (0.8.0, plus exigeant : on joue à la limite de son niveau, ~55 % de réussite) :
 | Bande | Proba | Réussite visée E |
 |---|---|---|
-| Cœur | 60 % | 0,60–0,80 |
-| Consolidation | 20 % | 0,80–0,93 |
-| Mesure (plus dur) | 15 % | 0,40–0,60 |
+| Limite | 55 % | 0,50–0,65 |
+| Défi | 25 % | 0,35–0,50 |
+| Respiration | 15 % | 0,65–0,80 |
 | Exploration | 5 % | aléatoire, priorité aux questions peu calibrées |
-Défi : bandes décalées (Cœur 0,45–0,65, Mesure 0,30–0,45).
+Mode Défi : 60 % à 0,30–0,45, 25 % à 0,45–0,60, 10 % à 0,20–0,30, 5 % d'exploration.
+(Avant 0.8.0 : cœur 0,60–0,80 et 20 % de consolidation à 0,80–0,93, soit ~70 % de réussite — jugé trop facile.)
 Conversion : `b = μ − S·ln(E/(1−E))`. Filtres : statut `published`, concept non vu depuis 3 jours (7 jours si réussi), pas deux fois le même concept dans une série, questions des Daily présents/futurs exclues. Si la bande est vide, élargissement progressif (±5 puis ±10) puis n'importe quelle question du filtre.
+
+Chaque question du pack porte `difficulty` et `expected` (chances estimées pour ce joueur). L'app en tire une pastille
+(Facile ≥ 0,70 · Moyen ≥ 0,50 · Difficile ≥ 0,35 · Très difficile) et un **ordre adaptatif** dans la partie : après 3 bonnes
+réponses d'affilée, la question restante la plus dure passe devant ; après 2 erreurs, la plus accessible.
+
+## Cote CULT (0.8.0)
+Lecture du niveau μ sur une échelle façon échecs : **cote = 1000 + 17,37 × (μ − 50)** (17,37 = 400 / (S · ln 10) : 400 points
+d'écart = 10 contre 1). 1000 = niveau médian ; μ ∈ [0, 100] → cote ∈ [131, 1869].
+| Rang | Cote |
+|---|---|
+| Curieux | < 900 |
+| Amateur | 900–1049 |
+| Éclairé | 1050–1199 |
+| Érudit | 1200–1349 |
+| Expert | 1350–1499 |
+| Encyclopédie | ≥ 1500 |
+- **Placement** : tant qu'un domaine a moins de 50 réponses classées (≈ 5 parties), la cote est cachée (« Placement 2/5 ») et le pas
+  maximal par réponse est doublé (±8 au lieu de ±4) pour converger vite. Un thème est placé dès 15 réponses.
+- **Cote globale** : moyenne des domaines pondérée par le nombre de réponses (calculée dans l'app), placée dès 50 réponses.
+- **Points de partie** (bonne réponse seulement) : 50 + 100 × (1 − E) + bonus de vitesse (≤ 30 sous 15 s ; rien sous 0,8 s).
+  Une question « à 30 % » juste et rapide ≈ 150 pts. Même formule côté serveur (`_attempt_points`) et app (`GamePoints`).
+- `play_submit` renvoie `points` et `ratings` (cote avant/après par domaine, placement).
+- **Simulation** (`supabase/tests/70_rating.sql`) : trois joueurs de vrai niveau 30, 50 et 72 jouent 8 parties classées ; ils
+  répondent juste avec la probabilité du modèle. Résultat : μ 28,6 / 50,1 / 71,3 (cotes 627 / 1002 / 1370), ordre respecté,
+  et le joueur moyen réussit 52 % de ses questions après placement.
+
+## Calibrage initial du contenu
+`node scripts/build-seed.mjs --report` écrit `docs/CALIBRATION.md` (répartition des difficultés par thème). Les thèmes importés
+de Wikidata trop resserrés (écart-type < 7) sont étalés par rang vers un écart-type de 10 autour de la même moyenne ; 105
+questions expertes (difficulté 66–85) écrites à la main couvrent les thèmes qui n'avaient rien de difficile.
 
 ## Daily (non individuel)
 Série commune du jour : 5 emplacements (calc, french, geo, history, surprise), ordre mélangé, profil de difficulté cible `[35, 45, 50, 55, 65]` réparti aléatoirement, en évitant : question utilisée dans un Daily depuis 180 j, concept utilisé depuis 60 j. Types variés (au plus 2 fois le même type).

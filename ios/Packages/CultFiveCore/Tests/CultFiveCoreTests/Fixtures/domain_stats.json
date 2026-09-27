@@ -1,103 +1,94 @@
 {
- "level": 46,
- "avg_ms": 8200,
- "correct": 0,
+ "cote": 1064,
+ "level": 54,
+ "avg_ms": 3033,
+ "placed": false,
+ "correct": 2,
  "history": [
   {
    "day": "2027-03-01",
-   "level": 46.0
+   "level": 53.7
   }
  ],
- "answered": 1,
+ "answered": 3,
  "domain_id": "geography",
+ "placement": 0,
  "subdomains": [
   {
    "id": "geography.capitals",
+   "cote": 1064,
    "name": "Capitales",
-   "level": 46,
+   "level": 54,
+   "placed": false,
    "correct": 0,
    "answered": 0,
-   "available": 12,
-   "reliability": 0.09
+   "available": 296,
+   "placement": 0,
+   "reliability": 0.2
   },
   {
    "id": "geography.flags",
+   "cote": 1064,
    "name": "Drapeaux",
-   "level": 46,
-   "correct": 0,
-   "answered": 1,
-   "available": 7,
-   "reliability": 0.09
-  },
-  {
-   "id": "geography.location",
-   "name": "Localisation",
-   "level": 46,
+   "level": 54,
+   "placed": false,
    "correct": 0,
    "answered": 0,
-   "available": 6,
-   "reliability": 0.09
+   "available": 198,
+   "placement": 0,
+   "reliability": 0.2
   },
   {
    "id": "geography.countries",
-   "name": "Pays",
-   "level": 46,
-   "correct": 0,
-   "answered": 0,
-   "available": 6,
-   "reliability": 0.09
-  },
-  {
-   "id": "geography.borders",
-   "name": "Frontières",
-   "level": 46,
-   "correct": 0,
-   "answered": 0,
-   "available": 5,
-   "reliability": 0.09
+   "cote": 1064,
+   "name": "Pays & villes",
+   "level": 54,
+   "placed": false,
+   "correct": 2,
+   "answered": 3,
+   "available": 854,
+   "placement": 1,
+   "reliability": 0.2
   },
   {
    "id": "geography.relief",
-   "name": "Reliefs",
-   "level": 46,
+   "cote": 1064,
+   "name": "Fleuves, mers & reliefs",
+   "level": 54,
+   "placed": false,
    "correct": 0,
    "answered": 0,
-   "available": 6,
-   "reliability": 0.09
-  },
-  {
-   "id": "geography.oceans",
-   "name": "Océans & fleuves",
-   "level": 46,
-   "correct": 0,
-   "answered": 0,
-   "available": 6,
-   "reliability": 0.09
+   "available": 150,
+   "placement": 0,
+   "reliability": 0.2
   },
   {
    "id": "geography.monuments",
-   "name": "Monuments",
-   "level": 46,
+   "cote": 1064,
+   "name": "Monuments & patrimoine",
+   "level": 54,
+   "placed": false,
    "correct": 0,
    "answered": 0,
-   "available": 5,
-   "reliability": 0.09
+   "available": 192,
+   "placement": 0,
+   "reliability": 0.2
   }
  ],
- "reliability": 0.09,
+ "reliability": 0.2,
  "by_difficulty": [
   {
    "band": "medium",
-   "correct": 0,
-   "answered": 1
+   "correct": 2,
+   "answered": 3
   }
  ],
  "recent_errors": [
   {
-   "label": "Drapeau du Bangladesh",
-   "since": "2027-03-01T08:00:26+00:00",
+   "label": "Situer Singapour",
+   "since": "2027-03-01T08:00:10+00:00",
    "state": "failed",
-   "concept_id": "geography.flags.japan_bangladesh"
+   "concept_id": "geography.countries.map_singapore"
   }
  ],
  "concepts_mastered": 0

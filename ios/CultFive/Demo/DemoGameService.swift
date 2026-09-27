@@ -251,10 +251,13 @@ struct DemoGameService: GameService {
         let engine = try engine()
         let skills: [SkillSummary] = try fixture("skills")
         return skills.map { s in
-            guard let level = engine.level(s.domainId) else { return s }
-            return (try? decode(JSONValue.object(["domain_id": .string(s.domainId), "name": .string(s.name),
-                                                   "level": .number(level.rounded()), "reliability": .number(s.reliability),
-                                                   "answered": .number(Double(s.answered)), "correct": .number(Double(s.correct))]))) ?? s
+            let level = engine.level(s.domainId) ?? Double(s.level)
+            let answered = engine.answeredCount(s.domainId) ?? s.answered
+            var fields: [String: JSONValue] = ["domain_id": .string(s.domainId), "name": .string(s.name),
+                                               "level": .number(level.rounded()), "reliability": .number(s.reliability),
+                                               "correct": .number(Double(s.correct))]
+            fields.merge(DemoPlayEngine.ratingFields(level: level, answered: answered)) { $1 }
+            return (try? decode(JSONValue.object(fields))) ?? s
         }
     }
 
@@ -269,6 +272,7 @@ struct DemoGameService: GameService {
         dict["domain_id"] = .string(domain)
         dict["level"] = .number(level)
         dict["answered"] = .number(Double(skill?.answered ?? 0))
+        dict.merge(DemoPlayEngine.ratingFields(level: engine.level(domain) ?? level, answered: skill?.answered ?? 0)) { $1 }
         dict["correct"] = .number(Double(skill?.correct ?? 0))
         if case .array(let points)? = dict["history"] {
             dict["history"] = .array(points.map { p -> JSONValue in
@@ -279,9 +283,14 @@ struct DemoGameService: GameService {
         }
         let subs: [SubdomainInfo] = try fixture("subdomains")
         dict["subdomains"] = .array(subs.filter { $0.domainId == domain }.enumerated().map { (i, sub) -> JSONValue in
-            .object(["id": .string(sub.id), "name": .string(sub.name), "level": .number(level + Double(i % 3 * 4 - 4)),
-                     "reliability": .number(0.5), "answered": .number(Double(skill?.answered ?? 0) / 3), "correct": .number(0),
-                     "available": .number(Double(engine.available(subdomain: sub.id)))])
+            let subLevel = level + Double(i % 3 * 4 - 4)
+            let subAnswered = (skill?.answered ?? 0) / 3
+            var fields: [String: JSONValue] = [
+                "id": .string(sub.id), "name": .string(sub.name), "level": .number(subLevel),
+                "reliability": .number(0.5), "correct": .number(0),
+                "available": .number(Double(engine.available(subdomain: sub.id)))]
+            fields.merge(DemoPlayEngine.ratingFields(level: subLevel, answered: subAnswered, threshold: 15)) { $1 }
+            return .object(fields)
         })
         dict["recent_errors"] = .array([])
         json = .object(dict)

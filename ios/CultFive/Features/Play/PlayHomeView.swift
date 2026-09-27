@@ -18,8 +18,13 @@ struct PlayHomeView: View {
                 VStack(alignment: .leading, spacing: Space.xl) {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Jouer").font(.cfDisplay)
-                        Text("Autant que tu veux. Le niveau s'ajuste à toi.")
-                            .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                        if let global = CoteCULT.global(skills), global.placed {
+                            Text("Ta cote CULT : **\(global.formatted)** · \(global.rank.name)")
+                                .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                        } else {
+                            Text("Autant que tu veux. La difficulté s'ajuste à toi.")
+                                .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                        }
                     }
                     .padding(.top, Space.l)
 
@@ -160,7 +165,7 @@ private struct ModeCard: View {
     }
 }
 
-/// Domaine : tuile blanche, pictogramme sur pastille colorée, niveau en jauge.
+/// Domaine : tuile blanche, pictogramme sur pastille colorée, cote CULT (ou placement en cours) et jauge.
 private struct DomainTile: View {
     let domain: DomainInfo
     let skill: SkillSummary?
@@ -175,20 +180,25 @@ private struct DomainTile: View {
                     .frame(width: 40, height: 40)
                     .background(color, in: RoundedRectangle(cornerRadius: 13, style: .continuous))
                 Spacer()
-                if let skill, skill.answered > 0 {
-                    Text("\(skill.level)")
+                if let skill, skill.rating.placed {
+                    Text(skill.rating.formatted)
                         .font(.system(.title3, design: .rounded).weight(.black))
                         .monospacedDigit()
                         .foregroundStyle(color)
-                        .accessibilityLabel("Niveau \(skill.level)")
+                        .accessibilityLabel("Cote \(skill.rating.formatted), \(skill.rating.rank.name)")
                 }
             }
             Text(domain.name)
                 .font(.system(.callout, design: .rounded).weight(.heavy))
                 .foregroundStyle(Color.ink)
                 .lineLimit(1).minimumScaleFactor(0.8)
-            if let skill, skill.answered > 0 {
-                SkillBar(level: skill.level, reliability: skill.reliability, color: color)
+            if let skill, skill.rating.placed {
+                HStack(spacing: 6) {
+                    Text(skill.rating.rank.name).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkSoft)
+                    SkillBar(level: skill.level, reliability: skill.reliability, color: color)
+                }
+            } else if let skill, skill.answered > 0 {
+                PlacementDots(done: skill.rating.placementGames, color: color, compact: true)
             } else {
                 Text("à découvrir").font(.cfFootnote).foregroundStyle(Color.inkSoft).frame(height: 10)
             }

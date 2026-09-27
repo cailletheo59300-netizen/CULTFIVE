@@ -1,113 +1,123 @@
 [
  {
-  "id": "6c0f3e8c-b97e-4117-ac21-829f74d8f53d",
+  "id": "41ce3df3-dfc6-4394-85f9-bc511a306718",
   "type": "mcq",
   "given": {
-   "option_id": "3065f003"
+   "option_id": "79929421"
   },
   "answer": {
-   "option_id": "3065f003"
+   "option_id": "79929421"
   },
-  "prompt": "Dans quelle ville naît Napoléon Bonaparte, en 1769 ?",
+  "prompt": "« Donner du fil à retordre » à quelqu'un, c'est…",
   "source": null,
   "payload": {
    "options": [
     {
-     "id": "3065f003",
-     "text": "Ajaccio"
+     "id": "cc2d9a26",
+     "text": "lui apprendre la couture"
     },
     {
-     "id": "d8127695",
-     "text": "Calvi"
+     "id": "0c2719c7",
+     "text": "lui faire un cadeau"
     },
     {
-     "id": "42fa876d",
-     "text": "Corte"
+     "id": "8983f238",
+     "text": "le tromper"
     },
     {
-     "id": "6554b948",
-     "text": "Bastia"
+     "id": "79929421",
+     "text": "lui causer des difficultés"
     }
    ]
   },
   "position": 1,
   "takeaway": null,
-  "domain_id": "history",
+  "domain_id": "french",
   "counted_ms": 3800,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Il naît à Ajaccio le 15 août 1769, un an après le rattachement de la Corse à la France.",
-  "subdomain_id": "history.figures"
+  "explanation": "Retordre le fil (le tordre à nouveau pour le renforcer) était un travail long et pénible.",
+  "subdomain_id": "french.expressions"
  },
  {
-  "id": "04166ccc-3354-4195-a02a-cf3ec4111d05",
-  "type": "numeric",
+  "id": "af0d14fb-4ac5-493e-b5fb-462f77c95761",
+  "type": "map_pick",
   "given": {
    "value": -999999,
    "option_id": "nope"
   },
   "answer": {
-   "value": 29,
-   "tolerance": 0
+   "option_id": "acb4b894"
   },
-  "prompt": "Un nénuphar double de surface chaque jour et couvre l'étang en 30 jours. En combien de jours en couvre-t-il la moitié ?",
-  "source": null,
+  "prompt": "Où se trouve Singapour ? Touche le bon point.",
+  "source": "Wikidata",
   "payload": {
-   "decimals": 0,
-   "allow_negative": false
-  },
-  "position": 2,
-  "takeaway": null,
-  "domain_id": "logic",
-  "counted_ms": 5100,
-  "fact_as_of": null,
-  "is_correct": false,
-  "explanation": "S'il double chaque jour, la veille du jour où il couvre tout l'étang, il en couvrait la moitié : le 29e jour.",
-  "subdomain_id": "logic.reasoning"
- },
- {
-  "id": "4763d563-16ef-4a94-9324-d3c8598d7c5c",
-  "type": "mcq",
-  "given": {
-   "option_id": "638b82c7"
-  },
-  "answer": {
-   "option_id": "638b82c7"
-  },
-  "prompt": "Comment écrit-on 1 999 en chiffres romains ?",
-  "source": null,
-  "payload": {
+   "region": {
+    "lat": 11.16,
+    "lon": 112.39,
+    "span": 33.6
+   },
    "options": [
     {
-     "id": "149ff4d0",
-     "text": "MCMIC"
+     "id": "acb4b894",
+     "lat": 1.3,
+     "lon": 103.8
     },
     {
-     "id": "8be7e282",
-     "text": "MDCCCCLXXXXVIIII"
+     "id": "fe1811f9",
+     "lat": 14.595833333,
+     "lon": 120.977222222
     },
     {
-     "id": "638b82c7",
-     "text": "MCMXCIX"
+     "id": "fdb03d03",
+     "lat": 4.916666666,
+     "lon": 114.916666666
     },
     {
-     "id": "e5563476",
-     "text": "MIM"
+     "id": "52339469",
+     "lat": 21.0245,
+     "lon": 105.84117
     }
    ]
   },
+  "position": 2,
+  "takeaway": null,
+  "domain_id": "geography",
+  "counted_ms": 5100,
+  "fact_as_of": null,
+  "is_correct": false,
+  "explanation": "Singapour est la capitale de Singapour. Les autres points : Manille, Bandar Seri Begawan et Hanoï.",
+  "subdomain_id": "geography.countries"
+ },
+ {
+  "id": "d3485515-9cc3-42ac-bb87-f5260268ac71",
+  "type": "numeric",
+  "given": {
+   "value": 340
+  },
+  "answer": {
+   "value": 340,
+   "tolerance": 20
+  },
+  "prompt": "Environ combien de mètres par seconde parcourt le son dans l'air ?",
+  "source": null,
+  "payload": {
+   "unit": "m/s",
+   "decimals": 0,
+   "allow_negative": false
+  },
   "position": 3,
   "takeaway": null,
-  "domain_id": "calc",
+  "domain_id": "science",
   "counted_ms": 6400,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "1000 = M, 900 = CM, 90 = XC, 9 = IX : MCMXCIX. « MIM » est une abréviation fautive.",
-  "subdomain_id": "calc.number_logic"
+  "explanation": "Environ 340 m/s à 15 °C. Compter les secondes entre l'éclair et le tonnerre puis diviser par 3 donne la distance de l'orage en km.",
+  "subdomain_id": "science.physics"
  },
  {
-  "id": "abea8274-6ee8-4867-b950-23d79dbdf288",
-  "type": "mcq",
+  "id": "2026a298-8dac-488e-869b-061c99aff311",
+  "type": "true_false",
   "given": {
    "order": [
     "a",
@@ -115,77 +125,58 @@
    ]
   },
   "answer": {
-   "option_id": "4521c63d"
+   "value": false
   },
-  "prompt": "À quel pays appartient ce drapeau ? 🇧🇩",
+  "prompt": "La guerre de Cent Ans a duré exactement cent ans.",
   "source": null,
-  "payload": {
-   "options": [
-    {
-     "id": "4521c63d",
-     "text": "Bangladesh"
-    },
-    {
-     "id": "2a14a199",
-     "text": "Japon"
-    },
-    {
-     "id": "7558514c",
-     "text": "Laos"
-    },
-    {
-     "id": "f44c9052",
-     "text": "Palaos"
-    }
-   ]
-  },
+  "payload": {},
   "position": 4,
   "takeaway": null,
-  "domain_id": "geography",
+  "domain_id": "history",
   "counted_ms": 8200,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Un disque rouge sur fond vert : le Bangladesh. Le disque est légèrement décalé vers la hampe pour paraître centré quand le drapeau flotte.",
-  "subdomain_id": "geography.flags"
+  "explanation": "Elle dure 116 ans, de 1337 à 1453, avec de longues trêves.",
+  "subdomain_id": "history.middle_ages"
  },
  {
-  "id": "cf7967cb-e89f-41cf-ada6-efaf011668c5",
+  "id": "ff99f784-9bbd-4b6c-927b-5771bb0287d8",
   "type": "mcq",
   "given": {
-   "option_id": "0e95bdc4"
+   "option_id": "359e41f4"
   },
   "answer": {
-   "option_id": "0e95bdc4"
+   "option_id": "359e41f4"
   },
-  "prompt": "Quel est le contraire de « prolixe » ?",
+  "prompt": "Deux remises successives de 50 % équivalent à une remise de…",
   "source": null,
   "payload": {
    "options": [
     {
-     "id": "0533625e",
-     "text": "bavard"
+     "id": "364c3597",
+     "text": "50 %"
     },
     {
-     "id": "450e0142",
-     "text": "confus"
+     "id": "d630b563",
+     "text": "100 %"
     },
     {
-     "id": "ab0b8b69",
-     "text": "abondant"
+     "id": "359e41f4",
+     "text": "75 %"
     },
     {
-     "id": "0e95bdc4",
-     "text": "concis"
+     "id": "e5567992",
+     "text": "25 %"
     }
    ]
   },
   "position": 5,
   "takeaway": null,
-  "domain_id": "french",
+  "domain_id": "calc",
   "counted_ms": 4300,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Prolixe : qui s'exprime trop longuement. Son contraire est concis : qui dit beaucoup en peu de mots.",
-  "subdomain_id": "french.antonyms"
+  "explanation": "Après la première remise il reste 50 %, et la seconde en retire la moitié : il reste 25 % du prix. La remise totale est de 75 %.",
+  "subdomain_id": "calc.percent"
  }
 ]

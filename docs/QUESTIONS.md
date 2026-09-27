@@ -58,4 +58,4 @@ Calcul (calcul mental, pourcentages, fractions, conversions, logique numérique)
 
 Sources ajoutées : Wikidata (lunes → planète, point culminant des pays, décennie de sortie des films, castings — caméos exclus), suites logiques calculées (`scripts/gen-logic.mjs`), et ~400 questions écrites et relues (`themes_*.json`). Écartés de Wikidata faute de fiabilité : architectes (attributions erronées), œuvres musicales (musiques de films mêlées), sportifs (requêtes instables) — écrits à la main.
 
-État : **3 870 questions**. Par domaine : géographie 1 680 · histoire 511 · arts 339 · cinéma 272 · musique 217 · sciences 172 · sport 133 · français 122 · nature 111 · calcul 110 · logique 103 · tech 101.
+État : **3 975 questions** (dont 105 expertes, `content/questions/expert.json`). Par domaine : géographie 1 690 · histoire 520 · arts 347 · cinéma 280 · musique 223 · sciences 181 · sport 141 · français 135 · nature 119 · calcul 121 · logique 109 · tech 109. Répartition des difficultés par thème : `docs/CALIBRATION.md`.

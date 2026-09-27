@@ -73,7 +73,7 @@ struct PlaySetupSheet: View {
                 .background(onColor, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
             VStack(alignment: .leading, spacing: 2) {
                 Text(app.domainName(domainId)).font(.cfHeadline).foregroundStyle(onColor)
-                Text(skill.map { $0.answered > 0 ? "Ton niveau : \($0.level)" : "Pas encore de niveau" } ?? " ")
+                Text(skill.map(ratingLine) ?? " ")
                     .font(.cfFootnote).foregroundStyle(onColor.opacity(0.8))
             }
             Spacer()
@@ -83,12 +83,18 @@ struct PlaySetupSheet: View {
         .background(color)
     }
 
+    private func ratingLine(_ skill: SkillSummary) -> String {
+        let rating = skill.rating
+        if rating.placed { return "Cote CULT \(rating.formatted) · \(rating.rank.name)" }
+        return "Placement \(rating.placementGames)/\(CoteCULT.placementGames) · ta cote se dévoile après 5 parties classées"
+    }
+
     private var kindPicker: some View {
         VStack(spacing: 10) {
             kindCard(ranked: true, title: "Partie classée", symbol: "chart.line.uptrend.xyaxis",
-                     detail: "10 questions adaptées à ton niveau. Ton niveau et tes graines évoluent.")
+                     detail: "10 questions à la limite de ton niveau : environ une sur deux est un vrai défi. Ta cote CULT et tes graines évoluent.")
             kindCard(ranked: false, title: "Entraînement libre", symbol: "slider.horizontal.3",
-                     detail: "Nombre de questions, chrono et difficulté au choix. Sans effet sur ton niveau.")
+                     detail: "Nombre de questions, chrono et difficulté au choix. Sans effet sur ta cote.")
         }
     }
 

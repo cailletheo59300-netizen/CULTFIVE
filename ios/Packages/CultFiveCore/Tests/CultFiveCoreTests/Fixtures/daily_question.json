@@ -1,29 +1,29 @@
 {
- "id": "6c0f3e8c-b97e-4117-ac21-829f74d8f53d",
+ "id": "41ce3df3-dfc6-4394-85f9-bc511a306718",
  "type": "mcq",
  "total": 5,
- "prompt": "Dans quelle ville naît Napoléon Bonaparte, en 1769 ?",
+ "prompt": "« Donner du fil à retordre » à quelqu'un, c'est…",
  "payload": {
   "options": [
    {
-    "id": "3065f003",
-    "text": "Ajaccio"
+    "id": "cc2d9a26",
+    "text": "lui apprendre la couture"
    },
    {
-    "id": "d8127695",
-    "text": "Calvi"
+    "id": "0c2719c7",
+    "text": "lui faire un cadeau"
    },
    {
-    "id": "42fa876d",
-    "text": "Corte"
+    "id": "8983f238",
+    "text": "le tromper"
    },
    {
-    "id": "6554b948",
-    "text": "Bastia"
+    "id": "79929421",
+    "text": "lui causer des difficultés"
    }
   ]
  },
  "position": 1,
- "domain_id": "history",
- "subdomain_id": "history.figures"
+ "domain_id": "french",
+ "subdomain_id": "french.expressions"
 }

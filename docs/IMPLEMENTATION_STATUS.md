@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : session 2 — 2026-09-26 (design Pop, 0.5.0)_
+_Dernière mise à jour : 2026-09-27 (Cote CULT, 0.8.0)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -11,15 +11,16 @@ _Dernière mise à jour : session 2 — 2026-09-26 (design Pop, 0.5.0)_
 | Schéma + RLS + droits | ✅ | `supabase/tests/40_security.sql` |
 | Daily serveur (génération, service, verdict, temps, série, jokers, percentile, revue, expiration, minuit, fuseaux, double soumission) | ✅ | `10_daily.sql` |
 | Adaptatif (compétences domaine/sous-domaine, calibration bornée, élargissement, questions problématiques, sélection par bandes, erreurs & maîtrise) | ✅ | `20_adaptive.sql` |
+| Cote CULT (placement, bandes exigeantes, points, variation de cote, simulation de convergence) | ✅ | `70_rating.sql` |
 | Économie (ledger, plafonds, aides), pseudo, amis, parrainage anti-abus, ligues, suppression de compte | ✅ | `30_social_economy.sql` |
-| Contenu (3 870 questions, 3 à 5 thèmes ≥ 20 questions par domaine) | ✅ | `build-seed.mjs` en CI, `scripts/wikidata/` |
+| Contenu (3 975 questions dont 105 expertes, 3 à 5 thèmes ≥ 20 questions par domaine, calibrage initial `docs/CALIBRATION.md`) | ✅ | `build-seed.mjs` en CI, `scripts/wikidata/` |
 | Anti-répétition (familles) + équilibre Surprise | ✅ | migrations 0009-0010, tests SQL |
 | Mode démo + captures + build Appetize | ✅ | workflow « Captures d'écran », `docs/screenshots` |
 | `CultFiveCore` (modèles, contrat JSON sur fixtures réelles, évaluateur = SQL, pavé numérique, client Auth/RPC, refresh unique, file hors-ligne) | ✅ | `swift test` en CI |
 | App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | ✅ build + tests unitaires en CI (macOS 15) · 🟡 **pas encore essayée sur appareil** avec un vrai projet Supabase | job CI `ios` |
 
 ## App iOS — écrans
-Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (choix de partie : classée ou entraînement libre, thèmes multiples, chrono ; rapide, surprise, défi, erreurs, par domaine/sous-domaine) · Domaine (niveau, sous-domaines, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche, **duels** par ami ou par lien) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (pseudo, notifications, âge, compte, suppression) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles ; Daily, profil avec radar, question du jour). Design « Pop » (voir `DESIGN_SYSTEM.md`) : 🟡 compilé en CI, rendu à valider à l'œil sur Appetize.
+Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (choix de partie : classée ou entraînement libre, thèmes multiples, chrono ; rapide, surprise, défi, erreurs, par domaine/sous-domaine) · Domaine (cote CULT ou placement, thèmes, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche, **duels** par ami ou par lien) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, carte Cote CULT, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (pseudo, notifications, âge, compte, suppression) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles ; Daily, profil avec radar, question du jour). Design « Pop » (voir `DESIGN_SYSTEM.md`) : 🟡 compilé en CI, rendu à valider à l'œil sur Appetize.
 
 ## Phases (plan du cahier des charges)
 | Phase | État |

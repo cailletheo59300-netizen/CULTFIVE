@@ -267,6 +267,8 @@ public struct PlaySubmitResult: Codable, Hashable, Sendable {
         public let errorTransition: String?
         public let domainBefore: Double?
         public let domainAfter: Double?
+        /// Points de la question (0 si ratée).
+        public let points: Int?
 
         enum CodingKeys: String, CodingKey {
             case questionId = "question_id"
@@ -274,6 +276,35 @@ public struct PlaySubmitResult: Codable, Hashable, Sendable {
             case errorTransition = "error_transition"
             case domainBefore = "domain_before"
             case domainAfter = "domain_after"
+            case points
+        }
+    }
+
+    /// Variation de cote d'un domaine sur la partie (partie classée seulement).
+    public struct RatingChange: Codable, Hashable, Sendable {
+        public let domainId: String
+        public let coteBefore: Int
+        public let coteAfter: Int
+        public let answered: Int
+        public let placement: Int
+        public let placed: Bool
+
+        public var delta: Int { coteAfter - coteBefore }
+
+        enum CodingKeys: String, CodingKey {
+            case answered, placement, placed
+            case domainId = "domain_id"
+            case coteBefore = "cote_before"
+            case coteAfter = "cote_after"
+        }
+
+        public init(domainId: String, coteBefore: Int, coteAfter: Int, answered: Int, placement: Int, placed: Bool) {
+            self.domainId = domainId
+            self.coteBefore = coteBefore
+            self.coteAfter = coteAfter
+            self.answered = answered
+            self.placement = placement
+            self.placed = placed
         }
     }
 
@@ -285,6 +316,9 @@ public struct PlaySubmitResult: Codable, Hashable, Sendable {
     public let results: [Item]
     public let achievements: [String]
     public let balance: Int
+    /// Points de la partie (difficulté + vitesse).
+    public let points: Int?
+    public let ratings: [RatingChange]?
 }
 
 public enum HelpKind: String, Codable, Sendable, CaseIterable {
@@ -365,12 +399,33 @@ public struct SkillSummary: Codable, Hashable, Identifiable, Sendable {
     public let reliability: Double
     public let answered: Int
     public let correct: Int
+    /// Cote CULT (1000 = niveau médian) ; affichée seulement une fois le placement terminé.
+    public let cote: Int?
+    /// Parties de placement jouées (0–5).
+    public let placement: Int?
+    public let placed: Bool?
     public var id: String { domainId }
 
     enum CodingKeys: String, CodingKey {
-        case name, level, reliability, answered, correct
+        case name, level, reliability, answered, correct, cote, placement, placed
         case domainId = "domain_id"
     }
+
+    public init(domainId: String, name: String, level: Int, reliability: Double, answered: Int, correct: Int,
+                cote: Int? = nil, placement: Int? = nil, placed: Bool? = nil) {
+        self.domainId = domainId
+        self.name = name
+        self.level = level
+        self.reliability = reliability
+        self.answered = answered
+        self.correct = correct
+        self.cote = cote
+        self.placement = placement
+        self.placed = placed
+    }
+
+    /// Cote de ce domaine (calculée depuis le niveau si le serveur ne l'envoie pas).
+    public var rating: CoteCULT { CoteCULT(cote: cote ?? CoteCULT.cote(level: Double(level)), answered: answered, placed: placed) }
 }
 
 public struct DomainStats: Codable, Hashable, Sendable {
@@ -382,8 +437,11 @@ public struct DomainStats: Codable, Hashable, Sendable {
         public let answered: Int
         public let correct: Int
         public let available: Int
+        public let cote: Int?
+        public let placed: Bool?
 
-        public init(id: String, name: String, level: Int, reliability: Double, answered: Int, correct: Int, available: Int) {
+        public init(id: String, name: String, level: Int, reliability: Double, answered: Int, correct: Int, available: Int,
+                    cote: Int? = nil, placed: Bool? = nil) {
             self.id = id
             self.name = name
             self.level = level
@@ -391,7 +449,11 @@ public struct DomainStats: Codable, Hashable, Sendable {
             self.answered = answered
             self.correct = correct
             self.available = available
+            self.cote = cote
+            self.placed = placed
         }
+
+        public var rating: CoteCULT { CoteCULT(cote: cote ?? CoteCULT.cote(level: Double(level)), answered: answered, placed: placed) }
     }
 
     public struct HistoryPoint: Codable, Hashable, Sendable {
@@ -428,9 +490,14 @@ public struct DomainStats: Codable, Hashable, Sendable {
     public let subdomains: [Subdomain]
     public let byDifficulty: [DifficultyBand]
     public let recentErrors: [RecentError]
+    public let cote: Int?
+    public let placement: Int?
+    public let placed: Bool?
+
+    public var rating: CoteCULT { CoteCULT(cote: cote ?? CoteCULT.cote(level: Double(level)), answered: answered, placed: placed) }
 
     enum CodingKeys: String, CodingKey {
-        case level, reliability, answered, correct, history, subdomains
+        case level, reliability, answered, correct, history, subdomains, cote, placement, placed
         case domainId = "domain_id"
         case avgMs = "avg_ms"
         case conceptsMastered = "concepts_mastered"

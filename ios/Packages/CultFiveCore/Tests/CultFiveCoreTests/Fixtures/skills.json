@@ -1,98 +1,134 @@
 [
  {
-  "name": "Logique",
-  "level": 50,
+  "cote": 1064,
+  "name": "Géographie",
+  "level": 54,
+  "placed": false,
   "correct": 2,
   "answered": 3,
-  "domain_id": "logic",
+  "domain_id": "geography",
+  "placement": 0,
   "reliability": 0.2
  },
  {
-  "name": "Français",
-  "level": 55,
-  "correct": 2,
+  "cote": 976,
+  "name": "Histoire",
+  "level": 49,
+  "placed": false,
+  "correct": 1,
   "answered": 2,
-  "domain_id": "french",
-  "reliability": 0.11
+  "domain_id": "history",
+  "placement": 0,
+  "reliability": 0.15
  },
  {
+  "cote": 1117,
+  "name": "Sciences",
+  "level": 57,
+  "placed": false,
+  "correct": 2,
+  "answered": 2,
+  "domain_id": "science",
+  "placement": 0,
+  "reliability": 0.15
+ },
+ {
+  "cote": 1106,
   "name": "Calcul",
-  "level": 52,
+  "level": 56,
+  "placed": false,
   "correct": 1,
   "answered": 1,
   "domain_id": "calc",
+  "placement": 0,
+  "reliability": 0.06
+ },
+ {
+  "cote": 1029,
+  "name": "Français",
+  "level": 52,
+  "placed": false,
+  "correct": 1,
+  "answered": 1,
+  "domain_id": "french",
+  "placement": 0,
+  "reliability": 0.06
+ },
+ {
+  "cote": 1064,
+  "name": "Logique",
+  "level": 54,
+  "placed": false,
+  "correct": 1,
+  "answered": 1,
+  "domain_id": "logic",
+  "placement": 0,
   "reliability": 0.08
  },
  {
-  "name": "Géographie",
-  "level": 46,
-  "correct": 0,
-  "answered": 1,
-  "domain_id": "geography",
-  "reliability": 0.09
- },
- {
-  "name": "Histoire",
-  "level": 51,
-  "correct": 1,
-  "answered": 1,
-  "domain_id": "history",
-  "reliability": 0.05
- },
- {
-  "name": "Sport",
+  "cote": 1039,
+  "name": "Technologie",
   "level": 52,
+  "placed": false,
   "correct": 1,
   "answered": 1,
-  "domain_id": "sport",
+  "domain_id": "tech",
+  "placement": 0,
   "reliability": 0.07
  },
  {
-  "name": "Musique",
-  "level": 52,
-  "correct": 1,
-  "answered": 1,
-  "domain_id": "music",
-  "reliability": 0.08
- },
- {
-  "name": "Nature & animaux",
-  "level": 51,
-  "correct": 1,
-  "answered": 1,
-  "domain_id": "nature",
-  "reliability": 0.05
- },
- {
-  "name": "Sciences",
-  "level": 50,
-  "correct": 0,
-  "answered": 0,
-  "domain_id": "science",
-  "reliability": 0.0
- },
- {
+  "cote": 1000,
   "name": "Arts & culture",
   "level": 50,
+  "placed": false,
   "correct": 0,
   "answered": 0,
   "domain_id": "arts",
+  "placement": 0,
   "reliability": 0.0
  },
  {
+  "cote": 1000,
+  "name": "Sport",
+  "level": 50,
+  "placed": false,
+  "correct": 0,
+  "answered": 0,
+  "domain_id": "sport",
+  "placement": 0,
+  "reliability": 0.0
+ },
+ {
+  "cote": 1000,
   "name": "Cinéma",
   "level": 50,
+  "placed": false,
   "correct": 0,
   "answered": 0,
   "domain_id": "cinema",
+  "placement": 0,
   "reliability": 0.0
  },
  {
-  "name": "Technologie",
+  "cote": 1000,
+  "name": "Musique",
   "level": 50,
+  "placed": false,
   "correct": 0,
   "answered": 0,
-  "domain_id": "tech",
+  "domain_id": "music",
+  "placement": 0,
+  "reliability": 0.0
+ },
+ {
+  "cote": 1000,
+  "name": "Nature & animaux",
+  "level": 50,
+  "placed": false,
+  "correct": 0,
+  "answered": 0,
+  "domain_id": "nature",
+  "placement": 0,
   "reliability": 0.0
  }
 ]

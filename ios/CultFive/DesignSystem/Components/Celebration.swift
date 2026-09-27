@@ -3,7 +3,7 @@ import SwiftUI
 /// Encart de célébration : trophée débloqué, erreur corrigée, niveau passé.
 /// L'icône entre en rebondissant ; les confettis sont gérés par l'écran qui l'affiche.
 struct CelebrationCard: View {
-    enum Kind { case trophy, corrected, levelUp }
+    enum Kind { case trophy, corrected, levelUp, rating }
 
     let kind: Kind
     let title: String
@@ -48,6 +48,7 @@ struct CelebrationCard: View {
         case .trophy: return "trophy.fill"
         case .corrected: return "checkmark.seal.fill"
         case .levelUp: return "arrow.up.circle.fill"
+        case .rating: return "chart.line.uptrend.xyaxis"
         }
     }
 
@@ -56,6 +57,7 @@ struct CelebrationCard: View {
         case .trophy: return "Trophée débloqué"
         case .corrected: return "Erreur corrigée"
         case .levelUp: return "Niveau supérieur"
+        case .rating: return "Cote CULT"
         }
     }
 
@@ -64,6 +66,7 @@ struct CelebrationCard: View {
         case .trophy: return .sun
         case .corrected: return .correct
         case .levelUp: return .brand
+        case .rating: return Color(hex: 0xF76707)
         }
     }
 }

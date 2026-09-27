@@ -79,17 +79,61 @@ function convert(q) {
 }
 
 const dir = join(root, 'content/questions');
+const raw = [];
+for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) raw.push(...JSON.parse(readFileSync(join(dir, file), 'utf8')));
+
+// Calibrage initial. Les questions importées (Wikidata) reçoivent une difficulté tirée de la notoriété, juste dans l'ordre
+// mais trop resserrée dans certains thèmes (ex. acteurs : tout entre 55 et 61). Dans un thème importé resserré (écart-type < 7),
+// on étale par rang vers un écart-type de 10 autour de la même moyenne : l'ordre est gardé, les extrêmes deviennent vraiment
+// faciles ou difficiles. Le calibrage en ligne (réponses des joueurs) prend ensuite le relais.
+const themeOf = (q) => (q.concept ?? '').split('.').slice(0, 2).join('.');
+const stats = (a) => {
+  const m = a.reduce((x, y) => x + y, 0) / a.length;
+  return { n: a.length, mean: m, sd: Math.sqrt(a.reduce((x, y) => x + (y - m) ** 2, 0) / a.length) };
+};
+// Inverse de la loi normale (approximation d'Acklam, largement suffisante ici).
+function probit(p) {
+  const a = [-39.6968302866538, 220.946098424521, -275.928510446969, 138.357751867269, -30.6647980661472, 2.50662827745924];
+  const b = [-54.4760987982241, 161.585836858041, -155.698979859887, 66.8013118877197, -13.2806815528857];
+  const c = [-0.00778489400243029, -0.322396458041136, -2.40075827716184, -2.54973253934373, 4.37466414146497, 2.93816398269878];
+  const d = [0.00778469570904146, 0.32246712907004, 2.445134137143, 3.75440866190742];
+  const lo = 0.02425;
+  if (p < lo) { const q = Math.sqrt(-2 * Math.log(p)); return (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1); }
+  if (p > 1 - lo) return -probit(1 - p);
+  const q = p - 0.5, r = q * q;
+  return (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q / (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1);
+}
+const calibration = [];
+const byTheme = new Map();
+for (const q of raw) if (q.origin === 'import') byTheme.set(themeOf(q), [...(byTheme.get(themeOf(q)) ?? []), q]);
+for (const [theme, group] of byTheme) {
+  const before = stats(group.map((q) => q.difficulty));
+  if (group.length < 30 || before.sd >= 7) continue;
+  const sorted = [...group].sort((x, y) => x.difficulty - y.difficulty);
+  // Rang moyen des ex æquo : même difficulté d'origine → même difficulté calibrée.
+  const rank = new Map();
+  for (let i = 0; i < sorted.length;) {
+    let j = i;
+    while (j < sorted.length && sorted[j].difficulty === sorted[i].difficulty) j++;
+    rank.set(sorted[i].difficulty, (i + j - 1) / 2);
+    i = j;
+  }
+  for (const q of group) {
+    const z = probit((rank.get(q.difficulty) + 0.5) / group.length);
+    q.difficulty = Math.round(Math.min(88, Math.max(15, before.mean + 10 * z)));
+  }
+  calibration.push({ theme, n: group.length, before, after: stats(group.map((q) => q.difficulty)) });
+}
+
 const questions = [];
 const keys = new Set();
 const concepts = new Map();
-for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
-  for (const q of JSON.parse(readFileSync(join(dir, file), 'utf8'))) {
-    if (keys.has(q.key)) fail(q.key, 'clé en double');
-    keys.add(q.key);
-    if (concepts.has(q.concept) && concepts.get(q.concept) !== q.label) fail(q.key, `libellé de concept incohérent pour ${q.concept}`);
-    concepts.set(q.concept, q.label);
-    questions.push(convert(q));
-  }
+for (const q of raw) {
+  if (keys.has(q.key)) fail(q.key, 'clé en double');
+  keys.add(q.key);
+  if (concepts.has(q.concept) && concepts.get(q.concept) !== q.label) fail(q.key, `libellé de concept incohérent pour ${q.concept}`);
+  concepts.set(q.concept, q.label);
+  questions.push(convert(q));
 }
 
 if (errors.length) {
@@ -119,6 +163,26 @@ for (const origin of ['human', 'import']) {
   if (group.length) lines.push(`select public._upsert_question(q, '${origin}', null) from jsonb_array_elements(${lit(JSON.stringify(group))}::jsonb) q;`);
 }
 lines.push('commit;', '');
+
+if (process.argv.includes('--report')) {
+  // Rapport de difficulté par thème (après calibrage) : repère les thèmes sans questions difficiles.
+  const rows = [];
+  const themes = [...new Set(questions.map((q) => themeOf({ concept: q.concept_id })))].sort();
+  for (const t of themes) {
+    const d = questions.filter((q) => themeOf({ concept: q.concept_id }) === t).map((q) => q.difficulty);
+    const c = (lo, hi) => d.filter((x) => x >= lo && x < hi).length;
+    rows.push(`| ${t} | ${d.length} | ${c(0, 35)} | ${c(35, 55)} | ${c(55, 70)} | ${c(70, 101)} | ${Math.max(...d)} |`);
+  }
+  const cal = calibration.map((c) => `| ${c.theme} | ${c.n} | ${c.before.mean.toFixed(0)} ± ${c.before.sd.toFixed(1)} | ${c.after.mean.toFixed(0)} ± ${c.after.sd.toFixed(1)} |`);
+  writeFileSync(join(root, 'docs/CALIBRATION.md'), [
+    '# Calibrage des difficultés (généré par `node scripts/build-seed.mjs --report`)', '',
+    'Difficulté initiale sur l\'échelle du niveau (0–100). Un joueur de niveau μ a 50 % de chances sur une question de difficulté μ,',
+    '27 % à μ + 10 et 73 % à μ − 10. Le calibrage en ligne ajuste ensuite chaque question d\'après les réponses.', '',
+    '## Thèmes importés étalés', '', '| Thème | Questions | Avant (moyenne ± écart-type) | Après |', '|---|---|---|---|', ...cal, '',
+    '## Répartition par thème', '', '| Thème | Questions | < 35 | 35–54 | 55–69 | ≥ 70 | Max |', '|---|---|---|---|---|---|---|', ...rows, '',
+  ].join('\n'));
+  console.log(`✓ docs/CALIBRATION.md (${calibration.length} thème(s) étalé(s))`);
+}
 
 if (process.argv.includes('--check')) {
   console.log(`✓ ${questions.length} questions valides`);

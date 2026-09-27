@@ -13,6 +13,8 @@ struct DailyResultView: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var appeared = false
     @State private var shownScore = 0
+    /// Domaines dont la cote est dévoilée (placement terminé).
+    @State private var placed: Set<String> = []
 
     private let white = Color.white
 
@@ -50,6 +52,11 @@ struct DailyResultView: View {
             }
         }
         .preferredColorScheme(.dark)
+        .task {
+            if let skills = try? await app.service.skills() {
+                placed = Set(skills.filter { $0.rating.placed }.map(\.domainId))
+            }
+        }
         .onAppear {
             withAnimation(Motion.adaptive(Motion.moment, reduceMotion: reduceMotion)) { appeared = true }
             countUp()
@@ -154,14 +161,14 @@ struct DailyResultView: View {
         .foregroundStyle(white)
     }
 
-    /// Évolution des connaissances : seulement les mouvements notables.
+    /// Évolution de la cote CULT : seulement les mouvements notables (≥ 5 points).
     @ViewBuilder private var knowledge: some View {
         let moves = result.answers
-            .compactMap { answer -> (String, Double, Double)? in
+            .compactMap { answer -> (String, Int, Int)? in
                 guard let before = answer.domainBefore, let after = answer.domainAfter else { return nil }
-                return (answer.domainId, before, after)
+                return (answer.domainId, CoteCULT.cote(level: before), CoteCULT.cote(level: after))
             }
-            .filter { abs($0.2 - $0.1) >= 0.5 }
+            .filter { abs($0.2 - $0.1) >= 5 }
             .prefix(3)
         if !moves.isEmpty {
             VStack(alignment: .leading, spacing: 10) {
@@ -170,10 +177,13 @@ struct DailyResultView: View {
                     HStack {
                         DomainTag(domainId: move.0, name: app.domainName(move.0))
                         Spacer()
-                        Text("\(Int(move.1.rounded()))").foregroundStyle(white.opacity(0.6))
-                        Image(systemName: move.2 >= move.1 ? "arrow.up.right" : "arrow.down.right")
+                        if placed.contains(move.0) {
+                            Text(CoteCULT.format(move.2)).foregroundStyle(white)
+                        } else {
+                            Text("placement").font(.cfFootnote.weight(.bold)).foregroundStyle(white.opacity(0.6))
+                        }
+                        Text(CoteCULT.formatDelta(move.2 - move.1))
                             .foregroundStyle(move.2 >= move.1 ? Color.sun : white.opacity(0.6))
-                        Text("\(Int(move.2.rounded()))").foregroundStyle(white)
                     }
                     .font(.system(.callout, design: .rounded).weight(.heavy).monospacedDigit())
                 }

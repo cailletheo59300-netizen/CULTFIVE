@@ -70,15 +70,28 @@ struct DomainView: View {
             Text(app.domainName(domainId))
                 .font(.cfDisplay)
                 .foregroundStyle(DomainPalette.onColor(domainId))
-            if let stats {
+            if let stats, stats.rating.placed {
                 HStack(alignment: .lastTextBaseline, spacing: Space.s) {
-                    Text("\(stats.level)").numeral(size: 64).foregroundStyle(DomainPalette.onColor(domainId))
+                    Text(stats.rating.formatted).numeral(size: 64).foregroundStyle(DomainPalette.onColor(domainId))
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("niveau").font(.cfFootnote)
-                        Text("fiabilité \(Reliability(stats.reliability).label)").font(.cfFootnote)
+                        Text("cote CULT · \(stats.rating.rank.name)").font(.cfFootnote.weight(.bold))
+                        if let next = stats.rating.toNextRank, let rank = stats.rating.rank.next {
+                            Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote)
+                        } else {
+                            Text("rang maximal").font(.cfFootnote)
+                        }
                     }
-                    .foregroundStyle(DomainPalette.onColor(domainId).opacity(0.8))
+                    .foregroundStyle(DomainPalette.onColor(domainId).opacity(0.85))
                 }
+            } else if let stats {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Placement \(stats.rating.placementGames)/\(CoteCULT.placementGames)")
+                        .font(.system(.title2, design: .rounded).weight(.black))
+                    Text("Joue \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") pour découvrir ta cote CULT.")
+                        .font(.cfFootnote)
+                        .opacity(0.85)
+                }
+                .foregroundStyle(DomainPalette.onColor(domainId))
             } else if let loadError {
                 Text(loadError).font(.cfCallout).foregroundStyle(DomainPalette.onColor(domainId).opacity(0.8))
             }
@@ -121,14 +134,16 @@ struct DomainView: View {
                                     Text("à renforcer").labelCaps(color)
                                 }
                                 Spacer()
-                                if sub.answered > 0 {
-                                    Text("\(sub.level)").font(.cfNumber).foregroundStyle(Color.ink)
+                                if sub.rating.placed {
+                                    Text(sub.rating.formatted).font(.cfNumber).foregroundStyle(Color.ink)
                                 }
                                 Image(systemName: "play.fill").font(.caption).foregroundStyle(color)
                                     .accessibilityLabel("S'entraîner")
                             }
-                            if sub.answered > 0 {
+                            if sub.rating.placed {
                                 SkillBar(level: sub.level, reliability: sub.reliability, color: color)
+                            } else if sub.answered > 0 {
+                                SkillBar(level: sub.level, reliability: sub.reliability, color: color.opacity(0.5))
                             }
                         }
                         .popCard(padding: 14)
@@ -145,17 +160,17 @@ struct DomainView: View {
             Text("Évolution").labelCaps()
             if stats.history.count >= 2 {
                 Chart(stats.history, id: \.day) { point in
-                    LineMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Niveau", point.level))
+                    LineMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Cote", CoteCULT.cote(level: point.level)))
                         .interpolationMethod(.monotone)
                         .foregroundStyle(color)
-                    PointMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Niveau", point.level))
+                    PointMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Cote", CoteCULT.cote(level: point.level)))
                         .foregroundStyle(color)
                         .symbolSize(18)
                 }
                 .chartYScale(domain: .automatic(includesZero: false))
                 .chartXAxis { AxisMarks(values: .automatic(desiredCount: 4)) }
                 .frame(height: 150)
-                .accessibilityLabel("Évolution du niveau sur les derniers jours")
+                .accessibilityLabel("Évolution de la cote sur les derniers jours")
             } else {
                 Text("La courbe apparaîtra après quelques jours de jeu.").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }

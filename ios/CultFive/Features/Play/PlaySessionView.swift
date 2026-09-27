@@ -59,6 +59,7 @@ struct PlaySessionView: View {
                     phase: model.phase,
                     removedOptions: model.removedOptions,
                     badge: model.badge,
+                    difficulty: model.currentDifficulty,
                     continueTitle: model.isLast ? "Terminer" : "Suivante",
                     onSubmit: { model.submit($0) },
                     onContinue: { Task { await model.next() } },
@@ -229,9 +230,10 @@ struct PlaySummaryView: View {
                 .frame(maxWidth: .infinity)
                 .accessibilityElement(children: .combine)
 
-                if summary.synced {
+                if summary.points > 0 || summary.synced {
                     HStack(spacing: Space.s) {
-                        chip(Text("+\(summary.xp ?? 0) XP").monospacedDigit(), tint: .brand)
+                        chip(Text("\(CoteCULT.format(summary.points)) pts").monospacedDigit(), tint: Color(hex: 0xF76707))
+                        if summary.synced { chip(Text("+\(summary.xp ?? 0) XP").monospacedDigit(), tint: .brand) }
                         if let seeds = summary.seeds, seeds > 0 {
                             chip(SeedsAmount(amount: seeds, signed: true, color: .correct), tint: .correct)
                         }
@@ -254,19 +256,19 @@ struct PlaySummaryView: View {
                 ForEach(summary.achievements, id: \.self) { name in
                     CelebrationCard(kind: .trophy, title: name)
                 }
-                if summary.synced, summary.ranked, !summary.domainMoves.isEmpty {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("Ton niveau").labelCaps()
-                        ForEach(summary.domainMoves.sorted { $0.key < $1.key }, id: \.key) { domain, move in
-                            HStack {
-                                DomainTag(domainId: domain, name: app.domainName(domain))
-                                Spacer()
-                                Text("\(Int(move.0.rounded()))").foregroundStyle(Color.inkSoft)
-                                Image(systemName: move.1 >= move.0 ? "arrow.up.right" : "arrow.down.right")
-                                    .foregroundStyle(move.1 >= move.0 ? Color.correct : Color.wrong)
-                                Text("\(Int(move.1.rounded()))").foregroundStyle(Color.ink)
-                            }
-                            .font(.system(.callout, design: .rounded).weight(.heavy).monospacedDigit())
+                ForEach(placementsDone, id: \.domainId) { r in
+                    CelebrationCard(kind: .rating, title: "Placement terminé : \(CoteCULT.format(r.coteAfter))",
+                                    detail: "\(app.domainName(r.domainId)) · rang \(CoteCULT.Rank(cote: r.coteAfter).name). Ta cote bouge maintenant à chaque partie classée.")
+                }
+                ForEach(rankUps, id: \.domainId) { r in
+                    CelebrationCard(kind: .rating, title: "Nouveau rang : \(CoteCULT.Rank(cote: r.coteAfter).name)",
+                                    detail: "\(app.domainName(r.domainId)) · \(CoteCULT.format(r.coteAfter))")
+                }
+                if summary.synced, summary.ranked, !summary.ratings.isEmpty {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Cote CULT").labelCaps()
+                        ForEach(summary.ratings, id: \.domainId) { r in
+                            RatingChangeRow(change: r, domainName: app.domainName(r.domainId))
                         }
                     }
                     .popCard()
@@ -292,7 +294,9 @@ struct PlaySummaryView: View {
         .scrollIndicators(.hidden)
         .background(Color.paper)
         .overlay {
-            if perfect || levelUp != nil || !summary.achievements.isEmpty { Confetti().ignoresSafeArea() }
+            if perfect || levelUp != nil || !summary.achievements.isEmpty || !placementsDone.isEmpty || !rankUps.isEmpty {
+                Confetti().ignoresSafeArea()
+            }
         }
         .onAppear {
             withAnimation(Motion.bounce.delay(0.1)) { appeared = true }
@@ -319,6 +323,19 @@ struct PlaySummaryView: View {
                 }
                 .popCard(padding: 12, radius: Radius.s)
             }
+        }
+    }
+
+    /// Domaines dont le placement s'est terminé pendant cette partie : la cote se dévoile.
+    private var placementsDone: [PlaySubmitResult.RatingChange] {
+        summary.ratings.filter { $0.placed && $0.answered - (summary.answeredByDomain[$0.domainId] ?? 0) < CoteCULT.placementAnswers }
+    }
+
+    /// Rang franchi (hors placement tout juste terminé).
+    private var rankUps: [PlaySubmitResult.RatingChange] {
+        summary.ratings.filter { r in
+            r.placed && !placementsDone.contains { $0.domainId == r.domainId }
+                && CoteCULT.Rank(cote: r.coteAfter) > CoteCULT.Rank(cote: r.coteBefore)
         }
     }
 
@@ -423,5 +440,54 @@ struct TimerRing: View {
             .accessibilityElement()
             .accessibilityLabel("\(Int(left.rounded(.up))) secondes restantes")
         }
+    }
+}
+
+/// Ligne de cote d'un domaine après une partie : « Histoire   1 342  +18 · Érudit », ou « Placement 2/5 ».
+struct RatingChangeRow: View {
+    let change: PlaySubmitResult.RatingChange
+    let domainName: String
+
+    var body: some View {
+        HStack(spacing: Space.s) {
+            DomainTag(domainId: change.domainId, name: domainName)
+            Spacer()
+            if change.placed {
+                VStack(alignment: .trailing, spacing: 0) {
+                    HStack(spacing: 6) {
+                        Text(CoteCULT.format(change.coteAfter)).foregroundStyle(Color.ink)
+                        Text(CoteCULT.formatDelta(change.delta))
+                            .foregroundStyle(change.delta > 0 ? Color.correct : change.delta < 0 ? Color.wrong : Color.inkSoft)
+                    }
+                    .font(.system(.body, design: .rounded).weight(.heavy).monospacedDigit())
+                    Text(CoteCULT.Rank(cote: change.coteAfter).name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                }
+            } else {
+                PlacementDots(done: change.placement, color: DomainPalette.color(change.domainId))
+            }
+        }
+        .accessibilityElement(children: .combine)
+    }
+}
+
+/// « Placement ●●○○○ 2/5 » : parties de placement jouées avant que la cote ne se dévoile.
+struct PlacementDots: View {
+    let done: Int
+    var color: Color = .brand
+    var compact = false
+
+    var body: some View {
+        HStack(spacing: 6) {
+            if !compact { Text("Placement").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft) }
+            HStack(spacing: 3) {
+                ForEach(0 ..< CoteCULT.placementGames, id: \.self) { i in
+                    Circle().fill(i < done ? color : color.opacity(0.2)).frame(width: 7, height: 7)
+                }
+            }
+            Text("\(done)/\(CoteCULT.placementGames)").font(.system(.footnote, design: .rounded).weight(.heavy)).monospacedDigit()
+                .foregroundStyle(Color.inkSoft)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Placement : \(done) partie\(done > 1 ? "s" : "") sur \(CoteCULT.placementGames)")
     }
 }

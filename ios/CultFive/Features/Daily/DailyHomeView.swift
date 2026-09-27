@@ -136,7 +136,8 @@ struct DailyHomeView: View {
             if let suggestion {
                 Button { playConfig = PlayConfig(mode: .training, domain: suggestion.domainId) } label: {
                     EditorialRow(label: "Ton terrain à conquérir", value: suggestion.name,
-                                 detail: "Niveau \(suggestion.level) · quelques questions pour progresser",
+                                 detail: suggestion.rating.placed ? "Cote \(suggestion.rating.formatted) · quelques questions pour progresser"
+                                                                  : "Placement \(suggestion.rating.placementGames)/\(CoteCULT.placementGames) · quelques questions pour progresser",
                                  symbol: "scope", accent: DomainPalette.color(suggestion.domainId), chevron: true)
                 }
                 .buttonStyle(.row)

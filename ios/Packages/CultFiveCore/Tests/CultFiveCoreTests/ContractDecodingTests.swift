@@ -45,6 +45,8 @@ final class ContractDecodingTests: XCTestCase {
         for question in pack.questions {
             let reveal = try XCTUnwrap(question.reveal)
             XCTAssertNotNil(question.conceptId)
+            XCTAssertNotNil(question.difficulty)
+            XCTAssertTrue((0 ... 1).contains(try XCTUnwrap(question.expected)))
             // L'évaluateur local doit accepter la bonne réponse telle que le serveur l'exprime.
             let given: GivenAnswer
             switch question.type {
@@ -59,6 +61,11 @@ final class ContractDecodingTests: XCTestCase {
         let submit: PlaySubmitResult = try fixture("play_submit")
         XCTAssertEqual(submit.recorded, 6)
         XCTAssertEqual(submit.correct, 6)
+        XCTAssertGreaterThan(try XCTUnwrap(submit.points), 6 * 50)
+        let ratings = try XCTUnwrap(submit.ratings)
+        XCTAssertFalse(ratings.isEmpty)
+        XCTAssertTrue(ratings.allSatisfy { $0.delta > 0 && !$0.placed })
+        XCTAssertTrue(submit.results.allSatisfy { ($0.points ?? 0) > 0 })
     }
 
     func testProfileAndStats() throws {
@@ -70,6 +77,10 @@ final class ContractDecodingTests: XCTestCase {
         let stats: DomainStats = try fixture("domain_stats")
         XCTAssertEqual(stats.domainId, "geography")
         XCTAssertFalse(stats.subdomains.isEmpty)
+        XCTAssertNotNil(stats.cote)
+        XCTAssertNotNil(stats.placement)
+        XCTAssertTrue(skills.allSatisfy { $0.cote != nil && $0.placed != nil })
+        XCTAssertTrue(stats.subdomains.allSatisfy { $0.cote != nil })
         let errors: ErrorsOverview = try fixture("errors")
         XCTAssertGreaterThanOrEqual(errors.active.count, 1)
         let achievements: [AchievementRef] = try fixture("achievements")

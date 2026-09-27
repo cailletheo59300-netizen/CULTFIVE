@@ -32,6 +32,8 @@ final class DemoPlayEngine: @unchecked Sendable {
     private var seen: Set<UUID> = []
     private var errors: [UUID] = []
     private var levels: [String: Double] = [:]
+    /// Réponses classées par domaine (placement : cote dévoilée à 50).
+    private var answered: [String: Int] = [:]
     private var sessions: [UUID: (ids: [UUID], ranked: Bool)] = [:]
     private var submitted: Set<UUID> = []
     private var seedsDelta = 0
@@ -43,7 +45,10 @@ final class DemoPlayEngine: @unchecked Sendable {
         guard !prepared else { return }
         prepared = true
         bank = load()
-        for skill in skills { levels[skill.domainId] = Double(skill.level) }
+        for skill in skills {
+            levels[skill.domainId] = Double(skill.level)
+            answered[skill.domainId] = skill.answered
+        }
         var rng = SeededRandom(seed: 7)
         errors = Array(bank.map(\.question.id).shuffled(using: &rng).prefix(activeErrors))
     }
@@ -51,6 +56,13 @@ final class DemoPlayEngine: @unchecked Sendable {
     var activeErrors: Int { lock.lock(); defer { lock.unlock() }; return errors.count }
     var seeds: Int { lock.lock(); defer { lock.unlock() }; return seedsDelta }
     func level(_ domain: String) -> Double? { lock.lock(); defer { lock.unlock() }; return levels[domain] }
+    func answeredCount(_ domain: String) -> Int? { lock.lock(); defer { lock.unlock() }; return answered[domain] }
+
+    /// Champs de cote, comme public._rating_json.
+    static func ratingFields(level: Double, answered: Int, threshold: Int = CoteCULT.placementAnswers) -> [String: JSONValue] {
+        ["cote": .number(Double(CoteCULT.cote(level: level))), "answered": .number(Double(answered)),
+         "placement": .number(Double(min(5, answered * 5 / threshold))), "placed": .bool(answered >= threshold)]
+    }
     func available(subdomain: String) -> Int { bank.filter { $0.question.subdomainId == subdomain }.count }
     func entry(_ id: UUID) -> Entry? { bank.first { $0.question.id == id } }
 
@@ -77,7 +89,15 @@ final class DemoPlayEngine: @unchecked Sendable {
         seen.formUnion(ids)
         let session = UUID()
         sessions[session] = (ids, mode == .errors ? true : ranked)
-        return PlayPack(sessionId: session, mode: mode.rawValue, questions: picked.map(\.question),
+        // Comme le serveur : difficulté et chances de réussite estimées de chaque question.
+        let questions = picked.map { entry -> Question in
+            var q = entry.question
+            let mu = levels[q.domainId] ?? 50
+            q.difficulty = entry.difficulty
+            q.expected = ((1 / (1 + exp(-(mu - entry.difficulty) / 10))) * 100).rounded() / 100
+            return q
+        }
+        return PlayPack(sessionId: session, mode: mode.rawValue, questions: questions,
                         ranked: mode == .errors ? true : ranked, level: ranked ? "adaptive" : level.rawValue)
     }
 
@@ -90,9 +110,10 @@ final class DemoPlayEngine: @unchecked Sendable {
             case .adaptive: break
             }
         }
+        // Parties exigeantes : autour de 55 % de réussite (défi : ~40 %).
         let mu = levels[domain] ?? 50
-        let shift: Double = mode == .challenge ? 10 : -5
-        return (mu + shift - 15) ... (mu + shift + 15)
+        let shift: Double = mode == .challenge ? 8 : 2
+        return (mu + shift - 12) ... (mu + shift + 12)
     }
 
     /// Jamais une question déjà vue ; une seule par famille tant que possible ; la difficulté visée d'abord, puis élargie.
@@ -125,6 +146,8 @@ final class DemoPlayEngine: @unchecked Sendable {
         var correct = 0
         var corrected: [JSONValue] = []
         var results: [JSONValue] = []
+        var points = 0
+        var moves: [(domain: String, before: Double)] = []
         for attempt in attempts where !submitted.contains(attempt.clientAttemptId) {
             submitted.insert(attempt.clientAttemptId)
             guard let entry = bank.first(where: { $0.question.id == attempt.questionId }) else { continue }
@@ -146,15 +169,22 @@ final class DemoPlayEngine: @unchecked Sendable {
             let domain = entry.question.domainId
             let before = levels[domain] ?? 50
             var after = before
+            let expected = 1 / (1 + exp((entry.difficulty - before) / 10))
             if ranked {
                 // Bayésien simplifié : on bouge plus sur une surprise (bonne réponse difficile, erreur facile).
-                let expected = 1 / (1 + exp((entry.difficulty - before) / 10))
-                after = min(100, max(0, before + 4 * ((ok ? 1 : 0) - expected)))
+                // Placement (< 50 réponses) : pas doublé.
+                let step: Double = (answered[domain] ?? 0) < CoteCULT.placementAnswers ? 8 : 4
+                after = min(100, max(0, before + step * ((ok ? 1 : 0) - expected)))
                 levels[domain] = after
+                answered[domain, default: 0] += 1
+                if !moves.contains(where: { $0.domain == domain }) { moves.append((domain, before)) }
             }
+            let gained = GamePoints.points(correct: ok, expected: expected, responseMs: attempt.responseMs)
+            points += gained
             results.append(.object([
                 "question_id": .string(entry.question.id.uuidString), "is_correct": .bool(ok), "error_transition": transition,
                 "domain_before": .number((before * 10).rounded() / 10), "domain_after": .number((after * 10).rounded() / 10),
+                "points": .number(Double(gained)),
             ]))
         }
         let xp = correct * (ranked ? 5 : 3) + (attempts.count >= 5 ? (ranked ? 10 : 5) : 0)
@@ -162,7 +192,15 @@ final class DemoPlayEngine: @unchecked Sendable {
         seedsDelta += seeds
         return ["recorded": .number(Double(results.count)), "correct": .number(Double(correct)), "xp": .number(Double(xp)),
                 "seeds": .number(Double(seeds)), "corrected": .array(corrected), "results": .array(results),
-                "achievements": .array([]), "ranked": .bool(ranked)]
+                "achievements": .array([]), "ranked": .bool(ranked), "points": .number(Double(points)),
+                "ratings": .array(moves.map { move -> JSONValue in
+                    var fields = DemoPlayEngine.ratingFields(level: levels[move.domain] ?? 50, answered: answered[move.domain] ?? 0)
+                    fields["cote"] = nil
+                    fields["domain_id"] = .string(move.domain)
+                    fields["cote_before"] = .number(Double(CoteCULT.cote(level: move.before)))
+                    fields["cote_after"] = .number(Double(CoteCULT.cote(level: levels[move.domain] ?? 50)))
+                    return .object(fields)
+                })]
     }
 
     func spendSeeds(_ amount: Int) {
