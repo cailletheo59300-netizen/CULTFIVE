@@ -1,0 +1,978 @@
+[
+ {
+  "key": "sci-401",
+  "concept": "science.physics.loi_de_la_gravitation",
+  "label": "Loi de la gravitation",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a formulé la loi de la gravitation universelle ?",
+  "options": [
+   "Isaac Newton*",
+   "Galilée",
+   "Johannes Kepler",
+   "Albert Einstein"
+  ],
+  "explanation": "Newton la publie en 1687 : les corps s'attirent proportionnellement à leurs masses. La légende parle d'une pomme tombée d'un arbre.",
+  "hint": "La légende parle d'une pomme."
+ },
+ {
+  "key": "sci-402",
+  "concept": "science.physics.unite_d_energie",
+  "label": "Unité d'énergie",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle est l'unité d'énergie du Système international ?",
+  "options": [
+   "Le joule*",
+   "Le watt",
+   "Le newton",
+   "Le volt"
+  ],
+  "explanation": "Le joule mesure l'énergie ; le watt est une puissance (des joules par seconde).",
+  "hint": "Du nom d'un physicien anglais."
+ },
+ {
+  "key": "sci-403",
+  "concept": "science.physics.unite_de_frequence",
+  "label": "Unité de fréquence",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle unité mesure une fréquence ?",
+  "options": [
+   "Le hertz*",
+   "Le décibel",
+   "Le lumen",
+   "Le tesla"
+  ],
+  "explanation": "1 hertz = une oscillation par seconde. Le la du diapason vibre à 440 Hz.",
+  "hint": "Pense aux ondes radio."
+ },
+ {
+  "key": "sci-404",
+  "concept": "science.physics.amperemetre",
+  "label": "Ampèremètre",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que mesure un ampèremètre ?",
+  "options": [
+   "L'intensité du courant*",
+   "La tension",
+   "La résistance",
+   "La puissance"
+  ],
+  "explanation": "L'intensité se mesure en ampères avec un ampèremètre, la tension en volts avec un voltmètre.",
+  "hint": "L'unité est l'ampère."
+ },
+ {
+  "key": "sci-405",
+  "concept": "science.physics.longueur_d_onde_du_rouge",
+  "label": "Longueur d'onde du rouge",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle couleur de la lumière visible a la plus grande longueur d'onde ?",
+  "options": [
+   "Le rouge*",
+   "Le violet",
+   "Le vert",
+   "Le bleu"
+  ],
+  "explanation": "Le rouge (vers 700 nm) a la plus grande longueur d'onde du visible, le violet (vers 400 nm) la plus petite. Au-delà : infrarouge et ultraviolet.",
+  "hint": "Au-delà, c'est l'infrarouge."
+ },
+ {
+  "key": "sci-406",
+  "concept": "science.physics.ciel_bleu",
+  "label": "Ciel bleu",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi le ciel est-il bleu en journée ?",
+  "options": [
+   "L'air diffuse davantage la lumière bleue*",
+   "Il reflète la couleur des océans",
+   "L'oxygène est un gaz bleu",
+   "La couche d'ozone est bleue"
+  ],
+  "explanation": "Les molécules de l'air diffusent bien plus les courtes longueurs d'onde (le bleu) : c'est la diffusion de Rayleigh. Au coucher du soleil, le rouge domine.",
+  "hint": "C'est une question de diffusion de la lumière."
+ },
+ {
+  "key": "sci-407",
+  "concept": "science.physics.sublimation",
+  "label": "Sublimation",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'appelle-t-on la sublimation ?",
+  "options": [
+   "Le passage direct de l'état solide à l'état gazeux*",
+   "Le passage du liquide au gaz",
+   "Le passage du gaz au liquide",
+   "Le passage du solide au liquide"
+  ],
+  "explanation": "La neige carbonique (CO₂ solide) se sublime : elle devient gaz sans fondre.",
+  "hint": "Sans passer par l'état liquide."
+ },
+ {
+  "key": "sci-408",
+  "concept": "science.physics.100_c_en_fahrenheit",
+  "label": "100 °C en Fahrenheit",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "À combien de degrés Fahrenheit correspond 100 °C ?",
+  "answer": 212,
+  "unit": "°F",
+  "explanation": "°F = °C × 1,8 + 32 : 100 × 1,8 + 32 = 212 °F. L'eau gèle à 32 °F.",
+  "hint": "Multiplie par 1,8 puis ajoute 32."
+ },
+ {
+  "key": "sci-409",
+  "concept": "science.physics.decouverte_de_la_radioactivite",
+  "label": "Découverte de la radioactivité",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a découvert la radioactivité, en 1896 ?",
+  "options": [
+   "Henri Becquerel*",
+   "Marie Curie",
+   "Ernest Rutherford",
+   "Wilhelm Röntgen"
+  ],
+  "explanation": "Becquerel l'observe avec des sels d'uranium. Pierre et Marie Curie poursuivent ses travaux ; les trois partagent le prix Nobel en 1903.",
+  "hint": "Il a partagé un Nobel avec les Curie."
+ },
+ {
+  "key": "sci-410",
+  "concept": "science.physics.loi_d_ohm",
+  "label": "Loi d'Ohm",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Selon la loi d'Ohm, la tension U vaut…",
+  "options": [
+   "R × I*",
+   "R ÷ I",
+   "I ÷ R",
+   "R + I"
+  ],
+  "explanation": "U = R × I : la tension (volts) est égale à la résistance (ohms) multipliée par l'intensité (ampères).",
+  "hint": "« URI »."
+ },
+ {
+  "key": "sci-411",
+  "concept": "science.physics.objets_lourds_et_flottaison",
+  "label": "Objets lourds et flottaison",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Un objet lourd flotte toujours moins bien qu'un objet léger.",
+  "answer": false,
+  "explanation": "Non : c'est la densité qui compte, pas le poids. Un paquebot de 100 000 tonnes flotte, une petite bille d'acier coule.",
+  "hint": "Pense à un paquebot."
+ },
+ {
+  "key": "sci-412",
+  "concept": "science.physics.lumiere_du_soleil",
+  "label": "Lumière du Soleil",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La lumière du Soleil met environ 8 minutes pour atteindre la Terre.",
+  "answer": true,
+  "explanation": "Oui : 150 millions de km à 300 000 km/s, soit environ 8 min 20 s. On voit le Soleil tel qu'il était il y a 8 minutes.",
+  "hint": "150 millions de km à 300 000 km/s."
+ },
+ {
+  "key": "sci-413",
+  "concept": "science.physics.orbite_de_la_lune",
+  "label": "Orbite de la Lune",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle force maintient la Lune en orbite autour de la Terre ?",
+  "options": [
+   "La gravitation*",
+   "Le magnétisme terrestre",
+   "Le vent solaire",
+   "La rotation de la Terre"
+  ],
+  "explanation": "La Lune « tombe » en permanence vers la Terre tout en avançant : elle tourne autour sans jamais s'écraser.",
+  "hint": "La même qui fait tomber les objets."
+ },
+ {
+  "key": "sci-414",
+  "concept": "science.physics.kelvin",
+  "label": "Kelvin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel savant a donné son nom à l'unité de température absolue ?",
+  "options": [
+   "Lord Kelvin*",
+   "Anders Celsius",
+   "Daniel Fahrenheit",
+   "James Joule"
+  ],
+  "explanation": "William Thomson, dit Lord Kelvin. 0 K est le zéro absolu, −273,15 °C.",
+  "hint": "Sa graduation commence au zéro absolu."
+ },
+ {
+  "key": "sci-415",
+  "concept": "science.physics.paille_cassee",
+  "label": "Paille cassée",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel phénomène fait paraître « cassée » une paille plongée dans un verre d'eau ?",
+  "options": [
+   "La réfraction*",
+   "La réflexion",
+   "La diffraction",
+   "L'évaporation"
+  ],
+  "explanation": "La lumière change de direction en passant de l'eau à l'air : c'est la réfraction.",
+  "hint": "La lumière change de milieu."
+ },
+ {
+  "key": "sci-416",
+  "concept": "science.physics.circuit_en_serie",
+  "label": "Circuit en série",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Dans un circuit en série, si une ampoule grille, les autres s'éteignent.",
+  "answer": true,
+  "explanation": "Oui : le circuit est ouvert, le courant ne passe plus. En dérivation (comme dans une maison), les autres restent allumées.",
+  "hint": "Il n'y a qu'un seul chemin pour le courant."
+ },
+ {
+  "key": "sci-417",
+  "concept": "science.physics.isolant",
+  "label": "Isolant",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Lequel de ces matériaux est un isolant électrique ?",
+  "options": [
+   "Le caoutchouc*",
+   "Le cuivre",
+   "L'aluminium",
+   "L'eau salée"
+  ],
+  "explanation": "Le caoutchouc et le plastique entourent les fils électriques. L'eau salée, elle, conduit très bien.",
+  "hint": "On en entoure les câbles."
+ },
+ {
+  "key": "sci-418",
+  "concept": "science.physics.decibel",
+  "label": "Décibel",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que mesure-t-on en décibels ?",
+  "options": [
+   "L'intensité sonore*",
+   "La luminosité",
+   "La température",
+   "La tension électrique"
+  ],
+  "explanation": "Une conversation : environ 60 dB ; un avion au décollage : environ 130 dB. +10 dB, c'est une intensité multipliée par 10.",
+  "hint": "On en parle pour le bruit."
+ },
+ {
+  "key": "sci-419",
+  "concept": "science.biology.virus",
+  "label": "Virus",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qui caractérise un virus ?",
+  "options": [
+   "Il ne se multiplie qu'à l'intérieur d'une cellule*",
+   "C'est une toute petite bactérie",
+   "C'est un champignon microscopique",
+   "Il fabrique sa propre énergie"
+  ],
+  "explanation": "Un virus n'est pas une cellule : il détourne la machinerie d'une cellule hôte pour se reproduire. D'où l'inefficacité des antibiotiques.",
+  "hint": "Il a besoin d'un hôte."
+ },
+ {
+  "key": "sci-420",
+  "concept": "science.biology.linne",
+  "label": "Linné",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a créé la manière de nommer les espèces par deux mots latins (Homo sapiens) ?",
+  "options": [
+   "Carl von Linné*",
+   "Buffon",
+   "Jean-Baptiste de Lamarck",
+   "Georges Cuvier"
+  ],
+  "explanation": "Le naturaliste suédois Linné généralise la nomenclature binominale au XVIIIe siècle : le genre, puis l'espèce.",
+  "hint": "Un naturaliste suédois."
+ },
+ {
+  "key": "sci-421",
+  "concept": "science.biology.autotrophe",
+  "label": "Autotrophe",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment appelle-t-on un être vivant qui fabrique sa propre matière organique, comme une plante ?",
+  "options": [
+   "Autotrophe*",
+   "Hétérotrophe",
+   "Saprophyte",
+   "Parasite"
+  ],
+  "explanation": "« Auto » (soi-même) et « trophê » (nourriture). Les animaux, qui mangent d'autres êtres vivants, sont hétérotrophes.",
+  "hint": "« Auto » : soi-même."
+ },
+ {
+  "key": "sci-422",
+  "concept": "science.biology.hemoglobine",
+  "label": "Hémoglobine",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle molécule transporte l'oxygène dans le sang ?",
+  "options": [
+   "L'hémoglobine*",
+   "L'insuline",
+   "La kératine",
+   "La chlorophylle"
+  ],
+  "explanation": "Présente dans les globules rouges, elle contient du fer, qui donne au sang sa couleur rouge.",
+  "hint": "Elle contient du fer."
+ },
+ {
+  "key": "sci-423",
+  "concept": "science.biology.produits_de_la_photosynthese",
+  "label": "Produits de la photosynthèse",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Avec la lumière, l'eau et le CO₂, la photosynthèse produit…",
+  "options": [
+   "des sucres et du dioxygène*",
+   "des protéines et de l'azote",
+   "des graisses et de l'eau",
+   "des vitamines et du CO₂"
+  ],
+  "explanation": "Les plantes fabriquent du glucose et rejettent du dioxygène.",
+  "hint": "Ce que nous respirons en sort."
+ },
+ {
+  "key": "sci-424",
+  "concept": "science.biology.espece_endemique",
+  "label": "Espèce endémique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une espèce « endémique » est une espèce…",
+  "options": [
+   "présente naturellement dans une seule région*",
+   "en voie de disparition",
+   "invasive",
+   "qui cause une épidémie"
+  ],
+  "explanation": "Le lémurien est endémique de Madagascar : on ne le trouve nulle part ailleurs à l'état sauvage.",
+  "hint": "Pense aux lémuriens de Madagascar."
+ },
+ {
+  "key": "sci-425",
+  "concept": "science.biology.record_d_especes",
+  "label": "Record d'espèces",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel groupe d'animaux compte le plus d'espèces connues ?",
+  "options": [
+   "Les insectes*",
+   "Les mammifères",
+   "Les poissons",
+   "Les oiseaux"
+  ],
+  "explanation": "Plus d'un million d'espèces d'insectes décrites, dont environ 400 000 coléoptères. Les mammifères n'en comptent qu'environ 6 500.",
+  "hint": "Les coléoptères à eux seuls…"
+ },
+ {
+  "key": "sci-426",
+  "concept": "science.biology.chauves_souris_aveugles",
+  "label": "Chauves-souris aveugles",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Les chauves-souris sont aveugles.",
+  "answer": false,
+  "explanation": "Non : elles voient, certaines très bien. Beaucoup utilisent en plus l'écholocation pour chasser dans le noir.",
+  "hint": "« Myope comme une taupe », pas comme une chauve-souris."
+ },
+ {
+  "key": "sci-427",
+  "concept": "science.biology.van_leeuwenhoek",
+  "label": "Van Leeuwenhoek",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a observé le premier des micro-organismes au microscope, au XVIIe siècle ?",
+  "options": [
+   "Antoni van Leeuwenhoek*",
+   "Louis Pasteur",
+   "Robert Koch",
+   "Claude Bernard"
+  ],
+  "explanation": "Ce drapier néerlandais fabrique ses propres lentilles et décrit des « animalcules » dès les années 1670.",
+  "hint": "Un drapier néerlandais."
+ },
+ {
+  "key": "sci-428",
+  "concept": "science.biology.robert_koch",
+  "label": "Robert Koch",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Robert Koch a découvert en 1882 le bacille responsable de quelle maladie ?",
+  "options": [
+   "La tuberculose*",
+   "Le choléra",
+   "La peste",
+   "La rage"
+  ],
+  "explanation": "On l'appelle d'ailleurs le bacille de Koch. Le bacille de la peste a été découvert par Alexandre Yersin en 1894.",
+  "hint": "On l'appelle « bacille de Koch »."
+ },
+ {
+  "key": "sci-429",
+  "concept": "science.biology.mitose",
+  "label": "Mitose",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'appelle la division d'une cellule en deux cellules identiques ?",
+  "options": [
+   "La mitose*",
+   "La méiose",
+   "L'osmose",
+   "La fécondation"
+  ],
+  "explanation": "La mitose permet la croissance et le renouvellement des tissus. La méiose, elle, produit les gamètes.",
+  "hint": "Pas celle des gamètes."
+ },
+ {
+  "key": "sci-430",
+  "concept": "science.biology.adn_du_chimpanze",
+  "label": "ADN du chimpanzé",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Notre ADN est identique à celui du chimpanzé à environ…",
+  "options": [
+   "98 %*",
+   "50 %",
+   "75 %",
+   "99,99 %"
+  ],
+  "explanation": "Environ 98 à 99 % selon la façon de compter : le chimpanzé et le bonobo sont nos plus proches cousins.",
+  "hint": "Nos plus proches cousins."
+ },
+ {
+  "key": "sci-431",
+  "concept": "science.biology.champignons_et_animaux",
+  "label": "Champignons et animaux",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Les champignons sont plus proches des animaux que des plantes.",
+  "answer": true,
+  "explanation": "Oui : l'ADN le montre, champignons et animaux partagent un ancêtre commun plus récent. Comme nous, ils ne font pas de photosynthèse.",
+  "hint": "Ils ne font pas de photosynthèse."
+ },
+ {
+  "key": "sci-432",
+  "concept": "science.biology.axolotl",
+  "label": "Axolotl",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Lequel de ces animaux peut faire repousser une patte entière ?",
+  "options": [
+   "L'axolotl*",
+   "Le chat",
+   "La poule",
+   "Le lapin"
+  ],
+  "explanation": "Cet amphibien mexicain régénère membres, cœur et même une partie du cerveau : un sujet d'étude majeur.",
+  "hint": "Un amphibien mexicain."
+ },
+ {
+  "key": "sci-433",
+  "concept": "science.biology.plus_grand_animal",
+  "label": "Plus grand animal",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le plus grand animal ayant jamais existé, à notre connaissance ?",
+  "options": [
+   "La baleine bleue*",
+   "L'argentinosaure",
+   "Le mammouth",
+   "Le mégalodon"
+  ],
+  "explanation": "Jusqu'à 30 m et 150 tonnes : plus lourde que les plus grands dinosaures connus.",
+  "hint": "Il vit encore aujourd'hui."
+ },
+ {
+  "key": "sci-434",
+  "concept": "science.human_body.volume_de_sang",
+  "label": "Volume de sang",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Combien de litres de sang contient le corps d'un adulte, environ ?",
+  "options": [
+   "5 litres*",
+   "2 litres",
+   "10 litres",
+   "15 litres"
+  ],
+  "explanation": "Environ 7 % du poids du corps : 4,5 à 6 litres pour un adulte.",
+  "hint": "Un peu plus qu'une grande bouteille d'eau."
+ },
+ {
+  "key": "sci-435",
+  "concept": "science.human_body.energie_du_cerveau",
+  "label": "Énergie du cerveau",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel organe consomme à lui seul environ 20 % de l'énergie du corps ?",
+  "options": [
+   "Le cerveau*",
+   "Le cœur",
+   "Le foie",
+   "L'estomac"
+  ],
+  "explanation": "Il ne pèse que 2 % du corps mais consomme environ un cinquième de l'énergie au repos.",
+  "hint": "Il travaille même quand tu dors."
+ },
+ {
+  "key": "sci-436",
+  "concept": "science.human_body.vitamine_des_agrumes",
+  "label": "Vitamine des agrumes",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle vitamine trouve-t-on surtout dans les agrumes ?",
+  "options": [
+   "La vitamine C*",
+   "La vitamine D",
+   "La vitamine K",
+   "La vitamine B12"
+  ],
+  "explanation": "Son manque provoquait le scorbut chez les marins, soignés ensuite par des citrons.",
+  "hint": "Elle protégeait les marins du scorbut."
+ },
+ {
+  "key": "sci-437",
+  "concept": "science.human_body.aorte",
+  "label": "Aorte",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle est la plus grosse artère du corps humain ?",
+  "options": [
+   "L'aorte*",
+   "La carotide",
+   "La veine cave",
+   "L'artère fémorale"
+  ],
+  "explanation": "Elle part du cœur et mesure environ 2,5 cm de diamètre. La veine cave, elle, est une veine.",
+  "hint": "Elle sort directement du cœur."
+ },
+ {
+  "key": "sci-438",
+  "concept": "science.human_body.rotule",
+  "label": "Rotule",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Où se trouve la rotule ?",
+  "options": [
+   "Au genou*",
+   "Au coude",
+   "À l'épaule",
+   "À la cheville"
+  ],
+  "explanation": "Ce petit os plat protège l'articulation du genou.",
+  "hint": "Quand tu t'agenouilles…"
+ },
+ {
+  "key": "sci-439",
+  "concept": "science.human_body.vertebres_cervicales",
+  "label": "Vertèbres cervicales",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de vertèbres compte le cou humain ?",
+  "answer": 7,
+  "explanation": "Sept vertèbres cervicales, comme presque tous les mammifères, y compris la girafe !",
+  "hint": "Autant que la girafe."
+ },
+ {
+  "key": "sci-440",
+  "concept": "science.human_body.moelle_osseuse",
+  "label": "Moelle osseuse",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Où sont fabriqués les globules rouges chez l'adulte ?",
+  "options": [
+   "Dans la moelle osseuse*",
+   "Dans la rate",
+   "Dans le foie",
+   "Dans le cœur"
+  ],
+  "explanation": "La moelle rouge des os plats (bassin, sternum, côtes) en produit plus de 2 millions par seconde.",
+  "hint": "À l'intérieur des os."
+ },
+ {
+  "key": "sci-441",
+  "concept": "science.human_body.scapula",
+  "label": "Scapula",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le nom anatomique de l'omoplate ?",
+  "options": [
+   "La scapula*",
+   "La clavicule",
+   "Le sternum",
+   "Le radius"
+  ],
+  "explanation": "Omoplate est le nom courant ; les médecins disent scapula.",
+  "hint": "Mot latin."
+ },
+ {
+  "key": "sci-442",
+  "concept": "science.human_body.couleur_des_yeux",
+  "label": "Couleur des yeux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle partie de l'œil donne sa couleur ?",
+  "options": [
+   "L'iris*",
+   "La pupille",
+   "La rétine",
+   "La cornée"
+  ],
+  "explanation": "L'iris, un muscle coloré, règle l'ouverture de la pupille, qui reste noire.",
+  "hint": "Il entoure la pupille."
+ },
+ {
+  "key": "sci-443",
+  "concept": "science.human_body.plaquettes",
+  "label": "Plaquettes",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le rôle principal des plaquettes sanguines ?",
+  "options": [
+   "Faire coaguler le sang*",
+   "Transporter l'oxygène",
+   "Combattre les microbes",
+   "Produire des hormones"
+  ],
+  "explanation": "Elles s'agglutinent pour boucher une plaie. L'oxygène est l'affaire des globules rouges, les microbes celle des globules blancs.",
+  "hint": "Utile quand on se coupe."
+ },
+ {
+  "key": "sci-444",
+  "concept": "science.human_body.ongles_apres_la_mort",
+  "label": "Ongles après la mort",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les ongles et les cheveux continuent de pousser après la mort.",
+  "answer": false,
+  "explanation": "Non : c'est une illusion. La peau se déshydrate et se rétracte, ce qui les fait paraître plus longs.",
+  "hint": "C'est la peau qui change."
+ },
+ {
+  "key": "sci-445",
+  "concept": "science.human_body.os_du_nouveau_ne",
+  "label": "Os du nouveau-né",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un nouveau-né a plus d'os qu'un adulte.",
+  "answer": true,
+  "explanation": "Oui : environ 300 à la naissance, qui se soudent en grandissant pour arriver à 206 (le crâne, le bassin…).",
+  "hint": "Certains se soudent en grandissant."
+ },
+ {
+  "key": "sci-446",
+  "concept": "science.human_body.hormone_du_stress",
+  "label": "Hormone du stress",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle hormone est surnommée « l'hormone du stress » ?",
+  "options": [
+   "Le cortisol*",
+   "L'insuline",
+   "La mélatonine",
+   "L'ocytocine"
+  ],
+  "explanation": "Produit par les glandes surrénales, il mobilise l'énergie face à une situation difficile.",
+  "hint": "Produite par les surrénales."
+ },
+ {
+  "key": "sci-447",
+  "concept": "science.human_body.melatonine",
+  "label": "Mélatonine",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle hormone, produite la nuit, favorise le sommeil ?",
+  "options": [
+   "La mélatonine*",
+   "L'adrénaline",
+   "Le cortisol",
+   "La thyroxine"
+  ],
+  "explanation": "La lumière, notamment celle des écrans, freine sa production.",
+  "hint": "Les écrans la perturbent."
+ },
+ {
+  "key": "sci-448",
+  "concept": "science.human_body.cerveau_gauche",
+  "label": "Cerveau gauche",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le côté gauche du cerveau commande surtout…",
+  "options": [
+   "le côté droit du corps*",
+   "le côté gauche du corps",
+   "les deux côtés à égalité",
+   "uniquement la parole"
+  ],
+  "explanation": "Les voies nerveuses se croisent : un AVC à gauche paralyse souvent le côté droit.",
+  "hint": "Les nerfs se croisent."
+ },
+ {
+  "key": "sci-449",
+  "concept": "science.human_body.sophage",
+  "label": "Œsophage",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel conduit relie la bouche à l'estomac ?",
+  "options": [
+   "L'œsophage*",
+   "La trachée",
+   "Le larynx",
+   "Le duodénum"
+  ],
+  "explanation": "La trachée, elle, mène l'air aux poumons ; l'épiglotte évite les « fausses routes ».",
+  "hint": "Pas celui de l'air."
+ },
+ {
+  "key": "sci-450",
+  "concept": "science.human_body.paires_de_cotes",
+  "label": "Paires de côtes",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de paires de côtes a un être humain ?",
+  "answer": 12,
+  "explanation": "Douze paires, soit 24 côtes, chez les hommes comme chez les femmes.",
+  "hint": "Autant que de mois dans l'année."
+ },
+ {
+  "key": "sci-451",
+  "concept": "science.human_body.duree_de_vie_d_un_globule_rouge",
+  "label": "Durée de vie d'un globule rouge",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien de temps vit un globule rouge, environ ?",
+  "options": [
+   "120 jours*",
+   "1 jour",
+   "10 jours",
+   "2 ans"
+  ],
+  "explanation": "Environ quatre mois, puis il est détruit dans la rate et le foie et remplacé.",
+  "hint": "Environ quatre mois."
+ },
+ {
+  "key": "sci-452",
+  "concept": "science.space.apollo_11",
+  "label": "Apollo 11",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle mission a posé les premiers humains sur la Lune ?",
+  "options": [
+   "Apollo 11*",
+   "Apollo 13",
+   "Gemini 4",
+   "Vostok 1"
+  ],
+  "explanation": "Le 20 juillet 1969, Neil Armstrong et Buzz Aldrin marchent sur la Lune ; Michael Collins reste en orbite.",
+  "hint": "En 1969."
+ },
+ {
+  "key": "sci-453",
+  "concept": "science.space.annee_des_premiers_pas_sur_la_lune",
+  "label": "Année des premiers pas sur la Lune",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "En quelle année l'être humain a-t-il marché sur la Lune pour la première fois ?",
+  "answer": 1969,
+  "explanation": "Le 20 juillet 1969 (le 21 en heure française), avec Apollo 11. Six missions s'y sont posées jusqu'en 1972.",
+  "hint": "Fin des années 1960."
+ },
+ {
+  "key": "sci-454",
+  "concept": "science.space.voie_lactee",
+  "label": "Voie lactée",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle notre galaxie ?",
+  "options": [
+   "La Voie lactée*",
+   "Andromède",
+   "Le Grand Nuage de Magellan",
+   "La galaxie du Triangle"
+  ],
+  "explanation": "Une galaxie spirale d'environ 100 000 années-lumière de diamètre, qui compte des centaines de milliards d'étoiles.",
+  "hint": "Elle a un nom de boisson."
+ },
+ {
+  "key": "sci-455",
+  "concept": "science.space.andromede",
+  "label": "Andromède",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle est la grande galaxie spirale la plus proche de la nôtre ?",
+  "options": [
+   "Andromède*",
+   "Le Sombrero",
+   "La galaxie du Tourbillon",
+   "Centaurus A"
+  ],
+  "explanation": "À environ 2,5 millions d'années-lumière, elle est visible à l'œil nu par ciel très noir. Elle devrait fusionner avec la Voie lactée dans quelques milliards d'années.",
+  "hint": "Une princesse de la mythologie."
+ },
+ {
+  "key": "sci-456",
+  "concept": "science.space.etoile_filante",
+  "label": "Étoile filante",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'une « étoile filante » ?",
+  "options": [
+   "Un petit débris qui brûle en entrant dans l'atmosphère*",
+   "Une étoile qui meurt",
+   "Une comète qui passe",
+   "Un satellite en panne"
+  ],
+  "explanation": "Des grains souvent plus petits qu'un pois chauffent et s'illuminent vers 100 km d'altitude.",
+  "hint": "Ce n'est pas une étoile."
+ },
+ {
+  "key": "sci-457",
+  "concept": "science.space.pluton",
+  "label": "Pluton",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "En 2006, Pluton a été reclassée comme…",
+  "options": [
+   "planète naine*",
+   "astéroïde",
+   "comète",
+   "satellite de Neptune"
+  ],
+  "explanation": "Elle ne « fait pas le ménage » sur son orbite, partagée avec d'autres objets de la ceinture de Kuiper.",
+  "hint": "Elle n'est plus une vraie planète."
+ },
+ {
+  "key": "sci-458",
+  "concept": "science.space.copernic",
+  "label": "Copernic",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a proposé, en 1543, que la Terre tourne autour du Soleil ?",
+  "options": [
+   "Nicolas Copernic*",
+   "Ptolémée",
+   "Galilée",
+   "Johannes Kepler"
+  ],
+  "explanation": "Copernic publie son modèle héliocentrique l'année de sa mort. Galilée le défendra ensuite, ce qui lui vaudra un procès en 1633.",
+  "hint": "Un astronome polonais."
+ },
+ {
+  "key": "sci-459",
+  "concept": "science.space.voyager_1",
+  "label": "Voyager 1",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle sonde, lancée en 1977, est l'objet humain le plus éloigné de la Terre ?",
+  "options": [
+   "Voyager 1*",
+   "Pioneer 10",
+   "New Horizons",
+   "Spoutnik 1"
+  ],
+  "explanation": "Elle a quitté l'héliosphère en 2012 et se trouve à plus de 24 milliards de km. Elle emporte un disque d'or avec des sons de la Terre.",
+  "hint": "Elle emporte un disque d'or."
+ },
+ {
+  "key": "sci-460",
+  "concept": "science.space.spoutnik",
+  "label": "Spoutnik",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment s'appelle le premier satellite artificiel, lancé en 1957 ?",
+  "options": [
+   "Spoutnik 1*",
+   "Explorer 1",
+   "Vostok 1",
+   "Hubble"
+  ],
+  "explanation": "Lancé par l'URSS le 4 octobre 1957, il déclenche la course à l'espace.",
+  "hint": "Lancé par l'URSS."
+ },
+ {
+  "key": "sci-461",
+  "concept": "science.space.revolution_de_la_lune",
+  "label": "Révolution de la Lune",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien de temps met la Lune pour faire le tour de la Terre ?",
+  "options": [
+   "Environ 27 jours*",
+   "Environ 7 jours",
+   "Environ 365 jours",
+   "Environ 24 heures"
+  ],
+  "explanation": "27,3 jours pour un tour complet ; 29,5 jours entre deux pleines lunes, car la Terre a avancé entre-temps.",
+  "hint": "Environ un mois."
+ },
+ {
+  "key": "sci-462",
+  "concept": "science.space.trou_noir",
+  "label": "Trou noir",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'un trou noir ?",
+  "options": [
+   "Une région dont même la lumière ne peut s'échapper*",
+   "Une étoile éteinte et froide",
+   "Un trou dans la couche d'ozone",
+   "Une zone vide entre les galaxies"
+  ],
+  "explanation": "Sa gravité est si intense que rien n'en ressort. La première « photo » d'un trou noir date de 2019.",
+  "hint": "Même la lumière y reste piégée."
+ },
+ {
+  "key": "sci-463",
+  "concept": "science.space.james_webb",
+  "label": "James Webb",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel télescope spatial, lancé en 2021, succède à Hubble ?",
+  "options": [
+   "James Webb*",
+   "Kepler",
+   "Spitzer",
+   "Chandra"
+  ],
+  "explanation": "Il observe dans l'infrarouge depuis le point de Lagrange L2, à 1,5 million de km de la Terre.",
+  "hint": "Du nom d'un administrateur de la NASA."
+ },
+ {
+  "key": "sci-464",
+  "concept": "science.space.naine_jaune",
+  "label": "Naine jaune",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le Soleil est une étoile de taille moyenne, une « naine jaune ».",
+  "answer": true,
+  "explanation": "Oui : il est immense à notre échelle, mais banal parmi les étoiles. Certaines géantes sont des milliers de fois plus grandes.",
+  "hint": "Il y a bien plus gros."
+ },
+ {
+  "key": "sci-465",
+  "concept": "science.space.rotation_de_venus",
+  "label": "Rotation de Vénus",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Vénus tourne sur elle-même dans le sens inverse de la plupart des planètes.",
+  "answer": true,
+  "explanation": "Oui : sa rotation est rétrograde et très lente. Vu de Vénus, le Soleil se lèverait à l'ouest.",
+  "hint": "Le Soleil s'y lève à l'ouest."
+ }
+]

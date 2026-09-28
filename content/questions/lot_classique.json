@@ -1,0 +1,275 @@
+[
+ {
+  "key": "music-401",
+  "concept": "music.classical.la_moldau",
+  "label": "La Moldau",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a composé « La Moldau », qui évoque le cours d'une rivière ?",
+  "options": [
+   "Bedřich Smetana*",
+   "Antonín Dvořák",
+   "Franz Liszt",
+   "Johannes Brahms"
+  ],
+  "explanation": "Extrait du cycle « Ma patrie », elle suit la Vltava à travers la Bohême.",
+  "hint": "Un compositeur tchèque."
+ },
+ {
+  "key": "music-402",
+  "concept": "music.classical.symphonie_du_nouveau_monde",
+  "label": "Symphonie du Nouveau Monde",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a composé la « Symphonie du Nouveau Monde » ?",
+  "options": [
+   "Antonín Dvořák*",
+   "Bedřich Smetana",
+   "Gustav Mahler",
+   "Piotr Tchaïkovski"
+  ],
+  "explanation": "Écrite en 1893 lors de son séjour aux États-Unis ; elle aurait accompagné Neil Armstrong sur la Lune.",
+  "hint": "Un Tchèque en Amérique."
+ },
+ {
+  "key": "music-403",
+  "concept": "music.classical.le_sacre_du_printemps",
+  "label": "Le Sacre du printemps",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a composé « Le Sacre du printemps », qui fit scandale en 1913 ?",
+  "options": [
+   "Igor Stravinsky*",
+   "Claude Debussy",
+   "Maurice Ravel",
+   "Erik Satie"
+  ],
+  "explanation": "Sa création au théâtre des Champs-Élysées tourne à l'émeute.",
+  "hint": "Un Russe à Paris."
+ },
+ {
+  "key": "music-404",
+  "concept": "music.classical.chevauchee_des_walkyries",
+  "label": "Chevauchée des Walkyries",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a composé « La Chevauchée des Walkyries » ?",
+  "options": [
+   "Richard Wagner*",
+   "Ludwig van Beethoven",
+   "Johann Strauss",
+   "Giuseppe Verdi"
+  ],
+  "explanation": "Extraite de l'opéra « La Walkyrie », elle est célèbre au cinéma depuis « Apocalypse Now ».",
+  "hint": "Un opéra de la Tétralogie."
+ },
+ {
+  "key": "music-405",
+  "concept": "music.classical.petite_musique_de_nuit",
+  "label": "Petite musique de nuit",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a composé « Une petite musique de nuit » ?",
+  "options": [
+   "Wolfgang Amadeus Mozart*",
+   "Joseph Haydn",
+   "Franz Schubert",
+   "Antonio Vivaldi"
+  ],
+  "explanation": "Sérénade de 1787, l'une des œuvres classiques les plus connues.",
+  "hint": "Né à Salzbourg."
+ },
+ {
+  "key": "music-406",
+  "concept": "music.classical.soliste_des_quatre_saisons",
+  "label": "Soliste des Quatre Saisons",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel instrument joue en soliste dans « Les Quatre Saisons » de Vivaldi ?",
+  "options": [
+   "Le violon*",
+   "Le piano",
+   "La flûte",
+   "Le violoncelle"
+  ],
+  "explanation": "Ce sont quatre concertos pour violon, publiés en 1725.",
+  "hint": "Vivaldi en jouait."
+ },
+ {
+  "key": "music-407",
+  "concept": "music.classical.barbier_de_seville",
+  "label": "Barbier de Séville",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel compositeur italien a écrit l'opéra « Le Barbier de Séville » ?",
+  "options": [
+   "Gioachino Rossini*",
+   "Giuseppe Verdi",
+   "Giacomo Puccini",
+   "Vincenzo Bellini"
+  ],
+  "explanation": "Créé en 1816 à Rome, d'après la pièce de Beaumarchais. L'air de Figaro est resté célèbre.",
+  "hint": "« Figaro ci, Figaro là »."
+ },
+ {
+  "key": "music-408",
+  "concept": "music.classical.carmina_burana",
+  "label": "Carmina Burana",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a composé « Carmina Burana », célèbre pour son « O Fortuna » ?",
+  "options": [
+   "Carl Orff*",
+   "Richard Strauss",
+   "Anton Bruckner",
+   "Gustav Holst"
+  ],
+  "explanation": "Cantate de 1937 sur des poèmes médiévaux ; son ouverture est très utilisée au cinéma et en publicité.",
+  "hint": "Un Allemand du XXe siècle."
+ },
+ {
+  "key": "music-409",
+  "concept": "music.classical.pierre_et_le_loup",
+  "label": "Pierre et le Loup",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a composé « Pierre et le Loup », conte musical pour enfants ?",
+  "options": [
+   "Sergueï Prokofiev*",
+   "Igor Stravinsky",
+   "Dmitri Chostakovitch",
+   "Nikolaï Rimski-Korsakov"
+  ],
+  "explanation": "Chaque personnage a son instrument : le chat est la clarinette, le loup les cors (1936).",
+  "hint": "Un compositeur russe."
+ },
+ {
+  "key": "music-410",
+  "concept": "music.classical.carnaval_des_animaux",
+  "label": "Carnaval des animaux",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a composé « Le Carnaval des animaux » ?",
+  "options": [
+   "Camille Saint-Saëns*",
+   "Claude Debussy",
+   "Georges Bizet",
+   "Hector Berlioz"
+  ],
+  "explanation": "On y trouve « Le Cygne », pour violoncelle. Saint-Saëns ne voulait pas qu'il soit publié de son vivant.",
+  "hint": "On y entend « Le Cygne »."
+ },
+ {
+  "key": "music-411",
+  "concept": "music.classical.madame_butterfly",
+  "label": "Madame Butterfly",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a composé l'opéra « Madame Butterfly » ?",
+  "options": [
+   "Giacomo Puccini*",
+   "Giuseppe Verdi",
+   "Gioachino Rossini",
+   "Georges Bizet"
+  ],
+  "explanation": "Créé en 1904, il se déroule à Nagasaki. Puccini a aussi composé « La Bohème » et « Tosca ».",
+  "hint": "L'auteur de « Tosca »."
+ },
+ {
+  "key": "music-412",
+  "concept": "music.classical.quatuor_a_cordes",
+  "label": "Quatuor à cordes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un quatuor à cordes réunit deux violons, un alto et…",
+  "options": [
+   "un violoncelle*",
+   "une contrebasse",
+   "un piano",
+   "une harpe"
+  ],
+  "explanation": "C'est la formation reine de la musique de chambre, de Haydn à nos jours.",
+  "hint": "Pas de contrebasse."
+ },
+ {
+  "key": "music-413",
+  "concept": "music.classical.allegro",
+  "label": "Allegro",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Sur une partition, que signifie « allegro » ?",
+  "options": [
+   "Vif, rapide*",
+   "Lent",
+   "Fort",
+   "Doux"
+  ],
+  "explanation": "Les indications de tempo sont en italien : adagio (lent), andante (allant), allegro (vif), presto (très rapide).",
+  "hint": "« Gai », en italien."
+ },
+ {
+  "key": "music-414",
+  "concept": "music.classical.contrebasse",
+  "label": "Contrebasse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est l'instrument le plus grave de la famille des cordes frottées ?",
+  "options": [
+   "La contrebasse*",
+   "Le violoncelle",
+   "L'alto",
+   "Le violon"
+  ],
+  "explanation": "Du plus aigu au plus grave : violon, alto, violoncelle, contrebasse.",
+  "hint": "La plus grande."
+ },
+ {
+  "key": "music-415",
+  "concept": "music.classical.periodes_de_la_musique",
+  "label": "Périodes de la musique",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces périodes de la musique savante de la plus ancienne à la plus récente.",
+  "items": [
+   "Baroque",
+   "Classique",
+   "Romantique",
+   "Moderne"
+  ],
+  "explanation": "Baroque (Bach, 1600–1750), classique (Mozart, 1750–1820), romantique (Chopin, XIXe), moderne (Stravinsky, XXe).",
+  "hint": "Bach, puis Mozart, puis Chopin."
+ },
+ {
+  "key": "music-416",
+  "concept": "music.classical.mort_de_mozart",
+  "label": "Mort de Mozart",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Mozart est mort à 35 ans.",
+  "answer": true,
+  "explanation": "Oui : né en 1756, mort en 1791, en laissant son Requiem inachevé.",
+  "hint": "Il n'a pas terminé son Requiem."
+ },
+ {
+  "key": "music-417",
+  "concept": "music.classical.origine_de_chopin",
+  "label": "Origine de Chopin",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Frédéric Chopin était d'origine autrichienne.",
+  "answer": false,
+  "explanation": "Non : il est né en Pologne, d'un père français. Il a passé la seconde moitié de sa vie à Paris.",
+  "hint": "Il est né près de Varsovie."
+ },
+ {
+  "key": "music-418",
+  "concept": "music.classical.nationalite_de_vivaldi",
+  "label": "Nationalité de Vivaldi",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Antonio Vivaldi était vénitien.",
+  "answer": true,
+  "explanation": "Oui : il est né à Venise en 1678, où il enseigna la musique dans un orphelinat de jeunes filles.",
+  "hint": "Né dans la cité des Doges."
+ }
+]

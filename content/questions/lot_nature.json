@@ -1,0 +1,804 @@
+[
+ {
+  "key": "nat-501",
+  "concept": "nature.plants.pollinisation",
+  "label": "Pollinisation",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que la pollinisation ?",
+  "options": [
+   "Le transport du pollen jusqu'au pistil d'une fleur*",
+   "La germination d'une graine",
+   "La chute des feuilles",
+   "La formation des racines"
+  ],
+  "explanation": "Portée par le vent, les insectes ou les oiseaux, elle permet la fécondation et la formation des fruits.",
+  "hint": "Les abeilles y participent."
+ },
+ {
+  "key": "nat-502",
+  "concept": "nature.plants.coton",
+  "label": "Coton",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "D'où vient la fibre de coton ?",
+  "options": [
+   "Des poils qui entourent les graines du cotonnier*",
+   "De la tige du cotonnier",
+   "De ses feuilles",
+   "De ses racines"
+  ],
+  "explanation": "Après la floraison, le fruit (la capsule) s'ouvre sur une touffe de fibres blanches.",
+  "hint": "Elle entoure les graines."
+ },
+ {
+  "key": "nat-503",
+  "concept": "nature.plants.glands",
+  "label": "Glands",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel arbre produit des glands ?",
+  "options": [
+   "Le chêne*",
+   "Le hêtre",
+   "Le châtaignier",
+   "Le noyer"
+  ],
+  "explanation": "Les glands sont les fruits du chêne ; le hêtre donne des faînes.",
+  "hint": "Un arbre majestueux."
+ },
+ {
+  "key": "nat-504",
+  "concept": "nature.plants.erable_du_canada",
+  "label": "Érable du Canada",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel arbre figure sur le drapeau du Canada ?",
+  "options": [
+   "L'érable*",
+   "Le sapin",
+   "Le bouleau",
+   "Le chêne"
+  ],
+  "explanation": "Sa feuille rouge orne le drapeau depuis 1965 ; sa sève donne le sirop d'érable.",
+  "hint": "Il donne un sirop."
+ },
+ {
+  "key": "nat-505",
+  "concept": "nature.plants.betterave_sucriere",
+  "label": "Betterave sucrière",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quelle plante tire-t-on l'essentiel du sucre produit en Europe ?",
+  "options": [
+   "La betterave sucrière*",
+   "La canne à sucre",
+   "Le maïs",
+   "L'érable"
+  ],
+  "explanation": "La culture s'est développée sous Napoléon, pendant le blocus qui privait la France du sucre de canne.",
+  "hint": "Elle pousse sous terre."
+ },
+ {
+  "key": "nat-506",
+  "concept": "nature.plants.cannelle",
+  "label": "Cannelle",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "D'où vient la cannelle ?",
+  "options": [
+   "De l'écorce d'un arbre*",
+   "De graines séchées",
+   "De fleurs broyées",
+   "D'une racine"
+  ],
+  "explanation": "On récolte l'écorce du cannelier, qui s'enroule en séchant en bâtons.",
+  "hint": "Elle s'enroule en séchant."
+ },
+ {
+  "key": "nat-507",
+  "concept": "nature.plants.poivre",
+  "label": "Poivre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce que le poivre noir ?",
+  "options": [
+   "Le fruit séché d'une liane*",
+   "La racine d'un arbuste",
+   "L'écorce d'un arbre",
+   "Une feuille broyée"
+  ],
+  "explanation": "Les baies du poivrier, cueillies vertes puis séchées, noircissent. Sans leur peau, elles donnent le poivre blanc.",
+  "hint": "On parle de « grains »."
+ },
+ {
+  "key": "nat-508",
+  "concept": "nature.plants.tequila",
+  "label": "Tequila",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quelle plante est tirée la tequila ?",
+  "options": [
+   "L'agave bleu*",
+   "Un cactus",
+   "Le maïs",
+   "La canne à sucre"
+  ],
+  "explanation": "Au Mexique, on distille le cœur de l'agave bleu, qui n'est pas un cactus.",
+  "hint": "Ce n'est pas un cactus."
+ },
+ {
+  "key": "nat-509",
+  "concept": "nature.plants.tulipe",
+  "label": "Tulipe",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle fleur est l'emblème des Pays-Bas ?",
+  "options": [
+   "La tulipe*",
+   "La rose",
+   "Le lys",
+   "Le coquelicot"
+  ],
+  "explanation": "Arrivée de Turquie au XVIe siècle, elle provoque en 1637 la « tulipomanie », une célèbre bulle spéculative.",
+  "hint": "Elle a provoqué une bulle financière."
+ },
+ {
+  "key": "nat-510",
+  "concept": "nature.plants.houblon",
+  "label": "Houblon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quoi sert principalement le houblon ?",
+  "options": [
+   "À fabriquer la bière*",
+   "À fabriquer le vin",
+   "À faire du pain",
+   "À teindre des tissus"
+  ],
+  "explanation": "Ses fleurs apportent l'amertume et les arômes de la bière.",
+  "hint": "Il apporte l'amertume."
+ },
+ {
+  "key": "nat-511",
+  "concept": "nature.plants.tournesol",
+  "label": "Tournesol",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Un tournesol adulte suit le Soleil d'est en ouest toute la journée.",
+  "answer": false,
+  "explanation": "Non : seuls les jeunes tournesols suivent le Soleil. Une fois en fleur, ils restent tournés vers l'est.",
+  "hint": "Seulement quand il est jeune."
+ },
+ {
+  "key": "nat-512",
+  "concept": "nature.plants.origine_des_cactus",
+  "label": "Origine des cactus",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Les cactus sont presque tous originaires des Amériques.",
+  "answer": true,
+  "explanation": "Oui : une seule espèce (du genre Rhipsalis) pousse naturellement hors des Amériques. En Afrique, ce sont souvent des euphorbes.",
+  "hint": "Pense au Mexique."
+ },
+ {
+  "key": "nat-513",
+  "concept": "nature.plants.ginkgo",
+  "label": "Ginkgo",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel arbre aux feuilles en éventail existe depuis environ 200 millions d'années ?",
+  "options": [
+   "Le ginkgo*",
+   "Le palmier",
+   "Le saule",
+   "L'olivier"
+  ],
+  "explanation": "Véritable « fossile vivant », il a survécu à la bombe d'Hiroshima, à 1 km de l'explosion.",
+  "hint": "Un « fossile vivant »."
+ },
+ {
+  "key": "nat-514",
+  "concept": "nature.plants.rafflesie",
+  "label": "Rafflésie",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle plante produit la plus grande fleur du monde ?",
+  "options": [
+   "La rafflésie*",
+   "Le tournesol",
+   "Le lotus",
+   "Le nénuphar géant"
+  ],
+  "explanation": "Sa fleur atteint 1 m de diamètre et sent la viande pourrie pour attirer les mouches.",
+  "hint": "Elle sent très mauvais."
+ },
+ {
+  "key": "nat-515",
+  "concept": "nature.plants.vivace",
+  "label": "Vivace",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Une plante « vivace » est une plante…",
+  "options": [
+   "qui vit plusieurs années*",
+   "qui ne vit qu'une saison",
+   "qui fleurit la nuit",
+   "qui n'a pas de racines"
+  ],
+  "explanation": "Une plante annuelle vit une seule saison ; une vivace repousse d'année en année.",
+  "hint": "Le contraire d'annuelle."
+ },
+ {
+  "key": "nat-516",
+  "concept": "nature.plants.famille_de_la_pomme_de_terre",
+  "label": "Famille de la pomme de terre",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "La pomme de terre est de la même famille que…",
+  "options": [
+   "la tomate*",
+   "la carotte",
+   "la betterave",
+   "le navet"
+  ],
+  "explanation": "Toutes deux sont des solanacées, comme l'aubergine et le poivron. Leurs feuilles sont toxiques.",
+  "hint": "Leurs feuilles se ressemblent."
+ },
+ {
+  "key": "nat-517",
+  "concept": "nature.plants.artichaut",
+  "label": "Artichaut",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel légume est en réalité un bouton de fleur ?",
+  "options": [
+   "L'artichaut*",
+   "La carotte",
+   "Le poireau",
+   "L'épinard"
+  ],
+  "explanation": "On mange le cœur et la base des bractées avant la floraison. Laissé en place, il donne une fleur violette.",
+  "hint": "Il fleurit en violet."
+ },
+ {
+  "key": "nat-518",
+  "concept": "nature.plants.hevea",
+  "label": "Hévéa",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quel arbre tire-t-on le caoutchouc naturel ?",
+  "options": [
+   "L'hévéa*",
+   "L'érable",
+   "Le pin",
+   "Le baobab"
+  ],
+  "explanation": "On incise son écorce pour recueillir le latex, une sève blanche.",
+  "hint": "Sa sève est blanche."
+ },
+ {
+  "key": "nat-519",
+  "concept": "nature.marine.plus_grand_ocean",
+  "label": "Plus grand océan",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le plus grand océan ?",
+  "options": [
+   "Le Pacifique*",
+   "L'Atlantique",
+   "L'océan Indien",
+   "L'océan Arctique"
+  ],
+  "explanation": "Il couvre environ un tiers de la surface du globe, plus que toutes les terres émergées réunies.",
+  "hint": "Il est « paisible »."
+ },
+ {
+  "key": "nat-520",
+  "concept": "nature.marine.respiration_des_baleines",
+  "label": "Respiration des baleines",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment respirent les baleines ?",
+  "options": [
+   "Avec des poumons, en remontant à la surface*",
+   "Avec des branchies",
+   "Par la peau",
+   "Elles ne respirent pas"
+  ],
+  "explanation": "Ce sont des mammifères : elles expirent par l'évent, ce qui forme le « souffle ».",
+  "hint": "Ce sont des mammifères."
+ },
+ {
+  "key": "nat-521",
+  "concept": "nature.marine.plancton",
+  "label": "Plancton",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que le plancton ?",
+  "options": [
+   "Des organismes qui dérivent au gré des courants*",
+   "Des algues fixées au fond",
+   "Des bancs de petits poissons",
+   "Des coraux morts"
+  ],
+  "explanation": "Du grec « planktos », errant : végétal (phytoplancton) ou animal (zooplancton), souvent microscopique.",
+  "hint": "Ils ne nagent pas contre le courant."
+ },
+ {
+  "key": "nat-522",
+  "concept": "nature.marine.squelette_du_requin",
+  "label": "Squelette du requin",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le requin est…",
+  "options": [
+   "un poisson au squelette de cartilage*",
+   "un mammifère marin",
+   "un poisson au squelette osseux",
+   "un reptile marin"
+  ],
+  "explanation": "Requins et raies ont un squelette cartilagineux, plus léger et souple que l'os.",
+  "hint": "Comme le bout de ton nez."
+ },
+ {
+  "key": "nat-523",
+  "concept": "nature.marine.calmar_colossal",
+  "label": "Calmar colossal",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est l'invertébré le plus lourd connu ?",
+  "options": [
+   "Le calmar colossal*",
+   "La pieuvre géante",
+   "La méduse à crinière de lion",
+   "Le crabe géant du Japon"
+  ],
+  "explanation": "Il peut dépasser 400 kg et possède les plus grands yeux du règne animal, gros comme un ballon.",
+  "hint": "Il a des yeux énormes."
+ },
+ {
+  "key": "nat-524",
+  "concept": "nature.marine.bernard_l_ermite",
+  "label": "Bernard-l'ermite",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel animal s'abrite dans une coquille abandonnée ?",
+  "options": [
+   "Le bernard-l'ermite*",
+   "Le homard",
+   "La crevette",
+   "L'oursin"
+  ],
+  "explanation": "Son abdomen mou a besoin d'une protection : il change de coquille en grandissant.",
+  "hint": "Il déménage en grandissant."
+ },
+ {
+  "key": "nat-525",
+  "concept": "nature.marine.poisson_clown",
+  "label": "Poisson-clown",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Chez le poisson-clown, que se passe-t-il quand la femelle dominante meurt ?",
+  "options": [
+   "Le mâle dominant devient femelle*",
+   "Le groupe se disperse",
+   "Une femelle arrive d'ailleurs",
+   "Les petits deviennent tous mâles"
+  ],
+  "explanation": "Les poissons-clowns naissent mâles ; le plus gros peut changer de sexe pour remplacer la femelle.",
+  "hint": "Il change de sexe."
+ },
+ {
+  "key": "nat-526",
+  "concept": "nature.marine.mer_morte",
+  "label": "Mer Morte",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle mer, très salée, flotte-t-on sans effort ?",
+  "options": [
+   "La mer Morte*",
+   "La Méditerranée",
+   "La mer Rouge",
+   "La mer Baltique"
+  ],
+  "explanation": "Environ 10 fois plus salée que l'océan : l'eau très dense porte le corps.",
+  "hint": "Sa rive est le point le plus bas des terres."
+ },
+ {
+  "key": "nat-527",
+  "concept": "nature.marine.blanchissement_du_corail",
+  "label": "Blanchissement du corail",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qui provoque surtout le blanchissement des coraux ?",
+  "options": [
+   "Le réchauffement de l'eau*",
+   "Le froid",
+   "La pollution sonore",
+   "Les marées"
+  ],
+  "explanation": "Stressé par la chaleur, le corail expulse les algues qui le nourrissent et le colorent.",
+  "hint": "Un problème de température."
+ },
+ {
+  "key": "nat-528",
+  "concept": "nature.marine.otaries_et_phoques",
+  "label": "Otaries et phoques",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qui distingue une otarie d'un phoque ?",
+  "options": [
+   "L'otarie a des oreilles externes visibles*",
+   "L'otarie vit en eau douce",
+   "Le phoque marche sur ses nageoires",
+   "Le phoque a des oreilles externes"
+  ],
+  "explanation": "L'otarie a de petits pavillons d'oreille et se déplace à quatre pattes sur terre ; le phoque rampe sur le ventre.",
+  "hint": "Regarde leurs oreilles."
+ },
+ {
+  "key": "nat-529",
+  "concept": "nature.marine.lamantin",
+  "label": "Lamantin",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Lequel de ces animaux marins est herbivore ?",
+  "options": [
+   "Le lamantin*",
+   "L'orque",
+   "Le phoque",
+   "Le morse"
+  ],
+  "explanation": "Le lamantin et le dugong broutent les herbiers marins. On les surnomme les « vaches de mer ».",
+  "hint": "La « vache de mer »."
+ },
+ {
+  "key": "nat-530",
+  "concept": "nature.marine.dauphins",
+  "label": "Dauphins",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Les dauphins sont des poissons.",
+  "answer": false,
+  "explanation": "Non : ce sont des mammifères marins. Ils respirent de l'air et allaitent leurs petits.",
+  "hint": "Ils respirent de l'air."
+ },
+ {
+  "key": "nat-531",
+  "concept": "nature.marine.oxygene_du_phytoplancton",
+  "label": "Oxygène du phytoplancton",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Environ la moitié de l'oxygène produit sur Terre vient du plancton océanique.",
+  "answer": true,
+  "explanation": "Oui : le phytoplancton fait de la photosynthèse, comme les forêts, et produit environ 50 % de l'oxygène.",
+  "hint": "Il fait de la photosynthèse."
+ },
+ {
+  "key": "nat-532",
+  "concept": "nature.marine.profondeur_des_mariannes",
+  "label": "Profondeur des Mariannes",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle profondeur atteint environ la fosse des Mariannes ?",
+  "options": [
+   "Environ 11 000 m*",
+   "Environ 4 000 m",
+   "Environ 8 800 m",
+   "Environ 25 000 m"
+  ],
+  "explanation": "Près de 11 km : on pourrait y engloutir l'Everest (8 849 m) avec plus de 2 km d'eau au-dessus.",
+  "hint": "Plus que la hauteur de l'Everest."
+ },
+ {
+  "key": "nat-533",
+  "concept": "nature.marine.echolocation",
+  "label": "Écholocation",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel animal marin se repère par écholocation ?",
+  "options": [
+   "Le dauphin*",
+   "Le requin",
+   "Le thon",
+   "La méduse"
+  ],
+  "explanation": "Il émet des clics et « lit » leur écho pour trouver ses proies, même dans l'eau trouble.",
+  "hint": "Comme la chauve-souris."
+ },
+ {
+  "key": "nat-534",
+  "concept": "nature.marine.cachalot",
+  "label": "Cachalot",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le plus grand prédateur à dents du monde ?",
+  "options": [
+   "Le cachalot*",
+   "L'orque",
+   "Le grand requin blanc",
+   "La baleine bleue"
+  ],
+  "explanation": "Il atteint 18 m et plonge à plus de 1 000 m pour chasser le calmar géant. La baleine bleue n'a pas de dents, mais des fanons.",
+  "hint": "Il chasse le calmar géant."
+ },
+ {
+  "key": "nat-535",
+  "concept": "nature.marine.sel_de_la_mer",
+  "label": "Sel de la mer",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi l'eau de mer est-elle salée ?",
+  "options": [
+   "Les rivières y apportent des sels arrachés aux roches*",
+   "Le sel vient du fond des volcans uniquement",
+   "Les poissons produisent du sel",
+   "La pluie est salée"
+  ],
+  "explanation": "Depuis des millions d'années, l'eau dissout les minéraux des roches ; l'évaporation concentre le sel dans les océans.",
+  "hint": "Les roches y sont pour beaucoup."
+ },
+ {
+  "key": "nat-536",
+  "concept": "nature.earth.croute_terrestre",
+  "label": "Croûte terrestre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est la couche la plus fine de la Terre ?",
+  "options": [
+   "La croûte*",
+   "Le manteau",
+   "Le noyau externe",
+   "Le noyau interne"
+  ],
+  "explanation": "Entre 5 km sous les océans et 70 km sous les montagnes : comme la peau d'une pomme.",
+  "hint": "Celle sur laquelle on vit."
+ },
+ {
+  "key": "nat-537",
+  "concept": "nature.earth.el_nino",
+  "label": "El Niño",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qu'El Niño ?",
+  "options": [
+   "Un réchauffement périodique des eaux du Pacifique*",
+   "Un vent chaud du Sahara",
+   "Un volcan du Chili",
+   "Un courant froid de l'Atlantique"
+  ],
+  "explanation": "Tous les 2 à 7 ans, il bouleverse la météo mondiale : sécheresses en Australie, pluies au Pérou.",
+  "hint": "« L'enfant », en espagnol."
+ },
+ {
+  "key": "nat-538",
+  "concept": "nature.earth.gaz_principal_de_l_air",
+  "label": "Gaz principal de l'air",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel gaz est le plus abondant dans l'atmosphère ?",
+  "options": [
+   "Le diazote*",
+   "Le dioxygène",
+   "Le dioxyde de carbone",
+   "L'argon"
+  ],
+  "explanation": "L'air contient environ 78 % de diazote, 21 % de dioxygène, 1 % d'argon et 0,04 % de CO₂.",
+  "hint": "Pas celui qu'on respire."
+ },
+ {
+  "key": "nat-539",
+  "concept": "nature.earth.echelle_de_beaufort",
+  "label": "Échelle de Beaufort",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle échelle mesure la force du vent ?",
+  "options": [
+   "L'échelle de Beaufort*",
+   "L'échelle de Richter",
+   "L'échelle de Mohs",
+   "L'échelle de Kelvin"
+  ],
+  "explanation": "De 0 (calme) à 12 (ouragan). Richter mesure les séismes, Mohs la dureté des minéraux.",
+  "hint": "Du nom d'un amiral britannique."
+ },
+ {
+  "key": "nat-540",
+  "concept": "nature.earth.geyser",
+  "label": "Geyser",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un geyser ?",
+  "options": [
+   "Une source d'eau chaude qui jaillit par intermittence*",
+   "Un volcan sous-marin",
+   "Une cascade gelée",
+   "Un tourbillon de vent"
+  ],
+  "explanation": "Le mot vient du Geysir, en Islande. Old Faithful, aux États-Unis, jaillit environ toutes les 90 minutes.",
+  "hint": "Le mot vient d'Islande."
+ },
+ {
+  "key": "nat-541",
+  "concept": "nature.earth.basalte",
+  "label": "Basalte",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Laquelle de ces roches est d'origine volcanique ?",
+  "options": [
+   "Le basalte*",
+   "Le calcaire",
+   "Le grès",
+   "Le marbre"
+  ],
+  "explanation": "La lave refroidie donne le basalte, parfois en orgues de colonnes. Calcaire et grès sont sédimentaires.",
+  "hint": "Pense aux orgues basaltiques."
+ },
+ {
+  "key": "nat-542",
+  "concept": "nature.earth.marbre",
+  "label": "Marbre",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le marbre est une roche…",
+  "options": [
+   "métamorphique*",
+   "volcanique",
+   "sédimentaire",
+   "organique"
+  ],
+  "explanation": "Du calcaire transformé par la chaleur et la pression en profondeur.",
+  "hint": "Un calcaire transformé."
+ },
+ {
+  "key": "nat-543",
+  "concept": "nature.earth.moraine",
+  "label": "Moraine",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'est-ce qu'une moraine ?",
+  "options": [
+   "Des débris rocheux déposés par un glacier*",
+   "Un marais en montagne",
+   "Une pente d'éboulis",
+   "Un lac de cratère"
+  ],
+  "explanation": "Le glacier pousse et transporte des roches ; elles restent en bourrelets quand il recule.",
+  "hint": "Un glacier les transporte."
+ },
+ {
+  "key": "nat-544",
+  "concept": "nature.earth.age_de_la_terre",
+  "label": "Âge de la Terre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est l'âge approximatif de la Terre ?",
+  "options": [
+   "4,5 milliards d'années*",
+   "6 000 ans",
+   "450 millions d'années",
+   "13,8 milliards d'années"
+  ],
+  "explanation": "13,8 milliards d'années, c'est l'âge de l'Univers. La Terre s'est formée il y a environ 4,54 milliards d'années.",
+  "hint": "L'Univers est bien plus vieux."
+ },
+ {
+  "key": "nat-545",
+  "concept": "nature.earth.hausse_du_niveau_des_mers",
+  "label": "Hausse du niveau des mers",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qui fait surtout monter le niveau des mers ?",
+  "options": [
+   "La fonte des glaciers terrestres et la dilatation de l'eau*",
+   "La fonte de la banquise arctique",
+   "Des pluies plus abondantes",
+   "L'érosion des côtes"
+  ],
+  "explanation": "La banquise flotte déjà : en fondant, elle ne fait presque pas monter la mer, comme un glaçon dans un verre. Les glaciers terrestres et l'eau qui se dilate en chauffant, si.",
+  "hint": "Pense au glaçon dans un verre."
+ },
+ {
+  "key": "nat-546",
+  "concept": "nature.earth.effet_de_serre",
+  "label": "Effet de serre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce que l'effet de serre naturel ?",
+  "options": [
+   "Des gaz qui retiennent une partie de la chaleur de la Terre*",
+   "Un trou dans la couche d'ozone",
+   "La chaleur des volcans",
+   "La pollution des villes"
+  ],
+  "explanation": "Sans lui, la Terre serait gelée. Son renforcement par nos émissions provoque le réchauffement.",
+  "hint": "Sans lui, il ferait très froid."
+ },
+ {
+  "key": "nat-547",
+  "concept": "nature.earth.sans_effet_de_serre",
+  "label": "Sans effet de serre",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Sans effet de serre naturel, quelle serait la température moyenne de la Terre ?",
+  "options": [
+   "Environ −18 °C*",
+   "Environ 0 °C",
+   "Environ +5 °C",
+   "Environ −100 °C"
+  ],
+  "explanation": "Au lieu d'environ +15 °C aujourd'hui : l'effet de serre naturel apporte environ 33 °C.",
+  "hint": "Bien en dessous de zéro."
+ },
+ {
+  "key": "nat-548",
+  "concept": "nature.earth.foudre",
+  "label": "Foudre",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "La foudre ne tombe jamais deux fois au même endroit.",
+  "answer": false,
+  "explanation": "Faux : l'Empire State Building est frappé environ 20 à 25 fois par an. Les points hauts attirent la foudre.",
+  "hint": "Pense aux gratte-ciel."
+ },
+ {
+  "key": "nat-549",
+  "concept": "nature.earth.arctique_et_antarctique",
+  "label": "Arctique et Antarctique",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "L'Antarctique est un continent, alors que l'Arctique est surtout un océan gelé.",
+  "answer": true,
+  "explanation": "Oui : l'Antarctique est une terre couverte de glace ; l'Arctique, un océan couvert de banquise.",
+  "hint": "L'un a un sol, l'autre non."
+ },
+ {
+  "key": "nat-550",
+  "concept": "nature.earth.ceinture_de_feu",
+  "label": "Ceinture de feu",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Où se trouve la « ceinture de feu » ?",
+  "options": [
+   "Autour de l'océan Pacifique*",
+   "Autour de la Méditerranée",
+   "En Afrique de l'Est",
+   "En Islande"
+  ],
+  "explanation": "Environ 75 % des volcans actifs et 90 % des séismes s'y concentrent, du Chili au Japon.",
+  "hint": "Japon, Chili, Indonésie…"
+ },
+ {
+  "key": "nat-551",
+  "concept": "nature.earth.barometre",
+  "label": "Baromètre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel instrument mesure la pression atmosphérique ?",
+  "options": [
+   "Le baromètre*",
+   "Le thermomètre",
+   "L'anémomètre",
+   "L'hygromètre"
+  ],
+  "explanation": "L'anémomètre mesure le vent, l'hygromètre l'humidité.",
+  "hint": "« Baros » : la pesanteur."
+ },
+ {
+  "key": "nat-552",
+  "concept": "nature.earth.alizes",
+  "label": "Alizés",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appellent les vents réguliers qui soufflent vers l'équateur ?",
+  "options": [
+   "Les alizés*",
+   "Le mistral",
+   "La mousson",
+   "Le sirocco"
+  ],
+  "explanation": "Ils ont porté les navires à voile vers les Amériques. Le mistral et le sirocco sont des vents régionaux.",
+  "hint": "Ils poussaient les caravelles."
+ }
+]

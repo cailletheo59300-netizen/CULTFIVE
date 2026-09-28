@@ -1,13 +1,13 @@
 {
- "cote": 887,
- "level": 43,
- "avg_ms": 8200,
+ "cote": 1045,
+ "level": 53,
+ "avg_ms": 6400,
  "placed": false,
- "correct": 0,
+ "correct": 1,
  "history": [
   {
    "day": "2027-03-01",
-   "level": 43.5
+   "level": 52.6
   }
  ],
  "answered": 1,
@@ -16,9 +16,9 @@
  "subdomains": [
   {
    "id": "geography.capitals",
-   "cote": 887,
+   "cote": 1045,
    "name": "Capitales",
-   "level": 43,
+   "level": 53,
    "placed": false,
    "correct": 0,
    "answered": 0,
@@ -28,9 +28,9 @@
   },
   {
    "id": "geography.flags",
-   "cote": 887,
+   "cote": 1045,
    "name": "Drapeaux",
-   "level": 43,
+   "level": 53,
    "placed": false,
    "correct": 0,
    "answered": 0,
@@ -40,11 +40,11 @@
   },
   {
    "id": "geography.countries",
-   "cote": 887,
+   "cote": 1045,
    "name": "Pays & villes",
-   "level": 43,
+   "level": 53,
    "placed": false,
-   "correct": 0,
+   "correct": 1,
    "answered": 1,
    "available": 745,
    "placement": 0,
@@ -52,9 +52,9 @@
   },
   {
    "id": "geography.relief",
-   "cote": 887,
+   "cote": 1045,
    "name": "Fleuves, mers & reliefs",
-   "level": 43,
+   "level": 53,
    "placed": false,
    "correct": 0,
    "answered": 0,
@@ -64,9 +64,9 @@
   },
   {
    "id": "geography.monuments",
-   "cote": 887,
+   "cote": 1045,
    "name": "Monuments & patrimoine",
-   "level": 43,
+   "level": 53,
    "placed": false,
    "correct": 0,
    "answered": 0,
@@ -78,18 +78,11 @@
  "reliability": 0.03,
  "by_difficulty": [
   {
-   "band": "easy",
-   "correct": 0,
+   "band": "hard",
+   "correct": 1,
    "answered": 1
   }
  ],
- "recent_errors": [
-  {
-   "label": "Hémisphère sud",
-   "since": "2027-03-01T08:00:26+00:00",
-   "state": "failed",
-   "concept_id": "geography.countries.cities_hemisphere"
-  }
- ],
+ "recent_errors": [],
  "concepts_mastered": 0
 }

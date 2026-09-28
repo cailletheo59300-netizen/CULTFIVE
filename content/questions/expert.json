@@ -717,16 +717,6 @@
   "explanation": "La boîte « Mélange » contient un seul type de fruit. Si c'est une pomme, c'est la boîte de pommes ; les deux autres s'en déduisent."
  },
  {
-  "key": "exp-058",
-  "concept": "logic.puzzles.expert_overtake_second",
-  "label": "Doubler le deuxième",
-  "type": "numeric",
-  "difficulty": 66,
-  "prompt": "Dans une course, tu doubles le coureur en deuxième position. À quelle place es-tu ?",
-  "answer": 2,
-  "explanation": "Tu prends sa place : deuxième. Le premier est toujours devant toi."
- },
- {
   "key": "exp-060",
   "concept": "arts.painting.expert_caravaggio",
   "label": "Vocation de saint Matthieu",
@@ -1168,21 +1158,6 @@
   "unit": "octets"
  },
  {
-  "key": "exp-091",
-  "concept": "tech.computing.expert_python",
-  "label": "Créateur de Python",
-  "type": "mcq",
-  "difficulty": 68,
-  "prompt": "Quel langage de programmation a été créé par Guido van Rossum ?",
-  "options": [
-   "Python*",
-   "Java",
-   "Ruby",
-   "C++"
-  ],
-  "explanation": "Python, en 1991, nommé d'après les Monty Python."
- },
- {
   "key": "exp-092",
   "concept": "tech.computing.expert_first_browser",
   "label": "Premier navigateur",
@@ -1281,21 +1256,6 @@
   "prompt": "En combien de poches se divise l'estomac d'une vache ?",
   "answer": 4,
   "explanation": "Panse, bonnet, feuillet et caillette : c'est un ruminant."
- },
- {
-  "key": "exp-100",
-  "concept": "nature.plants.expert_vanilla",
-  "label": "La vanille",
-  "type": "mcq",
-  "difficulty": 72,
-  "prompt": "La vanille est le fruit de quelle plante ?",
-  "options": [
-   "Une orchidée*",
-   "Un palmier",
-   "Une liane de poivrier",
-   "Un arbuste de la famille du café"
-  ],
-  "explanation": "Le vanillier est une orchidée grimpante, pollinisée à la main hors du Mexique."
  },
  {
   "key": "exp-101",

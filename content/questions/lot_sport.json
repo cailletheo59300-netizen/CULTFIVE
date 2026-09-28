@@ -1,0 +1,469 @@
+[
+ {
+  "key": "sport-401",
+  "concept": "sport.rules.egalite_au_tennis",
+  "label": "Égalité au tennis",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au tennis, comment appelle-t-on le score de 40-40 ?",
+  "options": [
+   "Égalité*",
+   "Avantage",
+   "Jeu blanc",
+   "Tie-break"
+  ],
+  "explanation": "À égalité, il faut marquer deux points de suite : avantage, puis jeu.",
+  "hint": "Personne ne mène."
+ },
+ {
+  "key": "sport-402",
+  "concept": "sport.rules.transformation_au_rugby",
+  "label": "Transformation au rugby",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Au rugby à XV, combien de points rapporte une transformation ?",
+  "answer": 2,
+  "explanation": "Essai : 5 points ; transformation : 2 ; pénalité ou drop : 3.",
+  "hint": "Moins qu'un drop."
+ },
+ {
+  "key": "sport-403",
+  "concept": "sport.rules.lancer_franc",
+  "label": "Lancer franc",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Au basket, combien de points rapporte un lancer franc réussi ?",
+  "answer": 1,
+  "explanation": "Un point par lancer franc ; 2 points pour un panier normal, 3 derrière la ligne à 3 points.",
+  "hint": "Le plus petit panier."
+ },
+ {
+  "key": "sport-404",
+  "concept": "sport.rules.remplacements_au_football",
+  "label": "Remplacements au football",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de remplacements chaque équipe peut-elle faire dans un match de football officiel (hors prolongations) ?",
+  "answer": 5,
+  "explanation": "Autorisés à titre provisoire pendant la pandémie de 2020, les cinq remplacements sont devenus la règle en 2022.",
+  "hint": "Plus de trois depuis 2020."
+ },
+ {
+  "key": "sport-405",
+  "concept": "sport.rules.ippon",
+  "label": "Ippon",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au judo, quel mot annonce une victoire immédiate ?",
+  "options": [
+   "Ippon*",
+   "Waza-ari",
+   "Hajime",
+   "Matte"
+  ],
+  "explanation": "Ippon : projection parfaite, immobilisation de 20 secondes ou abandon. « Hajime » lance le combat, « matte » l'arrête.",
+  "hint": "Le point parfait."
+ },
+ {
+  "key": "sport-406",
+  "concept": "sport.rules.ace",
+  "label": "Ace",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au tennis, qu'est-ce qu'un « ace » ?",
+  "options": [
+   "Un service que l'adversaire ne touche pas*",
+   "Une double faute",
+   "Un point gagné au filet",
+   "Un jeu gagné sans perdre de point"
+  ],
+  "explanation": "Le service est si bon que le receveur ne parvient même pas à toucher la balle.",
+  "hint": "Un service parfait."
+ },
+ {
+  "key": "sport-407",
+  "concept": "sport.rules.roque",
+  "label": "Roque",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Aux échecs, quel est le seul coup qui déplace deux pièces à la fois ?",
+  "options": [
+   "Le roque*",
+   "La prise en passant",
+   "La promotion",
+   "L'échec et mat"
+  ],
+  "explanation": "Le roi et une tour bougent en même temps : le roi se met à l'abri.",
+  "hint": "Roi et tour."
+ },
+ {
+  "key": "sport-408",
+  "concept": "sport.rules.fou_aux_echecs",
+  "label": "Fou aux échecs",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Aux échecs, quelle pièce se déplace uniquement en diagonale ?",
+  "options": [
+   "Le fou*",
+   "La tour",
+   "Le cavalier",
+   "Le roi"
+  ],
+  "explanation": "Le fou reste toute la partie sur des cases de la même couleur. La dame, elle, va aussi en ligne droite.",
+  "hint": "Il reste sur une couleur."
+ },
+ {
+  "key": "sport-409",
+  "concept": "sport.rules.nage_la_plus_rapide",
+  "label": "Nage la plus rapide",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle nage est la plus rapide ?",
+  "options": [
+   "Le crawl*",
+   "La brasse",
+   "Le dos",
+   "Le papillon"
+  ],
+  "explanation": "Les nageurs choisissent tous le crawl en « nage libre ». La brasse est la plus lente.",
+  "hint": "Utilisée en « nage libre »."
+ },
+ {
+  "key": "sport-410",
+  "concept": "sport.rules.drapeau_a_damier",
+  "label": "Drapeau à damier",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En Formule 1, que signifie le drapeau à damier ?",
+  "options": [
+   "La fin de la course*",
+   "Un accident",
+   "La voiture de sécurité",
+   "Une pénalité"
+  ],
+  "explanation": "Il salue le vainqueur puis chaque pilote qui franchit la ligne d'arrivée.",
+  "hint": "Noir et blanc."
+ },
+ {
+  "key": "sport-411",
+  "concept": "sport.rules.epreuves_du_decathlon",
+  "label": "Épreuves du décathlon",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien d'épreuves compte le décathlon ?",
+  "answer": 10,
+  "explanation": "« Déca » = dix : courses, sauts et lancers sur deux jours. L'heptathlon féminin en compte sept.",
+  "hint": "« Déca » veut dire dix."
+ },
+ {
+  "key": "sport-412",
+  "concept": "sport.rules.biathlon",
+  "label": "Biathlon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Le biathlon combine le ski de fond et…",
+  "options": [
+   "le tir à la carabine*",
+   "le saut à ski",
+   "la luge",
+   "le patinage"
+  ],
+  "explanation": "Les athlètes alternent ski et tir couché ou debout ; chaque cible manquée coûte une pénalité.",
+  "hint": "Il faut viser."
+ },
+ {
+  "key": "sport-413",
+  "concept": "sport.rules.round_de_boxe",
+  "label": "Round de boxe",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien de temps dure un round de boxe professionnelle masculine ?",
+  "options": [
+   "3 minutes*",
+   "1 minute",
+   "5 minutes",
+   "10 minutes"
+  ],
+  "explanation": "Trois minutes de combat, puis une minute de repos.",
+  "hint": "Suivi d'une minute de repos."
+ },
+ {
+  "key": "sport-414",
+  "concept": "sport.rules.passe_au_gardien",
+  "label": "Passe au gardien",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Au football, le gardien peut prendre à la main une passe volontaire du pied d'un coéquipier.",
+  "answer": false,
+  "explanation": "Non : depuis 1992, c'est interdit, sous peine de coup franc indirect.",
+  "hint": "Une règle de 1992."
+ },
+ {
+  "key": "sport-415",
+  "concept": "sport.rules.jeu_blanc",
+  "label": "Jeu blanc",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Au tennis, un jeu remporté sans que l'adversaire marque un point s'appelle un « jeu blanc ».",
+  "answer": true,
+  "explanation": "Oui : 15, 30, 40, jeu, sans laisser un point. En anglais : love game.",
+  "hint": "Aucun point pour l'adversaire."
+ },
+ {
+  "key": "sport-416",
+  "concept": "sport.champions.carl_lewis",
+  "label": "Carl Lewis",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel athlète américain remporte quatre médailles d'or aux JO de 1984, comme Jesse Owens en 1936 ?",
+  "options": [
+   "Carl Lewis*",
+   "Michael Johnson",
+   "Maurice Greene",
+   "Edwin Moses"
+  ],
+  "explanation": "Au 100 m, au 200 m, au relais 4 × 100 m et au saut en longueur, à Los Angeles. Il remportera neuf titres olympiques en tout.",
+  "hint": "Sprint et saut en longueur."
+ },
+ {
+  "key": "sport-417",
+  "concept": "sport.champions.jesse_owens",
+  "label": "Jesse Owens",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de médailles d'or Jesse Owens a-t-il remportées aux JO de Berlin, en 1936 ?",
+  "answer": 4,
+  "explanation": "100 m, 200 m, saut en longueur et relais 4 × 100 m, sous les yeux d'Hitler.",
+  "hint": "Autant que Carl Lewis en 1984."
+ },
+ {
+  "key": "sport-418",
+  "concept": "sport.champions.jean_claude_killy",
+  "label": "Jean-Claude Killy",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel skieur français remporte les trois épreuves de ski alpin aux JO de Grenoble, en 1968 ?",
+  "options": [
+   "Jean-Claude Killy*",
+   "Guy Périllat",
+   "Luc Alphand",
+   "Alexis Pinturault"
+  ],
+  "explanation": "Descente, slalom géant et slalom : le triplé à domicile.",
+  "hint": "Il a ensuite coorganisé les JO d'Albertville."
+ },
+ {
+  "key": "sport-419",
+  "concept": "sport.champions.ballons_d_or_de_messi",
+  "label": "Ballons d'or de Messi",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel footballeur a remporté le Ballon d'or à huit reprises ?",
+  "options": [
+   "Lionel Messi*",
+   "Cristiano Ronaldo",
+   "Michel Platini",
+   "Johan Cruyff"
+  ],
+  "explanation": "Record absolu, de 2009 à 2023. Cristiano Ronaldo en a cinq, Platini trois.",
+  "hint": "Un Argentin."
+ },
+ {
+  "key": "sport-420",
+  "concept": "sport.champions.laure_manaudou",
+  "label": "Laure Manaudou",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle nageuse française devient championne olympique du 400 m nage libre en 2004 ?",
+  "options": [
+   "Laure Manaudou*",
+   "Camille Muffat",
+   "Charlotte Bonnet",
+   "Coralie Balmy"
+  ],
+  "explanation": "À Athènes, à 17 ans, elle offre à la France son premier titre olympique en natation féminine.",
+  "hint": "À 17 ans, à Athènes."
+ },
+ {
+  "key": "sport-421",
+  "concept": "sport.champions.record_masculin_du_grand_chelem",
+  "label": "Record masculin du Grand Chelem",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel joueur détient le record masculin de titres du Grand Chelem en simple ?",
+  "options": [
+   "Novak Djokovic*",
+   "Rafael Nadal",
+   "Roger Federer",
+   "Pete Sampras"
+  ],
+  "explanation": "Djokovic en compte 24, devant Nadal (22) et Federer (20).",
+  "hint": "Un Serbe."
+ },
+ {
+  "key": "sport-422",
+  "concept": "sport.champions.michael_schumacher",
+  "label": "Michael Schumacher",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel pilote allemand a été sept fois champion du monde de Formule 1 ?",
+  "options": [
+   "Michael Schumacher*",
+   "Sebastian Vettel",
+   "Nico Rosberg",
+   "Niki Lauda"
+  ],
+  "explanation": "Record partagé avec le Britannique Lewis Hamilton.",
+  "hint": "Surnommé le « baron rouge » chez Ferrari."
+ },
+ {
+  "key": "sport-423",
+  "concept": "sport.champions.lance_armstrong",
+  "label": "Lance Armstrong",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel cycliste a été déchu de ses sept victoires sur le Tour de France pour dopage ?",
+  "options": [
+   "Lance Armstrong*",
+   "Miguel Indurain",
+   "Jan Ullrich",
+   "Alberto Contador"
+  ],
+  "explanation": "Ses titres de 1999 à 2005 lui ont été retirés en 2012.",
+  "hint": "Un Américain."
+ },
+ {
+  "key": "sport-424",
+  "concept": "sport.champions.simone_biles",
+  "label": "Simone Biles",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel sport s'illustre Simone Biles ?",
+  "options": [
+   "La gymnastique*",
+   "La natation",
+   "L'athlétisme",
+   "Le tennis"
+  ],
+  "explanation": "Gymnaste américaine la plus titrée de l'histoire, plusieurs figures portent son nom.",
+  "hint": "Des figures portent son nom."
+ },
+ {
+  "key": "sport-425",
+  "concept": "sport.champions.renaud_lavillenie",
+  "label": "Renaud Lavillenie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel perchiste français bat en 2014 le record du monde détenu depuis 21 ans par Sergueï Bubka ?",
+  "options": [
+   "Renaud Lavillenie*",
+   "Armand Duplantis",
+   "Jean Galfione",
+   "Pierre Quinon"
+  ],
+  "explanation": "6,16 m à Donetsk, la ville de Bubka. Le Suédois Armand Duplantis a depuis largement dépassé ce record.",
+  "hint": "Champion olympique à Londres en 2012."
+ },
+ {
+  "key": "sport-426",
+  "concept": "sport.champions.victor_wembanyama",
+  "label": "Victor Wembanyama",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel basketteur français est choisi en premier à la draft NBA 2023 ?",
+  "options": [
+   "Victor Wembanyama*",
+   "Rudy Gobert",
+   "Evan Fournier",
+   "Nicolas Batum"
+  ],
+  "explanation": "Plus de 2,20 m, recruté par les San Antonio Spurs, l'ancienne équipe de Tony Parker.",
+  "hint": "Plus de 2,20 m."
+ },
+ {
+  "key": "sport-427",
+  "concept": "sport.champions.nikola_karabatic",
+  "label": "Nikola Karabatic",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel handballeur français a été élu trois fois meilleur joueur du monde ?",
+  "options": [
+   "Nikola Karabatic*",
+   "Thierry Omeyer",
+   "Jackson Richardson",
+   "Daniel Narcisse"
+  ],
+  "explanation": "Surnommé « Niko », il a remporté trois titres olympiques avec les « Experts ».",
+  "hint": "Surnommé « Niko »."
+ },
+ {
+  "key": "sport-428",
+  "concept": "sport.champions.marion_bartoli",
+  "label": "Marion Bartoli",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle joueuse française remporte Wimbledon en 2013 ?",
+  "options": [
+   "Marion Bartoli*",
+   "Amélie Mauresmo",
+   "Mary Pierce",
+   "Caroline Garcia"
+  ],
+  "explanation": "Elle bat Sabine Lisicki en finale sans perdre un set du tournoi. Amélie Mauresmo avait gagné en 2006.",
+  "hint": "Elle a arrêté sa carrière la même année."
+ },
+ {
+  "key": "sport-429",
+  "concept": "sport.champions.iron_mike",
+  "label": "Iron Mike",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel boxeur surnommé « Iron Mike » devient champion du monde des poids lourds à 20 ans ?",
+  "options": [
+   "Mike Tyson*",
+   "Muhammad Ali",
+   "Evander Holyfield",
+   "George Foreman"
+  ],
+  "explanation": "En 1986, il est le plus jeune champion du monde des poids lourds de l'histoire.",
+  "hint": "Son prénom est dans son surnom."
+ },
+ {
+  "key": "sport-430",
+  "concept": "sport.champions.tiger_woods",
+  "label": "Tiger Woods",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel golfeur compte 15 victoires en tournois majeurs ?",
+  "options": [
+   "Tiger Woods*",
+   "Rory McIlroy",
+   "Phil Mickelson",
+   "Seve Ballesteros"
+  ],
+  "explanation": "Deuxième total de l'histoire, derrière Jack Nicklaus (18).",
+  "hint": "Un surnom félin."
+ },
+ {
+  "key": "sport-431",
+  "concept": "sport.champions.record_du_200_m",
+  "label": "Record du 200 m",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Usain Bolt détient aussi le record du monde du 200 m.",
+  "answer": true,
+  "explanation": "Oui : 19,19 s en 2009 à Berlin, en plus du 100 m en 9,58 s.",
+  "hint": "Même année que son record du 100 m."
+ },
+ {
+  "key": "sport-432",
+  "concept": "sport.champions.ballon_d_or_de_zidane",
+  "label": "Ballon d'or de Zidane",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Zinédine Zidane n'a jamais remporté le Ballon d'or.",
+  "answer": false,
+  "explanation": "Faux : il l'a reçu en 1998, l'année du titre mondial des Bleus.",
+  "hint": "L'année d'une Coupe du monde."
+ }
+]

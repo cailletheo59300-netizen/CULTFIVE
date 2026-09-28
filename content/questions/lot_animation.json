@@ -1,0 +1,243 @@
+[
+ {
+  "key": "cine-401",
+  "concept": "cinema.animation.studio_de_shrek",
+  "label": "Studio de Shrek",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel studio a produit « Shrek » (2001) ?",
+  "options": [
+   "DreamWorks*",
+   "Pixar",
+   "Disney",
+   "Illumination"
+  ],
+  "explanation": "DreamWorks Animation, fondé notamment par Steven Spielberg ; Shrek remporte le premier Oscar du film d'animation.",
+  "hint": "Cofondé par Spielberg."
+ },
+ {
+  "key": "cine-402",
+  "concept": "cinema.animation.cowboy_de_toy_story",
+  "label": "Cowboy de Toy Story",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le cowboy de « Toy Story » ?",
+  "options": [
+   "Woody*",
+   "Buzz",
+   "Jessie",
+   "Andy"
+  ],
+  "explanation": "Woody, le jouet préféré d'Andy, voit arriver Buzz l'Éclair, un nouveau rival.",
+  "hint": "Son rival est Buzz."
+ },
+ {
+  "key": "cine-403",
+  "concept": "cinema.animation.oncle_de_simba",
+  "label": "Oncle de Simba",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « Le Roi lion », qui est l'oncle de Simba ?",
+  "options": [
+   "Scar*",
+   "Mufasa",
+   "Rafiki",
+   "Zazu"
+  ],
+  "explanation": "Scar tue son frère Mufasa pour prendre le trône. L'histoire s'inspire en partie de Hamlet.",
+  "hint": "Il porte une cicatrice."
+ },
+ {
+  "key": "cine-404",
+  "concept": "cinema.animation.olaf",
+  "label": "Olaf",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le bonhomme de neige de « La Reine des neiges » ?",
+  "options": [
+   "Olaf*",
+   "Sven",
+   "Kristoff",
+   "Hans"
+  ],
+  "explanation": "Il rêve de découvrir l'été. Sven est le renne de Kristoff.",
+  "hint": "Il rêve de l'été."
+ },
+ {
+  "key": "cine-405",
+  "concept": "cinema.animation.la_haut",
+  "label": "Là-haut",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « Là-haut » (Pixar), comment Carl fait-il s'envoler sa maison ?",
+  "options": [
+   "Avec des milliers de ballons*",
+   "Avec une hélice",
+   "Avec un dirigeable",
+   "Grâce à une tornade"
+  ],
+  "explanation": "Des milliers de ballons de baudruche soulèvent la maison vers l'Amérique du Sud.",
+  "hint": "Pense à une fête d'anniversaire."
+ },
+ {
+  "key": "cine-406",
+  "concept": "cinema.animation.mon_voisin_totoro",
+  "label": "Mon voisin Totoro",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel film de Miyazaki deux sœurs rencontrent-elles un gros esprit de la forêt ?",
+  "options": [
+   "Mon voisin Totoro*",
+   "Le Château dans le ciel",
+   "Princesse Mononoké",
+   "Ponyo sur la falaise"
+  ],
+  "explanation": "Satsuki et Mei découvrent Totoro en 1988 ; il est devenu l'emblème du studio Ghibli.",
+  "hint": "L'emblème du studio Ghibli."
+ },
+ {
+  "key": "cine-407",
+  "concept": "cinema.animation.sortie_de_blanche_neige",
+  "label": "Sortie de Blanche-Neige",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "En quelle année sort « Blanche-Neige et les Sept Nains » de Disney ?",
+  "answer": 1937,
+  "explanation": "Premier long métrage d'animation de Disney, en couleurs et parlant, à la fin des années 1930.",
+  "hint": "À la fin des années 1930."
+ },
+ {
+  "key": "cine-408",
+  "concept": "cinema.animation.createur_de_mickey",
+  "label": "Créateur de Mickey",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui a créé Mickey Mouse, avec le dessinateur Ub Iwerks ?",
+  "options": [
+   "Walt Disney*",
+   "Tex Avery",
+   "Chuck Jones",
+   "Max Fleischer"
+  ],
+  "explanation": "Mickey apparaît en 1928 dans « Steamboat Willie ».",
+  "hint": "Son nom est devenu un empire."
+ },
+ {
+  "key": "cine-409",
+  "concept": "cinema.animation.rat_de_ratatouille",
+  "label": "Rat de Ratatouille",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'appelle le rat cuisinier de « Ratatouille » ?",
+  "options": [
+   "Rémy*",
+   "Linguini",
+   "Gusteau",
+   "Émile"
+  ],
+  "explanation": "Rémy guide le commis Linguini en lui tirant les cheveux. Émile est son frère, Gusteau le grand chef.",
+  "hint": "Son frère s'appelle Émile."
+ },
+ {
+  "key": "cine-410",
+  "concept": "cinema.animation.pays_des_minions",
+  "label": "Pays des Minions",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quel pays ont été en grande partie animés « Moi, moche et méchant » et les Minions ?",
+  "options": [
+   "En France*",
+   "Aux États-Unis",
+   "Au Canada",
+   "En Corée du Sud"
+  ],
+  "explanation": "Le studio Illumination Mac Guff, à Paris, anime ces films américains.",
+  "hint": "Un studio parisien."
+ },
+ {
+  "key": "cine-411",
+  "concept": "cinema.animation.vice_versa",
+  "label": "Vice-versa",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel film Pixar se déroule dans la tête d'une petite fille, Riley, parmi ses émotions ?",
+  "options": [
+   "Vice-versa*",
+   "Soul",
+   "Coco",
+   "Élémentaire"
+  ],
+  "explanation": "Joie, Tristesse, Colère, Peur et Dégoût pilotent Riley (2015).",
+  "hint": "Joie et Tristesse en sont les héroïnes."
+ },
+ {
+  "key": "cine-412",
+  "concept": "cinema.animation.singe_d_aladdin",
+  "label": "Singe d'Aladdin",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'appelle le singe d'Aladdin dans le film de Disney ?",
+  "options": [
+   "Abu*",
+   "Iago",
+   "Rajah",
+   "Raja"
+  ],
+  "explanation": "Iago est le perroquet de Jafar, Rajah le tigre de Jasmine.",
+  "hint": "Pas le perroquet."
+ },
+ {
+  "key": "cine-413",
+  "concept": "cinema.animation.monstres_et_cie",
+  "label": "Monstres et Cie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel film Pixar met en scène des monstres chargés d'effrayer les enfants ?",
+  "options": [
+   "Monstres & Cie*",
+   "Les Indestructibles",
+   "Là-haut",
+   "Le Monde de Nemo"
+  ],
+  "explanation": "Sulli et Bob récoltent les cris d'enfants pour produire de l'énergie (2001).",
+  "hint": "Sulli et Bob."
+ },
+ {
+  "key": "cine-414",
+  "concept": "cinema.animation.persepolis",
+  "label": "Persepolis",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a coréalisé « Persepolis » (2007), adapté de sa propre bande dessinée ?",
+  "options": [
+   "Marjane Satrapi*",
+   "Riad Sattouf",
+   "Joann Sfar",
+   "Pénélope Bagieu"
+  ],
+  "explanation": "Récit de son enfance en Iran, prix du jury à Cannes, coréalisé avec Vincent Paronnaud.",
+  "hint": "Elle a grandi en Iran."
+ },
+ {
+  "key": "cine-415",
+  "concept": "cinema.animation.toy_story_avant_le_roi_lion",
+  "label": "Toy Story avant le Roi lion",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Toy Story » est sorti avant « Le Roi lion ».",
+  "answer": false,
+  "explanation": "Non : Le Roi lion sort en 1994, Toy Story en 1995.",
+  "hint": "Un an d'écart."
+ },
+ {
+  "key": "cine-416",
+  "concept": "cinema.animation.rachat_de_pixar",
+  "label": "Rachat de Pixar",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Pixar a été racheté par Disney en 2006.",
+  "answer": true,
+  "explanation": "Oui, pour environ 7,4 milliards de dollars. Steve Jobs, qui dirigeait Pixar, devient alors le premier actionnaire de Disney.",
+  "hint": "Steve Jobs y a gagné gros."
+ }
+]

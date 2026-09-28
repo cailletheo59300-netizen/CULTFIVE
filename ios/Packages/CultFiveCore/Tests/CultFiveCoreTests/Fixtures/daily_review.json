@@ -1,78 +1,58 @@
 [
  {
-  "id": "ca496889-4458-4a8f-bfad-efa10163561c",
-  "type": "mcq",
+  "id": "a1ccbe59-6bce-46a5-92de-957773e5f424",
+  "type": "numeric",
   "given": {
-   "option_id": "1e9967cc"
+   "value": 1250
   },
   "answer": {
-   "option_id": "1e9967cc"
+   "value": 1250,
+   "tolerance": 0
   },
-  "prompt": "Quel est un synonyme de « véhément » ?",
+  "prompt": "Quel nombre suit : 2, 10, 50, 250, … ?",
   "source": null,
   "payload": {
-   "options": [
-    {
-     "id": "e5b28b89",
-     "text": "Discret"
-    },
-    {
-     "id": "f5deedb7",
-     "text": "Poli"
-    },
-    {
-     "id": "4f798bc7",
-     "text": "Rapide"
-    },
-    {
-     "id": "1e9967cc",
-     "text": "Emporté"
-    }
-   ]
+   "decimals": 0,
+   "allow_negative": false
   },
   "position": 1,
   "takeaway": null,
-  "domain_id": "french",
+  "domain_id": "logic",
   "counted_ms": 3800,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Un discours véhément est plein de passion et de force.",
-  "subdomain_id": "french.synonyms"
+  "explanation": "On multiplie par 5 : 250 × 5 = 1250.",
+  "subdomain_id": "logic.sequences"
  },
  {
-  "id": "e68df94f-ba4e-49d7-a209-c63094c76425",
-  "type": "ordering",
+  "id": "90def8a5-0805-466c-8792-7529d107a6a2",
+  "type": "mcq",
   "given": {
    "value": -999999,
    "option_id": "nope"
   },
   "answer": {
-   "order": [
-    "cc0c5920",
-    "3d2faf86",
-    "bf179761",
-    "e968338d"
-   ]
+   "option_id": "61c76de1"
   },
-  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "prompt": "Quelle cité Rome détruit-elle en 146 av. J.-C., à la fin des guerres puniques ?",
   "source": null,
   "payload": {
-   "items": [
+   "options": [
     {
-     "id": "cc0c5920",
-     "text": "Couronnement de Charlemagne"
+     "id": "b4dc0af3",
+     "text": "Alexandrie"
     },
     {
-     "id": "e968338d",
-     "text": "Mort de Jeanne d'Arc"
+     "id": "61c76de1",
+     "text": "Carthage"
     },
     {
-     "id": "3d2faf86",
-     "text": "Bataille d'Hastings"
+     "id": "493d30f8",
+     "text": "Athènes"
     },
     {
-     "id": "bf179761",
-     "text": "Première croisade"
+     "id": "42df1683",
+     "text": "Troie"
     }
    ]
   },
@@ -82,36 +62,60 @@
   "counted_ms": 5100,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Charlemagne : 800. Hastings : 1066. Première croisade : 1096-1099. Jeanne d'Arc : 1431.",
-  "subdomain_id": "history.middle_ages"
+  "explanation": "Après trois guerres puniques contre Carthage (dont celle d'Hannibal), Rome rase la ville.",
+  "subdomain_id": "history.antiquity"
  },
  {
-  "id": "dbc49cc3-0468-4d66-88b3-cecc9d4be4eb",
-  "type": "numeric",
+  "id": "6fd6e8e5-519d-4ecc-903d-ee7e973e453c",
+  "type": "map_pick",
   "given": {
-   "value": 10
+   "option_id": "c4f4b2be"
   },
   "answer": {
-   "value": 10,
-   "tolerance": 0
+   "option_id": "c4f4b2be"
   },
-  "prompt": "5 personnes se serrent toutes la main une fois. Combien de poignées de main en tout ?",
-  "source": null,
+  "prompt": "Touche l'emplacement de Majuro.",
+  "source": "Wikidata",
   "payload": {
-   "decimals": 0,
-   "allow_negative": false
+   "region": {
+    "lat": -1.17,
+    "lon": 168.65,
+    "span": 29.1
+   },
+   "options": [
+    {
+     "id": "c4f4b2be",
+     "lat": 7.0918,
+     "lon": 171.3802
+    },
+    {
+     "id": "7d8df147",
+     "lat": -9.433333,
+     "lon": 159.95
+    },
+    {
+     "id": "88b14a4c",
+     "lat": 6.917777777,
+     "lon": 158.185
+    },
+    {
+     "id": "ffb06a3b",
+     "lat": -8.504777777,
+     "lon": 179.117361111
+    }
+   ]
   },
   "position": 3,
   "takeaway": null,
-  "domain_id": "calc",
+  "domain_id": "geography",
   "counted_ms": 6400,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Chacun serre 4 mains, soit 5 × 4 = 20, mais chaque poignée est comptée deux fois : 20 ÷ 2 = 10.",
-  "subdomain_id": "calc.number_logic"
+  "explanation": "Majuro est la capitale des Îles Marshall. Les autres points : Honiara, Palikir et Funafuti.",
+  "subdomain_id": "geography.countries"
  },
  {
-  "id": "56e0dbce-8085-4c27-9b5b-19d68cc9758f",
+  "id": "d4062a04-82ef-4053-8421-989f39cbe110",
   "type": "true_false",
   "given": {
    "order": [
@@ -122,84 +126,84 @@
   "answer": {
    "value": false
   },
-  "prompt": "Nairobi, capitale du Kenya, se trouve dans l'hémisphère nord.",
+  "prompt": "0 divisé par 5, c'est impossible.",
   "source": null,
   "payload": {},
   "position": 4,
   "takeaway": null,
-  "domain_id": "geography",
+  "domain_id": "calc",
   "counted_ms": 8200,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Non : Nairobi est juste au sud de l'équateur, à environ 1° de latitude sud.",
-  "subdomain_id": "geography.countries"
+  "explanation": "Non : 0 ÷ 5 = 0. C'est l'inverse, diviser par zéro, qui n'a pas de sens.",
+  "subdomain_id": "calc.number_logic"
  },
  {
-  "id": "6084160a-ae95-4e08-b95b-e78fa4cba5be",
+  "id": "89aaacb0-bed9-4dcd-bde1-682e771e67c3",
   "type": "pairs",
   "given": {
    "pairs": {
-    "475687d8": "89d61e9a",
-    "6c377345": "209c88b3",
-    "a84468e9": "8e692dc4",
-    "e92319b0": "f5b63fa0"
+    "02bd3e96": "282b846b",
+    "6174a20d": "9801c220",
+    "99cb46dd": "a20b20e4",
+    "eb5763ca": "435c1876"
    }
   },
   "answer": {
    "pairs": {
-    "475687d8": "89d61e9a",
-    "6c377345": "209c88b3",
-    "a84468e9": "8e692dc4",
-    "e92319b0": "f5b63fa0"
+    "02bd3e96": "282b846b",
+    "6174a20d": "9801c220",
+    "99cb46dd": "a20b20e4",
+    "eb5763ca": "435c1876"
    }
   },
-  "prompt": "Associe chaque sport au nombre de joueurs d'une équipe sur le terrain.",
+  "prompt": "Associe chaque forme à son temps.",
   "source": null,
   "payload": {
    "left": [
     {
-     "id": "475687d8",
-     "text": "Basket-ball"
+     "id": "02bd3e96",
+     "text": "Nous chantâmes"
     },
     {
-     "id": "e92319b0",
-     "text": "Volley-ball"
+     "id": "eb5763ca",
+     "text": "Nous chanterions"
     },
     {
-     "id": "6c377345",
-     "text": "Handball"
+     "id": "6174a20d",
+     "text": "Que nous chantions"
     },
     {
-     "id": "a84468e9",
-     "text": "Football"
+     "id": "99cb46dd",
+     "text": "Nous avions chanté"
     }
    ],
    "right": [
     {
-     "id": "209c88b3",
-     "text": "7"
+     "id": "282b846b",
+     "text": "Passé simple"
     },
     {
-     "id": "f5b63fa0",
-     "text": "6"
+     "id": "a20b20e4",
+     "text": "Plus-que-parfait"
     },
     {
-     "id": "89d61e9a",
-     "text": "5"
+     "id": "435c1876",
+     "text": "Conditionnel présent"
     },
     {
-     "id": "8e692dc4",
-     "text": "11"
+     "id": "9801c220",
+     "text": "Subjonctif présent"
     }
    ]
   },
   "position": 5,
   "takeaway": null,
-  "domain_id": "sport",
+  "domain_id": "french",
   "counted_ms": 4300,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "5 au basket, 6 au volley, 7 au handball (gardien compris) et 11 au football.",
-  "subdomain_id": "sport.rules"
+  "explanation": "Le passé simple en -âmes, le conditionnel en -rions, le subjonctif précédé de « que », le plus-que-parfait avec l'auxiliaire à l'imparfait.",
+  "subdomain_id": "french.grammar"
  }
 ]

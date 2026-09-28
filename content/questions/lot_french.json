@@ -1,0 +1,1311 @@
+[
+ {
+  "key": "fr-501",
+  "concept": "french.vocabulary.sibyllin",
+  "label": "Sibyllin",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Que signifie « sibyllin » ?",
+  "options": [
+   "Obscur et énigmatique*",
+   "Doux et mélodieux",
+   "Très ancien",
+   "Rusé comme un serpent"
+  ],
+  "explanation": "Comme les oracles de la Sibylle, un propos sibyllin est mystérieux, difficile à interpréter.",
+  "hint": "Pense aux oracles antiques."
+ },
+ {
+  "key": "fr-502",
+  "concept": "french.vocabulary.peremptoire",
+  "label": "Péremptoire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Un ton « péremptoire » est…",
+  "options": [
+   "sans réplique possible*",
+   "périmé",
+   "très poli",
+   "hésitant"
+  ],
+  "explanation": "Péremptoire : qui tranche, qui n'admet pas de contestation. Rien à voir avec « périmé ».",
+  "hint": "Il ne laisse pas de place à la discussion."
+ },
+ {
+  "key": "fr-503",
+  "concept": "french.vocabulary.pantagruelique",
+  "label": "Pantagruélique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un repas « pantagruélique » est…",
+  "options": [
+   "énorme*",
+   "très léger",
+   "raffiné",
+   "servi froid"
+  ],
+  "explanation": "D'après Pantagruel, le géant glouton de Rabelais : un repas gargantuesque, gigantesque.",
+  "hint": "Pense au géant de Rabelais."
+ },
+ {
+  "key": "fr-504",
+  "concept": "french.vocabulary.sans_vergogne",
+  "label": "Sans vergogne",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Agir « sans vergogne », c'est agir…",
+  "options": [
+   "sans honte*",
+   "sans argent",
+   "sans bruit",
+   "sans effort"
+  ],
+  "explanation": "La vergogne est la honte, la pudeur. Agir sans vergogne, c'est agir de façon éhontée.",
+  "hint": "La vergogne est un sentiment."
+ },
+ {
+  "key": "fr-505",
+  "concept": "french.vocabulary.beotien",
+  "label": "Béotien",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Au sens figuré, un « béotien » est…",
+  "options": [
+   "un ignorant du domaine*",
+   "un grand spécialiste",
+   "un voyageur",
+   "un avare"
+  ],
+  "explanation": "Les Athéniens se moquaient des habitants de la Béotie, jugés rustres. Un béotien est un profane, un ignorant.",
+  "hint": "Le contraire d'un connaisseur."
+ },
+ {
+  "key": "fr-506",
+  "concept": "french.vocabulary.acrimonie",
+  "label": "Acrimonie",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Que signifie « acrimonie » ?",
+  "options": [
+   "Aigreur, mauvaise humeur hargneuse*",
+   "Tristesse profonde",
+   "Grande richesse",
+   "Joie bruyante"
+  ],
+  "explanation": "Du latin « acer », aigre. Répondre avec acrimonie, c'est répondre avec hargne.",
+  "hint": "Même racine qu'« âcre »."
+ },
+ {
+  "key": "fr-507",
+  "concept": "french.vocabulary.panacee",
+  "label": "Panacée",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qu'une « panacée » ?",
+  "options": [
+   "Un remède à tous les maux*",
+   "Une plante aromatique",
+   "Une grande fête",
+   "Un plat de pâtes"
+  ],
+  "explanation": "Du grec « pan » (tout) et « akos » (remède). On dit souvent qu'une solution n'est « pas une panacée ».",
+  "hint": "« Pan » veut dire « tout »."
+ },
+ {
+  "key": "fr-508",
+  "concept": "french.vocabulary.ostentatoire",
+  "label": "Ostentatoire",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un luxe « ostentatoire » est…",
+  "options": [
+   "étalé pour être vu*",
+   "discret",
+   "provisoire",
+   "lié aux os"
+  ],
+  "explanation": "L'ostentation, c'est le fait de montrer avec excès ce qu'on possède.",
+  "hint": "Il cherche à être remarqué."
+ },
+ {
+  "key": "fr-509",
+  "concept": "french.vocabulary.aphorisme",
+  "label": "Aphorisme",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qu'un « aphorisme » ?",
+  "options": [
+   "Une formule brève qui résume une vérité*",
+   "Une maladie de la gorge",
+   "Un pas de danse",
+   "Un long poème"
+  ],
+  "explanation": "Exemple : « La critique est aisée, et l'art est difficile. » Les maximes de La Rochefoucauld sont des aphorismes.",
+  "hint": "Court et bien frappé."
+ },
+ {
+  "key": "fr-510",
+  "concept": "french.vocabulary.idoine",
+  "label": "Idoine",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Que signifie « idoine » ?",
+  "options": [
+   "Approprié*",
+   "Bizarre",
+   "Identique",
+   "Paresseux"
+  ],
+  "explanation": "Idoine : qui convient parfaitement. « Trouver la personne idoine pour ce poste. »",
+  "hint": "Synonyme de « adéquat »."
+ },
+ {
+  "key": "fr-511",
+  "concept": "french.vocabulary.subreptice",
+  "label": "Subreptice",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Un geste « subreptice » est fait…",
+  "options": [
+   "en cachette*",
+   "très vite",
+   "sous terre",
+   "par surprise"
+  ],
+  "explanation": "Subreptice : qui se fait furtivement, à l'insu des autres. « Un coup d'œil subreptice. »",
+  "hint": "Pour ne pas être vu."
+ },
+ {
+  "key": "fr-512",
+  "concept": "french.vocabulary.neophyte",
+  "label": "Néophyte",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'un « néophyte » ?",
+  "options": [
+   "Un débutant*",
+   "Une plante rare",
+   "Un nouveau-né",
+   "Un expert"
+  ],
+  "explanation": "Du grec « neos » (nouveau) et « phuton » (plante, pousse) : quelqu'un de nouveau dans un domaine.",
+  "hint": "« Néo » veut dire « nouveau »."
+ },
+ {
+  "key": "fr-513",
+  "concept": "french.vocabulary.atermoyer",
+  "label": "Atermoyer",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Que signifie « atermoyer » ?",
+  "options": [
+   "Remettre à plus tard, tergiverser*",
+   "Atterrir en douceur",
+   "Se lamenter",
+   "Mentir avec aplomb"
+  ],
+  "explanation": "Atermoyer : chercher à gagner du temps par des délais. « Assez atermoyé, il faut décider ! »",
+  "hint": "Proche de « temporiser »."
+ },
+ {
+  "key": "fr-514",
+  "concept": "french.vocabulary.prefixe_hemi",
+  "label": "Préfixe hémi-",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que veut dire le préfixe « hémi- », dans « hémisphère » ?",
+  "options": [
+   "À moitié*",
+   "Sang",
+   "Autour",
+   "Au-dessus"
+  ],
+  "explanation": "Hémisphère : moitié de sphère. Ne pas confondre avec « hémo- » (sang), comme dans hémorragie.",
+  "hint": "La Terre a deux hémisphères."
+ },
+ {
+  "key": "fr-515",
+  "concept": "french.vocabulary.misanthrope",
+  "label": "Misanthrope",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un « misanthrope » est quelqu'un qui…",
+  "options": [
+   "n'aime pas les êtres humains*",
+   "aime les animaux",
+   "collectionne les timbres",
+   "vit seul par choix religieux"
+  ],
+  "explanation": "Du grec « misein » (haïr) et « anthrôpos » (homme). Molière en a fait une comédie en 1666.",
+  "hint": "Le contraire d'un philanthrope."
+ },
+ {
+  "key": "fr-516",
+  "concept": "french.vocabulary.bouquiniste",
+  "label": "Bouquiniste",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Un « bouquiniste » vend des bouquets de fleurs.",
+  "answer": false,
+  "explanation": "Non : il vend des livres d'occasion (des « bouquins »), comme les célèbres bouquinistes des quais de Seine. Le marchand de fleurs est un fleuriste.",
+  "hint": "Pense aux quais de Seine."
+ },
+ {
+  "key": "fr-517",
+  "concept": "french.vocabulary.hippopotame",
+  "label": "Hippopotame",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le mot « hippopotame » signifie « cheval de rivière » en grec.",
+  "answer": true,
+  "explanation": "Oui : « hippos » (cheval) et « potamos » (fleuve). On retrouve « hippos » dans hippodrome.",
+  "hint": "Pense à « hippodrome »."
+ },
+ {
+  "key": "fr-518",
+  "concept": "french.vocabulary.prononcer_gageure",
+  "label": "Prononcer gageure",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Le mot « gageure » se prononce « ga-jure », comme « rayure ».",
+  "answer": true,
+  "explanation": "Oui : le e ne sert qu'à adoucir le g, comme dans « mangeure » ou « Georges ». Dire « ga-jeure » est une faute courante.",
+  "hint": "Le e après le g ne se prononce pas."
+ },
+ {
+  "key": "fr-519",
+  "concept": "french.synonyms.contraire_de_benin",
+  "label": "Contraire de bénin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le contraire de « bénin » (pour une tumeur) ?",
+  "options": [
+   "Malin*",
+   "Bénéfique",
+   "Doux",
+   "Gentil"
+  ],
+  "explanation": "Une tumeur bénigne est sans gravité ; une tumeur maligne est dangereuse. Féminins : bénigne, maligne.",
+  "hint": "Le féminin est « maligne »."
+ },
+ {
+  "key": "fr-520",
+  "concept": "french.synonyms.synonyme_de_fallacieux",
+  "label": "Synonyme de fallacieux",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est un synonyme de « fallacieux » ?",
+  "options": [
+   "Trompeur*",
+   "Fatigué",
+   "Fautif",
+   "Faible"
+  ],
+  "explanation": "Un argument fallacieux cherche à tromper sous une apparence de vérité.",
+  "hint": "Même famille que « faillir »."
+ },
+ {
+  "key": "fr-521",
+  "concept": "french.synonyms.contraire_de_heterogene",
+  "label": "Contraire de hétérogène",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le contraire de « hétérogène » ?",
+  "options": [
+   "Homogène*",
+   "Hétéroclite",
+   "Hybride",
+   "Hérétique"
+  ],
+  "explanation": "Hétéro- : autre, différent. Homo- : même. Un mélange homogène a partout la même composition.",
+  "hint": "« Homo- » veut dire « même »."
+ },
+ {
+  "key": "fr-522",
+  "concept": "french.synonyms.synonyme_de_perenne",
+  "label": "Synonyme de pérenne",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est un synonyme de « pérenne » ?",
+  "options": [
+   "Durable*",
+   "Paternel",
+   "Périodique",
+   "Pressé"
+  ],
+  "explanation": "Pérenne : qui dure longtemps, qui se perpétue. Une plante pérenne vit plusieurs années.",
+  "hint": "Le contraire d'« éphémère »."
+ },
+ {
+  "key": "fr-523",
+  "concept": "french.synonyms.contraire_d_exhaustif",
+  "label": "Contraire d'exhaustif",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le contraire de « exhaustif » ?",
+  "options": [
+   "Partiel*",
+   "Épuisé",
+   "Complet",
+   "Rehaussé"
+  ],
+  "explanation": "Exhaustif : qui traite tout le sujet, sans rien omettre. Son contraire : partiel, incomplet.",
+  "hint": "Exhaustif veut dire « complet »."
+ },
+ {
+  "key": "fr-524",
+  "concept": "french.synonyms.synonyme_de_circonspect",
+  "label": "Synonyme de circonspect",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est un synonyme de « circonspect » ?",
+  "options": [
+   "Prudent*",
+   "Circulaire",
+   "Suspect",
+   "Curieux"
+  ],
+  "explanation": "Circonspect : qui regarde autour de soi avant d'agir (« circum » + « spicere »), donc prudent, réservé.",
+  "hint": "Il regarde avant d'agir."
+ },
+ {
+  "key": "fr-525",
+  "concept": "french.synonyms.contraire_de_prolifique",
+  "label": "Contraire de prolifique",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le contraire de « prolifique » ?",
+  "options": [
+   "Improductif*",
+   "Prolixe",
+   "Fécond",
+   "Rapide"
+  ],
+  "explanation": "Un auteur prolifique produit beaucoup d'œuvres. Attention : prolixe (bavard) est un faux ami.",
+  "hint": "Prolifique veut dire « qui produit beaucoup »."
+ },
+ {
+  "key": "fr-526",
+  "concept": "french.synonyms.synonyme_de_dilapider",
+  "label": "Synonyme de dilapider",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est un synonyme de « dilapider » ?",
+  "options": [
+   "Gaspiller*",
+   "Démolir",
+   "Diluer",
+   "Déplacer"
+  ],
+  "explanation": "Dilapider une fortune, c'est la dépenser follement.",
+  "hint": "Se dit souvent d'un héritage."
+ },
+ {
+  "key": "fr-527",
+  "concept": "french.synonyms.contraire_d_inne",
+  "label": "Contraire d'inné",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le contraire de « inné » ?",
+  "options": [
+   "Acquis*",
+   "Innocent",
+   "Naturel",
+   "Natal"
+  ],
+  "explanation": "Inné : présent dès la naissance. Acquis : appris au fil de la vie.",
+  "hint": "Ce qu'on apprend."
+ },
+ {
+  "key": "fr-528",
+  "concept": "french.synonyms.synonyme_d_acerbe",
+  "label": "Synonyme d'acerbe",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une critique « acerbe » est…",
+  "options": [
+   "mordante*",
+   "sucrée",
+   "aimable",
+   "hésitante"
+  ],
+  "explanation": "Acerbe : âpre au goût et, au figuré, blessant, caustique.",
+  "hint": "Elle fait mal."
+ },
+ {
+  "key": "fr-529",
+  "concept": "french.synonyms.contraire_d_anterieur",
+  "label": "Contraire d'antérieur",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le contraire de « antérieur » ?",
+  "options": [
+   "Postérieur*",
+   "Intérieur",
+   "Supérieur",
+   "Inférieur"
+  ],
+  "explanation": "Antérieur : qui est avant (dans le temps ou l'espace). Postérieur : qui est après, derrière.",
+  "hint": "« Post » veut dire « après »."
+ },
+ {
+  "key": "fr-530",
+  "concept": "french.synonyms.synonyme_de_sempiternel",
+  "label": "Synonyme de sempiternel",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est un synonyme de « sempiternel » ?",
+  "options": [
+   "Perpétuel*",
+   "Semestriel",
+   "Solennel",
+   "Simple"
+  ],
+  "explanation": "Sempiternel : qui dure toujours, souvent avec lassitude. « Ses sempiternelles plaintes. »",
+  "hint": "Contient « éternel »."
+ },
+ {
+  "key": "fr-531",
+  "concept": "french.synonyms.contraire_d_euphorie",
+  "label": "Contraire d'euphorie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le contraire de « euphorie » ?",
+  "options": [
+   "Abattement*",
+   "Allégresse",
+   "Harmonie",
+   "Euphonie"
+  ],
+  "explanation": "L'euphorie est un sentiment de bien-être intense ; l'abattement, une profonde lassitude.",
+  "hint": "Un moral au plus bas."
+ },
+ {
+  "key": "fr-532",
+  "concept": "french.synonyms.synonyme_de_vetuste",
+  "label": "Synonyme de vétuste",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un bâtiment « vétuste » est…",
+  "options": [
+   "délabré par le temps*",
+   "très vaste",
+   "richement décoré",
+   "flambant neuf"
+  ],
+  "explanation": "Vétuste : vieux et en mauvais état. Du latin « vetustus », ancien.",
+  "hint": "Il a beaucoup vieilli."
+ },
+ {
+  "key": "fr-533",
+  "concept": "french.synonyms.contraire_de_centrifuge",
+  "label": "Contraire de centrifuge",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le contraire de « centrifuge » ?",
+  "options": [
+   "Centripète*",
+   "Concentrique",
+   "Excentrique",
+   "Centralisé"
+  ],
+  "explanation": "Centrifuge : qui éloigne du centre (« fugere », fuir). Centripète : qui attire vers le centre (« petere », gagner).",
+  "hint": "Qui va vers le centre."
+ },
+ {
+  "key": "fr-534",
+  "concept": "french.synonyms.synonyme_d_opiniatre",
+  "label": "Synonyme d'opiniâtre",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est un synonyme de « opiniâtre » ?",
+  "options": [
+   "Obstiné*",
+   "Opulent",
+   "Distrait",
+   "Opportun"
+  ],
+  "explanation": "Opiniâtre : tenace, qui ne renonce pas. « Un travail opiniâtre. »",
+  "hint": "Il ne lâche rien."
+ },
+ {
+  "key": "fr-535",
+  "concept": "french.synonyms.contraire_de_majorer",
+  "label": "Contraire de majorer",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le contraire de « majorer » un prix ?",
+  "options": [
+   "Minorer*",
+   "Maîtriser",
+   "Mesurer",
+   "Maintenir"
+  ],
+  "explanation": "Majorer : augmenter. Minorer : diminuer, sous-estimer.",
+  "hint": "Majeur / mineur."
+ },
+ {
+  "key": "fr-536",
+  "concept": "french.spelling.dilemme",
+  "label": "Dilemme",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle orthographe est correcte ?",
+  "options": [
+   "Dilemme*",
+   "Dilemne",
+   "Dillemme",
+   "Dilème"
+  ],
+  "explanation": "Dilemme, avec deux m et sans n : du grec « di- » (deux) et « lêmma » (proposition).",
+  "hint": "Pas de n."
+ },
+ {
+  "key": "fr-537",
+  "concept": "french.spelling.connexion",
+  "label": "Connexion",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle orthographe est correcte ?",
+  "options": [
+   "Connexion*",
+   "Connection",
+   "Conexion",
+   "Connextion"
+  ],
+  "explanation": "En français : connexion, avec un x (comme « connexe »). « Connection » est l'orthographe anglaise.",
+  "hint": "Comme « connexe »."
+ },
+ {
+  "key": "fr-538",
+  "concept": "french.spelling.ascenseur",
+  "label": "Ascenseur",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle orthographe est correcte ?",
+  "options": [
+   "Ascenseur*",
+   "Assenseur",
+   "Ascenceur",
+   "Acenseur"
+  ],
+  "explanation": "Ascenseur, de « ascension » : sc au début, s à la fin.",
+  "hint": "Même famille qu'« ascension »."
+ },
+ {
+  "key": "fr-539",
+  "concept": "french.spelling.rythme",
+  "label": "Rythme",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle orthographe est correcte ?",
+  "options": [
+   "Rythme*",
+   "Rhythme",
+   "Rythmme",
+   "Ritme"
+  ],
+  "explanation": "Rythme : un y et un h après le t. L'anglais écrit « rhythm ».",
+  "hint": "Un seul h."
+ },
+ {
+  "key": "fr-540",
+  "concept": "french.spelling.se_sont_mis",
+  "label": "Se sont mis",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Complète : « Ils se sont ___ à chanter. » (mettre)",
+  "options": [
+   "mis*",
+   "mit",
+   "mises",
+   "mi"
+  ],
+  "explanation": "Participe passé de mettre : mis (féminin mise). Ici, accordé avec « ils » : mis.",
+  "hint": "Le participe passé de « mettre »."
+ },
+ {
+  "key": "fr-541",
+  "concept": "french.spelling.qu_il_a_fallu",
+  "label": "Qu'il a fallu",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Complète : « Tous les efforts qu'il a ___ ! » (falloir)",
+  "options": [
+   "fallu*",
+   "fallus",
+   "fallue",
+   "falut"
+  ],
+  "explanation": "Falloir est impersonnel : son participe passé « fallu » ne s'accorde jamais.",
+  "hint": "« Il faut » n'a pas de vrai sujet."
+ },
+ {
+  "key": "fr-542",
+  "concept": "french.spelling.s_est_lave_les_mains",
+  "label": "S'est lavé les mains",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Complète : « Elle s'est ___ les mains. »",
+  "options": [
+   "lavé*",
+   "lavée",
+   "lavés",
+   "lavées"
+  ],
+  "explanation": "Le complément d'objet direct (« les mains ») est placé après le verbe : pas d'accord. Mais « Elle s'est lavée » (sans complément) s'accorde.",
+  "hint": "Qu'a-t-elle lavé ?"
+ },
+ {
+  "key": "fr-543",
+  "concept": "french.spelling.trois_mille",
+  "label": "Trois mille",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle écriture est correcte ?",
+  "options": [
+   "Trois mille euros*",
+   "Trois milles euros",
+   "Trois mils euros",
+   "Trois milles d'euros"
+  ],
+  "explanation": "Mille, adjectif numéral, est invariable : trois mille, dix mille.",
+  "hint": "Mille ne prend jamais de s."
+ },
+ {
+  "key": "fr-544",
+  "concept": "french.spelling.des_landaus",
+  "label": "Des landaus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le pluriel de « un landau » ?",
+  "options": [
+   "des landaus*",
+   "des landaux",
+   "des landauts",
+   "des landau"
+  ],
+  "explanation": "Les noms en -au prennent un x, sauf landau, sarrau (et berimbau) : des landaus.",
+  "hint": "C'est une exception."
+ },
+ {
+  "key": "fr-545",
+  "concept": "french.spelling.chaussures_marron",
+  "label": "Chaussures marron",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Complète : « Ce sont des chaussures ___ . »",
+  "options": [
+   "marron*",
+   "marrons",
+   "marronnes",
+   "marronne"
+  ],
+  "explanation": "Un nom employé comme couleur reste invariable : des chaussures marron, orange (exceptions : rose, mauve, fauve…).",
+  "hint": "La couleur vient d'un fruit."
+ },
+ {
+  "key": "fr-546",
+  "concept": "french.spelling.quand_meme",
+  "label": "Quand même",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "On écrit « quand même », jamais « comme même ».",
+  "answer": true,
+  "explanation": "Oui : « quand même » (= malgré tout). « Comme même » est une faute d'oreille.",
+  "hint": "Quand = malgré tout."
+ },
+ {
+  "key": "fr-547",
+  "concept": "french.spelling.pallier",
+  "label": "Pallier",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "« Pallier à un problème » est la forme recommandée.",
+  "answer": false,
+  "explanation": "Non : pallier est transitif direct, on pallie un problème (sans « à »). « Remédier à » prend un « à ».",
+  "hint": "Comme « résoudre un problème »."
+ },
+ {
+  "key": "fr-548",
+  "concept": "french.spelling.quelle_que_soit",
+  "label": "Quelle que soit",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Complète : « ___ soit ta décision, je te soutiendrai. »",
+  "options": [
+   "Quelle que*",
+   "Quelque",
+   "Quel que",
+   "Quelles que"
+  ],
+  "explanation": "Devant le verbe être, « quel que » s'écrit en deux mots et s'accorde avec le sujet (« ta décision ») : quelle que soit.",
+  "hint": "Accord avec « décision »."
+ },
+ {
+  "key": "fr-549",
+  "concept": "french.spelling.ils_ont_peint",
+  "label": "Ils ont peint",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Complète : « Ils ont ___ leur maison en bleu. »",
+  "options": [
+   "peint*",
+   "peints",
+   "peinte",
+   "peins"
+  ],
+  "explanation": "Avec avoir, le participe ne s'accorde pas avec le sujet ; le COD (« leur maison ») est placé après : peint.",
+  "hint": "Le COD est après le verbe."
+ },
+ {
+  "key": "fr-550",
+  "concept": "french.spelling.apparemment",
+  "label": "Apparemment",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle orthographe est correcte ?",
+  "options": [
+   "Apparemment*",
+   "Apparament",
+   "Apparemmant",
+   "Aparemment"
+  ],
+  "explanation": "Apparent → apparemment : les adjectifs en -ent donnent des adverbes en -emment.",
+  "hint": "Adjectif en -ent → -emment."
+ },
+ {
+  "key": "fr-551",
+  "concept": "french.expressions.faire_chou_blanc",
+  "label": "Faire chou blanc",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que veut dire « faire chou blanc » ?",
+  "options": [
+   "Échouer, ne rien obtenir*",
+   "Réussir brillamment",
+   "Cuisiner des légumes",
+   "S'habiller en blanc"
+  ],
+  "explanation": "L'expression viendrait du jeu de quilles : faire « coup blanc », c'est ne rien renverser.",
+  "hint": "Pense au jeu de quilles."
+ },
+ {
+  "key": "fr-552",
+  "concept": "french.expressions.avoir_maille_a_partir",
+  "label": "Avoir maille à partir",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Avoir maille à partir avec quelqu'un », c'est…",
+  "options": [
+   "avoir un différend avec lui*",
+   "tricoter ensemble",
+   "partir en voyage avec lui",
+   "partager un repas"
+  ],
+  "explanation": "La maille était une petite pièce de monnaie ; « partir » voulait dire partager. Se disputer une somme qu'on ne peut pas partager.",
+  "hint": "« Partir » voulait dire « partager »."
+ },
+ {
+  "key": "fr-553",
+  "concept": "french.expressions.poudre_d_escampette",
+  "label": "Poudre d'escampette",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "« Prendre la poudre d'escampette », c'est…",
+  "options": [
+   "s'enfuir*",
+   "se maquiller",
+   "se battre",
+   "faire la sieste"
+  ],
+  "explanation": "« Escamper », en ancien français, veut dire s'enfuir. On file à toute vitesse.",
+  "hint": "On s'en va très vite."
+ },
+ {
+  "key": "fr-554",
+  "concept": "french.expressions.tirer_le_diable_par_la_queue",
+  "label": "Tirer le diable par la queue",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Tirer le diable par la queue », c'est…",
+  "options": [
+   "avoir du mal à boucler ses fins de mois*",
+   "tenter le sort",
+   "se disputer violemment",
+   "raconter des mensonges"
+  ],
+  "explanation": "L'image : devoir retenir le diable par la queue pour survivre, tant on est pauvre.",
+  "hint": "Question d'argent."
+ },
+ {
+  "key": "fr-555",
+  "concept": "french.expressions.beaux_draps",
+  "label": "Beaux draps",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Être « dans de beaux draps », c'est…",
+  "options": [
+   "être dans une situation difficile*",
+   "être riche",
+   "bien dormir",
+   "être élégant"
+  ],
+  "explanation": "L'expression est ironique : les draps ne sont pas beaux du tout.",
+  "hint": "C'est ironique."
+ },
+ {
+  "key": "fr-556",
+  "concept": "french.expressions.la_puce_a_l_oreille",
+  "label": "La puce à l'oreille",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Mettre la puce à l'oreille », c'est…",
+  "options": [
+   "éveiller les soupçons*",
+   "chuchoter un secret",
+   "agacer quelqu'un",
+   "piquer la curiosité d'un enfant"
+  ],
+  "explanation": "Quelque chose qui démange et qui alerte : un indice qui fait douter.",
+  "hint": "Un indice qui alerte."
+ },
+ {
+  "key": "fr-557",
+  "concept": "french.expressions.les_yeux_plus_gros_que_le_ventre",
+  "label": "Les yeux plus gros que le ventre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Avoir « les yeux plus gros que le ventre », c'est…",
+  "options": [
+   "prendre plus qu'on ne peut manger*",
+   "avoir faim",
+   "avoir une bonne vue",
+   "être gourmand de sucreries"
+  ],
+  "explanation": "Au sens large : vouloir plus que ce qu'on peut réaliser.",
+  "hint": "On a trop pris."
+ },
+ {
+  "key": "fr-558",
+  "concept": "french.expressions.battre_le_fer",
+  "label": "Battre le fer",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Il faut battre le fer pendant qu'il est chaud » veut dire…",
+  "options": [
+   "agir tant que l'occasion est bonne*",
+   "se mettre en colère",
+   "travailler dur",
+   "ne pas perdre patience"
+  ],
+  "explanation": "Le forgeron doit frapper le métal tant qu'il est chaud et malléable.",
+  "hint": "Pense au forgeron."
+ },
+ {
+  "key": "fr-559",
+  "concept": "french.expressions.menager_la_chevre_et_le_chou",
+  "label": "Ménager la chèvre et le chou",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "« Ménager la chèvre et le chou », c'est…",
+  "options": [
+   "ménager les deux camps à la fois*",
+   "faire des économies",
+   "cultiver son jardin",
+   "devenir végétarien"
+  ],
+  "explanation": "L'image vient d'une énigme : faire passer une rivière à une chèvre et un chou sans que l'une mange l'autre.",
+  "hint": "Ne vexer personne."
+ },
+ {
+  "key": "fr-560",
+  "concept": "french.expressions.sourde_oreille",
+  "label": "Sourde oreille",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Faire la sourde oreille », c'est…",
+  "options": [
+   "faire semblant de ne pas entendre*",
+   "être malentendant",
+   "parler fort",
+   "chuchoter"
+  ],
+  "explanation": "On entend très bien, mais on refuse de répondre à une demande.",
+  "hint": "On fait semblant."
+ },
+ {
+  "key": "fr-561",
+  "concept": "french.expressions.se_mettre_martel_en_tete",
+  "label": "Se mettre martel en tête",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Se mettre martel en tête », c'est…",
+  "options": [
+   "se faire beaucoup de souci*",
+   "frapper très fort",
+   "prendre une décision",
+   "avoir une idée de génie"
+  ],
+  "explanation": "Le « martel » (marteau) frappe dans la tête : on se tourmente.",
+  "hint": "Un marteau qui tape dans la tête."
+ },
+ {
+  "key": "fr-562",
+  "concept": "french.expressions.pain_sur_la_planche",
+  "label": "Pain sur la planche",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Avoir du pain sur la planche », c'est…",
+  "options": [
+   "avoir beaucoup de travail*",
+   "avoir de quoi manger",
+   "être boulanger",
+   "être riche"
+  ],
+  "explanation": "Autrefois, avoir du pain en réserve voulait dire être tranquille ; le sens a glissé vers « beaucoup à faire ».",
+  "hint": "Il y a de quoi faire."
+ },
+ {
+  "key": "fr-563",
+  "concept": "french.expressions.casser_sa_pipe",
+  "label": "Casser sa pipe",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Casser sa pipe », c'est…",
+  "options": [
+   "mourir*",
+   "arrêter de fumer",
+   "se fâcher",
+   "faire faillite"
+  ],
+  "explanation": "Expression familière. Une explication courante : le soldat blessé mordait sa pipe, qui tombait et se brisait s'il mourait.",
+  "hint": "Familier et définitif."
+ },
+ {
+  "key": "fr-564",
+  "concept": "french.expressions.rire_jaune",
+  "label": "Rire jaune",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Rire jaune », c'est…",
+  "options": [
+   "rire en se forçant*",
+   "rire aux éclats",
+   "rire de tout",
+   "rire d'une blague raciste"
+  ],
+  "explanation": "On rit sans en avoir envie, par gêne ou dépit. Le jaune est associé à la bile, à l'aigreur.",
+  "hint": "On n'a pas vraiment envie de rire."
+ },
+ {
+  "key": "fr-565",
+  "concept": "french.expressions.l_habit_ne_fait_pas_le_moine",
+  "label": "L'habit ne fait pas le moine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« L'habit ne fait pas le moine » veut dire…",
+  "options": [
+   "il ne faut pas juger sur l'apparence*",
+   "il faut bien s'habiller",
+   "les moines sont modestes",
+   "il faut rester simple"
+  ],
+  "explanation": "Porter la robe de bure ne suffit pas à être un moine.",
+  "hint": "Méfie-toi des apparences."
+ },
+ {
+  "key": "fr-566",
+  "concept": "french.expressions.tenir_la_chandelle",
+  "label": "Tenir la chandelle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Tenir la chandelle », c'est…",
+  "options": [
+   "être le témoin gênant d'un couple*",
+   "éclairer le chemin",
+   "veiller un malade",
+   "attendre longtemps"
+  ],
+  "explanation": "Autrefois, un domestique éclairait ses maîtres, sans participer. Aujourd'hui : être de trop auprès de deux amoureux.",
+  "hint": "Trois, c'est un de trop."
+ },
+ {
+  "key": "fr-567",
+  "concept": "french.expressions.bayer_aux_corneilles",
+  "label": "Bayer aux corneilles",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "« Bayer aux corneilles », c'est…",
+  "options": [
+   "rêvasser en regardant en l'air*",
+   "chasser les oiseaux",
+   "se plaindre sans cesse",
+   "parler trop fort"
+  ],
+  "explanation": "« Bayer » (garder la bouche ouverte) : regarder en l'air niaisement. À ne pas confondre avec bâiller.",
+  "hint": "« Bayer » : garder la bouche ouverte."
+ },
+ {
+  "key": "fr-568",
+  "concept": "french.grammar.mode_de_qu_il_vienne",
+  "label": "Mode de qu'il vienne",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quel mode est le verbe dans « Qu'il vienne ! » ?",
+  "options": [
+   "Subjonctif*",
+   "Indicatif",
+   "Impératif",
+   "Conditionnel"
+  ],
+  "explanation": "L'impératif n'existe pas à la 3ᵉ personne : on emprunte le subjonctif, introduit par « que ».",
+  "hint": "Il est introduit par « que »."
+ },
+ {
+  "key": "fr-569",
+  "concept": "french.grammar.complement_de_lieu",
+  "label": "Complément de lieu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « Les enfants jouent dans le jardin », quelle est la fonction de « dans le jardin » ?",
+  "options": [
+   "Complément circonstanciel de lieu*",
+   "Complément d'objet direct",
+   "Sujet",
+   "Attribut du sujet"
+  ],
+  "explanation": "Il répond à la question « où ? » et peut être déplacé ou supprimé.",
+  "hint": "Il répond à « où ? »."
+ },
+ {
+  "key": "fr-570",
+  "concept": "french.grammar.nous_craignons",
+  "label": "Nous craignons",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Conjugue « craindre » au présent : « Nous ___ . »",
+  "options": [
+   "craignons*",
+   "craindons",
+   "crainons",
+   "craigons"
+  ],
+  "explanation": "Les verbes en -aindre, -eindre, -oindre font -gnons : nous craignons, nous peignons, nous joignons.",
+  "hint": "Comme « nous peignons »."
+ },
+ {
+  "key": "fr-571",
+  "concept": "french.grammar.je_courrai",
+  "label": "Je courrai",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Futur de « courir » : « Demain, je ___ . »",
+  "options": [
+   "courrai*",
+   "courirai",
+   "courerai",
+   "courai"
+  ],
+  "explanation": "Deux r au futur et au conditionnel : je courrai, je courrais (comme mourir).",
+  "hint": "Deux r."
+ },
+ {
+  "key": "fr-572",
+  "concept": "french.grammar.j_enverrai",
+  "label": "J'enverrai",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Futur de « envoyer » : « J'___ la lettre demain. »",
+  "options": [
+   "enverrai*",
+   "envoierai",
+   "envoyerai",
+   "enverai"
+  ],
+  "explanation": "Envoyer est irrégulier au futur : j'enverrai, comme voir → je verrai.",
+  "hint": "Comme « voir » → « verrai »."
+ },
+ {
+  "key": "fr-573",
+  "concept": "french.grammar.participe_de_resoudre",
+  "label": "Participe de résoudre",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le participe passé de « résoudre » ?",
+  "options": [
+   "résolu*",
+   "résout",
+   "résolvé",
+   "résoudé"
+  ],
+  "explanation": "Un problème résolu. « Résout » est la 3ᵉ personne du présent : il résout.",
+  "hint": "Un problème ___."
+ },
+ {
+  "key": "fr-574",
+  "concept": "french.grammar.il_naquit",
+  "label": "Il naquit",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Passé simple de « naître » : « Il ___ en 1802. »",
+  "options": [
+   "naquit*",
+   "naissa",
+   "naîtit",
+   "naquut"
+  ],
+  "explanation": "Naître au passé simple : je naquis, il naquit, ils naquirent.",
+  "hint": "Forme irrégulière en -quit."
+ },
+ {
+  "key": "fr-575",
+  "concept": "french.grammar.que_tu_puisses",
+  "label": "Que tu puisses",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « Il faut que tu ___ venir. »",
+  "options": [
+   "puisses*",
+   "peux",
+   "pourrais",
+   "pouvais"
+  ],
+  "explanation": "« Il faut que » impose le subjonctif : que je puisse, que tu puisses.",
+  "hint": "« Il faut que » + subjonctif."
+ },
+ {
+  "key": "fr-576",
+  "concept": "french.grammar.nature_de_car",
+  "label": "Nature de car",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle est la nature de « car » ?",
+  "options": [
+   "Conjonction de coordination*",
+   "Adverbe",
+   "Préposition",
+   "Pronom"
+  ],
+  "explanation": "Mais, ou, et, or, ni, car : les conjonctions de coordination relient deux éléments de même fonction.",
+  "hint": "Mais, ou, et, or, ni…"
+ },
+ {
+  "key": "fr-577",
+  "concept": "french.grammar.voix_passive",
+  "label": "Voix passive",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle phrase est à la voix passive ?",
+  "options": [
+   "La souris est mangée par le chat.*",
+   "Le chat mange la souris.",
+   "Le chat est affamé.",
+   "Le chat s'est endormi."
+  ],
+  "explanation": "Le sujet (la souris) subit l'action, faite par le complément d'agent (« par le chat »).",
+  "hint": "Qui subit l'action ?"
+ },
+ {
+  "key": "fr-578",
+  "concept": "french.grammar.vengeresse",
+  "label": "Vengeresse",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le féminin de « vengeur » ?",
+  "options": [
+   "vengeresse*",
+   "vengeuse",
+   "vengeure",
+   "vengeante"
+  ],
+  "explanation": "Vengeur fait vengeresse, comme enchanteur → enchanteresse, pécheur → pécheresse.",
+  "hint": "Comme « enchanteresse »."
+ },
+ {
+  "key": "fr-579",
+  "concept": "french.grammar.des_vitraux",
+  "label": "Des vitraux",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le pluriel de « un vitrail » ?",
+  "options": [
+   "des vitraux*",
+   "des vitrails",
+   "des vitraus",
+   "des vitrailles"
+  ],
+  "explanation": "Quelques noms en -ail font -aux : bail, corail, émail, soupirail, travail, vantail, vitrail.",
+  "hint": "Comme « travail »."
+ },
+ {
+  "key": "fr-580",
+  "concept": "french.grammar.des_arcs_en_ciel",
+  "label": "Des arcs-en-ciel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le pluriel de « un arc-en-ciel » ?",
+  "options": [
+   "des arcs-en-ciel*",
+   "des arc-en-ciels",
+   "des arcs-en-ciels",
+   "des arc-en-ciel"
+  ],
+  "explanation": "Seul le premier nom prend la marque du pluriel : des arcs (en ciel).",
+  "hint": "Il y a plusieurs arcs, un seul ciel."
+ },
+ {
+  "key": "fr-581",
+  "concept": "french.grammar.comparatif_de_superiorite",
+  "label": "Comparatif de supériorité",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « Elle est plus grande que moi », on a…",
+  "options": [
+   "un comparatif de supériorité*",
+   "un superlatif",
+   "un comparatif d'égalité",
+   "un complément du nom"
+  ],
+  "explanation": "Plus… que : comparatif de supériorité. Le superlatif serait « la plus grande ».",
+  "hint": "On compare deux personnes."
+ },
+ {
+  "key": "fr-582",
+  "concept": "french.grammar.tu_l_aurais_vu",
+  "label": "Tu l'aurais vu",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Complète : « Si tu étais venu, tu l'___ vu. »",
+  "options": [
+   "aurais*",
+   "aurai",
+   "avais",
+   "auras"
+  ],
+  "explanation": "Si + plus-que-parfait → conditionnel passé : tu l'aurais vu.",
+  "hint": "Si + plus-que-parfait…"
+ },
+ {
+  "key": "fr-583",
+  "concept": "french.grammar.genre_d_apres_midi",
+  "label": "Genre d'après-midi",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le mot « après-midi » est uniquement masculin.",
+  "answer": false,
+  "explanation": "Non : on peut dire « un » ou « une » après-midi, les deux genres sont admis.",
+  "hint": "Les dictionnaires hésitent."
+ },
+ {
+  "key": "fr-584",
+  "concept": "french.grammar.accord_avec_etre",
+  "label": "Accord avec être",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Dans « Les filles sont parties », le participe s'accorde avec le sujet.",
+  "answer": true,
+  "explanation": "Oui : avec l'auxiliaire être, le participe passé s'accorde avec le sujet (elles sont parties).",
+  "hint": "Auxiliaire être."
+ }
+]

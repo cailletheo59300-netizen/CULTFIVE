@@ -1,0 +1,469 @@
+[
+ {
+  "key": "tech-401",
+  "concept": "tech.computing.origine_du_bug",
+  "label": "Origine du bug",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "D'où vient l'usage du mot « bug » en informatique ?",
+  "options": [
+   "D'un insecte trouvé dans un ordinateur en 1947*",
+   "D'un sigle anglais",
+   "Du nom d'un inventeur",
+   "D'un jeu vidéo des années 1980"
+  ],
+  "explanation": "L'équipe de Grace Hopper retrouve un papillon de nuit coincé dans un relais du Mark II et le colle dans le cahier de bord. Le mot existait déjà chez les ingénieurs.",
+  "hint": "« Bug » veut dire insecte."
+ },
+ {
+  "key": "tech-402",
+  "concept": "tech.computing.url",
+  "label": "URL",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que désigne une « URL » ?",
+  "options": [
+   "L'adresse d'une ressource sur le Web*",
+   "Un virus informatique",
+   "Un langage de programmation",
+   "Un type de câble"
+  ],
+  "explanation": "Uniform Resource Locator : par exemple https://www.exemple.fr/page.",
+  "hint": "Elle commence souvent par https."
+ },
+ {
+  "key": "tech-403",
+  "concept": "tech.computing.systeme_des_iphone",
+  "label": "Système des iPhone",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel système d'exploitation équipe les iPhone ?",
+  "options": [
+   "iOS*",
+   "Android",
+   "Windows",
+   "Linux"
+  ],
+  "explanation": "Apple développe iOS ; la plupart des autres smartphones utilisent Android, de Google.",
+  "hint": "Développé par Apple."
+ },
+ {
+  "key": "tech-404",
+  "concept": "tech.computing.cookie",
+  "label": "Cookie",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'un « cookie » sur Internet ?",
+  "options": [
+   "Un petit fichier qu'un site enregistre sur ton appareil*",
+   "Un virus",
+   "Une publicité",
+   "Un mot de passe"
+  ],
+  "explanation": "Il mémorise des informations (connexion, panier, préférences) ; certains servent au pistage publicitaire.",
+  "hint": "Il mémorise tes préférences."
+ },
+ {
+  "key": "tech-405",
+  "concept": "tech.computing.taille_d_une_adresse_ipv4",
+  "label": "Taille d'une adresse IPv4",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien de bits compte une adresse IPv4 ?",
+  "answer": 32,
+  "unit": "bits",
+  "explanation": "Quatre octets de 8 bits, soit environ 4,3 milliards d'adresses : trop peu, d'où l'IPv6 et ses 128 bits.",
+  "hint": "Quatre octets."
+ },
+ {
+  "key": "tech-406",
+  "concept": "tech.computing.html",
+  "label": "HTML",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel langage décrit la structure des pages web ?",
+  "options": [
+   "HTML*",
+   "Python",
+   "SQL",
+   "C++"
+  ],
+  "explanation": "HyperText Markup Language : titres, paragraphes, liens. La mise en forme vient du CSS, l'interactivité du JavaScript.",
+  "hint": "Un langage de balises."
+ },
+ {
+  "key": "tech-407",
+  "concept": "tech.computing.pare_feu",
+  "label": "Pare-feu",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que fait un pare-feu (firewall) ?",
+  "options": [
+   "Il filtre les connexions réseau*",
+   "Il refroidit le processeur",
+   "Il sauvegarde les fichiers",
+   "Il accélère Internet"
+  ],
+  "explanation": "Il autorise ou bloque les échanges selon des règles, pour protéger un ordinateur ou un réseau.",
+  "hint": "Il laisse passer ou bloque."
+ },
+ {
+  "key": "tech-408",
+  "concept": "tech.computing.open_source",
+  "label": "Open source",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que signifie « open source » pour un logiciel ?",
+  "options": [
+   "Son code source est accessible et réutilisable*",
+   "Il est forcément gratuit et sans licence",
+   "Il fonctionne sans Internet",
+   "Il est développé par l'État"
+  ],
+  "explanation": "Chacun peut lire, modifier et redistribuer le code selon la licence. Linux et Firefox sont open source.",
+  "hint": "Linux en est un exemple."
+ },
+ {
+  "key": "tech-409",
+  "concept": "tech.computing.android",
+  "label": "Android",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle entreprise développe le système Android ?",
+  "options": [
+   "Google*",
+   "Apple",
+   "Microsoft",
+   "Samsung"
+  ],
+  "explanation": "Google rachète la start-up Android en 2005 ; c'est aujourd'hui le système le plus utilisé au monde.",
+  "hint": "Le moteur de recherche."
+ },
+ {
+  "key": "tech-410",
+  "concept": "tech.computing.hameconnage",
+  "label": "Hameçonnage",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce que l'« hameçonnage » (phishing) ?",
+  "options": [
+   "Une arnaque pour voler tes identifiants*",
+   "Un jeu de pêche en ligne",
+   "Un logiciel de retouche photo",
+   "Une panne de réseau"
+  ],
+  "explanation": "Un faux message imite une banque ou un service connu pour te faire saisir tes codes.",
+  "hint": "Méfie-toi des faux messages."
+ },
+ {
+  "key": "tech-411",
+  "concept": "tech.computing.deep_blue",
+  "label": "Deep Blue",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel ordinateur a battu le champion du monde d'échecs Garry Kasparov en 1997 ?",
+  "options": [
+   "Deep Blue*",
+   "Watson",
+   "AlphaGo",
+   "HAL 9000"
+  ],
+  "explanation": "Un superordinateur d'IBM. AlphaGo, lui, a battu les meilleurs joueurs de go en 2016.",
+  "hint": "Conçu par IBM."
+ },
+ {
+  "key": "tech-412",
+  "concept": "tech.computing.cloud",
+  "label": "Cloud",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Stocker ses fichiers « dans le cloud », c'est les stocker…",
+  "options": [
+   "sur des serveurs distants, via Internet*",
+   "sur une clé USB",
+   "dans la mémoire vive",
+   "sur un CD"
+  ],
+  "explanation": "Le « nuage » désigne des centres de données dont on loue l'espace et la puissance.",
+  "hint": "Le « nuage »."
+ },
+ {
+  "key": "tech-413",
+  "concept": "tech.computing.11111111_en_binaire",
+  "label": "11111111 en binaire",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien vaut le nombre binaire 11111111 en décimal ?",
+  "answer": 255,
+  "explanation": "128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255 : la plus grande valeur d'un octet.",
+  "hint": "C'est la plus grande valeur d'un octet."
+ },
+ {
+  "key": "tech-414",
+  "concept": "tech.computing.ssd",
+  "label": "SSD",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Un SSD ne contient aucune pièce mécanique en mouvement.",
+  "answer": true,
+  "explanation": "Oui : il stocke les données sur de la mémoire flash, contrairement au disque dur à plateaux qui tournent.",
+  "hint": "Mémoire flash."
+ },
+ {
+  "key": "tech-415",
+  "concept": "tech.computing.bluetooth",
+  "label": "Bluetooth",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le nom « Bluetooth » vient d'un roi viking.",
+  "answer": true,
+  "explanation": "Oui : Harald « à la dent bleue », qui unifia le Danemark au Xe siècle, comme la technologie unifie les appareils. Son logo mêle ses initiales en runes.",
+  "hint": "Un roi du Danemark."
+ },
+ {
+  "key": "tech-416",
+  "concept": "tech.brands.toyota",
+  "label": "Toyota",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel pays vient Toyota ?",
+  "options": [
+   "Japon*",
+   "Corée du Sud",
+   "Chine",
+   "États-Unis"
+  ],
+  "explanation": "Fondée en 1937, Toyota est l'un des premiers constructeurs automobiles mondiaux.",
+  "hint": "Comme Honda."
+ },
+ {
+  "key": "tech-417",
+  "concept": "tech.brands.volkswagen",
+  "label": "Volkswagen",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que signifie « Volkswagen » ?",
+  "options": [
+   "La voiture du peuple*",
+   "La roue d'or",
+   "La voiture rapide",
+   "La grande route"
+  ],
+  "explanation": "« Volk » : peuple, « Wagen » : voiture. La Coccinelle en est le modèle emblématique.",
+  "hint": "« Volk » veut dire peuple."
+ },
+ {
+  "key": "tech-418",
+  "concept": "tech.brands.logo_virgule",
+  "label": "Logo virgule",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle marque a pour logo une sorte de virgule, le « swoosh » ?",
+  "options": [
+   "Nike*",
+   "Adidas",
+   "Puma",
+   "Reebok"
+  ],
+  "explanation": "Dessiné en 1971 par une étudiante, Carolyn Davidson, payée 35 dollars.",
+  "hint": "Une déesse grecque."
+ },
+ {
+  "key": "tech-419",
+  "concept": "tech.brands.nom_de_nike",
+  "label": "Nom de Nike",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "D'où vient le nom de la marque Nike ?",
+  "options": [
+   "De la déesse grecque de la victoire*",
+   "D'un fleuve africain",
+   "Du prénom du fondateur",
+   "D'un mot anglais pour « rapide »"
+  ],
+  "explanation": "Niké est la déesse ailée de la victoire, comme la Victoire de Samothrace au Louvre.",
+  "hint": "Une déesse ailée."
+ },
+ {
+  "key": "tech-420",
+  "concept": "tech.brands.rolex",
+  "label": "Rolex",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays vient la marque de montres Rolex ?",
+  "options": [
+   "Suisse*",
+   "France",
+   "Allemagne",
+   "Italie"
+  ],
+  "explanation": "Fondée à Londres en 1905, elle s'installe à Genève en 1919.",
+  "hint": "Le pays des horlogers."
+ },
+ {
+  "key": "tech-421",
+  "concept": "tech.brands.nintendo_au_depart",
+  "label": "Nintendo au départ",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que fabriquait Nintendo à sa création, en 1889 ?",
+  "options": [
+   "Des cartes à jouer*",
+   "Des jouets en bois",
+   "Des radios",
+   "Des vélos"
+  ],
+  "explanation": "Des cartes japonaises hanafuda ; les jeux vidéo ne viennent que dans les années 1970.",
+  "hint": "On les distribue."
+ },
+ {
+  "key": "tech-422",
+  "concept": "tech.brands.walkman",
+  "label": "Walkman",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle entreprise a lancé le Walkman en 1979 ?",
+  "options": [
+   "Sony*",
+   "Panasonic",
+   "Philips",
+   "Toshiba"
+  ],
+  "explanation": "Premier baladeur à cassette grand public, il a changé la façon d'écouter de la musique.",
+  "hint": "Celle de la PlayStation."
+ },
+ {
+  "key": "tech-423",
+  "concept": "tech.brands.cheval_cabre",
+  "label": "Cheval cabré",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel constructeur automobile a pour emblème un cheval cabré ?",
+  "options": [
+   "Ferrari*",
+   "Lamborghini",
+   "Maserati",
+   "Porsche"
+  ],
+  "explanation": "Emblème repris d'un pilote de la Première Guerre mondiale. Lamborghini, lui, a un taureau.",
+  "hint": "Rouge et italien."
+ },
+ {
+  "key": "tech-424",
+  "concept": "tech.brands.zara",
+  "label": "Zara",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays vient la marque de vêtements Zara ?",
+  "options": [
+   "Espagne*",
+   "Italie",
+   "France",
+   "Portugal"
+  ],
+  "explanation": "Fondée en 1975 en Galice par Amancio Ortega, au sein du groupe Inditex.",
+  "hint": "Elle vient de Galice."
+ },
+ {
+  "key": "tech-425",
+  "concept": "tech.brands.guide_michelin",
+  "label": "Guide Michelin",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle entreprise de pneus a créé un célèbre guide gastronomique ?",
+  "options": [
+   "Michelin*",
+   "Goodyear",
+   "Pirelli",
+   "Bridgestone"
+  ],
+  "explanation": "Lancé en 1900 pour pousser les automobilistes à rouler (et user leurs pneus) ; ses étoiles consacrent les grands chefs.",
+  "hint": "Son guide donne des étoiles."
+ },
+ {
+  "key": "tech-426",
+  "concept": "tech.brands.fondateur_d_amazon",
+  "label": "Fondateur d'Amazon",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a fondé Amazon ?",
+  "options": [
+   "Jeff Bezos*",
+   "Elon Musk",
+   "Bill Gates",
+   "Larry Page"
+  ],
+  "explanation": "En 1994, dans son garage à Seattle, pour vendre des livres en ligne.",
+  "hint": "Il vendait des livres dans son garage."
+ },
+ {
+  "key": "tech-427",
+  "concept": "tech.brands.alexa",
+  "label": "Alexa",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle l'assistant vocal d'Amazon ?",
+  "options": [
+   "Alexa*",
+   "Siri",
+   "Cortana",
+   "Bixby"
+  ],
+  "explanation": "Siri est celui d'Apple, Cortana de Microsoft, Bixby de Samsung.",
+  "hint": "Pas celui d'Apple."
+ },
+ {
+  "key": "tech-428",
+  "concept": "tech.brands.bing",
+  "label": "Bing",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle entreprise a créé le moteur de recherche Bing ?",
+  "options": [
+   "Microsoft*",
+   "Yahoo",
+   "Apple",
+   "Amazon"
+  ],
+  "explanation": "Lancé en 2009, il succède à Live Search.",
+  "hint": "L'éditeur de Windows."
+ },
+ {
+  "key": "tech-429",
+  "concept": "tech.brands.rafale",
+  "label": "Rafale",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle entreprise française construit l'avion de combat Rafale ?",
+  "options": [
+   "Dassault Aviation*",
+   "Airbus",
+   "Thales",
+   "Safran"
+  ],
+  "explanation": "Le Rafale vole depuis 1986 ; Dassault construit aussi les jets d'affaires Falcon.",
+  "hint": "Elle fabrique aussi les Falcon."
+ },
+ {
+  "key": "tech-430",
+  "concept": "tech.brands.nom_adidas",
+  "label": "Nom Adidas",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le nom « Adidas » vient de son fondateur, Adolf « Adi » Dassler.",
+  "answer": true,
+  "explanation": "Oui : « Adi » + « Das(sler) ». Son frère Rudolf a fondé Puma après leur brouille.",
+  "hint": "Son frère a fondé Puma."
+ },
+ {
+  "key": "tech-431",
+  "concept": "tech.brands.moulins_peugeot",
+  "label": "Moulins Peugeot",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Peugeot fabriquait des moulins à café et à poivre avant de construire des voitures.",
+  "answer": true,
+  "explanation": "Oui : dès 1840, et les moulins Peugeot existent toujours. Le lion était d'abord un gage de la qualité de leurs lames d'acier.",
+  "hint": "Ils existent encore."
+ }
+]

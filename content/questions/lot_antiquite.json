@@ -1,0 +1,248 @@
+[
+ {
+  "key": "hist-401",
+  "concept": "history.antiquity.auteur_de_l_iliade",
+  "label": "Auteur de l'Iliade",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Selon la tradition, qui a composé « L'Iliade » et « L'Odyssée » ?",
+  "options": [
+   "Homère*",
+   "Virgile",
+   "Sophocle",
+   "Hésiode"
+  ],
+  "explanation": "Poète grec du VIIIe siècle av. J.-C., dont l'existence même est discutée.",
+  "hint": "Un poète aveugle, selon la légende."
+ },
+ {
+  "key": "hist-402",
+  "concept": "history.antiquity.pyramide_de_kheops",
+  "label": "Pyramide de Khéops",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel pharaon a fait construire la plus grande pyramide de Gizeh ?",
+  "options": [
+   "Khéops*",
+   "Toutânkhamon",
+   "Ramsès II",
+   "Akhenaton"
+  ],
+  "explanation": "Vers 2560 av. J.-C. ; haute de 146 m à l'origine, elle a été le plus haut monument du monde pendant près de 4 000 ans.",
+  "hint": "Elle porte son nom."
+ },
+ {
+  "key": "hist-403",
+  "concept": "history.antiquity.sparte",
+  "label": "Sparte",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle cité grecque était réputée pour son éducation militaire très dure ?",
+  "options": [
+   "Sparte*",
+   "Athènes",
+   "Corinthe",
+   "Thèbes"
+  ],
+  "explanation": "Dès 7 ans, les jeunes Spartiates suivaient l'agôgé, un entraînement militaire rude.",
+  "hint": "Pense à « spartiate »."
+ },
+ {
+  "key": "hist-404",
+  "concept": "history.antiquity.leonidas",
+  "label": "Léonidas",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel roi spartiate a résisté aux Perses aux Thermopyles, en 480 av. J.-C. ?",
+  "options": [
+   "Léonidas*",
+   "Périclès",
+   "Agamemnon",
+   "Xerxès"
+  ],
+  "explanation": "Avec ses 300 Spartiates et leurs alliés, il retarde l'armée de Xerxès avant d'être tué.",
+  "hint": "À la tête de 300 Spartiates."
+ },
+ {
+  "key": "hist-405",
+  "concept": "history.antiquity.guerres_mediques",
+  "label": "Guerres médiques",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Contre quel empire les cités grecques combattent-elles lors des guerres médiques ?",
+  "options": [
+   "L'Empire perse*",
+   "L'Empire romain",
+   "L'Égypte",
+   "Carthage"
+  ],
+  "explanation": "Marathon (490), Thermopyles et Salamine (480) : les Grecs repoussent Darius puis Xerxès.",
+  "hint": "Darius et Xerxès."
+ },
+ {
+  "key": "hist-406",
+  "concept": "history.antiquity.bibliotheque_d_alexandrie",
+  "label": "Bibliothèque d'Alexandrie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle grande bibliothèque de l'Antiquité se trouvait en Égypte ?",
+  "options": [
+   "La bibliothèque d'Alexandrie*",
+   "La bibliothèque de Pergame",
+   "La bibliothèque de Memphis",
+   "La bibliothèque de Thèbes"
+  ],
+  "explanation": "Fondée par les Ptolémées vers 290 av. J.-C., elle aurait réuni des centaines de milliers de rouleaux.",
+  "hint": "Dans une ville fondée par un conquérant macédonien."
+ },
+ {
+  "key": "hist-407",
+  "concept": "history.antiquity.eureka",
+  "label": "Eurêka",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel savant grec aurait crié « Eurêka ! » dans son bain ?",
+  "options": [
+   "Archimède*",
+   "Pythagore",
+   "Euclide",
+   "Thalès"
+  ],
+  "explanation": "En observant l'eau déborder, il comprend comment mesurer le volume d'un objet. Eurêka : « J'ai trouvé ! »",
+  "hint": "Il a aussi sa « poussée »."
+ },
+ {
+  "key": "hist-408",
+  "concept": "history.antiquity.eratosthene",
+  "label": "Ératosthène",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a mesuré la circonférence de la Terre vers 240 av. J.-C. ?",
+  "options": [
+   "Ératosthène*",
+   "Aristote",
+   "Ptolémée",
+   "Archimède"
+  ],
+  "explanation": "Avec les ombres à Syène et Alexandrie, il trouve environ 40 000 km : remarquablement proche de la réalité.",
+  "hint": "Directeur de la bibliothèque d'Alexandrie."
+ },
+ {
+  "key": "hist-409",
+  "concept": "history.antiquity.mur_d_hadrien",
+  "label": "Mur d'Hadrien",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel empereur a fait bâtir un mur à travers le nord de l'Angleterre ?",
+  "options": [
+   "Hadrien*",
+   "Trajan",
+   "Auguste",
+   "Néron"
+  ],
+  "explanation": "Construit à partir de 122, long d'environ 120 km, il marquait la limite nord de l'Empire.",
+  "hint": "Le mur porte son nom."
+ },
+ {
+  "key": "hist-410",
+  "concept": "history.antiquity.constantin",
+  "label": "Constantin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel empereur autorise le christianisme par l'édit de Milan, en 313 ?",
+  "options": [
+   "Constantin*",
+   "Néron",
+   "Dioclétien",
+   "Marc Aurèle"
+  ],
+  "explanation": "Constantin lui-même se convertit ; il fonde aussi Constantinople en 330.",
+  "hint": "Il a donné son nom à une ville."
+ },
+ {
+  "key": "hist-411",
+  "concept": "history.antiquity.fondation_de_rome",
+  "label": "Fondation de Rome",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Selon la tradition, quand Rome a-t-elle été fondée ?",
+  "options": [
+   "En 753 av. J.-C.*",
+   "En 509 av. J.-C.",
+   "En 44 av. J.-C.",
+   "En 476 apr. J.-C."
+  ],
+  "explanation": "509 marque la fin de la royauté et le début de la République ; 44, la mort de César ; 476, la fin de l'Empire d'Occident.",
+  "hint": "Bien avant la République."
+ },
+ {
+  "key": "hist-412",
+  "concept": "history.antiquity.chute_de_carthage",
+  "label": "Chute de Carthage",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle cité Rome détruit-elle en 146 av. J.-C., à la fin des guerres puniques ?",
+  "options": [
+   "Carthage*",
+   "Troie",
+   "Athènes",
+   "Alexandrie"
+  ],
+  "explanation": "Après trois guerres puniques contre Carthage (dont celle d'Hannibal), Rome rase la ville.",
+  "hint": "Guerres « puniques »."
+ },
+ {
+  "key": "hist-413",
+  "concept": "history.antiquity.vestales",
+  "label": "Vestales",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui étaient les Vestales ?",
+  "options": [
+   "Des prêtresses gardiennes du feu sacré de Rome*",
+   "Des gladiatrices",
+   "Des épouses d'empereurs",
+   "Des sénatrices"
+  ],
+  "explanation": "Six prêtresses entretenaient le feu de Vesta, qui ne devait jamais s'éteindre.",
+  "hint": "Le feu de Vesta."
+ },
+ {
+  "key": "hist-414",
+  "concept": "history.antiquity.gladiateurs",
+  "label": "Gladiateurs",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Les combats de gladiateurs se terminaient toujours par la mort d'un combattant.",
+  "answer": false,
+  "explanation": "Non : les gladiateurs coûtaient cher à former. Beaucoup de combats s'arrêtaient sur une blessure ou une grâce.",
+  "hint": "Un gladiateur coûtait cher."
+ },
+ {
+  "key": "hist-415",
+  "concept": "history.antiquity.cesar_empereur",
+  "label": "César empereur",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Jules César n'a jamais porté le titre d'empereur romain.",
+  "answer": true,
+  "explanation": "Oui : il était dictateur. Le premier empereur est son fils adoptif Octave, devenu Auguste en 27 av. J.-C.",
+  "hint": "Il était dictateur."
+ },
+ {
+  "key": "hist-416",
+  "concept": "history.antiquity.chronologie_de_l_antiquite",
+  "label": "Chronologie de l'Antiquité",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe du plus ancien au plus récent.",
+  "items": [
+   "Les cités-États de Sumer",
+   "L'unification de l'Égypte par les pharaons",
+   "L'Athènes de Périclès",
+   "L'Empire romain d'Auguste"
+  ],
+  "explanation": "Sumer (vers 3500 av. J.-C.), unification de l'Égypte (vers 3100), Périclès (Ve siècle av. J.-C.), Auguste (27 av. J.-C.).",
+  "hint": "La Mésopotamie ouvre la marche."
+ }
+]

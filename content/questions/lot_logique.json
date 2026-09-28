@@ -1,0 +1,384 @@
+[
+ {
+  "key": "logic-401",
+  "concept": "logic.reasoning.syllogisme_des_chats_noirs",
+  "label": "Syllogisme des chats noirs",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "« Certains chats sont noirs. Tous les chats sont des animaux. » Donc certains animaux sont noirs.",
+  "answer": true,
+  "explanation": "Oui : les chats noirs sont des animaux, donc il existe des animaux noirs.",
+  "hint": "Les chats noirs sont bien des animaux."
+ },
+ {
+  "key": "logic-402",
+  "concept": "logic.reasoning.roses_qui_fanent",
+  "label": "Roses qui fanent",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« Toutes les roses sont des fleurs. Certaines fleurs fanent vite. » Donc certaines roses fanent vite.",
+  "answer": false,
+  "explanation": "Non : les fleurs qui fanent vite ne sont peut-être pas des roses. La conclusion ne découle pas des prémisses.",
+  "hint": "Les fleurs qui fanent vite sont-elles des roses ?"
+ },
+ {
+  "key": "logic-403",
+  "concept": "logic.reasoning.contraposee",
+  "label": "Contraposée",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "« Si je ne travaille pas, je ne réussirai pas. » Cela revient à dire…",
+  "options": [
+   "Si je réussis, c'est que j'ai travaillé.*",
+   "Si je travaille, je réussirai.",
+   "Si je ne réussis pas, c'est que je n'ai pas travaillé.",
+   "Travailler ne sert à rien."
+  ],
+  "explanation": "« Si non A alors non B » équivaut à sa contraposée « si B alors A ». Travailler est nécessaire, pas suffisant.",
+  "hint": "Travailler est nécessaire, pas suffisant."
+ },
+ {
+  "key": "logic-404",
+  "concept": "logic.reasoning.cousine",
+  "label": "Cousine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "La fille de la sœur de ma mère est ma…",
+  "options": [
+   "cousine*",
+   "nièce",
+   "tante",
+   "sœur"
+  ],
+  "explanation": "La sœur de ma mère est ma tante ; sa fille est ma cousine germaine.",
+  "hint": "Commence par la sœur de ta mère."
+ },
+ {
+  "key": "logic-405",
+  "concept": "logic.reasoning.du_1er_mars_au_1er_avril",
+  "label": "Du 1er mars au 1er avril",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Si le 1er mars est un lundi, quel jour est le 1er avril ?",
+  "options": [
+   "Jeudi*",
+   "Lundi",
+   "Mercredi",
+   "Vendredi"
+  ],
+  "explanation": "Mars a 31 jours : 31 = 4 semaines + 3 jours. Lundi + 3 jours = jeudi.",
+  "hint": "Mars compte 31 jours."
+ },
+ {
+  "key": "logic-406",
+  "concept": "logic.reasoning.intrus_des_formes",
+  "label": "Intrus des formes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est l'intrus : carré, triangle, cercle, rectangle ?",
+  "options": [
+   "Cercle*",
+   "Carré",
+   "Triangle",
+   "Rectangle"
+  ],
+  "explanation": "Le cercle est la seule figure sans côtés droits ni angles.",
+  "hint": "Compte les côtés."
+ },
+ {
+  "key": "logic-407",
+  "concept": "logic.reasoning.intrus_des_carres",
+  "label": "Intrus des carrés",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est l'intrus : 16, 25, 36, 48 ?",
+  "options": [
+   "48*",
+   "16",
+   "25",
+   "36"
+  ],
+  "explanation": "16 = 4², 25 = 5², 36 = 6² ; 48 n'est pas un carré parfait (49 l'est).",
+  "hint": "Cherche les carrés."
+ },
+ {
+  "key": "logic-408",
+  "concept": "logic.reasoning.lunettes_ou_chapeau",
+  "label": "Lunettes ou chapeau",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Tous les élèves portent des lunettes ou un chapeau. Tom ne porte pas de lunettes. Donc…",
+  "options": [
+   "Tom porte un chapeau*",
+   "Tom ne porte rien",
+   "Tom porte les deux",
+   "On ne peut rien dire"
+  ],
+  "explanation": "S'il n'a pas de lunettes, il doit avoir un chapeau pour respecter la règle.",
+  "hint": "Il lui faut au moins l'un des deux."
+ },
+ {
+  "key": "logic-409",
+  "concept": "logic.reasoning.the_et_cafe",
+  "label": "Thé et café",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Dans un groupe, 12 personnes aiment le thé, 15 le café, et 5 aiment les deux. Chacun aime au moins une boisson. Combien sont-ils ?",
+  "answer": 22,
+  "explanation": "12 + 15 = 27, mais les 5 qui aiment les deux sont comptés deux fois : 27 − 5 = 22.",
+  "hint": "Ceux qui aiment les deux sont comptés deux fois."
+ },
+ {
+  "key": "logic-410",
+  "concept": "logic.reasoning.mois_de_28_jours",
+  "label": "Mois de 28 jours",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien de mois de l'année ont 28 jours ?",
+  "answer": 12,
+  "explanation": "Tous ! Chaque mois a au moins 28 jours. Seul février n'en a pas plus (sauf les années bissextiles).",
+  "hint": "Lis bien la question."
+ },
+ {
+  "key": "logic-411",
+  "concept": "logic.reasoning.age_du_fils",
+  "label": "Âge du fils",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Un père et son fils ont 36 ans à eux deux. Le père a 30 ans de plus que son fils. Quel âge a le fils ?",
+  "answer": 3,
+  "explanation": "Fils + (fils + 30) = 36, donc 2 × fils = 6 : le fils a 3 ans et le père 33. Réponse piège : 6.",
+  "hint": "Ce n'est pas 6."
+ },
+ {
+  "key": "logic-412",
+  "concept": "logic.reasoning.negation_de_tous",
+  "label": "Négation de tous",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le contraire logique de « Tous les élèves sont venus » ?",
+  "options": [
+   "Au moins un élève n'est pas venu*",
+   "Aucun élève n'est venu",
+   "Tous les élèves sont partis",
+   "Certains élèves sont venus"
+  ],
+  "explanation": "Pour que « tous » soit faux, il suffit d'un seul absent.",
+  "hint": "Un seul absent suffit."
+ },
+ {
+  "key": "logic-413",
+  "concept": "logic.reasoning.trois_pommes",
+  "label": "Trois pommes",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Il y a 3 pommes sur la table. Tu en prends 2. Combien de pommes as-tu ?",
+  "answer": 2,
+  "explanation": "Tu as les 2 pommes que tu as prises ; il en reste 1 sur la table.",
+  "hint": "Combien en as-tu, toi ?"
+ },
+ {
+  "key": "logic-414",
+  "concept": "logic.reasoning.carres_et_rectangles",
+  "label": "Carrés et rectangles",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Tous les carrés sont des rectangles.",
+  "answer": true,
+  "explanation": "Oui : un rectangle a quatre angles droits ; le carré aussi, avec en plus quatre côtés égaux. L'inverse est faux.",
+  "hint": "Un carré a-t-il quatre angles droits ?"
+ },
+ {
+  "key": "logic-415",
+  "concept": "logic.puzzles.soustraire_10_de_100",
+  "label": "Soustraire 10 de 100",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de fois peut-on soustraire 10 de 100 ?",
+  "options": [
+   "Une seule fois*",
+   "10 fois",
+   "9 fois",
+   "Une infinité de fois"
+  ],
+  "explanation": "Après la première soustraction, on ne soustrait plus 10 de 100, mais de 90.",
+  "hint": "Relis bien : « de 100 »."
+ },
+ {
+  "key": "logic-416",
+  "concept": "logic.puzzles.survivants_a_la_frontiere",
+  "label": "Survivants à la frontière",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un avion s'écrase pile sur la frontière franco-espagnole. Où enterre-t-on les survivants ?",
+  "options": [
+   "Nulle part*",
+   "En France",
+   "En Espagne",
+   "Dans leur pays d'origine"
+  ],
+  "explanation": "On n'enterre pas des survivants !",
+  "hint": "Ils sont vivants."
+ },
+ {
+  "key": "logic-417",
+  "concept": "logic.puzzles.plumes_et_plomb",
+  "label": "Plumes et plomb",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui est le plus lourd : un kilo de plumes ou un kilo de plomb ?",
+  "options": [
+   "Ils pèsent pareil*",
+   "Le plomb",
+   "Les plumes",
+   "Ça dépend de l'altitude"
+  ],
+  "explanation": "Un kilo reste un kilo. Le plomb est seulement plus dense : il prend moins de place.",
+  "hint": "Un kilo est un kilo."
+ },
+ {
+  "key": "logic-418",
+  "concept": "logic.puzzles.tous_sauf_9",
+  "label": "Tous sauf 9",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Un fermier a 17 moutons. Tous meurent, sauf 9. Combien en reste-t-il ?",
+  "answer": 9,
+  "explanation": "« Tous sauf 9 » : il en reste 9. Le piège pousse à calculer 17 − 9 = 8.",
+  "hint": "Relis « sauf 9 »."
+ },
+ {
+  "key": "logic-419",
+  "concept": "logic.puzzles.arche_de_moise",
+  "label": "Arche de Moïse",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien d'animaux de chaque espèce Moïse a-t-il emmenés dans l'arche ?",
+  "options": [
+   "Aucun : c'est Noé*",
+   "Deux",
+   "Sept",
+   "Un seul"
+  ],
+  "explanation": "Dans la Bible, c'est Noé qui construit l'arche. On lit souvent trop vite la question.",
+  "hint": "Qui a construit l'arche ?"
+ },
+ {
+  "key": "logic-420",
+  "concept": "logic.puzzles.allumette_d_abord",
+  "label": "Allumette d'abord",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans une pièce sombre, tu as une allumette, une bougie, une lampe à huile et un poêle. Qu'allumes-tu en premier ?",
+  "options": [
+   "L'allumette*",
+   "La bougie",
+   "La lampe",
+   "Le poêle"
+  ],
+  "explanation": "Sans allumer l'allumette, impossible d'allumer quoi que ce soit.",
+  "hint": "Avec quoi allumes-tu le reste ?"
+ },
+ {
+  "key": "logic-421",
+  "concept": "logic.puzzles.deux_trains",
+  "label": "Deux trains",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Deux trains distants de 100 km roulent l'un vers l'autre, chacun à 50 km/h. Dans combien d'heures se croisent-ils ?",
+  "answer": 1,
+  "unit": "h",
+  "explanation": "Ils se rapprochent de 100 km par heure (50 + 50) : ils se croisent au bout d'une heure.",
+  "hint": "Additionne les vitesses."
+ },
+ {
+  "key": "logic-422",
+  "concept": "logic.puzzles.ouvriers_et_mur",
+  "label": "Ouvriers et mur",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "2 ouvriers construisent un mur en 6 jours. Combien de jours faut-il à 4 ouvriers, au même rythme ?",
+  "answer": 3,
+  "unit": "jours",
+  "explanation": "Deux fois plus d'ouvriers, deux fois moins de temps : 6 ÷ 2 = 3 jours.",
+  "hint": "Deux fois plus de monde…"
+ },
+ {
+  "key": "logic-423",
+  "concept": "logic.puzzles.trois_consecutifs",
+  "label": "Trois consécutifs",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "La somme de trois nombres entiers consécutifs vaut 48. Quel est le plus grand ?",
+  "answer": 17,
+  "explanation": "Le nombre du milieu vaut 48 ÷ 3 = 16 ; les trois nombres sont 15, 16 et 17.",
+  "hint": "Commence par celui du milieu."
+ },
+ {
+  "key": "logic-424",
+  "concept": "logic.puzzles.aiguilles_superposees",
+  "label": "Aiguilles superposées",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Combien de fois par jour (24 h) les aiguilles des heures et des minutes se superposent-elles ?",
+  "answer": 22,
+  "explanation": "11 fois toutes les 12 heures (pas 12 : entre 11 h et 13 h, elles ne se croisent qu'une fois, à midi), donc 22 fois par jour.",
+  "hint": "Pas 24."
+ },
+ {
+  "key": "logic-425",
+  "concept": "logic.puzzles.livre_a_10_plus_la_moitie",
+  "label": "Livre à 10 € plus la moitié",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Un livre coûte 10 € plus la moitié de son prix. Combien coûte-t-il ?",
+  "answer": 20,
+  "unit": "€",
+  "explanation": "Si le prix est P : P = 10 + P/2, donc P/2 = 10 et P = 20 €. Réponse piège : 15 €.",
+  "hint": "Ce n'est pas 15 €."
+ },
+ {
+  "key": "logic-426",
+  "concept": "logic.puzzles.feuille_pliee",
+  "label": "Feuille pliée",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Tu plies une feuille en deux, trois fois de suite. Combien d'épaisseurs de papier obtiens-tu ?",
+  "answer": 8,
+  "explanation": "Chaque pliage double l'épaisseur : 2, 4, puis 8.",
+  "hint": "Chaque pliage double."
+ },
+ {
+  "key": "logic-427",
+  "concept": "logic.puzzles.deux_ampoules",
+  "label": "Deux ampoules",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Une lampe clignote toutes les 4 secondes, une autre toutes les 6. Elles clignotent ensemble au départ. Combien de fois clignotent-elles de nouveau ensemble dans la minute qui suit ?",
+  "answer": 5,
+  "explanation": "Elles coïncident toutes les 12 secondes (le plus petit multiple commun) : à 12, 24, 36, 48 et 60 s.",
+  "hint": "Plus petit multiple commun de 4 et 6."
+ },
+ {
+  "key": "logic-428",
+  "concept": "logic.puzzles.tournoi_a_elimination",
+  "label": "Tournoi à élimination",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Un tournoi à élimination directe réunit 16 joueurs. Combien de matchs faut-il pour désigner le vainqueur ?",
+  "answer": 15,
+  "explanation": "Chaque match élimine un joueur ; il faut en éliminer 15 : 8 + 4 + 2 + 1 = 15 matchs.",
+  "hint": "Chaque match élimine un joueur."
+ },
+ {
+  "key": "logic-429",
+  "concept": "logic.puzzles.billes_bleues",
+  "label": "Billes bleues",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Un sac contient 5 billes rouges et 3 bleues. Combien faut-il en tirer, sans regarder, pour être sûr d'avoir 2 bleues ?",
+  "answer": 7,
+  "explanation": "Au pire, on tire d'abord les 5 rouges ; il faut ensuite 2 bleues : 5 + 2 = 7.",
+  "hint": "Imagine le pire des cas."
+ }
+]

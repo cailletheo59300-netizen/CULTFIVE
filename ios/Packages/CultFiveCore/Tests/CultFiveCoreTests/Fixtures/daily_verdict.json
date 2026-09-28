@@ -1,18 +1,19 @@
 {
  "answer": {
-  "option_id": "1e9967cc"
+  "value": 1250,
+  "tolerance": 0
  },
  "source": null,
  "finished": false,
  "position": 1,
  "takeaway": null,
- "domain_id": "french",
+ "domain_id": "logic",
  "duplicate": false,
  "counted_ms": 3800,
  "fact_as_of": null,
  "is_correct": true,
- "explanation": "Un discours véhément est plein de passion et de force.",
- "domain_after": 52.4,
+ "explanation": "On multiplie par 5 : 250 × 5 = 1250.",
+ "domain_after": 52.9,
  "domain_before": 50.0,
  "error_transition": null,
  "correction_reward": {

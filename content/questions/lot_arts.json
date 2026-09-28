@@ -1,0 +1,478 @@
+[
+ {
+  "key": "arts-401",
+  "concept": "arts.architecture.galerie_des_glaces",
+  "label": "Galerie des Glaces",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel architecte a conçu la galerie des Glaces de Versailles ?",
+  "options": [
+   "Jules Hardouin-Mansart*",
+   "André Le Nôtre",
+   "Charles Le Brun",
+   "Vauban"
+  ],
+  "explanation": "Hardouin-Mansart la construit de 1678 à 1684 ; Le Brun en peint la voûte ; Le Nôtre dessine les jardins.",
+  "hint": "Il a laissé son nom à un type de toit."
+ },
+ {
+  "key": "arts-402",
+  "concept": "arts.architecture.jardins_de_versailles",
+  "label": "Jardins de Versailles",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a dessiné les jardins de Versailles ?",
+  "options": [
+   "André Le Nôtre*",
+   "Jules Hardouin-Mansart",
+   "Louis Le Vau",
+   "Charles Perrault"
+  ],
+  "explanation": "Le Nôtre est le maître du jardin « à la française » : perspectives, bassins, parterres géométriques.",
+  "hint": "Le maître du jardin à la française."
+ },
+ {
+  "key": "arts-403",
+  "concept": "arts.architecture.chrysler_building",
+  "label": "Chrysler Building",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle ville se trouve le Chrysler Building, joyau de l'Art déco ?",
+  "options": [
+   "New York*",
+   "Chicago",
+   "Detroit",
+   "Los Angeles"
+  ],
+  "explanation": "Achevé en 1930 à Manhattan, il fut brièvement le plus haut immeuble du monde.",
+  "hint": "À Manhattan."
+ },
+ {
+  "key": "arts-404",
+  "concept": "arts.architecture.opera_garnier",
+  "label": "Opéra Garnier",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a conçu l'Opéra de Paris inauguré en 1875 ?",
+  "options": [
+   "Charles Garnier*",
+   "Gustave Eiffel",
+   "Georges-Eugène Haussmann",
+   "Viollet-le-Duc"
+  ],
+  "explanation": "L'opéra porte d'ailleurs son nom : le palais Garnier.",
+  "hint": "Il porte son nom."
+ },
+ {
+  "key": "arts-405",
+  "concept": "arts.architecture.arc_boutant",
+  "label": "Arc-boutant",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quoi sert un arc-boutant sur une cathédrale gothique ?",
+  "options": [
+   "À soutenir les murs depuis l'extérieur*",
+   "À évacuer l'eau de pluie",
+   "À décorer la façade",
+   "À porter les cloches"
+  ],
+  "explanation": "Il reporte la poussée des voûtes vers l'extérieur, ce qui permet des murs plus fins et de grands vitraux.",
+  "hint": "Il permet de grands vitraux."
+ },
+ {
+  "key": "arts-406",
+  "concept": "arts.architecture.colonnade_de_saint_pierre",
+  "label": "Colonnade de Saint-Pierre",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a conçu la colonnade de la place Saint-Pierre, à Rome ?",
+  "options": [
+   "Le Bernin*",
+   "Michel-Ange",
+   "Raphaël",
+   "Brunelleschi"
+  ],
+  "explanation": "Gian Lorenzo Bernini, maître du baroque, l'élève entre 1656 et 1667 : deux bras qui accueillent les fidèles.",
+  "hint": "Maître du baroque romain."
+ },
+ {
+  "key": "arts-407",
+  "concept": "arts.architecture.coupole_de_florence",
+  "label": "Coupole de Florence",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a réalisé la coupole de la cathédrale de Florence ?",
+  "options": [
+   "Filippo Brunelleschi*",
+   "Léonard de Vinci",
+   "Michel-Ange",
+   "Giotto"
+  ],
+  "explanation": "Achevée en 1436 sans échafaudage central, c'est une prouesse de la Renaissance.",
+  "hint": "Une prouesse de 1436."
+ },
+ {
+  "key": "arts-408",
+  "concept": "arts.architecture.philharmonie_de_paris",
+  "label": "Philharmonie de Paris",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel architecte a conçu la Philharmonie de Paris ?",
+  "options": [
+   "Jean Nouvel*",
+   "Renzo Piano",
+   "Frank Gehry",
+   "Christian de Portzamparc"
+  ],
+  "explanation": "Inaugurée en 2015 à la Villette. Jean Nouvel a aussi signé l'Institut du monde arabe et le Louvre Abu Dhabi.",
+  "hint": "Il a signé l'Institut du monde arabe."
+ },
+ {
+  "key": "arts-409",
+  "concept": "arts.architecture.bauhaus",
+  "label": "Bauhaus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel pays l'école du Bauhaus a-t-elle été fondée en 1919 ?",
+  "options": [
+   "En Allemagne*",
+   "Aux Pays-Bas",
+   "En Autriche",
+   "En Suisse"
+  ],
+  "explanation": "Fondée à Weimar par Walter Gropius, elle marque le design et l'architecture modernes.",
+  "hint": "À Weimar."
+ },
+ {
+  "key": "arts-410",
+  "concept": "arts.architecture.pantheon_de_soufflot",
+  "label": "Panthéon de Soufflot",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel monument parisien est l'œuvre de Jacques-Germain Soufflot ?",
+  "options": [
+   "Le Panthéon*",
+   "L'Arc de triomphe",
+   "La Madeleine",
+   "Les Invalides"
+  ],
+  "explanation": "Prévu comme église Sainte-Geneviève, il devient à la Révolution le temple des grands hommes.",
+  "hint": "On y honore les grands personnages."
+ },
+ {
+  "key": "arts-411",
+  "concept": "arts.architecture.maison_sur_la_cascade",
+  "label": "Maison sur la cascade",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel architecte a conçu la « Maison sur la cascade » (Fallingwater) ?",
+  "options": [
+   "Frank Lloyd Wright*",
+   "Le Corbusier",
+   "Ludwig Mies van der Rohe",
+   "Frank Gehry"
+  ],
+  "explanation": "Construite en 1939 en Pennsylvanie, au-dessus d'une chute d'eau : un modèle d'architecture « organique ».",
+  "hint": "Un Américain."
+ },
+ {
+  "key": "arts-412",
+  "concept": "arts.architecture.gargouilles",
+  "label": "Gargouilles",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quoi servent les gargouilles des cathédrales, à l'origine ?",
+  "options": [
+   "À évacuer l'eau de pluie*",
+   "À effrayer les fidèles",
+   "À porter des cloches",
+   "À soutenir la toiture"
+  ],
+  "explanation": "Ce sont des gouttières sculptées qui rejettent l'eau loin des murs. Le mot vient de « gargouiller ».",
+  "hint": "Le mot vient de « gargouiller »."
+ },
+ {
+  "key": "arts-413",
+  "concept": "arts.architecture.avant_le_gothique",
+  "label": "Avant le gothique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel style d'architecture précède le gothique en Europe ?",
+  "options": [
+   "Le roman*",
+   "Le baroque",
+   "La Renaissance",
+   "L'Art nouveau"
+  ],
+  "explanation": "L'art roman (XIe–XIIe siècles) a des murs épais et des arcs en plein cintre ; le gothique suit à partir du XIIe siècle.",
+  "hint": "Des murs épais et des arcs ronds."
+ },
+ {
+  "key": "arts-414",
+  "concept": "arts.architecture.ordre_du_parthenon",
+  "label": "Ordre du Parthénon",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le Parthénon d'Athènes est un temple de quel ordre ?",
+  "options": [
+   "Dorique*",
+   "Ionique",
+   "Corinthien",
+   "Toscan"
+  ],
+  "explanation": "Colonnes massives sans base et chapiteaux simples : l'ordre dorique. L'ionique a des volutes, le corinthien des feuilles d'acanthe.",
+  "hint": "Le plus sobre des ordres grecs."
+ },
+ {
+  "key": "arts-415",
+  "concept": "arts.architecture.tour_eiffel_provisoire",
+  "label": "Tour Eiffel provisoire",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La tour Eiffel devait être démontée au bout de 20 ans.",
+  "answer": true,
+  "explanation": "Oui : la concession courait jusqu'en 1909. Son utilité pour la radio et la télégraphie militaire l'a sauvée.",
+  "hint": "La radio l'a sauvée."
+ },
+ {
+  "key": "arts-416",
+  "concept": "arts.architecture.pyramide_blanche",
+  "label": "Pyramide blanche",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "La grande pyramide de Gizeh était à l'origine recouverte de calcaire blanc poli.",
+  "answer": true,
+  "explanation": "Oui : un parement de calcaire fin la faisait briller au soleil. Il a été en grande partie récupéré comme matériau de construction.",
+  "hint": "Elle brillait au soleil."
+ },
+ {
+  "key": "arts-417",
+  "concept": "arts.mythology.messager_des_dieux",
+  "label": "Messager des dieux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel dieu grec est le messager des dieux ?",
+  "options": [
+   "Hermès*",
+   "Apollon",
+   "Arès",
+   "Héphaïstos"
+  ],
+  "explanation": "Avec ses sandales ailées, il porte les messages de Zeus ; il protège aussi les voyageurs et les commerçants. À Rome : Mercure.",
+  "hint": "Il a des sandales ailées."
+ },
+ {
+  "key": "arts-418",
+  "concept": "arts.mythology.nee_de_l_ecume",
+  "label": "Née de l'écume",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle déesse est née de l'écume de la mer ?",
+  "options": [
+   "Aphrodite*",
+   "Athéna",
+   "Artémis",
+   "Héra"
+  ],
+  "explanation": "Déesse de l'amour et de la beauté (Vénus chez les Romains) : Botticelli l'a peinte sortant des flots.",
+  "hint": "Botticelli l'a peinte sur un coquillage."
+ },
+ {
+  "key": "arts-419",
+  "concept": "arts.mythology.tueur_de_meduse",
+  "label": "Tueur de Méduse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel héros a tranché la tête de Méduse ?",
+  "options": [
+   "Persée*",
+   "Thésée",
+   "Achille",
+   "Jason"
+  ],
+  "explanation": "Il l'observe dans le reflet de son bouclier pour ne pas être pétrifié.",
+  "hint": "Il utilise un bouclier miroir."
+ },
+ {
+  "key": "arts-420",
+  "concept": "arts.mythology.enigme_du_sphinx",
+  "label": "Énigme du Sphinx",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a résolu l'énigme du Sphinx ?",
+  "options": [
+   "Œdipe*",
+   "Ulysse",
+   "Héraclès",
+   "Persée"
+  ],
+  "explanation": "« Qui marche à quatre pattes le matin, à deux le midi et à trois le soir ? » L'homme. Le Sphinx se jette alors du haut de son rocher.",
+  "hint": "Il deviendra roi de Thèbes."
+ },
+ {
+  "key": "arts-421",
+  "concept": "arts.mythology.argonautes",
+  "label": "Argonautes",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel héros mène les Argonautes à la recherche de la Toison d'or ?",
+  "options": [
+   "Jason*",
+   "Persée",
+   "Thésée",
+   "Achille"
+  ],
+  "explanation": "Avec l'aide de Médée, il rapporte la Toison d'or de Colchide.",
+  "hint": "Il navigue sur l'Argo."
+ },
+ {
+  "key": "arts-422",
+  "concept": "arts.mythology.dieu_ruse_nordique",
+  "label": "Dieu rusé nordique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel dieu nordique est connu pour ses ruses et ses farces ?",
+  "options": [
+   "Loki*",
+   "Thor",
+   "Odin",
+   "Freyr"
+  ],
+  "explanation": "Tantôt allié tantôt ennemi des dieux, il annonce le Ragnarök.",
+  "hint": "Un dieu farceur."
+ },
+ {
+  "key": "arts-423",
+  "concept": "arts.mythology.rocher_eternel",
+  "label": "Rocher éternel",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui est condamné à pousser éternellement un rocher en haut d'une colline ?",
+  "options": [
+   "Sisyphe*",
+   "Tantale",
+   "Prométhée",
+   "Icare"
+  ],
+  "explanation": "Le rocher retombe toujours avant le sommet. Camus en a fait un symbole de l'absurde.",
+  "hint": "Camus en a fait un mythe."
+ },
+ {
+  "key": "arts-424",
+  "concept": "arts.mythology.porteur_du_ciel",
+  "label": "Porteur du ciel",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel titan porte la voûte du ciel sur ses épaules ?",
+  "options": [
+   "Atlas*",
+   "Cronos",
+   "Prométhée",
+   "Hypérion"
+  ],
+  "explanation": "Puni par Zeus, il a donné son nom aux recueils de cartes, souvent illustrés de son image.",
+  "hint": "Il a donné son nom aux recueils de cartes."
+ },
+ {
+  "key": "arts-425",
+  "concept": "arts.mythology.osiris",
+  "label": "Osiris",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel dieu égyptien règne sur le monde des morts ?",
+  "options": [
+   "Osiris*",
+   "Râ",
+   "Horus",
+   "Thot"
+  ],
+  "explanation": "Tué par son frère Seth, il est ramené à la vie par Isis et devient le juge des morts.",
+  "hint": "L'époux d'Isis."
+ },
+ {
+  "key": "arts-426",
+  "concept": "arts.mythology.fil_d_ariane",
+  "label": "Fil d'Ariane",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui aide Thésée à sortir du labyrinthe grâce à un fil ?",
+  "options": [
+   "Ariane*",
+   "Médée",
+   "Pénélope",
+   "Athéna"
+  ],
+  "explanation": "Fille du roi Minos, elle lui donne une pelote : le « fil d'Ariane » est devenu un fil conducteur.",
+  "hint": "« Le fil d'… »."
+ },
+ {
+  "key": "arts-427",
+  "concept": "arts.mythology.horus",
+  "label": "Horus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment représente-t-on le dieu égyptien Horus ?",
+  "options": [
+   "Avec une tête de faucon*",
+   "Avec une tête de chacal",
+   "Avec une tête d'ibis",
+   "Avec une tête de crocodile"
+  ],
+  "explanation": "L'œil d'Horus est un célèbre symbole de protection. Anubis a une tête de chacal, Thot une tête d'ibis.",
+  "hint": "Un rapace."
+ },
+ {
+  "key": "arts-428",
+  "concept": "arts.mythology.dieu_des_enfers",
+  "label": "Dieu des Enfers",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le dieu grec des Enfers ?",
+  "options": [
+   "Hadès*",
+   "Arès",
+   "Apollon",
+   "Dionysos"
+  ],
+  "explanation": "Frère de Zeus et de Poséidon, il règne sur le monde souterrain avec Perséphone. À Rome : Pluton.",
+  "hint": "Frère de Zeus."
+ },
+ {
+  "key": "arts-429",
+  "concept": "arts.mythology.amazones",
+  "label": "Amazones",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appellent les femmes guerrières de la mythologie grecque ?",
+  "options": [
+   "Les Amazones*",
+   "Les Muses",
+   "Les Nymphes",
+   "Les Sirènes"
+  ],
+  "explanation": "Peuple de guerrières combattu par Héraclès et Achille ; elles ont donné leur nom au fleuve Amazone.",
+  "hint": "Elles ont donné leur nom à un fleuve."
+ },
+ {
+  "key": "arts-430",
+  "concept": "arts.mythology.fratrie_de_zeus",
+  "label": "Fratrie de Zeus",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Dans la mythologie grecque, Zeus, Poséidon et Hadès sont frères.",
+  "answer": true,
+  "explanation": "Oui : tous trois fils de Cronos. Ils se partagent le ciel, la mer et les Enfers.",
+  "hint": "Ils se partagent le monde."
+ },
+ {
+  "key": "arts-431",
+  "concept": "arts.mythology.hercule_et_heracles",
+  "label": "Hercule et Héraclès",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Hercule » est le nom grec du héros, « Héraclès » son nom romain.",
+  "answer": false,
+  "explanation": "C'est l'inverse : Héraclès est le nom grec, Hercule le nom romain.",
+  "hint": "Pense à Zeus et Jupiter."
+ }
+]

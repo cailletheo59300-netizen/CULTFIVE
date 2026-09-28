@@ -4,108 +4,153 @@
  "ranked": true,
  "questions": [
   {
-   "id": "ff9d1352-503c-4516-82b5-9fc6643728cd",
-   "type": "mcq",
+   "id": "c09f5eca-cb13-41b4-be10-53dd8d61c702",
+   "type": "true_false",
    "answer": {
-    "option_id": "bfec3bba"
+    "value": true
    },
-   "prompt": "Quelle équipe a remporté la Coupe du monde de football 2010 ?",
-   "source": "Wikidata",
+   "prompt": "Le nom « Adidas » vient de son fondateur, Adolf « Adi » Dassler.",
+   "source": null,
+   "payload": {},
+   "expected": 0.75,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "tech",
+   "concept_id": "tech.brands.nom_adidas",
+   "difficulty": 50,
+   "fact_as_of": null,
+   "explanation": "Oui : « Adi » + « Das(sler) ». Son frère Rudolf a fondé Puma après leur brouille.",
+   "has_context": false,
+   "subdomain_id": "tech.brands"
+  },
+  {
+   "id": "ebe1b22c-d061-4cea-89a1-900e1c446714",
+   "type": "numeric",
+   "answer": {
+    "value": 42.195,
+    "tolerance": 0.001
+   },
+   "prompt": "Quelle est la distance officielle d'un marathon, en kilomètres ?",
+   "source": null,
    "payload": {
-    "options": [
-     {
-      "id": "bf195a13",
-      "text": "Allemagne"
-     },
-     {
-      "id": "b929fa98",
-      "text": "Argentine"
-     },
-     {
-      "id": "fdecb416",
-      "text": "Suède"
-     },
-     {
-      "id": "bfec3bba",
-      "text": "Espagne"
-     }
-    ]
+    "unit": "km",
+    "decimals": 3,
+    "allow_negative": false
    },
-   "expected": 0.78,
+   "expected": 0.61,
    "has_hint": true,
    "takeaway": null,
    "domain_id": "sport",
-   "concept_id": "sport.football.world_cup_2010",
-   "difficulty": 42,
+   "concept_id": "sport.rules.marathon_distance",
+   "difficulty": 45,
    "fact_as_of": null,
-   "explanation": "En 2010, la Coupe du monde, organisée par l'Afrique du Sud, a été remportée par l'Espagne.",
+   "explanation": "42,195 km : la distance des Jeux de Londres de 1908, fixée officiellement en 1921.",
    "has_context": false,
-   "subdomain_id": "sport.football"
+   "subdomain_id": "sport.rules"
   },
   {
-   "id": "c5b30853-e14e-4562-ac31-892eb993e458",
+   "id": "60b0ec52-a971-414f-adda-f0902c979028",
    "type": "mcq",
    "answer": {
-    "option_id": "402050c1"
+    "option_id": "ad6d3645"
    },
-   "prompt": "Quelle est l'orthographe correcte ?",
+   "prompt": "Quel phénomène fait paraître « cassée » une paille plongée dans un verre d'eau ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "923c6837",
-      "text": "Accueuil"
+      "id": "ad6d3645",
+      "text": "La réfraction"
      },
      {
-      "id": "6e2d2e52",
-      "text": "Acueil"
+      "id": "24097147",
+      "text": "L'évaporation"
      },
      {
-      "id": "2240b5ac",
-      "text": "Acceuil"
+      "id": "0485da29",
+      "text": "La réflexion"
      },
      {
-      "id": "402050c1",
-      "text": "Accueil"
+      "id": "082a99e2",
+      "text": "La diffraction"
      }
     ]
    },
-   "expected": 0.87,
-   "has_hint": false,
+   "expected": 0.63,
+   "has_hint": true,
    "takeaway": null,
-   "domain_id": "french",
-   "concept_id": "french.spelling.accueil",
-   "difficulty": 35,
+   "domain_id": "science",
+   "concept_id": "science.physics.paille_cassee",
+   "difficulty": 50,
    "fact_as_of": null,
-   "explanation": "Après c ou g, on écrit « ue » pour garder le son dur : accueil, cueillir, orgueil.",
+   "explanation": "La lumière change de direction en passant de l'eau à l'air : c'est la réfraction.",
    "has_context": false,
-   "subdomain_id": "french.spelling"
+   "subdomain_id": "science.physics"
   },
   {
-   "id": "115d6b00-8164-4d22-bc95-04c1182d258f",
+   "id": "09146760-9388-422c-bbf6-cbbbf07b5629",
    "type": "mcq",
    "answer": {
-    "option_id": "03fff6ef"
+    "option_id": "bdc9a217"
    },
-   "prompt": "Le groupe Red Hot Chili Peppers est originaire de quel pays ?",
-   "source": "Wikidata",
+   "prompt": "Quel style d'architecture précède le gothique en Europe ?",
+   "source": null,
    "payload": {
     "options": [
      {
-      "id": "78c83161",
-      "text": "Royaume-Uni"
+      "id": "01da5c62",
+      "text": "Le baroque"
      },
      {
-      "id": "a5aed45b",
-      "text": "Australie"
+      "id": "bdc9a217",
+      "text": "Le roman"
      },
      {
-      "id": "dc38c5d6",
-      "text": "Canada"
+      "id": "b36a2293",
+      "text": "L'Art nouveau"
      },
      {
-      "id": "03fff6ef",
-      "text": "États-Unis"
+      "id": "147c8def",
+      "text": "La Renaissance"
+     }
+    ]
+   },
+   "expected": 0.84,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "arts",
+   "concept_id": "arts.architecture.avant_le_gothique",
+   "difficulty": 35,
+   "fact_as_of": null,
+   "explanation": "L'art roman (XIe–XIIe siècles) a des murs épais et des arcs en plein cintre ; le gothique suit à partir du XIIe siècle.",
+   "has_context": false,
+   "subdomain_id": "arts.architecture"
+  },
+  {
+   "id": "b7c8cd78-68eb-4241-b3be-b0b4e56920d7",
+   "type": "mcq",
+   "answer": {
+    "option_id": "ab280996"
+   },
+   "prompt": "Qui a composé « Pierre et le Loup », conte musical pour enfants ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "ab009a6e",
+      "text": "Igor Stravinsky"
+     },
+     {
+      "id": "58730121",
+      "text": "Nikolaï Rimski-Korsakov"
+     },
+     {
+      "id": "ab280996",
+      "text": "Sergueï Prokofiev"
+     },
+     {
+      "id": "de13ed2b",
+      "text": "Dmitri Chostakovitch"
      }
     ]
    },
@@ -113,131 +158,37 @@
    "has_hint": true,
    "takeaway": null,
    "domain_id": "music",
-   "concept_id": "music.popular.band_red_hot_chili_peppers_q10708",
+   "concept_id": "music.classical.pierre_et_le_loup",
    "difficulty": 50,
    "fact_as_of": null,
-   "explanation": "Red Hot Chili Peppers est un groupe originaire des États-Unis.",
+   "explanation": "Chaque personnage a son instrument : le chat est la clarinette, le loup les cors (1936).",
    "has_context": false,
-   "subdomain_id": "music.popular"
+   "subdomain_id": "music.classical"
   },
   {
-   "id": "d09a63d3-8e13-4cb5-a7ee-a1c90e5eaa0f",
-   "type": "mcq",
+   "id": "0efab4c3-3b1d-4320-b5a2-83f1b5bc4a4b",
+   "type": "numeric",
    "answer": {
-    "option_id": "fd3e9c8d"
+    "value": 8,
+    "tolerance": 0
    },
-   "prompt": "« Les Évadés » (1994) est un film de…",
-   "source": "Wikidata",
+   "prompt": "Tu plies une feuille en deux, trois fois de suite. Combien d'épaisseurs de papier obtiens-tu ?",
+   "source": null,
    "payload": {
-    "options": [
-     {
-      "id": "f97b6117",
-      "text": "Mel Gibson"
-     },
-     {
-      "id": "a72a0807",
-      "text": "Steven Spielberg"
-     },
-     {
-      "id": "fd3e9c8d",
-      "text": "Frank Darabont"
-     },
-     {
-      "id": "95d2da4d",
-      "text": "Roberto Benigni"
-     }
-    ]
+    "decimals": 0,
+    "allow_negative": false
    },
-   "expected": 0.85,
+   "expected": 0.83,
    "has_hint": true,
    "takeaway": null,
-   "domain_id": "cinema",
-   "concept_id": "cinema.directors.film_les_evades_q172241",
-   "difficulty": 34,
+   "domain_id": "logic",
+   "concept_id": "logic.puzzles.feuille_pliee",
+   "difficulty": 35,
    "fact_as_of": null,
-   "explanation": "« Les Évadés » a été réalisé par Frank Darabont (cinéaste américain) et est sorti en 1994.",
+   "explanation": "Chaque pliage double l'épaisseur : 2, 4, puis 8.",
    "has_context": false,
-   "subdomain_id": "cinema.directors"
-  },
-  {
-   "id": "645eed02-30e9-4846-8827-0167fe3c46ba",
-   "type": "mcq",
-   "answer": {
-    "option_id": "b2f50867"
-   },
-   "prompt": "Le saxophone est un instrument…",
-   "source": "Wikidata",
-   "payload": {
-    "options": [
-     {
-      "id": "3bb45c58",
-      "text": "à cordes"
-     },
-     {
-      "id": "b2f50867",
-      "text": "à vent"
-     },
-     {
-      "id": "7903e56b",
-      "text": "de percussion"
-     },
-     {
-      "id": "351151cc",
-      "text": "à clavier"
-     }
-    ],
-    "keep_order": true
-   },
-   "expected": 0.69,
-   "has_hint": true,
-   "takeaway": null,
-   "domain_id": "music",
-   "concept_id": "music.instruments.family_saxophone",
-   "difficulty": 46,
-   "fact_as_of": null,
-   "explanation": "Le saxophone est un instrument à vent : le son naît du souffle.",
-   "has_context": false,
-   "subdomain_id": "music.instruments"
-  },
-  {
-   "id": "9bd9cff3-5d0b-4c7b-9739-1ce3ebbd4886",
-   "type": "mcq",
-   "answer": {
-    "option_id": "b191f2f9"
-   },
-   "prompt": "À qui doit-on le feu de circulation ?",
-   "source": "Wikidata",
-   "payload": {
-    "options": [
-     {
-      "id": "4c04d53e",
-      "text": "Christopher Cockerell"
-     },
-     {
-      "id": "6a3286c4",
-      "text": "Percy Spencer"
-     },
-     {
-      "id": "ccb97119",
-      "text": "Léon Foucault"
-     },
-     {
-      "id": "b191f2f9",
-      "text": "J. P. Knight"
-     }
-    ]
-   },
-   "expected": 0.51,
-   "has_hint": true,
-   "takeaway": null,
-   "domain_id": "tech",
-   "concept_id": "tech.inventions.feu_de_circulation",
-   "difficulty": 57,
-   "fact_as_of": null,
-   "explanation": "On doit le feu de circulation à J. P. Knight (ingénieur britannique).",
-   "has_context": false,
-   "subdomain_id": "tech.inventions"
+   "subdomain_id": "logic.puzzles"
   }
  ],
- "session_id": "cc0249cb-0dd5-4487-b248-455b4f4b2b81"
+ "session_id": "d5bc160a-11d2-4f23-941b-114e280cf940"
 }

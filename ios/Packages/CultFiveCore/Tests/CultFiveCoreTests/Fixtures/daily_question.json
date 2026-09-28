@@ -1,29 +1,13 @@
 {
- "id": "ca496889-4458-4a8f-bfad-efa10163561c",
- "type": "mcq",
+ "id": "a1ccbe59-6bce-46a5-92de-957773e5f424",
+ "type": "numeric",
  "total": 5,
- "prompt": "Quel est un synonyme de « véhément » ?",
+ "prompt": "Quel nombre suit : 2, 10, 50, 250, … ?",
  "payload": {
-  "options": [
-   {
-    "id": "e5b28b89",
-    "text": "Discret"
-   },
-   {
-    "id": "f5deedb7",
-    "text": "Poli"
-   },
-   {
-    "id": "4f798bc7",
-    "text": "Rapide"
-   },
-   {
-    "id": "1e9967cc",
-    "text": "Emporté"
-   }
-  ]
+  "decimals": 0,
+  "allow_negative": false
  },
  "position": 1,
- "domain_id": "french",
- "subdomain_id": "french.synonyms"
+ "domain_id": "logic",
+ "subdomain_id": "logic.sequences"
 }
