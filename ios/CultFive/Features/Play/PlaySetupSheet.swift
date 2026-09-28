@@ -85,16 +85,16 @@ struct PlaySetupSheet: View {
 
     private func ratingLine(_ skill: SkillSummary) -> String {
         let rating = skill.rating
-        if rating.placed { return "Cote CULT \(rating.formatted) · \(rating.rank.name)" }
-        return "Placement \(rating.placementGames)/\(CoteCULT.placementGames) · ta cote se dévoile après 5 parties classées"
+        if rating.placed { return "Elo \(rating.formatted) · \(rating.rank.name)" }
+        return "Placement \(rating.placementGames)/\(CoteCULT.placementGames) · ton Elo se dévoile après 5 parties classées"
     }
 
     private var kindPicker: some View {
         VStack(spacing: 10) {
             kindCard(ranked: true, title: "Partie classée", symbol: "chart.line.uptrend.xyaxis",
-                     detail: "10 questions à la limite de ton niveau : environ une sur deux est un vrai défi. Ta cote CULT et tes graines évoluent.")
+                     detail: "10 questions à la limite de ton niveau : environ une sur deux est un vrai défi. Ton Elo et tes graines évoluent.")
             kindCard(ranked: false, title: "Entraînement libre", symbol: "slider.horizontal.3",
-                     detail: "Nombre de questions, chrono et difficulté au choix. Sans effet sur ta cote.")
+                     detail: "Nombre de questions, chrono et difficulté au choix. Sans effet sur ton Elo.")
         }
     }
 

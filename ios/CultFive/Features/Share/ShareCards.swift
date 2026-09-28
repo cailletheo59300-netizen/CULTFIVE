@@ -224,7 +224,7 @@ struct ProfileShareCard: View {
                 Text(profile.handle).font(.system(size: 28, weight: .black, design: .rounded)).foregroundStyle(palette.text)
                     .lineLimit(1).minimumScaleFactor(0.6)
                 if let global = CoteCULT.global(skills), global.placed {
-                    Text("Cote CULT \(global.formatted) · \(global.rank.name)")
+                    Text("Elo \(global.formatted) · \(global.rank.name)")
                         .font(.system(size: 15, weight: .black, design: .rounded)).foregroundStyle(palette.accent)
                 }
                 Text("Mon radar de culture").font(.system(size: 11, weight: .heavy, design: .rounded)).textCase(.uppercase)

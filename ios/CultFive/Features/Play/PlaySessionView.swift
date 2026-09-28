@@ -258,7 +258,7 @@ struct PlaySummaryView: View {
                 }
                 ForEach(placementsDone, id: \.domainId) { r in
                     CelebrationCard(kind: .rating, title: "Placement terminé : \(CoteCULT.format(r.coteAfter))",
-                                    detail: "\(app.domainName(r.domainId)) · rang \(CoteCULT.Rank(cote: r.coteAfter).name). Ta cote bouge maintenant à chaque partie classée.")
+                                    detail: "\(app.domainName(r.domainId)) · rang \(CoteCULT.Rank(cote: r.coteAfter).name). Ton Elo bouge maintenant à chaque partie classée.")
                 }
                 ForEach(rankUps, id: \.domainId) { r in
                     CelebrationCard(kind: .rating, title: "Nouveau rang : \(CoteCULT.Rank(cote: r.coteAfter).name)",
@@ -266,7 +266,7 @@ struct PlaySummaryView: View {
                 }
                 if summary.synced, summary.ranked, !summary.ratings.isEmpty {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("Cote CULT").labelCaps()
+                        Text("Elo").labelCaps()
                         ForEach(summary.ratings, id: \.domainId) { r in
                             RatingChangeRow(change: r, domainName: app.domainName(r.domainId))
                         }

@@ -65,7 +65,7 @@ struct PlayHomeView: View {
                     Text(global.rank.name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
                 }
                 .accessibilityElement(children: .combine)
-                .accessibilityLabel("Ta cote CULT : \(global.formatted), \(global.rank.name)")
+                .accessibilityLabel("Ton Elo : \(global.formatted), \(global.rank.name)")
             }
         }
         .padding(.top, Space.l)
@@ -242,7 +242,7 @@ private struct DomainTile: View {
                     .lineLimit(1).minimumScaleFactor(0.6)
             }
             .foregroundStyle(on)
-            .accessibilityLabel("Cote \(skill.rating.formatted), \(skill.rating.rank.name)")
+            .accessibilityLabel("Elo \(skill.rating.formatted), \(skill.rating.rank.name)")
         } else if let skill, skill.answered > 0 {
             HStack(spacing: 3) {
                 ForEach(0 ..< CoteCULT.placementGames, id: \.self) { i in

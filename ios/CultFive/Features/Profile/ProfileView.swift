@@ -111,7 +111,7 @@ struct ProfileView: View {
         let global = CoteCULT.global(skills)
         return HStack(spacing: Space.m) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Cote CULT").labelCaps(.white.opacity(0.8))
+                Text("Elo").labelCaps(.white.opacity(0.8))
                 if let global, global.placed {
                     Text(global.formatted).numeral(size: 52).foregroundStyle(Color.white)
                     Text(global.rank.name).font(.cfHeadline).foregroundStyle(Color.sun)
@@ -126,7 +126,7 @@ struct ProfileView: View {
                     Text("En placement").font(.system(.title2, design: .rounded).weight(.black)).foregroundStyle(Color.white)
                     ProgressView(value: Double(min(answered, CoteCULT.placementAnswers)), total: Double(CoteCULT.placementAnswers))
                         .tint(.sun).frame(maxWidth: 200)
-                    Text("\(min(answered, CoteCULT.placementAnswers))/\(CoteCULT.placementAnswers) réponses classées avant de découvrir ta cote.")
+                    Text("\(min(answered, CoteCULT.placementAnswers))/\(CoteCULT.placementAnswers) réponses classées avant de découvrir ton Elo.")
                         .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
                         .fixedSize(horizontal: false, vertical: true)
                 }

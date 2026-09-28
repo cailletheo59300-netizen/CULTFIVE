@@ -74,7 +74,7 @@ struct DomainView: View {
                 HStack(alignment: .lastTextBaseline, spacing: Space.s) {
                     Text(stats.rating.formatted).numeral(size: 64).foregroundStyle(DomainPalette.onColor(domainId))
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("cote CULT · \(stats.rating.rank.name)").font(.cfFootnote.weight(.bold))
+                        Text("Elo · \(stats.rating.rank.name)").font(.cfFootnote.weight(.bold))
                         if let next = stats.rating.toNextRank, let rank = stats.rating.rank.next {
                             Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote)
                         } else {
@@ -87,7 +87,7 @@ struct DomainView: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Placement \(stats.rating.placementGames)/\(CoteCULT.placementGames)")
                         .font(.system(.title2, design: .rounded).weight(.black))
-                    Text("Joue \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") pour découvrir ta cote CULT.")
+                    Text("Joue \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") pour découvrir ton Elo.")
                         .font(.cfFootnote)
                         .opacity(0.85)
                 }
@@ -160,17 +160,17 @@ struct DomainView: View {
             Text("Évolution").labelCaps()
             if stats.history.count >= 2 {
                 Chart(stats.history, id: \.day) { point in
-                    LineMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Cote", CoteCULT.cote(level: point.level)))
+                    LineMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Elo", CoteCULT.cote(level: point.level)))
                         .interpolationMethod(.monotone)
                         .foregroundStyle(color)
-                    PointMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Cote", CoteCULT.cote(level: point.level)))
+                    PointMark(x: .value("Jour", DateText.date(point.day) ?? Date()), y: .value("Elo", CoteCULT.cote(level: point.level)))
                         .foregroundStyle(color)
                         .symbolSize(18)
                 }
                 .chartYScale(domain: .automatic(includesZero: false))
                 .chartXAxis { AxisMarks(values: .automatic(desiredCount: 4)) }
                 .frame(height: 150)
-                .accessibilityLabel("Évolution de la cote sur les derniers jours")
+                .accessibilityLabel("Évolution de l’Elo sur les derniers jours")
             } else {
                 Text("La courbe apparaîtra après quelques jours de jeu.").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }

@@ -4,6 +4,7 @@
 - L'app s'appelle désormais **Brainlix** (nom sous l'icône, textes, admin, docs). Le 5 du jour et son logo en bâtons ne changent pas.
 - Identifiant `app.brainlix.ios`, schéma `brainlix://`, liens d'invitation/ligue/duel et pages légales sur `www.etudia.site`. Réglage d'équipe Apple : `BRAINLIX_TEAM_ID`.
 - Serveur : migration 0019 (texte du succès « premier ami », tâche planifiée `brainlix-daily-maintenance`).
+- La **« Cote CULT » s'appelle « Elo »** dans l'app (accueil Jouer, domaines, fin de partie, profil, partage, célébrations) et dans l'objectif « Gagne 30 points d'Elo dans un domaine » (migration 0020). Calcul, rangs et placement inchangés.
 
 ## 0.9.0 — objectifs et récap
 - **Objectifs du jour** (3, dont toujours « Fais le 5 du jour ») et **de la semaine** (3, du lundi au dimanche) : carte « Objectifs » sur l'accueil (onglets Jour/Semaine, jauges, récompense, bonus, temps restant), célébration quand un objectif est rempli. Récompenses modestes : 15 XP + 2 graines par objectif du jour (+10 XP + 3 graines pour les trois), 50 XP + 8 graines par objectif de la semaine (coffre de 15 graines). Progression calculée par le serveur, impossible à tricher.

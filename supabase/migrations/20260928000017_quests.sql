@@ -104,7 +104,7 @@ begin
         ('daily_done', null, 5, 'Fais le 5 du jour 5 fois', false),
         ('ranked_games', null, 8, 'Joue 8 parties classées', false),
         ('domains_played', null, 4, 'Joue dans 4 domaines différents', false),
-        ('cote_gain', null, 30, 'Gagne 30 points de cote dans un domaine', false),
+        ('cote_gain', null, 30, 'Gagne 30 points d''Elo dans un domaine', false),
         ('daily_perfect', null, 1, 'Fais un sans-faute au 5 du jour', false),
         ('errors_corrected', null, 6, 'Corrige 6 erreurs', false)
       ) t where p_period = 'week' and (t.column1 <> 'errors_corrected' or v_errors >= 3)

@@ -83,7 +83,7 @@ réponses d'affilée, la question restante la plus dure passe devant ; après 2 
 - Simulation (joueurs qui devinent quand ils ne savent pas, 4 domaines × 3 niveaux, 14 parties) : réussite **66 %**,
   écart moyen entre niveau estimé et vrai niveau **1,8 point** (≈ 31 points de cote).
 
-## Cote CULT (0.8.0)
+## Elo (0.8.0, ex-« Cote CULT »)
 Lecture du niveau μ sur une échelle façon échecs : **cote = 1000 + 17,37 × (μ − 50)** (17,37 = 400 / (S · ln 10) : 400 points
 d'écart = 10 contre 1). 1000 = niveau médian ; μ ∈ [0, 100] → cote ∈ [131, 1869].
 | Rang | Cote |

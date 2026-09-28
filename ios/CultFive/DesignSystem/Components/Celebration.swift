@@ -58,7 +58,7 @@ struct CelebrationCard: View {
         case .trophy: return "Trophée débloqué"
         case .corrected: return "Erreur corrigée"
         case .levelUp: return "Niveau supérieur"
-        case .rating: return "Cote CULT"
+        case .rating: return "Elo"
         case .quest: return "Objectif rempli"
         }
     }
