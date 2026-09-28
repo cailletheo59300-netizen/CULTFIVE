@@ -39,7 +39,7 @@ final class DemoPlayEngine: @unchecked Sendable {
     private var seedsDelta = 0
     // Activité de la séance, pour les objectifs de la démo.
     private(set) var rankedGames = 0
-    private(set) var answered = 0
+    private(set) var sessionAnswers = 0
     private(set) var correctByDomain: [String: Int] = [:]
     private(set) var correctedCount = 0
     private(set) var domainsPlayed: Set<String> = []
@@ -194,7 +194,7 @@ final class DemoPlayEngine: @unchecked Sendable {
                 transition = .string("still_wrong")
             }
             let domain = entry.question.domainId
-            answered += 1
+            sessionAnswers += 1
             domainsPlayed.insert(domain)
             if ok { correctByDomain[domain, default: 0] += 1 }
             if case .string("corrected") = transition { correctedCount += 1 }

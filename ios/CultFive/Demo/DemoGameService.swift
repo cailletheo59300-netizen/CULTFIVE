@@ -186,7 +186,7 @@ struct DemoGameService: GameService {
         let week = { (i: Int) in fmt.string(from: start.addingTimeInterval(Double(-7 * i) * 86_400)) }
         let correct = engine.correctByDomain.values.reduce(0, +)
         return [
-            WeekRecap(weekStart: week(0), answers: 42 + engine.answered, correct: 29 + correct, games: 4 + engine.rankedGames, dailies: 3,
+            WeekRecap(weekStart: week(0), answers: 42 + engine.sessionAnswers, correct: 29 + correct, games: 4 + engine.rankedGames, dailies: 3,
                       dailyAvg: 3.7, errorsCorrected: 5 + engine.correctedCount, questsDone: 7,
                       coteMoves: [.init(domainId: "history", delta: 38), .init(domainId: "geography", delta: 21), .init(domainId: "sport", delta: -12)]),
             WeekRecap(weekStart: week(1), answers: 96, correct: 61, games: 7, dailies: 6, dailyAvg: 3.5, errorsCorrected: 9, questsDone: 14,
