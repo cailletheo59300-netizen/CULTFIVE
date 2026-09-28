@@ -807,8 +807,59 @@
  },
  {
   "key": "gcalc-063",
-  "concept": "calc.conversions.gen_units_63",
-  "label": "Conversion d'unités (63)",
+  "concept": "calc.fractions.gen_simplify_63",
+  "label": "Fraction irréductible (63)",
+  "difficulty": 50,
+  "family": "calc_simplify",
+  "type": "mcq",
+  "prompt": "Quelle est la forme irréductible de 24/36 ?",
+  "options": [
+   "2/3*",
+   "4/6",
+   "3/4",
+   "8/12"
+  ],
+  "explanation": "On divise haut et bas par 12 : 24/36 = 2/3. Les autres fractions valent la même chose sans être simplifiées au bout, ou valent autre chose.",
+  "hint": "Cherche le plus grand diviseur commun de 24 et 36."
+ },
+ {
+  "key": "gcalc-064",
+  "concept": "calc.fractions.gen_simplify_64",
+  "label": "Fraction irréductible (64)",
+  "difficulty": 50,
+  "family": "calc_simplify",
+  "type": "mcq",
+  "prompt": "Quelle est la forme irréductible de 45/60 ?",
+  "options": [
+   "3/4*",
+   "9/12",
+   "5/6",
+   "15/20"
+  ],
+  "explanation": "On divise haut et bas par 15 : 45/60 = 3/4. Les autres fractions valent la même chose sans être simplifiées au bout, ou valent autre chose.",
+  "hint": "Cherche le plus grand diviseur commun de 45 et 60."
+ },
+ {
+  "key": "gcalc-065",
+  "concept": "calc.fractions.gen_simplify_65",
+  "label": "Fraction irréductible (65)",
+  "difficulty": 50,
+  "family": "calc_simplify",
+  "type": "mcq",
+  "prompt": "Quelle est la forme irréductible de 28/42 ?",
+  "options": [
+   "2/3*",
+   "4/7",
+   "7/12",
+   "14/21"
+  ],
+  "explanation": "On divise haut et bas par 14 : 28/42 = 2/3. Les autres fractions valent la même chose sans être simplifiées au bout, ou valent autre chose.",
+  "hint": "Cherche le plus grand diviseur commun de 28 et 42."
+ },
+ {
+  "key": "gcalc-066",
+  "concept": "calc.conversions.gen_units_66",
+  "label": "Conversion d'unités (66)",
   "difficulty": 25,
   "family": "calc_units",
   "type": "numeric",
@@ -819,9 +870,9 @@
   "unit": "m"
  },
  {
-  "key": "gcalc-064",
-  "concept": "calc.conversions.gen_units_64",
-  "label": "Conversion d'unités (64)",
+  "key": "gcalc-067",
+  "concept": "calc.conversions.gen_units_67",
+  "label": "Conversion d'unités (67)",
   "difficulty": 25,
   "family": "calc_units",
   "type": "numeric",
@@ -832,9 +883,9 @@
   "unit": "cm"
  },
  {
-  "key": "gcalc-065",
-  "concept": "calc.conversions.gen_units_65",
-  "label": "Conversion d'unités (65)",
+  "key": "gcalc-068",
+  "concept": "calc.conversions.gen_units_68",
+  "label": "Conversion d'unités (68)",
   "difficulty": 25,
   "family": "calc_units",
   "type": "numeric",
@@ -845,9 +896,9 @@
   "unit": "g"
  },
  {
-  "key": "gcalc-066",
-  "concept": "calc.conversions.gen_units_66",
-  "label": "Conversion d'unités (66)",
+  "key": "gcalc-069",
+  "concept": "calc.conversions.gen_units_69",
+  "label": "Conversion d'unités (69)",
   "difficulty": 25,
   "family": "calc_units",
   "type": "numeric",
@@ -858,9 +909,9 @@
   "unit": "ml"
  },
  {
-  "key": "gcalc-067",
-  "concept": "calc.conversions.gen_units_67",
-  "label": "Conversion d'unités (67)",
+  "key": "gcalc-070",
+  "concept": "calc.conversions.gen_units_70",
+  "label": "Conversion d'unités (70)",
   "difficulty": 25,
   "family": "calc_units",
   "type": "numeric",
@@ -871,9 +922,9 @@
   "unit": "cl"
  },
  {
-  "key": "gcalc-068",
-  "concept": "calc.conversions.gen_hours_68",
-  "label": "Minutes en heures (68)",
+  "key": "gcalc-071",
+  "concept": "calc.conversions.gen_hours_71",
+  "label": "Minutes en heures (71)",
   "difficulty": 38,
   "family": "calc_hours",
   "type": "numeric",
@@ -884,9 +935,9 @@
   "unit": "h"
  },
  {
-  "key": "gcalc-069",
-  "concept": "calc.conversions.gen_hours_69",
-  "label": "Minutes en heures (69)",
+  "key": "gcalc-072",
+  "concept": "calc.conversions.gen_hours_72",
+  "label": "Minutes en heures (72)",
   "difficulty": 38,
   "family": "calc_hours",
   "type": "numeric",
@@ -897,9 +948,9 @@
   "unit": "h"
  },
  {
-  "key": "gcalc-070",
-  "concept": "calc.conversions.gen_hours_70",
-  "label": "Minutes en heures (70)",
+  "key": "gcalc-073",
+  "concept": "calc.conversions.gen_hours_73",
+  "label": "Minutes en heures (73)",
   "difficulty": 38,
   "family": "calc_hours",
   "type": "numeric",
@@ -910,9 +961,9 @@
   "unit": "h"
  },
  {
-  "key": "gcalc-071",
-  "concept": "calc.conversions.gen_hours_71",
-  "label": "Minutes en heures (71)",
+  "key": "gcalc-074",
+  "concept": "calc.conversions.gen_hours_74",
+  "label": "Minutes en heures (74)",
   "difficulty": 38,
   "family": "calc_hours",
   "type": "numeric",
@@ -923,9 +974,9 @@
   "unit": "h"
  },
  {
-  "key": "gcalc-072",
-  "concept": "calc.conversions.gen_speed_72",
-  "label": "km/h en m/s (72)",
+  "key": "gcalc-075",
+  "concept": "calc.conversions.gen_speed_75",
+  "label": "km/h en m/s (75)",
   "difficulty": 58,
   "family": "calc_speed",
   "type": "numeric",
@@ -936,9 +987,9 @@
   "unit": "m/s"
  },
  {
-  "key": "gcalc-073",
-  "concept": "calc.conversions.gen_speed_73",
-  "label": "km/h en m/s (73)",
+  "key": "gcalc-076",
+  "concept": "calc.conversions.gen_speed_76",
+  "label": "km/h en m/s (76)",
   "difficulty": 58,
   "family": "calc_speed",
   "type": "numeric",
@@ -949,9 +1000,9 @@
   "unit": "m/s"
  },
  {
-  "key": "gcalc-074",
-  "concept": "calc.conversions.gen_speed_74",
-  "label": "km/h en m/s (74)",
+  "key": "gcalc-077",
+  "concept": "calc.conversions.gen_speed_77",
+  "label": "km/h en m/s (77)",
   "difficulty": 58,
   "family": "calc_speed",
   "type": "numeric",
@@ -962,9 +1013,9 @@
   "unit": "m/s"
  },
  {
-  "key": "gcalc-075",
-  "concept": "calc.conversions.gen_speed_75",
-  "label": "km/h en m/s (75)",
+  "key": "gcalc-078",
+  "concept": "calc.conversions.gen_speed_78",
+  "label": "km/h en m/s (78)",
   "difficulty": 58,
   "family": "calc_speed",
   "type": "numeric",
@@ -975,9 +1026,9 @@
   "unit": "m/s"
  },
  {
-  "key": "gcalc-076",
-  "concept": "calc.conversions.gen_travel_76",
-  "label": "Temps de trajet (76)",
+  "key": "gcalc-079",
+  "concept": "calc.conversions.gen_travel_79",
+  "label": "Temps de trajet (79)",
   "difficulty": 50,
   "family": "calc_travel",
   "type": "numeric",
@@ -988,9 +1039,9 @@
   "unit": "min"
  },
  {
-  "key": "gcalc-077",
-  "concept": "calc.conversions.gen_travel_77",
-  "label": "Temps de trajet (77)",
+  "key": "gcalc-080",
+  "concept": "calc.conversions.gen_travel_80",
+  "label": "Temps de trajet (80)",
   "difficulty": 50,
   "family": "calc_travel",
   "type": "numeric",
@@ -1001,9 +1052,9 @@
   "unit": "min"
  },
  {
-  "key": "gcalc-078",
-  "concept": "calc.conversions.gen_travel_78",
-  "label": "Temps de trajet (78)",
+  "key": "gcalc-081",
+  "concept": "calc.conversions.gen_travel_81",
+  "label": "Temps de trajet (81)",
   "difficulty": 50,
   "family": "calc_travel",
   "type": "numeric",
@@ -1014,9 +1065,9 @@
   "unit": "min"
  },
  {
-  "key": "gcalc-079",
-  "concept": "calc.conversions.gen_travel_79",
-  "label": "Temps de trajet (79)",
+  "key": "gcalc-082",
+  "concept": "calc.conversions.gen_travel_82",
+  "label": "Temps de trajet (82)",
   "difficulty": 50,
   "family": "calc_travel",
   "type": "numeric",
@@ -1027,9 +1078,9 @@
   "unit": "min"
  },
  {
-  "key": "gcalc-080",
-  "concept": "calc.conversions.gen_area_volume_80",
-  "label": "Aires et volumes (80)",
+  "key": "gcalc-083",
+  "concept": "calc.conversions.gen_area_volume_83",
+  "label": "Aires et volumes (83)",
   "difficulty": 64,
   "family": "calc_area_volume",
   "type": "numeric",
@@ -1039,9 +1090,9 @@
   "hint": "Un carré de 1 000 m de côté."
  },
  {
-  "key": "gcalc-081",
-  "concept": "calc.conversions.gen_area_volume_81",
-  "label": "Aires et volumes (81)",
+  "key": "gcalc-084",
+  "concept": "calc.conversions.gen_area_volume_84",
+  "label": "Aires et volumes (84)",
   "difficulty": 64,
   "family": "calc_area_volume",
   "type": "numeric",
@@ -1051,9 +1102,9 @@
   "hint": "1 ha = un carré de 100 m de côté."
  },
  {
-  "key": "gcalc-082",
-  "concept": "calc.conversions.gen_area_volume_82",
-  "label": "Aires et volumes (82)",
+  "key": "gcalc-085",
+  "concept": "calc.conversions.gen_area_volume_85",
+  "label": "Aires et volumes (85)",
   "difficulty": 64,
   "family": "calc_area_volume",
   "type": "numeric",
@@ -1063,9 +1114,9 @@
   "hint": "1 dm³ = 1 litre."
  },
  {
-  "key": "gcalc-083",
-  "concept": "calc.conversions.gen_area_volume_83",
-  "label": "Aires et volumes (83)",
+  "key": "gcalc-086",
+  "concept": "calc.conversions.gen_area_volume_86",
+  "label": "Aires et volumes (86)",
   "difficulty": 64,
   "family": "calc_area_volume",
   "type": "numeric",
@@ -1075,9 +1126,33 @@
   "hint": "Un litre."
  },
  {
-  "key": "gcalc-084",
-  "concept": "calc.number_logic.gen_gcd_84",
-  "label": "Plus grand diviseur commun (84)",
+  "key": "gcalc-087",
+  "concept": "calc.conversions.gen_time_87",
+  "label": "Conversion de durées (87)",
+  "difficulty": 45,
+  "family": "calc_time",
+  "type": "numeric",
+  "prompt": "Combien de secondes font 1 h 15 min ?",
+  "answer": 4500,
+  "explanation": "1 h 15 = 75 minutes, et 75 × 60 = 4 500 secondes.",
+  "hint": "1 heure = 3 600 secondes."
+ },
+ {
+  "key": "gcalc-088",
+  "concept": "calc.conversions.gen_time_88",
+  "label": "Conversion de durées (88)",
+  "difficulty": 45,
+  "family": "calc_time",
+  "type": "numeric",
+  "prompt": "Combien de minutes compte une semaine ?",
+  "answer": 10080,
+  "explanation": "7 × 24 × 60 = 10 080 minutes.",
+  "hint": "7 jours de 1 440 minutes."
+ },
+ {
+  "key": "gcalc-089",
+  "concept": "calc.number_logic.gen_gcd_89",
+  "label": "Plus grand diviseur commun (89)",
   "difficulty": 58,
   "family": "calc_gcd",
   "type": "numeric",
@@ -1087,9 +1162,9 @@
   "hint": "Essaie de diviser les deux par un multiple de 6."
  },
  {
-  "key": "gcalc-085",
-  "concept": "calc.number_logic.gen_gcd_85",
-  "label": "Plus grand diviseur commun (85)",
+  "key": "gcalc-090",
+  "concept": "calc.number_logic.gen_gcd_90",
+  "label": "Plus grand diviseur commun (90)",
   "difficulty": 58,
   "family": "calc_gcd",
   "type": "numeric",
@@ -1099,9 +1174,9 @@
   "hint": "Essaie de diviser les deux par un multiple de 6."
  },
  {
-  "key": "gcalc-086",
-  "concept": "calc.number_logic.gen_gcd_86",
-  "label": "Plus grand diviseur commun (86)",
+  "key": "gcalc-091",
+  "concept": "calc.number_logic.gen_gcd_91",
+  "label": "Plus grand diviseur commun (91)",
   "difficulty": 58,
   "family": "calc_gcd",
   "type": "numeric",
@@ -1111,9 +1186,9 @@
   "hint": "Essaie de diviser les deux par un multiple de 5."
  },
  {
-  "key": "gcalc-087",
-  "concept": "calc.number_logic.gen_lcm_87",
-  "label": "Plus petit multiple commun (87)",
+  "key": "gcalc-092",
+  "concept": "calc.number_logic.gen_lcm_92",
+  "label": "Plus petit multiple commun (92)",
   "difficulty": 55,
   "family": "calc_lcm",
   "type": "numeric",
@@ -1124,9 +1199,9 @@
   "unit": "min"
  },
  {
-  "key": "gcalc-088",
-  "concept": "calc.number_logic.gen_lcm_88",
-  "label": "Plus petit multiple commun (88)",
+  "key": "gcalc-093",
+  "concept": "calc.number_logic.gen_lcm_93",
+  "label": "Plus petit multiple commun (93)",
   "difficulty": 55,
   "family": "calc_lcm",
   "type": "numeric",
@@ -1137,9 +1212,9 @@
   "unit": "min"
  },
  {
-  "key": "gcalc-089",
-  "concept": "calc.number_logic.gen_lcm_89",
-  "label": "Plus petit multiple commun (89)",
+  "key": "gcalc-094",
+  "concept": "calc.number_logic.gen_lcm_94",
+  "label": "Plus petit multiple commun (94)",
   "difficulty": 55,
   "family": "calc_lcm",
   "type": "numeric",
@@ -1150,9 +1225,9 @@
   "unit": "min"
  },
  {
-  "key": "gcalc-090",
-  "concept": "calc.number_logic.gen_gauss_90",
-  "label": "Somme des entiers (90)",
+  "key": "gcalc-095",
+  "concept": "calc.number_logic.gen_gauss_95",
+  "label": "Somme des entiers (95)",
   "difficulty": 60,
   "family": "calc_gauss",
   "type": "numeric",
@@ -1162,9 +1237,9 @@
   "hint": "Associe le premier et le dernier : 1 + 50."
  },
  {
-  "key": "gcalc-091",
-  "concept": "calc.number_logic.gen_gauss_91",
-  "label": "Somme des entiers (91)",
+  "key": "gcalc-096",
+  "concept": "calc.number_logic.gen_gauss_96",
+  "label": "Somme des entiers (96)",
   "difficulty": 60,
   "family": "calc_gauss",
   "type": "numeric",
@@ -1174,9 +1249,9 @@
   "hint": "Associe le premier et le dernier : 1 + 20."
  },
  {
-  "key": "gcalc-092",
-  "concept": "calc.number_logic.gen_gauss_92",
-  "label": "Somme des entiers (92)",
+  "key": "gcalc-097",
+  "concept": "calc.number_logic.gen_gauss_97",
+  "label": "Somme des entiers (97)",
   "difficulty": 60,
   "family": "calc_gauss",
   "type": "numeric",
@@ -1186,9 +1261,9 @@
   "hint": "Associe le premier et le dernier : 1 + 40."
  },
  {
-  "key": "gcalc-093",
-  "concept": "calc.number_logic.gen_multiples_93",
-  "label": "Compter des multiples (93)",
+  "key": "gcalc-098",
+  "concept": "calc.number_logic.gen_multiples_98",
+  "label": "Compter des multiples (98)",
   "difficulty": 55,
   "family": "calc_multiples",
   "type": "numeric",
@@ -1198,9 +1273,9 @@
   "hint": "Calcule 100 ÷ 6."
  },
  {
-  "key": "gcalc-094",
-  "concept": "calc.number_logic.gen_multiples_94",
-  "label": "Compter des multiples (94)",
+  "key": "gcalc-099",
+  "concept": "calc.number_logic.gen_multiples_99",
+  "label": "Compter des multiples (99)",
   "difficulty": 55,
   "family": "calc_multiples",
   "type": "numeric",
@@ -1210,9 +1285,9 @@
   "hint": "Calcule 200 ÷ 9."
  },
  {
-  "key": "gcalc-095",
-  "concept": "calc.number_logic.gen_multiples_95",
-  "label": "Compter des multiples (95)",
+  "key": "gcalc-100",
+  "concept": "calc.number_logic.gen_multiples_100",
+  "label": "Compter des multiples (100)",
   "difficulty": 55,
   "family": "calc_multiples",
   "type": "numeric",
@@ -1222,9 +1297,9 @@
   "hint": "Calcule 100 ÷ 13."
  },
  {
-  "key": "gcalc-096",
-  "concept": "calc.number_logic.gen_handshakes_96",
-  "label": "Poignées de main (96)",
+  "key": "gcalc-101",
+  "concept": "calc.number_logic.gen_handshakes_101",
+  "label": "Poignées de main (101)",
   "difficulty": 65,
   "family": "calc_handshakes",
   "type": "numeric",
@@ -1234,9 +1309,9 @@
   "hint": "Attention à ne pas compter deux fois la même poignée."
  },
  {
-  "key": "gcalc-097",
-  "concept": "calc.number_logic.gen_handshakes_97",
-  "label": "Poignées de main (97)",
+  "key": "gcalc-102",
+  "concept": "calc.number_logic.gen_handshakes_102",
+  "label": "Poignées de main (102)",
   "difficulty": 65,
   "family": "calc_handshakes",
   "type": "numeric",
@@ -1246,9 +1321,9 @@
   "hint": "Attention à ne pas compter deux fois la même poignée."
  },
  {
-  "key": "gcalc-098",
-  "concept": "calc.number_logic.gen_handshakes_98",
-  "label": "Poignées de main (98)",
+  "key": "gcalc-103",
+  "concept": "calc.number_logic.gen_handshakes_103",
+  "label": "Poignées de main (103)",
   "difficulty": 65,
   "family": "calc_handshakes",
   "type": "numeric",
@@ -1258,9 +1333,9 @@
   "hint": "Attention à ne pas compter deux fois la même poignée."
  },
  {
-  "key": "gcalc-099",
-  "concept": "calc.number_logic.gen_clock_99",
-  "label": "Angle des aiguilles (99)",
+  "key": "gcalc-104",
+  "concept": "calc.number_logic.gen_clock_104",
+  "label": "Angle des aiguilles (104)",
   "difficulty": 55,
   "family": "calc_clock",
   "type": "numeric",
@@ -1271,9 +1346,9 @@
   "unit": "°"
  },
  {
-  "key": "gcalc-100",
-  "concept": "calc.number_logic.gen_clock_100",
-  "label": "Angle des aiguilles (100)",
+  "key": "gcalc-105",
+  "concept": "calc.number_logic.gen_clock_105",
+  "label": "Angle des aiguilles (105)",
   "difficulty": 75,
   "family": "calc_clock",
   "type": "numeric",
@@ -1284,9 +1359,9 @@
   "unit": "°"
  },
  {
-  "key": "gcalc-101",
-  "concept": "calc.number_logic.gen_clock_101",
-  "label": "Angle des aiguilles (101)",
+  "key": "gcalc-106",
+  "concept": "calc.number_logic.gen_clock_106",
+  "label": "Angle des aiguilles (106)",
   "difficulty": 55,
   "family": "calc_clock",
   "type": "numeric",
@@ -1297,9 +1372,9 @@
   "unit": "°"
  },
  {
-  "key": "gcalc-102",
-  "concept": "calc.number_logic.gen_clock_102",
-  "label": "Angle des aiguilles (102)",
+  "key": "gcalc-107",
+  "concept": "calc.number_logic.gen_clock_107",
+  "label": "Angle des aiguilles (107)",
   "difficulty": 75,
   "family": "calc_clock",
   "type": "numeric",
@@ -1310,9 +1385,9 @@
   "unit": "°"
  },
  {
-  "key": "gcalc-103",
-  "concept": "calc.number_logic.gen_roman_103",
-  "label": "Chiffres romains (103)",
+  "key": "gcalc-108",
+  "concept": "calc.number_logic.gen_roman_108",
+  "label": "Chiffres romains (108)",
   "difficulty": 50,
   "family": "calc_roman",
   "type": "mcq",
@@ -1327,9 +1402,9 @@
   "hint": "M = 1 000, D = 500, C = 100, L = 50, X = 10, V = 5."
  },
  {
-  "key": "gcalc-104",
-  "concept": "calc.number_logic.gen_roman_104",
-  "label": "Chiffres romains (104)",
+  "key": "gcalc-109",
+  "concept": "calc.number_logic.gen_roman_109",
+  "label": "Chiffres romains (109)",
   "difficulty": 50,
   "family": "calc_roman",
   "type": "mcq",
@@ -1344,9 +1419,9 @@
   "hint": "M = 1 000, D = 500, C = 100, L = 50, X = 10, V = 5."
  },
  {
-  "key": "gcalc-105",
-  "concept": "calc.number_logic.gen_roman_105",
-  "label": "Chiffres romains (105)",
+  "key": "gcalc-110",
+  "concept": "calc.number_logic.gen_roman_110",
+  "label": "Chiffres romains (110)",
   "difficulty": 60,
   "family": "calc_roman",
   "type": "mcq",

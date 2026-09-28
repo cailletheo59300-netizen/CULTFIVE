@@ -1,19 +1,19 @@
 {
  "answer": {
-  "value": 1250,
+  "value": 12,
   "tolerance": 0
  },
  "source": null,
  "finished": false,
  "position": 1,
  "takeaway": null,
- "domain_id": "logic",
+ "domain_id": "calc",
  "duplicate": false,
  "counted_ms": 3800,
  "fact_as_of": null,
  "is_correct": true,
- "explanation": "On multiplie par 5 : 250 × 5 = 1250.",
- "domain_after": 52.9,
+ "explanation": "15 % de 80 = 80 × 15 ÷ 100 = 12.",
+ "domain_after": 51.6,
  "domain_before": 50.0,
  "error_transition": null,
  "correction_reward": {

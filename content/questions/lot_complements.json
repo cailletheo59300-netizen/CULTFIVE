@@ -1,0 +1,926 @@
+[
+ {
+  "key": "mix-001",
+  "concept": "french.grammar.participe_de_naitre",
+  "label": "Participe de naître",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le participe passé de « naître » ?",
+  "options": [
+   "né*",
+   "naît",
+   "naquit",
+   "naissé"
+  ],
+  "explanation": "Il est né. « Naquit » est le passé simple, « naît » le présent.",
+  "hint": "Il est ___ en 2010."
+ },
+ {
+  "key": "mix-002",
+  "concept": "french.grammar.j_appellerai",
+  "label": "J'appellerai",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Futur de « appeler » : « Je t'___ demain. »",
+  "options": [
+   "appellerai*",
+   "appelerai",
+   "apelerai",
+   "appelrai"
+  ],
+  "explanation": "Appeler double le l devant un e muet : j'appelle, j'appellerai (mais nous appelons).",
+  "hint": "Devant un e muet, le l double."
+ },
+ {
+  "key": "mix-003",
+  "concept": "french.grammar.plus_que_parfait",
+  "label": "Plus-que-parfait",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle phrase est au plus-que-parfait ?",
+  "options": [
+   "J'avais fini mes devoirs.*",
+   "J'ai fini mes devoirs.",
+   "Je finirai mes devoirs.",
+   "Je finissais mes devoirs."
+  ],
+  "explanation": "Plus-que-parfait = auxiliaire à l'imparfait + participe passé : j'avais fini. « J'ai fini » est un passé composé.",
+  "hint": "Auxiliaire à l'imparfait."
+ },
+ {
+  "key": "mix-004",
+  "concept": "science.physics.chute_des_corps",
+  "label": "Chute des corps",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel savant a étudié la chute des corps, selon la légende du haut de la tour de Pise ?",
+  "options": [
+   "Galilée*",
+   "Isaac Newton",
+   "Archimède",
+   "Blaise Pascal"
+  ],
+  "explanation": "Galilée montre que, sans frottement de l'air, tous les corps tombent à la même vitesse. L'expérience de Pise est sans doute une légende.",
+  "hint": "Un Italien du XVIIe siècle."
+ },
+ {
+  "key": "mix-005",
+  "concept": "science.physics.unite_de_tension",
+  "label": "Unité de tension",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle unité mesure la tension électrique ?",
+  "options": [
+   "Le volt*",
+   "L'ampère",
+   "L'ohm",
+   "Le watt"
+  ],
+  "explanation": "Du nom d'Alessandro Volta, inventeur de la pile électrique. Une prise française délivre 230 volts.",
+  "hint": "Une prise délivre 230 de ces unités."
+ },
+ {
+  "key": "mix-006",
+  "concept": "science.biology.paleontologie",
+  "label": "Paléontologie",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on l'étude des fossiles ?",
+  "options": [
+   "La paléontologie*",
+   "L'archéologie",
+   "La géologie",
+   "L'entomologie"
+  ],
+  "explanation": "Le paléontologue étudie les êtres vivants disparus ; l'archéologue, les traces laissées par les humains.",
+  "hint": "Pense aux dinosaures."
+ },
+ {
+  "key": "mix-007",
+  "concept": "science.biology.transpiration_des_plantes",
+  "label": "Transpiration des plantes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment appelle-t-on la perte d'eau d'une plante par ses feuilles ?",
+  "options": [
+   "La transpiration*",
+   "La photosynthèse",
+   "La respiration",
+   "La germination"
+  ],
+  "explanation": "L'eau s'évapore par de petits pores, les stomates, ce qui aspire la sève brute depuis les racines.",
+  "hint": "Comme nous quand il fait chaud."
+ },
+ {
+  "key": "mix-008",
+  "concept": "science.biology.ogm",
+  "label": "OGM",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que signifie « OGM » ?",
+  "options": [
+   "Organisme génétiquement modifié*",
+   "Organisme géré mondialement",
+   "Objet génétique moléculaire",
+   "Organe greffé médicalement"
+  ],
+  "explanation": "Un être vivant dont on a modifié l'ADN pour lui donner un caractère nouveau, comme la résistance à un insecte.",
+  "hint": "Son ADN a été modifié."
+ },
+ {
+  "key": "mix-009",
+  "concept": "science.biology.decomposeurs",
+  "label": "Décomposeurs",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le rôle des décomposeurs, comme les champignons et les bactéries du sol ?",
+  "options": [
+   "Recycler la matière morte*",
+   "Produire de l'oxygène",
+   "Polliniser les fleurs",
+   "Chasser les herbivores"
+  ],
+  "explanation": "Ils transforment feuilles mortes et cadavres en éléments minéraux que les plantes réutilisent.",
+  "hint": "Ils nettoient la forêt."
+ },
+ {
+  "key": "mix-010",
+  "concept": "science.biology.gestation_de_l_elephant",
+  "label": "Gestation de l'éléphant",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de temps dure la gestation d'un éléphant, environ ?",
+  "options": [
+   "22 mois*",
+   "9 mois",
+   "12 mois",
+   "36 mois"
+  ],
+  "explanation": "Près de deux ans : la plus longue gestation des mammifères terrestres.",
+  "hint": "Près de deux ans."
+ },
+ {
+  "key": "mix-011",
+  "concept": "science.biology.virus_dangereux",
+  "label": "Virus dangereux",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Tous les virus sont dangereux pour l'être humain.",
+  "answer": false,
+  "explanation": "Non : la plupart ne nous infectent pas, et certains (les bactériophages) s'attaquent aux bactéries. On les étudie même pour soigner.",
+  "hint": "Certains attaquent les bactéries."
+ },
+ {
+  "key": "mix-012",
+  "concept": "science.biology.sigle_adn",
+  "label": "Sigle ADN",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que signifie « ADN » ?",
+  "options": [
+   "Acide désoxyribonucléique*",
+   "Acide dinitrique naturel",
+   "Agent de défense naturelle",
+   "Acide diatomique neutre"
+  ],
+  "explanation": "La molécule support de l'hérédité, en double hélice. L'ARN est l'acide ribonucléique.",
+  "hint": "Un acide."
+ },
+ {
+  "key": "mix-013",
+  "concept": "science.human_body.eau_du_corps",
+  "label": "Eau du corps",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle part du corps d'un adulte est constituée d'eau, environ ?",
+  "options": [
+   "60 %*",
+   "20 %",
+   "40 %",
+   "90 %"
+  ],
+  "explanation": "Autour de 60 % chez l'adulte, davantage chez le bébé (environ 75 %).",
+  "hint": "Plus de la moitié."
+ },
+ {
+  "key": "mix-014",
+  "concept": "science.human_body.plus_gros_muscle",
+  "label": "Plus gros muscle",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le plus gros muscle du corps humain ?",
+  "options": [
+   "Le grand fessier*",
+   "Le biceps",
+   "Le cœur",
+   "Le quadriceps"
+  ],
+  "explanation": "Il nous permet de tenir debout et de monter les escaliers. Le quadriceps est un groupe de quatre muscles.",
+  "hint": "On s'assoit dessus."
+ },
+ {
+  "key": "mix-015",
+  "concept": "science.human_body.cervelet",
+  "label": "Cervelet",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle partie du cerveau joue un rôle clé dans l'équilibre et la coordination ?",
+  "options": [
+   "Le cervelet*",
+   "L'hippocampe",
+   "Le cortex frontal",
+   "L'hypophyse"
+  ],
+  "explanation": "Situé à l'arrière, sous le cerveau, il coordonne les mouvements. L'hippocampe sert surtout à la mémoire.",
+  "hint": "Le « petit cerveau »."
+ },
+ {
+  "key": "mix-016",
+  "concept": "logic.reasoning.intrus_des_jours",
+  "label": "Intrus des jours",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel mot n'a pas sa place : lundi, mars, jeudi, samedi ?",
+  "options": [
+   "mars*",
+   "lundi",
+   "jeudi",
+   "samedi"
+  ],
+  "explanation": "Mars est un mois ; les trois autres sont des jours de la semaine.",
+  "hint": "Trois jours et…"
+ },
+ {
+  "key": "mix-017",
+  "concept": "logic.reasoning.l_m_m_j_v_s",
+  "label": "L M M J V S",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle lettre vient ensuite : L, M, M, J, V, S, … ?",
+  "options": [
+   "D*",
+   "L",
+   "A",
+   "M"
+  ],
+  "explanation": "Ce sont les initiales des jours : lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.",
+  "hint": "Pense à la semaine."
+ },
+ {
+  "key": "mix-018",
+  "concept": "logic.reasoning.j_f_m_a_m_j",
+  "label": "J F M A M J",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle lettre vient ensuite : J, F, M, A, M, J, … ?",
+  "options": [
+   "J*",
+   "A",
+   "S",
+   "M"
+  ],
+  "explanation": "Les initiales des mois : janvier, février, mars, avril, mai, juin, juillet.",
+  "hint": "Pense au calendrier."
+ },
+ {
+  "key": "mix-019",
+  "concept": "logic.reasoning.u_d_t_q_c_s",
+  "label": "U D T Q C S",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle lettre vient ensuite : U, D, T, Q, C, S, … ?",
+  "options": [
+   "S*",
+   "H",
+   "N",
+   "D"
+  ],
+  "explanation": "Un, deux, trois, quatre, cinq, six, sept.",
+  "hint": "Compte en toutes lettres."
+ },
+ {
+  "key": "mix-020",
+  "concept": "logic.reasoning.divisible_par_4",
+  "label": "Divisible par 4",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Tout nombre divisible par 4 est pair.",
+  "answer": true,
+  "explanation": "Oui : un multiple de 4 est aussi un multiple de 2.",
+  "hint": "4 = 2 × 2."
+ },
+ {
+  "key": "mix-021",
+  "concept": "logic.reasoning.pair_donc_divisible_par_4",
+  "label": "Pair donc divisible par 4",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Tout nombre pair est divisible par 4.",
+  "answer": false,
+  "explanation": "Non : 6 est pair, mais pas divisible par 4. La réciproque d'une vérité n'est pas forcément vraie.",
+  "hint": "Pense à 6."
+ },
+ {
+  "key": "mix-022",
+  "concept": "arts.architecture.chenonceau",
+  "label": "Chenonceau",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel château de la Loire enjambe le Cher ?",
+  "options": [
+   "Chenonceau*",
+   "Chambord",
+   "Amboise",
+   "Blois"
+  ],
+  "explanation": "Sa galerie sur arches traverse la rivière ; on l'appelle le « château des Dames ».",
+  "hint": "Le « château des Dames »."
+ },
+ {
+  "key": "mix-023",
+  "concept": "arts.architecture.haussmann",
+  "label": "Haussmann",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel préfet a transformé Paris sous Napoléon III ?",
+  "options": [
+   "Georges-Eugène Haussmann*",
+   "Viollet-le-Duc",
+   "Charles Garnier",
+   "Gustave Eiffel"
+  ],
+  "explanation": "Grands boulevards, immeubles en pierre de taille, parcs et égouts : le Paris « haussmannien ».",
+  "hint": "On parle d'immeubles « haussmanniens »."
+ },
+ {
+  "key": "mix-024",
+  "concept": "arts.architecture.sagrada_familia",
+  "label": "Sagrada Família",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle basilique de Barcelone est en construction depuis 1882 ?",
+  "options": [
+   "La Sagrada Família*",
+   "La Seu",
+   "Santa Maria del Mar",
+   "Montserrat"
+  ],
+  "explanation": "L'œuvre de Gaudí, financée par les dons et les visiteurs ; sa tour centrale doit dépasser 170 m.",
+  "hint": "L'œuvre de Gaudí."
+ },
+ {
+  "key": "mix-025",
+  "concept": "arts.mythology.naissance_d_athena",
+  "label": "Naissance d'Athéna",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle déesse est sortie tout armée du crâne de Zeus ?",
+  "options": [
+   "Athéna*",
+   "Aphrodite",
+   "Artémis",
+   "Héra"
+  ],
+  "explanation": "Héphaïstos fend le crâne de Zeus d'un coup de hache : Athéna en jaillit, casquée et armée.",
+  "hint": "Déesse de la sagesse."
+ },
+ {
+  "key": "mix-026",
+  "concept": "arts.mythology.penelope",
+  "label": "Pénélope",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans l'Odyssée, qui est Pénélope ?",
+  "options": [
+   "L'épouse d'Ulysse*",
+   "La mère d'Achille",
+   "Une magicienne",
+   "Une reine des Amazones"
+  ],
+  "explanation": "Elle attend Ulysse vingt ans en défaisant la nuit la toile qu'elle tisse le jour pour repousser ses prétendants.",
+  "hint": "Elle tisse et défait sa toile."
+ },
+ {
+  "key": "mix-027",
+  "concept": "arts.mythology.yggdrasil",
+  "label": "Yggdrasil",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans la mythologie nordique, comment s'appelle l'arbre qui relie les mondes ?",
+  "options": [
+   "Yggdrasil*",
+   "Asgard",
+   "Midgard",
+   "Bifröst"
+  ],
+  "explanation": "Un frêne géant qui relie les neuf mondes. Asgard est le monde des dieux, Midgard celui des humains, Bifröst le pont arc-en-ciel.",
+  "hint": "Un frêne géant."
+ },
+ {
+  "key": "mix-028",
+  "concept": "arts.mythology.dionysos",
+  "label": "Dionysos",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel dieu grec est celui du vin et de la fête ?",
+  "options": [
+   "Dionysos*",
+   "Apollon",
+   "Hermès",
+   "Héphaïstos"
+  ],
+  "explanation": "Bacchus chez les Romains, d'où les « bacchanales ».",
+  "hint": "Bacchus chez les Romains."
+ },
+ {
+  "key": "mix-029",
+  "concept": "sport.rules.set_de_tennis_de_table",
+  "label": "Set de tennis de table",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Au tennis de table, en combien de points se joue un set (sans égalité) ?",
+  "answer": 11,
+  "explanation": "Un set se gagne à 11 points, avec deux points d'écart. Avant 2001, c'était 21.",
+  "hint": "Avant 2001, c'était 21."
+ },
+ {
+  "key": "mix-030",
+  "concept": "sport.rules.touches_au_volley",
+  "label": "Touches au volley",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Au volley-ball, combien de touches de balle une équipe peut-elle faire au maximum avant de renvoyer ?",
+  "answer": 3,
+  "explanation": "Souvent : réception, passe, attaque. Le contre ne compte pas.",
+  "hint": "Réception, passe, attaque."
+ },
+ {
+  "key": "mix-031",
+  "concept": "sport.rules.armes_de_l_escrime",
+  "label": "Armes de l'escrime",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelles sont les trois armes de l'escrime ?",
+  "options": [
+   "Fleuret, épée, sabre*",
+   "Fleuret, dague, lance",
+   "Épée, poignard, sabre",
+   "Rapière, fleuret, glaive"
+  ],
+  "explanation": "Chacune a ses règles : au sabre, on touche aussi avec le tranchant.",
+  "hint": "Le sabre en fait partie."
+ },
+ {
+  "key": "mix-032",
+  "concept": "sport.rules.badminton",
+  "label": "Badminton",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au badminton, que se renvoient les joueurs ?",
+  "options": [
+   "Un volant*",
+   "Une balle en mousse",
+   "Un palet",
+   "Une petite balle en plastique"
+  ],
+  "explanation": "Le volant, avec ses plumes, peut dépasser 400 km/h lors d'un smash.",
+  "hint": "Il a des plumes."
+ },
+ {
+  "key": "mix-033",
+  "concept": "sport.rules.quart_temps_nba",
+  "label": "Quart-temps NBA",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de minutes dure un quart-temps en NBA ?",
+  "answer": 12,
+  "unit": "min",
+  "explanation": "Quatre quarts-temps de 12 minutes en NBA ; 10 minutes dans les compétitions FIBA.",
+  "hint": "Plus qu'en Europe."
+ },
+ {
+  "key": "mix-034",
+  "concept": "sport.rules.maison_au_curling",
+  "label": "Maison au curling",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Au curling, comment s'appelle la cible dessinée sur la glace ?",
+  "options": [
+   "La maison*",
+   "Le cercle d'or",
+   "L'œil",
+   "Le nid"
+  ],
+  "explanation": "Les pierres doivent s'arrêter le plus près possible du centre de la maison, le « bouton ».",
+  "hint": "Son centre est le « bouton »."
+ },
+ {
+  "key": "mix-035",
+  "concept": "sport.champions.marie_jose_perec",
+  "label": "Marie-José Pérec",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle athlète française remporte le 200 m et le 400 m aux JO d'Atlanta, en 1996 ?",
+  "options": [
+   "Marie-José Pérec*",
+   "Christine Arron",
+   "Muriel Hurtis",
+   "Marie-Josée Ta Lou"
+  ],
+  "explanation": "Surnommée « la gazelle », elle avait déjà gagné le 400 m à Barcelone en 1992.",
+  "hint": "Surnommée « la gazelle »."
+ },
+ {
+  "key": "mix-036",
+  "concept": "sport.champions.kipchoge",
+  "label": "Kipchoge",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel coureur kényan a couru le premier un marathon en moins de deux heures, en 2019 ?",
+  "options": [
+   "Eliud Kipchoge*",
+   "Kenenisa Bekele",
+   "Haile Gebreselassie",
+   "Mo Farah"
+  ],
+  "explanation": "1 h 59 min 40 s à Vienne, lors d'une course aménagée non homologuée comme record.",
+  "hint": "Un Kényan double champion olympique."
+ },
+ {
+  "key": "mix-037",
+  "concept": "sport.champions.marit_bjrgen",
+  "label": "Marit Bjørgen",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle skieuse de fond norvégienne est la sportive la plus médaillée des Jeux d'hiver ?",
+  "options": [
+   "Marit Bjørgen*",
+   "Therese Johaug",
+   "Lindsey Vonn",
+   "Martina Sáblíková"
+  ],
+  "explanation": "Quinze médailles olympiques de 2002 à 2018, dont huit en or.",
+  "hint": "Une Norvégienne."
+ },
+ {
+  "key": "mix-038",
+  "concept": "cinema.animation.pere_de_nemo",
+  "label": "Père de Nemo",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment s'appelle le père de Nemo ?",
+  "options": [
+   "Marlin*",
+   "Dory",
+   "Gill",
+   "Crush"
+  ],
+  "explanation": "Marlin traverse l'océan avec Dory pour retrouver son fils. Crush est la tortue.",
+  "hint": "Il voyage avec Dory."
+ },
+ {
+  "key": "mix-039",
+  "concept": "cinema.animation.pouvoir_d_elastigirl",
+  "label": "Pouvoir d'Elastigirl",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans « Les Indestructibles », quel est le pouvoir d'Elastigirl ?",
+  "options": [
+   "Son corps s'étire*",
+   "Elle devient invisible",
+   "Elle court très vite",
+   "Elle vole"
+  ],
+  "explanation": "Hélène Parr peut s'étirer comme du caoutchouc ; sa fille Violette devient invisible, son fils Flèche court très vite.",
+  "hint": "Son nom le dit."
+ },
+ {
+  "key": "mix-040",
+  "concept": "cinema.animation.fondateur_de_ghibli",
+  "label": "Fondateur de Ghibli",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel réalisateur a cofondé le studio Ghibli avec Isao Takahata ?",
+  "options": [
+   "Hayao Miyazaki*",
+   "Makoto Shinkai",
+   "Mamoru Hosoda",
+   "Satoshi Kon"
+  ],
+  "explanation": "Fondé en 1985, le studio a produit Totoro, Princesse Mononoké et Le Voyage de Chihiro.",
+  "hint": "Le réalisateur de Totoro."
+ },
+ {
+  "key": "mix-041",
+  "concept": "tech.computing.tweets_de_140_caracteres",
+  "label": "Tweets de 140 caractères",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de caractères un tweet pouvait-il contenir à l'origine ?",
+  "answer": 140,
+  "explanation": "140 caractères de 2006 à 2017, puis 280. La limite venait des SMS (160 caractères).",
+  "hint": "La limite des SMS a joué."
+ },
+ {
+  "key": "mix-042",
+  "concept": "tech.computing.pdf",
+  "label": "PDF",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que signifie « PDF » ?",
+  "options": [
+   "Portable Document Format*",
+   "Printed Data File",
+   "Public Digital Folder",
+   "Personal Document Form"
+  ],
+  "explanation": "Créé par Adobe en 1993, il garde la même mise en page sur tous les appareils.",
+  "hint": "Un format « portable »."
+ },
+ {
+  "key": "mix-043",
+  "concept": "tech.computing.javascript",
+  "label": "JavaScript",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel langage rend les pages web interactives, dans le navigateur ?",
+  "options": [
+   "JavaScript*",
+   "HTML",
+   "SQL",
+   "COBOL"
+  ],
+  "explanation": "Créé en 1995 en dix jours, il n'a presque rien à voir avec Java malgré son nom.",
+  "hint": "Son nom rappelle un autre langage."
+ },
+ {
+  "key": "mix-044",
+  "concept": "tech.computing.algorithme",
+  "label": "Algorithme",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un algorithme ?",
+  "options": [
+   "Une suite d'instructions pour résoudre un problème*",
+   "Un ordinateur très puissant",
+   "Un virus informatique",
+   "Un langage de programmation"
+  ],
+  "explanation": "Une recette de cuisine est un algorithme. Le mot vient du mathématicien persan al-Khwârizmî.",
+  "hint": "Une recette en est un."
+ },
+ {
+  "key": "mix-045",
+  "concept": "tech.brands.fondateur_de_facebook",
+  "label": "Fondateur de Facebook",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qui a fondé Facebook, en 2004 ?",
+  "options": [
+   "Mark Zuckerberg*",
+   "Jack Dorsey",
+   "Larry Page",
+   "Evan Spiegel"
+  ],
+  "explanation": "Créé à Harvard avec quelques camarades ; l'entreprise s'appelle aujourd'hui Meta.",
+  "hint": "Un étudiant de Harvard."
+ },
+ {
+  "key": "mix-046",
+  "concept": "tech.brands.nutella",
+  "label": "Nutella",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel pays vient Nutella ?",
+  "options": [
+   "Italie*",
+   "France",
+   "Suisse",
+   "Belgique"
+  ],
+  "explanation": "Créé par Ferrero en 1964 dans le Piémont, célèbre pour ses noisettes.",
+  "hint": "Le Piémont et ses noisettes."
+ },
+ {
+  "key": "mix-047",
+  "concept": "tech.brands.quatre_anneaux",
+  "label": "Quatre anneaux",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle marque automobile a pour logo quatre anneaux entrelacés ?",
+  "options": [
+   "Audi*",
+   "Opel",
+   "Volvo",
+   "Mazda"
+  ],
+  "explanation": "Les quatre anneaux représentent les quatre marques réunies en 1932 : Audi, DKW, Horch et Wanderer.",
+  "hint": "Une marque allemande."
+ },
+ {
+  "key": "mix-048",
+  "concept": "nature.plants.marronnier",
+  "label": "Marronnier",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel arbre produit des marrons non comestibles ?",
+  "options": [
+   "Le marronnier d'Inde*",
+   "Le châtaignier",
+   "Le noisetier",
+   "Le hêtre"
+  ],
+  "explanation": "Les marrons glacés et chauds sont en réalité des châtaignes. Le marron d'Inde est toxique.",
+  "hint": "Les marrons glacés viennent d'un autre arbre."
+ },
+ {
+  "key": "mix-049",
+  "concept": "nature.plants.trefle_irlandais",
+  "label": "Trèfle irlandais",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle plante est le symbole de l'Irlande ?",
+  "options": [
+   "Le trèfle*",
+   "La bruyère",
+   "Le chardon",
+   "La rose"
+  ],
+  "explanation": "Saint Patrick s'en serait servi pour expliquer la Trinité. Le chardon est l'emblème de l'Écosse.",
+  "hint": "On le porte à la Saint-Patrick."
+ },
+ {
+  "key": "mix-050",
+  "concept": "nature.marine.bras_du_calmar",
+  "label": "Bras du calmar",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de bras et de tentacules compte un calmar, au total ?",
+  "answer": 10,
+  "explanation": "Huit bras et deux longs tentacules pour attraper ses proies. La pieuvre, elle, a huit bras.",
+  "hint": "Plus que la pieuvre."
+ },
+ {
+  "key": "mix-051",
+  "concept": "nature.marine.albatros",
+  "label": "Albatros",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel oiseau marin a la plus grande envergure ?",
+  "options": [
+   "L'albatros hurleur*",
+   "Le pélican",
+   "La frégate",
+   "Le goéland"
+  ],
+  "explanation": "Plus de 3 mètres d'envergure : il peut planer des heures au-dessus des océans du Sud.",
+  "hint": "Baudelaire lui a consacré un poème."
+ },
+ {
+  "key": "mix-052",
+  "concept": "nature.marine.manchot_empereur",
+  "label": "Manchot empereur",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Où vit le manchot empereur ?",
+  "options": [
+   "En Antarctique*",
+   "En Arctique",
+   "En Islande",
+   "Au Groenland"
+  ],
+  "explanation": "Il vit uniquement autour de l'Antarctique. Pas de manchots au pôle Nord, ni d'ours polaires au pôle Sud.",
+  "hint": "Au pôle Sud."
+ },
+ {
+  "key": "mix-053",
+  "concept": "nature.earth.volcanologue",
+  "label": "Volcanologue",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment appelle-t-on un scientifique qui étudie les volcans ?",
+  "options": [
+   "Un volcanologue*",
+   "Un sismologue",
+   "Un géographe",
+   "Un météorologue"
+  ],
+  "explanation": "Le sismologue étudie les séismes, le météorologue le temps qu'il fait.",
+  "hint": "Le mot contient « volcan »."
+ },
+ {
+  "key": "mix-054",
+  "concept": "nature.earth.marees",
+  "label": "Marées",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui provoque les marées ?",
+  "options": [
+   "L'attraction de la Lune et du Soleil*",
+   "Le vent",
+   "La rotation des courants",
+   "La température de l'eau"
+  ],
+  "explanation": "La Lune attire les océans ; deux marées hautes par jour environ. Aux grandes marées, Soleil et Lune s'alignent.",
+  "hint": "Pense à la Lune."
+ },
+ {
+  "key": "mix-055",
+  "concept": "logic.puzzles.portrait_mystere",
+  "label": "Portrait mystère",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Un homme dit devant un portrait : « Je n'ai ni frère ni sœur, mais le père de cet homme est le fils de mon père. » Qui est sur le portrait ?",
+  "options": [
+   "Son fils*",
+   "Lui-même",
+   "Son père",
+   "Son neveu"
+  ],
+  "explanation": "Le « fils de mon père », pour un fils unique, c'est lui-même. Donc le père de l'homme du portrait, c'est lui : c'est son fils.",
+  "hint": "« Le fils de mon père », c'est qui ?"
+ },
+ {
+  "key": "mix-056",
+  "concept": "logic.puzzles.chiffre_7",
+  "label": "Chiffre 7",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Combien de fois écrit-on le chiffre 7 en notant tous les nombres de 1 à 100 ?",
+  "answer": 20,
+  "explanation": "10 fois en unités (7, 17… 97) et 10 fois en dizaines (70 à 79) : 20. Le 77 compte deux fois.",
+  "hint": "N'oublie pas les dizaines."
+ },
+ {
+  "key": "mix-057",
+  "concept": "logic.puzzles.reste_de_1",
+  "label": "Reste de 1",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Quel est le plus petit nombre supérieur à 1 qui, divisé par 2, 3, 4, 5 ou 6, donne toujours un reste de 1 ?",
+  "answer": 61,
+  "explanation": "Il vaut 1 de plus qu'un multiple commun de 2, 3, 4, 5 et 6. Le plus petit est 60 : réponse 61.",
+  "hint": "Un multiple commun, plus 1."
+ },
+ {
+  "key": "mix-058",
+  "concept": "logic.puzzles.cube_peint",
+  "label": "Cube peint",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Un cube de 3 cm de côté est peint puis découpé en cubes de 1 cm. Combien de petits cubes n'ont aucune face peinte ?",
+  "answer": 1,
+  "explanation": "Seul le cube central, entièrement entouré, n'a aucune face à l'extérieur.",
+  "hint": "Celui qui est au milieu."
+ },
+ {
+  "key": "mix-059",
+  "concept": "logic.puzzles.pages_de_45_a_60",
+  "label": "Pages de 45 à 60",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de pages y a-t-il de la page 45 à la page 60, incluses ?",
+  "answer": 16,
+  "explanation": "60 − 45 = 15, plus 1 car on compte les deux bouts : 16 pages. Le piège des « piquets ».",
+  "hint": "Compte les deux bouts."
+ },
+ {
+  "key": "mix-060",
+  "concept": "logic.puzzles.horloge_qui_sonne",
+  "label": "Horloge qui sonne",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Une horloge sonne 6 coups en 5 secondes. Combien de secondes lui faut-il pour sonner 12 coups ?",
+  "answer": 11,
+  "unit": "s",
+  "explanation": "6 coups = 5 intervalles d'une seconde. 12 coups = 11 intervalles : 11 secondes. Le piège : 10.",
+  "hint": "Compte les intervalles."
+ },
+ {
+  "key": "mix-061",
+  "concept": "logic.puzzles.des_dents_sans_mordre",
+  "label": "Des dents sans mordre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui a des dents mais ne mord jamais ?",
+  "options": [
+   "Un peigne*",
+   "Un requin",
+   "Un bébé",
+   "Un loup"
+  ],
+  "explanation": "Le peigne a des dents… pour démêler les cheveux.",
+  "hint": "On s'en sert le matin."
+ },
+ {
+  "key": "mix-062",
+  "concept": "logic.puzzles.mois_de_31_jours",
+  "label": "Mois de 31 jours",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien de mois de l'année comptent 31 jours ?",
+  "answer": 7,
+  "explanation": "Janvier, mars, mai, juillet, août, octobre et décembre. Astuce : compter sur les bosses des poings.",
+  "hint": "Compte sur tes poings."
+ }
+]

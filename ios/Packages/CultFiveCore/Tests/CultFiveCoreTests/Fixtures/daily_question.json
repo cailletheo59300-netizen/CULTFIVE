@@ -1,13 +1,13 @@
 {
- "id": "a1ccbe59-6bce-46a5-92de-957773e5f424",
+ "id": "1034d6cc-0006-4030-898a-72b3a5c01145",
  "type": "numeric",
  "total": 5,
- "prompt": "Quel nombre suit : 2, 10, 50, 250, … ?",
+ "prompt": "Combien font 15 % de 80 ?",
  "payload": {
   "decimals": 0,
   "allow_negative": false
  },
  "position": 1,
- "domain_id": "logic",
- "subdomain_id": "logic.sequences"
+ "domain_id": "calc",
+ "subdomain_id": "calc.percent"
 }

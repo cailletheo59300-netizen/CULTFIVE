@@ -123,6 +123,12 @@ for (const set of [['5/8', ['3/5', '4/7', '1/2']], ['7/9', ['3/4', '5/7', '2/3']
     'Compare l\'écart de chaque fraction à 1.'));
 }
 
+for (const [a, b, r, w] of [[24, 36, '2/3', ['4/6', '3/4', '8/12']], [45, 60, '3/4', ['9/12', '5/6', '15/20']], [28, 42, '2/3', ['4/7', '7/12', '14/21']]]) {
+  add('fractions', 'simplify', 'Fraction irréductible', 50, mcq(`Quelle est la forme irréductible de ${a}/${b} ?`, r, w,
+    `On divise haut et bas par ${gcd(a, b)} : ${a}/${b} = ${r}. Les autres fractions valent la même chose sans être simplifiées au bout, ou valent autre chose.`,
+    `Cherche le plus grand diviseur commun de ${a} et ${b}.`));
+}
+
 // ─────────────── Conversions
 for (const [v, u, t, f] of [[3.4, 'km', 'm', 1000], [0.75, 'm', 'cm', 100], [2.3, 'kg', 'g', 1000], [45, 'cl', 'ml', 10], [1.8, 'l', 'cl', 100]]) {
   add('conversions', 'units', 'Conversion d\'unités', 25, num(`Combien de ${t} dans ${fr(v)} ${u} ?`, Math.round(v * f * 1000) / 1000,
@@ -148,6 +154,11 @@ for (const [q, a, e, h] of [
   ['Combien de litres contient un cube de 50 cm de côté ?', 125, '50 cm = 5 dm ; 5 × 5 × 5 = 125 dm³ = 125 litres.', '1 dm³ = 1 litre.'],
   ['Combien de millilitres dans 1 dm³ ?', 1000, '1 dm³ = 1 litre = 1 000 ml.', 'Un litre.'],
 ]) add('conversions', 'area_volume', 'Aires et volumes', 64, num(q, a, e, h));
+
+for (const [q, v, e, h] of [
+  ['Combien de secondes font 1 h 15 min ?', 4500, '1 h 15 = 75 minutes, et 75 × 60 = 4 500 secondes.', '1 heure = 3 600 secondes.'],
+  ['Combien de minutes compte une semaine ?', 10080, '7 × 24 × 60 = 10 080 minutes.', '7 jours de 1 440 minutes.'],
+]) add('conversions', 'time', 'Conversion de durées', 45, num(q, v, e, h));
 
 // ─────────────── Logique numérique
 for (const [a, b] of [[48, 180], [84, 126], [45, 75]]) {

@@ -1,15 +1,15 @@
 [
  {
-  "id": "a1ccbe59-6bce-46a5-92de-957773e5f424",
+  "id": "1034d6cc-0006-4030-898a-72b3a5c01145",
   "type": "numeric",
   "given": {
-   "value": 1250
+   "value": 12
   },
   "answer": {
-   "value": 1250,
+   "value": 12,
    "tolerance": 0
   },
-  "prompt": "Quel nombre suit : 2, 10, 50, 250, … ?",
+  "prompt": "Combien font 15 % de 80 ?",
   "source": null,
   "payload": {
    "decimals": 0,
@@ -17,106 +17,78 @@
   },
   "position": 1,
   "takeaway": null,
-  "domain_id": "logic",
+  "domain_id": "calc",
   "counted_ms": 3800,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "On multiplie par 5 : 250 × 5 = 1250.",
-  "subdomain_id": "logic.sequences"
+  "explanation": "15 % de 80 = 80 × 15 ÷ 100 = 12.",
+  "subdomain_id": "calc.percent"
  },
  {
-  "id": "90def8a5-0805-466c-8792-7529d107a6a2",
+  "id": "4328e755-dac4-4c12-9129-4b872897dcf2",
   "type": "mcq",
   "given": {
    "value": -999999,
    "option_id": "nope"
   },
   "answer": {
-   "option_id": "61c76de1"
+   "option_id": "42970006"
   },
-  "prompt": "Quelle cité Rome détruit-elle en 146 av. J.-C., à la fin des guerres puniques ?",
+  "prompt": "Complète : « Je ___ ai donné ___ cahiers. »",
   "source": null,
   "payload": {
    "options": [
     {
-     "id": "b4dc0af3",
-     "text": "Alexandrie"
+     "id": "42970006",
+     "text": "leur / leurs"
     },
     {
-     "id": "61c76de1",
-     "text": "Carthage"
+     "id": "c3b2f18b",
+     "text": "leurs / leurs"
     },
     {
-     "id": "493d30f8",
-     "text": "Athènes"
+     "id": "3ec970e3",
+     "text": "leurs / leur"
     },
     {
-     "id": "42df1683",
-     "text": "Troie"
+     "id": "5df5632c",
+     "text": "leur / leur"
     }
    ]
   },
   "position": 2,
   "takeaway": null,
-  "domain_id": "history",
+  "domain_id": "french",
   "counted_ms": 5100,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Après trois guerres puniques contre Carthage (dont celle d'Hannibal), Rome rase la ville.",
-  "subdomain_id": "history.antiquity"
+  "explanation": "Devant un verbe, « leur » (= à eux) est invariable. Devant un nom au pluriel, « leurs » s'accorde : leurs cahiers.",
+  "subdomain_id": "french.spelling"
  },
  {
-  "id": "6fd6e8e5-519d-4ecc-903d-ee7e973e453c",
-  "type": "map_pick",
+  "id": "c3dfa41e-cfc1-47aa-9f4e-1470b60a6b65",
+  "type": "true_false",
   "given": {
-   "option_id": "c4f4b2be"
+   "value": false
   },
   "answer": {
-   "option_id": "c4f4b2be"
+   "value": false
   },
-  "prompt": "Touche l'emplacement de Majuro.",
-  "source": "Wikidata",
-  "payload": {
-   "region": {
-    "lat": -1.17,
-    "lon": 168.65,
-    "span": 29.1
-   },
-   "options": [
-    {
-     "id": "c4f4b2be",
-     "lat": 7.0918,
-     "lon": 171.3802
-    },
-    {
-     "id": "7d8df147",
-     "lat": -9.433333,
-     "lon": 159.95
-    },
-    {
-     "id": "88b14a4c",
-     "lat": 6.917777777,
-     "lon": 158.185
-    },
-    {
-     "id": "ffb06a3b",
-     "lat": -8.504777777,
-     "lon": 179.117361111
-    }
-   ]
-  },
+  "prompt": "Les combats de gladiateurs se terminaient toujours par la mort d'un combattant.",
+  "source": null,
+  "payload": {},
   "position": 3,
   "takeaway": null,
-  "domain_id": "geography",
+  "domain_id": "history",
   "counted_ms": 6400,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Majuro est la capitale des Îles Marshall. Les autres points : Honiara, Palikir et Funafuti.",
-  "subdomain_id": "geography.countries"
+  "explanation": "Non : les gladiateurs coûtaient cher à former. Beaucoup de combats s'arrêtaient sur une blessure ou une grâce.",
+  "subdomain_id": "history.antiquity"
  },
  {
-  "id": "d4062a04-82ef-4053-8421-989f39cbe110",
-  "type": "true_false",
+  "id": "d74374c9-996c-401a-b738-9603a0155b43",
+  "type": "map_pick",
   "given": {
    "order": [
     "a",
@@ -124,86 +96,114 @@
    ]
   },
   "answer": {
-   "value": false
+   "option_id": "13c3b03a"
   },
-  "prompt": "0 divisé par 5, c'est impossible.",
+  "prompt": "Touche l'emplacement du Kazakhstan.",
   "source": null,
-  "payload": {},
+  "payload": {
+   "region": {
+    "lat": 42,
+    "lon": 68,
+    "span": 55
+   },
+   "options": [
+    {
+     "id": "13c3b03a",
+     "lat": 48,
+     "lon": 67
+    },
+    {
+     "id": "b9b53245",
+     "lat": 46.9,
+     "lon": 103.8
+    },
+    {
+     "id": "5a2b2d36",
+     "lat": 32.4,
+     "lon": 53.7
+    },
+    {
+     "id": "4a1facc3",
+     "lat": 49,
+     "lon": 31
+    }
+   ]
+  },
   "position": 4,
-  "takeaway": null,
-  "domain_id": "calc",
+  "takeaway": "C'est le plus grand pays au monde sans accès à l'océan.",
+  "domain_id": "geography",
   "counted_ms": 8200,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Non : 0 ÷ 5 = 0. C'est l'inverse, diviser par zéro, qui n'a pas de sens.",
-  "subdomain_id": "calc.number_logic"
+  "explanation": "Le Kazakhstan, 9e plus grand pays du monde, s'étend de la mer Caspienne à la Chine. Les autres points : Mongolie, Iran et Ukraine.",
+  "subdomain_id": "geography.countries"
  },
  {
-  "id": "89aaacb0-bed9-4dcd-bde1-682e771e67c3",
+  "id": "e589581d-5f63-4603-b383-ebc7089d6290",
   "type": "pairs",
   "given": {
    "pairs": {
-    "02bd3e96": "282b846b",
-    "6174a20d": "9801c220",
-    "99cb46dd": "a20b20e4",
-    "eb5763ca": "435c1876"
+    "0bf38416": "51d9aa88",
+    "10d82b60": "7cd6c531",
+    "164475ca": "0b2efa83",
+    "a09f9b82": "ffb4a6c3"
    }
   },
   "answer": {
    "pairs": {
-    "02bd3e96": "282b846b",
-    "6174a20d": "9801c220",
-    "99cb46dd": "a20b20e4",
-    "eb5763ca": "435c1876"
+    "0bf38416": "51d9aa88",
+    "10d82b60": "7cd6c531",
+    "164475ca": "0b2efa83",
+    "a09f9b82": "ffb4a6c3"
    }
   },
-  "prompt": "Associe chaque forme à son temps.",
+  "prompt": "Associe chaque auteur à son œuvre.",
   "source": null,
   "payload": {
    "left": [
     {
-     "id": "02bd3e96",
-     "text": "Nous chantâmes"
+     "id": "164475ca",
+     "text": "Molière"
     },
     {
-     "id": "eb5763ca",
-     "text": "Nous chanterions"
+     "id": "0bf38416",
+     "text": "Flaubert"
     },
     {
-     "id": "6174a20d",
-     "text": "Que nous chantions"
+     "id": "10d82b60",
+     "text": "Zola"
     },
     {
-     "id": "99cb46dd",
-     "text": "Nous avions chanté"
+     "id": "a09f9b82",
+     "text": "Proust"
     }
    ],
    "right": [
     {
-     "id": "282b846b",
-     "text": "Passé simple"
+     "id": "ffb4a6c3",
+     "text": "À la recherche du temps perdu"
     },
     {
-     "id": "a20b20e4",
-     "text": "Plus-que-parfait"
+     "id": "7cd6c531",
+     "text": "Germinal"
     },
     {
-     "id": "435c1876",
-     "text": "Conditionnel présent"
+     "id": "51d9aa88",
+     "text": "Madame Bovary"
     },
     {
-     "id": "9801c220",
-     "text": "Subjonctif présent"
+     "id": "0b2efa83",
+     "text": "Le Misanthrope"
     }
    ]
   },
   "position": 5,
   "takeaway": null,
-  "domain_id": "french",
+  "domain_id": "arts",
   "counted_ms": 4300,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Le passé simple en -âmes, le conditionnel en -rions, le subjonctif précédé de « que », le plus-que-parfait avec l'auxiliaire à l'imparfait.",
-  "subdomain_id": "french.grammar"
+  "explanation": "Le Misanthrope (1666), Madame Bovary (1857), Germinal (1885), À la recherche du temps perdu (1913–1927).",
+  "subdomain_id": "arts.literature"
  }
 ]

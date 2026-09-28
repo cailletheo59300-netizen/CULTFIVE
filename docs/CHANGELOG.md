@@ -6,6 +6,7 @@
 - **Révision espacée** des erreurs (1 j, 3 j, 7 j, 21 j) ; une révision due se glisse dans les parties classées du domaine et dans « Mes erreurs ».
 - Migration 0016, tests `80_algo.sql`, simulation : 66 % de réussite, niveau retrouvé à 1,8 point près.
 - **Qualité de la banque** : contrôles automatiques dans `build-seed.mjs` (doublons exacts et quasi-doublons, Vrai/Faux entre 40 et 60 % de « vrai ») ; 23 doublons retirés ; 13 Vrai/Faux inversés (33/33) ; le générateur Wikidata écarte les réponses devinables depuis l'énoncé (« Guinée → Franc guinéen », « Lettonie → Letton » : ~115 questions).
+- **+540 questions** : 110 de calcul générées (réponses exactes, méthode, indice) et ~430 écrites à la main, avec indice, dans les thèmes les plus maigres. **Tous les thèmes ont désormais au moins 40 questions.** Banque : 4 327.
 - **Indices pour ~80 % des questions** (au lieu d'une seule) : initiale de la réponse, avec le nombre de lettres si besoin ; fourchette pour les nombres et les années. Les indices écrits à la main restent prioritaires.
 
 ## 0.8.1 — Jouer compact, questions à ta cote
