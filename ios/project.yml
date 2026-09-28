@@ -23,6 +23,10 @@ targets:
     platform: iOS
     sources:
       - path: CultFive
+        excludes: ["Resources/PrivacyInfo.xcprivacy"]
+      # Déclaration de confidentialité Apple : copiée telle quelle dans l'app.
+      - path: CultFive/Resources/PrivacyInfo.xcprivacy
+        buildPhase: resources
     dependencies:
       - package: CultFiveCore
     configFiles:

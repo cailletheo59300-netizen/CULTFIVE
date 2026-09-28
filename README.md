@@ -28,7 +28,11 @@ brew install xcodegen
 cp ios/Config/Secrets.xcconfig.example ios/Config/Secrets.xcconfig   # URL + clé anon + Team ID
 cd ios && xcodegen && open CultFive.xcodeproj
 ```
-Capacités requises sur l'App ID : *Sign in with Apple*, *Associated Domains* (`applinks:www.etudia.site`).
+Capacités requises sur l'App ID `app.brainlix.ios` (équipe `BM85BF2WVQ`) : *Sign in with Apple*, *Associated Domains* (`applinks:www.etudia.site`), *Push Notifications*.
+
+### TestFlight
+Onglet Actions → **TestFlight** → *Run workflow* (`.github/workflows/testflight.yml`) : build Release (serveur de production, sans mode démo), signature automatique, envoi sur App Store Connect. Numéro de build = numéro d'exécution du workflow.
+Secrets du dépôt : `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8` (clé App Store Connect API, accès *Admin* pour la signature gérée par Apple).
 
 ### Tests
 ```bash

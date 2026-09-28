@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.2 — TestFlight
+- Équipe Apple `BM85BF2WVQ` dans le projet ; déclaration de confidentialité Apple (`PrivacyInfo.xcprivacy` : aucun pistage, e-mail, identifiant, données de jeu et d'usage, identifiant d'appareil haché, pour le fonctionnement de l'app).
+- Workflow manuel **TestFlight** : archive Release signée automatiquement avec la clé App Store Connect API, contrôles (identifiant, confidentialité, pas de fichiers démo), envoi sur App Store Connect.
+
 ## 0.9.1 — Brainlix
 - L'app s'appelle désormais **Brainlix** (nom sous l'icône, textes, admin, docs). Le 5 du jour et son logo en bâtons ne changent pas.
 - Identifiant `app.brainlix.ios`, schéma `brainlix://`, liens d'invitation/ligue/duel et pages légales sur `www.etudia.site`. Réglage d'équipe Apple : `BRAINLIX_TEAM_ID`.

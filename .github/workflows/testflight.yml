@@ -1,0 +1,111 @@
+name: TestFlight
+
+# Construit l'app en version Release (serveur de production, sans mode démo), la signe et l'envoie sur App Store Connect.
+# Déclenchement manuel uniquement : onglet Actions → TestFlight → Run workflow.
+# Secrets du dépôt : ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 (clé App Store Connect API, contenu du fichier .p8).
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: testflight
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    name: Build Release + envoi TestFlight
+    runs-on: macos-15
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      # Numéro de build unique et croissant (App Store Connect refuse deux fois le même).
+      BUILD_NUMBER: ${{ github.run_number }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Secrets présents
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          missing=""
+          [ -n "$ASC_KEY_ID" ] || missing="$missing ASC_KEY_ID"
+          [ -n "$ASC_ISSUER_ID" ] || missing="$missing ASC_ISSUER_ID"
+          [ -n "$ASC_KEY_P8" ] || missing="$missing ASC_KEY_P8"
+          if [ -n "$missing" ]; then echo "::error::Secrets manquants :$missing"; exit 1; fi
+          mkdir -p "$RUNNER_TEMP/asc"
+          printf '%s\n' "$ASC_KEY_P8" > "$RUNNER_TEMP/asc/AuthKey.p8"
+          echo "ASC_KEY_PATH=$RUNNER_TEMP/asc/AuthKey.p8" >> "$GITHUB_ENV"
+
+      - name: Xcode le plus récent
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | grep -v beta | sort -V | tail -1)
+          sudo xcode-select -s "$XCODE"
+          xcodebuild -version
+
+      - name: XcodeGen
+        run: |
+          brew install xcodegen
+          cd ios && xcodegen generate
+
+      - name: Archive (signature automatique)
+        run: |
+          status=0
+          xcodebuild archive \
+            -project ios/CultFive.xcodeproj \
+            -scheme CultFive \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath "$RUNNER_TEMP/Brainlix.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER" > archive.log 2>&1 || status=$?
+          grep -E "error:|warning: .*(sign|profile|entitlement)|ARCHIVE (SUCCEEDED|FAILED)" archive.log | tail -60
+          exit $status
+
+      - name: Contrôles de l'archive
+        run: |
+          APP="$RUNNER_TEMP/Brainlix.xcarchive/Products/Applications/CultFive.app"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" -c "Print :CFBundleDisplayName" \
+            -c "Print :CFBundleShortVersionString" -c "Print :CFBundleVersion" "$APP/Info.plist"
+          test -f "$APP/PrivacyInfo.xcprivacy" || { echo "::error::PrivacyInfo.xcprivacy absent de l'app"; exit 1; }
+          if ls "$APP" | grep -q "\.demo\.json"; then echo "::error::fichiers du mode démo présents en Release"; exit 1; fi
+          codesign -d --entitlements - "$APP" 2>/dev/null | grep -E "applesignin|associated-domains|team-identifier" || true
+
+      - name: Export et envoi sur App Store Connect
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>teamID</key><string>BM85BF2WVQ</string>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+            <key>uploadSymbols</key><true/>
+          </dict>
+          </plist>
+          PLIST
+          status=0
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/Brainlix.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" > export.log 2>&1 || status=$?
+          grep -E "error|Upload|upload|EXPORT (SUCCEEDED|FAILED)|Progress" export.log | tail -60
+          exit $status
+
+      - name: Journaux
+        if: failure()
+        run: |
+          [ -f archive.log ] && grep -E "error" -B2 -A4 archive.log | head -150 || true
+          [ -f export.log ] && tail -80 export.log || true
+
+      - name: Nettoyage de la clé
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc"
