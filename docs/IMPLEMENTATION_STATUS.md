@@ -42,6 +42,12 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 | 12 Polish/perf/tests | ⏳ après premiers retours sur appareil |
 | 13 App Store readiness | ⏳ (pages légales, AASA, captures, fiche) |
 
+## Serveur en ligne (2026-09-28)
+- Projet Supabase **sibpncsjsdtjcjxbfryk** (Irlande, eu-west-1) : 18 migrations, 4 327 questions, 49 thèmes, maintenance planifiée (pg_cron, toutes les 15 min). Contrôles de sécurité passés (restent des avertissements attendus : tables sans politique = accès par fonctions uniquement ; fonctions appelables = API du jeu).
+- L'app pointe sur ce serveur (`ios/Config/App.xcconfig`, clé anon publique). Mode démo : argument `-demo`.
+- Installation faite en téléchargeant les fichiers du dépôt depuis la base (extension `http`, à une version précise) : `seed.sql` pèse 2,7 Mo.
+- À régler dans le tableau de bord Supabase : connexions anonymes, modèle d'e-mail avec le code à 6 chiffres, connexion Apple (après le compte développeur).
+
 ## Prochaines étapes
 1. **Propriétaire** : créer le projet Supabase (Auth anonyme + Apple + e-mail), `db push`, seed, renseigner `Secrets.xcconfig`, lancer sur iPhone → retours.
 2. Contenu : viser ≥ 150 par pilier et étoffer les domaines surprise (outil IA + validation).
