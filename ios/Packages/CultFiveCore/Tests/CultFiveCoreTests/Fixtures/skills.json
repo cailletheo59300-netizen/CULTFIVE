@@ -1,89 +1,89 @@
 [
  {
-  "cote": 1137,
-  "name": "Géographie",
-  "level": 58,
+  "cote": 1062,
+  "name": "Français",
+  "level": 54,
   "placed": false,
   "correct": 2,
   "answered": 2,
-  "domain_id": "geography",
+  "domain_id": "french",
   "placement": 0,
-  "reliability": 0.12
+  "reliability": 0.08
  },
  {
-  "cote": 1102,
+  "cote": 1013,
+  "name": "Géographie",
+  "level": 51,
+  "placed": false,
+  "correct": 1,
+  "answered": 2,
+  "domain_id": "geography",
+  "placement": 0,
+  "reliability": 0.07
+ },
+ {
+  "cote": 1041,
   "name": "Histoire",
-  "level": 56,
+  "level": 52,
   "placed": false,
   "correct": 2,
   "answered": 2,
   "domain_id": "history",
   "placement": 0,
-  "reliability": 0.14
+  "reliability": 0.07
  },
  {
-  "cote": 1083,
-  "name": "Sciences",
-  "level": 55,
-  "placed": false,
-  "correct": 2,
-  "answered": 2,
-  "domain_id": "science",
-  "placement": 0,
-  "reliability": 0.12
- },
- {
-  "cote": 1050,
+  "cote": 922,
   "name": "Calcul",
-  "level": 53,
+  "level": 46,
   "placed": false,
-  "correct": 1,
+  "correct": 0,
   "answered": 1,
   "domain_id": "calc",
   "placement": 0,
   "reliability": 0.08
  },
  {
-  "cote": 922,
-  "name": "Français",
-  "level": 46,
+  "cote": 1024,
+  "name": "Sciences",
+  "level": 51,
   "placed": false,
-  "correct": 0,
+  "correct": 1,
   "answered": 1,
-  "domain_id": "french",
+  "domain_id": "science",
   "placement": 0,
-  "reliability": 0.08
+  "reliability": 0.03
  },
  {
-  "cote": 907,
+  "cote": 1047,
   "name": "Arts & culture",
-  "level": 45,
+  "level": 53,
   "placed": false,
-  "correct": 0,
+  "correct": 1,
   "answered": 1,
   "domain_id": "arts",
   "placement": 0,
-  "reliability": 0.07
+  "reliability": 0.04
  },
  {
-  "cote": 1050,
+  "cote": 1027,
   "name": "Cinéma",
-  "level": 53,
+  "level": 52,
   "placed": false,
   "correct": 1,
   "answered": 1,
   "domain_id": "cinema",
   "placement": 0,
-  "reliability": 0.08
+  "reliability": 0.05
  },
  {
-  "cote": 1050,
-  "name": "Nature & animaux",
-  "level": 53,
+  "cote": 1078,
+  "name": "Musique",
+  "level": 54,
   "placed": false,
   "correct": 1,
   "answered": 1,
-  "domain_id": "nature",
+  "domain_id": "music",
   "placement": 0,
   "reliability": 0.08
  },
@@ -111,23 +111,23 @@
  },
  {
   "cote": 1000,
-  "name": "Musique",
-  "level": 50,
-  "placed": false,
-  "correct": 0,
-  "answered": 0,
-  "domain_id": "music",
-  "placement": 0,
-  "reliability": 0.0
- },
- {
-  "cote": 1000,
   "name": "Technologie",
   "level": 50,
   "placed": false,
   "correct": 0,
   "answered": 0,
   "domain_id": "tech",
+  "placement": 0,
+  "reliability": 0.0
+ },
+ {
+  "cote": 1000,
+  "name": "Nature & animaux",
+  "level": 50,
+  "placed": false,
+  "correct": 0,
+  "answered": 0,
+  "domain_id": "nature",
   "placement": 0,
   "reliability": 0.0
  }

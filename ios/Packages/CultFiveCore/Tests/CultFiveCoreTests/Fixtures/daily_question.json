@@ -1,29 +1,29 @@
 {
- "id": "5c7410fa-acd3-4ce5-9010-cdbc86bf409f",
+ "id": "e5df73bb-59d1-4ace-9c41-0f3fc789cf31",
  "type": "mcq",
  "total": 5,
- "prompt": "Avec quelle monnaie paie-t-on aux Seychelles ?",
+ "prompt": "Qu'est-ce qu'une cacophonie ?",
  "payload": {
   "options": [
    {
-    "id": "df0e7769",
-    "text": "Dinar libyen"
+    "id": "0b0a0c25",
+    "text": "Un chant d'oiseau"
    },
    {
-    "id": "a931641b",
-    "text": "Franc CFA d'Afrique centrale"
+    "id": "bb511378",
+    "text": "Une belle mélodie"
    },
    {
-    "id": "685c74a2",
-    "text": "Roupie seychelloise"
+    "id": "592ec1e5",
+    "text": "Un mélange de sons désagréables"
    },
    {
-    "id": "c4eababa",
-    "text": "Shilling tanzanien"
+    "id": "e361ea88",
+    "text": "Un silence total"
    }
   ]
  },
  "position": 1,
- "domain_id": "geography",
- "subdomain_id": "geography.countries"
+ "domain_id": "french",
+ "subdomain_id": "french.vocabulary"
 }

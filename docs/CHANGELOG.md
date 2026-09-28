@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.2 — algo plus juste
+- **Hasard pris en compte** : un QCM à 4 choix se réussit 1 fois sur 4 sans rien savoir. Une bonne réponse devinable fait moins monter la cote, une erreur devinable la fait davantage baisser ; les questions se calibrent pareil ; les fenêtres visent les chances réelles.
+- **Thèmes équilibrés** dans chaque partie de domaine (2 par thème sur 10 en Géographie, au lieu de parties dominées par « Pays & villes »).
+- **Révision espacée** des erreurs (1 j, 3 j, 7 j, 21 j) ; une révision due se glisse dans les parties classées du domaine et dans « Mes erreurs ».
+- Migration 0016, tests `80_algo.sql`, simulation : 66 % de réussite, niveau retrouvé à 1,8 point près.
+
 ## 0.8.1 — Jouer compact, questions à ta cote
 - **Écran Jouer** repensé : grande carte « Partie rapide », Surprise / Défi / Erreurs en pastilles sur une ligne, domaines en grille de 3 cases pleines de couleur (pictogramme, cote + rang ou placement, ★ favoris). 4 rangées au lieu de 6, cote globale en haut.
 - **Questions choisies par écart de cote** (migration 0015) : surtout un peu sous ta cote ou pile à ta cote, quelques-unes plus accessibles ou au-dessus. Réussite ≈ 65 % en partie classée (au lieu de 55 %), Défi ≈ 45 %. Simulation `70_rating.sql` mise à jour.

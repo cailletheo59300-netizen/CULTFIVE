@@ -171,7 +171,18 @@ begin
   sub := public.play_submit((pack ->> 'session_id')::uuid, jsonb_build_array(
     jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', v_qid, 'given', tst.correct_given(v_qid), 'response_ms', 4000)));
   perform tst.ok((sub ->> 'xp')::int >= 15, 'correction récompensée (XP) : ' || (sub ->> 'xp'));
+  -- Révision espacée : réussir avant l'échéance ne fait pas avancer ; 3 j, puis 7 j, puis 21 j → maîtrisée.
+  perform public._record_attempt(u, v_qid, tst.correct_given(v_qid), 3000, 'training', null, gen_random_uuid());
+  perform tst.ok((select review_step from public.user_concepts where user_id = u and concept_id = v_concept) = 1, 'pas d''avance avant l''échéance');
   perform tst.tick('4 days');
+  perform public._record_attempt(u, v_qid, tst.correct_given(v_qid), 3000, 'training', null, gen_random_uuid());
+  perform tst.ok((select error_state = 'correct_once' and review_step = 2 and review_due > public._now() + interval '6 days'
+                  from public.user_concepts where user_id = u and concept_id = v_concept), 'révision : +7 j');
+  perform tst.tick('8 days');
+  perform public._record_attempt(u, v_qid, tst.correct_given(v_qid), 3000, 'training', null, gen_random_uuid());
+  perform tst.ok((select review_step = 3 and review_due > public._now() + interval '20 days'
+                  from public.user_concepts where user_id = u and concept_id = v_concept), 'révision : +21 j');
+  perform tst.tick('22 days');
   perform public._record_attempt(u, v_qid, tst.correct_given(v_qid), 3000, 'training', null, gen_random_uuid());
   perform tst.ok((select error_state from public.user_concepts where user_id = u and concept_id = v_concept) = 'mastered', 'maîtrisée');
   perform tst.ok((select count(*) from public.question_attempts where user_id = u and concept_id = v_concept) >= 5, 'historique conservé');

@@ -94,7 +94,7 @@ final class DemoPlayEngine: @unchecked Sendable {
             var q = entry.question
             let mu = levels[q.domainId] ?? 50
             q.difficulty = entry.difficulty
-            q.expected = ((1 / (1 + exp(-(mu - entry.difficulty) / 10))) * 100).rounded() / 100
+            q.expected = (DemoPlayEngine.chance(mu: mu, entry: entry) * 100).rounded() / 100
             return q
         }
         return PlayPack(sessionId: session, mode: mode.rawValue, questions: questions,
@@ -117,6 +117,18 @@ final class DemoPlayEngine: @unchecked Sendable {
         return (mu + window.0 / 17.37) ... (mu + window.1 / 17.37)
     }
 
+    /// Chances de réussite hasard compris (comme public._expect_q) : QCM 1/n, Vrai/Faux 1/2.
+    static func chance(mu: Double, entry: Entry) -> Double {
+        let q = entry.question
+        let guess: Double
+        switch q.type {
+        case .mcq, .mapPick: guess = 1 / Double(max(q.payload.options?.count ?? 4, 2))
+        case .trueFalse: guess = 0.5
+        default: guess = 0
+        }
+        return guess + (1 - guess) / (1 + exp(-(mu - entry.difficulty) / 10))
+    }
+
     /// Jamais une question déjà vue ; une seule par famille tant que possible ; la difficulté visée d'abord, puis élargie.
     private func pick(from pool: [Entry], count: Int, band: ClosedRange<Double>) -> [Entry] {
         var fresh = pool.filter { !seen.contains($0.question.id) }
@@ -126,6 +138,13 @@ final class DemoPlayEngine: @unchecked Sendable {
             fresh = pool
         }
         fresh.shuffle()
+        // Thèmes équilibrés : on alterne les thèmes (1er de chaque thème, puis 2e…), comme le serveur.
+        var rank: [String: Int] = [:]
+        fresh = fresh.map { e -> (Entry, Int) in
+            let r = rank[e.question.subdomainId, default: 0]
+            rank[e.question.subdomainId] = r + 1
+            return (e, r)
+        }.sorted { $0.1 < $1.1 }.map(\.0)
         var result: [Entry] = []
         var families: [String: Int] = [:]
         for (widen, perFamily) in [(0.0, 1), (10, 1), (20, 2), (100, 99)] {
@@ -170,7 +189,7 @@ final class DemoPlayEngine: @unchecked Sendable {
             let domain = entry.question.domainId
             let before = levels[domain] ?? 50
             var after = before
-            let expected = 1 / (1 + exp((entry.difficulty - before) / 10))
+            let expected = DemoPlayEngine.chance(mu: before, entry: entry)
             if ranked {
                 // Bayésien simplifié : on bouge plus sur une surprise (bonne réponse difficile, erreur facile).
                 // Placement (< 50 réponses) : pas doublé.

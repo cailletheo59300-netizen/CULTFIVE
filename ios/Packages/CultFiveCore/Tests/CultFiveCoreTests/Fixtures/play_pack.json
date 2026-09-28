@@ -4,235 +4,221 @@
  "ranked": true,
  "questions": [
   {
-   "id": "ffc7d4ef-674c-4f02-b0b3-4857c4ac492f",
-   "type": "numeric",
+   "id": "3b8ea9df-b8b5-4e94-a755-5ce4f8eabdb1",
+   "type": "true_false",
    "answer": {
-    "value": 340,
-    "tolerance": 20
+    "value": true
    },
-   "prompt": "Environ combien de mètres par seconde parcourt le son dans l'air ?",
+   "prompt": "Le son se propage plus vite dans l'eau que dans l'air.",
    "source": null,
-   "payload": {
-    "unit": "m/s",
-    "decimals": 0,
-    "allow_negative": false
-   },
-   "expected": 0.5,
+   "payload": {},
+   "expected": 0.75,
    "has_hint": false,
    "takeaway": null,
    "domain_id": "science",
-   "concept_id": "science.physics.speed_of_sound",
+   "concept_id": "science.physics.sound_water",
    "difficulty": 50,
    "fact_as_of": null,
-   "explanation": "Environ 340 m/s à 15 °C. Compter les secondes entre l'éclair et le tonnerre puis diviser par 3 donne la distance de l'orage en km.",
+   "explanation": "Environ 1 500 m/s dans l'eau contre 340 m/s dans l'air : plus un milieu est dense et peu compressible, plus le son y va vite.",
    "has_context": false,
    "subdomain_id": "science.physics"
   },
   {
-   "id": "2b1c468f-d669-476d-8783-0ea907e64738",
-   "type": "map_pick",
+   "id": "0c273a26-b222-428f-993e-50c584b58736",
+   "type": "mcq",
    "answer": {
-    "option_id": "7f2c572a"
+    "option_id": "7a84ef99"
    },
-   "prompt": "Où se trouve Riyad ? Touche le bon point.",
+   "prompt": "« Le Père Goriot » est une œuvre de…",
    "source": "Wikidata",
    "payload": {
-    "region": {
-     "lat": 29.59,
-     "lon": 52.55,
-     "span": 43.9
-    },
     "options": [
      {
-      "id": "7f2c572a",
-      "lat": 24.65,
-      "lon": 46.71
+      "id": "f15101dc",
+      "text": "Nicolas Gogol"
      },
      {
-      "id": "5e0a57da",
-      "lat": 34.532777777,
-      "lon": 69.165833333
+      "id": "82fad913",
+      "text": "Stendhal"
      },
      {
-      "id": "86137462",
-      "lat": 33.315277777,
-      "lon": 44.366111111
+      "id": "99504642",
+      "text": "Hans Christian Andersen"
      },
      {
-      "id": "6aa7db20",
-      "lat": 31.95,
-      "lon": 35.933333333
+      "id": "7a84ef99",
+      "text": "Honoré de Balzac"
      }
     ]
    },
-   "expected": 0.74,
+   "expected": 0.5,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "arts",
+   "concept_id": "arts.literature.book_le_pere_goriot_q240617",
+   "difficulty": 58,
+   "fact_as_of": null,
+   "explanation": "« Le Père Goriot » est une œuvre d'Honoré de Balzac, parue en 1835.",
+   "has_context": false,
+   "subdomain_id": "arts.literature"
+  },
+  {
+   "id": "0e4bade1-ee69-4263-b292-f913504511f4",
+   "type": "mcq",
+   "answer": {
+    "option_id": "a160d499"
+   },
+   "prompt": "Quel est le point culminant de la Mongolie ?",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "a160d499",
+      "text": "Kujten Uul"
+     },
+     {
+      "id": "80ba4388",
+      "text": "Mont Paektu"
+     },
+     {
+      "id": "078c531a",
+      "text": "Kangchenjunga"
+     },
+     {
+      "id": "50951f10",
+      "text": "Mont Damavand"
+     }
+    ]
+   },
+   "expected": 0.55,
    "has_hint": false,
    "takeaway": null,
    "domain_id": "geography",
-   "concept_id": "geography.countries.map_saudi_arabia",
-   "difficulty": 44,
+   "concept_id": "geography.relief.highest_mongolia",
+   "difficulty": 53,
    "fact_as_of": null,
-   "explanation": "Riyad est la capitale de l'Arabie saoudite. Les autres points : Kaboul, Bagdad et Amman.",
+   "explanation": "Le point culminant de la Mongolie est Kujten Uul, à 4 374 m d'altitude.",
    "has_context": false,
-   "subdomain_id": "geography.countries"
+   "subdomain_id": "geography.relief"
   },
   {
-   "id": "7cddfa66-2601-4294-b1c3-28d8dda8c2a0",
+   "id": "a643c34b-4050-4ea4-b8a3-59a6a667002f",
    "type": "mcq",
    "answer": {
-    "option_id": "9bfc3ffc"
+    "option_id": "c8c3b5fe"
    },
-   "prompt": "Qu'est-ce que le corail ?",
+   "prompt": "Quelle orthographe est correcte ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "9bfc3ffc",
-      "text": "Un animal"
+      "id": "46836b8d",
+      "text": "dévellopement"
      },
      {
-      "id": "26019f76",
-      "text": "Une roche"
+      "id": "a18c0333",
+      "text": "dévelopement"
      },
      {
-      "id": "1b0507bf",
-      "text": "Une plante"
+      "id": "f40d7be8",
+      "text": "développemment"
      },
      {
-      "id": "853bf6f1",
-      "text": "Une algue"
+      "id": "c8c3b5fe",
+      "text": "développement"
      }
     ]
    },
-   "expected": 0.61,
+   "expected": 0.56,
    "has_hint": false,
    "takeaway": null,
-   "domain_id": "nature",
-   "concept_id": "nature.marine.coral",
-   "difficulty": 45,
+   "domain_id": "french",
+   "concept_id": "french.spelling.double_consonnes",
+   "difficulty": 55,
    "fact_as_of": null,
-   "explanation": "Des colonies de minuscules animaux, les polypes, qui fabriquent un squelette calcaire.",
+   "explanation": "Un seul l et deux p : développer, développement.",
    "has_context": false,
-   "subdomain_id": "nature.marine"
+   "subdomain_id": "french.spelling"
   },
   {
-   "id": "96c21e77-5841-4647-8a04-3eaf3f5bb2d9",
+   "id": "07e00335-435e-47dd-bd1e-2a516cb19eb0",
    "type": "mcq",
    "answer": {
-    "option_id": "a142ff5f"
+    "option_id": "cbb45716"
    },
-   "prompt": "Environ combien de fois bat le cœur d'un adulte au repos, par minute ?",
+   "prompt": "Quel film de Hayao Miyazaki a remporté l'Oscar du meilleur film d'animation en 2003 ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "10435b96",
-      "text": "150 à 200 fois"
+      "id": "7c1d8cab",
+      "text": "Le Château ambulant"
      },
      {
-      "id": "572dfb7e",
-      "text": "20 à 30 fois"
+      "id": "3ad4b40a",
+      "text": "Mon voisin Totoro"
      },
      {
-      "id": "c820cb14",
-      "text": "10 fois"
+      "id": "2eca68b9",
+      "text": "Princesse Mononoké"
      },
      {
-      "id": "a142ff5f",
-      "text": "60 à 100 fois"
+      "id": "cbb45716",
+      "text": "Le Voyage de Chihiro"
      }
     ]
    },
-   "expected": 0.79,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "science",
-   "concept_id": "science.human_body.heartbeat",
-   "difficulty": 35,
-   "fact_as_of": null,
-   "explanation": "Entre 60 et 100 battements par minute ; moins chez les sportifs entraînés.",
-   "has_context": false,
-   "subdomain_id": "science.human_body"
-  },
-  {
-   "id": "af94b6ba-4787-4ed3-809f-0994186f509f",
-   "type": "mcq",
-   "answer": {
-    "option_id": "9bcbda20"
-   },
-   "prompt": "Qui a créé le personnage d'Astérix, adapté ensuite au cinéma ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "a146f9f9",
-      "text": "Hergé"
-     },
-     {
-      "id": "9bcbda20",
-      "text": "Goscinny et Uderzo"
-     },
-     {
-      "id": "3a15c26e",
-      "text": "Franquin"
-     },
-     {
-      "id": "15718f37",
-      "text": "Morris"
-     }
-    ]
-   },
-   "expected": 0.61,
+   "expected": 0.78,
    "has_hint": false,
    "takeaway": null,
    "domain_id": "cinema",
-   "concept_id": "cinema.animation.asterix_studio",
-   "difficulty": 45,
+   "concept_id": "cinema.animation.miyazaki",
+   "difficulty": 40,
    "fact_as_of": null,
-   "explanation": "René Goscinny au scénario et Albert Uderzo au dessin, en 1959.",
+   "explanation": "Le Voyage de Chihiro (2001), produit par le studio Ghibli.",
    "has_context": false,
    "subdomain_id": "cinema.animation"
   },
   {
-   "id": "54feb9d7-d054-4236-8c99-82876d437379",
+   "id": "2bd73f2a-5106-417b-bb51-98feb126d4ad",
    "type": "mcq",
    "answer": {
-    "option_id": "b240a57b"
+    "option_id": "d95c2366"
    },
-   "prompt": "Joseph Fourier est né au…",
+   "prompt": "À quel siècle remonte la naissance de Molière ?",
    "source": "Wikidata",
    "payload": {
     "options": [
      {
-      "id": "f8668c0c",
-      "text": "XVIe siècle"
+      "id": "1325e252",
+      "text": "XVe siècle"
      },
      {
-      "id": "1070750b",
+      "id": "d95c2366",
       "text": "XVIIe siècle"
      },
      {
-      "id": "b240a57b",
+      "id": "24f54099",
       "text": "XVIIIe siècle"
      },
      {
-      "id": "d20db840",
-      "text": "XXe siècle"
+      "id": "6c2d5b62",
+      "text": "XIXe siècle"
      }
     ],
     "keep_order": true
    },
-   "expected": 0.66,
+   "expected": 0.86,
    "has_hint": false,
    "takeaway": null,
    "domain_id": "history",
-   "concept_id": "history.modern.century_joseph_fourier",
-   "difficulty": 46,
+   "concept_id": "history.modern.century_moliere",
+   "difficulty": 35,
    "fact_as_of": null,
-   "explanation": "Joseph Fourier, mathématicien et physicien français, est né en 1768 et mort en 1830.",
+   "explanation": "Molière, dramaturge et acteur français, est né en 1622 et mort en 1673.",
    "has_context": false,
    "subdomain_id": "history.modern"
   }
  ],
- "session_id": "2f2a3b6a-3beb-426e-a15c-0e44402b941a"
+ "session_id": "eb3a9ef4-26bd-45f3-921c-dbece91ce804"
 }

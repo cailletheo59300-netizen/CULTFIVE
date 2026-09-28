@@ -68,6 +68,21 @@ Chaque question du pack porte `difficulty` et `expected` (chances estimées pour
 (Facile ≥ 0,70 · Moyen ≥ 0,50 · Difficile ≥ 0,35 · Très difficile) et un **ordre adaptatif** dans la partie : après 3 bonnes
 réponses d'affilée, la question restante la plus dure passe devant ; après 2 erreurs, la plus accessible.
 
+## Hasard, thèmes, révisions (0.8.2, migration 0016)
+- **Hasard** (modèle à 3 paramètres, c fixé) : P(juste) = c + (1 − c) · logistique, c = 1/n pour un QCM ou une carte à n choix,
+  1/2 pour un Vrai/Faux, 0 pour numérique, ordre, paires (`questions.guess_rate`). Mise à jour : information de Fisher et pas de
+  Newton de la vraisemblance à 3 paramètres (c = 0 redonne exactement l'ancien modèle). Une bonne réponse devinable fait moins
+  monter, une erreur devinable fait plus baisser ; la calibration des questions suit la même règle. La fenêtre de sélection
+  vise des **chances réelles** (hasard compris), question par question (`_b_for_p`).
+- **Thèmes équilibrés** : chaque question d'une partie de domaine tire d'abord un thème (le moins servi dans la partie, léger
+  bonus aux thèmes où la cote est la moins sûre), puis la question dans la fenêtre du niveau de ce thème. Partie de 10 en
+  Géographie : 2 questions par thème. Quand un petit thème est épuisé (anti-répétition), on complète dans tout le domaine.
+- **Révision espacée** : une erreur revient après 1 j ; une fois corrigée, à 3 j, 7 j puis 21 j ; maîtrisée à la 4e bonne
+  réponse « à l'heure » (réussir avant l'échéance ne fait pas avancer). Une révision due est glissée dans les parties
+  adaptatives du domaine (au plus une, jamais en 1re question) et dans « Mes erreurs ».
+- Simulation (joueurs qui devinent quand ils ne savent pas, 4 domaines × 3 niveaux, 14 parties) : réussite **66 %**,
+  écart moyen entre niveau estimé et vrai niveau **1,8 point** (≈ 31 points de cote).
+
 ## Cote CULT (0.8.0)
 Lecture du niveau μ sur une échelle façon échecs : **cote = 1000 + 17,37 × (μ − 50)** (17,37 = 400 / (S · ln 10) : 400 points
 d'écart = 10 contre 1). 1000 = niveau médian ; μ ∈ [0, 100] → cote ∈ [131, 1869].

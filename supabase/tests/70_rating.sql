@@ -58,13 +58,13 @@ begin
 end $$;
 
 -- Simulation : trois joueurs de vrai niveau 30, 50 et 72 (cotes 652, 1000, 1382) jouent 8 parties classées de 10 en géographie.
--- Ils répondent juste avec la probabilité du modèle. La cote doit retrouver l'ordre et s'approcher du vrai niveau,
+-- Ils savent avec la probabilité du modèle, et devinent sinon (hasard des QCM et Vrai/Faux). La cote doit retrouver l'ordre et s'approcher du vrai niveau,
 -- et le joueur moyen doit réussir environ deux questions sur trois (questions autour de sa cote).
 do $$
 declare
   thetas real[] := array[30, 50, 72];
   users uuid[] := '{}';
-  u uuid; pack jsonb; atts jsonb; x jsonb; b real; ok bool; mu real;
+  u uuid; pack jsonb; atts jsonb; x jsonb; b real; c real; ok bool; mu real;
   mus real[] := '{}';
   late_n int := 0; late_ok int := 0;
 begin
@@ -78,8 +78,9 @@ begin
       pack := public.play_pack('training', 'geography', null, 10, true, null);
       atts := '[]'::jsonb;
       for x in select * from jsonb_array_elements(pack -> 'questions') loop
-        select difficulty_effective into b from public.questions where id = (x ->> 'id')::uuid;
-        ok := random() < 1 / (1 + exp(-(thetas[p] - b) / 10));
+        -- Joueur réaliste : il sait avec la probabilité du modèle, sinon il devine (1 chance sur n au QCM).
+        select difficulty_effective, guess_rate into b, c from public.questions where id = (x ->> 'id')::uuid;
+        ok := random() < c + (1 - c) / (1 + exp(-(thetas[p] - b) / 10));
         if p = 2 and g > 4 then late_n := late_n + 1; late_ok := late_ok + ok::int; end if;
         atts := atts || jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', x ->> 'id',
                                            'given', case when ok then tst.correct_given((x ->> 'id')::uuid) else tst.wrong_given() end,
