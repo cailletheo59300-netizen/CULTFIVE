@@ -1,29 +1,29 @@
 {
- "id": "e8575743-a8ec-4faf-8984-f3534974b565",
+ "id": "ca496889-4458-4a8f-bfad-efa10163561c",
  "type": "mcq",
  "total": 5,
- "prompt": "Avec quelle monnaie paie-t-on au Tadjikistan ?",
+ "prompt": "Quel est un synonyme de « véhément » ?",
  "payload": {
   "options": [
    {
-    "id": "52dd7255",
-    "text": "Kyat"
+    "id": "e5b28b89",
+    "text": "Discret"
    },
    {
-    "id": "af29d4b9",
-    "text": "Somoni"
+    "id": "f5deedb7",
+    "text": "Poli"
    },
    {
-    "id": "7503eaec",
-    "text": "Dinar irakien"
+    "id": "4f798bc7",
+    "text": "Rapide"
    },
    {
-    "id": "6ffbc2b3",
-    "text": "Ringgit"
+    "id": "1e9967cc",
+    "text": "Emporté"
    }
   ]
  },
  "position": 1,
- "domain_id": "geography",
- "subdomain_id": "geography.countries"
+ "domain_id": "french",
+ "subdomain_id": "french.synonyms"
 }

@@ -1,17 +1,28 @@
 [
  {
-  "cote": 1120,
-  "name": "Histoire",
-  "level": 57,
+  "cote": 1057,
+  "name": "Français",
+  "level": 53,
   "placed": false,
   "correct": 2,
   "answered": 2,
-  "domain_id": "history",
+  "domain_id": "french",
   "placement": 0,
-  "reliability": 0.12
+  "reliability": 0.09
  },
  {
-  "cote": 1074,
+  "cote": 1062,
+  "name": "Sport",
+  "level": 54,
+  "placed": false,
+  "correct": 2,
+  "answered": 2,
+  "domain_id": "sport",
+  "placement": 0,
+  "reliability": 0.11
+ },
+ {
+  "cote": 1070,
   "name": "Musique",
   "level": 54,
   "placed": false,
@@ -22,81 +33,59 @@
   "reliability": 0.1
  },
  {
-  "cote": 922,
+  "cote": 1106,
   "name": "Calcul",
-  "level": 46,
+  "level": 56,
   "placed": false,
-  "correct": 0,
+  "correct": 1,
   "answered": 1,
   "domain_id": "calc",
   "placement": 0,
-  "reliability": 0.08
+  "reliability": 0.06
  },
  {
-  "cote": 1078,
-  "name": "Français",
-  "level": 54,
-  "placed": false,
-  "correct": 1,
-  "answered": 1,
-  "domain_id": "french",
-  "placement": 0,
-  "reliability": 0.08
- },
- {
-  "cote": 1041,
+  "cote": 887,
   "name": "Géographie",
-  "level": 52,
+  "level": 43,
   "placed": false,
-  "correct": 1,
+  "correct": 0,
   "answered": 1,
   "domain_id": "geography",
   "placement": 0,
-  "reliability": 0.05
+  "reliability": 0.03
  },
  {
-  "cote": 1041,
-  "name": "Logique",
-  "level": 52,
+  "cote": 950,
+  "name": "Histoire",
+  "level": 47,
   "placed": false,
-  "correct": 1,
+  "correct": 0,
   "answered": 1,
-  "domain_id": "logic",
+  "domain_id": "history",
   "placement": 0,
-  "reliability": 0.05
+  "reliability": 0.08
  },
  {
-  "cote": 1047,
-  "name": "Sport",
-  "level": 53,
-  "placed": false,
-  "correct": 1,
-  "answered": 1,
-  "domain_id": "sport",
-  "placement": 0,
-  "reliability": 0.04
- },
- {
-  "cote": 1041,
+  "cote": 1020,
   "name": "Cinéma",
-  "level": 52,
+  "level": 51,
   "placed": false,
   "correct": 1,
   "answered": 1,
   "domain_id": "cinema",
   "placement": 0,
-  "reliability": 0.05
+  "reliability": 0.04
  },
  {
-  "cote": 887,
+  "cote": 1046,
   "name": "Technologie",
-  "level": 43,
+  "level": 53,
   "placed": false,
-  "correct": 0,
+  "correct": 1,
   "answered": 1,
   "domain_id": "tech",
   "placement": 0,
-  "reliability": 0.03
+  "reliability": 0.04
  },
  {
   "cote": 1000,
@@ -106,6 +95,17 @@
   "correct": 0,
   "answered": 0,
   "domain_id": "science",
+  "placement": 0,
+  "reliability": 0.0
+ },
+ {
+  "cote": 1000,
+  "name": "Logique",
+  "level": 50,
+  "placed": false,
+  "correct": 0,
+  "answered": 0,
+  "domain_id": "logic",
   "placement": 0,
   "reliability": 0.0
  },

@@ -1,122 +1,117 @@
 [
  {
-  "id": "e8575743-a8ec-4faf-8984-f3534974b565",
+  "id": "ca496889-4458-4a8f-bfad-efa10163561c",
   "type": "mcq",
   "given": {
-   "option_id": "af29d4b9"
+   "option_id": "1e9967cc"
   },
   "answer": {
-   "option_id": "af29d4b9"
+   "option_id": "1e9967cc"
   },
-  "prompt": "Avec quelle monnaie paie-t-on au Tadjikistan ?",
-  "source": "Wikidata",
+  "prompt": "Quel est un synonyme de « véhément » ?",
+  "source": null,
   "payload": {
    "options": [
     {
-     "id": "52dd7255",
-     "text": "Kyat"
+     "id": "e5b28b89",
+     "text": "Discret"
     },
     {
-     "id": "af29d4b9",
-     "text": "Somoni"
+     "id": "f5deedb7",
+     "text": "Poli"
     },
     {
-     "id": "7503eaec",
-     "text": "Dinar irakien"
+     "id": "4f798bc7",
+     "text": "Rapide"
     },
     {
-     "id": "6ffbc2b3",
-     "text": "Ringgit"
+     "id": "1e9967cc",
+     "text": "Emporté"
     }
    ]
   },
   "position": 1,
   "takeaway": null,
-  "domain_id": "geography",
+  "domain_id": "french",
   "counted_ms": 3800,
-  "fact_as_of": "2026-09-26",
+  "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Au Tadjikistan, on paie en somoni.",
-  "subdomain_id": "geography.countries"
+  "explanation": "Un discours véhément est plein de passion et de force.",
+  "subdomain_id": "french.synonyms"
  },
  {
-  "id": "3061d992-7665-467d-8b1f-2872a93ed357",
-  "type": "numeric",
+  "id": "e68df94f-ba4e-49d7-a209-c63094c76425",
+  "type": "ordering",
   "given": {
    "value": -999999,
    "option_id": "nope"
   },
   "answer": {
-   "value": 15,
+   "order": [
+    "cc0c5920",
+    "3d2faf86",
+    "bf179761",
+    "e968338d"
+   ]
+  },
+  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "source": null,
+  "payload": {
+   "items": [
+    {
+     "id": "cc0c5920",
+     "text": "Couronnement de Charlemagne"
+    },
+    {
+     "id": "e968338d",
+     "text": "Mort de Jeanne d'Arc"
+    },
+    {
+     "id": "3d2faf86",
+     "text": "Bataille d'Hastings"
+    },
+    {
+     "id": "bf179761",
+     "text": "Première croisade"
+    }
+   ]
+  },
+  "position": 2,
+  "takeaway": null,
+  "domain_id": "history",
+  "counted_ms": 5100,
+  "fact_as_of": null,
+  "is_correct": false,
+  "explanation": "Charlemagne : 800. Hastings : 1066. Première croisade : 1096-1099. Jeanne d'Arc : 1431.",
+  "subdomain_id": "history.middle_ages"
+ },
+ {
+  "id": "dbc49cc3-0468-4d66-88b3-cecc9d4be4eb",
+  "type": "numeric",
+  "given": {
+   "value": 10
+  },
+  "answer": {
+   "value": 10,
    "tolerance": 0
   },
-  "prompt": "Quelle est la moitié du tiers de 90 ?",
+  "prompt": "5 personnes se serrent toutes la main une fois. Combien de poignées de main en tout ?",
   "source": null,
   "payload": {
    "decimals": 0,
    "allow_negative": false
   },
-  "position": 2,
-  "takeaway": "La moitié du tiers = un sixième.",
-  "domain_id": "calc",
-  "counted_ms": 5100,
-  "fact_as_of": null,
-  "is_correct": false,
-  "explanation": "Le tiers de 90 est 30, sa moitié est 15. C'est aussi 90 × 1/6.",
-  "subdomain_id": "calc.fractions"
- },
- {
-  "id": "6475c491-7c8e-45bb-afa6-baf8d7e20fdc",
-  "type": "ordering",
-  "given": {
-   "order": [
-    "277b0135",
-    "bfedc1f4",
-    "45ae1a7d",
-    "28d0a029"
-   ]
-  },
-  "answer": {
-   "order": [
-    "277b0135",
-    "bfedc1f4",
-    "45ae1a7d",
-    "28d0a029"
-   ]
-  },
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "source": "Wikidata",
-  "payload": {
-   "items": [
-    {
-     "id": "277b0135",
-     "text": "James Madison"
-    },
-    {
-     "id": "45ae1a7d",
-     "text": "William Faulkner"
-    },
-    {
-     "id": "bfedc1f4",
-     "text": "Walt Whitman"
-    },
-    {
-     "id": "28d0a029",
-     "text": "Al Pacino"
-    }
-   ]
-  },
   "position": 3,
   "takeaway": null,
-  "domain_id": "history",
+  "domain_id": "calc",
   "counted_ms": 6400,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "James Madison (1751), Walt Whitman (1819), William Faulkner (1897), Al Pacino (1940).",
-  "subdomain_id": "history.contemporary"
+  "explanation": "Chacun serre 4 mains, soit 5 × 4 = 20, mais chaque poignée est comptée deux fois : 20 ÷ 2 = 10.",
+  "subdomain_id": "calc.number_logic"
  },
  {
-  "id": "05bf43c5-efd8-49ff-a94c-105a92416e11",
+  "id": "56e0dbce-8085-4c27-9b5b-19d68cc9758f",
   "type": "true_false",
   "given": {
    "order": [
@@ -127,84 +122,84 @@
   "answer": {
    "value": false
   },
-  "prompt": "Le premier iPhone est sorti en 2004.",
+  "prompt": "Nairobi, capitale du Kenya, se trouve dans l'hémisphère nord.",
   "source": null,
   "payload": {},
   "position": 4,
   "takeaway": null,
-  "domain_id": "tech",
+  "domain_id": "geography",
   "counted_ms": 8200,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Non, en 2007. Présenté par Steve Jobs en janvier 2007, il sort aux États-Unis le 29 juin 2007.",
-  "subdomain_id": "tech.inventions"
+  "explanation": "Non : Nairobi est juste au sud de l'équateur, à environ 1° de latitude sud.",
+  "subdomain_id": "geography.countries"
  },
  {
-  "id": "74653ca7-8bb6-4495-b9e1-e8c79bbe5685",
+  "id": "6084160a-ae95-4e08-b95b-e78fa4cba5be",
   "type": "pairs",
   "given": {
    "pairs": {
-    "08787b43": "07adf531",
-    "72325c48": "4753e6db",
-    "77460fa5": "f652e8a8",
-    "e8451367": "fa71270a"
+    "475687d8": "89d61e9a",
+    "6c377345": "209c88b3",
+    "a84468e9": "8e692dc4",
+    "e92319b0": "f5b63fa0"
    }
   },
   "answer": {
    "pairs": {
-    "08787b43": "07adf531",
-    "72325c48": "4753e6db",
-    "77460fa5": "f652e8a8",
-    "e8451367": "fa71270a"
+    "475687d8": "89d61e9a",
+    "6c377345": "209c88b3",
+    "a84468e9": "8e692dc4",
+    "e92319b0": "f5b63fa0"
    }
   },
-  "prompt": "Associe chaque mot à son synonyme.",
+  "prompt": "Associe chaque sport au nombre de joueurs d'une équipe sur le terrain.",
   "source": null,
   "payload": {
    "left": [
     {
-     "id": "08787b43",
-     "text": "Onéreux"
+     "id": "475687d8",
+     "text": "Basket-ball"
     },
     {
-     "id": "72325c48",
-     "text": "Fugace"
+     "id": "e92319b0",
+     "text": "Volley-ball"
     },
     {
-     "id": "e8451367",
-     "text": "Opiniâtre"
+     "id": "6c377345",
+     "text": "Handball"
     },
     {
-     "id": "77460fa5",
-     "text": "Candide"
+     "id": "a84468e9",
+     "text": "Football"
     }
    ],
    "right": [
     {
-     "id": "f652e8a8",
-     "text": "Naïf"
+     "id": "209c88b3",
+     "text": "7"
     },
     {
-     "id": "fa71270a",
-     "text": "Tenace"
+     "id": "f5b63fa0",
+     "text": "6"
     },
     {
-     "id": "07adf531",
-     "text": "Coûteux"
+     "id": "89d61e9a",
+     "text": "5"
     },
     {
-     "id": "4753e6db",
-     "text": "Bref"
+     "id": "8e692dc4",
+     "text": "11"
     }
    ]
   },
   "position": 5,
   "takeaway": null,
-  "domain_id": "french",
+  "domain_id": "sport",
   "counted_ms": 4300,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Onéreux : qui coûte cher. Fugace : qui dure peu. Opiniâtre : qui persévère. Candide : d'une innocence naïve (comme le héros de Voltaire).",
-  "subdomain_id": "french.synonyms"
+  "explanation": "5 au basket, 6 au volley, 7 au handball (gardien compris) et 11 au football.",
+  "subdomain_id": "sport.rules"
  }
 ]

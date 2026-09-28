@@ -1,27 +1,5 @@
 [
  {
-  "key": "calc-302",
-  "concept": "calc.percent.discount_80",
-  "label": "Soldes -25 %",
-  "type": "numeric",
-  "difficulty": 35,
-  "prompt": "Un pull coûte 80 €. Avec une remise de 25 %, combien le paies-tu ?",
-  "answer": 60,
-  "explanation": "25 % de 80 = 20 € de remise, donc 80 − 20 = 60 €.",
-  "unit": "€"
- },
- {
-  "key": "calc-303",
-  "concept": "calc.percent.increase_then_decrease",
-  "label": "Hausse puis baisse",
-  "type": "numeric",
-  "difficulty": 65,
-  "prompt": "Un prix de 100 € augmente de 10 %, puis baisse de 10 %. Quel est le nouveau prix ?",
-  "answer": 99,
-  "explanation": "100 → 110 € (+10 %), puis 110 − 11 = 99 € : la baisse s'applique à un montant plus grand.",
-  "unit": "€"
- },
- {
   "key": "calc-304",
   "concept": "calc.percent.what_percent",
   "label": "Quel pourcentage ?",
@@ -31,21 +9,6 @@
   "answer": 25,
   "explanation": "15 ÷ 60 = 0,25, soit 25 %.",
   "unit": "%"
- },
- {
-  "key": "calc-305",
-  "concept": "calc.percent.vat",
-  "label": "Prix TTC",
-  "type": "mcq",
-  "difficulty": 45,
-  "prompt": "Un objet coûte 50 € hors taxes. Avec une TVA de 20 %, quel est son prix TTC ?",
-  "options": [
-   "60 €*",
-   "55 €",
-   "70 €",
-   "52 €"
-  ],
-  "explanation": "50 × 1,2 = 60 €."
  },
  {
   "key": "calc-306",
@@ -149,17 +112,6 @@
   "explanation": "Non, c'est le quart : 1/2 × 1/2 = 1/4."
  },
  {
-  "key": "calc-316",
-  "concept": "calc.conversions.km_m",
-  "label": "Kilomètres en mètres",
-  "type": "numeric",
-  "difficulty": 15,
-  "prompt": "Combien de mètres dans 2,5 km ?",
-  "answer": 2500,
-  "explanation": "1 km = 1 000 m, donc 2,5 km = 2 500 m.",
-  "unit": "m"
- },
- {
   "key": "calc-317",
   "concept": "calc.conversions.hours_minutes",
   "label": "Heures en minutes",
@@ -191,32 +143,6 @@
   "answer": 86400,
   "explanation": "24 × 60 × 60 = 86 400 secondes.",
   "unit": "s"
- },
- {
-  "key": "calc-320",
-  "concept": "calc.conversions.m2_ha",
-  "label": "L'hectare",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "À combien de mètres carrés correspond un hectare ?",
-  "options": [
-   "10 000 m²*",
-   "1 000 m²",
-   "100 m²",
-   "100 000 m²"
-  ],
-  "explanation": "Un hectare, c'est un carré de 100 m de côté : 100 × 100 = 10 000 m²."
- },
- {
-  "key": "calc-321",
-  "concept": "calc.conversions.kmh_ms",
-  "label": "km/h en m/s",
-  "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Une voiture roule à 36 km/h. Combien de mètres parcourt-elle en une seconde ?",
-  "answer": 10,
-  "explanation": "36 000 m en 3 600 s, soit 10 m/s. Astuce : on divise les km/h par 3,6.",
-  "unit": "m"
  },
  {
   "key": "calc-322",
@@ -332,21 +258,6 @@
    "Oblong"
   ],
   "explanation": "Concave : creusé vers l'intérieur (comme un bol). Convexe : bombé vers l'extérieur."
- },
- {
-  "key": "fr-308",
-  "concept": "french.expressions.poser_un_lapin",
-  "label": "Poser un lapin",
-  "type": "mcq",
-  "difficulty": 20,
-  "prompt": "Que veut dire « poser un lapin » ?",
-  "options": [
-   "Ne pas venir à un rendez-vous*",
-   "Offrir un cadeau",
-   "Partir en courant",
-   "Faire une blague"
-  ],
-  "explanation": "L'expression, du XIXᵉ siècle, désignait d'abord le fait de ne pas payer une faveur."
  },
  {
   "key": "fr-309",

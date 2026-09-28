@@ -122,21 +122,6 @@
   "explanation": "Le thuriféraire porte l'encensoir à l'église ; au figuré, c'est celui qui encense quelqu'un, un flatteur."
  },
  {
-  "key": "exp-013",
-  "concept": "french.vocabulary.expert_ubuesque",
-  "label": "Ubuesque",
-  "type": "mcq",
-  "difficulty": 68,
-  "prompt": "Que signifie « ubuesque » ?",
-  "options": [
-   "Absurde et grotesque*",
-   "Présent partout à la fois",
-   "D'une grande générosité",
-   "Très ancien"
-  ],
-  "explanation": "D'après Ubu roi, d'Alfred Jarry (1896) : une situation absurde jusqu'au ridicule. « Partout à la fois », c'est l'ubiquité."
- },
- {
   "key": "exp-014",
   "concept": "french.vocabulary.expert_abscons",
   "label": "Abscons",
@@ -742,17 +727,6 @@
   "explanation": "Tu prends sa place : deuxième. Le premier est toujours devant toi."
  },
  {
-  "key": "exp-059",
-  "concept": "logic.puzzles.expert_machines",
-  "label": "5 machines, 5 minutes",
-  "type": "numeric",
-  "difficulty": 72,
-  "prompt": "Si 5 machines font 5 objets en 5 minutes, combien de minutes faut-il à 100 machines pour faire 100 objets ?",
-  "answer": 5,
-  "explanation": "Chaque machine fait un objet en 5 minutes. 100 machines font donc 100 objets dans le même temps.",
-  "unit": "min"
- },
- {
   "key": "exp-060",
   "concept": "arts.painting.expert_caravaggio",
   "label": "Vocation de saint Matthieu",
@@ -911,21 +885,6 @@
   "prompt": "En quelle année des femmes participent-elles pour la première fois aux Jeux olympiques ?",
   "answer": 1900,
   "explanation": "Aux Jeux de Paris en 1900, en tennis, golf, voile, croquet et équitation. Charlotte Cooper devient la première championne olympique."
- },
- {
-  "key": "exp-071",
-  "concept": "sport.olympics.expert_grenoble",
-  "label": "JO d'hiver 1968",
-  "type": "mcq",
-  "difficulty": 70,
-  "prompt": "Quelle ville a accueilli les Jeux olympiques d'hiver de 1968 ?",
-  "options": [
-   "Grenoble*",
-   "Albertville",
-   "Chamonix",
-   "Innsbruck"
-  ],
-  "explanation": "Jean-Claude Killy y remporte les trois épreuves de ski alpin. Chamonix : 1924 ; Albertville : 1992."
  },
  {
   "key": "exp-072",
@@ -1297,21 +1256,6 @@
    "Du grec « logos »"
   ],
   "explanation": "Le fondateur danois Ole Kirk Christiansen choisit le nom en 1934. La coïncidence avec le latin est fortuite."
- },
- {
-  "key": "exp-097",
-  "concept": "tech.brands.expert_nokia",
-  "label": "Pays de Nokia",
-  "type": "mcq",
-  "difficulty": 62,
-  "prompt": "De quel pays vient Nokia ?",
-  "options": [
-   "Finlande*",
-   "Suède",
-   "Norvège",
-   "Danemark"
-  ],
-  "explanation": "Nokia est née en 1865 en Finlande, comme papeterie. Ericsson est suédoise."
  },
  {
   "key": "exp-098",

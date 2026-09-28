@@ -4,85 +4,85 @@
  "ranked": true,
  "questions": [
   {
-   "id": "bd402eee-6559-4556-a754-04d122ecfefb",
+   "id": "ff9d1352-503c-4516-82b5-9fc6643728cd",
    "type": "mcq",
    "answer": {
-    "option_id": "91443988"
+    "option_id": "bfec3bba"
    },
-   "prompt": "Si aujourd'hui est mardi, quel jour serons-nous dans 100 jours ?",
+   "prompt": "Quelle équipe a remporté la Coupe du monde de football 2010 ?",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "bf195a13",
+      "text": "Allemagne"
+     },
+     {
+      "id": "b929fa98",
+      "text": "Argentine"
+     },
+     {
+      "id": "fdecb416",
+      "text": "Suède"
+     },
+     {
+      "id": "bfec3bba",
+      "text": "Espagne"
+     }
+    ]
+   },
+   "expected": 0.78,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "sport",
+   "concept_id": "sport.football.world_cup_2010",
+   "difficulty": 42,
+   "fact_as_of": null,
+   "explanation": "En 2010, la Coupe du monde, organisée par l'Afrique du Sud, a été remportée par l'Espagne.",
+   "has_context": false,
+   "subdomain_id": "sport.football"
+  },
+  {
+   "id": "c5b30853-e14e-4562-ac31-892eb993e458",
+   "type": "mcq",
+   "answer": {
+    "option_id": "402050c1"
+   },
+   "prompt": "Quelle est l'orthographe correcte ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "fcd915ae",
-      "text": "Mercredi"
+      "id": "923c6837",
+      "text": "Accueuil"
      },
      {
-      "id": "721755c7",
-      "text": "Lundi"
+      "id": "6e2d2e52",
+      "text": "Acueil"
      },
      {
-      "id": "91443988",
-      "text": "Jeudi"
+      "id": "2240b5ac",
+      "text": "Acceuil"
      },
      {
-      "id": "bdea30d9",
-      "text": "Mardi"
+      "id": "402050c1",
+      "text": "Accueil"
      }
     ]
    },
-   "expected": 0.63,
-   "has_hint": true,
+   "expected": 0.87,
+   "has_hint": false,
    "takeaway": null,
-   "domain_id": "logic",
-   "concept_id": "logic.reasoning.days_after",
-   "difficulty": 50,
+   "domain_id": "french",
+   "concept_id": "french.spelling.accueil",
+   "difficulty": 35,
    "fact_as_of": null,
-   "explanation": "100 = 14 × 7 + 2. Dans 98 jours, on sera encore mardi ; deux jours plus tard, jeudi.",
+   "explanation": "Après c ou g, on écrit « ue » pour garder le son dur : accueil, cueillir, orgueil.",
    "has_context": false,
-   "subdomain_id": "logic.reasoning"
+   "subdomain_id": "french.spelling"
   },
   {
-   "id": "f4233198-348f-4efc-8b42-e6824b6e700e",
-   "type": "mcq",
-   "answer": {
-    "option_id": "48196240"
-   },
-   "prompt": "Qui a réalisé Les Aventures de Tintin : Le Secret de la Licorne (2011) ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "4ec65b68",
-      "text": "James Cameron"
-     },
-     {
-      "id": "48196240",
-      "text": "Steven Spielberg"
-     },
-     {
-      "id": "bb7340bf",
-      "text": "Robert Zemeckis"
-     },
-     {
-      "id": "87cfc7c8",
-      "text": "Peter Jackson"
-     }
-    ]
-   },
-   "expected": 0.63,
-   "has_hint": true,
-   "takeaway": null,
-   "domain_id": "cinema",
-   "concept_id": "cinema.animation.tintin_spielberg",
-   "difficulty": 50,
-   "fact_as_of": null,
-   "explanation": "Spielberg, avec Peter Jackson à la production, en capture de mouvement.",
-   "has_context": false,
-   "subdomain_id": "cinema.animation"
-  },
-  {
-   "id": "29b65948-0cfa-4037-b851-30bf91794d5f",
+   "id": "115d6b00-8164-4d22-bc95-04c1182d258f",
    "type": "mcq",
    "answer": {
     "option_id": "03fff6ef"
@@ -92,20 +92,20 @@
    "payload": {
     "options": [
      {
-      "id": "03fff6ef",
-      "text": "États-Unis"
-     },
-     {
-      "id": "dc38c5d6",
-      "text": "Canada"
-     },
-     {
       "id": "78c83161",
       "text": "Royaume-Uni"
      },
      {
       "id": "a5aed45b",
       "text": "Australie"
+     },
+     {
+      "id": "dc38c5d6",
+      "text": "Canada"
+     },
+     {
+      "id": "03fff6ef",
+      "text": "États-Unis"
      }
     ]
    },
@@ -121,123 +121,123 @@
    "subdomain_id": "music.popular"
   },
   {
-   "id": "418f5f5a-fb32-40aa-8caa-5a0fb5b98a16",
+   "id": "d09a63d3-8e13-4cb5-a7ee-a1c90e5eaa0f",
    "type": "mcq",
    "answer": {
-    "option_id": "090a8220"
+    "option_id": "fd3e9c8d"
    },
-   "prompt": "Comment Socrate est-il mort en 399 av. J.-C. ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "d6eee84b",
-      "text": "Au combat"
-     },
-     {
-      "id": "cd5dc66b",
-      "text": "De vieillesse"
-     },
-     {
-      "id": "7f6630b3",
-      "text": "Dans un naufrage"
-     },
-     {
-      "id": "090a8220",
-      "text": "En buvant de la ciguë"
-     }
-    ]
-   },
-   "expected": 0.71,
-   "has_hint": true,
-   "takeaway": null,
-   "domain_id": "history",
-   "concept_id": "history.antiquity.socrates",
-   "difficulty": 50,
-   "fact_as_of": null,
-   "explanation": "Condamné à mort par Athènes, il boit le poison plutôt que de fuir.",
-   "has_context": false,
-   "subdomain_id": "history.antiquity"
-  },
-  {
-   "id": "0eb1af15-643e-465f-8cac-15c8f54a297e",
-   "type": "mcq",
-   "answer": {
-    "option_id": "16000739"
-   },
-   "prompt": "Le trombone est un instrument…",
+   "prompt": "« Les Évadés » (1994) est un film de…",
    "source": "Wikidata",
    "payload": {
     "options": [
      {
-      "id": "3e32445e",
+      "id": "f97b6117",
+      "text": "Mel Gibson"
+     },
+     {
+      "id": "a72a0807",
+      "text": "Steven Spielberg"
+     },
+     {
+      "id": "fd3e9c8d",
+      "text": "Frank Darabont"
+     },
+     {
+      "id": "95d2da4d",
+      "text": "Roberto Benigni"
+     }
+    ]
+   },
+   "expected": 0.85,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "cinema",
+   "concept_id": "cinema.directors.film_les_evades_q172241",
+   "difficulty": 34,
+   "fact_as_of": null,
+   "explanation": "« Les Évadés » a été réalisé par Frank Darabont (cinéaste américain) et est sorti en 1994.",
+   "has_context": false,
+   "subdomain_id": "cinema.directors"
+  },
+  {
+   "id": "645eed02-30e9-4846-8827-0167fe3c46ba",
+   "type": "mcq",
+   "answer": {
+    "option_id": "b2f50867"
+   },
+   "prompt": "Le saxophone est un instrument…",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "3bb45c58",
       "text": "à cordes"
      },
      {
-      "id": "16000739",
+      "id": "b2f50867",
       "text": "à vent"
      },
      {
-      "id": "225a0e62",
+      "id": "7903e56b",
       "text": "de percussion"
      },
      {
-      "id": "40c774d7",
+      "id": "351151cc",
       "text": "à clavier"
      }
     ],
     "keep_order": true
    },
-   "expected": 0.64,
+   "expected": 0.69,
    "has_hint": true,
    "takeaway": null,
    "domain_id": "music",
-   "concept_id": "music.instruments.family_trombone",
-   "difficulty": 49,
+   "concept_id": "music.instruments.family_saxophone",
+   "difficulty": 46,
    "fact_as_of": null,
-   "explanation": "Le trombone est un instrument à vent : le son naît du souffle.",
+   "explanation": "Le saxophone est un instrument à vent : le son naît du souffle.",
    "has_context": false,
    "subdomain_id": "music.instruments"
   },
   {
-   "id": "8f4d4469-8c32-4922-8a51-987b978dd9c2",
+   "id": "9bd9cff3-5d0b-4c7b-9739-1ce3ebbd4886",
    "type": "mcq",
    "answer": {
-    "option_id": "ba2609ec"
+    "option_id": "b191f2f9"
    },
-   "prompt": "Les Jeux olympiques d'été de 1928 se sont tenus à…",
+   "prompt": "À qui doit-on le feu de circulation ?",
    "source": "Wikidata",
    "payload": {
     "options": [
      {
-      "id": "13066978",
-      "text": "Anvers"
+      "id": "4c04d53e",
+      "text": "Christopher Cockerell"
      },
      {
-      "id": "f8780fe5",
-      "text": "Los Angeles"
+      "id": "6a3286c4",
+      "text": "Percy Spencer"
      },
      {
-      "id": "86f3a64c",
-      "text": "Paris"
+      "id": "ccb97119",
+      "text": "Léon Foucault"
      },
      {
-      "id": "ba2609ec",
-      "text": "Amsterdam"
+      "id": "b191f2f9",
+      "text": "J. P. Knight"
      }
     ]
    },
-   "expected": 0.5,
+   "expected": 0.51,
    "has_hint": true,
    "takeaway": null,
-   "domain_id": "sport",
-   "concept_id": "sport.olympics.host_summer_1928",
-   "difficulty": 58,
+   "domain_id": "tech",
+   "concept_id": "tech.inventions.feu_de_circulation",
+   "difficulty": 57,
    "fact_as_of": null,
-   "explanation": "Les Jeux olympiques d'été de 1928 ont eu lieu à Amsterdam.",
+   "explanation": "On doit le feu de circulation à J. P. Knight (ingénieur britannique).",
    "has_context": false,
-   "subdomain_id": "sport.olympics"
+   "subdomain_id": "tech.inventions"
   }
  ],
- "session_id": "b689344d-e62b-4c3e-837e-9d302806c81a"
+ "session_id": "cc0249cb-0dd5-4487-b248-455b4f4b2b81"
 }

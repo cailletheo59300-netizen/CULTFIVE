@@ -180,16 +180,17 @@ for (const q of raw) {
 const norm = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const answerOf = (q) => q.type === 'mcq' ? q.options.find((o) => o.endsWith('*')) ?? '' : q.type === 'true_false' || q.type === 'numeric'
   ? String(q.answer) : JSON.stringify(q.items ?? q.pairs ?? q.pins ?? '');
-const wordSet = (t) => new Set(norm(t).split(' ').filter((w) => w.length > 3));
+// Mots de plus de 3 lettres et tous les nombres (« 36 km/h » et « 36 km/h » se ressemblent ; deux suites différentes non).
+const wordSet = (t) => new Set(norm(t).split(' ').filter((w) => w.length > 3 || /\d/.test(w)));
 const exact = new Map();
 const byAnswer = new Map();
+const NEAR = Number(process.env.NEAR ?? 0.6);
 for (const q of raw) {
   const a = norm(answerOf(q));
   const e = `${norm(q.prompt)}#${a}`;
   if (exact.has(e)) fail(q.key, `doublon de ${exact.get(e)}`);
   else exact.set(e, q.key);
-  // Réponses numériques exclues des quasi-doublons : deux suites différentes peuvent donner 125.
-  if (a.length >= 3 && /[a-z]/.test(a)) byAnswer.set(`${themeOf(q)}#${a}`, [...(byAnswer.get(`${themeOf(q)}#${a}`) ?? []), q]);
+  if (a.length >= 1) byAnswer.set(`${themeOf(q)}#${a}`, [...(byAnswer.get(`${themeOf(q)}#${a}`) ?? []), q]);
 }
 for (const group of byAnswer.values()) {
   if (group.length > 40) continue;
@@ -199,7 +200,7 @@ for (const group of byAnswer.values()) {
     if (x.origin === 'import' && y.origin === 'import') continue;
     const A = wordSet(x.prompt), B = wordSet(y.prompt);
     const inter = [...A].filter((w) => B.has(w)).length;
-    if (inter / ((A.size + B.size - inter) || 1) >= 0.6 && norm(x.prompt) !== norm(y.prompt)) fail(y.key, `quasi-doublon de ${x.key}`);
+    if (inter / ((A.size + B.size - inter) || 1) >= NEAR && norm(x.prompt) !== norm(y.prompt)) fail(y.key, `quasi-doublon de ${x.key}`);
   }
 }
 // 2. Vrai/Faux équilibré (sinon « toujours Vrai » devient une stratégie).

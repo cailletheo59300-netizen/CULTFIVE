@@ -1,13 +1,13 @@
 {
- "cote": 1041,
- "level": 52,
- "avg_ms": 3800,
+ "cote": 887,
+ "level": 43,
+ "avg_ms": 8200,
  "placed": false,
- "correct": 1,
+ "correct": 0,
  "history": [
   {
    "day": "2027-03-01",
-   "level": 52.4
+   "level": 43.5
   }
  ],
  "answered": 1,
@@ -16,73 +16,80 @@
  "subdomains": [
   {
    "id": "geography.capitals",
-   "cote": 1041,
+   "cote": 887,
    "name": "Capitales",
-   "level": 52,
+   "level": 43,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 285,
    "placement": 0,
-   "reliability": 0.05
+   "reliability": 0.03
   },
   {
    "id": "geography.flags",
-   "cote": 1041,
+   "cote": 887,
    "name": "Drapeaux",
-   "level": 52,
+   "level": 43,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 193,
    "placement": 0,
-   "reliability": 0.05
+   "reliability": 0.03
   },
   {
    "id": "geography.countries",
-   "cote": 1041,
+   "cote": 887,
    "name": "Pays & villes",
-   "level": 52,
+   "level": 43,
    "placed": false,
-   "correct": 1,
+   "correct": 0,
    "answered": 1,
    "available": 745,
    "placement": 0,
-   "reliability": 0.05
+   "reliability": 0.03
   },
   {
    "id": "geography.relief",
-   "cote": 1041,
+   "cote": 887,
    "name": "Fleuves, mers & reliefs",
-   "level": 52,
+   "level": 43,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 150,
    "placement": 0,
-   "reliability": 0.05
+   "reliability": 0.03
   },
   {
    "id": "geography.monuments",
-   "cote": 1041,
+   "cote": 887,
    "name": "Monuments & patrimoine",
-   "level": 52,
+   "level": 43,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 185,
    "placement": 0,
-   "reliability": 0.05
+   "reliability": 0.03
   }
  ],
- "reliability": 0.05,
+ "reliability": 0.03,
  "by_difficulty": [
   {
-   "band": "medium",
-   "correct": 1,
+   "band": "easy",
+   "correct": 0,
    "answered": 1
   }
  ],
- "recent_errors": [],
+ "recent_errors": [
+  {
+   "label": "Hémisphère sud",
+   "since": "2027-03-01T08:00:26+00:00",
+   "state": "failed",
+   "concept_id": "geography.countries.cities_hemisphere"
+  }
+ ],
  "concepts_mastered": 0
 }
