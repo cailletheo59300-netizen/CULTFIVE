@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Léon, le caméléon de CULT FIVE, version Pop : tout rond, grands yeux, joues roses.
+/// Léon, le caméléon de Brainlix, version Pop : tout rond, grands yeux, joues roses.
 /// Il prend la couleur du domaine, attrape les bonnes réponses avec sa langue, grisaille quand on se trompe,
 /// passe à l'arc-en-ciel sur un sans-faute. Sa queue s'enroule avec la série.
 /// Dessiné en code (aucun asset). Jamais pendant qu'on répond : seulement après, et aux moments forts.

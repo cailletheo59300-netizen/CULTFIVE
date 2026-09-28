@@ -1,4 +1,4 @@
--- CULT FIVE — 0010 Anti-répétition
+-- Brainlix — 0010 Anti-répétition
 -- « Famille » d'une question = son moule (capitale, drapeau, silhouette…). Les questions générées en ont une.
 -- Jouer : jamais deux questions de la même famille d'affilée, au plus deux par série.
 -- Daily : une seule question par famille.

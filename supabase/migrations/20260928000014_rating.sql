@@ -1,4 +1,4 @@
--- CULT FIVE — 0014 Cote CULT, placement, parties plus exigeantes, points de partie
+-- Brainlix — 0014 Cote CULT, placement, parties plus exigeantes, points de partie
 -- La cote est une vue lisible du niveau μ (0–100) : 1000 + 17,37 × (μ − 50). 17,37 = 400 / (10 · ln 10) : comme aux échecs,
 -- 400 points d'écart = 10 contre 1. Tant que le domaine compte moins de 50 réponses classées (≈ 5 parties de 10),
 -- le joueur est « en placement » : la cote n'est pas encore affichée et le niveau bouge deux fois plus vite.

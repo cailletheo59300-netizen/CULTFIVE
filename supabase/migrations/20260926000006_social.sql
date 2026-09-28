@@ -1,4 +1,4 @@
--- CULT FIVE — 0006 Social & Profile
+-- Brainlix — 0006 Social & Profile
 -- Profil (pseudo, fuseau, onboarding), amis, parrainage anti-abus, ligues privées, suppression de compte.
 
 -- ═══════════════════════════════════════════ PROFIL

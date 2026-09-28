@@ -1,6 +1,6 @@
 import Foundation
 
-/// Façade typée de toutes les RPC CULT FIVE. Les écrans ne parlent qu'à ce protocole.
+/// Façade typée de toutes les RPC Brainlix. Les écrans ne parlent qu'à ce protocole.
 public protocol GameService: Sendable {
     // Daily
     func dailyStatus() async throws -> DailyStatus

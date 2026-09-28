@@ -43,7 +43,7 @@
 - Une seule dépendance externe : `supabase-swift`.
 - Injection de dépendances : `AppEnvironment` (struct de repositories protocolés) passé via `@Environment`. Les implémentations de prévisualisation (`Preview*`) ne sont compilées que pour les SwiftUI Previews ; aucune fonctionnalité livrée ne repose sur des données factices.
 - Cache : `URLCache` + cache disque JSON des packs de questions et du profil (`Services/Cache`). File d'attente hors-ligne des tentatives Jouer (`OfflineAttemptQueue` dans Core), vidée au retour réseau.
-- Marque centralisée : `CultFive/App/Brand.swift` (nom, signatures, nom de la monnaie, mascotte, URL d'invitation). Rien d'autre ne contient « CULT FIVE » en dur.
+- Marque centralisée : `CultFive/App/Brand.swift` (nom, signatures, nom de la monnaie, mascotte, URL d'invitation). Rien d'autre ne contient « Brainlix » en dur.
 - Secrets : `ios/Config/Secrets.xcconfig` (ignoré par git) → `Info.plist` (`SUPABASE_URL`, `SUPABASE_ANON_KEY`). La clé anon est publique par nature ; aucune clé service n'est jamais embarquée.
 
 ## Structure des dossiers

@@ -1,4 +1,4 @@
-# Design system — CULT FIVE (direction « Pop », 0.5.0)
+# Design system — Brainlix (direction « Pop », 0.5.0)
 
 ## Intention
 Joyeux, vif, tactile, qui donne envie en deux secondes de vidéo TikTok. Fond clair, couleurs franches par domaine,
@@ -6,7 +6,7 @@ formes très arrondies, gros chiffres, petites animations qui rebondissent. Jama
 la couleur habille, le texte reste lisible. Pas de carrés, pas d'aplats gris ternes. (Remplace la direction « éditoriale papier/encre » de 0.1–0.4, jugée vieillotte : D-021.)
 
 ## Élément signature : le **trait de cinq** (tally mark)
-Le « 5 » de CULT FIVE : quatre traits verticaux barrés d'une diagonale. C'est aussi l'icône de l'app (blanc et jaune sur dégradé violet).
+Le « 5 » du 5 du jour : quatre traits verticaux barrés d'une diagonale. C'est aussi l'icône de l'app (blanc et jaune sur dégradé violet).
 - Onglet central : bulle violette qui dépasse de la barre, trait de cinq blanc ; diagonale jaune soleil quand le Daily est disponible ; ensuite, les traits reflètent le résultat (trait plein = juste, trait court et estompé = raté : forme + couleur).
 - Carte du jour à l'accueil, résultat, cartes de partage : le trait de cinq *est* le score.
 Composant : `TallyMark(strokes:)` / `TallyMark(results:)`, `onInk: true` sur fond coloré.

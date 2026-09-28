@@ -19,7 +19,7 @@ enum AppConfig {
 enum DeviceIdentity {
     @MainActor static var hash: String {
         let vendor = UIDevice.current.identifierForVendor?.uuidString ?? "unknown"
-        let digest = SHA256.hash(data: Data("cultfive:\(vendor)".utf8))
+        let digest = SHA256.hash(data: Data("brainlix:\(vendor)".utf8))
         return digest.map { String(format: "%02x", $0) }.joined()
     }
 }
@@ -27,7 +27,7 @@ enum DeviceIdentity {
 /// Petit cache disque JSON (référentiel, pack de secours hors-ligne). Évite les re-téléchargements inutiles.
 struct DiskCache {
     private let directory: URL = {
-        let base = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("cultfive", isDirectory: true)
+        let base = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("brainlix", isDirectory: true)
         try? FileManager.default.createDirectory(at: base, withIntermediateDirectories: true)
         return base
     }()

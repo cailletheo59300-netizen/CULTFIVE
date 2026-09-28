@@ -1,4 +1,4 @@
--- CULT FIVE — 0004 Daily (« 5 du jour »)
+-- Brainlix — 0004 Daily (« 5 du jour »)
 -- Série commune par date, une tentative officielle, réponses jamais envoyées avant validation,
 -- temps mesuré côté serveur, série, percentile honnête (réel ou estimation étiquetée).
 

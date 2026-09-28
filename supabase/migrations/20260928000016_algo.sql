@@ -1,4 +1,4 @@
--- CULT FIVE — 0016 Algo : hasard, thèmes équilibrés, révision espacée
+-- Brainlix — 0016 Algo : hasard, thèmes équilibrés, révision espacée
 -- 1. Hasard (modèle à 3 paramètres simplifié) : un QCM à n choix se réussit 1 fois sur n sans rien savoir, un Vrai/Faux
 --    une fois sur 2. P(juste) = c + (1 − c) · logistique. Une bonne réponse devinable fait moins monter la cote,
 --    une erreur sur une question devinable la fait davantage baisser ; la calibration des questions aussi.

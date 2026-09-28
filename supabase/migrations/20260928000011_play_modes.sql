@@ -1,4 +1,4 @@
--- CULT FIVE — 0011 Parties classées et entraînement libre
+-- Brainlix — 0011 Parties classées et entraînement libre
 -- Partie classée : adaptative, fait bouger le niveau. Entraînement libre : nombre de questions (≤ 30), difficulté au choix,
 -- niveau inchangé, moitié d'XP, pas de graines ; les erreurs restent suivies. Variété renforcée (une famille par partie si possible).
 -- Sous-thèmes : le joueur en choisit un ou plusieurs (p_subdomains), ou mélange tout le domaine.

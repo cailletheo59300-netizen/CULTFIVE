@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.1 — Brainlix
+- L'app s'appelle désormais **Brainlix** (nom sous l'icône, textes, admin, docs). Le 5 du jour et son logo en bâtons ne changent pas.
+- Identifiant `app.brainlix.ios`, schéma `brainlix://`, liens d'invitation/ligue/duel et pages légales sur `www.etudia.site`. Réglage d'équipe Apple : `BRAINLIX_TEAM_ID`.
+- Serveur : migration 0019 (texte du succès « premier ami », tâche planifiée `brainlix-daily-maintenance`).
+
 ## 0.9.0 — objectifs et récap
 - **Objectifs du jour** (3, dont toujours « Fais le 5 du jour ») et **de la semaine** (3, du lundi au dimanche) : carte « Objectifs » sur l'accueil (onglets Jour/Semaine, jauges, récompense, bonus, temps restant), célébration quand un objectif est rempli. Récompenses modestes : 15 XP + 2 graines par objectif du jour (+10 XP + 3 graines pour les trois), 50 XP + 8 graines par objectif de la semaine (coffre de 15 graines). Progression calculée par le serveur, impossible à tricher.
 - **Profil** : section **« Mes semaines »** (parties, réponses, % de réussite, moyenne au 5 du jour, variations de cote par domaine, objectifs, erreurs corrigées) et **historique du 5 du jour** (score, % de bonnes réponses, classement « top X % »), en résumé sous le calendrier et en feuille détaillée.
@@ -27,7 +32,7 @@
 - Démo : cote, placement et points simulés (Calcul, Français et Géographie sont à 4/5 : la prochaine partie classée dévoile la cote).
 
 ## 0.7.0 — thèmes et contenu
-- **Duels** : défier un ami (éclair à côté de son nom) ou n'importe qui par lien (`cultfive.app/d/CODE`), sur les mêmes 5 questions de 5 domaines ; chacun joue quand il veut (48 h) ; temps officiel serveur ; score adverse caché tant qu'on n'a pas joué ; vainqueur au score puis au temps (+20 XP, +5 graines). Écrans face-à-face, résultat « VS », section Duels dans Amis. Migration 0013, tests `60_duels.sql`. Démo : adversaire simulé.
+- **Duels** : défier un ami (éclair à côté de son nom) ou n'importe qui par lien (`www.etudia.site/d/CODE`), sur les mêmes 5 questions de 5 domaines ; chacun joue quand il veut (48 h) ; temps officiel serveur ; score adverse caché tant qu'on n'a pas joué ; vainqueur au score puis au temps (+20 XP, +5 graines). Écrans face-à-face, résultat « VS », section Duels dans Amis. Migration 0013, tests `60_duels.sql`. Démo : adversaire simulé.
 - **Admin web** (`admin/index.html`) : tableau de bord par thème, liste filtrable et triable (difficulté, réussite, signalements), éditeur par type de question, publication/désactivation, 5 du jour (générer, remplacer), signalements.
 - **Signaler une question** dans l'app (réponse fausse, ambiguë, plus à jour, faute, autre) → « à revoir » côté admin. Migration 0012 (`question_reports`, `report_question`, `admin_questions` triable, `admin_resolve_reports`, thèmes retirés inactifs).
 - Thèmes réorganisés : 3 à 5 par domaine, chacun ≥ ~20 questions. Histoire par époques (date → période), Géographie en 5 thèmes, Logique + Énigmes, nouveaux thèmes Mythologie, Architecture, Champions, Acteurs, Animation, Entreprises & marques, Vie marine, Planète & climat.

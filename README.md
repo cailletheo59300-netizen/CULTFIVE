@@ -1,4 +1,4 @@
-# CULT FIVE
+# Brainlix
 
 App iOS native de culture générale. Le **5 du jour** (5 questions, une tentative officielle) comme rituel, un mode **Jouer** adaptatif, des **amis** et des **ligues privées**, un vrai profil de connaissances.
 
@@ -28,7 +28,7 @@ brew install xcodegen
 cp ios/Config/Secrets.xcconfig.example ios/Config/Secrets.xcconfig   # URL + clé anon + Team ID
 cd ios && xcodegen && open CultFive.xcodeproj
 ```
-Capacités requises sur l'App ID : *Sign in with Apple*, *Associated Domains* (`applinks:cultfive.app`).
+Capacités requises sur l'App ID : *Sign in with Apple*, *Associated Domains* (`applinks:www.etudia.site`).
 
 ### Tests
 ```bash

@@ -1,4 +1,4 @@
-# CULT FIVE — Produit
+# Brainlix — Produit
 
 > Source de vérité produit condensée. Le cahier des charges complet a été fourni par le propriétaire en session 1 ; ce fichier en garde l'essentiel et les arbitrages.
 

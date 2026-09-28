@@ -1,4 +1,4 @@
-# Admin CULT FIVE
+# Admin Brainlix
 
 Page web autonome (`index.html`, aucune dépendance) pour gérer le contenu sans passer par le code.
 

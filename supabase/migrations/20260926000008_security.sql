@@ -1,4 +1,4 @@
--- CULT FIVE — 0008 Security
+-- Brainlix — 0008 Security
 -- RLS activée partout. Lecture directe : référentiel public + ses propres lignes. Aucune écriture directe.
 -- Les fonctions internes (préfixe _) ne sont exécutables par personne côté API.
 
@@ -83,7 +83,7 @@ do $$
 begin
   if exists (select 1 from pg_available_extensions where name = 'pg_cron') then
     create extension if not exists pg_cron;
-    perform cron.schedule('cultfive-daily-maintenance', '*/15 * * * *', 'select public.cron_daily_maintenance()');
+    perform cron.schedule('brainlix-daily-maintenance', '*/15 * * * *', 'select public.cron_daily_maintenance()');
   end if;
 exception when others then
   raise notice 'pg_cron indisponible : maintenance Daily non planifiée (%)', sqlerrm;

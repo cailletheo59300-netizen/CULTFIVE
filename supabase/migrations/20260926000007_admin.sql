@@ -1,4 +1,4 @@
--- CULT FIVE — 0007 Admin
+-- Brainlix — 0007 Admin
 -- RPC réservées aux administrateurs (table app_admins). Pipeline : draft → review → published ; disabled = retiré.
 -- Une question générée par IA (origin = 'ai') ne peut jamais être publiée sans passer par une validation humaine explicite.
 

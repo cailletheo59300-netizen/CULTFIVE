@@ -1,9 +1,9 @@
 // Configuration commune. Les valeurs propres à chaque développeur vont dans Secrets.xcconfig (non versionné).
-APP_DISPLAY_NAME = CULT FIVE
+APP_DISPLAY_NAME = Brainlix
 // Serveur de production (Supabase, Irlande). La clé « anon » est publique par nature : elle est embarquée dans l'app ;
 // la sécurité repose sur les droits de la base (fonctions et RLS). Secrets.xcconfig peut la surcharger en local.
 SUPABASE_URL = https:/$()/sibpncsjsdtjcjxbfryk.supabase.co
 SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNpYnBuY3Nqc2R0amNqeGJmcnlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MjQ1NTcsImV4cCI6MjEwMTEwMDU1N30.Baac4bYs7lFxQ5JrMydCEMqx7uifKSBz2dtKlmXZK2M
-CULTFIVE_TEAM_ID =
+BRAINLIX_TEAM_ID =
 
 #include? "Secrets.xcconfig"

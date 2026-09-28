@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Le « trait de cinq » : quatre traits verticaux barrés d'une diagonale. Élément signature de CULT FIVE.
+/// Le « trait de cinq » : quatre traits verticaux barrés d'une diagonale. Élément signature de Brainlix (le 5 du jour).
 /// Chaque trait porte l'état d'une question du 5 du jour.
 enum TallyStroke: Equatable {
     case empty      // pas encore joué

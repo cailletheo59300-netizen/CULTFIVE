@@ -1,4 +1,4 @@
--- CULT FIVE — 0003 Economy
+-- Brainlix — 0003 Economy
 -- Ledger unique XP + graines (une seule monnaie), trophées.
 
 create type public.currency as enum ('xp', 'seeds');
@@ -85,7 +85,7 @@ insert into public.achievements (id, name, description, reward_seeds, sort) valu
   ('errors_100',      'Rien ne se perd',       'Corriger 100 erreurs.',                                  60,  70),
   ('questions_1000',  'Mille questions',       'Répondre à 1 000 questions.',                            80,  80),
   ('polymath',        'Esprit large',          'Atteindre un niveau solide de 65 dans 5 domaines.',     100,  90),
-  ('first_friend',    'En bonne compagnie',    'Avoir un premier ami sur CULT FIVE.',                    10, 100);
+  ('first_friend',    'En bonne compagnie',    'Avoir un premier ami sur Brainlix.',                    10, 100);
 
 create table public.user_achievements (
   user_id         uuid not null references public.profiles(id) on delete cascade,

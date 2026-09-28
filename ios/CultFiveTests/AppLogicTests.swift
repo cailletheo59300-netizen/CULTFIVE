@@ -10,18 +10,18 @@ final class AppLogicTests: XCTestCase {
 
     func testInviteLinks() {
         let model = makeModel()
-        model.handle(url: URL(string: "cultfive://l/ABC123")!)
+        model.handle(url: URL(string: "brainlix://l/ABC123")!)
         XCTAssertEqual(model.pendingLeagueCode, "ABC123")
         XCTAssertEqual(model.tab, .friends)
 
-        model.handle(url: URL(string: "https://cultfive.app/i/xy7k2pq")!)
+        model.handle(url: URL(string: "https://www.etudia.site/i/xy7k2pq")!)
         XCTAssertEqual(model.pendingInvite, "XY7K2PQ")
         UserDefaults.standard.removeObject(forKey: "pendingInvite")
     }
 
     func testBrandIsCentralised() {
-        XCTAssertEqual(Brand.name, "CULT FIVE")
-        XCTAssertEqual(Brand.inviteURL(code: "ABC").absoluteString, "https://cultfive.app/i/ABC")
+        XCTAssertEqual(Brand.name, "Brainlix")
+        XCTAssertEqual(Brand.inviteURL(code: "ABC").absoluteString, "https://www.etudia.site/i/ABC")
         XCTAssertEqual(Brand.currency(1), "1 graine")
         XCTAssertEqual(Brand.currency(12), "12 graines")
     }

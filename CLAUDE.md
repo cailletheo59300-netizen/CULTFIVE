@@ -1,4 +1,4 @@
-# Règles de travail — CULT FIVE
+# Règles de travail — Brainlix
 
 ## Règle du propriétaire (obligatoire)
 **Avant d'écrire ou de modifier du code, présenter la liste des étapes prévues et attendre la confirmation explicite du propriétaire.** Ne commencer à coder qu'après son accord. Pas d'exception pour les « petites » modifications.

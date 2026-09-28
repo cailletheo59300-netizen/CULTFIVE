@@ -1,4 +1,4 @@
--- CULT FIVE — 0013 Duels
+-- Brainlix — 0013 Duels
 -- Défier un ami (ou n'importe qui via un lien) sur les mêmes 5 questions. Chacun joue quand il veut (48 h).
 -- Même règle que le Daily : temps officiel côté serveur, questions servies dans l'ordre, pas de retour en arrière.
 -- Vainqueur : meilleur score, puis temps total le plus court. Récompense : +20 XP et +5 graines (plafonnés).

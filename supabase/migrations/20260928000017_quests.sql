@@ -1,4 +1,4 @@
--- CULT FIVE — 0017 Objectifs du jour et de la semaine, récap des semaines, historique du 5 du jour
+-- Brainlix — 0017 Objectifs du jour et de la semaine, récap des semaines, historique du 5 du jour
 -- Objectifs : 3 par jour (dont toujours « Fais le 5 du jour ») et 3 par semaine (lundi → dimanche, fuseau du joueur).
 -- La progression est recalculée à partir de ce qui a vraiment été joué (Daily, parties, réponses, erreurs corrigées,
 -- cote) : rien à tricher côté client. Récompenses modestes pour ne pas dévaluer les graines :

@@ -1,4 +1,4 @@
--- CULT FIVE — 0002 Learning
+-- Brainlix — 0002 Learning
 -- Compétences adaptatives, calibration des questions, erreurs par concept, historique des tentatives.
 -- Modèle : Rasch + mise à jour bayésienne approchée (Glicko-1). Voir docs/ADAPTIVE.md.
 

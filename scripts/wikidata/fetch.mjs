@@ -173,7 +173,7 @@ function sparql(query) {
     '-sS', '-m', '120', '-G', 'https://query.wikidata.org/sparql',
     '--data-urlencode', `query=${query}`,
     '-H', 'Accept: application/sparql-results+json',
-    '-H', 'User-Agent: CultFive/0.1 (bonjour@cultfive.app)',
+    '-H', 'User-Agent: Brainlix/0.1 (bonjour@etudia.site)',
   ], { maxBuffer: 64 * 1024 * 1024 }).toString();
   const json = JSON.parse(out);
   // Aplatit : URI d'entité → QID, littéraux → valeur.

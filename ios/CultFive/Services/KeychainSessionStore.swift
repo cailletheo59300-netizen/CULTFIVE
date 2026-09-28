@@ -4,7 +4,7 @@ import CultFiveCore
 
 /// Session Supabase stockée dans le Trousseau (jamais dans UserDefaults).
 final class KeychainSessionStore: SessionStore, @unchecked Sendable {
-    private let service = "app.cultfive.session"
+    private let service = "app.brainlix.session"
     private let account = "supabase"
 
     func load() -> AuthSession? {

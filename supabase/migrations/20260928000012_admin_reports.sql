@@ -1,4 +1,4 @@
--- CULT FIVE — 0012 Signalements et outils d'admin
+-- Brainlix — 0012 Signalements et outils d'admin
 -- Les joueurs peuvent signaler une question (réponse fausse, ambiguë, faute, autre) : elle passe « à revoir ».
 -- L'admin web liste, trie (plus dures, plus faciles, taux de réussite, signalements) et corrige.
 -- Les thèmes retirés de la taxonomie restent en base (historique) mais sont inactifs.

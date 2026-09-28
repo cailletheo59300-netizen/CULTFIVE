@@ -1,4 +1,4 @@
--- CULT FIVE — 0015 Questions choisies par écart de cote (≈ 65 % de réussite en partie classée)
+-- Brainlix — 0015 Questions choisies par écart de cote (≈ 65 % de réussite en partie classée)
 -- On ne vise plus un pourcentage : chaque question est tirée dans une fenêtre de cote autour de celle du joueur.
 -- Écart = cote de la question − cote du joueur ; chances de réussite = 1 / (1 + 10^(écart / 400)).
 -- Classé : 50 % « un peu en dessous » (−250 à −75), 30 % « à ton niveau » (−100 à +25),

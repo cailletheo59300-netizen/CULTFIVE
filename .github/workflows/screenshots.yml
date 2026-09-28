@@ -54,7 +54,7 @@ jobs:
           mkdir -p docs/screenshots
           shoot() {  # $1 écran, $2 apparence, $3 nom de fichier
             xcrun simctl ui "$UDID" appearance "$2"
-            xcrun simctl launch --terminate-running-process "$UDID" app.cultfive.ios -demo -demoScreen "$1" > /dev/null
+            xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.ios -demo -demoScreen "$1" > /dev/null
             sleep 7
             xcrun simctl io "$UDID" screenshot "docs/screenshots/$3.png" > /dev/null
             echo "✓ $3"

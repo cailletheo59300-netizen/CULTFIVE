@@ -1,4 +1,4 @@
--- CULT FIVE — 0018 Chemin de recherche figé pour toutes les fonctions du schéma public
+-- Brainlix — 0018 Chemin de recherche figé pour toutes les fonctions du schéma public
 -- Recommandation du contrôle de sécurité Supabase (lint 0011) : une fonction sans search_path fixe résout les noms
 -- selon le rôle appelant. Les fonctions SECURITY DEFINER l'avaient déjà ; on l'étend à toutes les autres.
 do $$

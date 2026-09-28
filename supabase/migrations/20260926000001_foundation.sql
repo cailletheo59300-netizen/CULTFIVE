@@ -1,4 +1,4 @@
--- CULT FIVE — 0001 Foundation
+-- Brainlix — 0001 Foundation
 -- Référentiel (domaines, sous-domaines, concepts, questions), profils, administrateurs, utilitaires.
 -- Toute la logique métier est en RPC SECURITY DEFINER ; les tables ne sont jamais écrites directement par le client.
 

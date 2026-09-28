@@ -1,4 +1,4 @@
--- CULT FIVE — 0009 Équilibre
+-- Brainlix — 0009 Équilibre
 -- Le créneau « Surprise » du Daily tire d'abord un domaine au hasard (uniforme), puis une question dans ce domaine.
 -- Sans cela, un domaine très fourni (ex. Arts après l'import Wikidata) serait presque toujours choisi.
 

@@ -1,4 +1,4 @@
--- CULT FIVE — 0005 Play
+-- Brainlix — 0005 Play
 -- Packs de questions (avec réponses : jeu hors-ligne possible), soumission groupée idempotente,
 -- gains plafonnés, aides payantes en graines (jamais dans le Daily).
 
