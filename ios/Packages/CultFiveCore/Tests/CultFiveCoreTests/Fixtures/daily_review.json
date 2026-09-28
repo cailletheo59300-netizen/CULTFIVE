@@ -1,15 +1,15 @@
 [
  {
-  "id": "1034d6cc-0006-4030-898a-72b3a5c01145",
+  "id": "d3e662ff-a405-4c41-a340-44816d97df6b",
   "type": "numeric",
   "given": {
-   "value": 12
+   "value": 32
   },
   "answer": {
-   "value": 12,
+   "value": 32,
    "tolerance": 0
   },
-  "prompt": "Combien font 15 % de 80 ?",
+  "prompt": "Combien font les 4/9 de 72 ?",
   "source": null,
   "payload": {
    "decimals": 0,
@@ -21,52 +21,52 @@
   "counted_ms": 3800,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "15 % de 80 = 80 × 15 ÷ 100 = 12.",
-  "subdomain_id": "calc.percent"
+  "explanation": "72 ÷ 9 = 8, puis × 4 = 32.",
+  "subdomain_id": "calc.fractions"
  },
  {
-  "id": "4328e755-dac4-4c12-9129-4b872897dcf2",
+  "id": "b823d575-2013-4cdb-9eb4-4b216ae4c7d2",
   "type": "mcq",
   "given": {
    "value": -999999,
    "option_id": "nope"
   },
   "answer": {
-   "option_id": "42970006"
+   "option_id": "2de4c25b"
   },
-  "prompt": "Complète : « Je ___ ai donné ___ cahiers. »",
-  "source": null,
+  "prompt": "De quel pays vient le groupe Aerosmith ?",
+  "source": "Wikidata",
   "payload": {
    "options": [
     {
-     "id": "42970006",
-     "text": "leur / leurs"
+     "id": "2de4c25b",
+     "text": "États-Unis"
     },
     {
-     "id": "c3b2f18b",
-     "text": "leurs / leurs"
+     "id": "c61ff509",
+     "text": "Royaume-Uni"
     },
     {
-     "id": "3ec970e3",
-     "text": "leurs / leur"
+     "id": "6aba5d5a",
+     "text": "Canada"
     },
     {
-     "id": "5df5632c",
-     "text": "leur / leur"
+     "id": "bbc9e23d",
+     "text": "Australie"
     }
    ]
   },
   "position": 2,
   "takeaway": null,
-  "domain_id": "french",
+  "domain_id": "music",
   "counted_ms": 5100,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Devant un verbe, « leur » (= à eux) est invariable. Devant un nom au pluriel, « leurs » s'accorde : leurs cahiers.",
-  "subdomain_id": "french.spelling"
+  "explanation": "Aerosmith est un groupe originaire des États-Unis.",
+  "subdomain_id": "music.popular"
  },
  {
-  "id": "c3dfa41e-cfc1-47aa-9f4e-1470b60a6b65",
+  "id": "0e2e7cd2-569c-4f4f-9288-023c5f259548",
   "type": "true_false",
   "given": {
    "value": false
@@ -74,21 +74,21 @@
   "answer": {
    "value": false
   },
-  "prompt": "Les combats de gladiateurs se terminaient toujours par la mort d'un combattant.",
+  "prompt": "« Pallier à un problème » est la forme recommandée.",
   "source": null,
   "payload": {},
   "position": 3,
   "takeaway": null,
-  "domain_id": "history",
+  "domain_id": "french",
   "counted_ms": 6400,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Non : les gladiateurs coûtaient cher à former. Beaucoup de combats s'arrêtaient sur une blessure ou une grâce.",
-  "subdomain_id": "history.antiquity"
+  "explanation": "Non : pallier est transitif direct, on pallie un problème (sans « à »). « Remédier à » prend un « à ».",
+  "subdomain_id": "french.spelling"
  },
  {
-  "id": "d74374c9-996c-401a-b738-9603a0155b43",
-  "type": "map_pick",
+  "id": "f6e6117b-ce35-4cb6-8e13-461f2c3e097a",
+  "type": "ordering",
   "given": {
    "order": [
     "a",
@@ -96,114 +96,91 @@
    ]
   },
   "answer": {
-   "option_id": "13c3b03a"
+   "order": [
+    "7c24716d",
+    "a19264ed",
+    "dd3b30d1",
+    "ef01f9e2"
+   ]
   },
-  "prompt": "Touche l'emplacement du Kazakhstan.",
+  "prompt": "Classe ces présidents dans l'ordre de leur premier mandat.",
   "source": null,
   "payload": {
-   "region": {
-    "lat": 42,
-    "lon": 68,
-    "span": 55
-   },
-   "options": [
+   "items": [
     {
-     "id": "13c3b03a",
-     "lat": 48,
-     "lon": 67
+     "id": "a19264ed",
+     "text": "Valéry Giscard d'Estaing"
     },
     {
-     "id": "b9b53245",
-     "lat": 46.9,
-     "lon": 103.8
+     "id": "ef01f9e2",
+     "text": "Jacques Chirac"
     },
     {
-     "id": "5a2b2d36",
-     "lat": 32.4,
-     "lon": 53.7
+     "id": "dd3b30d1",
+     "text": "François Mitterrand"
     },
     {
-     "id": "4a1facc3",
-     "lat": 49,
-     "lon": 31
+     "id": "7c24716d",
+     "text": "Georges Pompidou"
     }
    ]
   },
   "position": 4,
-  "takeaway": "C'est le plus grand pays au monde sans accès à l'océan.",
-  "domain_id": "geography",
+  "takeaway": null,
+  "domain_id": "history",
   "counted_ms": 8200,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Le Kazakhstan, 9e plus grand pays du monde, s'étend de la mer Caspienne à la Chine. Les autres points : Mongolie, Iran et Ukraine.",
-  "subdomain_id": "geography.countries"
+  "explanation": "Pompidou (1969), Giscard d'Estaing (1974), Mitterrand (1981), Chirac (1995).",
+  "subdomain_id": "history.contemporary"
  },
  {
-  "id": "e589581d-5f63-4603-b383-ebc7089d6290",
-  "type": "pairs",
+  "id": "7da82473-e024-4aff-a303-437c9864719f",
+  "type": "map_pick",
   "given": {
-   "pairs": {
-    "0bf38416": "51d9aa88",
-    "10d82b60": "7cd6c531",
-    "164475ca": "0b2efa83",
-    "a09f9b82": "ffb4a6c3"
-   }
+   "option_id": "0596fea7"
   },
   "answer": {
-   "pairs": {
-    "0bf38416": "51d9aa88",
-    "10d82b60": "7cd6c531",
-    "164475ca": "0b2efa83",
-    "a09f9b82": "ffb4a6c3"
-   }
+   "option_id": "0596fea7"
   },
-  "prompt": "Associe chaque auteur à son œuvre.",
-  "source": null,
+  "prompt": "Touche l'emplacement de Podgorica.",
+  "source": "Wikidata",
   "payload": {
-   "left": [
+   "region": {
+    "lat": 46.97,
+    "lon": 9.57,
+    "span": 27.3
+   },
+   "options": [
     {
-     "id": "164475ca",
-     "text": "Molière"
+     "id": "0596fea7",
+     "lat": 42.441388888,
+     "lon": 19.262777777
     },
     {
-     "id": "0bf38416",
-     "text": "Flaubert"
+     "id": "da7892f6",
+     "lat": 51.507222222,
+     "lon": -0.1275
     },
     {
-     "id": "10d82b60",
-     "text": "Zola"
+     "id": "44c90a2b",
+     "lat": 43.731111111,
+     "lon": 7.42
     },
     {
-     "id": "a09f9b82",
-     "text": "Proust"
-    }
-   ],
-   "right": [
-    {
-     "id": "ffb4a6c3",
-     "text": "À la recherche du temps perdu"
-    },
-    {
-     "id": "7cd6c531",
-     "text": "Germinal"
-    },
-    {
-     "id": "51d9aa88",
-     "text": "Madame Bovary"
-    },
-    {
-     "id": "0b2efa83",
-     "text": "Le Misanthrope"
+     "id": "55d2e5d9",
+     "lat": 47.498333333,
+     "lon": 19.040833333
     }
    ]
   },
   "position": 5,
   "takeaway": null,
-  "domain_id": "arts",
+  "domain_id": "geography",
   "counted_ms": 4300,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Le Misanthrope (1666), Madame Bovary (1857), Germinal (1885), À la recherche du temps perdu (1913–1927).",
-  "subdomain_id": "arts.literature"
+  "explanation": "Podgorica est la capitale du Monténégro. Les autres points : Londres, Monaco et Budapest.",
+  "subdomain_id": "geography.countries"
  }
 ]

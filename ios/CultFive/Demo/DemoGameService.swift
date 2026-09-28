@@ -126,7 +126,77 @@ struct DemoGameService: GameService {
         return try decode(json)
     }
     func dailyReview(date: String?) async throws -> [ReviewItem] { reviewItems }
-    func dailyHistory(days: Int) async throws -> [DailyHistoryEntry] { try fixture("history") }
+    /// Historique d'exemple, avec % de réussite et classement plausibles.
+    func dailyHistory(days: Int) async throws -> [DailyHistoryEntry] {
+        let entries: [DailyHistoryEntry] = try fixture("history")
+        return entries.map { e in
+            guard e.status != "in_progress", let score = e.score else { return e }
+            let jitter = abs(e.date.hashValue % 9)
+            return DailyHistoryEntry(date: e.date, status: e.status, score: score, totalMs: e.totalMs,
+                                     rate: score * 20, percentile: Percentile(top: max(1, 90 - score * 16 - jitter), source: .live, participants: 1_240))
+        }
+    }
+
+    // MARK: Objectifs et récap
+
+    /// Objectifs simulés à partir de ce qui a été joué dans la séance de démo.
+    func quests() async throws -> QuestsOverview {
+        let engine = try engine()
+        let calendar = Calendar(identifier: .iso8601)
+        let now = Date()
+        let dayEnd = calendar.startOfDay(for: now).addingTimeInterval(86_400)
+        let weekStart = calendar.dateInterval(of: .weekOfYear, for: now)?.start ?? now
+        let dailyDone = DemoDailyRecorder.shared.completed != nil
+        var newly: [QuestsOverview.Reward] = []
+        func quest(_ period: String, _ slot: Int, _ label: String, _ target: Int, _ progress: Int, xp: Int, seeds: Int) -> QuestsOverview.Quest {
+            let done = progress >= target
+            if done, engine.claim("\(period):\(slot)", seeds: seeds) { newly.append(.init(label: label, xp: xp, seeds: seeds)) }
+            return .init(slot: slot, label: label, target: target, progress: min(progress, target), done: done, xp: xp, seeds: seeds)
+        }
+        let day = [
+            quest("day", 1, "Fais le 5 du jour", 1, dailyDone ? 1 : 0, xp: 15, seeds: 2),
+            quest("day", 2, "Joue 2 parties classées", 2, engine.rankedGames, xp: 15, seeds: 2),
+            quest("day", 3, "5 bonnes réponses en Histoire", 5, engine.correctByDomain["history"] ?? 0, xp: 15, seeds: 2),
+        ]
+        let week = [
+            quest("week", 1, "Fais le 5 du jour 5 fois", 5, 3 + (dailyDone ? 1 : 0), xp: 50, seeds: 8),
+            quest("week", 2, "Joue 8 parties classées", 8, 5 + engine.rankedGames, xp: 50, seeds: 8),
+            quest("week", 3, "Joue dans 4 domaines différents", 4, 2 + engine.domainsPlayed.subtracting(["history", "geography"]).count, xp: 50, seeds: 8),
+        ]
+        func bonus(_ key: String, _ quests: [QuestsOverview.Quest], xp: Int, seeds: Int, label: String) -> QuestsOverview.Bonus {
+            let done = quests.allSatisfy(\.done)
+            if done, engine.claim(key, seeds: seeds) { newly.append(.init(label: label, xp: xp, seeds: seeds, bonus: true)) }
+            return .init(xp: xp, seeds: seeds, done: done)
+        }
+        let dayBonus = bonus("day:bonus", day, xp: 10, seeds: 3, label: "Tous les objectifs du jour")
+        let weekBonus = bonus("week:bonus", week, xp: 0, seeds: 15, label: "Coffre de la semaine")
+        let fmt = ISO8601DateFormatter(); fmt.formatOptions = [.withFullDate]
+        return QuestsOverview(
+            day: .init(periodStart: fmt.string(from: now), endsAt: dayEnd, quests: day, bonus: dayBonus),
+            week: .init(periodStart: fmt.string(from: weekStart), endsAt: weekStart.addingTimeInterval(7 * 86_400), quests: week, bonus: weekBonus),
+            newly: newly, balance: try await profile().seeds)
+    }
+
+    /// Récap d'exemple : la semaine en cours (séance de démo) et quelques semaines passées.
+    func weeklyRecap(weeks: Int) async throws -> [WeekRecap] {
+        let engine = try engine()
+        let calendar = Calendar(identifier: .iso8601)
+        let start = calendar.dateInterval(of: .weekOfYear, for: Date())?.start ?? Date()
+        let fmt = ISO8601DateFormatter(); fmt.formatOptions = [.withFullDate]
+        let week = { (i: Int) in fmt.string(from: start.addingTimeInterval(Double(-7 * i) * 86_400)) }
+        let correct = engine.correctByDomain.values.reduce(0, +)
+        return [
+            WeekRecap(weekStart: week(0), answers: 42 + engine.answered, correct: 29 + correct, games: 4 + engine.rankedGames, dailies: 3,
+                      dailyAvg: 3.7, errorsCorrected: 5 + engine.correctedCount, questsDone: 7,
+                      coteMoves: [.init(domainId: "history", delta: 38), .init(domainId: "geography", delta: 21), .init(domainId: "sport", delta: -12)]),
+            WeekRecap(weekStart: week(1), answers: 96, correct: 61, games: 7, dailies: 6, dailyAvg: 3.5, errorsCorrected: 9, questsDone: 14,
+                      coteMoves: [.init(domainId: "calc", delta: 45), .init(domainId: "french", delta: 17)]),
+            WeekRecap(weekStart: week(2), answers: 71, correct: 40, games: 5, dailies: 7, dailyAvg: 3.1, errorsCorrected: 4, questsDone: 11,
+                      coteMoves: [.init(domainId: "science", delta: -8), .init(domainId: "history", delta: 26)]),
+            WeekRecap(weekStart: week(3), answers: 25, correct: 14, games: 1, dailies: 4, dailyAvg: 2.8, errorsCorrected: 0, questsDone: 3,
+                      coteMoves: []),
+        ].prefix(weeks).map { $0 }
+    }
 
     // MARK: Jouer
 

@@ -1,95 +1,88 @@
 {
- "cote": 965,
- "level": 48,
- "avg_ms": 8200,
+ "cote": 1069,
+ "level": 54,
+ "avg_ms": 3150,
  "placed": false,
- "correct": 0,
+ "correct": 2,
  "history": [
   {
    "day": "2027-03-01",
-   "level": 48.0
+   "level": 54.0
   }
  ],
- "answered": 1,
+ "answered": 2,
  "domain_id": "geography",
  "placement": 0,
  "subdomains": [
   {
    "id": "geography.capitals",
-   "cote": 965,
+   "cote": 1069,
    "name": "Capitales",
-   "level": 48,
+   "level": 54,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 285,
    "placement": 0,
-   "reliability": 0.03
+   "reliability": 0.1
   },
   {
    "id": "geography.flags",
-   "cote": 965,
+   "cote": 1069,
    "name": "Drapeaux",
-   "level": 48,
+   "level": 54,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 193,
    "placement": 0,
-   "reliability": 0.03
+   "reliability": 0.1
   },
   {
    "id": "geography.countries",
-   "cote": 965,
+   "cote": 1034,
    "name": "Pays & villes",
-   "level": 48,
+   "level": 52,
    "placed": false,
-   "correct": 0,
+   "correct": 1,
    "answered": 1,
    "available": 745,
    "placement": 0,
-   "reliability": 0.03
+   "reliability": 0.05
   },
   {
    "id": "geography.relief",
-   "cote": 965,
+   "cote": 1069,
    "name": "Fleuves, mers & reliefs",
-   "level": 48,
+   "level": 54,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 150,
    "placement": 0,
-   "reliability": 0.03
+   "reliability": 0.1
   },
   {
    "id": "geography.monuments",
-   "cote": 965,
+   "cote": 1069,
    "name": "Monuments & patrimoine",
-   "level": 48,
+   "level": 54,
    "placed": false,
-   "correct": 0,
-   "answered": 0,
+   "correct": 1,
+   "answered": 1,
    "available": 185,
    "placement": 0,
-   "reliability": 0.03
+   "reliability": 0.1
   }
  ],
- "reliability": 0.03,
+ "reliability": 0.1,
  "by_difficulty": [
   {
-   "band": "hard",
-   "correct": 0,
-   "answered": 1
+   "band": "medium",
+   "correct": 2,
+   "answered": 2
   }
  ],
- "recent_errors": [
-  {
-   "label": "Situer le Kazakhstan",
-   "since": "2027-03-01T08:00:26+00:00",
-   "state": "failed",
-   "concept_id": "geography.countries.kazakhstan"
-  }
- ],
+ "recent_errors": [],
  "concepts_mastered": 0
 }

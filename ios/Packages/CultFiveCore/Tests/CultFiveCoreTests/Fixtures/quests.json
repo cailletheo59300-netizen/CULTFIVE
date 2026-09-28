@@ -1,0 +1,91 @@
+{
+ "day": {
+  "bonus": {
+   "xp": 10,
+   "done": false,
+   "seeds": 3
+  },
+  "quests": [
+   {
+    "xp": 15,
+    "done": true,
+    "slot": 1,
+    "label": "Fais le 5 du jour",
+    "seeds": 2,
+    "target": 1,
+    "progress": 1
+   },
+   {
+    "xp": 15,
+    "done": false,
+    "slot": 2,
+    "label": "5 bonnes réponses en Musique",
+    "seeds": 2,
+    "target": 5,
+    "progress": 0
+   },
+   {
+    "xp": 15,
+    "done": false,
+    "slot": 3,
+    "label": "Corrige 2 erreurs",
+    "seeds": 2,
+    "target": 2,
+    "progress": 0
+   }
+  ],
+  "ends_at": "2027-03-01T23:00:00+00:00",
+  "period_start": "2027-03-01"
+ },
+ "week": {
+  "bonus": {
+   "xp": 0,
+   "done": false,
+   "seeds": 15
+  },
+  "quests": [
+   {
+    "xp": 50,
+    "done": false,
+    "slot": 1,
+    "label": "Fais le 5 du jour 5 fois",
+    "seeds": 8,
+    "target": 5,
+    "progress": 1
+   },
+   {
+    "xp": 50,
+    "done": false,
+    "slot": 2,
+    "label": "Fais un sans-faute au 5 du jour",
+    "seeds": 8,
+    "target": 1,
+    "progress": 0
+   },
+   {
+    "xp": 50,
+    "done": true,
+    "slot": 3,
+    "label": "Gagne 30 points de cote dans un domaine",
+    "seeds": 8,
+    "target": 30,
+    "progress": 30
+   }
+  ],
+  "ends_at": "2027-03-07T23:00:00+00:00",
+  "period_start": "2027-03-01"
+ },
+ "newly": [
+  {
+   "xp": 15,
+   "label": "Fais le 5 du jour",
+   "seeds": 2
+  },
+  {
+   "xp": 50,
+   "label": "Gagne 30 points de cote dans un domaine",
+   "seeds": 8
+  }
+ ],
+ "balance": 42
+}

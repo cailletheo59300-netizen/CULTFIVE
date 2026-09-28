@@ -11,6 +11,10 @@ public protocol GameService: Sendable {
     func dailyReview(date: String?) async throws -> [ReviewItem]
     func dailyHistory(days: Int) async throws -> [DailyHistoryEntry]
 
+    // Objectifs et récap
+    func quests() async throws -> QuestsOverview
+    func weeklyRecap(weeks: Int) async throws -> [WeekRecap]
+
     // Jouer
     func onboardingPack() async throws -> PlayPack
     /// `subdomains` : sous-thèmes choisis (vide = tout le domaine). `ranked = false` : entraînement libre à difficulté `level`.
@@ -162,6 +166,12 @@ public struct LiveGameService: GameService {
 
     public func registerDevice(hash: String) async throws {
         try await api.rpcVoid("register_device", ["p_device_hash": .string(hash)])
+    }
+
+    public func quests() async throws -> QuestsOverview { try await api.rpc("quests_overview") }
+
+    public func weeklyRecap(weeks: Int) async throws -> [WeekRecap] {
+        try await api.rpc("weekly_recap", ["p_weeks": .number(Double(weeks))])
     }
 
     public func skills() async throws -> [SkillSummary] { try await api.rpc("skills_overview") }

@@ -4,225 +4,240 @@
  "ranked": true,
  "questions": [
   {
-   "id": "41a2bbb5-7650-424e-bb73-0b46407454d8",
-   "type": "numeric",
-   "answer": {
-    "value": 7,
-    "tolerance": 0
-   },
-   "prompt": "Quel nombre suit : 1, 40, 3, 36, 5, 32, … ?",
-   "source": null,
-   "payload": {
-    "decimals": 0,
-    "allow_negative": false
-   },
-   "expected": 0.29,
-   "has_hint": true,
-   "takeaway": null,
-   "domain_id": "logic",
-   "concept_id": "logic.sequences.gen_interleaved_32",
-   "difficulty": 60,
-   "fact_as_of": null,
-   "explanation": "Deux suites alternent : 1, 3, 5… (+2) et 40, 36, 32… (−4). Le suivant appartient à la première : 7.",
-   "has_context": false,
-   "subdomain_id": "logic.sequences"
-  },
-  {
-   "id": "83eb01b1-87cb-430b-ab49-b38ad4d44d86",
+   "id": "5bc13e0b-b4d6-4378-aa03-46ff76b603a0",
    "type": "mcq",
    "answer": {
-    "option_id": "5f1e66a1"
+    "option_id": "ae3d5f0a"
    },
-   "prompt": "Qu'a volé Prométhée aux dieux pour le donner aux hommes ?",
+   "prompt": "Dans quelle ville se tiennent les premiers Jeux olympiques modernes, en 1896 ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "5f1e66a1",
-      "text": "Le feu"
+      "id": "1c40d627",
+      "text": "Paris"
      },
      {
-      "id": "ed373316",
-      "text": "La foudre"
+      "id": "3bdfbebf",
+      "text": "Londres"
      },
      {
-      "id": "286b9e5a",
-      "text": "L'or"
+      "id": "2fdb8d55",
+      "text": "Rome"
      },
      {
-      "id": "23835d8f",
-      "text": "L'ambroisie"
+      "id": "ae3d5f0a",
+      "text": "Athènes"
      }
     ]
    },
-   "expected": 0.75,
-   "has_hint": true,
-   "takeaway": null,
-   "domain_id": "arts",
-   "concept_id": "arts.mythology.prometheus",
-   "difficulty": 45,
-   "fact_as_of": null,
-   "explanation": "Zeus le punit en l'enchaînant à un rocher, où un aigle lui dévore le foie chaque jour.",
-   "has_context": false,
-   "subdomain_id": "arts.mythology"
-  },
-  {
-   "id": "9caa21b4-75a1-4ff0-9b9a-9bee220e3587",
-   "type": "mcq",
-   "answer": {
-    "option_id": "2447462a"
-   },
-   "prompt": "Arthur Schopenhauer est né au…",
-   "source": "Wikidata",
-   "payload": {
-    "options": [
-     {
-      "id": "d4721401",
-      "text": "XVIIe siècle"
-     },
-     {
-      "id": "2447462a",
-      "text": "XVIIIe siècle"
-     },
-     {
-      "id": "1b0a660e",
-      "text": "XIXe siècle"
-     },
-     {
-      "id": "64e812c0",
-      "text": "XXe siècle"
-     }
-    ],
-    "keep_order": true
-   },
-   "expected": 0.78,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "history",
-   "concept_id": "history.modern.century_arthur_schopenhauer",
-   "difficulty": 41,
-   "fact_as_of": null,
-   "explanation": "Arthur Schopenhauer, philosophe allemand, est né en 1788 et mort en 1860.",
-   "has_context": false,
-   "subdomain_id": "history.modern"
-  },
-  {
-   "id": "5820d10b-c36f-494a-ab02-5fa81d860bad",
-   "type": "mcq",
-   "answer": {
-    "option_id": "6e922bdc"
-   },
-   "prompt": "Quelle équipe a remporté la Coupe du monde de football 2006 ?",
-   "source": "Wikidata",
-   "payload": {
-    "options": [
-     {
-      "id": "6e922bdc",
-      "text": "Italie"
-     },
-     {
-      "id": "c4164d36",
-      "text": "Tchécoslovaquie"
-     },
-     {
-      "id": "34438968",
-      "text": "Brésil"
-     },
-     {
-      "id": "705ac1f7",
-      "text": "Angleterre"
-     }
-    ]
-   },
-   "expected": 0.75,
+   "expected": 0.72,
    "has_hint": true,
    "takeaway": null,
    "domain_id": "sport",
-   "concept_id": "sport.football.world_cup_2006",
-   "difficulty": 42,
+   "concept_id": "sport.olympics.athens_1896",
+   "difficulty": 44,
    "fact_as_of": null,
-   "explanation": "En 2006, la Coupe du monde, organisée par l'Allemagne, a été remportée par l'Italie.",
+   "explanation": "Athènes accueille ces premiers Jeux, en hommage à l'Antiquité grecque. Paris organise les suivants, en 1900.",
+   "has_context": false,
+   "subdomain_id": "sport.olympics"
+  },
+  {
+   "id": "4e6280e2-d699-4636-9e8f-5a6a1d534779",
+   "type": "mcq",
+   "answer": {
+    "option_id": "20ecb53f"
+   },
+   "prompt": "Que signifie « Volkswagen » ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "69d880e3",
+      "text": "La voiture rapide"
+     },
+     {
+      "id": "9a338865",
+      "text": "La grande route"
+     },
+     {
+      "id": "5f4c36f0",
+      "text": "La roue d'or"
+     },
+     {
+      "id": "20ecb53f",
+      "text": "La voiture du peuple"
+     }
+    ]
+   },
+   "expected": 0.71,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "tech",
+   "concept_id": "tech.brands.volkswagen",
+   "difficulty": 45,
+   "fact_as_of": null,
+   "explanation": "« Volk » : peuple, « Wagen » : voiture. La Coccinelle en est le modèle emblématique.",
+   "has_context": false,
+   "subdomain_id": "tech.brands"
+  },
+  {
+   "id": "71328717-141f-41e7-8b63-16765a2cc498",
+   "type": "mcq",
+   "answer": {
+    "option_id": "6a6ad35b"
+   },
+   "prompt": "« Leptis Magna » se trouve dans quel pays ?",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "6a6ad35b",
+      "text": "Libye"
+     },
+     {
+      "id": "f0c29d57",
+      "text": "Togo"
+     },
+     {
+      "id": "d57b49ea",
+      "text": "République du Congo"
+     },
+     {
+      "id": "79bfe401",
+      "text": "Sierra Leone"
+     }
+    ]
+   },
+   "expected": 0.66,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "geography",
+   "concept_id": "geography.monuments.wd_leptis_magna_q191504",
+   "difficulty": 50,
+   "fact_as_of": null,
+   "explanation": "« Leptis Magna » se trouve en Libye (ville antique de la république de Carthage). Le site est inscrit au patrimoine mondial de l'UNESCO.",
+   "has_context": false,
+   "subdomain_id": "geography.monuments"
+  },
+  {
+   "id": "26b35dd8-3bc6-4a32-8f56-310eb7917274",
+   "type": "mcq",
+   "answer": {
+    "option_id": "44d8c392"
+   },
+   "prompt": "Ganymède est un satellite naturel de…",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "44d8c392",
+      "text": "Jupiter"
+     },
+     {
+      "id": "362b0325",
+      "text": "Neptune"
+     },
+     {
+      "id": "13a20c5f",
+      "text": "Mars"
+     },
+     {
+      "id": "78b1d7c3",
+      "text": "Uranus"
+     }
+    ]
+   },
+   "expected": 0.71,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "science",
+   "concept_id": "science.space.moon_ganymede",
+   "difficulty": 45,
+   "fact_as_of": null,
+   "explanation": "Ganymède est un satellite naturel de Jupiter. Les lunes de Jupiter portent surtout des noms de proches de Zeus (Jupiter chez les Romains).",
+   "has_context": false,
+   "subdomain_id": "science.space"
+  },
+  {
+   "id": "75441bdd-24a2-408b-a6a5-4741daeb9bcd",
+   "type": "mcq",
+   "answer": {
+    "option_id": "97fd2a5c"
+   },
+   "prompt": "Quel pays a accueilli la Coupe du monde de football 2010 ?",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "47a3f4c6",
+      "text": "Chili"
+     },
+     {
+      "id": "97fd2a5c",
+      "text": "Afrique du Sud"
+     },
+     {
+      "id": "43eb5eab",
+      "text": "Mexique"
+     },
+     {
+      "id": "1edfd290",
+      "text": "Argentine"
+     }
+    ]
+   },
+   "expected": 0.81,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "sport",
+   "concept_id": "sport.football.world_cup_host_2010",
+   "difficulty": 38,
+   "fact_as_of": null,
+   "explanation": "La Coupe du monde 2010 s'est jouée en Afrique du Sud ; elle a été remportée par l'Espagne.",
    "has_context": false,
    "subdomain_id": "sport.football"
   },
   {
-   "id": "0d88f3ba-75ea-4fee-8d5d-bb6aca7456d4",
+   "id": "683ae5e5-70f0-4447-be15-4be843e0f258",
    "type": "mcq",
    "answer": {
-    "option_id": "2d5b0dad"
+    "option_id": "aee107f2"
    },
-   "prompt": "En quelle année se déroule la bataille d'Hastings ?",
-   "source": null,
+   "prompt": "À quel siècle remonte la naissance d'Hafez ?",
+   "source": "Wikidata",
    "payload": {
     "options": [
      {
-      "id": "06d147e9",
-      "text": "1054"
+      "id": "1c3d3363",
+      "text": "XIIe siècle"
      },
      {
-      "id": "2d5b0dad",
-      "text": "1066"
+      "id": "aee107f2",
+      "text": "XIVe siècle"
      },
      {
-      "id": "c3d13246",
-      "text": "1099"
+      "id": "bebf113f",
+      "text": "XVe siècle"
      },
      {
-      "id": "d037f9f7",
-      "text": "1215"
+      "id": "bd9e5786",
+      "text": "XVIe siècle"
      }
-    ]
+    ],
+    "keep_order": true
    },
-   "expected": 0.65,
-   "has_hint": false,
-   "takeaway": "La tapisserie de Bayeux raconte cette conquête.",
-   "domain_id": "history",
-   "concept_id": "history.middle_ages.hastings",
-   "difficulty": 50,
-   "fact_as_of": null,
-   "explanation": "Guillaume, duc de Normandie, bat le roi Harold et devient roi d'Angleterre : on l'appelle depuis Guillaume le Conquérant.",
-   "has_context": false,
-   "subdomain_id": "history.middle_ages"
-  },
-  {
-   "id": "b233cfb6-d946-47ce-8d0b-33d4e49a6a41",
-   "type": "mcq",
-   "answer": {
-    "option_id": "1f0c5e80"
-   },
-   "prompt": "« C'est la croix et la bannière » signifie…",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "742c94d4",
-      "text": "c'est une fête religieuse"
-     },
-     {
-      "id": "8f2f3c38",
-      "text": "c'est un combat perdu"
-     },
-     {
-      "id": "067cdf3f",
-      "text": "c'est un secret"
-     },
-     {
-      "id": "1f0c5e80",
-      "text": "c'est très compliqué"
-     }
-    ]
-   },
-   "expected": 0.55,
+   "expected": 0.64,
    "has_hint": false,
    "takeaway": null,
-   "domain_id": "french",
-   "concept_id": "french.expressions.croix_banniere",
-   "difficulty": 50,
+   "domain_id": "history",
+   "concept_id": "history.middle_ages.century_hafez",
+   "difficulty": 45,
    "fact_as_of": null,
-   "explanation": "Allusion aux processions religieuses, longues et solennelles à organiser : on dit cela de ce qui demande beaucoup d'efforts.",
+   "explanation": "Hafez, poète, philosophe et mystique persan, est né en 1325 et mort en 1389.",
    "has_context": false,
-   "subdomain_id": "french.expressions"
+   "subdomain_id": "history.middle_ages"
   }
  ],
- "session_id": "81fc9699-c790-465c-abc2-d5d30fd48a77"
+ "session_id": "083f6f8f-481f-4a4c-a311-0ec62a2455b1"
 }

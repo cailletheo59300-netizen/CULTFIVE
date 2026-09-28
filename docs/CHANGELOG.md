@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.0 — objectifs et récap
+- **Objectifs du jour** (3, dont toujours « Fais le 5 du jour ») et **de la semaine** (3, du lundi au dimanche) : carte « Objectifs » sur l'accueil (onglets Jour/Semaine, jauges, récompense, bonus, temps restant), célébration quand un objectif est rempli. Récompenses modestes : 15 XP + 2 graines par objectif du jour (+10 XP + 3 graines pour les trois), 50 XP + 8 graines par objectif de la semaine (coffre de 15 graines). Progression calculée par le serveur, impossible à tricher.
+- **Profil** : section **« Mes semaines »** (parties, réponses, % de réussite, moyenne au 5 du jour, variations de cote par domaine, objectifs, erreurs corrigées) et **historique du 5 du jour** (score, % de bonnes réponses, classement « top X % »), en résumé sous le calendrier et en feuille détaillée.
+- Serveur : migration 0017 (`user_quests`, `quests_overview`, `weekly_recap`, `daily_history` avec `rate` et `percentile`), tests `90_quests.sql`. Sélection : le thème cède avant la variété des familles (plus de parties avec deux questions du même moule).
+
 ## 0.8.2 — algo plus juste
 - **Hasard pris en compte** : un QCM à 4 choix se réussit 1 fois sur 4 sans rien savoir. Une bonne réponse devinable fait moins monter la cote, une erreur devinable la fait davantage baisser ; les questions se calibrent pareil ; les fenêtres visent les chances réelles.
 - **Thèmes équilibrés** dans chaque partie de domaine (2 par thème sur 10 en Géographie, au lieu de parties dominées par « Pays & villes »).

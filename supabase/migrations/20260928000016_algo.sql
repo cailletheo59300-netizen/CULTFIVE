@@ -337,10 +337,11 @@ begin
     select * into v_band from public._band_bounds(p_mode);
     v_pick := null;
 
-    -- Niveaux de repli : 0 bande exacte, 1 ±5, 2 ±10, 3 toute difficulté, 4 sans filtre de récence.
-    for lvl in 0 .. 4 loop
+    -- Niveaux de repli : 0 thème + bande exacte, 1 thème ± 5, 2 tout le domaine ± 10 (une question par famille),
+    -- 3 ± 10 (deux par famille), 4 toute difficulté, 5 sans filtre de récence. Le thème cède avant la variété des familles.
+    for lvl in 0 .. 5 loop
       v_level := lvl;
-      v_widen := case lvl when 0 then 0 when 1 then 5 when 2 then 10 else 1000 end;
+      v_widen := case lvl when 0 then 0 when 1 then 5 when 2 then 10 when 3 then 10 else 1000 end;
       -- Entraînement à difficulté choisie : bande fixe, indépendante du niveau.
       if p_level = 'beginner' then
         v_blo := 0; v_bhi := 40;
@@ -361,20 +362,20 @@ begin
         and q.domain_id = v_domain
         and (p_subdomain is null or q.subdomain_id = p_subdomain)
         and (p_subdomains is null or q.subdomain_id = any (p_subdomains))
-        -- Le thème tiré tient jusqu'au niveau 2 ; ensuite tout le périmètre (thème épuisé à ce niveau).
-        and (lvl >= 3 or v_theme is null or q.subdomain_id = v_theme)
+        -- Le thème tiré tient aux niveaux 0 et 1 ; ensuite tout le domaine.
+        and (lvl >= 2 or v_theme is null or q.subdomain_id = v_theme)
         and q.id <> all (v_result || v_banned)
         and q.concept_id <> all (v_concepts)
         -- Variété : une seule question par famille tant que possible (niveaux 0-1), puis au plus 2 et jamais deux de suite (niveau 2).
-        and (lvl >= 3 or q.family is null or (
+        and (lvl >= 4 or q.family is null or (
               q.family is distinct from v_families[cardinality(v_families)]
-              and (select count(*) from unnest(v_families) f where f = q.family) < case when lvl <= 1 then 1 else 2 end))
+              and (select count(*) from unnest(v_families) f where f = q.family) < case when lvl <= 2 then 1 else 2 end))
         -- Fenêtre adaptative : en chances réelles (hasard compris) pour chaque question ; difficulté fixe sinon.
         and (case when p_level is not null or v_band.explore
                   then q.difficulty_effective between v_blo - v_widen and v_bhi + v_widen
                   else q.difficulty_effective between public._b_for_p(v_mu, v_band.hi, q.guess_rate) - v_widen
                                                   and public._b_for_p(v_mu, v_band.lo, q.guess_rate) + v_widen end)
-        and (lvl = 4 or not exists (
+        and (lvl = 5 or not exists (
               select 1 from public.user_concepts uc
               where uc.user_id = p_user and uc.concept_id = q.concept_id
                 and uc.last_seen_at > public._now() - case when uc.last_correct_at = uc.last_seen_at

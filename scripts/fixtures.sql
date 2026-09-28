@@ -61,3 +61,7 @@ select public.achievements_mine();
 select public.daily_history(35);
 \echo @@@
 select jsonb_agg(jsonb_build_object('id', id, 'name', name, 'daily_slot', daily_slot, 'sort', sort) order by sort) from public.domains;
+\echo @@@
+select public.quests_overview();
+\echo @@@
+select public.weekly_recap(4);

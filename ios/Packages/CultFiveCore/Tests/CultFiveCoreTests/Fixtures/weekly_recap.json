@@ -1,0 +1,46 @@
+[
+ {
+  "games": 1,
+  "answers": 11,
+  "correct": 9,
+  "dailies": 1,
+  "daily_avg": 3.0,
+  "cote_moves": [
+   {
+    "delta": 69,
+    "domain_id": "geography"
+   },
+   {
+    "delta": -54,
+    "domain_id": "music"
+   },
+   {
+    "delta": -42,
+    "domain_id": "history"
+   },
+   {
+    "delta": 34,
+    "domain_id": "tech"
+   },
+   {
+    "delta": 34,
+    "domain_id": "science"
+   },
+   {
+    "delta": 29,
+    "domain_id": "calc"
+   },
+   {
+    "delta": 21,
+    "domain_id": "french"
+   },
+   {
+    "delta": 20,
+    "domain_id": "sport"
+   }
+  ],
+  "week_start": "2027-03-01",
+  "quests_done": 2,
+  "errors_corrected": 0
+ }
+]

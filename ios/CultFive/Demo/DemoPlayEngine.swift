@@ -37,6 +37,13 @@ final class DemoPlayEngine: @unchecked Sendable {
     private var sessions: [UUID: (ids: [UUID], ranked: Bool)] = [:]
     private var submitted: Set<UUID> = []
     private var seedsDelta = 0
+    // Activité de la séance, pour les objectifs de la démo.
+    private(set) var rankedGames = 0
+    private(set) var answered = 0
+    private(set) var correctByDomain: [String: Int] = [:]
+    private(set) var correctedCount = 0
+    private(set) var domainsPlayed: Set<String> = []
+    private var claimed: Set<String> = []
     private var prepared = false
 
     /// Charge la banque et l'état initial (niveaux du profil d'exemple, erreurs « à revoir » du profil).
@@ -187,6 +194,10 @@ final class DemoPlayEngine: @unchecked Sendable {
                 transition = .string("still_wrong")
             }
             let domain = entry.question.domainId
+            answered += 1
+            domainsPlayed.insert(domain)
+            if ok { correctByDomain[domain, default: 0] += 1 }
+            if case .string("corrected") = transition { correctedCount += 1 }
             let before = levels[domain] ?? 50
             var after = before
             let expected = DemoPlayEngine.chance(mu: before, entry: entry)
@@ -207,6 +218,7 @@ final class DemoPlayEngine: @unchecked Sendable {
                 "points": .number(Double(gained)),
             ]))
         }
+        if ranked && attempts.count >= 8 { rankedGames += 1 }
         let xp = correct * (ranked ? 5 : 3) + (attempts.count >= 5 ? (ranked ? 10 : 5) : 0)
         let seeds = ranked ? 2 * (correct / 5) : 0
         seedsDelta += seeds
@@ -222,6 +234,16 @@ final class DemoPlayEngine: @unchecked Sendable {
                     return .object(fields)
                 })]
     }
+
+    /// Récompense d'objectif, versée une seule fois par clé.
+    func claim(_ key: String, seeds: Int) -> Bool {
+        lock.lock(); defer { lock.unlock() }
+        guard !claimed.contains(key) else { return false }
+        claimed.insert(key)
+        seedsDelta += seeds
+        return true
+    }
+    func isClaimed(_ key: String) -> Bool { lock.lock(); defer { lock.unlock() }; return claimed.contains(key) }
 
     func spendSeeds(_ amount: Int) {
         lock.lock(); defer { lock.unlock() }

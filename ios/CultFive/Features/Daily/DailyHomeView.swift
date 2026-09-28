@@ -9,6 +9,9 @@ struct DailyHomeView: View {
     @State private var playConfig: PlayConfig?
     @State private var suggestion: SkillSummary?
     @State private var league: LeagueSummary?
+    @State private var quests: QuestsOverview?
+    /// Objectifs remplis depuis la dernière visite : célébrés en haut de l'accueil.
+    @State private var rewards: [QuestsOverview.Reward] = []
 
     var body: some View {
         NavigationStack {
@@ -17,7 +20,12 @@ struct DailyHomeView: View {
                     topLine
                     LeonSays(text: leonLine, color: .brand, pose: app.daily?.state == .done ? .proud : .wave,
                              curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08), size: 92)
+                    if !rewards.isEmpty {
+                        QuestRewardBanner(rewards: rewards)
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                    }
                     rendezVous
+                    if let quests { QuestsCard(overview: quests) }
                     column
                 }
                 .padding(.horizontal, Space.gutter)
@@ -28,10 +36,10 @@ struct DailyHomeView: View {
             .refreshable { await reload() }
             .toolbar(.hidden, for: .navigationBar)
         }
-        .fullScreenCover(isPresented: $showDaily) {
+        .fullScreenCover(isPresented: $showDaily, onDismiss: { Task { await reload() } }) {
             DailySessionView()
         }
-        .fullScreenCover(item: $playConfig) { config in
+        .fullScreenCover(item: $playConfig, onDismiss: { Task { await reload() } }) { config in
             PlaySessionView(config: config)
         }
         .task {
@@ -49,6 +57,14 @@ struct DailyHomeView: View {
             suggestion = skills.filter { $0.answered >= 5 }.min { $0.level < $1.level }
         }
         league = (try? await app.service.leagues())?.first
+        if let fresh = try? await app.service.quests() {
+            quests = fresh
+            if !fresh.newly.isEmpty {
+                withAnimation(Motion.bounce) { rewards = fresh.newly }
+                Haptics.success()
+                await app.refreshProfile()
+            }
+        }
     }
 
     // MARK: Blocs

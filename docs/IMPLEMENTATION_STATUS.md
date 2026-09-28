@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : 2026-09-27 (Cote CULT, 0.8.0)_
+_Dernière mise à jour : 2026-09-28 (objectifs et récap, 0.9.0)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -11,7 +11,9 @@ _Dernière mise à jour : 2026-09-27 (Cote CULT, 0.8.0)_
 | Schéma + RLS + droits | ✅ | `supabase/tests/40_security.sql` |
 | Daily serveur (génération, service, verdict, temps, série, jokers, percentile, revue, expiration, minuit, fuseaux, double soumission) | ✅ | `10_daily.sql` |
 | Adaptatif (compétences domaine/sous-domaine, calibration bornée, élargissement, questions problématiques, sélection par bandes, erreurs & maîtrise) | ✅ | `20_adaptive.sql` |
-| Cote CULT (placement, bandes exigeantes, points, variation de cote, simulation de convergence) | ✅ | `70_rating.sql` |
+| Cote CULT (placement, fenêtres de cote, points, variation de cote, simulation de convergence) | ✅ | `70_rating.sql` |
+| Algo : hasard (QCM, Vrai/Faux), thèmes équilibrés, révision espacée | ✅ | `80_algo.sql` |
+| Objectifs jour/semaine (progression serveur, récompenses uniques), récap des semaines, historique du Daily | ✅ | `90_quests.sql` |
 | Économie (ledger, plafonds, aides), pseudo, amis, parrainage anti-abus, ligues, suppression de compte | ✅ | `30_social_economy.sql` |
 | Contenu (3 975 questions dont 105 expertes, 3 à 5 thèmes ≥ 20 questions par domaine, calibrage initial `docs/CALIBRATION.md`) | ✅ | `build-seed.mjs` en CI, `scripts/wikidata/` |
 | Anti-répétition (familles) + équilibre Surprise | ✅ | migrations 0009-0010, tests SQL |

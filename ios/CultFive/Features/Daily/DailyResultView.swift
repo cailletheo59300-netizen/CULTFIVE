@@ -253,6 +253,19 @@ enum DateText {
     }
 
     static func date(_ isoDate: String) -> Date? { input.date(from: isoDate) }
+
+    private static let shortOutput: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "fr_FR")
+        formatter.setLocalizedDateFormatFromTemplate("dMMM")
+        return formatter
+    }()
+
+    /// « 21 sept. »
+    static func short(_ isoDate: String) -> String {
+        guard let date = input.date(from: isoDate) else { return isoDate }
+        return shortOutput.string(from: date)
+    }
 }
 
 private extension View {

@@ -1,99 +1,99 @@
 {
  "xp": 40,
  "seeds": 2,
- "points": 677,
+ "points": 629,
  "ranked": true,
  "balance": 32,
  "correct": 6,
  "ratings": [
   {
    "placed": false,
-   "answered": 1,
-   "domain_id": "logic",
-   "placement": 0,
-   "cote_after": 1092,
-   "cote_before": 1000
-  },
-  {
-   "placed": false,
    "answered": 2,
-   "domain_id": "arts",
-   "placement": 0,
-   "cote_after": 1076,
-   "cote_before": 1050
-  },
-  {
-   "placed": false,
-   "answered": 3,
-   "domain_id": "history",
-   "placement": 0,
-   "cote_after": 1082,
-   "cote_before": 1024
-  },
-  {
-   "placed": false,
-   "answered": 1,
    "domain_id": "sport",
    "placement": 0,
-   "cote_after": 1030,
+   "cote_after": 1054,
+   "cote_before": 1000
+  },
+  {
+   "placed": false,
+   "answered": 1,
+   "domain_id": "tech",
+   "placement": 0,
+   "cote_after": 1035,
    "cote_before": 1000
   },
   {
    "placed": false,
    "answered": 2,
-   "domain_id": "french",
+   "domain_id": "geography",
+   "placement": 0,
+   "cote_after": 1069,
+   "cote_before": 1035
+  },
+  {
+   "placed": false,
+   "answered": 1,
+   "domain_id": "science",
+   "placement": 0,
+   "cote_after": 1035,
+   "cote_before": 1000
+  },
+  {
+   "placed": false,
+   "answered": 2,
+   "domain_id": "history",
    "placement": 0,
    "cote_after": 958,
-   "cote_before": 917
+   "cote_before": 924
   }
  ],
  "results": [
   {
-   "points": 147,
+   "points": 104,
    "is_correct": true,
-   "question_id": "41a2bbb5-7650-424e-bb73-0b46407454d8",
-   "domain_after": 55.3,
+   "question_id": "5bc13e0b-b4d6-4378-aa03-46ff76b603a0",
+   "domain_after": 51.9,
    "domain_before": 50.0,
    "error_transition": null
   },
   {
-   "points": 101,
+   "points": 105,
    "is_correct": true,
-   "question_id": "83eb01b1-87cb-430b-ab49-b38ad4d44d86",
-   "domain_after": 54.4,
-   "domain_before": 52.9,
-   "error_transition": null
-  },
-  {
-   "points": 98,
-   "is_correct": true,
-   "question_id": "9caa21b4-75a1-4ff0-9b9a-9bee220e3587",
-   "domain_after": 52.8,
-   "domain_before": 51.4,
-   "error_transition": null
-  },
-  {
-   "points": 101,
-   "is_correct": true,
-   "question_id": "5820d10b-c36f-494a-ab02-5fa81d860bad",
-   "domain_after": 51.7,
+   "question_id": "4e6280e2-d699-4636-9e8f-5a6a1d534779",
+   "domain_after": 52.0,
    "domain_before": 50.0,
    "error_transition": null
   },
   {
-   "points": 109,
+   "points": 110,
    "is_correct": true,
-   "question_id": "0d88f3ba-75ea-4fee-8d5d-bb6aca7456d4",
-   "domain_after": 54.7,
-   "domain_before": 52.8,
+   "question_id": "71328717-141f-41e7-8b63-16765a2cc498",
+   "domain_after": 54.0,
+   "domain_before": 52.0,
    "error_transition": null
   },
   {
-   "points": 121,
+   "points": 105,
    "is_correct": true,
-   "question_id": "b233cfb6-d946-47ce-8d0b-33d4e49a6a41",
+   "question_id": "26b35dd8-3bc6-4a32-8f56-310eb7917274",
+   "domain_after": 52.0,
+   "domain_before": 50.0,
+   "error_transition": null
+  },
+  {
+   "points": 93,
+   "is_correct": true,
+   "question_id": "75441bdd-24a2-408b-a6a5-4741daeb9bcd",
+   "domain_after": 53.1,
+   "domain_before": 51.9,
+   "error_transition": null
+  },
+  {
+   "points": 112,
+   "is_correct": true,
+   "question_id": "683ae5e5-70f0-4447-be15-4be843e0f258",
    "domain_after": 47.6,
-   "domain_before": 45.2,
+   "domain_before": 45.6,
    "error_transition": null
   }
  ],

@@ -68,6 +68,23 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertTrue(submit.results.allSatisfy { ($0.points ?? 0) > 0 })
     }
 
+    func testQuestsAndRecap() throws {
+        let quests: QuestsOverview = try fixture("quests")
+        XCTAssertEqual(quests.day.quests.count, 3)
+        XCTAssertEqual(quests.week.quests.count, 3)
+        XCTAssertEqual(quests.day.quests.first?.label, "Fais le 5 du jour")
+        XCTAssertGreaterThan(quests.day.endsAt, quests.day.endsAt.addingTimeInterval(-86_400), "date ISO 8601 décodée")
+        XCTAssertTrue(quests.day.quests.allSatisfy { $0.progress <= $0.target })
+        let weeks: [WeekRecap] = try fixture("weekly_recap")
+        XCTAssertFalse(weeks.isEmpty)
+        XCTAssertGreaterThan(weeks[0].answers, 0)
+        XCTAssertNotNil(weeks[0].rate)
+        let history: [DailyHistoryEntry] = try fixture("history")
+        let finished = try XCTUnwrap(history.first { $0.status != "in_progress" })
+        XCTAssertEqual(finished.rate, (finished.score ?? 0) * 20)
+        XCTAssertNotNil(finished.percentile)
+    }
+
     func testProfileAndStats() throws {
         let profile: Profile = try fixture("profile")
         XCTAssertEqual(profile.handle, "alice_fx")

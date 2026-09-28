@@ -8,6 +8,8 @@ struct ProfileView: View {
     @State private var skills: [SkillSummary] = []
     @State private var achievements: [AchievementRef] = []
     @State private var history: [DailyHistoryEntry] = []
+    @State private var weeks: [WeekRecap] = []
+    @State private var showHistory = false
     @State private var showSettings = false
     @State private var showShare = false
 
@@ -21,6 +23,7 @@ struct ProfileView: View {
                     numbers
                     knowledge
                     calendar
+                    WeeksRecapSection(weeks: weeks)
                     trophies
                 }
                 .padding(.horizontal, Space.gutter)
@@ -33,6 +36,10 @@ struct ProfileView: View {
             .refreshable { await load() }
         }
         .sheet(isPresented: $showSettings) { SettingsView() }
+        .sheet(isPresented: $showHistory) {
+            NavigationStack { DailyHistoryDetail() }
+                .presentationDetents([.large])
+        }
         .sheet(isPresented: $showShare) {
             if let profile = app.profile {
                 ShareSheetView(content: .profile(profile, skills: skills))
@@ -47,9 +54,11 @@ struct ProfileView: View {
         async let s = try? service.skills()
         async let a = try? service.achievements()
         async let h = try? service.dailyHistory(days: 35)
+        async let w = try? service.weeklyRecap(weeks: 8)
         skills = await s ?? []
         achievements = await a ?? []
         history = await h ?? []
+        weeks = await w ?? []
     }
 
     // MARK: Blocs
@@ -226,6 +235,26 @@ struct ProfileView: View {
                         }
                         .accessibilityLabel(entry?.score.map { "\(isoDate(day)) : \($0) sur 5" } ?? "\(isoDate(day)) : non joué")
                 }
+            }
+            let finished = history.filter { $0.status != "in_progress" && $0.score != nil }
+            if !finished.isEmpty {
+                let rate = Int((Double(finished.compactMap(\.score).reduce(0, +)) / Double(finished.count * 5) * 100).rounded())
+                Button { showHistory = true } label: {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("\(finished.count) rendez-vous · \(rate) % de bonnes réponses")
+                                .font(.system(.subheadline, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
+                            if let best = finished.compactMap(\.top).min() {
+                                Text("Meilleur jour : top \(best) % des joueurs").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            }
+                        }
+                        Spacer()
+                        Text("Historique").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.brand)
+                        Image(systemName: "chevron.right").font(.caption.weight(.bold)).foregroundStyle(Color.brand)
+                    }
+                    .popCard(padding: 12, radius: Radius.s)
+                }
+                .buttonStyle(.row)
             }
         }
     }

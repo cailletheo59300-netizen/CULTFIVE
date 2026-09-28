@@ -60,12 +60,12 @@ Caméléon tout rond, grands yeux brillants, joues roses, queue en spirale. Dess
 - **Jamais pendant qu'on répond.** Il apparaît après la réponse (panneau d'explication), à l'accueil (`LeonSays` + bulle), au résultat, dans le bilan, l'onboarding, le profil, les cartes de partage et les états vides.
 
 ## Écrans
-- **Accueil** : date + pastilles série/graines ; Léon qui parle ; grande carte « 5 du jour » en dégradé violet (trait de cinq, bouton soleil) ; cartes série / erreurs / terrain à conquérir / ligue.
+- **Accueil** : date + pastilles série/graines ; Léon qui parle ; bandeau de célébration quand un objectif vient d'être rempli ; grande carte « 5 du jour » en dégradé violet (trait de cinq, bouton soleil) ; carte **Objectifs** (sélecteur Jour/Semaine en pilule, trois lignes avec case à cocher, jauge et récompense, ligne cadeau pour le bonus, temps restant) ; cartes série / erreurs / terrain à conquérir / ligue.
 - **Question** : pastille domaine + pilules de progression ; énoncé gros et gras ; réponses en pastilles blanches (lettre dans une bulle colorée) ; Vrai/Faux en deux grandes tuiles ; silhouettes de pays dans une carte blanche ; explication en carte avec Léon.
 - **Résultat du Daily** : plein écran dégradé violet, score géant jaune qui monte, Léon (fier / salue / dépité ; arc-en-ciel sur 5/5), chiffres en cartes translucides, célébrations, bouton « Partager » soleil.
 - **Jouer** (0.8.1, compact) : titre + cote globale à droite ; grande carte violette « Partie rapide » (éclair et bouton ▶ soleil) ; Surprise / Défi / Erreurs en 3 pastilles teintées sur une ligne (compteur d'erreurs) ; domaines en grille de **3 colonnes**, cases pleines de la couleur du domaine (pictogramme blanc, grand pictogramme en filigrane, nom, cote + rang ou « Placement ●●○○○ 2/5 » ou « à découvrir », ★ pour les centres d'intérêt). 4 rangées au lieu de 6 ; appui long : « Voir mes stats ».
 - **Domaine** : bandeau couleur du domaine à coins arrondis, grand pictogramme en filigrane.
-- **Profil** : Léon aux couleurs du meilleur domaine, 4 chiffres en cartes, **radar de culture** (`KnowledgeRadar`), domaines en cartes, calendrier, trophées.
+- **Profil** : Léon aux couleurs du meilleur domaine, carte **Cote CULT** (dégradé, rang et échelle des rangs), 4 chiffres en cartes, **radar de culture** (`KnowledgeRadar`), domaines en cartes, calendrier + résumé et **historique du 5 du jour** (feuille : score, %, top X %), **Mes semaines** (carte par semaine, la semaine en cours ouverte), trophées.
 - **Onboarding** : premier écran violet, Léon qui salue au centre d'une ronde de domaines.
 - **Barre d'onglets** : capsule blanche flottante, icônes qui rebondissent, bulle centrale « 5 du jour ».
 

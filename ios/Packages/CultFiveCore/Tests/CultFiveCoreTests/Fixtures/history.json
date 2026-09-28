@@ -1,8 +1,14 @@
 [
  {
   "date": "2027-03-01",
+  "rate": 60,
   "score": 3,
   "status": "finished",
-  "total_ms": 27800
+  "total_ms": 27800,
+  "percentile": {
+   "top": 40,
+   "source": "estimate",
+   "participants": 1
+  }
  }
 ]

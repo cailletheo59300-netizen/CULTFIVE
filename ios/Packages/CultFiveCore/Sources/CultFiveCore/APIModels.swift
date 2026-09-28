@@ -112,6 +112,12 @@ public struct Percentile: Codable, Hashable, Sendable {
     public let top: Int?
     public let source: Source
     public let participants: Int
+
+    public init(top: Int?, source: Source, participants: Int) {
+        self.top = top
+        self.source = source
+        self.participants = participants
+    }
 }
 
 public struct AchievementRef: Codable, Hashable, Identifiable, Sendable {
@@ -199,10 +205,165 @@ public struct DailyHistoryEntry: Codable, Hashable, Sendable {
     public let status: String
     public let score: Int?
     public let totalMs: Int?
+    /// % de bonnes réponses (score × 20) et classement (« top 12 % »), une fois le 5 du jour terminé.
+    public let rate: Int?
+    public let percentile: Percentile?
+    public var top: Int? { percentile?.top }
 
     enum CodingKeys: String, CodingKey {
-        case date, status, score
+        case date, status, score, rate, percentile
         case totalMs = "total_ms"
+    }
+
+    public init(date: String, status: String, score: Int?, totalMs: Int?, rate: Int? = nil, percentile: Percentile? = nil) {
+        self.date = date
+        self.status = status
+        self.score = score
+        self.totalMs = totalMs
+        self.rate = rate
+        self.percentile = percentile
+    }
+}
+
+// MARK: - Objectifs et récap
+
+/// Objectifs du jour et de la semaine. La progression est calculée par le serveur ; les récompenses tombent à la lecture.
+public struct QuestsOverview: Codable, Hashable, Sendable {
+    public struct Quest: Codable, Hashable, Identifiable, Sendable {
+        public let slot: Int
+        public let label: String
+        public let target: Int
+        public let progress: Int
+        public let done: Bool
+        public let xp: Int
+        public let seeds: Int
+        public var id: Int { slot }
+
+        public init(slot: Int, label: String, target: Int, progress: Int, done: Bool, xp: Int, seeds: Int) {
+            self.slot = slot
+            self.label = label
+            self.target = target
+            self.progress = progress
+            self.done = done
+            self.xp = xp
+            self.seeds = seeds
+        }
+    }
+
+    public struct Bonus: Codable, Hashable, Sendable {
+        public let xp: Int
+        public let seeds: Int
+        public let done: Bool
+
+        public init(xp: Int, seeds: Int, done: Bool) {
+            self.xp = xp
+            self.seeds = seeds
+            self.done = done
+        }
+    }
+
+    public struct Period: Codable, Hashable, Sendable {
+        public let periodStart: String
+        public let endsAt: Date
+        public let quests: [Quest]
+        public let bonus: Bonus
+
+        public var doneCount: Int { quests.filter(\.done).count }
+
+        enum CodingKeys: String, CodingKey {
+            case quests, bonus
+            case periodStart = "period_start"
+            case endsAt = "ends_at"
+        }
+
+        public init(periodStart: String, endsAt: Date, quests: [Quest], bonus: Bonus) {
+            self.periodStart = periodStart
+            self.endsAt = endsAt
+            self.quests = quests
+            self.bonus = bonus
+        }
+    }
+
+    /// Objectif rempli à l'instant (à célébrer).
+    public struct Reward: Codable, Hashable, Sendable {
+        public let label: String
+        public let xp: Int
+        public let seeds: Int
+        public let bonus: Bool?
+
+        public init(label: String, xp: Int, seeds: Int, bonus: Bool? = nil) {
+            self.label = label
+            self.xp = xp
+            self.seeds = seeds
+            self.bonus = bonus
+        }
+    }
+
+    public let day: Period
+    public let week: Period
+    public let newly: [Reward]
+    public let balance: Int?
+
+    public init(day: Period, week: Period, newly: [Reward], balance: Int? = nil) {
+        self.day = day
+        self.week = week
+        self.newly = newly
+        self.balance = balance
+    }
+}
+
+/// Une semaine du récap (profil), du lundi au dimanche.
+public struct WeekRecap: Codable, Hashable, Identifiable, Sendable {
+    public struct CoteMove: Codable, Hashable, Sendable {
+        public let domainId: String
+        public let delta: Int
+
+        enum CodingKeys: String, CodingKey {
+            case delta
+            case domainId = "domain_id"
+        }
+
+        public init(domainId: String, delta: Int) {
+            self.domainId = domainId
+            self.delta = delta
+        }
+    }
+
+    public let weekStart: String
+    public let answers: Int
+    public let correct: Int
+    public let games: Int
+    public let dailies: Int
+    public let dailyAvg: Double?
+    public let errorsCorrected: Int
+    public let questsDone: Int
+    public let coteMoves: [CoteMove]
+    public var id: String { weekStart }
+
+    /// % de bonnes réponses de la semaine.
+    public var rate: Int? { answers > 0 ? Int((Double(correct) / Double(answers) * 100).rounded()) : nil }
+    public var isEmpty: Bool { answers == 0 && dailies == 0 }
+
+    enum CodingKeys: String, CodingKey {
+        case answers, correct, games, dailies
+        case weekStart = "week_start"
+        case dailyAvg = "daily_avg"
+        case errorsCorrected = "errors_corrected"
+        case questsDone = "quests_done"
+        case coteMoves = "cote_moves"
+    }
+
+    public init(weekStart: String, answers: Int, correct: Int, games: Int, dailies: Int, dailyAvg: Double?,
+                errorsCorrected: Int, questsDone: Int, coteMoves: [CoteMove]) {
+        self.weekStart = weekStart
+        self.answers = answers
+        self.correct = correct
+        self.games = games
+        self.dailies = dailies
+        self.dailyAvg = dailyAvg
+        self.errorsCorrected = errorsCorrected
+        self.questsDone = questsDone
+        self.coteMoves = coteMoves
     }
 }
 

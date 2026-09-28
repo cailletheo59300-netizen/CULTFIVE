@@ -1,13 +1,13 @@
 {
- "id": "1034d6cc-0006-4030-898a-72b3a5c01145",
+ "id": "d3e662ff-a405-4c41-a340-44816d97df6b",
  "type": "numeric",
  "total": 5,
- "prompt": "Combien font 15 % de 80 ?",
+ "prompt": "Combien font les 4/9 de 72 ?",
  "payload": {
   "decimals": 0,
   "allow_negative": false
  },
  "position": 1,
  "domain_id": "calc",
- "subdomain_id": "calc.percent"
+ "subdomain_id": "calc.fractions"
 }
