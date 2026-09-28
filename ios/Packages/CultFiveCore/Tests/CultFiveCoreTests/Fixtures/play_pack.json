@@ -4,234 +4,235 @@
  "ranked": true,
  "questions": [
   {
-   "id": "f5344b0a-cda2-463d-8ca8-d9c0926a373f",
-   "type": "mcq",
-   "answer": {
-    "option_id": "18e1a53a"
-   },
-   "prompt": "Quelle est la monnaie de l'Ouganda ?",
-   "source": "Wikidata",
-   "payload": {
-    "options": [
-     {
-      "id": "b0408e8e",
-      "text": "Shilling kényan"
-     },
-     {
-      "id": "88515aca",
-      "text": "Livre sud-soudanaise"
-     },
-     {
-      "id": "18e1a53a",
-      "text": "Shilling ougandais"
-     },
-     {
-      "id": "d1251c30",
-      "text": "Franc Djibouti"
-     }
-    ]
-   },
-   "expected": 0.42,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.countries.currency_uganda",
-   "difficulty": 50,
-   "fact_as_of": "2026-09-26",
-   "explanation": "En Ouganda, on paie en shilling ougandais.",
-   "has_context": false,
-   "subdomain_id": "geography.countries"
-  },
-  {
-   "id": "31162f78-f1e8-4232-a264-076fd43531c7",
-   "type": "mcq",
-   "answer": {
-    "option_id": "dc94ebfc"
-   },
-   "prompt": "Quel groupe sanguin est donneur universel pour les globules rouges ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "ac2e1749",
-      "text": "A positif"
-     },
-     {
-      "id": "34960c2f",
-      "text": "B négatif"
-     },
-     {
-      "id": "1e6e7145",
-      "text": "AB positif"
-     },
-     {
-      "id": "dc94ebfc",
-      "text": "O négatif"
-     }
-    ]
-   },
-   "expected": 0.46,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "science",
-   "concept_id": "science.human_body.blood_types",
-   "difficulty": 55,
-   "fact_as_of": null,
-   "explanation": "O− peut être transfusé à presque tout le monde. AB+ est receveur universel.",
-   "has_context": false,
-   "subdomain_id": "science.human_body"
-  },
-  {
-   "id": "ba8ada06-c36a-4c0b-aaf2-50926183e707",
+   "id": "ffc7d4ef-674c-4f02-b0b3-4857c4ac492f",
    "type": "numeric",
    "answer": {
-    "value": 85,
-    "tolerance": 0
+    "value": 340,
+    "tolerance": 20
    },
-   "prompt": "Quel nombre suit : 100, 99, 97, 94, 90, … ?",
+   "prompt": "Environ combien de mètres par seconde parcourt le son dans l'air ?",
    "source": null,
    "payload": {
+    "unit": "m/s",
     "decimals": 0,
     "allow_negative": false
    },
    "expected": 0.5,
    "has_hint": false,
    "takeaway": null,
-   "domain_id": "logic",
-   "concept_id": "logic.sequences.minus_growing",
+   "domain_id": "science",
+   "concept_id": "science.physics.speed_of_sound",
    "difficulty": 50,
    "fact_as_of": null,
-   "explanation": "On retire 1, 2, 3, 4, puis 5 : 90 − 5 = 85.",
+   "explanation": "Environ 340 m/s à 15 °C. Compter les secondes entre l'éclair et le tonnerre puis diviser par 3 donne la distance de l'orage en km.",
    "has_context": false,
-   "subdomain_id": "logic.sequences"
+   "subdomain_id": "science.physics"
   },
   {
-   "id": "33e5e2e7-56a9-446f-bf77-4df78dc8be44",
+   "id": "2b1c468f-d669-476d-8783-0ea907e64738",
+   "type": "map_pick",
+   "answer": {
+    "option_id": "7f2c572a"
+   },
+   "prompt": "Où se trouve Riyad ? Touche le bon point.",
+   "source": "Wikidata",
+   "payload": {
+    "region": {
+     "lat": 29.59,
+     "lon": 52.55,
+     "span": 43.9
+    },
+    "options": [
+     {
+      "id": "7f2c572a",
+      "lat": 24.65,
+      "lon": 46.71
+     },
+     {
+      "id": "5e0a57da",
+      "lat": 34.532777777,
+      "lon": 69.165833333
+     },
+     {
+      "id": "86137462",
+      "lat": 33.315277777,
+      "lon": 44.366111111
+     },
+     {
+      "id": "6aa7db20",
+      "lat": 31.95,
+      "lon": 35.933333333
+     }
+    ]
+   },
+   "expected": 0.74,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "geography",
+   "concept_id": "geography.countries.map_saudi_arabia",
+   "difficulty": 44,
+   "fact_as_of": null,
+   "explanation": "Riyad est la capitale de l'Arabie saoudite. Les autres points : Kaboul, Bagdad et Amman.",
+   "has_context": false,
+   "subdomain_id": "geography.countries"
+  },
+  {
+   "id": "7cddfa66-2601-4294-b1c3-28d8dda8c2a0",
    "type": "mcq",
    "answer": {
-    "option_id": "debb7ca4"
+    "option_id": "9bfc3ffc"
    },
-   "prompt": "À quel siècle remonte la naissance de Florence Nightingale ?",
+   "prompt": "Qu'est-ce que le corail ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "9bfc3ffc",
+      "text": "Un animal"
+     },
+     {
+      "id": "26019f76",
+      "text": "Une roche"
+     },
+     {
+      "id": "1b0507bf",
+      "text": "Une plante"
+     },
+     {
+      "id": "853bf6f1",
+      "text": "Une algue"
+     }
+    ]
+   },
+   "expected": 0.61,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "nature",
+   "concept_id": "nature.marine.coral",
+   "difficulty": 45,
+   "fact_as_of": null,
+   "explanation": "Des colonies de minuscules animaux, les polypes, qui fabriquent un squelette calcaire.",
+   "has_context": false,
+   "subdomain_id": "nature.marine"
+  },
+  {
+   "id": "96c21e77-5841-4647-8a04-3eaf3f5bb2d9",
+   "type": "mcq",
+   "answer": {
+    "option_id": "a142ff5f"
+   },
+   "prompt": "Environ combien de fois bat le cœur d'un adulte au repos, par minute ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "10435b96",
+      "text": "150 à 200 fois"
+     },
+     {
+      "id": "572dfb7e",
+      "text": "20 à 30 fois"
+     },
+     {
+      "id": "c820cb14",
+      "text": "10 fois"
+     },
+     {
+      "id": "a142ff5f",
+      "text": "60 à 100 fois"
+     }
+    ]
+   },
+   "expected": 0.79,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "science",
+   "concept_id": "science.human_body.heartbeat",
+   "difficulty": 35,
+   "fact_as_of": null,
+   "explanation": "Entre 60 et 100 battements par minute ; moins chez les sportifs entraînés.",
+   "has_context": false,
+   "subdomain_id": "science.human_body"
+  },
+  {
+   "id": "af94b6ba-4787-4ed3-809f-0994186f509f",
+   "type": "mcq",
+   "answer": {
+    "option_id": "9bcbda20"
+   },
+   "prompt": "Qui a créé le personnage d'Astérix, adapté ensuite au cinéma ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "a146f9f9",
+      "text": "Hergé"
+     },
+     {
+      "id": "9bcbda20",
+      "text": "Goscinny et Uderzo"
+     },
+     {
+      "id": "3a15c26e",
+      "text": "Franquin"
+     },
+     {
+      "id": "15718f37",
+      "text": "Morris"
+     }
+    ]
+   },
+   "expected": 0.61,
+   "has_hint": false,
+   "takeaway": null,
+   "domain_id": "cinema",
+   "concept_id": "cinema.animation.asterix_studio",
+   "difficulty": 45,
+   "fact_as_of": null,
+   "explanation": "René Goscinny au scénario et Albert Uderzo au dessin, en 1959.",
+   "has_context": false,
+   "subdomain_id": "cinema.animation"
+  },
+  {
+   "id": "54feb9d7-d054-4236-8c99-82876d437379",
+   "type": "mcq",
+   "answer": {
+    "option_id": "b240a57b"
+   },
+   "prompt": "Joseph Fourier est né au…",
    "source": "Wikidata",
    "payload": {
     "options": [
      {
-      "id": "aec39a74",
+      "id": "f8668c0c",
+      "text": "XVIe siècle"
+     },
+     {
+      "id": "1070750b",
       "text": "XVIIe siècle"
      },
      {
-      "id": "515e708f",
+      "id": "b240a57b",
       "text": "XVIIIe siècle"
      },
      {
-      "id": "debb7ca4",
-      "text": "XIXe siècle"
-     },
-     {
-      "id": "774580ff",
+      "id": "d20db840",
       "text": "XXe siècle"
      }
     ],
     "keep_order": true
    },
-   "expected": 0.51,
+   "expected": 0.66,
    "has_hint": false,
    "takeaway": null,
    "domain_id": "history",
-   "concept_id": "history.contemporary.century_florence_nightingale",
-   "difficulty": 45,
+   "concept_id": "history.modern.century_joseph_fourier",
+   "difficulty": 46,
    "fact_as_of": null,
-   "explanation": "Florence Nightingale, infirmière britannique, est née en 1820 et morte en 1910.",
+   "explanation": "Joseph Fourier, mathématicien et physicien français, est né en 1768 et mort en 1830.",
    "has_context": false,
-   "subdomain_id": "history.contemporary"
-  },
-  {
-   "id": "7cc2b884-0c65-4ba4-8e7a-d46ec60f283a",
-   "type": "mcq",
-   "answer": {
-    "option_id": "0573ea29"
-   },
-   "prompt": "De quel pays viennent les briques Lego ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "e10b3fb9",
-      "text": "Allemagne"
-     },
-     {
-      "id": "18428a74",
-      "text": "Pays-Bas"
-     },
-     {
-      "id": "8b09500e",
-      "text": "Suède"
-     },
-     {
-      "id": "0573ea29",
-      "text": "Danemark"
-     }
-    ]
-   },
-   "expected": 0.71,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "tech",
-   "concept_id": "tech.brands.lego",
-   "difficulty": 40,
-   "fact_as_of": null,
-   "explanation": "« Leg godt » signifie « joue bien » en danois.",
-   "has_context": false,
-   "subdomain_id": "tech.brands"
-  },
-  {
-   "id": "99371443-112f-4c2d-9e93-ebe71dcba8cf",
-   "type": "map_pick",
-   "answer": {
-    "option_id": "b4974e88"
-   },
-   "prompt": "Touche l'emplacement de Bandar Seri Begawan.",
-   "source": "Wikidata",
-   "payload": {
-    "region": {
-     "lat": 11.16,
-     "lon": 107.72,
-     "span": 33.6
-    },
-    "options": [
-     {
-      "id": "b4974e88",
-      "lat": 4.916666666,
-      "lon": 114.916666666
-     },
-     {
-      "id": "249bc308",
-      "lat": 1.3,
-      "lon": 103.8
-     },
-     {
-      "id": "ad8bd795",
-      "lat": 13.75,
-      "lon": 100.516666666
-     },
-     {
-      "id": "b5988535",
-      "lat": 21.0245,
-      "lon": 105.84117
-     }
-    ]
-   },
-   "expected": 0.28,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.countries.map_brunei",
-   "difficulty": 57,
-   "fact_as_of": null,
-   "explanation": "Bandar Seri Begawan est la capitale de Brunei. Les autres points : Singapour, Bangkok et Hanoï.",
-   "has_context": false,
-   "subdomain_id": "geography.countries"
+   "subdomain_id": "history.modern"
   }
  ],
- "session_id": "3d899063-1d92-4c3e-b3d9-155b134b24b2"
+ "session_id": "2f2a3b6a-3beb-426e-a15c-0e44402b941a"
 }

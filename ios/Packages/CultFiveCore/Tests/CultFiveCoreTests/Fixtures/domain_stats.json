@@ -1,95 +1,93 @@
 {
- "cote": 1064,
- "level": 54,
- "avg_ms": 3033,
+ "cote": 1137,
+ "level": 58,
+ "avg_ms": 2900,
  "placed": false,
  "correct": 2,
  "history": [
   {
    "day": "2027-03-01",
-   "level": 53.7
+   "level": 57.9
   }
  ],
- "answered": 3,
+ "answered": 2,
  "domain_id": "geography",
  "placement": 0,
  "subdomains": [
   {
    "id": "geography.capitals",
-   "cote": 1064,
+   "cote": 1137,
    "name": "Capitales",
-   "level": 54,
+   "level": 58,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 296,
    "placement": 0,
-   "reliability": 0.2
+   "reliability": 0.12
   },
   {
    "id": "geography.flags",
-   "cote": 1064,
+   "cote": 1137,
    "name": "Drapeaux",
-   "level": 54,
+   "level": 58,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 198,
    "placement": 0,
-   "reliability": 0.2
+   "reliability": 0.12
   },
   {
    "id": "geography.countries",
-   "cote": 1064,
+   "cote": 1137,
    "name": "Pays & villes",
-   "level": 54,
+   "level": 58,
    "placed": false,
    "correct": 2,
-   "answered": 3,
+   "answered": 2,
    "available": 854,
-   "placement": 1,
-   "reliability": 0.2
+   "placement": 0,
+   "reliability": 0.12
   },
   {
    "id": "geography.relief",
-   "cote": 1064,
+   "cote": 1137,
    "name": "Fleuves, mers & reliefs",
-   "level": 54,
+   "level": 58,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 150,
    "placement": 0,
-   "reliability": 0.2
+   "reliability": 0.12
   },
   {
    "id": "geography.monuments",
-   "cote": 1064,
+   "cote": 1137,
    "name": "Monuments & patrimoine",
-   "level": 54,
+   "level": 58,
    "placed": false,
    "correct": 0,
    "answered": 0,
    "available": 192,
    "placement": 0,
-   "reliability": 0.2
+   "reliability": 0.12
   }
  ],
- "reliability": 0.2,
+ "reliability": 0.12,
  "by_difficulty": [
   {
-   "band": "medium",
-   "correct": 2,
-   "answered": 3
-  }
- ],
- "recent_errors": [
+   "band": "hard",
+   "correct": 1,
+   "answered": 1
+  },
   {
-   "label": "Situer Singapour",
-   "since": "2027-03-01T08:00:10+00:00",
-   "state": "failed",
-   "concept_id": "geography.countries.map_singapore"
+   "band": "medium",
+   "correct": 1,
+   "answered": 1
   }
  ],
+ "recent_errors": [],
  "concepts_mastered": 0
 }

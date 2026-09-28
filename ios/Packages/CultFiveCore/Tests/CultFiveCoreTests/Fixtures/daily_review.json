@@ -1,123 +1,137 @@
 [
  {
-  "id": "41ce3df3-dfc6-4394-85f9-bc511a306718",
+  "id": "5c7410fa-acd3-4ce5-9010-cdbc86bf409f",
   "type": "mcq",
   "given": {
-   "option_id": "79929421"
+   "option_id": "685c74a2"
   },
   "answer": {
-   "option_id": "79929421"
+   "option_id": "685c74a2"
   },
-  "prompt": "« Donner du fil à retordre » à quelqu'un, c'est…",
-  "source": null,
+  "prompt": "Avec quelle monnaie paie-t-on aux Seychelles ?",
+  "source": "Wikidata",
   "payload": {
    "options": [
     {
-     "id": "cc2d9a26",
-     "text": "lui apprendre la couture"
+     "id": "df0e7769",
+     "text": "Dinar libyen"
     },
     {
-     "id": "0c2719c7",
-     "text": "lui faire un cadeau"
+     "id": "a931641b",
+     "text": "Franc CFA d'Afrique centrale"
     },
     {
-     "id": "8983f238",
-     "text": "le tromper"
+     "id": "685c74a2",
+     "text": "Roupie seychelloise"
     },
     {
-     "id": "79929421",
-     "text": "lui causer des difficultés"
+     "id": "c4eababa",
+     "text": "Shilling tanzanien"
     }
    ]
   },
   "position": 1,
   "takeaway": null,
-  "domain_id": "french",
+  "domain_id": "geography",
   "counted_ms": 3800,
-  "fact_as_of": null,
+  "fact_as_of": "2026-09-26",
   "is_correct": true,
-  "explanation": "Retordre le fil (le tordre à nouveau pour le renforcer) était un travail long et pénible.",
-  "subdomain_id": "french.expressions"
+  "explanation": "Aux Seychelles, on paie en roupie seychelloise.",
+  "subdomain_id": "geography.countries"
  },
  {
-  "id": "af0d14fb-4ac5-493e-b5fb-462f77c95761",
-  "type": "map_pick",
+  "id": "f4ac2f7d-7159-42f0-8eca-58220e185e32",
+  "type": "true_false",
   "given": {
    "value": -999999,
    "option_id": "nope"
   },
   "answer": {
-   "option_id": "acb4b894"
+   "value": false
   },
-  "prompt": "Où se trouve Singapour ? Touche le bon point.",
-  "source": "Wikidata",
-  "payload": {
-   "region": {
-    "lat": 11.16,
-    "lon": 112.39,
-    "span": 33.6
-   },
-   "options": [
-    {
-     "id": "acb4b894",
-     "lat": 1.3,
-     "lon": 103.8
-    },
-    {
-     "id": "fe1811f9",
-     "lat": 14.595833333,
-     "lon": 120.977222222
-    },
-    {
-     "id": "fdb03d03",
-     "lat": 4.916666666,
-     "lon": 114.916666666
-    },
-    {
-     "id": "52339469",
-     "lat": 21.0245,
-     "lon": 105.84117
-    }
-   ]
-  },
+  "prompt": "« Actually » en anglais veut dire « actuellement » en français.",
+  "source": null,
+  "payload": {},
   "position": 2,
   "takeaway": null,
-  "domain_id": "geography",
+  "domain_id": "french",
   "counted_ms": 5100,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Singapour est la capitale de Singapour. Les autres points : Manille, Bandar Seri Begawan et Hanoï.",
-  "subdomain_id": "geography.countries"
+  "explanation": "C'est un faux ami : « actually » signifie « en fait ». « Actuellement » se dit « currently ».",
+  "subdomain_id": "french.vocabulary"
  },
  {
-  "id": "d3485515-9cc3-42ac-bb87-f5260268ac71",
-  "type": "numeric",
+  "id": "9d8c4007-139f-4a02-b811-faf827b9cb6b",
+  "type": "pairs",
   "given": {
-   "value": 340
+   "pairs": {
+    "06b296e0": "005e12e4",
+    "4b4893e2": "1a7d8aa7",
+    "c6d30657": "ce9db581",
+    "d1b09cc8": "58eeea0b"
+   }
   },
   "answer": {
-   "value": 340,
-   "tolerance": 20
+   "pairs": {
+    "06b296e0": "005e12e4",
+    "4b4893e2": "1a7d8aa7",
+    "c6d30657": "ce9db581",
+    "d1b09cc8": "58eeea0b"
+   }
   },
-  "prompt": "Environ combien de mètres par seconde parcourt le son dans l'air ?",
+  "prompt": "Associe chaque artiste à son œuvre.",
   "source": null,
   "payload": {
-   "unit": "m/s",
-   "decimals": 0,
-   "allow_negative": false
+   "left": [
+    {
+     "id": "c6d30657",
+     "text": "Michel-Ange"
+    },
+    {
+     "id": "4b4893e2",
+     "text": "Botticelli"
+    },
+    {
+     "id": "d1b09cc8",
+     "text": "Raphaël"
+    },
+    {
+     "id": "06b296e0",
+     "text": "Léonard de Vinci"
+    }
+   ],
+   "right": [
+    {
+     "id": "ce9db581",
+     "text": "Plafond de la chapelle Sixtine"
+    },
+    {
+     "id": "1a7d8aa7",
+     "text": "La Naissance de Vénus"
+    },
+    {
+     "id": "005e12e4",
+     "text": "La Cène"
+    },
+    {
+     "id": "58eeea0b",
+     "text": "L'École d'Athènes"
+    }
+   ]
   },
   "position": 3,
   "takeaway": null,
-  "domain_id": "science",
+  "domain_id": "history",
   "counted_ms": 6400,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Environ 340 m/s à 15 °C. Compter les secondes entre l'éclair et le tonnerre puis diviser par 3 donne la distance de l'orage en km.",
-  "subdomain_id": "science.physics"
+  "explanation": "Quatre géants de la Renaissance italienne. La Cène orne le réfectoire d'un couvent de Milan.",
+  "subdomain_id": "history.modern"
  },
  {
-  "id": "2026a298-8dac-488e-869b-061c99aff311",
-  "type": "true_false",
+  "id": "36367f84-61ca-49d4-9986-e070c793f2f0",
+  "type": "numeric",
   "given": {
    "order": [
     "a",
@@ -125,48 +139,62 @@
    ]
   },
   "answer": {
-   "value": false
+   "value": 1889,
+   "tolerance": 0
   },
-  "prompt": "La guerre de Cent Ans a duré exactement cent ans.",
+  "prompt": "Pour quelle Exposition universelle la tour Eiffel est-elle inaugurée ? (année)",
   "source": null,
-  "payload": {},
+  "payload": {
+   "decimals": 0,
+   "allow_negative": false
+  },
   "position": 4,
   "takeaway": null,
-  "domain_id": "history",
+  "domain_id": "arts",
   "counted_ms": 8200,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "Elle dure 116 ans, de 1337 à 1453, avec de longues trêves.",
-  "subdomain_id": "history.middle_ages"
+  "explanation": "En 1889, pour le centenaire de la Révolution. Elle devait être démontée au bout de 20 ans.",
+  "subdomain_id": "arts.architecture"
  },
  {
-  "id": "ff99f784-9bbd-4b6c-927b-5771bb0287d8",
-  "type": "mcq",
+  "id": "9df0683c-d538-493f-b093-84ba2ef21f4c",
+  "type": "ordering",
   "given": {
-   "option_id": "359e41f4"
+   "order": [
+    "b1548112",
+    "7aa1b77c",
+    "6c479ce6",
+    "a12914b1"
+   ]
   },
   "answer": {
-   "option_id": "359e41f4"
+   "order": [
+    "b1548112",
+    "7aa1b77c",
+    "6c479ce6",
+    "a12914b1"
+   ]
   },
-  "prompt": "Deux remises successives de 50 % équivalent à une remise de…",
+  "prompt": "Classe ces volumes du plus petit au plus grand.",
   "source": null,
   "payload": {
-   "options": [
+   "items": [
     {
-     "id": "364c3597",
-     "text": "50 %"
+     "id": "6c479ce6",
+     "text": "75 cL"
     },
     {
-     "id": "d630b563",
-     "text": "100 %"
+     "id": "a12914b1",
+     "text": "1,5 L"
     },
     {
-     "id": "359e41f4",
-     "text": "75 %"
+     "id": "b1548112",
+     "text": "25 cL"
     },
     {
-     "id": "e5567992",
-     "text": "25 %"
+     "id": "7aa1b77c",
+     "text": "0,5 L"
     }
    ]
   },
@@ -176,7 +204,7 @@
   "counted_ms": 4300,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Après la première remise il reste 50 %, et la seconde en retire la moitié : il reste 25 % du prix. La remise totale est de 75 %.",
-  "subdomain_id": "calc.percent"
+  "explanation": "25 cL = 0,25 L ; 0,5 L ; 75 cL = 0,75 L ; 1,5 L.",
+  "subdomain_id": "calc.conversions"
  }
 ]

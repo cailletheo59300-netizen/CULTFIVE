@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1 — Jouer compact, questions à ta cote
+- **Écran Jouer** repensé : grande carte « Partie rapide », Surprise / Défi / Erreurs en pastilles sur une ligne, domaines en grille de 3 cases pleines de couleur (pictogramme, cote + rang ou placement, ★ favoris). 4 rangées au lieu de 6, cote globale en haut.
+- **Questions choisies par écart de cote** (migration 0015) : surtout un peu sous ta cote ou pile à ta cote, quelques-unes plus accessibles ou au-dessus. Réussite ≈ 65 % en partie classée (au lieu de 55 %), Défi ≈ 45 %. Simulation `70_rating.sql` mise à jour.
+
 ## 0.8.0 — Cote CULT
 - **Cote CULT** par domaine et globale (1000 = niveau médian, rangs Curieux → Encyclopédie). Cachée pendant **5 parties de placement** (« Placement 2/5 »), puis dévoilée avec célébration ; nouveau rang célébré. Affichée sur les tuiles Jouer, la page domaine (courbe en cote), le profil (carte Cote CULT), la feuille de choix, le résultat du Daily et la carte de partage.
 - **Parties plus exigeantes** : parties classées visées à ~55 % de réussite (au lieu de ~70 %), Défi ~40 %. Placement plus rapide (pas doublé sur les 50 premières réponses).

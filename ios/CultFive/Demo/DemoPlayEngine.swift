@@ -110,10 +110,11 @@ final class DemoPlayEngine: @unchecked Sendable {
             case .adaptive: break
             }
         }
-        // Parties exigeantes : autour de 55 % de réussite (défi : ~40 %).
+        // Fenêtre de cote autour du joueur, comme le serveur (0015) : classé de −250 à +25 points de cote
+        // (≈ 65 % de réussite), défi de −150 à +250. 1 point de niveau = 17,37 points de cote.
         let mu = levels[domain] ?? 50
-        let shift: Double = mode == .challenge ? 8 : 2
-        return (mu + shift - 12) ... (mu + shift + 12)
+        let window: (Double, Double) = mode == .challenge ? (-150, 250) : (-250, 25)
+        return (mu + window.0 / 17.37) ... (mu + window.1 / 17.37)
     }
 
     /// Jamais une question déjà vue ; une seule par famille tant que possible ; la difficulté visée d'abord, puis élargie.

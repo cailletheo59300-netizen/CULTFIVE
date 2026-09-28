@@ -1,7 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Jouer : exploration. Quatre modes en cartes colorées, puis les domaines en tuiles vives avec leur niveau.
+/// Jouer : compact et coloré. Une grande carte « Partie rapide », trois pastilles de modes, puis les domaines
+/// en grille de 3 cases pleines (couleur du domaine, pictogramme, cote ou placement) : presque tout tient sur un écran.
 struct PlayHomeView: View {
     @Environment(AppModel.self) private var app
     @State private var skills: [SkillSummary] = []
@@ -15,19 +16,8 @@ struct PlayHomeView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ScrollView {
-                VStack(alignment: .leading, spacing: Space.xl) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Jouer").font(.cfDisplay)
-                        if let global = CoteCULT.global(skills), global.placed {
-                            Text("Ta cote CULT : **\(global.formatted)** · \(global.rank.name)")
-                                .font(.cfCallout).foregroundStyle(Color.inkSoft)
-                        } else {
-                            Text("Autant que tu veux. La difficulté s'ajuste à toi.")
-                                .font(.cfCallout).foregroundStyle(Color.inkSoft)
-                        }
-                    }
-                    .padding(.top, Space.l)
-
+                VStack(alignment: .leading, spacing: Space.l) {
+                    header
                     modes
                     domainsIndex
                 }
@@ -64,39 +54,51 @@ struct PlayHomeView: View {
         if let fresh = try? await app.service.skills() { skills = fresh }
     }
 
+    private var header: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text("Jouer").font(.cfDisplay)
+            Spacer()
+            if let global = CoteCULT.global(skills), global.placed {
+                VStack(alignment: .trailing, spacing: 0) {
+                    Text(global.formatted).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
+                        .foregroundStyle(Color.brand)
+                    Text(global.rank.name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                }
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Ta cote CULT : \(global.formatted), \(global.rank.name)")
+            }
+        }
+        .padding(.top, Space.l)
+    }
+
     private var modes: some View {
         let errors = app.profile?.activeErrors ?? 0
-        return LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
-            ModeCard(title: "Partie rapide", detail: "10 questions, tous domaines", symbol: "bolt.fill",
-                     colors: [Color(hex: 0x7B5CFF), Color(hex: 0x4B2FE0)]) {
-                playConfig = PlayConfig(mode: .quick)
-            }
-            ModeCard(title: "Mix surprise", detail: "On compose pour toi", symbol: "dice.fill",
-                     colors: [Color(hex: 0xFF6FA5), Color(hex: 0xE8457E)]) {
-                playConfig = PlayConfig(mode: .surprise)
-            }
-            ModeCard(title: "Défi", detail: "Un cran au-dessus", symbol: "flame.fill",
-                     colors: [Color(hex: 0xFF9A3D), Color(hex: 0xF76707)]) {
-                playConfig = PlayConfig(mode: .challenge)
-            }
-            ModeCard(title: "Mes erreurs", detail: errors > 0 ? "\(errors) à corriger" : "Rien à revoir", symbol: "arrow.uturn.backward",
-                     colors: [Color(hex: 0x2BD69A), Color(hex: 0x0CA678)], badge: errors > 0 ? "\(errors)" : nil,
-                     isEnabled: errors > 0) {
-                playConfig = PlayConfig(mode: .errors)
+        return VStack(spacing: 10) {
+            QuickPlayCard { playConfig = PlayConfig(mode: .quick) }
+            HStack(spacing: 10) {
+                ModePill(title: "Surprise", symbol: "dice.fill", tint: Color(hex: 0xE8457E)) {
+                    playConfig = PlayConfig(mode: .surprise)
+                }
+                ModePill(title: "Défi", symbol: "flame.fill", tint: Color(hex: 0xF76707)) {
+                    playConfig = PlayConfig(mode: .challenge)
+                }
+                ModePill(title: "Erreurs", symbol: "arrow.uturn.backward", tint: Color(hex: 0x0CA678),
+                         badge: errors > 0 ? "\(errors)" : nil, isEnabled: errors > 0) {
+                    playConfig = PlayConfig(mode: .errors)
+                }
             }
         }
     }
 
     private var domainsIndex: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text("Par domaine").font(.cfHeadline)
-                Text("Partie classée ou entraînement libre, à toi de choisir.").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-            }
-            LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
+        let interests = Set(app.profile?.interests ?? [])
+        return VStack(alignment: .leading, spacing: 10) {
+            Text("Par domaine").font(.cfHeadline)
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 10) {
                 ForEach(orderedDomains) { domain in
                     Button { setup = PlaySetupRequest(domainId: domain.id) } label: {
-                        DomainTile(domain: domain, skill: skills.first { $0.domainId == domain.id })
+                        DomainTile(domain: domain, skill: skills.first { $0.domainId == domain.id },
+                                   favorite: interests.contains(domain.id))
                     }
                     .buttonStyle(.row)
                     .contextMenu {
@@ -121,89 +123,139 @@ struct PlayHomeView: View {
     }
 }
 
-/// Mode de jeu : carte en dégradé, pictogramme dans une bulle, titre gras.
-private struct ModeCard: View {
+/// Partie rapide : grande carte violette, le geste principal de l'écran.
+private struct QuickPlayCard: View {
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 14) {
+                Image(systemName: "bolt.fill")
+                    .font(.system(.title2, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.sun)
+                    .frame(width: 50, height: 50)
+                    .background(.white.opacity(0.18), in: Circle())
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Partie rapide").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
+                    Text("10 questions · tous domaines").font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                }
+                Spacer(minLength: 0)
+                Image(systemName: "play.fill")
+                    .font(.system(.body, design: .rounded).weight(.black))
+                    .foregroundStyle(Color(hex: 0x3A1FB8))
+                    .frame(width: 44, height: 44)
+                    .background(Color.sun, in: Circle())
+            }
+            .padding(14)
+            .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+            .shadow(color: Color(hex: 0x3A1FB8).opacity(0.3), radius: 12, y: 6)
+        }
+        .buttonStyle(.row)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("10 questions de tous les domaines")
+    }
+}
+
+/// Mode secondaire : pastille teintée, pictogramme + titre, compteur éventuel.
+private struct ModePill: View {
     let title: String
-    let detail: String
     let symbol: String
-    let colors: [Color]
+    let tint: Color
     var badge: String? = nil
     var isEnabled = true
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            VStack(alignment: .leading, spacing: Space.s) {
-                HStack {
-                    Image(systemName: symbol)
-                        .font(.system(.title3, design: .rounded).weight(.heavy))
+            HStack(spacing: 6) {
+                Image(systemName: symbol).font(.system(.subheadline, design: .rounded).weight(.heavy))
+                Text(title).font(.system(.subheadline, design: .rounded).weight(.heavy))
+                    .lineLimit(1).minimumScaleFactor(0.75)
+                if let badge {
+                    Text(badge).font(.system(.caption2, design: .rounded).weight(.black)).monospacedDigit()
                         .foregroundStyle(.white)
-                        .frame(width: 42, height: 42)
-                        .background(.white.opacity(0.22), in: Circle())
-                    Spacer()
-                    if let badge {
-                        Text(badge).font(.system(.footnote, design: .rounded).weight(.black))
-                            .foregroundStyle(colors.last ?? .brand)
-                            .padding(.horizontal, 9).padding(.vertical, 4)
-                            .background(.white, in: Capsule())
-                    }
+                        .padding(.horizontal, 6).padding(.vertical, 2)
+                        .background(tint, in: Capsule())
                 }
-                Spacer(minLength: Space.s)
-                Text(title).font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(.white)
-                Text(detail).font(.cfFootnote).foregroundStyle(.white.opacity(0.85)).lineLimit(1).minimumScaleFactor(0.8)
             }
-            .padding(14)
-            .frame(maxWidth: .infinity, minHeight: 138, alignment: .leading)
-            .background(LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing),
-                        in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
-            .shadow(color: (colors.last ?? .brand).opacity(isEnabled ? 0.3 : 0), radius: 10, y: 6)
+            .foregroundStyle(tint)
+            .frame(maxWidth: .infinity, minHeight: 46)
+            .background(tint.opacity(0.13), in: Capsule())
         }
         .buttonStyle(.row)
         .disabled(!isEnabled)
-        .opacity(isEnabled ? 1 : 0.5)
+        .opacity(isEnabled ? 1 : 0.45)
         .accessibilityElement(children: .combine)
     }
 }
 
-/// Domaine : tuile blanche, pictogramme sur pastille colorée, cote CULT (ou placement en cours) et jauge.
+/// Domaine : case pleine de la couleur du domaine, gros pictogramme, nom, cote (ou placement) en bas.
 private struct DomainTile: View {
     let domain: DomainInfo
     let skill: SkillSummary?
+    var favorite = false
 
     var body: some View {
         let color = DomainPalette.color(domain.id)
-        VStack(alignment: .leading, spacing: 10) {
-            HStack {
+        let on = DomainPalette.onColor(domain.id)
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(alignment: .top) {
                 Image(systemName: DomainPalette.symbol(domain.id))
-                    .font(.system(.body, design: .rounded).weight(.bold))
-                    .foregroundStyle(DomainPalette.onColor(domain.id))
-                    .frame(width: 40, height: 40)
-                    .background(color, in: RoundedRectangle(cornerRadius: 13, style: .continuous))
-                Spacer()
-                if let skill, skill.rating.placed {
-                    Text(skill.rating.formatted)
-                        .font(.system(.title3, design: .rounded).weight(.black))
-                        .monospacedDigit()
-                        .foregroundStyle(color)
-                        .accessibilityLabel("Cote \(skill.rating.formatted), \(skill.rating.rank.name)")
+                    .font(.system(.title2, design: .rounded).weight(.bold))
+                    .foregroundStyle(on)
+                Spacer(minLength: 0)
+                if favorite {
+                    Image(systemName: "star.fill").font(.caption2.weight(.bold)).foregroundStyle(on.opacity(0.8))
+                        .accessibilityLabel("Favori")
                 }
             }
+            Spacer(minLength: 6)
             Text(domain.name)
-                .font(.system(.callout, design: .rounded).weight(.heavy))
-                .foregroundStyle(Color.ink)
-                .lineLimit(1).minimumScaleFactor(0.8)
-            if let skill, skill.rating.placed {
-                HStack(spacing: 6) {
-                    Text(skill.rating.rank.name).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkSoft)
-                    SkillBar(level: skill.level, reliability: skill.reliability, color: color)
-                }
-            } else if let skill, skill.answered > 0 {
-                PlacementDots(done: skill.rating.placementGames, color: color, compact: true)
-            } else {
-                Text("à découvrir").font(.cfFootnote).foregroundStyle(Color.inkSoft).frame(height: 10)
-            }
+                .font(.system(.footnote, design: .rounded).weight(.heavy))
+                .foregroundStyle(on)
+                .lineLimit(1).minimumScaleFactor(0.7)
+            status(on: on)
         }
-        .popCard(padding: 14)
+        .padding(12)
+        .frame(maxWidth: .infinity, minHeight: 108, alignment: .leading)
+        .background {
+            ZStack(alignment: .bottomTrailing) {
+                color
+                Image(systemName: DomainPalette.symbol(domain.id))
+                    .font(.system(size: 64, weight: .black))
+                    .foregroundStyle(on.opacity(0.1))
+                    .rotationEffect(.degrees(-12))
+                    .offset(x: 14, y: 12)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+        }
+        .shadow(color: color.opacity(0.28), radius: 8, y: 4)
         .accessibilityElement(children: .combine)
+    }
+
+    @ViewBuilder
+    private func status(on: Color) -> some View {
+        if let skill, skill.rating.placed {
+            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                Text(skill.rating.formatted).font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
+                Text(skill.rating.rank.name).font(.system(.caption2, design: .rounded).weight(.bold)).opacity(0.8)
+                    .lineLimit(1).minimumScaleFactor(0.6)
+            }
+            .foregroundStyle(on)
+            .accessibilityLabel("Cote \(skill.rating.formatted), \(skill.rating.rank.name)")
+        } else if let skill, skill.answered > 0 {
+            HStack(spacing: 3) {
+                ForEach(0 ..< CoteCULT.placementGames, id: \.self) { i in
+                    Circle().fill(on.opacity(i < skill.rating.placementGames ? 1 : 0.3)).frame(width: 6, height: 6)
+                }
+                Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames)")
+                    .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit()
+                    .foregroundStyle(on.opacity(0.85))
+            }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Placement \(skill.rating.placementGames) sur \(CoteCULT.placementGames)")
+        } else {
+            Text("à découvrir").font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(on.opacity(0.8))
+        }
     }
 }

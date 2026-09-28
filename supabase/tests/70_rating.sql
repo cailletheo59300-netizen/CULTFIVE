@@ -18,7 +18,7 @@ begin
   perform tst.ok((select bool_and(q ? 'difficulty' and (q ->> 'expected')::real between 0 and 1)
                   from jsonb_array_elements(pack -> 'questions') q), 'pack : difficulty + expected');
   -- Plus exigeant : chances moyennes nettement sous 75 %.
-  perform tst.ok((select avg((q ->> 'expected')::real) from jsonb_array_elements(pack -> 'questions') q) < 0.72, 'pack exigeant');
+  perform tst.ok((select avg((q ->> 'expected')::real) from jsonb_array_elements(pack -> 'questions') q) between 0.45 and 0.85, 'pack autour de la cote');
 
   -- Partie classée tout juste : points, cote qui monte, placement 1/5.
   atts := '[]'::jsonb;
@@ -59,7 +59,7 @@ end $$;
 
 -- Simulation : trois joueurs de vrai niveau 30, 50 et 72 (cotes 652, 1000, 1382) jouent 8 parties classées de 10 en géographie.
 -- Ils répondent juste avec la probabilité du modèle. La cote doit retrouver l'ordre et s'approcher du vrai niveau,
--- et le joueur moyen doit réussir environ une question sur deux (partie exigeante, pas trop facile).
+-- et le joueur moyen doit réussir environ deux questions sur trois (questions autour de sa cote).
 do $$
 declare
   thetas real[] := array[30, 50, 72];
@@ -97,7 +97,7 @@ begin
   end loop;
   perform tst.ok(mus[1] < mus[2] and mus[2] < mus[3], 'ordre des joueurs');
   raise notice 'simulation : réussite du joueur moyen après placement %/%', late_ok, late_n;
-  perform tst.ok(late_ok::real / late_n between 0.35 and 0.75, 'réussite visée ~55 %');
+  perform tst.ok(late_ok::real / late_n between 0.52 and 0.78, 'réussite ~65 %');
   perform tst.ok((select bool_and((s ->> 'placed')::bool) from (
                     select (select s from jsonb_array_elements(public.skills_overview()) s where s ->> 'domain_id' = 'geography') s) t),
                  'placement terminé après 8 parties');

@@ -49,15 +49,19 @@ Premières réponses d'un nouvel utilisateur (σ=10, E=0,5) : ≈ +4 points pour
 `fiabilité = 1 − σ/σ₀` ∈ [0,1], affichée en mots : « à affiner » (<0,35), « correcte » (<0,65), « solide ».
 
 ## Sélection des questions (Jouer, Défi, Erreurs)
-Pour chaque question à servir, on tire une **bande** (0.8.0, plus exigeant : on joue à la limite de son niveau, ~55 % de réussite) :
-| Bande | Proba | Réussite visée E |
-|---|---|---|
-| Limite | 55 % | 0,50–0,65 |
-| Défi | 25 % | 0,35–0,50 |
-| Respiration | 15 % | 0,65–0,80 |
-| Exploration | 5 % | aléatoire, priorité aux questions peu calibrées |
-Mode Défi : 60 % à 0,30–0,45, 25 % à 0,45–0,60, 10 % à 0,20–0,30, 5 % d'exploration.
-(Avant 0.8.0 : cœur 0,60–0,80 et 20 % de consolidation à 0,80–0,93, soit ~70 % de réussite — jugé trop facile.)
+Pour chaque question à servir, on tire une **fenêtre de cote** autour de celle du joueur (0.8.1) : on ne vise pas un
+pourcentage, on sert des questions qui correspondent à la cote, et la réussite en découle. Écart = cote de la question − cote
+du joueur ; chances = 1 / (1 + 10^(écart/400)).
+| Fenêtre | Proba | Écart de cote | Chances |
+|---|---|---|---|
+| Un peu en dessous | 50 % | −250 à −75 | 60–81 % |
+| À ton niveau | 30 % | −100 à +25 | 46–64 % |
+| Accessibles | 15 % | −400 à −250 | 81–91 % |
+| Au-dessus | 5 % | +25 à +175 | 27–46 % |
+Mode Défi : 60 % de −50 à +100, 25 % de +100 à +250, 15 % de −150 à −50 (≈ 45 %).
+Réussite mesurée par simulation (4 domaines × 3 niveaux, 9 parties après placement) : **65 %** en moyenne. Elle varie selon
+la banque (44–80 %) : un domaine qui manque de questions faciles ou difficiles pour un niveau donné élargit sa fenêtre.
+(0.8.0 visait 55 % ; avant, ~70 % avec 20 % de questions « de consolidation » trop faciles.)
 Conversion : `b = μ − S·ln(E/(1−E))`. Filtres : statut `published`, concept non vu depuis 3 jours (7 jours si réussi), pas deux fois le même concept dans une série, questions des Daily présents/futurs exclues. Si la bande est vide, élargissement progressif (±5 puis ±10) puis n'importe quelle question du filtre.
 
 Chaque question du pack porte `difficulty` et `expected` (chances estimées pour ce joueur). L'app en tire une pastille

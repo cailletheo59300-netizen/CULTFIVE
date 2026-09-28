@@ -73,4 +73,5 @@ Pourquoi : levier viral (un défi se partage) sans imposer d'être connectés en
 
 ### D-024 · 2026-09-27 · Cote CULT, placement et parties plus exigeantes
 Pourquoi : le propriétaire veut « une vraie note cohérente selon le niveau, pas une appli trop simple ». Le niveau 0–100 ressemblait à une note sur 100 et les parties visaient ~70 % de réussite. Cote façon échecs (1000 = médian, 400 points = 10 contre 1), rangs nommés, cote cachée pendant 5 parties de placement (pas doublé) pour ne jamais afficher un chiffre peu fiable ; parties classées visées à ~55 % (Défi ~40 %). Le μ interne ne change pas (calibrage, sélection, radar) : la cote n'en est qu'une lecture, donc aucune migration de données. Validé par simulation SQL. Points de partie (difficulté + vitesse) pour donner une récompense immédiate même quand le taux de réussite baisse.
+**Révision 0.8.1** : le propriétaire préfère « des questions qui correspondent à l'elo » plutôt qu'un pourcentage visé, et trouve 55 % trop bas. Sélection par fenêtres d'écart de cote, légèrement sous la cote du joueur (une question pile à sa cote = 50 % par définition) : ~65 % mesurés.
 
