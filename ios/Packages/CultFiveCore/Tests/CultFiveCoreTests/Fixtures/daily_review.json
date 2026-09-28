@@ -1,46 +1,46 @@
 [
  {
-  "id": "e5df73bb-59d1-4ace-9c41-0f3fc789cf31",
+  "id": "e8575743-a8ec-4faf-8984-f3534974b565",
   "type": "mcq",
   "given": {
-   "option_id": "592ec1e5"
+   "option_id": "af29d4b9"
   },
   "answer": {
-   "option_id": "592ec1e5"
+   "option_id": "af29d4b9"
   },
-  "prompt": "Qu'est-ce qu'une cacophonie ?",
-  "source": null,
+  "prompt": "Avec quelle monnaie paie-t-on au Tadjikistan ?",
+  "source": "Wikidata",
   "payload": {
    "options": [
     {
-     "id": "0b0a0c25",
-     "text": "Un chant d'oiseau"
+     "id": "52dd7255",
+     "text": "Kyat"
     },
     {
-     "id": "bb511378",
-     "text": "Une belle mélodie"
+     "id": "af29d4b9",
+     "text": "Somoni"
     },
     {
-     "id": "592ec1e5",
-     "text": "Un mélange de sons désagréables"
+     "id": "7503eaec",
+     "text": "Dinar irakien"
     },
     {
-     "id": "e361ea88",
-     "text": "Un silence total"
+     "id": "6ffbc2b3",
+     "text": "Ringgit"
     }
    ]
   },
   "position": 1,
   "takeaway": null,
-  "domain_id": "french",
+  "domain_id": "geography",
   "counted_ms": 3800,
-  "fact_as_of": null,
+  "fact_as_of": "2026-09-26",
   "is_correct": true,
-  "explanation": "Du grec kakos (mauvais) et phônê (voix, son).",
-  "subdomain_id": "french.vocabulary"
+  "explanation": "Au Tadjikistan, on paie en somoni.",
+  "subdomain_id": "geography.countries"
  },
  {
-  "id": "8fcf2391-0705-4540-bd39-6fad81b59fb1",
+  "id": "3061d992-7665-467d-8b1f-2872a93ed357",
   "type": "numeric",
   "given": {
    "value": -999999,
@@ -66,29 +66,58 @@
   "subdomain_id": "calc.fractions"
  },
  {
-  "id": "8404329a-042b-419b-a08d-dab5e9b83465",
-  "type": "true_false",
+  "id": "6475c491-7c8e-45bb-afa6-baf8d7e20fdc",
+  "type": "ordering",
   "given": {
-   "value": true
+   "order": [
+    "277b0135",
+    "bfedc1f4",
+    "45ae1a7d",
+    "28d0a029"
+   ]
   },
   "answer": {
-   "value": true
+   "order": [
+    "277b0135",
+    "bfedc1f4",
+    "45ae1a7d",
+    "28d0a029"
+   ]
   },
-  "prompt": "L'imprimerie de Gutenberg existait déjà quand Christophe Colomb a atteint l'Amérique.",
-  "source": null,
-  "payload": {},
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "source": "Wikidata",
+  "payload": {
+   "items": [
+    {
+     "id": "277b0135",
+     "text": "James Madison"
+    },
+    {
+     "id": "45ae1a7d",
+     "text": "William Faulkner"
+    },
+    {
+     "id": "bfedc1f4",
+     "text": "Walt Whitman"
+    },
+    {
+     "id": "28d0a029",
+     "text": "Al Pacino"
+    }
+   ]
+  },
   "position": 3,
   "takeaway": null,
   "domain_id": "history",
   "counted_ms": 6400,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "La Bible de Gutenberg est imprimée vers 1455, près de 40 ans avant le voyage de 1492.",
-  "subdomain_id": "history.middle_ages"
+  "explanation": "James Madison (1751), Walt Whitman (1819), William Faulkner (1897), Al Pacino (1940).",
+  "subdomain_id": "history.contemporary"
  },
  {
-  "id": "26c90030-b26d-47a1-8b23-fb5fd4e6841d",
-  "type": "map_pick",
+  "id": "05bf43c5-efd8-49ff-a94c-105a92416e11",
+  "type": "true_false",
   "given": {
    "order": [
     "a",
@@ -96,96 +125,86 @@
    ]
   },
   "answer": {
-   "option_id": "0961609a"
+   "value": false
   },
-  "prompt": "Où se trouve São Tomé ? Touche le bon point.",
-  "source": "Wikidata",
-  "payload": {
-   "region": {
-    "lat": -1.64,
-    "lon": 6.52,
-    "span": 25.6
-   },
-   "options": [
-    {
-     "id": "0961609a",
-     "lat": 0.3375,
-     "lon": 6.728333333
-    },
-    {
-     "id": "3c5088fb",
-     "lat": 3.857777777,
-     "lon": 11.518055555
-    },
-    {
-     "id": "5ecd6e4d",
-     "lat": -8.838333333,
-     "lon": 13.234444444
-    },
-    {
-     "id": "6cda62ae",
-     "lat": 5.55602,
-     "lon": -0.1969
-    }
-   ]
-  },
+  "prompt": "Le premier iPhone est sorti en 2004.",
+  "source": null,
+  "payload": {},
   "position": 4,
   "takeaway": null,
-  "domain_id": "geography",
+  "domain_id": "tech",
   "counted_ms": 8200,
   "fact_as_of": null,
   "is_correct": false,
-  "explanation": "São Tomé est la capitale de Sao Tomé-et-Principe. Les autres points : Yaoundé, Luanda et Accra.",
-  "subdomain_id": "geography.countries"
+  "explanation": "Non, en 2007. Présenté par Steve Jobs en janvier 2007, il sort aux États-Unis le 29 juin 2007.",
+  "subdomain_id": "tech.inventions"
  },
  {
-  "id": "543ae801-215b-40ac-8b45-3ad41da3f54e",
-  "type": "ordering",
+  "id": "74653ca7-8bb6-4495-b9e1-e8c79bbe5685",
+  "type": "pairs",
   "given": {
-   "order": [
-    "f749bc81",
-    "e8e6e96a",
-    "9494a915",
-    "8271d6f6"
-   ]
+   "pairs": {
+    "08787b43": "07adf531",
+    "72325c48": "4753e6db",
+    "77460fa5": "f652e8a8",
+    "e8451367": "fa71270a"
+   }
   },
   "answer": {
-   "order": [
-    "f749bc81",
-    "e8e6e96a",
-    "9494a915",
-    "8271d6f6"
-   ]
+   "pairs": {
+    "08787b43": "07adf531",
+    "72325c48": "4753e6db",
+    "77460fa5": "f652e8a8",
+    "e8451367": "fa71270a"
+   }
   },
-  "prompt": "Classe ces compositeurs du plus ancien au plus récent.",
+  "prompt": "Associe chaque mot à son synonyme.",
   "source": null,
   "payload": {
-   "items": [
+   "left": [
     {
-     "id": "f749bc81",
-     "text": "Bach"
+     "id": "08787b43",
+     "text": "Onéreux"
     },
     {
-     "id": "e8e6e96a",
-     "text": "Mozart"
+     "id": "72325c48",
+     "text": "Fugace"
     },
     {
-     "id": "8271d6f6",
-     "text": "Debussy"
+     "id": "e8451367",
+     "text": "Opiniâtre"
     },
     {
-     "id": "9494a915",
-     "text": "Chopin"
+     "id": "77460fa5",
+     "text": "Candide"
+    }
+   ],
+   "right": [
+    {
+     "id": "f652e8a8",
+     "text": "Naïf"
+    },
+    {
+     "id": "fa71270a",
+     "text": "Tenace"
+    },
+    {
+     "id": "07adf531",
+     "text": "Coûteux"
+    },
+    {
+     "id": "4753e6db",
+     "text": "Bref"
     }
    ]
   },
   "position": 5,
   "takeaway": null,
-  "domain_id": "music",
+  "domain_id": "french",
   "counted_ms": 4300,
   "fact_as_of": null,
   "is_correct": true,
-  "explanation": "Bach (1685-1750), Mozart (1756-1791), Chopin (1810-1849), Debussy (1862-1918).",
-  "subdomain_id": "music.classical"
+  "explanation": "Onéreux : qui coûte cher. Fugace : qui dure peu. Opiniâtre : qui persévère. Candide : d'une innocence naïve (comme le héros de Voltaire).",
+  "subdomain_id": "french.synonyms"
  }
 ]

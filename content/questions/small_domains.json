@@ -1,15 +1,5 @@
 [
  {
-  "key": "logic-201",
-  "concept": "logic.sequences.pronic",
-  "label": "Suite 2, 6, 12, 20",
-  "type": "numeric",
-  "difficulty": 45,
-  "prompt": "Quel nombre suit : 2, 6, 12, 20, 30, … ?",
-  "answer": 42,
-  "explanation": "On ajoute 4, 6, 8, 10, puis 12 : 30 + 12 = 42. Ce sont aussi les produits n × (n + 1) : 6 × 7 = 42."
- },
- {
   "key": "logic-202",
   "concept": "logic.sequences.factorials",
   "label": "Factorielles",
@@ -1178,16 +1168,6 @@
   "prompt": "Combien de notes différentes compte la gamme do, ré, mi… ?",
   "answer": 7,
   "explanation": "Do, ré, mi, fa, sol, la, si : sept notes. Le do suivant commence l'octave."
- },
- {
-  "key": "music-202",
-  "concept": "music.classical.staff_lines",
-  "label": "Lignes de la portée",
-  "type": "numeric",
-  "difficulty": 30,
-  "prompt": "Combien de lignes compte une portée musicale ?",
-  "answer": 5,
-  "explanation": "Cinq lignes. Les notes se placent sur les lignes ou dans les interlignes."
  },
  {
   "key": "music-203",

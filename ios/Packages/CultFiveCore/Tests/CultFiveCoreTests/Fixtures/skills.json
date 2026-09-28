@@ -1,36 +1,25 @@
 [
  {
-  "cote": 1062,
-  "name": "Français",
-  "level": 54,
-  "placed": false,
-  "correct": 2,
-  "answered": 2,
-  "domain_id": "french",
-  "placement": 0,
-  "reliability": 0.08
- },
- {
-  "cote": 1013,
-  "name": "Géographie",
-  "level": 51,
-  "placed": false,
-  "correct": 1,
-  "answered": 2,
-  "domain_id": "geography",
-  "placement": 0,
-  "reliability": 0.07
- },
- {
-  "cote": 1041,
+  "cote": 1120,
   "name": "Histoire",
-  "level": 52,
+  "level": 57,
   "placed": false,
   "correct": 2,
   "answered": 2,
   "domain_id": "history",
   "placement": 0,
-  "reliability": 0.07
+  "reliability": 0.12
+ },
+ {
+  "cote": 1074,
+  "name": "Musique",
+  "level": 54,
+  "placed": false,
+  "correct": 2,
+  "answered": 2,
+  "domain_id": "music",
+  "placement": 0,
+  "reliability": 0.1
  },
  {
   "cote": 922,
@@ -44,29 +33,51 @@
   "reliability": 0.08
  },
  {
-  "cote": 1024,
-  "name": "Sciences",
-  "level": 51,
+  "cote": 1078,
+  "name": "Français",
+  "level": 54,
   "placed": false,
   "correct": 1,
   "answered": 1,
-  "domain_id": "science",
+  "domain_id": "french",
   "placement": 0,
-  "reliability": 0.03
+  "reliability": 0.08
+ },
+ {
+  "cote": 1041,
+  "name": "Géographie",
+  "level": 52,
+  "placed": false,
+  "correct": 1,
+  "answered": 1,
+  "domain_id": "geography",
+  "placement": 0,
+  "reliability": 0.05
+ },
+ {
+  "cote": 1041,
+  "name": "Logique",
+  "level": 52,
+  "placed": false,
+  "correct": 1,
+  "answered": 1,
+  "domain_id": "logic",
+  "placement": 0,
+  "reliability": 0.05
  },
  {
   "cote": 1047,
-  "name": "Arts & culture",
+  "name": "Sport",
   "level": 53,
   "placed": false,
   "correct": 1,
   "answered": 1,
-  "domain_id": "arts",
+  "domain_id": "sport",
   "placement": 0,
   "reliability": 0.04
  },
  {
-  "cote": 1027,
+  "cote": 1041,
   "name": "Cinéma",
   "level": 52,
   "placed": false,
@@ -77,46 +88,35 @@
   "reliability": 0.05
  },
  {
-  "cote": 1078,
-  "name": "Musique",
-  "level": 54,
-  "placed": false,
-  "correct": 1,
-  "answered": 1,
-  "domain_id": "music",
-  "placement": 0,
-  "reliability": 0.08
- },
- {
-  "cote": 1000,
-  "name": "Logique",
-  "level": 50,
-  "placed": false,
-  "correct": 0,
-  "answered": 0,
-  "domain_id": "logic",
-  "placement": 0,
-  "reliability": 0.0
- },
- {
-  "cote": 1000,
-  "name": "Sport",
-  "level": 50,
-  "placed": false,
-  "correct": 0,
-  "answered": 0,
-  "domain_id": "sport",
-  "placement": 0,
-  "reliability": 0.0
- },
- {
-  "cote": 1000,
+  "cote": 887,
   "name": "Technologie",
+  "level": 43,
+  "placed": false,
+  "correct": 0,
+  "answered": 1,
+  "domain_id": "tech",
+  "placement": 0,
+  "reliability": 0.03
+ },
+ {
+  "cote": 1000,
+  "name": "Sciences",
   "level": 50,
   "placed": false,
   "correct": 0,
   "answered": 0,
-  "domain_id": "tech",
+  "domain_id": "science",
+  "placement": 0,
+  "reliability": 0.0
+ },
+ {
+  "cote": 1000,
+  "name": "Arts & culture",
+  "level": 50,
+  "placed": false,
+  "correct": 0,
+  "answered": 0,
+  "domain_id": "arts",
   "placement": 0,
   "reliability": 0.0
  },

@@ -76,28 +76,6 @@
   "explanation": "0,375 = 375/1 000 = 3/8 (car 1/8 = 0,125)."
  },
  {
-  "key": "exp-007",
-  "concept": "calc.conversions.expert_seconds_day",
-  "label": "Secondes dans une journée",
-  "type": "numeric",
-  "difficulty": 70,
-  "prompt": "Combien de secondes y a-t-il dans une journée ?",
-  "answer": 86400,
-  "explanation": "24 h × 60 min × 60 s = 86 400 secondes.",
-  "unit": "s"
- },
- {
-  "key": "exp-008",
-  "concept": "calc.conversions.expert_kmh_ms",
-  "label": "36 km/h en m/s",
-  "type": "numeric",
-  "difficulty": 70,
-  "prompt": "Une voiture roule à 36 km/h. Combien de mètres parcourt-elle en une seconde ?",
-  "answer": 10,
-  "explanation": "36 000 m en 3 600 s, soit 10 m/s. Astuce : on divise les km/h par 3,6.",
-  "unit": "m"
- },
- {
   "key": "exp-009",
   "concept": "calc.conversions.expert_nautical_mile",
   "label": "Mille marin",
@@ -172,21 +150,6 @@
    "Qui s'abstient de boire"
   ],
   "explanation": "Un texte abscons est obscur, difficile à comprendre. Ne pas confondre avec « abstème », qui ne boit pas d'alcool."
- },
- {
-  "key": "exp-015",
-  "concept": "french.synonyms.expert_prolixe",
-  "label": "Contraire de prolixe",
-  "type": "mcq",
-  "difficulty": 72,
-  "prompt": "Quel est le contraire de « prolixe » ?",
-  "options": [
-   "Concis*",
-   "Bavard",
-   "Prolifique",
-   "Fertile"
-  ],
-  "explanation": "Prolixe : qui s'étend trop en paroles. Son contraire : concis, laconique."
  },
  {
   "key": "exp-016",
@@ -729,21 +692,6 @@
   "explanation": "Le foie produit la bile ; la vésicule biliaire ne fait que la stocker."
  },
  {
-  "key": "exp-053",
-  "concept": "science.human_body.expert_femur",
-  "label": "Plus long os",
-  "type": "mcq",
-  "difficulty": 66,
-  "prompt": "Quel est l'os le plus long du corps humain ?",
-  "options": [
-   "Le fémur*",
-   "Le tibia",
-   "L'humérus",
-   "Le péroné"
-  ],
-  "explanation": "Le fémur, l'os de la cuisse, mesure environ un quart de la taille d'un adulte."
- },
- {
   "key": "exp-054",
   "concept": "logic.sequences.expert_look_and_say",
   "label": "Suite de Conway",
@@ -752,16 +700,6 @@
   "prompt": "Quel nombre suit : 1, 11, 21, 1211, 111221, … ?",
   "answer": 312211,
   "explanation": "Chaque terme décrit le précédent : 111221 = « trois 1, deux 2, un 1 » → 312211."
- },
- {
-  "key": "exp-055",
-  "concept": "logic.sequences.expert_n_power_n",
-  "label": "Suite n puissance n",
-  "type": "numeric",
-  "difficulty": 80,
-  "prompt": "Quel nombre suit : 1, 4, 27, 256, … ?",
-  "answer": 3125,
-  "explanation": "1¹, 2², 3³, 4⁴… puis 5⁵ = 3 125."
  },
  {
   "key": "exp-056",
@@ -1444,21 +1382,6 @@
    "Une tortue"
   ],
   "explanation": "La méduse Turritopsis dohrnii peut redevenir polype après avoir été adulte."
- },
- {
-  "key": "exp-103",
-  "concept": "nature.marine.expert_whale_shark",
-  "label": "Plus grand poisson",
-  "type": "mcq",
-  "difficulty": 66,
-  "prompt": "Quel est le plus grand poisson du monde ?",
-  "options": [
-   "Le requin-baleine*",
-   "La baleine bleue",
-   "Le grand requin blanc",
-   "Le poisson-lune"
-  ],
-  "explanation": "La baleine bleue est plus grande, mais c'est un mammifère. Le requin-baleine dépasse 12 m."
  },
  {
   "key": "exp-104",

@@ -1,29 +1,29 @@
 {
- "id": "e5df73bb-59d1-4ace-9c41-0f3fc789cf31",
+ "id": "e8575743-a8ec-4faf-8984-f3534974b565",
  "type": "mcq",
  "total": 5,
- "prompt": "Qu'est-ce qu'une cacophonie ?",
+ "prompt": "Avec quelle monnaie paie-t-on au Tadjikistan ?",
  "payload": {
   "options": [
    {
-    "id": "0b0a0c25",
-    "text": "Un chant d'oiseau"
+    "id": "52dd7255",
+    "text": "Kyat"
    },
    {
-    "id": "bb511378",
-    "text": "Une belle mélodie"
+    "id": "af29d4b9",
+    "text": "Somoni"
    },
    {
-    "id": "592ec1e5",
-    "text": "Un mélange de sons désagréables"
+    "id": "7503eaec",
+    "text": "Dinar irakien"
    },
    {
-    "id": "e361ea88",
-    "text": "Un silence total"
+    "id": "6ffbc2b3",
+    "text": "Ringgit"
    }
   ]
  },
  "position": 1,
- "domain_id": "french",
- "subdomain_id": "french.vocabulary"
+ "domain_id": "geography",
+ "subdomain_id": "geography.countries"
 }

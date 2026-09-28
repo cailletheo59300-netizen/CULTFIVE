@@ -5,6 +5,8 @@
 - **Thèmes équilibrés** dans chaque partie de domaine (2 par thème sur 10 en Géographie, au lieu de parties dominées par « Pays & villes »).
 - **Révision espacée** des erreurs (1 j, 3 j, 7 j, 21 j) ; une révision due se glisse dans les parties classées du domaine et dans « Mes erreurs ».
 - Migration 0016, tests `80_algo.sql`, simulation : 66 % de réussite, niveau retrouvé à 1,8 point près.
+- **Qualité de la banque** : contrôles automatiques dans `build-seed.mjs` (doublons exacts et quasi-doublons, Vrai/Faux entre 40 et 60 % de « vrai ») ; 23 doublons retirés ; 13 Vrai/Faux inversés (33/33) ; le générateur Wikidata écarte les réponses devinables depuis l'énoncé (« Guinée → Franc guinéen », « Lettonie → Letton » : ~115 questions).
+- **Indices pour ~80 % des questions** (au lieu d'une seule) : initiale de la réponse, avec le nombre de lettres si besoin ; fourchette pour les nombres et les années. Les indices écrits à la main restent prioritaires.
 
 ## 0.8.1 — Jouer compact, questions à ta cote
 - **Écran Jouer** repensé : grande carte « Partie rapide », Surprise / Défi / Erreurs en pastilles sur une ligne, domaines en grille de 3 cases pleines de couleur (pictogramme, cote + rang ou placement, ★ favoris). 4 rangées au lieu de 6, cote globale en haut.

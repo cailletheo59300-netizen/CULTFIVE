@@ -576,24 +576,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-band-Q18233",
-  "concept": "music.popular.band_abba_q18233",
-  "label": "Groupe ABBA",
-  "type": "mcq",
-  "difficulty": 53,
-  "prompt": "Le groupe ABBA est originaire de quel pays ?",
-  "options": [
-   "Suède*",
-   "Norvège",
-   "Danemark",
-   "Finlande"
-  ],
-  "explanation": "ABBA est un groupe originaire de la Suède.",
-  "family": "band",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-band-Q182890",
   "concept": "music.popular.band_def_leppard_q182890",
   "label": "Groupe Def Leppard",
@@ -625,24 +607,6 @@
    "Australie"
   ],
   "explanation": "The Beach Boys est un groupe originaire des États-Unis.",
-  "family": "band",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-band-Q184386",
-  "concept": "music.popular.band_yes_q184386",
-  "label": "Groupe Yes",
-  "type": "mcq",
-  "difficulty": 64,
-  "prompt": "De quel pays vient le groupe Yes ?",
-  "options": [
-   "Royaume-Uni*",
-   "États-Unis",
-   "Irlande",
-   "Australie"
-  ],
-  "explanation": "Yes est un groupe originaire du Royaume-Uni.",
   "family": "band",
   "source": "Wikidata",
   "origin": "import"
@@ -1728,24 +1692,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-band-Q57138",
-  "concept": "music.popular.band_within_temptation_q57138",
-  "label": "Groupe Within Temptation",
-  "type": "mcq",
-  "difficulty": 66,
-  "prompt": "De quel pays vient le groupe Within Temptation ?",
-  "options": [
-   "Pays-Bas*",
-   "Brésil",
-   "France",
-   "Suède"
-  ],
-  "explanation": "Within Temptation est un groupe originaire des Pays-Bas.",
-  "family": "band",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-band-Q58381",
   "concept": "music.popular.band_duran_duran_q58381",
   "label": "Groupe Duran Duran",
@@ -2019,25 +1965,6 @@
    "Années 2000"
   ],
   "explanation": "Metallica s'est formé en 1981.",
-  "family": "band",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-bandd-Q18233",
-  "concept": "music.popular.band_abba_q18233",
-  "label": "Groupe ABBA",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 61,
-  "prompt": "Dans quelle décennie le groupe ABBA s'est-il formé ?",
-  "options": [
-   "Années 1960",
-   "Années 1970*",
-   "Années 1980",
-   "Années 1990"
-  ],
-  "explanation": "ABBA s'est formé en 1970.",
   "family": "band",
   "source": "Wikidata",
   "origin": "import"

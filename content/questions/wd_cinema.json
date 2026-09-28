@@ -378,6 +378,24 @@
   "origin": "import"
  },
  {
+  "key": "wd-cast-Q132689",
+  "concept": "cinema.actors.casablanca_q132689",
+  "label": "Casting de « Casablanca »",
+  "type": "mcq",
+  "difficulty": 56,
+  "prompt": "Qui fait partie de la distribution de « Casablanca » (1942) ?",
+  "options": [
+   "Ingrid Bergman*",
+   "William Holden",
+   "Clark Gable",
+   "Walt Disney"
+  ],
+  "explanation": "Ingrid Bergman joue dans « Casablanca », sorti en 1942. On y voit aussi Humphrey Bogart.",
+  "family": "film_cast",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
   "key": "wd-cast-Q133654",
   "concept": "cinema.actors.le_silence_des_agneaux_q133654",
   "label": "Casting de « Le Silence des agneaux »",
@@ -828,24 +846,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cast-Q171861",
-  "concept": "cinema.actors.the_artist_q171861",
-  "label": "Casting de « The Artist »",
-  "type": "mcq",
-  "difficulty": 61,
-  "prompt": "Qui fait partie de la distribution de « The Artist » (2011) ?",
-  "options": [
-   "John Goodman*",
-   "Marion Cotillard",
-   "Matt Damon",
-   "Daniel Craig"
-  ],
-  "explanation": "John Goodman joue dans « The Artist », sorti en 2011. On y voit aussi Jean Dujardin et Malcolm McDowell.",
-  "family": "film_cast",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cast-Q172241",
   "concept": "cinema.actors.les_evades_q172241",
   "label": "Casting de « Les Évadés »",
@@ -1242,24 +1242,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cast-Q184605",
-  "concept": "cinema.actors.2012_q184605",
-  "label": "Casting de « 2012 »",
-  "type": "mcq",
-  "difficulty": 61,
-  "prompt": "Qui fait partie de la distribution de « 2012 » (2009) ?",
-  "options": [
-   "Woody Harrelson*",
-   "Judi Dench",
-   "Michelle Rodríguez",
-   "Michael Fassbender"
-  ],
-  "explanation": "Woody Harrelson joue dans « 2012 », sorti en 2009. On y voit aussi Amanda Peet.",
-  "family": "film_cast",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cast-Q184768",
   "concept": "cinema.actors.le_parrain_2_q184768",
   "label": "Casting de « Le Parrain 2 »",
@@ -1363,24 +1345,6 @@
    "Diane Keaton"
   ],
   "explanation": "Jack Nicholson joue dans « Shining », sorti en 1980. On y voit aussi Shelley Duvall.",
-  "family": "film_cast",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cast-Q186587",
-  "concept": "cinema.actors.troie_q186587",
-  "label": "Casting de « Troie »",
-  "type": "mcq",
-  "difficulty": 60,
-  "prompt": "Qui fait partie de la distribution de « Troie » (2004) ?",
-  "options": [
-   "Brad Pitt*",
-   "Katie Holmes",
-   "Kirsten Dunst",
-   "Jake Gyllenhaal"
-  ],
-  "explanation": "Brad Pitt joue dans « Troie », sorti en 2004. On y voit aussi Sean Bean et Diane Kruger.",
   "family": "film_cast",
   "source": "Wikidata",
   "origin": "import"
@@ -2250,24 +2214,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cast-Q484442",
-  "concept": "cinema.actors.spider_man_q484442",
-  "label": "Casting de « Spider-Man »",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "Lequel de ces acteurs joue dans « Spider-Man » (2002) ?",
-  "options": [
-   "Kirsten Dunst*",
-   "Adrien Brody",
-   "John Cleese",
-   "Jennifer Garner"
-  ],
-  "explanation": "Kirsten Dunst joue dans « Spider-Man », sorti en 2002. On y voit aussi Lucy Liu et James Franco.",
-  "family": "film_cast",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cast-Q48673898",
   "concept": "cinema.actors.green_book_sur_les_routes_du_s_q48673898",
   "label": "Casting de « Green Book : Sur les routes du Sud »",
@@ -2767,6 +2713,24 @@
    "Ang Lee"
   ],
   "explanation": "« Le Seigneur des anneaux : Le Retour du roi » a été réalisé par Peter Jackson (réalisateur, scénariste et producteur néo-zélandais) et est sorti en 2003.",
+  "family": "film",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-film-Q132689",
+  "concept": "cinema.directors.film_casablanca_q132689",
+  "label": "Auteur de « Casablanca »",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Qui a réalisé le film « Casablanca » (1942) ?",
+  "options": [
+   "Michael Curtiz*",
+   "Orson Welles",
+   "Charlie Chaplin",
+   "Billy Wilder"
+  ],
+  "explanation": "« Casablanca » a été réalisé par Michael Curtiz (réalisateur américain d'origine hongroise) et est sorti en 1942.",
   "family": "film",
   "source": "Wikidata",
   "origin": "import"
@@ -3366,24 +3330,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-film-Q484442",
-  "concept": "cinema.directors.film_spider_man_q484442",
-  "label": "Auteur de « Spider-Man »",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "« Spider-Man » (2002) est un film de…",
-  "options": [
-   "Sam Raimi*",
-   "Chris Columbus",
-   "Peter Jackson",
-   "Ron Howard"
-  ],
-  "explanation": "« Spider-Man » a été réalisé par Sam Raimi (réalisateur, producteur et scénariste américain) et est sorti en 2002.",
-  "family": "film",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-film-Q54274",
   "concept": "cinema.directors.film_pirates_des_caraibes_jusqu_au__q54274",
   "label": "Auteur de « Pirates des Caraïbes : Jusqu'au bout du monde »",
@@ -3697,6 +3643,25 @@
    "Années 2020"
   ],
   "explanation": "« Le Seigneur des anneaux : Le Retour du roi » de Peter Jackson est sorti en 2003.",
+  "family": "film_year",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-filmd-Q132689",
+  "concept": "cinema.films.year_casablanca_q132689",
+  "label": "Sortie de « Casablanca »",
+  "type": "mcq",
+  "keep_order": true,
+  "difficulty": 60,
+  "prompt": "Dans quelle décennie est sorti le film « Casablanca », de Michael Curtiz ?",
+  "options": [
+   "Années 1920",
+   "Années 1930",
+   "Années 1940*",
+   "Années 1950"
+  ],
+  "explanation": "« Casablanca » de Michael Curtiz est sorti en 1942.",
   "family": "film_year",
   "source": "Wikidata",
   "origin": "import"
@@ -4324,25 +4289,6 @@
    "Années 2000"
   ],
   "explanation": "« La Liste de Schindler » de Steven Spielberg est sorti en 1993.",
-  "family": "film_year",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-filmd-Q484442",
-  "concept": "cinema.films.year_spider_man_q484442",
-  "label": "Sortie de « Spider-Man »",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 63,
-  "prompt": "Dans quelle décennie est sorti le film « Spider-Man », de Sam Raimi ?",
-  "options": [
-   "Années 1980",
-   "Années 2000*",
-   "Années 2010",
-   "Années 2020"
-  ],
-  "explanation": "« Spider-Man » de Sam Raimi est sorti en 2002.",
   "family": "film_year",
   "source": "Wikidata",
   "origin": "import"

@@ -4,221 +4,240 @@
  "ranked": true,
  "questions": [
   {
-   "id": "3b8ea9df-b8b5-4e94-a755-5ce4f8eabdb1",
-   "type": "true_false",
+   "id": "bd402eee-6559-4556-a754-04d122ecfefb",
+   "type": "mcq",
    "answer": {
-    "value": true
+    "option_id": "91443988"
    },
-   "prompt": "Le son se propage plus vite dans l'eau que dans l'air.",
+   "prompt": "Si aujourd'hui est mardi, quel jour serons-nous dans 100 jours ?",
    "source": null,
-   "payload": {},
-   "expected": 0.75,
-   "has_hint": false,
+   "payload": {
+    "options": [
+     {
+      "id": "fcd915ae",
+      "text": "Mercredi"
+     },
+     {
+      "id": "721755c7",
+      "text": "Lundi"
+     },
+     {
+      "id": "91443988",
+      "text": "Jeudi"
+     },
+     {
+      "id": "bdea30d9",
+      "text": "Mardi"
+     }
+    ]
+   },
+   "expected": 0.63,
+   "has_hint": true,
    "takeaway": null,
-   "domain_id": "science",
-   "concept_id": "science.physics.sound_water",
+   "domain_id": "logic",
+   "concept_id": "logic.reasoning.days_after",
    "difficulty": 50,
    "fact_as_of": null,
-   "explanation": "Environ 1 500 m/s dans l'eau contre 340 m/s dans l'air : plus un milieu est dense et peu compressible, plus le son y va vite.",
+   "explanation": "100 = 14 × 7 + 2. Dans 98 jours, on sera encore mardi ; deux jours plus tard, jeudi.",
    "has_context": false,
-   "subdomain_id": "science.physics"
+   "subdomain_id": "logic.reasoning"
   },
   {
-   "id": "0c273a26-b222-428f-993e-50c584b58736",
+   "id": "f4233198-348f-4efc-8b42-e6824b6e700e",
    "type": "mcq",
    "answer": {
-    "option_id": "7a84ef99"
+    "option_id": "48196240"
    },
-   "prompt": "« Le Père Goriot » est une œuvre de…",
-   "source": "Wikidata",
-   "payload": {
-    "options": [
-     {
-      "id": "f15101dc",
-      "text": "Nicolas Gogol"
-     },
-     {
-      "id": "82fad913",
-      "text": "Stendhal"
-     },
-     {
-      "id": "99504642",
-      "text": "Hans Christian Andersen"
-     },
-     {
-      "id": "7a84ef99",
-      "text": "Honoré de Balzac"
-     }
-    ]
-   },
-   "expected": 0.5,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "arts",
-   "concept_id": "arts.literature.book_le_pere_goriot_q240617",
-   "difficulty": 58,
-   "fact_as_of": null,
-   "explanation": "« Le Père Goriot » est une œuvre d'Honoré de Balzac, parue en 1835.",
-   "has_context": false,
-   "subdomain_id": "arts.literature"
-  },
-  {
-   "id": "0e4bade1-ee69-4263-b292-f913504511f4",
-   "type": "mcq",
-   "answer": {
-    "option_id": "a160d499"
-   },
-   "prompt": "Quel est le point culminant de la Mongolie ?",
-   "source": "Wikidata",
-   "payload": {
-    "options": [
-     {
-      "id": "a160d499",
-      "text": "Kujten Uul"
-     },
-     {
-      "id": "80ba4388",
-      "text": "Mont Paektu"
-     },
-     {
-      "id": "078c531a",
-      "text": "Kangchenjunga"
-     },
-     {
-      "id": "50951f10",
-      "text": "Mont Damavand"
-     }
-    ]
-   },
-   "expected": 0.55,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "geography",
-   "concept_id": "geography.relief.highest_mongolia",
-   "difficulty": 53,
-   "fact_as_of": null,
-   "explanation": "Le point culminant de la Mongolie est Kujten Uul, à 4 374 m d'altitude.",
-   "has_context": false,
-   "subdomain_id": "geography.relief"
-  },
-  {
-   "id": "a643c34b-4050-4ea4-b8a3-59a6a667002f",
-   "type": "mcq",
-   "answer": {
-    "option_id": "c8c3b5fe"
-   },
-   "prompt": "Quelle orthographe est correcte ?",
+   "prompt": "Qui a réalisé Les Aventures de Tintin : Le Secret de la Licorne (2011) ?",
    "source": null,
    "payload": {
     "options": [
      {
-      "id": "46836b8d",
-      "text": "dévellopement"
+      "id": "4ec65b68",
+      "text": "James Cameron"
      },
      {
-      "id": "a18c0333",
-      "text": "dévelopement"
+      "id": "48196240",
+      "text": "Steven Spielberg"
      },
      {
-      "id": "f40d7be8",
-      "text": "développemment"
+      "id": "bb7340bf",
+      "text": "Robert Zemeckis"
      },
      {
-      "id": "c8c3b5fe",
-      "text": "développement"
+      "id": "87cfc7c8",
+      "text": "Peter Jackson"
      }
     ]
    },
-   "expected": 0.56,
-   "has_hint": false,
-   "takeaway": null,
-   "domain_id": "french",
-   "concept_id": "french.spelling.double_consonnes",
-   "difficulty": 55,
-   "fact_as_of": null,
-   "explanation": "Un seul l et deux p : développer, développement.",
-   "has_context": false,
-   "subdomain_id": "french.spelling"
-  },
-  {
-   "id": "07e00335-435e-47dd-bd1e-2a516cb19eb0",
-   "type": "mcq",
-   "answer": {
-    "option_id": "cbb45716"
-   },
-   "prompt": "Quel film de Hayao Miyazaki a remporté l'Oscar du meilleur film d'animation en 2003 ?",
-   "source": null,
-   "payload": {
-    "options": [
-     {
-      "id": "7c1d8cab",
-      "text": "Le Château ambulant"
-     },
-     {
-      "id": "3ad4b40a",
-      "text": "Mon voisin Totoro"
-     },
-     {
-      "id": "2eca68b9",
-      "text": "Princesse Mononoké"
-     },
-     {
-      "id": "cbb45716",
-      "text": "Le Voyage de Chihiro"
-     }
-    ]
-   },
-   "expected": 0.78,
-   "has_hint": false,
+   "expected": 0.63,
+   "has_hint": true,
    "takeaway": null,
    "domain_id": "cinema",
-   "concept_id": "cinema.animation.miyazaki",
-   "difficulty": 40,
+   "concept_id": "cinema.animation.tintin_spielberg",
+   "difficulty": 50,
    "fact_as_of": null,
-   "explanation": "Le Voyage de Chihiro (2001), produit par le studio Ghibli.",
+   "explanation": "Spielberg, avec Peter Jackson à la production, en capture de mouvement.",
    "has_context": false,
    "subdomain_id": "cinema.animation"
   },
   {
-   "id": "2bd73f2a-5106-417b-bb51-98feb126d4ad",
+   "id": "29b65948-0cfa-4037-b851-30bf91794d5f",
    "type": "mcq",
    "answer": {
-    "option_id": "d95c2366"
+    "option_id": "03fff6ef"
    },
-   "prompt": "À quel siècle remonte la naissance de Molière ?",
+   "prompt": "Le groupe Red Hot Chili Peppers est originaire de quel pays ?",
    "source": "Wikidata",
    "payload": {
     "options": [
      {
-      "id": "1325e252",
-      "text": "XVe siècle"
+      "id": "03fff6ef",
+      "text": "États-Unis"
      },
      {
-      "id": "d95c2366",
-      "text": "XVIIe siècle"
+      "id": "dc38c5d6",
+      "text": "Canada"
      },
      {
-      "id": "24f54099",
-      "text": "XVIIIe siècle"
+      "id": "78c83161",
+      "text": "Royaume-Uni"
      },
      {
-      "id": "6c2d5b62",
-      "text": "XIXe siècle"
+      "id": "a5aed45b",
+      "text": "Australie"
+     }
+    ]
+   },
+   "expected": 0.63,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "music",
+   "concept_id": "music.popular.band_red_hot_chili_peppers_q10708",
+   "difficulty": 50,
+   "fact_as_of": null,
+   "explanation": "Red Hot Chili Peppers est un groupe originaire des États-Unis.",
+   "has_context": false,
+   "subdomain_id": "music.popular"
+  },
+  {
+   "id": "418f5f5a-fb32-40aa-8caa-5a0fb5b98a16",
+   "type": "mcq",
+   "answer": {
+    "option_id": "090a8220"
+   },
+   "prompt": "Comment Socrate est-il mort en 399 av. J.-C. ?",
+   "source": null,
+   "payload": {
+    "options": [
+     {
+      "id": "d6eee84b",
+      "text": "Au combat"
+     },
+     {
+      "id": "cd5dc66b",
+      "text": "De vieillesse"
+     },
+     {
+      "id": "7f6630b3",
+      "text": "Dans un naufrage"
+     },
+     {
+      "id": "090a8220",
+      "text": "En buvant de la ciguë"
+     }
+    ]
+   },
+   "expected": 0.71,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "history",
+   "concept_id": "history.antiquity.socrates",
+   "difficulty": 50,
+   "fact_as_of": null,
+   "explanation": "Condamné à mort par Athènes, il boit le poison plutôt que de fuir.",
+   "has_context": false,
+   "subdomain_id": "history.antiquity"
+  },
+  {
+   "id": "0eb1af15-643e-465f-8cac-15c8f54a297e",
+   "type": "mcq",
+   "answer": {
+    "option_id": "16000739"
+   },
+   "prompt": "Le trombone est un instrument…",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "3e32445e",
+      "text": "à cordes"
+     },
+     {
+      "id": "16000739",
+      "text": "à vent"
+     },
+     {
+      "id": "225a0e62",
+      "text": "de percussion"
+     },
+     {
+      "id": "40c774d7",
+      "text": "à clavier"
      }
     ],
     "keep_order": true
    },
-   "expected": 0.86,
-   "has_hint": false,
+   "expected": 0.64,
+   "has_hint": true,
    "takeaway": null,
-   "domain_id": "history",
-   "concept_id": "history.modern.century_moliere",
-   "difficulty": 35,
+   "domain_id": "music",
+   "concept_id": "music.instruments.family_trombone",
+   "difficulty": 49,
    "fact_as_of": null,
-   "explanation": "Molière, dramaturge et acteur français, est né en 1622 et mort en 1673.",
+   "explanation": "Le trombone est un instrument à vent : le son naît du souffle.",
    "has_context": false,
-   "subdomain_id": "history.modern"
+   "subdomain_id": "music.instruments"
+  },
+  {
+   "id": "8f4d4469-8c32-4922-8a51-987b978dd9c2",
+   "type": "mcq",
+   "answer": {
+    "option_id": "ba2609ec"
+   },
+   "prompt": "Les Jeux olympiques d'été de 1928 se sont tenus à…",
+   "source": "Wikidata",
+   "payload": {
+    "options": [
+     {
+      "id": "13066978",
+      "text": "Anvers"
+     },
+     {
+      "id": "f8780fe5",
+      "text": "Los Angeles"
+     },
+     {
+      "id": "86f3a64c",
+      "text": "Paris"
+     },
+     {
+      "id": "ba2609ec",
+      "text": "Amsterdam"
+     }
+    ]
+   },
+   "expected": 0.5,
+   "has_hint": true,
+   "takeaway": null,
+   "domain_id": "sport",
+   "concept_id": "sport.olympics.host_summer_1928",
+   "difficulty": 58,
+   "fact_as_of": null,
+   "explanation": "Les Jeux olympiques d'été de 1928 ont eu lieu à Amsterdam.",
+   "has_context": false,
+   "subdomain_id": "sport.olympics"
   }
  ],
- "session_id": "eb3a9ef4-26bd-45f3-921c-dbece91ce804"
+ "session_id": "b689344d-e62b-4c3e-837e-9d302806c81a"
 }

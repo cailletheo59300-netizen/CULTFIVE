@@ -81,7 +81,7 @@ begin
         -- Joueur réaliste : il sait avec la probabilité du modèle, sinon il devine (1 chance sur n au QCM).
         select difficulty_effective, guess_rate into b, c from public.questions where id = (x ->> 'id')::uuid;
         ok := random() < c + (1 - c) / (1 + exp(-(thetas[p] - b) / 10));
-        if p = 2 and g > 4 then late_n := late_n + 1; late_ok := late_ok + ok::int; end if;
+        if g > 4 then late_n := late_n + 1; late_ok := late_ok + ok::int; end if;
         atts := atts || jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', x ->> 'id',
                                            'given', case when ok then tst.correct_given((x ->> 'id')::uuid) else tst.wrong_given() end,
                                            'response_ms', 6000);
@@ -97,8 +97,8 @@ begin
     perform tst.ok(abs(mu - thetas[p]) < 12, format('convergence du joueur %s (μ = %s)', thetas[p], mu));
   end loop;
   perform tst.ok(mus[1] < mus[2] and mus[2] < mus[3], 'ordre des joueurs');
-  raise notice 'simulation : réussite du joueur moyen après placement %/%', late_ok, late_n;
-  perform tst.ok(late_ok::real / late_n between 0.52 and 0.78, 'réussite ~65 %');
+  raise notice 'simulation : réussite des trois joueurs après placement %/%', late_ok, late_n;
+  perform tst.ok(late_ok::real / late_n between 0.55 and 0.78, 'réussite ~65 %');
   perform tst.ok((select bool_and((s ->> 'placed')::bool) from (
                     select (select s from jsonb_array_elements(public.skills_overview()) s where s ->> 'domain_id' = 'geography') s) t),
                  'placement terminé après 8 parties');

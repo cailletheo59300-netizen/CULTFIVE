@@ -708,16 +708,6 @@
   "explanation": "Le Soviétique Youri Gagarine, le 12 avril 1961, à bord de Vostok 1."
  },
  {
-  "key": "sci-356",
-  "concept": "science.space.planets_count",
-  "label": "Planètes",
-  "type": "numeric",
-  "difficulty": 15,
-  "prompt": "Combien de planètes compte le Système solaire ?",
-  "answer": 8,
-  "explanation": "Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune. Pluton est une planète naine depuis 2006."
- },
- {
   "key": "sci-358",
   "concept": "science.space.light_year",
   "label": "Année-lumière",
@@ -918,9 +908,9 @@
   "label": "Chute de Rome",
   "type": "true_false",
   "difficulty": 55,
-  "prompt": "L'Empire romain d'Occident prend fin en 476.",
-  "answer": true,
-  "explanation": "Le dernier empereur d'Occident, Romulus Augustule, est déposé en 476. L'Empire d'Orient dure jusqu'en 1453."
+  "prompt": "L'Empire romain d'Occident prend fin en 1453.",
+  "answer": false,
+  "explanation": "Non, en 476 ; 1453 marque la fin de l'Empire d'Orient. Le dernier empereur d'Occident, Romulus Augustule, est déposé en 476. L'Empire d'Orient dure jusqu'en 1453."
  },
  {
   "key": "arts-301",

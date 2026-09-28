@@ -1,15 +1,5 @@
 [
  {
-  "key": "calc-301",
-  "concept": "calc.percent.twenty_of_150",
-  "label": "20 % de 150",
-  "type": "numeric",
-  "difficulty": 25,
-  "prompt": "Combien font 20 % de 150 ?",
-  "answer": 30,
-  "explanation": "20 %, c'est un cinquième : 150 ÷ 5 = 30."
- },
- {
   "key": "calc-302",
   "concept": "calc.percent.discount_80",
   "label": "Soldes -25 %",
@@ -154,9 +144,9 @@
   "label": "La moitié de la moitié",
   "type": "true_false",
   "difficulty": 20,
-  "prompt": "La moitié de la moitié, c'est le quart.",
-  "answer": true,
-  "explanation": "1/2 × 1/2 = 1/4."
+  "prompt": "La moitié de la moitié, c'est le tiers.",
+  "answer": false,
+  "explanation": "Non, c'est le quart : 1/2 × 1/2 = 1/4."
  },
  {
   "key": "calc-316",
@@ -342,21 +332,6 @@
    "Oblong"
   ],
   "explanation": "Concave : creusé vers l'intérieur (comme un bol). Convexe : bombé vers l'extérieur."
- },
- {
-  "key": "fr-307",
-  "concept": "french.synonyms.fortuit",
-  "label": "Fortuit",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Quel est un synonyme de « fortuit » ?",
-  "options": [
-   "Accidentel*",
-   "Fort",
-   "Riche",
-   "Prévu"
-  ],
-  "explanation": "Fortuit : qui arrive par hasard. Le contraire serait « prévu »."
  },
  {
   "key": "fr-308",
@@ -562,16 +537,6 @@
    "J"
   ],
   "explanation": "Initiales des mois : janvier… juillet, puis août."
- },
- {
-  "key": "logic-306",
-  "concept": "logic.sequences.times_three",
-  "label": "Suite ×3",
-  "type": "numeric",
-  "difficulty": 25,
-  "prompt": "Quel nombre suit : 2, 6, 18, 54, … ?",
-  "answer": 162,
-  "explanation": "On multiplie par 3 : 54 × 3 = 162."
  },
  {
   "key": "logic-307",
@@ -829,16 +794,6 @@
   "prompt": "Dans une ferme, il y a 10 têtes et 28 pattes, entre poules et lapins. Combien de lapins ?",
   "answer": 4,
   "explanation": "Si tout était poules : 20 pattes. Il manque 8 pattes, 2 de plus par lapin : 4 lapins (et 6 poules)."
- },
- {
-  "key": "logic-329",
-  "concept": "logic.puzzles.page_numbers",
-  "label": "Pages d'un livre",
-  "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Combien de chiffres faut-il pour numéroter les pages d'un livre de 100 pages ?",
-  "answer": 192,
-  "explanation": "Pages 1 à 9 : 9 chiffres ; 10 à 99 : 90 × 2 = 180 ; page 100 : 3. Total 192."
  },
  {
   "key": "logic-330",

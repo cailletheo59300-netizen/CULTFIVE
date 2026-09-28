@@ -234,24 +234,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q11880",
-  "concept": "arts.literature.book_la_reine_des_neiges_q11880",
-  "label": "Auteur de « La Reine des neiges »",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "Qui a écrit « La Reine des neiges » ?",
-  "options": [
-   "Hans Christian Andersen*",
-   "Alexandre Dumas",
-   "Edgar Allan Poe",
-   "Charles Dickens"
-  ],
-  "explanation": "« La Reine des neiges » est une œuvre d'Hans Christian Andersen (romancier, dramaturge, conteur et poète danois), parue en 1844.",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q1213902",
   "concept": "arts.literature.book_les_enfants_du_capitaine_grant_q1213902",
   "label": "Auteur de « Les Enfants du capitaine Grant »",
@@ -283,24 +265,6 @@
    "Léon Tolstoï"
   ],
   "explanation": "« Le Tour du monde en quatre-vingts jours » est une œuvre de Jules Verne (écrivain français), parue en 1872.",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q123397",
-  "concept": "arts.literature.book_la_republique_q123397",
-  "label": "Auteur de « La République »",
-  "type": "mcq",
-  "difficulty": 52,
-  "prompt": "Qui a écrit « La République » ?",
-  "options": [
-   "Platon*",
-   "Mao Zedong",
-   "Anthony Burgess",
-   "Joseph Heller"
-  ],
-  "explanation": "« La République » est une œuvre de Platon (philosophe grec du IVe siècle avant notre ère), parue en 1963.",
   "family": "book",
   "source": "Wikidata",
   "origin": "import"
@@ -1404,24 +1368,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q205882",
-  "concept": "arts.literature.book_edda_de_snorri_q205882",
-  "label": "Auteur de « Edda de Snorri »",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "« Edda de Snorri » est une œuvre de…",
-  "options": [
-   "Snorri Sturluson*",
-   "Homère",
-   "Jacopone da Todi",
-   "Lao Tseu"
-  ],
-  "explanation": "« Edda de Snorri » est une œuvre de Snorri Sturluson (homme politique et écrivain islandais).",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q206870",
   "concept": "arts.literature.book_le_docteur_jivago_q206870",
   "label": "Auteur de « Le Docteur Jivago »",
@@ -1710,24 +1656,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q216299",
-  "concept": "arts.literature.book_souda_q216299",
-  "label": "Auteur de « Souda »",
-  "type": "mcq",
-  "difficulty": 61,
-  "prompt": "Quel auteur a signé « Souda » ?",
-  "options": [
-   "AA.VV.*",
-   "Paul de Tarse",
-   "anonyme",
-   "Vichnou-Sarma"
-  ],
-  "explanation": "« Souda » est une œuvre d'AA.VV..",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q216578",
   "concept": "arts.literature.book_les_fleurs_du_mal_q216578",
   "label": "Auteur de « Les Fleurs du mal »",
@@ -1867,24 +1795,6 @@
    "Henry David Thoreau"
   ],
   "explanation": "« La Case de l'oncle Tom » est une œuvre d'Harriet Beecher Stowe, parue en 1852.",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q223688",
-  "concept": "arts.literature.book_le_joueur_q223688",
-  "label": "Auteur de « Le Joueur »",
-  "type": "mcq",
-  "difficulty": 61,
-  "prompt": "« Le Joueur » est une œuvre de…",
-  "options": [
-   "Fiodor Dostoïevski*",
-   "Louisa May Alcott",
-   "Lewis Carroll",
-   "Jules Verne"
-  ],
-  "explanation": "« Le Joueur » est une œuvre de Fiodor Dostoïevski (écrivain russe), parue en 1867.",
   "family": "book",
   "source": "Wikidata",
   "origin": "import"
@@ -2790,24 +2700,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q464928",
-  "concept": "arts.literature.book_a_la_recherche_du_temps_perdu_q464928",
-  "label": "Auteur de « À la recherche du temps perdu »",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "« À la recherche du temps perdu » est une œuvre de…",
-  "options": [
-   "Marcel Proust*",
-   "Yann Martel",
-   "George R. R. Martin",
-   "Dan Brown"
-  ],
-  "explanation": "« À la recherche du temps perdu » est une œuvre de Marcel Proust (écrivain, critique et essayiste français), parue en 2000.",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q465108",
   "concept": "arts.literature.book_classique_des_vers_q465108",
   "label": "Auteur de « Classique des vers »",
@@ -3366,24 +3258,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q6511",
-  "concept": "arts.literature.book_ulysse_q6511",
-  "label": "Auteur de « Ulysse »",
-  "type": "mcq",
-  "difficulty": 55,
-  "prompt": "Qui a écrit « Ulysse » ?",
-  "options": [
-   "James Joyce*",
-   "Jaroslav Hašek",
-   "F. Scott Fitzgerald",
-   "Franz Kafka"
-  ],
-  "explanation": "« Ulysse » est une œuvre de James Joyce, parue en 1922.",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q651532",
   "concept": "arts.literature.book_les_trois_petits_cochons_q651532",
   "label": "Auteur de « Les Trois Petits Cochons »",
@@ -3492,24 +3366,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-livre-Q682733",
-  "concept": "arts.literature.book_le_chateau_q682733",
-  "label": "Auteur de « Le Château »",
-  "type": "mcq",
-  "difficulty": 62,
-  "prompt": "Quel auteur a signé « Le Château » ?",
-  "options": [
-   "Franz Kafka*",
-   "F. Scott Fitzgerald",
-   "Mikhaïl Boulgakov",
-   "Erich Maria Remarque"
-  ],
-  "explanation": "« Le Château » est une œuvre de Franz Kafka (écrivain pragois de langue allemande), parue en 1926.",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-livre-Q692557",
   "concept": "arts.literature.book_l_orange_mecanique_q692557",
   "label": "Auteur de « L'Orange mécanique »",
@@ -3613,24 +3469,6 @@
    "Érasme"
   ],
   "explanation": "« Au bord de l'eau » est une œuvre de Shi Nai'an (romancier chinois), parue en 1400.",
-  "family": "book",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-livre-Q722678",
-  "concept": "arts.literature.book_histoire_auguste_q722678",
-  "label": "Auteur de « Histoire Auguste »",
-  "type": "mcq",
-  "difficulty": 62,
-  "prompt": "Quel auteur a signé « Histoire Auguste » ?",
-  "options": [
-   "Scriptores Historiae Augustae*",
-   "Aristote",
-   "Claude Ptolémée",
-   "anonyme"
-  ],
-  "explanation": "« Histoire Auguste » est une œuvre de Scriptores Historiae Augustae (auteurs fictifs des biographies de l'Histoire Auguste).",
   "family": "book",
   "source": "Wikidata",
   "origin": "import"
@@ -4428,24 +4266,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-tableau-Q152509",
-  "concept": "arts.painting.work_le_dejeuner_sur_l_herbe_q152509",
-  "label": "Auteur de « Le Déjeuner sur l'herbe »",
-  "type": "mcq",
-  "difficulty": 58,
-  "prompt": "De quel peintre est « Le Déjeuner sur l'herbe » ?",
-  "options": [
-   "Édouard Manet*",
-   "Gustave Courbet",
-   "Ilia Répine",
-   "Claude Monet"
-  ],
-  "explanation": "« Le Déjeuner sur l'herbe » a été peint par Édouard Manet (peintre et graveur français) vers 1863.",
-  "family": "painting",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-tableau-Q152867",
   "concept": "arts.painting.work_la_maja_nue_q152867",
   "label": "Auteur de « La Maja nue »",
@@ -4657,24 +4477,6 @@
    "Léonard de Vinci"
   ],
   "explanation": "« Les Époux Arnolfini » a été peint par Jan van Eyck (peintre flamand) vers 1434.",
-  "family": "painting",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-tableau-Q2282256",
-  "concept": "arts.painting.work_iris_q2282256",
-  "label": "Auteur de « Iris »",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "« Iris » est un tableau de…",
-  "options": [
-   "Vincent van Gogh*",
-   "Georges Seurat",
-   "Auguste Renoir",
-   "Claude Monet"
-  ],
-  "explanation": "« Iris » a été peint par Vincent van Gogh (peintre néerlandais) vers 1889.",
   "family": "painting",
   "source": "Wikidata",
   "origin": "import"

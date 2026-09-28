@@ -1,100 +1,88 @@
 {
- "cote": 1013,
- "level": 51,
- "avg_ms": 5100,
+ "cote": 1041,
+ "level": 52,
+ "avg_ms": 3800,
  "placed": false,
  "correct": 1,
  "history": [
   {
    "day": "2027-03-01",
-   "level": 50.7
+   "level": 52.4
   }
  ],
- "answered": 2,
+ "answered": 1,
  "domain_id": "geography",
  "placement": 0,
  "subdomains": [
   {
    "id": "geography.capitals",
-   "cote": 1013,
+   "cote": 1041,
    "name": "Capitales",
-   "level": 51,
+   "level": 52,
    "placed": false,
    "correct": 0,
    "answered": 0,
-   "available": 296,
+   "available": 285,
    "placement": 0,
-   "reliability": 0.07
+   "reliability": 0.05
   },
   {
    "id": "geography.flags",
-   "cote": 1013,
+   "cote": 1041,
    "name": "Drapeaux",
-   "level": 51,
+   "level": 52,
    "placed": false,
    "correct": 0,
    "answered": 0,
-   "available": 198,
+   "available": 193,
    "placement": 0,
-   "reliability": 0.07
+   "reliability": 0.05
   },
   {
    "id": "geography.countries",
-   "cote": 969,
+   "cote": 1041,
    "name": "Pays & villes",
-   "level": 48,
-   "placed": false,
-   "correct": 0,
-   "answered": 1,
-   "available": 854,
-   "placement": 0,
-   "reliability": 0.02
-  },
-  {
-   "id": "geography.relief",
-   "cote": 1013,
-   "name": "Fleuves, mers & reliefs",
-   "level": 51,
+   "level": 52,
    "placed": false,
    "correct": 1,
    "answered": 1,
-   "available": 150,
+   "available": 745,
    "placement": 0,
-   "reliability": 0.07
+   "reliability": 0.05
   },
   {
-   "id": "geography.monuments",
-   "cote": 1013,
-   "name": "Monuments & patrimoine",
-   "level": 51,
+   "id": "geography.relief",
+   "cote": 1041,
+   "name": "Fleuves, mers & reliefs",
+   "level": 52,
    "placed": false,
    "correct": 0,
    "answered": 0,
-   "available": 192,
+   "available": 150,
    "placement": 0,
-   "reliability": 0.07
+   "reliability": 0.05
+  },
+  {
+   "id": "geography.monuments",
+   "cote": 1041,
+   "name": "Monuments & patrimoine",
+   "level": 52,
+   "placed": false,
+   "correct": 0,
+   "answered": 0,
+   "available": 185,
+   "placement": 0,
+   "reliability": 0.05
   }
  ],
- "reliability": 0.07,
+ "reliability": 0.05,
  "by_difficulty": [
-  {
-   "band": "hard",
-   "correct": 0,
-   "answered": 1
-  },
   {
    "band": "medium",
    "correct": 1,
    "answered": 1
   }
  ],
- "recent_errors": [
-  {
-   "label": "Situer São Tomé",
-   "since": "2027-03-01T08:00:26+00:00",
-   "state": "failed",
-   "concept_id": "geography.countries.map_sao_tome_and_principe"
-  }
- ],
+ "recent_errors": [],
  "concepts_mastered": 0
 }

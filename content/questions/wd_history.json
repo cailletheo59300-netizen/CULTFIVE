@@ -1444,289 +1444,289 @@
   "origin": "import"
  },
  {
-  "key": "wd-births-Q1339-Q47152-Q493-Q855252",
-  "concept": "history.contemporary.births_set_3",
-  "label": "Naissances : Jean-Sébastien Bach, Mary Shelley, Arthur Rimbaud, Rama IX",
+  "key": "wd-births-Q11813-Q81438-Q38392-Q41163",
+  "concept": "history.contemporary.births_set_5",
+  "label": "Naissances : James Madison, Walt Whitman, William Faulkner, Al Pacino",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
-   "Jean-Sébastien Bach",
-   "Mary Shelley",
-   "Arthur Rimbaud",
-   "Rama IX"
+   "James Madison",
+   "Walt Whitman",
+   "William Faulkner",
+   "Al Pacino"
   ],
-  "explanation": "Jean-Sébastien Bach (1685), Mary Shelley (1797), Arthur Rimbaud (1854), Rama IX (1927).",
+  "explanation": "James Madison (1751), Walt Whitman (1819), William Faulkner (1897), Al Pacino (1940).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q1399-Q255-Q49325-Q1276",
-  "concept": "history.modern.births_set_4",
-  "label": "Naissances : Nicolas Machiavel, Ludwig van Beethoven, Albert Schweitzer, Leonard Cohen",
+  "key": "wd-births-Q1399-Q11806-Q44403-Q2643",
+  "concept": "history.modern.births_set_7",
+  "label": "Naissances : Nicolas Machiavel, John Adams, Heinrich Heine, George Harrison",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
    "Nicolas Machiavel",
-   "Ludwig van Beethoven",
-   "Albert Schweitzer",
-   "Leonard Cohen"
+   "John Adams",
+   "Heinrich Heine",
+   "George Harrison"
   ],
-  "explanation": "Nicolas Machiavel (1469), Ludwig van Beethoven (1770), Albert Schweitzer (1875), Leonard Cohen (1934).",
+  "explanation": "Nicolas Machiavel (1469), John Adams (1735), Heinrich Heine (1797), George Harrison (1943).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q35900-Q23380-Q9106-Q8753",
-  "concept": "history.modern.births_set_15",
-  "label": "Naissances : Omar Khayyam, Jean-Auguste-Dominique Ingres, Dmitri Mendeleïev, Enrico Fermi",
+  "key": "wd-births-Q1401-Q49496-Q144535-Q132537",
+  "concept": "history.modern.births_set_16",
+  "label": "Naissances : Pétrarque, Jean de La Fontaine, Herbert Spencer, Robert Oppenheimer",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
-   "Omar Khayyam",
-   "Jean-Auguste-Dominique Ingres",
-   "Dmitri Mendeleïev",
-   "Enrico Fermi"
+   "Pétrarque",
+   "Jean de La Fontaine",
+   "Herbert Spencer",
+   "Robert Oppenheimer"
   ],
-  "explanation": "Omar Khayyam (1048), Jean-Auguste-Dominique Ingres (1780), Dmitri Mendeleïev (1834), Enrico Fermi (1901).",
+  "explanation": "Pétrarque (1304), Jean de La Fontaine (1621), Herbert Spencer (1820), Robert Oppenheimer (1904).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q36330-Q46096-Q79969-Q1203",
-  "concept": "history.contemporary.births_set_16",
-  "label": "Naissances : Giordano Bruno, Félix Mendelssohn Bartholdy, Emma Goldman, John Lennon",
+  "key": "wd-births-Q297-Q448-Q34836-Q83396",
+  "concept": "history.modern.births_set_3",
+  "label": "Naissances : Diego Vélasquez, Denis Diderot, Ulysses S. Grant, Eleanor Roosevelt",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Diego Vélasquez",
+   "Denis Diderot",
+   "Ulysses S. Grant",
+   "Eleanor Roosevelt"
+  ],
+  "explanation": "Diego Vélasquez (1599), Denis Diderot (1713), Ulysses S. Grant (1822), Eleanor Roosevelt (1884).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q36330-Q40946-Q7231-Q7176",
+  "concept": "history.modern.births_set_14",
+  "label": "Naissances : Giordano Bruno, Daniel Defoe, Rosa Luxemburg, Naguib Mahfoud",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
    "Giordano Bruno",
-   "Félix Mendelssohn Bartholdy",
-   "Emma Goldman",
-   "John Lennon"
+   "Daniel Defoe",
+   "Rosa Luxemburg",
+   "Naguib Mahfoud"
   ],
-  "explanation": "Giordano Bruno (1548), Félix Mendelssohn Bartholdy (1809), Emma Goldman (1869), John Lennon (1940).",
+  "explanation": "Giordano Bruno (1548), Daniel Defoe (1660), Rosa Luxemburg (1871), Naguib Mahfoud (1911).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q36517-Q81438-Q40213-Q5603",
-  "concept": "history.contemporary.births_set_5",
-  "label": "Naissances : Francis Drake, Walt Whitman, William Butler Yeats, Andy Warhol",
+  "key": "wd-births-Q36517-Q35802-Q9130-Q36268",
+  "concept": "history.modern.births_set_13",
+  "label": "Naissances : Francis Drake, Baruch Spinoza, Erwin Schrödinger, Brigitte Bardot",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
    "Francis Drake",
-   "Walt Whitman",
+   "Baruch Spinoza",
+   "Erwin Schrödinger",
+   "Brigitte Bardot"
+  ],
+  "explanation": "Francis Drake (1540), Baruch Spinoza (1632), Erwin Schrödinger (1887), Brigitte Bardot (1934).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q37388-Q5586-Q43444-Q2908",
+  "concept": "history.modern.births_set_10",
+  "label": "Naissances : Francis Bacon, Hokusai, Gustave Flaubert, Antoine de Saint-Exupéry",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Francis Bacon",
+   "Hokusai",
+   "Gustave Flaubert",
+   "Antoine de Saint-Exupéry"
+  ],
+  "explanation": "Francis Bacon (1561), Hokusai (1760), Gustave Flaubert (1821), Antoine de Saint-Exupéry (1900).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q37621-Q23380-Q7294-Q39803",
+  "concept": "history.modern.births_set_4",
+  "label": "Naissances : Thomas Hobbes, Jean-Auguste-Dominique Ingres, Johannes Brahms, Mario Vargas Llosa",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Thomas Hobbes",
+   "Jean-Auguste-Dominique Ingres",
+   "Johannes Brahms",
+   "Mario Vargas Llosa"
+  ],
+  "explanation": "Thomas Hobbes (1588), Jean-Auguste-Dominique Ingres (1780), Johannes Brahms (1833), Mario Vargas Llosa (1936).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q38370-Q255-Q42156-Q8873",
+  "concept": "history.modern.births_set_2",
+  "label": "Naissances : Henri VIII, Ludwig van Beethoven, Henri Bergson, Satyajit Ray",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Henri VIII",
+   "Ludwig van Beethoven",
+   "Henri Bergson",
+   "Satyajit Ray"
+  ],
+  "explanation": "Henri VIII (1491), Ludwig van Beethoven (1770), Henri Bergson (1859), Satyajit Ray (1921).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q39978-Q34969-Q40213-Q1149",
+  "concept": "history.modern.births_set_9",
+  "label": "Naissances : Nostradamus, Benjamin Franklin, William Butler Yeats, Indira Gandhi",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Nostradamus",
+   "Benjamin Franklin",
    "William Butler Yeats",
-   "Andy Warhol"
+   "Indira Gandhi"
   ],
-  "explanation": "Francis Drake (1540), Walt Whitman (1819), William Butler Yeats (1865), Andy Warhol (1928).",
+  "explanation": "Nostradamus (1503), Benjamin Franklin (1706), William Butler Yeats (1865), Indira Gandhi (1917).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q39837-Q6101-Q5679-Q25973",
-  "concept": "history.middle_ages.births_set_14",
-  "label": "Naissances : Averroès, Marco Polo, Lord Byron, Hermann Hesse",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Averroès",
-   "Marco Polo",
-   "Lord Byron",
-   "Hermann Hesse"
-  ],
-  "explanation": "Averroès (1126), Marco Polo (1254), Lord Byron (1788), Hermann Hesse (1877).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q41166-Q134958-Q33866-Q38757",
-  "concept": "history.contemporary.births_set_12",
-  "label": "Naissances : Jonathan Swift, Taras Chevtchenko, Theodore Roosevelt, Bertolt Brecht",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Jonathan Swift",
-   "Taras Chevtchenko",
-   "Theodore Roosevelt",
-   "Bertolt Brecht"
-  ],
-  "explanation": "Jonathan Swift (1667), Taras Chevtchenko (1814), Theodore Roosevelt (1858), Bertolt Brecht (1898).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q43347-Q9312-Q6694-Q1779",
-  "concept": "history.modern.births_set_6",
-  "label": "Naissances : Djalâl ad-Dîn Rûmî, Emmanuel Kant, Alexander von Humboldt, Louis Armstrong",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Djalâl ad-Dîn Rûmî",
-   "Emmanuel Kant",
-   "Alexander von Humboldt",
-   "Louis Armstrong"
-  ],
-  "explanation": "Djalâl ad-Dîn Rûmî (1207), Emmanuel Kant (1724), Alexander von Humboldt (1769), Louis Armstrong (1901).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q5598-Q11813-Q7351-Q23685",
-  "concept": "history.modern.births_set_8",
-  "label": "Naissances : Rembrandt, James Madison, Robert Schumann, Jimmy Carter",
+  "key": "wd-births-Q5598-Q3816-Q47478-Q7371",
+  "concept": "history.contemporary.births_set_8",
+  "label": "Naissances : Rembrandt, George Sand, Vivekananda, Federico Fellini",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
    "Rembrandt",
-   "James Madison",
-   "Robert Schumann",
-   "Jimmy Carter"
+   "George Sand",
+   "Vivekananda",
+   "Federico Fellini"
   ],
-  "explanation": "Rembrandt (1606), James Madison (1751), Robert Schumann (1810), Jimmy Carter (1924).",
+  "explanation": "Rembrandt (1606), George Sand (1804), Vivekananda (1863), Federico Fellini (1920).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q676555-Q8772-Q4985-Q80900",
-  "concept": "history.modern.births_set_10",
-  "label": "Naissances : François d'Assise, Joseph Fourier, Herman Melville, Pearl Buck",
+  "key": "wd-births-Q5683-Q8962-Q7199-Q8027",
+  "concept": "history.contemporary.births_set_6",
+  "label": "Naissances : Geoffrey Chaucer, James Prescott Joule, Marcel Proust, Martin Luther King",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
-   "François d'Assise",
-   "Joseph Fourier",
-   "Herman Melville",
-   "Pearl Buck"
-  ],
-  "explanation": "François d'Assise (1182), Joseph Fourier (1768), Herman Melville (1819), Pearl Buck (1892).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q7326-Q8962-Q7304-Q34851",
-  "concept": "history.contemporary.births_set_13",
-  "label": "Naissances : Hernán Cortés, James Prescott Joule, Gustav Mahler, Elizabeth Taylor",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Hernán Cortés",
+   "Geoffrey Chaucer",
    "James Prescott Joule",
-   "Gustav Mahler",
-   "Elizabeth Taylor"
+   "Marcel Proust",
+   "Martin Luther King"
   ],
-  "explanation": "Hernán Cortés (1485), James Prescott Joule (1818), Gustav Mahler (1860), Elizabeth Taylor (1932).",
+  "explanation": "Geoffrey Chaucer (1343), James Prescott Joule (1818), Marcel Proust (1871), Martin Luther King (1929).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q7331-Q33477-Q47478-Q2494",
-  "concept": "history.contemporary.births_set_2",
-  "label": "Naissances : Ibn Battuta, Eugène Delacroix, Vivekananda, Benoît XVI",
+  "key": "wd-births-Q7321-Q82409-Q47162-Q19673",
+  "concept": "history.modern.births_set_1",
+  "label": "Naissances : Jacques Cartier, Samuel Taylor Coleridge, Romain Rolland, Al Gore",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
+  "items": [
+   "Jacques Cartier",
+   "Samuel Taylor Coleridge",
+   "Romain Rolland",
+   "Al Gore"
+  ],
+  "explanation": "Jacques Cartier (1492), Samuel Taylor Coleridge (1772), Romain Rolland (1866), Al Gore (1948).",
+  "family": "person_era",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
+  "key": "wd-births-Q7331-Q11820-Q34296-Q392",
+  "concept": "history.modern.births_set_12",
+  "label": "Naissances : Ibn Battuta, Martin Van Buren, Woodrow Wilson, Bob Dylan",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
    "Ibn Battuta",
-   "Eugène Delacroix",
-   "Vivekananda",
-   "Benoît XVI"
+   "Martin Van Buren",
+   "Woodrow Wilson",
+   "Bob Dylan"
   ],
-  "explanation": "Ibn Battuta (1304), Eugène Delacroix (1798), Vivekananda (1863), Benoît XVI (1927).",
+  "explanation": "Ibn Battuta (1304), Martin Van Buren (1782), Woodrow Wilson (1856), Bob Dylan (1941).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q7604-Q93343-Q42985-Q909",
-  "concept": "history.contemporary.births_set_1",
-  "label": "Naissances : Leonhard Euler, Percy Bysshe Shelley, Ivan Pavlov, Jorge Luis Borges",
+  "key": "wd-births-Q9312-Q7200-Q5685-Q1276",
+  "concept": "history.contemporary.births_set_15",
+  "label": "Naissances : Emmanuel Kant, Alexandre Pouchkine, Anton Tchekhov, Leonard Cohen",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
-   "Leonhard Euler",
-   "Percy Bysshe Shelley",
-   "Ivan Pavlov",
-   "Jorge Luis Borges"
+   "Emmanuel Kant",
+   "Alexandre Pouchkine",
+   "Anton Tchekhov",
+   "Leonard Cohen"
   ],
-  "explanation": "Leonhard Euler (1707), Percy Bysshe Shelley (1792), Ivan Pavlov (1849), Jorge Luis Borges (1899).",
+  "explanation": "Emmanuel Kant (1724), Alexandre Pouchkine (1799), Anton Tchekhov (1860), Leonard Cohen (1934).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
  },
  {
-  "key": "wd-births-Q8763-Q37621-Q164047-Q905",
-  "concept": "history.modern.births_set_7",
-  "label": "Naissances : Leonardo Fibonacci, Thomas Hobbes, Alexander Pope, Franz Kafka",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Leonardo Fibonacci",
-   "Thomas Hobbes",
-   "Alexander Pope",
-   "Franz Kafka"
-  ],
-  "explanation": "Leonardo Fibonacci (1170), Thomas Hobbes (1588), Alexander Pope (1688), Franz Kafka (1883).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q9294-Q5879-Q27645-Q7374",
+  "key": "wd-births-Q9438-Q33550-Q38193-Q41532",
   "concept": "history.modern.births_set_11",
-  "label": "Naissances : Ibn Khaldoun, Johann Wolfgang von Goethe, Mikhaïl Bakounine, Alfred Hitchcock",
-  "type": "ordering",
-  "difficulty": 55,
-  "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
-  "items": [
-   "Ibn Khaldoun",
-   "Johann Wolfgang von Goethe",
-   "Mikhaïl Bakounine",
-   "Alfred Hitchcock"
-  ],
-  "explanation": "Ibn Khaldoun (1332), Johann Wolfgang von Goethe (1749), Mikhaïl Bakounine (1814), Alfred Hitchcock (1899).",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-births-Q9438-Q183266-Q9327-Q4573",
-  "concept": "history.modern.births_set_9",
-  "label": "Naissances : Thomas d’Aquin, Samuel Johnson, Guy de Maupassant, Sean Connery",
+  "label": "Naissances : Thomas d’Aquin, Frédéric II de Prusse, Arthur Schopenhauer, Carl Gustav Jung",
   "type": "ordering",
   "difficulty": 55,
   "prompt": "Classe ces personnalités de la plus ancienne à la plus récente (année de naissance).",
   "items": [
    "Thomas d’Aquin",
-   "Samuel Johnson",
-   "Guy de Maupassant",
-   "Sean Connery"
+   "Frédéric II de Prusse",
+   "Arthur Schopenhauer",
+   "Carl Gustav Jung"
   ],
-  "explanation": "Thomas d’Aquin (1225), Samuel Johnson (1709), Guy de Maupassant (1850), Sean Connery (1930).",
+  "explanation": "Thomas d’Aquin (1225), Frédéric II de Prusse (1712), Arthur Schopenhauer (1788), Carl Gustav Jung (1875).",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -2131,25 +2131,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cent-Q1268",
-  "concept": "history.contemporary.century_frederic_chopin",
-  "label": "Époque de Frédéric Chopin",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 42,
-  "prompt": "Frédéric Chopin est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Frédéric Chopin, compositeur et pianiste franco-polonais, est né en 1810 et mort en 1849.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cent-Q12706",
   "concept": "history.contemporary.century_maxime_gorki",
   "label": "Époque de Maxime Gorki",
@@ -2430,25 +2411,6 @@
    "XVIIIe siècle"
   ],
   "explanation": "Willem Barentsz, explorateur néerlandais, est né en 1550 et mort en 1597.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q1339",
-  "concept": "history.modern.century_jean_sebastien_bach",
-  "label": "Époque de Jean-Sébastien Bach",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 39,
-  "prompt": "Jean-Sébastien Bach est né au…",
-  "options": [
-   "XVe siècle",
-   "XVIe siècle",
-   "XVIIe siècle*",
-   "XIXe siècle"
-  ],
-  "explanation": "Jean-Sébastien Bach, claveciniste, organiste et compositeur allemand, est né en 1685 et mort en 1750.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -3746,25 +3708,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cent-Q307",
-  "concept": "history.modern.century_galilee",
-  "label": "Époque de Galilée",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 39,
-  "prompt": "À quel siècle remonte la naissance de Galilée ?",
-  "options": [
-   "XIVe siècle",
-   "XVe siècle",
-   "XVIe siècle*",
-   "XVIIIe siècle"
-  ],
-  "explanation": "Galilée, physicien, philosophe et astronome italien, est né en 1564 et mort en 1642.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cent-Q30755",
   "concept": "history.contemporary.century_auguste_rodin",
   "label": "Époque de Auguste Rodin",
@@ -4316,25 +4259,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cent-Q37193",
-  "concept": "history.contemporary.century_robert_koch",
-  "label": "Époque de Robert Koch",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 48,
-  "prompt": "Robert Koch est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Robert Koch, médecin et bactériologiste allemand, est né en 1843 et mort en 1910.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cent-Q37388",
   "concept": "history.modern.century_francis_bacon",
   "label": "Époque de Francis Bacon",
@@ -4444,25 +4368,6 @@
    "XXe siècle"
   ],
   "explanation": "John Muir, écrivain et naturaliste écossais-américain, est né en 1838 et mort en 1914.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q37970",
-  "concept": "history.contemporary.century_gregor_mendel",
-  "label": "Époque de Gregor Mendel",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 47,
-  "prompt": "À quel siècle remonte la naissance de Gregor Mendel ?",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Gregor Mendel, moine, naturaliste et biologiste morave, fondateur des lois de l'hérédité, est né en 1822 et mort en 1884.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -4658,25 +4563,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cent-Q39931",
-  "concept": "history.contemporary.century_auguste_renoir",
-  "label": "Époque de Auguste Renoir",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 49,
-  "prompt": "Auguste Renoir est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Auguste Renoir, peintre et sculpteur français, est né en 1841 et mort en 1919.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cent-Q39978",
   "concept": "history.modern.century_nostradamus",
   "label": "Époque de Nostradamus",
@@ -4710,25 +4596,6 @@
    "XXe siècle"
   ],
   "explanation": "William Butler Yeats, poète et dramaturge irlandais, est né en 1865 et mort en 1939.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q40599",
-  "concept": "history.contemporary.century_edouard_manet",
-  "label": "Époque de Édouard Manet",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 49,
-  "prompt": "Édouard Manet est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Édouard Manet, peintre et graveur français, est né en 1832 et mort en 1883.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -4919,25 +4786,6 @@
    "XXe siècle"
   ],
   "explanation": "John Dalton, chimiste et physicien britannique, est né en 1766 et mort en 1844.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q41309",
-  "concept": "history.contemporary.century_franz_liszt",
-  "label": "Époque de Franz Liszt",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 48,
-  "prompt": "En quel siècle est né Franz Liszt ?",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Franz Liszt, compositeur et pianiste hongrois, est né en 1811 et mort en 1886.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -5147,25 +4995,6 @@
    "XVIIIe siècle"
   ],
   "explanation": "Abel Tasman, navigateur et explorateur néerlandais, est né en 1603 et mort en 1659.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q42207",
-  "concept": "history.modern.century_le_caravage",
-  "label": "Époque de Le Caravage",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 49,
-  "prompt": "À quel siècle remonte la naissance de Le Caravage ?",
-  "options": [
-   "XIVe siècle",
-   "XVe siècle",
-   "XVIe siècle*",
-   "XVIIe siècle"
-  ],
-  "explanation": "Le Caravage, peintre italien, est né en 1571 et mort en 1610.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -5646,25 +5475,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cent-Q46633",
-  "concept": "history.contemporary.century_charles_babbage",
-  "label": "Époque de Charles Babbage",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 49,
-  "prompt": "À quel siècle remonte la naissance de Charles Babbage ?",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle*",
-   "XIXe siècle",
-   "XXe siècle"
-  ],
-  "explanation": "Charles Babbage, mathématicien britannique, est né en 1791 et mort en 1871.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cent-Q47152",
   "concept": "history.contemporary.century_mary_shelley",
   "label": "Époque de Mary Shelley",
@@ -5736,25 +5546,6 @@
    "XXe siècle"
   ],
   "explanation": "Vivekananda, moine hindou et indien, est né en 1863 et mort en 1902.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q47551",
-  "concept": "history.middle_ages.century_titien",
-  "label": "Époque de Titien",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 50,
-  "prompt": "Titien est né au…",
-  "options": [
-   "XIIIe siècle",
-   "XVe siècle*",
-   "XVIe siècle",
-   "XVIIe siècle"
-  ],
-  "explanation": "Titien, peintre et graveur vénitien, est né en 1490 et mort en 1576.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -6064,25 +5855,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cent-Q502",
-  "concept": "history.modern.century_stendhal",
-  "label": "Époque de Stendhal",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 47,
-  "prompt": "Stendhal est né au…",
-  "options": [
-   "XVIe siècle",
-   "XVIIe siècle",
-   "XVIIIe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Stendhal, écrivain français, est né en 1783 et mort en 1842.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cent-Q5152",
   "concept": "history.contemporary.century_mustafa_kemal_ataturk",
   "label": "Époque de Mustafa Kemal Atatürk",
@@ -6116,25 +5888,6 @@
    "XXe siècle"
   ],
   "explanation": "Luis Buñuel, réalisateur et scénariste mexicain, d'origine espagnole, est né en 1900 et mort en 1983.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q529",
-  "concept": "history.contemporary.century_louis_pasteur",
-  "label": "Époque de Louis Pasteur",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 42,
-  "prompt": "Louis Pasteur est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Louis Pasteur, chimiste et biologiste français, fondateur de la microbiologie, est né en 1822 et mort en 1895.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -6249,25 +6002,6 @@
    "XVIIIe siècle"
   ],
   "explanation": "Pierre Paul Rubens, peintre flamand, est né en 1577 et mort en 1640.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q5604",
-  "concept": "history.contemporary.century_frank_lloyd_wright",
-  "label": "Époque de Frank Lloyd Wright",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 44,
-  "prompt": "En quel siècle est né Frank Lloyd Wright ?",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Frank Lloyd Wright, architecte et concepteur américain, est né en 1867 et mort en 1959.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -6629,25 +6363,6 @@
    "XXe siècle"
   ],
   "explanation": "Vassily Kandinsky, peintre russe, naturalisé allemand puis français, est né en 1866 et mort en 1944.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q619",
-  "concept": "history.middle_ages.century_nicolas_copernic",
-  "label": "Époque de Nicolas Copernic",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 42,
-  "prompt": "À quel siècle remonte la naissance de Nicolas Copernic ?",
-  "options": [
-   "XIIIe siècle",
-   "XIVe siècle",
-   "XVe siècle*",
-   "XVIIe siècle"
-  ],
-  "explanation": "Nicolas Copernic, astronome polonais, également chanoine, médecin et mathématicien, est né en 1473 et mort en 1543.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -7104,25 +6819,6 @@
    "XXe siècle"
   ],
   "explanation": "Piotr Ilitch Tchaïkovski, compositeur russe, est né en 1840 et mort en 1893.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q7317",
-  "concept": "history.contemporary.century_giuseppe_verdi",
-  "label": "Époque de Giuseppe Verdi",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 44,
-  "prompt": "Giuseppe Verdi est né au…",
-  "options": [
-   "XVIIe siècle",
-   "XVIIIe siècle",
-   "XIXe siècle*",
-   "XXe siècle"
-  ],
-  "explanation": "Giuseppe Verdi, compositeur italien de l'ère romantique, est né en 1813 et mort en 1901.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"
@@ -8415,25 +8111,6 @@
    "XXe siècle"
   ],
   "explanation": "Percy Bysshe Shelley, poète et dramaturge britannique, est né en 1792 et mort en 1822.",
-  "family": "person_era",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cent-Q935",
-  "concept": "history.modern.century_isaac_newton",
-  "label": "Époque de Isaac Newton",
-  "type": "mcq",
-  "keep_order": true,
-  "difficulty": 37,
-  "prompt": "Isaac Newton est né au…",
-  "options": [
-   "XVe siècle",
-   "XVIIe siècle*",
-   "XVIIIe siècle",
-   "XIXe siècle"
-  ],
-  "explanation": "Isaac Newton, philosophe, mathématicien, physicien, alchimiste, astronome et théologien anglais, est né en 1643 et mort en 1727.",
   "family": "person_era",
   "source": "Wikidata",
   "origin": "import"

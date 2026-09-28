@@ -18,11 +18,50 @@ const oid = (key, text) => createHash('sha1').update(`${key}|${text}`).digest('h
 const subdomains = new Set();
 for (const d of taxonomy.domains) for (const [s] of d.subdomains) subdomains.add(`${d.id}.${s}`);
 
+// ─────────────── Indice automatique (aide « Indice », payée en graines) quand la question n'en a pas d'écrit à la main.
+// QCM : initiale de la réponse (sans article), avec le nombre de lettres si l'initiale ne suffit pas à trancher.
+// Nombre : une fourchette (siècle ou quart de siècle pour une année, ordre de grandeur sinon). Jamais la réponse elle-même.
+const ARTICLE = /^(le |la |les |l'|l’|un |une |des |du |de la |de l'|en |au |aux )/i;
+const letters = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z]/g, '');
+const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+export function autoHint(q) {
+  if (q.type === 'mcq' && Array.isArray(q.options)) {
+    const texts = q.options.map((o) => o.replace(/\*$/, '').replace(ARTICLE, '').trim());
+    const ci = q.options.findIndex((o) => o.endsWith('*'));
+    const answer = texts[ci];
+    // Options numériques (années, quantités) : l'initiale ne veut rien dire.
+    if (!answer || /^[\d−-]/.test(answer) || texts.some((t) => /^\d/.test(t))) return undefined;
+    // Siècles en chiffres romains, « Années 1960 »… : l'initiale ne distingue rien.
+    if (texts.every((t) => /^([IVXL]+e|[IVXL]+er)\b/.test(t) || /^Ann[ée]es\b/i.test(t))) return undefined;
+    const initial = letters(answer).charAt(0).toUpperCase();
+    if (!initial) return undefined;
+    const same = texts.filter((t, i) => i !== ci && letters(t).charAt(0).toUpperCase() === initial);
+    if (same.length === 0) return `La réponse commence par « ${initial} ».`;
+    const n = letters(answer).length;
+    if (same.every((t) => letters(t).length !== n)) return `La réponse commence par « ${initial} » et compte ${n} lettres.`;
+    return undefined;
+  }
+  if (q.type === 'numeric' && typeof q.answer === 'number' && q.answer > 0) {
+    const v = q.answer;
+    const isYear = Number.isInteger(v) && v >= 1000 && v <= 2100 && /(ann[ée]e|quand|en quelle|date)/i.test(q.prompt);
+    if (isYear) {
+      const lo = Math.floor(v / 25) * 25;
+      return `Entre ${lo} et ${lo + 25}.`;
+    }
+    if (v <= 12 && Number.isInteger(v)) return `Un nombre ${v % 2 === 0 ? 'pair' : 'impair'}, ${v <= 6 ? 'entre 1 et 6' : 'entre 7 et 12'}.`;
+    const mag = 10 ** Math.floor(Math.log10(v));
+    const lo = Math.floor(v / mag) * mag;
+    if (lo === v) return `Un nombre rond, entre ${fmt(lo / 2)} et ${fmt(lo * 2)}.`;
+    return `Entre ${fmt(lo)} et ${fmt(lo + mag)}.`;
+  }
+  return undefined;
+}
+
 function convert(q) {
   const k = q.key;
   const base = {
     external_key: k, concept_id: q.concept, concept_label: q.label, type: q.type, prompt: q.prompt,
-    explanation: q.explanation, takeaway: q.takeaway, hint: q.hint, context_note: q.context,
+    explanation: q.explanation, takeaway: q.takeaway, hint: q.hint ?? autoHint(q), context_note: q.context,
     source: q.source, fact_as_of: q.fact_as_of, difficulty: q.difficulty, status: q.status ?? 'published',
     origin: q.origin ?? 'human', family: q.family,
   };
@@ -136,6 +175,38 @@ for (const q of raw) {
   questions.push(convert(q));
 }
 
+// ─────────────── Contrôle qualité
+// 1. Doublons : même énoncé et même réponse ; ou même thème, même réponse et énoncés très proches (hors même famille).
+const norm = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const answerOf = (q) => q.type === 'mcq' ? q.options.find((o) => o.endsWith('*')) ?? '' : q.type === 'true_false' || q.type === 'numeric'
+  ? String(q.answer) : JSON.stringify(q.items ?? q.pairs ?? q.pins ?? '');
+const wordSet = (t) => new Set(norm(t).split(' ').filter((w) => w.length > 3));
+const exact = new Map();
+const byAnswer = new Map();
+for (const q of raw) {
+  const a = norm(answerOf(q));
+  const e = `${norm(q.prompt)}#${a}`;
+  if (exact.has(e)) fail(q.key, `doublon de ${exact.get(e)}`);
+  else exact.set(e, q.key);
+  // Réponses numériques exclues des quasi-doublons : deux suites différentes peuvent donner 125.
+  if (a.length >= 3 && /[a-z]/.test(a)) byAnswer.set(`${themeOf(q)}#${a}`, [...(byAnswer.get(`${themeOf(q)}#${a}`) ?? []), q]);
+}
+for (const group of byAnswer.values()) {
+  if (group.length > 40) continue;
+  for (let i = 0; i < group.length; i++) for (let j = i + 1; j < group.length; j++) {
+    const [x, y] = [group[i], group[j]];
+    if (x.family && x.family === y.family) continue;
+    if (x.origin === 'import' && y.origin === 'import') continue;
+    const A = wordSet(x.prompt), B = wordSet(y.prompt);
+    const inter = [...A].filter((w) => B.has(w)).length;
+    if (inter / ((A.size + B.size - inter) || 1) >= 0.6 && norm(x.prompt) !== norm(y.prompt)) fail(y.key, `quasi-doublon de ${x.key}`);
+  }
+}
+// 2. Vrai/Faux équilibré (sinon « toujours Vrai » devient une stratégie).
+const tf = raw.filter((q) => q.type === 'true_false');
+const trueShare = tf.filter((q) => q.answer === true).length / Math.max(tf.length, 1);
+if (tf.length >= 20 && (trueShare < 0.4 || trueShare > 0.6)) fail('vrai/faux', `${Math.round(trueShare * 100)} % de « vrai » (attendu 40–60 %)`);
+
 if (errors.length) {
   console.error(`✗ ${errors.length} problème(s) dans le contenu :\n  ` + errors.join('\n  '));
   process.exit(1);
@@ -182,6 +253,8 @@ if (process.argv.includes('--report')) {
     '## Répartition par thème', '', '| Thème | Questions | < 35 | 35–54 | 55–69 | ≥ 70 | Max |', '|---|---|---|---|---|---|---|', ...rows, '',
   ].join('\n'));
   console.log(`✓ docs/CALIBRATION.md (${calibration.length} thème(s) étalé(s))`);
+  const withHint = questions.filter((q) => q.hint).length;
+  console.log(`  indices : ${withHint}/${questions.length} (${raw.filter((q) => q.hint).length} écrits à la main) · vrai/faux : ${Math.round(trueShare * 100)} % de « vrai »`);
 }
 
 if (process.argv.includes('--check')) {

@@ -59,9 +59,24 @@ const FAMILY = {
 /** Plusieurs formulations pour un même modèle, choisies de façon stable. */
 const vary = (seed, variants) => variants[Math.floor(rng(`vary-${seed}`)() * variants.length)];
 
+/** Réponse devinable depuis l'énoncé : un mot de la réponse (≥ 4 lettres) a le même début qu'un mot de l'énoncé
+ *  (« Lettonie » → « letton », « Sierra Leone » → « leone », « Afrique du Sud » → « Afrique »). */
+const fold = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+function givesAway(q) {
+  if (q.type !== 'mcq') return false;
+  const words = (t) => fold(t).split(/[^a-z]+/).filter((w) => w.length >= 4);
+  const options = q.options.map((o) => o.replace(/\*$/, ''));
+  // Mots présents dans toutes les options (« siècle », « dinar ») : ils ne désignent pas la réponse.
+  const shared = new Set(words(options[0]).filter((w) => options.every((o) => words(o).includes(w))));
+  const promptWords = words(q.prompt);
+  return words(options[0]).filter((w) => !shared.has(w))
+    .some((w) => promptWords.some((p) => p.slice(0, 5) === w.slice(0, 5)));
+}
+
 function add(bucket, template, q) {
   q.family = FAMILY[template];
   if (rejects.has(q.key)) { stats[`${template} (rejetées)`] = (stats[`${template} (rejetées)`] ?? 0) + 1; return; }
+  if (givesAway(q)) { stats[`${template} (réponse dans l'énoncé)`] = (stats[`${template} (réponse dans l'énoncé)`] ?? 0) + 1; return; }
   q.source = 'Wikidata';
   q.origin = 'import';
   out[bucket].push(q);

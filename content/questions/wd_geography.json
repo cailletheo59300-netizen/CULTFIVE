@@ -596,25 +596,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cap-Q1039",
-  "concept": "geography.capitals.sao_tome_and_principe",
-  "label": "Capitale de Sao Tomé-et-Principe",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "Quelle ville est la capitale de Sao Tomé-et-Principe ?",
-  "options": [
-   "São Tomé*",
-   "Victoria",
-   "Praia",
-   "Moroni"
-  ],
-  "explanation": "São Tomé est la capitale de Sao Tomé-et-Principe, en Afrique. Le pays compte environ 204 000 habitants.",
-  "fact_as_of": "2026-09-26",
-  "family": "capital",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cap-Q1041",
   "concept": "geography.capitals.senegal",
   "label": "Capitale du Sénégal",
@@ -818,25 +799,6 @@
    "Dacca"
   ],
   "explanation": "Pékin est la capitale de la Chine, en Asie. Le pays compte environ 1,4 milliard d'habitants. Ce n'est pas la plus grande ville du pays : Shanghaï est plus peuplée.",
-  "fact_as_of": "2026-09-26",
-  "family": "capital",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cap-Q155",
-  "concept": "geography.capitals.brazil",
-  "label": "Capitale du Brésil",
-  "type": "mcq",
-  "difficulty": 38,
-  "prompt": "Quelle est la capitale du Brésil ?",
-  "options": [
-   "Brasilia*",
-   "Bogota",
-   "Buenos Aires",
-   "Lima"
-  ],
-  "explanation": "Brasilia est la capitale du Brésil, en Amérique du Sud. Le pays compte environ 214 millions d'habitants. Ce n'est pas la plus grande ville du pays : São Paulo est plus peuplée.",
   "fact_as_of": "2026-09-26",
   "family": "capital",
   "source": "Wikidata",
@@ -1350,25 +1312,6 @@
    "Manille"
   ],
   "explanation": "Jakarta est la capitale de l'Indonésie, en Asie. Le pays compte environ 275 millions d'habitants.",
-  "fact_as_of": "2026-09-26",
-  "family": "capital",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cap-Q262",
-  "concept": "geography.capitals.algeria",
-  "label": "Capitale de l'Algérie",
-  "type": "mcq",
-  "difficulty": 42,
-  "prompt": "Quelle ville est la capitale de l'Algérie ?",
-  "options": [
-   "Alger*",
-   "Kampala",
-   "Nairobi",
-   "Khartoum"
-  ],
-  "explanation": "Alger est la capitale de l'Algérie, en Afrique. Le pays compte environ 46 millions d'habitants.",
   "fact_as_of": "2026-09-26",
   "family": "capital",
   "source": "Wikidata",
@@ -2490,25 +2433,6 @@
    "Saint-Georges"
   ],
   "explanation": "Roseau est la capitale de la Dominique, en Amérique du Nord. Le pays compte environ 75 000 habitants.",
-  "fact_as_of": "2026-09-26",
-  "family": "capital",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cap-Q786",
-  "concept": "geography.capitals.dominican_republic",
-  "label": "Capitale de la République dominicaine",
-  "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Quelle ville est la capitale de la République dominicaine ?",
-  "options": [
-   "Saint-Domingue*",
-   "Port-au-Prince",
-   "La Havane",
-   "Tegucigalpa"
-  ],
-  "explanation": "Saint-Domingue est la capitale de la République dominicaine, en Amérique du Nord. Le pays compte environ 11 millions d'habitants.",
   "fact_as_of": "2026-09-26",
   "family": "capital",
   "source": "Wikidata",
@@ -4109,24 +4033,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-capr-Q262",
-  "concept": "geography.capitals.algeria",
-  "label": "Capitale de l'Algérie",
-  "type": "mcq",
-  "difficulty": 38,
-  "prompt": "De quel pays Alger est-elle la capitale ?",
-  "options": [
-   "Algérie*",
-   "Ouganda",
-   "Kenya",
-   "Soudan"
-  ],
-  "explanation": "Alger est la capitale de l'Algérie.",
-  "family": "capital",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-capr-Q265",
   "concept": "geography.capitals.uzbekistan",
   "label": "Capitale de l'Ouzbékistan",
@@ -4212,24 +4118,6 @@
    "Pérou"
   ],
   "explanation": "Santiago est la capitale du Chili.",
-  "family": "capital",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-capr-Q29999",
-  "concept": "geography.capitals.kingdom_of_the_netherlands",
-  "label": "Capitale des Pays-Bas",
-  "type": "mcq",
-  "difficulty": 25,
-  "prompt": "De quel pays Amsterdam est-elle la capitale ?",
-  "options": [
-   "Pays-Bas*",
-   "Roumanie",
-   "Belgique",
-   "Tchéquie"
-  ],
-  "explanation": "Amsterdam est la capitale des Pays-Bas.",
   "family": "capital",
   "source": "Wikidata",
   "origin": "import"
@@ -4716,24 +4604,6 @@
    "Cuba"
   ],
   "explanation": "Tegucigalpa est la capitale du Honduras.",
-  "family": "capital",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-capr-Q786",
-  "concept": "geography.capitals.dominican_republic",
-  "label": "Capitale de la République dominicaine",
-  "type": "mcq",
-  "difficulty": 31,
-  "prompt": "De quel pays Saint-Domingue est-elle la capitale ?",
-  "options": [
-   "République dominicaine*",
-   "Haïti",
-   "Cuba",
-   "Honduras"
-  ],
-  "explanation": "Saint-Domingue est la capitale de la République dominicaine.",
   "family": "capital",
   "source": "Wikidata",
   "origin": "import"
@@ -8030,24 +7900,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cont-Q258",
-  "concept": "geography.countries.continent_south_africa",
-  "label": "Continent de l'Afrique du Sud",
-  "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Sur quel continent se trouve l'Afrique du Sud ?",
-  "options": [
-   "Afrique*",
-   "Asie",
-   "Europe",
-   "Océanie"
-  ],
-  "explanation": "L'Afrique du Sud se trouve en Afrique.",
-  "family": "continent",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cont-Q262",
   "concept": "geography.countries.continent_algeria",
   "label": "Continent de l'Algérie",
@@ -9778,25 +9630,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q1006",
-  "concept": "geography.countries.currency_guinea",
-  "label": "Monnaie de la Guinée",
-  "type": "mcq",
-  "difficulty": 53,
-  "prompt": "Avec quelle monnaie paie-t-on en Guinée ?",
-  "options": [
-   "Franc guinéen*",
-   "Dobra",
-   "Dinar tunisien",
-   "Livre soudanaise"
-  ],
-  "explanation": "En Guinée, on paie en franc guinéen.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q1007",
   "concept": "geography.countries.currency_guinea_bissau",
   "label": "Monnaie de la Guinée-Bissau",
@@ -9873,44 +9706,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q1014",
-  "concept": "geography.countries.currency_liberia",
-  "label": "Monnaie du Liberia",
-  "type": "mcq",
-  "difficulty": 57,
-  "prompt": "Avec quelle monnaie paie-t-on au Liberia ?",
-  "options": [
-   "Dollar libérien*",
-   "Dalasi",
-   "Kwacha malawien",
-   "Franc Djibouti"
-  ],
-  "explanation": "Au Liberia, on paie en dollar libérien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q1016",
-  "concept": "geography.countries.currency_libya",
-  "label": "Monnaie de la Libye",
-  "type": "mcq",
-  "difficulty": 56,
-  "prompt": "Avec quelle monnaie paie-t-on en Libye ?",
-  "options": [
-   "Dinar libyen*",
-   "Shilling kényan",
-   "Kwacha malawien",
-   "Franc comorien"
-  ],
-  "explanation": "En Libye, on paie en dinar libyen.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q1019",
   "concept": "geography.countries.currency_madagascar",
   "label": "Monnaie de Madagascar",
@@ -9930,25 +9725,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q1020",
-  "concept": "geography.countries.currency_malawi",
-  "label": "Monnaie du Malawi",
-  "type": "mcq",
-  "difficulty": 53,
-  "prompt": "Avec quelle monnaie paie-t-on au Malawi ?",
-  "options": [
-   "Kwacha malawien*",
-   "Ariary",
-   "Dinar tunisien",
-   "Franc CFA d'Afrique centrale"
-  ],
-  "explanation": "Au Malawi, on paie en kwacha malawien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q1025",
   "concept": "geography.countries.currency_mauritania",
   "label": "Monnaie de la Mauritanie",
@@ -9962,44 +9738,6 @@
    "Franc rwandais"
   ],
   "explanation": "En Mauritanie, on paie en ouguiya.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q1027",
-  "concept": "geography.countries.currency_mauritius",
-  "label": "Monnaie de Maurice",
-  "type": "mcq",
-  "difficulty": 61,
-  "prompt": "Quelle est la monnaie de Maurice ?",
-  "options": [
-   "Roupie mauricienne*",
-   "Franc burundais",
-   "Dollar libérien",
-   "Pula"
-  ],
-  "explanation": "À Maurice, on paie en roupie mauricienne.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q1028",
-  "concept": "geography.countries.currency_morocco",
-  "label": "Monnaie du Maroc",
-  "type": "mcq",
-  "difficulty": 51,
-  "prompt": "Avec quelle monnaie paie-t-on au Maroc ?",
-  "options": [
-   "Dirham marocain*",
-   "Dinar algérien",
-   "Ouguiya",
-   "Franc Djibouti"
-  ],
-  "explanation": "Au Maroc, on paie en Dirham marocain.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -10063,44 +9801,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q1036",
-  "concept": "geography.countries.currency_uganda",
-  "label": "Monnaie de l'Ouganda",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Quelle est la monnaie de l'Ouganda ?",
-  "options": [
-   "Shilling ougandais*",
-   "Livre sud-soudanaise",
-   "Shilling kényan",
-   "Franc Djibouti"
-  ],
-  "explanation": "En Ouganda, on paie en shilling ougandais.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q1037",
-  "concept": "geography.countries.currency_rwanda",
-  "label": "Monnaie du Rwanda",
-  "type": "mcq",
-  "difficulty": 54,
-  "prompt": "Quelle est la monnaie du Rwanda ?",
-  "options": [
-   "Franc rwandais*",
-   "Dinar libyen",
-   "Kwanza",
-   "Dollar libérien"
-  ],
-  "explanation": "Au Rwanda, on paie en franc rwandais.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q1039",
   "concept": "geography.countries.currency_sao_tome_and_principe",
   "label": "Monnaie de Sao Tomé-et-Principe",
@@ -10139,82 +9839,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q1042",
-  "concept": "geography.countries.currency_seychelles",
-  "label": "Monnaie des Seychelles",
-  "type": "mcq",
-  "difficulty": 68,
-  "prompt": "Avec quelle monnaie paie-t-on aux Seychelles ?",
-  "options": [
-   "Roupie seychelloise*",
-   "Shilling tanzanien",
-   "Dinar libyen",
-   "Franc CFA d'Afrique centrale"
-  ],
-  "explanation": "Aux Seychelles, on paie en roupie seychelloise.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q1044",
-  "concept": "geography.countries.currency_sierra_leone",
-  "label": "Monnaie de la Sierra Leone",
-  "type": "mcq",
-  "difficulty": 56,
-  "prompt": "Avec quelle monnaie paie-t-on en Sierra Leone ?",
-  "options": [
-   "Leone*",
-   "Franc Djibouti",
-   "Cedi",
-   "Livre sud-soudanaise"
-  ],
-  "explanation": "En Sierra Leone, on paie en leone.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q1045",
-  "concept": "geography.countries.currency_somalia",
-  "label": "Monnaie de la Somalie",
-  "type": "mcq",
-  "difficulty": 55,
-  "prompt": "Avec quelle monnaie paie-t-on en Somalie ?",
-  "options": [
-   "Shilling somalien*",
-   "Ariary",
-   "Kwacha zambien",
-   "Escudo cap-verdien"
-  ],
-  "explanation": "En Somalie, on paie en shilling somalien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q1049",
-  "concept": "geography.countries.currency_sudan",
-  "label": "Monnaie du Soudan",
-  "type": "mcq",
-  "difficulty": 51,
-  "prompt": "Avec quelle monnaie paie-t-on au Soudan ?",
-  "options": [
-   "Livre soudanaise*",
-   "Franc CFA d'Afrique centrale",
-   "Kwacha malawien",
-   "Franc rwandais"
-  ],
-  "explanation": "Au Soudan, on paie en livre soudanaise.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q1050",
   "concept": "geography.countries.currency_eswatini",
   "label": "Monnaie de l'Eswatini",
@@ -10228,25 +9852,6 @@
    "Shilling somalien"
   ],
   "explanation": "En Eswatini, on paie en lilangeni.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q114",
-  "concept": "geography.countries.currency_kenya",
-  "label": "Monnaie du Kenya",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Quelle est la monnaie du Kenya ?",
-  "options": [
-   "Shilling kényan*",
-   "Kwacha malawien",
-   "Kwacha zambien",
-   "Metical"
-  ],
-  "explanation": "Au Kenya, on paie en Shilling kényan.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -10291,25 +9896,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q142",
-  "concept": "geography.countries.currency_france",
-  "label": "Monnaie de la France",
-  "type": "mcq",
-  "difficulty": 33,
-  "prompt": "Avec quelle monnaie paie-t-on en France ?",
-  "options": [
-   "Franc Pacifique*",
-   "Leu roumain",
-   "Leu moldave",
-   "Denar macédonien"
-  ],
-  "explanation": "En France, on paie en franc Pacifique.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q145",
   "concept": "geography.countries.currency_united_kingdom",
   "label": "Monnaie du Royaume-Uni",
@@ -10348,25 +9934,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q155",
-  "concept": "geography.countries.currency_brazil",
-  "label": "Monnaie du Brésil",
-  "type": "mcq",
-  "difficulty": 38,
-  "prompt": "Quelle est la monnaie du Brésil ?",
-  "options": [
-   "Réal brésilien*",
-   "Sol",
-   "Peso argentin",
-   "Guaraní"
-  ],
-  "explanation": "Au Brésil, on paie en réal brésilien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q159",
   "concept": "geography.countries.currency_russia",
   "label": "Monnaie de la Russie",
@@ -10380,25 +9947,6 @@
    "Ringgit"
   ],
   "explanation": "En Russie, on paie en rouble russe.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q16",
-  "concept": "geography.countries.currency_canada",
-  "label": "Monnaie du Canada",
-  "type": "mcq",
-  "difficulty": 39,
-  "prompt": "Avec quelle monnaie paie-t-on au Canada ?",
-  "options": [
-   "Dollar canadien*",
-   "Dollar de Trinité-et-Tobago",
-   "Dollar des Caraïbes orientales",
-   "Córdoba"
-  ],
-  "explanation": "Au Canada, on paie en dollar canadien.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -10424,63 +9972,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q184",
-  "concept": "geography.countries.currency_belarus",
-  "label": "Monnaie de la Biélorussie",
-  "type": "mcq",
-  "difficulty": 39,
-  "prompt": "Avec quelle monnaie paie-t-on en Biélorussie ?",
-  "options": [
-   "Rouble biélorusse*",
-   "Leu roumain",
-   "Couronne islandaise",
-   "Couronne norvégienne"
-  ],
-  "explanation": "En Biélorussie, on paie en Rouble biélorusse.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q189",
-  "concept": "geography.countries.currency_iceland",
-  "label": "Monnaie de l'Islande",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Quelle est la monnaie de l'Islande ?",
-  "options": [
-   "Couronne islandaise*",
-   "Złoty",
-   "Leu moldave",
-   "Lek"
-  ],
-  "explanation": "En Islande, on paie en couronne islandaise.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q20",
-  "concept": "geography.countries.currency_norway",
-  "label": "Monnaie de la Norvège",
-  "type": "mcq",
-  "difficulty": 41,
-  "prompt": "Quelle est la monnaie de la Norvège ?",
-  "options": [
-   "Couronne norvégienne*",
-   "Couronne islandaise",
-   "Forint",
-   "Lari"
-  ],
-  "explanation": "En Norvège, on paie en couronne norvégienne.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q212",
   "concept": "geography.countries.currency_ukraine",
   "label": "Monnaie de l'Ukraine",
@@ -10494,82 +9985,6 @@
    "Rouble biélorusse"
   ],
   "explanation": "En Ukraine, on paie en hryvnia.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q213",
-  "concept": "geography.countries.currency_czech_republic",
-  "label": "Monnaie de la Tchéquie",
-  "type": "mcq",
-  "difficulty": 39,
-  "prompt": "Avec quelle monnaie paie-t-on en Tchéquie ?",
-  "options": [
-   "Couronne tchèque*",
-   "Franc Pacifique",
-   "Rouble biélorusse",
-   "Livre sterling"
-  ],
-  "explanation": "En Tchéquie, on paie en couronne tchèque.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q217",
-  "concept": "geography.countries.currency_moldova",
-  "label": "Monnaie de la Moldavie",
-  "type": "mcq",
-  "difficulty": 43,
-  "prompt": "Quelle est la monnaie de la Moldavie ?",
-  "options": [
-   "Leu moldave*",
-   "Franc suisse",
-   "Leu roumain",
-   "Dinar serbe"
-  ],
-  "explanation": "En Moldavie, on paie en leu moldave.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q218",
-  "concept": "geography.countries.currency_romania",
-  "label": "Monnaie de la Roumanie",
-  "type": "mcq",
-  "difficulty": 37,
-  "prompt": "Quelle est la monnaie de la Roumanie ?",
-  "options": [
-   "Leu roumain*",
-   "Złoty",
-   "Livre sterling",
-   "Dinar serbe"
-  ],
-  "explanation": "En Roumanie, on paie en leu roumain.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q221",
-  "concept": "geography.countries.currency_north_macedonia",
-  "label": "Monnaie de la Macédoine du Nord",
-  "type": "mcq",
-  "difficulty": 44,
-  "prompt": "Quelle est la monnaie de la Macédoine du Nord ?",
-  "options": [
-   "Denar macédonien*",
-   "Couronne norvégienne",
-   "Franc Pacifique",
-   "Franc suisse"
-  ],
-  "explanation": "En Macédoine du Nord, on paie en denar macédonien.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -10595,25 +10010,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q227",
-  "concept": "geography.countries.currency_azerbaijan",
-  "label": "Monnaie de l'Azerbaïdjan",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Quelle est la monnaie de l'Azerbaïdjan ?",
-  "options": [
-   "Manat azerbaïdjanais*",
-   "Shekel",
-   "Dong",
-   "Som"
-  ],
-  "explanation": "En Azerbaïdjan, on paie en manat azerbaïdjanais.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q230",
   "concept": "geography.countries.currency_georgia",
   "label": "Monnaie de la Géorgie",
@@ -10627,25 +10023,6 @@
    "Leu roumain"
   ],
   "explanation": "En Géorgie, on paie en lari.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q232",
-  "concept": "geography.countries.currency_kazakhstan",
-  "label": "Monnaie du Kazakhstan",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Quelle est la monnaie du Kazakhstan ?",
-  "options": [
-   "Tenge kazakh*",
-   "Livre turque",
-   "Rouble russe",
-   "Ringgit"
-  ],
-  "explanation": "Au Kazakhstan, on paie en tenge kazakh.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -10671,63 +10048,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q242",
-  "concept": "geography.countries.currency_belize",
-  "label": "Monnaie du Belize",
-  "type": "mcq",
-  "difficulty": 53,
-  "prompt": "Avec quelle monnaie paie-t-on au Belize ?",
-  "options": [
-   "Dollar bélizien*",
-   "Peso cubain",
-   "Lempira",
-   "Dollar de Trinité-et-Tobago"
-  ],
-  "explanation": "Au Belize, on paie en dollar bélizien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q244",
-  "concept": "geography.countries.currency_barbados",
-  "label": "Monnaie de la Barbade",
-  "type": "mcq",
-  "difficulty": 54,
-  "prompt": "Avec quelle monnaie paie-t-on à la Barbade ?",
-  "options": [
-   "Dollar barbadien*",
-   "Dollar des Caraïbes orientales",
-   "Dollar bahaméen",
-   "Dollar canadien"
-  ],
-  "explanation": "À la Barbade, on paie en dollar barbadien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q252",
-  "concept": "geography.countries.currency_indonesia",
-  "label": "Monnaie de l'Indonésie",
-  "type": "mcq",
-  "difficulty": 40,
-  "prompt": "Quelle est la monnaie de l'Indonésie ?",
-  "options": [
-   "Roupie indonésienne*",
-   "Somoni",
-   "Dollar de Singapour",
-   "Manat azerbaïdjanais"
-  ],
-  "explanation": "En Indonésie, on paie en roupie indonésienne.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q258",
   "concept": "geography.countries.currency_south_africa",
   "label": "Monnaie de l'Afrique du Sud",
@@ -10741,25 +10061,6 @@
    "Birr"
   ],
   "explanation": "En Afrique du Sud, on paie en rand.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q262",
-  "concept": "geography.countries.currency_algeria",
-  "label": "Monnaie de l'Algérie",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Quelle est la monnaie de l'Algérie ?",
-  "options": [
-   "Dinar algérien*",
-   "Franc burundais",
-   "Ouguiya",
-   "Roupie seychelloise"
-  ],
-  "explanation": "En Algérie, on paie en dinar algérien.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -10804,25 +10105,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q298",
-  "concept": "geography.countries.currency_chile",
-  "label": "Monnaie du Chili",
-  "type": "mcq",
-  "difficulty": 45,
-  "prompt": "Avec quelle monnaie paie-t-on au Chili ?",
-  "options": [
-   "Peso chilien*",
-   "Sol",
-   "Dollar américain",
-   "Peso argentin"
-  ],
-  "explanation": "Au Chili, on paie en peso chilien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q30",
   "concept": "geography.countries.currency_united_states",
   "label": "Monnaie des États-Unis",
@@ -10836,25 +10118,6 @@
    "Gourde"
   ],
   "explanation": "Aux États-Unis, on paie en dollar américain.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q334",
-  "concept": "geography.countries.currency_singapore",
-  "label": "Monnaie de Singapour",
-  "type": "mcq",
-  "difficulty": 52,
-  "prompt": "Avec quelle monnaie paie-t-on à Singapour ?",
-  "options": [
-   "Dollar de Singapour*",
-   "Riel",
-   "Dram arménien",
-   "Renminbi"
-  ],
-  "explanation": "À Singapour, on paie en dollar de Singapour.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -10918,63 +10181,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q39",
-  "concept": "geography.countries.currency_switzerland",
-  "label": "Monnaie de la Suisse",
-  "type": "mcq",
-  "difficulty": 39,
-  "prompt": "Quelle est la monnaie de la Suisse ?",
-  "options": [
-   "Franc suisse*",
-   "Rouble biélorusse",
-   "Livre sterling",
-   "Forint"
-  ],
-  "explanation": "En Suisse, on paie en franc suisse.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q398",
-  "concept": "geography.countries.currency_bahrain",
-  "label": "Monnaie de Bahreïn",
-  "type": "mcq",
-  "difficulty": 56,
-  "prompt": "Quelle est la monnaie de Bahreïn ?",
-  "options": [
-   "Dinar bahreïnien*",
-   "Somoni",
-   "Dollar américain",
-   "Tugrik"
-  ],
-  "explanation": "À Bahreïn, on paie en dinar bahreïnien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q399",
-  "concept": "geography.countries.currency_armenia",
-  "label": "Monnaie de l'Arménie",
-  "type": "mcq",
-  "difficulty": 54,
-  "prompt": "Quelle est la monnaie de l'Arménie ?",
-  "options": [
-   "Dram arménien*",
-   "Riyal qatarien",
-   "Shekel",
-   "Afghani"
-  ],
-  "explanation": "En Arménie, on paie en dram arménien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q403",
   "concept": "geography.countries.currency_serbia",
   "label": "Monnaie de la Serbie",
@@ -10988,44 +10194,6 @@
    "Livre sterling"
   ],
   "explanation": "En Serbie, on paie en dinar serbe.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q408",
-  "concept": "geography.countries.currency_australia",
-  "label": "Monnaie de l'Australie",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Quelle est la monnaie de l'Australie ?",
-  "options": [
-   "Dollar australien*",
-   "Dollar des îles Salomon",
-   "Dollar néo-zélandais",
-   "Dollar des Fidji"
-  ],
-  "explanation": "En Australie, on paie en dollar australien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q414",
-  "concept": "geography.countries.currency_argentina",
-  "label": "Monnaie de l'Argentine",
-  "type": "mcq",
-  "difficulty": 42,
-  "prompt": "Quelle est la monnaie de l'Argentine ?",
-  "options": [
-   "Peso argentin*",
-   "Peso chilien",
-   "Dollar guyanien",
-   "Peso colombien"
-  ],
-  "explanation": "En Argentine, on paie en peso argentin.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11051,25 +10219,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q423",
-  "concept": "geography.countries.currency_north_korea",
-  "label": "Monnaie de la Corée du Nord",
-  "type": "mcq",
-  "difficulty": 47,
-  "prompt": "Quelle est la monnaie de la Corée du Nord ?",
-  "options": [
-   "Won nord-coréen*",
-   "Dollar de Brunei",
-   "Dram arménien",
-   "Tugrik"
-  ],
-  "explanation": "En Corée du Nord, on paie en won nord-coréen.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q424",
   "concept": "geography.countries.currency_cambodia",
   "label": "Monnaie du Cambodge",
@@ -11083,25 +10232,6 @@
    "Rial yéménite"
   ],
   "explanation": "Au Cambodge, on paie en riel.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q43",
-  "concept": "geography.countries.currency_turkey",
-  "label": "Monnaie de la Turquie",
-  "type": "mcq",
-  "difficulty": 44,
-  "prompt": "Quelle est la monnaie de la Turquie ?",
-  "options": [
-   "Livre turque*",
-   "Rouble russe",
-   "Tenge kazakh",
-   "Colón"
-  ],
-  "explanation": "En Turquie, on paie en livre turque.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11140,25 +10270,6 @@
    "Shilling tanzanien"
   ],
   "explanation": "Au Tchad, on paie en franc CFA d'Afrique centrale.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q664",
-  "concept": "geography.countries.currency_new_zealand",
-  "label": "Monnaie de la Nouvelle-Zélande",
-  "type": "mcq",
-  "difficulty": 55,
-  "prompt": "Quelle est la monnaie de la Nouvelle-Zélande ?",
-  "options": [
-   "Dollar néo-zélandais*",
-   "Dollar américain",
-   "Kina",
-   "Dollar des Fidji"
-  ],
-  "explanation": "En Nouvelle-Zélande, on paie en dollar néo-zélandais.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11216,25 +10327,6 @@
    "Dollar australien"
   ],
   "explanation": "Aux Samoa, on paie en tala.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q685",
-  "concept": "geography.countries.currency_solomon_islands",
-  "label": "Monnaie des Îles Salomon",
-  "type": "mcq",
-  "difficulty": 61,
-  "prompt": "Quelle est la monnaie des Îles Salomon ?",
-  "options": [
-   "Dollar des îles Salomon*",
-   "Dollar néo-zélandais",
-   "Dollar australien",
-   "Vatu"
-  ],
-  "explanation": "Aux Îles Salomon, on paie en dollar des îles Salomon.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11355,25 +10447,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q712",
-  "concept": "geography.countries.currency_fiji",
-  "label": "Monnaie des Fidji",
-  "type": "mcq",
-  "difficulty": 60,
-  "prompt": "Quelle est la monnaie des Fidji ?",
-  "options": [
-   "Dollar des Fidji*",
-   "Vatu",
-   "Dollar australien",
-   "Dollar néo-zélandais"
-  ],
-  "explanation": "Aux Fidji, on paie en dollar des Fidji.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q717",
   "concept": "geography.countries.currency_venezuela",
   "label": "Monnaie du Venezuela",
@@ -11387,25 +10460,6 @@
    "Dollar du Surinam"
   ],
   "explanation": "Au Venezuela, on paie en bolivar souverain.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q730",
-  "concept": "geography.countries.currency_suriname",
-  "label": "Monnaie du Suriname",
-  "type": "mcq",
-  "difficulty": 56,
-  "prompt": "Avec quelle monnaie paie-t-on au Suriname ?",
-  "options": [
-   "Dollar du Surinam*",
-   "Peso uruguayen",
-   "Bolivar souverain",
-   "Dollar américain"
-  ],
-  "explanation": "Au Suriname, on paie en Dollar du Surinam.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11431,25 +10485,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q734",
-  "concept": "geography.countries.currency_guyana",
-  "label": "Monnaie du Guyana",
-  "type": "mcq",
-  "difficulty": 54,
-  "prompt": "Avec quelle monnaie paie-t-on au Guyana ?",
-  "options": [
-   "Dollar guyanien*",
-   "Peso uruguayen",
-   "Sol",
-   "Peso chilien"
-  ],
-  "explanation": "Au Guyana, on paie en Dollar guyanien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q736",
   "concept": "geography.countries.currency_ecuador",
   "label": "Monnaie de l'Équateur",
@@ -11463,63 +10498,6 @@
    "Dollar guyanien"
   ],
   "explanation": "En Équateur, on paie en dollar américain.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q739",
-  "concept": "geography.countries.currency_colombia",
-  "label": "Monnaie de la Colombie",
-  "type": "mcq",
-  "difficulty": 42,
-  "prompt": "Quelle est la monnaie de la Colombie ?",
-  "options": [
-   "Peso colombien*",
-   "Sol",
-   "Dollar guyanien",
-   "Bolivar souverain"
-  ],
-  "explanation": "En Colombie, on paie en peso colombien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q750",
-  "concept": "geography.countries.currency_bolivia",
-  "label": "Monnaie de la Bolivie",
-  "type": "mcq",
-  "difficulty": 46,
-  "prompt": "Quelle est la monnaie de la Bolivie ?",
-  "options": [
-   "Boliviano*",
-   "Réal brésilien",
-   "Sol",
-   "Peso uruguayen"
-  ],
-  "explanation": "En Bolivie, on paie en boliviano.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q754",
-  "concept": "geography.countries.currency_trinidad_and_tobago",
-  "label": "Monnaie de Trinité-et-Tobago",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Quelle est la monnaie de Trinité-et-Tobago ?",
-  "options": [
-   "Dollar de Trinité-et-Tobago*",
-   "Dollar jamaïcain",
-   "Dollar bahaméen",
-   "Lempira"
-  ],
-  "explanation": "À Trinité-et-Tobago, on paie en Dollar de Trinité-et-Tobago.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11583,25 +10561,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q766",
-  "concept": "geography.countries.currency_jamaica",
-  "label": "Monnaie de la Jamaïque",
-  "type": "mcq",
-  "difficulty": 47,
-  "prompt": "Quelle est la monnaie de la Jamaïque ?",
-  "options": [
-   "Dollar jamaïcain*",
-   "Peso mexicain",
-   "Dollar canadien",
-   "Lempira"
-  ],
-  "explanation": "En Jamaïque, on paie en Dollar jamaïcain.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q769",
   "concept": "geography.countries.currency_grenada",
   "label": "Monnaie de la Grenade",
@@ -11621,25 +10580,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q77",
-  "concept": "geography.countries.currency_uruguay",
-  "label": "Monnaie de l'Uruguay",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Avec quelle monnaie paie-t-on en Uruguay ?",
-  "options": [
-   "Peso uruguayen*",
-   "Peso argentin",
-   "Boliviano",
-   "Dollar guyanien"
-  ],
-  "explanation": "En Uruguay, on paie en peso uruguayen.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q774",
   "concept": "geography.countries.currency_guatemala",
   "label": "Monnaie du Guatemala",
@@ -11653,25 +10593,6 @@
    "Dollar de Trinité-et-Tobago"
   ],
   "explanation": "Au Guatemala, on paie en Quetzal.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q778",
-  "concept": "geography.countries.currency_the_bahamas",
-  "label": "Monnaie des Bahamas",
-  "type": "mcq",
-  "difficulty": 53,
-  "prompt": "Quelle est la monnaie des Bahamas ?",
-  "options": [
-   "Dollar bahaméen*",
-   "Dollar barbadien",
-   "Córdoba",
-   "Lempira"
-  ],
-  "explanation": "Aux Bahamas, on paie en dollar bahaméen.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11729,44 +10650,6 @@
    "Dollar bahaméen"
   ],
   "explanation": "À la Dominique, on paie en dollar des Caraïbes orientales.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q786",
-  "concept": "geography.countries.currency_dominican_republic",
-  "label": "Monnaie de la République dominicaine",
-  "type": "mcq",
-  "difficulty": 43,
-  "prompt": "Quelle est la monnaie de la République dominicaine ?",
-  "options": [
-   "Peso dominicain*",
-   "Córdoba",
-   "Dollar des Caraïbes orientales",
-   "Dollar de Trinité-et-Tobago"
-  ],
-  "explanation": "En République dominicaine, on paie en peso dominicain.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q79",
-  "concept": "geography.countries.currency_egypt",
-  "label": "Monnaie de l'Égypte",
-  "type": "mcq",
-  "difficulty": 48,
-  "prompt": "Quelle est la monnaie de l'Égypte ?",
-  "options": [
-   "Livre égyptienne*",
-   "Nakfa érythréen",
-   "Birr",
-   "Pula"
-  ],
-  "explanation": "En Égypte, on paie en livre égyptienne.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -11887,44 +10770,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q805",
-  "concept": "geography.countries.currency_yemen",
-  "label": "Monnaie du Yémen",
-  "type": "mcq",
-  "difficulty": 47,
-  "prompt": "Avec quelle monnaie paie-t-on au Yémen ?",
-  "options": [
-   "Rial yéménite*",
-   "Dirham des Émirats arabes unis",
-   "Peso philippin",
-   "Dinar koweïtien"
-  ],
-  "explanation": "Au Yémen, on paie en rial yéménite.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q810",
-  "concept": "geography.countries.currency_jordan",
-  "label": "Monnaie de la Jordanie",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Quelle est la monnaie de la Jordanie ?",
-  "options": [
-   "Dinar jordanien*",
-   "Renminbi",
-   "Dirham des Émirats arabes unis",
-   "Riyal saoudien"
-  ],
-  "explanation": "En Jordanie, on paie en Dinar jordanien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q811",
   "concept": "geography.countries.currency_nicaragua",
   "label": "Monnaie du Nicaragua",
@@ -11963,25 +10808,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q817",
-  "concept": "geography.countries.currency_kuwait",
-  "label": "Monnaie du Koweït",
-  "type": "mcq",
-  "difficulty": 52,
-  "prompt": "Avec quelle monnaie paie-t-on au Koweït ?",
-  "options": [
-   "Dinar koweïtien*",
-   "Roupie indienne",
-   "Rial iranien",
-   "Yen"
-  ],
-  "explanation": "Au Koweït, on paie en dinar koweïtien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q819",
   "concept": "geography.countries.currency_laos",
   "label": "Monnaie du Laos",
@@ -11995,25 +10821,6 @@
    "Somoni"
   ],
   "explanation": "Au Laos, on paie en Kip laotien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q822",
-  "concept": "geography.countries.currency_lebanon",
-  "label": "Monnaie du Liban",
-  "type": "mcq",
-  "difficulty": 52,
-  "prompt": "Quelle est la monnaie du Liban ?",
-  "options": [
-   "Livre libanaise*",
-   "Roupie pakistanaise",
-   "Rial iranien",
-   "Riyal qatarien"
-  ],
-  "explanation": "Au Liban, on paie en livre libanaise.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -12077,25 +10884,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q837",
-  "concept": "geography.countries.currency_nepal",
-  "label": "Monnaie du Népal",
-  "type": "mcq",
-  "difficulty": 47,
-  "prompt": "Avec quelle monnaie paie-t-on au Népal ?",
-  "options": [
-   "Roupie népalaise*",
-   "Som",
-   "Roupie pakistanaise",
-   "Livre libanaise"
-  ],
-  "explanation": "Au Népal, on paie en roupie népalaise.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q842",
   "concept": "geography.countries.currency_oman",
   "label": "Monnaie d'Oman",
@@ -12115,63 +10903,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q843",
-  "concept": "geography.countries.currency_pakistan",
-  "label": "Monnaie du Pakistan",
-  "type": "mcq",
-  "difficulty": 41,
-  "prompt": "Avec quelle monnaie paie-t-on au Pakistan ?",
-  "options": [
-   "Roupie pakistanaise*",
-   "Livre libanaise",
-   "Dinar bahreïnien",
-   "Renminbi"
-  ],
-  "explanation": "Au Pakistan, on paie en roupie pakistanaise.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q846",
-  "concept": "geography.countries.currency_qatar",
-  "label": "Monnaie du Qatar",
-  "type": "mcq",
-  "difficulty": 54,
-  "prompt": "Avec quelle monnaie paie-t-on au Qatar ?",
-  "options": [
-   "Riyal qatarien*",
-   "Dinar bahreïnien",
-   "Dinar irakien",
-   "Riyal saoudien"
-  ],
-  "explanation": "Au Qatar, on paie en riyal qatarien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q851",
-  "concept": "geography.countries.currency_saudi_arabia",
-  "label": "Monnaie de l'Arabie saoudite",
-  "type": "mcq",
-  "difficulty": 46,
-  "prompt": "Avec quelle monnaie paie-t-on en Arabie saoudite ?",
-  "options": [
-   "Riyal saoudien*",
-   "Dirham des Émirats arabes unis",
-   "Rufiyaa",
-   "Sum"
-  ],
-  "explanation": "En Arabie saoudite, on paie en riyal saoudien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q854",
   "concept": "geography.countries.currency_sri_lanka",
   "label": "Monnaie du Sri Lanka",
@@ -12185,25 +10916,6 @@
    "Roupie népalaise"
   ],
   "explanation": "Au Sri Lanka, on paie en roupie srilankaise.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q858",
-  "concept": "geography.countries.currency_syria",
-  "label": "Monnaie de la Syrie",
-  "type": "mcq",
-  "difficulty": 47,
-  "prompt": "Avec quelle monnaie paie-t-on en Syrie ?",
-  "options": [
-   "Livre syrienne*",
-   "Riel",
-   "Shekel",
-   "Afghani"
-  ],
-  "explanation": "En Syrie, on paie en livre syrienne.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -12248,44 +10960,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q874",
-  "concept": "geography.countries.currency_turkmenistan",
-  "label": "Monnaie du Turkménistan",
-  "type": "mcq",
-  "difficulty": 51,
-  "prompt": "Quelle est la monnaie du Turkménistan ?",
-  "options": [
-   "Manat turkmène*",
-   "Rial iranien",
-   "Dollar de Brunei",
-   "Renminbi"
-  ],
-  "explanation": "Au Turkménistan, on paie en Manat turkmène.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q878",
-  "concept": "geography.countries.currency_united_arab_emirates",
-  "label": "Monnaie des Émirats arabes unis",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Avec quelle monnaie paie-t-on aux Émirats arabes unis ?",
-  "options": [
-   "Dirham des Émirats arabes unis*",
-   "Roupie népalaise",
-   "Riyal qatarien",
-   "Taka"
-  ],
-  "explanation": "Aux Émirats arabes unis, on paie en Dirham des Émirats arabes unis.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q881",
   "concept": "geography.countries.currency_vietnam",
   "label": "Monnaie du Viêt Nam",
@@ -12299,25 +10973,6 @@
    "Dinar bahreïnien"
   ],
   "explanation": "Au Viêt Nam, on paie en dong.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q889",
-  "concept": "geography.countries.currency_afghanistan",
-  "label": "Monnaie de l'Afghanistan",
-  "type": "mcq",
-  "difficulty": 46,
-  "prompt": "Avec quelle monnaie paie-t-on en Afghanistan ?",
-  "options": [
-   "Afghani*",
-   "Rial omanais",
-   "Dollar de Singapour",
-   "Peso philippin"
-  ],
-  "explanation": "En Afghanistan, on paie en afghani.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -12400,82 +11055,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q921",
-  "concept": "geography.countries.currency_brunei",
-  "label": "Monnaie de Brunei",
-  "type": "mcq",
-  "difficulty": 59,
-  "prompt": "Avec quelle monnaie paie-t-on à Brunei ?",
-  "options": [
-   "Dollar de Brunei*",
-   "Ringgit",
-   "Afghani",
-   "Livre libanaise"
-  ],
-  "explanation": "À Brunei, on paie en dollar de Brunei.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q924",
-  "concept": "geography.countries.currency_tanzania",
-  "label": "Monnaie de la Tanzanie",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Avec quelle monnaie paie-t-on en Tanzanie ?",
-  "options": [
-   "Shilling tanzanien*",
-   "Dobra",
-   "Pula",
-   "Franc burundais"
-  ],
-  "explanation": "En Tanzanie, on paie en shilling tanzanien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q928",
-  "concept": "geography.countries.currency_philippines",
-  "label": "Monnaie des Philippines",
-  "type": "mcq",
-  "difficulty": 43,
-  "prompt": "Avec quelle monnaie paie-t-on aux Philippines ?",
-  "options": [
-   "Peso philippin*",
-   "Riyal qatarien",
-   "Roupie népalaise",
-   "Baht"
-  ],
-  "explanation": "Aux Philippines, on paie en peso philippin.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q929",
-  "concept": "geography.countries.currency_central_african_republic",
-  "label": "Monnaie de la République centrafricaine",
-  "type": "mcq",
-  "difficulty": 57,
-  "prompt": "Avec quelle monnaie paie-t-on en République centrafricaine ?",
-  "options": [
-   "Franc CFA d'Afrique centrale*",
-   "Dinar algérien",
-   "Shilling somalien",
-   "Dalasi"
-  ],
-  "explanation": "En République centrafricaine, on paie en franc CFA d'Afrique centrale.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q945",
   "concept": "geography.countries.currency_togo",
   "label": "Monnaie du Togo",
@@ -12489,63 +11068,6 @@
    "Livre soudanaise"
   ],
   "explanation": "Au Togo, on paie en franc CFA.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q948",
-  "concept": "geography.countries.currency_tunisia",
-  "label": "Monnaie de la Tunisie",
-  "type": "mcq",
-  "difficulty": 55,
-  "prompt": "Quelle est la monnaie de la Tunisie ?",
-  "options": [
-   "Dinar tunisien*",
-   "Kwacha malawien",
-   "Franc congolais",
-   "Dalasi"
-  ],
-  "explanation": "En Tunisie, on paie en dinar tunisien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q953",
-  "concept": "geography.countries.currency_zambia",
-  "label": "Monnaie de la Zambie",
-  "type": "mcq",
-  "difficulty": 53,
-  "prompt": "Avec quelle monnaie paie-t-on en Zambie ?",
-  "options": [
-   "Kwacha zambien*",
-   "Dalasi",
-   "Birr",
-   "Livre soudanaise"
-  ],
-  "explanation": "En Zambie, on paie en kwacha zambien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q958",
-  "concept": "geography.countries.currency_south_sudan",
-  "label": "Monnaie du Soudan du Sud",
-  "type": "mcq",
-  "difficulty": 54,
-  "prompt": "Quelle est la monnaie du Soudan du Sud ?",
-  "options": [
-   "Livre sud-soudanaise*",
-   "Dinar tunisien",
-   "Shilling tanzanien",
-   "Nakfa érythréen"
-  ],
-  "explanation": "Au Soudan du Sud, on paie en livre sud-soudanaise.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -12628,44 +11150,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q967",
-  "concept": "geography.countries.currency_burundi",
-  "label": "Monnaie du Burundi",
-  "type": "mcq",
-  "difficulty": 54,
-  "prompt": "Quelle est la monnaie du Burundi ?",
-  "options": [
-   "Franc burundais*",
-   "Shilling somalien",
-   "Pula",
-   "Ariary"
-  ],
-  "explanation": "Au Burundi, on paie en Franc burundais.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q970",
-  "concept": "geography.countries.currency_comoros",
-  "label": "Monnaie des Comores",
-  "type": "mcq",
-  "difficulty": 62,
-  "prompt": "Quelle est la monnaie des Comores ?",
-  "options": [
-   "Franc comorien*",
-   "Naira",
-   "Kwacha malawien",
-   "Dirham marocain"
-  ],
-  "explanation": "Aux Comores, on paie en franc comorien.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q971",
   "concept": "geography.countries.currency_republic_of_the_congo",
   "label": "Monnaie de la République du Congo",
@@ -12685,44 +11169,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-cur-Q974",
-  "concept": "geography.countries.currency_democratic_republic_of_the_congo",
-  "label": "Monnaie de la République démocratique du Congo",
-  "type": "mcq",
-  "difficulty": 48,
-  "prompt": "Avec quelle monnaie paie-t-on en République démocratique du Congo ?",
-  "options": [
-   "Franc congolais*",
-   "Rand",
-   "Leone",
-   "Franc CFA d'Afrique centrale"
-  ],
-  "explanation": "En République démocratique du Congo, on paie en franc congolais.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q977",
-  "concept": "geography.countries.currency_djibouti",
-  "label": "Monnaie de Djibouti",
-  "type": "mcq",
-  "difficulty": 62,
-  "prompt": "Quelle est la monnaie de Djibouti ?",
-  "options": [
-   "Franc Djibouti*",
-   "Livre soudanaise",
-   "Roupie mauricienne",
-   "Shilling tanzanien"
-  ],
-  "explanation": "À Djibouti, on paie en franc Djibouti.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-cur-Q983",
   "concept": "geography.countries.currency_equatorial_guinea",
   "label": "Monnaie de la Guinée équatoriale",
@@ -12736,25 +11182,6 @@
    "Dinar tunisien"
   ],
   "explanation": "En Guinée équatoriale, on paie en franc CFA d'Afrique centrale.",
-  "fact_as_of": "2026-09-26",
-  "family": "currency",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-cur-Q986",
-  "concept": "geography.countries.currency_eritrea",
-  "label": "Monnaie de l'Érythrée",
-  "type": "mcq",
-  "difficulty": 58,
-  "prompt": "Avec quelle monnaie paie-t-on en Érythrée ?",
-  "options": [
-   "Nakfa érythréen*",
-   "Franc Djibouti",
-   "Livre égyptienne",
-   "Franc congolais"
-  ],
-  "explanation": "En Érythrée, on paie en nakfa érythréen.",
   "fact_as_of": "2026-09-26",
   "family": "currency",
   "source": "Wikidata",
@@ -14070,24 +12497,6 @@
    "Venezuela"
   ],
   "explanation": "C'est le drapeau du Chili, dont la capitale est Santiago (Amérique du Sud).",
-  "family": "flag",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-flag-Q29999",
-  "concept": "geography.flags.kingdom_of_the_netherlands",
-  "label": "Drapeau des Pays-Bas",
-  "type": "mcq",
-  "difficulty": 35,
-  "prompt": "🇳🇱 Quel pays ce drapeau représente-t-il ?",
-  "options": [
-   "Pays-Bas*",
-   "Roumanie",
-   "Belgique",
-   "Tchéquie"
-  ],
-  "explanation": "C'est le drapeau des Pays-Bas, dont la capitale est Amsterdam (Europe).",
   "family": "flag",
   "source": "Wikidata",
   "origin": "import"
@@ -16397,24 +14806,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-lang-Q142",
-  "concept": "geography.countries.language_france",
-  "label": "Langue de la France",
-  "type": "mcq",
-  "difficulty": 31,
-  "prompt": "Quelle langue est officielle en France ?",
-  "options": [
-   "Français*",
-   "Croate",
-   "Grec",
-   "Roumain"
-  ],
-  "explanation": "La langue officielle de la France est le français.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-lang-Q145",
   "concept": "geography.countries.language_united_kingdom",
   "label": "Langue du Royaume-Uni",
@@ -16487,150 +14878,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-lang-Q17",
-  "concept": "geography.countries.language_japan",
-  "label": "Langue du Japon",
-  "type": "mcq",
-  "difficulty": 40,
-  "prompt": "Quelle langue est officielle au Japon ?",
-  "options": [
-   "Japonais*",
-   "Népalais",
-   "Lao",
-   "Birman"
-  ],
-  "explanation": "La langue officielle du Japon est le japonais.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q189",
-  "concept": "geography.countries.language_iceland",
-  "label": "Langue de l'Islande",
-  "type": "mcq",
-  "difficulty": 47,
-  "prompt": "Quelle langue est officielle en Islande ?",
-  "options": [
-   "Islandais*",
-   "Anglais",
-   "Italien",
-   "Tchèque"
-  ],
-  "explanation": "La langue officielle de l'Islande est l'islandais.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q191",
-  "concept": "geography.countries.language_estonia",
-  "label": "Langue de l'Estonie",
-  "type": "mcq",
-  "difficulty": 43,
-  "prompt": "Quelle langue est officielle en Estonie ?",
-  "options": [
-   "Estonien*",
-   "Allemand",
-   "Catalan",
-   "Français"
-  ],
-  "explanation": "La langue officielle de l'Estonie est l'estonien.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q211",
-  "concept": "geography.countries.language_latvia",
-  "label": "Langue de la Lettonie",
-  "type": "mcq",
-  "difficulty": 42,
-  "prompt": "Quelle langue est officielle en Lettonie ?",
-  "options": [
-   "Letton*",
-   "Serbe",
-   "Slovaque",
-   "Catalan"
-  ],
-  "explanation": "La langue officielle de la Lettonie est le letton.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q212",
-  "concept": "geography.countries.language_ukraine",
-  "label": "Langue de l'Ukraine",
-  "type": "mcq",
-  "difficulty": 33,
-  "prompt": "Quelle est la langue officielle de l'Ukraine ?",
-  "options": [
-   "Ukrainien*",
-   "Néerlandais",
-   "Albanais",
-   "Italien"
-  ],
-  "explanation": "La langue officielle de l'Ukraine est l'ukrainien.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q213",
-  "concept": "geography.countries.language_czech_republic",
-  "label": "Langue de la Tchéquie",
-  "type": "mcq",
-  "difficulty": 37,
-  "prompt": "Quelle est la langue officielle de la Tchéquie ?",
-  "options": [
-   "Tchèque*",
-   "Slovène",
-   "Roumain",
-   "Bulgare"
-  ],
-  "explanation": "La langue officielle de la Tchéquie est le tchèque.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q214",
-  "concept": "geography.countries.language_slovakia",
-  "label": "Langue de la Slovaquie",
-  "type": "mcq",
-  "difficulty": 39,
-  "prompt": "Quelle est la langue officielle de la Slovaquie ?",
-  "options": [
-   "Slovaque*",
-   "Serbe",
-   "Portugais",
-   "Tchèque"
-  ],
-  "explanation": "La langue officielle de la Slovaquie est le slovaque.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q215",
-  "concept": "geography.countries.language_slovenia",
-  "label": "Langue de la Slovénie",
-  "type": "mcq",
-  "difficulty": 42,
-  "prompt": "Quelle langue est officielle en Slovénie ?",
-  "options": [
-   "Slovène*",
-   "Islandais",
-   "Français",
-   "Letton"
-  ],
-  "explanation": "La langue officielle de la Slovénie est le slovène.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-lang-Q217",
   "concept": "geography.countries.language_moldova",
   "label": "Langue de la Moldavie",
@@ -16644,78 +14891,6 @@
    "Bulgare"
   ],
   "explanation": "La langue officielle de la Moldavie est le roumain.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q218",
-  "concept": "geography.countries.language_romania",
-  "label": "Langue de la Roumanie",
-  "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Quelle est la langue officielle de la Roumanie ?",
-  "options": [
-   "Roumain*",
-   "Allemand",
-   "Portugais",
-   "Italien"
-  ],
-  "explanation": "La langue officielle de la Roumanie est le roumain.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q219",
-  "concept": "geography.countries.language_bulgaria",
-  "label": "Langue de la Bulgarie",
-  "type": "mcq",
-  "difficulty": 38,
-  "prompt": "Quelle langue est officielle en Bulgarie ?",
-  "options": [
-   "Bulgare*",
-   "Suédois",
-   "Serbe",
-   "Néerlandais"
-  ],
-  "explanation": "La langue officielle de la Bulgarie est le bulgare.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q222",
-  "concept": "geography.countries.language_albania",
-  "label": "Langue de l'Albanie",
-  "type": "mcq",
-  "difficulty": 41,
-  "prompt": "Quelle est la langue officielle de l'Albanie ?",
-  "options": [
-   "Albanais*",
-   "Estonien",
-   "Croate",
-   "Monténégrin"
-  ],
-  "explanation": "La langue officielle de l'Albanie est l'albanais.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q224",
-  "concept": "geography.countries.language_croatia",
-  "label": "Langue de la Croatie",
-  "type": "mcq",
-  "difficulty": 40,
-  "prompt": "Quelle est la langue officielle de la Croatie ?",
-  "options": [
-   "Croate*",
-   "Estonien",
-   "Allemand",
-   "Géorgien"
-  ],
-  "explanation": "La langue officielle de la Croatie est le croate.",
   "family": "language",
   "source": "Wikidata",
   "origin": "import"
@@ -16739,24 +14914,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-lang-Q230",
-  "concept": "geography.countries.language_georgia",
-  "label": "Langue de la Géorgie",
-  "type": "mcq",
-  "difficulty": 40,
-  "prompt": "Quelle langue est officielle en Géorgie ?",
-  "options": [
-   "Géorgien*",
-   "Néerlandais",
-   "Croate",
-   "Allemand"
-  ],
-  "explanation": "La langue officielle de la Géorgie est le géorgien.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-lang-Q235",
   "concept": "geography.countries.language_monaco",
   "label": "Langue de Monaco",
@@ -16770,24 +14927,6 @@
    "Espagnol"
   ],
   "explanation": "La langue officielle de Monaco est le français.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q236",
-  "concept": "geography.countries.language_montenegro",
-  "label": "Langue du Monténégro",
-  "type": "mcq",
-  "difficulty": 45,
-  "prompt": "Quelle est la langue officielle du Monténégro ?",
-  "options": [
-   "Monténégrin*",
-   "Croate",
-   "Italien",
-   "Catalan"
-  ],
-  "explanation": "La langue officielle du Monténégro est le monténégrin.",
   "family": "language",
   "source": "Wikidata",
   "origin": "import"
@@ -16842,78 +14981,6 @@
    "Tchèque"
   ],
   "explanation": "La langue officielle du Belize est l'anglais.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q252",
-  "concept": "geography.countries.language_indonesia",
-  "label": "Langue de l'Indonésie",
-  "type": "mcq",
-  "difficulty": 38,
-  "prompt": "Quelle est la langue officielle de l'Indonésie ?",
-  "options": [
-   "Indonésien*",
-   "Ouzbek",
-   "Arménien",
-   "Arabe"
-  ],
-  "explanation": "La langue officielle de l'Indonésie est l'indonésien.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q265",
-  "concept": "geography.countries.language_uzbekistan",
-  "label": "Langue de l'Ouzbékistan",
-  "type": "mcq",
-  "difficulty": 44,
-  "prompt": "Quelle est la langue officielle de l'Ouzbékistan ?",
-  "options": [
-   "Ouzbek*",
-   "Mongol",
-   "Bengali",
-   "Turkmène"
-  ],
-  "explanation": "La langue officielle de l'Ouzbékistan est l'ouzbek.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q28",
-  "concept": "geography.countries.language_hungary",
-  "label": "Langue de la Hongrie",
-  "type": "mcq",
-  "difficulty": 37,
-  "prompt": "Quelle langue est officielle en Hongrie ?",
-  "options": [
-   "Hongrois*",
-   "Roumain",
-   "Portugais",
-   "Néerlandais"
-  ],
-  "explanation": "La langue officielle de la Hongrie est l'hongrois.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q29",
-  "concept": "geography.countries.language_spain",
-  "label": "Langue de l'Espagne",
-  "type": "mcq",
-  "difficulty": 32,
-  "prompt": "Quelle est la langue officielle de l'Espagne ?",
-  "options": [
-   "Espagnol*",
-   "Serbe",
-   "Slovène",
-   "Italien"
-  ],
-  "explanation": "La langue officielle de l'Espagne est l'espagnol.",
   "family": "language",
   "source": "Wikidata",
   "origin": "import"
@@ -17009,42 +15076,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-lang-Q37",
-  "concept": "geography.countries.language_lithuania",
-  "label": "Langue de la Lituanie",
-  "type": "mcq",
-  "difficulty": 41,
-  "prompt": "Quelle langue est officielle en Lituanie ?",
-  "options": [
-   "Lituanien*",
-   "Anglais",
-   "Islandais",
-   "Roumain"
-  ],
-  "explanation": "La langue officielle de la Lituanie est le lituanien.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q38",
-  "concept": "geography.countries.language_italy",
-  "label": "Langue de l'Italie",
-  "type": "mcq",
-  "difficulty": 32,
-  "prompt": "Quelle langue est officielle en Italie ?",
-  "options": [
-   "Italien*",
-   "Islandais",
-   "Polonais",
-   "Grec"
-  ],
-  "explanation": "La langue officielle de l'Italie est l'italien.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-lang-Q398",
   "concept": "geography.countries.language_bahrain",
   "label": "Langue de Bahreïn",
@@ -17058,24 +15089,6 @@
    "Arménien"
   ],
   "explanation": "La langue officielle de Bahreïn est l'arabe.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q399",
-  "concept": "geography.countries.language_armenia",
-  "label": "Langue de l'Arménie",
-  "type": "mcq",
-  "difficulty": 52,
-  "prompt": "Quelle est la langue officielle de l'Arménie ?",
-  "options": [
-   "Arménien*",
-   "Malais",
-   "Tadjik",
-   "Arabe"
-  ],
-  "explanation": "La langue officielle de l'Arménie est l'arménien.",
   "family": "language",
   "source": "Wikidata",
   "origin": "import"
@@ -17189,24 +15202,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-lang-Q45",
-  "concept": "geography.countries.language_portugal",
-  "label": "Langue du Portugal",
-  "type": "mcq",
-  "difficulty": 37,
-  "prompt": "Quelle est la langue officielle du Portugal ?",
-  "options": [
-   "Portugais*",
-   "Grec",
-   "Slovaque",
-   "Estonien"
-  ],
-  "explanation": "La langue officielle du Portugal est le portugais.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-lang-Q685",
   "concept": "geography.countries.language_solomon_islands",
   "label": "Langue des Îles Salomon",
@@ -17238,24 +15233,6 @@
    "Arabe"
   ],
   "explanation": "La langue officielle de la Micronésie est l'anglais.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q711",
-  "concept": "geography.countries.language_mongolia",
-  "label": "Langue de la Mongolie",
-  "type": "mcq",
-  "difficulty": 51,
-  "prompt": "Quelle est la langue officielle de la Mongolie ?",
-  "options": [
-   "Mongol*",
-   "Arabe",
-   "Hébreu",
-   "Bengali"
-  ],
-  "explanation": "La langue officielle de la Mongolie est le mongol.",
   "family": "language",
   "source": "Wikidata",
   "origin": "import"
@@ -17639,24 +15616,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-lang-Q813",
-  "concept": "geography.countries.language_kyrgyzstan",
-  "label": "Langue du Kirghizistan",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Quelle langue est officielle au Kirghizistan ?",
-  "options": [
-   "Kirghize*",
-   "Maldivien",
-   "Indonésien",
-   "Vietnamien"
-  ],
-  "explanation": "La langue officielle du Kirghizistan est le kirghize.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-lang-Q817",
   "concept": "geography.countries.language_kuwait",
   "label": "Langue du Koweït",
@@ -17706,78 +15665,6 @@
    "Dzongkha"
   ],
   "explanation": "La langue officielle du Liban est l'arabe.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q826",
-  "concept": "geography.countries.language_maldives",
-  "label": "Langue des Maldives",
-  "type": "mcq",
-  "difficulty": 58,
-  "prompt": "Quelle est la langue officielle des Maldives ?",
-  "options": [
-   "Maldivien*",
-   "Hébreu",
-   "Japonais",
-   "Vietnamien"
-  ],
-  "explanation": "La langue officielle des Maldives est le maldivien.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q833",
-  "concept": "geography.countries.language_malaysia",
-  "label": "Langue de la Malaisie",
-  "type": "mcq",
-  "difficulty": 44,
-  "prompt": "Quelle langue est officielle en Malaisie ?",
-  "options": [
-   "Malais*",
-   "Arabe",
-   "Vietnamien",
-   "Hébreu"
-  ],
-  "explanation": "La langue officielle de la Malaisie est le malais.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q836",
-  "concept": "geography.countries.language_myanmar",
-  "label": "Langue de la Birmanie",
-  "type": "mcq",
-  "difficulty": 43,
-  "prompt": "Quelle est la langue officielle de la Birmanie ?",
-  "options": [
-   "Birman*",
-   "Arabe",
-   "Turkmène",
-   "Japonais"
-  ],
-  "explanation": "La langue officielle de la Birmanie est le birman.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q837",
-  "concept": "geography.countries.language_nepal",
-  "label": "Langue du Népal",
-  "type": "mcq",
-  "difficulty": 45,
-  "prompt": "Quelle est la langue officielle du Népal ?",
-  "options": [
-   "Népalais*",
-   "Arabe",
-   "Vietnamien",
-   "Mongol"
-  ],
-  "explanation": "La langue officielle du Népal est le népalais.",
   "family": "language",
   "source": "Wikidata",
   "origin": "import"
@@ -17855,24 +15742,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-lang-Q863",
-  "concept": "geography.countries.language_tajikistan",
-  "label": "Langue du Tadjikistan",
-  "type": "mcq",
-  "difficulty": 48,
-  "prompt": "Quelle langue est officielle au Tadjikistan ?",
-  "options": [
-   "Tadjik*",
-   "Kirghize",
-   "Mongol",
-   "Malais"
-  ],
-  "explanation": "La langue officielle du Tadjikistan est le tadjik.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-lang-Q869",
   "concept": "geography.countries.language_thailand",
   "label": "Langue de la Thaïlande",
@@ -17886,42 +15755,6 @@
    "Arabe"
   ],
   "explanation": "La langue officielle de la Thaïlande est le thaï.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q874",
-  "concept": "geography.countries.language_turkmenistan",
-  "label": "Langue du Turkménistan",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Quelle langue est officielle au Turkménistan ?",
-  "options": [
-   "Turkmène*",
-   "Dzongkha",
-   "Maldivien",
-   "Arabe"
-  ],
-  "explanation": "La langue officielle du Turkménistan est le turkmène.",
-  "family": "language",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-lang-Q878",
-  "concept": "geography.countries.language_united_arab_emirates",
-  "label": "Langue des Émirats arabes unis",
-  "type": "mcq",
-  "difficulty": 48,
-  "prompt": "Quelle est la langue officielle des Émirats arabes unis ?",
-  "options": [
-   "Arabe*",
-   "Maldivien",
-   "Ouzbek",
-   "Indonésien"
-  ],
-  "explanation": "La langue officielle des Émirats arabes unis est l'arabe.",
   "family": "language",
   "source": "Wikidata",
   "origin": "import"
@@ -41285,90 +39118,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-shape-Q29999",
-  "concept": "geography.countries.shape_kingdom_of_the_netherlands",
-  "label": "Silhouette des Pays-Bas",
-  "type": "mcq",
-  "difficulty": 39,
-  "prompt": "À quel pays correspond cette silhouette ?",
-  "options": [
-   "Pays-Bas*",
-   "Roumanie",
-   "Belgique",
-   "Tchéquie"
-  ],
-  "shape": {
-   "paths": [
-    [
-     [
-      0.815,
-      0.01
-     ],
-     [
-      0.857,
-      0.135
-     ],
-     [
-      0.801,
-      0.474
-     ],
-     [
-      0.743,
-      0.613
-     ],
-     [
-      0.607,
-      0.613
-     ],
-     [
-      0.645,
-      1
-     ],
-     [
-      0.52,
-      0.914
-     ],
-     [
-      0.376,
-      0.752
-     ],
-     [
-      0.166,
-      0.829
-     ],
-     [
-      0,
-      0.8
-     ],
-     [
-      0,
-      0.8
-     ],
-     [
-      0.117,
-      0.698
-     ],
-     [
-      0.316,
-      0.155
-     ],
-     [
-      0.626,
-      0
-     ],
-     [
-      0.815,
-      0.01
-     ]
-    ]
-   ]
-  },
-  "explanation": "C'est la silhouette des Pays-Bas (Europe), sans ses territoires éloignés. Contours : Natural Earth.",
-  "family": "shape",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-shape-Q30",
   "concept": "geography.countries.shape_united_states",
   "label": "Silhouette des États-Unis",
@@ -61949,24 +59698,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-unesco-Q2028",
-  "concept": "geography.monuments.wd_verone_q2028",
-  "label": "Pays de « Vérone »",
-  "type": "mcq",
-  "difficulty": 47,
-  "prompt": "« Vérone » se trouve dans quel pays ?",
-  "options": [
-   "Italie*",
-   "Royaume-Uni",
-   "France",
-   "Espagne"
-  ],
-  "explanation": "« Vérone » se trouve en Italie. Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-unesco-Q203197",
   "concept": "geography.monuments.wd_kandy_q203197",
   "label": "Pays de « Kandy »",
@@ -62957,6 +60688,24 @@
   "origin": "import"
  },
  {
+  "key": "wd-unesco-Q3551",
+  "concept": "geography.monuments.wd_rabat_q3551",
+  "label": "Pays de « Rabat »",
+  "type": "mcq",
+  "difficulty": 43,
+  "prompt": "« Rabat » se trouve dans quel pays ?",
+  "options": [
+   "Maroc*",
+   "Angola",
+   "Soudan",
+   "Ghana"
+  ],
+  "explanation": "« Rabat » se trouve au Maroc. Le site est inscrit au patrimoine mondial de l'UNESCO.",
+  "family": "monument",
+  "source": "Wikidata",
+  "origin": "import"
+ },
+ {
   "key": "wd-unesco-Q36034",
   "concept": "geography.monuments.wd_monts_huang_q36034",
   "label": "Pays de « Monts Huang »",
@@ -63042,24 +60791,6 @@
    "Venezuela"
   ],
   "explanation": "« Îles Galápagos » se trouve en Équateur. Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-unesco-Q38888",
-  "concept": "geography.monuments.wd_olympie_q38888",
-  "label": "Pays de « Olympie »",
-  "type": "mcq",
-  "difficulty": 52,
-  "prompt": "« Olympie » se trouve dans quel pays ?",
-  "options": [
-   "Grèce*",
-   "Suède",
-   "Portugal",
-   "Tchéquie"
-  ],
-  "explanation": "« Olympie » se trouve en Grèce. Le site est inscrit au patrimoine mondial de l'UNESCO.",
   "family": "monument",
   "source": "Wikidata",
   "origin": "import"
@@ -63222,24 +60953,6 @@
    "Japon"
   ],
   "explanation": "« Parc national de Lorentz » se trouve en Indonésie. Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-unesco-Q45178",
-  "concept": "geography.monuments.wd_opera_de_sydney_q45178",
-  "label": "Pays de « Opéra de Sydney »",
-  "type": "mcq",
-  "difficulty": 51,
-  "prompt": "« Opéra de Sydney » se trouve dans quel pays ?",
-  "options": [
-   "Australie*",
-   "Papouasie-Nouvelle-Guinée",
-   "Nouvelle-Zélande",
-   "Fidji"
-  ],
-  "explanation": "« Opéra de Sydney » se trouve en Australie (opéra de Sydney). Le site est inscrit au patrimoine mondial de l'UNESCO.",
   "family": "monument",
   "source": "Wikidata",
   "origin": "import"
@@ -63438,24 +61151,6 @@
    "Japon"
   ],
   "explanation": "« Temple de Prambanan » se trouve en Indonésie (ensemble de temples hindous situé à proximité de Yogyakarta sur l'île de Java). Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-unesco-Q48435",
-  "concept": "geography.monuments.wd_sagrada_familia_q48435",
-  "label": "Pays de « Sagrada Família »",
-  "type": "mcq",
-  "difficulty": 50,
-  "prompt": "Dans quel pays se trouve « Sagrada Família » ?",
-  "options": [
-   "Espagne*",
-   "Ukraine",
-   "Italie",
-   "Pologne"
-  ],
-  "explanation": "« Sagrada Família » se trouve en Espagne. Le site est inscrit au patrimoine mondial de l'UNESCO.",
   "family": "monument",
   "source": "Wikidata",
   "origin": "import"
@@ -63731,24 +61426,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-unesco-Q5788",
-  "concept": "geography.monuments.wd_petra_q5788",
-  "label": "Pays de « Pétra »",
-  "type": "mcq",
-  "difficulty": 49,
-  "prompt": "Dans quel pays se trouve « Pétra » ?",
-  "options": [
-   "Jordanie*",
-   "Azerbaïdjan",
-   "Émirats arabes unis",
-   "Israël"
-  ],
-  "explanation": "« Pétra » se trouve en Jordanie. Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-unesco-Q5832",
   "concept": "geography.monuments.wd_aksoum_q5832",
   "label": "Pays de « Aksoum »",
@@ -63875,24 +61552,6 @@
   "origin": "import"
  },
  {
-  "key": "wd-unesco-Q66485",
-  "concept": "geography.monuments.wd_jaipur_q66485",
-  "label": "Pays de « Jaipur »",
-  "type": "mcq",
-  "difficulty": 46,
-  "prompt": "« Jaipur » se trouve dans quel pays ?",
-  "options": [
-   "Inde*",
-   "Chine",
-   "Indonésie",
-   "Pakistan"
-  ],
-  "explanation": "« Jaipur » se trouve en Inde (capitale de l’État indien du Rajasthan). Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
   "key": "wd-unesco-Q679891",
   "concept": "geography.monuments.wd_parc_national_du_niokolo_koba_q679891",
   "label": "Pays de « Parc national du Niokolo-Koba »",
@@ -63960,24 +61619,6 @@
    "Italie"
   ],
   "explanation": "« Auschwitz » se trouve en Pologne (camp de concentration et d'extermination du Troisième Reich). Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-unesco-Q7343",
-  "concept": "geography.monuments.wd_grande_barriere_de_corail_q7343",
-  "label": "Pays de « Grande barrière de corail »",
-  "type": "mcq",
-  "difficulty": 45,
-  "prompt": "Dans quel pays se trouve « Grande barrière de corail » ?",
-  "options": [
-   "Australie*",
-   "Papouasie-Nouvelle-Guinée",
-   "Nouvelle-Zélande",
-   "Fidji"
-  ],
-  "explanation": "« Grande barrière de corail » se trouve en Australie. Le site est inscrit au patrimoine mondial de l'UNESCO.",
   "family": "monument",
   "source": "Wikidata",
   "origin": "import"
@@ -64104,24 +61745,6 @@
    "Ouganda"
   ],
   "explanation": "« Stone Town » se trouve en Tanzanie (vieux quartier de Zanzibar, situé sur l'île d'Unguja). Le site est inscrit au patrimoine mondial de l'UNESCO.",
-  "family": "monument",
-  "source": "Wikidata",
-  "origin": "import"
- },
- {
-  "key": "wd-unesco-Q9141",
-  "concept": "geography.monuments.wd_taj_mahal_q9141",
-  "label": "Pays de « Taj Mahal »",
-  "type": "mcq",
-  "difficulty": 43,
-  "prompt": "« Taj Mahal » se trouve dans quel pays ?",
-  "options": [
-   "Inde*",
-   "Chine",
-   "Indonésie",
-   "Pakistan"
-  ],
-  "explanation": "« Taj Mahal » se trouve en Inde. Le site est inscrit au patrimoine mondial de l'UNESCO.",
   "family": "monument",
   "source": "Wikidata",
   "origin": "import"
