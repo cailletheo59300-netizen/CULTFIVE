@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.1 — accueil : bloc « Aujourd'hui »
+- Sous la carte du jour (inchangée), un seul bloc **« Aujourd'hui »** remplace les cartes à icônes génériques : erreurs à revoir en gros chiffre, domaine à travailler en bandeau à sa couleur (Elo ou placement), ligue avec **ta place** (« 3e sur 8 · fin dans 3 j »).
+- La série n'est plus affichée deux fois : la carte « Série » disparaît, les jokers rejoignent la pastille 🔥 du haut.
+- Barre du bas : la marge est appliquée par chaque page défilante (onglets, fiche domaine, ligue, réglages) ; plus rien de caché.
+
 ## 0.10.0 — lot 1 : clair, réglages, règle de l'Elo
 - **Apparence claire par défaut**, même si l'iPhone est en sombre (plus de menus noirs). Réglage « Clair / Sombre / Comme l'iPhone ». Les écrans violets immersifs ne changent pas.
 - **Barre du bas** : elle ne cache plus les dernières lignes (Jouer, 5 du jour, Amis, Profil, fiches domaine, ligues), quelle que soit la taille d'écran ou de texte (hauteur mesurée).

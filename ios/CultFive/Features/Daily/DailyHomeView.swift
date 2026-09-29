@@ -2,13 +2,16 @@ import SwiftUI
 import CultFiveCore
 
 /// Accueil = le rendez-vous du jour. Léon t'accueille, la grande carte violette porte le trait de cinq ;
-/// en dessous, quelques cartes utiles (série, erreurs, suggestion, ligue), pas un dashboard.
+/// en dessous, un seul bloc « Aujourd'hui » (erreurs, domaine à travailler, ligue) où chaque ligne montre
+/// son information en grand plutôt qu'une icône générique. La série n'est affichée qu'une fois, en haut.
 struct DailyHomeView: View {
     @Environment(AppModel.self) private var app
     @State private var showDaily = false
     @State private var playConfig: PlayConfig?
     @State private var suggestion: SkillSummary?
     @State private var league: LeagueSummary?
+    /// Classement en cours de la première ligue (ma place, fin de période).
+    @State private var standings: LeagueStandings?
     @State private var quests: QuestsOverview?
     /// Objectifs remplis depuis la dernière visite : célébrés en haut de l'accueil.
     @State private var rewards: [QuestsOverview.Reward] = []
@@ -26,7 +29,7 @@ struct DailyHomeView: View {
                     }
                     rendezVous
                     if let quests { QuestsCard(overview: quests) }
-                    column
+                    today
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -58,6 +61,7 @@ struct DailyHomeView: View {
             suggestion = skills.filter { $0.answered >= 5 }.min { $0.level < $1.level }
         }
         league = (try? await app.service.leagues())?.first
+        if let league { standings = try? await app.service.leagueStandings(league.id, offset: 0) } else { standings = nil }
         if let fresh = try? await app.service.quests() {
             quests = fresh
             if !fresh.newly.isEmpty {
@@ -75,14 +79,21 @@ struct DailyHomeView: View {
             Text(DateText.long(app.daily?.date ?? isoToday)).labelCaps()
             Spacer()
             if let streak = app.profile?.streak, streak > 0 {
+                let freezes = app.profile?.streakFreezes ?? 0
                 HStack(spacing: 4) {
                     Image(systemName: "flame.fill").foregroundStyle(Color(hex: 0xF76707))
                     Text("\(streak)").monospacedDigit()
+                    if freezes > 0 {
+                        Text("· \(freezes) joker\(freezes > 1 ? "s" : "")")
+                            .font(.system(.caption, design: .rounded).weight(.bold))
+                            .foregroundStyle(Color.inkSoft)
+                    }
                 }
                 .font(.cfNumber)
                 .padding(.horizontal, 12).padding(.vertical, 6)
                 .background(Color.paperRaised, in: Capsule())
-                .accessibilityLabel("Série de \(streak) jours")
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Série de \(streak) jour\(streak > 1 ? "s" : "")" + (freezes > 0 ? ", \(freezes) joker\(freezes > 1 ? "s" : "") de série" : ""))
             }
             if let seeds = app.profile?.seeds {
                 SeedsAmount(amount: seeds).font(.cfNumber)
@@ -135,38 +146,82 @@ struct DailyHomeView: View {
         .shadow(color: Color.brand.opacity(0.35), radius: 18, y: 10)
     }
 
-    @ViewBuilder private var column: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            if let profile = app.profile {
-                EditorialRow(label: "Série", value: profile.streak > 0 ? "\(profile.streak) jour\(profile.streak > 1 ? "s" : "")" : "à lancer",
-                             detail: profile.streakFreezes > 0 ? "\(profile.streakFreezes) joker\(profile.streakFreezes > 1 ? "s" : "") de série en réserve" : "Un joker tous les 7 jours d'affilée",
-                             symbol: "flame.fill", accent: Color(hex: 0xF76707))
-                if profile.activeErrors > 0 {
-                    Button { playConfig = PlayConfig(mode: .errors) } label: {
-                        EditorialRow(label: "À revoir", value: "\(profile.activeErrors) erreur\(profile.activeErrors > 1 ? "s" : "")",
-                                     detail: "Corrige-les pendant qu'elles sont fraîches.", symbol: "arrow.uturn.backward",
-                                     accent: .wrong, chevron: true)
+    private var errorsCount: Int { app.profile?.activeErrors ?? 0 }
+
+    /// « Aujourd'hui » : un seul bloc, lignes séparées d'un trait fin. Masqué s'il n'y a rien à proposer.
+    @ViewBuilder private var today: some View {
+        if errorsCount > 0 || suggestion != nil || league != nil {
+            VStack(alignment: .leading, spacing: Space.s) {
+                Text("Aujourd'hui").font(.cfHeadline)
+                VStack(spacing: 0) {
+                    if errorsCount > 0 {
+                        Button { playConfig = PlayConfig(mode: .errors) } label: {
+                            TodayRow(title: errorsCount > 1 ? "erreurs à revoir" : "erreur à revoir",
+                                     detail: "Corrige-les pendant qu'elles sont fraîches.") {
+                                bigNumber("\(errorsCount)", color: .wrong)
+                            }
+                        }
+                        .buttonStyle(.row)
                     }
-                    .buttonStyle(.row)
+                    if let suggestion {
+                        // Le bandeau coloré se sépare de lui-même : pas de trait autour.
+                        Button { playConfig = PlayConfig(mode: .training, domain: suggestion.domainId) } label: {
+                            TerrainRow(skill: suggestion)
+                        }
+                        .buttonStyle(.row)
+                    }
+                    if let league {
+                        if errorsCount > 0 && suggestion == nil { hairline }
+                        Button { app.tab = .friends } label: {
+                            TodayRow(title: league.name, detail: leagueDetail(league)) {
+                                if let me = standings?.standings.first(where: \.isMe) {
+                                    bigNumber(me.rank == 1 ? "1er" : "\(me.rank)e", color: .brand)
+                                } else {
+                                    bigNumber("\(league.members)", color: .brand)
+                                }
+                            }
+                        }
+                        .buttonStyle(.row)
+                    }
                 }
-            }
-            if let suggestion {
-                Button { playConfig = PlayConfig(mode: .training, domain: suggestion.domainId) } label: {
-                    EditorialRow(label: "Ton terrain à conquérir", value: suggestion.name,
-                                 detail: suggestion.rating.placed ? "Elo \(suggestion.rating.formatted) · quelques questions pour progresser"
-                                                                  : "Placement \(suggestion.rating.placementGames)/\(CoteCULT.placementGames) · quelques questions pour progresser",
-                                 symbol: "scope", accent: DomainPalette.color(suggestion.domainId), chevron: true)
-                }
-                .buttonStyle(.row)
-            }
-            if let league {
-                Button { app.tab = .friends } label: {
-                    EditorialRow(label: "Ligue", value: league.name, detail: "\(league.members) membre\(league.members > 1 ? "s" : "") · classement de la \(league.period == .week ? "semaine" : "du mois")",
-                                 symbol: "trophy.fill", accent: Color(hex: 0xFFB020), chevron: true)
-                }
-                .buttonStyle(.row)
+                .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
             }
         }
+    }
+
+    private var hairline: some View {
+        Rectangle().fill(Color.hairline).frame(height: 1).padding(.horizontal, Space.m)
+    }
+
+    private func bigNumber(_ text: String, color: Color) -> some View {
+        Text(text)
+            .font(.system(size: 34, weight: .black, design: .rounded)).monospacedDigit()
+            .foregroundStyle(color)
+            .lineLimit(1).minimumScaleFactor(0.6)
+    }
+
+    /// « sur 8 · classement de la semaine, fin dans 3 j » ; à défaut de classement, le nombre de membres.
+    private func leagueDetail(_ league: LeagueSummary) -> String {
+        let period = league.period == .week ? "de la semaine" : "du mois"
+        guard let standings, standings.standings.contains(where: \.isMe) else {
+            // Le nombre de membres est déjà affiché en grand à gauche.
+            return "membre\(league.members > 1 ? "s" : "") · classement \(period)"
+        }
+        var parts = ["sur \(standings.standings.count)", "classement \(period)"]
+        if let days = DailyHomeView.daysLeft(until: standings.endDate) {
+            parts.append(days <= 0 ? "dernier jour" : "fin dans \(days) j")
+        }
+        return parts.joined(separator: " · ")
+    }
+
+    /// Jours restants jusqu'à la fin de période (date « yyyy-MM-dd » incluse).
+    static func daysLeft(until isoDate: String) -> Int? {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyy-MM-dd"
+        guard let end = formatter.date(from: isoDate) else { return nil }
+        let calendar = Calendar.current
+        return calendar.dateComponents([.day], from: calendar.startOfDay(for: Date()), to: calendar.startOfDay(for: end)).day
     }
 
     // MARK: Textes
@@ -255,5 +310,67 @@ struct EditorialRow: View {
         }
         .popCard(padding: 14)
         .accessibilityElement(children: .combine)
+    }
+}
+
+/// Ligne du bloc « Aujourd'hui » : l'information en grand à gauche (chiffre, rang), puis le titre et une précision.
+private struct TodayRow<Leading: View>: View {
+    let title: String
+    let detail: String
+    @ViewBuilder let leading: () -> Leading
+
+    var body: some View {
+        HStack(spacing: 14) {
+            leading()
+                .frame(minWidth: 56, alignment: .leading)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title).font(.cfTitle3).foregroundStyle(Color.ink).lineLimit(2)
+                Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.5))
+        }
+        .padding(.horizontal, Space.m)
+        .padding(.vertical, 14)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+    }
+}
+
+/// Domaine à travailler : bandeau à la couleur du domaine, nom en grand, Elo (ou placement) à droite.
+private struct TerrainRow: View {
+    let skill: SkillSummary
+
+    var body: some View {
+        let color = DomainPalette.color(skill.domainId)
+        let on = DomainPalette.onColor(skill.domainId)
+        HStack(alignment: .center, spacing: Space.m) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Ton terrain à conquérir").font(.cfLabel).tracking(0.6).textCase(.uppercase).foregroundStyle(on.opacity(0.8))
+                Text(skill.name).font(.system(.title2, design: .rounded).weight(.black)).foregroundStyle(on)
+                    .lineLimit(1).minimumScaleFactor(0.7)
+            }
+            Spacer(minLength: 0)
+            VStack(alignment: .trailing, spacing: 0) {
+                if skill.rating.placed {
+                    Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
+                    Text(skill.rating.rank.name).font(.system(.caption, design: .rounded).weight(.bold)).opacity(0.8)
+                } else {
+                    Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames)")
+                        .font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
+                    Text("placement").font(.system(.caption, design: .rounded).weight(.bold)).opacity(0.8)
+                }
+            }
+            .foregroundStyle(on)
+            Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(on.opacity(0.7))
+        }
+        .padding(.horizontal, Space.m)
+        .padding(.vertical, 14)
+        .background(color, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+        .padding(6)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Lance une partie classée dans ce domaine")
     }
 }
