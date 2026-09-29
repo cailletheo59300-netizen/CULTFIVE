@@ -20,7 +20,7 @@ enum Brand {
     static let duelBaseURL = URL(string: "https://brainlix.site/d/")!
     static let privacyURL = URL(string: "https://brainlix.site/confidentialite")!
     static let termsURL = URL(string: "https://brainlix.site/conditions")!
-    static let supportEmail = "theocaille1234@gmail.com"
+    static let supportEmail = "bonjour@brainlix.site"
 
     static func inviteURL(code: String) -> URL { inviteBaseURL.appendingPathComponent(code) }
     static func leagueURL(code: String) -> URL { leagueBaseURL.appendingPathComponent(code) }

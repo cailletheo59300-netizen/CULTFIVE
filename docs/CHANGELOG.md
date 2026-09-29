@@ -3,6 +3,7 @@
 ## 0.9.3 — site brainlix.site
 - Site `site/` (statique, hébergé sur Vercel, domaine **brainlix.site**) : accueil, confidentialité, conditions d'utilisation, mentions légales, aide ; page d'atterrissage des liens `/i/`, `/l/`, `/d/` (ouvre l'app ou invite à l'installer) ; `apple-app-site-association` (liens universels) ; `app-ads.txt` (prêt pour les pubs).
 - App : liens d'invitation, de ligue et de duel et pages légales sur `https://brainlix.site`, liens universels `applinks:brainlix.site`, contact support.
+- E-mails : contact `bonjour@brainlix.site` (redirection ImprovMX), envoi des codes de connexion par Resend (domaine brainlix.site vérifié, SMTP Supabase).
 
 ## 0.9.2 — TestFlight
 - Équipe Apple `BM85BF2WVQ` dans le projet ; déclaration de confidentialité Apple (`PrivacyInfo.xcprivacy` : aucun pistage, e-mail, identifiant, données de jeu et d'usage, identifiant d'appareil haché, pour le fonctionnement de l'app).
