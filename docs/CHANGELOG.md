@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.9.5 — questions difficiles
+- +144 questions de niveau 70 à 85 (`content/questions/lot_v7_hard.json`) pour les thèmes qui en manquaient (français, Antiquité, Moyen Âge, sciences, corps humain, nature, architecture, mythologies, musique classique, sport, tech, cinéma, géographie, suites logiques) : **5 293 questions**. Doublons avec les questions « expert » et Wikidata retirés.
+
 ## 0.9.4 — +822 questions
 - **5 149 questions** (4 327 avant), tous les thèmes ≥ 52 (40 avant).
 - Calcul : générateur restructuré en modèles réutilisables ; la première série (`gcalc-*`) reste identique, une seconde (`gcalb-*`) ajoute 180 questions et de nouveaux modèles (addition/soustraction autour d'un nombre rond, ×125, ×9/99/999, doubler-diviser, retrouver le total, taux d'évolution, TVA, fraction en %, produit de fractions, prix au kilo, somme et différence, piquets).

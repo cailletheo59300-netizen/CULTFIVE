@@ -1,0 +1,2281 @@
+[
+ {
+  "key": "hdb-001",
+  "concept": "french.expressions.gorges_chaudes",
+  "label": "Gorges chaudes",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "« Faire des gorges chaudes » de quelque chose, c'est…",
+  "options": [
+   "s'en moquer ouvertement*",
+   "en parler avec émotion",
+   "le crier sur les toits",
+   "le manger très chaud"
+  ],
+  "explanation": "À l'origine, en fauconnerie, la « gorge chaude » était la viande encore chaude donnée aux oiseaux de proie.",
+  "hint": "On rit de quelqu'un."
+ },
+ {
+  "key": "hdb-002",
+  "concept": "french.expressions.plans_sur_la_comete",
+  "label": "Plans sur la comète",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Tirer des plans sur la comète », c'est…",
+  "options": [
+   "faire des projets irréalistes*",
+   "observer le ciel",
+   "prévoir une catastrophe",
+   "dépenser sans compter"
+  ],
+  "explanation": "Des projets aussi lointains et incertains que la trajectoire d'une comète.",
+  "hint": "Des projets en l'air."
+ },
+ {
+  "key": "hdb-003",
+  "concept": "french.expressions.aux_abois",
+  "label": "Aux abois",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Être « aux abois », c'est…",
+  "options": [
+   "être dans une situation désespérée*",
+   "être en colère",
+   "être très bruyant",
+   "être à l'affût"
+  ],
+  "explanation": "Terme de chasse : le cerf est aux abois quand, encerclé par les chiens qui aboient, il ne peut plus fuir.",
+  "hint": "Encerclé par les chiens."
+ },
+ {
+  "key": "hdb-004",
+  "concept": "french.expressions.battre_la_campagne",
+  "label": "Battre la campagne",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "« Battre la campagne », au sens figuré, c'est…",
+  "options": [
+   "divaguer, déraisonner*",
+   "faire la guerre",
+   "se promener longuement",
+   "labourer les champs"
+  ],
+  "explanation": "Au sens propre, c'est parcourir la campagne en tous sens ; au figuré, l'esprit s'égare.",
+  "hint": "L'esprit s'égare."
+ },
+ {
+  "key": "hdb-005",
+  "concept": "french.expressions.vessies_pour_des_lanternes",
+  "label": "Vessies pour des lanternes",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Prendre des vessies pour des lanternes », c'est…",
+  "options": [
+   "se tromper grossièrement*",
+   "avoir peur du noir",
+   "mentir effrontément",
+   "être très économe"
+  ],
+  "explanation": "Une vessie gonflée ressemble vaguement à une lanterne… sans jamais éclairer.",
+  "hint": "Confondre deux choses."
+ },
+ {
+  "key": "hdb-006",
+  "concept": "french.expressions.amende_honorable",
+  "label": "Amende honorable",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "« Faire amende honorable », c'est…",
+  "options": [
+   "reconnaître publiquement ses torts*",
+   "payer une amende",
+   "recevoir une décoration",
+   "demander une faveur"
+  ],
+  "explanation": "Autrefois, le condamné avouait publiquement sa faute, un cierge à la main.",
+  "hint": "Avouer ses torts."
+ },
+ {
+  "key": "hdb-007",
+  "concept": "french.expressions.rompre_en_visiere",
+  "label": "Rompre en visière",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "« Rompre en visière » à quelqu'un, c'est…",
+  "options": [
+   "l'attaquer ou le contredire ouvertement*",
+   "se réconcilier avec lui",
+   "lui faire un clin d'œil",
+   "le quitter discrètement"
+  ],
+  "explanation": "Au tournoi, on brisait sa lance sur la visière du casque de l'adversaire, en face.",
+  "hint": "Un geste de tournoi."
+ },
+ {
+  "key": "hdb-008",
+  "concept": "french.expressions.dindon_de_la_farce",
+  "label": "Dindon de la farce",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Être « le dindon de la farce », c'est…",
+  "options": [
+   "être la dupe, celui dont on se moque*",
+   "être le plus gourmand",
+   "être l'invité d'honneur",
+   "faire le clown"
+  ],
+  "explanation": "La « farce » était une pièce comique où un personnage naïf se faisait berner.",
+  "hint": "Celui qui se fait avoir."
+ },
+ {
+  "key": "hdb-009",
+  "concept": "french.expressions.haut_du_pave",
+  "label": "Haut du pavé",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "« Tenir le haut du pavé », c'est…",
+  "options": [
+   "occuper le premier rang*",
+   "marcher au milieu de la rue",
+   "être architecte",
+   "manifester"
+  ],
+  "explanation": "Dans les rues anciennes, le haut du pavé, près des murs, restait propre : on le laissait aux personnes de rang élevé.",
+  "hint": "Le côté le plus propre de la rue."
+ },
+ {
+  "key": "hdb-010",
+  "concept": "french.expressions.queue_leu_leu",
+  "label": "Queue leu leu",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Dans « à la queue leu leu », le mot « leu » désigne le loup.",
+  "answer": true,
+  "explanation": "« Leu » est une ancienne forme de « loup » : les loups se déplacent souvent en file. On le retrouve dans « Saint-Leu ».",
+  "hint": "Une vieille forme d'un nom d'animal."
+ },
+ {
+  "key": "hdb-011",
+  "concept": "french.synonyms.synonyme_d_abstrus",
+  "label": "Synonyme d'abstrus",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Un raisonnement « abstrus » est…",
+  "options": [
+   "difficile à comprendre*",
+   "absurde",
+   "abstrait mais clair",
+   "très court"
+  ],
+  "explanation": "Abstrus : obscur, d'accès difficile. Proche de « abscons ».",
+  "hint": "Proche de « abscons »."
+ },
+ {
+  "key": "hdb-012",
+  "concept": "french.synonyms.synonyme_d_atrabilaire",
+  "label": "Synonyme d'atrabilaire",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Une personne « atrabilaire » est…",
+  "options": [
+   "irritable, d'humeur noire*",
+   "très joyeuse",
+   "avare",
+   "fatiguée"
+  ],
+  "explanation": "De la médecine ancienne : l'atrabile, ou « bile noire », était censée rendre mélancolique et coléreux.",
+  "hint": "La « bile noire »."
+ },
+ {
+  "key": "hdb-013",
+  "concept": "french.synonyms.contraire_de_diligent",
+  "label": "Contraire de diligent",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le contraire de « diligent » ?",
+  "options": [
+   "négligent*",
+   "rapide",
+   "appliqué",
+   "zélé"
+  ],
+  "explanation": "Diligent : qui agit avec soin et promptitude. Les trois autres mots en sont proches.",
+  "hint": "Qui néglige son travail."
+ },
+ {
+  "key": "hdb-014",
+  "concept": "french.synonyms.synonyme_d_amphigourique",
+  "label": "Synonyme d'amphigourique",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Un discours « amphigourique » est…",
+  "options": [
+   "confus et embrouillé*",
+   "élogieux",
+   "très drôle",
+   "bien construit"
+  ],
+  "explanation": "Amphigouri : écrit ou discours obscur, galimatias.",
+  "hint": "Un galimatias."
+ },
+ {
+  "key": "hdb-015",
+  "concept": "french.synonyms.synonyme_d_obvie",
+  "label": "Synonyme d'obvie",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Au sens littéraire, un sens « obvie » est…",
+  "options": [
+   "évident, qui vient d'abord à l'esprit*",
+   "caché",
+   "oublié",
+   "erroné"
+  ],
+  "explanation": "Du latin obvius, qui vient au-devant : le sens obvie d'un texte est le plus immédiat.",
+  "hint": "Il saute aux yeux."
+ },
+ {
+  "key": "hdb-016",
+  "concept": "french.synonyms.synonyme_de_vetilleux",
+  "label": "Synonyme de vétilleux",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Une personne « vétilleuse » est…",
+  "options": [
+   "pointilleuse sur des détails*",
+   "généreuse",
+   "très vieille",
+   "désordonnée"
+  ],
+  "explanation": "Une vétille est une chose insignifiante : le vétilleux s'y attache à l'excès.",
+  "hint": "Elle chipote."
+ },
+ {
+  "key": "hdb-017",
+  "concept": "french.synonyms.synonyme_d_impecunieux",
+  "label": "Synonyme d'impécunieux",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Une personne « impécunieuse » est…",
+  "options": [
+   "sans argent*",
+   "très riche",
+   "imprudente",
+   "honnête"
+  ],
+  "explanation": "Du latin pecunia, l'argent (comme « pécuniaire »).",
+  "hint": "Pecunia = argent."
+ },
+ {
+  "key": "hdb-018",
+  "concept": "french.synonyms.synonyme_de_hableur",
+  "label": "Synonyme de hâbleur",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Un « hâbleur » est…",
+  "options": [
+   "un vantard*",
+   "un menteur timide",
+   "un bavard muet",
+   "un voleur"
+  ],
+  "explanation": "Il se vante et exagère volontiers ses exploits.",
+  "hint": "Il se vante."
+ },
+ {
+  "key": "hdb-019",
+  "concept": "french.spelling.orthographe_d_acquiescer",
+  "label": "Orthographe d'acquiescer",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle orthographe est la bonne ?",
+  "options": [
+   "acquiescer*",
+   "aquiescer",
+   "acquiesser",
+   "acquièscer"
+  ],
+  "explanation": "« Acqu- » comme acquérir, et « -sc- » comme dans « acquiescement ».",
+  "hint": "Comme « acquérir »."
+ },
+ {
+  "key": "hdb-020",
+  "concept": "french.spelling.orthographe_d_exsangue",
+  "label": "Orthographe d'exsangue",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment écrit-on ce mot qui signifie « vidé de son sang » ?",
+  "options": [
+   "exsangue*",
+   "exangue",
+   "exsang",
+   "éxsangue"
+  ],
+  "explanation": "Ex- (hors de) + sanguis (sang) : on garde le s.",
+  "hint": "Ex + sang."
+ },
+ {
+  "key": "hdb-021",
+  "concept": "french.spelling.remuneration",
+  "label": "Rémunération",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle orthographe est la bonne ?",
+  "options": [
+   "rémunération*",
+   "rénumération",
+   "rémunérassion",
+   "rémmunération"
+  ],
+  "explanation": "Du latin munus, le présent : ré-MUN-ération. « Rénumération » est une erreur très fréquente.",
+  "hint": "Pas de « numéro » dedans."
+ },
+ {
+  "key": "hdb-022",
+  "concept": "french.spelling.dysfonctionnement",
+  "label": "Dysfonctionnement",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel mot est bien écrit ?",
+  "options": [
+   "dysfonctionnement*",
+   "disfonctionnement",
+   "dysfonctionement",
+   "disfontionnement"
+  ],
+  "explanation": "Préfixe grec dys- (mauvais), comme dans dyslexie ; et deux n.",
+  "hint": "Comme « dyslexie »."
+ },
+ {
+  "key": "hdb-023",
+  "concept": "french.spelling.appats_ou_appas",
+  "label": "Appâts ou appas",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Complète : « Le pêcheur prépare ses ___ . »",
+  "options": [
+   "appâts*",
+   "appas",
+   "appâs",
+   "apâts"
+  ],
+  "explanation": "Les appâts servent à attirer les poissons ; les appas (sans accent) sont, au sens littéraire, les charmes d'une personne.",
+  "hint": "Avec un accent circonflexe."
+ },
+ {
+  "key": "hdb-024",
+  "concept": "french.spelling.pecuniaire",
+  "label": "Pécuniaire",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Complète : « Il a des difficultés ___ . »",
+  "options": [
+   "pécuniaires*",
+   "pécunières",
+   "pécuniers",
+   "pécunaires"
+  ],
+  "explanation": "Pécuniaire (qui concerne l'argent) est le même au masculin et au féminin : un problème pécuniaire.",
+  "hint": "Même forme au masculin."
+ },
+ {
+  "key": "hdb-025",
+  "concept": "french.spelling.infarctus",
+  "label": "Infarctus",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Comment écrit-on ce mot ?",
+  "options": [
+   "infarctus*",
+   "infractus",
+   "infarctusse",
+   "infarcus"
+  ],
+  "explanation": "Du latin infarcire, remplir, bourrer. « Infractus » (comme une infraction) est une faute courante.",
+  "hint": "Pas d'« infraction » ici."
+ },
+ {
+  "key": "hdb-026",
+  "concept": "french.spelling.aeroport",
+  "label": "Aéroport",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle orthographe est la bonne ?",
+  "options": [
+   "aéroport*",
+   "aréoport",
+   "aéropore",
+   "aréopore"
+  ],
+  "explanation": "Aéro- (l'air) comme dans aérien, aéronautique. « Aréoport » est une erreur de prononciation courante.",
+  "hint": "Comme « aérien »."
+ },
+ {
+  "key": "hdb-027",
+  "concept": "french.grammar.les_heures_que_j_ai_dormi",
+  "label": "Les heures que j'ai dormi",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Complète : « Les deux heures que j'ai ___ m'ont fait du bien. » (dormir)",
+  "options": [
+   "dormi*",
+   "dormies",
+   "dormis",
+   "dormie"
+  ],
+  "explanation": "« Que » n'est pas un COD : on ne dort pas « des heures » comme on mange une pomme ; c'est un complément de durée. Pas d'accord.",
+  "hint": "Pendant combien de temps ?"
+ },
+ {
+  "key": "hdb-028",
+  "concept": "french.grammar.se_sont_succede",
+  "label": "Se sont succédé",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Complète : « Les rois se sont ___ sur le trône. »",
+  "options": [
+   "succédé*",
+   "succédés",
+   "succédées",
+   "succéder"
+  ],
+  "explanation": "On succède à quelqu'un : « se » est COI, donc pas d'accord. De même : ils se sont parlé, ils se sont souri.",
+  "hint": "On succède « à » quelqu'un."
+ },
+ {
+  "key": "hdb-029",
+  "concept": "french.grammar.s_est_permis",
+  "label": "S'est permis",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Complète : « Elle s'est ___ de répondre. »",
+  "options": [
+   "permis*",
+   "permise",
+   "permises",
+   "permit"
+  ],
+  "explanation": "On permet quelque chose à soi-même : « se » est COI, le participe reste invariable.",
+  "hint": "Permettre « à » soi."
+ },
+ {
+  "key": "hdb-030",
+  "concept": "french.grammar.subjonctif_imparfait_de_venir",
+  "label": "Subjonctif imparfait de venir",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Complète au subjonctif imparfait : « Il fallait qu'il ___ . » (venir)",
+  "options": [
+   "vînt*",
+   "vint",
+   "vienne",
+   "viendrait"
+  ],
+  "explanation": "Avec l'accent circonflexe : qu'il vînt. Sans accent, « il vint » est le passé simple.",
+  "hint": "Attention à l'accent."
+ },
+ {
+  "key": "hdb-031",
+  "concept": "french.grammar.toute_honteuse",
+  "label": "Toute honteuse",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Complète : « Elle est ___ honteuse. »",
+  "options": [
+   "toute*",
+   "tout",
+   "toutes",
+   "tous"
+  ],
+  "explanation": "« Tout » adverbe est invariable, sauf devant un adjectif féminin commençant par une consonne ou un h aspiré : toute honteuse, mais tout heureuse.",
+  "hint": "Le h de « honte » est aspiré."
+ },
+ {
+  "key": "hdb-032",
+  "concept": "french.grammar.feu_la_reine",
+  "label": "Feu la reine",
+  "type": "true_false",
+  "difficulty": 82,
+  "prompt": "Dans « feu la reine » (la défunte reine), « feu » reste invariable.",
+  "answer": true,
+  "explanation": "Placé avant l'article ou le possessif, feu est invariable : feu la reine. Placé entre les deux, il s'accorde : la feue reine.",
+  "hint": "Sa place compte."
+ },
+ {
+  "key": "hdb-033",
+  "concept": "french.vocabulary.ploutocratie",
+  "label": "Ploutocratie",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qu'est-ce qu'une « ploutocratie » ?",
+  "options": [
+   "Un régime où les riches gouvernent*",
+   "Un gouvernement de vieillards",
+   "Un pouvoir religieux",
+   "Un régime militaire"
+  ],
+  "explanation": "Du grec ploutos, la richesse (comme le dieu Ploutos).",
+  "hint": "Ploutos = richesse."
+ },
+ {
+  "key": "hdb-034",
+  "concept": "french.vocabulary.palinodie",
+  "label": "Palinodie",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Qu'est-ce qu'une « palinodie » ?",
+  "options": [
+   "Un brusque changement d'opinion*",
+   "Un chant religieux",
+   "Une maladie du palais",
+   "Un poème d'amour"
+  ],
+  "explanation": "À l'origine, un poème où l'auteur rétracte ce qu'il avait dit dans un précédent.",
+  "hint": "On retourne sa veste."
+ },
+ {
+  "key": "hdb-035",
+  "concept": "french.vocabulary.sycophante",
+  "label": "Sycophante",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qu'est-ce qu'un « sycophante » ?",
+  "options": [
+   "Un délateur, un mouchard*",
+   "Un amateur de figues",
+   "Un prêtre antique",
+   "Un flatteur sincère"
+  ],
+  "explanation": "À Athènes, un dénonciateur professionnel. Le mot contient sykon, la figue, pour des raisons discutées.",
+  "hint": "Il dénonce."
+ },
+ {
+  "key": "hdb-036",
+  "concept": "french.vocabulary.chafouin",
+  "label": "Chafouin",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Un air « chafouin » est…",
+  "options": [
+   "sournois*",
+   "fatigué",
+   "joyeux",
+   "naïf"
+  ],
+  "explanation": "À l'origine, le chafouin désignait le putois : un air rusé et hypocrite.",
+  "hint": "Rusé, pas franc."
+ },
+ {
+  "key": "hdb-037",
+  "concept": "french.vocabulary.prosopopee",
+  "label": "Prosopopée",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Qu'est-ce qu'une « prosopopée » ?",
+  "options": [
+   "Faire parler un absent, un mort ou un objet*",
+   "Une répétition de sons",
+   "Un poème en prose",
+   "Une exagération"
+  ],
+  "explanation": "Figure de style où l'on prête la parole à un être absent ou inanimé, comme Rousseau faisant parler Fabricius.",
+  "hint": "On fait parler les absents."
+ },
+ {
+  "key": "hdb-038",
+  "concept": "french.vocabulary.callipyge",
+  "label": "Callipyge",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Que signifie « callipyge » ?",
+  "options": [
+   "Qui a de belles fesses*",
+   "Qui a une belle écriture",
+   "Qui a de beaux cheveux",
+   "Qui a une belle voix"
+  ],
+  "explanation": "Du grec kallos (beauté) et pugê (fesses) : une célèbre statue antique s'appelle la Vénus callipyge.",
+  "hint": "Une Vénus célèbre."
+ },
+ {
+  "key": "hdb-039",
+  "concept": "french.vocabulary.hapax",
+  "label": "Hapax",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "En linguistique, qu'est-ce qu'un « hapax » ?",
+  "options": [
+   "Un mot attesté une seule fois*",
+   "Un mot qui se lit dans les deux sens",
+   "Un mot emprunté au grec",
+   "Un mot sans voyelle"
+  ],
+  "explanation": "Du grec hapax legomenon, « dit une seule fois ».",
+  "hint": "« Une seule fois »."
+ },
+ {
+  "key": "hdb-040",
+  "concept": "french.vocabulary.zeugme",
+  "label": "Zeugme",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quelle figure de style trouve-t-on dans « Il prit son chapeau et la fuite » ?",
+  "options": [
+   "Un zeugme*",
+   "Un chiasme",
+   "Une litote",
+   "Une anaphore"
+  ],
+  "explanation": "Un même verbe relie deux compléments de nature différente (concret et abstrait), pour un effet comique.",
+  "hint": "Un verbe, deux sens."
+ },
+ {
+  "key": "hdb-041",
+  "concept": "history.antiquity.gaugameles",
+  "label": "Gaugamèles",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle bataille, en 331 av. J.-C., voit Alexandre le Grand vaincre Darius III de façon décisive ?",
+  "options": [
+   "Gaugamèles*",
+   "Issos",
+   "Granique",
+   "Marathon"
+  ],
+  "explanation": "Après cette victoire, en Mésopotamie, l'Empire perse s'effondre. Issos (333) avait été une première victoire.",
+  "hint": "En Mésopotamie, en 331."
+ },
+ {
+  "key": "hdb-042",
+  "concept": "history.antiquity.tarquin_le_superbe",
+  "label": "Tarquin le Superbe",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui est le dernier roi de Rome, chassé en 509 av. J.-C. ?",
+  "options": [
+   "Tarquin le Superbe*",
+   "Numa Pompilius",
+   "Servius Tullius",
+   "Romulus"
+  ],
+  "explanation": "Son expulsion marque la naissance de la République romaine, dirigée par deux consuls.",
+  "hint": "Son surnom dit son orgueil."
+ },
+ {
+  "key": "hdb-043",
+  "concept": "history.antiquity.loi_des_douze_tables",
+  "label": "Loi des Douze Tables",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Comment s'appelle le premier code de lois écrit de Rome, vers 450 av. J.-C. ?",
+  "options": [
+   "La loi des Douze Tables*",
+   "Le Code Justinien",
+   "Les Tables de la Loi",
+   "Le Digeste"
+  ],
+  "explanation": "Gravées sur des tables exposées au forum, ces lois rendaient le droit connu de tous.",
+  "hint": "Un nombre de tables."
+ },
+ {
+  "key": "hdb-044",
+  "concept": "history.antiquity.cresus",
+  "label": "Crésus",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "De quel royaume Crésus, célèbre pour sa richesse, était-il roi ?",
+  "options": [
+   "La Lydie*",
+   "La Perse",
+   "La Phrygie",
+   "L'Égypte"
+  ],
+  "explanation": "En Asie Mineure, au VIe siècle av. J.-C. Son royaume aurait été l'un des premiers à frapper des monnaies.",
+  "hint": "En Asie Mineure."
+ },
+ {
+  "key": "hdb-045",
+  "concept": "history.antiquity.seneque",
+  "label": "Sénèque",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel philosophe stoïcien fut le précepteur de Néron ?",
+  "options": [
+   "Sénèque*",
+   "Cicéron",
+   "Épictète",
+   "Plutarque"
+  ],
+  "explanation": "Néron finit par lui ordonner de se donner la mort, en 65.",
+  "hint": "Auteur des « Lettres à Lucilius »."
+ },
+ {
+  "key": "hdb-046",
+  "concept": "history.antiquity.guerre_du_peloponnese",
+  "label": "Guerre du Péloponnèse",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelles cités s'affrontent pendant la guerre du Péloponnèse (431-404 av. J.-C.) ?",
+  "options": [
+   "Athènes et Sparte*",
+   "Rome et Carthage",
+   "Athènes et la Perse",
+   "Sparte et Troie"
+  ],
+  "explanation": "Sparte l'emporte. L'historien Thucydide en a fait le récit.",
+  "hint": "Racontée par Thucydide."
+ },
+ {
+  "key": "hdb-047",
+  "concept": "history.antiquity.dynastie_de_cleopatre",
+  "label": "Dynastie de Cléopâtre",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "À quelle dynastie appartenait Cléopâtre VII ?",
+  "options": [
+   "Les Ptolémées (Lagides)*",
+   "Les Ramessides",
+   "Les Achéménides",
+   "Les Séleucides"
+  ],
+  "explanation": "Une dynastie grecque, issue d'un général d'Alexandre. Cléopâtre serait la première de la famille à parler égyptien.",
+  "hint": "D'origine grecque."
+ },
+ {
+  "key": "hdb-048",
+  "concept": "history.middle_ages.poitiers_1356",
+  "label": "Poitiers 1356",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel roi de France est fait prisonnier par les Anglais à la bataille de Poitiers, en 1356 ?",
+  "options": [
+   "Jean II le Bon*",
+   "Philippe VI",
+   "Charles V",
+   "Louis IX"
+  ],
+  "explanation": "Emmené à Londres, il est libéré contre une énorme rançon. Son fils lui aurait crié : « Père, gardez-vous à droite ! »",
+  "hint": "« Père, gardez-vous à droite ! »"
+ },
+ {
+  "key": "hdb-049",
+  "concept": "history.middle_ages.etienne_marcel",
+  "label": "Étienne Marcel",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel prévôt des marchands de Paris se révolte contre le pouvoir royal en 1358 ?",
+  "options": [
+   "Étienne Marcel*",
+   "Jacques Cœur",
+   "Guillaume Cale",
+   "Bertrand du Guesclin"
+  ],
+  "explanation": "Il tente d'imposer un contrôle sur le dauphin, futur Charles V, avant d'être assassiné.",
+  "hint": "Sa statue est devant l'Hôtel de Ville."
+ },
+ {
+  "key": "hdb-050",
+  "concept": "history.middle_ages.jacquerie",
+  "label": "Jacquerie",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce que la Grande Jacquerie de 1358 ?",
+  "options": [
+   "Une révolte de paysans*",
+   "Une croisade",
+   "Une épidémie",
+   "Un traité de paix"
+  ],
+  "explanation": "« Jacques » était le surnom méprisant des paysans. La révolte est durement réprimée.",
+  "hint": "Les paysans se soulèvent."
+ },
+ {
+  "key": "hdb-051",
+  "concept": "history.middle_ages.cisterciens",
+  "label": "Cisterciens",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel ordre religieux est fondé à Cîteaux, en Bourgogne, en 1098 ?",
+  "options": [
+   "Les Cisterciens*",
+   "Les Bénédictins",
+   "Les Franciscains",
+   "Les Chartreux"
+  ],
+  "explanation": "Rendu célèbre par saint Bernard de Clairvaux, il prône l'austérité ; ses abbayes sont très dépouillées.",
+  "hint": "Le nom vient du lieu."
+ },
+ {
+  "key": "hdb-052",
+  "concept": "history.middle_ages.roncevaux",
+  "label": "Roncevaux",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À quelle bataille, en 778, meurt Roland, le neveu légendaire de Charlemagne ?",
+  "options": [
+   "Roncevaux*",
+   "Poitiers",
+   "Tolbiac",
+   "Hastings"
+  ],
+  "explanation": "Dans les Pyrénées, l'arrière-garde de l'armée franque est attaquée par des Vascons ; la « Chanson de Roland » en fait une épopée.",
+  "hint": "Dans les Pyrénées."
+ },
+ {
+  "key": "hdb-053",
+  "concept": "history.middle_ages.grand_schisme_d_occident",
+  "label": "Grand Schisme d'Occident",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Que se passe-t-il pendant le Grand Schisme d'Occident (1378-1417) ?",
+  "options": [
+   "Plusieurs papes rivaux se disputent l'Église*",
+   "L'Église se sépare des orthodoxes",
+   "Luther fonde le protestantisme",
+   "Les papes quittent Rome pour toujours"
+  ],
+  "explanation": "Jusqu'à trois papes à la fois, à Rome, Avignon et Pise ; le concile de Constance y met fin.",
+  "hint": "Trop de papes."
+ },
+ {
+  "key": "hdb-054",
+  "concept": "history.contemporary.traite_de_francfort",
+  "label": "Traité de Francfort",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Par quel traité la France cède-t-elle l'Alsace et une partie de la Lorraine à l'Allemagne, en 1871 ?",
+  "options": [
+   "Le traité de Francfort*",
+   "Le traité de Versailles",
+   "Le traité de Vienne",
+   "Le traité de Berlin"
+  ],
+  "explanation": "Il met fin à la guerre franco-allemande. Les territoires reviennent à la France en 1918-1919.",
+  "hint": "Une ville allemande."
+ },
+ {
+  "key": "hdb-055",
+  "concept": "history.contemporary.j_accuse",
+  "label": "J'accuse",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quel journal Émile Zola publie-t-il « J'accuse… ! » en 1898 ?",
+  "options": [
+   "L'Aurore*",
+   "Le Figaro",
+   "Le Monde",
+   "L'Humanité"
+  ],
+  "explanation": "Une lettre ouverte au président de la République pour défendre le capitaine Dreyfus.",
+  "hint": "Le lever du jour."
+ },
+ {
+  "key": "hdb-056",
+  "concept": "history.contemporary.crise_de_suez",
+  "label": "Crise de Suez",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel dirigeant égyptien nationalise le canal de Suez en 1956 ?",
+  "options": [
+   "Gamal Abdel Nasser*",
+   "Anouar el-Sadate",
+   "Hosni Moubarak",
+   "Le roi Farouk"
+  ],
+  "explanation": "France, Royaume-Uni et Israël interviennent, puis doivent se retirer sous la pression des États-Unis et de l'URSS.",
+  "hint": "Il a renversé la monarchie."
+ },
+ {
+  "key": "hdb-057",
+  "concept": "history.contemporary.dien_bien_phu",
+  "label": "Diên Biên Phu",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle défaite française de 1954 précipite la fin de la guerre d'Indochine ?",
+  "options": [
+   "Diên Biên Phu*",
+   "Sedan",
+   "Verdun",
+   "Alger"
+  ],
+  "explanation": "Le camp retranché tombe le 7 mai 1954 ; les accords de Genève suivent en juillet.",
+  "hint": "Un camp retranché dans une cuvette."
+ },
+ {
+  "key": "hdb-058",
+  "concept": "history.contemporary.printemps_de_prague",
+  "label": "Printemps de Prague",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que désigne le « Printemps de Prague », en 1968 ?",
+  "options": [
+   "Une période de libéralisation en Tchécoslovaquie*",
+   "Une révolte étudiante à Paris",
+   "La chute du mur de Berlin",
+   "Un festival de musique"
+  ],
+  "explanation": "Alexander Dubček veut un « socialisme à visage humain » ; les chars du pacte de Varsovie y mettent fin en août.",
+  "hint": "Écrasé par les chars."
+ },
+ {
+  "key": "hdb-059",
+  "concept": "history.contemporary.traite_de_rome",
+  "label": "Traité de Rome",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel traité crée la Communauté économique européenne, en 1957 ?",
+  "options": [
+   "Le traité de Rome*",
+   "Le traité de Maastricht",
+   "Le traité de Paris",
+   "Le traité de Lisbonne"
+  ],
+  "explanation": "Signé par six pays : France, Allemagne de l'Ouest, Italie, Belgique, Pays-Bas et Luxembourg.",
+  "hint": "Une capitale antique."
+ },
+ {
+  "key": "hdb-060",
+  "concept": "history.modern.journee_des_dupes",
+  "label": "Journée des Dupes",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Qui sort renforcé de la « journée des Dupes », en 1630 ?",
+  "options": [
+   "Le cardinal de Richelieu*",
+   "Marie de Médicis",
+   "Mazarin",
+   "Gaston d'Orléans"
+  ],
+  "explanation": "La reine mère croit avoir obtenu son renvoi, mais Louis XIII lui renouvelle sa confiance : ce sont ses ennemis les « dupes ».",
+  "hint": "Le ministre de Louis XIII."
+ },
+ {
+  "key": "hdb-061",
+  "concept": "history.modern.la_fronde",
+  "label": "La Fronde",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qu'est-ce que la Fronde (1648-1653) ?",
+  "options": [
+   "Une révolte contre le pouvoir royal pendant la minorité de Louis XIV*",
+   "Une guerre contre l'Espagne",
+   "Une révolte protestante",
+   "Une famine"
+  ],
+  "explanation": "Parlementaires puis nobles se soulèvent contre Mazarin ; le jeune roi en gardera la méfiance envers Paris et la noblesse.",
+  "hint": "Pendant l'enfance de Louis XIV."
+ },
+ {
+  "key": "hdb-062",
+  "concept": "science.physics.noyau_atomique",
+  "label": "Noyau atomique",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a mis en évidence le noyau de l'atome, en 1911 ?",
+  "options": [
+   "Ernest Rutherford*",
+   "Niels Bohr",
+   "Joseph John Thomson",
+   "Max Planck"
+  ],
+  "explanation": "En bombardant une feuille d'or : quelques particules rebondissent, preuve d'un noyau minuscule et dense.",
+  "hint": "Une feuille d'or."
+ },
+ {
+  "key": "hdb-063",
+  "concept": "science.physics.candela",
+  "label": "Candela",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle unité du Système international mesure l'intensité lumineuse ?",
+  "options": [
+   "La candela*",
+   "Le lux",
+   "Le lumen",
+   "Le watt"
+  ],
+  "explanation": "Du latin candela, chandelle. Le lumen mesure le flux lumineux, le lux l'éclairement.",
+  "hint": "Une chandelle en latin."
+ },
+ {
+  "key": "hdb-064",
+  "concept": "science.physics.effet_doppler",
+  "label": "Effet Doppler",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Pourquoi la sirène d'une ambulance paraît-elle plus aiguë quand elle s'approche ?",
+  "options": [
+   "À cause de l'effet Doppler*",
+   "À cause de l'écho",
+   "Parce que le son accélère",
+   "À cause du vent"
+  ],
+  "explanation": "Les ondes sont comprimées devant la source en mouvement et étirées derrière.",
+  "hint": "Un physicien autrichien."
+ },
+ {
+  "key": "hdb-065",
+  "concept": "science.physics.electron",
+  "label": "Électron",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Qui a découvert l'électron, en 1897 ?",
+  "options": [
+   "Joseph John Thomson*",
+   "Ernest Rutherford",
+   "Marie Curie",
+   "Albert Einstein"
+  ],
+  "explanation": "En étudiant les rayons cathodiques ; son modèle d'atome est le « pudding aux raisins ».",
+  "hint": "Le « pudding aux raisins »."
+ },
+ {
+  "key": "hdb-066",
+  "concept": "science.biology.groupes_sanguins",
+  "label": "Groupes sanguins",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qui a découvert les groupes sanguins A, B et O, en 1901 ?",
+  "options": [
+   "Karl Landsteiner*",
+   "Louis Pasteur",
+   "Robert Koch",
+   "William Harvey"
+  ],
+  "explanation": "Sa découverte a rendu les transfusions sûres ; il reçoit le prix Nobel en 1930.",
+  "hint": "Un médecin autrichien."
+ },
+ {
+  "key": "hdb-067",
+  "concept": "science.biology.ribosome",
+  "label": "Ribosome",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel élément de la cellule fabrique les protéines ?",
+  "options": [
+   "Le ribosome*",
+   "La mitochondrie",
+   "Le noyau",
+   "Le lysosome"
+  ],
+  "explanation": "Il lit l'ARN messager et assemble les acides aminés dans le bon ordre.",
+  "hint": "Il lit l'ARN."
+ },
+ {
+  "key": "hdb-068",
+  "concept": "science.biology.generation_spontanee",
+  "label": "Génération spontanée",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel savant a réfuté la « génération spontanée » avec ses flacons à col de cygne ?",
+  "options": [
+   "Louis Pasteur*",
+   "Claude Bernard",
+   "Lamarck",
+   "Buffon"
+  ],
+  "explanation": "Un bouillon stérilisé reste stérile si les poussières de l'air ne peuvent l'atteindre.",
+  "hint": "Des flacons à col de cygne."
+ },
+ {
+  "key": "hdb-069",
+  "concept": "science.biology.procaryotes",
+  "label": "Procaryotes",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Comment appelle-t-on les cellules sans noyau, comme les bactéries ?",
+  "options": [
+   "Les procaryotes*",
+   "Les eucaryotes",
+   "Les protozoaires",
+   "Les levures"
+  ],
+  "explanation": "Leur ADN flotte librement dans la cellule. Les cellules à noyau sont dites eucaryotes.",
+  "hint": "Pro = avant, karyon = noyau."
+ },
+ {
+  "key": "hdb-070",
+  "concept": "science.human_body.os_de_la_main",
+  "label": "Os de la main",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Combien d'os compte environ une main humaine (poignet compris) ?",
+  "options": [
+   "27*",
+   "12",
+   "19",
+   "42"
+  ],
+  "explanation": "8 os du carpe, 5 métacarpiens et 14 phalanges.",
+  "hint": "Plus de vingt."
+ },
+ {
+  "key": "hdb-071",
+  "concept": "science.human_body.valve_mitrale",
+  "label": "Valve mitrale",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Entre quelles cavités du cœur se trouve la valve mitrale ?",
+  "options": [
+   "L'oreillette et le ventricule gauches*",
+   "L'oreillette et le ventricule droits",
+   "Les deux ventricules",
+   "Le ventricule gauche et l'aorte"
+  ],
+  "explanation": "Elle empêche le sang de refluer vers l'oreillette. Son nom vient de sa forme de mitre d'évêque.",
+  "hint": "Comme une mitre d'évêque."
+ },
+ {
+  "key": "hdb-072",
+  "concept": "science.human_body.glucagon",
+  "label": "Glucagon",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quelle hormone du pancréas fait monter le taux de sucre dans le sang ?",
+  "options": [
+   "Le glucagon*",
+   "L'insuline",
+   "L'adrénaline",
+   "La thyroxine"
+  ],
+  "explanation": "Elle agit à l'inverse de l'insuline, qui fait baisser la glycémie.",
+  "hint": "L'inverse de l'insuline."
+ },
+ {
+  "key": "hdb-073",
+  "concept": "science.human_body.fovea",
+  "label": "Fovéa",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Comment s'appelle la petite zone de la rétine qui donne la vision la plus précise ?",
+  "options": [
+   "La fovéa*",
+   "Le cristallin",
+   "La tache aveugle",
+   "La cornée"
+  ],
+  "explanation": "Riche en cônes, elle permet de lire. La tache aveugle, où part le nerf optique, n'a aucun récepteur.",
+  "hint": "Au centre de la rétine."
+ },
+ {
+  "key": "hdb-074",
+  "concept": "science.human_body.nerf_sciatique",
+  "label": "Nerf sciatique",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel est le plus long nerf du corps humain ?",
+  "options": [
+   "Le nerf sciatique*",
+   "Le nerf optique",
+   "Le nerf vague",
+   "Le nerf radial"
+  ],
+  "explanation": "Il descend du bas du dos jusqu'au pied ; sa compression provoque la sciatique.",
+  "hint": "Du bas du dos au pied."
+ },
+ {
+  "key": "hdb-075",
+  "concept": "science.human_body.lobe_occipital",
+  "label": "Lobe occipital",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle partie du cerveau traite principalement la vision ?",
+  "options": [
+   "Le lobe occipital*",
+   "Le lobe frontal",
+   "Le lobe temporal",
+   "Le cervelet"
+  ],
+  "explanation": "Paradoxalement, il se trouve à l'arrière de la tête, loin des yeux.",
+  "hint": "À l'arrière du crâne."
+ },
+ {
+  "key": "hdb-076",
+  "concept": "science.human_body.globules_rouges_sans_noyau",
+  "label": "Globules rouges sans noyau",
+  "type": "true_false",
+  "difficulty": 72,
+  "prompt": "Chez l'humain, les globules rouges adultes n'ont pas de noyau.",
+  "answer": true,
+  "explanation": "Ils le perdent en mûrissant, ce qui laisse plus de place à l'hémoglobine.",
+  "hint": "Plus de place pour l'hémoglobine."
+ },
+ {
+  "key": "hdb-077",
+  "concept": "science.space.planete_la_plus_dense",
+  "label": "Planète la plus dense",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quelle est la planète la plus dense du Système solaire ?",
+  "options": [
+   "La Terre*",
+   "Jupiter",
+   "Mercure",
+   "Saturne"
+  ],
+  "explanation": "Environ 5,5 g/cm³, grâce à son gros noyau de fer. Saturne, à l'inverse, flotterait sur l'eau.",
+  "hint": "Tu marches dessus."
+ },
+ {
+  "key": "hdb-078",
+  "concept": "science.space.new_horizons",
+  "label": "New Horizons",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle sonde a été la première à survoler Pluton, en 2015 ?",
+  "options": [
+   "New Horizons*",
+   "Voyager 2",
+   "Cassini",
+   "Rosetta"
+  ],
+  "explanation": "Elle a révélé une grande plaine glacée en forme de cœur.",
+  "hint": "Un cœur sur Pluton."
+ },
+ {
+  "key": "hdb-079",
+  "concept": "science.space.plus_grand_satellite",
+  "label": "Plus grand satellite",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le plus grand satellite naturel du Système solaire ?",
+  "options": [
+   "Ganymède*",
+   "Titan",
+   "La Lune",
+   "Europe"
+  ],
+  "explanation": "Cette lune de Jupiter est plus grande que la planète Mercure.",
+  "hint": "Plus grand que Mercure."
+ },
+ {
+  "key": "hdb-080",
+  "concept": "science.space.point_l2",
+  "label": "Point L2",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Autour de quel point est placé le télescope spatial James-Webb ?",
+  "options": [
+   "Le point de Lagrange L2*",
+   "L'orbite basse terrestre",
+   "La surface de la Lune",
+   "L'orbite de Mars"
+  ],
+  "explanation": "À 1,5 million de km de la Terre, à l'opposé du Soleil, où il reste à l'abri de sa chaleur.",
+  "hint": "À 1,5 million de km."
+ },
+ {
+  "key": "hdb-081",
+  "concept": "science.chemistry.oxygene_de_la_croute",
+  "label": "Oxygène de la croûte",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel élément chimique est le plus abondant dans la croûte terrestre ?",
+  "options": [
+   "L'oxygène*",
+   "Le fer",
+   "Le silicium",
+   "L'azote"
+  ],
+  "explanation": "Près de la moitié de sa masse, lié dans les roches (silicates, oxydes). Le silicium arrive second.",
+  "hint": "Il est lié dans les roches."
+ },
+ {
+  "key": "hdb-082",
+  "concept": "nature.animals.levraut",
+  "label": "Levraut",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Comment appelle-t-on le petit du lièvre ?",
+  "options": [
+   "Le levraut*",
+   "Le lapereau",
+   "Le lièvreteau",
+   "Le faon"
+  ],
+  "explanation": "Le lapereau est le petit du lapin. Contrairement aux lapereaux, les levrauts naissent poilus et les yeux ouverts.",
+  "hint": "Pas le lapereau."
+ },
+ {
+  "key": "hdb-083",
+  "concept": "nature.animals.tardigrade",
+  "label": "Tardigrade",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel minuscule animal peut survivre au vide spatial ?",
+  "options": [
+   "Le tardigrade*",
+   "La fourmi",
+   "Le cafard",
+   "La puce"
+  ],
+  "explanation": "Surnommé « ourson d'eau », il se met en vie ralentie en se déshydratant.",
+  "hint": "L'« ourson d'eau »."
+ },
+ {
+  "key": "hdb-084",
+  "concept": "nature.animals.yeux_de_l_araignee",
+  "label": "Yeux de l'araignée",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien d'yeux ont la plupart des araignées ?",
+  "options": [
+   "8*",
+   "2",
+   "4",
+   "12"
+  ],
+  "explanation": "Beaucoup en ont huit, mais certaines espèces en ont six, quatre, voire aucun.",
+  "hint": "Autant que de pattes."
+ },
+ {
+  "key": "hdb-085",
+  "concept": "nature.animals.empreintes_du_koala",
+  "label": "Empreintes du koala",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel animal a des empreintes digitales très proches de celles des humains ?",
+  "options": [
+   "Le koala*",
+   "Le chimpanzé",
+   "Le panda",
+   "Le raton laveur"
+  ],
+  "explanation": "Elles sont si semblables qu'on pourrait les confondre au microscope : une convergence évolutive.",
+  "hint": "Un marsupial."
+ },
+ {
+  "key": "hdb-086",
+  "concept": "nature.animals.rat_taupe_nu",
+  "label": "Rat-taupe nu",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel rongeur africain, presque sans poils, vit plus de 30 ans et développe très rarement de cancer ?",
+  "options": [
+   "Le rat-taupe nu*",
+   "Le gerbille",
+   "Le porc-épic",
+   "Le hamster"
+  ],
+  "explanation": "Il vit en colonie sous terre, avec une reine, comme les abeilles.",
+  "hint": "Il vit sous terre avec une reine."
+ },
+ {
+  "key": "hdb-087",
+  "concept": "nature.animals.anon",
+  "label": "Ânon",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment appelle-t-on le petit de l'âne ?",
+  "options": [
+   "L'ânon*",
+   "Le poulain",
+   "Le baudet",
+   "Le mulet"
+  ],
+  "explanation": "Le baudet est l'âne mâle reproducteur ; le mulet, le croisement d'un âne et d'une jument.",
+  "hint": "Presque le même mot."
+ },
+ {
+  "key": "hdb-088",
+  "concept": "nature.marine.sang_bleu_de_la_pieuvre",
+  "label": "Sang bleu de la pieuvre",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "De quelle couleur est le sang d'une pieuvre ?",
+  "options": [
+   "Bleu*",
+   "Rouge",
+   "Vert",
+   "Transparent"
+  ],
+  "explanation": "Il transporte l'oxygène grâce à l'hémocyanine, riche en cuivre, et non à l'hémoglobine, riche en fer.",
+  "hint": "Grâce au cuivre."
+ },
+ {
+  "key": "hdb-089",
+  "concept": "nature.marine.poisson_pierre",
+  "label": "Poisson-pierre",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel poisson est considéré comme le plus venimeux du monde ?",
+  "options": [
+   "Le poisson-pierre*",
+   "Le poisson-lion",
+   "La murène",
+   "Le requin-tigre"
+  ],
+  "explanation": "Camouflé en rocher, il injecte son venin par les épines de sa nageoire dorsale quand on marche dessus.",
+  "hint": "Il ressemble à un caillou."
+ },
+ {
+  "key": "hdb-090",
+  "concept": "nature.marine.mer_sans_rivage",
+  "label": "Mer sans rivage",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle mer n'est bordée par aucune côte ?",
+  "options": [
+   "La mer des Sargasses*",
+   "La mer d'Aral",
+   "La mer Morte",
+   "La mer Caspienne"
+  ],
+  "explanation": "Au milieu de l'Atlantique Nord, elle est délimitée par des courants marins et couverte d'algues flottantes.",
+  "hint": "Au milieu de l'Atlantique."
+ },
+ {
+  "key": "hdb-091",
+  "concept": "nature.marine.cubomeduse",
+  "label": "Cuboméduse",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle méduse d'Australie est l'une des plus dangereuses au monde ?",
+  "options": [
+   "La guêpe de mer (cuboméduse)*",
+   "La méduse lune",
+   "La galère portugaise",
+   "La méduse rayonnée"
+  ],
+  "explanation": "Ses tentacules peuvent provoquer un arrêt cardiaque en quelques minutes. La galère portugaise n'est pas une vraie méduse.",
+  "hint": "En forme de boîte."
+ },
+ {
+  "key": "hdb-092",
+  "concept": "nature.earth.chimborazo",
+  "label": "Chimborazo",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Quel sommet est le point de la surface terrestre le plus éloigné du centre de la Terre ?",
+  "options": [
+   "Le Chimborazo*",
+   "L'Everest",
+   "Le Kilimandjaro",
+   "L'Aconcagua"
+  ],
+  "explanation": "Ce volcan d'Équateur profite du renflement de la Terre à l'équateur : son sommet dépasse celui de l'Everest de plus de 2 km, vu du centre.",
+  "hint": "Près de l'équateur."
+ },
+ {
+  "key": "hdb-093",
+  "concept": "nature.earth.moho",
+  "label": "Moho",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Que marque la « discontinuité de Mohorovičić » ?",
+  "options": [
+   "La limite entre la croûte et le manteau*",
+   "La limite entre le manteau et le noyau",
+   "Le fond des océans",
+   "La base de l'atmosphère"
+  ],
+  "explanation": "Découverte en 1909 grâce à l'étude des ondes sismiques ; on l'appelle souvent le « Moho ».",
+  "hint": "Sous la croûte."
+ },
+ {
+  "key": "hdb-094",
+  "concept": "nature.earth.foehn",
+  "label": "Foehn",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment s'appelle le vent chaud et sec qui descend le versant des Alpes ?",
+  "options": [
+   "Le foehn*",
+   "Le mistral",
+   "La tramontane",
+   "Le sirocco"
+  ],
+  "explanation": "L'air se refroidit et perd son humidité en montant, puis se réchauffe en redescendant.",
+  "hint": "Un nom allemand."
+ },
+ {
+  "key": "hdb-095",
+  "concept": "nature.earth.pierre_ponce",
+  "label": "Pierre ponce",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle roche volcanique, pleine de bulles, peut flotter sur l'eau ?",
+  "options": [
+   "La pierre ponce*",
+   "Le basalte",
+   "L'obsidienne",
+   "Le granite"
+  ],
+  "explanation": "Les gaz de la lave s'échappent en laissant une roche très poreuse et légère.",
+  "hint": "On s'en sert pour les pieds."
+ },
+ {
+  "key": "hdb-096",
+  "concept": "nature.earth.echelle_de_mohs",
+  "label": "Échelle de Mohs",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Que mesure l'échelle de Mohs ?",
+  "options": [
+   "La dureté des minéraux*",
+   "La force des séismes",
+   "La salinité de l'eau",
+   "La force du vent"
+  ],
+  "explanation": "De 1 (le talc) à 10 (le diamant) : un minéral raye ceux qui sont moins durs que lui.",
+  "hint": "Du talc au diamant."
+ },
+ {
+  "key": "hdb-097",
+  "concept": "nature.earth.cirrus",
+  "label": "Cirrus",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quels nuages, fins et filamenteux, se forment le plus haut dans le ciel ?",
+  "options": [
+   "Les cirrus*",
+   "Les stratus",
+   "Les cumulus",
+   "Les nimbostratus"
+  ],
+  "explanation": "Faits de cristaux de glace, vers 8 à 12 km d'altitude.",
+  "hint": "Comme des cheveux d'ange."
+ },
+ {
+  "key": "hdb-098",
+  "concept": "nature.plants.wolffia",
+  "label": "Wolffia",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Quelle est la plus petite plante à fleurs du monde ?",
+  "options": [
+   "La wolffia*",
+   "La mousse",
+   "Le trèfle",
+   "La lentille d'eau géante"
+  ],
+  "explanation": "Cette plante aquatique mesure environ un millimètre ; on l'appelle aussi « lentille d'eau sans racine ».",
+  "hint": "Environ un millimètre."
+ },
+ {
+  "key": "hdb-099",
+  "concept": "nature.plants.dragonnier_de_socotra",
+  "label": "Dragonnier de Socotra",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel arbre de l'île de Socotra laisse couler une résine rouge appelée « sang-dragon » ?",
+  "options": [
+   "Le dragonnier*",
+   "Le baobab",
+   "Le séquoia",
+   "L'acacia"
+  ],
+  "explanation": "En forme de parapluie, il ne pousse naturellement que sur cette île du Yémen.",
+  "hint": "Un nom de créature fantastique."
+ },
+ {
+  "key": "hdb-100",
+  "concept": "nature.plants.sensitive",
+  "label": "Sensitive",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle plante replie ses feuilles dès qu'on la touche ?",
+  "options": [
+   "Le mimosa pudique (sensitive)*",
+   "La fougère",
+   "L'ortie",
+   "Le trèfle"
+  ],
+  "explanation": "Un changement brusque de pression d'eau dans ses cellules fait se refermer les folioles.",
+  "hint": "Elle est « pudique »."
+ },
+ {
+  "key": "hdb-101",
+  "concept": "nature.plants.coco_de_mer",
+  "label": "Coco de mer",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quelle plante produit la plus grosse graine du monde, jusqu'à 25 kg ?",
+  "options": [
+   "Le cocotier de mer (coco de mer)*",
+   "Le cocotier",
+   "L'avocatier",
+   "Le baobab"
+  ],
+  "explanation": "Ce palmier ne pousse qu'aux Seychelles.",
+  "hint": "Aux Seychelles."
+ },
+ {
+  "key": "hdb-102",
+  "concept": "arts.architecture.louis_le_vau",
+  "label": "Louis Le Vau",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel architecte a commencé l'agrandissement du château de Versailles pour Louis XIV, dans les années 1660 ?",
+  "options": [
+   "Louis Le Vau*",
+   "François Mansart",
+   "Claude Perrault",
+   "Ange-Jacques Gabriel"
+  ],
+  "explanation": "Il avait déjà construit Vaux-le-Vicomte pour Fouquet ; Hardouin-Mansart lui succède.",
+  "hint": "Il a aussi bâti Vaux-le-Vicomte."
+ },
+ {
+  "key": "hdb-103",
+  "concept": "arts.architecture.grande_arche",
+  "label": "Grande Arche",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Quel architecte danois a conçu la Grande Arche de la Défense ?",
+  "options": [
+   "Johan Otto von Spreckelsen*",
+   "Jørn Utzon",
+   "Bjarke Ingels",
+   "Arne Jacobsen"
+  ],
+  "explanation": "Inaugurée en 1989 pour le bicentenaire de la Révolution ; le cube est assez grand pour abriter Notre-Dame.",
+  "hint": "Un architecte peu connu, danois."
+ },
+ {
+  "key": "hdb-104",
+  "concept": "arts.architecture.palais_ideal",
+  "label": "Palais idéal",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a construit le Palais idéal d'Hauterives, avec des pierres ramassées pendant sa tournée ?",
+  "options": [
+   "Le facteur Cheval*",
+   "Le douanier Rousseau",
+   "Gaudí",
+   "Le Corbusier"
+  ],
+  "explanation": "Ferdinand Cheval, facteur, y a travaillé 33 ans. C'est un chef-d'œuvre de l'art naïf.",
+  "hint": "Un facteur."
+ },
+ {
+  "key": "hdb-105",
+  "concept": "arts.architecture.arc_outrepasse",
+  "label": "Arc outrepassé",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "L'arc « en fer à cheval » est typique de quelle architecture ?",
+  "options": [
+   "Hispano-mauresque*",
+   "Gothique",
+   "Romane",
+   "Baroque"
+  ],
+  "explanation": "On le voit dans la mosquée de Cordoue, avec ses arcs bicolores.",
+  "hint": "La mosquée de Cordoue."
+ },
+ {
+  "key": "hdb-106",
+  "concept": "arts.mythology.mnemosyne",
+  "label": "Mnémosyne",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Qui est la mère des neuf Muses ?",
+  "options": [
+   "Mnémosyne*",
+   "Héra",
+   "Gaïa",
+   "Thémis"
+  ],
+  "explanation": "Déesse de la mémoire, d'où le mot « mnémotechnique ». Le père est Zeus.",
+  "hint": "La déesse de la mémoire."
+ },
+ {
+  "key": "hdb-107",
+  "concept": "arts.mythology.lethe",
+  "label": "Léthé",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel fleuve des Enfers fait oublier leur vie passée aux âmes qui y boivent ?",
+  "options": [
+   "Le Léthé*",
+   "Le Styx",
+   "L'Achéron",
+   "Le Cocyte"
+  ],
+  "explanation": "D'où le mot « léthargie ». Le Styx est le fleuve sur lequel les dieux prêtent serment.",
+  "hint": "Il a donné « léthargie »."
+ },
+ {
+  "key": "hdb-108",
+  "concept": "arts.mythology.charon",
+  "label": "Charon",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui fait traverser le fleuve des Enfers aux âmes des morts, contre une obole ?",
+  "options": [
+   "Charon*",
+   "Cerbère",
+   "Hermès",
+   "Minos"
+  ],
+  "explanation": "On plaçait une pièce dans la bouche des défunts pour payer le passeur.",
+  "hint": "Le passeur."
+ },
+ {
+  "key": "hdb-109",
+  "concept": "arts.mythology.fenrir",
+  "label": "Fenrir",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans la mythologie nordique, qui est le père du loup Fenrir ?",
+  "options": [
+   "Loki*",
+   "Odin",
+   "Thor",
+   "Tyr"
+  ],
+  "explanation": "Loki a aussi engendré le serpent Jörmungand et Hel, la gardienne du monde des morts.",
+  "hint": "Le dieu farceur."
+ },
+ {
+  "key": "hdb-110",
+  "concept": "arts.mythology.maat",
+  "label": "Maât",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle déesse égyptienne incarne la justice et l'ordre du monde ?",
+  "options": [
+   "Maât*",
+   "Isis",
+   "Hathor",
+   "Sekhmet"
+  ],
+  "explanation": "Sa plume sert de contrepoids lors de la pesée du cœur du défunt.",
+  "hint": "Une plume sur la tête."
+ },
+ {
+  "key": "hdb-111",
+  "concept": "music.classical.la_mer_de_debussy",
+  "label": "La Mer de Debussy",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a composé « La Mer », trois esquisses symphoniques (1905) ?",
+  "options": [
+   "Claude Debussy*",
+   "Maurice Ravel",
+   "Camille Saint-Saëns",
+   "Gabriel Fauré"
+  ],
+  "explanation": "La partition originale portait en couverture « La Grande Vague » d'Hokusai.",
+  "hint": "Une vague d'Hokusai en couverture."
+ },
+ {
+  "key": "hdb-112",
+  "concept": "music.classical.symphonie_fantastique",
+  "label": "Symphonie fantastique",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a composé la « Symphonie fantastique » (1830) ?",
+  "options": [
+   "Hector Berlioz*",
+   "Franz Liszt",
+   "Charles Gounod",
+   "Georges Bizet"
+  ],
+  "explanation": "Elle raconte les rêves d'un artiste amoureux, jusqu'à une « Marche au supplice » et un « Songe d'une nuit de sabbat ».",
+  "hint": "Un romantique français."
+ },
+ {
+  "key": "hdb-113",
+  "concept": "music.classical.tableaux_d_une_exposition",
+  "label": "Tableaux d'une exposition",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a composé « Tableaux d'une exposition » pour piano, orchestrés ensuite par Ravel ?",
+  "options": [
+   "Modeste Moussorgski*",
+   "Nikolaï Rimski-Korsakov",
+   "Piotr Tchaïkovski",
+   "Alexandre Borodine"
+  ],
+  "explanation": "Inspirée par une exposition des dessins de son ami Viktor Hartmann, mort jeune.",
+  "hint": "Un compositeur russe."
+ },
+ {
+  "key": "hdb-114",
+  "concept": "music.classical.librettiste_de_mozart",
+  "label": "Librettiste de Mozart",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qui a écrit le livret des « Noces de Figaro », de « Don Giovanni » et de « Così fan tutte » ?",
+  "options": [
+   "Lorenzo Da Ponte*",
+   "Emanuel Schikaneder",
+   "Pierre Beaumarchais",
+   "Carlo Goldoni"
+  ],
+  "explanation": "Beaumarchais a écrit la pièce « Le Mariage de Figaro », que Da Ponte adapte. Da Ponte finit sa vie à New York.",
+  "hint": "Un Vénitien mort à New York."
+ },
+ {
+  "key": "hdb-115",
+  "concept": "music.classical.rostropovitch",
+  "label": "Rostropovitch",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "De quel instrument Mstislav Rostropovitch était-il un virtuose ?",
+  "options": [
+   "Le violoncelle*",
+   "Le violon",
+   "Le piano",
+   "La contrebasse"
+  ],
+  "explanation": "En 1989, il joue Bach au pied du mur de Berlin qui vient de tomber.",
+  "hint": "Au pied du mur de Berlin."
+ },
+ {
+  "key": "hdb-116",
+  "concept": "sport.rules.hauteur_du_filet",
+  "label": "Hauteur du filet",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Au tennis, quelle est la hauteur du filet en son centre ?",
+  "options": [
+   "91,4 cm*",
+   "80 cm",
+   "1,07 m",
+   "1,20 m"
+  ],
+  "explanation": "3 pieds (91,4 cm) au centre, 1,07 m aux poteaux.",
+  "hint": "Moins d'un mètre."
+ },
+ {
+  "key": "hdb-117",
+  "concept": "sport.rules.poids_du_lancer_de_poids",
+  "label": "Poids du lancer de poids",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Combien pèse le poids lancé par les hommes en athlétisme ?",
+  "options": [
+   "7,26 kg*",
+   "5 kg",
+   "4 kg",
+   "10 kg"
+  ],
+  "explanation": "Soit 16 livres. Celui des femmes pèse 4 kg.",
+  "hint": "16 livres."
+ },
+ {
+  "key": "hdb-118",
+  "concept": "sport.rules.joueurs_de_baseball",
+  "label": "Joueurs de baseball",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de joueurs une équipe de baseball aligne-t-elle en défense ?",
+  "options": [
+   "9*",
+   "7",
+   "11",
+   "12"
+  ],
+  "explanation": "Un lanceur, un receveur, quatre joueurs de champ intérieur et trois de champ extérieur.",
+  "hint": "Un de moins que 10."
+ },
+ {
+  "key": "hdb-119",
+  "concept": "sport.rules.melee_au_rugby",
+  "label": "Mêlée au rugby",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Au rugby à XV, combien de joueurs par équipe forment la mêlée ?",
+  "options": [
+   "8*",
+   "5",
+   "6",
+   "10"
+  ],
+  "explanation": "Les huit avants : deux piliers, un talonneur, deux deuxièmes lignes, deux troisièmes lignes ailes et un numéro 8.",
+  "hint": "Tous les avants."
+ },
+ {
+  "key": "hdb-120",
+  "concept": "sport.champions.maurice_garin",
+  "label": "Maurice Garin",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a remporté le premier Tour de France, en 1903 ?",
+  "options": [
+   "Maurice Garin*",
+   "Henri Desgrange",
+   "Lucien Petit-Breton",
+   "Octave Lapize"
+  ],
+  "explanation": "Surnommé « le petit ramoneur ». Henri Desgrange était l'organisateur du Tour.",
+  "hint": "« Le petit ramoneur »."
+ },
+ {
+  "key": "hdb-121",
+  "concept": "sport.champions.premiere_coupe_du_monde_de_rugby",
+  "label": "Première Coupe du monde de rugby",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle équipe remporte la première Coupe du monde de rugby, en 1987 ?",
+  "options": [
+   "La Nouvelle-Zélande*",
+   "L'Australie",
+   "La France",
+   "L'Afrique du Sud"
+  ],
+  "explanation": "Les All Blacks battent la France en finale, à Auckland (29-9).",
+  "hint": "Contre la France en finale."
+ },
+ {
+  "key": "hdb-122",
+  "concept": "sport.football.lev_yachine",
+  "label": "Lev Yachine",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel est le seul gardien de but à avoir reçu le Ballon d'or ?",
+  "options": [
+   "Lev Yachine*",
+   "Gianluigi Buffon",
+   "Manuel Neuer",
+   "Oliver Kahn"
+  ],
+  "explanation": "Le gardien soviétique, surnommé « l'Araignée noire », le reçoit en 1963. Un trophée du meilleur gardien porte son nom.",
+  "hint": "« L'Araignée noire »."
+ },
+ {
+  "key": "hdb-123",
+  "concept": "sport.football.premier_mondial_feminin",
+  "label": "Premier Mondial féminin",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui remporte la première Coupe du monde féminine de football, en 1991 ?",
+  "options": [
+   "Les États-Unis*",
+   "L'Allemagne",
+   "La Norvège",
+   "La Chine"
+  ],
+  "explanation": "Le tournoi se déroule en Chine ; les Américaines battent la Norvège en finale.",
+  "hint": "Jouée en Chine."
+ },
+ {
+  "key": "hdb-124",
+  "concept": "sport.olympics.devise_olympique",
+  "label": "Devise olympique",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel mot a été ajouté en 2021 à la devise olympique « Citius, Altius, Fortius » ?",
+  "options": [
+   "Communiter (ensemble)*",
+   "Pacifice (en paix)",
+   "Honeste (honnêtement)",
+   "Semper (toujours)"
+  ],
+  "explanation": "« Plus vite, plus haut, plus fort – ensemble » : un ajout décidé par le CIO avant les Jeux de Tokyo.",
+  "hint": "Ensemble."
+ },
+ {
+  "key": "hdb-125",
+  "concept": "sport.olympics.jo_2032",
+  "label": "JO 2032",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle ville organisera les Jeux olympiques d'été de 2032 ?",
+  "options": [
+   "Brisbane*",
+   "Los Angeles",
+   "Doha",
+   "Madrid"
+  ],
+  "explanation": "Troisièmes JO d'été en Australie, après Melbourne 1956 et Sydney 2000. Los Angeles accueille ceux de 2028.",
+  "hint": "En Australie."
+ },
+ {
+  "key": "hdb-126",
+  "concept": "tech.brands.nom_d_audi",
+  "label": "Nom d'Audi",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Que signifie « Audi » en latin ?",
+  "options": [
+   "Écoute !*",
+   "Or",
+   "Voiture",
+   "Vitesse"
+  ],
+  "explanation": "August Horch ne pouvait plus utiliser son nom ; « Horch » signifie « écoute » en allemand, traduit en latin : audi.",
+  "hint": "Une traduction du nom du fondateur."
+ },
+ {
+  "key": "hdb-127",
+  "concept": "tech.brands.nom_de_samsung",
+  "label": "Nom de Samsung",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Que signifie « Samsung » en coréen ?",
+  "options": [
+   "Trois étoiles*",
+   "Nouvelle lumière",
+   "Grande montagne",
+   "Esprit du feu"
+  ],
+  "explanation": "Le fondateur voulait une entreprise puissante, nombreuse et éternelle comme les étoiles.",
+  "hint": "Un chiffre et un astre."
+ },
+ {
+  "key": "hdb-128",
+  "concept": "tech.brands.skype",
+  "label": "Skype",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quel pays le logiciel Skype a-t-il été développé ?",
+  "options": [
+   "L'Estonie*",
+   "La Finlande",
+   "La Suède",
+   "Les États-Unis"
+  ],
+  "explanation": "Fondé par un Suédois et un Danois, mais programmé par des ingénieurs estoniens, en 2003.",
+  "hint": "Un pays balte."
+ },
+ {
+  "key": "hdb-129",
+  "concept": "tech.brands.mille_milliards",
+  "label": "Mille milliards",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle entreprise est la première cotée en Bourse à dépasser 1 000 milliards de dollars, en 2018 ?",
+  "options": [
+   "Apple*",
+   "Amazon",
+   "Microsoft",
+   "Saudi Aramco"
+  ],
+  "explanation": "En août 2018. Amazon et Microsoft suivent peu après.",
+  "hint": "La marque à la pomme."
+ },
+ {
+  "key": "hdb-130",
+  "concept": "tech.computing.javascript_en_dix_jours",
+  "label": "JavaScript en dix jours",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel langage Brendan Eich aurait-il créé en dix jours, en 1995 ?",
+  "options": [
+   "JavaScript*",
+   "Java",
+   "Python",
+   "PHP"
+  ],
+  "explanation": "Pour le navigateur Netscape. Malgré son nom, il n'a presque rien à voir avec Java.",
+  "hint": "Rien à voir avec Java."
+ },
+ {
+  "key": "hdb-131",
+  "concept": "tech.computing.sigle_gif",
+  "label": "Sigle GIF",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Que signifie « GIF » ?",
+  "options": [
+   "Graphics Interchange Format*",
+   "General Image File",
+   "Graphic Internet Frame",
+   "Global Image Format"
+  ],
+  "explanation": "Créé en 1987 par CompuServe. Sa prononciation (« djif » ou « guif ») fait toujours débat.",
+  "hint": "Un format d'échange."
+ },
+ {
+  "key": "hdb-132",
+  "concept": "tech.computing.mot_robot",
+  "label": "Mot robot",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a popularisé le mot « robot », dans une pièce de théâtre de 1920 ?",
+  "options": [
+   "Karel Čapek*",
+   "Isaac Asimov",
+   "Jules Verne",
+   "H. G. Wells"
+  ],
+  "explanation": "Dans « R.U.R. » ; le mot vient du tchèque robota, la corvée. C'est son frère Josef qui l'aurait suggéré.",
+  "hint": "Un écrivain tchèque."
+ },
+ {
+  "key": "hdb-133",
+  "concept": "tech.computing.ascii",
+  "label": "ASCII",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "À quoi sert la table ASCII, créée dans les années 1960 ?",
+  "options": [
+   "À coder les caractères en nombres*",
+   "À compresser les images",
+   "À chiffrer les mots de passe",
+   "À mesurer la vitesse d'un réseau"
+  ],
+  "explanation": "Chaque lettre, chiffre ou signe reçoit un numéro : « A » vaut 65.",
+  "hint": "« A » vaut 65."
+ },
+ {
+  "key": "hdb-134",
+  "concept": "cinema.directors.cuirasse_potemkine",
+  "label": "Cuirassé Potemkine",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a réalisé « Le Cuirassé Potemkine » (1925) ?",
+  "options": [
+   "Sergueï Eisenstein*",
+   "Dziga Vertov",
+   "Andreï Tarkovski",
+   "Fritz Lang"
+  ],
+  "explanation": "Sa scène de l'escalier d'Odessa est l'une des plus étudiées de l'histoire du cinéma.",
+  "hint": "L'escalier d'Odessa."
+ },
+ {
+  "key": "hdb-135",
+  "concept": "cinema.directors.les_400_coups",
+  "label": "Les 400 coups",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a réalisé « Les Quatre Cents Coups » (1959) ?",
+  "options": [
+   "François Truffaut*",
+   "Jean-Luc Godard",
+   "Claude Chabrol",
+   "Éric Rohmer"
+  ],
+  "explanation": "Un film fondateur de la Nouvelle Vague, avec Jean-Pierre Léaud dans le rôle d'Antoine Doinel.",
+  "hint": "Antoine Doinel."
+ },
+ {
+  "key": "hdb-136",
+  "concept": "cinema.directors.rashomon",
+  "label": "Rashōmon",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a réalisé « Rashōmon » (1950) ?",
+  "options": [
+   "Akira Kurosawa*",
+   "Yasujirō Ozu",
+   "Kenji Mizoguchi",
+   "Hayao Miyazaki"
+  ],
+  "explanation": "Un même crime raconté par plusieurs témoins aux versions contradictoires.",
+  "hint": "Aussi « Les Sept Samouraïs »."
+ },
+ {
+  "key": "hdb-137",
+  "concept": "cinema.films.onze_oscars",
+  "label": "Onze Oscars",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel film partage avec « Ben-Hur » et « Titanic » le record de 11 Oscars ?",
+  "options": [
+   "Le Seigneur des anneaux : Le Retour du roi*",
+   "Avatar",
+   "Autant en emporte le vent",
+   "Oppenheimer"
+  ],
+  "explanation": "En 2004, il remporte les 11 Oscars pour lesquels il était nommé.",
+  "hint": "Une trilogie de Peter Jackson."
+ },
+ {
+  "key": "hdb-138",
+  "concept": "cinema.animation.paprika",
+  "label": "Paprika",
+  "type": "mcq",
+  "difficulty": 82,
+  "prompt": "Qui a réalisé le film d'animation japonais « Paprika » (2006) ?",
+  "options": [
+   "Satoshi Kon*",
+   "Hayao Miyazaki",
+   "Makoto Shinkai",
+   "Katsuhiro Ōtomo"
+  ],
+  "explanation": "Un thriller onirique sur une machine qui permet d'entrer dans les rêves, souvent cité comme inspiration d'« Inception ».",
+  "hint": "Aussi « Perfect Blue »."
+ },
+ {
+  "key": "hdb-139",
+  "concept": "cinema.animation.petite_sirene_1989",
+  "label": "Petite Sirène 1989",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel film de 1989 marque le début de la « Renaissance Disney » ?",
+  "options": [
+   "La Petite Sirène*",
+   "Aladdin",
+   "Le Roi lion",
+   "Bernard et Bianca"
+  ],
+  "explanation": "Après des années difficiles, Disney renoue avec le succès des comédies musicales animées.",
+  "hint": "Sous la mer."
+ },
+ {
+  "key": "hdb-140",
+  "concept": "geography.relief.salto_angel",
+  "label": "Salto Ángel",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle est la plus haute chute d'eau du monde ?",
+  "options": [
+   "Le Salto Ángel*",
+   "Les chutes du Niagara",
+   "Les chutes Victoria",
+   "Les chutes d'Iguaçu"
+  ],
+  "explanation": "Au Venezuela, près de 980 m de chute. Elle porte le nom de l'aviateur Jimmie Angel.",
+  "hint": "Au Venezuela."
+ },
+ {
+  "key": "hdb-141",
+  "concept": "geography.countries.plus_petit_pays_d_afrique_continentale",
+  "label": "Plus petit pays d'Afrique continentale",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel est le plus petit pays d'Afrique continentale ?",
+  "options": [
+   "La Gambie*",
+   "Le Rwanda",
+   "Djibouti",
+   "Le Togo"
+  ],
+  "explanation": "Une bande de terre le long du fleuve Gambie, enclavée dans le Sénégal sauf sur la côte.",
+  "hint": "Dans le Sénégal."
+ },
+ {
+  "key": "hdb-142",
+  "concept": "logic.sequences.suite_n_puissance_n",
+  "label": "Suite n puissance n",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Quel nombre suit : 1, 4, 27, 256, … ?",
+  "answer": 3125,
+  "explanation": "1¹, 2², 3³, 4⁴, puis 5⁵ = 3 125.",
+  "hint": "Chaque nombre à la puissance lui-même."
+ },
+ {
+  "key": "hdb-143",
+  "concept": "logic.sequences.initiales_des_nombres_anglais",
+  "label": "Initiales des nombres anglais",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle lettre suit : O, T, T, F, F, S, S, … ?",
+  "options": [
+   "E*",
+   "N",
+   "T",
+   "O"
+  ],
+  "explanation": "One, Two, Three, Four, Five, Six, Seven, Eight.",
+  "hint": "Compte en anglais."
+ },
+ {
+  "key": "hdb-144",
+  "concept": "logic.sequences.factorielles",
+  "label": "Factorielles",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Quel nombre suit : 1, 2, 6, 24, 120, … ?",
+  "answer": 720,
+  "explanation": "On multiplie successivement par 2, 3, 4, 5, puis 6 : 120 × 6 = 720 (factorielles).",
+  "hint": "× 2, × 3, × 4…"
+ }
+]
