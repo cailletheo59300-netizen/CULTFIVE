@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.11.0 — lot 3 : coffres, arbre de Léon, trophées (serveur)
+- **Coffres** bois / argent / or, jamais achetables, contenu tiré par le serveur à l'ouverture : graines, jokers de série, tickets d'aide (50/50, indice), objets pour Léon. Sources : 3 défis du jour (bois), 3 défis de la semaine (argent), chaque niveau d'XP (bois ; argent tous les 5 ; or tous les 10), trophées, étapes de l'arbre (or), paliers de parrainage.
+- **Arbre de Léon** nourri de graines : Graine → Pousse (150) → Jeune plant (600) → Arbuste (1 800) → Arbre (4 000) → en fleurs (9 000, ~6 mois), puis un fruit tous les 2 500 graines (4 objets rares, arbre complet à 19 000).
+- **12 objets pour Léon** (8 dans les coffres, 4 fruits) et tenue par emplacement. **Tickets d'aide** utilisés avant les graines.
+- **Trophées** : 13 exploits (+ Placé, Sans-faute classé, Globe-trotter) et 48 de maîtrise (Elo 1 050 / 1 200 / 1 350 / 1 500 par domaine). Chaque trophée donne un coffre au lieu de graines.
+- **Parrainage rééquilibré** : 30 graines pour l'invité (100), 50 pour le parrain (150), paliers en coffres.
+- Joueurs existants : arbre de départ selon l'XP (au plus « Jeune plant »), trophées de maîtrise déjà mérités débloqués sans coffre, un coffre d'or de bienvenue.
+- Fin de partie : les trophées s'affichent par leur nom. Accueil : la carte Défis annonce le coffre des trois défis.
+- Serveur : migration 0022, tests `95_gamification.sql`. L'affichage (ouverture des coffres, écran Léon et arbre, vitrine des trophées) arrive au lot 4.
+
 ## 0.10.1 — accueil : bloc « Aujourd'hui »
 - Sous la carte du jour (inchangée), un seul bloc **« Aujourd'hui »** remplace les cartes à icônes génériques : erreurs à revoir en gros chiffre, domaine à travailler en bandeau à sa couleur (Elo ou placement), ligue avec **ta place** (« 3e sur 8 · fin dans 3 j »).
 - La série n'est plus affichée deux fois : la carte « Série » disparaît, les jokers rejoignent la pastille 🔥 du haut.

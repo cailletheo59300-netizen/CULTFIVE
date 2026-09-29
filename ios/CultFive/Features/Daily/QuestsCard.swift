@@ -64,7 +64,14 @@ struct QuestsCard: View {
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
             Spacer()
-            RewardPill(xp: period.bonus.xp, seeds: period.bonus.seeds, done: period.bonus.done)
+            if let chest = period.bonus.chest {
+                Text(ChestName.title(chest))
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .foregroundStyle(period.bonus.done ? Color.inkSoft : Color(hex: 0xB7791F))
+                    .opacity(period.bonus.done ? 0.6 : 1)
+            } else {
+                RewardPill(xp: period.bonus.xp, seeds: period.bonus.seeds, done: period.bonus.done)
+            }
         }
         .padding(10)
         .background(Color(hex: 0xFFB020).opacity(0.08), in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
@@ -142,7 +149,8 @@ struct QuestRewardBanner: View {
         VStack(alignment: .leading, spacing: 6) {
             ForEach(Array(rewards.enumerated()), id: \.offset) { _, reward in
                 CelebrationCard(kind: .quest, title: reward.label,
-                                detail: "+\(reward.seeds) graines\(reward.xp > 0 ? " · +\(reward.xp) XP" : "")")
+                                detail: reward.chest.map { "\(ChestName.title($0)) gagné !" }
+                                    ?? "+\(reward.seeds) graines\(reward.xp > 0 ? " · +\(reward.xp) XP" : "")")
             }
         }
     }

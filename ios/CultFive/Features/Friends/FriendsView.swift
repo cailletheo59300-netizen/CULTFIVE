@@ -226,7 +226,7 @@ struct FriendsView: View {
         if let code = referral?.code ?? app.profile?.referralCode {
             VStack(alignment: .leading, spacing: Space.m) {
                 Text("Inviter").labelCaps()
-                Text("Ton ami reçoit 100 \(Brand.currencyPlural). Toi, 150 quand il termine son premier \(Brand.dailyName).")
+                Text("Ton ami reçoit 30 \(Brand.currencyPlural). Toi, 50 quand il termine son premier \(Brand.dailyName), et un coffre à 3, 5 et 10 amis.")
                     .font(.cfReading)
                     .fixedSize(horizontal: false, vertical: true)
                 if let referral, referral.qualified > 0 {

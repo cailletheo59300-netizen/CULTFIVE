@@ -106,7 +106,7 @@ begin
 
   perform tst.login(invitee);
   r := public.referral_claim(lower(v_code), 'device-invitee-111111');
-  perform tst.ok(r ->> 'status' = 'claimed' and (r ->> 'seeds')::int = 100, 'invité : +100 graines');
+  perform tst.ok(r ->> 'status' = 'claimed' and (r ->> 'seeds')::int = 30, 'invité : +30 graines');
   perform tst.ok(public._are_friends(inviter, invitee), 'parrain et filleul deviennent amis');
   perform tst.throws(format('select public.referral_claim(%L, ''device-invitee-111111'')', v_code), 'referral_already_claimed');
   perform tst.ok((select coalesce(sum(amount), 0) from public.ledger where user_id = inviter and reason = 'referral_inviter') = 0,
@@ -118,7 +118,7 @@ begin
     perform tst.tick('3 seconds');
     perform public.daily_answer(v_run, i, tst.wrong_given(), 3000);
   end loop;
-  perform tst.ok((select sum(amount) from public.ledger where user_id = inviter and reason = 'referral_inviter') = 150,
+  perform tst.ok((select sum(amount) from public.ledger where user_id = inviter and reason = 'referral_inviter') = 50,
                  'parrain récompensé au premier Daily du filleul');
 
   perform tst.login(late);

@@ -53,7 +53,8 @@ begin
 
   select * into p from public.profiles where id = u;
   perform tst.ok(p.xp_total = 4 * 10 + 30, 'XP = 4×10 + 30, obtenu : ' || p.xp_total);
-  perform tst.ok(p.seeds = 10 + 10, 'graines = 10 (daily) + 10 (trophée), obtenu : ' || p.seeds);
+  perform tst.ok(p.seeds = 10, 'graines = 10 (daily), le trophée donne un coffre, obtenu : ' || p.seeds);
+  perform tst.ok(exists (select 1 from public.user_chests where user_id = u and source = 'trophy' and ref = 'first_daily' and tier = 'wood'), 'trophée : coffre en bois');
   perform tst.ok(p.questions_answered = 5, 'compteur de réponses');
 
   -- Une seule tentative officielle

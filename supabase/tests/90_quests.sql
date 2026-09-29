@@ -44,7 +44,8 @@ begin
   o := public.quests_overview();
   perform tst.ok((o -> 'day' -> 'bonus' ->> 'done')::bool, 'bonus du jour');
   perform tst.ok(exists (select 1 from jsonb_array_elements(o -> 'newly') n where (n ->> 'bonus')::bool), 'bonus annoncé');
-  perform tst.ok((select seeds from public.profiles where id = u) = seeds1 + 2 + 3, 'bonus : +3 graines');
+  perform tst.ok((select seeds from public.profiles where id = u) = seeds1 + 2, 'bonus : pas de graines directes');
+  perform tst.ok((select count(*) from public.user_chests where user_id = u and source = 'quests_day' and tier = 'wood') = 1, 'bonus : un coffre en bois');
   -- Plafond de la journée : 9 graines au plus.
   perform tst.ok((select sum(amount) from public.ledger where user_id = u and reason = 'quest' and currency = 'seeds') <= 9, 'au plus 9 graines par jour');
 

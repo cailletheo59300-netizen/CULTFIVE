@@ -254,11 +254,14 @@ public struct QuestsOverview: Codable, Hashable, Sendable {
         public let xp: Int
         public let seeds: Int
         public let done: Bool
+        /// Coffre gagné quand les trois défis sont remplis (« wood », « silver », « gold ») ; nil avant les coffres.
+        public let chest: String?
 
-        public init(xp: Int, seeds: Int, done: Bool) {
+        public init(xp: Int, seeds: Int, done: Bool, chest: String? = nil) {
             self.xp = xp
             self.seeds = seeds
             self.done = done
+            self.chest = chest
         }
     }
 
@@ -290,12 +293,14 @@ public struct QuestsOverview: Codable, Hashable, Sendable {
         public let xp: Int
         public let seeds: Int
         public let bonus: Bool?
+        public let chest: String?
 
-        public init(label: String, xp: Int, seeds: Int, bonus: Bool? = nil) {
+        public init(label: String, xp: Int, seeds: Int, bonus: Bool? = nil, chest: String? = nil) {
             self.label = label
             self.xp = xp
             self.seeds = seeds
             self.bonus = bonus
+            self.chest = chest
         }
     }
 
@@ -910,4 +915,15 @@ public struct Duel: Codable, Hashable, Identifiable, Sendable {
     }
 
     public var isFinished: Bool { status == "finished" }
+}
+
+/// Nom d'un coffre pour l'affichage : « Coffre en bois »…
+public enum ChestName {
+    public static func title(_ tier: String) -> String {
+        switch tier {
+        case "silver": return "Coffre en argent"
+        case "gold": return "Coffre en or"
+        default: return "Coffre en bois"
+        }
+    }
 }
