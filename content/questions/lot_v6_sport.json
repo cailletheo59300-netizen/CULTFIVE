@@ -1,0 +1,1009 @@
+[
+ {
+  "key": "spb-001",
+  "concept": "sport.champions.le_cannibale",
+  "label": "Le Cannibale",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel coureur belge, surnommé « le Cannibale », a gagné cinq Tours de France ?",
+  "options": [
+   "Eddy Merckx*",
+   "Bernard Hinault",
+   "Jacques Anquetil",
+   "Miguel Indurain"
+  ],
+  "explanation": "Il voulait tout gagner, d'où son surnom : 5 Tours, 5 Giros, 1 Vuelta et 3 titres de champion du monde.",
+  "hint": "Un Belge insatiable."
+ },
+ {
+  "key": "spb-002",
+  "concept": "sport.champions.mark_spitz",
+  "label": "Mark Spitz",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel nageur américain gagne sept médailles d'or aux JO de Munich, en 1972 ?",
+  "options": [
+   "Mark Spitz*",
+   "Michael Phelps",
+   "Johnny Weissmuller",
+   "Matt Biondi"
+  ],
+  "explanation": "Son record de sept titres en une édition tient jusqu'aux huit de Michael Phelps, en 2008.",
+  "hint": "Battu par Phelps en 2008."
+ },
+ {
+  "key": "spb-003",
+  "concept": "sport.champions.johan_cruyff",
+  "label": "Johan Cruyff",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel joueur néerlandais incarne le « football total » des années 1970 ?",
+  "options": [
+   "Johan Cruyff*",
+   "Marco van Basten",
+   "Ruud Gullit",
+   "Johan Neeskens"
+  ],
+  "explanation": "Triple Ballon d'or, il marque aussi le FC Barcelone comme joueur puis comme entraîneur.",
+  "hint": "Triple Ballon d'or néerlandais."
+ },
+ {
+  "key": "spb-004",
+  "concept": "sport.champions.platini_triple_ballon_d_or",
+  "label": "Platini triple Ballon d'or",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel Français remporte trois Ballons d'or consécutifs, de 1983 à 1985 ?",
+  "options": [
+   "Michel Platini*",
+   "Zinédine Zidane",
+   "Jean-Pierre Papin",
+   "Raymond Kopa"
+  ],
+  "explanation": "Il mène aussi la France au titre de l'Euro 1984, dont il est le meilleur buteur avec 9 buts.",
+  "hint": "Le héros de l'Euro 1984."
+ },
+ {
+  "key": "spb-005",
+  "concept": "sport.champions.florent_manaudou",
+  "label": "Florent Manaudou",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel nageur français est champion olympique du 50 m nage libre à Londres, en 2012 ?",
+  "options": [
+   "Florent Manaudou*",
+   "Yannick Agnel",
+   "Alain Bernard",
+   "Léon Marchand"
+  ],
+  "explanation": "Le frère cadet de Laure Manaudou, championne olympique en 2004.",
+  "hint": "Le frère de Laure."
+ },
+ {
+  "key": "spb-006",
+  "concept": "sport.champions.alain_prost",
+  "label": "Alain Prost",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de titres de champion du monde de Formule 1 le Français Alain Prost a-t-il remportés ?",
+  "options": [
+   "4*",
+   "1",
+   "2",
+   "7"
+  ],
+  "explanation": "En 1985, 1986, 1989 et 1993. Sa rivalité avec Ayrton Senna est restée légendaire.",
+  "hint": "Le rival de Senna."
+ },
+ {
+  "key": "spb-007",
+  "concept": "sport.champions.wayne_gretzky",
+  "label": "Wayne Gretzky",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quel sport le Canadien Wayne Gretzky, « The Great One », est-il une légende ?",
+  "options": [
+   "Le hockey sur glace*",
+   "Le basket-ball",
+   "Le baseball",
+   "Le football américain"
+  ],
+  "explanation": "Il détient toujours de nombreux records de la NHL ; son numéro 99 a été retiré par toute la ligue.",
+  "hint": "Son numéro 99 est retiré partout."
+ },
+ {
+  "key": "spb-008",
+  "concept": "sport.champions.babe_ruth",
+  "label": "Babe Ruth",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quel sport Babe Ruth est-il une légende américaine ?",
+  "options": [
+   "Le baseball*",
+   "La boxe",
+   "Le golf",
+   "Le hockey"
+  ],
+  "explanation": "Star des New York Yankees dans les années 1920, célèbre pour ses « home runs ».",
+  "hint": "Des home runs."
+ },
+ {
+  "key": "spb-009",
+  "concept": "sport.champions.sebastien_loeb",
+  "label": "Sébastien Loeb",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle discipline Sébastien Loeb a-t-il été neuf fois champion du monde ?",
+  "options": [
+   "Le rallye*",
+   "La Formule 1",
+   "La moto",
+   "Le kitesurf"
+  ],
+  "explanation": "Neuf titres consécutifs de 2004 à 2012, avec son copilote Daniel Elena.",
+  "hint": "Avec un copilote."
+ },
+ {
+  "key": "spb-010",
+  "concept": "sport.champions.yannick_noah",
+  "label": "Yannick Noah",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel Français remporte Roland-Garros en 1983 ?",
+  "options": [
+   "Yannick Noah*",
+   "Henri Leconte",
+   "Guy Forget",
+   "Jo-Wilfried Tsonga"
+  ],
+  "explanation": "Il reste depuis le dernier Français vainqueur en simple messieurs à Roland-Garros. Il est aussi devenu chanteur.",
+  "hint": "Il est aussi chanteur."
+ },
+ {
+  "key": "spb-011",
+  "concept": "sport.champions.amelie_mauresmo",
+  "label": "Amélie Mauresmo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle Française devient numéro 1 mondiale de tennis en 2004 ?",
+  "options": [
+   "Amélie Mauresmo*",
+   "Mary Pierce",
+   "Marion Bartoli",
+   "Caroline Garcia"
+  ],
+  "explanation": "Elle remporte ensuite l'Open d'Australie et Wimbledon en 2006.",
+  "hint": "Victorieuse à Wimbledon en 2006."
+ },
+ {
+  "key": "spb-012",
+  "concept": "sport.champions.jack_nicklaus",
+  "label": "Jack Nicklaus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel golfeur américain détient le record de 18 victoires en tournois majeurs ?",
+  "options": [
+   "Jack Nicklaus*",
+   "Tiger Woods",
+   "Arnold Palmer",
+   "Gary Player"
+  ],
+  "explanation": "Surnommé « l'Ours doré ». Tiger Woods le suit avec 15 titres.",
+  "hint": "« L'Ours doré »."
+ },
+ {
+  "key": "spb-013",
+  "concept": "sport.champions.jonah_lomu",
+  "label": "Jonah Lomu",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel ailier néo-zélandais a impressionné le monde du rugby lors de la Coupe du monde 1995 ?",
+  "options": [
+   "Jonah Lomu*",
+   "Dan Carter",
+   "Richie McCaw",
+   "Jonny Wilkinson"
+  ],
+  "explanation": "1,96 m et 120 kg, il courait le 100 m en moins de 11 secondes. Il est mort en 2015, à 40 ans.",
+  "hint": "Un All Black hors norme."
+ },
+ {
+  "key": "spb-014",
+  "concept": "sport.champions.bjorn_borg",
+  "label": "Björn Borg",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel joueur suédois remporte cinq fois de suite Wimbledon, de 1976 à 1980 ?",
+  "options": [
+   "Björn Borg*",
+   "Stefan Edberg",
+   "Mats Wilander",
+   "John McEnroe"
+  ],
+  "explanation": "Surnommé « l'Ours » ou « Ice Borg » pour son calme. Sa finale de 1980 contre McEnroe est mythique.",
+  "hint": "Un Suédois imperturbable."
+ },
+ {
+  "key": "spb-015",
+  "concept": "sport.champions.cassius_clay",
+  "label": "Cassius Clay",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Sous quel nom Mohamed Ali était-il connu à ses débuts ?",
+  "options": [
+   "Cassius Clay*",
+   "Joe Frazier",
+   "Sonny Liston",
+   "George Foreman"
+  ],
+  "explanation": "Il change de nom en 1964 après sa conversion à l'islam. « Vole comme un papillon, pique comme une abeille. »",
+  "hint": "Il change de nom en 1964."
+ },
+ {
+  "key": "spb-016",
+  "concept": "sport.champions.nationalite_de_cristiano_ronaldo",
+  "label": "Nationalité de Cristiano Ronaldo",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "De quel pays est Cristiano Ronaldo ?",
+  "options": [
+   "Le Portugal*",
+   "L'Espagne",
+   "Le Brésil",
+   "L'Italie"
+  ],
+  "explanation": "Né à Madère en 1985, il a remporté l'Euro 2016 avec le Portugal… contre la France en finale.",
+  "hint": "Il est né à Madère."
+ },
+ {
+  "key": "spb-017",
+  "concept": "sport.champions.benzema_ballon_d_or",
+  "label": "Benzema Ballon d'or",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel Français remporte le Ballon d'or en 2022 ?",
+  "options": [
+   "Karim Benzema*",
+   "Kylian Mbappé",
+   "Antoine Griezmann",
+   "N'Golo Kanté"
+  ],
+  "explanation": "Le cinquième Français lauréat, après Kopa, Platini, Papin et Zidane.",
+  "hint": "L'attaquant du Real Madrid."
+ },
+ {
+  "key": "spb-018",
+  "concept": "sport.champions.kevin_mayer",
+  "label": "Kevin Mayer",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel Français bat le record du monde du décathlon en 2018 ?",
+  "options": [
+   "Kevin Mayer*",
+   "Renaud Lavillenie",
+   "Christophe Lemaitre",
+   "Teddy Tamgho"
+  ],
+  "explanation": "9 126 points à Talence, lors du Décastar.",
+  "hint": "À Talence."
+ },
+ {
+  "key": "spb-019",
+  "concept": "sport.champions.kelly_slater",
+  "label": "Kelly Slater",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel sport l'Américain Kelly Slater a-t-il été onze fois champion du monde ?",
+  "options": [
+   "Le surf*",
+   "Le skateboard",
+   "La voile",
+   "Le snowboard"
+  ],
+  "explanation": "Un record inégalé dans la discipline, sur plus de deux décennies.",
+  "hint": "Sur les vagues."
+ },
+ {
+  "key": "spb-020",
+  "concept": "sport.rules.distance_du_penalty",
+  "label": "Distance du penalty",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quelle distance du but se tire un penalty au football ?",
+  "options": [
+   "11 mètres*",
+   "9,15 mètres",
+   "16,5 mètres",
+   "20 mètres"
+  ],
+  "explanation": "Le point de penalty est à 11 m. 9,15 m, c'est la distance du mur sur un coup franc.",
+  "hint": "Plus près que la surface."
+ },
+ {
+  "key": "spb-021",
+  "concept": "sport.rules.deux_cartons_jaunes",
+  "label": "Deux cartons jaunes",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Au football, que se passe-t-il après deux cartons jaunes pour un même joueur ?",
+  "options": [
+   "Il est expulsé*",
+   "Il sort dix minutes",
+   "Son équipe perd un point",
+   "Il reçoit une amende"
+  ],
+  "explanation": "Deux jaunes font un rouge : le joueur quitte le terrain et ne peut pas être remplacé.",
+  "hint": "Jaune + jaune = …"
+ },
+ {
+  "key": "spb-022",
+  "concept": "sport.rules.passe_au_rugby",
+  "label": "Passe au rugby",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Au rugby, dans quelle direction doit-on faire les passes à la main ?",
+  "options": [
+   "Vers l'arrière ou latéralement*",
+   "Vers l'avant",
+   "Uniquement en diagonale avant",
+   "Dans n'importe quelle direction"
+  ],
+  "explanation": "Une passe vers l'avant est un « en-avant », sanctionné par une mêlée.",
+  "hint": "Sinon, c'est un « en-avant »."
+ },
+ {
+  "key": "spb-023",
+  "concept": "sport.rules.penalite_au_rugby",
+  "label": "Pénalité au rugby",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au rugby à XV, combien de points rapporte une pénalité réussie ?",
+  "options": [
+   "3*",
+   "1",
+   "2",
+   "5"
+  ],
+  "explanation": "Comme le drop. L'essai vaut 5 points, la transformation 2.",
+  "hint": "Autant qu'un drop."
+ },
+ {
+  "key": "spb-024",
+  "concept": "sport.rules.zone_du_handball",
+  "label": "Zone du handball",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au handball, qui a le droit d'entrer dans la zone des 6 mètres ?",
+  "options": [
+   "Seulement le gardien*",
+   "Tous les joueurs",
+   "Les attaquants",
+   "Personne"
+  ],
+  "explanation": "Les joueurs de champ peuvent sauter au-dessus de la zone et tirer avant de retomber dedans.",
+  "hint": "Un seul joueur."
+ },
+ {
+  "key": "spb-025",
+  "concept": "sport.rules.tie_break",
+  "label": "Tie-break",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au tennis, à quel score se joue généralement le tie-break d'un set ?",
+  "options": [
+   "6 jeux partout*",
+   "5 jeux partout",
+   "40 partout",
+   "7 jeux partout"
+  ],
+  "explanation": "Le premier à 7 points avec 2 d'écart gagne le set 7-6.",
+  "hint": "Le set finit alors 7-6."
+ },
+ {
+  "key": "spb-026",
+  "concept": "sport.rules.let_au_service",
+  "label": "Let au service",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au tennis, que se passe-t-il si le service touche le filet puis tombe dans le bon carré ?",
+  "options": [
+   "Le service est rejoué*",
+   "Le point est perdu",
+   "Le point est gagné",
+   "C'est une double faute"
+  ],
+  "explanation": "C'est un « let » : le serveur rejoue la balle, sans pénalité.",
+  "hint": "On dit « let »."
+ },
+ {
+  "key": "spb-027",
+  "concept": "sport.rules.points_d_un_set_de_volley",
+  "label": "Points d'un set de volley",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au volley-ball, en combien de points se joue un set (hors dernier set) ?",
+  "options": [
+   "25*",
+   "15",
+   "21",
+   "30"
+  ],
+  "explanation": "Avec deux points d'écart. Le cinquième set décisif se joue en 15 points.",
+  "hint": "Le dernier set se joue en 15."
+ },
+ {
+  "key": "spb-028",
+  "concept": "sport.rules.24_secondes",
+  "label": "24 secondes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au basket, de combien de secondes une équipe dispose-t-elle pour tirer ?",
+  "options": [
+   "24*",
+   "10",
+   "30",
+   "45"
+  ],
+  "explanation": "La règle des 24 secondes, créée en NBA en 1954, a rendu le jeu beaucoup plus rapide.",
+  "hint": "Adoptée en NBA en 1954."
+ },
+ {
+  "key": "spb-029",
+  "concept": "sport.rules.fautes_au_basket_fiba",
+  "label": "Fautes au basket FIBA",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "En basket (règles internationales), à combien de fautes personnelles un joueur est-il exclu ?",
+  "options": [
+   "5*",
+   "3",
+   "4",
+   "6"
+  ],
+  "explanation": "Cinq fautes selon la FIBA ; la NBA en autorise six.",
+  "hint": "La NBA en tolère une de plus."
+ },
+ {
+  "key": "spb-030",
+  "concept": "sport.rules.palet",
+  "label": "Palet",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au hockey sur glace, avec quoi joue-t-on ?",
+  "options": [
+   "Un palet*",
+   "Un ballon",
+   "Une balle",
+   "Un volant"
+  ],
+  "explanation": "Un disque de caoutchouc durci, souvent gelé avant les matchs pour moins rebondir.",
+  "hint": "Un disque noir."
+ },
+ {
+  "key": "spb-031",
+  "concept": "sport.rules.ceinture_noire",
+  "label": "Ceinture noire",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au judo, quelle couleur de ceinture marque le premier grade de dan ?",
+  "options": [
+   "Noire*",
+   "Marron",
+   "Rouge",
+   "Blanche"
+  ],
+  "explanation": "Les grades les plus élevés (6e à 8e dan) portent une ceinture rouge et blanche, puis rouge au-delà.",
+  "hint": "La plus célèbre."
+ },
+ {
+  "key": "spb-032",
+  "concept": "sport.rules.temoin_du_relais",
+  "label": "Témoin du relais",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans un relais en athlétisme, que se passent les coureurs ?",
+  "options": [
+   "Un témoin*",
+   "Un ballon",
+   "Un drapeau",
+   "Un dossard"
+  ],
+  "explanation": "La transmission doit se faire dans une zone précise ; un témoin tombé peut coûter la course.",
+  "hint": "Un petit bâton."
+ },
+ {
+  "key": "spb-033",
+  "concept": "sport.rules.fosbury_flop",
+  "label": "Fosbury flop",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle technique de saut en hauteur consiste à passer la barre sur le dos ?",
+  "options": [
+   "Le Fosbury flop*",
+   "Le rouleau ventral",
+   "Le ciseau",
+   "Le saut de l'ange"
+  ],
+  "explanation": "Popularisée par l'Américain Dick Fosbury, champion olympique en 1968.",
+  "hint": "Du nom de son inventeur."
+ },
+ {
+  "key": "spb-034",
+  "concept": "sport.rules.ordre_du_4_nages",
+  "label": "Ordre du 4 nages",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Dans l'épreuve du 4 nages individuel, remets les nages dans l'ordre.",
+  "items": [
+   "Papillon",
+   "Dos",
+   "Brasse",
+   "Nage libre"
+  ],
+  "explanation": "Papillon, dos, brasse puis nage libre. Dans le relais 4 nages, l'ordre change : le dos part en premier, dans l'eau.",
+  "hint": "On commence par le papillon."
+ },
+ {
+  "key": "spb-035",
+  "concept": "sport.rules.ordre_du_triathlon",
+  "label": "Ordre du triathlon",
+  "type": "ordering",
+  "difficulty": 25,
+  "prompt": "Remets les épreuves du triathlon dans l'ordre.",
+  "items": [
+   "Natation",
+   "Cyclisme",
+   "Course à pied"
+  ],
+  "explanation": "On nage d'abord, par sécurité, quand on est encore frais.",
+  "hint": "On commence dans l'eau."
+ },
+ {
+  "key": "spb-036",
+  "concept": "sport.rules.echec_et_mat",
+  "label": "Échec et mat",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Aux échecs, qu'est-ce que « échec et mat » ?",
+  "options": [
+   "Le roi est attaqué et ne peut plus s'échapper*",
+   "On a pris la dame adverse",
+   "Il n'y a plus de coup possible",
+   "On a perdu une tour"
+  ],
+  "explanation": "La partie est gagnée. Si le roi n'est pas attaqué mais qu'aucun coup n'est possible, c'est « pat » : partie nulle.",
+  "hint": "Le roi est pris au piège."
+ },
+ {
+  "key": "spb-037",
+  "concept": "sport.rules.cavalier",
+  "label": "Cavalier",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Aux échecs, quelle pièce peut sauter par-dessus les autres ?",
+  "options": [
+   "Le cavalier*",
+   "La tour",
+   "Le fou",
+   "La dame"
+  ],
+  "explanation": "Il se déplace en « L » : deux cases dans un sens, une sur le côté.",
+  "hint": "Il se déplace en L."
+ },
+ {
+  "key": "spb-038",
+  "concept": "sport.rules.promotion_du_pion",
+  "label": "Promotion du pion",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Aux échecs, que devient un pion qui atteint la dernière rangée ?",
+  "options": [
+   "Une autre pièce, souvent une dame*",
+   "Il est retiré du jeu",
+   "Il revient au départ",
+   "Il devient un roi"
+  ],
+  "explanation": "C'est la promotion. On choisit presque toujours la dame, la pièce la plus puissante.",
+  "hint": "Il est promu."
+ },
+ {
+  "key": "spb-039",
+  "concept": "sport.rules.le_par_au_golf",
+  "label": "Le par au golf",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au golf, que signifie le « par » d'un trou ?",
+  "options": [
+   "Le nombre de coups prévu pour un bon joueur*",
+   "Le trou le plus facile",
+   "Un coup raté",
+   "La distance jusqu'au trou"
+  ],
+  "explanation": "Un trou se joue en par 3, 4 ou 5. Un coup de moins, c'est un birdie ; un de plus, un bogey.",
+  "hint": "La référence du trou."
+ },
+ {
+  "key": "spb-040",
+  "concept": "sport.rules.peloton",
+  "label": "Peloton",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "En cyclisme, qu'est-ce que le « peloton » ?",
+  "options": [
+   "Le groupe principal de coureurs*",
+   "Le coureur en tête",
+   "La voiture de l'arbitre",
+   "Le dernier coureur"
+  ],
+  "explanation": "Rouler dans le peloton économise beaucoup d'énergie grâce à l'aspiration.",
+  "hint": "Le gros du groupe."
+ },
+ {
+  "key": "spb-041",
+  "concept": "sport.rules.pole_position",
+  "label": "Pole position",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "En Formule 1, qu'est-ce que la « pole position » ?",
+  "options": [
+   "La première place sur la grille de départ*",
+   "Le dernier tour",
+   "Un arrêt au stand",
+   "Le pilote en tête du championnat"
+  ],
+  "explanation": "Elle revient au pilote le plus rapide des qualifications.",
+  "hint": "Obtenue en qualifications."
+ },
+ {
+  "key": "spb-042",
+  "concept": "sport.rules.cochonnet",
+  "label": "Cochonnet",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "À la pétanque, comment s'appelle la petite boule à approcher ?",
+  "options": [
+   "Le cochonnet*",
+   "Le bouchon",
+   "Le palet",
+   "La bille"
+  ],
+  "explanation": "On l'appelle aussi le « petit » ou le « but ». La pétanque est née à La Ciotat en 1907.",
+  "hint": "Un nom d'animal."
+ },
+ {
+  "key": "spb-043",
+  "concept": "sport.rules.surface_valable_au_fleuret",
+  "label": "Surface valable au fleuret",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "En escrime, au fleuret, quelle partie du corps est une surface valable ?",
+  "options": [
+   "Le tronc*",
+   "Tout le corps",
+   "Seulement la tête",
+   "Les bras et la tête"
+  ],
+  "explanation": "Au fleuret, seul le tronc compte ; à l'épée, tout le corps ; au sabre, tout ce qui est au-dessus de la taille.",
+  "hint": "Pas les bras ni les jambes."
+ },
+ {
+  "key": "spb-044",
+  "concept": "sport.football.creation_du_ballon_d_or",
+  "label": "Création du Ballon d'or",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel magazine a créé le Ballon d'or en 1956 ?",
+  "options": [
+   "France Football*",
+   "L'Équipe Magazine",
+   "Onze Mondial",
+   "World Soccer"
+  ],
+  "explanation": "Le premier lauréat est l'Anglais Stanley Matthews.",
+  "hint": "Un magazine français."
+ },
+ {
+  "key": "spb-045",
+  "concept": "sport.football.raymond_kopa",
+  "label": "Raymond Kopa",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui est le premier Français à remporter le Ballon d'or, en 1958 ?",
+  "options": [
+   "Raymond Kopa*",
+   "Just Fontaine",
+   "Michel Platini",
+   "Jean-Pierre Papin"
+  ],
+  "explanation": "Il jouait alors au Real Madrid, avec lequel il remporte trois Coupes des clubs champions.",
+  "hint": "Il jouait au Real Madrid."
+ },
+ {
+  "key": "spb-046",
+  "concept": "sport.football.euros_de_la_france",
+  "label": "Euros de la France",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "En quelles années la France a-t-elle remporté le championnat d'Europe des nations ?",
+  "options": [
+   "1984 et 2000*",
+   "1998 et 2018",
+   "1984 et 2016",
+   "2000 et 2006"
+  ],
+  "explanation": "1984 avec Platini, à domicile ; 2000 avec le but en or de David Trezeguet contre l'Italie.",
+  "hint": "Avec Platini, puis avec Trezeguet."
+ },
+ {
+  "key": "spb-047",
+  "concept": "sport.football.hotes_de_la_coupe_du_monde_2026",
+  "label": "Hôtes de la Coupe du monde 2026",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quels pays organisent ensemble la Coupe du monde 2026 ?",
+  "options": [
+   "États-Unis, Canada et Mexique*",
+   "Espagne, Portugal et Maroc",
+   "Brésil, Argentine et Uruguay",
+   "Japon, Corée du Sud et Chine"
+  ],
+  "explanation": "La première édition à 48 équipes. Espagne, Portugal et Maroc organiseront celle de 2030.",
+  "hint": "En Amérique du Nord."
+ },
+ {
+  "key": "spb-048",
+  "concept": "sport.football.club_le_plus_titre_en_ligue_des_champion",
+  "label": "Club le plus titré en Ligue des champions",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel club a remporté le plus de Coupes d'Europe des clubs champions et de Ligues des champions ?",
+  "options": [
+   "Le Real Madrid*",
+   "Le FC Barcelone",
+   "Le Bayern Munich",
+   "L'AC Milan"
+  ],
+  "explanation": "Il a notamment gagné les cinq premières éditions, de 1956 à 1960.",
+  "hint": "Les cinq premières éditions."
+ },
+ {
+  "key": "spb-049",
+  "concept": "sport.football.psg_2025",
+  "label": "PSG 2025",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel club français remporte la Ligue des champions en 2025 ?",
+  "options": [
+   "Le Paris Saint-Germain*",
+   "L'Olympique de Marseille",
+   "L'AS Monaco",
+   "L'Olympique lyonnais"
+  ],
+  "explanation": "Victoire 5-0 en finale contre l'Inter Milan, à Munich : le plus large écart de l'histoire d'une finale.",
+  "hint": "Contre l'Inter, 5-0."
+ },
+ {
+  "key": "spb-050",
+  "concept": "sport.football.stade_de_france",
+  "label": "Stade de France",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle ville se trouve le Stade de France ?",
+  "options": [
+   "Saint-Denis*",
+   "Paris",
+   "Nanterre",
+   "Boulogne-Billancourt"
+  ],
+  "explanation": "Construit pour la Coupe du monde 1998, au nord de Paris.",
+  "hint": "Au nord de Paris."
+ },
+ {
+  "key": "spb-051",
+  "concept": "sport.football.maracana",
+  "label": "Maracanã",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle ville se trouve le mythique stade Maracanã ?",
+  "options": [
+   "Rio de Janeiro*",
+   "São Paulo",
+   "Buenos Aires",
+   "Montevideo"
+  ],
+  "explanation": "Il a accueilli les finales des Coupes du monde 1950 et 2014.",
+  "hint": "Au Brésil."
+ },
+ {
+  "key": "spb-052",
+  "concept": "sport.football.hors_jeu",
+  "label": "Hors-jeu",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au football, quand un attaquant est-il hors-jeu ?",
+  "options": [
+   "S'il est plus près du but adverse que l'avant-dernier défenseur au moment de la passe*",
+   "S'il entre dans la surface avant le ballon",
+   "S'il touche le ballon de la main",
+   "S'il se trouve dans son propre camp"
+  ],
+  "explanation": "Le gardien compte en général comme l'un des deux derniers défenseurs. Pas de hors-jeu dans son propre camp ni sur une touche.",
+  "hint": "Au moment de la passe."
+ },
+ {
+  "key": "spb-053",
+  "concept": "sport.football.var",
+  "label": "VAR",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Au football, que désigne la « VAR » ?",
+  "options": [
+   "L'assistance vidéo à l'arbitrage*",
+   "Le temps additionnel",
+   "Un type de tir",
+   "Le classement mondial"
+  ],
+  "explanation": "Utilisée en Coupe du monde depuis 2018, elle permet de revoir buts, penaltys et cartons rouges.",
+  "hint": "Des images vidéo."
+ },
+ {
+  "key": "spb-054",
+  "concept": "sport.football.coup_du_chapeau",
+  "label": "Coup du chapeau",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au football, qu'est-ce qu'un « coup du chapeau » ?",
+  "options": [
+   "Trois buts marqués par le même joueur dans un match*",
+   "Un but de la tête",
+   "Un retourné acrobatique",
+   "Un but contre son camp"
+  ],
+  "explanation": "L'expression viendrait du cricket, où l'on offrait un chapeau au lanceur qui éliminait trois batteurs d'affilée.",
+  "hint": "Un « triplé »."
+ },
+ {
+  "key": "spb-055",
+  "concept": "sport.football.panenka",
+  "label": "Panenka",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qu'une « panenka » ?",
+  "options": [
+   "Un penalty tiré en lob au centre du but*",
+   "Un dribble en talonnade",
+   "Un tir en ciseau",
+   "Un coup franc brossé"
+  ],
+  "explanation": "Du nom du Tchécoslovaque Antonín Panenka, qui l'a réussie en finale de l'Euro 1976.",
+  "hint": "Un penalty tout en douceur."
+ },
+ {
+  "key": "spb-056",
+  "concept": "sport.football.coup_de_tete_de_zidane",
+  "label": "Coup de tête de Zidane",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Lors de la finale de la Coupe du monde 2006, sur quel joueur Zidane donne-t-il un coup de tête ?",
+  "options": [
+   "Marco Materazzi*",
+   "Gianluigi Buffon",
+   "Fabio Cannavaro",
+   "Andrea Pirlo"
+  ],
+  "explanation": "Expulsé, Zidane termine sa carrière sur ce geste ; l'Italie gagne aux tirs au but.",
+  "hint": "Un défenseur italien."
+ },
+ {
+  "key": "spb-057",
+  "concept": "sport.football.main_de_dieu",
+  "label": "Main de Dieu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel joueur marque la célèbre « main de Dieu » contre l'Angleterre en 1986 ?",
+  "options": [
+   "Diego Maradona*",
+   "Pelé",
+   "Lionel Messi",
+   "Mario Kempes"
+  ],
+  "explanation": "Le même jour, il marque aussi l'un des plus beaux buts de l'histoire après avoir dribblé la moitié de l'équipe.",
+  "hint": "Un Argentin."
+ },
+ {
+  "key": "spb-058",
+  "concept": "sport.football.coupe_de_france",
+  "label": "Coupe de France",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle compétition française permet à des clubs amateurs d'affronter des clubs professionnels ?",
+  "options": [
+   "La Coupe de France*",
+   "La Ligue 1",
+   "Le Trophée des champions",
+   "La Ligue des nations"
+  ],
+  "explanation": "Surnommée la « vieille dame », elle réserve chaque année des exploits de « petits poucets ».",
+  "hint": "Les « petits poucets »."
+ },
+ {
+  "key": "spb-059",
+  "concept": "sport.football.club_de_messi",
+  "label": "Club de Messi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quel club Lionel Messi a-t-il joué la plus grande partie de sa carrière ?",
+  "options": [
+   "Le FC Barcelone*",
+   "Le Real Madrid",
+   "Le Paris Saint-Germain",
+   "Manchester City"
+  ],
+  "explanation": "Il y arrive enfant, à 13 ans, et y reste jusqu'en 2021.",
+  "hint": "Il y arrive à 13 ans."
+ },
+ {
+  "key": "spb-060",
+  "concept": "sport.football.arbitres_assistants",
+  "label": "Arbitres assistants",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Combien d'arbitres assistants se tiennent le long des lignes de touche lors d'un match de football ?",
+  "options": [
+   "2*",
+   "1",
+   "3",
+   "4"
+  ],
+  "explanation": "Un de chaque côté, avec un drapeau, pour signaler hors-jeu et sorties. Le quatrième arbitre, lui, se tient entre les bancs.",
+  "hint": "Un de chaque côté."
+ },
+ {
+  "key": "spb-061",
+  "concept": "sport.football.corner",
+  "label": "Corner",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Au football, comment appelle-t-on le coup de pied tiré depuis le coin du terrain ?",
+  "options": [
+   "Un corner*",
+   "Un penalty",
+   "Une touche",
+   "Un six-mètres"
+  ],
+  "explanation": "Il est accordé quand un défenseur fait sortir le ballon derrière sa propre ligne de but.",
+  "hint": "Coin se dit « corner » en anglais."
+ },
+ {
+  "key": "spb-062",
+  "concept": "sport.football.clairefontaine",
+  "label": "Clairefontaine",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où se trouve le centre national d'entraînement de l'équipe de France de football ?",
+  "options": [
+   "À Clairefontaine*",
+   "À Marcoussis",
+   "À l'INSEP",
+   "À Font-Romeu"
+  ],
+  "explanation": "Dans les Yvelines, inauguré en 1988. Marcoussis est le centre du rugby français.",
+  "hint": "Dans les Yvelines."
+ },
+ {
+  "key": "spb-063",
+  "concept": "sport.football.carton_rouge",
+  "label": "Carton rouge",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Au football, que signifie un carton rouge ?",
+  "options": [
+   "L'expulsion du joueur*",
+   "Un avertissement",
+   "Un penalty",
+   "Un changement de joueur"
+  ],
+  "explanation": "Le joueur quitte le terrain et son équipe joue à dix ; il est en général suspendu pour le match suivant.",
+  "hint": "Son équipe joue à dix."
+ }
+]

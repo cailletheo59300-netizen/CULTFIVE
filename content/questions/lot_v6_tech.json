@@ -1,0 +1,622 @@
+[
+ {
+  "key": "teb-001",
+  "concept": "tech.brands.naissance_de_coca_cola",
+  "label": "Naissance de Coca-Cola",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a inventé le Coca-Cola, en 1886 ?",
+  "options": [
+   "Un pharmacien d'Atlanta*",
+   "Un chimiste français",
+   "Un confiseur mexicain",
+   "Un brasseur allemand"
+  ],
+  "explanation": "John Pemberton le vend d'abord comme un remède en pharmacie.",
+  "hint": "Il le vendait comme remède."
+ },
+ {
+  "key": "teb-002",
+  "concept": "tech.brands.bibendum",
+  "label": "Bibendum",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quelle marque Bibendum, le bonhomme blanc, est-il la mascotte ?",
+  "options": [
+   "Michelin*",
+   "Pirelli",
+   "Goodyear",
+   "Total"
+  ],
+  "explanation": "Créé en 1898, il est fait de pneus empilés. Il était blanc car les pneus l'étaient avant l'ajout de noir de carbone.",
+  "hint": "Il est fait de pneus."
+ },
+ {
+  "key": "teb-003",
+  "concept": "tech.brands.logos_automobiles",
+  "label": "Logos automobiles",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque marque à son logo.",
+  "pairs": [
+   [
+    "Peugeot",
+    "Un lion"
+   ],
+   [
+    "Citroën",
+    "Deux chevrons"
+   ],
+   [
+    "Renault",
+    "Un losange"
+   ],
+   [
+    "Lamborghini",
+    "Un taureau"
+   ]
+  ],
+  "explanation": "Les chevrons de Citroën rappellent les engrenages à denture en V que fabriquait André Citroën.",
+  "hint": "Le lion rugit."
+ },
+ {
+  "key": "teb-004",
+  "concept": "tech.brands.sigle_bmw",
+  "label": "Sigle BMW",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que signifie le sigle BMW ?",
+  "options": [
+   "Manufacture bavaroise de moteurs*",
+   "Grande machine allemande",
+   "Voiture de Berlin",
+   "Fabrique de moteurs de Munich"
+  ],
+  "explanation": "Bayerische Motoren Werke : l'entreprise a commencé par les moteurs d'avion.",
+  "hint": "La Bavière."
+ },
+ {
+  "key": "teb-005",
+  "concept": "tech.brands.twitter_devient_x",
+  "label": "Twitter devient X",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel réseau social a été renommé « X » en 2023 ?",
+  "options": [
+   "Twitter*",
+   "Facebook",
+   "Snapchat",
+   "Instagram"
+  ],
+  "explanation": "Après son rachat par Elon Musk en 2022. L'oiseau bleu a disparu du logo.",
+  "hint": "L'oiseau bleu."
+ },
+ {
+  "key": "teb-006",
+  "concept": "tech.brands.meta",
+  "label": "Meta",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "En 2021, quelle entreprise prend le nom de « Meta » ?",
+  "options": [
+   "Facebook*",
+   "Google",
+   "Microsoft",
+   "Amazon"
+  ],
+  "explanation": "Le groupe, qui possède aussi Instagram et WhatsApp, veut alors miser sur le « métavers ».",
+  "hint": "Elle possède Instagram."
+ },
+ {
+  "key": "teb-007",
+  "concept": "tech.brands.alphabet",
+  "label": "Alphabet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'appelle la société mère de Google depuis 2015 ?",
+  "options": [
+   "Alphabet*",
+   "Meta",
+   "Oracle",
+   "Aurora"
+  ],
+  "explanation": "Elle regroupe Google, YouTube, Waymo (voitures autonomes) et d'autres projets.",
+  "hint": "Un nom très… élémentaire."
+ },
+ {
+  "key": "teb-008",
+  "concept": "tech.brands.debuts_de_netflix",
+  "label": "Débuts de Netflix",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que proposait Netflix à ses débuts, en 1997 ?",
+  "options": [
+   "La location de DVD par courrier*",
+   "Des jeux vidéo",
+   "Un réseau social",
+   "Des livres numériques"
+  ],
+  "explanation": "Le streaming n'arrive qu'en 2007. Le nom mêle « net » (Internet) et « flix » (films).",
+  "hint": "Des disques par la poste."
+ },
+ {
+  "key": "teb-009",
+  "concept": "tech.brands.airbnb",
+  "label": "Airbnb",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que propose principalement Airbnb ?",
+  "options": [
+   "La location de logements entre particuliers*",
+   "Des billets d'avion",
+   "Des voitures avec chauffeur",
+   "Des repas livrés"
+  ],
+  "explanation": "Né en 2008 à San Francisco : les fondateurs louaient des matelas gonflables (air beds) dans leur appartement.",
+  "hint": "Dormir chez l'habitant."
+ },
+ {
+  "key": "teb-010",
+  "concept": "tech.brands.spotify",
+  "label": "Spotify",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient le service de musique Spotify ?",
+  "options": [
+   "La Suède*",
+   "Les États-Unis",
+   "Le Royaume-Uni",
+   "L'Allemagne"
+  ],
+  "explanation": "Fondé à Stockholm en 2006.",
+  "hint": "Comme Ikea."
+ },
+ {
+  "key": "teb-011",
+  "concept": "tech.brands.shazam",
+  "label": "Shazam",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "À quoi sert l'application Shazam ?",
+  "options": [
+   "À reconnaître une musique qu'on entend*",
+   "À traduire un texte",
+   "À retoucher des photos",
+   "À payer en magasin"
+  ],
+  "explanation": "Elle compare l'« empreinte » sonore du morceau à sa base de données. Apple l'a rachetée en 2018.",
+  "hint": "Quelle est cette chanson ?"
+ },
+ {
+  "key": "teb-012",
+  "concept": "tech.brands.dyson",
+  "label": "Dyson",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pour quel appareil sans sac l'entreprise Dyson est-elle devenue célèbre ?",
+  "options": [
+   "L'aspirateur*",
+   "Le sèche-linge",
+   "Le réfrigérateur",
+   "Le grille-pain"
+  ],
+  "explanation": "James Dyson aurait fabriqué plus de 5 000 prototypes avant son aspirateur cyclonique.",
+  "hint": "Plus de 5 000 prototypes."
+ },
+ {
+  "key": "teb-013",
+  "concept": "tech.brands.stylo_bic",
+  "label": "Stylo Bic",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a fondé l'entreprise Bic, célèbre pour son stylo à bille ?",
+  "options": [
+   "Marcel Bich*",
+   "Ladislao Biro",
+   "Bernard Arnault",
+   "Louis Renault"
+  ],
+  "explanation": "Il lance le Bic Cristal en 1950. Il a retiré le h de son nom pour la marque. Biro, lui, avait inventé le stylo à bille.",
+  "hint": "Presque le même nom."
+ },
+ {
+  "key": "teb-014",
+  "concept": "tech.brands.tefal",
+  "label": "Tefal",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel objet a fait le succès de la marque française Tefal ?",
+  "options": [
+   "La poêle antiadhésive*",
+   "Le fer à repasser",
+   "La cafetière",
+   "Le mixeur"
+  ],
+  "explanation": "Tefal vient de « TEFlon » et « ALuminium ».",
+  "hint": "Teflon + aluminium."
+ },
+ {
+  "key": "teb-015",
+  "concept": "tech.brands.haribo",
+  "label": "Haribo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "D'où vient le nom « Haribo » ?",
+  "options": [
+   "De HAns RIegel BOnn*",
+   "D'un mot japonais",
+   "D'un ours en allemand",
+   "D'une ville suisse"
+  ],
+  "explanation": "Hans Riegel fonde sa confiserie à Bonn en 1920 et invente l'ourson en gomme.",
+  "hint": "Un nom, un prénom, une ville."
+ },
+ {
+  "key": "teb-016",
+  "concept": "tech.brands.kodak",
+  "label": "Kodak",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Pour quels produits Kodak est-elle célèbre ?",
+  "options": [
+   "Les appareils photo et les pellicules*",
+   "Les téléphones",
+   "Les montres",
+   "Les jouets"
+  ],
+  "explanation": "Un de ses ingénieurs invente l'appareil photo numérique en 1975… que Kodak tarde à exploiter.",
+  "hint": "Clic-clac."
+ },
+ {
+  "key": "teb-017",
+  "concept": "tech.brands.intel",
+  "label": "Intel",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que fabrique principalement Intel ?",
+  "options": [
+   "Des processeurs*",
+   "Des écrans",
+   "Des smartphones",
+   "Des imprimantes"
+  ],
+  "explanation": "Fondée en 1968, elle a lancé le premier microprocesseur commercial, le 4004, en 1971.",
+  "hint": "Le « cerveau » de l'ordinateur."
+ },
+ {
+  "key": "teb-018",
+  "concept": "tech.brands.nvidia",
+  "label": "Nvidia",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pour quels composants Nvidia est-elle surtout connue ?",
+  "options": [
+   "Les processeurs graphiques (cartes graphiques)*",
+   "Les disques durs",
+   "Les batteries",
+   "Les câbles réseau"
+  ],
+  "explanation": "Conçus pour les jeux vidéo, ses GPU sont devenus essentiels pour entraîner les intelligences artificielles.",
+  "hint": "Pour les jeux… et l'IA."
+ },
+ {
+  "key": "teb-019",
+  "concept": "tech.brands.chatgpt",
+  "label": "ChatGPT",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle entreprise a lancé ChatGPT, fin 2022 ?",
+  "options": [
+   "OpenAI*",
+   "Google",
+   "Meta",
+   "Apple"
+  ],
+  "explanation": "Il atteint 100 millions d'utilisateurs en deux mois, un record à l'époque.",
+  "hint": "Son nom parle d'ouverture."
+ },
+ {
+  "key": "teb-020",
+  "concept": "tech.computing.eniac",
+  "label": "ENIAC",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle l'un des premiers ordinateurs électroniques, achevé en 1945 aux États-Unis ?",
+  "options": [
+   "L'ENIAC*",
+   "Le Macintosh",
+   "L'IBM PC",
+   "Le Minitel"
+  ],
+  "explanation": "Il pesait près de 30 tonnes et occupait une grande salle.",
+  "hint": "Près de 30 tonnes."
+ },
+ {
+  "key": "teb-021",
+  "concept": "tech.computing.minitel",
+  "label": "Minitel",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'était le Minitel, très populaire en France dans les années 1980 ?",
+  "options": [
+   "Un terminal pour accéder à des services en ligne*",
+   "Un baladeur",
+   "Une console de jeux",
+   "Un téléphone portable"
+  ],
+  "explanation": "Annuaire, réservations, messageries… Il a fonctionné jusqu'en 2012.",
+  "hint": "Un ancêtre français d'Internet."
+ },
+ {
+  "key": "teb-022",
+  "concept": "tech.computing.unites_de_stockage",
+  "label": "Unités de stockage",
+  "type": "ordering",
+  "difficulty": 20,
+  "prompt": "Classe ces unités de la plus petite à la plus grande.",
+  "items": [
+   "Kilooctet",
+   "Mégaoctet",
+   "Gigaoctet",
+   "Téraoctet"
+  ],
+  "explanation": "Chaque unité vaut environ mille fois la précédente.",
+  "hint": "Kilo, méga, giga, téra."
+ },
+ {
+  "key": "teb-023",
+  "concept": "tech.computing.code_source",
+  "label": "Code source",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que le « code source » d'un logiciel ?",
+  "options": [
+   "Le texte du programme, écrit par les développeurs*",
+   "Le mot de passe de l'administrateur",
+   "Le numéro de licence",
+   "L'adresse du site web"
+  ],
+  "explanation": "Écrit dans un langage de programmation, il est ensuite traduit en instructions compréhensibles par la machine.",
+  "hint": "Ce qu'écrivent les développeurs."
+ },
+ {
+  "key": "teb-024",
+  "concept": "tech.computing.bug_de_l_an_2000",
+  "label": "Bug de l'an 2000",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que craignait-on avec le « bug de l'an 2000 » ?",
+  "options": [
+   "Que des ordinateurs confondent 2000 et 1900*",
+   "Une panne mondiale d'électricité",
+   "Un virus programmé pour le 1er janvier",
+   "La fin d'Internet"
+  ],
+  "explanation": "Beaucoup de programmes notaient l'année sur deux chiffres. D'importants travaux ont limité les problèmes.",
+  "hint": "Les années sur deux chiffres."
+ },
+ {
+  "key": "teb-025",
+  "concept": "tech.computing.spam",
+  "label": "Spam",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'appelle-t-on un « spam » ?",
+  "options": [
+   "Un courrier électronique indésirable envoyé en masse*",
+   "Un virus",
+   "Un mot de passe oublié",
+   "Une pièce jointe"
+  ],
+  "explanation": "Le nom viendrait d'un sketch des Monty Python où le mot « Spam » (une marque de jambon) revient sans cesse.",
+  "hint": "Il encombre ta boîte mail."
+ },
+ {
+  "key": "teb-026",
+  "concept": "tech.computing.rancongiciel",
+  "label": "Rançongiciel",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que fait un « rançongiciel » (ransomware) ?",
+  "options": [
+   "Il chiffre les fichiers et réclame une rançon*",
+   "Il accélère l'ordinateur",
+   "Il bloque les publicités",
+   "Il sauvegarde les fichiers"
+  ],
+  "explanation": "Hôpitaux et collectivités en sont souvent victimes. Des sauvegardes régulières sont la meilleure protection.",
+  "hint": "Il prend tes fichiers en otage."
+ },
+ {
+  "key": "teb-027",
+  "concept": "tech.computing.double_authentification",
+  "label": "Double authentification",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "À quoi sert l'authentification à deux facteurs ?",
+  "options": [
+   "À exiger une seconde preuve d'identité en plus du mot de passe*",
+   "À avoir deux mots de passe identiques",
+   "À partager son compte",
+   "À se connecter plus vite"
+  ],
+  "explanation": "Par exemple un code reçu par SMS ou généré par une application : un mot de passe volé ne suffit plus.",
+  "hint": "Un code en plus du mot de passe."
+ },
+ {
+  "key": "teb-028",
+  "concept": "tech.computing.apprentissage_automatique",
+  "label": "Apprentissage automatique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que l'apprentissage automatique (machine learning) ?",
+  "options": [
+   "Un programme qui apprend à partir d'exemples*",
+   "Un robot qui fabrique des machines",
+   "Un logiciel de cours en ligne",
+   "Une méthode pour taper plus vite"
+  ],
+  "explanation": "Au lieu de règles écrites à la main, le système ajuste ses paramètres à partir de nombreuses données.",
+  "hint": "Il apprend à partir de données."
+ },
+ {
+  "key": "teb-029",
+  "concept": "tech.computing.origine_du_qr_code",
+  "label": "Origine du QR code",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel secteur le QR code a-t-il été inventé, au Japon en 1994 ?",
+  "options": [
+   "L'automobile*",
+   "La banque",
+   "Les jeux vidéo",
+   "La restauration"
+  ],
+  "explanation": "Denso Wave, filiale de Toyota, le crée pour suivre les pièces détachées dans les usines.",
+  "hint": "Pour suivre des pièces détachées."
+ },
+ {
+  "key": "teb-030",
+  "concept": "tech.computing.pixel",
+  "label": "Pixel",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'un pixel ?",
+  "options": [
+   "Le plus petit point d'une image numérique*",
+   "Une unité de mémoire",
+   "Un type d'écran",
+   "Un logiciel de dessin"
+  ],
+  "explanation": "Contraction de l'anglais « picture element ». Un écran Full HD en compte environ 2 millions.",
+  "hint": "Picture element."
+ },
+ {
+  "key": "teb-031",
+  "concept": "tech.computing.gps",
+  "label": "GPS",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur quoi repose le fonctionnement du GPS ?",
+  "options": [
+   "Des satellites en orbite*",
+   "Des antennes de téléphone uniquement",
+   "Des boussoles",
+   "Des radars au sol"
+  ],
+  "explanation": "Le récepteur calcule sa position à partir des signaux d'au moins quatre satellites. L'Europe a son propre système : Galileo.",
+  "hint": "L'Europe a Galileo."
+ },
+ {
+  "key": "teb-032",
+  "concept": "tech.computing.ctrl_z",
+  "label": "Ctrl+Z",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Sur un ordinateur, à quoi sert généralement le raccourci Ctrl + Z ?",
+  "options": [
+   "À annuler la dernière action*",
+   "À copier",
+   "À enregistrer",
+   "À fermer la fenêtre"
+  ],
+  "explanation": "Ctrl + C copie, Ctrl + V colle, Ctrl + S enregistre. Sur Mac, on utilise la touche Cmd.",
+  "hint": "Oups, on revient en arrière."
+ },
+ {
+  "key": "teb-033",
+  "concept": "tech.computing.arobase",
+  "label": "Arobase",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle le symbole « @ » en français ?",
+  "options": [
+   "L'arobase*",
+   "L'esperluette",
+   "Le dièse",
+   "La barre oblique"
+  ],
+  "explanation": "Il sépare le nom de l'utilisateur et le domaine dans une adresse e-mail. L'esperluette, c'est « & ».",
+  "hint": "Dans les adresses e-mail."
+ },
+ {
+  "key": "teb-034",
+  "concept": "tech.computing.premier_sms",
+  "label": "Premier SMS",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel était le texte du premier SMS, envoyé en 1992 ?",
+  "options": [
+   "« Merry Christmas »*",
+   "« Hello World »",
+   "« Allô ? »",
+   "« Happy New Year »"
+  ],
+  "explanation": "Envoyé le 3 décembre 1992 par un ingénieur, depuis un ordinateur vers un téléphone.",
+  "hint": "Un message de saison."
+ },
+ {
+  "key": "teb-035",
+  "concept": "tech.computing.premier_iphone",
+  "label": "Premier iPhone",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "En quelle année Apple présente-t-elle le premier iPhone ?",
+  "options": [
+   "2007*",
+   "2001",
+   "2010",
+   "2004"
+  ],
+  "explanation": "Steve Jobs l'annonce comme « un iPod, un téléphone et un navigateur Internet » réunis.",
+  "hint": "Quelques années après l'iPod."
+ },
+ {
+  "key": "teb-036",
+  "concept": "tech.computing.fondation_de_google",
+  "label": "Fondation de Google",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "En quelle année la société Google est-elle fondée ?",
+  "options": [
+   "1998*",
+   "1990",
+   "2004",
+   "2008"
+  ],
+  "explanation": "Par Larry Page et Sergey Brin, étudiants à Stanford, dans un garage de Californie.",
+  "hint": "À la fin des années 1990."
+ },
+ {
+  "key": "teb-037",
+  "concept": "tech.computing.wikipedia",
+  "label": "Wikipédia",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "En quelle année l'encyclopédie collaborative Wikipédia est-elle lancée ?",
+  "options": [
+   "2001*",
+   "1995",
+   "2008",
+   "2012"
+  ],
+  "explanation": "Tout le monde peut la modifier ; elle compte des dizaines de millions d'articles dans plus de 300 langues.",
+  "hint": "Au tout début des années 2000."
+ },
+ {
+  "key": "teb-038",
+  "concept": "tech.computing.captcha",
+  "label": "CAPTCHA",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "À quoi sert un « CAPTCHA » (lettres déformées, images à cocher) ?",
+  "options": [
+   "À vérifier qu'on est un humain et non un robot*",
+   "À mesurer la vitesse de connexion",
+   "À tester la vue",
+   "À choisir un mot de passe"
+  ],
+  "explanation": "Il bloque les programmes automatiques qui voudraient créer des comptes ou envoyer du spam.",
+  "hint": "Humain ou robot ?"
+ }
+]

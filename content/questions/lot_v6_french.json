@@ -2047,22 +2047,6 @@
  },
  {
   "key": "frb-127",
-  "concept": "french.vocabulary.omnivore",
-  "label": "Omnivore",
-  "type": "mcq",
-  "difficulty": 15,
-  "prompt": "Un animal « omnivore »…",
-  "options": [
-   "mange de tout*",
-   "ne mange que des plantes",
-   "ne mange que de la viande",
-   "ne mange que la nuit"
-  ],
-  "explanation": "Du latin omnis (tout) et vorare (dévorer). L'humain, le cochon et l'ours sont omnivores.",
-  "hint": "Omni = tout."
- },
- {
-  "key": "frb-128",
   "concept": "french.vocabulary.anecdote",
   "label": "Anecdote",
   "type": "mcq",
@@ -2078,7 +2062,7 @@
   "hint": "Une petite histoire."
  },
  {
-  "key": "frb-129",
+  "key": "frb-128",
   "concept": "french.vocabulary.utopie",
   "label": "Utopie",
   "type": "mcq",
@@ -2094,7 +2078,7 @@
   "hint": "« Nulle part » en grec."
  },
  {
-  "key": "frb-130",
+  "key": "frb-129",
   "concept": "french.vocabulary.euphemisme",
   "label": "Euphémisme",
   "type": "mcq",
@@ -2110,7 +2094,7 @@
   "hint": "On adoucit."
  },
  {
-  "key": "frb-131",
+  "key": "frb-130",
   "concept": "french.vocabulary.hyperbole",
   "label": "Hyperbole",
   "type": "mcq",
@@ -2126,7 +2110,7 @@
   "hint": "On exagère."
  },
  {
-  "key": "frb-132",
+  "key": "frb-131",
   "concept": "french.vocabulary.anachronisme",
   "label": "Anachronisme",
   "type": "mcq",
@@ -2142,7 +2126,7 @@
   "hint": "Une erreur d'époque."
  },
  {
-  "key": "frb-133",
+  "key": "frb-132",
   "concept": "french.vocabulary.xenophobe",
   "label": "Xénophobe",
   "type": "mcq",
@@ -2158,7 +2142,7 @@
   "hint": "Xénos = étranger."
  },
  {
-  "key": "frb-134",
+  "key": "frb-133",
   "concept": "french.vocabulary.megalomane",
   "label": "Mégalomane",
   "type": "mcq",
@@ -2174,7 +2158,7 @@
   "hint": "Méga = grand."
  },
  {
-  "key": "frb-135",
+  "key": "frb-134",
   "concept": "french.vocabulary.collectionneurs",
   "label": "Collectionneurs",
   "type": "pairs",
@@ -2202,7 +2186,7 @@
   "hint": "Numisma = monnaie."
  },
  {
-  "key": "frb-136",
+  "key": "frb-135",
   "concept": "french.vocabulary.ornithologue",
   "label": "Ornithologue",
   "type": "mcq",
@@ -2218,7 +2202,7 @@
   "hint": "Ornis = oiseau."
  },
  {
-  "key": "frb-137",
+  "key": "frb-136",
   "concept": "french.vocabulary.somnambule",
   "label": "Somnambule",
   "type": "mcq",
@@ -2234,7 +2218,7 @@
   "hint": "Somnus + marcher."
  },
  {
-  "key": "frb-138",
+  "key": "frb-137",
   "concept": "french.vocabulary.insipide",
   "label": "Insipide",
   "type": "mcq",
@@ -2250,7 +2234,7 @@
   "hint": "Il manque de goût."
  },
  {
-  "key": "frb-139",
+  "key": "frb-138",
   "concept": "french.vocabulary.taciturne",
   "label": "Taciturne",
   "type": "mcq",
@@ -2266,7 +2250,7 @@
   "hint": "Tacere = se taire."
  },
  {
-  "key": "frb-140",
+  "key": "frb-139",
   "concept": "french.vocabulary.eclectique",
   "label": "Éclectique",
   "type": "mcq",
@@ -2282,7 +2266,7 @@
   "hint": "Un peu de tout."
  },
  {
-  "key": "frb-141",
+  "key": "frb-140",
   "concept": "french.vocabulary.cupide",
   "label": "Cupide",
   "type": "mcq",
@@ -2298,7 +2282,7 @@
   "hint": "Elle veut toujours plus."
  },
  {
-  "key": "frb-142",
+  "key": "frb-141",
   "concept": "french.vocabulary.candide",
   "label": "Candide",
   "type": "mcq",
@@ -2314,7 +2298,7 @@
   "hint": "Le héros de Voltaire."
  },
  {
-  "key": "frb-143",
+  "key": "frb-142",
   "concept": "french.vocabulary.peregrinations",
   "label": "Pérégrinations",
   "type": "mcq",
@@ -2330,7 +2314,7 @@
   "hint": "Comme un pèlerin."
  },
  {
-  "key": "frb-144",
+  "key": "frb-143",
   "concept": "french.vocabulary.belliqueux",
   "label": "Belliqueux",
   "type": "mcq",
@@ -2346,7 +2330,7 @@
   "hint": "Bellum = guerre."
  },
  {
-  "key": "frb-145",
+  "key": "frb-144",
   "concept": "french.vocabulary.nostalgie",
   "label": "Nostalgie",
   "type": "mcq",
@@ -2362,7 +2346,7 @@
   "hint": "Le mal du pays."
  },
  {
-  "key": "frb-146",
+  "key": "frb-145",
   "concept": "french.vocabulary.fastidieux",
   "label": "Fastidieux",
   "type": "mcq",
@@ -2378,7 +2362,7 @@
   "hint": "Long et ennuyeux."
  },
  {
-  "key": "frb-147",
+  "key": "frb-146",
   "concept": "french.vocabulary.onirique",
   "label": "Onirique",
   "type": "mcq",
@@ -2394,7 +2378,7 @@
   "hint": "Oneiros = rêve."
  },
  {
-  "key": "frb-148",
+  "key": "frb-147",
   "concept": "french.vocabulary.ineluctable",
   "label": "Inéluctable",
   "type": "mcq",
@@ -2410,7 +2394,7 @@
   "hint": "On n'y échappe pas."
  },
  {
-  "key": "frb-149",
+  "key": "frb-148",
   "concept": "french.vocabulary.soporifique",
   "label": "Soporifique",
   "type": "mcq",
@@ -2426,7 +2410,7 @@
   "hint": "On s'endort."
  },
  {
-  "key": "frb-150",
+  "key": "frb-149",
   "concept": "french.vocabulary.redhibitoire",
   "label": "Rédhibitoire",
   "type": "mcq",

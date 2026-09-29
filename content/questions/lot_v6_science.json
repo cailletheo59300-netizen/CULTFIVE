@@ -33,22 +33,6 @@
  },
  {
   "key": "scb-003",
-  "concept": "science.physics.inventeur_de_la_pile",
-  "label": "Inventeur de la pile",
-  "type": "mcq",
-  "difficulty": 45,
-  "prompt": "Qui a inventé la pile électrique, en 1800 ?",
-  "options": [
-   "Alessandro Volta*",
-   "Thomas Edison",
-   "André-Marie Ampère",
-   "Nikola Tesla"
-  ],
-  "explanation": "Un empilement de disques de zinc et de cuivre séparés par du carton imbibé d'eau salée : d'où le mot « pile ».",
-  "hint": "Il a donné son nom au volt."
- },
- {
-  "key": "scb-004",
   "concept": "science.physics.poussee_d_archimede",
   "label": "Poussée d'Archimède",
   "type": "mcq",
@@ -64,7 +48,7 @@
   "hint": "Eurêka !"
  },
  {
-  "key": "scb-005",
+  "key": "scb-004",
   "concept": "science.physics.principe_d_inertie",
   "label": "Principe d'inertie",
   "type": "mcq",
@@ -80,7 +64,7 @@
   "hint": "Pense à une sonde dans l'espace."
  },
  {
-  "key": "scb-006",
+  "key": "scb-005",
   "concept": "science.physics.masse_sur_la_lune",
   "label": "Masse sur la Lune",
   "type": "true_false",
@@ -91,7 +75,7 @@
   "hint": "Masse et poids, ce n'est pas pareil."
  },
  {
-  "key": "scb-007",
+  "key": "scb-006",
   "concept": "science.physics.pesanteur_lunaire",
   "label": "Pesanteur lunaire",
   "type": "mcq",
@@ -107,7 +91,7 @@
   "hint": "Les astronautes y bondissent."
  },
  {
-  "key": "scb-008",
+  "key": "scb-007",
   "concept": "science.physics.couleurs_primaires_de_la_lumiere",
   "label": "Couleurs primaires de la lumière",
   "type": "mcq",
@@ -123,7 +107,7 @@
   "hint": "Le code « RVB »."
  },
  {
-  "key": "scb-009",
+  "key": "scb-008",
   "concept": "science.physics.echo",
   "label": "Écho",
   "type": "mcq",
@@ -139,7 +123,7 @@
   "hint": "Il rebondit."
  },
  {
-  "key": "scb-010",
+  "key": "scb-009",
   "concept": "science.physics.loupe",
   "label": "Loupe",
   "type": "mcq",
@@ -155,7 +139,7 @@
   "hint": "Elle concentre la lumière."
  },
  {
-  "key": "scb-011",
+  "key": "scb-010",
   "concept": "science.physics.changements_d_etat",
   "label": "Changements d'état",
   "type": "pairs",
@@ -183,7 +167,7 @@
   "hint": "La glace qui fond…"
  },
  {
-  "key": "scb-012",
+  "key": "scb-011",
   "concept": "science.physics.cuillere_en_metal",
   "label": "Cuillère en métal",
   "type": "mcq",
@@ -199,7 +183,7 @@
   "hint": "Comme pour l'électricité."
  },
  {
-  "key": "scb-013",
+  "key": "scb-012",
   "concept": "science.physics.energie_non_renouvelable",
   "label": "Énergie non renouvelable",
   "type": "mcq",
@@ -215,7 +199,7 @@
   "hint": "Il faut des millions d'années pour en refaire."
  },
  {
-  "key": "scb-014",
+  "key": "scb-013",
   "concept": "science.physics.fission_nucleaire",
   "label": "Fission nucléaire",
   "type": "mcq",
@@ -231,7 +215,7 @@
   "hint": "On « casse » des noyaux."
  },
  {
-  "key": "scb-015",
+  "key": "scb-014",
   "concept": "science.physics.energie_du_soleil",
   "label": "Énergie du Soleil",
   "type": "mcq",
@@ -247,7 +231,7 @@
   "hint": "Des noyaux s'assemblent."
  },
  {
-  "key": "scb-016",
+  "key": "scb-015",
   "concept": "science.physics.relativite",
   "label": "Relativité",
   "type": "mcq",
@@ -263,7 +247,7 @@
   "hint": "E = mc²."
  },
  {
-  "key": "scb-017",
+  "key": "scb-016",
   "concept": "science.physics.rayons_x",
   "label": "Rayons X",
   "type": "mcq",
@@ -279,7 +263,7 @@
   "hint": "Un physicien allemand."
  },
  {
-  "key": "scb-018",
+  "key": "scb-017",
   "concept": "science.physics.deux_nobel_de_marie_curie",
   "label": "Deux Nobel de Marie Curie",
   "type": "true_false",
@@ -290,7 +274,7 @@
   "hint": "Physique, puis chimie."
  },
  {
-  "key": "scb-019",
+  "key": "scb-018",
   "concept": "science.physics.boussole",
   "label": "Boussole",
   "type": "mcq",
@@ -306,7 +290,7 @@
   "hint": "Un aimant géant."
  },
  {
-  "key": "scb-020",
+  "key": "scb-019",
   "concept": "science.physics.frottements",
   "label": "Frottements",
   "type": "mcq",
@@ -322,7 +306,7 @@
   "hint": "Air et route."
  },
  {
-  "key": "scb-021",
+  "key": "scb-020",
   "concept": "science.physics.point_d_appui",
   "label": "Point d'appui",
   "type": "mcq",
@@ -338,7 +322,7 @@
   "hint": "Le principe du levier."
  },
  {
-  "key": "scb-022",
+  "key": "scb-021",
   "concept": "science.physics.pendule_de_foucault",
   "label": "Pendule de Foucault",
   "type": "mcq",
@@ -354,7 +338,7 @@
   "hint": "Un pendule porte son nom."
  },
  {
-  "key": "scb-023",
+  "key": "scb-022",
   "concept": "science.physics.mur_du_son",
   "label": "Mur du son",
   "type": "mcq",
@@ -370,7 +354,7 @@
   "hint": "On entend un « bang »."
  },
  {
-  "key": "scb-024",
+  "key": "scb-023",
   "concept": "science.physics.ultrasons",
   "label": "Ultrasons",
   "type": "mcq",
@@ -386,7 +370,7 @@
   "hint": "Les chauves-souris les entendent."
  },
  {
-  "key": "scb-025",
+  "key": "scb-024",
   "concept": "science.physics.pression_et_altitude",
   "label": "Pression et altitude",
   "type": "mcq",
@@ -402,7 +386,7 @@
   "hint": "Pense au paquet de chips."
  },
  {
-  "key": "scb-026",
+  "key": "scb-025",
   "concept": "science.biology.vertebre",
   "label": "Vertébré",
   "type": "mcq",
@@ -418,7 +402,7 @@
   "hint": "Pense aux vertèbres."
  },
  {
-  "key": "scb-027",
+  "key": "scb-026",
   "concept": "science.biology.mutualisme",
   "label": "Mutualisme",
   "type": "mcq",
@@ -434,7 +418,7 @@
   "hint": "Chacun y gagne."
  },
  {
-  "key": "scb-028",
+  "key": "scb-027",
   "concept": "science.biology.parasite",
   "label": "Parasite",
   "type": "mcq",
@@ -450,7 +434,7 @@
   "hint": "Comme le pou."
  },
  {
-  "key": "scb-029",
+  "key": "scb-028",
   "concept": "science.biology.premier_maillon",
   "label": "Premier maillon",
   "type": "mcq",
@@ -466,7 +450,7 @@
   "hint": "Ils utilisent la lumière."
  },
  {
-  "key": "scb-030",
+  "key": "scb-029",
   "concept": "science.biology.gene_recessif",
   "label": "Gène récessif",
   "type": "mcq",
@@ -482,7 +466,7 @@
   "hint": "Il faut deux exemplaires."
  },
  {
-  "key": "scb-031",
+  "key": "scb-030",
   "concept": "science.biology.chromosomes_xy",
   "label": "Chromosomes XY",
   "type": "mcq",
@@ -498,7 +482,7 @@
   "hint": "Les femmes ont XX."
  },
  {
-  "key": "scb-032",
+  "key": "scb-031",
   "concept": "science.biology.brebis_dolly",
   "label": "Brebis Dolly",
   "type": "mcq",
@@ -514,7 +498,7 @@
   "hint": "Une copie génétique."
  },
  {
-  "key": "scb-033",
+  "key": "scb-032",
   "concept": "science.biology.paroi_vegetale",
   "label": "Paroi végétale",
   "type": "mcq",
@@ -530,7 +514,7 @@
   "hint": "Ce qui rend la plante rigide."
  },
  {
-  "key": "scb-034",
+  "key": "scb-033",
   "concept": "science.biology.enzyme",
   "label": "Enzyme",
   "type": "mcq",
@@ -546,7 +530,7 @@
   "hint": "Un accélérateur biologique."
  },
  {
-  "key": "scb-035",
+  "key": "scb-034",
   "concept": "science.biology.principe_du_vaccin",
   "label": "Principe du vaccin",
   "type": "mcq",
@@ -562,7 +546,7 @@
   "hint": "Un entraînement pour le corps."
  },
  {
-  "key": "scb-036",
+  "key": "scb-035",
   "concept": "science.biology.anticorps",
   "label": "Anticorps",
   "type": "mcq",
@@ -578,7 +562,7 @@
   "hint": "Les défenseurs du sang."
  },
  {
-  "key": "scb-037",
+  "key": "scb-036",
   "concept": "science.biology.ecosysteme",
   "label": "Écosystème",
   "type": "mcq",
@@ -594,7 +578,7 @@
   "hint": "Le milieu + les vivants."
  },
  {
-  "key": "scb-038",
+  "key": "scb-037",
   "concept": "science.biology.espece_invasive",
   "label": "Espèce invasive",
   "type": "mcq",
@@ -610,7 +594,7 @@
   "hint": "Il chasse devant les ruches."
  },
  {
-  "key": "scb-039",
+  "key": "scb-038",
   "concept": "science.biology.clacanthe",
   "label": "Cœlacanthe",
   "type": "mcq",
@@ -626,7 +610,7 @@
   "hint": "Un « fossile vivant »."
  },
  {
-  "key": "scb-040",
+  "key": "scb-039",
   "concept": "science.biology.fin_des_dinosaures",
   "label": "Fin des dinosaures",
   "type": "mcq",
@@ -642,7 +626,7 @@
   "hint": "Bien avant les humains."
  },
  {
-  "key": "scb-041",
+  "key": "scb-040",
   "concept": "science.biology.lucy",
   "label": "Lucy",
   "type": "mcq",
@@ -658,7 +642,7 @@
   "hint": "Elle marchait debout."
  },
  {
-  "key": "scb-042",
+  "key": "scb-041",
   "concept": "science.biology.apparition_d_homo_sapiens",
   "label": "Apparition d'Homo sapiens",
   "type": "mcq",
@@ -674,7 +658,7 @@
   "hint": "Quelques centaines de milliers d'années."
  },
  {
-  "key": "scb-043",
+  "key": "scb-042",
   "concept": "science.biology.structure_de_l_adn",
   "label": "Structure de l'ADN",
   "type": "mcq",
@@ -690,7 +674,7 @@
   "hint": "Grâce aux images de Rosalind Franklin."
  },
  {
-  "key": "scb-044",
+  "key": "scb-043",
   "concept": "science.biology.levure_du_pain",
   "label": "Levure du pain",
   "type": "mcq",
@@ -706,7 +690,7 @@
   "hint": "Un champignon microscopique."
  },
  {
-  "key": "scb-045",
+  "key": "scb-044",
   "concept": "science.biology.yaourt",
   "label": "Yaourt",
   "type": "mcq",
@@ -722,7 +706,7 @@
   "hint": "Des micro-organismes « bons »."
  },
  {
-  "key": "scb-046",
+  "key": "scb-045",
   "concept": "science.biology.mue_du_serpent",
   "label": "Mue du serpent",
   "type": "mcq",
@@ -738,7 +722,7 @@
   "hint": "On trouve parfois sa vieille peau."
  },
  {
-  "key": "scb-047",
+  "key": "scb-046",
   "concept": "science.biology.ovipare",
   "label": "Ovipare",
   "type": "mcq",
@@ -754,7 +738,7 @@
   "hint": "Ovum = œuf."
  },
  {
-  "key": "scb-048",
+  "key": "scb-047",
   "concept": "science.biology.regimes_alimentaires",
   "label": "Régimes alimentaires",
   "type": "pairs",
@@ -782,7 +766,7 @@
   "hint": "-vore = qui mange."
  },
  {
-  "key": "scb-049",
+  "key": "scb-048",
   "concept": "science.biology.dauphin_et_chauve_souris",
   "label": "Dauphin et chauve-souris",
   "type": "mcq",
@@ -798,7 +782,7 @@
   "hint": "Ils allaitent leurs petits."
  },
  {
-  "key": "scb-050",
+  "key": "scb-049",
   "concept": "science.biology.biodiversite",
   "label": "Biodiversité",
   "type": "mcq",
@@ -814,7 +798,7 @@
   "hint": "Bio = vie."
  },
  {
-  "key": "scb-051",
+  "key": "scb-050",
   "concept": "science.human_body.alveoles_pulmonaires",
   "label": "Alvéoles pulmonaires",
   "type": "mcq",
@@ -830,7 +814,7 @@
   "hint": "De minuscules sacs."
  },
  {
-  "key": "scb-052",
+  "key": "scb-051",
   "concept": "science.human_body.diaphragme",
   "label": "Diaphragme",
   "type": "mcq",
@@ -846,7 +830,7 @@
   "hint": "Responsable du hoquet."
  },
  {
-  "key": "scb-053",
+  "key": "scb-052",
   "concept": "science.human_body.nerf_optique",
   "label": "Nerf optique",
   "type": "mcq",
@@ -862,7 +846,7 @@
   "hint": "Optique = vision."
  },
  {
-  "key": "scb-054",
+  "key": "scb-053",
   "concept": "science.human_body.pupille",
   "label": "Pupille",
   "type": "mcq",
@@ -878,7 +862,7 @@
   "hint": "Le petit rond noir."
  },
  {
-  "key": "scb-055",
+  "key": "scb-054",
   "concept": "science.human_body.oreille_interne",
   "label": "Oreille interne",
   "type": "mcq",
@@ -894,7 +878,7 @@
   "hint": "La partie la plus profonde."
  },
  {
-  "key": "scb-056",
+  "key": "scb-055",
   "concept": "science.human_body.tympan",
   "label": "Tympan",
   "type": "mcq",
@@ -910,7 +894,7 @@
   "hint": "Comme la peau d'un tambour."
  },
  {
-  "key": "scb-057",
+  "key": "scb-056",
   "concept": "science.human_body.papilles_gustatives",
   "label": "Papilles gustatives",
   "type": "mcq",
@@ -926,7 +910,7 @@
   "hint": "Pour goûter."
  },
  {
-  "key": "scb-058",
+  "key": "scb-057",
   "concept": "science.human_body.salive_et_digestion",
   "label": "Salive et digestion",
   "type": "mcq",
@@ -942,7 +926,7 @@
   "hint": "Dès la première bouchée."
  },
  {
-  "key": "scb-059",
+  "key": "scb-058",
   "concept": "science.human_body.longueur_de_l_intestin_grele",
   "label": "Longueur de l'intestin grêle",
   "type": "mcq",
@@ -958,7 +942,7 @@
   "hint": "Plus long que tu ne le crois."
  },
  {
-  "key": "scb-060",
+  "key": "scb-059",
   "concept": "science.human_body.appendice",
   "label": "Appendice",
   "type": "mcq",
@@ -974,7 +958,7 @@
   "hint": "En bas à droite du ventre."
  },
  {
-  "key": "scb-061",
+  "key": "scb-060",
   "concept": "science.human_body.foie_plus_gros_organe_interne",
   "label": "Foie plus gros organe interne",
   "type": "true_false",
@@ -985,7 +969,7 @@
   "hint": "La peau est à l'extérieur."
  },
  {
-  "key": "scb-062",
+  "key": "scb-061",
   "concept": "science.human_body.tendon",
   "label": "Tendon",
   "type": "mcq",
@@ -1001,7 +985,7 @@
   "hint": "Celui d'Achille est célèbre."
  },
  {
-  "key": "scb-063",
+  "key": "scb-062",
   "concept": "science.human_body.vertebres_de_la_colonne",
   "label": "Vertèbres de la colonne",
   "type": "mcq",
@@ -1017,7 +1001,7 @@
   "hint": "Un peu plus de 30."
  },
  {
-  "key": "scb-064",
+  "key": "scb-063",
   "concept": "science.human_body.neurones",
   "label": "Neurones",
   "type": "mcq",
@@ -1033,7 +1017,7 @@
   "hint": "Environ 86 milliards dans le cerveau."
  },
  {
-  "key": "scb-065",
+  "key": "scb-064",
   "concept": "science.human_body.globules_blancs",
   "label": "Globules blancs",
   "type": "mcq",
@@ -1049,7 +1033,7 @@
   "hint": "Les soldats du corps."
  },
  {
-  "key": "scb-066",
+  "key": "scb-065",
   "concept": "science.human_body.receveur_universel",
   "label": "Receveur universel",
   "type": "mcq",
@@ -1065,7 +1049,7 @@
   "hint": "L'inverse du donneur universel."
  },
  {
-  "key": "scb-067",
+  "key": "scb-066",
   "concept": "science.human_body.tensiometre",
   "label": "Tensiomètre",
   "type": "mcq",
@@ -1081,7 +1065,7 @@
   "hint": "On note par exemple « 12/8 »."
  },
  {
-  "key": "scb-068",
+  "key": "scb-067",
   "concept": "science.human_body.adrenaline",
   "label": "Adrénaline",
   "type": "mcq",
@@ -1097,7 +1081,7 @@
   "hint": "Une « montée » de…"
  },
  {
-  "key": "scb-069",
+  "key": "scb-068",
   "concept": "science.human_body.thyroide",
   "label": "Thyroïde",
   "type": "mcq",
@@ -1113,7 +1097,7 @@
   "hint": "En forme de papillon."
  },
  {
-  "key": "scb-070",
+  "key": "scb-069",
   "concept": "science.human_body.melanine",
   "label": "Mélanine",
   "type": "mcq",
@@ -1129,7 +1113,7 @@
   "hint": "Responsable du bronzage."
  },
  {
-  "key": "scb-071",
+  "key": "scb-070",
   "concept": "science.human_body.sang_bleu",
   "label": "Sang bleu",
   "type": "true_false",
@@ -1140,7 +1124,7 @@
   "hint": "Une illusion d'optique."
  },
  {
-  "key": "scb-072",
+  "key": "scb-071",
   "concept": "science.human_body.circulation_sanguine",
   "label": "Circulation sanguine",
   "type": "mcq",
@@ -1156,7 +1140,7 @@
   "hint": "Un médecin du XVIIe siècle."
  },
  {
-  "key": "scb-073",
+  "key": "scb-072",
   "concept": "science.human_body.empreintes_des_jumeaux",
   "label": "Empreintes des jumeaux",
   "type": "true_false",
@@ -1167,7 +1151,7 @@
   "hint": "Elles ne dépendent pas que de l'ADN."
  },
  {
-  "key": "scb-074",
+  "key": "scb-073",
   "concept": "science.human_body.dents_de_lait",
   "label": "Dents de lait",
   "type": "mcq",
@@ -1183,7 +1167,7 @@
   "hint": "Moins que chez l'adulte."
  },
  {
-  "key": "scb-075",
+  "key": "scb-074",
   "concept": "science.human_body.email",
   "label": "Émail",
   "type": "mcq",
@@ -1199,7 +1183,7 @@
   "hint": "Il recouvre les dents."
  },
  {
-  "key": "scb-076",
+  "key": "scb-075",
   "concept": "science.human_body.reflexe_rotulien",
   "label": "Réflexe rotulien",
   "type": "mcq",
@@ -1215,7 +1199,7 @@
   "hint": "Sans réfléchir."
  },
  {
-  "key": "scb-077",
+  "key": "scb-076",
   "concept": "science.space.planete_rouge",
   "label": "Planète rouge",
   "type": "mcq",
@@ -1231,7 +1215,7 @@
   "hint": "Elle est rouillée."
  },
  {
-  "key": "scb-078",
+  "key": "scb-077",
   "concept": "science.space.grande_tache_rouge",
   "label": "Grande Tache rouge",
   "type": "mcq",
@@ -1247,7 +1231,7 @@
   "hint": "La plus grosse planète."
  },
  {
-  "key": "scb-079",
+  "key": "scb-078",
   "concept": "science.space.anneaux_de_saturne",
   "label": "Anneaux de Saturne",
   "type": "mcq",
@@ -1263,7 +1247,7 @@
   "hint": "La sixième planète."
  },
  {
-  "key": "scb-080",
+  "key": "scb-079",
   "concept": "science.space.uranus_couchee",
   "label": "Uranus couchée",
   "type": "mcq",
@@ -1279,7 +1263,7 @@
   "hint": "La septième planète."
  },
  {
-  "key": "scb-081",
+  "key": "scb-080",
   "concept": "science.space.decouverte_de_neptune",
   "label": "Découverte de Neptune",
   "type": "mcq",
@@ -1295,7 +1279,7 @@
   "hint": "Grâce à Le Verrier."
  },
  {
-  "key": "scb-082",
+  "key": "scb-081",
   "concept": "science.space.etoile_polaire",
   "label": "Étoile polaire",
   "type": "mcq",
@@ -1311,7 +1295,7 @@
   "hint": "Elle semble immobile."
  },
  {
-  "key": "scb-083",
+  "key": "scb-082",
   "concept": "science.space.grande_ourse",
   "label": "Grande Ourse",
   "type": "mcq",
@@ -1327,7 +1311,7 @@
   "hint": "On l'appelle aussi le Grand Chariot."
  },
  {
-  "key": "scb-084",
+  "key": "scb-083",
   "concept": "science.space.eclipse_de_soleil",
   "label": "Éclipse de Soleil",
   "type": "mcq",
@@ -1343,7 +1327,7 @@
   "hint": "Elle passe devant."
  },
  {
-  "key": "scb-085",
+  "key": "scb-084",
   "concept": "science.space.eclipse_de_lune",
   "label": "Éclipse de Lune",
   "type": "mcq",
@@ -1359,7 +1343,7 @@
   "hint": "Notre planète s'interpose."
  },
  {
-  "key": "scb-086",
+  "key": "scb-085",
   "concept": "science.space.altitude_de_l_iss",
   "label": "Altitude de l'ISS",
   "type": "mcq",
@@ -1375,7 +1359,7 @@
   "hint": "Un tour en 90 minutes."
  },
  {
-  "key": "scb-087",
+  "key": "scb-086",
   "concept": "science.space.thomas_pesquet",
   "label": "Thomas Pesquet",
   "type": "mcq",
@@ -1391,7 +1375,7 @@
   "hint": "Missions Proxima et Alpha."
  },
  {
-  "key": "scb-088",
+  "key": "scb-087",
   "concept": "science.space.premier_francais_dans_l_espace",
   "label": "Premier Français dans l'espace",
   "type": "mcq",
@@ -1407,7 +1391,7 @@
   "hint": "À bord d'une station soviétique."
  },
  {
-  "key": "scb-089",
+  "key": "scb-088",
   "concept": "science.space.premiere_femme_dans_l_espace",
   "label": "Première femme dans l'espace",
   "type": "mcq",
@@ -1423,7 +1407,7 @@
   "hint": "Une Soviétique."
  },
  {
-  "key": "scb-090",
+  "key": "scb-089",
   "concept": "science.space.base_de_kourou",
   "label": "Base de Kourou",
   "type": "mcq",
@@ -1439,7 +1423,7 @@
   "hint": "Un département d'Amérique du Sud."
  },
  {
-  "key": "scb-091",
+  "key": "scb-090",
   "concept": "science.space.composition_des_cometes",
   "label": "Composition des comètes",
   "type": "mcq",
@@ -1455,7 +1439,7 @@
   "hint": "Une « boule de neige sale »."
  },
  {
-  "key": "scb-092",
+  "key": "scb-091",
   "concept": "science.space.ceinture_d_asteroides",
   "label": "Ceinture d'astéroïdes",
   "type": "mcq",
@@ -1471,7 +1455,7 @@
   "hint": "Juste après la planète rouge."
  },
  {
-  "key": "scb-093",
+  "key": "scb-092",
   "concept": "science.space.age_de_l_univers",
   "label": "Âge de l'Univers",
   "type": "mcq",
@@ -1487,7 +1471,7 @@
   "hint": "Plus vieux que la Terre."
  },
  {
-  "key": "scb-094",
+  "key": "scb-093",
   "concept": "science.space.age_du_soleil",
   "label": "Âge du Soleil",
   "type": "mcq",
@@ -1503,7 +1487,7 @@
   "hint": "À peu près l'âge de la Terre."
  },
  {
-  "key": "scb-095",
+  "key": "scb-094",
   "concept": "science.space.apesanteur_dans_l_iss",
   "label": "Apesanteur dans l'ISS",
   "type": "mcq",
@@ -1519,7 +1503,7 @@
   "hint": "La gravité est encore là."
  },
  {
-  "key": "scb-096",
+  "key": "scb-095",
   "concept": "science.space.perseverance",
   "label": "Perseverance",
   "type": "mcq",
@@ -1535,7 +1519,7 @@
   "hint": "Il est accompagné d'un hélicoptère."
  },
  {
-  "key": "scb-097",
+  "key": "scb-096",
   "concept": "science.space.face_visible_de_la_lune",
   "label": "Face visible de la Lune",
   "type": "true_false",

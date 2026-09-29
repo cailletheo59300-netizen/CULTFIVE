@@ -1,22 +1,6 @@
 [
  {
   "key": "hib-001",
-  "concept": "history.antiquity.guerre_des_gaules",
-  "label": "Guerre des Gaules",
-  "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Qui a écrit « La Guerre des Gaules » ?",
-  "options": [
-   "Jules César*",
-   "Cicéron",
-   "Vercingétorix",
-   "Virgile"
-  ],
-  "explanation": "César raconte lui-même sa conquête de la Gaule (58-51 av. J.-C.), à la troisième personne.",
-  "hint": "Le vainqueur raconte."
- },
- {
-  "key": "hib-002",
   "concept": "history.antiquity.fleuve_de_l_egypte",
   "label": "Fleuve de l'Égypte",
   "type": "mcq",
@@ -32,7 +16,7 @@
   "hint": "Il traverse Le Caire."
  },
  {
-  "key": "hib-003",
+  "key": "hib-002",
   "concept": "history.antiquity.mesopotamie",
   "label": "Mésopotamie",
   "type": "mcq",
@@ -48,7 +32,7 @@
   "hint": "L'actuel Irak."
  },
  {
-  "key": "hib-004",
+  "key": "hib-003",
   "concept": "history.antiquity.code_d_hammurabi",
   "label": "Code d'Hammurabi",
   "type": "mcq",
@@ -64,7 +48,7 @@
   "hint": "La stèle est au Louvre."
  },
  {
-  "key": "hib-005",
+  "key": "hib-004",
   "concept": "history.antiquity.platon",
   "label": "Platon",
   "type": "mcq",
@@ -80,7 +64,7 @@
   "hint": "Il fonde l'Académie."
  },
  {
-  "key": "hib-006",
+  "key": "hib-005",
   "concept": "history.antiquity.siecle_de_pericles",
   "label": "Siècle de Périclès",
   "type": "mcq",
@@ -96,7 +80,7 @@
   "hint": "On parle du « siècle de… »."
  },
  {
-  "key": "hib-007",
+  "key": "hib-006",
   "concept": "history.antiquity.pythie_de_delphes",
   "label": "Pythie de Delphes",
   "type": "mcq",
@@ -112,7 +96,7 @@
   "hint": "Une prêtresse d'Apollon."
  },
  {
-  "key": "hib-008",
+  "key": "hib-007",
   "concept": "history.antiquity.amphitheatre_flavien",
   "label": "Amphithéâtre flavien",
   "type": "mcq",
@@ -128,7 +112,7 @@
   "hint": "Du nom d'une dynastie."
  },
  {
-  "key": "hib-009",
+  "key": "hib-008",
   "concept": "history.antiquity.langue_des_romains",
   "label": "Langue des Romains",
   "type": "mcq",
@@ -144,7 +128,7 @@
   "hint": "L'ancêtre du français."
  },
  {
-  "key": "hib-010",
+  "key": "hib-009",
   "concept": "history.antiquity.bataille_de_marathon",
   "label": "Bataille de Marathon",
   "type": "mcq",
@@ -160,7 +144,7 @@
   "hint": "Une course de 42 km."
  },
  {
-  "key": "hib-011",
+  "key": "hib-010",
   "concept": "history.antiquity.bataille_de_salamine",
   "label": "Bataille de Salamine",
   "type": "mcq",
@@ -176,7 +160,7 @@
   "hint": "Une île près d'Athènes."
  },
  {
-  "key": "hib-012",
+  "key": "hib-011",
   "concept": "history.antiquity.xerxes",
   "label": "Xerxès",
   "type": "mcq",
@@ -192,7 +176,7 @@
   "hint": "Le fils de Darius."
  },
  {
-  "key": "hib-013",
+  "key": "hib-012",
   "concept": "history.antiquity.toutankhamon",
   "label": "Toutânkhamon",
   "type": "mcq",
@@ -208,7 +192,7 @@
   "hint": "Sa tombe est célèbre."
  },
  {
-  "key": "hib-014",
+  "key": "hib-013",
   "concept": "history.antiquity.bataille_de_qadesh",
   "label": "Bataille de Qadesh",
   "type": "mcq",
@@ -224,7 +208,7 @@
   "hint": "Un empire d'Anatolie."
  },
  {
-  "key": "hib-015",
+  "key": "hib-014",
   "concept": "history.antiquity.nefertiti",
   "label": "Néfertiti",
   "type": "mcq",
@@ -240,7 +224,7 @@
   "hint": "Un buste célèbre."
  },
  {
-  "key": "hib-016",
+  "key": "hib-015",
   "concept": "history.antiquity.momification",
   "label": "Momification",
   "type": "mcq",
@@ -256,7 +240,7 @@
   "hint": "Une croyance religieuse."
  },
  {
-  "key": "hib-017",
+  "key": "hib-016",
   "concept": "history.antiquity.premier_triumvirat",
   "label": "Premier triumvirat",
   "type": "mcq",
@@ -272,7 +256,7 @@
   "hint": "Le futur rival de César."
  },
  {
-  "key": "hib-018",
+  "key": "hib-017",
   "concept": "history.antiquity.rubicon",
   "label": "Rubicon",
   "type": "mcq",
@@ -288,7 +272,7 @@
   "hint": "L'expression est restée."
  },
  {
-  "key": "hib-019",
+  "key": "hib-018",
   "concept": "history.antiquity.neron_et_l_incendie",
   "label": "Néron et l'incendie",
   "type": "true_false",
@@ -299,7 +283,7 @@
   "hint": "Un empereur à la réputation terrible."
  },
  {
-  "key": "hib-020",
+  "key": "hib-019",
   "concept": "history.antiquity.trajan",
   "label": "Trajan",
   "type": "mcq",
@@ -315,23 +299,7 @@
   "hint": "Une colonne à Rome porte son nom."
  },
  {
-  "key": "hib-021",
-  "concept": "history.antiquity.marc_aurele",
-  "label": "Marc Aurèle",
-  "type": "mcq",
-  "difficulty": 55,
-  "prompt": "Quel empereur romain, philosophe stoïcien, a écrit les « Pensées pour moi-même » ?",
-  "options": [
-   "Marc Aurèle*",
-   "Hadrien",
-   "Caligula",
-   "Tibère"
-  ],
-  "explanation": "Il les écrit en grec, souvent en campagne militaire. On le voit au début du film « Gladiator ».",
-  "hint": "Un empereur philosophe."
- },
- {
-  "key": "hib-022",
+  "key": "hib-020",
   "concept": "history.antiquity.via_appia",
   "label": "Via Appia",
   "type": "mcq",
@@ -347,7 +315,7 @@
   "hint": "La « reine des routes »."
  },
  {
-  "key": "hib-023",
+  "key": "hib-021",
   "concept": "history.antiquity.aqueduc_romain",
   "label": "Aqueduc romain",
   "type": "mcq",
@@ -363,7 +331,7 @@
   "hint": "Pense à « aqua »."
  },
  {
-  "key": "hib-024",
+  "key": "hib-022",
   "concept": "history.antiquity.lutece",
   "label": "Lutèce",
   "type": "mcq",
@@ -379,7 +347,7 @@
   "hint": "Chez les Parisii."
  },
  {
-  "key": "hib-025",
+  "key": "hib-023",
   "concept": "history.antiquity.villes_gallo_romaines",
   "label": "Villes gallo-romaines",
   "type": "pairs",
@@ -407,7 +375,7 @@
   "hint": "Massalia était grecque."
  },
  {
-  "key": "hib-026",
+  "key": "hib-024",
   "concept": "history.antiquity.druides",
   "label": "Druides",
   "type": "mcq",
@@ -423,7 +391,7 @@
   "hint": "Pense à Panoramix."
  },
  {
-  "key": "hib-027",
+  "key": "hib-025",
   "concept": "history.antiquity.gergovie",
   "label": "Gergovie",
   "type": "mcq",
@@ -439,7 +407,7 @@
   "hint": "Près de Clermont-Ferrand."
  },
  {
-  "key": "hib-028",
+  "key": "hib-026",
   "concept": "history.antiquity.bataille_de_cannes",
   "label": "Bataille de Cannes",
   "type": "mcq",
@@ -455,7 +423,7 @@
   "hint": "Même nom qu'une ville du festival."
  },
  {
-  "key": "hib-029",
+  "key": "hib-027",
   "concept": "history.antiquity.ecclesia",
   "label": "Ecclésia",
   "type": "mcq",
@@ -471,7 +439,7 @@
   "hint": "Le mot a donné « église »."
  },
  {
-  "key": "hib-030",
+  "key": "hib-028",
   "concept": "history.antiquity.ostracisme",
   "label": "Ostracisme",
   "type": "mcq",
@@ -487,7 +455,7 @@
   "hint": "Un vote sur des tessons."
  },
  {
-  "key": "hib-031",
+  "key": "hib-029",
   "concept": "history.antiquity.herodote",
   "label": "Hérodote",
   "type": "mcq",
@@ -503,7 +471,7 @@
   "hint": "Il enquête sur les guerres médiques."
  },
  {
-  "key": "hib-032",
+  "key": "hib-030",
   "concept": "history.antiquity.hippocrate",
   "label": "Hippocrate",
   "type": "mcq",
@@ -519,7 +487,7 @@
   "hint": "Les médecins prêtent son serment."
  },
  {
-  "key": "hib-033",
+  "key": "hib-031",
   "concept": "history.antiquity.pythagore",
   "label": "Pythagore",
   "type": "mcq",
@@ -535,7 +503,7 @@
   "hint": "a² + b² = c²."
  },
  {
-  "key": "hib-034",
+  "key": "hib-032",
   "concept": "history.antiquity.grandes_dates_de_l_antiquite",
   "label": "Grandes dates de l'Antiquité",
   "type": "ordering",
@@ -551,7 +519,7 @@
   "hint": "Les pyramides sont très anciennes."
  },
  {
-  "key": "hib-035",
+  "key": "hib-033",
   "concept": "history.antiquity.alphabet_phenicien",
   "label": "Alphabet phénicien",
   "type": "mcq",
@@ -567,7 +535,7 @@
   "hint": "Des marins commerçants."
  },
  {
-  "key": "hib-036",
+  "key": "hib-034",
   "concept": "history.antiquity.fin_de_l_empire_d_occident",
   "label": "Fin de l'Empire d'Occident",
   "type": "mcq",
@@ -583,7 +551,7 @@
   "hint": "Fin du Ve siècle."
  },
  {
-  "key": "hib-037",
+  "key": "hib-035",
   "concept": "history.antiquity.nouvelle_capitale_de_constantin",
   "label": "Nouvelle capitale de Constantin",
   "type": "mcq",
@@ -599,7 +567,7 @@
   "hint": "Aujourd'hui Istanbul."
  },
  {
-  "key": "hib-038",
+  "key": "hib-036",
   "concept": "history.middle_ages.bataille_de_poitiers_732",
   "label": "Bataille de Poitiers 732",
   "type": "mcq",
@@ -615,7 +583,7 @@
   "hint": "Le grand-père de Charlemagne."
  },
  {
-  "key": "hib-039",
+  "key": "hib-037",
   "concept": "history.middle_ages.hugues_capet",
   "label": "Hugues Capet",
   "type": "mcq",
@@ -631,7 +599,7 @@
   "hint": "Son nom est dans celui de la dynastie."
  },
  {
-  "key": "hib-040",
+  "key": "hib-038",
   "concept": "history.middle_ages.conquete_de_l_angleterre",
   "label": "Conquête de l'Angleterre",
   "type": "mcq",
@@ -647,7 +615,7 @@
   "hint": "Son surnom dit tout."
  },
  {
-  "key": "hib-041",
+  "key": "hib-039",
   "concept": "history.middle_ages.tapisserie_de_bayeux",
   "label": "Tapisserie de Bayeux",
   "type": "mcq",
@@ -663,7 +631,7 @@
   "hint": "Un événement de 1066."
  },
  {
-  "key": "hib-042",
+  "key": "hib-040",
   "concept": "history.middle_ages.appel_de_clermont",
   "label": "Appel de Clermont",
   "type": "mcq",
@@ -679,7 +647,7 @@
   "hint": "Un pape de la fin du XIe siècle."
  },
  {
-  "key": "hib-043",
+  "key": "hib-041",
   "concept": "history.middle_ages.saladin",
   "label": "Saladin",
   "type": "mcq",
@@ -695,7 +663,7 @@
   "hint": "Le rival de Richard Cœur de Lion."
  },
  {
-  "key": "hib-044",
+  "key": "hib-042",
   "concept": "history.middle_ages.mort_de_saint_louis",
   "label": "Mort de Saint Louis",
   "type": "mcq",
@@ -711,7 +679,7 @@
   "hint": "En Afrique du Nord."
  },
  {
-  "key": "hib-045",
+  "key": "hib-043",
   "concept": "history.middle_ages.alienor_d_aquitaine",
   "label": "Aliénor d'Aquitaine",
   "type": "mcq",
@@ -727,7 +695,7 @@
   "hint": "Elle a épousé deux rois."
  },
  {
-  "key": "hib-046",
+  "key": "hib-044",
   "concept": "history.middle_ages.richard_cur_de_lion",
   "label": "Richard Cœur de Lion",
   "type": "mcq",
@@ -743,7 +711,7 @@
   "hint": "Il a combattu Saladin."
  },
  {
-  "key": "hib-047",
+  "key": "hib-045",
   "concept": "history.middle_ages.devoirs_du_vassal",
   "label": "Devoirs du vassal",
   "type": "mcq",
@@ -759,7 +727,7 @@
   "hint": "En échange d'un fief."
  },
  {
-  "key": "hib-048",
+  "key": "hib-046",
   "concept": "history.middle_ages.les_trois_ordres",
   "label": "Les trois ordres",
   "type": "pairs",
@@ -783,7 +751,7 @@
   "hint": "Prier, combattre, travailler."
  },
  {
-  "key": "hib-049",
+  "key": "hib-047",
   "concept": "history.middle_ages.serf",
   "label": "Serf",
   "type": "mcq",
@@ -799,7 +767,7 @@
   "hint": "Il ne peut pas partir."
  },
  {
-  "key": "hib-050",
+  "key": "hib-048",
   "concept": "history.middle_ages.moines_copistes",
   "label": "Moines copistes",
   "type": "mcq",
@@ -815,7 +783,7 @@
   "hint": "Dans les monastères."
  },
  {
-  "key": "hib-051",
+  "key": "hib-049",
   "concept": "history.middle_ages.fin_des_templiers",
   "label": "Fin des Templiers",
   "type": "mcq",
@@ -831,7 +799,7 @@
   "hint": "Le roi « de fer »."
  },
  {
-  "key": "hib-052",
+  "key": "hib-050",
   "concept": "history.middle_ages.siege_d_orleans",
   "label": "Siège d'Orléans",
   "type": "mcq",
@@ -847,7 +815,7 @@
   "hint": "Son surnom vient de là."
  },
  {
-  "key": "hib-053",
+  "key": "hib-051",
   "concept": "history.middle_ages.sacre_de_charles_vii",
   "label": "Sacre de Charles VII",
   "type": "mcq",
@@ -863,7 +831,7 @@
   "hint": "Le « gentil dauphin »."
  },
  {
-  "key": "hib-054",
+  "key": "hib-052",
   "concept": "history.middle_ages.transmission_de_la_peste",
   "label": "Transmission de la peste",
   "type": "mcq",
@@ -879,7 +847,7 @@
   "hint": "Un petit insecte sauteur."
  },
  {
-  "key": "hib-055",
+  "key": "hib-053",
   "concept": "history.middle_ages.normandie",
   "label": "Normandie",
   "type": "mcq",
@@ -895,7 +863,7 @@
   "hint": "Les hommes du Nord."
  },
  {
-  "key": "hib-056",
+  "key": "hib-054",
   "concept": "history.middle_ages.traite_de_saint_clair_sur_epte",
   "label": "Traité de Saint-Clair-sur-Epte",
   "type": "mcq",
@@ -911,7 +879,7 @@
   "hint": "Le premier duc de Normandie."
  },
  {
-  "key": "hib-057",
+  "key": "hib-055",
   "concept": "history.middle_ages.gengis_khan",
   "label": "Gengis Khan",
   "type": "mcq",
@@ -927,7 +895,7 @@
   "hint": "Des cavaliers des steppes."
  },
  {
-  "key": "hib-058",
+  "key": "hib-056",
   "concept": "history.middle_ages.marco_polo_en_chine",
   "label": "Marco Polo en Chine",
   "type": "mcq",
@@ -943,7 +911,7 @@
   "hint": "La cour de Kubilaï Khan."
  },
  {
-  "key": "hib-059",
+  "key": "hib-057",
   "concept": "history.middle_ages.prise_de_constantinople",
   "label": "Prise de Constantinople",
   "type": "mcq",
@@ -959,7 +927,7 @@
   "hint": "Le sultan Mehmed II."
  },
  {
-  "key": "hib-060",
+  "key": "hib-058",
   "concept": "history.middle_ages.fin_de_la_reconquista",
   "label": "Fin de la Reconquista",
   "type": "mcq",
@@ -975,7 +943,7 @@
   "hint": "La ville de l'Alhambra."
  },
  {
-  "key": "hib-061",
+  "key": "hib-059",
   "concept": "history.middle_ages.hegire",
   "label": "Hégire",
   "type": "mcq",
@@ -991,7 +959,7 @@
   "hint": "L'an 1 du calendrier musulman."
  },
  {
-  "key": "hib-062",
+  "key": "hib-060",
   "concept": "history.middle_ages.dynastie_de_pepin_le_bref",
   "label": "Dynastie de Pépin le Bref",
   "type": "mcq",
@@ -1007,7 +975,7 @@
   "hint": "Le nom de son fils."
  },
  {
-  "key": "hib-063",
+  "key": "hib-061",
   "concept": "history.middle_ages.dynastie_de_clovis",
   "label": "Dynastie de Clovis",
   "type": "mcq",
@@ -1023,7 +991,7 @@
   "hint": "Du nom de Mérovée."
  },
  {
-  "key": "hib-064",
+  "key": "hib-062",
   "concept": "history.middle_ages.donjon",
   "label": "Donjon",
   "type": "mcq",
@@ -1039,7 +1007,7 @@
   "hint": "Le dernier refuge."
  },
  {
-  "key": "hib-065",
+  "key": "hib-063",
   "concept": "history.middle_ages.adoubement",
   "label": "Adoubement",
   "type": "mcq",
@@ -1055,7 +1023,7 @@
   "hint": "Il reçoit ses armes."
  },
  {
-  "key": "hib-066",
+  "key": "hib-064",
   "concept": "history.middle_ages.papes_d_avignon",
   "label": "Papes d'Avignon",
   "type": "mcq",
@@ -1071,7 +1039,7 @@
   "hint": "Son pont est célèbre."
  },
  {
-  "key": "hib-067",
+  "key": "hib-065",
   "concept": "history.middle_ages.reperes_du_moyen_age",
   "label": "Repères du Moyen Âge",
   "type": "ordering",
@@ -1079,15 +1047,15 @@
   "prompt": "Classe ces événements du plus ancien au plus récent.",
   "items": [
    "Baptême de Clovis",
-   "Couronnement de Charlemagne",
-   "Bataille d'Hastings",
+   "Traité de Verdun",
+   "Grande Charte (Magna Carta)",
    "Prise de Constantinople"
   ],
-  "explanation": "Clovis vers 500, Charlemagne en 800, Hastings en 1066, Constantinople en 1453.",
+  "explanation": "Clovis vers 500, traité de Verdun en 843, Magna Carta en 1215, prise de Constantinople en 1453.",
   "hint": "Clovis est le plus ancien."
  },
  {
-  "key": "hib-068",
+  "key": "hib-066",
   "concept": "history.middle_ages.schisme_de_1054",
   "label": "Schisme de 1054",
   "type": "mcq",
@@ -1103,7 +1071,7 @@
   "hint": "Une rupture religieuse."
  },
  {
-  "key": "hib-069",
+  "key": "hib-067",
   "concept": "history.middle_ages.robert_de_sorbon",
   "label": "Robert de Sorbon",
   "type": "mcq",

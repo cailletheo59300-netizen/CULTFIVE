@@ -1,0 +1,1140 @@
+[
+ {
+  "key": "arb-001",
+  "concept": "arts.architecture.commande_de_l_arc_de_triomphe",
+  "label": "Commande de l'Arc de triomphe",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a commandé l'Arc de triomphe de l'Étoile, en 1806 ?",
+  "options": [
+   "Napoléon Ier*",
+   "Louis XIV",
+   "Napoléon III",
+   "Louis-Philippe"
+  ],
+  "explanation": "Pour célébrer la victoire d'Austerlitz. Il n'est achevé qu'en 1836, après la chute de l'Empire.",
+  "hint": "Après Austerlitz."
+ },
+ {
+  "key": "arb-002",
+  "concept": "arts.architecture.escalier_de_chambord",
+  "label": "Escalier de Chambord",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle est la particularité du grand escalier du château de Chambord ?",
+  "options": [
+   "Deux escaliers s'y croisent sans jamais se rencontrer*",
+   "Il est en verre",
+   "Il tourne à gauche puis à droite",
+   "Il n'a pas de marches"
+  ],
+  "explanation": "L'escalier à double révolution est souvent attribué à l'influence de Léonard de Vinci, invité de François Ier.",
+  "hint": "Une double hélice."
+ },
+ {
+  "key": "arb-003",
+  "concept": "arts.architecture.viaduc_de_millau",
+  "label": "Viaduc de Millau",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel pont français est le plus haut du monde, avec un sommet à 343 m ?",
+  "options": [
+   "Le viaduc de Millau*",
+   "Le pont de Normandie",
+   "Le Golden Gate",
+   "Le pont de l'Øresund"
+  ],
+  "explanation": "Inauguré en 2004 dans l'Aveyron, conçu par l'architecte Norman Foster et l'ingénieur Michel Virlogeux.",
+  "hint": "Dans l'Aveyron."
+ },
+ {
+  "key": "arb-004",
+  "concept": "arts.architecture.big_ben",
+  "label": "Big Ben",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Big Ben » est le nom de la grosse cloche, et non de la tour.",
+  "answer": true,
+  "explanation": "La tour s'appelle officiellement Elizabeth Tower depuis 2012 ; Big Ben est la cloche de plus de 13 tonnes.",
+  "hint": "On l'entend sonner."
+ },
+ {
+  "key": "arb-005",
+  "concept": "arts.architecture.empire_state_building",
+  "label": "Empire State Building",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle ville se trouve l'Empire State Building, achevé en 1931 ?",
+  "options": [
+   "New York*",
+   "Chicago",
+   "Los Angeles",
+   "Boston"
+  ],
+  "explanation": "Construit en à peine plus d'un an, il reste le plus haut immeuble du monde jusqu'en 1970.",
+  "hint": "King Kong l'escalade."
+ },
+ {
+  "key": "arb-006",
+  "concept": "arts.architecture.saint_basile",
+  "label": "Saint-Basile",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle cathédrale aux coupoles en bulbe multicolores se dresse sur la place Rouge ?",
+  "options": [
+   "Saint-Basile-le-Bienheureux*",
+   "Sainte-Sophie",
+   "Notre-Dame de Kazan",
+   "Saint-Isaac"
+  ],
+  "explanation": "Construite au XVIe siècle sous Ivan le Terrible, à Moscou.",
+  "hint": "À Moscou."
+ },
+ {
+  "key": "arb-007",
+  "concept": "arts.architecture.ordre_corinthien",
+  "label": "Ordre corinthien",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel ordre grec a des chapiteaux ornés de feuilles d'acanthe ?",
+  "options": [
+   "Le corinthien*",
+   "Le dorique",
+   "L'ionique",
+   "Le toscan"
+  ],
+  "explanation": "Le dorique est sobre, l'ionique a des volutes en spirale, le corinthien des feuillages sculptés.",
+  "hint": "Le plus décoré."
+ },
+ {
+  "key": "arb-008",
+  "concept": "arts.architecture.rosace",
+  "label": "Rosace",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on le grand vitrail circulaire d'une cathédrale ?",
+  "options": [
+   "Une rosace*",
+   "Un vitrail-roue",
+   "Une verrière",
+   "Un oculus"
+  ],
+  "explanation": "Notre-Dame de Paris en compte trois, dont la rosace sud de près de 13 m de diamètre.",
+  "hint": "Comme une fleur."
+ },
+ {
+  "key": "arb-009",
+  "concept": "arts.architecture.cle_de_voute",
+  "label": "Clé de voûte",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment appelle-t-on la pierre centrale qui bloque un arc ou une voûte ?",
+  "options": [
+   "La clé de voûte*",
+   "Le pilier",
+   "Le linteau",
+   "La corniche"
+  ],
+  "explanation": "Posée en dernier au sommet, elle maintient toutes les autres. Au figuré : l'élément essentiel.",
+  "hint": "Au figuré, l'élément essentiel."
+ },
+ {
+  "key": "arb-010",
+  "concept": "arts.architecture.mansarde",
+  "label": "Mansarde",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Le mot « mansarde » vient du nom de quel architecte ?",
+  "options": [
+   "François Mansart*",
+   "Jacques-Germain Soufflot",
+   "Charles Garnier",
+   "Claude Perrault"
+  ],
+  "explanation": "Il a popularisé au XVIIe siècle le toit brisé, dont les combles aménagés sont devenus des mansardes.",
+  "hint": "Presque le même mot."
+ },
+ {
+  "key": "arb-011",
+  "concept": "arts.architecture.vauban",
+  "label": "Vauban",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pour quelles constructions Vauban est-il célèbre ?",
+  "options": [
+   "Des fortifications*",
+   "Des cathédrales",
+   "Des ponts suspendus",
+   "Des jardins"
+  ],
+  "explanation": "Ingénieur de Louis XIV, il a fortifié plus de 150 places fortes ; douze sites sont inscrits à l'UNESCO.",
+  "hint": "Des citadelles en étoile."
+ },
+ {
+  "key": "arb-012",
+  "concept": "arts.architecture.metro_guimard",
+  "label": "Métro Guimard",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel architecte Art nouveau a dessiné les célèbres entrées du métro parisien ?",
+  "options": [
+   "Hector Guimard*",
+   "Le Corbusier",
+   "Gustave Eiffel",
+   "Auguste Perret"
+  ],
+  "explanation": "Des volutes de fonte vert-de-gris inspirées des plantes, vers 1900.",
+  "hint": "Des formes végétales, vers 1900."
+ },
+ {
+  "key": "arb-013",
+  "concept": "arts.architecture.brutalisme",
+  "label": "Brutalisme",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel style d'architecture du XXe siècle met en valeur le béton brut ?",
+  "options": [
+   "Le brutalisme*",
+   "Le baroque",
+   "L'Art déco",
+   "Le néoclassicisme"
+  ],
+  "explanation": "Du français « béton brut ». La Cité radieuse de Le Corbusier à Marseille en est un exemple fondateur.",
+  "hint": "Pense au « béton brut »."
+ },
+ {
+  "key": "arb-014",
+  "concept": "arts.architecture.premier_gratte_ciel",
+  "label": "Premier gratte-ciel",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quelle ville est né le gratte-ciel, à la fin du XIXe siècle ?",
+  "options": [
+   "Chicago*",
+   "New York",
+   "Londres",
+   "Paris"
+  ],
+  "explanation": "Après le grand incendie de 1871, Chicago se reconstruit en hauteur grâce aux structures en acier et à l'ascenseur.",
+  "hint": "Après un grand incendie."
+ },
+ {
+  "key": "arb-015",
+  "concept": "arts.architecture.zaha_hadid",
+  "label": "Zaha Hadid",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle architecte est la première femme à recevoir le prix Pritzker, en 2004 ?",
+  "options": [
+   "Zaha Hadid*",
+   "Kazuyo Sejima",
+   "Odile Decq",
+   "Jeanne Gang"
+  ],
+  "explanation": "Irako-britannique, elle est connue pour ses courbes audacieuses, comme le centre culturel Heydar Aliyev à Bakou.",
+  "hint": "Des bâtiments tout en courbes."
+ },
+ {
+  "key": "arb-016",
+  "concept": "arts.architecture.prix_pritzker",
+  "label": "Prix Pritzker",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel prix est souvent présenté comme le « Nobel de l'architecture » ?",
+  "options": [
+   "Le prix Pritzker*",
+   "Le prix Goncourt",
+   "La médaille Fields",
+   "Le prix Turner"
+  ],
+  "explanation": "Créé en 1979. Parmi les lauréats français : Christian de Portzamparc, Jean Nouvel, Lacaton et Vassal.",
+  "hint": "Créé en 1979."
+ },
+ {
+  "key": "arb-017",
+  "concept": "arts.architecture.louvre_abu_dhabi",
+  "label": "Louvre Abu Dhabi",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel architecte français a conçu le Louvre Abu Dhabi, avec sa grande coupole ajourée ?",
+  "options": [
+   "Jean Nouvel*",
+   "Ieoh Ming Pei",
+   "Renzo Piano",
+   "Christian de Portzamparc"
+  ],
+  "explanation": "Inauguré en 2017, sa coupole crée une « pluie de lumière » inspirée des palmeraies.",
+  "hint": "Aussi l'auteur de l'Institut du monde arabe."
+ },
+ {
+  "key": "arb-018",
+  "concept": "arts.architecture.colombages",
+  "label": "Colombages",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on les maisons à structure de bois apparente, fréquentes en Alsace et en Normandie ?",
+  "options": [
+   "Des maisons à colombages*",
+   "Des maisons à pignons",
+   "Des chaumières",
+   "Des maisons de maître"
+  ],
+  "explanation": "Les pans de bois forment l'ossature ; l'espace entre eux est rempli de torchis ou de briques.",
+  "hint": "Du bois apparent."
+ },
+ {
+  "key": "arb-019",
+  "concept": "arts.architecture.minaret",
+  "label": "Minaret",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment appelle-t-on la tour d'une mosquée ?",
+  "options": [
+   "Un minaret*",
+   "Un clocher",
+   "Un beffroi",
+   "Un campanile"
+  ],
+  "explanation": "Le muezzin y appelait traditionnellement à la prière.",
+  "hint": "On y appelait à la prière."
+ },
+ {
+  "key": "arb-020",
+  "concept": "arts.architecture.neuschwanstein",
+  "label": "Neuschwanstein",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel château bavarois aurait inspiré le château de « La Belle au bois dormant » de Disney ?",
+  "options": [
+   "Neuschwanstein*",
+   "Chambord",
+   "Hohenzollern",
+   "Schönbrunn"
+  ],
+  "explanation": "Construit pour le roi Louis II de Bavière à partir de 1869, dans un style médiéval rêvé.",
+  "hint": "Le château du roi Louis II."
+ },
+ {
+  "key": "arb-021",
+  "concept": "arts.mythology.ares",
+  "label": "Arès",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le dieu grec de la guerre ?",
+  "options": [
+   "Arès*",
+   "Apollon",
+   "Hermès",
+   "Hadès"
+  ],
+  "explanation": "Son équivalent romain est Mars, qui a donné son nom à la planète rouge et au mois de mars.",
+  "hint": "Mars chez les Romains."
+ },
+ {
+  "key": "arb-022",
+  "concept": "arts.mythology.hephaistos",
+  "label": "Héphaïstos",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel dieu grec est le forgeron des dieux ?",
+  "options": [
+   "Héphaïstos*",
+   "Arès",
+   "Poséidon",
+   "Dionysos"
+  ],
+  "explanation": "Il forge la foudre de Zeus et les armes d'Achille. C'est Vulcain chez les Romains.",
+  "hint": "Vulcain chez les Romains."
+ },
+ {
+  "key": "arb-023",
+  "concept": "arts.mythology.demeter",
+  "label": "Déméter",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle déesse grecque veille sur les moissons et l'agriculture ?",
+  "options": [
+   "Déméter*",
+   "Héra",
+   "Athéna",
+   "Artémis"
+  ],
+  "explanation": "Cérès chez les Romains, d'où le mot « céréale ».",
+  "hint": "Elle a donné le mot « céréale »."
+ },
+ {
+  "key": "arb-024",
+  "concept": "arts.mythology.persephone_et_les_saisons",
+  "label": "Perséphone et les saisons",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Selon le mythe grec, pourquoi y a-t-il un hiver ?",
+  "options": [
+   "Perséphone passe une partie de l'année aux Enfers*",
+   "Zeus éteint le Soleil",
+   "Poséidon gèle la mer",
+   "Apollon part en voyage"
+  ],
+  "explanation": "Enlevée par Hadès, elle doit y retourner chaque année ; sa mère Déméter, en deuil, laisse alors la terre stérile.",
+  "hint": "Sa mère est Déméter."
+ },
+ {
+  "key": "arb-025",
+  "concept": "arts.mythology.orphee",
+  "label": "Orphée",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui descend aux Enfers pour ramener son épouse Eurydice ?",
+  "options": [
+   "Orphée*",
+   "Ulysse",
+   "Thésée",
+   "Persée"
+  ],
+  "explanation": "Sa musique charme Hadès, à condition de ne pas se retourner… ce qu'il fait, et il la perd pour toujours.",
+  "hint": "Un musicien."
+ },
+ {
+  "key": "arb-026",
+  "concept": "arts.mythology.roi_midas",
+  "label": "Roi Midas",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel roi transformait en or tout ce qu'il touchait ?",
+  "options": [
+   "Midas*",
+   "Crésus",
+   "Priam",
+   "Minos"
+  ],
+  "explanation": "Un don de Dionysos qui tourne au cauchemar : sa nourriture aussi devient de l'or.",
+  "hint": "Un don empoisonné."
+ },
+ {
+  "key": "arb-027",
+  "concept": "arts.mythology.supplice_de_tantale",
+  "label": "Supplice de Tantale",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le supplice de Tantale aux Enfers ?",
+  "options": [
+   "Eau et fruits s'éloignent dès qu'il veut les atteindre*",
+   "Pousser un rocher",
+   "Se faire dévorer le foie",
+   "Remplir un tonneau percé"
+  ],
+  "explanation": "D'où l'expression « supplice de Tantale » : voir ce qu'on désire sans jamais l'obtenir. Le rocher, c'est Sisyphe.",
+  "hint": "Si proche, et pourtant…"
+ },
+ {
+  "key": "arb-028",
+  "concept": "arts.mythology.pegase",
+  "label": "Pégase",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le cheval ailé de la mythologie grecque ?",
+  "options": [
+   "Pégase*",
+   "Bucéphale",
+   "Sleipnir",
+   "Chiron"
+  ],
+  "explanation": "Il naît du sang de Méduse quand Persée la décapite. Bucéphale était le vrai cheval d'Alexandre.",
+  "hint": "Il naît du sang de Méduse."
+ },
+ {
+  "key": "arb-029",
+  "concept": "arts.mythology.chimere",
+  "label": "Chimère",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans la mythologie grecque, qu'est-ce que la Chimère ?",
+  "options": [
+   "Un monstre à tête de lion, corps de chèvre et queue de serpent*",
+   "Une nymphe des sources",
+   "Un oiseau de feu",
+   "Un géant à cent bras"
+  ],
+  "explanation": "Vaincue par Bellérophon monté sur Pégase. Au figuré, une chimère est un rêve irréalisable.",
+  "hint": "Un monstre composite."
+ },
+ {
+  "key": "arb-030",
+  "concept": "arts.mythology.polypheme",
+  "label": "Polyphème",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel cyclope Ulysse aveugle-t-il pour s'échapper de sa caverne ?",
+  "options": [
+   "Polyphème*",
+   "Argos",
+   "Cerbère",
+   "Typhon"
+  ],
+  "explanation": "Ulysse lui dit s'appeler « Personne » : le cyclope crie ensuite que « Personne » l'a blessé.",
+  "hint": "Ulysse se nomme « Personne »."
+ },
+ {
+  "key": "arb-031",
+  "concept": "arts.mythology.chant_des_sirenes",
+  "label": "Chant des sirènes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment Ulysse résiste-t-il au chant des sirènes ?",
+  "options": [
+   "Il se fait attacher au mât du navire*",
+   "Il chante plus fort qu'elles",
+   "Il ferme les yeux",
+   "Il tue les sirènes"
+  ],
+  "explanation": "Ses marins se bouchent les oreilles avec de la cire ; lui veut entendre le chant sans pouvoir y céder.",
+  "hint": "Il est attaché."
+ },
+ {
+  "key": "arb-032",
+  "concept": "arts.mythology.circe",
+  "label": "Circé",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "En quoi la magicienne Circé transforme-t-elle les compagnons d'Ulysse ?",
+  "options": [
+   "En porcs*",
+   "En pierres",
+   "En oiseaux",
+   "En arbres"
+  ],
+  "explanation": "Grâce à une herbe donnée par Hermès, Ulysse échappe au sortilège et obtient leur retour à forme humaine.",
+  "hint": "Des animaux de ferme."
+ },
+ {
+  "key": "arb-033",
+  "concept": "arts.mythology.helene_de_troie",
+  "label": "Hélène de Troie",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Selon la légende, l'enlèvement de quelle reine déclenche la guerre de Troie ?",
+  "options": [
+   "Hélène*",
+   "Pénélope",
+   "Andromaque",
+   "Cassandre"
+  ],
+  "explanation": "Épouse du roi de Sparte Ménélas, elle est emmenée à Troie par Pâris.",
+  "hint": "La plus belle femme du monde."
+ },
+ {
+  "key": "arb-034",
+  "concept": "arts.mythology.jugement_de_paris",
+  "label": "Jugement de Pâris",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À qui Pâris remet-il la pomme d'or destinée « à la plus belle » ?",
+  "options": [
+   "Aphrodite*",
+   "Héra",
+   "Athéna",
+   "Artémis"
+  ],
+  "explanation": "Aphrodite lui promet l'amour d'Hélène. C'est la « pomme de discorde », à l'origine de la guerre de Troie.",
+  "hint": "Elle lui promet Hélène."
+ },
+ {
+  "key": "arb-035",
+  "concept": "arts.mythology.janus",
+  "label": "Janus",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel dieu romain à deux visages a donné son nom au mois de janvier ?",
+  "options": [
+   "Janus*",
+   "Jupiter",
+   "Junon",
+   "Saturne"
+  ],
+  "explanation": "Dieu des portes et des commencements, il regarde à la fois le passé et l'avenir.",
+  "hint": "Le mois qui ouvre l'année."
+ },
+ {
+  "key": "arb-036",
+  "concept": "arts.mythology.isis",
+  "label": "Isis",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle déesse égyptienne est l'épouse d'Osiris ?",
+  "options": [
+   "Isis*",
+   "Bastet",
+   "Hathor",
+   "Nout"
+  ],
+  "explanation": "Elle rassemble les morceaux du corps d'Osiris, tué par son frère Seth, et lui rend la vie.",
+  "hint": "La mère d'Horus."
+ },
+ {
+  "key": "arb-037",
+  "concept": "arts.mythology.thot",
+  "label": "Thot",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel dieu égyptien à tête d'ibis est le dieu de l'écriture et du savoir ?",
+  "options": [
+   "Thot*",
+   "Rê",
+   "Ptah",
+   "Sobek"
+  ],
+  "explanation": "Scribe des dieux, il note le résultat de la pesée du cœur lors du jugement des morts.",
+  "hint": "Un oiseau au long bec courbé."
+ },
+ {
+  "key": "arb-038",
+  "concept": "arts.mythology.bastet",
+  "label": "Bastet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sous quelle forme représente-t-on la déesse égyptienne Bastet ?",
+  "options": [
+   "Une chatte*",
+   "Une vache",
+   "Un crocodile",
+   "Un faucon"
+  ],
+  "explanation": "Protectrice du foyer ; les chats étaient vénérés et parfois momifiés.",
+  "hint": "Les Égyptiens vénéraient cet animal."
+ },
+ {
+  "key": "arb-039",
+  "concept": "arts.mythology.freyja",
+  "label": "Freyja",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans la mythologie nordique, quelle déesse règne sur l'amour et la fertilité ?",
+  "options": [
+   "Freyja*",
+   "Hel",
+   "Skadi",
+   "Idunn"
+  ],
+  "explanation": "Elle voyage sur un char tiré par des chats. Le vendredi (Friday) doit son nom à Frigg, souvent confondue avec elle.",
+  "hint": "Son char est tiré par des chats."
+ },
+ {
+  "key": "arb-040",
+  "concept": "arts.mythology.ragnarok",
+  "label": "Ragnarök",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce que le Ragnarök dans la mythologie nordique ?",
+  "options": [
+   "La bataille de la fin du monde*",
+   "Le palais d'Odin",
+   "Le pont arc-en-ciel",
+   "Le serpent qui entoure la Terre"
+  ],
+  "explanation": "Dieux et géants s'y affrontent ; Odin est dévoré par le loup Fenrir, puis un monde nouveau renaît.",
+  "hint": "Le crépuscule des dieux."
+ },
+ {
+  "key": "arb-041",
+  "concept": "arts.mythology.valkyries",
+  "label": "Valkyries",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui sont les Valkyries ?",
+  "options": [
+   "Des guerrières qui choisissent les morts au combat*",
+   "Des sorcières des forêts",
+   "Des déesses de la mer",
+   "Des géantes de glace"
+  ],
+  "explanation": "Elles conduisent les guerriers tombés au Valhalla, auprès d'Odin. Wagner en a fait une chevauchée célèbre.",
+  "hint": "Wagner les fait chevaucher."
+ },
+ {
+  "key": "arb-042",
+  "concept": "arts.mythology.gilgamesh",
+  "label": "Gilgamesh",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle civilisation vient l'épopée de Gilgamesh, l'un des plus anciens récits connus ?",
+  "options": [
+   "La Mésopotamie*",
+   "L'Égypte",
+   "La Grèce",
+   "L'Inde"
+  ],
+  "explanation": "Écrite en cunéiforme sur des tablettes d'argile, elle raconte déjà un déluge.",
+  "hint": "Écrite en cunéiforme."
+ },
+ {
+  "key": "arb-043",
+  "concept": "arts.mythology.ganesh",
+  "label": "Ganesh",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel dieu hindou a une tête d'éléphant ?",
+  "options": [
+   "Ganesh*",
+   "Shiva",
+   "Vishnou",
+   "Krishna"
+  ],
+  "explanation": "Dieu de la sagesse et de l'intelligence, il lève les obstacles ; on l'invoque avant toute entreprise.",
+  "hint": "Il lève les obstacles."
+ },
+ {
+  "key": "arb-044",
+  "concept": "arts.mythology.quetzalcoatl",
+  "label": "Quetzalcóatl",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel dieu aztèque est représenté en « serpent à plumes » ?",
+  "options": [
+   "Quetzalcóatl*",
+   "Huitzilopochtli",
+   "Tlaloc",
+   "Tezcatlipoca"
+  ],
+  "explanation": "Dieu du vent et du savoir, également vénéré par les Mayas sous le nom de Kukulcán.",
+  "hint": "Un serpent à plumes."
+ },
+ {
+  "key": "arb-045",
+  "concept": "arts.mythology.mort_d_achille",
+  "label": "Mort d'Achille",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui tue Achille d'une flèche au talon ?",
+  "options": [
+   "Pâris*",
+   "Hector",
+   "Ulysse",
+   "Énée"
+  ],
+  "explanation": "La flèche est guidée par Apollon. Achille avait lui-même tué Hector, le frère de Pâris.",
+  "hint": "Le frère d'Hector."
+ },
+ {
+  "key": "arb-046",
+  "concept": "music.classical.requiem_de_mozart",
+  "label": "Requiem de Mozart",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle œuvre Mozart laisse-t-il inachevée à sa mort, en 1791 ?",
+  "options": [
+   "Son Requiem*",
+   "La Flûte enchantée",
+   "Don Giovanni",
+   "La Symphonie Jupiter"
+  ],
+  "explanation": "Une messe des morts commandée anonymement ; son élève Süssmayr la complète.",
+  "hint": "Une messe des morts."
+ },
+ {
+  "key": "arb-047",
+  "concept": "music.classical.le_messie",
+  "label": "Le Messie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a composé l'oratorio « Le Messie », célèbre pour son « Alléluia » ?",
+  "options": [
+   "Haendel*",
+   "Bach",
+   "Vivaldi",
+   "Haydn"
+  ],
+  "explanation": "Créé à Dublin en 1742. La tradition veut que le public se lève pendant l'« Alléluia ».",
+  "hint": "Un Allemand installé à Londres."
+ },
+ {
+  "key": "arb-048",
+  "concept": "music.classical.toccata_et_fugue",
+  "label": "Toccata et fugue",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pour quel instrument Bach a-t-il écrit la célèbre « Toccata et fugue en ré mineur » ?",
+  "options": [
+   "L'orgue*",
+   "Le piano",
+   "Le violon",
+   "Le clavecin"
+  ],
+  "explanation": "Son ouverture sombre est souvent utilisée dans les films pour évoquer le mystère ou l'épouvante.",
+  "hint": "Un instrument d'église."
+ },
+ {
+  "key": "arb-049",
+  "concept": "music.classical.la_truite",
+  "label": "La Truite",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel compositeur a écrit le quintette « La Truite » ?",
+  "options": [
+   "Franz Schubert*",
+   "Robert Schumann",
+   "Johannes Brahms",
+   "Joseph Haydn"
+  ],
+  "explanation": "Il reprend la mélodie de son propre lied « Die Forelle ». Schubert meurt à 31 ans.",
+  "hint": "Mort à 31 ans."
+ },
+ {
+  "key": "arb-050",
+  "concept": "music.classical.ouverture_1812",
+  "label": "Ouverture 1812",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle ouverture de Tchaïkovski utilise de vrais coups de canon ?",
+  "options": [
+   "L'Ouverture 1812*",
+   "Casse-Noisette",
+   "Roméo et Juliette",
+   "Le Lac des cygnes"
+  ],
+  "explanation": "Elle célèbre la résistance russe face à l'armée de Napoléon en 1812.",
+  "hint": "La campagne de Russie."
+ },
+ {
+  "key": "arb-051",
+  "concept": "music.classical.antre_du_roi_de_la_montagne",
+  "label": "Antre du roi de la montagne",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a composé « Dans l'antre du roi de la montagne » ?",
+  "options": [
+   "Edvard Grieg*",
+   "Jean Sibelius",
+   "Modeste Moussorgski",
+   "Bedřich Smetana"
+  ],
+  "explanation": "Extrait de la musique de scène de « Peer Gynt » (1876), il accélère jusqu'à la frénésie.",
+  "hint": "Un Norvégien."
+ },
+ {
+  "key": "arb-052",
+  "concept": "music.classical.gymnopedies",
+  "label": "Gymnopédies",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a composé les « Gymnopédies » pour piano ?",
+  "options": [
+   "Erik Satie*",
+   "Claude Debussy",
+   "Maurice Ravel",
+   "Gabriel Fauré"
+  ],
+  "explanation": "Trois pièces lentes et dépouillées (1888), d'un compositeur connu pour son humour et son excentricité.",
+  "hint": "Un excentrique d'Honfleur."
+ },
+ {
+  "key": "arb-053",
+  "concept": "music.classical.orphee_aux_enfers",
+  "label": "Orphée aux Enfers",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel opéra-bouffe d'Offenbach vient le célèbre « French cancan » ?",
+  "options": [
+   "Orphée aux Enfers*",
+   "La Belle Hélène",
+   "Les Contes d'Hoffmann",
+   "La Vie parisienne"
+  ],
+  "explanation": "Le « galop infernal » (1858) est devenu la musique du cancan des cabarets.",
+  "hint": "Un mythe grec parodié."
+ },
+ {
+  "key": "arb-054",
+  "concept": "music.classical.faust_de_gounod",
+  "label": "Faust de Gounod",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel compositeur français a écrit l'opéra « Faust » (1859) ?",
+  "options": [
+   "Charles Gounod*",
+   "Hector Berlioz",
+   "Jules Massenet",
+   "Georges Bizet"
+  ],
+  "explanation": "L'« air des bijoux » y est chanté par Marguerite. Berlioz a lui aussi traité le sujet (« La Damnation de Faust »).",
+  "hint": "Aussi l'auteur d'un « Ave Maria »."
+ },
+ {
+  "key": "arb-055",
+  "concept": "music.classical.bayreuth",
+  "label": "Bayreuth",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel compositeur a fait construire son propre théâtre à Bayreuth ?",
+  "options": [
+   "Richard Wagner*",
+   "Ludwig van Beethoven",
+   "Johannes Brahms",
+   "Richard Strauss"
+  ],
+  "explanation": "Le festival de Bayreuth, fondé en 1876, ne joue que ses opéras.",
+  "hint": "L'auteur de « L'Anneau du Nibelung »."
+ },
+ {
+  "key": "arb-056",
+  "concept": "music.classical.beau_danube_bleu",
+  "label": "Beau Danube bleu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a composé la valse « Le Beau Danube bleu » ?",
+  "options": [
+   "Johann Strauss fils*",
+   "Richard Strauss",
+   "Franz Liszt",
+   "Frédéric Chopin"
+  ],
+  "explanation": "Le « roi de la valse » viennois. Elle est jouée chaque année au concert du Nouvel An à Vienne.",
+  "hint": "Le « roi de la valse »."
+ },
+ {
+  "key": "arb-057",
+  "concept": "music.classical.canon_de_pachelbel",
+  "label": "Canon de Pachelbel",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel compositeur allemand est célèbre pour son « Canon en ré » ?",
+  "options": [
+   "Johann Pachelbel*",
+   "Georg Philipp Telemann",
+   "Johann Sebastian Bach",
+   "Carl Orff"
+  ],
+  "explanation": "Écrit vers 1680, il est aujourd'hui joué dans d'innombrables mariages.",
+  "hint": "On l'entend aux mariages."
+ },
+ {
+  "key": "arb-058",
+  "concept": "music.classical.marche_nuptiale",
+  "label": "Marche nuptiale",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a composé la « Marche nuptiale » jouée à la sortie des mariages ?",
+  "options": [
+   "Felix Mendelssohn*",
+   "Richard Wagner",
+   "Franz Schubert",
+   "Edward Elgar"
+  ],
+  "explanation": "Extraite de la musique du « Songe d'une nuit d'été » (1842). Wagner a écrit l'autre marche, celle de l'entrée.",
+  "hint": "Le Songe d'une nuit d'été."
+ },
+ {
+  "key": "arb-059",
+  "concept": "music.classical.rachmaninov",
+  "label": "Rachmaninov",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel pianiste et compositeur russe est célèbre pour ses concertos pour piano très virtuoses ?",
+  "options": [
+   "Sergueï Rachmaninov*",
+   "Igor Stravinsky",
+   "Nikolaï Rimski-Korsakov",
+   "Alexandre Borodine"
+  ],
+  "explanation": "Ses mains immenses lui permettaient des accords très écartés. Son 2e concerto est l'un des plus joués.",
+  "hint": "Des mains immenses."
+ },
+ {
+  "key": "arb-060",
+  "concept": "music.classical.liszt",
+  "label": "Liszt",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel virtuose hongrois du piano a composé les « Rhapsodies hongroises » ?",
+  "options": [
+   "Franz Liszt*",
+   "Béla Bartók",
+   "Zoltán Kodály",
+   "Antonín Dvořák"
+  ],
+  "explanation": "Véritable star du XIXe siècle, il provoquait l'hystérie du public : on parlait de « lisztomanie ».",
+  "hint": "On parlait de « lisztomanie »."
+ },
+ {
+  "key": "arb-061",
+  "concept": "music.classical.paganini",
+  "label": "Paganini",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel violoniste italien était si virtuose qu'on le disait lié au diable ?",
+  "options": [
+   "Niccolò Paganini*",
+   "Antonio Vivaldi",
+   "Arcangelo Corelli",
+   "Giuseppe Tartini"
+  ],
+  "explanation": "Ses 24 Caprices restent parmi les pièces les plus difficiles du répertoire.",
+  "hint": "Ses 24 Caprices."
+ },
+ {
+  "key": "arb-062",
+  "concept": "music.classical.familles_de_l_orchestre",
+  "label": "Familles de l'orchestre",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque instrument à sa famille.",
+  "pairs": [
+   [
+    "Harpe",
+    "Cordes"
+   ],
+   [
+    "Cor",
+    "Cuivres"
+   ],
+   [
+    "Flûte traversière",
+    "Bois"
+   ],
+   [
+    "Xylophone",
+    "Percussions"
+   ]
+  ],
+  "explanation": "La flûte traversière, bien qu'en métal, fait partie des bois : c'est le mode de production du son qui compte.",
+  "hint": "La flûte est un « bois »."
+ },
+ {
+  "key": "arb-063",
+  "concept": "music.classical.le_la_de_l_orchestre",
+  "label": "Le la de l'orchestre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel instrument donne traditionnellement le « la » pour accorder l'orchestre ?",
+  "options": [
+   "Le hautbois*",
+   "Le violon",
+   "Le piano",
+   "La trompette"
+  ],
+  "explanation": "Son son stable et perçant s'entend bien de tous les musiciens.",
+  "hint": "Un bois à anche double."
+ },
+ {
+  "key": "arb-064",
+  "concept": "music.classical.livret_d_opera",
+  "label": "Livret d'opéra",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que le « livret » d'un opéra ?",
+  "options": [
+   "Son texte*",
+   "Sa partition d'orchestre",
+   "Son programme de salle",
+   "Son décor"
+  ],
+  "explanation": "Le librettiste écrit les paroles, le compositeur la musique. Da Ponte a écrit trois livrets pour Mozart.",
+  "hint": "Les paroles."
+ },
+ {
+  "key": "arb-065",
+  "concept": "music.classical.soprano",
+  "label": "Soprano",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle est la voix de femme la plus aiguë ?",
+  "options": [
+   "Soprano*",
+   "Alto",
+   "Mezzo-soprano",
+   "Contralto"
+  ],
+  "explanation": "De la plus aiguë à la plus grave : soprano, mezzo-soprano, alto (ou contralto).",
+  "hint": "La plus haute."
+ },
+ {
+  "key": "arb-066",
+  "concept": "music.classical.voix_d_homme",
+  "label": "Voix d'homme",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Classe ces voix d'homme de la plus grave à la plus aiguë.",
+  "items": [
+   "Basse",
+   "Baryton",
+   "Ténor",
+   "Contre-ténor"
+  ],
+  "explanation": "Le contre-ténor chante dans l'aigu en voix de tête, dans la tessiture d'une alto.",
+  "hint": "La basse est la plus grave."
+ },
+ {
+  "key": "arb-067",
+  "concept": "music.classical.metronome",
+  "label": "Métronome",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert un métronome ?",
+  "options": [
+   "À battre la mesure à un tempo régulier*",
+   "À accorder un instrument",
+   "À mesurer le volume",
+   "À tourner les pages"
+  ],
+  "explanation": "Il fait « tic-tac » à la vitesse choisie. Beethoven fut l'un des premiers à noter ses tempos au métronome.",
+  "hint": "Tic-tac, tic-tac."
+ },
+ {
+  "key": "arb-068",
+  "concept": "music.classical.cle_de_fa",
+  "label": "Clé de fa",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle clé utilise-t-on surtout pour écrire les notes graves ?",
+  "options": [
+   "La clé de fa*",
+   "La clé de sol",
+   "La clé d'ut",
+   "La clé de mi"
+  ],
+  "explanation": "Au piano, la main gauche lit souvent en clé de fa, la main droite en clé de sol.",
+  "hint": "La main gauche au piano."
+ },
+ {
+  "key": "arb-069",
+  "concept": "music.classical.symphonie_pastorale",
+  "label": "Symphonie pastorale",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle symphonie de Beethoven évoque la campagne, avec un orage et des chants d'oiseaux ?",
+  "options": [
+   "La 6e, « Pastorale »*",
+   "La 5e",
+   "La 9e",
+   "La 3e, « Héroïque »"
+  ],
+  "explanation": "Créée en 1808, le même soir que la 5e. On y entend le rossignol, la caille et le coucou.",
+  "hint": "La campagne."
+ },
+ {
+  "key": "arb-070",
+  "concept": "music.classical.mozart_enfant",
+  "label": "Mozart enfant",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Mozart composait déjà de petites pièces à l'âge de 5 ans.",
+  "answer": true,
+  "explanation": "Enfant prodige, il fait le tour des cours d'Europe avec sa sœur Nannerl, sous la conduite de leur père Leopold.",
+  "hint": "Un enfant prodige."
+ },
+ {
+  "key": "arb-071",
+  "concept": "music.classical.naissance_de_beethoven",
+  "label": "Naissance de Beethoven",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle ville est né Beethoven, en 1770 ?",
+  "options": [
+   "Bonn*",
+   "Vienne",
+   "Salzbourg",
+   "Berlin"
+  ],
+  "explanation": "Il s'installe à Vienne à 22 ans et y passe le reste de sa vie.",
+  "hint": "Une ville allemande sur le Rhin."
+ }
+]
