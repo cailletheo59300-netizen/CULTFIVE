@@ -48,6 +48,7 @@ struct FriendsView: View {
                 .padding(.bottom, Space.l)
             }
             .scrollIndicators(.hidden)
+            .clearsTabBar()
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
             .refreshable { await load() }

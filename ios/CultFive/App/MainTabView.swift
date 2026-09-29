@@ -7,10 +7,10 @@ struct MainTabView: View {
     /// Hauteur réelle de la barre flottante, mesurée (elle varie avec la taille du texte et l'appareil).
     @State private var barHeight: CGFloat = 70
 
-    /// Espace réservé en bas de chaque onglet : la barre, la bulle du 5 qui en dépasse, et un peu d'air.
-    /// Un `safeAreaInset` posé sur le TabView n'atteint pas le contenu des onglets : on le pose sur chacun,
-    /// ce qui couvre aussi les écrans poussés dans leur pile de navigation (fiche domaine, réglages…).
-    private var reserved: CGFloat { barHeight + CultTabBar.bubbleOverflow + Space.s }
+    /// Espace à laisser sous le contenu : la barre, la bulle du 5 qui en dépasse, et de l'air.
+    /// Une marge posée autour des onglets n'atteint pas les défilements (chaque onglet a sa pile de navigation) :
+    /// la valeur passe par l'environnement et chaque page défilante l'applique elle-même (`clearsTabBar()`).
+    private var clearance: CGFloat { barHeight + CultTabBar.bubbleOverflow + Space.m }
 
     var body: some View {
         @Bindable var model = model
@@ -25,11 +25,11 @@ struct MainTabView: View {
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { barHeight = $0 }
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
+        .environment(\.tabBarClearance, clearance)
     }
 
     private func tab(_ content: some View, _ tag: AppModel.Tab) -> some View {
         content
-            .safeAreaInset(edge: .bottom, spacing: 0) { Color.clear.frame(height: reserved) }
             .toolbar(.hidden, for: .tabBar)
             .tag(tag)
     }
@@ -121,5 +121,23 @@ struct CultTabBar: View {
         case .available: return [.correct, .correct, .correct, .correct, .ready]
         case .inProgress, .done: return daily.answers.map { $0 ? .correct : .wrong }
         }
+    }
+}
+
+extension EnvironmentValues {
+    /// Hauteur occupée par la barre d'onglets flottante au-dessus de la zone sûre (0 hors des onglets).
+    @Entry var tabBarClearance: CGFloat = 0
+}
+
+extension View {
+    /// À poser sur le défilement de chaque page affichée sous la barre d'onglets (onglets et pages poussées).
+    func clearsTabBar() -> some View { modifier(TabBarClearance()) }
+}
+
+private struct TabBarClearance: ViewModifier {
+    @Environment(\.tabBarClearance) private var clearance
+
+    func body(content: Content) -> some View {
+        content.contentMargins(.bottom, clearance, for: .scrollContent)
     }
 }

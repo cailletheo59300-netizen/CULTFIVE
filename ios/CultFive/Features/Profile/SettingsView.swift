@@ -64,6 +64,7 @@ struct SettingsView: View {
             .padding(.bottom, Space.l)
         }
         .scrollIndicators(.hidden)
+        .clearsTabBar()
         .scrollDismissesKeyboard(.interactively)
         .background(Color.paper)
         .navigationTitle("Réglages")

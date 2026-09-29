@@ -193,6 +193,7 @@ struct LeagueView: View {
             .padding(.horizontal, Space.gutter)
             .padding(.bottom, Space.l)
         }
+        .clearsTabBar()
         .background(Color.paper)
         .navigationBarTitleDisplayMode(.inline)
         .task(id: offset) {

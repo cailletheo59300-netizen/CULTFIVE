@@ -32,6 +32,7 @@ struct DailyHomeView: View {
                 .padding(.bottom, Space.l)
             }
             .scrollIndicators(.hidden)
+            .clearsTabBar()
             .background(Color.paper)
             .refreshable { await reload() }
             .toolbar(.hidden, for: .navigationBar)

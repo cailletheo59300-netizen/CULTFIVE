@@ -42,6 +42,7 @@ struct DomainView: View {
             }
         }
         .scrollIndicators(.hidden)
+        .clearsTabBar()
         .background(Color.paper)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(color, for: .navigationBar)

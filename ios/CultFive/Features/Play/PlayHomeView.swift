@@ -25,6 +25,7 @@ struct PlayHomeView: View {
                 .padding(.bottom, Space.l)
             }
             .scrollIndicators(.hidden)
+            .clearsTabBar()
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: String.self) { domain in

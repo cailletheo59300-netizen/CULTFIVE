@@ -30,6 +30,7 @@ struct ProfileView: View {
                 .padding(.bottom, Space.l)
             }
             .scrollIndicators(.hidden)
+            .clearsTabBar()
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: String.self) { DomainView(domainId: $0) }
