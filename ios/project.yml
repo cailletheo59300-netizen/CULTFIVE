@@ -36,7 +36,7 @@ targets:
       path: CultFive/CultFive.entitlements
       properties:
         com.apple.developer.applesignin: [Default]
-        com.apple.developer.associated-domains: ["applinks:www.etudia.site"]
+        com.apple.developer.associated-domains: ["applinks:brainlix.site"]
     info:
       path: CultFive/Info.plist
       properties:

@@ -208,10 +208,10 @@ final class AppModel {
 
     // MARK: Liens
 
-    /// brainlix://i/CODE, https://www.etudia.site/i/CODE (invitation) ; …/l/CODE (ligue) ; …/d/CODE (duel).
+    /// brainlix://i/CODE, https://brainlix.site/i/CODE (invitation) ; …/l/CODE (ligue) ; …/d/CODE (duel).
     func handle(url: URL) {
         let parts = (url.host.map { [$0] } ?? []) + url.pathComponents.filter { $0 != "/" }
-        let meaningful = parts.filter { $0 != "etudia.site" && $0 != "www.etudia.site" }
+        let meaningful = parts.filter { $0 != "brainlix.site" && $0 != "www.brainlix.site" }
         guard meaningful.count >= 2 else { return }
         let code = meaningful[1].uppercased()
         switch meaningful[0] {

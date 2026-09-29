@@ -14,14 +14,14 @@ final class AppLogicTests: XCTestCase {
         XCTAssertEqual(model.pendingLeagueCode, "ABC123")
         XCTAssertEqual(model.tab, .friends)
 
-        model.handle(url: URL(string: "https://www.etudia.site/i/xy7k2pq")!)
+        model.handle(url: URL(string: "https://brainlix.site/i/xy7k2pq")!)
         XCTAssertEqual(model.pendingInvite, "XY7K2PQ")
         UserDefaults.standard.removeObject(forKey: "pendingInvite")
     }
 
     func testBrandIsCentralised() {
         XCTAssertEqual(Brand.name, "Brainlix")
-        XCTAssertEqual(Brand.inviteURL(code: "ABC").absoluteString, "https://www.etudia.site/i/ABC")
+        XCTAssertEqual(Brand.inviteURL(code: "ABC").absoluteString, "https://brainlix.site/i/ABC")
         XCTAssertEqual(Brand.currency(1), "1 graine")
         XCTAssertEqual(Brand.currency(12), "12 graines")
     }

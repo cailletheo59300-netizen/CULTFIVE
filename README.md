@@ -28,11 +28,14 @@ brew install xcodegen
 cp ios/Config/Secrets.xcconfig.example ios/Config/Secrets.xcconfig   # URL + clé anon + Team ID
 cd ios && xcodegen && open CultFive.xcodeproj
 ```
-Capacités requises sur l'App ID `app.brainlix.ios` (équipe `BM85BF2WVQ`) : *Sign in with Apple*, *Associated Domains* (`applinks:www.etudia.site`), *Push Notifications*.
+Capacités requises sur l'App ID `app.brainlix.ios` (équipe `BM85BF2WVQ`) : *Sign in with Apple*, *Associated Domains* (`applinks:brainlix.site`), *Push Notifications*.
 
 ### TestFlight
 Onglet Actions → **TestFlight** → *Run workflow* (`.github/workflows/testflight.yml`) : build Release (serveur de production, sans mode démo), signature automatique, envoi sur App Store Connect. Numéro de build = numéro d'exécution du workflow.
 Secrets du dépôt : `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8` (clé App Store Connect API, accès *Admin* pour la signature gérée par Apple).
+
+### Site (brainlix.site)
+Dossier `site/` : HTML statique sans build, déployé par Vercel (répertoire racine `site`, framework « Other »). `vercel.json` gère les URL propres, les liens `/i/ /l/ /d/` et l'en-tête JSON de `apple-app-site-association`.
 
 ### Tests
 ```bash

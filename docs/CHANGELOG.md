@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.3 — site brainlix.site
+- Site `site/` (statique, hébergé sur Vercel, domaine **brainlix.site**) : accueil, confidentialité, conditions d'utilisation, mentions légales, aide ; page d'atterrissage des liens `/i/`, `/l/`, `/d/` (ouvre l'app ou invite à l'installer) ; `apple-app-site-association` (liens universels) ; `app-ads.txt` (prêt pour les pubs).
+- App : liens d'invitation, de ligue et de duel et pages légales sur `https://brainlix.site`, liens universels `applinks:brainlix.site`, contact support.
+
 ## 0.9.2 — TestFlight
 - Équipe Apple `BM85BF2WVQ` dans le projet ; déclaration de confidentialité Apple (`PrivacyInfo.xcprivacy` : aucun pistage, e-mail, identifiant, données de jeu et d'usage, identifiant d'appareil haché, pour le fonctionnement de l'app).
 - Workflow manuel **TestFlight** : archive Release signée automatiquement avec la clé App Store Connect API, contrôles (identifiant, confidentialité, pas de fichiers démo), envoi sur App Store Connect.
@@ -37,7 +41,7 @@
 - Démo : cote, placement et points simulés (Calcul, Français et Géographie sont à 4/5 : la prochaine partie classée dévoile la cote).
 
 ## 0.7.0 — thèmes et contenu
-- **Duels** : défier un ami (éclair à côté de son nom) ou n'importe qui par lien (`www.etudia.site/d/CODE`), sur les mêmes 5 questions de 5 domaines ; chacun joue quand il veut (48 h) ; temps officiel serveur ; score adverse caché tant qu'on n'a pas joué ; vainqueur au score puis au temps (+20 XP, +5 graines). Écrans face-à-face, résultat « VS », section Duels dans Amis. Migration 0013, tests `60_duels.sql`. Démo : adversaire simulé.
+- **Duels** : défier un ami (éclair à côté de son nom) ou n'importe qui par lien (`brainlix.site/d/CODE`), sur les mêmes 5 questions de 5 domaines ; chacun joue quand il veut (48 h) ; temps officiel serveur ; score adverse caché tant qu'on n'a pas joué ; vainqueur au score puis au temps (+20 XP, +5 graines). Écrans face-à-face, résultat « VS », section Duels dans Amis. Migration 0013, tests `60_duels.sql`. Démo : adversaire simulé.
 - **Admin web** (`admin/index.html`) : tableau de bord par thème, liste filtrable et triable (difficulté, réussite, signalements), éditeur par type de question, publication/désactivation, 5 du jour (générer, remplacer), signalements.
 - **Signaler une question** dans l'app (réponse fausse, ambiguë, plus à jour, faute, autre) → « à revoir » côté admin. Migration 0012 (`question_reports`, `report_question`, `admin_questions` triable, `admin_resolve_reports`, thèmes retirés inactifs).
 - Thèmes réorganisés : 3 à 5 par domaine, chacun ≥ ~20 questions. Histoire par époques (date → période), Géographie en 5 thèmes, Logique + Énigmes, nouveaux thèmes Mythologie, Architecture, Champions, Acteurs, Animation, Entreprises & marques, Vie marine, Planète & climat.

@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["BM85BF2WVQ.app.brainlix.ios"],
+        "components": [
+          { "/": "/i/*", "comment": "Invitation d'un ami" },
+          { "/": "/l/*", "comment": "Code de ligue" },
+          { "/": "/d/*", "comment": "Duel" }
+        ]
+      }
+    ]
+  }
+}

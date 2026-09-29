@@ -15,12 +15,12 @@ enum Brand {
     static let mascotName = "Léon"
 
     static let urlScheme = "brainlix"
-    static let inviteBaseURL = URL(string: "https://www.etudia.site/i/")!
-    static let leagueBaseURL = URL(string: "https://www.etudia.site/l/")!
-    static let duelBaseURL = URL(string: "https://www.etudia.site/d/")!
-    static let privacyURL = URL(string: "https://www.etudia.site/confidentialite")!
-    static let termsURL = URL(string: "https://www.etudia.site/conditions")!
-    static let supportEmail = "bonjour@etudia.site"
+    static let inviteBaseURL = URL(string: "https://brainlix.site/i/")!
+    static let leagueBaseURL = URL(string: "https://brainlix.site/l/")!
+    static let duelBaseURL = URL(string: "https://brainlix.site/d/")!
+    static let privacyURL = URL(string: "https://brainlix.site/confidentialite")!
+    static let termsURL = URL(string: "https://brainlix.site/conditions")!
+    static let supportEmail = "theocaille1234@gmail.com"
 
     static func inviteURL(code: String) -> URL { inviteBaseURL.appendingPathComponent(code) }
     static func leagueURL(code: String) -> URL { leagueBaseURL.appendingPathComponent(code) }

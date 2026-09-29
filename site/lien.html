@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brainlix</title>
+<meta name="description" content="Rejoins-moi sur Brainlix, le quiz de culture générale.">
+<meta property="og:title" content="Rejoins-moi sur Brainlix">
+<meta property="og:description" content="5 questions. Chaque jour. Et toi, tu sais quoi ?">
+<meta property="og:image" content="https://brainlix.site/icon.png">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="link-page"><div class="box">
+<img src="/icon.png" alt="Icône de Brainlix">
+<h1 id="title">Rejoins-moi sur Brainlix</h1>
+<p id="text">5 questions. Chaque jour. Et toi, tu sais quoi ?</p>
+<div class="code" id="code" hidden></div>
+<div class="stack">
+<a class="btn" id="open" href="brainlix://">Ouvrir dans Brainlix</a>
+<span class="btn soon">Bientôt sur l'App Store</span>
+</div>
+</div></div>
+<script>
+(function () {
+  var parts = location.pathname.split("/").filter(Boolean);
+  var kind = parts[0], code = (parts[1] || "").replace(/[^A-Za-z0-9]/g, "").toUpperCase();
+  var texts = {
+    i: ["Ton ami t'invite sur Brainlix", "Installe Brainlix et ouvre ce lien sur ton iPhone : vous serez amis automatiquement."],
+    l: ["Rejoins ma ligue sur Brainlix", "Ouvre ce lien sur ton iPhone avec Brainlix pour rejoindre la ligue."],
+    d: ["Ton ami te défie en duel !", "Mêmes 5 questions, chacun à son rythme. Ouvre ce lien sur ton iPhone avec Brainlix pour relever le défi."]
+  };
+  if (texts[kind] && code) {
+    document.getElementById("title").textContent = texts[kind][0];
+    document.getElementById("text").textContent = texts[kind][1];
+    var c = document.getElementById("code");
+    c.textContent = code; c.hidden = false;
+    document.getElementById("open").href = "brainlix://" + kind + "/" + code;
+  }
+})();
+</script>
+</body>
+</html>

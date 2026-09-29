@@ -1,0 +1,97 @@
+/* Brainlix — site vitrine et pages légales. Couleurs reprises de l'app (ios/CultFive/DesignSystem/Tokens.swift). */
+:root {
+  --paper: #F6F5FB;
+  --raised: #FFFFFF;
+  --ink: #1A1830;
+  --ink-soft: #6E6B85;
+  --hairline: #E9E7F2;
+  --brand: #6A4CFF;
+  --brand-deep: #3A1FB8;
+  --sun: #FFD23F;
+  --radius: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0E0D16;
+    --raised: #1C1A2A;
+    --ink: #F4F3FA;
+    --ink-soft: #A3A0B8;
+    --hairline: #2C2940;
+    --brand: #8469FF;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.55 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--brand); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+/* En-tête */
+.top { padding: 18px 0; }
+.top .wrap { display: flex; align-items: center; gap: 10px; }
+.top a.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 900; font-size: 20px; }
+.top img { width: 36px; height: 36px; border-radius: 9px; }
+
+/* Accueil */
+.hero {
+  background: linear-gradient(135deg, #7B5CFF, #3A1FB8);
+  color: #fff;
+  text-align: center;
+  padding: 56px 0 64px;
+}
+.hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+.hero h1 { font-size: 44px; line-height: 1.1; margin: 22px 0 8px; font-weight: 900; letter-spacing: -0.5px; }
+.hero p.tag { font-size: 21px; margin: 0 0 28px; opacity: .92; }
+.hero p.tag strong { color: var(--sun); }
+.btn {
+  display: inline-block;
+  background: var(--sun);
+  color: #1A1830;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 15px 26px;
+  border-radius: 999px;
+}
+.btn.soon { background: rgba(255,255,255,.18); color: #fff; }
+.btn.brand { background: var(--brand); color: #fff; }
+.features { display: grid; gap: 14px; margin: -30px auto 40px; }
+@media (min-width: 700px) { .features { grid-template-columns: repeat(3, 1fr); } }
+.card {
+  background: var(--raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.card h2 { font-size: 19px; margin: 8px 0 6px; }
+.card p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+.emoji { font-size: 30px; }
+
+/* Pages de texte */
+main.doc { padding: 12px 0 40px; }
+main.doc h1 { font-size: 32px; line-height: 1.2; margin: 16px 0 4px; }
+main.doc h2 { font-size: 21px; margin: 32px 0 8px; }
+main.doc .updated { color: var(--ink-soft); font-size: 15px; margin: 0 0 20px; }
+main.doc ul { padding-left: 22px; }
+main.doc li { margin: 4px 0; }
+.todo { background: rgba(255,210,63,.25); border-radius: 6px; padding: 0 4px; }
+details { background: var(--raised); border: 1px solid var(--hairline); border-radius: 14px; padding: 14px 18px; margin: 10px 0; }
+summary { font-weight: 700; cursor: pointer; }
+
+/* Page de lien (invitation, ligue, duel) */
+.link-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; background: linear-gradient(135deg, #7B5CFF, #3A1FB8); color: #fff; }
+.link-page .box { max-width: 420px; }
+.link-page img { width: 96px; height: 96px; border-radius: 22px; }
+.link-page h1 { font-size: 30px; line-height: 1.2; margin: 20px 0 10px; }
+.link-page p { opacity: .92; margin: 0 0 24px; }
+.link-page .code { display: inline-block; background: rgba(255,255,255,.16); border-radius: 12px; padding: 6px 14px; font-weight: 800; letter-spacing: 2px; margin-bottom: 24px; }
+.link-page .stack { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+
+/* Pied de page */
+footer { border-top: 1px solid var(--hairline); padding: 24px 0 40px; color: var(--ink-soft); font-size: 15px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 10px; }
+footer a { color: var(--ink-soft); }
