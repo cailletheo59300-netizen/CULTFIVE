@@ -1,0 +1,354 @@
+[
+ {
+  "key": "cib-001",
+  "concept": "cinema.animation.oreilles_de_dumbo",
+  "label": "Oreilles de Dumbo",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qu'est-ce qui permet à Dumbo de voler ?",
+  "options": [
+   "Ses immenses oreilles*",
+   "Une plume magique seule",
+   "Des ailes",
+   "Un ballon"
+  ],
+  "explanation": "Il croit d'abord que c'est grâce à une « plume magique » ; en réalité, ce sont ses oreilles.",
+  "hint": "On se moquait d'elles."
+ },
+ {
+  "key": "cib-002",
+  "concept": "cinema.animation.bambi",
+  "label": "Bambi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal est Bambi ?",
+  "options": [
+   "Un faon*",
+   "Un lapin",
+   "Un écureuil",
+   "Un renard"
+  ],
+  "explanation": "Le petit du cerf. Son ami le lapin s'appelle Panpan.",
+  "hint": "Le petit du cerf."
+ },
+ {
+  "key": "cib-003",
+  "concept": "cinema.animation.sortie_du_roi_lion",
+  "label": "Sortie du Roi lion",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "En quelle année sort « Le Roi lion » de Disney ?",
+  "options": [
+   "1994*",
+   "1989",
+   "1999",
+   "2004"
+  ],
+  "explanation": "Le plus grand succès de l'animation traditionnelle de l'époque, avec les chansons d'Elton John.",
+  "hint": "Au milieu des années 1990."
+ },
+ {
+  "key": "cib-004",
+  "concept": "cinema.animation.flash_mcqueen",
+  "label": "Flash McQueen",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle la voiture de course héroïne de « Cars » (Pixar) ?",
+  "options": [
+   "Flash McQueen*",
+   "Martin",
+   "Doc Hudson",
+   "Sally"
+  ],
+  "explanation": "En version originale, Lightning McQueen. Martin est la dépanneuse rouillée.",
+  "hint": "Il porte le numéro 95."
+ },
+ {
+  "key": "cib-005",
+  "concept": "cinema.animation.aardman",
+  "label": "Aardman",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel studio anglais a créé « Wallace et Gromit » en pâte à modeler ?",
+  "options": [
+   "Aardman*",
+   "Pixar",
+   "DreamWorks",
+   "Laika"
+  ],
+  "explanation": "Il a aussi réalisé « Chicken Run » et « Shaun le mouton », toujours en animation image par image.",
+  "hint": "Il a aussi fait « Chicken Run »."
+ },
+ {
+  "key": "cib-006",
+  "concept": "cinema.animation.princesse_mononoke",
+  "label": "Princesse Mononoké",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a réalisé « Princesse Mononoké » (1997) ?",
+  "options": [
+   "Hayao Miyazaki*",
+   "Isao Takahata",
+   "Mamoru Hosoda",
+   "Makoto Shinkai"
+  ],
+  "explanation": "Une fable écologique où humains et esprits de la forêt s'affrontent.",
+  "hint": "Le maître du studio Ghibli."
+ },
+ {
+  "key": "cib-007",
+  "concept": "cinema.animation.porco_rosso",
+  "label": "Porco Rosso",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui est le héros de « Porco Rosso » (Miyazaki) ?",
+  "options": [
+   "Un aviateur transformé en cochon*",
+   "Un cochon qui devient roi",
+   "Un chat cuisinier",
+   "Un pilote de course"
+  ],
+  "explanation": "Un ancien pilote de chasse italien, dans l'Adriatique des années 1920.",
+  "hint": "Il pilote un hydravion rouge."
+ },
+ {
+  "key": "cib-008",
+  "concept": "cinema.animation.studio_des_minions",
+  "label": "Studio des Minions",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel studio a créé « Moi, moche et méchant » et les Minions ?",
+  "options": [
+   "Illumination*",
+   "Pixar",
+   "DreamWorks",
+   "Blue Sky"
+  ],
+  "explanation": "Studio américain fondé en 2007 par Chris Meledandri ; l'animation est réalisée à Paris (Illumination Mac Guff).",
+  "hint": "Des bâtiments… lumineux."
+ },
+ {
+  "key": "cib-009",
+  "concept": "cinema.animation.judy_hopps",
+  "label": "Judy Hopps",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « Zootopie », quel animal est la policière Judy Hopps ?",
+  "options": [
+   "Une lapine*",
+   "Une renarde",
+   "Une chatte",
+   "Une souris"
+  ],
+  "explanation": "Elle fait équipe avec un renard escroc, Nick Wilde.",
+  "hint": "Elle a de grandes oreilles."
+ },
+ {
+  "key": "cib-010",
+  "concept": "cinema.animation.maui",
+  "label": "Maui",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans « Vaiana », qui est Maui ?",
+  "options": [
+   "Un demi-dieu*",
+   "Le père de Vaiana",
+   "Un poulet",
+   "Un pirate"
+  ],
+  "explanation": "Un demi-dieu farceur aux tatouages animés, qui a volé le cœur de Te Fiti.",
+  "hint": "Ses tatouages bougent."
+ },
+ {
+  "key": "cib-011",
+  "concept": "cinema.animation.raiponce",
+  "label": "Raiponce",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle princesse Disney a des cheveux immenses ?",
+  "options": [
+   "Raiponce*",
+   "Cendrillon",
+   "Aurore",
+   "Blanche-Neige"
+  ],
+  "explanation": "Ses cheveux magiques mesurent environ 21 m et ont un pouvoir de guérison.",
+  "hint": "Enfermée dans une tour."
+ },
+ {
+  "key": "cib-012",
+  "concept": "cinema.animation.mulan",
+  "label": "Mulan",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Pourquoi Mulan se déguise-t-elle en homme ?",
+  "options": [
+   "Pour partir à la guerre à la place de son père*",
+   "Pour épouser un prince",
+   "Pour fuir un dragon",
+   "Pour gagner une course"
+  ],
+  "explanation": "Inspirée d'une légende chinoise ; elle est accompagnée du petit dragon Mushu.",
+  "hint": "Son père est trop âgé."
+ },
+ {
+  "key": "cib-013",
+  "concept": "cinema.animation.belle_et_la_bete",
+  "label": "Belle et la Bête",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « La Belle et la Bête » de Disney, en quoi est transformée Madame Samovar ?",
+  "options": [
+   "Une théière*",
+   "Une horloge",
+   "Un chandelier",
+   "Une armoire"
+  ],
+  "explanation": "Son fils Zip est une tasse ; Big Ben est l'horloge, Lumière le chandelier.",
+  "hint": "Son fils est une tasse."
+ },
+ {
+  "key": "cib-014",
+  "concept": "cinema.animation.cruella",
+  "label": "Cruella",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans « Les 101 Dalmatiens », comment s'appelle la méchante qui veut un manteau en fourrure de chiots ?",
+  "options": [
+   "Cruella d'Enfer*",
+   "Ursula",
+   "Maléfique",
+   "Madame Mim"
+  ],
+  "explanation": "En version originale : Cruella De Vil (« cruel devil »).",
+  "hint": "Son nom évoque la cruauté."
+ },
+ {
+  "key": "cib-015",
+  "concept": "cinema.animation.vux_du_genie",
+  "label": "Vœux du génie",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Combien de vœux le génie accorde-t-il à Aladdin ?",
+  "options": [
+   "3*",
+   "1",
+   "5",
+   "7"
+  ],
+  "explanation": "Avec trois règles : on ne peut ni tuer, ni forcer l'amour, ni ramener les morts.",
+  "hint": "Le chiffre des contes."
+ },
+ {
+  "key": "cib-016",
+  "concept": "cinema.animation.tarzan",
+  "label": "Tarzan",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quels animaux élèvent Tarzan dans le film de Disney ?",
+  "options": [
+   "Des gorilles*",
+   "Des loups",
+   "Des lions",
+   "Des éléphants"
+  ],
+  "explanation": "Sa mère adoptive s'appelle Kala. Mowgli, lui, est élevé par des loups.",
+  "hint": "Des grands singes."
+ },
+ {
+  "key": "cib-017",
+  "concept": "cinema.animation.kung_fu_panda",
+  "label": "Kung Fu Panda",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le panda de « Kung Fu Panda » ?",
+  "options": [
+   "Po*",
+   "Tai Lung",
+   "Shifu",
+   "Oogway"
+  ],
+  "explanation": "Fils adoptif d'un marchand de nouilles, il devient le Guerrier Dragon.",
+  "hint": "Un nom très court."
+ },
+ {
+  "key": "cib-018",
+  "concept": "cinema.animation.madagascar",
+  "label": "Madagascar",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « Madagascar », d'où s'échappent les animaux ?",
+  "options": [
+   "D'un zoo de New York*",
+   "D'un cirque",
+   "D'un bateau",
+   "D'une ferme"
+  ],
+  "explanation": "Alex le lion, Marty le zèbre, Gloria l'hippopotame et Melman la girafe vivent au zoo de Central Park.",
+  "hint": "Central Park."
+ },
+ {
+  "key": "cib-019",
+  "concept": "cinema.animation.scrat",
+  "label": "Scrat",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « L'Âge de glace », que cherche sans cesse l'écureuil Scrat ?",
+  "options": [
+   "Un gland*",
+   "Une noisette",
+   "Une pomme de pin",
+   "Un bout de fromage"
+  ],
+  "explanation": "Sa quête provoque des catastrophes… jusqu'à la dérive des continents.",
+  "hint": "Le fruit du chêne."
+ },
+ {
+  "key": "cib-020",
+  "concept": "cinema.animation.ernest_et_celestine",
+  "label": "Ernest et Célestine",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans « Ernest et Célestine » (2012), quels animaux sont les deux héros ?",
+  "options": [
+   "Un ours et une souris*",
+   "Un chat et un chien",
+   "Un lapin et un renard",
+   "Un loup et un agneau"
+  ],
+  "explanation": "Adapté des albums de Gabrielle Vincent, il remporte le César du meilleur film d'animation.",
+  "hint": "Un grand et une toute petite."
+ },
+ {
+  "key": "cib-021",
+  "concept": "cinema.animation.oscar_de_l_animation",
+  "label": "Oscar de l'animation",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel film remporte le premier Oscar du meilleur film d'animation, en 2002 ?",
+  "options": [
+   "Shrek*",
+   "Monstres et Cie",
+   "Le Voyage de Chihiro",
+   "Toy Story"
+  ],
+  "explanation": "La catégorie est créée pour la cérémonie de 2002 ; « Le Voyage de Chihiro » la remporte l'année suivante.",
+  "hint": "Un ogre vert."
+ },
+ {
+  "key": "cib-022",
+  "concept": "cinema.animation.record_d_oscars",
+  "label": "Record d'Oscars",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui détient le record d'Oscars remportés par une seule personne ?",
+  "options": [
+   "Walt Disney*",
+   "Steven Spielberg",
+   "John Williams",
+   "Meryl Streep"
+  ],
+  "explanation": "22 Oscars en compétition, plus 4 honorifiques.",
+  "hint": "Le père de Mickey."
+ }
+]

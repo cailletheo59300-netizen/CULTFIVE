@@ -1,0 +1,607 @@
+[
+ {
+  "key": "lob-001",
+  "concept": "logic.puzzles.produit_des_chiffres",
+  "label": "Produit des chiffres",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien obtient-on en multipliant entre eux tous les chiffres de 0 à 9 ?",
+  "answer": 0,
+  "explanation": "Il suffit d'un seul zéro dans une multiplication pour que le résultat soit nul.",
+  "hint": "Regarde le premier chiffre."
+ },
+ {
+  "key": "lob-002",
+  "concept": "logic.puzzles.deux_pieces_qui_font_3",
+  "label": "Deux pièces qui font 3 €",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "J'ai deux pièces qui font 3 € en tout. L'une des deux n'est pas une pièce de 1 €. Quelles sont-elles ?",
+  "options": [
+   "Une de 2 € et une de 1 €*",
+   "Deux pièces de 1,50 €",
+   "Une de 2 € et deux de 50 centimes",
+   "C'est impossible"
+  ],
+  "explanation": "L'une n'est pas une pièce de 1 € (c'est celle de 2 €)… mais l'autre, si !",
+  "hint": "Relis bien : « l'une des deux »."
+ },
+ {
+  "key": "lob-003",
+  "concept": "logic.puzzles.aretes_du_cube",
+  "label": "Arêtes du cube",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien d'arêtes compte un cube ?",
+  "answer": 12,
+  "explanation": "4 sur le dessus, 4 en dessous et 4 verticales. Il a aussi 6 faces et 8 sommets.",
+  "hint": "Compte le haut, le bas, puis les côtés."
+ },
+ {
+  "key": "lob-004",
+  "concept": "logic.puzzles.triangles_de_la_triforce",
+  "label": "Triangles de la Triforce",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Un grand triangle est découpé en 4 petits triangles (un au centre, trois aux coins). Combien de triangles en tout ?",
+  "answer": 5,
+  "explanation": "Les 4 petits, plus le grand qui les contient.",
+  "hint": "N'oublie pas le grand."
+ },
+ {
+  "key": "lob-005",
+  "concept": "logic.puzzles.train_dans_le_tunnel",
+  "label": "Train dans le tunnel",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Un train de 1 km de long entre dans un tunnel de 1 km à 60 km/h. Combien de minutes faut-il pour qu'il en soit entièrement sorti ?",
+  "answer": 2,
+  "unit": "min",
+  "explanation": "L'avant du train doit parcourir 2 km (le tunnel, puis la longueur du train). À 60 km/h, soit 1 km par minute : 2 minutes.",
+  "hint": "L'arrière du train doit aussi sortir."
+ },
+ {
+  "key": "lob-006",
+  "concept": "logic.puzzles.nombre_magique",
+  "label": "Nombre magique",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Je pense à un nombre. Je le double, j'ajoute 6, je divise par 2, puis j'enlève le nombre de départ. Que me reste-t-il ?",
+  "answer": 3,
+  "explanation": "(2n + 6) ÷ 2 = n + 3 ; moins n, il reste toujours 3, quel que soit le nombre choisi.",
+  "hint": "Essaie avec 10, puis avec 1."
+ },
+ {
+  "key": "lob-007",
+  "concept": "logic.puzzles.age_de_la_fille",
+  "label": "Âge de la fille",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Une mère a trois fois l'âge de sa fille. Dans 10 ans, elle n'aura plus que le double. Quel âge a la fille aujourd'hui ?",
+  "answer": 10,
+  "unit": "ans",
+  "explanation": "Fille x, mère 3x ; dans 10 ans : 3x + 10 = 2(x + 10), donc x = 10. La mère a 30 ans, puis 40 contre 20.",
+  "hint": "Essaie 10 ans."
+ },
+ {
+  "key": "lob-008",
+  "concept": "logic.puzzles.six_allumettes",
+  "label": "Six allumettes",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Avec 6 allumettes, combien de triangles équilatéraux peut-on former au maximum, sans les casser ?",
+  "answer": 4,
+  "explanation": "Il faut sortir du plan : une pyramide à base triangulaire (tétraèdre) a 6 arêtes et 4 faces triangulaires.",
+  "hint": "Pense en trois dimensions."
+ },
+ {
+  "key": "lob-009",
+  "concept": "logic.puzzles.seaux_de_3_et_5_litres",
+  "label": "Seaux de 3 et 5 litres",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Avec un seau de 3 L et un seau de 5 L (sans graduations) et un robinet, on peut mesurer exactement 4 L.",
+  "answer": true,
+  "explanation": "Remplis le 5 L, verse dans le 3 L : il reste 2 L. Vide le 3 L, verse-y ces 2 L. Remplis le 5 L et complète le 3 L (1 L) : il reste 4 L.",
+  "hint": "Commence par remplir le grand."
+ },
+ {
+  "key": "lob-010",
+  "concept": "logic.puzzles.monte_et_descend",
+  "label": "Monte et descend",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qui monte et descend sans jamais bouger ?",
+  "options": [
+   "Un escalier*",
+   "Un ascenseur",
+   "Un oiseau",
+   "La marée"
+  ],
+  "explanation": "On le monte et on le descend, mais lui ne bouge pas.",
+  "hint": "On l'emprunte à pied."
+ },
+ {
+  "key": "lob-011",
+  "concept": "logic.puzzles.plus_de_gardiens",
+  "label": "Plus de gardiens",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "« Plus j'ai de gardiens, moins je suis gardé. » Qui suis-je ?",
+  "options": [
+   "Un secret*",
+   "Un trésor",
+   "Une prison",
+   "Un château"
+  ],
+  "explanation": "Plus on le confie à de gens, moins il reste secret.",
+  "hint": "On le confie à quelqu'un."
+ },
+ {
+  "key": "lob-012",
+  "concept": "logic.puzzles.se_mouille_en_sechant",
+  "label": "Se mouille en séchant",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui se mouille en séchant ?",
+  "options": [
+   "Une serviette*",
+   "Le linge au soleil",
+   "Une éponge sèche",
+   "La peinture"
+  ],
+  "explanation": "Elle sèche ce qu'elle touche… et se mouille elle-même.",
+  "hint": "On l'utilise après la douche."
+ },
+ {
+  "key": "lob-013",
+  "concept": "logic.puzzles.plein_de_trous",
+  "label": "Plein de trous",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Je suis plein de trous, et pourtant je retiens l'eau. Qui suis-je ?",
+  "options": [
+   "Une éponge*",
+   "Une passoire",
+   "Un filet",
+   "Un tamis"
+  ],
+  "explanation": "Ses petits trous retiennent l'eau par capillarité.",
+  "hint": "Dans la cuisine."
+ },
+ {
+  "key": "lob-014",
+  "concept": "logic.puzzles.mon_prenom",
+  "label": "Mon prénom",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qui t'appartient, mais que les autres utilisent bien plus que toi ?",
+  "options": [
+   "Ton prénom*",
+   "Ton téléphone",
+   "Ta maison",
+   "Ta voix"
+  ],
+  "explanation": "Les autres le prononcent pour t'appeler ; toi, rarement.",
+  "hint": "On t'appelle avec."
+ },
+ {
+  "key": "lob-015",
+  "concept": "logic.puzzles.loup_chevre_et_chou",
+  "label": "Loup, chèvre et chou",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un passeur doit faire traverser un loup, une chèvre et un chou, un seul à la fois. Loup et chèvre, ou chèvre et chou, ne peuvent rester seuls. Qui fait-il passer en premier ?",
+  "options": [
+   "La chèvre*",
+   "Le loup",
+   "Le chou",
+   "Peu importe"
+  ],
+  "explanation": "Loup et chou peuvent rester ensemble. Ensuite : il prend le loup, ramène la chèvre, passe le chou, puis revient chercher la chèvre.",
+  "hint": "Qui est en danger… et dangereux ?"
+ },
+ {
+  "key": "lob-016",
+  "concept": "logic.puzzles.carreaux_pour_1_m",
+  "label": "Carreaux pour 1 m²",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de carreaux de 20 cm × 20 cm faut-il pour couvrir 1 m² ?",
+  "answer": 25,
+  "explanation": "1 m = 100 cm, soit 5 carreaux par côté : 5 × 5 = 25.",
+  "hint": "Combien de carreaux sur 1 m de long ?"
+ },
+ {
+  "key": "lob-017",
+  "concept": "logic.puzzles.freres_et_surs",
+  "label": "Frères et sœurs",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Dans une famille, chaque fille a autant de frères que de sœurs, et chaque garçon a deux fois plus de sœurs que de frères. Combien d'enfants y a-t-il ?",
+  "answer": 7,
+  "explanation": "4 filles et 3 garçons : une fille a 3 sœurs et 3 frères ; un garçon a 4 sœurs et 2 frères.",
+  "hint": "Il y a une fille de plus que de garçons."
+ },
+ {
+  "key": "lob-018",
+  "concept": "logic.puzzles.premier_janvier_2027",
+  "label": "Premier janvier 2027",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le 1er janvier 2026 était un jeudi. Quel jour sera le 1er janvier 2027 ?",
+  "options": [
+   "Un vendredi*",
+   "Un jeudi",
+   "Un samedi",
+   "Un mercredi"
+  ],
+  "explanation": "2026 compte 365 jours, soit 52 semaines et 1 jour : on décale d'un jour.",
+  "hint": "365 = 52 × 7 + 1."
+ },
+ {
+  "key": "lob-019",
+  "concept": "logic.puzzles.poids_de_la_brique",
+  "label": "Poids de la brique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Une brique pèse 1 kg plus une demi-brique. Combien pèse une brique, en kg ?",
+  "answer": 2,
+  "unit": "kg",
+  "explanation": "Si la brique pèse B : B = 1 + B/2, donc B/2 = 1 et B = 2 kg.",
+  "hint": "La moitié de la brique pèse 1 kg."
+ },
+ {
+  "key": "lob-020",
+  "concept": "logic.reasoning.menteurs_honnetes",
+  "label": "Menteurs honnêtes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Aucun menteur n'est honnête. Luc est honnête. » Que peut-on en conclure ?",
+  "options": [
+   "Luc n'est pas un menteur*",
+   "Luc est un menteur",
+   "Tous les honnêtes sont des menteurs",
+   "On ne peut rien conclure"
+  ],
+  "explanation": "Si Luc était menteur, il ne pourrait pas être honnête. Il est honnête, donc il n'est pas menteur.",
+  "hint": "Suppose le contraire."
+ },
+ {
+  "key": "lob-021",
+  "concept": "logic.reasoning.intrus_des_villes",
+  "label": "Intrus des villes",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est l'intrus : Paris, Londres, Berlin, Barcelone ?",
+  "options": [
+   "Barcelone*",
+   "Paris",
+   "Londres",
+   "Berlin"
+  ],
+  "explanation": "Les trois autres sont des capitales. La capitale de l'Espagne est Madrid.",
+  "hint": "Pense aux capitales."
+ },
+ {
+  "key": "lob-022",
+  "concept": "logic.reasoning.intrus_des_instruments",
+  "label": "Intrus des instruments",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est l'intrus : violon, guitare, flûte, harpe ?",
+  "options": [
+   "Flûte*",
+   "Violon",
+   "Guitare",
+   "Harpe"
+  ],
+  "explanation": "Les trois autres sont des instruments à cordes ; la flûte est un instrument à vent.",
+  "hint": "Trois ont des cordes."
+ },
+ {
+  "key": "lob-023",
+  "concept": "logic.reasoning.intrus_marin",
+  "label": "Intrus marin",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est l'intrus : baleine, dauphin, requin, phoque ?",
+  "options": [
+   "Requin*",
+   "Baleine",
+   "Dauphin",
+   "Phoque"
+  ],
+  "explanation": "Ils vivent tous dans la mer, mais le requin est un poisson ; les autres sont des mammifères.",
+  "hint": "Trois allaitent leurs petits."
+ },
+ {
+  "key": "lob-024",
+  "concept": "logic.reasoning.frere_du_pere",
+  "label": "Frère du père",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Le frère de mon père est mon…",
+  "options": [
+   "oncle*",
+   "cousin",
+   "neveu",
+   "grand-père"
+  ],
+  "explanation": "Et ses enfants sont mes cousins.",
+  "hint": "Ses enfants sont tes cousins."
+ },
+ {
+  "key": "lob-025",
+  "concept": "logic.reasoning.mari_de_ma_sur",
+  "label": "Mari de ma sœur",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Le mari de ma sœur est mon…",
+  "options": [
+   "beau-frère*",
+   "cousin",
+   "oncle",
+   "gendre"
+  ],
+  "explanation": "Un gendre est le mari de sa fille, pour un parent.",
+  "hint": "Un frère « par alliance »."
+ },
+ {
+  "key": "lob-026",
+  "concept": "logic.reasoning.si_hier_etait_lundi",
+  "label": "Si hier était lundi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Si hier était lundi, quel jour serons-nous demain ?",
+  "options": [
+   "Mercredi*",
+   "Mardi",
+   "Jeudi",
+   "Dimanche"
+  ],
+  "explanation": "Hier lundi, donc aujourd'hui mardi, et demain mercredi.",
+  "hint": "Aujourd'hui, c'est…"
+ },
+ {
+  "key": "lob-027",
+  "concept": "logic.reasoning.anagramme_de_chien",
+  "label": "Anagramme de chien",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel mot est une anagramme de « chien » (mêmes lettres) ?",
+  "options": [
+   "niche*",
+   "chêne",
+   "chaîne",
+   "échine"
+  ],
+  "explanation": "N-I-C-H-E : les mêmes cinq lettres que C-H-I-E-N. « Échine » a une lettre de trop, « chêne » et « chaîne » ne les ont pas toutes.",
+  "hint": "Là où il dort."
+ },
+ {
+  "key": "lob-028",
+  "concept": "logic.reasoning.les_glips",
+  "label": "Les Glips",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Tous les Glips sont verts. Zog n'est pas vert. » Que peut-on conclure ?",
+  "options": [
+   "Zog n'est pas un Glip*",
+   "Zog est un Glip",
+   "Certains Glips ne sont pas verts",
+   "On ne peut rien conclure"
+  ],
+  "explanation": "Si Zog était un Glip, il serait vert. Il ne l'est pas, donc ce n'est pas un Glip.",
+  "hint": "Et s'il était un Glip ?"
+ },
+ {
+  "key": "lob-029",
+  "concept": "logic.reasoning.syllogisme_invalide",
+  "label": "Syllogisme invalide",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "« Tous les oiseaux ont des plumes. Ce manchot a des plumes. Donc c'est un oiseau. » Ce raisonnement est-il valide ?",
+  "options": [
+   "Non, même si la conclusion est vraie*",
+   "Oui, parfaitement",
+   "Oui, car le manchot est un oiseau",
+   "Non, car le manchot n'a pas de plumes"
+  ],
+  "explanation": "Avoir des plumes ne prouve pas qu'on est un oiseau d'après ces seules prémisses (un oreiller aussi en a !). Une conclusion vraie peut venir d'un raisonnement faux.",
+  "hint": "Un oreiller aussi a des plumes."
+ },
+ {
+  "key": "lob-030",
+  "concept": "logic.reasoning.negation_d_une_conjonction",
+  "label": "Négation d'une conjonction",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le contraire logique de « Il pleut et il fait froid » ?",
+  "options": [
+   "Il ne pleut pas, ou il ne fait pas froid*",
+   "Il ne pleut pas et il ne fait pas froid",
+   "Il fait beau et chaud",
+   "Il pleut mais il ne fait pas froid"
+  ],
+  "explanation": "Il suffit qu'une des deux conditions soit fausse pour que la phrase soit fausse (lois de De Morgan).",
+  "hint": "Une seule condition fausse suffit."
+ },
+ {
+  "key": "lob-031",
+  "concept": "logic.reasoning.quatrieme_des_deux_cotes",
+  "label": "Quatrième des deux côtés",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Dans une file, Tom est 4e en partant du début et 4e en partant de la fin. Combien y a-t-il de personnes dans la file ?",
+  "answer": 7,
+  "explanation": "3 devant lui, 3 derrière lui, plus Tom : 7.",
+  "hint": "Combien devant, combien derrière ?"
+ },
+ {
+  "key": "lob-032",
+  "concept": "logic.reasoning.horloge_dans_un_miroir",
+  "label": "Horloge dans un miroir",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans un miroir, une horloge à aiguilles semble indiquer 3 h. Quelle heure est-il vraiment ?",
+  "options": [
+   "9 h*",
+   "3 h",
+   "6 h",
+   "12 h"
+  ],
+  "explanation": "Le miroir inverse gauche et droite : l'aiguille qui semble sur le 3 est en réalité sur le 9.",
+  "hint": "Le miroir inverse gauche et droite."
+ },
+ {
+  "key": "lob-033",
+  "concept": "logic.reasoning.piece_apres_5_faces",
+  "label": "Pièce après 5 faces",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une pièce équilibrée vient de tomber 5 fois de suite sur « face ». Quelle est la probabilité d'obtenir « pile » au prochain lancer ?",
+  "options": [
+   "1 chance sur 2*",
+   "Plus d'une chance sur 2",
+   "Moins d'une chance sur 2",
+   "5 chances sur 6"
+  ],
+  "explanation": "La pièce n'a pas de mémoire : chaque lancer est indépendant. Croire le contraire, c'est « l'erreur du joueur ».",
+  "hint": "La pièce n'a pas de mémoire."
+ },
+ {
+  "key": "lob-034",
+  "concept": "logic.reasoning.probabilite_du_6",
+  "label": "Probabilité du 6",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle est la probabilité d'obtenir un 6 avec un dé classique ?",
+  "options": [
+   "1 chance sur 6*",
+   "1 chance sur 2",
+   "1 chance sur 3",
+   "6 chances sur 6"
+  ],
+  "explanation": "Six faces, une seule porte le 6.",
+  "hint": "Combien de faces ?"
+ },
+ {
+  "key": "lob-035",
+  "concept": "logic.reasoning.somme_7_avec_deux_des",
+  "label": "Somme 7 avec deux dés",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Avec deux dés, quelle est la probabilité que la somme fasse 7 ?",
+  "options": [
+   "1 chance sur 6*",
+   "1 chance sur 12",
+   "1 chance sur 36",
+   "1 chance sur 2"
+  ],
+  "explanation": "6 combinaisons sur 36 donnent 7 (1-6, 2-5, 3-4, 4-3, 5-2, 6-1) : 6/36 = 1/6. C'est la somme la plus probable.",
+  "hint": "Compte les combinaisons."
+ },
+ {
+  "key": "lob-036",
+  "concept": "logic.reasoning.certains_sportifs_fumeurs",
+  "label": "Certains sportifs fumeurs",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Certains sportifs sont fumeurs. » Quelle phrase est alors forcément vraie ?",
+  "options": [
+   "Certains fumeurs sont sportifs*",
+   "Tous les fumeurs sont sportifs",
+   "Certains sportifs ne sont pas fumeurs",
+   "Aucun fumeur n'est sportif"
+  ],
+  "explanation": "« Certains A sont B » peut se retourner : il existe au moins une personne à la fois sportive et fumeuse. En revanche, on ne sait pas s'il existe des sportifs non-fumeurs.",
+  "hint": "Au moins une personne est les deux."
+ },
+ {
+  "key": "lob-037",
+  "concept": "logic.reasoning.monty_hall",
+  "label": "Monty Hall",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Jeu télévisé : tu choisis une porte parmi 3 (une seule cache une voiture). L'animateur, qui sait tout, ouvre une autre porte vide et te propose de changer. Que faire ?",
+  "options": [
+   "Changer : 2 chances sur 3 de gagner*",
+   "Garder : 2 chances sur 3",
+   "Peu importe : 1 chance sur 2",
+   "Garder : 1 chance sur 2"
+  ],
+  "explanation": "Ton premier choix a 1 chance sur 3. L'animateur ne t'aide qu'en éliminant une porte vide : l'autre porte concentre les 2/3 restants.",
+  "hint": "Ton premier choix avait 1 chance sur 3."
+ },
+ {
+  "key": "lob-038",
+  "concept": "logic.reasoning.transitivite",
+  "label": "Transitivité",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Si A entraîne B, et que B entraîne C, alors A entraîne C.",
+  "answer": true,
+  "explanation": "C'est la transitivité : s'il pleut, le sol est mouillé ; si le sol est mouillé, il glisse ; donc s'il pleut, il glisse.",
+  "hint": "Une chaîne de conséquences."
+ },
+ {
+  "key": "lob-039",
+  "concept": "logic.reasoning.deux_menteurs",
+  "label": "Deux menteurs",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Sur une île, chacun dit toujours la vérité ou ment toujours. A dit : « Nous sommes tous les deux des menteurs », en parlant de lui et de B. Qui est quoi ?",
+  "options": [
+   "A ment, B dit la vérité*",
+   "Les deux mentent",
+   "Les deux disent la vérité",
+   "A dit la vérité, B ment"
+  ],
+  "explanation": "Si A disait vrai, il serait menteur : impossible. Donc A ment, et sa phrase est fausse : ils ne sont pas tous deux menteurs, donc B dit la vérité.",
+  "hint": "A peut-il dire vrai ?"
+ },
+ {
+  "key": "lob-040",
+  "concept": "logic.reasoning.dans_30_jours",
+  "label": "Dans 30 jours",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Si nous sommes lundi, quel jour serons-nous dans 30 jours ?",
+  "options": [
+   "Mercredi*",
+   "Lundi",
+   "Mardi",
+   "Jeudi"
+  ],
+  "explanation": "30 = 4 semaines + 2 jours : lundi + 2 jours = mercredi.",
+  "hint": "30 = 28 + 2."
+ },
+ {
+  "key": "lob-041",
+  "concept": "logic.reasoning.lundis_dans_un_mois",
+  "label": "Lundis dans un mois",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien de lundis un mois peut-il compter au maximum ?",
+  "answer": 5,
+  "explanation": "Un mois de 29 à 31 jours contient 4 semaines complètes plus 1 à 3 jours : un jour peut donc apparaître 5 fois.",
+  "hint": "Plus de 4 semaines."
+ },
+ {
+  "key": "lob-042",
+  "concept": "logic.reasoning.intrus_des_formes",
+  "label": "Intrus des formes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est l'intrus : triangle, carré, cube, cercle ?",
+  "options": [
+   "Cube*",
+   "Triangle",
+   "Carré",
+   "Cercle"
+  ],
+  "explanation": "Le cube est un volume (3 dimensions) ; les autres sont des figures planes.",
+  "hint": "Lequel a du volume ?"
+ }
+]

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.4 — +822 questions
+- **5 149 questions** (4 327 avant), tous les thèmes ≥ 52 (40 avant).
+- Calcul : générateur restructuré en modèles réutilisables ; la première série (`gcalc-*`) reste identique, une seconde (`gcalb-*`) ajoute 180 questions et de nouveaux modèles (addition/soustraction autour d'un nombre rond, ×125, ×9/99/999, doubler-diviser, retrouver le total, taux d'évolution, TVA, fraction en %, produit de fractions, prix au kilo, somme et différence, piquets).
+- ~570 questions écrites et relues (`content/questions/lot_v6_*.json`) : français (expressions, synonymes, orthographe, grammaire, vocabulaire), Antiquité et Moyen Âge, physique, biologie, corps humain, espace, terre et climat, vie marine, plantes, animaux, architecture, mythologies, musique classique, champions, règles, football, marques, informatique, énigmes, raisonnement, animation. Faits stables uniquement (pas de records en cours), doublons de sens retirés après comparaison avec toute la banque.
+
 ## 0.9.3 — site brainlix.site
 - Site `site/` (statique, hébergé sur Vercel, domaine **brainlix.site**) : accueil, confidentialité, conditions d'utilisation, mentions légales, aide ; page d'atterrissage des liens `/i/`, `/l/`, `/d/` (ouvre l'app ou invite à l'installer) ; `apple-app-site-association` (liens universels) ; `app-ads.txt` (prêt pour les pubs).
 - App : liens d'invitation, de ligue et de duel et pages légales sur `https://brainlix.site`, liens universels `applinks:brainlix.site`, contact support.

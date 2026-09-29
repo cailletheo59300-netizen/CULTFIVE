@@ -58,4 +58,4 @@ Calcul (calcul mental, pourcentages, fractions, conversions, logique numérique)
 
 Sources ajoutées : Wikidata (lunes → planète, point culminant des pays, décennie de sortie des films, castings — caméos exclus), suites logiques calculées (`scripts/gen-logic.mjs`), et ~400 questions écrites et relues (`themes_*.json`). Écartés de Wikidata faute de fiabilité : architectes (attributions erronées), œuvres musicales (musiques de films mêlées), sportifs (requêtes instables) — écrits à la main.
 
-État : **4 327 questions** (tous les thèmes ≥ 40 ; lots écrits à la main dans `content/questions/lot_*.json`, calcul généré par `scripts/gen-calc.mjs`, 97 expertes dans `expert.json`). Répartition des difficultés par thème : `docs/CALIBRATION.md`.
+État : **5 149 questions** (tous les thèmes ≥ 52 ; lots écrits à la main dans `content/questions/lot_*.json`, dont la vague 0.9.4 `lot_v6_*.json` : ~570 questions relues sur les 30 thèmes les plus minces ; calcul généré par `scripts/gen-calc.mjs`, 290 questions en deux séries `gcalc-*` figée et `gcalb-*`, 97 expertes dans `expert.json`). Répartition des difficultés par thème : `docs/CALIBRATION.md`.
