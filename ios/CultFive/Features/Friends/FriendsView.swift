@@ -45,7 +45,7 @@ struct FriendsView: View {
                     }
                 }
                 .padding(.horizontal, Space.gutter)
-                .padding(.bottom, Space.xxl)
+                .padding(.bottom, Space.l)
             }
             .scrollIndicators(.hidden)
             .background(Color.paper)

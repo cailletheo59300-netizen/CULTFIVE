@@ -191,7 +191,7 @@ struct LeagueView: View {
                 }
             }
             .padding(.horizontal, Space.gutter)
-            .padding(.bottom, Space.xxl)
+            .padding(.bottom, Space.l)
         }
         .background(Color.paper)
         .navigationBarTitleDisplayMode(.inline)

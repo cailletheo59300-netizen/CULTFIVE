@@ -241,8 +241,10 @@ struct PlaySummaryView: View {
                     }
                 }
                 if !summary.ranked {
-                    Label("Entraînement libre : ton niveau ne change pas. Tes erreurs sont notées pour que tu les retravailles.",
-                          systemImage: "slider.horizontal.3")
+                    Label(config.mode == .errors
+                          ? "Révision : ton Elo ne bouge pas. Chaque erreur corrigée revient plus tard pour vérifier qu'elle est acquise."
+                          : "Entraînement libre : ton Elo ne change pas. Tes erreurs sont notées pour que tu les retravailles.",
+                          systemImage: config.mode == .errors ? "arrow.uturn.backward" : "slider.horizontal.3")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                 }
                 if summary.corrected > 0 {
@@ -348,7 +350,9 @@ struct PlaySummaryView: View {
     }
 }
 
-/// Annonce de la partie : domaine, type (classée / entraînement), réglages. Un temps pour se concentrer.
+/// Avant la partie : un vrai écran de lancement, à la couleur du domaine. Le type de partie, le nom du domaine en grand,
+/// ce qui va se passer (thèmes, difficulté, effet sur l'Elo) en trois chiffres, puis « Go » avec un compte à rebours 3-2-1
+/// (sauté si « Réduire les animations » est activé).
 struct PlayIntroView: View {
     let config: PlayConfig
     let domainName: String?
@@ -356,64 +360,195 @@ struct PlayIntroView: View {
     var onGo: () -> Void
     var onClose: () -> Void
 
+    @Environment(AppModel.self) private var app
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var appeared = false
+    @State private var skill: SkillSummary?
+    @State private var countdown: Int?
 
     private var color: Color { config.domain.map(DomainPalette.color) ?? .brand }
     private var onColor: Color { config.domain.map(DomainPalette.onColor) ?? .white }
+    private var buttonText: Color { config.domain == nil ? .brandDeep : color }
 
     var body: some View {
         ZStack {
             Rectangle().fill(config.domain == nil ? AnyShapeStyle(Color.popGradient) : AnyShapeStyle(color)).ignoresSafeArea()
-            if let domain = config.domain {
-                Image(systemName: DomainPalette.symbol(domain))
-                    .font(.system(size: 260, weight: .black))
-                    .foregroundStyle(onColor.opacity(0.1))
-                    .rotationEffect(.degrees(-14))
-                    .offset(x: 110, y: -170)
-                    .accessibilityHidden(true)
-            }
-            VStack(alignment: .leading, spacing: Space.m) {
-                HStack {
-                    Spacer()
-                    Button(action: onClose) {
-                        Image(systemName: "xmark").font(.system(.footnote, design: .rounded).weight(.heavy))
-                            .foregroundStyle(onColor)
-                            .frame(width: 34, height: 34)
-                            .background(onColor.opacity(0.18), in: Circle())
-                            .frame(width: 44, height: 44)
-                    }
-                    .accessibilityLabel("Fermer")
+            VStack(alignment: .leading, spacing: 0) {
+                topBar
+                Spacer(minLength: Space.l)
+                VStack(alignment: .leading, spacing: Space.m) {
+                    Text(domainName ?? config.title)
+                        .font(.system(size: 56, weight: .black, design: .rounded))
+                        .tracking(-1.5)
+                        .foregroundStyle(onColor)
+                        .lineLimit(2).minimumScaleFactor(0.5)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .offset(y: appeared ? 0 : 24)
+                    Text(promise)
+                        .font(.system(.title3, design: .rounded).weight(.semibold))
+                        .foregroundStyle(onColor.opacity(0.85))
+                        .fixedSize(horizontal: false, vertical: true)
+                        .offset(y: appeared ? 0 : 16)
+                    if !themeNames.isEmpty { themes }
                 }
-                Spacer()
-                Text(config.title.uppercased()).font(.cfLabel).tracking(1).foregroundStyle(onColor.opacity(0.8))
-                Text(domainName ?? config.title)
-                    .font(.system(size: 44, weight: .black, design: .rounded))
-                    .foregroundStyle(onColor)
-                    .minimumScaleFactor(0.6).lineLimit(2)
-                VStack(alignment: .leading, spacing: 8) {
-                    line(icon: "number", "\(count) question\(count > 1 ? "s" : "")")
-                    if config.mode == .training {
-                        line(icon: config.ranked ? "chart.line.uptrend.xyaxis" : "slider.horizontal.3",
-                             config.ranked ? "Adaptée à ton niveau · compte pour ta progression" : "Difficulté : \(PlayLevelText.name(config.level)) · sans effet sur ton niveau")
-                    }
-                    if let timer = config.timer { line(icon: "stopwatch.fill", "\(timer) secondes par question") }
-                    if !config.subdomains.isEmpty { line(icon: "square.grid.2x2.fill", "\(config.subdomains.count) thème\(config.subdomains.count > 1 ? "s" : "") choisi\(config.subdomains.count > 1 ? "s" : "")") }
+                Spacer(minLength: Space.l)
+                facts
+                    .padding(.bottom, Space.l)
+                Button(action: go) {
+                    Text("Go").frame(maxWidth: .infinity)
                 }
-                Spacer()
-                Button("Go !", action: onGo)
-                    .buttonStyle(InkButtonStyle(fill: .white, text: config.domain == nil ? Color(hex: 0x3A1FB8) : color))
+                .buttonStyle(InkButtonStyle(fill: .white, text: buttonText, arrow: true))
+                .disabled(countdown != nil)
             }
             .padding(Space.gutter)
-            .opacity(appeared ? 1 : 0)
-            .offset(y: appeared ? 0 : 16)
+            .opacity(appeared ? (countdown == nil ? 1 : 0.15) : 0)
+            .blur(radius: countdown == nil ? 0 : 6)
+
+            if let countdown {
+                Text("\(countdown)")
+                    .font(.system(size: 180, weight: .black, design: .rounded))
+                    .monospacedDigit()
+                    .foregroundStyle(onColor)
+                    .id(countdown)
+                    .transition(.asymmetric(insertion: .scale(scale: 1.6).combined(with: .opacity),
+                                            removal: .scale(scale: 0.6).combined(with: .opacity)))
+                    .accessibilityLabel("\(countdown)")
+            }
         }
         .onAppear { withAnimation(Motion.moment) { appeared = true } }
+        .task {
+            guard let domain = config.domain else { return }
+            skill = (try? await app.service.skills())?.first { $0.domainId == domain }
+        }
     }
 
-    private func line(icon: String, _ text: String) -> some View {
-        Label(text, systemImage: icon)
-            .font(.system(.callout, design: .rounded).weight(.bold))
-            .foregroundStyle(onColor.opacity(0.9))
+    // MARK: Blocs
+
+    private var topBar: some View {
+        HStack {
+            Label(config.title, systemImage: modeSymbol)
+                .font(.system(.footnote, design: .rounded).weight(.heavy))
+                .foregroundStyle(onColor)
+                .padding(.horizontal, 12).padding(.vertical, 7)
+                .overlay(Capsule().strokeBorder(onColor.opacity(0.45), lineWidth: 1.5))
+            Spacer()
+            Button(action: onClose) {
+                Image(systemName: "xmark").font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .foregroundStyle(onColor)
+                    .frame(width: 34, height: 34)
+                    .background(onColor.opacity(0.18), in: Circle())
+                    .frame(width: 44, height: 44)
+            }
+            .accessibilityLabel("Fermer")
+        }
+    }
+
+    private var themes: some View {
+        FlowLayout(spacing: 6) {
+            ForEach(themeNames, id: \.self) { name in
+                Text(name)
+                    .font(.system(.footnote, design: .rounded).weight(.bold))
+                    .foregroundStyle(onColor)
+                    .padding(.horizontal, 10).padding(.vertical, 5)
+                    .background(onColor.opacity(0.16), in: Capsule())
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    /// Trois repères : nombre de questions, difficulté, enjeu (Elo, placement ou « sans effet »).
+    private var facts: some View {
+        HStack(alignment: .top, spacing: 0) {
+            fact(value: "\(count)", label: count > 1 ? "questions" : "question")
+            separator
+            fact(value: difficultyValue, label: config.timer.map { "\($0) s par question" } ?? "difficulté")
+            separator
+            fact(value: stakeValue, label: stakeLabel)
+        }
+        .padding(.vertical, Space.m)
+        .overlay(alignment: .top) { Rectangle().fill(onColor.opacity(0.3)).frame(height: 1) }
+        .overlay(alignment: .bottom) { Rectangle().fill(onColor.opacity(0.3)).frame(height: 1) }
+        .opacity(appeared ? 1 : 0)
+        .accessibilityElement(children: .combine)
+    }
+
+    private func fact(value: String, label: String) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(value)
+                .font(.system(.title2, design: .rounded).weight(.black)).monospacedDigit()
+                .foregroundStyle(onColor)
+                .lineLimit(1).minimumScaleFactor(0.6)
+            Text(label)
+                .font(.system(.caption, design: .rounded).weight(.bold))
+                .foregroundStyle(onColor.opacity(0.75))
+                .lineLimit(2).fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var separator: some View {
+        Rectangle().fill(onColor.opacity(0.3)).frame(width: 1, height: 40).padding(.horizontal, Space.s)
+    }
+
+    // MARK: Textes
+
+    private var modeSymbol: String {
+        switch config.mode {
+        case .quick: return "bolt.fill"
+        case .errors: return "arrow.uturn.backward"
+        case .training: return config.countsForElo ? "chart.line.uptrend.xyaxis" : "slider.horizontal.3"
+        case .surprise, .challenge: return "sparkles"
+        }
+    }
+
+    /// Une phrase qui dit ce qui attend le joueur.
+    private var promise: String {
+        switch config.mode {
+        case .quick, .surprise, .challenge: return "Un domaine différent à chaque question. De quoi voir large."
+        case .errors: return "Les questions qui t'ont échappé reviennent. Cette fois, c'est la bonne."
+        case .training:
+            if config.countsForElo { return "Tous les thèmes du domaine, à la limite de ton niveau." }
+            return config.subdomains.isEmpty ? "Tous les thèmes du domaine, à ton rythme." : "Les thèmes que tu as choisis, à ton rythme."
+        }
+    }
+
+    private var themeNames: [String] {
+        guard let domain = config.domain, !config.subdomains.isEmpty else { return [] }
+        let names = Dictionary(uniqueKeysWithValues: app.subdomains(of: domain).map { ($0.id, $0.name) })
+        return config.subdomains.compactMap { names[$0] }
+    }
+
+    private var difficultyValue: String {
+        if config.mode == .errors { return "Tes erreurs" }
+        return config.countsForElo || config.mode == .quick ? "Adaptée" : PlayLevelText.name(config.level)
+    }
+
+    private var stakeValue: String {
+        guard config.countsForElo else { return "Libre" }
+        guard let rating = skill?.rating else { return "Elo" }
+        return rating.placed ? rating.formatted : "\(rating.placementGames)/\(CoteCULT.placementGames)"
+    }
+
+    private var stakeLabel: String {
+        guard config.countsForElo else { return "sans effet sur l'Elo" }
+        guard let rating = skill?.rating else { return config.domain == nil ? "en jeu, par domaine" : "en jeu" }
+        return rating.placed ? "Elo en jeu · \(rating.rank.name)" : "placement"
+    }
+
+    // MARK: Lancement
+
+    private func go() {
+        guard countdown == nil else { return }
+        guard !reduceMotion else { Haptics.soft(); onGo(); return }
+        Task { @MainActor in
+            for n in stride(from: 3, through: 1, by: -1) {
+                Haptics.soft()
+                withAnimation(Motion.press) { countdown = n }
+                try? await Task.sleep(nanoseconds: 520_000_000)
+            }
+            Haptics.success()
+            onGo()
+        }
     }
 }
 

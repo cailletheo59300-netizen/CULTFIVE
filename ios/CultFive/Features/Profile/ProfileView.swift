@@ -27,15 +27,15 @@ struct ProfileView: View {
                     trophies
                 }
                 .padding(.horizontal, Space.gutter)
-                .padding(.bottom, Space.xxl)
+                .padding(.bottom, Space.l)
             }
             .scrollIndicators(.hidden)
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: String.self) { DomainView(domainId: $0) }
+            .navigationDestination(isPresented: $showSettings) { SettingsView() }
             .refreshable { await load() }
         }
-        .sheet(isPresented: $showSettings) { SettingsView() }
         .sheet(isPresented: $showHistory) {
             NavigationStack { DailyHistoryDetail() }
                 .presentationDetents([.large])

@@ -27,6 +27,18 @@ begin
   perform tst.ok(jsonb_array_length(pack -> 'questions') >= 2, 'sous-thèmes : des questions');
   perform tst.throws('select public.play_pack(''training'', ''history'', null, 10, true, null, array[''geography.flags''])', 'invalid_scope');
 
+  -- Règle de l'Elo : des thèmes choisis = entraînement libre, même si « classée » est demandé (anciennes versions de l'app).
+  perform tst.ok(not (pack ->> 'ranked')::bool, 'thèmes choisis : pas classé');
+  pack := public.play_pack('training', 'geography', 'geography.capitals', 10, true, null);
+  perform tst.ok(not (pack ->> 'ranked')::bool, 'un thème choisi : pas classé');
+  pack := public.play_pack('training', 'geography', null, 10, true, null, '{}'::text[]);
+  perform tst.ok((pack ->> 'ranked')::bool, 'liste de thèmes vide = tout le domaine, classé');
+  pack := public.play_pack('quick', null, null, 10);
+  perform tst.ok((pack ->> 'ranked')::bool, 'partie rapide classée');
+  -- « Mes erreurs » : jamais classé.
+  pack := public.play_pack('errors', null, null, 5);
+  perform tst.ok(not (pack ->> 'ranked')::bool, 'Mes erreurs : pas classé');
+
   -- Expert : nettement plus dur.
   pack := public.play_pack('training', 'geography', null, 10, false, 'expert');
   perform tst.ok((select avg(difficulty_effective) from public.questions q

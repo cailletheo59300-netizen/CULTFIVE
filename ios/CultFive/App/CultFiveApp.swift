@@ -6,12 +6,15 @@ import CultFiveCore
 struct CultFiveApp: App {
     @State private var model = AppModel.live()
     @Environment(\.scenePhase) private var scenePhase
+    /// Clair par défaut, indépendamment du réglage de l'iPhone (voir `AppAppearance`).
+    @AppStorage(AppAppearance.storageKey) private var appearance: AppAppearance = .light
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environment(model)
                 .tint(Color.brand)
+                .preferredColorScheme(appearance.colorScheme)
                 .onOpenURL { model.handle(url: $0) }
                 .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in
                     if let url = activity.webpageURL { model.handle(url: url) }

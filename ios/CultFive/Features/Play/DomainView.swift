@@ -38,7 +38,7 @@ struct DomainView: View {
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.top, Space.l)
-                .padding(.bottom, Space.xxl)
+                .padding(.bottom, Space.l)
             }
         }
         .scrollIndicators(.hidden)

@@ -10,10 +10,11 @@ enum Haptics {
     private static let notificationGenerator = UINotificationFeedbackGenerator()
     private static let softGenerator = UIImpactFeedbackGenerator(style: .soft)
 
-    static func selection() { selectionGenerator.selectionChanged() }
-    static func success() { notificationGenerator.notificationOccurred(.success) }
-    static func error() { notificationGenerator.notificationOccurred(.error) }
-    static func soft() { softGenerator.impactOccurred(intensity: 0.7) }
+    // Toutes les vibrations passent par ici : le réglage « Vibrations » les coupe d'un coup.
+    static func selection() { if GamePreferences.hapticsEnabled { selectionGenerator.selectionChanged() } }
+    static func success() { if GamePreferences.hapticsEnabled { notificationGenerator.notificationOccurred(.success) } }
+    static func error() { if GamePreferences.hapticsEnabled { notificationGenerator.notificationOccurred(.error) } }
+    static func soft() { if GamePreferences.hapticsEnabled { softGenerator.impactOccurred(intensity: 0.7) } }
 }
 
 // MARK: - Boutons

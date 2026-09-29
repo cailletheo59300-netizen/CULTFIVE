@@ -80,3 +80,6 @@ Pourquoi : le propriétaire veut des objectifs quotidiens et hebdomadaires, mais
 
 ### D-026 · 2026-09-28 · Brainlix et « Elo »
 L'app s'appelle **Brainlix** (identifiant `app.brainlix.ios`, liens sur `brainlix.site` depuis le 29/09, domaine acheté chez Namecheap ; etudia.site n'est plus utilisé). Le 5 du jour et son logo en bâtons restent. La « Cote CULT » s'appelle **Elo** pour les joueurs ; le type Swift `CoteCULT` et les champs serveur `cote` gardent leur nom (interne, sans effet visible).
+
+### D-027 · 2026-09-29 · L'Elo d'un domaine se gagne sur tout le domaine ; clair par défaut
+Pourquoi : choisir un seul thème fort (par ex. « Capitales ») permettait de gonfler l'Elo du domaine. Une partie classée couvre donc toujours tous les thèmes ; des thèmes choisis = entraînement libre (Elo intact, XP réduite, pas de graines). « Mes erreurs » (sélection biaisée vers les points faibles) ne fait plus bouger l'Elo mais garde ses récompenses (révise D-022). Règle imposée par le serveur (`_play_pack_base`), donc aussi pour les anciennes versions de l'app. Les modes « Défi » et « Surprise » quittent l'écran Jouer (doublons de la partie rapide et de l'entraînement Expert) ; le serveur les accepte encore. L'app est **claire par défaut** quel que soit le réglage de l'iPhone ; le sombre devient un choix dans les Réglages.

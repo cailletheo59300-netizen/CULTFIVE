@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : 2026-09-28 (objectifs et récap, 0.9.0)_
+_Dernière mise à jour : 2026-09-29 (lot 1 : clair par défaut, réglages, règle de l'Elo, 0.10.0)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -22,7 +22,7 @@ _Dernière mise à jour : 2026-09-28 (objectifs et récap, 0.9.0)_
 | App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | ✅ build + tests unitaires en CI (macOS 15) · 🟡 **pas encore essayée sur appareil** avec un vrai projet Supabase | job CI `ios` |
 
 ## App iOS — écrans
-Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (choix de partie : classée ou entraînement libre, thèmes multiples, chrono ; rapide, surprise, défi, erreurs, par domaine/sous-domaine) · Domaine (Elo ou placement, thèmes, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche, **duels** par ami ou par lien) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, carte Elo, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (pseudo, notifications, âge, compte, suppression) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles ; Daily, profil avec radar, question du jour). Design « Pop » (voir `DESIGN_SYSTEM.md`) : 🟡 compilé en CI, rendu à valider à l'œil sur Appetize.
+Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (partie rapide, « Revoir mes erreurs », domaines ; par domaine : classée = tous les thèmes, ou entraînement libre avec thèmes, difficulté, nombre, chrono) · Lancement de partie (repères + 3-2-1) · Domaine (Elo ou placement, thèmes, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche, **duels** par ami ou par lien) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, carte Elo, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (page poussée : pseudo, apparence clair/sombre/iPhone, notifications, vibrations, âge, compte, aide et légal ; enregistrement immédiat) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles ; Daily, profil avec radar, question du jour). Design « Pop » (voir `DESIGN_SYSTEM.md`) : 🟡 compilé en CI, rendu à valider à l'œil sur Appetize.
 
 ## Phases (plan du cahier des charges)
 | Phase | État |

@@ -15,6 +15,9 @@ struct PlayConfig: Identifiable, Hashable {
     /// Secondes par question (entraînement libre) ; nil = sans chrono.
     var timer: Int? = nil
 
+    /// L'Elo ne bouge que sur une partie classée couvrant tout le domaine ; jamais en « Mes erreurs » (règle appliquée aussi par le serveur).
+    var countsForElo: Bool { ranked && mode != .errors && subdomains.isEmpty }
+
     var title: String {
         switch mode {
         case .quick: return "Partie rapide"
@@ -275,7 +278,7 @@ final class PlaySessionModel {
         let correct = results.filter { $0 }.count
         var summary = PlaySummary(correct: correct, total: results.count, xp: nil, seeds: nil,
                                   corrected: 0, achievements: [], synced: false)
-        summary.ranked = config.ranked
+        summary.ranked = config.countsForElo
         summary.bestStreak = bestStreak
         summary.missed = zip(questions, results).filter { !$0.1 }.map { $0.0 }
         summary.points = points
@@ -293,7 +296,7 @@ final class PlaySessionModel {
             summary.achievements = result.achievements
             summary.synced = true
             if let serverPoints = result.points { summary.points = serverPoints }
-            summary.ratings = config.ranked ? (result.ratings ?? []) : []
+            summary.ratings = config.countsForElo ? (result.ratings ?? []) : []
             seedsBalance = result.balance
         } catch {
             await queue.enqueue(session: sessionId, attempts: attempts)

@@ -34,7 +34,7 @@ final class DemoPlayEngine: @unchecked Sendable {
     private var levels: [String: Double] = [:]
     /// Réponses classées par domaine (placement : cote dévoilée à 50).
     private var answered: [String: Int] = [:]
-    private var sessions: [UUID: (ids: [UUID], ranked: Bool)] = [:]
+    private var sessions: [UUID: (ids: [UUID], ranked: Bool, rewarded: Bool)] = [:]
     private var submitted: Set<UUID> = []
     private var seedsDelta = 0
     // Activité de la séance, pour les objectifs de la démo.
@@ -95,7 +95,10 @@ final class DemoPlayEngine: @unchecked Sendable {
         let ids = picked.map(\.question.id)
         seen.formUnion(ids)
         let session = UUID()
-        sessions[session] = (ids, mode == .errors ? true : ranked)
+        // Comme le serveur : l'Elo ne bouge que sur une partie classée couvrant tout le domaine (jamais en « Mes erreurs »),
+        // mais « Mes erreurs » garde les récompenses pleines.
+        let counts = mode != .errors && ranked && subdomains.isEmpty
+        sessions[session] = (ids, counts, counts || mode == .errors)
         // Comme le serveur : difficulté et chances de réussite estimées de chaque question.
         let questions = picked.map { entry -> Question in
             var q = entry.question
@@ -105,7 +108,7 @@ final class DemoPlayEngine: @unchecked Sendable {
             return q
         }
         return PlayPack(sessionId: session, mode: mode.rawValue, questions: questions,
-                        ranked: mode == .errors ? true : ranked, level: ranked ? "adaptive" : level.rawValue)
+                        ranked: counts, level: counts ? "adaptive" : level.rawValue)
     }
 
     private func band(mode: PlayMode, domain: String, ranked: Bool, level: PlayLevel) -> ClosedRange<Double> {
@@ -170,6 +173,7 @@ final class DemoPlayEngine: @unchecked Sendable {
     func submit(session: UUID, attempts: [PlayAttempt]) -> [String: JSONValue] {
         lock.lock(); defer { lock.unlock() }
         let ranked = sessions[session]?.ranked ?? true
+        let rewarded = sessions[session]?.rewarded ?? true
         var correct = 0
         var corrected: [JSONValue] = []
         var results: [JSONValue] = []
@@ -219,8 +223,8 @@ final class DemoPlayEngine: @unchecked Sendable {
             ]))
         }
         if ranked && attempts.count >= 8 { rankedGames += 1 }
-        let xp = correct * (ranked ? 5 : 3) + (attempts.count >= 5 ? (ranked ? 10 : 5) : 0)
-        let seeds = ranked ? 2 * (correct / 5) : 0
+        let xp = correct * (rewarded ? 5 : 3) + (attempts.count >= 5 ? (rewarded ? 10 : 5) : 0)
+        let seeds = rewarded ? 2 * (correct / 5) : 0
         seedsDelta += seeds
         return ["recorded": .number(Double(results.count)), "correct": .number(Double(correct)), "xp": .number(Double(xp)),
                 "seeds": .number(Double(seeds)), "corrected": .array(corrected), "results": .array(results),

@@ -4,32 +4,43 @@ import CultFiveCore
 /// Navigation principale : Jouer · 5 DU JOUR · Amis · Profil. Le 5 du jour est l'objet central.
 struct MainTabView: View {
     @Environment(AppModel.self) private var model
+    /// Hauteur réelle de la barre flottante, mesurée (elle varie avec la taille du texte et l'appareil).
+    @State private var barHeight: CGFloat = 70
+
+    /// Espace réservé en bas de chaque onglet : la barre, la bulle du 5 qui en dépasse, et un peu d'air.
+    /// Un `safeAreaInset` posé sur le TabView n'atteint pas le contenu des onglets : on le pose sur chacun,
+    /// ce qui couvre aussi les écrans poussés dans leur pile de navigation (fiche domaine, réglages…).
+    private var reserved: CGFloat { barHeight + CultTabBar.bubbleOverflow + Space.s }
 
     var body: some View {
         @Bindable var model = model
         TabView(selection: $model.tab) {
-            PlayHomeView()
-                .toolbar(.hidden, for: .tabBar)
-                .tag(AppModel.Tab.play)
-            DailyHomeView()
-                .toolbar(.hidden, for: .tabBar)
-                .tag(AppModel.Tab.daily)
-            FriendsView()
-                .toolbar(.hidden, for: .tabBar)
-                .tag(AppModel.Tab.friends)
-            ProfileView()
-                .toolbar(.hidden, for: .tabBar)
-                .tag(AppModel.Tab.profile)
+            tab(PlayHomeView(), .play)
+            tab(DailyHomeView(), .daily)
+            tab(FriendsView(), .friends)
+            tab(ProfileView(), .profile)
         }
-        .safeAreaInset(edge: .bottom, spacing: 0) {
+        .overlay(alignment: .bottom) {
             CultTabBar(selection: $model.tab, daily: model.daily)
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { barHeight = $0 }
         }
+        .ignoresSafeArea(.keyboard, edges: .bottom)
+    }
+
+    private func tab(_ content: some View, _ tag: AppModel.Tab) -> some View {
+        content
+            .safeAreaInset(edge: .bottom, spacing: 0) { Color.clear.frame(height: reserved) }
+            .toolbar(.hidden, for: .tabBar)
+            .tag(tag)
     }
 }
 
 struct CultTabBar: View {
     @Binding var selection: AppModel.Tab
     let daily: DailyStatus?
+
+    /// La bulle du 5 dépasse de la barre : décalage de 22 pt, moins la marge intérieure de 6 pt.
+    static let bubbleOverflow: CGFloat = 16
 
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {

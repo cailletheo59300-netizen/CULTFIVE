@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.10.0 — lot 1 : clair, réglages, règle de l'Elo
+- **Apparence claire par défaut**, même si l'iPhone est en sombre (plus de menus noirs). Réglage « Clair / Sombre / Comme l'iPhone ». Les écrans violets immersifs ne changent pas.
+- **Barre du bas** : elle ne cache plus les dernières lignes (Jouer, 5 du jour, Amis, Profil, fiches domaine, ligues), quelle que soit la taille d'écran ou de texte (hauteur mesurée).
+- **Réglages** : vraie page Brainlix ouverte depuis le Profil. Pseudo, apparence, notifications, vibrations, tranche d'âge, compte, aide et pages légales, version. Enregistrement immédiat (plus de bouton « OK » qui perdait les changements).
+- **Règle de l'Elo** : une partie classée couvre toujours tous les thèmes du domaine. Choisir des thèmes = entraînement libre. « Mes erreurs » ne fait plus bouger l'Elo mais garde ses récompenses pleines. Appliqué aussi par le serveur (migration 0021, y compris pour les anciennes versions de l'app).
+- **Jouer** : modes « Défi » et « Surprise » retirés (pour plus dur : entraînement libre en Expert). « Revoir mes erreurs » n'apparaît que s'il y en a.
+- **Avant la partie** : nouvel écran de lancement (type de partie, nom du domaine en grand, promesse, thèmes choisis, trois repères questions / difficulté / Elo en jeu) et compte à rebours 3-2-1 sur « Go » (sauté si « Réduire les animations »).
+
 ## 0.9.5 — questions difficiles
 - +144 questions de niveau 70 à 85 (`content/questions/lot_v7_hard.json`) pour les thèmes qui en manquaient (français, Antiquité, Moyen Âge, sciences, corps humain, nature, architecture, mythologies, musique classique, sport, tech, cinéma, géographie, suites logiques) : **5 293 questions**. Doublons avec les questions « expert » et Wikidata retirés.
 

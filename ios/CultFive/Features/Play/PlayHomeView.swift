@@ -1,7 +1,7 @@
 import SwiftUI
 import CultFiveCore
 
-/// Jouer : compact et coloré. Une grande carte « Partie rapide », trois pastilles de modes, puis les domaines
+/// Jouer : compact et coloré. Une grande carte « Partie rapide », « Mes erreurs » quand il y en a, puis les domaines
 /// en grille de 3 cases pleines (couleur du domaine, pictogramme, cote ou placement) : presque tout tient sur un écran.
 struct PlayHomeView: View {
     @Environment(AppModel.self) private var app
@@ -22,7 +22,7 @@ struct PlayHomeView: View {
                     domainsIndex
                 }
                 .padding(.horizontal, Space.gutter)
-                .padding(.bottom, Space.xxl)
+                .padding(.bottom, Space.l)
             }
             .scrollIndicators(.hidden)
             .background(Color.paper)
@@ -75,15 +75,10 @@ struct PlayHomeView: View {
         let errors = app.profile?.activeErrors ?? 0
         return VStack(spacing: 10) {
             QuickPlayCard { playConfig = PlayConfig(mode: .quick) }
-            HStack(spacing: 10) {
-                ModePill(title: "Surprise", symbol: "dice.fill", tint: Color(hex: 0xE8457E)) {
-                    playConfig = PlayConfig(mode: .surprise)
-                }
-                ModePill(title: "Défi", symbol: "flame.fill", tint: Color(hex: 0xF76707)) {
-                    playConfig = PlayConfig(mode: .challenge)
-                }
-                ModePill(title: "Erreurs", symbol: "arrow.uturn.backward", tint: Color(hex: 0x0CA678),
-                         badge: errors > 0 ? "\(errors)" : nil, isEnabled: errors > 0) {
+            // Plus dur ? L'entraînement libre d'un domaine, en difficulté Expert. Plus de modes « Défi » ni « Surprise ».
+            if errors > 0 {
+                ModePill(title: "Revoir mes erreurs", symbol: "arrow.uturn.backward", tint: Color(hex: 0x0CA678),
+                         badge: "\(errors)") {
                     playConfig = PlayConfig(mode: .errors)
                 }
             }

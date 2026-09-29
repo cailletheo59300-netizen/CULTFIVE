@@ -1,8 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Choix de la partie dans un domaine : partie classée (adaptative, compte pour le niveau) ou entraînement libre
-/// (nombre de questions, chrono, difficulté au choix, sans effet sur le niveau). Sous-thèmes : tout mélanger, un ou plusieurs.
+/// Choix de la partie dans un domaine : partie classée (adaptative, tous les thèmes du domaine, compte pour l'Elo)
+/// ou entraînement libre (thèmes, nombre de questions, chrono et difficulté au choix, sans effet sur l'Elo).
 /// Le parent lance la partie dans le `onDismiss` de la feuille (pas de présentation pendant une fermeture).
 struct PlaySetupSheet: View {
     let domainId: String
@@ -34,8 +34,10 @@ struct PlaySetupSheet: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
                     kindPicker
-                    if themes.count > 1 { themePicker }
-                    if !ranked { freeOptions }
+                    if !ranked {
+                        if themes.count > 1 { themePicker }
+                        freeOptions
+                    }
                 }
                 .padding(Space.gutter)
             }
@@ -55,6 +57,7 @@ struct PlaySetupSheet: View {
         .presentationDragIndicator(.visible)
         .task {
             selected = Set(preselected)
+            if !preselected.isEmpty { ranked = false }
             if let stats = try? await app.service.domainStats(domainId) {
                 available = Dictionary(uniqueKeysWithValues: stats.subdomains.map { ($0.id, $0.available) })
             }
@@ -92,9 +95,9 @@ struct PlaySetupSheet: View {
     private var kindPicker: some View {
         VStack(spacing: 10) {
             kindCard(ranked: true, title: "Partie classée", symbol: "chart.line.uptrend.xyaxis",
-                     detail: "10 questions à la limite de ton niveau : environ une sur deux est un vrai défi. Ton Elo et tes graines évoluent.")
+                     detail: "10 questions sur tous les thèmes du domaine, à la limite de ton niveau. Ton Elo et tes graines évoluent.")
             kindCard(ranked: false, title: "Entraînement libre", symbol: "slider.horizontal.3",
-                     detail: "Nombre de questions, chrono et difficulté au choix. Sans effet sur ton Elo.")
+                     detail: "Thèmes, nombre de questions, chrono et difficulté au choix. Sans effet sur ton Elo.")
         }
     }
 
@@ -187,7 +190,7 @@ struct PlaySetupSheet: View {
     }
 
     private func start() {
-        let config = PlayConfig(mode: .training, domain: domainId, subdomains: Array(selected).sorted(),
+        let config = PlayConfig(mode: .training, domain: domainId, subdomains: ranked ? [] : Array(selected).sorted(),
                                 count: ranked ? 10 : count, ranked: ranked, level: ranked ? .adaptive : level,
                                 timer: !ranked && timed ? 20 : nil)
         dismiss()
