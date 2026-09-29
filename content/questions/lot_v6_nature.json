@@ -1,0 +1,1507 @@
+[
+ {
+  "key": "nab-001",
+  "concept": "nature.earth.stalactite",
+  "label": "Stalactite",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans une grotte, qu'est-ce qu'une stalactite ?",
+  "options": [
+   "Une concrétion qui pend du plafond*",
+   "Une concrétion qui monte du sol",
+   "Une chauve-souris",
+   "Un lac souterrain"
+  ],
+  "explanation": "Moyen mnémotechnique : les stalactites « tombent », les stalagmites « montent ».",
+  "hint": "Elle « tombe »."
+ },
+ {
+  "key": "nab-002",
+  "concept": "nature.earth.delta",
+  "label": "Delta",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'un delta ?",
+  "options": [
+   "Une embouchure où le fleuve se divise en plusieurs bras*",
+   "Une chute d'eau",
+   "Un lac de montagne",
+   "Une source"
+  ],
+  "explanation": "Le fleuve dépose ses alluvions et forme un triangle, comme la lettre grecque Δ. Exemples : Nil, Rhône (Camargue).",
+  "hint": "Comme la lettre grecque."
+ },
+ {
+  "key": "nab-003",
+  "concept": "nature.earth.estuaire",
+  "label": "Estuaire",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qu'un estuaire ?",
+  "options": [
+   "Une embouchure large où la mer remonte*",
+   "Un bras mort de rivière",
+   "Un glacier",
+   "Une île fluviale"
+  ],
+  "explanation": "La marée y pénètre profondément, comme dans l'estuaire de la Gironde ou de la Seine.",
+  "hint": "La marée y entre."
+ },
+ {
+  "key": "nab-004",
+  "concept": "nature.earth.fjord",
+  "label": "Fjord",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'un fjord ?",
+  "options": [
+   "Une ancienne vallée glaciaire envahie par la mer*",
+   "Un volcan sous-marin",
+   "Une plage de sable noir",
+   "Un lac salé"
+  ],
+  "explanation": "Typiques de la Norvège : des bras de mer étroits entre de hautes falaises.",
+  "hint": "Pense à la Norvège."
+ },
+ {
+  "key": "nab-005",
+  "concept": "nature.earth.atoll",
+  "label": "Atoll",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qu'un atoll ?",
+  "options": [
+   "Une île de corail en forme d'anneau autour d'un lagon*",
+   "Un volcan actif",
+   "Un banc de sable",
+   "Une presqu'île rocheuse"
+  ],
+  "explanation": "Il se forme autour d'un volcan qui s'est enfoncé dans l'océan, comme en Polynésie ou aux Maldives.",
+  "hint": "Un anneau autour d'un lagon."
+ },
+ {
+  "key": "nab-006",
+  "concept": "nature.earth.erosion",
+  "label": "Érosion",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce que l'érosion ?",
+  "options": [
+   "L'usure du relief par l'eau, le vent ou la glace*",
+   "La formation des volcans",
+   "Le réchauffement de l'air",
+   "La pousse des forêts"
+  ],
+  "explanation": "C'est l'érosion qui a creusé le Grand Canyon, sur des millions d'années.",
+  "hint": "Le Grand Canyon en est un exemple."
+ },
+ {
+  "key": "nab-007",
+  "concept": "nature.earth.cumulonimbus",
+  "label": "Cumulonimbus",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel nuage, en forme d'enclume, annonce un orage ?",
+  "options": [
+   "Le cumulonimbus*",
+   "Le cirrus",
+   "Le stratus",
+   "L'altocumulus"
+  ],
+  "explanation": "Il peut s'élever jusqu'à plus de 10 km d'altitude et apporter éclairs, grêle et averses violentes.",
+  "hint": "Une tour en forme d'enclume."
+ },
+ {
+  "key": "nab-008",
+  "concept": "nature.earth.instruments_meteo",
+  "label": "Instruments météo",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque instrument à ce qu'il mesure.",
+  "pairs": [
+   [
+    "Thermomètre",
+    "La température"
+   ],
+   [
+    "Anémomètre",
+    "La vitesse du vent"
+   ],
+   [
+    "Hygromètre",
+    "L'humidité"
+   ],
+   [
+    "Pluviomètre",
+    "La quantité de pluie"
+   ]
+  ],
+  "explanation": "Anemos = vent, hygros = humide en grec. Le baromètre, lui, mesure la pression.",
+  "hint": "Anemos = vent."
+ },
+ {
+  "key": "nab-009",
+  "concept": "nature.earth.derive_des_continents",
+  "label": "Dérive des continents",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a proposé, en 1912, l'idée que les continents se déplacent ?",
+  "options": [
+   "Alfred Wegener*",
+   "Charles Darwin",
+   "Albert Einstein",
+   "Louis Agassiz"
+  ],
+  "explanation": "Il remarque que l'Afrique et l'Amérique du Sud s'emboîtent. Son idée n'est acceptée qu'avec la tectonique des plaques, dans les années 1960.",
+  "hint": "Un météorologue allemand."
+ },
+ {
+  "key": "nab-010",
+  "concept": "nature.earth.mistral",
+  "label": "Mistral",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que le mistral ?",
+  "options": [
+   "Un vent du nord qui descend la vallée du Rhône*",
+   "Un vent chaud venu du Sahara",
+   "Une tempête tropicale",
+   "Une brise de mer"
+  ],
+  "explanation": "Froid et sec, il souffle souvent plusieurs jours et dégage le ciel de Provence.",
+  "hint": "Il souffle en Provence."
+ },
+ {
+  "key": "nab-011",
+  "concept": "nature.earth.grele",
+  "label": "Grêle",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce que la grêle ?",
+  "options": [
+   "Des grains de glace qui tombent pendant un orage*",
+   "De la neige fondue",
+   "Du brouillard gelé",
+   "De la rosée"
+  ],
+  "explanation": "Les gouttes montent et descendent dans le nuage d'orage et se couvrent de couches de glace successives.",
+  "hint": "De la glace."
+ },
+ {
+  "key": "nab-012",
+  "concept": "nature.earth.rosee",
+  "label": "Rosée",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "D'où vient la rosée du matin ?",
+  "options": [
+   "De la vapeur d'eau de l'air qui se condense au froid*",
+   "De la pluie de la nuit",
+   "De la sève des plantes",
+   "De la mer"
+  ],
+  "explanation": "La nuit, l'herbe se refroidit et l'humidité de l'air se dépose en gouttelettes.",
+  "hint": "Comme la buée sur une vitre."
+ },
+ {
+  "key": "nab-013",
+  "concept": "nature.earth.pergelisol",
+  "label": "Pergélisol",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que le pergélisol (permafrost) ?",
+  "options": [
+   "Un sol gelé en permanence*",
+   "Une neige éternelle",
+   "Un glacier de montagne",
+   "Une banquise"
+  ],
+  "explanation": "Il couvre environ un quart des terres de l'hémisphère Nord. En dégelant, il libère du méthane.",
+  "hint": "Gelé toute l'année."
+ },
+ {
+  "key": "nab-014",
+  "concept": "nature.earth.calotte_du_groenland",
+  "label": "Calotte du Groenland",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où se trouve la deuxième plus grande calotte glaciaire du monde ?",
+  "options": [
+   "Au Groenland*",
+   "En Islande",
+   "En Sibérie",
+   "Dans l'Himalaya"
+  ],
+  "explanation": "Après celle de l'Antarctique. Sa fonte complète ferait monter les mers d'environ 7 mètres.",
+  "hint": "Une grande île arctique."
+ },
+ {
+  "key": "nab-015",
+  "concept": "nature.earth.mousson",
+  "label": "Mousson",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que la mousson ?",
+  "options": [
+   "Un vent saisonnier qui apporte de fortes pluies*",
+   "Un désert de sel",
+   "Un courant marin froid",
+   "Une éruption volcanique"
+  ],
+  "explanation": "En Inde et en Asie du Sud, la mousson d'été est vitale pour l'agriculture.",
+  "hint": "Pense à l'Inde."
+ },
+ {
+  "key": "nab-016",
+  "concept": "nature.earth.tornade",
+  "label": "Tornade",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'une tornade ?",
+  "options": [
+   "Un tourbillon de vent violent qui touche le sol*",
+   "Un cyclone de plusieurs centaines de km",
+   "Une vague géante",
+   "Une tempête de sable"
+  ],
+  "explanation": "Bien plus petite qu'un cyclone, elle peut dépasser 300 km/h. Les États-Unis en connaissent le plus.",
+  "hint": "Plus petit qu'un cyclone."
+ },
+ {
+  "key": "nab-017",
+  "concept": "nature.earth.sismographe",
+  "label": "Sismographe",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel instrument enregistre les tremblements de terre ?",
+  "options": [
+   "Le sismographe*",
+   "Le baromètre",
+   "Le gyroscope",
+   "L'altimètre"
+  ],
+  "explanation": "Seismos signifie « secousse » en grec.",
+  "hint": "Seismos = secousse."
+ },
+ {
+  "key": "nab-018",
+  "concept": "nature.earth.epicentre",
+  "label": "Épicentre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce que l'épicentre d'un séisme ?",
+  "options": [
+   "Le point en surface situé au-dessus du foyer*",
+   "Le point le plus profond",
+   "La faille elle-même",
+   "La ville la plus touchée"
+  ],
+  "explanation": "Le foyer (ou hypocentre) est en profondeur ; l'épicentre est sa projection à la surface.",
+  "hint": "Épi = au-dessus."
+ },
+ {
+  "key": "nab-019",
+  "concept": "nature.earth.granite",
+  "label": "Granite",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment se forme le granite ?",
+  "options": [
+   "Par refroidissement lent de magma en profondeur*",
+   "Par accumulation de coquillages",
+   "Par compression de sable",
+   "Par refroidissement rapide de lave"
+  ],
+  "explanation": "Refroidi lentement, il forme de gros cristaux visibles. La lave refroidie vite en surface donne du basalte.",
+  "hint": "Il a de gros cristaux."
+ },
+ {
+  "key": "nab-020",
+  "concept": "nature.earth.calcaire",
+  "label": "Calcaire",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quoi est formé le calcaire ?",
+  "options": [
+   "De restes de coquillages et d'organismes marins*",
+   "De lave refroidie",
+   "De sable fondu",
+   "De charbon"
+  ],
+  "explanation": "Des squelettes calcaires accumulés au fond des mers anciennes, puis compactés. La craie en est une variété.",
+  "hint": "Des fonds marins anciens."
+ },
+ {
+  "key": "nab-021",
+  "concept": "nature.earth.origine_du_charbon",
+  "label": "Origine du charbon",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "D'où vient le charbon ?",
+  "options": [
+   "De végétaux enfouis il y a des millions d'années*",
+   "De roches volcaniques",
+   "De cadavres de dinosaures",
+   "De la lave refroidie"
+  ],
+  "explanation": "Des forêts de marécages se sont décomposées sans oxygène, surtout il y a environ 300 millions d'années.",
+  "hint": "D'anciennes forêts."
+ },
+ {
+  "key": "nab-022",
+  "concept": "nature.earth.origine_du_petrole",
+  "label": "Origine du pétrole",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Le pétrole provient surtout…",
+  "options": [
+   "de plancton et d'organismes marins enfouis*",
+   "de dinosaures",
+   "de forêts brûlées",
+   "de roches volcaniques"
+  ],
+  "explanation": "La matière organique, enfouie et chauffée pendant des millions d'années, se transforme en hydrocarbures.",
+  "hint": "De minuscules organismes marins."
+ },
+ {
+  "key": "nab-023",
+  "concept": "nature.earth.cycle_de_l_eau",
+  "label": "Cycle de l'eau",
+  "type": "ordering",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre ces étapes du cycle de l'eau.",
+  "items": [
+   "Évaporation",
+   "Condensation en nuages",
+   "Précipitations",
+   "Ruissellement vers la mer"
+  ],
+  "explanation": "Le soleil évapore l'eau, qui se condense en nuages, retombe en pluie et regagne la mer par les rivières.",
+  "hint": "Tout commence avec le soleil."
+ },
+ {
+  "key": "nab-024",
+  "concept": "nature.earth.troposphere",
+  "label": "Troposphère",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quelle couche de l'atmosphère vivons-nous et se forme la météo ?",
+  "options": [
+   "La troposphère*",
+   "La stratosphère",
+   "La mésosphère",
+   "La thermosphère"
+  ],
+  "explanation": "Elle s'élève à environ 10-15 km. La stratosphère au-dessus contient la couche d'ozone.",
+  "hint": "La plus basse."
+ },
+ {
+  "key": "nab-025",
+  "concept": "nature.earth.origine_du_vent",
+  "label": "Origine du vent",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi le vent souffle-t-il ?",
+  "options": [
+   "L'air va des hautes pressions vers les basses pressions*",
+   "À cause de la rotation de la Lune",
+   "Parce que les arbres bougent",
+   "À cause des marées"
+  ],
+  "explanation": "Les différences de température créent des différences de pression ; l'air se déplace pour les équilibrer.",
+  "hint": "Une question de pression."
+ },
+ {
+  "key": "nab-026",
+  "concept": "nature.marine.defenses_du_morse",
+  "label": "Défenses du morse",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel animal marin porte deux longues défenses ?",
+  "options": [
+   "Le morse*",
+   "Le phoque",
+   "Le lamantin",
+   "L'otarie"
+  ],
+  "explanation": "Il s'en sert pour se hisser sur la glace et pour se battre. Mâles et femelles en ont.",
+  "hint": "Il vit dans l'Arctique."
+ },
+ {
+  "key": "nab-027",
+  "concept": "nature.marine.groupes_d_animaux_marins",
+  "label": "Groupes d'animaux marins",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque animal à son groupe.",
+  "pairs": [
+   [
+    "Homard",
+    "Crustacé"
+   ],
+   [
+    "Moule",
+    "Mollusque"
+   ],
+   [
+    "Oursin",
+    "Échinoderme"
+   ],
+   [
+    "Méduse",
+    "Cnidaire"
+   ]
+  ],
+  "explanation": "L'oursin est cousin de l'étoile de mer ; la méduse, du corail et de l'anémone.",
+  "hint": "L'oursin est cousin de l'étoile de mer."
+ },
+ {
+  "key": "nab-028",
+  "concept": "nature.marine.mer_des_sargasses",
+  "label": "Mer des Sargasses",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Où les anguilles d'Europe vont-elles se reproduire ?",
+  "options": [
+   "Dans la mer des Sargasses*",
+   "Dans la mer Noire",
+   "Dans les lacs alpins",
+   "En Méditerranée"
+  ],
+  "explanation": "Au milieu de l'Atlantique. Les larves traversent l'océan pendant des mois pour rejoindre les rivières d'Europe.",
+  "hint": "Au milieu de l'Atlantique."
+ },
+ {
+  "key": "nab-029",
+  "concept": "nature.marine.poisson_lune",
+  "label": "Poisson-lune",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le plus lourd des poissons osseux ?",
+  "options": [
+   "Le poisson-lune (môle)*",
+   "Le thon rouge",
+   "L'espadon",
+   "Le mérou"
+  ],
+  "explanation": "Il peut dépasser 2 tonnes. Les requins, plus lourds, ont un squelette de cartilage.",
+  "hint": "Un poisson tout rond."
+ },
+ {
+  "key": "nab-030",
+  "concept": "nature.marine.requin_marteau",
+  "label": "Requin-marteau",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quoi sert la tête en forme de marteau du requin-marteau ?",
+  "options": [
+   "À mieux détecter ses proies*",
+   "À casser les coquillages",
+   "À nager plus vite",
+   "À se défendre"
+  ],
+  "explanation": "Ses yeux écartés et ses capteurs électriques, répartis sur la largeur, repèrent les proies cachées dans le sable.",
+  "hint": "Des capteurs plus écartés."
+ },
+ {
+  "key": "nab-031",
+  "concept": "nature.marine.bras_de_la_pieuvre",
+  "label": "Bras de la pieuvre",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Combien de bras a une pieuvre ?",
+  "options": [
+   "8*",
+   "6",
+   "10",
+   "12"
+  ],
+  "explanation": "Octopus signifie « huit pieds ». Le calmar et la seiche ont en plus deux tentacules.",
+  "hint": "Octo = huit."
+ },
+ {
+  "key": "nab-032",
+  "concept": "nature.marine.os_de_seiche",
+  "label": "Os de seiche",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que l'« os de seiche » qu'on trouve sur les plages ?",
+  "options": [
+   "Sa coquille interne*",
+   "Sa mâchoire",
+   "Un fossile",
+   "Une algue séchée"
+  ],
+  "explanation": "Cette coquille poreuse l'aide à flotter. On la donne aux oiseaux en cage pour le calcium.",
+  "hint": "Elle l'aide à flotter."
+ },
+ {
+  "key": "nab-033",
+  "concept": "nature.marine.chant_des_baleines_a_bosse",
+  "label": "Chant des baleines à bosse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle baleine est célèbre pour ses longs chants ?",
+  "options": [
+   "La baleine à bosse*",
+   "La baleine bleue",
+   "Le cachalot",
+   "Le béluga"
+  ],
+  "explanation": "Les mâles chantent des mélodies complexes qui peuvent durer des heures et évoluent au fil des années.",
+  "hint": "Elle saute souvent hors de l'eau."
+ },
+ {
+  "key": "nab-034",
+  "concept": "nature.marine.cachalot",
+  "label": "Cachalot",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel animal possède le plus gros cerveau du règne animal ?",
+  "options": [
+   "Le cachalot*",
+   "La baleine bleue",
+   "L'éléphant",
+   "L'orque"
+  ],
+  "explanation": "Environ 8 kg. Ce plongeur peut descendre à plus de 1 000 m pour chasser les calmars géants.",
+  "hint": "Il chasse les calmars géants."
+ },
+ {
+  "key": "nab-035",
+  "concept": "nature.marine.maree_noire",
+  "label": "Marée noire",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'une marée noire ?",
+  "options": [
+   "Une pollution de la mer par du pétrole*",
+   "Une marée de nuit",
+   "Une invasion d'algues",
+   "Une éruption sous-marine"
+  ],
+  "explanation": "En France, le naufrage de l'Erika (1999) a souillé les côtes bretonnes et vendéennes.",
+  "hint": "Du pétrole en mer."
+ },
+ {
+  "key": "nab-036",
+  "concept": "nature.marine.mangrove",
+  "label": "Mangrove",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'une mangrove ?",
+  "options": [
+   "Une forêt de palétuviers en bord de mer tropicale*",
+   "Un récif de corail",
+   "Un lagon",
+   "Une prairie sous-marine"
+  ],
+  "explanation": "Leurs racines en échasses, dans l'eau salée, abritent de nombreux jeunes poissons et protègent les côtes.",
+  "hint": "Des arbres les pieds dans l'eau salée."
+ },
+ {
+  "key": "nab-037",
+  "concept": "nature.marine.manchot_des_galapagos",
+  "label": "Manchot des Galápagos",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel manchot vit tout près de l'équateur ?",
+  "options": [
+   "Le manchot des Galápagos*",
+   "Le manchot empereur",
+   "Le manchot royal",
+   "Le manchot Adélie"
+  ],
+  "explanation": "Un courant froid venu du sud lui permet de vivre sous l'équateur, exception chez les manchots.",
+  "hint": "Sur des îles célèbres pour Darwin."
+ },
+ {
+  "key": "nab-038",
+  "concept": "nature.marine.elephant_de_mer",
+  "label": "Éléphant de mer",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pourquoi l'éléphant de mer porte-t-il ce nom ?",
+  "options": [
+   "Le nez du mâle ressemble à une trompe*",
+   "Il a des défenses",
+   "Il est gris et ridé",
+   "Il barrit comme un éléphant"
+  ],
+  "explanation": "Le mâle gonfle son nez pour impressionner ses rivaux. Il peut dépasser 3 tonnes.",
+  "hint": "Regarde son nez."
+ },
+ {
+  "key": "nab-039",
+  "concept": "nature.marine.espadon",
+  "label": "Espadon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel poisson a la mâchoire supérieure allongée en forme d'épée ?",
+  "options": [
+   "L'espadon*",
+   "Le barracuda",
+   "Le brochet",
+   "Le requin-scie"
+  ],
+  "explanation": "Il s'en sert pour frapper les bancs de poissons. Le requin-scie, lui, a un rostre garni de dents.",
+  "hint": "Son nom évoque l'épée."
+ },
+ {
+  "key": "nab-040",
+  "concept": "nature.marine.bioluminescence",
+  "label": "Bioluminescence",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment appelle-t-on la lumière produite par certains animaux des profondeurs ?",
+  "options": [
+   "La bioluminescence*",
+   "La fluorescence solaire",
+   "La phosphorescence minérale",
+   "L'électrolyse"
+  ],
+  "explanation": "Une réaction chimique produit de la lumière, pour attirer des proies ou tromper les prédateurs. La luciole fait de même.",
+  "hint": "Bio = vivant."
+ },
+ {
+  "key": "nab-041",
+  "concept": "nature.marine.tortue_luth",
+  "label": "Tortue luth",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle est la plus grande tortue du monde ?",
+  "options": [
+   "La tortue luth*",
+   "La tortue des Galápagos",
+   "La tortue verte",
+   "La tortue caouanne"
+  ],
+  "explanation": "Elle peut dépasser 2 m et 600 kg. Sa carapace est souple, couverte d'une peau épaisse.",
+  "hint": "Une tortue marine à carapace souple."
+ },
+ {
+  "key": "nab-042",
+  "concept": "nature.marine.forets_de_kelp",
+  "label": "Forêts de kelp",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce que le kelp ?",
+  "options": [
+   "Une grande algue formant des forêts sous-marines*",
+   "Un corail des mers froides",
+   "Un poisson des abysses",
+   "Un plancton lumineux"
+  ],
+  "explanation": "Ces algues brunes peuvent grandir de plusieurs dizaines de centimètres par jour.",
+  "hint": "Des forêts sous l'eau."
+ },
+ {
+  "key": "nab-043",
+  "concept": "nature.marine.meduse_sans_cerveau",
+  "label": "Méduse sans cerveau",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La méduse n'a pas de cerveau.",
+  "answer": true,
+  "explanation": "Elle possède un réseau de nerfs diffus mais pas de cerveau, et son corps est composé à 95 % d'eau.",
+  "hint": "Elle est surtout faite d'eau."
+ },
+ {
+  "key": "nab-044",
+  "concept": "nature.marine.etoile_de_mer_regenere",
+  "label": "Étoile de mer régénère",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Une étoile de mer peut faire repousser un bras perdu.",
+  "answer": true,
+  "explanation": "Certaines espèces peuvent même reformer une étoile entière à partir d'un bras et d'une partie du centre.",
+  "hint": "Elle se régénère."
+ },
+ {
+  "key": "nab-045",
+  "concept": "nature.marine.poisson_volant",
+  "label": "Poisson volant",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que fait un poisson volant ?",
+  "options": [
+   "Il plane au-dessus de l'eau grâce à ses nageoires*",
+   "Il vole comme un oiseau",
+   "Il saute d'un océan à l'autre",
+   "Il grimpe aux arbres"
+  ],
+  "explanation": "Il jaillit de l'eau pour échapper aux prédateurs et plane parfois sur plus de 100 m.",
+  "hint": "Il plane."
+ },
+ {
+  "key": "nab-046",
+  "concept": "nature.marine.beluga",
+  "label": "Béluga",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle baleine est surnommée la « baleine blanche » ?",
+  "options": [
+   "Le béluga*",
+   "Le narval",
+   "Le rorqual",
+   "L'orque"
+  ],
+  "explanation": "Blanc à l'âge adulte, très bavard, on le surnomme aussi le « canari des mers ».",
+  "hint": "Le « canari des mers »."
+ },
+ {
+  "key": "nab-047",
+  "concept": "nature.marine.zooxanthelles",
+  "label": "Zooxanthelles",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Avec quels organismes les coraux vivent-ils en association ?",
+  "options": [
+   "Des micro-algues*",
+   "Des bactéries du sable",
+   "Des poissons-clowns",
+   "Des éponges"
+  ],
+  "explanation": "Ces micro-algues (zooxanthelles) nourrissent le corail et lui donnent ses couleurs. Si elles partent, il blanchit.",
+  "hint": "Elles lui donnent ses couleurs."
+ },
+ {
+  "key": "nab-048",
+  "concept": "nature.marine.frequence_des_marees",
+  "label": "Fréquence des marées",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur les côtes françaises de l'Atlantique, combien de marées hautes y a-t-il environ par jour ?",
+  "options": [
+   "2*",
+   "1",
+   "4",
+   "6"
+  ],
+  "explanation": "Deux marées hautes et deux marées basses, décalées d'environ 50 minutes chaque jour.",
+  "hint": "Toutes les 12 heures environ."
+ },
+ {
+  "key": "nab-049",
+  "concept": "nature.plants.role_des_racines",
+  "label": "Rôle des racines",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le rôle principal des racines ?",
+  "options": [
+   "Puiser l'eau et les sels minéraux*",
+   "Produire l'oxygène",
+   "Attirer les insectes",
+   "Faire la photosynthèse"
+  ],
+  "explanation": "Elles fixent aussi la plante au sol.",
+  "hint": "Elles boivent."
+ },
+ {
+  "key": "nab-050",
+  "concept": "nature.plants.seve_elaboree",
+  "label": "Sève élaborée",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que transporte la sève élaborée ?",
+  "options": [
+   "Les sucres fabriqués par les feuilles*",
+   "L'eau puisée par les racines",
+   "Le pollen",
+   "L'oxygène"
+  ],
+  "explanation": "La sève brute monte des racines (eau et minéraux) ; la sève élaborée distribue les sucres produits par la photosynthèse.",
+  "hint": "Elle part des feuilles."
+ },
+ {
+  "key": "nab-051",
+  "concept": "nature.plants.germination",
+  "label": "Germination",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on le moment où une graine commence à pousser ?",
+  "options": [
+   "La germination*",
+   "La floraison",
+   "La pollinisation",
+   "La fructification"
+  ],
+  "explanation": "Il lui faut de l'eau, de l'air et une température adaptée.",
+  "hint": "La graine s'ouvre."
+ },
+ {
+  "key": "nab-052",
+  "concept": "nature.plants.olivier",
+  "label": "Olivier",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel arbre est un symbole de paix ?",
+  "options": [
+   "L'olivier*",
+   "Le chêne",
+   "Le cyprès",
+   "Le saule"
+  ],
+  "explanation": "Dans la Bible, la colombe revient vers Noé avec un rameau d'olivier. Il figure sur le drapeau de l'ONU.",
+  "hint": "Il est sur le drapeau de l'ONU."
+ },
+ {
+  "key": "nab-053",
+  "concept": "nature.plants.faine",
+  "label": "Faîne",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel arbre produit les faînes ?",
+  "options": [
+   "Le hêtre*",
+   "Le chêne",
+   "Le noisetier",
+   "Le châtaignier"
+  ],
+  "explanation": "De petits fruits triangulaires dans une bogue, dont se régalent sangliers et écureuils.",
+  "hint": "Un arbre des forêts de France."
+ },
+ {
+  "key": "nab-054",
+  "concept": "nature.plants.conifere",
+  "label": "Conifère",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un conifère ?",
+  "options": [
+   "Un arbre qui porte des cônes*",
+   "Un arbre qui perd ses feuilles",
+   "Un arbre fruitier",
+   "Un arbre tropical"
+  ],
+  "explanation": "Sapin, pin, épicéa, cèdre : la plupart gardent leurs aiguilles toute l'année.",
+  "hint": "Il porte des pommes de pin."
+ },
+ {
+  "key": "nab-055",
+  "concept": "nature.plants.meleze",
+  "label": "Mélèze",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le mélèze est un conifère qui perd ses aiguilles en hiver.",
+  "answer": true,
+  "explanation": "Une exception chez les conifères : ses aiguilles jaunissent en automne et tombent.",
+  "hint": "Une exception."
+ },
+ {
+  "key": "nab-056",
+  "concept": "nature.plants.baobab",
+  "label": "Baobab",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel arbre au tronc énorme stocke de grandes quantités d'eau ?",
+  "options": [
+   "Le baobab*",
+   "Le palmier",
+   "Le séquoia",
+   "Le cèdre"
+  ],
+  "explanation": "Il vit en Afrique, à Madagascar et en Australie, et peut vivre plus de mille ans.",
+  "hint": "L'arbre du Petit Prince."
+ },
+ {
+  "key": "nab-057",
+  "concept": "nature.plants.epines_du_rosier",
+  "label": "Épines du rosier",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Au sens botanique, le rosier porte des épines.",
+  "answer": false,
+  "explanation": "Ce sont des aiguillons : ils naissent de l'écorce et se détachent facilement. Les vraies épines (aubépine, cactus) sont des organes modifiés.",
+  "hint": "Elles se détachent facilement."
+ },
+ {
+  "key": "nab-058",
+  "concept": "nature.plants.ortie",
+  "label": "Ortie",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pourquoi l'ortie pique-t-elle ?",
+  "options": [
+   "Ses poils injectent un liquide irritant*",
+   "Elle a des épines",
+   "Elle est électrique",
+   "Elle contient du piment"
+  ],
+  "explanation": "Des poils très fins se brisent au contact de la peau et libèrent un liquide irritant.",
+  "hint": "De minuscules poils."
+ },
+ {
+  "key": "nab-059",
+  "concept": "nature.plants.muguet",
+  "label": "Muguet",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle fleur offre-t-on traditionnellement le 1er mai en France ?",
+  "options": [
+   "Le muguet*",
+   "La rose",
+   "La tulipe",
+   "Le lilas"
+  ],
+  "explanation": "Il est censé porter bonheur. Attention : toute la plante est toxique.",
+  "hint": "Il porte bonheur."
+ },
+ {
+  "key": "nab-060",
+  "concept": "nature.plants.lavande",
+  "label": "Lavande",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle plante violette et parfumée fleurit dans les champs de Provence ?",
+  "options": [
+   "La lavande*",
+   "Le lilas",
+   "La violette",
+   "Le thym"
+  ],
+  "explanation": "Elle fleurit en été ; on en tire une huile essentielle très utilisée en parfumerie.",
+  "hint": "Elle parfume les armoires."
+ },
+ {
+  "key": "nab-061",
+  "concept": "nature.plants.dent_de_lion",
+  "label": "Dent-de-lion",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel autre nom donne-t-on au pissenlit ?",
+  "options": [
+   "La dent-de-lion*",
+   "La marguerite",
+   "Le bouton d'or",
+   "La pâquerette"
+  ],
+  "explanation": "À cause de ses feuilles dentelées. En anglais, « dandelion » vient du français.",
+  "hint": "À cause de ses feuilles."
+ },
+ {
+  "key": "nab-062",
+  "concept": "nature.plants.riz",
+  "label": "Riz",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle céréale nourrit plus de la moitié de l'humanité ?",
+  "options": [
+   "Le riz*",
+   "Le blé",
+   "Le maïs",
+   "L'orge"
+  ],
+  "explanation": "Il est la base de l'alimentation en Asie. On le cultive souvent dans des rizières inondées.",
+  "hint": "Il pousse dans l'eau."
+ },
+ {
+  "key": "nab-063",
+  "concept": "nature.plants.origine_du_mais",
+  "label": "Origine du maïs",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "D'où le maïs est-il originaire ?",
+  "options": [
+   "Du Mexique*",
+   "De Chine",
+   "D'Égypte",
+   "D'Inde"
+  ],
+  "explanation": "Domestiqué il y a environ 9 000 ans à partir d'une herbe sauvage, le téosinte.",
+  "hint": "D'Amérique."
+ },
+ {
+  "key": "nab-064",
+  "concept": "nature.plants.parties_de_la_fleur",
+  "label": "Parties de la fleur",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque partie de la fleur à son rôle.",
+  "pairs": [
+   [
+    "Pistil",
+    "Organe femelle"
+   ],
+   [
+    "Étamine",
+    "Organe mâle, porte le pollen"
+   ],
+   [
+    "Pétale",
+    "Attire les insectes"
+   ],
+   [
+    "Sépale",
+    "Protège le bouton"
+   ]
+  ],
+  "explanation": "Le pollen des étamines doit atteindre le pistil pour former une graine.",
+  "hint": "Le pollen vient des étamines."
+ },
+ {
+  "key": "nab-065",
+  "concept": "nature.plants.lichen",
+  "label": "Lichen",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qu'un lichen ?",
+  "options": [
+   "L'association d'un champignon et d'une algue*",
+   "Une mousse",
+   "Une fougère naine",
+   "Une moisissure"
+  ],
+  "explanation": "Le champignon apporte l'eau et un abri, l'algue fabrique les sucres. Les lichens sont sensibles à la pollution.",
+  "hint": "Deux êtres vivants associés."
+ },
+ {
+  "key": "nab-066",
+  "concept": "nature.plants.spores_de_fougere",
+  "label": "Spores de fougère",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment les fougères se reproduisent-elles ?",
+  "options": [
+   "Par des spores*",
+   "Par des graines",
+   "Par des fleurs",
+   "Par des bulbes"
+  ],
+  "explanation": "Les petits points bruns sous les feuilles contiennent les spores. Les fougères existaient bien avant les plantes à fleurs.",
+  "hint": "Regarde sous les feuilles."
+ },
+ {
+  "key": "nab-067",
+  "concept": "nature.plants.gui",
+  "label": "Gui",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Le gui qui pousse sur les arbres est…",
+  "options": [
+   "une plante parasite*",
+   "un champignon",
+   "un nid d'oiseau",
+   "une maladie"
+  ],
+  "explanation": "Il puise l'eau et les minéraux de l'arbre, mais fait lui-même sa photosynthèse. On s'embrasse dessous au Nouvel An.",
+  "hint": "On s'embrasse dessous."
+ },
+ {
+  "key": "nab-068",
+  "concept": "nature.plants.chene_liege",
+  "label": "Chêne-liège",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Avec l'écorce de quel arbre fabrique-t-on les bouchons ?",
+  "options": [
+   "Le chêne-liège*",
+   "Le bouleau",
+   "Le pin",
+   "Le hêtre"
+  ],
+  "explanation": "On la récolte tous les neuf ans environ, sans abattre l'arbre. Le Portugal en est le premier producteur.",
+  "hint": "Son nom le dit."
+ },
+ {
+  "key": "nab-069",
+  "concept": "nature.plants.sirop_d_erable",
+  "label": "Sirop d'érable",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel arbre tire-t-on le sirop que l'on verse sur les crêpes au Canada ?",
+  "options": [
+   "L'érable*",
+   "Le bouleau",
+   "Le chêne",
+   "Le noyer"
+  ],
+  "explanation": "On recueille la sève au printemps et on la fait bouillir : il faut environ 40 litres de sève pour 1 litre de sirop.",
+  "hint": "Sa feuille est sur le drapeau."
+ },
+ {
+  "key": "nab-070",
+  "concept": "nature.plants.theier",
+  "label": "Théier",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle plante proviennent les feuilles de thé ?",
+  "options": [
+   "Un camélia*",
+   "Une menthe",
+   "Un laurier",
+   "Un olivier"
+  ],
+  "explanation": "Le théier (Camellia sinensis) est un arbuste. Thé vert et thé noir viennent de la même plante, traitée différemment.",
+  "hint": "Une fleur ornementale bien connue."
+ },
+ {
+  "key": "nab-071",
+  "concept": "nature.plants.le_bananier",
+  "label": "Le bananier",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le bananier est un arbre.",
+  "answer": false,
+  "explanation": "C'est une herbe géante : son « tronc » est formé de feuilles enroulées et ne contient pas de bois.",
+  "hint": "Pas de bois."
+ },
+ {
+  "key": "nab-072",
+  "concept": "nature.plants.origine_de_la_pomme_de_terre",
+  "label": "Origine de la pomme de terre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "D'où la pomme de terre est-elle originaire ?",
+  "options": [
+   "Des Andes, en Amérique du Sud*",
+   "D'Irlande",
+   "D'Inde",
+   "De Russie"
+  ],
+  "explanation": "Rapportée en Europe au XVIe siècle, elle est popularisée en France par Parmentier au XVIIIe siècle.",
+  "hint": "Parmentier l'a popularisée."
+ },
+ {
+  "key": "nab-073",
+  "concept": "nature.plants.coquelicot_du_souvenir",
+  "label": "Coquelicot du souvenir",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle fleur rouge est le symbole du souvenir des soldats de 1914-1918 au Royaume-Uni ?",
+  "options": [
+   "Le coquelicot*",
+   "La rose",
+   "La tulipe",
+   "Le géranium"
+  ],
+  "explanation": "Il fleurissait sur les champs de bataille des Flandres. En France, c'est le bleuet.",
+  "hint": "En France, c'est le bleuet."
+ },
+ {
+  "key": "nab-074",
+  "concept": "nature.animals.plus_grand_felin",
+  "label": "Plus grand félin",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le plus grand félin du monde ?",
+  "options": [
+   "Le tigre*",
+   "Le lion",
+   "Le jaguar",
+   "Le léopard"
+  ],
+  "explanation": "Le tigre de Sibérie peut dépasser 300 kg.",
+  "hint": "Il est rayé."
+ },
+ {
+  "key": "nab-075",
+  "concept": "nature.animals.faucon_pelerin",
+  "label": "Faucon pèlerin",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel animal atteint la plus grande vitesse, en piqué ?",
+  "options": [
+   "Le faucon pèlerin*",
+   "Le guépard",
+   "L'aigle royal",
+   "L'espadon"
+  ],
+  "explanation": "Plus de 300 km/h en piqué pour fondre sur ses proies. Le guépard est le plus rapide au sol.",
+  "hint": "Un rapace."
+ },
+ {
+  "key": "nab-076",
+  "concept": "nature.animals.mouffette",
+  "label": "Mouffette",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel animal se défend en projetant un liquide nauséabond ?",
+  "options": [
+   "La mouffette*",
+   "Le blaireau",
+   "Le hérisson",
+   "Le raton laveur"
+  ],
+  "explanation": "Elle vise les yeux de ses agresseurs, jusqu'à plusieurs mètres. L'odeur tient des jours.",
+  "hint": "Noire et blanche."
+ },
+ {
+  "key": "nab-077",
+  "concept": "nature.animals.castor",
+  "label": "Castor",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel animal construit des barrages sur les rivières ?",
+  "options": [
+   "Le castor*",
+   "La loutre",
+   "Le ragondin",
+   "Le rat musqué"
+  ],
+  "explanation": "Il abat des arbres avec ses dents et bâtit des huttes dont l'entrée est sous l'eau.",
+  "hint": "Il ronge les arbres."
+ },
+ {
+  "key": "nab-078",
+  "concept": "nature.animals.taupe",
+  "label": "Taupe",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel petit mammifère creuse des galeries et fait des « monticules » dans les jardins ?",
+  "options": [
+   "La taupe*",
+   "Le mulot",
+   "Le hérisson",
+   "La musaraigne"
+  ],
+  "explanation": "Elle voit très mal mais possède d'énormes pattes avant en forme de pelles.",
+  "hint": "Elle voit très mal."
+ },
+ {
+  "key": "nab-079",
+  "concept": "nature.animals.chameau_et_dromadaire",
+  "label": "Chameau et dromadaire",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Combien de bosses a un chameau (de Bactriane) ?",
+  "options": [
+   "2*",
+   "1",
+   "3",
+   "0"
+  ],
+  "explanation": "Le chameau en a deux, le dromadaire une seule.",
+  "hint": "Le dromadaire en a une."
+ },
+ {
+  "key": "nab-080",
+  "concept": "nature.animals.bosse_du_dromadaire",
+  "label": "Bosse du dromadaire",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "La bosse du dromadaire est une réserve d'eau.",
+  "answer": false,
+  "explanation": "C'est une réserve de graisse, qui fournit de l'énergie. Le dromadaire résiste à la soif grâce à son organisme très économe en eau.",
+  "hint": "C'est une réserve d'énergie."
+ },
+ {
+  "key": "nab-081",
+  "concept": "nature.animals.oreilles_de_l_elephant_d_afrique",
+  "label": "Oreilles de l'éléphant d'Afrique",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment distinguer un éléphant d'Afrique d'un éléphant d'Asie ?",
+  "options": [
+   "L'éléphant d'Afrique a de plus grandes oreilles*",
+   "L'éléphant d'Afrique n'a pas de trompe",
+   "L'éléphant d'Asie est plus grand",
+   "L'éléphant d'Asie a deux trompes"
+  ],
+  "explanation": "Ses grandes oreilles, qui ont un peu la forme de l'Afrique, l'aident à évacuer la chaleur.",
+  "hint": "Regarde ses oreilles."
+ },
+ {
+  "key": "nab-082",
+  "concept": "nature.animals.gorille",
+  "label": "Gorille",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le plus grand des primates ?",
+  "options": [
+   "Le gorille*",
+   "Le chimpanzé",
+   "L'orang-outan",
+   "Le babouin"
+  ],
+  "explanation": "Un mâle adulte peut dépasser 180 kg. Il est pourtant essentiellement végétarien.",
+  "hint": "Le « dos argenté »."
+ },
+ {
+  "key": "nab-083",
+  "concept": "nature.animals.orang_outan",
+  "label": "Orang-outan",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Sur quelles îles vit l'orang-outan ?",
+  "options": [
+   "Bornéo et Sumatra*",
+   "Madagascar et Maurice",
+   "Java et Bali",
+   "Les Philippines"
+  ],
+  "explanation": "Son nom signifie « homme de la forêt » en malais. Il est menacé par la déforestation liée aux palmiers à huile.",
+  "hint": "En Indonésie et en Malaisie."
+ },
+ {
+  "key": "nab-084",
+  "concept": "nature.animals.paon",
+  "label": "Paon",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pourquoi le paon mâle fait-il la roue ?",
+  "options": [
+   "Pour séduire une femelle*",
+   "Pour se rafraîchir",
+   "Pour voler",
+   "Pour faire peur aux loups"
+  ],
+  "explanation": "Il déploie les plumes de sa queue ornées d'« yeux » et les fait vibrer.",
+  "hint": "Une parade."
+ },
+ {
+  "key": "nab-085",
+  "concept": "nature.animals.coucou",
+  "label": "Coucou",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle est la particularité du coucou ?",
+  "options": [
+   "Il pond dans le nid d'autres oiseaux*",
+   "Il vole à reculons",
+   "Il ne dort jamais",
+   "Il vit sous terre"
+  ],
+  "explanation": "Le poussin de coucou éjecte souvent les œufs de ses « parents adoptifs », qui le nourrissent sans rien remarquer.",
+  "hint": "Ses parents adoptifs l'élèvent."
+ },
+ {
+  "key": "nab-086",
+  "concept": "nature.animals.migration_des_hirondelles",
+  "label": "Migration des hirondelles",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Où les hirondelles de France passent-elles l'hiver ?",
+  "options": [
+   "En Afrique*",
+   "En Scandinavie",
+   "Dans des grottes",
+   "En Amérique"
+  ],
+  "explanation": "Elles parcourent des milliers de kilomètres et reviennent au printemps, souvent au même nid.",
+  "hint": "Au sud, au soleil."
+ },
+ {
+  "key": "nab-087",
+  "concept": "nature.animals.meute",
+  "label": "Meute",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment appelle-t-on un groupe de loups ?",
+  "options": [
+   "Une meute*",
+   "Un troupeau",
+   "Une harde",
+   "Un banc"
+  ],
+  "explanation": "La meute est une famille, menée par un couple reproducteur.",
+  "hint": "Aussi pour les chiens de chasse."
+ },
+ {
+  "key": "nab-088",
+  "concept": "nature.animals.reine_des_abeilles",
+  "label": "Reine des abeilles",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans une ruche, qui pond les œufs ?",
+  "options": [
+   "La reine*",
+   "Les ouvrières",
+   "Les faux bourdons",
+   "Toutes les abeilles"
+  ],
+  "explanation": "Elle peut pondre plus de 1 500 œufs par jour au printemps. Les faux bourdons sont les mâles.",
+  "hint": "Il n'y en a qu'une."
+ },
+ {
+  "key": "nab-089",
+  "concept": "nature.animals.mante_religieuse",
+  "label": "Mante religieuse",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel insecte femelle dévore parfois le mâle pendant ou après l'accouplement ?",
+  "options": [
+   "La mante religieuse*",
+   "La coccinelle",
+   "La libellule",
+   "La fourmi"
+  ],
+  "explanation": "Ce n'est pas systématique, surtout dans la nature. Elle doit son nom à ses pattes avant, qui semblent en prière.",
+  "hint": "Elle semble prier."
+ },
+ {
+  "key": "nab-090",
+  "concept": "nature.animals.pingouin_et_manchot",
+  "label": "Pingouin et manchot",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle est la grande différence entre le pingouin et le manchot ?",
+  "options": [
+   "Le pingouin peut voler*",
+   "Le manchot vit dans l'Arctique",
+   "Le pingouin ne sait pas nager",
+   "Le manchot est un mammifère"
+  ],
+  "explanation": "Le petit pingouin vit dans l'hémisphère Nord et vole. Le manchot, de l'hémisphère Sud, ne vole pas mais « vole » sous l'eau.",
+  "hint": "L'un des deux vole."
+ },
+ {
+  "key": "nab-091",
+  "concept": "nature.animals.coq_gaulois",
+  "label": "Coq gaulois",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel animal est un symbole de la France ?",
+  "options": [
+   "Le coq*",
+   "L'aigle",
+   "Le lion",
+   "L'ours"
+  ],
+  "explanation": "Un jeu de mots latin : gallus signifie à la fois « coq » et « Gaulois ».",
+  "hint": "Gallus en latin."
+ },
+ {
+  "key": "nab-092",
+  "concept": "nature.animals.rayures_du_zebre",
+  "label": "Rayures du zèbre",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Chaque zèbre a des rayures différentes de celles des autres.",
+  "answer": true,
+  "explanation": "Comme nos empreintes digitales, leur motif est unique à chaque individu.",
+  "hint": "Comme une empreinte digitale."
+ },
+ {
+  "key": "nab-093",
+  "concept": "nature.animals.lynx",
+  "label": "Lynx",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel félin sauvage d'Europe a des pinceaux de poils au bout des oreilles ?",
+  "options": [
+   "Le lynx*",
+   "Le chat sauvage",
+   "Le puma",
+   "L'ocelot"
+  ],
+  "explanation": "En France, il vit surtout dans le Jura, les Vosges et les Alpes, où il est revenu après avoir disparu.",
+  "hint": "Il vit dans le Jura."
+ },
+ {
+  "key": "nab-094",
+  "concept": "nature.animals.tatou",
+  "label": "Tatou",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel mammifère d'Amérique est protégé par une carapace ?",
+  "options": [
+   "Le tatou*",
+   "Le pangolin",
+   "Le hérisson",
+   "Le fourmilier"
+  ],
+  "explanation": "Certaines espèces peuvent se rouler en boule. Le pangolin, en Afrique et en Asie, est couvert d'écailles.",
+  "hint": "Il vit en Amérique."
+ }
+]

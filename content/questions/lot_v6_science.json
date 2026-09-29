@@ -1,0 +1,1548 @@
+[
+ {
+  "key": "scb-001",
+  "concept": "science.physics.unite_de_pression",
+  "label": "Unité de pression",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est l'unité de pression du Système international ?",
+  "options": [
+   "Le pascal*",
+   "Le bar",
+   "Le newton",
+   "Le joule"
+  ],
+  "explanation": "Du nom de Blaise Pascal. Un pascal est une pression faible : la pression atmosphérique vaut environ 100 000 Pa.",
+  "hint": "Un savant français du XVIIe siècle."
+ },
+ {
+  "key": "scb-002",
+  "concept": "science.physics.unite_de_charge_electrique",
+  "label": "Unité de charge électrique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle unité mesure une charge électrique ?",
+  "options": [
+   "Le coulomb*",
+   "Le volt",
+   "L'ohm",
+   "Le tesla"
+  ],
+  "explanation": "Un coulomb correspond à un courant de 1 ampère pendant 1 seconde.",
+  "hint": "Du nom de Charles-Augustin…"
+ },
+ {
+  "key": "scb-003",
+  "concept": "science.physics.inventeur_de_la_pile",
+  "label": "Inventeur de la pile",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a inventé la pile électrique, en 1800 ?",
+  "options": [
+   "Alessandro Volta*",
+   "Thomas Edison",
+   "André-Marie Ampère",
+   "Nikola Tesla"
+  ],
+  "explanation": "Un empilement de disques de zinc et de cuivre séparés par du carton imbibé d'eau salée : d'où le mot « pile ».",
+  "hint": "Il a donné son nom au volt."
+ },
+ {
+  "key": "scb-004",
+  "concept": "science.physics.poussee_d_archimede",
+  "label": "Poussée d'Archimède",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle force permet à un bateau de flotter ?",
+  "options": [
+   "La poussée d'Archimède*",
+   "La force centrifuge",
+   "Le magnétisme",
+   "La tension superficielle"
+  ],
+  "explanation": "Un corps plongé dans un liquide subit une poussée vers le haut égale au poids du liquide déplacé.",
+  "hint": "Eurêka !"
+ },
+ {
+  "key": "scb-005",
+  "concept": "science.physics.principe_d_inertie",
+  "label": "Principe d'inertie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Sans aucune force pour le freiner ni le pousser, un objet en mouvement…",
+  "options": [
+   "continue en ligne droite à vitesse constante*",
+   "finit par s'arrêter",
+   "accélère",
+   "se met à tourner"
+  ],
+  "explanation": "C'est le principe d'inertie (première loi de Newton). Sur Terre, les frottements finissent par arrêter les objets.",
+  "hint": "Pense à une sonde dans l'espace."
+ },
+ {
+  "key": "scb-006",
+  "concept": "science.physics.masse_sur_la_lune",
+  "label": "Masse sur la Lune",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Sur la Lune, notre masse est plus petite que sur Terre.",
+  "answer": false,
+  "explanation": "La masse (la quantité de matière) ne change pas. C'est le poids, la force d'attraction, qui est environ six fois plus faible.",
+  "hint": "Masse et poids, ce n'est pas pareil."
+ },
+ {
+  "key": "scb-007",
+  "concept": "science.physics.pesanteur_lunaire",
+  "label": "Pesanteur lunaire",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sur la Lune, on pèse environ…",
+  "options": [
+   "6 fois moins que sur Terre*",
+   "2 fois moins",
+   "100 fois moins",
+   "autant que sur Terre"
+  ],
+  "explanation": "La gravité lunaire vaut environ 1,6 m/s², contre 9,8 m/s² sur Terre. Un astronaute y fait des bonds.",
+  "hint": "Les astronautes y bondissent."
+ },
+ {
+  "key": "scb-008",
+  "concept": "science.physics.couleurs_primaires_de_la_lumiere",
+  "label": "Couleurs primaires de la lumière",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelles sont les trois couleurs primaires de la lumière, utilisées par les écrans ?",
+  "options": [
+   "Rouge, vert, bleu*",
+   "Rouge, jaune, bleu",
+   "Cyan, magenta, jaune",
+   "Blanc, noir, gris"
+  ],
+  "explanation": "Mélangés, ces trois faisceaux donnent du blanc (RVB). Rouge-jaune-bleu, ce sont les couleurs du peintre.",
+  "hint": "Le code « RVB »."
+ },
+ {
+  "key": "scb-009",
+  "concept": "science.physics.echo",
+  "label": "Écho",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un écho ?",
+  "options": [
+   "Un son réfléchi par un obstacle*",
+   "Un son très aigu",
+   "Un son amplifié par le vent",
+   "Un son qui voyage sous l'eau"
+  ],
+  "explanation": "Le son rebondit sur une paroi et revient vers nous avec un léger retard.",
+  "hint": "Il rebondit."
+ },
+ {
+  "key": "scb-010",
+  "concept": "science.physics.loupe",
+  "label": "Loupe",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel type de lentille est une loupe ?",
+  "options": [
+   "Une lentille convergente*",
+   "Une lentille divergente",
+   "Un miroir plan",
+   "Un prisme"
+  ],
+  "explanation": "Plus épaisse au centre, elle fait converger les rayons lumineux et grossit les objets proches.",
+  "hint": "Elle concentre la lumière."
+ },
+ {
+  "key": "scb-011",
+  "concept": "science.physics.changements_d_etat",
+  "label": "Changements d'état",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque changement d'état à son nom.",
+  "pairs": [
+   [
+    "Solide → liquide",
+    "Fusion"
+   ],
+   [
+    "Liquide → solide",
+    "Solidification"
+   ],
+   [
+    "Liquide → gaz",
+    "Vaporisation"
+   ],
+   [
+    "Gaz → liquide",
+    "Liquéfaction"
+   ]
+  ],
+  "explanation": "La glace fond (fusion), l'eau gèle (solidification), s'évapore (vaporisation) ; la buée sur une vitre est une liquéfaction, qu'on appelle aussi condensation.",
+  "hint": "La glace qui fond…"
+ },
+ {
+  "key": "scb-012",
+  "concept": "science.physics.cuillere_en_metal",
+  "label": "Cuillère en métal",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Pourquoi une cuillère en métal chauffe-t-elle vite dans une soupe chaude ?",
+  "options": [
+   "Le métal conduit bien la chaleur*",
+   "Le métal attire la chaleur",
+   "La soupe est magnétique",
+   "Le métal est plus léger"
+  ],
+  "explanation": "Les métaux sont de bons conducteurs thermiques ; le bois et le plastique, de mauvais.",
+  "hint": "Comme pour l'électricité."
+ },
+ {
+  "key": "scb-013",
+  "concept": "science.physics.energie_non_renouvelable",
+  "label": "Énergie non renouvelable",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Laquelle de ces sources d'énergie n'est pas renouvelable ?",
+  "options": [
+   "Le charbon*",
+   "Le vent",
+   "Le soleil",
+   "La marée"
+  ],
+  "explanation": "Le charbon s'est formé en des millions d'années : ses réserves s'épuisent.",
+  "hint": "Il faut des millions d'années pour en refaire."
+ },
+ {
+  "key": "scb-014",
+  "concept": "science.physics.fission_nucleaire",
+  "label": "Fission nucléaire",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel phénomène produit la chaleur dans une centrale nucléaire ?",
+  "options": [
+   "La fission de noyaux d'uranium*",
+   "La fusion de l'hydrogène",
+   "La combustion du charbon",
+   "La réaction chimique de l'eau"
+  ],
+  "explanation": "Les noyaux d'uranium se cassent en libérant de l'énergie, qui chauffe de l'eau et fait tourner une turbine.",
+  "hint": "On « casse » des noyaux."
+ },
+ {
+  "key": "scb-015",
+  "concept": "science.physics.energie_du_soleil",
+  "label": "Énergie du Soleil",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle réaction produit l'énergie du Soleil ?",
+  "options": [
+   "La fusion nucléaire*",
+   "La fission nucléaire",
+   "La combustion",
+   "Le magnétisme"
+  ],
+  "explanation": "Dans son cœur, à environ 15 millions de degrés, des noyaux d'hydrogène fusionnent pour former de l'hélium.",
+  "hint": "Des noyaux s'assemblent."
+ },
+ {
+  "key": "scb-016",
+  "concept": "science.physics.relativite",
+  "label": "Relativité",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel savant a formulé la théorie de la relativité ?",
+  "options": [
+   "Albert Einstein*",
+   "Isaac Newton",
+   "Stephen Hawking",
+   "Niels Bohr"
+  ],
+  "explanation": "Relativité restreinte en 1905, générale en 1915. Il reçoit pourtant le prix Nobel pour l'effet photoélectrique.",
+  "hint": "E = mc²."
+ },
+ {
+  "key": "scb-017",
+  "concept": "science.physics.rayons_x",
+  "label": "Rayons X",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a découvert les rayons X, en 1895 ?",
+  "options": [
+   "Wilhelm Röntgen*",
+   "Marie Curie",
+   "Henri Becquerel",
+   "Ernest Rutherford"
+  ],
+  "explanation": "La première radiographie montre la main de sa femme, avec sa bague. Il reçoit le premier prix Nobel de physique en 1901.",
+  "hint": "Un physicien allemand."
+ },
+ {
+  "key": "scb-018",
+  "concept": "science.physics.deux_nobel_de_marie_curie",
+  "label": "Deux Nobel de Marie Curie",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Marie Curie a reçu deux prix Nobel, dans deux sciences différentes.",
+  "answer": true,
+  "explanation": "Physique en 1903 (avec Pierre Curie et Henri Becquerel), chimie en 1911. Elle reste la seule dans ce cas.",
+  "hint": "Physique, puis chimie."
+ },
+ {
+  "key": "scb-019",
+  "concept": "science.physics.boussole",
+  "label": "Boussole",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi l'aiguille d'une boussole indique-t-elle le nord ?",
+  "options": [
+   "Elle s'aligne sur le champ magnétique terrestre*",
+   "Elle est attirée par l'étoile polaire",
+   "Elle suit la rotation de la Terre",
+   "Elle est attirée par le froid"
+  ],
+  "explanation": "L'aiguille aimantée s'oriente selon le champ magnétique de la Terre, dont le pôle nord magnétique est proche du pôle nord géographique.",
+  "hint": "Un aimant géant."
+ },
+ {
+  "key": "scb-020",
+  "concept": "science.physics.frottements",
+  "label": "Frottements",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle force ralentit un vélo en roue libre sur le plat ?",
+  "options": [
+   "Les frottements*",
+   "La poussée d'Archimède",
+   "La force centrifuge",
+   "Le magnétisme"
+  ],
+  "explanation": "Frottement de l'air et des pneus sur la route : sans eux, le vélo roulerait indéfiniment.",
+  "hint": "Air et route."
+ },
+ {
+  "key": "scb-021",
+  "concept": "science.physics.point_d_appui",
+  "label": "Point d'appui",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel savant aurait dit : « Donnez-moi un point d'appui et je soulèverai le monde » ?",
+  "options": [
+   "Archimède*",
+   "Galilée",
+   "Newton",
+   "Euclide"
+  ],
+  "explanation": "Il parlait du principe du levier : avec un bras assez long, une petite force soulève une lourde charge.",
+  "hint": "Le principe du levier."
+ },
+ {
+  "key": "scb-022",
+  "concept": "science.physics.pendule_de_foucault",
+  "label": "Pendule de Foucault",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a montré la rotation de la Terre avec un pendule au Panthéon de Paris, en 1851 ?",
+  "options": [
+   "Léon Foucault*",
+   "Blaise Pascal",
+   "Pierre-Simon Laplace",
+   "Louis Pasteur"
+  ],
+  "explanation": "Le plan d'oscillation du pendule semble tourner lentement : c'est la Terre qui tourne en dessous.",
+  "hint": "Un pendule porte son nom."
+ },
+ {
+  "key": "scb-023",
+  "concept": "science.physics.mur_du_son",
+  "label": "Mur du son",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que fait un avion qui « franchit le mur du son » ?",
+  "options": [
+   "Il va plus vite que le son*",
+   "Il atteint son altitude maximale",
+   "Il coupe ses moteurs",
+   "Il traverse un nuage"
+  ],
+  "explanation": "Au-delà d'environ 1 200 km/h au sol, il crée une onde de choc entendue comme un « bang ».",
+  "hint": "On entend un « bang »."
+ },
+ {
+  "key": "scb-024",
+  "concept": "science.physics.ultrasons",
+  "label": "Ultrasons",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on les sons trop aigus pour l'oreille humaine ?",
+  "options": [
+   "Les ultrasons*",
+   "Les infrasons",
+   "Les basses",
+   "Les harmoniques"
+  ],
+  "explanation": "Au-delà d'environ 20 000 Hz. Chauves-souris et dauphins les utilisent ; les échographies aussi.",
+  "hint": "Les chauves-souris les entendent."
+ },
+ {
+  "key": "scb-025",
+  "concept": "science.physics.pression_et_altitude",
+  "label": "Pression et altitude",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quand on monte en altitude, la pression de l'air…",
+  "options": [
+   "diminue*",
+   "augmente",
+   "reste la même",
+   "double"
+  ],
+  "explanation": "Il y a moins d'air au-dessus de nous. C'est pourquoi un paquet de chips gonfle en montagne.",
+  "hint": "Pense au paquet de chips."
+ },
+ {
+  "key": "scb-026",
+  "concept": "science.biology.vertebre",
+  "label": "Vertébré",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qu'est-ce qu'un vertébré ?",
+  "options": [
+   "Un animal qui a une colonne vertébrale*",
+   "Un animal qui vit dans l'eau",
+   "Un animal à sang froid",
+   "Un animal qui pond des œufs"
+  ],
+  "explanation": "Poissons, amphibiens, reptiles, oiseaux et mammifères sont des vertébrés. Insectes et escargots sont des invertébrés.",
+  "hint": "Pense aux vertèbres."
+ },
+ {
+  "key": "scb-027",
+  "concept": "science.biology.mutualisme",
+  "label": "Mutualisme",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment appelle-t-on une association où deux espèces tirent chacune un avantage ?",
+  "options": [
+   "Le mutualisme*",
+   "Le parasitisme",
+   "La prédation",
+   "La compétition"
+  ],
+  "explanation": "Exemple : l'abeille se nourrit du nectar et pollinise la fleur. On parle aussi de symbiose quand l'association est étroite.",
+  "hint": "Chacun y gagne."
+ },
+ {
+  "key": "scb-028",
+  "concept": "science.biology.parasite",
+  "label": "Parasite",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Un être vivant qui vit aux dépens d'un autre, en lui nuisant, est…",
+  "options": [
+   "un parasite*",
+   "un prédateur",
+   "un décomposeur",
+   "un symbiote"
+  ],
+  "explanation": "Le pou, le ténia ou le gui sont des parasites : ils prélèvent leur nourriture sur un hôte.",
+  "hint": "Comme le pou."
+ },
+ {
+  "key": "scb-029",
+  "concept": "science.biology.premier_maillon",
+  "label": "Premier maillon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans une chaîne alimentaire, qui est au premier maillon ?",
+  "options": [
+   "Les végétaux*",
+   "Les herbivores",
+   "Les carnivores",
+   "Les décomposeurs"
+  ],
+  "explanation": "Les plantes fabriquent leur matière grâce à la lumière ; elles sont mangées par les herbivores, eux-mêmes mangés par les carnivores.",
+  "hint": "Ils utilisent la lumière."
+ },
+ {
+  "key": "scb-030",
+  "concept": "science.biology.gene_recessif",
+  "label": "Gène récessif",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un caractère « récessif » (comme les yeux bleus) apparaît…",
+  "options": [
+   "seulement si l'on hérite du gène des deux parents*",
+   "toujours",
+   "seulement chez les garçons",
+   "seulement une génération sur deux"
+  ],
+  "explanation": "Un gène dominant masque le récessif : deux parents aux yeux marron peuvent avoir un enfant aux yeux bleus s'ils portent tous deux le gène.",
+  "hint": "Il faut deux exemplaires."
+ },
+ {
+  "key": "scb-031",
+  "concept": "science.biology.chromosomes_xy",
+  "label": "Chromosomes XY",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle paire de chromosomes sexuels porte en général un homme ?",
+  "options": [
+   "XY*",
+   "XX",
+   "YY",
+   "XXY"
+  ],
+  "explanation": "Les femmes ont en général deux chromosomes X, les hommes un X et un Y. C'est le père qui transmet X ou Y.",
+  "hint": "Les femmes ont XX."
+ },
+ {
+  "key": "scb-032",
+  "concept": "science.biology.brebis_dolly",
+  "label": "Brebis Dolly",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que la brebis Dolly, née en 1996 ?",
+  "options": [
+   "Le premier mammifère cloné à partir d'une cellule adulte*",
+   "Le premier animal envoyé dans l'espace",
+   "La brebis la plus âgée du monde",
+   "Un OGM résistant au froid"
+  ],
+  "explanation": "Née en Écosse, elle était la copie génétique de la brebis dont on avait prélevé une cellule.",
+  "hint": "Une copie génétique."
+ },
+ {
+  "key": "scb-033",
+  "concept": "science.biology.paroi_vegetale",
+  "label": "Paroi végétale",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que possèdent les cellules végétales, mais pas les cellules animales ?",
+  "options": [
+   "Une paroi rigide et des chloroplastes*",
+   "Un noyau",
+   "De l'ADN",
+   "Une membrane"
+  ],
+  "explanation": "La paroi de cellulose donne leur rigidité aux plantes ; les chloroplastes réalisent la photosynthèse.",
+  "hint": "Ce qui rend la plante rigide."
+ },
+ {
+  "key": "scb-034",
+  "concept": "science.biology.enzyme",
+  "label": "Enzyme",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qu'une enzyme ?",
+  "options": [
+   "Une protéine qui accélère une réaction chimique*",
+   "Une hormone de croissance",
+   "Un type de bactérie",
+   "Une vitamine"
+  ],
+  "explanation": "Dans la salive, l'amylase commence à digérer l'amidon. Sans enzymes, la digestion prendrait des années.",
+  "hint": "Un accélérateur biologique."
+ },
+ {
+  "key": "scb-035",
+  "concept": "science.biology.principe_du_vaccin",
+  "label": "Principe du vaccin",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment agit un vaccin ?",
+  "options": [
+   "Il apprend au système immunitaire à reconnaître un microbe*",
+   "Il tue directement les microbes",
+   "Il remplace les globules blancs",
+   "Il bloque toutes les maladies"
+  ],
+  "explanation": "Il présente au corps un microbe affaibli, inactivé ou une partie de celui-ci : en cas d'infection réelle, la défense est prête.",
+  "hint": "Un entraînement pour le corps."
+ },
+ {
+  "key": "scb-036",
+  "concept": "science.biology.anticorps",
+  "label": "Anticorps",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelles cellules fabriquent les anticorps ?",
+  "options": [
+   "Des globules blancs*",
+   "Les globules rouges",
+   "Les plaquettes",
+   "Les neurones"
+  ],
+  "explanation": "Certains lymphocytes (les lymphocytes B) produisent des anticorps qui neutralisent les microbes.",
+  "hint": "Les défenseurs du sang."
+ },
+ {
+  "key": "scb-037",
+  "concept": "science.biology.ecosysteme",
+  "label": "Écosystème",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un écosystème ?",
+  "options": [
+   "Un milieu et l'ensemble des êtres vivants qui y vivent*",
+   "Une espèce protégée",
+   "Un parc naturel",
+   "Un groupe d'animaux de la même espèce"
+  ],
+  "explanation": "Une mare, une forêt, un récif : les êtres vivants et leur milieu interagissent en permanence.",
+  "hint": "Le milieu + les vivants."
+ },
+ {
+  "key": "scb-038",
+  "concept": "science.biology.espece_invasive",
+  "label": "Espèce invasive",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel insecte, arrivé en France vers 2004, menace les abeilles ?",
+  "options": [
+   "Le frelon asiatique*",
+   "Le moustique tigre",
+   "Le doryphore",
+   "La coccinelle"
+  ],
+  "explanation": "Arrivé accidentellement, probablement dans des poteries importées de Chine, il chasse les abeilles devant les ruches.",
+  "hint": "Il chasse devant les ruches."
+ },
+ {
+  "key": "scb-039",
+  "concept": "science.biology.clacanthe",
+  "label": "Cœlacanthe",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel poisson, qu'on croyait disparu, a été redécouvert vivant en 1938 ?",
+  "options": [
+   "Le cœlacanthe*",
+   "Le requin-lutin",
+   "Le poisson-lune",
+   "L'esturgeon"
+  ],
+  "explanation": "On ne le connaissait que par des fossiles de plus de 66 millions d'années : un « fossile vivant ».",
+  "hint": "Un « fossile vivant »."
+ },
+ {
+  "key": "scb-040",
+  "concept": "science.biology.fin_des_dinosaures",
+  "label": "Fin des dinosaures",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Il y a environ combien d'années les dinosaures non aviens ont-ils disparu ?",
+  "options": [
+   "66 millions d'années*",
+   "6 millions d'années",
+   "660 000 ans",
+   "1 milliard d'années"
+  ],
+  "explanation": "Une météorite de près de 10 km tombe au Mexique (cratère de Chicxulub). Les oiseaux sont les descendants des dinosaures.",
+  "hint": "Bien avant les humains."
+ },
+ {
+  "key": "scb-041",
+  "concept": "science.biology.lucy",
+  "label": "Lucy",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui est Lucy, découverte en Éthiopie en 1974 ?",
+  "options": [
+   "Une australopithèque*",
+   "La première Homo sapiens",
+   "Une néandertalienne",
+   "Un singe actuel"
+  ],
+  "explanation": "Vieux d'environ 3,2 millions d'années, son squelette montre qu'elle marchait déjà debout.",
+  "hint": "Elle marchait debout."
+ },
+ {
+  "key": "scb-042",
+  "concept": "science.biology.apparition_d_homo_sapiens",
+  "label": "Apparition d'Homo sapiens",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Depuis combien de temps Homo sapiens existe-t-il, environ ?",
+  "options": [
+   "300 000 ans*",
+   "30 000 ans",
+   "3 millions d'années",
+   "10 000 ans"
+  ],
+  "explanation": "Les plus anciens fossiles connus, trouvés au Maroc (Djebel Irhoud), ont environ 300 000 ans.",
+  "hint": "Quelques centaines de milliers d'années."
+ },
+ {
+  "key": "scb-043",
+  "concept": "science.biology.structure_de_l_adn",
+  "label": "Structure de l'ADN",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a publié la structure en double hélice de l'ADN, en 1953 ?",
+  "options": [
+   "James Watson et Francis Crick*",
+   "Louis Pasteur et Robert Koch",
+   "Pierre et Marie Curie",
+   "Charles Darwin et Gregor Mendel"
+  ],
+  "explanation": "Leur découverte s'appuie sur les images de diffraction de Rosalind Franklin, longtemps oubliée.",
+  "hint": "Grâce aux images de Rosalind Franklin."
+ },
+ {
+  "key": "scb-044",
+  "concept": "science.biology.levure_du_pain",
+  "label": "Levure du pain",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel micro-organisme fait lever la pâte à pain ?",
+  "options": [
+   "La levure*",
+   "Une bactérie lactique",
+   "Un virus",
+   "Une algue"
+  ],
+  "explanation": "La levure est un champignon microscopique : en fermentant, elle produit du gaz carbonique qui fait gonfler la pâte.",
+  "hint": "Un champignon microscopique."
+ },
+ {
+  "key": "scb-045",
+  "concept": "science.biology.yaourt",
+  "label": "Yaourt",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qui transforme le lait en yaourt ?",
+  "options": [
+   "Des bactéries*",
+   "Des levures",
+   "La chaleur seule",
+   "Le sucre"
+  ],
+  "explanation": "Des bactéries lactiques consomment le sucre du lait et produisent de l'acide lactique, qui le fait épaissir.",
+  "hint": "Des micro-organismes « bons »."
+ },
+ {
+  "key": "scb-046",
+  "concept": "science.biology.mue_du_serpent",
+  "label": "Mue du serpent",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on le changement de peau d'un serpent ?",
+  "options": [
+   "La mue*",
+   "La métamorphose",
+   "L'éclosion",
+   "La desquamation"
+  ],
+  "explanation": "Le serpent se débarrasse de sa vieille peau d'un seul tenant, plusieurs fois par an.",
+  "hint": "On trouve parfois sa vieille peau."
+ },
+ {
+  "key": "scb-047",
+  "concept": "science.biology.ovipare",
+  "label": "Ovipare",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on un animal qui pond des œufs ?",
+  "options": [
+   "Ovipare*",
+   "Vivipare",
+   "Omnivore",
+   "Ovin"
+  ],
+  "explanation": "Du latin ovum (œuf) et parere (enfanter). Les mammifères, qui donnent naissance à des petits, sont presque tous vivipares.",
+  "hint": "Ovum = œuf."
+ },
+ {
+  "key": "scb-048",
+  "concept": "science.biology.regimes_alimentaires",
+  "label": "Régimes alimentaires",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque régime à ce qu'il mange.",
+  "pairs": [
+   [
+    "Herbivore",
+    "Des plantes"
+   ],
+   [
+    "Carnivore",
+    "De la viande"
+   ],
+   [
+    "Insectivore",
+    "Des insectes"
+   ],
+   [
+    "Frugivore",
+    "Des fruits"
+   ]
+  ],
+  "explanation": "Le suffixe -vore vient du latin vorare, dévorer.",
+  "hint": "-vore = qui mange."
+ },
+ {
+  "key": "scb-049",
+  "concept": "science.biology.dauphin_et_chauve_souris",
+  "label": "Dauphin et chauve-souris",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Le dauphin et la chauve-souris sont tous les deux…",
+  "options": [
+   "des mammifères*",
+   "des poissons",
+   "des oiseaux",
+   "des reptiles"
+  ],
+  "explanation": "Ils allaitent leurs petits. L'un nage, l'autre vole, mais ils partagent cette caractéristique.",
+  "hint": "Ils allaitent leurs petits."
+ },
+ {
+  "key": "scb-050",
+  "concept": "science.biology.biodiversite",
+  "label": "Biodiversité",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que désigne la « biodiversité » ?",
+  "options": [
+   "La variété des êtres vivants*",
+   "L'agriculture biologique",
+   "La pollution des sols",
+   "Le nombre d'humains sur Terre"
+  ],
+  "explanation": "Diversité des espèces, des gènes et des milieux naturels.",
+  "hint": "Bio = vie."
+ },
+ {
+  "key": "scb-051",
+  "concept": "science.human_body.alveoles_pulmonaires",
+  "label": "Alvéoles pulmonaires",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Où l'oxygène passe-t-il de l'air au sang, dans les poumons ?",
+  "options": [
+   "Dans les alvéoles*",
+   "Dans les bronches",
+   "Dans la trachée",
+   "Dans le diaphragme"
+  ],
+  "explanation": "Des centaines de millions de petits sacs entourés de vaisseaux sanguins : déplié, leur surface avoisine celle d'un terrain de tennis.",
+  "hint": "De minuscules sacs."
+ },
+ {
+  "key": "scb-052",
+  "concept": "science.human_body.diaphragme",
+  "label": "Diaphragme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel muscle, sous les poumons, est essentiel à la respiration ?",
+  "options": [
+   "Le diaphragme*",
+   "Le pectoral",
+   "L'abdominal",
+   "Le trapèze"
+  ],
+  "explanation": "En se contractant, il descend et fait entrer l'air. Le hoquet est une contraction involontaire du diaphragme.",
+  "hint": "Responsable du hoquet."
+ },
+ {
+  "key": "scb-053",
+  "concept": "science.human_body.nerf_optique",
+  "label": "Nerf optique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel nerf transmet les images de l'œil au cerveau ?",
+  "options": [
+   "Le nerf optique*",
+   "Le nerf auditif",
+   "Le nerf sciatique",
+   "La moelle épinière"
+  ],
+  "explanation": "Il part de la rétine, où la lumière est transformée en signaux électriques.",
+  "hint": "Optique = vision."
+ },
+ {
+  "key": "scb-054",
+  "concept": "science.human_body.pupille",
+  "label": "Pupille",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle partie de l'œil s'agrandit dans le noir ?",
+  "options": [
+   "La pupille*",
+   "L'iris",
+   "La cornée",
+   "La rétine"
+  ],
+  "explanation": "Le trou noir au centre de l'iris se dilate pour laisser entrer plus de lumière.",
+  "hint": "Le petit rond noir."
+ },
+ {
+  "key": "scb-055",
+  "concept": "science.human_body.oreille_interne",
+  "label": "Oreille interne",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle partie de l'oreille participe à l'équilibre ?",
+  "options": [
+   "L'oreille interne*",
+   "Le pavillon",
+   "Le tympan",
+   "Le conduit auditif"
+  ],
+  "explanation": "Elle contient des canaux remplis de liquide qui détectent les mouvements de la tête. C'est ce qui donne le mal des transports.",
+  "hint": "La partie la plus profonde."
+ },
+ {
+  "key": "scb-056",
+  "concept": "science.human_body.tympan",
+  "label": "Tympan",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle fine membrane de l'oreille vibre avec les sons ?",
+  "options": [
+   "Le tympan*",
+   "La cochlée",
+   "Le pavillon",
+   "L'enclume"
+  ],
+  "explanation": "Il transmet les vibrations aux osselets (marteau, enclume, étrier), puis à l'oreille interne.",
+  "hint": "Comme la peau d'un tambour."
+ },
+ {
+  "key": "scb-057",
+  "concept": "science.human_body.papilles_gustatives",
+  "label": "Papilles gustatives",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Où se trouvent les papilles gustatives ?",
+  "options": [
+   "Sur la langue*",
+   "Dans le nez",
+   "Dans l'estomac",
+   "Sur les dents"
+  ],
+  "explanation": "Elles détectent le sucré, le salé, l'acide, l'amer et l'umami. L'odorat complète le goût.",
+  "hint": "Pour goûter."
+ },
+ {
+  "key": "scb-058",
+  "concept": "science.human_body.salive_et_digestion",
+  "label": "Salive et digestion",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où commence la digestion ?",
+  "options": [
+   "Dans la bouche*",
+   "Dans l'estomac",
+   "Dans l'intestin grêle",
+   "Dans le foie"
+  ],
+  "explanation": "On mâche les aliments, et la salive commence à transformer l'amidon en sucres.",
+  "hint": "Dès la première bouchée."
+ },
+ {
+  "key": "scb-059",
+  "concept": "science.human_body.longueur_de_l_intestin_grele",
+  "label": "Longueur de l'intestin grêle",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle longueur mesure environ l'intestin grêle d'un adulte ?",
+  "options": [
+   "6 mètres*",
+   "60 centimètres",
+   "1,5 mètre",
+   "25 mètres"
+  ],
+  "explanation": "Replié dans l'abdomen, c'est là que l'essentiel des nutriments passe dans le sang.",
+  "hint": "Plus long que tu ne le crois."
+ },
+ {
+  "key": "scb-060",
+  "concept": "science.human_body.appendice",
+  "label": "Appendice",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où se trouve l'appendice ?",
+  "options": [
+   "Au début du gros intestin*",
+   "Sur le foie",
+   "Près du cœur",
+   "Sous l'estomac"
+  ],
+  "explanation": "Ce petit prolongement en bas à droite du ventre peut s'infecter : c'est l'appendicite.",
+  "hint": "En bas à droite du ventre."
+ },
+ {
+  "key": "scb-061",
+  "concept": "science.human_body.foie_plus_gros_organe_interne",
+  "label": "Foie plus gros organe interne",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le foie est le plus gros organe à l'intérieur du corps.",
+  "answer": true,
+  "explanation": "Environ 1,5 kg. Le plus grand organe tout court est la peau.",
+  "hint": "La peau est à l'extérieur."
+ },
+ {
+  "key": "scb-062",
+  "concept": "science.human_body.tendon",
+  "label": "Tendon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui relie un muscle à un os ?",
+  "options": [
+   "Un tendon*",
+   "Un ligament",
+   "Un cartilage",
+   "Un nerf"
+  ],
+  "explanation": "Le tendon d'Achille relie le mollet au talon. Les ligaments, eux, relient les os entre eux.",
+  "hint": "Celui d'Achille est célèbre."
+ },
+ {
+  "key": "scb-063",
+  "concept": "science.human_body.vertebres_de_la_colonne",
+  "label": "Vertèbres de la colonne",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de vertèbres compte à peu près la colonne vertébrale humaine ?",
+  "options": [
+   "33*",
+   "12",
+   "24",
+   "52"
+  ],
+  "explanation": "7 cervicales, 12 thoraciques, 5 lombaires, puis le sacrum et le coccyx, formés de vertèbres soudées.",
+  "hint": "Un peu plus de 30."
+ },
+ {
+  "key": "scb-064",
+  "concept": "science.human_body.neurones",
+  "label": "Neurones",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appellent les cellules du système nerveux qui transmettent l'information ?",
+  "options": [
+   "Les neurones*",
+   "Les globules",
+   "Les hormones",
+   "Les fibres musculaires"
+  ],
+  "explanation": "Le cerveau en compte environ 86 milliards, reliés par des connexions appelées synapses.",
+  "hint": "Environ 86 milliards dans le cerveau."
+ },
+ {
+  "key": "scb-065",
+  "concept": "science.human_body.globules_blancs",
+  "label": "Globules blancs",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le rôle principal des globules blancs ?",
+  "options": [
+   "Défendre le corps contre les infections*",
+   "Transporter l'oxygène",
+   "Faire coaguler le sang",
+   "Digérer les graisses"
+  ],
+  "explanation": "Ils forment le système immunitaire : certains mangent les microbes, d'autres fabriquent des anticorps.",
+  "hint": "Les soldats du corps."
+ },
+ {
+  "key": "scb-066",
+  "concept": "science.human_body.receveur_universel",
+  "label": "Receveur universel",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel groupe sanguin peut recevoir des globules rouges de tous les groupes ?",
+  "options": [
+   "AB+*",
+   "O−",
+   "A+",
+   "B−"
+  ],
+  "explanation": "Il ne possède pas d'anticorps contre A ni B, ni contre le rhésus. À l'inverse, O− est donneur universel.",
+  "hint": "L'inverse du donneur universel."
+ },
+ {
+  "key": "scb-067",
+  "concept": "science.human_body.tensiometre",
+  "label": "Tensiomètre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que mesure un tensiomètre ?",
+  "options": [
+   "La pression artérielle*",
+   "La température",
+   "Le taux de sucre",
+   "La force musculaire"
+  ],
+  "explanation": "On note deux chiffres, par exemple « 12/8 » : la pression quand le cœur se contracte, puis quand il se relâche.",
+  "hint": "On note par exemple « 12/8 »."
+ },
+ {
+  "key": "scb-068",
+  "concept": "science.human_body.adrenaline",
+  "label": "Adrénaline",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle hormone accélère le cœur face à un danger ?",
+  "options": [
+   "L'adrénaline*",
+   "L'insuline",
+   "La mélatonine",
+   "La thyroxine"
+  ],
+  "explanation": "Produite par les glandes surrénales, elle prépare le corps à fuir ou à combattre.",
+  "hint": "Une « montée » de…"
+ },
+ {
+  "key": "scb-069",
+  "concept": "science.human_body.thyroide",
+  "label": "Thyroïde",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où se trouve la glande thyroïde ?",
+  "options": [
+   "Dans le cou*",
+   "Dans le cerveau",
+   "Sous l'estomac",
+   "Près des reins"
+  ],
+  "explanation": "En forme de papillon, devant la trachée, elle règle le rythme du métabolisme.",
+  "hint": "En forme de papillon."
+ },
+ {
+  "key": "scb-070",
+  "concept": "science.human_body.melanine",
+  "label": "Mélanine",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel pigment donne sa couleur à la peau et aux cheveux ?",
+  "options": [
+   "La mélanine*",
+   "La chlorophylle",
+   "L'hémoglobine",
+   "La kératine"
+  ],
+  "explanation": "Elle protège des UV : on en produit plus au soleil, d'où le bronzage.",
+  "hint": "Responsable du bronzage."
+ },
+ {
+  "key": "scb-071",
+  "concept": "science.human_body.sang_bleu",
+  "label": "Sang bleu",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Le sang qui circule dans nos veines est bleu.",
+  "answer": false,
+  "explanation": "Il est toujours rouge, plus foncé quand il est pauvre en oxygène. Les veines paraissent bleues à travers la peau par un effet de lumière.",
+  "hint": "Une illusion d'optique."
+ },
+ {
+  "key": "scb-072",
+  "concept": "science.human_body.circulation_sanguine",
+  "label": "Circulation sanguine",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel médecin anglais a décrit la circulation du sang, en 1628 ?",
+  "options": [
+   "William Harvey*",
+   "Edward Jenner",
+   "Alexander Fleming",
+   "Joseph Lister"
+  ],
+  "explanation": "Il montre que le cœur pompe le sang dans un circuit fermé, contre les idées héritées de Galien.",
+  "hint": "Un médecin du XVIIe siècle."
+ },
+ {
+  "key": "scb-073",
+  "concept": "science.human_body.empreintes_des_jumeaux",
+  "label": "Empreintes des jumeaux",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Même de vrais jumeaux ont des empreintes digitales différentes.",
+  "answer": true,
+  "explanation": "Elles se forment dans l'utérus selon des conditions propres à chacun, pas seulement selon les gènes.",
+  "hint": "Elles ne dépendent pas que de l'ADN."
+ },
+ {
+  "key": "scb-074",
+  "concept": "science.human_body.dents_de_lait",
+  "label": "Dents de lait",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de dents de lait a un enfant ?",
+  "options": [
+   "20*",
+   "12",
+   "28",
+   "32"
+  ],
+  "explanation": "Elles sont remplacées par 32 dents définitives (en comptant les dents de sagesse).",
+  "hint": "Moins que chez l'adulte."
+ },
+ {
+  "key": "scb-075",
+  "concept": "science.human_body.email",
+  "label": "Émail",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est la substance la plus dure du corps humain ?",
+  "options": [
+   "L'émail des dents*",
+   "L'os du fémur",
+   "L'ongle",
+   "Le crâne"
+  ],
+  "explanation": "Il recouvre la couronne des dents mais ne se régénère pas : d'où l'importance du brossage.",
+  "hint": "Il recouvre les dents."
+ },
+ {
+  "key": "scb-076",
+  "concept": "science.human_body.reflexe_rotulien",
+  "label": "Réflexe rotulien",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le médecin tape sous le genou et la jambe se lève toute seule. C'est…",
+  "options": [
+   "un réflexe*",
+   "une crampe",
+   "une allergie",
+   "un tic nerveux"
+  ],
+  "explanation": "Le réflexe rotulien passe par la moelle épinière, sans attendre le cerveau.",
+  "hint": "Sans réfléchir."
+ },
+ {
+  "key": "scb-077",
+  "concept": "science.space.planete_rouge",
+  "label": "Planète rouge",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quelle planète est surnommée la « planète rouge » ?",
+  "options": [
+   "Mars*",
+   "Vénus",
+   "Jupiter",
+   "Mercure"
+  ],
+  "explanation": "Son sol est riche en oxyde de fer, c'est-à-dire en rouille.",
+  "hint": "Elle est rouillée."
+ },
+ {
+  "key": "scb-078",
+  "concept": "science.space.grande_tache_rouge",
+  "label": "Grande Tache rouge",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle planète est célèbre pour sa Grande Tache rouge ?",
+  "options": [
+   "Jupiter*",
+   "Mars",
+   "Saturne",
+   "Neptune"
+  ],
+  "explanation": "Une tempête géante, plus large que la Terre, observée depuis plus de 150 ans.",
+  "hint": "La plus grosse planète."
+ },
+ {
+  "key": "scb-079",
+  "concept": "science.space.anneaux_de_saturne",
+  "label": "Anneaux de Saturne",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle planète est connue pour ses grands anneaux ?",
+  "options": [
+   "Saturne*",
+   "Mars",
+   "Vénus",
+   "Mercure"
+  ],
+  "explanation": "Ils sont faits de glace et de roches. Jupiter, Uranus et Neptune ont aussi des anneaux, bien plus discrets.",
+  "hint": "La sixième planète."
+ },
+ {
+  "key": "scb-080",
+  "concept": "science.space.uranus_couchee",
+  "label": "Uranus couchée",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle planète tourne « couchée sur le côté » ?",
+  "options": [
+   "Uranus*",
+   "Neptune",
+   "Vénus",
+   "Mars"
+  ],
+  "explanation": "Son axe est incliné d'environ 98° : sans doute la trace d'une collision géante.",
+  "hint": "La septième planète."
+ },
+ {
+  "key": "scb-081",
+  "concept": "science.space.decouverte_de_neptune",
+  "label": "Découverte de Neptune",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle planète a été découverte par le calcul avant d'être observée, en 1846 ?",
+  "options": [
+   "Neptune*",
+   "Uranus",
+   "Pluton",
+   "Saturne"
+  ],
+  "explanation": "Urbain Le Verrier déduit sa position des perturbations de l'orbite d'Uranus ; Johann Galle l'observe presque à l'endroit prévu.",
+  "hint": "Grâce à Le Verrier."
+ },
+ {
+  "key": "scb-082",
+  "concept": "science.space.etoile_polaire",
+  "label": "Étoile polaire",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle étoile indique à peu près le nord dans le ciel ?",
+  "options": [
+   "L'étoile polaire*",
+   "Sirius",
+   "Vénus",
+   "Bételgeuse"
+  ],
+  "explanation": "Elle est presque alignée avec l'axe de la Terre : elle semble immobile quand le ciel tourne.",
+  "hint": "Elle semble immobile."
+ },
+ {
+  "key": "scb-083",
+  "concept": "science.space.grande_ourse",
+  "label": "Grande Ourse",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle constellation ressemble à une casserole ?",
+  "options": [
+   "La Grande Ourse*",
+   "Orion",
+   "Cassiopée",
+   "Le Scorpion"
+  ],
+  "explanation": "Ses sept étoiles les plus brillantes forment le « Grand Chariot ». Elle aide à trouver l'étoile polaire.",
+  "hint": "On l'appelle aussi le Grand Chariot."
+ },
+ {
+  "key": "scb-084",
+  "concept": "science.space.eclipse_de_soleil",
+  "label": "Éclipse de Soleil",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Lors d'une éclipse de Soleil, qu'est-ce qui cache le Soleil ?",
+  "options": [
+   "La Lune*",
+   "La Terre",
+   "Un nuage de poussière",
+   "Vénus"
+  ],
+  "explanation": "La Lune passe entre le Soleil et la Terre. Par hasard, elle a presque la même taille apparente que le Soleil.",
+  "hint": "Elle passe devant."
+ },
+ {
+  "key": "scb-085",
+  "concept": "science.space.eclipse_de_lune",
+  "label": "Éclipse de Lune",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Lors d'une éclipse de Lune, qu'est-ce qui assombrit la Lune ?",
+  "options": [
+   "L'ombre de la Terre*",
+   "L'ombre du Soleil",
+   "Un nuage",
+   "Mars"
+  ],
+  "explanation": "La Terre passe entre le Soleil et la Lune, qui prend souvent une teinte rougeâtre.",
+  "hint": "Notre planète s'interpose."
+ },
+ {
+  "key": "scb-086",
+  "concept": "science.space.altitude_de_l_iss",
+  "label": "Altitude de l'ISS",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quelle altitude tourne la Station spatiale internationale, environ ?",
+  "options": [
+   "400 km*",
+   "40 km",
+   "4 000 km",
+   "36 000 km"
+  ],
+  "explanation": "Elle fait le tour de la Terre en 90 minutes environ, à près de 28 000 km/h.",
+  "hint": "Un tour en 90 minutes."
+ },
+ {
+  "key": "scb-087",
+  "concept": "science.space.thomas_pesquet",
+  "label": "Thomas Pesquet",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel astronaute français a séjourné deux fois dans la Station spatiale internationale ?",
+  "options": [
+   "Thomas Pesquet*",
+   "Jean-Loup Chrétien",
+   "Claudie Haigneré",
+   "Patrick Baudry"
+  ],
+  "explanation": "Missions Proxima (2016-2017) et Alpha (2021), où il a commandé la station.",
+  "hint": "Missions Proxima et Alpha."
+ },
+ {
+  "key": "scb-088",
+  "concept": "science.space.premier_francais_dans_l_espace",
+  "label": "Premier Français dans l'espace",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui est le premier Français à être allé dans l'espace, en 1982 ?",
+  "options": [
+   "Jean-Loup Chrétien*",
+   "Thomas Pesquet",
+   "Philippe Perrin",
+   "Jean-Pierre Haigneré"
+  ],
+  "explanation": "Il séjourne à bord de la station soviétique Saliout 7.",
+  "hint": "À bord d'une station soviétique."
+ },
+ {
+  "key": "scb-089",
+  "concept": "science.space.premiere_femme_dans_l_espace",
+  "label": "Première femme dans l'espace",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui est la première femme à être allée dans l'espace, en 1963 ?",
+  "options": [
+   "Valentina Terechkova*",
+   "Sally Ride",
+   "Claudie Haigneré",
+   "Svetlana Savitskaïa"
+  ],
+  "explanation": "Cette cosmonaute soviétique fait 48 fois le tour de la Terre à bord de Vostok 6.",
+  "hint": "Une Soviétique."
+ },
+ {
+  "key": "scb-090",
+  "concept": "science.space.base_de_kourou",
+  "label": "Base de Kourou",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "D'où décollent les fusées européennes Ariane ?",
+  "options": [
+   "De Kourou, en Guyane*",
+   "De Cap Canaveral",
+   "De Toulouse",
+   "De Baïkonour"
+  ],
+  "explanation": "Près de l'équateur, la rotation de la Terre donne un coup de pouce aux fusées.",
+  "hint": "Un département d'Amérique du Sud."
+ },
+ {
+  "key": "scb-091",
+  "concept": "science.space.composition_des_cometes",
+  "label": "Composition des comètes",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quoi une comète est-elle surtout faite ?",
+  "options": [
+   "De glace et de poussières*",
+   "De fer en fusion",
+   "De gaz brûlant",
+   "De roche volcanique"
+  ],
+  "explanation": "Près du Soleil, la glace se sublime et forme sa queue lumineuse. On la surnomme « boule de neige sale ».",
+  "hint": "Une « boule de neige sale »."
+ },
+ {
+  "key": "scb-092",
+  "concept": "science.space.ceinture_d_asteroides",
+  "label": "Ceinture d'astéroïdes",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Entre quelles planètes se trouve la principale ceinture d'astéroïdes ?",
+  "options": [
+   "Mars et Jupiter*",
+   "La Terre et Mars",
+   "Jupiter et Saturne",
+   "Vénus et la Terre"
+  ],
+  "explanation": "Des millions de rochers, dont la planète naine Cérès.",
+  "hint": "Juste après la planète rouge."
+ },
+ {
+  "key": "scb-093",
+  "concept": "science.space.age_de_l_univers",
+  "label": "Âge de l'Univers",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel âge a l'Univers, selon les estimations actuelles ?",
+  "options": [
+   "Environ 13,8 milliards d'années*",
+   "Environ 4,5 milliards d'années",
+   "Environ 100 millions d'années",
+   "Environ 1 000 milliards d'années"
+  ],
+  "explanation": "Estimation issue du rayonnement fossile du Big Bang. 4,5 milliards d'années, c'est l'âge de la Terre.",
+  "hint": "Plus vieux que la Terre."
+ },
+ {
+  "key": "scb-094",
+  "concept": "science.space.age_du_soleil",
+  "label": "Âge du Soleil",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel âge a le Soleil, environ ?",
+  "options": [
+   "4,6 milliards d'années*",
+   "13,8 milliards d'années",
+   "460 millions d'années",
+   "46 000 ans"
+  ],
+  "explanation": "Il est à peu près à la moitié de sa vie. Dans environ 5 milliards d'années, il deviendra une géante rouge.",
+  "hint": "À peu près l'âge de la Terre."
+ },
+ {
+  "key": "scb-095",
+  "concept": "science.space.apesanteur_dans_l_iss",
+  "label": "Apesanteur dans l'ISS",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi les astronautes flottent-ils dans la Station spatiale ?",
+  "options": [
+   "Ils tombent en permanence autour de la Terre*",
+   "Il n'y a plus de gravité à cette altitude",
+   "La station est trop légère",
+   "L'air les soulève"
+  ],
+  "explanation": "À 400 km, la gravité vaut encore 90 % de celle du sol. La station et ses occupants sont en chute libre permanente.",
+  "hint": "La gravité est encore là."
+ },
+ {
+  "key": "scb-096",
+  "concept": "science.space.perseverance",
+  "label": "Perseverance",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que Perseverance, arrivé en 2021 ?",
+  "options": [
+   "Un robot qui explore Mars*",
+   "Un télescope spatial",
+   "Une station lunaire",
+   "Une sonde vers Jupiter"
+  ],
+  "explanation": "Ce rover de la NASA cherche des traces de vie ancienne ; il a emporté un petit hélicoptère, Ingenuity.",
+  "hint": "Il est accompagné d'un hélicoptère."
+ },
+ {
+  "key": "scb-097",
+  "concept": "science.space.face_visible_de_la_lune",
+  "label": "Face visible de la Lune",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Depuis la Terre, on voit toujours la même face de la Lune.",
+  "answer": true,
+  "explanation": "La Lune tourne sur elle-même dans le même temps qu'elle tourne autour de la Terre. La face cachée n'est pas obscure pour autant.",
+  "hint": "Elle nous montre toujours la même joue."
+ }
+]
