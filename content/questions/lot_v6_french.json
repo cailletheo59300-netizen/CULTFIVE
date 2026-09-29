@@ -1,0 +1,2444 @@
+[
+ {
+  "key": "frb-001",
+  "concept": "french.expressions.avoir_la_main_verte",
+  "label": "Avoir la main verte",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Avoir « la main verte », c'est…",
+  "options": [
+   "être doué pour le jardinage*",
+   "avoir les mains sales",
+   "être jaloux",
+   "manquer d'expérience"
+  ],
+  "explanation": "Les plantes poussent bien chez ceux qui ont la main verte. Rien à voir avec « être vert de jalousie ».",
+  "hint": "Pense aux plantes."
+ },
+ {
+  "key": "frb-002",
+  "concept": "french.expressions.tirer_les_vers_du_nez",
+  "label": "Tirer les vers du nez",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Tirer les vers du nez » à quelqu'un, c'est…",
+  "options": [
+   "le faire parler, lui soutirer des informations*",
+   "le soigner",
+   "se moquer de lui",
+   "le réveiller brutalement"
+  ],
+  "explanation": "On obtient petit à petit des aveux de quelqu'un qui ne voulait rien dire.",
+  "hint": "Il finit par avouer."
+ },
+ {
+  "key": "frb-003",
+  "concept": "french.expressions.etre_au_pied_du_mur",
+  "label": "Être au pied du mur",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Être « au pied du mur », c'est…",
+  "options": [
+   "ne plus pouvoir reculer*",
+   "commencer un chantier",
+   "être en prison",
+   "être très fatigué"
+  ],
+  "explanation": "Comme devant un mur infranchissable : il faut agir ou décider, sans échappatoire.",
+  "hint": "Impossible de reculer."
+ },
+ {
+  "key": "frb-004",
+  "concept": "french.expressions.mettre_les_pieds_dans_le_plat",
+  "label": "Mettre les pieds dans le plat",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Mettre les pieds dans le plat », c'est…",
+  "options": [
+   "aborder maladroitement un sujet délicat*",
+   "cuisiner sans recette",
+   "être très gourmand",
+   "arriver en retard au repas"
+  ],
+  "explanation": "On évoque sans précaution ce que tout le monde évitait, au risque de gêner.",
+  "hint": "Une maladresse en société."
+ },
+ {
+  "key": "frb-005",
+  "concept": "french.expressions.avoir_le_cur_sur_la_main",
+  "label": "Avoir le cœur sur la main",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Avoir « le cœur sur la main », c'est…",
+  "options": [
+   "être très généreux*",
+   "être cardiaque",
+   "être amoureux",
+   "être franc jusqu'à la brutalité"
+  ],
+  "explanation": "La personne donne volontiers, sans compter.",
+  "hint": "Elle donne facilement."
+ },
+ {
+  "key": "frb-006",
+  "concept": "french.expressions.donner_sa_langue_au_chat",
+  "label": "Donner sa langue au chat",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "« Donner sa langue au chat », c'est…",
+  "options": [
+   "renoncer à trouver la réponse*",
+   "dire un secret",
+   "se taire par politesse",
+   "mentir"
+  ],
+  "explanation": "Face à une devinette, on abandonne et on demande la solution.",
+  "hint": "Devant une devinette trop dure."
+ },
+ {
+  "key": "frb-007",
+  "concept": "french.expressions.filer_a_l_anglaise",
+  "label": "Filer à l'anglaise",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Filer à l'anglaise », c'est…",
+  "options": [
+   "partir discrètement, sans dire au revoir*",
+   "partir en voyage à Londres",
+   "conduire à gauche",
+   "partir en courant après un vol"
+  ],
+  "explanation": "Ironie de l'histoire : les Anglais disent « to take French leave », partir à la française.",
+  "hint": "Personne ne te voit partir."
+ },
+ {
+  "key": "frb-008",
+  "concept": "french.expressions.etre_dans_la_lune",
+  "label": "Être dans la lune",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Être « dans la lune », c'est…",
+  "options": [
+   "être distrait, rêveur*",
+   "être très heureux",
+   "travailler la nuit",
+   "être somnambule"
+  ],
+  "explanation": "L'esprit est ailleurs, loin de ce qui se passe.",
+  "hint": "Tu n'écoutes pas…"
+ },
+ {
+  "key": "frb-009",
+  "concept": "french.expressions.avoir_un_chat_dans_la_gorge",
+  "label": "Avoir un chat dans la gorge",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Avoir « un chat dans la gorge », c'est…",
+  "options": [
+   "être enroué*",
+   "avoir très soif",
+   "avoir peur de parler",
+   "avoir avalé de travers"
+  ],
+  "explanation": "La voix est éraillée, on doit s'éclaircir la gorge.",
+  "hint": "La voix se voile."
+ },
+ {
+  "key": "frb-010",
+  "concept": "french.expressions.monter_sur_ses_grands_chevaux",
+  "label": "Monter sur ses grands chevaux",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Monter sur ses grands chevaux », c'est…",
+  "options": [
+   "s'emporter, prendre un ton arrogant*",
+   "partir en voyage",
+   "faire de l'équitation",
+   "devenir riche"
+  ],
+  "explanation": "Au Moyen Âge, le chevalier montait son grand cheval de bataille pour combattre.",
+  "hint": "Le cheval de bataille."
+ },
+ {
+  "key": "frb-011",
+  "concept": "french.expressions.prendre_ses_jambes_a_son_cou",
+  "label": "Prendre ses jambes à son cou",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Prendre ses jambes à son cou », c'est…",
+  "options": [
+   "s'enfuir en courant*",
+   "faire du yoga",
+   "trébucher",
+   "se reposer"
+  ],
+  "explanation": "On court si vite que les jambes semblent monter jusqu'au cou.",
+  "hint": "Il faut courir vite."
+ },
+ {
+  "key": "frb-012",
+  "concept": "french.expressions.ne_pas_etre_dans_son_assiette",
+  "label": "Ne pas être dans son assiette",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Ne pas être « dans son assiette », c'est…",
+  "options": [
+   "ne pas se sentir bien*",
+   "ne pas avoir faim",
+   "être invité chez quelqu'un",
+   "manger trop vite"
+  ],
+  "explanation": "L'« assiette » désignait autrefois la manière d'être assis, l'équilibre du cavalier.",
+  "hint": "Un malaise, pas un repas."
+ },
+ {
+  "key": "frb-013",
+  "concept": "french.expressions.tourner_autour_du_pot",
+  "label": "Tourner autour du pot",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Tourner autour du pot », c'est…",
+  "options": [
+   "ne pas aller droit au but*",
+   "cuisiner lentement",
+   "hésiter entre deux plats",
+   "faire le ménage"
+  ],
+  "explanation": "On parle de tout sauf de l'essentiel, par gêne ou prudence.",
+  "hint": "Dis-le franchement !"
+ },
+ {
+  "key": "frb-014",
+  "concept": "french.expressions.connu_comme_le_loup_blanc",
+  "label": "Connu comme le loup blanc",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Être « connu comme le loup blanc », c'est…",
+  "options": [
+   "être connu de tout le monde*",
+   "avoir mauvaise réputation",
+   "être très âgé",
+   "vivre seul"
+  ],
+  "explanation": "Un loup blanc, rare, se remarque et se reconnaît partout.",
+  "hint": "Un animal qu'on remarque."
+ },
+ {
+  "key": "frb-015",
+  "concept": "french.expressions.d_autres_chats_a_fouetter",
+  "label": "D'autres chats à fouetter",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Avoir « d'autres chats à fouetter », c'est…",
+  "options": [
+   "avoir des choses plus importantes à faire*",
+   "être méchant avec les animaux",
+   "avoir beaucoup d'animaux",
+   "chercher la dispute"
+  ],
+  "explanation": "Sous-entendu : cette affaire-là ne mérite pas qu'on s'y attarde.",
+  "hint": "Tu as mieux à faire."
+ },
+ {
+  "key": "frb-016",
+  "concept": "french.expressions.rouler_dans_la_farine",
+  "label": "Rouler dans la farine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Se faire « rouler dans la farine », c'est…",
+  "options": [
+   "se faire duper*",
+   "se salir en cuisinant",
+   "tomber de fatigue",
+   "recevoir un compliment"
+  ],
+  "explanation": "Comme le poisson qu'on enfarine avant de le cuire : on est « cuisiné » sans s'en rendre compte.",
+  "hint": "On t'a eu."
+ },
+ {
+  "key": "frb-017",
+  "concept": "french.expressions.mettre_de_l_eau_dans_son_vin",
+  "label": "Mettre de l'eau dans son vin",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Mettre de l'eau dans son vin », c'est…",
+  "options": [
+   "modérer ses exigences*",
+   "boire moins",
+   "tricher sur la qualité",
+   "se réconcilier par écrit"
+  ],
+  "explanation": "Comme on adoucit un vin trop fort, on assouplit sa position pour trouver un accord.",
+  "hint": "On devient plus souple."
+ },
+ {
+  "key": "frb-018",
+  "concept": "french.expressions.couper_l_herbe_sous_le_pied",
+  "label": "Couper l'herbe sous le pied",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Couper l'herbe sous le pied » de quelqu'un, c'est…",
+  "options": [
+   "le devancer pour lui retirer un avantage*",
+   "le faire tomber",
+   "tondre sa pelouse",
+   "l'aider à démarrer"
+  ],
+  "explanation": "On prend les devants et l'autre perd l'occasion qu'il comptait saisir.",
+  "hint": "Tu le devances."
+ },
+ {
+  "key": "frb-019",
+  "concept": "french.expressions.d_une_pierre_deux_coups",
+  "label": "D'une pierre deux coups",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "« Faire d'une pierre deux coups », c'est…",
+  "options": [
+   "obtenir deux résultats en une seule action*",
+   "rater deux fois",
+   "se venger",
+   "travailler deux fois plus"
+  ],
+  "explanation": "Un seul effort, deux bénéfices.",
+  "hint": "Un geste, deux résultats."
+ },
+ {
+  "key": "frb-020",
+  "concept": "french.expressions.la_peau_de_l_ours",
+  "label": "La peau de l'ours",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Vendre la peau de l'ours avant de l'avoir tué », c'est…",
+  "options": [
+   "se réjouir d'un succès qui n'est pas encore acquis*",
+   "être cruel",
+   "faire une mauvaise affaire",
+   "mentir sur un produit"
+  ],
+  "explanation": "Vient d'une fable de La Fontaine, « L'Ours et les Deux Compagnons ».",
+  "hint": "Ne crie pas victoire trop tôt."
+ },
+ {
+  "key": "frb-021",
+  "concept": "french.expressions.la_charrue_avant_les_bufs",
+  "label": "La charrue avant les bœufs",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Mettre la charrue avant les bœufs », c'est…",
+  "options": [
+   "faire les choses dans le mauvais ordre*",
+   "travailler à la ferme",
+   "aller trop lentement",
+   "dépenser trop"
+  ],
+  "explanation": "La charrue doit être tirée par les bœufs, pas les précéder.",
+  "hint": "L'ordre est inversé."
+ },
+ {
+  "key": "frb-022",
+  "concept": "french.expressions.pleurer_comme_une_madeleine",
+  "label": "Pleurer comme une Madeleine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Pleurer comme une Madeleine », c'est…",
+  "options": [
+   "pleurer abondamment*",
+   "pleurer de rire",
+   "faire semblant de pleurer",
+   "pleurer en cachette"
+  ],
+  "explanation": "Allusion à Marie-Madeleine, en larmes aux pieds de Jésus dans l'Évangile.",
+  "hint": "Beaucoup de larmes."
+ },
+ {
+  "key": "frb-023",
+  "concept": "french.expressions.comme_un_poisson_dans_l_eau",
+  "label": "Comme un poisson dans l'eau",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Être « comme un poisson dans l'eau », c'est…",
+  "options": [
+   "être parfaitement à l'aise*",
+   "savoir bien nager",
+   "avoir froid",
+   "être muet"
+  ],
+  "explanation": "On évolue dans son élément, sans effort.",
+  "hint": "Dans son élément."
+ },
+ {
+  "key": "frb-024",
+  "concept": "french.expressions.avoir_le_vent_en_poupe",
+  "label": "Avoir le vent en poupe",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Avoir « le vent en poupe », c'est…",
+  "options": [
+   "être porté par le succès*",
+   "être en retard",
+   "avoir mauvais caractère",
+   "partir en bateau"
+  ],
+  "explanation": "Le vent qui souffle de l'arrière (la poupe) pousse le navire en avant.",
+  "hint": "Le vent pousse le bateau."
+ },
+ {
+  "key": "frb-025",
+  "concept": "french.expressions.du_coq_a_l_ane",
+  "label": "Du coq à l'âne",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Sauter du coq à l'âne », c'est…",
+  "options": [
+   "changer brusquement de sujet*",
+   "imiter des animaux",
+   "mentir",
+   "se disputer"
+  ],
+  "explanation": "La conversation passe sans transition d'une idée à une autre.",
+  "hint": "Aucune transition."
+ },
+ {
+  "key": "frb-026",
+  "concept": "french.expressions.haut_comme_trois_pommes",
+  "label": "Haut comme trois pommes",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Être « haut comme trois pommes », c'est…",
+  "options": [
+   "être tout petit*",
+   "être très grand",
+   "être gourmand",
+   "être prétentieux"
+  ],
+  "explanation": "On le dit surtout d'un jeune enfant.",
+  "hint": "On le dit d'un enfant."
+ },
+ {
+  "key": "frb-027",
+  "concept": "french.expressions.de_charybde_en_scylla",
+  "label": "De Charybde en Scylla",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Aller « de Charybde en Scylla », c'est…",
+  "options": [
+   "échapper à un danger pour tomber dans un pire*",
+   "voyager en Grèce",
+   "hésiter sans fin",
+   "réussir de justesse"
+  ],
+  "explanation": "Charybde et Scylla sont deux monstres du détroit de Messine dans l'Odyssée : éviter l'un, c'est frôler l'autre.",
+  "hint": "Deux monstres de l'Odyssée."
+ },
+ {
+  "key": "frb-028",
+  "concept": "french.expressions.reveiller_le_chat_qui_dort",
+  "label": "Réveiller le chat qui dort",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Il ne faut pas réveiller le chat qui dort » signifie…",
+  "options": [
+   "il ne faut pas raviver un problème apaisé*",
+   "il faut laisser dormir les enfants",
+   "il faut être patient",
+   "il ne faut pas faire de bruit la nuit"
+  ],
+  "explanation": "Mieux vaut ne pas relancer une affaire qui pourrait se retourner contre soi.",
+  "hint": "Laisse ce problème tranquille."
+ },
+ {
+  "key": "frb-029",
+  "concept": "french.expressions.expressions_animales",
+  "label": "Expressions animales",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque expression à son sens.",
+  "pairs": [
+   [
+    "Une mémoire d'éléphant",
+    "Se souvenir de tout"
+   ],
+   [
+    "Muet comme une carpe",
+    "Ne rien dire"
+   ],
+   [
+    "Une faim de loup",
+    "Avoir très faim"
+   ],
+   [
+    "Têtu comme une mule",
+    "Être entêté"
+   ]
+  ],
+  "explanation": "Les animaux prêtent leurs traits (réels ou supposés) à de nombreuses expressions.",
+  "hint": "Pense au caractère de chaque animal."
+ },
+ {
+  "key": "frb-030",
+  "concept": "french.expressions.expressions_de_couleur",
+  "label": "Expressions de couleur",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque expression à son sens.",
+  "pairs": [
+   [
+    "Broyer du noir",
+    "Avoir des idées tristes"
+   ],
+   [
+    "Voir la vie en rose",
+    "Être optimiste"
+   ],
+   [
+    "Blanc comme un linge",
+    "Très pâle"
+   ],
+   [
+    "Une peur bleue",
+    "Une très grande peur"
+   ]
+  ],
+  "explanation": "Les couleurs expriment souvent des émotions : le noir pour la tristesse, le rose pour l'optimisme.",
+  "hint": "Chaque couleur, une émotion."
+ },
+ {
+  "key": "frb-031",
+  "concept": "french.synonyms.synonyme_d_apaiser",
+  "label": "Synonyme d'apaiser",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est un synonyme de « apaiser » ?",
+  "options": [
+   "calmer*",
+   "exciter",
+   "ignorer",
+   "abandonner"
+  ],
+  "explanation": "Apaiser, c'est ramener la paix : calmer une colère, une douleur.",
+  "hint": "On apaise une colère."
+ },
+ {
+  "key": "frb-032",
+  "concept": "french.synonyms.contraire_de_rare",
+  "label": "Contraire de rare",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est le contraire de « rare » ?",
+  "options": [
+   "fréquent*",
+   "précieux",
+   "cher",
+   "unique"
+  ],
+  "explanation": "Rare : qui arrive peu souvent. Fréquent : qui arrive souvent. « Précieux » est plutôt une conséquence de la rareté.",
+  "hint": "Qui arrive souvent."
+ },
+ {
+  "key": "frb-033",
+  "concept": "french.synonyms.synonyme_d_hilare",
+  "label": "Synonyme d'hilare",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel mot est le plus proche de « hilare » ?",
+  "options": [
+   "riant*",
+   "furieux",
+   "endormi",
+   "affamé"
+  ],
+  "explanation": "Hilare : qui montre une joie bruyante, qui rit. Même famille que « hilarant ».",
+  "hint": "Pense à « hilarant »."
+ },
+ {
+  "key": "frb-034",
+  "concept": "french.synonyms.contraire_de_docile",
+  "label": "Contraire de docile",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le contraire de « docile » ?",
+  "options": [
+   "rebelle*",
+   "obéissant",
+   "calme",
+   "timide"
+  ],
+  "explanation": "Docile : qui se laisse diriger facilement. « Obéissant » en est un synonyme.",
+  "hint": "Qui n'obéit pas."
+ },
+ {
+  "key": "frb-035",
+  "concept": "french.synonyms.synonyme_d_exigu",
+  "label": "Synonyme d'exigu",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Une pièce « exiguë » est…",
+  "options": [
+   "étroite*",
+   "lumineuse",
+   "humide",
+   "luxueuse"
+  ],
+  "explanation": "Exigu : trop petit, où l'on manque de place. Attention au tréma : exiguë.",
+  "hint": "On y manque de place."
+ },
+ {
+  "key": "frb-036",
+  "concept": "french.synonyms.contraire_de_prudent",
+  "label": "Contraire de prudent",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le contraire de « prudent » ?",
+  "options": [
+   "téméraire*",
+   "sage",
+   "méfiant",
+   "patient"
+  ],
+  "explanation": "Le téméraire prend des risques inconsidérés ; le prudent les évite.",
+  "hint": "Qui prend trop de risques."
+ },
+ {
+  "key": "frb-037",
+  "concept": "french.synonyms.synonyme_d_ardu",
+  "label": "Synonyme d'ardu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est un synonyme de « ardu » ?",
+  "options": [
+   "difficile*",
+   "brûlant",
+   "rapide",
+   "agréable"
+  ],
+  "explanation": "Une tâche ardue demande beaucoup d'efforts. Rien à voir avec « ardent ».",
+  "hint": "Une tâche ardue…"
+ },
+ {
+  "key": "frb-038",
+  "concept": "french.synonyms.contraire_de_futile",
+  "label": "Contraire de futile",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le contraire de « futile » ?",
+  "options": [
+   "essentiel*",
+   "inutile",
+   "léger",
+   "amusant"
+  ],
+  "explanation": "Futile : sans importance, frivole. « Inutile » en est proche.",
+  "hint": "Qui a de l'importance."
+ },
+ {
+  "key": "frb-039",
+  "concept": "french.synonyms.synonyme_de_querir",
+  "label": "Synonyme de quérir",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que signifie le verbe ancien « quérir » ?",
+  "options": [
+   "aller chercher*",
+   "interroger",
+   "guérir",
+   "se plaindre"
+  ],
+  "explanation": "« Aller quérir le médecin » : aller le chercher. Il survit dans « acquérir », « requérir », « conquérir ».",
+  "hint": "Pense à « acquérir »."
+ },
+ {
+  "key": "frb-040",
+  "concept": "french.synonyms.synonyme_d_inciter",
+  "label": "Synonyme d'inciter",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est un synonyme de « inciter » ?",
+  "options": [
+   "encourager*",
+   "interdire",
+   "retenir",
+   "décourager"
+  ],
+  "explanation": "Inciter quelqu'un à faire quelque chose, c'est l'y pousser.",
+  "hint": "Pousser à agir."
+ },
+ {
+  "key": "frb-041",
+  "concept": "french.synonyms.contraire_d_ascension",
+  "label": "Contraire d'ascension",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le contraire de « ascension » ?",
+  "options": [
+   "descente*",
+   "montée",
+   "escalade",
+   "sommet"
+  ],
+  "explanation": "L'ascension monte vers le sommet ; la descente en revient.",
+  "hint": "Après le sommet…"
+ },
+ {
+  "key": "frb-042",
+  "concept": "french.synonyms.synonyme_de_magnanime",
+  "label": "Synonyme de magnanime",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel mot est le plus proche de « magnanime » ?",
+  "options": [
+   "clément*",
+   "cruel",
+   "avare",
+   "naïf"
+  ],
+  "explanation": "Magnanime (« grande âme ») : généreux et indulgent, qui pardonne volontiers.",
+  "hint": "« Grande âme » en latin."
+ },
+ {
+  "key": "frb-043",
+  "concept": "french.synonyms.contraire_de_parcimonie",
+  "label": "Contraire de parcimonie",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel est le contraire de « parcimonie » ?",
+  "options": [
+   "prodigalité*",
+   "économie",
+   "avarice",
+   "modestie"
+  ],
+  "explanation": "La parcimonie consiste à dépenser avec une extrême économie ; la prodigalité, à dépenser sans compter.",
+  "hint": "Dépenser sans compter."
+ },
+ {
+  "key": "frb-044",
+  "concept": "french.synonyms.synonyme_d_obsequieux",
+  "label": "Synonyme d'obséquieux",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Un serveur « obséquieux » est…",
+  "options": [
+   "servile, trop poli*",
+   "impoli",
+   "distrait",
+   "maladroit"
+  ],
+  "explanation": "Obséquieux : d'une politesse excessive, qui cherche à plaire par des marques de respect exagérées.",
+  "hint": "Trop de courbettes."
+ },
+ {
+  "key": "frb-045",
+  "concept": "french.synonyms.contraire_de_sporadique",
+  "label": "Contraire de sporadique",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le contraire de « sporadique » ?",
+  "options": [
+   "continu*",
+   "rare",
+   "irrégulier",
+   "isolé"
+  ],
+  "explanation": "Sporadique : qui se produit de temps en temps, de façon irrégulière.",
+  "hint": "Sans interruption."
+ },
+ {
+  "key": "frb-046",
+  "concept": "french.synonyms.synonyme_de_desinvolte",
+  "label": "Synonyme de désinvolte",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une attitude « désinvolte » est…",
+  "options": [
+   "trop détachée, sans-gêne*",
+   "timide",
+   "très sérieuse",
+   "agressive"
+  ],
+  "explanation": "Désinvolte : qui agit avec une légèreté excessive, parfois insolente.",
+  "hint": "Un peu trop à l'aise."
+ },
+ {
+  "key": "frb-047",
+  "concept": "french.synonyms.synonyme_de_probant",
+  "label": "Synonyme de probant",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un argument « probant » est…",
+  "options": [
+   "convaincant*",
+   "faux",
+   "hésitant",
+   "compliqué"
+  ],
+  "explanation": "Probant : qui apporte la preuve. Même racine que « prouver ».",
+  "hint": "Il prouve quelque chose."
+ },
+ {
+  "key": "frb-048",
+  "concept": "french.synonyms.contraire_de_tacite",
+  "label": "Contraire de tacite",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le contraire de « tacite » ?",
+  "options": [
+   "explicite*",
+   "silencieux",
+   "secret",
+   "implicite"
+  ],
+  "explanation": "Un accord tacite n'est pas exprimé ; un accord explicite est clairement formulé.",
+  "hint": "Clairement dit."
+ },
+ {
+  "key": "frb-049",
+  "concept": "french.synonyms.synonyme_de_narquois",
+  "label": "Synonyme de narquois",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un sourire « narquois » est…",
+  "options": [
+   "moqueur*",
+   "tendre",
+   "triste",
+   "gêné"
+  ],
+  "explanation": "Narquois : qui se moque avec une malice un peu méchante.",
+  "hint": "Il se moque."
+ },
+ {
+  "key": "frb-050",
+  "concept": "french.synonyms.contraire_d_empirer",
+  "label": "Contraire d'empirer",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le contraire de « empirer » ?",
+  "options": [
+   "s'améliorer*",
+   "s'aggraver",
+   "stagner",
+   "recommencer"
+  ],
+  "explanation": "Empirer : devenir pire. Le contraire : devenir meilleur, s'améliorer.",
+  "hint": "Devenir meilleur."
+ },
+ {
+  "key": "frb-051",
+  "concept": "french.synonyms.synonyme_de_s_esclaffer",
+  "label": "Synonyme de s'esclaffer",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que fait quelqu'un qui « s'esclaffe » ?",
+  "options": [
+   "Il éclate de rire*",
+   "Il s'enfuit",
+   "Il se fâche",
+   "Il glisse"
+  ],
+  "explanation": "S'esclaffer : partir d'un grand éclat de rire.",
+  "hint": "C'est bruyant et joyeux."
+ },
+ {
+  "key": "frb-052",
+  "concept": "french.synonyms.contraire_d_acquitter",
+  "label": "Contraire d'acquitter",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au tribunal, quel est le contraire de « acquitter » un accusé ?",
+  "options": [
+   "le condamner*",
+   "le juger",
+   "l'interroger",
+   "le libérer"
+  ],
+  "explanation": "Acquitter : déclarer non coupable. Libérer en est une conséquence, pas le contraire.",
+  "hint": "Déclarer coupable."
+ },
+ {
+  "key": "frb-053",
+  "concept": "french.synonyms.synonyme_de_velocite",
+  "label": "Synonyme de vélocité",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est un synonyme de « vélocité » ?",
+  "options": [
+   "vitesse*",
+   "vélo",
+   "force",
+   "souplesse"
+  ],
+  "explanation": "Du latin velox, rapide. Le mot « vélocipède » (ancêtre du vélo) vient de la même racine.",
+  "hint": "Pense à « véloce »."
+ },
+ {
+  "key": "frb-054",
+  "concept": "french.synonyms.synonyme_d_ineffable",
+  "label": "Synonyme d'ineffable",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Un bonheur « ineffable » est…",
+  "options": [
+   "indicible, impossible à exprimer*",
+   "fragile",
+   "passager",
+   "partagé"
+  ],
+  "explanation": "Ineffable : si intense que les mots ne suffisent pas à le dire.",
+  "hint": "Les mots manquent."
+ },
+ {
+  "key": "frb-055",
+  "concept": "french.synonyms.contraire_de_nefaste",
+  "label": "Contraire de néfaste",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le contraire de « néfaste » ?",
+  "options": [
+   "bénéfique*",
+   "nuisible",
+   "fatal",
+   "funeste"
+  ],
+  "explanation": "Néfaste : qui cause du tort. Les trois autres mots en sont des synonymes.",
+  "hint": "Qui fait du bien."
+ },
+ {
+  "key": "frb-056",
+  "concept": "french.synonyms.synonyme_d_acariatre",
+  "label": "Synonyme d'acariâtre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une personne « acariâtre » est…",
+  "options": [
+   "grincheuse*",
+   "joyeuse",
+   "maladroite",
+   "bavarde"
+  ],
+  "explanation": "Acariâtre : d'humeur aigre et querelleuse.",
+  "hint": "Toujours de mauvaise humeur."
+ },
+ {
+  "key": "frb-057",
+  "concept": "french.synonyms.contraire_d_innocent",
+  "label": "Contraire d'innocent",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est le contraire de « innocent » ?",
+  "options": [
+   "coupable*",
+   "naïf",
+   "enfant",
+   "honnête"
+  ],
+  "explanation": "Au sens judiciaire, l'innocent n'a pas commis la faute ; le coupable l'a commise.",
+  "hint": "Au tribunal…"
+ },
+ {
+  "key": "frb-058",
+  "concept": "french.synonyms.synonyme_de_farfelu",
+  "label": "Synonyme de farfelu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Une idée « farfelue » est…",
+  "options": [
+   "bizarre, extravagante*",
+   "géniale",
+   "dangereuse",
+   "banale"
+  ],
+  "explanation": "Farfelu : un peu fou, fantaisiste.",
+  "hint": "Un peu folle."
+ },
+ {
+  "key": "frb-059",
+  "concept": "french.synonyms.synonyme_d_ebahi",
+  "label": "Synonyme d'ébahi",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Être « ébahi », c'est être…",
+  "options": [
+   "stupéfait*",
+   "fatigué",
+   "content",
+   "fâché"
+  ],
+  "explanation": "Ébahi : frappé d'étonnement, bouche bée.",
+  "hint": "Bouche bée."
+ },
+ {
+  "key": "frb-060",
+  "concept": "french.synonyms.paires_de_synonymes",
+  "label": "Paires de synonymes",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque mot à son synonyme.",
+  "pairs": [
+   [
+    "Courageux",
+    "Brave"
+   ],
+   [
+    "Triste",
+    "Morose"
+   ],
+   [
+    "Rapide",
+    "Prompt"
+   ],
+   [
+    "Calme",
+    "Serein"
+   ]
+  ],
+  "explanation": "Des synonymes de sens proche, mais pas toujours interchangeables : « morose » évoque une tristesse terne et durable.",
+  "hint": "Cherche le sens le plus proche."
+ },
+ {
+  "key": "frb-061",
+  "concept": "french.synonyms.paires_de_contraires",
+  "label": "Paires de contraires",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque mot à son contraire.",
+  "pairs": [
+   [
+    "Avare",
+    "Dépensier"
+   ],
+   [
+    "Humble",
+    "Orgueilleux"
+   ],
+   [
+    "Ancien",
+    "Moderne"
+   ],
+   [
+    "Lucide",
+    "Confus"
+   ]
+  ],
+  "explanation": "Chaque paire oppose deux qualités : garder ou dépenser, s'effacer ou se mettre en avant…",
+  "hint": "Cherche l'opposé."
+ },
+ {
+  "key": "frb-062",
+  "concept": "french.spelling.orthographe_de_developpement",
+  "label": "Orthographe de développement",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel mot est bien écrit ?",
+  "options": [
+   "développement*",
+   "dévelopement",
+   "développemment",
+   "devellopement"
+  ],
+  "explanation": "Deux p, un l, et « -ment » avec un seul m.",
+  "hint": "Deux p, un l."
+ },
+ {
+  "key": "frb-063",
+  "concept": "french.spelling.orthographe_de_rythme",
+  "label": "Orthographe de rythme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment écrit-on ce mot ?",
+  "options": [
+   "rythme*",
+   "ritme",
+   "rhytme",
+   "rythmme"
+  ],
+  "explanation": "Du grec rhuthmos : le y et le h se placent « r-y-t-h ». En anglais, c'est rhythm.",
+  "hint": "r, y, t, h…"
+ },
+ {
+  "key": "frb-064",
+  "concept": "french.spelling.orthographe_d_abreviation",
+  "label": "Orthographe d'abréviation",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle orthographe est la bonne ?",
+  "options": [
+   "abréviation*",
+   "abbréviation",
+   "abrévation",
+   "abbrévation"
+  ],
+  "explanation": "Un seul b, contrairement à l'anglais abbreviation.",
+  "hint": "Un seul b en français."
+ },
+ {
+  "key": "frb-065",
+  "concept": "french.spelling.orthographe_d_apercevoir",
+  "label": "Orthographe d'apercevoir",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment écrit-on ce verbe ?",
+  "options": [
+   "apercevoir*",
+   "appercevoir",
+   "aperçevoir",
+   "apercevoire"
+  ],
+  "explanation": "Un seul p, alors que « apprendre » ou « apporter » en prennent deux.",
+  "hint": "Un seul p."
+ },
+ {
+  "key": "frb-066",
+  "concept": "french.spelling.orthographe_de_connaissance",
+  "label": "Orthographe de connaissance",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel mot est bien écrit ?",
+  "options": [
+   "connaissance*",
+   "conaissance",
+   "connaisance",
+   "connaîssance"
+  ],
+  "explanation": "Deux n et deux s. L'accent circonflexe ne se met que devant un t : il connaît.",
+  "hint": "Deux n, deux s."
+ },
+ {
+  "key": "frb-067",
+  "concept": "french.spelling.orthographe_d_occurrence",
+  "label": "Orthographe d'occurrence",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle orthographe est la bonne ?",
+  "options": [
+   "occurrence*",
+   "occurence",
+   "ocurrence",
+   "occurance"
+  ],
+  "explanation": "Deux c et deux r, comme dans « concurrence ».",
+  "hint": "Comme « concurrence »."
+ },
+ {
+  "key": "frb-068",
+  "concept": "french.spelling.orthographe_de_bizarre",
+  "label": "Orthographe de bizarre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment écrit-on ce mot ?",
+  "options": [
+   "bizarre*",
+   "bizzare",
+   "bizare",
+   "bizzarre"
+  ],
+  "explanation": "Un z, deux r : bi-za-rre.",
+  "hint": "Un z, deux r."
+ },
+ {
+  "key": "frb-069",
+  "concept": "french.spelling.orthographe_de_neanmoins",
+  "label": "Orthographe de néanmoins",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel mot est bien écrit ?",
+  "options": [
+   "néanmoins*",
+   "néamoins",
+   "néanmoin",
+   "néammoins"
+  ],
+  "explanation": "C'est « néant » + « moins » : on garde le n devant le m.",
+  "hint": "Néant + moins."
+ },
+ {
+  "key": "frb-070",
+  "concept": "french.spelling.quatre_vingts_ans",
+  "label": "Quatre-vingts ans",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Complète : « Il a quatre-___ ans. »",
+  "options": [
+   "vingts*",
+   "vingt",
+   "vingt-s",
+   "vingtz"
+  ],
+  "explanation": "Vingt prend un s quand il est multiplié et termine le nombre : quatre-vingts ans, mais quatre-vingt-deux ans.",
+  "hint": "Il termine le nombre."
+ },
+ {
+  "key": "frb-071",
+  "concept": "french.spelling.deux_cent_trois",
+  "label": "Deux cent trois",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "On écrit « deux cents trois ».",
+  "answer": false,
+  "explanation": "Non : cent prend un s s'il est multiplié ET termine le nombre. On écrit deux cents, mais deux cent trois.",
+  "hint": "Est-ce qu'il termine le nombre ?"
+ },
+ {
+  "key": "frb-072",
+  "concept": "french.spelling.mille_invariable",
+  "label": "Mille invariable",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "On écrit « trois milles euros ».",
+  "answer": false,
+  "explanation": "Mille (le nombre) est invariable : trois mille euros. Seul « mille » l'unité de distance marine prend un s.",
+  "hint": "Le nombre ne s'accorde pas."
+ },
+ {
+  "key": "frb-073",
+  "concept": "french.spelling.leur_devant_le_verbe",
+  "label": "Leur devant le verbe",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « Je ___ ai dit la vérité. »",
+  "options": [
+   "leur*",
+   "leurs",
+   "leurre",
+   "l'eur"
+  ],
+  "explanation": "Devant un verbe, « leur » est un pronom (= à eux) et reste invariable.",
+  "hint": "Remplace par « lui » : je lui ai dit."
+ },
+ {
+  "key": "frb-074",
+  "concept": "french.spelling.quelques_minutes",
+  "label": "Quelques minutes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « Il reste ___ minutes. »",
+  "options": [
+   "quelques*",
+   "quelque",
+   "quel que",
+   "quels que"
+  ],
+  "explanation": "Devant un nom pluriel, quelques (= plusieurs) s'accorde.",
+  "hint": "Plusieurs minutes."
+ },
+ {
+  "key": "frb-075",
+  "concept": "french.spelling.on_ou_ont",
+  "label": "On ou ont",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Complète : « Ils ___ faim. »",
+  "options": [
+   "ont*",
+   "on",
+   "onts",
+   "ons"
+  ],
+  "explanation": "« Ont » est le verbe avoir : on peut dire « ils avaient faim ».",
+  "hint": "Essaie avec « avaient »."
+ },
+ {
+  "key": "frb-076",
+  "concept": "french.spelling.se_ou_ce",
+  "label": "Se ou ce",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Complète : « Il ___ lave les mains. »",
+  "options": [
+   "se*",
+   "ce",
+   "ceux",
+   "ses"
+  ],
+  "explanation": "« Se » accompagne un verbe pronominal (se laver) ; « ce » accompagne un nom (ce livre).",
+  "hint": "Je me lave, il ___ lave."
+ },
+ {
+  "key": "frb-077",
+  "concept": "french.spelling.l_a_ou_la",
+  "label": "L'a ou là",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Complète : « Cette photo, il ___ prise hier. »",
+  "options": [
+   "l'a*",
+   "la",
+   "là",
+   "l'as"
+  ],
+  "explanation": "On peut dire « il l'avait prise » : c'est le pronom l' + le verbe avoir.",
+  "hint": "Essaie avec « l'avait »."
+ },
+ {
+  "key": "frb-078",
+  "concept": "french.spelling.cense_ou_sense",
+  "label": "Censé ou sensé",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Complète : « Tu es ___ arriver à 8 h. »",
+  "options": [
+   "censé*",
+   "sensé",
+   "sencé",
+   "cencé"
+  ],
+  "explanation": "Censé = supposé. Sensé = qui a du bon sens.",
+  "hint": "Supposé arriver…"
+ },
+ {
+  "key": "frb-079",
+  "concept": "french.spelling.davantage",
+  "label": "Davantage",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Complète : « Il travaille ___ que moi. »",
+  "options": [
+   "davantage*",
+   "d'avantage",
+   "d'avantages",
+   "davantages"
+  ],
+  "explanation": "Davantage (= plus) s'écrit en un mot. « D'avantage » désigne un bénéfice : il n'a pas d'avantage.",
+  "hint": "Tu peux dire « plus »."
+ },
+ {
+  "key": "frb-080",
+  "concept": "french.spelling.plus_tot",
+  "label": "Plus tôt",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Complète : « Je suis arrivé ___ que prévu. »",
+  "options": [
+   "plus tôt*",
+   "plutôt",
+   "plutot",
+   "plus-tôt"
+  ],
+  "explanation": "Plus tôt s'oppose à plus tard. Plutôt marque une préférence : plutôt du thé.",
+  "hint": "Le contraire de « plus tard »."
+ },
+ {
+  "key": "frb-081",
+  "concept": "french.spelling.quoi_que_tu_dises",
+  "label": "Quoi que tu dises",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Complète : « ___ tu dises, je partirai. »",
+  "options": [
+   "Quoi que*",
+   "Quoique",
+   "Quoiqu'",
+   "Quoi qu'"
+  ],
+  "explanation": "Quoi que (en deux mots) = quelle que soit la chose que. Quoique (en un mot) = bien que.",
+  "hint": "Quelle que soit la chose que…"
+ },
+ {
+  "key": "frb-082",
+  "concept": "french.spelling.evenement_ou_evenement",
+  "label": "Événement ou évènement",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« Événement » et « évènement » sont deux orthographes admises.",
+  "answer": true,
+  "explanation": "Oui : les rectifications de 1990 ont admis « évènement », plus conforme à la prononciation.",
+  "hint": "Réforme de 1990."
+ },
+ {
+  "key": "frb-083",
+  "concept": "french.spelling.chariot",
+  "label": "Chariot",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« Chariot » s'écrit avec un seul r, contrairement à « charrette ».",
+  "answer": true,
+  "explanation": "Une exception célèbre : chariot (un r), mais charrette, charrue, charrier (deux r).",
+  "hint": "Une exception connue."
+ },
+ {
+  "key": "frb-084",
+  "concept": "french.spelling.orthographe_de_dilemme",
+  "label": "Orthographe de dilemme",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment écrit-on ce mot ?",
+  "options": [
+   "dilemme*",
+   "dilemne",
+   "dilème",
+   "dillemme"
+  ],
+  "explanation": "Deux m, pas de n : du grec lêmma, proposition.",
+  "hint": "Deux m."
+ },
+ {
+  "key": "frb-085",
+  "concept": "french.spelling.orthographe_d_accueil",
+  "label": "Orthographe d'accueil",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel mot est bien écrit ?",
+  "options": [
+   "accueil*",
+   "acceuil",
+   "acueil",
+   "accueuil"
+  ],
+  "explanation": "Après c, on écrit « ueil » pour garder le son [k] : accueil, cueillir, recueil.",
+  "hint": "Comme « cueillir »."
+ },
+ {
+  "key": "frb-086",
+  "concept": "french.spelling.resonner_ou_raisonner",
+  "label": "Résonner ou raisonner",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Complète : « La cloche ___ dans la vallée. »",
+  "options": [
+   "résonne*",
+   "raisonne",
+   "résone",
+   "raisone"
+  ],
+  "explanation": "Résonner : produire un son qui se prolonge. Raisonner : réfléchir.",
+  "hint": "Il s'agit d'un son."
+ },
+ {
+  "key": "frb-087",
+  "concept": "french.spelling.voire_ou_voir",
+  "label": "Voire ou voir",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Complète : « C'est difficile, ___ impossible. »",
+  "options": [
+   "voire*",
+   "voir",
+   "voir même",
+   "voirent"
+  ],
+  "explanation": "Voire (avec un e) signifie « et même ». Voir est le verbe.",
+  "hint": "« Et même »."
+ },
+ {
+  "key": "frb-088",
+  "concept": "french.spelling.pluriel_de_pneu",
+  "label": "Pluriel de pneu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le pluriel de « un pneu » ?",
+  "options": [
+   "des pneus*",
+   "des pneux",
+   "des pneuxs",
+   "des pneu"
+  ],
+  "explanation": "Les mots en -eu prennent un x (des jeux), sauf pneu, bleu, émeu et landau… qui prennent un s.",
+  "hint": "Une exception en -eu."
+ },
+ {
+  "key": "frb-089",
+  "concept": "french.spelling.pluriel_de_travail",
+  "label": "Pluriel de travail",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le pluriel de « un travail » ?",
+  "options": [
+   "des travaux*",
+   "des travails",
+   "des travaus",
+   "des travailles"
+  ],
+  "explanation": "Comme corail, émail, soupirail, vitrail : -ail devient -aux.",
+  "hint": "Comme « vitrail »."
+ },
+ {
+  "key": "frb-090",
+  "concept": "french.spelling.orthographe_de_persifler",
+  "label": "Orthographe de persifler",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Lequel de ces verbes s'écrit avec un seul f ?",
+  "options": [
+   "persifler*",
+   "siffler",
+   "souffler",
+   "griffer"
+  ],
+  "explanation": "Persifler (se moquer) s'écrit avec un seul f, alors qu'il vient de siffler.",
+  "hint": "Il vient pourtant de « siffler »."
+ },
+ {
+  "key": "frb-091",
+  "concept": "french.spelling.c_est_un_bon_film",
+  "label": "C'est un bon film",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Complète : « ___ un bon film. »",
+  "options": [
+   "C'est*",
+   "S'est",
+   "Ses",
+   "Sait"
+  ],
+  "explanation": "« C'est » = cela est. « S'est » accompagne un verbe pronominal : il s'est levé.",
+  "hint": "Cela est…"
+ },
+ {
+  "key": "frb-092",
+  "concept": "french.grammar.si_j_avais_su",
+  "label": "Si j'avais su",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Complète : « Si j'avais su, je ne ___ pas venu. »",
+  "options": [
+   "serais*",
+   "serai",
+   "suis",
+   "serait"
+  ],
+  "explanation": "Si + plus-que-parfait → conditionnel passé : je ne serais pas venu.",
+  "hint": "Conditionnel."
+ },
+ {
+  "key": "frb-093",
+  "concept": "french.grammar.subjonctif_d_etre",
+  "label": "Subjonctif d'être",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Complète : « Je veux que tu ___ à l'heure. »",
+  "options": [
+   "sois*",
+   "es",
+   "soit",
+   "serais"
+  ],
+  "explanation": "Après « vouloir que », on met le subjonctif : que tu sois (sans t à la 2e personne).",
+  "hint": "Subjonctif, 2e personne."
+ },
+ {
+  "key": "frb-094",
+  "concept": "french.grammar.subjonctif_de_partir",
+  "label": "Subjonctif de partir",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « Il faut que nous ___ . » (partir)",
+  "options": [
+   "partions*",
+   "partons",
+   "partirions",
+   "partîmes"
+  ],
+  "explanation": "Il faut que + subjonctif : que nous partions.",
+  "hint": "Après « il faut que »."
+ },
+ {
+  "key": "frb-095",
+  "concept": "french.grammar.passe_simple_de_faire",
+  "label": "Passé simple de faire",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au passé simple : « Ils ___ la guerre. » (faire)",
+  "options": [
+   "firent*",
+   "faisèrent",
+   "firènt",
+   "faisaient"
+  ],
+  "explanation": "Faire au passé simple : je fis, tu fis, il fit, nous fîmes, vous fîtes, ils firent.",
+  "hint": "Comme « il fit »."
+ },
+ {
+  "key": "frb-096",
+  "concept": "french.grammar.accord_avec_le_cod_place_avant",
+  "label": "Accord avec le COD placé avant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Complète : « Les pommes qu'il a ___ étaient bonnes. » (manger)",
+  "options": [
+   "mangées*",
+   "mangé",
+   "mangés",
+   "manger"
+  ],
+  "explanation": "Avec avoir, le participe s'accorde avec le COD placé avant : « qu' » reprend « les pommes ».",
+  "hint": "Qu'a-t-il mangé ? Les pommes."
+ },
+ {
+  "key": "frb-097",
+  "concept": "french.grammar.elles_ont_chante",
+  "label": "Elles ont chanté",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « Elles ont ___ toute la soirée. » (chanter)",
+  "options": [
+   "chanté*",
+   "chantées",
+   "chantés",
+   "chanter"
+  ],
+  "explanation": "Avec avoir, pas d'accord avec le sujet ; ici, il n'y a pas de COD placé avant.",
+  "hint": "Pas d'accord avec le sujet."
+ },
+ {
+  "key": "frb-098",
+  "concept": "french.grammar.nature_de_souvent",
+  "label": "Nature de souvent",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle est la nature du mot « souvent » ?",
+  "options": [
+   "un adverbe*",
+   "un adjectif",
+   "un nom",
+   "une préposition"
+  ],
+  "explanation": "Souvent est un adverbe de temps : il est invariable et modifie le verbe.",
+  "hint": "Il est invariable."
+ },
+ {
+  "key": "frb-099",
+  "concept": "french.grammar.donc_conjonction",
+  "label": "Donc conjonction",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "« Donc » est une conjonction de coordination.",
+  "answer": true,
+  "explanation": "Oui : mais, ou, et, donc, or, ni, car (« Mais où est donc Ornicar ? »).",
+  "hint": "Mais où est donc Ornicar ?"
+ },
+ {
+  "key": "frb-100",
+  "concept": "french.grammar.fonction_sujet",
+  "label": "Fonction sujet",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans « Pierre mange une pomme », quelle est la fonction de « Pierre » ?",
+  "options": [
+   "sujet*",
+   "complément d'objet",
+   "attribut",
+   "complément circonstanciel"
+  ],
+  "explanation": "Qui est-ce qui mange ? Pierre : c'est le sujet du verbe.",
+  "hint": "Qui mange ?"
+ },
+ {
+  "key": "frb-101",
+  "concept": "french.grammar.fonction_cod",
+  "label": "Fonction COD",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « Elle lit un roman », quelle est la fonction de « un roman » ?",
+  "options": [
+   "complément d'objet direct*",
+   "sujet",
+   "complément d'objet indirect",
+   "attribut du sujet"
+  ],
+  "explanation": "Elle lit quoi ? Un roman : complément relié au verbe sans préposition.",
+  "hint": "Elle lit quoi ?"
+ },
+ {
+  "key": "frb-102",
+  "concept": "french.grammar.fonction_coi",
+  "label": "Fonction COI",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans « Il parle à sa sœur », quelle est la fonction de « à sa sœur » ?",
+  "options": [
+   "COI (complément d'objet indirect)*",
+   "complément du nom",
+   "complément de lieu",
+   "COD (complément d'objet direct)"
+  ],
+  "explanation": "Il parle à qui ? À sa sœur : le complément est introduit par une préposition.",
+  "hint": "Il y a une préposition."
+ },
+ {
+  "key": "frb-103",
+  "concept": "french.grammar.nous_chanterions",
+  "label": "Nous chanterions",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quel temps est « nous chanterions » ?",
+  "options": [
+   "conditionnel présent*",
+   "futur simple",
+   "imparfait",
+   "subjonctif présent"
+  ],
+  "explanation": "Radical du futur (chanter-) + terminaison de l'imparfait (-ions) : c'est le conditionnel.",
+  "hint": "Futur + imparfait."
+ },
+ {
+  "key": "frb-104",
+  "concept": "french.grammar.passe_anterieur",
+  "label": "Passé antérieur",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À quel temps est « j'eus fini » ?",
+  "options": [
+   "passé antérieur*",
+   "plus-que-parfait",
+   "passé composé",
+   "futur antérieur"
+  ],
+  "explanation": "Auxiliaire au passé simple + participe passé : le passé antérieur, surtout employé à l'écrit.",
+  "hint": "Auxiliaire au passé simple."
+ },
+ {
+  "key": "frb-105",
+  "concept": "french.grammar.qu_il_fut",
+  "label": "Qu'il fût",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "À quel temps est « qu'il fût » ?",
+  "options": [
+   "subjonctif imparfait*",
+   "passé simple",
+   "imparfait de l'indicatif",
+   "conditionnel"
+  ],
+  "explanation": "Avec l'accent circonflexe et « que », c'est le subjonctif imparfait. Sans accent, « il fut » est au passé simple.",
+  "hint": "Attention à l'accent."
+ },
+ {
+  "key": "frb-106",
+  "concept": "french.grammar.feminin_de_loup",
+  "label": "Féminin de loup",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le féminin de « loup » ?",
+  "options": [
+   "louve*",
+   "loupe",
+   "loupette",
+   "louvette"
+  ],
+  "explanation": "La louve ; son petit est le louveteau.",
+  "hint": "Comme dans la légende de Rome."
+ },
+ {
+  "key": "frb-107",
+  "concept": "french.grammar.pluriel_de_bal",
+  "label": "Pluriel de bal",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le pluriel de « un bal » ?",
+  "options": [
+   "des bals*",
+   "des baux",
+   "des bales",
+   "des baus"
+  ],
+  "explanation": "Exception : bal, carnaval, chacal, festival, récital, régal font leur pluriel en -als.",
+  "hint": "Une exception en -al."
+ },
+ {
+  "key": "frb-108",
+  "concept": "french.grammar.pluriel_de_chacal",
+  "label": "Pluriel de chacal",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le pluriel de « un chacal » ?",
+  "options": [
+   "des chacals*",
+   "des chacaux",
+   "des chacales",
+   "des chacaus"
+  ],
+  "explanation": "Comme bal, carnaval, festival et régal : -als.",
+  "hint": "Même exception que « bal »."
+ },
+ {
+  "key": "frb-109",
+  "concept": "french.grammar.pluriel_de_pou",
+  "label": "Pluriel de pou",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le pluriel de « un pou » ?",
+  "options": [
+   "des poux*",
+   "des pous",
+   "des poues",
+   "des pou"
+  ],
+  "explanation": "Les sept mots en -ou qui prennent un x : bijou, caillou, chou, genou, hibou, joujou, pou.",
+  "hint": "Comme « bijou, caillou, chou… »."
+ },
+ {
+  "key": "frb-110",
+  "concept": "french.grammar.pluriel_de_timbre_poste",
+  "label": "Pluriel de timbre-poste",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel est le pluriel de « un timbre-poste » ?",
+  "options": [
+   "des timbres-poste*",
+   "des timbres-postes",
+   "des timbre-postes",
+   "des timbre-poste"
+  ],
+  "explanation": "Ce sont des timbres pour la poste : seul « timbre » varie.",
+  "hint": "Des timbres pour la poste."
+ },
+ {
+  "key": "frb-111",
+  "concept": "french.grammar.leur_pronom_invariable",
+  "label": "Leur pronom invariable",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Dans « Je leur donne du pain », « leur » ne prend jamais de s.",
+  "answer": true,
+  "explanation": "Placé devant un verbe, « leur » est un pronom personnel (= à eux) et reste invariable.",
+  "hint": "Remplace par « lui »."
+ },
+ {
+  "key": "frb-112",
+  "concept": "french.grammar.chemises_orange",
+  "label": "Chemises orange",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle écriture est correcte ?",
+  "options": [
+   "des chemises orange*",
+   "des chemises oranges",
+   "des chemises orangés",
+   "des chemise orange"
+  ],
+  "explanation": "Les adjectifs de couleur issus d'un nom (orange, marron, citron) restent invariables. Exceptions : rose, mauve, pourpre…",
+  "hint": "La couleur vient d'un fruit."
+ },
+ {
+  "key": "frb-113",
+  "concept": "french.grammar.midi_et_demi",
+  "label": "Midi et demi",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Complète : « Il est midi et ___ . »",
+  "options": [
+   "demi*",
+   "demie",
+   "demis",
+   "demies"
+  ],
+  "explanation": "Après le nom, demi s'accorde en genre avec lui : midi est masculin, donc midi et demi (mais une heure et demie).",
+  "hint": "Midi est masculin."
+ },
+ {
+  "key": "frb-114",
+  "concept": "french.grammar.nu_pieds",
+  "label": "Nu-pieds",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Complète : « Il marche ___ sur la plage. »",
+  "options": [
+   "nu-pieds*",
+   "nus-pieds",
+   "nu-pied",
+   "nus pieds"
+  ],
+  "explanation": "Devant le nom et avec un trait d'union, nu est invariable : nu-pieds, nu-tête. Mais : pieds nus.",
+  "hint": "Placé devant, il ne varie pas."
+ },
+ {
+  "key": "frb-115",
+  "concept": "french.grammar.phrase_exclamative",
+  "label": "Phrase exclamative",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel type de phrase est « Quelle belle journée ! » ?",
+  "options": [
+   "exclamative*",
+   "interrogative",
+   "impérative",
+   "déclarative"
+  ],
+  "explanation": "Elle exprime une émotion et se termine par un point d'exclamation.",
+  "hint": "Regarde la ponctuation."
+ },
+ {
+  "key": "frb-116",
+  "concept": "french.grammar.infinitif_de_vinmes",
+  "label": "Infinitif de vînmes",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est l'infinitif de « nous vînmes » ?",
+  "options": [
+   "venir*",
+   "voir",
+   "vaincre",
+   "vivre"
+  ],
+  "explanation": "Venir au passé simple : je vins, nous vînmes, ils vinrent.",
+  "hint": "Nous vînmes, vous vîntes, ils vinrent."
+ },
+ {
+  "key": "frb-117",
+  "concept": "french.grammar.groupe_de_finir",
+  "label": "Groupe de finir",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quel groupe appartient le verbe « finir » ?",
+  "options": [
+   "au 2e groupe*",
+   "au 1er groupe",
+   "au 3e groupe",
+   "à aucun groupe"
+  ],
+  "explanation": "Les verbes en -ir qui font -issons (nous finissons) forment le 2e groupe.",
+  "hint": "Nous finissons."
+ },
+ {
+  "key": "frb-118",
+  "concept": "french.grammar.groupe_d_aller",
+  "label": "Groupe d'aller",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quel groupe appartient le verbe « aller » ?",
+  "options": [
+   "au 3e groupe*",
+   "au 1er groupe",
+   "au 2e groupe",
+   "à aucun groupe"
+  ],
+  "explanation": "Malgré sa terminaison en -er, aller est irrégulier (je vais, j'irai) : il est rangé dans le 3e groupe.",
+  "hint": "Il est très irrégulier."
+ },
+ {
+  "key": "frb-119",
+  "concept": "french.grammar.complement_de_temps",
+  "label": "Complément de temps",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans « Demain, nous partirons », quelle est la fonction de « demain » ?",
+  "options": [
+   "complément circonstanciel de temps*",
+   "sujet",
+   "complément d'objet direct",
+   "complément circonstanciel de lieu"
+  ],
+  "explanation": "Il indique quand l'action a lieu et peut être déplacé ou supprimé.",
+  "hint": "Quand ?"
+ },
+ {
+  "key": "frb-120",
+  "concept": "french.grammar.mode_imperatif",
+  "label": "Mode impératif",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "À quel mode est « Range ta chambre ! » ?",
+  "options": [
+   "l'impératif*",
+   "l'indicatif",
+   "le subjonctif",
+   "l'infinitif"
+  ],
+  "explanation": "L'impératif sert à donner un ordre ou un conseil, sans sujet exprimé.",
+  "hint": "Un ordre."
+ },
+ {
+  "key": "frb-121",
+  "concept": "french.vocabulary.medecins_specialistes",
+  "label": "Médecins spécialistes",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque médecin à ce qu'il soigne.",
+  "pairs": [
+   [
+    "Dermatologue",
+    "La peau"
+   ],
+   [
+    "Cardiologue",
+    "Le cœur"
+   ],
+   [
+    "Ophtalmologue",
+    "Les yeux"
+   ],
+   [
+    "Pneumologue",
+    "Les poumons"
+   ]
+  ],
+  "explanation": "Racines grecques : derma (peau), kardia (cœur), ophthalmos (œil), pneumôn (poumon).",
+  "hint": "Cherche la racine grecque."
+ },
+ {
+  "key": "frb-122",
+  "concept": "french.vocabulary.pediatre",
+  "label": "Pédiatre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui soigne un pédiatre ?",
+  "options": [
+   "les enfants*",
+   "les pieds",
+   "les personnes âgées",
+   "les animaux"
+  ],
+  "explanation": "Du grec pais, paidos : l'enfant (comme dans « pédagogie »). Les pieds, c'est le podologue.",
+  "hint": "Pense à « pédagogie »."
+ },
+ {
+  "key": "frb-123",
+  "concept": "french.vocabulary.ephemeride",
+  "label": "Éphéméride",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qu'une « éphéméride » ?",
+  "options": [
+   "un calendrier dont on détache une feuille par jour*",
+   "un insecte qui vit un jour",
+   "une fleur de printemps",
+   "un journal intime"
+  ],
+  "explanation": "Du grec ephêmeros, « qui dure un jour ». L'insecte, c'est l'éphémère.",
+  "hint": "Une page par jour."
+ },
+ {
+  "key": "frb-124",
+  "concept": "french.vocabulary.autodidacte",
+  "label": "Autodidacte",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Un « autodidacte » est quelqu'un qui…",
+  "options": [
+   "a appris seul, sans maître*",
+   "conduit une voiture",
+   "écrit sa biographie",
+   "refuse d'apprendre"
+  ],
+  "explanation": "Du grec autos (soi-même) et didaskein (enseigner).",
+  "hint": "Auto = soi-même."
+ },
+ {
+  "key": "frb-125",
+  "concept": "french.vocabulary.hebdomadaire",
+  "label": "Hebdomadaire",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Un magazine « hebdomadaire » paraît…",
+  "options": [
+   "chaque semaine*",
+   "chaque jour",
+   "chaque mois",
+   "chaque année"
+  ],
+  "explanation": "Du grec hebdomas, semaine. Quotidien : chaque jour ; mensuel : chaque mois.",
+  "hint": "Sept jours."
+ },
+ {
+  "key": "frb-126",
+  "concept": "french.vocabulary.bimensuel",
+  "label": "Bimensuel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un journal « bimensuel » paraît…",
+  "options": [
+   "deux fois par mois*",
+   "tous les deux mois",
+   "deux fois par an",
+   "tous les deux ans"
+  ],
+  "explanation": "Bimensuel : deux fois par mois. Tous les deux mois, c'est bimestriel.",
+  "hint": "Pas « bimestriel »…"
+ },
+ {
+  "key": "frb-127",
+  "concept": "french.vocabulary.omnivore",
+  "label": "Omnivore",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Un animal « omnivore »…",
+  "options": [
+   "mange de tout*",
+   "ne mange que des plantes",
+   "ne mange que de la viande",
+   "ne mange que la nuit"
+  ],
+  "explanation": "Du latin omnis (tout) et vorare (dévorer). L'humain, le cochon et l'ours sont omnivores.",
+  "hint": "Omni = tout."
+ },
+ {
+  "key": "frb-128",
+  "concept": "french.vocabulary.anecdote",
+  "label": "Anecdote",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'une « anecdote » ?",
+  "options": [
+   "un petit récit d'un fait curieux*",
+   "un médicament contre le poison",
+   "une erreur de date",
+   "un long roman"
+  ],
+  "explanation": "Un court récit, souvent amusant, d'un fait particulier. L'antidote, lui, combat un poison.",
+  "hint": "Une petite histoire."
+ },
+ {
+  "key": "frb-129",
+  "concept": "french.vocabulary.utopie",
+  "label": "Utopie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'une « utopie » ?",
+  "options": [
+   "un idéal qui semble irréalisable*",
+   "un cauchemar",
+   "un souvenir lointain",
+   "un pays imaginaire en guerre"
+  ],
+  "explanation": "Le mot vient du livre de Thomas More (1516) : « ou-topos », le lieu qui n'existe nulle part.",
+  "hint": "« Nulle part » en grec."
+ },
+ {
+  "key": "frb-130",
+  "concept": "french.vocabulary.euphemisme",
+  "label": "Euphémisme",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dire « il nous a quittés » au lieu de « il est mort » est…",
+  "options": [
+   "un euphémisme*",
+   "une hyperbole",
+   "un pléonasme",
+   "une onomatopée"
+  ],
+  "explanation": "L'euphémisme adoucit une réalité pénible ou choquante.",
+  "hint": "On adoucit."
+ },
+ {
+  "key": "frb-131",
+  "concept": "french.vocabulary.hyperbole",
+  "label": "Hyperbole",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dire « je meurs de faim » quand on a faim est…",
+  "options": [
+   "une hyperbole*",
+   "un euphémisme",
+   "un oxymore",
+   "une litote"
+  ],
+  "explanation": "L'hyperbole exagère volontairement pour frapper l'esprit.",
+  "hint": "On exagère."
+ },
+ {
+  "key": "frb-132",
+  "concept": "french.vocabulary.anachronisme",
+  "label": "Anachronisme",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un chevalier avec une montre-bracelet dans un film est…",
+  "options": [
+   "un anachronisme*",
+   "un néologisme",
+   "un paradoxe",
+   "un archaïsme"
+  ],
+  "explanation": "Un anachronisme place un élément dans une époque qui n'est pas la sienne.",
+  "hint": "Une erreur d'époque."
+ },
+ {
+  "key": "frb-133",
+  "concept": "french.vocabulary.xenophobe",
+  "label": "Xénophobe",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Une personne « xénophobe »…",
+  "options": [
+   "est hostile aux étrangers*",
+   "a peur des araignées",
+   "aime voyager",
+   "parle plusieurs langues"
+  ],
+  "explanation": "Du grec xenos (étranger) et phobos (peur). La peur des araignées est l'arachnophobie.",
+  "hint": "Xénos = étranger."
+ },
+ {
+  "key": "frb-134",
+  "concept": "french.vocabulary.megalomane",
+  "label": "Mégalomane",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un « mégalomane » souffre…",
+  "options": [
+   "de la folie des grandeurs*",
+   "du vertige",
+   "de la peur du noir",
+   "d'insomnie"
+  ],
+  "explanation": "Du grec megas (grand) et mania (folie) : il se croit plus important qu'il n'est.",
+  "hint": "Méga = grand."
+ },
+ {
+  "key": "frb-135",
+  "concept": "french.vocabulary.collectionneurs",
+  "label": "Collectionneurs",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque collectionneur à ce qu'il collectionne.",
+  "pairs": [
+   [
+    "Philatéliste",
+    "Les timbres"
+   ],
+   [
+    "Numismate",
+    "Les monnaies"
+   ],
+   [
+    "Cartophile",
+    "Les cartes postales"
+   ],
+   [
+    "Tyrosémiophile",
+    "Les étiquettes de fromage"
+   ]
+  ],
+  "explanation": "Chaque passion a son nom savant : numisma est la monnaie en latin, et le tyrosémiophile collectionne les étiquettes de camembert.",
+  "hint": "Numisma = monnaie."
+ },
+ {
+  "key": "frb-136",
+  "concept": "french.vocabulary.ornithologue",
+  "label": "Ornithologue",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'étudie un « ornithologue » ?",
+  "options": [
+   "les oiseaux*",
+   "les poissons",
+   "les insectes",
+   "les roches"
+  ],
+  "explanation": "Du grec ornis, ornithos : oiseau.",
+  "hint": "Ornis = oiseau."
+ },
+ {
+  "key": "frb-137",
+  "concept": "french.vocabulary.somnambule",
+  "label": "Somnambule",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Un « somnambule »…",
+  "options": [
+   "marche en dormant*",
+   "dort debout",
+   "rêve éveillé",
+   "dort le jour"
+  ],
+  "explanation": "Du latin somnus (sommeil) et ambulare (marcher).",
+  "hint": "Somnus + marcher."
+ },
+ {
+  "key": "frb-138",
+  "concept": "french.vocabulary.insipide",
+  "label": "Insipide",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un plat « insipide » est…",
+  "options": [
+   "sans saveur*",
+   "trop salé",
+   "trop épicé",
+   "trop cuit"
+  ],
+  "explanation": "In- (privatif) + sapidus (qui a du goût). Au figuré : ennuyeux.",
+  "hint": "Il manque de goût."
+ },
+ {
+  "key": "frb-139",
+  "concept": "french.vocabulary.taciturne",
+  "label": "Taciturne",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Une personne « taciturne »…",
+  "options": [
+   "parle peu*",
+   "parle trop",
+   "se fâche vite",
+   "rit souvent"
+  ],
+  "explanation": "Du latin tacere, se taire (comme « tacite »).",
+  "hint": "Tacere = se taire."
+ },
+ {
+  "key": "frb-140",
+  "concept": "french.vocabulary.eclectique",
+  "label": "Éclectique",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avoir des goûts « éclectiques », c'est…",
+  "options": [
+   "aimer des choses très variées*",
+   "être difficile",
+   "aimer l'électricité",
+   "n'aimer que le classique"
+  ],
+  "explanation": "Éclectique : qui choisit dans différents genres sans se limiter à un seul.",
+  "hint": "Un peu de tout."
+ },
+ {
+  "key": "frb-141",
+  "concept": "french.vocabulary.cupide",
+  "label": "Cupide",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Une personne « cupide » est…",
+  "options": [
+   "avide d'argent*",
+   "amoureuse",
+   "naïve",
+   "très maigre"
+  ],
+  "explanation": "Du latin cupiditas, le désir. Rien à voir avec Cupidon… qui partage pourtant la même racine.",
+  "hint": "Elle veut toujours plus."
+ },
+ {
+  "key": "frb-142",
+  "concept": "french.vocabulary.candide",
+  "label": "Candide",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Une personne « candide » est…",
+  "options": [
+   "naïve et innocente*",
+   "rusée",
+   "méchante",
+   "très savante"
+  ],
+  "explanation": "Popularisé par le conte de Voltaire, « Candide » (1759), dont le héros croit que tout est pour le mieux.",
+  "hint": "Le héros de Voltaire."
+ },
+ {
+  "key": "frb-143",
+  "concept": "french.vocabulary.peregrinations",
+  "label": "Pérégrinations",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Des « pérégrinations » sont…",
+  "options": [
+   "des voyages nombreux et compliqués*",
+   "des prières",
+   "des disputes",
+   "des migrations d'oiseaux"
+  ],
+  "explanation": "Du latin peregrinus, l'étranger, le voyageur (comme « pèlerin »).",
+  "hint": "Comme un pèlerin."
+ },
+ {
+  "key": "frb-144",
+  "concept": "french.vocabulary.belliqueux",
+  "label": "Belliqueux",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un peuple « belliqueux »…",
+  "options": [
+   "aime la guerre*",
+   "aime la beauté",
+   "est très pacifique",
+   "vit de la pêche"
+  ],
+  "explanation": "Du latin bellum, la guerre (comme « belligérant »).",
+  "hint": "Bellum = guerre."
+ },
+ {
+  "key": "frb-145",
+  "concept": "french.vocabulary.nostalgie",
+  "label": "Nostalgie",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce que la « nostalgie » ?",
+  "options": [
+   "le regret mélancolique du passé*",
+   "la peur de l'avenir",
+   "le mal de mer",
+   "une maladie des os"
+  ],
+  "explanation": "Du grec nostos (retour) et algos (douleur) : à l'origine, le mal du pays.",
+  "hint": "Le mal du pays."
+ },
+ {
+  "key": "frb-146",
+  "concept": "french.vocabulary.fastidieux",
+  "label": "Fastidieux",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un travail « fastidieux » est…",
+  "options": [
+   "ennuyeux, long et répétitif*",
+   "luxueux",
+   "rapide",
+   "dangereux"
+  ],
+  "explanation": "Rien à voir avec le faste : fastidieux vient du latin fastidium, dégoût.",
+  "hint": "Long et ennuyeux."
+ },
+ {
+  "key": "frb-147",
+  "concept": "french.vocabulary.onirique",
+  "label": "Onirique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une ambiance « onirique » évoque…",
+  "options": [
+   "le rêve*",
+   "la mer",
+   "la mort",
+   "la musique"
+  ],
+  "explanation": "Du grec oneiros, le rêve.",
+  "hint": "Oneiros = rêve."
+ },
+ {
+  "key": "frb-148",
+  "concept": "french.vocabulary.ineluctable",
+  "label": "Inéluctable",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un événement « inéluctable » est…",
+  "options": [
+   "impossible à éviter*",
+   "imprévisible",
+   "très heureux",
+   "rare"
+  ],
+  "explanation": "Du latin eluctari, se sortir en luttant : on ne peut s'y soustraire.",
+  "hint": "On n'y échappe pas."
+ },
+ {
+  "key": "frb-149",
+  "concept": "french.vocabulary.soporifique",
+  "label": "Soporifique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un discours « soporifique »…",
+  "options": [
+   "endort*",
+   "réveille",
+   "fait peur",
+   "fait rire"
+  ],
+  "explanation": "Du latin sopor, sommeil profond.",
+  "hint": "On s'endort."
+ },
+ {
+  "key": "frb-150",
+  "concept": "french.vocabulary.redhibitoire",
+  "label": "Rédhibitoire",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Un défaut « rédhibitoire » est…",
+  "options": [
+   "un obstacle absolu, qui fait tout refuser*",
+   "léger et sans importance",
+   "caché",
+   "facile à réparer"
+  ],
+  "explanation": "À l'origine, un défaut qui permet d'annuler une vente. Au sens courant : totalement éliminatoire.",
+  "hint": "Éliminatoire."
+ }
+]

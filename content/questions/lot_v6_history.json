@@ -1,0 +1,1121 @@
+[
+ {
+  "key": "hib-001",
+  "concept": "history.antiquity.guerre_des_gaules",
+  "label": "Guerre des Gaules",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a écrit « La Guerre des Gaules » ?",
+  "options": [
+   "Jules César*",
+   "Cicéron",
+   "Vercingétorix",
+   "Virgile"
+  ],
+  "explanation": "César raconte lui-même sa conquête de la Gaule (58-51 av. J.-C.), à la troisième personne.",
+  "hint": "Le vainqueur raconte."
+ },
+ {
+  "key": "hib-002",
+  "concept": "history.antiquity.fleuve_de_l_egypte",
+  "label": "Fleuve de l'Égypte",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel fleuve a permis l'essor de la civilisation égyptienne ?",
+  "options": [
+   "Le Nil*",
+   "Le Tigre",
+   "L'Euphrate",
+   "Le Jourdain"
+  ],
+  "explanation": "Ses crues annuelles déposaient un limon fertile : « L'Égypte est un don du Nil », écrivait Hérodote.",
+  "hint": "Il traverse Le Caire."
+ },
+ {
+  "key": "hib-003",
+  "concept": "history.antiquity.mesopotamie",
+  "label": "Mésopotamie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "La Mésopotamie s'étendait entre deux fleuves. Lesquels ?",
+  "options": [
+   "Le Tigre et l'Euphrate*",
+   "Le Nil et le Jourdain",
+   "L'Indus et le Gange",
+   "Le Danube et le Rhin"
+  ],
+  "explanation": "Mésopotamie signifie « entre les fleuves » en grec. C'est l'actuel Irak.",
+  "hint": "L'actuel Irak."
+ },
+ {
+  "key": "hib-004",
+  "concept": "history.antiquity.code_d_hammurabi",
+  "label": "Code d'Hammurabi",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel roi de Babylone a fait graver l'un des plus anciens codes de lois sur une stèle ?",
+  "options": [
+   "Hammurabi*",
+   "Nabuchodonosor",
+   "Ramsès II",
+   "Cyrus"
+  ],
+  "explanation": "Vers 1750 av. J.-C. La stèle, conservée au Louvre, contient près de 300 lois.",
+  "hint": "La stèle est au Louvre."
+ },
+ {
+  "key": "hib-005",
+  "concept": "history.antiquity.platon",
+  "label": "Platon",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel philosophe fut l'élève de Socrate et le maître d'Aristote ?",
+  "options": [
+   "Platon*",
+   "Épicure",
+   "Diogène",
+   "Pythagore"
+  ],
+  "explanation": "Platon fonde l'Académie à Athènes. C'est par ses dialogues que l'on connaît Socrate, qui n'a rien écrit.",
+  "hint": "Il fonde l'Académie."
+ },
+ {
+  "key": "hib-006",
+  "concept": "history.antiquity.siecle_de_pericles",
+  "label": "Siècle de Périclès",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel homme d'État a donné son nom à l'âge d'or d'Athènes, au Ve siècle av. J.-C. ?",
+  "options": [
+   "Périclès*",
+   "Solon",
+   "Clisthène",
+   "Léonidas"
+  ],
+  "explanation": "Sous Périclès, Athènes construit le Parthénon et rayonne par ses arts et sa démocratie.",
+  "hint": "On parle du « siècle de… »."
+ },
+ {
+  "key": "hib-007",
+  "concept": "history.antiquity.pythie_de_delphes",
+  "label": "Pythie de Delphes",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À Delphes, qui transmettait les réponses du dieu Apollon aux Grecs venus le consulter ?",
+  "options": [
+   "La Pythie*",
+   "La Sibylle",
+   "Une Vestale",
+   "Cassandre"
+  ],
+  "explanation": "Les oracles de la Pythie, souvent obscurs, étaient interprétés par des prêtres. Cités et rois la consultaient avant les grandes décisions.",
+  "hint": "Une prêtresse d'Apollon."
+ },
+ {
+  "key": "hib-008",
+  "concept": "history.antiquity.amphitheatre_flavien",
+  "label": "Amphithéâtre flavien",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelait à l'origine le Colisée de Rome ?",
+  "options": [
+   "L'amphithéâtre flavien*",
+   "Le Circus Maximus",
+   "Le Panthéon",
+   "Le forum de Trajan"
+  ],
+  "explanation": "Construit sous les empereurs flaviens (Vespasien, Titus), inauguré en 80. Son surnom viendrait d'une statue colossale de Néron.",
+  "hint": "Du nom d'une dynastie."
+ },
+ {
+  "key": "hib-009",
+  "concept": "history.antiquity.langue_des_romains",
+  "label": "Langue des Romains",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quelle langue parlaient les Romains de l'Antiquité ?",
+  "options": [
+   "Le latin*",
+   "Le grec",
+   "L'italien",
+   "Le gaulois"
+  ],
+  "explanation": "Le latin a donné naissance aux langues romanes : français, italien, espagnol, portugais, roumain.",
+  "hint": "L'ancêtre du français."
+ },
+ {
+  "key": "hib-010",
+  "concept": "history.antiquity.bataille_de_marathon",
+  "label": "Bataille de Marathon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle bataille de 490 av. J.-C., gagnée par les Athéniens sur les Perses, a inspiré une course célèbre ?",
+  "options": [
+   "Marathon*",
+   "Salamine",
+   "Platées",
+   "Thermopyles"
+  ],
+  "explanation": "Selon la légende, un messager aurait couru jusqu'à Athènes annoncer la victoire, avant de s'effondrer.",
+  "hint": "Une course de 42 km."
+ },
+ {
+  "key": "hib-011",
+  "concept": "history.antiquity.bataille_de_salamine",
+  "label": "Bataille de Salamine",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle bataille navale voit la flotte grecque vaincre les Perses en 480 av. J.-C. ?",
+  "options": [
+   "Salamine*",
+   "Actium",
+   "Lépante",
+   "Marathon"
+  ],
+  "explanation": "Thémistocle attire la flotte perse de Xerxès dans un détroit étroit près d'Athènes, où elle ne peut manœuvrer.",
+  "hint": "Une île près d'Athènes."
+ },
+ {
+  "key": "hib-012",
+  "concept": "history.antiquity.xerxes",
+  "label": "Xerxès",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel roi perse envahit la Grèce en 480 av. J.-C. ?",
+  "options": [
+   "Xerxès Ier*",
+   "Darius Ier",
+   "Cyrus le Grand",
+   "Cambyse"
+  ],
+  "explanation": "Fils de Darius, il franchit l'Hellespont avec une armée immense, avant d'être battu à Salamine.",
+  "hint": "Le fils de Darius."
+ },
+ {
+  "key": "hib-013",
+  "concept": "history.antiquity.toutankhamon",
+  "label": "Toutânkhamon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui était Toutânkhamon ?",
+  "options": [
+   "Un pharaon mort jeune*",
+   "Un dieu égyptien",
+   "Un architecte de pyramide",
+   "Un général romain"
+  ],
+  "explanation": "Mort vers 19 ans, il est célèbre grâce à sa tombe retrouvée presque intacte en 1922.",
+  "hint": "Sa tombe est célèbre."
+ },
+ {
+  "key": "hib-014",
+  "concept": "history.antiquity.bataille_de_qadesh",
+  "label": "Bataille de Qadesh",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Contre quel peuple Ramsès II livre-t-il la bataille de Qadesh, vers 1274 av. J.-C. ?",
+  "options": [
+   "Les Hittites*",
+   "Les Perses",
+   "Les Grecs",
+   "Les Romains"
+  ],
+  "explanation": "L'une des premières batailles bien documentées, suivie d'un des plus anciens traités de paix connus.",
+  "hint": "Un empire d'Anatolie."
+ },
+ {
+  "key": "hib-015",
+  "concept": "history.antiquity.nefertiti",
+  "label": "Néfertiti",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui était Néfertiti ?",
+  "options": [
+   "La reine, épouse d'Akhenaton*",
+   "La mère de Cléopâtre",
+   "Une déesse du Nil",
+   "Une reine de Saba"
+  ],
+  "explanation": "Son buste peint, découvert en 1912, est l'une des œuvres les plus célèbres de l'Égypte antique.",
+  "hint": "Un buste célèbre."
+ },
+ {
+  "key": "hib-016",
+  "concept": "history.antiquity.momification",
+  "label": "Momification",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi les Égyptiens momifiaient-ils leurs morts ?",
+  "options": [
+   "Pour conserver le corps pour l'au-delà*",
+   "Pour éviter les épidémies",
+   "Pour les exposer au public",
+   "Pour les transporter"
+  ],
+  "explanation": "Ils croyaient que l'âme avait besoin du corps pour vivre éternellement.",
+  "hint": "Une croyance religieuse."
+ },
+ {
+  "key": "hib-017",
+  "concept": "history.antiquity.premier_triumvirat",
+  "label": "Premier triumvirat",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Avec César et Crassus, qui formait le premier triumvirat ?",
+  "options": [
+   "Pompée*",
+   "Octave",
+   "Marc Antoine",
+   "Cicéron"
+  ],
+  "explanation": "En 60 av. J.-C. Après la mort de Crassus, César et Pompée s'affrontent dans une guerre civile.",
+  "hint": "Le futur rival de César."
+ },
+ {
+  "key": "hib-018",
+  "concept": "history.antiquity.rubicon",
+  "label": "Rubicon",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle rivière César franchit-il en 49 av. J.-C. en déclarant « Le sort en est jeté » ?",
+  "options": [
+   "Le Rubicon*",
+   "Le Tibre",
+   "Le Pô",
+   "Le Rhône"
+  ],
+  "explanation": "Franchir le Rubicon en armes, c'était déclarer la guerre à Rome. « Franchir le Rubicon » : prendre une décision irréversible.",
+  "hint": "L'expression est restée."
+ },
+ {
+  "key": "hib-019",
+  "concept": "history.antiquity.neron_et_l_incendie",
+  "label": "Néron et l'incendie",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Néron était l'empereur de Rome lors du grand incendie de 64.",
+  "answer": true,
+  "explanation": "Oui. Il accuse les chrétiens, qu'il persécute. L'idée qu'il aurait joué de la lyre en regardant brûler la ville est une légende.",
+  "hint": "Un empereur à la réputation terrible."
+ },
+ {
+  "key": "hib-020",
+  "concept": "history.antiquity.trajan",
+  "label": "Trajan",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Sous quel empereur l'Empire romain atteint-il sa plus grande étendue, en 117 ?",
+  "options": [
+   "Trajan*",
+   "Auguste",
+   "Néron",
+   "Constantin"
+  ],
+  "explanation": "Après la conquête de la Dacie (Roumanie) et de la Mésopotamie. La colonne Trajane à Rome célèbre ses victoires.",
+  "hint": "Une colonne à Rome porte son nom."
+ },
+ {
+  "key": "hib-021",
+  "concept": "history.antiquity.marc_aurele",
+  "label": "Marc Aurèle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel empereur romain, philosophe stoïcien, a écrit les « Pensées pour moi-même » ?",
+  "options": [
+   "Marc Aurèle*",
+   "Hadrien",
+   "Caligula",
+   "Tibère"
+  ],
+  "explanation": "Il les écrit en grec, souvent en campagne militaire. On le voit au début du film « Gladiator ».",
+  "hint": "Un empereur philosophe."
+ },
+ {
+  "key": "hib-022",
+  "concept": "history.antiquity.via_appia",
+  "label": "Via Appia",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment s'appelle la plus célèbre voie romaine, partant de Rome vers le sud ?",
+  "options": [
+   "La via Appia*",
+   "La via Domitia",
+   "La via Aurelia",
+   "La via Egnatia"
+  ],
+  "explanation": "Construite à partir de 312 av. J.-C., la « reine des routes » reliait Rome à Brindisi.",
+  "hint": "La « reine des routes »."
+ },
+ {
+  "key": "hib-023",
+  "concept": "history.antiquity.aqueduc_romain",
+  "label": "Aqueduc romain",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "À quoi servait un aqueduc romain comme le pont du Gard ?",
+  "options": [
+   "À transporter l'eau*",
+   "À traverser un fleuve à pied",
+   "À défendre une ville",
+   "À mesurer le temps"
+  ],
+  "explanation": "Le pont du Gard acheminait l'eau jusqu'à Nîmes, avec une pente de quelques centimètres par kilomètre.",
+  "hint": "Pense à « aqua »."
+ },
+ {
+  "key": "hib-024",
+  "concept": "history.antiquity.lutece",
+  "label": "Lutèce",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel était le nom de Paris à l'époque gallo-romaine ?",
+  "options": [
+   "Lutèce*",
+   "Lugdunum",
+   "Massalia",
+   "Burdigala"
+  ],
+  "explanation": "Lutetia, sur l'île de la Cité, chez le peuple gaulois des Parisii, qui a donné son nom à la ville.",
+  "hint": "Chez les Parisii."
+ },
+ {
+  "key": "hib-025",
+  "concept": "history.antiquity.villes_gallo_romaines",
+  "label": "Villes gallo-romaines",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque nom antique à la ville actuelle.",
+  "pairs": [
+   [
+    "Lugdunum",
+    "Lyon"
+   ],
+   [
+    "Massalia",
+    "Marseille"
+   ],
+   [
+    "Burdigala",
+    "Bordeaux"
+   ],
+   [
+    "Nemausus",
+    "Nîmes"
+   ]
+  ],
+  "explanation": "Massalia a été fondée par des Grecs de Phocée vers 600 av. J.-C. ; Lugdunum était la capitale des Gaules.",
+  "hint": "Massalia était grecque."
+ },
+ {
+  "key": "hib-026",
+  "concept": "history.antiquity.druides",
+  "label": "Druides",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui étaient les druides chez les Gaulois ?",
+  "options": [
+   "Des prêtres et des savants*",
+   "Des guerriers",
+   "Des marchands",
+   "Des esclaves"
+  ],
+  "explanation": "Ils présidaient les cérémonies, rendaient la justice et transmettaient le savoir oralement.",
+  "hint": "Pense à Panoramix."
+ },
+ {
+  "key": "hib-027",
+  "concept": "history.antiquity.gergovie",
+  "label": "Gergovie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle bataille Vercingétorix remporte-t-il contre César, en 52 av. J.-C., avant Alésia ?",
+  "options": [
+   "Gergovie*",
+   "Bibracte",
+   "Avaricum",
+   "Uxellodunum"
+  ],
+  "explanation": "Près de l'actuelle Clermont-Ferrand. Quelques mois plus tard, il capitule à Alésia.",
+  "hint": "Près de Clermont-Ferrand."
+ },
+ {
+  "key": "hib-028",
+  "concept": "history.antiquity.bataille_de_cannes",
+  "label": "Bataille de Cannes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle grande victoire Hannibal remporte-t-il sur Rome en 216 av. J.-C. ?",
+  "options": [
+   "Cannes*",
+   "Zama",
+   "Trasimène",
+   "Actium"
+  ],
+  "explanation": "Encerclement parfait de l'armée romaine, toujours étudié dans les écoles militaires. Zama (202) sera sa défaite.",
+  "hint": "Même nom qu'une ville du festival."
+ },
+ {
+  "key": "hib-029",
+  "concept": "history.antiquity.ecclesia",
+  "label": "Ecclésia",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment s'appelait l'assemblée des citoyens à Athènes ?",
+  "options": [
+   "L'Ecclésia*",
+   "Le Sénat",
+   "L'Agora",
+   "Le Forum"
+  ],
+  "explanation": "Les citoyens y votaient les lois à main levée. L'agora est la place publique.",
+  "hint": "Le mot a donné « église »."
+ },
+ {
+  "key": "hib-030",
+  "concept": "history.antiquity.ostracisme",
+  "label": "Ostracisme",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À Athènes, à quoi servait l'ostracisme ?",
+  "options": [
+   "À exiler un citoyen par un vote*",
+   "À élire les juges",
+   "À déclarer la guerre",
+   "À choisir les athlètes"
+  ],
+  "explanation": "On écrivait le nom sur un tesson de poterie (ostrakon). L'exilé partait dix ans.",
+  "hint": "Un vote sur des tessons."
+ },
+ {
+  "key": "hib-031",
+  "concept": "history.antiquity.herodote",
+  "label": "Hérodote",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel Grec est surnommé le « père de l'histoire » ?",
+  "options": [
+   "Hérodote*",
+   "Homère",
+   "Thucydide",
+   "Plutarque"
+  ],
+  "explanation": "Ses « Enquêtes » (Ve siècle av. J.-C.) racontent les guerres médiques entre Grecs et Perses.",
+  "hint": "Il enquête sur les guerres médiques."
+ },
+ {
+  "key": "hib-032",
+  "concept": "history.antiquity.hippocrate",
+  "label": "Hippocrate",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel Grec est considéré comme le père de la médecine ?",
+  "options": [
+   "Hippocrate*",
+   "Galien",
+   "Archimède",
+   "Aristote"
+  ],
+  "explanation": "Les médecins prêtent encore aujourd'hui un serment inspiré du sien.",
+  "hint": "Les médecins prêtent son serment."
+ },
+ {
+  "key": "hib-033",
+  "concept": "history.antiquity.pythagore",
+  "label": "Pythagore",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel savant grec a donné son nom à un théorème sur le triangle rectangle ?",
+  "options": [
+   "Pythagore*",
+   "Thalès",
+   "Euclide",
+   "Archimède"
+  ],
+  "explanation": "Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés.",
+  "hint": "a² + b² = c²."
+ },
+ {
+  "key": "hib-034",
+  "concept": "history.antiquity.grandes_dates_de_l_antiquite",
+  "label": "Grandes dates de l'Antiquité",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "items": [
+   "Pyramide de Khéops",
+   "Code d'Hammurabi",
+   "Premiers Jeux olympiques",
+   "Mort d'Alexandre le Grand"
+  ],
+  "explanation": "Khéops vers 2560 av. J.-C., Hammurabi vers 1750, premiers Jeux en 776, mort d'Alexandre en 323 av. J.-C.",
+  "hint": "Les pyramides sont très anciennes."
+ },
+ {
+  "key": "hib-035",
+  "concept": "history.antiquity.alphabet_phenicien",
+  "label": "Alphabet phénicien",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel peuple a créé l'alphabet dont dérivent l'alphabet grec puis latin ?",
+  "options": [
+   "Les Phéniciens*",
+   "Les Égyptiens",
+   "Les Sumériens",
+   "Les Étrusques"
+  ],
+  "explanation": "Un alphabet de 22 consonnes, diffusé par ces marins et commerçants de la Méditerranée.",
+  "hint": "Des marins commerçants."
+ },
+ {
+  "key": "hib-036",
+  "concept": "history.antiquity.fin_de_l_empire_d_occident",
+  "label": "Fin de l'Empire d'Occident",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "En quelle année l'Empire romain d'Occident prend-il fin ?",
+  "options": [
+   "476*",
+   "410",
+   "1453",
+   "313"
+  ],
+  "explanation": "Le dernier empereur, Romulus Augustule, est déposé par Odoacre. En 410, Rome avait été pillée ; en 1453, c'est l'Empire d'Orient qui tombe.",
+  "hint": "Fin du Ve siècle."
+ },
+ {
+  "key": "hib-037",
+  "concept": "history.antiquity.nouvelle_capitale_de_constantin",
+  "label": "Nouvelle capitale de Constantin",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle ville Constantin fait-il capitale de l'Empire romain en 330 ?",
+  "options": [
+   "Constantinople*",
+   "Ravenne",
+   "Milan",
+   "Alexandrie"
+  ],
+  "explanation": "L'ancienne Byzance, aujourd'hui Istanbul. Elle restera la capitale de l'Empire d'Orient jusqu'en 1453.",
+  "hint": "Aujourd'hui Istanbul."
+ },
+ {
+  "key": "hib-038",
+  "concept": "history.middle_ages.bataille_de_poitiers_732",
+  "label": "Bataille de Poitiers 732",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui arrête une armée arabe près de Poitiers en 732 ?",
+  "options": [
+   "Charles Martel*",
+   "Charlemagne",
+   "Clovis",
+   "Pépin le Bref"
+  ],
+  "explanation": "Grand-père de Charlemagne, il renforce ainsi le pouvoir de sa famille, les futurs Carolingiens.",
+  "hint": "Le grand-père de Charlemagne."
+ },
+ {
+  "key": "hib-039",
+  "concept": "history.middle_ages.hugues_capet",
+  "label": "Hugues Capet",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel roi, élu en 987, fonde la dynastie des Capétiens ?",
+  "options": [
+   "Hugues Capet*",
+   "Louis le Pieux",
+   "Philippe Auguste",
+   "Robert le Pieux"
+  ],
+  "explanation": "Sa dynastie et ses branches (Valois, Bourbons) régneront sur la France jusqu'en 1848.",
+  "hint": "Son nom est dans celui de la dynastie."
+ },
+ {
+  "key": "hib-040",
+  "concept": "history.middle_ages.conquete_de_l_angleterre",
+  "label": "Conquête de l'Angleterre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel duc de Normandie conquiert l'Angleterre en 1066 ?",
+  "options": [
+   "Guillaume le Conquérant*",
+   "Richard Cœur de Lion",
+   "Rollon",
+   "Henri Plantagenêt"
+  ],
+  "explanation": "Vainqueur à Hastings, il est couronné roi d'Angleterre à Noël 1066.",
+  "hint": "Son surnom dit tout."
+ },
+ {
+  "key": "hib-041",
+  "concept": "history.middle_ages.tapisserie_de_bayeux",
+  "label": "Tapisserie de Bayeux",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que raconte la tapisserie de Bayeux ?",
+  "options": [
+   "La conquête de l'Angleterre par les Normands*",
+   "La vie de Jeanne d'Arc",
+   "Les croisades",
+   "Le couronnement de Charlemagne"
+  ],
+  "explanation": "Une broderie de près de 70 m, comme une bande dessinée du XIe siècle.",
+  "hint": "Un événement de 1066."
+ },
+ {
+  "key": "hib-042",
+  "concept": "history.middle_ages.appel_de_clermont",
+  "label": "Appel de Clermont",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pape lance l'appel à la première croisade, à Clermont en 1095 ?",
+  "options": [
+   "Urbain II*",
+   "Innocent III",
+   "Grégoire VII",
+   "Boniface VIII"
+  ],
+  "explanation": "L'objectif : reprendre Jérusalem. Les croisés la prennent en 1099.",
+  "hint": "Un pape de la fin du XIe siècle."
+ },
+ {
+  "key": "hib-043",
+  "concept": "history.middle_ages.saladin",
+  "label": "Saladin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel sultan reprend Jérusalem aux croisés en 1187 ?",
+  "options": [
+   "Saladin*",
+   "Soliman le Magnifique",
+   "Mehmed II",
+   "Haroun al-Rachid"
+  ],
+  "explanation": "Après sa victoire de Hattin. Cela provoque la troisième croisade, avec Richard Cœur de Lion.",
+  "hint": "Le rival de Richard Cœur de Lion."
+ },
+ {
+  "key": "hib-044",
+  "concept": "history.middle_ages.mort_de_saint_louis",
+  "label": "Mort de Saint Louis",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Où meurt le roi Louis IX (Saint Louis), en 1270, pendant une croisade ?",
+  "options": [
+   "Devant Tunis*",
+   "À Jérusalem",
+   "À Damas",
+   "À Constantinople"
+  ],
+  "explanation": "Il meurt de maladie (sans doute la dysenterie) lors de la huitième croisade.",
+  "hint": "En Afrique du Nord."
+ },
+ {
+  "key": "hib-045",
+  "concept": "history.middle_ages.alienor_d_aquitaine",
+  "label": "Aliénor d'Aquitaine",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Aliénor d'Aquitaine a été reine…",
+  "options": [
+   "de France puis d'Angleterre*",
+   "d'Espagne puis de France",
+   "d'Écosse",
+   "du Portugal"
+  ],
+  "explanation": "Épouse de Louis VII, puis d'Henri II Plantagenêt, elle est la mère de Richard Cœur de Lion.",
+  "hint": "Elle a épousé deux rois."
+ },
+ {
+  "key": "hib-046",
+  "concept": "history.middle_ages.richard_cur_de_lion",
+  "label": "Richard Cœur de Lion",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Richard Cœur de Lion était roi…",
+  "options": [
+   "d'Angleterre*",
+   "de France",
+   "d'Écosse",
+   "de Jérusalem"
+  ],
+  "explanation": "Roi de 1189 à 1199, il passe pourtant l'essentiel de son règne hors d'Angleterre : croisade, captivité, guerres en France.",
+  "hint": "Il a combattu Saladin."
+ },
+ {
+  "key": "hib-047",
+  "concept": "history.middle_ages.devoirs_du_vassal",
+  "label": "Devoirs du vassal",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans la société féodale, que doit un vassal à son seigneur ?",
+  "options": [
+   "La fidélité, l'aide militaire et le conseil*",
+   "Un impôt sur le sel",
+   "Sa terre",
+   "Rien du tout"
+  ],
+  "explanation": "En échange, le seigneur lui donne un fief (une terre) et sa protection.",
+  "hint": "En échange d'un fief."
+ },
+ {
+  "key": "hib-048",
+  "concept": "history.middle_ages.les_trois_ordres",
+  "label": "Les trois ordres",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque ordre de la société médiévale à son rôle.",
+  "pairs": [
+   [
+    "Le clergé",
+    "Prier"
+   ],
+   [
+    "La noblesse",
+    "Combattre"
+   ],
+   [
+    "Les paysans",
+    "Travailler la terre"
+   ]
+  ],
+  "explanation": "Selon la vision médiévale : ceux qui prient (oratores), ceux qui combattent (bellatores) et ceux qui travaillent (laboratores).",
+  "hint": "Prier, combattre, travailler."
+ },
+ {
+  "key": "hib-049",
+  "concept": "history.middle_ages.serf",
+  "label": "Serf",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au Moyen Âge, qu'est-ce qu'un serf ?",
+  "options": [
+   "Un paysan attaché à la terre de son seigneur*",
+   "Un soldat de métier",
+   "Un moine",
+   "Un marchand ambulant"
+  ],
+  "explanation": "Il n'est pas un esclave, mais ne peut quitter la seigneurie ni se marier sans autorisation.",
+  "hint": "Il ne peut pas partir."
+ },
+ {
+  "key": "hib-050",
+  "concept": "history.middle_ages.moines_copistes",
+  "label": "Moines copistes",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui recopiait les livres à la main dans les monastères ?",
+  "options": [
+   "Les moines copistes*",
+   "Les troubadours",
+   "Les chevaliers",
+   "Les bourgeois"
+  ],
+  "explanation": "Avant l'imprimerie, chaque livre était recopié et souvent orné d'enluminures.",
+  "hint": "Dans les monastères."
+ },
+ {
+  "key": "hib-051",
+  "concept": "history.middle_ages.fin_des_templiers",
+  "label": "Fin des Templiers",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel roi de France fait arrêter les Templiers en 1307 ?",
+  "options": [
+   "Philippe le Bel*",
+   "Saint Louis",
+   "Philippe Auguste",
+   "Charles VII"
+  ],
+  "explanation": "Endetté envers l'ordre, il les accuse d'hérésie ; l'ordre est dissous en 1312.",
+  "hint": "Le roi « de fer »."
+ },
+ {
+  "key": "hib-052",
+  "concept": "history.middle_ages.siege_d_orleans",
+  "label": "Siège d'Orléans",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle ville Jeanne d'Arc délivre-t-elle des Anglais en 1429 ?",
+  "options": [
+   "Orléans*",
+   "Reims",
+   "Rouen",
+   "Paris"
+  ],
+  "explanation": "On l'appelle depuis la « Pucelle d'Orléans ». Rouen est la ville où elle meurt en 1431.",
+  "hint": "Son surnom vient de là."
+ },
+ {
+  "key": "hib-053",
+  "concept": "history.middle_ages.sacre_de_charles_vii",
+  "label": "Sacre de Charles VII",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel roi Jeanne d'Arc fait-elle sacrer à Reims en 1429 ?",
+  "options": [
+   "Charles VII*",
+   "Louis XI",
+   "Charles VI",
+   "Henri V"
+  ],
+  "explanation": "Le sacre à Reims donnait sa légitimité au roi, contesté pendant la guerre de Cent Ans.",
+  "hint": "Le « gentil dauphin »."
+ },
+ {
+  "key": "hib-054",
+  "concept": "history.middle_ages.transmission_de_la_peste",
+  "label": "Transmission de la peste",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment la peste noire se transmettait-elle surtout ?",
+  "options": [
+   "Par les puces des rats*",
+   "Par l'eau des puits",
+   "Par les moustiques",
+   "Par le vent"
+  ],
+  "explanation": "La bactérie passe du rat à l'homme par les puces, puis d'homme à homme par la toux dans sa forme pulmonaire.",
+  "hint": "Un petit insecte sauteur."
+ },
+ {
+  "key": "hib-055",
+  "concept": "history.middle_ages.normandie",
+  "label": "Normandie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle région française doit son nom aux Vikings installés au Xe siècle ?",
+  "options": [
+   "La Normandie*",
+   "La Bretagne",
+   "La Picardie",
+   "La Flandre"
+  ],
+  "explanation": "Les « hommes du Nord » (Northmen) de Rollon reçoivent la région en 911.",
+  "hint": "Les hommes du Nord."
+ },
+ {
+  "key": "hib-056",
+  "concept": "history.middle_ages.traite_de_saint_clair_sur_epte",
+  "label": "Traité de Saint-Clair-sur-Epte",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En 911, à quel chef viking le roi Charles le Simple cède-t-il la future Normandie ?",
+  "options": [
+   "Rollon*",
+   "Ragnar",
+   "Harald",
+   "Erik le Rouge"
+  ],
+  "explanation": "Par le traité de Saint-Clair-sur-Epte, Rollon devient vassal du roi et se fait baptiser.",
+  "hint": "Le premier duc de Normandie."
+ },
+ {
+  "key": "hib-057",
+  "concept": "history.middle_ages.gengis_khan",
+  "label": "Gengis Khan",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel empire Gengis Khan fonde-t-il au XIIIe siècle ?",
+  "options": [
+   "L'Empire mongol*",
+   "L'Empire ottoman",
+   "L'Empire perse",
+   "L'Empire byzantin"
+  ],
+  "explanation": "Le plus grand empire d'un seul tenant de l'histoire, de la Chine à l'Europe de l'Est.",
+  "hint": "Des cavaliers des steppes."
+ },
+ {
+  "key": "hib-058",
+  "concept": "history.middle_ages.marco_polo_en_chine",
+  "label": "Marco Polo en Chine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel pays Marco Polo décrit-il dans son récit de voyage ?",
+  "options": [
+   "La Chine*",
+   "L'Inde",
+   "Le Japon",
+   "L'Égypte"
+  ],
+  "explanation": "Ce Vénitien séjourne à la cour de Kubilaï Khan à la fin du XIIIe siècle.",
+  "hint": "La cour de Kubilaï Khan."
+ },
+ {
+  "key": "hib-059",
+  "concept": "history.middle_ages.prise_de_constantinople",
+  "label": "Prise de Constantinople",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui s'empare de Constantinople en 1453 ?",
+  "options": [
+   "Les Ottomans*",
+   "Les Mongols",
+   "Les croisés",
+   "Les Vénitiens"
+  ],
+  "explanation": "Le sultan Mehmed II prend la ville, qui devient la capitale ottomane. On y voit souvent la fin du Moyen Âge.",
+  "hint": "Le sultan Mehmed II."
+ },
+ {
+  "key": "hib-060",
+  "concept": "history.middle_ages.fin_de_la_reconquista",
+  "label": "Fin de la Reconquista",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle ville, dernier royaume musulman d'Espagne, est prise en 1492 ?",
+  "options": [
+   "Grenade*",
+   "Cordoue",
+   "Séville",
+   "Tolède"
+  ],
+  "explanation": "Les Rois catholiques, Isabelle et Ferdinand, achèvent la Reconquista. L'Alhambra en est le joyau.",
+  "hint": "La ville de l'Alhambra."
+ },
+ {
+  "key": "hib-061",
+  "concept": "history.middle_ages.hegire",
+  "label": "Hégire",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que marque l'Hégire, en 622 ?",
+  "options": [
+   "Le départ de Mahomet de La Mecque vers Médine*",
+   "La construction de la Kaaba",
+   "La mort de Mahomet",
+   "La prise de Jérusalem"
+  ],
+  "explanation": "C'est l'an 1 du calendrier musulman.",
+  "hint": "L'an 1 du calendrier musulman."
+ },
+ {
+  "key": "hib-062",
+  "concept": "history.middle_ages.dynastie_de_pepin_le_bref",
+  "label": "Dynastie de Pépin le Bref",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle dynastie Pépin le Bref fonde-t-il en devenant roi en 751 ?",
+  "options": [
+   "Les Carolingiens*",
+   "Les Mérovingiens",
+   "Les Capétiens",
+   "Les Valois"
+  ],
+  "explanation": "Elle tire son nom de son fils le plus célèbre, Charlemagne (Carolus Magnus).",
+  "hint": "Le nom de son fils."
+ },
+ {
+  "key": "hib-063",
+  "concept": "history.middle_ages.dynastie_de_clovis",
+  "label": "Dynastie de Clovis",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quelle dynastie appartient Clovis ?",
+  "options": [
+   "Les Mérovingiens*",
+   "Les Carolingiens",
+   "Les Capétiens",
+   "Les Bourbons"
+  ],
+  "explanation": "Du nom de Mérovée, son grand-père légendaire.",
+  "hint": "Du nom de Mérovée."
+ },
+ {
+  "key": "hib-064",
+  "concept": "history.middle_ages.donjon",
+  "label": "Donjon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment appelle-t-on la tour principale d'un château fort ?",
+  "options": [
+   "Le donjon*",
+   "Le créneau",
+   "La herse",
+   "Le pont-levis"
+  ],
+  "explanation": "Tour la plus haute et la mieux défendue, dernier refuge en cas de siège.",
+  "hint": "Le dernier refuge."
+ },
+ {
+  "key": "hib-065",
+  "concept": "history.middle_ages.adoubement",
+  "label": "Adoubement",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment appelle-t-on la cérémonie qui fait d'un jeune noble un chevalier ?",
+  "options": [
+   "L'adoubement*",
+   "Le sacre",
+   "L'hommage",
+   "L'investiture"
+  ],
+  "explanation": "Le futur chevalier reçoit ses armes, et souvent un coup du plat de l'épée sur l'épaule.",
+  "hint": "Il reçoit ses armes."
+ },
+ {
+  "key": "hib-066",
+  "concept": "history.middle_ages.papes_d_avignon",
+  "label": "Papes d'Avignon",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quelle ville les papes s'installent-ils au XIVe siècle ?",
+  "options": [
+   "Avignon*",
+   "Lyon",
+   "Reims",
+   "Florence"
+  ],
+  "explanation": "De 1309 à 1377. Le palais des Papes est l'un des plus grands édifices gothiques.",
+  "hint": "Son pont est célèbre."
+ },
+ {
+  "key": "hib-067",
+  "concept": "history.middle_ages.reperes_du_moyen_age",
+  "label": "Repères du Moyen Âge",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "items": [
+   "Baptême de Clovis",
+   "Couronnement de Charlemagne",
+   "Bataille d'Hastings",
+   "Prise de Constantinople"
+  ],
+  "explanation": "Clovis vers 500, Charlemagne en 800, Hastings en 1066, Constantinople en 1453.",
+  "hint": "Clovis est le plus ancien."
+ },
+ {
+  "key": "hib-068",
+  "concept": "history.middle_ages.schisme_de_1054",
+  "label": "Schisme de 1054",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Que se passe-t-il en 1054 entre Rome et Constantinople ?",
+  "options": [
+   "La séparation entre catholiques et orthodoxes*",
+   "La première croisade",
+   "La fondation de l'Empire ottoman",
+   "Un traité de paix"
+  ],
+  "explanation": "Le « Grand Schisme d'Orient » sépare l'Église d'Occident (catholique) et celle d'Orient (orthodoxe).",
+  "hint": "Une rupture religieuse."
+ },
+ {
+  "key": "hib-069",
+  "concept": "history.middle_ages.robert_de_sorbon",
+  "label": "Robert de Sorbon",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "La Sorbonne tient son nom de Robert de Sorbon. Qui était-il ?",
+  "options": [
+   "Un théologien, chapelain de Saint Louis*",
+   "Un roi de France",
+   "Un architecte",
+   "Un chevalier croisé"
+  ],
+  "explanation": "Vers 1257, il fonde un collège pour les étudiants pauvres en théologie, qui donnera son nom à l'université.",
+  "hint": "Proche de Saint Louis."
+ }
+]
