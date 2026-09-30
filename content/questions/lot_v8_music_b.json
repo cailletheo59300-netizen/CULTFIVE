@@ -1,0 +1,842 @@
+[
+ {
+  "key": "music-593",
+  "concept": "music.classical.lettre_elise",
+  "label": "Lettre à Élise",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a composé « La Lettre à Élise » ?",
+  "options": [
+   "Beethoven*",
+   "Mozart",
+   "Chopin",
+   "Schubert"
+  ],
+  "explanation": "Une bagatelle pour piano de 1810, publiée après sa mort. L'identité d'Élise reste un mystère.",
+  "hint": "Le compositeur de l'« Hymne à la joie »."
+ },
+ {
+  "key": "music-594",
+  "concept": "music.classical.mozart_prenoms",
+  "label": "Mozart",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quels sont les prénoms de Mozart ?",
+  "options": [
+   "Wolfgang Amadeus*",
+   "Johann Sebastian",
+   "Ludwig van",
+   "Franz Joseph"
+  ],
+  "explanation": "Wolfgang Amadeus Mozart, né à Salzbourg en 1756.",
+  "hint": "« Amadeus » est aussi le titre d'un film sur lui."
+ },
+ {
+  "key": "music-595",
+  "concept": "music.classical.quatre_saisons_concertos",
+  "label": "Quatre Saisons",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien de concertos forment « Les Quatre Saisons » de Vivaldi ?",
+  "answer": 4,
+  "explanation": "Un par saison : le printemps, l'été, l'automne et l'hiver.",
+  "hint": "Le titre donne la réponse."
+ },
+ {
+  "key": "music-596",
+  "concept": "music.classical.opera_garnier",
+  "label": "Opéra Garnier",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle ville se trouve l'opéra Garnier ?",
+  "options": [
+   "Paris*",
+   "Lyon",
+   "Vienne",
+   "Milan"
+  ],
+  "explanation": "Inauguré en 1875, il porte le nom de son architecte, Charles Garnier. Il inspire « Le Fantôme de l'Opéra ».",
+  "hint": "La capitale."
+ },
+ {
+  "key": "music-597",
+  "concept": "music.classical.la_scala",
+  "label": "La Scala",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quelle ville se trouve le célèbre opéra de la Scala ?",
+  "options": [
+   "Milan*",
+   "Rome",
+   "Venise",
+   "Naples"
+  ],
+  "explanation": "Inauguré en 1778, c'est l'un des temples de l'opéra. Verdi y crée plusieurs de ses œuvres.",
+  "hint": "La capitale de la Lombardie."
+ },
+ {
+  "key": "music-598",
+  "concept": "music.classical.belle_bois_dormant",
+  "label": "La Belle au bois dormant",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a composé le ballet « La Belle au bois dormant » (1890) ?",
+  "options": [
+   "Tchaïkovski*",
+   "Prokofiev",
+   "Stravinsky",
+   "Ravel"
+  ],
+  "explanation": "Disney en reprend la musique pour son film de 1959.",
+  "hint": "Le compositeur du « Lac des cygnes »."
+ },
+ {
+  "key": "music-599",
+  "concept": "music.classical.apprenti_sorcier",
+  "label": "L'Apprenti sorcier",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a composé « L'Apprenti sorcier » (1897), rendu célèbre par le film Fantasia ?",
+  "options": [
+   "Paul Dukas*",
+   "Claude Debussy",
+   "Maurice Ravel",
+   "Camille Saint-Saëns"
+  ],
+  "explanation": "Inspiré d'un poème de Goethe. Mickey y joue l'apprenti dans « Fantasia » (1940).",
+  "hint": "Un compositeur français au nom court."
+ },
+ {
+  "key": "music-600",
+  "concept": "music.classical.rhapsody_in_blue",
+  "label": "Rhapsody in Blue",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a composé « Rhapsody in Blue » (1924), mêlant jazz et musique classique ?",
+  "options": [
+   "George Gershwin*",
+   "Leonard Bernstein",
+   "Duke Ellington",
+   "Aaron Copland"
+  ],
+  "explanation": "Elle commence par un célèbre glissando de clarinette.",
+  "hint": "L'auteur de « Porgy and Bess »."
+ },
+ {
+  "key": "music-601",
+  "concept": "music.classical.star_wars_williams",
+  "label": "Musique de Star Wars",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a composé la musique de « La Guerre des étoiles » ?",
+  "options": [
+   "John Williams*",
+   "Hans Zimmer",
+   "Ennio Morricone",
+   "Danny Elfman"
+  ],
+  "explanation": "Il signe aussi « Les Dents de la mer », « Indiana Jones » et les premiers « Harry Potter ».",
+  "hint": "Il a aussi écrit « Les Dents de la mer »."
+ },
+ {
+  "key": "music-602",
+  "concept": "music.classical.danse_macabre",
+  "label": "Danse macabre",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel compositeur français a écrit la « Danse macabre » (1874) ?",
+  "options": [
+   "Camille Saint-Saëns*",
+   "Claude Debussy",
+   "Hector Berlioz",
+   "Georges Bizet"
+  ],
+  "explanation": "Un violon désaccordé y figure la Mort qui fait danser les squelettes à minuit.",
+  "hint": "Le compositeur du « Carnaval des animaux »."
+ },
+ {
+  "key": "music-603",
+  "concept": "music.classical.les_planetes",
+  "label": "Les Planètes",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a composé la suite « Les Planètes » (1916), avec un mouvement par planète ?",
+  "options": [
+   "Gustav Holst*",
+   "Edward Elgar",
+   "Richard Strauss",
+   "Jean Sibelius"
+  ],
+  "explanation": "« Mars, celui qui apporte la guerre » a inspiré de nombreuses musiques de films.",
+  "hint": "Un compositeur anglais."
+ },
+ {
+  "key": "music-604",
+  "concept": "music.classical.trio_musiciens",
+  "label": "Trio",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Combien de musiciens compte un trio ?",
+  "answer": 3,
+  "explanation": "Un duo en compte 2, un quatuor 4, un quintette 5.",
+  "hint": "« Tri » comme triangle."
+ },
+ {
+  "key": "music-605",
+  "concept": "music.classical.concerto",
+  "label": "Concerto",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'un concerto ?",
+  "options": [
+   "Une œuvre pour un soliste accompagné d'un orchestre*",
+   "Un concert en plein air",
+   "Un opéra sans paroles",
+   "Une danse italienne"
+  ],
+  "explanation": "Par exemple, les concertos pour piano de Rachmaninov ou pour violon de Vivaldi.",
+  "hint": "Un instrument se détache de l'orchestre."
+ },
+ {
+  "key": "music-606",
+  "concept": "music.classical.forte",
+  "label": "Forte",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur une partition, que signifie « forte » ?",
+  "options": [
+   "Fort*",
+   "Vite",
+   "Lentement",
+   "Doucement"
+  ],
+  "explanation": "Il s'écrit « f ». « Fortissimo » (ff) veut dire très fort, « piano » (p) doucement.",
+  "hint": "Un mot italien transparent."
+ },
+ {
+  "key": "music-607",
+  "concept": "music.classical.crescendo",
+  "label": "Crescendo",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Sur une partition, que signifie « crescendo » ?",
+  "options": [
+   "En jouant de plus en plus fort*",
+   "En accélérant",
+   "En ralentissant",
+   "En jouant de plus en plus doucement"
+  ],
+  "explanation": "Le contraire est « decrescendo » ou « diminuendo ». Le « Boléro » de Ravel est un long crescendo.",
+  "hint": "Quelque chose qui grandit."
+ },
+ {
+  "key": "music-608",
+  "concept": "music.classical.a_cappella",
+  "label": "A cappella",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que veut dire chanter « a cappella » ?",
+  "options": [
+   "Sans accompagnement d'instruments*",
+   "En chœur uniquement",
+   "En latin",
+   "Très fort"
+  ],
+  "explanation": "L'expression italienne signifie « à la manière de la chapelle », où l'on chantait sans instruments.",
+  "hint": "Seulement des voix."
+ },
+ {
+  "key": "music-609",
+  "concept": "music.classical.blanche_duree",
+  "label": "Durée des notes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de noires vaut une blanche ?",
+  "options": [
+   "2*",
+   "4",
+   "1",
+   "3"
+  ],
+  "explanation": "Une ronde vaut 2 blanches, une blanche 2 noires, une noire 2 croches.",
+  "hint": "La moitié d'une ronde."
+ },
+ {
+  "key": "music-610",
+  "concept": "music.classical.la_440",
+  "label": "La 440",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle note sert de référence pour accorder les instruments, à 440 hertz ?",
+  "options": [
+   "Le la*",
+   "Le do",
+   "Le mi",
+   "Le sol"
+  ],
+  "explanation": "C'est la note du diapason et celle que donne le hautbois à l'orchestre.",
+  "hint": "La note du diapason."
+ },
+ {
+  "key": "music-611",
+  "concept": "music.classical.fanny_mendelssohn",
+  "label": "Fanny Mendelssohn",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle compositrice allemande était la sœur aînée de Felix Mendelssohn ?",
+  "options": [
+   "Fanny Mendelssohn*",
+   "Clara Schumann",
+   "Alma Mahler",
+   "Hildegarde de Bingen"
+  ],
+  "explanation": "Elle a écrit plus de 450 œuvres, dont certaines publiées sous le nom de son frère.",
+  "hint": "Elle portait le même nom de famille."
+ },
+ {
+  "key": "music-612",
+  "concept": "music.classical.clara_schumann",
+  "label": "Clara Schumann",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel instrument Clara Schumann était-elle une grande virtuose ?",
+  "options": [
+   "Du piano*",
+   "Du violon",
+   "De la harpe",
+   "Du violoncelle"
+  ],
+  "explanation": "Elle a joué en concert pendant plus de 60 ans et fait connaître les œuvres de son mari, Robert Schumann.",
+  "hint": "Un instrument à clavier."
+ },
+ {
+  "key": "music-613",
+  "concept": "music.classical.lully_louis_xiv",
+  "label": "Lully",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pour quel roi Jean-Baptiste Lully a-t-il composé ?",
+  "options": [
+   "Louis XIV*",
+   "Louis XIII",
+   "Louis XV",
+   "Henri IV"
+  ],
+  "explanation": "Surintendant de la musique du roi, il meurt en 1687 après s'être blessé au pied avec son bâton de direction.",
+  "hint": "Le Roi-Soleil."
+ },
+ {
+  "key": "music-614",
+  "concept": "music.instruments.guitare_cordes",
+  "label": "Guitare",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Combien de cordes a une guitare classique ?",
+  "options": [
+   "6*",
+   "4",
+   "5",
+   "12"
+  ],
+  "explanation": "Accordées mi, la, ré, sol, si, mi. Il existe des guitares à 12 cordes, doublées.",
+  "hint": "Plus que le violon."
+ },
+ {
+  "key": "music-615",
+  "concept": "music.instruments.basse_cordes",
+  "label": "Guitare basse",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de cordes a une guitare basse électrique standard ?",
+  "answer": 4,
+  "explanation": "Accordées comme les quatre cordes graves de la guitare, une octave plus bas.",
+  "hint": "Autant que le violon."
+ },
+ {
+  "key": "music-616",
+  "concept": "music.instruments.orgue_eglise",
+  "label": "Orgue",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel instrument à tuyaux et à claviers trouve-t-on dans beaucoup d'églises ?",
+  "options": [
+   "L'orgue*",
+   "Le clavecin",
+   "L'harmonica",
+   "Le piano"
+  ],
+  "explanation": "Les plus grands comptent des milliers de tuyaux, du plus petit comme un crayon au plus grand de plus de 10 m.",
+  "hint": "Il a aussi des pédales."
+ },
+ {
+  "key": "music-617",
+  "concept": "music.instruments.cornemuse_ecosse",
+  "label": "Cornemuse",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel instrument est l'emblème de l'Écosse ?",
+  "options": [
+   "La cornemuse*",
+   "La harpe",
+   "Le violon",
+   "L'accordéon"
+  ],
+  "explanation": "Le musicien souffle dans une poche qui alimente plusieurs tuyaux. On en joue aussi en Bretagne (le biniou).",
+  "hint": "Un sac et des tuyaux."
+ },
+ {
+  "key": "music-618",
+  "concept": "music.instruments.archet",
+  "label": "Archet",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Avec quoi fait-on sonner les cordes d'un violon ?",
+  "options": [
+   "Un archet*",
+   "Un médiator",
+   "Des baguettes",
+   "Un marteau"
+  ],
+  "explanation": "L'archet est tendu de crins de cheval, frottés de colophane pour accrocher les cordes.",
+  "hint": "Il est garni de crins de cheval."
+ },
+ {
+  "key": "music-619",
+  "concept": "music.instruments.xylophone_bois",
+  "label": "Xylophone",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel instrument de percussion a des lames de bois sur lesquelles on frappe ?",
+  "options": [
+   "Le xylophone*",
+   "Le triangle",
+   "La cymbale",
+   "Le tambour"
+  ],
+  "explanation": "« Xylo » veut dire bois en grec. Avec des lames en métal, on parle de métallophone.",
+  "hint": "« Xylo » veut dire bois."
+ },
+ {
+  "key": "music-620",
+  "concept": "music.instruments.hautbois_anche_double",
+  "label": "Anche double",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel instrument à vent utilise une anche double ?",
+  "options": [
+   "Le hautbois*",
+   "La clarinette",
+   "Le saxophone",
+   "La flûte traversière"
+  ],
+  "explanation": "Deux lamelles de roseau vibrent l'une contre l'autre. Le basson aussi ; la clarinette et le saxophone ont une anche simple.",
+  "hint": "Il donne le « la » à l'orchestre."
+ },
+ {
+  "key": "music-621",
+  "concept": "music.instruments.sourdine",
+  "label": "Sourdine",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À quoi sert une sourdine sur une trompette ou un violon ?",
+  "options": [
+   "À atténuer ou changer le son*",
+   "À accorder l'instrument",
+   "À le protéger de la pluie",
+   "À amplifier le son"
+  ],
+  "explanation": "On la place dans le pavillon de la trompette ou sur le chevalet du violon.",
+  "hint": "Le mot vient de « sourd »."
+ },
+ {
+  "key": "music-622",
+  "concept": "music.instruments.pianoforte",
+  "label": "Pianoforte",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelait le piano à ses débuts, au XVIIIe siècle ?",
+  "options": [
+   "Le pianoforte*",
+   "Le clavecin",
+   "L'épinette",
+   "Le clavicorde"
+  ],
+  "explanation": "Il pouvait jouer doux (piano) et fort (forte), contrairement au clavecin. Bartolomeo Cristofori l'invente vers 1700 à Florence.",
+  "hint": "Il pouvait jouer doucement et fort."
+ },
+ {
+  "key": "music-623",
+  "concept": "music.instruments.adolphe_sax",
+  "label": "Saxophone",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a inventé le saxophone, vers 1840 ?",
+  "options": [
+   "Adolphe Sax*",
+   "Antoine Sax",
+   "Johann Denner",
+   "Louis Armstrong"
+  ],
+  "explanation": "L'instrument porte son nom. Sax a aussi inventé les saxhorns.",
+  "hint": "L'instrument porte son nom."
+ },
+ {
+  "key": "music-624",
+  "concept": "music.instruments.sax_nationalite",
+  "label": "Adolphe Sax",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quelle nationalité était Adolphe Sax, l'inventeur du saxophone ?",
+  "options": [
+   "Belge*",
+   "Français",
+   "Allemand",
+   "Américain"
+  ],
+  "explanation": "Né à Dinant en 1814, il fait breveter son invention à Paris en 1846.",
+  "hint": "Né à Dinant."
+ },
+ {
+  "key": "music-625",
+  "concept": "music.instruments.touches_blanches",
+  "label": "Touches blanches",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Combien de touches blanches compte un piano standard de 88 touches ?",
+  "answer": 52,
+  "explanation": "Et 36 touches noires. 52 + 36 = 88.",
+  "hint": "Un peu plus de la moitié."
+ },
+ {
+  "key": "music-626",
+  "concept": "music.instruments.piano_a_bretelles",
+  "label": "Accordéon",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel instrument surnomme-t-on le « piano à bretelles » ?",
+  "options": [
+   "L'accordéon*",
+   "L'harmonica",
+   "Le synthétiseur",
+   "L'orgue de Barbarie"
+  ],
+  "explanation": "On le porte sur le ventre grâce à des sangles. Il est au cœur du bal musette.",
+  "hint": "On le porte avec des sangles."
+ },
+ {
+  "key": "music-627",
+  "concept": "music.instruments.django_guitare",
+  "label": "Django Reinhardt",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel instrument jouait Django Reinhardt, légende du jazz manouche ?",
+  "options": [
+   "De la guitare*",
+   "Du violon",
+   "De l'accordéon",
+   "De la contrebasse"
+  ],
+  "explanation": "Brûlé à la main gauche à 18 ans, il invente une technique avec seulement deux doigts valides.",
+  "hint": "Il jouait avec deux doigts de la main gauche."
+ },
+ {
+  "key": "music-628",
+  "concept": "music.instruments.miles_davis",
+  "label": "Miles Davis",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel instrument jouait Miles Davis ?",
+  "options": [
+   "De la trompette*",
+   "Du saxophone",
+   "Du piano",
+   "De la batterie"
+  ],
+  "explanation": "Son album « Kind of Blue » (1959) est l'album de jazz le plus vendu.",
+  "hint": "Comme Louis Armstrong."
+ },
+ {
+  "key": "music-629",
+  "concept": "music.instruments.plus_grand_cuivre",
+  "label": "Tuba",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le plus grave des cuivres de l'orchestre ?",
+  "options": [
+   "Le tuba*",
+   "Le trombone",
+   "La trompette",
+   "Le cor"
+  ],
+  "explanation": "Son long tube enroulé mesure plus de 5 mètres une fois déplié.",
+  "hint": "Un gros cuivre enroulé."
+ },
+ {
+  "key": "music-630",
+  "concept": "music.instruments.harpe_47_cordes",
+  "label": "Harpe",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel instrument de l'orchestre compte environ 47 cordes ?",
+  "options": [
+   "La harpe*",
+   "Le piano",
+   "Le clavecin",
+   "La guitare"
+  ],
+  "explanation": "La harpe de concert a aussi sept pédales pour changer les notes. Les cordes de do sont rouges pour se repérer.",
+  "hint": "On la joue en pinçant, debout à côté d'elle."
+ },
+ {
+  "key": "music-631",
+  "concept": "music.instruments.theremine",
+  "label": "Thérémine",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel instrument électronique se joue sans le toucher, en approchant les mains de deux antennes ?",
+  "options": [
+   "Le thérémine*",
+   "Le synthétiseur",
+   "Les ondes Martenot",
+   "Le vocodeur"
+  ],
+  "explanation": "Inventé en 1920 par le Russe Léon Theremin. Son son étrange a servi dans des films de science-fiction.",
+  "hint": "Il porte le nom de son inventeur russe."
+ },
+ {
+  "key": "music-632",
+  "concept": "music.instruments.dj_sigle",
+  "label": "DJ",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que signifie « DJ » ?",
+  "options": [
+   "Disc-jockey*",
+   "Digital Joker",
+   "Direct Jam",
+   "Dance Judge"
+  ],
+  "explanation": "Celui qui passe et enchaîne des disques. En France, on dit aussi « platiniste ».",
+  "hint": "Le « D » est pour disque."
+ },
+ {
+  "key": "music-633",
+  "concept": "music.instruments.sitar_shankar",
+  "label": "Sitar",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quel instrument indien jouait Ravi Shankar ?",
+  "options": [
+   "Du sitar*",
+   "Du tabla",
+   "Du didgeridoo",
+   "Du koto"
+  ],
+  "explanation": "Il le fait découvrir aux Occidentaux, dont George Harrison des Beatles.",
+  "hint": "Il l'a enseigné à George Harrison."
+ },
+ {
+  "key": "music-634",
+  "concept": "music.instruments.steelpan",
+  "label": "Steelpan",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Dans quel pays est né le steelpan, un instrument fabriqué à partir de bidons de pétrole ?",
+  "options": [
+   "À Trinité-et-Tobago*",
+   "En Jamaïque",
+   "À Cuba",
+   "En Haïti"
+  ],
+  "explanation": "Dans les années 1930-1940, des musiciens martèlent des fûts pour en tirer des notes. C'est l'instrument national.",
+  "hint": "Une île pétrolière des Caraïbes."
+ },
+ {
+  "key": "music-635",
+  "concept": "music.instruments.stradivarius",
+  "label": "Stradivarius",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que fabriquait Antonio Stradivari, dont les instruments valent des millions ?",
+  "options": [
+   "Des violons*",
+   "Des pianos",
+   "Des flûtes",
+   "Des orgues"
+  ],
+  "explanation": "Environ 600 de ses instruments existent encore. Certains se vendent plus de 15 millions de dollars.",
+  "hint": "Des instruments à cordes frottées."
+ },
+ {
+  "key": "music-636",
+  "concept": "music.instruments.luthier",
+  "label": "Luthier",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que fabrique un luthier ?",
+  "options": [
+   "Des instruments à cordes*",
+   "Des luths uniquement",
+   "Des tambours",
+   "Des cuivres"
+  ],
+  "explanation": "Violons, guitares, violoncelles… Le mot vient du luth, ancien instrument à cordes.",
+  "hint": "Le mot vient d'un ancien instrument."
+ },
+ {
+  "key": "music-637",
+  "concept": "music.instruments.harmonica",
+  "label": "Harmonica",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment joue-t-on de l'harmonica ?",
+  "options": [
+   "En soufflant et en aspirant*",
+   "En pinçant des cordes",
+   "En frappant des lames",
+   "En tapant sur des touches"
+  ],
+  "explanation": "Chaque trou donne une note en soufflant, une autre en aspirant. On l'appelle aussi « ruine-babines ».",
+  "hint": "Avec la bouche."
+ },
+ {
+  "key": "music-638",
+  "concept": "music.instruments.diapason",
+  "label": "Diapason",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quoi sert un diapason ?",
+  "options": [
+   "À donner une note de référence pour s'accorder*",
+   "À battre la mesure",
+   "À amplifier le son",
+   "À ranger les partitions"
+  ],
+  "explanation": "Frappé, il vibre et donne le la, en général à 440 Hz.",
+  "hint": "Une petite fourche en métal."
+ },
+ {
+  "key": "music-639",
+  "concept": "music.instruments.piano_percussion",
+  "label": "Piano",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le piano est souvent classé parmi les instruments à percussion.",
+  "answer": true,
+  "explanation": "Oui : des marteaux frappent les cordes. On le classe tantôt dans les cordes frappées, tantôt dans les percussions."
+ },
+ {
+  "key": "music-640",
+  "concept": "music.classical.beethoven_sourd_neuvieme",
+  "label": "Beethoven sourd",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Beethoven était déjà presque sourd quand il a composé sa Neuvième Symphonie.",
+  "answer": true,
+  "explanation": "Oui : lors de la première, en 1824, il faut le retourner vers le public pour qu'il voie les applaudissements."
+ },
+ {
+  "key": "music-641",
+  "concept": "music.popular.beatles_francais",
+  "label": "Beatles en français",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Les Beatles ont chanté une chanson en partie en français.",
+  "answer": true,
+  "explanation": "Oui : « Michelle » (1965) contient des paroles en français : « Michelle, ma belle, sont des mots qui vont très bien ensemble »."
+ },
+ {
+  "key": "music-642",
+  "concept": "music.classical.chopin_mort_paris",
+  "label": "Chopin à Paris",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Frédéric Chopin est mort à Paris.",
+  "answer": true,
+  "explanation": "Oui : en 1849, à 39 ans. Il est enterré au Père-Lachaise, mais son cœur a été ramené à Varsovie."
+ },
+ {
+  "key": "music-643",
+  "concept": "music.popular.chronologie_styles",
+  "label": "Styles musicaux",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces styles de musique du plus ancien au plus récent.",
+  "items": [
+   "Le jazz",
+   "Le rock'n'roll",
+   "Le disco",
+   "Le rap français"
+  ],
+  "explanation": "Jazz (début XXe siècle), rock'n'roll (années 1950), disco (années 1970), rap français (années 1980-1990)."
+ },
+ {
+  "key": "music-644",
+  "concept": "music.classical.chronologie_notes",
+  "label": "Durée des notes",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces notes de la plus longue à la plus courte.",
+  "items": [
+   "La ronde",
+   "La blanche",
+   "La noire",
+   "La croche"
+  ],
+  "explanation": "Chaque note vaut la moitié de la précédente."
+ },
+ {
+  "key": "music-645",
+  "concept": "music.popular.chanteurs_chansons",
+  "label": "Chansons françaises",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque chanson à son interprète.",
+  "pairs": [
+   [
+    "La Vie en rose",
+    "Édith Piaf"
+   ],
+   [
+    "Ne me quitte pas",
+    "Jacques Brel"
+   ],
+   [
+    "La Bohème",
+    "Charles Aznavour"
+   ],
+   [
+    "Alors on danse",
+    "Stromae"
+   ]
+  ],
+  "explanation": "Quatre classiques de la chanson francophone."
+ },
+ {
+  "key": "music-646",
+  "concept": "music.popular.danses_pays",
+  "label": "Danses et pays",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque danse à son pays d'origine.",
+  "pairs": [
+   [
+    "Tango",
+    "Argentine"
+   ],
+   [
+    "Flamenco",
+    "Espagne"
+   ],
+   [
+    "Samba",
+    "Brésil"
+   ],
+   [
+    "Valse",
+    "Autriche"
+   ]
+  ],
+  "explanation": "Buenos Aires, l'Andalousie, Rio et Vienne."
+ }
+]

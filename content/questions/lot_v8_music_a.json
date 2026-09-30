@@ -1,0 +1,1384 @@
+[
+ {
+  "key": "music-501",
+  "concept": "music.popular.vie_en_rose",
+  "label": "La Vie en rose",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui chante « La Vie en rose » ?",
+  "options": [
+   "Édith Piaf*",
+   "Dalida",
+   "Barbara",
+   "Juliette Gréco"
+  ],
+  "explanation": "Piaf en écrit les paroles en 1945 ; elle devient l'une des chansons françaises les plus connues au monde.",
+  "hint": "« La Môme »."
+ },
+ {
+  "key": "music-502",
+  "concept": "music.popular.piaf_surnom",
+  "label": "La Môme",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel surnom portait Édith Piaf à ses débuts ?",
+  "options": [
+   "La Môme*",
+   "La Divine",
+   "La Dame en noir",
+   "La Petite Reine"
+  ],
+  "explanation": "« La Môme Piaf » : un cabaretier la baptise ainsi en 1935, piaf voulant dire moineau en argot.",
+  "hint": "Un mot d'argot pour une gamine."
+ },
+ {
+  "key": "music-503",
+  "concept": "music.popular.ne_me_quitte_pas",
+  "label": "Ne me quitte pas",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a écrit et chanté « Ne me quitte pas » ?",
+  "options": [
+   "Jacques Brel*",
+   "Georges Brassens",
+   "Charles Aznavour",
+   "Léo Ferré"
+  ],
+  "explanation": "Enregistrée en 1959, reprise ensuite par Nina Simone ou Sting.",
+  "hint": "Un chanteur belge."
+ },
+ {
+  "key": "music-504",
+  "concept": "music.popular.brel_pays",
+  "label": "Jacques Brel",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays venait Jacques Brel ?",
+  "options": [
+   "De Belgique*",
+   "De France",
+   "De Suisse",
+   "Du Canada"
+  ],
+  "explanation": "Né à Bruxelles en 1929, il s'installe à la fin de sa vie aux Marquises, en Polynésie, où il est enterré.",
+  "hint": "Comme Stromae."
+ },
+ {
+  "key": "music-505",
+  "concept": "music.popular.allumer_le_feu",
+  "label": "Allumer le feu",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui chante « Allumer le feu » ?",
+  "options": [
+   "Johnny Hallyday*",
+   "Florent Pagny",
+   "Pascal Obispo",
+   "Michel Sardou"
+  ],
+  "explanation": "Sortie en 1998, elle enflamme le Stade de France la même année.",
+  "hint": "L'idole des jeunes."
+ },
+ {
+  "key": "music-506",
+  "concept": "music.popular.johnny_vrai_nom",
+  "label": "Johnny Hallyday",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel était le vrai nom de Johnny Hallyday ?",
+  "options": [
+   "Jean-Philippe Smet*",
+   "Jean-Pierre Hallier",
+   "Jean-Paul Belmond",
+   "Jean-Philippe Lefèvre"
+  ],
+  "explanation": "Son nom de scène vient d'un cousin par alliance, danseur américain, Lee Halliday.",
+  "hint": "Son nom de famille est d'origine belge."
+ },
+ {
+  "key": "music-507",
+  "concept": "music.popular.la_boheme",
+  "label": "La Bohème",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui chante « La Bohème » (1965) ?",
+  "options": [
+   "Charles Aznavour*",
+   "Jacques Brel",
+   "Serge Gainsbourg",
+   "Georges Brassens"
+  ],
+  "explanation": "Elle raconte la jeunesse d'un peintre à Montmartre. Aznavour a écrit plus de 1 000 chansons.",
+  "hint": "Un chanteur d'origine arménienne."
+ },
+ {
+  "key": "music-508",
+  "concept": "music.popular.champs_elysees_dassin",
+  "label": "Les Champs-Élysées",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui chante « Les Champs-Élysées » (1969) ?",
+  "options": [
+   "Joe Dassin*",
+   "Claude François",
+   "Michel Delpech",
+   "Yves Montand"
+  ],
+  "explanation": "Adaptation d'une chanson anglaise, « Waterloo Road ». Joe Dassin était né à New York.",
+  "hint": "Il était né à New York."
+ },
+ {
+  "key": "music-509",
+  "concept": "music.popular.alors_on_danse",
+  "label": "Alors on danse",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui chante « Alors on danse » (2009) ?",
+  "options": [
+   "Stromae*",
+   "Maître Gims",
+   "Orelsan",
+   "Angèle"
+  ],
+  "explanation": "Un succès dans toute l'Europe. Son nom de scène est « maestro » en verlan.",
+  "hint": "« Maestro » en verlan."
+ },
+ {
+  "key": "music-510",
+  "concept": "music.popular.derniere_danse",
+  "label": "Dernière danse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui chante « Dernière danse » (2013) ?",
+  "options": [
+   "Indila*",
+   "Zaz",
+   "Louane",
+   "Nolwenn Leroy"
+  ],
+  "explanation": "Des centaines de millions de vues sur YouTube : l'une des chansons françaises les plus écoutées au monde.",
+  "hint": "Une chanteuse au nom court."
+ },
+ {
+  "key": "music-511",
+  "concept": "music.popular.djadja",
+  "label": "Djadja",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui chante « Djadja » (2018) ?",
+  "options": [
+   "Aya Nakamura*",
+   "Angèle",
+   "Wejdene",
+   "Vitaa"
+  ],
+  "explanation": "La chanteuse francophone la plus écoutée au monde. Son nom de scène vient d'une série américaine.",
+  "hint": "Elle a chanté à l'ouverture des Jeux de Paris."
+ },
+ {
+  "key": "music-512",
+  "concept": "music.popular.aya_garde",
+  "label": "Cérémonie de Paris 2024",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Avec qui Aya Nakamura a-t-elle chanté lors de la cérémonie d'ouverture des Jeux de Paris 2024 ?",
+  "options": [
+   "La Garde républicaine*",
+   "Céline Dion",
+   "Lady Gaga",
+   "L'Orchestre de Paris"
+  ],
+  "explanation": "Devant l'Académie française, sur un pont de la Seine, en mêlant ses tubes et du Charles Aznavour.",
+  "hint": "Une formation militaire en uniforme."
+ },
+ {
+  "key": "music-513",
+  "concept": "music.popular.celine_tour_eiffel",
+  "label": "Hymne à l'amour",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle chanteuse a interprété « L'Hymne à l'amour » depuis la tour Eiffel, à l'ouverture de Paris 2024 ?",
+  "options": [
+   "Céline Dion*",
+   "Mylène Farmer",
+   "Aya Nakamura",
+   "Adele"
+  ],
+  "explanation": "Son grand retour, après des années de maladie, avec une chanson d'Édith Piaf.",
+  "hint": "Une Québécoise."
+ },
+ {
+  "key": "music-514",
+  "concept": "music.popular.my_heart_titanic",
+  "label": "My Heart Will Go On",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel film vient la chanson « My Heart Will Go On », chantée par Céline Dion ?",
+  "options": [
+   "Titanic*",
+   "Bodyguard",
+   "Pretty Woman",
+   "Le Roi lion"
+  ],
+  "explanation": "Le film de James Cameron (1997). La chanson remporte l'Oscar et se vend à des millions d'exemplaires.",
+  "hint": "Un paquebot et un iceberg."
+ },
+ {
+  "key": "music-515",
+  "concept": "music.popular.celine_pays",
+  "label": "Céline Dion",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel pays vient Céline Dion ?",
+  "options": [
+   "Du Canada*",
+   "De France",
+   "De Belgique",
+   "De Suisse"
+  ],
+  "explanation": "Née au Québec en 1968, quatorzième enfant de sa famille.",
+  "hint": "Elle vient du Québec."
+ },
+ {
+  "key": "music-516",
+  "concept": "music.popular.thriller",
+  "label": "Thriller",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel chanteur a sorti l'album « Thriller » en 1982 ?",
+  "options": [
+   "Michael Jackson*",
+   "Prince",
+   "Stevie Wonder",
+   "Lionel Richie"
+  ],
+  "explanation": "L'album le plus vendu de l'histoire, avec son clip de zombies de 14 minutes.",
+  "hint": "Le roi de la pop."
+ },
+ {
+  "key": "music-517",
+  "concept": "music.popular.roi_pop",
+  "label": "Roi de la pop",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qui est surnommé le « roi de la pop » ?",
+  "options": [
+   "Michael Jackson*",
+   "Elvis Presley",
+   "Justin Bieber",
+   "Elton John"
+  ],
+  "explanation": "Pour ses albums record, ses clips et son « moonwalk ».",
+  "hint": "Il faisait le moonwalk."
+ },
+ {
+  "key": "music-518",
+  "concept": "music.popular.roi_rock",
+  "label": "Roi du rock'n'roll",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui est surnommé le « roi du rock'n'roll » ?",
+  "options": [
+   "Elvis Presley*",
+   "Chuck Berry",
+   "Johnny Hallyday",
+   "Little Richard"
+  ],
+  "explanation": "« The King », star des années 1950, mort en 1977 dans sa maison de Graceland.",
+  "hint": "On l'appelle simplement « The King »."
+ },
+ {
+  "key": "music-519",
+  "concept": "music.popular.beatles_ville",
+  "label": "Beatles",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quelle ville anglaise viennent les Beatles ?",
+  "options": [
+   "Liverpool*",
+   "Londres",
+   "Manchester",
+   "Birmingham"
+  ],
+  "explanation": "Ils débutent au Cavern Club. L'aéroport de la ville porte le nom de John Lennon.",
+  "hint": "Une ville portuaire, rivale footballistique de Manchester."
+ },
+ {
+  "key": "music-520",
+  "concept": "music.popular.beatles_membres",
+  "label": "Beatles",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de membres comptaient les Beatles ?",
+  "answer": 4,
+  "explanation": "John Lennon, Paul McCartney, George Harrison et Ringo Starr.",
+  "hint": "Les « Fab Four »."
+ },
+ {
+  "key": "music-521",
+  "concept": "music.popular.imagine",
+  "label": "Imagine",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel ancien Beatles a chanté « Imagine » (1971) ?",
+  "options": [
+   "John Lennon*",
+   "Paul McCartney",
+   "George Harrison",
+   "Ringo Starr"
+  ],
+  "explanation": "Une chanson pour la paix, écrite au piano. Lennon est assassiné à New York en 1980.",
+  "hint": "Il chantait aussi « Give Peace a Chance »."
+ },
+ {
+  "key": "music-522",
+  "concept": "music.popular.like_a_virgin",
+  "label": "Like a Virgin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle chanteuse a sorti « Like a Virgin » (1984) ?",
+  "options": [
+   "Madonna*",
+   "Cyndi Lauper",
+   "Whitney Houston",
+   "Kylie Minogue"
+  ],
+  "explanation": "La « reine de la pop » est la chanteuse qui a vendu le plus de disques au monde.",
+  "hint": "La reine de la pop."
+ },
+ {
+  "key": "music-523",
+  "concept": "music.popular.hello_adele",
+  "label": "Hello",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle chanteuse britannique a sorti « Hello » (2015) et « Rolling in the Deep » ?",
+  "options": [
+   "Adele*",
+   "Amy Winehouse",
+   "Dua Lipa",
+   "Ellie Goulding"
+  ],
+  "explanation": "Ses albums portent ses âges : 19, 21, 25 et 30.",
+  "hint": "Ses albums s'appellent comme des âges."
+ },
+ {
+  "key": "music-524",
+  "concept": "music.popular.shape_of_you",
+  "label": "Shape of You",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui chante « Shape of You » (2017) ?",
+  "options": [
+   "Ed Sheeran*",
+   "Justin Bieber",
+   "Bruno Mars",
+   "Harry Styles"
+  ],
+  "explanation": "L'une des chansons les plus écoutées de l'histoire du streaming.",
+  "hint": "Un rouquin anglais à la guitare."
+ },
+ {
+  "key": "music-525",
+  "concept": "music.popular.eras_tour",
+  "label": "The Eras Tour",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle chanteuse a réalisé la tournée la plus rentable de l'histoire, « The Eras Tour » (2023-2024) ?",
+  "options": [
+   "Taylor Swift*",
+   "Beyoncé",
+   "Lady Gaga",
+   "Rihanna"
+  ],
+  "explanation": "Plus de 2 milliards de dollars de recettes, 149 concerts sur cinq continents.",
+  "hint": "Ses fans s'appellent les « Swifties »."
+ },
+ {
+  "key": "music-526",
+  "concept": "music.popular.bad_guy",
+  "label": "Bad Guy",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui chante « Bad Guy » (2019) ?",
+  "options": [
+   "Billie Eilish*",
+   "Olivia Rodrigo",
+   "Dua Lipa",
+   "Ariana Grande"
+  ],
+  "explanation": "Composée dans une chambre avec son frère Finneas. Elle signe aussi une chanson de James Bond.",
+  "hint": "Elle travaille avec son frère Finneas."
+ },
+ {
+  "key": "music-527",
+  "concept": "music.popular.blinding_lights",
+  "label": "Blinding Lights",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui chante « Blinding Lights » (2019) ?",
+  "options": [
+   "The Weeknd*",
+   "Drake",
+   "Post Malone",
+   "Bruno Mars"
+  ],
+  "explanation": "Longtemps la chanson la plus écoutée sur Spotify. The Weeknd est canadien.",
+  "hint": "Un chanteur canadien au nom de week-end."
+ },
+ {
+  "key": "music-528",
+  "concept": "music.popular.get_lucky",
+  "label": "Get Lucky",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel duo a sorti « Get Lucky » (2013), avec Pharrell Williams ?",
+  "options": [
+   "Daft Punk*",
+   "Justice",
+   "The Chemical Brothers",
+   "Air"
+  ],
+  "explanation": "Les deux Français casqués, Thomas Bangalter et Guy-Manuel de Homem-Christo, se séparent en 2021.",
+  "hint": "Deux robots casqués."
+ },
+ {
+  "key": "music-529",
+  "concept": "music.popular.despacito",
+  "label": "Despacito",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a chanté « Despacito » (2017), avec Daddy Yankee ?",
+  "options": [
+   "Luis Fonsi*",
+   "Enrique Iglesias",
+   "Ricky Martin",
+   "J Balvin"
+  ],
+  "explanation": "Un chanteur portoricain. Le clip a été la première vidéo à dépasser 5 milliards de vues sur YouTube.",
+  "hint": "Un chanteur portoricain."
+ },
+ {
+  "key": "music-530",
+  "concept": "music.popular.gangnam",
+  "label": "Gangnam Style",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel chanteur a lancé la danse du « Gangnam Style » (2012) ?",
+  "options": [
+   "PSY*",
+   "Rain",
+   "G-Dragon",
+   "Jungkook"
+  ],
+  "explanation": "Première vidéo à atteindre un milliard de vues sur YouTube. Gangnam est un quartier chic de Séoul.",
+  "hint": "Trois lettres."
+ },
+ {
+  "key": "music-531",
+  "concept": "music.popular.waterloo_abba",
+  "label": "ABBA",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Avec quelle chanson ABBA a-t-il remporté l'Eurovision 1974 ?",
+  "options": [
+   "Waterloo*",
+   "Mamma Mia",
+   "Dancing Queen",
+   "Fernando"
+  ],
+  "explanation": "Le concours avait lieu à Brighton. Le groupe devient ensuite une star mondiale.",
+  "hint": "Une bataille perdue par Napoléon."
+ },
+ {
+  "key": "music-532",
+  "concept": "music.popular.abba_pays",
+  "label": "ABBA",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays vient le groupe ABBA ?",
+  "options": [
+   "De Suède*",
+   "De Norvège",
+   "Du Danemark",
+   "Des Pays-Bas"
+  ],
+  "explanation": "Son nom reprend les initiales des prénoms de ses quatre membres : Agnetha, Björn, Benny, Anni-Frid.",
+  "hint": "Le pays d'Ikea."
+ },
+ {
+  "key": "music-533",
+  "concept": "music.popular.eurovision_1977",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui est la dernière personne à avoir remporté l'Eurovision pour la France, en 1977 ?",
+  "options": [
+   "Marie Myriam*",
+   "Patricia Kaas",
+   "Barbara Pravi",
+   "Amir"
+  ],
+  "explanation": "Avec « L'Oiseau et l'Enfant ». Barbara Pravi a fini deuxième en 2021.",
+  "hint": "Elle chantait « L'Oiseau et l'Enfant »."
+ },
+ {
+  "key": "music-534",
+  "concept": "music.popular.eurovision_2024",
+  "label": "Eurovision 2024",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel pays a remporté l'Eurovision 2024 ?",
+  "options": [
+   "La Suisse*",
+   "La Croatie",
+   "L'Italie",
+   "La France"
+  ],
+  "explanation": "Avec Nemo et « The Code ». La Suisse avait gagné la toute première édition, en 1956.",
+  "hint": "Le pays de la première gagnante, en 1956."
+ },
+ {
+  "key": "music-535",
+  "concept": "music.popular.hallelujah",
+  "label": "Hallelujah",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a écrit la chanson « Hallelujah » (1984), reprise par Jeff Buckley et dans Shrek ?",
+  "options": [
+   "Leonard Cohen*",
+   "Bob Dylan",
+   "Paul Simon",
+   "Neil Young"
+  ],
+  "explanation": "Le poète canadien aurait écrit près de 80 couplets avant de la terminer.",
+  "hint": "Un poète canadien."
+ },
+ {
+  "key": "music-536",
+  "concept": "music.popular.hotel_california",
+  "label": "Hotel California",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel groupe a chanté « Hotel California » (1976) ?",
+  "options": [
+   "Eagles*",
+   "The Doors",
+   "Fleetwood Mac",
+   "Pink Floyd"
+  ],
+  "explanation": "Son solo de guitare à deux voix est l'un des plus célèbres du rock.",
+  "hint": "Des oiseaux de proie."
+ },
+ {
+  "key": "music-537",
+  "concept": "music.popular.wonderwall",
+  "label": "Wonderwall",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel groupe anglais a chanté « Wonderwall » (1995) ?",
+  "options": [
+   "Oasis*",
+   "Blur",
+   "Coldplay",
+   "Radiohead"
+  ],
+  "explanation": "Le groupe des frères Gallagher, qui se retrouvent en 2025 pour une tournée.",
+  "hint": "Les frères Gallagher."
+ },
+ {
+  "key": "music-538",
+  "concept": "music.popular.marley_genre",
+  "label": "Bob Marley",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel style musical Bob Marley est-il la légende ?",
+  "options": [
+   "Le reggae*",
+   "Le blues",
+   "Le funk",
+   "La salsa"
+  ],
+  "explanation": "Né en Jamaïque, il fait connaître le reggae au monde entier dans les années 1970.",
+  "hint": "Un rythme né en Jamaïque."
+ },
+ {
+  "key": "music-539",
+  "concept": "music.popular.wonderful_world",
+  "label": "What a Wonderful World",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui chante « What a Wonderful World » (1967) ?",
+  "options": [
+   "Louis Armstrong*",
+   "Frank Sinatra",
+   "Ray Charles",
+   "Nat King Cole"
+  ],
+  "explanation": "Le trompettiste de La Nouvelle-Orléans, surnommé « Satchmo ».",
+  "hint": "Surnommé « Satchmo »."
+ },
+ {
+  "key": "music-540",
+  "concept": "music.popular.armstrong_instrument",
+  "label": "Louis Armstrong",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel instrument jouait Louis Armstrong ?",
+  "options": [
+   "De la trompette*",
+   "Du saxophone",
+   "Du piano",
+   "De la contrebasse"
+  ],
+  "explanation": "Il en joue depuis l'enfance, appris dans un foyer pour jeunes à La Nouvelle-Orléans.",
+  "hint": "Un cuivre."
+ },
+ {
+  "key": "music-541",
+  "concept": "music.popular.satisfaction",
+  "label": "Satisfaction",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel groupe a chanté « (I Can't Get No) Satisfaction » (1965) ?",
+  "options": [
+   "The Rolling Stones*",
+   "The Beatles",
+   "The Who",
+   "The Kinks"
+  ],
+  "explanation": "Keith Richards aurait trouvé le riff en pleine nuit et l'aurait enregistré avant de se rendormir.",
+  "hint": "Le groupe de Mick Jagger."
+ },
+ {
+  "key": "music-542",
+  "concept": "music.popular.purple_rain",
+  "label": "Purple Rain",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a chanté « Purple Rain » (1984) ?",
+  "options": [
+   "Prince*",
+   "David Bowie",
+   "Michael Jackson",
+   "Stevie Wonder"
+  ],
+  "explanation": "Aussi titre d'un film dans lequel il joue. Il était multi-instrumentiste.",
+  "hint": "Un titre royal."
+ },
+ {
+  "key": "music-543",
+  "concept": "music.popular.jagger",
+  "label": "Rolling Stones",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui est le chanteur des Rolling Stones ?",
+  "options": [
+   "Mick Jagger*",
+   "Keith Richards",
+   "Freddie Mercury",
+   "Robert Plant"
+  ],
+  "explanation": "Il fonde le groupe en 1962 et monte encore sur scène plus de soixante ans plus tard.",
+  "hint": "Il a des « Moves like… »."
+ },
+ {
+  "key": "music-544",
+  "concept": "music.popular.the_boss",
+  "label": "Le Boss",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel rockeur américain est surnommé « the Boss » ?",
+  "options": [
+   "Bruce Springsteen*",
+   "Bon Jovi",
+   "Tom Petty",
+   "Bob Dylan"
+  ],
+  "explanation": "Auteur de « Born in the U.S.A. », connu pour ses concerts de plus de trois heures.",
+  "hint": "Il est « Born in the U.S.A. »."
+ },
+ {
+  "key": "music-545",
+  "concept": "music.popular.enfoires",
+  "label": "Les Enfoirés",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Pour quelle association les Enfoirés chantent-ils chaque année ?",
+  "options": [
+   "Les Restos du cœur*",
+   "La Croix-Rouge",
+   "Le Téléthon",
+   "Emmaüs"
+  ],
+  "explanation": "Fondés par Coluche en 1985. Les concerts financent les repas distribués l'hiver.",
+  "hint": "L'association fondée par Coluche."
+ },
+ {
+  "key": "music-546",
+  "concept": "music.popular.fete_musique_date",
+  "label": "Fête de la musique",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel jour a lieu la Fête de la musique ?",
+  "options": [
+   "Le 21 juin*",
+   "Le 14 juillet",
+   "Le 1er mai",
+   "Le 31 décembre"
+  ],
+  "explanation": "Le jour de l'été, la nuit la plus courte de l'année.",
+  "hint": "Le premier jour de l'été."
+ },
+ {
+  "key": "music-547",
+  "concept": "music.popular.fete_musique_lang",
+  "label": "Fête de la musique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a créé la Fête de la musique, en 1982 ?",
+  "options": [
+   "Jack Lang*",
+   "François Mitterrand",
+   "Jacques Chirac",
+   "André Malraux"
+  ],
+  "explanation": "Alors ministre de la Culture. Elle se fête aujourd'hui dans plus de 120 pays.",
+  "hint": "Un ministre de la Culture."
+ },
+ {
+  "key": "music-548",
+  "concept": "music.popular.victoires_musique",
+  "label": "Victoires de la musique",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que sont les Victoires de la musique ?",
+  "options": [
+   "Des récompenses de la musique en France*",
+   "Un festival de rock",
+   "Un concours de chorales",
+   "Une émission de karaoké"
+  ],
+  "explanation": "Créées en 1985, elles sont l'équivalent français des Grammy Awards américains.",
+  "hint": "Comme les Grammy, mais en France."
+ },
+ {
+  "key": "music-549",
+  "concept": "music.popular.je_taime_moi_non_plus",
+  "label": "Je t'aime… moi non plus",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a écrit « Je t'aime… moi non plus », chantée avec Jane Birkin ?",
+  "options": [
+   "Serge Gainsbourg*",
+   "Michel Polnareff",
+   "Jacques Dutronc",
+   "Alain Bashung"
+  ],
+  "explanation": "La chanson fait scandale en 1969 et est interdite dans plusieurs pays… ce qui fait son succès.",
+  "hint": "L'homme à la tête de chou."
+ },
+ {
+  "key": "music-550",
+  "concept": "music.popular.mistral_gagnant",
+  "label": "Mistral gagnant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui chante « Mistral gagnant » (1985) ?",
+  "options": [
+   "Renaud*",
+   "Francis Cabrel",
+   "Alain Souchon",
+   "Maxime Le Forestier"
+  ],
+  "explanation": "Une chanson pour sa fille, qui parle des bonbons de son enfance.",
+  "hint": "Il chante aussi « Laisse béton »."
+ },
+ {
+  "key": "music-551",
+  "concept": "music.popular.aigle_noir",
+  "label": "L'Aigle noir",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui chante « L'Aigle noir » (1970) ?",
+  "options": [
+   "Barbara*",
+   "Juliette Gréco",
+   "Dalida",
+   "Anne Sylvestre"
+  ],
+  "explanation": "« La dame en noir », pianiste et autrice de ses chansons.",
+  "hint": "Surnommée « la dame en noir »."
+ },
+ {
+  "key": "music-552",
+  "concept": "music.popular.le_sud",
+  "label": "Le Sud",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui chante « Le Sud » (1975) ?",
+  "options": [
+   "Nino Ferrer*",
+   "Joe Dassin",
+   "Julien Clerc",
+   "Michel Fugain"
+  ],
+  "explanation": "D'origine italienne, il est aussi connu pour « Le Téléfon » et « Mirza ».",
+  "hint": "Il chantait aussi « Mirza »."
+ },
+ {
+  "key": "music-553",
+  "concept": "music.popular.je_veux_zaz",
+  "label": "Je veux",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui chante « Je veux » (2010) ?",
+  "options": [
+   "Zaz*",
+   "Louane",
+   "Camille",
+   "Olivia Ruiz"
+  ],
+  "explanation": "Une chanson jazz manouche, énorme succès en France et à l'étranger.",
+  "hint": "Un nom de trois lettres."
+ },
+ {
+  "key": "music-554",
+  "concept": "music.popular.petit_papa_noel",
+  "label": "Petit Papa Noël",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a chanté pour la première fois « Petit Papa Noël », en 1946 ?",
+  "options": [
+   "Tino Rossi*",
+   "Charles Trenet",
+   "Yves Montand",
+   "Bourvil"
+  ],
+  "explanation": "Le disque le plus vendu en France, avec plus de 30 millions d'exemplaires.",
+  "hint": "Un chanteur corse."
+ },
+ {
+  "key": "music-555",
+  "concept": "music.popular.foule_sentimentale",
+  "label": "Foule sentimentale",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui chante « Foule sentimentale » (1993) ?",
+  "options": [
+   "Alain Souchon*",
+   "Laurent Voulzy",
+   "Francis Cabrel",
+   "Jean-Louis Aubert"
+  ],
+  "explanation": "Élue en 2005 meilleure chanson des vingt dernières années aux Victoires de la musique. Souchon écrit souvent avec son ami Laurent Voulzy.",
+  "hint": "L'ami de Laurent Voulzy."
+ },
+ {
+  "key": "music-556",
+  "concept": "music.popular.aventurier",
+  "label": "L'Aventurier",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel groupe chante « L'Aventurier » (1982) ?",
+  "options": [
+   "Indochine*",
+   "Téléphone",
+   "Noir Désir",
+   "Trust"
+  ],
+  "explanation": "Le groupe de Nicola Sirkis, inspiré par Bob Morane, un héros de romans d'aventure.",
+  "hint": "Le groupe de Nicola Sirkis."
+ },
+ {
+  "key": "music-557",
+  "concept": "music.popular.lacs_connemara",
+  "label": "Les Lacs du Connemara",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui chante « Les Lacs du Connemara » (1981) ?",
+  "options": [
+   "Michel Sardou*",
+   "Julien Clerc",
+   "Johnny Hallyday",
+   "Serge Lama"
+  ],
+  "explanation": "La chanson des fins de soirées et des mariages. Le Connemara est une région d'Irlande.",
+  "hint": "Il a aussi chanté « Je vais t'aimer »."
+ },
+ {
+  "key": "music-558",
+  "concept": "music.popular.sweet_dreams",
+  "label": "Sweet Dreams",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel duo britannique a chanté « Sweet Dreams (Are Made of This) » en 1983 ?",
+  "options": [
+   "Eurythmics*",
+   "Depeche Mode",
+   "Tears for Fears",
+   "Pet Shop Boys"
+  ],
+  "explanation": "Annie Lennox et Dave Stewart. Le clip montre Annie Lennox en costume, cheveux orange très courts.",
+  "hint": "Le duo d'Annie Lennox."
+ },
+ {
+  "key": "music-559",
+  "concept": "music.popular.blackpink_pays",
+  "label": "BLACKPINK",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays vient le groupe BLACKPINK ?",
+  "options": [
+   "De Corée du Sud*",
+   "Du Japon",
+   "De Chine",
+   "De Thaïlande"
+  ],
+  "explanation": "L'un des groupes de K-pop les plus suivis au monde. La K-pop désigne la pop coréenne.",
+  "hint": "Le « K » de K-pop."
+ },
+ {
+  "key": "music-560",
+  "concept": "music.popular.beyonce_groupe",
+  "label": "Beyoncé",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quel groupe Beyoncé a-t-elle commencé sa carrière ?",
+  "options": [
+   "Destiny's Child*",
+   "The Pussycat Dolls",
+   "Spice Girls",
+   "TLC"
+  ],
+  "explanation": "Un groupe de Houston, célèbre pour « Say My Name ».",
+  "hint": "Un groupe au nom de destin."
+ },
+ {
+  "key": "music-561",
+  "concept": "music.popular.civilisation_orelsan",
+  "label": "Orelsan",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel rappeur a sorti l'album « Civilisation » (2021) ?",
+  "options": [
+   "Orelsan*",
+   "Nekfeu",
+   "Booba",
+   "Damso"
+  ],
+  "explanation": "Le rappeur caennais, aussi connu pour « Basique » et la série « Montre jamais ça à personne ».",
+  "hint": "Il vient de Caen."
+ },
+ {
+  "key": "music-562",
+  "concept": "music.popular.iam_marseille",
+  "label": "IAM",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quelle ville vient le groupe de rap IAM ?",
+  "options": [
+   "Marseille*",
+   "Paris",
+   "Lyon",
+   "Toulouse"
+  ],
+  "explanation": "Akhenaton, Shurik'n et les autres, célèbres pour « Je danse le Mia » et l'album « L'École du micro d'argent ».",
+  "hint": "La ville de l'OM."
+ },
+ {
+  "key": "music-563",
+  "concept": "music.popular.ntm",
+  "label": "NTM",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel département vient le groupe NTM, de JoeyStarr et Kool Shen ?",
+  "options": [
+   "La Seine-Saint-Denis*",
+   "Les Bouches-du-Rhône",
+   "Le Val-de-Marne",
+   "Le Rhône"
+  ],
+  "explanation": "Le « 93 », qu'ils revendiquent dans leurs chansons, notamment à Saint-Denis.",
+  "hint": "Le « 93 »."
+ },
+ {
+  "key": "music-564",
+  "concept": "music.popular.jazz_origine",
+  "label": "Naissance du jazz",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quelle ville le jazz est-il né, au début du XXe siècle ?",
+  "options": [
+   "La Nouvelle-Orléans*",
+   "New York",
+   "Chicago",
+   "Memphis"
+  ],
+  "explanation": "Au carrefour des musiques africaines, européennes et caribéennes, dans le sud des États-Unis.",
+  "hint": "Une ville de Louisiane."
+ },
+ {
+  "key": "music-565",
+  "concept": "music.popular.tango_origine",
+  "label": "Tango",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient le tango ?",
+  "options": [
+   "D'Argentine*",
+   "D'Espagne",
+   "De Cuba",
+   "Du Portugal"
+  ],
+  "explanation": "Né à la fin du XIXe siècle dans les faubourgs de Buenos Aires et de Montevideo.",
+  "hint": "Le pays de Buenos Aires."
+ },
+ {
+  "key": "music-566",
+  "concept": "music.popular.flamenco_origine",
+  "label": "Flamenco",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel pays vient le flamenco ?",
+  "options": [
+   "D'Espagne*",
+   "Du Mexique",
+   "D'Italie",
+   "D'Argentine"
+  ],
+  "explanation": "Il vient d'Andalousie, avec chant, guitare, danse et claquements de mains.",
+  "hint": "Le pays de l'Andalousie."
+ },
+ {
+  "key": "music-567",
+  "concept": "music.popular.samba_origine",
+  "label": "Samba",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel pays vient la samba ?",
+  "options": [
+   "Du Brésil*",
+   "De Cuba",
+   "D'Argentine",
+   "Du Portugal"
+  ],
+  "explanation": "Elle rythme le carnaval de Rio de Janeiro.",
+  "hint": "Le pays du carnaval de Rio."
+ },
+ {
+  "key": "music-568",
+  "concept": "music.popular.fado_origine",
+  "label": "Fado",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays vient le fado, chant souvent mélancolique ?",
+  "options": [
+   "Du Portugal*",
+   "D'Espagne",
+   "D'Italie",
+   "De Grèce"
+  ],
+  "explanation": "Né à Lisbonne. Amália Rodrigues en est la grande voix.",
+  "hint": "Le pays de Lisbonne."
+ },
+ {
+  "key": "music-569",
+  "concept": "music.popular.valse_origine",
+  "label": "Valse",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quelle ville la valse est-elle devenue le symbole, au XIXe siècle ?",
+  "options": [
+   "Vienne*",
+   "Paris",
+   "Berlin",
+   "Moscou"
+  ],
+  "explanation": "Johann Strauss fils y compose « Le Beau Danube bleu ». Le concert du Nouvel An y joue toujours des valses.",
+  "hint": "La capitale de l'Autriche."
+ },
+ {
+  "key": "music-570",
+  "concept": "music.popular.hip_hop_bronx",
+  "label": "Naissance du hip-hop",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel quartier de New York le hip-hop est-il né, dans les années 1970 ?",
+  "options": [
+   "Le Bronx*",
+   "Manhattan",
+   "Brooklyn",
+   "Queens"
+  ],
+  "explanation": "Lors de fêtes de quartier, le DJ Kool Herc prolonge les passages instrumentaux des disques.",
+  "hint": "Au nord de Manhattan."
+ },
+ {
+  "key": "music-571",
+  "concept": "music.popular.techno_detroit",
+  "label": "Techno",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quelle ville américaine la techno est-elle née, dans les années 1980 ?",
+  "options": [
+   "Detroit*",
+   "Chicago",
+   "Los Angeles",
+   "Miami"
+  ],
+  "explanation": "La ville de l'automobile, où quelques DJ mêlent électronique européenne et funk. Chicago, elle, a vu naître la house.",
+  "hint": "La ville des voitures."
+ },
+ {
+  "key": "music-572",
+  "concept": "music.popular.woodstock",
+  "label": "Woodstock",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "En quelle année s'est tenu le festival de Woodstock ?",
+  "answer": 1969,
+  "explanation": "Trois jours de musique, près d'un demi-million de personnes. Jimi Hendrix y joue l'hymne américain à la guitare.",
+  "hint": "La même année que les premiers pas sur la Lune."
+ },
+ {
+  "key": "music-573",
+  "concept": "music.popular.33_tours",
+  "label": "33 tours",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que signifie « 33 tours » pour un disque vinyle ?",
+  "options": [
+   "Il tourne 33 fois par minute*",
+   "Il contient 33 chansons",
+   "Il dure 33 minutes",
+   "Il peut être écouté 33 fois"
+  ],
+  "explanation": "Plus précisément 33 tours et un tiers par minute. Les « 45 tours », plus rapides, contenaient une ou deux chansons par face.",
+  "hint": "Une vitesse de rotation."
+ },
+ {
+  "key": "music-574",
+  "concept": "music.popular.mtv_premier_clip",
+  "label": "MTV",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel clip a été le tout premier diffusé par la chaîne MTV, en 1981 ?",
+  "options": [
+   "« Video Killed the Radio Star »*",
+   "« Thriller »",
+   "« Like a Virgin »",
+   "« Bohemian Rhapsody »"
+  ],
+  "explanation": "Du groupe The Buggles. Le titre annonçait justement la victoire de l'image sur la radio.",
+  "hint": "Le titre parle de la mort de la radio."
+ },
+ {
+  "key": "music-575",
+  "concept": "music.popular.freddie_queen",
+  "label": "Queen",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui était le chanteur du groupe Queen ?",
+  "options": [
+   "Freddie Mercury*",
+   "Brian May",
+   "Roger Taylor",
+   "Elton John"
+  ],
+  "explanation": "Sa voix couvrait près de quatre octaves. Brian May est le guitariste du groupe.",
+  "hint": "Il porte le nom d'une planète."
+ },
+ {
+  "key": "music-576",
+  "concept": "music.popular.rihanna_pays",
+  "label": "Rihanna",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle île vient la chanteuse Rihanna ?",
+  "options": [
+   "La Barbade*",
+   "La Jamaïque",
+   "Porto Rico",
+   "La Martinique"
+  ],
+  "explanation": "Elle y est même devenue héroïne nationale en 2021.",
+  "hint": "Une île des Caraïbes anglophones."
+ },
+ {
+  "key": "music-577",
+  "concept": "music.popular.shakira_pays",
+  "label": "Shakira",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient la chanteuse Shakira ?",
+  "options": [
+   "De Colombie*",
+   "Du Mexique",
+   "D'Espagne",
+   "D'Argentine"
+  ],
+  "explanation": "Née à Barranquilla, elle chante « Waka Waka » pour la Coupe du monde 2010.",
+  "hint": "Elle a chanté « Waka Waka »."
+ },
+ {
+  "key": "music-578",
+  "concept": "music.popular.elton_piano",
+  "label": "Elton John",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel instrument joue Elton John sur scène ?",
+  "options": [
+   "Du piano*",
+   "De la guitare",
+   "De la batterie",
+   "Du saxophone"
+  ],
+  "explanation": "Il compose au piano les musiques des textes de son parolier Bernie Taupin, dont « Rocket Man ».",
+  "hint": "Des touches noires et blanches."
+ },
+ {
+  "key": "music-579",
+  "concept": "music.popular.hendrix_guitare",
+  "label": "Jimi Hendrix",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel instrument jouait Jimi Hendrix ?",
+  "options": [
+   "De la guitare électrique*",
+   "Du piano",
+   "De la batterie",
+   "De la basse"
+  ],
+  "explanation": "Gaucher, il jouait sur une guitare de droitier retournée.",
+  "hint": "Il y mettait parfois le feu sur scène."
+ },
+ {
+  "key": "music-580",
+  "concept": "music.popular.ringo_batterie",
+  "label": "Ringo Starr",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel instrument jouait Ringo Starr dans les Beatles ?",
+  "options": [
+   "De la batterie*",
+   "De la basse",
+   "De la guitare",
+   "Du clavier"
+  ],
+  "explanation": "Paul McCartney tenait la basse, John Lennon et George Harrison les guitares.",
+  "hint": "Il frappait."
+ },
+ {
+  "key": "music-581",
+  "concept": "music.popular.gims_sexion",
+  "label": "Maître Gims",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel groupe Gims s'est-il d'abord fait connaître ?",
+  "options": [
+   "Sexion d'Assaut*",
+   "IAM",
+   "Suprême NTM",
+   "PNL"
+  ],
+  "explanation": "Le collectif parisien sort « L'École des points vitaux » en 2010, avant la carrière solo de Gims.",
+  "hint": "Un groupe au nom militaire."
+ },
+ {
+  "key": "music-582",
+  "concept": "music.popular.desenchantee",
+  "label": "Désenchantée",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui chante « Désenchantée » (1991) ?",
+  "options": [
+   "Mylène Farmer*",
+   "Vanessa Paradis",
+   "Patricia Kaas",
+   "Jeanne Mas"
+  ],
+  "explanation": "Écrite avec Laurent Boutonnat, la chanson française la plus vendue de 1991.",
+  "hint": "Une chanteuse rousse."
+ },
+ {
+  "key": "music-583",
+  "concept": "music.popular.envole_moi",
+  "label": "Envole-moi",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui chante « Envole-moi » (1984) ?",
+  "options": [
+   "Jean-Jacques Goldman*",
+   "Daniel Balavoine",
+   "Francis Cabrel",
+   "Jean-Louis Aubert"
+  ],
+  "explanation": "Goldman est longtemps la personnalité préférée des Français.",
+  "hint": "Il a aussi écrit pour Céline Dion."
+ },
+ {
+  "key": "music-584",
+  "concept": "music.popular.joe_le_taxi",
+  "label": "Joe le taxi",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui chante « Joe le taxi » (1987), à seulement 14 ans ?",
+  "options": [
+   "Vanessa Paradis*",
+   "Lio",
+   "Elsa",
+   "Mylène Farmer"
+  ],
+  "explanation": "Un tube européen, avant sa carrière d'actrice.",
+  "hint": "Elle est aussi actrice."
+ },
+ {
+  "key": "music-585",
+  "concept": "music.popular.comme_d_habitude",
+  "label": "Comme d'habitude",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle chanson française de Claude François est devenue « My Way », chantée par Frank Sinatra ?",
+  "options": [
+   "« Comme d'habitude »*",
+   "« Alexandrie Alexandra »",
+   "« Le Lundi au soleil »",
+   "« Belles ! Belles ! Belles ! »"
+  ],
+  "explanation": "Paul Anka en écrit des paroles anglaises toutes différentes. C'est l'une des chansons les plus reprises au monde.",
+  "hint": "Une histoire de routine de couple."
+ },
+ {
+  "key": "music-586",
+  "concept": "music.popular.gigi_amoroso",
+  "label": "Gigi l'amoroso",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle chanteuse a interprété « Gigi l'amoroso » (1974) ?",
+  "options": [
+   "Dalida*",
+   "Sheila",
+   "Nana Mouskouri",
+   "Mireille Mathieu"
+  ],
+  "explanation": "Née au Caire de parents italiens, elle a chanté en une dizaine de langues.",
+  "hint": "Née en Égypte."
+ },
+ {
+  "key": "music-587",
+  "concept": "music.popular.kurt_cobain",
+  "label": "Nirvana",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui était le chanteur de Nirvana ?",
+  "options": [
+   "Kurt Cobain*",
+   "Dave Grohl",
+   "Eddie Vedder",
+   "Chris Cornell"
+  ],
+  "explanation": "Dave Grohl, le batteur, fonde ensuite les Foo Fighters.",
+  "hint": "Il est mort en 1994, à 27 ans."
+ }
+]
