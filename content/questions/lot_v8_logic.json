@@ -1,0 +1,2687 @@
+[
+ {
+  "key": "logic-501",
+  "concept": "logic.reasoning.pilotes_prudents",
+  "label": "Syllogisme",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "« Tous les pilotes sont prudents. Nora est pilote. » Donc Nora est prudente.",
+  "answer": true,
+  "explanation": "Oui : ce qui vaut pour tous les pilotes vaut pour Nora."
+ },
+ {
+  "key": "logic-502",
+  "concept": "logic.reasoning.pilotes_reciproque",
+  "label": "Réciproque",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Tous les pilotes sont prudents. Nora est prudente. » Donc Nora est pilote.",
+  "answer": false,
+  "explanation": "Non : on peut être prudent sans être pilote. « Tous les A sont B » ne dit rien de ceux qui sont B."
+ },
+ {
+  "key": "logic-503",
+  "concept": "logic.reasoning.reptiles_poils",
+  "label": "Syllogisme",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "« Aucun reptile n'a de poils. Le lézard est un reptile. » Donc le lézard n'a pas de poils.",
+  "answer": true,
+  "explanation": "Oui : la règle s'applique à tous les reptiles, donc au lézard."
+ },
+ {
+  "key": "logic-504",
+  "concept": "logic.reasoning.musiciens_peintres",
+  "label": "Syllogisme piégé",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« Certains musiciens sont gauchers. Certains gauchers sont peintres. » Donc certains musiciens sont peintres.",
+  "answer": false,
+  "explanation": "Non : les gauchers musiciens et les gauchers peintres peuvent être des personnes totalement différentes."
+ },
+ {
+  "key": "logic-505",
+  "concept": "logic.reasoning.neige_ecole_contraposee",
+  "label": "Contraposée",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« S'il neige, l'école ferme. » L'école est ouverte. Donc il ne neige pas.",
+  "answer": true,
+  "explanation": "Oui : s'il neigeait, l'école serait fermée. C'est la contraposée, toujours valable."
+ },
+ {
+  "key": "logic-506",
+  "concept": "logic.reasoning.neige_ecole_inverse",
+  "label": "Erreur de l'inverse",
+  "type": "true_false",
+  "difficulty": 62,
+  "prompt": "« S'il neige, l'école ferme. » Il ne neige pas. Donc l'école est ouverte.",
+  "answer": false,
+  "explanation": "Non : l'école peut fermer pour une autre raison (grève, vacances). La règle ne dit rien quand il ne neige pas."
+ },
+ {
+  "key": "logic-507",
+  "concept": "logic.reasoning.multiple_10_5",
+  "label": "Multiples",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Tout multiple de 10 est un multiple de 5.",
+  "answer": true,
+  "explanation": "Oui : 10 = 2 × 5, donc tout multiple de 10 est aussi un multiple de 5."
+ },
+ {
+  "key": "logic-508",
+  "concept": "logic.reasoning.multiple_5_10",
+  "label": "Multiples",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Tout multiple de 5 est un multiple de 10.",
+  "answer": false,
+  "explanation": "Non : 15 est un multiple de 5, mais pas de 10."
+ },
+ {
+  "key": "logic-509",
+  "concept": "logic.reasoning.tout_le_monde_reussi",
+  "label": "Contraire logique",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le contraire de « Tout le monde a réussi » est « Personne n'a réussi ».",
+  "answer": false,
+  "explanation": "Non : il suffit qu'une seule personne ait échoué. Le contraire est « Au moins une personne n'a pas réussi »."
+ },
+ {
+  "key": "logic-510",
+  "concept": "logic.reasoning.divisible_2_4_8",
+  "label": "Divisibilité",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Un nombre divisible par 2 et par 4 est forcément divisible par 8.",
+  "answer": false,
+  "explanation": "Non : 12 est divisible par 2 et par 4, mais pas par 8."
+ },
+ {
+  "key": "logic-511",
+  "concept": "logic.reasoning.comparaison_ages",
+  "label": "Comparaison",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Léa est plus âgée que Tom, et Tom plus âgé que Sam. Donc Sam est plus jeune que Léa.",
+  "answer": true,
+  "explanation": "Oui : l'ordre se transmet. Léa > Tom > Sam."
+ },
+ {
+  "key": "logic-512",
+  "concept": "logic.reasoning.seuls_adultes",
+  "label": "« Seuls »",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Seuls les adultes peuvent voter » veut dire que tous les adultes votent.",
+  "answer": false,
+  "explanation": "Non : la phrase dit que voter est réservé aux adultes, pas qu'ils votent tous."
+ },
+ {
+  "key": "logic-513",
+  "concept": "logic.reasoning.double_negation_tricher",
+  "label": "Double négation",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "« Il n'est pas vrai qu'aucun élève n'a triché » signifie qu'au moins un élève a triché.",
+  "answer": true,
+  "explanation": "Oui : nier « aucun n'a triché » revient à dire « au moins un a triché »."
+ },
+ {
+  "key": "logic-514",
+  "concept": "logic.reasoning.carre_losange",
+  "label": "Carré et losange",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Un carré est un losange.",
+  "answer": true,
+  "explanation": "Oui : un losange a quatre côtés égaux ; le carré aussi, avec en plus des angles droits."
+ },
+ {
+  "key": "logic-515",
+  "concept": "logic.reasoning.rectangle_carre",
+  "label": "Rectangle",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Un rectangle est toujours un carré.",
+  "answer": false,
+  "explanation": "Non : c'est l'inverse. Un carré est un rectangle particulier, aux côtés égaux."
+ },
+ {
+  "key": "logic-516",
+  "concept": "logic.reasoning.somme_impairs",
+  "label": "Pair et impair",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "La somme de deux nombres impairs est toujours impaire.",
+  "answer": false,
+  "explanation": "Non : 3 + 5 = 8. La somme de deux impairs est toujours paire."
+ },
+ {
+  "key": "logic-517",
+  "concept": "logic.reasoning.produit_impairs",
+  "label": "Pair et impair",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le produit de deux nombres impairs est toujours impair.",
+  "answer": true,
+  "explanation": "Oui : 3 × 5 = 15, 7 × 9 = 63. Il n'y a jamais de facteur 2."
+ },
+ {
+  "key": "logic-518",
+  "concept": "logic.reasoning.premier_impair",
+  "label": "Nombres premiers",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Tout nombre premier est impair.",
+  "answer": false,
+  "explanation": "Non : 2 est premier, et pair. C'est le seul."
+ },
+ {
+  "key": "logic-519",
+  "concept": "logic.reasoning.zorks_bleus",
+  "label": "Syllogisme",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "« Tous les zorks sont bleus. Certains objets bleus sont ronds. » Que peut-on affirmer à coup sûr ?",
+  "options": [
+   "On ne sait rien de la forme des zorks*",
+   "Certains zorks sont ronds",
+   "Aucun zork n'est rond",
+   "Tous les zorks sont ronds"
+  ],
+  "explanation": "Les objets bleus et ronds ne sont peut-être pas des zorks. Les deux phrases ne permettent aucune conclusion sur leur forme.",
+  "hint": "Les objets bleus et ronds sont-ils forcément des zorks ?"
+ },
+ {
+  "key": "logic-520",
+  "concept": "logic.reasoning.fils_frere_pere",
+  "label": "Famille",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Le fils du frère de mon père est mon…",
+  "options": [
+   "cousin*",
+   "neveu",
+   "oncle",
+   "frère"
+  ],
+  "explanation": "Le frère de mon père est mon oncle ; son fils est mon cousin.",
+  "hint": "Commence par le frère de ton père."
+ },
+ {
+  "key": "logic-521",
+  "concept": "logic.reasoning.mere_de_ma_mere",
+  "label": "Famille",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "La mère de ma mère est ma…",
+  "options": [
+   "grand-mère*",
+   "tante",
+   "cousine",
+   "belle-mère"
+  ],
+  "explanation": "On l'appelle grand-mère maternelle.",
+  "hint": "Une génération au-dessus de ta mère."
+ },
+ {
+  "key": "logic-522",
+  "concept": "logic.reasoning.pere_du_neveu",
+  "label": "Famille",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le père de mon neveu est forcément…",
+  "options": [
+   "mon frère ou mon beau-frère*",
+   "mon oncle",
+   "mon cousin",
+   "mon père"
+  ],
+  "explanation": "Un neveu est l'enfant d'un frère ou d'une sœur. Son père est donc mon frère… ou le mari de ma sœur.",
+  "hint": "Qui sont les parents d'un neveu ?"
+ },
+ {
+  "key": "logic-523",
+  "concept": "logic.reasoning.samedi_10_25",
+  "label": "Jours de la semaine",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Si le 10 d'un mois est un samedi, quel jour est le 25 ?",
+  "options": [
+   "Dimanche*",
+   "Samedi",
+   "Lundi",
+   "Vendredi"
+  ],
+  "explanation": "15 jours plus tard : 14 jours ramènent au samedi, plus 1 jour donne dimanche.",
+  "hint": "14 jours, c'est deux semaines pile."
+ },
+ {
+  "key": "logic-524",
+  "concept": "logic.reasoning.vendredi_moins_10",
+  "label": "Jours de la semaine",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Si nous sommes vendredi, quel jour était-il il y a 10 jours ?",
+  "options": [
+   "Mardi*",
+   "Lundi",
+   "Mercredi",
+   "Dimanche"
+  ],
+  "explanation": "Il y a 7 jours : vendredi. 3 jours de plus en arrière : mardi.",
+  "hint": "Recule d'une semaine, puis de 3 jours."
+ },
+ {
+  "key": "logic-525",
+  "concept": "logic.reasoning.lundi_1000_jours",
+  "label": "Jours de la semaine",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Si nous sommes lundi, quel jour serons-nous dans 1 000 jours ?",
+  "options": [
+   "Dimanche*",
+   "Lundi",
+   "Mardi",
+   "Samedi"
+  ],
+  "explanation": "1 000 = 7 × 142 + 6. Six jours après un lundi : dimanche.",
+  "hint": "Divise 1 000 par 7 et regarde le reste."
+ },
+ {
+  "key": "logic-526",
+  "concept": "logic.reasoning.annee_mardi_31dec",
+  "label": "Calendrier",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Une année non bissextile commence un mardi. Quel jour sera le 31 décembre ?",
+  "options": [
+   "Mardi*",
+   "Mercredi",
+   "Lundi",
+   "Jeudi"
+  ],
+  "explanation": "Le 31 décembre est 364 jours après le 1er janvier, soit 52 semaines pile : même jour.",
+  "hint": "365 jours, c'est 52 semaines et 1 jour."
+ },
+ {
+  "key": "logic-527",
+  "concept": "logic.reasoning.course_classement",
+  "label": "Classement",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Marc court plus vite que Paul, mais moins vite que Léo. Qui est le plus rapide ?",
+  "options": [
+   "Léo*",
+   "Marc",
+   "Paul",
+   "On ne peut pas savoir"
+  ],
+  "explanation": "Léo > Marc > Paul.",
+  "hint": "Range-les du plus rapide au plus lent."
+ },
+ {
+  "key": "logic-528",
+  "concept": "logic.reasoning.billes_moins",
+  "label": "Comparaison",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Ana a plus de billes que Ben. Céline en a plus que Ben, mais moins qu'Ana. Qui en a le moins ?",
+  "options": [
+   "Ben*",
+   "Céline",
+   "Ana",
+   "On ne peut pas savoir"
+  ],
+  "explanation": "Ana > Céline > Ben.",
+  "hint": "Place Céline entre les deux autres."
+ },
+ {
+  "key": "logic-529",
+  "concept": "logic.reasoning.file_cinq_amis",
+  "label": "File d'attente",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Eva est devant Ali, Ali devant Bob, Dan derrière Bob et Chloé derrière Dan. Qui est le dernier de la file ?",
+  "options": [
+   "Chloé*",
+   "Dan",
+   "Bob",
+   "Eva"
+  ],
+  "explanation": "L'ordre est : Eva, Ali, Bob, Dan, Chloé.",
+  "hint": "Place les amis un par un."
+ },
+ {
+  "key": "logic-530",
+  "concept": "logic.reasoning.intrus_premiers",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est l'intrus : 17, 19, 21, 23 ?",
+  "options": [
+   "21*",
+   "17",
+   "19",
+   "23"
+  ],
+  "explanation": "Les autres sont des nombres premiers ; 21 = 3 × 7.",
+  "hint": "Lesquels ne se divisent que par 1 et par eux-mêmes ?"
+ },
+ {
+  "key": "logic-531",
+  "concept": "logic.reasoning.intrus_lune",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est l'intrus : Mercure, Vénus, Lune, Mars ?",
+  "options": [
+   "Lune*",
+   "Mercure",
+   "Vénus",
+   "Mars"
+  ],
+  "explanation": "La Lune est un satellite de la Terre ; les autres sont des planètes.",
+  "hint": "Trois d'entre eux tournent autour du Soleil directement."
+ },
+ {
+  "key": "logic-532",
+  "concept": "logic.reasoning.intrus_carres",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est l'intrus : 121, 144, 169, 188 ?",
+  "options": [
+   "188*",
+   "121",
+   "144",
+   "169"
+  ],
+  "explanation": "121 = 11², 144 = 12², 169 = 13² ; 188 n'est pas un carré.",
+  "hint": "Pense à 11, 12, 13…"
+ },
+ {
+  "key": "logic-533",
+  "concept": "logic.reasoning.intrus_poemes",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est l'intrus : sonnet, roman, rondeau, ballade ?",
+  "options": [
+   "Roman*",
+   "Sonnet",
+   "Rondeau",
+   "Ballade"
+  ],
+  "explanation": "Sonnet, rondeau et ballade sont des formes de poèmes ; le roman est un récit en prose.",
+  "hint": "Trois formes de poésie."
+ },
+ {
+  "key": "logic-534",
+  "concept": "logic.reasoning.intrus_cylindre",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est l'intrus : octogone, hexagone, pentagone, cylindre ?",
+  "options": [
+   "Cylindre*",
+   "Octogone",
+   "Hexagone",
+   "Pentagone"
+  ],
+  "explanation": "Le cylindre est un solide en volume ; les autres sont des figures planes à côtés droits.",
+  "hint": "Lequel a du volume ?"
+ },
+ {
+  "key": "logic-535",
+  "concept": "logic.reasoning.intrus_litre",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est l'intrus : kilomètre, litre, mètre, centimètre ?",
+  "options": [
+   "Litre*",
+   "Kilomètre",
+   "Mètre",
+   "Centimètre"
+  ],
+  "explanation": "Le litre mesure un volume ; les autres, des longueurs.",
+  "hint": "Lequel ne mesure pas une distance ?"
+ },
+ {
+  "key": "logic-536",
+  "concept": "logic.reasoning.anagramme_parisien",
+  "label": "Anagramme",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel mot est une anagramme de « parisien » (mêmes lettres) ?",
+  "options": [
+   "Aspirine*",
+   "Paresseux",
+   "Pépinière",
+   "Prairies"
+  ],
+  "explanation": "P-A-R-I-S-I-E-N contient exactement les lettres de A-S-P-I-R-I-N-E.",
+  "hint": "Un médicament."
+ },
+ {
+  "key": "logic-537",
+  "concept": "logic.reasoning.anagramme_argent",
+  "label": "Anagramme",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel mot est une anagramme de « argent » ?",
+  "options": [
+   "Gérant*",
+   "Gratin",
+   "Orange",
+   "Tangue"
+  ],
+  "explanation": "G-É-R-A-N-T reprend les six lettres d'« argent ».",
+  "hint": "Celui qui dirige un magasin."
+ },
+ {
+  "key": "logic-538",
+  "concept": "logic.reasoning.code_cab",
+  "label": "Code lettres",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Si A = 1, B = 2, C = 3…, combien vaut le mot « CAB » (somme des lettres) ?",
+  "answer": 6,
+  "explanation": "C = 3, A = 1, B = 2 : 3 + 1 + 2 = 6.",
+  "hint": "Additionne la valeur de chaque lettre."
+ },
+ {
+  "key": "logic-539",
+  "concept": "logic.reasoning.code_chat_dibu",
+  "label": "Code décalé",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans un code, CHAT s'écrit DIBU (chaque lettre avance d'un rang). Comment s'écrit LION ?",
+  "options": [
+   "MJPO*",
+   "KHNM",
+   "MJON",
+   "LJPO"
+  ],
+  "explanation": "L→M, I→J, O→P, N→O.",
+  "hint": "Remplace chaque lettre par la suivante."
+ },
+ {
+  "key": "logic-540",
+  "concept": "logic.reasoning.code_logique",
+  "label": "Code chiffré",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Si 1 = A, 2 = B, 3 = C…, quel mot se cache derrière 12 - 15 - 7 - 9 - 17 - 21 - 5 ?",
+  "options": [
+   "LOGIQUE*",
+   "LOGICIEL",
+   "LAGUNE",
+   "LOUPIOTE"
+  ],
+  "explanation": "12 = L, 15 = O, 7 = G, 9 = I, 17 = Q, 21 = U, 5 = E.",
+  "hint": "Le 12 est un L."
+ },
+ {
+  "key": "logic-541",
+  "concept": "logic.reasoning.code_miroir",
+  "label": "Mot à l'envers",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Si PARIS s'écrit SIRAP, comment s'écrit LYON ?",
+  "options": [
+   "NOYL*",
+   "NYOL",
+   "LNOY",
+   "YLON"
+  ],
+  "explanation": "On lit le mot de droite à gauche.",
+  "hint": "Comme dans un miroir."
+ },
+ {
+  "key": "logic-542",
+  "concept": "logic.reasoning.proba_coeur",
+  "label": "Probabilité",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "On tire une carte au hasard dans un jeu de 52 cartes. Quelle est la probabilité que ce soit un cœur ?",
+  "options": [
+   "1 chance sur 4*",
+   "1 chance sur 13",
+   "1 chance sur 2",
+   "1 chance sur 52"
+  ],
+  "explanation": "Il y a 13 cœurs sur 52 cartes : 13/52 = 1/4.",
+  "hint": "Il y a quatre « couleurs »."
+ },
+ {
+  "key": "logic-543",
+  "concept": "logic.reasoning.proba_as",
+  "label": "Probabilité",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle est la probabilité de tirer un as dans un jeu de 52 cartes ?",
+  "options": [
+   "1 chance sur 13*",
+   "1 chance sur 4",
+   "1 chance sur 52",
+   "1 chance sur 26"
+  ],
+  "explanation": "4 as sur 52 cartes : 4/52 = 1/13.",
+  "hint": "Combien y a-t-il d'as ?"
+ },
+ {
+  "key": "logic-544",
+  "concept": "logic.reasoning.proba_deux_faces",
+  "label": "Probabilité",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "On lance deux pièces. Quelle est la probabilité d'obtenir deux fois « face » ?",
+  "options": [
+   "1 chance sur 4*",
+   "1 chance sur 2",
+   "1 chance sur 3",
+   "1 chance sur 8"
+  ],
+  "explanation": "Quatre cas équiprobables : FF, FP, PF, PP. Un seul donne FF.",
+  "hint": "Liste tous les résultats possibles."
+ },
+ {
+  "key": "logic-545",
+  "concept": "logic.reasoning.proba_pile_face",
+  "label": "Probabilité piégée",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "On lance deux pièces. Quelle est la probabilité d'obtenir un pile et un face, dans n'importe quel ordre ?",
+  "options": [
+   "1 chance sur 2*",
+   "1 chance sur 3",
+   "1 chance sur 4",
+   "2 chances sur 3"
+  ],
+  "explanation": "Deux cas sur quatre conviennent : PF et FP. Le piège : croire qu'il n'y a que trois résultats.",
+  "hint": "PF et FP sont deux cas différents."
+ },
+ {
+  "key": "logic-546",
+  "concept": "logic.reasoning.des_somme_frequente",
+  "label": "Deux dés",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec deux dés, quelle somme a le plus de chances de sortir ?",
+  "options": [
+   "7*",
+   "6",
+   "12",
+   "2"
+  ],
+  "explanation": "Six combinaisons donnent 7 (1+6, 2+5, 3+4 et l'inverse), plus que toute autre somme.",
+  "hint": "La somme du milieu."
+ },
+ {
+  "key": "logic-547",
+  "concept": "logic.reasoning.des_double",
+  "label": "Deux dés",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Avec deux dés, quelle est la probabilité de faire un double ?",
+  "options": [
+   "1 chance sur 6*",
+   "1 chance sur 36",
+   "1 chance sur 12",
+   "1 chance sur 3"
+  ],
+  "explanation": "Six doubles sur 36 combinaisons : 6/36 = 1/6.",
+  "hint": "Quel que soit le premier dé, que faut-il au second ?"
+ },
+ {
+  "key": "logic-548",
+  "concept": "logic.reasoning.sac_bille_bleue",
+  "label": "Probabilité",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Un sac contient 3 billes rouges et 1 bleue. Quelle est la probabilité de tirer la bleue ?",
+  "options": [
+   "1 chance sur 4*",
+   "1 chance sur 3",
+   "1 chance sur 2",
+   "3 chances sur 4"
+  ],
+  "explanation": "Une bille bleue sur 4 billes en tout.",
+  "hint": "Compte toutes les billes."
+ },
+ {
+  "key": "logic-549",
+  "concept": "logic.reasoning.ile_b_ment",
+  "label": "Menteurs et sincères",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Sur une île, chacun dit toujours la vérité ou ment toujours. A dit : « B ment. » B dit : « A et moi sommes pareils. » Que sait-on ?",
+  "options": [
+   "A dit vrai, B ment*",
+   "A ment, B dit vrai",
+   "Les deux disent vrai",
+   "Les deux mentent"
+  ],
+  "explanation": "Si A mentait, B dirait vrai… mais alors A et B seraient différents, et B mentirait : contradiction. Donc A dit vrai et B ment (et sa phrase est bien fausse).",
+  "hint": "Suppose que A ment, et vois si ça tient."
+ },
+ {
+  "key": "logic-550",
+  "concept": "logic.reasoning.menteur_frere_soeur",
+  "label": "Menteur",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Un homme qui ment toujours dit : « J'ai un frère et une sœur. » Que peut-on conclure ?",
+  "options": [
+   "Il n'a pas à la fois un frère et une sœur*",
+   "Il n'a ni frère ni sœur",
+   "Il a un frère mais pas de sœur",
+   "Il est enfant unique"
+  ],
+  "explanation": "Sa phrase est fausse : il lui manque au moins l'un des deux. Il peut avoir un frère seul, une sœur seule, ou aucun.",
+  "hint": "Le contraire de « A et B » est « pas A ou pas B »."
+ },
+ {
+  "key": "logic-551",
+  "concept": "logic.reasoning.deux_gardiens",
+  "label": "Deux gardiens",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Deux portes, deux gardiens : l'un dit toujours vrai, l'autre ment toujours. Quelle question poser à l'un d'eux pour trouver la bonne porte ?",
+  "options": [
+   "« Quelle porte l'autre m'indiquerait ? », puis prendre l'autre*",
+   "« Es-tu le menteur ? »",
+   "« Quelle est la bonne porte ? »",
+   "« Il fait beau ? »"
+  ],
+  "explanation": "Dans les deux cas, la réponse désigne la mauvaise porte : le sincère rapporte le mensonge de l'autre, le menteur ment sur la vérité de l'autre.",
+  "hint": "Fais parler un gardien de l'autre."
+ },
+ {
+  "key": "logic-552",
+  "concept": "logic.reasoning.chats_souris",
+  "label": "Proportions",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Si 3 chats attrapent 3 souris en 3 minutes, combien de chats faut-il pour attraper 100 souris en 100 minutes ?",
+  "options": [
+   "3*",
+   "100",
+   "33",
+   "300"
+  ],
+  "explanation": "Chaque chat attrape 1 souris en 3 minutes, soit environ 33 en 100 minutes. 3 chats en attrapent 100.",
+  "hint": "Combien de souris un chat attrape-t-il en 100 minutes ?"
+ },
+ {
+  "key": "logic-553",
+  "concept": "logic.reasoning.foot_judo_aucun",
+  "label": "Ensembles",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Dans une classe de 30 élèves, 18 font du foot, 12 du judo et 5 les deux. Combien ne font aucun des deux ?",
+  "answer": 5,
+  "explanation": "18 + 12 − 5 = 25 élèves font au moins un sport. 30 − 25 = 5.",
+  "hint": "Ceux qui font les deux sont comptés deux fois."
+ },
+ {
+  "key": "logic-554",
+  "concept": "logic.reasoning.anglais_espagnol_deux",
+  "label": "Ensembles",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Dans un groupe de 40 personnes, 25 parlent anglais et 20 espagnol. Chacun parle au moins une des deux langues. Combien parlent les deux ?",
+  "answer": 5,
+  "explanation": "25 + 20 = 45, soit 5 de plus que 40 : ces 5 personnes sont comptées deux fois.",
+  "hint": "Compare 25 + 20 avec 40."
+ },
+ {
+  "key": "logic-555",
+  "concept": "logic.reasoning.beau_ou_pluie",
+  "label": "« Ou »",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Il fait beau ou il pleut. » Il ne fait pas beau. Que peut-on conclure ?",
+  "options": [
+   "Il pleut*",
+   "Il neige",
+   "Il fait beau quand même",
+   "On ne peut rien conclure"
+  ],
+  "explanation": "Si l'une des deux possibilités est exclue, c'est l'autre.",
+  "hint": "Une des deux options tombe."
+ },
+ {
+  "key": "logic-556",
+  "concept": "logic.reasoning.soupe_dessert",
+  "label": "Contraposée",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Si tu manges ta soupe, tu auras un dessert. » Tu n'as pas eu de dessert. Que peut-on conclure ?",
+  "options": [
+   "Tu n'as pas mangé ta soupe*",
+   "Tu as mangé ta soupe",
+   "Il n'y avait plus de dessert",
+   "On ne peut rien conclure"
+  ],
+  "explanation": "Si tu avais mangé ta soupe, tu aurais eu un dessert. La promesse étant tenue, tu ne l'as pas mangée.",
+  "hint": "Que se passerait-il si tu l'avais mangée ?"
+ },
+ {
+  "key": "logic-557",
+  "concept": "logic.reasoning.chat_moustaches",
+  "label": "Contraposée",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle phrase veut dire la même chose que « Si c'est un chat, alors il a des moustaches » ?",
+  "options": [
+   "S'il n'a pas de moustaches, ce n'est pas un chat*",
+   "S'il a des moustaches, c'est un chat",
+   "Si ce n'est pas un chat, il n'a pas de moustaches",
+   "Tous les animaux à moustaches sont des chats"
+  ],
+  "explanation": "C'est la contraposée : on inverse et on nie les deux parties. Les phoques ont des moustaches sans être des chats.",
+  "hint": "Inverse et nie."
+ },
+ {
+  "key": "logic-558",
+  "concept": "logic.reasoning.certains_absents",
+  "label": "Contraire logique",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le contraire logique de « Certains élèves sont absents » ?",
+  "options": [
+   "Aucun élève n'est absent*",
+   "Certains élèves sont présents",
+   "Tous les élèves sont absents",
+   "La moitié des élèves est absente"
+  ],
+  "explanation": "Pour contredire « certains », il faut « aucun ».",
+  "hint": "Contredire « au moins un »."
+ },
+ {
+  "key": "logic-559",
+  "concept": "logic.reasoning.au_moins_une_erreur",
+  "label": "Contraire logique",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le contraire de « Il y a au moins une erreur » ?",
+  "options": [
+   "Il n'y a aucune erreur*",
+   "Il y a plusieurs erreurs",
+   "Il y a exactement une erreur",
+   "Il y a peut-être une erreur"
+  ],
+  "explanation": "« Au moins une » est contredit par « aucune ».",
+  "hint": "Le contraire de « au moins un »."
+ },
+ {
+  "key": "logic-560",
+  "concept": "logic.reasoning.pair_multiple_3",
+  "label": "Devinette de nombre",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Je suis un nombre pair, multiple de 3, plus petit que 10 et différent de 0. Qui suis-je ?",
+  "answer": 6,
+  "explanation": "Les multiples de 3 sous 10 sont 3, 6 et 9 ; seul 6 est pair.",
+  "hint": "Liste les multiples de 3."
+ },
+ {
+  "key": "logic-561",
+  "concept": "logic.reasoning.chiffres_somme_9",
+  "label": "Devinette de nombre",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Je suis un nombre impair à deux chiffres, divisible par 5, et la somme de mes chiffres vaut 9. Qui suis-je ?",
+  "answer": 45,
+  "explanation": "Divisible par 5 et impair : je finis par 5. Il faut donc 4 dizaines : 45.",
+  "hint": "Par quel chiffre finis-je ?"
+ },
+ {
+  "key": "logic-562",
+  "concept": "logic.reasoning.multiple_4_et_7",
+  "label": "Devinette de nombre",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Je suis un nombre entre 20 et 30, multiple de 4 et de 7. Qui suis-je ?",
+  "answer": 28,
+  "explanation": "4 × 7 = 28, qui est bien entre 20 et 30.",
+  "hint": "Multiplie 4 par 7."
+ },
+ {
+  "key": "logic-563",
+  "concept": "logic.reasoning.dizaines_double",
+  "label": "Devinette de nombre",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Mon chiffre des dizaines est le double de celui des unités, et leur somme vaut 12. Qui suis-je ?",
+  "answer": 84,
+  "explanation": "Si les unités valent u, les dizaines 2u : 3u = 12, donc u = 4 et le nombre est 84.",
+  "hint": "Les dizaines valent deux fois les unités."
+ },
+ {
+  "key": "logic-564",
+  "concept": "logic.puzzles.poignees_de_main",
+  "label": "Poignées de main",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "5 personnes se serrent toutes la main, une fois chacune. Combien de poignées de main en tout ?",
+  "answer": 10,
+  "explanation": "Chacune serre 4 mains, soit 5 × 4 = 20, mais chaque poignée est comptée deux fois : 10.",
+  "hint": "Chaque poignée concerne deux personnes."
+ },
+ {
+  "key": "logic-565",
+  "concept": "logic.puzzles.championnat_6",
+  "label": "Championnat",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Dans un championnat de 6 équipes, chacune rencontre toutes les autres une seule fois. Combien de matchs ?",
+  "answer": 15,
+  "explanation": "6 × 5 ÷ 2 = 15 : chaque match réunit deux équipes.",
+  "hint": "Même raisonnement que pour des poignées de main."
+ },
+ {
+  "key": "logic-566",
+  "concept": "logic.puzzles.diagonales_hexagone",
+  "label": "Diagonales",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Combien de diagonales compte un hexagone (6 côtés) ?",
+  "answer": 9,
+  "explanation": "De chaque sommet partent 3 diagonales : 6 × 3 ÷ 2 = 9.",
+  "hint": "Un sommet ne se relie ni à lui-même ni à ses deux voisins."
+ },
+ {
+  "key": "logic-567",
+  "concept": "logic.puzzles.diagonales_carre",
+  "label": "Diagonales",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de diagonales a un carré ?",
+  "answer": 2,
+  "explanation": "Elles relient les coins opposés et se croisent au centre.",
+  "hint": "Elles se croisent au milieu."
+ },
+ {
+  "key": "logic-568",
+  "concept": "logic.puzzles.somme_de",
+  "label": "Dé",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien vaut la somme de tous les points d'un dé classique ?",
+  "answer": 21,
+  "explanation": "1 + 2 + 3 + 4 + 5 + 6 = 21.",
+  "hint": "Additionne de 1 à 6."
+ },
+ {
+  "key": "logic-569",
+  "concept": "logic.puzzles.de_face_opposee",
+  "label": "Dé",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Sur un dé classique, deux faces opposées font toujours 7. Quelle face est opposée au 2 ?",
+  "answer": 5,
+  "explanation": "2 + 5 = 7. De même, 1 est face au 6, et 3 face au 4.",
+  "hint": "Complète jusqu'à 7."
+ },
+ {
+  "key": "logic-570",
+  "concept": "logic.puzzles.chiffres_pages_99",
+  "label": "Numéroter des pages",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien de chiffres faut-il écrire pour numéroter les pages de 1 à 99 ?",
+  "answer": 189,
+  "explanation": "9 pages à un chiffre, puis 90 pages à deux chiffres : 9 + 180 = 189.",
+  "hint": "Sépare les pages à un et à deux chiffres."
+ },
+ {
+  "key": "logic-571",
+  "concept": "logic.puzzles.zeros_1_100",
+  "label": "Chiffre zéro",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Combien de fois écrit-on le chiffre 0 en notant tous les nombres de 1 à 100 ?",
+  "answer": 11,
+  "explanation": "Un zéro dans 10, 20… 90 (9 fois), et deux dans 100 : 11.",
+  "hint": "N'oublie pas 100."
+ },
+ {
+  "key": "logic-572",
+  "concept": "logic.puzzles.arbres_bassin",
+  "label": "Arbres en cercle",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Autour d'un bassin rond de 40 m de tour, on plante un arbre tous les 5 m. Combien d'arbres ?",
+  "answer": 8,
+  "explanation": "En cercle, le dernier intervalle revient au premier arbre : 40 ÷ 5 = 8, sans arbre en plus.",
+  "hint": "Sur un cercle, il n'y a pas de « bout »."
+ },
+ {
+  "key": "logic-573",
+  "concept": "logic.puzzles.age_triple_double",
+  "label": "Âges",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Paul a trois fois l'âge de son fils. Dans 12 ans, il n'aura plus que le double. Quel âge a le fils aujourd'hui ?",
+  "answer": 12,
+  "explanation": "Si le fils a f ans : 3f + 12 = 2(f + 12), donc f = 12. Paul a 36 ans ; dans 12 ans, 48 et 24.",
+  "hint": "Écris les âges dans 12 ans."
+ },
+ {
+  "key": "logic-574",
+  "concept": "logic.puzzles.trois_enfants",
+  "label": "Âges",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Trois enfants nés à 2 ans d'écart ont 21 ans à eux trois. Quel âge a le plus jeune ?",
+  "answer": 5,
+  "explanation": "x + (x + 2) + (x + 4) = 21, donc 3x = 15 et x = 5. Les âges : 5, 7 et 9.",
+  "hint": "L'âge du milieu vaut le tiers du total."
+ },
+ {
+  "key": "logic-575",
+  "concept": "logic.puzzles.motos_voitures",
+  "label": "Roues",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Dans un parking, il y a 12 véhicules, motos et voitures, et 40 roues. Combien de voitures ?",
+  "answer": 8,
+  "explanation": "Si tout le monde avait 2 roues : 24 roues. Les 16 roues en plus viennent des voitures, 2 de plus chacune : 8 voitures.",
+  "hint": "Imagine d'abord que ce ne sont que des motos."
+ },
+ {
+  "key": "logic-576",
+  "concept": "logic.puzzles.araignees_scarabees",
+  "label": "Pattes",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Une boîte contient 10 bêtes, araignées (8 pattes) et scarabées (6 pattes), soit 68 pattes. Combien d'araignées ?",
+  "answer": 4,
+  "explanation": "Avec 10 scarabées : 60 pattes. Il en manque 8 ; chaque araignée apporte 2 pattes de plus : 4 araignées.",
+  "hint": "Pars de 10 scarabées."
+ },
+ {
+  "key": "logic-577",
+  "concept": "logic.puzzles.deux_robinets",
+  "label": "Robinets",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Un robinet remplit une baignoire en 6 minutes, un autre en 3 minutes. Ouverts ensemble, en combien de minutes la remplissent-ils ?",
+  "answer": 2,
+  "explanation": "En 1 minute : 1/6 + 1/3 = 1/2 baignoire. Il faut donc 2 minutes.",
+  "hint": "Quelle part remplissent-ils en une minute ?"
+ },
+ {
+  "key": "logic-578",
+  "concept": "logic.puzzles.peintres",
+  "label": "Travail",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "3 peintres mettent 4 heures pour peindre une salle. Combien d'heures faut-il à 6 peintres, au même rythme ?",
+  "answer": 2,
+  "explanation": "Deux fois plus de peintres : deux fois moins de temps.",
+  "hint": "Double les peintres."
+ },
+ {
+  "key": "logic-579",
+  "concept": "logic.puzzles.vitesse_moyenne_aller_retour",
+  "label": "Vitesse moyenne",
+  "type": "numeric",
+  "difficulty": 78,
+  "prompt": "Je fais un trajet à 60 km/h et le retour, sur la même route, à 30 km/h. Quelle est ma vitesse moyenne (en km/h) ?",
+  "answer": 40,
+  "explanation": "Pour 60 km : 1 h à l'aller, 2 h au retour. 120 km en 3 h = 40 km/h, et non 45.",
+  "hint": "Prends un trajet de 60 km et calcule les temps.",
+  "unit": "km/h"
+ },
+ {
+  "key": "logic-580",
+  "concept": "logic.puzzles.cycliste_45km",
+  "label": "Vitesse",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Un cycliste parcourt 45 km en 1 h 30. Quelle est sa vitesse moyenne (en km/h) ?",
+  "answer": 30,
+  "explanation": "45 km en 1,5 h : 45 ÷ 1,5 = 30 km/h.",
+  "hint": "Combien fait-il en une demi-heure ?",
+  "unit": "km/h"
+ },
+ {
+  "key": "logic-581",
+  "concept": "logic.puzzles.neuf_billes_pesees",
+  "label": "Pesées",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Parmi 9 billes identiques, une est plus lourde. Avec une balance à deux plateaux, combien de pesées faut-il au minimum pour la trouver à coup sûr ?",
+  "answer": 2,
+  "explanation": "On compare 3 contre 3 : on sait dans quel groupe de 3 elle est. Puis 1 contre 1 parmi ces 3.",
+  "hint": "Fais des groupes de trois."
+ },
+ {
+  "key": "logic-582",
+  "concept": "logic.puzzles.trois_billes_pesee",
+  "label": "Pesée",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Parmi 3 billes identiques, une est plus lourde. Combien de pesées suffisent, avec une balance à deux plateaux ?",
+  "answer": 1,
+  "explanation": "On pèse 1 contre 1 : si ça penche, c'est la plus lourde ; sinon, c'est celle qui reste.",
+  "hint": "Laisse une bille de côté."
+ },
+ {
+  "key": "logic-583",
+  "concept": "logic.puzzles.sabliers_7_4",
+  "label": "Sabliers",
+  "type": "true_false",
+  "difficulty": 72,
+  "prompt": "Avec un sablier de 7 minutes et un de 4 minutes, on peut mesurer exactement 9 minutes.",
+  "answer": true,
+  "explanation": "Oui : on lance les deux ; à 4 min on retourne le petit ; à 7 min on retourne le grand ; à 8 min le petit se vide et le grand a coulé 1 min : on le retourne, il met 1 min à se vider. Total 9."
+ },
+ {
+  "key": "logic-584",
+  "concept": "logic.puzzles.carres_grille_4",
+  "label": "Carrés cachés",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien de carrés, de toutes tailles, compte une grille de 4 × 4 cases ?",
+  "answer": 30,
+  "explanation": "16 carrés de 1 × 1, 9 de 2 × 2, 4 de 3 × 3 et 1 de 4 × 4 : 30.",
+  "hint": "Compte séparément chaque taille."
+ },
+ {
+  "key": "logic-585",
+  "concept": "logic.puzzles.rectangles_grille_2",
+  "label": "Rectangles cachés",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Combien de rectangles (carrés compris) compte une grille de 2 × 2 cases ?",
+  "answer": 9,
+  "explanation": "4 petits carrés, 2 rectangles horizontaux, 2 verticaux et le grand carré : 9.",
+  "hint": "N'oublie pas le grand carré."
+ },
+ {
+  "key": "logic-586",
+  "concept": "logic.puzzles.triangle_coupe",
+  "label": "Triangles cachés",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "On trace un segment d'un sommet d'un triangle jusqu'au côté opposé. Combien de triangles voit-on en tout ?",
+  "answer": 3,
+  "explanation": "Les deux petits triangles, plus le grand.",
+  "hint": "Le grand compte aussi."
+ },
+ {
+  "key": "logic-587",
+  "concept": "logic.puzzles.fev_mars_avril",
+  "label": "Calendrier",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de jours comptent février, mars et avril réunis, une année bissextile ?",
+  "answer": 90,
+  "explanation": "29 + 31 + 30 = 90.",
+  "hint": "Février a un jour de plus."
+ },
+ {
+  "key": "logic-588",
+  "concept": "logic.puzzles.samedis_mois",
+  "label": "Calendrier",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Un mois de 31 jours commence un samedi. Combien de samedis compte-t-il ?",
+  "answer": 5,
+  "explanation": "Les samedis tombent les 1er, 8, 15, 22 et 29.",
+  "hint": "Ajoute 7 à partir du 1er."
+ },
+ {
+  "key": "logic-589",
+  "concept": "logic.puzzles.cent_heures",
+  "label": "Horloge",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Il est midi, un lundi. Quel jour et quelle heure sera-t-il 100 heures plus tard ?",
+  "options": [
+   "Vendredi, 16 h*",
+   "Jeudi, 16 h",
+   "Vendredi, 4 h",
+   "Samedi, midi"
+  ],
+  "explanation": "100 h = 4 jours (96 h) et 4 h : vendredi midi, plus 4 h.",
+  "hint": "Combien de jours entiers dans 100 heures ?"
+ },
+ {
+  "key": "logic-590",
+  "concept": "logic.puzzles.allumettes_trois_carres",
+  "label": "Allumettes",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien d'allumettes faut-il pour former 3 carrés côte à côte, en ligne ?",
+  "answer": 10,
+  "explanation": "Le premier carré en prend 4, chacun des suivants 3, car il partage un côté : 4 + 3 + 3 = 10.",
+  "hint": "Les carrés voisins partagent un côté."
+ },
+ {
+  "key": "logic-591",
+  "concept": "logic.puzzles.allumettes_grille_2",
+  "label": "Allumettes",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien d'allumettes faut-il pour une grille de 2 × 2 carrés ?",
+  "answer": 12,
+  "explanation": "3 lignes horizontales et 3 verticales de 2 allumettes chacune : 6 × 2 = 12.",
+  "hint": "Compte les lignes, pas les carrés."
+ },
+ {
+  "key": "logic-592",
+  "concept": "logic.puzzles.bus_dixieme",
+  "label": "Horaires",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un bus part toutes les 15 minutes ; le premier part à 6 h. À quelle heure part le 10e ?",
+  "options": [
+   "8 h 15*",
+   "8 h 30",
+   "8 h",
+   "8 h 45"
+  ],
+  "explanation": "Entre le 1er et le 10e, il y a 9 intervalles de 15 minutes : 2 h 15. 6 h + 2 h 15 = 8 h 15.",
+  "hint": "Il y a 9 intervalles, pas 10."
+ },
+ {
+  "key": "logic-593",
+  "concept": "logic.puzzles.feuilles_livre",
+  "label": "Feuilles et pages",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Un livre a des pages numérotées de 1 à 200. Combien de feuilles compte-t-il ?",
+  "answer": 100,
+  "explanation": "Chaque feuille porte deux pages, recto et verso.",
+  "hint": "Une feuille, deux pages."
+ },
+ {
+  "key": "logic-594",
+  "concept": "logic.puzzles.midi_pile",
+  "label": "Horloge",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de fois par jour (24 h) une montre à aiguilles indique-t-elle exactement 12 h 00 ?",
+  "answer": 2,
+  "explanation": "À midi et à minuit.",
+  "hint": "Le jour et la nuit."
+ },
+ {
+  "key": "logic-595",
+  "concept": "logic.puzzles.angle_droit_jour",
+  "label": "Angles droits",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Combien de fois par jour (24 h) les aiguilles des heures et des minutes forment-elles un angle droit ?",
+  "answer": 44,
+  "explanation": "22 fois toutes les 12 heures (2 par heure, sauf deux « perdues » vers 3 h et 9 h) : 44 en 24 h.",
+  "hint": "Environ deux fois par heure… mais pas tout à fait."
+ },
+ {
+  "key": "logic-596",
+  "concept": "logic.puzzles.angle_6h",
+  "label": "Angle",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Quel angle (en degrés) forment les aiguilles d'une horloge à 6 h pile ?",
+  "answer": 180,
+  "explanation": "Elles sont alignées, opposées : un angle plat.",
+  "hint": "Elles forment une ligne droite.",
+  "unit": "°"
+ },
+ {
+  "key": "logic-597",
+  "concept": "logic.puzzles.angle_9h30",
+  "label": "Angle",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Quel angle (en degrés) forment les aiguilles d'une horloge à 9 h 30 ?",
+  "answer": 105,
+  "explanation": "La grande est sur le 6 (180°). La petite est à mi-chemin entre 9 et 10 (285°). Écart : 105°.",
+  "hint": "La petite aiguille a avancé depuis 9 h.",
+  "unit": "°"
+ },
+ {
+  "key": "logic-598",
+  "concept": "logic.puzzles.angle_2h",
+  "label": "Angle",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Quel angle (en degrés) forment les aiguilles d'une horloge à 2 h pile ?",
+  "answer": 60,
+  "explanation": "Chaque heure vaut 30° : 2 × 30 = 60°.",
+  "hint": "Un tour complet fait 360° pour 12 heures.",
+  "unit": "°"
+ },
+ {
+  "key": "logic-599",
+  "concept": "logic.puzzles.pont_lampe",
+  "label": "Le pont de nuit",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Quatre amis doivent traverser un pont de nuit avec une seule lampe, à deux au plus. Ils mettent 1, 2, 5 et 10 minutes (un duo va à la vitesse du plus lent). Combien de minutes au minimum ?",
+  "answer": 17,
+  "explanation": "1 et 2 passent (2), 1 revient (1), 5 et 10 passent (10), 2 revient (2), 1 et 2 passent (2) : 17.",
+  "hint": "Faites passer les deux plus lents ensemble."
+ },
+ {
+  "key": "logic-600",
+  "concept": "logic.puzzles.poules_oeufs",
+  "label": "Poules",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Si 2 poules pondent 2 œufs en 2 jours, combien d'œufs pondent 4 poules en 4 jours ?",
+  "answer": 8,
+  "explanation": "Une poule pond 1 œuf en 2 jours. 4 poules en 4 jours : 4 × 2 = 8 œufs.",
+  "hint": "Combien d'œufs une poule pond-elle en 4 jours ?"
+ },
+ {
+  "key": "logic-601",
+  "concept": "logic.puzzles.pieces_2_5",
+  "label": "Pièces",
+  "type": "numeric",
+  "difficulty": 78,
+  "prompt": "Avec seulement des pièces de 2 € et de 5 €, quel est le plus grand montant entier qu'on ne peut pas payer exactement ?",
+  "answer": 3,
+  "explanation": "1 et 3 sont impossibles ; 4 = 2 + 2, 5, 6 = 2 + 2 + 2, 7 = 5 + 2… et ensuite tout est possible.",
+  "hint": "Teste 1, 2, 3, 4…",
+  "unit": "€"
+ },
+ {
+  "key": "logic-602",
+  "concept": "logic.puzzles.divisibles_3",
+  "label": "Divisibilité",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de nombres entiers de 1 à 100 sont divisibles par 3 ?",
+  "answer": 33,
+  "explanation": "3 × 33 = 99, le plus grand multiple de 3 avant 100.",
+  "hint": "Quel est le plus grand multiple de 3 sous 100 ?"
+ },
+ {
+  "key": "logic-603",
+  "concept": "logic.puzzles.divisibles_3_ou_5",
+  "label": "Divisibilité",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Combien de nombres entiers de 1 à 100 sont divisibles par 3 ou par 5 ?",
+  "answer": 47,
+  "explanation": "33 multiples de 3, 20 de 5, moins les 6 multiples de 15 comptés deux fois : 47.",
+  "hint": "Attention aux multiples de 15."
+ },
+ {
+  "key": "logic-604",
+  "concept": "logic.puzzles.ppcm_2_a_6",
+  "label": "Divisibilité",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel est le plus petit nombre divisible à la fois par 2, 3, 4, 5 et 6 ?",
+  "answer": 60,
+  "explanation": "Il faut 4 (pour 2 et 4), 3 et 5 : 4 × 3 × 5 = 60.",
+  "hint": "4 × 3 × 5."
+ },
+ {
+  "key": "logic-605",
+  "concept": "logic.puzzles.cartes_meme_couleur",
+  "label": "Tiroirs",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de cartes faut-il tirer d'un jeu de 52 pour être sûr d'avoir deux cartes de la même couleur (cœur, carreau, trèfle ou pique) ?",
+  "answer": 5,
+  "explanation": "Avec 4 cartes, on peut avoir une de chaque couleur. La 5e en répète forcément une.",
+  "hint": "Il y a 4 couleurs."
+ },
+ {
+  "key": "logic-606",
+  "concept": "logic.puzzles.gants_noir",
+  "label": "Gants dans le noir",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Un tiroir contient 4 paires de gants noirs et 4 paires de gants blancs, mélangés. Dans le noir, combien de gants faut-il prendre pour être sûr d'avoir une paire de même couleur (une main gauche et une droite) ?",
+  "answer": 9,
+  "explanation": "Au pire, on prend d'abord les 8 gants gauches. Le 9e est forcément un droit, qui complète une paire.",
+  "hint": "Pense au pire : que des gants de la même main."
+ },
+ {
+  "key": "logic-607",
+  "concept": "logic.puzzles.gateau_3_coupes",
+  "label": "Gâteau",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Avec 3 coupes droites (vues de dessus, sans déplacer les parts), combien de parts au maximum peut-on faire dans une pizza ?",
+  "answer": 7,
+  "explanation": "Chaque nouvelle coupe doit croiser toutes les précédentes : 2, puis 4, puis 7.",
+  "hint": "La 3e coupe doit croiser les deux autres."
+ },
+ {
+  "key": "logic-608",
+  "concept": "logic.puzzles.train_duree",
+  "label": "Durée",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Un train part à 8 h 45 et arrive à 11 h 20. Combien de temps dure le trajet ?",
+  "options": [
+   "2 h 35*",
+   "2 h 75",
+   "3 h 35",
+   "2 h 25"
+  ],
+  "explanation": "De 8 h 45 à 11 h 45 : 3 h ; moins 25 minutes : 2 h 35.",
+  "hint": "Va jusqu'à 11 h 45, puis recule."
+ },
+ {
+  "key": "logic-609",
+  "concept": "logic.puzzles.quatre_filles_frere",
+  "label": "Famille",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Un père a 4 filles, et chacune a un frère. Combien a-t-il d'enfants ?",
+  "answer": 5,
+  "explanation": "Le même frère pour toutes : 4 filles et 1 garçon.",
+  "hint": "Est-ce le même frère ?"
+ },
+ {
+  "key": "logic-610",
+  "concept": "logic.puzzles.cou_sans_tete",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui a un cou, mais pas de tête ?",
+  "options": [
+   "Une bouteille*",
+   "Une girafe",
+   "Un serpent",
+   "Un chapeau"
+  ],
+  "explanation": "On parle du cou (ou goulot) d'une bouteille.",
+  "hint": "On la remplit d'eau."
+ },
+ {
+  "key": "logic-611",
+  "concept": "logic.puzzles.lettre_n",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Je commence la nuit et je finis le matin. Qui suis-je ?",
+  "options": [
+   "La lettre N*",
+   "Le soleil",
+   "Le réveil",
+   "Le rêve"
+  ],
+  "explanation": "« Nuit » commence par N, « matin » finit par N.",
+  "hint": "Regarde l'orthographe des mots."
+ },
+ {
+  "key": "logic-612",
+  "concept": "logic.puzzles.aiguilles_sans_coudre",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui a des aiguilles mais ne coud jamais ?",
+  "options": [
+   "Une horloge*",
+   "Une couturière",
+   "Une pelote de laine",
+   "Un dé à coudre"
+  ],
+  "explanation": "Les aiguilles d'une horloge indiquent l'heure.",
+  "hint": "Elle donne l'heure."
+ },
+ {
+  "key": "logic-613",
+  "concept": "logic.puzzles.feuilles_livre_devinette",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui a des feuilles, mais n'est pas un arbre ?",
+  "options": [
+   "Un livre*",
+   "Une fleur",
+   "Un buisson",
+   "Une salade"
+  ],
+  "explanation": "Les feuilles d'un livre se tournent.",
+  "hint": "On le lit."
+ },
+ {
+  "key": "logic-614",
+  "concept": "logic.puzzles.plus_on_voit_moins",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Plus il y en a, moins on voit. Qu'est-ce que c'est ?",
+  "options": [
+   "L'obscurité*",
+   "La lumière",
+   "Les lunettes",
+   "La neige"
+  ],
+  "explanation": "Plus il fait noir, moins on distingue les choses.",
+  "hint": "Pense à la nuit."
+ },
+ {
+  "key": "logic-615",
+  "concept": "logic.puzzles.remplir_piece",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qui peut remplir une pièce sans prendre aucune place ?",
+  "options": [
+   "La lumière*",
+   "L'air",
+   "Un meuble",
+   "L'eau"
+  ],
+  "explanation": "La lumière éclaire toute la pièce sans occuper de volume.",
+  "hint": "On l'allume."
+ },
+ {
+  "key": "logic-616",
+  "concept": "logic.puzzles.oeil_aveugle",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui a un œil, mais ne voit rien ?",
+  "options": [
+   "Une aiguille*",
+   "Un cyclope",
+   "Une pomme de terre",
+   "Un appareil photo"
+  ],
+  "explanation": "Le fil passe par le chas, qu'on appelle aussi l'œil de l'aiguille.",
+  "hint": "On y passe un fil."
+ },
+ {
+  "key": "logic-617",
+  "concept": "logic.puzzles.milieu_paris",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Je suis au milieu de Paris. Qui suis-je ?",
+  "options": [
+   "La lettre R*",
+   "La tour Eiffel",
+   "La Seine",
+   "Notre-Dame"
+  ],
+  "explanation": "P-A-R-I-S : la lettre du milieu est R.",
+  "hint": "Épelle le mot."
+ },
+ {
+  "key": "logic-618",
+  "concept": "logic.puzzles.silence",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qui se brise dès qu'on prononce son nom ?",
+  "options": [
+   "Le silence*",
+   "Le verre",
+   "Un secret",
+   "Un record"
+  ],
+  "explanation": "Dire « silence », c'est déjà le rompre.",
+  "hint": "Chut…"
+ },
+ {
+  "key": "logic-619",
+  "concept": "logic.puzzles.nuage",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Je vole sans ailes, je pleure sans yeux. Qui suis-je ?",
+  "options": [
+   "Un nuage*",
+   "Un oiseau",
+   "Un avion",
+   "Un fantôme"
+  ],
+  "explanation": "Le nuage flotte dans le ciel et fait tomber la pluie.",
+  "hint": "Regarde le ciel un jour gris."
+ },
+ {
+  "key": "logic-620",
+  "concept": "logic.puzzles.sphinx",
+  "label": "Énigme du Sphinx",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel être marche à quatre pattes le matin, sur deux au midi et sur trois le soir ?",
+  "options": [
+   "L'humain*",
+   "Le chat",
+   "Le kangourou",
+   "Le cheval"
+  ],
+  "explanation": "L'énigme du Sphinx, résolue par Œdipe : bébé à quatre pattes, adulte debout, vieillard avec une canne.",
+  "hint": "Pense aux âges de la vie."
+ },
+ {
+  "key": "logic-621",
+  "concept": "logic.puzzles.charbon",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Noir quand on l'achète, rouge quand on l'utilise, gris quand on le jette. Qu'est-ce que c'est ?",
+  "options": [
+   "Le charbon*",
+   "Le café",
+   "Le pneu",
+   "La tomate"
+  ],
+  "explanation": "Il rougit en brûlant et finit en cendres.",
+  "hint": "Il chauffe le barbecue."
+ },
+ {
+  "key": "logic-622",
+  "concept": "logic.puzzles.avenir",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Je suis toujours devant toi, mais tu ne peux jamais me voir. Qui suis-je ?",
+  "options": [
+   "L'avenir*",
+   "Ton nez",
+   "L'horizon",
+   "Ton ombre"
+  ],
+  "explanation": "L'avenir est toujours devant nous… et reste invisible.",
+  "hint": "Pense au temps."
+ },
+ {
+  "key": "logic-623",
+  "concept": "logic.puzzles.lit_riviere",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qui a un lit, mais ne dort jamais ?",
+  "options": [
+   "Une rivière*",
+   "Un hôtel",
+   "Un chat",
+   "Un bébé"
+  ],
+  "explanation": "On parle du lit d'une rivière : le creux où elle coule.",
+  "hint": "Elle coule."
+ },
+ {
+  "key": "logic-624",
+  "concept": "logic.puzzles.bras_sans_mains",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qui a des bras, mais pas de mains ?",
+  "options": [
+   "Un fauteuil*",
+   "Un singe",
+   "Une pieuvre",
+   "Une horloge"
+  ],
+  "explanation": "Les accoudoirs d'un fauteuil s'appellent aussi des bras.",
+  "hint": "On s'y assoit."
+ },
+ {
+  "key": "logic-625",
+  "concept": "logic.puzzles.pied_sans_jambe",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qui a un pied, mais pas de jambe ?",
+  "options": [
+   "Un champignon*",
+   "Un oiseau",
+   "Un serpent",
+   "Un poisson"
+  ],
+  "explanation": "Le champignon a un pied et un chapeau.",
+  "hint": "Il pousse en forêt."
+ },
+ {
+  "key": "logic-626",
+  "concept": "logic.puzzles.poids_1_a_15",
+  "label": "Poids",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Avec une balance à deux plateaux (objet d'un côté, poids de l'autre), combien de poids faut-il au minimum pour peser tous les kilos entiers de 1 à 15 ?",
+  "answer": 4,
+  "explanation": "1, 2, 4 et 8 kg suffisent : chaque nombre de 1 à 15 s'écrit comme une somme de ces poids.",
+  "hint": "Pense aux puissances de 2."
+ },
+ {
+  "key": "logic-627",
+  "concept": "logic.puzzles.douze_pieces_pesees",
+  "label": "Pesées",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Parmi 12 pièces identiques, une est plus légère. Combien de pesées faut-il au minimum, avec une balance à deux plateaux, pour la trouver à coup sûr ?",
+  "answer": 3,
+  "explanation": "Chaque pesée a 3 issues ; 2 pesées ne distinguent que 9 cas. Avec 3 : 4 contre 4, puis 1 contre 1 parmi 3 ou 4… On y arrive.",
+  "hint": "Deux pesées ne donnent que 9 issues."
+ },
+ {
+  "key": "logic-628",
+  "concept": "logic.puzzles.minutes_minuit",
+  "label": "Durée",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien de minutes s'écoulent entre 23 h 40 et 0 h 25 ?",
+  "answer": 45,
+  "explanation": "20 minutes jusqu'à minuit, puis 25 : 45 minutes.",
+  "hint": "Passe par minuit."
+ },
+ {
+  "key": "logic-629",
+  "concept": "logic.puzzles.echelle_bateau",
+  "label": "Échelle et marée",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Une échelle pend d'un bateau ; 3 barreaux sont sous l'eau. La marée monte d'un mètre. Combien de barreaux sont maintenant sous l'eau ?",
+  "options": [
+   "Toujours 3*",
+   "Aucun",
+   "8",
+   "5"
+  ],
+  "explanation": "Le bateau flotte : il monte avec la marée, et l'échelle avec lui.",
+  "hint": "Le bateau reste-t-il au même endroit ?"
+ },
+ {
+  "key": "logic-630",
+  "concept": "logic.puzzles.zeros_10_20_30",
+  "label": "Zéros",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de zéros termine le produit 10 × 20 × 30 ?",
+  "answer": 3,
+  "explanation": "10 × 20 × 30 = 6 000.",
+  "hint": "Chaque facteur apporte un zéro."
+ },
+ {
+  "key": "logic-631",
+  "concept": "logic.puzzles.cube_de_cubes",
+  "label": "Cube de cubes",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien de petits cubes faut-il pour construire un grand cube de 4 petits cubes de côté ?",
+  "answer": 64,
+  "explanation": "4 × 4 × 4 = 64.",
+  "hint": "Trois dimensions."
+ },
+ {
+  "key": "logic-632",
+  "concept": "logic.puzzles.faces_pyramide",
+  "label": "Pyramide",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien de faces compte une pyramide à base carrée, base comprise ?",
+  "answer": 5,
+  "explanation": "La base carrée et 4 faces triangulaires.",
+  "hint": "La base, plus un triangle par côté."
+ },
+ {
+  "key": "logic-633",
+  "concept": "logic.puzzles.sommets_cube",
+  "label": "Cube",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de sommets (coins) a un cube ?",
+  "answer": 8,
+  "explanation": "4 en haut et 4 en bas.",
+  "hint": "Compte ceux du haut, puis ceux du bas."
+ },
+ {
+  "key": "logic-634",
+  "concept": "logic.puzzles.plus_petit_trois_chiffres",
+  "label": "Nombres",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel est le plus petit nombre à trois chiffres tous différents ?",
+  "answer": 102,
+  "explanation": "On commence par 1 (pas de 0 devant), puis 0, puis le plus petit chiffre restant, 2.",
+  "hint": "Le premier chiffre ne peut pas être 0."
+ },
+ {
+  "key": "logic-635",
+  "concept": "logic.puzzles.nombres_deux_chiffres",
+  "label": "Nombres",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien existe-t-il de nombres entiers à deux chiffres ?",
+  "answer": 90,
+  "explanation": "De 10 à 99 : 99 − 10 + 1 = 90.",
+  "hint": "De 10 à 99."
+ },
+ {
+  "key": "logic-636",
+  "concept": "logic.puzzles.mots_abc",
+  "label": "Combinaisons",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de « mots » de 2 lettres (même sans sens) peut-on écrire avec A, B et C, si l'on peut répéter une lettre ?",
+  "answer": 9,
+  "explanation": "3 choix pour la 1re lettre, 3 pour la 2e : 9 (AA, AB, AC, BA…).",
+  "hint": "3 choix, deux fois."
+ },
+ {
+  "key": "logic-637",
+  "concept": "logic.puzzles.ranger_trois_livres",
+  "label": "Combinaisons",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "De combien de façons peut-on ranger 3 livres différents sur une étagère ?",
+  "answer": 6,
+  "explanation": "3 choix pour la 1re place, 2 pour la 2e, 1 pour la 3e : 3 × 2 × 1 = 6.",
+  "hint": "Place les livres un par un."
+ },
+ {
+  "key": "logic-638",
+  "concept": "logic.puzzles.file_quatre",
+  "label": "Combinaisons",
+  "type": "numeric",
+  "difficulty": 62,
+  "prompt": "De combien de façons 4 personnes peuvent-elles se mettre en file ?",
+  "answer": 24,
+  "explanation": "4 × 3 × 2 × 1 = 24.",
+  "hint": "Même raisonnement que pour des livres."
+ },
+ {
+  "key": "logic-639",
+  "concept": "logic.reasoning.palindrome_kayak",
+  "label": "Palindrome",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel mot se lit de la même façon dans les deux sens ?",
+  "options": [
+   "Kayak*",
+   "Canoë",
+   "Radeau",
+   "Bateau"
+  ],
+  "explanation": "K-A-Y-A-K se lit pareil de gauche à droite et de droite à gauche. On dit que c'est un palindrome.",
+  "hint": "Lis-les à l'envers."
+ },
+ {
+  "key": "logic-640",
+  "concept": "logic.reasoning.anniversaire_4_ans",
+  "label": "Calendrier",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle date d'anniversaire ne revient, en général, que tous les 4 ans ?",
+  "options": [
+   "Le 29 février*",
+   "Le 31 décembre",
+   "Le 1er janvier",
+   "Le 30 février"
+  ],
+  "explanation": "Le 29 février n'existe que les années bissextiles. Le 30 février n'existe jamais.",
+  "hint": "Une année sur quatre a un jour de plus."
+ },
+ {
+  "key": "logic-641",
+  "concept": "logic.reasoning.regle_divisible_9",
+  "label": "Divisibilité",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment savoir rapidement si un nombre est divisible par 9 ?",
+  "options": [
+   "La somme de ses chiffres est divisible par 9*",
+   "Il se termine par 9",
+   "Il est impair",
+   "Son dernier chiffre est pair"
+  ],
+  "explanation": "Par exemple 738 : 7 + 3 + 8 = 18, divisible par 9, donc 738 aussi (9 × 82).",
+  "hint": "La même astuce existe pour 3."
+ },
+ {
+  "key": "logic-642",
+  "concept": "logic.sequences.lettres_voyelles",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle lettre suit : A, E, I, O, … ?",
+  "options": [
+   "U*",
+   "Y",
+   "P",
+   "Q"
+  ],
+  "explanation": "Ce sont les voyelles dans l'ordre de l'alphabet (Y est parfois compté à part).",
+  "hint": "Quel est le point commun de ces lettres ?"
+ },
+ {
+  "key": "logic-643",
+  "concept": "logic.sequences.lettres_z_x_v",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle lettre suit : Z, X, V, T, … ?",
+  "options": [
+   "R*",
+   "S",
+   "Q",
+   "P"
+  ],
+  "explanation": "On recule de deux lettres à chaque fois : T, (S), R.",
+  "hint": "L'alphabet à l'envers, une lettre sur deux."
+ },
+ {
+  "key": "logic-644",
+  "concept": "logic.sequences.lettres_ecarts",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle lettre suit : A, B, D, G, K, … ?",
+  "options": [
+   "P*",
+   "O",
+   "Q",
+   "N"
+  ],
+  "explanation": "Les écarts grandissent : +1, +2, +3, +4, puis +5. K + 5 = P.",
+  "hint": "Compte les lettres sautées."
+ },
+ {
+  "key": "logic-645",
+  "concept": "logic.sequences.lettres_nombres",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle lettre suit : D, T, Q, C, S, S, … ?",
+  "options": [
+   "H*",
+   "N",
+   "O",
+   "D"
+  ],
+  "explanation": "Deux, Trois, Quatre, Cinq, Six, Sept… puis Huit.",
+  "hint": "Pense aux nombres écrits en toutes lettres."
+ },
+ {
+  "key": "logic-646",
+  "concept": "logic.sequences.lettres_a_z",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle lettre suit : A, Z, B, Y, C, … ?",
+  "options": [
+   "X*",
+   "D",
+   "W",
+   "Y"
+  ],
+  "explanation": "Deux suites s'alternent : A, B, C… et Z, Y, X…",
+  "hint": "Lis une lettre sur deux."
+ },
+ {
+  "key": "logic-647",
+  "concept": "logic.sequences.lettres_planetes",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans la suite M, V, T, M, J, S, U, …, quelle lettre vient ensuite ?",
+  "options": [
+   "N*",
+   "P",
+   "O",
+   "L"
+  ],
+  "explanation": "Les planètes depuis le Soleil : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus… Neptune.",
+  "hint": "Pense au système solaire."
+ },
+ {
+  "key": "logic-648",
+  "concept": "logic.sequences.lettres_mois_rebours",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle lettre suit : O, N, D, J, F, … ?",
+  "options": [
+   "M*",
+   "A",
+   "S",
+   "J"
+  ],
+  "explanation": "Octobre, Novembre, Décembre, Janvier, Février… puis Mars.",
+  "hint": "Pense au calendrier."
+ },
+ {
+  "key": "logic-649",
+  "concept": "logic.sequences.lettres_c_f_i",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans la suite C, F, I, L, …, quelle lettre vient ensuite ?",
+  "options": [
+   "O*",
+   "M",
+   "N",
+   "P"
+  ],
+  "explanation": "On avance de 3 lettres à chaque fois : L, (M, N), O.",
+  "hint": "Compte les lettres sautées."
+ },
+ {
+  "key": "logic-650",
+  "concept": "logic.sequences.lettres_b_d_f",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle lettre suit : B, D, F, H, … ?",
+  "options": [
+   "J*",
+   "I",
+   "K",
+   "G"
+  ],
+  "explanation": "Une lettre sur deux.",
+  "hint": "Saute une lettre à chaque fois."
+ },
+ {
+  "key": "logic-651",
+  "concept": "logic.sequences.centieme_abc",
+  "label": "Motif répété",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans la suite ABCABCABC…, quelle est la 100e lettre ?",
+  "options": [
+   "A*",
+   "B",
+   "C",
+   "On ne peut pas savoir"
+  ],
+  "explanation": "Le motif fait 3 lettres. 99 = 3 × 33 : la 99e lettre est un C, la 100e un A.",
+  "hint": "Le motif se répète tous les 3."
+ },
+ {
+  "key": "logic-652",
+  "concept": "logic.sequences.cinquantieme_impair",
+  "label": "Nombres impairs",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel est le 50e nombre impair ?",
+  "answer": 99,
+  "explanation": "Le n-ième impair vaut 2n − 1 : 2 × 50 − 1 = 99.",
+  "hint": "Le 1er est 1, le 2e est 3, le 3e est 5…"
+ },
+ {
+  "key": "logic-653",
+  "concept": "logic.sequences.vingtieme_multiple_5",
+  "label": "Multiples",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Dans la suite 5, 10, 15, 20…, quel est le 20e nombre ?",
+  "answer": 100,
+  "explanation": "Le n-ième terme vaut 5 × n : 5 × 20 = 100.",
+  "hint": "C'est la table de 5."
+ },
+ {
+  "key": "logic-654",
+  "concept": "logic.sequences.dixieme_terme_4",
+  "label": "Terme d'une suite",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel est le 10e terme de la suite 3, 7, 11, 15… ?",
+  "answer": 39,
+  "explanation": "On ajoute 4 neuf fois à 3 : 3 + 9 × 4 = 39.",
+  "hint": "Du 1er au 10e, il y a 9 pas."
+ },
+ {
+  "key": "logic-655",
+  "concept": "logic.sequences.arith_34_12",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 34, 46, 58, 70, 82, … ?",
+  "answer": 94,
+  "explanation": "On ajoute 12 à chaque fois : 82 + 12 = 94.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-656",
+  "concept": "logic.sequences.arith_45_8",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 45, 53, 61, 69, 77, … ?",
+  "answer": 85,
+  "explanation": "On ajoute 8 à chaque fois : 77 + 8 = 85.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-657",
+  "concept": "logic.sequences.arith_48_9",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 48, 57, 66, 75, 84, … ?",
+  "answer": 93,
+  "explanation": "On ajoute 9 à chaque fois : 84 + 9 = 93.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-658",
+  "concept": "logic.sequences.arith_45_15",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 45, 60, 75, 90, 105, … ?",
+  "answer": 120,
+  "explanation": "On ajoute 15 à chaque fois : 105 + 15 = 120.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-659",
+  "concept": "logic.sequences.arith_50_12",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 50, 62, 74, 86, 98, … ?",
+  "answer": 110,
+  "explanation": "On ajoute 12 à chaque fois : 98 + 12 = 110.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-660",
+  "concept": "logic.sequences.arith_57_4",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 57, 61, 65, 69, 73, … ?",
+  "answer": 77,
+  "explanation": "On ajoute 4 à chaque fois : 73 + 4 = 77.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-661",
+  "concept": "logic.sequences.arith_41_9",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 41, 50, 59, 68, 77, … ?",
+  "answer": 86,
+  "explanation": "On ajoute 9 à chaque fois : 77 + 9 = 86.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-662",
+  "concept": "logic.sequences.arith_6_4",
+  "label": "Suite régulière",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 6, 10, 14, 18, 22, … ?",
+  "answer": 26,
+  "explanation": "On ajoute 4 à chaque fois : 22 + 4 = 26.",
+  "hint": "Regarde l'écart entre deux nombres voisins."
+ },
+ {
+  "key": "logic-663",
+  "concept": "logic.sequences.geo_3_2",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 38,
+  "prompt": "Quel nombre suit : 3, 6, 12, 24, … ?",
+  "answer": 48,
+  "explanation": "Chaque nombre est multiplié par 2 : 24 × 2 = 48.",
+  "hint": "Divise un nombre par celui qui le précède."
+ },
+ {
+  "key": "logic-664",
+  "concept": "logic.sequences.geo_1_3",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 38,
+  "prompt": "Quel nombre suit : 1, 3, 9, 27, … ?",
+  "answer": 81,
+  "explanation": "Chaque nombre est multiplié par 3 : 27 × 3 = 81.",
+  "hint": "Divise un nombre par celui qui le précède."
+ },
+ {
+  "key": "logic-665",
+  "concept": "logic.sequences.geo_2_4",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 2, 8, 32, 128, … ?",
+  "answer": 512,
+  "explanation": "Chaque nombre est multiplié par 4 : 128 × 4 = 512.",
+  "hint": "Divise un nombre par celui qui le précède."
+ },
+ {
+  "key": "logic-666",
+  "concept": "logic.sequences.geo_5_3",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 38,
+  "prompt": "Quel nombre suit : 5, 15, 45, 135, … ?",
+  "answer": 405,
+  "explanation": "Chaque nombre est multiplié par 3 : 135 × 3 = 405.",
+  "hint": "Divise un nombre par celui qui le précède."
+ },
+ {
+  "key": "logic-667",
+  "concept": "logic.sequences.geo_7_2",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 38,
+  "prompt": "Quel nombre suit : 7, 14, 28, 56, … ?",
+  "answer": 112,
+  "explanation": "Chaque nombre est multiplié par 2 : 56 × 2 = 112.",
+  "hint": "Divise un nombre par celui qui le précède."
+ },
+ {
+  "key": "logic-668",
+  "concept": "logic.sequences.geo_1_5",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre suit : 1, 5, 25, 125, … ?",
+  "answer": 625,
+  "explanation": "Chaque nombre est multiplié par 5 : 125 × 5 = 625.",
+  "hint": "Divise un nombre par celui qui le précède."
+ },
+ {
+  "key": "logic-669",
+  "concept": "logic.sequences.geo_6_2",
+  "label": "Suite multipliée",
+  "type": "numeric",
+  "difficulty": 38,
+  "prompt": "Quel nombre suit : 6, 12, 24, 48, … ?",
+  "answer": 96,
+  "explanation": "Chaque nombre est multiplié par 2 : 48 × 2 = 96.",
+  "hint": "Divise un nombre par celui qui le précède."
+ },
+ {
+  "key": "logic-670",
+  "concept": "logic.sequences.ecarts_3_1",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 3, 4, 6, 9, 13, … ?",
+  "answer": 18,
+  "explanation": "Les écarts augmentent de 1 : +1, +2, +3, +4, puis +5. 13 + 5 = 18.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-671",
+  "concept": "logic.sequences.ecarts_10_2",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 10, 12, 15, 19, 24, … ?",
+  "answer": 30,
+  "explanation": "Les écarts augmentent de 1 : +2, +3, +4, +5, puis +6. 24 + 6 = 30.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-672",
+  "concept": "logic.sequences.ecarts_20_1",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 20, 21, 23, 26, 30, … ?",
+  "answer": 35,
+  "explanation": "Les écarts augmentent de 1 : +1, +2, +3, +4, puis +5. 30 + 5 = 35.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-673",
+  "concept": "logic.sequences.ecarts_5_3",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 5, 8, 12, 17, 23, … ?",
+  "answer": 30,
+  "explanation": "Les écarts augmentent de 1 : +3, +4, +5, +6, puis +7. 23 + 7 = 30.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-674",
+  "concept": "logic.sequences.ecarts_2_2",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 2, 4, 7, 11, 16, … ?",
+  "answer": 22,
+  "explanation": "Les écarts augmentent de 1 : +2, +3, +4, +5, puis +6. 16 + 6 = 22.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-675",
+  "concept": "logic.sequences.ecarts_30_4",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 30, 34, 39, 45, 52, … ?",
+  "answer": 60,
+  "explanation": "Les écarts augmentent de 1 : +4, +5, +6, +7, puis +8. 52 + 8 = 60.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-676",
+  "concept": "logic.sequences.ecarts_1_1",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 1, 2, 4, 7, 11, … ?",
+  "answer": 16,
+  "explanation": "Les écarts augmentent de 1 : +1, +2, +3, +4, puis +5. 11 + 5 = 16.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-677",
+  "concept": "logic.sequences.ecarts_8_5",
+  "label": "Écarts qui grandissent",
+  "type": "numeric",
+  "difficulty": 48,
+  "prompt": "Quel nombre suit : 8, 13, 19, 26, 34, … ?",
+  "answer": 43,
+  "explanation": "Les écarts augmentent de 1 : +5, +6, +7, +8, puis +9. 34 + 9 = 43.",
+  "hint": "Écris les écarts entre voisins."
+ },
+ {
+  "key": "logic-679",
+  "concept": "logic.sequences.ecarts_doubles_5_2",
+  "label": "Écarts qui doublent",
+  "type": "numeric",
+  "difficulty": 62,
+  "prompt": "Quel nombre suit : 5, 7, 11, 19, 35, … ?",
+  "answer": 67,
+  "explanation": "Les écarts doublent : +2, +4, +8, +16, puis +32. 35 + 32 = 67.",
+  "hint": "Regarde les écarts : ils suivent une autre règle."
+ },
+ {
+  "key": "logic-681",
+  "concept": "logic.sequences.ecarts_doubles_10_1",
+  "label": "Écarts qui doublent",
+  "type": "numeric",
+  "difficulty": 62,
+  "prompt": "Quel nombre suit : 10, 11, 13, 17, 25, … ?",
+  "answer": 41,
+  "explanation": "Les écarts doublent : +1, +2, +4, +8, puis +16. 25 + 16 = 41.",
+  "hint": "Regarde les écarts : ils suivent une autre règle."
+ },
+ {
+  "key": "logic-682",
+  "concept": "logic.sequences.ecarts_doubles_2_5",
+  "label": "Écarts qui doublent",
+  "type": "numeric",
+  "difficulty": 62,
+  "prompt": "Quel nombre suit : 2, 7, 17, 37, 77, … ?",
+  "answer": 157,
+  "explanation": "Les écarts doublent : +5, +10, +20, +40, puis +80. 77 + 80 = 157.",
+  "hint": "Regarde les écarts : ils suivent une autre règle."
+ },
+ {
+  "key": "logic-683",
+  "concept": "logic.sequences.entrelacees_2_50",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 2, 50, 5, 45, 8, 40, … ?",
+  "answer": 11,
+  "explanation": "Deux suites alternent : 2, 5, 8… (+3) et 50, 45, 40… (−5). La suivante est 11.",
+  "hint": "Lis un nombre sur deux."
+ },
+ {
+  "key": "logic-684",
+  "concept": "logic.sequences.entrelacees_10_1",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 10, 1, 20, 3, 30, 5, … ?",
+  "answer": 40,
+  "explanation": "Deux suites alternent : 10, 20, 30… (+10) et 1, 3, 5… (+2). La suivante est 40.",
+  "hint": "Lis un nombre sur deux."
+ },
+ {
+  "key": "logic-685",
+  "concept": "logic.sequences.entrelacees_5_40",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 5, 40, 10, 36, 15, 32, … ?",
+  "answer": 20,
+  "explanation": "Deux suites alternent : 5, 10, 15… (+5) et 40, 36, 32… (−4). La suivante est 20.",
+  "hint": "Lis un nombre sur deux."
+ },
+ {
+  "key": "logic-686",
+  "concept": "logic.sequences.entrelacees_1_100",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 1, 100, 3, 90, 5, 80, … ?",
+  "answer": 7,
+  "explanation": "Deux suites alternent : 1, 3, 5… (+2) et 100, 90, 80… (−10). La suivante est 7.",
+  "hint": "Lis un nombre sur deux."
+ },
+ {
+  "key": "logic-687",
+  "concept": "logic.sequences.entrelacees_7_3",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 7, 3, 14, 6, 21, 9, … ?",
+  "answer": 28,
+  "explanation": "Deux suites alternent : 7, 14, 21… (+7) et 3, 6, 9… (+3). La suivante est 28.",
+  "hint": "Lis un nombre sur deux."
+ },
+ {
+  "key": "logic-688",
+  "concept": "logic.sequences.entrelacees_20_4",
+  "label": "Deux suites mêlées",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 20, 4, 18, 8, 16, 12, … ?",
+  "answer": 14,
+  "explanation": "Deux suites alternent : 20, 18, 16… (−2) et 4, 8, 12… (+4). La suivante est 14.",
+  "hint": "Lis un nombre sur deux."
+ },
+ {
+  "key": "logic-689",
+  "concept": "logic.sequences.mult_plus_2_2_2",
+  "label": "Multiplier puis ajouter",
+  "type": "numeric",
+  "difficulty": 64,
+  "prompt": "Quel nombre suit : 2, 6, 14, 30, 62, … ?",
+  "answer": 126,
+  "explanation": "Chaque terme vaut le précédent × 2 + 2 : 62 × 2 + 2 = 126.",
+  "hint": "Deux opérations à chaque étape."
+ },
+ {
+  "key": "logic-690",
+  "concept": "logic.sequences.mult_plus_3_2_m1",
+  "label": "Multiplier puis ajouter",
+  "type": "numeric",
+  "difficulty": 64,
+  "prompt": "Quel nombre suit : 3, 5, 9, 17, 33, … ?",
+  "answer": 65,
+  "explanation": "Chaque terme vaut le précédent × 2 − 1 : 33 × 2 − 1 = 65.",
+  "hint": "Deux opérations à chaque étape."
+ },
+ {
+  "key": "logic-691",
+  "concept": "logic.sequences.mult_plus_1_3_1",
+  "label": "Multiplier puis ajouter",
+  "type": "numeric",
+  "difficulty": 64,
+  "prompt": "Quel nombre suit : 1, 4, 13, 40, 121, … ?",
+  "answer": 364,
+  "explanation": "Chaque terme vaut le précédent × 3 + 1 : 121 × 3 + 1 = 364.",
+  "hint": "Deux opérations à chaque étape."
+ },
+ {
+  "key": "logic-692",
+  "concept": "logic.sequences.mult_plus_2_3_m1",
+  "label": "Multiplier puis ajouter",
+  "type": "numeric",
+  "difficulty": 64,
+  "prompt": "Quel nombre suit : 2, 5, 14, 41, 122, … ?",
+  "answer": 365,
+  "explanation": "Chaque terme vaut le précédent × 3 − 1 : 122 × 3 − 1 = 365.",
+  "hint": "Deux opérations à chaque étape."
+ },
+ {
+  "key": "logic-693",
+  "concept": "logic.sequences.mult_plus_4_2_3",
+  "label": "Multiplier puis ajouter",
+  "type": "numeric",
+  "difficulty": 64,
+  "prompt": "Quel nombre suit : 4, 11, 25, 53, 109, … ?",
+  "answer": 221,
+  "explanation": "Chaque terme vaut le précédent × 2 + 3 : 109 × 2 + 3 = 221.",
+  "hint": "Deux opérations à chaque étape."
+ },
+ {
+  "key": "logic-694",
+  "concept": "logic.sequences.carres_1_1",
+  "label": "Carrés",
+  "type": "numeric",
+  "difficulty": 58,
+  "prompt": "Quel nombre suit : 2, 5, 10, 17, 26, … ?",
+  "answer": 37,
+  "explanation": "Ce sont les carrés plus 1 : 6 × 6 + 1 = 37.",
+  "hint": "Pense aux nombres multipliés par eux-mêmes."
+ },
+ {
+  "key": "logic-695",
+  "concept": "logic.sequences.carres_m1_2",
+  "label": "Carrés",
+  "type": "numeric",
+  "difficulty": 58,
+  "prompt": "Quel nombre suit : 3, 8, 15, 24, 35, … ?",
+  "answer": 48,
+  "explanation": "Ce sont les carrés moins 1 : 7 × 7 − 1 = 48.",
+  "hint": "Pense aux nombres multipliés par eux-mêmes."
+ },
+ {
+  "key": "logic-696",
+  "concept": "logic.sequences.carres_3_1",
+  "label": "Carrés",
+  "type": "numeric",
+  "difficulty": 58,
+  "prompt": "Quel nombre suit : 4, 7, 12, 19, 28, … ?",
+  "answer": 39,
+  "explanation": "Ce sont les carrés plus 3 : 6 × 6 + 3 = 39.",
+  "hint": "Pense aux nombres multipliés par eux-mêmes."
+ },
+ {
+  "key": "logic-697",
+  "concept": "logic.sequences.carres_0_4",
+  "label": "Carrés",
+  "type": "numeric",
+  "difficulty": 58,
+  "prompt": "Quel nombre suit : 16, 25, 36, 49, 64, … ?",
+  "answer": 81,
+  "explanation": "Ce sont les carrés : 9 × 9 = 81.",
+  "hint": "Pense aux nombres multipliés par eux-mêmes."
+ },
+ {
+  "key": "logic-698",
+  "concept": "logic.sequences.carres_premiers",
+  "label": "Carrés de nombres premiers",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Quel nombre suit : 4, 9, 25, 49, 121, … ?",
+  "answer": 169,
+  "explanation": "Ce sont les carrés des nombres premiers : 2², 3², 5², 7², 11², puis 13² = 169.",
+  "hint": "Quels nombres a-t-on mis au carré ?"
+ },
+ {
+  "key": "logic-699",
+  "concept": "logic.sequences.cubes_2",
+  "label": "Cubes",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 8, 27, 64, 125, … ?",
+  "answer": 216,
+  "explanation": "Ce sont les cubes : 2³ = 8, 3³ = 27, 4³ = 64, 5³ = 125, puis 6³ = 216.",
+  "hint": "Un nombre multiplié trois fois par lui-même."
+ },
+ {
+  "key": "logic-700",
+  "concept": "logic.sequences.fibo_2_1",
+  "label": "Somme des deux précédents",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 2, 1, 3, 4, 7, 11, … ?",
+  "answer": 18,
+  "explanation": "Chaque nombre est la somme des deux précédents : 7 + 11 = 18.",
+  "hint": "Additionne deux nombres voisins."
+ },
+ {
+  "key": "logic-701",
+  "concept": "logic.sequences.fibo_1_3",
+  "label": "Somme des deux précédents",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 1, 3, 4, 7, 11, 18, … ?",
+  "answer": 29,
+  "explanation": "Chaque nombre est la somme des deux précédents : 11 + 18 = 29.",
+  "hint": "Additionne deux nombres voisins."
+ },
+ {
+  "key": "logic-702",
+  "concept": "logic.sequences.fibo_3_4",
+  "label": "Somme des deux précédents",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 3, 4, 7, 11, 18, 29, … ?",
+  "answer": 47,
+  "explanation": "Chaque nombre est la somme des deux précédents : 18 + 29 = 47.",
+  "hint": "Additionne deux nombres voisins."
+ },
+ {
+  "key": "logic-703",
+  "concept": "logic.sequences.fibo_2_5",
+  "label": "Somme des deux précédents",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 2, 5, 7, 12, 19, 31, … ?",
+  "answer": 50,
+  "explanation": "Chaque nombre est la somme des deux précédents : 19 + 31 = 50.",
+  "hint": "Additionne deux nombres voisins."
+ },
+ {
+  "key": "logic-704",
+  "concept": "logic.sequences.fibo_4_4",
+  "label": "Somme des deux précédents",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre suit : 4, 4, 8, 12, 20, 32, … ?",
+  "answer": 52,
+  "explanation": "Chaque nombre est la somme des deux précédents : 20 + 32 = 52.",
+  "hint": "Additionne deux nombres voisins."
+ },
+ {
+  "key": "logic-705",
+  "concept": "logic.sequences.alterne_2_3_2",
+  "label": "Opérations alternées",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Quel nombre suit : 2, 5, 10, 13, 26, 29, … ?",
+  "answer": 58,
+  "explanation": "On alterne + 3 et × 2 : après + 3, c'est au tour de × 2. 29 × 2 = 58.",
+  "hint": "Deux règles qui se relaient."
+ },
+ {
+  "key": "logic-706",
+  "concept": "logic.sequences.alterne_1_4_3",
+  "label": "Opérations alternées",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Quel nombre suit : 1, 5, 15, 19, 57, 61, … ?",
+  "answer": 183,
+  "explanation": "On alterne + 4 et × 3 : après + 4, c'est au tour de × 3. 61 × 3 = 183.",
+  "hint": "Deux règles qui se relaient."
+ },
+ {
+  "key": "logic-707",
+  "concept": "logic.sequences.alterne_5_2_2",
+  "label": "Opérations alternées",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Quel nombre suit : 5, 7, 14, 16, 32, 34, … ?",
+  "answer": 68,
+  "explanation": "On alterne + 2 et × 2 : après + 2, c'est au tour de × 2. 34 × 2 = 68.",
+  "hint": "Deux règles qui se relaient."
+ },
+ {
+  "key": "logic-708",
+  "concept": "logic.sequences.alterne_3_5_2",
+  "label": "Opérations alternées",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Quel nombre suit : 3, 8, 16, 21, 42, 47, … ?",
+  "answer": 94,
+  "explanation": "On alterne + 5 et × 2 : après + 5, c'est au tour de × 2. 47 × 2 = 94.",
+  "hint": "Deux règles qui se relaient."
+ },
+ {
+  "key": "logic-709",
+  "concept": "logic.sequences.puissances_2_moins_1",
+  "label": "Puissances de 2 moins 1",
+  "type": "numeric",
+  "difficulty": 62,
+  "prompt": "Quel nombre suit : 1, 3, 7, 15, 31, 63, … ?",
+  "answer": 127,
+  "explanation": "Chaque terme vaut 2ⁿ − 1 (ou le double du précédent plus 1) : 2⁷ − 1 = 127.",
+  "hint": "Compare avec 2, 4, 8, 16…"
+ },
+ {
+  "key": "logic-710",
+  "concept": "logic.sequences.somme_chiffres",
+  "label": "Double et chiffres",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Quel nombre suit : 1, 2, 4, 8, 16, 23, 28, … ?",
+  "answer": 38,
+  "explanation": "Chaque terme ajoute la somme des chiffres du précédent : 28 + 2 + 8 = 38.",
+  "hint": "Regarde les chiffres du nombre précédent."
+ },
+ {
+  "key": "logic-711",
+  "concept": "logic.sequences.premiers_suivants",
+  "label": "Nombres premiers",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre suit : 31, 37, 41, 43, 47, … ?",
+  "answer": 53,
+  "explanation": "Ce sont les nombres premiers qui se suivent : après 47, le suivant est 53 (49 = 7 × 7, 51 = 3 × 17).",
+  "hint": "Ils ne se divisent que par 1 et par eux-mêmes."
+ },
+ {
+  "key": "logic-712",
+  "concept": "logic.sequences.diviser_alterne",
+  "label": "Diviser puis ajouter",
+  "type": "numeric",
+  "difficulty": 66,
+  "prompt": "Quel nombre suit : 64, 32, 36, 18, 22, 11, … ?",
+  "answer": 15,
+  "explanation": "On alterne ÷ 2 et + 4 : 11 + 4 = 15.",
+  "hint": "Deux règles qui se relaient."
+ },
+ {
+  "key": "logic-713",
+  "concept": "logic.sequences.decroissante_moitie",
+  "label": "Moitiés",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Quel nombre suit : 800, 400, 200, 100, … ?",
+  "answer": 50,
+  "explanation": "On divise par 2 à chaque fois : 100 ÷ 2 = 50.",
+  "hint": "Chaque nombre est la moitié du précédent."
+ },
+ {
+  "key": "logic-714",
+  "concept": "logic.sequences.miroir_11",
+  "label": "Multiples de 11",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Quel nombre suit : 11, 22, 33, 44, 55, … ?",
+  "answer": 66,
+  "explanation": "On ajoute 11 à chaque fois : 55 + 11 = 66.",
+  "hint": "Des chiffres jumeaux."
+ },
+ {
+  "key": "logic-715",
+  "concept": "logic.sequences.tables_9_decroissant",
+  "label": "Table de 9 à l'envers",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre suit : 90, 81, 72, 63, 54, … ?",
+  "answer": 45,
+  "explanation": "On retire 9 à chaque fois : 54 − 9 = 45.",
+  "hint": "Une table de multiplication, à l'envers."
+ }
+]
