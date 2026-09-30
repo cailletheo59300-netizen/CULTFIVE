@@ -1,0 +1,246 @@
+[
+ {
+  "key": "tech-501",
+  "concept": "tech.computing.tetris_createur",
+  "label": "Tetris",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quel pays le jeu Tetris a-t-il été créé, en 1984 ?",
+  "options": [
+   "En Union soviétique*",
+   "Au Japon",
+   "Aux États-Unis",
+   "En Finlande"
+  ],
+  "explanation": "Alexeï Pajitnov le programme à Moscou, dans un centre de recherche de l'Académie des sciences. Nintendo le rend mondial avec la Game Boy en 1989.",
+  "hint": "Son créateur s'appelle Alexeï."
+ },
+ {
+  "key": "tech-502",
+  "concept": "tech.brands.pong_atari",
+  "label": "Pong",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle entreprise a lancé Pong, l'un des premiers jeux vidéo à succès, en 1972 ?",
+  "options": [
+   "Atari*",
+   "Nintendo",
+   "Sega",
+   "Sony"
+  ],
+  "explanation": "Pong, une partie de ping-pong en deux traits et un point, lance l'industrie des bornes d'arcade. Atari a été fondée par Nolan Bushnell.",
+  "hint": "Son nom vient d'un terme du jeu de go."
+ },
+ {
+  "key": "tech-503",
+  "concept": "tech.computing.deep_blue",
+  "label": "Deep Blue",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel champion du monde d'échecs l'ordinateur Deep Blue d'IBM a-t-il battu en 1997 ?",
+  "options": [
+   "Garry Kasparov*",
+   "Anatoli Karpov",
+   "Magnus Carlsen",
+   "Bobby Fischer"
+  ],
+  "explanation": "Kasparov avait gagné le premier match en 1996 ; il perd la revanche 3,5 à 2,5. Une première pour un champion du monde face à une machine.",
+  "hint": "Un champion russe, roi des échecs des années 1980 et 1990."
+ },
+ {
+  "key": "tech-504",
+  "concept": "tech.computing.unicode_emojis",
+  "label": "Unicode",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel organisme décide quels nouveaux emojis apparaîtront sur tous les téléphones ?",
+  "options": [
+   "Le consortium Unicode*",
+   "Apple",
+   "L'ONU",
+   "Google"
+  ],
+  "explanation": "Le consortium Unicode attribue un code unique à chaque caractère, lettres de toutes les langues comprises. Chaque fabricant dessine ensuite ses emojis à sa façon.",
+  "hint": "Il attribue aussi un numéro à chaque lettre de toutes les langues du monde."
+ },
+ {
+  "key": "tech-505",
+  "concept": "tech.brands.bitcoin_nakamoto",
+  "label": "Bitcoin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Sous quel pseudonyme se cache le créateur du bitcoin ?",
+  "options": [
+   "Satoshi Nakamoto*",
+   "Vitalik Buterin",
+   "Elon Musk",
+   "Linus Torvalds"
+  ],
+  "explanation": "Il publie le principe du bitcoin en 2008 et lance le réseau début 2009, puis disparaît en 2011. Sa vraie identité n'a jamais été prouvée.",
+  "hint": "Un nom à consonance japonaise."
+ },
+ {
+  "key": "tech-506",
+  "concept": "tech.computing.eniac_poids",
+  "label": "ENIAC",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Combien pesait l'ENIAC, l'un des tout premiers ordinateurs électroniques (1946) ?",
+  "options": [
+   "Environ 30 tonnes*",
+   "Environ 300 kilos",
+   "Environ 3 tonnes",
+   "Environ 300 tonnes"
+  ],
+  "explanation": "Près de 18 000 tubes électroniques, 170 m² au sol et 27 tonnes. Un smartphone calcule aujourd'hui des millions de fois plus vite.",
+  "hint": "Il remplissait une grande salle, mais ce n'était pas un navire."
+ },
+ {
+  "key": "tech-507",
+  "concept": "tech.inventions.machine_analytique",
+  "label": "Machine analytique",
+  "type": "mcq",
+  "difficulty": 66,
+  "prompt": "Qui a conçu la « machine analytique », ancêtre mécanique de l'ordinateur, au XIXe siècle ?",
+  "options": [
+   "Charles Babbage*",
+   "Alan Turing",
+   "Blaise Pascal",
+   "John von Neumann"
+  ],
+  "explanation": "Babbage la dessine à partir de 1834 sans jamais la terminer. Ada Lovelace écrit pour elle ce qu'on considère comme le premier programme.",
+  "hint": "Un mathématicien anglais, ami d'Ada Lovelace."
+ },
+ {
+  "key": "tech-508",
+  "concept": "tech.inventions.transistor_bell",
+  "label": "Transistor",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Où le transistor, brique de base de toute l'électronique, a-t-il été inventé en 1947 ?",
+  "options": [
+   "Aux laboratoires Bell*",
+   "Chez IBM",
+   "Au MIT",
+   "Chez Intel"
+  ],
+  "explanation": "Bardeen, Brattain et Shockley y reçoivent le prix Nobel de physique 1956. Un processeur actuel compte des milliards de transistors.",
+  "hint": "Le laboratoire porte le nom de l'inventeur du téléphone."
+ },
+ {
+  "key": "tech-509",
+  "concept": "tech.computing.arpanet",
+  "label": "ARPANET",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Comment s'appelait l'ancêtre d'Internet, mis en service en 1969 aux États-Unis ?",
+  "options": [
+   "ARPANET*",
+   "Minitel",
+   "Usenet",
+   "Ethernet"
+  ],
+  "explanation": "Le premier message part de l'université de Californie à Los Angeles vers Stanford : « LO », l'ordinateur plante avant la fin de « LOGIN ».",
+  "hint": "Un réseau financé par une agence de la défense américaine."
+ },
+ {
+  "key": "tech-510",
+  "concept": "tech.inventions.braille_points",
+  "label": "Braille",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de points compte une cellule de l'alphabet braille ?",
+  "answer": 6,
+  "explanation": "Deux colonnes de trois points en relief, soit 64 combinaisons. Louis Braille, aveugle depuis l'enfance, invente son système à 15 ans, vers 1824.",
+  "hint": "Un nombre pair, plus petit que 10."
+ },
+ {
+  "key": "tech-511",
+  "concept": "tech.inventions.velcro_bardane",
+  "label": "Velcro",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quoi s'est inspiré l'ingénieur suisse qui a inventé le Velcro ?",
+  "options": [
+   "Des fleurs de bardane accrochées aux poils de son chien*",
+   "Des ventouses d'une pieuvre",
+   "Des pattes d'un gecko",
+   "Des plumes d'un oiseau"
+  ],
+  "explanation": "George de Mestral observe au microscope les minuscules crochets de la bardane après une promenade en 1941. « Velcro » vient de velours et crochet.",
+  "hint": "Tout commence par une promenade en forêt."
+ },
+ {
+  "key": "tech-512",
+  "concept": "tech.brands.post_it_3m",
+  "label": "Post-it",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle entreprise a inventé le Post-it ?",
+  "options": [
+   "3M*",
+   "Bic",
+   "Canon",
+   "Staedtler"
+  ],
+  "explanation": "Une colle ratée, trop faible, mise au point en 1968 par Spencer Silver ; son collègue Art Fry s'en sert pour marquer les pages de son livre de chants.",
+  "hint": "Son nom est un chiffre suivi d'une lettre."
+ },
+ {
+  "key": "tech-513",
+  "concept": "tech.inventions.hedy_lamarr",
+  "label": "Hedy Lamarr",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle actrice d'Hollywood a co-inventé un procédé de saut de fréquence, ancêtre du Wi-Fi et du Bluetooth ?",
+  "options": [
+   "Hedy Lamarr*",
+   "Marilyn Monroe",
+   "Greta Garbo",
+   "Audrey Hepburn"
+  ],
+  "explanation": "Brevet déposé en 1942 avec le compositeur George Antheil, pour guider des torpilles sans être brouillé. Il n'a été reconnu que bien plus tard.",
+  "hint": "Une star d'origine autrichienne des années 1940."
+ },
+ {
+  "key": "tech-514",
+  "concept": "tech.inventions.mp3_allemagne",
+  "label": "MP3",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Dans quel pays le format audio MP3 a-t-il été mis au point ?",
+  "options": [
+   "En Allemagne*",
+   "Au Japon",
+   "Aux États-Unis",
+   "En Corée du Sud"
+  ],
+  "explanation": "À l'institut Fraunhofer d'Erlangen, au début des années 1990. Le MP3 divise la taille d'un morceau par dix en retirant ce que l'oreille entend mal.",
+  "hint": "Le pays de Siemens et de Bosch."
+ },
+ {
+  "key": "tech-515",
+  "concept": "tech.inventions.telecom_chronologie",
+  "label": "Télécommunications",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces inventions de la plus ancienne à la plus récente.",
+  "items": [
+   "Le télégraphe optique de Chappe",
+   "Le téléphone",
+   "La radio",
+   "La télévision"
+  ],
+  "explanation": "Télégraphe de Chappe (1794), téléphone (1876), radio (Marconi, 1895-1897), première démonstration de télévision (Baird, 1926)."
+ },
+ {
+  "key": "tech-516",
+  "concept": "tech.inventions.cle_usb_cd",
+  "label": "Clé USB et CD",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La clé USB a été inventée avant le CD.",
+  "answer": false,
+  "explanation": "Non : le CD arrive en 1982, la clé USB vers 2000. Elle a vite remplacé la disquette."
+ }
+]
