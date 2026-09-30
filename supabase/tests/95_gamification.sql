@@ -122,7 +122,7 @@ begin
 
   -- Vue d'ensemble.
   o := public.progression_overview();
-  perform tst.ok(jsonb_array_length(o -> 'items') = 12 and o ? 'tree' and o ? 'chests' and o ? 'tickets', 'progression : tout y est');
+  perform tst.ok(jsonb_array_length(o -> 'items') = (select count(*) from public.items where kind = 'cosmetic') and o ? 'tree' and o ? 'chests' and o ? 'tickets', 'progression : tout y est');
   perform tst.ok((select bool_and((i ->> 'owned')::bool) from jsonb_array_elements(o -> 'items') i where i ->> 'rarity' = 'chest'), 'objets possédés');
 
   -- Sécurité : pas d'accès direct.

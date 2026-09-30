@@ -46,6 +46,8 @@ public protocol GameService: Sendable {
     /// `item` nil : retire l'objet de cet emplacement. Renvoie la tenue complète.
     func equip(slot: String, item: String?) async throws -> [String: String]
     func trophies() async throws -> TrophiesOverview
+    func shop() async throws -> ShopOverview
+    func buy(_ item: String) async throws -> ShopPurchase
 
     // Social
     func friends() async throws -> FriendsOverview
@@ -210,6 +212,8 @@ public struct LiveGameService: GameService {
     }
 
     public func trophies() async throws -> TrophiesOverview { try await api.rpc("trophies_overview") }
+    public func shop() async throws -> ShopOverview { try await api.rpc("shop_overview") }
+    public func buy(_ item: String) async throws -> ShopPurchase { try await api.rpc("shop_buy", ["p_item": .string(item)]) }
 
     // MARK: Social
 

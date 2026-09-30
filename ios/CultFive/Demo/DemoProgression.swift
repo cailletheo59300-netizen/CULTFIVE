@@ -22,7 +22,28 @@ final class DemoProgression: @unchecked Sendable {
     private var freezes = 1
     private var fedKeys: Set<UUID> = []
 
-    static let catalog: [(id: String, name: String, slot: String, rarity: String)] = [
+    static let catalog: [(id: String, name: String, slot: String, rarity: String)] = chestAndFruit + forms + shopItems.map { ($0.id, $0.name, $0.slot, "shop") }
+
+    static let forms: [(id: String, name: String, slot: String, rarity: String)] = [
+        ("form_baby", "Bébé", "form", "tree"), ("form_young", "Jeune", "form", "tree"),
+        ("form_adult", "Adulte", "form", "tree"), ("form_sage", "Sage", "form", "tree"),
+    ]
+    static let formStages = ["form_baby": 1, "form_young": 3, "form_adult": 5, "form_sage": 6]
+
+    static let shopItems: [(id: String, name: String, slot: String, price: Int)] = [
+        ("skin_mint", "Menthe", "skin", 200), ("skin_peach", "Pêche", "skin", 200), ("skin_sky", "Ciel", "skin", 200),
+        ("skin_coral", "Corail", "skin", 200), ("skin_ocean", "Océan", "skin", 250), ("skin_lavender", "Lavande", "skin", 250),
+        ("skin_lemon", "Citron", "skin", 250), ("skin_raspberry", "Framboise", "skin", 300), ("skin_forest", "Forêt", "skin", 300),
+        ("skin_cocoa", "Cacao", "skin", 350), ("skin_night", "Nuit", "skin", 400), ("skin_snow", "Neige", "skin", 600),
+        ("pattern_stripes", "Rayures", "pattern", 800), ("pattern_dots", "Pois", "pattern", 800),
+        ("pattern_stars", "Étoiles", "pattern", 1200), ("pattern_rainbow", "Arc-en-ciel", "pattern", 1500),
+        ("cap", "Casquette", "hat", 300), ("beanie", "Bonnet", "hat", 300), ("wizard_hat", "Chapeau de magicien", "hat", 900),
+        ("crown", "Couronne", "hat", 1200), ("sunglasses", "Lunettes de soleil", "eyes", 400), ("hero_mask", "Masque de héros", "eyes", 700),
+        ("medal", "Médaille", "neck", 500), ("flower_necklace", "Collier de fleurs", "neck", 450), ("backpack", "Sac à dos", "back", 500),
+        ("wings", "Ailes", "back", 1200), ("aura_stars", "Aura étoilée", "effect", 1000), ("bubbles", "Bulles", "effect", 600),
+    ]
+
+    static let chestAndFruit: [(id: String, name: String, slot: String, rarity: String)] = [
         ("beret", "Béret", "hat", "chest"), ("party_hat", "Chapeau de fête", "hat", "chest"),
         ("headphones", "Casque audio", "hat", "chest"), ("round_glasses", "Lunettes rondes", "eyes", "chest"),
         ("star_glasses", "Lunettes étoiles", "eyes", "chest"), ("red_scarf", "Écharpe rouge", "neck", "chest"),
@@ -53,8 +74,13 @@ final class DemoProgression: @unchecked Sendable {
         return ProgressionOverview(
             xp: 1240, level: 5, seeds: seeds, streakFreezes: freezes, tree: Self.tree(treePoints), chests: chests,
             tickets: HelpTickets(fiftyFifty: tickets.fifty, hint: tickets.hint), outfit: outfit,
-            items: Self.catalog.map { LeonItem(id: $0.id, name: $0.name, slot: $0.slot, rarity: $0.rarity,
-                                               owned: owned.contains($0.id), equipped: outfit[$0.slot] == $0.id) })
+            items: Self.catalog.map { item in
+                LeonItem(id: item.id, name: item.name, slot: item.slot, rarity: item.rarity,
+                         owned: owned.contains(item.id) || (Self.formStages[item.id].map { $0 <= Self.stage(treePoints) } ?? false),
+                         equipped: outfit[item.slot] == item.id,
+                         price: Self.shopItems.first { $0.id == item.id }?.price, unlockStage: Self.formStages[item.id])
+            },
+            bestForm: Self.formStages.filter { $0.value <= Self.stage(treePoints) }.max { $0.value < $1.value }?.key)
     }
 
     /// Ouvre un coffre ; renvoie le contenu et les graines gagnées (à créditer par l'appelant).
@@ -120,10 +146,31 @@ final class DemoProgression: @unchecked Sendable {
         return (fed, newChests, items, Self.tree(treePoints))
     }
 
+    /// Vitrine du jour : 3 articles, le premier à −30 %.
+    func shop(seeds: Int) -> ShopOverview {
+        lock.lock(); defer { lock.unlock() }
+        let day = Calendar.current.ordinality(of: .day, in: .era, for: Date()) ?? 0
+        let pool = Self.shopItems.filter { !owned.contains($0.id) }
+        let picks = (0 ..< min(3, pool.count)).map { pool[(day * 7 + $0 * 5) % pool.count] }
+        return ShopOverview(featured: picks.enumerated().map { i, item in
+            .init(id: item.id, price: i == 0 ? Int((Double(item.price) * 0.7 / 10).rounded()) * 10 : item.price, original: item.price)
+        }, resetsAt: Calendar.current.startOfDay(for: Date()).addingTimeInterval(86_400), balance: seeds)
+    }
+
+    /// Achète un article (le prix est vérifié par l'appelant) ; false s'il était déjà possédé.
+    func buy(_ item: String) throws -> Bool {
+        lock.lock(); defer { lock.unlock() }
+        guard Self.shopItems.contains(where: { $0.id == item }) else {
+            throw BackendError.server(status: 400, code: "item_not_for_sale", message: "")
+        }
+        return owned.insert(item).inserted
+    }
+
     func equip(slot: String, item: String?) throws -> [String: String] {
         lock.lock(); defer { lock.unlock() }
         if let item {
-            guard owned.contains(item), Self.catalog.contains(where: { $0.id == item && $0.slot == slot }) else {
+            let unlockedForm = Self.formStages[item].map { $0 <= Self.stage(treePoints) } ?? false
+            guard owned.contains(item) || unlockedForm, Self.catalog.contains(where: { $0.id == item && $0.slot == slot }) else {
                 throw BackendError.server(status: 400, code: "item_not_owned", message: "")
             }
             outfit[slot] = item

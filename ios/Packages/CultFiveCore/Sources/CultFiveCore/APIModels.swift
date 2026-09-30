@@ -1099,17 +1099,74 @@ public struct LeonItem: Codable, Hashable, Identifiable, Sendable {
     public let id: String
     public let name: String
     public let slot: String
+    /// « chest » (coffres), « fruit » (arbre), « shop » (boutique), « tree » (forme débloquée par l'arbre).
     public let rarity: String
     public let owned: Bool
     public let equipped: Bool
+    /// Prix en graines (boutique seulement).
+    public let price: Int?
+    /// Étape de l'arbre qui débloque cette forme de Léon.
+    public let unlockStage: Int?
 
-    public init(id: String, name: String, slot: String, rarity: String, owned: Bool, equipped: Bool) {
+    public init(id: String, name: String, slot: String, rarity: String, owned: Bool, equipped: Bool,
+                price: Int? = nil, unlockStage: Int? = nil) {
         self.id = id
         self.name = name
         self.slot = slot
         self.rarity = rarity
         self.owned = owned
         self.equipped = equipped
+        self.price = price
+        self.unlockStage = unlockStage
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, slot, rarity, owned, equipped, price
+        case unlockStage = "unlock_stage"
+    }
+}
+
+/// Vitrine du jour de la boutique de Léon (le premier objet est en promotion).
+public struct ShopOverview: Codable, Hashable, Sendable {
+    public struct Featured: Codable, Hashable, Identifiable, Sendable {
+        public let id: String
+        public let price: Int
+        public let original: Int
+
+        public init(id: String, price: Int, original: Int) {
+            self.id = id
+            self.price = price
+            self.original = original
+        }
+    }
+
+    public let featured: [Featured]
+    public let resetsAt: Date?
+    public let balance: Int
+
+    public init(featured: [Featured], resetsAt: Date?, balance: Int) {
+        self.featured = featured
+        self.resetsAt = resetsAt
+        self.balance = balance
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case featured, balance
+        case resetsAt = "resets_at"
+    }
+}
+
+public struct ShopPurchase: Codable, Hashable, Sendable {
+    public let bought: Bool
+    public let item: String
+    public let price: Int?
+    public let balance: Int
+
+    public init(bought: Bool, item: String, price: Int?, balance: Int) {
+        self.bought = bought
+        self.item = item
+        self.price = price
+        self.balance = balance
     }
 }
 
@@ -1147,9 +1204,12 @@ public struct ProgressionOverview: Codable, Hashable, Sendable {
     /// Emplacement → objet porté (« hat » → « beret »).
     public let outfit: [String: String]
     public let items: [LeonItem]
+    /// Forme de Léon la plus avancée débloquée (affichée quand aucune n'est choisie).
+    public let bestForm: String?
 
     public init(xp: Int, level: Int, seeds: Int, streakFreezes: Int, tree: TreeState, chests: [ChestRef],
-                tickets: HelpTickets, outfit: [String: String], items: [LeonItem]) {
+                tickets: HelpTickets, outfit: [String: String], items: [LeonItem], bestForm: String? = nil) {
+        self.bestForm = bestForm
         self.xp = xp
         self.level = level
         self.seeds = seeds
@@ -1164,6 +1224,7 @@ public struct ProgressionOverview: Codable, Hashable, Sendable {
     enum CodingKeys: String, CodingKey {
         case xp, level, seeds, tree, chests, tickets, outfit, items
         case streakFreezes = "streak_freezes"
+        case bestForm = "best_form"
     }
 }
 

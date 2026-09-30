@@ -399,6 +399,20 @@ struct DemoGameService: GameService {
         try DemoProgression.shared.equip(slot: slot, item: item)
     }
 
+    func shop() async throws -> ShopOverview { DemoProgression.shared.shop(seeds: try await profile().seeds) }
+
+    func buy(_ item: String) async throws -> ShopPurchase {
+        let overview = DemoProgression.shared.shop(seeds: try await profile().seeds)
+        guard let base = DemoProgression.shopItems.first(where: { $0.id == item })?.price else {
+            throw BackendError.server(status: 400, code: "item_not_for_sale", message: "")
+        }
+        let price = overview.featured.first { $0.id == item }?.price ?? base
+        guard try await profile().seeds >= price else { throw BackendError.server(status: 400, code: "insufficient_seeds", message: "") }
+        let bought = try DemoProgression.shared.buy(item)
+        if bought { try engine().spendSeeds(price) }
+        return ShopPurchase(bought: bought, item: item, price: bought ? price : nil, balance: try await profile().seeds)
+    }
+
     func trophies() async throws -> TrophiesOverview {
         let achievements = try await achievements()
         let skills = try await skills()

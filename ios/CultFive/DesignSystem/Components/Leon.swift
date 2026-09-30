@@ -76,6 +76,7 @@ private struct LeonDrawing {
         let t = time ?? 0
         let animating = time != nil
         let skin = skinColor(t)
+        let form = LeonForm(outfit.form)
 
         // Ombre au sol (ne respire pas).
         context.fill(Path(ellipseIn: CGRect(x: 26, y: 84, width: 70, height: 7)), with: .color(.black.opacity(0.07)))
@@ -97,26 +98,30 @@ private struct LeonDrawing {
 
         // Coucou : la queue s'enroule et se déroule.
         let tailCurl = pose == .wave && animating ? curl + 0.18 * sin(t * 5) : curl
-        if outfit.back != nil { LeonWear.back(outfit.back, in: &context, t: t) }
-        drawTail(&context, skin: skin, curl: tailCurl)
+        if form.halo { LeonWear.halo(in: &context, t: t) }
+        LeonWear.back(outfit.back, in: &context, t: t)
+        drawTail(&context, skin: skin, curl: tailCurl, scale: form.tail)
         for x in [42.0, 70.0] {
             let foot = Path(roundedRect: CGRect(x: x, y: 72, width: 12, height: 12), cornerRadius: 6)
             fillShaded(&context, foot, skin, shade: 0.18)
         }
 
         // Crête (casque), puis corps et tête d'un seul tenant.
-        fillShaded(&context, Path(ellipseIn: CGRect(x: 64, y: 14, width: 24, height: 20)), skin, shade: 0.12)
-        var body = Path(ellipseIn: CGRect(x: 24, y: 38, width: 68, height: 44))
+        fillShaded(&context, Path(ellipseIn: form.crest), skin, shade: 0.12)
+        var body = Path(ellipseIn: form.body)
         body.addEllipse(in: CGRect(x: 62, y: 22, width: 48, height: 48))
         context.fill(body, with: .color(skin))
+        if outfit.pattern != nil { LeonWear.pattern(outfit.pattern, body: body, in: &context, t: t) }
 
         // Ventre clair, taches sur le dos.
-        context.fill(Path(ellipseIn: CGRect(x: 34, y: 64, width: 48, height: 13)), with: .color(.white.opacity(0.24)))
-        for (x, y, r) in [(44.0, 46.0, 3.4), (55.0, 42.0, 2.8), (35.0, 54.0, 2.6)] {
+        context.fill(Path(ellipseIn: CGRect(x: form.body.minX + 10, y: form.body.maxY - 18, width: form.body.width - 20, height: 13)),
+                     with: .color(.white.opacity(0.24)))
+        for (x, y, r) in form.spots {
             context.fill(Path(ellipseIn: CGRect(x: x - r, y: y - r, width: 2 * r, height: 2 * r)), with: .color(.white.opacity(0.28)))
         }
+        LeonWear.backFront(outfit.back, in: &context)
 
-        drawEye(&context, skin: skin, t: t, animating: animating)
+        drawEye(&context, skin: skin, t: t, animating: animating, scale: form.eye)
 
         // Joue.
         context.fill(Path(ellipseIn: CGRect(x: 79, y: 54, width: 11, height: 7)), with: .color(Color.blush.opacity(pose == .sad ? 0.35 : 0.85)))
@@ -124,7 +129,8 @@ private struct LeonDrawing {
         LeonWear.neck(outfit.neck, in: &context)
         LeonWear.eyes(outfit.eyes, in: &context)
         LeonWear.hat(outfit.hat, in: &context)
-        if outfit.skin == "skin_gold" { drawSparkles(&context, t: t + 1.3, animating: animating) }
+        LeonWear.effect(outfit.effect, in: &context, t: t)
+        if outfit.skin == "skin_gold" || form.halo { drawSparkles(&context, t: t + 1.3, animating: animating) }
         if pose == .proud { drawSparkles(&context, t: t, animating: animating) }
     }
 
@@ -141,9 +147,9 @@ private struct LeonDrawing {
     }
 
     /// Queue en spirale, effilée, qui s'enroule vers le bas.
-    private func drawTail(_ context: inout GraphicsContext, skin: Color, curl: Double) {
-        let center = CGPoint(x: 18, y: 62)
-        let radius0 = 14.0
+    private func drawTail(_ context: inout GraphicsContext, skin: Color, curl: Double, scale: Double = 1) {
+        let center = CGPoint(x: 18 + (1 - scale) * 14, y: 62 + (1 - scale) * 4)
+        let radius0 = 14.0 * scale
         let startAngle = -0.6
         let sweep = (0.7 + min(max(curl, 0), 1) * 1.1) * 2 * .pi
         let steps = 48
@@ -157,7 +163,7 @@ private struct LeonDrawing {
                 var segment = Path()
                 segment.move(to: previous)
                 segment.addLine(to: point)
-                let width = 11 - s * 6
+                let width = (11 - s * 6) * (0.6 + 0.4 * scale)
                 context.stroke(segment, with: .color(skin), style: StrokeStyle(lineWidth: width, lineCap: .round))
                 context.stroke(segment, with: .color(.black.opacity(0.1)), style: StrokeStyle(lineWidth: width, lineCap: .round))
             }
@@ -165,9 +171,9 @@ private struct LeonDrawing {
         }
     }
 
-    private func drawEye(_ context: inout GraphicsContext, skin: Color, t: Double, animating: Bool) {
+    private func drawEye(_ context: inout GraphicsContext, skin: Color, t: Double, animating: Bool, scale: Double = 1) {
         let center = CGPoint(x: 90, y: 40)
-        let eyeRect = CGRect(x: center.x - 13, y: center.y - 13, width: 26, height: 26)
+        let eyeRect = CGRect(x: center.x - 13 * scale, y: center.y - 13 * scale, width: 26 * scale, height: 26 * scale)
         // Tourelle de l'œil (un peu plus sombre), puis le blanc.
         fillShaded(&context, Path(ellipseIn: eyeRect.insetBy(dx: -3, dy: -3)), skin, shade: 0.08)
         context.fill(Path(ellipseIn: eyeRect), with: .color(.white))
@@ -191,8 +197,10 @@ private struct LeonDrawing {
         default: look = animating ? CGSize(width: sin(t * 0.7) * 3, height: cos(t * 0.5) * 1.5) : CGSize(width: 2, height: 0)
         }
         let pupil = CGPoint(x: center.x + look.width, y: center.y + look.height)
-        context.fill(Path(ellipseIn: CGRect(x: pupil.x - 7, y: pupil.y - 7, width: 14, height: 14)), with: .color(dark))
-        context.fill(Path(ellipseIn: CGRect(x: pupil.x - 4.5, y: pupil.y - 5, width: 4.5, height: 4.5)), with: .color(.white))
+        let pr = 7 * scale
+        context.fill(Path(ellipseIn: CGRect(x: pupil.x - pr, y: pupil.y - pr, width: 2 * pr, height: 2 * pr)), with: .color(dark))
+        context.fill(Path(ellipseIn: CGRect(x: pupil.x - 4.5 * scale, y: pupil.y - 5 * scale, width: 4.5 * scale, height: 4.5 * scale)),
+                     with: .color(.white))
 
         if pose == .sad {
             // Paupière tombante.
@@ -309,17 +317,41 @@ struct LeonOutfit: Equatable, Sendable {
     var neck: String?
     var back: String?
     var skin: String?
+    var pattern: String?
+    var effect: String?
+    /// Forme de Léon (« form_baby »…) ; nil : forme adulte, celle d'origine.
+    var form: String?
 
-    init(hat: String? = nil, eyes: String? = nil, neck: String? = nil, back: String? = nil, skin: String? = nil) {
+    init(hat: String? = nil, eyes: String? = nil, neck: String? = nil, back: String? = nil, skin: String? = nil,
+         pattern: String? = nil, effect: String? = nil, form: String? = nil) {
         self.hat = hat
         self.eyes = eyes
         self.neck = neck
         self.back = back
         self.skin = skin
+        self.pattern = pattern
+        self.effect = effect
+        self.form = form
     }
 
     init(_ slots: [String: String]) {
-        self.init(hat: slots["hat"], eyes: slots["eyes"], neck: slots["neck"], back: slots["back"], skin: slots["skin"])
+        self.init(hat: slots["hat"], eyes: slots["eyes"], neck: slots["neck"], back: slots["back"], skin: slots["skin"],
+                  pattern: slots["pattern"], effect: slots["effect"], form: slots["form"])
+    }
+
+    /// L'objet porté à cet emplacement.
+    func item(in slot: String) -> String? {
+        switch slot {
+        case "hat": return hat
+        case "eyes": return eyes
+        case "neck": return neck
+        case "back": return back
+        case "skin": return skin
+        case "pattern": return pattern
+        case "effect": return effect
+        case "form": return form
+        default: return nil
+        }
     }
 
     /// Même tenue avec un objet essayé à sa place.
@@ -331,6 +363,9 @@ struct LeonOutfit: Equatable, Sendable {
         case "neck": copy.neck = item
         case "back": copy.back = item
         case "skin": copy.skin = item
+        case "pattern": copy.pattern = item
+        case "effect": copy.effect = item
+        case "form": copy.form = item
         default: break
         }
         return copy
@@ -350,6 +385,18 @@ enum LeonWear {
         switch id {
         case "skin_sunset": return Color(hex: 0xFF8A5B)
         case "skin_gold": return Color(hex: 0xE8B923)
+        case "skin_mint": return Color(hex: 0x38D9A9)
+        case "skin_peach": return Color(hex: 0xFFA94D)
+        case "skin_sky": return Color(hex: 0x74C0FC)
+        case "skin_coral": return Color(hex: 0xFF8787)
+        case "skin_ocean": return Color(hex: 0x1C7ED6)
+        case "skin_lavender": return Color(hex: 0xB197FC)
+        case "skin_lemon": return Color(hex: 0xFFE066)
+        case "skin_raspberry": return Color(hex: 0xE64980)
+        case "skin_forest": return Color(hex: 0x2F9E44)
+        case "skin_cocoa": return Color(hex: 0x8D6E63)
+        case "skin_night": return Color(hex: 0x3B3B7A)
+        case "skin_snow": return Color(hex: 0xE9ECEF)
         default: return nil
         }
     }
@@ -400,6 +447,48 @@ enum LeonWear {
                 context.fill(Path(ellipseIn: CGRect(x: point.x - 3, y: point.y - 3, width: 6, height: 6)), with: .color(Color(hex: 0xFFD8A8)))
                 context.fill(Path(ellipseIn: CGRect(x: point.x - 1.3, y: point.y - 1.3, width: 2.6, height: 2.6)), with: .color(Color.sun))
             }
+        case "cap":
+            var dome = Path()
+            dome.move(to: CGPoint(x: 68, y: 26))
+            dome.addQuadCurve(to: CGPoint(x: 104, y: 24), control: CGPoint(x: 84, y: 2))
+            dome.closeSubpath()
+            context.fill(dome, with: .color(Color(hex: 0x1C7ED6)))
+            var brim = Path()
+            brim.move(to: CGPoint(x: 96, y: 22))
+            brim.addQuadCurve(to: CGPoint(x: 122, y: 26), control: CGPoint(x: 112, y: 18))
+            brim.addLine(to: CGPoint(x: 100, y: 27))
+            brim.closeSubpath()
+            context.fill(brim, with: .color(Color(hex: 0x1864AB)))
+            context.fill(Path(ellipseIn: CGRect(x: 83, y: 6.5, width: 4, height: 4)), with: .color(.white))
+        case "beanie":
+            var dome = Path()
+            dome.move(to: CGPoint(x: 68, y: 28))
+            dome.addQuadCurve(to: CGPoint(x: 106, y: 26), control: CGPoint(x: 86, y: -2))
+            dome.closeSubpath()
+            context.fill(dome, with: .color(Color(hex: 0xF76707)))
+            context.fill(Path(roundedRect: CGRect(x: 66, y: 22, width: 42, height: 8), cornerRadius: 4), with: .color(Color(hex: 0xD9480F)))
+            context.fill(Path(ellipseIn: CGRect(x: 81, y: 1, width: 9, height: 9)), with: .color(.white))
+        case "wizard_hat":
+            var cone = Path()
+            cone.move(to: CGPoint(x: 72, y: 24))
+            cone.addQuadCurve(to: CGPoint(x: 104, y: -12), control: CGPoint(x: 86, y: 4))
+            cone.addLine(to: CGPoint(x: 102, y: 24))
+            cone.closeSubpath()
+            context.fill(cone, with: .color(Color(hex: 0x5F3DC4)))
+            context.fill(Path(ellipseIn: CGRect(x: 64, y: 19, width: 46, height: 9)), with: .color(Color(hex: 0x4C2E9E)))
+            for (x, y) in [(86.0, 12.0), (95.0, 2.0)] {
+                context.fill(Path(ellipseIn: CGRect(x: x - 1.8, y: y - 1.8, width: 3.6, height: 3.6)), with: .color(Color.sun))
+            }
+        case "crown":
+            var crown = Path()
+            crown.move(to: CGPoint(x: 74, y: 24))
+            for (x, y) in [(74.0, 8.0), (80, 16), (87, 4), (94, 16), (100, 8), (100, 24)] { crown.addLine(to: CGPoint(x: x, y: y)) }
+            crown.closeSubpath()
+            context.fill(crown, with: .color(Color(hex: 0xFCC419)))
+            context.fill(Path(CGRect(x: 74, y: 20, width: 26, height: 4)), with: .color(Color(hex: 0xE8A200)))
+            for (x, color) in [(80.0, 0xE03131), (87.0, 0x1C7ED6), (94.0, 0x2F9E44)] {
+                context.fill(Path(ellipseIn: CGRect(x: x - 1.8, y: 19.5, width: 3.6, height: 3.6)), with: .color(Color(hex: UInt32(color))))
+            }
         default:
             break
         }
@@ -432,6 +521,23 @@ enum LeonWear {
             chain.move(to: CGPoint(x: center.x + 9, y: center.y + 13))
             chain.addQuadCurve(to: CGPoint(x: 96, y: 76), control: CGPoint(x: 110, y: 66))
             context.stroke(chain, with: .color(Color(hex: 0xE8B923)), style: StrokeStyle(lineWidth: 1.4, lineCap: .round, dash: [2, 2]))
+        case "sunglasses":
+            context.fill(Path(ellipseIn: CGRect(x: center.x - 15, y: center.y - 12, width: 30, height: 24)), with: .color(dark.opacity(0.88)))
+            context.fill(Path(ellipseIn: CGRect(x: center.x - 9, y: center.y - 8, width: 8, height: 4)), with: .color(.white.opacity(0.35)))
+            var arm = Path()
+            arm.move(to: CGPoint(x: center.x - 15, y: center.y - 2))
+            arm.addLine(to: CGPoint(x: 64, y: 37))
+            context.stroke(arm, with: .color(dark), style: StrokeStyle(lineWidth: 2.4, lineCap: .round))
+        case "hero_mask":
+            var mask = Path(roundedRect: CGRect(x: 66, y: 30, width: 46, height: 19), cornerRadius: 9)
+            mask.addEllipse(in: CGRect(x: center.x - 10, y: center.y - 9, width: 20, height: 18))
+            context.fill(mask, with: .color(Color(hex: 0xE03131)), style: FillStyle(eoFill: true))
+            var tail = Path()
+            tail.move(to: CGPoint(x: 67, y: 38))
+            tail.addLine(to: CGPoint(x: 56, y: 32))
+            tail.addLine(to: CGPoint(x: 58, y: 44))
+            tail.closeSubpath()
+            context.fill(tail, with: .color(Color(hex: 0xC92A2A)))
         default:
             break
         }
@@ -462,12 +568,44 @@ enum LeonWear {
                 context.fill(wing, with: .color(Color(hex: 0x7048E8)))
             }
             context.fill(Path(ellipseIn: CGRect(x: knot.x - 3, y: knot.y - 3, width: 6, height: 6)), with: .color(Color(hex: 0x5F3DC4)))
+        case "medal":
+            var ribbon = Path()
+            ribbon.move(to: CGPoint(x: 70, y: 60))
+            ribbon.addLine(to: CGPoint(x: 82, y: 74))
+            ribbon.addLine(to: CGPoint(x: 94, y: 64))
+            context.stroke(ribbon, with: .color(Color(hex: 0x1C7ED6)), style: StrokeStyle(lineWidth: 4, lineJoin: .round))
+            context.fill(Path(ellipseIn: CGRect(x: 76, y: 71, width: 12, height: 12)), with: .color(Color(hex: 0xFCC419)))
+            context.fill(Path(ellipseIn: CGRect(x: 79, y: 74, width: 6, height: 6)), with: .color(Color(hex: 0xE8A200)))
+        case "flower_necklace":
+            for i in 0 ..< 6 {
+                let s = Double(i) / 5
+                let x = 64 + s * 32
+                let y = 58 + sin(s * .pi) * 13 + s * 6
+                let color = [0xF06595, 0xFFD43B, 0x74C0FC][i % 3]
+                for petal in 0 ..< 5 {
+                    let a = Double(petal) / 5 * 2 * .pi
+                    context.fill(Path(ellipseIn: CGRect(x: x + 2.3 * cos(a) - 2, y: y + 2.3 * sin(a) - 2, width: 4, height: 4)),
+                                 with: .color(Color(hex: UInt32(color))))
+                }
+                context.fill(Path(ellipseIn: CGRect(x: x - 1.3, y: y - 1.3, width: 2.6, height: 2.6)), with: .color(.white))
+            }
         default:
             break
         }
     }
 
     static func back(_ id: String?, in context: inout GraphicsContext, t: Double) {
+        if id == "wings" {
+            let flap = sin(t * 3) * 0.12
+            for (dx, alpha) in [(0.0, 0.95), (-10.0, 0.75)] {
+                let wing = Path(ellipseIn: CGRect(x: -26, y: -9, width: 34, height: 18))
+                    .applying(CGAffineTransform(rotationAngle: -0.7 + flap))
+                    .applying(CGAffineTransform(translationX: 48 + dx, y: 34))
+                context.fill(wing, with: .color(Color.white.opacity(alpha)))
+                context.stroke(wing, with: .color(Color(hex: 0xA5D8FF)), lineWidth: 1.5)
+            }
+            return
+        }
         guard id == "star_cape" else { return }
         var cape = Path()
         cape.move(to: CGPoint(x: 66, y: 40))
@@ -477,6 +615,137 @@ enum LeonWear {
         context.fill(cape, with: .color(Color(hex: 0x364FC7)))
         for (x, y) in [(30.0, 70.0), (44, 60), (40, 78), (22, 80), (54, 70)] {
             context.fill(Path(ellipseIn: CGRect(x: x - 1.6, y: y - 1.6, width: 3.2, height: 3.2)), with: .color(Color.sun))
+        }
+    }
+}
+
+/// Formes de Léon, débloquées par l'arbre : proportions du corps, crête, taches, œil, queue.
+struct LeonForm {
+    let body: CGRect
+    let crest: CGRect
+    let spots: [(Double, Double, Double)]
+    let eye: Double
+    let tail: Double
+    let halo: Bool
+
+    init(_ id: String?) {
+        switch id {
+        case "form_baby":
+            body = CGRect(x: 36, y: 46, width: 54, height: 36); crest = CGRect(x: 70, y: 20, width: 14, height: 12)
+            spots = []; eye = 1.22; tail = 0.65; halo = false
+        case "form_young":
+            body = CGRect(x: 29, y: 42, width: 63, height: 40); crest = CGRect(x: 66, y: 16, width: 20, height: 17)
+            spots = [(46, 49, 3.0)]; eye = 1.1; tail = 0.85; halo = false
+        case "form_sage":
+            body = CGRect(x: 24, y: 38, width: 68, height: 44); crest = CGRect(x: 63, y: 12, width: 26, height: 22)
+            spots = [(44, 46, 3.4), (55, 42, 2.8), (35, 54, 2.6), (50, 55, 2.2), (62, 48, 2.0)]; eye = 1; tail = 1.05; halo = true
+        default:
+            body = CGRect(x: 24, y: 38, width: 68, height: 44); crest = CGRect(x: 64, y: 14, width: 24, height: 20)
+            spots = [(44, 46, 3.4), (55, 42, 2.8), (35, 54, 2.6)]; eye = 1; tail = 1; halo = false
+        }
+    }
+}
+
+extension LeonWear {
+    /// Couronne de feuilles lumineuses derrière Léon (forme Sage).
+    static func halo(in context: inout GraphicsContext, t: Double) {
+        context.fill(Path(ellipseIn: CGRect(x: 40, y: 2, width: 90, height: 80)),
+                     with: .radialGradient(Gradient(colors: [Color(hex: 0xB2F2BB).opacity(0.55), .clear]),
+                                           center: CGPoint(x: 84, y: 42), startRadius: 10, endRadius: 46))
+        for i in 0 ..< 8 {
+            let angle = Double(i) / 8 * 2 * .pi + t * 0.3
+            let point = CGPoint(x: 84 + 40 * cos(angle), y: 42 + 34 * sin(angle))
+            let leaf = Path(ellipseIn: CGRect(x: -4, y: -2, width: 8, height: 4))
+                .applying(CGAffineTransform(rotationAngle: angle))
+                .applying(CGAffineTransform(translationX: point.x, y: point.y))
+            context.fill(leaf, with: .color(Color(hex: 0x51CF66).opacity(0.8)))
+        }
+    }
+
+    /// Motif sur la peau (corps et tête), découpé à la forme de Léon.
+    static func pattern(_ id: String?, body: Path, in context: inout GraphicsContext, t: Double) {
+        guard let id else { return }
+        context.drawLayer { layer in
+            layer.clip(to: body)
+            switch id {
+            case "pattern_stripes":
+                for x in stride(from: 10.0, through: 130, by: 12) {
+                    var band = Path()
+                    band.move(to: CGPoint(x: x, y: 10))
+                    band.addLine(to: CGPoint(x: x - 20, y: 90))
+                    layer.stroke(band, with: .color(.white.opacity(0.24)), lineWidth: 4.5)
+                }
+            case "pattern_dots":
+                for row in 0 ..< 8 {
+                    for col in 0 ..< 12 {
+                        let x = Double(col) * 10 + (row.isMultiple(of: 2) ? 0 : 5) + 20
+                        let y = Double(row) * 10 + 18
+                        layer.fill(Path(ellipseIn: CGRect(x: x - 2, y: y - 2, width: 4, height: 4)), with: .color(.white.opacity(0.32)))
+                    }
+                }
+            case "pattern_stars":
+                for (i, (x, y)) in [(34.0, 50.0), (50, 44), (62, 60), (44, 66), (78, 32), (96, 58), (70, 44)].enumerated() {
+                    let r = 3.2 + Double(i % 2)
+                    var star = Path()
+                    for k in 0 ..< 10 {
+                        let radius = k.isMultiple(of: 2) ? r : r * 0.45
+                        let angle = -Double.pi / 2 + Double(k) * .pi / 5
+                        let point = CGPoint(x: x + radius * cos(angle), y: y + radius * sin(angle))
+                        if k == 0 { star.move(to: point) } else { star.addLine(to: point) }
+                    }
+                    star.closeSubpath()
+                    layer.fill(star, with: .color(Color.sun.opacity(0.85)))
+                }
+            case "pattern_rainbow":
+                let colors = (0 ..< 7).map { Color(hue: (Double($0) / 7 + t * 0.05).truncatingRemainder(dividingBy: 1), saturation: 0.55, brightness: 1) }
+                layer.fill(Path(CGRect(x: 0, y: 0, width: 128, height: 96)),
+                           with: .linearGradient(Gradient(colors: colors), startPoint: CGPoint(x: 20, y: 20), endPoint: CGPoint(x: 110, y: 80)))
+                layer.fill(Path(CGRect(x: 0, y: 0, width: 128, height: 96)), with: .color(.white.opacity(0.1)))
+            default:
+                break
+            }
+        }
+    }
+
+    /// Objets de dos portés par-dessus le corps (sac à dos).
+    static func backFront(_ id: String?, in context: inout GraphicsContext) {
+        guard id == "backpack" else { return }
+        let bag = Path(roundedRect: CGRect(x: 30, y: 40, width: 22, height: 26), cornerRadius: 7)
+        context.fill(bag, with: .color(Color(hex: 0xFD7E14)))
+        context.fill(Path(roundedRect: CGRect(x: 33, y: 52, width: 16, height: 10), cornerRadius: 4), with: .color(Color(hex: 0xE8590C)))
+        var strap = Path()
+        strap.move(to: CGPoint(x: 50, y: 44))
+        strap.addQuadCurve(to: CGPoint(x: 58, y: 66), control: CGPoint(x: 60, y: 50))
+        context.stroke(strap, with: .color(Color(hex: 0xD9480F)), lineWidth: 3)
+    }
+
+    /// Effets autour de Léon : aura étoilée, bulles.
+    static func effect(_ id: String?, in context: inout GraphicsContext, t: Double) {
+        switch id {
+        case "aura_stars":
+            for i in 0 ..< 6 {
+                let angle = Double(i) / 6 * 2 * .pi + t * 0.8
+                let point = CGPoint(x: 64 + 58 * cos(angle), y: 48 + 40 * sin(angle))
+                let r = 3 + 1.2 * sin(t * 3 + Double(i))
+                var star = Path()
+                star.move(to: CGPoint(x: point.x, y: point.y - r))
+                star.addQuadCurve(to: CGPoint(x: point.x + r, y: point.y), control: point)
+                star.addQuadCurve(to: CGPoint(x: point.x, y: point.y + r), control: point)
+                star.addQuadCurve(to: CGPoint(x: point.x - r, y: point.y), control: point)
+                star.addQuadCurve(to: CGPoint(x: point.x, y: point.y - r), control: point)
+                context.fill(star, with: .color(Color.sun))
+            }
+        case "bubbles":
+            for i in 0 ..< 5 {
+                let phase = (t * 0.25 + Double(i) / 5).truncatingRemainder(dividingBy: 1)
+                let x = 104 + Double(i % 3) * 7 + sin(t * 2 + Double(i)) * 3
+                let y = 60 - phase * 60
+                let r = 2.5 + Double(i % 3)
+                context.stroke(Path(ellipseIn: CGRect(x: x - r, y: y - r, width: 2 * r, height: 2 * r)),
+                               with: .color(Color(hex: 0x74C0FC).opacity(1 - phase)), lineWidth: 1.4)
+            }
+        default:
+            break
         }
     }
 }

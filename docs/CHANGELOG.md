@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.14.0 — Léon : boutique, formes, cabine d'essayage
+- **Boutique de Léon** (graines uniquement, jamais d'argent réel) : 12 couleurs de peau (200–600), 4 motifs (rayures, pois, étoiles, arc-en-ciel ; 800–1 500), 12 objets (casquette, bonnet, chapeau de magicien, couronne, lunettes de soleil, masque de héros, médaille, collier de fleurs, sac à dos, ailes, aura étoilée, bulles ; 300–1 200). **Vitrine du jour** : 3 articles par joueur, le premier à −30 %. Les objets des coffres et des fruits ne sont jamais vendus.
+- **Cabine d'essayage** : chaque article s'essaie sur Léon avant l'achat ; acheté, il est porté aussitôt.
+- **Formes de Léon** liées à l'arbre : Bébé (départ), Jeune (Jeune plant), Adulte (Arbre), Sage (en fleurs, feuilles lumineuses). La plus avancée s'affiche d'office ; on peut revenir à une ancienne.
+- **« Voir toutes les étapes »** : frise de l'arbre (6 étapes + 4 fruits) avec les seuils, les récompenses et la forme de Léon, en silhouette tant qu'elles ne sont pas atteintes.
+- **Garde-robe** : forme, peau, motif, chapeau, yeux, cou, dos, effet ; bouton « Au hasard ».
+- Serveur : migration 0024 (`shop_overview`, `shop_buy`, formes), tests `97_leon_shop.sql`.
+
 ## 0.13.0 — lot 5 : ligues, onboarding, finitions
 - **Ligues** : explication en 4 étapes illustrées (au premier passage, puis bouton « ? »), fin de période en clair (« Se termine dimanche 7 mars à minuit · dans 3 jours »), coffres du podium affichés à côté des 3 premiers, carte « Tu as fini 2e : coffre en argent ! » sur la période précédente.
 - **Coffres du podium** (serveur, migration 0023) : or / argent / bois pour les 3 premiers à la fin de chaque période, si la ligue compte au moins 4 joueurs actifs et le joueur au moins 3 jours joués (10 pour un mois). Tâche planifiée horaire, versement de secours à l'ouverture des ligues, un seul coffre par ligue et par période.

@@ -148,7 +148,11 @@ final class AppModel {
     }
 
     /// Tenue de Léon (emplacement → objet), portée partout où il apparaît.
-    var outfit: LeonOutfit { LeonOutfit(progression?.outfit ?? [:]) }
+    var outfit: LeonOutfit {
+        var outfit = LeonOutfit(progression?.outfit ?? [:])
+        if outfit.form == nil { outfit.form = progression?.bestForm }
+        return outfit
+    }
 
     func refreshDaily() async {
         guard let status = try? await service.dailyStatus() else { return }
@@ -313,6 +317,8 @@ struct UnavailableService: GameService {
     func feedTree(amount: Int, clientId: UUID) async throws -> TreeFeedResult { try fail() }
     func equip(slot: String, item: String?) async throws -> [String: String] { try fail() }
     func trophies() async throws -> TrophiesOverview { try fail() }
+    func shop() async throws -> ShopOverview { try fail() }
+    func buy(_ item: String) async throws -> ShopPurchase { try fail() }
     func friends() async throws -> FriendsOverview { try fail() }
     func searchHandles(_ query: String) async throws -> [HandleSearchResult] { try fail() }
     func requestFriend(handle: String) async throws -> FriendRequestResult { try fail() }

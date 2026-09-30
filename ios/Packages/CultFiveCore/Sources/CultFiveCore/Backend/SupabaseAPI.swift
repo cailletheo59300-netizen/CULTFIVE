@@ -99,6 +99,7 @@ public enum BackendError: Error, Equatable, LocalizedError {
         case "tree_complete": return "L'arbre de Léon est complet."
         case "chest_not_found": return "Coffre introuvable."
         case "item_not_owned": return "Tu n'as pas encore cet objet."
+        case "item_not_for_sale": return "Cet objet ne se vend pas : il se gagne."
         case "league_not_found": return "Ligue introuvable."
         case "league_full": return "Cette ligue est complète."
         case "too_many_leagues": return "Tu fais déjà partie de 10 ligues."

@@ -11,6 +11,8 @@ struct LeonTreeScreen: View {
     @State private var floating: Int?
     @State private var news: [String] = []
     @State private var error: String?
+    @State private var showStages = false
+    @State private var showShop = false
 
     private var progression: ProgressionOverview? { app.progression }
     private var seeds: Int { app.profile?.seeds ?? progression?.seeds ?? 0 }
@@ -21,6 +23,11 @@ struct LeonTreeScreen: View {
                 if let progression {
                     scene(progression.tree)
                     gauge(progression.tree)
+                    Button { showStages = true } label: {
+                        Label("Voir toutes les étapes", systemImage: "list.bullet")
+                            .font(.system(.subheadline, design: .rounded).weight(.bold))
+                    }
+                    .buttonStyle(TextLinkStyle(color: .brand))
                     feedButtons(progression.tree)
                     ForEach(news, id: \.self) { line in
                         CelebrationCard(kind: .levelUp, title: line)
@@ -33,6 +40,7 @@ struct LeonTreeScreen: View {
                         }
                     }
                     tickets(progression.tickets)
+                    shopCard
                     wardrobe(progression.items)
                 } else {
                     ProgressView().frame(maxWidth: .infinity, minHeight: 300)
@@ -50,6 +58,32 @@ struct LeonTreeScreen: View {
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(Color.paper, for: .navigationBar)
         .task { await app.refreshProfile() }
+        .sheet(isPresented: $showStages) {
+            if let tree = progression?.tree { TreeStagesSheet(tree: tree) }
+        }
+        .navigationDestination(isPresented: $showShop) { LeonShopScreen() }
+    }
+
+    private var shopCard: some View {
+        Button { showShop = true } label: {
+            HStack(spacing: Space.m) {
+                HStack(spacing: -10) {
+                    ForEach(["skin_mint", "skin_coral", "skin_ocean"], id: \.self) { skin in
+                        Leon(color: .brand, pose: .rest, curl: 0.4, animated: false, outfit: LeonOutfit(skin: skin)).frame(width: 36)
+                    }
+                }
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Boutique de Léon").font(.cfTitle3).foregroundStyle(Color.ink)
+                    Text("Couleurs, motifs, objets : à essayer avant d'acheter, en \(Brand.currencyPlural).")
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
+            }
+            .popCard(padding: 14)
+        }
+        .buttonStyle(.row)
     }
 
     // MARK: Arbre
@@ -184,7 +218,8 @@ struct LeonTreeScreen: View {
     }
 
     private static let slots: [(id: String, name: String)] = [
-        ("hat", "Sur la tête"), ("eyes", "Les yeux"), ("neck", "Le cou"), ("back", "Le dos"), ("skin", "La peau"),
+        ("form", "La forme de Léon"), ("skin", "La peau"), ("pattern", "Le motif"), ("hat", "Sur la tête"), ("eyes", "Les yeux"),
+        ("neck", "Le cou"), ("back", "Le dos"), ("effect", "L'effet"),
     ]
 
     private func wardrobe(_ items: [LeonItem]) -> some View {
@@ -194,10 +229,23 @@ struct LeonTreeScreen: View {
                 Spacer()
                 Text("\(items.filter(\.owned).count)/\(items.count)").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
             }
-            Text("Touche un objet pour que Léon le porte partout dans l'app.")
-                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            HStack {
+                Text("Touche un objet pour que Léon le porte partout dans l'app.")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                Spacer(minLength: Space.s)
+                Button { Task { await randomOutfit(items) } } label: {
+                    Label("Au hasard", systemImage: "dice.fill")
+                        .font(.system(.footnote, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color.brand)
+                        .padding(.horizontal, 12).frame(minHeight: 36)
+                        .background(Color.brand.opacity(0.12), in: Capsule())
+                }
+                .buttonStyle(.row)
+                .accessibilityLabel("Tenue au hasard")
+            }
             ForEach(Self.slots, id: \.id) { slot in
-                let slotItems = items.filter { $0.slot == slot.id }
+                // Garde-robe : ce qu'on possède, et ce qui se gagne (coffres, fruits, formes) ; le reste est en boutique.
+                let slotItems = items.filter { $0.slot == slot.id && ($0.owned || $0.rarity != "shop") }
                 if !slotItems.isEmpty {
                     VStack(alignment: .leading, spacing: Space.s) {
                         Text(slot.name).labelCaps()
@@ -224,29 +272,52 @@ struct LeonTreeScreen: View {
                     .font(.system(.caption, design: .rounded).weight(.bold))
                     .foregroundStyle(item.owned ? Color.ink : Color.inkSoft)
                     .lineLimit(1).minimumScaleFactor(0.7)
-                Text(item.owned ? (item.equipped ? "Porté" : "Porter") : (item.rarity == "fruit" ? "Fruit de l'arbre" : "Dans les coffres"))
+                Text(item.owned ? (worn(item) ? "Porté" : "Porter") : lockedText(item))
                     .font(.system(.caption2, design: .rounded).weight(.heavy))
-                    .foregroundStyle(item.equipped ? Color.brand : Color.inkSoft)
+                    .foregroundStyle(worn(item) ? Color.brand : Color.inkSoft)
+                    .lineLimit(1).minimumScaleFactor(0.7)
             }
             .padding(8)
             .frame(maxWidth: .infinity)
             .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
             .overlay {
                 RoundedRectangle(cornerRadius: Radius.s, style: .continuous)
-                    .strokeBorder(item.equipped ? Color.brand : .clear, lineWidth: 2)
+                    .strokeBorder(worn(item) ? Color.brand : .clear, lineWidth: 2)
             }
         }
         .buttonStyle(.row)
         .disabled(!item.owned)
         .accessibilityLabel(item.name)
-        .accessibilityValue(item.owned ? (item.equipped ? "porté" : "possédé") : (item.rarity == "fruit" ? "fruit de l'arbre, à gagner" : "à gagner dans les coffres"))
+        .accessibilityValue(item.owned ? (worn(item) ? "porté" : "possédé") : lockedText(item))
+    }
+
+    /// Porté à l'écran (la forme la plus avancée compte comme portée quand aucune n'est choisie).
+    private func worn(_ item: LeonItem) -> Bool { outfit.item(in: item.slot) == item.id }
+
+    private func lockedText(_ item: LeonItem) -> String {
+        switch item.rarity {
+        case "fruit": return "Fruit de l'arbre"
+        case "tree": return "Arbre : \(TreeState.stageName(item.unlockStage ?? 1).lowercased())"
+        default: return "Dans les coffres"
+        }
+    }
+
+    /// Tenue au hasard parmi ce qu'on possède (la forme ne change pas).
+    private func randomOutfit(_ items: [LeonItem]) async {
+        Haptics.selection()
+        for slot in ["skin", "pattern", "hat", "eyes", "neck", "back", "effect"] {
+            let owned = items.filter { $0.slot == slot && $0.owned }
+            let pick = Bool.random() || slot == "skin" ? owned.randomElement()?.id : nil
+            _ = try? await app.service.equip(slot: slot, item: pick)
+        }
+        await app.refreshProgression()
     }
 
     private func toggle(_ item: LeonItem) async {
         guard item.owned else { return }
         Haptics.selection()
         do {
-            _ = try await app.service.equip(slot: item.slot, item: item.equipped ? nil : item.id)
+            _ = try await app.service.equip(slot: item.slot, item: item.equipped && item.slot != "form" ? nil : item.id)
             await app.refreshProgression()
         } catch {
             self.error = (error as? LocalizedError)?.errorDescription
