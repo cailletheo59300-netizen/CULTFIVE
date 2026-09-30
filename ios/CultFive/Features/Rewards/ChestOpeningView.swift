@@ -373,23 +373,29 @@ private struct LightRays: View {
 
     var body: some View {
         TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion)) { timeline in
-            let t = timeline.date.timeIntervalSinceReferenceDate
             Canvas { context, size in
-                let center = CGPoint(x: size.width / 2, y: size.height * 0.45)
-                let radius = max(size.width, size.height)
-                let count = 12
-                for i in 0 ..< count {
-                    let a0 = Double(i) / Double(count) * 2 * .pi + t * 0.25
-                    var ray = Path()
-                    ray.move(to: center)
-                    ray.addLine(to: CGPoint(x: center.x + radius * cos(a0), y: center.y + radius * sin(a0)))
-                    ray.addLine(to: CGPoint(x: center.x + radius * cos(a0 + 0.16), y: center.y + radius * sin(a0 + 0.16)))
-                    ray.closeSubpath()
-                    context.fill(ray, with: .radialGradient(Gradient(colors: [color.opacity(0.35), color.opacity(0)]),
-                                                             center: center, startRadius: 20, endRadius: radius * 0.6))
-                }
+                LightRays.draw(in: &context, size: size, time: timeline.date.timeIntervalSinceReferenceDate, color: color)
             }
         }
         .accessibilityHidden(true)
+    }
+
+    private static func draw(in context: inout GraphicsContext, size: CGSize, time: Double, color: Color) {
+        let center = CGPoint(x: size.width / 2, y: size.height * 0.45)
+        let radius: Double = max(Double(size.width), Double(size.height))
+        let gradient = Gradient(colors: [color.opacity(0.35), color.opacity(0)])
+        let shading = GraphicsContext.Shading.radialGradient(gradient, center: center, startRadius: 20, endRadius: radius * 0.6)
+        for i in 0 ..< 12 {
+            let start: Double = Double(i) / 12 * 2 * Double.pi + time * 0.25
+            let end: Double = start + 0.16
+            let p1 = CGPoint(x: center.x + radius * cos(start), y: center.y + radius * sin(start))
+            let p2 = CGPoint(x: center.x + radius * cos(end), y: center.y + radius * sin(end))
+            var ray = Path()
+            ray.move(to: center)
+            ray.addLine(to: p1)
+            ray.addLine(to: p2)
+            ray.closeSubpath()
+            context.fill(ray, with: shading)
+        }
     }
 }
