@@ -24,6 +24,8 @@ final class DailySessionModel {
     /// « Question suivante » touchée : la question s'efface aussitôt, la suivante arrive du serveur.
     /// Le chrono officiel ne démarre qu'à l'envoi par le serveur (pas de préchargement : aucune lecture en avance possible).
     private(set) var advancing = false
+    /// Résultat préparé pendant la lecture de la dernière correction : « Voir mon résultat » s'affiche sans attente.
+    private var preparedResult: Task<DailyResult?, Never>?
 
     private let service: GameService
     private var runId: UUID?
@@ -110,6 +112,10 @@ final class DailySessionModel {
             if results.count < position { results.append(correct) }
             phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
             pendingGiven = nil
+            if verdict.finished == true || position >= 5 {
+                let service = service
+                preparedResult = Task { try? await service.dailyResult(date: nil) }
+            }
         } catch {
             isRetrying = true
         }
@@ -128,6 +134,12 @@ final class DailySessionModel {
     }
 
     private func showResult() async {
+        if let prepared = await preparedResult?.value {
+            preparedResult = nil
+            results = prepared.answers.map(\.isCorrect)
+            stage = .finished(prepared)
+            return
+        }
         stage = .loading
         do {
             let result = try await service.dailyResult(date: nil)
