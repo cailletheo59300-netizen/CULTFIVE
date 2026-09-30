@@ -97,6 +97,7 @@ struct LeonTreeScreen: View {
     private func scene(_ tree: TreeState) -> some View {
         ZStack(alignment: .bottom) {
             LinearGradient(colors: [Color(hex: 0xDFF1FF), Color(hex: 0xF3FAFF)], startPoint: .top, endPoint: .bottom)
+            SkyDecor().allowsHitTesting(false)
             VStack(spacing: 0) {
                 Rectangle().fill(Color(hex: 0x69DB7C)).frame(height: 10)
                 Rectangle().fill(Color(hex: 0xA47551)).frame(height: 26)
@@ -245,4 +246,39 @@ struct LeonTreeScreen: View {
         }
     }
 
+}
+
+/// Le ciel au-dessus de l'arbre : un soleil et deux nuages qui dérivent doucement (l'arbre remplira la place en grandissant).
+private struct SkyDecor: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var body: some View {
+        TimelineView(.animation(minimumInterval: 1 / 20, paused: reduceMotion)) { timeline in
+            let t = reduceMotion ? 0 : timeline.date.timeIntervalSinceReferenceDate
+            GeometryReader { geo in
+                let w = geo.size.width
+                Circle().fill(Color.sun.opacity(0.9)).frame(width: 44, height: 44)
+                    .shadow(color: Color.sun.opacity(0.6), radius: 14)
+                    .position(x: w - 46, y: 42)
+                cloud.position(x: drift(t, speed: 6, offset: 0, width: w), y: 58)
+                cloud.scaleEffect(0.7).position(x: drift(t, speed: 4, offset: w * 0.55, width: w), y: 100)
+            }
+        }
+        .accessibilityHidden(true)
+    }
+
+    private var cloud: some View {
+        ZStack {
+            Capsule().fill(.white).frame(width: 70, height: 22).offset(y: 6)
+            Circle().fill(.white).frame(width: 30, height: 30).offset(x: -12, y: -2)
+            Circle().fill(.white).frame(width: 38, height: 38).offset(x: 10, y: -6)
+        }
+        .opacity(0.9)
+    }
+
+    /// Les nuages traversent le ciel lentement, puis reviennent par la gauche.
+    private func drift(_ t: Double, speed: Double, offset: Double, width: Double) -> Double {
+        let span = width + 120
+        return (t * speed + offset).truncatingRemainder(dividingBy: span) - 60
+    }
 }
