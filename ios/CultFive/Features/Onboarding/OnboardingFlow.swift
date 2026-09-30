@@ -30,7 +30,7 @@ struct OnboardingFlow: View {
             switch step {
             case .welcome: welcome
             case .intro: framed { intro }
-            case .questions: questions
+            case .questions: VStack(spacing: 0) { questionDashes; questions }
             case .result: framed(back: false) { resultStep }
             case .interests: framed { interestsStep }
             case .handle: framed { HandleStep { step = app.isAnonymous ? .account : .gift; Task { await prepareGift() } } }
@@ -180,6 +180,25 @@ struct OnboardingFlow: View {
     }
 
     // MARK: 3. Trois vraies questions
+
+    /// Trois tirets en haut : on voit tout de suite que ce sera court.
+    private var questionDashes: some View {
+        let total = max(pack?.questions.count ?? 3, 1)
+        let done = index + (phase.isAnswering ? 0 : 1)
+        return HStack(spacing: 6) {
+            ForEach(0 ..< total, id: \.self) { i in
+                Capsule()
+                    .fill(i < done ? Color.brand : (i == index ? Color.brand.opacity(0.35) : Color.hairline))
+                    .frame(height: 6)
+            }
+        }
+        .frame(maxWidth: 160)
+        .padding(.top, Space.s)
+        .padding(.bottom, 2)
+        .animation(Motion.standard, value: done)
+        .accessibilityElement()
+        .accessibilityLabel("Question \(min(index + 1, total)) sur \(total)")
+    }
 
     @ViewBuilder private var questions: some View {
         if let pack, pack.questions.indices.contains(index) {
@@ -408,7 +427,7 @@ struct OnboardingFlow: View {
             Spacer()
             Leon(color: .brand, pose: .proud).frame(width: 150)
             Text("Garde ta progression").font(.cfDisplay)
-            Text("Avec un compte, ta série, tes amis, tes coffres et l'arbre de Léon te suivent, même si tu changes d'iPhone. Ça se fait en un geste, et tu peux aussi le faire plus tard.")
+            Text("Avec un compte, tu gardes ta série, tes amis, tes coffres et l'arbre de Léon. Ça se fait en un geste, et tu peux aussi le faire plus tard.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 .fixedSize(horizontal: false, vertical: true)
             Spacer()
