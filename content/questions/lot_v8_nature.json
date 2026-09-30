@@ -1,0 +1,1625 @@
+[
+ {
+  "key": "nature-501",
+  "concept": "nature.animals.ephemere_vie",
+  "label": "Éphémère",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de temps vit un insecte éphémère une fois adulte ?",
+  "options": [
+   "De quelques heures à un jour ou deux*",
+   "Environ un mois",
+   "Un an",
+   "Plusieurs années"
+  ],
+  "explanation": "Il passe jusqu'à deux ans sous l'eau à l'état de larve. Adulte, il n'a même pas de bouche : il vit juste le temps de se reproduire.",
+  "hint": "Son nom le dit."
+ },
+ {
+  "key": "nature-502",
+  "concept": "nature.animals.sterne_arctique",
+  "label": "Migration record",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel oiseau réalise la plus longue migration du monde, d'un pôle à l'autre ?",
+  "options": [
+   "La sterne arctique*",
+   "L'hirondelle",
+   "La cigogne blanche",
+   "L'albatros hurleur"
+  ],
+  "explanation": "Jusqu'à 70 000 km par an entre l'Arctique et l'Antarctique : elle vit dans un été presque permanent.",
+  "hint": "Elle vit deux étés par an."
+ },
+ {
+  "key": "nature-503",
+  "concept": "nature.animals.ovipare",
+  "label": "Ovipare",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que signifie « ovipare » ?",
+  "options": [
+   "Qui pond des œufs*",
+   "Qui mange des œufs",
+   "Qui vit la nuit",
+   "Qui mange de tout"
+  ],
+  "explanation": "Oiseaux, la plupart des reptiles et des poissons. Les animaux qui mettent au monde des petits sont vivipares.",
+  "hint": "« Ovo » veut dire œuf."
+ },
+ {
+  "key": "nature-504",
+  "concept": "nature.animals.omnivore",
+  "label": "Omnivore",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment appelle-t-on un animal qui mange à la fois des plantes et des animaux ?",
+  "options": [
+   "Omnivore*",
+   "Herbivore",
+   "Carnivore",
+   "Insectivore"
+  ],
+  "explanation": "L'ours, le sanglier, le corbeau… et l'être humain.",
+  "hint": "« Omni » veut dire tout."
+ },
+ {
+  "key": "nature-505",
+  "concept": "nature.animals.femelle_cerf",
+  "label": "Biche",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle la femelle du cerf ?",
+  "options": [
+   "La biche*",
+   "La chevrette",
+   "La laie",
+   "L'hase"
+  ],
+  "explanation": "Le petit s'appelle le faon. La chevrette est la femelle du chevreuil.",
+  "hint": "Bambi en est le petit."
+ },
+ {
+  "key": "nature-506",
+  "concept": "nature.animals.femelle_sanglier",
+  "label": "Laie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle la femelle du sanglier ?",
+  "options": [
+   "La laie*",
+   "La truie",
+   "La biche",
+   "La hase"
+  ],
+  "explanation": "Ses petits, rayés, s'appellent des marcassins.",
+  "hint": "Un mot de quatre lettres."
+ },
+ {
+  "key": "nature-507",
+  "concept": "nature.animals.male_chevre",
+  "label": "Bouc",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le mâle de la chèvre ?",
+  "options": [
+   "Le bouc*",
+   "Le bélier",
+   "Le chevreau",
+   "Le taureau"
+  ],
+  "explanation": "Le bélier est le mâle de la brebis, le chevreau le petit de la chèvre.",
+  "hint": "Il a souvent une barbiche."
+ },
+ {
+  "key": "nature-508",
+  "concept": "nature.animals.poisson_zebre_coeur",
+  "label": "Poisson-zèbre",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel petit poisson peut régénérer une partie de son cœur abîmé ?",
+  "options": [
+   "Le poisson-zèbre*",
+   "Le poisson rouge",
+   "Le saumon",
+   "Le requin"
+  ],
+  "explanation": "Les chercheurs l'étudient pour comprendre comment réparer le cœur humain après un infarctus.",
+  "hint": "Un poisson rayé d'aquarium."
+ },
+ {
+  "key": "nature-509",
+  "concept": "nature.animals.baleine_boreale",
+  "label": "Longévité record",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel mammifère peut vivre plus de 200 ans ?",
+  "options": [
+   "La baleine boréale*",
+   "L'éléphant d'Afrique",
+   "Le chimpanzé",
+   "L'orque"
+  ],
+  "explanation": "On a retrouvé dans certaines des pointes de harpon du XIXe siècle. C'est le mammifère le plus vieux connu.",
+  "hint": "Elle vit dans les eaux arctiques."
+ },
+ {
+  "key": "nature-510",
+  "concept": "nature.animals.tortue_geante",
+  "label": "Longévité",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel animal terrestre peut vivre le plus longtemps ?",
+  "options": [
+   "La tortue géante*",
+   "L'éléphant",
+   "Le perroquet",
+   "Le cheval"
+  ],
+  "explanation": "Jonathan, une tortue des Seychelles, aurait plus de 190 ans.",
+  "hint": "Elle se déplace lentement."
+ },
+ {
+  "key": "nature-511",
+  "concept": "nature.animals.jonathan_tortue",
+  "label": "Jonathan",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Sur quelle île vit Jonathan, la tortue la plus âgée du monde, née vers 1832 ?",
+  "options": [
+   "Sainte-Hélène*",
+   "Madagascar",
+   "Les Galápagos",
+   "La Réunion"
+  ],
+  "explanation": "Il y vit dans le jardin du gouverneur, sur l'île où Napoléon fut exilé.",
+  "hint": "L'île de l'exil de Napoléon."
+ },
+ {
+  "key": "nature-512",
+  "concept": "nature.animals.plus_petit_oiseau",
+  "label": "Plus petit oiseau",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le plus petit oiseau du monde ?",
+  "options": [
+   "Le colibri d'Elena*",
+   "Le roitelet",
+   "La mésange",
+   "Le moineau"
+  ],
+  "explanation": "Cet oiseau-mouche de Cuba mesure environ 5 cm et pèse moins de 2 grammes.",
+  "hint": "Un oiseau-mouche de Cuba."
+ },
+ {
+  "key": "nature-513",
+  "concept": "nature.animals.perroquet_voix",
+  "label": "Parler",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel oiseau est capable d'imiter la voix humaine ?",
+  "options": [
+   "Le perroquet*",
+   "Le moineau",
+   "Le pigeon",
+   "Le hibou"
+  ],
+  "explanation": "Le perroquet gris du Gabon peut apprendre des centaines de mots.",
+  "hint": "Un oiseau coloré des tropiques."
+ },
+ {
+  "key": "nature-514",
+  "concept": "nature.animals.oeuf_autruche",
+  "label": "Plus gros œuf",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel oiseau pond les plus gros œufs ?",
+  "options": [
+   "L'autruche*",
+   "L'aigle royal",
+   "Le cygne",
+   "L'émeu"
+  ],
+  "explanation": "Un œuf d'autruche pèse environ 1,5 kg, autant qu'une vingtaine d'œufs de poule.",
+  "hint": "Le plus grand oiseau."
+ },
+ {
+  "key": "nature-515",
+  "concept": "nature.animals.elephant_saut",
+  "label": "Sauter",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel mammifère est incapable de sauter ?",
+  "options": [
+   "L'éléphant*",
+   "Le kangourou",
+   "Le cheval",
+   "Le chat"
+  ],
+  "explanation": "Il ne peut pas décoller ses quatre pattes du sol en même temps : trop lourd, et des os des pattes peu souples.",
+  "hint": "Le plus lourd des animaux terrestres."
+ },
+ {
+  "key": "nature-516",
+  "concept": "nature.animals.vache_incisives",
+  "label": "Dents de la vache",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "La vache n'a pas d'incisives sur la mâchoire du haut.",
+  "answer": true,
+  "explanation": "Vrai : elle a un bourrelet dur à la place. Elle arrache l'herbe en la coinçant entre sa langue et ses incisives du bas."
+ },
+ {
+  "key": "nature-517",
+  "concept": "nature.animals.bois_cerf",
+  "label": "Bois du cerf",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le cerf perd ses bois et en refait de nouveaux chaque année.",
+  "answer": true,
+  "explanation": "Oui : ils tombent à la fin de l'hiver et repoussent, recouverts d'une peau appelée velours. Ce sont des os, pas des cornes."
+ },
+ {
+  "key": "nature-518",
+  "concept": "nature.animals.memoire_poisson_rouge",
+  "label": "Poisson rouge",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le poisson rouge a une mémoire de trois secondes.",
+  "answer": false,
+  "explanation": "Faux : il peut retenir des informations pendant des mois et même apprendre des tours."
+ },
+ {
+  "key": "nature-519",
+  "concept": "nature.animals.autruche_tete",
+  "label": "Autruche",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "L'autruche enfouit sa tête dans le sable quand elle a peur.",
+  "answer": false,
+  "explanation": "Faux : elle s'aplatit au sol ou s'enfuit à plus de 60 km/h. Vue de loin, elle semble avoir la tête enterrée."
+ },
+ {
+  "key": "nature-520",
+  "concept": "nature.animals.taureau_rouge",
+  "label": "Taureau et rouge",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le taureau charge parce que la couleur rouge l'énerve.",
+  "answer": false,
+  "explanation": "Faux : il distingue mal le rouge. C'est le mouvement de la cape qui déclenche la charge."
+ },
+ {
+  "key": "nature-521",
+  "concept": "nature.animals.morsure_crocodile",
+  "label": "Morsure la plus puissante",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel animal a la morsure la plus puissante jamais mesurée ?",
+  "options": [
+   "Le crocodile marin*",
+   "Le requin blanc",
+   "Le lion",
+   "L'hippopotame"
+  ],
+  "explanation": "Plus de 16 000 newtons, environ vingt fois une morsure humaine.",
+  "hint": "Un reptile d'Asie et d'Australie."
+ },
+ {
+  "key": "nature-522",
+  "concept": "nature.animals.python_reticule",
+  "label": "Plus long serpent",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel est le plus long serpent du monde ?",
+  "options": [
+   "Le python réticulé*",
+   "L'anaconda vert",
+   "Le cobra royal",
+   "Le boa constricteur"
+  ],
+  "explanation": "Il dépasse parfois 7 mètres. L'anaconda est plus lourd, mais plus court.",
+  "hint": "Un python d'Asie du Sud-Est."
+ },
+ {
+  "key": "nature-523",
+  "concept": "nature.animals.taipan",
+  "label": "Serpent venimeux",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel serpent terrestre a le venin le plus puissant ?",
+  "options": [
+   "Le taïpan du désert*",
+   "Le cobra royal",
+   "La vipère aspic",
+   "Le mamba noir"
+  ],
+  "explanation": "Il vit en Australie, dans des zones presque désertes, et mord très rarement l'homme.",
+  "hint": "Un serpent australien."
+ },
+ {
+  "key": "nature-524",
+  "concept": "nature.animals.ver_a_soie",
+  "label": "Soie",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel animal produit la soie utilisée pour les tissus ?",
+  "options": [
+   "La chenille du bombyx, le « ver à soie »*",
+   "L'araignée des jardins",
+   "La guêpe",
+   "La fourmi tisserande"
+  ],
+  "explanation": "Elle fabrique un cocon d'un seul fil pouvant mesurer plus de 1 km. La Chine l'élève depuis des millénaires.",
+  "hint": "On l'appelle un ver, mais c'est une chenille."
+ },
+ {
+  "key": "nature-525",
+  "concept": "nature.animals.ailes_abeille",
+  "label": "Ailes de l'abeille",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien d'ailes a une abeille ?",
+  "answer": 4,
+  "explanation": "Deux paires, accrochées ensemble en vol par de petits crochets : on croit souvent n'en voir que deux.",
+  "hint": "Deux paires."
+ },
+ {
+  "key": "nature-526",
+  "concept": "nature.animals.fourmis_pheromones",
+  "label": "Fourmis",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment les fourmis se transmettent-elles surtout les informations ?",
+  "options": [
+   "Par des signaux chimiques, les phéromones*",
+   "Par des sons aigus",
+   "Par des couleurs",
+   "Par la vue"
+  ],
+  "explanation": "Une fourmi qui trouve de la nourriture laisse une piste odorante que les autres suivent.",
+  "hint": "Une question d'odeur."
+ },
+ {
+  "key": "nature-527",
+  "concept": "nature.animals.luciole",
+  "label": "Lumière d'été",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel insecte produit de la lumière les soirs d'été ?",
+  "options": [
+   "Le ver luisant (luciole)*",
+   "La coccinelle",
+   "Le papillon de nuit",
+   "Le grillon"
+  ],
+  "explanation": "C'est un coléoptère. La femelle, souvent sans ailes, brille pour attirer les mâles.",
+  "hint": "Il luit dans l'herbe."
+ },
+ {
+  "key": "nature-528",
+  "concept": "nature.animals.reine_abeille_vie",
+  "label": "Reine des abeilles",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien de temps vit une reine des abeilles ?",
+  "options": [
+   "Plusieurs années*",
+   "Quelques jours",
+   "Six semaines",
+   "Un siècle"
+  ],
+  "explanation": "Souvent de 3 à 5 ans, contre 5 à 6 semaines pour une ouvrière en été.",
+  "hint": "Beaucoup plus que les ouvrières."
+ },
+ {
+  "key": "nature-529",
+  "concept": "nature.animals.faux_bourdon",
+  "label": "Faux-bourdon",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment s'appelle le mâle de l'abeille ?",
+  "options": [
+   "Le faux-bourdon*",
+   "Le frelon",
+   "Le bourdon",
+   "L'abeillon"
+  ],
+  "explanation": "Il ne pique pas et ne butine pas : son rôle est de féconder une reine.",
+  "hint": "Il n'est pas un vrai bourdon."
+ },
+ {
+  "key": "nature-530",
+  "concept": "nature.animals.colombe_paix",
+  "label": "Symbole de paix",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel oiseau est le symbole de la paix ?",
+  "options": [
+   "La colombe*",
+   "Le corbeau",
+   "L'aigle",
+   "Le coq"
+  ],
+  "explanation": "Souvent dessinée avec un rameau d'olivier, comme par Picasso en 1949.",
+  "hint": "Blanche, avec un rameau d'olivier."
+ },
+ {
+  "key": "nature-531",
+  "concept": "nature.animals.plus_grand_afrique",
+  "label": "Plus grand animal terrestre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le plus grand animal terrestre ?",
+  "options": [
+   "L'éléphant d'Afrique*",
+   "La girafe",
+   "L'hippopotame",
+   "Le rhinocéros blanc"
+  ],
+  "explanation": "Jusqu'à 6 tonnes et plus. La girafe est plus haute, mais bien plus légère.",
+  "hint": "Il a une trompe."
+ },
+ {
+  "key": "nature-532",
+  "concept": "nature.animals.oiseau_chanteur",
+  "label": "Rouge-gorge",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel petit oiseau à la poitrine orange est très familier dans les jardins en hiver ?",
+  "options": [
+   "Le rouge-gorge*",
+   "Le merle",
+   "La pie",
+   "Le pinson"
+  ],
+  "explanation": "Il suit souvent les jardiniers pour attraper les vers qu'ils déterrent.",
+  "hint": "Son nom décrit sa poitrine."
+ },
+ {
+  "key": "nature-533",
+  "concept": "nature.animals.lapin_lievre",
+  "label": "Lapin et lièvre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qui distingue le lièvre du lapin ?",
+  "options": [
+   "Il naît poilu, les yeux ouverts, et vit en surface*",
+   "Il est plus petit",
+   "Il vit dans un terrier",
+   "Il est domestique"
+  ],
+  "explanation": "Le lapereau naît nu et aveugle dans un terrier. Le lièvre, plus grand, a aussi de plus longues oreilles.",
+  "hint": "Où naissent les petits ?"
+ },
+ {
+  "key": "nature-534",
+  "concept": "nature.animals.marmotte_sifflement",
+  "label": "Marmotte",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que fait la marmotte quand elle voit un danger ?",
+  "options": [
+   "Elle siffle pour prévenir les autres*",
+   "Elle fait le mort",
+   "Elle grimpe aux arbres",
+   "Elle change de couleur"
+  ],
+  "explanation": "Un sifflement aigu qui résonne dans la montagne. Elle hiberne près de six mois.",
+  "hint": "Elle alerte ses voisines."
+ },
+ {
+  "key": "nature-535",
+  "concept": "nature.plants.carotte_racine",
+  "label": "Carotte",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle partie de la carotte mange-t-on ?",
+  "options": [
+   "La racine*",
+   "La tige",
+   "La feuille",
+   "Le fruit"
+  ],
+  "explanation": "Une racine qui a stocké des réserves. Les fanes, les feuilles, se mangent aussi en soupe.",
+  "hint": "Elle pousse sous terre."
+ },
+ {
+  "key": "nature-536",
+  "concept": "nature.plants.asperge_tige",
+  "label": "Asperge",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle partie de la plante mange-t-on dans l'asperge ?",
+  "options": [
+   "La jeune tige*",
+   "La racine",
+   "La fleur",
+   "Le fruit"
+  ],
+  "explanation": "On la récolte au printemps, juste quand elle sort de terre. Laissée pousser, elle forme un plumeau.",
+  "hint": "Elle pointe hors de la terre."
+ },
+ {
+  "key": "nature-537",
+  "concept": "nature.plants.rhubarbe_petiole",
+  "label": "Rhubarbe",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle partie de la rhubarbe mange-t-on ?",
+  "options": [
+   "Le pétiole, la « queue » de la feuille*",
+   "La racine",
+   "La fleur",
+   "La feuille entière"
+  ],
+  "explanation": "Les grandes feuilles, elles, sont toxiques car riches en acide oxalique.",
+  "hint": "Les feuilles sont toxiques."
+ },
+ {
+  "key": "nature-538",
+  "concept": "nature.plants.cacahuete",
+  "label": "Cacahuète",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Où pousse la cacahuète ?",
+  "options": [
+   "Sous la terre*",
+   "Sur un arbre",
+   "Sur une liane",
+   "Dans l'eau"
+  ],
+  "explanation": "Après la floraison, la tige de la fleur s'enfonce dans le sol, où la gousse mûrit. C'est une légumineuse, comme le pois.",
+  "hint": "On l'appelle aussi arachide."
+ },
+ {
+  "key": "nature-539",
+  "concept": "nature.plants.ananas_pousse",
+  "label": "Ananas",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment pousse l'ananas ?",
+  "options": [
+   "Au centre d'une plante basse, au ras du sol*",
+   "Sur un grand arbre",
+   "Sur un palmier",
+   "Sous la terre"
+  ],
+  "explanation": "Un seul fruit par plante, formé de dizaines de petits fruits soudés. Il met presque deux ans à mûrir.",
+  "hint": "Pas sur un arbre."
+ },
+ {
+  "key": "nature-540",
+  "concept": "nature.plants.kiwi_origine",
+  "label": "Kiwi",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays le kiwi est-il originaire ?",
+  "options": [
+   "De Chine*",
+   "De Nouvelle-Zélande",
+   "D'Australie",
+   "Du Brésil"
+  ],
+  "explanation": "On l'appelait « groseille de Chine ». La Nouvelle-Zélande l'a rebaptisé kiwi, du nom de son oiseau, pour l'exporter.",
+  "hint": "La Nouvelle-Zélande lui a seulement donné son nom."
+ },
+ {
+  "key": "nature-541",
+  "concept": "nature.plants.photosynthese_besoins",
+  "label": "Photosynthèse",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quoi une plante a-t-elle besoin pour faire la photosynthèse ?",
+  "options": [
+   "De lumière, d'eau et de dioxyde de carbone*",
+   "De sucre et d'oxygène",
+   "D'azote seulement",
+   "De chaleur et de sel"
+  ],
+  "explanation": "Elle fabrique du sucre et rejette de l'oxygène.",
+  "hint": "Du soleil, de l'eau et un gaz de l'air."
+ },
+ {
+  "key": "nature-542",
+  "concept": "nature.plants.noyer",
+  "label": "Noix",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel arbre produit les noix ?",
+  "options": [
+   "Le noyer*",
+   "Le noisetier",
+   "Le châtaignier",
+   "Le chêne"
+  ],
+  "explanation": "Le noisetier donne les noisettes, le châtaignier les châtaignes.",
+  "hint": "Son nom ressemble à celui du fruit."
+ },
+ {
+  "key": "nature-543",
+  "concept": "nature.plants.balsa",
+  "label": "Bois le plus léger",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel arbre fournit l'un des bois les plus légers, utilisé en maquettisme ?",
+  "options": [
+   "Le balsa*",
+   "L'ébène",
+   "Le chêne",
+   "Le teck"
+  ],
+  "explanation": "Il pousse en Amérique du Sud. L'expédition du Kon-Tiki a traversé le Pacifique sur un radeau de balsa.",
+  "hint": "Le bois des maquettes d'avion."
+ },
+ {
+  "key": "nature-544",
+  "concept": "nature.plants.papyrus",
+  "label": "Papyrus",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Avec quelle plante les Égyptiens fabriquaient-ils leur support d'écriture ?",
+  "options": [
+   "Le papyrus*",
+   "Le bambou",
+   "Le lin",
+   "Le roseau"
+  ],
+  "explanation": "Les tiges, coupées en fines lamelles croisées et pressées, donnaient des feuilles. Le mot « papier » en vient.",
+  "hint": "Le mot « papier » en vient."
+ },
+ {
+  "key": "nature-545",
+  "concept": "nature.plants.riz_culture",
+  "label": "Riz",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Où pousse le plus souvent le riz ?",
+  "options": [
+   "Dans des rizières inondées*",
+   "Dans le désert",
+   "Sur des arbres",
+   "En haute montagne"
+  ],
+  "explanation": "L'eau protège les jeunes plants des mauvaises herbes. La Chine et l'Inde en sont les premiers producteurs.",
+  "hint": "Les pieds dans l'eau."
+ },
+ {
+  "key": "nature-546",
+  "concept": "nature.plants.plante_annuelle",
+  "label": "Plante annuelle",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'une plante annuelle ?",
+  "options": [
+   "Une plante qui vit une seule année*",
+   "Une plante qui fleurit une fois par an",
+   "Une plante qui vit cent ans",
+   "Une plante qu'on taille chaque année"
+  ],
+  "explanation": "Elle germe, fleurit, fait ses graines et meurt en une saison, comme le coquelicot ou le tournesol.",
+  "hint": "Son cycle complet dure un an."
+ },
+ {
+  "key": "nature-547",
+  "concept": "nature.plants.seve_brute",
+  "label": "Sève brute",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que transporte la sève brute ?",
+  "options": [
+   "L'eau et les sels minéraux, des racines vers les feuilles*",
+   "Le sucre, des feuilles vers les racines",
+   "L'oxygène",
+   "Le pollen"
+  ],
+  "explanation": "La sève élaborée, elle, redistribue les sucres fabriqués dans les feuilles.",
+  "hint": "Elle monte depuis les racines."
+ },
+ {
+  "key": "nature-548",
+  "concept": "nature.plants.plus_grande_feuille",
+  "label": "Plus grande feuille",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle plante possède les plus grandes feuilles du monde ?",
+  "options": [
+   "Le palmier raphia*",
+   "Le bananier",
+   "Le nénuphar géant",
+   "Le tabac"
+  ],
+  "explanation": "Ses feuilles peuvent dépasser 20 mètres de long. Le nénuphar géant a les plus grandes feuilles rondes.",
+  "hint": "Un palmier d'Afrique."
+ },
+ {
+  "key": "nature-549",
+  "concept": "nature.plants.albius_vanille",
+  "label": "Vanille",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a découvert, en 1841 à La Réunion, comment polliniser la vanille à la main ?",
+  "options": [
+   "Edmond Albius, un jeune esclave de 12 ans*",
+   "Louis Pasteur",
+   "Pierre Poivre",
+   "Un botaniste mexicain"
+  ],
+  "explanation": "Sans l'abeille mexicaine qui la pollinise dans son pays d'origine, la vanille ne donnait pas de fruits. Son geste est toujours utilisé.",
+  "hint": "Un enfant réunionnais."
+ },
+ {
+  "key": "nature-550",
+  "concept": "nature.plants.citron_agrume",
+  "label": "Agrume",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Lequel de ces fruits est un agrume ?",
+  "options": [
+   "Le citron*",
+   "La pomme",
+   "La fraise",
+   "La banane"
+  ],
+  "explanation": "Orange, mandarine, pamplemousse et citron sont des agrumes.",
+  "hint": "Un fruit acide et jaune."
+ },
+ {
+  "key": "nature-551",
+  "concept": "nature.plants.noix_de_coco",
+  "label": "Noix de coco",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Botaniquement, la noix de coco est…",
+  "options": [
+   "Une drupe, comme la pêche*",
+   "Une vraie noix",
+   "Une baie",
+   "Une graine sans fruit"
+  ],
+  "explanation": "Une enveloppe fibreuse entoure un noyau dur, qui contient la graine. Elle peut flotter des milliers de kilomètres.",
+  "hint": "Elle a un noyau, comme la cerise."
+ },
+ {
+  "key": "nature-552",
+  "concept": "nature.plants.arum_titan",
+  "label": "Arum titan",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle plante porte la plus grande inflorescence du monde et sent le cadavre ?",
+  "options": [
+   "L'arum titan*",
+   "La rafflésie",
+   "Le lotus",
+   "L'orchidée vanille"
+  ],
+  "explanation": "Jusqu'à 3 mètres de haut. Son odeur attire les mouches qui la pollinisent. Elle ne fleurit que tous les quelques années.",
+  "hint": "Un « titan »."
+ },
+ {
+  "key": "nature-553",
+  "concept": "nature.plants.bulbe",
+  "label": "Bulbe",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'un bulbe, chez la tulipe ou l'oignon ?",
+  "options": [
+   "Une réserve souterraine qui permet de repousser*",
+   "Une graine",
+   "Une racine morte",
+   "Un fruit"
+  ],
+  "explanation": "Il stocke l'énergie pendant l'hiver. On plante les bulbes de tulipes en automne.",
+  "hint": "On le plante en automne."
+ },
+ {
+  "key": "nature-554",
+  "concept": "nature.plants.sequoias_californie",
+  "label": "Séquoias géants",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle région poussent naturellement les séquoias géants ?",
+  "options": [
+   "En Californie*",
+   "En Scandinavie",
+   "En Amazonie",
+   "Au Japon"
+  ],
+  "explanation": "Le « General Sherman » est l'arbre le plus massif du monde, plus de 1 000 tonnes.",
+  "hint": "Sur la côte ouest des États-Unis."
+ },
+ {
+  "key": "nature-555",
+  "concept": "nature.plants.arbres_communiquent",
+  "label": "Réseau des racines",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les arbres d'une forêt peuvent échanger des nutriments par des champignons reliés à leurs racines.",
+  "answer": true,
+  "explanation": "Oui : un réseau de filaments de champignons, les mycorhizes, relie les racines et fait circuler eau, sucres et signaux."
+ },
+ {
+  "key": "nature-556",
+  "concept": "nature.plants.tomate_toxique",
+  "label": "Tomate",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les feuilles de tomate sont toxiques pour l'homme.",
+  "answer": true,
+  "explanation": "Oui, en quantité : comme la pomme de terre, la tomate appartient à la famille des solanacées, riches en alcaloïdes."
+ },
+ {
+  "key": "nature-557",
+  "concept": "nature.marine.requin_baleine_repas",
+  "label": "Requin-baleine",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quoi se nourrit le requin-baleine, le plus gros poisson du monde ?",
+  "options": [
+   "De plancton et de petits poissons*",
+   "De phoques",
+   "De dauphins",
+   "D'algues seulement"
+  ],
+  "explanation": "Il filtre l'eau en nageant la bouche ouverte. Il est totalement inoffensif pour l'homme.",
+  "hint": "Il filtre l'eau."
+ },
+ {
+  "key": "nature-558",
+  "concept": "nature.marine.dents_de_la_mer",
+  "label": "Les Dents de la mer",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel requin est la vedette du film « Les Dents de la mer » ?",
+  "options": [
+   "Le grand requin blanc*",
+   "Le requin-marteau",
+   "Le requin-tigre",
+   "Le requin-baleine"
+  ],
+  "explanation": "Le film de Spielberg (1975) a donné une image terrifiante, et injuste, de cet animal.",
+  "hint": "Le plus célèbre des requins."
+ },
+ {
+  "key": "nature-559",
+  "concept": "nature.marine.loutre_outils",
+  "label": "Loutre de mer",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel mammifère marin utilise une pierre pour casser les coquillages sur son ventre ?",
+  "options": [
+   "La loutre de mer*",
+   "Le phoque",
+   "Le dauphin",
+   "Le morse"
+  ],
+  "explanation": "Elle flotte sur le dos et garde parfois sa pierre préférée sous son aisselle. Sa fourrure est la plus dense du monde animal.",
+  "hint": "Elle dort en se tenant la patte avec les autres."
+ },
+ {
+  "key": "nature-560",
+  "concept": "nature.marine.nautile",
+  "label": "Nautile",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel mollusque à coquille en spirale, cousin de la pieuvre, existe depuis des centaines de millions d'années ?",
+  "options": [
+   "Le nautile*",
+   "L'escargot de mer",
+   "Le bernard-l'ermite",
+   "La seiche"
+  ],
+  "explanation": "Il règle sa flottaison avec les chambres remplies de gaz de sa coquille. Jules Verne a donné son nom au Nautilus.",
+  "hint": "Il a donné son nom au sous-marin de Nemo."
+ },
+ {
+  "key": "nature-561",
+  "concept": "nature.marine.banc_poissons",
+  "label": "Banc",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on un grand groupe de poissons qui nagent ensemble ?",
+  "options": [
+   "Un banc*",
+   "Une meute",
+   "Un troupeau",
+   "Une nuée"
+  ],
+  "explanation": "Nager en banc désoriente les prédateurs et économise de l'énergie.",
+  "hint": "Un meuble pour s'asseoir."
+ },
+ {
+  "key": "nature-562",
+  "concept": "nature.marine.plus_petit_ocean",
+  "label": "Plus petit océan",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le plus petit des océans ?",
+  "options": [
+   "L'océan Arctique*",
+   "L'océan Indien",
+   "L'océan Austral",
+   "L'océan Atlantique"
+  ],
+  "explanation": "Autour du pôle Nord, il est en partie couvert de banquise toute l'année.",
+  "hint": "Autour du pôle Nord."
+ },
+ {
+  "key": "nature-563",
+  "concept": "nature.marine.nombre_oceans",
+  "label": "Océans",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien d'océans compte-t-on sur Terre, selon le découpage le plus courant ?",
+  "answer": 5,
+  "explanation": "Pacifique, Atlantique, Indien, Austral et Arctique. Ils communiquent tous entre eux.",
+  "hint": "Autant que de doigts d'une main."
+ },
+ {
+  "key": "nature-564",
+  "concept": "nature.marine.gibraltar",
+  "label": "Détroit de Gibraltar",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Par quel détroit la Méditerranée communique-t-elle avec l'océan Atlantique ?",
+  "options": [
+   "Le détroit de Gibraltar*",
+   "Le Bosphore",
+   "Le détroit de Messine",
+   "Le pas de Calais"
+  ],
+  "explanation": "Il sépare l'Espagne du Maroc, d'environ 14 km au plus étroit.",
+  "hint": "Entre l'Espagne et le Maroc."
+ },
+ {
+  "key": "nature-565",
+  "concept": "nature.marine.mer_bleue",
+  "label": "Mer bleue",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi la mer paraît-elle bleue ?",
+  "options": [
+   "L'eau absorbe surtout le rouge de la lumière*",
+   "Elle reflète seulement le ciel",
+   "À cause du sel",
+   "À cause des algues bleues"
+  ],
+  "explanation": "Le reflet du ciel joue un peu, mais l'eau en épaisseur absorbe le rouge et renvoie le bleu.",
+  "hint": "Une affaire d'absorption des couleurs."
+ },
+ {
+  "key": "nature-566",
+  "concept": "nature.marine.gulf_stream",
+  "label": "Gulf Stream",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce que le Gulf Stream ?",
+  "options": [
+   "Un courant marin chaud de l'Atlantique*",
+   "Un vent du golfe du Mexique",
+   "Une tempête tropicale",
+   "Un poisson migrateur"
+  ],
+  "explanation": "Il part du golfe du Mexique et adoucit le climat de l'Europe de l'Ouest.",
+  "hint": "Il réchauffe l'Europe."
+ },
+ {
+  "key": "nature-567",
+  "concept": "nature.marine.pieuvre_bocal",
+  "label": "Pieuvre",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Une pieuvre peut apprendre à dévisser le couvercle d'un bocal.",
+  "answer": true,
+  "explanation": "Vrai : c'est l'un des invertébrés les plus intelligents. Certaines s'échappent même de leur aquarium."
+ },
+ {
+  "key": "nature-568",
+  "concept": "nature.marine.huitres_sexe",
+  "label": "Huîtres",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Les huîtres peuvent changer de sexe au cours de leur vie.",
+  "answer": true,
+  "explanation": "Vrai : beaucoup commencent mâles puis deviennent femelles, et certaines alternent plusieurs fois."
+ },
+ {
+  "key": "nature-569",
+  "concept": "nature.marine.etoile_mer_cerveau",
+  "label": "Étoile de mer",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "L'étoile de mer n'a pas de cerveau.",
+  "answer": true,
+  "explanation": "Vrai : un anneau de nerfs relie ses bras. Elle a aussi un petit œil au bout de chaque bras."
+ },
+ {
+  "key": "nature-570",
+  "concept": "nature.marine.homard_rouge",
+  "label": "Crustacé rouge",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel crustacé, bleu-noir vivant, devient rouge à la cuisson ?",
+  "options": [
+   "Le homard*",
+   "La méduse",
+   "L'huître",
+   "L'oursin"
+  ],
+  "explanation": "La chaleur détruit une protéine qui masque un pigment rouge, l'astaxanthine.",
+  "hint": "On le sert avec du beurre."
+ },
+ {
+  "key": "nature-571",
+  "concept": "nature.marine.crabe_araignee",
+  "label": "Plus grand crabe",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel est le plus grand crabe du monde ?",
+  "options": [
+   "Le crabe-araignée géant du Japon*",
+   "Le tourteau",
+   "Le crabe royal",
+   "Le crabe de cocotier"
+  ],
+  "explanation": "Ses pattes écartées peuvent dépasser 3,5 mètres d'envergure.",
+  "hint": "Il vit au large du Japon."
+ },
+ {
+  "key": "nature-572",
+  "concept": "nature.marine.sirenes_lamantins",
+  "label": "Sirènes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quels animaux les marins auraient-ils pris pour des sirènes ?",
+  "options": [
+   "Les lamantins et les dugongs*",
+   "Les phoques moines",
+   "Les dauphins",
+   "Les otaries"
+  ],
+  "explanation": "Christophe Colomb écrit en avoir vu trois, « pas aussi belles qu'on le dit ». Leur ordre s'appelle d'ailleurs les siréniens.",
+  "hint": "Des « vaches de mer »."
+ },
+ {
+  "key": "nature-573",
+  "concept": "nature.marine.dauphin_rose",
+  "label": "Dauphin rose",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Où vit le dauphin rose ?",
+  "options": [
+   "Dans l'Amazone*",
+   "En mer Méditerranée",
+   "Dans le Nil",
+   "En Antarctique"
+  ],
+  "explanation": "Le boto vit en eau douce. Sa couleur rose s'accentue avec l'âge et l'agitation.",
+  "hint": "Dans le plus grand fleuve du monde."
+ },
+ {
+  "key": "nature-574",
+  "concept": "nature.marine.ostreiculture",
+  "label": "Ostréiculture",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment appelle-t-on l'élevage des huîtres ?",
+  "options": [
+   "L'ostréiculture*",
+   "La mytiliculture",
+   "La pisciculture",
+   "L'aquaponie"
+  ],
+  "explanation": "La France est le premier producteur d'huîtres en Europe, notamment à Marennes-Oléron et Arcachon.",
+  "hint": "« Ostréa » veut dire huître en latin."
+ },
+ {
+  "key": "nature-575",
+  "concept": "nature.marine.mytiliculture",
+  "label": "Mytiliculture",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment appelle-t-on l'élevage des moules ?",
+  "options": [
+   "La mytiliculture*",
+   "L'ostréiculture",
+   "La conchyliculture des huîtres",
+   "L'apiculture"
+  ],
+  "explanation": "Souvent sur des pieux de bois, les bouchots, en baie du Mont-Saint-Michel par exemple.",
+  "hint": "Du nom latin de la moule, Mytilus."
+ },
+ {
+  "key": "nature-576",
+  "concept": "nature.marine.calmar_colossal_oeil",
+  "label": "Plus gros œil",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel animal a les plus gros yeux du monde ?",
+  "options": [
+   "Le calmar colossal*",
+   "La baleine bleue",
+   "L'éléphant",
+   "L'autruche"
+  ],
+  "explanation": "Ils mesurent jusqu'à 27 cm de diamètre, pour repérer les cachalots dans l'obscurité des profondeurs.",
+  "hint": "Il vit dans les profondeurs de l'océan Austral."
+ },
+ {
+  "key": "nature-577",
+  "concept": "nature.marine.recif_plus_grand",
+  "label": "Récif corallien",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de temps faut-il à un récif corallien pour se former ?",
+  "options": [
+   "Des milliers d'années*",
+   "Quelques mois",
+   "Une dizaine d'années",
+   "Un siècle"
+  ],
+  "explanation": "Les coraux ne grandissent que de quelques millimètres à quelques centimètres par an.",
+  "hint": "Les coraux grandissent très lentement."
+ },
+ {
+  "key": "nature-578",
+  "concept": "nature.earth.loire",
+  "label": "Plus long fleuve de France",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le plus long fleuve entièrement français ?",
+  "options": [
+   "La Loire*",
+   "La Seine",
+   "La Garonne",
+   "Le Rhône"
+  ],
+  "explanation": "Environ 1 000 km, du mont Gerbier-de-Jonc à l'Atlantique. Le Rhône naît en Suisse.",
+  "hint": "Le fleuve des châteaux."
+ },
+ {
+  "key": "nature-579",
+  "concept": "nature.earth.plaques_majeures",
+  "label": "Plaques tectoniques",
+  "type": "numeric",
+  "difficulty": 72,
+  "prompt": "Combien compte-t-on environ de grandes plaques tectoniques ?",
+  "answer": 7,
+  "explanation": "Pacifique, nord-américaine, sud-américaine, eurasienne, africaine, indo-australienne et antarctique, plus des dizaines de petites.",
+  "hint": "Environ autant que de continents."
+ },
+ {
+  "key": "nature-580",
+  "concept": "nature.earth.obsidienne",
+  "label": "Obsidienne",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'est-ce que l'obsidienne ?",
+  "options": [
+   "Un verre volcanique naturel*",
+   "Un métal précieux",
+   "Un fossile d'arbre",
+   "Une pierre de rivière"
+  ],
+  "explanation": "La lave refroidit si vite que les cristaux n'ont pas le temps de se former. Taillée, elle coupe comme un rasoir.",
+  "hint": "Une lave refroidie d'un coup."
+ },
+ {
+  "key": "nature-581",
+  "concept": "nature.earth.diamant_carbone",
+  "label": "Diamant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quoi est fait un diamant ?",
+  "options": [
+   "De carbone*",
+   "De silicium",
+   "De fer",
+   "De quartz"
+  ],
+  "explanation": "Du carbone comprimé à très haute pression dans les profondeurs. Le graphite du crayon est aussi du carbone.",
+  "hint": "Le même élément que le charbon."
+ },
+ {
+  "key": "nature-582",
+  "concept": "nature.earth.halite",
+  "label": "Sel gemme",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment appelle-t-on le minéral qui forme le sel de cuisine ?",
+  "options": [
+   "La halite*",
+   "La calcite",
+   "Le gypse",
+   "Le quartz"
+  ],
+  "explanation": "Du chlorure de sodium en cristaux cubiques. On l'extrait de mines ou des marais salants.",
+  "hint": "Son nom vient du grec « hals », le sel."
+ },
+ {
+  "key": "nature-583",
+  "concept": "nature.earth.fossile",
+  "label": "Fossile",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un fossile ?",
+  "options": [
+   "Une trace d'un être vivant ancien conservée dans la roche*",
+   "Une pierre précieuse",
+   "Un volcan éteint",
+   "Une grotte"
+  ],
+  "explanation": "Os, coquilles, empreintes de pas ou de feuilles… qui ont parfois des centaines de millions d'années.",
+  "hint": "Les dinosaures en ont laissé beaucoup."
+ },
+ {
+  "key": "nature-584",
+  "concept": "nature.earth.etna",
+  "label": "Etna",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le plus haut volcan actif d'Europe ?",
+  "options": [
+   "L'Etna*",
+   "Le Vésuve",
+   "Le Stromboli",
+   "Le Teide"
+  ],
+  "explanation": "En Sicile, environ 3 300 m. Il entre en éruption plusieurs fois par an. Le Teide, plus haut, est aux Canaries, rattachées à l'Afrique.",
+  "hint": "En Sicile."
+ },
+ {
+  "key": "nature-585",
+  "concept": "nature.earth.eyjafjallajokull",
+  "label": "Volcan islandais",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "En 2010, l'éruption de quel volcan islandais a bloqué le trafic aérien européen ?",
+  "options": [
+   "L'Eyjafjallajökull*",
+   "Le Vésuve",
+   "L'Etna",
+   "Le Fuji"
+  ],
+  "explanation": "Son nuage de cendres a cloué au sol plus de 100 000 vols. Son nom est réputé imprononçable.",
+  "hint": "Un nom très difficile à prononcer."
+ },
+ {
+  "key": "nature-586",
+  "concept": "nature.earth.oeil_cyclone",
+  "label": "Œil du cyclone",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce que l'« œil » d'un cyclone ?",
+  "options": [
+   "Une zone calme au centre de la tempête*",
+   "La zone la plus violente",
+   "Le point de départ du cyclone",
+   "Un éclair géant"
+  ],
+  "explanation": "Le ciel peut même y être dégagé, entouré d'un mur de nuages aux vents les plus forts.",
+  "hint": "Le calme au milieu de la tempête."
+ },
+ {
+  "key": "nature-587",
+  "concept": "nature.earth.ouragan",
+  "label": "Ouragan",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on un cyclone tropical dans l'Atlantique nord ?",
+  "options": [
+   "Un ouragan*",
+   "Un typhon",
+   "Un mistral",
+   "Un blizzard"
+  ],
+  "explanation": "Dans le Pacifique nord-ouest, on parle de typhon ; dans l'océan Indien, de cyclone.",
+  "hint": "Ceux des Antilles et de Floride."
+ },
+ {
+  "key": "nature-588",
+  "concept": "nature.earth.anticyclone",
+  "label": "Anticyclone",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel temps annonce généralement un anticyclone ?",
+  "options": [
+   "Du beau temps, calme et sec*",
+   "Des orages",
+   "De fortes pluies",
+   "Des tempêtes"
+  ],
+  "explanation": "Une zone de hautes pressions où l'air descend et empêche les nuages de se former. L'anticyclone des Açores est célèbre.",
+  "hint": "Celui des Açores."
+ },
+ {
+  "key": "nature-589",
+  "concept": "nature.earth.solstice",
+  "label": "Solstice",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que se passe-t-il au solstice d'été ?",
+  "options": [
+   "C'est le jour le plus long de l'année*",
+   "Le jour et la nuit sont égaux",
+   "La Lune est pleine",
+   "La Terre est au plus près du Soleil"
+  ],
+  "explanation": "Autour du 21 juin dans l'hémisphère nord. Au solstice d'hiver, vers le 21 décembre, c'est la nuit la plus longue.",
+  "hint": "Le jour de la Fête de la musique."
+ },
+ {
+  "key": "nature-590",
+  "concept": "nature.earth.equinoxe",
+  "label": "Équinoxe",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que se passe-t-il à un équinoxe ?",
+  "options": [
+   "Le jour et la nuit ont presque la même durée*",
+   "C'est le jour le plus long",
+   "C'est le jour le plus court",
+   "Il y a une éclipse"
+  ],
+  "explanation": "Deux fois par an, vers le 20 mars et le 22 septembre. « Équinoxe » veut dire nuit égale.",
+  "hint": "« Nuit égale »."
+ },
+ {
+  "key": "nature-591",
+  "concept": "nature.earth.ebullition_everest",
+  "label": "Eau bouillante en altitude",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "À quelle température l'eau bout-elle environ au sommet de l'Everest ?",
+  "options": [
+   "Environ 70 °C*",
+   "100 °C",
+   "120 °C",
+   "Environ 90 °C"
+  ],
+  "explanation": "La pression de l'air y est trois fois plus faible : l'eau bout plus tôt, et les pâtes cuisent mal.",
+  "hint": "Moins qu'au niveau de la mer."
+ },
+ {
+  "key": "nature-592",
+  "concept": "nature.earth.baikal",
+  "label": "Lac le plus profond",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le lac le plus profond du monde ?",
+  "options": [
+   "Le lac Baïkal*",
+   "Le lac Tanganyika",
+   "Le lac Supérieur",
+   "La mer Caspienne"
+  ],
+  "explanation": "Plus de 1 600 m de profondeur, en Sibérie. Il contient environ 20 % de l'eau douce liquide de surface de la planète.",
+  "hint": "Un lac de Sibérie."
+ },
+ {
+  "key": "nature-593",
+  "concept": "nature.earth.atacama",
+  "label": "Désert le plus sec",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le désert chaud le plus sec du monde ?",
+  "options": [
+   "Le désert d'Atacama*",
+   "Le Sahara",
+   "Le désert de Gobi",
+   "Le Kalahari"
+  ],
+  "explanation": "Au Chili. Certaines stations n'y ont jamais enregistré de pluie. La NASA y teste ses robots martiens.",
+  "hint": "Au Chili."
+ },
+ {
+  "key": "nature-594",
+  "concept": "nature.earth.humus",
+  "label": "Humus",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce que l'humus ?",
+  "options": [
+   "La matière organique décomposée du sol*",
+   "Une roche volcanique",
+   "Un champignon",
+   "Une couche de glace"
+  ],
+  "explanation": "Feuilles mortes et débris transformés par les vers et les micro-organismes : il rend la terre fertile.",
+  "hint": "Ce que deviennent les feuilles mortes."
+ },
+ {
+  "key": "nature-595",
+  "concept": "nature.earth.vallee_mort",
+  "label": "Record de chaleur",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Où a-t-on mesuré la température de l'air la plus élevée sur Terre ?",
+  "options": [
+   "Dans la Vallée de la Mort, en Californie*",
+   "Dans le Sahara",
+   "En Australie",
+   "En Inde"
+  ],
+  "explanation": "56,7 °C en juillet 1913. Le lieu est aussi l'un des plus bas d'Amérique du Nord.",
+  "hint": "Son nom fait peur."
+ },
+ {
+  "key": "nature-596",
+  "concept": "nature.earth.islande_volcans",
+  "label": "Islande",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi l'Islande compte-t-elle autant de volcans ?",
+  "options": [
+   "Elle est sur une dorsale océanique et un point chaud*",
+   "Elle est proche du pôle",
+   "Elle est très ancienne",
+   "À cause de ses glaciers"
+  ],
+  "explanation": "Les plaques nord-américaine et eurasienne s'y écartent de quelques centimètres par an, et du magma remonte en plus d'un point chaud.",
+  "hint": "Deux plaques s'y séparent."
+ },
+ {
+  "key": "nature-597",
+  "concept": "nature.earth.canyon_colorado",
+  "label": "Grand Canyon",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel fleuve a creusé le Grand Canyon ?",
+  "options": [
+   "Le Colorado*",
+   "Le Mississippi",
+   "Le Rio Grande",
+   "L'Amazone"
+  ],
+  "explanation": "Pendant plusieurs millions d'années. Le canyon atteint 1 800 m de profondeur.",
+  "hint": "Il a donné son nom à un État."
+ },
+ {
+  "key": "nature-598",
+  "concept": "nature.earth.calotte_groenland",
+  "label": "Groenland",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle proportion du Groenland est recouverte de glace ?",
+  "options": [
+   "Environ 80 %*",
+   "Environ 10 %",
+   "Environ 30 %",
+   "La totalité"
+  ],
+  "explanation": "Si toute cette glace fondait, le niveau des mers monterait d'environ 7 mètres.",
+  "hint": "La grande majorité."
+ },
+ {
+  "key": "nature-599",
+  "concept": "nature.earth.plus_haute_cascade",
+  "label": "Plus haute cascade",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle est la plus haute chute d'eau du monde ?",
+  "options": [
+   "Le Salto Ángel, au Venezuela*",
+   "Les chutes du Niagara",
+   "Les chutes Victoria",
+   "Les chutes d'Iguazú"
+  ],
+  "explanation": "Près de 980 m de chute, dont plus de 800 m d'un seul jet.",
+  "hint": "Au Venezuela."
+ },
+ {
+  "key": "nature-600",
+  "concept": "nature.earth.eclair_avant_tonnerre",
+  "label": "Éclair et tonnerre",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "On voit l'éclair avant d'entendre le tonnerre, parce que la lumière va plus vite que le son.",
+  "answer": true,
+  "explanation": "Oui : en comptant les secondes entre les deux et en divisant par 3, on obtient la distance de l'orage en kilomètres."
+ },
+ {
+  "key": "nature-601",
+  "concept": "nature.earth.desert_toujours_chaud",
+  "label": "Déserts",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Tous les déserts sont chauds.",
+  "answer": false,
+  "explanation": "Faux : un désert se définit par le manque de pluie. L'Antarctique est le plus grand désert du monde, et il est glacial."
+ },
+ {
+  "key": "nature-602",
+  "concept": "nature.earth.everest_grandit",
+  "label": "Everest",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "L'Everest grandit encore de quelques millimètres par an.",
+  "answer": true,
+  "explanation": "Oui : la plaque indienne continue de pousser contre l'Asie et soulève l'Himalaya."
+ },
+ {
+  "key": "nature-603",
+  "concept": "nature.earth.couches_terre",
+  "label": "Couches de la Terre",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces couches de la Terre de la surface vers le centre.",
+  "items": [
+   "La croûte",
+   "Le manteau",
+   "Le noyau externe",
+   "Le noyau interne"
+  ],
+  "explanation": "La croûte ne fait que quelques dizaines de km ; le noyau interne, solide, est aussi chaud que la surface du Soleil."
+ },
+ {
+  "key": "nature-604",
+  "concept": "nature.animals.poids_animaux_marins",
+  "label": "Du plus léger au plus lourd",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces animaux adultes du plus léger au plus lourd.",
+  "items": [
+   "Le dauphin",
+   "L'orque",
+   "Le cachalot",
+   "La baleine bleue"
+  ],
+  "explanation": "Environ 150 kg, 6 tonnes, 45 tonnes et jusqu'à 150 tonnes."
+ },
+ {
+  "key": "nature-605",
+  "concept": "nature.animals.femelles_animaux",
+  "label": "Femelles",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque animal au nom de sa femelle.",
+  "pairs": [
+   [
+    "Cerf",
+    "Biche"
+   ],
+   [
+    "Sanglier",
+    "Laie"
+   ],
+   [
+    "Cheval",
+    "Jument"
+   ],
+   [
+    "Lièvre",
+    "Hase"
+   ]
+  ],
+  "explanation": "Quatre noms à connaître."
+ },
+ {
+  "key": "nature-606",
+  "concept": "nature.plants.fruits_arbres",
+  "label": "Fruits et arbres",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque fruit à l'arbre qui le porte.",
+  "pairs": [
+   [
+    "Noix",
+    "Noyer"
+   ],
+   [
+    "Noisette",
+    "Noisetier"
+   ],
+   [
+    "Châtaigne",
+    "Châtaignier"
+   ],
+   [
+    "Olive",
+    "Olivier"
+   ]
+  ],
+  "explanation": "Le plus souvent, l'arbre porte le nom de son fruit."
+ }
+]
