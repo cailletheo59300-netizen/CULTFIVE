@@ -19,6 +19,7 @@ struct DailySessionView: View {
                 ProgressView()
             }
         }
+        .animation(Motion.standard, value: model?.advancing)
         .task {
             if model == nil {
                 let session = DailySessionModel(service: app.service)
@@ -50,7 +51,10 @@ struct DailySessionView: View {
             }
             .padding(Space.gutter)
         case .question:
-            if let question = model.question {
+            if model.advancing {
+                DailyNextPlaceholder(position: model.position + 1)
+                    .transition(.opacity)
+            } else if let question = model.question {
                 QuestionScreen(
                     question: question,
                     domainName: app.domainName(question.domainId),
@@ -102,5 +106,29 @@ struct DailySessionView: View {
             await app.refreshProfile()
         }
         dismiss()
+    }
+}
+
+/// Entre deux questions : la place de la suivante, le temps qu'elle arrive (le chrono n'a pas commencé).
+private struct DailyNextPlaceholder: View {
+    let position: Int
+
+    var body: some View {
+        VStack(spacing: Space.m) {
+            HStack {
+                Spacer()
+                ProgressPills(current: position, total: 5, color: .brand)
+            }
+            .padding(.horizontal, Space.gutter)
+            .padding(.vertical, Space.m)
+            Spacer()
+            Text("Question \(position) sur 5")
+                .font(.cfHeadline)
+                .foregroundStyle(Color.inkSoft)
+            ProgressView().tint(Color.brand)
+            Spacer()
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Question \(position) sur 5, chargement")
     }
 }

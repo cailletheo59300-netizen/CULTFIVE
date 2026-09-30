@@ -21,6 +21,9 @@ final class DailySessionModel {
     private(set) var position = 1
     private(set) var isRetrying = false
     private(set) var lastVerdict: DailyVerdict?
+    /// « Question suivante » touchée : la question s'efface aussitôt, la suivante arrive du serveur.
+    /// Le chrono officiel ne démarre qu'à l'envoi par le serveur (pas de préchargement : aucune lecture en avance possible).
+    private(set) var advancing = false
 
     private let service: GameService
     private var runId: UUID?
@@ -113,9 +116,13 @@ final class DailySessionModel {
     }
 
     func next() async {
+        guard !advancing else { return }
+        Haptics.selection()
         if lastVerdict?.finished == true || position >= 5 {
             await showResult()
         } else {
+            advancing = true
+            defer { advancing = false }
             await load(position: position + 1)
         }
     }
