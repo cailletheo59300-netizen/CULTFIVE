@@ -360,9 +360,10 @@ private struct TerrainRow: View {
                     Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
                     Text(skill.rating.rank.name).font(.system(.caption, design: .rounded).weight(.bold)).opacity(0.8)
                 } else {
-                    Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames)")
-                        .font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
-                    Text("placement").font(.system(.caption, design: .rounded).weight(.bold)).opacity(0.8)
+                    PlacementSquares(done: skill.rating.placementGames, color: on, empty: on.opacity(0.3), size: 11)
+                        .padding(.bottom, 4)
+                    Text("placement \(skill.rating.placementGames)/\(CoteCULT.placementGames)")
+                        .font(.system(.caption, design: .rounded).weight(.bold)).monospacedDigit().opacity(0.8)
                 }
             }
             .foregroundStyle(on)

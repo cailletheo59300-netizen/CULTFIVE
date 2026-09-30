@@ -13,6 +13,7 @@ struct ProfileView: View {
     @State private var showHistory = false
     @State private var showSettings = false
     @State private var showShare = false
+    @State private var showEloHelp = false
 
     var body: some View {
         NavigationStack {
@@ -49,6 +50,7 @@ struct ProfileView: View {
                 ShareSheetView(content: .profile(profile, skills: skills))
             }
         }
+        .sheet(isPresented: $showEloHelp) { EloExplainerSheet() }
         .task { await load() }
     }
 
@@ -116,7 +118,9 @@ struct ProfileView: View {
 
     /// Cote CULT globale : moyenne des domaines pondérée par les réponses, rang et progression vers le rang suivant.
     private var coteCard: some View {
-        let global = CoteCULT.global(skills)
+        // Seuls les domaines placés comptent : une cote encore cachée ne s'affiche nulle part.
+        let placedSkills = skills.filter { $0.rating.placed }
+        let global = CoteCULT.global(placedSkills).map { CoteCULT(cote: $0.cote, answered: $0.answered, placed: true) }
         return HStack(spacing: Space.m) {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Elo").labelCaps(.white.opacity(0.8))
@@ -130,13 +134,22 @@ struct ProfileView: View {
                         Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote).foregroundStyle(.white.opacity(0.8))
                     }
                 } else {
-                    let answered = global?.answered ?? 0
                     Text("En placement").font(.system(.title2, design: .rounded).weight(.black)).foregroundStyle(Color.white)
-                    ProgressView(value: Double(min(answered, CoteCULT.placementAnswers)), total: Double(CoteCULT.placementAnswers))
-                        .tint(.sun).frame(maxWidth: 200)
-                    Text("\(min(answered, CoteCULT.placementAnswers))/\(CoteCULT.placementAnswers) réponses classées avant de découvrir ton Elo.")
-                        .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
-                        .fixedSize(horizontal: false, vertical: true)
+                    if let closest = skills.filter({ !$0.rating.placed && $0.answered > 0 }).max(by: { $0.answered < $1.answered }) {
+                        PlacementSquares(done: closest.rating.placementGames, color: .sun, empty: .white.opacity(0.25), size: 12)
+                        Text("\(closest.name) : \(closest.rating.placementGames)/\(CoteCULT.placementGames) parties classées. Ton rang se dévoile à la 5e.")
+                            .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                            .fixedSize(horizontal: false, vertical: true)
+                    } else {
+                        Text("Joue 5 parties classées dans un domaine pour découvrir ton rang.")
+                            .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                if !skills.isEmpty {
+                    Text("Domaines placés : \(placedSkills.count) sur \(skills.count)")
+                        .font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.75))
+                        .padding(.top, 2)
                 }
             }
             Spacer(minLength: 0)
@@ -188,7 +201,18 @@ struct ProfileView: View {
 
     private var knowledge: some View {
         VStack(alignment: .leading, spacing: Space.s) {
-            Text("Ce que tu sais").font(.cfHeadline)
+            HStack {
+                Text("Ce que tu sais").font(.cfHeadline)
+                Spacer()
+                Button { showEloHelp = true } label: {
+                    Label("Comment marche l'Elo", systemImage: "questionmark.circle.fill")
+                        .labelStyle(.iconOnly)
+                        .font(.title3)
+                        .foregroundStyle(Color.brand)
+                        .frame(minWidth: 44, minHeight: 44)
+                }
+                .accessibilityLabel("Comment marche l'Elo")
+            }
             if skills.contains(where: { $0.answered > 0 }) {
                 KnowledgeRadar(axes: skills.map { KnowledgeRadar.Axis(domainId: $0.domainId, level: $0.answered > 0 ? Double($0.level) : 0) },
                                fill: favoriteColor)
@@ -196,13 +220,10 @@ struct ProfileView: View {
                     .frame(maxWidth: .infinity)
                     .popCard()
             }
-            // Les cotes placées d'abord, puis par niveau.
-            let played = skills.filter { $0.answered > 0 }.sorted {
-                ($0.rating.placed ? 1 : 0, $0.level) > ($1.rating.placed ? 1 : 0, $1.level)
-            }
-            if played.isEmpty {
-                Text("Joue quelques parties : ton profil de connaissances se dessinera ici.")
-                    .font(.cfCallout).foregroundStyle(Color.inkSoft)
+            // Les cotes placées d'abord (par niveau), puis les placements les plus avancés, puis les domaines à découvrir.
+            let played = skills.sorted {
+                ($0.rating.placed ? 1 : 0, $0.rating.placed ? Double($0.level) : Double($0.answered))
+                    > ($1.rating.placed ? 1 : 0, $1.rating.placed ? Double($1.level) : Double($1.answered))
             }
             ForEach(played) { skill in
                 NavigationLink(value: skill.domainId) {
@@ -214,12 +235,14 @@ struct ProfileView: View {
                                 Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
                                     .foregroundStyle(Color.ink)
                             } else {
-                                PlacementDots(done: skill.rating.placementGames, color: DomainPalette.color(skill.domainId), compact: true)
+                                PlacementSquares(done: skill.rating.placementGames, color: DomainPalette.color(skill.domainId), size: 12)
                             }
                         }
-                        SkillBar(level: skill.level, reliability: skill.reliability, color: DomainPalette.color(skill.domainId))
+                        if skill.rating.placed {
+                            SkillBar(level: skill.level, reliability: skill.reliability, color: DomainPalette.color(skill.domainId))
+                        }
                         HStack(alignment: .center) {
-                            Text(skill.rating.placed ? "\(skill.rating.rank.name) · \(skill.answered) réponses" : "\(skill.answered) réponses · placement en cours")
+                            Text(placementLine(skill))
                                 .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                             Spacer(minLength: Space.s)
                             if let mastery = trophyOverview?.mastery.first(where: { $0.domainId == skill.domainId }) {
@@ -232,6 +255,14 @@ struct ProfileView: View {
                 .buttonStyle(.row)
             }
         }
+    }
+
+    private func placementLine(_ skill: SkillSummary) -> String {
+        if skill.rating.placed { return "\(skill.rating.rank.name) · \(skill.answered) réponses" }
+        let done = skill.rating.placementGames
+        let left = CoteCULT.placementGames - done
+        if skill.answered == 0 { return "Pas encore joué · 5 parties classées pour ton rang" }
+        return "\(done)/\(CoteCULT.placementGames) parties · encore \(left) pour découvrir ton rang"
     }
 
     /// Les 5 dernières semaines du 5 du jour : un trait par jour joué.

@@ -302,8 +302,8 @@ struct PlaySummaryView: View {
                                       action: onOpenChests)
                 }
                 ForEach(placementsDone, id: \.domainId) { r in
-                    CelebrationCard(kind: .rating, title: "Placement terminé : \(CoteCULT.format(r.coteAfter))",
-                                    detail: "\(app.domainName(r.domainId)) · rang \(CoteCULT.Rank(cote: r.coteAfter).name). Ton Elo bouge maintenant à chaque partie classée.")
+                    CelebrationCard(kind: .rating, title: "Rang découvert : \(CoteCULT.Rank(cote: r.coteAfter).name) !",
+                                    detail: "\(app.domainName(r.domainId)) · \(CoteCULT.format(r.coteAfter)) Elo. Il bouge maintenant à chaque partie classée.")
                 }
                 ForEach(rankUps, id: \.domainId) { r in
                     CelebrationCard(kind: .rating, title: "Nouveau rang : \(CoteCULT.Rank(cote: r.coteAfter).name)",
@@ -314,6 +314,12 @@ struct PlaySummaryView: View {
                         Text("Elo").labelCaps()
                         ForEach(summary.ratings, id: \.domainId) { r in
                             RatingChangeRow(change: r, domainName: app.domainName(r.domainId))
+                        }
+                        if let r = summary.ratings.first(where: { !$0.placed }) {
+                            let left = max(CoteCULT.placementGames - r.placement, 1)
+                            Text("Encore \(left) partie\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") en \(app.domainName(r.domainId)) pour découvrir ton rang.")
+                                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                     }
                     .popCard()
@@ -669,16 +675,31 @@ struct PlacementDots: View {
     var body: some View {
         HStack(spacing: 6) {
             if !compact { Text("Placement").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft) }
-            HStack(spacing: 3) {
-                ForEach(0 ..< CoteCULT.placementGames, id: \.self) { i in
-                    Circle().fill(i < done ? color : color.opacity(0.2)).frame(width: 7, height: 7)
-                }
-            }
+            PlacementSquares(done: done, color: color)
             Text("\(done)/\(CoteCULT.placementGames)").font(.system(.footnote, design: .rounded).weight(.heavy)).monospacedDigit()
                 .foregroundStyle(Color.inkSoft)
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Placement : \(done) partie\(done > 1 ? "s" : "") sur \(CoteCULT.placementGames)")
+    }
+}
+
+/// Cinq petits carrés : un par partie classée de placement. Pleins, le rang du domaine se dévoile.
+struct PlacementSquares: View {
+    let done: Int
+    var color: Color = .brand
+    var empty: Color? = nil
+    var size: CGFloat = 9
+
+    var body: some View {
+        HStack(spacing: 3) {
+            ForEach(0 ..< CoteCULT.placementGames, id: \.self) { i in
+                RoundedRectangle(cornerRadius: size * 0.28, style: .continuous)
+                    .fill(i < done ? color : (empty ?? color.opacity(0.2)))
+                    .frame(width: size, height: size)
+            }
+        }
+        .accessibilityHidden(true)
     }
 }
 

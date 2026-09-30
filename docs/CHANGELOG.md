@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.18.0 — placement lisible, 5 du jour plus fluide
+- **Placement en 5 carrés** : dans le Profil, tous les domaines apparaissent (même jamais joués) avec 5 carrés à leur couleur, un par partie classée, et « 2/5 parties · encore 3 pour découvrir ton rang ». Mêmes carrés sur l'accueil (domaine à travailler), l'écran Jouer et la fin de partie (« Encore 2 parties classées en Histoire… »), célébration « Rang découvert : Érudit ! » à la 5e.
+- **En-tête du Profil** : l'Elo global ne compte que les domaines placés ; sinon, les carrés du domaine le plus avancé et « Domaines placés : 3 sur 12 ».
+- **« Comment marche l'Elo »** (bouton « ? » dans « Ce que tu sais ») : 5 parties pour ton rang, départ à 1000, plafonds par partie, parties qui comptent, liste des rangs.
+- **5 du jour** : la question s'efface dès « Question suivante » ; le score final est préparé pendant la lecture de la dernière correction (plus de chargement à la fin). Le chrono officiel ne change pas (pas de préchargement des questions, donc aucune lecture en avance possible).
+
 ## 0.17.0 — Seconde chance
 - **Seconde chance** (parties Jouer, jamais au 5 du jour) : après une mauvaise réponse, avant la correction, « Seconde chance » (15 graines ou un ticket indice) ou « Voir la réponse ». La réponse déjà tentée est retirée (QCM, carte). Juste au 2e essai : moitié des points et de l'XP ; en partie classée, **demi-réussite** pour l'Elo ; la question n'est pas recalibrée et la notion reste à revoir. Pas proposée sur un Vrai/Faux ni un choix à 2 options.
 - Le serveur ne retient le 2e essai que si la Seconde chance a été payée et que le 1er essai est faux (migration 0028, tests `98_second_chance.sql`).

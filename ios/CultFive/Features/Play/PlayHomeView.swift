@@ -241,9 +241,7 @@ private struct DomainTile: View {
             .accessibilityLabel("Elo \(skill.rating.formatted), \(skill.rating.rank.name)")
         } else if let skill, skill.answered > 0 {
             HStack(spacing: 3) {
-                ForEach(0 ..< CoteCULT.placementGames, id: \.self) { i in
-                    Circle().fill(on.opacity(i < skill.rating.placementGames ? 1 : 0.3)).frame(width: 6, height: 6)
-                }
+                PlacementSquares(done: skill.rating.placementGames, color: on, empty: on.opacity(0.3), size: 7)
                 Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames)")
                     .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit()
                     .foregroundStyle(on.opacity(0.85))
