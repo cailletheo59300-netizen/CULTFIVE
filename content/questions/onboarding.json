@@ -121,63 +121,63 @@
  },
  {
   "key": "onb2-01",
-  "concept": "logic.puzzles.footsteps_riddle",
-  "label": "Énigme : plus j'en prends",
+  "concept": "logic.reasoning.socks_dark",
+  "label": "Les chaussettes dans le noir",
   "type": "mcq",
-  "difficulty": 30,
-  "prompt": "Énigme : plus j'en prends, plus j'en laisse derrière moi. Que suis-je ?",
+  "difficulty": 40,
+  "prompt": "Dans un tiroir plongé dans le noir, il y a 10 chaussettes blanches et 10 noires. Combien dois-tu en prendre, au minimum, pour être sûr d'avoir une paire de la même couleur ?",
   "options": [
-   "Des pas*",
-   "Des photos",
-   "Des années",
-   "Des notes"
+   "3*",
+   "2",
+   "11",
+   "20"
   ],
-  "explanation": "Chaque pas que tu fais laisse une empreinte derrière toi."
+  "explanation": "Avec 2 chaussettes, tu peux tomber sur une blanche et une noire. La 3e est forcément de la même couleur que l'une des deux."
  },
  {
   "key": "onb2-02",
-  "concept": "logic.puzzles.comb_riddle",
-  "label": "Énigme : des dents sans mordre",
+  "concept": "logic.reasoning.snail_well",
+  "label": "L'escargot dans le puits",
   "type": "mcq",
-  "difficulty": 25,
-  "prompt": "Énigme : j'ai des dents, mais je ne mords jamais. Que suis-je ?",
+  "difficulty": 45,
+  "prompt": "Un escargot au fond d'un puits de 10 m grimpe de 3 m le jour et glisse de 2 m la nuit. Au bout de combien de jours sort-il ?",
   "options": [
-   "Un peigne*",
-   "Une horloge",
-   "Un livre",
-   "Une chaise"
+   "8 jours*",
+   "10 jours",
+   "7 jours",
+   "9 jours"
   ],
-  "explanation": "Les « dents » du peigne démêlent les cheveux, sans jamais mordre."
+  "explanation": "Il gagne 1 m par jour et nuit : au matin du 8e jour il est à 7 m, et ce jour-là il grimpe les 3 derniers mètres. Il sort avant de glisser."
  },
  {
   "key": "onb2-03",
-  "concept": "logic.puzzles.your_name_riddle",
-  "label": "Énigme : ce qui est à toi",
+  "concept": "logic.reasoning.machines_rate",
+  "label": "Les machines et les objets",
   "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Énigme : c'est à toi, mais les autres s'en servent bien plus que toi. Qu'est-ce que c'est ?",
+  "difficulty": 45,
+  "prompt": "5 machines fabriquent 5 objets en 5 minutes. Combien de temps faut-il à 100 machines pour fabriquer 100 objets ?",
   "options": [
-   "Ton prénom*",
-   "Ton téléphone",
-   "Ta chambre",
-   "Ton vélo"
+   "5 minutes*",
+   "100 minutes",
+   "20 minutes",
+   "1 minute"
   ],
-  "explanation": "Les autres disent ton prénom sans arrêt pour t'appeler ou parler de toi. Toi, beaucoup moins !"
+  "explanation": "Chaque machine fait 1 objet en 5 minutes. 100 machines font donc 100 objets dans le même temps : 5 minutes."
  },
  {
   "key": "onb2-04",
-  "concept": "logic.reasoning.all_but_nine",
-  "label": "Énigme : tous sauf neuf",
+  "concept": "logic.reasoning.water_lily",
+  "label": "Le nénuphar qui double",
   "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Un berger a 17 moutons. Tous meurent sauf 9. Combien lui en reste-t-il ?",
+  "difficulty": 40,
+  "prompt": "Un nénuphar double de taille chaque jour. Il couvre tout l'étang au bout de 30 jours. Au bout de combien de jours en couvrait-il la moitié ?",
   "options": [
-   "9*",
-   "8",
-   "17",
-   "0"
+   "29 jours*",
+   "15 jours",
+   "20 jours",
+   "28 jours"
   ],
-  "explanation": "« Tous sauf 9 » : il en reste 9. Le calcul 17 − 9 est le piège."
+  "explanation": "Puisqu'il double chaque jour, la veille du 30e jour il en couvrait exactement la moitié."
  },
  {
   "key": "onb2-05",
@@ -196,18 +196,18 @@
  },
  {
   "key": "onb2-06",
-  "concept": "logic.puzzles.stairs_riddle",
-  "label": "Énigme : monter sans bouger",
+  "concept": "logic.reasoning.clock_strikes",
+  "label": "Les coups de l'horloge",
   "type": "mcq",
-  "difficulty": 30,
-  "prompt": "Énigme : je monte et je descends, mais je ne bouge jamais. Que suis-je ?",
+  "difficulty": 45,
+  "prompt": "Une horloge sonne 6 coups en 5 secondes. Combien de temps lui faut-il pour sonner 12 coups ?",
   "options": [
-   "Un escalier*",
-   "Un ascenseur",
-   "Un yoyo",
-   "La marée"
+   "11 secondes*",
+   "10 secondes",
+   "12 secondes",
+   "6 secondes"
   ],
-  "explanation": "On monte et on descend un escalier, qui, lui, reste bien en place."
+  "explanation": "Entre 6 coups, il y a 5 intervalles d'une seconde. Entre 12 coups, il y en a 11 : 11 secondes."
  },
  {
   "key": "onb2-07",
@@ -226,18 +226,18 @@
  },
  {
   "key": "onb2-08",
-  "concept": "logic.reasoning.subtract_once",
-  "label": "Énigme : soustraire 5 de 25",
+  "concept": "logic.reasoning.father_son_ages",
+  "label": "Le père et le fils",
   "type": "mcq",
   "difficulty": 40,
-  "prompt": "Combien de fois peut-on soustraire 5 de 25 ?",
+  "prompt": "Un père et son fils ont 36 ans à eux deux. Le père a 30 ans de plus que son fils. Quel âge a le fils ?",
   "options": [
-   "Une seule fois*",
-   "4 fois",
-   "5 fois",
-   "25 fois"
+   "3 ans*",
+   "6 ans",
+   "5 ans",
+   "4 ans"
   ],
-  "explanation": "Après la première soustraction, on ne soustrait plus 5 de 25, mais de 20 !"
+  "explanation": "Si le fils a 3 ans, le père en a 33 : 3 + 33 = 36. Avec 6 ans, le père en aurait 36 et le total ferait 42."
  },
  {
   "key": "onb3-01",
@@ -329,18 +329,18 @@
  },
  {
   "key": "onb3-07",
-  "concept": "music.instruments.einstein_violin",
-  "label": "L'instrument d'Einstein",
+  "concept": "nature.animals.flamingo_pink",
+  "label": "Pourquoi le flamant est rose",
   "type": "mcq",
   "difficulty": 35,
-  "prompt": "De quel instrument Albert Einstein jouait-il avec passion ?",
+  "prompt": "Pourquoi le flamant rose est-il rose ?",
   "options": [
-   "Du violon*",
-   "De la trompette",
-   "De la batterie",
-   "De la harpe"
+   "À cause de ce qu'il mange*",
+   "C'est la couleur de ses os",
+   "Pour se cacher dans les couchers de soleil",
+   "Il rougit au soleil"
   ],
-  "explanation": "Il jouait du violon depuis l'enfance et disait que la musique l'aidait à réfléchir. Il surnommait son violon « Lina »."
+  "explanation": "Les petites crevettes et les algues qu'il mange contiennent des pigments roses. Un flamant nourri autrement devient presque blanc."
  },
  {
   "key": "onb3-08",
