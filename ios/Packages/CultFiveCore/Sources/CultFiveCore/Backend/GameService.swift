@@ -65,6 +65,12 @@ public protocol GameService: Sendable {
     func duels() async throws -> [Duel]
     /// `friend` nil : défi ouvert, à partager par lien.
     func duelCreate(friend: UUID?) async throws -> Duel
+    /// Duel réglé (nombre de questions, domaines, difficulté).
+    func duelCreate(friend: UUID?, settings: DuelSettings) async throws -> Duel
+    /// Revanche : même adversaire, mêmes réglages.
+    func duelRematch(_ duel: UUID) async throws -> Duel
+    /// Profil d'un ami et face-à-face.
+    func friendProfile(_ friend: UUID) async throws -> FriendProfile
     func duelJoin(code: String) async throws -> Duel
     func duelDecline(_ duel: UUID) async throws
     func duelQuestion(duel: UUID, position: Int) async throws -> DailyQuestionResponse
@@ -265,6 +271,23 @@ public struct LiveGameService: GameService {
         try await api.rpc("duel_create", ["p_friend": friend.map { .string($0.uuidString) } ?? .null])
     }
 
+    public func duelCreate(friend: UUID?, settings: DuelSettings) async throws -> Duel {
+        try await api.rpc("duel_create", [
+            "p_friend": friend.map { .string($0.uuidString) } ?? .null,
+            "p_count": .number(Double(settings.count)),
+            "p_domains": settings.domains.isEmpty ? .null : .array(settings.domains.map(JSONValue.string)),
+            "p_difficulty": .string(settings.difficulty.rawValue),
+        ])
+    }
+
+    public func duelRematch(_ duel: UUID) async throws -> Duel {
+        try await api.rpc("duel_rematch", ["p_duel": .string(duel.uuidString)])
+    }
+
+    public func friendProfile(_ friend: UUID) async throws -> FriendProfile {
+        try await api.rpc("friend_profile", ["p_friend": .string(friend.uuidString)])
+    }
+
     public func duelJoin(code: String) async throws -> Duel { try await api.rpc("duel_join", ["p_code": .string(code)]) }
 
     public func duelDecline(_ duel: UUID) async throws {
@@ -357,6 +380,17 @@ public extension GameService {
     }
 
     func adStatus() async throws -> AdStatus { AdStatus() }
+
+    /// Par défaut (démo) : le duel de base.
+    func duelCreate(friend: UUID?, settings: DuelSettings) async throws -> Duel { try await duelCreate(friend: friend) }
+
+    func duelRematch(_ duel: UUID) async throws -> Duel {
+        throw BackendError.server(status: 400, code: "duel_not_found", message: "")
+    }
+
+    func friendProfile(_ friend: UUID) async throws -> FriendProfile {
+        throw BackendError.server(status: 400, code: "not_friends", message: "")
+    }
 
     func adCan(_ kind: AdKind, ref: String?) async throws {
         throw BackendError.server(status: 400, code: "ad_unavailable", message: "")

@@ -17,6 +17,8 @@ final class DuelSessionModel {
 
     let duelId: UUID
     private(set) var stage: Stage = .loading
+    /// Nombre de questions du duel (5 à 20).
+    private(set) var total = 5
     private(set) var question: Question?
     private(set) var phase: AnswerPhase = .answering
     private(set) var results: [Bool] = []
@@ -37,6 +39,7 @@ final class DuelSessionModel {
         stage = .loading
         do {
             let duel = try await service.duelResult(duelId)
+            total = duel.questionCount
             if duel.myTurn {
                 position = duel.me.answered + 1
                 results = (duel.myAnswers ?? []).map { $0.isCorrect ?? false }
@@ -101,7 +104,7 @@ final class DuelSessionModel {
     }
 
     func next() async {
-        if lastVerdict?.finished == true || position >= 5 { await showResult() } else { await load(position: position + 1) }
+        if lastVerdict?.finished == true || position >= total { await showResult() } else { await load(position: position + 1) }
     }
 
     private func showResult() async {
@@ -123,15 +126,17 @@ struct DuelSessionView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
     @State private var model: DuelSessionModel?
+    /// Duel affiché : celui demandé, puis la revanche éventuelle.
+    @State private var currentId: UUID?
+    @State private var rematchError: String?
 
     var body: some View {
         ZStack {
             Color.paper.ignoresSafeArea()
             if let model { content(model) } else { ProgressView() }
         }
-        .task {
-            guard model == nil else { return }
-            let session = DuelSessionModel(duelId: duelId, service: app.service)
+        .task(id: currentId ?? duelId) {
+            let session = DuelSessionModel(duelId: currentId ?? duelId, service: app.service)
             model = session
             await session.start()
         }
@@ -162,14 +167,18 @@ struct DuelSessionView: View {
                     question: question,
                     domainName: app.domainName(question.domainId),
                     phase: model.phase,
-                    continueTitle: model.position >= 5 ? "Voir le résultat" : "Question suivante",
+                    continueTitle: model.position >= model.total ? "Voir le résultat" : "Question suivante",
                     onSubmit: { model.submit($0) },
                     onContinue: { Task { await model.next() } },
                     onDisplayed: { model.questionDisplayed() }
                 ) {
                     HStack(spacing: Space.m) {
                         Label("Duel", systemImage: "bolt.fill").font(.cfFootnote.weight(.heavy)).foregroundStyle(Color.brand)
-                        ProgressPills(current: model.position, total: 5, color: DomainPalette.color(question.domainId))
+                        if model.total <= 12 {
+                            ProgressPills(current: model.position, total: model.total, color: DomainPalette.color(question.domainId))
+                        } else {
+                            Text("\(model.position) / \(model.total)").font(.cfNumber).foregroundStyle(Color.inkSoft)
+                        }
                         Button { close() } label: { CloseCircle() }
                             .accessibilityLabel("Quitter (tu pourras reprendre)")
                     }
@@ -189,13 +198,31 @@ struct DuelSessionView: View {
                 }
             }
         case .finished(let duel):
-            DuelResultView(duel: duel, myHandle: app.profile?.handle ?? "Moi", onClose: { close() })
+            DuelResultView(duel: duel, myHandle: app.profile?.handle ?? "Moi", rematchError: rematchError,
+                           onRematch: duel.opponent?.id == nil || duel.myTurn || (!duel.isFinished && duel.status != "expired")
+                               ? nil : { rematch(duel) },
+                           onClose: { close() })
         }
     }
 
     private func close() {
         Task { await app.refreshProfile() }
         dismiss()
+    }
+
+    /// Revanche : même adversaire, mêmes réglages ; on enchaîne directement.
+    private func rematch(_ duel: Duel) {
+        rematchError = nil
+        Task {
+            do {
+                let next = try await app.service.duelRematch(duel.id)
+                Haptics.soft()
+                model = nil
+                currentId = next.id
+            } catch {
+                rematchError = (error as? LocalizedError)?.errorDescription ?? "Revanche impossible pour l'instant."
+            }
+        }
     }
 }
 
@@ -230,9 +257,10 @@ private struct DuelIntroView: View {
                     player(duel.opponent?.handle ?? "?", color: Color(hex: 0xFF8FB1), pose: .curious)
                 }
                 VStack(spacing: 6) {
-                    Text("5 questions, les mêmes pour vous deux.")
+                    Text("\(duel.questionCount) questions, les mêmes pour vous deux.")
+                    Text(DuelText.settings(duel)).foregroundStyle(.white.opacity(0.75))
                     Text("Le meilleur score gagne ; à égalité, le plus rapide.")
-                    if let opponent = duel.opponent, opponent.answered == 5 {
+                    if let opponent = duel.opponent, opponent.answered == duel.questionCount {
                         Text("\(opponent.handle ?? "Ton adversaire") a déjà joué : à toi !").foregroundStyle(Color.sun)
                     } else if duel.opponent == nil {
                         Text("Personne n'a encore rejoint : joue, puis partage le lien.").foregroundStyle(Color.sun)
@@ -264,6 +292,9 @@ private struct DuelIntroView: View {
 struct DuelResultView: View {
     let duel: Duel
     let myHandle: String
+    var rematchError: String? = nil
+    /// Revanche proposée une fois le duel terminé (même adversaire, mêmes réglages).
+    var onRematch: (() -> Void)? = nil
     var onClose: () -> Void
 
     @State private var appeared = false
@@ -294,7 +325,7 @@ struct DuelResultView: View {
                         .accessibilityLabel("Fermer")
                     }
                     Leon(color: .sun, pose: duel.winner == "me" ? .proud : duel.winner == "opponent" ? .sad : .wave,
-                         rainbow: duel.winner == "me" && duel.me.score == 5)
+                         rainbow: duel.winner == "me" && duel.me.score == duel.questionCount)
                         .frame(width: 140)
                     Text(title).font(.system(size: 34, weight: .black, design: .rounded)).foregroundStyle(.white)
                         .multilineTextAlignment(.center)
@@ -317,11 +348,19 @@ struct DuelResultView: View {
                                                       : "Tu seras prévenu dans l'onglet Amis quand il aura joué.")
                                 .font(.cfCallout).foregroundStyle(.white.opacity(0.85)).multilineTextAlignment(.center)
                             ShareLink(item: Brand.duelURL(code: duel.code),
-                                      message: Text("Je t'ai défié sur \(Brand.name) : j'ai fait \(duel.me.score)/5. À toi !")) {
+                                      message: Text("Je t'ai défié sur \(Brand.name) : j'ai fait \(duel.me.score)/\(duel.questionCount). À toi !")) {
                                 Label("Partager le défi", systemImage: "square.and.arrow.up")
                             }
                             .buttonStyle(.sun)
                         }
+                    }
+                    if let onRematch {
+                        Button(action: onRematch) { Label("Revanche", systemImage: "arrow.triangle.2.circlepath") }
+                            .buttonStyle(.sun)
+                        Text("Mêmes réglages, nouvelles questions.").font(.cfFootnote).foregroundStyle(.white.opacity(0.75))
+                    }
+                    if let rematchError {
+                        Text(rematchError).font(.cfFootnote).foregroundStyle(.white).multilineTextAlignment(.center)
                     }
                     Button("Continuer", action: onClose).buttonStyle(TextLinkStyle(color: .white))
                 }
@@ -360,35 +399,12 @@ struct DuelLaunch: Identifiable {
     let id: UUID
 }
 
-struct DuelsBlock: View {
-    let duels: [Duel]
-    var onOpen: (Duel) -> Void
-    var onDecline: (Duel) -> Void
-    var onChallengeByLink: () -> Void
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            HStack {
-                Text("Duels").font(.cfHeadline)
-                Spacer()
-                Button { onChallengeByLink() } label: { Label("Défier par lien", systemImage: "link") }
-                    .buttonStyle(.textLink)
-            }
-            if duels.isEmpty {
-                Text("Défie un ami sur 5 questions : touche l'éclair à côté de son nom.")
-                    .font(.cfCallout).foregroundStyle(Color.inkSoft)
-            }
-            ForEach(duels.prefix(8)) { duel in
-                DuelRow(duel: duel, onOpen: { onOpen(duel) }, onDecline: { onDecline(duel) })
-            }
-        }
-    }
-}
-
-private struct DuelRow: View {
+struct DuelRow: View {
     let duel: Duel
+    /// Afficher l'adversaire (liste générale) ou la date (profil d'un ami).
+    var showsDate = false
     var onOpen: () -> Void
-    var onDecline: () -> Void
+    var onDecline: () -> Void = {}
 
     private var status: (String, Color) {
         switch duel.winner {
@@ -412,8 +428,10 @@ private struct DuelRow: View {
                     .frame(width: 42, height: 42)
                     .background(duel.myTurn ? Color.brand : Color.brand.opacity(0.14), in: Circle())
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(duel.opponent?.handle.map { "Contre \($0)" } ?? "Défi par lien").font(.cfTitle3).foregroundStyle(Color.ink)
+                    Text(showsDate ? DuelText.date(duel) : (duel.opponent?.handle.map { "Contre \($0)" } ?? "Défi par lien"))
+                        .font(.cfTitle3).foregroundStyle(Color.ink)
                     Text(status.0).font(.cfFootnote.weight(.bold)).foregroundStyle(status.1)
+                    Text(DuelText.settings(duel)).font(.cfFootnote).foregroundStyle(Color.inkSoft)
                 }
                 Spacer(minLength: 0)
                 if duel.myTurn, !duel.iAmChallenger, duel.me.answered == 0 {
@@ -424,5 +442,44 @@ private struct DuelRow: View {
             .popCard(padding: 12)
         }
         .buttonStyle(.row)
+    }
+}
+
+/// Textes communs des duels.
+enum DuelText {
+    /// « 10 questions · Histoire, Sciences · Difficile »
+    static func settings(_ duel: Duel) -> String {
+        var parts = ["\(duel.questionCount) questions"]
+        if let domains = duel.domains, !domains.isEmpty {
+            parts.append(domains.count <= 2 ? domains.map(DomainPalette.fallbackName).joined(separator: ", ")
+                                            : "\(domains.count) domaines")
+        } else {
+            parts.append("tous les domaines")
+        }
+        if let difficulty = duel.difficulty.flatMap(DuelDifficulty.init(rawValue:)), difficulty != .auto {
+            parts.append(difficulty.title.lowercased())
+        }
+        return parts.joined(separator: " · ")
+    }
+
+    private static let iso: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+
+    private static let isoPlain = ISO8601DateFormatter()
+
+    private static let output: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "fr_FR")
+        formatter.setLocalizedDateFormatFromTemplate("dMMMM")
+        return formatter
+    }()
+
+    /// « 30 septembre »
+    static func date(_ duel: Duel) -> String {
+        guard let raw = duel.createdAt, let date = iso.date(from: raw) ?? isoPlain.date(from: raw) else { return "Duel" }
+        return output.string(from: date)
     }
 }

@@ -19,13 +19,16 @@
 <div class="code" id="code" hidden></div>
 <div class="stack">
 <a class="btn" id="open" href="brainlix://">Ouvrir dans Brainlix</a>
-<span class="btn soon">Bientôt sur l'App Store</span>
+<button class="btn soon" id="copy" type="button" hidden>Copier le code</button>
 </div>
+<p class="help" id="help" hidden>Rien ne s'ouvre&nbsp;? Si tu as ouvert ce lien depuis WhatsApp ou Instagram, appuie sur «&nbsp;Ouvrir dans Brainlix&nbsp;», ou touche «&nbsp;⋯&nbsp;» puis «&nbsp;Ouvrir dans Safari&nbsp;». Tu peux aussi entrer le code dans l'app&nbsp;: <b id="where"></b>.</p>
+<p class="help">Pas encore Brainlix&nbsp;? L'app arrive bientôt sur l'App Store.</p>
 </div></div>
 <script>
 (function () {
   var parts = location.pathname.split("/").filter(Boolean);
   var kind = parts[0], code = (parts[1] || "").replace(/[^A-Za-z0-9]/g, "").toUpperCase();
+  var where = { i: "installe Brainlix, puis rouvre ce lien", l: "Amis → + → Rejoindre une ligue", d: "ouvre le lien sur ton iPhone" };
   var texts = {
     i: ["Ton ami t'invite sur Brainlix", "Installe Brainlix et ouvre ce lien sur ton iPhone : vous serez amis automatiquement."],
     l: ["Rejoins ma ligue sur Brainlix", "Ouvre ce lien sur ton iPhone avec Brainlix pour rejoindre la ligue."],
@@ -36,7 +39,22 @@
     document.getElementById("text").textContent = texts[kind][1];
     var c = document.getElementById("code");
     c.textContent = code; c.hidden = false;
-    document.getElementById("open").href = "brainlix://" + kind + "/" + code;
+    var deep = "brainlix://" + kind + "/" + code;
+    document.getElementById("open").href = deep;
+    document.getElementById("where").textContent = where[kind];
+    document.getElementById("help").hidden = false;
+    var copy = document.getElementById("copy");
+    if (navigator.clipboard) {
+      copy.hidden = false;
+      copy.addEventListener("click", function () {
+        navigator.clipboard.writeText(code).then(function () { copy.textContent = "Code copié"; });
+      });
+    }
+    // Navigateurs intégrés (WhatsApp, Instagram…) : iOS n'ouvre pas l'app par le lien web.
+    // On tente l'ouverture directe une fois ; si l'app n'est pas installée, la page reste affichée.
+    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+      setTimeout(function () { location.href = deep; }, 400);
+    }
   }
 })();
 </script>

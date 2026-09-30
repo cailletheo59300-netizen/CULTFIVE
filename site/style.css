@@ -89,6 +89,8 @@ summary { font-weight: 700; cursor: pointer; }
 .link-page h1 { font-size: 30px; line-height: 1.2; margin: 20px 0 10px; }
 .link-page p { opacity: .92; margin: 0 0 24px; }
 .link-page .code { display: inline-block; background: rgba(255,255,255,.16); border-radius: 12px; padding: 6px 14px; font-weight: 800; letter-spacing: 2px; margin-bottom: 24px; }
+.link-page .help { font-size: 14px; opacity: .8; margin: 20px 0 0; }
+.link-page button.btn { border: 0; font: inherit; cursor: pointer; }
 .link-page .stack { display: flex; flex-direction: column; gap: 12px; align-items: center; }
 
 /* Pied de page */

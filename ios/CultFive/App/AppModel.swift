@@ -231,7 +231,8 @@ final class AppModel {
     func finishOnboarding() async {
         await refreshProfile()
         phase = .main
-        tab = .daily
+        // Arrivé par un lien de ligue ou de duel : on l'emmène directement dans Amis.
+        tab = pendingLeagueCode != nil || pendingDuelCode != nil ? .friends : .daily
         await refreshDaily()
         await claimPendingInviteIfPossible()
         await startAds()

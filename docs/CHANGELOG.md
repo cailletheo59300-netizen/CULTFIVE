@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.24.0 — Amis : profil d'ami, duels personnalisés, face-à-face
+- **Onglet Amis simplifié** : « À toi de jouer » (demandes, duels à jouer) seulement s'il y a quelque chose, puis Mes ligues et Mes amis en listes simples ; les actions globales (ajouter un ami, défier par lien, créer / rejoindre une ligue) dans le bouton « + ».
+- **Profil d'un ami** : son 5 du jour, sa série, son niveau et son Elo ; bouton « Défier » ; **face-à-face** (victoires, défaites, égalités, série en cours, taux de bonnes réponses, ton record, questions jouées) calculé sur tous vos duels ; derniers duels ; retirer / bloquer dans « ⋯ ».
+- **Duels réglables** : 5, 10, 15 ou 20 questions ; tous les domaines ou certains ; difficulté auto (calée sur vos deux niveaux) ou facile / moyenne / difficile ; questions déjà vues évitées. **Revanche** en un tap (mêmes réglages).
+- Les duels **ne changent plus l'Elo** (XP, graines, erreurs à revoir et statistiques gardées).
+- Liens : la page brainlix.site/l/… (et /d/, /i/) ouvre l'app directement même depuis WhatsApp ou Instagram, avec « Copier le code » et l'aide ; un joueur arrivé par un lien de ligue pendant l'onboarding atterrit dans Amis ; les erreurs d'adhésion s'affichent en haut de l'écran. Texte du parrainage corrigé (100 / 150 graines, comme le serveur).
+- Migration 0033, tests `99_duels_v2.sql`.
+
 ## 0.23.0 — pubs (Google AdMob)
 - **Pubs récompensées**, toujours au choix du joueur, récompense donnée par le serveur seulement après la confirmation de Google (fonction Edge `admob-ssv`, signature vérifiée) :
   **Doubler mes graines** (fin de partie Jouer et 5 du jour, partie de moins d'1 h, 3 par jour), **Coffre boosté** (chances de montée doublées 50 / 40 / 10 %, graines +50 %, 2 par jour), **Coffre offert** (coffre en bois, 1 par jour), **Série sauvée** (dans les 48 h, 1 par mois), **Corrige tes erreurs** (la pub remplace le gratuit, 1 fois par partie).

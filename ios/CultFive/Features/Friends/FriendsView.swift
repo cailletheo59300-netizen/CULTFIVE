@@ -1,20 +1,33 @@
 import SwiftUI
 import CultFiveCore
 
-/// Amis : des personnes et leur 5 du jour, des ligues, une invitation. Favorise l'interaction, pas la contemplation.
+/// Amis : court et clair. En haut, seulement ce qui attend le joueur (demandes, duels à jouer) ; puis ses ligues et ses
+/// amis en listes simples. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son profil ; les
+/// actions globales (ajouter, défier par lien, ligues) dans le bouton « + ».
 struct FriendsView: View {
+    enum Route: Hashable {
+        case league(UUID)
+        case friend(UUID, String)
+    }
+
     @Environment(AppModel.self) private var app
     @State private var overview: FriendsOverview?
     @State private var leagues: [LeagueSummary] = []
     @State private var referral: ReferralOverview?
     @State private var showSearch = false
     @State private var showNewLeague = false
+    @State private var showLinkDuel = false
     @State private var joinCode = ""
     @State private var showJoin = false
-    @State private var path: [UUID] = []
-    @State private var error: String?
+    @State private var path: [Route] = []
     @State private var duels: [Duel] = []
     @State private var activeDuel: DuelLaunch?
+    @State private var pendingLaunch: DuelLaunch?
+
+    /// Duels qui attendent le joueur, ou un adversaire par lien.
+    private var waitingDuels: [Duel] {
+        duels.filter { $0.myTurn || ($0.status == "open" && $0.opponent == nil) }
+    }
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -23,26 +36,17 @@ struct FriendsView: View {
                     HStack(alignment: .firstTextBaseline) {
                         Text("Amis").font(.cfDisplay)
                         Spacer()
-                        Button { showSearch = true } label: {
-                            Label("Ajouter", systemImage: "plus").font(.system(.callout, design: .rounded).weight(.semibold))
-                        }
-                        .buttonStyle(.textLink)
+                        addMenu
                     }
                     .padding(.top, Space.l)
 
                     if app.isAnonymous {
                         AccountNudge()
                     }
-                    requests
-                    DuelsBlock(duels: duels, onOpen: { activeDuel = DuelLaunch(id: $0.id) },
-                               onDecline: { duel in Task { try? await app.service.duelDecline(duel.id); await load() } },
-                               onChallengeByLink: { challenge(nil) })
-                    friendsList
+                    toPlay
                     leaguesBlock
+                    friendsList
                     invite
-                    if let error {
-                        Text(error).font(.cfFootnote).foregroundStyle(Color.wrong)
-                    }
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -52,8 +56,11 @@ struct FriendsView: View {
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
             .refreshable { await load() }
-            .navigationDestination(for: UUID.self) { id in
-                LeagueView(leagueId: id)
+            .navigationDestination(for: Route.self) { route in
+                switch route {
+                case .league(let id): LeagueView(leagueId: id)
+                case .friend(let id, let handle): FriendProfileView(friendId: id, handle: handle)
+                }
             }
         }
         .sheet(isPresented: $showSearch, onDismiss: { Task { await load() } }) {
@@ -64,8 +71,19 @@ struct FriendsView: View {
                 showNewLeague = false
                 Task {
                     await load()
-                    path.append(standings.id)
+                    path.append(.league(standings.id))
                 }
+            }
+        }
+        .sheet(isPresented: $showLinkDuel, onDismiss: {
+            if let launch = pendingLaunch {
+                pendingLaunch = nil
+                activeDuel = launch
+            }
+        }) {
+            DuelSetupSheet(opponentName: nil, friendId: nil) { duel in
+                pendingLaunch = DuelLaunch(id: duel.id)
+                showLinkDuel = false
             }
         }
         .alert("Rejoindre une ligue", isPresented: $showJoin) {
@@ -76,7 +94,7 @@ struct FriendsView: View {
         .task {
             await load()
             #if DEBUG
-            if Demo.screen == .league, let first = leagues.first { path.append(first.id) }
+            if Demo.screen == .league, let first = leagues.first { path.append(.league(first.id)) }
             #endif
         }
         .fullScreenCover(item: $activeDuel, onDismiss: { Task { await load() } }) { launch in
@@ -90,7 +108,7 @@ struct FriendsView: View {
                     await load()
                     activeDuel = DuelLaunch(id: duel.id)
                 } catch {
-                    self.error = (error as? LocalizedError)?.errorDescription ?? "Ce défi n'est plus disponible."
+                    app.show((error as? LocalizedError)?.errorDescription ?? "Ce défi n'est plus disponible.")
                 }
             }
         }
@@ -114,39 +132,49 @@ struct FriendsView: View {
         referral = await referralInfo
     }
 
-    /// Nouveau duel contre un ami (ou ouvert, par lien) : on joue tout de suite.
-    private func challenge(_ friend: UUID?) {
-        Task {
-            do {
-                let duel = try await app.service.duelCreate(friend: friend)
-                Haptics.soft()
-                await load()
-                activeDuel = DuelLaunch(id: duel.id)
-            } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Impossible de créer le défi."
-            }
-        }
-    }
-
     private func join(code: String) async {
         do {
             let standings = try await app.service.joinLeague(code: code)
+            Haptics.success()
             await load()
-            path.append(standings.id)
+            path.append(.league(standings.id))
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription
+            // Toast visible (l'ancien message s'affichait en bas de l'écran, hors de vue).
+            app.show((error as? LocalizedError)?.errorDescription ?? "Impossible de rejoindre cette ligue.")
         }
     }
 
     // MARK: Blocs
 
-    @ViewBuilder private var requests: some View {
-        if let incoming = overview?.incoming, !incoming.isEmpty {
+    private var addMenu: some View {
+        Menu {
+            Button("Ajouter un ami", systemImage: "person.badge.plus") { showSearch = true }
+            Button("Défier par lien", systemImage: "link") { showLinkDuel = true }
+            Divider()
+            Button("Créer une ligue", systemImage: "trophy") { showNewLeague = true }
+            Button("Rejoindre une ligue", systemImage: "number") { joinCode = ""; showJoin = true }
+        } label: {
+            Image(systemName: "plus")
+                .font(.system(.body, design: .rounded).weight(.heavy))
+                .foregroundStyle(.white)
+                .frame(width: 40, height: 40)
+                .background(Color.brand, in: Circle())
+        }
+        .accessibilityLabel("Ajouter")
+    }
+
+    /// Ce qui attend le joueur. Absent s'il n'y a rien.
+    @ViewBuilder private var toPlay: some View {
+        let incoming = overview?.incoming ?? []
+        if !incoming.isEmpty || !waitingDuels.isEmpty {
             VStack(alignment: .leading, spacing: Space.s) {
-                Text("Demandes").labelCaps()
+                Text("À toi de jouer").labelCaps()
                 ForEach(incoming) { request in
                     HStack {
-                        Text(request.handle).font(.cfTitle3)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(request.handle).font(.cfTitle3)
+                            Text("veut être ton ami").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        }
                         Spacer()
                         Button("Refuser") { respond(request, accept: false) }.buttonStyle(.textLink)
                         Button("Accepter") { respond(request, accept: true) }
@@ -154,6 +182,10 @@ struct FriendsView: View {
                             .fixedSize()
                     }
                     .popCard(padding: 14)
+                }
+                ForEach(waitingDuels) { duel in
+                    DuelRow(duel: duel, onOpen: { activeDuel = DuelLaunch(id: duel.id) },
+                            onDecline: { Task { try? await app.service.duelDecline(duel.id); await load() } })
                 }
             }
         }
@@ -170,7 +202,7 @@ struct FriendsView: View {
     @ViewBuilder private var friendsList: some View {
         let friends = overview?.friends ?? []
         VStack(alignment: .leading, spacing: Space.s) {
-            Text("Le \(Brand.dailyName) de tes amis").labelCaps()
+            Text("Mes amis").labelCaps()
             if friends.isEmpty {
                 HStack(alignment: .center, spacing: Space.m) {
                     Leon(color: .brand, pose: .curious).frame(width: 90)
@@ -180,17 +212,10 @@ struct FriendsView: View {
                 .padding(.vertical, Space.s)
             } else {
                 ForEach(friends) { friend in
-                    FriendRow(friend: friend, onChallenge: { challenge(friend.id) }) {
-                        Task {
-                            try? await app.service.removeFriend(friend.id)
-                            await load()
-                        }
-                    } onBlock: {
-                        Task {
-                            try? await app.service.blockUser(friend.id)
-                            await load()
-                        }
+                    NavigationLink(value: Route.friend(friend.id, friend.handle)) {
+                        FriendRow(friend: friend)
                     }
+                    .buttonStyle(.row)
                 }
             }
             if let outgoing = overview?.outgoing, !outgoing.isEmpty {
@@ -200,24 +225,23 @@ struct FriendsView: View {
         }
     }
 
-    private var leaguesBlock: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            HStack {
-                Text("Ligues privées").labelCaps()
-                Spacer()
-                Button("Rejoindre") { joinCode = ""; showJoin = true }.buttonStyle(.textLink)
-                Button("Créer") { showNewLeague = true }.buttonStyle(.textLink)
+    @ViewBuilder private var leaguesBlock: some View {
+        if leagues.isEmpty {
+            Button { showNewLeague = true } label: {
+                EditorialRow(label: "Ligues", value: "Crée une ligue entre amis",
+                             detail: "Un classement privé, avec le code pour inviter", chevron: true)
             }
-            if leagues.isEmpty {
-                Text("Une ligue, c'est le 5 du jour entre amis, sur la semaine ou le mois.")
-                    .font(.cfCallout).foregroundStyle(Color.inkSoft)
-            }
-            ForEach(leagues) { league in
-                NavigationLink(value: league.id) {
-                    EditorialRow(label: league.period == .week ? "Semaine" : "Mois", value: league.name,
-                                 detail: "\(league.members) membre\(league.members > 1 ? "s" : "")", chevron: true)
+            .buttonStyle(.row)
+        } else {
+            VStack(alignment: .leading, spacing: Space.s) {
+                Text("Mes ligues").labelCaps()
+                ForEach(leagues) { league in
+                    NavigationLink(value: Route.league(league.id)) {
+                        EditorialRow(label: league.period == .week ? "Semaine" : "Mois", value: league.name,
+                                     detail: "\(league.members) membre\(league.members > 1 ? "s" : "")", chevron: true)
+                    }
+                    .buttonStyle(.row)
                 }
-                .buttonStyle(.row)
             }
         }
     }
@@ -226,7 +250,7 @@ struct FriendsView: View {
         if let code = referral?.code ?? app.profile?.referralCode {
             VStack(alignment: .leading, spacing: Space.m) {
                 Text("Inviter").labelCaps()
-                Text("Ton ami reçoit 30 \(Brand.currencyPlural). Toi, 50 quand il termine son premier \(Brand.dailyName), et un coffre à 3, 5 et 10 amis.")
+                Text("Ton ami reçoit 100 \(Brand.currencyPlural) en créant son compte. Toi, 150 quand il termine son premier \(Brand.dailyName), et un bonus à 3, 5 et 10 amis.")
                     .font(.cfReading)
                     .fixedSize(horizontal: false, vertical: true)
                 if let referral, referral.qualified > 0 {
@@ -247,11 +271,9 @@ struct FriendsView: View {
     }
 }
 
+/// Un ami dans la liste : pseudo, série, son 5 du jour. Toucher ouvre son profil.
 private struct FriendRow: View {
     let friend: Friend
-    var onChallenge: () -> Void
-    var onRemove: () -> Void
-    var onBlock: () -> Void
 
     var body: some View {
         HStack(spacing: Space.m) {
@@ -263,29 +285,17 @@ private struct FriendRow: View {
             Spacer()
             if let today = friend.today, let answers = today.answers {
                 HStack(spacing: Space.s) {
-                    Text("\(today.score ?? 0)/5").font(.cfNumber)
+                    Text("\(today.score ?? 0)/5").font(.cfNumber).foregroundStyle(Color.ink)
                     TallyMark(results: answers).frame(width: 34)
                 }
             } else {
                 Text("pas encore joué").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
-            Button(action: onChallenge) {
-                Image(systemName: "bolt.fill")
-                    .font(.system(.callout, design: .rounded).weight(.bold))
-                    .foregroundStyle(.white)
-                    .frame(width: 38, height: 38)
-                    .background(Color.brand, in: Circle())
-            }
-            .buttonStyle(.row)
-            .accessibilityLabel("Défier \(friend.handle) en duel")
+            Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
         }
         .popCard(padding: 14)
-        .contextMenu {
-            Button("Retirer des amis", systemImage: "person.badge.minus", action: onRemove)
-            Button("Bloquer", systemImage: "hand.raised", role: .destructive, action: onBlock)
-        }
-        .accessibilityElement(children: .contain)
-        .accessibilityHint("Maintiens pour retirer ou bloquer")
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Ouvre son profil")
     }
 }
 

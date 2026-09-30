@@ -942,9 +942,17 @@ public struct Duel: Codable, Hashable, Identifiable, Sendable {
     public let winner: String?
     public let myAnswers: [Mark]?
     public let theirAnswers: [Mark]?
+    /// Nombre de questions (5 à 20) ; absent sur les anciens duels : 5.
+    public let total: Int?
+    /// Domaines choisis ; nil = tous.
+    public let domains: [String]?
+    /// auto · easy · medium · hard
+    public let difficulty: String?
+    public let createdAt: String?
 
     enum CodingKeys: String, CodingKey {
-        case id, code, status, opponent, me, winner
+        case id, code, status, opponent, me, winner, total, domains, difficulty
+        case createdAt = "created_at"
         case expiresAt = "expires_at"
         case iAmChallenger = "i_am_challenger"
         case myTurn = "my_turn"
@@ -953,6 +961,88 @@ public struct Duel: Codable, Hashable, Identifiable, Sendable {
     }
 
     public var isFinished: Bool { status == "finished" }
+    public var questionCount: Int { total ?? 5 }
+}
+
+/// Difficulté d'un duel : automatique (niveau moyen des deux joueurs) ou choisie.
+public enum DuelDifficulty: String, CaseIterable, Hashable, Sendable {
+    case auto, easy, medium, hard
+
+    public var title: String {
+        switch self {
+        case .auto: return "Auto"
+        case .easy: return "Facile"
+        case .medium: return "Moyen"
+        case .hard: return "Difficile"
+        }
+    }
+}
+
+/// Réglages d'un duel.
+public struct DuelSettings: Hashable, Sendable {
+    public static let counts = [5, 10, 15, 20]
+    public var count: Int
+    /// Vide = tous les domaines.
+    public var domains: [String]
+    public var difficulty: DuelDifficulty
+
+    public init(count: Int = 5, domains: [String] = [], difficulty: DuelDifficulty = .auto) {
+        self.count = count
+        self.domains = domains
+        self.difficulty = difficulty
+    }
+}
+
+/// Profil d'un ami : son 5 du jour, son Elo, et notre face-à-face.
+public struct FriendProfile: Decodable, Hashable, Sendable {
+    public struct HeadToHead: Decodable, Hashable, Sendable {
+        public struct Streak: Decodable, Hashable, Sendable {
+            /// me · friend
+            public let who: String
+            public let count: Int
+        }
+
+        public struct Best: Decodable, Hashable, Sendable {
+            public let score: Int
+            public let total: Int
+        }
+
+        public let played: Int
+        public let wins: Int
+        public let losses: Int
+        public let draws: Int
+        public let questions: Int
+        public let myRate: Int?
+        public let theirRate: Int?
+        public let streak: Streak?
+        public let myBest: Best?
+
+        enum CodingKeys: String, CodingKey {
+            case played, wins, losses, draws, questions, streak
+            case myRate = "my_rate"
+            case theirRate = "their_rate"
+            case myBest = "my_best"
+        }
+    }
+
+    public let id: UUID
+    public let handle: String
+    public let streak: Int
+    public let streakBest: Int
+    public let xpTotal: Int
+    public let cote: Int?
+    public let cotePlaced: Bool
+    public let today: FriendToday?
+    public let headToHead: HeadToHead
+    public let duels: [Duel]
+
+    enum CodingKeys: String, CodingKey {
+        case id, handle, streak, cote, today, duels
+        case streakBest = "streak_best"
+        case xpTotal = "xp_total"
+        case cotePlaced = "cote_placed"
+        case headToHead = "head_to_head"
+    }
 }
 
 /// Nom d'un coffre pour l'affichage : « Coffre en bois »…
