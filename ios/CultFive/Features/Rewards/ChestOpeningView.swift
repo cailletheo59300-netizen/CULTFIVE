@@ -270,7 +270,7 @@ private struct RewardCard: View {
     private var subtitle: String {
         switch reward {
         case .seeds: return "\(Brand.currencyPlural.capitalized) pour l'arbre de Léon et les aides"
-        case .tickets(let kind, _): return kind == .fiftyFifty ? "Retire deux mauvaises réponses, sans dépenser de graines" : "Un indice gratuit pendant une partie"
+        case .tickets(let kind, _): return kind == .fiftyFifty ? "Retire deux mauvaises réponses, sans dépenser de graines" : "Un indice ou une seconde chance, sans dépenser de graines"
         case .joker: return "Protège ta série un jour où tu oublies de jouer"
         case .item: return "Nouveau pour Léon : il le porte déjà !"
         }

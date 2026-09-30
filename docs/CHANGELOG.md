@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.17.0 — Seconde chance
+- **Seconde chance** (parties Jouer, jamais au 5 du jour) : après une mauvaise réponse, avant la correction, « Seconde chance » (15 graines ou un ticket indice) ou « Voir la réponse ». La réponse déjà tentée est retirée (QCM, carte). Juste au 2e essai : moitié des points et de l'XP ; en partie classée, **demi-réussite** pour l'Elo ; la question n'est pas recalibrée et la notion reste à revoir. Pas proposée sur un Vrai/Faux ni un choix à 2 options.
+- Le serveur ne retient le 2e essai que si la Seconde chance a été payée et que le 1er essai est faux (migration 0028, tests `98_second_chance.sql`).
+- Les tickets « indice » servent aussi de Seconde chance.
+
 ## 0.16.0 — Elo plus juste, aides plus réactives
 - **Elo v2** (migration 0027) : tout le monde part de **1000** (le niveau choisi à l'inscription règle seulement la difficulté des premières questions, pendant 50 réponses) ; **plafond par partie** : ±120 pendant le placement (50 premières réponses du domaine), ±40 ensuite ; pas par réponse réduit ; partie classée dans une **fenêtre étroite** (questions un peu sous ton Elo, ≈ 65 % de réussite), repli vers la question la plus proche quand un domaine manque de questions.
 - **5 du jour** : difficultés resserrées (44 → 56), rangées de la plus accessible à la plus dure.

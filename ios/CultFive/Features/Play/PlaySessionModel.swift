@@ -110,6 +110,10 @@ final class PlaySessionModel {
     private(set) var helpError: String?
     /// Aide en cours de validation par le serveur : le bouton est verrouillé, le solde déjà décompté.
     private(set) var pendingHelp: HelpKind?
+    /// Mauvaise réponse en suspens : la correction attend que le joueur choisisse Seconde chance ou « Voir la réponse ».
+    private(set) var secondChanceOffer: GivenAnswer?
+    /// Seconde chance prise sur la question en cours : la première réponse (fausse).
+    private(set) var firstGiven: GivenAnswer?
     /// Fin du temps imparti pour la question en cours (entraînement chronométré).
     private(set) var deadline: Date?
     /// Points cumulés pendant la partie (même règle que le serveur).
@@ -230,11 +234,7 @@ final class PlaySessionModel {
         guard phase.isAnswering, let question = current, let reveal = question.reveal else { return }
         stopwatch.pause()
         deadline = nil
-        attempts.append(PlayAttempt(questionId: question.id, given: nil, responseMs: stopwatch.elapsedMilliseconds))
-        results.append(false)
-        lastPoints = 0
-        Feedback.answer(false)
-        phase = .revealed(given: nil, isCorrect: false, reveal: reveal)
+        record(nil, correct: false, question: question, reveal: reveal)
     }
     func pause() { stopwatch.pause() }
     func resume() { if stage == .playing && phase.isAnswering { stopwatch.start() } }
@@ -244,12 +244,58 @@ final class PlaySessionModel {
         stopwatch.pause()
         deadline = nil
         let correct = AnswerEvaluator.isCorrect(given, for: question) ?? false
-        attempts.append(PlayAttempt(questionId: question.id, given: given, responseMs: stopwatch.elapsedMilliseconds))
+        // Raté : on propose une Seconde chance avant de montrer la correction.
+        if !correct, firstGiven == nil, offersSecondChance(question) {
+            Haptics.selection()
+            secondChanceOffer = given
+            phase = .submitting(given)
+            return
+        }
+        record(given, correct: correct, question: question, reveal: reveal)
+    }
+
+    private func record(_ given: GivenAnswer?, correct: Bool, question: Question, reveal: Reveal) {
+        attempts.append(PlayAttempt(questionId: question.id, given: given, responseMs: stopwatch.elapsedMilliseconds,
+                                    firstGiven: firstGiven))
         results.append(correct)
         lastPoints = GamePoints.points(correct: correct, expected: question.expected, responseMs: stopwatch.elapsedMilliseconds)
+        // Réussie au second essai : moitié des points (même règle que le serveur).
+        if firstGiven != nil { lastPoints /= 2 }
         points += lastPoints
         Feedback.answer(correct)
         phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
+    }
+
+    /// Seconde chance possible : en ligne, une seule fois par question, jamais sur un Vrai/Faux ou un choix à 2 options
+    /// (le second essai serait gagné d'avance), et seulement si le joueur peut la payer.
+    private func offersSecondChance(_ question: Question) -> Bool {
+        guard !usedOfflinePack, sessionId != nil, canAfford(.secondChance) else { return false }
+        switch question.type {
+        case .trueFalse: return false
+        case .mcq, .mapPick: return (question.payload.options?.count ?? 0) - removedOptions.count >= 3
+        default: return true
+        }
+    }
+
+    /// « Voir la réponse » : la mauvaise réponse compte, la correction s'affiche.
+    func declineSecondChance() {
+        guard let given = secondChanceOffer, let question = current, let reveal = question.reveal, pendingHelp == nil else { return }
+        secondChanceOffer = nil
+        helpError = nil
+        record(given, correct: false, question: question, reveal: reveal)
+    }
+
+    /// Seconde chance : payée (ticket ou graines), la question se rejoue sans la réponse déjà tentée.
+    func acceptSecondChance() async {
+        guard let given = secondChanceOffer, let question = current else { return }
+        await useHelp(.secondChance)
+        guard helpError == nil, current?.id == question.id, secondChanceOffer == given else { return }
+        secondChanceOffer = nil
+        firstGiven = given
+        if case .option(let optionId) = given { removedOptions.insert(optionId) }
+        phase = .answering
+        stopwatch.start()
+        if let timer = config.timer { deadline = Date().addingTimeInterval(TimeInterval(timer)) }
     }
 
     /// Badge immédiat en mode Erreurs : une bonne réponse corrige l'erreur.
@@ -271,6 +317,8 @@ final class PlaySessionModel {
             removedOptions = []
             helpText = nil
             helpError = nil
+            secondChanceOffer = nil
+            firstGiven = nil
             stopwatch.reset()
         }
     }
@@ -338,6 +386,8 @@ final class PlaySessionModel {
     /// lui, ne facture jamais deux fois la même aide sur la même question.
     func useHelp(_ kind: HelpKind) async {
         guard let sessionId, let question = current, pendingHelp == nil, canAfford(kind) else { return }
+        // Une aide classique ne se prend qu'en répondant ; la Seconde chance, seulement après une erreur.
+        guard kind == .secondChance ? secondChanceOffer != nil : phase.isAnswering else { return }
         helpError = nil
         pendingHelp = kind
         Haptics.selection()
@@ -365,6 +415,7 @@ final class PlaySessionModel {
             case .fiftyFifty: removedOptions = Set(content.remove ?? [])
             case .hint: helpText = content.hint
             case .context: helpText = content.context
+            case .secondChance: break
             }
         } catch {
             seedsBalance = previousSeeds

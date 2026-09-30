@@ -244,6 +244,8 @@ struct DemoGameService: GameService {
         case .context:
             guard let context = entry.context else { throw BackendError.decoding("pas de contexte") }
             content["context"] = .string(context)
+        case .secondChance:
+            break
         }
         let ticket = DemoProgression.shared.useTicket(kind)
         if !ticket.used { engine.spendSeeds(kind.cost) }

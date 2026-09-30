@@ -410,19 +410,23 @@ public struct PlayAttempt: Codable, Hashable, Sendable {
     public let questionId: UUID
     public let given: GivenAnswer?
     public let responseMs: Int
+    /// Seconde chance : la première réponse (fausse) ; `given` est alors le second essai.
+    public let firstGiven: GivenAnswer?
 
     enum CodingKeys: String, CodingKey {
         case given
         case clientAttemptId = "client_attempt_id"
         case questionId = "question_id"
         case responseMs = "response_ms"
+        case firstGiven = "first_given"
     }
 
-    public init(clientAttemptId: UUID = UUID(), questionId: UUID, given: GivenAnswer?, responseMs: Int) {
+    public init(clientAttemptId: UUID = UUID(), questionId: UUID, given: GivenAnswer?, responseMs: Int, firstGiven: GivenAnswer? = nil) {
         self.clientAttemptId = clientAttemptId
         self.questionId = questionId
         self.given = given
         self.responseMs = responseMs
+        self.firstGiven = firstGiven
     }
 }
 
@@ -491,12 +495,15 @@ public enum HelpKind: String, Codable, Sendable, CaseIterable {
     case fiftyFifty = "fifty_fifty"
     case hint
     case context
+    /// Réessayer après une mauvaise réponse, avant de voir la correction (moitié des points).
+    case secondChance = "second_chance"
 
     public var cost: Int {
         switch self {
         case .fiftyFifty: return 15
         case .hint: return 10
         case .context: return 5
+        case .secondChance: return 15
         }
     }
 }
@@ -1187,7 +1194,7 @@ public struct HelpTickets: Codable, Hashable, Sendable {
     public func count(_ kind: HelpKind) -> Int {
         switch kind {
         case .fiftyFifty: return fiftyFifty
-        case .hint: return hint
+        case .hint, .secondChance: return hint   // le ticket « indice » sert aussi de Seconde chance
         case .context: return 0
         }
     }

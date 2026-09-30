@@ -61,6 +61,7 @@ struct PlaySessionView: View {
                     badge: model.badge,
                     difficulty: model.currentDifficulty,
                     continueTitle: model.isLast ? "Terminer" : "Suivante",
+                    onHold: model.secondChanceOffer != nil,
                     onSubmit: { model.submit($0) },
                     onContinue: { Task { await model.next() } },
                     onDisplayed: { model.questionDisplayed() },
@@ -128,6 +129,9 @@ struct PlaySessionView: View {
     private func helpBar(_ model: PlaySessionModel, question: Question) -> some View {
         let helps = model.availableHelps(for: question)
         VStack(alignment: .leading, spacing: Space.s) {
+            if model.secondChanceOffer != nil {
+                SecondChanceCard(model: model)
+            }
             if let text = model.helpText {
                 HStack(alignment: .top, spacing: Space.s) {
                     Image(systemName: "lightbulb.fill").foregroundStyle(Color(hex: 0xFFB020)).accessibilityHidden(true)
@@ -190,6 +194,7 @@ struct PlaySessionView: View {
         case .fiftyFifty: return "50/50"
         case .hint: return "Indice"
         case .context: return "Contexte"
+        case .secondChance: return "Seconde chance"
         }
     }
 
@@ -674,5 +679,58 @@ struct PlacementDots: View {
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Placement : \(done) partie\(done > 1 ? "s" : "") sur \(CoteCULT.placementGames)")
+    }
+}
+
+/// Après une erreur, avant la correction : réessayer (moitié des points) ou voir la réponse.
+private struct SecondChanceCard: View {
+    let model: PlaySessionModel
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Space.m) {
+            HStack(spacing: Space.s) {
+                Image(systemName: "arrow.uturn.backward.circle.fill")
+                    .font(.title2)
+                    .foregroundStyle(Color.wrong)
+                    .accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Raté !").font(.cfHeadline).foregroundStyle(Color.ink)
+                    Text("Tente une seconde chance avant de voir la réponse. Juste au 2e essai : moitié des points.")
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            HStack(spacing: Space.s) {
+                Button {
+                    Task { await model.acceptSecondChance() }
+                } label: {
+                    HStack(spacing: 6) {
+                        if model.pendingHelp == .secondChance { ProgressView().controlSize(.mini) }
+                        Text("Seconde chance")
+                        if model.tickets.count(.secondChance) > 0 {
+                            Text("🎟️ \(model.tickets.count(.secondChance))").monospacedDigit()
+                        } else {
+                            SeedsAmount(amount: HelpKind.secondChance.cost, color: .inkSoft)
+                        }
+                    }
+                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                    .frame(maxWidth: .infinity, minHeight: 44)
+                    .background(Color.sun.opacity(0.9), in: Capsule())
+                }
+                .buttonStyle(.row)
+                .foregroundStyle(Color.ink)
+                .disabled(model.pendingHelp != nil)
+                .accessibilityHint("Réessayer cette question pour la moitié des points")
+
+                Button("Voir la réponse") { model.declineSecondChance() }
+                    .font(.system(.subheadline, design: .rounded).weight(.bold))
+                    .frame(maxWidth: .infinity, minHeight: 44)
+                    .background(Color.paperRaised, in: Capsule())
+                    .buttonStyle(.row)
+                    .foregroundStyle(Color.ink)
+                    .disabled(model.pendingHelp != nil)
+            }
+        }
+        .popCard(padding: 14, radius: Radius.m)
     }
 }

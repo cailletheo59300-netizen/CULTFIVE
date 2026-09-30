@@ -188,7 +188,7 @@ final class DemoProgression: @unchecked Sendable {
             guard tickets.fifty > 0 else { return (false, 0) }
             tickets.fifty -= 1
             return (true, tickets.fifty)
-        case .hint:
+        case .hint, .secondChance:
             guard tickets.hint > 0 else { return (false, 0) }
             tickets.hint -= 1
             return (true, tickets.hint)

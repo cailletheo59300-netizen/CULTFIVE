@@ -242,7 +242,7 @@ struct LeonTreeScreen: View {
             }
             .font(.system(.footnote, design: .rounded).weight(.bold))
             .foregroundStyle(Color.inkSoft)
-            .accessibilityLabel("Tickets d'aide : \(tickets.fiftyFifty) 50/50, \(tickets.hint) indice. Utilisés avant tes graines pendant les parties.")
+            .accessibilityLabel("Tickets d'aide : \(tickets.fiftyFifty) 50/50, \(tickets.hint) indice ou seconde chance. Utilisés avant tes graines pendant les parties.")
         }
     }
 
