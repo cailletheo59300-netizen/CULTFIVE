@@ -1,9 +1,14 @@
 import SwiftUI
 import CultFiveCore
 
-/// Onboarding court : on joue tout de suite (3 vraies questions), puis 3 choix rapides. Pas de tutoriel abstrait.
+/// Onboarding : on joue tout de suite (3 vraies questions, annoncées et expliquées), on voit son résultat et le niveau
+/// proposé, on choisit ses domaines et son pseudo, on peut créer son compte, puis on ouvre un coffre de bienvenue.
+/// Barre de progression et retour sur chaque étape. Le rappel de notification est proposé plus tard, après le premier 5 du jour.
 struct OnboardingFlow: View {
-    enum Step: Hashable { case welcome, questions, level, interests, account, handle }
+    enum Step: Int, Hashable, Comparable {
+        case welcome, intro, questions, result, interests, handle, account, gift, howItWorks
+        static func < (a: Step, b: Step) -> Bool { a.rawValue < b.rawValue }
+    }
 
     @Environment(AppModel.self) private var app
     @State private var step: Step = .welcome
@@ -11,22 +16,27 @@ struct OnboardingFlow: View {
     @State private var index = 0
     @State private var phase: AnswerPhase = .answering
     @State private var attempts: [PlayAttempt] = []
+    @State private var correctCount = 0
     @State private var stopwatch = Stopwatch()
     @State private var level = "balanced"
     @State private var interests: Set<String> = []
     @State private var busy = false
     @State private var error: String?
+    @State private var welcomeChest: ChestRef?
 
     var body: some View {
         ZStack {
             Color.paper.ignoresSafeArea()
             switch step {
             case .welcome: welcome
-            case .questions: questions
-            case .level: levelStep
-            case .interests: interestsStep
-            case .account: accountStep
-            case .handle: HandleStep { Task { await finish() } }
+            case .intro: framed { intro }
+            case .questions: framed(back: false) { questions }
+            case .result: framed(back: false) { resultStep }
+            case .interests: framed { interestsStep }
+            case .handle: framed { HandleStep { step = app.isAnonymous ? .account : .gift; Task { await prepareGift() } } }
+            case .account: framed { accountStep }
+            case .gift: giftStep
+            case .howItWorks: howItWorks
             }
         }
         .animation(Motion.standard, value: step)
@@ -37,6 +47,67 @@ struct OnboardingFlow: View {
                 await loadPack()
             }
             #endif
+        }
+    }
+
+    // MARK: Cadre : progression et retour
+
+    /// Étapes comptées dans la barre de progression.
+    private static let progressSteps: [Step] = [.intro, .questions, .result, .interests, .handle, .account]
+
+    private var progress: Double {
+        guard let i = Self.progressSteps.firstIndex(of: step) else { return 1 }
+        var value = Double(i) / Double(Self.progressSteps.count)
+        if step == .questions, let pack, !pack.questions.isEmpty {
+            value += Double(index) / Double(pack.questions.count) / Double(Self.progressSteps.count)
+        }
+        return value
+    }
+
+    private var previous: Step? {
+        switch step {
+        case .intro: return .welcome
+        case .interests: return .result
+        case .handle: return .interests
+        case .account: return .handle
+        default: return nil
+        }
+    }
+
+    private func framed<Content: View>(back: Bool = true, @ViewBuilder content: () -> Content) -> some View {
+        VStack(spacing: 0) {
+            HStack(spacing: Space.m) {
+                if back, let previous {
+                    Button {
+                        Haptics.selection()
+                        step = previous
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.system(.body, design: .rounded).weight(.bold))
+                            .foregroundStyle(Color.ink)
+                            .frame(width: 36, height: 36)
+                            .background(Color.paperRaised, in: Circle())
+                            .frame(width: 44, height: 44)
+                    }
+                    .accessibilityLabel("Retour")
+                } else {
+                    Color.clear.frame(width: 44, height: 44)
+                }
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(Color.hairline)
+                        Capsule().fill(Color.brand).frame(width: max(10, geo.size.width * progress))
+                    }
+                }
+                .frame(height: 8)
+                .animation(Motion.standard, value: progress)
+                .accessibilityElement()
+                .accessibilityLabel("Progression")
+                .accessibilityValue("\(Int(progress * 100)) %")
+                Color.clear.frame(width: 44, height: 44)
+            }
+            .padding(.horizontal, Space.s)
+            content()
         }
     }
 
@@ -68,18 +139,48 @@ struct OnboardingFlow: View {
                         .padding(.top, 4)
                 }
                 Spacer()
-                Button("C'est parti !") {
-                    step = .questions
-                    Task { await loadPack() }
-                }
-                .buttonStyle(.sun)
+                Button("C'est parti !") { step = .intro }
+                    .buttonStyle(.sun)
             }
             .padding(Space.gutter)
         }
         .preferredColorScheme(.dark)
     }
 
-    // MARK: 2–3. Trois vraies questions
+    // MARK: 2. Ce qui va se passer
+
+    private var intro: some View {
+        VStack(alignment: .leading, spacing: Space.l) {
+            Spacer(minLength: Space.m)
+            Leon(color: .brand, pose: .curious, curl: 0.5).frame(width: 130)
+            Text("On fait connaissance").font(.cfDisplay)
+            VStack(alignment: .leading, spacing: Space.m) {
+                introLine("3", "vraies questions, sur des sujets variés.")
+                introLine("0", "pression : il n'y a rien à perdre, c'est juste pour régler \(Brand.name) à ton niveau.")
+                introLine("5", "questions chaque jour ensuite : les mêmes pour tout le monde, c'est le \(Brand.dailyName).")
+            }
+            Spacer()
+            Button("Je suis prêt") {
+                step = .questions
+                if pack == nil { Task { await loadPack() } }
+            }
+            .buttonStyle(.ink)
+        }
+        .padding(Space.gutter)
+    }
+
+    private func introLine(_ number: String, _ text: String) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: Space.m) {
+            Text(number)
+                .font(.system(size: 34, weight: .black, design: .rounded))
+                .foregroundStyle(Color.brand)
+                .frame(width: 34, alignment: .leading)
+            Text(text).font(.cfReading).foregroundStyle(Color.ink).fixedSize(horizontal: false, vertical: true)
+        }
+        .accessibilityElement(children: .combine)
+    }
+
+    // MARK: 3. Trois vraies questions
 
     @ViewBuilder private var questions: some View {
         if let pack, pack.questions.indices.contains(index) {
@@ -88,12 +189,15 @@ struct OnboardingFlow: View {
                 question: question,
                 domainName: app.domainName(question.domainId),
                 phase: phase,
-                continueTitle: index == pack.questions.count - 1 ? "Continuer" : "Suivante",
+                continueTitle: index == pack.questions.count - 1 ? "Voir mon résultat" : "Suivante",
                 onSubmit: { submit($0, question: question) },
                 onContinue: { advance() },
                 onDisplayed: { stopwatch.reset(); stopwatch.start() }
             ) {
-                Text("\(index + 1) / \(pack.questions.count)").font(.cfNumber).foregroundStyle(Color.inkSoft)
+                VStack(alignment: .trailing, spacing: 0) {
+                    Text("Question \(index + 1) sur \(pack.questions.count)").font(.cfNumber).foregroundStyle(Color.ink)
+                    Text("pour régler ton niveau").font(.system(.caption2, design: .rounded).weight(.semibold)).foregroundStyle(Color.inkSoft)
+                }
             }
             .id(question.id)
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .opacity))
@@ -101,11 +205,11 @@ struct OnboardingFlow: View {
             VStack(spacing: Space.l) {
                 Text(error).font(.cfBody)
                 Button("Réessayer") { Task { await loadPack() } }.buttonStyle(.ink)
-                Button("Passer") { step = .level }.buttonStyle(.textLink)
+                Button("Passer") { step = .result }.buttonStyle(.textLink)
             }
             .padding(Space.gutter)
         } else {
-            ProgressView()
+            ProgressView().frame(maxHeight: .infinity)
         }
     }
 
@@ -113,7 +217,7 @@ struct OnboardingFlow: View {
         error = nil
         do {
             let loaded = try await app.service.onboardingPack()
-            if loaded.questions.isEmpty { step = .level } else { pack = loaded }
+            if loaded.questions.isEmpty { step = .result } else { pack = loaded }
         } catch {
             self.error = (error as? LocalizedError)?.errorDescription ?? "Connexion impossible."
         }
@@ -124,6 +228,7 @@ struct OnboardingFlow: View {
         stopwatch.pause()
         let correct = AnswerEvaluator.isCorrect(given, for: question) ?? false
         attempts.append(PlayAttempt(questionId: question.id, given: given, responseMs: stopwatch.elapsedMilliseconds))
+        if correct { correctCount += 1 }
         Feedback.answer(correct)
         phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
     }
@@ -146,37 +251,77 @@ struct OnboardingFlow: View {
                     await queue.enqueue(session: session, attempts: answers)
                 }
             }
-            step = .level
+            level = correctCount >= 3 ? "challenge" : correctCount == 2 ? "balanced" : "discovery"
+            step = .result
         }
     }
 
-    // MARK: 4. Niveau de challenge (prior initial)
+    // MARK: 4. Résultat et niveau proposé
 
-    private var levelStep: some View {
-        VStack(alignment: .leading, spacing: Space.l) {
-            Text("Quel niveau de défi ?").font(.cfDisplay).padding(.top, Space.xl)
-            Text("Un point de départ. Ensuite, \(Brand.name) s'ajuste à tes réponses.")
-                .font(.cfCallout).foregroundStyle(Color.inkSoft)
-            VStack(spacing: 10) {
-                levelRow("discovery", "Découverte", "Des questions accessibles pour commencer.")
-                levelRow("balanced", "Équilibre", "Un peu de tout, ni trop simple ni trop dur.")
-                levelRow("challenge", "Challenge", "Tu aimes être poussé.")
-                levelRow("expert", "Expert", "Tu penses tout savoir. Vraiment ?")
+    private var total: Int { pack?.questions.count ?? 0 }
+
+    private var resultStep: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: Space.l) {
+                HStack(alignment: .bottom, spacing: Space.m) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        if total > 0 {
+                            Text("\(correctCount) sur \(total)").font(.system(size: 52, weight: .black, design: .rounded))
+                                .foregroundStyle(Color.brand)
+                            Text(verdict).font(.cfHeadline)
+                        } else {
+                            Text("Ton niveau de départ").font(.cfDisplay)
+                        }
+                    }
+                    Spacer()
+                    Leon(color: .brand, pose: correctCount >= 2 ? .proud : .curious, curl: 0.6).frame(width: 110)
+                }
+                .padding(.top, Space.m)
+                (total > 0
+                    ? Text("On te propose le niveau ") + Text(levelName(level)).bold().foregroundColor(Color.ink)
+                        + Text(". \(Brand.name) s'ajustera ensuite à chacune de tes réponses. Tu peux changer :")
+                    : Text("Choisis un point de départ. \(Brand.name) s'ajustera ensuite à chacune de tes réponses."))
+                    .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                    .fixedSize(horizontal: false, vertical: true)
+                VStack(spacing: 10) {
+                    levelRow("discovery", "Des questions accessibles pour commencer.")
+                    levelRow("balanced", "Un peu de tout, ni trop simple ni trop dur.")
+                    levelRow("challenge", "Tu aimes être poussé.")
+                    levelRow("expert", "Tu penses tout savoir. Vraiment ?")
+                }
+                Button("Continuer") { step = .interests }.buttonStyle(.ink).padding(.top, Space.s)
             }
-            Spacer()
-            Button("Continuer") { step = .interests }.buttonStyle(.ink)
+            .padding(Space.gutter)
         }
-        .padding(Space.gutter)
+        .scrollIndicators(.hidden)
     }
 
-    private func levelRow(_ id: String, _ title: String, _ detail: String) -> some View {
+    private var verdict: String {
+        switch correctCount {
+        case 3...: return "Impressionnant !"
+        case 2: return "Pas mal du tout."
+        case 1: return "Un bon début."
+        default: return "Pas de panique : ici, on apprend."
+        }
+    }
+
+    private func levelName(_ id: String) -> String {
+        switch id {
+        case "discovery": return "Découverte"
+        case "challenge": return "Challenge"
+        case "expert": return "Expert"
+        default: return "Équilibre"
+        }
+    }
+
+    private func levelRow(_ id: String, _ detail: String) -> some View {
         Button {
             Haptics.selection()
             level = id
         } label: {
             HStack(spacing: Space.m) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(title).font(.cfTitle3).foregroundStyle(level == id ? .white : Color.ink)
+                    Text(levelName(id)).font(.cfTitle3).foregroundStyle(level == id ? .white : Color.ink)
                     Text(detail).font(.cfFootnote).foregroundStyle(level == id ? .white.opacity(0.85) : Color.inkSoft)
                 }
                 Spacer()
@@ -197,35 +342,41 @@ struct OnboardingFlow: View {
 
     private var interestsStep: some View {
         VStack(alignment: .leading, spacing: Space.l) {
-            Text("Ce qui t'attire").font(.cfDisplay).padding(.top, Space.xl)
-            Text("Pour composer tes parties. Le \(Brand.dailyName) reste varié pour tout le monde.")
+            Text("Ce qui t'attire").font(.cfDisplay).padding(.top, Space.m)
+            Text("Pour composer tes parties : choisis-en au moins 3 pour qu'elles restent variées. Le \(Brand.dailyName) mélange tout, pour tout le monde.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft)
-            FlowLayout(spacing: Space.s) {
-                ForEach(domainOptions, id: \.id) { domain in
-                    let selected = interests.contains(domain.id)
-                    Button {
-                        Haptics.selection()
-                        if selected { interests.remove(domain.id) } else { interests.insert(domain.id) }
-                    } label: {
-                        HStack(spacing: 6) {
-                            Image(systemName: selected ? "checkmark" : DomainPalette.symbol(domain.id))
-                                .foregroundStyle(selected ? DomainPalette.onColor(domain.id) : DomainPalette.color(domain.id))
-                            Text(domain.name)
+                .fixedSize(horizontal: false, vertical: true)
+            ScrollView {
+                FlowLayout(spacing: Space.s) {
+                    ForEach(domainOptions, id: \.id) { domain in
+                        let selected = interests.contains(domain.id)
+                        Button {
+                            Haptics.selection()
+                            if selected { interests.remove(domain.id) } else { interests.insert(domain.id) }
+                        } label: {
+                            HStack(spacing: 6) {
+                                Image(systemName: selected ? "checkmark" : DomainPalette.symbol(domain.id))
+                                    .foregroundStyle(selected ? DomainPalette.onColor(domain.id) : DomainPalette.color(domain.id))
+                                Text(domain.name)
+                            }
+                            .font(.system(.callout, design: .rounded).weight(.heavy))
+                            .padding(.horizontal, 16)
+                            .frame(minHeight: 46)
+                            .foregroundStyle(selected ? DomainPalette.onColor(domain.id) : Color.ink)
+                            .background(selected ? DomainPalette.color(domain.id) : Color.paperRaised, in: Capsule())
+                            .shadow(color: selected ? DomainPalette.color(domain.id).opacity(0.35) : .clear, radius: 8, y: 4)
+                            .scaleEffect(selected ? 1.04 : 1)
+                            .animation(Motion.bounce, value: selected)
                         }
-                        .font(.system(.callout, design: .rounded).weight(.heavy))
-                        .padding(.horizontal, 16)
-                        .frame(minHeight: 46)
-                        .foregroundStyle(selected ? DomainPalette.onColor(domain.id) : Color.ink)
-                        .background(selected ? DomainPalette.color(domain.id) : Color.paperRaised, in: Capsule())
-                        .shadow(color: selected ? DomainPalette.color(domain.id).opacity(0.35) : .clear, radius: 8, y: 4)
-                        .scaleEffect(selected ? 1.04 : 1)
-                        .animation(Motion.bounce, value: selected)
+                        .buttonStyle(.row)
+                        .accessibilityAddTraits(selected ? .isSelected : [])
                     }
-                    .buttonStyle(.row)
-                    .accessibilityAddTraits(selected ? .isSelected : [])
                 }
+                .padding(.vertical, 4)
             }
-            Spacer()
+            .scrollIndicators(.hidden)
+            Text(interests.isEmpty ? "Aucun choisi : tes parties piocheront partout." : "\(interests.count) choisi\(interests.count > 1 ? "s" : "")")
+                .font(.cfFootnote.weight(.bold)).foregroundStyle(interests.count >= 3 || interests.isEmpty ? Color.inkSoft : Color(hex: 0xE8590C))
             Button(interests.isEmpty ? "Passer" : "Continuer") {
                 Task { await saveChoices() }
             }
@@ -248,30 +399,86 @@ struct OnboardingFlow: View {
         defer { busy = false }
         do {
             _ = try await app.service.completeOnboarding(level: level, interests: Array(interests))
-            step = app.isAnonymous ? .account : .handle
+            step = .handle
         } catch {
             self.error = (error as? LocalizedError)?.errorDescription
         }
     }
 
-    // MARK: 6. Compte (facultatif à ce stade)
+    // MARK: 7. Compte (facultatif à ce stade)
 
     private var accountStep: some View {
         VStack(alignment: .leading, spacing: Space.l) {
             Spacer()
             Leon(color: .brand, pose: .proud).frame(width: 150)
-            Text("Garde ta progression.").font(.cfDisplay)
-            Text("Crée ton compte en un geste pour retrouver ta série et tes amis partout. Tu peux aussi le faire plus tard.")
+            Text("Garde ta progression").font(.cfDisplay)
+            Text("Avec un compte, ta série, tes amis, tes coffres et l'arbre de Léon te suivent, même si tu changes d'iPhone. Ça se fait en un geste, et tu peux aussi le faire plus tard.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                .fixedSize(horizontal: false, vertical: true)
             Spacer()
-            AccountInline { step = .handle }
-            Button("Plus tard") { step = .handle }.buttonStyle(.textLink)
+            AccountInline { step = .gift }
+            Button("Plus tard") { step = .gift }.buttonStyle(.textLink)
         }
         .padding(Space.gutter)
     }
 
+    // MARK: 8. Cadeau de bienvenue, puis comment ça marche
+
+    private func prepareGift() async {
+        await app.refreshProgression()
+        welcomeChest = app.progression?.chests.first { $0.source == "welcome" }
+    }
+
+    @ViewBuilder private var giftStep: some View {
+        if let welcomeChest {
+            ChestOpeningView(chests: [welcomeChest]) { step = .howItWorks }
+        } else {
+            howItWorks
+                .task {
+                    await prepareGift()
+                }
+        }
+    }
+
+    private var howItWorks: some View {
+        VStack(alignment: .leading, spacing: Space.l) {
+            Spacer(minLength: Space.m)
+            Leon(color: .brand, pose: .wave, curl: 0.6).frame(width: 130)
+            Text("Voilà comment ça marche").font(.cfDisplay)
+            VStack(alignment: .leading, spacing: Space.m) {
+                howLine(title: "Un \(Brand.dailyName) chaque jour", detail: "Les 5 mêmes questions pour tout le monde. Ta série grandit jour après jour.") {
+                    TallyMark(strokes: [.correct, .correct, .correct, .correct, .ready]).frame(width: 46)
+                }
+                howLine(title: "Des coffres à gagner", detail: "Défis du jour et de la semaine, niveaux, trophées, podium de ligue.") {
+                    ChestView(tier: .gold).frame(width: 46)
+                }
+                howLine(title: "L'arbre de Léon", detail: "Nourris-le de tes graines : il grandit, puis donne des fruits rares.") {
+                    LeonTreeView(stage: 3).frame(width: 46, height: 46)
+                }
+            }
+            Spacer()
+            Button("Allons-y !") { Task { await finish() } }
+                .buttonStyle(.ink)
+                .disabled(busy)
+        }
+        .padding(Space.gutter)
+    }
+
+    private func howLine<Art: View>(title: String, detail: String, @ViewBuilder art: () -> Art) -> some View {
+        HStack(spacing: Space.m) {
+            art().frame(width: 52)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title).font(.cfTitle3).foregroundStyle(Color.ink)
+                Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .accessibilityElement(children: .combine)
+    }
+
     private func finish() async {
+        busy = true
         await app.finishOnboarding()
+        busy = false
     }
 }
 
@@ -301,7 +508,7 @@ private struct HandleStep: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: Space.l) {
-            Text("Ton pseudo").font(.cfDisplay).padding(.top, Space.xl)
+            Text("Ton pseudo").font(.cfDisplay).padding(.top, Space.m)
             Text("C'est ainsi que tes amis te verront dans leurs ligues.").font(.cfCallout).foregroundStyle(Color.inkSoft)
             TextField("pseudo", text: $handle)
                 .font(.system(.title2, design: .rounded).weight(.bold))
@@ -315,6 +522,17 @@ private struct HandleStep: View {
             if let status {
                 Text(status).font(.cfFootnote).foregroundStyle(available ? Color.correct : Color.wrong)
             }
+            Button {
+                Task { await suggest() }
+            } label: {
+                Label("Proposer un pseudo", systemImage: "dice.fill")
+                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.brand)
+                    .padding(.horizontal, 14).frame(minHeight: 40)
+                    .background(Color.brand.opacity(0.12), in: Capsule())
+            }
+            .buttonStyle(.row)
+            .disabled(busy)
             Spacer()
             Button("Valider mon pseudo") { save() }
                 .buttonStyle(.ink)
@@ -329,6 +547,23 @@ private struct HandleStep: View {
             available = result.available
             status = result.available ? "Disponible" : (result.reason == "invalid" ? "3 à 20 caractères : lettres, chiffres ou _."
                                                         : result.reason == "not_allowed" ? "Pseudo non autorisé." : "Déjà pris.")
+        }
+    }
+
+    private static let firstWords = ["Curieux", "Malin", "Rapide", "Brillant", "Sage", "Vif", "Joyeux", "Calme", "Tenace",
+                                      "Hardi", "Subtil", "Lucide"]
+    private static let secondWords = ["Hibou", "Renard", "Lynx", "Panda", "Castor", "Koala", "Loup", "Lion", "Faucon",
+                                       "Dauphin", "Colibri", "Cameleon"]
+
+    /// Invente un pseudo libre (« MalinCastor42 »), vérifié auprès du serveur ; quelques essais au plus.
+    private func suggest() async {
+        Haptics.selection()
+        for _ in 0 ..< 5 {
+            let candidate = "\(Self.firstWords.randomElement()!)\(Self.secondWords.randomElement()!)\(Int.random(in: 2...99))"
+            if let result = try? await app.service.handleAvailable(candidate), result.available {
+                handle = candidate
+                return
+            }
         }
     }
 

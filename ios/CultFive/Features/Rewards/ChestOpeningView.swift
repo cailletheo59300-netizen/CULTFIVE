@@ -33,7 +33,7 @@ struct ChestOpeningView: View {
                 if let chest {
                     Button { Task { await open() } } label: {
                         ChestView(tier: chest.tier, open: contents != nil)
-                            .frame(maxWidth: 230)
+                            .frame(maxWidth: contents == nil ? 230 : 150)
                             .rotationEffect(.degrees(sin(shake * .pi * 6) * (opening ? 6 : 0)))
                             .scaleEffect(burst ? 1.06 : 1)
                     }

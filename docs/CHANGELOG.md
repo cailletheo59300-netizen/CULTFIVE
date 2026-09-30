@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.0 — lot 5 : ligues, onboarding, finitions
+- **Ligues** : explication en 4 étapes illustrées (au premier passage, puis bouton « ? »), fin de période en clair (« Se termine dimanche 7 mars à minuit · dans 3 jours »), coffres du podium affichés à côté des 3 premiers, carte « Tu as fini 2e : coffre en argent ! » sur la période précédente.
+- **Coffres du podium** (serveur, migration 0023) : or / argent / bois pour les 3 premiers à la fin de chaque période, si la ligue compte au moins 4 joueurs actifs et le joueur au moins 3 jours joués (10 pour un mois). Tâche planifiée horaire, versement de secours à l'ouverture des ligues, un seul coffre par ligue et par période.
+- **Onboarding** : barre de progression et retour ; écran « On fait connaissance » qui explique les 3 questions ; question « 1 sur 3 · pour régler ton niveau » ; résultat (« 2 sur 3, pas mal du tout ») avec le niveau proposé selon le score ; conseil de choisir au moins 3 domaines ; pseudo avant le compte, avec « Proposer un pseudo » ; coffre d'or de bienvenue à ouvrir, puis « Voilà comment ça marche » (5 du jour, coffres, arbre de Léon).
+- **Rappel** : proposé une seule fois, après un 5 du jour (heure au choix, autorisation de l'iPhone demandée seulement après « Oui »).
+- **Site** : page d'aide complétée (coffres, graines et arbre, trophées, ligues, jokers de série, règle de l'Elo).
+
 ## 0.12.0 — lot 4 : coffres, arbre de Léon, tenue, trophées (app)
 - **Coffres** : pastille 🎁 sur l'accueil, carte « coffres à ouvrir » en fin de partie, sur l'écran Léon et le Profil. Ouverture en plein écran à la chaîne : le coffre (dessiné en code, bois / argent / or) tremble, s'ouvre dans un éclat, le contenu apparaît ligne par ligne.
 - **L'arbre de Léon** (Profil → Léon ou la carte « L'arbre de Léon ») : l'arbre dessiné à chaque étape puis ses fruits, Léon qui grandit avec lui, jauge vers la prochaine étape, boutons Nourrir (+10, +50, Tout), célébration et coffre à chaque étape.

@@ -131,6 +131,9 @@ struct LeagueView: View {
     @State private var standings: LeagueStandings?
     @State private var offset = 0
     @State private var confirmLeave = false
+    @State private var showRules = false
+    /// L'explication s'ouvre toute seule la première fois qu'on entre dans une ligue.
+    @AppStorage("leagueRulesSeen") private var rulesSeen = false
 
     var body: some View {
         ScrollView {
@@ -139,9 +142,10 @@ struct LeagueView: View {
                     VStack(alignment: .leading, spacing: Space.xs) {
                         Text(standings.period == .week ? "Ligue · semaine" : "Ligue · mois").labelCaps()
                         Text(standings.name).font(.cfDisplay)
-                        Text("Du \(DateText.long(standings.startDate)) au \(DateText.long(standings.endDate))")
-                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        Text(periodLine(standings))
+                            .font(.cfFootnote.weight(.semibold)).foregroundStyle(Color.inkSoft)
                     }
+                    podiumCard(standings)
                     Picker("Période", selection: $offset) {
                         Text("En cours").tag(0)
                         Text("Précédente").tag(-1)
@@ -163,6 +167,10 @@ struct LeagueView: View {
                                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                                 }
                                 Spacer()
+                                if let tier = podiumTier(row, in: standings) {
+                                    ChestView(tier: tier, open: offset < 0).frame(width: 30)
+                                        .accessibilityLabel("Podium : \(tier.title.lowercased())")
+                                }
                                 Text("\(row.points)").font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
                             }
                             .padding(12)
@@ -196,6 +204,21 @@ struct LeagueView: View {
         .clearsTabBar()
         .background(Color.paper)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { showRules = true } label: {
+                    Image(systemName: "questionmark.circle").font(.body.weight(.bold))
+                }
+                .accessibilityLabel("Comment marchent les ligues")
+            }
+        }
+        .sheet(isPresented: $showRules) { LeagueRulesSheet() }
+        .onAppear {
+            if !rulesSeen {
+                rulesSeen = true
+                showRules = true
+            }
+        }
         .task(id: offset) {
             standings = try? await app.service.leagueStandings(leagueId, offset: offset)
         }
@@ -206,6 +229,142 @@ struct LeagueView: View {
                     dismiss()
                 }
             }
+        }
+    }
+}
+
+extension LeagueView {
+    /// « Se termine dimanche soir · dans 3 j » (en cours) ou « Du lundi 1er au dimanche 7 mars » (précédente).
+    fileprivate func periodLine(_ standings: LeagueStandings) -> String {
+        guard offset == 0 else { return "Du \(DateText.long(standings.startDate)) au \(DateText.long(standings.endDate))" }
+        let end = DateText.long(standings.endDate)
+        let days = DailyHomeView.daysLeft(until: standings.endDate) ?? 0
+        let left = days <= 0 ? "dernier jour" : days == 1 ? "demain" : "dans \(days) jours"
+        return "Se termine \(end) à minuit · \(left)"
+    }
+
+    /// Coffre du podium pour une ligne (seulement si la ligue compte assez de joueurs actifs et le joueur assez de jours).
+    fileprivate func podiumTier(_ row: LeagueStandings.Row, in standings: LeagueStandings) -> ChestTier? {
+        guard let podium = standings.podium, podium.activePlayers >= podium.minPlayers, row.days >= podium.minDays else { return nil }
+        let eligible = standings.standings.filter { $0.days >= podium.minDays }
+        guard let place = eligible.firstIndex(where: { $0.id == row.id }), place < 3 else { return nil }
+        return [ChestTier.gold, .silver, .wood][place]
+    }
+
+    @ViewBuilder
+    fileprivate func podiumCard(_ standings: LeagueStandings) -> some View {
+        if let reward = standings.myReward {
+            let waiting = app.progression?.chests.contains { $0.source == "league" } ?? false
+            HStack(spacing: Space.m) {
+                ChestView(tier: reward.tier, open: !waiting).frame(width: 54)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Tu as fini \(reward.place == 1 ? "1er" : "\(reward.place)e") !").font(.cfTitle3)
+                    Text("\(reward.tier.title) gagné.").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                }
+                Spacer(minLength: 0)
+                if waiting {
+                    Button("Ouvrir") { app.openChests() }
+                        .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color(hex: 0x1E1340))
+                        .padding(.horizontal, 14).frame(minHeight: 40)
+                        .background(Color.sun, in: Capsule())
+                }
+            }
+            .popCard(padding: 14)
+        } else if offset == 0, let podium = standings.podium {
+            HStack(spacing: Space.m) {
+                HStack(alignment: .bottom, spacing: 2) {
+                    ChestView(tier: .silver).frame(width: 28)
+                    ChestView(tier: .gold).frame(width: 36)
+                    ChestView(tier: .wood).frame(width: 24)
+                }
+                VStack(alignment: .leading, spacing: 2) {
+                    if podium.activePlayers < podium.minPlayers {
+                        let missing = podium.minPlayers - podium.activePlayers
+                        Text("Encore \(missing) joueur\(missing > 1 ? "s" : "") actif\(missing > 1 ? "s" : "")")
+                            .font(.system(.subheadline, design: .rounded).weight(.bold))
+                        Text("Il faut \(podium.minPlayers) joueurs qui font leur \(Brand.dailyName) pour que le podium gagne des coffres.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+                    } else {
+                        Text("Le podium gagne un coffre").font(.system(.subheadline, design: .rounded).weight(.bold))
+                        Text("Or, argent et bois pour les 3 premiers ayant joué au moins \(podium.minDays) jours.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                Spacer(minLength: 0)
+            }
+            .popCard(padding: 14)
+            .onTapGesture { showRules = true }
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isButton)
+        }
+    }
+}
+
+/// Comment marchent les ligues, en 4 étapes illustrées.
+struct LeagueRulesSheet: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: Space.l) {
+                Text("Les ligues").font(.cfDisplay).padding(.top, Space.l)
+                Text("Un classement privé entre amis, remis à zéro à chaque période.")
+                    .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                step(1, "Crée ou rejoins une ligue", "Partage son code à tes amis : seuls ceux qui l'ont peuvent entrer.") {
+                    Text("K7P2QX")
+                        .font(.system(.title3, design: .monospaced).weight(.bold))
+                        .foregroundStyle(Color.brand)
+                        .padding(.horizontal, 12).padding(.vertical, 8)
+                        .background(Color.brand.opacity(0.12), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                }
+                step(2, "Fais ton \(Brand.dailyName)", "Chaque bonne réponse vaut 1 point. À égalité, le plus rapide passe devant.") {
+                    TallyMark(strokes: [.correct, .correct, .wrong, .correct, .correct]).frame(width: 60)
+                }
+                step(3, "La période se termine", "Chaque dimanche à minuit pour une ligue de la semaine, ou le dernier jour du mois.") {
+                    VStack(spacing: 0) {
+                        Text("DIM.").font(.system(.caption2, design: .rounded).weight(.heavy)).foregroundStyle(.white)
+                            .frame(maxWidth: .infinity).padding(.vertical, 3).background(Color.wrong)
+                        Text("23:59").font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit()
+                            .foregroundStyle(Color.ink).padding(.vertical, 6)
+                    }
+                    .frame(width: 64)
+                    .background(Color.paperRaised)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(Color.hairline))
+                }
+                step(4, "Le podium gagne un coffre", "Or pour le 1er, argent pour le 2e, bois pour le 3e. Il faut au moins 4 joueurs actifs dans la ligue, et avoir joué au moins 3 jours (10 pour un mois).") {
+                    HStack(alignment: .bottom, spacing: 2) {
+                        podiumStep(.silver, height: 16)
+                        podiumStep(.gold, height: 26)
+                        podiumStep(.wood, height: 10)
+                    }
+                }
+                Button("C'est compris") { dismiss() }.buttonStyle(.ink).padding(.top, Space.s)
+            }
+            .padding(.horizontal, Space.gutter)
+            .padding(.bottom, Space.l)
+        }
+        .background(Color.paper)
+        .presentationDragIndicator(.visible)
+    }
+
+    private func step<Art: View>(_ number: Int, _ title: String, _ detail: String, @ViewBuilder art: () -> Art) -> some View {
+        HStack(alignment: .center, spacing: Space.m) {
+            art().frame(width: 76, height: 64)
+            VStack(alignment: .leading, spacing: 3) {
+                Text("\(number). \(title)").font(.cfTitle3).foregroundStyle(Color.ink)
+                Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .accessibilityElement(children: .combine)
+    }
+
+    private func podiumStep(_ tier: ChestTier, height: CGFloat) -> some View {
+        VStack(spacing: 1) {
+            ChestView(tier: tier).frame(width: 22)
+            Rectangle().fill(Color.brand.opacity(0.25)).frame(width: 22, height: height)
         }
     }
 }

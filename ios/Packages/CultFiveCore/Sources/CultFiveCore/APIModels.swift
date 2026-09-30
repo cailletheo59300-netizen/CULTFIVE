@@ -817,13 +817,35 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
     public let startDate: String
     public let endDate: String
     public let standings: [Row]
+    /// Règles du podium (coffres de fin de période) ; nil sur un ancien serveur.
+    public let podium: Podium?
+    /// Coffre gagné par le joueur sur cette période (podium), s'il y en a un.
+    public let myReward: Reward?
+
+    public struct Podium: Codable, Hashable, Sendable {
+        public let minPlayers: Int
+        public let minDays: Int
+        public let activePlayers: Int
+
+        enum CodingKeys: String, CodingKey {
+            case minPlayers = "min_players"
+            case minDays = "min_days"
+            case activePlayers = "active_players"
+        }
+    }
+
+    public struct Reward: Codable, Hashable, Sendable {
+        public let tier: ChestTier
+        public let place: Int
+    }
 
     enum CodingKeys: String, CodingKey {
-        case id, name, period, standings
+        case id, name, period, standings, podium
         case inviteCode = "invite_code"
         case isOwner = "is_owner"
         case startDate = "start_date"
         case endDate = "end_date"
+        case myReward = "my_reward"
     }
 }
 
@@ -967,6 +989,7 @@ public struct ChestRef: Codable, Hashable, Identifiable, Sendable {
         case "trophy": return "Trophée"
         case "tree": return "L'arbre de Léon a grandi"
         case "referral": return "Parrainage"
+        case "league": return "Podium de ta ligue"
         case "welcome": return "Bienvenue dans la nouvelle version"
         default: return "Récompense"
         }
