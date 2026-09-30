@@ -1,0 +1,948 @@
+[
+ {
+  "key": "tech-631",
+  "concept": "tech.brands.mcdonalds_logo",
+  "label": "McDonald's",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle lettre forme le logo de McDonald's ?",
+  "options": [
+   "Un M jaune*",
+   "Un W rouge",
+   "Un O doré",
+   "Un D bleu"
+  ],
+  "explanation": "Les « arches dorées » viennent des arches qui décoraient les premiers restaurants dans les années 1950.",
+  "hint": "L'initiale de la marque."
+ },
+ {
+  "key": "tech-632",
+  "concept": "tech.brands.lamborghini_pays",
+  "label": "Lamborghini",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays vient Lamborghini ?",
+  "options": [
+   "D'Italie*",
+   "D'Allemagne",
+   "D'Espagne",
+   "Du Japon"
+  ],
+  "explanation": "Ferruccio Lamborghini fabriquait des tracteurs ; mécontent de sa Ferrari, il lance ses propres voitures de sport en 1963.",
+  "hint": "Le même pays que Ferrari."
+ },
+ {
+  "key": "tech-633",
+  "concept": "tech.brands.lamborghini_tracteurs",
+  "label": "Lamborghini avant les voitures",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Que fabriquait Ferruccio Lamborghini avant ses voitures de sport ?",
+  "options": [
+   "Des tracteurs*",
+   "Des motos",
+   "Des avions",
+   "Des machines à café"
+  ],
+  "explanation": "Ses tracteurs se vendent encore aujourd'hui. Son logo, un taureau, rappelle son signe astrologique.",
+  "hint": "Des engins agricoles."
+ },
+ {
+  "key": "tech-634",
+  "concept": "tech.brands.chanel_coco",
+  "label": "Chanel",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le prénom d'usage de la créatrice de la maison Chanel ?",
+  "options": [
+   "Coco*",
+   "Jeanne",
+   "Christian",
+   "Yves"
+  ],
+  "explanation": "Gabrielle « Coco » Chanel ouvre sa première boutique à Paris en 1910. Le parfum N°5 sort en 1921.",
+  "hint": "Deux syllabes identiques."
+ },
+ {
+  "key": "tech-635",
+  "concept": "tech.brands.nestle_pays",
+  "label": "Nestlé",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient Nestlé, le plus grand groupe alimentaire du monde ?",
+  "options": [
+   "De Suisse*",
+   "De France",
+   "Des États-Unis",
+   "D'Allemagne"
+  ],
+  "explanation": "Henri Nestlé, pharmacien d'origine allemande installé à Vevey, crée en 1867 une farine lactée pour nourrissons.",
+  "hint": "Son siège est au bord du lac Léman."
+ },
+ {
+  "key": "tech-636",
+  "concept": "tech.brands.heineken_pays",
+  "label": "Heineken",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient la bière Heineken ?",
+  "options": [
+   "Des Pays-Bas*",
+   "D'Allemagne",
+   "De Belgique",
+   "Du Danemark"
+  ],
+  "explanation": "Gerard Heineken rachète une brasserie d'Amsterdam en 1864. Son étoile rouge est l'un des logos les plus connus.",
+  "hint": "Sa capitale est Amsterdam."
+ },
+ {
+  "key": "tech-637",
+  "concept": "tech.brands.red_bull_pays",
+  "label": "Red Bull",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quel pays vient la boisson Red Bull ?",
+  "options": [
+   "D'Autriche*",
+   "Des États-Unis",
+   "D'Allemagne",
+   "D'Australie"
+  ],
+  "explanation": "Dietrich Mateschitz adapte en 1987 une boisson thaïlandaise, Krating Daeng (« taureau rouge »).",
+  "hint": "Le pays de Salzbourg."
+ },
+ {
+  "key": "tech-638",
+  "concept": "tech.brands.philips_pays",
+  "label": "Philips",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays vient l'entreprise Philips ?",
+  "options": [
+   "Des Pays-Bas*",
+   "D'Allemagne",
+   "De Suède",
+   "Du Royaume-Uni"
+  ],
+  "explanation": "Fondée à Eindhoven en 1891 pour fabriquer des ampoules. Elle co-invente la cassette audio et le CD.",
+  "hint": "Son siège historique est à Eindhoven."
+ },
+ {
+  "key": "tech-639",
+  "concept": "tech.brands.volvo_pays",
+  "label": "Volvo",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel pays vient le constructeur automobile Volvo ?",
+  "options": [
+   "De Suède*",
+   "De Norvège",
+   "D'Allemagne",
+   "Du Danemark"
+  ],
+  "explanation": "Fondé à Göteborg en 1927. Un ingénieur Volvo invente en 1959 la ceinture de sécurité à trois points, laissée libre de droits.",
+  "hint": "Le pays d'Ikea."
+ },
+ {
+  "key": "tech-640",
+  "concept": "tech.brands.ceinture_volvo",
+  "label": "Ceinture de sécurité",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel constructeur a inventé la ceinture de sécurité à trois points, en 1959, et l'a offerte à tous les autres ?",
+  "options": [
+   "Volvo*",
+   "Mercedes",
+   "Ford",
+   "Renault"
+  ],
+  "explanation": "Nils Bohlin, ingénieur Volvo, la met au point ; Volvo renonce à faire payer le brevet pour sauver des vies.",
+  "hint": "Un constructeur suédois."
+ },
+ {
+  "key": "tech-641",
+  "concept": "tech.brands.skoda_pays",
+  "label": "Škoda",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel pays vient le constructeur automobile Škoda ?",
+  "options": [
+   "De Tchéquie*",
+   "De Pologne",
+   "De Slovaquie",
+   "De Hongrie"
+  ],
+  "explanation": "Né à Mladá Boleslav en 1895 comme fabricant de vélos (Laurin & Klement). Il appartient aujourd'hui au groupe Volkswagen.",
+  "hint": "Sa capitale est Prague."
+ },
+ {
+  "key": "tech-642",
+  "concept": "tech.brands.seat_pays",
+  "label": "SEAT",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel pays vient le constructeur automobile SEAT ?",
+  "options": [
+   "D'Espagne*",
+   "D'Italie",
+   "Du Portugal",
+   "De France"
+  ],
+  "explanation": "Fondé en 1950 à Barcelone, d'abord pour produire des Fiat sous licence. Il fait aujourd'hui partie du groupe Volkswagen.",
+  "hint": "Son siège est près de Barcelone."
+ },
+ {
+  "key": "tech-643",
+  "concept": "tech.brands.lacoste_crocodile",
+  "label": "Lacoste",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel animal est le logo de Lacoste ?",
+  "options": [
+   "Un crocodile*",
+   "Un lézard",
+   "Un requin",
+   "Un serpent"
+  ],
+  "explanation": "René Lacoste, champion de tennis, était surnommé « le Crocodile ». Il crée son polo en 1933.",
+  "hint": "Son fondateur avait ce surnom."
+ },
+ {
+  "key": "tech-644",
+  "concept": "tech.brands.lacoste_sport",
+  "label": "René Lacoste",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quel sport René Lacoste, fondateur de la marque au crocodile, était-il champion ?",
+  "options": [
+   "Le tennis*",
+   "Le golf",
+   "La voile",
+   "Le rugby"
+  ],
+  "explanation": "L'un des « Mousquetaires » qui gagnent la Coupe Davis pour la France en 1927. Son polo remplace les chemises à manches longues.",
+  "hint": "Il a gagné Roland-Garros."
+ },
+ {
+  "key": "tech-645",
+  "concept": "tech.brands.puma_dassler",
+  "label": "Puma et Adidas",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel lien unit les fondateurs de Puma et d'Adidas ?",
+  "options": [
+   "Ils étaient frères*",
+   "Ils étaient père et fils",
+   "Ils étaient associés américains",
+   "Aucun lien"
+  ],
+  "explanation": "Rudolf et Adolf Dassler se brouillent en 1948 et fondent deux marques rivales, de part et d'autre de la rivière de leur village, Herzogenaurach.",
+  "hint": "Même nom de famille."
+ },
+ {
+  "key": "tech-646",
+  "concept": "tech.brands.starbucks_nom",
+  "label": "Starbucks",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "D'où vient le nom de la chaîne de cafés Starbucks ?",
+  "options": [
+   "D'un personnage du roman Moby Dick*",
+   "D'un café de Seattle disparu",
+   "Du nom de son fondateur",
+   "D'une étoile du drapeau américain"
+  ],
+  "explanation": "Starbuck est le second du capitaine Achab. Le logo, une sirène à deux queues, rappelle aussi la mer.",
+  "hint": "Un roman sur une baleine blanche."
+ },
+ {
+  "key": "tech-647",
+  "concept": "tech.brands.canon_nom",
+  "label": "Canon",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "D'où viendrait le nom de la marque japonaise Canon ?",
+  "options": [
+   "De Kwanon, déesse bouddhiste de la miséricorde*",
+   "D'une arme d'artillerie",
+   "Du mot latin pour règle",
+   "D'un fleuve japonais"
+  ],
+  "explanation": "Le premier appareil photo s'appelait « Kwanon » en 1934 ; le nom devient Canon, plus facile à dire partout.",
+  "hint": "Une divinité bouddhiste."
+ },
+ {
+  "key": "tech-648",
+  "concept": "tech.brands.mercedes_prenom",
+  "label": "Mercedes",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le nom « Mercedes » de la marque automobile ?",
+  "options": [
+   "Du prénom de la fille d'un client*",
+   "D'une ville espagnole",
+   "Du mot latin pour marchandise",
+   "D'une déesse grecque"
+  ],
+  "explanation": "Emil Jellinek, gros client de Daimler, fait courir ses voitures sous le prénom de sa fille, Mercedes. Le nom devient la marque en 1902.",
+  "hint": "Le prénom d'une petite fille."
+ },
+ {
+  "key": "tech-649",
+  "concept": "tech.brands.mercedes_etoile",
+  "label": "Étoile Mercedes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que représenteraient les trois branches de l'étoile Mercedes ?",
+  "options": [
+   "La terre, la mer et les airs*",
+   "Les trois fondateurs",
+   "Trois victoires en course",
+   "Trois pays"
+  ],
+  "explanation": "Gottlieb Daimler voulait motoriser tout ce qui se déplace sur terre, sur l'eau et dans le ciel.",
+  "hint": "Trois éléments où l'on se déplace."
+ },
+ {
+  "key": "tech-650",
+  "concept": "tech.brands.citroen_chevrons",
+  "label": "Citroën",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que représentent les deux chevrons du logo Citroën ?",
+  "options": [
+   "Des engrenages à dents en V*",
+   "Deux montagnes",
+   "Des ailes d'avion",
+   "Un grade militaire"
+  ],
+  "explanation": "André Citroën fabriquait d'abord des engrenages à chevrons, plus silencieux, avant de construire des voitures en 1919.",
+  "hint": "Son premier métier était mécanique."
+ },
+ {
+  "key": "tech-651",
+  "concept": "tech.brands.peugeot_lion",
+  "label": "Peugeot",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel animal figure sur le logo de Peugeot ?",
+  "options": [
+   "Un lion*",
+   "Un aigle",
+   "Un cheval",
+   "Un taureau"
+  ],
+  "explanation": "Le lion apparaît en 1858 sur les outils en acier de la marque (scies, lames) pour évoquer leur solidité.",
+  "hint": "Le roi des animaux."
+ },
+ {
+  "key": "tech-652",
+  "concept": "tech.brands.renault_losange",
+  "label": "Renault",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle forme a le logo de Renault ?",
+  "options": [
+   "Un losange*",
+   "Un cercle",
+   "Une étoile",
+   "Un bouclier"
+  ],
+  "explanation": "Le losange est adopté en 1925. Il a été simplifié en 2021, dans un style qui rappelle celui des années 1970.",
+  "hint": "Une figure à quatre côtés égaux."
+ },
+ {
+  "key": "tech-653",
+  "concept": "tech.brands.porsche_ville",
+  "label": "Porsche",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quelle ville se trouve le siège de Porsche ?",
+  "options": [
+   "Stuttgart*",
+   "Munich",
+   "Berlin",
+   "Wolfsburg"
+  ],
+  "explanation": "Le cheval cabré du logo vient d'ailleurs des armoiries de Stuttgart. Mercedes y a aussi son siège.",
+  "hint": "Le cheval du logo vient de ses armoiries."
+ },
+ {
+  "key": "tech-654",
+  "concept": "tech.brands.twitter_oiseau",
+  "label": "Oiseau de Twitter",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelait l'oiseau bleu du logo de Twitter ?",
+  "options": [
+   "Larry*",
+   "Tweety",
+   "Bluey",
+   "Jack"
+  ],
+  "explanation": "Un clin d'œil au basketteur Larry Bird. Il disparaît en 2023 quand Twitter devient X.",
+  "hint": "Le prénom d'un basketteur dont le nom veut dire oiseau."
+ },
+ {
+  "key": "tech-655",
+  "concept": "tech.brands.snapchat_fantome",
+  "label": "Snapchat",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel personnage sert de logo à Snapchat ?",
+  "options": [
+   "Un fantôme*",
+   "Un chat",
+   "Un oiseau",
+   "Une abeille"
+  ],
+  "explanation": "Le fantôme, surnommé Ghostface Chillah, évoque les messages qui disparaissent après lecture.",
+  "hint": "Il disparaît, comme les messages."
+ },
+ {
+  "key": "tech-656",
+  "concept": "tech.brands.swatch_pays",
+  "label": "Swatch",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient la marque de montres Swatch ?",
+  "options": [
+   "De Suisse*",
+   "Du Japon",
+   "D'Allemagne",
+   "D'Italie"
+  ],
+  "explanation": "Lancée en 1983 pour contrer les montres japonaises bon marché. « Swatch » : Swiss watch… ou second watch.",
+  "hint": "Le pays des montres."
+ },
+ {
+  "key": "tech-657",
+  "concept": "tech.brands.kinder_pays",
+  "label": "Kinder",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quel groupe appartient la marque Kinder ?",
+  "options": [
+   "Ferrero*",
+   "Nestlé",
+   "Mondelez",
+   "Mars"
+  ],
+  "explanation": "Le groupe italien lance Kinder en 1968 et l'œuf surprise en 1974. Il fabrique aussi Nutella et les Rocher.",
+  "hint": "Le groupe de Nutella."
+ },
+ {
+  "key": "tech-658",
+  "concept": "tech.brands.ikea_nom",
+  "label": "Ikea",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Que signifient les lettres I, K, E, A ?",
+  "options": [
+   "Les initiales du fondateur, de sa ferme et de son village*",
+   "Un mot suédois pour maison",
+   "Les noms de quatre associés",
+   "Une formule de meuble"
+  ],
+  "explanation": "Ingvar Kamprad, Elmtaryd (la ferme), Agunnaryd (le village). Il fonde l'entreprise à 17 ans, en 1943.",
+  "hint": "Le fondateur s'appelait Ingvar Kamprad."
+ },
+ {
+  "key": "tech-659",
+  "concept": "tech.brands.toblerone",
+  "label": "Toblerone",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle montagne est représentée sur les boîtes de Toblerone ?",
+  "options": [
+   "Le Cervin*",
+   "Le mont Blanc",
+   "L'Everest",
+   "Le Kilimandjaro"
+  ],
+  "explanation": "Depuis 2023, une partie de la production quitte la Suisse : le Cervin a dû être retiré de l'emballage, remplacé par une montagne générique.",
+  "hint": "Une pyramide suisse célèbre."
+ },
+ {
+  "key": "tech-660",
+  "concept": "tech.brands.lindt_pays",
+  "label": "Lindt",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient le chocolatier Lindt ?",
+  "options": [
+   "De Suisse*",
+   "De Belgique",
+   "De France",
+   "D'Autriche"
+  ],
+  "explanation": "Rodolphe Lindt invente en 1879 le conchage, qui rend le chocolat fondant. Ses lapins de Pâques dorés sont célèbres.",
+  "hint": "Le pays du Cervin."
+ },
+ {
+  "key": "tech-661",
+  "concept": "tech.brands.mattel_barbie",
+  "label": "Barbie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle entreprise fabrique la poupée Barbie ?",
+  "options": [
+   "Mattel*",
+   "Hasbro",
+   "Lego",
+   "Playmobil"
+  ],
+  "explanation": "Ruth Handler la lance en 1959 et lui donne le surnom de sa fille, Barbara. Le petit ami Ken porte le prénom de son fils.",
+  "hint": "Une entreprise californienne de jouets."
+ },
+ {
+  "key": "tech-662",
+  "concept": "tech.brands.monopoly_rues",
+  "label": "Monopoly",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est la case la plus chère du Monopoly français classique ?",
+  "options": [
+   "La rue de la Paix*",
+   "Les Champs-Élysées",
+   "L'avenue Foch",
+   "La place Pigalle"
+  ],
+  "explanation": "Elle coûte 400 francs (ou euros selon les versions). Les Champs-Élysées suivent, à 350.",
+  "hint": "Une rue près de la place Vendôme."
+ },
+ {
+  "key": "tech-663",
+  "concept": "tech.brands.playmobil_pays",
+  "label": "Playmobil",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays viennent les figurines Playmobil ?",
+  "options": [
+   "D'Allemagne*",
+   "Du Danemark",
+   "De Suisse",
+   "De France"
+  ],
+  "explanation": "Lancées en 1974 par Hans Beck, pour l'entreprise Geobra Brandstätter, près de Nuremberg.",
+  "hint": "Pas le pays de Lego."
+ },
+ {
+  "key": "tech-664",
+  "concept": "tech.brands.game_boy",
+  "label": "Game Boy",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle console portable Nintendo a lancé en 1989, avec Tetris ?",
+  "options": [
+   "La Game Boy*",
+   "La Switch",
+   "La DS",
+   "La Wii"
+  ],
+  "explanation": "Plus de 118 millions de Game Boy et Game Boy Color vendues. Tetris a fait vendre des consoles à des adultes.",
+  "hint": "Un « garçon joueur »."
+ },
+ {
+  "key": "tech-665",
+  "concept": "tech.brands.sega_sonic",
+  "label": "Sonic",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle entreprise a créé Sonic, le hérisson bleu ?",
+  "options": [
+   "Sega*",
+   "Nintendo",
+   "Sony",
+   "Atari"
+  ],
+  "explanation": "Il naît en 1991 pour concurrencer Mario. Sa couleur reprend le bleu du logo de Sega.",
+  "hint": "Le rival historique de Nintendo."
+ },
+ {
+  "key": "tech-666",
+  "concept": "tech.brands.minecraft_mojang",
+  "label": "Minecraft",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle entreprise a racheté Minecraft et son studio Mojang, en 2014 ?",
+  "options": [
+   "Microsoft*",
+   "Sony",
+   "Google",
+   "Nintendo"
+  ],
+  "explanation": "Pour 2,5 milliards de dollars. Le studio suédois avait été fondé par Markus « Notch » Persson.",
+  "hint": "L'entreprise de la Xbox."
+ },
+ {
+  "key": "tech-667",
+  "concept": "tech.brands.fortnite_epic",
+  "label": "Fortnite",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel studio a créé Fortnite ?",
+  "options": [
+   "Epic Games*",
+   "Ubisoft",
+   "Nintendo",
+   "Rockstar"
+  ],
+  "explanation": "Le mode Battle Royale, gratuit, sort en 2017 et rassemble des centaines de millions de joueurs.",
+  "hint": "Un studio au nom « épique »."
+ },
+ {
+  "key": "tech-668",
+  "concept": "tech.brands.ubisoft_pays",
+  "label": "Ubisoft",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays vient l'éditeur de jeux vidéo Ubisoft, créateur des Lapins Crétins ?",
+  "options": [
+   "De France*",
+   "Du Canada",
+   "Du Japon",
+   "De Belgique"
+  ],
+  "explanation": "Fondé en 1986 par les cinq frères Guillemot, en Bretagne. Rayman et Assassin's Creed sont aussi à lui.",
+  "hint": "Ses fondateurs sont bretons."
+ },
+ {
+  "key": "tech-669",
+  "concept": "tech.brands.pokemon_nom",
+  "label": "Pokémon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "D'où vient le nom « Pokémon » ?",
+  "options": [
+   "De « Pocket Monsters », monstres de poche*",
+   "D'un mot japonais pour ami",
+   "D'un dresseur célèbre",
+   "D'un jeu de cartes coréen"
+  ],
+  "explanation": "Les premiers jeux sortent en 1996 sur Game Boy. C'est la franchise la plus rentable de l'histoire.",
+  "hint": "On les garde dans la poche."
+ },
+ {
+  "key": "tech-670",
+  "concept": "tech.brands.pikachu_type",
+  "label": "Pikachu",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel type est Pikachu ?",
+  "options": [
+   "Électrique*",
+   "Feu",
+   "Eau",
+   "Plante"
+  ],
+  "explanation": "Son nom mêle « pika » (le crépitement électrique en japonais) et « chu » (le cri de la souris).",
+  "hint": "Il lance des éclairs."
+ },
+ {
+  "key": "tech-671",
+  "concept": "tech.brands.evian_pays",
+  "label": "Evian",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "D'où vient l'eau Evian ?",
+  "options": [
+   "D'une ville au bord du lac Léman, en France*",
+   "Des Alpes suisses",
+   "D'une source en Belgique",
+   "Des Pyrénées"
+  ],
+  "explanation": "Évian-les-Bains, en Haute-Savoie. L'eau met une quinzaine d'années à traverser les couches glaciaires avant de sortir.",
+  "hint": "Au bord du plus grand lac alpin."
+ },
+ {
+  "key": "tech-672",
+  "concept": "tech.brands.danone_nom",
+  "label": "Danone",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "D'où vient le nom Danone ?",
+  "options": [
+   "Du surnom du fils de son fondateur, Daniel*",
+   "D'une ville danoise",
+   "D'une montagne grecque",
+   "D'un mot latin pour lait"
+  ],
+  "explanation": "Isaac Carasso fonde l'entreprise à Barcelone en 1919 et la nomme d'après « Danon », petit Daniel en catalan.",
+  "hint": "Un petit prénom."
+ },
+ {
+  "key": "tech-673",
+  "concept": "tech.brands.oreal_nom",
+  "label": "L'Oréal",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel produit a fait naître L'Oréal, en 1909 ?",
+  "options": [
+   "Une teinture pour cheveux*",
+   "Un rouge à lèvres",
+   "Une crème solaire",
+   "Un savon"
+  ],
+  "explanation": "Le chimiste Eugène Schueller invente une teinture sans danger, « L'Auréale ». L'Oréal est aujourd'hui le n° 1 mondial des cosmétiques.",
+  "hint": "Une couleur pour les cheveux."
+ },
+ {
+  "key": "tech-674",
+  "concept": "tech.brands.converse_star",
+  "label": "Converse",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel joueur de basket a donné son nom aux chaussures « All Star » de Converse ?",
+  "options": [
+   "Chuck Taylor*",
+   "Michael Jordan",
+   "Magic Johnson",
+   "Kobe Bryant"
+  ],
+  "explanation": "Joueur puis représentant de la marque dans les années 1920, il sillonnait les États-Unis pour la vendre. Son nom est sur la cheville.",
+  "hint": "Son prénom est un diminutif de Charles."
+ },
+ {
+  "key": "tech-675",
+  "concept": "tech.brands.air_jordan",
+  "label": "Air Jordan",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle marque fabrique les chaussures Air Jordan ?",
+  "options": [
+   "Nike*",
+   "Adidas",
+   "Puma",
+   "Reebok"
+  ],
+  "explanation": "Lancées en 1985 avec Michael Jordan. La NBA interdisait les premières couleurs ; Nike payait l'amende et en faisait de la publicité.",
+  "hint": "La marque au « swoosh »."
+ },
+ {
+  "key": "tech-676",
+  "concept": "tech.brands.ray_ban_nom",
+  "label": "Ray-Ban",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "D'où vient le nom des lunettes Ray-Ban ?",
+  "options": [
+   "Elles « bannissent » les rayons du soleil*",
+   "De leur inventeur Raymond Bannister",
+   "D'une ville américaine",
+   "D'un modèle d'avion"
+  ],
+  "explanation": "Créées pour les pilotes de l'armée américaine dans les années 1930 : le modèle Aviator vient de là.",
+  "hint": "Traduisez les deux mots anglais."
+ },
+ {
+  "key": "tech-677",
+  "concept": "tech.brands.nivea_nom",
+  "label": "Nivea",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que signifie « Nivea », nom de la crème au pot bleu ?",
+  "options": [
+   "Blanche comme la neige, en latin*",
+   "Nouvelle, en allemand",
+   "Douce, en grec",
+   "Pure, en italien"
+  ],
+  "explanation": "Du latin « nix, nivis », la neige. La crème, lancée en 1911 à Hambourg, était d'un blanc éclatant.",
+  "hint": "Pensez à « névé »."
+ },
+ {
+  "key": "tech-678",
+  "concept": "tech.brands.uber_service",
+  "label": "Uber",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que propose principalement l'application Uber ?",
+  "options": [
+   "Des trajets en voiture avec chauffeur*",
+   "Des locations de maisons",
+   "Des cours en ligne",
+   "Des jeux vidéo"
+  ],
+  "explanation": "Lancée en 2010 à San Francisco. Le mot « ubérisation » désigne désormais tout un modèle économique.",
+  "hint": "Un service de transport."
+ },
+ {
+  "key": "tech-679",
+  "concept": "tech.brands.blablacar_pays",
+  "label": "BlaBlaCar",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quel pays vient BlaBlaCar, le site de covoiturage ?",
+  "options": [
+   "De France*",
+   "D'Allemagne",
+   "D'Espagne",
+   "Des Pays-Bas"
+  ],
+  "explanation": "Fondé en 2006. Le nom vient d'un curseur « Bla, BlaBla, BlaBlaBla » pour dire si l'on aime parler pendant le trajet.",
+  "hint": "Son nom se moque des bavards… en français."
+ },
+ {
+  "key": "tech-680",
+  "concept": "tech.brands.deezer_pays",
+  "label": "Deezer",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quel pays vient le service de musique Deezer ?",
+  "options": [
+   "De France*",
+   "De Suède",
+   "Des États-Unis",
+   "D'Allemagne"
+  ],
+  "explanation": "Lancé en 2007 à Paris. Son grand rival, Spotify, est suédois.",
+  "hint": "Pas le pays de Spotify."
+ },
+ {
+  "key": "tech-681",
+  "concept": "tech.brands.pepsi_nom",
+  "label": "Pepsi",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "D'où viendrait le nom Pepsi ?",
+  "options": [
+   "De la dyspepsie, la mauvaise digestion*",
+   "Du nom de son inventeur",
+   "D'un fruit exotique",
+   "D'une ville de Caroline"
+  ],
+  "explanation": "Le pharmacien Caleb Bradham le vendait en 1893 comme boisson aidant à digérer, sous le nom de « Brad's Drink ».",
+  "hint": "Un trouble de l'estomac."
+ },
+ {
+  "key": "tech-682",
+  "concept": "tech.brands.michelin_etoiles",
+  "label": "Guide Michelin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien d'étoiles au maximum le guide Michelin donne-t-il à un restaurant ?",
+  "options": [
+   "3*",
+   "5",
+   "4",
+   "10"
+  ],
+  "explanation": "Trois étoiles : « une cuisine unique, qui vaut le voyage ». En France, une trentaine de restaurants les ont.",
+  "hint": "Moins que les hôtels."
+ },
+ {
+  "key": "tech-683",
+  "concept": "tech.brands.nokia_papier",
+  "label": "Nokia",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Nokia fabriquait du papier avant de fabriquer des téléphones.",
+  "answer": true,
+  "explanation": "Oui : l'entreprise naît en 1865 comme usine de pâte à papier en Finlande. Elle fait ensuite des bottes en caoutchouc, des câbles… puis des téléphones."
+ },
+ {
+  "key": "tech-684",
+  "concept": "tech.brands.amazon_riviere",
+  "label": "Amazon",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le nom d'Amazon vient du plus grand fleuve du monde.",
+  "answer": true,
+  "explanation": "Oui : Jeff Bezos voulait évoquer l'immensité, et un nom commençant par A, en tête des listes alphabétiques."
+ },
+ {
+  "key": "tech-685",
+  "concept": "tech.brands.lego_brique_1949",
+  "label": "Lego",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Lego a d'abord fabriqué des jouets en bois avant ses briques en plastique.",
+  "answer": true,
+  "explanation": "Oui : fondée en 1932 au Danemark, l'entreprise fait des jouets en bois ; la brique en plastique arrive en 1949 et son système d'emboîtement actuel en 1958."
+ },
+ {
+  "key": "tech-686",
+  "concept": "tech.brands.marques_chronologie",
+  "label": "Fondation d'entreprises",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces entreprises de la plus ancienne à la plus récente.",
+  "items": [
+   "Nintendo",
+   "Sony",
+   "Apple",
+   "Google"
+  ],
+  "explanation": "Nintendo (1889), Sony (1946), Apple (1976), Google (1998)."
+ },
+ {
+  "key": "tech-687",
+  "concept": "tech.brands.reseaux_chronologie",
+  "label": "Réseaux sociaux",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces réseaux sociaux du plus ancien au plus récent.",
+  "items": [
+   "Facebook",
+   "Twitter",
+   "Instagram",
+   "TikTok"
+  ],
+  "explanation": "Facebook (2004), Twitter (2006), Instagram (2010), TikTok (2016 en Chine sous le nom Douyin, 2017 dans le monde)."
+ },
+ {
+  "key": "tech-688",
+  "concept": "tech.brands.marques_pays",
+  "label": "Marques et pays",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque marque à son pays d'origine.",
+  "pairs": [
+   [
+    "Volvo",
+    "Suède"
+   ],
+   [
+    "Nokia",
+    "Finlande"
+   ],
+   [
+    "Heineken",
+    "Pays-Bas"
+   ],
+   [
+    "Lamborghini",
+    "Italie"
+   ]
+  ],
+  "explanation": "Quatre marques européennes célèbres."
+ },
+ {
+  "key": "tech-689",
+  "concept": "tech.brands.logos_animaux",
+  "label": "Logos animaux",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque marque à l'animal de son logo.",
+  "pairs": [
+   [
+    "Lacoste",
+    "Crocodile"
+   ],
+   [
+    "Peugeot",
+    "Lion"
+   ],
+   [
+    "Ferrari",
+    "Cheval"
+   ],
+   [
+    "Twitter",
+    "Oiseau"
+   ]
+  ],
+  "explanation": "Un surnom de tennisman, un symbole de solidité, un emblème d'aviateur et un clin d'œil au gazouillis."
+ }
+]

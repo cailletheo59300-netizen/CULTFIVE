@@ -1,0 +1,853 @@
+[
+ {
+  "key": "tech-577",
+  "concept": "tech.inventions.ampoule_edison",
+  "label": "Ampoule",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel inventeur américain a mis au point une ampoule électrique durable en 1879 ?",
+  "options": [
+   "Thomas Edison*",
+   "Nikola Tesla",
+   "Graham Bell",
+   "Henry Ford"
+  ],
+  "explanation": "Le Britannique Joseph Swan travaillait sur la même idée ; les deux finissent par s'associer en Angleterre.",
+  "hint": "L'inventeur du phonographe."
+ },
+ {
+  "key": "tech-578",
+  "concept": "tech.inventions.cinematographe",
+  "label": "Cinématographe",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a présenté le cinématographe au public, à Paris en 1895 ?",
+  "options": [
+   "Les frères Lumière*",
+   "Les frères Wright",
+   "Les frères Montgolfier",
+   "Les frères Pathé"
+  ],
+  "explanation": "Première séance payante le 28 décembre 1895, au Grand Café. Au programme : « La Sortie de l'usine Lumière à Lyon ».",
+  "hint": "Leur nom évoque la clarté."
+ },
+ {
+  "key": "tech-579",
+  "concept": "tech.inventions.freres_wright",
+  "label": "Premier vol",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a réalisé le premier vol motorisé contrôlé, en 1903 aux États-Unis ?",
+  "options": [
+   "Les frères Wright*",
+   "Louis Blériot",
+   "Clément Ader",
+   "Charles Lindbergh"
+  ],
+  "explanation": "Le 17 décembre 1903, Orville vole 12 secondes et 37 mètres à Kitty Hawk. Wilbur fera mieux le même jour.",
+  "hint": "Deux frères réparateurs de vélos."
+ },
+ {
+  "key": "tech-580",
+  "concept": "tech.inventions.montgolfiere",
+  "label": "Montgolfière",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a inventé la montgolfière, en 1783 ?",
+  "options": [
+   "Les frères Montgolfier*",
+   "Les frères Lumière",
+   "Les frères Wright",
+   "Les frères Caudron"
+  ],
+  "explanation": "Ils étaient papetiers à Annonay, en Ardèche. Leur ballon était gonflé à l'air chaud.",
+  "hint": "Le nom de l'engin vient du leur."
+ },
+ {
+  "key": "tech-581",
+  "concept": "tech.inventions.montgolfiere_passagers",
+  "label": "Premiers passagers",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui furent les premiers passagers d'une montgolfière, à Versailles en 1783 ?",
+  "options": [
+   "Un mouton, un canard et un coq*",
+   "Deux soldats du roi",
+   "Les frères Montgolfier",
+   "Un chien et un chat"
+  ],
+  "explanation": "Devant Louis XVI, pour vérifier qu'on pouvait respirer en altitude. Les trois animaux atterrissent sains et saufs.",
+  "hint": "Trois animaux de ferme."
+ },
+ {
+  "key": "tech-582",
+  "concept": "tech.inventions.boussole_chine",
+  "label": "Boussole",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où la boussole a-t-elle été inventée ?",
+  "options": [
+   "En Chine*",
+   "En Grèce",
+   "En Égypte",
+   "En Italie"
+  ],
+  "explanation": "Les Chinois utilisent l'aimantation pour s'orienter dès les environs du XIe siècle ; la boussole arrive ensuite en Europe par la navigation.",
+  "hint": "Le même pays que le papier et la poudre noire."
+ },
+ {
+  "key": "tech-583",
+  "concept": "tech.inventions.papier_chine",
+  "label": "Papier",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel pays le papier a-t-il été inventé ?",
+  "options": [
+   "En Chine*",
+   "En Égypte",
+   "En Inde",
+   "En Perse"
+  ],
+  "explanation": "Sa fabrication est attribuée à Cai Lun, vers l'an 105. Le papyrus égyptien, plus ancien, n'est pas du papier au sens strict.",
+  "hint": "Le pays de la Grande Muraille."
+ },
+ {
+  "key": "tech-584",
+  "concept": "tech.inventions.photographie_niepce",
+  "label": "Photographie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a réalisé la plus ancienne photographie connue, vers 1827 ?",
+  "options": [
+   "Nicéphore Niépce*",
+   "Louis Daguerre",
+   "Les frères Lumière",
+   "George Eastman"
+  ],
+  "explanation": "« Point de vue du Gras », prise depuis sa fenêtre en Bourgogne, avec des heures de pose. Daguerre, son associé, perfectionne ensuite le procédé.",
+  "hint": "Un Français de Chalon-sur-Saône."
+ },
+ {
+  "key": "tech-585",
+  "concept": "tech.inventions.machine_vapeur_watt",
+  "label": "Machine à vapeur",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel ingénieur écossais a fortement amélioré la machine à vapeur à la fin du XVIIIe siècle ?",
+  "options": [
+   "James Watt*",
+   "George Stephenson",
+   "Isaac Newton",
+   "Charles Babbage"
+  ],
+  "explanation": "Son condenseur séparé rend la machine bien plus efficace. L'unité de puissance, le watt, porte son nom.",
+  "hint": "Une unité électrique porte son nom."
+ },
+ {
+  "key": "tech-586",
+  "concept": "tech.inventions.locomotive_stephenson",
+  "label": "Locomotive",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel ingénieur anglais a construit la célèbre locomotive « Rocket », en 1829 ?",
+  "options": [
+   "George Stephenson*",
+   "James Watt",
+   "Isambard Brunel",
+   "Richard Arkwright"
+  ],
+  "explanation": "Elle remporte un concours de vitesse et fixe le modèle des locomotives à vapeur pour des décennies.",
+  "hint": "On le surnomme le « père des chemins de fer »."
+ },
+ {
+  "key": "tech-587",
+  "concept": "tech.inventions.automobile_benz",
+  "label": "Automobile",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a breveté la première voiture à moteur à essence, en 1886 ?",
+  "options": [
+   "Carl Benz*",
+   "Henry Ford",
+   "Louis Renault",
+   "Enzo Ferrari"
+  ],
+  "explanation": "Son tricycle motorisé est considéré comme la première automobile. Sa femme Bertha fait le premier long trajet, 100 km, en 1888.",
+  "hint": "Son nom vit encore dans une grande marque allemande."
+ },
+ {
+  "key": "tech-588",
+  "concept": "tech.inventions.stylo_biro",
+  "label": "Stylo à bille",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Quel inventeur hongrois a breveté le stylo à bille moderne, en 1938 ?",
+  "options": [
+   "László Bíró*",
+   "Marcel Bich",
+   "Ernő Rubik",
+   "John Loud"
+  ],
+  "explanation": "Journaliste, il remarque que l'encre d'imprimerie sèche vite. En Argentine, on dit encore « birome ». Bic rachète ensuite le brevet.",
+  "hint": "En anglais, on appelle souvent un stylo par son nom."
+ },
+ {
+  "key": "tech-589",
+  "concept": "tech.inventions.television_baird",
+  "label": "Télévision",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a fait la première démonstration publique d'une télévision, à Londres en 1926 ?",
+  "options": [
+   "John Logie Baird*",
+   "Guglielmo Marconi",
+   "Thomas Edison",
+   "Nikola Tesla"
+  ],
+  "explanation": "Un système mécanique à disque tournant. La télévision électronique l'emporte dans les années 1930.",
+  "hint": "Un inventeur écossais."
+ },
+ {
+  "key": "tech-590",
+  "concept": "tech.inventions.radio_marconi",
+  "label": "Radio",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel inventeur italien est considéré comme l'un des pères de la radio ?",
+  "options": [
+   "Guglielmo Marconi*",
+   "Alessandro Volta",
+   "Galilée",
+   "Enrico Fermi"
+  ],
+  "explanation": "Il transmet des signaux sans fil au-dessus de la Manche (1899), puis de l'Atlantique (1901). Prix Nobel de physique 1909.",
+  "hint": "Prix Nobel de physique en 1909."
+ },
+ {
+  "key": "tech-591",
+  "concept": "tech.inventions.lunettes_italie",
+  "label": "Lunettes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Où les premières lunettes de vue sont-elles apparues, vers la fin du XIIIe siècle ?",
+  "options": [
+   "En Italie*",
+   "En Chine",
+   "En Égypte",
+   "En Angleterre"
+  ],
+  "explanation": "Probablement autour de Pise ou de Venise, dont les verriers étaient réputés. Ce sont d'abord des loupes pour lire, tenues sur le nez.",
+  "hint": "Le pays des verriers de Murano."
+ },
+ {
+  "key": "tech-592",
+  "concept": "tech.inventions.horloge_huygens",
+  "label": "Horloge à pendule",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a construit la première horloge à pendule, en 1656 ?",
+  "options": [
+   "Christiaan Huygens*",
+   "Galilée",
+   "Isaac Newton",
+   "Blaise Pascal"
+  ],
+  "explanation": "Le savant néerlandais applique l'idée de Galilée : un balancier bat toujours au même rythme. La précision passe de 15 minutes à 15 secondes par jour.",
+  "hint": "Un savant néerlandais qui a aussi découvert Titan."
+ },
+ {
+  "key": "tech-593",
+  "concept": "tech.inventions.telescope_galilee",
+  "label": "Lunette de Galilée",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'a découvert Galilée en 1610 grâce à sa lunette astronomique ?",
+  "options": [
+   "Quatre lunes de Jupiter*",
+   "Les anneaux de Saturne en détail",
+   "La planète Neptune",
+   "La comète de Halley"
+  ],
+  "explanation": "Io, Europe, Ganymède et Callisto. Preuve que tout ne tourne pas autour de la Terre.",
+  "hint": "Elles tournent autour de la plus grosse planète."
+ },
+ {
+  "key": "tech-594",
+  "concept": "tech.inventions.parachute_garnerin",
+  "label": "Parachute",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Qui a réalisé le premier saut en parachute, depuis un ballon au-dessus de Paris en 1797 ?",
+  "options": [
+   "André-Jacques Garnerin*",
+   "Léonard de Vinci",
+   "Louis Blériot",
+   "Jacques Charles"
+  ],
+  "explanation": "Il saute d'environ 700 mètres au-dessus du parc Monceau. Léonard de Vinci avait dessiné un parachute, sans l'essayer.",
+  "hint": "Un aéronaute français."
+ },
+ {
+  "key": "tech-595",
+  "concept": "tech.inventions.jeans_levi",
+  "label": "Jean",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a lancé le jean en toile de coton renforcé de rivets, en 1873 ?",
+  "options": [
+   "Levi Strauss*",
+   "Calvin Klein",
+   "Coco Chanel",
+   "Ralph Lauren"
+  ],
+  "explanation": "Avec le tailleur Jacob Davis, pour les chercheurs d'or et ouvriers de Californie. La toile « denim » viendrait de Nîmes.",
+  "hint": "Son prénom est devenu une marque."
+ },
+ {
+  "key": "tech-596",
+  "concept": "tech.inventions.conserve_appert",
+  "label": "Conserve",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel Français a inventé la conservation des aliments en bocaux chauffés, au début du XIXe siècle ?",
+  "options": [
+   "Nicolas Appert*",
+   "Louis Pasteur",
+   "Antoine Parmentier",
+   "Denis Papin"
+  ],
+  "explanation": "Napoléon offrait un prix pour nourrir ses armées. Appert explique sa méthode en 1810, avant qu'on sache pourquoi elle marche : les microbes.",
+  "hint": "On parle encore d'« appertisation »."
+ },
+ {
+  "key": "tech-597",
+  "concept": "tech.inventions.carte_puce_moreno",
+  "label": "Carte à puce",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Quel inventeur français a breveté la carte à puce, en 1974 ?",
+  "options": [
+   "Roland Moreno*",
+   "François Gernelle",
+   "Louis Pouzin",
+   "Jacques Ellul"
+  ],
+  "explanation": "Elle équipe ensuite cartes bancaires, cartes SIM et Carte Vitale. Moreno aimait les jeux de mots et les inventions farfelues.",
+  "hint": "Un Français, né au Caire."
+ },
+ {
+  "key": "tech-598",
+  "concept": "tech.inventions.tgv_record",
+  "label": "Record du TGV",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Quelle vitesse a atteint le TGV lors de son record du monde, en 2007 ? (en km/h, arrondi)",
+  "answer": 575,
+  "explanation": "574,8 km/h, sur la ligne Paris-Strasbourg. Ce record sur rail classique tient toujours.",
+  "hint": "Plus de 500.",
+  "unit": "km/h"
+ },
+ {
+  "key": "tech-599",
+  "concept": "tech.inventions.concorde_premier_vol",
+  "label": "Concorde",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "En quelle année le Concorde a-t-il fait son premier vol ?",
+  "answer": 1969,
+  "explanation": "Le 2 mars 1969 à Toulouse, quelques mois avant les premiers pas sur la Lune. Il vole commercialement de 1976 à 2003.",
+  "hint": "La même année que les premiers pas sur la Lune."
+ },
+ {
+  "key": "tech-600",
+  "concept": "tech.inventions.machine_a_coudre",
+  "label": "Machine à coudre",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel tailleur français a breveté l'une des premières machines à coudre, en 1830 ?",
+  "options": [
+   "Barthélemy Thimonnier*",
+   "Isaac Singer",
+   "Nicolas Appert",
+   "Joseph Jacquard"
+  ],
+  "explanation": "Des tailleurs parisiens, craignant pour leur métier, saccagent son atelier. Singer popularise la machine vingt ans plus tard.",
+  "hint": "Il venait de la région lyonnaise."
+ },
+ {
+  "key": "tech-601",
+  "concept": "tech.inventions.jacquard_cartes",
+  "label": "Métier Jacquard",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle invention de Joseph Marie Jacquard (1801) a inspiré les premiers ordinateurs ?",
+  "options": [
+   "Les cartes perforées*",
+   "La vapeur sous pression",
+   "Le moteur électrique",
+   "Le télégraphe"
+  ],
+  "explanation": "Les trous des cartes commandent le motif tissé par le métier. Babbage, puis IBM, reprendront l'idée pour « programmer » des machines.",
+  "hint": "Des cartes avec des trous."
+ },
+ {
+  "key": "tech-602",
+  "concept": "tech.inventions.laser_1960",
+  "label": "Laser",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "En quelle décennie le premier laser a-t-il fonctionné ?",
+  "options": [
+   "Les années 1960*",
+   "Les années 1920",
+   "Les années 1940",
+   "Les années 1980"
+  ],
+  "explanation": "Theodore Maiman l'allume en 1960 avec un cristal de rubis. On disait alors : une solution en quête d'un problème.",
+  "hint": "Celle des premiers pas sur la Lune."
+ },
+ {
+  "key": "tech-603",
+  "concept": "tech.inventions.ascenseur_otis",
+  "label": "Ascenseur",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel inventeur américain a rendu l'ascenseur sûr grâce à un frein de sécurité, en 1852 ?",
+  "options": [
+   "Elisha Otis*",
+   "Thomas Edison",
+   "Henry Ford",
+   "George Westinghouse"
+  ],
+  "explanation": "À New York, il fait couper le câble de sa propre plateforme devant la foule : le frein la bloque. Les gratte-ciel deviennent possibles.",
+  "hint": "Son nom est encore gravé dans beaucoup d'ascenseurs."
+ },
+ {
+  "key": "tech-604",
+  "concept": "tech.inventions.code_barres",
+  "label": "Code-barres",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel produit a été le premier scanné grâce à un code-barres, dans un supermarché américain en 1974 ?",
+  "options": [
+   "Un paquet de chewing-gums*",
+   "Une bouteille de lait",
+   "Une boîte de céréales",
+   "Une canette de soda"
+  ],
+  "explanation": "Des Wrigley's au fruit, dans l'Ohio. Le paquet est aujourd'hui exposé dans un musée.",
+  "hint": "Un produit qu'on mâche."
+ },
+ {
+  "key": "tech-605",
+  "concept": "tech.inventions.rubik_cube",
+  "label": "Rubik's Cube",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel pays le Rubik's Cube a-t-il été inventé, en 1974 ?",
+  "options": [
+   "En Hongrie*",
+   "Au Japon",
+   "En Allemagne",
+   "Aux États-Unis"
+  ],
+  "explanation": "Ernő Rubik, professeur d'architecture à Budapest, l'imagine pour expliquer les volumes à ses étudiants. Il met un mois à le résoudre lui-même.",
+  "hint": "Son inventeur vit à Budapest."
+ },
+ {
+  "key": "tech-606",
+  "concept": "tech.inventions.pate_a_modeler",
+  "label": "Play-Doh",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "À quoi servait à l'origine la pâte à modeler Play-Doh ?",
+  "options": [
+   "À nettoyer le papier peint*",
+   "À boucher les fissures",
+   "À mouler des bougies",
+   "À faire des pansements"
+  ],
+  "explanation": "Elle retirait la suie des murs. Quand le chauffage au charbon recule, le produit est reconverti en jouet dans les années 1950.",
+  "hint": "Un produit ménager pour les murs."
+ },
+ {
+  "key": "tech-607",
+  "concept": "tech.inventions.poubelle_prefet",
+  "label": "Poubelle",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "D'où vient le mot « poubelle » ?",
+  "options": [
+   "Du nom d'un préfet de Paris*",
+   "D'un mot latin signifiant sale",
+   "D'une marque de seaux",
+   "D'une ville du Nord"
+  ],
+  "explanation": "En 1883, le préfet Eugène Poubelle impose aux Parisiens des récipients pour les ordures. Son nom est resté à l'objet.",
+  "hint": "Un haut fonctionnaire du XIXe siècle."
+ },
+ {
+  "key": "tech-608",
+  "concept": "tech.inventions.pneu_dunlop",
+  "label": "Pneu gonflable",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "Pour qui John Dunlop a-t-il conçu un pneu gonflable, en 1888 ?",
+  "options": [
+   "Pour le tricycle de son fils*",
+   "Pour la voiture de la reine",
+   "Pour l'armée britannique",
+   "Pour une course de chevaux"
+  ],
+  "explanation": "Vétérinaire écossais, il veut éviter les secousses à son fils. Les frères Michelin inventent ensuite le pneu démontable.",
+  "hint": "Pour un enfant."
+ },
+ {
+  "key": "tech-609",
+  "concept": "tech.inventions.premier_vaccin",
+  "label": "Vaccin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Contre quelle maladie Edward Jenner a-t-il mis au point le premier vaccin, en 1796 ?",
+  "options": [
+   "La variole*",
+   "La rage",
+   "La polio",
+   "La tuberculose"
+  ],
+  "explanation": "Il utilise la vaccine, une maladie des vaches : c'est l'origine du mot « vaccin ». La variole est déclarée éradiquée en 1980.",
+  "hint": "Le mot « vaccin » vient de « vache »."
+ },
+ {
+  "key": "tech-610",
+  "concept": "tech.inventions.pasteurisation",
+  "label": "Pasteurisation",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quoi sert la pasteurisation, inventée par Louis Pasteur ?",
+  "options": [
+   "À tuer les microbes en chauffant*",
+   "À faire mûrir le fromage",
+   "À colorer le lait",
+   "À conserver par le froid"
+  ],
+  "explanation": "On chauffe le lait, le vin ou les jus sans les faire bouillir. Pasteur l'imagine d'abord pour éviter que le vin tourne.",
+  "hint": "Elle porte son nom."
+ },
+ {
+  "key": "tech-611",
+  "concept": "tech.inventions.refrigerateur",
+  "label": "Réfrigérateur",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avant le réfrigérateur électrique, comment gardait-on les aliments au frais chez soi ?",
+  "options": [
+   "Dans une glacière remplie de pains de glace*",
+   "Dans le four éteint",
+   "Dans du sable chaud",
+   "Dans le grenier"
+  ],
+  "explanation": "Des livreurs apportaient la glace, découpée l'hiver dans les lacs. Le réfrigérateur domestique se répand dans les années 1920-1950.",
+  "hint": "De la glace livrée à domicile."
+ },
+ {
+  "key": "tech-612",
+  "concept": "tech.inventions.machine_ecrire",
+  "label": "Machine à écrire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle disposition de clavier est née avec les machines à écrire des années 1870 ?",
+  "options": [
+   "QWERTY*",
+   "AZERTY",
+   "BÉPO",
+   "DVORAK"
+  ],
+  "explanation": "Christopher Sholes l'organise pour éviter que les tiges voisines se coincent. L'AZERTY en est une adaptation française.",
+  "hint": "Les six premières lettres de la rangée du haut, en anglais."
+ },
+ {
+  "key": "tech-613",
+  "concept": "tech.inventions.telegraphe_morse",
+  "label": "Morse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "En morse, que signifie « ··· −−− ··· » ?",
+  "options": [
+   "SOS*",
+   "OK",
+   "HELP",
+   "STOP"
+  ],
+  "explanation": "Trois points, trois traits, trois points : facile à reconnaître. Il devient le signal de détresse international en 1906.",
+  "hint": "Un appel au secours."
+ },
+ {
+  "key": "tech-614",
+  "concept": "tech.inventions.morse_inventeur",
+  "label": "Samuel Morse",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel était le premier métier de Samuel Morse, inventeur du télégraphe électrique américain ?",
+  "options": [
+   "Peintre*",
+   "Médecin",
+   "Horloger",
+   "Marin"
+  ],
+  "explanation": "Portraitiste reconnu, il se tourne vers l'électricité après avoir appris trop tard la mort de sa femme, faute de nouvelles rapides.",
+  "hint": "Un métier d'art."
+ },
+ {
+  "key": "tech-615",
+  "concept": "tech.inventions.sous_marin_nautilus",
+  "label": "Nautilus",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Comment s'appelait le sous-marin que l'Américain Robert Fulton a proposé à Napoléon, en 1800 ?",
+  "options": [
+   "Le Nautilus*",
+   "Le Titanic",
+   "Le Surcouf",
+   "Le Redoutable"
+  ],
+  "explanation": "Il plonge dans la Seine, mais la Marine française n'en veut pas. Jules Verne reprendra le nom pour le capitaine Nemo.",
+  "hint": "Le même nom que celui du capitaine Nemo."
+ },
+ {
+  "key": "tech-616",
+  "concept": "tech.inventions.montre_santos",
+  "label": "Montre-bracelet",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pour quel aviateur Louis Cartier a-t-il créé l'une des premières montres-bracelets d'homme, en 1904 ?",
+  "options": [
+   "Alberto Santos-Dumont*",
+   "Louis Blériot",
+   "Charles Lindbergh",
+   "Roland Garros"
+  ],
+  "explanation": "Le pilote brésilien ne pouvait pas sortir sa montre de poche en vol. La « Santos » est toujours vendue.",
+  "hint": "Un pionnier brésilien de l'aviation."
+ },
+ {
+  "key": "tech-617",
+  "concept": "tech.inventions.appareil_numerique",
+  "label": "Appareil photo numérique",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quelle entreprise le premier appareil photo numérique a-t-il été construit, en 1975 ?",
+  "options": [
+   "Kodak*",
+   "Canon",
+   "Sony",
+   "Nikon"
+  ],
+  "explanation": "Steven Sasson assemble un prototype de 3,6 kg qui met 23 secondes à enregistrer une image en noir et blanc. Kodak ne croit pas au numérique.",
+  "hint": "Une marque de pellicules."
+ },
+ {
+  "key": "tech-618",
+  "concept": "tech.inventions.enigma_machine",
+  "label": "Enigma",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle machine électromécanique les Allemands utilisaient-ils pour chiffrer leurs messages pendant la Seconde Guerre mondiale ?",
+  "options": [
+   "Enigma*",
+   "Colossus",
+   "ENIAC",
+   "Minitel"
+  ],
+  "explanation": "Ses rotors changeaient le chiffrement à chaque lettre. Les Polonais, puis Turing à Bletchley Park, en percent le secret.",
+  "hint": "Son nom veut dire « énigme »."
+ },
+ {
+  "key": "tech-619",
+  "concept": "tech.inventions.velo_draisienne",
+  "label": "Draisienne",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce que la draisienne, inventée en 1817, ancêtre du vélo ?",
+  "options": [
+   "Un deux-roues sans pédales, poussé avec les pieds*",
+   "Un tricycle à vapeur",
+   "Un monocycle à pédales",
+   "Une trottinette électrique"
+  ],
+  "explanation": "Karl Drais l'invente en Allemagne. Les pédales arrivent sur la roue avant dans les années 1860, la chaîne plus tard.",
+  "hint": "Aujourd'hui, les enfants apprennent avec."
+ },
+ {
+  "key": "tech-620",
+  "concept": "tech.inventions.imprimante_3d",
+  "label": "Impression 3D",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment une imprimante 3D fabrique-t-elle généralement un objet ?",
+  "options": [
+   "En superposant de fines couches de matière*",
+   "En sculptant un bloc au laser",
+   "En moulant du plastique liquide",
+   "En pliant du papier"
+  ],
+  "explanation": "Couche après couche, souvent du plastique fondu. On imprime aujourd'hui des prothèses, des pièces d'avion et même des maisons.",
+  "hint": "Couche par couche."
+ },
+ {
+  "key": "tech-621",
+  "concept": "tech.inventions.lave_linge",
+  "label": "Machine à laver",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel appareil ménager a le plus réduit le temps passé à la lessive au XXe siècle ?",
+  "options": [
+   "Le lave-linge*",
+   "L'aspirateur",
+   "Le grille-pain",
+   "La cafetière"
+  ],
+  "explanation": "Laver à la main prenait une journée par semaine. Les lave-linge électriques se répandent en France dans les années 1960.",
+  "hint": "Il tourne et essore."
+ },
+ {
+  "key": "tech-622",
+  "concept": "tech.inventions.allumette",
+  "label": "Allumette",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel danger posaient les premières allumettes au phosphore blanc, au XIXe siècle ?",
+  "options": [
+   "Elles empoisonnaient les ouvriers qui les fabriquaient*",
+   "Elles explosaient sous la pluie",
+   "Elles attiraient la foudre",
+   "Elles rendaient aveugle"
+  ],
+  "explanation": "La « nécrose phosphorée » rongeait les mâchoires. Le phosphore rouge, plus sûr, les remplace ; la France interdit le blanc en 1898.",
+  "hint": "Un problème de santé dans les usines."
+ },
+ {
+  "key": "tech-623",
+  "concept": "tech.inventions.telephone_avant_ampoule",
+  "label": "Téléphone et ampoule",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le téléphone a été breveté avant l'ampoule électrique d'Edison.",
+  "answer": true,
+  "explanation": "Oui : le brevet de Bell date de 1876, l'ampoule durable d'Edison de 1879."
+ },
+ {
+  "key": "tech-624",
+  "concept": "tech.inventions.velo_avant_auto",
+  "label": "Vélo et voiture",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "La bicyclette à pédales est apparue avant l'automobile à essence.",
+  "answer": true,
+  "explanation": "Oui : les vélos à pédales datent des années 1860, la voiture à essence de Benz de 1886."
+ },
+ {
+  "key": "tech-625",
+  "concept": "tech.inventions.leonard_helicoptere",
+  "label": "Vis aérienne",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Léonard de Vinci a construit et fait voler un hélicoptère.",
+  "answer": false,
+  "explanation": "Non : il en a dessiné un, la « vis aérienne », vers 1490, sans jamais le construire. Le premier hélicoptère vraiment pilotable vole dans les années 1930-1940."
+ },
+ {
+  "key": "tech-626",
+  "concept": "tech.inventions.internet_web",
+  "label": "Internet et Web",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Internet et le Web désignent exactement la même chose.",
+  "answer": false,
+  "explanation": "Non : Internet est le réseau d'ordinateurs (depuis les années 1970-1980) ; le Web n'est qu'un de ses services, avec les courriels ou les jeux en ligne."
+ },
+ {
+  "key": "tech-627",
+  "concept": "tech.inventions.transports_chronologie",
+  "label": "Transports",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces moyens de transport du plus ancien au plus récent.",
+  "items": [
+   "La montgolfière",
+   "La locomotive à vapeur",
+   "L'automobile à essence",
+   "L'avion à moteur"
+  ],
+  "explanation": "Montgolfière (1783), locomotive (début XIXe), automobile (1886), avion (1903)."
+ },
+ {
+  "key": "tech-628",
+  "concept": "tech.inventions.image_chronologie",
+  "label": "Image et son",
+  "type": "ordering",
+  "difficulty": 62,
+  "prompt": "Classe ces inventions de la plus ancienne à la plus récente.",
+  "items": [
+   "La photographie",
+   "Le phonographe",
+   "Le cinématographe",
+   "La télévision"
+  ],
+  "explanation": "Photographie (1827), phonographe (1877), cinématographe (1895), télévision (1926)."
+ },
+ {
+  "key": "tech-629",
+  "concept": "tech.inventions.inventeurs_pays",
+  "label": "Inventeurs",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque invention à son inventeur.",
+  "pairs": [
+   [
+    "Cinématographe",
+    "Frères Lumière"
+   ],
+   [
+    "Ampoule durable",
+    "Thomas Edison"
+   ],
+   [
+    "Radio",
+    "Guglielmo Marconi"
+   ],
+   [
+    "Premier vaccin",
+    "Edward Jenner"
+   ]
+  ],
+  "explanation": "Lyon 1895, Menlo Park 1879, Bologne et Angleterre fin XIXe, Angleterre 1796."
+ },
+ {
+  "key": "tech-630",
+  "concept": "tech.inventions.unites_savants",
+  "label": "Unités et savants",
+  "type": "pairs",
+  "difficulty": 68,
+  "prompt": "Associe chaque unité au savant qui lui donne son nom.",
+  "pairs": [
+   [
+    "Watt",
+    "James Watt"
+   ],
+   [
+    "Volt",
+    "Alessandro Volta"
+   ],
+   [
+    "Ampère",
+    "André-Marie Ampère"
+   ],
+   [
+    "Pascal",
+    "Blaise Pascal"
+   ]
+  ],
+  "explanation": "Puissance, tension électrique, intensité du courant et pression honorent quatre pionniers."
+ }
+]

@@ -1,0 +1,948 @@
+[
+ {
+  "key": "tech-517",
+  "concept": "tech.computing.raccourci_copier",
+  "label": "Copier",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Sur un ordinateur Windows, quel raccourci copie le texte sélectionné ?",
+  "options": [
+   "Ctrl + C*",
+   "Ctrl + V",
+   "Ctrl + X",
+   "Ctrl + P"
+  ],
+  "explanation": "Ctrl + C copie, Ctrl + V colle, Ctrl + X coupe, Ctrl + P imprime. Sur Mac, on remplace Ctrl par Cmd.",
+  "hint": "C comme…"
+ },
+ {
+  "key": "tech-518",
+  "concept": "tech.computing.navigateur_web",
+  "label": "Navigateur",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Chrome, Firefox et Safari sont des…",
+  "options": [
+   "Navigateurs web*",
+   "Systèmes d'exploitation",
+   "Antivirus",
+   "Réseaux sociaux"
+  ],
+  "explanation": "Un navigateur affiche les pages du Web. Chrome est de Google, Firefox de la fondation Mozilla, Safari d'Apple.",
+  "hint": "Ils servent à ouvrir des sites."
+ },
+ {
+  "key": "tech-519",
+  "concept": "tech.computing.tableur",
+  "label": "Tableur",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert principalement un tableur comme Excel ?",
+  "options": [
+   "À faire des calculs dans des tableaux*",
+   "À retoucher des photos",
+   "À monter des vidéos",
+   "À envoyer des courriels"
+  ],
+  "explanation": "Un tableur range des nombres dans des cases (cellules) et recalcule tout automatiquement quand une valeur change.",
+  "hint": "Il est rempli de cases et de formules."
+ },
+ {
+  "key": "tech-520",
+  "concept": "tech.computing.arobase_adresse",
+  "label": "Arobase",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans une adresse e-mail, que trouve-t-on juste après l'arobase (@) ?",
+  "options": [
+   "Le nom de domaine du service*",
+   "Le mot de passe",
+   "Le prénom du destinataire",
+   "La date d'envoi"
+  ],
+  "explanation": "Dans lea@exemple.fr, « lea » est l'utilisateur et « exemple.fr » le domaine qui gère la boîte.",
+  "hint": "Par exemple « gmail.com »."
+ },
+ {
+  "key": "tech-521",
+  "concept": "tech.computing.mode_avion",
+  "label": "Mode avion",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que coupe le « mode avion » d'un téléphone ?",
+  "options": [
+   "Les connexions sans fil*",
+   "L'écran",
+   "Le son",
+   "L'appareil photo"
+  ],
+  "explanation": "Réseau mobile, Wi-Fi et Bluetooth s'éteignent. On peut souvent rallumer le Wi-Fi à la main, même en vol.",
+  "hint": "Les ondes."
+ },
+ {
+  "key": "tech-522",
+  "concept": "tech.computing.extension_jpg",
+  "label": "Fichier .jpg",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que contient en général un fichier qui se termine par « .jpg » ?",
+  "options": [
+   "Une image*",
+   "Une musique",
+   "Un texte",
+   "Une vidéo"
+  ],
+  "explanation": "JPEG est un format d'image compressée, très utilisé pour les photos. Pour la musique, on trouve plutôt .mp3.",
+  "hint": "Pensez aux photos de vacances."
+ },
+ {
+  "key": "tech-523",
+  "concept": "tech.computing.streaming",
+  "label": "Streaming",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que veut dire regarder une vidéo « en streaming » ?",
+  "options": [
+   "La lire pendant qu'elle se télécharge*",
+   "La regarder sans le son",
+   "La graver sur un disque",
+   "La regarder en accéléré"
+  ],
+  "explanation": "Les données arrivent en flux continu et sont lues au fur et à mesure, sans garder le fichier entier.",
+  "hint": "« Stream » veut dire ruisseau en anglais."
+ },
+ {
+  "key": "tech-524",
+  "concept": "tech.computing.capture_ecran",
+  "label": "Capture d'écran",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'une capture d'écran ?",
+  "options": [
+   "Une image de ce qui est affiché à l'écran*",
+   "Une vidéo de la caméra frontale",
+   "Un écran cassé",
+   "Un économiseur d'écran"
+  ],
+  "explanation": "Sur iPhone, on appuie en même temps sur le bouton latéral et le bouton de volume haut.",
+  "hint": "On « photographie » l'écran lui-même."
+ },
+ {
+  "key": "tech-525",
+  "concept": "tech.computing.hashtag",
+  "label": "Hashtag",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Sur les réseaux sociaux, à quoi sert un mot précédé d'un « # » ?",
+  "options": [
+   "À classer les messages par sujet*",
+   "À écrire en gras",
+   "À envoyer un message privé",
+   "À bloquer quelqu'un"
+  ],
+  "explanation": "Le hashtag rend le mot cliquable : un clic affiche tous les messages sur ce sujet. Il a été popularisé sur Twitter à partir de 2007.",
+  "hint": "On l'appelle un hashtag, ou mot-dièse."
+ },
+ {
+  "key": "tech-526",
+  "concept": "tech.computing.mise_a_jour",
+  "label": "Mise à jour",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Pourquoi est-il conseillé d'installer les mises à jour de son téléphone ?",
+  "options": [
+   "Elles corrigent des failles de sécurité*",
+   "Elles libèrent toujours de la place",
+   "Elles rechargent la batterie",
+   "Elles suppriment les publicités"
+  ],
+  "explanation": "Une faille connue mais non corrigée est une porte ouverte aux pirates. Les mises à jour ajoutent aussi des fonctions.",
+  "hint": "Pensez aux pirates."
+ },
+ {
+  "key": "tech-527",
+  "concept": "tech.computing.mot_de_passe_fort",
+  "label": "Mot de passe",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Lequel de ces mots de passe est le plus solide ?",
+  "options": [
+   "Tr0mb0ne!Violet#27*",
+   "123456",
+   "motdepasse",
+   "azerty"
+  ],
+  "explanation": "Longueur et mélange (majuscules, chiffres, symboles) comptent. « 123456 » est chaque année parmi les plus utilisés… et les plus piratés.",
+  "hint": "Le plus long et le plus varié."
+ },
+ {
+  "key": "tech-528",
+  "concept": "tech.computing.java_sun",
+  "label": "Java",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle entreprise a créé le langage de programmation Java, en 1995 ?",
+  "options": [
+   "Sun Microsystems*",
+   "Microsoft",
+   "Apple",
+   "IBM"
+  ],
+  "explanation": "James Gosling le conçoit chez Sun. Oracle rachète Sun en 2009. Java n'a rien à voir avec JavaScript, malgré le nom.",
+  "hint": "Une entreprise au nom de soleil."
+ },
+ {
+  "key": "tech-529",
+  "concept": "tech.computing.langage_c",
+  "label": "Langage C",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Où le langage de programmation C a-t-il été créé, au début des années 1970 ?",
+  "options": [
+   "Aux laboratoires Bell*",
+   "Chez Microsoft",
+   "À l'université de Cambridge",
+   "Chez Apple"
+  ],
+  "explanation": "Dennis Ritchie le conçoit pour écrire le système Unix. Beaucoup de langages actuels (C++, Java, Python) en héritent.",
+  "hint": "Là où on a aussi inventé le transistor."
+ },
+ {
+  "key": "tech-530",
+  "concept": "tech.computing.hello_world",
+  "label": "Hello, world",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle phrase affiche traditionnellement le premier programme qu'on écrit dans un langage ?",
+  "options": [
+   "Hello, world!*",
+   "Bonjour Paris",
+   "Test 1 2 3",
+   "Lorem ipsum"
+  ],
+  "explanation": "La tradition vient d'un manuel du langage C, dans les années 1970. On l'écrit pour vérifier que tout fonctionne.",
+  "hint": "Une salutation au monde entier."
+ },
+ {
+  "key": "tech-531",
+  "concept": "tech.computing.vpn",
+  "label": "VPN",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quoi sert un VPN ?",
+  "options": [
+   "À faire passer sa connexion par un tunnel chiffré*",
+   "À accélérer la batterie",
+   "À imprimer à distance",
+   "À bloquer les appels"
+  ],
+  "explanation": "Réseau privé virtuel : le trafic est chiffré jusqu'à un serveur, qui navigue ensuite à votre place.",
+  "hint": "« Réseau privé virtuel »."
+ },
+ {
+  "key": "tech-532",
+  "concept": "tech.computing.adresse_ip",
+  "label": "Adresse IP",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'une adresse IP ?",
+  "options": [
+   "Le numéro qui identifie un appareil sur un réseau*",
+   "Le mot de passe du Wi-Fi",
+   "L'adresse postale d'un site",
+   "Le numéro de série d'un téléphone"
+  ],
+  "explanation": "Par exemple 192.168.1.10. Les données circulent sur Internet d'adresse en adresse, comme du courrier.",
+  "hint": "Chaque appareil connecté en a une."
+ },
+ {
+  "key": "tech-533",
+  "concept": "tech.computing.dns",
+  "label": "DNS",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le rôle du DNS sur Internet ?",
+  "options": [
+   "Traduire un nom de site en adresse IP*",
+   "Chiffrer les mots de passe",
+   "Bloquer les virus",
+   "Compresser les images"
+  ],
+  "explanation": "Quand on tape exemple.fr, le DNS répond avec le numéro du serveur. C'est l'annuaire d'Internet.",
+  "hint": "L'annuaire d'Internet."
+ },
+ {
+  "key": "tech-534",
+  "concept": "tech.computing.fibre_optique",
+  "label": "Fibre optique",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Sous quelle forme les données voyagent-elles dans une fibre optique ?",
+  "options": [
+   "De la lumière*",
+   "Du courant électrique",
+   "Des ondes sonores",
+   "De l'air comprimé"
+  ],
+  "explanation": "Un fil de verre plus fin qu'un cheveu guide des impulsions lumineuses sur des dizaines de kilomètres.",
+  "hint": "Elle est faite de verre."
+ },
+ {
+  "key": "tech-535",
+  "concept": "tech.computing.rvb_ecran",
+  "label": "Couleurs d'écran",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelles couleurs de base mélange un écran pour afficher toutes les autres ?",
+  "options": [
+   "Rouge, vert, bleu*",
+   "Rouge, jaune, bleu",
+   "Cyan, magenta, jaune",
+   "Noir, blanc, gris"
+  ],
+  "explanation": "Chaque pixel mélange ces trois lumières. Tout allumé au maximum donne du blanc. Le rouge-jaune-bleu, c'est la peinture.",
+  "hint": "On les appelle RVB (ou RGB)."
+ },
+ {
+  "key": "tech-536",
+  "concept": "tech.computing.hexa_ff",
+  "label": "Hexadécimal",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Combien vaut « FF » en hexadécimal, en nombre décimal ?",
+  "answer": 255,
+  "explanation": "F vaut 15 : FF = 15 × 16 + 15 = 255. C'est la valeur maximale d'un octet, d'où les couleurs du web comme #FF0000.",
+  "hint": "La valeur maximale d'un octet."
+ },
+ {
+  "key": "tech-537",
+  "concept": "tech.computing.bot",
+  "label": "Bot",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'un « bot » sur Internet ?",
+  "options": [
+   "Un programme qui agit automatiquement*",
+   "Un pirate informatique",
+   "Un type de câble",
+   "Un réseau social"
+  ],
+  "explanation": "Le mot vient de « robot ». Certains sont utiles (indexer le web), d'autres envoient du spam ou gonflent des likes.",
+  "hint": "Diminutif d'un mot tchèque."
+ },
+ {
+  "key": "tech-538",
+  "concept": "tech.computing.deepfake",
+  "label": "Deepfake",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'un « deepfake » ?",
+  "options": [
+   "Une vidéo truquée par intelligence artificielle*",
+   "Un virus caché dans une photo",
+   "Un faux site bancaire",
+   "Un compte piraté"
+  ],
+  "explanation": "L'IA remplace un visage ou une voix de façon réaliste. D'où l'importance de vérifier la source d'une vidéo.",
+  "hint": "« Fake » veut dire faux."
+ },
+ {
+  "key": "tech-539",
+  "concept": "tech.computing.blockchain",
+  "label": "Blockchain",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Sur quelle technologie reposent le bitcoin et la plupart des cryptomonnaies ?",
+  "options": [
+   "La blockchain*",
+   "Le Bluetooth",
+   "Le Minitel",
+   "La fibre optique"
+  ],
+  "explanation": "Un registre partagé par des milliers d'ordinateurs : chaque bloc de transactions est lié au précédent, ce qui le rend très difficile à falsifier.",
+  "hint": "Une « chaîne de blocs »."
+ },
+ {
+  "key": "tech-540",
+  "concept": "tech.computing.api",
+  "label": "API",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "En informatique, à quoi sert une API ?",
+  "options": [
+   "À permettre à des logiciels de communiquer entre eux*",
+   "À refroidir un processeur",
+   "À mesurer la vitesse d'Internet",
+   "À dessiner des interfaces"
+  ],
+  "explanation": "Une application météo demande les prévisions à un serveur par son API, avec des règles précises de question et de réponse.",
+  "hint": "Une « interface de programmation »."
+ },
+ {
+  "key": "tech-541",
+  "concept": "tech.computing.objets_connectes",
+  "label": "Objets connectés",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Une montre, un thermostat ou une ampoule reliés à Internet sont des…",
+  "options": [
+   "Objets connectés*",
+   "Serveurs",
+   "Navigateurs",
+   "Processeurs"
+  ],
+  "explanation": "On parle aussi d'« Internet des objets ». On les pilote souvent depuis son téléphone.",
+  "hint": "Ils sont connectés."
+ },
+ {
+  "key": "tech-542",
+  "concept": "tech.computing.teraoctet",
+  "label": "Téraoctet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de gigaoctets (Go) y a-t-il dans un téraoctet (To) ?",
+  "options": [
+   "1 000*",
+   "100",
+   "10",
+   "1 000 000"
+  ],
+  "explanation": "Kilo, méga, giga, téra : chaque cran multiplie par 1 000. Un disque de 1 To contient environ 250 000 photos.",
+  "hint": "Le même rapport qu'entre mètre et kilomètre."
+ },
+ {
+  "key": "tech-543",
+  "concept": "tech.computing.cheval_de_troie",
+  "label": "Cheval de Troie",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "En informatique, qu'est-ce qu'un « cheval de Troie » ?",
+  "options": [
+   "Un programme malveillant déguisé en logiciel utile*",
+   "Un pare-feu très solide",
+   "Un mot de passe oublié",
+   "Un câble réseau"
+  ],
+  "explanation": "Comme dans la légende grecque, on le fait entrer soi-même : il ouvre ensuite la porte aux pirates.",
+  "hint": "Pensez à la ruse d'Ulysse."
+ },
+ {
+  "key": "tech-544",
+  "concept": "tech.computing.iloveyou",
+  "label": "ILOVEYOU",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "En 2000, un ver informatique a infecté des millions d'ordinateurs grâce à un courriel intitulé…",
+  "options": [
+   "ILOVEYOU*",
+   "HAPPY NEW YEAR",
+   "YOU WON",
+   "HELLO WORLD"
+  ],
+  "explanation": "Il s'ouvrait en pièce jointe « LOVE-LETTER-FOR-YOU » et s'envoyait à tous les contacts. Les dégâts se comptent en milliards de dollars.",
+  "hint": "Une déclaration d'amour."
+ },
+ {
+  "key": "tech-545",
+  "concept": "tech.computing.grace_hopper",
+  "label": "Grace Hopper",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Grace Hopper, pionnière de l'informatique, a écrit l'un des premiers…",
+  "options": [
+   "Compilateurs*",
+   "Jeux vidéo",
+   "Réseaux sociaux",
+   "Antivirus"
+  ],
+  "explanation": "Un compilateur traduit un programme écrit en mots en instructions pour la machine. Elle a aussi inspiré le langage COBOL.",
+  "hint": "Il traduit le code pour la machine."
+ },
+ {
+  "key": "tech-546",
+  "concept": "tech.computing.pascal_wirth",
+  "label": "Langage Pascal",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Le langage Pascal, créé par Niklaus Wirth en 1970, doit son nom à…",
+  "options": [
+   "Blaise Pascal*",
+   "Une ville suisse",
+   "Un acronyme anglais",
+   "Un chien de laboratoire"
+  ],
+  "explanation": "Hommage au mathématicien français, inventeur de la Pascaline. Pascal a été très utilisé pour enseigner la programmation.",
+  "hint": "Un savant français du XVIIe siècle."
+ },
+ {
+  "key": "tech-547",
+  "concept": "tech.computing.sql",
+  "label": "SQL",
+  "type": "mcq",
+  "difficulty": 62,
+  "prompt": "À quoi sert le langage SQL ?",
+  "options": [
+   "À interroger des bases de données*",
+   "À dessiner en 3D",
+   "À créer des sites web animés",
+   "À programmer des robots"
+  ],
+  "explanation": "Par exemple : SELECT nom FROM joueurs WHERE score > 4. Presque toutes les applications stockent leurs données ainsi.",
+  "hint": "Il commence souvent par SELECT."
+ },
+ {
+  "key": "tech-548",
+  "concept": "tech.computing.brain_virus",
+  "label": "Premier virus PC",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "De quel pays venait « Brain » (1986), considéré comme le premier virus pour PC ?",
+  "options": [
+   "Du Pakistan*",
+   "Des États-Unis",
+   "D'Allemagne",
+   "D'Inde"
+  ],
+  "explanation": "Deux frères de Lahore voulaient protéger leur logiciel contre la copie ; le virus contenait leur adresse et leur téléphone.",
+  "hint": "Ses auteurs vivaient à Lahore."
+ },
+ {
+  "key": "tech-549",
+  "concept": "tech.computing.premier_site",
+  "label": "Premier site web",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Où a été mis en ligne le premier site web, en 1990-1991 ?",
+  "options": [
+   "Au CERN, près de Genève*",
+   "À la Silicon Valley",
+   "Au MIT",
+   "À Londres"
+  ],
+  "explanation": "Tim Berners-Lee l'héberge sur son ordinateur NeXT au CERN. Il expliquait… ce qu'est le Web.",
+  "hint": "Un grand laboratoire de physique des particules."
+ },
+ {
+  "key": "tech-550",
+  "concept": "tech.computing.micral_n",
+  "label": "Micral N",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le Micral N (1973), souvent présenté comme le premier micro-ordinateur vendu dans le commerce, est…",
+  "options": [
+   "Français*",
+   "Japonais",
+   "Américain",
+   "Britannique"
+  ],
+  "explanation": "Conçu par François Gernelle pour la société R2E, il servait à des mesures agricoles. L'Apple I arrive trois ans plus tard.",
+  "hint": "Il a été conçu près de Paris."
+ },
+ {
+  "key": "tech-551",
+  "concept": "tech.computing.ia_mccarthy",
+  "label": "Intelligence artificielle",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a inventé l'expression « intelligence artificielle », en 1956 ?",
+  "options": [
+   "John McCarthy*",
+   "Alan Turing",
+   "Bill Gates",
+   "Steve Jobs"
+  ],
+  "explanation": "Pour un séminaire d'été à Dartmouth, aux États-Unis, considéré comme l'acte de naissance du domaine.",
+  "hint": "Un chercheur américain, créateur du langage Lisp."
+ },
+ {
+  "key": "tech-552",
+  "concept": "tech.computing.test_turing",
+  "label": "Test de Turing",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que cherche à savoir le « test de Turing » ?",
+  "options": [
+   "Si une machine peut se faire passer pour un humain*",
+   "Si un ordinateur est rapide",
+   "Si un code est chiffré",
+   "Si un site est sécurisé"
+  ],
+  "explanation": "Un juge discute par écrit avec un humain et une machine sans savoir qui est qui. Turing le propose en 1950.",
+  "hint": "Imitation."
+ },
+ {
+  "key": "tech-553",
+  "concept": "tech.computing.git_torvalds",
+  "label": "Git",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a créé Git, l'outil de gestion de versions utilisé par presque tous les développeurs ?",
+  "options": [
+   "Linus Torvalds*",
+   "Bill Gates",
+   "Guido van Rossum",
+   "Mark Zuckerberg"
+  ],
+  "explanation": "En 2005, pour le développement de Linux. GitHub, créé en 2008, héberge des projets Git.",
+  "hint": "Le créateur de Linux."
+ },
+ {
+  "key": "tech-554",
+  "concept": "tech.computing.swift_apple",
+  "label": "Swift",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle entreprise a créé le langage Swift, en 2014 ?",
+  "options": [
+   "Apple*",
+   "Google",
+   "Microsoft",
+   "Meta"
+  ],
+  "explanation": "Il sert à programmer les apps iPhone, Mac et Apple Watch. Brainlix est écrite en Swift.",
+  "hint": "Celle de l'iPhone."
+ },
+ {
+  "key": "tech-555",
+  "concept": "tech.computing.ibm_simon",
+  "label": "Premier smartphone",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel appareil de 1994 est souvent considéré comme le premier smartphone ?",
+  "options": [
+   "L'IBM Simon*",
+   "Le Nokia 3310",
+   "Le BlackBerry",
+   "L'iPhone"
+  ],
+  "explanation": "Écran tactile, courriels, agenda : il s'est vendu à environ 50 000 exemplaires. Le mot « smartphone » n'existait pas encore.",
+  "hint": "Il portait un prénom."
+ },
+ {
+  "key": "tech-556",
+  "concept": "tech.computing.apple_1",
+  "label": "Apple I",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelait le premier ordinateur vendu par Apple, en 1976 ?",
+  "options": [
+   "L'Apple I*",
+   "Le Macintosh",
+   "L'iMac",
+   "Le Lisa"
+  ],
+  "explanation": "Assemblé par Steve Wozniak, vendu 666,66 dollars, sans boîtier ni clavier. Le Macintosh arrive en 1984.",
+  "hint": "Un chiffre suit le nom de la marque."
+ },
+ {
+  "key": "tech-557",
+  "concept": "tech.computing.bit_origine",
+  "label": "Bit",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "D'où vient le mot « bit » ?",
+  "options": [
+   "De « binary digit », chiffre binaire*",
+   "D'une marque de câble",
+   "De « bitte », en allemand",
+   "D'un morceau en anglais, sans autre sens"
+  ],
+  "explanation": "Un bit vaut 0 ou 1. Le mot est popularisé par Claude Shannon en 1948.",
+  "hint": "Deux mots anglais contractés."
+ },
+ {
+  "key": "tech-558",
+  "concept": "tech.computing.hexa_10",
+  "label": "Hexadécimal 10",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Combien vaut « 10 » écrit en hexadécimal, en nombre décimal ?",
+  "answer": 16,
+  "explanation": "En base 16, on compte 0 à 9 puis A à F ; « 10 » arrive juste après F (15), donc vaut 16.",
+  "hint": "La base elle-même."
+ },
+ {
+  "key": "tech-559",
+  "concept": "tech.computing.pagerank",
+  "label": "PageRank",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment s'appelle l'algorithme qui a fait le succès du moteur de recherche Google ?",
+  "options": [
+   "PageRank*",
+   "WebScore",
+   "LinkMaster",
+   "SearchRank"
+  ],
+  "explanation": "Il classe une page selon le nombre et l'importance des pages qui pointent vers elle. « Page » est aussi le nom de Larry Page.",
+  "hint": "Il porte le nom d'un des fondateurs."
+ },
+ {
+  "key": "tech-560",
+  "concept": "tech.computing.cobol",
+  "label": "COBOL",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel vieux langage, créé en 1959, fait encore tourner une partie des systèmes bancaires ?",
+  "options": [
+   "COBOL*",
+   "Python",
+   "Swift",
+   "Rust"
+  ],
+  "explanation": "Des milliards de lignes existent encore ; les programmeurs COBOL sont recherchés… et souvent proches de la retraite.",
+  "hint": "Inspiré par Grace Hopper."
+ },
+ {
+  "key": "tech-561",
+  "concept": "tech.computing.gpu",
+  "label": "GPU",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel composant d'un ordinateur s'occupe surtout des images et de la 3D ?",
+  "options": [
+   "La carte graphique (GPU)*",
+   "La carte mère",
+   "L'alimentation",
+   "Le disque dur"
+  ],
+  "explanation": "Ses milliers de petits cœurs calculent en parallèle ; c'est aussi pour cela qu'on s'en sert pour entraîner les IA.",
+  "hint": "Les jeux vidéo en demandent une puissante."
+ },
+ {
+  "key": "tech-562",
+  "concept": "tech.computing.disque_ibm",
+  "label": "Premier disque dur",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le premier disque dur, vendu par IBM en 1956, pesait près d'une tonne. Il stockait environ…",
+  "options": [
+   "5 mégaoctets*",
+   "5 gigaoctets",
+   "5 kilooctets",
+   "500 mégaoctets"
+  ],
+  "explanation": "L'IBM 350 contenait 50 disques de 60 cm. Soit 5 millions de caractères ; aujourd'hui, une seule photo de téléphone pèse souvent plus.",
+  "hint": "L'équivalent de quelques chansons MP3."
+ },
+ {
+  "key": "tech-563",
+  "concept": "tech.computing.wifi_nom",
+  "label": "Wi-Fi",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Que signifie réellement le nom « Wi-Fi » ?",
+  "options": [
+   "Rien : c'est un nom de marque*",
+   "Wireless Fidelity, officiellement",
+   "Wide Fiber",
+   "Wireless File"
+  ],
+  "explanation": "Une agence l'a choisi en 1999 pour sa sonorité, en écho à « Hi-Fi ». L'explication « Wireless Fidelity » est venue après coup.",
+  "hint": "Un nom trouvé par des publicitaires."
+ },
+ {
+  "key": "tech-564",
+  "concept": "tech.computing.5g",
+  "label": "5G",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que désigne la « 5G » ?",
+  "options": [
+   "La cinquième génération de réseau mobile*",
+   "Un écran 5 fois plus net",
+   "Une batterie de 5 gigas",
+   "La 5e version d'Android"
+  ],
+  "explanation": "Après la 4G (2010) : plus de débit et moins de délai. La 1G, dans les années 1980, ne transmettait que la voix.",
+  "hint": "Le « G » veut dire génération."
+ },
+ {
+  "key": "tech-565",
+  "concept": "tech.computing.serveur",
+  "label": "Serveur",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'un serveur, en informatique ?",
+  "options": [
+   "Un ordinateur qui fournit des services à d'autres*",
+   "Un employé de support",
+   "Un câble très long",
+   "Un logiciel de dessin"
+  ],
+  "explanation": "Quand vous ouvrez un site, votre téléphone demande la page à un serveur, souvent rangé dans un centre de données.",
+  "hint": "Il « sert » des pages et des fichiers."
+ },
+ {
+  "key": "tech-566",
+  "concept": "tech.computing.ram_disque",
+  "label": "RAM et stockage",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Ajouter de la mémoire vive (RAM) augmente la place disponible pour stocker ses photos.",
+  "answer": false,
+  "explanation": "Non : la RAM sert au travail en cours et se vide à l'extinction. Les photos sont stockées sur le disque ou la mémoire flash."
+ },
+ {
+  "key": "tech-567",
+  "concept": "tech.computing.premier_courriel",
+  "label": "Courriel et Web",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le courrier électronique existait avant le World Wide Web.",
+  "answer": true,
+  "explanation": "Oui : le premier courriel entre deux ordinateurs date de 1971 ; le Web naît vingt ans plus tard, en 1991."
+ },
+ {
+  "key": "tech-568",
+  "concept": "tech.computing.clavier_azerty",
+  "label": "AZERTY",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le clavier AZERTY a été conçu pour taper le plus vite possible.",
+  "answer": false,
+  "explanation": "Non : il descend des claviers QWERTY des machines à écrire, pensés pour éviter que les tiges se coincent. Des dispositions plus rapides existent (BÉPO)."
+ },
+ {
+  "key": "tech-569",
+  "concept": "tech.computing.google_nom",
+  "label": "Googol",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le nom Google vient d'un mot désignant le nombre 1 suivi de 100 zéros.",
+  "answer": true,
+  "explanation": "Oui : le « googol ». Les fondateurs voulaient évoquer l'immense quantité d'informations du Web."
+ },
+ {
+  "key": "tech-570",
+  "concept": "tech.computing.reseaux_chronologie",
+  "label": "Générations du mobile",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces technologies de la plus ancienne à la plus récente.",
+  "items": [
+   "Le SMS",
+   "La 3G",
+   "La 4G",
+   "La 5G"
+  ],
+  "explanation": "Premier SMS en 1992, 3G au début des années 2000, 4G vers 2010, 5G vers 2019-2020 en Europe."
+ },
+ {
+  "key": "tech-571",
+  "concept": "tech.computing.langages_chronologie",
+  "label": "Langages",
+  "type": "ordering",
+  "difficulty": 72,
+  "prompt": "Classe ces langages de programmation du plus ancien au plus récent.",
+  "items": [
+   "COBOL",
+   "C",
+   "Python",
+   "Swift"
+  ],
+  "explanation": "COBOL (1959), C (1972), Python (1991), Swift (2014)."
+ },
+ {
+  "key": "tech-572",
+  "concept": "tech.computing.langages_createurs",
+  "label": "Créateurs de langages",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque langage à son créateur.",
+  "pairs": [
+   [
+    "Python",
+    "Guido van Rossum"
+   ],
+   [
+    "C",
+    "Dennis Ritchie"
+   ],
+   [
+    "Java",
+    "James Gosling"
+   ],
+   [
+    "Linux (noyau)",
+    "Linus Torvalds"
+   ]
+  ],
+  "explanation": "Van Rossum (1991), Ritchie (1972), Gosling (1995), Torvalds (1991)."
+ },
+ {
+  "key": "tech-573",
+  "concept": "tech.computing.sigles_web",
+  "label": "Sigles",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque sigle à ce qu'il désigne.",
+  "pairs": [
+   [
+    "HTML",
+    "Structure d'une page web"
+   ],
+   [
+    "PDF",
+    "Document à la mise en page fixe"
+   ],
+   [
+    "URL",
+    "Adresse d'une ressource"
+   ],
+   [
+    "Wi-Fi",
+    "Réseau sans fil"
+   ]
+  ],
+  "explanation": "Quatre sigles du quotidien numérique."
+ },
+ {
+  "key": "tech-574",
+  "concept": "tech.computing.souris_pointeur",
+  "label": "Souris",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel appareil déplace le pointeur à l'écran d'un ordinateur ?",
+  "options": [
+   "La souris*",
+   "Le clavier",
+   "L'imprimante",
+   "Le haut-parleur"
+  ],
+  "explanation": "Inventée par Douglas Engelbart dans les années 1960, elle doit son nom à son fil qui ressemblait à une queue.",
+  "hint": "Elle a été nommée à cause de son fil."
+ },
+ {
+  "key": "tech-575",
+  "concept": "tech.computing.antivirus",
+  "label": "Antivirus",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert un antivirus ?",
+  "options": [
+   "À détecter et bloquer les logiciels malveillants*",
+   "À soigner la grippe",
+   "À accélérer Internet",
+   "À recharger la batterie"
+  ],
+  "explanation": "Il compare les fichiers à une liste de menaces connues et surveille les comportements suspects.",
+  "hint": "Il protège contre les « virus » informatiques."
+ },
+ {
+  "key": "tech-576",
+  "concept": "tech.computing.emoji_mdr",
+  "label": "Émoticône",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel smiley fait-on au clavier pour un visage souriant ?",
+  "options": [
+   ":-)*",
+   ":-(",
+   ":-O",
+   ":-/"
+  ],
+  "explanation": "Le premier smiley en texte, :-), est proposé en 1982 par Scott Fahlman, chercheur américain, pour signaler les blagues.",
+  "hint": "On le lit en penchant la tête à gauche."
+ }
+]

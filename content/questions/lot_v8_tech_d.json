@@ -1,0 +1,332 @@
+[
+ {
+  "key": "tech-690",
+  "concept": "tech.computing.captcha_recaptcha",
+  "label": "reCAPTCHA",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En résolvant certains CAPTCHA « reCAPTCHA », les internautes ont aidé sans le savoir à…",
+  "options": [
+   "Numériser des livres*",
+   "Miner du bitcoin",
+   "Tester des mots de passe",
+   "Traduire Wikipédia"
+  ],
+  "explanation": "Les mots que les logiciels n'arrivaient pas à lire étaient montrés aux humains. Google a racheté reCAPTCHA en 2009.",
+  "hint": "Pensez aux vieux livres scannés."
+ },
+ {
+  "key": "tech-691",
+  "concept": "tech.computing.octet_mot",
+  "label": "Octet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de valeurs différentes un seul bit peut-il prendre ?",
+  "options": [
+   "2*",
+   "1",
+   "8",
+   "10"
+  ],
+  "explanation": "0 ou 1. Avec 8 bits (un octet), on obtient 256 combinaisons.",
+  "hint": "Le système est binaire."
+ },
+ {
+  "key": "tech-692",
+  "concept": "tech.computing.photo_pixels",
+  "label": "Mégapixel",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien de pixels compte un « mégapixel » ?",
+  "options": [
+   "Un million*",
+   "Mille",
+   "Cent mille",
+   "Un milliard"
+  ],
+  "explanation": "Une photo de 12 mégapixels compte environ 4 000 × 3 000 points.",
+  "hint": "« Méga » comme dans mégaoctet."
+ },
+ {
+  "key": "tech-693",
+  "concept": "tech.computing.clavier_touche_entree",
+  "label": "Touche Échap",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur un clavier, à quoi sert souvent la touche « Échap » (Esc) ?",
+  "options": [
+   "À annuler ou quitter*",
+   "À supprimer un fichier",
+   "À éteindre l'ordinateur",
+   "À changer de langue"
+  ],
+  "explanation": "Elle permet de « s'échapper » : sortir du plein écran, fermer un menu, annuler une action.",
+  "hint": "Son nom dit tout."
+ },
+ {
+  "key": "tech-694",
+  "concept": "tech.computing.moteur_plus_utilise",
+  "label": "Moteur de recherche",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le moteur de recherche le plus utilisé au monde ?",
+  "options": [
+   "Google*",
+   "Bing",
+   "Yahoo",
+   "Qwant"
+  ],
+  "explanation": "Il traite près de 9 recherches sur 10 dans le monde. Qwant est un moteur français.",
+  "hint": "Le nom d'un très grand nombre."
+ },
+ {
+  "key": "tech-695",
+  "concept": "tech.computing.linux_mascotte",
+  "label": "Mascotte de Linux",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel animal est la mascotte de Linux ?",
+  "options": [
+   "Un manchot*",
+   "Un renard",
+   "Un pingouin volant",
+   "Une mouette"
+  ],
+  "explanation": "Tux, un manchot, dessiné en 1996. Linus Torvalds disait avoir été mordu par l'un d'eux dans un zoo.",
+  "hint": "Il vit en Antarctique."
+ },
+ {
+  "key": "tech-696",
+  "concept": "tech.computing.firefox_animal",
+  "label": "Firefox",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel animal représente réellement le logo de Firefox ?",
+  "options": [
+   "Un panda roux*",
+   "Un renard",
+   "Un chat roux",
+   "Un écureuil"
+  ],
+  "explanation": "« Firefox » est un surnom anglais du panda roux, même si le logo évoque souvent un renard.",
+  "hint": "Un petit mammifère d'Asie qui porte un nom d'ours."
+ },
+ {
+  "key": "tech-697",
+  "concept": "tech.computing.cloud_centre",
+  "label": "Centre de données",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Où sont physiquement stockées les données « dans le cloud » ?",
+  "options": [
+   "Dans de grands centres remplis de serveurs*",
+   "Dans les satellites",
+   "Dans l'air, sous forme d'ondes",
+   "Dans les antennes 5G"
+  ],
+  "explanation": "Des bâtiments géants, refroidis en permanence. Ils consomment une part importante de l'électricité mondiale.",
+  "hint": "Le nuage est bien sur terre."
+ },
+ {
+  "key": "tech-698",
+  "concept": "tech.inventions.telephone_portable_poids",
+  "label": "Premier portable",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Combien pesait le premier téléphone portable vendu, le Motorola DynaTAC, en 1983 ?",
+  "options": [
+   "Près de 800 grammes*",
+   "200 grammes",
+   "2 kilos",
+   "50 grammes"
+  ],
+  "explanation": "Surnommé « la brique », il offrait 30 minutes de conversation pour 10 heures de charge.",
+  "hint": "On le surnommait « la brique »."
+ },
+ {
+  "key": "tech-699",
+  "concept": "tech.inventions.gps_militaire",
+  "label": "GPS",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a créé le système GPS ?",
+  "options": [
+   "L'armée américaine*",
+   "L'Agence spatiale européenne",
+   "Google",
+   "La NASA pour les astronautes"
+  ],
+  "explanation": "Il est ouvert aux civils dans les années 1980-1990. L'Europe a lancé son propre système, Galileo.",
+  "hint": "Il servait d'abord à guider des militaires."
+ },
+ {
+  "key": "tech-700",
+  "concept": "tech.inventions.galileo_europe",
+  "label": "Galileo",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment s'appelle le système de positionnement par satellites de l'Union européenne ?",
+  "options": [
+   "Galileo*",
+   "Copernic",
+   "Ariane",
+   "Kepler"
+  ],
+  "explanation": "Opérationnel depuis 2016, il complète le GPS américain et offre une précision de l'ordre du mètre.",
+  "hint": "Le nom d'un astronome italien."
+ },
+ {
+  "key": "tech-701",
+  "concept": "tech.inventions.sans_contact",
+  "label": "Sans contact",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que le « sans contact » sur une carte bancaire ?",
+  "options": [
+   "Un paiement en approchant la carte du terminal*",
+   "Un paiement sans code, par Internet",
+   "Une carte sans puce",
+   "Une carte virtuelle"
+  ],
+  "explanation": "La carte communique par ondes radio (NFC) à quelques centimètres. En France, le plafond est de 50 euros.",
+  "hint": "On pose, ça bipe."
+ },
+ {
+  "key": "tech-702",
+  "concept": "tech.brands.google_chrome_annee",
+  "label": "Chrome",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle entreprise a lancé le navigateur Chrome, en 2008 ?",
+  "options": [
+   "Google*",
+   "Apple",
+   "Microsoft",
+   "Mozilla"
+  ],
+  "explanation": "Il devient le navigateur le plus utilisé au monde en quelques années, devant Internet Explorer.",
+  "hint": "Celle du moteur de recherche."
+ },
+ {
+  "key": "tech-703",
+  "concept": "tech.brands.whatsapp_prix",
+  "label": "WhatsApp",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pour combien Facebook a-t-il racheté WhatsApp, en 2014 ?",
+  "options": [
+   "Environ 19 milliards de dollars*",
+   "1 milliard de dollars",
+   "190 millions de dollars",
+   "100 milliards de dollars"
+  ],
+  "explanation": "Un record pour une application de 55 employés. Instagram, deux ans plus tôt, avait coûté 1 milliard.",
+  "hint": "Beaucoup plus qu'Instagram."
+ },
+ {
+  "key": "tech-704",
+  "concept": "tech.brands.intel_inside",
+  "label": "Intel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel slogan est associé aux processeurs Intel ?",
+  "options": [
+   "« Intel Inside »*",
+   "« Think Different »",
+   "« Just Do It »",
+   "« Don't be evil »"
+  ],
+  "explanation": "Lancé en 1991, avec ses quatre notes musicales. « Think Different » est d'Apple, « Just Do It » de Nike.",
+  "hint": "« À l'intérieur »."
+ },
+ {
+  "key": "tech-705",
+  "concept": "tech.brands.apple_slogan",
+  "label": "Think Different",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle marque a utilisé le slogan « Think Different » ?",
+  "options": [
+   "Apple*",
+   "Microsoft",
+   "Samsung",
+   "IBM"
+  ],
+  "explanation": "Une campagne de 1997, au retour de Steve Jobs, en réponse au « Think » d'IBM.",
+  "hint": "La marque à la pomme."
+ },
+ {
+  "key": "tech-706",
+  "concept": "tech.brands.nike_slogan",
+  "label": "Just Do It",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle marque a pour slogan « Just Do It » ?",
+  "options": [
+   "Nike*",
+   "Adidas",
+   "Puma",
+   "Reebok"
+  ],
+  "explanation": "Depuis 1988. Son logo, le « swoosh », avait été dessiné pour 35 dollars par une étudiante.",
+  "hint": "La marque au swoosh."
+ },
+ {
+  "key": "tech-707",
+  "concept": "tech.brands.ikea_meubles",
+  "label": "Ikea",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment les meubles Ikea sont-ils le plus souvent vendus ?",
+  "options": [
+   "En kit, à monter soi-même*",
+   "Déjà montés",
+   "En location",
+   "Uniquement en ligne"
+  ],
+  "explanation": "Les paquets plats réduisent les coûts de transport. L'idée serait venue d'un employé qui avait retiré les pieds d'une table pour la charger.",
+  "hint": "Il faut sortir la clé Allen."
+ },
+ {
+  "key": "tech-708",
+  "concept": "tech.brands.samsung_poisson",
+  "label": "Samsung",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Samsung a commencé en vendant du poisson séché et des nouilles.",
+  "answer": true,
+  "explanation": "Oui : en 1938, c'était une petite entreprise de commerce à Daegu, en Corée. L'électronique n'arrive qu'en 1969."
+ },
+ {
+  "key": "tech-709",
+  "concept": "tech.brands.google_garage",
+  "label": "Garages",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Google, comme Apple, a débuté dans un garage.",
+  "answer": true,
+  "explanation": "Oui : en 1998, Larry Page et Sergey Brin louent le garage de Susan Wojcicki, future patronne de YouTube."
+ },
+ {
+  "key": "tech-710",
+  "concept": "tech.brands.coca_formule_annee",
+  "label": "Coca-Cola",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "En quelle année le Coca-Cola a-t-il été inventé à Atlanta ?",
+  "answer": 1886,
+  "explanation": "Le pharmacien John Pemberton le vend d'abord comme un remède. La même année, on inaugure la statue de la Liberté.",
+  "hint": "La même année que la statue de la Liberté."
+ },
+ {
+  "key": "tech-711",
+  "concept": "tech.computing.premier_sms_annee",
+  "label": "Premier SMS",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "En quelle année le premier SMS a-t-il été envoyé ?",
+  "answer": 1992,
+  "explanation": "Le 3 décembre 1992 : « Merry Christmas », envoyé d'un ordinateur à un téléphone au Royaume-Uni.",
+  "hint": "Au début des années 1990."
+ }
+]
