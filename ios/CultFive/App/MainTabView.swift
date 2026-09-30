@@ -26,6 +26,13 @@ struct MainTabView: View {
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
         .environment(\.tabBarClearance, clearance)
+        .fullScreenCover(isPresented: Binding(get: { model.chestQueue != nil }, set: { if !$0 { model.chestQueue = nil } })) {
+            ChestOpeningView(chests: model.chestQueue ?? []) {
+                model.chestQueue = nil
+                Task { await model.refreshProfile() }
+            }
+        }
+        .task { await model.refreshProgression() }
     }
 
     private func tab(_ content: some View, _ tag: AppModel.Tab) -> some View {

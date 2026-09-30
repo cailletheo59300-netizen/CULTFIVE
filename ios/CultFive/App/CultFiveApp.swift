@@ -15,6 +15,7 @@ struct CultFiveApp: App {
                 .environment(model)
                 .tint(Color.brand)
                 .preferredColorScheme(appearance.colorScheme)
+                .environment(\.leonOutfit, model.outfit)
                 .onOpenURL { model.handle(url: $0) }
                 .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in
                     if let url = activity.webpageURL { model.handle(url: url) }

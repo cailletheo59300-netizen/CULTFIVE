@@ -124,7 +124,7 @@ struct OnboardingFlow: View {
         stopwatch.pause()
         let correct = AnswerEvaluator.isCorrect(given, for: question) ?? false
         attempts.append(PlayAttempt(questionId: question.id, given: given, responseMs: stopwatch.elapsedMilliseconds))
-        correct ? Haptics.success() : Haptics.error()
+        Feedback.answer(correct)
         phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
     }
 

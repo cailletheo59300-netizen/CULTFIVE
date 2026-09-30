@@ -1,7 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Objectifs du jour et de la semaine : trois lignes avec leur jauge, la récompense, le bonus et le temps restant.
+/// Défis du jour et de la semaine : trois lignes avec leur jauge et leur récompense ; les trois remplis donnent un coffre
+/// (bois le jour, argent la semaine).
 struct QuestsCard: View {
     let overview: QuestsOverview
     @State private var weekly = false
@@ -11,7 +12,7 @@ struct QuestsCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .firstTextBaseline) {
-                Text("Objectifs").font(.cfHeadline)
+                Text("Défis").font(.cfHeadline)
                 Spacer()
                 picker
             }
@@ -21,7 +22,7 @@ struct QuestsCard: View {
             bonusRow
             HStack(spacing: 4) {
                 Image(systemName: "clock").accessibilityHidden(true)
-                Text("Nouveaux objectifs \(remaining)")
+                Text("Nouveaux défis \(remaining)")
             }
             .font(.cfFootnote).foregroundStyle(Color.inkSoft)
         }
@@ -52,15 +53,20 @@ struct QuestsCard: View {
 
     private var bonusRow: some View {
         HStack(spacing: 10) {
-            Image(systemName: period.bonus.done ? "gift.fill" : "gift")
-                .font(.system(.body, design: .rounded).weight(.bold))
-                .foregroundStyle(period.bonus.done ? Color.white : Color(hex: 0xFFB020))
-                .frame(width: 34, height: 34)
-                .background(period.bonus.done ? Color(hex: 0xFFB020) : Color(hex: 0xFFB020).opacity(0.14), in: Circle())
+            if let chest = period.bonus.chest.flatMap(ChestTier.init(rawValue:)) {
+                ChestView(tier: chest, open: period.bonus.done).frame(width: 40)
+                    .opacity(period.bonus.done ? 0.7 : 1)
+            } else {
+                Image(systemName: period.bonus.done ? "gift.fill" : "gift")
+                    .font(.system(.body, design: .rounded).weight(.bold))
+                    .foregroundStyle(period.bonus.done ? Color.white : Color(hex: 0xFFB020))
+                    .frame(width: 34, height: 34)
+                    .background(period.bonus.done ? Color(hex: 0xFFB020) : Color(hex: 0xFFB020).opacity(0.14), in: Circle())
+            }
             VStack(alignment: .leading, spacing: 1) {
-                Text(weekly ? "Coffre de la semaine" : "Les trois du jour")
+                Text(weekly ? "Les trois de la semaine" : "Les trois du jour")
                     .font(.system(.subheadline, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
-                Text(period.bonus.done ? "Récupéré !" : "\(period.doneCount)/\(period.quests.count) objectifs remplis")
+                Text(period.bonus.done ? "Coffre gagné !" : "\(period.doneCount)/\(period.quests.count) défis remplis")
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
             Spacer()

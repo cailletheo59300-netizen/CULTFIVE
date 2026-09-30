@@ -24,7 +24,7 @@ struct PlaySessionView: View {
         }
         .task(id: config.id) {
             let session = PlaySessionModel(config: config, service: app.service, queue: app.queue, cache: app.cache,
-                                           seeds: app.profile?.seeds)
+                                           seeds: app.profile?.seeds, tickets: app.progression?.tickets)
             model = session
             await session.start()
         }
@@ -83,6 +83,7 @@ struct PlaySessionView: View {
                             onAgain: { restart(config.again()) },
                             showErrors: config.mode != .errors && ((app.profile?.activeErrors ?? 0) > 0 || summary.correct < summary.total),
                             onErrors: { restart(PlayConfig(mode: .errors)) },
+                            onOpenChests: { closeThenOpenChests() },
                             onClose: { close() })
         }
     }
@@ -142,7 +143,12 @@ struct PlaySessionView: View {
                         } label: {
                             HStack(spacing: 4) {
                                 Text(title(kind))
-                                SeedsAmount(amount: kind.cost, color: .inkSoft)
+                                if model.tickets.count(kind) > 0 {
+                                    Text("🎟️ \(model.tickets.count(kind))").monospacedDigit()
+                                        .accessibilityLabel("\(model.tickets.count(kind)) ticket\(model.tickets.count(kind) > 1 ? "s" : "")")
+                                } else {
+                                    SeedsAmount(amount: kind.cost, color: .inkSoft)
+                                }
                             }
                             .font(.system(.footnote, design: .rounded).weight(.heavy))
                             .padding(.horizontal, 14)
@@ -152,7 +158,7 @@ struct PlaySessionView: View {
                         }
                         .buttonStyle(.row)
                         .foregroundStyle(Color.ink)
-                        .disabled((model.seedsBalance ?? 0) < kind.cost)
+                        .disabled(!model.canAfford(kind))
                     }
                     Spacer()
                 }
@@ -179,6 +185,16 @@ struct PlaySessionView: View {
         }
         dismiss()
     }
+
+    /// Les coffres s'ouvrent en plein écran depuis l'app : on ferme d'abord la partie.
+    private func closeThenOpenChests() {
+        dismiss()
+        Task {
+            await app.refreshProfile()
+            try? await Task.sleep(nanoseconds: 600_000_000)
+            app.openChests()
+        }
+    }
 }
 
 struct PlaySummaryView: View {
@@ -187,10 +203,13 @@ struct PlaySummaryView: View {
     var onAgain: () -> Void
     var showErrors = false
     var onErrors: () -> Void = {}
+    var onOpenChests: () -> Void = {}
     var onClose: () -> Void
 
     @Environment(AppModel.self) private var app
     @State private var appeared = false
+    /// Coffres en attente, relus après l'envoi de la partie (niveau, trophée…).
+    @State private var chestsWaiting = 0
 
     private var accent: Color { config.domain.map(DomainPalette.color) ?? .brand }
     private var rate: Double { summary.total > 0 ? Double(summary.correct) / Double(summary.total) : 0 }
@@ -253,10 +272,14 @@ struct PlaySummaryView: View {
                                     detail: "Elles sortent de ta liste à revoir.")
                 }
                 if let levelUp {
-                    CelebrationCard(kind: .levelUp, title: "Niveau \(levelUp)", detail: "Ton XP grimpe, continue comme ça.")
+                    CelebrationCard(kind: .levelUp, title: "Niveau \(levelUp)", detail: "Un coffre de niveau t'attend.")
                 }
                 ForEach(summary.achievements, id: \.self) { name in
-                    CelebrationCard(kind: .trophy, title: name)
+                    CelebrationCard(kind: .trophy, title: name, detail: "Trophée débloqué : un coffre t'attend.")
+                }
+                if chestsWaiting > 0 {
+                    ChestsWaitingCard(count: chestsWaiting, tier: app.progression?.chests.map(\.tier).max { $0.rank < $1.rank } ?? .wood,
+                                      action: onOpenChests)
                 }
                 ForEach(placementsDone, id: \.domainId) { r in
                     CelebrationCard(kind: .rating, title: "Placement terminé : \(CoteCULT.format(r.coteAfter))",
@@ -303,6 +326,11 @@ struct PlaySummaryView: View {
         .onAppear {
             withAnimation(Motion.bounce.delay(0.1)) { appeared = true }
             rate >= 0.7 ? Haptics.success() : Haptics.soft()
+        }
+        .task(id: summary.synced) {
+            guard summary.synced else { return }
+            await app.refreshProgression()
+            withAnimation(Motion.standard) { chestsWaiting = app.progression?.chests.count ?? 0 }
         }
     }
 

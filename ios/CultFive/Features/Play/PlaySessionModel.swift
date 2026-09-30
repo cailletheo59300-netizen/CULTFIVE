@@ -103,6 +103,8 @@ final class PlaySessionModel {
     private(set) var removedOptions: Set<String> = []
     private(set) var helpText: String?
     private(set) var seedsBalance: Int?
+    /// Tickets d'aide (gagnés dans les coffres) : utilisés avant les graines.
+    private(set) var tickets: HelpTickets
     private(set) var helpError: String?
     /// Fin du temps imparti pour la question en cours (entraînement chronométré).
     private(set) var deadline: Date?
@@ -119,12 +121,19 @@ final class PlaySessionModel {
     private var stopwatch = Stopwatch()
     private var usedOfflinePack = false
 
-    init(config: PlayConfig, service: GameService, queue: OfflineAttemptQueue, cache: DiskCache, seeds: Int?) {
+    init(config: PlayConfig, service: GameService, queue: OfflineAttemptQueue, cache: DiskCache, seeds: Int?,
+         tickets: HelpTickets? = nil) {
         self.config = config
         self.service = service
         self.queue = queue
         self.cache = cache
         self.seedsBalance = seeds
+        self.tickets = tickets ?? HelpTickets(fiftyFifty: 0, hint: 0)
+    }
+
+    /// Une aide est possible : un ticket, ou assez de graines.
+    func canAfford(_ kind: HelpKind) -> Bool {
+        tickets.count(kind) > 0 || (seedsBalance ?? 0) >= kind.cost
     }
 
     var current: Question? { questions.indices.contains(index) ? questions[index] : nil }
@@ -220,7 +229,7 @@ final class PlaySessionModel {
         attempts.append(PlayAttempt(questionId: question.id, given: nil, responseMs: stopwatch.elapsedMilliseconds))
         results.append(false)
         lastPoints = 0
-        Haptics.error()
+        Feedback.answer(false)
         phase = .revealed(given: nil, isCorrect: false, reveal: reveal)
     }
     func pause() { stopwatch.pause() }
@@ -235,7 +244,7 @@ final class PlaySessionModel {
         results.append(correct)
         lastPoints = GamePoints.points(correct: correct, expected: question.expected, responseMs: stopwatch.elapsedMilliseconds)
         points += lastPoints
-        correct ? Haptics.success() : Haptics.error()
+        Feedback.answer(correct)
         phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
     }
 
@@ -323,6 +332,10 @@ final class PlaySessionModel {
         do {
             let content = try await service.spendHelp(session: sessionId, question: question.id, kind: kind)
             seedsBalance = content.balance
+            if content.ticketUsed == true, let left = content.ticketsLeft {
+                tickets = kind == .fiftyFifty ? HelpTickets(fiftyFifty: left, hint: tickets.hint)
+                                              : HelpTickets(fiftyFifty: tickets.fiftyFifty, hint: left)
+            }
             Haptics.soft()
             switch kind {
             case .fiftyFifty: removedOptions = Set(content.remove ?? [])

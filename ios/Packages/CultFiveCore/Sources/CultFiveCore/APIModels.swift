@@ -506,6 +506,15 @@ public struct HelpContent: Codable, Hashable, Sendable {
     public let hint: String?
     public let context: String?
     public let balance: Int
+    /// Un ticket d'aide a remplacé les graines ; tickets de ce type restants.
+    public let ticketUsed: Bool?
+    public let ticketsLeft: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case remove, hint, context, balance
+        case ticketUsed = "ticket_used"
+        case ticketsLeft = "tickets_left"
+    }
 }
 
 // MARK: - Profil, compétences
@@ -926,4 +935,304 @@ public enum ChestName {
         default: return "Coffre en bois"
         }
     }
+}
+
+// MARK: - Coffres, arbre de Léon, tenue, trophées
+
+public enum ChestTier: String, Codable, Hashable, Sendable, CaseIterable {
+    case wood, silver, gold
+
+    public var title: String { ChestName.title(rawValue) }
+}
+
+public struct ChestRef: Codable, Hashable, Identifiable, Sendable {
+    public let id: UUID
+    public let tier: ChestTier
+    public let source: String
+    public let ref: String?
+
+    public init(id: UUID, tier: ChestTier, source: String, ref: String? = nil) {
+        self.id = id
+        self.tier = tier
+        self.source = source
+        self.ref = ref
+    }
+
+    /// D'où vient le coffre, en mots.
+    public var origin: String {
+        switch source {
+        case "quests_day": return "Tous les défis du jour"
+        case "quests_week": return "Tous les défis de la semaine"
+        case "level": return ref.map { "Niveau \($0)" } ?? "Nouveau niveau"
+        case "trophy": return "Trophée"
+        case "tree": return "L'arbre de Léon a grandi"
+        case "referral": return "Parrainage"
+        case "welcome": return "Bienvenue dans la nouvelle version"
+        default: return "Récompense"
+        }
+    }
+}
+
+public struct ChestItem: Codable, Hashable, Sendable {
+    public let id: String
+    public let name: String
+    public let slot: String
+
+    public init(id: String, name: String, slot: String) {
+        self.id = id
+        self.name = name
+        self.slot = slot
+    }
+}
+
+public struct ChestContents: Codable, Hashable, Sendable {
+    public struct Tickets: Codable, Hashable, Sendable {
+        public let fiftyFifty: Int
+        public let hint: Int
+
+        public init(fiftyFifty: Int, hint: Int) {
+            self.fiftyFifty = fiftyFifty
+            self.hint = hint
+        }
+
+        enum CodingKeys: String, CodingKey {
+            case hint
+            case fiftyFifty = "fifty_fifty"
+        }
+    }
+
+    public let tier: ChestTier
+    public let seeds: Int
+    public let tickets: Tickets
+    public let joker: Bool
+    public let item: ChestItem?
+    public let balance: Int?
+
+    public init(tier: ChestTier, seeds: Int, tickets: Tickets, joker: Bool, item: ChestItem?, balance: Int?) {
+        self.tier = tier
+        self.seeds = seeds
+        self.tickets = tickets
+        self.joker = joker
+        self.item = item
+        self.balance = balance
+    }
+}
+
+public struct TreeState: Codable, Hashable, Sendable {
+    public let points: Int
+    public let stage: Int
+    public let stageName: String
+    public let fruits: Int
+    /// Graines cumulées pour la prochaine étape ou le prochain fruit ; nil quand l'arbre est complet.
+    public let nextAt: Int?
+    public let max: Int
+    public let complete: Bool
+
+    public init(points: Int, stage: Int, stageName: String, fruits: Int, nextAt: Int?, max: Int, complete: Bool) {
+        self.points = points
+        self.stage = stage
+        self.stageName = stageName
+        self.fruits = fruits
+        self.nextAt = nextAt
+        self.max = max
+        self.complete = complete
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case points, stage, fruits, max, complete
+        case stageName = "stage_name"
+        case nextAt = "next_at"
+    }
+
+    /// Seuils (graines cumulées) des étapes 1 à 6, puis des fruits : mêmes valeurs que le serveur.
+    public static let stageThresholds = [0, 150, 600, 1800, 4000, 9000]
+    public static let fruitStep = 2500
+
+    /// Début du palier en cours, pour la jauge.
+    public var levelStart: Int {
+        if stage < 6 { return TreeState.stageThresholds[stage - 1] }
+        return 9000 + TreeState.fruitStep * fruits
+    }
+
+    /// Avancement vers le prochain palier (0 à 1).
+    public var progress: Double {
+        guard let nextAt, nextAt > levelStart else { return 1 }
+        return Double(points - levelStart) / Double(nextAt - levelStart)
+    }
+
+    /// « Jeune plant », « 2e fruit »…
+    public var nextLabel: String? {
+        guard nextAt != nil else { return nil }
+        if stage < 6 { return TreeState.stageName(stage + 1) }
+        return fruits == 0 ? "1er fruit" : "\(fruits + 1)e fruit"
+    }
+
+    public static func stageName(_ stage: Int) -> String {
+        ["Graine", "Pousse", "Jeune plant", "Arbuste", "Arbre", "Arbre de Léon en fleurs"][min(Swift.max(stage, 1), 6) - 1]
+    }
+}
+
+public struct LeonItem: Codable, Hashable, Identifiable, Sendable {
+    public let id: String
+    public let name: String
+    public let slot: String
+    public let rarity: String
+    public let owned: Bool
+    public let equipped: Bool
+
+    public init(id: String, name: String, slot: String, rarity: String, owned: Bool, equipped: Bool) {
+        self.id = id
+        self.name = name
+        self.slot = slot
+        self.rarity = rarity
+        self.owned = owned
+        self.equipped = equipped
+    }
+}
+
+public struct HelpTickets: Codable, Hashable, Sendable {
+    public let fiftyFifty: Int
+    public let hint: Int
+
+    public init(fiftyFifty: Int, hint: Int) {
+        self.fiftyFifty = fiftyFifty
+        self.hint = hint
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case hint
+        case fiftyFifty = "fifty_fifty"
+    }
+
+    public func count(_ kind: HelpKind) -> Int {
+        switch kind {
+        case .fiftyFifty: return fiftyFifty
+        case .hint: return hint
+        case .context: return 0
+        }
+    }
+}
+
+public struct ProgressionOverview: Codable, Hashable, Sendable {
+    public let xp: Int
+    public let level: Int
+    public let seeds: Int
+    public let streakFreezes: Int
+    public let tree: TreeState
+    public let chests: [ChestRef]
+    public let tickets: HelpTickets
+    /// Emplacement → objet porté (« hat » → « beret »).
+    public let outfit: [String: String]
+    public let items: [LeonItem]
+
+    public init(xp: Int, level: Int, seeds: Int, streakFreezes: Int, tree: TreeState, chests: [ChestRef],
+                tickets: HelpTickets, outfit: [String: String], items: [LeonItem]) {
+        self.xp = xp
+        self.level = level
+        self.seeds = seeds
+        self.streakFreezes = streakFreezes
+        self.tree = tree
+        self.chests = chests
+        self.tickets = tickets
+        self.outfit = outfit
+        self.items = items
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case xp, level, seeds, tree, chests, tickets, outfit, items
+        case streakFreezes = "streak_freezes"
+    }
+}
+
+public struct TreeFeedResult: Codable, Hashable, Sendable {
+    public let fed: Int
+    public let newChests: Int
+    public let newItems: [ChestItem]
+    public let tree: TreeState
+    public let balance: Int
+
+    public init(fed: Int, newChests: Int, newItems: [ChestItem], tree: TreeState, balance: Int) {
+        self.fed = fed
+        self.newChests = newChests
+        self.newItems = newItems
+        self.tree = tree
+        self.balance = balance
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case fed, tree, balance
+        case newChests = "new_chests"
+        case newItems = "new_items"
+    }
+}
+
+public struct TrophiesOverview: Codable, Hashable, Sendable {
+    public struct Exploit: Codable, Hashable, Identifiable, Sendable {
+        public let id: String
+        public let name: String
+        public let description: String
+        public let chest: ChestTier?
+        public let unlockedAt: Date?
+
+        public init(id: String, name: String, description: String, chest: ChestTier?, unlockedAt: Date?) {
+            self.id = id
+            self.name = name
+            self.description = description
+            self.chest = chest
+            self.unlockedAt = unlockedAt
+        }
+
+        enum CodingKeys: String, CodingKey {
+            case id, name, description, chest
+            case unlockedAt = "unlocked_at"
+        }
+    }
+
+    public struct Mastery: Codable, Hashable, Identifiable, Sendable {
+        public struct Next: Codable, Hashable, Sendable {
+            public let tier: String
+            public let cote: Int
+
+            public init(tier: String, cote: Int) {
+                self.tier = tier
+                self.cote = cote
+            }
+        }
+
+        public let domainId: String
+        public let name: String
+        public let placed: Bool
+        public let cote: Int?
+        /// Palier atteint : « bronze », « silver », « gold », « diamond » ; nil sinon.
+        public let tier: String?
+        public let next: Next?
+        public var id: String { domainId }
+
+        public init(domainId: String, name: String, placed: Bool, cote: Int?, tier: String?, next: Next?) {
+            self.domainId = domainId
+            self.name = name
+            self.placed = placed
+            self.cote = cote
+            self.tier = tier
+            self.next = next
+        }
+
+        enum CodingKeys: String, CodingKey {
+            case name, placed, cote, tier, next
+            case domainId = "domain_id"
+        }
+    }
+
+    public let exploits: [Exploit]
+    public let mastery: [Mastery]
+
+    public init(exploits: [Exploit], mastery: [Mastery]) {
+        self.exploits = exploits
+        self.mastery = mastery
+    }
+
+    /// Paliers de maîtrise dans l'ordre, avec leur Elo et leur nom.
+    public static let tiers: [(id: String, name: String, cote: Int)] = [
+        ("bronze", "Bronze", 1050), ("silver", "Argent", 1200), ("gold", "Or", 1350), ("diamond", "Diamant", 1500),
+    ]
 }

@@ -67,7 +67,7 @@ struct WeeksRecapSection: View {
                         }
                     }
                     HStack(spacing: 12) {
-                        Label("\(week.questsDone) objectif\(week.questsDone > 1 ? "s" : "")", systemImage: "target")
+                        Label("\(week.questsDone) défi\(week.questsDone > 1 ? "s" : "")", systemImage: "target")
                         Label("\(week.errorsCorrected) erreur\(week.errorsCorrected > 1 ? "s" : "") corrigée\(week.errorsCorrected > 1 ? "s" : "")",
                               systemImage: "checkmark.seal")
                     }

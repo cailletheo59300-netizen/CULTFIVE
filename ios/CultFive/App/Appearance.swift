@@ -35,4 +35,11 @@ enum GamePreferences {
     static var hapticsEnabled: Bool {
         UserDefaults.standard.object(forKey: hapticsKey) as? Bool ?? true
     }
+
+    static let soundsKey = "sounds"
+
+    /// Sons activés (par défaut : oui ; le mode silencieux de l'iPhone les coupe de toute façon).
+    static var soundsEnabled: Bool {
+        UserDefaults.standard.object(forKey: soundsKey) as? Bool ?? true
+    }
 }

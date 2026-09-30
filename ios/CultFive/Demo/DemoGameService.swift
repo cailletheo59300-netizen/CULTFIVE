@@ -163,13 +163,13 @@ struct DemoGameService: GameService {
             quest("week", 2, "Joue 8 parties classées", 8, 5 + engine.rankedGames, xp: 50, seeds: 8),
             quest("week", 3, "Joue dans 4 domaines différents", 4, 2 + engine.domainsPlayed.subtracting(["history", "geography"]).count, xp: 50, seeds: 8),
         ]
-        func bonus(_ key: String, _ quests: [QuestsOverview.Quest], xp: Int, seeds: Int, label: String) -> QuestsOverview.Bonus {
+        func bonus(_ key: String, _ quests: [QuestsOverview.Quest], chest: String, label: String) -> QuestsOverview.Bonus {
             let done = quests.allSatisfy(\.done)
-            if done, engine.claim(key, seeds: seeds) { newly.append(.init(label: label, xp: xp, seeds: seeds, bonus: true)) }
-            return .init(xp: xp, seeds: seeds, done: done)
+            if done, engine.claim(key, seeds: 0) { newly.append(.init(label: label, xp: 0, seeds: 0, bonus: true, chest: chest)) }
+            return .init(xp: 0, seeds: 0, done: done, chest: chest)
         }
-        let dayBonus = bonus("day:bonus", day, xp: 10, seeds: 3, label: "Tous les objectifs du jour")
-        let weekBonus = bonus("week:bonus", week, xp: 0, seeds: 15, label: "Coffre de la semaine")
+        let dayBonus = bonus("day:bonus", day, chest: "wood", label: "Tous les défis du jour")
+        let weekBonus = bonus("week:bonus", week, chest: "silver", label: "Tous les défis de la semaine")
         let fmt = ISO8601DateFormatter(); fmt.formatOptions = [.withFullDate]
         return QuestsOverview(
             day: .init(periodStart: fmt.string(from: now), endsAt: dayEnd, quests: day, bonus: dayBonus),
@@ -245,7 +245,10 @@ struct DemoGameService: GameService {
             guard let context = entry.context else { throw BackendError.decoding("pas de contexte") }
             content["context"] = .string(context)
         }
-        engine.spendSeeds(kind.cost)
+        let ticket = DemoProgression.shared.useTicket(kind)
+        if !ticket.used { engine.spendSeeds(kind.cost) }
+        content["ticket_used"] = .bool(ticket.used)
+        content["tickets_left"] = .number(Double(ticket.left))
         content["balance"] = .number(Double(try await profile().seeds))
         return try decode(.object(content))
     }
@@ -368,6 +371,47 @@ struct DemoGameService: GameService {
     }
     func errors() async throws -> ErrorsOverview { try fixture("errors") }
     func achievements() async throws -> [AchievementRef] { try fixture("achievements") }
+
+    // MARK: Coffres, arbre, tenue, trophées
+
+    func progression() async throws -> ProgressionOverview {
+        DemoProgression.shared.overview(seeds: try await profile().seeds)
+    }
+
+    func openChest(_ chest: UUID) async throws -> ChestContents {
+        let contents = try DemoProgression.shared.open(chest)
+        try engine().spendSeeds(-contents.seeds)
+        return ChestContents(tier: contents.tier, seeds: contents.seeds, tickets: contents.tickets, joker: contents.joker,
+                             item: contents.item, balance: try await profile().seeds)
+    }
+
+    func feedTree(amount: Int, clientId: UUID) async throws -> TreeFeedResult {
+        let seeds = try await profile().seeds
+        guard amount > 0 else { throw BackendError.server(status: 400, code: "invalid_amount", message: "") }
+        guard seeds > 0 else { throw BackendError.server(status: 400, code: "insufficient_seeds", message: "") }
+        let result = try DemoProgression.shared.feed(min(amount, seeds), key: clientId)
+        try engine().spendSeeds(result.fed)
+        return TreeFeedResult(fed: result.fed, newChests: result.chests, newItems: result.items, tree: result.tree,
+                              balance: try await profile().seeds)
+    }
+
+    func equip(slot: String, item: String?) async throws -> [String: String] {
+        try DemoProgression.shared.equip(slot: slot, item: item)
+    }
+
+    func trophies() async throws -> TrophiesOverview {
+        let achievements = try await achievements()
+        let skills = try await skills()
+        return TrophiesOverview(
+            exploits: achievements.map { .init(id: $0.id, name: $0.name, description: $0.description, chest: .wood, unlockedAt: $0.unlockedAt) },
+            mastery: skills.map { skill in
+                let cote = skill.rating.placed ? skill.rating.cote : nil
+                let reached = TrophiesOverview.tiers.last { tier in cote.map { $0 >= tier.cote } ?? false }
+                let next = TrophiesOverview.tiers.first { tier in cote.map { $0 < tier.cote } ?? true }
+                return .init(domainId: skill.domainId, name: skill.name, placed: skill.rating.placed, cote: cote,
+                             tier: reached?.id, next: next.map { .init(tier: $0.id, cote: $0.cote) })
+            })
+    }
     func deleteAccount() async throws {}
 
     // MARK: Social

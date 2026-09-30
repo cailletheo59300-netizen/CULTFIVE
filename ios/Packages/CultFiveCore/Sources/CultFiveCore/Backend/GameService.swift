@@ -38,6 +38,15 @@ public protocol GameService: Sendable {
     func achievements() async throws -> [AchievementRef]
     func deleteAccount() async throws
 
+    // Coffres, arbre de Léon, tenue, trophées
+    func progression() async throws -> ProgressionOverview
+    func openChest(_ chest: UUID) async throws -> ChestContents
+    /// `clientId` rend l'appel idempotent (renvoi réseau).
+    func feedTree(amount: Int, clientId: UUID) async throws -> TreeFeedResult
+    /// `item` nil : retire l'objet de cet emplacement. Renvoie la tenue complète.
+    func equip(slot: String, item: String?) async throws -> [String: String]
+    func trophies() async throws -> TrophiesOverview
+
     // Social
     func friends() async throws -> FriendsOverview
     // Duels
@@ -183,6 +192,24 @@ public struct LiveGameService: GameService {
     public func errors() async throws -> ErrorsOverview { try await api.rpc("errors_overview") }
     public func achievements() async throws -> [AchievementRef] { try await api.rpc("achievements_mine") }
     public func deleteAccount() async throws { try await api.rpcVoid("delete_account") }
+
+    // MARK: Coffres, arbre, tenue, trophées
+
+    public func progression() async throws -> ProgressionOverview { try await api.rpc("progression_overview") }
+
+    public func openChest(_ chest: UUID) async throws -> ChestContents {
+        try await api.rpc("chest_open", ["p_chest": .string(chest.uuidString)])
+    }
+
+    public func feedTree(amount: Int, clientId: UUID) async throws -> TreeFeedResult {
+        try await api.rpc("tree_feed", ["p_amount": .number(Double(amount)), "p_client_id": .string(clientId.uuidString)])
+    }
+
+    public func equip(slot: String, item: String?) async throws -> [String: String] {
+        try await api.rpc("leon_equip", ["p_slot": .string(slot), "p_item": optional(item)])
+    }
+
+    public func trophies() async throws -> TrophiesOverview { try await api.rpc("trophies_overview") }
 
     // MARK: Social
 

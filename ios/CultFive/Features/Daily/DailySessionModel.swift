@@ -103,7 +103,7 @@ final class DailySessionModel {
             guard let reveal = verdict.reveal else { throw BackendError.decoding("verdict incomplet") }
             let correct = verdict.isCorrect ?? false
             lastVerdict = verdict
-            correct ? Haptics.success() : Haptics.error()
+            Feedback.answer(correct)
             if results.count < position { results.append(correct) }
             phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
             pendingGiven = nil

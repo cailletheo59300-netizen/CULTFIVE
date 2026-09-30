@@ -6,7 +6,8 @@ import CultFiveCore
 struct ProfileView: View {
     @Environment(AppModel.self) private var app
     @State private var skills: [SkillSummary] = []
-    @State private var achievements: [AchievementRef] = []
+    @State private var trophyOverview: TrophiesOverview?
+    @State private var showTree = false
     @State private var history: [DailyHistoryEntry] = []
     @State private var weeks: [WeekRecap] = []
     @State private var showHistory = false
@@ -19,6 +20,7 @@ struct ProfileView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     portrait
                     if app.isAnonymous { AccountNudge() }
+                    treeCard
                     coteCard
                     numbers
                     knowledge
@@ -35,6 +37,7 @@ struct ProfileView: View {
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: String.self) { DomainView(domainId: $0) }
             .navigationDestination(isPresented: $showSettings) { SettingsView() }
+            .navigationDestination(isPresented: $showTree) { LeonTreeScreen() }
             .refreshable { await load() }
         }
         .sheet(isPresented: $showHistory) {
@@ -53,11 +56,11 @@ struct ProfileView: View {
         await app.refreshProfile()
         let service = app.service
         async let s = try? service.skills()
-        async let a = try? service.achievements()
+        async let a = try? service.trophies()
         async let h = try? service.dailyHistory(days: 35)
         async let w = try? service.weeklyRecap(weeks: 8)
         skills = await s ?? []
-        achievements = await a ?? []
+        trophyOverview = await a ?? trophyOverview
         history = await h ?? []
         weeks = await w ?? []
     }
@@ -87,8 +90,12 @@ struct ProfileView: View {
                     }
                 }
                 Spacer()
-                Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
-                    .frame(width: 120)
+                Button { showTree = true } label: {
+                    Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
+                        .frame(width: 120)
+                }
+                .buttonStyle(.row)
+                .accessibilityHint("Ouvre l'arbre de Léon et sa tenue")
             }
         }
     }
@@ -272,30 +279,36 @@ struct ProfileView: View {
         return formatter.string(from: date)
     }
 
-    private var trophies: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            Text("Trophées").font(.cfHeadline)
-            let unlocked = achievements.filter { $0.unlockedAt != nil }
-            Text("\(unlocked.count) sur \(achievements.count)").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-            ForEach(achievements) { achievement in
+    /// Trophées : maîtrise par domaine et exploits (vitrine).
+    @ViewBuilder private var trophies: some View {
+        if let trophyOverview {
+            TrophiesShowcase(trophies: trophyOverview)
+        }
+    }
+
+    /// Entrée vers l'arbre de Léon : l'arbre en miniature, l'étape, la jauge.
+    @ViewBuilder private var treeCard: some View {
+        if let tree = app.progression?.tree {
+            Button { showTree = true } label: {
                 HStack(spacing: Space.m) {
-                    Image(systemName: achievement.unlockedAt != nil ? "trophy.fill" : "lock.fill")
-                        .font(.system(.callout, design: .rounded).weight(.bold))
-                        .foregroundStyle(achievement.unlockedAt != nil ? Color.inkFixed : Color.inkSoft.opacity(0.5))
-                        .frame(width: 40, height: 40)
-                        .background(achievement.unlockedAt != nil ? Color.sun : Color.hairline, in: Circle())
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(achievement.name).font(.system(.body, design: .rounded).weight(.semibold))
-                            .foregroundStyle(achievement.unlockedAt != nil ? Color.ink : Color.inkSoft)
-                        Text(achievement.description).font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    LeonTreeView(stage: tree.stage, fruits: tree.fruits).frame(width: 70, height: 70)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("L'arbre de Léon").labelCaps()
+                        Text(tree.stageName).font(.cfTitle3).foregroundStyle(Color.ink)
+                        if let label = tree.nextLabel {
+                            ProgressView(value: tree.progress).tint(.correct).frame(maxWidth: 180)
+                            Text("Nourris-le pour atteindre : \(label.lowercased())").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        } else {
+                            Text("Complet, avec tous ses fruits").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        }
                     }
-                    Spacer()
+                    Spacer(minLength: 0)
+                    Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
                 }
-                .popCard(padding: 12)
-                .opacity(achievement.unlockedAt != nil ? 1 : 0.7)
-                .accessibilityElement(children: .combine)
-                .accessibilityValue(achievement.unlockedAt != nil ? "débloqué" : "à débloquer")
+                .popCard(padding: 14)
             }
+            .buttonStyle(.row)
+            .accessibilityHint("Nourrir l'arbre et habiller Léon")
         }
     }
 }

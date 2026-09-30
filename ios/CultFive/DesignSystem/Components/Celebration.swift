@@ -59,7 +59,7 @@ struct CelebrationCard: View {
         case .corrected: return "Erreur corrigée"
         case .levelUp: return "Niveau supérieur"
         case .rating: return "Elo"
-        case .quest: return "Objectif rempli"
+        case .quest: return "Défi rempli"
         }
     }
 

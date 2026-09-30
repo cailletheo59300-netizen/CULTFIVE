@@ -9,6 +9,7 @@ struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage(AppAppearance.storageKey) private var appearance: AppAppearance = .light
     @AppStorage(GamePreferences.hapticsKey) private var haptics = true
+    @AppStorage(GamePreferences.soundsKey) private var sounds = true
 
     @State private var handle = ""
     @State private var handleStatus: HandleStatus?
@@ -49,7 +50,9 @@ struct SettingsView: View {
                 section("Apparence") { appearancePicker }
                 section("Notifications",
                         footer: "Jamais plus de deux par jour, et aucune si ton \(Brand.dailyName) est déjà fait.") { notifications }
-                section("Jeu") {
+                section("Jeu", footer: "Les sons restent muets quand ton iPhone est en mode silencieux.") {
+                    toggleRow("Sons", symbol: "speaker.wave.2.fill", tint: Color(hex: 0x1C7ED6), isOn: $sounds)
+                    divider
                     toggleRow("Vibrations", symbol: "iphone.radiowaves.left.and.right", tint: Color(hex: 0xF76707), isOn: $haptics)
                 }
                 section("Informations", footer: "Facultatif. Sert seulement à adapter les questions, jamais affiché.") { ageRow }

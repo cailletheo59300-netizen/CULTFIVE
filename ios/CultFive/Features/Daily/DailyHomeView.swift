@@ -95,6 +95,9 @@ struct DailyHomeView: View {
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel("Série de \(streak) jour\(streak > 1 ? "s" : "")" + (freezes > 0 ? ", \(freezes) joker\(freezes > 1 ? "s" : "") de série" : ""))
             }
+            if let chests = app.progression?.chests, !chests.isEmpty {
+                ChestPill(count: chests.count) { app.openChests() }
+            }
             if let seeds = app.profile?.seeds {
                 SeedsAmount(amount: seeds).font(.cfNumber)
                     .padding(.horizontal, 12).padding(.vertical, 6)

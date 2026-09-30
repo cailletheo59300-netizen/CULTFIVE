@@ -19,6 +19,10 @@ final class AppModel {
     var tab: Tab = .daily
     var profile: Profile?
     var daily: DailyStatus?
+    /// Coffres à ouvrir, arbre de Léon, tickets, tenue. Mis à jour après chaque partie et chaque ouverture.
+    var progression: ProgressionOverview?
+    /// Coffres présentés en plein écran (ouverture à la chaîne).
+    var chestQueue: [ChestRef]?
     var domains: [DomainInfo] = []
     var subdomains: [SubdomainInfo] = []
     var toast: String?
@@ -129,7 +133,22 @@ final class AppModel {
 
     func refreshProfile() async {
         if let fresh = try? await service.profile() { profile = fresh }
+        await refreshProgression()
     }
+
+    func refreshProgression() async {
+        if let fresh = try? await service.progression() { progression = fresh }
+    }
+
+    /// Ouvre la séance d'ouverture des coffres (tous ceux en attente, ou ceux donnés).
+    func openChests(_ chests: [ChestRef]? = nil) {
+        let list = chests ?? progression?.chests ?? []
+        guard !list.isEmpty else { return }
+        chestQueue = list
+    }
+
+    /// Tenue de Léon (emplacement → objet), portée partout où il apparaît.
+    var outfit: LeonOutfit { LeonOutfit(progression?.outfit ?? [:]) }
 
     func refreshDaily() async {
         guard let status = try? await service.dailyStatus() else { return }
@@ -289,6 +308,11 @@ struct UnavailableService: GameService {
     func errors() async throws -> ErrorsOverview { try fail() }
     func achievements() async throws -> [AchievementRef] { try fail() }
     func deleteAccount() async throws { try fail() as Void }
+    func progression() async throws -> ProgressionOverview { try fail() }
+    func openChest(_ chest: UUID) async throws -> ChestContents { try fail() }
+    func feedTree(amount: Int, clientId: UUID) async throws -> TreeFeedResult { try fail() }
+    func equip(slot: String, item: String?) async throws -> [String: String] { try fail() }
+    func trophies() async throws -> TrophiesOverview { try fail() }
     func friends() async throws -> FriendsOverview { try fail() }
     func searchHandles(_ query: String) async throws -> [HandleSearchResult] { try fail() }
     func requestFriend(handle: String) async throws -> FriendRequestResult { try fail() }

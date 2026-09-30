@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.12.0 — lot 4 : coffres, arbre de Léon, tenue, trophées (app)
+- **Coffres** : pastille 🎁 sur l'accueil, carte « coffres à ouvrir » en fin de partie, sur l'écran Léon et le Profil. Ouverture en plein écran à la chaîne : le coffre (dessiné en code, bois / argent / or) tremble, s'ouvre dans un éclat, le contenu apparaît ligne par ligne.
+- **L'arbre de Léon** (Profil → Léon ou la carte « L'arbre de Léon ») : l'arbre dessiné à chaque étape puis ses fruits, Léon qui grandit avec lui, jauge vers la prochaine étape, boutons Nourrir (+10, +50, Tout), célébration et coffre à chaque étape.
+- **Tenue de Léon** : 12 objets dessinés en code (béret, chapeau de fête, casque, lunettes rondes / étoiles, écharpe, nœud papillon, peau coucher de soleil ; fruits : couronne de feuilles, monocle, cape étoilée, Léon doré). Léon porte sa tenue partout dans l'app.
+- **Trophées** : vitrine du Profil avec la maîtrise par domaine (Bronze / Argent / Or / Diamant, Elo et prochain palier) et les 13 exploits (détail au toucher).
+- **Défis** remplacent « Objectifs » ; le bonus des trois défis montre son coffre.
+- **Tickets d'aide** : affichés sur les boutons d'aide (« 🎟️ 1 ») et utilisés avant les graines.
+- **Sons** discrets synthétisés (bonne / mauvaise réponse, coffre, récompense), muets en mode silencieux ; réglage « Sons » dans Réglages → Jeu.
+
 ## 0.11.0 — lot 3 : coffres, arbre de Léon, trophées (serveur)
 - **Coffres** bois / argent / or, jamais achetables, contenu tiré par le serveur à l'ouverture : graines, jokers de série, tickets d'aide (50/50, indice), objets pour Léon. Sources : 3 défis du jour (bois), 3 défis de la semaine (argent), chaque niveau d'XP (bois ; argent tous les 5 ; or tous les 10), trophées, étapes de l'arbre (or), paliers de parrainage.
 - **Arbre de Léon** nourri de graines : Graine → Pousse (150) → Jeune plant (600) → Arbuste (1 800) → Arbre (4 000) → en fleurs (9 000, ~6 mois), puis un fruit tous les 2 500 graines (4 objets rares, arbre complet à 19 000).
