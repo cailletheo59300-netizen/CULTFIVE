@@ -160,17 +160,22 @@ struct ProfileView: View {
             number("\(app.profile?.streak ?? 0)", "jours de série", symbol: "flame.fill", tint: Color(hex: 0xF76707))
             number("\(app.profile?.questionsAnswered ?? 0)", "réponses", symbol: "checkmark.circle.fill", tint: .brand)
             number("\(app.profile?.errorsCorrected ?? 0)", "erreurs corrigées", symbol: "checkmark.seal.fill", tint: .correct)
-            number("\(app.profile?.seeds ?? 0)", Brand.currencyPlural, symbol: "leaf.fill", tint: Color(hex: 0x37B24D))
+            number("\(app.profile?.seeds ?? 0)", Brand.currencyPlural, symbol: nil, tint: Color(hex: 0xE8A33D))
         }
     }
 
-    private func number(_ value: String, _ label: String, symbol: String, tint: Color) -> some View {
+    /// `symbol` nil : la graine de Brainlix.
+    private func number(_ value: String, _ label: String, symbol: String?, tint: Color) -> some View {
         HStack(spacing: 10) {
-            Image(systemName: symbol)
-                .font(.system(.callout, design: .rounded).weight(.bold))
-                .foregroundStyle(tint)
-                .frame(width: 36, height: 36)
-                .background(tint.opacity(0.14), in: Circle())
+            Group {
+                if let symbol {
+                    Image(systemName: symbol).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(tint)
+                } else {
+                    SeedIcon().frame(width: 15, height: 19)
+                }
+            }
+            .frame(width: 36, height: 36)
+            .background(tint.opacity(0.14), in: Circle())
             VStack(alignment: .leading, spacing: 0) {
                 Text(value).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
                     .lineLimit(1).minimumScaleFactor(0.6)

@@ -81,8 +81,15 @@ final class AppModel {
             }
             try await loadProfile()
             await loadReference()
-            try? await service.setTimezone(TimeZone.current.identifier)
-            try? await service.registerDevice(hash: DeviceIdentity.hash)
+            // Fuseau et appareil : en arrière-plan, sans retarder l'accueil ; le fuseau seulement s'il a changé.
+            let service = self.service
+            let timezone = TimeZone.current.identifier
+            let sendTimezone = profile?.timezone != timezone
+            let device = DeviceIdentity.hash
+            Task.detached {
+                if sendTimezone { try? await service.setTimezone(timezone) }
+                try? await service.registerDevice(hash: device)
+            }
             phase = (profile?.onboarded ?? false) ? .main : .onboarding
             if phase == .main {
                 await refreshDaily()
@@ -131,9 +138,13 @@ final class AppModel {
         profile = try await service.profile()
     }
 
+    /// Profil et progression en parallèle.
     func refreshProfile() async {
-        if let fresh = try? await service.profile() { profile = fresh }
-        await refreshProgression()
+        let service = self.service
+        async let fresh = try? service.profile()
+        async let progress = try? service.progression()
+        if let fresh = await fresh { profile = fresh }
+        if let progress = await progress { progression = progress }
     }
 
     func refreshProgression() async {

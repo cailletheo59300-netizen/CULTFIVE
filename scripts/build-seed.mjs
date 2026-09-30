@@ -19,12 +19,14 @@ const subdomains = new Set();
 for (const d of taxonomy.domains) for (const [s] of d.subdomains) subdomains.add(`${d.id}.${s}`);
 
 // ─────────────── Indice automatique (aide « Indice », payée en graines) quand la question n'en a pas d'écrit à la main.
-// QCM : initiale de la réponse (sans article), avec le nombre de lettres si l'initiale ne suffit pas à trancher.
+// QCM : aucun (les indices « initiale » donnaient la réponse, retirés en 0026).
 // Nombre : une fourchette (siècle ou quart de siècle pour une année, ordre de grandeur sinon). Jamais la réponse elle-même.
 const ARTICLE = /^(le |la |les |l'|l’|un |une |des |du |de la |de l'|en |au |aux )/i;
 const letters = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z]/g, '');
 const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 export function autoHint(q) {
+  // QCM : plus d'indice automatique (« commence par X » donnait souvent la réponse). Seuls les indices écrits comptent.
+  if (q.type === 'mcq') return undefined;
   if (q.type === 'mcq' && Array.isArray(q.options)) {
     const texts = q.options.map((o) => o.replace(/\*$/, '').replace(ARTICLE, '').trim());
     const ci = q.options.findIndex((o) => o.endsWith('*'));

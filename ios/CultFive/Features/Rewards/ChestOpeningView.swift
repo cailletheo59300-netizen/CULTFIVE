@@ -299,8 +299,8 @@ private struct SeedPile: View {
                 let seed = Path(ellipseIn: CGRect(x: -12, y: -18, width: 24, height: 36))
                     .applying(CGAffineTransform(rotationAngle: angle))
                     .applying(CGAffineTransform(translationX: x, y: y))
-                context.fill(seed, with: .color(Color(hex: 0x8CE99A)))
-                context.fill(seed.applying(CGAffineTransform(translationX: 2, y: 2)), with: .color(Color(hex: 0x2F9E44).opacity(0.35)))
+                context.fill(seed, with: .color(Color(hex: 0xF0B654)))
+                context.fill(seed.applying(CGAffineTransform(translationX: 2, y: 2)), with: .color(Color(hex: 0xB9772A).opacity(0.35)))
                 context.fill(Path(ellipseIn: CGRect(x: x - 5, y: y - 10, width: 6, height: 10)), with: .color(.white.opacity(0.5)))
             }
             var sprout = Path()

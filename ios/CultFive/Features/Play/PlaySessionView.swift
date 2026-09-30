@@ -136,12 +136,26 @@ struct PlaySessionView: View {
                 .popCard(padding: 12, radius: Radius.s)
             }
             if !helps.isEmpty {
-                HStack(spacing: Space.m) {
+                HStack(spacing: Space.s) {
+                    // Solde visible là où on se demande si on a de quoi payer.
+                    if let balance = model.seedsBalance {
+                        SeedsAmount(amount: balance)
+                            .font(.system(.footnote, design: .rounded).weight(.heavy))
+                            .padding(.horizontal, 10)
+                            .frame(minHeight: 40)
+                            .background(Color.correct.opacity(0.12), in: Capsule())
+                            .contentTransition(.numericText(value: Double(balance)))
+                            .animation(Motion.standard, value: balance)
+                            .accessibilityLabel("Tu as \(balance) \(Brand.currencyPlural)")
+                    }
                     ForEach(helps, id: \.self) { kind in
                         Button {
                             Task { await model.useHelp(kind) }
                         } label: {
                             HStack(spacing: 4) {
+                                if model.pendingHelp == kind {
+                                    ProgressView().controlSize(.mini)
+                                }
                                 Text(title(kind))
                                 if model.tickets.count(kind) > 0 {
                                     Text("🎟️ \(model.tickets.count(kind))").monospacedDigit()
@@ -158,7 +172,8 @@ struct PlaySessionView: View {
                         }
                         .buttonStyle(.row)
                         .foregroundStyle(Color.ink)
-                        .disabled(!model.canAfford(kind))
+                        .disabled(model.pendingHelp != nil || !model.canAfford(kind))
+                        .opacity(model.pendingHelp == kind ? 0.75 : 1)
                     }
                     Spacer()
                 }
@@ -297,6 +312,13 @@ struct PlaySummaryView: View {
                         }
                     }
                     .popCard()
+                } else if summary.syncing {
+                    HStack(spacing: Space.s) {
+                        ProgressView().controlSize(.small)
+                        Text(summary.ranked ? "Calcul de ton Elo et de tes récompenses…" : "Calcul de tes récompenses…")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    }
+                    .transition(.opacity)
                 } else if !summary.synced, summary.total > 0 {
                     Label("Hors ligne : ta partie sera enregistrée dès le retour du réseau.", systemImage: "wifi.slash")
                         .font(.cfCallout).foregroundStyle(Color.inkSoft)

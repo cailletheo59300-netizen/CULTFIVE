@@ -68,3 +68,13 @@ begin
                   join public.questions q on q.id = (t.e ->> 'id')::uuid) = array['onb1', 'onb2', 'onb3'],
                  'une question qui surprend, une énigme, un « le savais-tu ? »');
 end $$;
+
+-- 0026 : fuseau vérifié sans parcourir la liste des fuseaux ; plus d'indice « commence par ».
+do $$
+declare u uuid := tst.new_user();
+begin
+  perform tst.login(u);
+  perform tst.throws('select public.set_timezone(''Pas/UnFuseau'')', 'invalid_timezone');
+  perform tst.ok((public.set_timezone('America/New_York') ->> 'applied')::bool, 'fuseau valide accepté');
+  perform tst.ok(not exists (select 1 from public.questions where hint like 'La réponse commence par%'), 'plus d''indice « commence par »');
+end $$;

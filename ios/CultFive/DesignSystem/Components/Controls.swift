@@ -232,7 +232,7 @@ struct SeedsAmount: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            Image(systemName: "leaf.fill").imageScale(.small).foregroundStyle(Color.correct)
+            SeedIcon().frame(width: 11, height: 14)
             Text(signed && amount > 0 ? "+\(amount)" : "\(amount)").monospacedDigit()
         }
         .foregroundStyle(color)
@@ -271,5 +271,26 @@ struct CloseCircle: View {
             .frame(width: 34, height: 34)
             .background(Color.paperRaised, in: Circle())
             .frame(width: 44, height: 44)
+    }
+}
+
+/// La graine de Brainlix (monnaie) : une graine dorée avec un petit germe vert. Remplace la feuille, qu'on prenait
+/// pour une autre monnaie.
+struct SeedIcon: View {
+    var body: some View {
+        Canvas { context, size in
+            let w = size.width, h = size.height
+            var seed = Path()
+            seed.move(to: CGPoint(x: w * 0.5, y: h * 0.28))
+            seed.addQuadCurve(to: CGPoint(x: w * 0.5, y: h), control: CGPoint(x: w * 1.15, y: h * 0.72))
+            seed.addQuadCurve(to: CGPoint(x: w * 0.5, y: h * 0.28), control: CGPoint(x: -w * 0.15, y: h * 0.72))
+            context.fill(seed, with: .color(Color(hex: 0xE8A33D)))
+            context.fill(Path(ellipseIn: CGRect(x: w * 0.3, y: h * 0.5, width: w * 0.2, height: h * 0.25)), with: .color(.white.opacity(0.45)))
+            var sprout = Path()
+            sprout.move(to: CGPoint(x: w * 0.5, y: h * 0.32))
+            sprout.addQuadCurve(to: CGPoint(x: w * 0.95, y: 0), control: CGPoint(x: w * 0.5, y: h * 0.02))
+            context.stroke(sprout, with: .color(Color.correct), style: StrokeStyle(lineWidth: max(1.2, w * 0.14), lineCap: .round))
+        }
+        .accessibilityHidden(true)
     }
 }

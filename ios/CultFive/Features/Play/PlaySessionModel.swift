@@ -76,6 +76,8 @@ final class PlaySessionModel {
         var corrected: Int
         var achievements: [String]
         var synced: Bool
+        /// Envoi au serveur en cours : le résumé s'affiche déjà, XP, graines et Elo arrivent ensuite.
+        var syncing = false
         var ranked = true
         /// Questions ratées, avec leur bonne réponse : « ce que tu as appris ».
         var missed: [Question] = []
@@ -90,7 +92,7 @@ final class PlaySessionModel {
 
         static func == (lhs: PlaySummary, rhs: PlaySummary) -> Bool {
             lhs.correct == rhs.correct && lhs.total == rhs.total && lhs.xp == rhs.xp && lhs.seeds == rhs.seeds
-                && lhs.corrected == rhs.corrected && lhs.synced == rhs.synced
+                && lhs.corrected == rhs.corrected && lhs.synced == rhs.synced && lhs.syncing == rhs.syncing
         }
     }
 
@@ -106,6 +108,8 @@ final class PlaySessionModel {
     /// Tickets d'aide (gagnés dans les coffres) : utilisés avant les graines.
     private(set) var tickets: HelpTickets
     private(set) var helpError: String?
+    /// Aide en cours de validation par le serveur : le bouton est verrouillé, le solde déjà décompté.
+    private(set) var pendingHelp: HelpKind?
     /// Fin du temps imparti pour la question en cours (entraînement chronométré).
     private(set) var deadline: Date?
     /// Points cumulés pendant la partie (même règle que le serveur).
@@ -296,7 +300,10 @@ final class PlaySessionModel {
             stage = .summary(summary)
             return
         }
-        stage = .loading
+        // Le résumé s'affiche tout de suite (score et points sont connus) ; le serveur complète ensuite.
+        summary.syncing = true
+        stage = .summary(summary)
+        summary.syncing = false
         do {
             let result = try await service.playSubmit(session: sessionId, attempts: attempts)
             summary.xp = result.xp
@@ -326,15 +333,32 @@ final class PlaySessionModel {
         return kinds
     }
 
+    /// Au toucher : retour immédiat (vibration, bouton verrouillé, solde ou ticket décompté), puis validation serveur.
+    /// En cas d'échec, tout revient comme avant. Un second toucher pendant la validation est ignoré ; le serveur,
+    /// lui, ne facture jamais deux fois la même aide sur la même question.
     func useHelp(_ kind: HelpKind) async {
-        guard let sessionId, let question = current else { return }
+        guard let sessionId, let question = current, pendingHelp == nil, canAfford(kind) else { return }
         helpError = nil
+        pendingHelp = kind
+        Haptics.selection()
+        let previousSeeds = seedsBalance
+        let previousTickets = tickets
+        if tickets.count(kind) > 0 {
+            tickets = kind == .fiftyFifty ? HelpTickets(fiftyFifty: tickets.fiftyFifty - 1, hint: tickets.hint)
+                                          : HelpTickets(fiftyFifty: tickets.fiftyFifty, hint: tickets.hint - 1)
+        } else if let balance = seedsBalance {
+            seedsBalance = balance - kind.cost
+        }
+        defer { pendingHelp = nil }
         do {
             let content = try await service.spendHelp(session: sessionId, question: question.id, kind: kind)
+            guard current?.id == question.id else { return }
             seedsBalance = content.balance
             if content.ticketUsed == true, let left = content.ticketsLeft {
                 tickets = kind == .fiftyFifty ? HelpTickets(fiftyFifty: left, hint: tickets.hint)
                                               : HelpTickets(fiftyFifty: tickets.fiftyFifty, hint: left)
+            } else {
+                tickets = previousTickets
             }
             Haptics.soft()
             switch kind {
@@ -343,7 +367,9 @@ final class PlaySessionModel {
             case .context: helpText = content.context
             }
         } catch {
-            helpError = (error as? LocalizedError)?.errorDescription
+            seedsBalance = previousSeeds
+            tickets = previousTickets
+            helpError = (error as? LocalizedError)?.errorDescription ?? "Aide indisponible. Réessaie."
         }
     }
 }
