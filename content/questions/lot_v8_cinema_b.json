@@ -1,0 +1,466 @@
+[
+ {
+  "key": "cinema-584",
+  "concept": "cinema.films.sept_samourais",
+  "label": "Sept Samouraïs",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel film japonais a inspiré le western « Les Sept Mercenaires » (1960) ?",
+  "options": [
+   "Les Sept Samouraïs*",
+   "Rashōmon",
+   "Yojimbo",
+   "Ran"
+  ],
+  "explanation": "Le film de Kurosawa (1954) : des villageois engagent des guerriers pour se défendre contre des bandits.",
+  "hint": "Remplacez les cow-boys par des guerriers japonais."
+ },
+ {
+  "key": "cinema-585",
+  "concept": "cinema.directors.kiarostami",
+  "label": "Le Goût de la cerise",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel réalisateur iranien a reçu la Palme d'or 1997 pour « Le Goût de la cerise » ?",
+  "options": [
+   "Abbas Kiarostami*",
+   "Asghar Farhadi",
+   "Jafar Panahi",
+   "Mohsen Makhmalbaf"
+  ],
+  "explanation": "Ex æquo avec « L'Anguille » du Japonais Shōhei Imamura.",
+  "hint": "Un pionnier du cinéma iranien moderne."
+ },
+ {
+  "key": "cinema-586",
+  "concept": "cinema.directors.rossellini",
+  "label": "Néoréalisme",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a réalisé « Rome, ville ouverte » (1945), manifeste du néoréalisme italien ?",
+  "options": [
+   "Roberto Rossellini*",
+   "Vittorio De Sica",
+   "Federico Fellini",
+   "Luchino Visconti"
+  ],
+  "explanation": "Tourné dans Rome à peine libérée, avec peu de moyens et des acteurs non professionnels.",
+  "hint": "Il a ensuite épousé Ingrid Bergman."
+ },
+ {
+  "key": "cinema-587",
+  "concept": "cinema.directors.fellini_dolce_vita",
+  "label": "La Dolce Vita",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a réalisé « La Dolce Vita » (1960) ?",
+  "options": [
+   "Federico Fellini*",
+   "Michelangelo Antonioni",
+   "Pier Paolo Pasolini",
+   "Sergio Leone"
+  ],
+  "explanation": "Palme d'or 1960. Le personnage du photographe Paparazzo a donné le mot « paparazzi ».",
+  "hint": "Il a aussi réalisé « Huit et demi »."
+ },
+ {
+  "key": "cinema-588",
+  "concept": "cinema.films.mastroianni",
+  "label": "La Dolce Vita",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel acteur tient le rôle principal de « La Dolce Vita » ?",
+  "options": [
+   "Marcello Mastroianni*",
+   "Vittorio Gassman",
+   "Alain Delon",
+   "Roberto Benigni"
+  ],
+  "explanation": "Il y joue un journaliste mondain à Rome. Il tourne souvent avec Fellini et Sophia Loren.",
+  "hint": "Le partenaire fétiche de Sophia Loren."
+ },
+ {
+  "key": "cinema-589",
+  "concept": "cinema.films.fontaine_trevi",
+  "label": "Fontaine de Trevi",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quelle fontaine Anita Ekberg se baigne-t-elle dans « La Dolce Vita » ?",
+  "options": [
+   "La fontaine de Trevi*",
+   "La fontaine des Quatre-Fleuves",
+   "La fontaine Saint-Michel",
+   "La fontaine de Neptune"
+  ],
+  "explanation": "La scène a été tournée en plein hiver ; Mastroianni portait une combinaison de plongée sous son costume.",
+  "hint": "On y jette une pièce pour revenir à Rome."
+ },
+ {
+  "key": "cinema-590",
+  "concept": "cinema.directors.carne_enfants_paradis",
+  "label": "Les Enfants du paradis",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a réalisé « Les Enfants du paradis » (1945) ?",
+  "options": [
+   "Marcel Carné*",
+   "Jean Renoir",
+   "Jean Cocteau",
+   "Julien Duvivier"
+  ],
+  "explanation": "Tourné pendant l'Occupation, souvent élu meilleur film français de tous les temps.",
+  "hint": "Il a aussi réalisé « Hôtel du Nord »."
+ },
+ {
+  "key": "cinema-591",
+  "concept": "cinema.films.prevert_dialogues",
+  "label": "Dialogues de Prévert",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel poète a écrit le scénario et les dialogues des « Enfants du paradis » ?",
+  "options": [
+   "Jacques Prévert*",
+   "Jean Cocteau",
+   "Paul Éluard",
+   "Louis Aragon"
+  ],
+  "explanation": "Il écrit aussi « Quai des brumes » pour Marcel Carné. Son recueil « Paroles » est un grand succès.",
+  "hint": "L'auteur de « Paroles »."
+ },
+ {
+  "key": "cinema-592",
+  "concept": "cinema.films.arletty_atmosphere",
+  "label": "Atmosphère !",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle actrice lance « Atmosphère ! Atmosphère ! Est-ce que j'ai une gueule d'atmosphère ? » dans « Hôtel du Nord » (1938) ?",
+  "options": [
+   "Arletty*",
+   "Michèle Morgan",
+   "Simone Signoret",
+   "Danielle Darrieux"
+  ],
+  "explanation": "Une des répliques les plus célèbres du cinéma français, face à Louis Jouvet.",
+  "hint": "Elle joue aussi Garance dans « Les Enfants du paradis »."
+ },
+ {
+  "key": "cinema-593",
+  "concept": "cinema.directors.tati",
+  "label": "Jacques Tati",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel réalisateur-acteur a créé « Jour de fête » et « Mon oncle », avec M. Hulot ?",
+  "options": [
+   "Jacques Tati*",
+   "Pierre Étaix",
+   "Louis de Funès",
+   "Jacques Demy"
+  ],
+  "explanation": "« Mon oncle » gagne l'Oscar du meilleur film étranger en 1959. M. Hulot porte pipe, chapeau et pantalon trop court.",
+  "hint": "Le créateur de M. Hulot."
+ },
+ {
+  "key": "cinema-594",
+  "concept": "cinema.directors.bunuel",
+  "label": "Buñuel",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a réalisé « Le Charme discret de la bourgeoisie », Oscar du meilleur film étranger 1973 ?",
+  "options": [
+   "Luis Buñuel*",
+   "Pedro Almodóvar",
+   "Jean-Luc Godard",
+   "Louis Malle"
+  ],
+  "explanation": "Le cinéaste espagnol, compagnon des surréalistes, avait réalisé « Un chien andalou » avec Salvador Dalí.",
+  "hint": "Il a travaillé avec Salvador Dalí."
+ },
+ {
+  "key": "cinema-595",
+  "concept": "cinema.films.rosebud",
+  "label": "Rosebud",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que désigne « Rosebud », dernier mot de Charles Foster Kane dans « Citizen Kane » ?",
+  "options": [
+   "Sa luge d'enfant*",
+   "Une femme aimée",
+   "Son journal",
+   "Une rose de son jardin"
+  ],
+  "explanation": "La dernière image révèle le mot peint sur la luge qui brûle : l'enfance perdue du milliardaire.",
+  "hint": "Un jouet d'hiver."
+ },
+ {
+  "key": "cinema-596",
+  "concept": "cinema.films.apocalypse_conrad",
+  "label": "Apocalypse Now",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "De quel roman « Apocalypse Now » (1979) est-il une adaptation libre ?",
+  "options": [
+   "Au cœur des ténèbres, de Joseph Conrad*",
+   "Le Vieil Homme et la Mer",
+   "Voyage au bout de la nuit",
+   "Le Nom de la rose"
+  ],
+  "explanation": "Coppola transpose au Viêt Nam la remontée d'un fleuve africain à la recherche du mystérieux Kurtz.",
+  "hint": "Un roman de Joseph Conrad."
+ },
+ {
+  "key": "cinema-597",
+  "concept": "cinema.films.travis_bickle",
+  "label": "Travis Bickle",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quel film de Scorsese Robert De Niro joue-t-il Travis Bickle, qui demande « You talkin' to me? » ?",
+  "options": [
+   "Taxi Driver*",
+   "Les Affranchis",
+   "Raging Bull",
+   "Casino"
+  ],
+  "explanation": "Palme d'or 1976. Travis est un vétéran du Viêt Nam devenu chauffeur de taxi de nuit à New York.",
+  "hint": "Il conduit la nuit dans New York."
+ },
+ {
+  "key": "cinema-598",
+  "concept": "cinema.films.morricone",
+  "label": "Ennio Morricone",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a composé la musique du « Bon, la Brute et le Truand » ?",
+  "options": [
+   "Ennio Morricone*",
+   "John Williams",
+   "Nino Rota",
+   "Hans Zimmer"
+  ],
+  "explanation": "Son thème siffle comme un cri de coyote. Il a signé plus de 400 musiques de films.",
+  "hint": "Un compositeur italien, complice de Sergio Leone."
+ },
+ {
+  "key": "cinema-599",
+  "concept": "cinema.films.tiersen_amelie",
+  "label": "Yann Tiersen",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a composé la musique du « Fabuleux Destin d'Amélie Poulain » ?",
+  "options": [
+   "Yann Tiersen*",
+   "Alexandre Desplat",
+   "Michel Legrand",
+   "Éric Serra"
+  ],
+  "explanation": "Des airs de piano, d'accordéon et de toy piano. Le Breton vit sur l'île d'Ouessant.",
+  "hint": "Un musicien breton."
+ },
+ {
+  "key": "cinema-600",
+  "concept": "cinema.films.nino_rota",
+  "label": "Le Parrain",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a composé la musique du « Parrain » (1972) ?",
+  "options": [
+   "Nino Rota*",
+   "Ennio Morricone",
+   "Henry Mancini",
+   "John Barry"
+  ],
+  "explanation": "Il était aussi le compositeur attitré de Fellini. Il obtient l'Oscar pour « Le Parrain 2 ».",
+  "hint": "Le compositeur de Fellini."
+ },
+ {
+  "key": "cinema-601",
+  "concept": "cinema.films.bernard_herrmann",
+  "label": "Psychose",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Qui a composé la musique stridente de « Psychose » ?",
+  "options": [
+   "Bernard Herrmann*",
+   "John Williams",
+   "Danny Elfman",
+   "Jerry Goldsmith"
+  ],
+  "explanation": "Uniquement des cordes. Hitchcock voulait d'abord la scène de la douche sans musique.",
+  "hint": "Le compositeur de « Citizen Kane » et de « Taxi Driver »."
+ },
+ {
+  "key": "cinema-602",
+  "concept": "cinema.films.wings_oscar",
+  "label": "Premier Oscar",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel film a remporté le tout premier Oscar du meilleur film, en 1929 ?",
+  "options": [
+   "Les Ailes (Wings)*",
+   "Le Chanteur de jazz",
+   "Metropolis",
+   "Autant en emporte le vent"
+  ],
+  "explanation": "Un film muet sur des pilotes de la Première Guerre mondiale. La cérémonie ne dure alors qu'un quart d'heure.",
+  "hint": "Un film d'aviation muet."
+ },
+ {
+  "key": "cinema-603",
+  "concept": "cinema.films.marty_double",
+  "label": "Palme et Oscar",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel film américain de 1955 a remporté à la fois la Palme d'or et l'Oscar du meilleur film ?",
+  "options": [
+   "Marty*",
+   "Le Parrain",
+   "Pulp Fiction",
+   "Taxi Driver"
+  ],
+  "explanation": "L'histoire toute simple d'un boucher timide du Bronx. Il faudra attendre « Parasite » pour revoir ce doublé.",
+  "hint": "La toute première Palme d'or."
+ },
+ {
+  "key": "cinema-604",
+  "concept": "cinema.directors.ozu",
+  "label": "Voyage à Tokyo",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Qui a réalisé « Voyage à Tokyo » (1953), souvent classé parmi les plus grands films de l'histoire ?",
+  "options": [
+   "Yasujirō Ozu*",
+   "Akira Kurosawa",
+   "Kenji Mizoguchi",
+   "Hayao Miyazaki"
+  ],
+  "explanation": "Célèbre pour ses plans fixes filmés à hauteur d'une personne assise sur un tatami.",
+  "hint": "Sa caméra est posée très bas."
+ },
+ {
+  "key": "cinema-605",
+  "concept": "cinema.directors.bergman",
+  "label": "Le Septième Sceau",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel cinéaste suédois a réalisé « Le Septième Sceau » (1957) ?",
+  "options": [
+   "Ingmar Bergman*",
+   "Lars von Trier",
+   "Carl Theodor Dreyer",
+   "Aki Kaurismäki"
+  ],
+  "explanation": "Un chevalier revenant des croisades y affronte la Mort. Bergman a aussi dirigé des centaines de pièces de théâtre.",
+  "hint": "Même nom de famille qu'une actrice de « Casablanca »."
+ },
+ {
+  "key": "cinema-606",
+  "concept": "cinema.films.echecs_mort",
+  "label": "Partie contre la Mort",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans « Le Septième Sceau », à quel jeu le chevalier défie-t-il la Mort ?",
+  "options": [
+   "Aux échecs*",
+   "Aux dés",
+   "Aux cartes",
+   "Au jeu de l'oie"
+  ],
+  "explanation": "Une image si célèbre qu'elle est parodiée partout, jusque dans des dessins animés.",
+  "hint": "Un jeu de rois et de fous."
+ },
+ {
+  "key": "cinema-607",
+  "concept": "cinema.films.bardot_dieu",
+  "label": "Brigitte Bardot",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel film de 1956 a fait de Brigitte Bardot une star mondiale ?",
+  "options": [
+   "Et Dieu… créa la femme*",
+   "Le Mépris",
+   "Viva Maria !",
+   "La Vérité"
+  ],
+  "explanation": "Réalisé par Roger Vadim, son mari d'alors, et tourné à Saint-Tropez.",
+  "hint": "Réalisé par Roger Vadim."
+ },
+ {
+  "key": "cinema-608",
+  "concept": "cinema.films.parapluies_cherbourg",
+  "label": "Parapluies de Cherbourg",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel film de Jacques Demy est entièrement chanté, même les dialogues ?",
+  "options": [
+   "Les Parapluies de Cherbourg*",
+   "Les Demoiselles de Rochefort",
+   "Peau d'âne",
+   "Lola"
+  ],
+  "explanation": "Palme d'or 1964, sur une musique de Michel Legrand.",
+  "hint": "Dans une ville de la Manche."
+ },
+ {
+  "key": "cinema-609",
+  "concept": "cinema.films.deneuve_parapluies",
+  "label": "Catherine Deneuve",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle actrice joue la jeune vendeuse de parapluies dans « Les Parapluies de Cherbourg » ?",
+  "options": [
+   "Catherine Deneuve*",
+   "Brigitte Bardot",
+   "Jeanne Moreau",
+   "Anouk Aimée"
+  ],
+  "explanation": "Elle a 20 ans. Sa sœur, Françoise Dorléac, la rejoint dans « Les Demoiselles de Rochefort ».",
+  "hint": "Sa sœur était Françoise Dorléac."
+ },
+ {
+  "key": "cinema-610",
+  "concept": "cinema.directors.clouzot",
+  "label": "Le Salaire de la peur",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a réalisé « Le Salaire de la peur » (1953), où des camions transportent de la nitroglycérine ?",
+  "options": [
+   "Henri-Georges Clouzot*",
+   "Jean-Pierre Melville",
+   "René Clément",
+   "Jacques Becker"
+  ],
+  "explanation": "Grand Prix à Cannes et Ours d'or à Berlin la même année.",
+  "hint": "Il a aussi réalisé « Les Diaboliques »."
+ },
+ {
+  "key": "cinema-611",
+  "concept": "cinema.films.nosferatu",
+  "label": "Nosferatu",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel film muet allemand de 1922 met en scène le comte Orlok, un vampire ?",
+  "options": [
+   "Nosferatu*",
+   "Le Cabinet du docteur Caligari",
+   "Metropolis",
+   "M le maudit"
+  ],
+  "explanation": "Friedrich Wilhelm Murnau adapte « Dracula » sans autorisation : les héritiers de Bram Stoker ont fait détruire les copies… mais pas toutes.",
+  "hint": "« Eine Symphonie des Grauens »."
+ },
+ {
+  "key": "cinema-612",
+  "concept": "cinema.films.panahi_palme",
+  "label": "Palme d'or 2025",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel réalisateur iranien a reçu la Palme d'or 2025 pour « Un simple accident » ?",
+  "options": [
+   "Jafar Panahi*",
+   "Abbas Kiarostami",
+   "Asghar Farhadi",
+   "Mohammad Rasoulof"
+  ],
+  "explanation": "Interdit de tourner dans son pays pendant des années, il réalisait ses films en secret.",
+  "hint": "Il avait tourné « Taxi Téhéran » en cachette."
+ }
+]

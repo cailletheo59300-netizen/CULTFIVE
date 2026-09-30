@@ -1,0 +1,1317 @@
+[
+ {
+  "key": "cinema-501",
+  "concept": "cinema.films.je_suis_ton_pere",
+  "label": "Je suis ton père",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quel film Dark Vador révèle-t-il à Luke : « Je suis ton père » ?",
+  "options": [
+   "L'Empire contre-attaque*",
+   "La Guerre des étoiles",
+   "Le Retour du Jedi",
+   "La Revanche des Sith"
+  ],
+  "explanation": "Épisode V (1980). La réplique exacte est « Non, je suis ton père ». Le secret avait été caché à presque toute l'équipe.",
+  "hint": "Le deuxième film sorti de la saga."
+ },
+ {
+  "key": "cinema-502",
+  "concept": "cinema.films.cicatrice_eclair",
+  "label": "Cicatrice en éclair",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel sorcier porte une cicatrice en forme d'éclair sur le front ?",
+  "options": [
+   "Harry Potter*",
+   "Gandalf",
+   "Merlin",
+   "Dumbledore"
+  ],
+  "explanation": "Laissée par le sortilège de Voldemort quand Harry était bébé.",
+  "hint": "Il a étudié à Poudlard."
+ },
+ {
+  "key": "cinema-503",
+  "concept": "cinema.films.et_maison",
+  "label": "E.T.",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel film un extraterrestre veut-il « téléphoner maison » ?",
+  "options": [
+   "E.T. l'extra-terrestre*",
+   "Rencontres du troisième type",
+   "Men in Black",
+   "Alien"
+  ],
+  "explanation": "Le film de Spielberg (1982). La scène du vélo devant la Lune est devenue le logo de sa société.",
+  "hint": "Un vélo s'envole devant la Lune."
+ },
+ {
+  "key": "cinema-504",
+  "concept": "cinema.films.souliers_dorothy",
+  "label": "Magicien d'Oz",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quelle couleur sont les souliers magiques de Dorothy dans « Le Magicien d'Oz » (1939) ?",
+  "options": [
+   "Rouges, couleur rubis*",
+   "Argentés",
+   "Dorés",
+   "Bleus"
+  ],
+  "explanation": "Dans le livre, ils sont argentés ; le film les rend rouges pour profiter du Technicolor.",
+  "hint": "Des rubis."
+ },
+ {
+  "key": "cinema-505",
+  "concept": "cinema.films.hasta_la_vista",
+  "label": "Hasta la vista",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel personnage prononce « Hasta la vista, baby » ?",
+  "options": [
+   "Le Terminator*",
+   "Rambo",
+   "Rocky",
+   "Indiana Jones"
+  ],
+  "explanation": "Arnold Schwarzenegger dans « Terminator 2 » (1991).",
+  "hint": "Un cyborg joué par Schwarzenegger."
+ },
+ {
+  "key": "cinema-506",
+  "concept": "cinema.films.chtis_bergues",
+  "label": "Bienvenue chez les Ch'tis",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quelle ville du Nord se déroule « Bienvenue chez les Ch'tis » ?",
+  "options": [
+   "Bergues*",
+   "Lille",
+   "Dunkerque",
+   "Roubaix"
+  ],
+  "explanation": "Le postier joué par Kad Merad y est muté. Le film de Dany Boon attire plus de 20 millions de spectateurs.",
+  "hint": "Une petite ville fortifiée près de Dunkerque."
+ },
+ {
+  "key": "cinema-507",
+  "concept": "cinema.films.intouchables",
+  "label": "Intouchables",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel film Omar Sy et François Cluzet jouent-ils un aide-soignant et un riche tétraplégique ?",
+  "options": [
+   "Intouchables*",
+   "Le Dîner de cons",
+   "Les Visiteurs",
+   "Qu'est-ce qu'on a fait au Bon Dieu ?"
+  ],
+  "explanation": "Sorti en 2011, inspiré d'une histoire vraie. Omar Sy reçoit le César du meilleur acteur.",
+  "hint": "Omar Sy y a gagné un César."
+ },
+ {
+  "key": "cinema-508",
+  "concept": "cinema.films.grande_vadrouille",
+  "label": "La Grande Vadrouille",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel acteur partage l'affiche de « La Grande Vadrouille » (1966) avec Bourvil ?",
+  "options": [
+   "Louis de Funès*",
+   "Jean Gabin",
+   "Fernandel",
+   "Jean-Paul Belmondo"
+  ],
+  "explanation": "Deux Français aident des aviateurs anglais sous l'Occupation. Plus de 17 millions d'entrées.",
+  "hint": "Le gendarme de Saint-Tropez."
+ },
+ {
+  "key": "cinema-509",
+  "concept": "cinema.films.visiteurs_epoque",
+  "label": "Les Visiteurs",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quelle époque viennent Godefroy de Montmirail et Jacquouille, dans « Les Visiteurs » ?",
+  "options": [
+   "Du Moyen Âge*",
+   "De l'Antiquité",
+   "De la Renaissance",
+   "De la Révolution"
+  ],
+  "explanation": "Un sort les projette de 1123 à 1993. « Okayyy ! »",
+  "hint": "Chevaliers et châteaux forts."
+ },
+ {
+  "key": "cinema-510",
+  "concept": "cinema.films.diner_de_cons",
+  "label": "Le Dîner de cons",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle le personnage joué par Jacques Villeret dans « Le Dîner de cons » ?",
+  "options": [
+   "François Pignon*",
+   "Pierre Brochant",
+   "Juste Leblanc",
+   "Jacquouille"
+  ],
+  "explanation": "Francis Veber a donné ce nom à plusieurs personnages de ses films. « Juste Leblanc » est le prénom… qu'on ne comprend pas.",
+  "hint": "Un nom que Francis Veber réutilise souvent."
+ },
+ {
+  "key": "cinema-511",
+  "concept": "cinema.films.inception_reves",
+  "label": "Inception",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel film de Christopher Nolan se déroule dans les rêves ?",
+  "options": [
+   "Inception*",
+   "Interstellar",
+   "Memento",
+   "Tenet"
+  ],
+  "explanation": "Leonardo DiCaprio y implante une idée dans l'esprit d'un homme. La toupie finale fait encore débat.",
+  "hint": "Une toupie qui tourne."
+ },
+ {
+  "key": "cinema-512",
+  "concept": "cinema.films.gotham",
+  "label": "Gotham City",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel super-héros protège Gotham City ?",
+  "options": [
+   "Batman*",
+   "Superman",
+   "Spider-Man",
+   "Iron Man"
+  ],
+  "explanation": "Superman vit à Metropolis, Spider-Man à New York.",
+  "hint": "L'homme chauve-souris."
+ },
+ {
+  "key": "cinema-513",
+  "concept": "cinema.films.avatar_record",
+  "label": "Record au box-office",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel film a réalisé les plus grosses recettes de l'histoire du cinéma ?",
+  "options": [
+   "Avatar*",
+   "Avengers: Endgame",
+   "Titanic",
+   "Star Wars: Le Réveil de la Force"
+  ],
+  "explanation": "Près de 3 milliards de dollars, grâce notamment à sa ressortie en Chine. Trois des quatre premiers sont de James Cameron.",
+  "hint": "Des êtres bleus sur Pandora."
+ },
+ {
+  "key": "cinema-514",
+  "concept": "cinema.films.film_francais_plus_vu",
+  "label": "Record en France",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le film français le plus vu en salles en France ?",
+  "options": [
+   "Bienvenue chez les Ch'tis*",
+   "Intouchables",
+   "La Grande Vadrouille",
+   "Astérix et Obélix : Mission Cléopâtre"
+  ],
+  "explanation": "Plus de 20 millions d'entrées en 2008. Seul Titanic, film américain, a fait mieux en France.",
+  "hint": "Un film de Dany Boon."
+ },
+ {
+  "key": "cinema-515",
+  "concept": "cinema.films.cesar_pays",
+  "label": "César",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Les César récompensent le cinéma de quel pays ?",
+  "options": [
+   "La France*",
+   "L'Italie",
+   "La Belgique",
+   "L'Espagne"
+  ],
+  "explanation": "Créés en 1976. Les Américains ont les Oscars, les Espagnols les Goya.",
+  "hint": "L'équivalent français des Oscars."
+ },
+ {
+  "key": "cinema-516",
+  "concept": "cinema.films.cesar_statuette",
+  "label": "Statuette des César",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a sculpté la statuette des César, qui lui doit son nom ?",
+  "options": [
+   "Le sculpteur César*",
+   "Rodin",
+   "Jules César",
+   "Niki de Saint Phalle"
+  ],
+  "explanation": "César Baldaccini, célèbre pour ses compressions de voitures. L'Académie a choisi son prénom.",
+  "hint": "Un sculpteur marseillais."
+ },
+ {
+  "key": "cinema-517",
+  "concept": "cinema.films.mostra_venise",
+  "label": "Mostra",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle ville se déroule la Mostra, le plus ancien festival de cinéma du monde ?",
+  "options": [
+   "Venise*",
+   "Rome",
+   "Cannes",
+   "Berlin"
+  ],
+  "explanation": "Créée en 1932. Son grand prix est le Lion d'or, en hommage au lion de saint Marc.",
+  "hint": "Son prix est un lion d'or."
+ },
+ {
+  "key": "cinema-518",
+  "concept": "cinema.films.ours_berlin",
+  "label": "Berlinale",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel prix récompense le meilleur film au festival de Berlin ?",
+  "options": [
+   "L'Ours d'or*",
+   "Le Lion d'or",
+   "La Palme d'or",
+   "L'Aigle d'or"
+  ],
+  "explanation": "L'ours est l'emblème de la ville de Berlin.",
+  "hint": "L'animal emblème de Berlin."
+ },
+ {
+  "key": "cinema-519",
+  "concept": "cinema.films.arrivee_train",
+  "label": "Arrivée d'un train",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel film des frères Lumière aurait fait reculer les spectateurs de peur ?",
+  "options": [
+   "L'Arrivée d'un train en gare de La Ciotat*",
+   "La Sortie de l'usine Lumière",
+   "L'Arroseur arrosé",
+   "Le Repas de bébé"
+  ],
+  "explanation": "La légende est sans doute exagérée, mais la locomotive qui avance vers la caméra impressionne en 1896.",
+  "hint": "Une locomotive vient vers la caméra."
+ },
+ {
+  "key": "cinema-520",
+  "concept": "cinema.films.charlot",
+  "label": "Charlot",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel acteur a créé le personnage de Charlot, le vagabond au chapeau melon ?",
+  "options": [
+   "Charlie Chaplin*",
+   "Buster Keaton",
+   "Harold Lloyd",
+   "Laurel"
+  ],
+  "explanation": "Né en 1914, Charlot apparaît dans des dizaines de films, de « The Kid » aux « Temps modernes ».",
+  "hint": "Il a aussi joué « Le Dictateur »."
+ },
+ {
+  "key": "cinema-521",
+  "concept": "cinema.films.robe_marilyn",
+  "label": "Robe blanche",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Dans quel film Marilyn Monroe voit-elle sa robe blanche soulevée par l'air d'une bouche de métro ?",
+  "options": [
+   "Sept ans de réflexion*",
+   "Certains l'aiment chaud",
+   "Les hommes préfèrent les blondes",
+   "Les Désaxés"
+  ],
+  "explanation": "Une scène de 1955, tournée à New York devant des milliers de curieux, puis refaite en studio.",
+  "hint": "Un film de Billy Wilder sur un mari tenté."
+ },
+ {
+  "key": "cinema-522",
+  "concept": "cinema.films.houston_probleme",
+  "label": "Houston…",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quel film entend-on : « Houston, nous avons un problème » ?",
+  "options": [
+   "Apollo 13*",
+   "Armageddon",
+   "Gravity",
+   "Interstellar"
+  ],
+  "explanation": "Le film de Ron Howard (1995) raconte le sauvetage de la mission de 1970. L'astronaute avait dit en réalité « we've had a problem ».",
+  "hint": "Une mission lunaire qui tourne mal."
+ },
+ {
+  "key": "cinema-523",
+  "concept": "cinema.films.parrain_puzo",
+  "label": "Le Parrain",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qui a écrit le roman « Le Parrain », adapté par Francis Ford Coppola ?",
+  "options": [
+   "Mario Puzo*",
+   "Stephen King",
+   "Truman Capote",
+   "Martin Scorsese"
+  ],
+  "explanation": "Il coécrit aussi le scénario des films, qui remportent deux Oscars du meilleur film.",
+  "hint": "Un romancier américain d'origine italienne."
+ },
+ {
+  "key": "cinema-524",
+  "concept": "cinema.films.parasite_oscar",
+  "label": "Parasite",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel film est le premier en langue étrangère à remporter l'Oscar du meilleur film, en 2020 ?",
+  "options": [
+   "Parasite*",
+   "The Artist",
+   "Roma",
+   "Le Tigre et le Dragon"
+  ],
+  "explanation": "Le film sud-coréen de Bong Joon-ho avait aussi reçu la Palme d'or.",
+  "hint": "Un film sud-coréen."
+ },
+ {
+  "key": "cinema-525",
+  "concept": "cinema.films.the_artist",
+  "label": "The Artist",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel film muet français a remporté l'Oscar du meilleur film en 2012 ?",
+  "options": [
+   "The Artist*",
+   "Intouchables",
+   "Amélie Poulain",
+   "La Môme"
+  ],
+  "explanation": "Réalisé par Michel Hazanavicius, en noir et blanc, avec Jean Dujardin.",
+  "hint": "Un film en noir et blanc, sans dialogues."
+ },
+ {
+  "key": "cinema-526",
+  "concept": "cinema.films.premier_bond",
+  "label": "Premier James Bond",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel acteur a joué James Bond le premier au cinéma ?",
+  "options": [
+   "Sean Connery*",
+   "Roger Moore",
+   "Pierce Brosnan",
+   "Daniel Craig"
+  ],
+  "explanation": "Dans « James Bond 007 contre Dr No » (1962). Il le joue six fois dans la série officielle.",
+  "hint": "Un Écossais."
+ },
+ {
+  "key": "cinema-527",
+  "concept": "cinema.films.bond_craig",
+  "label": "Daniel Craig",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel acteur a incarné James Bond de « Casino Royale » (2006) à « Mourir peut attendre » (2021) ?",
+  "options": [
+   "Daniel Craig*",
+   "Pierce Brosnan",
+   "Timothy Dalton",
+   "Tom Hardy"
+  ],
+  "explanation": "Le premier Bond blond. Il meurt à la fin de son dernier film, une première.",
+  "hint": "Le premier Bond blond."
+ },
+ {
+  "key": "cinema-528",
+  "concept": "cinema.films.cameo",
+  "label": "Caméo",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Au cinéma, qu'est-ce qu'un « caméo » ?",
+  "options": [
+   "La courte apparition d'une personnalité*",
+   "Un film très court",
+   "Un gros plan sur un bijou",
+   "Une scène coupée"
+  ],
+  "explanation": "Hitchcock apparaissait dans presque tous ses films ; Stan Lee dans ceux de Marvel.",
+  "hint": "Hitchcock en faisait dans ses propres films."
+ },
+ {
+  "key": "cinema-529",
+  "concept": "cinema.films.travelling",
+  "label": "Travelling",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Au cinéma, qu'est-ce qu'un « travelling » ?",
+  "options": [
+   "Un déplacement de la caméra pendant la prise*",
+   "Un film de voyage",
+   "Un changement de décor",
+   "Un plan fixe"
+  ],
+  "explanation": "La caméra roule souvent sur des rails. Godard disait : « Le travelling est affaire de morale ».",
+  "hint": "La caméra bouge."
+ },
+ {
+  "key": "cinema-530",
+  "concept": "cinema.films.blockbuster",
+  "label": "Blockbuster",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un « blockbuster » ?",
+  "options": [
+   "Un film à très gros budget et gros succès*",
+   "Un film d'horreur",
+   "Un film en noir et blanc",
+   "Un court-métrage"
+  ],
+  "explanation": "Le mot désignait une bombe capable de raser un pâté de maisons. « Les Dents de la mer » est souvent cité comme le premier.",
+  "hint": "Une grosse production."
+ },
+ {
+  "key": "cinema-531",
+  "concept": "cinema.films.clap",
+  "label": "Clap",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À quoi sert le clap au début d'une prise ?",
+  "options": [
+   "À synchroniser l'image et le son*",
+   "À faire taire l'équipe",
+   "À donner le rythme aux acteurs",
+   "À signaler la fin de la journée"
+  ],
+  "explanation": "Le claquement sonore et l'image de la barre qui se ferme permettent d'aligner le son enregistré à part. On y écrit aussi le numéro de la prise.",
+  "hint": "Le son est enregistré à part."
+ },
+ {
+  "key": "cinema-532",
+  "concept": "cinema.films.plan_sequence",
+  "label": "Plan-séquence",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'est-ce qu'un plan-séquence ?",
+  "options": [
+   "Une scène entière filmée en un seul plan, sans coupe*",
+   "Une suite de plans très courts",
+   "Un plan pris d'un hélicoptère",
+   "Une scène au ralenti"
+  ],
+  "explanation": "« 1917 » de Sam Mendes est monté pour paraître un plan-séquence de deux heures.",
+  "hint": "Aucune coupe."
+ },
+ {
+  "key": "cinema-533",
+  "concept": "cinema.films.vo",
+  "label": "VO",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au cinéma, que signifie « VO » ?",
+  "options": [
+   "Version originale*",
+   "Vidéo officielle",
+   "Vue d'ensemble",
+   "Voix off"
+  ],
+  "explanation": "Le film dans sa langue d'origine, souvent sous-titré (VOST). La VF est doublée en français.",
+  "hint": "Le contraire de VF."
+ },
+ {
+  "key": "cinema-534",
+  "concept": "cinema.films.images_seconde",
+  "label": "Images par seconde",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien d'images par seconde défilent traditionnellement au cinéma ?",
+  "answer": 24,
+  "explanation": "La norme du cinéma parlant depuis la fin des années 1920. Le muet tournait souvent autour de 16 à 18 images.",
+  "hint": "Autant que d'heures dans une journée."
+ },
+ {
+  "key": "cinema-535",
+  "concept": "cinema.films.hollywood_ville",
+  "label": "Hollywood",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle ville se trouve Hollywood ?",
+  "options": [
+   "Los Angeles*",
+   "New York",
+   "San Francisco",
+   "Las Vegas"
+  ],
+  "explanation": "Un quartier de Los Angeles, célèbre pour ses grandes lettres blanches sur la colline.",
+  "hint": "En Californie."
+ },
+ {
+  "key": "cinema-536",
+  "concept": "cinema.films.bollywood",
+  "label": "Bollywood",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays Bollywood désigne-t-il le cinéma populaire ?",
+  "options": [
+   "L'Inde*",
+   "Le Pakistan",
+   "Le Brésil",
+   "Le Nigeria"
+  ],
+  "explanation": "Un mélange de « Bombay » et « Hollywood ». L'Inde produit plus de films que tout autre pays.",
+  "hint": "« B » comme Bombay."
+ },
+ {
+  "key": "cinema-537",
+  "concept": "cinema.films.nollywood",
+  "label": "Nollywood",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel pays a un cinéma si productif qu'on le surnomme « Nollywood » ?",
+  "options": [
+   "Le Nigeria*",
+   "La Norvège",
+   "Le Népal",
+   "La Nouvelle-Zélande"
+  ],
+  "explanation": "L'une des industries les plus prolifiques du monde, avec des milliers de films par an.",
+  "hint": "Un pays d'Afrique de l'Ouest."
+ },
+ {
+  "key": "cinema-538",
+  "concept": "cinema.films.cotillard_mome",
+  "label": "Marion Cotillard",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pour quel rôle Marion Cotillard a-t-elle reçu l'Oscar de la meilleure actrice, en 2008 ?",
+  "options": [
+   "Édith Piaf, dans « La Môme »*",
+   "Coco Chanel",
+   "Marie Curie",
+   "Jeanne d'Arc"
+  ],
+  "explanation": "Un rôle en français, une rareté pour un Oscar d'interprétation.",
+  "hint": "Une chanteuse, « la Môme »."
+ },
+ {
+  "key": "cinema-539",
+  "concept": "cinema.films.amelie_tautou",
+  "label": "Amélie Poulain",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle actrice joue Amélie Poulain ?",
+  "options": [
+   "Audrey Tautou*",
+   "Marion Cotillard",
+   "Sophie Marceau",
+   "Juliette Binoche"
+  ],
+  "explanation": "Le film de Jean-Pierre Jeunet (2001) fait découvrir Montmartre au monde entier.",
+  "hint": "Elle a aussi joué Coco Chanel."
+ },
+ {
+  "key": "cinema-540",
+  "concept": "cinema.films.obelix_depardieu",
+  "label": "Obélix",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel acteur a joué Obélix dans les premiers films Astérix ?",
+  "options": [
+   "Gérard Depardieu*",
+   "Christian Clavier",
+   "Gilles Lellouche",
+   "Jamel Debbouze"
+  ],
+  "explanation": "De 1999 à 2012. Gilles Lellouche reprend le rôle en 2023.",
+  "hint": "Un géant du cinéma français."
+ },
+ {
+  "key": "cinema-541",
+  "concept": "cinema.films.bronzes_splendid",
+  "label": "Le Splendid",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle troupe viennent les acteurs des « Bronzés » ?",
+  "options": [
+   "Le Splendid*",
+   "Les Nuls",
+   "Les Inconnus",
+   "La bande du Café de la Gare"
+  ],
+  "explanation": "Josiane Balasko, Michel Blanc, Christian Clavier, Gérard Jugnot, Thierry Lhermitte…",
+  "hint": "Le nom d'un café-théâtre parisien."
+ },
+ {
+  "key": "cinema-542",
+  "concept": "cinema.films.gendarme_saint_tropez",
+  "label": "Le Gendarme",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle ville se passe « Le Gendarme de Saint-Tropez » ?",
+  "options": [
+   "Saint-Tropez*",
+   "Nice",
+   "Marseille",
+   "Cannes"
+  ],
+  "explanation": "Louis de Funès y joue le maréchal des logis Cruchot, en six films de 1964 à 1982.",
+  "hint": "Le titre le dit."
+ },
+ {
+  "key": "cinema-543",
+  "concept": "cinema.films.cite_de_la_peur",
+  "label": "La Cité de la peur",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel trio comique a écrit « La Cité de la peur » (1994) ?",
+  "options": [
+   "Les Nuls*",
+   "Les Inconnus",
+   "Kad et Olivier",
+   "Le Splendid"
+  ],
+  "explanation": "Alain Chabat, Chantal Lauby et Dominique Farrugia, avec la célèbre « Carioca ».",
+  "hint": "Le trio d'Alain Chabat."
+ },
+ {
+  "key": "cinema-544",
+  "concept": "cinema.films.kaamelott",
+  "label": "Kaamelott",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a créé « Kaamelott » et y joue le roi Arthur ?",
+  "options": [
+   "Alexandre Astier*",
+   "Alain Chabat",
+   "Franck Dubosc",
+   "Kad Merad"
+  ],
+  "explanation": "D'abord une série courte (2005-2009), puis des films à partir de 2021.",
+  "hint": "Il en a aussi écrit la musique."
+ },
+ {
+  "key": "cinema-545",
+  "concept": "cinema.films.lupin_omar",
+  "label": "Lupin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle série Netflix Omar Sy joue-t-il un cambrioleur inspiré d'Arsène Lupin ?",
+  "options": [
+   "Lupin*",
+   "La Casa de papel",
+   "Le Bureau des légendes",
+   "Dix pour cent"
+  ],
+  "explanation": "Sortie en 2021, l'une des séries françaises les plus vues au monde.",
+  "hint": "Le nom du gentleman cambrioleur."
+ },
+ {
+  "key": "cinema-546",
+  "concept": "cinema.films.tolkien",
+  "label": "Le Seigneur des anneaux",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a écrit le roman « Le Seigneur des anneaux » ?",
+  "options": [
+   "J. R. R. Tolkien*",
+   "C. S. Lewis",
+   "J. K. Rowling",
+   "George R. R. Martin"
+  ],
+  "explanation": "Publié en 1954-1955. Peter Jackson l'adapte en trois films (2001-2003).",
+  "hint": "Un professeur d'Oxford."
+ },
+ {
+  "key": "cinema-547",
+  "concept": "cinema.films.day_lewis",
+  "label": "Record d'Oscars",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel acteur a remporté trois fois l'Oscar du meilleur acteur, un record ?",
+  "options": [
+   "Daniel Day-Lewis*",
+   "Jack Nicholson",
+   "Tom Hanks",
+   "Leonardo DiCaprio"
+  ],
+  "explanation": "Pour « My Left Foot », « There Will Be Blood » et « Lincoln ». Il prenait ses rôles très au sérieux.",
+  "hint": "Il a joué Lincoln."
+ },
+ {
+  "key": "cinema-548",
+  "concept": "cinema.directors.cameron",
+  "label": "James Cameron",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a réalisé « Titanic » et « Avatar » ?",
+  "options": [
+   "James Cameron*",
+   "Steven Spielberg",
+   "Peter Jackson",
+   "Ridley Scott"
+  ],
+  "explanation": "Il est aussi l'auteur de « Terminator » et a plongé seul au fond de la fosse des Mariannes.",
+  "hint": "Il a aussi réalisé « Terminator »."
+ },
+ {
+  "key": "cinema-549",
+  "concept": "cinema.directors.spielberg_et",
+  "label": "Steven Spielberg",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a réalisé « E.T. » et « Les Dents de la mer » ?",
+  "options": [
+   "Steven Spielberg*",
+   "George Lucas",
+   "James Cameron",
+   "Tim Burton"
+  ],
+  "explanation": "Il signe aussi « Jurassic Park », « Indiana Jones » et « La Liste de Schindler ».",
+  "hint": "Le père d'Indiana Jones."
+ },
+ {
+  "key": "cinema-550",
+  "concept": "cinema.directors.hitchcock_psychose",
+  "label": "Psychose",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a réalisé « Psychose » (1960), avec sa célèbre scène de la douche ?",
+  "options": [
+   "Alfred Hitchcock*",
+   "Stanley Kubrick",
+   "Orson Welles",
+   "Brian De Palma"
+  ],
+  "explanation": "La scène dure environ trois minutes et compte une cinquantaine de coupes. Le sang est… du sirop de chocolat.",
+  "hint": "Le maître du suspense."
+ },
+ {
+  "key": "cinema-551",
+  "concept": "cinema.directors.hitchcock_surnom",
+  "label": "Maître du suspense",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel réalisateur était surnommé « le maître du suspense » ?",
+  "options": [
+   "Alfred Hitchcock*",
+   "Steven Spielberg",
+   "Martin Scorsese",
+   "Christopher Nolan"
+  ],
+  "explanation": "« Les Oiseaux », « Fenêtre sur cour », « Vertigo »… Il faisait une apparition dans presque tous ses films.",
+  "hint": "Le réalisateur des « Oiseaux »."
+ },
+ {
+  "key": "cinema-552",
+  "concept": "cinema.directors.besson",
+  "label": "Luc Besson",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a réalisé « Le Grand Bleu » et « Le Cinquième Élément » ?",
+  "options": [
+   "Luc Besson*",
+   "Jean-Pierre Jeunet",
+   "Jacques Audiard",
+   "Olivier Nakache"
+  ],
+  "explanation": "Il signe aussi « Léon » et « Lucy », et fonde la société EuropaCorp.",
+  "hint": "Il a aussi réalisé « Léon »."
+ },
+ {
+  "key": "cinema-553",
+  "concept": "cinema.directors.kassovitz_haine",
+  "label": "La Haine",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a réalisé « La Haine » (1995), avec Vincent Cassel ?",
+  "options": [
+   "Mathieu Kassovitz*",
+   "Luc Besson",
+   "Jacques Audiard",
+   "Cédric Klapisch"
+  ],
+  "explanation": "Tourné en noir et blanc, prix de la mise en scène à Cannes. « Jusqu'ici tout va bien… »",
+  "hint": "Il joue aussi dans « Amélie Poulain »."
+ },
+ {
+  "key": "cinema-554",
+  "concept": "cinema.directors.nakache_toledano",
+  "label": "Intouchables",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a réalisé « Intouchables » (2011) ?",
+  "options": [
+   "Olivier Nakache et Éric Toledano*",
+   "Dany Boon",
+   "Jean-Pierre Jeunet",
+   "Luc Besson"
+  ],
+  "explanation": "Le duo signe aussi « Le Sens de la fête » et « Hors normes ».",
+  "hint": "Un duo de réalisateurs."
+ },
+ {
+  "key": "cinema-555",
+  "concept": "cinema.directors.justine_triet",
+  "label": "Anatomie d'une chute",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a réalisé « Anatomie d'une chute », Palme d'or 2023 ?",
+  "options": [
+   "Justine Triet*",
+   "Julia Ducournau",
+   "Céline Sciamma",
+   "Alice Diop"
+  ],
+  "explanation": "La troisième femme à recevoir la Palme d'or. Le film gagne aussi l'Oscar du meilleur scénario original.",
+  "hint": "Une réalisatrice française."
+ },
+ {
+  "key": "cinema-556",
+  "concept": "cinema.directors.jane_campion",
+  "label": "Première Palme d'or féminine",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle réalisatrice a été la première femme à recevoir la Palme d'or, en 1993 ?",
+  "options": [
+   "Jane Campion*",
+   "Agnès Varda",
+   "Sofia Coppola",
+   "Kathryn Bigelow"
+  ],
+  "explanation": "Pour « La Leçon de piano », ex æquo avec un film chinois. La Néo-Zélandaise gagne ensuite l'Oscar de la réalisation.",
+  "hint": "Une Néo-Zélandaise."
+ },
+ {
+  "key": "cinema-557",
+  "concept": "cinema.directors.nolan_oppenheimer",
+  "label": "Oppenheimer",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a réalisé « Oppenheimer » (2023) ?",
+  "options": [
+   "Christopher Nolan*",
+   "Denis Villeneuve",
+   "Ridley Scott",
+   "Steven Spielberg"
+  ],
+  "explanation": "Sept Oscars, dont celui du meilleur film et, enfin, de la réalisation pour Nolan.",
+  "hint": "Le réalisateur d'« Inception »."
+ },
+ {
+  "key": "cinema-558",
+  "concept": "cinema.directors.gerwig_barbie",
+  "label": "Barbie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a réalisé « Barbie » (2023) ?",
+  "options": [
+   "Greta Gerwig*",
+   "Sofia Coppola",
+   "Patty Jenkins",
+   "Olivia Wilde"
+  ],
+  "explanation": "Le plus gros succès de l'année au box-office mondial, sorti le même jour qu'« Oppenheimer ».",
+  "hint": "Elle a aussi réalisé « Les Filles du docteur March »."
+ },
+ {
+  "key": "cinema-559",
+  "concept": "cinema.directors.audiard_tontons",
+  "label": "Les Tontons flingueurs",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Qui a écrit les dialogues cultes des « Tontons flingueurs » (1963) ?",
+  "options": [
+   "Michel Audiard*",
+   "Georges Lautner",
+   "Francis Veber",
+   "Marcel Pagnol"
+  ],
+  "explanation": "« Les cons, ça ose tout. C'est même à ça qu'on les reconnaît. » Le film est réalisé par Georges Lautner.",
+  "hint": "Le père du réalisateur Jacques Audiard."
+ },
+ {
+  "key": "cinema-560",
+  "concept": "cinema.directors.godard_souffle",
+  "label": "À bout de souffle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a réalisé « À bout de souffle » (1960), avec Jean-Paul Belmondo ?",
+  "options": [
+   "Jean-Luc Godard*",
+   "François Truffaut",
+   "Claude Chabrol",
+   "Éric Rohmer"
+  ],
+  "explanation": "Un film manifeste, tourné caméra à l'épaule dans les rues de Paris.",
+  "hint": "Une figure majeure de la Nouvelle Vague."
+ },
+ {
+  "key": "cinema-561",
+  "concept": "cinema.directors.nouvelle_vague",
+  "label": "Nouvelle Vague",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment appelle-t-on le mouvement de jeunes cinéastes français des années 1960, comme Truffaut et Godard ?",
+  "options": [
+   "La Nouvelle Vague*",
+   "Le Néoréalisme",
+   "Le Cinéma vérité",
+   "L'Avant-garde"
+  ],
+  "explanation": "Tournages légers, en décors réels, avec des acteurs souvent inconnus. Beaucoup venaient des « Cahiers du cinéma ».",
+  "hint": "Une vague qui déferle."
+ },
+ {
+  "key": "cinema-562",
+  "concept": "cinema.directors.renoir_fils",
+  "label": "Jean Renoir",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le réalisateur Jean Renoir (« La Grande Illusion ») était le fils de…",
+  "options": [
+   "Du peintre Auguste Renoir*",
+   "Du sculpteur Rodin",
+   "Du photographe Nadar",
+   "De l'écrivain Émile Zola"
+  ],
+  "explanation": "Il a même servi de modèle, enfant, pour des tableaux de son père.",
+  "hint": "Un peintre impressionniste."
+ },
+ {
+  "key": "cinema-563",
+  "concept": "cinema.directors.melies_lune",
+  "label": "Le Voyage dans la Lune",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a réalisé « Le Voyage dans la Lune » (1902), avec l'obus planté dans l'œil de la Lune ?",
+  "options": [
+   "Georges Méliès*",
+   "Les frères Lumière",
+   "Charles Pathé",
+   "Abel Gance"
+  ],
+  "explanation": "Ancien illusionniste, il invente de nombreux trucages. Scorsese lui rend hommage dans « Hugo Cabret ».",
+  "hint": "Un ancien magicien."
+ },
+ {
+  "key": "cinema-564",
+  "concept": "cinema.directors.del_toro",
+  "label": "La Forme de l'eau",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel réalisateur mexicain a remporté l'Oscar du meilleur film pour « La Forme de l'eau » (2018) ?",
+  "options": [
+   "Guillermo del Toro*",
+   "Alfonso Cuarón",
+   "Alejandro González Iñárritu",
+   "Robert Rodriguez"
+  ],
+  "explanation": "Passionné de monstres, il signe aussi « Le Labyrinthe de Pan » et un « Pinocchio » en stop motion.",
+  "hint": "Il a aussi fait « Le Labyrinthe de Pan »."
+ },
+ {
+  "key": "cinema-565",
+  "concept": "cinema.directors.villeneuve_dune",
+  "label": "Dune",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a réalisé les films « Dune » (2021 et 2024) ?",
+  "options": [
+   "Denis Villeneuve*",
+   "Christopher Nolan",
+   "Ridley Scott",
+   "David Lynch"
+  ],
+  "explanation": "Le Québécois adapte le roman de Frank Herbert. David Lynch en avait tiré un film en 1984.",
+  "hint": "Un réalisateur québécois."
+ },
+ {
+  "key": "cinema-566",
+  "concept": "cinema.directors.varda",
+  "label": "Agnès Varda",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle réalisatrice, figure de la Nouvelle Vague, a signé « Cléo de 5 à 7 » (1962) ?",
+  "options": [
+   "Agnès Varda*",
+   "Jeanne Moreau",
+   "Claire Denis",
+   "Chantal Akerman"
+  ],
+  "explanation": "Elle reçoit un Oscar d'honneur en 2017. On la reconnaissait à sa coupe au bol bicolore.",
+  "hint": "On la reconnaissait à sa coupe au bol."
+ },
+ {
+  "key": "cinema-567",
+  "concept": "cinema.directors.kubrick_shining",
+  "label": "Shining",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a réalisé « Shining » (1980), adapté de Stephen King ?",
+  "options": [
+   "Stanley Kubrick*",
+   "John Carpenter",
+   "Steven Spielberg",
+   "Wes Craven"
+  ],
+  "explanation": "« Here's Johnny! » Stephen King n'aimait pas du tout cette adaptation.",
+  "hint": "Le réalisateur de « 2001, l'Odyssée de l'espace »."
+ },
+ {
+  "key": "cinema-568",
+  "concept": "cinema.directors.burton",
+  "label": "Tim Burton",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel réalisateur a signé « Edward aux mains d'argent » et « L'Étrange Noël de monsieur Jack » (comme producteur) ?",
+  "options": [
+   "Tim Burton*",
+   "Wes Anderson",
+   "Guillermo del Toro",
+   "Sam Raimi"
+  ],
+  "explanation": "Un univers gothique et poétique, souvent avec Johnny Depp.",
+  "hint": "Il travaille souvent avec Johnny Depp."
+ },
+ {
+  "key": "cinema-569",
+  "concept": "cinema.directors.wes_anderson",
+  "label": "Wes Anderson",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel réalisateur est connu pour ses images symétriques et colorées, comme dans « The Grand Budapest Hotel » ?",
+  "options": [
+   "Wes Anderson*",
+   "Tim Burton",
+   "Sofia Coppola",
+   "Quentin Tarantino"
+  ],
+  "explanation": "Ses plans très composés, ses couleurs pastel et ses acteurs fidèles (Bill Murray…) sont reconnaissables au premier coup d'œil.",
+  "hint": "Un réalisateur texan au style « maison de poupée »."
+ },
+ {
+  "key": "cinema-570",
+  "concept": "cinema.animation.coco_guitare",
+  "label": "Coco",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel instrument rêve de jouer Miguel, le héros de « Coco » (Pixar) ?",
+  "options": [
+   "De la guitare*",
+   "Du piano",
+   "De la trompette",
+   "Du violon"
+  ],
+  "explanation": "Sa famille interdit la musique depuis des générations. Le film remporte l'Oscar du meilleur film d'animation.",
+  "hint": "L'instrument des mariachis."
+ },
+ {
+  "key": "cinema-571",
+  "concept": "cinema.animation.chat_botte",
+  "label": "Le Chat Potté",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle saga d'animation apparaît le Chat Potté ?",
+  "options": [
+   "Shrek*",
+   "Madagascar",
+   "Kung Fu Panda",
+   "L'Âge de glace"
+  ],
+  "explanation": "Il obtient ensuite ses propres films. Son regard attendrissant est sa meilleure arme.",
+  "hint": "Un ogre vert."
+ },
+ {
+  "key": "cinema-572",
+  "concept": "cinema.animation.your_name",
+  "label": "Your Name",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel réalisateur japonais a signé « Your Name » (2016), où deux adolescents échangent leurs corps ?",
+  "options": [
+   "Makoto Shinkai*",
+   "Hayao Miyazaki",
+   "Mamoru Hosoda",
+   "Isao Takahata"
+  ],
+  "explanation": "Longtemps l'anime le plus rentable de l'histoire, célèbre pour ses ciels spectaculaires.",
+  "hint": "Pas Miyazaki."
+ },
+ {
+  "key": "cinema-573",
+  "concept": "cinema.animation.gromit",
+  "label": "Gromit",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal est Gromit, le compagnon de Wallace ?",
+  "options": [
+   "Un chien*",
+   "Un chat",
+   "Un mouton",
+   "Un lapin"
+  ],
+  "explanation": "Il ne parle pas, mais tout passe par ses sourcils. Wallace, lui, adore le fromage.",
+  "hint": "Il n'aboie jamais."
+ },
+ {
+  "key": "cinema-574",
+  "concept": "cinema.animation.flow_chat",
+  "label": "Flow",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel animal est le héros de « Flow » (2024), film letton sans dialogues, Oscar du meilleur film d'animation ?",
+  "options": [
+   "Un chat*",
+   "Un chien",
+   "Un capybara",
+   "Un lémurien"
+  ],
+  "explanation": "Un chat noir survit à une inondation sur un bateau, avec d'autres animaux. Le film a été fait avec le logiciel gratuit Blender.",
+  "hint": "Un animal qui n'aime pas l'eau."
+ },
+ {
+  "key": "cinema-575",
+  "concept": "cinema.animation.kirikou_petit",
+  "label": "Kirikou",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle est la particularité de Kirikou, héros du film de Michel Ocelot ?",
+  "options": [
+   "Il est tout petit et très malin*",
+   "Il est géant",
+   "Il peut voler",
+   "Il parle aux animaux"
+  ],
+  "explanation": "« Kirikou n'est pas grand, mais il est vaillant. » Il affronte la sorcière Karaba.",
+  "hint": "« Il n'est pas grand, mais il est vaillant »."
+ },
+ {
+  "key": "cinema-576",
+  "concept": "cinema.animation.moana_ocean",
+  "label": "Vaiana",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « Vaiana » (Disney), qu'est-ce qui choisit l'héroïne pour sa mission ?",
+  "options": [
+   "L'océan*",
+   "Un dieu du vent",
+   "Sa grand-mère",
+   "Un volcan"
+  ],
+  "explanation": "L'océan lui confie le cœur de Te Fiti. En anglais, le film s'appelle « Moana ».",
+  "hint": "Il est bleu et immense."
+ },
+ {
+  "key": "cinema-577",
+  "concept": "cinema.animation.ghibli_nom",
+  "label": "Studio Ghibli",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "D'où vient le nom du studio japonais Ghibli ?",
+  "options": [
+   "D'un avion italien, lui-même nommé d'après un vent du Sahara*",
+   "D'un personnage de Totoro",
+   "D'une montagne japonaise",
+   "D'un mot qui veut dire rêve"
+  ],
+  "explanation": "Miyazaki, passionné d'aviation, a repris le nom d'un avion Caproni. Le mot désigne un vent chaud du désert.",
+  "hint": "Miyazaki adore les avions."
+ },
+ {
+  "key": "cinema-578",
+  "concept": "cinema.animation.stop_motion_coraline",
+  "label": "Coraline",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle technique a été utilisée pour « Coraline » (2009) et « L'Étrange Noël de monsieur Jack » ?",
+  "options": [
+   "L'animation image par image de figurines*",
+   "Le dessin à la main",
+   "Les images de synthèse",
+   "La capture de mouvement"
+  ],
+  "explanation": "Des marionnettes déplacées un peu entre chaque photo : quelques secondes de film par jour de tournage.",
+  "hint": "On l'appelle aussi « stop motion »."
+ },
+ {
+  "key": "cinema-579",
+  "concept": "cinema.films.titanic_premier_rang",
+  "label": "Titanic en France",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "« Titanic » est le film le plus vu de l'histoire dans les salles françaises.",
+  "answer": true,
+  "explanation": "Oui : plus de 21 millions d'entrées en 1998, devant « Bienvenue chez les Ch'tis »."
+ },
+ {
+  "key": "cinema-580",
+  "concept": "cinema.films.oscars_statuette_or",
+  "label": "Statuette des Oscars",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "La statuette des Oscars est en or massif.",
+  "answer": false,
+  "explanation": "Non : elle est en bronze plaqué or. Pendant la Seconde Guerre mondiale, elles étaient même en plâtre peint."
+ },
+ {
+  "key": "cinema-581",
+  "concept": "cinema.directors.hitchcock_oscar",
+  "label": "Hitchcock et l'Oscar",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Alfred Hitchcock n'a jamais gagné l'Oscar du meilleur réalisateur.",
+  "answer": true,
+  "explanation": "Vrai : cinq fois nommé, jamais récompensé. Il reçoit seulement un prix d'honneur en 1968."
+ },
+ {
+  "key": "cinema-582",
+  "concept": "cinema.films.chronologie_films_fr",
+  "label": "Comédies françaises",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces films du plus ancien au plus récent.",
+  "items": [
+   "La Grande Vadrouille",
+   "Les Bronzés",
+   "Les Visiteurs",
+   "Intouchables"
+  ],
+  "explanation": "1966, 1978, 1993 et 2011."
+ },
+ {
+  "key": "cinema-583",
+  "concept": "cinema.directors.realisateurs_films",
+  "label": "Réalisateurs",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque film à son réalisateur.",
+  "pairs": [
+   [
+    "Titanic",
+    "James Cameron"
+   ],
+   [
+    "Psychose",
+    "Alfred Hitchcock"
+   ],
+   [
+    "Le Grand Bleu",
+    "Luc Besson"
+   ],
+   [
+    "Oppenheimer",
+    "Christopher Nolan"
+   ]
+  ],
+  "explanation": "Quatre grands noms du cinéma."
+ }
+]
