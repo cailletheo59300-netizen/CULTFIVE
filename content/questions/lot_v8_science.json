@@ -1,0 +1,545 @@
+[
+ {
+  "key": "science-501",
+  "concept": "science.physics.noyau_atome",
+  "label": "Noyau de l'atome",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelles particules forment le noyau d'un atome ?",
+  "options": [
+   "Des protons et des neutrons*",
+   "Des électrons seulement",
+   "Des photons",
+   "Des molécules"
+  ],
+  "explanation": "Les électrons tournent autour, dans un nuage bien plus grand : si le noyau était une bille, l'atome ferait la taille d'un stade.",
+  "hint": "L'une est positive, l'autre neutre."
+ },
+ {
+  "key": "science-502",
+  "concept": "science.physics.charge_neutron",
+  "label": "Neutron",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est la charge électrique d'un neutron ?",
+  "options": [
+   "Nulle*",
+   "Positive",
+   "Négative",
+   "Elle varie"
+  ],
+  "explanation": "Son nom le dit : il est neutre. Il a été découvert par James Chadwick en 1932.",
+  "hint": "Son nom le dit."
+ },
+ {
+  "key": "science-503",
+  "concept": "science.physics.newton_pomme",
+  "label": "Newton",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel savant anglais a formulé la loi de la gravitation universelle, en 1687 ?",
+  "options": [
+   "Isaac Newton*",
+   "Albert Einstein",
+   "Galilée",
+   "Stephen Hawking"
+  ],
+  "explanation": "Selon la légende, la chute d'une pomme l'aurait mis sur la voie. L'unité de force porte son nom.",
+  "hint": "Une pomme serait tombée près de lui."
+ },
+ {
+  "key": "science-504",
+  "concept": "science.physics.emc2",
+  "label": "E = mc²",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel savant est l'auteur de la célèbre formule E = mc² ?",
+  "options": [
+   "Albert Einstein*",
+   "Isaac Newton",
+   "Marie Curie",
+   "Niels Bohr"
+  ],
+  "explanation": "Elle dit que la masse est une forme d'énergie. Einstein la publie en 1905, à 26 ans.",
+  "hint": "Le père de la relativité."
+ },
+ {
+  "key": "science-505",
+  "concept": "science.physics.einstein_nobel",
+  "label": "Nobel d'Einstein",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Pour quel travail Albert Einstein a-t-il reçu le prix Nobel de physique, en 1921 ?",
+  "options": [
+   "L'effet photoélectrique*",
+   "La relativité générale",
+   "E = mc²",
+   "La bombe atomique"
+  ],
+  "explanation": "Il explique que la lumière est faite de grains d'énergie, les photons. La relativité, jugée trop audacieuse, n'a pas été récompensée.",
+  "hint": "La lumière arrache des électrons."
+ },
+ {
+  "key": "science-506",
+  "concept": "science.physics.zero_absolu",
+  "label": "Zéro absolu",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À combien de degrés Celsius correspond le zéro absolu, la température la plus basse possible ?",
+  "options": [
+   "−273,15 °C*",
+   "−100 °C",
+   "−459 °C",
+   "−1 000 °C"
+  ],
+  "explanation": "C'est 0 kelvin : les atomes n'y bougent presque plus. On ne peut pas l'atteindre exactement.",
+  "hint": "Environ −273."
+ },
+ {
+  "key": "science-507",
+  "concept": "science.physics.kelvin",
+  "label": "Kelvin",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est l'unité de température du Système international ?",
+  "options": [
+   "Le kelvin*",
+   "Le degré Celsius",
+   "Le degré Fahrenheit",
+   "Le joule"
+  ],
+  "explanation": "0 K = −273,15 °C. Un écart de 1 K vaut un écart de 1 °C.",
+  "hint": "Elle part du zéro absolu."
+ },
+ {
+  "key": "science-508",
+  "concept": "science.physics.volt",
+  "label": "Volt",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que mesure-t-on en volts ?",
+  "options": [
+   "La tension électrique*",
+   "L'intensité du courant",
+   "La puissance",
+   "La résistance"
+  ],
+  "explanation": "Une prise française fournit 230 volts. L'unité honore l'Italien Alessandro Volta.",
+  "hint": "Une prise française en fournit 230."
+ },
+ {
+  "key": "science-509",
+  "concept": "science.physics.fusion_soleil",
+  "label": "Énergie du Soleil",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "D'où vient l'énergie du Soleil ?",
+  "options": [
+   "De la fusion de noyaux d'hydrogène*",
+   "De la combustion du charbon",
+   "De la fission de l'uranium",
+   "D'une réaction chimique au gaz"
+  ],
+  "explanation": "Au cœur du Soleil, à 15 millions de degrés, l'hydrogène fusionne en hélium en libérant une énergie énorme.",
+  "hint": "Des noyaux légers qui s'assemblent."
+ },
+ {
+  "key": "science-510",
+  "concept": "science.physics.fission_centrale",
+  "label": "Centrales nucléaires",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Sur quelle réaction reposent les centrales nucléaires actuelles ?",
+  "options": [
+   "La fission de noyaux d'uranium*",
+   "La fusion de l'hydrogène",
+   "La combustion du pétrole",
+   "L'électrolyse de l'eau"
+  ],
+  "explanation": "Un neutron casse un gros noyau, qui libère de l'énergie et d'autres neutrons : c'est la réaction en chaîne.",
+  "hint": "On casse de gros noyaux."
+ },
+ {
+  "key": "science-511",
+  "concept": "science.physics.photon",
+  "label": "Photon",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment appelle-t-on la particule de lumière ?",
+  "options": [
+   "Le photon*",
+   "Le proton",
+   "Le neutron",
+   "L'électron"
+  ],
+  "explanation": "Il n'a pas de masse et voyage à environ 300 000 km/s dans le vide.",
+  "hint": "« Photo » veut dire lumière."
+ },
+ {
+  "key": "science-512",
+  "concept": "science.physics.plasma_etat",
+  "label": "Plasma",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel est le quatrième état de la matière, après solide, liquide et gaz ?",
+  "options": [
+   "Le plasma*",
+   "Le cristal",
+   "Le gel",
+   "La vapeur"
+  ],
+  "explanation": "Un gaz si chaud que les atomes perdent leurs électrons. Les étoiles, les éclairs et les aurores en sont faits.",
+  "hint": "Les étoiles en sont faites."
+ },
+ {
+  "key": "science-513",
+  "concept": "science.chemistry.mendeleiev",
+  "label": "Tableau périodique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel chimiste russe a proposé le tableau périodique des éléments, en 1869 ?",
+  "options": [
+   "Dmitri Mendeleïev*",
+   "Antoine Lavoisier",
+   "Marie Curie",
+   "Niels Bohr"
+  ],
+  "explanation": "Il laisse des cases vides pour des éléments encore inconnus… et prédit leurs propriétés, confirmées ensuite.",
+  "hint": "Un élément porte son nom, le mendélévium."
+ },
+ {
+  "key": "science-514",
+  "concept": "science.chemistry.isotope",
+  "label": "Isotopes",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Qu'ont de différent deux isotopes d'un même élément ?",
+  "options": [
+   "Le nombre de neutrons*",
+   "Le nombre de protons",
+   "Le nombre d'électrons seulement",
+   "Leur couleur"
+  ],
+  "explanation": "Le carbone 14, radioactif, a deux neutrons de plus que le carbone 12 : il sert à dater les objets anciens.",
+  "hint": "Même élément, noyau plus ou moins lourd."
+ },
+ {
+  "key": "science-515",
+  "concept": "science.chemistry.carbone_14",
+  "label": "Datation",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À quoi sert le carbone 14 en archéologie ?",
+  "options": [
+   "À dater des restes d'êtres vivants*",
+   "À colorer des fossiles",
+   "À nettoyer les os",
+   "À mesurer la profondeur des fouilles"
+  ],
+  "explanation": "Il se désintègre lentement : la moitié disparaît en environ 5 700 ans. On peut dater jusqu'à environ 50 000 ans.",
+  "hint": "Il permet de connaître l'âge."
+ },
+ {
+  "key": "science-516",
+  "concept": "science.chemistry.ph_neutre",
+  "label": "pH neutre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le pH de l'eau pure ?",
+  "options": [
+   "7*",
+   "0",
+   "14",
+   "1"
+  ],
+  "explanation": "En dessous de 7, c'est acide (citron, vinaigre) ; au-dessus, basique (savon, eau de Javel).",
+  "hint": "Le milieu de l'échelle."
+ },
+ {
+  "key": "science-517",
+  "concept": "science.biology.neurone",
+  "label": "Neurone",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'appellent les cellules qui transmettent l'influx nerveux ?",
+  "options": [
+   "Les neurones*",
+   "Les globules rouges",
+   "Les plaquettes",
+   "Les ostéocytes"
+  ],
+  "explanation": "Le cerveau humain en compte environ 86 milliards, reliés par des milliers de connexions chacun.",
+  "hint": "Il y en a des milliards dans le cerveau."
+ },
+ {
+  "key": "science-518",
+  "concept": "science.biology.darwin_galapagos",
+  "label": "Darwin",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelles îles ont inspiré à Charles Darwin sa théorie de l'évolution ?",
+  "options": [
+   "Les Galápagos*",
+   "Madagascar",
+   "Les Canaries",
+   "Hawaï"
+  ],
+  "explanation": "Les pinsons y ont des becs différents selon les îles et leur nourriture. Il publie « L'Origine des espèces » en 1859.",
+  "hint": "Des îles aux tortues géantes, au large de l'Équateur."
+ },
+ {
+  "key": "science-519",
+  "concept": "science.human_body.litres_sang",
+  "label": "Volume de sang",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de litres de sang contient environ le corps d'un adulte ?",
+  "answer": 5,
+  "explanation": "Entre 4,5 et 6 litres selon la taille. Le cœur le fait circuler en une minute environ.",
+  "hint": "Autant qu'un gros bidon de lessive.",
+  "unit": "L"
+ },
+ {
+  "key": "science-520",
+  "concept": "science.space.jupiter_plus_grosse",
+  "label": "Jupiter",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle est la plus grosse planète du système solaire ?",
+  "options": [
+   "Jupiter*",
+   "Saturne",
+   "Neptune",
+   "La Terre"
+  ],
+  "explanation": "On pourrait y loger plus de 1 300 Terres. Sa Grande Tache rouge est une tempête plus large que notre planète.",
+  "hint": "La planète de la Grande Tache rouge."
+ },
+ {
+  "key": "science-521",
+  "concept": "science.space.saturne_anneaux",
+  "label": "Anneaux",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle planète est célèbre pour ses anneaux très visibles ?",
+  "options": [
+   "Saturne*",
+   "Mars",
+   "Mercure",
+   "Vénus"
+  ],
+  "explanation": "Faits de glace et de roche. Jupiter, Uranus et Neptune ont aussi des anneaux, bien plus discrets.",
+  "hint": "La sixième planète."
+ },
+ {
+  "key": "science-522",
+  "concept": "science.space.big_bang_age",
+  "label": "Âge de l'Univers",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel âge a l'Univers, d'après la théorie du Big Bang ?",
+  "options": [
+   "Environ 13,8 milliards d'années*",
+   "Environ 4,5 milliards d'années",
+   "Environ 100 millions d'années",
+   "Environ 1 000 milliards d'années"
+  ],
+  "explanation": "La Terre, elle, a environ 4,5 milliards d'années.",
+  "hint": "Environ trois fois l'âge de la Terre."
+ },
+ {
+  "key": "science-523",
+  "concept": "science.space.lumiere_soleil_terre",
+  "label": "Lumière du Soleil",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de temps met la lumière du Soleil pour atteindre la Terre ?",
+  "options": [
+   "Environ 8 minutes*",
+   "Environ 8 secondes",
+   "Environ 1 heure",
+   "Environ 1 jour"
+  ],
+  "explanation": "Pour parcourir 150 millions de km à 300 000 km/s. On voit donc le Soleil tel qu'il était il y a 8 minutes.",
+  "hint": "Le temps de faire cuire des pâtes."
+ },
+ {
+  "key": "science-524",
+  "concept": "science.space.son_espace",
+  "label": "Son dans l'espace",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le son peut se propager dans le vide de l'espace.",
+  "answer": false,
+  "explanation": "Faux : le son a besoin de matière (air, eau…) pour voyager. Les explosions des films de science-fiction devraient être silencieuses."
+ },
+ {
+  "key": "science-525",
+  "concept": "science.physics.verre_liquide",
+  "label": "Le verre",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le verre des vieux vitraux s'est affaissé avec le temps parce qu'il coule lentement.",
+  "answer": false,
+  "explanation": "Faux : c'est une légende. Les vitraux plus épais en bas viennent des techniques de fabrication de l'époque ; le verre ne coule pas à l'échelle humaine."
+ },
+ {
+  "key": "science-526",
+  "concept": "science.space.planetes_ordre",
+  "label": "Ordre des planètes",
+  "type": "ordering",
+  "difficulty": 35,
+  "prompt": "Classe ces planètes de la plus proche à la plus éloignée du Soleil.",
+  "items": [
+   "Mercure",
+   "Vénus",
+   "Mars",
+   "Jupiter"
+  ],
+  "explanation": "La Terre se trouve entre Vénus et Mars."
+ },
+ {
+  "key": "science-527",
+  "concept": "science.chemistry.hydrogene_univers",
+  "label": "Élément le plus abondant",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est l'élément chimique le plus abondant dans l'Univers ?",
+  "options": [
+   "L'hydrogène*",
+   "L'oxygène",
+   "Le carbone",
+   "Le fer"
+  ],
+  "explanation": "Environ les trois quarts de la matière ordinaire. C'est aussi le plus léger des éléments.",
+  "hint": "Le numéro 1 du tableau périodique."
+ },
+ {
+  "key": "science-528",
+  "concept": "science.space.kepler_lois",
+  "label": "Lois de Kepler",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel astronome a montré que les planètes tournent autour du Soleil sur des ellipses ?",
+  "options": [
+   "Johannes Kepler*",
+   "Nicolas Copernic",
+   "Galilée",
+   "Tycho Brahe"
+  ],
+  "explanation": "Ses trois lois (1609-1619) s'appuient sur les mesures très précises de Tycho Brahe.",
+  "hint": "Un télescope spatial chasseur d'exoplanètes porte son nom."
+ },
+ {
+  "key": "science-529",
+  "concept": "science.space.titan_atmosphere",
+  "label": "Titan",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel satellite de Saturne possède une atmosphère épaisse et des lacs de méthane ?",
+  "options": [
+   "Titan*",
+   "Encelade",
+   "Io",
+   "Ganymède"
+  ],
+  "explanation": "La sonde Huygens s'y est posée en 2005. Il est plus grand que la planète Mercure.",
+  "hint": "Le plus grand satellite de Saturne."
+ },
+ {
+  "key": "science-530",
+  "concept": "science.space.europe_ocean",
+  "label": "Europe",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quelle lune de Jupiter cacherait un océan d'eau liquide sous sa croûte de glace ?",
+  "options": [
+   "Europe*",
+   "Io",
+   "Callisto",
+   "Titan"
+  ],
+  "explanation": "Cet océan pourrait contenir plus d'eau que tous ceux de la Terre. Des sondes partent l'étudier.",
+  "hint": "Elle porte le nom d'un continent."
+ },
+ {
+  "key": "science-531",
+  "concept": "science.space.proxima",
+  "label": "Étoile la plus proche",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est l'étoile la plus proche du Soleil ?",
+  "options": [
+   "Proxima du Centaure*",
+   "Sirius",
+   "L'étoile Polaire",
+   "Bételgeuse"
+  ],
+  "explanation": "À environ 4,2 années-lumière. Sa lumière met donc plus de quatre ans à nous parvenir.",
+  "hint": "Son nom veut dire « la plus proche »."
+ },
+ {
+  "key": "science-532",
+  "concept": "science.biology.mendel_pois",
+  "label": "Hérédité",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Avec quelles plantes Gregor Mendel a-t-il découvert les lois de l'hérédité ?",
+  "options": [
+   "Des petits pois*",
+   "Des roses",
+   "Des tomates",
+   "Du blé"
+  ],
+  "explanation": "Ce moine croise des milliers de plants dans le jardin de son monastère, vers 1860. Son travail n'est reconnu qu'après sa mort.",
+  "hint": "Des légumes verts et ronds."
+ },
+ {
+  "key": "science-533",
+  "concept": "science.space.hayabusa",
+  "label": "Échantillons d'astéroïde",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel pays a rapporté sur Terre les premiers échantillons d'un astéroïde, en 2010 ?",
+  "options": [
+   "Le Japon*",
+   "Les États-Unis",
+   "La Chine",
+   "La Russie"
+  ],
+  "explanation": "La sonde Hayabusa (« faucon pèlerin ») ramène des grains de l'astéroïde Itokawa, malgré de nombreuses pannes.",
+  "hint": "La sonde s'appelait « faucon pèlerin » dans sa langue."
+ },
+ {
+  "key": "science-534",
+  "concept": "science.physics.hertz_ondes",
+  "label": "Ondes radio",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel physicien allemand a prouvé l'existence des ondes radio, vers 1887 ?",
+  "options": [
+   "Heinrich Hertz*",
+   "Guglielmo Marconi",
+   "Max Planck",
+   "Wilhelm Röntgen"
+  ],
+  "explanation": "L'unité de fréquence, le hertz, porte son nom. Il pensait que sa découverte ne servirait à rien.",
+  "hint": "Une unité de fréquence porte son nom."
+ },
+ {
+  "key": "science-535",
+  "concept": "science.space.coucher_soleil_mars",
+  "label": "Coucher de soleil martien",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "De quelle couleur est un coucher de soleil sur Mars ?",
+  "options": [
+   "Bleuté*",
+   "Rouge vif",
+   "Vert",
+   "Violet foncé"
+  ],
+  "explanation": "La fine poussière martienne diffuse la lumière bleue autour du Soleil couchant, l'inverse de chez nous. Les rovers l'ont photographié.",
+  "hint": "L'inverse de la Terre."
+ }
+]

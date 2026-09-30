@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.20.0 — contenu : tous les domaines à 400 questions ou plus
+- **+ environ 950 questions**, écrites à la main (explication et indice écrit pour la plupart), vérifiées contre les doublons :
+  Tech 191 → 402, Logique 199 → 412 (suites vérifiées par calcul), Sport 254 → 401, Musique 267 → 408 (surtout des faciles),
+  Nature 296 → 402, Cinéma 324 → 436 (une soixantaine de difficiles), Sciences 375 → 410.
+- Plus aucun domaine sous 400 questions ; les domaines pauvres en questions difficiles (Tech, Logique, Nature, Cinéma) en ont désormais au moins une soixantaine.
+
 ## 0.19.0 — la Recharge des coffres
 - **Recharge** : on touche 3 fois le coffre ; il tremble de plus en plus fort dans un halo à sa couleur, des étincelles jaillissent, et il peut **monter de rang** (bannière « Amélioré : Coffre en or ! », éclat, vibration). Tirage fait une seule fois par le serveur à l'ouverture : bois → argent 25 %, argent → or 20 %, or → Savant 5 %.
 - **Coffre Savant** (violet, constellation) : 120–160 graines, un joker, 2 tickets, un objet garanti ; au premier, le **Mortier de savant**, objet exclusif jamais vendu.
