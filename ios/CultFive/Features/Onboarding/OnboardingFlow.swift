@@ -3,7 +3,7 @@ import CultFiveCore
 
 /// Onboarding : on joue tout de suite (3 vraies questions, annoncées et expliquées), on voit son résultat et le niveau
 /// proposé, on choisit ses domaines et son pseudo, on peut créer son compte, puis on ouvre un coffre de bienvenue.
-/// Barre de progression et retour sur chaque étape. Le rappel de notification est proposé plus tard, après le premier 5 du jour.
+/// Repère d'étape nommé (« Étape 2 sur 4 · Tes domaines ») et retour après les questions. Le rappel de notification est proposé plus tard, après le premier 5 du jour.
 struct OnboardingFlow: View {
     enum Step: Int, Hashable, Comparable {
         case welcome, intro, questions, result, interests, handle, account, gift, howItWorks
@@ -30,7 +30,7 @@ struct OnboardingFlow: View {
             switch step {
             case .welcome: welcome
             case .intro: framed { intro }
-            case .questions: framed(back: false) { questions }
+            case .questions: questions
             case .result: framed(back: false) { resultStep }
             case .interests: framed { interestsStep }
             case .handle: framed { HandleStep { step = app.isAnonymous ? .account : .gift; Task { await prepareGift() } } }
@@ -50,19 +50,12 @@ struct OnboardingFlow: View {
         }
     }
 
-    // MARK: Cadre : progression et retour
+    // MARK: Cadre : repère d'étape et retour
 
-    /// Étapes comptées dans la barre de progression.
-    private static let progressSteps: [Step] = [.intro, .questions, .result, .interests, .handle, .account]
-
-    private var progress: Double {
-        guard let i = Self.progressSteps.firstIndex(of: step) else { return 1 }
-        var value = Double(i) / Double(Self.progressSteps.count)
-        if step == .questions, let pack, !pack.questions.isEmpty {
-            value += Double(index) / Double(pack.questions.count) / Double(Self.progressSteps.count)
-        }
-        return value
-    }
+    /// Étapes nommées après les questions (pendant les questions, seul « Question 1 sur 3 » s'affiche).
+    private static let namedSteps: [(step: Step, name: String)] = [
+        (.result, "Ton niveau"), (.interests, "Tes domaines"), (.handle, "Ton pseudo"), (.account, "Ton compte"),
+    ]
 
     private var previous: Step? {
         switch step {
@@ -76,7 +69,7 @@ struct OnboardingFlow: View {
 
     private func framed<Content: View>(back: Bool = true, @ViewBuilder content: () -> Content) -> some View {
         VStack(spacing: 0) {
-            HStack(spacing: Space.m) {
+            HStack(spacing: Space.s) {
                 if back, let previous {
                     Button {
                         Haptics.selection()
@@ -93,17 +86,23 @@ struct OnboardingFlow: View {
                 } else {
                     Color.clear.frame(width: 44, height: 44)
                 }
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule().fill(Color.hairline)
-                        Capsule().fill(Color.brand).frame(width: max(10, geo.size.width * progress))
+                Spacer()
+                if let index = Self.namedSteps.firstIndex(where: { $0.step == step }) {
+                    HStack(spacing: 6) {
+                        ForEach(0 ..< Self.namedSteps.count, id: \.self) { i in
+                            Capsule().fill(i <= index ? Color.brand : Color.hairline)
+                                .frame(width: i == index ? 18 : 7, height: 7)
+                        }
+                        Text("Étape \(index + 1) sur \(Self.namedSteps.count) · \(Self.namedSteps[index].name)")
+                            .font(.system(.footnote, design: .rounded).weight(.bold))
+                            .foregroundStyle(Color.inkSoft)
+                            .padding(.leading, 4)
                     }
+                    .animation(Motion.standard, value: index)
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel("Étape \(index + 1) sur \(Self.namedSteps.count) : \(Self.namedSteps[index].name)")
                 }
-                .frame(height: 8)
-                .animation(Motion.standard, value: progress)
-                .accessibilityElement()
-                .accessibilityLabel("Progression")
-                .accessibilityValue("\(Int(progress * 100)) %")
+                Spacer()
                 Color.clear.frame(width: 44, height: 44)
             }
             .padding(.horizontal, Space.s)

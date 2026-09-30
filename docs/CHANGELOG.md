@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.15.0 — onboarding soigné, Tenue unique, ouverture des coffres
+- **Onboarding** : exactement 3 questions (un bug en servait 5), tirées d'une **banque dédiée de 24 questions** choisies à la main : une question qui surprend, une énigme connue, un « le savais-tu ? » (`content/questions/onboarding.json`, migration 0025). Plus de barre pendant les questions ; ensuite « Étape 1 sur 4 · Ton niveau », « Tes domaines », « Ton pseudo », « Ton compte ».
+- **Profil allégé** : les médailles de maîtrise (Bronze → Diamant) sont sur les cartes « Ce que tu sais », à côté de l'Elo ; la vitrine ne garde que les trophées d'exploit.
+- **Tenue unique** (écran Léon, onglets Arbre / Tenue) : garde-robe et boutique réunies, Léon en cabine d'essayage, une ligne par emplacement (4 cases + « + N »), cases teintées selon l'origine (coffres, fruits, arbre), un seul bouton Porter / Acheter / origine, vitrine du jour en bandeau, tenue au hasard.
+- **Ouverture des coffres** : tremblement qui monte avec les vibrations, éclat de lumière, rayons tournants ; les récompenses sortent une par une en grandes cartes dessinées (graines qui défilent, tickets, bouclier de joker, Léon qui porte son objet), puis récapitulatif.
+
 ## 0.14.0 — Léon : boutique, formes, cabine d'essayage
 - **Boutique de Léon** (graines uniquement, jamais d'argent réel) : 12 couleurs de peau (200–600), 4 motifs (rayures, pois, étoiles, arc-en-ciel ; 800–1 500), 12 objets (casquette, bonnet, chapeau de magicien, couronne, lunettes de soleil, masque de héros, médaille, collier de fleurs, sac à dos, ailes, aura étoilée, bulles ; 300–1 200). **Vitrine du jour** : 3 articles par joueur, le premier à −30 %. Les objets des coffres et des fruits ne sont jamais vendus.
 - **Cabine d'essayage** : chaque article s'essaie sur Léon avant l'achat ; acheté, il est porté aussitôt.

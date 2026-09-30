@@ -55,3 +55,16 @@ begin
   perform tst.ok(has_function_privilege('authenticated', 'public.shop_buy(text)', 'execute'), 'achat ouvert aux connectés');
   perform tst.ok(not has_function_privilege('anon', 'public.shop_buy(text)', 'execute'), 'achat fermé aux anonymes');
 end $$;
+
+-- Onboarding : exactement 3 questions, une par catégorie de la banque dédiée, dans l'ordre.
+do $$
+declare u uuid := tst.new_user(); p jsonb;
+begin
+  perform tst.login(u);
+  p := public.onboarding_pack();
+  perform tst.ok(jsonb_array_length(p -> 'questions') = 3, '3 questions, pas 5');
+  perform tst.ok((select array_agg(substr(q.external_key, 1, 4) order by t.n)
+                  from jsonb_array_elements(p -> 'questions') with ordinality t(e, n)
+                  join public.questions q on q.id = (t.e ->> 'id')::uuid) = array['onb1', 'onb2', 'onb3'],
+                 'une question qui surprend, une énigme, un « le savais-tu ? »');
+end $$;

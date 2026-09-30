@@ -213,8 +213,14 @@ struct ProfileView: View {
                             }
                         }
                         SkillBar(level: skill.level, reliability: skill.reliability, color: DomainPalette.color(skill.domainId))
-                        Text(skill.rating.placed ? "\(skill.rating.rank.name) · \(skill.answered) réponses" : "\(skill.answered) réponses · placement en cours")
-                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        HStack(alignment: .center) {
+                            Text(skill.rating.placed ? "\(skill.rating.rank.name) · \(skill.answered) réponses" : "\(skill.answered) réponses · placement en cours")
+                                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            Spacer(minLength: Space.s)
+                            if let mastery = trophyOverview?.mastery.first(where: { $0.domainId == skill.domainId }) {
+                                MasteryMedals(mastery: mastery)
+                            }
+                        }
                     }
                     .popCard(padding: 14)
                 }

@@ -1,8 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// L'arbre de Léon : on le nourrit de graines, il grandit en 6 étapes (un coffre d'or à chacune), puis donne
-/// ses fruits (objets rares). En dessous, la tenue de Léon : les objets gagnés dans les coffres et sur l'arbre.
+/// Léon, en deux onglets. Arbre : on le nourrit de graines, il grandit en 6 étapes (un coffre d'or à chacune), puis
+/// donne ses fruits (objets rares). Tenue : garde-robe et boutique réunies (voir `LeonWardrobe`).
 struct LeonTreeScreen: View {
     @Environment(AppModel.self) private var app
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -12,7 +12,9 @@ struct LeonTreeScreen: View {
     @State private var news: [String] = []
     @State private var error: String?
     @State private var showStages = false
-    @State private var showShop = false
+    @State private var tab: Tab = .tree
+
+    enum Tab: Hashable { case tree, outfit }
 
     private var progression: ProgressionOverview? { app.progression }
     private var seeds: Int { app.profile?.seeds ?? progression?.seeds ?? 0 }
@@ -20,7 +22,15 @@ struct LeonTreeScreen: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Space.l) {
-                if let progression {
+                Picker("Léon", selection: $tab) {
+                    Text("Arbre").tag(Tab.tree)
+                    Text("Tenue").tag(Tab.outfit)
+                }
+                .pickerStyle(.segmented)
+                .padding(.top, Space.s)
+                if tab == .outfit, progression != nil {
+                    LeonWardrobe()
+                } else if let progression {
                     scene(progression.tree)
                     gauge(progression.tree)
                     Button { showStages = true } label: {
@@ -40,8 +50,11 @@ struct LeonTreeScreen: View {
                         }
                     }
                     tickets(progression.tickets)
-                    shopCard
-                    wardrobe(progression.items)
+                    Button { withAnimation(Motion.standard) { tab = .outfit } } label: {
+                        Label("Habiller Léon : garde-robe et boutique", systemImage: "tshirt.fill")
+                            .font(.system(.subheadline, design: .rounded).weight(.bold))
+                    }
+                    .buttonStyle(TextLinkStyle(color: .brand))
                 } else {
                     ProgressView().frame(maxWidth: .infinity, minHeight: 300)
                 }
@@ -53,7 +66,7 @@ struct LeonTreeScreen: View {
         .scrollIndicators(.hidden)
         .clearsTabBar()
         .background(Color.paper)
-        .navigationTitle("L'arbre de Léon")
+        .navigationTitle("Léon")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(Color.paper, for: .navigationBar)
@@ -61,29 +74,6 @@ struct LeonTreeScreen: View {
         .sheet(isPresented: $showStages) {
             if let tree = progression?.tree { TreeStagesSheet(tree: tree) }
         }
-        .navigationDestination(isPresented: $showShop) { LeonShopScreen() }
-    }
-
-    private var shopCard: some View {
-        Button { showShop = true } label: {
-            HStack(spacing: Space.m) {
-                HStack(spacing: -10) {
-                    ForEach(["skin_mint", "skin_coral", "skin_ocean"], id: \.self) { skin in
-                        Leon(color: .brand, pose: .rest, curl: 0.4, animated: false, outfit: LeonOutfit(skin: skin)).frame(width: 36)
-                    }
-                }
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Boutique de Léon").font(.cfTitle3).foregroundStyle(Color.ink)
-                    Text("Couleurs, motifs, objets : à essayer avant d'acheter, en \(Brand.currencyPlural).")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer(minLength: 0)
-                Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
-            }
-            .popCard(padding: 14)
-        }
-        .buttonStyle(.row)
     }
 
     // MARK: Arbre
@@ -217,110 +207,4 @@ struct LeonTreeScreen: View {
         }
     }
 
-    private static let slots: [(id: String, name: String)] = [
-        ("form", "La forme de Léon"), ("skin", "La peau"), ("pattern", "Le motif"), ("hat", "Sur la tête"), ("eyes", "Les yeux"),
-        ("neck", "Le cou"), ("back", "Le dos"), ("effect", "L'effet"),
-    ]
-
-    private func wardrobe(_ items: [LeonItem]) -> some View {
-        VStack(alignment: .leading, spacing: Space.m) {
-            HStack(alignment: .firstTextBaseline) {
-                Text("La tenue de Léon").font(.cfHeadline)
-                Spacer()
-                Text("\(items.filter(\.owned).count)/\(items.count)").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
-            }
-            HStack {
-                Text("Touche un objet pour que Léon le porte partout dans l'app.")
-                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                Spacer(minLength: Space.s)
-                Button { Task { await randomOutfit(items) } } label: {
-                    Label("Au hasard", systemImage: "dice.fill")
-                        .font(.system(.footnote, design: .rounded).weight(.heavy))
-                        .foregroundStyle(Color.brand)
-                        .padding(.horizontal, 12).frame(minHeight: 36)
-                        .background(Color.brand.opacity(0.12), in: Capsule())
-                }
-                .buttonStyle(.row)
-                .accessibilityLabel("Tenue au hasard")
-            }
-            ForEach(Self.slots, id: \.id) { slot in
-                // Garde-robe : ce qu'on possède, et ce qui se gagne (coffres, fruits, formes) ; le reste est en boutique.
-                let slotItems = items.filter { $0.slot == slot.id && ($0.owned || $0.rarity != "shop") }
-                if !slotItems.isEmpty {
-                    VStack(alignment: .leading, spacing: Space.s) {
-                        Text(slot.name).labelCaps()
-                        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 10) {
-                            ForEach(slotItems) { item in itemTile(item) }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private func itemTile(_ item: LeonItem) -> some View {
-        Button {
-            Task { await toggle(item) }
-        } label: {
-            VStack(spacing: 4) {
-                Leon(color: .brand, pose: .rest, curl: 0.4, animated: false,
-                     outfit: item.owned ? outfit.trying(item.id, slot: item.slot) : LeonOutfit().trying(item.id, slot: item.slot))
-                    .frame(height: 54)
-                    .saturation(item.owned ? 1 : 0)
-                    .opacity(item.owned ? 1 : 0.4)
-                Text(item.name)
-                    .font(.system(.caption, design: .rounded).weight(.bold))
-                    .foregroundStyle(item.owned ? Color.ink : Color.inkSoft)
-                    .lineLimit(1).minimumScaleFactor(0.7)
-                Text(item.owned ? (worn(item) ? "Porté" : "Porter") : lockedText(item))
-                    .font(.system(.caption2, design: .rounded).weight(.heavy))
-                    .foregroundStyle(worn(item) ? Color.brand : Color.inkSoft)
-                    .lineLimit(1).minimumScaleFactor(0.7)
-            }
-            .padding(8)
-            .frame(maxWidth: .infinity)
-            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: Radius.s, style: .continuous)
-                    .strokeBorder(worn(item) ? Color.brand : .clear, lineWidth: 2)
-            }
-        }
-        .buttonStyle(.row)
-        .disabled(!item.owned)
-        .accessibilityLabel(item.name)
-        .accessibilityValue(item.owned ? (worn(item) ? "porté" : "possédé") : lockedText(item))
-    }
-
-    /// Porté à l'écran (la forme la plus avancée compte comme portée quand aucune n'est choisie).
-    private func worn(_ item: LeonItem) -> Bool { outfit.item(in: item.slot) == item.id }
-
-    private func lockedText(_ item: LeonItem) -> String {
-        switch item.rarity {
-        case "fruit": return "Fruit de l'arbre"
-        case "tree": return "Arbre : \(TreeState.stageName(item.unlockStage ?? 1).lowercased())"
-        default: return "Dans les coffres"
-        }
-    }
-
-    /// Tenue au hasard parmi ce qu'on possède (la forme ne change pas).
-    private func randomOutfit(_ items: [LeonItem]) async {
-        Haptics.selection()
-        for slot in ["skin", "pattern", "hat", "eyes", "neck", "back", "effect"] {
-            let owned = items.filter { $0.slot == slot && $0.owned }
-            let pick = Bool.random() || slot == "skin" ? owned.randomElement()?.id : nil
-            _ = try? await app.service.equip(slot: slot, item: pick)
-        }
-        await app.refreshProgression()
-    }
-
-    private func toggle(_ item: LeonItem) async {
-        guard item.owned else { return }
-        Haptics.selection()
-        do {
-            _ = try await app.service.equip(slot: item.slot, item: item.equipped && item.slot != "form" ? nil : item.id)
-            await app.refreshProgression()
-        } catch {
-            self.error = (error as? LocalizedError)?.errorDescription
-        }
-    }
 }

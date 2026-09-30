@@ -1,17 +1,14 @@
 import SwiftUI
 import CultFiveCore
 
-/// Vitrine des trophées (Profil) : maîtrise par domaine (Bronze, Argent, Or, Diamant sur l'Elo classé) puis exploits.
-/// Chaque trophée a donné un coffre.
+/// Vitrine des exploits (Profil). La maîtrise par domaine (Bronze, Argent, Or, Diamant) s'affiche sur les cartes
+/// de « Ce que tu sais », à côté de l'Elo : pas de doublon. Chaque trophée a donné un coffre.
 struct TrophiesShowcase: View {
     let trophies: TrophiesOverview
     @State private var selected: TrophiesOverview.Exploit?
 
     var body: some View {
-        VStack(alignment: .leading, spacing: Space.l) {
-            mastery
-            exploits
-        }
+        exploits
         .sheet(item: $selected) { exploit in
             VStack(spacing: Space.m) {
                 Medal(unlocked: exploit.unlockedAt != nil, size: 72)
@@ -31,68 +28,12 @@ struct TrophiesShowcase: View {
         }
     }
 
-    // MARK: Maîtrise
-
-    private var mastery: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            HStack(alignment: .firstTextBaseline) {
-                Text("Maîtrise").font(.cfHeadline)
-                Spacer()
-                let count = trophies.mastery.reduce(0) { $0 + tierIndex($1.tier) }
-                Text("\(count)/\(trophies.mastery.count * 4)").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
-            }
-            Text("Bronze à 1 050 d'Elo, Argent à 1 200, Or à 1 350, Diamant à 1 500 (parties classées).")
-                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-            VStack(spacing: 0) {
-                ForEach(Array(trophies.mastery.enumerated()), id: \.element.id) { i, row in
-                    if i > 0 { Rectangle().fill(Color.hairline).frame(height: 1).padding(.leading, Space.m) }
-                    masteryRow(row)
-                }
-            }
-            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
-        }
-    }
-
-    private func tierIndex(_ tier: String?) -> Int {
-        guard let tier, let i = TrophiesOverview.tiers.firstIndex(where: { $0.id == tier }) else { return 0 }
-        return i + 1
-    }
-
-    private func masteryRow(_ row: TrophiesOverview.Mastery) -> some View {
-        let reached = tierIndex(row.tier)
-        return HStack(spacing: Space.s) {
-            Circle().fill(DomainPalette.color(row.domainId)).frame(width: 10, height: 10)
-            VStack(alignment: .leading, spacing: 1) {
-                Text(row.name).font(.system(.subheadline, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
-                    .lineLimit(1).minimumScaleFactor(0.8)
-                Text(detail(row)).font(.system(.caption, design: .rounded)).foregroundStyle(Color.inkSoft).monospacedDigit()
-            }
-            Spacer(minLength: 4)
-            HStack(spacing: 5) {
-                ForEach(Array(TrophiesOverview.tiers.enumerated()), id: \.offset) { i, tier in
-                    TierMedal(tier: tier.id, unlocked: i < reached)
-                        .accessibilityLabel("\(tier.name) \(i < reached ? "obtenu" : "à obtenir")")
-                }
-            }
-        }
-        .padding(.horizontal, Space.m)
-        .padding(.vertical, 10)
-        .accessibilityElement(children: .combine)
-    }
-
-    private func detail(_ row: TrophiesOverview.Mastery) -> String {
-        guard row.placed, let cote = row.cote else { return "Termine ton placement (5 parties classées)" }
-        guard let next = row.next else { return "Elo \(CoteCULT.format(cote)) · tout est obtenu" }
-        let name = TrophiesOverview.tiers.first { $0.id == next.tier }?.name ?? next.tier
-        return "Elo \(CoteCULT.format(cote)) → \(name) à \(CoteCULT.format(next.cote))"
-    }
-
     // MARK: Exploits
 
     private var exploits: some View {
         VStack(alignment: .leading, spacing: Space.s) {
             HStack(alignment: .firstTextBaseline) {
-                Text("Exploits").font(.cfHeadline)
+                Text("Trophées").font(.cfHeadline)
                 Spacer()
                 Text("\(trophies.exploits.filter { $0.unlockedAt != nil }.count)/\(trophies.exploits.count)")
                     .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
@@ -140,8 +81,34 @@ private struct Medal: View {
     }
 }
 
+/// Médailles de maîtrise d'un domaine (sur les cartes « Ce que tu sais ») et prochain palier.
+struct MasteryMedals: View {
+    let mastery: TrophiesOverview.Mastery
+
+    private var reached: Int {
+        guard let tier = mastery.tier, let i = TrophiesOverview.tiers.firstIndex(where: { $0.id == tier }) else { return 0 }
+        return i + 1
+    }
+
+    var body: some View {
+        HStack(spacing: 5) {
+            ForEach(Array(TrophiesOverview.tiers.enumerated()), id: \.offset) { i, tier in
+                TierMedal(tier: tier.id, unlocked: i < reached)
+            }
+            if mastery.placed, let next = mastery.next {
+                let name = TrophiesOverview.tiers.first { $0.id == next.tier }?.name ?? next.tier
+                Text("\(name) à \(CoteCULT.format(next.cote))")
+                    .font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+                    .padding(.leading, 2)
+            }
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(reached == 0 ? "Aucune médaille de maîtrise" : "Médaille \(TrophiesOverview.tiers[reached - 1].name)")
+    }
+}
+
 /// Petite médaille de palier (bronze, argent, or, diamant).
-private struct TierMedal: View {
+struct TierMedal: View {
     let tier: String
     let unlocked: Bool
 

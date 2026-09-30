@@ -1,0 +1,360 @@
+[
+ {
+  "key": "onb1-01",
+  "concept": "nature.marine.octopus_hearts",
+  "label": "Les cœurs de la pieuvre",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de cœurs a une pieuvre ?",
+  "options": [
+   "3*",
+   "1",
+   "2",
+   "8"
+  ],
+  "explanation": "Deux cœurs envoient le sang vers les branchies, le troisième vers le reste du corps. Et son sang est bleu !"
+ },
+ {
+  "key": "onb1-02",
+  "concept": "nature.animals.flying_mammal",
+  "label": "Le mammifère volant",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est le seul mammifère capable de vraiment voler, et pas seulement de planer ?",
+  "options": [
+   "La chauve-souris*",
+   "L'écureuil volant",
+   "Le colugo",
+   "L'ornithorynque"
+  ],
+  "explanation": "L'écureuil volant et le colugo planent grâce à une membrane de peau. La chauve-souris, elle, bat des ailes."
+ },
+ {
+  "key": "onb1-03",
+  "concept": "science.physics.eiffel_expansion",
+  "label": "La tour Eiffel grandit l'été",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "La tour Eiffel peut gagner une quinzaine de centimètres en été. Pourquoi ?",
+  "options": [
+   "Le fer se dilate avec la chaleur*",
+   "On y installe des antennes",
+   "Le sol se soulève",
+   "Le vent la redresse"
+  ],
+  "explanation": "Chauffé, le métal se dilate : ses 7 300 tonnes de fer s'allongent un peu, et la tour grandit de plusieurs centimètres."
+ },
+ {
+  "key": "onb1-04",
+  "concept": "nature.plants.banana_berry",
+  "label": "La banane, une baie",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pour un botaniste, lequel de ces fruits est une baie ?",
+  "options": [
+   "La banane*",
+   "La fraise",
+   "La framboise",
+   "La mûre"
+  ],
+  "explanation": "Une baie vient d'une seule fleur et garde ses graines dans la chair : c'est le cas de la banane. La fraise, la framboise et la mûre n'en sont pas."
+ },
+ {
+  "key": "onb1-05",
+  "concept": "science.physics.lightning_heat",
+  "label": "Plus chaud que le Soleil",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Lequel de ces phénomènes est le plus chaud ?",
+  "options": [
+   "Un éclair*",
+   "La surface du Soleil",
+   "De la lave en fusion",
+   "La flamme d'un chalumeau"
+  ],
+  "explanation": "Un éclair chauffe l'air à environ 30 000 °C, cinq fois plus que la surface du Soleil (environ 5 500 °C)."
+ },
+ {
+  "key": "onb1-06",
+  "concept": "geography.countries.most_time_zones",
+  "label": "Le pays aux fuseaux horaires",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel pays compte le plus de fuseaux horaires, en comptant ses territoires d'outre-mer ?",
+  "options": [
+   "La France*",
+   "La Russie",
+   "Les États-Unis",
+   "La Chine"
+  ],
+  "explanation": "Grâce à ses territoires d'outre-mer, de la Polynésie aux Antilles en passant par La Réunion, la France couvre 12 fuseaux horaires."
+ },
+ {
+  "key": "onb1-07",
+  "concept": "nature.animals.bee_dance",
+  "label": "La danse des abeilles",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment une abeille indique-t-elle aux autres où trouver des fleurs ?",
+  "options": [
+   "En dansant*",
+   "En bourdonnant plus fort",
+   "En changeant de couleur",
+   "En laissant une trace de miel"
+  ],
+  "explanation": "Dans la ruche, elle fait une « danse frétillante » : l'angle et la durée de la danse donnent la direction et la distance des fleurs."
+ },
+ {
+  "key": "onb1-08",
+  "concept": "science.human_body.liver_regrowth",
+  "label": "L'organe qui repousse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel organe humain peut repousser après en avoir perdu une grande partie ?",
+  "options": [
+   "Le foie*",
+   "Le cœur",
+   "Le cerveau",
+   "Les reins"
+  ],
+  "explanation": "Le foie peut retrouver sa taille même quand on en retire plus de la moitié : c'est ce qui rend possibles les greffes de foie entre vivants."
+ },
+ {
+  "key": "onb2-01",
+  "concept": "logic.puzzles.footsteps_riddle",
+  "label": "Énigme : plus j'en prends",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Énigme : plus j'en prends, plus j'en laisse derrière moi. Que suis-je ?",
+  "options": [
+   "Des pas*",
+   "Des photos",
+   "Des années",
+   "Des notes"
+  ],
+  "explanation": "Chaque pas que tu fais laisse une empreinte derrière toi."
+ },
+ {
+  "key": "onb2-02",
+  "concept": "logic.puzzles.comb_riddle",
+  "label": "Énigme : des dents sans mordre",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Énigme : j'ai des dents, mais je ne mords jamais. Que suis-je ?",
+  "options": [
+   "Un peigne*",
+   "Une horloge",
+   "Un livre",
+   "Une chaise"
+  ],
+  "explanation": "Les « dents » du peigne démêlent les cheveux, sans jamais mordre."
+ },
+ {
+  "key": "onb2-03",
+  "concept": "logic.puzzles.your_name_riddle",
+  "label": "Énigme : ce qui est à toi",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Énigme : c'est à toi, mais les autres s'en servent bien plus que toi. Qu'est-ce que c'est ?",
+  "options": [
+   "Ton prénom*",
+   "Ton téléphone",
+   "Ta chambre",
+   "Ton vélo"
+  ],
+  "explanation": "Les autres disent ton prénom sans arrêt pour t'appeler ou parler de toi. Toi, beaucoup moins !"
+ },
+ {
+  "key": "onb2-04",
+  "concept": "logic.reasoning.all_but_nine",
+  "label": "Énigme : tous sauf neuf",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Un berger a 17 moutons. Tous meurent sauf 9. Combien lui en reste-t-il ?",
+  "options": [
+   "9*",
+   "8",
+   "17",
+   "0"
+  ],
+  "explanation": "« Tous sauf 9 » : il en reste 9. Le calcul 17 − 9 est le piège."
+ },
+ {
+  "key": "onb2-05",
+  "concept": "logic.reasoning.crash_survivors",
+  "label": "Énigme : les survivants",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Un avion s'écrase pile sur la frontière entre la France et l'Espagne. Où enterre-t-on les survivants ?",
+  "options": [
+   "Nulle part*",
+   "En France",
+   "En Espagne",
+   "Dans leur pays d'origine"
+  ],
+  "explanation": "Des survivants sont vivants : on ne les enterre pas. La question détourne l'attention vers la frontière."
+ },
+ {
+  "key": "onb2-06",
+  "concept": "logic.puzzles.stairs_riddle",
+  "label": "Énigme : monter sans bouger",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Énigme : je monte et je descends, mais je ne bouge jamais. Que suis-je ?",
+  "options": [
+   "Un escalier*",
+   "Un ascenseur",
+   "Un yoyo",
+   "La marée"
+  ],
+  "explanation": "On monte et on descend un escalier, qui, lui, reste bien en place."
+ },
+ {
+  "key": "onb2-07",
+  "concept": "logic.reasoning.bottle_cork",
+  "label": "Énigme : la bouteille et le bouchon",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Une bouteille et son bouchon coûtent 1,10 € en tout. La bouteille coûte 1 € de plus que le bouchon. Combien coûte le bouchon ?",
+  "options": [
+   "5 centimes*",
+   "10 centimes",
+   "1 centime",
+   "15 centimes"
+  ],
+  "explanation": "Si le bouchon coûtait 10 centimes, la bouteille coûterait 1,10 € et le tout 1,20 €. Avec 5 centimes : 0,05 + 1,05 = 1,10 €."
+ },
+ {
+  "key": "onb2-08",
+  "concept": "logic.reasoning.subtract_once",
+  "label": "Énigme : soustraire 5 de 25",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Combien de fois peut-on soustraire 5 de 25 ?",
+  "options": [
+   "Une seule fois*",
+   "4 fois",
+   "5 fois",
+   "25 fois"
+  ],
+  "explanation": "Après la première soustraction, on ne soustrait plus 5 de 25, mais de 20 !"
+ },
+ {
+  "key": "onb3-01",
+  "concept": "history.contemporary.zanzibar_war",
+  "label": "La guerre la plus courte",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "En 1896, le Royaume-Uni et Zanzibar se sont fait la guerre la plus courte de l'histoire. Combien de temps a-t-elle duré ?",
+  "options": [
+   "Moins d'une heure*",
+   "Une journée",
+   "Une semaine",
+   "Un mois"
+  ],
+  "explanation": "Environ 40 minutes : après un bombardement du palais, le sultan s'est enfui et le drapeau a été baissé."
+ },
+ {
+  "key": "onb3-02",
+  "concept": "history.antiquity.cleopatra_timeline",
+  "label": "Cléopâtre, l'iPhone et les pyramides",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans le temps, Cléopâtre est plus proche…",
+  "options": [
+   "de la sortie du premier iPhone*",
+   "de la construction de la pyramide de Khéops"
+  ],
+  "explanation": "La grande pyramide date d'environ 2560 av. J.-C., soit 2 500 ans avant Cléopâtre (morte en 30 av. J.-C.). Le premier iPhone est sorti environ 2 040 ans après elle."
+ },
+ {
+  "key": "onb3-03",
+  "concept": "nature.animals.koala_fingerprints",
+  "label": "Les empreintes du koala",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel animal a des empreintes digitales si proches des nôtres qu'on peut les confondre ?",
+  "options": [
+   "Le koala*",
+   "Le chimpanzé",
+   "Le panda",
+   "Le raton laveur"
+  ],
+  "explanation": "Le koala, pourtant très éloigné de nous, a développé des empreintes presque identiques aux nôtres, sans doute pour bien saisir les feuilles d'eucalyptus."
+ },
+ {
+  "key": "onb3-04",
+  "concept": "french.vocabulary.salaire_sel",
+  "label": "L'origine du mot salaire",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Le mot « salaire » vient d'une denrée autrefois précieuse. Laquelle ?",
+  "options": [
+   "Le sel*",
+   "Le sucre",
+   "Le safran",
+   "Le poivre"
+  ],
+  "explanation": "Il vient du latin salarium, lié au sel (sal), indispensable pour conserver les aliments et qui valait très cher dans l'Antiquité."
+ },
+ {
+  "key": "onb3-05",
+  "concept": "history.middle_ages.animal_trials",
+  "label": "Les procès d'animaux",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au Moyen Âge, qu'arrivait-il parfois à un animal accusé d'avoir tué quelqu'un ?",
+  "options": [
+   "Il avait droit à un procès*",
+   "On l'exilait sur une île",
+   "On l'offrait au roi",
+   "Rien : c'était interdit de le juger"
+  ],
+  "explanation": "Des cochons, des chiens, et même des insectes ont été jugés, parfois avec un avocat, du Moyen Âge jusqu'au XVIIIe siècle."
+ },
+ {
+  "key": "onb3-06",
+  "concept": "arts.painting.mona_lisa_eyebrows",
+  "label": "Ce qui manque à la Joconde",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Regarde bien la Joconde : qu'est-ce qu'on ne lui voit pas ?",
+  "options": [
+   "Des sourcils*",
+   "Des mains",
+   "Un sourire",
+   "Un paysage derrière elle"
+  ],
+  "explanation": "On ne voit ni sourcils ni cils. Peut-être la mode de l'époque, ou des détails effacés avec le temps et les restaurations."
+ },
+ {
+  "key": "onb3-07",
+  "concept": "music.instruments.einstein_violin",
+  "label": "L'instrument d'Einstein",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel instrument Albert Einstein jouait-il avec passion ?",
+  "options": [
+   "Du violon*",
+   "De la trompette",
+   "De la batterie",
+   "De la harpe"
+  ],
+  "explanation": "Il jouait du violon depuis l'enfance et disait que la musique l'aidait à réfléchir. Il surnommait son violon « Lina »."
+ },
+ {
+  "key": "onb3-08",
+  "concept": "geography.countries.scotland_unicorn",
+  "label": "L'animal national de l'Écosse",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est l'animal national officiel de l'Écosse ?",
+  "options": [
+   "La licorne*",
+   "Le cerf",
+   "L'aigle royal",
+   "Le lion"
+  ],
+  "explanation": "La licorne, symbole de pureté et de force, figure sur les armoiries écossaises depuis le Moyen Âge."
+ }
+]
