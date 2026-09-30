@@ -792,10 +792,131 @@ public struct LeagueSummary: Codable, Hashable, Identifiable, Sendable {
     public let period: LeaguePeriod
     public let members: Int
     public let inviteCode: String
+    /// upcoming · active · finished
+    public let status: String?
+    public let myRank: Int?
+    public let daysLeft: Int?
+    public let startsIn: Int?
+    public let questionCount: Int?
+    /// Quiz du jour de la ligue : todo · in_progress · done (nil hors saison).
+    public let todayState: String?
 
     enum CodingKeys: String, CodingKey {
-        case id, name, period, members
+        case id, name, period, members, status
         case inviteCode = "invite_code"
+        case myRank = "my_rank"
+        case daysLeft = "days_left"
+        case startsIn = "starts_in"
+        case questionCount = "question_count"
+        case todayState = "today_state"
+    }
+}
+
+/// Réglages d'une ligue.
+public struct LeagueSettings: Codable, Hashable, Sendable {
+    public static let counts = [5, 10, 15, 20]
+    public static let memberLimits = [5, 10, 20, 50]
+
+    public var questionCount: Int
+    /// nil ou vide = tous les domaines.
+    public var domains: [String]?
+    public var difficulty: String
+    /// 1w · 2w · 1m
+    public var duration: String
+    public var maxMembers: Int
+
+    public init(questionCount: Int = 5, domains: [String]? = nil, difficulty: String = "auto", duration: String = "1w",
+                maxMembers: Int = 50) {
+        self.questionCount = questionCount
+        self.domains = domains
+        self.difficulty = difficulty
+        self.duration = duration
+        self.maxMembers = maxMembers
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case domains, difficulty, duration
+        case questionCount = "question_count"
+        case maxMembers = "max_members"
+    }
+}
+
+/// Création d'une ligue.
+public struct LeagueDraft: Hashable, Sendable {
+    public var name: String
+    public var settings: LeagueSettings
+    public var startToday: Bool
+
+    public init(name: String = "", settings: LeagueSettings = LeagueSettings(), startToday: Bool = true) {
+        self.name = name
+        self.settings = settings
+        self.startToday = startToday
+    }
+}
+
+/// Aperçu d'une ligue avant de la rejoindre (par code ou lien).
+public struct LeaguePreview: Decodable, Hashable, Sendable {
+    public let found: Bool
+    public let error: String?
+    public let code: String?
+    public let name: String?
+    public let owner: String?
+    public let members: Int?
+    public let maxMembers: Int?
+    public let isMember: Bool?
+    public let status: String?
+    public let startsOn: String?
+    public let endsOn: String?
+    public let daysLeft: Int?
+    public let settings: LeagueSettings?
+
+    enum CodingKeys: String, CodingKey {
+        case found, error, code, name, owner, members, status, settings
+        case maxMembers = "max_members"
+        case isMember = "is_member"
+        case startsOn = "starts_on"
+        case endsOn = "ends_on"
+        case daysLeft = "days_left"
+    }
+}
+
+/// Résultat du quiz du jour d'une ligue : mes réponses, et les scores des membres une fois mon quiz fini.
+public struct LeagueDayResult: Decodable, Hashable, Sendable {
+    public struct Me: Decodable, Hashable, Sendable {
+        public let answered: Int
+        public let score: Int
+        public let totalMs: Int
+
+        enum CodingKeys: String, CodingKey {
+            case answered, score
+            case totalMs = "total_ms"
+        }
+    }
+
+    public struct Member: Decodable, Hashable, Identifiable, Sendable {
+        public let id: UUID
+        public let handle: String
+        public let isMe: Bool
+        public let answered: Int
+        public let score: Int
+        public let totalMs: Int
+
+        enum CodingKeys: String, CodingKey {
+            case id, handle, answered, score
+            case isMe = "is_me"
+            case totalMs = "total_ms"
+        }
+    }
+
+    public let day: String
+    public let total: Int
+    public let me: Me
+    public let myAnswers: [Duel.Mark]
+    public let members: [Member]?
+
+    enum CodingKeys: String, CodingKey {
+        case day, total, me, members
+        case myAnswers = "my_answers"
     }
 }
 
@@ -808,12 +929,23 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
         public let days: Int
         public let totalMs: Int
         public let isMe: Bool
+        public let isOwner: Bool?
 
         enum CodingKeys: String, CodingKey {
             case rank, id, handle, points, days
             case totalMs = "total_ms"
             case isMe = "is_me"
+            case isOwner = "is_owner"
         }
+    }
+
+    /// Quiz du jour du joueur dans cette ligue.
+    public struct Today: Codable, Hashable, Sendable {
+        public let answered: Int
+        public let score: Int
+        public let total: Int
+        /// todo · in_progress · done
+        public let state: String
     }
 
     public let id: UUID
@@ -828,6 +960,21 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
     public let podium: Podium?
     /// Coffre gagné par le joueur sur cette période (podium), s'il y en a un.
     public let myReward: Reward?
+    // Ligues v2 (absents sur un ancien serveur).
+    public let season: Int?
+    public let currentSeason: Int?
+    public let hasPrevious: Bool?
+    /// upcoming · active · finished
+    public let status: String?
+    public let timezone: String?
+    public let totalDays: Int?
+    public let dayIndex: Int?
+    public let daysLeft: Int?
+    public let startsIn: Int?
+    public let endsAt: String?
+    public let members: Int?
+    public let settings: LeagueSettings?
+    public let myToday: Today?
 
     public struct Podium: Codable, Hashable, Sendable {
         public let minPlayers: Int
@@ -853,6 +1000,15 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
         case startDate = "start_date"
         case endDate = "end_date"
         case myReward = "my_reward"
+        case season, status, timezone, members, settings
+        case currentSeason = "current_season"
+        case hasPrevious = "has_previous"
+        case totalDays = "total_days"
+        case dayIndex = "day_index"
+        case daysLeft = "days_left"
+        case startsIn = "starts_in"
+        case endsAt = "ends_at"
+        case myToday = "my_today"
     }
 }
 

@@ -23,6 +23,8 @@ struct FriendsView: View {
     @State private var duels: [Duel] = []
     @State private var activeDuel: DuelLaunch?
     @State private var pendingLaunch: DuelLaunch?
+    /// Code de ligue à confirmer (saisi ou reçu par lien) : aperçu avant de rejoindre.
+    @State private var joinRequest: LeagueJoinRequest?
 
     /// Duels qui attendent le joueur, ou un adversaire par lien.
     private var waitingDuels: [Duel] {
@@ -88,7 +90,10 @@ struct FriendsView: View {
         }
         .alert("Rejoindre une ligue", isPresented: $showJoin) {
             TextField("Code", text: $joinCode).textInputAutocapitalization(.characters)
-            Button("Rejoindre") { Task { await join(code: joinCode) } }
+            Button("Continuer") {
+                let code = joinCode.trimmingCharacters(in: .whitespaces)
+                if !code.isEmpty { joinRequest = LeagueJoinRequest(code: code) }
+            }
             Button("Annuler", role: .cancel) {}
         }
         .task {
@@ -99,6 +104,15 @@ struct FriendsView: View {
         }
         .fullScreenCover(item: $activeDuel, onDismiss: { Task { await load() } }) { launch in
             DuelSessionView(duelId: launch.id)
+        }
+        .sheet(item: $joinRequest) { request in
+            LeagueJoinSheet(code: request.code) { standings in
+                joinRequest = nil
+                Task {
+                    await load()
+                    path.append(.league(standings.id))
+                }
+            }
         }
         .task(id: app.pendingDuelCode) {
             if let code = app.pendingDuelCode {
@@ -115,7 +129,7 @@ struct FriendsView: View {
         .task(id: app.pendingLeagueCode) {
             if let code = app.pendingLeagueCode {
                 app.pendingLeagueCode = nil
-                await join(code: code)
+                joinRequest = LeagueJoinRequest(code: code)
             }
         }
     }
@@ -132,17 +146,6 @@ struct FriendsView: View {
         referral = await referralInfo
     }
 
-    private func join(code: String) async {
-        do {
-            let standings = try await app.service.joinLeague(code: code)
-            Haptics.success()
-            await load()
-            path.append(.league(standings.id))
-        } catch {
-            // Toast visible (l'ancien message s'affichait en bas de l'écran, hors de vue).
-            app.show((error as? LocalizedError)?.errorDescription ?? "Impossible de rejoindre cette ligue.")
-        }
-    }
 
     // MARK: Blocs
 
@@ -229,7 +232,7 @@ struct FriendsView: View {
         if leagues.isEmpty {
             Button { showNewLeague = true } label: {
                 EditorialRow(label: "Ligues", value: "Crée une ligue entre amis",
-                             detail: "Un classement privé, avec le code pour inviter", chevron: true)
+                             detail: "Un quiz privé chaque jour, un classement, un podium", symbol: "trophy.fill", chevron: true)
             }
             .buttonStyle(.row)
         } else {
@@ -237,8 +240,7 @@ struct FriendsView: View {
                 Text("Mes ligues").labelCaps()
                 ForEach(leagues) { league in
                     NavigationLink(value: Route.league(league.id)) {
-                        EditorialRow(label: league.period == .week ? "Semaine" : "Mois", value: league.name,
-                                     detail: "\(league.members) membre\(league.members > 1 ? "s" : "")", chevron: true)
+                        LeagueRow(league: league)
                     }
                     .buttonStyle(.row)
                 }

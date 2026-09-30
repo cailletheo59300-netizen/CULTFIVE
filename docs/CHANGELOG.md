@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.25.0 — Ligues v2 : un quiz quotidien propre à chaque ligue
+- **Quiz de la ligue** : chaque jour, un quiz dédié, le même pour tous les membres, **indépendant du 5 du jour** de Brainlix (carte jaune distincte), hors Elo, à faire avant minuit (fuseau de la ligue). 1 point par bonne réponse, départage au temps ; jour manqué = 0. Scores du jour des membres visibles une fois son quiz fini.
+- **Création réglable** : questions par jour (5, 10, 15, 20), domaines, difficulté (auto ou choisie), durée (1 semaine, 2 semaines, 1 mois), début aujourd'hui ou demain, membres max (5, 10, 20, 50), avec les dates exactes affichées avant de créer.
+- **Dates fiables** : calculées par le serveur dans le fuseau du créateur ; « 1 mois » = jusqu'à la veille du même jour le mois suivant (fin de mois ramenée au dernier jour existant, années bissextiles et changement d'année gérés). Temps restant clair : « 6 jours restants », « Se termine demain soir », « Dernier jour : fin ce soir à minuit », « Commence demain », « Terminée le … ».
+- **Saisons** : à la fin, le créateur lance une « Nouvelle saison » (mêmes membres et réglages) ; la saison précédente reste consultable ; coffres du podium comme avant.
+- **Invitations** : aperçu avant de rejoindre (nom, créateur, membres, réglages, dates) ; codes de 8 caractères ; essais de codes limités ; le créateur peut générer un nouveau code et retirer un membre ; ligue pleine refusée.
+- La ligue existante « Family » passe au nouveau format (5 questions, tous domaines, 1 mois à partir de demain). Migration 0034, tests ligues réécrits.
+
 ## 0.24.0 — Amis : profil d'ami, duels personnalisés, face-à-face
 - **Onglet Amis simplifié** : « À toi de jouer » (demandes, duels à jouer) seulement s'il y a quelque chose, puis Mes ligues et Mes amis en listes simples ; les actions globales (ajouter un ami, défier par lien, créer / rejoindre une ligue) dans le bouton « + ».
 - **Profil d'un ami** : son 5 du jour, sa série, son niveau et son Elo ; bouton « Défier » ; **face-à-face** (victoires, défaites, égalités, série en cours, taux de bonnes réponses, ton record, questions jouées) calculé sur tous vos duels ; derniers duels ; retirer / bloquer dans « ⋯ ».

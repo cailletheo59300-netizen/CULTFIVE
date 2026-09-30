@@ -126,30 +126,83 @@ begin
   perform tst.ok(public.referral_claim(v_code, 'device-late-22222222') ->> 'reason' = 'account_too_old', 'compte trop ancien');
 end $$;
 
--- Ligues : création, adhésion par code, classement (score puis temps), départ du propriétaire.
+-- Ligues : création, aperçu et adhésion par code, quiz du jour de la ligue, classement (points puis temps), saisons,
+-- départ du propriétaire.
+create or replace function tst.league_play(p_league uuid, p_user uuid, p_correct int, p_ms int) returns void language plpgsql as $$
+declare q jsonb; n int;
+begin
+  perform tst.login(p_user);
+  n := (select question_count from public.leagues where id = p_league);
+  for i in 1 .. n loop
+    q := public.league_question(p_league, i);
+    perform tst.tick((p_ms || ' milliseconds')::interval);
+    perform public.league_answer(p_league, i, case when i <= p_correct then tst.correct_given((q ->> 'id')::uuid)
+                                                   else tst.wrong_given() end, p_ms);
+  end loop;
+end $$;
+
 do $$
-declare a uuid := tst.new_user(); b uuid := tst.new_user(); l jsonb; st jsonb; v_code text; v_league uuid;
+declare a uuid := tst.new_user(); b uuid := tst.new_user(); l jsonb; st jsonb; pv jsonb; v_code text; v_league uuid; r jsonb;
 begin
   perform tst.clock('2026-12-09 10:00:00+01');  -- mercredi
   perform tst.login(a);
-  l := public.league_create('Les Curieux', 'week');
+  l := public.league_create('Les Curieux', 'week');  -- ancienne signature : 7 jours dès aujourd'hui
   v_league := (l ->> 'id')::uuid; v_code := l ->> 'invite_code';
-  perform tst.ok((l ->> 'start_date')::date = '2026-12-07' and (l ->> 'end_date')::date = '2026-12-13', 'semaine ISO lundi–dimanche');
-  perform tst.throws('select public.league_create(''ab'', ''week'')', 'check');
+  perform tst.ok((l ->> 'start_date')::date = '2026-12-09' and (l ->> 'end_date')::date = '2026-12-15', '7 jours à partir d''aujourd''hui');
+  perform tst.ok(l ->> 'status' = 'active' and (l ->> 'day_index')::int = 1 and (l ->> 'days_left')::int = 6, 'jour 1 sur 7, 6 jours restants');
+  perform tst.ok(length(v_code) = 8, 'code de 8 caractères');
+  perform tst.throws('select public.league_create(''ab'', ''week'')', 'invalid_name');
 
   perform tst.login(b);
   perform tst.throws(format('select public.league_standings(%L, 0)', v_league), 'league_not_found');
+  perform tst.throws(format('select public.league_question(%L, 1)', v_league), 'league_not_found');
+  pv := public.league_preview(lower(v_code));
+  perform tst.ok((pv ->> 'found')::bool and pv ->> 'name' = 'Les Curieux' and (pv ->> 'members')::int = 1
+                 and not (pv ->> 'is_member')::bool, 'aperçu avant de rejoindre');
+  perform tst.ok(not (public.league_preview('ZZZZZZZZ') ->> 'found')::bool, 'code inconnu : pas d''erreur, found = false');
   perform public.league_join(lower(v_code));
-  -- Scores de la semaine
-  insert into public.daily_runs (user_id, daily_date, status, started_at, deadline_at, score, total_ms) values
-    (a, '2026-12-07', 'finished', now(), now(), 4, 60000), (a, '2026-12-08', 'finished', now(), now(), 3, 50000),
-    (b, '2026-12-07', 'finished', now(), now(), 5, 90000), (b, '2026-12-08', 'finished', now(), now(), 2, 40000),
-    (b, '2026-11-30', 'finished', now(), now(), 5, 10000);  -- semaine précédente
+
+  -- Jour 1 : a 4/5 en 2 s, b 3/5 en 3 s. Jour 2 : a 3/5, b 4/5. Égalité 7 points : a plus rapide.
+  perform tst.league_play(v_league, a, 4, 2000);
+  perform tst.throws(format('select public.league_question(%L, 1)', v_league), 'league_out_of_order');
+  perform tst.league_play(v_league, b, 3, 3000);
+  r := public.league_day_result(v_league);
+  perform tst.ok(jsonb_array_length(r -> 'members') = 2 and (r -> 'members' -> 0 ->> 'score')::int = 4, 'résultat du jour des membres');
+  perform tst.tick('1 day');
+  perform tst.league_play(v_league, a, 3, 2000);
+  perform tst.league_play(v_league, b, 4, 3000);
   st := public.league_standings(v_league, 0);
   perform tst.ok(jsonb_array_length(st -> 'standings') = 2, '2 membres');
-  perform tst.ok((st -> 'standings' -> 0 ->> 'handle') = (select handle from public.profiles where id = a), 'égalité 7 pts : départagé au temps (110 s < 130 s)');
-  perform tst.ok((st -> 'standings' -> 0 ->> 'points')::int = 7 and (st -> 'standings' -> 1 ->> 'points')::int = 7, 'points');
-  perform tst.ok((public.league_standings(v_league, -1) -> 'standings' -> 0 ->> 'points')::int = 5, 'semaine précédente');
+  perform tst.ok((st -> 'standings' -> 0 ->> 'handle') = (select handle from public.profiles where id = a), 'égalité 7 pts : départagé au temps');
+  perform tst.ok((st -> 'standings' -> 0 ->> 'points')::int = 7 and (st -> 'standings' -> 1 ->> 'points')::int = 7
+                 and (st -> 'standings' -> 0 ->> 'days')::int = 2, 'points et jours joués');
+  perform tst.ok(st -> 'my_today' ->> 'state' = 'done', 'quiz du jour fait');
+  -- Les questions changent chaque jour et ne sont jamais le 5 du jour.
+  perform tst.ok((select count(*) from public.league_days where league_id = v_league) = 2
+                 and not exists (select 1 from public.league_days d1 join public.league_days d2 on d1.league_id = d2.league_id
+                                 and d1.day < d2.day and d1.question_ids && d2.question_ids where d1.league_id = v_league),
+                 'un quiz différent chaque jour');
+  -- Le quiz de ligue ne change pas l'Elo.
+  perform tst.ok(not exists (select 1 from public.question_attempts where user_id = a and dom_mu_after is not null
+                             and session_id = v_league), 'hors Elo');
+
+  -- Nouvelle saison : seulement une fois la ligue finie, par le créateur.
+  perform tst.login(a);
+  perform tst.throws(format('select public.league_new_season(%L)', v_league), 'league_not_finished');
+  perform tst.tick('6 days');   -- 16 décembre : terminée
+  perform tst.ok(public.league_standings(v_league, 0) ->> 'status' = 'finished', 'ligue terminée');
+  perform tst.login(b);
+  perform tst.throws(format('select public.league_new_season(%L)', v_league), 'forbidden');
+  perform tst.login(a);
+  st := public.league_new_season(v_league, false);
+  perform tst.ok((st ->> 'season')::int = 2 and st ->> 'status' = 'upcoming' and (st ->> 'starts_in')::int = 1, 'saison 2 demain');
+  perform tst.ok((public.league_standings(v_league, -1) -> 'standings' -> 0 ->> 'points')::int = 7, 'saison précédente');
+
+  -- Le créateur : nouveau code, retrait d'un membre.
+  perform tst.ok(public.league_regenerate_code(v_league) ->> 'invite_code' <> v_code, 'nouveau code');
+  perform tst.login(b);
+  perform tst.throws(format('select public.league_join(%L)', v_code), 'league_not_found');
+  perform tst.throws(format('select public.league_kick(%L, %L)', v_league, a), 'forbidden');
 
   perform tst.login(a);
   perform public.league_leave(v_league);
@@ -157,6 +210,43 @@ begin
   perform tst.login(b);
   perform public.league_leave(v_league);
   perform tst.ok(not exists (select 1 from public.leagues where id = v_league), 'ligue vide supprimée');
+end $$;
+
+-- Dates des ligues : mois de 28 à 31 jours, années bissextiles, changement d'année, fuseau du créateur.
+do $$
+declare u uuid := tst.new_user(); l jsonb;
+begin
+  perform tst.ok(public._league_last_day('2026-09-30', '1m') = '2026-10-29', '30 sept. + 1 mois → dernier jour 29 oct.');
+  perform tst.ok(public._league_last_day('2027-01-31', '1m') = '2027-02-27', '31 janv. → 27 févr. (février de 28 jours)');
+  perform tst.ok(public._league_last_day('2028-01-31', '1m') = '2028-02-28', '31 janv. 2028 → 28 févr. (année bissextile)');
+  perform tst.ok(public._league_last_day('2026-12-20', '2w') = '2027-01-02', 'changement d''année');
+  perform tst.ok(public._league_last_day('2028-02-29', '1w') = '2028-03-06', '29 févr. + 7 jours');
+  -- Fuseau : à 3 h UTC le 9 décembre, il est encore le 8 à New York.
+  update public.profiles set timezone = 'America/New_York' where id = u;
+  perform tst.clock('2026-12-09 03:00:00+00');
+  perform tst.login(u);
+  l := public.league_create('Les Lève-tard', 5, null, 'auto', '1m', true, 20);
+  perform tst.ok((l ->> 'start_date')::date = '2026-12-08' and (l ->> 'end_date')::date = '2027-01-07', 'jours comptés dans le fuseau de la ligue');
+  perform tst.ok((l ->> 'ends_at')::timestamptz = '2027-01-08 05:00:00+00', 'fin à minuit, heure de New York');
+  perform tst.ok((l -> 'settings' ->> 'max_members')::int = 20, 'membres max');
+  perform tst.throws('select public.league_create(''Trop'', 7, null, ''auto'', ''1w'', true, 50)', 'invalid_count');
+  perform tst.throws('select public.league_create(''Trop'', 5, null, ''auto'', ''3d'', true, 50)', 'invalid_duration');
+end $$;
+
+-- Invitations : essais de codes limités ; ligue pleine.
+do $$
+declare a uuid := tst.new_user(); b uuid := tst.new_user(); c uuid := tst.new_user(); l jsonb;
+begin
+  perform tst.clock('2026-12-20 10:00:00+01');
+  perform tst.login(a);
+  l := public.league_create('Petite', 5, null, 'auto', '1w', true, 2);
+  perform tst.login(b);
+  perform public.league_join(l ->> 'invite_code');
+  perform tst.login(c);
+  perform tst.throws(format('select public.league_join(%L)', l ->> 'invite_code'), 'league_full');
+  for i in 1 .. 30 loop perform public.league_preview('XXXX' || i); end loop;
+  perform tst.ok(public.league_preview(l ->> 'invite_code') ->> 'error' = 'rate_limited', 'aperçus limités à 30 par heure');
+  perform tst.throws(format('select public.league_join(%L)', l ->> 'invite_code'), 'rate_limited');
 end $$;
 
 -- Suppression de compte : tout disparaît en cascade ; les agrégats des questions restent.

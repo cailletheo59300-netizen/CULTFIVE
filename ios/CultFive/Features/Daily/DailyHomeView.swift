@@ -206,16 +206,28 @@ struct DailyHomeView: View {
             .lineLimit(1).minimumScaleFactor(0.6)
     }
 
-    /// « sur 8 · classement de la semaine, fin dans 3 j » ; à défaut de classement, le nombre de membres.
+    /// « Quiz de la ligue à jouer · sur 8 · fin dans 3 j » ; à défaut de classement, le nombre de membres.
     private func leagueDetail(_ league: LeagueSummary) -> String {
-        let period = league.period == .week ? "de la semaine" : "du mois"
+        var parts: [String] = []
+        switch league.todayState {
+        case "todo": parts.append("quiz de la ligue à jouer")
+        case "in_progress": parts.append("quiz de la ligue à finir")
+        case "done": parts.append("quiz du jour fait")
+        default: break
+        }
         guard let standings, standings.standings.contains(where: \.isMe) else {
             // Le nombre de membres est déjà affiché en grand à gauche.
-            return "membre\(league.members > 1 ? "s" : "") · classement \(period)"
+            parts.insert("membre\(league.members > 1 ? "s" : "")", at: 0)
+            return parts.joined(separator: " · ")
         }
-        var parts = ["sur \(standings.standings.count)", "classement \(period)"]
-        if let days = DailyHomeView.daysLeft(until: standings.endDate) {
-            parts.append(days <= 0 ? "dernier jour" : "fin dans \(days) j")
+        parts.append("sur \(standings.standings.count)")
+        switch league.status {
+        case "upcoming": parts.append("commence bientôt")
+        case "finished": parts.append("terminée")
+        default:
+            if let days = league.daysLeft ?? DailyHomeView.daysLeft(until: standings.endDate) {
+                parts.append(days <= 0 ? "dernier jour" : "fin dans \(days) j")
+            }
         }
         return parts.joined(separator: " · ")
     }
