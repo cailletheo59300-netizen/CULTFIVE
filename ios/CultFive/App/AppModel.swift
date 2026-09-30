@@ -245,6 +245,12 @@ final class AppModel {
         await ads.start()
     }
 
+    /// Majeur d'après la tranche d'âge indiquée (facultative) : sans réponse, on reste prudent.
+    private var isAdult: Bool {
+        guard let range = profile?.ageRange else { return false }
+        return range != "13-17"
+    }
+
     func refreshAdStatus() async {
         if let status = try? await service.adStatus() { adStatus = status }
     }
@@ -258,6 +264,7 @@ final class AppModel {
         try await service.adCan(kind, ref: ref)
         guard let user = profile?.id else { throw BackendError.notAuthenticated }
         track("ad_offer", ["kind": kind.rawValue])
+        ads.adultAudience = isAdult
         guard try await ads.showRewarded(kind, userId: user, ref: ref) else { return nil }
         track("ad_view", ["kind": kind.rawValue])
         let service = self.service
@@ -275,6 +282,7 @@ final class AppModel {
         try await service.adCan(.correction, ref: ref)
         guard let user = profile?.id else { throw BackendError.notAuthenticated }
         track("ad_offer", ["kind": AdKind.correction.rawValue])
+        ads.adultAudience = isAdult
         guard try await ads.showRewarded(.correction, userId: user, ref: ref) else { return nil }
         track("ad_view", ["kind": AdKind.correction.rawValue])
         let service = self.service
@@ -299,6 +307,7 @@ final class AppModel {
 
     /// Entre deux parties Jouer (après le bilan) : pub plein écran si elle est due.
     func interstitialBetweenGames() async {
+        ads.adultAudience = isAdult
         if await ads.showInterstitialIfDue(allowed: adStatus?.interstitial ?? false) {
             track("interstitial")
         }

@@ -33,6 +33,9 @@ final class AdsController {
     private let enabled: Bool
     private(set) var started = false
     private var starting = false
+    /// Joueur majeur (tranche d'âge 18+ indiquée) : pubs jusqu'à « public adulte » (MA). Sinon (13-17 ou âge non
+    /// indiqué) : « adolescents » (T) au plus. Les catégories sensibles restent bloquées dans AdMob pour tous.
+    var adultAudience = false
     /// Une pub récompensée a été vue depuis la dernière partie finie : pas de pub entre les parties juste après.
     private var rewardedSinceLastGame = false
     private let defaults = UserDefaults.standard
@@ -81,6 +84,7 @@ final class AdsController {
         let unit = testAds ? Self.testRewardedUnit : (Self.rewardedUnits[kind] ?? Self.testRewardedUnit)
         let ad: GADRewardedAd
         do {
+            applyAudience()
             ad = try await GADRewardedAd.load(withAdUnitID: unit, request: GADRequest())
         } catch {
             throw Self.unavailable
@@ -122,6 +126,7 @@ final class AdsController {
         let shownToday = defaults.string(forKey: Self.dayKey) == today ? defaults.integer(forKey: Self.countKey) : 0
         guard defaults.integer(forKey: Self.gamesKey) >= 3, shownToday < 3 else { return false }
         let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
+        applyAudience()
         guard let ad = try? await GADInterstitialAd.load(withAdUnitID: unit, request: GADRequest()) else { return false }
         let waiter = PresentationWaiter()
         ad.fullScreenContentDelegate = waiter
@@ -137,6 +142,11 @@ final class AdsController {
     }
 
     // MARK: Outils
+
+    /// Classification maximale des pubs, appliquée avant chaque chargement.
+    private func applyAudience() {
+        GADMobileAds.sharedInstance().requestConfiguration.maxAdContentRating = adultAudience ? .matureAudience : .teen
+    }
 
     private static var unavailable: BackendError { .server(status: 400, code: "ad_unavailable", message: "") }
 
