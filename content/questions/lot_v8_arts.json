@@ -1,0 +1,178 @@
+[
+ {
+  "key": "arts-501",
+  "concept": "arts.mythology.talon_achille",
+  "label": "Talon d'Achille",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel héros grec n'était vulnérable qu'au talon ?",
+  "options": [
+   "Achille*",
+   "Hercule",
+   "Ulysse",
+   "Persée"
+  ],
+  "explanation": "Sa mère l'avait plongé dans le Styx en le tenant par le talon. Pâris le tue d'une flèche à cet endroit.",
+  "hint": "On parle encore de son « talon »."
+ },
+ {
+  "key": "arts-502",
+  "concept": "arts.mythology.meduse_serpents",
+  "label": "Méduse",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle créature avait des serpents à la place des cheveux ?",
+  "options": [
+   "Méduse*",
+   "Athéna",
+   "L'Hydre",
+   "La Sphinx"
+  ],
+  "explanation": "Son regard changeait en pierre. Persée la vainc en regardant son reflet dans un bouclier.",
+  "hint": "Son regard pétrifiait."
+ },
+ {
+  "key": "arts-503",
+  "concept": "arts.literature.capitaine_nemo",
+  "label": "Capitaine Nemo",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle le capitaine du Nautilus dans « Vingt mille lieues sous les mers » ?",
+  "options": [
+   "Nemo*",
+   "Haddock",
+   "Achab",
+   "Crochet"
+  ],
+  "explanation": "« Nemo » veut dire « personne » en latin. Le roman de Jules Verne paraît en 1869-1870.",
+  "hint": "Son nom veut dire « personne »."
+ },
+ {
+  "key": "arts-504",
+  "concept": "arts.literature.rowling",
+  "label": "Harry Potter",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qui a écrit la saga Harry Potter ?",
+  "options": [
+   "J. K. Rowling*",
+   "J. R. R. Tolkien",
+   "Roald Dahl",
+   "C. S. Lewis"
+  ],
+  "explanation": "Le premier tome paraît en 1997. Elle en aurait eu l'idée dans un train entre Manchester et Londres.",
+  "hint": "Une autrice britannique."
+ },
+ {
+  "key": "arts-505",
+  "concept": "arts.painting.van_gogh_oreille",
+  "label": "Van Gogh",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel peintre s'est coupé une partie de l'oreille, en 1888 ?",
+  "options": [
+   "Vincent van Gogh*",
+   "Pablo Picasso",
+   "Claude Monet",
+   "Paul Gauguin"
+  ],
+  "explanation": "À Arles, après une dispute avec Gauguin. Il peint ensuite son autoportrait à l'oreille bandée.",
+  "hint": "Le peintre des « Tournesols »."
+ },
+ {
+  "key": "arts-506",
+  "concept": "arts.painting.bleu_jaune",
+  "label": "Mélange de couleurs",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "En peinture, quelle couleur obtient-on en mélangeant du bleu et du jaune ?",
+  "options": [
+   "Du vert*",
+   "Du violet",
+   "De l'orange",
+   "Du marron"
+  ],
+  "explanation": "Bleu + rouge donne du violet, rouge + jaune de l'orange.",
+  "hint": "La couleur de l'herbe."
+ },
+ {
+  "key": "arts-507",
+  "concept": "arts.architecture.tour_penchee",
+  "label": "Tour penchée",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quelle ville italienne se trouve la célèbre tour penchée ?",
+  "options": [
+   "Pise*",
+   "Rome",
+   "Venise",
+   "Florence"
+  ],
+  "explanation": "Elle commence à pencher dès sa construction, au XIIe siècle, à cause d'un sol trop mou.",
+  "hint": "Le nom de la tour est celui de la ville."
+ },
+ {
+  "key": "arts-508",
+  "concept": "arts.literature.corbeau_renard",
+  "label": "Fables",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui a écrit la fable « Le Corbeau et le Renard » ?",
+  "options": [
+   "Jean de La Fontaine*",
+   "Charles Perrault",
+   "Molière",
+   "Victor Hugo"
+  ],
+  "explanation": "Publiée en 1668. « Maître Corbeau, sur un arbre perché… »",
+  "hint": "Il a aussi écrit « La Cigale et la Fourmi »."
+ },
+ {
+  "key": "arts-509",
+  "concept": "arts.mythology.zeus_roi",
+  "label": "Roi des dieux",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel dieu grec est le roi de l'Olympe ?",
+  "options": [
+   "Zeus*",
+   "Poséidon",
+   "Apollon",
+   "Hadès"
+  ],
+  "explanation": "Il règne sur le ciel et lance la foudre. Les Romains l'appelaient Jupiter.",
+  "hint": "Il lance la foudre."
+ },
+ {
+  "key": "arts-510",
+  "concept": "arts.architecture.pyramide_louvre",
+  "label": "Pyramide du Louvre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel monument de verre se trouve dans la cour du Louvre ?",
+  "options": [
+   "Une pyramide*",
+   "Un dôme",
+   "Une tour",
+   "Un cube"
+  ],
+  "explanation": "Inaugurée en 1989, dessinée par l'architecte Ieoh Ming Pei. Elle sert d'entrée au musée.",
+  "hint": "Une forme égyptienne."
+ },
+ {
+  "key": "arts-511",
+  "concept": "arts.painting.cri_munch",
+  "label": "Le Cri",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel peintre a réalisé « Le Cri », où un personnage se tient la tête sur un pont ?",
+  "options": [
+   "Edvard Munch*",
+   "Vincent van Gogh",
+   "Salvador Dalí",
+   "Pablo Picasso"
+  ],
+  "explanation": "Le peintre norvégien en a fait plusieurs versions, à partir de 1893.",
+  "hint": "Un peintre norvégien."
+ }
+]

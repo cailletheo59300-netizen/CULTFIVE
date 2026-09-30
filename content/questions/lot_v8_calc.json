@@ -1,0 +1,154 @@
+[
+ {
+  "key": "calc-501",
+  "concept": "calc.mental.produit_17_23",
+  "label": "Calcul mental",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Combien font 17 × 23 ?",
+  "answer": 391,
+  "explanation": "17 × 23 = 17 × 20 + 17 × 3 = 340 + 51 = 391.",
+  "hint": "Décompose 23 en 20 + 3."
+ },
+ {
+  "key": "calc-502",
+  "concept": "calc.mental.carre_99",
+  "label": "Carré de 99",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Combien font 99 × 99 ?",
+  "answer": 9801,
+  "explanation": "99² = (100 − 1)² = 10 000 − 200 + 1 = 9 801.",
+  "hint": "Pense à 100 − 1."
+ },
+ {
+  "key": "calc-503",
+  "concept": "calc.mental.produit_125_64",
+  "label": "Calcul astucieux",
+  "type": "numeric",
+  "difficulty": 66,
+  "prompt": "Combien font 125 × 64 ?",
+  "answer": 8000,
+  "explanation": "125 × 8 = 1 000, et 64 = 8 × 8 : donc 1 000 × 8 = 8 000.",
+  "hint": "125 × 8 = 1 000."
+ },
+ {
+  "key": "calc-504",
+  "concept": "calc.percent.hausse_baisse_20",
+  "label": "Hausse puis baisse",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Un prix augmente de 20 %, puis baisse de 20 %. De combien de pour cent a-t-il varié au total ?",
+  "answer": -4,
+  "explanation": "× 1,2 puis × 0,8 = × 0,96 : le prix a baissé de 4 %. La baisse s'applique à un montant plus grand.",
+  "hint": "Multiplie 1,2 par 0,8.",
+  "unit": "%"
+ },
+ {
+  "key": "calc-505",
+  "concept": "calc.percent.solde_30",
+  "label": "Prix avant soldes",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Un article soldé à −30 % coûte 56 €. Quel était son prix avant les soldes ?",
+  "answer": 80,
+  "explanation": "56 € représentent 70 % du prix : 56 ÷ 0,7 = 80 €.",
+  "hint": "56 € correspondent à 70 %.",
+  "unit": "€"
+ },
+ {
+  "key": "calc-506",
+  "concept": "calc.percent.deux_hausses_10",
+  "label": "Hausses successives",
+  "type": "numeric",
+  "difficulty": 66,
+  "prompt": "Un loyer augmente de 10 % deux années de suite. De combien de pour cent a-t-il augmenté au total ?",
+  "answer": 21,
+  "explanation": "1,1 × 1,1 = 1,21 : la seconde hausse porte aussi sur la première.",
+  "hint": "Pas 20.",
+  "unit": "%"
+ },
+ {
+  "key": "calc-507",
+  "concept": "calc.percent.pourcent_35_180",
+  "label": "Pourcentage",
+  "type": "numeric",
+  "difficulty": 66,
+  "prompt": "Combien font 35 % de 180 ?",
+  "answer": 63,
+  "explanation": "10 % de 180 = 18 ; 30 % = 54 ; 5 % = 9 ; 54 + 9 = 63.",
+  "hint": "Calcule 10 %, puis 5 %."
+ },
+ {
+  "key": "calc-508",
+  "concept": "calc.fractions.deux_tiers_trois_quarts",
+  "label": "Fraction de fraction",
+  "type": "numeric",
+  "difficulty": 66,
+  "prompt": "Combien font les 2/3 des 3/4 de 80 ?",
+  "answer": 40,
+  "explanation": "3/4 de 80 = 60 ; 2/3 de 60 = 40. Ou directement : 2/3 × 3/4 = 1/2.",
+  "hint": "2/3 × 3/4 se simplifie."
+ },
+ {
+  "key": "calc-509",
+  "concept": "calc.fractions.plus_grande_fraction",
+  "label": "Comparer des fractions",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quelle fraction est la plus grande ?",
+  "options": [
+   "2/3*",
+   "5/8",
+   "3/5",
+   "7/12"
+  ],
+  "explanation": "En 120es : 2/3 = 80, 5/8 = 75, 3/5 = 72, 7/12 = 70.",
+  "hint": "Mets-les au même dénominateur."
+ },
+ {
+  "key": "calc-510",
+  "concept": "calc.conversions.kmh_ms",
+  "label": "km/h en m/s",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "À combien de mètres par seconde correspond une vitesse de 90 km/h ?",
+  "answer": 25,
+  "explanation": "90 000 m en 3 600 s : 90 ÷ 3,6 = 25 m/s.",
+  "hint": "Divise par 3,6.",
+  "unit": "m/s"
+ },
+ {
+  "key": "calc-511",
+  "concept": "calc.number_logic.premier_apres_90",
+  "label": "Nombre premier",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Quel est le plus petit nombre premier supérieur à 90 ?",
+  "answer": 97,
+  "explanation": "91 = 7 × 13, 93 = 3 × 31, 95 = 5 × 19 ; 97 n'a pas de diviseur.",
+  "hint": "Méfie-toi de 91."
+ },
+ {
+  "key": "calc-512",
+  "concept": "calc.number_logic.somme_1_100",
+  "label": "Somme de Gauss",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien vaut la somme de tous les entiers de 1 à 100 ?",
+  "answer": 5050,
+  "explanation": "On associe 1 + 100, 2 + 99… : 50 paires de 101 = 5 050. Gauss l'aurait trouvé enfant.",
+  "hint": "Associe le premier et le dernier."
+ },
+ {
+  "key": "calc-513",
+  "concept": "calc.number_logic.pgcd_84_126",
+  "label": "Plus grand diviseur commun",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Quel est le plus grand nombre qui divise à la fois 84 et 126 ?",
+  "answer": 42,
+  "explanation": "84 = 2 × 42 et 126 = 3 × 42.",
+  "hint": "Il divise aussi leur différence, 42."
+ }
+]
