@@ -41,6 +41,35 @@ jobs:
           sudo xcode-select -s "$XCODE"
           xcodebuild -version
 
+      # Chaque build part d'une machine vierge : Xcode y crée un certificat de développement jetable (« Created via API »).
+      # Apple en limite le nombre ; on supprime ces certificats-là avant d'en créer un nouveau. Jamais les certificats
+      # de distribution (publication), jamais les certificats de développement créés à la main.
+      - name: Nettoyage des certificats de développement jetables
+        run: |
+          pip3 install --quiet --break-system-packages pyjwt cryptography || pip3 install --quiet pyjwt cryptography
+          python3 - <<'PY' || echo "::warning::Nettoyage des certificats impossible (le build continue)."
+          import json, os, time, urllib.request, jwt
+          key = open(os.environ["ASC_KEY_PATH"]).read()
+          token = jwt.encode({"iss": os.environ["ASC_ISSUER_ID"], "iat": int(time.time()), "exp": int(time.time()) + 600,
+                              "aud": "appstoreconnect-v1"}, key, algorithm="ES256",
+                             headers={"kid": os.environ["ASC_KEY_ID"], "typ": "JWT"})
+          def call(method, url):
+              req = urllib.request.Request(url, method=method, headers={"Authorization": f"Bearer {token}"})
+              with urllib.request.urlopen(req) as r:
+                  body = r.read()
+                  return json.loads(body) if body else None
+          certs = call("GET", "https://api.appstoreconnect.apple.com/v1/certificates?limit=200")["data"]
+          removed = 0
+          for c in certs:
+              a = c["attributes"]
+              kind = a.get("certificateType", "")
+              label = f"{a.get('name', '')} {a.get('displayName', '')}"
+              if kind in ("DEVELOPMENT", "IOS_DEVELOPMENT") and "Created via API" in label:
+                  call("DELETE", f"https://api.appstoreconnect.apple.com/v1/certificates/{c['id']}")
+                  removed += 1
+          print(f"Certificats de développement jetables supprimés : {removed} (sur {len(certs)} certificats)")
+          PY
+
       - name: XcodeGen
         run: |
           brew install xcodegen
