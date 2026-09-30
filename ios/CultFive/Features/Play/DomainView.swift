@@ -79,16 +79,18 @@ struct DomainView: View {
                         if let next = stats.rating.toNextRank, let rank = stats.rating.rank.next {
                             Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote)
                         } else {
-                            Text("rang maximal").font(.cfFootnote)
+                            Text("niveau maximal").font(.cfFootnote)
                         }
                     }
                     .foregroundStyle(DomainPalette.onColor(domainId).opacity(0.85))
                 }
             } else if let stats {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("Placement \(stats.rating.placementGames)/\(CoteCULT.placementGames)")
-                        .font(.system(.title2, design: .rounded).weight(.black))
-                    Text("Joue \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") pour découvrir ton Elo.")
+                    HStack(alignment: .lastTextBaseline, spacing: Space.s) {
+                        Text(stats.rating.formatted).numeral(size: 48).opacity(0.8)
+                        Text("Elo \(stats.rating.provisionalLabel)").font(.cfFootnote.weight(.bold))
+                    }
+                    Text("Encore \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") pour le confirmer.")
                         .font(.cfFootnote)
                         .opacity(0.85)
                 }

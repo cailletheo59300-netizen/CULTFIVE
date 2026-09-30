@@ -118,36 +118,37 @@ struct ProfileView: View {
 
     /// Cote CULT globale : moyenne des domaines pondérée par les réponses, rang et progression vers le rang suivant.
     private var coteCard: some View {
-        // Seuls les domaines placés comptent : une cote encore cachée ne s'affiche nulle part.
-        let placedSkills = skills.filter { $0.rating.placed }
-        let global = CoteCULT.global(placedSkills).map { CoteCULT(cote: $0.cote, answered: $0.answered, placed: true) }
+        // Même règle que l'écran Jouer : l'Elo se voit dès la 1re partie, « provisoire » tant qu'aucun domaine n'est confirmé.
+        let global = CoteCULT.overall(skills)
+        let confirmed = skills.filter { $0.rating.placed }.count
+        let played = skills.filter { $0.answered > 0 }.count
         return HStack(spacing: Space.m) {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Elo").labelCaps(.white.opacity(0.8))
-                if let global, global.placed {
-                    Text(global.formatted).numeral(size: 52).foregroundStyle(Color.white)
-                    Text(global.rank.name).font(.cfHeadline).foregroundStyle(Color.sun)
-                    if let next = global.toNextRank, let rank = global.rank.next {
-                        ProgressView(value: next.progress).tint(.sun)
-                            .frame(maxWidth: 200)
-                            .accessibilityLabel("\(next.missing) points avant \(rank.name)")
-                        Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote).foregroundStyle(.white.opacity(0.8))
+                if let global {
+                    Text(global.formatted).numeral(size: 52).foregroundStyle(global.placed ? Color.white : .white.opacity(0.75))
+                    if global.placed {
+                        Text(global.rank.name).font(.cfHeadline).foregroundStyle(Color.sun)
+                        if let next = global.toNextRank, let rank = global.rank.next {
+                            ProgressView(value: next.progress).tint(.sun)
+                                .frame(maxWidth: 200)
+                                .accessibilityLabel("\(next.missing) points avant \(rank.name)")
+                            Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote).foregroundStyle(.white.opacity(0.8))
+                        }
+                    } else {
+                        Text("Elo provisoire").font(.cfHeadline).foregroundStyle(Color.sun)
+                        Text("Il se confirme après 5 parties classées dans un domaine.")
+                            .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 } else {
-                    Text("En placement").font(.system(.title2, design: .rounded).weight(.black)).foregroundStyle(Color.white)
-                    if let closest = skills.filter({ !$0.rating.placed && $0.answered > 0 }).max(by: { $0.answered < $1.answered }) {
-                        PlacementSquares(done: closest.rating.placementGames, color: .sun, empty: .white.opacity(0.25), size: 12)
-                        Text("\(closest.name) : \(closest.rating.placementGames)/\(CoteCULT.placementGames) parties classées. Ton rang se dévoile à la 5e.")
-                            .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
-                            .fixedSize(horizontal: false, vertical: true)
-                    } else {
-                        Text("Joue 5 parties classées dans un domaine pour découvrir ton rang.")
-                            .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
+                    Text("1 000").numeral(size: 52).foregroundStyle(.white.opacity(0.75))
+                    Text("Tout le monde part de 1 000. Joue une partie classée pour voir ton Elo bouger.")
+                        .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                if !skills.isEmpty {
-                    Text("Domaines placés : \(placedSkills.count) sur \(skills.count)")
+                if played > 0 {
+                    Text("Elo confirmé dans \(confirmed) domaine\(confirmed > 1 ? "s" : "") sur \(played) joué\(played > 1 ? "s" : "")")
                         .font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.75))
                         .padding(.top, 2)
                 }
@@ -234,12 +235,15 @@ struct ProfileView: View {
                             if skill.rating.placed {
                                 Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
                                     .foregroundStyle(Color.ink)
-                            } else {
-                                PlacementSquares(done: skill.rating.placementGames, color: DomainPalette.color(skill.domainId), size: 12)
+                            } else if skill.answered > 0 {
+                                Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
+                                    .foregroundStyle(Color.inkSoft)
                             }
                         }
                         if skill.rating.placed {
                             SkillBar(level: skill.level, reliability: skill.reliability, color: DomainPalette.color(skill.domainId))
+                        } else {
+                            PlacementSquares(done: skill.rating.placementGames, color: DomainPalette.color(skill.domainId), size: 10)
                         }
                         HStack(alignment: .center) {
                             Text(placementLine(skill))
@@ -261,8 +265,8 @@ struct ProfileView: View {
         if skill.rating.placed { return "\(skill.rating.rank.name) · \(skill.answered) réponses" }
         let done = skill.rating.placementGames
         let left = CoteCULT.placementGames - done
-        if skill.answered == 0 { return "Pas encore joué · 5 parties classées pour ton rang" }
-        return "\(done)/\(CoteCULT.placementGames) parties · encore \(left) pour découvrir ton rang"
+        if skill.answered == 0 { return "Pas encore joué · départ à 1 000" }
+        return "Elo provisoire · \(done)/\(CoteCULT.placementGames) parties · encore \(left) pour le confirmer"
     }
 
     /// Les 5 dernières semaines du 5 du jour : un trait par jour joué.

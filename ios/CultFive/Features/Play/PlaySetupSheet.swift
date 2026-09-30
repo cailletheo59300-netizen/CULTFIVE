@@ -89,7 +89,8 @@ struct PlaySetupSheet: View {
     private func ratingLine(_ skill: SkillSummary) -> String {
         let rating = skill.rating
         if rating.placed { return "Elo \(rating.formatted) · \(rating.rank.name)" }
-        return "Placement \(rating.placementGames)/\(CoteCULT.placementGames) · ton Elo se dévoile après 5 parties classées"
+        if rating.answered == 0 { return "Elo de départ : 1 000 · il se confirme après 5 parties classées" }
+        return "Elo \(rating.formatted) (\(rating.provisionalLabel)) · il se confirme après 5 parties classées"
     }
 
     private var kindPicker: some View {

@@ -13,8 +13,6 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
     /// Difficulté ressentie pour ce joueur (parties Jouer) : pastille au-dessus de l'énoncé.
     var difficulty: RelativeDifficulty? = nil
     var continueTitle: String = "Continuer"
-    /// Réponse en suspens sans envoi réseau (Seconde chance proposée) : pas de roue d'attente, les aides restent visibles.
-    var onHold = false
     let onSubmit: (GivenAnswer) -> Void
     let onContinue: () -> Void
     var onDisplayed: () -> Void = {}
@@ -51,7 +49,7 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
 
                         answerArea
 
-                        if phase.isAnswering || onHold {
+                        if phase.isAnswering {
                             help()
                         }
 
@@ -83,7 +81,7 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
                     .buttonStyle(.domain(question.domainId))
                     .padding(.horizontal, Space.gutter)
                     .padding(.vertical, Space.s)
-            } else if case .submitting = phase, !onHold {
+            } else if case .submitting = phase {
                 ProgressView().frame(height: 56).padding(.vertical, Space.s)
             }
         }

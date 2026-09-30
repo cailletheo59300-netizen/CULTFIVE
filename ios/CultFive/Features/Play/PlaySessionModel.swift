@@ -64,6 +64,8 @@ final class PlaySessionModel {
         case intro
         case playing
         case summary(PlaySummary)
+        /// « Corrige tes erreurs » : les questions ratées, rejouées une fois.
+        case correction
         case empty(String)
         case failed(String)
     }
@@ -87,12 +89,19 @@ final class PlaySessionModel {
         /// Variation de cote par domaine (partie classée synchronisée).
         var ratings: [PlaySubmitResult.RatingChange] = []
 
-        /// Réponses de la partie par domaine (pour savoir si le placement vient de se terminer).
+        /// Réponses de la partie par domaine (pour savoir si l'Elo vient d'être confirmé).
         var answeredByDomain: [String: Int] = [:]
+        /// « Corrige tes erreurs » : proposé après une partie synchronisée qui a des erreurs.
+        var correctionAvailable = false
+        var correctionLoading = false
+        var correctionError: String?
+        var correction: CorrectionResult?
 
         static func == (lhs: PlaySummary, rhs: PlaySummary) -> Bool {
             lhs.correct == rhs.correct && lhs.total == rhs.total && lhs.xp == rhs.xp && lhs.seeds == rhs.seeds
                 && lhs.corrected == rhs.corrected && lhs.synced == rhs.synced && lhs.syncing == rhs.syncing
+                && lhs.correction == rhs.correction && lhs.correctionLoading == rhs.correctionLoading
+                && lhs.correctionError == rhs.correctionError && lhs.correctionAvailable == rhs.correctionAvailable
         }
     }
 
@@ -110,9 +119,11 @@ final class PlaySessionModel {
     private(set) var helpError: String?
     /// Aide en cours de validation par le serveur : le bouton est verrouillé, le solde déjà décompté.
     private(set) var pendingHelp: HelpKind?
-    /// Mauvaise réponse en suspens : la correction attend que le joueur choisisse Seconde chance ou « Voir la réponse ».
-    private(set) var secondChanceOffer: GivenAnswer?
-    /// Seconde chance prise sur la question en cours : la première réponse (fausse).
+    /// Bouclier activé sur la question en cours (payé à l'activation) : une erreur donne aussitôt un second essai.
+    private(set) var shieldArmed = false
+    /// Le bouclier vient de servir : « Bouclier ! Encore un essai ».
+    private(set) var shieldTriggered = false
+    /// Bouclier déclenché sur la question en cours : la première réponse (fausse).
     private(set) var firstGiven: GivenAnswer?
     /// Fin du temps imparti pour la question en cours (entraînement chronométré).
     private(set) var deadline: Date?
@@ -244,11 +255,15 @@ final class PlaySessionModel {
         stopwatch.pause()
         deadline = nil
         let correct = AnswerEvaluator.isCorrect(given, for: question) ?? false
-        // Raté : on propose une Seconde chance avant de montrer la correction.
-        if !correct, firstGiven == nil, offersSecondChance(question) {
-            Haptics.selection()
-            secondChanceOffer = given
-            phase = .submitting(given)
+        // Bouclier actif : l'erreur est absorbée, second essai immédiat sans rien révéler ni demander.
+        if !correct, shieldArmed, firstGiven == nil {
+            shieldArmed = false
+            shieldTriggered = true
+            firstGiven = given
+            if case .option(let optionId) = given { removedOptions.insert(optionId) }
+            Haptics.soft()
+            stopwatch.start()
+            if let timer = config.timer { deadline = Date().addingTimeInterval(TimeInterval(timer)) }
             return
         }
         record(given, correct: correct, question: question, reveal: reveal)
@@ -262,40 +277,21 @@ final class PlaySessionModel {
         // Réussie au second essai : moitié des points (même règle que le serveur).
         if firstGiven != nil { lastPoints /= 2 }
         points += lastPoints
+        shieldArmed = false
+        shieldTriggered = false
         Feedback.answer(correct)
         phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
     }
 
-    /// Seconde chance possible : en ligne, une seule fois par question, jamais sur un Vrai/Faux ou un choix à 2 options
-    /// (le second essai serait gagné d'avance), et seulement si le joueur peut la payer.
-    private func offersSecondChance(_ question: Question) -> Bool {
-        guard !usedOfflinePack, sessionId != nil, canAfford(.secondChance) else { return false }
+    /// Bouclier possible : en ligne, pas encore utilisé sur la question, jamais sur un Vrai/Faux ou un choix à 2 options
+    /// (le second essai serait gagné d'avance).
+    private func shieldAllowed(_ question: Question) -> Bool {
+        guard !usedOfflinePack, sessionId != nil, !shieldArmed, firstGiven == nil else { return false }
         switch question.type {
         case .trueFalse: return false
         case .mcq, .mapPick: return (question.payload.options?.count ?? 0) - removedOptions.count >= 3
         default: return true
         }
-    }
-
-    /// « Voir la réponse » : la mauvaise réponse compte, la correction s'affiche.
-    func declineSecondChance() {
-        guard let given = secondChanceOffer, let question = current, let reveal = question.reveal, pendingHelp == nil else { return }
-        secondChanceOffer = nil
-        helpError = nil
-        record(given, correct: false, question: question, reveal: reveal)
-    }
-
-    /// Seconde chance : payée (ticket ou graines), la question se rejoue sans la réponse déjà tentée.
-    func acceptSecondChance() async {
-        guard let given = secondChanceOffer, let question = current else { return }
-        await useHelp(.secondChance)
-        guard helpError == nil, current?.id == question.id, secondChanceOffer == given else { return }
-        secondChanceOffer = nil
-        firstGiven = given
-        if case .option(let optionId) = given { removedOptions.insert(optionId) }
-        phase = .answering
-        stopwatch.start()
-        if let timer = config.timer { deadline = Date().addingTimeInterval(TimeInterval(timer)) }
     }
 
     /// Badge immédiat en mode Erreurs : une bonne réponse corrige l'erreur.
@@ -317,7 +313,8 @@ final class PlaySessionModel {
             removedOptions = []
             helpText = nil
             helpError = nil
-            secondChanceOffer = nil
+            shieldArmed = false
+            shieldTriggered = false
             firstGiven = nil
             stopwatch.reset()
         }
@@ -332,6 +329,9 @@ final class PlaySessionModel {
         guard pick > 0 else { return }
         questions.swapAt(index + 1, index + 1 + pick)
     }
+
+    /// Identifiant de la partie (pour « Corrige tes erreurs »).
+    var currentSessionId: UUID? { sessionId }
 
     /// Terminer plus tôt : ce qui a été joué compte.
     func finish() async {
@@ -361,11 +361,88 @@ final class PlaySessionModel {
             summary.synced = true
             if let serverPoints = result.points { summary.points = serverPoints }
             summary.ratings = config.countsForElo ? (result.ratings ?? []) : []
+            summary.correctionAvailable = !summary.missed.isEmpty && !usedOfflinePack && config.mode != .errors
             seedsBalance = result.balance
         } catch {
             await queue.enqueue(session: sessionId, attempts: attempts)
         }
         stage = .summary(summary)
+    }
+
+    // MARK: Corrige tes erreurs
+
+    private var lastSummary: PlaySummary?
+    private(set) var correctionQuestions: [Question] = []
+    private(set) var correctionIndex = 0
+    private(set) var correctionPhase: AnswerPhase = .answering
+    private var correctionAnswers: [(UUID, GivenAnswer?)] = []
+    private(set) var correctionRanked = true
+
+    var correctionQuestion: Question? {
+        correctionQuestions.indices.contains(correctionIndex) ? correctionQuestions[correctionIndex] : nil
+    }
+
+    /// Ouvre la correction : le serveur confirme les questions ratées, on les rejoue depuis le pack de la partie.
+    func startCorrection() async {
+        guard case .summary(var summary) = stage, let sessionId, !summary.correctionLoading else { return }
+        summary.correctionLoading = true
+        summary.correctionError = nil
+        stage = .summary(summary)
+        do {
+            let start = try await service.correctionStart(session: sessionId)
+            let byId = Dictionary(questions.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+            correctionQuestions = start.questionIds.compactMap { byId[$0] }.filter { $0.reveal != nil }
+            correctionRanked = start.ranked
+            guard !correctionQuestions.isEmpty else { throw BackendError.server(status: 400, code: "nothing_to_correct", message: "") }
+            summary.correctionLoading = false
+            lastSummary = summary
+            correctionIndex = 0
+            correctionAnswers = []
+            correctionPhase = .answering
+            Haptics.selection()
+            stage = .correction
+        } catch {
+            summary.correctionLoading = false
+            summary.correctionError = (error as? LocalizedError)?.errorDescription ?? "Correction impossible pour l'instant."
+            stage = .summary(summary)
+        }
+    }
+
+    func submitCorrection(_ given: GivenAnswer) {
+        guard correctionPhase.isAnswering, let question = correctionQuestion, let reveal = question.reveal else { return }
+        let correct = AnswerEvaluator.isCorrect(given, for: question) ?? false
+        correctionAnswers.append((question.id, given))
+        Feedback.answer(correct)
+        correctionPhase = .revealed(given: given, isCorrect: correct, reveal: reveal)
+    }
+
+    var correctionIsLast: Bool { correctionIndex >= correctionQuestions.count - 1 }
+
+    func nextCorrection() async {
+        if !correctionIsLast {
+            correctionIndex += 1
+            correctionPhase = .answering
+            return
+        }
+        guard let sessionId, var summary = lastSummary else { return }
+        summary.correctionLoading = true
+        stage = .summary(summary)
+        do {
+            summary.correction = try await service.correctionSubmit(session: sessionId, answers: correctionAnswers)
+            summary.correctionAvailable = false
+            if summary.correction?.corrected == summary.correction?.total { Haptics.success() }
+        } catch {
+            summary.correctionError = (error as? LocalizedError)?.errorDescription ?? "Correction non enregistrée. Réessaie."
+        }
+        summary.correctionLoading = false
+        stage = .summary(summary)
+    }
+
+    /// Quitter la correction en cours : ce qui a été répondu est envoyé.
+    func abandonCorrection() async {
+        guard stage == .correction else { return }
+        correctionIndex = max(0, correctionQuestions.count - 1)
+        await nextCorrection()
     }
 
     // MARK: Aides (graines)
@@ -376,8 +453,8 @@ final class PlaySessionModel {
         if (question.type == .mcq || question.type == .mapPick), (question.payload.options?.count ?? 0) > 2, removedOptions.isEmpty {
             kinds.append(.fiftyFifty)
         }
+        if shieldAllowed(question) { kinds.append(.secondChance) }
         if question.hasHint == true, helpText == nil { kinds.append(.hint) }
-        if question.hasContext == true, helpText == nil { kinds.append(.context) }
         return kinds
     }
 
@@ -386,8 +463,7 @@ final class PlaySessionModel {
     /// lui, ne facture jamais deux fois la même aide sur la même question.
     func useHelp(_ kind: HelpKind) async {
         guard let sessionId, let question = current, pendingHelp == nil, canAfford(kind) else { return }
-        // Une aide classique ne se prend qu'en répondant ; la Seconde chance, seulement après une erreur.
-        guard kind == .secondChance ? secondChanceOffer != nil : phase.isAnswering else { return }
+        guard phase.isAnswering else { return }
         helpError = nil
         pendingHelp = kind
         Haptics.selection()
@@ -415,7 +491,7 @@ final class PlaySessionModel {
             case .fiftyFifty: removedOptions = Set(content.remove ?? [])
             case .hint: helpText = content.hint
             case .context: helpText = content.context
-            case .secondChance: break
+            case .secondChance: shieldArmed = true
             }
         } catch {
             seedsBalance = previousSeeds

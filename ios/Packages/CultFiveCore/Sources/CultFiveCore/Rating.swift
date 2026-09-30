@@ -34,6 +34,15 @@ public struct CoteCULT: Hashable, Sendable {
         return CoteCULT(cote: Int(weighted.rounded()), answered: total)
     }
 
+    /// Elo global de tous les domaines joués, affiché dès la 1re partie ; « confirmé » dès qu'un domaine l'est.
+    public static func overall(_ skills: [SkillSummary]) -> CoteCULT? {
+        guard let all = global(skills) else { return nil }
+        return CoteCULT(cote: all.cote, answered: all.answered, placed: skills.contains { $0.rating.placed })
+    }
+
+    /// « provisoire · 2/5 » : parties classées jouées sur les 5 qui confirment l'Elo d'un domaine.
+    public var provisionalLabel: String { "provisoire · \(placementGames)/\(CoteCULT.placementGames)" }
+
     /// « 1 342 » (espace fine insécable des milliers, à la française).
     public var formatted: String { CoteCULT.format(cote) }
 

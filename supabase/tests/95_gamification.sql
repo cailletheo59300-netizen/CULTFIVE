@@ -21,7 +21,9 @@ begin
   select id into c from public.user_chests where user_id = u and idempotency_key = 'level:10';
   select seeds into seeds0 from public.profiles where id = u;
   r := public.chest_open(c);
-  perform tst.ok((r ->> 'seeds')::int between 60 and 80, 'or : 60 à 80 graines (' || (r ->> 'seeds') || ')');
+  -- (1 fois sur 20, la Recharge le fait passer Savant : 120 à 160 graines.)
+  perform tst.ok((r ->> 'seeds')::int between 60 and 80 or (r ->> 'final_tier' = 'savant' and (r ->> 'seeds')::int between 120 and 160),
+                 'or : 60 à 80 graines (' || (r ->> 'seeds') || ')');
   perform tst.ok((r ->> 'joker')::bool and (select streak_freezes from public.profiles where id = u) = 1, 'or : joker garanti');
   perform tst.ok(r -> 'item' ->> 'id' is not null
                  and exists (select 1 from public.items where id = r -> 'item' ->> 'id' and rarity = 'chest'), 'or : un objet des coffres');

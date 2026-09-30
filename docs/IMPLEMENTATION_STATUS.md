@@ -11,7 +11,8 @@ _Dernière mise à jour : 2026-09-29 (lot 1 : clair par défaut, réglages, règ
 | Schéma + RLS + droits | ✅ | `supabase/tests/40_security.sql` |
 | Daily serveur (génération, service, verdict, temps, série, jokers, percentile, revue, expiration, minuit, fuseaux, double soumission) | ✅ | `10_daily.sql` |
 | Adaptatif (compétences domaine/sous-domaine, calibration bornée, élargissement, questions problématiques, sélection par bandes, erreurs & maîtrise) | ✅ | `20_adaptive.sql` |
-| Elo (placement, fenêtres de cote, points, variation de cote, simulation de convergence) | ✅ | `70_rating.sql` |
+| Elo (provisoire 5 parties, fenêtres de cote, points, variation de cote, simulation de convergence) | ✅ | `70_rating.sql` |
+| Bouclier (2e essai payé, demi-réussite) · « Corrige tes erreurs » (remboursement d'Elo plafonné au niveau d'avant) | ✅ | `98_second_chance.sql`, `99_correction.sql` |
 | Algo : hasard (QCM, Vrai/Faux), thèmes équilibrés, révision espacée | ✅ | `80_algo.sql` |
 | Objectifs jour/semaine (progression serveur, récompenses uniques), récap des semaines, historique du Daily | ✅ | `90_quests.sql` |
 | Économie (ledger, plafonds, aides), pseudo, amis, parrainage anti-abus, ligues, suppression de compte | ✅ | `30_social_economy.sql` |
@@ -22,7 +23,7 @@ _Dernière mise à jour : 2026-09-29 (lot 1 : clair par défaut, réglages, règ
 | App iOS : toutes les fonctionnalités V1 codées (voir ci-dessous) | ✅ build + tests unitaires en CI (macOS 15) · 🟡 **pas encore essayée sur appareil** avec un vrai projet Supabase | job CI `ios` |
 
 ## App iOS — écrans
-Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (partie rapide, « Revoir mes erreurs », domaines ; par domaine : classée = tous les thèmes, ou entraînement libre avec thèmes, difficulté, nombre, chrono) · Lancement de partie (repères + 3-2-1) · Domaine (Elo ou placement, thèmes, courbe, stats, erreurs) · Résumé de partie · Amis (demandes, liste avec le 5 du jour, recherche, **duels** par ami ou par lien) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, carte Elo, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (page poussée : pseudo, apparence clair/sombre/iPhone, notifications, vibrations, âge, compte, aide et légal ; enregistrement immédiat) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles ; Daily, profil avec radar, question du jour). Design « Pop » (voir `DESIGN_SYSTEM.md`) : 🟡 compilé en CI, rendu à valider à l'œil sur Appetize.
+Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte → pseudo) · Accueil « 5 du jour » · Session Daily · Résultat · Revue · Jouer (partie rapide, « Revoir mes erreurs », domaines ; par domaine : classée = tous les thèmes, ou entraînement libre avec thèmes, difficulté, nombre, chrono) · Lancement de partie (repères + 3-2-1) · Domaine (Elo, provisoire ou confirmé, thèmes, courbe, stats, erreurs) · Résumé de partie (dont « Corrige tes erreurs ») · Amis (demandes, liste avec le 5 du jour, recherche, **duels** par ami ou par lien) · Ligues (création, code, classement, période précédente) · Invitation/parrainage · Profil (portrait, carte Elo, chiffres, « Ce que tu sais », calendrier 35 j, trophées) · Réglages (page poussée : pseudo, apparence clair/sombre/iPhone, notifications, vibrations, âge, compte, aide et légal ; enregistrement immédiat) · Compte (Apple / e-mail OTP, liaison du compte anonyme) · Partage 9:16 (3 modèles ; Daily, profil avec radar, question du jour). Design « Pop » (voir `DESIGN_SYSTEM.md`) : 🟡 compilé en CI, rendu à valider à l'œil sur Appetize.
 
 ## Phases (plan du cahier des charges)
 | Phase | État |

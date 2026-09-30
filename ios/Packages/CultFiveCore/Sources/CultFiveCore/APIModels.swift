@@ -1368,3 +1368,50 @@ public struct AppEvent: Hashable, Sendable {
         return .object(object)
     }
 }
+
+// MARK: - Corrige tes erreurs
+
+public struct CorrectionStart: Decodable, Hashable, Sendable {
+    public let questionIds: [UUID]
+    public let ranked: Bool
+
+    public init(questionIds: [UUID], ranked: Bool) {
+        self.questionIds = questionIds
+        self.ranked = ranked
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case ranked
+        case questionIds = "question_ids"
+    }
+}
+
+public struct CorrectionResult: Decodable, Hashable, Sendable {
+    public struct Refund: Decodable, Hashable, Sendable {
+        public let domainId: String
+        public let coteRefund: Int
+        public let coteAfter: Int
+
+        public init(domainId: String, coteRefund: Int, coteAfter: Int) {
+            self.domainId = domainId
+            self.coteRefund = coteRefund
+            self.coteAfter = coteAfter
+        }
+
+        enum CodingKeys: String, CodingKey {
+            case domainId = "domain_id"
+            case coteRefund = "cote_refund"
+            case coteAfter = "cote_after"
+        }
+    }
+
+    public let corrected: Int
+    public let total: Int
+    public let refunds: [Refund]
+
+    public init(corrected: Int, total: Int, refunds: [Refund]) {
+        self.corrected = corrected
+        self.total = total
+        self.refunds = refunds
+    }
+}

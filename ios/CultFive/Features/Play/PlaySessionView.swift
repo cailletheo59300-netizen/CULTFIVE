@@ -61,7 +61,6 @@ struct PlaySessionView: View {
                     badge: model.badge,
                     difficulty: model.currentDifficulty,
                     continueTitle: model.isLast ? "Terminer" : "Suivante",
-                    onHold: model.secondChanceOffer != nil,
                     onSubmit: { model.submit($0) },
                     onContinue: { Task { await model.next() } },
                     onDisplayed: { model.questionDisplayed() },
@@ -85,7 +84,29 @@ struct PlaySessionView: View {
                             showErrors: config.mode != .errors && ((app.profile?.activeErrors ?? 0) > 0 || summary.correct < summary.total),
                             onErrors: { restart(PlayConfig(mode: .errors)) },
                             onOpenChests: { closeThenOpenChests() },
+                            onCorrect: { Task { await model.startCorrection() } },
                             onClose: { close() })
+        case .correction:
+            if let question = model.correctionQuestion {
+                QuestionScreen(
+                    question: question,
+                    domainName: app.domainName(question.domainId),
+                    phase: model.correctionPhase,
+                    continueTitle: model.correctionIsLast ? "Voir le bilan" : "Suivante",
+                    onSubmit: { model.submitCorrection($0) },
+                    onContinue: { Task { await model.nextCorrection() } }
+                ) {
+                    HStack(spacing: Space.m) {
+                        Text("Correction \(model.correctionIndex + 1)/\(model.correctionQuestions.count)")
+                            .font(.system(.footnote, design: .rounded).weight(.heavy)).monospacedDigit()
+                            .foregroundStyle(Color.inkSoft)
+                        Button { Task { await model.abandonCorrection() } } label: { CloseCircle() }
+                            .accessibilityLabel("Arrêter la correction")
+                    }
+                }
+                .id(question.id)
+                .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
+            }
         }
     }
 
@@ -129,8 +150,16 @@ struct PlaySessionView: View {
     private func helpBar(_ model: PlaySessionModel, question: Question) -> some View {
         let helps = model.availableHelps(for: question)
         VStack(alignment: .leading, spacing: Space.s) {
-            if model.secondChanceOffer != nil {
-                SecondChanceCard(model: model)
+            if model.shieldTriggered {
+                HStack(spacing: Space.s) {
+                    Image(systemName: "shield.lefthalf.filled").foregroundStyle(Color.brand).accessibilityHidden(true)
+                    Text("Bouclier ! Encore un essai.").font(.cfCallout.weight(.bold)).foregroundStyle(Color.ink)
+                }
+                .popCard(padding: 12, radius: Radius.s)
+                .transition(.scale.combined(with: .opacity))
+            } else if model.shieldArmed {
+                Label("Bouclier actif : une erreur te donnera un second essai", systemImage: "shield.fill")
+                    .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.brand)
             }
             if let text = model.helpText {
                 HStack(alignment: .top, spacing: Space.s) {
@@ -194,7 +223,7 @@ struct PlaySessionView: View {
         case .fiftyFifty: return "50/50"
         case .hint: return "Indice"
         case .context: return "Contexte"
-        case .secondChance: return "Seconde chance"
+        case .secondChance: return "Bouclier"
         }
     }
 
@@ -224,6 +253,7 @@ struct PlaySummaryView: View {
     var showErrors = false
     var onErrors: () -> Void = {}
     var onOpenChests: () -> Void = {}
+    var onCorrect: () -> Void = {}
     var onClose: () -> Void
 
     @Environment(AppModel.self) private var app
@@ -302,11 +332,11 @@ struct PlaySummaryView: View {
                                       action: onOpenChests)
                 }
                 ForEach(placementsDone, id: \.domainId) { r in
-                    CelebrationCard(kind: .rating, title: "Rang découvert : \(CoteCULT.Rank(cote: r.coteAfter).name) !",
-                                    detail: "\(app.domainName(r.domainId)) · \(CoteCULT.format(r.coteAfter)) Elo. Il bouge maintenant à chaque partie classée.")
+                    CelebrationCard(kind: .rating, title: "Elo confirmé : \(CoteCULT.Rank(cote: r.coteAfter).name) !",
+                                    detail: "\(app.domainName(r.domainId)) · \(CoteCULT.format(r.coteAfter)). Il bouge maintenant de 40 points au plus par partie.")
                 }
                 ForEach(rankUps, id: \.domainId) { r in
-                    CelebrationCard(kind: .rating, title: "Nouveau rang : \(CoteCULT.Rank(cote: r.coteAfter).name)",
+                    CelebrationCard(kind: .rating, title: "Nouveau niveau : \(CoteCULT.Rank(cote: r.coteAfter).name)",
                                     detail: "\(app.domainName(r.domainId)) · \(CoteCULT.format(r.coteAfter))")
                 }
                 if summary.synced, summary.ranked, !summary.ratings.isEmpty {
@@ -317,7 +347,7 @@ struct PlaySummaryView: View {
                         }
                         if let r = summary.ratings.first(where: { !$0.placed }) {
                             let left = max(CoteCULT.placementGames - r.placement, 1)
-                            Text("Encore \(left) partie\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") en \(app.domainName(r.domainId)) pour découvrir ton rang.")
+                            Text("Encore \(left) partie\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") en \(app.domainName(r.domainId)) pour confirmer ton Elo.")
                                 .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
@@ -333,6 +363,9 @@ struct PlaySummaryView: View {
                 } else if !summary.synced, summary.total > 0 {
                     Label("Hors ligne : ta partie sera enregistrée dès le retour du réseau.", systemImage: "wifi.slash")
                         .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                }
+                if summary.correction != nil || summary.correctionAvailable {
+                    CorrectionCard(summary: summary, domainName: { app.domainName($0) }, onCorrect: onCorrect)
                 }
                 if !summary.missed.isEmpty { learned }
                 VStack(spacing: Space.s) {
@@ -587,13 +620,13 @@ struct PlayIntroView: View {
     private var stakeValue: String {
         guard config.countsForElo else { return "Libre" }
         guard let rating = skill?.rating else { return "Elo" }
-        return rating.placed ? rating.formatted : "\(rating.placementGames)/\(CoteCULT.placementGames)"
+        return rating.formatted
     }
 
     private var stakeLabel: String {
         guard config.countsForElo else { return "sans effet sur l'Elo" }
         guard let rating = skill?.rating else { return config.domain == nil ? "en jeu, par domaine" : "en jeu" }
-        return rating.placed ? "Elo en jeu · \(rating.rank.name)" : "placement"
+        return rating.placed ? "Elo en jeu · \(rating.rank.name)" : "Elo \(rating.provisionalLabel)"
     }
 
     // MARK: Lancement
@@ -639,7 +672,7 @@ struct TimerRing: View {
     }
 }
 
-/// Ligne de cote d'un domaine après une partie : « Histoire   1 342  +18 · Érudit », ou « Placement 2/5 ».
+/// Ligne de cote d'un domaine après une partie : « Histoire   1 342  +18 · Érudit », ou « provisoire ■■□□□ ».
 struct RatingChangeRow: View {
     let change: PlaySubmitResult.RatingChange
     let domainName: String
@@ -648,43 +681,28 @@ struct RatingChangeRow: View {
         HStack(spacing: Space.s) {
             DomainTag(domainId: change.domainId, name: domainName)
             Spacer()
-            if change.placed {
-                VStack(alignment: .trailing, spacing: 0) {
-                    HStack(spacing: 6) {
-                        Text(CoteCULT.format(change.coteAfter)).foregroundStyle(Color.ink)
-                        Text(CoteCULT.formatDelta(change.delta))
-                            .foregroundStyle(change.delta > 0 ? Color.correct : change.delta < 0 ? Color.wrong : Color.inkSoft)
-                    }
-                    .font(.system(.body, design: .rounded).weight(.heavy).monospacedDigit())
-                    Text(CoteCULT.Rank(cote: change.coteAfter).name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+            VStack(alignment: .trailing, spacing: 0) {
+                HStack(spacing: 6) {
+                    Text(CoteCULT.format(change.coteAfter)).foregroundStyle(change.placed ? Color.ink : Color.inkSoft)
+                    Text(CoteCULT.formatDelta(change.delta))
+                        .foregroundStyle(change.delta > 0 ? Color.correct : change.delta < 0 ? Color.wrong : Color.inkSoft)
                 }
-            } else {
-                PlacementDots(done: change.placement, color: DomainPalette.color(change.domainId))
+                .font(.system(.body, design: .rounded).weight(.heavy).monospacedDigit())
+                if change.placed {
+                    Text(CoteCULT.Rank(cote: change.coteAfter).name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                } else {
+                    HStack(spacing: 6) {
+                        Text("provisoire").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                        PlacementSquares(done: change.placement, color: DomainPalette.color(change.domainId), size: 8)
+                    }
+                }
             }
         }
         .accessibilityElement(children: .combine)
     }
 }
 
-/// « Placement ●●○○○ 2/5 » : parties de placement jouées avant que la cote ne se dévoile.
-struct PlacementDots: View {
-    let done: Int
-    var color: Color = .brand
-    var compact = false
-
-    var body: some View {
-        HStack(spacing: 6) {
-            if !compact { Text("Placement").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft) }
-            PlacementSquares(done: done, color: color)
-            Text("\(done)/\(CoteCULT.placementGames)").font(.system(.footnote, design: .rounded).weight(.heavy)).monospacedDigit()
-                .foregroundStyle(Color.inkSoft)
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Placement : \(done) partie\(done > 1 ? "s" : "") sur \(CoteCULT.placementGames)")
-    }
-}
-
-/// Cinq petits carrés : un par partie classée de placement. Pleins, le rang du domaine se dévoile.
+/// Cinq petits carrés : un par partie classée. Pleins, l'Elo du domaine est confirmé et son niveau se dévoile.
 struct PlacementSquares: View {
     let done: Int
     var color: Color = .brand
@@ -703,55 +721,66 @@ struct PlacementSquares: View {
     }
 }
 
-/// Après une erreur, avant la correction : réessayer (moitié des points) ou voir la réponse.
-private struct SecondChanceCard: View {
-    let model: PlaySessionModel
+/// Fin de partie : « Corrige tes erreurs ». Carte intégrée au bilan, jamais imposée. Les questions ratées se rejouent
+/// une fois ; en partie classée, chaque bonne réponse annule l'Elo que l'erreur avait fait perdre (sans jamais en gagner).
+private struct CorrectionCard: View {
+    let summary: PlaySessionModel.PlaySummary
+    let domainName: (String) -> String
+    let onCorrect: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: Space.m) {
-            HStack(spacing: Space.s) {
-                Image(systemName: "arrow.uturn.backward.circle.fill")
-                    .font(.title2)
-                    .foregroundStyle(Color.wrong)
+            HStack(alignment: .top, spacing: Space.m) {
+                Image(systemName: summary.correction == nil ? "arrow.counterclockwise.circle.fill" : "checkmark.seal.fill")
+                    .font(.system(size: 30))
+                    .foregroundStyle(summary.correction == nil ? Color.brand : Color.correct)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Raté !").font(.cfHeadline).foregroundStyle(Color.ink)
-                    Text("Tente une seconde chance avant de voir la réponse. Juste au 2e essai : moitié des points.")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(title).font(.cfHeadline).foregroundStyle(Color.ink)
+                    Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
-            HStack(spacing: Space.s) {
-                Button {
-                    Task { await model.acceptSecondChance() }
-                } label: {
-                    HStack(spacing: 6) {
-                        if model.pendingHelp == .secondChance { ProgressView().controlSize(.mini) }
-                        Text("Seconde chance")
-                        if model.tickets.count(.secondChance) > 0 {
-                            Text("🎟️ \(model.tickets.count(.secondChance))").monospacedDigit()
-                        } else {
-                            SeedsAmount(amount: HelpKind.secondChance.cost, color: .inkSoft)
-                        }
+            if summary.correction == nil {
+                Button(action: onCorrect) {
+                    HStack(spacing: 8) {
+                        if summary.correctionLoading { ProgressView().controlSize(.small) }
+                        Text("Corriger mes erreurs")
                     }
-                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
-                    .frame(maxWidth: .infinity, minHeight: 44)
-                    .background(Color.sun.opacity(0.9), in: Capsule())
+                    .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.row)
-                .foregroundStyle(Color.ink)
-                .disabled(model.pendingHelp != nil)
-                .accessibilityHint("Réessayer cette question pour la moitié des points")
-
-                Button("Voir la réponse") { model.declineSecondChance() }
-                    .font(.system(.subheadline, design: .rounded).weight(.bold))
-                    .frame(maxWidth: .infinity, minHeight: 44)
-                    .background(Color.paperRaised, in: Capsule())
-                    .buttonStyle(.row)
-                    .foregroundStyle(Color.ink)
-                    .disabled(model.pendingHelp != nil)
+                .buttonStyle(.ink)
+                .disabled(summary.correctionLoading)
+            }
+            if let error = summary.correctionError {
+                Text(error).font(.cfFootnote).foregroundStyle(Color.wrong)
             }
         }
-        .popCard(padding: 14, radius: Radius.m)
+        .popCard()
+        .accessibilityElement(children: .contain)
+    }
+
+    private var errors: Int { summary.missed.count }
+
+    private var title: String {
+        guard let result = summary.correction else {
+            return "Corrige tes \(errors) erreur\(errors > 1 ? "s" : "")"
+        }
+        return result.corrected == result.total ? "\(result.corrected)/\(result.total) corrigées, bravo !"
+                                                : "\(result.corrected)/\(result.total) corrigée\(result.corrected > 1 ? "s" : "")"
+    }
+
+    private var detail: String {
+        guard let result = summary.correction else {
+            return summary.ranked
+                ? "Rejoue les questions ratées : chaque bonne réponse annule l'Elo que l'erreur t'a fait perdre."
+                : "Rejoue les questions ratées pour les retenir."
+        }
+        let refunds = result.refunds.filter { $0.coteRefund > 0 }
+        if refunds.isEmpty {
+            return result.corrected > 0 ? "Elles restent dans « Mes erreurs » pour une vraie révision demain." : "Elles reviendront dans « Mes erreurs »."
+        }
+        return refunds.map { "\(domainName($0.domainId)) : +\($0.coteRefund) d'Elo récupérés (\(CoteCULT.format($0.coteAfter)))" }
+            .joined(separator: " · ")
     }
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.22.0 — Elo provisoire, Bouclier, « Corrige tes erreurs »
+- **Elo provisoire** : l'Elo s'affiche dès la 1re partie classée, en gris avec « provisoire · 2/5 », et devient **confirmé** à la 5e (« Elo confirmé : Érudit ! »). Même règle partout (Profil, Jouer, domaine, fin de partie, 5 du jour). « Rang » devient « niveau » ; « classement » reste réservé aux ligues.
+- **Réponse plus fluide** : réponse → résultat immédiat → « Suivante », plus de carte intermédiaire.
+- **Bouclier** (remplace la Seconde chance) : activé avant de répondre (15 graines ou un ticket indice), **toujours consommé**, même si la réponse est juste. En cas d'erreur, la réponse tentée se grise et on réessaie aussitôt : moitié des points, demi-réussite pour l'Elo. Pas sur un Vrai/Faux ni un choix à 2 options. L'aide « Contexte » est retirée : restent 50/50, Bouclier et Indice (quand il existe).
+- **« Corrige tes erreurs »** en fin de partie : on rejoue une fois les questions ratées ; chaque bonne correction rend l'Elo que l'erreur avait fait perdre, **sans jamais dépasser le niveau d'avant la partie**. Ni points, ni XP, ni graines, ni statistiques ; la question reste dans « Mes erreurs ». Seulement la dernière partie, dans l'heure. Gratuit 3 fois par jour en attendant la pub qui la débloquera. Migration 0031, tests `99_correction.sql`.
+- « Comment marche l'Elo » mis à jour (départ à 1000, provisoire, correction, bouclier, niveaux).
+
 ## 0.21.0 — espace admin : joueurs et statistiques
 - **brainlix.site/admin** (page non indexée, accès réservé aux comptes admin, vérifié par le serveur) : joueurs actifs par jour / 7 j / 30 j, nouveaux joueurs, 5 du jour et parties par jour en graphiques, rétention J1 / J7 / J30, parcours des nouveaux joueurs, économie des graines et coffres, domaines joués, versions de l'app.
 - **Joueurs** : recherche, fiche complète (Elo, parties, 5 du jour, graines, journal), renommer un pseudo, bannir / débannir (un joueur banni ne peut plus jouer et quitte ses ligues ; message « compte suspendu » dans l'app).

@@ -183,10 +183,9 @@ struct DailyResultView: View {
                     HStack {
                         DomainTag(domainId: move.0, name: app.domainName(move.0))
                         Spacer()
-                        if placed.contains(move.0) {
-                            Text(CoteCULT.format(move.2)).foregroundStyle(white)
-                        } else {
-                            Text("placement").font(.cfFootnote.weight(.bold)).foregroundStyle(white.opacity(0.6))
+                        Text(CoteCULT.format(move.2)).foregroundStyle(placed.contains(move.0) ? white : white.opacity(0.6))
+                        if !placed.contains(move.0) {
+                            Text("prov.").font(.cfFootnote.weight(.bold)).foregroundStyle(white.opacity(0.6))
                         }
                         Text(CoteCULT.formatDelta(move.2 - move.1))
                             .foregroundStyle(move.2 >= move.1 ? Color.sun : white.opacity(0.6))

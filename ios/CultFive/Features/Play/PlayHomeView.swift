@@ -59,14 +59,14 @@ struct PlayHomeView: View {
         HStack(alignment: .firstTextBaseline) {
             Text("Jouer").font(.cfDisplay)
             Spacer()
-            if let global = CoteCULT.global(skills), global.placed {
+            if let global = CoteCULT.overall(skills) {
                 VStack(alignment: .trailing, spacing: 0) {
                     Text(global.formatted).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
-                        .foregroundStyle(Color.brand)
-                    Text(global.rank.name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                        .foregroundStyle(global.placed ? Color.brand : Color.inkSoft)
+                    Text(global.placed ? global.rank.name : "Elo provisoire").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
                 }
                 .accessibilityElement(children: .combine)
-                .accessibilityLabel("Ton Elo : \(global.formatted), \(global.rank.name)")
+                .accessibilityLabel(global.placed ? "Ton Elo : \(global.formatted), \(global.rank.name)" : "Ton Elo provisoire : \(global.formatted)")
             }
         }
         .padding(.top, Space.l)
@@ -240,14 +240,16 @@ private struct DomainTile: View {
             .foregroundStyle(on)
             .accessibilityLabel("Elo \(skill.rating.formatted), \(skill.rating.rank.name)")
         } else if let skill, skill.answered > 0 {
-            HStack(spacing: 3) {
-                PlacementSquares(done: skill.rating.placementGames, color: on, empty: on.opacity(0.3), size: 7)
+            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                Text(skill.rating.formatted).font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
+                    .opacity(0.75)
                 Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames)")
                     .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit()
-                    .foregroundStyle(on.opacity(0.85))
+                    .opacity(0.85)
             }
+            .foregroundStyle(on)
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Placement \(skill.rating.placementGames) sur \(CoteCULT.placementGames)")
+            .accessibilityLabel("Elo provisoire \(skill.rating.formatted), \(skill.rating.placementGames) parties sur \(CoteCULT.placementGames)")
         } else {
             Text("à découvrir").font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(on.opacity(0.8))
         }

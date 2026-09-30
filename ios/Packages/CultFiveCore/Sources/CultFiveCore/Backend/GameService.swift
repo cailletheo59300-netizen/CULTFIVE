@@ -25,6 +25,9 @@ public protocol GameService: Sendable {
     func reportQuestion(_ question: UUID, reason: String, note: String?) async throws
     /// Journal d'usage (ouverture, onboarding, partage…), stocké dans la base Brainlix uniquement.
     func trackEvents(_ events: [AppEvent]) async throws
+    /// « Corrige tes erreurs » : ouvre la correction de la dernière partie, puis envoie les réponses.
+    func correctionStart(session: UUID) async throws -> CorrectionStart
+    func correctionSubmit(session: UUID, answers: [(UUID, GivenAnswer?)]) async throws -> CorrectionResult
 
     // Profil & progression
     func profile() async throws -> Profile
@@ -136,6 +139,17 @@ public struct LiveGameService: GameService {
                                         "p_subdomains": subdomains.isEmpty ? .null : .array(subdomains.map(JSONValue.string)),
                                         "p_count": .number(Double(count)), "p_ranked": .bool(ranked),
                                         "p_level": .string(level.rawValue)])
+    }
+
+    public func correctionStart(session: UUID) async throws -> CorrectionStart {
+        try await api.rpc("play_correction_start", ["p_session": .string(session.uuidString), "p_via": .string("free")])
+    }
+
+    public func correctionSubmit(session: UUID, answers: [(UUID, GivenAnswer?)]) async throws -> CorrectionResult {
+        let list = answers.map { id, given in
+            JSONValue.object(["question_id": .string(id.uuidString), "given": given?.json ?? .null])
+        }
+        return try await api.rpc("play_correction_submit", ["p_session": .string(session.uuidString), "p_answers": .array(list)])
     }
 
     public func trackEvents(_ events: [AppEvent]) async throws {
@@ -318,4 +332,12 @@ public extension GameService {
 public extension GameService {
     /// Par défaut (démo, service indisponible) : rien n'est envoyé.
     func trackEvents(_ events: [AppEvent]) async throws {}
+
+    func correctionStart(session: UUID) async throws -> CorrectionStart {
+        throw BackendError.server(status: 400, code: "correction_unavailable", message: "")
+    }
+
+    func correctionSubmit(session: UUID, answers: [(UUID, GivenAnswer?)]) async throws -> CorrectionResult {
+        throw BackendError.server(status: 400, code: "correction_unavailable", message: "")
+    }
 }
