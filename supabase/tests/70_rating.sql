@@ -32,8 +32,9 @@ begin
   perform tst.ok(jsonb_array_length(sub -> 'ratings') = 1 and sub -> 'ratings' -> 0 ->> 'domain_id' = 'history', 'variation de cote');
   perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int > (sub -> 'ratings' -> 0 ->> 'cote_before')::int, 'cote en hausse');
   perform tst.ok((sub -> 'ratings' -> 0 ->> 'placement')::int = 1, 'placement 1/5');
-  -- Placement : pas doublé, 10 bonnes réponses font nettement monter.
-  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int > 150, 'placement rapide');
+  -- Placement : 10 bonnes réponses font nettement monter, mais jamais plus de 120 par partie (0027).
+  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int between 60 and 121,
+                 'placement : forte hausse plafonnée à 120 (' || ((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int) || ')');
 
   -- Renvoi identique (file hors-ligne) : mêmes points.
   perform tst.ok((public.play_submit((pack ->> 'session_id')::uuid, atts) ->> 'points')::int = (sub ->> 'points')::int, 'points idempotents');

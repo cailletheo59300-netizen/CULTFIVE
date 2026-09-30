@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.16.0 — Elo plus juste, aides plus réactives
+- **Elo v2** (migration 0027) : tout le monde part de **1000** (le niveau choisi à l'inscription règle seulement la difficulté des premières questions, pendant 50 réponses) ; **plafond par partie** : ±120 pendant le placement (50 premières réponses du domaine), ±40 ensuite ; pas par réponse réduit ; partie classée dans une **fenêtre étroite** (questions un peu sous ton Elo, ≈ 65 % de réussite), repli vers la question la plus proche quand un domaine manque de questions.
+- **5 du jour** : difficultés resserrées (44 → 56), rangées de la plus accessible à la plus dure.
+- **Calibration des questions** prudente : ±5 autour de la difficulté d'origine avant 20 réponses, ±15 avant 50.
+- **Joueurs existants** : Elo recalculé à partir de leurs réponses classées, dans l'ordre et à leur date (courbes conservées), avec les nouvelles règles. Objectif « Gagne 30 points d'Elo » et récap : un domaine jamais joué part de 1000.
+- **Aides en jeu** : réaction immédiate (graines et tickets décomptés tout de suite, rendus en cas d'échec), plus de double débit en tapant deux fois ; compteur de graines à côté des boutons d'aide ; le bilan de partie s'affiche aussitôt (« Calcul de ton Elo et de tes récompenses… »).
+- **Indices** : les indices « La réponse commence par… » (qui donnaient la réponse) sont retirés ; seuls les indices écrits à la main restent (migration 0026).
+- **Rapidité** : le fuseau horaire n'est plus envoyé qu'en cas de changement, en arrière-plan, et vérifié sans parcourir la liste des fuseaux (0,8 s → instantané) ; profil et progression chargés en parallèle.
+- **Graine** : nouvelle icône (graine dorée avec une pousse) à la place de la feuille.
+
 ## 0.15.0 — onboarding soigné, Tenue unique, ouverture des coffres
 - **Onboarding** : exactement 3 questions (un bug en servait 5), tirées d'une **banque dédiée de 24 questions** choisies à la main : une question qui surprend, une énigme connue, un « le savais-tu ? » (`content/questions/onboarding.json`, migration 0025). Plus de barre pendant les questions ; ensuite « Étape 1 sur 4 · Ton niveau », « Tes domaines », « Ton pseudo », « Ton compte ».
 - **Profil allégé** : les médailles de maîtrise (Bronze → Diamant) sont sur les cartes « Ce que tu sais », à côté de l'Elo ; la vitrine ne garde que les trophées d'exploit.

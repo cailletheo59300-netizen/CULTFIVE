@@ -31,7 +31,7 @@ begin
   o := public.quests_overview();
   perform tst.ok((o -> 'day' -> 'quests' -> 1 ->> 'done')::bool and (o -> 'day' -> 'quests' -> 1 ->> 'progress')::int = 5, 'réponses comptées (plafonnées à l''objectif)');
   perform tst.ok((o -> 'day' -> 'quests' -> 2 ->> 'done')::bool, 'partie classée comptée');
-  perform tst.ok(jsonb_array_length(o -> 'newly') = 2, 'deux objectifs annoncés');
+  perform tst.ok(jsonb_array_length(o -> 'newly') = 2, 'deux objectifs annoncés : ' || (o -> 'newly')::text);
   select seeds into seeds1 from public.profiles where id = u;
   perform tst.ok(seeds1 - seeds0 = 4, 'graines : 2 par objectif');
   -- Relecture : rien de plus.

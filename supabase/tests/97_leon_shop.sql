@@ -78,3 +78,25 @@ begin
   perform tst.ok((public.set_timezone('America/New_York') ->> 'applied')::bool, 'fuseau valide accepté');
   perform tst.ok(not exists (select 1 from public.questions where hint like 'La réponse commence par%'), 'plus d''indice « commence par »');
 end $$;
+
+-- 0027 : 5 du jour en montée douce ; partie classée dans une fenêtre étroite ; calibration prudente.
+do $$
+declare u uuid := tst.new_user(); pack jsonb; d real[]; q public.questions;
+begin
+  perform tst.clock('2027-08-02 10:00:00+02');
+  perform public._generate_daily_set('2027-08-20');
+  select array_agg(q2.difficulty_effective order by i.position) into d
+  from public.daily_set_items i join public.questions q2 on q2.id = i.question_id where i.daily_date = '2027-08-20';
+  perform tst.ok(d[1] < d[5] and d[5] - d[1] < 25, '5 du jour : du plus accessible au plus dur, écart resserré (' || d::text || ')');
+
+  perform tst.login(u);
+  pack := public.play_pack('training', 'geography', null, 10, true, null);
+  perform tst.ok((select max(x.d) - min(x.d) from (select q3.difficulty_effective d from jsonb_array_elements(pack -> 'questions') e
+                  join public.questions q3 on q3.id = (e ->> 'id')::uuid
+                  where q3.guess_rate < 0.5) x) < 25, 'partie classée : difficultés proches (hors vrai/faux, plus faciles à deviner)');
+
+  select * into q from public.questions where status = 'published' and answer_count = 0 limit 1;
+  for i in 1 .. 10 loop perform public._question_update(q.id, 95, 9, false); end loop;
+  perform tst.ok((select difficulty_observed from public.questions where id = q.id) <= q.difficulty_initial + 5.01,
+                 'calibration : pas plus de 5 points d''écart avant 20 réponses');
+end $$;

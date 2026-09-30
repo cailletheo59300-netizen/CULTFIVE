@@ -46,8 +46,10 @@ begin
   perform public.complete_onboarding('expert', array['history', 'science', 'nope']);
   perform tst.ok((select challenge_prior from public.profiles where id = u) = 70, 'prior expert = 70');
   perform tst.ok((select interests from public.profiles where id = u) = array['history', 'science'], 'intérêts filtrés');
-  perform tst.ok((select mu from public._skill_peek(u, 'calc')) = 70, 'domaine jamais joué : prior');
-  perform tst.ok((select mu from public._skill_peek(u, 'calc.fractions')) = 70, 'sous-domaine hérite du domaine');
+  -- 0027 : départ à 1000 pour tous ; le niveau annoncé décale seulement la sélection pendant le placement.
+  perform tst.ok((select mu from public._skill_peek(u, 'calc')) = 50, 'domaine jamais joué : départ à 1000');
+  perform tst.ok((select mu from public._skill_peek(u, 'calc.fractions')) = 50, 'sous-domaine hérite du domaine');
+  perform tst.ok(public._placement_offset(u, 'calc') = 20, 'expert : questions plus dures pendant le placement');
   perform tst.throws('select public.complete_onboarding(''legend'', ''{}'')', 'invalid_level');
 end $$;
 
