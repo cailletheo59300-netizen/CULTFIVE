@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.23.0 — pubs (Google AdMob)
+- **Pubs récompensées**, toujours au choix du joueur, récompense donnée par le serveur seulement après la confirmation de Google (fonction Edge `admob-ssv`, signature vérifiée) :
+  **Doubler mes graines** (fin de partie Jouer et 5 du jour, partie de moins d'1 h, 3 par jour), **Coffre boosté** (chances de montée doublées 50 / 40 / 10 %, graines +50 %, 2 par jour), **Coffre offert** (coffre en bois, 1 par jour), **Série sauvée** (dans les 48 h, 1 par mois), **Corrige tes erreurs** (la pub remplace le gratuit, 1 fois par partie).
+- **Pub entre les parties** (plein écran) : au plus 1 toutes les 3 parties finies et 3 par jour, jamais les 3 premiers jours, jamais pendant le 5 du jour, l'onboarding ou une question, jamais juste après une pub récompensée.
+- **Consentement** : message RGPD de Google puis demande Apple « Autoriser le suivi », après l'onboarding ; refus = pubs non personnalisées.
+- Builds de test (Xcode, TestFlight) : pubs de test de Google ; un compte admin y reçoit les récompenses sans confirmation de Google.
+- `app-ads.txt` sur brainlix.site, politique de confidentialité mise à jour, section « Pubs » dans l'admin. Migration 0032, tests `99_ads.sql`.
+
 ## 0.22.0 — Elo provisoire, Bouclier, « Corrige tes erreurs »
 - **Elo provisoire** : l'Elo s'affiche dès la 1re partie classée, en gris avec « provisoire · 2/5 », et devient **confirmé** à la 5e (« Elo confirmé : Érudit ! »). Même règle partout (Profil, Jouer, domaine, fin de partie, 5 du jour). « Rang » devient « niveau » ; « classement » reste réservé aux ligues.
 - **Réponse plus fluide** : réponse → résultat immédiat → « Suivante », plus de carte intermédiaire.

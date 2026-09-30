@@ -8,6 +8,8 @@ struct PlaySessionView: View {
     @State private var model: PlaySessionModel?
     /// Réglages de la partie en cours (« Rejouer » et « Mes erreurs » enchaînent sans refermer l'écran).
     @State private var config: PlayConfig
+    /// Partie déjà comptée pour la pub entre les parties.
+    @State private var countedGame: UUID?
 
     init(config: PlayConfig) {
         _config = State(initialValue: config)
@@ -79,13 +81,18 @@ struct PlaySessionView: View {
                 }
             }
         case .summary(let summary):
-            PlaySummaryView(config: config, summary: summary,
+            PlaySummaryView(config: config, summary: summary, sessionId: model.currentSessionId,
                             onAgain: { restart(config.again()) },
                             showErrors: config.mode != .errors && ((app.profile?.activeErrors ?? 0) > 0 || summary.correct < summary.total),
                             onErrors: { restart(PlayConfig(mode: .errors)) },
                             onOpenChests: { closeThenOpenChests() },
-                            onCorrect: { Task { await model.startCorrection() } },
+                            onCorrect: { Task { await model.startCorrection { try await app.watchCorrectionAd(session: $0) } } },
                             onClose: { close() })
+                .task(id: config.id) {
+                    guard countedGame != config.id else { return }
+                    countedGame = config.id
+                    app.ads.noteGameFinished()
+                }
         case .correction:
             if let question = model.correctionQuestion {
                 QuestionScreen(
@@ -118,9 +125,19 @@ struct PlaySessionView: View {
         model.current.map { DomainPalette.color($0.domainId) } ?? accent
     }
 
+    /// Bilan affiché : une pub entre les parties peut passer en le quittant.
+    private var atSummary: Bool {
+        if case .summary = model?.stage { return true }
+        return false
+    }
+
     private func restart(_ next: PlayConfig) {
-        model = nil
-        config = next
+        let betweenGames = atSummary
+        Task {
+            if betweenGames { await app.interstitialBetweenGames() }
+            model = nil
+            config = next
+        }
     }
 
     private func header(_ model: PlaySessionModel) -> some View {
@@ -228,11 +245,13 @@ struct PlaySessionView: View {
     }
 
     private func close() {
+        let betweenGames = atSummary
         Task {
+            if betweenGames { await app.interstitialBetweenGames() }
+            dismiss()
             await app.refreshProfile()
             await app.syncPending()
         }
-        dismiss()
     }
 
     /// Les coffres s'ouvrent en plein écran depuis l'app : on ferme d'abord la partie.
@@ -249,6 +268,7 @@ struct PlaySessionView: View {
 struct PlaySummaryView: View {
     let config: PlayConfig
     let summary: PlaySessionModel.PlaySummary
+    var sessionId: UUID? = nil
     var onAgain: () -> Void
     var showErrors = false
     var onErrors: () -> Void = {}
@@ -308,6 +328,9 @@ struct PlaySummaryView: View {
                         }
                         Spacer()
                     }
+                }
+                if summary.synced, let sessionId, (summary.seeds ?? 0) > 0 {
+                    DoubleSeedsButton(ref: "play:\(sessionId.uuidString.lowercased())")
                 }
                 if !summary.ranked {
                     Label(config.mode == .errors
@@ -745,7 +768,7 @@ private struct CorrectionCard: View {
                 Button(action: onCorrect) {
                     HStack(spacing: 8) {
                         if summary.correctionLoading { ProgressView().controlSize(.small) }
-                        Text("Corriger mes erreurs")
+                        Label("Corriger mes erreurs", systemImage: "play.rectangle.fill")
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -773,8 +796,8 @@ private struct CorrectionCard: View {
     private var detail: String {
         guard let result = summary.correction else {
             return summary.ranked
-                ? "Rejoue les questions ratées : chaque bonne réponse annule l'Elo que l'erreur t'a fait perdre."
-                : "Rejoue les questions ratées pour les retenir."
+                ? "Après une courte pub, rejoue les questions ratées : chaque bonne réponse annule l'Elo que l'erreur t'a fait perdre."
+                : "Après une courte pub, rejoue les questions ratées pour les retenir."
         }
         let refunds = result.refunds.filter { $0.coteRefund > 0 }
         if refunds.isEmpty {

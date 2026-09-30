@@ -37,11 +37,16 @@ final class AppModel {
     let api: SupabaseAPI?
     let queue: OfflineAttemptQueue
     let cache = DiskCache()
+    /// Pubs AdMob (désactivées en démo et sans serveur).
+    let ads: AdsController
+    /// Récompenses de pub restantes aujourd'hui, série à sauver, pub entre les parties autorisée.
+    var adStatus: AdStatus?
 
     init(service: GameService, api: SupabaseAPI?, queue: OfflineAttemptQueue) {
         self.service = service
         self.api = api
         self.queue = queue
+        self.ads = AdsController(enabled: api != nil)
         self.domains = cache.load("domains") ?? []
         self.subdomains = cache.load("subdomains") ?? []
         self.pendingInvite = UserDefaults.standard.string(forKey: "pendingInvite")
@@ -96,6 +101,7 @@ final class AppModel {
             if phase == .main {
                 await refreshDaily()
                 await syncPending()
+                await startAds()
             }
         } catch BackendError.notAuthenticated where bootstrapAttempts < 3 {
             // Session révoquée (compte supprimé ailleurs…) : on repart d'un compte neuf.
@@ -228,6 +234,74 @@ final class AppModel {
         tab = .daily
         await refreshDaily()
         await claimPendingInviteIfPossible()
+        await startAds()
+    }
+
+    // MARK: Pubs
+
+    /// Consentement (RGPD puis suivi Apple) et démarrage des pubs, après l'onboarding seulement.
+    func startAds() async {
+        await refreshAdStatus()
+        await ads.start()
+    }
+
+    func refreshAdStatus() async {
+        if let status = try? await service.adStatus() { adStatus = status }
+    }
+
+    /// Pubs de test de Google : Google ne prévient pas notre serveur, qui accepte alors la récompense pour un admin.
+    private var adTestClaims: Bool { ads.testAds && (adStatus?.admin ?? false) }
+
+    /// Pub récompensée : vérifie que la récompense est possible, montre la pub, puis demande la récompense au serveur
+    /// (qui attend la confirmation de Google). `nil` si la pub a été fermée avant la fin.
+    func watchAd(_ kind: AdKind, ref: String? = nil) async throws -> AdReward? {
+        try await service.adCan(kind, ref: ref)
+        guard let user = profile?.id else { throw BackendError.notAuthenticated }
+        track("ad_offer", ["kind": kind.rawValue])
+        guard try await ads.showRewarded(kind, userId: user, ref: ref) else { return nil }
+        track("ad_view", ["kind": kind.rawValue])
+        let service = self.service
+        let test = adTestClaims
+        let reward = try await claimAd { try await service.adClaim(kind, ref: ref, test: test) }
+        track("ad_reward", ["kind": kind.rawValue])
+        await refreshAdStatus()
+        await refreshProfile()
+        return reward
+    }
+
+    /// « Corrige tes erreurs » débloquée par une pub : renvoie les questions à rejouer.
+    func watchCorrectionAd(session: UUID) async throws -> CorrectionStart? {
+        let ref = session.uuidString.lowercased()
+        try await service.adCan(.correction, ref: ref)
+        guard let user = profile?.id else { throw BackendError.notAuthenticated }
+        track("ad_offer", ["kind": AdKind.correction.rawValue])
+        guard try await ads.showRewarded(.correction, userId: user, ref: ref) else { return nil }
+        track("ad_view", ["kind": AdKind.correction.rawValue])
+        let service = self.service
+        let test = adTestClaims
+        let start = try await claimAd { try await service.correctionStart(session: session, test: test) }
+        track("ad_reward", ["kind": AdKind.correction.rawValue])
+        return start
+    }
+
+    /// Google confirme la vue en quelques secondes : on réessaie tant que le serveur répond « en attente ».
+    private func claimAd<T>(_ claim: () async throws -> T) async throws -> T {
+        var attempt = 0
+        while true {
+            do {
+                return try await claim()
+            } catch let error as BackendError where error.code == "ad_pending" && attempt < 12 {
+                attempt += 1
+                try await Task.sleep(nanoseconds: 1_500_000_000)
+            }
+        }
+    }
+
+    /// Entre deux parties Jouer (après le bilan) : pub plein écran si elle est due.
+    func interstitialBetweenGames() async {
+        if await ads.showInterstitialIfDue(allowed: adStatus?.interstitial ?? false) {
+            track("interstitial")
+        }
     }
 
     func signOut() async {

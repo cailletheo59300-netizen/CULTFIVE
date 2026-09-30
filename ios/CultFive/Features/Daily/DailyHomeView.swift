@@ -27,8 +27,10 @@ struct DailyHomeView: View {
                         QuestRewardBanner(rewards: rewards)
                             .transition(.move(edge: .top).combined(with: .opacity))
                     }
+                    StreakRescueOffer()
                     rendezVous
                     if let quests { QuestsCard(overview: quests) }
+                    FreeChestOffer()
                     today
                 }
                 .padding(.horizontal, Space.gutter)
@@ -57,6 +59,7 @@ struct DailyHomeView: View {
     private func reload() async {
         await app.refreshDaily()
         await app.refreshProfile()
+        await app.refreshAdStatus()
         if let skills = try? await app.service.skills() {
             suggestion = skills.filter { $0.answered >= 5 }.min { $0.level < $1.level }
         }

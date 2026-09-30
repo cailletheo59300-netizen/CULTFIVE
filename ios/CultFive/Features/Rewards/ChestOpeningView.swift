@@ -28,6 +28,9 @@ struct ChestOpeningView: View {
     @State private var burst: ChestBurst?
     @State private var flash = 0.0
     @State private var error: String?
+    /// Coffres boostés par une pub (chances de montée doublées, graines +50 %).
+    @State private var boosted: Set<UUID> = []
+    @State private var boosting = false
 
     private var chest: ChestRef? { chests.indices.contains(index) ? chests[index] : nil }
     private var tier: ChestTier { upgraded ?? chest?.tier ?? .wood }
@@ -75,6 +78,12 @@ struct ChestOpeningView: View {
                 .contentTransition(.opacity)
                 .id(tier)
             Text(chest?.origin ?? "").font(.cfCallout).foregroundStyle(.white.opacity(0.7))
+            if let chest, boosted.contains(chest.id) {
+                Label("Boosté", systemImage: "bolt.fill")
+                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.sun)
+                    .transition(.scale.combined(with: .opacity))
+            }
             if chests.count > 1 {
                 Text("\(index + 1) sur \(chests.count)")
                     .font(.system(.footnote, design: .rounded).weight(.heavy)).monospacedDigit()
@@ -157,6 +166,18 @@ struct ChestOpeningView: View {
                     .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.6))
                     .frame(minHeight: 44)
             case .closed:
+                if let chest, taps == 0, !boosted.contains(chest.id), (app.adStatus?.boostChest ?? 0) > 0 {
+                    Button { Task { await boost(chest) } } label: {
+                        HStack(spacing: 8) {
+                            if boosting { ProgressView().controlSize(.small) }
+                            Label("Booster avec une pub", systemImage: "play.rectangle.fill")
+                        }
+                    }
+                    .buttonStyle(InkButtonStyle(fill: Color.sun, text: Color(hex: 0x1E1340)))
+                    .disabled(boosting)
+                    Text("Chances d'amélioration doublées, graines +50 %")
+                        .font(.cfFootnote).foregroundStyle(.white.opacity(0.7))
+                }
                 Button("Plus tard") { onDone() }
                     .font(.system(.subheadline, design: .rounded).weight(.bold))
                     .foregroundStyle(.white.opacity(0.7))
@@ -220,6 +241,23 @@ struct ChestOpeningView: View {
                 upgraded = nil
                 phase = .closed
             }
+        }
+    }
+
+    /// Coffre boosté par une pub : le serveur le marque, l'ouverture en tient compte.
+    private func boost(_ chest: ChestRef) async {
+        guard !boosting else { return }
+        boosting = true
+        defer { boosting = false }
+        error = nil
+        do {
+            if try await app.watchAd(.boostChest, ref: chest.id.uuidString.lowercased()) != nil {
+                withAnimation(Motion.bounce) { _ = boosted.insert(chest.id) }
+                Haptics.success()
+                pulse(big: true)
+            }
+        } catch {
+            self.error = (error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant."
         }
     }
 

@@ -1000,6 +1000,7 @@ public struct ChestRef: Codable, Hashable, Identifiable, Sendable {
         case "referral": return "Parrainage"
         case "league": return "Podium de ta ligue"
         case "welcome": return "Bienvenue dans la nouvelle version"
+        case "ad": return "Coffre offert"
         default: return "Récompense"
         }
     }
@@ -1413,5 +1414,77 @@ public struct CorrectionResult: Decodable, Hashable, Sendable {
         self.corrected = corrected
         self.total = total
         self.refunds = refunds
+    }
+}
+
+// MARK: - Pubs récompensées
+
+/// Récompenses possibles d'une pub (nom serveur).
+public enum AdKind: String, Sendable, CaseIterable {
+    case doubleSeeds = "double_seeds"
+    case boostChest = "boost_chest"
+    case freeChest = "free_chest"
+    case streakRescue = "streak_rescue"
+    case correction
+}
+
+/// État des pubs du jour : récompenses restantes, série à sauver, pub entre les parties autorisée.
+public struct AdStatus: Decodable, Hashable, Sendable {
+    public var doubleSeeds: Int
+    public var boostChest: Int
+    public var freeChest: Int
+    /// Série perdue récupérable (sa longueur), sinon nil.
+    public var streakRescue: Int?
+    public var interstitial: Bool
+    public var admin: Bool
+
+    public init(doubleSeeds: Int = 0, boostChest: Int = 0, freeChest: Int = 0, streakRescue: Int? = nil,
+                interstitial: Bool = false, admin: Bool = false) {
+        self.doubleSeeds = doubleSeeds
+        self.boostChest = boostChest
+        self.freeChest = freeChest
+        self.streakRescue = streakRescue
+        self.interstitial = interstitial
+        self.admin = admin
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case interstitial, admin
+        case doubleSeeds = "double_seeds"
+        case boostChest = "boost_chest"
+        case freeChest = "free_chest"
+        case streakRescue = "streak_rescue"
+    }
+
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        doubleSeeds = try c.decodeIfPresent(Int.self, forKey: .doubleSeeds) ?? 0
+        boostChest = try c.decodeIfPresent(Int.self, forKey: .boostChest) ?? 0
+        freeChest = try c.decodeIfPresent(Int.self, forKey: .freeChest) ?? 0
+        streakRescue = try c.decodeIfPresent(Int.self, forKey: .streakRescue)
+        interstitial = try c.decodeIfPresent(Bool.self, forKey: .interstitial) ?? false
+        admin = try c.decodeIfPresent(Bool.self, forKey: .admin) ?? false
+    }
+}
+
+/// Récompense donnée par le serveur après une pub vérifiée.
+public struct AdReward: Decodable, Hashable, Sendable {
+    public let seeds: Int?
+    public let chestId: UUID?
+    public let boosted: Bool?
+    public let streak: Int?
+    public let balance: Int?
+
+    public init(seeds: Int? = nil, chestId: UUID? = nil, boosted: Bool? = nil, streak: Int? = nil, balance: Int? = nil) {
+        self.seeds = seeds
+        self.chestId = chestId
+        self.boosted = boosted
+        self.streak = streak
+        self.balance = balance
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case seeds, boosted, streak, balance
+        case chestId = "chest_id"
     }
 }

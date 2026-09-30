@@ -26,8 +26,13 @@ public protocol GameService: Sendable {
     /// Journal d'usage (ouverture, onboarding, partage…), stocké dans la base Brainlix uniquement.
     func trackEvents(_ events: [AppEvent]) async throws
     /// « Corrige tes erreurs » : ouvre la correction de la dernière partie, puis envoie les réponses.
-    func correctionStart(session: UUID) async throws -> CorrectionStart
+    /// Ouverture après une pub vue (`test` : pubs de test, réservé aux admins).
+    func correctionStart(session: UUID, test: Bool) async throws -> CorrectionStart
     func correctionSubmit(session: UUID, answers: [(UUID, GivenAnswer?)]) async throws -> CorrectionResult
+    /// Pubs récompensées : état du jour, vérification avant la pub, récompense après (vérifiée par le serveur).
+    func adStatus() async throws -> AdStatus
+    func adCan(_ kind: AdKind, ref: String?) async throws
+    func adClaim(_ kind: AdKind, ref: String?, test: Bool) async throws -> AdReward
 
     // Profil & progression
     func profile() async throws -> Profile
@@ -141,8 +146,22 @@ public struct LiveGameService: GameService {
                                         "p_level": .string(level.rawValue)])
     }
 
-    public func correctionStart(session: UUID) async throws -> CorrectionStart {
-        try await api.rpc("play_correction_start", ["p_session": .string(session.uuidString), "p_via": .string("free")])
+    public func correctionStart(session: UUID, test: Bool) async throws -> CorrectionStart {
+        try await api.rpc("play_correction_start", ["p_session": .string(session.uuidString), "p_via": .string("ad"),
+                                                     "p_test": .bool(test)])
+    }
+
+    public func adStatus() async throws -> AdStatus {
+        try await api.rpc("ad_status")
+    }
+
+    public func adCan(_ kind: AdKind, ref: String?) async throws {
+        try await api.rpcVoid("ad_can", ["p_kind": .string(kind.rawValue), "p_ref": ref.map(JSONValue.string) ?? .null])
+    }
+
+    public func adClaim(_ kind: AdKind, ref: String?, test: Bool) async throws -> AdReward {
+        try await api.rpc("ad_claim", ["p_kind": .string(kind.rawValue), "p_ref": ref.map(JSONValue.string) ?? .null,
+                                       "p_test": .bool(test)])
     }
 
     public func correctionSubmit(session: UUID, answers: [(UUID, GivenAnswer?)]) async throws -> CorrectionResult {
@@ -333,8 +352,18 @@ public extension GameService {
     /// Par défaut (démo, service indisponible) : rien n'est envoyé.
     func trackEvents(_ events: [AppEvent]) async throws {}
 
-    func correctionStart(session: UUID) async throws -> CorrectionStart {
+    func correctionStart(session: UUID, test: Bool) async throws -> CorrectionStart {
         throw BackendError.server(status: 400, code: "correction_unavailable", message: "")
+    }
+
+    func adStatus() async throws -> AdStatus { AdStatus() }
+
+    func adCan(_ kind: AdKind, ref: String?) async throws {
+        throw BackendError.server(status: 400, code: "ad_unavailable", message: "")
+    }
+
+    func adClaim(_ kind: AdKind, ref: String?, test: Bool) async throws -> AdReward {
+        throw BackendError.server(status: 400, code: "ad_unavailable", message: "")
     }
 
     func correctionSubmit(session: UUID, answers: [(UUID, GivenAnswer?)]) async throws -> CorrectionResult {

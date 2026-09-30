@@ -212,7 +212,25 @@ const ago = (t) => { if (!t) return '—'; const m = (Date.now() - new Date(t)) 
   return m < 60 ? `il y a ${Math.round(m)} min` : m < 1440 ? `il y a ${Math.round(m / 60)} h` : `il y a ${Math.round(m / 1440)} j`; };
 
 async function renderDashboard() {
-  const [d, k] = await Promise.all([rpc('admin_dashboard'), rpc('admin_kpis', { p_days: 30 })]);
+  const [d, k, ads] = await Promise.all([rpc('admin_dashboard'), rpc('admin_kpis', { p_days: 30 }),
+                                         rpc('admin_ads', { p_days: 30 }).catch(() => null)]);
+  const AD_KINDS = { double_seeds: 'Graines doublées', boost_chest: 'Coffre boosté', free_chest: 'Coffre offert',
+                     streak_rescue: 'Série sauvée', correction: 'Correction des erreurs' };
+  const adsHtml = ads ? `
+    <h2 style="margin-top:24px">Pubs</h2>
+    <div class="grid">
+      ${[['Pubs récompensées vues (7 j)', Object.values(ads.by_kind ?? {}).reduce((a, x) => a + x.views, 0)],
+         ['Joueurs ayant regardé (7 j)', ads.viewers_7d], ['Pubs entre les parties (7 j)', ads.interstitial_7d],
+         ['Graines doublées (7 j)', ads.seeds_doubled]]
+        .map(([l, v]) => `<div class="card stat"><b>${fmt(v)}</b><span>${l}</span></div>`).join('')}
+    </div>
+    <div class="two">
+      <div class="card"><h2>Pubs récompensées par jour</h2>${barChart(ads.series, 'rewarded', 'pubs récompensées')}</div>
+      <div class="card"><h2>Pubs entre les parties par jour</h2>${barChart(ads.series, 'interstitial', 'pubs entre les parties')}</div>
+    </div>
+    <div class="card"><h2>Par récompense (7 jours)</h2><p class="muted small">Vues confirmées par Google · récompenses données. Les vues de test ne sont pas comptées ; les revenus sont dans la console AdMob.</p>
+      <table>${Object.entries(AD_KINDS).map(([key, label]) => { const x = ads.by_kind?.[key] ?? { views: 0, claimed: 0 };
+        return `<tr><td>${label}</td><td style="text-align:right"><b>${fmt(x.views)}</b> vues · ${fmt(x.claimed)} données</td></tr>`; }).join('')}</table></div>` : '';
   const t = k.totals, f = k.funnel, ret = k.retention ?? {};
   const funnelRows = [['Arrivés (30 derniers jours)', f.created], ['Onboarding terminé', f.onboarded], ['Première réponse', f.first_answer],
                       ['Premier 5 du jour', f.first_daily], ['Revenus un autre jour', f.came_back], ['Compte créé (Apple ou e-mail)', f.linked]];
@@ -249,7 +267,7 @@ async function renderDashboard() {
     </div>`;
   const byTheme = d.published_by_subdomain ?? {};
   const themes = state.subdomains.filter((s) => s.is_active !== false);
-  app.innerHTML = kpiHtml + `
+  app.innerHTML = kpiHtml + adsHtml + `
     <h2 style="margin-top:24px">Contenu</h2>
     <div class="grid">
       ${[['Joueurs', d.users], ['5 du jour terminés aujourd\'hui', d.daily_players_today], ['Réponses (7 jours)', d.answers_7d],

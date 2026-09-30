@@ -81,6 +81,7 @@ struct LeonTreeScreen: View {
                         app.openChests()
                     }
                 }
+                FreeChestOffer()
                 tickets(progression.tickets)
             } else {
                 ProgressView().frame(maxWidth: .infinity, minHeight: 300)

@@ -22,7 +22,11 @@ begin
   select mu into mu1 from public.user_skills where user_id = u and scope_id = 'history';
   select seeds, xp_total into seeds1, xp1 from public.profiles where id = u;
 
-  r := public.play_correction_start(sid);
+  -- Sans pub vérifiée : refusé ; le gratuit n'existe plus.
+  perform tst.throws(format('select public.play_correction_start(%L)', sid), 'ad_pending');
+  perform tst.throws(format('select public.play_correction_start(%L, ''free'')', sid), 'ad_required');
+  perform public.ad_ssv_record('tx-corr-1', u::text, 'unit', 'correction:' || sid);
+  r := public.ad_claim('correction', sid::text);
   ids := r -> 'question_ids';
   perform tst.ok(jsonb_array_length(ids) = 5, 'les 5 questions ratées sont proposées');
 
@@ -51,11 +55,10 @@ begin
   perform tst.throws(format('select public.play_correction_start(%L)', sid), 'correction_done');
   perform tst.throws(format('select public.play_correction_start(%L)', pack ->> 'session_id'), 'nothing_to_correct');
 
-  -- Pub pas encore branchée : refusée.
-  perform tst.throws(format('select public.play_correction_start(%L, ''ad'')', pack ->> 'session_id'), 'nothing_to_correct');
+  perform tst.throws(format('select public.ad_can(''correction'', %L)', pack ->> 'session_id'), 'nothing_to_correct');
 end $$;
 
--- Délai et limite quotidienne.
+-- Délai : seulement dans l'heure, et pas de limite par jour (une pub par partie).
 do $$
 declare
   u uuid := tst.new_user();
@@ -70,12 +73,16 @@ begin
       atts := atts || jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', x ->> 'id', 'given', tst.wrong_given(), 'response_ms', 3000);
     end loop;
     perform public.play_submit((pack ->> 'session_id')::uuid, atts);
-    if i < 4 then
-      perform public.play_correction_start((pack ->> 'session_id')::uuid);
-    else
-      perform tst.throws(format('select public.play_correction_start(%L)', pack ->> 'session_id'), 'correction_limit');
-    end if;
+    perform public.ad_ssv_record('tx-lim-' || i, u::text, 'unit', 'correction:' || (pack ->> 'session_id'));
+    perform public.play_correction_start((pack ->> 'session_id')::uuid, 'ad');
   end loop;
+  perform tst.ok(true, '4 corrections le même jour');
+  pack := public.play_pack('training', 'geography', null, 3, false, 'beginner');
+  atts := '[]'::jsonb;
+  for x in select * from jsonb_array_elements(pack -> 'questions') loop
+    atts := atts || jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', x ->> 'id', 'given', tst.wrong_given(), 'response_ms', 3000);
+  end loop;
+  perform public.play_submit((pack ->> 'session_id')::uuid, atts);
   perform tst.tick('2 hours');
-  perform tst.throws(format('select public.play_correction_start(%L)', pack ->> 'session_id'), 'correction_expired');
+  perform tst.throws(format('select public.ad_can(''correction'', %L)', pack ->> 'session_id'), 'correction_expired');
 end $$;

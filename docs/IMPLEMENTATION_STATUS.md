@@ -13,6 +13,7 @@ _Dernière mise à jour : 2026-09-29 (lot 1 : clair par défaut, réglages, règ
 | Adaptatif (compétences domaine/sous-domaine, calibration bornée, élargissement, questions problématiques, sélection par bandes, erreurs & maîtrise) | ✅ | `20_adaptive.sql` |
 | Elo (provisoire 5 parties, fenêtres de cote, points, variation de cote, simulation de convergence) | ✅ | `70_rating.sql` |
 | Bouclier (2e essai payé, demi-réussite) · « Corrige tes erreurs » (remboursement d'Elo plafonné au niveau d'avant) | ✅ | `98_second_chance.sql`, `99_correction.sql` |
+| Pubs récompensées vérifiées par le serveur (SSV AdMob), limites par jour / mois, mode test admin | ✅ | `99_ads.sql`, fonction Edge `admob-ssv` |
 | Algo : hasard (QCM, Vrai/Faux), thèmes équilibrés, révision espacée | ✅ | `80_algo.sql` |
 | Objectifs jour/semaine (progression serveur, récompenses uniques), récap des semaines, historique du Daily | ✅ | `90_quests.sql` |
 | Économie (ledger, plafonds, aides), pseudo, amis, parrainage anti-abus, ligues, suppression de compte | ✅ | `30_social_economy.sql` |

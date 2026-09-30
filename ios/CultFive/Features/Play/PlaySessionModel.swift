@@ -382,14 +382,19 @@ final class PlaySessionModel {
         correctionQuestions.indices.contains(correctionIndex) ? correctionQuestions[correctionIndex] : nil
     }
 
-    /// Ouvre la correction : le serveur confirme les questions ratées, on les rejoue depuis le pack de la partie.
-    func startCorrection() async {
+    /// Ouvre la correction : `unlock` montre la pub et renvoie les questions ratées confirmées par le serveur (nil si la
+    /// pub a été fermée avant la fin) ; on les rejoue depuis le pack de la partie.
+    func startCorrection(unlock: (UUID) async throws -> CorrectionStart?) async {
         guard case .summary(var summary) = stage, let sessionId, !summary.correctionLoading else { return }
         summary.correctionLoading = true
         summary.correctionError = nil
         stage = .summary(summary)
         do {
-            let start = try await service.correctionStart(session: sessionId)
+            guard let start = try await unlock(sessionId) else {
+                summary.correctionLoading = false
+                stage = .summary(summary)
+                return
+            }
             let byId = Dictionary(questions.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
             correctionQuestions = start.questionIds.compactMap { byId[$0] }.filter { $0.reveal != nil }
             correctionRanked = start.ranked

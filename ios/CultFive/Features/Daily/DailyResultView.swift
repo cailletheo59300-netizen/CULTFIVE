@@ -41,6 +41,9 @@ struct DailyResultView: View {
                         .stagger(appeared, index: 1, reduceMotion: reduceMotion)
                     figures.stagger(appeared, index: 2, reduceMotion: reduceMotion)
                     rewards.stagger(appeared, index: 3, reduceMotion: reduceMotion)
+                    if result.seeds > 0 {
+                        DoubleSeedsButton(ref: "daily:\(result.runId.uuidString.lowercased())", onInk: true)
+                    }
                     knowledge.stagger(appeared, index: 4, reduceMotion: reduceMotion)
                     celebrations.stagger(appeared, index: 5, reduceMotion: reduceMotion)
                     if !reminderAsked {
