@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Brainlix · Admin</title>
 <style>
   :root {
@@ -56,6 +57,12 @@
   .bar i { display: block; height: 100%; background: var(--brand); }
   .hidden { display: none !important; }
   .center { max-width: 420px; margin: 60px auto; }
+  .chart { width: 100%; height: 150px; display: block; }
+  .chart rect.b { fill: var(--brand); } .chart rect.b:hover { fill: var(--brand-deep); }
+  .chart text { fill: var(--soft); font-size: 11px; font-weight: 700; }
+  .chart line { stroke: var(--line); stroke-width: 1; }
+  .two { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  .funnel td:first-child { width: 42%; }
   pre { white-space: pre-wrap; font-size: 12px; background: var(--bg); padding: 8px; border-radius: 10px; }
 </style>
 </head>
@@ -64,6 +71,7 @@
   <h1>Brainlix · Admin</h1>
   <nav id="nav" class="hidden">
     <button data-view="dashboard">Tableau de bord</button>
+    <button data-view="users">Joueurs</button>
     <button data-view="questions">Questions</button>
     <button data-view="reports">Signalements</button>
     <button data-view="daily">5 du jour</button>
@@ -90,7 +98,9 @@ const store = {
   set(k, v) { try { localStorage.setItem('cf-admin-' + k, JSON.stringify(v)); } catch {} },
   del(k) { try { localStorage.removeItem('cf-admin-' + k); } catch {} },
 };
-const state = { config: store.get('config'), session: store.get('session'), domains: [], subdomains: [], view: 'dashboard',
+const DEFAULT_CONFIG = { url: 'https://sibpncsjsdtjcjxbfryk.supabase.co',
+  key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNpYnBuY3Nqc2R0amNqeGJmcnlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MjQ1NTcsImV4cCI6MjEwMTEwMDU1N30.Baac4bYs7lFxQ5JrMydCEMqx7uifKSBz2dtKlmXZK2M' };
+const state = { config: store.get('config') ?? DEFAULT_CONFIG, session: store.get('session'), domains: [], subdomains: [], view: 'dashboard',
   filter: { sort: 'recent' }, page: 0 };
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -156,7 +166,7 @@ function renderLogin() {
   $('#resetCfg').onclick = (e) => { e.preventDefault(); state.config = null; store.del('config'); render(); };
   $('#send').onclick = async () => {
     const email = $('#email').value.trim();
-    try { await http('/auth/v1/otp', { method: 'POST', body: { email, create_user: false }, auth: false });
+    try { await http('/auth/v1/otp', { method: 'POST', body: { email, create_user: true }, auth: false });
       store.set('email', email); $('#codeBox').classList.remove('hidden'); toast('Code envoyé'); }
     catch (e) { toast(e.message, true); }
   };
@@ -181,11 +191,66 @@ const statusPill = (s) => `<span class="pill ${s === 'published' ? 'ok' : s === 
 const pct = (x) => x == null ? '—' : Math.round(x * 100) + ' %';
 
 // ───────────────────────── Tableau de bord
+// Histogramme à une série (couleur de la marque), infobulle au survol de chaque barre.
+function barChart(series, key, unit) {
+  const W = 600, H = 150, pad = 18, n = series.length, max = Math.max(1, ...series.map((x) => x[key] ?? 0));
+  const bw = (W - 2) / n;
+  const bars = series.map((x, i) => {
+    const v = x[key] ?? 0, h = Math.max(v > 0 ? 3 : 0, (H - pad - 14) * v / max);
+    return `<rect class="b" x="${(i * bw + 1).toFixed(1)}" y="${(H - pad - h).toFixed(1)}" width="${Math.max(1, bw - 2).toFixed(1)}" height="${h.toFixed(1)}" rx="3">
+      <title>${new Date(x.day).toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' })} : ${v} ${unit}</title></rect>`;
+  }).join('');
+  const d0 = new Date(series[0].day).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+  const d1 = new Date(series[n - 1].day).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="${unit} par jour">
+    <line x1="0" x2="${W}" y1="${H - pad}" y2="${H - pad}"/>${bars}
+    <text x="0" y="${H - 3}">${d0}</text><text x="${W}" y="${H - 3}" text-anchor="end">${d1}</text>
+    <text x="0" y="11">max ${max}</text></svg>`;
+}
+const fmt = (n) => (n ?? 0).toLocaleString('fr-FR');
+const ago = (t) => { if (!t) return '—'; const m = (Date.now() - new Date(t)) / 60000;
+  return m < 60 ? `il y a ${Math.round(m)} min` : m < 1440 ? `il y a ${Math.round(m / 60)} h` : `il y a ${Math.round(m / 1440)} j`; };
+
 async function renderDashboard() {
-  const d = await rpc('admin_dashboard');
+  const [d, k] = await Promise.all([rpc('admin_dashboard'), rpc('admin_kpis', { p_days: 30 })]);
+  const t = k.totals, f = k.funnel, ret = k.retention ?? {};
+  const funnelRows = [['Arrivés (30 derniers jours)', f.created], ['Onboarding terminé', f.onboarded], ['Première réponse', f.first_answer],
+                      ['Premier 5 du jour', f.first_daily], ['Revenus un autre jour', f.came_back], ['Compte créé (Apple ou e-mail)', f.linked]];
+  const kpiHtml = `
+    <div class="grid">
+      ${[['Joueurs', t.players], ['Actifs aujourd\'hui', t.dau], ['Actifs 7 jours', t.wau], ['Actifs 30 jours', t.mau],
+         ['Comptes créés', t.linked], ['Réponses (total)', t.answers]]
+        .map(([l, v]) => `<div class="card stat"><b>${fmt(v)}</b><span>${l}</span></div>`).join('')}
+    </div>
+    <div class="two">
+      <div class="card"><h2>Joueurs actifs par jour</h2>${barChart(k.series, 'active', 'joueurs actifs')}</div>
+      <div class="card"><h2>Nouveaux joueurs par jour</h2>${barChart(k.series, 'new_players', 'nouveaux joueurs')}</div>
+      <div class="card"><h2>5 du jour terminés</h2>${barChart(k.series, 'daily_finished', '5 du jour terminés')}</div>
+      <div class="card"><h2>Parties terminées</h2>${barChart(k.series, 'games', 'parties')}</div>
+    </div>
+    <div class="two">
+      <div class="card"><h2>Rétention</h2><p class="muted small">Part des joueurs revenus exactement 1, 7 ou 30 jours après leur arrivée.</p>
+        <div class="grid">${[1, 7, 30].map((n) => { const r = ret[n] ?? {}; return `<div class="stat"><b>${pct(r.rate)}</b>
+          <span>J${n} · ${fmt(r.returned)} sur ${fmt(r.cohort)}</span></div>`; }).join('')}</div></div>
+      <div class="card"><h2>Parcours des nouveaux joueurs</h2>
+        <table class="funnel">${funnelRows.map(([l, v]) => `<tr><td>${l}</td><td style="width:60px"><b>${fmt(v)}</b></td>
+          <td><div class="bar"><i style="width:${f.created ? Math.round(100 * v / f.created) : 0}%"></i></div></td>
+          <td style="width:50px" class="muted small">${f.created ? Math.round(100 * v / f.created) + ' %' : ''}</td></tr>`).join('')}</table></div>
+    </div>
+    <div class="two">
+      <div class="card"><h2>Graines (7 jours)</h2>
+        <p><b>${fmt(k.economy.seeds_earned)}</b> gagnées · <b>${fmt(k.economy.seeds_spent)}</b> dépensées</p>
+        <table>${Object.entries(k.economy.by_reason ?? {}).map(([r, n]) => `<tr><td>${esc(r)}</td><td style="text-align:right"><b>${fmt(n)}</b></td></tr>`).join('')}</table>
+        <h3>Coffres ouverts (7 jours)</h3><p>${Object.entries(k.economy.chests_opened ?? {}).map(([t2, n]) => `<span class="pill">${esc(t2)} · ${n}</span>`).join(' ') || '<span class="muted">Aucun</span>'}</p></div>
+      <div class="card"><h2>Domaines joués (30 jours)</h2>
+        <table>${(k.domains ?? []).map((x) => `<tr><td>${chip(x.domain_id)}</td><td style="text-align:right"><b>${fmt(x.answers)}</b> réponses</td></tr>`).join('')}</table>
+        <h3>Versions de l'app (30 jours)</h3><p>${Object.entries(k.versions ?? {}).map(([v, n]) => `<span class="pill">${esc(v)} · ${n}</span>`).join(' ') || '<span class="muted">Pas encore de données</span>'}</p>
+        <h3>Événements (7 jours)</h3><p>${Object.entries(k.events ?? {}).map(([v, n]) => `<span class="pill">${esc(v)} · ${n}</span>`).join(' ') || '<span class="muted">Pas encore de données</span>'}</p></div>
+    </div>`;
   const byTheme = d.published_by_subdomain ?? {};
   const themes = state.subdomains.filter((s) => s.is_active !== false);
-  app.innerHTML = `
+  app.innerHTML = kpiHtml + `
+    <h2 style="margin-top:24px">Contenu</h2>
     <div class="grid">
       ${[['Joueurs', d.users], ['5 du jour terminés aujourd\'hui', d.daily_players_today], ['Réponses (7 jours)', d.answers_7d],
          ['Signalements ouverts', d.open_reports], ['Questions à revoir', d.needs_review],
@@ -434,6 +499,76 @@ async function pickReplacement(date, position, domain, started) {
   search();
 }
 
+// ───────────────────────── Joueurs
+state.users = { search: '', sort: 'recent', page: 0 };
+async function renderUsers() {
+  const u = state.users;
+  const res = await rpc('admin_users', { p_search: u.search || null, p_sort: u.sort, p_limit: 50, p_offset: u.page * 50 });
+  app.innerHTML = `<div class="card"><div class="row">
+      <div style="flex:3"><label>Pseudo ou identifiant</label><input id="uSearch" value="${esc(u.search)}"></div>
+      <div><label>Tri</label><select id="uSort">${[['recent', 'Plus récents'], ['active', 'Derniers actifs'], ['answers', 'Plus de réponses'], ['streak', 'Plus longue série']]
+        .map(([key, v]) => `<option value="${key}" ${u.sort === key ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+      <div><label>&nbsp;</label><button class="btn" id="uGo">Chercher</button></div></div></div>
+    <div class="card"><p class="muted small">${fmt(res.total)} joueurs</p>
+    <table><thead><tr><th>Pseudo</th><th>Arrivé</th><th>Dernière activité</th><th>Réponses</th><th>Série</th><th>Graines</th><th>Compte</th></tr></thead><tbody>
+    ${res.items.map((p) => `<tr class="click" data-id="${p.id}"><td><b>${esc(p.handle)}</b> ${p.banned_at ? '<span class="pill bad">banni</span>' : ''}</td>
+      <td class="small">${new Date(p.created_at).toLocaleDateString('fr-FR')}</td><td class="small">${ago(p.last_active)}</td>
+      <td>${fmt(p.questions_answered)}</td><td>${p.streak_current ?? 0}</td><td>${fmt(p.seeds)}</td>
+      <td>${p.anonymous ? '<span class="pill">invité</span>' : '<span class="pill ok">compte</span>'}</td></tr>`).join('')}
+    </tbody></table>
+    <p class="row"><button class="btn ghost" id="uPrev" ${u.page === 0 ? 'disabled' : ''}>Précédents</button>
+      <button class="btn ghost" id="uNext" ${(u.page + 1) * 50 >= res.total ? 'disabled' : ''}>Suivants</button></p></div>`;
+  const go = () => { u.search = $('#uSearch').value.trim(); u.sort = $('#uSort').value; u.page = 0; renderUsers(); };
+  $('#uGo').onclick = go; $('#uSearch').onkeydown = (e) => { if (e.key === 'Enter') go(); };
+  $('#uPrev').onclick = () => { u.page--; renderUsers(); }; $('#uNext').onclick = () => { u.page++; renderUsers(); };
+  app.querySelectorAll('tr[data-id]').forEach((tr) => tr.onclick = () => openUser(tr.dataset.id));
+}
+async function openUser(id) {
+  const d = await rpc('admin_user', { p_user: id });
+  const p = d.profile;
+  const m = document.createElement('div');
+  m.className = 'modal';
+  m.innerHTML = `<div class="card">
+    <div class="row" style="align-items:center"><h2 style="flex:3">${esc(p.handle)} ${p.banned_at ? '<span class="pill bad">banni</span>' : ''}</h2>
+      <button class="btn ghost" id="close" style="flex:0">Fermer</button></div>
+    <p class="muted small">Arrivé le ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${d.anonymous ? 'invité (sans compte)' : 'compte ' + (d.providers ?? []).join(', ')}
+      · ${d.devices} appareil(s) · fuseau ${esc(p.timezone)} · id <code>${esc(p.id)}</code></p>
+    ${p.banned_at ? `<p class="pill bad">Banni le ${new Date(p.banned_at).toLocaleDateString('fr-FR')} : ${esc(p.ban_reason ?? '')}</p>` : ''}
+    <div class="grid">${[['XP', p.xp_total], ['Graines', p.seeds], ['Série', p.streak_current], ['Meilleure série', p.streak_best],
+      ['Réponses', p.questions_answered], ['Bonnes réponses', p.questions_correct], ['Coffres en attente', d.chests.waiting], ['Signalements faits', d.reports]]
+      .map(([l, v]) => `<div class="stat"><b>${fmt(v)}</b><span>${l}</span></div>`).join('')}</div>
+    <h3>Elo par domaine</h3><p>${d.skills.map((s) => `${chip(s.domain_id)} <b>${s.cote}</b> <span class="muted small">(${s.n} rép.)</span>`).join(' &nbsp; ') || '<span class="muted">Aucun</span>'}</p>
+    <h3>Dernières parties</h3><table>${d.games.map((g) => `<tr><td class="small">${new Date(g.created_at).toLocaleString('fr-FR')}</td><td>${esc(g.mode)}</td>
+      <td>${g.domain_id ? chip(g.domain_id) : ''}</td><td>${g.correct}/${g.answers}</td><td>${g.completed ? '' : '<span class="pill">abandonnée</span>'}</td></tr>`).join('') || '<tr><td class="muted">Aucune</td></tr>'}</table>
+    <h3>5 du jour (14 derniers)</h3><p>${d.dailies.map((x) => `<span class="pill">${x.date} · ${x.status === 'finished' ? x.score + '/5' : x.status}</span>`).join(' ') || '<span class="muted">Aucun</span>'}</p>
+    <h3>Graines et XP</h3><table>${d.ledger.map((l) => `<tr><td class="small">${new Date(l.at).toLocaleString('fr-FR')}</td><td>${esc(l.reason)}</td><td>${l.amount > 0 ? '+' : ''}${l.amount} ${l.currency === 'seeds' ? 'graines' : esc(l.currency)}</td></tr>`).join('')}</table>
+    <h3>Journal de l'app</h3><table>${d.events.map((e) => `<tr><td class="small">${new Date(e.at).toLocaleString('fr-FR')}</td><td>${esc(e.name)}</td><td class="small muted">${esc(JSON.stringify(e.props))}</td><td class="small">${esc(e.app_version ?? '')}</td></tr>`).join('') || '<tr><td class="muted">Pas encore d\'événement</td></tr>'}</table>
+    <h3>Modération</h3>
+    <div class="row"><div style="flex:2"><label>Nouveau pseudo</label><input id="newHandle" value="${esc(p.handle)}"></div>
+      <div><label>&nbsp;</label><button class="btn ghost" id="rename">Renommer</button></div></div>
+    <div class="row" style="margin-top:10px">${p.banned_at
+      ? '<div><button class="btn ok" id="unban">Débannir</button></div>'
+      : '<div style="flex:2"><label>Motif du bannissement</label><input id="banReason" placeholder="Triche, pseudo injurieux…"></div><div><label>&nbsp;</label><button class="btn bad" id="ban">Bannir</button></div>'}</div>
+  </div>`;
+  document.body.appendChild(m);
+  const close = () => { m.remove(); renderUsers(); };
+  $('#close', m).onclick = close;
+  m.onclick = (e) => { if (e.target === m) close(); };
+  $('#rename', m).onclick = async () => {
+    try { await rpc('admin_user_rename', { p_user: id, p_handle: $('#newHandle', m).value.trim() }); toast('Pseudo modifié'); close(); }
+    catch (e) { toast(e.message, true); }
+  };
+  const ban = $('#ban', m), unban = $('#unban', m);
+  if (ban) ban.onclick = async () => {
+    if (!confirm(`Bannir ${p.handle} ? Il ne pourra plus jouer et quittera ses ligues.`)) return;
+    try { await rpc('admin_user_ban', { p_user: id, p_reason: $('#banReason', m).value.trim() || null }); toast('Joueur banni'); close(); }
+    catch (e) { toast(e.message, true); }
+  };
+  if (unban) unban.onclick = async () => {
+    try { await rpc('admin_user_unban', { p_user: id }); toast('Joueur débanni'); close(); } catch (e) { toast(e.message, true); }
+  };
+}
+
 // ───────────────────────── Navigation
 async function render() {
   $('#nav').classList.toggle('hidden', !state.session);
@@ -447,6 +582,7 @@ async function render() {
     if (!(await rpc('is_admin'))) { app.innerHTML = `<div class="card center"><h2>Accès refusé</h2><p>Ce compte n'est pas administrateur. Ajoute-le dans la table <code>app_admins</code>.</p></div>`; return; }
     await loadTaxonomy();
     if (state.view === 'dashboard') await renderDashboard();
+    else if (state.view === 'users') await renderUsers();
     else if (state.view === 'questions') await renderQuestions();
     else if (state.view === 'reports') await renderQuestions({ reported: true });
     else if (state.view === 'daily') await renderDaily();

@@ -33,17 +33,24 @@ begin
   -- Coffre de bois : 10–20 graines (+10 si un joker tombe mais qu'on en a déjà 2), 1 ticket.
   select id into c from public.user_chests where user_id = u and idempotency_key = 'level:2';
   r := public.chest_open(c);
-  perform tst.ok((r ->> 'seeds')::int between 10 and 30, 'bois : graines');
-  perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 1, 'bois : 1 ticket');
-  perform tst.ok(r -> 'item' = 'null'::jsonb or r -> 'item' is null, 'bois : pas d''objet');
+  -- (La Recharge peut faire monter le coffre : on ne vérifie le contenu « bois » que s'il est resté en bois.)
+  if r ->> 'final_tier' = 'wood' then
+    perform tst.ok((r ->> 'seeds')::int between 10 and 30, 'bois : graines');
+    perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 1, 'bois : 1 ticket');
+    perform tst.ok(r -> 'item' = 'null'::jsonb or r -> 'item' is null, 'bois : pas d''objet');
+  else
+    perform tst.ok((r ->> 'seeds')::int >= 30, 'coffre monté : plus de graines');
+  end if;
 
   -- Jokers plafonnés à 2 : un joker en trop devient des graines.
   update public.profiles set streak_freezes = 2 where id = u;
   select id into c from public.user_chests where user_id = u and idempotency_key = 'level:5';
   r := public.chest_open(c);
   perform tst.ok(not (r ->> 'joker')::bool and (select streak_freezes from public.profiles where id = u) = 2, 'jamais plus de 2 jokers');
-  perform tst.ok((r ->> 'seeds')::int between 30 and 95, 'argent : graines (+ compensations)');
-  perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 2, 'argent : 2 tickets');
+  if r ->> 'final_tier' = 'silver' then
+    perform tst.ok((r ->> 'seeds')::int between 30 and 95, 'argent : graines (+ compensations)');
+    perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 2, 'argent : 2 tickets');
+  end if;
 
   -- Tous les objets des coffres possédés : l'objet est remplacé par des graines.
   insert into public.user_items (user_id, item_id) select u, id from public.items where rarity = 'chest' on conflict do nothing;
@@ -51,7 +58,9 @@ begin
   select id into c from public.user_chests where user_id = u and idempotency_key = 'test:gold';
   r := public.chest_open(c);
   perform tst.ok(r -> 'item' = 'null'::jsonb or r -> 'item' is null, 'plus d''objet à gagner');
-  perform tst.ok((r ->> 'seeds')::int between 100 and 160, 'objet remplacé par 40 graines');
+  if r ->> 'final_tier' = 'gold' then
+    perform tst.ok((r ->> 'seeds')::int between 100 and 160, 'objet remplacé par 40 graines');
+  end if;
 
   -- Coffre d'un autre joueur : introuvable.
   perform tst.throws(format('select public.chest_open(%L)', gen_random_uuid()), 'chest_not_found');

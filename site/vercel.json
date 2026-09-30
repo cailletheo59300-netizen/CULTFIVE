@@ -2,20 +2,57 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/i/:code", "destination": "/lien" },
-    { "source": "/l/:code", "destination": "/lien" },
-    { "source": "/d/:code", "destination": "/lien" }
+    {
+      "source": "/i/:code",
+      "destination": "/lien"
+    },
+    {
+      "source": "/l/:code",
+      "destination": "/lien"
+    },
+    {
+      "source": "/d/:code",
+      "destination": "/lien"
+    }
   ],
   "headers": [
     {
+      "source": "/admin",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
       "source": "/.well-known/apple-app-site-association",
-      "headers": [{ "key": "Content-Type", "value": "application/json" }]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]

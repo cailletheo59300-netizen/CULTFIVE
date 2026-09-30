@@ -23,6 +23,8 @@ public protocol GameService: Sendable {
     func spendHelp(session: UUID, question: UUID, kind: HelpKind) async throws -> HelpContent
     /// Signalement d'une question (réponse fausse, ambiguë, faute, plus à jour, autre).
     func reportQuestion(_ question: UUID, reason: String, note: String?) async throws
+    /// Journal d'usage (ouverture, onboarding, partage…), stocké dans la base Brainlix uniquement.
+    func trackEvents(_ events: [AppEvent]) async throws
 
     // Profil & progression
     func profile() async throws -> Profile
@@ -134,6 +136,11 @@ public struct LiveGameService: GameService {
                                         "p_subdomains": subdomains.isEmpty ? .null : .array(subdomains.map(JSONValue.string)),
                                         "p_count": .number(Double(count)), "p_ranked": .bool(ranked),
                                         "p_level": .string(level.rawValue)])
+    }
+
+    public func trackEvents(_ events: [AppEvent]) async throws {
+        guard !events.isEmpty else { return }
+        try await api.rpcVoid("track_events", ["p_events": .array(events.map(\.json))])
     }
 
     public func reportQuestion(_ question: UUID, reason: String, note: String?) async throws {
@@ -306,4 +313,9 @@ public extension GameService {
     func playPack(mode: PlayMode, domain: String?, count: Int) async throws -> PlayPack {
         try await playPack(mode: mode, domain: domain, subdomains: [], count: count, ranked: true, level: .adaptive)
     }
+}
+
+public extension GameService {
+    /// Par défaut (démo, service indisponible) : rien n'est envoyé.
+    func trackEvents(_ events: [AppEvent]) async throws {}
 }

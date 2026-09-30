@@ -94,6 +94,7 @@ public enum BackendError: Error, Equatable, LocalizedError {
         case "handle_change_too_soon": return "Tu pourras rechanger de pseudo dans quelques jours."
         case "user_not_found": return "Aucun joueur avec ce pseudo."
         case "rate_limited": return "Doucement ! Réessaie un peu plus tard."
+        case "banned": return "Ce compte est suspendu. Si c'est une erreur, écris-nous depuis la page d'aide de brainlix.site."
         case "insufficient_seeds": return "Pas assez de graines."
         case "help_unavailable": return "Aide indisponible pour cette question."
         case "tree_complete": return "L'arbre de Léon est complet."

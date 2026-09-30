@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import UIKit
 import CultFiveCore
 
 /// État global de l'app : session, profil, statut du Daily, référentiel. Source unique pour les onglets.
@@ -90,6 +91,7 @@ final class AppModel {
                 if sendTimezone { try? await service.setTimezone(timezone) }
                 try? await service.registerDevice(hash: device)
             }
+            track("app_open", ["os": UIDevice.current.systemVersion])
             phase = (profile?.onboarded ?? false) ? .main : .onboarding
             if phase == .main {
                 await refreshDaily()
@@ -212,6 +214,13 @@ final class AppModel {
     // MARK: Compte
 
     var isAnonymous: Bool { profile?.isAnonymous ?? true }
+
+    /// Journal d'usage, envoyé en arrière-plan sans jamais bloquer ni afficher d'erreur.
+    func track(_ name: String, _ props: [String: String] = [:]) {
+        let event = AppEvent(name: name, props: props, appVersion: Bundle.main.appVersion)
+        let service = self.service
+        Task.detached { try? await service.trackEvents([event]) }
+    }
 
     func finishOnboarding() async {
         await refreshProfile()
@@ -345,4 +354,13 @@ struct UnavailableService: GameService {
     func leagueStandings(_ id: UUID, offset: Int) async throws -> LeagueStandings { try fail() }
     func domains() async throws -> [DomainInfo] { try fail() }
     func subdomains() async throws -> [SubdomainInfo] { try fail() }
+}
+
+extension Bundle {
+    /// « 1.4 (37) » : version et numéro de build.
+    var appVersion: String {
+        let version = infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
+        let build = infoDictionary?["CFBundleVersion"] as? String ?? "?"
+        return "\(version) (\(build))"
+    }
 }

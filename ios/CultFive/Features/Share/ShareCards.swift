@@ -7,6 +7,15 @@ enum ShareContent {
     case profile(Profile, skills: [SkillSummary])
     /// Une question du Daily, sans la réponse : « Et toi, tu aurais trouvé ? »
     case question(Question, date: String?)
+
+    /// Nom court pour le journal d'usage.
+    var kind: String {
+        switch self {
+        case .daily: return "daily"
+        case .profile: return "profile"
+        case .question: return "question"
+        }
+    }
 }
 
 enum ShareTemplate: String, CaseIterable, Identifiable {
@@ -24,6 +33,7 @@ enum ShareTemplate: String, CaseIterable, Identifiable {
 struct ShareSheetView: View {
     let content: ShareContent
 
+    @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @State private var template: ShareTemplate = .violet
     @State private var rendered: Image?
@@ -60,6 +70,7 @@ struct ShareSheetView: View {
                     ShareLink(item: rendered, preview: SharePreview(Brand.name, image: rendered)) {
                         Label("Partager l'image", systemImage: "square.and.arrow.up")
                     }
+                    .simultaneousGesture(TapGesture().onEnded { app.track("share", ["what": content.kind]) })
                     .buttonStyle(.ink)
                     .padding(.horizontal, Space.gutter)
                 }

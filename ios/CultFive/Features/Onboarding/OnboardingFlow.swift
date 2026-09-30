@@ -40,6 +40,7 @@ struct OnboardingFlow: View {
             }
         }
         .animation(Motion.standard, value: step)
+        .onChange(of: step) { _, new in app.track("onboarding_step", ["step": "\(new)"]) }
         .task {
             #if DEBUG
             if Demo.screen == .onboardingQuestion {
@@ -492,6 +493,7 @@ struct OnboardingFlow: View {
 
     private func finish() async {
         busy = true
+        app.track("onboarding_done", ["level": level, "interests": "\(interests.count)"])
         await app.finishOnboarding()
         busy = false
     }

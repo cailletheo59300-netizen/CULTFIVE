@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.21.0 — espace admin : joueurs et statistiques
+- **brainlix.site/admin** (page non indexée, accès réservé aux comptes admin, vérifié par le serveur) : joueurs actifs par jour / 7 j / 30 j, nouveaux joueurs, 5 du jour et parties par jour en graphiques, rétention J1 / J7 / J30, parcours des nouveaux joueurs, économie des graines et coffres, domaines joués, versions de l'app.
+- **Joueurs** : recherche, fiche complète (Elo, parties, 5 du jour, graines, journal), renommer un pseudo, bannir / débannir (un joueur banni ne peut plus jouer et quitte ses ligues ; message « compte suspendu » dans l'app).
+- **Journal d'usage** envoyé par l'app (ouverture, étapes de l'onboarding, partage, rappel, autorisation des notifications), stocké uniquement dans la base Brainlix, sans outil tiers ; politique de confidentialité mise à jour. Migration 0030, tests `99_admin_analytics.sql`.
+
 ## 0.20.0 — contenu : tous les domaines à 400 questions ou plus
 - **+ environ 950 questions**, écrites à la main (explication et indice écrit pour la plupart), vérifiées contre les doublons :
   Tech 191 → 402, Logique 199 → 412 (suites vérifiées par calcul), Sport 254 → 401, Musique 267 → 408 (surtout des faciles),

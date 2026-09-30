@@ -1347,3 +1347,24 @@ public struct TrophiesOverview: Codable, Hashable, Sendable {
         ("bronze", "Bronze", 1050), ("silver", "Argent", 1200), ("gold", "Or", 1350), ("diamond", "Diamant", 1500),
     ]
 }
+
+// MARK: - Journal d'usage
+
+/// Un événement d'usage : nom (liste blanche côté serveur) et quelques propriétés courtes.
+public struct AppEvent: Hashable, Sendable {
+    public let name: String
+    public let props: [String: String]
+    public let appVersion: String?
+
+    public init(name: String, props: [String: String] = [:], appVersion: String? = nil) {
+        self.name = name
+        self.props = props
+        self.appVersion = appVersion
+    }
+
+    public var json: JSONValue {
+        var object: [String: JSONValue] = ["name": .string(name), "props": .object(props.mapValues(JSONValue.string))]
+        if let appVersion { object["app_version"] = .string(appVersion) }
+        return .object(object)
+    }
+}

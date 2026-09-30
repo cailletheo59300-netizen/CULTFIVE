@@ -13,6 +13,11 @@ create table if not exists auth.users (
   is_anonymous bool not null default false,
   created_at timestamptz not null default now()
 );
+create table if not exists auth.identities (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  provider text not null
+);
 create or replace function auth.uid() returns uuid language sql stable as $$
   select (nullif(current_setting('request.jwt.claims', true), '')::jsonb ->> 'sub')::uuid
 $$;

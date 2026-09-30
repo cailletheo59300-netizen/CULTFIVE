@@ -336,8 +336,10 @@ private struct ReminderOfferCard: View {
         var fields: [String: JSONValue] = ["notif_daily": .bool(yes), "notif_reminder": .bool(yes)]
         if yes {
             fields["notif_daily_time"] = .string(String(format: "%02d:%02d", parts.hour ?? 8, parts.minute ?? 30))
-            _ = await NotificationScheduler.requestAuthorization()
+            let granted = await NotificationScheduler.requestAuthorization()
+            app.track("notif_permission", ["granted": granted ? "yes" : "no", "from": "daily_result"])
         }
+        app.track("reminder_optin", ["answer": yes ? "yes" : "no"])
         if let profile = try? await app.service.updateProfile(fields) {
             app.profile = profile
             await NotificationScheduler.refresh(profile: profile, dailyDone: true)
