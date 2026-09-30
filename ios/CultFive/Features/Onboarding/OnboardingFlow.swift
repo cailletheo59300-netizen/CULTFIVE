@@ -1,8 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Onboarding : on joue tout de suite (3 vraies questions, annoncées et expliquées), on voit son résultat et le niveau
-/// proposé, on choisit ses domaines et son pseudo, on peut créer son compte, puis on ouvre un coffre de bienvenue.
+/// Onboarding : on découvre le jeu tout de suite (3 questions choisies pour donner envie, sans enjeu), on voit son score,
+/// on choisit soi-même son niveau de départ, ses domaines et son pseudo, on peut créer son compte, puis on ouvre un coffre de bienvenue.
 /// Repère d'étape nommé (« Étape 2 sur 4 · Tes domaines ») et retour après les questions. Le rappel de notification est proposé plus tard, après le premier 5 du jour.
 struct OnboardingFlow: View {
     enum Step: Int, Hashable, Comparable {
@@ -152,10 +152,10 @@ struct OnboardingFlow: View {
         VStack(alignment: .leading, spacing: Space.l) {
             Spacer(minLength: Space.m)
             Leon(color: .brand, pose: .curious, curl: 0.5).frame(width: 130)
-            Text("On fait connaissance").font(.cfDisplay)
+            Text("Découvre \(Brand.name)").font(.cfDisplay)
             VStack(alignment: .leading, spacing: Space.m) {
-                introLine("3", "vraies questions, sur des sujets variés.")
-                introLine("0", "pression : il n'y a rien à perdre, c'est juste pour régler \(Brand.name) à ton niveau.")
+                introLine("3", "questions pour goûter au jeu : une qui surprend, une de logique, un « le savais-tu ? ».")
+                introLine("0", "pression : il n'y a rien à perdre. Après chaque réponse, tu découvres l'explication.")
                 introLine("5", "questions chaque jour ensuite : les mêmes pour tout le monde, c'est le \(Brand.dailyName).")
             }
             Spacer()
@@ -195,7 +195,7 @@ struct OnboardingFlow: View {
             ) {
                 VStack(alignment: .trailing, spacing: 0) {
                     Text("Question \(index + 1) sur \(pack.questions.count)").font(.cfNumber).foregroundStyle(Color.ink)
-                    Text("pour régler ton niveau").font(.system(.caption2, design: .rounded).weight(.semibold)).foregroundStyle(Color.inkSoft)
+                    Text("pour découvrir").font(.system(.caption2, design: .rounded).weight(.semibold)).foregroundStyle(Color.inkSoft)
                 }
             }
             .id(question.id)
@@ -250,7 +250,6 @@ struct OnboardingFlow: View {
                     await queue.enqueue(session: session, attempts: answers)
                 }
             }
-            level = correctCount >= 3 ? "challenge" : correctCount == 2 ? "balanced" : "discovery"
             step = .result
         }
     }
@@ -276,10 +275,8 @@ struct OnboardingFlow: View {
                     Leon(color: .brand, pose: correctCount >= 2 ? .proud : .curious, curl: 0.6).frame(width: 110)
                 }
                 .padding(.top, Space.m)
-                (total > 0
-                    ? Text("On te propose le niveau ") + Text(levelName(level)).bold().foregroundColor(Color.ink)
-                        + Text(". \(Brand.name) s'ajustera ensuite à chacune de tes réponses. Tu peux changer :")
-                    : Text("Choisis un point de départ. \(Brand.name) s'ajustera ensuite à chacune de tes réponses."))
+                Text("Choisis ton niveau de départ").font(.cfTitle3).padding(.top, Space.s)
+                Text("\(Brand.name) s'ajustera ensuite à chacune de tes réponses. Tu pourras toujours jouer plus facile ou plus dur.")
                     .font(.cfCallout).foregroundStyle(Color.inkSoft)
                     .fixedSize(horizontal: false, vertical: true)
                 VStack(spacing: 10) {
