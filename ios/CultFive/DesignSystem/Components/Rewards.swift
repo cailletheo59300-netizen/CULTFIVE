@@ -102,10 +102,12 @@ private struct ChestDrawing {
 struct LeonTreeView: View {
     let stage: Int
     var fruits = 0
+    /// Scène de l'écran Léon : sans butte (le sol est posé par l'écran), les petites étapes agrandies pour remplir le cadre.
+    var scene = false
 
     var body: some View {
         Canvas { context, size in
-            TreeDrawing(stage: stage, fruits: fruits).draw(in: &context, size: size)
+            TreeDrawing(stage: stage, fruits: fruits, scene: scene).draw(in: &context, size: size)
         }
         .aspectRatio(1, contentMode: .fit)
         .accessibilityElement()
@@ -116,6 +118,7 @@ struct LeonTreeView: View {
 private struct TreeDrawing {
     let stage: Int
     let fruits: Int
+    var scene = false
 
     private let leaf = Color(hex: 0x40C057)
     private let leafDark = Color(hex: 0x2F9E44)
@@ -127,9 +130,17 @@ private struct TreeDrawing {
         context.translateBy(x: (size.width - 200 * scale) / 2, y: (size.height - 200 * scale) / 2)
         context.scaleBy(x: scale, y: scale)
 
-        // Butte de terre et herbe.
-        context.fill(Path(ellipseIn: CGRect(x: 28, y: 164, width: 144, height: 30)), with: .color(Color(hex: 0xA47551)))
-        context.fill(Path(ellipseIn: CGRect(x: 34, y: 160, width: 132, height: 16)), with: .color(Color(hex: 0x69DB7C)))
+        if scene {
+            // Le pied de l'arbre reste au sol (y = 168) ; les petites étapes sont agrandies.
+            let zoom: Double = [2.3, 2.1, 1.6, 1.25, 1.05, 1][min(max(stage, 1), 6) - 1]
+            context.translateBy(x: 100, y: 168)
+            context.scaleBy(x: zoom, y: zoom)
+            context.translateBy(x: -100, y: -168)
+        } else {
+            // Butte de terre et herbe.
+            context.fill(Path(ellipseIn: CGRect(x: 28, y: 164, width: 144, height: 30)), with: .color(Color(hex: 0xA47551)))
+            context.fill(Path(ellipseIn: CGRect(x: 34, y: 160, width: 132, height: 16)), with: .color(Color(hex: 0x69DB7C)))
+        }
 
         switch stage {
         case ...1: seed(&context)

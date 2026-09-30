@@ -19,52 +19,31 @@ struct LeonTreeScreen: View {
     private var progression: ProgressionOverview? { app.progression }
     private var seeds: Int { app.profile?.seeds ?? progression?.seeds ?? 0 }
 
+    @Environment(\.tabBarClearance) private var clearance
+
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: Space.l) {
-                Picker("Léon", selection: $tab) {
-                    Text("Arbre").tag(Tab.tree)
-                    Text("Tenue").tag(Tab.outfit)
+        Group {
+            if tab == .outfit {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: Space.l) {
+                        picker
+                        LeonWardrobe()
+                    }
+                    .padding(.horizontal, Space.gutter)
+                    .padding(.bottom, Space.l)
                 }
-                .pickerStyle(.segmented)
-                .padding(.top, Space.s)
-                if tab == .outfit, progression != nil {
-                    LeonWardrobe()
-                } else if let progression {
-                    scene(progression.tree)
-                    gauge(progression.tree)
-                    Button { showStages = true } label: {
-                        Label("Voir toutes les étapes", systemImage: "list.bullet")
-                            .font(.system(.subheadline, design: .rounded).weight(.bold))
-                    }
-                    .buttonStyle(TextLinkStyle(color: .brand))
-                    feedButtons(progression.tree)
-                    ForEach(news, id: \.self) { line in
-                        CelebrationCard(kind: .levelUp, title: line)
-                            .transition(.move(edge: .top).combined(with: .opacity))
-                    }
-                    if !progression.chests.isEmpty {
-                        ChestsWaitingCard(count: progression.chests.count,
-                                          tier: progression.chests.map(\.tier).max { $0.rank < $1.rank } ?? .wood) {
-                            app.openChests()
-                        }
-                    }
-                    tickets(progression.tickets)
-                    Button { withAnimation(Motion.standard) { tab = .outfit } } label: {
-                        Label("Habiller Léon : garde-robe et boutique", systemImage: "tshirt.fill")
-                            .font(.system(.subheadline, design: .rounded).weight(.bold))
-                    }
-                    .buttonStyle(TextLinkStyle(color: .brand))
-                } else {
-                    ProgressView().frame(maxWidth: .infinity, minHeight: 300)
+                .scrollIndicators(.hidden)
+                .clearsTabBar()
+            } else {
+                // L'arbre tient sur l'écran ; il ne défile que s'il le faut vraiment (petit iPhone, célébration).
+                ViewThatFits(in: .vertical) {
+                    treeContent.padding(.bottom, clearance)
+                    ScrollView { treeContent }
+                        .scrollIndicators(.hidden)
+                        .clearsTabBar()
                 }
-                if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
             }
-            .padding(.horizontal, Space.gutter)
-            .padding(.bottom, Space.l)
         }
-        .scrollIndicators(.hidden)
-        .clearsTabBar()
         .background(Color.paper)
         .navigationTitle("Léon")
         .navigationBarTitleDisplayMode(.inline)
@@ -76,39 +55,91 @@ struct LeonTreeScreen: View {
         }
     }
 
+    private var picker: some View {
+        Picker("Léon", selection: $tab) {
+            Text("Arbre").tag(Tab.tree)
+            Text("Tenue").tag(Tab.outfit)
+        }
+        .pickerStyle(.segmented)
+        .padding(.top, Space.s)
+    }
+
+    private var treeContent: some View {
+        VStack(alignment: .leading, spacing: Space.m) {
+            picker
+            if let progression {
+                scene(progression.tree)
+                gauge(progression.tree)
+                feedButtons(progression.tree)
+                ForEach(news, id: \.self) { line in
+                    CelebrationCard(kind: .levelUp, title: line)
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                }
+                if !progression.chests.isEmpty {
+                    ChestsWaitingCard(count: progression.chests.count,
+                                      tier: progression.chests.map(\.tier).max { $0.rank < $1.rank } ?? .wood) {
+                        app.openChests()
+                    }
+                }
+                tickets(progression.tickets)
+            } else {
+                ProgressView().frame(maxWidth: .infinity, minHeight: 300)
+            }
+            if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
+        }
+        .padding(.horizontal, Space.gutter)
+        .padding(.bottom, Space.m)
+    }
+
     // MARK: Arbre
 
+    /// La scène : ciel clair, sol en bas, l'arbre au centre et Léon debout dans l'herbe à côté.
     private func scene(_ tree: TreeState) -> some View {
-        ZStack(alignment: .bottomLeading) {
-            LeonTreeView(stage: tree.stage, fruits: tree.fruits)
-                .frame(maxWidth: .infinity)
-                .frame(height: 280)
-            // Léon grandit avec l'arbre.
-            Leon(color: .brand, pose: feeding ? .tongue : .rest, curl: 0.5)
-                .frame(width: 64 + CGFloat(tree.stage) * 9)
-                .padding(.leading, Space.s)
+        ZStack(alignment: .bottom) {
+            LinearGradient(colors: [Color(hex: 0xDFF1FF), Color(hex: 0xF3FAFF)], startPoint: .top, endPoint: .bottom)
+            VStack(spacing: 0) {
+                Rectangle().fill(Color(hex: 0x69DB7C)).frame(height: 10)
+                Rectangle().fill(Color(hex: 0xA47551)).frame(height: 26)
+            }
+            LeonTreeView(stage: tree.stage, fruits: tree.fruits, scene: true)
+                .frame(height: 236)
+                .padding(.bottom, 36 - 236 * 32 / 200)
+            HStack {
+                Leon(color: .brand, pose: feeding ? .tongue : .rest, curl: 0.5)
+                    .frame(width: 88 + CGFloat(tree.stage) * 6)
+                    .padding(.leading, Space.m)
+                    .padding(.bottom, 24)
+                Spacer()
+            }
             if let floating {
                 Text("+\(floating)")
-                    .font(.system(.title2, design: .rounded).weight(.black))
+                    .font(.system(.title, design: .rounded).weight(.black))
                     .foregroundStyle(Color.correct)
-                    .frame(maxWidth: .infinity)
-                    .offset(y: -150)
+                    .frame(maxHeight: .infinity, alignment: .top)
+                    .padding(.top, Space.l)
                     .transition(.asymmetric(insertion: .move(edge: .bottom).combined(with: .opacity), removal: .opacity))
             }
         }
-        .padding(.top, Space.s)
+        .frame(height: 236)
+        .clipShape(RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
         .accessibilityElement(children: .combine)
     }
 
+    /// Étape, jauge vers la suivante et lien vers toutes les étapes, dans une carte.
     private func gauge(_ tree: TreeState) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .firstTextBaseline) {
-                Text(tree.stageName).font(.cfHeadline)
-                Spacer()
-                if tree.stage >= 6 {
-                    Text("\(tree.fruits)/4 fruits").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
-                } else {
-                    Text("Étape \(tree.stage)/6").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                Text(tree.stageName).font(.cfTitle3)
+                Text(tree.stage >= 6 ? "· \(tree.fruits)/4 fruits" : "· étape \(tree.stage)/6")
+                    .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                Spacer(minLength: Space.s)
+                Button { showStages = true } label: {
+                    HStack(spacing: 2) {
+                        Text("Toutes les étapes")
+                        Image(systemName: "chevron.right")
+                    }
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.brand)
                 }
             }
             if let next = tree.nextAt, let label = tree.nextLabel {
@@ -118,7 +149,7 @@ struct LeonTreeScreen: View {
                         Capsule().fill(Color.correct).frame(width: max(12, geo.size.width * tree.progress))
                     }
                 }
-                .frame(height: 12)
+                .frame(height: 10)
                 .animation(Motion.standard, value: tree.points)
                 Text("\(tree.points - tree.levelStart) / \(next - tree.levelStart) \(Brand.currencyPlural) avant \(label.lowercased())")
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft).monospacedDigit()
@@ -127,25 +158,32 @@ struct LeonTreeScreen: View {
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
         }
+        .popCard(padding: 14)
     }
 
+    /// Nourrir l'arbre : titre et solde sur une ligne, trois boutons, une seule ligne d'explication.
     @ViewBuilder
     private func feedButtons(_ tree: TreeState) -> some View {
         if !tree.complete {
-            VStack(alignment: .leading, spacing: Space.s) {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack {
+                    Text("Nourrir l'arbre").font(.cfTitle3)
+                    Spacer()
+                    SeedsAmount(amount: seeds)
+                        .font(.cfNumber)
+                        .padding(.horizontal, 10).padding(.vertical, 4)
+                        .background(Color.correct.opacity(0.12), in: Capsule())
+                }
                 HStack(spacing: 10) {
                     feedButton("+10", amount: 10)
                     feedButton("+50", amount: 50)
                     feedButton("Tout", amount: seeds)
                 }
-                HStack(spacing: 4) {
-                    Text("Tu as")
-                    SeedsAmount(amount: seeds)
-                    Text("· un coffre d'or à chaque étape, un objet rare à chaque fruit")
-                }
-                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                .lineLimit(2)
+                Text("Un coffre d'or à chaque étape, un objet rare à chaque fruit.")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    .lineLimit(2).fixedSize(horizontal: false, vertical: true)
             }
+            .popCard(padding: 14)
         }
     }
 
