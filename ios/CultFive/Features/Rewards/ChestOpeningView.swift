@@ -1,9 +1,9 @@
 import SwiftUI
 import CultFiveCore
 
-/// Ouverture des coffres, en plein écran, à la chaîne. On touche le coffre : il tremble de plus en plus fort, saute
-/// dans un éclat de lumière, puis les récompenses sortent une par une en grandes cartes dessinées (on touche pour
-/// la suivante) : graines qui défilent, tickets, bouclier de joker, Léon qui porte son nouvel objet. Récapitulatif à la fin.
+/// Ouverture des coffres, en plein écran, à la chaîne. La Recharge : trois touchers, le coffre tremble de plus en plus
+/// fort dans son halo, des étincelles jaillissent, et il peut monter de rang (tirage fait par le serveur à l'ouverture).
+/// Au 3e toucher il s'ouvre dans un éclat ; les récompenses sortent une par une en grandes cartes, puis le récapitulatif.
 struct ChestOpeningView: View {
     let chests: [ChestRef]
     var onDone: () -> Void
@@ -11,23 +11,33 @@ struct ChestOpeningView: View {
     @Environment(AppModel.self) private var app
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private enum Phase: Equatable { case closed, shaking, card(Int), summary }
+    private enum Phase: Equatable { case closed, charging, card(Int), summary }
+    private static let taps = 3
 
     @State private var index = 0
     @State private var phase: Phase = .closed
     @State private var contents: ChestContents?
-    @State private var shake = 0.0
+    @State private var opening: Task<ChestContents, Error>?
+    @State private var taps = 0
+    @State private var busy = false
+    /// Rang atteint pendant la Recharge (nil : rang d'origine).
+    @State private var upgraded: ChestTier?
+    @State private var upgradeBanner: ChestTier?
+    @State private var kick = 0.0
+    @State private var wobble = false
+    @State private var burst: ChestBurst?
     @State private var flash = 0.0
     @State private var error: String?
 
     private var chest: ChestRef? { chests.indices.contains(index) ? chests[index] : nil }
+    private var tier: ChestTier { upgraded ?? chest?.tier ?? .wood }
     private var isLast: Bool { index >= chests.count - 1 }
     private var rewards: [ChestReward] { contents.map(ChestReward.list) ?? [] }
 
     var body: some View {
         ZStack {
             Color(hex: 0x1E1340).ignoresSafeArea()
-            if phase != .closed && phase != .shaking {
+            if phase != .closed && phase != .charging {
                 LightRays(color: glow).ignoresSafeArea().transition(.opacity)
             }
             VStack(spacing: Space.l) {
@@ -38,29 +48,32 @@ struct ChestOpeningView: View {
                 footer
             }
             .padding(Space.gutter)
+            if let burst, !reduceMotion {
+                ChestSparks(burst: burst).ignoresSafeArea().allowsHitTesting(false)
+            }
             Color.white.opacity(flash).ignoresSafeArea().allowsHitTesting(false)
-            if case .card(let i) = phase, rewards.indices.contains(i), rewards[i].isItem || chest?.tier == .gold {
+            if case .card(let i) = phase, rewards.indices.contains(i), rewards[i].isItem || tier.rank >= 2 {
                 Confetti().ignoresSafeArea().allowsHitTesting(false)
             }
         }
         .contentShape(Rectangle())
         .onTapGesture { advance() }
         .preferredColorScheme(.dark)
+        .onAppear {
+            guard !reduceMotion else { return }
+            withAnimation(.easeInOut(duration: 1.4).repeatForever(autoreverses: true)) { wobble = true }
+        }
     }
 
     // MARK: Blocs
 
-    private var glow: Color {
-        switch chest?.tier {
-        case .gold: return Color.sun
-        case .silver: return Color(hex: 0xC5D3E8)
-        default: return Color(hex: 0xFFB36B)
-        }
-    }
+    private var glow: Color { ChestGlow.color(tier) }
 
     private var header: some View {
         VStack(spacing: 4) {
-            Text(chest?.tier.title ?? "").font(.system(.title, design: .rounded).weight(.black)).foregroundStyle(.white)
+            Text(tier.title).font(.system(.title, design: .rounded).weight(.black)).foregroundStyle(.white)
+                .contentTransition(.opacity)
+                .id(tier)
             Text(chest?.origin ?? "").font(.cfCallout).foregroundStyle(.white.opacity(0.7))
             if chests.count > 1 {
                 Text("\(index + 1) sur \(chests.count)")
@@ -74,22 +87,44 @@ struct ChestOpeningView: View {
     @ViewBuilder
     private var stage: some View {
         switch phase {
-        case .closed, .shaking:
+        case .closed, .charging:
             VStack(spacing: Space.l) {
                 if let chest {
-                    ChestView(tier: chest.tier)
-                        .frame(maxWidth: 220)
-                        .rotationEffect(.degrees(sin(shake * .pi * 14) * 9 * shake))
-                        .scaleEffect(1 + 0.08 * shake)
-                        .shadow(color: glow.opacity(0.5 * shake), radius: 30)
-                        .id(chest.id)
-                        .transition(.scale.combined(with: .opacity))
+                    ZStack {
+                        // Halo de la rareté, qui grossit à chaque toucher.
+                        Circle()
+                            .fill(RadialGradient(colors: [glow.opacity(0.6), glow.opacity(0)], center: .center, startRadius: 8, endRadius: 170))
+                            .frame(width: 340, height: 340)
+                            .scaleEffect(1 + 0.12 * Double(taps))
+                        ChestView(tier: tier)
+                            .frame(maxWidth: 220)
+                            .rotationEffect(.degrees(taps == 0 && wobble ? 2.5 : (taps == 0 ? -2.5 : 0)), anchor: .bottom)
+                            .rotationEffect(.degrees(kick), anchor: .bottom)
+                            .scaleEffect(1 + 0.06 * Double(taps))
+                            .shadow(color: glow.opacity(0.5), radius: 30)
+                    }
+                    .id(chest.id)
+                    .transition(.scale.combined(with: .opacity))
                 }
-                Text(phase == .shaking ? " " : "Touche le coffre pour l'ouvrir")
-                    .font(.system(.headline, design: .rounded)).foregroundStyle(.white.opacity(0.8))
+                if let upgradeBanner {
+                    Text("Amélioré : \(upgradeBanner.title) !")
+                        .font(.system(.title3, design: .rounded).weight(.black))
+                        .foregroundStyle(ChestGlow.color(upgradeBanner))
+                        .transition(.scale.combined(with: .opacity))
+                } else {
+                    Text(taps == 0 ? "Touche 3 fois pour recharger le coffre" : "Encore !")
+                        .font(.system(.headline, design: .rounded)).foregroundStyle(.white.opacity(0.8))
+                }
+                HStack(spacing: 8) {
+                    ForEach(0 ..< Self.taps, id: \.self) { i in
+                        Circle().fill(i < taps ? glow : .white.opacity(0.2)).frame(width: 10, height: 10)
+                    }
+                }
+                .accessibilityHidden(true)
             }
             .accessibilityElement(children: .combine)
             .accessibilityAddTraits(.isButton)
+            .accessibilityHint("Touche trois fois pour ouvrir le coffre")
         case .card(let i):
             if rewards.indices.contains(i) {
                 RewardCard(reward: rewards[i], glow: glow)
@@ -99,7 +134,7 @@ struct ChestOpeningView: View {
             }
         case .summary:
             VStack(spacing: Space.m) {
-                ChestView(tier: chest?.tier ?? .wood, open: true).frame(width: 110)
+                ChestView(tier: tier, open: true).frame(width: 110)
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 96), spacing: 10)], spacing: 10) {
                     ForEach(Array(rewards.enumerated()), id: \.offset) { _, reward in
                         RewardCard(reward: reward, glow: glow, compact: true)
@@ -126,7 +161,7 @@ struct ChestOpeningView: View {
                     .font(.system(.subheadline, design: .rounded).weight(.bold))
                     .foregroundStyle(.white.opacity(0.7))
                     .frame(minHeight: 44)
-            case .shaking:
+            case .charging:
                 Color.clear.frame(height: 44)
             }
         }
@@ -134,10 +169,10 @@ struct ChestOpeningView: View {
 
     // MARK: Déroulé
 
-    /// Un toucher fait avancer : ouvrir, carte suivante, récapitulatif.
+    /// Un toucher fait avancer : recharger, carte suivante, récapitulatif.
     private func advance() {
         switch phase {
-        case .closed: Task { await open() }
+        case .closed, .charging: Task { await charge() }
         case .card(let i):
             Haptics.selection()
             withAnimation(Motion.bounce) { phase = i + 1 < rewards.count ? .card(i + 1) : .summary }
@@ -146,39 +181,83 @@ struct ChestOpeningView: View {
         }
     }
 
-    private func open() async {
-        guard let chest, contents == nil, phase == .closed else { return }
+    /// Un toucher de Recharge. Le serveur tire tout dès le premier ; les montées se dévoilent sur les derniers touchers
+    /// (une montée au 3e, deux aux 2e et 3e…), pour garder le suspense jusqu'au bout.
+    private func charge() async {
+        guard let chest, !busy, taps < Self.taps, contents == nil else { return }
+        busy = true
+        defer { busy = false }
         error = nil
-        withAnimation(.easeIn(duration: 0.2)) { phase = .shaking }
-        let service = app.service
-        async let result = service.openChest(chest.id)
-        if !reduceMotion {
-            // Le tremblement monte, les vibrations aussi.
-            withAnimation(.easeIn(duration: 1.1)) { shake = 1 }
-            for step in 0 ..< 6 {
-                try? await Task.sleep(nanoseconds: UInt64(260_000_000 - step * 30_000_000))
-                Haptics.soft()
-            }
+        if taps == 0 {
+            let service = app.service
+            let id = chest.id
+            opening = Task { try await service.openChest(id) }
+            withAnimation(.easeIn(duration: 0.15)) { phase = .charging }
         }
+        taps += 1
+        pulse(big: false)
+        Haptics.soft()
         do {
-            let opened = try await result
-            contents = opened
-            SoundFX.play(.chest)
-            Haptics.success()
-            shake = 0
-            if !reduceMotion {
-                flash = 0.9
-                withAnimation(.easeOut(duration: 0.6)) { flash = 0 }
+            guard let opening else { return }
+            let opened = try await opening.value
+            let reached = opened.reachedTier
+            let rise = max(0, reached.rank - chest.tier.rank)
+            // Montées à dévoiler à ce toucher : celles dont le tour est arrivé.
+            let due = max(0, rise - (Self.taps - taps))
+            let shown = (upgraded ?? chest.tier).rank - chest.tier.rank
+            if due > shown, let next = ChestTier.allCases.first(where: { $0.rank == chest.tier.rank + due }) {
+                reveal(upgrade: next)
             }
-            withAnimation(Motion.bounce) { phase = .card(0) }
-            if let first = rewards.first { cueFor(first) }
+            if taps == Self.taps {
+                try? await Task.sleep(nanoseconds: upgradeBanner != nil ? 700_000_000 : 250_000_000)
+                openUp(with: opened)
+            }
         } catch {
             self.error = (error as? LocalizedError)?.errorDescription ?? "Ouverture impossible. Réessaie."
+            opening = nil
             withAnimation(Motion.standard) {
-                shake = 0
+                taps = 0
+                upgraded = nil
                 phase = .closed
             }
         }
+    }
+
+    /// Secousse du coffre et gerbe d'étincelles.
+    private func pulse(big: Bool) {
+        burst = ChestBurst(date: Date(), color: glow, big: big)
+        guard !reduceMotion else { return }
+        kick = (taps.isMultiple(of: 2) ? -1 : 1) * (6 + 4 * Double(taps)) * (big ? 1.5 : 1)
+        withAnimation(.spring(response: 0.28, dampingFraction: 0.25)) { kick = 0 }
+    }
+
+    private func reveal(upgrade next: ChestTier) {
+        withAnimation(Motion.bounce) {
+            upgraded = next
+            upgradeBanner = next
+        }
+        SoundFX.play(.reward)
+        Haptics.success()
+        pulse(big: true)
+        if !reduceMotion {
+            flash = 0.7
+            withAnimation(.easeOut(duration: 0.5)) { flash = 0 }
+        }
+    }
+
+    private func openUp(with opened: ChestContents) {
+        contents = opened
+        SoundFX.play(.chest)
+        Haptics.success()
+        if !reduceMotion {
+            flash = 0.9
+            withAnimation(.easeOut(duration: 0.6)) { flash = 0 }
+        }
+        withAnimation(Motion.bounce) {
+            upgradeBanner = nil
+            phase = .card(0)
+        }
+        if let first = rewards.first { cueFor(first) }
     }
 
     private func cueFor(_ reward: ChestReward) {
@@ -193,7 +272,65 @@ struct ChestOpeningView: View {
         withAnimation(Motion.standard) {
             index += 1
             contents = nil
+            opening = nil
+            taps = 0
+            upgraded = nil
+            upgradeBanner = nil
             phase = .closed
+        }
+    }
+}
+
+/// Couleur du halo et de la lumière selon la rareté.
+enum ChestGlow {
+    static func color(_ tier: ChestTier) -> Color {
+        switch tier {
+        case .wood: return Color(hex: 0xFFB36B)
+        case .silver: return Color(hex: 0xC5D3E8)
+        case .gold: return Color.sun
+        case .savant: return Color(hex: 0xB197FC)
+        }
+    }
+}
+
+struct ChestBurst: Equatable {
+    let id = UUID()
+    let date: Date
+    let color: Color
+    let big: Bool
+}
+
+/// Étincelles qui jaillissent du coffre à chaque toucher (plus nombreuses et plus loin à une montée de rang).
+private struct ChestSparks: View {
+    let burst: ChestBurst
+
+    var body: some View {
+        TimelineView(.animation(minimumInterval: 1 / 60)) { timeline in
+            Canvas { context, size in
+                let elapsed: Double = timeline.date.timeIntervalSince(burst.date)
+                ChestSparks.draw(in: &context, size: size, elapsed: elapsed, color: burst.color, big: burst.big)
+            }
+        }
+        .accessibilityHidden(true)
+    }
+
+    private static func draw(in context: inout GraphicsContext, size: CGSize, elapsed: Double, color: Color, big: Bool) {
+        let duration: Double = big ? 1.1 : 0.7
+        guard elapsed >= 0, elapsed < duration else { return }
+        let t: Double = elapsed / duration
+        let eased: Double = 1 - (1 - t) * (1 - t)
+        let center = CGPoint(x: size.width / 2, y: size.height * 0.48)
+        let count: Int = big ? 28 : 14
+        let reach: Double = big ? 210 : 130
+        for i in 0 ..< count {
+            let noise: Double = abs(sin(Double(i) * 12.9898) * 43758.5453).truncatingRemainder(dividingBy: 1)
+            let angle: Double = Double(i) / Double(count) * 2 * Double.pi + noise * 0.6
+            let distance: Double = reach * (0.55 + 0.45 * noise) * eased
+            let x: Double = Double(center.x) + cos(angle) * distance
+            let y: Double = Double(center.y) + sin(angle) * distance + 40 * t * t
+            let radius: Double = (big ? 4.5 : 3.5) * (1 - t * 0.6)
+            let spark = Path(ellipseIn: CGRect(x: x - radius, y: y - radius, width: 2 * radius, height: 2 * radius))
+            context.fill(spark, with: .color((i.isMultiple(of: 3) ? Color.white : color).opacity(1 - t)))
         }
     }
 }
@@ -214,6 +351,7 @@ enum ChestReward: Hashable {
         if contents.tickets.hint > 0 { list.append(.tickets(.hint, contents.tickets.hint)) }
         if contents.joker { list.append(.joker) }
         if let item = contents.item { list.append(.item(item)) }
+        if let bonus = contents.bonusItem { list.append(.item(bonus)) }
         return list
     }
 }

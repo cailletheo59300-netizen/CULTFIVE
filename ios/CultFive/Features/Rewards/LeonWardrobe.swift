@@ -250,6 +250,7 @@ struct LeonWardrobe: View {
         case "chest": return Color(hex: 0xF59F00)
         case "fruit": return Color(hex: 0x2F9E44)
         case "tree": return .brand
+        case "savant": return Color(hex: 0x7B5CFF)
         default: return nil
         }
     }
@@ -257,6 +258,7 @@ struct LeonWardrobe: View {
     private func origin(_ item: LeonItem) -> String {
         switch item.rarity {
         case "fruit": return "Fruit de l'arbre de Léon"
+        case "savant": return "Premier coffre Savant"
         case "tree": return "Arbre : \(TreeState.stageName(item.unlockStage ?? 1).lowercased())"
         default: return "À gagner dans les coffres"
         }

@@ -88,33 +88,41 @@ final class DemoProgression: @unchecked Sendable {
         lock.lock(); defer { lock.unlock() }
         if let done = opened[id] { return done }
         guard let chest = chests.first(where: { $0.id == id }) else { throw BackendError.server(status: 400, code: "chest_not_found", message: "") }
+        // Recharge : même tirage que le serveur.
+        var tier = chest.tier
+        var upgrades = 0
+        if tier == .wood, Double.random(in: 0..<1) < 0.25 { tier = .silver; upgrades += 1 }
+        if tier == .silver, Double.random(in: 0..<1) < 0.20 { tier = .gold; upgrades += 1 }
+        if tier == .gold, Double.random(in: 0..<1) < 0.05 { tier = .savant; upgrades += 1 }
         var seeds: Int
         var ticketCount: Int
-        switch chest.tier {
+        switch tier {
         case .wood: seeds = Int.random(in: 10...20); ticketCount = 1
         case .silver: seeds = Int.random(in: 30...50); ticketCount = 2
         case .gold: seeds = Int.random(in: 60...80); ticketCount = 0
+        case .savant: seeds = Int.random(in: 120...160); ticketCount = 2
         }
         var fifty = 0, hint = 0
         for _ in 0 ..< ticketCount { if Bool.random() { fifty += 1 } else { hint += 1 } }
         tickets.fifty += fifty
         tickets.hint += hint
         var joker = false
-        let wantJoker = chest.tier == .gold || Double.random(in: 0..<1) < (chest.tier == .silver ? 0.3 : 0.1)
+        let wantJoker = tier.rank >= 2 || Double.random(in: 0..<1) < (tier == .silver ? 0.3 : 0.1)
         if wantJoker {
-            if freezes < 2 { freezes += 1; joker = true } else { seeds += chest.tier == .wood ? 10 : chest.tier == .silver ? 20 : 40 }
+            if freezes < 2 { freezes += 1; joker = true } else { seeds += tier == .wood ? 10 : tier == .silver ? 20 : 40 }
         }
         var item: ChestItem?
-        if chest.tier == .gold || (chest.tier == .silver && Double.random(in: 0..<1) < 0.25) {
+        if tier.rank >= 2 || (tier == .silver && Double.random(in: 0..<1) < 0.25) {
             if let pick = Self.catalog.filter({ $0.rarity == "chest" && !owned.contains($0.id) }).randomElement() {
                 owned.insert(pick.id)
                 item = ChestItem(id: pick.id, name: pick.name, slot: pick.slot)
             } else {
-                seeds += chest.tier == .silver ? 25 : 40
+                seeds += tier == .silver ? 25 : 40
             }
         }
         let contents = ChestContents(tier: chest.tier, seeds: seeds,
-                                     tickets: .init(fiftyFifty: fifty, hint: hint), joker: joker, item: item, balance: nil)
+                                     tickets: .init(fiftyFifty: fifty, hint: hint), joker: joker, item: item, balance: nil,
+                                     finalTier: tier, upgrades: upgrades)
         opened[id] = contents
         chests.removeAll { $0.id == id }
         return contents

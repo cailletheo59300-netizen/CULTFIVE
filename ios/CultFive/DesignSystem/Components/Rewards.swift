@@ -27,7 +27,21 @@ private struct ChestDrawing {
         case .wood: return (Color(hex: 0xB7793E), Color(hex: 0x8A5A2B), Color(hex: 0x5F666D))
         case .silver: return (Color(hex: 0xDDE3EA), Color(hex: 0xAEB7C2), Color(hex: 0x6F7B88))
         case .gold: return (Color(hex: 0xFFC933), Color(hex: 0xE0A300), Color(hex: 0xA8740A))
+        case .savant: return (Color(hex: 0x7B5CFF), Color(hex: 0x4B2BC9), Color(hex: 0xFFD23F))
         }
+    }
+
+    /// Étincelle à quatre branches.
+    static func spark(center: CGPoint, radius r: Double) -> Path {
+        var path = Path()
+        let c = center
+        path.move(to: CGPoint(x: c.x, y: c.y - r))
+        path.addQuadCurve(to: CGPoint(x: c.x + r, y: c.y), control: CGPoint(x: c.x + r * 0.18, y: c.y - r * 0.18))
+        path.addQuadCurve(to: CGPoint(x: c.x, y: c.y + r), control: CGPoint(x: c.x + r * 0.18, y: c.y + r * 0.18))
+        path.addQuadCurve(to: CGPoint(x: c.x - r, y: c.y), control: CGPoint(x: c.x - r * 0.18, y: c.y + r * 0.18))
+        path.addQuadCurve(to: CGPoint(x: c.x, y: c.y - r), control: CGPoint(x: c.x - r * 0.18, y: c.y - r * 0.18))
+        path.closeSubpath()
+        return path
     }
 
     func draw(in context: inout GraphicsContext, size: CGSize) {
@@ -75,7 +89,8 @@ private struct ChestDrawing {
             lid.addQuadCurve(to: CGPoint(x: 92, y: 32), control: CGPoint(x: 50, y: 6))
             lid.addLine(to: CGPoint(x: 92, y: 44))
             lid.closeSubpath()
-            context.fill(lid, with: .color(p.main))
+            context.fill(lid, with: .linearGradient(Gradient(colors: [p.main, p.dark]),
+                                                    startPoint: CGPoint(x: 50, y: 10), endPoint: CGPoint(x: 50, y: 44)))
             context.fill(Path(ellipseIn: CGRect(x: 26, y: 16, width: 30, height: 8)), with: .color(.white.opacity(0.25)))
             context.drawLayer { layer in
                 layer.clip(to: lid)
@@ -84,13 +99,18 @@ private struct ChestDrawing {
             context.fill(Path(CGRect(x: 8, y: 42, width: 84, height: 4)), with: .color(p.band))
         }
 
-        // Serrure.
-        let lock = Path(roundedRect: CGRect(x: 43, y: open ? 44 : 38, width: 14, height: 15), cornerRadius: 3)
-        context.fill(lock, with: .color(p.band))
-        context.fill(Path(ellipseIn: CGRect(x: 48, y: (open ? 44 : 38) + 4, width: 4, height: 4)), with: .color(Color(hex: 0x1A1830).opacity(0.7)))
-        if tier == .gold {
-            for (x, y) in [(18.0, 50.0), (84.0, 58.0)] {
-                context.fill(Path(ellipseIn: CGRect(x: x - 2, y: y - 2, width: 4, height: 4)), with: .color(.white.opacity(0.8)))
+        // Serrure : un écusson rond marqué de l'étincelle Brainlix.
+        let lockY: Double = open ? 44 : 37
+        context.fill(Path(ellipseIn: CGRect(x: 40, y: lockY, width: 20, height: 20)), with: .color(p.band))
+        context.fill(Path(ellipseIn: CGRect(x: 42.5, y: lockY + 2.5, width: 15, height: 15)), with: .color(Color(hex: 0x1E1340).opacity(0.85)))
+        context.fill(ChestDrawing.spark(center: CGPoint(x: 50, y: lockY + 10), radius: 5.5), with: .color(tier == .savant ? Color.sun : p.main))
+        if tier.rank >= 2 {
+            // Reflets (or) ou constellation (Savant).
+            let points: [(Double, Double, Double)] = tier == .savant
+                ? [(18, 52, 3.2), (82, 60, 3.6), (30, 74, 2.4), (70, 50, 2.2), (24, 26, 2.6), (76, 22, 2.8)]
+                : [(18, 50, 2.2), (84, 58, 2.2)]
+            for (x, y, r) in points where open || y > 30 || tier == .savant {
+                context.fill(ChestDrawing.spark(center: CGPoint(x: x, y: y), radius: r), with: .color(.white.opacity(0.9)))
             }
         }
     }
@@ -245,6 +265,7 @@ extension ChestTier {
         case .wood: return 0
         case .silver: return 1
         case .gold: return 2
+        case .savant: return 3
         }
     }
 }

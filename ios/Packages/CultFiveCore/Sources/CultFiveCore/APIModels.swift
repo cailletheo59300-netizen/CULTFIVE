@@ -961,6 +961,7 @@ public enum ChestName {
         switch tier {
         case "silver": return "Coffre en argent"
         case "gold": return "Coffre en or"
+        case "savant": return "Coffre Savant"
         default: return "Coffre en bois"
         }
     }
@@ -969,7 +970,8 @@ public enum ChestName {
 // MARK: - Coffres, arbre de Léon, tenue, trophées
 
 public enum ChestTier: String, Codable, Hashable, Sendable, CaseIterable {
-    case wood, silver, gold
+    /// `savant` : jamais un coffre reçu, seulement le rang obtenu à l'ouverture (Recharge).
+    case wood, silver, gold, savant
 
     public var title: String { ChestName.title(rawValue) }
 }
@@ -1037,14 +1039,32 @@ public struct ChestContents: Codable, Hashable, Sendable {
     public let joker: Bool
     public let item: ChestItem?
     public let balance: Int?
+    /// Rang obtenu après la Recharge (absent sur un ancien coffre) et nombre de montées.
+    public let finalTier: ChestTier?
+    public let upgrades: Int?
+    /// Objet exclusif du premier coffre Savant.
+    public let bonusItem: ChestItem?
 
-    public init(tier: ChestTier, seeds: Int, tickets: Tickets, joker: Bool, item: ChestItem?, balance: Int?) {
+    public init(tier: ChestTier, seeds: Int, tickets: Tickets, joker: Bool, item: ChestItem?, balance: Int?,
+                finalTier: ChestTier? = nil, upgrades: Int? = nil, bonusItem: ChestItem? = nil) {
         self.tier = tier
         self.seeds = seeds
         self.tickets = tickets
         self.joker = joker
         self.item = item
         self.balance = balance
+        self.finalTier = finalTier
+        self.upgrades = upgrades
+        self.bonusItem = bonusItem
+    }
+
+    /// Rang final du coffre, montées comprises.
+    public var reachedTier: ChestTier { finalTier ?? tier }
+
+    enum CodingKeys: String, CodingKey {
+        case tier, seeds, tickets, joker, item, balance, upgrades
+        case finalTier = "final_tier"
+        case bonusItem = "bonus_item"
     }
 }
 

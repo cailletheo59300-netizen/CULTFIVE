@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.19.0 — la Recharge des coffres
+- **Recharge** : on touche 3 fois le coffre ; il tremble de plus en plus fort dans un halo à sa couleur, des étincelles jaillissent, et il peut **monter de rang** (bannière « Amélioré : Coffre en or ! », éclat, vibration). Tirage fait une seule fois par le serveur à l'ouverture : bois → argent 25 %, argent → or 20 %, or → Savant 5 %.
+- **Coffre Savant** (violet, constellation) : 120–160 graines, un joker, 2 tickets, un objet garanti ; au premier, le **Mortier de savant**, objet exclusif jamais vendu.
+- **Nouveau dessin des coffres** : écusson rond marqué de l'étincelle Brainlix, couvercle en dégradé, léger balancement au repos, halo par rareté.
+- Compatibilité : le rang d'origine reste dans `tier`, le rang obtenu est dans `final_tier` (anciennes versions de l'app inchangées). Migration 0029, tests `99_chest_recharge.sql`.
+
 ## 0.18.0 — placement lisible, 5 du jour plus fluide
 - **Placement en 5 carrés** : dans le Profil, tous les domaines apparaissent (même jamais joués) avec 5 carrés à leur couleur, un par partie classée, et « 2/5 parties · encore 3 pour découvrir ton rang ». Mêmes carrés sur l'accueil (domaine à travailler), l'écran Jouer et la fin de partie (« Encore 2 parties classées en Histoire… »), célébration « Rang découvert : Érudit ! » à la 5e.
 - **En-tête du Profil** : l'Elo global ne compte que les domaines placés ; sinon, les carrés du domaine le plus avancé et « Domaines placés : 3 sur 12 ».

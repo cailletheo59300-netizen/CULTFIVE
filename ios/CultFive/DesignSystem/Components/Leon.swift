@@ -479,6 +479,27 @@ enum LeonWear {
             for (x, y) in [(86.0, 12.0), (95.0, 2.0)] {
                 context.fill(Path(ellipseIn: CGRect(x: x - 1.8, y: y - 1.8, width: 3.6, height: 3.6)), with: .color(Color.sun))
             }
+        case "mortarboard":
+            // Mortier de savant : calotte, plateau vu en biais, gland doré.
+            var cap = Path()
+            cap.move(to: CGPoint(x: 72, y: 26))
+            cap.addQuadCurve(to: CGPoint(x: 102, y: 25), control: CGPoint(x: 87, y: 12))
+            cap.closeSubpath()
+            context.fill(cap, with: .color(Color(hex: 0x212529)))
+            var board = Path()
+            board.move(to: CGPoint(x: 64, y: 14))
+            board.addLine(to: CGPoint(x: 88, y: 5))
+            board.addLine(to: CGPoint(x: 112, y: 14))
+            board.addLine(to: CGPoint(x: 88, y: 23))
+            board.closeSubpath()
+            context.fill(board, with: .color(Color(hex: 0x343A40)))
+            context.stroke(board, with: .color(Color(hex: 0x7B5CFF)), lineWidth: 1.2)
+            context.fill(Path(ellipseIn: CGRect(x: 86, y: 12, width: 4, height: 4)), with: .color(Color.sun))
+            var cord = Path()
+            cord.move(to: CGPoint(x: 88, y: 14))
+            cord.addQuadCurve(to: CGPoint(x: 106, y: 24), control: CGPoint(x: 104, y: 13))
+            context.stroke(cord, with: .color(Color.sun), style: StrokeStyle(lineWidth: 1.4, lineCap: .round))
+            context.fill(Path(roundedRect: CGRect(x: 104, y: 23, width: 4, height: 7), cornerRadius: 1.5), with: .color(Color.sun))
         case "crown":
             var crown = Path()
             crown.move(to: CGPoint(x: 74, y: 24))
