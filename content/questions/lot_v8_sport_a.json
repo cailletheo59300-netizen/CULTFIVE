@@ -1,0 +1,1119 @@
+[
+ {
+  "key": "sport-501",
+  "concept": "sport.football.bresil_record_cdm",
+  "label": "Record de Coupes du monde",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel pays a remporté le plus de Coupes du monde de football ?",
+  "options": [
+   "Le Brésil*",
+   "L'Allemagne",
+   "L'Italie",
+   "L'Argentine"
+  ],
+  "explanation": "Cinq titres : 1958, 1962, 1970, 1994 et 2002. L'Allemagne et l'Italie en ont quatre.",
+  "hint": "Le pays de Pelé."
+ },
+ {
+  "key": "sport-502",
+  "concept": "sport.football.france_titres_cdm",
+  "label": "Bleus champions",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de fois l'équipe de France a-t-elle remporté la Coupe du monde de football ?",
+  "answer": 2,
+  "explanation": "En 1998 contre le Brésil (3-0) et en 2018 contre la Croatie (4-2).",
+  "hint": "1998 et…"
+ },
+ {
+  "key": "sport-503",
+  "concept": "sport.football.selectionneur_2018",
+  "label": "Sélectionneur 2018",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui était le sélectionneur de l'équipe de France championne du monde en 2018 ?",
+  "options": [
+   "Didier Deschamps*",
+   "Zinédine Zidane",
+   "Laurent Blanc",
+   "Aimé Jacquet"
+  ],
+  "explanation": "Il devient le troisième à gagner la Coupe du monde comme joueur (1998) puis comme sélectionneur.",
+  "hint": "Il était déjà capitaine en 1998."
+ },
+ {
+  "key": "sport-504",
+  "concept": "sport.football.capitaine_1998",
+  "label": "Capitaine 1998",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui était le capitaine de l'équipe de France championne du monde en 1998 ?",
+  "options": [
+   "Didier Deschamps*",
+   "Zinédine Zidane",
+   "Marcel Desailly",
+   "Fabien Barthez"
+  ],
+  "explanation": "Le milieu de terrain soulève la coupe au Stade de France. Vingt ans plus tard, il la gagne comme sélectionneur.",
+  "hint": "Le futur sélectionneur de 2018."
+ },
+ {
+  "key": "sport-505",
+  "concept": "sport.football.selectionneur_1998",
+  "label": "Sélectionneur 1998",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui était le sélectionneur de l'équipe de France championne du monde en 1998 ?",
+  "options": [
+   "Aimé Jacquet*",
+   "Didier Deschamps",
+   "Raymond Domenech",
+   "Michel Hidalgo"
+  ],
+  "explanation": "Très critiqué avant le tournoi, il quitte son poste en champion du monde.",
+  "hint": "Son prénom est un participe passé."
+ },
+ {
+  "key": "sport-506",
+  "concept": "sport.football.asse_les_verts",
+  "label": "Les Verts",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel club est surnommé « les Verts » ?",
+  "options": [
+   "L'AS Saint-Étienne*",
+   "Le FC Nantes",
+   "L'OGC Nice",
+   "Le RC Lens"
+  ],
+  "explanation": "Finaliste de la Coupe des clubs champions en 1976, il compte 10 titres de champion de France.",
+  "hint": "Un club de la Loire."
+ },
+ {
+  "key": "sport-507",
+  "concept": "sport.football.om_ldc_1993",
+  "label": "Premier club français sacré",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel club a été le premier club français à remporter la Ligue des champions ?",
+  "options": [
+   "L'Olympique de Marseille*",
+   "Le Paris Saint-Germain",
+   "L'Olympique lyonnais",
+   "L'AS Monaco"
+  ],
+  "explanation": "En 1993, contre l'AC Milan (1-0), sur un but de Basile Boli. Le PSG est le deuxième, en 2025.",
+  "hint": "« À jamais les premiers »."
+ },
+ {
+  "key": "sport-508",
+  "concept": "sport.football.italie_surnom",
+  "label": "Squadra Azzurra",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment surnomme-t-on l'équipe d'Italie de football ?",
+  "options": [
+   "La Squadra Azzurra*",
+   "La Roja",
+   "La Seleção",
+   "L'Albiceleste"
+  ],
+  "explanation": "Le bleu vient de la couleur de la maison de Savoie, qui régnait sur l'Italie. La Roja est l'Espagne, la Seleção le Brésil.",
+  "hint": "« L'équipe bleue »."
+ },
+ {
+  "key": "sport-509",
+  "concept": "sport.football.angleterre_surnom",
+  "label": "Three Lions",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel surnom porte l'équipe d'Angleterre de football ?",
+  "options": [
+   "Les Trois Lions*",
+   "Les Diables rouges",
+   "Les Aigles",
+   "Les Coqs"
+  ],
+  "explanation": "Les trois lions de son écusson viennent des armoiries royales. Les Diables rouges sont les Belges.",
+  "hint": "Regarde l'écusson de son maillot."
+ },
+ {
+  "key": "sport-510",
+  "concept": "sport.football.argentine_surnom",
+  "label": "Albiceleste",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi l'équipe d'Argentine est-elle surnommée l'« Albiceleste » ?",
+  "options": [
+   "Pour son maillot rayé blanc et bleu ciel*",
+   "Pour son premier stade",
+   "Pour son hymne",
+   "Pour sa mascotte"
+  ],
+  "explanation": "« Albi » (blanc) et « celeste » (bleu ciel), les couleurs du drapeau argentin.",
+  "hint": "Pense aux couleurs du maillot."
+ },
+ {
+  "key": "sport-511",
+  "concept": "sport.football.finale_2018_mbappe",
+  "label": "Finale 2018",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a marqué le quatrième but français en finale de la Coupe du monde 2018 ?",
+  "options": [
+   "Kylian Mbappé*",
+   "Antoine Griezmann",
+   "Paul Pogba",
+   "Olivier Giroud"
+  ],
+  "explanation": "Après Mandžukić contre son camp, Griezmann sur penalty et Pogba, Mbappé frappe de loin : 4-2 contre la Croatie.",
+  "hint": "Le plus jeune de l'équipe."
+ },
+ {
+  "key": "sport-512",
+  "concept": "sport.football.triple_finale_2022",
+  "label": "Triplé en finale",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel joueur a marqué un triplé en finale de la Coupe du monde 2022 ?",
+  "options": [
+   "Kylian Mbappé*",
+   "Lionel Messi",
+   "Olivier Giroud",
+   "Julián Álvarez"
+  ],
+  "explanation": "Le deuxième triplé de l'histoire en finale, après Geoff Hurst en 1966. L'Argentine gagne quand même aux tirs au but.",
+  "hint": "Un Français, pourtant battu."
+ },
+ {
+  "key": "sport-513",
+  "concept": "sport.football.parc_des_princes",
+  "label": "Parc des Princes",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel club joue ses matchs à domicile au Parc des Princes ?",
+  "options": [
+   "Le Paris Saint-Germain*",
+   "L'Olympique de Marseille",
+   "Le Paris FC",
+   "Le Stade rennais"
+  ],
+  "explanation": "Le stade, dans le 16e arrondissement, accueille le PSG depuis 1974.",
+  "hint": "Un club de la capitale."
+ },
+ {
+  "key": "sport-514",
+  "concept": "sport.football.velodrome",
+  "label": "Stade Vélodrome",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel club joue ses matchs à domicile au stade Vélodrome ?",
+  "options": [
+   "L'Olympique de Marseille*",
+   "Le LOSC",
+   "L'Olympique lyonnais",
+   "Le FC Nantes"
+  ],
+  "explanation": "Son nom rappelle la piste cycliste qui entourait le terrain à son ouverture, en 1937.",
+  "hint": "Au bord de la Méditerranée."
+ },
+ {
+  "key": "sport-515",
+  "concept": "sport.football.red_devils",
+  "label": "Red Devils",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel club anglais est surnommé « les Red Devils » ?",
+  "options": [
+   "Manchester United*",
+   "Liverpool",
+   "Arsenal",
+   "Chelsea"
+  ],
+  "explanation": "Le diable rouge orne son écusson. Il a gagné 20 titres de champion d'Angleterre.",
+  "hint": "Un club de Manchester."
+ },
+ {
+  "key": "sport-516",
+  "concept": "sport.football.bernabeu",
+  "label": "Santiago-Bernabéu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel club joue au stade Santiago-Bernabéu ?",
+  "options": [
+   "Le Real Madrid*",
+   "L'Atlético de Madrid",
+   "Le FC Barcelone",
+   "Le FC Séville"
+  ],
+  "explanation": "Le stade porte le nom d'un ancien président du club, qui l'a fait construire en 1947.",
+  "hint": "Le club qui a gagné le plus de Ligues des champions."
+ },
+ {
+  "key": "sport-517",
+  "concept": "sport.football.camp_nou",
+  "label": "Camp Nou",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel club joue au Camp Nou ?",
+  "options": [
+   "Le FC Barcelone*",
+   "Le Real Madrid",
+   "Valence",
+   "Le Bayern Munich"
+  ],
+  "explanation": "C'est le plus grand stade d'Europe, près de 100 000 places.",
+  "hint": "Le club où Messi a longtemps joué."
+ },
+ {
+  "key": "sport-518",
+  "concept": "sport.football.lucarne",
+  "label": "Lucarne",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au football, que désigne la « lucarne » ?",
+  "options": [
+   "Un angle supérieur du but*",
+   "La ligne de but",
+   "Le point de penalty",
+   "Le banc des remplaçants"
+  ],
+  "explanation": "Là où la barre transversale rejoint le poteau : l'endroit le plus dur à atteindre pour un gardien.",
+  "hint": "En haut, dans un coin."
+ },
+ {
+  "key": "sport-519",
+  "concept": "sport.football.soulier_or",
+  "label": "Soulier d'or",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que récompense le Soulier d'or européen ?",
+  "options": [
+   "Le meilleur buteur des championnats européens*",
+   "Le meilleur gardien",
+   "Le meilleur jeune joueur",
+   "Le fair-play"
+  ],
+  "explanation": "Les buts comptent plus dans les grands championnats. Messi l'a gagné six fois.",
+  "hint": "Des buts, beaucoup de buts."
+ },
+ {
+  "key": "sport-520",
+  "concept": "sport.football.gant_or",
+  "label": "Gant d'or",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel trophée récompense le meilleur gardien d'une Coupe du monde ?",
+  "options": [
+   "Le Gant d'or*",
+   "Le Ballon d'or",
+   "Le Soulier d'or",
+   "Le Mur d'or"
+  ],
+  "explanation": "Emiliano Martínez l'a reçu en 2022, Thibaut Courtois en 2018.",
+  "hint": "Ce qu'il porte aux mains."
+ },
+ {
+  "key": "sport-521",
+  "concept": "sport.football.klose_record",
+  "label": "Record de buts en Coupe du monde",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui détient le record de buts en phase finale de Coupe du monde (16) ?",
+  "options": [
+   "Miroslav Klose*",
+   "Ronaldo",
+   "Pelé",
+   "Just Fontaine"
+  ],
+  "explanation": "L'Allemand marque sur quatre éditions, de 2002 à 2014. Ronaldo le Brésilien en compte 15.",
+  "hint": "Un attaquant allemand."
+ },
+ {
+  "key": "sport-522",
+  "concept": "sport.football.pays_bas_finales",
+  "label": "Finales perdues",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel pays a perdu trois finales de Coupe du monde sans jamais la gagner ?",
+  "options": [
+   "Les Pays-Bas*",
+   "La Hongrie",
+   "La Croatie",
+   "La Suède"
+  ],
+  "explanation": "En 1974, 1978 et 2010, malgré le « football total » de Johan Cruyff.",
+  "hint": "Le pays de Johan Cruyff."
+ },
+ {
+  "key": "sport-523",
+  "concept": "sport.football.euro_2016",
+  "label": "Euro 2016",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel pays a remporté l'Euro 2016, en battant la France en finale à Saint-Denis ?",
+  "options": [
+   "Le Portugal*",
+   "L'Espagne",
+   "L'Allemagne",
+   "L'Italie"
+  ],
+  "explanation": "1-0 après prolongation, sur un but d'Eder. Cristiano Ronaldo, blessé, encourage depuis le bord du terrain.",
+  "hint": "Le pays de Cristiano Ronaldo."
+ },
+ {
+  "key": "sport-524",
+  "concept": "sport.football.euro_2024",
+  "label": "Euro 2024",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel pays a remporté l'Euro 2024, en Allemagne ?",
+  "options": [
+   "L'Espagne*",
+   "L'Angleterre",
+   "La France",
+   "Les Pays-Bas"
+  ],
+  "explanation": "2-1 contre l'Angleterre en finale à Berlin. C'est son quatrième Euro, un record.",
+  "hint": "La Roja."
+ },
+ {
+  "key": "sport-525",
+  "concept": "sport.football.euro_2004_grece",
+  "label": "Euro 2004",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel pays a remporté l'Euro 2004, à la surprise générale ?",
+  "options": [
+   "La Grèce*",
+   "Le Portugal",
+   "La République tchèque",
+   "Le Danemark"
+  ],
+  "explanation": "Elle bat le Portugal, pays hôte, en ouverture et en finale (1-0).",
+  "hint": "Le pays des premiers Jeux olympiques."
+ },
+ {
+  "key": "sport-526",
+  "concept": "sport.football.modric_2018",
+  "label": "Meilleur joueur 2018",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a reçu le Ballon d'or du meilleur joueur de la Coupe du monde 2018 ?",
+  "options": [
+   "Luka Modrić*",
+   "Kylian Mbappé",
+   "Antoine Griezmann",
+   "Harry Kane"
+  ],
+  "explanation": "Le meneur croate mène son pays en finale. La même année, il gagne aussi le Ballon d'or France Football.",
+  "hint": "Un joueur croate du Real Madrid."
+ },
+ {
+  "key": "sport-527",
+  "concept": "sport.football.lloris_capitaine",
+  "label": "Capitaine 2018",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel gardien, capitaine des Bleus, a soulevé la Coupe du monde en 2018 ?",
+  "options": [
+   "Hugo Lloris*",
+   "Steve Mandanda",
+   "Fabien Barthez",
+   "Alphonse Areola"
+  ],
+  "explanation": "Il a porté le brassard plus de 120 fois, un record en équipe de France.",
+  "hint": "Il jouait à Tottenham."
+ },
+ {
+  "key": "sport-528",
+  "concept": "sport.football.prolongations",
+  "label": "Prolongations",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien de minutes durent les prolongations d'un match de football (hors arrêts de jeu) ?",
+  "answer": 30,
+  "explanation": "Deux périodes de 15 minutes. Si l'égalité persiste, place aux tirs au but.",
+  "hint": "Deux périodes de 15 minutes.",
+  "unit": "min"
+ },
+ {
+  "key": "sport-529",
+  "concept": "sport.football.coq_bleus",
+  "label": "Emblème des Bleus",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal est l'emblème de l'équipe de France de football ?",
+  "options": [
+   "Le coq*",
+   "Le lion",
+   "L'aigle",
+   "Le loup"
+  ],
+  "explanation": "Le coq gaulois, symbole de la France, orne le maillot depuis le début du XXe siècle.",
+  "hint": "Il chante le matin."
+ },
+ {
+  "key": "sport-530",
+  "concept": "sport.football.regles_1863",
+  "label": "Naissance du football",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel pays les règles du football moderne ont-elles été fixées, en 1863 ?",
+  "options": [
+   "En Angleterre*",
+   "En France",
+   "En Italie",
+   "Au Brésil"
+  ],
+  "explanation": "La Football Association naît à Londres. Le rugby, qui autorise la main, prend un autre chemin.",
+  "hint": "Le pays de la Premier League."
+ },
+ {
+  "key": "sport-531",
+  "concept": "sport.football.futsal",
+  "label": "Futsal",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de joueurs par équipe, gardien compris, sont sur le terrain au futsal ?",
+  "answer": 5,
+  "explanation": "Le futsal se joue en salle, avec un ballon plus lourd qui rebondit moins.",
+  "hint": "Autant qu'au basket."
+ },
+ {
+  "key": "sport-532",
+  "concept": "sport.football.cr7",
+  "label": "CR7",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel joueur est surnommé « CR7 » ?",
+  "options": [
+   "Cristiano Ronaldo*",
+   "Ronaldo Nazário",
+   "Ronaldinho",
+   "Rodrygo"
+  ],
+  "explanation": "Ses initiales et son numéro de maillot. C'est le meilleur buteur de l'histoire en sélection nationale.",
+  "hint": "Un Portugais."
+ },
+ {
+  "key": "sport-533",
+  "concept": "sport.football.pele_roi",
+  "label": "Le Roi",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel footballeur brésilien était surnommé « le Roi » ?",
+  "options": [
+   "Pelé*",
+   "Ronaldo",
+   "Zico",
+   "Garrincha"
+  ],
+  "explanation": "Seul joueur à avoir gagné trois Coupes du monde (1958, 1962, 1970).",
+  "hint": "Trois fois champion du monde."
+ },
+ {
+  "key": "sport-534",
+  "concept": "sport.football.hegerberg",
+  "label": "Premier Ballon d'or féminin",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle joueuse a reçu le premier Ballon d'or féminin, en 2018 ?",
+  "options": [
+   "Ada Hegerberg*",
+   "Megan Rapinoe",
+   "Wendie Renard",
+   "Alexia Putellas"
+  ],
+  "explanation": "L'attaquante norvégienne de l'Olympique lyonnais, avec qui elle remporte de nombreuses Ligues des champions.",
+  "hint": "Une Norvégienne qui jouait à Lyon."
+ },
+ {
+  "key": "sport-535",
+  "concept": "sport.football.psg_titres",
+  "label": "Titres de champion de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel club compte le plus de titres de champion de France de football ?",
+  "options": [
+   "Le Paris Saint-Germain*",
+   "L'AS Saint-Étienne",
+   "L'Olympique de Marseille",
+   "Le FC Nantes"
+  ],
+  "explanation": "Le PSG a dépassé Saint-Étienne (10 titres) au début des années 2020.",
+  "hint": "Un club de la capitale."
+ },
+ {
+  "key": "sport-536",
+  "concept": "sport.rules.essai_5_points",
+  "label": "Essai",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de points vaut un essai au rugby à XV ?",
+  "answer": 5,
+  "explanation": "Puis la transformation peut en rapporter 2 de plus. Avant 1992, l'essai ne valait que 4 points.",
+  "hint": "Plus qu'une pénalité."
+ },
+ {
+  "key": "sport-537",
+  "concept": "sport.rules.rugby_touche",
+  "label": "Touche",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au rugby, qu'est-ce qu'une « touche » ?",
+  "options": [
+   "Une remise en jeu entre deux alignements de joueurs*",
+   "Un plaquage autorisé",
+   "Un coup de pied au but",
+   "Un essai refusé"
+  ],
+  "explanation": "Le talonneur lance le ballon entre les deux lignes ; les sauteurs sont soulevés par leurs coéquipiers.",
+  "hint": "Le ballon est sorti du terrain."
+ },
+ {
+  "key": "sport-538",
+  "concept": "sport.rules.tennis_sets_gc",
+  "label": "Sets en Grand Chelem",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "En Grand Chelem, combien de sets faut-il gagner pour remporter un match masculin ?",
+  "answer": 3,
+  "explanation": "Les matchs se jouent en cinq sets. Chez les femmes, en trois (deux sets gagnants).",
+  "hint": "Au meilleur des cinq sets."
+ },
+ {
+  "key": "sport-539",
+  "concept": "sport.rules.double_faute",
+  "label": "Double faute",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au tennis, qu'est-ce qu'une « double faute » ?",
+  "options": [
+   "Rater ses deux services*",
+   "Toucher deux fois la balle",
+   "Frapper le filet deux fois",
+   "Sortir deux balles de suite"
+  ],
+  "explanation": "Le serveur a droit à deux essais ; s'il rate les deux, il perd le point.",
+  "hint": "Deux services manqués."
+ },
+ {
+  "key": "sport-540",
+  "concept": "sport.rules.love_tennis",
+  "label": "Zéro au tennis",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Au tennis, comment dit-on « zéro » en anglais pour annoncer le score ?",
+  "options": [
+   "Love*",
+   "Nil",
+   "Zero",
+   "Egg"
+  ],
+  "explanation": "L'origine serait le mot français « l'œuf », pour sa forme… mais rien n'est sûr.",
+  "hint": "Un mot qui veut aussi dire amour."
+ },
+ {
+  "key": "sport-541",
+  "concept": "sport.rules.ping_pong_service",
+  "label": "Service au ping-pong",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Au tennis de table, que doit faire la balle au service ?",
+  "options": [
+   "Rebondir une fois de chaque côté du filet*",
+   "Passer directement sans rebond",
+   "Rebondir deux fois chez l'adversaire",
+   "Toucher le filet"
+  ],
+  "explanation": "Elle rebondit d'abord dans sa propre moitié, puis dans celle de l'adversaire.",
+  "hint": "Deux rebonds, un de chaque côté."
+ },
+ {
+  "key": "sport-542",
+  "concept": "sport.rules.badminton_set",
+  "label": "Badminton",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "En combien de points se joue un set de badminton (sans égalité) ?",
+  "answer": 21,
+  "explanation": "Avec deux points d'écart, jusqu'à 30 au maximum. Un match se joue en deux sets gagnants.",
+  "hint": "Un nombre qui rappelle le blackjack."
+ },
+ {
+  "key": "sport-543",
+  "concept": "sport.rules.volley_joueurs",
+  "label": "Volley-ball",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de joueurs par équipe sont sur le terrain au volley-ball en salle ?",
+  "answer": 6,
+  "explanation": "Ils tournent d'une position à chaque récupération du service. Au beach-volley, ils ne sont que 2.",
+  "hint": "Deux rangées de trois."
+ },
+ {
+  "key": "sport-544",
+  "concept": "sport.rules.basket_trois_secondes",
+  "label": "Trois secondes",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Au basket, combien de secondes au plus un attaquant peut-il rester dans la raquette adverse ?",
+  "answer": 3,
+  "explanation": "La règle empêche les grands joueurs de camper sous le panier.",
+  "hint": "Moins de cinq.",
+  "unit": "s"
+ },
+ {
+  "key": "sport-545",
+  "concept": "sport.rules.double_dribble",
+  "label": "Reprise de dribble",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au basket, qu'est-ce qu'une « reprise de dribble » ?",
+  "options": [
+   "Dribbler à nouveau après avoir tenu le ballon à deux mains*",
+   "Dribbler avec les deux mains en même temps en marchant",
+   "Faire une passe en dribblant",
+   "Dribbler plus de 5 secondes"
+  ],
+  "explanation": "Une fois le dribble arrêté, il faut passer ou tirer. Reprendre est une faute.",
+  "hint": "Arrêter puis recommencer."
+ },
+ {
+  "key": "sport-546",
+  "concept": "sport.rules.piste_400",
+  "label": "Piste d'athlétisme",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de mètres mesure un tour de piste standard d'athlétisme ?",
+  "answer": 400,
+  "explanation": "Le 400 m se court donc en un tour, le 800 m en deux.",
+  "hint": "Le 1 500 m en fait presque quatre.",
+  "unit": "m"
+ },
+ {
+  "key": "sport-547",
+  "concept": "sport.rules.haies_110",
+  "label": "110 m haies",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de haies franchit-on sur un 110 m haies ?",
+  "answer": 10,
+  "explanation": "Hautes de 1,067 m chez les hommes. Le 100 m haies féminin en compte aussi 10.",
+  "hint": "Autant que les doigts des mains."
+ },
+ {
+  "key": "sport-548",
+  "concept": "sport.rules.heptathlon",
+  "label": "Heptathlon",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien d'épreuves compte l'heptathlon ?",
+  "answer": 7,
+  "explanation": "« Hepta » veut dire sept en grec. C'est l'épreuve combinée féminine, sur deux jours.",
+  "hint": "« Hepta »."
+ },
+ {
+  "key": "sport-549",
+  "concept": "sport.rules.bassin_olympique",
+  "label": "Bassin olympique",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de mètres mesure un bassin olympique de natation ?",
+  "answer": 50,
+  "explanation": "Un 100 m se nage donc en un aller-retour.",
+  "hint": "La moitié de 100.",
+  "unit": "m"
+ },
+ {
+  "key": "sport-550",
+  "concept": "sport.rules.judogi",
+  "label": "Tenue de judo",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'appelle la tenue des judokas ?",
+  "options": [
+   "Le judogi*",
+   "Le dobok",
+   "Le gi-karaté",
+   "Le hakama"
+  ],
+  "explanation": "On l'appelle souvent kimono, à tort. Le dobok est la tenue du taekwondo.",
+  "hint": "« Judo » + « gi »."
+ },
+ {
+  "key": "sport-551",
+  "concept": "sport.rules.kata",
+  "label": "Kata",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Au karaté, comment s'appelle un enchaînement codifié de mouvements, exécuté seul ?",
+  "options": [
+   "Un kata*",
+   "Un kumite",
+   "Un dojo",
+   "Un kiai"
+  ],
+  "explanation": "Le kumite est le combat, le dojo la salle, le kiai le cri.",
+  "hint": "Quatre lettres, deux A."
+ },
+ {
+  "key": "sport-552",
+  "concept": "sport.rules.eagle_golf",
+  "label": "Eagle",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Au golf, que signifie un « eagle » ?",
+  "options": [
+   "Deux coups de moins que le par*",
+   "Un coup de moins que le par",
+   "Un trou en un",
+   "Un coup de plus que le par"
+  ],
+  "explanation": "Après le birdie (−1) vient l'eagle (−2), puis l'albatros (−3), très rare.",
+  "hint": "Un oiseau plus grand que le birdie."
+ },
+ {
+  "key": "sport-553",
+  "concept": "sport.rules.trou_en_un",
+  "label": "Trou en un",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Au golf, qu'est-ce qu'un « trou en un » ?",
+  "options": [
+   "Mettre la balle dans le trou en un seul coup*",
+   "Jouer un seul trou",
+   "Perdre une balle",
+   "Jouer avec un seul club"
+  ],
+  "explanation": "Surtout possible sur les trous courts, les par 3.",
+  "hint": "Un seul coup."
+ },
+ {
+  "key": "sport-554",
+  "concept": "sport.rules.bowling_quilles",
+  "label": "Bowling",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien de quilles faut-il renverser d'un coup pour faire un « strike » au bowling ?",
+  "answer": 10,
+  "explanation": "Toutes les quilles, disposées en triangle, dès le premier lancer.",
+  "hint": "Toutes."
+ },
+ {
+  "key": "sport-555",
+  "concept": "sport.rules.spare",
+  "label": "Spare",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au bowling, comment appelle-t-on dix quilles renversées en deux lancers ?",
+  "options": [
+   "Un spare*",
+   "Un strike",
+   "Un split",
+   "Un gutter"
+  ],
+  "explanation": "Le strike, c'est au premier lancer. Le spare rapporte un bonus sur le lancer suivant.",
+  "hint": "Pas un strike."
+ },
+ {
+  "key": "sport-556",
+  "concept": "sport.rules.billard_8",
+  "label": "Billard américain",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au billard américain (jeu du 8), quelle bille faut-il rentrer en dernier ?",
+  "options": [
+   "La noire, la 8*",
+   "La blanche",
+   "La jaune, la 1",
+   "La rouge"
+  ],
+  "explanation": "Rentrer la 8 trop tôt fait perdre la partie immédiatement.",
+  "hint": "Le jeu porte son numéro."
+ },
+ {
+  "key": "sport-557",
+  "concept": "sport.rules.boxe_rounds_titre",
+  "label": "Championnat de boxe",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "En combien de rounds au maximum se dispute un championnat du monde de boxe professionnelle masculine ?",
+  "answer": 12,
+  "explanation": "De 3 minutes chacun. Jusqu'au début des années 1980, les titres se jouaient souvent en 15 rounds.",
+  "hint": "Autant que de mois dans l'année."
+ },
+ {
+  "key": "sport-558",
+  "concept": "sport.rules.sumo_victoire",
+  "label": "Sumo",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment gagne-t-on un combat de sumo ?",
+  "options": [
+   "En faisant sortir l'adversaire du cercle ou toucher le sol*",
+   "En le maintenant au sol 10 secondes",
+   "Aux points, après 3 minutes",
+   "En le soulevant au-dessus de la tête"
+  ],
+  "explanation": "Toucher le sol avec autre chose que la plante des pieds suffit à perdre. Les combats durent souvent quelques secondes.",
+  "hint": "Il faut le pousser dehors ou le faire tomber."
+ },
+ {
+  "key": "sport-559",
+  "concept": "sport.rules.f1_victoire_points",
+  "label": "Points en F1",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de points rapporte une victoire en Grand Prix de Formule 1 ?",
+  "answer": 25,
+  "explanation": "Puis 18 au 2e, 15 au 3e, jusqu'à 1 point pour le 10e.",
+  "hint": "Un quart de cent."
+ },
+ {
+  "key": "sport-560",
+  "concept": "sport.rules.echiquier_cases",
+  "label": "Échiquier",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien de cases compte un échiquier ?",
+  "answer": 64,
+  "explanation": "8 rangées de 8 cases, alternativement claires et sombres.",
+  "hint": "8 × 8."
+ },
+ {
+  "key": "sport-561",
+  "concept": "sport.rules.piece_puissante",
+  "label": "Dame",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Aux échecs, quelle est la pièce la plus puissante ?",
+  "options": [
+   "La dame*",
+   "Le roi",
+   "La tour",
+   "Le fou"
+  ],
+  "explanation": "Elle se déplace en ligne droite et en diagonale, d'autant de cases qu'elle veut.",
+  "hint": "On l'appelle aussi la reine."
+ },
+ {
+  "key": "sport-562",
+  "concept": "sport.rules.pat_echecs",
+  "label": "Pat",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Aux échecs, que signifie « pat » ?",
+  "options": [
+   "Le joueur n'est pas en échec mais n'a aucun coup légal : partie nulle*",
+   "Le roi est pris",
+   "Un pion atteint la dernière rangée",
+   "Le joueur abandonne"
+  ],
+  "explanation": "Une ressource pour sauver une partie perdue : si l'adversaire ne peut plus jouer sans se mettre en échec, c'est match nul.",
+  "hint": "Ce n'est ni une victoire ni une défaite."
+ },
+ {
+  "key": "sport-563",
+  "concept": "sport.rules.match_rugby_duree",
+  "label": "Durée d'un match de rugby",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien de minutes dure un match de rugby à XV (hors arrêts de jeu) ?",
+  "answer": 80,
+  "explanation": "Deux mi-temps de 40 minutes.",
+  "hint": "Deux fois 40.",
+  "unit": "min"
+ },
+ {
+  "key": "sport-564",
+  "concept": "sport.rules.match_handball_duree",
+  "label": "Durée d'un match de handball",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de minutes dure un match de handball (hors arrêts) ?",
+  "answer": 60,
+  "explanation": "Deux mi-temps de 30 minutes.",
+  "hint": "Deux fois 30.",
+  "unit": "min"
+ },
+ {
+  "key": "sport-565",
+  "concept": "sport.rules.hockey_periodes",
+  "label": "Hockey sur glace",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "En combien de périodes se joue un match de hockey sur glace ?",
+  "answer": 3,
+  "explanation": "Trois tiers-temps de 20 minutes de jeu effectif.",
+  "hint": "Pas deux mi-temps."
+ },
+ {
+  "key": "sport-566",
+  "concept": "sport.rules.descente_ski",
+  "label": "Descente",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle discipline de ski alpin est la plus rapide ?",
+  "options": [
+   "La descente*",
+   "Le slalom",
+   "Le slalom géant",
+   "Le super-G"
+  ],
+  "explanation": "Les skieurs y dépassent souvent 130 km/h, parfois 150.",
+  "hint": "Tout schuss."
+ },
+ {
+  "key": "sport-567",
+  "concept": "sport.rules.cricket_bowler",
+  "label": "Cricket",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Au cricket, comment s'appelle le joueur qui lance la balle vers le batteur ?",
+  "options": [
+   "Le bowler*",
+   "Le pitcher",
+   "Le striker",
+   "Le keeper"
+  ],
+  "explanation": "Au baseball, c'est le « pitcher ». Au cricket, le lanceur a le bras tendu et fait rebondir la balle.",
+  "hint": "Un mot qui évoque le bowling."
+ },
+ {
+  "key": "sport-568",
+  "concept": "sport.rules.home_run",
+  "label": "Home run",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au baseball, qu'est-ce qu'un « home run » ?",
+  "options": [
+   "Une frappe qui permet de faire le tour des bases d'un coup*",
+   "Une faute du lanceur",
+   "Un match à domicile",
+   "Un changement de joueur"
+  ],
+  "explanation": "Souvent la balle sort du terrain. Le batteur, et ceux déjà sur les bases, marquent.",
+  "hint": "« Course jusqu'à la maison »."
+ },
+ {
+  "key": "sport-569",
+  "concept": "sport.rules.touchdown",
+  "label": "Touchdown",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de points vaut un touchdown au football américain ?",
+  "answer": 6,
+  "explanation": "Puis la transformation rapporte 1 point au pied, ou 2 en rejouant une action.",
+  "hint": "Plus qu'un essai de rugby."
+ },
+ {
+  "key": "sport-570",
+  "concept": "sport.rules.water_polo",
+  "label": "Water-polo",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien de joueurs par équipe, gardien compris, sont dans l'eau au water-polo ?",
+  "answer": 7,
+  "explanation": "Six joueurs de champ et un gardien. Ils n'ont pas le droit de toucher le fond.",
+  "hint": "Autant qu'au handball."
+ },
+ {
+  "key": "sport-571",
+  "concept": "sport.rules.dressage",
+  "label": "Dressage",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle discipline d'équitation est parfois appelée la « danse » du cheval ?",
+  "options": [
+   "Le dressage*",
+   "Le saut d'obstacles",
+   "Le concours complet",
+   "L'endurance"
+  ],
+  "explanation": "Le cavalier fait exécuter des figures précises, notées par des juges, parfois en musique.",
+  "hint": "Des figures notées."
+ },
+ {
+  "key": "sport-572",
+  "concept": "sport.rules.vendee_globe",
+  "label": "Vendée Globe",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que le Vendée Globe ?",
+  "options": [
+   "Un tour du monde à la voile en solitaire, sans escale*",
+   "Une course cycliste en Vendée",
+   "Un rallye automobile",
+   "Une course à pied autour du monde"
+  ],
+  "explanation": "Départ et arrivée aux Sables-d'Olonne, tous les quatre ans. Il dure entre deux et trois mois.",
+  "hint": "On le court seul, en bateau."
+ },
+ {
+  "key": "sport-573",
+  "concept": "sport.rules.route_du_rhum",
+  "label": "Route du Rhum",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle ville part la course à la voile Route du Rhum ?",
+  "options": [
+   "Saint-Malo*",
+   "Brest",
+   "La Rochelle",
+   "Le Havre"
+  ],
+  "explanation": "Elle arrive en Guadeloupe, à Pointe-à-Pitre, tous les quatre ans depuis 1978.",
+  "hint": "Une cité corsaire bretonne."
+ },
+ {
+  "key": "sport-574",
+  "concept": "sport.rules.enfer_du_nord",
+  "label": "L'Enfer du Nord",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle course cycliste est surnommée « l'Enfer du Nord » ?",
+  "options": [
+   "Paris-Roubaix*",
+   "Liège-Bastogne-Liège",
+   "Le Tour des Flandres",
+   "Milan-San Remo"
+  ],
+  "explanation": "Pour ses secteurs pavés, souvent boueux. Le vainqueur reçoit… un pavé.",
+  "hint": "Elle finit dans un vélodrome du Nord."
+ },
+ {
+  "key": "sport-575",
+  "concept": "sport.rules.le_mans",
+  "label": "24 Heures du Mans",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle course automobile dure une journée entière, dans la Sarthe ?",
+  "options": [
+   "Les 24 Heures du Mans*",
+   "Le Grand Prix de Monaco",
+   "Le Dakar",
+   "Le Tour de Corse"
+  ],
+  "explanation": "Depuis 1923, les pilotes se relaient jour et nuit au volant.",
+  "hint": "Son nom dit combien de temps elle dure."
+ },
+ {
+  "key": "sport-576",
+  "concept": "sport.rules.champs_elysees_tour",
+  "label": "Arrivée du Tour",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Où se termine traditionnellement le Tour de France ?",
+  "options": [
+   "Sur les Champs-Élysées*",
+   "Au pied de la tour Eiffel",
+   "À Versailles",
+   "Au Stade de France"
+  ],
+  "explanation": "Depuis 1975. En 2024, à cause des Jeux, l'arrivée a exceptionnellement eu lieu à Nice.",
+  "hint": "La plus belle avenue du monde, dit-on."
+ }
+]

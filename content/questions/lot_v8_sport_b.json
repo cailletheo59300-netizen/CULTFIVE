@@ -1,0 +1,1088 @@
+[
+ {
+  "key": "sport-577",
+  "concept": "sport.champions.marchand_or_2024",
+  "label": "Léon Marchand",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de médailles d'or individuelles Léon Marchand a-t-il remportées aux JO de Paris 2024 ?",
+  "answer": 4,
+  "explanation": "400 m quatre nages, 200 m papillon, 200 m brasse et 200 m quatre nages, dont deux finales le même soir.",
+  "hint": "Plus que les doigts d'une main… moins un."
+ },
+ {
+  "key": "sport-578",
+  "concept": "sport.champions.marchand_sport",
+  "label": "Léon Marchand",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel sport Léon Marchand est-il devenu une star à Paris 2024 ?",
+  "options": [
+   "La natation*",
+   "L'athlétisme",
+   "Le judo",
+   "Le cyclisme"
+  ],
+  "explanation": "Le Toulousain a fait vibrer La Défense Arena avec quatre titres olympiques.",
+  "hint": "On le voit dans un bassin."
+ },
+ {
+  "key": "sport-579",
+  "concept": "sport.champions.djokovic_semaines",
+  "label": "Numéro 1",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel joueur détient le record de semaines passées à la première place mondiale de tennis ?",
+  "options": [
+   "Novak Djokovic*",
+   "Roger Federer",
+   "Rafael Nadal",
+   "Pete Sampras"
+  ],
+  "explanation": "Plus de 400 semaines. Il détient aussi le record de 24 titres du Grand Chelem chez les hommes.",
+  "hint": "Un joueur serbe."
+ },
+ {
+  "key": "sport-580",
+  "concept": "sport.champions.alcaraz_rg",
+  "label": "Roland-Garros",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel joueur espagnol a remporté Roland-Garros en 2024 et en 2025 ?",
+  "options": [
+   "Carlos Alcaraz*",
+   "Rafael Nadal",
+   "Jannik Sinner",
+   "Casper Ruud"
+  ],
+  "explanation": "En 2025, il bat Jannik Sinner en finale après avoir sauvé trois balles de match, dans la plus longue finale de l'histoire du tournoi.",
+  "hint": "Le successeur de Nadal."
+ },
+ {
+  "key": "sport-581",
+  "concept": "sport.champions.hinault_dernier",
+  "label": "Dernier Français sacré",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui est le dernier Français à avoir remporté le Tour de France, en 1985 ?",
+  "options": [
+   "Bernard Hinault*",
+   "Laurent Fignon",
+   "Jacques Anquetil",
+   "Thibaut Pinot"
+  ],
+  "explanation": "Son cinquième titre. Depuis, aucun Français n'a gagné la Grande Boucle.",
+  "hint": "Surnommé « le Blaireau »."
+ },
+ {
+  "key": "sport-582",
+  "concept": "sport.champions.pogacar",
+  "label": "Tour de France 2024",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel coureur slovène a remporté le Tour de France en 2024 et 2025 ?",
+  "options": [
+   "Tadej Pogačar*",
+   "Primož Roglič",
+   "Jonas Vingegaard",
+   "Remco Evenepoel"
+  ],
+  "explanation": "Il gagne aussi le Giro et le championnat du monde en 2024, un triplé rarissime.",
+  "hint": "Le rival de Vingegaard."
+ },
+ {
+  "key": "sport-583",
+  "concept": "sport.champions.froome",
+  "label": "Chris Froome",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel coureur britannique a remporté quatre fois le Tour de France, entre 2013 et 2017 ?",
+  "options": [
+   "Chris Froome*",
+   "Bradley Wiggins",
+   "Geraint Thomas",
+   "Mark Cavendish"
+  ],
+  "explanation": "En 2013, puis de 2015 à 2017. Wiggins, en 2012, avait été le premier Britannique vainqueur.",
+  "hint": "Né au Kenya."
+ },
+ {
+  "key": "sport-584",
+  "concept": "sport.champions.indurain",
+  "label": "Miguel Indurain",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel coureur espagnol a remporté cinq Tours de France consécutifs, de 1991 à 1995 ?",
+  "options": [
+   "Miguel Indurain*",
+   "Alberto Contador",
+   "Pedro Delgado",
+   "Carlos Sastre"
+  ],
+  "explanation": "Surnommé « Big Mig », il était imbattable dans les contre-la-montre.",
+  "hint": "Un Navarrais, surnommé « Big Mig »."
+ },
+ {
+  "key": "sport-585",
+  "concept": "sport.champions.estanguet",
+  "label": "Tony Estanguet",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pour quel sport Tony Estanguet, patron des Jeux de Paris 2024, a-t-il été trois fois champion olympique ?",
+  "options": [
+   "Le canoë*",
+   "L'escrime",
+   "Le judo",
+   "L'aviron"
+  ],
+  "explanation": "En canoë monoplace de slalom, en 2000, 2004 et 2012.",
+  "hint": "Une embarcation à pagaie."
+ },
+ {
+  "key": "sport-586",
+  "concept": "sport.champions.flojo",
+  "label": "Record du 100 m féminin",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle sprinteuse américaine détient depuis 1988 le record du monde du 100 m (10,49 s) ?",
+  "options": [
+   "Florence Griffith-Joyner*",
+   "Marion Jones",
+   "Shelly-Ann Fraser-Pryce",
+   "Carl Lewis"
+  ],
+  "explanation": "« Flo-Jo », célèbre aussi pour ses ongles très longs et décorés. Son record du 200 m tient toujours également.",
+  "hint": "Surnommée « Flo-Jo »."
+ },
+ {
+  "key": "sport-587",
+  "concept": "sport.champions.duplantis",
+  "label": "Armand Duplantis",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel perchiste suédois a battu le record du monde plus d'une dizaine de fois depuis 2020 ?",
+  "options": [
+   "Armand Duplantis*",
+   "Renaud Lavillenie",
+   "Sam Kendricks",
+   "Sergueï Bubka"
+  ],
+  "explanation": "« Mondo » l'améliore centimètre par centimètre, au-delà de 6,20 m. Il a été champion olympique en 2021 et 2024.",
+  "hint": "Surnommé « Mondo »."
+ },
+ {
+  "key": "sport-588",
+  "concept": "sport.champions.venus_williams",
+  "label": "Sœurs Williams",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle la sœur aînée de Serena Williams, elle aussi championne de tennis ?",
+  "options": [
+   "Venus*",
+   "Maria",
+   "Naomi",
+   "Coco"
+  ],
+  "explanation": "Venus a gagné sept titres du Grand Chelem en simple, dont cinq Wimbledon.",
+  "hint": "Une planète."
+ },
+ {
+  "key": "sport-589",
+  "concept": "sport.champions.pacquiao",
+  "label": "Manny Pacquiao",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel boxeur philippin a été champion du monde dans huit catégories de poids différentes ?",
+  "options": [
+   "Manny Pacquiao*",
+   "Floyd Mayweather",
+   "Oscar De La Hoya",
+   "Mike Tyson"
+  ],
+  "explanation": "Un record unique. Il a aussi été sénateur aux Philippines.",
+  "hint": "Il a aussi fait de la politique."
+ },
+ {
+  "key": "sport-590",
+  "concept": "sport.champions.chamberlain_100",
+  "label": "100 points",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel basketteur a marqué 100 points en un seul match de NBA, en 1962 ?",
+  "options": [
+   "Wilt Chamberlain*",
+   "Michael Jordan",
+   "Kobe Bryant",
+   "Kareem Abdul-Jabbar"
+  ],
+  "explanation": "Le 2 mars 1962. Kobe Bryant s'en est le plus approché avec 81 points en 2006.",
+  "hint": "Un géant des années 1960."
+ },
+ {
+  "key": "sport-591",
+  "concept": "sport.champions.lebron_record",
+  "label": "Record de points NBA",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel joueur a battu en 2023 le record de points en carrière de Kareem Abdul-Jabbar en NBA ?",
+  "options": [
+   "LeBron James*",
+   "Stephen Curry",
+   "Kevin Durant",
+   "Michael Jordan"
+  ],
+  "explanation": "Le record tenait depuis 1984. LeBron a depuis dépassé les 40 000 points.",
+  "hint": "Surnommé « King James »."
+ },
+ {
+  "key": "sport-592",
+  "concept": "sport.champions.wembanyama",
+  "label": "Victor Wembanyama",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle équipe NBA joue le Français Victor Wembanyama ?",
+  "options": [
+   "Les San Antonio Spurs*",
+   "Les Los Angeles Lakers",
+   "Les Boston Celtics",
+   "Les Chicago Bulls"
+  ],
+  "explanation": "La franchise texane où Tony Parker avait gagné quatre titres.",
+  "hint": "L'ancienne équipe de Tony Parker."
+ },
+ {
+  "key": "sport-593",
+  "concept": "sport.champions.afrique_sud_rugby",
+  "label": "Rugby",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel pays a remporté le plus de Coupes du monde de rugby ?",
+  "options": [
+   "L'Afrique du Sud*",
+   "La Nouvelle-Zélande",
+   "L'Australie",
+   "L'Angleterre"
+  ],
+  "explanation": "Quatre titres : 1995, 2007, 2019 et 2023. La Nouvelle-Zélande en compte trois.",
+  "hint": "Les Springboks."
+ },
+ {
+  "key": "sport-594",
+  "concept": "sport.champions.six_nations",
+  "label": "Six Nations",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel tournoi de rugby oppose chaque hiver six pays européens ?",
+  "options": [
+   "Le Tournoi des Six Nations*",
+   "La Coupe du monde",
+   "La Champions Cup",
+   "Le Rugby Championship"
+  ],
+  "explanation": "Angleterre, Écosse, France, Irlande, Italie et pays de Galles.",
+  "hint": "Son nom compte les équipes."
+ },
+ {
+  "key": "sport-595",
+  "concept": "sport.champions.grand_chelem_rugby",
+  "label": "Grand Chelem au rugby",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au Tournoi des Six Nations, que signifie réussir le « Grand Chelem » ?",
+  "options": [
+   "Gagner tous ses matchs*",
+   "Gagner à l'extérieur",
+   "Marquer un essai par match",
+   "Finir sans carton"
+  ],
+  "explanation": "Cinq victoires sur cinq. La France l'a réussi pour la dernière fois en 2022.",
+  "hint": "Aucune défaite."
+ },
+ {
+  "key": "sport-596",
+  "concept": "sport.champions.hillary_everest",
+  "label": "Everest",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a atteint le sommet de l'Everest en premier avec le sherpa Tenzing Norgay, en 1953 ?",
+  "options": [
+   "Edmund Hillary*",
+   "George Mallory",
+   "Reinhold Messner",
+   "Maurice Herzog"
+  ],
+  "explanation": "Le Néo-Zélandais et le Népalais y arrivent le 29 mai 1953.",
+  "hint": "Un apiculteur néo-zélandais."
+ },
+ {
+  "key": "sport-597",
+  "concept": "sport.champions.desjoyeaux",
+  "label": "Vendée Globe",
+  "type": "mcq",
+  "difficulty": 78,
+  "prompt": "Quel navigateur est le seul à avoir remporté deux fois le Vendée Globe ?",
+  "options": [
+   "Michel Desjoyeaux*",
+   "François Gabart",
+   "Armel Le Cléac'h",
+   "Charlie Dalin"
+  ],
+  "explanation": "En 2001 et en 2009. On le surnomme « le Professeur ».",
+  "hint": "Surnommé « le Professeur »."
+ },
+ {
+  "key": "sport-598",
+  "concept": "sport.champions.shiffrin",
+  "label": "Mikaela Shiffrin",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle skieuse américaine détient le record de victoires en Coupe du monde de ski alpin ?",
+  "options": [
+   "Mikaela Shiffrin*",
+   "Lindsey Vonn",
+   "Tessa Worley",
+   "Petra Vlhová"
+  ],
+  "explanation": "Elle a dépassé les 100 victoires, loin devant tous les hommes et toutes les femmes.",
+  "hint": "Plus de 100 victoires."
+ },
+ {
+  "key": "sport-599",
+  "concept": "sport.champions.rodri_2024",
+  "label": "Ballon d'or 2024",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a remporté le Ballon d'or 2024 ?",
+  "options": [
+   "Rodri*",
+   "Vinícius Júnior",
+   "Jude Bellingham",
+   "Kylian Mbappé"
+  ],
+  "explanation": "Le milieu espagnol de Manchester City, champion d'Europe avec l'Espagne la même année.",
+  "hint": "Un milieu espagnol de Manchester City."
+ },
+ {
+  "key": "sport-600",
+  "concept": "sport.champions.dembele_2025",
+  "label": "Ballon d'or 2025",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel Français a remporté le Ballon d'or 2025 ?",
+  "options": [
+   "Ousmane Dembélé*",
+   "Kylian Mbappé",
+   "Antoine Griezmann",
+   "Michael Olise"
+  ],
+  "explanation": "Après la Ligue des champions gagnée avec le PSG. Il succède à Karim Benzema, dernier Français lauréat en 2022.",
+  "hint": "Un ailier du PSG."
+ },
+ {
+  "key": "sport-601",
+  "concept": "sport.champions.osaka",
+  "label": "Naomi Osaka",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle joueuse japonaise a remporté quatre titres du Grand Chelem entre 2018 et 2021 ?",
+  "options": [
+   "Naomi Osaka*",
+   "Li Na",
+   "Kimiko Date",
+   "Coco Gauff"
+  ],
+  "explanation": "Deux US Open et deux Open d'Australie. Elle a allumé la vasque des JO de Tokyo.",
+  "hint": "Elle a allumé la flamme de Tokyo 2020."
+ },
+ {
+  "key": "sport-602",
+  "concept": "sport.champions.mimoun",
+  "label": "Marathon olympique",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel Français a été champion olympique du marathon, à Melbourne en 1956 ?",
+  "options": [
+   "Alain Mimoun*",
+   "Jean Bouin",
+   "Michel Jazy",
+   "Christophe Lemaitre"
+  ],
+  "explanation": "Longtemps battu par le Tchèque Zátopek sur piste, il le devance enfin sur marathon.",
+  "hint": "L'éternel rival d'Emil Zátopek."
+ },
+ {
+  "key": "sport-603",
+  "concept": "sport.champions.hamilton",
+  "label": "Lewis Hamilton",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel pilote britannique a été sept fois champion du monde de Formule 1 ?",
+  "options": [
+   "Lewis Hamilton*",
+   "Jenson Button",
+   "Nigel Mansell",
+   "Damon Hill"
+  ],
+  "explanation": "Il égale le record de Michael Schumacher en 2020.",
+  "hint": "Il a longtemps couru chez Mercedes."
+ },
+ {
+  "key": "sport-604",
+  "concept": "sport.champions.verstappen",
+  "label": "Max Verstappen",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel pilote néerlandais a été champion du monde de F1 de 2021 à 2024 ?",
+  "options": [
+   "Max Verstappen*",
+   "Charles Leclerc",
+   "Lando Norris",
+   "Fernando Alonso"
+  ],
+  "explanation": "Quatre titres de suite avec Red Bull.",
+  "hint": "Il court pour Red Bull."
+ },
+ {
+  "key": "sport-605",
+  "concept": "sport.champions.quartararo",
+  "label": "MotoGP",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pilote français a été champion du monde de MotoGP en 2021 ?",
+  "options": [
+   "Fabio Quartararo*",
+   "Johann Zarco",
+   "Valentino Rossi",
+   "Marc Márquez"
+  ],
+  "explanation": "Le premier Français sacré dans la catégorie reine de la moto.",
+  "hint": "Surnommé « El Diablo »."
+ },
+ {
+  "key": "sport-606",
+  "concept": "sport.olympics.jo_frequence",
+  "label": "Rythme des Jeux",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Tous les combien d'années ont lieu les Jeux olympiques d'été ?",
+  "answer": 4,
+  "explanation": "On appelle « olympiade » cette période de quatre ans.",
+  "hint": "Comme les années bissextiles."
+ },
+ {
+  "key": "sport-607",
+  "concept": "sport.olympics.medaille_bronze",
+  "label": "Troisième place",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle médaille reçoit le troisième d'une épreuve olympique ?",
+  "options": [
+   "Le bronze*",
+   "L'argent",
+   "L'or",
+   "Le cuivre"
+  ],
+  "explanation": "Or, argent, bronze : l'ordre est fixé depuis 1904.",
+  "hint": "Après l'argent."
+ },
+ {
+  "key": "sport-608",
+  "concept": "sport.olympics.la_2028",
+  "label": "JO 2028",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle ville accueillera les Jeux olympiques d'été de 2028 ?",
+  "options": [
+   "Los Angeles*",
+   "Brisbane",
+   "Madrid",
+   "Tokyo"
+  ],
+  "explanation": "Pour la troisième fois, après 1932 et 1984. Brisbane organisera ceux de 2032.",
+  "hint": "La ville d'Hollywood."
+ },
+ {
+  "key": "sport-609",
+  "concept": "sport.olympics.milan_cortina",
+  "label": "JO d'hiver 2026",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Où se tiennent les Jeux olympiques d'hiver de 2026 ?",
+  "options": [
+   "À Milan et Cortina d'Ampezzo*",
+   "À Salt Lake City",
+   "Dans les Alpes françaises",
+   "À Stockholm"
+  ],
+  "explanation": "Des Jeux partagés entre la grande ville lombarde et la station des Dolomites.",
+  "hint": "En Italie."
+ },
+ {
+  "key": "sport-610",
+  "concept": "sport.olympics.alpes_2030",
+  "label": "JO d'hiver 2030",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui organisera les Jeux olympiques d'hiver de 2030 ?",
+  "options": [
+   "Les Alpes françaises*",
+   "La Suisse",
+   "La Suède",
+   "Les États-Unis"
+  ],
+  "explanation": "Plusieurs sites, de la Haute-Savoie à Nice. La France accueillera ses quatrièmes Jeux d'hiver.",
+  "hint": "Chamonix et Grenoble les ont déjà accueillis."
+ },
+ {
+  "key": "sport-611",
+  "concept": "sport.olympics.breaking",
+  "label": "Nouveau sport 2024",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle discipline a fait ses débuts olympiques à Paris 2024 ?",
+  "options": [
+   "Le breaking (breakdance)*",
+   "Le surf",
+   "Le skateboard",
+   "L'escalade"
+  ],
+  "explanation": "Le surf, le skate et l'escalade étaient apparus à Tokyo. Le breaking ne sera pas aux Jeux de 2028.",
+  "hint": "Une danse née dans le hip-hop."
+ },
+ {
+  "key": "sport-612",
+  "concept": "sport.olympics.teahupoo",
+  "label": "Surf à Paris 2024",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Où se sont déroulées les épreuves de surf des Jeux de Paris 2024 ?",
+  "options": [
+   "À Tahiti*",
+   "À Biarritz",
+   "À Hossegor",
+   "À Lacanau"
+  ],
+  "explanation": "Sur la vague de Teahupo'o, à plus de 15 000 km de Paris : un record de distance pour un site olympique.",
+  "hint": "Une île de Polynésie."
+ },
+ {
+  "key": "sport-613",
+  "concept": "sport.olympics.vasque_2024",
+  "label": "Vasque de Paris 2024",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a allumé la vasque olympique lors de la cérémonie d'ouverture de Paris 2024 ?",
+  "options": [
+   "Marie-José Pérec et Teddy Riner*",
+   "Zinédine Zidane et Tony Parker",
+   "Léon Marchand et Kylian Mbappé",
+   "Amélie Mauresmo et Nadia Comăneci"
+  ],
+  "explanation": "Zidane apporte la flamme au début de la cérémonie ; les deux champions l'allument à la fin, aux Tuileries.",
+  "hint": "Une sprinteuse et un judoka."
+ },
+ {
+  "key": "sport-614",
+  "concept": "sport.olympics.montgolfiere_2024",
+  "label": "Vasque en montgolfière",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Sous quelle forme se présentait la vasque des Jeux de Paris 2024 ?",
+  "options": [
+   "Un ballon qui s'élevait au-dessus des Tuileries*",
+   "Une tour de verre sur la Seine",
+   "Une flamme au sommet de la tour Eiffel",
+   "Une coupe au Stade de France"
+  ],
+  "explanation": "Un anneau de feu sous un ballon, hommage aux frères Montgolfier. La flamme était… électrique, sans combustion.",
+  "hint": "Un hommage aux frères Montgolfier."
+ },
+ {
+  "key": "sport-615",
+  "concept": "sport.olympics.france_or_2024",
+  "label": "France à Paris 2024",
+  "type": "numeric",
+  "difficulty": 68,
+  "prompt": "Combien de médailles d'or la France a-t-elle remportées aux Jeux de Paris 2024 ?",
+  "answer": 16,
+  "explanation": "Pour 64 médailles au total, un record pour la France depuis 1900.",
+  "hint": "Plus de 15."
+ },
+ {
+  "key": "sport-616",
+  "concept": "sport.olympics.phryges",
+  "label": "Mascottes de Paris 2024",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'appelaient les mascottes des Jeux de Paris 2024 ?",
+  "options": [
+   "Les Phryges*",
+   "Les Mariannes",
+   "Les Coqs",
+   "Les Olympes"
+  ],
+  "explanation": "Des bonnets phrygiens, symboles de liberté de la Révolution française.",
+  "hint": "Des bonnets rouges."
+ },
+ {
+  "key": "sport-617",
+  "concept": "sport.olympics.anneaux_couleurs",
+  "label": "Couleurs des anneaux",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelles sont les couleurs des cinq anneaux olympiques ?",
+  "options": [
+   "Bleu, jaune, noir, vert, rouge*",
+   "Bleu, blanc, rouge, vert, orange",
+   "Rouge, jaune, vert, violet, noir",
+   "Or, argent, bronze, bleu, rouge"
+  ],
+  "explanation": "Avec le fond blanc, ces couleurs permettaient de reproduire tous les drapeaux du monde en 1913.",
+  "hint": "Il y a du noir."
+ },
+ {
+  "key": "sport-618",
+  "concept": "sport.olympics.anneaux_continents",
+  "label": "Cinq anneaux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que représentent les cinq anneaux olympiques ?",
+  "options": [
+   "L'union des continents*",
+   "Les cinq sports d'origine",
+   "Les cinq premières villes hôtes",
+   "Les cinq valeurs du sport"
+  ],
+  "explanation": "Pierre de Coubertin les dessine en 1913 : cinq anneaux entrelacés pour les continents réunis par les Jeux.",
+  "hint": "Autant que de parties du monde."
+ },
+ {
+  "key": "sport-619",
+  "concept": "sport.olympics.flamme_olympie",
+  "label": "Flamme olympique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où la flamme olympique est-elle allumée avant chaque édition ?",
+  "options": [
+   "À Olympie, en Grèce*",
+   "À Athènes, sur l'Acropole",
+   "Au siège du CIO à Lausanne",
+   "Dans la ville hôte"
+  ],
+  "explanation": "Grâce aux rayons du soleil concentrés par un miroir, lors d'une cérémonie inspirée de l'Antiquité.",
+  "hint": "Là où se tenaient les Jeux antiques."
+ },
+ {
+  "key": "sport-620",
+  "concept": "sport.olympics.jeux_antiques_zeus",
+  "label": "Jeux antiques",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "En l'honneur de quel dieu se déroulaient les Jeux olympiques antiques ?",
+  "options": [
+   "Zeus*",
+   "Apollon",
+   "Arès",
+   "Poséidon"
+  ],
+  "explanation": "Le sanctuaire d'Olympie abritait une immense statue de Zeus, l'une des Sept Merveilles du monde.",
+  "hint": "Le roi de l'Olympe."
+ },
+ {
+  "key": "sport-621",
+  "concept": "sport.olympics.premiers_jo_hiver",
+  "label": "Premiers Jeux d'hiver",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quelle ville se sont tenus les premiers Jeux olympiques d'hiver, en 1924 ?",
+  "options": [
+   "Chamonix*",
+   "Saint-Moritz",
+   "Oslo",
+   "Lake Placid"
+  ],
+  "explanation": "Au pied du mont Blanc. On ne les appelle « olympiques » qu'après coup.",
+  "hint": "Au pied du mont Blanc."
+ },
+ {
+  "key": "sport-622",
+  "concept": "sport.olympics.usa_medailles",
+  "label": "Record de médailles",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel pays a remporté le plus de médailles aux Jeux olympiques d'été ?",
+  "options": [
+   "Les États-Unis*",
+   "La Chine",
+   "La Russie",
+   "Le Royaume-Uni"
+  ],
+  "explanation": "Plus de 2 700 médailles depuis 1896, dont plus de 1 000 en or.",
+  "hint": "Le pays de Michael Phelps."
+ },
+ {
+  "key": "sport-623",
+  "concept": "sport.olympics.boycott_1980",
+  "label": "Boycott de 1980",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pays a mené le boycott des Jeux de Moscou, en 1980 ?",
+  "options": [
+   "Les États-Unis*",
+   "La Chine",
+   "La France",
+   "Le Royaume-Uni"
+  ],
+  "explanation": "Pour protester contre l'invasion de l'Afghanistan par l'URSS. En retour, le bloc soviétique boycotte Los Angeles 1984.",
+  "hint": "En pleine guerre froide, l'autre superpuissance."
+ },
+ {
+  "key": "sport-624",
+  "concept": "sport.olympics.jo_annules",
+  "label": "Jeux annulés",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien d'éditions des Jeux d'été ont été annulées à cause des guerres mondiales ?",
+  "answer": 3,
+  "explanation": "1916 (Berlin), 1940 (Tokyo puis Helsinki) et 1944 (Londres). Les éditions gardent pourtant leur numéro.",
+  "hint": "Une pendant la Première Guerre mondiale, le reste pendant la Seconde."
+ },
+ {
+  "key": "sport-625",
+  "concept": "sport.olympics.tokyo_2021",
+  "label": "Tokyo 2020",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "En quelle année les Jeux de Tokyo 2020 ont-ils réellement eu lieu ?",
+  "answer": 2021,
+  "explanation": "Reportés d'un an à cause du Covid-19, en gardant leur nom, et sans public.",
+  "hint": "Un an de retard."
+ },
+ {
+  "key": "sport-626",
+  "concept": "sport.olympics.stoke_mandeville",
+  "label": "Origine des Paralympiques",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Dans quel pays sont nés, en 1948, les jeux sportifs qui ont donné les Jeux paralympiques ?",
+  "options": [
+   "En Angleterre*",
+   "Aux États-Unis",
+   "En Allemagne",
+   "En Suède"
+  ],
+  "explanation": "À l'hôpital de Stoke Mandeville, pour des vétérans blessés. Les premiers Jeux paralympiques ont lieu à Rome en 1960.",
+  "hint": "Autour d'un hôpital anglais."
+ },
+ {
+  "key": "sport-627",
+  "concept": "sport.olympics.pentathlon",
+  "label": "Pentathlon moderne",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Combien de disciplines compte le pentathlon moderne ?",
+  "answer": 5,
+  "explanation": "« Penta » veut dire cinq. L'épreuve a été inventée par Pierre de Coubertin, sur le modèle d'un officier en mission.",
+  "hint": "« Penta »."
+ },
+ {
+  "key": "sport-628",
+  "concept": "sport.olympics.marathon_cloture",
+  "label": "Dernière épreuve",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle épreuve conclut traditionnellement le programme d'athlétisme des Jeux d'été ?",
+  "options": [
+   "Le marathon*",
+   "Le 100 m",
+   "Le relais 4 × 400 m",
+   "Le décathlon"
+  ],
+  "explanation": "À Paris 2024, c'est pour la première fois le marathon féminin qui a clos les Jeux.",
+  "hint": "L'épreuve la plus longue."
+ },
+ {
+  "key": "sport-629",
+  "concept": "sport.olympics.jo_antiques_fin",
+  "label": "Fin des Jeux antiques",
+  "type": "mcq",
+  "difficulty": 72,
+  "prompt": "Quel empereur romain a mis fin aux Jeux olympiques antiques, vers 393 ?",
+  "options": [
+   "Théodose Ier*",
+   "Néron",
+   "Constantin",
+   "Jules César"
+  ],
+  "explanation": "Ils avaient duré plus de mille ans. L'empereur chrétien interdit les cultes païens.",
+  "hint": "Un empereur chrétien de la fin du IVe siècle."
+ },
+ {
+  "key": "sport-630",
+  "concept": "sport.olympics.serment",
+  "label": "Serment olympique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui prête le serment olympique lors de la cérémonie d'ouverture ?",
+  "options": [
+   "Un athlète, un juge et un entraîneur du pays hôte*",
+   "Le président du CIO",
+   "Le chef de l'État",
+   "Le plus jeune athlète"
+  ],
+  "explanation": "Ils promettent, au nom de tous, de respecter les règles et l'esprit du sport.",
+  "hint": "Des représentants du pays qui reçoit."
+ },
+ {
+  "key": "sport-631",
+  "concept": "sport.olympics.nero_jeux",
+  "label": "Néron aux Jeux",
+  "type": "mcq",
+  "difficulty": 68,
+  "prompt": "Quel empereur romain aurait « gagné » une course de chars aux Jeux olympiques… en tombant de son char ?",
+  "options": [
+   "Néron*",
+   "Caligula",
+   "Auguste",
+   "Hadrien"
+  ],
+  "explanation": "En 67, les juges lui donnent la victoire malgré sa chute. Son nom a été rayé des listes après sa mort.",
+  "hint": "L'empereur de l'incendie de Rome."
+ },
+ {
+  "key": "sport-632",
+  "concept": "sport.olympics.or_massif",
+  "label": "Médaille d'or",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les médailles d'or olympiques sont en or massif.",
+  "answer": false,
+  "explanation": "Non : depuis 1912, elles sont surtout en argent, recouvertes d'au moins 6 grammes d'or."
+ },
+ {
+  "key": "sport-633",
+  "concept": "sport.olympics.tir_a_la_corde",
+  "label": "Tir à la corde",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le tir à la corde a été une épreuve olympique.",
+  "answer": true,
+  "explanation": "Oui, de 1900 à 1920. La Grande-Bretagne en a gagné deux titres."
+ },
+ {
+  "key": "sport-634",
+  "concept": "sport.olympics.golf_olympique",
+  "label": "Golf olympique",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le golf est revenu aux Jeux olympiques en 2016, après plus d'un siècle d'absence.",
+  "answer": true,
+  "explanation": "Oui : il avait été au programme en 1900 et 1904, puis revient à Rio en 2016."
+ },
+ {
+  "key": "sport-635",
+  "concept": "sport.champions.zidane_ldc_entraineur",
+  "label": "Zidane entraîneur",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Zinédine Zidane a gagné trois Ligues des champions de suite comme entraîneur du Real Madrid.",
+  "answer": true,
+  "explanation": "Oui : en 2016, 2017 et 2018. Une première dans l'histoire de la compétition moderne."
+ },
+ {
+  "key": "sport-636",
+  "concept": "sport.champions.federer_rg",
+  "label": "Federer à Roland-Garros",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Roger Federer n'a jamais remporté Roland-Garros.",
+  "answer": false,
+  "explanation": "Si : une fois, en 2009, en l'absence de Nadal battu plus tôt. C'est son seul titre à Paris."
+ },
+ {
+  "key": "sport-637",
+  "concept": "sport.rules.carton_blanc",
+  "label": "Carton blanc",
+  "type": "true_false",
+  "difficulty": 68,
+  "prompt": "Un carton blanc existe dans certaines compétitions de football.",
+  "answer": true,
+  "explanation": "Oui : le Portugal l'a introduit en 2023 pour saluer un geste de fair-play. Le premier a été montré lors d'un match féminin, à Lisbonne."
+ },
+ {
+  "key": "sport-638",
+  "concept": "sport.champions.chronologie_bleus",
+  "label": "Trophées des Bleus",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces titres de l'équipe de France de football du plus ancien au plus récent.",
+  "items": [
+   "Euro 1984",
+   "Coupe du monde 1998",
+   "Euro 2000",
+   "Coupe du monde 2018"
+  ],
+  "explanation": "Platini en 1984, Zidane en 1998 et 2000, Mbappé et Griezmann en 2018."
+ },
+ {
+  "key": "sport-639",
+  "concept": "sport.olympics.jo_paris_chronologie",
+  "label": "Jeux à Paris",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces Jeux organisés en France du plus ancien au plus récent.",
+  "items": [
+   "Paris 1900",
+   "Chamonix 1924",
+   "Grenoble 1968",
+   "Albertville 1992"
+  ],
+  "explanation": "Sans oublier Paris 1924 et Paris 2024. En 2030, les Alpes françaises accueilleront les Jeux d'hiver."
+ },
+ {
+  "key": "sport-640",
+  "concept": "sport.champions.sportifs_sports",
+  "label": "Champions et sports",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque champion à son sport.",
+  "pairs": [
+   [
+    "Teddy Riner",
+    "Judo"
+   ],
+   [
+    "Tony Parker",
+    "Basket"
+   ],
+   [
+    "Antoine Dupont",
+    "Rugby"
+   ],
+   [
+    "Amélie Mauresmo",
+    "Tennis"
+   ]
+  ],
+  "explanation": "Quatre grands noms du sport français."
+ },
+ {
+  "key": "sport-641",
+  "concept": "sport.olympics.villes_hiver",
+  "label": "Jeux d'hiver en France",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque ville française aux Jeux d'hiver qu'elle a accueillis.",
+  "pairs": [
+   [
+    "Chamonix",
+    "1924"
+   ],
+   [
+    "Grenoble",
+    "1968"
+   ],
+   [
+    "Albertville",
+    "1992"
+   ],
+   [
+    "Alpes françaises",
+    "2030"
+   ]
+  ],
+  "explanation": "Quatre éditions sur le sol français."
+ },
+ {
+  "key": "sport-642",
+  "concept": "sport.rules.maillot_jaune_origine",
+  "label": "Maillot jaune",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi le leader du Tour de France porte-t-il un maillot jaune ?",
+  "options": [
+   "À cause de la couleur du journal organisateur*",
+   "En hommage au soleil de juillet",
+   "Pour être vu des avions",
+   "Par tirage au sort"
+  ],
+  "explanation": "Le journal L'Auto, ancêtre de L'Équipe, était imprimé sur papier jaune. Le maillot apparaît en 1919.",
+  "hint": "Pense au papier d'un journal."
+ },
+ {
+  "key": "sport-643",
+  "concept": "sport.rules.sprint_depart",
+  "label": "Départ du sprint",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Sur quoi prennent appui les sprinteurs au départ d'un 100 m ?",
+  "options": [
+   "Des blocs de départ*",
+   "Une ligne peinte seulement",
+   "Des cales en bois tenues par un juge",
+   "Un tremplin"
+  ],
+  "explanation": "Des capteurs y détectent les faux départs : partir moins de 0,1 s après le coup de pistolet est jugé impossible sans anticiper.",
+  "hint": "On pose les pieds dessus."
+ },
+ {
+  "key": "sport-644",
+  "concept": "sport.rules.marathon_distance_m",
+  "label": "Marathon",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Combien de mètres, au-delà des 42 kilomètres, compte un marathon ?",
+  "answer": 195,
+  "explanation": "42,195 km : la distance des Jeux de Londres 1908, pour que la course parte du château de Windsor et finisse devant la loge royale.",
+  "hint": "Moins de 200.",
+  "unit": "m"
+ },
+ {
+  "key": "sport-645",
+  "concept": "sport.champions.tour_cinq_fois",
+  "label": "Cinq Tours de France",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Lequel de ces coureurs n'a PAS gagné cinq fois le Tour de France ?",
+  "options": [
+   "Chris Froome*",
+   "Jacques Anquetil",
+   "Eddy Merckx",
+   "Miguel Indurain"
+  ],
+  "explanation": "Anquetil, Merckx, Hinault et Indurain en comptent cinq. Froome en a quatre.",
+  "hint": "Un Britannique en a gagné « seulement » quatre."
+ },
+ {
+  "key": "sport-646",
+  "concept": "sport.football.coupe_de_france_trophee",
+  "label": "Coupe de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel club détient le record de victoires en Coupe de France de football ?",
+  "options": [
+   "Le Paris Saint-Germain*",
+   "L'Olympique de Marseille",
+   "L'AS Saint-Étienne",
+   "Le FC Nantes"
+  ],
+  "explanation": "Le PSG en compte plus de quinze. L'OM suit avec dix.",
+  "hint": "Un club de la capitale."
+ },
+ {
+  "key": "sport-647",
+  "concept": "sport.olympics.coubertin_nationalite",
+  "label": "Pierre de Coubertin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quelle nationalité était Pierre de Coubertin, rénovateur des Jeux olympiques ?",
+  "options": [
+   "Française*",
+   "Grecque",
+   "Suisse",
+   "Belge"
+  ],
+  "explanation": "Le baron français fonde le CIO en 1894 à Paris. Le siège s'installe ensuite à Lausanne.",
+  "hint": "Un baron parisien."
+ }
+]
