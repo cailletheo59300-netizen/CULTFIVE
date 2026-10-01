@@ -104,6 +104,7 @@
     <button data-view="questions">Questions</button>
     <button data-view="reports">Signalements</button>
     <button data-view="moderation">Modération</button>
+    <button data-view="health">Santé</button>
     <button data-view="daily">5 du jour</button>
     <button data-view="new">Nouvelle question</button>
   </nav>
@@ -549,6 +550,47 @@ async function pickReplacement(date, position, domain, started) {
 
 // ───────────────────────── Joueurs
 state.users = { search: '', sort: 'recent', page: 0 };
+// ───────────────────────── Santé : plantages, erreurs, tâches planifiées, notifications, version minimale
+const KINDS = { crash: 'Plantage', hang: 'Blocage', cpu: 'Processeur', disk: 'Disque', launch: 'Lancement' };
+async function renderHealth() {
+  const h = await rpc('admin_health');
+  const okPill = (s) => s === 'succeeded' ? '<span class="pill ok">ok</span>' : s ? `<span class="pill bad">${esc(s)}</span>` : '<span class="pill">—</span>';
+  app.innerHTML = `
+    <div class="grid">
+      ${[['Plantages (7 j)', (h.diagnostics_7d ?? []).filter((d) => d.kind === 'crash').reduce((a, d) => a + d.count, 0)],
+         ['Blocages (7 j)', (h.diagnostics_7d ?? []).filter((d) => d.kind === 'hang').reduce((a, d) => a + d.count, 0)],
+         ['Erreurs vues (7 j)', (h.errors_7d ?? []).reduce((a, e) => a + e.count, 0)],
+         ['Notifications (24 h)', h.push.sent_24h], ['iPhones inscrits', h.push.tokens], ['Pubs vérifiées (24 h)', h.ads_24h]]
+        .map(([l, v]) => `<div class="card stat"><b>${fmt(v)}</b><span>${l}</span></div>`).join('')}
+    </div>
+    <div class="card"><h2>Version minimale de l'app</h2>
+      <p class="muted small">Les versions dont le numéro de build est plus petit affichent « Mets à jour Brainlix ». 0 = aucune restriction. Le numéro de build est visible dans TestFlight (entre parenthèses).</p>
+      <div class="row"><div><label>Build minimal</label><input id="minBuild" type="number" min="0" value="${h.min_build}"></div>
+      <div><label>&nbsp;</label><button class="btn" id="saveMin">Enregistrer</button></div></div></div>
+    <div class="card"><h2>Tâches planifiées</h2>
+      <table><thead><tr><th>Tâche</th><th>Fréquence</th><th>Dernier passage</th><th>État</th><th>Échecs 24 h</th><th>Dernière erreur</th></tr></thead><tbody>
+      ${(h.cron ?? []).map((j) => `<tr><td><b>${esc(j.job)}</b></td><td class="small">${esc(j.schedule)}</td><td class="small">${ago(j.last_run)}</td>
+        <td>${okPill(j.last_status)}</td><td>${j.failures_24h}</td><td class="small">${esc(j.last_error ?? '')}</td></tr>`).join('')}
+      </tbody></table></div>
+    <div class="two">
+      <div class="card"><h2>Erreurs vues par les joueurs (7 j)</h2>
+        ${(h.errors_7d ?? []).length === 0 ? '<p class="muted">Aucune.</p>' : `<table><thead><tr><th>Fonction</th><th>Erreur</th><th>Fois</th><th>Joueurs</th></tr></thead><tbody>
+        ${h.errors_7d.map((e) => `<tr><td>${esc(e.function)}</td><td>${esc(e.code)}</td><td>${e.count}</td><td>${e.players}</td></tr>`).join('')}</tbody></table>`}</div>
+      <div class="card"><h2>Plantages et blocages (7 j)</h2>
+        ${(h.diagnostics_7d ?? []).length === 0 ? '<p class="muted">Aucun.</p>' : `<table><thead><tr><th>Type</th><th>Version</th><th>Fois</th></tr></thead><tbody>
+        ${h.diagnostics_7d.map((d) => `<tr><td>${KINDS[d.kind] ?? esc(d.kind)}</td><td>${esc(d.app_version ?? '')}</td><td>${d.count}</td></tr>`).join('')}</tbody></table>`}
+        ${(h.recent_crashes ?? []).length ? `<h3>Derniers</h3>${h.recent_crashes.map((c) => `<details><summary class="small">${ago(c.at)} · ${KINDS[c.kind] ?? c.kind} · ${esc(c.app_version ?? '')} · iOS ${esc(c.os_version ?? '')}</summary><pre>${esc(JSON.stringify(c.payload, null, 1).slice(0, 4000))}</pre></details>`).join('')}` : ''}</div>
+    </div>
+    <div class="card"><h2>Notifications</h2>
+      <p>${fmt(h.push.waiting)} en attente · ${fmt(h.push.errors_24h)} erreur${h.push.errors_24h > 1 ? 's' : ''} en 24 h${h.push.last_error ? ` · dernière : <code>${esc(h.push.last_error)}</code>` : ''}</p>
+      <p class="muted small">Base de données : ${esc(h.db_size)}</p></div>`;
+  $('#saveMin').onclick = async () => {
+    const n = parseInt($('#minBuild').value, 10) || 0;
+    if (n > 0 && !confirm(`Les builds plus anciens que ${n} devront être mis à jour. Continuer ?`)) return;
+    await rpc('admin_set_min_build', { p_build: n }); toast('Version minimale enregistrée'); renderHealth();
+  };
+}
+
 // ───────────────────────── Modération : joueurs et ligues signalés
 const REPORT_REASONS = { name: 'Nom offensant', behavior: 'Comportement', cheating: 'Triche', other: 'Autre' };
 async function renderModeration() {
@@ -668,6 +710,7 @@ async function render() {
     else if (state.view === 'reports') await renderQuestions({ reported: true });
     else if (state.view === 'daily') await renderDaily();
     else if (state.view === 'moderation') await renderModeration();
+    else if (state.view === 'health') await renderHealth();
     else if (state.view === 'new') { app.innerHTML = '<div class="card"><p class="muted">Nouvelle question : elle est créée en brouillon, puis publiée depuis l\'éditeur.</p></div>'; openEditor({}, () => { state.view = 'questions'; render(); }); }
   } catch (e) { app.innerHTML = `<div class="card"><h2>Erreur</h2><pre>${esc(e.message)}</pre></div>`; }
 }

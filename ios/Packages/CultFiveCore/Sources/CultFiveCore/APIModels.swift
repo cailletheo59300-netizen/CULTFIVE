@@ -1739,3 +1739,16 @@ public struct AdReward: Decodable, Hashable, Sendable {
         case chestId = "chest_id"
     }
 }
+
+// MARK: - Réglages de l'app
+
+public struct AppSettings: Decodable, Hashable, Sendable {
+    /// En dessous de ce numéro de build, l'app demande la mise à jour.
+    public let minBuild: Int
+
+    public init(minBuild: Int) { self.minBuild = minBuild }
+
+    enum CodingKeys: String, CodingKey {
+        case minBuild = "min_build"
+    }
+}

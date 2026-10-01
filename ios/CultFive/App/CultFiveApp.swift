@@ -48,6 +48,8 @@ struct RootView: View {
                     .transition(.opacity)
             case .unavailable(let message):
                 UnavailableView(message: message)
+            case .updateRequired:
+                UpdateRequiredView()
             }
 
             if let toast = model.toast {
@@ -88,6 +90,31 @@ private struct UnavailableView: View {
             Text(message).font(.cfBody).foregroundStyle(Color.inkSoft)
             Button("Réessayer") { Task { await model.retryLaunch() } }
                 .buttonStyle(.ink)
+            Spacer()
+        }
+        .padding(.horizontal, Space.gutter)
+        .background(Color.paper)
+    }
+}
+
+/// Version trop ancienne : on demande la mise à jour (App Store, ou TestFlight pendant la bêta).
+private struct UpdateRequiredView: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: Space.l) {
+            Spacer()
+            Leon(pose: .curious).frame(width: 150)
+            Text("Une mise à jour est nécessaire").font(.cfDisplay)
+            Text("Cette version de \(Brand.name) n'est plus prise en charge. Mets l'app à jour pour continuer à jouer : ta progression est gardée.")
+                .font(.cfBody).foregroundStyle(Color.inkSoft)
+                .fixedSize(horizontal: false, vertical: true)
+            Link(destination: URL(string: "itms-beta://")!) {
+                Text("Ouvrir TestFlight").frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.ink)
+            Link(destination: URL(string: "https://apps.apple.com/search?term=Brainlix")!) {
+                Text("Ouvrir l'App Store").frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.textLink)
             Spacer()
         }
         .padding(.horizontal, Space.gutter)

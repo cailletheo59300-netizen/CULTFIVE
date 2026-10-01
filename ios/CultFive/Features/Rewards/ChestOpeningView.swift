@@ -166,7 +166,8 @@ struct ChestOpeningView: View {
                     .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.6))
                     .frame(minHeight: 44)
             case .closed:
-                if let chest, taps == 0, !boosted.contains(chest.id), (app.adStatus?.boostChest ?? 0) > 0 {
+                // Pas de pub sur le coffre de bienvenue.
+                if let chest, chest.source != "welcome", taps == 0, !boosted.contains(chest.id), (app.adStatus?.boostChest ?? 0) > 0 {
                     Button { Task { await boost(chest) } } label: {
                         HStack(spacing: 8) {
                             if boosting { ProgressView().controlSize(.small) }

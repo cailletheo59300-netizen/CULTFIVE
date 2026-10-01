@@ -39,7 +39,7 @@ struct FriendProfileView: View {
                         }
                     }
                 } else if let error {
-                    Text(error).font(.cfCallout).foregroundStyle(Color.inkSoft)
+                    RetryMessage(text: error) { Task { await load() } }
                 } else {
                     ProgressView().frame(maxWidth: .infinity).padding(.top, Space.xl)
                 }

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.28.0 — fiabilité, et corrections (coffre de bienvenue, partage, connexion)
+- **Corrections** : pas de pub « Booster » sur le coffre de bienvenue ; le temps ne passe plus sur deux lignes dans l'image partagée du 5 du jour ; se connecter à un compte existant pendant l'onboarding ouvre directement l'app (plus de « coffre introuvable ») ; **« Déjà un compte ? Se connecter »** sur le premier écran.
+- **Plantages et blocages** relevés par iOS (MetricKit, sans service tiers) et **échecs techniques** des appels au serveur (réseau, serveur, réponse illisible ; jamais les refus métier), envoyés à l'admin.
+- **Admin → Santé** : plantages, blocages, erreurs vues par les joueurs, tâches planifiées (dernier passage, échecs), notifications, pubs, taille de la base ; **version minimale** de l'app (numéro de build) au-delà de laquelle l'app demande la mise à jour.
+- **Sauvegarde chiffrée chaque nuit** par GitHub (30 jours), procédure de restauration (`docs/BACKUP.md`).
+- **Base** : règles d'accès évaluées une fois par requête, 23 index ajoutés, chemin de recherche fixe pour toutes les fonctions, `_is_banned` fermé aux anonymes, anciennes tables de sauvegarde supprimées.
+- **Test de charge** (`scripts/load-test.sql`, 1 000 joueurs) : partie classée complète ≈ 62 ms, quiz de ligue ≈ 32 ms, classement de 50 membres ≈ 6 ms, écran Amis (100 amis) ≈ 17 ms ; statistiques admin ≈ 2,8 s.
+- Écrans de ligue et de profil d'ami : message clair et « Réessayer » en cas de coupure. Migration 0037, tests `99_reliability.sql`.
+
 ## 0.27.0 — notifications push, comptes de test supprimés, admin sur téléphone
 - **Notifications push** : duel reçu, défi relevé, duel terminé (« Victoire contre Théo : 8–6 »), demande d'ami reçue / acceptée, quiz de la ligue à faire (19 h), ligue terminée (classement final). Interrupteurs « Duels et amis » et « Ligues » dans les Réglages ; rien entre 22 h et 8 h (reporté à 8 h) ; 5 par jour au plus. L'autorisation est proposée après un duel lancé ou une ligue rejointe. Toucher la notification ouvre le duel ou la ligue. Envoi par la fonction Edge `push-send` (APNs), chaque minute.
 - Le rappel du 5 du jour et celui de la série restent des notifications locales.

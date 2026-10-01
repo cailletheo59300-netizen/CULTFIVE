@@ -169,6 +169,8 @@ private struct CardChip: View {
     var body: some View {
         Label(text, systemImage: symbol)
             .font(.system(size: 12, weight: .heavy, design: .rounded).monospacedDigit())
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)
             .foregroundStyle(palette.text)
             .padding(.horizontal, 10).padding(.vertical, 6)
             .background(palette.chip, in: Capsule())

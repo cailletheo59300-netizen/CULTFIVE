@@ -12,6 +12,8 @@ final class AppModel {
         case onboarding
         case main
         case unavailable(String)
+        /// Version trop ancienne (réglée depuis l'admin) : mise à jour demandée.
+        case updateRequired
     }
 
     enum Tab: Hashable { case play, daily, friends, profile }
@@ -89,6 +91,11 @@ final class AppModel {
                 try await api.signInAnonymously()
             }
             try await loadProfile()
+            if let settings = try? await service.appSettings(), Bundle.main.buildNumber < settings.minBuild {
+                phase = .updateRequired
+                return
+            }
+            await startReliability(api: api)
             await loadReference()
             // Fuseau et appareil : en arrière-plan, sans retarder l'accueil ; le fuseau seulement s'il a changé.
             let service = self.service
@@ -346,6 +353,26 @@ final class AppModel {
         await bootstrap()
     }
 
+    // MARK: Fiabilité
+
+    private var diagnostics: DiagnosticsReporter?
+    /// Erreurs déjà signalées (une fois par fonction et par type d'erreur et par lancement).
+    private var reportedErrors: Set<String> = []
+
+    /// Plantages (MetricKit) et échecs techniques des appels au serveur, envoyés à l'onglet Santé de l'admin.
+    private func startReliability(api: SupabaseAPI) async {
+        if diagnostics == nil { diagnostics = DiagnosticsReporter(service: service) }
+        await api.setErrorHandler { [weak self] function, code in
+            Task { @MainActor in self?.reportError(function: function, code: code) }
+        }
+    }
+
+    private func reportError(function: String, code: String) {
+        let key = "\(function):\(code)"
+        guard reportedErrors.count < 50, reportedErrors.insert(key).inserted else { return }
+        track("client_error", ["function": function, "code": code])
+    }
+
     // MARK: Notifications push
 
     private static let pushTokenKey = "pushToken"
@@ -494,6 +521,11 @@ struct UnavailableService: GameService {
 }
 
 extension Bundle {
+    /// Numéro de build (CFBundleVersion), comparé à la version minimale réglée dans l'admin.
+    var buildNumber: Int {
+        Int(infoDictionary?["CFBundleVersion"] as? String ?? "") ?? 0
+    }
+
     /// « 1.4 (37) » : version et numéro de build.
     var appVersion: String {
         let version = infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"

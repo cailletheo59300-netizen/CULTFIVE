@@ -25,6 +25,7 @@ struct OnboardingFlow: View {
     @State private var welcomeChest: ChestRef?
     /// « Moins de 13 ans » choisi : Brainlix n'est pas accessible (mémorisé sur l'appareil).
     @AppStorage("ageBlocked") private var ageBlocked = false
+    @State private var showSignIn = false
 
     var body: some View {
         ZStack {
@@ -38,7 +39,13 @@ struct OnboardingFlow: View {
             case .questions: VStack(spacing: 0) { questionDashes; questions }
             case .result: framed(back: false) { resultStep }
             case .interests: framed { interestsStep }
-            case .handle: framed { HandleStep { step = app.isAnonymous ? .account : .gift; Task { await prepareGift() } } }
+            case .handle: framed {
+                HandleStep {
+                    // Compte invité : le coffre de bienvenue est cherché après l'étape compte (il change de compte
+                    // si le joueur se connecte à un compte existant).
+                    if app.isAnonymous { step = .account } else { Task { await prepareGift(); step = .gift } }
+                }
+            }
             case .account: framed { accountStep }
             case .gift: giftStep
             case .howItWorks: howItWorks
@@ -147,10 +154,29 @@ struct OnboardingFlow: View {
                 Spacer()
                 Button("C'est parti !") { step = .age }
                     .buttonStyle(.sun)
+                Button("Déjà un compte ? Se connecter") { showSignIn = true }
+                    .font(.system(.footnote, design: .rounded).weight(.bold))
+                    .foregroundStyle(.white.opacity(0.85))
+                    .frame(minHeight: 44)
+                    .frame(maxWidth: .infinity)
+                    .sheet(isPresented: $showSignIn) {
+                        AccountSheet { Task { await signedInFromWelcome() } }
+                    }
             }
             .padding(Space.gutter)
         }
         .preferredColorScheme(.dark)
+    }
+
+    /// « Déjà un compte » sur le premier écran : un compte existant entre directement dans l'app ; un compte tout
+    /// neuf (e-mail jamais utilisé) commence l'onboarding normalement.
+    private func signedInFromWelcome() async {
+        await app.refreshProfile()
+        if app.profile?.onboarded == true {
+            await app.finishOnboarding()
+        } else {
+            step = .age
+        }
     }
 
     // MARK: Âge (13 ans minimum)
@@ -505,13 +531,26 @@ struct OnboardingFlow: View {
                 .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 .fixedSize(horizontal: false, vertical: true)
             Spacer()
-            AccountInline { step = .gift }
-            Button("Plus tard") { step = .gift }.buttonStyle(.textLink)
+            AccountInline { Task { await afterSignIn() } }
+            Button("Plus tard") { Task { await prepareGift(); step = .gift } }.buttonStyle(.textLink)
         }
         .padding(Space.gutter)
     }
 
     // MARK: 8. Cadeau de bienvenue, puis comment ça marche
+
+    /// Connexion (ou création de compte) pendant l'onboarding : un compte qui a déjà tout fait va directement dans
+    /// l'app, sans coffre ni étapes ; sinon, on reprend avec le coffre de ce compte.
+    private func afterSignIn() async {
+        await app.refreshProfile()
+        if app.profile?.onboarded == true {
+            await app.finishOnboarding()
+        } else {
+            welcomeChest = nil
+            await prepareGift()
+            step = .gift
+        }
+    }
 
     private func prepareGift() async {
         await app.refreshProgression()

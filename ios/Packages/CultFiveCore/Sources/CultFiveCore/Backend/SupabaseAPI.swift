@@ -235,17 +235,52 @@ public actor SupabaseAPI {
 
     // MARK: RPC
 
+    /// Signalement des échecs techniques (réseau, serveur en erreur, réponse illisible) pour le suivi de fiabilité.
+    /// Les refus métier (« ligue introuvable »…) n'en sont pas.
+    private var errorHandler: (@Sendable (_ function: String, _ code: String) -> Void)?
+
+    public func setErrorHandler(_ handler: @escaping @Sendable (_ function: String, _ code: String) -> Void) {
+        errorHandler = handler
+    }
+
+    private func report(_ function: String, _ error: Error) {
+        guard function != "track_events", function != "report_diagnostic", let handler = errorHandler else { return }
+        if let backend = error as? BackendError {
+            switch backend {
+            case .offline: handler(function, "offline")
+            case .decoding: handler(function, "decoding")
+            case .server(let status, let code, _) where status >= 500: handler(function, code.isEmpty ? "http_\(status)" : code)
+            default: break
+            }
+        } else if let urlError = error as? URLError {
+            handler(function, urlError.code == .notConnectedToInternet ? "offline" : "network_\(urlError.code.rawValue)")
+        }
+    }
+
     public func rpc<T: Decodable>(_ function: String, _ params: [String: JSONValue] = [:], as type: T.Type = T.self) async throws -> T {
-        let data = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user)
+        let data: Data
+        do {
+            data = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user)
+        } catch {
+            report(function, error)
+            throw error
+        }
         do {
             return try SupabaseAPI.decoder.decode(T.self, from: data)
         } catch {
-            throw BackendError.decoding("\(function): \(error)")
+            let failure = BackendError.decoding("\(function): \(error)")
+            report(function, failure)
+            throw failure
         }
     }
 
     public func rpcVoid(_ function: String, _ params: [String: JSONValue] = [:]) async throws {
-        _ = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user)
+        do {
+            _ = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user)
+        } catch {
+            report(function, error)
+            throw error
+        }
     }
 
     /// Lecture de tables de référentiel (RLS : lecture publique).

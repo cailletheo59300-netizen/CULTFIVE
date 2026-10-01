@@ -92,6 +92,10 @@ public protocol GameService: Sendable {
     func reportContent(kind: String, target: UUID, reason: String, note: String?) async throws
     /// Export de mes données personnelles (JSON).
     func dataExport() async throws -> Data
+    /// Réglages de l'app (version minimale, en numéro de build).
+    func appSettings() async throws -> AppSettings
+    /// Rapport de plantage ou de blocage (MetricKit).
+    func reportDiagnostic(kind: String, payload: JSONValue, appVersion: String, osVersion: String) async throws
     /// Notifications push : jeton de l'iPhone (hexadécimal) ; environment = production · sandbox.
     func pushRegister(token: String, environment: String) async throws
     func pushUnregister(token: String) async throws
@@ -366,6 +370,13 @@ public struct LiveGameService: GameService {
                                                  "p_reason": .string(reason), "p_note": note.map(JSONValue.string) ?? .null])
     }
 
+    public func appSettings() async throws -> AppSettings { try await api.rpc("app_settings") }
+
+    public func reportDiagnostic(kind: String, payload: JSONValue, appVersion: String, osVersion: String) async throws {
+        try await api.rpcVoid("report_diagnostic", ["p_kind": .string(kind), "p_payload": payload,
+                                                    "p_app_version": .string(appVersion), "p_os_version": .string(osVersion)])
+    }
+
     public func pushRegister(token: String, environment: String) async throws {
         try await api.rpcVoid("push_register", ["p_token": .string(token), "p_environment": .string(environment)])
     }
@@ -478,6 +489,8 @@ public extension GameService {
         throw BackendError.server(status: 400, code: "export_unavailable", message: "")
     }
 
+    func appSettings() async throws -> AppSettings { AppSettings(minBuild: 0) }
+    func reportDiagnostic(kind: String, payload: JSONValue, appVersion: String, osVersion: String) async throws {}
     func pushRegister(token: String, environment: String) async throws {}
     func pushUnregister(token: String) async throws {}
 

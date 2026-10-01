@@ -441,6 +441,8 @@ struct LeagueView: View {
                     if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
                     Button("Quitter la ligue", role: .destructive) { confirmLeave = true }
                         .buttonStyle(TextLinkStyle(color: .wrong))
+                } else if let error {
+                    RetryMessage(text: error) { Task { await load() } }
                 } else {
                     ProgressView().frame(maxWidth: .infinity).padding(.top, Space.xxl)
                 }
@@ -510,6 +512,7 @@ struct LeagueView: View {
     private func load() async {
         do {
             standings = try await app.service.leagueStandings(leagueId, offset: offset)
+            error = nil
         } catch {
             self.error = (error as? LocalizedError)?.errorDescription
         }
@@ -1099,5 +1102,20 @@ private func medal(_ rank: Int, points: Int) -> Color {
     case 2: return Color(hex: 0xD9DCE8)
     case 3: return Color(hex: 0xF2B489)
     default: return .hairline
+    }
+}
+
+/// Message d'erreur avec « Réessayer » (réseau coupé, serveur indisponible).
+struct RetryMessage: View {
+    let text: String
+    var retry: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Space.m) {
+            Leon(pose: .curious).frame(width: 110)
+            Text(text).font(.cfHeadline).fixedSize(horizontal: false, vertical: true)
+            Button("Réessayer", action: retry).buttonStyle(.ink)
+        }
+        .padding(.top, Space.xl)
     }
 }
