@@ -166,7 +166,7 @@ struct PlaySessionView: View {
                 Button("Continuer la partie", role: .cancel) {}
             } message: {
                 let n = model.results.count
-                Text("Tes \(n) réponse\(n > 1 ? "s" : "") \(n > 1 ? "sont gardées et comptent" : "est gardée et compte") "
+                Text((n > 1 ? "Tes \(n) réponses sont gardées et comptent " : "Ta réponse est gardée et compte ")
                      + (config.countsForElo ? "(Elo, XP, défis)" : "(XP, défis)")
                      + ". Les questions restantes ne seront pas jouées.")
             }
