@@ -79,7 +79,8 @@ struct StreakRescueOffer: View {
                 do {
                     guard let reward = try await app.watchAd(.streakRescue) else { return }
                     Haptics.success()
-                    app.show("Série sauvée : \(reward.streak ?? streak) jours !")
+                    let days = reward.streak ?? streak
+                    app.show("Série sauvée : \(days) jour\(days > 1 ? "s" : "") !")
                     await app.refreshDaily()
                 } catch {
                     app.show((error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant.")

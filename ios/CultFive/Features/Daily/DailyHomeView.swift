@@ -80,18 +80,25 @@ struct DailyHomeView: View {
     private var topLine: some View {
         HStack(spacing: Space.s) {
             Text(DateText.long(app.daily?.date ?? isoToday)).labelCaps()
-            Spacer()
+                .lineLimit(1).minimumScaleFactor(0.7)
+            Spacer(minLength: 0)
             if let streak = app.profile?.streak, streak > 0 {
                 let freezes = app.profile?.streakFreezes ?? 0
                 HStack(spacing: 4) {
                     Image(systemName: "flame.fill").foregroundStyle(Color(hex: 0xF76707))
                     Text("\(streak)").monospacedDigit()
                     if freezes > 0 {
-                        Text("· \(freezes) joker\(freezes > 1 ? "s" : "")")
-                            .font(.system(.caption, design: .rounded).weight(.bold))
-                            .foregroundStyle(Color.inkSoft)
+                        // Jokers de série : un petit bouclier et leur nombre, pour que la ligne tienne sur petit écran.
+                        HStack(spacing: 2) {
+                            Image(systemName: "shield.fill")
+                            Text("\(freezes)").monospacedDigit()
+                        }
+                        .font(.system(.caption, design: .rounded).weight(.bold))
+                        .foregroundStyle(Color.inkSoft)
                     }
                 }
+                .lineLimit(1)
+                .fixedSize()
                 .font(.cfNumber)
                 .padding(.horizontal, 12).padding(.vertical, 6)
                 .background(Color.paperRaised, in: Capsule())
@@ -102,7 +109,7 @@ struct DailyHomeView: View {
                 ChestPill(count: chests.count) { app.openChests() }
             }
             if let seeds = app.profile?.seeds {
-                SeedsAmount(amount: seeds).font(.cfNumber)
+                SeedsAmount(amount: seeds).font(.cfNumber).fixedSize()
                     .padding(.horizontal, 12).padding(.vertical, 6)
                     .background(Color.paperRaised, in: Capsule())
             }
@@ -178,7 +185,7 @@ struct DailyHomeView: View {
                     }
                     if let league {
                         if errorsCount > 0 && suggestion == nil { hairline }
-                        Button { app.tab = .friends } label: {
+                        Button { app.pendingLeagueId = league.id; app.tab = .friends } label: {
                             TodayRow(title: league.name, detail: leagueDetail(league)) {
                                 if let me = standings?.standings.first(where: \.isMe) {
                                     bigNumber(me.rank == 1 ? "1er" : "\(me.rank)e", color: .brand)

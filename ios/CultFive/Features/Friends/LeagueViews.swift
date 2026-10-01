@@ -926,8 +926,9 @@ struct LeagueQuizView: View {
                     onDisplayed: { model.questionDisplayed() }
                 ) {
                     HStack(spacing: Space.m) {
-                        Label(name, systemImage: "trophy.fill").font(.cfFootnote.weight(.heavy)).foregroundStyle(Color(hex: 0xE08A00))
-                            .lineLimit(1)
+                        // Le nom de la ligue ne tenait pas à côté du domaine et de la progression : juste le trophée.
+                        Image(systemName: "trophy.fill").font(.cfFootnote.weight(.heavy)).foregroundStyle(Color(hex: 0xE08A00))
+                            .accessibilityLabel(name)
                         if model.total <= 12 {
                             ProgressPills(current: model.position, total: model.total, color: DomainPalette.color(question.domainId))
                         } else {

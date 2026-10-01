@@ -64,12 +64,26 @@ struct FriendProfileView: View {
         }
         .confirmationDialog("Retirer \(handle) de tes amis ?", isPresented: $confirmRemove, titleVisibility: .visible) {
             Button("Retirer", role: .destructive) {
-                Task { try? await app.service.removeFriend(friendId); dismiss() }
+                Task {
+                    do {
+                        try await app.service.removeFriend(friendId)
+                        dismiss()
+                    } catch {
+                        app.show("Impossible de retirer cet ami. Réessaie.")
+                    }
+                }
             }
         }
         .confirmationDialog("Bloquer \(handle) ?", isPresented: $confirmBlock, titleVisibility: .visible) {
             Button("Bloquer", role: .destructive) {
-                Task { try? await app.service.blockUser(friendId); dismiss() }
+                Task {
+                    do {
+                        try await app.service.blockUser(friendId)
+                        dismiss()
+                    } catch {
+                        app.show("Impossible de bloquer ce joueur. Réessaie.")
+                    }
+                }
             }
         } message: {
             Text("Vous ne serez plus amis et \(handle) ne pourra plus te retrouver.")

@@ -35,10 +35,15 @@ struct FriendsView: View {
         NavigationStack(path: $path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.xl) {
-                    HStack(alignment: .firstTextBaseline) {
-                        Text("Amis").font(.cfDisplay)
-                        Spacer()
-                        addMenu
+                    VStack(alignment: .leading, spacing: 4) {
+                        HStack(alignment: .firstTextBaseline) {
+                            Text("Amis").font(.cfDisplay)
+                            Spacer()
+                            addMenu
+                        }
+                        Text("Défie tes amis en duel : mêmes questions, chacun son tour.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     .padding(.top, Space.l)
 
@@ -223,8 +228,9 @@ struct FriendsView: View {
             if friends.isEmpty {
                 HStack(alignment: .center, spacing: Space.m) {
                     Leon(color: .brand, pose: .curious).frame(width: 90)
-                    Text("Personne pour l'instant. Invite quelqu'un qui aime avoir raison.")
+                    Text("Ajoute un ami avec le bouton +, puis défie-le en duel. Tu peux aussi défier n'importe qui avec un lien (+ → Défier par lien).")
                         .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 .padding(.vertical, Space.s)
             } else {

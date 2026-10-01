@@ -215,7 +215,7 @@ struct DomainView: View {
                             }
                         }
                         .frame(height: 6)
-                        Text("\(Int((rate * 100).rounded())) %").font(.cfNumber).frame(width: 52, alignment: .trailing)
+                        Text("\(Int((rate * 100).rounded())) %").font(.cfNumber).lineLimit(1).minimumScaleFactor(0.6).frame(width: 52, alignment: .trailing)
                     }
                     .accessibilityElement(children: .combine)
                 }

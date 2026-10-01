@@ -170,11 +170,15 @@ struct ProfileView: View {
     }
 
     private var numbers: some View {
-        LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
-            number("\(app.profile?.streak ?? 0)", "jours de série", symbol: "flame.fill", tint: Color(hex: 0xF76707))
-            number("\(app.profile?.questionsAnswered ?? 0)", "réponses", symbol: "checkmark.circle.fill", tint: .brand)
-            number("\(app.profile?.errorsCorrected ?? 0)", "erreurs corrigées", symbol: "checkmark.seal.fill", tint: .correct)
-            number("\(app.profile?.seeds ?? 0)", Brand.currencyPlural, symbol: nil, tint: Color(hex: 0xE8A33D))
+        let streak = app.profile?.streak ?? 0
+        let answered = app.profile?.questionsAnswered ?? 0
+        let corrected = app.profile?.errorsCorrected ?? 0
+        let seeds = app.profile?.seeds ?? 0
+        return LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
+            number("\(streak)", streak > 1 ? "jours de série" : "jour de série", symbol: "flame.fill", tint: Color(hex: 0xF76707))
+            number("\(answered)", answered > 1 ? "réponses" : "réponse", symbol: "checkmark.circle.fill", tint: .brand)
+            number("\(corrected)", corrected > 1 ? "erreurs corrigées" : "erreur corrigée", symbol: "checkmark.seal.fill", tint: .correct)
+            number("\(seeds)", seeds > 1 ? Brand.currencyPlural : Brand.currencySingular, symbol: nil, tint: Color(hex: 0xE8A33D))
         }
     }
 

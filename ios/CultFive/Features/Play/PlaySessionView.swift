@@ -196,7 +196,7 @@ struct PlaySessionView: View {
                             .background(Color.correct.opacity(0.12), in: Capsule())
                             .contentTransition(.numericText(value: Double(balance)))
                             .animation(Motion.standard, value: balance)
-                            .accessibilityLabel("Tu as \(balance) \(Brand.currencyPlural)")
+                            .accessibilityLabel("Tu as \(balance) \(balance > 1 ? Brand.currencyPlural : Brand.currencySingular)")
                     }
                     ForEach(helps, id: \.self) { kind in
                         Button {
