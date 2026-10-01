@@ -2,6 +2,44 @@
 
 Réponses prêtes à recopier dans App Store Connect. À tenir à jour si l'app change (pubs, données, fonctions sociales).
 
+## 0. Fiche de l'app (textes à recopier)
+
+**Nom** (30 car. max) : `Brainlix – Quiz de culture`
+**Sous-titre** (30 car. max) : `Le quiz du jour entre amis`
+**Catégorie principale** : Jeux → sous-catégories **Quiz** et **Éducation** · **Prix** : gratuit
+**Langue principale** : Français · **Pays** : France, Belgique, Suisse, Luxembourg, Canada, Monaco (et autres pays francophones au choix)
+**URL d'assistance** : https://brainlix.site/support · **URL marketing** : https://brainlix.site
+**Copyright** : `2026 Brainlix`
+
+**Texte promotionnel** (170 car. max, modifiable sans nouvelle version) :
+> Chaque jour, 5 nouvelles questions, les mêmes pour tout le monde. Défie tes amis en duel, crée ta ligue et fais grimper ton Elo dans 12 domaines.
+
+**Mots-clés** (100 car. max, séparés par des virgules sans espace) :
+`quiz,culture générale,questions,trivia,jeu,duel,amis,ligue,histoire,géographie,sciences,cinéma,elo`
+
+**Description** :
+> Brainlix, c'est le rendez-vous quotidien des curieux.
+>
+> LE 5 DU JOUR
+> Chaque jour à minuit, 5 nouvelles questions, les mêmes pour tout le monde. Une seule tentative : compare ton score avec tes amis et entretiens ta série.
+>
+> 12 DOMAINES, PLUS DE 6 000 QUESTIONS
+> Histoire, géographie, sciences, arts, cinéma, musique, sport, nature, tech, langue française, logique et calcul mental. QCM, vrai ou faux, chiffres à trouver, frises à remettre dans l'ordre, silhouettes de pays… Chaque réponse est expliquée : on joue, et on apprend.
+>
+> TON ELO, DOMAINE PAR DOMAINE
+> Les questions s'adaptent à ton niveau. Tes parties classées font monter ton Elo dans chaque domaine, de Curieux à Encyclopédie. Ton radar de culture montre ce que tu sais… et ce qu'il te reste à conquérir.
+>
+> ENTRE AMIS
+> • Duels : les mêmes questions pour vous deux, chacun à son rythme. Choisis le nombre de questions, les domaines et la difficulté.
+> • Ligues privées : un quiz propre à la ligue chaque jour, un classement, un podium.
+> • Face-à-face : vos victoires, vos séries et vos records.
+>
+> LÉON ET SON ARBRE
+> Gagne des graines et des coffres, fais grandir l'arbre de Léon, ta mascotte, et habille-le avec des objets rares. Rien ne s'achète : tout se gagne en jouant.
+>
+> Gratuit, avec quelques publicités. Les vidéos récompensées sont toujours facultatives.
+> Dès 13 ans.
+
 ## 1. Confidentialité de l'app (« App Privacy »)
 
 **Collectez-vous des données ?** Oui.
@@ -59,3 +97,16 @@ Questionnaire (réponses) :
 - **Chiffrement** : `ITSAppUsesNonExemptEncryption = NO` (déjà dans l'app).
 - **Site de l'éditeur** sur la fiche App Store : https://brainlix.site (nécessaire pour que AdMob valide `app-ads.txt`).
 - Après publication : relier l'app dans AdMob (Applications → Brainlix → « Associer à une plate-forme »), pour lever l'« Examen requis ».
+
+## 5. Envoi à Apple, pas à pas
+
+1. **App Store Connect → Apps → Brainlix → onglet « Distribution »**, version **1.0** (créer la version « 1.0 » si elle n'existe pas).
+2. Coller les textes de la section 0 (nom, sous-titre, texte promotionnel, description, mots-clés, URL).
+3. **Captures** : glisser les 8 images de `docs/screenshots/app-store/` dans la case « iPhone 6,9 pouces » (l'ordre est celui des noms de fichiers).
+4. **Build** : choisir le build TestFlight de la version 1.0.0.
+5. **Informations générales de l'app** : catégorie, classification d'âge (section 2), confidentialité (section 1), URL de la politique de confidentialité.
+6. **Prix et disponibilité** : gratuit, pays de la section 0.
+7. **Conformité DSA (UE)** : déclarer le statut de commerçant (voir avec Claude avant de choisir).
+8. **Informations pour la revue** : notes de la section 3, contact (nom, e-mail, téléphone : vus seulement par Apple).
+9. **Publication** : « Publier automatiquement après approbation » + **sortie progressive sur 7 jours**.
+10. **Ajouter pour vérification** → **Envoyer**. Réponse d'Apple en général sous 24 à 48 h.

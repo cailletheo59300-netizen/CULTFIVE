@@ -64,7 +64,9 @@ jobs:
             xcrun simctl ui "$UDID" appearance light
             i=1
             for s in home question reveal result play friends league profile; do
-              xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.ios -demo -demoScreen "$s" > /dev/null
+              # En français (nombres « 3 120 »), sans la fiche des règles des ligues qui s'ouvre à la première visite.
+              xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.ios -demo -demoScreen "$s" \
+                -AppleLanguages "(fr)" -AppleLocale fr_FR -leagueRulesSeenV2 YES > /dev/null
               sleep 8
               xcrun simctl io "$UDID" screenshot "$dir/$(printf '%02d' $i)-$s.png" > /dev/null
               echo "✓ $s"; i=$((i+1))
