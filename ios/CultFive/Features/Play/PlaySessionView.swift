@@ -10,6 +10,7 @@ struct PlaySessionView: View {
     @State private var config: PlayConfig
     /// Partie déjà comptée pour la pub entre les parties.
     @State private var countedGame: UUID?
+    @State private var confirmQuit = false
 
     init(config: PlayConfig) {
         _config = State(initialValue: config)
@@ -153,13 +154,22 @@ struct PlaySessionView: View {
             } else {
                 Text("\(model.index + 1) / \(model.questions.count)").font(.cfNumber).foregroundStyle(Color.inkSoft)
             }
-            Menu {
-                Button("Terminer la partie") { Task { await model.finish() } }
-                Button("Quitter sans enregistrer", role: .destructive) { close() }
+            // Une seule sortie : ce qui a été répondu compte toujours (quitter ne peut pas effacer une partie classée).
+            Button {
+                if model.results.isEmpty { close() } else { confirmQuit = true }
             } label: {
                 CloseCircle()
             }
-            .accessibilityLabel("Options de partie")
+            .accessibilityLabel("Quitter la partie")
+            .confirmationDialog("Quitter la partie ?", isPresented: $confirmQuit, titleVisibility: .visible) {
+                Button("Quitter") { Task { await model.finish() } }
+                Button("Continuer la partie", role: .cancel) {}
+            } message: {
+                let n = model.results.count
+                Text("Tes \(n) réponse\(n > 1 ? "s" : "") \(n > 1 ? "sont gardées et comptent" : "est gardée et compte") "
+                     + (config.countsForElo ? "(Elo, XP, défis)" : "(XP, défis)")
+                     + ". Les questions restantes ne seront pas jouées.")
+            }
         }
     }
 

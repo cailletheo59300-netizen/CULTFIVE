@@ -15,6 +15,7 @@ struct DailyHomeView: View {
     @State private var quests: QuestsOverview?
     /// Objectifs remplis depuis la dernière visite : célébrés en haut de l'accueil.
     @State private var rewards: [QuestsOverview.Reward] = []
+    @State private var showStreakHelp = false
 
     var body: some View {
         NavigationStack {
@@ -78,32 +79,54 @@ struct DailyHomeView: View {
     // MARK: Blocs
 
     private var topLine: some View {
+        // Jokers écrits en toutes lettres quand la ligne a la place, sinon un bouclier et leur nombre.
+        ViewThatFits(in: .horizontal) {
+            topLineContent(jokersInWords: true)
+            topLineContent(jokersInWords: false)
+        }
+        .padding(.top, Space.m)
+        .popover(isPresented: $showStreakHelp) {
+            streakHelp.presentationCompactAdaptation(.popover)
+        }
+    }
+
+    private func topLineContent(jokersInWords: Bool) -> some View {
         HStack(spacing: Space.s) {
             Text(DateText.long(app.daily?.date ?? isoToday)).labelCaps()
-                .lineLimit(1).minimumScaleFactor(0.7)
+                .lineLimit(1).minimumScaleFactor(jokersInWords ? 1 : 0.7)
             Spacer(minLength: 0)
             if let streak = app.profile?.streak, streak > 0 {
                 let freezes = app.profile?.streakFreezes ?? 0
-                HStack(spacing: 4) {
-                    Image(systemName: "flame.fill").foregroundStyle(Color(hex: 0xF76707))
-                    Text("\(streak)").monospacedDigit()
-                    if freezes > 0 {
-                        // Jokers de série : un petit bouclier et leur nombre, pour que la ligne tienne sur petit écran.
-                        HStack(spacing: 2) {
-                            Image(systemName: "shield.fill")
-                            Text("\(freezes)").monospacedDigit()
+                Button { showStreakHelp = true } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "flame.fill").foregroundStyle(Color(hex: 0xF76707))
+                        Text("\(streak)").monospacedDigit()
+                        if freezes > 0 {
+                            Group {
+                                if jokersInWords {
+                                    Text("· \(freezes) joker\(freezes > 1 ? "s" : "")")
+                                } else {
+                                    HStack(spacing: 2) {
+                                        Image(systemName: "shield.fill")
+                                        Text("\(freezes)").monospacedDigit()
+                                    }
+                                }
+                            }
+                            .font(.system(.caption, design: .rounded).weight(.bold))
+                            .foregroundStyle(Color.inkSoft)
                         }
-                        .font(.system(.caption, design: .rounded).weight(.bold))
-                        .foregroundStyle(Color.inkSoft)
                     }
+                    .lineLimit(1)
+                    .fixedSize()
+                    .font(.cfNumber)
+                    .foregroundStyle(Color.ink)
+                    .padding(.horizontal, 12).padding(.vertical, 6)
+                    .background(Color.paperRaised, in: Capsule())
                 }
-                .lineLimit(1)
-                .fixedSize()
-                .font(.cfNumber)
-                .padding(.horizontal, 12).padding(.vertical, 6)
-                .background(Color.paperRaised, in: Capsule())
+                .buttonStyle(.row)
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel("Série de \(streak) jour\(streak > 1 ? "s" : "")" + (freezes > 0 ? ", \(freezes) joker\(freezes > 1 ? "s" : "") de série" : ""))
+                .accessibilityHint("Explique la série et les jokers")
             }
             if let chests = app.progression?.chests, !chests.isEmpty {
                 ChestPill(count: chests.count) { app.openChests() }
@@ -114,7 +137,27 @@ struct DailyHomeView: View {
                     .background(Color.paperRaised, in: Capsule())
             }
         }
-        .padding(.top, Space.m)
+    }
+
+    /// Bulle ouverte en touchant la flamme : la série et les jokers expliqués.
+    private var streakHelp: some View {
+        let streak = app.profile?.streak ?? 0
+        let freezes = app.profile?.streakFreezes ?? 0
+        return VStack(alignment: .leading, spacing: Space.s) {
+            Label("\(streak) jour\(streak > 1 ? "s" : "") de série", systemImage: "flame.fill")
+                .font(.cfTitle3).foregroundStyle(Color.ink)
+            Text("Fais le \(Brand.dailyName) chaque jour pour la faire grandir.")
+            Label(freezes > 0 ? "\(freezes) joker\(freezes > 1 ? "s" : "") de série" : "Aucun joker pour l'instant",
+                  systemImage: "shield.fill")
+                .font(.cfCallout.weight(.bold)).foregroundStyle(Color.ink)
+                .padding(.top, 4)
+            Text("Si tu rates un jour, un joker sauve ta série automatiquement. Tu en gagnes un tous les 7 jours d'affilée (2 au maximum).")
+        }
+        .font(.cfFootnote)
+        .foregroundStyle(Color.inkSoft)
+        .fixedSize(horizontal: false, vertical: true)
+        .padding(Space.m)
+        .frame(width: 290, alignment: .leading)
     }
 
     /// La grande carte du jour : dégradé violet, trait de cinq, bouton soleil.

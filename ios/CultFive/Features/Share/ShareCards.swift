@@ -201,11 +201,19 @@ struct DailyShareCard: View {
                 }
                 .padding(.vertical, -18)
                 TallyMark(results: result.answers.map(\.isCorrect), onInk: palette.onInk, lineWidth: 6).frame(width: 78)
+                // Classement sur sa propre ligne : trois pastilles ne tenaient pas sur la largeur de la carte.
+                if let top = result.percentile?.top {
+                    HStack(spacing: 5) {
+                        Image(systemName: "chart.bar.fill")
+                        Text(result.percentile?.source == .estimate ? "Top \(top) % (estimation)" : "Top \(top) % des joueurs du jour")
+                    }
+                    .font(.system(size: 14, weight: .heavy, design: .rounded))
+                    .foregroundStyle(palette.text)
+                    .lineLimit(1).minimumScaleFactor(0.7)
+                    .padding(.top, 6)
+                }
                 Spacer()
                 HStack(spacing: 6) {
-                    if let top = result.percentile?.top {
-                        CardChip(text: "Top \(top) %", symbol: "chart.bar.fill", palette: palette)
-                    }
                     CardChip(text: DurationFormat.clock(milliseconds: result.totalMs), symbol: "stopwatch.fill", palette: palette)
                     CardChip(text: "\(result.streak) j", symbol: "flame.fill", palette: palette)
                 }
