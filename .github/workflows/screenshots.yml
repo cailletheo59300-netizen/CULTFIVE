@@ -4,6 +4,11 @@ name: Captures d'écran
 # Déclenchement manuel uniquement (Actions → Captures d'écran → Run workflow), à la demande du propriétaire.
 on:
   workflow_dispatch:
+    inputs:
+      app_store:
+        description: "Captures pour la fiche App Store (iPhone 6,9 pouces, docs/screenshots/app-store)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -37,11 +42,12 @@ jobs:
           import json, sys
           devices = json.load(sys.stdin)["devices"]
           for runtime in sorted((k for k in devices if "iOS" in k), reverse=True):
-              for name in ("iPhone 16 Pro", "iPhone 16", "iPhone 15 Pro"):
+              names = ("iPhone 16 Pro Max", "iPhone 15 Pro Max") if sys.argv[1] == "true" else ("iPhone 16 Pro", "iPhone 16", "iPhone 15 Pro")
+              for name in names:
                   for d in devices[runtime]:
                       if d["name"] == name:
                           print(d["udid"]); raise SystemExit
-          ')
+          ' "${{ inputs.app_store }}")
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
           xcrun simctl boot "$UDID"
           xcrun simctl bootstatus "$UDID" -b
@@ -51,6 +57,21 @@ jobs:
         env:
           UDID: ${{ steps.sim.outputs.udid }}
         run: |
+          if [ "${{ inputs.app_store }}" = "true" ]; then
+            # Fiche App Store : 1320 × 2868 (iPhone 6,9 pouces), mode clair, les écrans qui racontent l'app.
+            dir=docs/screenshots/app-store
+            mkdir -p "$dir"
+            xcrun simctl ui "$UDID" appearance light
+            i=1
+            for s in home question reveal result play friends league profile; do
+              xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.ios -demo -demoScreen "$s" > /dev/null
+              sleep 8
+              xcrun simctl io "$UDID" screenshot "$dir/$(printf '%02d' $i)-$s.png" > /dev/null
+              echo "✓ $s"; i=$((i+1))
+            done
+            sips -g pixelWidth -g pixelHeight "$dir/01-home.png"
+            exit 0
+          fi
           mkdir -p docs/screenshots
           shoot() {  # $1 écran, $2 apparence, $3 nom de fichier
             xcrun simctl ui "$UDID" appearance "$2"
