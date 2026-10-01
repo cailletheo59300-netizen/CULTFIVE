@@ -85,7 +85,7 @@ struct FriendProfileView: View {
                 showSetup = false
             }
         }
-        .sheet(item: $report) { ReportSheet(target: $0) }
+        .sheet(item: $report) { ContentReportSheet(target: $0) }
         .fullScreenCover(item: $activeDuel, onDismiss: { Task { await load() } }) { launch in
             DuelSessionView(duelId: launch.id)
         }

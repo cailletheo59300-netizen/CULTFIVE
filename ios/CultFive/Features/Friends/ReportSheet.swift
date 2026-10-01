@@ -11,7 +11,7 @@ struct ReportTarget: Identifiable {
 }
 
 /// Signaler un joueur ou une ligue. Le signalement arrive dans l'admin ; l'auteur n'en sait rien.
-struct ReportSheet: View {
+struct ContentReportSheet: View {
     let target: ReportTarget
 
     @Environment(AppModel.self) private var app

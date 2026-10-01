@@ -468,7 +468,7 @@ struct LeagueView: View {
         }
         .sheet(isPresented: $showRules) { LeagueRulesSheet() }
         .sheet(isPresented: $showDay) { LeagueDaySheet(leagueId: leagueId) }
-        .sheet(item: $report) { ReportSheet(target: $0) }
+        .sheet(item: $report) { ContentReportSheet(target: $0) }
         .fullScreenCover(isPresented: $playing, onDismiss: { Task { await load() } }) {
             LeagueQuizView(leagueId: leagueId, name: standings?.name ?? "Ligue")
         }
