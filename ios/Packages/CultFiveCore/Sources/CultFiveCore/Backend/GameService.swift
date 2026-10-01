@@ -92,6 +92,9 @@ public protocol GameService: Sendable {
     func reportContent(kind: String, target: UUID, reason: String, note: String?) async throws
     /// Export de mes données personnelles (JSON).
     func dataExport() async throws -> Data
+    /// Notifications push : jeton de l'iPhone (hexadécimal) ; environment = production · sandbox.
+    func pushRegister(token: String, environment: String) async throws
+    func pushUnregister(token: String) async throws
     // Ligues v2 : quiz du jour propre à la ligue, saisons, aperçu avant de rejoindre.
     func createLeague(_ draft: LeagueDraft) async throws -> LeagueStandings
     func leaguePreview(code: String) async throws -> LeaguePreview
@@ -363,6 +366,14 @@ public struct LiveGameService: GameService {
                                                  "p_reason": .string(reason), "p_note": note.map(JSONValue.string) ?? .null])
     }
 
+    public func pushRegister(token: String, environment: String) async throws {
+        try await api.rpcVoid("push_register", ["p_token": .string(token), "p_environment": .string(environment)])
+    }
+
+    public func pushUnregister(token: String) async throws {
+        try await api.rpcVoid("push_unregister", ["p_token": .string(token)])
+    }
+
     public func dataExport() async throws -> Data {
         let json: JSONValue = try await api.rpc("my_data_export")
         let encoder = JSONEncoder()
@@ -466,6 +477,9 @@ public extension GameService {
     func dataExport() async throws -> Data {
         throw BackendError.server(status: 400, code: "export_unavailable", message: "")
     }
+
+    func pushRegister(token: String, environment: String) async throws {}
+    func pushUnregister(token: String) async throws {}
 
     // Ligues v2 : la démo garde les anciennes ligues.
     func createLeague(_ draft: LeagueDraft) async throws -> LeagueStandings {

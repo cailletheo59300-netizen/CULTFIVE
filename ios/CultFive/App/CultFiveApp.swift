@@ -4,6 +4,7 @@ import CultFiveCore
 @main
 @MainActor
 struct CultFiveApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     @State private var model = AppModel.live()
     @Environment(\.scenePhase) private var scenePhase
     /// Clair par défaut, indépendamment du réglage de l'iPhone (voir `AppAppearance`).
@@ -54,7 +55,11 @@ struct RootView: View {
             }
         }
         .animation(Motion.standard, value: model.phase)
-        .task { await model.bootstrap() }
+        .task {
+            AppDelegate.onToken = { model.registerPush(token: $0) }
+            AppDelegate.onOpen = { model.openNotification($0) }
+            await model.bootstrap()
+        }
     }
 }
 

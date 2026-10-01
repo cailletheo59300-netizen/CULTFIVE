@@ -547,6 +547,9 @@ public struct Profile: Codable, Hashable, Sendable {
     public let notifDaily: Bool
     public let notifDailyTime: String
     public let notifReminder: Bool
+    /// Notifications push « Duels et amis » et « Ligues » (absentes sur un ancien serveur : activées).
+    public let notifSocial: Bool?
+    public let notifLeagues: Bool?
     public let onboarded: Bool
     public let isAnonymous: Bool
 
@@ -565,6 +568,8 @@ public struct Profile: Codable, Hashable, Sendable {
         case notifDaily = "notif_daily"
         case notifDailyTime = "notif_daily_time"
         case notifReminder = "notif_reminder"
+        case notifSocial = "notif_social"
+        case notifLeagues = "notif_leagues"
         case isAnonymous = "is_anonymous"
     }
 }

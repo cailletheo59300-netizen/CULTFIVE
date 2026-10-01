@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.27.0 — notifications push, comptes de test supprimés, admin sur téléphone
+- **Notifications push** : duel reçu, défi relevé, duel terminé (« Victoire contre Théo : 8–6 »), demande d'ami reçue / acceptée, quiz de la ligue à faire (19 h), ligue terminée (classement final). Interrupteurs « Duels et amis » et « Ligues » dans les Réglages ; rien entre 22 h et 8 h (reporté à 8 h) ; 5 par jour au plus. L'autorisation est proposée après un duel lancé ou une ligue rejointe. Toucher la notification ouvre le duel ou la ligue. Envoi par la fonction Edge `push-send` (APNs), chaque minute.
+- Le rappel du 5 du jour et celui de la série restent des notifications locales.
+- **Comptes** : 41 comptes invités de test supprimés en prod (restent les 4 vrais comptes) ; les comptes invités jamais terminés et inactifs depuis 7 jours sont supprimés chaque nuit.
+- **Admin** : « Vrais comptes » par défaut dans Joueurs ; mise en page téléphone (menu qui défile, une colonne, tableaux en cartes, fiches plein écran).
+- Migration 0036, tests `99_push.sql`.
+
 ## 0.26.0 — conformité (âge, mineurs, signalements, données personnelles)
 - **13 ans minimum** : l'onboarding demande l'âge ; « Moins de 13 ans » bloque l'accès (mémorisé sur l'appareil). La tranche d'âge reste modifiable dans les Réglages.
 - **Mineurs et pubs** : pour les 13-17 ans et l'âge non indiqué, pubs **non personnalisées** (Google : moins de l'âge du consentement), contenu « adolescents » au plus, **pas de demande de suivi Apple**.

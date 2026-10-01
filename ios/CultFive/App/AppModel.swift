@@ -32,6 +32,9 @@ final class AppModel {
     var pendingLeagueCode: String?
     /// Défi reçu par lien (…/d/CODE), rejoint depuis l'onglet Amis.
     var pendingDuelCode: String?
+    /// Notification ouverte : duel ou ligue à afficher dans l'onglet Amis.
+    var pendingDuelId: UUID?
+    var pendingLeagueId: UUID?
 
     let service: GameService
     let api: SupabaseAPI?
@@ -101,6 +104,11 @@ final class AppModel {
             if phase == .main {
                 await refreshDaily()
                 await syncPending()
+                await NotificationScheduler.registerPushIfAuthorized()
+                if let token = AppDelegate.pendingToken {
+                    AppDelegate.pendingToken = nil
+                    registerPush(token: token)
+                }
                 await startAds()
             }
         } catch BackendError.notAuthenticated where bootstrapAttempts < 3 {
@@ -316,6 +324,10 @@ final class AppModel {
     }
 
     func signOut() async {
+        if let token = UserDefaults.standard.string(forKey: Self.pushTokenKey) {
+            try? await service.pushUnregister(token: token)
+            UserDefaults.standard.removeObject(forKey: Self.pushTokenKey)
+        }
         await api?.signOut()
         NotificationScheduler.cancelAll()
         profile = nil
@@ -332,6 +344,46 @@ final class AppModel {
         daily = nil
         phase = .launching
         await bootstrap()
+    }
+
+    // MARK: Notifications push
+
+    private static let pushTokenKey = "pushToken"
+
+    /// Jeton de l'iPhone pour les notifications push, envoyé au serveur (production en TestFlight / App Store).
+    func registerPush(token data: Data) {
+        let token = data.map { String(format: "%02x", $0) }.joined()
+        UserDefaults.standard.set(token, forKey: Self.pushTokenKey)
+        #if DEBUG
+        let environment = "sandbox"
+        #else
+        let environment = "production"
+        #endif
+        let service = self.service
+        Task.detached { try? await service.pushRegister(token: token, environment: environment) }
+    }
+
+    /// Notification touchée : on ouvre l'onglet Amis sur le duel ou la ligue concernés.
+    func openNotification(_ info: [AnyHashable: Any]) {
+        guard phase == .main else { return }
+        let id = (info["id"] as? String).flatMap(UUID.init(uuidString:))
+        switch info["type"] as? String {
+        case "duel":
+            tab = .friends
+            pendingDuelId = id
+        case "league":
+            tab = .friends
+            pendingLeagueId = id
+        case "friends", "friend":
+            tab = .friends
+        default:
+            break
+        }
+    }
+
+    /// Proposée après un geste social (duel lancé, ligue rejointe) : être prévenu quand l'autre joue.
+    func askNotificationsAfterSocial() {
+        Task { _ = await NotificationScheduler.requestAuthorization() }
     }
 
     // MARK: Liens

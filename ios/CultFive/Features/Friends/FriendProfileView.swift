@@ -83,6 +83,7 @@ struct FriendProfileView: View {
             DuelSetupSheet(opponentName: handle, friendId: friendId) { duel in
                 pendingLaunch = DuelLaunch(id: duel.id)
                 showSetup = false
+                app.askNotificationsAfterSocial()
             }
         }
         .sheet(item: $report) { ContentReportSheet(target: $0) }

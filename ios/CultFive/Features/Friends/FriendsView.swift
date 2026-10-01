@@ -86,6 +86,7 @@ struct FriendsView: View {
             DuelSetupSheet(opponentName: nil, friendId: nil) { duel in
                 pendingLaunch = DuelLaunch(id: duel.id)
                 showLinkDuel = false
+                app.askNotificationsAfterSocial()
             }
         }
         .alert("Rejoindre une ligue", isPresented: $showJoin) {
@@ -108,10 +109,23 @@ struct FriendsView: View {
         .sheet(item: $joinRequest) { request in
             LeagueJoinSheet(code: request.code) { standings in
                 joinRequest = nil
+                app.askNotificationsAfterSocial()
                 Task {
                     await load()
                     path.append(.league(standings.id))
                 }
+            }
+        }
+        .task(id: app.pendingDuelId) {
+            if let id = app.pendingDuelId {
+                app.pendingDuelId = nil
+                activeDuel = DuelLaunch(id: id)
+            }
+        }
+        .task(id: app.pendingLeagueId) {
+            if let id = app.pendingLeagueId {
+                app.pendingLeagueId = nil
+                path = [.league(id)]
             }
         }
         .task(id: app.pendingDuelCode) {

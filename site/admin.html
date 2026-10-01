@@ -64,6 +64,35 @@
   .two { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
   .funnel td:first-child { width: 42%; }
   pre { white-space: pre-wrap; font-size: 12px; background: var(--bg); padding: 8px; border-radius: 10px; }
+  .two { grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); }
+
+  /* ───────── Téléphone : menu qui défile, une colonne, tableaux en cartes, fiches en plein écran ───────── */
+  @media (max-width: 700px) {
+    body { font-size: 16px; }
+    header { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
+    header h1 { font-size: 16px; }
+    header .me { font-size: 12px; }
+    header nav { order: 3; width: 100%; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 2px; scrollbar-width: none; }
+    header nav::-webkit-scrollbar { display: none; }
+    header nav button { flex: 0 0 auto; padding: 9px 14px; }
+    main { padding: 12px 10px 80px; }
+    .card { padding: 14px; border-radius: 14px; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .stat b { font-size: 22px; }
+    .row > * { flex: 1 1 100%; }
+    input, select, textarea { font-size: 16px; }
+    button.btn { min-height: 44px; }
+    table.cards thead { display: none; }
+    table.cards, table.cards tbody, table.cards tr, table.cards td { display: block; width: 100%; }
+    table.cards tr { border: 1px solid var(--line); border-radius: 12px; padding: 6px 10px; margin-bottom: 10px; background: var(--card); }
+    table.cards td { border: 0; padding: 5px 0; display: flex; justify-content: space-between; gap: 12px; text-align: right; }
+    table.cards td::before { content: attr(data-label); color: var(--soft); font-size: 12px; font-weight: 800; text-transform: uppercase; text-align: left; flex: 0 0 auto; }
+    table.cards td[data-label=""]::before { content: none; }
+    table.cards td:first-child { text-align: left; }
+    .modal { padding: 0; align-items: stretch; }
+    .modal .card { width: 100%; min-height: 100%; border-radius: 0; margin: 0; }
+    .funnel td:first-child { width: auto; }
+  }
 </style>
 </head>
 <body>
@@ -551,13 +580,16 @@ async function renderModeration() {
 
 async function renderUsers() {
   const u = state.users;
-  const res = await rpc('admin_users', { p_search: u.search || null, p_sort: u.sort, p_limit: 50, p_offset: u.page * 50 });
+  u.scope = u.scope || 'real';
+  const res = await rpc('admin_users', { p_search: u.search || null, p_sort: u.sort, p_limit: 50, p_offset: u.page * 50, p_scope: u.scope });
   app.innerHTML = `<div class="card"><div class="row">
       <div style="flex:3"><label>Pseudo ou identifiant</label><input id="uSearch" value="${esc(u.search)}"></div>
       <div><label>Tri</label><select id="uSort">${[['recent', 'Plus récents'], ['active', 'Derniers actifs'], ['answers', 'Plus de réponses'], ['streak', 'Plus longue série']]
         .map(([key, v]) => `<option value="${key}" ${u.sort === key ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+      <div><label>Comptes</label><select id="uScope"><option value="real" ${u.scope === 'real' ? 'selected' : ''}>Vrais comptes</option>
+        <option value="all" ${u.scope === 'all' ? 'selected' : ''}>Tous (avec les invités)</option></select></div>
       <div><label>&nbsp;</label><button class="btn" id="uGo">Chercher</button></div></div></div>
-    <div class="card"><p class="muted small">${fmt(res.total)} joueurs</p>
+    <div class="card"><p class="muted small">${fmt(res.total)} joueur${res.total > 1 ? 's' : ''}${u.scope === 'real' ? ' (vrais comptes : onboarding fini ou compte Apple / e-mail)' : ''}</p>
     <table><thead><tr><th>Pseudo</th><th>Arrivé</th><th>Dernière activité</th><th>Réponses</th><th>Série</th><th>Graines</th><th>Compte</th></tr></thead><tbody>
     ${res.items.map((p) => `<tr class="click" data-id="${p.id}"><td><b>${esc(p.handle)}</b> ${p.banned_at ? '<span class="pill bad">banni</span>' : ''}</td>
       <td class="small">${new Date(p.created_at).toLocaleDateString('fr-FR')}</td><td class="small">${ago(p.last_active)}</td>
@@ -566,7 +598,8 @@ async function renderUsers() {
     </tbody></table>
     <p class="row"><button class="btn ghost" id="uPrev" ${u.page === 0 ? 'disabled' : ''}>Précédents</button>
       <button class="btn ghost" id="uNext" ${(u.page + 1) * 50 >= res.total ? 'disabled' : ''}>Suivants</button></p></div>`;
-  const go = () => { u.search = $('#uSearch').value.trim(); u.sort = $('#uSort').value; u.page = 0; renderUsers(); };
+  const go = () => { u.search = $('#uSearch').value.trim(); u.sort = $('#uSort').value; u.scope = $('#uScope').value; u.page = 0; renderUsers(); };
+  $('#uScope').onchange = go;
   $('#uGo').onclick = go; $('#uSearch').onkeydown = (e) => { if (e.key === 'Enter') go(); };
   $('#uPrev').onclick = () => { u.page--; renderUsers(); }; $('#uNext').onclick = () => { u.page++; renderUsers(); };
   app.querySelectorAll('tr[data-id]').forEach((tr) => tr.onclick = () => openUser(tr.dataset.id));
@@ -639,6 +672,18 @@ async function render() {
   } catch (e) { app.innerHTML = `<div class="card"><h2>Erreur</h2><pre>${esc(e.message)}</pre></div>`; }
 }
 document.querySelectorAll('#nav button').forEach((b) => b.onclick = () => { state.view = b.dataset.view; if (b.dataset.view !== 'reports') state.filter.reported = undefined; render(); });
+// Tableaux lisibles sur téléphone : chaque cellule reçoit le titre de sa colonne (affiché en carte sous 700 px).
+function cardTables(root) {
+  root.querySelectorAll('table').forEach((table) => {
+    const heads = [...table.querySelectorAll('thead th')].map((th) => th.textContent.trim());
+    if (!heads.length) return;
+    table.classList.add('cards');
+    table.querySelectorAll('tbody tr').forEach((tr) => [...tr.children].forEach((td, i) => {
+      if (!td.hasAttribute('data-label')) td.setAttribute('data-label', heads[i] ?? '');
+    }));
+  });
+}
+new MutationObserver(() => cardTables(document.body)).observe(document.body, { childList: true, subtree: true });
 render();
 </script>
 </body>

@@ -59,8 +59,16 @@ enum NotificationScheduler {
     private static let dailyId = "daily-available"
     private static let reminderId = "daily-reminder"
 
+    /// Demande l'autorisation ; acceptée, l'iPhone s'inscrit aussi aux notifications push (duels, amis, ligues).
     static func requestAuthorization() async -> Bool {
-        (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
+        let granted = (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
+        if granted { await MainActor.run { UIApplication.shared.registerForRemoteNotifications() } }
+        return granted
+    }
+
+    /// Au lancement : si les notifications sont déjà autorisées, on renouvelle l'inscription push.
+    @MainActor static func registerPushIfAuthorized() async {
+        if await isAuthorized() { UIApplication.shared.registerForRemoteNotifications() }
     }
 
     static func isAuthorized() async -> Bool {

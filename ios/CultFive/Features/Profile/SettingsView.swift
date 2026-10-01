@@ -31,6 +31,8 @@ struct SettingsView: View {
     private struct Prefs: Equatable {
         var notifDaily = true
         var notifReminder = true
+        var notifSocial = true
+        var notifLeagues = true
         var notifTime = Date()
         var ageRange = ""
     }
@@ -196,6 +198,10 @@ struct SettingsView: View {
             }
             divider
             toggleRow("Rappel le soir si pas encore joué", symbol: "moon.fill", tint: Color(hex: 0x7048E8), isOn: $prefs.notifReminder)
+            divider
+            toggleRow("Duels et amis", symbol: "bolt.fill", tint: Color(hex: 0xF76707), isOn: $prefs.notifSocial)
+            divider
+            toggleRow("Ligues", symbol: "trophy.fill", tint: Color(hex: 0xE08A00), isOn: $prefs.notifLeagues)
         }
         .animation(Motion.standard, value: prefs.notifDaily)
     }
@@ -362,6 +368,7 @@ struct SettingsView: View {
         handle = profile.handle
         let parts = profile.notifDailyTime.split(separator: ":").compactMap { Int($0) }
         prefs = Prefs(notifDaily: profile.notifDaily, notifReminder: profile.notifReminder,
+                      notifSocial: profile.notifSocial ?? true, notifLeagues: profile.notifLeagues ?? true,
                       notifTime: Calendar.current.date(bySettingHour: parts.first ?? 8, minute: parts.count > 1 ? parts[1] : 30,
                                                        second: 0, of: Date()) ?? Date(),
                       ageRange: profile.ageRange ?? "")
@@ -396,6 +403,7 @@ struct SettingsView: View {
         let time = Calendar.current.dateComponents([.hour, .minute], from: prefs.notifTime)
         let timeText = String(format: "%02d:%02d", time.hour ?? 8, time.minute ?? 30)
         let unchanged = prefs.notifDaily == profile.notifDaily && prefs.notifReminder == profile.notifReminder
+            && prefs.notifSocial == (profile.notifSocial ?? true) && prefs.notifLeagues == (profile.notifLeagues ?? true)
             && timeText == profile.notifDailyTime.prefix(5) && prefs.ageRange == (profile.ageRange ?? "")
         guard !unchanged else { return }
         try? await Task.sleep(nanoseconds: 500_000_000)
@@ -403,10 +411,14 @@ struct SettingsView: View {
         let fields: [String: JSONValue] = [
             "notif_daily": .bool(prefs.notifDaily),
             "notif_reminder": .bool(prefs.notifReminder),
+            "notif_social": .bool(prefs.notifSocial),
+            "notif_leagues": .bool(prefs.notifLeagues),
             "notif_daily_time": .string(timeText),
             "age_range": prefs.ageRange.isEmpty ? .null : .string(prefs.ageRange),
         ]
-        if prefs.notifDaily || prefs.notifReminder { _ = await NotificationScheduler.requestAuthorization() }
+        if prefs.notifDaily || prefs.notifReminder || prefs.notifSocial || prefs.notifLeagues {
+            _ = await NotificationScheduler.requestAuthorization()
+        }
         do {
             let updated = try await app.service.updateProfile(fields)
             app.profile = updated

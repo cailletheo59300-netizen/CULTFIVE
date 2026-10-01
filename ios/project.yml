@@ -48,6 +48,8 @@ targets:
       properties:
         com.apple.developer.applesignin: [Default]
         com.apple.developer.associated-domains: ["applinks:brainlix.site"]
+        # Notifications push (duels, amis, ligues). La signature passe en « production » à l'export App Store / TestFlight.
+        aps-environment: development
     info:
       path: CultFive/Info.plist
       properties:
