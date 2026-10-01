@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.26.0 — conformité (âge, mineurs, signalements, données personnelles)
+- **13 ans minimum** : l'onboarding demande l'âge ; « Moins de 13 ans » bloque l'accès (mémorisé sur l'appareil). La tranche d'âge reste modifiable dans les Réglages.
+- **Mineurs et pubs** : pour les 13-17 ans et l'âge non indiqué, pubs **non personnalisées** (Google : moins de l'âge du consentement), contenu « adolescents » au plus, **pas de demande de suivi Apple**.
+- **Signaler** un joueur (profil d'ami, membres d'une ligue) ou une ligue (nom) ; seulement ce qu'on voit. Nouvel onglet **Modération** dans l'admin : renommer une ligue, ouvrir la fiche d'un joueur (renommer, bannir), clore.
+- **Noms de ligue filtrés** (mots interdits, comparés mot par mot pour éviter les faux positifs).
+- **Télécharger mes données** (Réglages) : un fichier JSON avec tout le compte (droit d'accès RGPD).
+- **Conservation** : journal d'usage, vues de pubs et signalements traités supprimés après 13 mois (tâche quotidienne).
+- Déclaration de confidentialité Apple mise à jour (pubs, suivi avec accord, tranche d'âge, contenu des joueurs) ; pages Confidentialité et Conditions mises à jour ; fiche App Store prête (`docs/APP_STORE.md`). Migration 0035, tests `99_compliance.sql`.
+
 ## 0.25.0 — Ligues v2 : un quiz quotidien propre à chaque ligue
 - **Quiz de la ligue** : chaque jour, un quiz dédié, le même pour tous les membres, **indépendant du 5 du jour** de Brainlix (carte jaune distincte), hors Elo, à faire avant minuit (fuseau de la ligue). 1 point par bonne réponse, départage au temps ; jour manqué = 0. Scores du jour des membres visibles une fois son quiz fini.
 - **Création réglable** : questions par jour (5, 10, 15, 20), domaines, difficulté (auto ou choisie), durée (1 semaine, 2 semaines, 1 mois), début aujourd'hui ou demain, membres max (5, 10, 20, 50), avec les dates exactes affichées avant de créer.

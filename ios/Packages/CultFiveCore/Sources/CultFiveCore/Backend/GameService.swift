@@ -88,6 +88,10 @@ public protocol GameService: Sendable {
     func joinLeague(code: String) async throws -> LeagueStandings
     func leaveLeague(_ id: UUID) async throws
     func leagueStandings(_ id: UUID, offset: Int) async throws -> LeagueStandings
+    /// Signaler un joueur ou une ligue (kind : user · league ; reason : name · behavior · cheating · other).
+    func reportContent(kind: String, target: UUID, reason: String, note: String?) async throws
+    /// Export de mes données personnelles (JSON).
+    func dataExport() async throws -> Data
     // Ligues v2 : quiz du jour propre à la ligue, saisons, aperçu avant de rejoindre.
     func createLeague(_ draft: LeagueDraft) async throws -> LeagueStandings
     func leaguePreview(code: String) async throws -> LeaguePreview
@@ -354,6 +358,18 @@ public struct LiveGameService: GameService {
         try await api.rpcVoid("league_leave", ["p_league": .string(id.uuidString)])
     }
 
+    public func reportContent(kind: String, target: UUID, reason: String, note: String?) async throws {
+        try await api.rpcVoid("report_content", ["p_kind": .string(kind), "p_target": .string(target.uuidString),
+                                                 "p_reason": .string(reason), "p_note": note.map(JSONValue.string) ?? .null])
+    }
+
+    public func dataExport() async throws -> Data {
+        let json: JSONValue = try await api.rpc("my_data_export")
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        return try encoder.encode(json)
+    }
+
     public func createLeague(_ draft: LeagueDraft) async throws -> LeagueStandings {
         let domains = draft.settings.domains ?? []
         return try await api.rpc("league_create", [
@@ -443,6 +459,12 @@ public extension GameService {
 
     func friendProfile(_ friend: UUID) async throws -> FriendProfile {
         throw BackendError.server(status: 400, code: "not_friends", message: "")
+    }
+
+    func reportContent(kind: String, target: UUID, reason: String, note: String?) async throws {}
+
+    func dataExport() async throws -> Data {
+        throw BackendError.server(status: 400, code: "export_unavailable", message: "")
     }
 
     // Ligues v2 : la démo garde les anciennes ligues.

@@ -243,6 +243,7 @@ final class AppModel {
     /// Consentement (RGPD puis suivi Apple) et démarrage des pubs, après l'onboarding seulement.
     func startAds() async {
         await refreshAdStatus()
+        ads.adultAudience = isAdult
         await ads.start()
     }
 

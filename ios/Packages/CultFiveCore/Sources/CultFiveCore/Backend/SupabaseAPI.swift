@@ -97,6 +97,8 @@ public enum BackendError: Error, Equatable, LocalizedError {
         case "correction_limit": return "Tu as déjà corrigé 3 parties aujourd'hui. Reviens demain !"
         case "invalid_count", "invalid_difficulty", "invalid_duration", "invalid_max_members": return "Réglages invalides."
         case "invalid_name": return "Le nom doit faire entre 3 et 40 caractères."
+        case "name_not_allowed": return "Ce nom n'est pas autorisé. Choisis-en un autre."
+        case "export_unavailable": return "Export indisponible pour l'instant."
         case "league_not_active": return "Le quiz de la ligue n'est pas ouvert aujourd'hui."
         case "league_not_finished": return "La ligue n'est pas encore terminée."
         case "league_out_of_order", "league_not_served": return "Question déjà passée. Rouvre le quiz."

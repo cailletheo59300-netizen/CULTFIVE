@@ -6,7 +6,7 @@ import CultFiveCore
 /// Repère d'étape nommé (« Étape 2 sur 4 · Tes domaines ») et retour après les questions. Le rappel de notification est proposé plus tard, après le premier 5 du jour.
 struct OnboardingFlow: View {
     enum Step: Int, Hashable, Comparable {
-        case welcome, intro, questions, result, interests, handle, account, gift, howItWorks
+        case welcome, age, tooYoung, intro, questions, result, interests, handle, account, gift, howItWorks
         static func < (a: Step, b: Step) -> Bool { a.rawValue < b.rawValue }
     }
 
@@ -23,12 +23,17 @@ struct OnboardingFlow: View {
     @State private var busy = false
     @State private var error: String?
     @State private var welcomeChest: ChestRef?
+    /// « Moins de 13 ans » choisi : Brainlix n'est pas accessible (mémorisé sur l'appareil).
+    @AppStorage("ageBlocked") private var ageBlocked = false
 
     var body: some View {
         ZStack {
             Color.paper.ignoresSafeArea()
             switch step {
-            case .welcome: welcome
+            case .welcome:
+                if ageBlocked { tooYoung } else { welcome }
+            case .age: framed { ageStep }
+            case .tooYoung: tooYoung
             case .intro: framed { intro }
             case .questions: VStack(spacing: 0) { questionDashes; questions }
             case .result: framed(back: false) { resultStep }
@@ -60,7 +65,8 @@ struct OnboardingFlow: View {
 
     private var previous: Step? {
         switch step {
-        case .intro: return .welcome
+        case .age: return .welcome
+        case .intro: return .age
         case .interests: return .result
         case .handle: return .interests
         case .account: return .handle
@@ -139,12 +145,79 @@ struct OnboardingFlow: View {
                         .padding(.top, 4)
                 }
                 Spacer()
-                Button("C'est parti !") { step = .intro }
+                Button("C'est parti !") { step = .age }
                     .buttonStyle(.sun)
             }
             .padding(Space.gutter)
         }
         .preferredColorScheme(.dark)
+    }
+
+    // MARK: Âge (13 ans minimum)
+
+    private static let ageOptions: [(label: String, value: String?)] = [
+        ("Moins de 13 ans", nil), ("13 à 17 ans", "13-17"), ("18 à 24 ans", "18-24"), ("25 à 34 ans", "25-34"),
+        ("35 à 49 ans", "35-49"), ("50 ans et plus", "50+"),
+    ]
+
+    private var ageStep: some View {
+        VStack(alignment: .leading, spacing: Space.l) {
+            Spacer(minLength: Space.m)
+            Text("Quel âge as-tu ?").font(.cfDisplay)
+            Text("Brainlix est ouvert dès 13 ans. Ton âge sert à adapter les pubs ; tu pourras le changer dans les Réglages.")
+                .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                .fixedSize(horizontal: false, vertical: true)
+            VStack(spacing: 10) {
+                ForEach(Self.ageOptions, id: \.label) { option in
+                    Button {
+                        Haptics.selection()
+                        chooseAge(option.value)
+                    } label: {
+                        HStack {
+                            Text(option.label).font(.system(.body, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
+                            Spacer()
+                            Image(systemName: "chevron.right").font(.footnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                        }
+                        .padding(.horizontal, Space.m)
+                        .frame(minHeight: 52)
+                        .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                    }
+                    .buttonStyle(.row)
+                    .disabled(busy)
+                }
+            }
+            Spacer()
+        }
+        .padding(Space.gutter)
+    }
+
+    private func chooseAge(_ value: String?) {
+        guard let value else {
+            ageBlocked = true
+            step = .tooYoung
+            return
+        }
+        busy = true
+        Task {
+            _ = try? await app.service.updateProfile(["age_range": .string(value)])
+            await app.refreshProfile()
+            busy = false
+            step = .intro
+        }
+    }
+
+    private var tooYoung: some View {
+        VStack(alignment: .leading, spacing: Space.l) {
+            Spacer()
+            Leon(color: .brand, pose: .wave).frame(width: 140)
+            Text("À bientôt sur \(Brand.name) !").font(.cfDisplay)
+            Text("Brainlix est réservé aux 13 ans et plus. Reviens nous voir pour ton anniversaire !")
+                .font(.cfReading).foregroundStyle(Color.ink)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer()
+        }
+        .padding(Space.gutter)
+        .background(Color.paper)
     }
 
     // MARK: 2. Ce qui va se passer

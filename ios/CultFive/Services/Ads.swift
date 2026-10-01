@@ -34,7 +34,8 @@ final class AdsController {
     private(set) var started = false
     private var starting = false
     /// Joueur majeur (tranche d'âge 18+ indiquée) : pubs jusqu'à « public adulte » (MA). Sinon (13-17 ou âge non
-    /// indiqué) : « adolescents » (T) au plus. Les catégories sensibles restent bloquées dans AdMob pour tous.
+    /// indiqué) : « adolescents » (T) au plus, non personnalisées (sous l'âge du consentement numérique), sans demande
+    /// de suivi Apple. Les catégories sensibles restent bloquées dans AdMob pour tous.
     var adultAudience = false
     /// Une pub récompensée a été vue depuis la dernière partie finie : pas de pub entre les parties juste après.
     private var rewardedSinceLastGame = false
@@ -58,15 +59,19 @@ final class AdsController {
         starting = true
         defer { starting = false }
         let consent = UMPConsentInformation.sharedInstance
+        let parameters = UMPRequestParameters()
+        // Mineurs (ou âge non indiqué) : sous l'âge du consentement numérique, pubs non personnalisées.
+        parameters.tagForUnderAgeOfConsent = !adultAudience
         do {
-            try await consent.requestConsentInfoUpdate(with: UMPRequestParameters())
+            try await consent.requestConsentInfoUpdate(with: parameters)
             if let root = Self.topViewController {
                 try await UMPConsentForm.loadAndPresentIfRequired(from: root)
             }
         } catch {
             // Réseau ou formulaire indisponible : on réessaiera au prochain lancement.
         }
-        if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
+        // Demande de suivi Apple seulement aux majeurs : aux autres, aucune pub personnalisée n'est montrée.
+        if adultAudience, ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
             _ = await ATTrackingManager.requestTrackingAuthorization()
         }
         guard consent.canRequestAds else { return }
@@ -145,7 +150,9 @@ final class AdsController {
 
     /// Classification maximale des pubs, appliquée avant chaque chargement.
     private func applyAudience() {
-        GADMobileAds.sharedInstance().requestConfiguration.maxAdContentRating = adultAudience ? .matureAudience : .teen
+        let configuration = GADMobileAds.sharedInstance().requestConfiguration
+        configuration.maxAdContentRating = adultAudience ? .matureAudience : .teen
+        configuration.tagForUnderAgeOfConsent = NSNumber(value: !adultAudience)
     }
 
     private static var unavailable: BackendError { .server(status: 400, code: "ad_unavailable", message: "") }

@@ -74,6 +74,7 @@
     <button data-view="users">Joueurs</button>
     <button data-view="questions">Questions</button>
     <button data-view="reports">Signalements</button>
+    <button data-view="moderation">Modération</button>
     <button data-view="daily">5 du jour</button>
     <button data-view="new">Nouvelle question</button>
   </nav>
@@ -519,6 +520,35 @@ async function pickReplacement(date, position, domain, started) {
 
 // ───────────────────────── Joueurs
 state.users = { search: '', sort: 'recent', page: 0 };
+// ───────────────────────── Modération : joueurs et ligues signalés
+const REPORT_REASONS = { name: 'Nom offensant', behavior: 'Comportement', cheating: 'Triche', other: 'Autre' };
+async function renderModeration() {
+  const list = await rpc('admin_content_reports');
+  app.innerHTML = `<div class="card"><h2>Joueurs et ligues signalés</h2>
+    <p class="muted small">Renomme un pseudo ou une ligue offensants, bannis un joueur abusif (onglet Joueurs), puis clos le signalement.</p></div>
+    <div class="card">${list.length === 0 ? '<p class="muted">Aucun signalement ouvert.</p>' : `<table>
+      <thead><tr><th>Cible</th><th>Motif</th><th>Note</th><th>Par</th><th>Quand</th><th></th></tr></thead><tbody>
+      ${list.map((r) => `<tr>
+        <td><b>${esc(r.target ?? '(supprimé)')}</b><br><span class="muted small">${r.kind === 'user' ? 'joueur' : 'ligue'} · ${r.count} signalement${r.count > 1 ? 's' : ''}</span></td>
+        <td>${REPORT_REASONS[r.reason] ?? esc(r.reason)}</td><td>${esc(r.note ?? '')}</td><td>${esc(r.reporter ?? '')}</td>
+        <td class="muted small">${ago(r.created_at)}</td>
+        <td style="white-space:nowrap">
+          ${r.kind === 'user' ? `<button class="btn ghost" data-user="${r.target_id}">Fiche</button>`
+                              : `<button class="btn ghost" data-league="${r.target_id}" data-name="${esc(r.target ?? '')}">Renommer</button>`}
+          <button class="btn" data-close="${r.target_id}">Clore</button></td></tr>`).join('')}
+      </tbody></table>`}</div>`;
+  app.querySelectorAll('[data-user]').forEach((b) => b.onclick = () => openUser(b.dataset.user));
+  app.querySelectorAll('[data-league]').forEach((b) => b.onclick = async () => {
+    const name = prompt('Nouveau nom de la ligue', b.dataset.name);
+    if (!name) return;
+    try { await rpc('admin_league_rename', { p_league: b.dataset.league, p_name: name.trim() }); toast('Ligue renommée'); renderModeration(); }
+    catch (e) { toast(e.message); }
+  });
+  app.querySelectorAll('[data-close]').forEach((b) => b.onclick = async () => {
+    await rpc('admin_content_resolve', { p_target: b.dataset.close }); toast('Signalement clos'); renderModeration();
+  });
+}
+
 async function renderUsers() {
   const u = state.users;
   const res = await rpc('admin_users', { p_search: u.search || null, p_sort: u.sort, p_limit: 50, p_offset: u.page * 50 });
@@ -604,6 +634,7 @@ async function render() {
     else if (state.view === 'questions') await renderQuestions();
     else if (state.view === 'reports') await renderQuestions({ reported: true });
     else if (state.view === 'daily') await renderDaily();
+    else if (state.view === 'moderation') await renderModeration();
     else if (state.view === 'new') { app.innerHTML = '<div class="card"><p class="muted">Nouvelle question : elle est créée en brouillon, puis publiée depuis l\'éditeur.</p></div>'; openEditor({}, () => { state.view = 'questions'; render(); }); }
   } catch (e) { app.innerHTML = `<div class="card"><h2>Erreur</h2><pre>${esc(e.message)}</pre></div>`; }
 }

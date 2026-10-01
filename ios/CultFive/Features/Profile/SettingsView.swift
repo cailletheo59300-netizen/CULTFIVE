@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import CultFiveCore
 
 /// Réglages : une vraie page Brainlix, ouverte depuis le Profil (pas une feuille). Tout s'enregistre tout de suite,
@@ -18,6 +19,9 @@ struct SettingsView: View {
     @State private var saved = false
     @State private var showAccount = false
     @State private var confirmDelete = false
+    /// Export de mes données : fichier prêt à partager, ou en préparation.
+    @State private var export: ExportFile?
+    @State private var exporting = false
     @State private var confirmSignOut = false
     @State private var error: String?
 
@@ -79,6 +83,9 @@ struct SettingsView: View {
         .task(id: handle) { await checkHandle() }
         .task(id: prefs) { await savePrefs() }
         .sheet(isPresented: $showAccount) { AccountSheet() }
+        .sheet(item: $export) { file in
+            ActivityView(items: [file.url]).ignoresSafeArea()
+        }
         .confirmationDialog("Supprimer ton compte ?", isPresented: $confirmDelete, titleVisibility: .visible) {
             Button("Supprimer définitivement", role: .destructive) { deleteAccount() }
         } message: {
@@ -211,6 +218,10 @@ struct SettingsView: View {
             } else {
                 actionRow("Se déconnecter", symbol: "rectangle.portrait.and.arrow.right", tint: Color.inkSoft) { confirmSignOut = true }
             }
+            divider
+            actionRow(exporting ? "Préparation de tes données…" : "Télécharger mes données", symbol: "square.and.arrow.down.fill",
+                      tint: Color(hex: 0x1C7ED6)) { exportData() }
+                .disabled(exporting)
             divider
             actionRow("Supprimer mon compte", symbol: "trash.fill", tint: .wrong, destructive: true) { confirmDelete = true }
         }
@@ -409,6 +420,22 @@ struct SettingsView: View {
         }
     }
 
+    /// Droit d'accès (RGPD) : toutes mes données dans un fichier JSON, à enregistrer ou envoyer.
+    private func exportData() {
+        exporting = true
+        Task {
+            defer { exporting = false }
+            do {
+                let data = try await app.service.dataExport()
+                let url = FileManager.default.temporaryDirectory.appendingPathComponent("brainlix-mes-donnees.json")
+                try data.write(to: url, options: .atomic)
+                export = ExportFile(url: url)
+            } catch {
+                app.show((error as? LocalizedError)?.errorDescription ?? "Export impossible pour l'instant.")
+            }
+        }
+    }
+
     private func deleteAccount() {
         Task {
             do {
@@ -456,4 +483,21 @@ private struct AppearanceThumbnail: View {
             .padding(9)
         }
     }
+}
+
+/// Fichier exporté, présenté dans la feuille de partage.
+struct ExportFile: Identifiable {
+    let id = UUID()
+    let url: URL
+}
+
+/// Feuille de partage iOS (enregistrer dans Fichiers, envoyer par e-mail…).
+struct ActivityView: UIViewControllerRepresentable {
+    let items: [Any]
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ controller: UIActivityViewController, context: Context) {}
 }

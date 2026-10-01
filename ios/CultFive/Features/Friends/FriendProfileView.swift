@@ -17,6 +17,7 @@ struct FriendProfileView: View {
     @State private var activeDuel: DuelLaunch?
     @State private var confirmRemove = false
     @State private var confirmBlock = false
+    @State private var report: ReportTarget?
 
     var body: some View {
         ScrollView {
@@ -53,6 +54,7 @@ struct FriendProfileView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
                     Button("Retirer des amis", systemImage: "person.badge.minus") { confirmRemove = true }
+                    Button("Signaler", systemImage: "flag") { report = ReportTarget(kind: .user, targetId: friendId, name: handle) }
                     Button("Bloquer", systemImage: "hand.raised", role: .destructive) { confirmBlock = true }
                 } label: {
                     Image(systemName: "ellipsis.circle").font(.body.weight(.bold))
@@ -83,6 +85,7 @@ struct FriendProfileView: View {
                 showSetup = false
             }
         }
+        .sheet(item: $report) { ReportSheet(target: $0) }
         .fullScreenCover(item: $activeDuel, onDismiss: { Task { await load() } }) { launch in
             DuelSessionView(duelId: launch.id)
         }

@@ -416,6 +416,7 @@ struct LeagueView: View {
     @State private var playing = false
     @State private var showDay = false
     @State private var kick: LeagueStandings.Row?
+    @State private var report: ReportTarget?
     @State private var error: String?
     /// L'explication s'ouvre toute seule la première fois qu'on entre dans une ligue.
     @AppStorage("leagueRulesSeenV2") private var rulesSeen = false
@@ -452,14 +453,22 @@ struct LeagueView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button { showRules = true } label: {
-                    Image(systemName: "questionmark.circle").font(.body.weight(.bold))
+                Menu {
+                    Button("Comment marchent les ligues", systemImage: "questionmark.circle") { showRules = true }
+                    if let standings, !standings.isOwner {
+                        Button("Signaler la ligue", systemImage: "flag") {
+                            report = ReportTarget(kind: .league, targetId: leagueId, name: standings.name)
+                        }
+                    }
+                } label: {
+                    Image(systemName: "ellipsis.circle").font(.body.weight(.bold))
                 }
-                .accessibilityLabel("Comment marchent les ligues")
+                .accessibilityLabel("Options de la ligue")
             }
         }
         .sheet(isPresented: $showRules) { LeagueRulesSheet() }
         .sheet(isPresented: $showDay) { LeagueDaySheet(leagueId: leagueId) }
+        .sheet(item: $report) { ReportSheet(target: $0) }
         .fullScreenCover(isPresented: $playing, onDismiss: { Task { await load() } }) {
             LeagueQuizView(leagueId: leagueId, name: standings?.name ?? "Ligue")
         }
@@ -623,6 +632,11 @@ struct LeagueView: View {
                     .strokeBorder(row.isMe ? Color.brand : .clear, lineWidth: 2))
                 .accessibilityElement(children: .combine)
                 .contextMenu {
+                    if !row.isMe {
+                        Button("Signaler \(row.handle)", systemImage: "flag") {
+                            report = ReportTarget(kind: .user, targetId: row.id, name: row.handle)
+                        }
+                    }
                     if s.isOwner, !row.isMe {
                         Button("Retirer de la ligue", systemImage: "person.badge.minus", role: .destructive) { kick = row }
                     }
