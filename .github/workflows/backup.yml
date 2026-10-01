@@ -33,7 +33,7 @@ jobs:
         env:
           SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
         run: |
-          docker run --rm -e SUPABASE_DB_URL -v "$PWD:/out" postgres:17 \
+          docker run --rm --user "$(id -u):$(id -g)" -e SUPABASE_DB_URL -v "$PWD:/out" postgres:17 \
             pg_dump "$SUPABASE_DB_URL" --format=custom --no-owner --no-privileges \
               --schema=public --schema=auth -f /out/brainlix.dump
           ls -lh brainlix.dump
