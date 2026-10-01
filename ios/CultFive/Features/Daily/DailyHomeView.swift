@@ -81,8 +81,9 @@ struct DailyHomeView: View {
     private var topLine: some View {
         // Jokers écrits en toutes lettres quand la ligne a la place, sinon un bouclier et leur nombre.
         ViewThatFits(in: .horizontal) {
-            topLineContent(jokersInWords: true)
-            topLineContent(jokersInWords: false)
+            topLineContent(jokersInWords: true, shortDate: false)
+            topLineContent(jokersInWords: true, shortDate: true)
+            topLineContent(jokersInWords: false, shortDate: true)
         }
         .padding(.top, Space.m)
         .popover(isPresented: $showStreakHelp) {
@@ -90,9 +91,10 @@ struct DailyHomeView: View {
         }
     }
 
-    private func topLineContent(jokersInWords: Bool) -> some View {
-        HStack(spacing: Space.s) {
-            Text(DateText.long(app.daily?.date ?? isoToday)).labelCaps()
+    private func topLineContent(jokersInWords: Bool, shortDate: Bool) -> some View {
+        let date = app.daily?.date ?? isoToday
+        return HStack(spacing: Space.s) {
+            Text(shortDate ? DateText.short(date) : DateText.long(date)).labelCaps()
                 .lineLimit(1).minimumScaleFactor(jokersInWords ? 1 : 0.7)
             Spacer(minLength: 0)
             if let streak = app.profile?.streak, streak > 0 {
