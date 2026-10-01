@@ -3,11 +3,12 @@
 <!-- Déclaration de confidentialité exigée par Apple.
      Données du jeu liées au compte (fonctionnement) ; journal d'usage (analyse interne) ; tranche d'âge (adapter les pubs) ;
      identifiant d'appareil et données publicitaires utilisés par Google AdMob, avec suivi seulement si le joueur l'accepte
-     (demande Apple, majeurs uniquement). Le SDK Google fournit sa propre déclaration pour ses domaines. -->
+     (demande Apple, majeurs uniquement). Le code de Brainlix ne fait pas de suivi lui-même (NSPrivacyTracking false) :
+     c'est la déclaration fournie par le SDK Google qui couvre le suivi d'AdMob et ses domaines. -->
 <plist version="1.0">
 <dict>
 	<key>NSPrivacyTracking</key>
-	<true/>
+	<false/>
 	<key>NSPrivacyTrackingDomains</key>
 	<array/>
 	<key>NSPrivacyAccessedAPITypes</key>
