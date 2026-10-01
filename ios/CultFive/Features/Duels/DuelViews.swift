@@ -334,8 +334,12 @@ struct DuelResultView: View {
                                highlight: duel.winner == "me")
                         Text("–").font(.system(size: 40, weight: .black, design: .rounded)).foregroundStyle(.white.opacity(0.5))
                             .padding(.top, 34)
-                        column(duel.opponent?.handle ?? "?", score: duel.opponent?.score, ms: duel.opponent?.totalMs,
-                               marks: duel.theirAnswers ?? [], highlight: duel.winner == "opponent")
+                        if let pending = opponentPending {
+                            pendingColumn(duel.opponent?.handle ?? "?", text: pending)
+                        } else {
+                            column(duel.opponent?.handle ?? "?", score: duel.opponent?.score, ms: duel.opponent?.totalMs,
+                                   marks: duel.theirAnswers ?? [], highlight: duel.winner == "opponent")
+                        }
                     }
                     if duel.winner == "me" {
                         Label("+20 XP · +5 \(Brand.currencyPlural)", systemImage: "trophy.fill")
@@ -376,6 +380,29 @@ struct DuelResultView: View {
         }
     }
 
+    /// L'adversaire n'a pas fini : on n'affiche ni score partiel ni temps, seulement où il en est.
+    private var opponentPending: String? {
+        guard !duel.isFinished, duel.status != "expired" else { return nil }
+        guard let opponent = duel.opponent else { return "Pas encore d'adversaire" }
+        if opponent.answered >= duel.questionCount { return nil }
+        return opponent.answered == 0 ? "Pas encore joué" : "En train de jouer"
+    }
+
+    private func pendingColumn(_ handle: String, text: String) -> some View {
+        VStack(spacing: 8) {
+            Text(handle).font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(.white)
+                .lineLimit(1).minimumScaleFactor(0.6)
+            Image(systemName: "hourglass").font(.system(size: 40, weight: .bold)).foregroundStyle(.white.opacity(0.7))
+                .frame(height: 64)
+            Text(text).font(.cfFootnote.weight(.bold)).foregroundStyle(.white.opacity(0.8))
+                .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(Space.m)
+        .background(.white.opacity(0.1), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+
     private func column(_ handle: String, score: Int?, ms: Int?, marks: [Duel.Mark], highlight: Bool) -> some View {
         VStack(spacing: 8) {
             Text(handle).font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(.white)
@@ -406,6 +433,8 @@ struct DuelRow: View {
     var onOpen: () -> Void
     var onDecline: () -> Void = {}
 
+    @State private var confirmDecline = false
+
     private var status: (String, Color) {
         switch duel.winner {
         case "me": return ("Gagné \(duel.me.score)–\(duel.opponent?.score ?? 0)", .correct)
@@ -435,13 +464,23 @@ struct DuelRow: View {
                 }
                 Spacer(minLength: 0)
                 if duel.myTurn, !duel.iAmChallenger, duel.me.answered == 0 {
-                    Button("Refuser", action: onDecline).buttonStyle(TextLinkStyle(color: .inkSoft))
+                    // Petite pastille grise, et une confirmation : un doigt qui glisse ne refuse pas le défi.
+                    Button("Refuser") { confirmDecline = true }
+                        .font(.system(.caption, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color.inkSoft)
+                        .padding(.horizontal, 10).padding(.vertical, 5)
+                        .background(Color.paper, in: Capsule())
+                        .buttonStyle(.plain)
                 }
                 Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
             }
             .popCard(padding: 12)
         }
         .buttonStyle(.row)
+        .confirmationDialog("Refuser le défi de \(duel.opponent?.handle ?? "ton adversaire") ?",
+                            isPresented: $confirmDecline, titleVisibility: .visible) {
+            Button("Refuser le défi", role: .destructive, action: onDecline)
+        }
     }
 }
 

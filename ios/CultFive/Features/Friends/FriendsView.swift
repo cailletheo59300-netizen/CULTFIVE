@@ -192,16 +192,22 @@ struct FriendsView: View {
             VStack(alignment: .leading, spacing: Space.s) {
                 Text("À toi de jouer").labelCaps()
                 ForEach(incoming) { request in
-                    HStack {
+                    // Deux boutons de même taille, bien séparés : refuser ne se fait pas par erreur.
+                    VStack(alignment: .leading, spacing: Space.m) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(request.handle).font(.cfTitle3)
                             Text("veut être ton ami").font(.cfFootnote).foregroundStyle(Color.inkSoft)
                         }
-                        Spacer()
-                        Button("Refuser") { respond(request, accept: false) }.buttonStyle(.textLink)
-                        Button("Accepter") { respond(request, accept: true) }
-                            .buttonStyle(InkButtonStyle(arrow: false))
-                            .fixedSize()
+                        HStack(spacing: Space.m) {
+                            Button { respond(request, accept: false) } label: {
+                                Text("Refuser").frame(maxWidth: .infinity, minHeight: 44)
+                            }
+                            .buttonStyle(SmallPillStyle(fill: Color.paper, text: Color.inkSoft))
+                            Button { respond(request, accept: true) } label: {
+                                Text("Accepter").frame(maxWidth: .infinity, minHeight: 44)
+                            }
+                            .buttonStyle(SmallPillStyle(fill: Color.brand, text: .white))
+                        }
                     }
                     .popCard(padding: 14)
                 }
@@ -343,5 +349,23 @@ struct AccountNudge: View {
         .sheet(isPresented: $showAccount) {
             AccountSheet()
         }
+    }
+}
+
+/// Petit bouton pilule (accepter / refuser) : même taille pour les deux choix.
+struct SmallPillStyle: ButtonStyle {
+    let fill: Color
+    let text: Color
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.system(.callout, design: .rounded).weight(.heavy))
+            .foregroundStyle(text)
+            .padding(.horizontal, 14)
+            .background(fill, in: Capsule())
+            .opacity(configuration.isPressed ? 0.6 : 1)
+            .scaleEffect(configuration.isPressed ? 0.97 : 1)
+            .animation(Motion.press, value: configuration.isPressed)
+            .contentShape(Capsule())
     }
 }
