@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : 2026-09-29 (lot 1 : clair par défaut, réglages, règle de l'Elo, 0.10.0)_
+_Dernière mise à jour : 2026-10-01 (version 1.0.0 envoyée à Apple, build 30 ; plan 1.1 « difficulté et progression » décidé)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -51,11 +51,17 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 - À régler dans le tableau de bord Supabase : connexions anonymes, modèle d'e-mail avec le code à 6 chiffres, connexion Apple (après le compte développeur).
 
 ## Prochaines étapes
-1. **Propriétaire** : créer le projet Supabase (Auth anonyme + Apple + e-mail), `db push`, seed, renseigner `Secrets.xcconfig`, lancer sur iPhone → retours.
-2. Contenu : viser ≥ 150 par pilier et étoffer les domaines surprise (outil IA + validation).
-3. Admin web (RPC prêtes) + Edge Function de génération IA (lots en `review`).
-4. Polish après retours (animations, micro-copies, accessibilité VoiceOver sur appareil).
-5. App Store : pages légales, AASA, métadonnées, captures.
+**Sortie 1.0.0 (en cours, 2026-10-01)** : fiche App Store remplie (textes et marche à suivre dans `APP_STORE.md`, captures dans `docs/screenshots/app-store` et `app-store-6.5`), statut de commerçant DSA déclaré (adresse modifiable dans App Store Connect → Business). Build 29 refusé au contrôle automatique (ITMS-91064 : `NSPrivacyTracking` vrai sans domaines) ; corrigé dans le build 30 (le suivi d'AdMob est déclaré par le SDK Google). Après publication : relier l'app dans AdMob, vérifier les premiers push et l'onglet Santé de l'admin.
+
+**Version 1.1 « difficulté et progression »** (décidée par le propriétaire, voir D-039 ; étapes détaillées à présenter avant de coder) :
+1. Recalibrer toute la banque : les estimations sont trop optimistes (≈ 11 points d'écart mesurés sur 723 réponses classées : « facile » prévu 77 %, réel 66 % ; « moyen » 62 % → 51 %). Correction globale puis recalcul hebdomadaire avec les vraies réponses ; l'avis des joueurs prend le dessus plus vite sur l'estimation de départ (sinon l'Elo de tous baisse lentement).
+2. Réévaluer les 6 306 questions avec une grille à exemples concrets (ex. capitales : facile Italie, Espagne, Japon ; moyen Portugal, Hongrie, Colombie, Croatie ; difficile Biélorussie, Kirghizistan). 87 capitales sont aujourd'hui « faciles » dont Minsk, Bogota, Zagreb.
+3. Ajouter de la « culture de base » : classiques accessibles à tous, ni bêtes ni pièges, en quantité modérée (le tiers accessible de chaque partie).
+4. Plus de variété en géographie (284 questions de capitales sur 1 562).
+5. Mélange dans chaque partie classée autour du niveau du joueur (≈ 3 accessibles, 5 à son niveau, 2 qui piquent sur 10), adaptation douce conservée ; viser ≈ 70 % de réussite réelle (aujourd'hui ≈ 55 %).
+6. Départ de l'Elo à **500** (placement rapide vers le vrai niveau), rangs et trophées de maîtrise redécoupés (seuils à valider), joueurs existants décalés sans perte de place relative.
+7. Retirer la pastille Facile / Moyen / Difficile des questions.
+8. Petits correctifs : boutons d'aide en grille de 2 colonnes (les libellés se coupent sur plusieurs lignes) ; tickets des coffres redessinés (le « 50/50 » est coupé dans le ticket bleu).
 
 ## Commandes utiles
 `scripts/test-db.sh` · `scripts/gen-fixtures.sh` (après test-db) · `node scripts/build-seed.mjs` · `python3 scripts/make-icon.py <sortie>` · `cd ios && xcodegen`
