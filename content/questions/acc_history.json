@@ -1,0 +1,564 @@
+[
+ {
+  "key": "acc-history-001",
+  "concept": "history.contemporary.acc_louis_xvi",
+  "label": "Louis XVI guillotiné",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quel roi de France a été guillotiné en 1793, pendant la Révolution ?",
+  "options": [
+   "Louis XVI*",
+   "Louis XIV",
+   "Henri IV",
+   "Charles X"
+  ],
+  "explanation": "Jugé par la Convention, Louis XVI est exécuté le 21 janvier 1793, place de la Révolution (aujourd'hui place de la Concorde)."
+ },
+ {
+  "key": "acc-history-002",
+  "concept": "history.contemporary.acc_marie_antoinette",
+  "label": "Marie-Antoinette",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle reine de France a été guillotinée en 1793, quelques mois après son mari ?",
+  "options": [
+   "Marie-Antoinette*",
+   "Catherine de Médicis",
+   "Anne d'Autriche",
+   "Joséphine de Beauharnais"
+  ],
+  "explanation": "Épouse de Louis XVI, née en Autriche, elle est exécutée le 16 octobre 1793."
+ },
+ {
+  "key": "acc-history-003",
+  "concept": "history.contemporary.acc_sacre_napoleon",
+  "label": "Sacre de Napoléon",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Qui s'est fait sacrer empereur des Français en 1804, à Notre-Dame de Paris ?",
+  "options": [
+   "Napoléon Bonaparte*",
+   "Louis XVIII",
+   "Charlemagne",
+   "Louis-Philippe"
+  ],
+  "explanation": "Le 2 décembre 1804, Napoléon se couronne lui-même devant le pape Pie VII. Le tableau de David immortalise la scène."
+ },
+ {
+  "key": "acc-history-004",
+  "concept": "history.contemporary.acc_sainte_helene",
+  "label": "Exil de Napoléon",
+  "type": "true_false",
+  "difficulty": 32,
+  "prompt": "Napoléon est mort en exil sur l'île de Sainte-Hélène, au milieu de l'Atlantique.",
+  "answer": true,
+  "explanation": "Après Waterloo (1815), les Anglais l'envoient sur cette île isolée de l'Atlantique Sud, où il meurt en 1821."
+ },
+ {
+  "key": "acc-history-005",
+  "concept": "history.middle_ages.acc_cent_ans_adversaire",
+  "label": "Guerre de Cent Ans",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Contre quel pays la France a-t-elle mené la guerre de Cent Ans ?",
+  "options": [
+   "L'Angleterre*",
+   "L'Espagne",
+   "L'Allemagne",
+   "L'Italie"
+  ],
+  "explanation": "De 1337 à 1453, les rois de France et d'Angleterre se disputent la couronne de France. C'est l'époque de Jeanne d'Arc."
+ },
+ {
+  "key": "acc-history-006",
+  "concept": "history.contemporary.acc_armistice_1918",
+  "label": "11 novembre 1918",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "L'armistice du 11 novembre 1918 marque la fin de…",
+  "options": [
+   "la Première Guerre mondiale*",
+   "la Seconde Guerre mondiale",
+   "la guerre de Cent Ans",
+   "la Révolution française"
+  ],
+  "explanation": "Signé à Rethondes, dans la forêt de Compiègne, il met fin aux combats de la Grande Guerre. Le 11 Novembre est un jour férié en France."
+ },
+ {
+  "key": "acc-history-007",
+  "concept": "history.contemporary.acc_hiroshima",
+  "label": "Hiroshima",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Sur quelle ville japonaise la première bombe atomique a-t-elle été larguée, en 1945 ?",
+  "options": [
+   "Hiroshima*",
+   "Tokyo",
+   "Osaka",
+   "Kyoto"
+  ],
+  "explanation": "Le 6 août 1945. Une deuxième bombe frappe Nagasaki trois jours plus tard ; le Japon capitule le 2 septembre."
+ },
+ {
+  "key": "acc-history-008",
+  "concept": "history.contemporary.acc_debarquement",
+  "label": "Débarquement de 1944",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Le 6 juin 1944, les Alliés débarquent dans quelle région française ?",
+  "options": [
+   "La Normandie*",
+   "La Bretagne",
+   "La Provence",
+   "Le Nord"
+  ],
+  "explanation": "C'est le « Jour J » : plus de 150 000 soldats débarquent sur les plages normandes (Omaha, Utah, Juno…)."
+ },
+ {
+  "key": "acc-history-009",
+  "concept": "history.contemporary.acc_appel_18_juin",
+  "label": "Appel du 18 juin",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Qui lance l'appel du 18 juin 1940 à la radio de Londres ?",
+  "options": [
+   "Charles de Gaulle*",
+   "Philippe Pétain",
+   "Jean Moulin",
+   "Winston Churchill"
+  ],
+  "explanation": "Depuis la BBC, le général de Gaulle appelle les Français à continuer le combat : c'est l'acte fondateur de la France libre."
+ },
+ {
+  "key": "acc-history-010",
+  "concept": "history.modern.acc_roi_soleil",
+  "label": "Roi-Soleil",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel roi de France était surnommé le Roi-Soleil ?",
+  "options": [
+   "Louis XIV*",
+   "Louis XVI",
+   "François Ier",
+   "Henri IV"
+  ],
+  "explanation": "Il a choisi le soleil pour emblème. Son règne (1643-1715) est le plus long de l'histoire de France : 72 ans."
+ },
+ {
+  "key": "acc-history-011",
+  "concept": "history.antiquity.acc_lascaux",
+  "label": "Grotte de Lascaux",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a peint les animaux de la grotte de Lascaux, en Dordogne ?",
+  "options": [
+   "Des hommes de la Préhistoire*",
+   "Des moines du Moyen Âge",
+   "Des soldats romains",
+   "Des peintres de la Renaissance"
+  ],
+  "explanation": "Ces peintures ont environ 18 000 ans. Chevaux, taureaux et cerfs y sont représentés par des chasseurs-cueilleurs."
+ },
+ {
+  "key": "acc-history-012",
+  "concept": "history.antiquity.acc_pyramides_role",
+  "label": "Pyramides d'Égypte",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "À quoi servaient les grandes pyramides de Gizeh ?",
+  "options": [
+   "De tombeaux pour des pharaons*",
+   "De temples pour prier le soleil",
+   "D'entrepôts à blé",
+   "De phares pour le Nil"
+  ],
+  "explanation": "Elles abritaient les sépultures des pharaons Khéops, Khéphren et Mykérinos, il y a environ 4 500 ans."
+ },
+ {
+  "key": "acc-history-013",
+  "concept": "history.contemporary.acc_statue_liberte_don",
+  "label": "Statue de la Liberté",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "Quel pays a offert la statue de la Liberté aux États-Unis ?",
+  "options": [
+   "La France*",
+   "Le Royaume-Uni",
+   "L'Espagne",
+   "L'Italie"
+  ],
+  "explanation": "Sculptée par Bartholdi, avec une structure de Gustave Eiffel, elle est inaugurée à New York en 1886."
+ },
+ {
+  "key": "acc-history-014",
+  "concept": "history.contemporary.acc_kennedy",
+  "label": "Assassinat de Kennedy",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel président américain a été assassiné à Dallas en 1963 ?",
+  "options": [
+   "John F. Kennedy*",
+   "Abraham Lincoln",
+   "Richard Nixon",
+   "Franklin Roosevelt"
+  ],
+  "explanation": "Le 22 novembre 1963, il est tué par balle pendant un défilé en voiture découverte. Lincoln, lui, avait été assassiné en 1865."
+ },
+ {
+  "key": "acc-history-015",
+  "concept": "history.middle_ages.acc_vikings_origine",
+  "label": "Origine des Vikings",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "D'où venaient les Vikings ?",
+  "options": [
+   "De Scandinavie*",
+   "D'Écosse",
+   "D'Espagne",
+   "De Russie"
+  ],
+  "explanation": "Ils venaient de l'actuelle Norvège, de Suède et du Danemark, et ont navigué jusqu'en Amérique du Nord."
+ },
+ {
+  "key": "acc-history-016",
+  "concept": "history.antiquity.acc_cleopatre_reine",
+  "label": "Cléopâtre",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Cléopâtre était une reine romaine.",
+  "answer": false,
+  "explanation": "Cléopâtre VII était reine d'Égypte. Elle a été l'alliée, puis l'amante, de deux Romains : Jules César et Marc Antoine."
+ },
+ {
+  "key": "acc-history-017",
+  "concept": "history.contemporary.acc_revolution_annee",
+  "label": "Début de la Révolution",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "En quelle année commence la Révolution française ?",
+  "answer": 1789,
+  "explanation": "1789 : réunion des États généraux, prise de la Bastille le 14 juillet, Déclaration des droits de l'homme en août."
+ },
+ {
+  "key": "acc-history-018",
+  "concept": "history.contemporary.acc_jean_moulin",
+  "label": "Jean Moulin",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel héros de la Résistance a unifié les mouvements résistants, avant d'être arrêté en 1943 ?",
+  "options": [
+   "Jean Moulin*",
+   "Charles de Gaulle",
+   "Philippe Pétain",
+   "Jean Jaurès"
+  ],
+  "explanation": "Envoyé par de Gaulle, il crée le Conseil national de la Résistance. Arrêté à Caluire, il meurt sous la torture. Ses cendres sont au Panthéon."
+ },
+ {
+  "key": "acc-history-019",
+  "concept": "history.contemporary.acc_ordre_dirigeants",
+  "label": "Ordre des dirigeants",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Range ces dirigeants du plus ancien au plus récent.",
+  "items": [
+   "Charlemagne",
+   "Louis XIV",
+   "Napoléon Ier",
+   "Charles de Gaulle"
+  ],
+  "explanation": "Charlemagne : empereur en 800 ; Louis XIV : 1643-1715 ; Napoléon Ier : 1804-1815 ; de Gaulle : président de 1959 à 1969."
+ },
+ {
+  "key": "acc-history-020",
+  "concept": "history.modern.acc_ordre_periodes",
+  "label": "Grandes périodes",
+  "type": "ordering",
+  "difficulty": 28,
+  "prompt": "Range ces grandes périodes de l'histoire dans l'ordre.",
+  "items": [
+   "La Préhistoire",
+   "L'Antiquité",
+   "Le Moyen Âge",
+   "Les Temps modernes",
+   "L'époque contemporaine"
+  ],
+  "explanation": "L'Antiquité commence avec l'écriture, le Moyen Âge avec la chute de Rome (476), les Temps modernes vers 1492 et l'époque contemporaine en 1789."
+ },
+ {
+  "key": "acc-history-021",
+  "concept": "history.modern.acc_ordre_inventions",
+  "label": "Ordre des inventions",
+  "type": "ordering",
+  "difficulty": 32,
+  "prompt": "Range ces inventions de la plus ancienne à la plus récente.",
+  "items": [
+   "L'imprimerie",
+   "La machine à vapeur",
+   "Le téléphone",
+   "Internet"
+  ],
+  "explanation": "Imprimerie de Gutenberg vers 1450, machine à vapeur au XVIIIe siècle, téléphone en 1876, Internet à partir des années 1970-1990."
+ },
+ {
+  "key": "acc-history-022",
+  "concept": "history.antiquity.acc_cesar_gaule",
+  "label": "Conquête de la Gaule",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quel général romain a conquis la Gaule ?",
+  "options": [
+   "Jules César*",
+   "Néron",
+   "Auguste",
+   "Hannibal"
+  ],
+  "explanation": "De 58 à 51 av. J.-C. Sa victoire à Alésia sur Vercingétorix, en 52 av. J.-C., est décisive."
+ },
+ {
+  "key": "acc-history-023",
+  "concept": "history.middle_ages.acc_croisades",
+  "label": "Croisades",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on les expéditions militaires chrétiennes vers Jérusalem, au Moyen Âge ?",
+  "options": [
+   "Les croisades*",
+   "Les invasions barbares",
+   "Les grandes découvertes",
+   "Les guerres de Religion"
+  ],
+  "explanation": "Il y en eut huit principales, de 1096 à 1270. Les participants portaient une croix cousue sur leurs vêtements."
+ },
+ {
+  "key": "acc-history-024",
+  "concept": "history.modern.acc_renaissance_pays",
+  "label": "Berceau de la Renaissance",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Dans quel pays la Renaissance est-elle née, au XVe siècle ?",
+  "options": [
+   "L'Italie*",
+   "La France",
+   "L'Angleterre",
+   "L'Espagne"
+  ],
+  "explanation": "Elle naît notamment à Florence, avec des artistes comme Léonard de Vinci et Michel-Ange, puis gagne toute l'Europe."
+ },
+ {
+  "key": "acc-history-025",
+  "concept": "history.contemporary.acc_abolition_esclavage",
+  "label": "Abolition de l'esclavage",
+  "type": "true_false",
+  "difficulty": 42,
+  "prompt": "La France a aboli définitivement l'esclavage en 1848.",
+  "answer": true,
+  "explanation": "Le décret du 27 avril 1848, porté par Victor Schœlcher, l'abolit dans toutes les colonies. Une première abolition de 1794 avait été annulée par Napoléon en 1802."
+ },
+ {
+  "key": "acc-history-026",
+  "concept": "history.contemporary.acc_mai_68",
+  "label": "Mai 68",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "En mai 1968, de grandes manifestations et grèves paralysent la France. Qui les a lancées ?",
+  "options": [
+   "Des étudiants, rejoints par les ouvriers*",
+   "L'armée",
+   "Les agriculteurs seuls",
+   "Le gouvernement"
+  ],
+  "explanation": "Parti des universités, le mouvement gagne les usines : jusqu'à 7 millions de grévistes. Il change durablement la société française."
+ },
+ {
+  "key": "acc-history-027",
+  "concept": "history.modern.acc_chateaux_loire",
+  "label": "Châteaux de la Loire",
+  "type": "true_false",
+  "difficulty": 28,
+  "prompt": "Les châteaux de la Loire ont été construits par les Romains.",
+  "answer": false,
+  "explanation": "La plupart datent de la Renaissance (XVe-XVIe siècles) : Chambord, Chenonceau, Amboise… Les rois de France aimaient y séjourner."
+ },
+ {
+  "key": "acc-history-028",
+  "concept": "history.contemporary.acc_gagarine",
+  "label": "Premier homme dans l'espace",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "Quel pays a envoyé le premier homme dans l'espace, en 1961 ?",
+  "options": [
+   "L'URSS*",
+   "Les États-Unis",
+   "La France",
+   "La Chine"
+  ],
+  "explanation": "Le Soviétique Youri Gagarine fait le tour de la Terre le 12 avril 1961. Les Américains répondront en marchant sur la Lune en 1969."
+ },
+ {
+  "key": "acc-history-029",
+  "concept": "history.contemporary.acc_guerre_froide",
+  "label": "Guerre froide",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on la longue rivalité entre les États-Unis et l'URSS, de 1947 à 1991 ?",
+  "options": [
+   "La guerre froide*",
+   "La guerre de Cent Ans",
+   "La Grande Guerre",
+   "La guerre des étoiles"
+  ],
+  "explanation": "« Froide » car les deux puissances ne se sont jamais affrontées directement : course aux armes, à l'espace et à l'influence."
+ },
+ {
+  "key": "acc-history-030",
+  "concept": "history.contemporary.acc_euro_franc",
+  "label": "Arrivée de l'euro",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En 2002, quelle monnaie a remplacé le franc en France ?",
+  "options": [
+   "L'euro*",
+   "Le dollar",
+   "L'écu",
+   "La livre"
+  ],
+  "explanation": "Les pièces et billets en euros circulent depuis le 1er janvier 2002. Un euro valait environ 6,56 francs."
+ },
+ {
+  "key": "acc-history-031",
+  "concept": "history.modern.acc_tsar",
+  "label": "Tsar",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "Dans quel pays le souverain portait-il le titre de tsar ?",
+  "options": [
+   "La Russie*",
+   "L'Angleterre",
+   "L'Espagne",
+   "Le Japon"
+  ],
+  "explanation": "Le mot « tsar » vient du latin « Caesar ». Le dernier tsar, Nicolas II, est renversé en 1917."
+ },
+ {
+  "key": "acc-history-032",
+  "concept": "history.contemporary.acc_peine_de_mort",
+  "label": "Abolition de la peine de mort",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'a aboli la France en 1981 ?",
+  "options": [
+   "La peine de mort*",
+   "Le service militaire",
+   "L'esclavage",
+   "La monarchie"
+  ],
+  "explanation": "La loi portée par Robert Badinter, ministre de la Justice, est votée en octobre 1981. L'esclavage, lui, avait été aboli en 1848."
+ },
+ {
+  "key": "acc-history-033",
+  "concept": "history.contemporary.acc_elisabeth_ii",
+  "label": "Élisabeth II",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle reine a régné plus de 70 ans sur le Royaume-Uni ?",
+  "options": [
+   "Élisabeth II*",
+   "Victoria",
+   "Marie Stuart",
+   "Anne Boleyn"
+  ],
+  "explanation": "De 1952 à sa mort en 2022 : 70 ans et 7 mois, le plus long règne de l'histoire britannique."
+ },
+ {
+  "key": "acc-history-034",
+  "concept": "history.modern.acc_henri_iv_poule",
+  "label": "Henri IV",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Selon la tradition, quel roi voulait que chaque paysan puisse mettre « la poule au pot » le dimanche ?",
+  "options": [
+   "Henri IV*",
+   "Louis XIV",
+   "Saint Louis",
+   "François Ier"
+  ],
+  "explanation": "Roi de 1589 à 1610, Henri IV est resté dans les mémoires comme un roi proche du peuple. Il a aussi signé l'édit de Nantes."
+ },
+ {
+  "key": "acc-history-035",
+  "concept": "history.antiquity.acc_jo_antiques",
+  "label": "Jeux olympiques antiques",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel peuple a inventé les Jeux olympiques, dans l'Antiquité ?",
+  "options": [
+   "Les Grecs*",
+   "Les Romains",
+   "Les Égyptiens",
+   "Les Gaulois"
+  ],
+  "explanation": "Les premiers Jeux auraient eu lieu en 776 av. J.-C. à Olympie, en l'honneur de Zeus. Ils ont été relancés en 1896."
+ },
+ {
+  "key": "acc-history-036",
+  "concept": "history.modern.acc_colomb_indes",
+  "label": "But de Christophe Colomb",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Christophe Colomb cherchait une nouvelle route vers les Indes.",
+  "answer": true,
+  "explanation": "Il voulait atteindre l'Asie en naviguant vers l'ouest. Il est arrivé aux Antilles en 1492, persuadé d'être en Inde, d'où le nom d'« Indiens »."
+ },
+ {
+  "key": "acc-history-037",
+  "concept": "history.antiquity.acc_dinosaures_hommes",
+  "label": "Dinosaures et hommes",
+  "type": "true_false",
+  "difficulty": 18,
+  "prompt": "Les premiers hommes ont côtoyé les dinosaures.",
+  "answer": false,
+  "explanation": "Les grands dinosaures ont disparu il y a 66 millions d'années ; les premiers humains (genre Homo) apparaissent il y a moins de 3 millions d'années."
+ },
+ {
+  "key": "acc-history-038",
+  "concept": "history.contemporary.acc_mlk_reve",
+  "label": "« I have a dream »",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a prononcé le célèbre discours « I have a dream », en 1963 ?",
+  "options": [
+   "Martin Luther King*",
+   "Nelson Mandela",
+   "Barack Obama",
+   "Malcolm X"
+  ],
+  "explanation": "Le pasteur américain le prononce à Washington devant 250 000 personnes, pour l'égalité des droits entre Noirs et Blancs. Il a reçu le prix Nobel de la paix en 1964."
+ },
+ {
+  "key": "acc-history-039",
+  "concept": "history.contemporary.acc_duree_ww2",
+  "label": "Durée de la Seconde Guerre mondiale",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien d'années la Seconde Guerre mondiale a-t-elle duré, à peu près ?",
+  "answer": 6,
+  "unit": "ans",
+  "explanation": "De septembre 1939 (invasion de la Pologne) à septembre 1945 (capitulation du Japon)."
+ },
+ {
+  "key": "acc-history-040",
+  "concept": "history.middle_ages.acc_serf",
+  "label": "Serf",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Au Moyen Âge, comment appelait-on le paysan attaché à la terre d'un seigneur ?",
+  "options": [
+   "Un serf*",
+   "Un chevalier",
+   "Un vassal",
+   "Un bourgeois"
+  ],
+  "explanation": "Le serf ne pouvait pas quitter la terre de son seigneur et lui devait des redevances et des corvées."
+ }
+]

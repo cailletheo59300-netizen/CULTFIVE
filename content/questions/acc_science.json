@@ -1,0 +1,578 @@
+[
+ {
+  "key": "acc-science-001",
+  "concept": "science.space.acc_lune_lumiere",
+  "label": "Lumière de la Lune",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "La Lune brille parce qu'elle produit sa propre lumière.",
+  "answer": false,
+  "explanation": "La Lune ne fait que renvoyer la lumière du Soleil, comme un miroir géant mais très sombre."
+ },
+ {
+  "key": "acc-science-002",
+  "concept": "science.human_body.acc_respirer_oxygene",
+  "label": "Respirer",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel gaz notre corps doit-il absorber en respirant pour vivre ?",
+  "options": [
+   "L'oxygène*",
+   "Le dioxyde de carbone",
+   "L'hélium",
+   "L'azote"
+  ],
+  "explanation": "Les poumons font passer l'oxygène de l'air dans le sang, qui l'apporte à toutes les cellules."
+ },
+ {
+  "key": "acc-science-003",
+  "concept": "science.space.acc_soleil_hydrogene",
+  "label": "Composition du Soleil",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quoi le Soleil est-il surtout composé ?",
+  "options": [
+   "D'hydrogène*",
+   "De roche en fusion",
+   "De fer",
+   "D'oxygène"
+  ],
+  "explanation": "Environ trois quarts d'hydrogène et un quart d'hélium. Dans son cœur, l'hydrogène se transforme en hélium : c'est ce qui le fait briller."
+ },
+ {
+  "key": "acc-science-004",
+  "concept": "science.chemistry.acc_h2o",
+  "label": "H₂O",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle substance a pour formule chimique H₂O ?",
+  "options": [
+   "L'eau*",
+   "Le sel",
+   "L'oxygène",
+   "Le sucre"
+  ],
+  "explanation": "Deux atomes d'hydrogène (H) et un atome d'oxygène (O) forment une molécule d'eau."
+ },
+ {
+  "key": "acc-science-005",
+  "concept": "science.chemistry.acc_feu_oxygene",
+  "label": "Ce qu'il faut au feu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pourquoi une bougie s'éteint-elle si on la couvre avec un verre ?",
+  "options": [
+   "Elle n'a plus d'oxygène*",
+   "Le verre la refroidit",
+   "La cire fond trop vite",
+   "La lumière ne peut plus sortir"
+  ],
+  "explanation": "Un feu a besoin de combustible, de chaleur et d'oxygène. Sous le verre, l'oxygène s'épuise vite."
+ },
+ {
+  "key": "acc-science-006",
+  "concept": "science.physics.acc_buee_hiver",
+  "label": "Buée en hiver",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi voit-on un petit nuage devant sa bouche quand on respire en hiver ?",
+  "options": [
+   "La vapeur d'eau de notre souffle se refroidit et se condense*",
+   "On rejette de la fumée",
+   "L'air froid gèle dans la bouche",
+   "On respire plus fort"
+  ],
+  "explanation": "Notre souffle contient de la vapeur d'eau invisible. Au contact de l'air froid, elle forme de minuscules gouttelettes : un vrai petit nuage."
+ },
+ {
+  "key": "acc-science-007",
+  "concept": "science.space.acc_jour_24h",
+  "label": "Rotation de la Terre",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Combien de temps met la Terre pour faire un tour sur elle-même ?",
+  "options": [
+   "Environ 24 heures*",
+   "Environ 1 heure",
+   "Environ 1 semaine",
+   "Environ 1 an"
+  ],
+  "explanation": "C'est ce qui fait alterner le jour et la nuit. Le tour du Soleil, lui, prend un an."
+ },
+ {
+  "key": "acc-science-008",
+  "concept": "science.human_body.acc_organes_roles",
+  "label": "Organes et rôles",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque organe à son rôle.",
+  "pairs": [
+   [
+    "Le cœur",
+    "Pomper le sang"
+   ],
+   [
+    "Les poumons",
+    "Respirer"
+   ],
+   [
+    "L'estomac",
+    "Digérer"
+   ],
+   [
+    "Le cerveau",
+    "Commander le corps"
+   ]
+  ],
+  "explanation": "Quatre organes vitaux, chacun avec sa mission principale."
+ },
+ {
+  "key": "acc-science-009",
+  "concept": "science.physics.acc_etats_eau",
+  "label": "États de l'eau",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque forme de l'eau à son état.",
+  "pairs": [
+   [
+    "La glace",
+    "Solide"
+   ],
+   [
+    "L'eau du robinet",
+    "Liquide"
+   ],
+   [
+    "La vapeur d'eau",
+    "Gaz"
+   ]
+  ],
+  "explanation": "La même substance change d'état selon la température : elle gèle à 0 °C et bout à 100 °C."
+ },
+ {
+  "key": "acc-science-010",
+  "concept": "science.chemistry.acc_azote_air",
+  "label": "Composition de l'air",
+  "type": "mcq",
+  "difficulty": 42,
+  "prompt": "Quel gaz forme la plus grande partie de l'air que l'on respire ?",
+  "options": [
+   "L'azote*",
+   "L'oxygène",
+   "Le dioxyde de carbone",
+   "L'hydrogène"
+  ],
+  "explanation": "L'air contient environ 78 % d'azote et 21 % d'oxygène. Le dioxyde de carbone n'en représente qu'une infime partie."
+ },
+ {
+  "key": "acc-science-011",
+  "concept": "science.physics.acc_eau_gele",
+  "label": "Gel de l'eau",
+  "type": "numeric",
+  "difficulty": 12,
+  "prompt": "À quelle température (en °C) l'eau pure gèle-t-elle ?",
+  "answer": 0,
+  "unit": "°C",
+  "explanation": "L'échelle Celsius a été construite ainsi : 0 °C pour la glace qui fond, 100 °C pour l'eau qui bout."
+ },
+ {
+  "key": "acc-science-012",
+  "concept": "science.biology.acc_nocturne",
+  "label": "Animal nocturne",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment appelle-t-on un animal qui est surtout actif la nuit ?",
+  "options": [
+   "Nocturne*",
+   "Diurne",
+   "Migrateur",
+   "Herbivore"
+  ],
+  "explanation": "Chouettes, chauves-souris et hérissons sont nocturnes. Les animaux actifs le jour sont dits diurnes."
+ },
+ {
+  "key": "acc-science-013",
+  "concept": "science.human_body.acc_coeur_muscle",
+  "label": "Le cœur, un muscle",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Le cœur est un muscle.",
+  "answer": true,
+  "explanation": "C'est un muscle creux qui se contracte environ 100 000 fois par jour, sans jamais se reposer."
+ },
+ {
+  "key": "acc-science-014",
+  "concept": "science.chemistry.acc_huile_eau",
+  "label": "L'huile et l'eau",
+  "type": "true_false",
+  "difficulty": 18,
+  "prompt": "L'huile se mélange parfaitement avec l'eau.",
+  "answer": false,
+  "explanation": "Elles ne se mélangent pas : l'huile, plus légère, remonte et forme une couche à la surface."
+ },
+ {
+  "key": "acc-science-015",
+  "concept": "science.chemistry.acc_sel_routes",
+  "label": "Sel sur les routes",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pourquoi met-on du sel sur les routes en hiver ?",
+  "options": [
+   "Pour faire fondre la glace*",
+   "Pour rendre la route plus colorée",
+   "Pour nourrir les sols",
+   "Pour sécher la route"
+  ],
+  "explanation": "L'eau salée gèle à une température plus basse que l'eau pure : le sel empêche la glace de se former jusqu'à environ −10 °C."
+ },
+ {
+  "key": "acc-science-016",
+  "concept": "science.space.acc_lune_unique",
+  "label": "Satellite de la Terre",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de satellites naturels la Terre possède-t-elle ?",
+  "answer": 1,
+  "explanation": "Un seul : la Lune. Mars en a deux, Jupiter et Saturne plusieurs dizaines."
+ },
+ {
+  "key": "acc-science-017",
+  "concept": "science.physics.acc_barometre",
+  "label": "Baromètre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que mesure un baromètre ?",
+  "options": [
+   "La pression de l'air*",
+   "La température",
+   "La vitesse du vent",
+   "L'humidité"
+  ],
+  "explanation": "Quand la pression baisse, le mauvais temps arrive souvent ; quand elle monte, le beau temps revient."
+ },
+ {
+  "key": "acc-science-018",
+  "concept": "science.space.acc_etoiles_jour",
+  "label": "Étoiles en plein jour",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Les étoiles sont toujours dans le ciel en plein jour, mais la lumière du Soleil nous empêche de les voir.",
+  "answer": true,
+  "explanation": "Le ciel éclairé par le Soleil est bien plus lumineux que les étoiles lointaines. Lors d'une éclipse totale, on peut en apercevoir quelques-unes en plein jour."
+ },
+ {
+  "key": "acc-science-019",
+  "concept": "science.chemistry.acc_helium_ballon",
+  "label": "Ballons à l'hélium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel gaz sont remplis les ballons de fête qui s'envolent tout seuls ?",
+  "options": [
+   "L'hélium*",
+   "L'oxygène",
+   "Le dioxyde de carbone",
+   "L'air"
+  ],
+  "explanation": "L'hélium est plus léger que l'air, donc le ballon monte. C'est aussi lui qui rend la voix aiguë quand on l'inspire."
+ },
+ {
+  "key": "acc-science-020",
+  "concept": "science.physics.acc_eau_gonfle",
+  "label": "L'eau qui gèle",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que se passe-t-il pour une bouteille d'eau pleine oubliée au congélateur ?",
+  "options": [
+   "Elle peut éclater, car l'eau gonfle en gelant*",
+   "Elle se vide toute seule",
+   "Elle rétrécit",
+   "Rien du tout"
+  ],
+  "explanation": "En gelant, l'eau prend environ 9 % de place en plus. C'est aussi ce qui fait éclater certaines roches en hiver."
+ },
+ {
+  "key": "acc-science-021",
+  "concept": "science.physics.acc_plumes_plomb",
+  "label": "Plumes et plomb",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Un kilo de plumes pèse autant qu'un kilo de plomb.",
+  "answer": true,
+  "explanation": "Un kilo reste un kilo ! Les plumes prennent simplement beaucoup plus de place."
+ },
+ {
+  "key": "acc-science-022",
+  "concept": "science.biology.acc_chlorophylle",
+  "label": "Chlorophylle",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui donne leur couleur verte aux feuilles ?",
+  "options": [
+   "La chlorophylle*",
+   "L'eau",
+   "Le sucre",
+   "La sève"
+  ],
+  "explanation": "Ce pigment capte la lumière du Soleil pour la photosynthèse. En automne, il disparaît et laisse voir le jaune et le rouge."
+ },
+ {
+  "key": "acc-science-023",
+  "concept": "science.space.acc_annee_terre",
+  "label": "Tour du Soleil",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Combien de temps met la Terre pour faire le tour du Soleil ?",
+  "options": [
+   "Environ un an*",
+   "Environ un jour",
+   "Environ un mois",
+   "Environ dix ans"
+  ],
+  "explanation": "Environ 365 jours et 6 heures, d'où une année bissextile tous les quatre ans pour rattraper le décalage."
+ },
+ {
+  "key": "acc-science-024",
+  "concept": "science.chemistry.acc_bicarbonate_vinaigre",
+  "label": "Bicarbonate et vinaigre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que se passe-t-il quand on verse du vinaigre sur du bicarbonate de soude ?",
+  "options": [
+   "Ça mousse en libérant un gaz*",
+   "Ça devient solide",
+   "Ça prend feu",
+   "Rien du tout"
+  ],
+  "explanation": "La réaction produit du dioxyde de carbone : c'est le principe des volcans en carton des expériences d'école."
+ },
+ {
+  "key": "acc-science-025",
+  "concept": "science.physics.acc_celsius",
+  "label": "Échelle Celsius",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Le degré utilisé en France pour la température porte le nom de quel savant ?",
+  "options": [
+   "Celsius*",
+   "Fahrenheit",
+   "Kelvin",
+   "Newton"
+  ],
+  "explanation": "Anders Celsius, astronome suédois du XVIIIe siècle. Les Américains utilisent plutôt les degrés Fahrenheit."
+ },
+ {
+  "key": "acc-science-026",
+  "concept": "science.human_body.acc_pouls_repos",
+  "label": "Battements du cœur",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de fois le cœur d'un adulte bat-il environ par minute, au repos ?",
+  "options": [
+   "Environ 70 fois*",
+   "Environ 10 fois",
+   "Environ 200 fois",
+   "Environ 500 fois"
+  ],
+  "explanation": "Entre 60 et 100 battements par minute au repos. Pendant un effort, il peut dépasser 150."
+ },
+ {
+  "key": "acc-science-027",
+  "concept": "science.space.acc_phases_lune",
+  "label": "Phases de la Lune",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi la Lune change-t-elle de forme au fil du mois ?",
+  "options": [
+   "On voit plus ou moins sa partie éclairée par le Soleil*",
+   "La Terre lui fait de l'ombre chaque nuit",
+   "Elle gonfle et dégonfle",
+   "Des nuages la cachent"
+  ],
+  "explanation": "La Lune est toujours à moitié éclairée par le Soleil. Selon sa position autour de la Terre, on voit plus ou moins cette moitié : c'est le cycle des phases, d'environ 29 jours."
+ },
+ {
+  "key": "acc-science-028",
+  "concept": "science.chemistry.acc_mercure_liquide",
+  "label": "Métal liquide",
+  "type": "mcq",
+  "difficulty": 42,
+  "prompt": "Quel métal est liquide à température ambiante ?",
+  "options": [
+   "Le mercure*",
+   "Le fer",
+   "Le plomb",
+   "L'or"
+  ],
+  "explanation": "C'est pour ça qu'on l'utilisait dans les anciens thermomètres. Il est toxique : on l'a remplacé."
+ },
+ {
+  "key": "acc-science-029",
+  "concept": "science.human_body.acc_transpiration",
+  "label": "Transpiration",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert la transpiration ?",
+  "options": [
+   "À refroidir le corps*",
+   "À nourrir la peau",
+   "À éliminer la graisse",
+   "À faire pousser les poils"
+  ],
+  "explanation": "En s'évaporant, la sueur emporte de la chaleur. C'est le climatiseur naturel du corps."
+ },
+ {
+  "key": "acc-science-030",
+  "concept": "science.physics.acc_electricite_statique",
+  "label": "Électricité statique",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi un ballon frotté sur les cheveux attire-t-il ensuite les cheveux ?",
+  "options": [
+   "À cause de l'électricité statique*",
+   "À cause du magnétisme terrestre",
+   "Parce que le ballon est collant",
+   "Parce que l'air est humide"
+  ],
+  "explanation": "Le frottement arrache de minuscules charges électriques (des électrons). Le ballon et les cheveux, chargés différemment, s'attirent."
+ },
+ {
+  "key": "acc-science-031",
+  "concept": "science.physics.acc_aimant_fer",
+  "label": "L'aimant",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Lequel de ces objets est attiré par un aimant ?",
+  "options": [
+   "Un clou en fer*",
+   "Une pièce en cuivre",
+   "Une cuillère en bois",
+   "Un gobelet en plastique"
+  ],
+  "explanation": "Les aimants attirent le fer, le nickel et le cobalt, mais pas le cuivre, l'aluminium, le bois ou le plastique."
+ },
+ {
+  "key": "acc-science-032",
+  "concept": "science.chemistry.acc_sel_formule",
+  "label": "Sel de cuisine",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le nom chimique du sel de cuisine ?",
+  "options": [
+   "Le chlorure de sodium*",
+   "Le carbonate de calcium",
+   "Le bicarbonate de soude",
+   "Le sulfate de cuivre"
+  ],
+  "explanation": "Sa formule est NaCl : un atome de sodium (Na) et un atome de chlore (Cl)."
+ },
+ {
+  "key": "acc-science-033",
+  "concept": "science.physics.acc_gravite_chute",
+  "label": "Gravité",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle force fait tomber les objets vers le sol ?",
+  "options": [
+   "La gravité*",
+   "Le magnétisme",
+   "Le vent",
+   "L'électricité"
+  ],
+  "explanation": "La Terre attire tout ce qui a une masse. Newton l'a décrite au XVIIe siècle ; c'est aussi elle qui retient la Lune autour de la Terre."
+ },
+ {
+  "key": "acc-science-034",
+  "concept": "science.space.acc_station_spatiale",
+  "label": "Station spatiale internationale",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle la grande base où des astronautes vivent en orbite autour de la Terre ?",
+  "options": [
+   "La Station spatiale internationale*",
+   "La Voie lactée",
+   "Le télescope Hubble",
+   "Apollo"
+  ],
+  "explanation": "L'ISS fait le tour de la Terre en 90 minutes environ, à 400 km d'altitude. Elle est habitée en permanence depuis 2000."
+ },
+ {
+  "key": "acc-science-035",
+  "concept": "science.space.acc_terre_soleil_ete",
+  "label": "Distance et saisons",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "C'est l'été en France parce que la Terre est alors plus proche du Soleil.",
+  "answer": false,
+  "explanation": "Au contraire : la Terre est au plus près du Soleil début janvier ! Les saisons viennent de l'inclinaison de la Terre, qui fait arriver les rayons plus ou moins droits."
+ },
+ {
+  "key": "acc-science-036",
+  "concept": "science.human_body.acc_calcium_os",
+  "label": "Calcium",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel élément, présent dans le lait, rend les os solides ?",
+  "options": [
+   "Le calcium*",
+   "Le fer",
+   "Le sucre",
+   "Le sodium"
+  ],
+  "explanation": "Le squelette contient presque tout le calcium du corps. Le fer, lui, sert surtout au sang."
+ },
+ {
+  "key": "acc-science-037",
+  "concept": "science.human_body.acc_keratine",
+  "label": "Kératine",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quoi sont faits principalement nos ongles et nos cheveux ?",
+  "options": [
+   "De kératine*",
+   "De calcium",
+   "D'os",
+   "De cartilage"
+  ],
+  "explanation": "C'est une protéine résistante qu'on retrouve aussi dans les plumes, les griffes et les cornes des animaux."
+ },
+ {
+  "key": "acc-science-038",
+  "concept": "science.human_body.acc_expirer_co2",
+  "label": "Ce qu'on expire",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel gaz rejetons-nous en expirant ?",
+  "options": [
+   "Le dioxyde de carbone*",
+   "L'hélium",
+   "L'ozone",
+   "L'hydrogène"
+  ],
+  "explanation": "Nos cellules utilisent l'oxygène et produisent du dioxyde de carbone (CO₂), que les poumons rejettent."
+ },
+ {
+  "key": "acc-science-039",
+  "concept": "science.human_body.acc_oeil_pupille",
+  "label": "Pupille",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "La pupille s'agrandit quand il fait sombre.",
+  "answer": true,
+  "explanation": "Elle s'ouvre pour laisser entrer plus de lumière, et se rétrécit en plein soleil pour protéger l'œil."
+ },
+ {
+  "key": "acc-science-040",
+  "concept": "science.space.acc_soleil_etoile",
+  "label": "Le Soleil",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce que le Soleil ?",
+  "options": [
+   "Une étoile*",
+   "Une planète",
+   "Une comète",
+   "Un satellite"
+  ],
+  "explanation": "C'est l'étoile la plus proche de nous. Les étoiles de la nuit sont d'autres soleils, beaucoup plus lointains."
+ }
+]

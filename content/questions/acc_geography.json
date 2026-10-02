@@ -1,0 +1,563 @@
+[
+ {
+  "key": "acc-geo-001",
+  "concept": "geography.relief.acc_rhone",
+  "label": "Le Rhône",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel fleuve traverse à la fois Lyon et Avignon ?",
+  "options": [
+   "Le Rhône*",
+   "La Loire",
+   "La Garonne",
+   "La Seine"
+  ],
+  "explanation": "Né en Suisse, le Rhône passe par le lac Léman, Lyon et Avignon avant de se jeter dans la Méditerranée."
+ },
+ {
+  "key": "acc-geo-002",
+  "concept": "geography.relief.acc_seine_paris",
+  "label": "La Seine",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel fleuve traverse Paris ?",
+  "options": [
+   "La Seine*",
+   "La Loire",
+   "Le Rhône",
+   "La Marne"
+  ],
+  "explanation": "La Seine coupe Paris en rive droite et rive gauche, puis se jette dans la Manche au Havre."
+ },
+ {
+  "key": "acc-geo-003",
+  "concept": "geography.relief.acc_himalaya",
+  "label": "L'Himalaya",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle chaîne de montagnes se trouve l'Everest ?",
+  "options": [
+   "L'Himalaya*",
+   "Les Andes",
+   "Les Alpes",
+   "Les Rocheuses"
+  ],
+  "explanation": "L'Himalaya, entre le Népal et la Chine, regroupe tous les sommets de plus de 8 000 m."
+ },
+ {
+  "key": "acc-geo-004",
+  "concept": "geography.relief.acc_atlantique_ouest",
+  "label": "Océan Atlantique",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel océan borde la côte ouest de la France ?",
+  "options": [
+   "L'océan Atlantique*",
+   "L'océan Pacifique",
+   "L'océan Indien",
+   "L'océan Arctique"
+  ],
+  "explanation": "De la Bretagne au Pays basque, la France fait face à l'Atlantique. Au sud, c'est la Méditerranée."
+ },
+ {
+  "key": "acc-geo-005",
+  "concept": "geography.countries.acc_egypte_continent",
+  "label": "Continent de l'Égypte",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Sur quel continent se trouve l'Égypte ?",
+  "options": [
+   "L'Afrique*",
+   "L'Asie",
+   "L'Europe",
+   "L'Océanie"
+  ],
+  "explanation": "L'Égypte est en Afrique du Nord. La petite péninsule du Sinaï, elle, est en Asie."
+ },
+ {
+  "key": "acc-geo-006",
+  "concept": "geography.relief.acc_mediterranee_sud",
+  "label": "Méditerranée",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quelle mer borde le sud de la France ?",
+  "options": [
+   "La mer Méditerranée*",
+   "La mer du Nord",
+   "La Manche",
+   "La mer Baltique"
+  ],
+  "explanation": "De Perpignan à Menton, en passant par Marseille et Nice, et tout autour de la Corse."
+ },
+ {
+  "key": "acc-geo-007",
+  "concept": "geography.countries.acc_italie_botte",
+  "label": "Pays en forme de botte",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel pays a la forme d'une botte sur la carte ?",
+  "options": [
+   "L'Italie*",
+   "La Grèce",
+   "Le Portugal",
+   "La Norvège"
+  ],
+  "explanation": "La « botte » italienne semble donner un coup de pied à la Sicile."
+ },
+ {
+  "key": "acc-geo-008",
+  "concept": "geography.countries.acc_big_apple",
+  "label": "La Grosse Pomme",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle ville est surnommée « la Grosse Pomme » (Big Apple) ?",
+  "options": [
+   "New York*",
+   "Los Angeles",
+   "Chicago",
+   "Londres"
+  ],
+  "explanation": "Le surnom vient du monde des courses hippiques dans les années 1920, puis il est devenu un slogan touristique."
+ },
+ {
+  "key": "acc-geo-009",
+  "concept": "geography.countries.acc_ville_rose",
+  "label": "La Ville rose",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Quelle ville française est surnommée la « Ville rose » ?",
+  "options": [
+   "Toulouse*",
+   "Marseille",
+   "Lyon",
+   "Nice"
+  ],
+  "explanation": "À cause de la couleur de ses briques en terre cuite, utilisées pour beaucoup de ses bâtiments."
+ },
+ {
+  "key": "acc-geo-010",
+  "concept": "geography.countries.acc_kangourou",
+  "label": "Pays du kangourou",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quel pays vivent les kangourous à l'état sauvage ?",
+  "options": [
+   "L'Australie*",
+   "L'Afrique du Sud",
+   "Le Brésil",
+   "L'Inde"
+  ],
+  "explanation": "Le kangourou est le symbole de l'Australie : il figure même sur ses armoiries."
+ },
+ {
+  "key": "acc-geo-011",
+  "concept": "geography.monuments.acc_tour_penchee",
+  "label": "Tour penchée",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Dans quelle ville italienne se trouve une célèbre tour penchée ?",
+  "options": [
+   "Pise*",
+   "Rome",
+   "Venise",
+   "Milan"
+  ],
+  "explanation": "Elle a commencé à pencher dès sa construction, au XIIe siècle, à cause d'un sol trop mou."
+ },
+ {
+  "key": "acc-geo-012",
+  "concept": "geography.relief.acc_nil_egypte",
+  "label": "Le Nil",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel fleuve traverse l'Égypte ?",
+  "options": [
+   "Le Nil*",
+   "Le Congo",
+   "Le Niger",
+   "L'Euphrate"
+  ],
+  "explanation": "Presque toute la population égyptienne vit le long du Nil, au milieu du désert."
+ },
+ {
+  "key": "acc-geo-013",
+  "concept": "geography.countries.acc_ile_de_beaute",
+  "label": "L'île de Beauté",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "Quelle île française est surnommée l'« île de Beauté » ?",
+  "options": [
+   "La Corse*",
+   "La Réunion",
+   "Belle-Île",
+   "La Martinique"
+  ],
+  "explanation": "Montagnes, plages et maquis : la Corse se trouve en Méditerranée, au sud-est de la France."
+ },
+ {
+  "key": "acc-geo-014",
+  "concept": "geography.countries.acc_ue_27",
+  "label": "Membres de l'UE",
+  "type": "numeric",
+  "difficulty": 42,
+  "prompt": "Combien de pays font partie de l'Union européenne ?",
+  "answer": 27,
+  "explanation": "27 depuis la sortie du Royaume-Uni (le Brexit), le 31 janvier 2020.",
+  "source": "Union européenne",
+  "fact_as_of": "2026-01-01"
+ },
+ {
+  "key": "acc-geo-015",
+  "concept": "geography.countries.acc_strasbourg_alsace",
+  "label": "Strasbourg",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle région historique se trouve Strasbourg ?",
+  "options": [
+   "L'Alsace*",
+   "La Bretagne",
+   "La Provence",
+   "La Normandie"
+  ],
+  "explanation": "Strasbourg, au bord du Rhin, accueille aussi le Parlement européen."
+ },
+ {
+  "key": "acc-geo-016",
+  "concept": "geography.monuments.acc_christ_redempteur",
+  "label": "Christ Rédempteur",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "Dans quelle ville se dresse la grande statue du Christ Rédempteur, bras ouverts au-dessus de la baie ?",
+  "options": [
+   "Rio de Janeiro*",
+   "Lisbonne",
+   "Mexico",
+   "Buenos Aires"
+  ],
+  "explanation": "Haute de 30 m, elle domine Rio depuis le mont Corcovado depuis 1931."
+ },
+ {
+  "key": "acc-geo-017",
+  "concept": "geography.countries.acc_bresil_vaste",
+  "label": "Brésil",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Quel est le plus grand pays d'Amérique du Sud ?",
+  "options": [
+   "Le Brésil*",
+   "L'Argentine",
+   "Le Pérou",
+   "La Colombie"
+  ],
+  "explanation": "Il occupe près de la moitié du continent, et c'est le seul pays d'Amérique du Sud où l'on parle portugais."
+ },
+ {
+  "key": "acc-geo-018",
+  "concept": "geography.countries.acc_paris_75",
+  "label": "Département de Paris",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel est le numéro de département de Paris ?",
+  "answer": 75,
+  "explanation": "On le retrouve dans les codes postaux (75001 à 75020) et, longtemps, sur les plaques d'immatriculation."
+ },
+ {
+  "key": "acc-geo-019",
+  "concept": "geography.monuments.acc_mont_saint_michel",
+  "label": "Mont-Saint-Michel",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le Mont-Saint-Michel se trouve en Bretagne.",
+  "answer": false,
+  "explanation": "Il est en Normandie, de peu : le Couesnon, la rivière qui marque la limite avec la Bretagne, passe juste à côté."
+ },
+ {
+  "key": "acc-geo-020",
+  "concept": "geography.countries.acc_australie_continent",
+  "label": "Australie",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "L'Australie est à la fois un pays et un continent.",
+  "answer": true,
+  "explanation": "C'est le seul pays qui occupe tout un continent (avec la Tasmanie)."
+ },
+ {
+  "key": "acc-geo-021",
+  "concept": "geography.countries.acc_canada_usa",
+  "label": "Canada et États-Unis",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le Canada est plus grand que les États-Unis.",
+  "answer": true,
+  "explanation": "De peu : environ 9,98 millions de km² contre 9,8. Mais le Canada compte presque 9 fois moins d'habitants."
+ },
+ {
+  "key": "acc-geo-022",
+  "concept": "geography.countries.acc_marseille_deuxieme",
+  "label": "Marseille",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Marseille est la deuxième ville la plus peuplée de France.",
+  "answer": true,
+  "explanation": "Environ 870 000 habitants, derrière Paris (2,1 millions) et devant Lyon.",
+  "source": "Insee",
+  "fact_as_of": "2025-01-01"
+ },
+ {
+  "key": "acc-geo-023",
+  "concept": "geography.relief.acc_pyrenees",
+  "label": "Les Pyrénées",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelles montagnes séparent la France de l'Espagne ?",
+  "options": [
+   "Les Pyrénées*",
+   "Les Alpes",
+   "Le Jura",
+   "Les Vosges"
+  ],
+  "explanation": "Elles s'étendent sur 430 km, de l'Atlantique à la Méditerranée. Le petit pays d'Andorre s'y trouve."
+ },
+ {
+  "key": "acc-geo-024",
+  "concept": "geography.relief.acc_fuji",
+  "label": "Le mont Fuji",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quel pays se trouve le mont Fuji ?",
+  "options": [
+   "Le Japon*",
+   "La Chine",
+   "La Corée du Sud",
+   "L'Indonésie"
+  ],
+  "explanation": "Ce volcan de 3 776 m est le plus haut sommet du Japon et un symbole du pays."
+ },
+ {
+  "key": "acc-geo-025",
+  "concept": "geography.relief.acc_suez",
+  "label": "Canal de Suez",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "Quel canal relie la mer Méditerranée à la mer Rouge ?",
+  "options": [
+   "Le canal de Suez*",
+   "Le canal de Panama",
+   "Le canal du Midi",
+   "Le canal de Corinthe"
+  ],
+  "explanation": "Ouvert en 1869 en Égypte, il évite aux navires de contourner l'Afrique. Celui de Panama relie l'Atlantique au Pacifique."
+ },
+ {
+  "key": "acc-geo-026",
+  "concept": "geography.countries.acc_venise_canaux",
+  "label": "Venise",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle ville italienne est célèbre pour ses canaux et ses gondoles ?",
+  "options": [
+   "Venise*",
+   "Florence",
+   "Naples",
+   "Turin"
+  ],
+  "explanation": "Construite sur plus de 100 petites îles, Venise compte environ 150 canaux."
+ },
+ {
+  "key": "acc-geo-027",
+  "concept": "geography.countries.acc_saisons_australie",
+  "label": "Saisons inversées",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quand c'est l'été en France, quelle saison est-ce en Australie ?",
+  "options": [
+   "L'hiver*",
+   "L'été aussi",
+   "Le printemps",
+   "L'automne"
+  ],
+  "explanation": "Les saisons sont inversées entre les deux hémisphères : à Noël, les Australiens sont en plein été."
+ },
+ {
+  "key": "acc-geo-028",
+  "concept": "geography.relief.acc_equateur",
+  "label": "L'équateur",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle la ligne imaginaire qui partage la Terre en hémisphère Nord et hémisphère Sud ?",
+  "options": [
+   "L'équateur*",
+   "Le méridien de Greenwich",
+   "Le tropique du Cancer",
+   "Le cercle polaire"
+  ],
+  "explanation": "Elle fait environ 40 000 km de long. Le méridien de Greenwich, lui, sépare l'Est et l'Ouest."
+ },
+ {
+  "key": "acc-geo-029",
+  "concept": "geography.relief.acc_vesuve",
+  "label": "Le Vésuve",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel volcan domine la ville de Naples, en Italie ?",
+  "options": [
+   "Le Vésuve*",
+   "L'Etna",
+   "Le Stromboli",
+   "Le Fuji"
+  ],
+  "explanation": "C'est lui qui a enseveli Pompéi en l'an 79. L'Etna, plus grand, se trouve en Sicile."
+ },
+ {
+  "key": "acc-geo-030",
+  "concept": "geography.relief.acc_leman",
+  "label": "Lac Léman",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "Au bord de quel lac se trouve la ville de Genève ?",
+  "options": [
+   "Le lac Léman*",
+   "Le lac d'Annecy",
+   "Le lac de Côme",
+   "Le lac du Bourget"
+  ],
+  "explanation": "Partagé entre la Suisse et la France (Évian, Thonon), c'est le plus grand lac d'Europe de l'Ouest. Le Rhône le traverse."
+ },
+ {
+  "key": "acc-geo-031",
+  "concept": "geography.countries.acc_groenland_australie",
+  "label": "Groenland et Australie",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le Groenland est plus grand que l'Australie.",
+  "answer": false,
+  "explanation": "Sur beaucoup de cartes, il paraît énorme à cause de la projection. En réalité, l'Australie est 3 à 4 fois plus grande."
+ },
+ {
+  "key": "acc-geo-032",
+  "concept": "geography.relief.acc_manche",
+  "label": "La Manche",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle mer sépare la France de l'Angleterre ?",
+  "options": [
+   "La Manche*",
+   "La mer du Nord",
+   "La mer Baltique",
+   "La mer Méditerranée"
+  ],
+  "explanation": "Un tunnel de 50 km passe dessous depuis 1994 : le tunnel sous la Manche."
+ },
+ {
+  "key": "acc-geo-033",
+  "concept": "geography.countries.acc_soleil_levant",
+  "label": "Pays du Soleil-Levant",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel pays est surnommé le « pays du Soleil-Levant » ?",
+  "options": [
+   "Le Japon*",
+   "La Chine",
+   "La Thaïlande",
+   "L'Inde"
+  ],
+  "explanation": "Vu de la Chine, le Japon est à l'est, là où le soleil se lève. C'est aussi le sens de son nom, Nihon."
+ },
+ {
+  "key": "acc-geo-034",
+  "concept": "geography.relief.acc_reunion_ocean",
+  "label": "La Réunion",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel océan se trouve l'île de La Réunion ?",
+  "options": [
+   "L'océan Indien*",
+   "L'océan Atlantique",
+   "L'océan Pacifique",
+   "La mer des Caraïbes"
+  ],
+  "explanation": "Département français, elle se trouve à l'est de Madagascar."
+ },
+ {
+  "key": "acc-geo-035",
+  "concept": "geography.relief.acc_mer_morte",
+  "label": "Mer Morte",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle mer est si salée qu'on y flotte sans effort ?",
+  "options": [
+   "La mer Morte*",
+   "La mer Rouge",
+   "La mer Noire",
+   "La mer Baltique"
+  ],
+  "explanation": "Environ 10 fois plus salée que l'océan, elle ne contient presque aucune vie. Ses rives sont le point le plus bas des terres émergées."
+ },
+ {
+  "key": "acc-geo-036",
+  "concept": "geography.countries.acc_population_france",
+  "label": "Population de la France",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien d'habitants compte la France, environ ?",
+  "options": [
+   "68 millions*",
+   "48 millions",
+   "88 millions",
+   "120 millions"
+  ],
+  "explanation": "Environ 68 millions, outre-mer compris. L'Allemagne en compte environ 84 millions.",
+  "source": "Insee",
+  "fact_as_of": "2025-01-01"
+ },
+ {
+  "key": "acc-geo-037",
+  "concept": "geography.countries.acc_belgique_langues",
+  "label": "Langues de la Belgique",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel pays parle-t-on officiellement français, néerlandais et allemand ?",
+  "options": [
+   "La Belgique*",
+   "La Suisse",
+   "Le Luxembourg",
+   "Le Canada"
+  ],
+  "explanation": "Ses trois langues officielles. En Suisse, on parle allemand, français, italien et romanche."
+ },
+ {
+  "key": "acc-geo-038",
+  "concept": "geography.relief.acc_sicile",
+  "label": "La Sicile",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Quelle grande île italienne se trouve au bout de la « botte » ?",
+  "options": [
+   "La Sicile*",
+   "La Sardaigne",
+   "La Corse",
+   "Malte"
+  ],
+  "explanation": "C'est la plus grande île de la Méditerranée. On y trouve l'Etna, le plus haut volcan actif d'Europe."
+ },
+ {
+  "key": "acc-geo-039",
+  "concept": "geography.relief.acc_pole_nord",
+  "label": "Pôle Nord",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Au pôle Nord, il n'y a pas de terre : seulement de la glace qui flotte sur l'océan.",
+  "answer": true,
+  "explanation": "Le pôle Nord est au milieu de l'océan Arctique, recouvert de banquise. Le pôle Sud, lui, est sur un continent : l'Antarctique."
+ },
+ {
+  "key": "acc-geo-040",
+  "concept": "geography.countries.acc_suisse_ue",
+  "label": "Suisse et UE",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "La Suisse fait partie de l'Union européenne.",
+  "answer": false,
+  "explanation": "Elle est au cœur de l'Europe mais n'a jamais rejoint l'UE. Elle garde aussi sa monnaie, le franc suisse."
+ }
+]
