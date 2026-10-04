@@ -157,11 +157,6 @@ final class PlaySessionModel {
 
     var current: Question? { questions.indices.contains(index) ? questions[index] : nil }
 
-    /// Difficulté ressentie de la question en cours (packs Jouer, hors mode Erreurs).
-    var currentDifficulty: RelativeDifficulty? {
-        guard config.mode != .errors, let p = current?.expected else { return nil }
-        return RelativeDifficulty(expected: p)
-    }
     var isLast: Bool { index >= questions.count - 1 }
     var isOffline: Bool { usedOfflinePack }
 

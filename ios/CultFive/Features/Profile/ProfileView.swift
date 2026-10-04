@@ -154,15 +154,11 @@ struct ProfileView: View {
                 }
             }
             Spacer(minLength: 0)
-            VStack(alignment: .trailing, spacing: 3) {
-                ForEach(CoteCULT.Rank.allCases.reversed(), id: \.self) { rank in
-                    let current = global?.placed == true && global?.rank == rank
-                    Text(rank.name)
-                        .font(.system(.caption2, design: .rounded).weight(current ? .black : .semibold))
-                        .foregroundStyle(current ? Color.sun : .white.opacity(0.55))
-                }
-            }
-            .accessibilityHidden(true)
+            // L'emblème du rang ; estompé tant que l'Elo est provisoire.
+            RankEmblem(rank: global?.placed == true ? global?.rank ?? .curious : .curious)
+                .frame(width: 96, height: 96)
+                .opacity(global?.placed == true ? 1 : 0.45)
+                .accessibilityHidden(true)
         }
         .padding(Space.m)
         .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))

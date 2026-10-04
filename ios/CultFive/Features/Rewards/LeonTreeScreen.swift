@@ -13,6 +13,12 @@ struct LeonTreeScreen: View {
     @State private var error: String?
     @State private var showStages = false
     @State private var tab: Tab = .tree
+    /// Graines qui volent vers l'arbre (instant du don).
+    @State private var seedFlight: Date?
+    /// Petit rebond de l'arbre quand les graines arrivent.
+    @State private var boing = false
+    /// L'arbre vient de changer d'étape : Léon est fier.
+    @State private var proud = false
 
     enum Tab: Hashable { case tree, outfit }
 
@@ -93,35 +99,42 @@ struct LeonTreeScreen: View {
 
     // MARK: Arbre
 
-    /// La scène : ciel clair, sol en bas, l'arbre au centre et Léon debout dans l'herbe à côté.
+    /// La scène : ciel, soleil, nuages, colline, herbe ; l'arbre au centre et Léon dans l'herbe à côté.
     private func scene(_ tree: TreeState) -> some View {
-        ZStack(alignment: .bottom) {
-            LinearGradient(colors: [Color(hex: 0xDFF1FF), Color(hex: 0xF3FAFF)], startPoint: .top, endPoint: .bottom)
-            SkyDecor().allowsHitTesting(false)
-            VStack(spacing: 0) {
-                Rectangle().fill(Color(hex: 0x69DB7C)).frame(height: 10)
-                Rectangle().fill(Color(hex: 0xA47551)).frame(height: 26)
-            }
-            LeonTreeView(stage: tree.stage, fruits: tree.fruits, scene: true)
-                .frame(height: 236)
-                .padding(.bottom, 36 - 236 * 32 / 200)
-            HStack {
-                Leon(color: .brand, pose: feeding ? .tongue : .rest, curl: 0.5)
-                    .frame(width: 88 + CGFloat(tree.stage) * 6)
-                    .padding(.leading, Space.m)
-                    .padding(.bottom, 24)
-                Spacer()
-            }
-            if let floating {
-                Text("+\(floating)")
-                    .font(.system(.title, design: .rounded).weight(.black))
-                    .foregroundStyle(Color.correct)
-                    .frame(maxHeight: .infinity, alignment: .top)
-                    .padding(.top, Space.l)
-                    .transition(.asymmetric(insertion: .move(edge: .bottom).combined(with: .opacity), removal: .opacity))
+        TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion)) { timeline in
+            let time = reduceMotion ? 0 : timeline.date.timeIntervalSinceReferenceDate
+            ZStack(alignment: .bottom) {
+                Canvas { context, size in TreeScenery.draw(in: &context, size: size, time: time) }
+                LeonTreeView(stage: tree.stage, fruits: tree.fruits, scene: true, time: reduceMotion ? nil : time)
+                    .frame(height: 236)
+                    .scaleEffect(x: boing ? 0.96 : 1, y: boing ? 1.06 : 1, anchor: .bottom)
+                    .padding(.bottom, 44 - 236 * 32 / 200)
+                    .offset(x: 26)
+                HStack {
+                    Leon(color: .brand, pose: proud ? .proud : (feeding ? .tongue : .rest), curl: 0.5)
+                        .frame(width: 88 + CGFloat(tree.stage) * 5)
+                        .padding(.leading, Space.s)
+                        .padding(.bottom, 30)
+                    Spacer()
+                }
+                if let seedFlight {
+                    Canvas { context, size in
+                        TreeScenery.drawSeeds(in: &context, size: size, elapsed: timeline.date.timeIntervalSince(seedFlight), stage: tree.stage)
+                    }
+                    .allowsHitTesting(false)
+                }
+                if let floating {
+                    Text("+\(floating)")
+                        .font(.system(.title, design: .rounded).weight(.black))
+                        .foregroundStyle(Color.correct)
+                        .shadow(color: .white, radius: 0, y: 2)
+                        .frame(maxHeight: .infinity, alignment: .top)
+                        .padding(.top, Space.l)
+                        .transition(.asymmetric(insertion: .move(edge: .bottom).combined(with: .opacity), removal: .opacity))
+                }
             }
         }
-        .frame(height: 236)
+        .frame(height: 270)
         .clipShape(RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
         .accessibilityElement(children: .combine)
     }
@@ -143,6 +156,7 @@ struct LeonTreeScreen: View {
                     .foregroundStyle(Color.brand)
                 }
             }
+            StageDots(stage: tree.stage, progress: tree.complete ? 1 : tree.progress, fruitsDone: tree.stage >= 6)
             if let next = tree.nextAt, let label = tree.nextLabel {
                 GeometryReader { geo in
                     ZStack(alignment: .leading) {
@@ -150,8 +164,8 @@ struct LeonTreeScreen: View {
                         Capsule().fill(Color.correct).frame(width: max(12, geo.size.width * tree.progress))
                     }
                 }
-                .frame(height: 10)
-                .animation(Motion.standard, value: tree.points)
+                .frame(height: 12)
+                .animation(Motion.bounce, value: tree.points)
                 Text("\(tree.points - tree.levelStart) / \(next - tree.levelStart) \(Brand.currencyPlural) avant \(label.lowercased())")
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft).monospacedDigit()
             } else {
@@ -211,10 +225,21 @@ struct LeonTreeScreen: View {
         Haptics.soft()
         do {
             let result = try await app.service.feedTree(amount: min(amount, seeds), clientId: UUID())
-            if !reduceMotion { withAnimation(Motion.bounce) { floating = result.fed } }
+            if !reduceMotion {
+                seedFlight = Date()
+                withAnimation(Motion.bounce) { floating = result.fed }
+                // Les graines arrivent : l'arbre rebondit.
+                Task {
+                    try? await Task.sleep(nanoseconds: 650_000_000)
+                    withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { boing = true }
+                    try? await Task.sleep(nanoseconds: 140_000_000)
+                    withAnimation(.spring(response: 0.35, dampingFraction: 0.35)) { boing = false }
+                }
+            }
             var lines: [String] = []
             if result.newChests > 0 {
                 lines.append("Nouvelle étape : \(result.tree.stageName) !")
+                proud = true
             }
             for item in result.newItems { lines.append("Fruit cueilli : \(item.name)") }
             if !lines.isEmpty {
@@ -225,6 +250,9 @@ struct LeonTreeScreen: View {
             await app.refreshProfile()
             try? await Task.sleep(nanoseconds: 900_000_000)
             withAnimation(Motion.standard) { floating = nil }
+            seedFlight = nil
+            try? await Task.sleep(nanoseconds: 1_600_000_000)
+            proud = false
         } catch {
             self.error = (error as? LocalizedError)?.errorDescription ?? "Impossible de nourrir l'arbre. Réessaie."
         }
@@ -254,37 +282,148 @@ struct LeonTreeScreen: View {
 
 }
 
-/// Le ciel au-dessus de l'arbre : un soleil et deux nuages qui dérivent doucement (l'arbre remplira la place en grandissant).
-private struct SkyDecor: View {
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+/// Les 6 étapes de l'arbre en traits : faites en vert, celle en cours remplie à moitié selon la jauge.
+private struct StageDots: View {
+    let stage: Int
+    let progress: Double
+    var fruitsDone = false
 
     var body: some View {
-        TimelineView(.animation(minimumInterval: 1 / 20, paused: reduceMotion)) { timeline in
-            let t = reduceMotion ? 0 : timeline.date.timeIntervalSinceReferenceDate
-            GeometryReader { geo in
-                let w = geo.size.width
-                Circle().fill(Color.sun.opacity(0.9)).frame(width: 44, height: 44)
-                    .shadow(color: Color.sun.opacity(0.6), radius: 14)
-                    .position(x: w - 46, y: 42)
-                cloud.position(x: drift(t, speed: 6, offset: 0, width: w), y: 58)
-                cloud.scaleEffect(0.7).position(x: drift(t, speed: 4, offset: w * 0.55, width: w), y: 100)
+        HStack(spacing: 6) {
+            ForEach(1 ... 6, id: \.self) { i in
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(Color.hairline)
+                        Capsule().fill(Color.correct).frame(width: geo.size.width * fill(i))
+                    }
+                }
+                .frame(height: 6)
             }
         }
         .accessibilityHidden(true)
     }
 
-    private var cloud: some View {
-        ZStack {
-            Capsule().fill(.white).frame(width: 70, height: 22).offset(y: 6)
-            Circle().fill(.white).frame(width: 30, height: 30).offset(x: -12, y: -2)
-            Circle().fill(.white).frame(width: 38, height: 38).offset(x: 10, y: -6)
+    private func fill(_ i: Int) -> CGFloat {
+        if i < stage || fruitsDone { return 1 }
+        return i == stage ? CGFloat(progress) : 0
+    }
+}
+
+/// Le décor de l'arbre : ciel, soleil qui tourne, nuages qui dérivent, colline au loin, herbe qui bouge, terre.
+private enum TreeScenery {
+    static func draw(in context: inout GraphicsContext, size: CGSize, time t: Double) {
+        let w = Double(size.width), h = Double(size.height)
+        let gy: Double = h - 44
+        // Ciel.
+        context.fill(Path(CGRect(origin: .zero, size: size)),
+                     with: .linearGradient(Gradient(colors: [Color(hex: 0xCDEBFF), Color(hex: 0xF3FAFF)]),
+                                           startPoint: .zero, endPoint: CGPoint(x: 0, y: h)))
+        // Soleil, halo et rayons.
+        let sx: Double = w - 50, sy: Double = 44
+        context.fill(Path(ellipseIn: CGRect(x: sx - 70, y: sy - 70, width: 140, height: 140)),
+                     with: .radialGradient(Gradient(colors: [Color.sun.opacity(0.55), Color.sun.opacity(0)]),
+                                           center: CGPoint(x: sx, y: sy), startRadius: 10, endRadius: 70))
+        for i in 0 ..< 10 {
+            let a: Double = Double(i) / 10 * 2 * Double.pi + t * 0.15
+            var ray = context
+            ray.translateBy(x: sx, y: sy)
+            ray.rotate(by: .radians(a))
+            ray.fill(Path(roundedRect: CGRect(x: -3, y: -36, width: 6, height: 10), cornerRadius: 3), with: .color(Color.sun.opacity(0.8)))
         }
-        .opacity(0.9)
+        circle(&context, sx, sy, 22, Color.sun)
+        circle(&context, sx - 6, sy - 6, 7, .white.opacity(0.5))
+        // Nuages.
+        cloud(&context, x: drift(t, 9, 0, w), y: 56, scale: 1)
+        cloud(&context, x: drift(t, 6, w * 0.55, w), y: 96, scale: 0.7)
+        cloud(&context, x: drift(t, 4, w * 0.3, w), y: 30, scale: 0.5)
+        // Colline au loin et petits arbres.
+        var hill = Path()
+        hill.move(to: CGPoint(x: 0, y: gy - 6))
+        hill.addCurve(to: CGPoint(x: w * 0.6, y: gy - 14), control1: CGPoint(x: w * 0.25, y: gy - 46), control2: CGPoint(x: w * 0.45, y: gy - 30))
+        hill.addCurve(to: CGPoint(x: w, y: gy - 24), control1: CGPoint(x: w * 0.75, y: gy - 2), control2: CGPoint(x: w * 0.9, y: gy - 36))
+        hill.addLine(to: CGPoint(x: w, y: h))
+        hill.addLine(to: CGPoint(x: 0, y: h))
+        hill.closeSubpath()
+        context.fill(hill, with: .color(Color(hex: 0xB2F2BB)))
+        for (x, y, r) in [(w * 0.12, gy - 28, 9.0), (w * 0.2, gy - 34, 12.0), (w * 0.86, gy - 26, 10.0)] {
+            context.fill(Path(CGRect(x: x - 1.5, y: y, width: 3, height: 10)), with: .color(Color(hex: 0x7BCB8A)))
+            circle(&context, x, y - r * 0.4, r, Color(hex: 0x8FD89B))
+        }
+        // Herbe.
+        var grass = Path()
+        grass.move(to: CGPoint(x: 0, y: gy))
+        grass.addCurve(to: CGPoint(x: w, y: gy - 4), control1: CGPoint(x: w * 0.3, y: gy - 8), control2: CGPoint(x: w * 0.7, y: gy + 6))
+        grass.addLine(to: CGPoint(x: w, y: h))
+        grass.addLine(to: CGPoint(x: 0, y: h))
+        grass.closeSubpath()
+        context.fill(grass, with: .color(Color(hex: 0x69DB7C)))
+        // Terre et cailloux.
+        var dirt = Path()
+        dirt.move(to: CGPoint(x: 0, y: gy + 12))
+        dirt.addCurve(to: CGPoint(x: w, y: gy + 10), control1: CGPoint(x: w * 0.3, y: gy + 6), control2: CGPoint(x: w * 0.7, y: gy + 18))
+        dirt.addLine(to: CGPoint(x: w, y: h))
+        dirt.addLine(to: CGPoint(x: 0, y: h))
+        dirt.closeSubpath()
+        context.fill(dirt, with: .color(Color(hex: 0xA47551)))
+        for (x, y, r) in [(w * 0.15, h - 14, 4.0), (w * 0.42, h - 10, 3.0), (w * 0.7, h - 16, 5.0), (w * 0.9, h - 8, 3.0)] {
+            context.fill(Path(ellipseIn: CGRect(x: x - r * 1.4, y: y - r, width: r * 2.8, height: r * 2)), with: .color(Color(hex: 0x8A5E3F)))
+        }
+        // Brins d'herbe et fleurettes.
+        for i in 0 ..< 14 {
+            let x: Double = (Double(i) * w / 13 + 7).truncatingRemainder(dividingBy: w)
+            let y: Double = gy + 2 + Double((i * 7) % 5)
+            let bend: Double = sin(t * 2 + Double(i)) * 1.5
+            var blade = Path()
+            blade.move(to: CGPoint(x: x, y: y + 4))
+            blade.addQuadCurve(to: CGPoint(x: x + bend * 1.6, y: y - 6), control: CGPoint(x: x + bend, y: y - 2))
+            context.stroke(blade, with: .color(Color(hex: 0x40C057)), style: StrokeStyle(lineWidth: 2, lineCap: .round))
+        }
+        for (x, color) in [(w * 0.08, Color(hex: 0xFCC2D7)), (w * 0.33, Color.white), (w * 0.93, Color.sun), (w * 0.58, Color(hex: 0xFCC2D7))] {
+            circle(&context, x, gy + 4, 3.5, color)
+            circle(&context, x, gy + 4, 1.4, Color.sun)
+        }
+    }
+
+    /// Graines qui partent du bas et filent en arc jusqu'à l'arbre (0,8 s environ).
+    static func drawSeeds(in context: inout GraphicsContext, size: CGSize, elapsed: Double, stage: Int) {
+        let w = Double(size.width), h = Double(size.height)
+        let seed = context.resolve(Image("seeds"))
+        // Hauteur du feuillage au-dessus du sol, selon l'étape.
+        let heights: [Double] = [20, 40, 70, 100, 130, 150]
+        let lift: Double = heights[min(max(stage, 1), 6) - 1]
+        let target = CGPoint(x: w / 2 + 26, y: h - 44 - lift)
+        for i in 0 ..< 10 {
+            let noise: Double = abs(sin(Double(i) * 12.9898) * 43758.5453).truncatingRemainder(dividingBy: 1)
+            let k: Double = min(max((elapsed - Double(i) * 0.04) / 0.62, 0), 1)
+            guard k > 0, k < 1 else { continue }
+            let x0: Double = w * (0.2 + 0.6 * noise), y0: Double = h + 10
+            let tx: Double = Double(target.x) + (noise - 0.5) * 40, ty: Double = Double(target.y) + (noise - 0.5) * 30
+            let arc: Double = 60 + noise * 50
+            let x: Double = x0 + (tx - x0) * k
+            let y: Double = y0 + (ty - y0) * k - sin(k * Double.pi) * arc
+            let side: Double = 20 * (1 - k * 0.35)
+            context.draw(seed, in: CGRect(x: x - side / 2, y: y - side / 2, width: side, height: side))
+        }
+    }
+
+    private static func circle(_ context: inout GraphicsContext, _ x: Double, _ y: Double, _ r: Double, _ color: Color) {
+        context.fill(Path(ellipseIn: CGRect(x: x - r, y: y - r, width: 2 * r, height: 2 * r)), with: .color(color))
+    }
+
+    private static func cloud(_ context: inout GraphicsContext, x: Double, y: Double, scale: Double) {
+        var c = context
+        c.translateBy(x: x, y: y)
+        c.scaleBy(x: scale, y: scale)
+        c.opacity = 0.95
+        c.fill(Path(roundedRect: CGRect(x: -36, y: -4, width: 72, height: 22), cornerRadius: 11), with: .color(.white))
+        c.fill(Path(ellipseIn: CGRect(x: -27, y: -19, width: 30, height: 30)), with: .color(.white))
+        c.fill(Path(ellipseIn: CGRect(x: -9, y: -27, width: 38, height: 38)), with: .color(.white))
+        c.fill(Path(roundedRect: CGRect(x: -34, y: 10, width: 68, height: 8), cornerRadius: 4), with: .color(Color(hex: 0xE3F0FA).opacity(0.5)))
     }
 
     /// Les nuages traversent le ciel lentement, puis reviennent par la gauche.
-    private func drift(_ t: Double, speed: Double, offset: Double, width: Double) -> Double {
-        let span = width + 120
-        return (t * speed + offset).truncatingRemainder(dividingBy: span) - 60
+    private static func drift(_ t: Double, _ speed: Double, _ offset: Double, _ width: Double) -> Double {
+        let span = width + 140
+        return (t * speed + offset).truncatingRemainder(dividingBy: span) - 70
     }
 }

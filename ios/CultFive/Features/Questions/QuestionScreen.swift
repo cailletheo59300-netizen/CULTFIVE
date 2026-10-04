@@ -10,8 +10,6 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
     let phase: AnswerPhase
     var removedOptions: Set<String> = []
     var badge: String? = nil
-    /// Difficulté ressentie pour ce joueur (parties Jouer) : pastille au-dessus de l'énoncé.
-    var difficulty: RelativeDifficulty? = nil
     var continueTitle: String = "Continuer"
     let onSubmit: (GivenAnswer) -> Void
     let onContinue: () -> Void
@@ -35,11 +33,6 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
             ScrollViewReader { reader in
                 ScrollView {
                     VStack(alignment: .leading, spacing: Space.l) {
-                        if let difficulty {
-                            DifficultyPill(difficulty: difficulty)
-                                .padding(.horizontal, Space.gutter)
-                                .padding(.bottom, -Space.s)
-                        }
                         Text(question.prompt)
                             .font(.cfQuestion)
                             .foregroundStyle(Color.ink)
@@ -95,8 +88,8 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
             .ignoresSafeArea()
         }
         .onAppear {
-            entry = NumericEntry(maxDecimals: max(question.payload.decimals ?? 0, 3),
-                                 allowNegative: question.payload.allowNegative ?? false)
+            // La touche « − » est toujours là : sa présence ne doit pas trahir une réponse négative.
+            entry = NumericEntry(maxDecimals: max(question.payload.decimals ?? 0, 3), allowNegative: true)
             onDisplayed()
         }
         .animation(Motion.adaptive(Motion.standard, reduceMotion: reduceMotion), value: phase)
@@ -332,35 +325,5 @@ struct ReportSheet: View {
             }
             sending = false
         }
-    }
-}
-
-
-/// « ●●○○ Difficile » : difficulté ressentie de la question, d'après les chances de réussite estimées du joueur.
-struct DifficultyPill: View {
-    let difficulty: RelativeDifficulty
-
-    private var color: Color {
-        switch difficulty {
-        case .easy: return .correct
-        case .medium: return .brand
-        case .hard: return Color(hex: 0xF76707)
-        case .veryHard: return .wrong
-        }
-    }
-
-    var body: some View {
-        HStack(spacing: 6) {
-            HStack(spacing: 3) {
-                ForEach(0 ..< 4, id: \.self) { i in
-                    Capsule().fill(i <= difficulty.rawValue ? color : color.opacity(0.2)).frame(width: 10, height: 6)
-                }
-            }
-            Text(difficulty.label).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(color)
-        }
-        .padding(.horizontal, 10).padding(.vertical, 5)
-        .background(color.opacity(0.1), in: Capsule())
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Difficulté : \(difficulty.label)")
     }
 }

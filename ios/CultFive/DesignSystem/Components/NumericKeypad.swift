@@ -16,7 +16,7 @@ struct NumericKeypad: View {
                     key(Text("\(digit)"), label: "\(digit)") { entry.append(digit: digit) }
                 }
                 if entry.allowNegative {
-                    key(Text("±"), label: "Changer le signe") { entry.toggleSign() }
+                    key(Text("−"), label: "Moins (changer le signe)") { entry.toggleSign() }
                 } else {
                     key(Text(decimalSeparator), label: "Virgule") { entry.appendDecimalSeparator() }
                 }

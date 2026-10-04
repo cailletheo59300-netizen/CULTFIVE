@@ -73,6 +73,9 @@ struct DomainView: View {
                 .foregroundStyle(DomainPalette.onColor(domainId))
             if let stats, stats.rating.placed {
                 HStack(alignment: .lastTextBaseline, spacing: Space.s) {
+                    RankEmblem(rank: stats.rating.rank).frame(width: 56, height: 56)
+                        .alignmentGuide(.lastTextBaseline) { $0[.bottom] - 6 }
+                        .accessibilityHidden(true)
                     Text(stats.rating.formatted).numeral(size: 64).foregroundStyle(DomainPalette.onColor(domainId))
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Elo · \(stats.rating.rank.name)").font(.cfFootnote.weight(.bold))

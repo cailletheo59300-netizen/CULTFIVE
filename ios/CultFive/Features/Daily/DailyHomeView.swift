@@ -18,6 +18,7 @@ struct DailyHomeView: View {
     @State private var showStreakHelp = false
     /// Défis remplis, fêtés en plein écran (le bandeau reste en haut de l'accueil ensuite).
     @State private var questMoments: [Celebration] = []
+    @State private var showBag = false
 
     var body: some View {
         NavigationStack {
@@ -51,6 +52,7 @@ struct DailyHomeView: View {
         .fullScreenCover(item: $playConfig, onDismiss: { Task { await reload() } }) { config in
             PlaySessionView(config: config)
         }
+        .sheet(isPresented: $showBag) { BagView() }
         .fullScreenCover(isPresented: Binding(get: { !questMoments.isEmpty }, set: { if !$0 { questMoments = [] } })) {
             CelebrationSequence(items: questMoments) { questMoments = [] }
         }
@@ -141,9 +143,13 @@ struct DailyHomeView: View {
                 ChestPill(count: chests.count) { app.openChests() }
             }
             if let seeds = app.profile?.seeds {
-                SeedsAmount(amount: seeds).font(.cfNumber).fixedSize()
-                    .padding(.horizontal, 12).padding(.vertical, 6)
-                    .background(Color.paperRaised, in: Capsule())
+                Button { showBag = true } label: {
+                    SeedsAmount(amount: seeds).font(.cfNumber).fixedSize()
+                        .padding(.horizontal, 12).padding(.vertical, 6)
+                        .background(Color.paperRaised, in: Capsule())
+                }
+                .buttonStyle(.row)
+                .accessibilityHint("Ouvre ton sac : graines, tickets, jokers, coffres")
             }
         }
     }

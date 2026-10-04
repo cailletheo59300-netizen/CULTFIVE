@@ -60,6 +60,10 @@ struct PlayHomeView: View {
             Text("Jouer").font(.cfDisplay)
             Spacer()
             if let global = CoteCULT.overall(skills) {
+                if global.placed {
+                    RankEmblem(rank: global.rank).frame(width: 40, height: 40).alignmentGuide(.firstTextBaseline) { $0[.bottom] - 8 }
+                        .accessibilityHidden(true)
+                }
                 VStack(alignment: .trailing, spacing: 0) {
                     Text(global.formatted).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
                         .foregroundStyle(global.placed ? Color.brand : Color.inkSoft)

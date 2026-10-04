@@ -40,6 +40,7 @@ struct EloExplainerSheet: View {
                     Text("Les niveaux").font(.cfHeadline)
                     ForEach(CoteCULT.Rank.allCases.reversed(), id: \.self) { rank in
                         HStack {
+                            RankEmblem(rank: rank).frame(width: 36, height: 36).accessibilityHidden(true)
                             Text(rank.name).font(.cfCallout.weight(.bold)).foregroundStyle(Color.ink)
                             Spacer()
                             Text(rank == .curious ? "moins de 900" : "dès \(CoteCULT.format(rank.floor))")

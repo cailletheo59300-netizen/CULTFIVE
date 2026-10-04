@@ -62,7 +62,6 @@ struct PlaySessionView: View {
                     phase: model.phase,
                     removedOptions: model.removedOptions,
                     badge: model.badge,
-                    difficulty: model.currentDifficulty,
                     continueTitle: model.isLast ? "Terminer" : "Suivante",
                     onSubmit: { model.submit($0) },
                     onContinue: { Task { await model.next() } },
@@ -196,46 +195,25 @@ struct PlaySessionView: View {
                 .popCard(padding: 12, radius: Radius.s)
             }
             if !helps.isEmpty {
-                HStack(spacing: Space.s) {
-                    // Solde visible là où on se demande si on a de quoi payer.
+                // Solde visible là où on se demande si on a de quoi payer ; les aides en grille de 2 colonnes.
+                HStack {
+                    Text("Aides").labelCaps()
+                    Spacer()
                     if let balance = model.seedsBalance {
                         SeedsAmount(amount: balance)
                             .font(.system(.footnote, design: .rounded).weight(.heavy))
                             .padding(.horizontal, 10)
-                            .frame(minHeight: 40)
+                            .frame(minHeight: 30)
                             .background(Color.correct.opacity(0.12), in: Capsule())
                             .contentTransition(.numericText(value: Double(balance)))
                             .animation(Motion.standard, value: balance)
                             .accessibilityLabel("Tu as \(balance) \(balance > 1 ? Brand.currencyPlural : Brand.currencySingular)")
                     }
+                }
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: Space.s), GridItem(.flexible(), spacing: Space.s)], spacing: Space.s) {
                     ForEach(helps, id: \.self) { kind in
-                        Button {
-                            Task { await model.useHelp(kind) }
-                        } label: {
-                            HStack(spacing: 4) {
-                                if model.pendingHelp == kind {
-                                    ProgressView().controlSize(.mini)
-                                }
-                                Text(title(kind))
-                                if model.tickets.count(kind) > 0 {
-                                    Text("🎟️ \(model.tickets.count(kind))").monospacedDigit()
-                                        .accessibilityLabel("\(model.tickets.count(kind)) ticket\(model.tickets.count(kind) > 1 ? "s" : "")")
-                                } else {
-                                    SeedsAmount(amount: kind.cost, color: .inkSoft)
-                                }
-                            }
-                            .font(.system(.footnote, design: .rounded).weight(.heavy))
-                            .padding(.horizontal, 14)
-                            .frame(minHeight: 40)
-                            .background(Color.paperRaised, in: Capsule())
-                            .shadow(color: Color(hex: 0x3A1FB8).opacity(0.08), radius: 6, y: 3)
-                        }
-                        .buttonStyle(.row)
-                        .foregroundStyle(Color.ink)
-                        .disabled(model.pendingHelp != nil || !model.canAfford(kind))
-                        .opacity(model.pendingHelp == kind ? 0.75 : 1)
+                        helpButton(model, kind: kind)
                     }
-                    Spacer()
                 }
             }
             if let error = model.helpError {
@@ -243,6 +221,49 @@ struct PlaySessionView: View {
             }
         }
         .padding(.horizontal, Space.gutter)
+    }
+
+    private func helpButton(_ model: PlaySessionModel, kind: HelpKind) -> some View {
+        let tickets = model.tickets.count(kind)
+        return Button {
+            Task { await model.useHelp(kind) }
+        } label: {
+            HStack(spacing: 8) {
+                helpIcon(kind, ticket: tickets > 0).frame(width: 30, height: 30)
+                Text(title(kind)).lineLimit(1).minimumScaleFactor(0.8)
+                Spacer(minLength: 4)
+                if model.pendingHelp == kind {
+                    ProgressView().controlSize(.mini)
+                } else if tickets > 0 {
+                    Text("× \(tickets)").monospacedDigit()
+                        .accessibilityLabel("\(tickets) ticket\(tickets > 1 ? "s" : "")")
+                } else {
+                    SeedsAmount(amount: kind.cost, color: .inkSoft)
+                }
+            }
+            .font(.system(.subheadline, design: .rounded).weight(.heavy))
+            .padding(.horizontal, 12)
+            .frame(maxWidth: .infinity, minHeight: 48)
+            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+            .shadow(color: Color(hex: 0x3A1FB8).opacity(0.08), radius: 6, y: 3)
+        }
+        .buttonStyle(.row)
+        .foregroundStyle(Color.ink)
+        .disabled(model.pendingHelp != nil || !model.canAfford(kind))
+        .opacity(model.pendingHelp == kind ? 0.75 : 1)
+    }
+
+    /// Ticket 3D quand on en a un, sinon le symbole de l'aide.
+    @ViewBuilder
+    private func helpIcon(_ kind: HelpKind, ticket: Bool) -> some View {
+        switch kind {
+        case .fiftyFifty where ticket: GameIcon.ticketFifty.image
+        case .hint where ticket: GameIcon.ticketHint.image
+        case .fiftyFifty: Text("½").font(.system(size: 20, weight: .black, design: .rounded)).foregroundStyle(Color(hex: 0x1C7ED6))
+        case .hint: Image(systemName: "lightbulb.fill").foregroundStyle(Color(hex: 0xF2A900))
+        case .context: Image(systemName: "text.book.closed.fill").foregroundStyle(Color.brand)
+        case .secondChance: Image(systemName: "shield.fill").foregroundStyle(Color.brand)
+        }
     }
 
     private func title(_ kind: HelpKind) -> String {
