@@ -78,7 +78,7 @@ struct RankPathView: View {
     private func row(_ rank: CoteCULT.Rank) -> some View {
         let isCurrent = rank == current
         let done = reached(rank)
-        let state: RankTally.State = isCurrent ? .current(progress(rank)) : (done ? .reached : .locked)
+        let state: RankTally.Progress = isCurrent ? .current(progress(rank)) : (done ? .reached : .locked)
         return HStack(spacing: Space.m) {
             RankEmblem(rank: rank)
                 .frame(width: 64, height: 64)
@@ -156,10 +156,10 @@ struct RankPathView: View {
 /// Les traits du 5 du jour d'un rang. Atteint : pleins. En cours : remplis selon la jauge, le suivant clignote.
 /// À venir : « manqués », plus courts et pâles (forme et couleur, jamais la couleur seule).
 private struct RankTally: View {
-    enum State: Equatable { case reached, current(Double), locked }
+    enum Progress: Equatable { case reached, current(Double), locked }
 
     let marks: Int
-    let state: State
+    let state: Progress
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var pulse = false
