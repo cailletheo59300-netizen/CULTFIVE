@@ -290,6 +290,9 @@ struct PlaySummaryView: View {
     @State private var appeared = false
     /// Coffres en attente, relus après l'envoi de la partie (niveau, trophée…).
     @State private var chestsWaiting = 0
+    /// Moments forts de la partie (niveau, rang, trophée), fêtés en plein écran une seule fois.
+    @State private var celebrations: [Celebration] = []
+    @State private var celebrated = false
 
     private var accent: Color { config.domain.map(DomainPalette.color) ?? .brand }
     private var rate: Double { summary.total > 0 ? Double(summary.correct) / Double(summary.total) : 0 }
@@ -354,22 +357,8 @@ struct PlaySummaryView: View {
                                     title: "\(summary.corrected) erreur\(summary.corrected > 1 ? "s" : "") corrigée\(summary.corrected > 1 ? "s" : "")",
                                     detail: "Elles sortent de ta liste à revoir.")
                 }
-                if let levelUp {
-                    CelebrationCard(kind: .levelUp, title: "Niveau \(levelUp)", detail: "Un coffre de niveau t'attend.")
-                }
-                ForEach(summary.achievements, id: \.self) { name in
-                    CelebrationCard(kind: .trophy, title: name, detail: "Trophée débloqué : un coffre t'attend.")
-                }
                 if chestsWaiting > 0 {
                     ChestsWaitingCard(tiers: app.progression?.chests.map(\.tier) ?? [], action: onOpenChests)
-                }
-                ForEach(placementsDone, id: \.domainId) { r in
-                    CelebrationCard(kind: .rating, title: "Elo confirmé : \(CoteCULT.Rank(cote: r.coteAfter).name) !",
-                                    detail: "\(app.domainName(r.domainId)) · \(CoteCULT.format(r.coteAfter)). Il bouge maintenant de 40 points au plus par partie.")
-                }
-                ForEach(rankUps, id: \.domainId) { r in
-                    CelebrationCard(kind: .rating, title: "Nouveau niveau : \(CoteCULT.Rank(cote: r.coteAfter).name)",
-                                    detail: "\(app.domainName(r.domainId)) · \(CoteCULT.format(r.coteAfter))")
                 }
                 if summary.synced, summary.ranked, !summary.ratings.isEmpty {
                     VStack(alignment: .leading, spacing: 12) {
@@ -417,7 +406,7 @@ struct PlaySummaryView: View {
         .scrollIndicators(.hidden)
         .background(Color.paper)
         .overlay {
-            if perfect || levelUp != nil || !summary.achievements.isEmpty || !placementsDone.isEmpty || !rankUps.isEmpty {
+            if perfect {
                 Confetti().ignoresSafeArea()
             }
         }
@@ -429,6 +418,13 @@ struct PlaySummaryView: View {
             guard summary.synced else { return }
             await app.refreshProgression()
             withAnimation(Motion.standard) { chestsWaiting = app.progression?.chests.count ?? 0 }
+            if !celebrated {
+                celebrated = true
+                celebrations = moments
+            }
+        }
+        .fullScreenCover(isPresented: Binding(get: { !celebrations.isEmpty }, set: { if !$0 { celebrations = [] } })) {
+            CelebrationSequence(items: celebrations) { celebrations = [] }
         }
     }
 
@@ -455,6 +451,27 @@ struct PlaySummaryView: View {
     }
 
     /// Domaines dont le placement s'est terminé pendant cette partie : la cote se dévoile.
+    /// Les moments forts à fêter en plein écran, dans l'ordre : niveau, Elo confirmé, nouveau rang, trophées.
+    private var moments: [Celebration] {
+        let chests = app.progression?.chests ?? []
+        var items: [Celebration] = []
+        if let levelUp {
+            let chest = chests.first { $0.source == "level" && $0.ref == "\(levelUp)" } ?? chests.first { $0.source == "level" }
+            items.append(.level(levelUp, xp: summary.xp, chest: chest?.tier))
+        }
+        for r in placementsDone {
+            items.append(.rank(CoteCULT.Rank(cote: r.coteAfter), domain: app.domainName(r.domainId), cote: r.coteAfter, confirmed: true))
+        }
+        for r in rankUps {
+            items.append(.rank(CoteCULT.Rank(cote: r.coteAfter), domain: app.domainName(r.domainId), cote: r.coteAfter, confirmed: false))
+        }
+        let trophyChest = chests.first { $0.source == "trophy" }?.tier
+        for name in summary.achievements {
+            items.append(.trophy(name: name, detail: nil, chest: trophyChest))
+        }
+        return items
+    }
+
     private var placementsDone: [PlaySubmitResult.RatingChange] {
         summary.ratings.filter { $0.placed && $0.answered - (summary.answeredByDomain[$0.domainId] ?? 0) < CoteCULT.placementAnswers }
     }

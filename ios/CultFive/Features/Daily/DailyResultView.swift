@@ -17,6 +17,9 @@ struct DailyResultView: View {
     @State private var placed: Set<String> = []
     /// Le rappel quotidien est proposé une seule fois, après le premier 5 du jour (jamais pendant l'onboarding).
     @AppStorage("reminderOfferAnswered") private var reminderAsked = false
+    /// Moments forts (niveau, record de série, trophées), fêtés en plein écran une seule fois.
+    @State private var celebrations: [Celebration] = []
+    @State private var celebrated = false
 
     private let white = Color.white
 
@@ -45,7 +48,6 @@ struct DailyResultView: View {
                         DoubleSeedsButton(ref: "daily:\(result.runId.uuidString.lowercased())", onInk: true)
                     }
                     knowledge.stagger(appeared, index: 4, reduceMotion: reduceMotion)
-                    celebrations.stagger(appeared, index: 5, reduceMotion: reduceMotion)
                     if !reminderAsked {
                         ReminderOfferCard { reminderAsked = true }
                             .stagger(appeared, index: 6, reduceMotion: reduceMotion)
@@ -56,12 +58,22 @@ struct DailyResultView: View {
                 .padding(.bottom, Space.xl)
             }
             .scrollIndicators(.hidden)
-            if result.score == 5 || !result.achievements.isEmpty || levelUp != nil {
+            if result.score == 5 {
                 Confetti().ignoresSafeArea()
             }
         }
         .preferredColorScheme(.dark)
+        .fullScreenCover(isPresented: Binding(get: { !celebrations.isEmpty }, set: { if !$0 { celebrations = [] } })) {
+            CelebrationSequence(items: celebrations) { celebrations = [] }
+        }
         .task {
+            if !celebrated {
+                celebrated = true
+                let items = await moments()
+                // Après l'apparition du score : le résultat d'abord, puis la fête.
+                try? await Task.sleep(nanoseconds: 1_200_000_000)
+                celebrations = items
+            }
             if let skills = try? await app.service.skills() {
                 placed = Set(skills.filter { $0.rating.placed }.map(\.domainId))
             }
@@ -201,15 +213,26 @@ struct DailyResultView: View {
         }
     }
 
-    @ViewBuilder private var celebrations: some View {
-        VStack(spacing: 10) {
-            if let levelUp {
-                CelebrationCard(kind: .levelUp, title: "Niveau \(levelUp)", detail: "Ton XP grimpe, continue comme ça.", onColor: true)
-            }
-            ForEach(result.achievements) { achievement in
-                CelebrationCard(kind: .trophy, title: achievement.name, detail: achievement.description, onColor: true)
-            }
+    /// Les moments forts à fêter en plein écran : niveau, record de série, trophées. Le profil porte encore les
+    /// valeurs d'avant ce Daily (XP, meilleure série, jokers).
+    private func moments() async -> [Celebration] {
+        await app.refreshProgression()
+        let chests = app.progression?.chests ?? []
+        var items: [Celebration] = []
+        if let levelUp {
+            let chest = chests.first { $0.source == "level" && $0.ref == "\(levelUp)" } ?? chests.first { $0.source == "level" }
+            items.append(.level(levelUp, xp: result.xp, chest: chest?.tier))
         }
+        if let profile = app.profile, result.streak >= 3, result.streak > profile.streakBest {
+            // Un joker tous les 7 jours d'affilée, 2 au plus.
+            let joker = result.streak.isMultiple(of: 7) && profile.streakFreezes < 2
+            items.append(.streak(result.streak, joker: joker))
+        }
+        let trophyChest = chests.first { $0.source == "trophy" }?.tier
+        for achievement in result.achievements {
+            items.append(.trophy(name: achievement.name, detail: achievement.description, chest: trophyChest))
+        }
+        return items
     }
 
     private var actions: some View {

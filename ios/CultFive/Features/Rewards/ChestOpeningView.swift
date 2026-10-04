@@ -719,23 +719,29 @@ private struct CardRays: View {
 
     var body: some View {
         TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion)) { timeline in
-            let angle = reduceMotion ? 0 : timeline.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 14) / 14 * 360
             Canvas { context, size in
-                let c = CGPoint(x: size.width / 2, y: size.height / 2)
-                let r = Double(min(size.width, size.height)) / 2
-                for i in 0 ..< 18 {
-                    let a = (Double(i) / 18 * 360 + angle) * .pi / 180
-                    var ray = Path()
-                    ray.move(to: c)
-                    ray.addLine(to: CGPoint(x: c.x + r * cos(a), y: c.y + r * sin(a)))
-                    ray.addLine(to: CGPoint(x: c.x + r * cos(a + 0.17), y: c.y + r * sin(a + 0.17)))
-                    ray.closeSubpath()
-                    context.fill(ray, with: .color(color.opacity(0.33)))
-                }
+                let time: Double = reduceMotion ? 0 : timeline.date.timeIntervalSinceReferenceDate
+                CardRays.draw(in: &context, size: size, time: time, color: color)
             }
             .mask(RadialGradient(colors: [.black, .clear], center: .center, startRadius: 30, endRadius: 170))
         }
         .accessibilityHidden(true)
+    }
+
+    private static func draw(in context: inout GraphicsContext, size: CGSize, time: Double, color: Color) {
+        let cx = Double(size.width) / 2, cy = Double(size.height) / 2
+        let r: Double = min(cx, cy)
+        let turn: Double = time.truncatingRemainder(dividingBy: 14) / 14 * 2 * Double.pi
+        for i in 0 ..< 18 {
+            let a: Double = Double(i) / 18 * 2 * Double.pi + turn
+            let b: Double = a + 0.17
+            var ray = Path()
+            ray.move(to: CGPoint(x: cx, y: cy))
+            ray.addLine(to: CGPoint(x: cx + r * cos(a), y: cy + r * sin(a)))
+            ray.addLine(to: CGPoint(x: cx + r * cos(b), y: cy + r * sin(b)))
+            ray.closeSubpath()
+            context.fill(ray, with: .color(color.opacity(0.33)))
+        }
     }
 }
 
@@ -745,14 +751,15 @@ private struct HoloShine: View {
 
     var body: some View {
         TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion)) { timeline in
-            let t = timeline.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 3.2) / 3.2
+            let t: Double = timeline.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 3.2) / 3.2
+            let shift: Double = reduceMotion ? -0.6 : 0.45 - 1.8 * t
             GeometryReader { geo in
                 LinearGradient(stops: [.init(color: .clear, location: 0.3), .init(color: .white.opacity(0.35), location: 0.45),
                                        .init(color: Color(hex: 0xFFAAF0).opacity(0.25), location: 0.52),
                                        .init(color: Color(hex: 0x8CDCFF).opacity(0.2), location: 0.58), .init(color: .clear, location: 0.7)],
                                startPoint: .topLeading, endPoint: .bottomTrailing)
                     .frame(width: geo.size.width * 2.5)
-                    .offset(x: geo.size.width * (reduceMotion ? -0.6 : (1.2 - 1.8 * t) - 0.75))
+                    .offset(x: geo.size.width * CGFloat(shift))
                     .blendMode(.screen)
             }
         }

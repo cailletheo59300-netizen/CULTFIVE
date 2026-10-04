@@ -16,6 +16,8 @@ struct DailyHomeView: View {
     /// Objectifs remplis depuis la dernière visite : célébrés en haut de l'accueil.
     @State private var rewards: [QuestsOverview.Reward] = []
     @State private var showStreakHelp = false
+    /// Défis remplis, fêtés en plein écran (le bandeau reste en haut de l'accueil ensuite).
+    @State private var questMoments: [Celebration] = []
 
     var body: some View {
         NavigationStack {
@@ -49,6 +51,9 @@ struct DailyHomeView: View {
         .fullScreenCover(item: $playConfig, onDismiss: { Task { await reload() } }) { config in
             PlaySessionView(config: config)
         }
+        .fullScreenCover(isPresented: Binding(get: { !questMoments.isEmpty }, set: { if !$0 { questMoments = [] } })) {
+            CelebrationSequence(items: questMoments) { questMoments = [] }
+        }
         .task {
             await reload()
             #if DEBUG
@@ -70,7 +75,9 @@ struct DailyHomeView: View {
             quests = fresh
             if !fresh.newly.isEmpty {
                 withAnimation(Motion.bounce) { rewards = fresh.newly }
-                Haptics.success()
+                questMoments = fresh.newly.map {
+                    .quest(label: $0.label, seeds: $0.seeds, xp: $0.xp, chest: $0.chest.flatMap(ChestTier.init(rawValue:)))
+                }
                 await app.refreshProfile()
             }
         }

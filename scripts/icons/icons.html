@@ -145,6 +145,98 @@ function snap(build,px,frameBuild){
   R.render(scene,cam);return R.domElement.toDataURL('image/png');
 }
 
+// Emblèmes de rang, médailles et coupe (repris de la maquette « rangs 3D » validée).
+  const RANKS = [
+    { name: 'Curieux',      elo: 'Moins de 600',  rim: 0xB87333, enamel: 0x8B4A2B, marks: 1 },
+    { name: 'Amateur',      elo: 'À partir de 600',  rim: 0xC9773A, enamel: 0x2F9E44, marks: 2 },
+    { name: 'Éclairé',      elo: 'À partir de 750',  rim: 0xDDE3EA, enamel: 0x1C7ED6, marks: 3, laurel: true },
+    { name: 'Érudit',       elo: 'À partir de 900',  rim: 0xFFC933, enamel: 0x6A4CFF, marks: 4, laurel: true },
+    { name: 'Expert',       elo: 'À partir de 1 050', rim: 0xFFC933, enamel: 0xC2255C, marks: 4, laurel: true, wings: true },
+    { name: 'Encyclopédie', elo: 'À partir de 1 200', rim: 0xFFC933, enamel: 0x24127A, marks: 5, laurel: true, wings: true, crown: true, gem: true },
+  ];
+  function rrect(w, h, r) { const s = new THREE.Shape(); s.moveTo(-w / 2 + r, -h / 2); s.lineTo(w / 2 - r, -h / 2); s.quadraticCurveTo(w / 2, -h / 2, w / 2, -h / 2 + r); s.lineTo(w / 2, h / 2 - r); s.quadraticCurveTo(w / 2, h / 2, w / 2 - r, h / 2); s.lineTo(-w / 2 + r, h / 2); s.quadraticCurveTo(-w / 2, h / 2, -w / 2, h / 2 - r); s.lineTo(-w / 2, -h / 2 + r); s.quadraticCurveTo(-w / 2, -h / 2, -w / 2 + r, -h / 2); return s; }
+  const circle = (r) => { const s = new THREE.Shape(); s.absarc(0, 0, r, 0, Math.PI * 2, false); return s; };
+  const polygon = (n, r, rot) => { const s = new THREE.Shape(); for (let i = 0; i <= n; i++) { const a = rot + i / n * Math.PI * 2; i ? s.lineTo(Math.cos(a) * r, Math.sin(a) * r) : s.moveTo(Math.cos(a) * r, Math.sin(a) * r); } return s; };
+  const shield = (k) => { const p = new THREE.Shape(); p.moveTo(0, .8 * k); p.bezierCurveTo(.32 * k, .72 * k, .58 * k, .66 * k, .74 * k, .62 * k); p.bezierCurveTo(.76 * k, .08 * k, .52 * k, -.52 * k, 0, -.86 * k); p.bezierCurveTo(-.52 * k, -.52 * k, -.76 * k, .08 * k, -.74 * k, .62 * k); p.bezierCurveTo(-.58 * k, .66 * k, -.32 * k, .72 * k, 0, .8 * k); return p; };
+  const star = (n, R, r) => { const s = new THREE.Shape(); for (let i = 0; i <= 2 * n; i++) { const a = Math.PI / 2 + i / (2 * n) * Math.PI * 2, rr = i % 2 ? r : R; i ? s.lineTo(Math.cos(a) * rr, Math.sin(a) * rr) : s.moveTo(Math.cos(a) * rr, Math.sin(a) * rr); } return s; };
+
+  // Les traits du 5 du jour, en relief.
+  function tally(n, mat, slashMat) {
+    const g = new THREE.Group(); const count = Math.min(n, 4); const gap = .17;
+    for (let i = 0; i < count; i++) { const m = new THREE.Mesh(extrude(rrect(.09, .52, .045), .06, .025), mat); m.position.x = (i - (count - 1) / 2) * gap; g.add(m); }
+    if (n >= 5) { const s = new THREE.Mesh(extrude(rrect(.09, .78, .045), .06, .025), slashMat); s.rotation.z = -1.05; s.position.z = .05; g.add(s); }
+    return g;
+  }
+  function laurel(mat) {
+    const g = new THREE.Group(); const leaf = new THREE.SphereGeometry(.09, 14, 10);
+    [-1, 1].forEach((side) => { for (let i = 0; i < 6; i++) { const a = -Math.PI / 2 + .35 + i * .36; const m = new THREE.Mesh(leaf, mat); m.scale.set(.55, 1.25, .35); m.position.set(side * Math.cos(a) * .98, Math.sin(a) * .98 - .02, .02); m.rotation.z = side * (a + Math.PI / 2) * -1 + (side > 0 ? 0 : 0); m.rotation.z = Math.atan2(Math.sin(a), Math.cos(a)) * (side > 0 ? 1 : -1) + (side > 0 ? 0 : Math.PI); g.add(m); } });
+    return g;
+  }
+  function wing(side, mat) {
+    const s = new THREE.Shape(); s.moveTo(0, .25); s.bezierCurveTo(.35, .55, .75, .6, 1.05, .52); s.bezierCurveTo(.92, .4, .95, .3, .82, .22); s.bezierCurveTo(.9, .12, .85, .02, .72, -.02);
+    s.bezierCurveTo(.78, -.12, .7, -.2, .58, -.2); s.bezierCurveTo(.4, -.2, .2, -.15, 0, -.1); s.lineTo(0, .25);
+    const m = new THREE.Mesh(extrude(s, .05, .03), mat); m.scale.x = side; m.position.set(side * .62, .12, -.08); return m;
+  }
+  function crown(mat, gemMat) {
+    const s = new THREE.Shape(); s.moveTo(-.42, 0); s.lineTo(-.48, .36); s.lineTo(-.24, .18); s.lineTo(0, .44); s.lineTo(.24, .18); s.lineTo(.48, .36); s.lineTo(.42, 0); s.lineTo(-.42, 0);
+    const g = new THREE.Group(); g.add(new THREE.Mesh(extrude(s, .1, .04), mat));
+    [-.48, 0, .48].forEach((x, i) => { const b = new THREE.Mesh(new THREE.SphereGeometry(.065, 16, 12), gemMat); b.position.set(x, [.38, .47, .38][i], .03); g.add(b); });
+    return g;
+  }
+
+  function emblem(rank, idx) {
+    const g = new THREE.Group(); const rim = metal(rank.rim, rank.rim === 0xDDE3EA ? .12 : .2); const enamel = phys(rank.enamel);
+    const white = phys(0xffffff, { roughness: .3 }); const gold = metal(0xFFC933, .16);
+    let outer, inner;
+    if (idx === 0) { outer = circle(.86); inner = circle(.72); }
+    else if (idx === 1) { outer = shield(1.05); inner = shield(.88); }
+    else if (idx === 2) { outer = polygon(6, .9, Math.PI / 2); inner = polygon(6, .75, Math.PI / 2); }
+    else if (idx === 3) { outer = polygon(8, .92, Math.PI / 8); inner = polygon(8, .77, Math.PI / 8); }
+    else if (idx === 4) { outer = shield(1.12); inner = shield(.94); }
+    else { outer = star(8, 1.0, .84); inner = circle(.7); }
+    g.add(new THREE.Mesh(extrude(outer, .16, .06), rim));
+    const enam = new THREE.Mesh(extrude(inner, .14, .04), enamel); enam.position.z = .06; g.add(enam);
+    if (rank.laurel) { const l = laurel(gold); l.position.z = .02; l.scale.setScalar(idx === 5 ? 1.12 : 1.02); g.add(l); }
+    if (rank.wings) { g.add(wing(1, metal(0xffffff, .25))); g.add(wing(-1, metal(0xffffff, .25))); }
+    const t = tally(rank.marks, idx >= 3 ? gold : white, metal(0xFFD23F, .12)); t.position.set(0, idx === 1 || idx === 4 ? .02 : 0, .2); g.add(t);
+    if (rank.crown) { const c = crown(gold, phys(0xff4d5e, { emissive: 0xff2040, emissiveIntensity: .25 })); c.position.set(0, .9, 0); g.add(c); }
+    if (rank.gem) {
+      const gm = new THREE.Mesh(new THREE.OctahedronGeometry(.13, 0), phys(0x74C0FC, { emissive: 0x4dabf7, emissiveIntensity: .5, roughness: .05 }));
+      gm.position.set(0, -.78, .15); gm.scale.set(1, 1.3, .7); g.add(gm); g.userData.gem = gm;
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(1.18, .025, 8, 80), metal(0xFFE680, .1)); ring.rotation.x = 1.25; g.add(ring); g.userData.ring = ring;
+    }
+    return g;
+  }
+  function medal(m) {
+    const g = new THREE.Group(); const mat = m.diamond ? phys(m.metal, { roughness: .04, clearcoat: 1, metalness: .3, envMapIntensity: 1.8 }) : metal(m.metal, .2);
+    const ribbonA = phys(0x6A4CFF, { clearcoat: .3, roughness: .5 }), ribbonB = phys(0xFFD23F, { clearcoat: .3, roughness: .5 });
+    const tail = (side, mat2) => { const s = new THREE.Shape(); s.moveTo(-.16, 0); s.lineTo(.16, 0); s.lineTo(.2, -.62); s.lineTo(0, -.5); s.lineTo(-.2, -.62); s.lineTo(-.16, 0);
+      const r = new THREE.Mesh(extrude(s, .03, .015), mat2); r.position.set(side * .22, -.55, -.12); r.rotation.z = side * .32; return r; };
+    g.add(tail(-1, ribbonA)); g.add(tail(1, ribbonB));
+    const disc = new THREE.Mesh(extrude(circle(.72), .14, .06), mat); g.add(disc);
+    const inner = new THREE.Mesh(extrude(circle(.56), .06, .03), m.diamond ? phys(0x1C7ED6, { roughness: .1 }) : phys(0x2B1B66, { roughness: .35 })); inner.position.z = .09; g.add(inner);
+    // Globe en relief (domaine Géographie)
+    const globeMat = m.diamond ? metal(0xffffff, .05) : mat;
+    const ring = (r, rx, ry) => { const t = new THREE.Mesh(new THREE.TorusGeometry(r, .025, 8, 48), globeMat); t.rotation.set(rx, ry, 0); t.position.z = .16; g.add(t); };
+    ring(.36, 0, 0); ring(.36, 0, Math.PI / 2 - .5); ring(.36, 0, -(Math.PI / 2 - .5)); ring(.36, Math.PI / 2, 0);
+    const lat = new THREE.Mesh(new THREE.TorusGeometry(.28, .022, 8, 48), globeMat); lat.position.set(0, .2, .16); lat.scale.y = .3; g.add(lat);
+    const lat2 = lat.clone(); lat2.position.y = -.2; g.add(lat2);
+    if (m.diamond) { const d = new THREE.Mesh(new THREE.OctahedronGeometry(.12, 0), phys(0xffffff, { roughness: 0, emissive: 0x9be7ff, emissiveIntensity: .4 })); d.position.set(0, .82, .05); d.scale.set(1, 1.3, .7); g.add(d); }
+    g.position.y = .18; return g;
+  }
+  function cup() {
+    const g = new THREE.Group(); const gold = metal(0xFFC933, .16);
+    const prof = [[0, -.9], [.42, -.9], [.42, -.8], [.16, -.72], [.1, -.5], [.12, -.3], [.3, -.2], [.5, .05], [.58, .45], [.6, .62], [.56, .62], [.52, .45], [.44, .1], [0, 0]].map(([x, y]) => new THREE.Vector2(x, y));
+    g.add(new THREE.Mesh(new THREE.LatheGeometry(prof, 56), gold));
+    [-1, 1].forEach((s) => { const h = new THREE.Mesh(new THREE.TorusGeometry(.22, .045, 12, 32, Math.PI * 1.2), gold); h.position.set(s * .6, .3, 0); h.rotation.z = s > 0 ? -Math.PI / 2 - .3 : Math.PI / 2 + .3; g.add(h); });
+    const plaque = new THREE.Mesh(extrude(rrect(.5, .16, .05), .03, .015), phys(0x6A4CFF)); plaque.position.set(0, -.82, .44); g.add(plaque);
+    const flame = (k) => { const f = new THREE.Shape(); f.moveTo(0, .55 * k); f.bezierCurveTo(.35 * k, .2 * k, .4 * k, -.15 * k, .25 * k, -.35 * k); f.bezierCurveTo(.12 * k, -.5 * k, -.12 * k, -.5 * k, -.25 * k, -.35 * k); f.bezierCurveTo(-.42 * k, -.12 * k, -.3 * k, .1 * k, -.12 * k, .22 * k); f.bezierCurveTo(-.08 * k, .05 * k, .02 * k, .1 * k, 0, .55 * k); return f; };
+    const fl = new THREE.Mesh(extrude(flame(.55), .06, .03), phys(0xFF922B, { emissive: 0xff6b00, emissiveIntensity: .3 })); fl.position.set(0, .25, .5); g.add(fl);
+    g.position.y = .1; return g;
+  }
+
+function framed(obj,c){return {obj,cam:c||[0,.2,5.2,0,.05,0]};}
+
 // Nom de l'image dans l'app → [modèle, taille en pixels (@3x)].
 const ICONS={
   chest_wood:[()=>chest('wood',false),600], chest_silver:[()=>chest('silver',false),600],
@@ -158,6 +250,9 @@ const ICONS={
 const FRAMES=10;
 for(const tier of ['wood','silver','gold','savant']) for(let i=0;i<FRAMES;i++)
   ICONS[`ChestOpening/chest_${tier}_${i}`]=[()=>chest(tier,Math.pow(i/(FRAMES-1),1.6)),540,()=>chest(tier,1)];
+// Rangs (même ordre que CoteCULT.Rank), trophée d'exploit.
+['curious','amateur','enlightened','scholar','expert','encyclopedia'].forEach((id,i)=>{ICONS[`rank_${id}`]=[()=>framed(emblem(RANKS[i],i)),360];});
+ICONS.trophy_cup=[()=>framed(cup()),360];
 window.renderIcons=()=>{const out={};for(const [name,[build,px,frame]] of Object.entries(ICONS)) out[name]=snap(build,px,frame);return out;};
 </script>
 </body>
