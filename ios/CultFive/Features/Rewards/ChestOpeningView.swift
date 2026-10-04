@@ -115,7 +115,9 @@ struct ChestOpeningView: View {
                             .shadow(color: glow.opacity(0.5), radius: 30)
                     }
                     .id(chest.id)
-                    .transition(.scale.combined(with: .opacity))
+                    // Le coffre arrive en grandissant ; à l'ouverture il éclate vers l'avant (jamais il ne rapetisse).
+                    .transition(.asymmetric(insertion: .scale(scale: 0.8).combined(with: .opacity),
+                                            removal: .scale(scale: 1.25).combined(with: .opacity)))
                 }
                 if let upgradeBanner {
                     Text("Amélioré : \(upgradeBanner.title) !")

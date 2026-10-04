@@ -128,7 +128,7 @@ const T50=()=>ticket(0x2F8CE8,'#8FCBFF','#0B3C7A',(c,x,y)=>{c.fillStyle='#0B3C7A
 const THINT=()=>ticket(0xF2A900,'#FFE27A','#7A4A00',(c,x,y)=>{c.fillStyle='#fff';c.beginPath();c.arc(x,y-22,58,Math.PI*.8,Math.PI*2.2);c.lineTo(x+30,y+46);c.lineTo(x-30,y+46);c.closePath();c.fill();
   c.fillStyle='#1E1340';c.fillRect(x-30,y+54,60,14);c.fillRect(x-22,y+74,44,12);c.strokeStyle='#E0A300';c.lineWidth=8;c.lineCap='round';c.beginPath();c.moveTo(x-16,y-8);c.lineTo(x,y+16);c.lineTo(x+16,y-8);c.stroke();});
 
-function snap(build,px,frameBuild){
+function snap(build,px,frameBuild,restBuild){
   R.setSize(px,px,false);
   while(holder.children.length) holder.remove(holder.children[0]);
   const {obj,cam:c}=build();holder.add(obj);
@@ -137,8 +137,14 @@ function snap(build,px,frameBuild){
   // cadrage automatique : l'objet remplit l'image avec une petite marge
   cam.position.set(c[0],c[1],c[2]);cam.lookAt(c[3],c[4],c[5]);cam.updateMatrixWorld();
   // Cadrage : celui de l'objet, ou d'un autre état (ex. coffre ouvert) pour qu'une animation ne bouge pas.
-  let ref=obj;if(frameBuild){ref=frameBuild().obj;ref.updateMatrixWorld(true);}
-  const box=new THREE.Box3().setFromObject(ref);const ctr=box.getCenter(new THREE.Vector3());const sz=box.getSize(new THREE.Vector3());
+  // Avec frameBuild (images d'une animation) : centré sur l'objet au repos, taille de l'état le plus grand (sans la lueur),
+  // pour que l'objet reste au centre et ne bouge pas d'une image à l'autre.
+  let ctr,sz;
+  if(frameBuild){
+    const rest=(restBuild||build)().obj;rest.updateMatrixWorld(true);ctr=new THREE.Box3().setFromObject(rest).getCenter(new THREE.Vector3());
+    const big=frameBuild().obj;big.updateMatrixWorld(true);const bb=new THREE.Box3();
+    big.traverse(o=>{if(o.isMesh)bb.expandByObject(o);});sz=bb.getSize(new THREE.Vector3());
+  }else{const box=new THREE.Box3().setFromObject(obj);ctr=box.getCenter(new THREE.Vector3());sz=box.getSize(new THREE.Vector3());}
   const rad=Math.max(sz.x,sz.y,sz.z)*.62;const dist=rad/Math.tan(THREE.MathUtils.degToRad(15));
   const dir=new THREE.Vector3(c[0]-c[3],c[1]-c[4],c[2]-c[5]).normalize();
   cam.position.copy(ctr).addScaledVector(dir,dist);cam.lookAt(ctr);
@@ -275,12 +281,12 @@ const ICONS={
 // Ouverture du coffre, image par image (écran d'ouverture) : 10 images de fermé à ouvert, même cadrage.
 const FRAMES=10;
 for(const tier of ['wood','silver','gold','savant']) for(let i=0;i<FRAMES;i++)
-  ICONS[`ChestOpening/chest_${tier}_${i}`]=[()=>chest(tier,Math.pow(i/(FRAMES-1),1.6)),540,()=>chest(tier,1)];
+  ICONS[`ChestOpening/chest_${tier}_${i}`]=[()=>chest(tier,Math.pow(i/(FRAMES-1),1.6)),540,()=>chest(tier,1),()=>chest(tier,0)];
 // Rangs (même ordre que CoteCULT.Rank), trophée d'exploit.
 ['curious','amateur','enlightened','scholar','expert','encyclopedia'].forEach((id,i)=>{ICONS[`rank_${id}`]=[()=>framed(emblem(RANKS[i],i)),360];});
 ICONS.bag=[bag,192];
 ICONS.trophy_cup=[()=>framed(cup()),360];
-window.renderIcons=()=>{const out={};for(const [name,[build,px,frame]] of Object.entries(ICONS)) out[name]=snap(build,px,frame);return out;};
+window.renderIcons=()=>{const out={};for(const [name,[build,px,frame,rest]] of Object.entries(ICONS)) out[name]=snap(build,px,frame,rest);return out;};
 </script>
 </body>
 </html>
