@@ -101,7 +101,7 @@ struct DailyHomeView: View {
                 let freezes = app.profile?.streakFreezes ?? 0
                 Button { showStreakHelp = true } label: {
                     HStack(spacing: 4) {
-                        Image(systemName: "flame.fill").foregroundStyle(Color(hex: 0xF76707))
+                        GameIcon.flame.image.frame(width: 20, height: 20)
                         Text("\(streak)").monospacedDigit()
                         if freezes > 0 {
                             Group {
@@ -109,7 +109,7 @@ struct DailyHomeView: View {
                                     Text("· \(freezes) joker\(freezes > 1 ? "s" : "")")
                                 } else {
                                     HStack(spacing: 2) {
-                                        Image(systemName: "shield.fill")
+                                        GameIcon.joker.image.frame(width: 15, height: 15)
                                         Text("\(freezes)").monospacedDigit()
                                     }
                                 }
@@ -146,11 +146,11 @@ struct DailyHomeView: View {
         let streak = app.profile?.streak ?? 0
         let freezes = app.profile?.streakFreezes ?? 0
         return VStack(alignment: .leading, spacing: Space.s) {
-            Label("\(streak) jour\(streak > 1 ? "s" : "") de série", systemImage: "flame.fill")
+            Label { Text("\(streak) jour\(streak > 1 ? "s" : "") de série") } icon: { GameIcon.flame.image.frame(width: 24, height: 24) }
                 .font(.cfTitle3).foregroundStyle(Color.ink)
             Text("Fais le \(Brand.dailyName) chaque jour pour la faire grandir.")
-            Label(freezes > 0 ? "\(freezes) joker\(freezes > 1 ? "s" : "") de série" : "Aucun joker pour l'instant",
-                  systemImage: "shield.fill")
+            Label { Text(freezes > 0 ? "\(freezes) joker\(freezes > 1 ? "s" : "") de série" : "Aucun joker pour l'instant") }
+                  icon: { GameIcon.joker.image.frame(width: 22, height: 22) }
                 .font(.cfCallout.weight(.bold)).foregroundStyle(Color.ink)
                 .padding(.top, 4)
             Text("Si tu rates un jour, un joker sauve ta série automatiquement. Tu en gagnes un tous les 7 jours d'affilée (2 au maximum).")

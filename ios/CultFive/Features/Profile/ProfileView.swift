@@ -189,7 +189,7 @@ struct ProfileView: View {
                 if let symbol {
                     Image(systemName: symbol).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(tint)
                 } else {
-                    SeedIcon().frame(width: 15, height: 19)
+                    SeedIcon().frame(width: 24, height: 24)
                 }
             }
             .frame(width: 36, height: 36)

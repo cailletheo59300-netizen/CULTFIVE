@@ -4,10 +4,9 @@ import CultFiveCore
 /// Pubs récompensées : toujours proposées, jamais imposées. La récompense vient du serveur, après la confirmation de
 /// Google ; ces vues ne font qu'afficher l'offre et le résultat.
 
-/// Carte « une pub pour… ».
-struct AdOfferCard: View {
-    let icon: String
-    let tint: Color
+/// Carte « une pub pour… », avec son icône 3D.
+struct AdOfferCard<Icon: View>: View {
+    @ViewBuilder let icon: Icon
     let title: String
     let detail: String
     let button: String
@@ -18,7 +17,7 @@ struct AdOfferCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Space.m) {
             HStack(alignment: .top, spacing: Space.m) {
-                Image(systemName: icon).font(.system(size: 28)).foregroundStyle(tint).accessibilityHidden(true)
+                icon.frame(width: 48, height: 48).accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title).font(.cfHeadline).foregroundStyle(Color.ink)
                     Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft)
@@ -52,7 +51,7 @@ struct FreeChestOffer: View {
 
     var body: some View {
         if (app.adStatus?.freeChest ?? 0) > 0 {
-            AdOfferCard(icon: "gift.fill", tint: Color(hex: 0xB07A3F), title: "Coffre offert",
+            AdOfferCard(icon: { ChestView(tier: .wood) }, title: "Coffre offert",
                         detail: "Un coffre en bois par jour contre une courte pub. Il peut monter de rang à l'ouverture !",
                         button: "Regarder une pub") {
                 do {
@@ -73,7 +72,7 @@ struct StreakRescueOffer: View {
 
     var body: some View {
         if let streak = app.adStatus?.streakRescue {
-            AdOfferCard(icon: "flame.fill", tint: Color(hex: 0xF76707), title: "Sauve ta série de \(streak) jours",
+            AdOfferCard(icon: { GameIcon.flameOff.image }, title: "Sauve ta série de \(streak) jours",
                         detail: "Tu l'as perdue il y a moins de 48 h. Une courte pub et elle repart, comme si de rien n'était. Une fois par mois.",
                         button: "Sauver ma série") {
                 do {

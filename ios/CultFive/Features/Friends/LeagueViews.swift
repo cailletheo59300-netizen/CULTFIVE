@@ -742,10 +742,10 @@ extension LeagueView {
             .popCard(padding: 14)
         } else if standings.status != "finished", let podium = standings.podium {
             HStack(spacing: Space.m) {
-                HStack(alignment: .bottom, spacing: 2) {
-                    ChestView(tier: .silver).frame(width: 28)
-                    ChestView(tier: .gold).frame(width: 36)
-                    ChestView(tier: .wood).frame(width: 24)
+                HStack(alignment: .bottom, spacing: -4) {
+                    ChestView(tier: .silver).frame(width: 32)
+                    ChestView(tier: .gold).frame(width: 42).zIndex(1)
+                    ChestView(tier: .wood).frame(width: 28)
                 }
                 VStack(alignment: .leading, spacing: 2) {
                     if podium.activePlayers < podium.minPlayers {
@@ -1089,7 +1089,7 @@ struct LeagueRulesSheet: View {
 
     private func podiumStep(_ tier: ChestTier, height: CGFloat) -> some View {
         VStack(spacing: 1) {
-            ChestView(tier: tier).frame(width: 22)
+            ChestView(tier: tier).frame(width: 26)
             Rectangle().fill(Color.brand.opacity(0.25)).frame(width: 22, height: height)
         }
     }

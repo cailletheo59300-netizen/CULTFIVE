@@ -64,4 +64,4 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 8. Petits correctifs : boutons d'aide en grille de 2 colonnes (les libellés se coupent sur plusieurs lignes) ; tickets des coffres redessinés (le « 50/50 » est coupé dans le ticket bleu).
 
 ## Commandes utiles
-`scripts/test-db.sh` · `scripts/gen-fixtures.sh` (après test-db) · `node scripts/build-seed.mjs` · `python3 scripts/make-icon.py <sortie>` · `cd ios && xcodegen`
+`scripts/test-db.sh` · `scripts/gen-fixtures.sh` (après test-db) · `node scripts/build-seed.mjs` · `python3 scripts/make-icon.py <sortie>` · `node scripts/icons/render.mjs` (icônes 3D : coffres, graines, flamme, joker, tickets, arrosoir → `Assets.xcassets/Icons`) · `cd ios && xcodegen`

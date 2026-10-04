@@ -76,8 +76,7 @@ struct LeonTreeScreen: View {
                         .transition(.move(edge: .top).combined(with: .opacity))
                 }
                 if !progression.chests.isEmpty {
-                    ChestsWaitingCard(count: progression.chests.count,
-                                      tier: progression.chests.map(\.tier).max { $0.rank < $1.rank } ?? .wood) {
+                    ChestsWaitingCard(tiers: progression.chests.map(\.tier)) {
                         app.openChests()
                     }
                 }
@@ -238,8 +237,14 @@ struct LeonTreeScreen: View {
     private func tickets(_ tickets: HelpTickets) -> some View {
         if tickets.fiftyFifty + tickets.hint > 0 {
             HStack(spacing: Space.m) {
-                Text("🎟️ \(tickets.fiftyFifty) ticket\(tickets.fiftyFifty > 1 ? "s" : "") 50/50")
-                Text("💡 \(tickets.hint) ticket\(tickets.hint > 1 ? "s" : "") indice")
+                HStack(spacing: 4) {
+                    GameIcon.ticketFifty.image.frame(width: 26, height: 26)
+                    Text("\(tickets.fiftyFifty) ticket\(tickets.fiftyFifty > 1 ? "s" : "") 50/50")
+                }
+                HStack(spacing: 4) {
+                    GameIcon.ticketHint.image.frame(width: 26, height: 26)
+                    Text("\(tickets.hint) ticket\(tickets.hint > 1 ? "s" : "") indice")
+                }
             }
             .font(.system(.footnote, design: .rounded).weight(.bold))
             .foregroundStyle(Color.inkSoft)

@@ -361,8 +361,7 @@ struct PlaySummaryView: View {
                     CelebrationCard(kind: .trophy, title: name, detail: "Trophée débloqué : un coffre t'attend.")
                 }
                 if chestsWaiting > 0 {
-                    ChestsWaitingCard(count: chestsWaiting, tier: app.progression?.chests.map(\.tier).max { $0.rank < $1.rank } ?? .wood,
-                                      action: onOpenChests)
+                    ChestsWaitingCard(tiers: app.progression?.chests.map(\.tier) ?? [], action: onOpenChests)
                 }
                 ForEach(placementsDone, id: \.domainId) { r in
                     CelebrationCard(kind: .rating, title: "Elo confirmé : \(CoteCULT.Rank(cote: r.coteAfter).name) !",

@@ -3,116 +3,31 @@ import CultFiveCore
 
 // MARK: - Coffre
 
-/// Coffre dessiné en code : bois, argent ou or. Ouvert, le couvercle bascule et une lueur sort.
+/// Coffre en 3D (bois, argent, or, Savant), fermé ou ouvert avec sa lueur. Images rendues à partir des modèles 3D
+/// (`scripts/icons`), nettes à toutes les tailles.
 struct ChestView: View {
     let tier: ChestTier
     var open = false
 
     var body: some View {
-        Canvas { context, size in
-            ChestDrawing(tier: tier, open: open).draw(in: &context, size: size)
-        }
-        .aspectRatio(100.0 / 90.0, contentMode: .fit)
-        .accessibilityElement()
-        .accessibilityLabel(tier.title + (open ? ", ouvert" : ""))
+        Image("chest_\(tier.rawValue)" + (open ? "_open" : ""))
+            .resizable()
+            .scaledToFit()
+            .accessibilityElement()
+            .accessibilityLabel(tier.title + (open ? ", ouvert" : ""))
     }
 }
 
-private struct ChestDrawing {
-    let tier: ChestTier
-    let open: Bool
+/// Les autres icônes 3D de l'app (même fabrication que les coffres).
+enum GameIcon: String {
+    case seeds, flame, joker
+    case flameOff = "flame_off"
+    case ticketFifty = "ticket_fifty"
+    case ticketHint = "ticket_hint"
+    case wateringCan = "watering_can"
 
-    private var palette: (main: Color, dark: Color, band: Color) {
-        switch tier {
-        case .wood: return (Color(hex: 0xB7793E), Color(hex: 0x8A5A2B), Color(hex: 0x5F666D))
-        case .silver: return (Color(hex: 0xDDE3EA), Color(hex: 0xAEB7C2), Color(hex: 0x6F7B88))
-        case .gold: return (Color(hex: 0xFFC933), Color(hex: 0xE0A300), Color(hex: 0xA8740A))
-        case .savant: return (Color(hex: 0x7B5CFF), Color(hex: 0x4B2BC9), Color(hex: 0xFFD23F))
-        }
-    }
-
-    /// Étincelle à quatre branches.
-    static func spark(center: CGPoint, radius r: Double) -> Path {
-        var path = Path()
-        let c = center
-        path.move(to: CGPoint(x: c.x, y: c.y - r))
-        path.addQuadCurve(to: CGPoint(x: c.x + r, y: c.y), control: CGPoint(x: c.x + r * 0.18, y: c.y - r * 0.18))
-        path.addQuadCurve(to: CGPoint(x: c.x, y: c.y + r), control: CGPoint(x: c.x + r * 0.18, y: c.y + r * 0.18))
-        path.addQuadCurve(to: CGPoint(x: c.x - r, y: c.y), control: CGPoint(x: c.x - r * 0.18, y: c.y + r * 0.18))
-        path.addQuadCurve(to: CGPoint(x: c.x, y: c.y - r), control: CGPoint(x: c.x - r * 0.18, y: c.y - r * 0.18))
-        path.closeSubpath()
-        return path
-    }
-
-    func draw(in context: inout GraphicsContext, size: CGSize) {
-        let scale = min(size.width / 100, size.height / 90)
-        context.translateBy(x: (size.width - 100 * scale) / 2, y: (size.height - 90 * scale) / 2)
-        context.scaleBy(x: scale, y: scale)
-        let p = palette
-
-        // Ombre.
-        context.fill(Path(ellipseIn: CGRect(x: 14, y: 80, width: 72, height: 8)), with: .color(.black.opacity(0.1)))
-
-        if open {
-            // Lueur, puis couvercle basculé derrière.
-            context.fill(Path(ellipseIn: CGRect(x: 6, y: 0, width: 88, height: 60)),
-                         with: .radialGradient(Gradient(colors: [Color.sun.opacity(0.95), Color.sun.opacity(0)]),
-                                               center: CGPoint(x: 50, y: 40), startRadius: 2, endRadius: 46))
-            var lid = Path()
-            lid.move(to: CGPoint(x: 12, y: 40))
-            lid.addLine(to: CGPoint(x: 18, y: 14))
-            lid.addQuadCurve(to: CGPoint(x: 82, y: 14), control: CGPoint(x: 50, y: 2))
-            lid.addLine(to: CGPoint(x: 88, y: 40))
-            lid.closeSubpath()
-            context.fill(lid, with: .color(p.dark))
-            context.fill(Path(roundedRect: CGRect(x: 16, y: 36, width: 68, height: 6), cornerRadius: 2), with: .color(Color(hex: 0x2B1A0E).opacity(0.55)))
-        }
-
-        // Caisse.
-        let base = Path(roundedRect: CGRect(x: 10, y: 42, width: 80, height: 42), cornerRadius: 7)
-        context.fill(base, with: .color(p.main))
-        context.fill(Path(roundedRect: CGRect(x: 10, y: 70, width: 80, height: 14), cornerRadius: 7), with: .color(p.dark.opacity(0.55)))
-        for x in [22.0, 72.0] {
-            context.fill(Path(CGRect(x: x, y: 42, width: 6, height: 42)), with: .color(p.band))
-        }
-        if tier == .wood {
-            for y in [54.0, 66.0] {
-                context.fill(Path(CGRect(x: 12, y: y, width: 76, height: 1.2)), with: .color(p.dark.opacity(0.6)))
-            }
-        }
-
-        if !open {
-            // Couvercle bombé.
-            var lid = Path()
-            lid.move(to: CGPoint(x: 8, y: 44))
-            lid.addLine(to: CGPoint(x: 8, y: 32))
-            lid.addQuadCurve(to: CGPoint(x: 92, y: 32), control: CGPoint(x: 50, y: 6))
-            lid.addLine(to: CGPoint(x: 92, y: 44))
-            lid.closeSubpath()
-            context.fill(lid, with: .linearGradient(Gradient(colors: [p.main, p.dark]),
-                                                    startPoint: CGPoint(x: 50, y: 10), endPoint: CGPoint(x: 50, y: 44)))
-            context.fill(Path(ellipseIn: CGRect(x: 26, y: 16, width: 30, height: 8)), with: .color(.white.opacity(0.25)))
-            context.drawLayer { layer in
-                layer.clip(to: lid)
-                for x in [22.0, 72.0] { layer.fill(Path(CGRect(x: x, y: 0, width: 6, height: 44)), with: .color(p.band)) }
-            }
-            context.fill(Path(CGRect(x: 8, y: 42, width: 84, height: 4)), with: .color(p.band))
-        }
-
-        // Serrure : un écusson rond marqué de l'étincelle Brainlix.
-        let lockY: Double = open ? 44 : 37
-        context.fill(Path(ellipseIn: CGRect(x: 40, y: lockY, width: 20, height: 20)), with: .color(p.band))
-        context.fill(Path(ellipseIn: CGRect(x: 42.5, y: lockY + 2.5, width: 15, height: 15)), with: .color(Color(hex: 0x1E1340).opacity(0.85)))
-        context.fill(ChestDrawing.spark(center: CGPoint(x: 50, y: lockY + 10), radius: 5.5), with: .color(tier == .savant ? Color.sun : p.main))
-        if tier.rank >= 2 {
-            // Reflets (or) ou constellation (Savant).
-            let points: [(Double, Double, Double)] = tier == .savant
-                ? [(18, 52, 3.2), (82, 60, 3.6), (30, 74, 2.4), (70, 50, 2.2), (24, 26, 2.6), (76, 22, 2.8)]
-                : [(18, 50, 2.2), (84, 58, 2.2)]
-            for (x, y, r) in points where open || y > 30 || tier == .savant {
-                context.fill(ChestDrawing.spark(center: CGPoint(x: x, y: y), radius: r), with: .color(.white.opacity(0.9)))
-            }
-        }
+    var image: some View {
+        Image(rawValue).resizable().scaledToFit().accessibilityHidden(true)
     }
 }
 
@@ -270,20 +185,31 @@ extension ChestTier {
     }
 }
 
-/// « 2 coffres t'attendent » : le plus beau coffre dessiné, bouton « Ouvrir ».
+/// « 3 coffres t'attendent » : les plus beaux coffres empilés (le meilleur devant), bouton « Ouvrir ».
 struct ChestsWaitingCard: View {
-    let count: Int
-    let tier: ChestTier
+    let tiers: [ChestTier]
     let action: () -> Void
+
+    private var count: Int { tiers.count }
+    /// Jusqu'à trois coffres, du plus beau au moins beau.
+    private var shown: [ChestTier] { Array(tiers.sorted { $0.rank > $1.rank }.prefix(3)) }
 
     var body: some View {
         Button(action: action) {
             HStack(spacing: 14) {
-                ChestView(tier: tier).frame(width: 58)
+                ZStack {
+                    // Derrière : les suivants, un peu plus petits, de part et d'autre.
+                    ForEach(Array(shown.enumerated().reversed()), id: \.offset) { i, tier in
+                        ChestView(tier: tier)
+                            .frame(width: i == 0 ? 58 : 44)
+                            .offset(x: i == 0 ? 0 : (i == 1 ? 18 : -18), y: i == 0 ? 0 : 6)
+                    }
+                }
+                .frame(width: shown.count > 1 ? 82 : 58, height: 58)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(count > 1 ? "\(count) coffres t'attendent" : "Un coffre t'attend")
                         .font(.cfTitle3).foregroundStyle(Color.ink)
-                    Text("Graines, tickets d'aide, jokers, objets pour Léon…")
+                    Text(count > 1 ? detail : "Graines, tickets d'aide, jokers, objets pour Léon…")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                 }
                 Spacer(minLength: 0)
@@ -298,6 +224,16 @@ struct ChestsWaitingCard: View {
         .buttonStyle(.row)
         .accessibilityElement(children: .combine)
     }
+
+    /// « 1 en or, 2 en bois ».
+    private var detail: String {
+        let names: [(ChestTier, String)] = [(.savant, "Savant"), (.gold, "en or"), (.silver, "en argent"), (.wood, "en bois")]
+        return names.compactMap { tier, name in
+            let n = tiers.filter { $0 == tier }.count
+            return n > 0 ? "\(n) \(name)" : nil
+        }
+        .joined(separator: ", ")
+    }
 }
 
 /// Pastille de l'accueil : nombre de coffres à ouvrir.
@@ -308,7 +244,7 @@ struct ChestPill: View {
     var body: some View {
         Button(action: action) {
             HStack(spacing: 5) {
-                ChestView(tier: .gold).frame(width: 22)
+                ChestView(tier: .gold).frame(width: 26, height: 22)
                 Text("\(count)").monospacedDigit()
             }
             .font(.cfNumber)
