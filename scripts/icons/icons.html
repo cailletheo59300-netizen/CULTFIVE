@@ -38,7 +38,9 @@ const TIERS={
   gold:{wood:['#C2361F','#7A1A0E','#F0745B',true],metal:0xffc933,metalRough:.2,lock:0xffe27a,gem:0xff4d5e},
   savant:{wood:['#4B2BC9','#24127A','#8E73FF',true],metal:0xffc933,metalRough:.16,lock:0xffe27a,gem:0xffd23f},
 };
-function chest(tier,open){
+// k : ouverture, de 0 (fermé) à 1 (couvercle basculé, lueur pleine) ; true = 1.
+function chest(tier,k){
+  k=k===true?1:(k||0);const open=k>0;
   const W=2.3,H=1.25,D=1.6,Rr=D/2,t=TIERS[tier];const g=new THREE.Group();
   const map=woodTex(...t.wood);map.wrapS=map.wrapT=THREE.RepeatWrapping;map.repeat.set(.45,.8);
   const wood=new THREE.MeshStandardMaterial({map,roughness:t.wood[3]?.45:.75,envMapIntensity:.7});
@@ -56,15 +58,18 @@ function chest(tier,open){
   if(t.gem){const gm=add(new THREE.OctahedronGeometry(.11,0),new THREE.MeshStandardMaterial({color:t.gem,emissive:t.gem,emissiveIntensity:.45,roughness:.1,metalness:.2}),0,H-.09,D/2+.14);gm.scale.set(1,1.25,.6);}
   const lid=new THREE.Group();lid.position.set(0,H,-D/2);g.add(lid);
   const dome=new THREE.CylinderGeometry(Rr,Rr,W,40,1,false,0,Math.PI);dome.rotateZ(Math.PI/2);add(dome,wood,0,0,Rr,lid);
-  const under=add(new THREE.PlaneGeometry(W,D),dark,0,.003,Rr,lid);under.rotation.x=Math.PI/2;
+
+  // Dessous du couvercle (visible une fois ouvert) : bois plus sombre.
+  const under=add(new THREE.PlaneGeometry(W,D),new THREE.MeshStandardMaterial({map,color:0x9a8a80,roughness:.8,side:THREE.DoubleSide,envMapIntensity:.5}),0,.003,Rr,lid);under.rotation.x=Math.PI/2;
   [-.72,.72].forEach(x=>{const b=new THREE.CylinderGeometry(Rr+.045,Rr+.045,.28,40,1,false,0,Math.PI);b.rotateZ(Math.PI/2);add(b,met,x,0,Rr,lid);});
   [-1,1].forEach(sx=>{const c=new THREE.CylinderGeometry(Rr+.03,Rr+.03,.12,40,1,false,0,Math.PI);c.rotateZ(Math.PI/2);add(c,met,sx*(W/2-.02),0,Rr,lid);});
   add(rbox(W+.08,.14,.16,.05),met,0,.06,D+.01,lid);
   if(open){
-    lid.rotation.x=-1.95;
-    const glow=add(new THREE.PlaneGeometry(W-.3,D-.3),new THREE.MeshBasicMaterial({color:0xfff1b0}),0,H+.002,0);glow.rotation.x=-Math.PI/2;
-    const halo=new THREE.Sprite(new THREE.SpriteMaterial({map:canvasTex(128,128,(c,w,h)=>{const r=c.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);r.addColorStop(0,'rgba(255,236,150,.95)');r.addColorStop(1,'rgba(255,236,150,0)');c.fillStyle=r;c.fillRect(0,0,w,h);}),transparent:true,depthWrite:false,blending:THREE.AdditiveBlending}));
-    halo.position.set(0,H+.5,0);halo.scale.set(2.6,2,1);g.add(halo);
+    const e=1+2.7*Math.pow(k-1,3)+1.7*Math.pow(k-1,2); // easeOutBack : le couvercle dépasse un peu puis revient
+    lid.rotation.x=-1.95*e;
+    const glow=add(new THREE.PlaneGeometry(W-.3,D-.3),new THREE.MeshBasicMaterial({color:0xfff1b0,transparent:true,opacity:Math.min(1,k*1.4)}),0,H+.002,0);glow.rotation.x=-Math.PI/2;
+    const halo=new THREE.Sprite(new THREE.SpriteMaterial({map:canvasTex(128,128,(c,w,h)=>{const r=c.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);r.addColorStop(0,'rgba(255,236,150,.95)');r.addColorStop(1,'rgba(255,236,150,0)');c.fillStyle=r;c.fillRect(0,0,w,h);}),transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,opacity:k}));
+    halo.position.set(0,H+.5,0);halo.scale.set(2.6*k,2*k,1);g.add(halo);
   }
   g.rotation.y=-.42;
   return {obj:g,cam:open?[0,2.9,7.2,0,1.25,0]:[0,2.6,6.6,0,.95,0]};
@@ -123,7 +128,7 @@ const T50=()=>ticket(0x2F8CE8,'#8FCBFF','#0B3C7A',(c,x,y)=>{c.fillStyle='#0B3C7A
 const THINT=()=>ticket(0xF2A900,'#FFE27A','#7A4A00',(c,x,y)=>{c.fillStyle='#fff';c.beginPath();c.arc(x,y-22,58,Math.PI*.8,Math.PI*2.2);c.lineTo(x+30,y+46);c.lineTo(x-30,y+46);c.closePath();c.fill();
   c.fillStyle='#1E1340';c.fillRect(x-30,y+54,60,14);c.fillRect(x-22,y+74,44,12);c.strokeStyle='#E0A300';c.lineWidth=8;c.lineCap='round';c.beginPath();c.moveTo(x-16,y-8);c.lineTo(x,y+16);c.lineTo(x+16,y-8);c.stroke();});
 
-function snap(build,px){
+function snap(build,px,frameBuild){
   R.setSize(px,px,false);
   while(holder.children.length) holder.remove(holder.children[0]);
   const {obj,cam:c}=build();holder.add(obj);
@@ -131,7 +136,9 @@ function snap(build,px){
   obj.traverse(o=>{const m=o.material;if(!m||m.userData.lin||m.isSpriteMaterial)return;m.userData.lin=true;if(m.color&&!m.map)m.color.convertSRGBToLinear();if(m.emissive)m.emissive.convertSRGBToLinear();});
   // cadrage automatique : l'objet remplit l'image avec une petite marge
   cam.position.set(c[0],c[1],c[2]);cam.lookAt(c[3],c[4],c[5]);cam.updateMatrixWorld();
-  const box=new THREE.Box3().setFromObject(obj);const ctr=box.getCenter(new THREE.Vector3());const sz=box.getSize(new THREE.Vector3());
+  // Cadrage : celui de l'objet, ou d'un autre état (ex. coffre ouvert) pour qu'une animation ne bouge pas.
+  let ref=obj;if(frameBuild){ref=frameBuild().obj;ref.updateMatrixWorld(true);}
+  const box=new THREE.Box3().setFromObject(ref);const ctr=box.getCenter(new THREE.Vector3());const sz=box.getSize(new THREE.Vector3());
   const rad=Math.max(sz.x,sz.y,sz.z)*.62;const dist=rad/Math.tan(THREE.MathUtils.degToRad(15));
   const dir=new THREE.Vector3(c[0]-c[3],c[1]-c[4],c[2]-c[5]).normalize();
   cam.position.copy(ctr).addScaledVector(dir,dist);cam.lookAt(ctr);
@@ -147,7 +154,11 @@ const ICONS={
   seeds:[seeds,192], flame:[()=>flame(true),192], flame_off:[()=>flame(false),192], joker:[joker,192],
   ticket_fifty:[T50,192], ticket_hint:[THINT,192], watering_can:[can,192],
 };
-window.renderIcons=()=>{const out={};for(const [name,[build,px]] of Object.entries(ICONS)) out[name]=snap(build,px);return out;};
+// Ouverture du coffre, image par image (écran d'ouverture) : 10 images de fermé à ouvert, même cadrage.
+const FRAMES=10;
+for(const tier of ['wood','silver','gold','savant']) for(let i=0;i<FRAMES;i++)
+  ICONS[`ChestOpening/chest_${tier}_${i}`]=[()=>chest(tier,Math.pow(i/(FRAMES-1),1.6)),540,()=>chest(tier,1)];
+window.renderIcons=()=>{const out={};for(const [name,[build,px,frame]] of Object.entries(ICONS)) out[name]=snap(build,px,frame);return out;};
 </script>
 </body>
 </html>

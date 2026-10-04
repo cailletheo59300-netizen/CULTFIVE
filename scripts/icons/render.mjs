@@ -22,13 +22,21 @@ await browser.close();
 rmSync(assets, { recursive: true, force: true });
 mkdirSync(assets, { recursive: true });
 writeFileSync(join(assets, 'Contents.json'), JSON.stringify({ info: { author: 'xcode', version: 1 }, properties: { 'provides-namespace': false } }, null, 2) + '\n');
-for (const [name, url] of Object.entries(icons)) {
-  const dir = join(assets, `${name}.imageset`);
+const folder = (path) => {
+  mkdirSync(path, { recursive: true });
+  writeFileSync(join(path, 'Contents.json'), JSON.stringify({ info: { author: 'xcode', version: 1 } }, null, 2) + '\n');
+};
+for (const [path, url] of Object.entries(icons)) {
+  // « Dossier/nom » : l'image est rangée dans un dossier du catalogue (sans espace de noms).
+  const parts = path.split('/');
+  const name = parts.pop();
+  if (parts.length) folder(join(assets, ...parts));
+  const dir = join(assets, ...parts, `${name}.imageset`);
   mkdirSync(dir);
   writeFileSync(join(dir, `${name}.png`), Buffer.from(url.split(',')[1], 'base64'));
   writeFileSync(join(dir, 'Contents.json'), JSON.stringify({
     images: [{ idiom: 'universal', filename: `${name}.png`, scale: '3x' }],
     info: { author: 'xcode', version: 1 },
   }, null, 2) + '\n');
-  console.log(name);
+  console.log(path);
 }
