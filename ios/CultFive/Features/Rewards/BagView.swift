@@ -40,8 +40,10 @@ struct BagView: View {
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
+                .containerRelativeFrame(.horizontal)
             }
             .scrollIndicators(.hidden)
+            .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .background(Color.paper)
             .navigationTitle("Mon sac")
             .toolbar {

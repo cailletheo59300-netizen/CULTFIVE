@@ -33,7 +33,7 @@ struct RankEmblem: View {
 
 /// Les autres icônes 3D de l'app (même fabrication que les coffres).
 enum GameIcon: String {
-    case seeds, flame, joker
+    case seeds, flame, joker, bag
     case flameOff = "flame_off"
     case ticketFifty = "ticket_fifty"
     case ticketHint = "ticket_hint"
@@ -310,26 +310,5 @@ struct ChestsWaitingCard: View {
             return n > 0 ? "\(n) \(name)" : nil
         }
         .joined(separator: ", ")
-    }
-}
-
-/// Pastille de l'accueil : nombre de coffres à ouvrir.
-struct ChestPill: View {
-    let count: Int
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            HStack(spacing: 5) {
-                ChestView(tier: .gold).frame(width: 26, height: 22)
-                Text("\(count)").monospacedDigit()
-            }
-            .font(.cfNumber)
-            .foregroundStyle(Color.ink)
-            .padding(.horizontal, 10).padding(.vertical, 5)
-            .background(Color.sun.opacity(0.35), in: Capsule())
-        }
-        .buttonStyle(.row)
-        .accessibilityLabel(count > 1 ? "\(count) coffres à ouvrir" : "Un coffre à ouvrir")
     }
 }

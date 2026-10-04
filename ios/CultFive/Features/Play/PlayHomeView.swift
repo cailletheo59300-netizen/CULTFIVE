@@ -56,12 +56,13 @@ struct PlayHomeView: View {
     }
 
     private var header: some View {
-        HStack(alignment: .firstTextBaseline) {
+        HStack(alignment: .center) {
             Text("Jouer").font(.cfDisplay)
             Spacer()
             if let global = CoteCULT.overall(skills) {
+                // Emblème et Elo centrés l'un sur l'autre.
                 if global.placed {
-                    RankEmblem(rank: global.rank).frame(width: 40, height: 40).alignmentGuide(.firstTextBaseline) { $0[.bottom] - 8 }
+                    RankEmblem(rank: global.rank).frame(width: 44, height: 44)
                         .accessibilityHidden(true)
                 }
                 VStack(alignment: .trailing, spacing: 0) {

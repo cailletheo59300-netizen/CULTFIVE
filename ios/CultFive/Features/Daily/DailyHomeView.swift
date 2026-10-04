@@ -39,8 +39,11 @@ struct DailyHomeView: View {
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
+                // Largeur de l'écran, jamais plus : la page ne bouge que de haut en bas.
+                .containerRelativeFrame(.horizontal)
             }
             .scrollIndicators(.hidden)
+            .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .clearsTabBar()
             .background(Color.paper)
             .refreshable { await reload() }
@@ -90,9 +93,8 @@ struct DailyHomeView: View {
     private var topLine: some View {
         // Jokers écrits en toutes lettres quand la ligne a la place, sinon un bouclier et leur nombre.
         ViewThatFits(in: .horizontal) {
-            topLineContent(jokersInWords: true, shortDate: false)
-            topLineContent(jokersInWords: true, shortDate: true)
-            topLineContent(jokersInWords: false, shortDate: true)
+            topLineContent(shortDate: false)
+            topLineContent(shortDate: true)
         }
         .padding(.top, Space.m)
         .popover(isPresented: $showStreakHelp) {
@@ -100,38 +102,25 @@ struct DailyHomeView: View {
         }
     }
 
-    private func topLineContent(jokersInWords: Bool, shortDate: Bool) -> some View {
+    /// La date, la série (flamme) et le sac (graines, tickets, jokers, coffres ; pastille : coffres à ouvrir).
+    private func topLineContent(shortDate: Bool) -> some View {
         let date = app.daily?.date ?? isoToday
         return HStack(spacing: Space.s) {
             Text(shortDate ? DateText.short(date) : DateText.long(date)).labelCaps()
-                .lineLimit(1).minimumScaleFactor(jokersInWords ? 1 : 0.7)
+                .lineLimit(1).minimumScaleFactor(0.7)
             Spacer(minLength: 0)
             if let streak = app.profile?.streak, streak > 0 {
                 let freezes = app.profile?.streakFreezes ?? 0
                 Button { showStreakHelp = true } label: {
                     HStack(spacing: 4) {
-                        GameIcon.flame.image.frame(width: 20, height: 20)
+                        GameIcon.flame.image.frame(width: 24, height: 24)
                         Text("\(streak)").monospacedDigit()
-                        if freezes > 0 {
-                            Group {
-                                if jokersInWords {
-                                    Text("· \(freezes) joker\(freezes > 1 ? "s" : "")")
-                                } else {
-                                    HStack(spacing: 2) {
-                                        GameIcon.joker.image.frame(width: 15, height: 15)
-                                        Text("\(freezes)").monospacedDigit()
-                                    }
-                                }
-                            }
-                            .font(.system(.caption, design: .rounded).weight(.bold))
-                            .foregroundStyle(Color.inkSoft)
-                        }
                     }
                     .lineLimit(1)
                     .fixedSize()
                     .font(.cfNumber)
                     .foregroundStyle(Color.ink)
-                    .padding(.horizontal, 12).padding(.vertical, 6)
+                    .padding(.leading, 8).padding(.trailing, 12).frame(minHeight: 40)
                     .background(Color.paperRaised, in: Capsule())
                 }
                 .buttonStyle(.row)
@@ -139,18 +128,26 @@ struct DailyHomeView: View {
                 .accessibilityLabel("Série de \(streak) jour\(streak > 1 ? "s" : "")" + (freezes > 0 ? ", \(freezes) joker\(freezes > 1 ? "s" : "") de série" : ""))
                 .accessibilityHint("Explique la série et les jokers")
             }
-            if let chests = app.progression?.chests, !chests.isEmpty {
-                ChestPill(count: chests.count) { app.openChests() }
+            let chests = app.progression?.chests.count ?? 0
+            Button { showBag = true } label: {
+                GameIcon.bag.image
+                    .frame(width: 34, height: 34)
+                    .frame(width: 48, height: 40)
+                    .background(Color.paperRaised, in: Capsule())
+                    .overlay(alignment: .topTrailing) {
+                        if chests > 0 {
+                            Text("\(chests)")
+                                .font(.system(.caption2, design: .rounded).weight(.black)).monospacedDigit()
+                                .foregroundStyle(Color(hex: 0x1E1340))
+                                .frame(minWidth: 18, minHeight: 18)
+                                .background(Color.sun, in: Capsule())
+                                .offset(x: 4, y: -4)
+                        }
+                    }
             }
-            if let seeds = app.profile?.seeds {
-                Button { showBag = true } label: {
-                    SeedsAmount(amount: seeds).font(.cfNumber).fixedSize()
-                        .padding(.horizontal, 12).padding(.vertical, 6)
-                        .background(Color.paperRaised, in: Capsule())
-                }
-                .buttonStyle(.row)
-                .accessibilityHint("Ouvre ton sac : graines, tickets, jokers, coffres")
-            }
+            .buttonStyle(.row)
+            .accessibilityLabel(chests > 0 ? "Mon sac, \(chests) coffre\(chests > 1 ? "s" : "") à ouvrir" : "Mon sac")
+            .accessibilityHint("Graines, tickets, jokers, coffres")
         }
     }
 

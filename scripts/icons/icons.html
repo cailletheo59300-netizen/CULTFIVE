@@ -237,6 +237,32 @@ function snap(build,px,frameBuild){
 
 function framed(obj,c){return {obj,cam:c||[0,.2,5.2,0,.05,0]};}
 
+// Sac : besace en cuir violet, rabat arrondi, boucle et coutures dorées, graines qui dépassent, anse.
+function bag(){const g=new THREE.Group();
+  const leather=phys(0x7B5CFF,{roughness:.5});const leatherDark=phys(0x4B2BC9,{roughness:.55});const gold=metal(0xFFC933,.2);
+  // corps
+  const body=new THREE.Mesh(rbox(1.8,1.3,.9,.3),leather);body.position.y=-.15;g.add(body);
+  // graines qui dépassent du sac
+  const prof=[];for(let i=0;i<=20;i++){const t=i/20;prof.push(new THREE.Vector2(Math.max(.001,.44*Math.pow(Math.sin(Math.PI*t),.85)*(1-.38*t)),t*1.15));}
+  const lathe=new THREE.LatheGeometry(prof,32);lathe.translate(0,-.55,0);
+  [[-.38,.72,.02,.55,.45],[.04,.86,-.05,.62,-.08],[.44,.7,.06,.5,-.5]].forEach(([x,y,z,sc,rz])=>{const m=new THREE.Mesh(lathe,phys(0xE0A03A,{roughness:.3}));m.scale.setScalar(sc);m.position.set(x,y,z);m.rotation.z=rz;g.add(m);});
+  const stem=new THREE.Mesh(new THREE.CylinderGeometry(.025,.025,.2,8),phys(0x40C057));stem.position.set(.06,1.28,-.05);g.add(stem);
+  const leaf=new THREE.Mesh(new THREE.SphereGeometry(.15,16,10),phys(0x51CF66));leaf.scale.set(1,.25,.5);leaf.position.set(.17,1.38,-.05);leaf.rotation.z=.4;g.add(leaf);
+  // rabat court qui retombe sur le haut du devant
+  const flapShape=new THREE.Shape();flapShape.moveTo(-.88,0);flapShape.lineTo(.88,0);flapShape.lineTo(.88,-.25);flapShape.quadraticCurveTo(.88,-.58,0,-.62);flapShape.quadraticCurveTo(-.88,-.58,-.88,-.25);flapShape.lineTo(-.88,0);
+  const flap=new THREE.Mesh(extrude(flapShape,.1,.05),leatherDark);flap.position.set(0,.5,.47);g.add(flap);
+  // couture dorée du rabat
+  const seam=new THREE.Mesh(new THREE.TorusGeometry(.68,.02,8,48,Math.PI),gold);seam.rotation.z=Math.PI;seam.scale.set(1,.62,1);seam.position.set(0,.36,.57);g.add(seam);
+  // boucle dorée au bas du rabat
+  const buckle=new THREE.Mesh(rbox(.36,.3,.1,.07),gold);buckle.position.set(0,-.1,.6);g.add(buckle);
+  const hole=new THREE.Mesh(rbox(.18,.12,.05,.03),new THREE.MeshStandardMaterial({color:0x1a0f2e,roughness:.8}));hole.position.set(0,-.1,.66);g.add(hole);
+  // couture du bas
+  const line=new THREE.Mesh(rbox(1.5,.03,.02,.01),gold);line.position.set(0,-.62,.46);g.add(line);
+  // anse
+  const handle=new THREE.Mesh(new THREE.TorusGeometry(.62,.07,14,40,Math.PI),leatherDark);handle.position.set(0,.5,-.25);g.add(handle);
+  [-.62,.62].forEach(x=>{const r=new THREE.Mesh(new THREE.CylinderGeometry(.1,.1,.06,20),gold);r.rotation.x=Math.PI/2;r.position.set(x,.5,-.2);g.add(r);});
+  g.rotation.set(.18,-.35,0);return {obj:g,cam:[0,.5,5,0,0,0]};}
+
 // Nom de l'image dans l'app → [modèle, taille en pixels (@3x)].
 const ICONS={
   chest_wood:[()=>chest('wood',false),600], chest_silver:[()=>chest('silver',false),600],
@@ -252,6 +278,7 @@ for(const tier of ['wood','silver','gold','savant']) for(let i=0;i<FRAMES;i++)
   ICONS[`ChestOpening/chest_${tier}_${i}`]=[()=>chest(tier,Math.pow(i/(FRAMES-1),1.6)),540,()=>chest(tier,1)];
 // Rangs (même ordre que CoteCULT.Rank), trophée d'exploit.
 ['curious','amateur','enlightened','scholar','expert','encyclopedia'].forEach((id,i)=>{ICONS[`rank_${id}`]=[()=>framed(emblem(RANKS[i],i)),360];});
+ICONS.bag=[bag,192];
 ICONS.trophy_cup=[()=>framed(cup()),360];
 window.renderIcons=()=>{const out={};for(const [name,[build,px,frame]] of Object.entries(ICONS)) out[name]=snap(build,px,frame);return out;};
 </script>

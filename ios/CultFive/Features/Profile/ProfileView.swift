@@ -14,6 +14,7 @@ struct ProfileView: View {
     @State private var showSettings = false
     @State private var showShare = false
     @State private var showEloHelp = false
+    @State private var showRankPath = false
 
     var body: some View {
         NavigationStack {
@@ -22,7 +23,9 @@ struct ProfileView: View {
                     portrait
                     if app.isAnonymous { AccountNudge() }
                     treeCard
-                    coteCard
+                    Button { showRankPath = true } label: { coteCard }
+                        .buttonStyle(.row)
+                        .accessibilityHint("Ouvre ton parcours : les rangs et ce qu'il te reste à gagner")
                     numbers
                     knowledge
                     calendar
@@ -39,6 +42,7 @@ struct ProfileView: View {
             .navigationDestination(for: String.self) { DomainView(domainId: $0) }
             .navigationDestination(isPresented: $showSettings) { SettingsView() }
             .navigationDestination(isPresented: $showTree) { LeonTreeScreen() }
+            .navigationDestination(isPresented: $showRankPath) { RankPathView(global: CoteCULT.overall(skills)) }
             .refreshable { await load() }
         }
         .sheet(isPresented: $showHistory) {
@@ -155,10 +159,18 @@ struct ProfileView: View {
             }
             Spacer(minLength: 0)
             // L'emblème du rang ; estompé tant que l'Elo est provisoire.
-            RankEmblem(rank: global?.placed == true ? global?.rank ?? .curious : .curious)
-                .frame(width: 96, height: 96)
-                .opacity(global?.placed == true ? 1 : 0.45)
-                .accessibilityHidden(true)
+            VStack(spacing: 4) {
+                RankEmblem(rank: global?.placed == true ? global?.rank ?? .curious : .curious)
+                    .frame(width: 96, height: 96)
+                    .opacity(global?.placed == true ? 1 : 0.45)
+                    .accessibilityHidden(true)
+                HStack(spacing: 2) {
+                    Text("Parcours")
+                    Image(systemName: "chevron.right")
+                }
+                .font(.system(.caption, design: .rounded).weight(.heavy))
+                .foregroundStyle(Color.sun)
+            }
         }
         .padding(Space.m)
         .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
