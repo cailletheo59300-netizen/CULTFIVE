@@ -257,10 +257,10 @@ function alphaCenterX(px){const c=document.createElement('canvas');c.width=c.hei
 // Emblèmes de rang v2 : la matière monte avec le rang (cuivre, bronze, argent, or, platine, cristal), les traits du
 // 5 du jour (1 à 5), des étoiles au-dessus (Éclairé 1, Érudit 2, Expert et Encyclopédie 3) et un ruban au nom du rang.
 const RANKS2=[
-  {name:'CURIEUX',rim:0xB87333,rough:.35,enamel:0x8B4A2B,ribbon:0x8B4A2B,marks:1,stars:0,shape:'circle'},
-  {name:'AMATEUR',rim:0xCD8A45,rough:.28,enamel:0x2F9E44,ribbon:0x2B8A3E,marks:2,stars:0,shape:'shield'},
-  {name:'ÉCLAIRÉ',rim:0xE4EAF2,rough:.14,enamel:0x1C7ED6,ribbon:0x1971C2,marks:3,stars:1,shape:'hex'},
-  {name:'ÉRUDIT',rim:0xFFC933,rough:.16,enamel:0x6A4CFF,ribbon:0x5F3DC4,marks:4,stars:2,shape:'oct',laurel:true},
+  {name:'CURIEUX',rim:0xC07A3E,rough:.3,enamel:0x8B4A2B,ribbon:0x9C5B2E,marks:1,stars:0,shape:'circle',rivets:0xE8A86A,burst:0xD08A4E,gem:0xFF922B,sprig:0x51CF66},
+  {name:'AMATEUR',rim:0xCD8A45,rough:.24,enamel:0x2F9E44,ribbon:0x2B8A3E,marks:2,stars:0,shape:'shield',burst:0xD99A55,gem:0x40C057,leaves:0xCD8A45,rivets:0xF0C08A},
+  {name:'ÉCLAIRÉ',rim:0xE4EAF2,rough:.12,enamel:0x1C7ED6,ribbon:0x1971C2,marks:3,stars:1,shape:'hex',burst:0xE4EAF2,gem:0x74C0FC,leaves:0xE4EAF2,rivets:0xFFFFFF},
+  {name:'ÉRUDIT',rim:0xFFC933,rough:.16,enamel:0x6A4CFF,ribbon:0x5F3DC4,marks:4,stars:2,shape:'oct',laurel:true,burst:0xFFD23F,gem:0xB197FC},
   {name:'EXPERT',rim:0xCFE3FF,rough:.1,enamel:0xC2255C,ribbon:0xA61E4D,marks:5,stars:3,shape:'shield',laurel:true,wings:true},
   {name:'ENCYCLOPÉDIE',rim:0xFFC933,rough:.1,enamel:0x24127A,ribbon:0x24127A,marks:5,stars:3,shape:'star',laurel:true,wings:true,crown:true},
 ];
@@ -274,7 +274,7 @@ function ribbonMesh(text,color){
   const label=new THREE.Mesh(new THREE.PlaneGeometry(w*.86,h*.86),new THREE.MeshBasicMaterial({map:tex,transparent:true}));label.position.z=.075;label.renderOrder=2;label.material.depthTest=false;g.add(label);
   return g;}
 function emblem2(idx,core){
-  const r=Object.assign({},RANKS2[idx],core?{wings:false,crown:false,stars:0,ribbon:null}:{});const g=new THREE.Group();
+  const r=Object.assign({},RANKS2[idx],core?{wings:false,crown:false,stars:0,ribbon:null,gem:null,burst:null}:{});const g=new THREE.Group();
   const rim=metal(r.rim,r.rough);const enamel=phys(r.enamel,{roughness:.22});const gold=metal(0xFFC933,.15);const white=phys(0xffffff,{roughness:.3});
   let outer,inner;
   if(r.shape==='circle'){outer=circle(.86);inner=circle(.7);}
@@ -286,6 +286,18 @@ function emblem2(idx,core){
   const en=new THREE.Mesh(extrude(inner,.14,.04),enamel);en.position.z=.08;g.add(en);
   if(r.laurel){const l=laurel(gold);l.position.z=.02;l.scale.setScalar(idx===5?1.14:1.04);g.add(l);}
   if(r.wings){const wm=metal(idx===5?0xFFE680:0xEAF2FF,.18);g.add(wing(1,wm));g.add(wing(-1,wm));}
+  // Éclat derrière l'emblème (rayons en métal), rivets, gemme au sommet, feuilles.
+  if(r.burst){const b=new THREE.Mesh(extrude(star(16,1.12,.86),.06,.02),metal(r.burst,.2));b.position.z=-.12;b.rotation.z=Math.PI/16;g.add(b);}
+  if(r.rivets){const rm=metal(r.rivets,.15);const rv=new THREE.SphereGeometry(.05,14,10);const n=r.shape==='circle'?12:0;
+    for(let i=0;i<n;i++){const a=i/n*Math.PI*2;const m=new THREE.Mesh(rv,rm);m.position.set(Math.cos(a)*.79,Math.sin(a)*.79,.11);g.add(m);}}
+  if(r.gem){const gm=new THREE.Mesh(new THREE.OctahedronGeometry(.19,0),phys(r.gem,{emissive:r.gem,emissiveIntensity:.35,roughness:.05}));
+    const top=r.shape==='circle'?.86:r.shape==='shield'?.82:.92;gm.position.set(0,top+.06,.2);gm.scale.set(1,1.25,.7);g.add(gm);
+    const set=new THREE.Mesh(new THREE.TorusGeometry(.2,.045,8,24),metal(r.rim,.15));set.position.set(0,top+.06,.16);g.add(set);}
+  if(r.sprig){const lm=phys(r.sprig,{roughness:.35});const lf=new THREE.SphereGeometry(.1,14,10);
+    [[-.62,-.62,.9],[-.48,-.74,.5],[.62,-.62,-.9],[.48,-.74,-.5]].forEach(([x,y,rz])=>{const m=new THREE.Mesh(lf,lm);m.scale.set(.55,1.3,.35);m.position.set(x,y,.14);m.rotation.z=rz;g.add(m);});}
+  if(r.leaves){const lm=metal(r.leaves,.2);const lf=new THREE.SphereGeometry(.09,14,10);
+    [-1,1].forEach(side=>{for(let i=0;i<3;i++){const a=-Math.PI/2+.45+i*.38;const m=new THREE.Mesh(lf,lm);m.scale.set(.55,1.25,.35);
+      m.position.set(side*Math.cos(a)*1.0,Math.sin(a)*1.0-.02,.02);m.rotation.z=Math.atan2(Math.sin(a),Math.cos(a))*(side>0?1:-1)+(side>0?0:Math.PI);g.add(m);}});}
   // Traits : 1 à 4 verticaux, le 5e barre en or.
   const t=tally(r.marks,idx>=3?gold:white,metal(0xFFD23F,.1));t.position.set(0,r.shape==='shield'?.04:.02,.22);t.scale.setScalar(1.1);g.add(t);
   // Étoiles au-dessus.
