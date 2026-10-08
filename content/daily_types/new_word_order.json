@@ -675,5 +675,453 @@
    "s'oublier"
   ],
   "explanation": "Dans « Ne me quitte pas » (1959)."
+ },
+ {
+  "key": "dt-word-036",
+  "concept": "french.expressions.dt_loin_yeux",
+  "label": "Loin des yeux",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Loin des yeux, loin du cœur.",
+  "words": [
+   "Loin",
+   "des",
+   "yeux",
+   "loin",
+   "du",
+   "cœur"
+  ],
+  "explanation": "L'absence fait oublier."
+ },
+ {
+  "key": "dt-word-037",
+  "concept": "french.expressions.dt_chacun_gouts",
+  "label": "Chacun ses goûts",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Chacun ses goûts.",
+  "words": [
+   "Chacun",
+   "ses",
+   "goûts"
+  ],
+  "explanation": "Les goûts ne se discutent pas."
+ },
+ {
+  "key": "dt-word-038",
+  "concept": "french.expressions.dt_vole_oeuf",
+  "label": "Qui vole un œuf",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Qui vole un œuf vole un bœuf.",
+  "words": [
+   "Qui",
+   "vole",
+   "un",
+   "œuf",
+   "vole",
+   "un",
+   "bœuf"
+  ],
+  "explanation": "Celui qui commet un petit vol finira par en commettre de grands."
+ },
+ {
+  "key": "dt-word-039",
+  "concept": "french.expressions.dt_moutons",
+  "label": "Revenons à nos moutons",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Remets cette expression dans l'ordre.",
+  "answer": "Revenons à nos moutons.",
+  "words": [
+   "Revenons",
+   "à",
+   "nos",
+   "moutons"
+  ],
+  "explanation": "Reprenons le sujet ; l'expression vient d'une farce du Moyen Âge."
+ },
+ {
+  "key": "dt-word-040",
+  "concept": "french.expressions.dt_ventre_vide",
+  "label": "Ventre affamé",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Ventre affamé n'a point d'oreilles.",
+  "words": [
+   "Ventre",
+   "affamé",
+   "n'a",
+   "point",
+   "d'oreilles"
+  ],
+  "explanation": "Quand on a faim, on n'écoute plus rien."
+ },
+ {
+  "key": "dt-word-041",
+  "concept": "french.expressions.dt_absents",
+  "label": "Les absents",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Les absents ont toujours tort.",
+  "words": [
+   "Les",
+   "absents",
+   "ont",
+   "toujours",
+   "tort"
+  ],
+  "explanation": "Ceux qui ne sont pas là ne peuvent pas se défendre."
+ },
+ {
+  "key": "dt-word-042",
+  "concept": "french.expressions.dt_tel_pere",
+  "label": "Tel père, tel fils",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Tel père, tel fils.",
+  "words": [
+   "Tel",
+   "père",
+   "tel",
+   "fils"
+  ],
+  "explanation": "Les enfants ressemblent à leurs parents."
+ },
+ {
+  "key": "dt-word-043",
+  "concept": "french.expressions.dt_vouloir_pouvoir",
+  "label": "Vouloir, c'est pouvoir",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Quand on veut, on peut.",
+  "words": [
+   "Quand",
+   "on",
+   "veut",
+   "on",
+   "peut"
+  ],
+  "explanation": "La volonté permet de réussir."
+ },
+ {
+  "key": "dt-word-044",
+  "concept": "french.expressions.dt_mains_froides",
+  "label": "Mains froides",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets ce dicton dans l'ordre.",
+  "answer": "Mains froides, cœur chaud.",
+  "words": [
+   "Mains",
+   "froides",
+   "cœur",
+   "chaud"
+  ],
+  "explanation": "Un dicton pour consoler ceux qui ont toujours froid aux mains."
+ },
+ {
+  "key": "dt-word-045",
+  "concept": "french.expressions.dt_noel_balcon",
+  "label": "Noël au balcon",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets ce dicton dans l'ordre.",
+  "answer": "Noël au balcon, Pâques au tison.",
+  "words": [
+   "Noël",
+   "au",
+   "balcon",
+   "Pâques",
+   "au",
+   "tison"
+  ],
+  "explanation": "Un Noël doux annonce des Pâques froides, au coin du feu."
+ },
+ {
+  "key": "dt-word-046",
+  "concept": "french.expressions.dt_avril_fil",
+  "label": "En avril",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets ce dicton dans l'ordre.",
+  "answer": "En avril, ne te découvre pas d'un fil.",
+  "words": [
+   "En",
+   "avril",
+   "ne",
+   "te",
+   "découvre",
+   "pas",
+   "d'un",
+   "fil"
+  ],
+  "explanation": "Il fait encore frais : garde tes vêtements chauds."
+ },
+ {
+  "key": "dt-word-047",
+  "concept": "arts.literature.dt_cigale",
+  "label": "La Cigale et la Fourmi",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre ce vers de La Fontaine.",
+  "answer": "La Cigale, ayant chanté tout l'été…",
+  "words": [
+   "La",
+   "Cigale",
+   "ayant",
+   "chanté",
+   "tout",
+   "l'été…"
+  ],
+  "explanation": "Le tout début de « La Cigale et la Fourmi »."
+ },
+ {
+  "key": "dt-word-048",
+  "concept": "arts.literature.dt_corbeau",
+  "label": "Le Corbeau et le Renard",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre ce vers de La Fontaine.",
+  "answer": "Maître Corbeau, sur un arbre perché, tenait en son bec un fromage.",
+  "words": [
+   "Maître",
+   "Corbeau",
+   "sur",
+   "un",
+   "arbre",
+   "perché",
+   "tenait",
+   "en",
+   "son",
+   "bec",
+   "un",
+   "fromage"
+  ],
+  "explanation": "Le début de « Le Corbeau et le Renard »."
+ },
+ {
+  "key": "dt-word-049",
+  "concept": "arts.literature.dt_baudelaire",
+  "label": "Baudelaire",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets dans l'ordre ce vers de Baudelaire (« L'Invitation au voyage »).",
+  "answer": "Là, tout n'est qu'ordre et beauté, luxe, calme et volupté.",
+  "words": [
+   "Là",
+   "tout",
+   "n'est",
+   "qu'ordre",
+   "et",
+   "beauté",
+   "luxe",
+   "calme",
+   "et",
+   "volupté"
+  ],
+  "explanation": "Un refrain célèbre des « Fleurs du mal » (1857)."
+ },
+ {
+  "key": "dt-word-050",
+  "concept": "arts.literature.dt_hugo_demain",
+  "label": "Demain, dès l'aube",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Remets dans l'ordre ce vers de Victor Hugo.",
+  "answer": "Demain, dès l'aube, à l'heure où blanchit la campagne",
+  "words": [
+   "Demain",
+   "dès",
+   "l'aube",
+   "à",
+   "l'heure",
+   "où",
+   "blanchit",
+   "la",
+   "campagne"
+  ],
+  "explanation": "Un poème écrit pour sa fille Léopoldine."
+ },
+ {
+  "key": "dt-word-051",
+  "concept": "cinema.films.dt_vous_ne_passerez",
+  "label": "Vous ne passerez pas",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre cette réplique du « Seigneur des anneaux ».",
+  "answer": "Vous ne passerez pas !",
+  "words": [
+   "Vous",
+   "ne",
+   "passerez",
+   "pas"
+  ],
+  "explanation": "Gandalf face au Balrog, sur le pont de la Moria."
+ },
+ {
+  "key": "dt-word-052",
+  "concept": "cinema.animation.dt_hakuna",
+  "label": "Hakuna matata",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre ces paroles du « Roi lion ».",
+  "answer": "Hakuna matata, mais quelle phrase magnifique !",
+  "words": [
+   "Hakuna",
+   "matata",
+   "mais",
+   "quelle",
+   "phrase",
+   "magnifique"
+  ],
+  "explanation": "« Hakuna matata » veut dire « pas de soucis » en swahili."
+ },
+ {
+  "key": "dt-word-053",
+  "concept": "cinema.animation.dt_liberee",
+  "label": "Libérée, délivrée",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets dans l'ordre ces paroles de « La Reine des neiges ».",
+  "answer": "Libérée, délivrée, je ne mentirai plus jamais.",
+  "words": [
+   "Libérée",
+   "délivrée",
+   "je",
+   "ne",
+   "mentirai",
+   "plus",
+   "jamais"
+  ],
+  "explanation": "La version française de « Let It Go »."
+ },
+ {
+  "key": "dt-word-054",
+  "concept": "cinema.films.dt_et_maison",
+  "label": "E.T. téléphone maison",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre cette réplique culte.",
+  "answer": "E.T. téléphone maison.",
+  "words": [
+   "E.T",
+   "téléphone",
+   "maison"
+  ],
+  "explanation": "Dans le film de Spielberg (1982)."
+ },
+ {
+  "key": "dt-word-055",
+  "concept": "history.contemporary.dt_de_gaulle_flamme",
+  "label": "La flamme de la résistance",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets dans l'ordre cette phrase de l'appel du 18 Juin.",
+  "answer": "La flamme de la résistance française ne doit pas s'éteindre.",
+  "words": [
+   "La",
+   "flamme",
+   "de",
+   "la",
+   "résistance",
+   "française",
+   "ne",
+   "doit",
+   "pas",
+   "s'éteindre"
+  ],
+  "explanation": "De Gaulle, à la BBC, le 18 juin 1940."
+ },
+ {
+  "key": "dt-word-056",
+  "concept": "history.contemporary.dt_mlk_reve",
+  "label": "J'ai fait un rêve",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre la phrase célèbre de Martin Luther King, en français.",
+  "answer": "Je fais le rêve qu'un jour cette nation se lèvera.",
+  "words": [
+   "Je",
+   "fais",
+   "le",
+   "rêve",
+   "qu'un",
+   "jour",
+   "cette",
+   "nation",
+   "se",
+   "lèvera"
+  ],
+  "explanation": "Washington, 28 août 1963."
+ },
+ {
+  "key": "dt-word-057",
+  "concept": "music.popular.dt_trenet_mer",
+  "label": "La Mer",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre ces paroles de Charles Trenet.",
+  "answer": "La mer qu'on voit danser le long des golfes clairs",
+  "words": [
+   "La",
+   "mer",
+   "qu'on",
+   "voit",
+   "danser",
+   "le",
+   "long",
+   "des",
+   "golfes",
+   "clairs"
+  ],
+  "explanation": "« La Mer », écrite en 1943."
+ },
+ {
+  "key": "dt-word-058",
+  "concept": "music.popular.dt_piaf_regrette",
+  "label": "Non, je ne regrette rien",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre ces paroles d'Édith Piaf.",
+  "answer": "Non, rien de rien, non, je ne regrette rien.",
+  "words": [
+   "Non",
+   "rien",
+   "de",
+   "rien",
+   "non",
+   "je",
+   "ne",
+   "regrette",
+   "rien"
+  ],
+  "explanation": "Chanté pour la première fois en 1960."
+ },
+ {
+  "key": "dt-word-059",
+  "concept": "music.popular.dt_joyeux_anniversaire",
+  "label": "Joyeux anniversaire",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets dans l'ordre le début de la chanson.",
+  "answer": "Joyeux anniversaire, nos vœux les plus sincères.",
+  "words": [
+   "Joyeux",
+   "anniversaire",
+   "nos",
+   "vœux",
+   "les",
+   "plus",
+   "sincères"
+  ],
+  "explanation": "La version française la plus chantée."
  }
 ]

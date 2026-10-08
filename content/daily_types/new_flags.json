@@ -548,5 +548,430 @@
    }
   ],
   "explanation": "Une croix blanche sur un drapeau carré rouge."
+ },
+ {
+  "key": "dt-flag-023",
+  "concept": "geography.flags.dt_twin_canada",
+  "label": "Canada ou Pérou",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 20,
+  "prompt": "Lequel est le drapeau du Canada ?",
+  "options": [
+   {
+    "flag": "ca",
+    "correct": true
+   },
+   {
+    "flag": "pe"
+   },
+   {
+    "flag": "at"
+   },
+   {
+    "flag": "lb"
+   }
+  ],
+  "explanation": "Une feuille d'érable rouge entre deux bandes rouges ; le Pérou a des bandes rouge-blanc-rouge sans feuille."
+ },
+ {
+  "key": "dt-flag-024",
+  "concept": "geography.flags.dt_twin_liban",
+  "label": "Le cèdre du Liban",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 45,
+  "prompt": "Lequel est le drapeau du Liban ?",
+  "options": [
+   {
+    "flag": "lb",
+    "correct": true
+   },
+   {
+    "flag": "ca"
+   },
+   {
+    "flag": "at"
+   },
+   {
+    "flag": "pe"
+   }
+  ],
+  "explanation": "Un cèdre vert entre deux bandes rouges."
+ },
+ {
+  "key": "dt-flag-025",
+  "concept": "geography.flags.dt_twin_bresil",
+  "label": "Brésil",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 15,
+  "prompt": "Lequel est le drapeau du Brésil ?",
+  "options": [
+   {
+    "flag": "br",
+    "correct": true
+   },
+   {
+    "flag": "pt"
+   },
+   {
+    "flag": "za"
+   },
+   {
+    "flag": "jm"
+   }
+  ],
+  "explanation": "Un losange jaune sur fond vert, avec un globe bleu étoilé."
+ },
+ {
+  "key": "dt-flag-026",
+  "concept": "geography.flags.dt_twin_portugal",
+  "label": "Portugal",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 35,
+  "prompt": "Lequel est le drapeau du Portugal ?",
+  "options": [
+   {
+    "flag": "pt",
+    "correct": true
+   },
+   {
+    "flag": "es"
+   },
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "bo"
+   }
+  ],
+  "explanation": "Vert et rouge, avec une sphère armillaire et un écusson."
+ },
+ {
+  "key": "dt-flag-027",
+  "concept": "geography.flags.dt_twin_espagne",
+  "label": "Espagne",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 15,
+  "prompt": "Lequel est le drapeau de l'Espagne ?",
+  "options": [
+   {
+    "flag": "es",
+    "correct": true
+   },
+   {
+    "flag": "pt"
+   },
+   {
+    "flag": "co"
+   },
+   {
+    "flag": "bo"
+   }
+  ],
+  "explanation": "Rouge, jaune (bande deux fois plus large), rouge, avec les armoiries."
+ },
+ {
+  "key": "dt-flag-028",
+  "concept": "geography.flags.dt_twin_grece",
+  "label": "Grèce",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 30,
+  "prompt": "Lequel est le drapeau de la Grèce ?",
+  "options": [
+   {
+    "flag": "gr",
+    "correct": true
+   },
+   {
+    "flag": "fi"
+   },
+   {
+    "flag": "uy"
+   },
+   {
+    "flag": "il"
+   }
+  ],
+  "explanation": "Neuf bandes bleues et blanches et une croix blanche ; l'Uruguay a un soleil."
+ },
+ {
+  "key": "dt-flag-029",
+  "concept": "geography.flags.dt_twin_israel",
+  "label": "Israël",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 35,
+  "prompt": "Lequel est le drapeau d'Israël ?",
+  "options": [
+   {
+    "flag": "il",
+    "correct": true
+   },
+   {
+    "flag": "gr"
+   },
+   {
+    "flag": "fi"
+   },
+   {
+    "flag": "ar"
+   }
+  ],
+  "explanation": "Deux bandes bleues et l'étoile de David sur fond blanc."
+ },
+ {
+  "key": "dt-flag-030",
+  "concept": "geography.flags.dt_twin_turquie",
+  "label": "Turquie ou Tunisie",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 45,
+  "prompt": "Lequel est le drapeau de la Turquie ?",
+  "options": [
+   {
+    "flag": "tr",
+    "correct": true
+   },
+   {
+    "flag": "tn"
+   },
+   {
+    "flag": "ma"
+   },
+   {
+    "flag": "vn"
+   }
+  ],
+  "explanation": "Croissant et étoile blancs sur fond rouge ; la Tunisie les met dans un disque blanc."
+ },
+ {
+  "key": "dt-flag-031",
+  "concept": "geography.flags.dt_twin_tunisie",
+  "label": "Tunisie",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 50,
+  "prompt": "Lequel est le drapeau de la Tunisie ?",
+  "options": [
+   {
+    "flag": "tn",
+    "correct": true
+   },
+   {
+    "flag": "tr"
+   },
+   {
+    "flag": "ma"
+   },
+   {
+    "flag": "dz"
+   }
+  ],
+  "explanation": "Un disque blanc avec un croissant et une étoile rouges, sur fond rouge."
+ },
+ {
+  "key": "dt-flag-032",
+  "concept": "geography.flags.dt_twin_maroc",
+  "label": "Maroc",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 35,
+  "prompt": "Lequel est le drapeau du Maroc ?",
+  "options": [
+   {
+    "flag": "ma",
+    "correct": true
+   },
+   {
+    "flag": "tn"
+   },
+   {
+    "flag": "tr"
+   },
+   {
+    "flag": "vn"
+   }
+  ],
+  "explanation": "Une étoile verte à cinq branches sur fond rouge."
+ },
+ {
+  "key": "dt-flag-033",
+  "concept": "geography.flags.dt_twin_vietnam",
+  "label": "Viêt Nam ou Chine",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 40,
+  "prompt": "Lequel est le drapeau du Viêt Nam ?",
+  "options": [
+   {
+    "flag": "vn",
+    "correct": true
+   },
+   {
+    "flag": "cn"
+   },
+   {
+    "flag": "ma"
+   },
+   {
+    "flag": "tr"
+   }
+  ],
+  "explanation": "Une seule grande étoile jaune ; la Chine en a cinq."
+ },
+ {
+  "key": "dt-flag-034",
+  "concept": "geography.flags.dt_twin_chine",
+  "label": "Chine",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 20,
+  "prompt": "Lequel est le drapeau de la Chine ?",
+  "options": [
+   {
+    "flag": "cn",
+    "correct": true
+   },
+   {
+    "flag": "vn"
+   },
+   {
+    "flag": "kp"
+   },
+   {
+    "flag": "tr"
+   }
+  ],
+  "explanation": "Une grande étoile jaune et quatre petites, sur fond rouge."
+ },
+ {
+  "key": "dt-flag-035",
+  "concept": "geography.flags.dt_twin_coree_sud",
+  "label": "Corée du Sud",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 35,
+  "prompt": "Lequel est le drapeau de la Corée du Sud ?",
+  "options": [
+   {
+    "flag": "kr",
+    "correct": true
+   },
+   {
+    "flag": "jp"
+   },
+   {
+    "flag": "kp"
+   },
+   {
+    "flag": "tw"
+   }
+  ],
+  "explanation": "Le symbole rouge et bleu du yin et du yang, entouré de quatre trigrammes noirs."
+ },
+ {
+  "key": "dt-flag-036",
+  "concept": "geography.flags.dt_twin_argentine",
+  "label": "Argentine ou Uruguay",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 40,
+  "prompt": "Lequel est le drapeau de l'Argentine ?",
+  "options": [
+   {
+    "flag": "ar",
+    "correct": true
+   },
+   {
+    "flag": "uy"
+   },
+   {
+    "flag": "gr"
+   },
+   {
+    "flag": "sv"
+   }
+  ],
+  "explanation": "Bleu ciel, blanc, bleu ciel, avec un soleil au centre."
+ },
+ {
+  "key": "dt-flag-037",
+  "concept": "geography.flags.dt_twin_allemagne",
+  "label": "Allemagne ou Belgique",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 15,
+  "prompt": "Lequel est le drapeau de l'Allemagne ?",
+  "options": [
+   {
+    "flag": "de",
+    "correct": true
+   },
+   {
+    "flag": "be"
+   },
+   {
+    "flag": "ug"
+   },
+   {
+    "flag": "ye"
+   }
+  ],
+  "explanation": "Noir, rouge, or à l'horizontale."
+ },
+ {
+  "key": "dt-flag-038",
+  "concept": "geography.flags.dt_twin_royaume_uni",
+  "label": "Royaume-Uni",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 10,
+  "prompt": "Lequel est le drapeau du Royaume-Uni ?",
+  "options": [
+   {
+    "flag": "gb",
+    "correct": true
+   },
+   {
+    "flag": "au"
+   },
+   {
+    "flag": "nz"
+   },
+   {
+    "flag": "is"
+   }
+  ],
+  "explanation": "L'« Union Jack », qui réunit les croix d'Angleterre, d'Écosse et d'Irlande."
+ },
+ {
+  "key": "dt-flag-039",
+  "concept": "geography.flags.dt_twin_inde",
+  "label": "Inde ou Niger",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 45,
+  "prompt": "Lequel est le drapeau de l'Inde ?",
+  "options": [
+   {
+    "flag": "in",
+    "correct": true
+   },
+   {
+    "flag": "ne"
+   },
+   {
+    "flag": "ie"
+   },
+   {
+    "flag": "ci"
+   }
+  ],
+  "explanation": "Safran, blanc, vert, avec une roue bleue au centre ; le Niger a un disque orange."
  }
 ]

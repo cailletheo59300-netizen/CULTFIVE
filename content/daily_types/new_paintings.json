@@ -849,5 +849,449 @@
    }
   ],
   "explanation": "Monet a peint près de 250 toiles des nénuphars de son étang de Giverny. Les quatre sont des séries ou des sujets célèbres de Monet."
+ },
+ {
+  "key": "dt-paint-024",
+  "concept": "arts.painting.dt_gioconda",
+  "label": "La Joconde",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 10,
+  "prompt": "Lequel de ces tableaux est « La Joconde » de Léonard de Vinci ?",
+  "options": [
+   {
+    "title": "La Joconde",
+    "artist": "Léonard de Vinci",
+    "year": 1503,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Dame à l'hermine",
+    "artist": "Léonard de Vinci",
+    "year": 1490,
+    "image": null
+   },
+   {
+    "title": "La Belle Ferronnière",
+    "artist": "Léonard de Vinci",
+    "year": 1495,
+    "image": null
+   },
+   {
+    "title": "La Fornarina",
+    "artist": "Raphaël",
+    "year": 1520,
+    "image": null
+   }
+  ],
+  "explanation": "Au Louvre, derrière une vitre blindée. Les trois autres portraits sont de la même époque."
+ },
+ {
+  "key": "dt-paint-025",
+  "concept": "arts.painting.dt_sacre",
+  "label": "Le Sacre de Napoléon",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 30,
+  "prompt": "Lequel de ces tableaux est « Le Sacre de Napoléon » de David ?",
+  "options": [
+   {
+    "title": "Le Sacre de Napoléon",
+    "artist": "Jacques-Louis David",
+    "year": 1807,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Serment des Horaces",
+    "artist": "Jacques-Louis David",
+    "year": 1785,
+    "image": null
+   },
+   {
+    "title": "Bonaparte franchissant le Grand-Saint-Bernard",
+    "artist": "Jacques-Louis David",
+    "year": 1801,
+    "image": null
+   },
+   {
+    "title": "La Mort de Marat",
+    "artist": "Jacques-Louis David",
+    "year": 1793,
+    "image": null
+   }
+  ],
+  "explanation": "Un immense tableau de près de 10 m de large, au Louvre."
+ },
+ {
+  "key": "dt-paint-026",
+  "concept": "arts.painting.dt_nuit_etoilee_rhone",
+  "label": "Nuit étoilée sur le Rhône",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 55,
+  "prompt": "Lequel de ces tableaux est « La Nuit étoilée sur le Rhône » de Van Gogh ?",
+  "options": [
+   {
+    "title": "Nuit étoilée sur le Rhône",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Nuit étoilée",
+    "artist": "Vincent van Gogh",
+    "year": 1889,
+    "image": null
+   },
+   {
+    "title": "Terrasse du café le soir",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null
+   },
+   {
+    "title": "Le Café de nuit",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null
+   }
+  ],
+  "explanation": "Les reflets des réverbères d'Arles dans le fleuve. Attention : ce n'est pas la célèbre « Nuit étoilée » aux tourbillons."
+ },
+ {
+  "key": "dt-paint-027",
+  "concept": "arts.painting.dt_coquelicots",
+  "label": "Les Coquelicots",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 40,
+  "prompt": "Lequel de ces tableaux est « Les Coquelicots » de Monet ?",
+  "options": [
+   {
+    "title": "Les Coquelicots",
+    "artist": "Claude Monet",
+    "year": 1873,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Femme à l'ombrelle",
+    "artist": "Claude Monet",
+    "year": 1875,
+    "image": null
+   },
+   {
+    "title": "Champ de tulipes en Hollande",
+    "artist": "Claude Monet",
+    "year": 1886,
+    "image": null
+   },
+   {
+    "title": "Le Jardin de l'artiste à Vétheuil",
+    "artist": "Claude Monet",
+    "year": 1880,
+    "image": null
+   }
+  ],
+  "explanation": "Une mère et son enfant dans un champ de coquelicots, près d'Argenteuil."
+ },
+ {
+  "key": "dt-paint-028",
+  "concept": "arts.painting.dt_ombrelle",
+  "label": "Femme à l'ombrelle",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 45,
+  "prompt": "Lequel de ces tableaux est « La Promenade, la femme à l'ombrelle » de Monet ?",
+  "options": [
+   {
+    "title": "La Promenade, la femme à l'ombrelle",
+    "artist": "Claude Monet",
+    "year": 1875,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Les Coquelicots",
+    "artist": "Claude Monet",
+    "year": 1873,
+    "image": null
+   },
+   {
+    "title": "Le Pont d'Argenteuil",
+    "artist": "Claude Monet",
+    "year": 1874,
+    "image": null
+   },
+   {
+    "title": "Femmes au jardin",
+    "artist": "Claude Monet",
+    "year": 1866,
+    "image": null
+   }
+  ],
+  "explanation": "Camille, la femme de Monet, et leur fils Jean, vus d'en bas, en plein vent."
+ },
+ {
+  "key": "dt-paint-029",
+  "concept": "arts.painting.dt_danseuses_degas",
+  "label": "Les danseuses",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 40,
+  "prompt": "Lequel de ces tableaux est « La Classe de danse » de Degas ?",
+  "options": [
+   {
+    "title": "La Classe de danse",
+    "artist": "Edgar Degas",
+    "year": 1874,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "L'Absinthe",
+    "artist": "Edgar Degas",
+    "year": 1876,
+    "image": null
+   },
+   {
+    "title": "Les Repasseuses",
+    "artist": "Edgar Degas",
+    "year": 1884,
+    "image": null
+   },
+   {
+    "title": "Le Bal du moulin de la Galette",
+    "artist": "Auguste Renoir",
+    "year": 1876,
+    "image": null
+   }
+  ],
+  "explanation": "Degas a peint des centaines de danseuses de l'Opéra de Paris."
+ },
+ {
+  "key": "dt-paint-030",
+  "concept": "arts.painting.dt_joueurs_cartes",
+  "label": "Les Joueurs de cartes",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 55,
+  "prompt": "Lequel de ces tableaux est « Les Joueurs de cartes » de Cézanne ?",
+  "options": [
+   {
+    "title": "Les Joueurs de cartes",
+    "artist": "Paul Cézanne",
+    "year": 1894,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Montagne Sainte-Victoire",
+    "artist": "Paul Cézanne",
+    "year": 1904,
+    "image": null
+   },
+   {
+    "title": "Les Grandes Baigneuses",
+    "artist": "Paul Cézanne",
+    "year": 1906,
+    "image": null
+   },
+   {
+    "title": "Nature morte aux pommes",
+    "artist": "Paul Cézanne",
+    "year": 1890,
+    "image": null
+   }
+  ],
+  "explanation": "Deux paysans provençaux absorbés par leur partie."
+ },
+ {
+  "key": "dt-paint-031",
+  "concept": "arts.painting.dt_sainte_victoire",
+  "label": "La montagne Sainte-Victoire",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 50,
+  "prompt": "Lequel de ces tableaux montre la montagne Sainte-Victoire, peinte par Cézanne ?",
+  "options": [
+   {
+    "title": "La Montagne Sainte-Victoire",
+    "artist": "Paul Cézanne",
+    "year": 1904,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Les Joueurs de cartes",
+    "artist": "Paul Cézanne",
+    "year": 1894,
+    "image": null
+   },
+   {
+    "title": "Nature morte aux pommes",
+    "artist": "Paul Cézanne",
+    "year": 1890,
+    "image": null
+   },
+   {
+    "title": "La Maison du pendu",
+    "artist": "Paul Cézanne",
+    "year": 1873,
+    "image": null
+   }
+  ],
+  "explanation": "Cézanne l'a peinte des dizaines de fois, près d'Aix-en-Provence."
+ },
+ {
+  "key": "dt-paint-032",
+  "concept": "arts.painting.dt_arearea",
+  "label": "Gauguin à Tahiti",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 55,
+  "prompt": "Lequel de ces tableaux a été peint par Gauguin à Tahiti ?",
+  "options": [
+   {
+    "title": "Arearea",
+    "artist": "Paul Gauguin",
+    "year": 1892,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Vision après le sermon",
+    "artist": "Paul Gauguin",
+    "year": 1888,
+    "image": null
+   },
+   {
+    "title": "Le Christ jaune",
+    "artist": "Paul Gauguin",
+    "year": 1889,
+    "image": null
+   },
+   {
+    "title": "Les Alyscamps",
+    "artist": "Paul Gauguin",
+    "year": 1888,
+    "image": null
+   }
+  ],
+  "explanation": "Couleurs vives et chien rouge : Gauguin s'installe à Tahiti en 1891. Les trois autres ont été peints en Bretagne ou à Arles."
+ },
+ {
+  "key": "dt-paint-033",
+  "concept": "arts.painting.dt_olympia",
+  "label": "Olympia",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 50,
+  "prompt": "Lequel de ces tableaux est « Olympia » de Manet ?",
+  "options": [
+   {
+    "title": "Olympia",
+    "artist": "Édouard Manet",
+    "year": 1863,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Vénus d'Urbino",
+    "artist": "Titien",
+    "year": 1538,
+    "image": null
+   },
+   {
+    "title": "La Grande Odalisque",
+    "artist": "Ingres",
+    "year": 1814,
+    "image": null
+   },
+   {
+    "title": "La Maja nue",
+    "artist": "Francisco de Goya",
+    "year": 1800,
+    "image": null
+   }
+  ],
+  "explanation": "Manet reprend la pose de la Vénus de Titien, et fait scandale en 1865."
+ },
+ {
+  "key": "dt-paint-034",
+  "concept": "arts.painting.dt_grande_odalisque",
+  "label": "La Grande Odalisque",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 60,
+  "prompt": "Lequel de ces tableaux est « La Grande Odalisque » d'Ingres ?",
+  "options": [
+   {
+    "title": "La Grande Odalisque",
+    "artist": "Ingres",
+    "year": 1814,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Olympia",
+    "artist": "Édouard Manet",
+    "year": 1863,
+    "image": null
+   },
+   {
+    "title": "La Maja nue",
+    "artist": "Francisco de Goya",
+    "year": 1800,
+    "image": null
+   },
+   {
+    "title": "Le Bain turc",
+    "artist": "Ingres",
+    "year": 1862,
+    "image": null
+   }
+  ],
+  "explanation": "On dit que son dos a trois vertèbres de trop, pour plus d'élégance."
+ },
+ {
+  "key": "dt-paint-035",
+  "concept": "arts.painting.dt_jardin_delices",
+  "label": "Le Jardin des délices",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 60,
+  "prompt": "Lequel de ces tableaux est « Le Jardin des délices » de Jérôme Bosch ?",
+  "options": [
+   {
+    "title": "Le Jardin des délices",
+    "artist": "Jérôme Bosch",
+    "year": 1500,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Tentation de saint Antoine",
+    "artist": "Jérôme Bosch",
+    "year": 1501,
+    "image": null
+   },
+   {
+    "title": "Le Triomphe de la Mort",
+    "artist": "Pieter Bruegel l'Ancien",
+    "year": 1562,
+    "image": null
+   },
+   {
+    "title": "La Tour de Babel",
+    "artist": "Pieter Bruegel l'Ancien",
+    "year": 1563,
+    "image": null
+   }
+  ],
+  "explanation": "Un triptyque peuplé de créatures étranges, au Prado de Madrid."
  }
 ]

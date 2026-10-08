@@ -550,5 +550,373 @@
   "tolerance": 0.08,
   "max": 4,
   "explanation": "Environ 2,22 m : l'un des plus grands joueurs de la NBA."
+ },
+ {
+  "key": "dt-prop-025",
+  "concept": "nature.animals.dt_ours_polaire",
+  "label": "Ours polaire debout",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire l'ours polaire, dressé sur ses pattes arrière, à côté d'un adulte.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Ours polaire debout",
+   "icon": "bear"
+  },
+  "answer": 3,
+  "tolerance": 0.15,
+  "max": 4.2,
+  "explanation": "Un grand mâle dressé atteint environ 3 m."
+ },
+ {
+  "key": "dt-prop-026",
+  "concept": "nature.animals.dt_crocodile",
+  "label": "Crocodile marin",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire le crocodile marin à sa vraie longueur, à côté d'une voiture.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Voiture",
+   "size": 4.5,
+   "icon": "car"
+  },
+  "item": {
+   "label": "Crocodile marin",
+   "icon": "crocodile"
+  },
+  "answer": 6,
+  "tolerance": 0.2,
+  "max": 9,
+  "explanation": "Les grands mâles mesurent environ 6 m, le plus grand reptile vivant."
+ },
+ {
+  "key": "dt-prop-027",
+  "concept": "nature.animals.dt_cheval",
+  "label": "Cheval au garrot",
+  "type": "proportion",
+  "difficulty": 30,
+  "prompt": "Étire le cheval à sa vraie hauteur au garrot, à côté d'un adulte.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Cheval",
+   "icon": "horse"
+  },
+  "answer": 1.6,
+  "tolerance": 0.12,
+  "max": 3,
+  "explanation": "Environ 1,60 m au garrot pour un cheval de selle."
+ },
+ {
+  "key": "dt-prop-028",
+  "concept": "nature.marine.dt_orque",
+  "label": "Longueur de l'orque",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire l'orque à sa vraie longueur, à côté d'une voiture.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Voiture",
+   "size": 4.5,
+   "icon": "car"
+  },
+  "item": {
+   "label": "Orque",
+   "icon": "whale"
+  },
+  "answer": 8,
+  "tolerance": 0.2,
+  "max": 13,
+  "explanation": "Un mâle adulte mesure environ 8 m."
+ },
+ {
+  "key": "dt-prop-029",
+  "concept": "nature.marine.dt_dauphin",
+  "label": "Longueur du dauphin",
+  "type": "proportion",
+  "difficulty": 35,
+  "prompt": "Étire le grand dauphin à sa vraie longueur, à côté d'un adulte couché.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Grand dauphin",
+   "icon": "dolphin"
+  },
+  "answer": 3,
+  "tolerance": 0.2,
+  "max": 5,
+  "explanation": "Environ 3 m pour un grand dauphin, le dauphin de Flipper."
+ },
+ {
+  "key": "dt-prop-030",
+  "concept": "nature.animals.dt_condor",
+  "label": "Envergure du condor",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire les ailes du condor des Andes à leur vraie envergure, à côté d'un adulte bras écartés.",
+  "dimension": "envergure",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte bras écartés",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Condor des Andes",
+   "icon": "bird"
+  },
+  "answer": 3.1,
+  "tolerance": 0.15,
+  "max": 5,
+  "explanation": "Plus de 3 m d'envergure, l'un des plus grands oiseaux volants."
+ },
+ {
+  "key": "dt-prop-031",
+  "concept": "geography.monuments.dt_tour_montparnasse",
+  "label": "Tour Montparnasse",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire la tour Montparnasse à sa vraie hauteur, à côté de la tour Eiffel.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Tour Eiffel",
+   "size": 330,
+   "icon": "tower"
+  },
+  "item": {
+   "label": "Tour Montparnasse",
+   "icon": "skyscraper"
+  },
+  "answer": 210,
+  "tolerance": 0.15,
+  "max": 530,
+  "explanation": "210 m, environ les deux tiers de la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-032",
+  "concept": "geography.monuments.dt_notre_dame",
+  "label": "Tours de Notre-Dame",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire les tours de Notre-Dame de Paris à leur vraie hauteur, à côté de l'Arc de triomphe.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Arc de triomphe",
+   "size": 50,
+   "icon": "arch"
+  },
+  "item": {
+   "label": "Tours de Notre-Dame",
+   "icon": "cathedral"
+  },
+  "answer": 69,
+  "tolerance": 0.15,
+  "max": 110,
+  "explanation": "69 m pour les tours ; la flèche monte à 96 m."
+ },
+ {
+  "key": "dt-prop-033",
+  "concept": "geography.monuments.dt_big_ben",
+  "label": "Elizabeth Tower",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire la tour de Big Ben à sa vraie hauteur, à côté de l'Arc de triomphe.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Arc de triomphe",
+   "size": 50,
+   "icon": "arch"
+  },
+  "item": {
+   "label": "Tour de Big Ben",
+   "icon": "clocktower"
+  },
+  "answer": 96,
+  "tolerance": 0.15,
+  "max": 150,
+  "explanation": "96 m, presque deux Arcs de triomphe."
+ },
+ {
+  "key": "dt-prop-034",
+  "concept": "geography.monuments.dt_christ_redempteur",
+  "label": "Christ Rédempteur",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire le Christ Rédempteur de Rio (avec son socle) à sa vraie hauteur, à côté d'un immeuble de 10 étages (30 m).",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Immeuble de 10 étages",
+   "size": 30,
+   "icon": "building"
+  },
+  "item": {
+   "label": "Christ Rédempteur",
+   "icon": "statue"
+  },
+  "answer": 38,
+  "tolerance": 0.15,
+  "max": 54,
+  "explanation": "38 m avec le socle, 30 m pour la statue seule."
+ },
+ {
+  "key": "dt-prop-035",
+  "concept": "geography.relief.dt_puy_de_dome",
+  "label": "Mont Blanc et puy de Dôme",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire le mont Blanc à sa vraie altitude, à côté du puy de Dôme.",
+  "dimension": "altitude",
+  "unit": "m",
+  "reference": {
+   "label": "Puy de Dôme",
+   "size": 1465,
+   "icon": "mountain"
+  },
+  "item": {
+   "label": "Mont Blanc",
+   "icon": "mountain"
+  },
+  "answer": 4806,
+  "tolerance": 0.15,
+  "max": 8000,
+  "explanation": "Environ 4 806 m, plus de trois fois le puy de Dôme."
+ },
+ {
+  "key": "dt-prop-036",
+  "concept": "science.space.dt_soleil_jupiter",
+  "label": "Le Soleil et Jupiter",
+  "type": "proportion",
+  "difficulty": 65,
+  "prompt": "Étire le Soleil à son vrai diamètre, à côté de Jupiter.",
+  "dimension": "diamètre",
+  "unit": "km",
+  "reference": {
+   "label": "Jupiter",
+   "size": 139820,
+   "icon": "planet"
+  },
+  "item": {
+   "label": "Soleil",
+   "icon": "sun"
+  },
+  "answer": 1392700,
+  "tolerance": 0.15,
+  "max": 2300000,
+  "explanation": "Le Soleil est environ 10 fois plus large que Jupiter… et 109 fois plus que la Terre."
+ },
+ {
+  "key": "dt-prop-037",
+  "concept": "sport.rules.dt_terrain_tennis",
+  "label": "Court de tennis",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire le court de tennis à sa vraie longueur, à côté d'un bus.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Bus",
+   "size": 12,
+   "icon": "bus"
+  },
+  "item": {
+   "label": "Court de tennis",
+   "icon": "court"
+  },
+  "answer": 23.77,
+  "tolerance": 0.15,
+  "max": 38,
+  "explanation": "23,77 m de long, environ deux bus."
+ },
+ {
+  "key": "dt-prop-038",
+  "concept": "sport.rules.dt_perche_record",
+  "label": "Saut à la perche",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire la barre du record du monde de saut à la perche à sa vraie hauteur, à côté d'un adulte.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Record de Duplantis",
+   "icon": "pole"
+  },
+  "answer": 6.3,
+  "tolerance": 0.1,
+  "max": 11,
+  "explanation": "Armand Duplantis a franchi plus de 6,30 m, plus de trois fois la taille d'un adulte."
+ },
+ {
+  "key": "dt-prop-039",
+  "concept": "tech.inventions.dt_tgv",
+  "label": "Longueur d'un TGV",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire la rame de TGV à sa vraie longueur, à côté d'un terrain de football.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Terrain de football",
+   "size": 105,
+   "icon": "field"
+  },
+  "item": {
+   "label": "Rame de TGV",
+   "icon": "train"
+  },
+  "answer": 200,
+  "tolerance": 0.15,
+  "max": 350,
+  "explanation": "Une rame simple mesure environ 200 m, presque deux terrains."
+ },
+ {
+  "key": "dt-prop-040",
+  "concept": "tech.inventions.dt_porte_avions",
+  "label": "Porte-avions Charles-de-Gaulle",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire le porte-avions Charles-de-Gaulle à sa vraie longueur, à côté de la tour Eiffel couchée.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Tour Eiffel",
+   "size": 330,
+   "icon": "tower"
+  },
+  "item": {
+   "label": "Charles-de-Gaulle",
+   "icon": "ship"
+  },
+  "answer": 261,
+  "tolerance": 0.15,
+  "max": 570,
+  "explanation": "261 m, un peu moins que la tour Eiffel."
  }
 ]
