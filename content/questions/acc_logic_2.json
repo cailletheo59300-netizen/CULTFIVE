@@ -1,0 +1,362 @@
+[
+ {
+  "key": "acc-logic2-001",
+  "concept": "logic.puzzles.acc_devinette_bouteille",
+  "label": "J'ai un cou sans tête",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "J'ai un cou mais pas de tête, un ventre mais pas de jambes. On me vide pour boire. Qui suis-je ?",
+  "options": [
+   "Une bouteille*",
+   "Une girafe",
+   "Un pull",
+   "Une cruche cassée"
+  ],
+  "explanation": "Le goulot d'une bouteille s'appelle aussi le col (ou le cou)."
+ },
+ {
+  "key": "acc-logic2-002",
+  "concept": "logic.puzzles.acc_devinette_oeuf",
+  "label": "À casser pour servir",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Il faut me casser avant de pouvoir m'utiliser. Qui suis-je ?",
+  "options": [
+   "Un œuf*",
+   "Un verre",
+   "Une noix de coco",
+   "Un cadenas"
+  ],
+  "explanation": "Pour l'omelette, pas le choix."
+ },
+ {
+  "key": "acc-logic2-003",
+  "concept": "logic.puzzles.acc_devinette_bougie",
+  "label": "Plus je vis, plus je rétrécis",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Plus je vis, plus je deviens petite. Qui suis-je ?",
+  "options": [
+   "Une bougie*",
+   "Une fleur",
+   "La Lune",
+   "Une montre"
+  ],
+  "explanation": "Elle fond en brûlant."
+ },
+ {
+  "key": "acc-logic2-004",
+  "concept": "logic.puzzles.acc_devinette_horloge",
+  "label": "Des aiguilles sans coudre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "J'ai des aiguilles mais je ne couds pas. Qui suis-je ?",
+  "options": [
+   "Une horloge*",
+   "Un hérisson",
+   "Un sapin",
+   "Une couturière"
+  ],
+  "explanation": "Celle des heures et celle des minutes."
+ },
+ {
+  "key": "acc-logic2-005",
+  "concept": "logic.puzzles.acc_devinette_lettre_e",
+  "label": "Au début de l'été",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Je suis au début de l'été, à la fin de l'hiver et deux fois dans « été ». Qui suis-je ?",
+  "options": [
+   "La lettre É (E)*",
+   "Le soleil",
+   "La chaleur",
+   "Le mois de juin"
+  ],
+  "explanation": "Un jeu sur les lettres, pas sur les saisons !"
+ },
+ {
+  "key": "acc-logic2-006",
+  "concept": "logic.puzzles.acc_devinette_silence",
+  "label": "Je disparais si on me nomme",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Si tu dis mon nom, je disparais. Qui suis-je ?",
+  "options": [
+   "Le silence*",
+   "Un secret",
+   "Une ombre",
+   "Un rêve"
+  ],
+  "explanation": "Dès qu'on parle, il n'est plus là."
+ },
+ {
+  "key": "acc-logic2-007",
+  "concept": "logic.puzzles.acc_devinette_promesse",
+  "label": "Je me brise sans bruit",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "On peut me tenir ou me briser sans jamais me toucher. Qui suis-je ?",
+  "options": [
+   "Une promesse*",
+   "Un miroir",
+   "Une assiette",
+   "Un record"
+  ],
+  "explanation": "On tient sa promesse… ou on la brise."
+ },
+ {
+  "key": "acc-logic2-008",
+  "concept": "logic.puzzles.acc_devinette_coin",
+  "label": "Le tour du monde dans un coin",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Je fais le tour du monde en restant dans un coin. Qui suis-je ?",
+  "options": [
+   "Un timbre*",
+   "Une boussole",
+   "Un avion",
+   "Un globe"
+  ],
+  "explanation": "Collé au coin de l'enveloppe."
+ },
+ {
+  "key": "acc-logic2-009",
+  "concept": "logic.puzzles.acc_devinette_glace",
+  "label": "Je pleure quand il fait chaud",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Je ne pleure que lorsqu'il fait chaud, et je disparais en été. Qui suis-je ?",
+  "options": [
+   "Un glaçon (ou un bonhomme de neige)*",
+   "Un nuage",
+   "Un enfant",
+   "Un arbre"
+  ],
+  "explanation": "Il fond dès que la température dépasse 0 °C."
+ },
+ {
+  "key": "acc-logic2-010",
+  "concept": "logic.puzzles.acc_devinette_pas",
+  "label": "Plus on en fait, plus on en laisse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Plus tu en fais, plus tu en laisses derrière toi. Qu'est-ce que c'est ?",
+  "options": [
+   "Des pas (des empreintes)*",
+   "Des erreurs",
+   "Des miettes",
+   "Des dettes"
+  ],
+  "explanation": "Chaque pas laisse une trace."
+ },
+ {
+  "key": "acc-logic2-011",
+  "concept": "logic.puzzles.acc_devinette_temps",
+  "label": "On le tue sans le blesser",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "On le perd, on le gagne, on le tue, mais il ne meurt jamais. Qu'est-ce que c'est ?",
+  "options": [
+   "Le temps*",
+   "Un match",
+   "L'argent",
+   "Le sommeil"
+  ],
+  "explanation": "« Tuer le temps », « gagner du temps »."
+ },
+ {
+  "key": "acc-logic2-012",
+  "concept": "logic.puzzles.acc_enigme_coq_oeuf",
+  "label": "L'œuf du coq",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Un coq pond un œuf pile sur le toit pointu d'une grange. De quel côté tombe l'œuf ?",
+  "options": [
+   "Aucun : un coq ne pond pas*",
+   "À gauche",
+   "À droite",
+   "Il reste sur le toit"
+  ],
+  "explanation": "Ce sont les poules qui pondent."
+ },
+ {
+  "key": "acc-logic2-013",
+  "concept": "logic.puzzles.acc_enigme_electrique",
+  "label": "Le train électrique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Un train électrique roule vers le nord, le vent souffle vers le sud. De quel côté part la fumée ?",
+  "options": [
+   "Il n'y a pas de fumée*",
+   "Vers le sud",
+   "Vers le nord",
+   "Vers le haut"
+  ],
+  "explanation": "Un train électrique ne fait pas de fumée."
+ },
+ {
+  "key": "acc-logic2-014",
+  "concept": "logic.puzzles.acc_enigme_bougies",
+  "label": "Bougies éteintes",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Il y a 10 bougies allumées. Le vent en éteint 3. Combien en reste-t-il à la fin, une fois la nuit passée ?",
+  "answer": 3,
+  "explanation": "Les 7 restées allumées ont fini par fondre ; il ne reste que les 3 éteintes."
+ },
+ {
+  "key": "acc-logic2-015",
+  "concept": "logic.puzzles.acc_enigme_medecin",
+  "label": "Le chirurgien",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un garçon a un accident. Le chirurgien dit : « Je ne peux pas l'opérer, c'est mon fils. » Le père du garçon n'est pas chirurgien. Qui est le chirurgien ?",
+  "options": [
+   "Sa mère*",
+   "Son oncle",
+   "Son grand-père",
+   "Un imposteur"
+  ],
+  "explanation": "Une énigme qui montre nos préjugés sur les métiers."
+ },
+ {
+  "key": "acc-logic2-016",
+  "concept": "logic.reasoning.acc_menteur_simple",
+  "label": "Toujours faux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Léo ment toujours. Il dit : « Il pleut. » Que peut-on en conclure ?",
+  "options": [
+   "Il ne pleut pas*",
+   "Il pleut",
+   "On ne peut rien dire",
+   "Il neige"
+  ],
+  "explanation": "Puisqu'il ment toujours, c'est le contraire."
+ },
+ {
+  "key": "acc-logic2-017",
+  "concept": "logic.reasoning.acc_tous_les_lundis",
+  "label": "Jour de marché",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Il y a marché tous les mercredis. Aujourd'hui, c'est le 3 du mois et c'est un lundi. Quand est le prochain marché ?",
+  "options": [
+   "Le 5*",
+   "Le 4",
+   "Le 6",
+   "Le 10"
+  ],
+  "explanation": "Lundi 3, mardi 4, mercredi 5."
+ },
+ {
+  "key": "acc-logic2-018",
+  "concept": "logic.reasoning.acc_qui_le_plus_vieux",
+  "label": "Le plus âgé",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Anna est plus vieille que Bruno, mais plus jeune que Chloé. Qui est le plus âgé ?",
+  "options": [
+   "Chloé*",
+   "Anna",
+   "Bruno",
+   "On ne peut pas savoir"
+  ],
+  "explanation": "Chloé > Anna > Bruno."
+ },
+ {
+  "key": "acc-logic2-019",
+  "concept": "logic.reasoning.acc_cadenas_code",
+  "label": "Le cadenas",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Le code d'un cadenas a 3 chiffres (de 0 à 9). Combien de codes différents sont possibles ?",
+  "answer": 1000,
+  "explanation": "10 × 10 × 10 = 1 000, de 000 à 999."
+ },
+ {
+  "key": "acc-logic2-020",
+  "concept": "logic.reasoning.acc_tenues",
+  "label": "Tenues possibles",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Tu as 3 t-shirts et 2 pantalons. Combien de tenues différentes peux-tu composer ?",
+  "answer": 6,
+  "explanation": "3 × 2 = 6."
+ },
+ {
+  "key": "acc-logic2-021",
+  "concept": "logic.sequences.acc_suite_impairs",
+  "label": "Nombres impairs",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Quel nombre suit : 1, 3, 5, 7, … ?",
+  "answer": 9,
+  "explanation": "Les nombres impairs."
+ },
+ {
+  "key": "acc-logic2-022",
+  "concept": "logic.sequences.acc_suite_dizaines",
+  "label": "De 10 en 10",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Quel nombre suit : 25, 35, 45, 55, … ?",
+  "answer": 65,
+  "explanation": "On ajoute 10."
+ },
+ {
+  "key": "acc-logic2-023",
+  "concept": "logic.sequences.acc_suite_moitie",
+  "label": "Moitié de moitié",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Quel nombre suit : 64, 32, 16, 8, … ?",
+  "answer": 4,
+  "explanation": "Chaque nombre est la moitié du précédent."
+ },
+ {
+  "key": "acc-logic2-024",
+  "concept": "logic.sequences.acc_suite_saisons",
+  "label": "Les saisons",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle saison vient après l'automne ?",
+  "options": [
+   "L'hiver*",
+   "Le printemps",
+   "L'été",
+   "L'automne"
+  ],
+  "explanation": "Printemps, été, automne, hiver."
+ },
+ {
+  "key": "acc-logic2-025",
+  "concept": "logic.sequences.acc_suite_notes",
+  "label": "Les notes",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle note suit : do, ré, mi, fa, … ?",
+  "options": [
+   "Sol*",
+   "La",
+   "Si",
+   "Do"
+  ],
+  "explanation": "Do, ré, mi, fa, sol, la, si."
+ },
+ {
+  "key": "acc-logic2-026",
+  "concept": "logic.sequences.acc_suite_planetes",
+  "label": "Les planètes",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle planète suit, en partant du Soleil : Mercure, Vénus, Terre, … ?",
+  "options": [
+   "Mars*",
+   "Jupiter",
+   "Saturne",
+   "Neptune"
+  ],
+  "explanation": "Puis Jupiter, Saturne, Uranus, Neptune."
+ }
+]
