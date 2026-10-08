@@ -21,9 +21,6 @@ struct RankPathView: View {
                         if rank != .curious { connector(reached: reached(rank)) }
                     }
                 }
-                Text("Chaque rang ajoute un trait au 5 du jour : un trait pour le Curieux, le 5 barré pour l'Encyclopédie. Ton Elo monte quand tu réussis des questions de ton niveau ou plus dures.")
-                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, Space.gutter)
             .padding(.bottom, Space.xl)
@@ -31,6 +28,7 @@ struct RankPathView: View {
         }
         .scrollIndicators(.hidden)
         .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
+        .clearsTabBar()
         .background(Color.paper)
         .navigationTitle("Ton parcours")
         .navigationBarTitleDisplayMode(.inline)

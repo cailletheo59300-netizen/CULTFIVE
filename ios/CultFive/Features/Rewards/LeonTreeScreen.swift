@@ -87,7 +87,6 @@ struct LeonTreeScreen: View {
                     }
                 }
                 FreeChestOffer()
-                tickets(progression.tickets)
             } else {
                 ProgressView().frame(maxWidth: .infinity, minHeight: 300)
             }
@@ -259,26 +258,6 @@ struct LeonTreeScreen: View {
         feeding = false
     }
 
-    // MARK: Tickets et tenue
-
-    @ViewBuilder
-    private func tickets(_ tickets: HelpTickets) -> some View {
-        if tickets.fiftyFifty + tickets.hint > 0 {
-            HStack(spacing: Space.m) {
-                HStack(spacing: 4) {
-                    GameIcon.ticketFifty.image.frame(width: 26, height: 26)
-                    Text("\(tickets.fiftyFifty) ticket\(tickets.fiftyFifty > 1 ? "s" : "") 50/50")
-                }
-                HStack(spacing: 4) {
-                    GameIcon.ticketHint.image.frame(width: 26, height: 26)
-                    Text("\(tickets.hint) ticket\(tickets.hint > 1 ? "s" : "") indice")
-                }
-            }
-            .font(.system(.footnote, design: .rounded).weight(.bold))
-            .foregroundStyle(Color.inkSoft)
-            .accessibilityLabel("Tickets d'aide : \(tickets.fiftyFifty) 50/50, \(tickets.hint) indice ou seconde chance. Utilisés avant tes graines pendant les parties.")
-        }
-    }
 
 }
 
