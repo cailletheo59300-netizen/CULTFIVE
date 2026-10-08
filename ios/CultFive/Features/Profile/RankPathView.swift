@@ -133,14 +133,14 @@ struct RankPathView: View {
         return global.toNextRank?.progress ?? 1
     }
 
-    /// Traits de l'emblème : 1 (Curieux) … 4 (Érudit, Expert), 5 barré (Encyclopédie).
+    /// Traits de l'emblème : 1 (Curieux) … 4 (Érudit), 5 barré (Expert, Encyclopédie).
     static func marks(_ rank: CoteCULT.Rank) -> Int {
         switch rank {
         case .curious: return 1
         case .amateur: return 2
         case .enlightened: return 3
-        case .scholar, .expert: return 4
-        case .encyclopedia: return 5
+        case .scholar: return 4
+        case .expert, .encyclopedia: return 5
         }
     }
 

@@ -94,8 +94,12 @@ struct PlayHomeView: View {
     private var domainsIndex: some View {
         let interests = Set(app.profile?.interests ?? [])
         return VStack(alignment: .leading, spacing: 10) {
-            Text("Par domaine").font(.cfHeadline)
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 10) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("Par domaine").font(.cfHeadline)
+                Spacer()
+                Text("Classée ou entraînement").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkSoft)
+            }
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 3), spacing: 8) {
                 ForEach(orderedDomains) { domain in
                     Button { setup = PlaySetupRequest(domainId: domain.id) } label: {
                         DomainTile(domain: domain, skill: skills.first { $0.domainId == domain.id },
@@ -137,8 +141,16 @@ private struct QuickPlayCard: View {
                     .frame(width: 50, height: 50)
                     .background(.white.opacity(0.18), in: Circle())
                 VStack(alignment: .leading, spacing: 2) {
+                    Text("CLASSÉE · COMPTE POUR L'ELO")
+                        .font(.system(size: 10, weight: .black, design: .rounded)).tracking(0.8)
+                        .foregroundStyle(Color(hex: 0x1E1340))
+                        .padding(.horizontal, 6).padding(.vertical, 2)
+                        .background(Color.sun, in: RoundedRectangle(cornerRadius: 6, style: .continuous))
+                        .lineLimit(1).minimumScaleFactor(0.8)
                     Text("Partie rapide").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
-                    Text("10 questions · tous domaines").font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                    Text("10 questions de tous les domaines, à ton niveau. Environ 3 min.")
+                        .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer(minLength: 0)
                 Image(systemName: "play.fill")
@@ -153,7 +165,7 @@ private struct QuickPlayCard: View {
         }
         .buttonStyle(.row)
         .accessibilityElement(children: .combine)
-        .accessibilityHint("10 questions de tous les domaines")
+        .accessibilityHint("Partie classée : 10 questions de tous les domaines, compte pour ton Elo")
     }
 }
 
@@ -191,6 +203,8 @@ private struct ModePill: View {
 }
 
 /// Domaine : case pleine de la couleur du domaine, gros pictogramme, nom, cote (ou placement) en bas.
+/// Domaine : case pleine de la couleur du domaine, nom en haut, emblème du rang au centre, rang et Elo en petit
+/// dessous, jauge vers le rang suivant. Provisoire : emblème grisé et parties jouées ; jamais joué : « À découvrir ».
 private struct DomainTile: View {
     let domain: DomainInfo
     let skill: SkillSummary?
@@ -199,64 +213,75 @@ private struct DomainTile: View {
     var body: some View {
         let color = DomainPalette.color(domain.id)
         let on = DomainPalette.onColor(domain.id)
-        VStack(alignment: .leading, spacing: 4) {
-            HStack(alignment: .top) {
-                Image(systemName: DomainPalette.symbol(domain.id))
-                    .font(.system(.title2, design: .rounded).weight(.bold))
-                    .foregroundStyle(on)
-                Spacer(minLength: 0)
+        VStack(spacing: 2) {
+            HStack(spacing: 3) {
                 if favorite {
-                    Image(systemName: "star.fill").font(.caption2.weight(.bold)).foregroundStyle(on.opacity(0.8))
-                        .accessibilityLabel("Favori")
+                    Image(systemName: "star.fill").font(.system(size: 8, weight: .bold)).accessibilityLabel("Favori")
                 }
+                Text(domain.name).font(.system(.caption, design: .rounded).weight(.black))
+                    .lineLimit(1).minimumScaleFactor(0.75)
             }
-            Spacer(minLength: 6)
-            Text(domain.name)
-                .font(.system(.footnote, design: .rounded).weight(.heavy))
-                .foregroundStyle(on)
-                .lineLimit(1).minimumScaleFactor(0.7)
-            status(on: on)
+            .foregroundStyle(on)
+            content(on: on)
         }
-        .padding(12)
-        .frame(maxWidth: .infinity, minHeight: 108, alignment: .leading)
+        .padding(.horizontal, 6).padding(.vertical, 8)
+        .frame(maxWidth: .infinity, minHeight: 122, alignment: .top)
         .background {
             ZStack(alignment: .bottomTrailing) {
                 color
                 Image(systemName: DomainPalette.symbol(domain.id))
-                    .font(.system(size: 64, weight: .black))
+                    .font(.system(size: 46, weight: .black))
                     .foregroundStyle(on.opacity(0.1))
                     .rotationEffect(.degrees(-12))
-                    .offset(x: 14, y: 12)
+                    .offset(x: 10, y: 8)
             }
-            .clipShape(RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
-        .shadow(color: color.opacity(0.28), radius: 8, y: 4)
+        .shadow(color: color.opacity(0.28), radius: 6, y: 3)
         .accessibilityElement(children: .combine)
     }
 
     @ViewBuilder
-    private func status(on: Color) -> some View {
+    private func content(on: Color) -> some View {
         if let skill, skill.rating.placed {
-            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                Text(skill.rating.formatted).font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
-                Text(skill.rating.rank.name).font(.system(.caption2, design: .rounded).weight(.bold)).opacity(0.8)
-                    .lineLimit(1).minimumScaleFactor(0.6)
+            let rating = skill.rating
+            RankEmblem(rank: rating.rank).frame(width: 56, height: 56).accessibilityHidden(true)
+            VStack(spacing: 0) {
+                Text(rating.rank.name).font(.system(.caption, design: .rounded).weight(.black))
+                    .lineLimit(1).minimumScaleFactor(0.7)
+                Text(rating.formatted).font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit().opacity(0.88)
             }
             .foregroundStyle(on)
-            .accessibilityLabel("Elo \(skill.rating.formatted), \(skill.rating.rank.name)")
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(on.opacity(0.25))
+                    Capsule().fill(on).frame(width: geo.size.width * (rating.toNextRank?.progress ?? 1))
+                }
+            }
+            .frame(height: 4)
+            .padding(.horizontal, 8).padding(.top, 3)
+            .accessibilityHidden(true)
         } else if let skill, skill.answered > 0 {
-            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                Text(skill.rating.formatted).font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
-                    .opacity(0.75)
-                Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames)")
-                    .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit()
-                    .opacity(0.85)
+            RankEmblem(rank: .curious).frame(width: 56, height: 56)
+                .saturation(0).opacity(0.5).accessibilityHidden(true)
+            VStack(spacing: 0) {
+                Text("Provisoire").font(.system(.caption, design: .rounded).weight(.black))
+                Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames) parties")
+                    .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit().opacity(0.88)
             }
             .foregroundStyle(on)
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Elo provisoire \(skill.rating.formatted), \(skill.rating.placementGames) parties sur \(CoteCULT.placementGames)")
+            .accessibilityLabel("Elo provisoire, \(skill.rating.placementGames) parties sur \(CoteCULT.placementGames)")
         } else {
-            Text("à découvrir").font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(on.opacity(0.8))
+            Spacer(minLength: 4)
+            Image(systemName: "play.fill")
+                .font(.system(size: 13, weight: .black))
+                .foregroundStyle(on)
+                .frame(width: 34, height: 34)
+                .background(on.opacity(0.22), in: Circle())
+            Text("À découvrir").font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(on)
+                .padding(.top, 4)
+            Spacer(minLength: 4)
         }
     }
 }

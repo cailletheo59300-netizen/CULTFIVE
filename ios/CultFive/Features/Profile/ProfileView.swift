@@ -9,12 +9,12 @@ struct ProfileView: View {
     @State private var trophyOverview: TrophiesOverview?
     @State private var showTree = false
     @State private var history: [DailyHistoryEntry] = []
-    @State private var weeks: [WeekRecap] = []
     @State private var showHistory = false
     @State private var showSettings = false
     @State private var showShare = false
     @State private var showEloHelp = false
     @State private var showRankPath = false
+    @State private var showTrophies = false
 
     var body: some View {
         NavigationStack {
@@ -26,11 +26,16 @@ struct ProfileView: View {
                     Button { showRankPath = true } label: { coteCard }
                         .buttonStyle(.row)
                         .accessibilityHint("Ouvre ton parcours : les rangs et ce qu'il te reste à gagner")
-                    numbers
-                    knowledge
-                    calendar
-                    WeeksRecapSection(weeks: weeks)
-                    trophies
+                    ProfileSectionTitle(title: "Tes chiffres")
+                    ProfileStatsGrid(profile: app.profile, skills: skills, history: history)
+                    ProfileSectionTitle(title: "Tes domaines", action: "Comment marche l'Elo ?") { showEloHelp = true }
+                    ProfileDomainsList(skills: skills)
+                    ProfileSectionTitle(title: "Ton mois", action: "Historique") { showHistory = true }
+                    ProfileMonthCalendar(history: history)
+                    if let trophyOverview {
+                        ProfileSectionTitle(title: "Trophées", action: "Tout voir") { showTrophies = true }
+                        ProfileTrophyShelf(trophies: trophyOverview)
+                    }
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -55,6 +60,17 @@ struct ProfileView: View {
             }
         }
         .sheet(isPresented: $showEloHelp) { EloExplainerSheet() }
+        .sheet(isPresented: $showTrophies) {
+            if let trophyOverview {
+                NavigationStack {
+                    ScrollView { TrophiesShowcase(trophies: trophyOverview).padding(Space.gutter) }
+                        .background(Color.paper)
+                        .navigationTitle("Trophées")
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+                .presentationDetents([.large])
+            }
+        }
         .task { await load() }
     }
 
@@ -64,11 +80,9 @@ struct ProfileView: View {
         async let s = try? service.skills()
         async let a = try? service.trophies()
         async let h = try? service.dailyHistory(days: 35)
-        async let w = try? service.weeklyRecap(weeks: 8)
         skills = await s ?? []
         trophyOverview = await a ?? trophyOverview
         history = await h ?? []
-        weeks = await w ?? []
     }
 
     // MARK: Blocs
@@ -175,173 +189,6 @@ struct ProfileView: View {
         .padding(Space.m)
         .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
         .accessibilityElement(children: .combine)
-    }
-
-    private var numbers: some View {
-        let streak = app.profile?.streak ?? 0
-        let answered = app.profile?.questionsAnswered ?? 0
-        let corrected = app.profile?.errorsCorrected ?? 0
-        let seeds = app.profile?.seeds ?? 0
-        return LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
-            number("\(streak)", streak > 1 ? "jours de série" : "jour de série", symbol: "flame.fill", tint: Color(hex: 0xF76707))
-            number("\(answered)", answered > 1 ? "réponses" : "réponse", symbol: "checkmark.circle.fill", tint: .brand)
-            number("\(corrected)", corrected > 1 ? "erreurs corrigées" : "erreur corrigée", symbol: "checkmark.seal.fill", tint: .correct)
-            number("\(seeds)", seeds > 1 ? Brand.currencyPlural : Brand.currencySingular, symbol: nil, tint: Color(hex: 0xE8A33D))
-        }
-    }
-
-    /// `symbol` nil : la graine de Brainlix.
-    private func number(_ value: String, _ label: String, symbol: String?, tint: Color) -> some View {
-        HStack(spacing: 10) {
-            Group {
-                if let symbol {
-                    Image(systemName: symbol).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(tint)
-                } else {
-                    SeedIcon().frame(width: 24, height: 24)
-                }
-            }
-            .frame(width: 36, height: 36)
-            .background(tint.opacity(0.14), in: Circle())
-            VStack(alignment: .leading, spacing: 0) {
-                Text(value).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
-                    .lineLimit(1).minimumScaleFactor(0.6)
-                Text(label).font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1).minimumScaleFactor(0.8)
-            }
-        }
-        .popCard(padding: 12)
-        .accessibilityElement(children: .combine)
-    }
-
-    private var knowledge: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            HStack {
-                Text("Ce que tu sais").font(.cfHeadline)
-                Spacer()
-                Button { showEloHelp = true } label: {
-                    Label("Comment marche l'Elo", systemImage: "questionmark.circle.fill")
-                        .labelStyle(.iconOnly)
-                        .font(.title3)
-                        .foregroundStyle(Color.brand)
-                        .frame(minWidth: 44, minHeight: 44)
-                }
-                .accessibilityLabel("Comment marche l'Elo")
-            }
-            if skills.contains(where: { $0.answered > 0 }) {
-                KnowledgeRadar(axes: skills.map { KnowledgeRadar.Axis(domainId: $0.domainId, level: $0.answered > 0 ? Double($0.level) : 0) },
-                               fill: favoriteColor)
-                    .frame(maxWidth: 300)
-                    .frame(maxWidth: .infinity)
-                    .popCard()
-            }
-            // Les cotes placées d'abord (par niveau), puis les placements les plus avancés, puis les domaines à découvrir.
-            let played = skills.sorted {
-                ($0.rating.placed ? 1 : 0, $0.rating.placed ? Double($0.level) : Double($0.answered))
-                    > ($1.rating.placed ? 1 : 0, $1.rating.placed ? Double($1.level) : Double($1.answered))
-            }
-            ForEach(played) { skill in
-                NavigationLink(value: skill.domainId) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        HStack(alignment: .firstTextBaseline) {
-                            Text(skill.name).font(.cfTitle3).foregroundStyle(Color.ink)
-                            Spacer()
-                            if skill.rating.placed {
-                                Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
-                                    .foregroundStyle(Color.ink)
-                            } else if skill.answered > 0 {
-                                Text(skill.rating.formatted).font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
-                                    .foregroundStyle(Color.inkSoft)
-                            }
-                        }
-                        if skill.rating.placed {
-                            SkillBar(level: skill.level, reliability: skill.reliability, color: DomainPalette.color(skill.domainId))
-                        } else {
-                            PlacementSquares(done: skill.rating.placementGames, color: DomainPalette.color(skill.domainId), size: 10)
-                        }
-                        HStack(alignment: .center) {
-                            Text(placementLine(skill))
-                                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                            Spacer(minLength: Space.s)
-                            if let mastery = trophyOverview?.mastery.first(where: { $0.domainId == skill.domainId }) {
-                                MasteryMedals(mastery: mastery)
-                            }
-                        }
-                    }
-                    .popCard(padding: 14)
-                }
-                .buttonStyle(.row)
-            }
-        }
-    }
-
-    private func placementLine(_ skill: SkillSummary) -> String {
-        if skill.rating.placed { return "\(skill.rating.rank.name) · \(skill.answered) réponses" }
-        let done = skill.rating.placementGames
-        let left = CoteCULT.placementGames - done
-        if skill.answered == 0 { return "Pas encore joué · départ à 1 000" }
-        return "Elo provisoire · \(done)/\(CoteCULT.placementGames) parties · encore \(left) pour le confirmer"
-    }
-
-    /// Les 5 dernières semaines du 5 du jour : un trait par jour joué.
-    private var calendar: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            Text("Tes rendez-vous").font(.cfHeadline)
-            let byDate = Dictionary(uniqueKeysWithValues: history.map { ($0.date, $0) })
-            let days = (0..<35).reversed().compactMap { Calendar.current.date(byAdding: .day, value: -$0, to: Date()) }
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 7), spacing: 6) {
-                ForEach(days, id: \.self) { day in
-                    let entry = byDate[isoDate(day)]
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .fill(fill(for: entry))
-                        .aspectRatio(1, contentMode: .fit)
-                        .overlay {
-                            if let score = entry?.score, entry?.status == "finished" {
-                                Text("\(score)").font(.system(.caption2, design: .rounded).weight(.bold))
-                                    .foregroundStyle(score >= 4 ? Color.inkFixed : .white)
-                            }
-                        }
-                        .accessibilityLabel(entry?.score.map { "\(isoDate(day)) : \($0) sur 5" } ?? "\(isoDate(day)) : non joué")
-                }
-            }
-            let finished = history.filter { $0.status != "in_progress" && $0.score != nil }
-            if !finished.isEmpty {
-                let rate = Int((Double(finished.compactMap(\.score).reduce(0, +)) / Double(finished.count * 5) * 100).rounded())
-                Button { showHistory = true } label: {
-                    HStack {
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text("\(finished.count) rendez-vous · \(rate) % de bonnes réponses")
-                                .font(.system(.subheadline, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
-                            if let best = finished.compactMap(\.top).min() {
-                                Text("Meilleur jour : top \(best) % des joueurs").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                            }
-                        }
-                        Spacer()
-                        Text("Historique").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.brand)
-                        Image(systemName: "chevron.right").font(.caption.weight(.bold)).foregroundStyle(Color.brand)
-                    }
-                    .popCard(padding: 12, radius: Radius.s)
-                }
-                .buttonStyle(.row)
-            }
-        }
-    }
-
-    private func fill(for entry: DailyHistoryEntry?) -> Color {
-        guard let entry, entry.status == "finished", let score = entry.score else { return .hairline }
-        return score >= 4 ? .sun : Color.brand.opacity(0.35 + Double(score) * 0.12)
-    }
-
-    private func isoDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: date)
-    }
-
-    /// Trophées : maîtrise par domaine et exploits (vitrine).
-    @ViewBuilder private var trophies: some View {
-        if let trophyOverview {
-            TrophiesShowcase(trophies: trophyOverview)
-        }
     }
 
     /// Entrée vers l'arbre de Léon : l'arbre en miniature, l'étape, la jauge.

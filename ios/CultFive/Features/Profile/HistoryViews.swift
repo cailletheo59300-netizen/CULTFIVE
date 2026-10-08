@@ -98,6 +98,8 @@ struct WeeksRecapSection: View {
 /// Historique du 5 du jour : score, % de bonnes réponses, classement parmi les joueurs du jour.
 struct DailyHistoryList: View {
     let entries: [DailyHistoryEntry]
+    /// Récap des semaines (déplacé du profil ici).
+    var weeks: [WeekRecap] = []
 
     private var finished: [DailyHistoryEntry] { entries.filter { $0.status != "in_progress" } }
 
@@ -111,6 +113,13 @@ struct DailyHistoryList: View {
                         figure(finished.compactMap(\.top).min().map { "Top \($0) %" } ?? "—", "meilleur classement")
                     }
                     .listRowBackground(Color.paperRaised)
+                }
+            }
+            if !weeks.isEmpty {
+                Section {
+                    WeeksRecapSection(weeks: weeks)
+                        .listRowBackground(Color.clear)
+                        .listRowInsets(EdgeInsets())
                 }
             }
             Section {
@@ -171,11 +180,12 @@ struct DailyHistoryDetail: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @State private var entries: [DailyHistoryEntry]?
+    @State private var weeks: [WeekRecap] = []
 
     var body: some View {
         Group {
             if let entries {
-                DailyHistoryList(entries: entries)
+                DailyHistoryList(entries: entries, weeks: weeks)
             } else {
                 ProgressView().frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.paper)
             }
@@ -185,6 +195,9 @@ struct DailyHistoryDetail: View {
                 Button("Fermer") { dismiss() }
             }
         }
-        .task { entries = (try? await app.service.dailyHistory(days: 120)) ?? [] }
+        .task {
+            weeks = (try? await app.service.weeklyRecap(weeks: 8)) ?? []
+            entries = (try? await app.service.dailyHistory(days: 120)) ?? []
+        }
     }
 }
