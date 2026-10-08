@@ -131,7 +131,7 @@ const THINT=()=>ticket(0xF2A900,'#FFE27A','#7A4A00',(c,x,y)=>{c.fillStyle='#fff'
 function snap(build,px,frameBuild,restBuild){
   R.setSize(px,px,false);
   while(holder.children.length) holder.remove(holder.children[0]);
-  const {obj,cam:c}=build();holder.add(obj);
+  const built=build();const {obj,cam:c}=built;holder.add(obj);R.toneMappingExposure=built.exposure||1.25;
   linear(obj);
   // cadrage automatique : l'objet remplit l'image avec une petite marge
   cam.position.set(c[0],c[1],c[2]);cam.lookAt(c[3],c[4],c[5]);cam.updateMatrixWorld();
@@ -254,6 +254,51 @@ function alphaCenterX(px){const c=document.createElement('canvas');c.width=c.hei
     g.position.y = .1; return g;
   }
 
+// Emblèmes de rang v2 : la matière monte avec le rang (cuivre, bronze, argent, or, platine, cristal), les traits du
+// 5 du jour (1 à 5), des étoiles au-dessus (Éclairé 1, Érudit 2, Expert et Encyclopédie 3) et un ruban au nom du rang.
+const RANKS2=[
+  {name:'CURIEUX',rim:0xB87333,rough:.35,enamel:0x8B4A2B,ribbon:0x8B4A2B,marks:1,stars:0,shape:'circle'},
+  {name:'AMATEUR',rim:0xCD8A45,rough:.28,enamel:0x2F9E44,ribbon:0x2B8A3E,marks:2,stars:0,shape:'shield'},
+  {name:'ÉCLAIRÉ',rim:0xE4EAF2,rough:.14,enamel:0x1C7ED6,ribbon:0x1971C2,marks:3,stars:1,shape:'hex'},
+  {name:'ÉRUDIT',rim:0xFFC933,rough:.16,enamel:0x6A4CFF,ribbon:0x5F3DC4,marks:4,stars:2,shape:'oct',laurel:true},
+  {name:'EXPERT',rim:0xCFE3FF,rough:.1,enamel:0xC2255C,ribbon:0xA61E4D,marks:5,stars:3,shape:'shield',laurel:true,wings:true},
+  {name:'ENCYCLOPÉDIE',rim:0xFFC933,rough:.1,enamel:0x24127A,ribbon:0x24127A,marks:5,stars:3,shape:'star',laurel:true,wings:true,crown:true},
+];
+function ribbonMesh(text,color){
+  const g=new THREE.Group();const w=1.9,h=.36;
+  const sh=new THREE.Shape();sh.moveTo(-w/2,-h/2);sh.lineTo(w/2,-h/2);sh.lineTo(w/2-.12,0);sh.lineTo(w/2,h/2);sh.lineTo(-w/2,h/2);sh.lineTo(-w/2+.12,0);sh.lineTo(-w/2,-h/2);
+  g.add(new THREE.Mesh(extrude(sh,.05,.02),phys(color,{roughness:.45})));
+  const tex=canvasTex(512,96,(c,W,H)=>{c.clearRect(0,0,W,H);c.fillStyle='#fff';c.textAlign='center';c.textBaseline='middle';
+    let size=68;c.font=`900 ${size}px Nunito, Arial Black, sans-serif`;while(c.measureText(text).width>W*.86&&size>20){size-=2;c.font=`900 ${size}px Nunito, Arial Black, sans-serif`;}
+    c.fillStyle='rgba(0,0,0,.25)';c.fillText(text,W/2,H*.6+3);c.fillStyle='#fff';c.fillText(text,W/2,H*.6);});
+  const label=new THREE.Mesh(new THREE.PlaneGeometry(w*.86,h*.86),new THREE.MeshBasicMaterial({map:tex,transparent:true}));label.position.z=.075;label.renderOrder=2;label.material.depthTest=false;g.add(label);
+  return g;}
+function emblem2(idx,core){
+  const r=Object.assign({},RANKS2[idx],core?{wings:false,crown:false,stars:0,ribbon:null}:{});const g=new THREE.Group();
+  const rim=metal(r.rim,r.rough);const enamel=phys(r.enamel,{roughness:.22});const gold=metal(0xFFC933,.15);const white=phys(0xffffff,{roughness:.3});
+  let outer,inner;
+  if(r.shape==='circle'){outer=circle(.86);inner=circle(.7);}
+  else if(r.shape==='shield'){outer=shield(idx===4?1.12:1.05);inner=shield(idx===4?.94:.88);}
+  else if(r.shape==='hex'){outer=polygon(6,.92,Math.PI/2);inner=polygon(6,.76,Math.PI/2);}
+  else if(r.shape==='oct'){outer=polygon(8,.94,Math.PI/8);inner=polygon(8,.78,Math.PI/8);}
+  else {outer=star(8,1.02,.86);inner=circle(.7);}
+  g.add(new THREE.Mesh(extrude(outer,.18,.07),rim));
+  const en=new THREE.Mesh(extrude(inner,.14,.04),enamel);en.position.z=.08;g.add(en);
+  if(r.laurel){const l=laurel(gold);l.position.z=.02;l.scale.setScalar(idx===5?1.14:1.04);g.add(l);}
+  if(r.wings){const wm=metal(idx===5?0xFFE680:0xEAF2FF,.18);g.add(wing(1,wm));g.add(wing(-1,wm));}
+  // Traits : 1 à 4 verticaux, le 5e barre en or.
+  const t=tally(r.marks,idx>=3?gold:white,metal(0xFFD23F,.1));t.position.set(0,r.shape==='shield'?.04:.02,.22);t.scale.setScalar(1.1);g.add(t);
+  // Étoiles au-dessus.
+  const starMat=metal(0xFFD23F,.12);
+  for(let i=0;i<r.stars;i++){const m=new THREE.Mesh(extrude(star(5,.15,.065),.05,.02),starMat);const x=(i-(r.stars-1)/2)*.32;m.position.set(x,(r.crown?1.32:1.06)-Math.abs(x)*.25,.05);m.rotation.z=-x*.4;g.add(m);}
+  if(r.crown){const c=crown(gold,phys(0xff4d5e,{emissive:0xff2040,emissiveIntensity:.25}));c.position.set(0,.92,0);g.add(c);
+    const gem=new THREE.Mesh(new THREE.OctahedronGeometry(.14,0),phys(0x74C0FC,{emissive:0x4dabf7,emissiveIntensity:.5,roughness:.05}));gem.position.set(0,-.55,.26);gem.scale.set(1,1.3,.7);g.add(gem);
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(1.2,.028,8,80),metal(0xFFE680,.1));ring.rotation.x=1.3;g.add(ring);}
+  // Ruban au nom du rang.
+  if(core)return g;
+  const rb=ribbonMesh(r.name,r.ribbon);rb.position.set(0,-.98,.3);rb.rotation.x=-.12;g.add(rb);
+  return g;}
+
 function framed(obj,c){return {obj,cam:c||[0,.2,5.2,0,.05,0]};}
 
 // Sac : besace en cuir violet, rabat arrondi, boucle et coutures dorées, graines qui dépassent, anse.
@@ -295,8 +340,9 @@ const ICONS={
 const FRAMES=10;
 for(const tier of ['wood','silver','gold','savant']) for(let i=0;i<FRAMES;i++)
   ICONS[`ChestOpening/chest_${tier}_${i}`]=[()=>chest(tier,Math.pow(i/(FRAMES-1),1.6)),540,()=>chest(tier,1),()=>chest(tier,0)];
-// Rangs (même ordre que CoteCULT.Rank), trophée d'exploit.
-['curious','amateur','enlightened','scholar','expert','encyclopedia'].forEach((id,i)=>{ICONS[`rank_${id}`]=[()=>framed(emblem(RANKS[i],i)),360];});
+// Rangs (même ordre que CoteCULT.Rank), trophée d'exploit. Même cadre pour les six : la taille des ornements dit le rang.
+const rankFrame=()=>({obj:new THREE.Mesh(new THREE.BoxGeometry(2.7,2.7,.4))});
+['curious','amateur','enlightened','scholar','expert','encyclopedia'].forEach((id,i)=>{ICONS[`rank_${id}`]=[()=>Object.assign(framed(emblem2(i)),{exposure:.95}),540,rankFrame,()=>framed(emblem2(i,true))];});
 ICONS.bag=[bag,192];
 // Médailles de maîtrise d'un domaine (globe en relief).
 [['bronze',0xC77B3A,false],['silver',0xE4EAF2,false],['gold',0xFFC933,false],['diamond',0x9BE7FF,true]].forEach(([id,c,d])=>{ICONS[`medal_${id}`]=[()=>framed(medal({metal:c,diamond:d})),360];});
