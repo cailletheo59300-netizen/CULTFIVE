@@ -1,0 +1,522 @@
+[
+ {
+  "key": "acc-sport-001",
+  "concept": "sport.football.acc_hors_jeu_corner",
+  "label": "Pas de hors-jeu sur corner",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Au football, on peut être hors-jeu directement sur un corner.",
+  "answer": false,
+  "explanation": "Non : pas de hors-jeu sur un corner, une touche ou un six mètres."
+ },
+ {
+  "key": "acc-sport-002",
+  "concept": "sport.football.acc_ballon_or",
+  "label": "Ballon d'or",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel trophée récompense chaque année le meilleur footballeur ?",
+  "options": [
+   "Le Ballon d'or*",
+   "Le Soulier d'or",
+   "La Coupe d'or",
+   "Le Maillot d'or"
+  ],
+  "explanation": "Créé en 1956 par le magazine France Football."
+ },
+ {
+  "key": "acc-sport-003",
+  "concept": "sport.football.acc_mbappe_club",
+  "label": "Mbappé au Real",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel club Kylian Mbappé joue-t-il depuis 2024 ?",
+  "options": [
+   "Le Real Madrid*",
+   "Le FC Barcelone",
+   "Liverpool",
+   "Le Bayern Munich"
+  ],
+  "explanation": "Il quitte le PSG à l'été 2024 pour le Real Madrid."
+ },
+ {
+  "key": "acc-sport-004",
+  "concept": "sport.football.acc_gardien_mains",
+  "label": "Les mains du gardien",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Le gardien de but peut toucher le ballon avec les mains partout sur le terrain.",
+  "answer": false,
+  "explanation": "Seulement dans sa surface de réparation."
+ },
+ {
+  "key": "acc-sport-005",
+  "concept": "sport.football.acc_ligue_1",
+  "label": "Championnat de France",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle le championnat de France de football de première division ?",
+  "options": [
+   "La Ligue 1*",
+   "La Liga",
+   "La Serie A",
+   "La Premier League"
+  ],
+  "explanation": "La Liga est espagnole, la Serie A italienne, la Premier League anglaise."
+ },
+ {
+  "key": "acc-sport-006",
+  "concept": "sport.football.acc_premier_league",
+  "label": "Championnat anglais",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel pays se joue la Premier League ?",
+  "options": [
+   "L'Angleterre*",
+   "L'Espagne",
+   "L'Allemagne",
+   "L'Italie"
+  ],
+  "explanation": "Avec des clubs comme Manchester United, Liverpool ou Arsenal."
+ },
+ {
+  "key": "acc-sport-007",
+  "concept": "sport.football.acc_bundesliga",
+  "label": "Bundesliga",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "La Bundesliga est le championnat de football de quel pays ?",
+  "options": [
+   "L'Allemagne*",
+   "L'Autriche",
+   "Les Pays-Bas",
+   "La Suisse"
+  ],
+  "explanation": "Le Bayern Munich y domine depuis des années."
+ },
+ {
+  "key": "acc-sport-008",
+  "concept": "sport.rules.acc_tennis_zero",
+  "label": "Zéro au tennis",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au tennis, comment dit-on « zéro » dans le décompte des points ?",
+  "options": [
+   "Love*",
+   "Nil",
+   "Zero",
+   "Null"
+  ],
+  "explanation": "En anglais, on dit « love » ; en français, on dit simplement « zéro »."
+ },
+ {
+  "key": "acc-sport-009",
+  "concept": "sport.rules.acc_wimbledon_gazon",
+  "label": "Surface de Wimbledon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Sur quelle surface se joue le tournoi de Wimbledon ?",
+  "options": [
+   "Le gazon*",
+   "La terre battue",
+   "Le dur",
+   "Le bois"
+  ],
+  "explanation": "Le plus vieux tournoi du monde, à Londres, se joue sur herbe."
+ },
+ {
+  "key": "acc-sport-010",
+  "concept": "sport.rules.acc_wimbledon_blanc",
+  "label": "Tenue blanche",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "À Wimbledon, les joueurs doivent porter une tenue presque entièrement blanche.",
+  "answer": true,
+  "explanation": "Une tradition stricte depuis le XIXe siècle."
+ },
+ {
+  "key": "acc-sport-011",
+  "concept": "sport.rules.acc_judo_ceinture",
+  "label": "Ceinture du judo",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au judo, quelle ceinture porte le débutant ?",
+  "options": [
+   "La blanche*",
+   "La noire",
+   "La jaune",
+   "La marron"
+  ],
+  "explanation": "On commence en blanc, et la noire arrive après des années."
+ },
+ {
+  "key": "acc-sport-012",
+  "concept": "sport.rules.acc_ping_pong",
+  "label": "Tennis de table",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est l'autre nom du tennis de table ?",
+  "options": [
+   "Le ping-pong*",
+   "Le squash",
+   "Le padel",
+   "Le badminton"
+  ],
+  "explanation": "Le nom vient du bruit de la balle."
+ },
+ {
+  "key": "acc-sport-013",
+  "concept": "sport.rules.acc_ski_slalom_portes",
+  "label": "Le slalom",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "En ski, que doit-on franchir pendant un slalom ?",
+  "options": [
+   "Des portes*",
+   "Des haies",
+   "Des bosses",
+   "Des tremplins"
+  ],
+  "explanation": "Des piquets qui forment des portes, à franchir sans en rater une."
+ },
+ {
+  "key": "acc-sport-014",
+  "concept": "sport.olympics.acc_jo_tous_4_ans",
+  "label": "Rythme des JO d'hiver",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Les Jeux olympiques d'hiver et d'été ont lieu la même année.",
+  "answer": false,
+  "explanation": "Depuis 1994, ils sont décalés de deux ans."
+ },
+ {
+  "key": "acc-sport-015",
+  "concept": "sport.champions.acc_nadal_terre",
+  "label": "Roi de la terre battue",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel joueur est surnommé « le roi de la terre battue » ?",
+  "options": [
+   "Rafael Nadal*",
+   "Roger Federer",
+   "Novak Djokovic",
+   "Andy Murray"
+  ],
+  "explanation": "Il a gagné Roland-Garros 14 fois."
+ },
+ {
+  "key": "acc-sport-016",
+  "concept": "sport.champions.acc_jordan_bulls",
+  "label": "Michael Jordan",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle équipe Michael Jordan a-t-il gagné six titres NBA ?",
+  "options": [
+   "Les Chicago Bulls*",
+   "Les Los Angeles Lakers",
+   "Les Boston Celtics",
+   "Les New York Knicks"
+  ],
+  "explanation": "Six titres dans les années 1990, avec le célèbre numéro 23."
+ },
+ {
+  "key": "acc-sport-017",
+  "concept": "sport.champions.acc_griezmann",
+  "label": "Antoine Griezmann",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel attaquant français a fini meilleur buteur de l'Euro 2016 ?",
+  "options": [
+   "Antoine Griezmann*",
+   "Olivier Giroud",
+   "Karim Benzema",
+   "Dimitri Payet"
+  ],
+  "explanation": "Six buts, mais la France perd la finale contre le Portugal."
+ },
+ {
+  "key": "acc-sport-018",
+  "concept": "sport.rules.acc_padel",
+  "label": "Le padel",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Le padel ressemble au tennis, mais avec une particularité. Laquelle ?",
+  "options": [
+   "On peut jouer la balle après un rebond sur les murs*",
+   "On joue sans filet",
+   "La balle est en mousse géante",
+   "On joue à un contre trois"
+  ],
+  "explanation": "Un terrain entouré de murs et de grillage, en double, avec des raquettes pleines."
+ },
+ {
+  "key": "acc-sport-019",
+  "concept": "sport.rules.acc_smash",
+  "label": "Le smash",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Au tennis ou au badminton, comment appelle-t-on la frappe puissante de haut en bas ?",
+  "options": [
+   "Le smash*",
+   "Le lob",
+   "Le revers",
+   "L'amorti"
+  ],
+  "explanation": "Le lob, au contraire, passe au-dessus de l'adversaire."
+ },
+ {
+  "key": "acc-sport-020",
+  "concept": "sport.rules.acc_ko_boxe",
+  "label": "K.-O. en boxe",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "En boxe, que signifie « K.-O. » ?",
+  "options": [
+   "Knock-out : le boxeur ne peut pas se relever à temps*",
+   "Kilo-octet",
+   "Une victoire aux points",
+   "Un coup interdit"
+  ],
+  "explanation": "L'arbitre compte jusqu'à 10 ; si le boxeur ne se relève pas, c'est le K.-O."
+ },
+ {
+  "key": "acc-sport-021",
+  "concept": "sport.rules.acc_caddie_golf",
+  "label": "Le caddie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Au golf, comment s'appelle la personne qui porte le sac du joueur ?",
+  "options": [
+   "Le caddie*",
+   "Le greenkeeper",
+   "Le starter",
+   "Le marqueur"
+  ],
+  "explanation": "C'est ce mot qui a donné le nom du chariot de supermarché."
+ },
+ {
+  "key": "acc-sport-022",
+  "concept": "sport.rules.acc_tir_arc_cible",
+  "label": "Centre de la cible",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Au tir à l'arc, de quelle couleur est le centre de la cible ?",
+  "options": [
+   "Jaune*",
+   "Rouge",
+   "Noir",
+   "Bleu"
+  ],
+  "explanation": "La cible a des anneaux blanc, noir, bleu, rouge, et le jaune au centre (10 points)."
+ },
+ {
+  "key": "acc-sport-023",
+  "concept": "sport.rules.acc_escrime_armes",
+  "label": "Armes de l'escrime",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Laquelle de ces armes n'est PAS utilisée en escrime olympique ?",
+  "options": [
+   "La dague*",
+   "Le fleuret",
+   "L'épée",
+   "Le sabre"
+  ],
+  "explanation": "Fleuret, épée et sabre : chacune a ses règles et ses zones de touche."
+ },
+ {
+  "key": "acc-sport-024",
+  "concept": "sport.rules.acc_aviron_dos",
+  "label": "Le sens de l'aviron",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "En aviron, les rameurs avancent le dos tourné à la direction du bateau.",
+  "answer": true,
+  "explanation": "Ils tirent sur les rames en regardant vers l'arrière ; en kayak, on regarde devant."
+ },
+ {
+  "key": "acc-sport-025",
+  "concept": "sport.rules.acc_halteres",
+  "label": "L'haltérophilie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que fait-on en haltérophilie ?",
+  "options": [
+   "On soulève des barres chargées de poids*",
+   "On lance un poids le plus loin possible",
+   "On grimpe à la corde",
+   "On fait du saut à la perche"
+  ],
+  "explanation": "Deux mouvements : l'arraché et l'épaulé-jeté."
+ },
+ {
+  "key": "acc-sport-026",
+  "concept": "sport.rules.acc_escalade_bloc",
+  "label": "Escalade de bloc",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "En escalade, comment s'appelle la discipline où l'on grimpe des murs bas, sans corde, au-dessus de gros tapis ?",
+  "options": [
+   "Le bloc*",
+   "La voie",
+   "La vitesse",
+   "La via ferrata"
+  ],
+  "explanation": "Le bloc, la difficulté et la vitesse sont les trois disciplines de compétition."
+ },
+ {
+  "key": "acc-sport-027",
+  "concept": "sport.olympics.acc_skate_jo",
+  "label": "Skateboard aux JO",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le skateboard est au programme olympique depuis les premiers Jeux modernes.",
+  "answer": false,
+  "explanation": "Il n'est arrivé qu'aux Jeux de Tokyo, en 2021, avec le surf et l'escalade."
+ },
+ {
+  "key": "acc-sport-028",
+  "concept": "sport.olympics.acc_bobsleigh",
+  "label": "Le bobsleigh",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quels Jeux le bobsleigh appartient-il ?",
+  "options": [
+   "Aux Jeux d'hiver*",
+   "Aux Jeux d'été",
+   "Aux deux",
+   "À aucun"
+  ],
+  "explanation": "On descend une piste de glace dans un engin à 2 ou 4 personnes."
+ },
+ {
+  "key": "acc-sport-029",
+  "concept": "sport.olympics.acc_luge_couche",
+  "label": "La luge",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "En luge olympique, dans quelle position descend-on la piste ?",
+  "options": [
+   "Allongé sur le dos, les pieds devant*",
+   "Allongé sur le ventre, la tête devant",
+   "Assis",
+   "Debout"
+  ],
+  "explanation": "Sur le ventre, tête devant, c'est le skeleton."
+ },
+ {
+  "key": "acc-sport-030",
+  "concept": "sport.olympics.acc_bmx",
+  "label": "Le BMX",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Le BMX, c'est une discipline de…",
+  "options": [
+   "Vélo*",
+   "Moto",
+   "Skate",
+   "Ski"
+  ],
+  "explanation": "De petits vélos pour des courses sur bosses ou des figures (freestyle)."
+ },
+ {
+  "key": "acc-sport-031",
+  "concept": "sport.olympics.acc_perec",
+  "label": "Marie-José Pérec",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quelle discipline Marie-José Pérec a-t-elle été triple championne olympique ?",
+  "options": [
+   "La course (200 m et 400 m)*",
+   "La natation",
+   "Le saut en longueur",
+   "Le judo"
+  ],
+  "explanation": "Or au 400 m en 1992, puis au 200 m et au 400 m en 1996."
+ },
+ {
+  "key": "acc-sport-032",
+  "concept": "sport.champions.acc_zlatan",
+  "label": "Zlatan Ibrahimović",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel pays est Zlatan Ibrahimović, passé par le PSG ?",
+  "options": [
+   "La Suède*",
+   "La Norvège",
+   "Le Danemark",
+   "La Bosnie"
+  ],
+  "explanation": "Un attaquant suédois connu pour ses buts acrobatiques… et sa grande confiance en lui."
+ },
+ {
+  "key": "acc-sport-033",
+  "concept": "sport.champions.acc_pogacar",
+  "label": "Tadej Pogačar",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel pays vient le cycliste Tadej Pogačar, vainqueur de plusieurs Tours de France ?",
+  "options": [
+   "La Slovénie*",
+   "La Slovaquie",
+   "La Croatie",
+   "La Belgique"
+  ],
+  "explanation": "Vainqueur du Tour en 2020, 2021, 2024 et 2025."
+ },
+ {
+  "key": "acc-sport-034",
+  "concept": "sport.champions.acc_dakar_rallye",
+  "label": "Le Dakar",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce que le Dakar ?",
+  "options": [
+   "Un rallye-raid dans le désert*",
+   "Une course de voile",
+   "Un marathon africain",
+   "Un tournoi de football"
+  ],
+  "explanation": "Né Paris–Dakar en 1978, il se court aujourd'hui en Arabie saoudite."
+ },
+ {
+  "key": "acc-sport-035",
+  "concept": "sport.football.acc_ldc_hymne",
+  "label": "Ligue des champions",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle compétition réunit chaque année les meilleurs clubs de football européens ?",
+  "options": [
+   "La Ligue des champions*",
+   "La Coupe du monde",
+   "L'Euro",
+   "La Copa América"
+  ],
+  "explanation": "Avec son célèbre hymne joué avant chaque match."
+ },
+ {
+  "key": "acc-sport-036",
+  "concept": "sport.football.acc_euro_selection",
+  "label": "L'Euro",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui participe à l'Euro de football ?",
+  "options": [
+   "Des équipes nationales européennes*",
+   "Des clubs européens",
+   "Des équipes du monde entier",
+   "Des joueurs de moins de 21 ans"
+  ],
+  "explanation": "Il a lieu tous les quatre ans ; la France l'a gagné en 1984 et en 2000."
+ },
+ {
+  "key": "acc-sport-037",
+  "concept": "sport.football.acc_tirs_au_but",
+  "label": "Tirs au but",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "En cas d'égalité après les prolongations, un match à élimination directe se décide aux tirs au but.",
+  "answer": true,
+  "explanation": "Cinq tirs par équipe, puis mort subite."
+ }
+]

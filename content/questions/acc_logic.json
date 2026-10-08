@@ -1,0 +1,307 @@
+[
+ {
+  "key": "acc-logic-001",
+  "concept": "logic.sequences.acc_suite_5",
+  "label": "De 5 en 5",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Quel nombre suit : 5, 10, 15, 20, … ?",
+  "answer": 25,
+  "explanation": "On ajoute 5 à chaque fois."
+ },
+ {
+  "key": "acc-logic-002",
+  "concept": "logic.sequences.acc_suite_moins_3",
+  "label": "Moins 3",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre suit : 30, 27, 24, 21, … ?",
+  "answer": 18,
+  "explanation": "On enlève 3 à chaque fois."
+ },
+ {
+  "key": "acc-logic-003",
+  "concept": "logic.sequences.acc_suite_carres_debut",
+  "label": "Les carrés",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre suit : 1, 4, 9, 16, … ?",
+  "answer": 25,
+  "explanation": "Ce sont les carrés : 1², 2², 3², 4², puis 5² = 25."
+ },
+ {
+  "key": "acc-logic-004",
+  "concept": "logic.sequences.acc_suite_jours",
+  "label": "Jours de la semaine",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel jour vient deux jours après vendredi ?",
+  "options": [
+   "Dimanche*",
+   "Samedi",
+   "Lundi",
+   "Jeudi"
+  ],
+  "explanation": "Vendredi → samedi → dimanche."
+ },
+ {
+  "key": "acc-logic-005",
+  "concept": "logic.sequences.acc_suite_mois",
+  "label": "Les mois",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel mois vient trois mois après novembre ?",
+  "options": [
+   "Février*",
+   "Janvier",
+   "Mars",
+   "Décembre"
+  ],
+  "explanation": "Novembre → décembre → janvier → février."
+ },
+ {
+  "key": "acc-logic-006",
+  "concept": "logic.sequences.acc_suite_lettres",
+  "label": "Une lettre sur deux",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle lettre suit : A, C, E, G, … ?",
+  "options": [
+   "I*",
+   "H",
+   "J",
+   "K"
+  ],
+  "explanation": "On saute une lettre à chaque fois."
+ },
+ {
+  "key": "acc-logic-007",
+  "concept": "logic.sequences.acc_suite_horloge",
+  "label": "Toutes les 15 minutes",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle heure suit : 9 h, 9 h 15, 9 h 30, 9 h 45, … ?",
+  "options": [
+   "10 h*",
+   "9 h 60",
+   "10 h 15",
+   "9 h 50"
+  ],
+  "explanation": "Un quart d'heure de plus : 10 h pile."
+ },
+ {
+  "key": "acc-logic-008",
+  "concept": "logic.reasoning.acc_age_frere",
+  "label": "Âge du frère",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Léa a 10 ans. Son frère a 3 ans de plus qu'elle. Quel âge aura-t-il dans 2 ans ?",
+  "answer": 15,
+  "explanation": "10 + 3 = 13 ans aujourd'hui, donc 15 dans 2 ans."
+ },
+ {
+  "key": "acc-logic-009",
+  "concept": "logic.reasoning.acc_plus_grand",
+  "label": "Le plus grand",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Paul est plus grand que Léo. Léo est plus grand que Tom. Qui est le plus petit ?",
+  "options": [
+   "Tom*",
+   "Léo",
+   "Paul",
+   "On ne peut pas savoir"
+  ],
+  "explanation": "Paul > Léo > Tom."
+ },
+ {
+  "key": "acc-logic-010",
+  "concept": "logic.reasoning.acc_course_dernier",
+  "label": "Dépasser le dernier",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans une course, peux-tu dépasser le dernier ?",
+  "options": [
+   "Non, personne n'est derrière lui*",
+   "Oui, tu deviens avant-dernier",
+   "Oui, tu deviens dernier",
+   "Seulement au dernier tour"
+  ],
+  "explanation": "Pour le dépasser, il faudrait être derrière le dernier."
+ },
+ {
+  "key": "acc-logic-011",
+  "concept": "logic.reasoning.acc_oeufs_cuisson",
+  "label": "Cuisson des œufs",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Un œuf cuit en 10 minutes. Combien de minutes faut-il pour cuire 3 œufs en même temps dans la même casserole ?",
+  "answer": 10,
+  "explanation": "Ils cuisent ensemble : toujours 10 minutes."
+ },
+ {
+  "key": "acc-logic-012",
+  "concept": "logic.reasoning.acc_sechage_linge",
+  "label": "Linge qui sèche",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Une chemise sèche au soleil en 2 heures. Combien d'heures faut-il pour que 4 chemises étendues côte à côte sèchent ?",
+  "answer": 2,
+  "explanation": "Elles sèchent en même temps."
+ },
+ {
+  "key": "acc-logic-013",
+  "concept": "logic.reasoning.acc_fils_soeur",
+  "label": "Le fils de ma sœur",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qui est le fils de ma sœur ?",
+  "options": [
+   "Mon neveu*",
+   "Mon cousin",
+   "Mon oncle",
+   "Mon petit-fils"
+  ],
+  "explanation": "La fille de ma sœur est ma nièce."
+ },
+ {
+  "key": "acc-logic-014",
+  "concept": "logic.reasoning.acc_tous_chats",
+  "label": "Tous les chats",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Tous les chats sont des mammifères. Minou est un chat. Donc Minou est un mammifère.",
+  "answer": true,
+  "explanation": "Si tous les chats sont des mammifères, Minou, qui est un chat, en est forcément un."
+ },
+ {
+  "key": "acc-logic-015",
+  "concept": "logic.reasoning.acc_tous_oiseaux_volent",
+  "label": "Tout ce qui vole",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Tous les oiseaux ont des plumes. Ce poulet a des plumes. Donc c'est forcément… un aigle.",
+  "answer": false,
+  "explanation": "Avoir des plumes montre qu'il est un oiseau, pas lequel."
+ },
+ {
+  "key": "acc-logic-016",
+  "concept": "logic.reasoning.acc_feu_tricolore",
+  "label": "Le feu tricolore",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Sur un feu de circulation, quelle couleur est en bas ?",
+  "options": [
+   "Vert*",
+   "Rouge",
+   "Orange",
+   "Jaune"
+  ],
+  "explanation": "Rouge en haut, orange au milieu, vert en bas."
+ },
+ {
+  "key": "acc-logic-017",
+  "concept": "logic.puzzles.acc_devinette_trou",
+  "label": "Plus on enlève…",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Plus on lui enlève, plus il devient grand. Qu'est-ce que c'est ?",
+  "options": [
+   "Un trou*",
+   "Un ballon",
+   "Un arbre",
+   "Une ombre"
+  ],
+  "explanation": "Plus on creuse, plus le trou grandit."
+ },
+ {
+  "key": "acc-logic-018",
+  "concept": "logic.puzzles.acc_devinette_echo",
+  "label": "Je réponds sans parler",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Je te réponds sans jamais parler, et je répète tes derniers mots. Qui suis-je ?",
+  "options": [
+   "L'écho*",
+   "Un perroquet",
+   "Le téléphone",
+   "Le miroir"
+  ],
+  "explanation": "Le son rebondit contre une paroi et revient."
+ },
+ {
+  "key": "acc-logic-019",
+  "concept": "logic.puzzles.acc_devinette_ombre",
+  "label": "Je te suis partout",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Je te suis partout au soleil, mais je disparais dans le noir. Qui suis-je ?",
+  "options": [
+   "Ton ombre*",
+   "Ton chien",
+   "Ton reflet",
+   "Ton écho"
+  ],
+  "explanation": "Sans lumière, pas d'ombre."
+ },
+ {
+  "key": "acc-logic-020",
+  "concept": "logic.puzzles.acc_devinette_serviette",
+  "label": "Plus elle sèche, plus elle est mouillée",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Plus elle sèche, plus elle est mouillée. Qu'est-ce que c'est ?",
+  "options": [
+   "Une serviette*",
+   "Une éponge",
+   "Une flaque",
+   "Le linge"
+  ],
+  "explanation": "Elle sèche les autres en se mouillant."
+ },
+ {
+  "key": "acc-logic-021",
+  "concept": "logic.puzzles.acc_devinette_age",
+  "label": "Elle monte sans redescendre",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Elle monte toujours et ne redescend jamais. Qu'est-ce que c'est ?",
+  "options": [
+   "L'âge*",
+   "La fumée",
+   "Une montgolfière",
+   "La marée"
+  ],
+  "explanation": "On vieillit tous les jours."
+ },
+ {
+  "key": "acc-logic-022",
+  "concept": "logic.puzzles.acc_devinette_clavier",
+  "label": "Des touches mais pas de serrure",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "J'ai des touches mais aucune serrure, de l'espace mais pas de pièce. Qui suis-je ?",
+  "options": [
+   "Un clavier*",
+   "Une maison",
+   "Un coffre",
+   "Un piano"
+  ],
+  "explanation": "La touche Espace et la touche Entrée !"
+ },
+ {
+  "key": "acc-logic-023",
+  "concept": "logic.puzzles.acc_devinette_carte",
+  "label": "Des villes sans maisons",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "J'ai des villes sans maisons, des forêts sans arbres et des rivières sans eau. Qui suis-je ?",
+  "options": [
+   "Une carte*",
+   "Un rêve",
+   "Un livre",
+   "Un désert"
+  ],
+  "explanation": "Tout y est dessiné."
+ }
+]

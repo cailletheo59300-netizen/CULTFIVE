@@ -1,0 +1,572 @@
+[
+ {
+  "key": "acc-tech-001",
+  "concept": "tech.computing.acc_wifi",
+  "label": "Le Wi-Fi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "À quoi sert le Wi-Fi ?",
+  "options": [
+   "Se connecter à Internet sans fil*",
+   "Recharger son téléphone",
+   "Écouter la radio",
+   "Imprimer des photos"
+  ],
+  "explanation": "Une connexion par ondes radio entre la box et les appareils."
+ },
+ {
+  "key": "acc-tech-002",
+  "concept": "tech.computing.acc_mdp_123456",
+  "label": "Le pire mot de passe",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "« 123456 » fait partie des mots de passe les plus utilisés au monde.",
+  "answer": true,
+  "explanation": "Il est craqué en une fraction de seconde : à éviter absolument."
+ },
+ {
+  "key": "acc-tech-003",
+  "concept": "tech.computing.acc_hashtag",
+  "label": "Le hashtag",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel symbole utilise-t-on pour un hashtag ?",
+  "options": [
+   "#*",
+   "@",
+   "&",
+   "%"
+  ],
+  "explanation": "Le croisillon, ou « dièse » dans le langage courant."
+ },
+ {
+  "key": "acc-tech-004",
+  "concept": "tech.computing.acc_arobase",
+  "label": "L'arobase",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel symbole trouve-t-on dans toutes les adresses e-mail ?",
+  "options": [
+   "@*",
+   "#",
+   "&",
+   "€"
+  ],
+  "explanation": "L'arobase sépare le nom de l'utilisateur et celui du service."
+ },
+ {
+  "key": "acc-tech-005",
+  "concept": "tech.computing.acc_copier_coller",
+  "label": "Copier-coller",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Sur un ordinateur Windows, quel raccourci permet de coller ?",
+  "options": [
+   "Ctrl + V*",
+   "Ctrl + C",
+   "Ctrl + X",
+   "Ctrl + Z"
+  ],
+  "explanation": "Ctrl + C copie, Ctrl + X coupe, Ctrl + Z annule."
+ },
+ {
+  "key": "acc-tech-006",
+  "concept": "tech.computing.acc_pdf",
+  "label": "Le PDF",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert surtout un fichier PDF ?",
+  "options": [
+   "À garder la même mise en page sur tous les appareils*",
+   "À faire de la musique",
+   "À compresser des vidéos",
+   "À programmer des jeux"
+  ],
+  "explanation": "Inventé par Adobe, il s'affiche partout pareil."
+ },
+ {
+  "key": "acc-tech-007",
+  "concept": "tech.computing.acc_qr_code",
+  "label": "Le QR code",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment lit-on un QR code ?",
+  "options": [
+   "Avec l'appareil photo d'un téléphone*",
+   "Avec une carte bancaire",
+   "En le touchant",
+   "Avec une clé USB"
+  ],
+  "explanation": "Ce carré de petits pixels contient un lien ou un texte."
+ },
+ {
+  "key": "acc-tech-008",
+  "concept": "tech.computing.acc_spam",
+  "label": "Le spam",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on les e-mails publicitaires non désirés ?",
+  "options": [
+   "Les spams*",
+   "Les cookies",
+   "Les pixels",
+   "Les bugs"
+  ],
+  "explanation": "Le nom vient d'un sketch des Monty Python… sur du jambon en boîte."
+ },
+ {
+  "key": "acc-tech-009",
+  "concept": "tech.computing.acc_bug_insecte",
+  "label": "Le bug",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le mot « bug » vient de l'anglais et veut dire « insecte ».",
+  "answer": true,
+  "explanation": "Une légende raconte qu'un papillon de nuit a bloqué un ordinateur en 1947."
+ },
+ {
+  "key": "acc-tech-010",
+  "concept": "tech.computing.acc_selfie",
+  "label": "Le selfie",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qu'est-ce qu'un selfie ?",
+  "options": [
+   "Une photo de soi prise par soi-même*",
+   "Une vidéo en direct",
+   "Un filtre photo",
+   "Un message vocal"
+  ],
+  "explanation": "Le mot entre dans les dictionnaires français en 2016."
+ },
+ {
+  "key": "acc-tech-011",
+  "concept": "tech.computing.acc_emoji_japon",
+  "label": "Les émojis",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays viennent les émojis ?",
+  "options": [
+   "Le Japon*",
+   "Les États-Unis",
+   "La Corée du Sud",
+   "La Chine"
+  ],
+  "explanation": "Inventés à la fin des années 1990 pour les téléphones japonais."
+ },
+ {
+  "key": "acc-tech-012",
+  "concept": "tech.computing.acc_carte_sim",
+  "label": "La carte SIM",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert la carte SIM d'un téléphone ?",
+  "options": [
+   "À relier le téléphone à ton opérateur et ton numéro*",
+   "À stocker les photos",
+   "À recharger la batterie",
+   "À capter le Wi-Fi"
+  ],
+  "explanation": "Sans elle, pas d'appels ni de SMS sur le réseau mobile."
+ },
+ {
+  "key": "acc-tech-013",
+  "concept": "tech.computing.acc_ctrl_alt_suppr",
+  "label": "Ctrl + Alt + Suppr",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Sur Windows, quel raccourci ouvre l'écran pour verrouiller ou lancer le gestionnaire des tâches ?",
+  "options": [
+   "Ctrl + Alt + Suppr*",
+   "Ctrl + Maj + A",
+   "Alt + F4",
+   "Ctrl + Échap"
+  ],
+  "explanation": "Alt + F4 ferme la fenêtre ouverte."
+ },
+ {
+  "key": "acc-tech-014",
+  "concept": "tech.computing.acc_navigateur",
+  "label": "Le navigateur",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Lequel de ces logiciels est un navigateur Internet ?",
+  "options": [
+   "Firefox*",
+   "Excel",
+   "Photoshop",
+   "Word"
+  ],
+  "explanation": "Comme Chrome, Safari ou Edge."
+ },
+ {
+  "key": "acc-tech-015",
+  "concept": "tech.inventions.acc_micro_ondes",
+  "label": "Le micro-ondes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment un four à micro-ondes chauffe-t-il les aliments ?",
+  "options": [
+   "Il fait vibrer l'eau qu'ils contiennent*",
+   "Avec une résistance qui rougit",
+   "Avec une flamme",
+   "Avec de la vapeur"
+  ],
+  "explanation": "L'agitation des molécules d'eau produit la chaleur."
+ },
+ {
+  "key": "acc-tech-016",
+  "concept": "tech.inventions.acc_micro_ondes_metal",
+  "label": "Métal au micro-ondes",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Il faut éviter de mettre du métal dans un four à micro-ondes.",
+  "answer": true,
+  "explanation": "Il peut faire des étincelles et abîmer l'appareil."
+ },
+ {
+  "key": "acc-tech-017",
+  "concept": "tech.inventions.acc_frigo_porte",
+  "label": "La porte du frigo",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Où fait-il le moins froid dans un réfrigérateur ?",
+  "options": [
+   "Dans la porte*",
+   "En bas",
+   "Au fond",
+   "Au milieu"
+  ],
+  "explanation": "On y range les boissons et les œufs, pas la viande."
+ },
+ {
+  "key": "acc-tech-018",
+  "concept": "tech.inventions.acc_led_conso",
+  "label": "Les ampoules LED",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Une ampoule LED consomme plus d'électricité qu'une vieille ampoule à incandescence.",
+  "answer": false,
+  "explanation": "C'est l'inverse : 5 à 10 fois moins, pour la même lumière."
+ },
+ {
+  "key": "acc-tech-019",
+  "concept": "tech.inventions.acc_gps_satellites",
+  "label": "Le GPS",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "D'où le GPS de ton téléphone reçoit-il les signaux pour te situer ?",
+  "options": [
+   "De satellites*",
+   "Des antennes Wi-Fi seulement",
+   "De la Lune",
+   "Des radars routiers"
+  ],
+  "explanation": "Une trentaine de satellites tournent autour de la Terre pour cela."
+ },
+ {
+  "key": "acc-tech-020",
+  "concept": "tech.inventions.acc_drone",
+  "label": "Le drone",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce qu'un drone ?",
+  "options": [
+   "Un appareil volant sans pilote à bord*",
+   "Un robot aspirateur",
+   "Un sous-marin",
+   "Un satellite"
+  ],
+  "explanation": "Piloté à distance ou de façon autonome."
+ },
+ {
+  "key": "acc-tech-021",
+  "concept": "tech.inventions.acc_imprimante_3d",
+  "label": "L'imprimante 3D",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que fabrique une imprimante 3D ?",
+  "options": [
+   "Des objets en volume*",
+   "Des photos en relief",
+   "Des films 3D",
+   "Des lunettes 3D"
+  ],
+  "explanation": "Elle dépose de la matière couche par couche."
+ },
+ {
+  "key": "acc-tech-022",
+  "concept": "tech.inventions.acc_code_barres",
+  "label": "Le code-barres",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que contient le code-barres d'un produit de supermarché ?",
+  "options": [
+   "Un numéro qui identifie le produit*",
+   "Son prix exact",
+   "Sa date de péremption",
+   "La recette"
+  ],
+  "explanation": "La caisse retrouve le prix grâce à ce numéro."
+ },
+ {
+  "key": "acc-tech-023",
+  "concept": "tech.inventions.acc_thermometre_37",
+  "label": "Le thermomètre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "À partir de quelle température dit-on en général qu'on a de la fièvre ?",
+  "options": [
+   "38 °C*",
+   "36 °C",
+   "37 °C",
+   "40 °C"
+  ],
+  "explanation": "La température normale tourne autour de 37 °C."
+ },
+ {
+  "key": "acc-tech-024",
+  "concept": "tech.inventions.acc_telecommande",
+  "label": "La télécommande",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment communique la plupart des télécommandes de télé ?",
+  "options": [
+   "Par infrarouge*",
+   "Par câble",
+   "Par ultrasons",
+   "Par Wi-Fi uniquement"
+  ],
+  "explanation": "Une lumière invisible à l'œil… mais visible avec l'appareil photo d'un téléphone."
+ },
+ {
+  "key": "acc-tech-025",
+  "concept": "tech.inventions.acc_cd_disque",
+  "label": "Le CD",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment un lecteur lit-il un CD ?",
+  "options": [
+   "Avec un laser*",
+   "Avec une aiguille",
+   "Avec un aimant",
+   "Avec une bande magnétique"
+  ],
+  "explanation": "L'aiguille, c'est pour le vinyle ; la bande, pour la cassette."
+ },
+ {
+  "key": "acc-tech-026",
+  "concept": "tech.inventions.acc_vinyle",
+  "label": "Le vinyle",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Avec quoi lit-on un disque vinyle ?",
+  "options": [
+   "Une platine avec une aiguille*",
+   "Un laser",
+   "Une clé USB",
+   "Un lecteur DVD"
+  ],
+  "explanation": "L'aiguille suit le sillon gravé dans le disque."
+ },
+ {
+  "key": "acc-tech-027",
+  "concept": "tech.inventions.acc_walkman",
+  "label": "Le Walkman",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle marque a lancé le Walkman, baladeur à cassettes, en 1979 ?",
+  "options": [
+   "Sony*",
+   "Philips",
+   "Panasonic",
+   "Apple"
+  ],
+  "explanation": "Il a permis d'écouter de la musique partout."
+ },
+ {
+  "key": "acc-tech-028",
+  "concept": "tech.inventions.acc_batterie_froid",
+  "label": "Batterie et froid",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Une batterie de téléphone se vide plus vite dans le grand froid.",
+  "answer": true,
+  "explanation": "Le froid ralentit les réactions chimiques dans la batterie."
+ },
+ {
+  "key": "acc-tech-029",
+  "concept": "tech.inventions.acc_lave_vaisselle",
+  "label": "Le lave-vaisselle",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Un lave-vaisselle bien rempli consomme souvent moins d'eau qu'une vaisselle à la main.",
+  "answer": true,
+  "explanation": "Environ 10 litres pour un cycle éco, souvent bien moins qu'à la main."
+ },
+ {
+  "key": "acc-tech-030",
+  "concept": "tech.brands.acc_mario_metier",
+  "label": "Le métier de Mario",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le métier de Mario, le héros de Nintendo ?",
+  "options": [
+   "Plombier*",
+   "Charpentier",
+   "Pizzaïolo",
+   "Électricien"
+  ],
+  "explanation": "Il a d'abord été charpentier dans Donkey Kong (1981), avant de devenir plombier."
+ },
+ {
+  "key": "acc-tech-031",
+  "concept": "tech.brands.acc_luigi",
+  "label": "Le frère de Mario",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle le frère de Mario ?",
+  "options": [
+   "Luigi*",
+   "Wario",
+   "Toad",
+   "Yoshi"
+  ],
+  "explanation": "Luigi, en vert, plus grand et plus mince."
+ },
+ {
+  "key": "acc-tech-032",
+  "concept": "tech.brands.acc_zelda_link",
+  "label": "Zelda",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans la série « The Legend of Zelda », comment s'appelle le héros que l'on dirige ?",
+  "options": [
+   "Link*",
+   "Zelda",
+   "Ganon",
+   "Navi"
+  ],
+  "explanation": "Beaucoup pensent qu'il s'appelle Zelda, mais Zelda est la princesse."
+ },
+ {
+  "key": "acc-tech-033",
+  "concept": "tech.brands.acc_pac_man",
+  "label": "Pac-Man",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que mange Pac-Man dans son labyrinthe ?",
+  "options": [
+   "Des pac-gommes*",
+   "Des pièces",
+   "Des fruits seulement",
+   "Des fantômes uniquement"
+  ],
+  "explanation": "Il avale les pac-gommes en fuyant les fantômes ; les grosses lui permettent de les manger."
+ },
+ {
+  "key": "acc-tech-034",
+  "concept": "tech.brands.acc_minecraft_cubes",
+  "label": "Minecraft",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "De quoi est fait le monde de Minecraft ?",
+  "options": [
+   "De cubes*",
+   "De sphères",
+   "De triangles",
+   "De pixels ronds"
+  ],
+  "explanation": "On casse et on pose des blocs pour tout construire."
+ },
+ {
+  "key": "acc-tech-035",
+  "concept": "tech.brands.acc_tetris_russie",
+  "label": "Tetris",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel pays est né le jeu Tetris ?",
+  "options": [
+   "L'URSS (Russie)*",
+   "Le Japon",
+   "Les États-Unis",
+   "La Hongrie"
+  ],
+  "explanation": "Créé en 1984 par Alexeï Pajitnov, à Moscou."
+ },
+ {
+  "key": "acc-tech-036",
+  "concept": "tech.brands.acc_sonic_herisson",
+  "label": "Sonic",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal est Sonic, la mascotte de Sega ?",
+  "options": [
+   "Un hérisson*",
+   "Un renard",
+   "Un tatou",
+   "Un chat"
+  ],
+  "explanation": "Un hérisson bleu ultra-rapide ; son ami Tails est un renard."
+ },
+ {
+  "key": "acc-tech-037",
+  "concept": "tech.brands.acc_xbox",
+  "label": "La Xbox",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle entreprise fabrique la console Xbox ?",
+  "options": [
+   "Microsoft*",
+   "Sony",
+   "Nintendo",
+   "Sega"
+  ],
+  "explanation": "Sony fait la PlayStation, Nintendo la Switch."
+ },
+ {
+  "key": "acc-tech-038",
+  "concept": "tech.brands.acc_switch",
+  "label": "La Switch",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle console peut se jouer sur la télé ou en portable ?",
+  "options": [
+   "La Nintendo Switch*",
+   "La PlayStation 5",
+   "La Xbox Series X",
+   "La Wii"
+  ],
+  "explanation": "Sortie en 2017, elle a eu une suite, la Switch 2, en 2025."
+ },
+ {
+  "key": "acc-tech-039",
+  "concept": "tech.brands.acc_netflix_dvd",
+  "label": "Netflix",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Avant le streaming, comment fonctionnait Netflix ?",
+  "options": [
+   "Il louait des DVD par la poste*",
+   "C'était une chaîne de télé",
+   "C'était un cinéma",
+   "Il vendait des magnétoscopes"
+  ],
+  "explanation": "Le streaming arrive en 2007."
+ },
+ {
+  "key": "acc-tech-040",
+  "concept": "tech.brands.acc_ikea_suede",
+  "label": "IKEA",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "De quel pays vient IKEA ?",
+  "options": [
+   "La Suède*",
+   "La Norvège",
+   "Le Danemark",
+   "La Finlande"
+  ],
+  "explanation": "Ses meubles portent souvent des noms suédois."
+ }
+]

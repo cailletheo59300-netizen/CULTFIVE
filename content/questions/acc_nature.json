@@ -1,0 +1,542 @@
+[
+ {
+  "key": "acc-nature-001",
+  "concept": "nature.animals.acc_coccinelle_points",
+  "label": "Points de la coccinelle",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Le nombre de points d'une coccinelle indique son âge.",
+  "answer": false,
+  "explanation": "C'est une idée reçue : le nombre de points dépend de l'espèce (la plus connue en a 7)."
+ },
+ {
+  "key": "acc-nature-002",
+  "concept": "nature.animals.acc_coccinelle_pucerons",
+  "label": "Coccinelle au jardin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi les jardiniers aiment-ils les coccinelles ?",
+  "options": [
+   "Elles mangent les pucerons*",
+   "Elles pollinisent les tomates",
+   "Elles éloignent les oiseaux",
+   "Elles aèrent la terre"
+  ],
+  "explanation": "Une coccinelle peut dévorer des dizaines de pucerons par jour."
+ },
+ {
+  "key": "acc-nature-003",
+  "concept": "nature.animals.acc_guepe_dard",
+  "label": "Dard de la guêpe",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Comme l'abeille, la guêpe perd son dard après avoir piqué.",
+  "answer": false,
+  "explanation": "Le dard de la guêpe est lisse : elle peut piquer plusieurs fois. Celui de l'abeille, crochu, reste planté."
+ },
+ {
+  "key": "acc-nature-004",
+  "concept": "nature.animals.acc_limace_coquille",
+  "label": "Limace et escargot",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle est la grande différence entre une limace et un escargot ?",
+  "options": [
+   "La limace n'a pas de coquille*",
+   "La limace a des pattes",
+   "La limace vit dans l'eau",
+   "La limace n'a pas d'antennes"
+  ],
+  "explanation": "Ce sont deux mollusques très proches, mais la limace vit sans maison."
+ },
+ {
+  "key": "acc-nature-005",
+  "concept": "nature.animals.acc_taupe_aveugle",
+  "label": "La taupe",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Où vit la taupe la plupart du temps ?",
+  "options": [
+   "Sous terre, dans des galeries*",
+   "Dans les arbres",
+   "Dans les rivières",
+   "Dans les greniers"
+  ],
+  "explanation": "Ses grosses pattes avant sont de vraies pelles ; les taupinières trahissent ses galeries."
+ },
+ {
+  "key": "acc-nature-006",
+  "concept": "nature.animals.acc_hibou_aigrettes",
+  "label": "Hibou ou chouette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui distingue un hibou d'une chouette ?",
+  "options": [
+   "Le hibou a des aigrettes (touffes de plumes) sur la tête*",
+   "Le hibou vit le jour",
+   "Le hibou est toujours plus gros",
+   "Le hibou ne chasse pas"
+  ],
+  "explanation": "Ces « oreilles » de plumes ne servent pas à entendre."
+ },
+ {
+  "key": "acc-nature-007",
+  "concept": "nature.animals.acc_pigeon_voyageur",
+  "label": "Pigeon voyageur",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Pourquoi utilisait-on autrefois des pigeons voyageurs ?",
+  "options": [
+   "Pour porter des messages*",
+   "Pour surveiller les champs",
+   "Pour chasser les insectes",
+   "Pour annoncer la pluie"
+  ],
+  "explanation": "Ils retrouvent leur pigeonnier de très loin ; ils ont servi jusque pendant les guerres mondiales."
+ },
+ {
+  "key": "acc-nature-008",
+  "concept": "nature.animals.acc_cigogne_alsace",
+  "label": "La cigogne",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quelle région française la cigogne est-elle le symbole ?",
+  "options": [
+   "L'Alsace*",
+   "La Bretagne",
+   "La Provence",
+   "La Normandie"
+  ],
+  "explanation": "Elle niche sur les toits et les clochers alsaciens."
+ },
+ {
+  "key": "acc-nature-009",
+  "concept": "nature.animals.acc_cigogne_migration",
+  "label": "Migration des cigognes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Où partent la plupart des cigognes d'Europe en hiver ?",
+  "options": [
+   "En Afrique*",
+   "En Scandinavie",
+   "En Amérique",
+   "Elles ne bougent pas"
+  ],
+  "explanation": "Elles traversent la Méditerranée par le détroit de Gibraltar ou par l'Est."
+ },
+ {
+  "key": "acc-nature-010",
+  "concept": "nature.animals.acc_hirondelle_printemps",
+  "label": "Les hirondelles",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que dit le proverbe ? « Une hirondelle ne fait pas… »",
+  "options": [
+   "Le printemps*",
+   "L'été",
+   "Le beau temps",
+   "La saison"
+  ],
+  "explanation": "Un seul signe ne suffit pas pour conclure."
+ },
+ {
+  "key": "acc-nature-011",
+  "concept": "nature.animals.acc_chevreuil_cerf",
+  "label": "Chevreuil ou cerf",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le chevreuil est le petit du cerf.",
+  "answer": false,
+  "explanation": "Ce sont deux espèces différentes ; le petit du cerf s'appelle le faon (comme celui du chevreuil)."
+ },
+ {
+  "key": "acc-nature-012",
+  "concept": "nature.animals.acc_blaireau",
+  "label": "Le blaireau",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel animal de nos forêts a une tête rayée noir et blanc ?",
+  "options": [
+   "Le blaireau*",
+   "Le renard",
+   "Le putois",
+   "La fouine"
+  ],
+  "explanation": "Il vit en famille dans des terriers appelés « blaireautières »."
+ },
+ {
+  "key": "acc-nature-013",
+  "concept": "nature.animals.acc_bouquetin",
+  "label": "Le bouquetin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel animal des Alpes a de longues cornes recourbées vers l'arrière et grimpe sur des parois très raides ?",
+  "options": [
+   "Le bouquetin*",
+   "Le chamois",
+   "Le mouflon",
+   "Le cerf"
+  ],
+  "explanation": "Il est capable d'escalader des barrages presque verticaux pour lécher le sel."
+ },
+ {
+  "key": "acc-nature-014",
+  "concept": "nature.animals.acc_marmotte_hiberne",
+  "label": "L'hibernation",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "La marmotte hiberne une grande partie de l'hiver.",
+  "answer": true,
+  "explanation": "Jusqu'à six mois, avec un cœur qui ralentit à quelques battements par minute."
+ },
+ {
+  "key": "acc-nature-015",
+  "concept": "nature.animals.acc_koala_ours",
+  "label": "Koala, pas un ours",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le koala est un ours.",
+  "answer": false,
+  "explanation": "C'est un marsupial, comme le kangourou : la femelle porte son petit dans une poche."
+ },
+ {
+  "key": "acc-nature-016",
+  "concept": "nature.animals.acc_dinde_male",
+  "label": "Le mâle de la dinde",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on le mâle de la dinde ?",
+  "options": [
+   "Le dindon*",
+   "Le dindonneau",
+   "Le jars",
+   "Le coq"
+  ],
+  "explanation": "Le dindonneau est le petit ; le jars est le mâle de l'oie."
+ },
+ {
+  "key": "acc-nature-017",
+  "concept": "nature.animals.acc_chevre_petit",
+  "label": "Petit de la chèvre",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment appelle-t-on le petit de la chèvre ?",
+  "options": [
+   "Le chevreau*",
+   "Le poulain",
+   "L'agneau",
+   "Le veau"
+  ],
+  "explanation": "Le poulain est le petit du cheval, l'agneau celui de la brebis."
+ },
+ {
+  "key": "acc-nature-018",
+  "concept": "nature.animals.acc_canard_cri",
+  "label": "Cri du canard",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que fait le canard ?",
+  "options": [
+   "Il cancane*",
+   "Il glousse",
+   "Il hennit",
+   "Il brait"
+  ],
+  "explanation": "Le cheval hennit, l'âne brait, la poule glousse."
+ },
+ {
+  "key": "acc-nature-019",
+  "concept": "nature.animals.acc_vache_lait",
+  "label": "La vache et le lait",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Une vache donne du lait toute sa vie, même sans avoir eu de veau.",
+  "answer": false,
+  "explanation": "Comme tous les mammifères, elle produit du lait après avoir mis bas."
+ },
+ {
+  "key": "acc-nature-020",
+  "concept": "nature.animals.acc_chat_ronronne",
+  "label": "Le ronronnement",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Un chat ronronne uniquement quand il est content.",
+  "answer": false,
+  "explanation": "Il ronronne aussi quand il est stressé, malade ou blessé : le ronronnement l'apaise."
+ },
+ {
+  "key": "acc-nature-021",
+  "concept": "nature.animals.acc_chien_odorat",
+  "label": "L'odorat du chien",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le sens le plus développé chez le chien ?",
+  "options": [
+   "L'odorat*",
+   "La vue",
+   "Le goût",
+   "Le toucher"
+  ],
+  "explanation": "Son flair est des milliers de fois plus fin que le nôtre."
+ },
+ {
+  "key": "acc-nature-022",
+  "concept": "nature.animals.acc_fourmi_poids",
+  "label": "La force des fourmis",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Une fourmi peut porter plusieurs fois son propre poids.",
+  "answer": true,
+  "explanation": "Certaines portent l'équivalent de 10 à 50 fois leur poids."
+ },
+ {
+  "key": "acc-nature-023",
+  "concept": "nature.marine.acc_mouette_goeland",
+  "label": "Mouette et goéland",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Entre la mouette et le goéland, lequel est généralement le plus grand ?",
+  "options": [
+   "Le goéland*",
+   "La mouette",
+   "Ils ont la même taille",
+   "Cela dépend de la saison"
+  ],
+  "explanation": "Le goéland argenté est bien plus gros que la mouette rieuse."
+ },
+ {
+  "key": "acc-nature-024",
+  "concept": "nature.marine.acc_huitre_perle",
+  "label": "Perle de l'huître",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment se forme une perle dans une huître ?",
+  "options": [
+   "Autour d'un corps étranger entré dans la coquille*",
+   "Avec le sable avalé",
+   "Avec ses œufs",
+   "À partir du sel de mer"
+  ],
+  "explanation": "L'huître l'enrobe de nacre, couche après couche."
+ },
+ {
+  "key": "acc-nature-025",
+  "concept": "nature.plants.acc_chene_gland",
+  "label": "Le fruit du chêne",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est le fruit du chêne ?",
+  "options": [
+   "Le gland*",
+   "La châtaigne",
+   "La noisette",
+   "La faine"
+  ],
+  "explanation": "Les écureuils et les geais en font des réserves."
+ },
+ {
+  "key": "acc-nature-026",
+  "concept": "nature.plants.acc_sapin_noel",
+  "label": "Le sapin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pourquoi le sapin reste-t-il vert en hiver ?",
+  "options": [
+   "Il garde ses aiguilles toute l'année*",
+   "Il fait pousser de nouvelles feuilles en novembre",
+   "Il est peint",
+   "Il ne vit qu'en hiver"
+  ],
+  "explanation": "C'est un arbre à feuillage persistant : ses aiguilles tombent peu à peu, mais jamais toutes."
+ },
+ {
+  "key": "acc-nature-027",
+  "concept": "nature.plants.acc_bouleau_blanc",
+  "label": "Le bouleau",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel arbre a une écorce blanche qui se détache en fines feuilles ?",
+  "options": [
+   "Le bouleau*",
+   "Le chêne",
+   "Le hêtre",
+   "Le marronnier"
+  ],
+  "explanation": "On le reconnaît de loin dans les forêts."
+ },
+ {
+  "key": "acc-nature-028",
+  "concept": "nature.plants.acc_olivier_provence",
+  "label": "L'olivier",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel arbre, symbole de la Méditerranée, donne une huile ?",
+  "options": [
+   "L'olivier*",
+   "Le pin parasol",
+   "Le platane",
+   "Le chêne-liège"
+  ],
+  "explanation": "Il peut vivre plus de mille ans."
+ },
+ {
+  "key": "acc-nature-029",
+  "concept": "nature.plants.acc_marronnier_marron",
+  "label": "Marrons et châtaignes",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Les marrons d'Inde, qui tombent des marronniers des villes, se mangent grillés.",
+  "answer": false,
+  "explanation": "Ils sont toxiques ! Les « marrons » grillés sont en réalité des châtaignes."
+ },
+ {
+  "key": "acc-nature-030",
+  "concept": "nature.plants.acc_coquelicot_couleur",
+  "label": "Le coquelicot",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "De quelle couleur est le coquelicot ?",
+  "options": [
+   "Rouge*",
+   "Jaune",
+   "Bleu",
+   "Blanc"
+  ],
+  "explanation": "Une fleur des champs, symbole du souvenir des soldats en Grande-Bretagne."
+ },
+ {
+  "key": "acc-nature-031",
+  "concept": "nature.plants.acc_pissenlit_souffle",
+  "label": "Le pissenlit",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que deviennent les fleurs jaunes du pissenlit ?",
+  "options": [
+   "Des boules de graines que le vent emporte*",
+   "Des fruits rouges",
+   "Des épines",
+   "Des feuilles"
+  ],
+  "explanation": "On souffle dessus pour disperser les graines et leurs petits parachutes."
+ },
+ {
+  "key": "acc-nature-032",
+  "concept": "nature.plants.acc_houx_noel",
+  "label": "Le houx",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle plante aux feuilles piquantes et aux boules rouges décore les tables à Noël ?",
+  "options": [
+   "Le houx*",
+   "Le gui",
+   "Le lierre",
+   "Le buis"
+  ],
+  "explanation": "Ses baies rouges sont toxiques pour l'homme."
+ },
+ {
+  "key": "acc-nature-033",
+  "concept": "nature.plants.acc_gui_pommier",
+  "label": "Le gui",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où pousse le gui ?",
+  "options": [
+   "Sur les branches d'autres arbres*",
+   "Dans les marais",
+   "Dans le sable",
+   "Dans les grottes"
+  ],
+  "explanation": "C'est une plante parasite ; on s'embrasse dessous au Nouvel An."
+ },
+ {
+  "key": "acc-nature-034",
+  "concept": "nature.plants.acc_lierre_mur",
+  "label": "Le lierre",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Le lierre est une plante parasite qui se nourrit de l'arbre sur lequel il grimpe.",
+  "answer": false,
+  "explanation": "Il s'accroche seulement avec ses racines crampons ; il fabrique sa propre nourriture grâce à ses feuilles."
+ },
+ {
+  "key": "acc-nature-035",
+  "concept": "nature.plants.acc_cepe_champignon",
+  "label": "Le cèpe",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'un cèpe ?",
+  "options": [
+   "Un champignon*",
+   "Un arbre",
+   "Un poisson",
+   "Un fromage"
+  ],
+  "explanation": "Un champignon des bois très recherché, comme la girolle."
+ },
+ {
+  "key": "acc-nature-036",
+  "concept": "nature.plants.acc_champignon_cueillette",
+  "label": "Champignons cueillis",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "En France, on peut faire vérifier ses champignons cueillis par un pharmacien.",
+  "answer": true,
+  "explanation": "Beaucoup de pharmaciens sont formés pour repérer les espèces toxiques."
+ },
+ {
+  "key": "acc-nature-037",
+  "concept": "nature.earth.acc_arc_en_ciel_soleil",
+  "label": "L'arc-en-ciel",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Pour voir un arc-en-ciel, où doit se trouver le Soleil ?",
+  "options": [
+   "Dans notre dos*",
+   "Devant nous",
+   "Juste au-dessus de nous",
+   "Il doit être caché"
+  ],
+  "explanation": "La lumière traverse les gouttes devant nous et revient vers nos yeux."
+ },
+ {
+  "key": "acc-nature-038",
+  "concept": "nature.earth.acc_saisons_axe",
+  "label": "Pourquoi des saisons",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pourquoi y a-t-il des saisons sur Terre ?",
+  "options": [
+   "Parce que l'axe de la Terre est incliné*",
+   "Parce que la Terre s'éloigne du Soleil en hiver",
+   "Parce que le Soleil chauffe moins en hiver",
+   "À cause de la Lune"
+  ],
+  "explanation": "L'inclinaison change l'angle des rayons et la durée du jour."
+ },
+ {
+  "key": "acc-nature-039",
+  "concept": "nature.earth.acc_maree_lune",
+  "label": "Les marées",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel astre est le principal responsable des marées ?",
+  "options": [
+   "La Lune*",
+   "Le Soleil",
+   "Mars",
+   "Les étoiles"
+  ],
+  "explanation": "Le Soleil joue aussi, mais deux fois moins que la Lune."
+ },
+ {
+  "key": "acc-nature-040",
+  "concept": "nature.earth.acc_brouillard_nuage",
+  "label": "Le brouillard",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Le brouillard est un nuage qui touche le sol.",
+  "answer": true,
+  "explanation": "Il est fait des mêmes fines gouttelettes d'eau."
+ }
+]

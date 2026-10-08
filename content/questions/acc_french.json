@@ -1,0 +1,622 @@
+[
+ {
+  "key": "acc-french-001",
+  "concept": "french.expressions.acc_coup_de_foudre",
+  "label": "Coup de foudre",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Avoir « le coup de foudre », c'est…",
+  "options": [
+   "Tomber amoureux au premier regard*",
+   "Se faire électrocuter",
+   "Se mettre très en colère",
+   "Avoir très peur"
+  ],
+  "explanation": "Un amour soudain, comme un éclair."
+ },
+ {
+  "key": "acc-french-002",
+  "concept": "french.expressions.acc_langue_de_bois",
+  "label": "Langue de bois",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que veut dire « parler la langue de bois » ?",
+  "options": [
+   "Parler sans rien dire de précis*",
+   "Parler très fort",
+   "Parler une langue étrangère",
+   "Bégayer"
+  ],
+  "explanation": "On l'entend souvent chez certains responsables politiques."
+ },
+ {
+  "key": "acc-french-003",
+  "concept": "french.expressions.acc_cerise_gateau",
+  "label": "La cerise sur le gâteau",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "« La cerise sur le gâteau », c'est…",
+  "options": [
+   "Le petit plus qui rend une chose parfaite*",
+   "Un problème de trop",
+   "Une chose inutile",
+   "Un dessert raté"
+  ],
+  "explanation": "Souvent utilisée avec ironie quand un ennui s'ajoute aux autres."
+ },
+ {
+  "key": "acc-french-004",
+  "concept": "french.expressions.acc_mettre_eau_bouche",
+  "label": "L'eau à la bouche",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que veut dire « mettre l'eau à la bouche » ?",
+  "options": [
+   "Donner envie*",
+   "Donner soif",
+   "Faire pleurer",
+   "Rendre malade"
+  ],
+  "explanation": "Comme quand un bon plat nous fait saliver."
+ },
+ {
+  "key": "acc-french-005",
+  "concept": "french.expressions.acc_quatre_heures",
+  "label": "Chercher midi à quatorze heures",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que veut dire « chercher midi à quatorze heures » ?",
+  "options": [
+   "Compliquer une chose simple*",
+   "Être en retard",
+   "Manger tard",
+   "Travailler sans pause"
+  ],
+  "explanation": "Inutile de chercher loin ce qui est évident."
+ },
+ {
+  "key": "acc-french-006",
+  "concept": "french.expressions.acc_vendre_meche",
+  "label": "Vendre la mèche",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Vendre la mèche », c'est…",
+  "options": [
+   "Révéler un secret*",
+   "Allumer un feu",
+   "Faire du commerce",
+   "Se couper les cheveux"
+  ],
+  "explanation": "La mèche d'une bombe : on la révèle avant l'explosion."
+ },
+ {
+  "key": "acc-french-007",
+  "concept": "french.expressions.acc_tomber_eau",
+  "label": "Tomber à l'eau",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Un projet qui « tombe à l'eau »…",
+  "options": [
+   "Est abandonné*",
+   "Réussit",
+   "Devient urgent",
+   "Est inondé"
+  ],
+  "explanation": "Il n'aboutit pas."
+ },
+ {
+  "key": "acc-french-008",
+  "concept": "french.expressions.acc_prendre_veste",
+  "label": "Prendre une veste",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Prendre une veste », c'est…",
+  "options": [
+   "Essuyer un échec ou un refus*",
+   "S'habiller chaudement",
+   "Partir en voyage",
+   "Gagner un concours"
+  ],
+  "explanation": "Surtout en amour ou en politique."
+ },
+ {
+  "key": "acc-french-009",
+  "concept": "french.expressions.acc_mouche_piquee",
+  "label": "Quelle mouche t'a piqué ?",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quand on dit « Quelle mouche t'a piqué ? », on veut dire…",
+  "options": [
+   "Pourquoi réagis-tu si brusquement ?*",
+   "As-tu une allergie ?",
+   "Où étais-tu ?",
+   "Pourquoi te grattes-tu ?"
+  ],
+  "explanation": "On s'étonne d'une colère ou d'un comportement soudain."
+ },
+ {
+  "key": "acc-french-010",
+  "concept": "french.expressions.acc_bras_long",
+  "label": "Avoir le bras long",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Une personne qui « a le bras long »…",
+  "options": [
+   "A beaucoup d'influence*",
+   "Est très grande",
+   "Vole facilement",
+   "Est très généreuse"
+  ],
+  "explanation": "Elle connaît des gens haut placés."
+ },
+ {
+  "key": "acc-french-011",
+  "concept": "french.expressions.acc_occuper_oignons",
+  "label": "Occupe-toi de tes oignons",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "« Occupe-toi de tes oignons » veut dire…",
+  "options": [
+   "Mêle-toi de tes affaires*",
+   "Va faire la cuisine",
+   "Va au jardin",
+   "Arrête de pleurer"
+  ],
+  "explanation": "Une manière familière de dire que ça ne nous regarde pas."
+ },
+ {
+  "key": "acc-french-012",
+  "concept": "french.expressions.acc_froid_canard",
+  "label": "Un froid de canard",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "« Il fait un froid de canard » signifie…",
+  "options": [
+   "Il fait très froid*",
+   "Il fait humide",
+   "Il fait doux",
+   "Il y a du vent"
+  ],
+  "explanation": "L'expression viendrait de la chasse au canard, en plein hiver."
+ },
+ {
+  "key": "acc-french-013",
+  "concept": "french.expressions.acc_tirer_portrait",
+  "label": "Tirer le portrait",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Tirer le portrait » de quelqu'un, c'est…",
+  "options": [
+   "Le prendre en photo*",
+   "Le critiquer",
+   "Le dessiner de force",
+   "Le chasser"
+  ],
+  "explanation": "On dit aussi « se faire tirer le portrait »."
+ },
+ {
+  "key": "acc-french-014",
+  "concept": "french.expressions.acc_casser_pieds",
+  "label": "Casser les pieds",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelqu'un qui « casse les pieds »…",
+  "options": [
+   "Ennuie ou agace*",
+   "Danse mal",
+   "Marche vite",
+   "Fait du karaté"
+  ],
+  "explanation": "On dit aussi « casse-pieds »."
+ },
+ {
+  "key": "acc-french-015",
+  "concept": "french.expressions.acc_monter_bateau",
+  "label": "Mener en bateau",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Mener quelqu'un en bateau », c'est…",
+  "options": [
+   "Le tromper*",
+   "L'emmener en vacances",
+   "Le sauver",
+   "Le diriger"
+  ],
+  "explanation": "Lui faire croire des histoires."
+ },
+ {
+  "key": "acc-french-016",
+  "concept": "french.vocabulary.acc_verlan_meuf",
+  "label": "Le verlan",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "En verlan, que veut dire « meuf » ?",
+  "options": [
+   "Femme*",
+   "Mère",
+   "Fête",
+   "Fou"
+  ],
+  "explanation": "Le verlan inverse les syllabes : « femme » devient « meuf »."
+ },
+ {
+  "key": "acc-french-017",
+  "concept": "french.vocabulary.acc_verlan_ouf",
+  "label": "Ouf",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En verlan, que veut dire « ouf » ?",
+  "options": [
+   "Fou*",
+   "Fort",
+   "Faux",
+   "Ouvert"
+  ],
+  "explanation": "« C'est un truc de ouf » : c'est un truc de fou."
+ },
+ {
+  "key": "acc-french-018",
+  "concept": "french.vocabulary.acc_verlan_chelou",
+  "label": "Chelou",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En verlan, « chelou » veut dire…",
+  "options": [
+   "Louche*",
+   "Chouette",
+   "Chaud",
+   "Lourd"
+  ],
+  "explanation": "« Lou-che » devient « che-lou »."
+ },
+ {
+  "key": "acc-french-019",
+  "concept": "french.vocabulary.acc_verlan_mot",
+  "label": "Le mot verlan",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le mot « verlan » est lui-même du verlan.",
+  "answer": true,
+  "explanation": "C'est « l'envers » à l'envers : (l')en-vers → vers-l'en."
+ },
+ {
+  "key": "acc-french-020",
+  "concept": "french.vocabulary.acc_sncf",
+  "label": "SNCF",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire le sigle SNCF ?",
+  "options": [
+   "Société nationale des chemins de fer français*",
+   "Service national de circulation ferroviaire",
+   "Société nouvelle des chemins de France",
+   "Syndicat national des cheminots français"
+  ],
+  "explanation": "Créée en 1938."
+ },
+ {
+  "key": "acc-french-021",
+  "concept": "french.vocabulary.acc_ovni",
+  "label": "OVNI",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que veut dire « OVNI » ?",
+  "options": [
+   "Objet volant non identifié*",
+   "Objet visible non interdit",
+   "Organisme volant naturel inconnu",
+   "Observation visuelle non identifiée"
+  ],
+  "explanation": "En anglais, on dit UFO."
+ },
+ {
+  "key": "acc-french-022",
+  "concept": "french.vocabulary.acc_asap",
+  "label": "ASAP",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Au bureau, que veut dire « ASAP » ?",
+  "options": [
+   "Dès que possible*",
+   "À savoir avant la pause",
+   "Au service après paiement",
+   "Absent sans autorisation préalable"
+  ],
+  "explanation": "De l'anglais « as soon as possible »."
+ },
+ {
+  "key": "acc-french-023",
+  "concept": "french.vocabulary.acc_rsvp",
+  "label": "RSVP",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Sur une invitation, que veut dire « RSVP » ?",
+  "options": [
+   "Répondez, s'il vous plaît*",
+   "Rendez-vous sans voiture possible",
+   "Réservé sur présentation",
+   "Retour sous vingt-quatre heures"
+  ],
+  "explanation": "Une formule qui demande de confirmer sa venue."
+ },
+ {
+  "key": "acc-french-024",
+  "concept": "french.vocabulary.acc_cad",
+  "label": "C.-à-d.",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire l'abréviation « c.-à-d. » ?",
+  "options": [
+   "C'est-à-dire*",
+   "Ce à déterminer",
+   "Comme à demander",
+   "Chacun à droite"
+  ],
+  "explanation": "Elle introduit une explication."
+ },
+ {
+  "key": "acc-french-025",
+  "concept": "french.vocabulary.acc_psd",
+  "label": "P.-S.",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "À la fin d'une lettre, que veut dire « P.-S. » ?",
+  "options": [
+   "Post-scriptum : ce qu'on ajoute après la signature*",
+   "Pour savoir",
+   "Prière de signer",
+   "Pas de souci"
+  ],
+  "explanation": "Du latin « écrit après »."
+ },
+ {
+  "key": "acc-french-026",
+  "concept": "french.vocabulary.acc_mdr",
+  "label": "MDR",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans un message, que veut dire « mdr » ?",
+  "options": [
+   "Mort de rire*",
+   "Merci de répondre",
+   "Mon dieu, rien",
+   "Ma demande reste"
+  ],
+  "explanation": "L'équivalent de l'anglais « lol »."
+ },
+ {
+  "key": "acc-french-027",
+  "concept": "french.vocabulary.acc_stp",
+  "label": "STP",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans un SMS, que veut dire « stp » ?",
+  "options": [
+   "S'il te plaît*",
+   "Sans te presser",
+   "Sur ton portable",
+   "Si tu peux"
+  ],
+  "explanation": "Et « svp » pour « s'il vous plaît »."
+ },
+ {
+  "key": "acc-french-028",
+  "concept": "french.vocabulary.acc_bonne_appetit",
+  "label": "Bon appétit",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "En français, on écrit « bon appétit » car « appétit » est masculin.",
+  "answer": true,
+  "explanation": "Un appétit, un bon appétit."
+ },
+ {
+  "key": "acc-french-029",
+  "concept": "french.spelling.acc_cedille",
+  "label": "La cédille",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle le petit signe sous le c de « garçon » ?",
+  "options": [
+   "La cédille*",
+   "Le tréma",
+   "L'accent circonflexe",
+   "L'apostrophe"
+  ],
+  "explanation": "Elle fait prononcer le c comme un s devant a, o, u."
+ },
+ {
+  "key": "acc-french-030",
+  "concept": "french.spelling.acc_trema",
+  "label": "Le tréma",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appellent les deux points sur le ï de « maïs » ?",
+  "options": [
+   "Le tréma*",
+   "La cédille",
+   "L'accent grave",
+   "Le double point"
+  ],
+  "explanation": "Il indique que la voyelle se prononce séparément."
+ },
+ {
+  "key": "acc-french-031",
+  "concept": "french.spelling.acc_point_virgule",
+  "label": "Le point-virgule",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle ce signe : « ; » ?",
+  "options": [
+   "Le point-virgule*",
+   "Les deux-points",
+   "La virgule double",
+   "Le point d'arrêt"
+  ],
+  "explanation": "Il sépare deux parties d'une phrase, plus qu'une virgule et moins qu'un point."
+ },
+ {
+  "key": "acc-french-032",
+  "concept": "french.spelling.acc_guillemets",
+  "label": "Les guillemets",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appellent les signes « » en français ?",
+  "options": [
+   "Les guillemets*",
+   "Les parenthèses",
+   "Les crochets",
+   "Les chevrons doubles"
+  ],
+  "explanation": "Ils encadrent une citation ou un dialogue."
+ },
+ {
+  "key": "acc-french-033",
+  "concept": "french.spelling.acc_majuscule_mois",
+  "label": "Les mois sans majuscule",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "En français, les mois de l'année s'écrivent sans majuscule.",
+  "answer": true,
+  "explanation": "On écrit « le 14 juillet », mais « le 14 Juillet » pour la fête nationale."
+ },
+ {
+  "key": "acc-french-034",
+  "concept": "french.spelling.acc_majuscule_langue",
+  "label": "Le français, sans majuscule",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "En français, le nom d'une langue s'écrit avec une majuscule : « il parle Français ».",
+  "answer": false,
+  "explanation": "On écrit « il parle français », mais « un Français » pour la personne."
+ },
+ {
+  "key": "acc-french-035",
+  "concept": "french.spelling.acc_oignon",
+  "label": "Ognon ou oignon",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Depuis la réforme de 1990, on peut aussi écrire « ognon » au lieu d'« oignon ».",
+  "answer": true,
+  "explanation": "Les deux orthographes sont acceptées."
+ },
+ {
+  "key": "acc-french-036",
+  "concept": "french.spelling.acc_cent_vingt",
+  "label": "Quatre-vingts",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'écrit correctement 80 ?",
+  "options": [
+   "Quatre-vingts*",
+   "Quatre-vingt",
+   "Quatres-vingts",
+   "Quatre vingt"
+  ],
+  "explanation": "« Vingt » prend un s quand il est multiplié et non suivi d'un autre nombre."
+ },
+ {
+  "key": "acc-french-037",
+  "concept": "french.grammar.acc_homophone_a",
+  "label": "A ou à",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Complète : « Elle ___ un chat roux. »",
+  "options": [
+   "a*",
+   "à",
+   "as",
+   "ah"
+  ],
+  "explanation": "On peut remplacer par « avait » : c'est le verbe avoir."
+ },
+ {
+  "key": "acc-french-038",
+  "concept": "french.grammar.acc_homophone_et",
+  "label": "Et ou est",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Complète : « Le ciel ___ bleu. »",
+  "options": [
+   "est*",
+   "et",
+   "ai",
+   "es"
+  ],
+  "explanation": "On peut remplacer par « était » : c'est le verbe être."
+ },
+ {
+  "key": "acc-french-039",
+  "concept": "french.grammar.acc_homophone_ou",
+  "label": "Ou ou où",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Complète : « ___ vas-tu ? »",
+  "options": [
+   "Où*",
+   "Ou",
+   "Oû",
+   "Hou"
+  ],
+  "explanation": "« Où » avec accent indique le lieu ; « ou » sans accent veut dire « ou bien »."
+ },
+ {
+  "key": "acc-french-040",
+  "concept": "french.grammar.acc_homophone_ce",
+  "label": "Ce ou se",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Complète : « Il ___ lève tôt. »",
+  "options": [
+   "se*",
+   "ce",
+   "ceux",
+   "s'"
+  ],
+  "explanation": "« Se lever » : un verbe pronominal. « Ce » montre une chose : ce livre."
+ },
+ {
+  "key": "acc-french-041",
+  "concept": "french.grammar.acc_feminin_acteur",
+  "label": "Féminin d'acteur",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est le féminin d'« acteur » ?",
+  "options": [
+   "Actrice*",
+   "Acteuse",
+   "Acteure",
+   "Actresse"
+  ],
+  "explanation": "Comme directeur, directrice."
+ },
+ {
+  "key": "acc-french-042",
+  "concept": "french.grammar.acc_pluriel_cheval",
+  "label": "Pluriel de cheval",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est le pluriel de « cheval » ?",
+  "options": [
+   "Chevaux*",
+   "Chevals",
+   "Chevaus",
+   "Chevales"
+  ],
+  "explanation": "La plupart des mots en -al font -aux."
+ },
+ {
+  "key": "acc-french-043",
+  "concept": "french.grammar.acc_pluriel_bijou",
+  "label": "Pluriel de bijou",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le pluriel de « bijou » ?",
+  "options": [
+   "Bijoux*",
+   "Bijous",
+   "Bijou",
+   "Bijoues"
+  ],
+  "explanation": "Bijou, caillou, chou, genou, hibou, joujou, pou prennent un x."
+ }
+]
