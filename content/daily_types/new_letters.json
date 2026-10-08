@@ -111,17 +111,6 @@
  },
  {
   "key": "dt-let-011",
-  "concept": "geography.capitals.dt_ottawa",
-  "label": "Ottawa",
-  "type": "letters",
-  "difficulty": 35,
-  "prompt": "Capitale du Canada.",
-  "word": "OTTAWA",
-  "display": "Ottawa",
-  "explanation": "Et non Toronto ni Montréal."
- },
- {
-  "key": "dt-let-012",
   "concept": "arts.painting.dt_picasso",
   "label": "Picasso",
   "type": "letters",
@@ -132,7 +121,7 @@
   "explanation": "Pablo Picasso, cofondateur du cubisme."
  },
  {
-  "key": "dt-let-013",
+  "key": "dt-let-012",
   "concept": "arts.painting.dt_vermeer",
   "label": "Vermeer",
   "type": "letters",
@@ -143,7 +132,7 @@
   "explanation": "Johannes Vermeer, maître de la lumière, à Delft."
  },
  {
-  "key": "dt-let-014",
+  "key": "dt-let-013",
   "concept": "arts.painting.dt_rodin",
   "label": "Rodin",
   "type": "letters",
@@ -154,7 +143,7 @@
   "explanation": "Auguste Rodin ; son musée est à Paris."
  },
  {
-  "key": "dt-let-015",
+  "key": "dt-let-014",
   "concept": "arts.literature.dt_moliere",
   "label": "Molière",
   "type": "letters",
@@ -165,7 +154,7 @@
   "explanation": "On dit d'ailleurs « la langue de Molière » pour le français."
  },
  {
-  "key": "dt-let-016",
+  "key": "dt-let-015",
   "concept": "arts.literature.dt_voltaire",
   "label": "Voltaire",
   "type": "letters",
@@ -176,7 +165,7 @@
   "explanation": "De son vrai nom François-Marie Arouet."
  },
  {
-  "key": "dt-let-017",
+  "key": "dt-let-016",
   "concept": "arts.literature.dt_balzac",
   "label": "Balzac",
   "type": "letters",
@@ -187,7 +176,7 @@
   "explanation": "Honoré de Balzac, grand buveur de café."
  },
  {
-  "key": "dt-let-018",
+  "key": "dt-let-017",
   "concept": "arts.mythology.dt_hercule",
   "label": "Hercule",
   "type": "letters",
@@ -198,7 +187,7 @@
   "explanation": "Héraclès chez les Grecs, Hercule chez les Romains."
  },
  {
-  "key": "dt-let-019",
+  "key": "dt-let-018",
   "concept": "arts.mythology.dt_meduse",
   "label": "Méduse",
   "type": "letters",
@@ -209,18 +198,7 @@
   "explanation": "Persée la décapite en regardant son reflet dans un bouclier."
  },
  {
-  "key": "dt-let-020",
-  "concept": "arts.mythology.dt_pegase",
-  "label": "Pégase",
-  "type": "letters",
-  "difficulty": 30,
-  "prompt": "Cheval ailé de la mythologie grecque.",
-  "word": "PEGASE",
-  "display": "Pégase",
-  "explanation": "Né du sang de Méduse."
- },
- {
-  "key": "dt-let-021",
+  "key": "dt-let-019",
   "concept": "arts.mythology.dt_achille",
   "label": "Achille",
   "type": "letters",
@@ -231,7 +209,7 @@
   "explanation": "D'où le « talon d'Achille »."
  },
  {
-  "key": "dt-let-022",
+  "key": "dt-let-020",
   "concept": "history.antiquity.dt_cleopatre",
   "label": "Cléopâtre",
   "type": "letters",
@@ -242,7 +220,7 @@
   "explanation": "Cléopâtre VII meurt en 30 av. J.-C."
  },
  {
-  "key": "dt-let-023",
+  "key": "dt-let-021",
   "concept": "history.middle_ages.dt_charlemagne",
   "label": "Charlemagne",
   "type": "letters",
@@ -253,7 +231,7 @@
   "explanation": "« Charles le Grand », roi des Francs."
  },
  {
-  "key": "dt-let-024",
+  "key": "dt-let-022",
   "concept": "history.contemporary.dt_napoleon",
   "label": "Napoléon",
   "type": "letters",
@@ -264,18 +242,7 @@
   "explanation": "Napoléon Bonaparte, sacré en 1804."
  },
  {
-  "key": "dt-let-025",
-  "concept": "science.space.dt_jupiter",
-  "label": "Jupiter",
-  "type": "letters",
-  "difficulty": 15,
-  "prompt": "La plus grosse planète du Système solaire.",
-  "word": "JUPITER",
-  "display": "Jupiter",
-  "explanation": "Plus de 1 300 Terres tiendraient dedans."
- },
- {
-  "key": "dt-let-026",
+  "key": "dt-let-023",
   "concept": "science.space.dt_saturne",
   "label": "Saturne",
   "type": "letters",
@@ -286,7 +253,7 @@
   "explanation": "Ses anneaux sont faits de glace et de roche."
  },
  {
-  "key": "dt-let-027",
+  "key": "dt-let-024",
   "concept": "science.space.dt_neptune",
   "label": "Neptune",
   "type": "letters",
@@ -297,7 +264,7 @@
   "explanation": "Elle met 165 ans à faire le tour du Soleil."
  },
  {
-  "key": "dt-let-028",
+  "key": "dt-let-025",
   "concept": "science.chemistry.dt_oxygene",
   "label": "Oxygène",
   "type": "letters",
@@ -308,7 +275,7 @@
   "explanation": "Il forme 21 % de l'air."
  },
  {
-  "key": "dt-let-029",
+  "key": "dt-let-026",
   "concept": "science.chemistry.dt_hydrogene",
   "label": "Hydrogène",
   "type": "letters",
@@ -319,7 +286,7 @@
   "explanation": "C'est aussi le plus abondant de l'Univers."
  },
  {
-  "key": "dt-let-030",
+  "key": "dt-let-027",
   "concept": "science.human_body.dt_neurone",
   "label": "Neurone",
   "type": "letters",
@@ -330,7 +297,7 @@
   "explanation": "Le cerveau en compte environ 86 milliards."
  },
  {
-  "key": "dt-let-031",
+  "key": "dt-let-028",
   "concept": "science.human_body.dt_poumon",
   "label": "Poumon",
   "type": "letters",
@@ -341,7 +308,7 @@
   "explanation": "Le gauche est un peu plus petit, pour laisser la place au cœur."
  },
  {
-  "key": "dt-let-032",
+  "key": "dt-let-029",
   "concept": "music.instruments.dt_guitare",
   "label": "Guitare",
   "type": "letters",
@@ -352,7 +319,7 @@
   "explanation": "Classique, folk ou électrique."
  },
  {
-  "key": "dt-let-033",
+  "key": "dt-let-030",
   "concept": "music.instruments.dt_trompette",
   "label": "Trompette",
   "type": "letters",
@@ -363,7 +330,7 @@
   "explanation": "Louis Armstrong en a fait une star du jazz."
  },
  {
-  "key": "dt-let-034",
+  "key": "dt-let-031",
   "concept": "music.instruments.dt_accordeon",
   "label": "Accordéon",
   "type": "letters",
@@ -374,7 +341,7 @@
   "explanation": "On l'appelle aussi « piano à bretelles »."
  },
  {
-  "key": "dt-let-035",
+  "key": "dt-let-032",
   "concept": "music.instruments.dt_violoncelle",
   "label": "Violoncelle",
   "type": "letters",
@@ -385,7 +352,7 @@
   "explanation": "Plus grave que l'alto, plus aigu que la contrebasse."
  },
  {
-  "key": "dt-let-036",
+  "key": "dt-let-033",
   "concept": "sport.rules.dt_penalty",
   "label": "Penalty",
   "type": "letters",
@@ -396,7 +363,7 @@
   "explanation": "Ou « tir de réparation »."
  },
  {
-  "key": "dt-let-037",
+  "key": "dt-let-034",
   "concept": "sport.rules.dt_marathon",
   "label": "Marathon",
   "type": "letters",
@@ -407,7 +374,7 @@
   "explanation": "Du nom de la ville grecque de la légende du messager."
  },
  {
-  "key": "dt-let-038",
+  "key": "dt-let-035",
   "concept": "sport.rules.dt_badminton",
   "label": "Badminton",
   "type": "letters",
@@ -418,7 +385,7 @@
   "explanation": "Le volant peut dépasser 400 km/h au smash."
  },
  {
-  "key": "dt-let-039",
+  "key": "dt-let-036",
   "concept": "sport.rules.dt_slalom",
   "label": "Slalom",
   "type": "letters",
@@ -429,7 +396,7 @@
   "explanation": "Un mot d'origine norvégienne."
  },
  {
-  "key": "dt-let-040",
+  "key": "dt-let-037",
   "concept": "nature.animals.dt_kangourou",
   "label": "Kangourou",
   "type": "letters",
@@ -440,7 +407,7 @@
   "explanation": "La femelle porte son petit dans une poche."
  },
  {
-  "key": "dt-let-041",
+  "key": "dt-let-038",
   "concept": "nature.animals.dt_cameleon",
   "label": "Caméléon",
   "type": "letters",
@@ -451,7 +418,7 @@
   "explanation": "Ses yeux bougent indépendamment l'un de l'autre."
  },
  {
-  "key": "dt-let-042",
+  "key": "dt-let-039",
   "concept": "nature.marine.dt_hippocampe",
   "label": "Hippocampe",
   "type": "letters",
@@ -462,7 +429,7 @@
   "explanation": "Chez lui, c'est le mâle qui porte les petits."
  },
  {
-  "key": "dt-let-043",
+  "key": "dt-let-040",
   "concept": "nature.marine.dt_dauphin",
   "label": "Dauphin",
   "type": "letters",
@@ -473,7 +440,7 @@
   "explanation": "Il respire par un évent sur le dessus de la tête."
  },
  {
-  "key": "dt-let-044",
+  "key": "dt-let-041",
   "concept": "nature.animals.dt_papillon",
   "label": "Papillon",
   "type": "letters",
@@ -484,7 +451,7 @@
   "explanation": "Après la chenille, il passe par la chrysalide."
  },
  {
-  "key": "dt-let-045",
+  "key": "dt-let-042",
   "concept": "tech.computing.dt_clavier",
   "label": "Clavier",
   "type": "letters",
@@ -495,7 +462,7 @@
   "explanation": "En France, le clavier commence par A, Z, E, R, T, Y."
  },
  {
-  "key": "dt-let-046",
+  "key": "dt-let-043",
   "concept": "tech.computing.dt_ordinateur",
   "label": "Ordinateur",
   "type": "letters",
@@ -506,7 +473,7 @@
   "explanation": "Le mot a été inventé en 1955 pour IBM France."
  },
  {
-  "key": "dt-let-047",
+  "key": "dt-let-044",
   "concept": "french.vocabulary.dt_palindrome",
   "label": "Palindrome",
   "type": "letters",
@@ -517,7 +484,7 @@
   "explanation": "Kayak, ressasser, été… sont des palindromes."
  },
  {
-  "key": "dt-let-048",
+  "key": "dt-let-045",
   "concept": "french.vocabulary.dt_anagramme",
   "label": "Anagramme",
   "type": "letters",
@@ -528,7 +495,7 @@
   "explanation": "« Chien » est une anagramme de « niche »."
  },
  {
-  "key": "dt-let-049",
+  "key": "dt-let-046",
   "concept": "french.vocabulary.dt_synonyme",
   "label": "Synonyme",
   "type": "letters",
@@ -539,7 +506,7 @@
   "explanation": "Son contraire : antonyme."
  },
  {
-  "key": "dt-let-050",
+  "key": "dt-let-047",
   "concept": "cinema.films.dt_titanic_mot",
   "label": "Titanic",
   "type": "letters",
@@ -550,7 +517,7 @@
   "explanation": "Sorti en 1997, avec Leonardo DiCaprio et Kate Winslet."
  },
  {
-  "key": "dt-let-051",
+  "key": "dt-let-048",
   "concept": "cinema.animation.dt_pinocchio",
   "label": "Pinocchio",
   "type": "letters",
@@ -561,7 +528,7 @@
   "explanation": "Créé par l'Italien Carlo Collodi en 1881."
  },
  {
-  "key": "dt-let-052",
+  "key": "dt-let-049",
   "concept": "geography.capitals.dt_helsinki",
   "label": "Helsinki",
   "type": "letters",
@@ -572,18 +539,7 @@
   "explanation": "Au bord de la mer Baltique."
  },
  {
-  "key": "dt-let-053",
-  "concept": "geography.capitals.dt_dublin",
-  "label": "Dublin",
-  "type": "letters",
-  "difficulty": 25,
-  "prompt": "Capitale de l'Irlande.",
-  "word": "DUBLIN",
-  "display": "Dublin",
-  "explanation": "Traversée par la Liffey."
- },
- {
-  "key": "dt-let-054",
+  "key": "dt-let-050",
   "concept": "geography.capitals.dt_athenes",
   "label": "Athènes",
   "type": "letters",
@@ -594,18 +550,7 @@
   "explanation": "Une des plus vieilles villes du monde."
  },
  {
-  "key": "dt-let-055",
-  "concept": "geography.capitals.dt_nairobi",
-  "label": "Nairobi",
-  "type": "letters",
-  "difficulty": 45,
-  "prompt": "Capitale du Kenya.",
-  "word": "NAIROBI",
-  "display": "Nairobi",
-  "explanation": "Un parc national se trouve aux portes de la ville."
- },
- {
-  "key": "dt-let-056",
+  "key": "dt-let-051",
   "concept": "geography.countries.dt_bretagne",
   "label": "Bretagne",
   "type": "letters",
@@ -616,7 +561,7 @@
   "explanation": "Avec son drapeau noir et blanc, le Gwenn-ha-Du."
  },
  {
-  "key": "dt-let-057",
+  "key": "dt-let-052",
   "concept": "geography.relief.dt_pyrenees",
   "label": "Pyrénées",
   "type": "letters",
@@ -627,7 +572,7 @@
   "explanation": "De l'Atlantique à la Méditerranée."
  },
  {
-  "key": "dt-let-058",
+  "key": "dt-let-053",
   "concept": "geography.relief.dt_amazonie",
   "label": "Amazonie",
   "type": "letters",
@@ -638,7 +583,7 @@
   "explanation": "Surtout au Brésil."
  },
  {
-  "key": "dt-let-059",
+  "key": "dt-let-054",
   "concept": "history.antiquity.dt_pharaon",
   "label": "Pharaon",
   "type": "letters",
@@ -649,7 +594,7 @@
   "explanation": "Comme Toutânkhamon ou Ramsès II."
  },
  {
-  "key": "dt-let-060",
+  "key": "dt-let-055",
   "concept": "history.middle_ages.dt_chevalier",
   "label": "Chevalier",
   "type": "letters",
@@ -660,7 +605,7 @@
   "explanation": "Il devient chevalier lors de l'adoubement."
  },
  {
-  "key": "dt-let-061",
+  "key": "dt-let-056",
   "concept": "history.contemporary.dt_resistance",
   "label": "Résistance",
   "type": "letters",
@@ -671,7 +616,7 @@
   "explanation": "Jean Moulin l'a unifiée."
  },
  {
-  "key": "dt-let-062",
+  "key": "dt-let-057",
   "concept": "science.chemistry.dt_carbone",
   "label": "Carbone",
   "type": "letters",
@@ -682,7 +627,7 @@
   "explanation": "Le diamant et le graphite sont du carbone pur."
  },
  {
-  "key": "dt-let-063",
+  "key": "dt-let-058",
   "concept": "science.physics.dt_gravite",
   "label": "Gravité",
   "type": "letters",
@@ -693,7 +638,7 @@
   "explanation": "Newton l'aurait comprise en voyant tomber une pomme."
  },
  {
-  "key": "dt-let-064",
+  "key": "dt-let-059",
   "concept": "science.space.dt_galaxie",
   "label": "Galaxie",
   "type": "letters",
@@ -704,7 +649,7 @@
   "explanation": "La nôtre compte des centaines de milliards d'étoiles."
  },
  {
-  "key": "dt-let-065",
+  "key": "dt-let-060",
   "concept": "science.space.dt_comete",
   "label": "Comète",
   "type": "letters",
@@ -715,7 +660,7 @@
   "explanation": "Comme la comète de Halley, visible tous les 76 ans."
  },
  {
-  "key": "dt-let-066",
+  "key": "dt-let-061",
   "concept": "science.human_body.dt_squelette",
   "label": "Squelette",
   "type": "letters",
@@ -726,7 +671,7 @@
   "explanation": "Il soutient et protège le corps."
  },
  {
-  "key": "dt-let-067",
+  "key": "dt-let-062",
   "concept": "science.human_body.dt_estomac",
   "label": "Estomac",
   "type": "letters",
@@ -737,7 +682,7 @@
   "explanation": "Il mélange les aliments avec un acide puissant."
  },
  {
-  "key": "dt-let-068",
+  "key": "dt-let-063",
   "concept": "nature.animals.dt_herisson",
   "label": "Hérisson",
   "type": "letters",
@@ -748,7 +693,7 @@
   "explanation": "Il se roule en boule pour se protéger."
  },
  {
-  "key": "dt-let-069",
+  "key": "dt-let-064",
   "concept": "nature.animals.dt_ecureuil",
   "label": "Écureuil",
   "type": "letters",
@@ -759,7 +704,7 @@
   "explanation": "Il oublie souvent ses cachettes… et plante ainsi des arbres."
  },
  {
-  "key": "dt-let-070",
+  "key": "dt-let-065",
   "concept": "nature.animals.dt_manchot",
   "label": "Manchot",
   "type": "letters",
@@ -770,7 +715,7 @@
   "explanation": "Le pingouin, lui, vit dans l'hémisphère Nord et peut voler."
  },
  {
-  "key": "dt-let-071",
+  "key": "dt-let-066",
   "concept": "nature.plants.dt_tournesol",
   "label": "Tournesol",
   "type": "letters",
@@ -781,7 +726,7 @@
   "explanation": "On fait de l'huile avec ses graines."
  },
  {
-  "key": "dt-let-072",
+  "key": "dt-let-067",
   "concept": "nature.earth.dt_volcan",
   "label": "Volcan",
   "type": "letters",
@@ -792,7 +737,7 @@
   "explanation": "Comme l'Etna ou le piton de la Fournaise."
  },
  {
-  "key": "dt-let-073",
+  "key": "dt-let-068",
   "concept": "nature.earth.dt_tornade",
   "label": "Tornade",
   "type": "letters",
@@ -803,7 +748,7 @@
   "explanation": "Les vents peuvent dépasser 300 km/h."
  },
  {
-  "key": "dt-let-074",
+  "key": "dt-let-069",
   "concept": "sport.rules.dt_arbitre",
   "label": "Arbitre",
   "type": "letters",
@@ -814,7 +759,7 @@
   "explanation": "Au football, il est aidé par la VAR."
  },
  {
-  "key": "dt-let-075",
+  "key": "dt-let-070",
   "concept": "sport.rules.dt_handball",
   "label": "Handball",
   "type": "letters",
@@ -825,7 +770,7 @@
   "explanation": "La France a gagné de nombreux titres mondiaux."
  },
  {
-  "key": "dt-let-076",
+  "key": "dt-let-071",
   "concept": "sport.olympics.dt_escrime",
   "label": "Escrime",
   "type": "letters",
@@ -836,7 +781,7 @@
   "explanation": "La France y est l'une des nations les plus titrées."
  },
  {
-  "key": "dt-let-077",
+  "key": "dt-let-072",
   "concept": "music.instruments.dt_batterie",
   "label": "Batterie",
   "type": "letters",
@@ -847,7 +792,7 @@
   "explanation": "On en joue avec des baguettes… et les pieds."
  },
  {
-  "key": "dt-let-078",
+  "key": "dt-let-073",
   "concept": "music.instruments.dt_saxophone",
   "label": "Saxophone",
   "type": "letters",
@@ -858,7 +803,7 @@
   "explanation": "Inventé vers 1840."
  },
  {
-  "key": "dt-let-079",
+  "key": "dt-let-074",
   "concept": "music.popular.dt_karaoke",
   "label": "Karaoké",
   "type": "letters",
@@ -869,7 +814,7 @@
   "explanation": "Le mot vient du japonais : « orchestre vide »."
  },
  {
-  "key": "dt-let-080",
+  "key": "dt-let-075",
   "concept": "cinema.animation.dt_raiponce",
   "label": "Raiponce",
   "type": "letters",
@@ -880,7 +825,7 @@
   "explanation": "Enfermée dans une tour."
  },
  {
-  "key": "dt-let-081",
+  "key": "dt-let-076",
   "concept": "cinema.animation.dt_minions",
   "label": "Minions",
   "type": "letters",
@@ -891,7 +836,7 @@
   "explanation": "Les assistants de Gru, dans « Moi, moche et méchant »."
  },
  {
-  "key": "dt-let-082",
+  "key": "dt-let-077",
   "concept": "cinema.films.dt_cinema",
   "label": "Cinéma",
   "type": "letters",
@@ -902,7 +847,7 @@
   "explanation": "Inventé par les frères Lumière en 1895."
  },
  {
-  "key": "dt-let-083",
+  "key": "dt-let-078",
   "concept": "tech.computing.dt_internet",
   "label": "Internet",
   "type": "letters",
@@ -913,7 +858,7 @@
   "explanation": "Le Web n'en est qu'une partie."
  },
  {
-  "key": "dt-let-084",
+  "key": "dt-let-079",
   "concept": "tech.computing.dt_tablette",
   "label": "Tablette",
   "type": "letters",
@@ -924,7 +869,7 @@
   "explanation": "Comme l'iPad, sorti en 2010."
  },
  {
-  "key": "dt-let-085",
+  "key": "dt-let-080",
   "concept": "tech.inventions.dt_telescope",
   "label": "Télescope",
   "type": "letters",
@@ -935,7 +880,7 @@
   "explanation": "Galilée a été l'un des premiers à le tourner vers le ciel."
  },
  {
-  "key": "dt-let-086",
+  "key": "dt-let-081",
   "concept": "tech.inventions.dt_parachute",
   "label": "Parachute",
   "type": "letters",
@@ -946,7 +891,7 @@
   "explanation": "Léonard de Vinci en avait déjà dessiné un."
  },
  {
-  "key": "dt-let-087",
+  "key": "dt-let-082",
   "concept": "french.vocabulary.dt_dictionnaire",
   "label": "Dictionnaire",
   "type": "letters",
@@ -957,7 +902,7 @@
   "explanation": "Le Larousse et le Robert sont les plus connus."
  },
  {
-  "key": "dt-let-088",
+  "key": "dt-let-083",
   "concept": "french.vocabulary.dt_crepe",
   "label": "Crêpe",
   "type": "letters",
@@ -968,7 +913,7 @@
   "explanation": "La tradition veut qu'on la fasse sauter avec une pièce dans l'autre main."
  },
  {
-  "key": "dt-let-089",
+  "key": "dt-let-084",
   "concept": "french.vocabulary.dt_fromage_comte",
   "label": "Comté",
   "type": "letters",
@@ -979,7 +924,7 @@
   "explanation": "Il est affiné plusieurs mois, voire plusieurs années."
  },
  {
-  "key": "dt-let-090",
+  "key": "dt-let-085",
   "concept": "arts.mythology.dt_minotaure",
   "label": "Minotaure",
   "type": "letters",
@@ -990,7 +935,7 @@
   "explanation": "Thésée le tue grâce au fil d'Ariane."
  },
  {
-  "key": "dt-let-091",
+  "key": "dt-let-086",
   "concept": "arts.painting.dt_joconde",
   "label": "Joconde",
   "type": "letters",

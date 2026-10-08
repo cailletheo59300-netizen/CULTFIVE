@@ -38,6 +38,13 @@ create or replace function tst.correct_given(p_question uuid) returns jsonb lang
     when 'numeric' then jsonb_build_object('value', q.answer -> 'value')
     when 'ordering' then jsonb_build_object('order', q.answer -> 'order')
     when 'pairs' then jsonb_build_object('pairs', q.answer -> 'pairs')
+    when 'counter' then jsonb_build_object('value', q.answer -> 'value')
+    when 'timeline' then jsonb_build_object('value', q.answer -> 'value')
+    when 'gauge' then jsonb_build_object('value', q.answer -> 'value')
+    when 'proportion' then jsonb_build_object('value', q.answer -> 'value')
+    when 'letters' then jsonb_build_object('text', q.answer -> 'word')
+    when 'word_order' then jsonb_build_object('words', q.answer -> 'words')
+    when 'image_choice' then jsonb_build_object('option_id', q.answer ->> 'option_id')
   end from public.questions q where q.id = p_question
 $$;
 create or replace function tst.wrong_given() returns jsonb language sql as $$ select '{"option_id":"nope","value":-999999}'::jsonb $$;

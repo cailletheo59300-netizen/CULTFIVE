@@ -15,6 +15,8 @@ const fail = (key, msg) => errors.push(`${key}: ${msg}`);
 // Identifiants d'options opaques et stables : ne révèlent ni l'ordre ni la bonne réponse.
 const oid = (key, text) => createHash('sha1').update(`${key}|${text}`).digest('hex').slice(0, 8);
 
+const FLAG_NAMES = JSON.parse(readFileSync(join(root, 'content/daily_types/flag_names.json'), 'utf8'));
+
 const subdomains = new Set();
 for (const d of taxonomy.domains) for (const [s] of d.subdomains) subdomains.add(`${d.id}.${s}`);
 
@@ -113,15 +115,73 @@ function convert(q) {
       return { ...base, payload: { region: q.region, options },
                answer: { option_id: oid(k, `${correct[0]?.lat},${correct[0]?.lon}`) } };
     }
+    // ─── Nouveaux types (0038) : marge annoncée avant de répondre, donc publique dans le payload.
+    case 'counter': {
+      if (!Number.isInteger(q.answer) || !(q.min <= q.answer && q.answer <= q.max)) fail(k, 'compteur : réponse entière entre min et max');
+      if (!(q.tolerance >= 0)) fail(k, 'compteur : marge invalide');
+      return { ...base, payload: { min: q.min, max: q.max, start: q.start ?? q.min, tolerance: q.tolerance, ...(q.unit ? { unit: q.unit } : {}) },
+               answer: { value: q.answer, tolerance: q.tolerance } };
+    }
+    case 'timeline': {
+      if (!Number.isInteger(q.answer) || !(q.min < q.answer && q.answer < q.max)) fail(k, 'frise : année strictement entre min et max');
+      if (!(q.tolerance >= 0)) fail(k, 'frise : marge invalide');
+      return { ...base, payload: { min: q.min, max: q.max, tolerance: q.tolerance }, answer: { value: q.answer, tolerance: q.tolerance } };
+    }
+    case 'gauge': {
+      if (!(q.answer >= 0 && q.answer <= 100) || !(q.tolerance > 0)) fail(k, 'jauge : pourcentage 0–100 et marge > 0');
+      return { ...base, payload: { tolerance: q.tolerance, unit: '%' }, answer: { value: q.answer, tolerance: q.tolerance } };
+    }
+    case 'proportion': {
+      if (!(q.answer > 0 && q.reference?.size > 0 && q.max > Math.max(q.answer, q.reference.size))) fail(k, 'proportion : tailles invalides');
+      if (!(q.tolerance > 0 && q.tolerance < 0.3)) fail(k, 'proportion : marge relative entre 0 et 0,3');
+      return { ...base, payload: { reference: q.reference, item: q.item, unit: q.unit, dimension: q.dimension, max: q.max, rel_tolerance: q.tolerance },
+               answer: { value: q.answer, rel_tolerance: q.tolerance } };
+    }
+    case 'letters': {
+      if (!/^[A-Z]{4,12}$/.test(q.word ?? '')) fail(k, 'lettres : 4 à 12 majuscules sans accents');
+      const tiles = shuffled(k, [...(q.word ?? '')]);
+      return { ...base, payload: { tiles }, answer: { word: q.word, display: q.display ?? q.word } };
+    }
+    case 'word_order': {
+      if (!Array.isArray(q.words) || q.words.length < 3 || q.words.length > 14) fail(k, 'mots dans l\'ordre : 3 à 14 mots');
+      const tiles = shuffled(k, (q.words ?? []).map((t, i) => ({ id: oid(k, `${i}:${t}`), text: t })));
+      return { ...base, payload: { tiles }, answer: { words: q.words, sentence: q.answer } };
+    }
+    case 'image_choice': {
+      const opts = q.options ?? [];
+      if (opts.length !== 4 || opts.filter((o) => o.correct).length !== 1) fail(k, 'choix d\'images : 4 options dont 1 correcte');
+      if (q.kind === 'flag' && !opts.every((o) => /^[a-z]{2}$/.test(o.flag ?? '') && FLAG_NAMES[o.flag])) fail(k, 'drapeau : code inconnu');
+      const id = (o) => oid(k, o.flag ?? o.title);
+      const options = opts.map((o) => q.kind === 'flag' ? { id: id(o), flag: o.flag } : { id: id(o), image: o.image ?? null });
+      const labels = Object.fromEntries(opts.map((o) => [id(o), q.kind === 'flag' ? (o.label ?? FLAG_NAMES[o.flag]) : `${o.title}, ${o.artist} (${o.year})`]));
+      return { ...base,
+               // Tableau sans image : pas encore jouable, gardé en brouillon.
+               status: q.kind === 'painting' && opts.some((o) => !o.image) ? 'draft' : base.status,
+               payload: { kind: q.kind, options: shuffled(k, options) },
+               answer: { option_id: id(opts.find((o) => o.correct) ?? {}), labels } };
+    }
     default:
       fail(k, `type inconnu ${q.type}`);
       return base;
   }
 }
 
-const dir = join(root, 'content/questions');
+// Mélange stable (même graine ⇒ même ordre), jamais identique à l'ordre d'origine quand c'est possible.
+function shuffled(key, list) {
+  const h = (x) => createHash('sha1').update(`${key}|mix|${x}`).digest('hex');
+  let out = list.map((v, i) => [h(i), v]).sort((a, b) => (a[0] < b[0] ? -1 : 1)).map(([, v]) => v);
+  if (list.length > 1 && JSON.stringify(out) === JSON.stringify(list)) out = [...out.slice(1), out[0]];
+  return out;
+}
+
 const raw = [];
-for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) raw.push(...JSON.parse(readFileSync(join(dir, file), 'utf8')));
+// Questions classiques, puis celles des nouveaux types (content/daily_types, hors noms de drapeaux).
+for (const sub of ['questions', 'daily_types']) {
+  const dir = join(root, 'content', sub);
+  for (const file of readdirSync(dir).filter((f) => f.endsWith('.json') && f !== 'flag_names.json').sort()) {
+    raw.push(...JSON.parse(readFileSync(join(dir, file), 'utf8')));
+  }
+}
 
 // Calibrage initial. Les questions importées (Wikidata) reçoivent une difficulté tirée de la notoriété, juste dans l'ordre
 // mais trop resserrée dans certains thèmes (ex. acteurs : tout entre 55 et 61). Dans un thème importé resserré (écart-type < 7),
@@ -180,8 +240,11 @@ for (const q of raw) {
 // ─────────────── Contrôle qualité
 // 1. Doublons : même énoncé et même réponse ; ou même thème, même réponse et énoncés très proches (hors même famille).
 const norm = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-const answerOf = (q) => q.type === 'mcq' ? q.options.find((o) => o.endsWith('*')) ?? '' : q.type === 'true_false' || q.type === 'numeric'
-  ? String(q.answer) : JSON.stringify(q.items ?? q.pairs ?? q.pins ?? '');
+const answerOf = (q) => q.type === 'mcq' ? q.options.find((o) => o.endsWith('*')) ?? ''
+  : ['true_false', 'numeric', 'counter', 'timeline', 'gauge', 'proportion', 'word_order'].includes(q.type) ? String(q.answer)
+  : q.type === 'letters' ? q.word
+  : q.type === 'image_choice' ? JSON.stringify(q.options.find((o) => o.correct) ?? '')
+  : JSON.stringify(q.items ?? q.pairs ?? q.pins ?? '');
 // Mots de plus de 3 lettres et tous les nombres (« 36 km/h » et « 36 km/h » se ressemblent ; deux suites différentes non).
 const wordSet = (t) => new Set(norm(t).split(' ').filter((w) => w.length > 3 || /\d/.test(w)));
 const exact = new Map();
@@ -190,7 +253,7 @@ const NEAR = Number(process.env.NEAR ?? 0.6);
 for (const q of raw) {
   const a = norm(answerOf(q));
   const e = `${norm(q.prompt)}#${a}`;
-  if (exact.has(e)) fail(q.key, `doublon de ${exact.get(e)}`);
+  if (exact.has(e) && !q.from) fail(q.key, `doublon de ${exact.get(e)}`);
   else exact.set(e, q.key);
   if (a.length >= 1) byAnswer.set(`${themeOf(q)}#${a}`, [...(byAnswer.get(`${themeOf(q)}#${a}`) ?? []), q]);
 }
@@ -200,6 +263,8 @@ for (const group of byAnswer.values()) {
     const [x, y] = [group[i], group[j]];
     if (x.family && x.family === y.family) continue;
     if (x.origin === 'import' && y.origin === 'import') continue;
+    // Conversion d'une question classique vers un nouveau type : variante voulue, même notion.
+    if (x.from || y.from) continue;
     const A = wordSet(x.prompt), B = wordSet(y.prompt);
     const inter = [...A].filter((w) => B.has(w)).length;
     if (inter / ((A.size + B.size - inter) || 1) >= NEAR && norm(x.prompt) !== norm(y.prompt)) fail(y.key, `quasi-doublon de ${x.key}`);

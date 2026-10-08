@@ -645,7 +645,7 @@
  },
  {
   "key": "dt-prop-029",
-  "concept": "nature.marine.dt_dauphin",
+  "concept": "nature.marine.dt_dauphin_taille",
   "label": "Longueur du dauphin",
   "type": "proportion",
   "difficulty": 35,
@@ -663,7 +663,7 @@
   },
   "answer": 3,
   "tolerance": 0.2,
-  "max": 5,
+  "max": 4.9,
   "explanation": "Environ 3 m pour un grand dauphin, le dauphin de Flipper."
  },
  {

@@ -533,18 +533,6 @@
  },
  {
   "key": "dt-gauge-045",
-  "concept": "calc.percent.dt_note_15",
-  "label": "Note de 15 sur 20",
-  "type": "gauge",
-  "difficulty": 25,
-  "prompt": "Tu as 15 sur 20. Quel pourcentage de réussite ?",
-  "answer": 75,
-  "tolerance": 3,
-  "unit": "%",
-  "explanation": "15 ÷ 20 = 0,75, soit 75 %."
- },
- {
-  "key": "dt-gauge-046",
   "concept": "calc.percent.dt_pile_face",
   "label": "Pile ou face",
   "type": "gauge",
@@ -556,7 +544,7 @@
   "explanation": "Une chance sur deux : 50 %."
  },
  {
-  "key": "dt-gauge-047",
+  "key": "dt-gauge-046",
   "concept": "tech.computing.dt_mobile_trafic",
   "label": "Internet sur mobile",
   "type": "gauge",
@@ -568,7 +556,7 @@
   "explanation": "Environ 60 % : on navigue plus sur téléphone que sur ordinateur."
  },
  {
-  "key": "dt-gauge-048",
+  "key": "dt-gauge-047",
   "concept": "sport.rules.dt_tirs_au_but_reussite",
   "label": "Les tirs au but",
   "type": "gauge",
