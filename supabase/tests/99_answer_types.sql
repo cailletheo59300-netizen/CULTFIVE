@@ -145,3 +145,33 @@ begin
   perform tst.ok(not exists (select 1 from public.questions q where q.id = any (ids) and not public._is_classic(q.type)), 'duel : types classiques');
   perform tst.app_v2(false);
 end $$;
+
+-- 7. Lot 2 : le compte est bon, mot mystère, épingle, tri.
+do $$
+declare
+  u uuid := tst.new_user(); v_q uuid; s0 int; r jsonb;
+begin
+  perform tst.ok(public._number_target_ok('[3,6,5,2]', 27, '[{"a":6,"op":"+","b":5},{"a":11,"op":"-","b":2},{"a":9,"op":"*","b":3}]'), 'compte est bon : 6+5-2=9, 9×3=27');
+  perform tst.ok(not public._number_target_ok('[3,6,5,2]', 27, '[{"a":9,"op":"*","b":3}]'), 'compte est bon : 9 n''est pas disponible');
+  perform tst.ok(not public._number_target_ok('[3,6,5,2]', 27, '[{"a":6,"op":"*","b":6}]'), 'compte est bon : un nombre ne sert qu''une fois');
+  perform tst.ok(not public._number_target_ok('[3,6,5,2]', 2, '[{"a":5,"op":"/","b":2}]') , 'compte est bon : division non entière refusée');
+  perform tst.ok(not public._number_target_ok('[3,6,5,2]', 3, '[{"a":2,"op":"-","b":5}]'), 'compte est bon : pas de négatif');
+  perform tst.ok(public._km(48.58, 7.75, 48.86, 2.35) between 390 and 410, 'distance Paris–Strasbourg ≈ 400 km');
+  perform tst.ok(public._evaluate('map_pin', '{"lat":48.58,"lon":7.75,"tolerance_km":60}', '{"lat":48.9,"lon":7.6}'), 'épingle : à 37 km, dans la marge');
+  perform tst.ok(not public._evaluate('map_pin', '{"lat":48.58,"lon":7.75,"tolerance_km":60}', '{"lat":47.7,"lon":7.3}'), 'épingle : à 100 km, hors marge');
+  perform tst.ok(public._is_exact('map_pin', '{"lat":48.58,"lon":7.75,"tolerance_km":60}', '{"lat":48.6,"lon":7.76}'), 'épingle : pile à 2 km');
+  perform tst.ok(public._evaluate('sort', '{"groups":{"a":"x","b":"y"}}', '{"groups":{"b":"y","a":"x"}}'), 'tri : l''ordre des clés ne compte pas');
+  perform tst.ok(not public._evaluate('sort', '{"groups":{"a":"x","b":"y"}}', '{"groups":{"a":"y","b":"y"}}'), 'tri : une étiquette mal rangée');
+  perform tst.ok((select count(*) from public.questions where type in ('number_target', 'riddle', 'map_pin', 'sort') and status = 'published') >= 200,
+                 'lot 2 importé');
+  -- Chaque question du lot 2 accepte sa propre bonne réponse (solution du compte est bon comprise).
+  perform tst.ok(not exists (select 1 from public.questions q where q.type in ('number_target', 'riddle', 'map_pin', 'sort')
+                             and not public._evaluate(q.type, q.answer, tst.correct_given(q.id))), 'bonne réponse acceptée pour tout le lot 2');
+  -- Mot mystère trouvé au 1er indice : +3 graines.
+  select id into v_q from public.questions where type = 'riddle' and status = 'published' limit 1;
+  select seeds into s0 from public.profiles where id = u;
+  r := public._record_attempt(u, v_q, jsonb_build_object('option_id', (select answer ->> 'option_id' from public.questions where id = v_q), 'clues', 1),
+                              5000, 'training', null, gen_random_uuid(), false);
+  perform tst.ok((r ->> 'is_correct')::bool, 'mot mystère juste');
+  perform tst.ok((select seeds from public.profiles where id = u) = s0 + 3, 'mot mystère au 1er indice : +3 graines');
+end $$;

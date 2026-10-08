@@ -1,0 +1,802 @@
+[
+ {
+  "key": "dt-rid-001",
+  "concept": "geography.monuments.dt_mystere_tour_eiffel",
+  "label": "Mot mystère : La tour Eiffel",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "On m'a construite pour ne durer que 20 ans.",
+   "Je mesure 330 m, antennes comprises.",
+   "Je suis le monument le plus célèbre de Paris."
+  ],
+  "options": [
+   "La tour Eiffel*",
+   "Big Ben",
+   "La statue de la Liberté",
+   "L'Arc de triomphe"
+  ],
+  "explanation": "Elle devait être démontée en 1909 ; la radio l'a sauvée."
+ },
+ {
+  "key": "dt-rid-002",
+  "concept": "geography.monuments.dt_mystere_statue_liberte",
+  "label": "Mot mystère : La statue de la Liberté",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis un cadeau de la France, livré en pièces détachées.",
+   "Ma structure intérieure a été conçue par Gustave Eiffel.",
+   "Je tiens une torche à l'entrée du port de New York."
+  ],
+  "options": [
+   "La statue de la Liberté*",
+   "Le Christ Rédempteur",
+   "La tour Eiffel",
+   "Le Sphinx"
+  ],
+  "explanation": "Inaugurée en 1886 sur Liberty Island."
+ },
+ {
+  "key": "dt-rid-003",
+  "concept": "geography.monuments.dt_mystere_colisee",
+  "label": "Mot mystère : Le Colisée",
+  "type": "riddle",
+  "difficulty": 35,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "J'ai pu accueillir 50 000 spectateurs.",
+   "On y donnait des combats de gladiateurs.",
+   "Je suis l'amphithéâtre le plus célèbre de Rome."
+  ],
+  "options": [
+   "Le Colisée*",
+   "Le Parthénon",
+   "Les arènes de Nîmes",
+   "Le Panthéon"
+  ],
+  "explanation": "Inauguré en 80, sous l'empereur Titus."
+ },
+ {
+  "key": "dt-rid-004",
+  "concept": "geography.monuments.dt_mystere_grande_muraille",
+  "label": "Mot mystère : La Grande Muraille",
+  "type": "riddle",
+  "difficulty": 35,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "On dit à tort qu'on me voit depuis la Lune.",
+   "J'ai été construite et reconstruite pendant des siècles.",
+   "Je protégeais la Chine des invasions venues du nord."
+  ],
+  "options": [
+   "La Grande Muraille*",
+   "Le mur d'Hadrien",
+   "Le mur de Berlin",
+   "La ligne Maginot"
+  ],
+  "explanation": "Elle s'étend sur des milliers de kilomètres, mais elle est trop étroite pour être vue de la Lune."
+ },
+ {
+  "key": "dt-rid-005",
+  "concept": "geography.countries.dt_mystere_venise",
+  "label": "Mot mystère : Venise",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis construite sur plus de 100 petites îles.",
+   "Mon carnaval est célèbre pour ses masques.",
+   "On s'y déplace en gondole."
+  ],
+  "options": [
+   "Venise*",
+   "Amsterdam",
+   "Bruges",
+   "Saint-Pétersbourg"
+  ],
+  "explanation": "Elle compte plus de 400 ponts."
+ },
+ {
+  "key": "dt-rid-006",
+  "concept": "geography.countries.dt_mystere_islande",
+  "label": "Mot mystère : L'Islande",
+  "type": "riddle",
+  "difficulty": 40,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis une île où il n'y a presque pas d'arbres.",
+   "Mes volcans et mes geysers attirent les touristes.",
+   "Ma capitale est Reykjavik."
+  ],
+  "options": [
+   "L'Islande*",
+   "Le Groenland",
+   "La Norvège",
+   "L'Irlande"
+  ],
+  "explanation": "Le mot « geyser » vient d'un geyser islandais."
+ },
+ {
+  "key": "dt-rid-007",
+  "concept": "geography.relief.dt_mystere_sahara",
+  "label": "Mot mystère : Le Sahara",
+  "type": "riddle",
+  "difficulty": 25,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Il peut y geler la nuit, alors qu'il fait plus de 40 °C le jour.",
+   "Je couvre une dizaine de pays.",
+   "Je suis le plus grand désert chaud du monde."
+  ],
+  "options": [
+   "Le Sahara*",
+   "Le Gobi",
+   "Le Kalahari",
+   "L'Atacama"
+  ],
+  "explanation": "Plus de 9 millions de km² en Afrique du Nord."
+ },
+ {
+  "key": "dt-rid-008",
+  "concept": "geography.relief.dt_mystere_nil",
+  "label": "Mot mystère : Le Nil",
+  "type": "riddle",
+  "difficulty": 35,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je traverse onze pays.",
+   "Mes crues ont nourri une civilisation pendant des millénaires.",
+   "Je me jette dans la Méditerranée, en Égypte."
+  ],
+  "options": [
+   "Le Nil*",
+   "Le Congo",
+   "L'Amazone",
+   "Le Danube"
+  ],
+  "explanation": "L'un des deux plus longs fleuves du monde, avec l'Amazone."
+ },
+ {
+  "key": "dt-rid-009",
+  "concept": "history.contemporary.dt_mystere_napoleon",
+  "label": "Mot mystère : Napoléon",
+  "type": "riddle",
+  "difficulty": 25,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis né en Corse en 1769.",
+   "J'ai écrit le Code civil… avec beaucoup d'aide.",
+   "J'ai perdu à Waterloo."
+  ],
+  "options": [
+   "Napoléon Bonaparte*",
+   "Louis XIV",
+   "Charles de Gaulle",
+   "Jules César"
+  ],
+  "explanation": "Empereur des Français de 1804 à 1815."
+ },
+ {
+  "key": "dt-rid-010",
+  "concept": "history.middle_ages.dt_mystere_jeanne_arc",
+  "label": "Mot mystère : Jeanne d'Arc",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "J'ai entendu des voix dès l'âge de 13 ans.",
+   "J'ai fait sacrer le roi à Reims.",
+   "On m'appelle « la Pucelle d'Orléans »."
+  ],
+  "options": [
+   "Jeanne d'Arc*",
+   "Aliénor d'Aquitaine",
+   "Marie Curie",
+   "Catherine de Médicis"
+  ],
+  "explanation": "Brûlée à Rouen en 1431, elle est devenue sainte en 1920."
+ },
+ {
+  "key": "dt-rid-011",
+  "concept": "history.antiquity.dt_mystere_cleopatre",
+  "label": "Mot mystère : Cléopâtre",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "J'ai parlé de nombreuses langues, dont l'égyptien, ce qui était rare dans ma famille.",
+   "J'ai été l'alliée de Jules César puis de Marc Antoine.",
+   "J'ai été la dernière reine d'Égypte."
+  ],
+  "options": [
+   "Cléopâtre*",
+   "Néfertiti",
+   "Hatchepsout",
+   "Didon"
+  ],
+  "explanation": "Elle meurt en 30 av. J.-C. ; l'Égypte devient romaine."
+ },
+ {
+  "key": "dt-rid-012",
+  "concept": "history.modern.dt_mystere_louis_xiv",
+  "label": "Mot mystère : Louis XIV",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis devenu roi à 4 ans.",
+   "J'ai régné 72 ans, un record.",
+   "On m'appelle le Roi-Soleil."
+  ],
+  "options": [
+   "Louis XIV*",
+   "Louis XVI",
+   "Henri IV",
+   "François Ier"
+  ],
+  "explanation": "Il installe la cour à Versailles en 1682."
+ },
+ {
+  "key": "dt-rid-013",
+  "concept": "history.contemporary.dt_mystere_de_gaulle",
+  "label": "Mot mystère : Charles de Gaulle",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je mesurais près de 1,96 m.",
+   "J'ai fondé la Ve République en 1958.",
+   "J'ai lancé l'appel du 18 Juin depuis Londres."
+  ],
+  "options": [
+   "Charles de Gaulle*",
+   "Georges Clemenceau",
+   "Jean Moulin",
+   "François Mitterrand"
+  ],
+  "explanation": "Un aéroport et un porte-avions portent son nom."
+ },
+ {
+  "key": "dt-rid-014",
+  "concept": "science.space.dt_mystere_lune",
+  "label": "Mot mystère : La Lune",
+  "type": "riddle",
+  "difficulty": 15,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je m'éloigne de la Terre d'environ 4 cm par an.",
+   "Douze hommes ont marché sur moi.",
+   "Je provoque les marées."
+  ],
+  "options": [
+   "La Lune*",
+   "Mars",
+   "Le Soleil",
+   "Vénus"
+  ],
+  "explanation": "Le dernier homme à y avoir marché, en 1972, était Eugene Cernan."
+ },
+ {
+  "key": "dt-rid-015",
+  "concept": "science.space.dt_mystere_saturne",
+  "label": "Mot mystère : Saturne",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis si légère que je flotterais dans une baignoire géante.",
+   "J'ai plus de 100 lunes.",
+   "Mes anneaux sont les plus célèbres du Système solaire."
+  ],
+  "options": [
+   "Saturne*",
+   "Jupiter",
+   "Uranus",
+   "Neptune"
+  ],
+  "explanation": "Sa densité est plus faible que celle de l'eau."
+ },
+ {
+  "key": "dt-rid-016",
+  "concept": "science.human_body.dt_mystere_coeur",
+  "label": "Mot mystère : Le cœur",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je bats environ 100 000 fois par jour.",
+   "Je compte quatre cavités.",
+   "Je pompe le sang dans tout le corps."
+  ],
+  "options": [
+   "Le cœur*",
+   "Le foie",
+   "Les poumons",
+   "Le cerveau"
+  ],
+  "explanation": "C'est un muscle qui ne se repose jamais."
+ },
+ {
+  "key": "dt-rid-017",
+  "concept": "science.human_body.dt_mystere_peau",
+  "label": "Mot mystère : La peau",
+  "type": "riddle",
+  "difficulty": 35,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je me renouvelle entièrement en un mois environ.",
+   "Je pèse plusieurs kilos chez un adulte.",
+   "Je suis le plus grand organe du corps."
+  ],
+  "options": [
+   "La peau*",
+   "Le foie",
+   "L'intestin",
+   "Le squelette"
+  ],
+  "explanation": "Environ 2 m² chez un adulte."
+ },
+ {
+  "key": "dt-rid-018",
+  "concept": "science.chemistry.dt_mystere_eau",
+  "label": "Mot mystère : L'eau",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis plus légère solide que liquide.",
+   "Ma formule tient en trois lettres et un chiffre.",
+   "Je couvre 71 % de la surface de la Terre."
+  ],
+  "options": [
+   "L'eau*",
+   "Le sel",
+   "Le sable",
+   "L'air"
+  ],
+  "explanation": "H₂O : deux atomes d'hydrogène, un d'oxygène."
+ },
+ {
+  "key": "dt-rid-019",
+  "concept": "science.physics.dt_mystere_arc_en_ciel",
+  "label": "Mot mystère : L'arc-en-ciel",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Pour me voir, il faut avoir le Soleil dans le dos.",
+   "Je suis fait de lumière décomposée par des gouttes d'eau.",
+   "J'ai sept couleurs, du rouge au violet."
+  ],
+  "options": [
+   "L'arc-en-ciel*",
+   "L'aurore boréale",
+   "Le mirage",
+   "L'éclair"
+  ],
+  "explanation": "Chaque goutte agit comme un petit prisme."
+ },
+ {
+  "key": "dt-rid-020",
+  "concept": "nature.animals.dt_mystere_pieuvre",
+  "label": "Mot mystère : La pieuvre",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "J'ai trois cœurs et le sang bleu.",
+   "Je peux changer de couleur en un instant.",
+   "J'ai huit bras."
+  ],
+  "options": [
+   "La pieuvre*",
+   "Le calmar",
+   "La méduse",
+   "L'étoile de mer"
+  ],
+  "explanation": "Très intelligente, elle sait ouvrir des bocaux."
+ },
+ {
+  "key": "dt-rid-021",
+  "concept": "nature.animals.dt_mystere_girafe",
+  "label": "Mot mystère : La girafe",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je dors moins de deux heures par jour.",
+   "Ma langue est bleu foncé et mesure 50 cm.",
+   "Je suis l'animal le plus grand du monde."
+  ],
+  "options": [
+   "La girafe*",
+   "L'éléphant",
+   "L'autruche",
+   "Le chameau"
+  ],
+  "explanation": "Elle a sept vertèbres dans le cou, comme nous."
+ },
+ {
+  "key": "dt-rid-022",
+  "concept": "nature.animals.dt_mystere_abeille",
+  "label": "Mot mystère : L'abeille",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je danse pour indiquer le chemin des fleurs.",
+   "Je meurs souvent après avoir piqué.",
+   "Je fabrique le miel."
+  ],
+  "options": [
+   "L'abeille*",
+   "La guêpe",
+   "Le bourdon",
+   "La fourmi"
+  ],
+  "explanation": "Son dard crochu reste planté dans la peau."
+ },
+ {
+  "key": "dt-rid-023",
+  "concept": "nature.animals.dt_mystere_manchot",
+  "label": "Mot mystère : Le manchot empereur",
+  "type": "riddle",
+  "difficulty": 40,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Le mâle couve l'œuf sur ses pattes pendant deux mois.",
+   "Je ne vole pas, mais je nage très bien.",
+   "Je vis en Antarctique."
+  ],
+  "options": [
+   "Le manchot empereur*",
+   "Le pingouin",
+   "L'albatros",
+   "Le macareux"
+  ],
+  "explanation": "Le pingouin, lui, vit dans l'hémisphère Nord et peut voler."
+ },
+ {
+  "key": "dt-rid-024",
+  "concept": "nature.plants.dt_mystere_bambou",
+  "label": "Mot mystère : Le bambou",
+  "type": "riddle",
+  "difficulty": 35,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je peux pousser de près d'un mètre en une journée.",
+   "Je suis une herbe, pas un arbre.",
+   "Je suis le repas préféré du panda."
+  ],
+  "options": [
+   "Le bambou*",
+   "L'eucalyptus",
+   "Le roseau",
+   "Le papyrus"
+  ],
+  "explanation": "C'est l'une des plantes à la croissance la plus rapide."
+ },
+ {
+  "key": "dt-rid-025",
+  "concept": "arts.painting.dt_mystere_joconde",
+  "label": "Mot mystère : La Joconde",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "On m'a volée en 1911 et retrouvée deux ans plus tard.",
+   "Mon sourire fait parler depuis cinq siècles.",
+   "J'ai été peinte par Léonard de Vinci."
+  ],
+  "options": [
+   "La Joconde*",
+   "La Jeune Fille à la perle",
+   "La Naissance de Vénus",
+   "Le Cri"
+  ],
+  "explanation": "Elle est au Louvre, derrière une vitre blindée."
+ },
+ {
+  "key": "dt-rid-026",
+  "concept": "arts.literature.dt_mystere_petit_prince",
+  "label": "Mot mystère : Le Petit Prince",
+  "type": "riddle",
+  "difficulty": 25,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis l'un des livres les plus traduits au monde.",
+   "J'aime une rose et j'ai apprivoisé un renard.",
+   "Je viens de l'astéroïde B 612."
+  ],
+  "options": [
+   "Le Petit Prince*",
+   "Pinocchio",
+   "Peter Pan",
+   "Tintin"
+  ],
+  "explanation": "Écrit par Saint-Exupéry en 1943."
+ },
+ {
+  "key": "dt-rid-027",
+  "concept": "arts.literature.dt_mystere_sherlock",
+  "label": "Mot mystère : Sherlock Holmes",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "J'habite au 221B Baker Street.",
+   "Mon fidèle compagnon s'appelle le docteur Watson.",
+   "Je suis le détective le plus célèbre de Londres."
+  ],
+  "options": [
+   "Sherlock Holmes*",
+   "Hercule Poirot",
+   "Arsène Lupin",
+   "Le commissaire Maigret"
+  ],
+  "explanation": "Créé par Arthur Conan Doyle en 1887."
+ },
+ {
+  "key": "dt-rid-028",
+  "concept": "arts.mythology.dt_mystere_zeus",
+  "label": "Mot mystère : Zeus",
+  "type": "riddle",
+  "difficulty": 25,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je me suis souvent transformé pour séduire, en cygne ou en taureau.",
+   "Mon arme est la foudre.",
+   "Je suis le roi des dieux de l'Olympe."
+  ],
+  "options": [
+   "Zeus*",
+   "Poséidon",
+   "Hadès",
+   "Apollon"
+  ],
+  "explanation": "Les Romains l'appellent Jupiter."
+ },
+ {
+  "key": "dt-rid-029",
+  "concept": "music.instruments.dt_mystere_piano",
+  "label": "Mot mystère : Le piano",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Mon vrai nom était « pianoforte ».",
+   "J'ai des marteaux qui frappent des cordes.",
+   "J'ai 52 touches blanches et 36 noires."
+  ],
+  "options": [
+   "Le piano*",
+   "Le clavecin",
+   "L'orgue",
+   "La harpe"
+  ],
+  "explanation": "Il permet de jouer doux (piano) et fort (forte)."
+ },
+ {
+  "key": "dt-rid-030",
+  "concept": "music.popular.dt_mystere_beatles",
+  "label": "Mot mystère : Les Beatles",
+  "type": "riddle",
+  "difficulty": 25,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Nous avons traversé un passage piéton pour une pochette d'album célèbre.",
+   "Nous étions quatre, à Liverpool.",
+   "Nous avons chanté « Yesterday » et « Hey Jude »."
+  ],
+  "options": [
+   "Les Beatles*",
+   "Les Rolling Stones",
+   "Queen",
+   "ABBA"
+  ],
+  "explanation": "La pochette d'« Abbey Road », en 1969."
+ },
+ {
+  "key": "dt-rid-031",
+  "concept": "cinema.animation.dt_mystere_shrek",
+  "label": "Mot mystère : Shrek",
+  "type": "riddle",
+  "difficulty": 15,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je vis dans un marais et j'aime qu'on m'y laisse tranquille.",
+   "Mon meilleur ami est un âne bavard.",
+   "Je suis un ogre vert."
+  ],
+  "options": [
+   "Shrek*",
+   "Hulk",
+   "Grinch",
+   "Fiona"
+  ],
+  "explanation": "Le premier film sort en 2001."
+ },
+ {
+  "key": "dt-rid-032",
+  "concept": "cinema.films.dt_mystere_titanic_film",
+  "label": "Mot mystère : Titanic",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "J'ai coûté plus cher que le vrai bateau dont je raconte l'histoire.",
+   "J'ai remporté 11 Oscars.",
+   "Jack et Rose se rencontrent à mon bord."
+  ],
+  "options": [
+   "Titanic*",
+   "Avatar",
+   "Pearl Harbor",
+   "Le Grand Bleu"
+  ],
+  "explanation": "Le film de James Cameron sort en 1997."
+ },
+ {
+  "key": "dt-rid-033",
+  "concept": "cinema.films.dt_mystere_star_wars",
+  "label": "Mot mystère : Star Wars",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je commence par « Il y a bien longtemps, dans une galaxie lointaine, très lointaine… ».",
+   "On y manie des sabres laser.",
+   "Dark Vador y est le méchant le plus célèbre."
+  ],
+  "options": [
+   "Star Wars*",
+   "Star Trek",
+   "Dune",
+   "Avatar"
+  ],
+  "explanation": "Le premier film sort en 1977."
+ },
+ {
+  "key": "dt-rid-034",
+  "concept": "sport.champions.dt_mystere_zidane",
+  "label": "Mot mystère : Zinédine Zidane",
+  "type": "riddle",
+  "difficulty": 25,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "On m'a surnommé « Zizou ».",
+   "J'ai donné un coup de tête en finale de 2006.",
+   "J'ai marqué deux buts en finale de la Coupe du monde 1998."
+  ],
+  "options": [
+   "Zinédine Zidane*",
+   "Thierry Henry",
+   "Michel Platini",
+   "Kylian Mbappé"
+  ],
+  "explanation": "Il a aussi gagné trois Ligues des champions comme entraîneur du Real Madrid."
+ },
+ {
+  "key": "dt-rid-035",
+  "concept": "sport.olympics.dt_mystere_marathon_s",
+  "label": "Mot mystère : Le marathon",
+  "type": "riddle",
+  "difficulty": 30,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je dois mon nom à une ville grecque.",
+   "Ma distance a été fixée pour arriver devant la loge royale, à Londres, en 1908.",
+   "Je mesure 42,195 km."
+  ],
+  "options": [
+   "Le marathon*",
+   "Le triathlon",
+   "Le décathlon",
+   "Le semi-marathon"
+  ],
+  "explanation": "Selon la légende, un messager courut de Marathon à Athènes pour annoncer une victoire."
+ },
+ {
+  "key": "dt-rid-036",
+  "concept": "tech.inventions.dt_mystere_internet_s",
+  "label": "Mot mystère : Internet",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis né d'un réseau militaire américain.",
+   "Je relie des milliards d'appareils.",
+   "Le Web n'est qu'une partie de moi."
+  ],
+  "options": [
+   "Internet*",
+   "Le Minitel",
+   "La télévision",
+   "La radio"
+  ],
+  "explanation": "L'ancêtre, Arpanet, date de 1969."
+ },
+ {
+  "key": "dt-rid-037",
+  "concept": "tech.brands.dt_mystere_lego_s",
+  "label": "Mot mystère : LEGO",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Mon nom vient du danois « leg godt », « joue bien ».",
+   "Mes briques de 1958 s'emboîtent encore avec celles d'aujourd'hui.",
+   "Je suis le jouet de construction le plus célèbre."
+  ],
+  "options": [
+   "LEGO*",
+   "Playmobil",
+   "Meccano",
+   "Kapla"
+  ],
+  "explanation": "Fabriqué au Danemark."
+ },
+ {
+  "key": "dt-rid-038",
+  "concept": "french.vocabulary.dt_mystere_baguette_s",
+  "label": "Mot mystère : La baguette",
+  "type": "riddle",
+  "difficulty": 15,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je suis inscrite au patrimoine immatériel de l'UNESCO depuis 2022.",
+   "Je pèse environ 250 g.",
+   "On m'achète chaque matin à la boulangerie."
+  ],
+  "options": [
+   "La baguette*",
+   "Le croissant",
+   "La brioche",
+   "La fougasse"
+  ],
+  "explanation": "Les Français en mangent environ 6 milliards par an."
+ },
+ {
+  "key": "dt-rid-039",
+  "concept": "french.vocabulary.dt_mystere_croissant_s",
+  "label": "Mot mystère : Le croissant",
+  "type": "riddle",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Je viendrais d'une viennoiserie autrichienne, le kipferl.",
+   "Ma pâte est feuilletée et pleine de beurre.",
+   "J'ai la forme d'une lune."
+  ],
+  "options": [
+   "Le croissant*",
+   "Le pain au chocolat",
+   "La chouquette",
+   "Le macaron"
+  ],
+  "explanation": "D'où le nom de « viennoiserie »."
+ },
+ {
+  "key": "dt-rid-040",
+  "concept": "logic.puzzles.dt_mystere_ombre_s",
+  "label": "Mot mystère : L'ombre",
+  "type": "riddle",
+  "difficulty": 25,
+  "prompt": "Qui suis-je ?",
+  "clues": [
+   "Plus le Soleil est bas, plus je suis grande.",
+   "Je disparais à midi sous les tropiques, certains jours.",
+   "Je te suis partout au soleil."
+  ],
+  "options": [
+   "Ton ombre*",
+   "Ton reflet",
+   "L'écho",
+   "Le vent"
+  ],
+  "explanation": "Sous les tropiques, le Soleil peut passer exactement à la verticale."
+ }
+]

@@ -1,0 +1,1222 @@
+[
+ {
+  "key": "dt-ct-001",
+  "concept": "calc.mental.dt_compte_1",
+  "label": "Le compte est bon n° 1",
+  "type": "number_target",
+  "difficulty": 30,
+  "prompt": "Atteins 85 avec ces nombres.",
+  "numbers": [
+   1,
+   5,
+   9,
+   10
+  ],
+  "target": 85,
+  "solution": [
+   "9 × 10 = 90",
+   "90 − 5 = 85"
+  ],
+  "explanation": "Une solution : 9 × 10 = 90, puis 90 − 5 = 85."
+ },
+ {
+  "key": "dt-ct-002",
+  "concept": "calc.mental.dt_compte_2",
+  "label": "Le compte est bon n° 2",
+  "type": "number_target",
+  "difficulty": 30,
+  "prompt": "Atteins 14 avec ces nombres.",
+  "numbers": [
+   3,
+   7,
+   10,
+   12
+  ],
+  "target": 14,
+  "solution": [
+   "7 − 3 = 4",
+   "4 + 10 = 14"
+  ],
+  "explanation": "Une solution : 7 − 3 = 4, puis 4 + 10 = 14."
+ },
+ {
+  "key": "dt-ct-003",
+  "concept": "calc.mental.dt_compte_3",
+  "label": "Le compte est bon n° 3",
+  "type": "number_target",
+  "difficulty": 35,
+  "prompt": "Atteins 32 avec ces nombres.",
+  "numbers": [
+   3,
+   3,
+   4,
+   5
+  ],
+  "target": 32,
+  "solution": [
+   "3 + 5 = 8",
+   "4 × 8 = 32"
+  ],
+  "explanation": "Une solution : 3 + 5 = 8, puis 4 × 8 = 32."
+ },
+ {
+  "key": "dt-ct-004",
+  "concept": "calc.mental.dt_compte_4",
+  "label": "Le compte est bon n° 4",
+  "type": "number_target",
+  "difficulty": 30,
+  "prompt": "Atteins 40 avec ces nombres.",
+  "numbers": [
+   3,
+   3,
+   5,
+   25
+  ],
+  "target": 40,
+  "solution": [
+   "3 × 5 = 15",
+   "15 + 25 = 40"
+  ],
+  "explanation": "Une solution : 3 × 5 = 15, puis 15 + 25 = 40."
+ },
+ {
+  "key": "dt-ct-005",
+  "concept": "calc.mental.dt_compte_5",
+  "label": "Le compte est bon n° 5",
+  "type": "number_target",
+  "difficulty": 31,
+  "prompt": "Atteins 38 avec ces nombres.",
+  "numbers": [
+   3,
+   7,
+   9,
+   25
+  ],
+  "target": 38,
+  "solution": [
+   "7 × 9 = 63",
+   "63 − 25 = 38"
+  ],
+  "explanation": "Une solution : 7 × 9 = 63, puis 63 − 25 = 38."
+ },
+ {
+  "key": "dt-ct-006",
+  "concept": "calc.mental.dt_compte_6",
+  "label": "Le compte est bon n° 6",
+  "type": "number_target",
+  "difficulty": 34,
+  "prompt": "Atteins 89 avec ces nombres.",
+  "numbers": [
+   1,
+   3,
+   9,
+   10
+  ],
+  "target": 89,
+  "solution": [
+   "9 × 10 = 90",
+   "90 − 1 = 89"
+  ],
+  "explanation": "Une solution : 9 × 10 = 90, puis 90 − 1 = 89."
+ },
+ {
+  "key": "dt-ct-007",
+  "concept": "calc.mental.dt_compte_7",
+  "label": "Le compte est bon n° 7",
+  "type": "number_target",
+  "difficulty": 56,
+  "prompt": "Atteins 31 avec ces nombres.",
+  "numbers": [
+   2,
+   2,
+   6,
+   10
+  ],
+  "target": 31,
+  "solution": [
+   "6 × 10 = 60",
+   "2 + 60 = 62",
+   "62 ÷ 2 = 31"
+  ],
+  "explanation": "Une solution : 6 × 10 = 60, puis 2 + 60 = 62, puis 62 ÷ 2 = 31."
+ },
+ {
+  "key": "dt-ct-008",
+  "concept": "calc.mental.dt_compte_8",
+  "label": "Le compte est bon n° 8",
+  "type": "number_target",
+  "difficulty": 54,
+  "prompt": "Atteins 86 avec ces nombres.",
+  "numbers": [
+   7,
+   7,
+   10,
+   10
+  ],
+  "target": 86,
+  "solution": [
+   "7 + 7 = 14",
+   "10 × 10 = 100",
+   "100 − 14 = 86"
+  ],
+  "explanation": "Une solution : 7 + 7 = 14, puis 10 × 10 = 100, puis 100 − 14 = 86."
+ },
+ {
+  "key": "dt-ct-009",
+  "concept": "calc.mental.dt_compte_9",
+  "label": "Le compte est bon n° 9",
+  "type": "number_target",
+  "difficulty": 48,
+  "prompt": "Atteins 91 avec ces nombres.",
+  "numbers": [
+   4,
+   7,
+   10,
+   15
+  ],
+  "target": 91,
+  "solution": [
+   "4 + 10 = 14",
+   "7 × 15 = 105",
+   "105 − 14 = 91"
+  ],
+  "explanation": "Une solution : 4 + 10 = 14, puis 7 × 15 = 105, puis 105 − 14 = 91."
+ },
+ {
+  "key": "dt-ct-010",
+  "concept": "calc.mental.dt_compte_10",
+  "label": "Le compte est bon n° 10",
+  "type": "number_target",
+  "difficulty": 35,
+  "prompt": "Atteins 16 avec ces nombres.",
+  "numbers": [
+   5,
+   7,
+   7,
+   8
+  ],
+  "target": 16,
+  "solution": [
+   "7 − 5 = 2",
+   "2 × 8 = 16"
+  ],
+  "explanation": "Une solution : 7 − 5 = 2, puis 2 × 8 = 16."
+ },
+ {
+  "key": "dt-ct-011",
+  "concept": "calc.mental.dt_compte_11",
+  "label": "Le compte est bon n° 11",
+  "type": "number_target",
+  "difficulty": 52,
+  "prompt": "Atteins 32 avec ces nombres.",
+  "numbers": [
+   1,
+   5,
+   7,
+   10
+  ],
+  "target": 32,
+  "solution": [
+   "1 + 5 = 6",
+   "6 × 7 = 42",
+   "42 − 10 = 32"
+  ],
+  "explanation": "Une solution : 1 + 5 = 6, puis 6 × 7 = 42, puis 42 − 10 = 32."
+ },
+ {
+  "key": "dt-ct-012",
+  "concept": "calc.mental.dt_compte_12",
+  "label": "Le compte est bon n° 12",
+  "type": "number_target",
+  "difficulty": 33,
+  "prompt": "Atteins 73 avec ces nombres.",
+  "numbers": [
+   4,
+   7,
+   7,
+   20
+  ],
+  "target": 73,
+  "solution": [
+   "4 × 20 = 80",
+   "80 − 7 = 73"
+  ],
+  "explanation": "Une solution : 4 × 20 = 80, puis 80 − 7 = 73."
+ },
+ {
+  "key": "dt-ct-013",
+  "concept": "calc.mental.dt_compte_13",
+  "label": "Le compte est bon n° 13",
+  "type": "number_target",
+  "difficulty": 38,
+  "prompt": "Atteins 18 avec ces nombres.",
+  "numbers": [
+   3,
+   5,
+   7,
+   20
+  ],
+  "target": 18,
+  "solution": [
+   "3 + 20 = 23",
+   "23 − 5 = 18"
+  ],
+  "explanation": "Une solution : 3 + 20 = 23, puis 23 − 5 = 18."
+ },
+ {
+  "key": "dt-ct-014",
+  "concept": "calc.mental.dt_compte_14",
+  "label": "Le compte est bon n° 14",
+  "type": "number_target",
+  "difficulty": 52,
+  "prompt": "Atteins 31 avec ces nombres.",
+  "numbers": [
+   1,
+   5,
+   7,
+   15
+  ],
+  "target": 31,
+  "solution": [
+   "7 − 5 = 2",
+   "2 × 15 = 30",
+   "1 + 30 = 31"
+  ],
+  "explanation": "Une solution : 7 − 5 = 2, puis 2 × 15 = 30, puis 1 + 30 = 31."
+ },
+ {
+  "key": "dt-ct-015",
+  "concept": "calc.mental.dt_compte_15",
+  "label": "Le compte est bon n° 15",
+  "type": "number_target",
+  "difficulty": 38,
+  "prompt": "Atteins 35 avec ces nombres.",
+  "numbers": [
+   1,
+   2,
+   7,
+   10
+  ],
+  "target": 35,
+  "solution": [
+   "7 × 10 = 70",
+   "70 ÷ 2 = 35"
+  ],
+  "explanation": "Une solution : 7 × 10 = 70, puis 70 ÷ 2 = 35."
+ },
+ {
+  "key": "dt-ct-016",
+  "concept": "calc.mental.dt_compte_16",
+  "label": "Le compte est bon n° 16",
+  "type": "number_target",
+  "difficulty": 33,
+  "prompt": "Atteins 24 avec ces nombres.",
+  "numbers": [
+   2,
+   3,
+   7,
+   9
+  ],
+  "target": 24,
+  "solution": [
+   "3 + 9 = 12",
+   "2 × 12 = 24"
+  ],
+  "explanation": "Une solution : 3 + 9 = 12, puis 2 × 12 = 24."
+ },
+ {
+  "key": "dt-ct-017",
+  "concept": "calc.mental.dt_compte_17",
+  "label": "Le compte est bon n° 17",
+  "type": "number_target",
+  "difficulty": 58,
+  "prompt": "Atteins 22 avec ces nombres.",
+  "numbers": [
+   2,
+   3,
+   6,
+   7
+  ],
+  "target": 22,
+  "solution": [
+   "2 × 6 = 12",
+   "3 + 7 = 10",
+   "10 + 12 = 22"
+  ],
+  "explanation": "Une solution : 2 × 6 = 12, puis 3 + 7 = 10, puis 10 + 12 = 22."
+ },
+ {
+  "key": "dt-ct-018",
+  "concept": "calc.mental.dt_compte_18",
+  "label": "Le compte est bon n° 18",
+  "type": "number_target",
+  "difficulty": 39,
+  "prompt": "Atteins 79 avec ces nombres.",
+  "numbers": [
+   7,
+   8,
+   9,
+   20
+  ],
+  "target": 79,
+  "solution": [
+   "8 × 9 = 72",
+   "7 + 72 = 79"
+  ],
+  "explanation": "Une solution : 8 × 9 = 72, puis 7 + 72 = 79."
+ },
+ {
+  "key": "dt-ct-019",
+  "concept": "calc.mental.dt_compte_19",
+  "label": "Le compte est bon n° 19",
+  "type": "number_target",
+  "difficulty": 32,
+  "prompt": "Atteins 91 avec ces nombres.",
+  "numbers": [
+   4,
+   6,
+   9,
+   25
+  ],
+  "target": 91,
+  "solution": [
+   "4 × 25 = 100",
+   "100 − 9 = 91"
+  ],
+  "explanation": "Une solution : 4 × 25 = 100, puis 100 − 9 = 91."
+ },
+ {
+  "key": "dt-ct-020",
+  "concept": "calc.mental.dt_compte_20",
+  "label": "Le compte est bon n° 20",
+  "type": "number_target",
+  "difficulty": 57,
+  "prompt": "Atteins 36 avec ces nombres.",
+  "numbers": [
+   1,
+   2,
+   4,
+   4
+  ],
+  "target": 36,
+  "solution": [
+   "2 × 4 = 8",
+   "1 + 8 = 9",
+   "4 × 9 = 36"
+  ],
+  "explanation": "Une solution : 2 × 4 = 8, puis 1 + 8 = 9, puis 4 × 9 = 36."
+ },
+ {
+  "key": "dt-ct-021",
+  "concept": "calc.mental.dt_compte_21",
+  "label": "Le compte est bon n° 21",
+  "type": "number_target",
+  "difficulty": 35,
+  "prompt": "Atteins 95 avec ces nombres.",
+  "numbers": [
+   5,
+   6,
+   9,
+   25
+  ],
+  "target": 95,
+  "solution": [
+   "25 − 6 = 19",
+   "5 × 19 = 95"
+  ],
+  "explanation": "Une solution : 25 − 6 = 19, puis 5 × 19 = 95."
+ },
+ {
+  "key": "dt-ct-022",
+  "concept": "calc.mental.dt_compte_22",
+  "label": "Le compte est bon n° 22",
+  "type": "number_target",
+  "difficulty": 39,
+  "prompt": "Atteins 16 avec ces nombres.",
+  "numbers": [
+   1,
+   3,
+   4,
+   10
+  ],
+  "target": 16,
+  "solution": [
+   "1 + 3 = 4",
+   "4 × 4 = 16"
+  ],
+  "explanation": "Une solution : 1 + 3 = 4, puis 4 × 4 = 16."
+ },
+ {
+  "key": "dt-ct-023",
+  "concept": "calc.mental.dt_compte_23",
+  "label": "Le compte est bon n° 23",
+  "type": "number_target",
+  "difficulty": 48,
+  "prompt": "Atteins 50 avec ces nombres.",
+  "numbers": [
+   2,
+   3,
+   4,
+   20
+  ],
+  "target": 50,
+  "solution": [
+   "3 + 20 = 23",
+   "2 × 23 = 46",
+   "4 + 46 = 50"
+  ],
+  "explanation": "Une solution : 3 + 20 = 23, puis 2 × 23 = 46, puis 4 + 46 = 50."
+ },
+ {
+  "key": "dt-ct-024",
+  "concept": "calc.mental.dt_compte_24",
+  "label": "Le compte est bon n° 24",
+  "type": "number_target",
+  "difficulty": 38,
+  "prompt": "Atteins 29 avec ces nombres.",
+  "numbers": [
+   1,
+   4,
+   7,
+   10
+  ],
+  "target": 29,
+  "solution": [
+   "4 × 7 = 28",
+   "1 + 28 = 29"
+  ],
+  "explanation": "Une solution : 4 × 7 = 28, puis 1 + 28 = 29."
+ },
+ {
+  "key": "dt-ct-025",
+  "concept": "calc.mental.dt_compte_25",
+  "label": "Le compte est bon n° 25",
+  "type": "number_target",
+  "difficulty": 37,
+  "prompt": "Atteins 74 avec ces nombres.",
+  "numbers": [
+   3,
+   7,
+   9,
+   9
+  ],
+  "target": 74,
+  "solution": [
+   "9 × 9 = 81",
+   "81 − 7 = 74"
+  ],
+  "explanation": "Une solution : 9 × 9 = 81, puis 81 − 7 = 74."
+ },
+ {
+  "key": "dt-ct-026",
+  "concept": "calc.mental.dt_compte_26",
+  "label": "Le compte est bon n° 26",
+  "type": "number_target",
+  "difficulty": 56,
+  "prompt": "Atteins 21 avec ces nombres.",
+  "numbers": [
+   1,
+   2,
+   9,
+   9
+  ],
+  "target": 21,
+  "solution": [
+   "1 + 2 = 3",
+   "3 + 9 = 12",
+   "9 + 12 = 21"
+  ],
+  "explanation": "Une solution : 1 + 2 = 3, puis 3 + 9 = 12, puis 9 + 12 = 21."
+ },
+ {
+  "key": "dt-ct-027",
+  "concept": "calc.mental.dt_compte_27",
+  "label": "Le compte est bon n° 27",
+  "type": "number_target",
+  "difficulty": 37,
+  "prompt": "Atteins 50 avec ces nombres.",
+  "numbers": [
+   3,
+   4,
+   10,
+   20
+  ],
+  "target": 50,
+  "solution": [
+   "3 × 10 = 30",
+   "20 + 30 = 50"
+  ],
+  "explanation": "Une solution : 3 × 10 = 30, puis 20 + 30 = 50."
+ },
+ {
+  "key": "dt-ct-028",
+  "concept": "calc.mental.dt_compte_28",
+  "label": "Le compte est bon n° 28",
+  "type": "number_target",
+  "difficulty": 30,
+  "prompt": "Atteins 11 avec ces nombres.",
+  "numbers": [
+   2,
+   4,
+   6,
+   8
+  ],
+  "target": 11,
+  "solution": [
+   "6 ÷ 2 = 3",
+   "3 + 8 = 11"
+  ],
+  "explanation": "Une solution : 6 ÷ 2 = 3, puis 3 + 8 = 11."
+ },
+ {
+  "key": "dt-ct-029",
+  "concept": "calc.mental.dt_compte_29",
+  "label": "Le compte est bon n° 29",
+  "type": "number_target",
+  "difficulty": 58,
+  "prompt": "Atteins 11 avec ces nombres.",
+  "numbers": [
+   1,
+   1,
+   3,
+   20
+  ],
+  "target": 11,
+  "solution": [
+   "3 − 1 = 2",
+   "20 ÷ 2 = 10",
+   "1 + 10 = 11"
+  ],
+  "explanation": "Une solution : 3 − 1 = 2, puis 20 ÷ 2 = 10, puis 1 + 10 = 11."
+ },
+ {
+  "key": "dt-ct-030",
+  "concept": "calc.mental.dt_compte_30",
+  "label": "Le compte est bon n° 30",
+  "type": "number_target",
+  "difficulty": 31,
+  "prompt": "Atteins 38 avec ces nombres.",
+  "numbers": [
+   5,
+   5,
+   8,
+   25
+  ],
+  "target": 38,
+  "solution": [
+   "5 + 8 = 13",
+   "13 + 25 = 38"
+  ],
+  "explanation": "Une solution : 5 + 8 = 13, puis 13 + 25 = 38."
+ },
+ {
+  "key": "dt-ct-031",
+  "concept": "calc.mental.dt_compte_31",
+  "label": "Le compte est bon n° 31",
+  "type": "number_target",
+  "difficulty": 31,
+  "prompt": "Atteins 42 avec ces nombres.",
+  "numbers": [
+   2,
+   3,
+   6,
+   20
+  ],
+  "target": 42,
+  "solution": [
+   "20 − 6 = 14",
+   "3 × 14 = 42"
+  ],
+  "explanation": "Une solution : 20 − 6 = 14, puis 3 × 14 = 42."
+ },
+ {
+  "key": "dt-ct-032",
+  "concept": "calc.mental.dt_compte_32",
+  "label": "Le compte est bon n° 32",
+  "type": "number_target",
+  "difficulty": 49,
+  "prompt": "Atteins 99 avec ces nombres.",
+  "numbers": [
+   1,
+   5,
+   7,
+   15
+  ],
+  "target": 99,
+  "solution": [
+   "1 + 5 = 6",
+   "7 × 15 = 105",
+   "105 − 6 = 99"
+  ],
+  "explanation": "Une solution : 1 + 5 = 6, puis 7 × 15 = 105, puis 105 − 6 = 99."
+ },
+ {
+  "key": "dt-ct-033",
+  "concept": "calc.mental.dt_compte_33",
+  "label": "Le compte est bon n° 33",
+  "type": "number_target",
+  "difficulty": 38,
+  "prompt": "Atteins 24 avec ces nombres.",
+  "numbers": [
+   2,
+   5,
+   8,
+   25
+  ],
+  "target": 24,
+  "solution": [
+   "5 − 2 = 3",
+   "3 × 8 = 24"
+  ],
+  "explanation": "Une solution : 5 − 2 = 3, puis 3 × 8 = 24."
+ },
+ {
+  "key": "dt-ct-034",
+  "concept": "calc.mental.dt_compte_34",
+  "label": "Le compte est bon n° 34",
+  "type": "number_target",
+  "difficulty": 33,
+  "prompt": "Atteins 32 avec ces nombres.",
+  "numbers": [
+   2,
+   6,
+   8,
+   10
+  ],
+  "target": 32,
+  "solution": [
+   "6 − 2 = 4",
+   "4 × 8 = 32"
+  ],
+  "explanation": "Une solution : 6 − 2 = 4, puis 4 × 8 = 32."
+ },
+ {
+  "key": "dt-ct-035",
+  "concept": "calc.mental.dt_compte_35",
+  "label": "Le compte est bon n° 35",
+  "type": "number_target",
+  "difficulty": 58,
+  "prompt": "Atteins 22 avec ces nombres.",
+  "numbers": [
+   1,
+   1,
+   3,
+   10
+  ],
+  "target": 22,
+  "solution": [
+   "1 + 10 = 11",
+   "3 − 1 = 2",
+   "2 × 11 = 22"
+  ],
+  "explanation": "Une solution : 1 + 10 = 11, puis 3 − 1 = 2, puis 2 × 11 = 22."
+ },
+ {
+  "key": "dt-ct-036",
+  "concept": "calc.mental.dt_compte_36",
+  "label": "Le compte est bon n° 36",
+  "type": "number_target",
+  "difficulty": 37,
+  "prompt": "Atteins 33 avec ces nombres.",
+  "numbers": [
+   4,
+   5,
+   7,
+   10
+  ],
+  "target": 33,
+  "solution": [
+   "4 × 7 = 28",
+   "5 + 28 = 33"
+  ],
+  "explanation": "Une solution : 4 × 7 = 28, puis 5 + 28 = 33."
+ },
+ {
+  "key": "dt-ct-037",
+  "concept": "calc.mental.dt_compte_37",
+  "label": "Le compte est bon n° 37",
+  "type": "number_target",
+  "difficulty": 32,
+  "prompt": "Atteins 60 avec ces nombres.",
+  "numbers": [
+   3,
+   4,
+   5,
+   5
+  ],
+  "target": 60,
+  "solution": [
+   "3 × 4 = 12",
+   "5 × 12 = 60"
+  ],
+  "explanation": "Une solution : 3 × 4 = 12, puis 5 × 12 = 60."
+ },
+ {
+  "key": "dt-ct-038",
+  "concept": "calc.mental.dt_compte_38",
+  "label": "Le compte est bon n° 38",
+  "type": "number_target",
+  "difficulty": 48,
+  "prompt": "Atteins 50 avec ces nombres.",
+  "numbers": [
+   3,
+   7,
+   7,
+   8
+  ],
+  "target": 50,
+  "solution": [
+   "7 + 7 = 14",
+   "3 × 14 = 42",
+   "8 + 42 = 50"
+  ],
+  "explanation": "Une solution : 7 + 7 = 14, puis 3 × 14 = 42, puis 8 + 42 = 50."
+ },
+ {
+  "key": "dt-ct-039",
+  "concept": "calc.mental.dt_compte_39",
+  "label": "Le compte est bon n° 39",
+  "type": "number_target",
+  "difficulty": 37,
+  "prompt": "Atteins 14 avec ces nombres.",
+  "numbers": [
+   2,
+   3,
+   3,
+   5
+  ],
+  "target": 14,
+  "solution": [
+   "3 × 3 = 9",
+   "5 + 9 = 14"
+  ],
+  "explanation": "Une solution : 3 × 3 = 9, puis 5 + 9 = 14."
+ },
+ {
+  "key": "dt-ct-040",
+  "concept": "calc.mental.dt_compte_40",
+  "label": "Le compte est bon n° 40",
+  "type": "number_target",
+  "difficulty": 34,
+  "prompt": "Atteins 60 avec ces nombres.",
+  "numbers": [
+   1,
+   2,
+   5,
+   15
+  ],
+  "target": 60,
+  "solution": [
+   "5 − 1 = 4",
+   "4 × 15 = 60"
+  ],
+  "explanation": "Une solution : 5 − 1 = 4, puis 4 × 15 = 60."
+ },
+ {
+  "key": "dt-ct-041",
+  "concept": "calc.mental.dt_compte_41",
+  "label": "Le compte est bon n° 41",
+  "type": "number_target",
+  "difficulty": 56,
+  "prompt": "Atteins 67 avec ces nombres.",
+  "numbers": [
+   3,
+   8,
+   9,
+   15
+  ],
+  "target": 67,
+  "solution": [
+   "8 × 9 = 72",
+   "15 ÷ 3 = 5",
+   "72 − 5 = 67"
+  ],
+  "explanation": "Une solution : 8 × 9 = 72, puis 15 ÷ 3 = 5, puis 72 − 5 = 67."
+ },
+ {
+  "key": "dt-ct-042",
+  "concept": "calc.mental.dt_compte_42",
+  "label": "Le compte est bon n° 42",
+  "type": "number_target",
+  "difficulty": 31,
+  "prompt": "Atteins 38 avec ces nombres.",
+  "numbers": [
+   4,
+   6,
+   9,
+   25
+  ],
+  "target": 38,
+  "solution": [
+   "4 + 9 = 13",
+   "13 + 25 = 38"
+  ],
+  "explanation": "Une solution : 4 + 9 = 13, puis 13 + 25 = 38."
+ },
+ {
+  "key": "dt-ct-043",
+  "concept": "calc.mental.dt_compte_43",
+  "label": "Le compte est bon n° 43",
+  "type": "number_target",
+  "difficulty": 30,
+  "prompt": "Atteins 70 avec ces nombres.",
+  "numbers": [
+   3,
+   9,
+   10,
+   20
+  ],
+  "target": 70,
+  "solution": [
+   "3 × 20 = 60",
+   "10 + 60 = 70"
+  ],
+  "explanation": "Une solution : 3 × 20 = 60, puis 10 + 60 = 70."
+ },
+ {
+  "key": "dt-ct-044",
+  "concept": "calc.mental.dt_compte_44",
+  "label": "Le compte est bon n° 44",
+  "type": "number_target",
+  "difficulty": 51,
+  "prompt": "Atteins 29 avec ces nombres.",
+  "numbers": [
+   2,
+   6,
+   7,
+   8
+  ],
+  "target": 29,
+  "solution": [
+   "2 × 8 = 16",
+   "6 + 7 = 13",
+   "13 + 16 = 29"
+  ],
+  "explanation": "Une solution : 2 × 8 = 16, puis 6 + 7 = 13, puis 13 + 16 = 29."
+ },
+ {
+  "key": "dt-ct-045",
+  "concept": "calc.mental.dt_compte_45",
+  "label": "Le compte est bon n° 45",
+  "type": "number_target",
+  "difficulty": 33,
+  "prompt": "Atteins 27 avec ces nombres.",
+  "numbers": [
+   2,
+   4,
+   5,
+   8
+  ],
+  "target": 27,
+  "solution": [
+   "4 × 8 = 32",
+   "32 − 5 = 27"
+  ],
+  "explanation": "Une solution : 4 × 8 = 32, puis 32 − 5 = 27."
+ },
+ {
+  "key": "dt-ct-046",
+  "concept": "calc.mental.dt_compte_46",
+  "label": "Le compte est bon n° 46",
+  "type": "number_target",
+  "difficulty": 33,
+  "prompt": "Atteins 84 avec ces nombres.",
+  "numbers": [
+   2,
+   6,
+   10,
+   12
+  ],
+  "target": 84,
+  "solution": [
+   "2 + 12 = 14",
+   "6 × 14 = 84"
+  ],
+  "explanation": "Une solution : 2 + 12 = 14, puis 6 × 14 = 84."
+ },
+ {
+  "key": "dt-ct-047",
+  "concept": "calc.mental.dt_compte_47",
+  "label": "Le compte est bon n° 47",
+  "type": "number_target",
+  "difficulty": 55,
+  "prompt": "Atteins 54 avec ces nombres.",
+  "numbers": [
+   3,
+   7,
+   8,
+   8
+  ],
+  "target": 54,
+  "solution": [
+   "3 + 7 = 10",
+   "8 × 8 = 64",
+   "64 − 10 = 54"
+  ],
+  "explanation": "Une solution : 3 + 7 = 10, puis 8 × 8 = 64, puis 64 − 10 = 54."
+ },
+ {
+  "key": "dt-ct-048",
+  "concept": "calc.mental.dt_compte_48",
+  "label": "Le compte est bon n° 48",
+  "type": "number_target",
+  "difficulty": 37,
+  "prompt": "Atteins 83 avec ces nombres.",
+  "numbers": [
+   2,
+   9,
+   9,
+   10
+  ],
+  "target": 83,
+  "solution": [
+   "9 × 9 = 81",
+   "2 + 81 = 83"
+  ],
+  "explanation": "Une solution : 9 × 9 = 81, puis 2 + 81 = 83."
+ },
+ {
+  "key": "dt-ct-049",
+  "concept": "calc.mental.dt_compte_49",
+  "label": "Le compte est bon n° 49",
+  "type": "number_target",
+  "difficulty": 37,
+  "prompt": "Atteins 96 avec ces nombres.",
+  "numbers": [
+   4,
+   5,
+   7,
+   8
+  ],
+  "target": 96,
+  "solution": [
+   "5 + 7 = 12",
+   "8 × 12 = 96"
+  ],
+  "explanation": "Une solution : 5 + 7 = 12, puis 8 × 12 = 96."
+ },
+ {
+  "key": "dt-ct-050",
+  "concept": "calc.mental.dt_compte_50",
+  "label": "Le compte est bon n° 50",
+  "type": "number_target",
+  "difficulty": 51,
+  "prompt": "Atteins 64 avec ces nombres.",
+  "numbers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "target": 64,
+  "solution": [
+   "1 + 7 = 8",
+   "3 + 5 = 8",
+   "8 × 8 = 64"
+  ],
+  "explanation": "Une solution : 1 + 7 = 8, puis 3 + 5 = 8, puis 8 × 8 = 64."
+ },
+ {
+  "key": "dt-ct-051",
+  "concept": "calc.mental.dt_compte_51",
+  "label": "Le compte est bon n° 51",
+  "type": "number_target",
+  "difficulty": 37,
+  "prompt": "Atteins 50 avec ces nombres.",
+  "numbers": [
+   1,
+   3,
+   9,
+   25
+  ],
+  "target": 50,
+  "solution": [
+   "3 − 1 = 2",
+   "2 × 25 = 50"
+  ],
+  "explanation": "Une solution : 3 − 1 = 2, puis 2 × 25 = 50."
+ },
+ {
+  "key": "dt-ct-052",
+  "concept": "calc.mental.dt_compte_52",
+  "label": "Le compte est bon n° 52",
+  "type": "number_target",
+  "difficulty": 32,
+  "prompt": "Atteins 27 avec ces nombres.",
+  "numbers": [
+   2,
+   5,
+   8,
+   9
+  ],
+  "target": 27,
+  "solution": [
+   "5 − 2 = 3",
+   "3 × 9 = 27"
+  ],
+  "explanation": "Une solution : 5 − 2 = 3, puis 3 × 9 = 27."
+ },
+ {
+  "key": "dt-ct-053",
+  "concept": "calc.mental.dt_compte_53",
+  "label": "Le compte est bon n° 53",
+  "type": "number_target",
+  "difficulty": 57,
+  "prompt": "Atteins 70 avec ces nombres.",
+  "numbers": [
+   1,
+   9,
+   9,
+   20
+  ],
+  "target": 70,
+  "solution": [
+   "1 + 9 = 10",
+   "9 × 10 = 90",
+   "90 − 20 = 70"
+  ],
+  "explanation": "Une solution : 1 + 9 = 10, puis 9 × 10 = 90, puis 90 − 20 = 70."
+ },
+ {
+  "key": "dt-ct-054",
+  "concept": "calc.mental.dt_compte_54",
+  "label": "Le compte est bon n° 54",
+  "type": "number_target",
+  "difficulty": 35,
+  "prompt": "Atteins 54 avec ces nombres.",
+  "numbers": [
+   4,
+   5,
+   10,
+   20
+  ],
+  "target": 54,
+  "solution": [
+   "5 × 10 = 50",
+   "4 + 50 = 54"
+  ],
+  "explanation": "Une solution : 5 × 10 = 50, puis 4 + 50 = 54."
+ },
+ {
+  "key": "dt-ct-055",
+  "concept": "calc.mental.dt_compte_55",
+  "label": "Le compte est bon n° 55",
+  "type": "number_target",
+  "difficulty": 35,
+  "prompt": "Atteins 56 avec ces nombres.",
+  "numbers": [
+   2,
+   3,
+   8,
+   10
+  ],
+  "target": 56,
+  "solution": [
+   "10 − 3 = 7",
+   "7 × 8 = 56"
+  ],
+  "explanation": "Une solution : 10 − 3 = 7, puis 7 × 8 = 56."
+ },
+ {
+  "key": "dt-ct-056",
+  "concept": "calc.mental.dt_compte_56",
+  "label": "Le compte est bon n° 56",
+  "type": "number_target",
+  "difficulty": 49,
+  "prompt": "Atteins 85 avec ces nombres.",
+  "numbers": [
+   1,
+   6,
+   9,
+   10
+  ],
+  "target": 85,
+  "solution": [
+   "6 − 1 = 5",
+   "9 × 10 = 90",
+   "90 − 5 = 85"
+  ],
+  "explanation": "Une solution : 6 − 1 = 5, puis 9 × 10 = 90, puis 90 − 5 = 85."
+ },
+ {
+  "key": "dt-ct-057",
+  "concept": "calc.mental.dt_compte_57",
+  "label": "Le compte est bon n° 57",
+  "type": "number_target",
+  "difficulty": 34,
+  "prompt": "Atteins 32 avec ces nombres.",
+  "numbers": [
+   2,
+   4,
+   6,
+   6
+  ],
+  "target": 32,
+  "solution": [
+   "2 + 6 = 8",
+   "4 × 8 = 32"
+  ],
+  "explanation": "Une solution : 2 + 6 = 8, puis 4 × 8 = 32."
+ },
+ {
+  "key": "dt-ct-058",
+  "concept": "calc.mental.dt_compte_58",
+  "label": "Le compte est bon n° 58",
+  "type": "number_target",
+  "difficulty": 35,
+  "prompt": "Atteins 44 avec ces nombres.",
+  "numbers": [
+   5,
+   6,
+   8,
+   10
+  ],
+  "target": 44,
+  "solution": [
+   "5 × 10 = 50",
+   "50 − 6 = 44"
+  ],
+  "explanation": "Une solution : 5 × 10 = 50, puis 50 − 6 = 44."
+ },
+ {
+  "key": "dt-ct-059",
+  "concept": "calc.mental.dt_compte_59",
+  "label": "Le compte est bon n° 59",
+  "type": "number_target",
+  "difficulty": 55,
+  "prompt": "Atteins 26 avec ces nombres.",
+  "numbers": [
+   1,
+   4,
+   8,
+   10
+  ],
+  "target": 26,
+  "solution": [
+   "1 + 8 = 9",
+   "4 × 9 = 36",
+   "36 − 10 = 26"
+  ],
+  "explanation": "Une solution : 1 + 8 = 9, puis 4 × 9 = 36, puis 36 − 10 = 26."
+ },
+ {
+  "key": "dt-ct-060",
+  "concept": "calc.mental.dt_compte_60",
+  "label": "Le compte est bon n° 60",
+  "type": "number_target",
+  "difficulty": 32,
+  "prompt": "Atteins 70 avec ces nombres.",
+  "numbers": [
+   2,
+   9,
+   10,
+   12
+  ],
+  "target": 70,
+  "solution": [
+   "9 − 2 = 7",
+   "7 × 10 = 70"
+  ],
+  "explanation": "Une solution : 9 − 2 = 7, puis 7 × 10 = 70."
+ }
+]

@@ -1,0 +1,1172 @@
+[
+ {
+  "key": "dt-pin-001",
+  "concept": "geography.countries.dt_epingle_strasbourg",
+  "label": "Épingle : Strasbourg",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle Strasbourg sur la carte.",
+  "place": "Strasbourg",
+  "lat": 48.58,
+  "lon": 7.75,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Au bord du Rhin, face à l'Allemagne : le siège du Parlement européen."
+ },
+ {
+  "key": "dt-pin-002",
+  "concept": "geography.countries.dt_epingle_marseille",
+  "label": "Épingle : Marseille",
+  "type": "map_pin",
+  "difficulty": 15,
+  "prompt": "Épingle Marseille sur la carte.",
+  "place": "Marseille",
+  "lat": 43.3,
+  "lon": 5.37,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur la Méditerranée, deuxième ville de France."
+ },
+ {
+  "key": "dt-pin-003",
+  "concept": "geography.countries.dt_epingle_lille",
+  "label": "Épingle : Lille",
+  "type": "map_pin",
+  "difficulty": 20,
+  "prompt": "Épingle Lille sur la carte.",
+  "place": "Lille",
+  "lat": 50.63,
+  "lon": 3.06,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Tout au nord, à deux pas de la Belgique."
+ },
+ {
+  "key": "dt-pin-004",
+  "concept": "geography.countries.dt_epingle_bordeaux",
+  "label": "Épingle : Bordeaux",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle Bordeaux sur la carte.",
+  "place": "Bordeaux",
+  "lat": 44.84,
+  "lon": -0.58,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur la Garonne, près de l'Atlantique, au milieu des vignes."
+ },
+ {
+  "key": "dt-pin-005",
+  "concept": "geography.countries.dt_epingle_brest",
+  "label": "Épingle : Brest",
+  "type": "map_pin",
+  "difficulty": 35,
+  "prompt": "Épingle Brest sur la carte.",
+  "place": "Brest",
+  "lat": 48.39,
+  "lon": -4.49,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "À la pointe de la Bretagne, tout à l'ouest."
+ },
+ {
+  "key": "dt-pin-006",
+  "concept": "geography.countries.dt_epingle_lyon",
+  "label": "Épingle : Lyon",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle Lyon sur la carte.",
+  "place": "Lyon",
+  "lat": 45.76,
+  "lon": 4.84,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Au confluent du Rhône et de la Saône."
+ },
+ {
+  "key": "dt-pin-007",
+  "concept": "geography.countries.dt_epingle_nice",
+  "label": "Épingle : Nice",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle Nice sur la carte.",
+  "place": "Nice",
+  "lat": 43.7,
+  "lon": 7.27,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur la Côte d'Azur, près de l'Italie."
+ },
+ {
+  "key": "dt-pin-008",
+  "concept": "geography.countries.dt_epingle_toulouse",
+  "label": "Épingle : Toulouse",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle Toulouse sur la carte.",
+  "place": "Toulouse",
+  "lat": 43.6,
+  "lon": 1.44,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "La Ville rose, dans le Sud-Ouest, au bord de la Garonne."
+ },
+ {
+  "key": "dt-pin-009",
+  "concept": "geography.countries.dt_epingle_nantes",
+  "label": "Épingle : Nantes",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Nantes sur la carte.",
+  "place": "Nantes",
+  "lat": 47.22,
+  "lon": -1.55,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur la Loire, près de son estuaire."
+ },
+ {
+  "key": "dt-pin-010",
+  "concept": "geography.monuments.dt_epingle_mont_saint_michel",
+  "label": "Épingle : le Mont-Saint-Michel",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle le Mont-Saint-Michel sur la carte.",
+  "place": "Le Mont-Saint-Michel",
+  "lat": 48.64,
+  "lon": -1.51,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Dans une baie à la limite de la Normandie et de la Bretagne."
+ },
+ {
+  "key": "dt-pin-011",
+  "concept": "geography.monuments.dt_epingle_carcassonne",
+  "label": "Épingle : la cité de Carcassonne",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle la cité de Carcassonne sur la carte.",
+  "place": "La cité de Carcassonne",
+  "lat": 43.21,
+  "lon": 2.35,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Dans l'Aude, entre Toulouse et la Méditerranée."
+ },
+ {
+  "key": "dt-pin-012",
+  "concept": "geography.relief.dt_epingle_mont_blanc",
+  "label": "Épingle : le mont Blanc",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle le mont Blanc sur la carte.",
+  "place": "Le mont Blanc",
+  "lat": 45.83,
+  "lon": 6.86,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Dans les Alpes, au-dessus de Chamonix, à la frontière italienne."
+ },
+ {
+  "key": "dt-pin-013",
+  "concept": "geography.countries.dt_epingle_ajaccio",
+  "label": "Épingle : Ajaccio",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Ajaccio sur la carte.",
+  "place": "Ajaccio",
+  "lat": 41.93,
+  "lon": 8.74,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur la côte ouest de la Corse ; Napoléon y est né."
+ },
+ {
+  "key": "dt-pin-014",
+  "concept": "geography.countries.dt_epingle_dijon",
+  "label": "Épingle : Dijon",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Dijon sur la carte.",
+  "place": "Dijon",
+  "lat": 47.32,
+  "lon": 5.04,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "En Bourgogne, célèbre pour sa moutarde."
+ },
+ {
+  "key": "dt-pin-015",
+  "concept": "geography.countries.dt_epingle_clermont",
+  "label": "Épingle : Clermont-Ferrand",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Clermont-Ferrand sur la carte.",
+  "place": "Clermont-Ferrand",
+  "lat": 45.78,
+  "lon": 3.08,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Au cœur du Massif central, au pied du puy de Dôme."
+ },
+ {
+  "key": "dt-pin-016",
+  "concept": "geography.countries.dt_epingle_biarritz",
+  "label": "Épingle : Biarritz",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Biarritz sur la carte.",
+  "place": "Biarritz",
+  "lat": 43.48,
+  "lon": -1.56,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Au Pays basque, sur l'Atlantique, près de l'Espagne."
+ },
+ {
+  "key": "dt-pin-017",
+  "concept": "geography.countries.dt_epingle_reims",
+  "label": "Épingle : Reims",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Reims sur la carte.",
+  "place": "Reims",
+  "lat": 49.26,
+  "lon": 4.03,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "En Champagne ; les rois de France y étaient sacrés."
+ },
+ {
+  "key": "dt-pin-018",
+  "concept": "geography.countries.dt_epingle_rouen",
+  "label": "Épingle : Rouen",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Rouen sur la carte.",
+  "place": "Rouen",
+  "lat": 49.44,
+  "lon": 1.1,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "En Normandie, sur la Seine ; Jeanne d'Arc y fut brûlée."
+ },
+ {
+  "key": "dt-pin-019",
+  "concept": "geography.countries.dt_epingle_grenoble",
+  "label": "Épingle : Grenoble",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Grenoble sur la carte.",
+  "place": "Grenoble",
+  "lat": 45.19,
+  "lon": 5.72,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Au pied des Alpes, dans l'Isère."
+ },
+ {
+  "key": "dt-pin-020",
+  "concept": "geography.countries.dt_epingle_avignon",
+  "label": "Épingle : Avignon",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Avignon sur la carte.",
+  "place": "Avignon",
+  "lat": 43.95,
+  "lon": 4.81,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur le Rhône, en Provence : la cité des papes."
+ },
+ {
+  "key": "dt-pin-021",
+  "concept": "geography.monuments.dt_epingle_lascaux",
+  "label": "Épingle : la grotte de Lascaux",
+  "type": "map_pin",
+  "difficulty": 55,
+  "prompt": "Épingle la grotte de Lascaux sur la carte.",
+  "place": "La grotte de Lascaux",
+  "lat": 45.05,
+  "lon": 1.17,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "En Dordogne, près de Montignac."
+ },
+ {
+  "key": "dt-pin-022",
+  "concept": "geography.countries.dt_epingle_verdun",
+  "label": "Épingle : Verdun",
+  "type": "map_pin",
+  "difficulty": 50,
+  "prompt": "Épingle Verdun sur la carte.",
+  "place": "Verdun",
+  "lat": 49.16,
+  "lon": 5.38,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "En Lorraine, sur la Meuse ; théâtre de la grande bataille de 1916."
+ },
+ {
+  "key": "dt-pin-023",
+  "concept": "geography.countries.dt_epingle_calais",
+  "label": "Épingle : Calais",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Calais sur la carte.",
+  "place": "Calais",
+  "lat": 50.95,
+  "lon": 1.86,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur la Manche, au plus près de l'Angleterre."
+ },
+ {
+  "key": "dt-pin-024",
+  "concept": "geography.countries.dt_epingle_perpignan",
+  "label": "Épingle : Perpignan",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Perpignan sur la carte.",
+  "place": "Perpignan",
+  "lat": 42.7,
+  "lon": 2.9,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Tout au sud, près des Pyrénées et de l'Espagne."
+ },
+ {
+  "key": "dt-pin-025",
+  "concept": "geography.countries.dt_epingle_orleans",
+  "label": "Épingle : Orléans",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Orléans sur la carte.",
+  "place": "Orléans",
+  "lat": 47.9,
+  "lon": 1.9,
+  "region": {
+   "lat": 46.6,
+   "lon": 2.4,
+   "span": 11
+  },
+  "tolerance_km": 60,
+  "explanation": "Sur la Loire, au sud de Paris ; ville de Jeanne d'Arc."
+ },
+ {
+  "key": "dt-pin-026",
+  "concept": "geography.capitals.dt_epingle_rome",
+  "label": "Épingle : Rome",
+  "type": "map_pin",
+  "difficulty": 20,
+  "prompt": "Épingle Rome sur la carte.",
+  "place": "Rome",
+  "lat": 41.9,
+  "lon": 12.5,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au centre de l'Italie, sur le Tibre."
+ },
+ {
+  "key": "dt-pin-027",
+  "concept": "geography.capitals.dt_epingle_berlin",
+  "label": "Épingle : Berlin",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle Berlin sur la carte.",
+  "place": "Berlin",
+  "lat": 52.52,
+  "lon": 13.4,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au nord-est de l'Allemagne, près de la Pologne."
+ },
+ {
+  "key": "dt-pin-028",
+  "concept": "geography.capitals.dt_epingle_madrid",
+  "label": "Épingle : Madrid",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle Madrid sur la carte.",
+  "place": "Madrid",
+  "lat": 40.42,
+  "lon": -3.7,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au centre de l'Espagne."
+ },
+ {
+  "key": "dt-pin-029",
+  "concept": "geography.capitals.dt_epingle_londres",
+  "label": "Épingle : Londres",
+  "type": "map_pin",
+  "difficulty": 20,
+  "prompt": "Épingle Londres sur la carte.",
+  "place": "Londres",
+  "lat": 51.51,
+  "lon": -0.13,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Sur la Tamise, au sud-est de l'Angleterre."
+ },
+ {
+  "key": "dt-pin-030",
+  "concept": "geography.capitals.dt_epingle_vienne",
+  "label": "Épingle : Vienne",
+  "type": "map_pin",
+  "difficulty": 35,
+  "prompt": "Épingle Vienne sur la carte.",
+  "place": "Vienne",
+  "lat": 48.21,
+  "lon": 16.37,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Sur le Danube, à l'est de l'Autriche."
+ },
+ {
+  "key": "dt-pin-031",
+  "concept": "geography.capitals.dt_epingle_athenes",
+  "label": "Épingle : Athènes",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Athènes sur la carte.",
+  "place": "Athènes",
+  "lat": 37.98,
+  "lon": 23.73,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au sud-est de la Grèce, au pied de l'Acropole."
+ },
+ {
+  "key": "dt-pin-032",
+  "concept": "geography.capitals.dt_epingle_oslo",
+  "label": "Épingle : Oslo",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Oslo sur la carte.",
+  "place": "Oslo",
+  "lat": 59.91,
+  "lon": 10.75,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au fond d'un fjord, au sud de la Norvège."
+ },
+ {
+  "key": "dt-pin-033",
+  "concept": "geography.capitals.dt_epingle_varsovie",
+  "label": "Épingle : Varsovie",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Varsovie sur la carte.",
+  "place": "Varsovie",
+  "lat": 52.23,
+  "lon": 21.01,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au centre-est de la Pologne, sur la Vistule."
+ },
+ {
+  "key": "dt-pin-034",
+  "concept": "geography.capitals.dt_epingle_lisbonne",
+  "label": "Épingle : Lisbonne",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Lisbonne sur la carte.",
+  "place": "Lisbonne",
+  "lat": 38.72,
+  "lon": -9.14,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "À l'embouchure du Tage, sur l'Atlantique."
+ },
+ {
+  "key": "dt-pin-035",
+  "concept": "geography.capitals.dt_epingle_prague",
+  "label": "Épingle : Prague",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Prague sur la carte.",
+  "place": "Prague",
+  "lat": 50.08,
+  "lon": 14.44,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au cœur de la Tchéquie, sur la Vltava."
+ },
+ {
+  "key": "dt-pin-036",
+  "concept": "geography.capitals.dt_epingle_dublin",
+  "label": "Épingle : Dublin",
+  "type": "map_pin",
+  "difficulty": 35,
+  "prompt": "Épingle Dublin sur la carte.",
+  "place": "Dublin",
+  "lat": 53.35,
+  "lon": -6.26,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Sur la côte est de l'Irlande."
+ },
+ {
+  "key": "dt-pin-037",
+  "concept": "geography.capitals.dt_epingle_budapest",
+  "label": "Épingle : Budapest",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Budapest sur la carte.",
+  "place": "Budapest",
+  "lat": 47.5,
+  "lon": 19.04,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Sur le Danube, au cœur de la Hongrie."
+ },
+ {
+  "key": "dt-pin-038",
+  "concept": "geography.capitals.dt_epingle_stockholm",
+  "label": "Épingle : Stockholm",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Stockholm sur la carte.",
+  "place": "Stockholm",
+  "lat": 59.33,
+  "lon": 18.07,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Sur la Baltique, à l'est de la Suède."
+ },
+ {
+  "key": "dt-pin-039",
+  "concept": "geography.monuments.dt_epingle_pompei",
+  "label": "Épingle : Pompéi",
+  "type": "map_pin",
+  "difficulty": 45,
+  "prompt": "Épingle Pompéi sur la carte.",
+  "place": "Pompéi",
+  "lat": 40.75,
+  "lon": 14.49,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au pied du Vésuve, près de Naples."
+ },
+ {
+  "key": "dt-pin-040",
+  "concept": "geography.monuments.dt_epingle_pise",
+  "label": "Épingle : la tour de Pise",
+  "type": "map_pin",
+  "difficulty": 35,
+  "prompt": "Épingle la tour de Pise sur la carte.",
+  "place": "La tour de Pise",
+  "lat": 43.72,
+  "lon": 10.4,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "En Toscane, près de la côte."
+ },
+ {
+  "key": "dt-pin-041",
+  "concept": "geography.monuments.dt_epingle_sagrada",
+  "label": "Épingle : la Sagrada Família",
+  "type": "map_pin",
+  "difficulty": 35,
+  "prompt": "Épingle la Sagrada Família sur la carte.",
+  "place": "La Sagrada Família",
+  "lat": 41.4,
+  "lon": 2.17,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "À Barcelone, au bord de la Méditerranée."
+ },
+ {
+  "key": "dt-pin-042",
+  "concept": "geography.capitals.dt_epingle_amsterdam_pin",
+  "label": "Épingle : Amsterdam",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Amsterdam sur la carte.",
+  "place": "Amsterdam",
+  "lat": 52.37,
+  "lon": 4.9,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Au nord-ouest des Pays-Bas."
+ },
+ {
+  "key": "dt-pin-043",
+  "concept": "geography.capitals.dt_epingle_copenhague",
+  "label": "Épingle : Copenhague",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Copenhague sur la carte.",
+  "place": "Copenhague",
+  "lat": 55.68,
+  "lon": 12.57,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Sur une île de l'est du Danemark, face à la Suède."
+ },
+ {
+  "key": "dt-pin-044",
+  "concept": "geography.capitals.dt_epingle_helsinki_pin",
+  "label": "Épingle : Helsinki",
+  "type": "map_pin",
+  "difficulty": 45,
+  "prompt": "Épingle Helsinki sur la carte.",
+  "place": "Helsinki",
+  "lat": 60.17,
+  "lon": 24.94,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "Sur le golfe de Finlande, au sud du pays."
+ },
+ {
+  "key": "dt-pin-045",
+  "concept": "geography.countries.dt_epingle_edimbourg",
+  "label": "Épingle : Édimbourg",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Édimbourg sur la carte.",
+  "place": "Édimbourg",
+  "lat": 55.95,
+  "lon": -3.19,
+  "region": {
+   "lat": 50,
+   "lon": 12,
+   "span": 36
+  },
+  "tolerance_km": 200,
+  "explanation": "La capitale de l'Écosse, sur la côte est."
+ },
+ {
+  "key": "dt-pin-046",
+  "concept": "geography.capitals.dt_epingle_tokyo",
+  "label": "Épingle : Tokyo",
+  "type": "map_pin",
+  "difficulty": 20,
+  "prompt": "Épingle Tokyo sur la carte.",
+  "place": "Tokyo",
+  "lat": 35.68,
+  "lon": 139.69,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Sur l'île de Honshū, au Japon."
+ },
+ {
+  "key": "dt-pin-047",
+  "concept": "geography.countries.dt_epingle_new_york",
+  "label": "Épingle : New York",
+  "type": "map_pin",
+  "difficulty": 20,
+  "prompt": "Épingle New York sur la carte.",
+  "place": "New York",
+  "lat": 40.71,
+  "lon": -74.01,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Sur la côte est des États-Unis."
+ },
+ {
+  "key": "dt-pin-048",
+  "concept": "geography.countries.dt_epingle_rio",
+  "label": "Épingle : Rio de Janeiro",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Rio de Janeiro sur la carte.",
+  "place": "Rio de Janeiro",
+  "lat": -22.91,
+  "lon": -43.17,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Sur la côte sud-est du Brésil."
+ },
+ {
+  "key": "dt-pin-049",
+  "concept": "geography.monuments.dt_epingle_gizeh",
+  "label": "Épingle : les pyramides de Gizeh",
+  "type": "map_pin",
+  "difficulty": 25,
+  "prompt": "Épingle les pyramides de Gizeh sur la carte.",
+  "place": "Les pyramides de Gizeh",
+  "lat": 29.98,
+  "lon": 31.13,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Au bord du Caire, en Égypte, près du Nil."
+ },
+ {
+  "key": "dt-pin-050",
+  "concept": "geography.countries.dt_epingle_sydney",
+  "label": "Épingle : Sydney",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Sydney sur la carte.",
+  "place": "Sydney",
+  "lat": -33.87,
+  "lon": 151.21,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Sur la côte sud-est de l'Australie."
+ },
+ {
+  "key": "dt-pin-051",
+  "concept": "geography.monuments.dt_epingle_machu_picchu",
+  "label": "Épingle : le Machu Picchu",
+  "type": "map_pin",
+  "difficulty": 45,
+  "prompt": "Épingle le Machu Picchu sur la carte.",
+  "place": "Le Machu Picchu",
+  "lat": -13.16,
+  "lon": -72.55,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Dans les Andes, au Pérou."
+ },
+ {
+  "key": "dt-pin-052",
+  "concept": "geography.monuments.dt_epingle_taj_mahal",
+  "label": "Épingle : le Taj Mahal",
+  "type": "map_pin",
+  "difficulty": 45,
+  "prompt": "Épingle le Taj Mahal sur la carte.",
+  "place": "Le Taj Mahal",
+  "lat": 27.18,
+  "lon": 78.04,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "À Agra, au nord de l'Inde."
+ },
+ {
+  "key": "dt-pin-053",
+  "concept": "geography.capitals.dt_epingle_moscou",
+  "label": "Épingle : Moscou",
+  "type": "map_pin",
+  "difficulty": 30,
+  "prompt": "Épingle Moscou sur la carte.",
+  "place": "Moscou",
+  "lat": 55.76,
+  "lon": 37.62,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "À l'ouest de la Russie, en Europe."
+ },
+ {
+  "key": "dt-pin-054",
+  "concept": "geography.countries.dt_epingle_le_cap",
+  "label": "Épingle : Le Cap",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Le Cap sur la carte.",
+  "place": "Le Cap",
+  "lat": -33.92,
+  "lon": 18.42,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "À la pointe sud-ouest de l'Afrique."
+ },
+ {
+  "key": "dt-pin-055",
+  "concept": "geography.capitals.dt_epingle_pekin",
+  "label": "Épingle : Pékin",
+  "type": "map_pin",
+  "difficulty": 35,
+  "prompt": "Épingle Pékin sur la carte.",
+  "place": "Pékin",
+  "lat": 39.9,
+  "lon": 116.4,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Au nord-est de la Chine."
+ },
+ {
+  "key": "dt-pin-056",
+  "concept": "geography.capitals.dt_epingle_mexico",
+  "label": "Épingle : Mexico",
+  "type": "map_pin",
+  "difficulty": 35,
+  "prompt": "Épingle Mexico sur la carte.",
+  "place": "Mexico",
+  "lat": 19.43,
+  "lon": -99.13,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Au centre du Mexique, en altitude."
+ },
+ {
+  "key": "dt-pin-057",
+  "concept": "geography.capitals.dt_epingle_buenos_aires",
+  "label": "Épingle : Buenos Aires",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Buenos Aires sur la carte.",
+  "place": "Buenos Aires",
+  "lat": -34.6,
+  "lon": -58.38,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Sur le Río de la Plata, en Argentine."
+ },
+ {
+  "key": "dt-pin-058",
+  "concept": "geography.relief.dt_epingle_everest",
+  "label": "Épingle : l'Everest",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle l'Everest sur la carte.",
+  "place": "L'Everest",
+  "lat": 27.99,
+  "lon": 86.93,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Dans l'Himalaya, entre le Népal et la Chine."
+ },
+ {
+  "key": "dt-pin-059",
+  "concept": "geography.relief.dt_epingle_niagara",
+  "label": "Épingle : les chutes du Niagara",
+  "type": "map_pin",
+  "difficulty": 45,
+  "prompt": "Épingle les chutes du Niagara sur la carte.",
+  "place": "Les chutes du Niagara",
+  "lat": 43.08,
+  "lon": -79.07,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "À la frontière entre le Canada et les États-Unis."
+ },
+ {
+  "key": "dt-pin-060",
+  "concept": "geography.capitals.dt_epingle_ottawa_pin",
+  "label": "Épingle : Ottawa",
+  "type": "map_pin",
+  "difficulty": 50,
+  "prompt": "Épingle Ottawa sur la carte.",
+  "place": "Ottawa",
+  "lat": 45.42,
+  "lon": -75.7,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Au sud-est du Canada, près de la frontière américaine."
+ },
+ {
+  "key": "dt-pin-061",
+  "concept": "geography.capitals.dt_epingle_nairobi_pin",
+  "label": "Épingle : Nairobi",
+  "type": "map_pin",
+  "difficulty": 50,
+  "prompt": "Épingle Nairobi sur la carte.",
+  "place": "Nairobi",
+  "lat": -1.29,
+  "lon": 36.82,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Au Kenya, près de l'équateur."
+ },
+ {
+  "key": "dt-pin-062",
+  "concept": "geography.countries.dt_epingle_dubai",
+  "label": "Épingle : Dubaï",
+  "type": "map_pin",
+  "difficulty": 40,
+  "prompt": "Épingle Dubaï sur la carte.",
+  "place": "Dubaï",
+  "lat": 25.2,
+  "lon": 55.27,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Sur le golfe Persique, aux Émirats arabes unis."
+ },
+ {
+  "key": "dt-pin-063",
+  "concept": "geography.capitals.dt_epingle_bangkok",
+  "label": "Épingle : Bangkok",
+  "type": "map_pin",
+  "difficulty": 45,
+  "prompt": "Épingle Bangkok sur la carte.",
+  "place": "Bangkok",
+  "lat": 13.76,
+  "lon": 100.5,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Au sud de la Thaïlande."
+ },
+ {
+  "key": "dt-pin-064",
+  "concept": "geography.capitals.dt_epingle_reykjavik",
+  "label": "Épingle : Reykjavik",
+  "type": "map_pin",
+  "difficulty": 45,
+  "prompt": "Épingle Reykjavik sur la carte.",
+  "place": "Reykjavik",
+  "lat": 64.15,
+  "lon": -21.94,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Sur la côte ouest de l'Islande, près du cercle polaire."
+ },
+ {
+  "key": "dt-pin-065",
+  "concept": "geography.monuments.dt_epingle_petra",
+  "label": "Épingle : Petra",
+  "type": "map_pin",
+  "difficulty": 55,
+  "prompt": "Épingle Petra sur la carte.",
+  "place": "Petra",
+  "lat": 30.33,
+  "lon": 35.44,
+  "region": {
+   "lat": 20,
+   "lon": 10,
+   "span": 170
+  },
+  "tolerance_km": 700,
+  "explanation": "Dans le désert du sud de la Jordanie."
+ }
+]

@@ -1,0 +1,2428 @@
+[
+ {
+  "key": "dt-sort-001",
+  "concept": "nature.animals.dt_tri_mammifere",
+  "label": "Tri express : Mammifère ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 30,
+  "prompt": "Mammifère ou pas ?",
+  "groups": [
+   {
+    "label": "Mammifère"
+   },
+   {
+    "label": "Pas mammifère"
+   }
+  ],
+  "items": [
+   [
+    "Dauphin",
+    0
+   ],
+   [
+    "Chauve-souris",
+    0
+   ],
+   [
+    "Ornithorynque",
+    0
+   ],
+   [
+    "Pingouin",
+    1
+   ],
+   [
+    "Requin",
+    1
+   ],
+   [
+    "Crocodile",
+    1
+   ]
+  ],
+  "explanation": "Le dauphin, la chauve-souris et l'ornithorynque (qui pond des œufs) sont des mammifères. Le pingouin est un oiseau, le requin un poisson, le crocodile un reptile."
+ },
+ {
+  "key": "dt-sort-002",
+  "concept": "nature.animals.dt_tri_insecte",
+  "label": "Tri express : Insecte ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Insecte ou pas ?",
+  "groups": [
+   {
+    "label": "Insecte"
+   },
+   {
+    "label": "Pas insecte"
+   }
+  ],
+  "items": [
+   [
+    "Fourmi",
+    0
+   ],
+   [
+    "Coccinelle",
+    0
+   ],
+   [
+    "Papillon",
+    0
+   ],
+   [
+    "Araignée",
+    1
+   ],
+   [
+    "Scorpion",
+    1
+   ],
+   [
+    "Cloporte",
+    1
+   ]
+  ],
+  "explanation": "Un insecte a 6 pattes. L'araignée et le scorpion (8 pattes) sont des arachnides, le cloporte est un crustacé."
+ },
+ {
+  "key": "dt-sort-003",
+  "concept": "nature.animals.dt_tri_ovipare",
+  "label": "Tri express : Pond des œufs ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Pond des œufs ou pas ?",
+  "groups": [
+   {
+    "label": "Pond des œufs"
+   },
+   {
+    "label": "Ne pond pas"
+   }
+  ],
+  "items": [
+   [
+    "Tortue",
+    0
+   ],
+   [
+    "Ornithorynque",
+    0
+   ],
+   [
+    "Autruche",
+    0
+   ],
+   [
+    "Baleine",
+    1
+   ],
+   [
+    "Chauve-souris",
+    1
+   ],
+   [
+    "Kangourou",
+    1
+   ]
+  ],
+  "explanation": "L'ornithorynque est l'un des rares mammifères qui pondent des œufs."
+ },
+ {
+  "key": "dt-sort-004",
+  "concept": "nature.plants.dt_tri_fruit_legume",
+  "label": "Tri express : Fruit ou légume (pour un botaniste)",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 30,
+  "prompt": "Fruit ou légume (pour un botaniste) ?",
+  "groups": [
+   {
+    "label": "Fruit"
+   },
+   {
+    "label": "Légume"
+   }
+  ],
+  "items": [
+   [
+    "Tomate",
+    0
+   ],
+   [
+    "Courgette",
+    0
+   ],
+   [
+    "Avocat",
+    0
+   ],
+   [
+    "Carotte",
+    1
+   ],
+   [
+    "Poireau",
+    1
+   ],
+   [
+    "Pomme de terre",
+    1
+   ]
+  ],
+  "explanation": "Pour un botaniste, un fruit vient d'une fleur et contient les graines : tomate, courgette et avocat en sont."
+ },
+ {
+  "key": "dt-sort-005",
+  "concept": "nature.plants.dt_tri_toxique",
+  "label": "Tri express : Comestible ou toxique",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Comestible ou toxique ?",
+  "groups": [
+   {
+    "label": "Comestible"
+   },
+   {
+    "label": "Toxique"
+   }
+  ],
+  "items": [
+   [
+    "Cèpe",
+    0
+   ],
+   [
+    "Girolle",
+    0
+   ],
+   [
+    "Châtaigne",
+    0
+   ],
+   [
+    "Amanite phalloïde",
+    1
+   ],
+   [
+    "Marron d'Inde",
+    1
+   ],
+   [
+    "Muguet",
+    1
+   ]
+  ],
+  "explanation": "L'amanite phalloïde est mortelle ; le marron d'Inde et le muguet sont toxiques."
+ },
+ {
+  "key": "dt-sort-006",
+  "concept": "nature.marine.dt_tri_eau_douce",
+  "label": "Tri express : Mer ou eau douce",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Mer ou eau douce ?",
+  "groups": [
+   {
+    "label": "Mer"
+   },
+   {
+    "label": "Eau douce"
+   }
+  ],
+  "items": [
+   [
+    "Thon",
+    0
+   ],
+   [
+    "Hareng",
+    0
+   ],
+   [
+    "Hippocampe",
+    0
+   ],
+   [
+    "Brochet",
+    1
+   ],
+   [
+    "Carpe",
+    1
+   ],
+   [
+    "Truite",
+    1
+   ]
+  ],
+  "explanation": "Le brochet, la carpe et la truite vivent en eau douce (certaines truites vont aussi en mer)."
+ },
+ {
+  "key": "dt-sort-007",
+  "concept": "geography.countries.dt_tri_europe_asie",
+  "label": "Tri express : Europe ou Asie",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Europe ou Asie ?",
+  "groups": [
+   {
+    "label": "Europe"
+   },
+   {
+    "label": "Asie"
+   }
+  ],
+  "items": [
+   [
+    "Islande",
+    0
+   ],
+   [
+    "Malte",
+    0
+   ],
+   [
+    "Estonie",
+    0
+   ],
+   [
+    "Mongolie",
+    1
+   ],
+   [
+    "Népal",
+    1
+   ],
+   [
+    "Laos",
+    1
+   ]
+  ],
+  "explanation": "La Turquie et la Russie sont à cheval, d'où leur absence ici."
+ },
+ {
+  "key": "dt-sort-008",
+  "concept": "geography.countries.dt_tri_ue",
+  "label": "Tri express : Dans l'Union européenne ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Dans l'Union européenne ou pas ?",
+  "groups": [
+   {
+    "label": "Dans l'UE"
+   },
+   {
+    "label": "Hors UE"
+   }
+  ],
+  "items": [
+   [
+    "Croatie",
+    0
+   ],
+   [
+    "Irlande",
+    0
+   ],
+   [
+    "Finlande",
+    0
+   ],
+   [
+    "Suisse",
+    1
+   ],
+   [
+    "Norvège",
+    1
+   ],
+   [
+    "Royaume-Uni",
+    1
+   ]
+  ],
+  "explanation": "Le Royaume-Uni a quitté l'UE en 2020 ; la Suisse et la Norvège n'y sont jamais entrées."
+ },
+ {
+  "key": "dt-sort-009",
+  "concept": "geography.countries.dt_tri_hemisphere",
+  "label": "Tri express : Hémisphère Nord ou Sud",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 45,
+  "prompt": "Hémisphère Nord ou Sud ?",
+  "groups": [
+   {
+    "label": "Nord"
+   },
+   {
+    "label": "Sud"
+   }
+  ],
+  "items": [
+   [
+    "Égypte",
+    0
+   ],
+   [
+    "Mexique",
+    0
+   ],
+   [
+    "Inde",
+    0
+   ],
+   [
+    "Argentine",
+    1
+   ],
+   [
+    "Madagascar",
+    1
+   ],
+   [
+    "Nouvelle-Zélande",
+    1
+   ]
+  ],
+  "explanation": "L'équateur traverse notamment l'Équateur, le Kenya et l'Indonésie."
+ },
+ {
+  "key": "dt-sort-010",
+  "concept": "geography.countries.dt_tri_francophone",
+  "label": "Tri express : Le français y est-il langue officielle",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Le français y est-il langue officielle ?",
+  "groups": [
+   {
+    "label": "Oui"
+   },
+   {
+    "label": "Non"
+   }
+  ],
+  "items": [
+   [
+    "Sénégal",
+    0
+   ],
+   [
+    "Belgique",
+    0
+   ],
+   [
+    "Haïti",
+    0
+   ],
+   [
+    "Algérie",
+    1
+   ],
+   [
+    "Portugal",
+    1
+   ],
+   [
+    "Vietnam",
+    1
+   ]
+  ],
+  "explanation": "En Algérie, le français est très parlé mais n'est pas langue officielle."
+ },
+ {
+  "key": "dt-sort-011",
+  "concept": "geography.countries.dt_tri_ile",
+  "label": "Tri express : Île ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Île ou pas ?",
+  "groups": [
+   {
+    "label": "Île"
+   },
+   {
+    "label": "Pas une île"
+   }
+  ],
+  "items": [
+   [
+    "Madagascar",
+    0
+   ],
+   [
+    "Islande",
+    0
+   ],
+   [
+    "Cuba",
+    0
+   ],
+   [
+    "Paraguay",
+    1
+   ],
+   [
+    "Bolivie",
+    1
+   ],
+   [
+    "Suisse",
+    1
+   ]
+  ],
+  "explanation": "Le Paraguay, la Bolivie et la Suisse n'ont même aucun accès à la mer."
+ },
+ {
+  "key": "dt-sort-012",
+  "concept": "geography.capitals.dt_tri_capitale",
+  "label": "Tri express : Capitale ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Capitale ou pas ?",
+  "groups": [
+   {
+    "label": "Capitale"
+   },
+   {
+    "label": "Pas capitale"
+   }
+  ],
+  "items": [
+   [
+    "Canberra",
+    0
+   ],
+   [
+    "Ottawa",
+    0
+   ],
+   [
+    "Berne",
+    0
+   ],
+   [
+    "Sydney",
+    1
+   ],
+   [
+    "Toronto",
+    1
+   ],
+   [
+    "Genève",
+    1
+   ]
+  ],
+  "explanation": "Les plus grandes villes ne sont pas toujours les capitales."
+ },
+ {
+  "key": "dt-sort-013",
+  "concept": "history.contemporary.dt_tri_avant_apres_1900",
+  "label": "Tri express : Avant ou après 1900",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Avant ou après 1900 ?",
+  "groups": [
+   {
+    "label": "Avant 1900"
+   },
+   {
+    "label": "Après 1900"
+   }
+  ],
+  "items": [
+   [
+    "Le téléphone",
+    0
+   ],
+   [
+    "La photographie",
+    0
+   ],
+   [
+    "Le vélo",
+    0
+   ],
+   [
+    "La télévision",
+    1
+   ],
+   [
+    "Le réfrigérateur",
+    1
+   ],
+   [
+    "Le Velcro",
+    1
+   ]
+  ],
+  "explanation": "Téléphone (1876), photographie (années 1820-1830), vélo (XIXe siècle) ; télévision (années 1920), réfrigérateur domestique (années 1910), Velcro (1955)."
+ },
+ {
+  "key": "dt-sort-014",
+  "concept": "history.antiquity.dt_tri_avant_apres_jc",
+  "label": "Tri express : Avant ou après Jésus-Christ",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Avant ou après Jésus-Christ ?",
+  "groups": [
+   {
+    "label": "Avant J.-C."
+   },
+   {
+    "label": "Après J.-C."
+   }
+  ],
+  "items": [
+   [
+    "Jules César",
+    0
+   ],
+   [
+    "Alexandre le Grand",
+    0
+   ],
+   [
+    "Cléopâtre",
+    0
+   ],
+   [
+    "Néron",
+    1
+   ],
+   [
+    "Attila",
+    1
+   ],
+   [
+    "Marc Aurèle",
+    1
+   ]
+  ],
+  "explanation": "César meurt en 44 av. J.-C., Cléopâtre en 30 av. J.-C. ; Néron, Marc Aurèle et Attila vivent après."
+ },
+ {
+  "key": "dt-sort-015",
+  "concept": "history.contemporary.dt_tri_guerres",
+  "label": "Tri express : Première ou Seconde Guerre mondiale",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 45,
+  "prompt": "Première ou Seconde Guerre mondiale ?",
+  "groups": [
+   {
+    "label": "1914-1918"
+   },
+   {
+    "label": "1939-1945"
+   }
+  ],
+  "items": [
+   [
+    "Verdun",
+    0
+   ],
+   [
+    "Les tranchées",
+    0
+   ],
+   [
+    "L'armistice de Rethondes",
+    0
+   ],
+   [
+    "Le Débarquement",
+    1
+   ],
+   [
+    "Stalingrad",
+    1
+   ],
+   [
+    "L'appel du 18 Juin",
+    1
+   ]
+  ],
+  "explanation": "L'armistice du 11 novembre 1918 est signé à Rethondes, en forêt de Compiègne."
+ },
+ {
+  "key": "dt-sort-016",
+  "concept": "history.modern.dt_tri_rois_reines",
+  "label": "Tri express : Roi ou reine de France",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Roi ou reine de France ?",
+  "groups": [
+   {
+    "label": "Roi"
+   },
+   {
+    "label": "Reine"
+   }
+  ],
+  "items": [
+   [
+    "Clovis",
+    0
+   ],
+   [
+    "Henri IV",
+    0
+   ],
+   [
+    "Louis-Philippe",
+    0
+   ],
+   [
+    "Marie-Antoinette",
+    1
+   ],
+   [
+    "Catherine de Médicis",
+    1
+   ],
+   [
+    "Anne d'Autriche",
+    1
+   ]
+  ],
+  "explanation": "Trois reines célèbres, toutes épouses de rois."
+ },
+ {
+  "key": "dt-sort-017",
+  "concept": "science.space.dt_tri_planete",
+  "label": "Tri express : Planète ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 30,
+  "prompt": "Planète ou pas ?",
+  "groups": [
+   {
+    "label": "Planète"
+   },
+   {
+    "label": "Pas une planète"
+   }
+  ],
+  "items": [
+   [
+    "Mercure",
+    0
+   ],
+   [
+    "Neptune",
+    0
+   ],
+   [
+    "Mars",
+    0
+   ],
+   [
+    "Pluton",
+    1
+   ],
+   [
+    "La Lune",
+    1
+   ],
+   [
+    "Le Soleil",
+    1
+   ]
+  ],
+  "explanation": "Depuis 2006, Pluton est une « planète naine ». La Lune est un satellite, le Soleil une étoile."
+ },
+ {
+  "key": "dt-sort-018",
+  "concept": "science.human_body.dt_tri_os_muscle",
+  "label": "Tri express : Os ou muscle",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Os ou muscle ?",
+  "groups": [
+   {
+    "label": "Os"
+   },
+   {
+    "label": "Muscle"
+   }
+  ],
+  "items": [
+   [
+    "Fémur",
+    0
+   ],
+   [
+    "Tibia",
+    0
+   ],
+   [
+    "Omoplate",
+    0
+   ],
+   [
+    "Biceps",
+    1
+   ],
+   [
+    "Mollet",
+    1
+   ],
+   [
+    "Diaphragme",
+    1
+   ]
+  ],
+  "explanation": "Le diaphragme est le muscle principal de la respiration."
+ },
+ {
+  "key": "dt-sort-019",
+  "concept": "science.chemistry.dt_tri_metal",
+  "label": "Tri express : Métal ou non",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Métal ou non ?",
+  "groups": [
+   {
+    "label": "Métal"
+   },
+   {
+    "label": "Non-métal"
+   }
+  ],
+  "items": [
+   [
+    "Cuivre",
+    0
+   ],
+   [
+    "Mercure",
+    0
+   ],
+   [
+    "Aluminium",
+    0
+   ],
+   [
+    "Carbone",
+    1
+   ],
+   [
+    "Soufre",
+    1
+   ],
+   [
+    "Oxygène",
+    1
+   ]
+  ],
+  "explanation": "Le mercure est le seul métal liquide à température ambiante."
+ },
+ {
+  "key": "dt-sort-020",
+  "concept": "science.physics.dt_tri_conducteur",
+  "label": "Tri express : Conduit l'électricité ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Conduit l'électricité ou pas ?",
+  "groups": [
+   {
+    "label": "Conducteur"
+   },
+   {
+    "label": "Isolant"
+   }
+  ],
+  "items": [
+   [
+    "Cuivre",
+    0
+   ],
+   [
+    "Eau salée",
+    0
+   ],
+   [
+    "Graphite (mine de crayon)",
+    0
+   ],
+   [
+    "Caoutchouc",
+    1
+   ],
+   [
+    "Verre",
+    1
+   ],
+   [
+    "Plastique",
+    1
+   ]
+  ],
+  "explanation": "Le graphite conduit l'électricité ; l'eau salée aussi, grâce à ses ions."
+ },
+ {
+  "key": "dt-sort-021",
+  "concept": "arts.painting.dt_tri_monet_vangogh",
+  "label": "Tri express : Monet ou Van Gogh",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 45,
+  "prompt": "Monet ou Van Gogh ?",
+  "groups": [
+   {
+    "label": "Monet"
+   },
+   {
+    "label": "Van Gogh"
+   }
+  ],
+  "items": [
+   [
+    "Les Nymphéas",
+    0
+   ],
+   [
+    "Impression, soleil levant",
+    0
+   ],
+   [
+    "La Gare Saint-Lazare",
+    0
+   ],
+   [
+    "Les Tournesols",
+    1
+   ],
+   [
+    "La Nuit étoilée",
+    1
+   ],
+   [
+    "La Chambre à Arles",
+    1
+   ]
+  ],
+  "explanation": "Monet est le père de l'impressionnisme ; Van Gogh a peint ses toiles les plus célèbres à Arles."
+ },
+ {
+  "key": "dt-sort-022",
+  "concept": "arts.literature.dt_tri_hugo_moliere",
+  "label": "Tri express : Victor Hugo ou Molière",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Victor Hugo ou Molière ?",
+  "groups": [
+   {
+    "label": "Victor Hugo"
+   },
+   {
+    "label": "Molière"
+   }
+  ],
+  "items": [
+   [
+    "Les Misérables",
+    0
+   ],
+   [
+    "Notre-Dame de Paris",
+    0
+   ],
+   [
+    "Les Contemplations",
+    0
+   ],
+   [
+    "Le Malade imaginaire",
+    1
+   ],
+   [
+    "L'Avare",
+    1
+   ],
+   [
+    "Le Bourgeois gentilhomme",
+    1
+   ]
+  ],
+  "explanation": "Hugo écrit au XIXe siècle, Molière au XVIIe."
+ },
+ {
+  "key": "dt-sort-023",
+  "concept": "arts.mythology.dt_tri_grec_romain",
+  "label": "Tri express : Nom grec ou nom romain",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 45,
+  "prompt": "Nom grec ou nom romain ?",
+  "groups": [
+   {
+    "label": "Grec"
+   },
+   {
+    "label": "Romain"
+   }
+  ],
+  "items": [
+   [
+    "Zeus",
+    0
+   ],
+   [
+    "Aphrodite",
+    0
+   ],
+   [
+    "Arès",
+    0
+   ],
+   [
+    "Jupiter",
+    1
+   ],
+   [
+    "Vénus",
+    1
+   ],
+   [
+    "Mars",
+    1
+   ]
+  ],
+  "explanation": "Les Romains ont repris les dieux grecs sous d'autres noms."
+ },
+ {
+  "key": "dt-sort-024",
+  "concept": "music.instruments.dt_tri_vent_cordes",
+  "label": "Tri express : Instrument à vent ou à cordes",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 30,
+  "prompt": "Instrument à vent ou à cordes ?",
+  "groups": [
+   {
+    "label": "Vent"
+   },
+   {
+    "label": "Cordes"
+   }
+  ],
+  "items": [
+   [
+    "Trompette",
+    0
+   ],
+   [
+    "Clarinette",
+    0
+   ],
+   [
+    "Saxophone",
+    0
+   ],
+   [
+    "Violon",
+    1
+   ],
+   [
+    "Harpe",
+    1
+   ],
+   [
+    "Contrebasse",
+    1
+   ]
+  ],
+  "explanation": "Le saxophone, en métal, est pourtant un « bois » : il a une anche."
+ },
+ {
+  "key": "dt-sort-025",
+  "concept": "music.popular.dt_tri_francais_etranger",
+  "label": "Tri express : Chanteur français ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Chanteur français ou pas ?",
+  "groups": [
+   {
+    "label": "Français"
+   },
+   {
+    "label": "Pas français"
+   }
+  ],
+  "items": [
+   [
+    "Johnny Hallyday",
+    0
+   ],
+   [
+    "Édith Piaf",
+    0
+   ],
+   [
+    "Charles Aznavour",
+    0
+   ],
+   [
+    "Jacques Brel",
+    1
+   ],
+   [
+    "Stromae",
+    1
+   ],
+   [
+    "Céline Dion",
+    1
+   ]
+  ],
+  "explanation": "Brel et Stromae sont belges, Céline Dion québécoise."
+ },
+ {
+  "key": "dt-sort-026",
+  "concept": "cinema.animation.dt_tri_disney_pixar",
+  "label": "Tri express : Disney ou Pixar",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Disney ou Pixar ?",
+  "groups": [
+   {
+    "label": "Disney"
+   },
+   {
+    "label": "Pixar"
+   }
+  ],
+  "items": [
+   [
+    "Le Roi lion",
+    0
+   ],
+   [
+    "Aladdin",
+    0
+   ],
+   [
+    "La Belle et la Bête",
+    0
+   ],
+   [
+    "Toy Story",
+    1
+   ],
+   [
+    "Le Monde de Nemo",
+    1
+   ],
+   [
+    "Là-haut",
+    1
+   ]
+  ],
+  "explanation": "Pixar appartient à Disney depuis 2006, mais ses films ont leur propre studio."
+ },
+ {
+  "key": "dt-sort-027",
+  "concept": "cinema.films.dt_tri_francais_us",
+  "label": "Tri express : Film français ou américain",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 35,
+  "prompt": "Film français ou américain ?",
+  "groups": [
+   {
+    "label": "Français"
+   },
+   {
+    "label": "Américain"
+   }
+  ],
+  "items": [
+   [
+    "Intouchables",
+    0
+   ],
+   [
+    "Amélie Poulain",
+    0
+   ],
+   [
+    "Les Visiteurs",
+    0
+   ],
+   [
+    "Titanic",
+    1
+   ],
+   [
+    "Forrest Gump",
+    1
+   ],
+   [
+    "Jurassic Park",
+    1
+   ]
+  ],
+  "explanation": "« Intouchables » est l'un des plus grands succès du cinéma français."
+ },
+ {
+  "key": "dt-sort-028",
+  "concept": "sport.rules.dt_tri_ballon_rond",
+  "label": "Tri express : Ballon rond ou ovale",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 30,
+  "prompt": "Ballon rond ou ovale ?",
+  "groups": [
+   {
+    "label": "Rond"
+   },
+   {
+    "label": "Ovale"
+   }
+  ],
+  "items": [
+   [
+    "Football",
+    0
+   ],
+   [
+    "Basket",
+    0
+   ],
+   [
+    "Volley",
+    0
+   ],
+   [
+    "Rugby",
+    1
+   ],
+   [
+    "Football américain",
+    1
+   ],
+   [
+    "Football australien",
+    1
+   ]
+  ],
+  "explanation": "Le football australien se joue aussi avec un ballon ovale, sur un terrain… ovale."
+ },
+ {
+  "key": "dt-sort-029",
+  "concept": "sport.olympics.dt_tri_ete_hiver",
+  "label": "Tri express : JO d'été ou d'hiver",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 30,
+  "prompt": "JO d'été ou d'hiver ?",
+  "groups": [
+   {
+    "label": "Été"
+   },
+   {
+    "label": "Hiver"
+   }
+  ],
+  "items": [
+   [
+    "Escrime",
+    0
+   ],
+   [
+    "Aviron",
+    0
+   ],
+   [
+    "Judo",
+    0
+   ],
+   [
+    "Biathlon",
+    1
+   ],
+   [
+    "Curling",
+    1
+   ],
+   [
+    "Bobsleigh",
+    1
+   ]
+  ],
+  "explanation": "Le biathlon mêle ski de fond et tir à la carabine."
+ },
+ {
+  "key": "dt-sort-030",
+  "concept": "tech.brands.dt_tri_pays_marque",
+  "label": "Tri express : Marque japonaise ou coréenne",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Marque japonaise ou coréenne ?",
+  "groups": [
+   {
+    "label": "Japon"
+   },
+   {
+    "label": "Corée du Sud"
+   }
+  ],
+  "items": [
+   [
+    "Sony",
+    0
+   ],
+   [
+    "Nintendo",
+    0
+   ],
+   [
+    "Toyota",
+    0
+   ],
+   [
+    "Samsung",
+    1
+   ],
+   [
+    "Hyundai",
+    1
+   ],
+   [
+    "LG",
+    1
+   ]
+  ],
+  "explanation": "Samsung est la plus grande entreprise de Corée du Sud."
+ },
+ {
+  "key": "dt-sort-031",
+  "concept": "tech.computing.dt_tri_materiel_logiciel",
+  "label": "Tri express : Matériel ou logiciel",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 30,
+  "prompt": "Matériel ou logiciel ?",
+  "groups": [
+   {
+    "label": "Matériel"
+   },
+   {
+    "label": "Logiciel"
+   }
+  ],
+  "items": [
+   [
+    "Clavier",
+    0
+   ],
+   [
+    "Processeur",
+    0
+   ],
+   [
+    "Clé USB",
+    0
+   ],
+   [
+    "Navigateur",
+    1
+   ],
+   [
+    "Système d'exploitation",
+    1
+   ],
+   [
+    "Antivirus",
+    1
+   ]
+  ],
+  "explanation": "Le matériel se touche, le logiciel s'installe."
+ },
+ {
+  "key": "dt-sort-032",
+  "concept": "french.grammar.dt_tri_masculin_feminin",
+  "label": "Tri express : Masculin ou féminin",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 45,
+  "prompt": "Masculin ou féminin ?",
+  "groups": [
+   {
+    "label": "Un"
+   },
+   {
+    "label": "Une"
+   }
+  ],
+  "items": [
+   [
+    "Pétale",
+    0
+   ],
+   [
+    "Tentacule",
+    0
+   ],
+   [
+    "Astérisque",
+    0
+   ],
+   [
+    "Oasis",
+    1
+   ],
+   [
+    "Épithète",
+    1
+   ],
+   [
+    "Orthographe",
+    1
+   ]
+  ],
+  "explanation": "Des pièges classiques : on dit un pétale, un tentacule, un astérisque, mais une oasis, une épithète, une orthographe."
+ },
+ {
+  "key": "dt-sort-033",
+  "concept": "french.spelling.dt_tri_accord_pluriel",
+  "label": "Tri express : Un s au pluriel ou un x",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 40,
+  "prompt": "Un s au pluriel ou un x ?",
+  "groups": [
+   {
+    "label": "-s"
+   },
+   {
+    "label": "-x"
+   }
+  ],
+  "items": [
+   [
+    "Bal",
+    0
+   ],
+   [
+    "Carnaval",
+    0
+   ],
+   [
+    "Festival",
+    0
+   ],
+   [
+    "Bijou",
+    1
+   ],
+   [
+    "Genou",
+    1
+   ],
+   [
+    "Hibou",
+    1
+   ]
+  ],
+  "explanation": "Bal, carnaval et festival font -als ; bijou, genou et hibou font -oux."
+ },
+ {
+  "key": "dt-sort-034",
+  "concept": "calc.number_logic.dt_tri_pair_impair_tri",
+  "label": "Tri express : Pair ou impair",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 20,
+  "prompt": "Pair ou impair ?",
+  "groups": [
+   {
+    "label": "Pair"
+   },
+   {
+    "label": "Impair"
+   }
+  ],
+  "items": [
+   [
+    "128",
+    0
+   ],
+   [
+    "1 000",
+    0
+   ],
+   [
+    "76",
+    0
+   ],
+   [
+    "333",
+    1
+   ],
+   [
+    "45",
+    1
+   ],
+   [
+    "1 001",
+    1
+   ]
+  ],
+  "explanation": "Un nombre est pair s'il se termine par 0, 2, 4, 6 ou 8."
+ },
+ {
+  "key": "dt-sort-035",
+  "concept": "calc.number_logic.dt_tri_premier",
+  "label": "Tri express : Nombre premier ou pas",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 45,
+  "prompt": "Nombre premier ou pas ?",
+  "groups": [
+   {
+    "label": "Premier"
+   },
+   {
+    "label": "Pas premier"
+   }
+  ],
+  "items": [
+   [
+    "2",
+    0
+   ],
+   [
+    "13",
+    0
+   ],
+   [
+    "31",
+    0
+   ],
+   [
+    "1",
+    1
+   ],
+   [
+    "21",
+    1
+   ],
+   [
+    "51",
+    1
+   ]
+  ],
+  "explanation": "1 n'est pas premier ; 21 = 3 × 7 et 51 = 3 × 17."
+ },
+ {
+  "key": "dt-sort-036",
+  "concept": "logic.reasoning.dt_tri_vivant",
+  "label": "Tri express : Vivant ou non vivant",
+  "type": "sort",
+  "layout": "bins",
+  "difficulty": 25,
+  "prompt": "Vivant ou non vivant ?",
+  "groups": [
+   {
+    "label": "Vivant"
+   },
+   {
+    "label": "Non vivant"
+   }
+  ],
+  "items": [
+   [
+    "Champignon",
+    0
+   ],
+   [
+    "Corail",
+    0
+   ],
+   [
+    "Levure",
+    0
+   ],
+   [
+    "Cristal",
+    1
+   ],
+   [
+    "Nuage",
+    1
+   ],
+   [
+    "Feu",
+    1
+   ]
+  ],
+  "explanation": "Le corail est un animal ; la levure, un champignon microscopique."
+ },
+ {
+  "key": "dt-sort-037",
+  "concept": "history.contemporary.dt_epoque_personnages_fr",
+  "label": "Pyramide des âges : personnages fr",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 25,
+  "prompt": "Place chacun à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "Vercingétorix",
+    0
+   ],
+   [
+    "Jeanne d'Arc",
+    1
+   ],
+   [
+    "Louis XIV",
+    2
+   ],
+   [
+    "Victor Hugo",
+    3
+   ]
+  ],
+  "explanation": "Vercingétorix (52 av. J.-C.), Jeanne d'Arc (1431), Louis XIV (1643-1715), Victor Hugo (1802-1885)."
+ },
+ {
+  "key": "dt-sort-038",
+  "concept": "history.antiquity.dt_epoque_personnages_monde",
+  "label": "Pyramide des âges : personnages monde",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 35,
+  "prompt": "Place chacun à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "Jules César",
+    0
+   ],
+   [
+    "Gengis Khan",
+    1
+   ],
+   [
+    "Christophe Colomb",
+    2
+   ],
+   [
+    "Gandhi",
+    3
+   ]
+  ],
+  "explanation": "Gengis Khan meurt en 1227 ; Colomb atteint l'Amérique en 1492, début des Temps modernes."
+ },
+ {
+  "key": "dt-sort-039",
+  "concept": "history.middle_ages.dt_epoque_batailles",
+  "label": "Pyramide des âges : batailles",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 40,
+  "prompt": "Place chaque bataille à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "Alésia",
+    0
+   ],
+   [
+    "Azincourt",
+    1
+   ],
+   [
+    "Marignan",
+    2
+   ],
+   [
+    "Waterloo",
+    3
+   ]
+  ],
+  "explanation": "Alésia (52 av. J.-C.), Azincourt (1415), Marignan (1515), Waterloo (1815)."
+ },
+ {
+  "key": "dt-sort-040",
+  "concept": "history.modern.dt_epoque_monuments_hist",
+  "label": "Pyramide des âges : monuments hist",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 40,
+  "prompt": "Place chaque construction à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "Le pont du Gard",
+    0
+   ],
+   [
+    "Notre-Dame de Paris",
+    1
+   ],
+   [
+    "Le château de Versailles",
+    2
+   ],
+   [
+    "La tour Eiffel",
+    3
+   ]
+  ],
+  "explanation": "Pont du Gard (Ier siècle), Notre-Dame (1163-1345), Versailles (XVIIe siècle), tour Eiffel (1889)."
+ },
+ {
+  "key": "dt-sort-041",
+  "concept": "history.contemporary.dt_epoque_inventions_epoques",
+  "label": "Pyramide des âges : inventions epoques",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 35,
+  "prompt": "Place chaque invention à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "L'écriture",
+    0
+   ],
+   [
+    "L'imprimerie de Gutenberg",
+    1
+   ],
+   [
+    "La montgolfière",
+    2
+   ],
+   [
+    "Le téléphone",
+    3
+   ]
+  ],
+  "explanation": "L'écriture vers 3300 av. J.-C. ; l'imprimerie vers 1450 ; la montgolfière en 1783, juste avant la Révolution ; le téléphone en 1876."
+ },
+ {
+  "key": "dt-sort-042",
+  "concept": "history.contemporary.dt_epoque_evenements",
+  "label": "Pyramide des âges : evenements",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 35,
+  "prompt": "Place chaque événement à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "La fondation de Rome",
+    0
+   ],
+   [
+    "Le sacre de Charlemagne",
+    1
+   ],
+   [
+    "La Renaissance",
+    2
+   ],
+   [
+    "La Révolution française",
+    3
+   ]
+  ],
+  "explanation": "Rome est fondée en 753 av. J.-C. selon la légende ; Charlemagne est sacré en 800."
+ },
+ {
+  "key": "dt-sort-043",
+  "concept": "history.middle_ages.dt_epoque_rois_reines_ep",
+  "label": "Pyramide des âges : rois reines ep",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 45,
+  "prompt": "Place chacun à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "Néron",
+    0
+   ],
+   [
+    "Aliénor d'Aquitaine",
+    1
+   ],
+   [
+    "Catherine de Médicis",
+    2
+   ],
+   [
+    "La reine Victoria",
+    3
+   ]
+  ],
+  "explanation": "Néron (Ier siècle), Aliénor (XIIe siècle), Catherine de Médicis (XVIe siècle), Victoria (1837-1901)."
+ },
+ {
+  "key": "dt-sort-044",
+  "concept": "arts.literature.dt_epoque_ecrivains",
+  "label": "Pyramide des âges : ecrivains",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 40,
+  "prompt": "Place chaque écrivain à son siècle.",
+  "groups": [
+   {
+    "label": "XVIe siècle",
+    "sub": "1501 – 1600"
+   },
+   {
+    "label": "XVIIe siècle",
+    "sub": "1601 – 1700"
+   },
+   {
+    "label": "XVIIIe siècle",
+    "sub": "1701 – 1800"
+   },
+   {
+    "label": "XIXe siècle",
+    "sub": "1801 – 1900"
+   }
+  ],
+  "items": [
+   [
+    "Rabelais",
+    0
+   ],
+   [
+    "Molière",
+    1
+   ],
+   [
+    "Voltaire",
+    2
+   ],
+   [
+    "Zola",
+    3
+   ]
+  ],
+  "explanation": "Rabelais (Gargantua, 1534), Molière (années 1660), Voltaire (Candide, 1759), Zola (années 1870-1900)."
+ },
+ {
+  "key": "dt-sort-045",
+  "concept": "arts.painting.dt_epoque_peintres",
+  "label": "Pyramide des âges : peintres",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 50,
+  "prompt": "Place chaque peintre à son siècle.",
+  "groups": [
+   {
+    "label": "XVe siècle",
+    "sub": "1401 – 1500"
+   },
+   {
+    "label": "XVIIe siècle",
+    "sub": "1601 – 1700"
+   },
+   {
+    "label": "XIXe siècle",
+    "sub": "1801 – 1900"
+   },
+   {
+    "label": "XXe siècle",
+    "sub": "1901 – 2000"
+   }
+  ],
+  "items": [
+   [
+    "Botticelli",
+    0
+   ],
+   [
+    "Rembrandt",
+    1
+   ],
+   [
+    "Monet",
+    2
+   ],
+   [
+    "Picasso",
+    3
+   ]
+  ],
+  "explanation": "Botticelli (La Naissance de Vénus, vers 1485), Rembrandt (La Ronde de nuit, 1642), Monet (Impression, 1872), Picasso (Guernica, 1937)."
+ },
+ {
+  "key": "dt-sort-046",
+  "concept": "music.classical.dt_epoque_compositeurs",
+  "label": "Pyramide des âges : compositeurs",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 50,
+  "prompt": "Place chaque compositeur à son époque musicale.",
+  "groups": [
+   {
+    "label": "Baroque",
+    "sub": "1600 – 1750"
+   },
+   {
+    "label": "Classique",
+    "sub": "1750 – 1820"
+   },
+   {
+    "label": "Romantique",
+    "sub": "1820 – 1900"
+   },
+   {
+    "label": "Moderne",
+    "sub": "depuis 1900"
+   }
+  ],
+  "items": [
+   [
+    "Vivaldi",
+    0
+   ],
+   [
+    "Mozart",
+    1
+   ],
+   [
+    "Chopin",
+    2
+   ],
+   [
+    "Ravel",
+    3
+   ]
+  ],
+  "explanation": "Vivaldi (Les Quatre Saisons, 1725), Mozart (1756-1791), Chopin (1810-1849), Ravel (Boléro, 1928)."
+ },
+ {
+  "key": "dt-sort-047",
+  "concept": "music.popular.dt_epoque_tubes",
+  "label": "Pyramide des âges : tubes",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 35,
+  "prompt": "Place chaque tube à sa décennie.",
+  "groups": [
+   {
+    "label": "Années 1960"
+   },
+   {
+    "label": "Années 1980"
+   },
+   {
+    "label": "Années 2000"
+   },
+   {
+    "label": "Années 2020"
+   }
+  ],
+  "items": [
+   [
+    "Yesterday (Beatles)",
+    0
+   ],
+   [
+    "Thriller (Michael Jackson)",
+    1
+   ],
+   [
+    "Crazy in Love (Beyoncé)",
+    2
+   ],
+   [
+    "Flowers (Miley Cyrus)",
+    3
+   ]
+  ],
+  "explanation": "Yesterday (1965), Thriller (1982), Crazy in Love (2003), Flowers (2023)."
+ },
+ {
+  "key": "dt-sort-048",
+  "concept": "cinema.films.dt_epoque_films_decennies",
+  "label": "Pyramide des âges : films decennies",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 35,
+  "prompt": "Place chaque film à sa décennie.",
+  "groups": [
+   {
+    "label": "Années 1970"
+   },
+   {
+    "label": "Années 1990"
+   },
+   {
+    "label": "Années 2000"
+   },
+   {
+    "label": "Années 2010"
+   }
+  ],
+  "items": [
+   [
+    "Star Wars",
+    0
+   ],
+   [
+    "Titanic",
+    1
+   ],
+   [
+    "Le Fabuleux Destin d'Amélie Poulain",
+    2
+   ],
+   [
+    "Intouchables",
+    3
+   ]
+  ],
+  "explanation": "Star Wars (1977), Titanic (1997), Amélie (2001), Intouchables (2011)."
+ },
+ {
+  "key": "dt-sort-049",
+  "concept": "cinema.animation.dt_epoque_disney_decennies",
+  "label": "Pyramide des âges : disney decennies",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 40,
+  "prompt": "Place chaque Disney à sa décennie.",
+  "groups": [
+   {
+    "label": "Années 1930"
+   },
+   {
+    "label": "Années 1960"
+   },
+   {
+    "label": "Années 1990"
+   },
+   {
+    "label": "Années 2010"
+   }
+  ],
+  "items": [
+   [
+    "Blanche-Neige",
+    0
+   ],
+   [
+    "Les 101 Dalmatiens",
+    1
+   ],
+   [
+    "Le Roi lion",
+    2
+   ],
+   [
+    "La Reine des neiges",
+    3
+   ]
+  ],
+  "explanation": "Blanche-Neige (1937), Les 101 Dalmatiens (1961), Le Roi lion (1994), La Reine des neiges (2013)."
+ },
+ {
+  "key": "dt-sort-050",
+  "concept": "tech.inventions.dt_epoque_objets",
+  "label": "Pyramide des âges : objets",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 30,
+  "prompt": "Place chaque objet à sa décennie.",
+  "groups": [
+   {
+    "label": "Années 1950"
+   },
+   {
+    "label": "Années 1970"
+   },
+   {
+    "label": "Années 1990"
+   },
+   {
+    "label": "Années 2010"
+   }
+  ],
+  "items": [
+   [
+    "La télé dans les foyers",
+    0
+   ],
+   [
+    "Le walkman",
+    1
+   ],
+   [
+    "Le DVD",
+    2
+   ],
+   [
+    "La montre connectée",
+    3
+   ]
+  ],
+  "explanation": "La télé se répand dans les années 1950 ; walkman (1979) ; DVD (1995) ; Apple Watch (2015)."
+ },
+ {
+  "key": "dt-sort-051",
+  "concept": "tech.brands.dt_epoque_consoles",
+  "label": "Pyramide des âges : consoles",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 35,
+  "prompt": "Place chaque console à sa décennie.",
+  "groups": [
+   {
+    "label": "Années 1970"
+   },
+   {
+    "label": "Années 1980"
+   },
+   {
+    "label": "Années 1990"
+   },
+   {
+    "label": "Années 2010"
+   }
+  ],
+  "items": [
+   [
+    "L'Atari 2600",
+    0
+   ],
+   [
+    "La Game Boy",
+    1
+   ],
+   [
+    "La PlayStation",
+    2
+   ],
+   [
+    "La Nintendo Switch",
+    3
+   ]
+  ],
+  "explanation": "Atari 2600 (1977), Game Boy (1989), PlayStation (1994), Switch (2017)."
+ },
+ {
+  "key": "dt-sort-052",
+  "concept": "science.biology.dt_epoque_decouvertes",
+  "label": "Pyramide des âges : decouvertes",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 45,
+  "prompt": "Place chaque découverte à son siècle.",
+  "groups": [
+   {
+    "label": "XVIIe siècle",
+    "sub": "1601 – 1700"
+   },
+   {
+    "label": "XVIIIe siècle",
+    "sub": "1701 – 1800"
+   },
+   {
+    "label": "XIXe siècle",
+    "sub": "1801 – 1900"
+   },
+   {
+    "label": "XXe siècle",
+    "sub": "1901 – 2000"
+   }
+  ],
+  "items": [
+   [
+    "La gravitation (Newton)",
+    0
+   ],
+   [
+    "L'oxygène (Lavoisier)",
+    1
+   ],
+   [
+    "Le vaccin contre la rage (Pasteur)",
+    2
+   ],
+   [
+    "La pénicilline (Fleming)",
+    3
+   ]
+  ],
+  "explanation": "Newton (1687), Lavoisier (années 1770), Pasteur (1885), Fleming (1928)."
+ },
+ {
+  "key": "dt-sort-053",
+  "concept": "science.space.dt_epoque_espace",
+  "label": "Pyramide des âges : espace",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 35,
+  "prompt": "Place chaque exploit à sa décennie.",
+  "groups": [
+   {
+    "label": "Années 1950"
+   },
+   {
+    "label": "Années 1960"
+   },
+   {
+    "label": "Années 1980"
+   },
+   {
+    "label": "Années 2020"
+   }
+  ],
+  "items": [
+   [
+    "Spoutnik",
+    0
+   ],
+   [
+    "Les premiers pas sur la Lune",
+    1
+   ],
+   [
+    "La première navette spatiale",
+    2
+   ],
+   [
+    "Le télescope James-Webb",
+    3
+   ]
+  ],
+  "explanation": "Spoutnik (1957), la Lune (1969), la navette Columbia (1981), James-Webb (lancé fin 2021, premières images en 2022)."
+ },
+ {
+  "key": "dt-sort-054",
+  "concept": "sport.olympics.dt_epoque_jo_paris",
+  "label": "Pyramide des âges : jo paris",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 40,
+  "prompt": "Place chaque événement sportif à son époque.",
+  "groups": [
+   {
+    "label": "Antiquité"
+   },
+   {
+    "label": "XIXe siècle"
+   },
+   {
+    "label": "Années 1920"
+   },
+   {
+    "label": "XXIe siècle"
+   }
+  ],
+  "items": [
+   [
+    "Les premiers Jeux d'Olympie",
+    0
+   ],
+   [
+    "Les premiers JO modernes",
+    1
+   ],
+   [
+    "Les JO de Paris 1924",
+    2
+   ],
+   [
+    "Les JO de Paris 2024",
+    3
+   ]
+  ],
+  "explanation": "Olympie (776 av. J.-C.), Athènes (1896), Paris (1924 et 2024)."
+ },
+ {
+  "key": "dt-sort-055",
+  "concept": "nature.earth.dt_epoque_terre",
+  "label": "Pyramide des âges : terre",
+  "type": "sort",
+  "layout": "timeline",
+  "difficulty": 50,
+  "prompt": "Place chaque être vivant à son époque d'apparition.",
+  "groups": [
+   {
+    "label": "Il y a 3,5 milliards d'années"
+   },
+   {
+    "label": "Il y a 230 millions d'années"
+   },
+   {
+    "label": "Il y a 7 millions d'années"
+   },
+   {
+    "label": "Il y a 300 000 ans"
+   }
+  ],
+  "items": [
+   [
+    "Les premières bactéries",
+    0
+   ],
+   [
+    "Les premiers dinosaures",
+    1
+   ],
+   [
+    "Les premiers ancêtres de l'homme",
+    2
+   ],
+   [
+    "Homo sapiens",
+    3
+   ]
+  ],
+  "explanation": "Les dinosaures apparaissent il y a environ 230 millions d'années, Homo sapiens il y a environ 300 000 ans."
+ }
+]

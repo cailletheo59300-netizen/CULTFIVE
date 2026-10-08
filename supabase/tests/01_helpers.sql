@@ -45,6 +45,10 @@ create or replace function tst.correct_given(p_question uuid) returns jsonb lang
     when 'letters' then jsonb_build_object('text', q.answer -> 'word')
     when 'word_order' then jsonb_build_object('words', q.answer -> 'words')
     when 'image_choice' then jsonb_build_object('option_id', q.answer ->> 'option_id')
+    when 'riddle' then jsonb_build_object('option_id', q.answer ->> 'option_id', 'clues', 3)
+    when 'number_target' then jsonb_build_object('steps', q.answer -> 'steps')
+    when 'map_pin' then jsonb_build_object('lat', q.answer -> 'lat', 'lon', q.answer -> 'lon')
+    when 'sort' then jsonb_build_object('groups', q.answer -> 'groups')
   end from public.questions q where q.id = p_question
 $$;
 create or replace function tst.wrong_given() returns jsonb language sql as $$ select '{"option_id":"nope","value":-999999}'::jsonb $$;

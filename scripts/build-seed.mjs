@@ -160,6 +160,40 @@ function convert(q) {
                payload: { kind: q.kind, options: shuffled(k, options) },
                answer: { option_id: id(opts.find((o) => o.correct) ?? {}), labels } };
     }
+    // ─── Lot 2 (0040) : le compte est bon, mot mystère, épingle sur la carte, tri (paniers ou époques).
+    case 'number_target': {
+      const ok = Array.isArray(q.numbers) && q.numbers.length >= 3 && q.numbers.every(Number.isInteger) && Number.isInteger(q.target);
+      if (!ok) fail(k, 'compte est bon : nombres entiers et cible entière');
+      const SYM = { '+': '+', '−': '-', '×': '*', '÷': '/' };
+      const steps = (q.solution ?? []).map((t) => {
+        const m = t.match(/^(\d+) (\S) (\d+) = (\d+)$/);
+        if (!m || !SYM[m[2]]) { fail(k, `étape illisible « ${t} »`); return null; }
+        return { a: +m[1], op: SYM[m[2]], b: +m[3] };
+      });
+      return { ...base, payload: { numbers: q.numbers, target: q.target },
+               answer: { numbers: q.numbers, target: q.target, steps, solution: q.solution } };
+    }
+    case 'riddle': {
+      const correct = (q.options ?? []).filter((o) => o.endsWith('*'));
+      if (correct.length !== 1 || q.options.length !== 4) fail(k, 'mot mystère : 4 options dont 1 marquée *');
+      if (!Array.isArray(q.clues) || q.clues.length !== 3) fail(k, 'mot mystère : 3 indices');
+      const options = q.options.map((o) => ({ id: oid(k, o.replace(/\*$/, '')), text: o.replace(/\*$/, '') }));
+      return { ...base, payload: { clues: q.clues, options: shuffled(k, options) },
+               answer: { option_id: oid(k, correct[0]?.replace(/\*$/, '')) } };
+    }
+    case 'map_pin': {
+      if (!(Math.abs(q.lat) <= 90 && Math.abs(q.lon) <= 180) || !(q.tolerance_km > 0) || !q.region) fail(k, 'épingle : coordonnées, marge et région');
+      return { ...base, payload: { region: q.region, tolerance_km: q.tolerance_km },
+               answer: { lat: q.lat, lon: q.lon, tolerance_km: q.tolerance_km, place: q.place } };
+    }
+    case 'sort': {
+      const groups = (q.groups ?? []).map((g, i) => ({ id: oid(k, `G${i}:${g.label}`), label: g.label, ...(g.sub ? { sub: g.sub } : {}) }));
+      const items = (q.items ?? []).map(([t, g], i) => ({ id: oid(k, `I${i}:${t}`), text: t, g }));
+      if (groups.length < 2 || items.length < 4 || !items.every((it) => groups[it.g])) fail(k, 'tri : 2 groupes ou plus, 4 étiquettes ou plus');
+      if (!['bins', 'timeline'].includes(q.layout)) fail(k, 'tri : layout bins ou timeline');
+      return { ...base, payload: { layout: q.layout, groups, items: shuffled(k, items.map(({ g: _g, ...it }) => it)) },
+               answer: { groups: Object.fromEntries(items.map((it) => [it.id, groups[it.g]?.id])) } };
+    }
     default:
       fail(k, `type inconnu ${q.type}`);
       return base;
@@ -243,6 +277,10 @@ const norm = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCa
 const answerOf = (q) => q.type === 'mcq' ? q.options.find((o) => o.endsWith('*')) ?? ''
   : ['true_false', 'numeric', 'counter', 'timeline', 'gauge', 'proportion', 'word_order'].includes(q.type) ? String(q.answer)
   : q.type === 'letters' ? q.word
+  : q.type === 'number_target' ? `${q.numbers}>${q.target}`
+  : q.type === 'riddle' ? q.options.find((o) => o.endsWith('*')) ?? ''
+  : q.type === 'map_pin' ? q.place
+  : q.type === 'sort' ? JSON.stringify(q.items)
   : q.type === 'image_choice' ? JSON.stringify(q.options.find((o) => o.correct) ?? '')
   : JSON.stringify(q.items ?? q.pairs ?? q.pins ?? '');
 // Mots de plus de 3 lettres et tous les nombres (« 36 km/h » et « 36 km/h » se ressemblent ; deux suites différentes non).
