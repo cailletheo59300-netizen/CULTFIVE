@@ -74,7 +74,29 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 8. ✅ Pastille de difficulté retirée.
 9. ✅ Emblèmes de rang 3D (profil, Jouer, domaine, explication de l'Elo) ; seuils actuels jusqu'à la partie B.
 
-**1.1 — partie B (serveur, seulement après la publication de la 1.0, avec le feu vert du propriétaire)** : fréquence des coffres (niveaux 2-9 : graines, coffre d'argent au niveau 5 ; dès le niveau 10 : un coffre par niveau ; petits trophées : graines, gros : coffres) ; arrosoir (objet épique des coffres : dons à l'arbre ×2 pendant 4 h) ; coffre boosté par une pub : monte toujours d'un rang (bois → argent → or → Savant), graines +50 %, peut encore monter par chance (texte du bouton : « Amélioration garantie ») ; Elo : la 1.1 lit les seuils des rangs depuis le serveur, bascule de l'Elo seulement une fois la 1.1 publiée, message « mets à jour » pour la 1.0 ; pubs de « Mon sac » (50/50 et indice : 1 par jour chacun ; arrosoir : 1 par semaine ; joker : 1 par semaine si moins de 2) ; Elo de départ 500 et seuils 600 / 750 / 900 / 1 050 / 1 200 ; recalibrage, réévaluation et mélange des niveaux (points 1 à 6 ci-dessus) ; questions accessibles (lot 1 prêt, 9 domaines à écrire).
+## À faire après la publication de la 1.0 (partie B — serveur, avec le feu vert du propriétaire)
+Liste tenue à jour à chaque nouvelle demande. Rien de ceci ne touche la production tant que la 1.0 n'est pas publiée.
+
+**Coffres et objets**
+- [ ] Fréquence des coffres : niveaux 2 à 9 → graines, coffre d'argent au niveau 5 ; dès le niveau 10 → un coffre par niveau ; petits trophées → graines, gros trophées → coffres.
+- [ ] Coffre boosté par une pub : monte **toujours** d'un rang (bois → argent → or → Savant), graines +50 %, peut encore monter par chance. Bouton : « Amélioration garantie ».
+- [ ] Arrosoir : objet épique des coffres ; pendant 4 h, les dons à l'arbre comptent double. Afficher alors sa carte sur l'écran de l'arbre (prévue dans la maquette validée).
+- [ ] Pubs de « Mon sac » : 50/50 et indice 1 par jour chacun ; arrosoir 1 par semaine ; joker 1 par semaine si moins de 2 (la pub « Sauve ta série » reste à part). Boutons cachés tant que le serveur ne les propose pas.
+
+**Elo et niveau des questions**
+- [ ] Elo de départ 500, seuils des rangs 600 / 750 / 900 / 1 050 / 1 200 ; joueurs actuels décalés sans perte de place relative ; trophées de maîtrise redécoupés.
+- [ ] La 1.1 lit les seuils des rangs depuis le serveur ; bascule de l'Elo seulement une fois la 1.1 publiée ; message « mets à jour l'app » pour la 1.0. Textes « tout le monde part de 1 000 » à changer.
+- [ ] Recalibrer toute la banque (≈ 11 points trop optimiste) puis recalcul hebdomadaire avec les vraies réponses.
+- [ ] Réévaluer les questions avec la grille à exemples (ex. capitales). Beaucoup de grands classiques faciles existent déjà mais sont notés trop durs.
+- [ ] Mélange dans chaque partie classée : ≈ 3 accessibles, 5 au niveau, 2 qui piquent ; viser ≈ 70 % de réussite.
+
+**Contenu**
+- [ ] Déployer les questions accessibles en production : lot 1 (Histoire, Géographie, Sciences : 120) et lot 2 (Arts 33, Calcul 37, Cinéma 24, Musique 19). Lot 3 en cours : Sport, Nature, Technologie, Français, Logique, puis 2e passage Histoire, Géographie, Sciences.
+- [ ] Nouveaux types de réponses pour rendre le 5 du jour plus amusant (idée du propriétaire, à détailler avant de coder) : compteur à flèches, choix d'images (œuvres du domaine public uniquement), et autres types à proposer. Le 5 du jour en profite en priorité ; les parties classées restent plus classiques.
+
+**Après la publication**
+- [ ] Lier l'app dans AdMob.
+- [ ] DSA : infos de commerçant à revalider dans App Store Connect (mail d'Apple du 6 octobre), sinon l'app n'est pas disponible dans l'UE.
 
 ## Commandes utiles
 `scripts/test-db.sh` · `scripts/gen-fixtures.sh` (après test-db) · `node scripts/build-seed.mjs` · `python3 scripts/make-icon.py <sortie>` · `node scripts/icons/render.mjs` (icônes 3D : coffres, graines, flamme, joker, tickets, arrosoir → `Assets.xcassets/Icons`) · `cd ios && xcodegen`
