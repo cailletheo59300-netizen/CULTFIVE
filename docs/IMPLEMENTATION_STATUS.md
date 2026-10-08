@@ -92,7 +92,9 @@ Liste tenue à jour à chaque nouvelle demande. Rien de ceci ne touche la produc
 
 **Contenu**
 - [ ] Déployer les questions accessibles en production : lot 1 (Histoire, Géographie, Sciences : 120) et lot 2 (Arts 33, Calcul 37, Cinéma 24, Musique 19). Lot 3 en cours : Sport, Nature, Technologie, Français, Logique, puis 2e passage Histoire, Géographie, Sciences.
-- [ ] Nouveaux types de réponses pour rendre le 5 du jour plus amusant (idée du propriétaire, à détailler avant de coder) : compteur à flèches, choix d'images (œuvres du domaine public uniquement), et autres types à proposer. Le 5 du jour en profite en priorité ; les parties classées restent plus classiques.
+- [ ] Nouveaux types de réponses (maquette v2 en cours de validation) : compteur (nombres raisonnables, ± 10, marge annoncée ou « nombre exact »), choix d'images (drapeaux dessinés, tableaux du domaine public), frise à glisser, jauge de pourcentage, proportions (étirer un élément à sa vraie taille), lettres mélangées et mots dans l'ordre. Abandonnés : image qui se dévoile, plus ou moins, vrai/faux en glissant. Règle : toujours juste ou faux ; marge annoncée avant (🎯), zone visée affichée en direct, correction « Pile ! / Juste, dans la marge / Presque… hors de la marge / Raté » avec bonne réponse, réponse et écart ; « Pile ! » = +5 graines.
+- [ ] Convertir les questions existantes qui s'y prêtent : années → frise, drapeaux → choix d'images, pourcentages → jauge, petits nombres → compteur.
+- [ ] Le 5 du jour : un type différent par question ; les parties classées restent surtout sur les types classiques.
 
 **Après la publication**
 - [ ] Lier l'app dans AdMob.
