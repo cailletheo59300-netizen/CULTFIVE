@@ -252,6 +252,8 @@ struct LeonTreeScreen: View {
             seedFlight = nil
             try? await Task.sleep(nanoseconds: 1_600_000_000)
             proud = false
+            // Nouvelle étape : son coffre d'or s'ouvre tout de suite.
+            if result.newChests > 0 { app.openNewChests() }
         } catch {
             self.error = (error as? LocalizedError)?.errorDescription ?? "Impossible de nourrir l'arbre. Réessaie."
         }

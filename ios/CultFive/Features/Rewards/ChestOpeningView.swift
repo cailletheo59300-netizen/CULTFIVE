@@ -41,9 +41,17 @@ struct ChestOpeningView: View {
 
     var body: some View {
         ZStack {
-            Color(hex: 0x1E1340).ignoresSafeArea()
+            // Le violet de l'app (comme les célébrations), sans rayons qui tournent.
+            RadialGradient(colors: [Color(hex: 0x8A6BFF), Color(hex: 0x6A4CFF), Color(hex: 0x3A1FB8)],
+                           center: UnitPoint(x: 0.5, y: 0.4), startRadius: 0, endRadius: 640)
+                .ignoresSafeArea()
             if phase != .closed && phase != .charging {
-                LightRays(color: glow).ignoresSafeArea().transition(.opacity)
+                // Après l'ouverture, une lueur douce reste derrière les cartes.
+                Circle()
+                    .fill(RadialGradient(colors: [Color(hex: 0xFFECAA).opacity(0.5), .clear], center: .center, startRadius: 10, endRadius: 260))
+                    .frame(width: 520, height: 520)
+                    .allowsHitTesting(false)
+                    .transition(.opacity)
             }
             VStack(spacing: Space.l) {
                 header
@@ -102,17 +110,23 @@ struct ChestOpeningView: View {
             VStack(spacing: Space.l) {
                 if let chest {
                     ZStack {
-                        // Halo de la rareté, qui grossit à chaque toucher.
+                        // Lueur douce derrière le coffre, qui grandit à chaque toucher.
                         Circle()
-                            .fill(RadialGradient(colors: [glow.opacity(0.6), glow.opacity(0)], center: .center, startRadius: 8, endRadius: 170))
+                            .fill(RadialGradient(colors: [Color(hex: 0xFFECAA).opacity(0.55), .clear], center: .center, startRadius: 8, endRadius: 170))
                             .frame(width: 340, height: 340)
                             .scaleEffect(1 + 0.12 * Double(taps))
+                            .opacity(0.45 + 0.18 * Double(taps))
+                        // Ombre au sol.
+                        Ellipse()
+                            .fill(Color(hex: 0x140850).opacity(0.45))
+                            .frame(width: 170, height: 22)
+                            .blur(radius: 6)
+                            .offset(y: 112)
                         ChestFrames(tier: tier, frame: lidFrame)
                             .frame(maxWidth: 260)
                             .rotationEffect(.degrees(taps == 0 && wobble ? 2.5 : (taps == 0 ? -2.5 : 0)), anchor: .bottom)
                             .rotationEffect(.degrees(kick), anchor: .bottom)
                             .scaleEffect(1 + 0.06 * Double(taps))
-                            .shadow(color: glow.opacity(0.5), radius: 30)
                     }
                     .id(chest.id)
                     // Le coffre arrive en grandissant ; à l'ouverture il éclate vers l'avant (jamais il ne rapetisse).
@@ -767,39 +781,5 @@ private struct HoloShine: View {
         }
         .allowsHitTesting(false)
         .accessibilityHidden(true)
-    }
-}
-
-/// Rayons de lumière qui tournent lentement derrière la récompense.
-private struct LightRays: View {
-    let color: Color
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-
-    var body: some View {
-        TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion)) { timeline in
-            Canvas { context, size in
-                LightRays.draw(in: &context, size: size, time: timeline.date.timeIntervalSinceReferenceDate, color: color)
-            }
-        }
-        .accessibilityHidden(true)
-    }
-
-    private static func draw(in context: inout GraphicsContext, size: CGSize, time: Double, color: Color) {
-        let center = CGPoint(x: size.width / 2, y: size.height * 0.45)
-        let radius: Double = max(Double(size.width), Double(size.height))
-        let gradient = Gradient(colors: [color.opacity(0.35), color.opacity(0)])
-        let shading = GraphicsContext.Shading.radialGradient(gradient, center: center, startRadius: 20, endRadius: radius * 0.6)
-        for i in 0 ..< 12 {
-            let start: Double = Double(i) / 12 * 2 * Double.pi + time * 0.25
-            let end: Double = start + 0.16
-            let p1 = CGPoint(x: center.x + radius * cos(start), y: center.y + radius * sin(start))
-            let p2 = CGPoint(x: center.x + radius * cos(end), y: center.y + radius * sin(end))
-            var ray = Path()
-            ray.move(to: center)
-            ray.addLine(to: p1)
-            ray.addLine(to: p2)
-            ray.closeSubpath()
-            context.fill(ray, with: shading)
-        }
     }
 }

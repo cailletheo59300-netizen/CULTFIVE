@@ -33,7 +33,13 @@ struct PlayHomeView: View {
             }
             .refreshable { await load() }
         }
-        .fullScreenCover(item: $playConfig) { config in
+        .fullScreenCover(item: $playConfig, onDismiss: {
+            // Coffres gagnés pendant la partie : ils s'ouvrent dès le retour.
+            Task {
+                await app.refreshProgression()
+                app.openNewChests()
+            }
+        }) { config in
             PlaySessionView(config: config)
         }
         .sheet(item: $setup, onDismiss: {

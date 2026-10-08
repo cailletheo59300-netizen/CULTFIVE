@@ -49,15 +49,31 @@ struct DailyHomeView: View {
             .refreshable { await reload() }
             .toolbar(.hidden, for: .navigationBar)
         }
-        .fullScreenCover(isPresented: $showDaily, onDismiss: { Task { await reload() } }) {
+        .fullScreenCover(isPresented: $showDaily, onDismiss: { Task {
+            await reload()
+            // Un défi rempli est d'abord fêté ; son coffre s'ouvre à la fin de la fête.
+            if questMoments.isEmpty { app.openNewChests() }
+        } }) {
             DailySessionView()
         }
-        .fullScreenCover(item: $playConfig, onDismiss: { Task { await reload() } }) { config in
+        .fullScreenCover(item: $playConfig, onDismiss: { Task {
+            await reload()
+            // Un défi rempli est d'abord fêté ; son coffre s'ouvre à la fin de la fête.
+            if questMoments.isEmpty { app.openNewChests() }
+        } }) { config in
             PlaySessionView(config: config)
         }
         .sheet(isPresented: $showBag) { BagView() }
         .fullScreenCover(isPresented: Binding(get: { !questMoments.isEmpty }, set: { if !$0 { questMoments = [] } })) {
-            CelebrationSequence(items: questMoments) { questMoments = [] }
+            CelebrationSequence(items: questMoments) {
+                questMoments = []
+                // Le coffre du défi rempli s'ouvre juste après la fête.
+                Task {
+                    try? await Task.sleep(nanoseconds: 450_000_000)
+                    await app.refreshProgression()
+                    app.openNewChests()
+                }
+            }
         }
         .task {
             await reload()

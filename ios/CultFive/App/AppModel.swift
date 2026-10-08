@@ -23,7 +23,14 @@ final class AppModel {
     var profile: Profile?
     var daily: DailyStatus?
     /// Coffres à ouvrir, arbre de Léon, tickets, tenue. Mis à jour après chaque partie et chaque ouverture.
-    var progression: ProgressionOverview?
+    var progression: ProgressionOverview? {
+        didSet {
+            // Coffres déjà là au premier chargement : ils restent dans le sac (pas d'ouverture au démarrage).
+            if seenChests == nil, let progression { seenChests = Set(progression.chests.map(\.id)) }
+        }
+    }
+    /// Coffres déjà connus. Ceux qui arrivent ensuite (partie, défi, arbre…) s'ouvrent d'eux-mêmes (`openNewChests`).
+    @ObservationIgnored private var seenChests: Set<UUID>?
     /// Coffres présentés en plein écran (ouverture à la chaîne).
     var chestQueue: [ChestRef]?
     var domains: [DomainInfo] = []
@@ -178,7 +185,17 @@ final class AppModel {
     func openChests(_ chests: [ChestRef]? = nil) {
         let list = chests ?? progression?.chests ?? []
         guard !list.isEmpty else { return }
+        seenChests = (seenChests ?? []).union(list.map(\.id))
         chestQueue = list
+    }
+
+    /// Ouvre tout de suite les coffres gagnés depuis la dernière fois (« Plus tard » les laisse dans le sac).
+    /// À appeler une fois revenu sur un onglet (fin de partie, défi rempli, arbre qui grandit).
+    func openNewChests() {
+        guard chestQueue == nil, let chests = progression?.chests, let seen = seenChests else { return }
+        let fresh = chests.filter { !seen.contains($0.id) }
+        seenChests = seen.union(chests.map(\.id))
+        if !fresh.isEmpty { chestQueue = fresh }
     }
 
     /// Tenue de Léon (emplacement → objet), portée partout où il apparaît.
