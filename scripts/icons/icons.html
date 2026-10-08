@@ -298,6 +298,8 @@ for(const tier of ['wood','silver','gold','savant']) for(let i=0;i<FRAMES;i++)
 // Rangs (même ordre que CoteCULT.Rank), trophée d'exploit.
 ['curious','amateur','enlightened','scholar','expert','encyclopedia'].forEach((id,i)=>{ICONS[`rank_${id}`]=[()=>framed(emblem(RANKS[i],i)),360];});
 ICONS.bag=[bag,192];
+// Médailles de maîtrise d'un domaine (globe en relief).
+[['bronze',0xC77B3A,false],['silver',0xE4EAF2,false],['gold',0xFFC933,false],['diamond',0x9BE7FF,true]].forEach(([id,c,d])=>{ICONS[`medal_${id}`]=[()=>framed(medal({metal:c,diamond:d})),360];});
 ICONS.trophy_cup=[()=>framed(cup()),360];
 window.renderIcons=()=>{const out={};for(const [name,[build,px,frame,rest]] of Object.entries(ICONS)) out[name]=snap(build,px,frame,rest);return out;};
 </script>
