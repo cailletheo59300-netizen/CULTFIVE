@@ -42,17 +42,17 @@ struct ChestOpeningView: View {
     var body: some View {
         ZStack {
             // Le violet de l'app (comme les célébrations), sans rayons qui tournent.
+            // Après l'ouverture, une lueur douce reste derrière les cartes. Dessinée dans le fond : elle ne
+            // change jamais la largeur de l'écran.
             RadialGradient(colors: [Color(hex: 0x8A6BFF), Color(hex: 0x6A4CFF), Color(hex: 0x3A1FB8)],
                            center: UnitPoint(x: 0.5, y: 0.4), startRadius: 0, endRadius: 640)
+                .overlay {
+                    RadialGradient(colors: [Color(hex: 0xFFECAA).opacity(0.5), .clear], center: UnitPoint(x: 0.5, y: 0.45),
+                                   startRadius: 10, endRadius: 260)
+                        .opacity(phase != .closed && phase != .charging ? 1 : 0)
+                        .animation(Motion.standard, value: phase)
+                }
                 .ignoresSafeArea()
-            if phase != .closed && phase != .charging {
-                // Après l'ouverture, une lueur douce reste derrière les cartes.
-                Circle()
-                    .fill(RadialGradient(colors: [Color(hex: 0xFFECAA).opacity(0.5), .clear], center: .center, startRadius: 10, endRadius: 260))
-                    .frame(width: 520, height: 520)
-                    .allowsHitTesting(false)
-                    .transition(.opacity)
-            }
             VStack(spacing: Space.l) {
                 header
                 Spacer(minLength: 0)
@@ -110,12 +110,6 @@ struct ChestOpeningView: View {
             VStack(spacing: Space.l) {
                 if let chest {
                     ZStack {
-                        // Lueur douce derrière le coffre, qui grandit à chaque toucher.
-                        Circle()
-                            .fill(RadialGradient(colors: [Color(hex: 0xFFECAA).opacity(0.55), .clear], center: .center, startRadius: 8, endRadius: 170))
-                            .frame(width: 340, height: 340)
-                            .scaleEffect(1 + 0.12 * Double(taps))
-                            .opacity(0.45 + 0.18 * Double(taps))
                         // Ombre au sol.
                         Ellipse()
                             .fill(Color(hex: 0x140850).opacity(0.45))
@@ -127,6 +121,14 @@ struct ChestOpeningView: View {
                             .rotationEffect(.degrees(taps == 0 && wobble ? 2.5 : (taps == 0 ? -2.5 : 0)), anchor: .bottom)
                             .rotationEffect(.degrees(kick), anchor: .bottom)
                             .scaleEffect(1 + 0.06 * Double(taps))
+                    }
+                    .frame(maxWidth: .infinity)
+                    // Lueur douce derrière le coffre, qui grandit à chaque toucher (en fond : ne change pas la mise en page).
+                    .background {
+                        RadialGradient(colors: [Color(hex: 0xFFECAA).opacity(0.55), .clear], center: .center, startRadius: 8, endRadius: 170)
+                            .scaleEffect(1 + 0.12 * Double(taps))
+                            .opacity(0.45 + 0.18 * Double(taps))
+                            .allowsHitTesting(false)
                     }
                     .id(chest.id)
                     // Le coffre arrive en grandissant ; à l'ouverture il éclate vers l'avant (jamais il ne rapetisse).
@@ -152,24 +154,34 @@ struct ChestOpeningView: View {
             .accessibilityElement(children: .combine)
             .accessibilityAddTraits(.isButton)
             .accessibilityHint("Touche trois fois pour ouvrir le coffre")
-        case .card(let i):
-            if rewards.indices.contains(i) {
-                RewardCard(reward: rewards[i], glow: glow)
-                    .id(i)
-                    .transition(.asymmetric(insertion: .scale(scale: 0.3).combined(with: .opacity).combined(with: .offset(y: 120)),
-                                            removal: .scale(scale: 0.6).combined(with: .opacity).combined(with: .offset(x: -200))))
-            }
-        case .summary:
-            VStack(spacing: Space.m) {
-                ChestView(tier: tier, open: true).frame(width: 110)
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 96), spacing: 10)], spacing: 10) {
-                    ForEach(Array(rewards.enumerated()), id: \.offset) { _, reward in
-                        RewardCard(reward: reward, glow: glow, compact: true)
-                    }
+        case .card, .summary:
+            deck
+        }
+    }
+
+    /// Les cartes déjà sorties, en grand : la dernière devant, les précédentes en éventail derrière (comme la maquette).
+    /// À la fin, le paquet reste affiché avec « Terminé ».
+    private var deck: some View {
+        let top: Int = {
+            if case .card(let i) = phase { return i }
+            return rewards.count - 1
+        }()
+        return ZStack {
+            ForEach(Array(rewards.enumerated()), id: \.offset) { index, reward in
+                if index <= top {
+                    let depth = Double(top - index)
+                    RewardCard(reward: reward, glow: glow)
+                        .scaleEffect(1 - 0.08 * min(depth, 3))
+                        .rotationEffect(.degrees(-5 * min(depth, 3)))
+                        .offset(x: -28 * min(depth, 3), y: 10 * min(depth, 3))
+                        .opacity(depth == 0 ? 1 : 0.6)
+                        .zIndex(Double(index))
+                        .transition(.scale(scale: 0.3).combined(with: .opacity).combined(with: .offset(y: 160)))
                 }
             }
-            .transition(.opacity)
         }
+        .frame(maxWidth: .infinity)
+        .animation(Motion.bounce, value: top)
     }
 
     private var footer: some View {
