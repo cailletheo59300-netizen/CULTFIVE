@@ -1,0 +1,347 @@
+[
+ {
+  "key": "acc-cinema-001",
+  "concept": "cinema.animation.acc_hakuna",
+  "label": "Hakuna matata",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Dans « Le Roi lion », qui chante « Hakuna matata » avec Simba ?",
+  "options": [
+   "Timon et Pumbaa*",
+   "Rafiki et Zazu",
+   "Scar et les hyènes",
+   "Nala et Sarabi"
+  ],
+  "explanation": "Le suricate Timon et le phacochère Pumbaa. « Hakuna matata » veut dire « pas de soucis » en swahili."
+ },
+ {
+  "key": "acc-cinema-002",
+  "concept": "cinema.animation.acc_reine_neiges",
+  "label": "La Reine des neiges",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « La Reine des neiges », quelle sœur a le pouvoir de créer de la glace ?",
+  "options": [
+   "Elsa*",
+   "Anna",
+   "Raiponce",
+   "Vaiana"
+  ],
+  "explanation": "Elsa, reine d'Arendelle, chante « Libérée, délivrée ». Anna est sa petite sœur."
+ },
+ {
+  "key": "acc-cinema-003",
+  "concept": "cinema.animation.acc_shrek",
+  "label": "Shrek",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel ogre vert vit dans un marais avec son ami l'âne ?",
+  "options": [
+   "Shrek*",
+   "Hulk",
+   "Gru",
+   "Fiona"
+  ],
+  "explanation": "Shrek (2001), des studios DreamWorks. Il finit par épouser la princesse Fiona."
+ },
+ {
+  "key": "acc-cinema-004",
+  "concept": "cinema.animation.acc_minions",
+  "label": "Les Minions",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Moi, moche et méchant », comment s'appellent les petits personnages jaunes ?",
+  "options": [
+   "Les Minions*",
+   "Les Schtroumpfs",
+   "Les Lapins crétins",
+   "Les Gremlins"
+  ],
+  "explanation": "Les Minions servent Gru, le méchant au grand cœur. Ils ont eu leurs propres films."
+ },
+ {
+  "key": "acc-cinema-005",
+  "concept": "cinema.animation.acc_ratatouille",
+  "label": "Ratatouille",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans « Ratatouille », de quel animal est Rémy, qui rêve de devenir chef cuisinier ?",
+  "options": [
+   "Un rat*",
+   "Une souris",
+   "Un hamster",
+   "Un écureuil"
+  ],
+  "explanation": "Rémy le rat cuisine en cachette à Paris, caché sous la toque de Linguini."
+ },
+ {
+  "key": "acc-cinema-006",
+  "concept": "cinema.animation.acc_aladdin_genie",
+  "label": "Le génie d'Aladdin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Aladdin », d'où sort le génie ?",
+  "options": [
+   "D'une lampe*",
+   "D'une bouteille",
+   "D'un coffre",
+   "D'un tapis"
+  ],
+  "explanation": "Aladdin frotte la lampe merveilleuse et le génie lui offre trois vœux."
+ },
+ {
+  "key": "acc-cinema-007",
+  "concept": "cinema.films.acc_titanic_iceberg",
+  "label": "Titanic",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Dans « Titanic », contre quoi le paquebot heurte-t-il ?",
+  "options": [
+   "Un iceberg*",
+   "Un autre navire",
+   "Des rochers",
+   "Une baleine"
+  ],
+  "explanation": "Comme le vrai Titanic, en avril 1912, dans l'Atlantique Nord."
+ },
+ {
+  "key": "acc-cinema-008",
+  "concept": "cinema.films.acc_star_wars_pere",
+  "label": "Je suis ton père",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Dans « Star Wars », qui révèle à Luke Skywalker « Je suis ton père » ?",
+  "options": [
+   "Dark Vador*",
+   "Obi-Wan Kenobi",
+   "L'empereur Palpatine",
+   "Han Solo"
+  ],
+  "explanation": "La révélation arrive dans L'Empire contre-attaque (1980)."
+ },
+ {
+  "key": "acc-cinema-009",
+  "concept": "cinema.films.acc_jurassic_park",
+  "label": "Jurassic Park",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Jurassic Park », quels animaux sont recréés dans un parc d'attractions ?",
+  "options": [
+   "Des dinosaures*",
+   "Des mammouths",
+   "Des dragons",
+   "Des requins géants"
+  ],
+  "explanation": "Recréés à partir d'ADN conservé dans l'ambre. Réalisé par Steven Spielberg en 1993."
+ },
+ {
+  "key": "acc-cinema-010",
+  "concept": "cinema.films.acc_bienvenue_chtis",
+  "label": "Bienvenue chez les Ch'tis",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle région se déroule « Bienvenue chez les Ch'tis » ?",
+  "options": [
+   "Le Nord-Pas-de-Calais*",
+   "La Bretagne",
+   "La Provence",
+   "L'Alsace"
+  ],
+  "explanation": "Un directeur de poste muté à Bergues découvre le Nord et le ch'ti. Plus de 20 millions d'entrées en 2008."
+ },
+ {
+  "key": "acc-cinema-011",
+  "concept": "cinema.films.acc_intouchables",
+  "label": "Intouchables",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel acteur joue Driss, l'aide à domicile, dans « Intouchables » (2011) ?",
+  "options": [
+   "Omar Sy*",
+   "Jamel Debbouze",
+   "Kad Merad",
+   "Dany Boon"
+  ],
+  "explanation": "Omar Sy reçoit le César du meilleur acteur pour ce rôle, face à François Cluzet."
+ },
+ {
+  "key": "acc-cinema-012",
+  "concept": "cinema.films.acc_harry_ecole",
+  "label": "Poudlard",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle l'école de sorcellerie de Harry Potter ?",
+  "options": [
+   "Poudlard*",
+   "Beauxbâtons",
+   "Durmstrang",
+   "Ilvermorny"
+  ],
+  "explanation": "Poudlard (Hogwarts en anglais) et ses quatre maisons, dont Gryffondor."
+ },
+ {
+  "key": "acc-cinema-013",
+  "concept": "cinema.films.acc_seigneur_anneau_frodon",
+  "label": "Frodon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans « Le Seigneur des anneaux », quel hobbit doit détruire l'anneau ?",
+  "options": [
+   "Frodon*",
+   "Sam",
+   "Bilbon",
+   "Pippin"
+  ],
+  "explanation": "Frodon Sacquet, accompagné de son fidèle Sam, jusqu'à la Montagne du Destin."
+ },
+ {
+  "key": "acc-cinema-014",
+  "concept": "cinema.films.acc_retour_futur",
+  "label": "Retour vers le futur",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « Retour vers le futur », dans quoi est installée la machine à voyager dans le temps ?",
+  "options": [
+   "Une voiture DeLorean*",
+   "Une cabine téléphonique",
+   "Un train à vapeur",
+   "Un frigo"
+  ],
+  "explanation": "La DeLorean doit atteindre 88 miles à l'heure. Avec Michael J. Fox (1985)."
+ },
+ {
+  "key": "acc-cinema-015",
+  "concept": "cinema.films.acc_oscar_statuette",
+  "label": "La statuette des Oscars",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "La statuette des Oscars représente une femme tenant une palme.",
+  "answer": false,
+  "explanation": "C'est un chevalier debout sur une bobine de film, tenant une épée."
+ },
+ {
+  "key": "acc-cinema-016",
+  "concept": "cinema.films.acc_cesar",
+  "label": "Les César",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appellent les grandes récompenses du cinéma français ?",
+  "options": [
+   "Les César*",
+   "Les Victoires",
+   "Les Molières",
+   "Les Oscars"
+  ],
+  "explanation": "Créés en 1976. Les Molières récompensent le théâtre, les Victoires la musique."
+ },
+ {
+  "key": "acc-cinema-017",
+  "concept": "cinema.actors.acc_ironman",
+  "label": "Iron Man",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel acteur a joué Iron Man dans les films Marvel ?",
+  "options": [
+   "Robert Downey Jr.*",
+   "Chris Evans",
+   "Chris Hemsworth",
+   "Mark Ruffalo"
+  ],
+  "explanation": "Il incarne Tony Stark de 2008 à 2019. Chris Evans joue Captain America."
+ },
+ {
+  "key": "acc-cinema-018",
+  "concept": "cinema.actors.acc_jack_sparrow",
+  "label": "Jack Sparrow",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel acteur joue le pirate Jack Sparrow dans « Pirates des Caraïbes » ?",
+  "options": [
+   "Johnny Depp*",
+   "Orlando Bloom",
+   "Brad Pitt",
+   "Keanu Reeves"
+  ],
+  "explanation": "Johnny Depp, nommé aux Oscars pour ce rôle en 2004."
+ },
+ {
+  "key": "acc-cinema-019",
+  "concept": "cinema.actors.acc_de_funes",
+  "label": "Louis de Funès",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel acteur comique joue le gendarme Cruchot dans « Le Gendarme de Saint-Tropez » ?",
+  "options": [
+   "Louis de Funès*",
+   "Bourvil",
+   "Fernandel",
+   "Pierre Richard"
+  ],
+  "explanation": "Six films de la série entre 1964 et 1982."
+ },
+ {
+  "key": "acc-cinema-020",
+  "concept": "cinema.actors.acc_007",
+  "label": "James Bond",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel est le matricule de l'agent secret James Bond ?",
+  "options": [
+   "007*",
+   "001",
+   "700",
+   "077"
+  ],
+  "explanation": "« Bond, James Bond. » Le permis de tuer est signalé par le double zéro."
+ },
+ {
+  "key": "acc-cinema-021",
+  "concept": "cinema.directors.acc_lucas_star_wars",
+  "label": "George Lucas",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a créé la saga « Star Wars » ?",
+  "options": [
+   "George Lucas*",
+   "Steven Spielberg",
+   "James Cameron",
+   "Christopher Nolan"
+  ],
+  "explanation": "George Lucas réalise le premier film en 1977."
+ },
+ {
+  "key": "acc-cinema-022",
+  "concept": "cinema.directors.acc_muet",
+  "label": "Cinéma muet",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Les premiers films n'avaient pas de son : on les appelle les films muets.",
+  "answer": true,
+  "explanation": "Le parlant arrive en 1927 avec Le Chanteur de jazz. Avant, un pianiste jouait souvent dans la salle."
+ },
+ {
+  "key": "acc-cinema-023",
+  "concept": "cinema.films.acc_harry_tomes",
+  "label": "Films Harry Potter",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien de films compte la saga Harry Potter (hors Animaux fantastiques) ?",
+  "answer": 8,
+  "explanation": "Sept livres, mais le dernier tome a été coupé en deux films : huit en tout."
+ },
+ {
+  "key": "acc-cinema-024",
+  "concept": "cinema.films.acc_popcorn",
+  "label": "Le pop-corn",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Avec quelle céréale fait-on le pop-corn ?",
+  "options": [
+   "Le maïs*",
+   "Le blé",
+   "Le riz",
+   "L'orge"
+  ],
+  "explanation": "Des grains de maïs qui éclatent sous la chaleur."
+ }
+]

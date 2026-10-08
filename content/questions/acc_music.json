@@ -1,0 +1,282 @@
+[
+ {
+  "key": "acc-music-001",
+  "concept": "music.instruments.acc_touches_piano",
+  "label": "Touches du piano",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quelles couleurs sont les touches d'un piano ?",
+  "options": [
+   "Blanches et noires*",
+   "Blanches et grises",
+   "Noires et rouges",
+   "Toutes blanches"
+  ],
+  "explanation": "Les touches noires jouent les dièses et les bémols. Un piano en compte 88 au total."
+ },
+ {
+  "key": "acc-music-002",
+  "concept": "music.instruments.acc_archet",
+  "label": "L'archet",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Avec quoi joue-t-on du violon ?",
+  "options": [
+   "Un archet*",
+   "Un médiator",
+   "Des baguettes",
+   "Un marteau"
+  ],
+  "explanation": "L'archet, tendu de crins de cheval, frotte les cordes."
+ },
+ {
+  "key": "acc-music-003",
+  "concept": "music.instruments.acc_baguettes",
+  "label": "Les baguettes",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel instrument se joue avec des baguettes ?",
+  "options": [
+   "La batterie*",
+   "La flûte",
+   "Le violon",
+   "La harpe"
+  ],
+  "explanation": "La batterie réunit grosse caisse, caisse claire, toms et cymbales."
+ },
+ {
+  "key": "acc-music-004",
+  "concept": "music.instruments.acc_souffle",
+  "label": "Instrument à vent",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Lequel de ces instruments est un instrument à vent ?",
+  "options": [
+   "La trompette*",
+   "Le violoncelle",
+   "Le xylophone",
+   "La guitare"
+  ],
+  "explanation": "On souffle dans la trompette. Le violoncelle est à cordes, le xylophone à percussion."
+ },
+ {
+  "key": "acc-music-005",
+  "concept": "music.instruments.acc_accordeon",
+  "label": "L'accordéon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel instrument à soufflet est typique du bal musette ?",
+  "options": [
+   "L'accordéon*",
+   "La cornemuse",
+   "L'harmonica",
+   "L'orgue"
+  ],
+  "explanation": "L'accordéon, symbole des guinguettes et du Paris d'autrefois."
+ },
+ {
+  "key": "acc-music-006",
+  "concept": "music.instruments.acc_piano_cordes",
+  "label": "Le piano a des cordes",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "À l'intérieur d'un piano, des marteaux frappent des cordes.",
+  "answer": true,
+  "explanation": "Quand on appuie sur une touche, un marteau feutré frappe une ou plusieurs cordes."
+ },
+ {
+  "key": "acc-music-007",
+  "concept": "music.classical.acc_mozart_enfant",
+  "label": "Mozart enfant",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel compositeur autrichien jouait déjà devant les rois à 6 ans ?",
+  "options": [
+   "Wolfgang Amadeus Mozart*",
+   "Ludwig van Beethoven",
+   "Johann Sebastian Bach",
+   "Frédéric Chopin"
+  ],
+  "explanation": "Enfant prodige, Mozart compose dès 5 ans et part en tournée en Europe."
+ },
+ {
+  "key": "acc-music-008",
+  "concept": "music.classical.acc_hymne_europe",
+  "label": "Hymne européen",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel morceau de Beethoven est devenu l'hymne de l'Union européenne ?",
+  "options": [
+   "L'Hymne à la joie*",
+   "La Lettre à Élise",
+   "La Sonate au clair de lune",
+   "La 5e symphonie"
+  ],
+  "explanation": "C'est le final de sa 9e symphonie, adopté comme hymne européen en 1972 (Conseil de l'Europe)."
+ },
+ {
+  "key": "acc-music-009",
+  "concept": "music.classical.acc_opera_chante",
+  "label": "L'opéra",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment appelle-t-on une pièce de théâtre entièrement chantée, avec un orchestre ?",
+  "options": [
+   "Un opéra*",
+   "Une symphonie",
+   "Un concerto",
+   "Une sonate"
+  ],
+  "explanation": "Carmen, La Traviata, La Flûte enchantée sont des opéras célèbres."
+ },
+ {
+  "key": "acc-music-010",
+  "concept": "music.popular.acc_marseillaise",
+  "label": "La Marseillaise",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle l'hymne national de la France ?",
+  "options": [
+   "La Marseillaise*",
+   "Le Chant des partisans",
+   "La Carmagnole",
+   "Le Chant du départ"
+  ],
+  "explanation": "Écrite par Rouget de Lisle en 1792. « Allons enfants de la Patrie… »"
+ },
+ {
+  "key": "acc-music-011",
+  "concept": "music.popular.acc_piaf_vie_en_rose",
+  "label": "La Vie en rose",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle chanteuse a chanté « La Vie en rose » et « Non, je ne regrette rien » ?",
+  "options": [
+   "Édith Piaf*",
+   "Dalida",
+   "Barbara",
+   "Juliette Gréco"
+  ],
+  "explanation": "« La Môme Piaf », figure de la chanson française des années 1940-1960."
+ },
+ {
+  "key": "acc-music-012",
+  "concept": "music.popular.acc_johnny",
+  "label": "Johnny Hallyday",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel chanteur était surnommé « l'idole des jeunes » ?",
+  "options": [
+   "Johnny Hallyday*",
+   "Eddy Mitchell",
+   "Michel Sardou",
+   "Claude François"
+  ],
+  "explanation": "Johnny Hallyday, star du rock en France pendant près de 60 ans."
+ },
+ {
+  "key": "acc-music-013",
+  "concept": "music.popular.acc_cloclo",
+  "label": "Claude François",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel chanteur, accompagné de ses Claudettes, a chanté « Alexandrie Alexandra » ?",
+  "options": [
+   "Claude François*",
+   "Michel Sardou",
+   "Joe Dassin",
+   "Mike Brant"
+  ],
+  "explanation": "« Cloclo » a aussi écrit « Comme d'habitude », devenu « My Way » en anglais."
+ },
+ {
+  "key": "acc-music-014",
+  "concept": "music.popular.acc_michael_jackson_moonwalk",
+  "label": "Moonwalk",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel chanteur a rendu célèbre le « moonwalk », ce pas qui glisse en arrière ?",
+  "options": [
+   "Michael Jackson*",
+   "Prince",
+   "Elvis Presley",
+   "Madonna"
+  ],
+  "explanation": "Il le présente en 1983 sur « Billie Jean »."
+ },
+ {
+  "key": "acc-music-015",
+  "concept": "music.popular.acc_eurovision",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle le grand concours de chansons entre pays européens ?",
+  "options": [
+   "L'Eurovision*",
+   "The Voice",
+   "Les Victoires de la musique",
+   "La Star Academy"
+  ],
+  "explanation": "Créé en 1956. ABBA l'a gagné en 1974 avec « Waterloo »."
+ },
+ {
+  "key": "acc-music-016",
+  "concept": "music.popular.acc_fete_musique",
+  "label": "Fête de la musique",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "À quelle date a lieu la Fête de la musique en France ?",
+  "options": [
+   "Le 21 juin*",
+   "Le 14 juillet",
+   "Le 1er mai",
+   "Le 31 décembre"
+  ],
+  "explanation": "Créée en 1982, le jour du solstice d'été."
+ },
+ {
+  "key": "acc-music-017",
+  "concept": "music.popular.acc_daft_punk",
+  "label": "Daft Punk",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel duo français de musique électronique portait des casques de robot ?",
+  "options": [
+   "Daft Punk*",
+   "Justice",
+   "Air",
+   "Cassius"
+  ],
+  "explanation": "Thomas Bangalter et Guy-Manuel de Homem-Christo. Le groupe s'est séparé en 2021."
+ },
+ {
+  "key": "acc-music-018",
+  "concept": "music.popular.acc_joyeux_anniversaire",
+  "label": "Joyeux anniversaire",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quelle chanson est chantée partout dans le monde pour un anniversaire ?",
+  "options": [
+   "Happy Birthday*",
+   "Jingle Bells",
+   "Frère Jacques",
+   "We Are the Champions"
+  ],
+  "explanation": "Sa mélodie vient d'une chanson enfantine américaine de la fin du XIXe siècle."
+ },
+ {
+  "key": "acc-music-019",
+  "concept": "music.popular.acc_frere_jacques",
+  "label": "Frère Jacques",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans la comptine, que fait Frère Jacques pendant qu'on lui demande « Sonnez les matines » ?",
+  "options": [
+   "Il dort*",
+   "Il mange",
+   "Il chante",
+   "Il prie"
+  ],
+  "explanation": "« Frère Jacques, dormez-vous ? » On la chante souvent en canon."
+ }
+]

@@ -1,0 +1,472 @@
+[
+ {
+  "key": "acc-arts-001",
+  "concept": "arts.literature.acc_don_quichotte",
+  "label": "Don Quichotte",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel héros de roman espagnol se bat contre des moulins à vent qu'il prend pour des géants ?",
+  "options": [
+   "Don Quichotte*",
+   "Don Juan",
+   "Zorro",
+   "Sancho Panza"
+  ],
+  "explanation": "Don Quichotte, de Cervantès (1605). Sancho Panza est son fidèle écuyer."
+ },
+ {
+  "key": "acc-arts-002",
+  "concept": "arts.literature.acc_perrault",
+  "label": "Contes de Perrault",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel auteur français a publié en 1697 « Le Petit Chaperon rouge », « Cendrillon » et « Le Chat botté » ?",
+  "options": [
+   "Charles Perrault*",
+   "Jean de La Fontaine",
+   "Les frères Grimm",
+   "Hans Christian Andersen"
+  ],
+  "explanation": "Les Contes de ma mère l'Oye de Charles Perrault. Les frères Grimm en ont publié leurs propres versions plus d'un siècle après."
+ },
+ {
+  "key": "acc-arts-003",
+  "concept": "arts.literature.acc_romeo_verone",
+  "label": "Roméo et Juliette à Vérone",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle ville italienne se déroule « Roméo et Juliette » de Shakespeare ?",
+  "options": [
+   "Vérone*",
+   "Venise",
+   "Florence",
+   "Rome"
+  ],
+  "explanation": "Les Montaigu et les Capulet se déchirent à Vérone. On y montre encore le « balcon de Juliette »."
+ },
+ {
+  "key": "acc-arts-004",
+  "concept": "arts.literature.acc_harpagon",
+  "label": "Harpagon",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "Quel personnage de Molière est un avare obsédé par sa cassette d'argent ?",
+  "options": [
+   "Harpagon*",
+   "Tartuffe",
+   "Alceste",
+   "Scapin"
+  ],
+  "explanation": "Harpagon est le héros de L'Avare (1668). Son nom est devenu synonyme d'avare."
+ },
+ {
+  "key": "acc-arts-005",
+  "concept": "arts.literature.acc_sherlock",
+  "label": "Sherlock Holmes",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Le détective Sherlock Holmes a été créé par Agatha Christie.",
+  "answer": false,
+  "explanation": "Sherlock Holmes est né sous la plume d'Arthur Conan Doyle en 1887. Agatha Christie a créé Hercule Poirot."
+ },
+ {
+  "key": "acc-arts-006",
+  "concept": "arts.literature.acc_tintin",
+  "label": "Tintin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel auteur belge a créé Tintin et Milou ?",
+  "options": [
+   "Hergé*",
+   "René Goscinny",
+   "Albert Uderzo",
+   "André Franquin"
+  ],
+  "explanation": "Hergé (Georges Remi) dessine Tintin à partir de 1929."
+ },
+ {
+  "key": "acc-arts-007",
+  "concept": "arts.literature.acc_asterix",
+  "label": "Astérix",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui sont les créateurs d'Astérix ?",
+  "options": [
+   "Goscinny et Uderzo*",
+   "Hergé et Jacobs",
+   "Morris et Goscinny",
+   "Peyo et Franquin"
+  ],
+  "explanation": "René Goscinny (scénario) et Albert Uderzo (dessin) créent Astérix en 1959."
+ },
+ {
+  "key": "acc-arts-008",
+  "concept": "arts.literature.acc_quasimodo",
+  "label": "Quasimodo",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Dans quel roman de Victor Hugo apparaît Quasimodo, le sonneur de cloches ?",
+  "options": [
+   "Notre-Dame de Paris*",
+   "Les Misérables",
+   "Quatrevingt-treize",
+   "L'Homme qui rit"
+  ],
+  "explanation": "Notre-Dame de Paris (1831) : Quasimodo aime Esmeralda."
+ },
+ {
+  "key": "acc-arts-009",
+  "concept": "arts.painting.acc_montres_molles",
+  "label": "Les montres molles",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel peintre surréaliste a peint des montres molles qui fondent ?",
+  "options": [
+   "Salvador Dalí*",
+   "René Magritte",
+   "Pablo Picasso",
+   "Joan Miró"
+  ],
+  "explanation": "La Persistance de la mémoire (1931), de Salvador Dalí."
+ },
+ {
+  "key": "acc-arts-010",
+  "concept": "arts.painting.acc_sixtine",
+  "label": "La chapelle Sixtine",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a peint le plafond de la chapelle Sixtine, au Vatican ?",
+  "options": [
+   "Michel-Ange*",
+   "Léonard de Vinci",
+   "Raphaël",
+   "Le Caravage"
+  ],
+  "explanation": "Michel-Ange le peint de 1508 à 1512, dont la célèbre Création d'Adam."
+ },
+ {
+  "key": "acc-arts-011",
+  "concept": "arts.painting.acc_giverny",
+  "label": "Giverny",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel village Claude Monet a-t-il peint ses fameux nymphéas, dans son propre jardin ?",
+  "options": [
+   "Giverny*",
+   "Barbizon",
+   "Auvers-sur-Oise",
+   "Étretat"
+  ],
+  "explanation": "Monet vit à Giverny, en Normandie, de 1883 à sa mort. Son jardin se visite."
+ },
+ {
+  "key": "acc-arts-012",
+  "concept": "arts.painting.acc_couleurs_primaires",
+  "label": "Couleurs primaires",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "En peinture traditionnelle, les trois couleurs primaires sont le vert, le violet et l'orange.",
+  "answer": false,
+  "explanation": "Ce sont les couleurs secondaires. Les primaires sont le rouge, le jaune et le bleu : mélangées deux à deux, elles donnent le vert, le violet et l'orange."
+ },
+ {
+  "key": "acc-arts-013",
+  "concept": "arts.painting.acc_warhol",
+  "label": "Andy Warhol",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel artiste américain a reproduit en série des boîtes de soupe Campbell et des portraits de Marilyn Monroe ?",
+  "options": [
+   "Andy Warhol*",
+   "Roy Lichtenstein",
+   "Jean-Michel Basquiat",
+   "Jackson Pollock"
+  ],
+  "explanation": "Figure du pop art, Warhol peint ses Campbell's Soup Cans en 1962."
+ },
+ {
+  "key": "acc-arts-014",
+  "concept": "arts.architecture.acc_colisee",
+  "label": "Le Colisée",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Le Colisée de Rome était un amphithéâtre où se déroulaient des combats de gladiateurs.",
+  "answer": true,
+  "explanation": "Inauguré en l'an 80, il pouvait accueillir environ 50 000 spectateurs."
+ },
+ {
+  "key": "acc-arts-015",
+  "concept": "arts.mythology.acc_jupiter",
+  "label": "Jupiter",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel dieu romain correspond au Zeus des Grecs ?",
+  "options": [
+   "Jupiter*",
+   "Mars",
+   "Neptune",
+   "Mercure"
+  ],
+  "explanation": "Les Romains ont repris les dieux grecs sous d'autres noms : Zeus devient Jupiter, Poséidon Neptune."
+ },
+ {
+  "key": "acc-arts-016",
+  "concept": "arts.mythology.acc_meduse",
+  "label": "Méduse",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quelle créature de la mythologie grecque changeait en pierre ceux qui la regardaient ?",
+  "options": [
+   "Méduse*",
+   "Le Sphinx",
+   "L'Hydre",
+   "Cerbère"
+  ],
+  "explanation": "Ses cheveux étaient des serpents. Persée la tue en la regardant dans un bouclier."
+ },
+ {
+  "key": "acc-arts-017",
+  "concept": "arts.mythology.acc_thor",
+  "label": "Thor",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans la mythologie nordique, quel dieu du tonnerre manie un marteau ?",
+  "options": [
+   "Thor*",
+   "Odin",
+   "Loki",
+   "Freyr"
+  ],
+  "explanation": "Son marteau s'appelle Mjöllnir. Il a donné son nom au jeudi en anglais (Thursday)."
+ },
+ {
+  "key": "acc-arts-018",
+  "concept": "arts.mythology.acc_ithaque",
+  "label": "Ithaque",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans l'« Odyssée », quelle île Ulysse met dix ans à regagner ?",
+  "options": [
+   "Ithaque*",
+   "La Crète",
+   "Rhodes",
+   "Chypre"
+  ],
+  "explanation": "Ulysse y retrouve sa femme Pénélope et son fils Télémaque."
+ },
+ {
+  "key": "acc-arts-019",
+  "concept": "arts.literature.acc_lucky_luke",
+  "label": "Lucky Luke",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel cow-boy de bande dessinée « tire plus vite que son ombre » ?",
+  "options": [
+   "Lucky Luke*",
+   "Blueberry",
+   "Buffalo Bill",
+   "Jolly Jumper"
+  ],
+  "explanation": "Lucky Luke est créé par Morris en 1946. Jolly Jumper est son cheval."
+ },
+ {
+  "key": "acc-arts-020",
+  "concept": "arts.literature.acc_schtroumpfs",
+  "label": "Les Schtroumpfs",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel dessinateur belge a créé les Schtroumpfs ?",
+  "options": [
+   "Peyo*",
+   "Hergé",
+   "Franquin",
+   "Morris"
+  ],
+  "explanation": "Peyo les fait apparaître en 1958. Leur ennemi : Gargamel et son chat Azraël."
+ },
+ {
+  "key": "acc-arts-021",
+  "concept": "arts.literature.acc_gaston",
+  "label": "Gaston Lagaffe",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel employé maladroit de bande dessinée enchaîne les gaffes dans les bureaux du journal Spirou ?",
+  "options": [
+   "Gaston Lagaffe*",
+   "Le Marsupilami",
+   "Achille Talon",
+   "Boule"
+  ],
+  "explanation": "Gaston, créé par André Franquin en 1957, avec son chat et sa mouette rieuse."
+ },
+ {
+  "key": "acc-arts-022",
+  "concept": "arts.literature.acc_petit_nicolas",
+  "label": "Le Petit Nicolas",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a écrit les histoires du « Petit Nicolas », illustrées par Sempé ?",
+  "options": [
+   "René Goscinny*",
+   "Marcel Pagnol",
+   "Daniel Pennac",
+   "Jacques Prévert"
+  ],
+  "explanation": "Goscinny, aussi scénariste d'Astérix, écrit Le Petit Nicolas à partir de 1959."
+ },
+ {
+  "key": "acc-arts-023",
+  "concept": "arts.literature.acc_charlie_chocolaterie",
+  "label": "Charlie et la chocolaterie",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "Qui a écrit « Charlie et la chocolaterie » ?",
+  "options": [
+   "Roald Dahl*",
+   "Lewis Carroll",
+   "J. M. Barrie",
+   "Rudyard Kipling"
+  ],
+  "explanation": "Roald Dahl publie le roman en 1964 : Willy Wonka et ses tickets d'or."
+ },
+ {
+  "key": "acc-arts-024",
+  "concept": "arts.literature.acc_pinocchio",
+  "label": "Pinocchio",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel pantin de bois voit son nez s'allonger quand il ment ?",
+  "options": [
+   "Pinocchio*",
+   "Polichinelle",
+   "Guignol",
+   "Arlequin"
+  ],
+  "explanation": "Pinocchio est né sous la plume de l'Italien Carlo Collodi en 1881."
+ },
+ {
+  "key": "acc-arts-025",
+  "concept": "arts.literature.acc_pantoufle",
+  "label": "La pantoufle de verre",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quelle héroïne de conte perd une pantoufle de verre en quittant le bal ?",
+  "options": [
+   "Cendrillon*",
+   "Blanche-Neige",
+   "La Belle au bois dormant",
+   "Raiponce"
+  ],
+  "explanation": "Le prince retrouve Cendrillon grâce à la pantoufle, qui ne va qu'à elle."
+ },
+ {
+  "key": "acc-arts-026",
+  "concept": "arts.literature.acc_nains",
+  "label": "Les sept nains",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Combien de nains accueillent Blanche-Neige dans leur maison ?",
+  "answer": 7,
+  "explanation": "Sept nains, dans le conte des frères Grimm comme dans le dessin animé de Disney."
+ },
+ {
+  "key": "acc-arts-027",
+  "concept": "arts.painting.acc_penseur",
+  "label": "Le Penseur",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel sculpteur a créé « Le Penseur », un homme assis, le menton sur la main ?",
+  "options": [
+   "Auguste Rodin*",
+   "Camille Claudel",
+   "Michel-Ange",
+   "Aristide Maillol"
+  ],
+  "explanation": "Rodin le conçoit vers 1880. Le musée Rodin à Paris en expose un exemplaire."
+ },
+ {
+  "key": "acc-arts-028",
+  "concept": "arts.painting.acc_venus_milo",
+  "label": "La Vénus de Milo",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle célèbre statue grecque du Louvre n'a plus de bras ?",
+  "options": [
+   "La Vénus de Milo*",
+   "La Victoire de Samothrace",
+   "Le Discobole",
+   "La Dame d'Elche"
+  ],
+  "explanation": "Découverte en 1820 sur l'île de Milo, elle avait déjà perdu ses bras."
+ },
+ {
+  "key": "acc-arts-029",
+  "concept": "arts.architecture.acc_chambord",
+  "label": "Chambord",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pour quel roi le château de Chambord a-t-il été construit ?",
+  "options": [
+   "François Ier*",
+   "Louis XIV",
+   "Henri IV",
+   "Louis XII"
+  ],
+  "explanation": "Le chantier commence en 1519. Son escalier à double révolution est célèbre."
+ },
+ {
+  "key": "acc-arts-030",
+  "concept": "arts.architecture.acc_pont_du_gard",
+  "label": "Le pont du Gard",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qui a construit le pont du Gard, dans le sud de la France ?",
+  "options": [
+   "Les Romains*",
+   "Les Grecs",
+   "Les Gaulois",
+   "Les Égyptiens"
+  ],
+  "explanation": "Cet aqueduc romain du Ier siècle apportait l'eau jusqu'à Nîmes."
+ },
+ {
+  "key": "acc-arts-031",
+  "concept": "arts.architecture.acc_statue_liberte",
+  "label": "La statue de la Liberté",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "La statue de la Liberté de New York a été offerte par la France.",
+  "answer": true,
+  "explanation": "Œuvre de Bartholdi, avec une structure de Gustave Eiffel, elle est inaugurée en 1886."
+ },
+ {
+  "key": "acc-arts-032",
+  "concept": "arts.mythology.acc_cupidon",
+  "label": "Cupidon",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel dieu romain de l'amour décoche des flèches pour rendre amoureux ?",
+  "options": [
+   "Cupidon*",
+   "Mercure",
+   "Apollon",
+   "Bacchus"
+  ],
+  "explanation": "Cupidon (Éros chez les Grecs) est souvent représenté en enfant ailé avec un arc."
+ },
+ {
+  "key": "acc-arts-033",
+  "concept": "arts.mythology.acc_pandore",
+  "label": "La boîte de Pandore",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui, selon la mythologie grecque, a ouvert la boîte qui a libéré tous les maux sur la Terre ?",
+  "options": [
+   "Pandore*",
+   "Athéna",
+   "Médée",
+   "Hélène"
+  ],
+  "explanation": "Il ne resta au fond que l'espérance. « Ouvrir la boîte de Pandore » : déclencher des ennuis."
+ }
+]

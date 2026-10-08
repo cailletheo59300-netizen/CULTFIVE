@@ -1,0 +1,407 @@
+[
+ {
+  "key": "acc-calc-001",
+  "concept": "calc.mental.acc_baguettes",
+  "label": "3 baguettes",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Une baguette coûte 1,30 €. Combien coûtent 3 baguettes, en euros ?",
+  "answer": 3.9,
+  "explanation": "3 × 1,30 = 3,90 €."
+ },
+ {
+  "key": "acc-calc-002",
+  "concept": "calc.mental.acc_monnaie_20",
+  "label": "Rendre la monnaie",
+  "type": "numeric",
+  "difficulty": 18,
+  "prompt": "Tu paies 13,50 € avec un billet de 20 €. Combien doit-on te rendre, en euros ?",
+  "answer": 6.5,
+  "explanation": "20 − 13,50 = 6,50 €."
+ },
+ {
+  "key": "acc-calc-003",
+  "concept": "calc.mental.acc_film_fin",
+  "label": "Fin du film",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Un film de 1 h 45 commence à 20 h 30. À quelle heure finit-il ?",
+  "options": [
+   "22 h 15*",
+   "21 h 75",
+   "22 h 45",
+   "21 h 15"
+  ],
+  "explanation": "20 h 30 + 1 h = 21 h 30, puis + 45 min = 22 h 15."
+ },
+ {
+  "key": "acc-calc-004",
+  "concept": "calc.mental.acc_oeufs_douzaines",
+  "label": "Œufs",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien d'œufs y a-t-il dans 3 boîtes d'une demi-douzaine ?",
+  "answer": 18,
+  "explanation": "Une demi-douzaine = 6 œufs. 3 × 6 = 18."
+ },
+ {
+  "key": "acc-calc-005",
+  "concept": "calc.mental.acc_semaines_annee",
+  "label": "Semaines dans une année",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien y a-t-il de semaines (pleines) dans une année de 365 jours ?",
+  "answer": 52,
+  "explanation": "365 ÷ 7 = 52 semaines et 1 jour."
+ },
+ {
+  "key": "acc-calc-006",
+  "concept": "calc.mental.acc_pizza_partage",
+  "label": "Partager la note",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quatre amis partagent une note de 52 € à parts égales. Combien paie chacun, en euros ?",
+  "answer": 13,
+  "explanation": "52 ÷ 4 = 13 €."
+ },
+ {
+  "key": "acc-calc-007",
+  "concept": "calc.mental.acc_double_45",
+  "label": "Double de 45",
+  "type": "numeric",
+  "difficulty": 12,
+  "prompt": "Quel est le double de 45 ?",
+  "answer": 90,
+  "explanation": "45 × 2 = 90."
+ },
+ {
+  "key": "acc-calc-008",
+  "concept": "calc.mental.acc_moitie_150",
+  "label": "Moitié de 150",
+  "type": "numeric",
+  "difficulty": 12,
+  "prompt": "Quelle est la moitié de 150 ?",
+  "answer": 75,
+  "explanation": "150 ÷ 2 = 75."
+ },
+ {
+  "key": "acc-calc-009",
+  "concept": "calc.mental.acc_trajet_km",
+  "label": "Kilomètres en voiture",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Une voiture roule à 90 km/h pendant 2 heures. Combien de kilomètres parcourt-elle ?",
+  "answer": 180,
+  "explanation": "90 × 2 = 180 km."
+ },
+ {
+  "key": "acc-calc-010",
+  "concept": "calc.mental.acc_age_dans",
+  "label": "Âge en 2040",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Une personne née en 1998 aura quel âge en 2040, après son anniversaire ?",
+  "answer": 42,
+  "explanation": "2040 − 1998 = 42 ans."
+ },
+ {
+  "key": "acc-calc-011",
+  "concept": "calc.mental.acc_paquets_gateaux",
+  "label": "Paquets de gâteaux",
+  "type": "numeric",
+  "difficulty": 22,
+  "prompt": "Un paquet contient 12 biscuits. Combien de biscuits dans 5 paquets ?",
+  "answer": 60,
+  "explanation": "12 × 5 = 60."
+ },
+ {
+  "key": "acc-calc-012",
+  "concept": "calc.mental.acc_rendez_vous",
+  "label": "Retard",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Un train part à 14 h 50 et arrive à 16 h 05. Combien de temps dure le trajet ?",
+  "options": [
+   "1 h 15*",
+   "1 h 55",
+   "1 h 05",
+   "2 h 15"
+  ],
+  "explanation": "De 14 h 50 à 15 h 50 : 1 h, puis 15 minutes jusqu'à 16 h 05. Total : 1 h 15."
+ },
+ {
+  "key": "acc-calc-013",
+  "concept": "calc.percent.acc_soldes_50",
+  "label": "Soldes −50 %",
+  "type": "numeric",
+  "difficulty": 12,
+  "prompt": "Un pull à 40 € est soldé à −50 %. Quel est son nouveau prix, en euros ?",
+  "answer": 20,
+  "explanation": "50 % = la moitié. 40 ÷ 2 = 20 €."
+ },
+ {
+  "key": "acc-calc-014",
+  "concept": "calc.percent.acc_soldes_20",
+  "label": "Soldes −20 %",
+  "type": "numeric",
+  "difficulty": 28,
+  "prompt": "Une veste coûte 60 €. Avec −20 %, combien coûte-t-elle, en euros ?",
+  "answer": 48,
+  "explanation": "20 % de 60 = 12. 60 − 12 = 48 €."
+ },
+ {
+  "key": "acc-calc-015",
+  "concept": "calc.percent.acc_pourboire_10",
+  "label": "Pourboire de 10 %",
+  "type": "numeric",
+  "difficulty": 22,
+  "prompt": "Tu veux laisser 10 % de pourboire sur une note de 35 €. Combien, en euros ?",
+  "answer": 3.5,
+  "explanation": "10 % = diviser par 10 : 3,50 €."
+ },
+ {
+  "key": "acc-calc-016",
+  "concept": "calc.percent.acc_quart_100",
+  "label": "25 % de 80",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien font 25 % de 80 ?",
+  "answer": 20,
+  "explanation": "25 % = un quart. 80 ÷ 4 = 20."
+ },
+ {
+  "key": "acc-calc-017",
+  "concept": "calc.percent.acc_batterie",
+  "label": "Batterie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Ton téléphone affiche 75 % de batterie. Quelle part de la batterie reste-t-il ?",
+  "options": [
+   "Les trois quarts*",
+   "La moitié",
+   "Un quart",
+   "Les deux tiers"
+  ],
+  "explanation": "75 % = 75/100 = 3/4."
+ },
+ {
+  "key": "acc-calc-018",
+  "concept": "calc.percent.acc_cent_pour_cent",
+  "label": "100 % de remise",
+  "type": "true_false",
+  "difficulty": 18,
+  "prompt": "Une remise de 100 % rend un article gratuit.",
+  "answer": true,
+  "explanation": "100 % du prix est retiré : il ne reste rien à payer."
+ },
+ {
+  "key": "acc-calc-019",
+  "concept": "calc.percent.acc_note_sur_20",
+  "label": "Note sur 20",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Tu as eu 15 bonnes réponses sur 20. Quel pourcentage de réussite ?",
+  "answer": 75,
+  "explanation": "15 ÷ 20 = 0,75, soit 75 %."
+ },
+ {
+  "key": "acc-calc-020",
+  "concept": "calc.fractions.acc_moitie_pizza",
+  "label": "Parts de pizza",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Une pizza est coupée en 8 parts. Tu en manges la moitié. Combien de parts as-tu mangé ?",
+  "answer": 4,
+  "explanation": "La moitié de 8 = 4."
+ },
+ {
+  "key": "acc-calc-021",
+  "concept": "calc.fractions.acc_tiers_30",
+  "label": "Tiers de 30",
+  "type": "numeric",
+  "difficulty": 18,
+  "prompt": "Combien vaut le tiers de 30 ?",
+  "answer": 10,
+  "explanation": "30 ÷ 3 = 10."
+ },
+ {
+  "key": "acc-calc-022",
+  "concept": "calc.fractions.acc_demi_heure",
+  "label": "Trois quarts d'heure",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Combien de minutes dure trois quarts d'heure ?",
+  "options": [
+   "45 minutes*",
+   "34 minutes",
+   "30 minutes",
+   "75 minutes"
+  ],
+  "explanation": "Un quart d'heure = 15 min. 3 × 15 = 45 min."
+ },
+ {
+  "key": "acc-calc-023",
+  "concept": "calc.fractions.acc_recette_double",
+  "label": "Recette pour 8",
+  "type": "numeric",
+  "difficulty": 28,
+  "prompt": "Une recette pour 4 personnes demande 250 g de farine. Combien en faut-il pour 8 personnes, en grammes ?",
+  "answer": 500,
+  "explanation": "Deux fois plus de personnes : deux fois plus de farine. 250 × 2 = 500 g."
+ },
+ {
+  "key": "acc-calc-024",
+  "concept": "calc.fractions.acc_recette_moitie",
+  "label": "Recette pour 2",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Une recette pour 6 personnes demande 3 œufs. Combien en faut-il pour 2 personnes ?",
+  "answer": 1,
+  "explanation": "2 personnes = un tiers de 6. Un tiers de 3 œufs = 1 œuf."
+ },
+ {
+  "key": "acc-calc-025",
+  "concept": "calc.conversions.acc_litre_cl",
+  "label": "Litre en centilitres",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien y a-t-il de centilitres dans un litre ?",
+  "answer": 100,
+  "explanation": "1 L = 100 cL = 1 000 mL."
+ },
+ {
+  "key": "acc-calc-026",
+  "concept": "calc.conversions.acc_canette_ml",
+  "label": "Canette",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Une canette contient 33 cL. Combien de millilitres ?",
+  "answer": 330,
+  "explanation": "1 cL = 10 mL. 33 × 10 = 330 mL."
+ },
+ {
+  "key": "acc-calc-027",
+  "concept": "calc.conversions.acc_kg_g",
+  "label": "Kilo en grammes",
+  "type": "numeric",
+  "difficulty": 12,
+  "prompt": "Combien de grammes dans 2 kilos ?",
+  "answer": 2000,
+  "explanation": "1 kg = 1 000 g. 2 × 1 000 = 2 000 g."
+ },
+ {
+  "key": "acc-calc-028",
+  "concept": "calc.conversions.acc_km_m",
+  "label": "Kilomètre en mètres",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de mètres dans 3 kilomètres ?",
+  "answer": 3000,
+  "explanation": "1 km = 1 000 m."
+ },
+ {
+  "key": "acc-calc-029",
+  "concept": "calc.conversions.acc_minutes_jour",
+  "label": "Heures dans 3 jours",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien d'heures dans 3 jours ?",
+  "answer": 72,
+  "explanation": "3 × 24 = 72 heures."
+ },
+ {
+  "key": "acc-calc-030",
+  "concept": "calc.conversions.acc_metre_cm",
+  "label": "1,5 mètre",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "1,5 mètre, cela fait combien de centimètres ?",
+  "options": [
+   "150 cm*",
+   "15 cm",
+   "1 500 cm",
+   "105 cm"
+  ],
+  "explanation": "1 m = 100 cm. 1,5 × 100 = 150 cm."
+ },
+ {
+  "key": "acc-calc-031",
+  "concept": "calc.conversions.acc_tour_stade",
+  "label": "Tours de piste",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Une piste d'athlétisme mesure 400 m. Combien de tours pour courir 2 km ?",
+  "answer": 5,
+  "explanation": "2 km = 2 000 m. 2 000 ÷ 400 = 5 tours."
+ },
+ {
+  "key": "acc-calc-032",
+  "concept": "calc.number_logic.acc_pair_suivant",
+  "label": "Nombre pair",
+  "type": "numeric",
+  "difficulty": 12,
+  "prompt": "Quel est le plus petit nombre pair plus grand que 47 ?",
+  "answer": 48,
+  "explanation": "48 est pair (divisible par 2) et vient juste après 47."
+ },
+ {
+  "key": "acc-calc-033",
+  "concept": "calc.number_logic.acc_chiffre_romain",
+  "label": "Chiffres romains",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Combien vaut le nombre romain XII ?",
+  "options": [
+   "12*",
+   "7",
+   "110",
+   "21"
+  ],
+  "explanation": "X = 10, I = 1. XII = 10 + 1 + 1 = 12."
+ },
+ {
+  "key": "acc-calc-034",
+  "concept": "calc.number_logic.acc_dizaine",
+  "label": "Arrondi",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Arrondis 68 à la dizaine la plus proche.",
+  "answer": 70,
+  "explanation": "68 est plus proche de 70 que de 60."
+ },
+ {
+  "key": "acc-calc-035",
+  "concept": "calc.number_logic.acc_zero_fois",
+  "label": "Multiplier par zéro",
+  "type": "true_false",
+  "difficulty": 12,
+  "prompt": "Un nombre multiplié par 0 reste le même nombre.",
+  "answer": false,
+  "explanation": "Non : n'importe quel nombre multiplié par 0 donne 0. C'est en multipliant par 1 qu'il reste le même."
+ },
+ {
+  "key": "acc-calc-036",
+  "concept": "calc.number_logic.acc_plus_grand_nb",
+  "label": "Plus grand nombre",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quel est le plus grand de ces nombres ?",
+  "options": [
+   "2,5*",
+   "2,05",
+   "2,15",
+   "2,45"
+  ],
+  "explanation": "Comparer chiffre après chiffre : 2,50 > 2,45 > 2,15 > 2,05."
+ },
+ {
+  "key": "acc-calc-037",
+  "concept": "calc.number_logic.acc_carre_9",
+  "label": "9 au carré",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien font 9 × 9 ?",
+  "answer": 81,
+  "explanation": "9 × 9 = 81."
+ }
+]
