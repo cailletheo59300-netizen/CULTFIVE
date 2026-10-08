@@ -1,321 +1,281 @@
 [
  {
   "key": "acc-logic2-001",
-  "concept": "logic.puzzles.acc_devinette_bouteille",
-  "label": "J'ai un cou sans tête",
+  "concept": "logic.puzzles.acc_enigme_bougie",
+  "label": "Je fonds en brillant",
   "type": "mcq",
-  "difficulty": 25,
-  "prompt": "J'ai un cou mais pas de tête, un ventre mais pas de jambes. On me vide pour boire. Qui suis-je ?",
+  "difficulty": 20,
+  "prompt": "Je suis grande quand je suis jeune et petite quand je suis vieille. Je brille quand on m'allume. Qui suis-je ?",
   "options": [
-   "Une bouteille*",
-   "Une girafe",
-   "Un pull",
-   "Une cruche cassée"
+   "Une bougie*",
+   "Une étoile",
+   "Une ampoule",
+   "Une allumette"
   ],
-  "explanation": "Le goulot d'une bouteille s'appelle aussi le col (ou le cou)."
+  "explanation": "Elle raccourcit à mesure qu'elle brûle."
  },
  {
   "key": "acc-logic2-002",
-  "concept": "logic.puzzles.acc_devinette_oeuf",
-  "label": "À casser pour servir",
+  "concept": "logic.puzzles.acc_enigme_promesse",
+  "label": "Ce qu'on tient",
   "type": "mcq",
-  "difficulty": 20,
-  "prompt": "Il faut me casser avant de pouvoir m'utiliser. Qui suis-je ?",
+  "difficulty": 30,
+  "prompt": "Je peux être tenue sans jamais être touchée, et brisée sans faire de bruit. Qui suis-je ?",
   "options": [
-   "Un œuf*",
-   "Un verre",
-   "Une noix de coco",
-   "Un cadenas"
+   "Une promesse*",
+   "Une note de musique",
+   "Une bulle",
+   "Une ombre"
   ],
-  "explanation": "Pour l'omelette, pas le choix."
+  "explanation": "On tient ou on brise sa promesse."
  },
  {
   "key": "acc-logic2-003",
-  "concept": "logic.puzzles.acc_devinette_bougie",
-  "label": "Plus je vis, plus je rétrécis",
-  "type": "mcq",
-  "difficulty": 20,
-  "prompt": "Plus je vis, plus je deviens petite. Qui suis-je ?",
-  "options": [
-   "Une bougie*",
-   "Une fleur",
-   "La Lune",
-   "Une montre"
-  ],
-  "explanation": "Elle fond en brûlant."
- },
- {
-  "key": "acc-logic2-004",
-  "concept": "logic.puzzles.acc_devinette_horloge",
-  "label": "Des aiguilles sans coudre",
-  "type": "mcq",
-  "difficulty": 15,
-  "prompt": "J'ai des aiguilles mais je ne couds pas. Qui suis-je ?",
-  "options": [
-   "Une horloge*",
-   "Un hérisson",
-   "Un sapin",
-   "Une couturière"
-  ],
-  "explanation": "Celle des heures et celle des minutes."
- },
- {
-  "key": "acc-logic2-005",
-  "concept": "logic.puzzles.acc_devinette_lettre_e",
-  "label": "Au début de l'été",
+  "concept": "logic.puzzles.acc_enigme_silence",
+  "label": "Si on me nomme",
   "type": "mcq",
   "difficulty": 35,
-  "prompt": "Je suis au début de l'été, à la fin de l'hiver et deux fois dans « été ». Qui suis-je ?",
-  "options": [
-   "La lettre É (E)*",
-   "Le soleil",
-   "La chaleur",
-   "Le mois de juin"
-  ],
-  "explanation": "Un jeu sur les lettres, pas sur les saisons !"
- },
- {
-  "key": "acc-logic2-006",
-  "concept": "logic.puzzles.acc_devinette_silence",
-  "label": "Je disparais si on me nomme",
-  "type": "mcq",
-  "difficulty": 30,
-  "prompt": "Si tu dis mon nom, je disparais. Qui suis-je ?",
+  "prompt": "Dès qu'on prononce mon nom, je disparais. Qui suis-je ?",
   "options": [
    "Le silence*",
    "Un secret",
-   "Une ombre",
-   "Un rêve"
+   "Le vent",
+   "Une ombre"
   ],
-  "explanation": "Dès qu'on parle, il n'est plus là."
+  "explanation": "Dire « silence », c'est déjà le rompre."
+ },
+ {
+  "key": "acc-logic2-004",
+  "concept": "logic.puzzles.acc_enigme_aiguille",
+  "label": "Un œil sans voir",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "J'ai un œil mais je ne vois rien. Qui suis-je ?",
+  "options": [
+   "Une aiguille*",
+   "Un cyclope",
+   "Une pomme de terre",
+   "Une caméra"
+  ],
+  "explanation": "Le chas de l'aiguille s'appelle aussi « l'œil »."
+ },
+ {
+  "key": "acc-logic2-005",
+  "concept": "logic.puzzles.acc_enigme_riviere",
+  "label": "Un lit sans dormir",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "J'ai un lit mais je ne dors jamais, une bouche mais je ne parle pas. Qui suis-je ?",
+  "options": [
+   "Une rivière*",
+   "Un hôtel",
+   "Une grotte",
+   "Un volcan"
+  ],
+  "explanation": "Le lit et l'embouchure d'une rivière."
+ },
+ {
+  "key": "acc-logic2-006",
+  "concept": "logic.puzzles.acc_enigme_glace_vitre",
+  "label": "Le coffre sans clé",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Un coffre sans charnière, sans clé ni couvercle, contient un trésor doré. Qu'est-ce que c'est ?",
+  "options": [
+   "Un œuf*",
+   "Une noix",
+   "Un coquillage",
+   "Une pomme"
+  ],
+  "explanation": "Le jaune d'œuf est le trésor doré."
  },
  {
   "key": "acc-logic2-007",
-  "concept": "logic.puzzles.acc_devinette_promesse",
-  "label": "Je me brise sans bruit",
-  "type": "mcq",
+  "concept": "logic.puzzles.acc_enigme_coupes",
+  "label": "Couper une bûche",
+  "type": "numeric",
   "difficulty": 40,
-  "prompt": "On peut me tenir ou me briser sans jamais me toucher. Qui suis-je ?",
-  "options": [
-   "Une promesse*",
-   "Un miroir",
-   "Une assiette",
-   "Un record"
-  ],
-  "explanation": "On tient sa promesse… ou on la brise."
+  "prompt": "Il faut 3 minutes pour couper une bûche en 2 morceaux. Combien de minutes faut-il pour la couper en 4 morceaux ?",
+  "answer": 9,
+  "explanation": "Pour 4 morceaux, il faut 3 coupes : 3 × 3 = 9 minutes."
  },
  {
   "key": "acc-logic2-008",
-  "concept": "logic.puzzles.acc_devinette_coin",
-  "label": "Le tour du monde dans un coin",
-  "type": "mcq",
-  "difficulty": 40,
-  "prompt": "Je fais le tour du monde en restant dans un coin. Qui suis-je ?",
-  "options": [
-   "Un timbre*",
-   "Une boussole",
-   "Un avion",
-   "Un globe"
-  ],
-  "explanation": "Collé au coin de l'enveloppe."
+  "concept": "logic.puzzles.acc_enigme_pilules",
+  "label": "Les comprimés",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Le médecin te donne 3 comprimés, à prendre un toutes les demi-heures. Combien de minutes dure le traitement ?",
+  "answer": 60,
+  "explanation": "Un tout de suite, un à 30 min, le dernier à 60 min."
  },
  {
   "key": "acc-logic2-009",
-  "concept": "logic.puzzles.acc_devinette_glace",
-  "label": "Je pleure quand il fait chaud",
+  "concept": "logic.puzzles.acc_enigme_moitie_chemin",
+  "label": "Courir dans la forêt",
   "type": "mcq",
-  "difficulty": 20,
-  "prompt": "Je ne pleure que lorsqu'il fait chaud, et je disparais en été. Qui suis-je ?",
+  "difficulty": 45,
+  "prompt": "Jusqu'où peut-on courir dans une forêt ?",
   "options": [
-   "Un glaçon (ou un bonhomme de neige)*",
-   "Un nuage",
-   "Un enfant",
-   "Un arbre"
+   "Jusqu'à la moitié : après, on en sort*",
+   "Jusqu'au bout",
+   "Jusqu'au premier arbre",
+   "Sans limite"
   ],
-  "explanation": "Il fond dès que la température dépasse 0 °C."
+  "explanation": "Passé le milieu, on court vers la sortie !"
  },
  {
   "key": "acc-logic2-010",
-  "concept": "logic.puzzles.acc_devinette_pas",
-  "label": "Plus on en fait, plus on en laisse",
+  "concept": "logic.puzzles.acc_enigme_noir_blanc",
+  "label": "Le jour le plus long",
   "type": "mcq",
   "difficulty": 35,
-  "prompt": "Plus tu en fais, plus tu en laisses derrière toi. Qu'est-ce que c'est ?",
+  "prompt": "Quel mois de l'année est le plus court ?",
   "options": [
-   "Des pas (des empreintes)*",
-   "Des erreurs",
-   "Des miettes",
-   "Des dettes"
+   "Mai : il n'a que 3 lettres*",
+   "Février",
+   "Juin",
+   "Avril"
   ],
-  "explanation": "Chaque pas laisse une trace."
+  "explanation": "Une devinette sur le mot, pas sur les jours ! (En jours, c'est février.)"
  },
  {
   "key": "acc-logic2-011",
-  "concept": "logic.puzzles.acc_devinette_temps",
-  "label": "On le tue sans le blesser",
+  "concept": "logic.reasoning.acc_ordre_taille_cinq",
+  "label": "La file d'attente",
   "type": "mcq",
   "difficulty": 35,
-  "prompt": "On le perd, on le gagne, on le tue, mais il ne meurt jamais. Qu'est-ce que c'est ?",
+  "prompt": "Dans une file, Zoé est devant Hugo, Hugo est devant Inès, et Inès est devant Jules. Qui est en deuxième position ?",
   "options": [
-   "Le temps*",
-   "Un match",
-   "L'argent",
-   "Le sommeil"
+   "Hugo*",
+   "Zoé",
+   "Inès",
+   "Jules"
   ],
-  "explanation": "« Tuer le temps », « gagner du temps »."
+  "explanation": "L'ordre est : Zoé, Hugo, Inès, Jules."
  },
  {
   "key": "acc-logic2-012",
-  "concept": "logic.puzzles.acc_enigme_coq_oeuf",
-  "label": "L'œuf du coq",
+  "concept": "logic.reasoning.acc_qui_ment",
+  "label": "Qui dit vrai ?",
   "type": "mcq",
-  "difficulty": 30,
-  "prompt": "Un coq pond un œuf pile sur le toit pointu d'une grange. De quel côté tombe l'œuf ?",
+  "difficulty": 45,
+  "prompt": "Léo dit : « Je n'ai pas mangé le gâteau. » Mia dit : « C'est Léo. » Un seul des deux ment. Si c'est Léo qui l'a mangé, qui ment ?",
   "options": [
-   "Aucun : un coq ne pond pas*",
-   "À gauche",
-   "À droite",
-   "Il reste sur le toit"
+   "Léo*",
+   "Mia",
+   "Les deux",
+   "Personne"
   ],
-  "explanation": "Ce sont les poules qui pondent."
+  "explanation": "Léo l'a mangé et dit le contraire : il ment. Mia dit vrai."
  },
  {
   "key": "acc-logic2-013",
-  "concept": "logic.puzzles.acc_enigme_electrique",
-  "label": "Le train électrique",
+  "concept": "logic.reasoning.acc_anniv_dimanche",
+  "label": "Jour de la semaine",
   "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Un train électrique roule vers le nord, le vent souffle vers le sud. De quel côté part la fumée ?",
+  "difficulty": 40,
+  "prompt": "Le 1er du mois est un mardi. Quel jour de la semaine sera le 15 ?",
   "options": [
-   "Il n'y a pas de fumée*",
-   "Vers le sud",
-   "Vers le nord",
-   "Vers le haut"
+   "Mardi*",
+   "Lundi",
+   "Mercredi",
+   "Jeudi"
   ],
-  "explanation": "Un train électrique ne fait pas de fumée."
+  "explanation": "14 jours plus tard, soit 2 semaines pile : encore un mardi."
  },
  {
   "key": "acc-logic2-014",
-  "concept": "logic.puzzles.acc_enigme_bougies",
-  "label": "Bougies éteintes",
-  "type": "numeric",
-  "difficulty": 50,
-  "prompt": "Il y a 10 bougies allumées. Le vent en éteint 3. Combien en reste-t-il à la fin, une fois la nuit passée ?",
-  "answer": 3,
-  "explanation": "Les 7 restées allumées ont fini par fondre ; il ne reste que les 3 éteintes."
+  "concept": "logic.reasoning.acc_piece_lancee",
+  "label": "Pile ou face",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Une pièce est tombée 5 fois sur pile : au 6e lancer, face a plus de chances de sortir.",
+  "answer": false,
+  "explanation": "Chaque lancer est indépendant : toujours une chance sur deux."
  },
  {
   "key": "acc-logic2-015",
-  "concept": "logic.puzzles.acc_enigme_medecin",
-  "label": "Le chirurgien",
-  "type": "mcq",
+  "concept": "logic.reasoning.acc_syllogisme_certains",
+  "label": "Certains chiens",
+  "type": "true_false",
   "difficulty": 40,
-  "prompt": "Un garçon a un accident. Le chirurgien dit : « Je ne peux pas l'opérer, c'est mon fils. » Le père du garçon n'est pas chirurgien. Qui est le chirurgien ?",
-  "options": [
-   "Sa mère*",
-   "Son oncle",
-   "Son grand-père",
-   "Un imposteur"
-  ],
-  "explanation": "Une énigme qui montre nos préjugés sur les métiers."
+  "prompt": "Certains chiens sont noirs. Médor est un chien. Donc Médor est noir.",
+  "answer": false,
+  "explanation": "« Certains » ne veut pas dire « tous » : Médor peut être d'une autre couleur."
  },
  {
   "key": "acc-logic2-016",
-  "concept": "logic.reasoning.acc_menteur_simple",
-  "label": "Toujours faux",
-  "type": "mcq",
-  "difficulty": 30,
-  "prompt": "Léo ment toujours. Il dit : « Il pleut. » Que peut-on en conclure ?",
-  "options": [
-   "Il ne pleut pas*",
-   "Il pleut",
-   "On ne peut rien dire",
-   "Il neige"
-  ],
-  "explanation": "Puisqu'il ment toujours, c'est le contraire."
+  "concept": "logic.reasoning.acc_syllogisme_aucun",
+  "label": "Aucun poisson",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Aucun poisson n'a de poumons… et la baleine a des poumons. Donc la baleine n'est pas un poisson.",
+  "answer": true,
+  "explanation": "Le raisonnement est juste (et c'est vrai : c'est un mammifère). Attention, quelques rares poissons ont bien un poumon, mais on raisonne sur la phrase."
  },
  {
   "key": "acc-logic2-017",
-  "concept": "logic.reasoning.acc_tous_les_lundis",
-  "label": "Jour de marché",
+  "concept": "logic.reasoning.acc_famille_grand_pere",
+  "label": "Le père de mon père",
   "type": "mcq",
-  "difficulty": 25,
-  "prompt": "Il y a marché tous les mercredis. Aujourd'hui, c'est le 3 du mois et c'est un lundi. Quand est le prochain marché ?",
+  "difficulty": 15,
+  "prompt": "Qui est le père de mon père ?",
   "options": [
-   "Le 5*",
-   "Le 4",
-   "Le 6",
-   "Le 10"
+   "Mon grand-père*",
+   "Mon oncle",
+   "Mon arrière-grand-père",
+   "Mon parrain"
   ],
-  "explanation": "Lundi 3, mardi 4, mercredi 5."
+  "explanation": "C'est mon grand-père paternel."
  },
  {
   "key": "acc-logic2-018",
-  "concept": "logic.reasoning.acc_qui_le_plus_vieux",
-  "label": "Le plus âgé",
+  "concept": "logic.reasoning.acc_famille_cousin",
+  "label": "L'enfant de ma tante",
   "type": "mcq",
-  "difficulty": 25,
-  "prompt": "Anna est plus vieille que Bruno, mais plus jeune que Chloé. Qui est le plus âgé ?",
+  "difficulty": 15,
+  "prompt": "Qui est l'enfant de ma tante ?",
   "options": [
-   "Chloé*",
-   "Anna",
-   "Bruno",
-   "On ne peut pas savoir"
+   "Mon cousin ou ma cousine*",
+   "Mon neveu",
+   "Mon frère",
+   "Mon oncle"
   ],
-  "explanation": "Chloé > Anna > Bruno."
+  "explanation": "Les enfants des frères et sœurs de mes parents sont mes cousins."
  },
  {
   "key": "acc-logic2-019",
-  "concept": "logic.reasoning.acc_cadenas_code",
-  "label": "Le cadenas",
+  "concept": "logic.sequences.acc_suite_moitie",
+  "label": "La moitié",
   "type": "numeric",
-  "difficulty": 40,
-  "prompt": "Le code d'un cadenas a 3 chiffres (de 0 à 9). Combien de codes différents sont possibles ?",
-  "answer": 1000,
-  "explanation": "10 × 10 × 10 = 1 000, de 000 à 999."
+  "difficulty": 20,
+  "prompt": "Quel nombre suit : 64, 32, 16, 8, … ?",
+  "answer": 4,
+  "explanation": "On divise par 2 à chaque fois."
  },
  {
   "key": "acc-logic2-020",
-  "concept": "logic.reasoning.acc_tenues",
-  "label": "Tenues possibles",
-  "type": "numeric",
-  "difficulty": 35,
-  "prompt": "Tu as 3 t-shirts et 2 pantalons. Combien de tenues différentes peux-tu composer ?",
-  "answer": 6,
-  "explanation": "3 × 2 = 6."
- },
- {
-  "key": "acc-logic2-021",
   "concept": "logic.sequences.acc_suite_impairs",
-  "label": "Nombres impairs",
+  "label": "Les impairs",
   "type": "numeric",
   "difficulty": 10,
-  "prompt": "Quel nombre suit : 1, 3, 5, 7, … ?",
-  "answer": 9,
+  "prompt": "Quel nombre suit : 1, 3, 5, 7, 9, … ?",
+  "answer": 11,
   "explanation": "Les nombres impairs."
  },
  {
+  "key": "acc-logic2-021",
+  "concept": "logic.sequences.acc_suite_alternee",
+  "label": "Plus 2, moins 1",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Quel nombre suit : 2, 4, 3, 5, 4, 6, … ?",
+  "answer": 5,
+  "explanation": "On fait +2, −1, +2, −1… donc 6 − 1 = 5."
+ },
+ {
   "key": "acc-logic2-022",
-  "concept": "logic.sequences.acc_suite_dizaines",
-  "label": "De 10 en 10",
-  "type": "numeric",
-  "difficulty": 10,
-  "prompt": "Quel nombre suit : 25, 35, 45, 55, … ?",
-  "answer": 65,
-  "explanation": "On ajoute 10."
- },
- {
-  "key": "acc-logic2-023",
-  "concept": "logic.sequences.acc_suite_moitie",
-  "label": "Moitié de moitié",
-  "type": "numeric",
-  "difficulty": 25,
-  "prompt": "Quel nombre suit : 64, 32, 16, 8, … ?",
-  "answer": 4,
-  "explanation": "Chaque nombre est la moitié du précédent."
- },
- {
-  "key": "acc-logic2-024",
   "concept": "logic.sequences.acc_suite_saisons",
   "label": "Les saisons",
   "type": "mcq",
@@ -330,7 +290,7 @@
   "explanation": "Printemps, été, automne, hiver."
  },
  {
-  "key": "acc-logic2-025",
+  "key": "acc-logic2-023",
   "concept": "logic.sequences.acc_suite_notes",
   "label": "Les notes",
   "type": "mcq",
@@ -345,18 +305,18 @@
   "explanation": "Do, ré, mi, fa, sol, la, si."
  },
  {
-  "key": "acc-logic2-026",
+  "key": "acc-logic2-024",
   "concept": "logic.sequences.acc_suite_planetes",
   "label": "Les planètes",
   "type": "mcq",
-  "difficulty": 35,
-  "prompt": "Quelle planète suit, en partant du Soleil : Mercure, Vénus, Terre, … ?",
+  "difficulty": 30,
+  "prompt": "Quelle planète suit : Mercure, Vénus, la Terre, … ?",
   "options": [
    "Mars*",
    "Jupiter",
    "Saturne",
    "Neptune"
   ],
-  "explanation": "Puis Jupiter, Saturne, Uranus, Neptune."
+  "explanation": "En s'éloignant du Soleil : Mercure, Vénus, la Terre, Mars…"
  }
 ]

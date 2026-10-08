@@ -2,341 +2,396 @@
  {
   "key": "acc-calc2-001",
   "concept": "calc.mental.acc_courses_total",
-  "label": "Ticket de caisse",
+  "label": "Panier de courses",
   "type": "numeric",
-  "difficulty": 15,
-  "prompt": "Au marché, tu achètes des tomates à 2,50 €, du pain à 1,20 € et du fromage à 4,30 €. Combien paies-tu, en euros ?",
-  "answer": 8,
-  "explanation": "2,50 + 1,20 + 4,30 = 8 €."
+  "difficulty": 20,
+  "prompt": "Au marché, tu achètes des tomates à 3,20 €, du pain à 1,40 € et du fromage à 5,40 €. Combien paies-tu, en euros ?",
+  "answer": 10,
+  "explanation": "3,20 + 1,40 = 4,60 ; 4,60 + 5,40 = 10 €."
  },
  {
   "key": "acc-calc2-002",
-  "concept": "calc.mental.acc_rendu_50",
-  "label": "Monnaie sur 50 €",
+  "concept": "calc.mental.acc_monnaie_50",
+  "label": "Billet de 50 €",
   "type": "numeric",
   "difficulty": 20,
-  "prompt": "Tes courses coûtent 37,60 €. Tu paies avec un billet de 50 €. Combien doit-on te rendre, en euros ?",
+  "prompt": "Tes courses coûtent 37,60 €. Tu donnes un billet de 50 €. Combien doit-on te rendre, en euros ?",
   "answer": 12.4,
   "explanation": "50 − 37,60 = 12,40 €."
  },
  {
   "key": "acc-calc2-003",
-  "concept": "calc.mental.acc_cinema_famille",
-  "label": "Place de cinéma",
-  "type": "numeric",
-  "difficulty": 15,
-  "prompt": "Une place de cinéma coûte 11 €. Combien paie une famille de 4 personnes, en euros ?",
-  "answer": 44,
-  "explanation": "4 × 11 = 44 €."
+  "concept": "calc.mental.acc_lot_yaourts",
+  "label": "Lot de yaourts",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Un lot de 4 yaourts coûte 2 €, un lot de 12 coûte 5,40 €. Lequel est le moins cher par yaourt ?",
+  "options": [
+   "Le lot de 12*",
+   "Le lot de 4",
+   "Ils coûtent pareil",
+   "Impossible à dire"
+  ],
+  "explanation": "4 yaourts : 0,50 € l'un. 12 yaourts : 0,45 € l'un."
  },
  {
   "key": "acc-calc2-004",
-  "concept": "calc.mental.acc_pizza_parts",
-  "label": "Pizzas à partager",
+  "concept": "calc.mental.acc_abonnement_mois",
+  "label": "Abonnement annuel",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "6 amis veulent chacun 3 parts de pizza. Une pizza fait 8 parts. Combien de pizzas faut-il commander au minimum ?",
-  "answer": 3,
-  "explanation": "6 × 3 = 18 parts ; 2 pizzas ne font que 16 parts, il en faut donc 3."
+  "difficulty": 25,
+  "prompt": "Un abonnement coûte 9 € par mois. Combien coûte-t-il sur un an, en euros ?",
+  "answer": 108,
+  "explanation": "9 × 12 = 108 €."
  },
  {
   "key": "acc-calc2-005",
-  "concept": "calc.mental.acc_essence_plein",
-  "label": "Le plein",
+  "concept": "calc.mental.acc_cafe_semaine",
+  "label": "Café quotidien",
   "type": "numeric",
   "difficulty": 25,
-  "prompt": "Le litre d'essence coûte 1,80 €. Combien coûtent 40 litres, en euros ?",
-  "answer": 72,
-  "explanation": "40 × 1,80 = 72 €."
+  "prompt": "Tu prends un café à 1,50 € chaque jour de la semaine, du lundi au vendredi. Combien dépenses-tu par semaine, en euros ?",
+  "answer": 7.5,
+  "explanation": "5 × 1,50 = 7,50 €."
  },
  {
   "key": "acc-calc2-006",
-  "concept": "calc.mental.acc_abonnement_annee",
-  "label": "Abonnement mensuel",
+  "concept": "calc.mental.acc_cinema_famille",
+  "label": "Ciné en famille",
   "type": "numeric",
   "difficulty": 20,
-  "prompt": "Un abonnement coûte 9 € par mois. Combien coûte-t-il sur un an, en euros ?",
-  "answer": 108,
-  "explanation": "12 × 9 = 108 €."
+  "prompt": "Une place de cinéma coûte 11 € pour un adulte et 6 € pour un enfant. Combien pour 2 adultes et 3 enfants, en euros ?",
+  "answer": 40,
+  "explanation": "2 × 11 + 3 × 6 = 22 + 18 = 40 €."
  },
  {
   "key": "acc-calc2-007",
-  "concept": "calc.mental.acc_epargne_semaine",
+  "concept": "calc.mental.acc_epargne",
   "label": "Tirelire",
   "type": "numeric",
   "difficulty": 20,
-  "prompt": "Tu mets 5 € de côté chaque semaine. Combien auras-tu après 10 semaines, en euros ?",
-  "answer": 50,
-  "explanation": "10 × 5 = 50 €."
+  "prompt": "Tu mets 15 € de côté chaque semaine. Au bout de combien de semaines auras-tu 120 € ?",
+  "answer": 8,
+  "explanation": "120 ÷ 15 = 8 semaines."
  },
  {
   "key": "acc-calc2-008",
-  "concept": "calc.mental.acc_bus_attente",
-  "label": "Le prochain bus",
-  "type": "mcq",
+  "concept": "calc.mental.acc_livres_pages",
+  "label": "Pages par jour",
+  "type": "numeric",
   "difficulty": 20,
-  "prompt": "Un bus passe toutes les 12 minutes. Le dernier est passé à 8 h 50. À quelle heure passe le suivant ?",
-  "options": [
-   "9 h 02*",
-   "9 h 12",
-   "8 h 62",
-   "9 h 10"
-  ],
-  "explanation": "8 h 50 + 12 min = 9 h 02."
+  "prompt": "Un livre fait 240 pages. Tu en lis 30 par jour. En combien de jours l'auras-tu fini ?",
+  "answer": 8,
+  "explanation": "240 ÷ 30 = 8 jours."
  },
  {
   "key": "acc-calc2-009",
-  "concept": "calc.mental.acc_train_retard",
-  "label": "Train en retard",
-  "type": "mcq",
-  "difficulty": 20,
-  "prompt": "Ton train devait arriver à 17 h 45, il a 25 minutes de retard. À quelle heure arrive-t-il ?",
-  "options": [
-   "18 h 10*",
-   "18 h 20",
-   "17 h 70",
-   "18 h 05"
-  ],
-  "explanation": "17 h 45 + 15 min = 18 h, puis + 10 min = 18 h 10."
+  "concept": "calc.mental.acc_anniversaire_bougies",
+  "label": "Bougies d'anniversaire",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Ton petit frère a 7 ans et ta sœur 12 ans. Combien de bougies faut-il en tout pour leurs deux gâteaux ?",
+  "answer": 19,
+  "explanation": "7 + 12 = 19 bougies."
  },
  {
   "key": "acc-calc2-010",
-  "concept": "calc.mental.acc_duree_trajet",
-  "label": "Durée du trajet",
+  "concept": "calc.mental.acc_bus_horaire",
+  "label": "Le prochain bus",
   "type": "mcq",
   "difficulty": 20,
-  "prompt": "Tu pars à 14 h 40 et tu arrives à 16 h 15. Combien de temps a duré ton trajet ?",
+  "prompt": "Un bus passe toutes les 20 minutes, à partir de 7 h. Tu arrives à l'arrêt à 8 h 05. À quelle heure passe le prochain ?",
   "options": [
-   "1 h 35*",
-   "1 h 75",
-   "2 h 35",
-   "1 h 25"
+   "8 h 20*",
+   "8 h 10",
+   "8 h 25",
+   "8 h 40"
   ],
-  "explanation": "De 14 h 40 à 16 h 40, c'est 2 h ; on enlève 25 min : 1 h 35."
+  "explanation": "7 h, 7 h 20, 7 h 40, 8 h, 8 h 20…"
  },
  {
   "key": "acc-calc2-011",
-  "concept": "calc.mental.acc_heures_sommeil",
-  "label": "Nuit de sommeil",
+  "concept": "calc.mental.acc_reveil",
+  "label": "Heures de sommeil",
   "type": "numeric",
   "difficulty": 15,
-  "prompt": "Tu te couches à 22 h 30 et tu te lèves à 6 h 30. Combien d'heures as-tu dormi ?",
+  "prompt": "Tu te couches à 22 h 30 et ton réveil sonne à 6 h 30. Combien d'heures dors-tu ?",
   "answer": 8,
-  "explanation": "De 22 h 30 à 6 h 30 : 8 heures."
+  "explanation": "De 22 h 30 à 6 h 30, il y a 8 heures."
  },
  {
   "key": "acc-calc2-012",
-  "concept": "calc.mental.acc_age_mamie",
-  "label": "Âge de mamie",
-  "type": "numeric",
+  "concept": "calc.mental.acc_cuisson_poulet",
+  "label": "Fin de cuisson",
+  "type": "mcq",
   "difficulty": 20,
-  "prompt": "Mamie est née en 1952. Quel âge a-t-elle eu à son anniversaire en 2024 ?",
-  "answer": 72,
-  "explanation": "2024 − 1952 = 72 ans."
+  "prompt": "Un poulet doit cuire 1 h 20. Tu le mets au four à 11 h 50. À quelle heure le sortir ?",
+  "options": [
+   "13 h 10*",
+   "13 h 00",
+   "12 h 70",
+   "13 h 20"
+  ],
+  "explanation": "11 h 50 + 1 h = 12 h 50, puis + 20 min = 13 h 10."
  },
  {
   "key": "acc-calc2-013",
-  "concept": "calc.mental.acc_tour_tables",
-  "label": "Tables pour un mariage",
-  "type": "numeric",
-  "difficulty": 25,
-  "prompt": "Il y a 75 invités et chaque table accueille 8 personnes. Combien de tables faut-il au minimum ?",
-  "answer": 10,
-  "explanation": "75 ÷ 8 = 9,4 : 9 tables ne suffisent pas, il en faut 10."
+  "concept": "calc.mental.acc_retard_train",
+  "label": "Train en retard",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Ton train devait arriver à 17 h 45, mais il a 25 minutes de retard. À quelle heure arrive-t-il ?",
+  "options": [
+   "18 h 10*",
+   "18 h 05",
+   "17 h 70",
+   "18 h 25"
+  ],
+  "explanation": "17 h 45 + 15 min = 18 h, + 10 min = 18 h 10."
  },
  {
   "key": "acc-calc2-014",
-  "concept": "calc.mental.acc_cartons_livres",
-  "label": "Cartons de livres",
+  "concept": "calc.mental.acc_semaines_mois",
+  "label": "Jours en 3 semaines",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Tu dois ranger 120 livres dans des cartons de 15 livres. Combien de cartons te faut-il ?",
-  "answer": 8,
-  "explanation": "120 ÷ 15 = 8."
+  "difficulty": 10,
+  "prompt": "Combien de jours y a-t-il dans 3 semaines ?",
+  "answer": 21,
+  "explanation": "3 × 7 = 21."
  },
  {
   "key": "acc-calc2-015",
-  "concept": "calc.mental.acc_marche_pas",
-  "label": "Les pas",
+  "concept": "calc.mental.acc_marches_etages",
+  "label": "Les étages",
   "type": "numeric",
-  "difficulty": 30,
-  "prompt": "Un pas fait environ 70 cm. Combien de mètres parcours-tu en 1 000 pas ?",
-  "answer": 700,
-  "explanation": "1 000 × 0,70 m = 700 m."
+  "difficulty": 25,
+  "prompt": "Il y a 18 marches entre chaque étage. Combien de marches pour monter du rez-de-chaussée au 4e étage ?",
+  "answer": 72,
+  "explanation": "4 étages × 18 = 72 marches."
  },
  {
   "key": "acc-calc2-016",
-  "concept": "calc.mental.acc_velo_vitesse",
-  "label": "À vélo",
+  "concept": "calc.mental.acc_equipe_bus",
+  "label": "Places dans les minibus",
   "type": "numeric",
-  "difficulty": 25,
-  "prompt": "À vélo, tu roules à 15 km/h. Combien de minutes mets-tu pour faire 5 km ?",
-  "answer": 20,
-  "explanation": "15 km en 60 min, donc 5 km en 20 min."
+  "difficulty": 30,
+  "prompt": "28 élèves partent en sortie. Un minibus peut prendre 8 élèves. Combien de minibus faut-il au minimum ?",
+  "answer": 4,
+  "explanation": "28 ÷ 8 = 3,5 : il en faut 4, pour ne laisser personne."
  },
  {
   "key": "acc-calc2-017",
-  "concept": "calc.mental.acc_voiture_temps",
-  "label": "Temps de trajet",
-  "type": "mcq",
+  "concept": "calc.mental.acc_boites_oeufs",
+  "label": "Boîtes d'œufs",
+  "type": "numeric",
   "difficulty": 25,
-  "prompt": "Tu dois faire 240 km à 80 km/h de moyenne. Combien de temps dure le trajet ?",
-  "options": [
-   "3 h*",
-   "2 h 40",
-   "3 h 20",
-   "4 h"
-  ],
-  "explanation": "240 ÷ 80 = 3 heures."
+  "prompt": "Tu as 40 œufs à ranger dans des boîtes de 6. Combien de boîtes complètes peux-tu remplir ?",
+  "answer": 6,
+  "explanation": "6 × 6 = 36 ; il reste 4 œufs."
  },
  {
   "key": "acc-calc2-018",
-  "concept": "calc.percent.acc_quart_temps",
-  "label": "Le quart d'heure",
+  "concept": "calc.mental.acc_chaussettes_paires",
+  "label": "Chaussettes",
   "type": "numeric",
-  "difficulty": 10,
-  "prompt": "Combien de minutes dure un quart d'heure ?",
-  "answer": 15,
-  "explanation": "60 ÷ 4 = 15 minutes."
+  "difficulty": 15,
+  "prompt": "Combien de chaussettes dans 7 paires ?",
+  "answer": 14,
+  "explanation": "7 × 2 = 14."
  },
  {
   "key": "acc-calc2-019",
-  "concept": "calc.percent.acc_batterie_25",
-  "label": "Batterie",
+  "concept": "calc.mental.acc_tables_restaurant",
+  "label": "Tables au resto",
   "type": "numeric",
   "difficulty": 25,
-  "prompt": "Ta batterie est à 80 % et perd 5 % toutes les 10 minutes. Au bout de combien de minutes sera-t-elle à 50 % ?",
-  "answer": 60,
-  "explanation": "Il faut perdre 30 %, soit 6 fois 5 % : 6 × 10 = 60 minutes."
+  "prompt": "Un restaurant a 12 tables de 4 places et 5 tables de 2 places. Combien de personnes peut-il accueillir ?",
+  "answer": 58,
+  "explanation": "12 × 4 + 5 × 2 = 48 + 10 = 58."
  },
  {
   "key": "acc-calc2-020",
-  "concept": "calc.percent.acc_promo_2_achete",
-  "label": "Deuxième à moitié prix",
+  "concept": "calc.percent.acc_soldes_30",
+  "label": "Soldes à −30 %",
   "type": "numeric",
-  "difficulty": 30,
-  "prompt": "Un shampoing coûte 6 €, et le deuxième est à −50 %. Combien paies-tu pour deux, en euros ?",
-  "answer": 9,
-  "explanation": "6 + 3 = 9 €."
+  "difficulty": 25,
+  "prompt": "Des baskets à 80 € sont soldées à −30 %. Quel est leur nouveau prix, en euros ?",
+  "answer": 56,
+  "explanation": "30 % de 80 = 24 ; 80 − 24 = 56 €."
  },
  {
   "key": "acc-calc2-021",
-  "concept": "calc.percent.acc_trois_pour_deux",
-  "label": "3 pour le prix de 2",
+  "concept": "calc.percent.acc_hausse_10",
+  "label": "Hausse de 10 %",
   "type": "numeric",
   "difficulty": 25,
-  "prompt": "Des yaourts sont à 2 € le pack, avec l'offre « 3 packs pour le prix de 2 ». Combien paies-tu pour 6 packs, en euros ?",
-  "answer": 8,
-  "explanation": "6 packs = 2 offres de 3, chacune payée 2 packs : 4 packs × 2 € = 8 €."
+  "prompt": "Un loyer de 600 € augmente de 10 %. Quel est le nouveau loyer, en euros ?",
+  "answer": 660,
+  "explanation": "10 % de 600 = 60 ; 600 + 60 = 660 €."
  },
  {
   "key": "acc-calc2-022",
-  "concept": "calc.fractions.acc_gateau_parts",
-  "label": "Le gâteau",
+  "concept": "calc.percent.acc_moitie_pourcent",
+  "label": "La moitié en %",
   "type": "numeric",
-  "difficulty": 15,
-  "prompt": "Un gâteau est coupé en 12 parts. Un tiers a été mangé. Combien de parts reste-t-il ?",
-  "answer": 8,
-  "explanation": "Un tiers de 12 = 4 ; 12 − 4 = 8."
+  "difficulty": 10,
+  "prompt": "La moitié d'une pizza, c'est combien en pourcentage ?",
+  "answer": 50,
+  "explanation": "Une moitié = 50 %."
  },
  {
   "key": "acc-calc2-023",
-  "concept": "calc.fractions.acc_demi_litre",
-  "label": "Bouteilles d'un demi-litre",
+  "concept": "calc.percent.acc_quart_pourcent",
+  "label": "Un quart",
   "type": "numeric",
   "difficulty": 15,
-  "prompt": "Combien de bouteilles de 50 cl faut-il pour faire 3 litres ?",
-  "answer": 6,
-  "explanation": "3 L = 300 cl ; 300 ÷ 50 = 6."
+  "prompt": "Un quart d'un gâteau, cela représente quel pourcentage ?",
+  "answer": 25,
+  "explanation": "1/4 = 25 %."
  },
  {
   "key": "acc-calc2-024",
-  "concept": "calc.fractions.acc_verres_bouteille",
-  "label": "Verres d'eau",
+  "concept": "calc.percent.acc_note_sur_20",
+  "label": "Note sur 20",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Une bouteille de 1,5 L remplit des verres de 25 cl. Combien de verres ?",
-  "answer": 6,
-  "explanation": "150 cl ÷ 25 cl = 6 verres."
+  "difficulty": 25,
+  "prompt": "Tu as 14 sur 20. Combien cela fait-il sur 100 ?",
+  "answer": 70,
+  "explanation": "14 × 5 = 70."
  },
  {
   "key": "acc-calc2-025",
-  "concept": "calc.conversions.acc_semaines_jours",
-  "label": "Jours en semaines",
-  "type": "numeric",
-  "difficulty": 10,
-  "prompt": "Combien de jours y a-t-il dans 5 semaines ?",
-  "answer": 35,
-  "explanation": "5 × 7 = 35 jours."
+  "concept": "calc.percent.acc_double_remise",
+  "label": "Deux remises",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un article baisse de 50 %, puis encore de 50 %. Au total, de combien a-t-il baissé ?",
+  "options": [
+   "75 %*",
+   "100 %",
+   "50 %",
+   "25 %"
+  ],
+  "explanation": "Après la 1re baisse, il reste la moitié ; après la 2e, un quart. Il a perdu 75 %."
  },
  {
   "key": "acc-calc2-026",
-  "concept": "calc.conversions.acc_heure_minutes",
-  "label": "Heures et demie",
-  "type": "numeric",
-  "difficulty": 10,
-  "prompt": "Combien de minutes y a-t-il dans 2 h 30 ?",
-  "answer": 150,
-  "explanation": "2 × 60 + 30 = 150 minutes."
+  "concept": "calc.percent.acc_lot_gratuit",
+  "label": "3 pour le prix de 2",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« 3 pour le prix de 2 » : quelle remise cela fait-il sur les 3 articles ?",
+  "options": [
+   "Environ 33 %*",
+   "50 %",
+   "20 %",
+   "66 %"
+  ],
+  "explanation": "On paie 2 articles sur 3 : un tiers est gratuit, soit environ 33 %."
  },
  {
   "key": "acc-calc2-027",
-  "concept": "calc.conversions.acc_cm_metre",
-  "label": "Centimètres",
-  "type": "numeric",
-  "difficulty": 10,
-  "prompt": "Combien de centimètres y a-t-il dans 1,5 mètre ?",
-  "answer": 150,
-  "explanation": "1 m = 100 cm."
+  "concept": "calc.percent.acc_deuxieme_moitie",
+  "label": "Le 2e à −50 %",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Le 2e à −50 % » : quelle remise obtiens-tu sur l'ensemble de deux articles identiques ?",
+  "options": [
+   "25 %*",
+   "50 %",
+   "75 %",
+   "10 %"
+  ],
+  "explanation": "Tu paies 1 + 0,5 = 1,5 article au lieu de 2 : une remise de 25 %."
  },
  {
   "key": "acc-calc2-028",
-  "concept": "calc.conversions.acc_g_kg_pommes",
-  "label": "Kilo de pommes",
+  "concept": "calc.fractions.acc_tiers_gateau",
+  "label": "Le gâteau partagé",
   "type": "numeric",
-  "difficulty": 15,
-  "prompt": "Une pomme pèse environ 200 g. Combien de pommes pour faire 1 kg ?",
-  "answer": 5,
-  "explanation": "1 000 ÷ 200 = 5."
+  "difficulty": 20,
+  "prompt": "Un gâteau est coupé en 12 parts. On en mange le tiers. Combien de parts restent ?",
+  "answer": 8,
+  "explanation": "Le tiers de 12 = 4 parts mangées ; il en reste 8."
  },
  {
   "key": "acc-calc2-029",
-  "concept": "calc.conversions.acc_ans_mois",
-  "label": "Bébé en mois",
+  "concept": "calc.fractions.acc_bouteille_litre",
+  "label": "Verres d'eau",
   "type": "numeric",
-  "difficulty": 15,
-  "prompt": "Un bébé de 2 ans et demi a combien de mois ?",
-  "answer": 30,
-  "explanation": "2 × 12 + 6 = 30 mois."
+  "difficulty": 25,
+  "prompt": "Une bouteille contient 1,5 litre. Un verre fait 25 cL. Combien de verres peut-on remplir ?",
+  "answer": 6,
+  "explanation": "1,5 L = 150 cL ; 150 ÷ 25 = 6 verres."
  },
  {
   "key": "acc-calc2-030",
-  "concept": "calc.number_logic.acc_pair_impair_somme",
-  "label": "Pair + impair",
-  "type": "true_false",
-  "difficulty": 15,
-  "prompt": "Un nombre pair plus un nombre impair donne toujours un nombre impair.",
-  "answer": true,
-  "explanation": "Par exemple 4 + 3 = 7, 10 + 1 = 11."
+  "concept": "calc.fractions.acc_recette_crepes",
+  "label": "Pâte à crêpes",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Pour 20 crêpes, il faut 4 œufs. Combien d'œufs pour 30 crêpes ?",
+  "answer": 6,
+  "explanation": "30 crêpes, c'est une fois et demie 20 : 4 × 1,5 = 6 œufs."
  },
  {
   "key": "acc-calc2-031",
-  "concept": "calc.number_logic.acc_multiplier_10",
-  "label": "Fois 10",
-  "type": "true_false",
+  "concept": "calc.conversions.acc_minutes_heure_demie",
+  "label": "Une heure et demie",
+  "type": "numeric",
   "difficulty": 10,
-  "prompt": "Multiplier un nombre entier par 10, c'est ajouter un zéro à droite.",
-  "answer": true,
-  "explanation": "23 × 10 = 230."
+  "prompt": "Combien de minutes dure une heure et demie ?",
+  "answer": 90,
+  "explanation": "60 + 30 = 90 minutes."
  },
  {
   "key": "acc-calc2-032",
-  "concept": "calc.number_logic.acc_diviser_zero",
-  "label": "Diviser par zéro",
-  "type": "true_false",
+  "concept": "calc.conversions.acc_kg_sucre",
+  "label": "Sachets de sucre",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Combien de sachets de 250 g faut-il pour faire 1 kg ?",
+  "answer": 4,
+  "explanation": "1 kg = 1 000 g ; 1 000 ÷ 250 = 4."
+ },
+ {
+  "key": "acc-calc2-033",
+  "concept": "calc.conversions.acc_euro_centimes",
+  "label": "Centimes",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Combien de centimes y a-t-il dans 3 euros ?",
+  "answer": 300,
+  "explanation": "1 € = 100 centimes."
+ },
+ {
+  "key": "acc-calc2-034",
+  "concept": "calc.conversions.acc_marathon_heures",
+  "label": "Kilomètres à pied",
+  "type": "numeric",
   "difficulty": 30,
-  "prompt": "On peut diviser n'importe quel nombre par zéro.",
+  "prompt": "Tu marches à 5 km/h. Combien de minutes te faut-il pour faire 2 km ?",
+  "answer": 24,
+  "explanation": "1 km en 12 min (60 ÷ 5) ; 2 km en 24 min."
+ },
+ {
+  "key": "acc-calc2-035",
+  "concept": "calc.number_logic.acc_multiple_5",
+  "label": "Finir par 0 ou 5",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Tout nombre qui se termine par 5 est divisible par 5.",
+  "answer": true,
+  "explanation": "Les multiples de 5 finissent par 0 ou 5."
+ },
+ {
+  "key": "acc-calc2-036",
+  "concept": "calc.number_logic.acc_plus_petit_premier",
+  "label": "Nombre premier",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "1 est un nombre premier.",
   "answer": false,
-  "explanation": "La division par zéro n'a pas de sens : aucune calculatrice ne donne de résultat."
+  "explanation": "Un nombre premier a exactement deux diviseurs ; 1 n'en a qu'un. Le plus petit est 2."
  }
 ]
