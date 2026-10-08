@@ -1,0 +1,362 @@
+[
+ {
+  "key": "acc-cinema2-001",
+  "concept": "cinema.films.acc_friends_cafe",
+  "label": "Friends",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans la série « Friends », comment s'appelle le café où se retrouvent les amis ?",
+  "options": [
+   "Central Perk*",
+   "Monica's",
+   "The Coffee House",
+   "Joey's"
+  ],
+  "explanation": "Un canapé orange devenu culte."
+ },
+ {
+  "key": "acc-cinema2-002",
+  "concept": "cinema.films.acc_simpson_couleur",
+  "label": "Les Simpson",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "De quelle couleur est la peau des Simpson ?",
+  "options": [
+   "Jaune*",
+   "Verte",
+   "Bleue",
+   "Orange"
+  ],
+  "explanation": "Une couleur choisie pour attirer l'œil en zappant."
+ },
+ {
+  "key": "acc-cinema2-003",
+  "concept": "cinema.films.acc_simpson_ville",
+  "label": "Springfield",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle ville vivent les Simpson ?",
+  "options": [
+   "Springfield*",
+   "Shelbyville",
+   "South Park",
+   "Riverdale"
+  ],
+  "explanation": "Un nom choisi car il existe des dizaines de Springfield aux États-Unis."
+ },
+ {
+  "key": "acc-cinema2-004",
+  "concept": "cinema.films.acc_casa_papel_masques",
+  "label": "La Casa de papel",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel masque portent les braqueurs de « La Casa de papel » ?",
+  "options": [
+   "Celui du peintre Dalí*",
+   "Celui de Picasso",
+   "Celui de Guy Fawkes",
+   "Un masque de clown"
+  ],
+  "explanation": "Avec leurs combinaisons rouges."
+ },
+ {
+  "key": "acc-cinema2-005",
+  "concept": "cinema.films.acc_stranger_things",
+  "label": "Stranger Things",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans « Stranger Things », comment s'appelle le monde parallèle effrayant ?",
+  "options": [
+   "Le Monde à l'envers*",
+   "Le Néant",
+   "La Zone fantôme",
+   "L'Au-delà"
+  ],
+  "explanation": "Un monde sombre et inversé de la ville d'Hawkins."
+ },
+ {
+  "key": "acc-cinema2-006",
+  "concept": "cinema.films.acc_squid_game",
+  "label": "Squid Game",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel pays vient la série « Squid Game » ?",
+  "options": [
+   "La Corée du Sud*",
+   "Le Japon",
+   "La Chine",
+   "Les États-Unis"
+  ],
+  "explanation": "Sortie en 2021, elle a battu des records sur Netflix."
+ },
+ {
+  "key": "acc-cinema2-007",
+  "concept": "cinema.films.acc_lupin_omar_sy",
+  "label": "Lupin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel acteur joue Assane Diop dans la série « Lupin » ?",
+  "options": [
+   "Omar Sy*",
+   "Jean Dujardin",
+   "Vincent Cassel",
+   "Dany Boon"
+  ],
+  "explanation": "Un fan d'Arsène Lupin, le gentleman cambrioleur."
+ },
+ {
+  "key": "acc-cinema2-008",
+  "concept": "cinema.films.acc_fort_boyard",
+  "label": "Fort Boyard",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quel jeu télé les candidats cherchent-ils des clés dans un fort en pleine mer ?",
+  "options": [
+   "Fort Boyard*",
+   "Koh-Lanta",
+   "Pékin Express",
+   "Intervilles"
+  ],
+  "explanation": "Avec le Père Fouras et ses énigmes."
+ },
+ {
+  "key": "acc-cinema2-009",
+  "concept": "cinema.films.acc_koh_lanta",
+  "label": "Koh-Lanta",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quelle émission des candidats survivent-ils sur une île et s'affrontent en épreuves ?",
+  "options": [
+   "Koh-Lanta*",
+   "Fort Boyard",
+   "La Carte aux trésors",
+   "Top Chef"
+  ],
+  "explanation": "Avec le célèbre conseil et ses votes."
+ },
+ {
+  "key": "acc-cinema2-010",
+  "concept": "cinema.films.acc_top_chef",
+  "label": "Top Chef",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quelle émission des cuisiniers s'affrontent-ils devant des grands chefs ?",
+  "options": [
+   "Top Chef*",
+   "Masterchef Junior",
+   "Le Meilleur Pâtissier",
+   "Les Reines du shopping"
+  ],
+  "explanation": "Le gagnant est sacré chaque année."
+ },
+ {
+  "key": "acc-cinema2-011",
+  "concept": "cinema.films.acc_qpuc",
+  "label": "Questions pour un champion",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel jeu télévisé est célèbre pour son « Quatre à la suite » et son « Face-à-face » ?",
+  "options": [
+   "Questions pour un champion*",
+   "Des chiffres et des lettres",
+   "Le Maillon faible",
+   "Slam"
+  ],
+  "explanation": "Créé en 1988, longtemps animé par Julien Lepers."
+ },
+ {
+  "key": "acc-cinema2-012",
+  "concept": "cinema.films.acc_yoda_couleur",
+  "label": "Maître Yoda",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "De quelle couleur est Maître Yoda ?",
+  "options": [
+   "Vert*",
+   "Bleu",
+   "Gris",
+   "Jaune"
+  ],
+  "explanation": "Un petit maître Jedi de 900 ans qui parle à l'envers."
+ },
+ {
+  "key": "acc-cinema2-013",
+  "concept": "cinema.films.acc_hermione",
+  "label": "Hermione",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle la meilleure amie de Harry Potter ?",
+  "options": [
+   "Hermione Granger*",
+   "Luna Lovegood",
+   "Ginny Weasley",
+   "Cho Chang"
+  ],
+  "explanation": "Brillante élève de Gryffondor, jouée par Emma Watson."
+ },
+ {
+  "key": "acc-cinema2-014",
+  "concept": "cinema.films.acc_gandalf",
+  "label": "Gandalf",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel magicien guide les héros du « Seigneur des anneaux » ?",
+  "options": [
+   "Gandalf*",
+   "Saroumane",
+   "Dumbledore",
+   "Merlin"
+  ],
+  "explanation": "Gandalf le Gris, qui devient Gandalf le Blanc."
+ },
+ {
+  "key": "acc-cinema2-015",
+  "concept": "cinema.films.acc_superman_krypton",
+  "label": "Superman",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quelle planète vient Superman ?",
+  "options": [
+   "Krypton*",
+   "Mars",
+   "Asgard",
+   "Vulcain"
+  ],
+  "explanation": "Une planète détruite ; il est envoyé bébé sur Terre."
+ },
+ {
+  "key": "acc-cinema2-016",
+  "concept": "cinema.films.acc_et_maison",
+  "label": "E.T.",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que veut faire E.T., l'extraterrestre de Spielberg ?",
+  "options": [
+   "Rentrer chez lui*",
+   "Conquérir la Terre",
+   "Devenir acteur",
+   "Trouver un trésor"
+  ],
+  "explanation": "« E.T. téléphone maison ! »"
+ },
+ {
+  "key": "acc-cinema2-017",
+  "concept": "cinema.films.acc_asterix_mission",
+  "label": "Astérix Mission Cléopâtre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui réalise le film « Astérix et Obélix : Mission Cléopâtre » (2002) ?",
+  "options": [
+   "Alain Chabat*",
+   "Claude Zidi",
+   "Guillaume Canet",
+   "Dany Boon"
+  ],
+  "explanation": "Avec Jamel Debbouze en Numérobis."
+ },
+ {
+  "key": "acc-cinema2-018",
+  "concept": "cinema.actors.acc_dicaprio_titanic",
+  "label": "Leonardo DiCaprio",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel acteur joue Jack dans « Titanic » ?",
+  "options": [
+   "Leonardo DiCaprio*",
+   "Brad Pitt",
+   "Matt Damon",
+   "Johnny Depp"
+  ],
+  "explanation": "Avec Kate Winslet dans le rôle de Rose."
+ },
+ {
+  "key": "acc-cinema2-019",
+  "concept": "cinema.animation.acc_woody_sherif",
+  "label": "Woody",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Toy Story », quel jouet est Woody ?",
+  "options": [
+   "Un cow-boy shérif*",
+   "Un astronaute",
+   "Un dinosaure",
+   "Un soldat"
+  ],
+  "explanation": "Buzz l'Éclair, lui, est un astronaute."
+ },
+ {
+  "key": "acc-cinema2-020",
+  "concept": "cinema.animation.acc_totoro",
+  "label": "Totoro",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel studio japonais a créé « Mon voisin Totoro » ?",
+  "options": [
+   "Le studio Ghibli*",
+   "Pixar",
+   "DreamWorks",
+   "Toei"
+  ],
+  "explanation": "Fondé par Hayao Miyazaki ; Totoro est sa mascotte."
+ },
+ {
+  "key": "acc-cinema2-021",
+  "concept": "cinema.animation.acc_dory",
+  "label": "Dory",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le gros défaut de Dory, dans « Le Monde de Nemo » ?",
+  "options": [
+   "Elle oublie tout très vite*",
+   "Elle a peur de l'eau",
+   "Elle ne sait pas nager",
+   "Elle est jalouse"
+  ],
+  "explanation": "Une mémoire de poisson rouge… alors qu'elle est bleue."
+ },
+ {
+  "key": "acc-cinema2-022",
+  "concept": "cinema.animation.acc_bambi_mere",
+  "label": "Bambi",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel animal est Bambi ?",
+  "options": [
+   "Un faon (un jeune cerf)*",
+   "Un lapin",
+   "Un écureuil",
+   "Un renard"
+  ],
+  "explanation": "Son ami Panpan est un lapin."
+ },
+ {
+  "key": "acc-cinema2-023",
+  "concept": "cinema.animation.acc_aladdin_tapis",
+  "label": "Aladdin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Aladdin », comment voyagent Aladdin et Jasmine ?",
+  "options": [
+   "Sur un tapis volant*",
+   "Sur un dragon",
+   "À dos de chameau",
+   "En montgolfière"
+  ],
+  "explanation": "« Ce rêve bleu… »"
+ },
+ {
+  "key": "acc-cinema2-024",
+  "concept": "cinema.animation.acc_cendrillon_minuit",
+  "label": "Cendrillon",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "À quelle heure le charme de Cendrillon prend-il fin ?",
+  "options": [
+   "À minuit*",
+   "À 22 h",
+   "À l'aube",
+   "À midi"
+  ],
+  "explanation": "Elle perd sa pantoufle de verre en s'enfuyant."
+ }
+]

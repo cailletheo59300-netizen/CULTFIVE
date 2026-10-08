@@ -1,0 +1,197 @@
+[
+ {
+  "key": "acc-arts2-001",
+  "concept": "arts.literature.acc_lucky_luke_cheval",
+  "label": "Jolly Jumper",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le cheval de Lucky Luke ?",
+  "options": [
+   "Jolly Jumper*",
+   "Rantanplan",
+   "Tornado",
+   "Silver"
+  ],
+  "explanation": "Rantanplan, c'est le chien le plus bête de l'Ouest."
+ },
+ {
+  "key": "acc-arts2-002",
+  "concept": "arts.literature.acc_titeuf_meche",
+  "label": "Titeuf",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel personnage de BD a une grande mèche blonde sur la tête et dit « Tchô ! » ?",
+  "options": [
+   "Titeuf*",
+   "Le Petit Spirou",
+   "Boule",
+   "Kid Paddle"
+  ],
+  "explanation": "Créé par Zep en 1992."
+ },
+ {
+  "key": "acc-arts2-003",
+  "concept": "arts.literature.acc_milou_chien",
+  "label": "Milou",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle le chien de Tintin ?",
+  "options": [
+   "Milou*",
+   "Idéfix",
+   "Rantanplan",
+   "Pif"
+  ],
+  "explanation": "Un fox-terrier blanc."
+ },
+ {
+  "key": "acc-arts2-004",
+  "concept": "arts.literature.acc_idefix",
+  "label": "Idéfix",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle le petit chien d'Obélix ?",
+  "options": [
+   "Idéfix*",
+   "Milou",
+   "Pluto",
+   "Dogmatix"
+  ],
+  "explanation": "Il hurle quand on abat un arbre."
+ },
+ {
+  "key": "acc-arts2-005",
+  "concept": "arts.literature.acc_haddock_jurons",
+  "label": "Le capitaine Haddock",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel ami de Tintin dit « Mille millions de mille sabords ! » ?",
+  "options": [
+   "Le capitaine Haddock*",
+   "Le professeur Tournesol",
+   "Dupond",
+   "Nestor"
+  ],
+  "explanation": "Grand amateur de whisky."
+ },
+ {
+  "key": "acc-arts2-006",
+  "concept": "arts.literature.acc_schtroumpfs_couleur",
+  "label": "Les Schtroumpfs",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "De quelle couleur sont les Schtroumpfs ?",
+  "options": [
+   "Bleus*",
+   "Verts",
+   "Rouges",
+   "Jaunes"
+  ],
+  "explanation": "Créés par Peyo en 1958."
+ },
+ {
+  "key": "acc-arts2-007",
+  "concept": "arts.literature.acc_gargamel",
+  "label": "Gargamel",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qui veut capturer les Schtroumpfs ?",
+  "options": [
+   "Gargamel*",
+   "Le Grand Schtroumpf",
+   "Rantanplan",
+   "Abraracourcix"
+  ],
+  "explanation": "Avec son chat Azraël."
+ },
+ {
+  "key": "acc-arts2-008",
+  "concept": "arts.literature.acc_asterix_potion",
+  "label": "La potion magique",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui prépare la potion magique dans Astérix ?",
+  "options": [
+   "Panoramix*",
+   "Abraracourcix",
+   "Assurancetourix",
+   "Obélix"
+  ],
+  "explanation": "Le druide du village."
+ },
+ {
+  "key": "acc-arts2-009",
+  "concept": "arts.literature.acc_obelix_marmite",
+  "label": "Obélix",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Pourquoi Obélix n'a-t-il pas le droit de boire la potion magique ?",
+  "options": [
+   "Il est tombé dedans quand il était petit*",
+   "Il est allergique",
+   "Il est trop fort au naturel",
+   "Il n'aime pas le goût"
+  ],
+  "explanation": "Les effets sont permanents chez lui."
+ },
+ {
+  "key": "acc-arts2-010",
+  "concept": "arts.literature.acc_assurancetourix",
+  "label": "Le barde",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le barde d'Astérix, qui chante si mal ?",
+  "options": [
+   "Assurancetourix*",
+   "Abraracourcix",
+   "Ordralfabétix",
+   "Cétautomatix"
+  ],
+  "explanation": "On l'attache souvent pendant le banquet final."
+ },
+ {
+  "key": "acc-arts2-011",
+  "concept": "arts.literature.acc_alice_lapin",
+  "label": "Alice au pays des merveilles",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui Alice suit-elle pour tomber au pays des merveilles ?",
+  "options": [
+   "Un lapin blanc pressé*",
+   "Un chat qui sourit",
+   "Une chenille",
+   "Un chapelier"
+  ],
+  "explanation": "« En retard, en retard ! »"
+ },
+ {
+  "key": "acc-arts2-012",
+  "concept": "arts.literature.acc_robinson",
+  "label": "Robinson Crusoé",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle le compagnon de Robinson Crusoé sur son île ?",
+  "options": [
+   "Vendredi*",
+   "Samedi",
+   "Lundi",
+   "Dimanche"
+  ],
+  "explanation": "Il le rencontre un vendredi."
+ },
+ {
+  "key": "acc-arts2-013",
+  "concept": "arts.literature.acc_petit_prince_planete",
+  "label": "Le Petit Prince",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur quelle planète vit le Petit Prince ?",
+  "options": [
+   "L'astéroïde B 612*",
+   "Mars",
+   "Vénus",
+   "La planète Rose"
+  ],
+  "explanation": "Avec sa rose et ses trois volcans."
+ }
+]

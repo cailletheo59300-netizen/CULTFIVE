@@ -1,0 +1,117 @@
+[
+ {
+  "key": "acc-music2-001",
+  "concept": "music.popular.acc_angele_belge",
+  "label": "Angèle",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel pays vient la chanteuse Angèle ?",
+  "options": [
+   "La Belgique*",
+   "La Suisse",
+   "Le Canada",
+   "La France"
+  ],
+  "explanation": "Comme Stromae, son frère Roméo Elvis est aussi musicien."
+ },
+ {
+  "key": "acc-music2-002",
+  "concept": "music.popular.acc_brassens_gorille",
+  "label": "Georges Brassens",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Avec quel instrument Georges Brassens s'accompagnait-il ?",
+  "options": [
+   "La guitare*",
+   "Le piano",
+   "L'accordéon",
+   "Le violon"
+  ],
+  "explanation": "Avec sa pipe et sa moustache, à Sète."
+ },
+ {
+  "key": "acc-music2-003",
+  "concept": "music.popular.acc_orelsan_caen",
+  "label": "Orelsan",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quelle ville vient le rappeur Orelsan, qu'il cite souvent ?",
+  "options": [
+   "Caen*",
+   "Marseille",
+   "Lille",
+   "Rouen"
+  ],
+  "explanation": "Il l'a racontée dans « Ensemble ou mieux : Caen »."
+ },
+ {
+  "key": "acc-music2-004",
+  "concept": "music.popular.acc_guetta_dj",
+  "label": "David Guetta",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le métier de David Guetta ?",
+  "options": [
+   "DJ et producteur*",
+   "Acteur",
+   "Chef d'orchestre",
+   "Animateur télé"
+  ],
+  "explanation": "Le DJ français le plus célèbre du monde."
+ },
+ {
+  "key": "acc-music2-005",
+  "concept": "music.popular.acc_bob_marley_reggae",
+  "label": "Le reggae",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "De quel pays vient le reggae ?",
+  "options": [
+   "La Jamaïque*",
+   "Cuba",
+   "Le Brésil",
+   "Le Mexique"
+  ],
+  "explanation": "Popularisé par Bob Marley."
+ },
+ {
+  "key": "acc-music2-006",
+  "concept": "music.classical.acc_bolero_ravel",
+  "label": "Le Boléro",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel compositeur français a écrit le « Boléro » ?",
+  "options": [
+   "Maurice Ravel*",
+   "Claude Debussy",
+   "Georges Bizet",
+   "Erik Satie"
+  ],
+  "explanation": "La même mélodie se répète en grossissant pendant 15 minutes."
+ },
+ {
+  "key": "acc-music2-007",
+  "concept": "music.instruments.acc_batterie_baguettes",
+  "label": "La batterie",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Avec quoi joue-t-on généralement de la batterie ?",
+  "options": [
+   "Des baguettes*",
+   "Un archet",
+   "Des médiators",
+   "Un souffle"
+  ],
+  "explanation": "Avec les pieds aussi, pour la grosse caisse."
+ },
+ {
+  "key": "acc-music2-008",
+  "concept": "music.instruments.acc_guitare_electrique",
+  "label": "Guitare électrique",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Une guitare électrique s'entend très bien sans amplificateur.",
+  "answer": false,
+  "explanation": "Sans ampli, on l'entend à peine : elle n'a pas de caisse de résonance creuse."
+ }
+]
