@@ -138,6 +138,9 @@ public enum BackendError: Error, Equatable, LocalizedError {
 }
 
 public actor SupabaseAPI {
+    /// Version des types de réponses comprise par l'app (en-tête « x-brainlix-types »).
+    public static let answerTypesVersion = "2"
+
     public let config: BackendConfig
     private let store: SessionStore
     private let transport: HTTPTransport
@@ -384,6 +387,8 @@ public actor SupabaseAPI {
         request.setValue(config.anonKey, forHTTPHeaderField: "apikey")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
+        // Cette version sait afficher les nouveaux types de réponses : sans cet en-tête (app 1.0), le serveur sert des questions classiques.
+        request.setValue(Self.answerTypesVersion, forHTTPHeaderField: "x-brainlix-types")
         switch auth {
         case .anonKey:
             request.setValue("Bearer \(config.anonKey)", forHTTPHeaderField: "Authorization")

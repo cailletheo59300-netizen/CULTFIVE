@@ -139,7 +139,7 @@ function convert(q) {
     }
     case 'letters': {
       if (!/^[A-Z]{4,12}$/.test(q.word ?? '')) fail(k, 'lettres : 4 à 12 majuscules sans accents');
-      const tiles = shuffled(k, [...(q.word ?? '')]);
+      const tiles = shuffled(k, [...(q.word ?? '')].map((t, i) => ({ id: oid(k, `${i}:${t}`), text: t })));
       return { ...base, payload: { tiles }, answer: { word: q.word, display: q.display ?? q.word } };
     }
     case 'word_order': {

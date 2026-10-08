@@ -120,11 +120,18 @@ enum GivenText {
         switch given {
         case .option(let id):
             if question.type == .mapPick { return "un autre emplacement" }
+            if question.type == .imageChoice { return question.reveal?.answer.labels?[id] ?? "une autre image" }
             return question.payload.options?.first { $0.id == id }?.text
         case .bool(let value):
             return value ? "Vrai" : "Faux"
         case .number(let value):
-            return NumberFormat.display(NSDecimalNumber(decimal: value).doubleValue)
+            let number = NSDecimalNumber(decimal: value).doubleValue
+            if question.type.hasMargin { return AnswerValueFormat.text(number, type: question.type, unit: question.payload.unit) }
+            return NumberFormat.display(number)
+        case .text(let text):
+            return text
+        case .words(let words):
+            return words.joined(separator: " ")
         case .order, .pairs:
             return nil
         }

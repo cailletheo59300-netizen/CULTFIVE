@@ -120,6 +120,25 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
             if let region = question.payload.region {
                 MapPickAnswerView(region: region, options: question.payload.options ?? [], phase: phase, onSubmit: onSubmit)
             }
+        case .counter:
+            CounterAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .timeline:
+            TimelineAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .gauge:
+            GaugeAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .proportion:
+            ProportionAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .letters:
+            TileOrderAnswerView(question: question, mode: .letters, phase: phase, onSubmit: onSubmit)
+        case .wordOrder:
+            TileOrderAnswerView(question: question, mode: .words, phase: phase, onSubmit: onSubmit)
+        case .imageChoice:
+            ImageChoiceAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .unknown:
+            Text("Cette question demande une version plus récente de l'app. Mets-la à jour pour y répondre.")
+                .font(.cfReading)
+                .foregroundStyle(Color.inkSoft)
+                .padding(.horizontal, Space.gutter)
         }
     }
 
@@ -179,7 +198,9 @@ struct RevealPanel: View {
             .accessibilityElement(children: .combine)
 
             VStack(alignment: .leading, spacing: Space.m) {
-                if let answerText = AnswerText.correct(for: question, answer: reveal.answer), !isCorrect || question.type == .numeric {
+                if question.type.hasMargin {
+                    MarginVerdictCard(question: question, given: given, answer: reveal.answer)
+                } else if let answerText = AnswerText.correct(for: question, answer: reveal.answer), !isCorrect || question.type == .numeric {
                     HStack(spacing: Space.s) {
                         Text("Réponse").labelCaps()
                         Text(answerText)
@@ -246,7 +267,16 @@ enum AnswerText {
             guard let value = answer.value?.doubleValue else { return nil }
             let text = NumberFormat.display(value)
             return question.payload.unit.map { "\(text) \($0)" } ?? text
-        case .ordering, .pairs, .mapPick:
+        case .counter, .timeline, .gauge, .proportion:
+            guard let value = answer.value?.doubleValue else { return nil }
+            return AnswerValueFormat.text(value, type: question.type, unit: question.payload.unit)
+        case .letters:
+            return answer.display ?? answer.word
+        case .wordOrder:
+            return answer.sentence ?? answer.words?.joined(separator: " ")
+        case .imageChoice:
+            return answer.optionId.flatMap { answer.labels?[$0] }
+        case .ordering, .pairs, .mapPick, .unknown:
             return nil
         }
     }
