@@ -148,7 +148,7 @@ private struct QuickPlayCard: View {
                         .background(Color.sun, in: RoundedRectangle(cornerRadius: 6, style: .continuous))
                         .lineLimit(1).minimumScaleFactor(0.8)
                     Text("Partie rapide").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
-                    Text("10 questions de tous les domaines, à ton niveau. Environ 3 min.")
+                    Text("10 questions de tous les domaines, à ton niveau.")
                         .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
                         .fixedSize(horizontal: false, vertical: true)
                 }
