@@ -96,7 +96,8 @@ Liste tenue à jour à chaque nouvelle demande. Rien de ceci ne touche la produc
 - [x] Règles validées : 5 du jour = 5 thèmes, dont 1 ou 2 questions d'un nouveau type (jamais deux du même, pas le type de la veille) ; parties classées = au plus 1 nouveau type par partie, environ une partie sur deux ; duels et ligues = classiques. App 1.0 : remplaçant classique (en-tête `x-brainlix-types`).
 - [ ] **À déployer après la publication de la 1.1** : migrations 0038–0039 + seed (questions accessibles et nouveaux types). L'app 1.0 continue de marcher grâce aux remplaçants.
 - [ ] Contenu des nouveaux types (910 questions dans le seed, non déployées). Reste : images des tableaux (domaine public, Wikimedia Commons ; en brouillon tant qu'elles manquent), silhouettes dessinées pour les proportions (émojis en attendant), puis en écrire d'autres.
-- [ ] Idées de types, lot 2 (maquette : https://claude.ai/artifact/MEBgV8ZtERsEXMkKwqGXZY) : le compte est bon, distance sur la carte, lequel d'abord ?, mot mystère en 3 indices (+3 / +1 graine), rébus en émojis. En attente du choix du propriétaire.
+- [ ] Idées de types, lot 2 (maquette : https://claude.ai/artifact/MEBgV8ZtERsEXMkKwqGXZY) : gardés « le compte est bon » et « mot mystère en 3 indices » (+3 / +1 graine) ; abandonnés « rébus » et « lequel d'abord ? » ; « distance sur la carte » jugé trop limité, alternatives proposées (épingler sur la carte, horloge des fuseaux, thermomètre, boussole).
+- [x] Règle confirmée : les nouveaux types ont une difficulté comme les autres et comptent pour l'Elo ; ils apparaissent dans les parties classées, mais davantage dans le 5 du jour.
 
 **Après la publication**
 - [ ] Lier l'app dans AdMob.
