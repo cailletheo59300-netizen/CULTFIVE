@@ -55,6 +55,11 @@ final class ContractDecodingTests: XCTestCase {
             case .numeric: given = .number(Decimal(try XCTUnwrap(reveal.answer.value?.doubleValue)))
             case .ordering: given = .order(try XCTUnwrap(reveal.answer.order))
             case .pairs: given = .pairs(try XCTUnwrap(reveal.answer.pairs))
+            case .counter, .timeline, .gauge, .proportion: given = .number(Decimal(try XCTUnwrap(reveal.answer.value?.doubleValue)))
+            case .letters: given = .text(try XCTUnwrap(reveal.answer.word))
+            case .wordOrder: given = .words(try XCTUnwrap(reveal.answer.words))
+            case .imageChoice: given = .option(try XCTUnwrap(reveal.answer.optionId))
+            case .unknown: XCTFail("type inconnu dans les fixtures"); continue
             }
             XCTAssertEqual(AnswerEvaluator.isCorrect(given, for: question), true, question.prompt)
         }
