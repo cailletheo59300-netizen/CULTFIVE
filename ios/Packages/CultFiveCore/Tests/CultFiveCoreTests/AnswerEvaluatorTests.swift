@@ -107,4 +107,39 @@ final class ShapeDecodingTests: XCTestCase {
         XCTAssertEqual(given, .words(["La", "nuit"]))
         XCTAssertEqual(try JSONDecoder().decode(GivenAnswer.self, from: Data(#"{"text":"NUIT"}"#.utf8)), .text("NUIT"))
     }
+
+    // MARK: Lot 2
+
+    func testNumberTarget() {
+        let steps = [TargetStep(a: 6, op: "+", b: 5), TargetStep(a: 11, op: "-", b: 2), TargetStep(a: 9, op: "*", b: 3)]
+        XCTAssertTrue(AnswerEvaluator.reaches(27, from: [3, 6, 5, 2], with: steps))
+        XCTAssertFalse(AnswerEvaluator.reaches(27, from: [3, 6, 5, 2], with: [TargetStep(a: 9, op: "*", b: 3)]), "9 pas disponible")
+        XCTAssertFalse(AnswerEvaluator.reaches(36, from: [3, 6, 5, 2], with: [TargetStep(a: 6, op: "*", b: 6)]), "6 une seule fois")
+        XCTAssertNil(TargetStep(a: 5, op: "/", b: 2).result)
+        XCTAssertNil(TargetStep(a: 2, op: "-", b: 5).result)
+        var answer = CorrectAnswer()
+        answer.numbers = [3, 6, 5, 2]
+        answer.target = 27
+        XCTAssertTrue(AnswerEvaluator.isCorrect(.steps(steps), type: .numberTarget, answer: answer))
+    }
+
+    func testMapPinAndSort() throws {
+        var strasbourg = CorrectAnswer()
+        strasbourg.lat = 48.58
+        strasbourg.lon = 7.75
+        strasbourg.toleranceKm = 60
+        let paris = try XCTUnwrap(AnswerEvaluator.distanceKm(lat: 48.86, lon: 2.35, answer: strasbourg))
+        XCTAssertEqual(paris, 397, accuracy: 10)
+        XCTAssertTrue(AnswerEvaluator.isCorrect(.pin(lat: 48.9, lon: 7.6), type: .mapPin, answer: strasbourg))
+        XCTAssertFalse(AnswerEvaluator.isCorrect(.pin(lat: 47.7, lon: 7.3), type: .mapPin, answer: strasbourg))
+        XCTAssertEqual(AnswerEvaluator.margin(.pin(lat: 48.6, lon: 7.76), type: .mapPin, answer: strasbourg), .exact)
+        var sorted = CorrectAnswer()
+        sorted.groups = ["a": "x", "b": "y"]
+        XCTAssertTrue(AnswerEvaluator.isCorrect(.groups(["b": "y", "a": "x"]), type: .sort, answer: sorted))
+        XCTAssertFalse(AnswerEvaluator.isCorrect(.groups(["a": "y", "b": "y"]), type: .sort, answer: sorted))
+        XCTAssertTrue(AnswerEvaluator.isCorrect(.riddle("o1", clues: 2), type: .riddle, answer: CorrectAnswer(optionId: "o1")))
+        let given = try JSONDecoder().decode(GivenAnswer.self, from: Data(#"{"option_id":"o1","clues":1}"#.utf8))
+        XCTAssertEqual(given, .riddle("o1", clues: 1))
+        XCTAssertEqual(try JSONDecoder().decode(GivenAnswer.self, from: Data(#"{"lat":1.5,"lon":2}"#.utf8)), .pin(lat: 1.5, lon: 2))
+    }
 }

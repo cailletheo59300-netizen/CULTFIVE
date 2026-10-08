@@ -56,7 +56,7 @@ struct MarginChip: View {
 }
 
 /// Bouton « Valider » des nouveaux types, aux couleurs du domaine.
-private struct ValidateButton: View {
+struct ValidateButton: View {
     let domainId: String
     var enabled = true
     let action: () -> Void
@@ -80,7 +80,7 @@ private func submittedNumber(_ phase: AnswerPhase) -> Double? {
 }
 
 /// Zone visée en clair : « Juste si la bonne réponse est entre X et Y ».
-private struct LiveRange: View {
+struct LiveRange: View {
     let low: String
     let high: String
 
@@ -216,6 +216,7 @@ struct TimelineAnswerView: View {
                 .contentTransition(.numericText())
             HorizontalScale(value: Binding(get: { shown }, set: { if phase.isAnswering { year = $0.rounded() } }),
                             range: low...high, band: tolerance, enabled: phase.isAnswering,
+                            correct: phase.revealed?.reveal.answer.value?.doubleValue,
                             labels: [low, (low + high) / 2, high].map { AnswerValueFormat.text($0.rounded(), type: .timeline, unit: nil) })
                 .frame(height: 84)
                 .padding(.horizontal, Space.gutter)
@@ -254,6 +255,8 @@ struct HorizontalScale: View {
     let range: ClosedRange<Double>
     let band: Double
     let enabled: Bool
+    /// Après la réponse : la bonne valeur, en vert, à côté de la tienne.
+    var correct: Double? = nil
     let labels: [String]
 
     var body: some View {
@@ -280,6 +283,12 @@ struct HorizontalScale: View {
                         .foregroundStyle(Color.inkSoft)
                         .fixedSize()
                         .position(x: Swift.min(Swift.max(width * CGFloat(i) / CGFloat(Swift.max(labels.count - 1, 1)), 24), width - 24), y: 72)
+                }
+                if let correct {
+                    let cx = CGFloat((correct - range.lowerBound) / span) * width
+                    Capsule().fill(Color.correct).frame(width: 6, height: 44).offset(x: cx - 3, y: 19)
+                    Image(systemName: "checkmark.circle.fill").font(.system(size: 20, weight: .bold)).foregroundStyle(Color.correct)
+                        .background(Circle().fill(.white)).offset(x: cx - 10, y: -6)
                 }
                 Circle().fill(Color.brand)
                     .overlay(Circle().strokeBorder(.white, lineWidth: 4))
@@ -328,6 +337,15 @@ struct GaugeAnswerView: View {
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                     .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous).strokeBorder(Color.hairline, lineWidth: 3))
+                    .overlay(alignment: .bottom) {
+                        if let correct = phase.revealed?.reveal.answer.value?.doubleValue {
+                            HStack(spacing: 4) {
+                                Rectangle().fill(Color.correct).frame(height: 4)
+                                Image(systemName: "checkmark.circle.fill").foregroundStyle(Color.correct).background(Circle().fill(.white))
+                            }
+                            .offset(x: 14, y: -h * CGFloat(correct) / 100 + 2)
+                        }
+                    }
                     .contentShape(Rectangle())
                     .gesture(DragGesture(minimumDistance: 0).onChanged { drag in
                         guard phase.isAnswering else { return }
@@ -390,11 +408,15 @@ struct ProportionAnswerView: View {
                 ZStack(alignment: .bottom) {
                     LinearGradient(colors: [Color(hex: 0xDFF1FF), Color(hex: 0xF3FAFF)], startPoint: .top, endPoint: .bottom)
                     Rectangle().fill(Color(hex: 0x69DB7C)).frame(height: 24)
-                    HStack(alignment: .bottom, spacing: Space.xl) {
+                    HStack(alignment: .bottom, spacing: Space.m) {
                         bar(label: reference.label, icon: reference.icon, height: refHeight, color: Color.inkSoft.opacity(0.5),
                             value: AnswerValueFormat.text(reference.size ?? 0, type: .proportion, unit: payload.unit))
                         bar(label: payload.item?.label ?? "", icon: payload.item?.icon, height: itemHeight, color: Color.brand,
                             value: AnswerValueFormat.text(shown, type: .proportion, unit: payload.unit))
+                        if let correct = phase.revealed?.reveal.answer.value?.doubleValue {
+                            bar(label: "Vraie taille", icon: payload.item?.icon, height: CGFloat(correct) * scale, color: Color.correct,
+                                value: AnswerValueFormat.text(correct, type: .proportion, unit: payload.unit))
+                        }
                     }
                     .padding(.bottom, 24)
                 }

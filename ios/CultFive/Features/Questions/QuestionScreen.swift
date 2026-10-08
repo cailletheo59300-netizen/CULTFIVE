@@ -134,6 +134,14 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
             TileOrderAnswerView(question: question, mode: .words, phase: phase, onSubmit: onSubmit)
         case .imageChoice:
             ImageChoiceAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .numberTarget:
+            NumberTargetAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .riddle:
+            RiddleAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .mapPin:
+            MapPinAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+        case .sort:
+            SortAnswerView(question: question, phase: phase, onSubmit: onSubmit)
         case .unknown:
             Text("Cette question demande une version plus récente de l'app. Mets-la à jour pour y répondre.")
                 .font(.cfReading)
@@ -200,6 +208,12 @@ struct RevealPanel: View {
             VStack(alignment: .leading, spacing: Space.m) {
                 if question.type.hasMargin {
                     MarginVerdictCard(question: question, given: given, answer: reveal.answer)
+                } else if question.type == .mapPin {
+                    DistanceVerdictCard(question: question, given: given, answer: reveal.answer)
+                } else if question.type == .riddle, isCorrect, case .riddle(_, let clues)? = given, clues <= 2 {
+                    Text(clues == 1 ? "💎 Trouvé dès le 1er indice : +3 graines" : "💎 Trouvé au 2e indice : +1 graine")
+                        .font(.system(.callout, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color(hex: 0x8A6400))
                 } else if let answerText = AnswerText.correct(for: question, answer: reveal.answer), !isCorrect || question.type == .numeric {
                     HStack(spacing: Space.s) {
                         Text("Réponse").labelCaps()
@@ -276,7 +290,13 @@ enum AnswerText {
             return answer.sentence ?? answer.words?.joined(separator: " ")
         case .imageChoice:
             return answer.optionId.flatMap { answer.labels?[$0] }
-        case .ordering, .pairs, .mapPick, .unknown:
+        case .riddle:
+            return question.payload.options?.first { $0.id == answer.optionId }?.text
+        case .numberTarget:
+            return answer.solution?.joined(separator: " · ")
+        case .mapPin:
+            return answer.place
+        case .ordering, .pairs, .mapPick, .sort, .unknown:
             return nil
         }
     }

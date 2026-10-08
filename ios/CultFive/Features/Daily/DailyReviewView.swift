@@ -132,6 +132,15 @@ enum GivenText {
             return text
         case .words(let words):
             return words.joined(separator: " ")
+        case .riddle(let id, _):
+            return question.payload.options?.first { $0.id == id }?.text
+        case .steps(let steps):
+            return steps.isEmpty ? "aucun calcul" : steps.map { "\($0.a) \($0.symbol) \($0.b)" }.joined(separator: ", ")
+        case .pin(let lat, let lon):
+            guard let answer = question.reveal?.answer, let km = AnswerEvaluator.distanceKm(lat: lat, lon: lon, answer: answer) else { return "une épingle" }
+            return "une épingle à \(NumberFormat.display(km.rounded())) km"
+        case .groups:
+            return nil
         case .order, .pairs:
             return nil
         }

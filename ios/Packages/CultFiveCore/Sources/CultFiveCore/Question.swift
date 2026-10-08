@@ -15,6 +15,11 @@ public enum QuestionType: String, Codable, Sendable, CaseIterable {
     case letters
     case wordOrder = "word_order"
     case imageChoice = "image_choice"
+    // Lot 2 (serveur 0040) : le compte est bon, mot mystère, épingle sur la carte, tri (paniers ou époques).
+    case numberTarget = "number_target"
+    case riddle
+    case mapPin = "map_pin"
+    case sort
     /// Type inconnu de cette version de l'app (ajouté plus tard côté serveur) : affiché comme indisponible, jamais un plantage.
     case unknown
 
@@ -50,6 +55,45 @@ public struct Choice: Codable, Hashable, Identifiable, Sendable {
         self.flag = flag
         self.image = image
     }
+}
+
+/// Groupe d'un tri : panier (« Mammifère ») ou époque (« Moyen Âge », 476 – 1492).
+public struct SortGroup: Codable, Hashable, Identifiable, Sendable {
+    public let id: String
+    public let label: String
+    public let sub: String?
+
+    public init(id: String, label: String, sub: String? = nil) {
+        self.id = id
+        self.label = label
+        self.sub = sub
+    }
+}
+
+/// Une étape du « compte est bon » : a op b (op : +, -, *, /).
+public struct TargetStep: Codable, Hashable, Sendable {
+    public let a: Int
+    public let op: String
+    public let b: Int
+
+    public init(a: Int, op: String, b: Int) {
+        self.a = a
+        self.op = op
+        self.b = b
+    }
+
+    /// Résultat, ou nil si l'opération est interdite (division non entière, résultat négatif).
+    public var result: Int? {
+        switch op {
+        case "+": return a + b
+        case "-": return a - b >= 0 ? a - b : nil
+        case "*": return a * b
+        case "/": return b != 0 && a % b == 0 ? a / b : nil
+        default: return nil
+        }
+    }
+
+    public var symbol: String { ["+": "+", "-": "−", "*": "×", "/": "÷"][op] ?? op }
 }
 
 /// Élément à l'échelle (jeu des proportions) : la référence a une taille connue, l'autre est à étirer.
@@ -104,10 +148,19 @@ public struct QuestionPayload: Codable, Hashable, Sendable {
     public var dimension: String?
     public var tiles: [Choice]?
     public var kind: String?
+    // Lot 2.
+    public var numbers: [Int]?
+    public var target: Int?
+    public var clues: [String]?
+    public var toleranceKm: Double?
+    public var layout: String?
+    public var groups: [SortGroup]?
 
     enum CodingKeys: String, CodingKey {
         case options, items, left, right, region, unit, decimals, shape
         case min, max, start, tolerance, reference, item, dimension, tiles, kind
+        case numbers, target, clues, layout, groups
+        case toleranceKm = "tolerance_km"
         case allowNegative = "allow_negative"
         case keepOrder = "keep_order"
         case relTolerance = "rel_tolerance"
@@ -143,10 +196,22 @@ public struct CorrectAnswer: Codable, Hashable, Sendable {
     public var sentence: String?
     /// Choix d'images : nom de chaque option (pays, tableau), révélé après la réponse.
     public var labels: [String: String]?
+    // Lot 2 : solution du compte est bon, point juste de l'épingle, rangement juste du tri.
+    public var numbers: [Int]?
+    public var target: Int?
+    public var steps: [TargetStep]?
+    public var solution: [String]?
+    public var lat: Double?
+    public var lon: Double?
+    public var toleranceKm: Double?
+    public var place: String?
+    public var groups: [String: String]?
 
     enum CodingKeys: String, CodingKey {
         case optionId = "option_id"
         case value, tolerance, order, pairs, word, display, words, sentence, labels
+        case numbers, target, steps, solution, lat, lon, place, groups
+        case toleranceKm = "tolerance_km"
         case relTolerance = "rel_tolerance"
     }
 
@@ -278,6 +343,14 @@ public enum GivenAnswer: Hashable, Sendable {
     case text(String)
     /// Mots dans l'ordre : le texte de chaque tuile, dans l'ordre choisi.
     case words([String])
+    /// Le compte est bon : les opérations faites, dans l'ordre.
+    case steps([TargetStep])
+    /// Mot mystère : l'option choisie et le nombre d'indices vus (bonus si trouvé tôt).
+    case riddle(String, clues: Int)
+    /// Épingle sur la carte.
+    case pin(lat: Double, lon: Double)
+    /// Tri : groupe choisi pour chaque étiquette.
+    case groups([String: String])
 
     public var json: JSONValue {
         switch self {
@@ -288,6 +361,11 @@ public enum GivenAnswer: Hashable, Sendable {
         case .pairs(let map): return .object(["pairs": .object(map.mapValues(JSONValue.string))])
         case .text(let text): return .object(["text": .string(text)])
         case .words(let words): return .object(["words": .array(words.map(JSONValue.string))])
+        case .steps(let steps):
+            return .object(["steps": .array(steps.map { .object(["a": .number(Double($0.a)), "op": .string($0.op), "b": .number(Double($0.b))]) })])
+        case .riddle(let id, let clues): return .object(["option_id": .string(id), "clues": .number(Double(clues))])
+        case .pin(let lat, let lon): return .object(["lat": .number(lat), "lon": .number(lon)])
+        case .groups(let map): return .object(["groups": .object(map.mapValues(JSONValue.string))])
         }
     }
 }
@@ -295,8 +373,19 @@ public enum GivenAnswer: Hashable, Sendable {
 extension GivenAnswer: Codable {
     public init(from decoder: Decoder) throws {
         let json = try JSONValue(from: decoder)
-        if let id = json["option_id"]?.stringValue {
+        if let id = json["option_id"]?.stringValue, let clues = json["clues"]?.doubleValue {
+            self = .riddle(id, clues: Int(clues))
+        } else if let id = json["option_id"]?.stringValue {
             self = .option(id)
+        } else if let lat = json["lat"]?.doubleValue, let lon = json["lon"]?.doubleValue {
+            self = .pin(lat: lat, lon: lon)
+        } else if case .array(let items)? = json["steps"] {
+            self = .steps(items.compactMap { item in
+                guard let a = item["a"]?.doubleValue, let op = item["op"]?.stringValue, let b = item["b"]?.doubleValue else { return nil }
+                return TargetStep(a: Int(a), op: op, b: Int(b))
+            })
+        } else if case .object(let map)? = json["groups"] {
+            self = .groups(map.compactMapValues(\.stringValue))
         } else if let value = json["value"]?.boolValue {
             self = .bool(value)
         } else if let value = json["value"]?.doubleValue {
