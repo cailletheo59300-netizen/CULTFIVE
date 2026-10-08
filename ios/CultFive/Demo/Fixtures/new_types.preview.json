@@ -1,0 +1,1608 @@
+[
+ {
+  "id": "a0be3b1c-2895-467d-a595-af619b49e33d",
+  "type": "counter",
+  "domain_id": "arts",
+  "subdomain_id": "arts.literature",
+  "prompt": "Combien de tomes compte la saga Harry Potter ?",
+  "payload": {
+   "min": 0,
+   "max": 20,
+   "start": 0,
+   "tolerance": 0,
+   "unit": "tomes"
+  },
+  "answer": {
+   "value": 7,
+   "tolerance": 0
+  },
+  "explanation": "Sept tomes, de « l'École des sorciers » aux « Reliques de la Mort »."
+ },
+ {
+  "id": "45a2c004-3b7a-42fd-a15c-57cc5f802f60",
+  "type": "counter",
+  "domain_id": "history",
+  "subdomain_id": "history.contemporary",
+  "prompt": "Combien d'années la Seconde Guerre mondiale a-t-elle duré, à peu près ?",
+  "payload": {
+   "min": 0,
+   "max": 20,
+   "start": 0,
+   "tolerance": 0,
+   "unit": "ans"
+  },
+  "answer": {
+   "value": 6,
+   "tolerance": 0
+  },
+  "explanation": "De septembre 1939 (invasion de la Pologne) à septembre 1945 (capitulation du Japon)."
+ },
+ {
+  "id": "d84f7aa0-1805-42ce-ad5b-478cbde5d0ca",
+  "type": "counter",
+  "domain_id": "sport",
+  "subdomain_id": "sport.rules",
+  "prompt": "En Grand Chelem, combien de sets faut-il gagner pour remporter un match masculin ?",
+  "payload": {
+   "min": 0,
+   "max": 20,
+   "start": 0,
+   "tolerance": 0
+  },
+  "answer": {
+   "value": 3,
+   "tolerance": 0
+  },
+  "explanation": "Les matchs se jouent en cinq sets. Chez les femmes, en trois (deux sets gagnants)."
+ },
+ {
+  "id": "5038c749-b3c6-49fd-a2b9-e6c338947f1a",
+  "type": "counter",
+  "domain_id": "science",
+  "subdomain_id": "science.space",
+  "prompt": "À combien de kilomètres d'altitude tourne la Station spatiale internationale ?",
+  "payload": {
+   "min": 0,
+   "max": 650,
+   "start": 0,
+   "tolerance": 30,
+   "unit": "km"
+  },
+  "answer": {
+   "value": 400,
+   "tolerance": 30
+  },
+  "explanation": "Environ 400 km, à peu près la distance Paris–Nantes, mais à la verticale."
+ },
+ {
+  "id": "db9542d8-d031-4228-aa70-fed0774eebfd",
+  "type": "gauge",
+  "domain_id": "nature",
+  "subdomain_id": "nature.plants",
+  "prompt": "Quelle part d'une pastèque est faite d'eau ?",
+  "payload": {
+   "tolerance": 4,
+   "unit": "%"
+  },
+  "answer": {
+   "value": 92,
+   "tolerance": 4
+  },
+  "explanation": "Environ 92 %, d'où son nom anglais : « watermelon »."
+ },
+ {
+  "id": "abce6557-bfb0-4359-a979-06441349a871",
+  "type": "gauge",
+  "domain_id": "geography",
+  "subdomain_id": "geography.countries",
+  "prompt": "Quelle part de la population mondiale vit en Asie ?",
+  "payload": {
+   "tolerance": 5,
+   "unit": "%"
+  },
+  "answer": {
+   "value": 59,
+   "tolerance": 5
+  },
+  "explanation": "Environ 59 %, avec l'Inde et la Chine en tête."
+ },
+ {
+  "id": "f61c5cdd-1198-4171-a304-6ca404be4a13",
+  "type": "gauge",
+  "domain_id": "science",
+  "subdomain_id": "science.chemistry",
+  "prompt": "Un bijou en or 18 carats contient quelle part d'or pur ?",
+  "payload": {
+   "tolerance": 5,
+   "unit": "%"
+  },
+  "answer": {
+   "value": 75,
+   "tolerance": 5
+  },
+  "explanation": "18 carats sur 24 : 75 % d'or, le reste étant d'autres métaux."
+ },
+ {
+  "id": "261bba97-2dd9-46c9-af37-ab8065a3ff28",
+  "type": "gauge",
+  "domain_id": "geography",
+  "subdomain_id": "geography.countries",
+  "prompt": "Quelle part du territoire de l'Égypte est désertique ?",
+  "payload": {
+   "tolerance": 4,
+   "unit": "%"
+  },
+  "answer": {
+   "value": 95,
+   "tolerance": 4
+  },
+  "explanation": "Environ 95 % : presque tous les Égyptiens vivent le long du Nil."
+ },
+ {
+  "id": "4912553b-9d89-40c6-a19f-a2bdad9bfd22",
+  "type": "image_choice",
+  "domain_id": "geography",
+  "subdomain_id": "geography.flags",
+  "prompt": "Lequel est le drapeau de la Corée du Sud ?",
+  "payload": {
+   "kind": "flag",
+   "options": [
+    {
+     "id": "9aec601f",
+     "flag": "kp"
+    },
+    {
+     "id": "b1920d1a",
+     "flag": "tw"
+    },
+    {
+     "id": "6af9d07d",
+     "flag": "jp"
+    },
+    {
+     "id": "a7493c85",
+     "flag": "kr"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "a7493c85",
+   "labels": {
+    "a7493c85": "Corée du Sud",
+    "6af9d07d": "Japon",
+    "9aec601f": "Corée du Nord",
+    "b1920d1a": "Taïwan"
+   }
+  },
+  "explanation": "Le symbole rouge et bleu du yin et du yang, entouré de quatre trigrammes noirs."
+ },
+ {
+  "id": "1546c7c5-8667-4c29-a2a0-9cbb97194d15",
+  "type": "image_choice",
+  "domain_id": "geography",
+  "subdomain_id": "geography.flags",
+  "prompt": "Lequel est le drapeau de l'Ouzbékistan ?",
+  "payload": {
+   "kind": "flag",
+   "options": [
+    {
+     "id": "5d316e43",
+     "flag": "my"
+    },
+    {
+     "id": "e2cd67d5",
+     "flag": "iq"
+    },
+    {
+     "id": "266d0374",
+     "flag": "sa"
+    },
+    {
+     "id": "974fbc75",
+     "flag": "uz"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "974fbc75",
+   "labels": {
+    "974fbc75": "Ouzbékistan",
+    "5d316e43": "Malaisie",
+    "266d0374": "Arabie saoudite",
+    "e2cd67d5": "Irak"
+   }
+  },
+  "explanation": "C'est le drapeau de l'Ouzbékistan, dont la capitale est Tachkent (Asie)."
+ },
+ {
+  "id": "46d4d16e-7669-49da-a728-422786229810",
+  "type": "image_choice",
+  "domain_id": "geography",
+  "subdomain_id": "geography.flags",
+  "prompt": "Lequel est le drapeau de l'Australie ?",
+  "payload": {
+   "kind": "flag",
+   "options": [
+    {
+     "id": "4b3c455b",
+     "flag": "fj"
+    },
+    {
+     "id": "d81ea16b",
+     "flag": "tv"
+    },
+    {
+     "id": "9ebff3d5",
+     "flag": "au"
+    },
+    {
+     "id": "c5c9ed0c",
+     "flag": "nz"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "9ebff3d5",
+   "labels": {
+    "9ebff3d5": "Australie",
+    "c5c9ed0c": "Nouvelle-Zélande",
+    "d81ea16b": "Tuvalu",
+    "4b3c455b": "Fidji"
+   }
+  },
+  "explanation": "L'Australie a des étoiles blanches, dont une grande à sept branches ; la Nouvelle-Zélande, quatre étoiles rouges."
+ },
+ {
+  "id": "f289ab20-d311-4604-a4de-ec580e759739",
+  "type": "image_choice",
+  "domain_id": "geography",
+  "subdomain_id": "geography.flags",
+  "prompt": "Lequel est le drapeau de Brunei ?",
+  "payload": {
+   "kind": "flag",
+   "options": [
+    {
+     "id": "d59cc552",
+     "flag": "bn"
+    },
+    {
+     "id": "a8bd35a6",
+     "flag": "mv"
+    },
+    {
+     "id": "3f59bf8c",
+     "flag": "tl"
+    },
+    {
+     "id": "5b25fce3",
+     "flag": "bt"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "d59cc552",
+   "labels": {
+    "d59cc552": "Brunei",
+    "a8bd35a6": "Maldives",
+    "5b25fce3": "Bhoutan",
+    "3f59bf8c": "Timor oriental"
+   }
+  },
+  "explanation": "C'est le drapeau de Brunei, dont la capitale est Bandar Seri Begawan (Asie)."
+ },
+ {
+  "id": "ce35a9d4-e062-444e-a3b4-c5cd7d3df0b5",
+  "type": "letters",
+  "domain_id": "nature",
+  "subdomain_id": "nature.plants",
+  "prompt": "Grande fleur jaune qui suit le soleil quand elle est jeune.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "396fdb3b",
+     "text": "U"
+    },
+    {
+     "id": "4712b29c",
+     "text": "E"
+    },
+    {
+     "id": "e0f16d2f",
+     "text": "N"
+    },
+    {
+     "id": "a7a72064",
+     "text": "R"
+    },
+    {
+     "id": "56995581",
+     "text": "L"
+    },
+    {
+     "id": "a42152e4",
+     "text": "O"
+    },
+    {
+     "id": "a2fae819",
+     "text": "O"
+    },
+    {
+     "id": "316a08f7",
+     "text": "T"
+    },
+    {
+     "id": "38469e63",
+     "text": "S"
+    }
+   ]
+  },
+  "answer": {
+   "word": "TOURNESOL",
+   "display": "Tournesol"
+  },
+  "explanation": "On fait de l'huile avec ses graines."
+ },
+ {
+  "id": "34f1b820-808f-42ae-a981-0b683fe11e36",
+  "type": "letters",
+  "domain_id": "history",
+  "subdomain_id": "history.antiquity",
+  "prompt": "Roi de l'Égypte antique.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "343075b6",
+     "text": "P"
+    },
+    {
+     "id": "5641c2bd",
+     "text": "R"
+    },
+    {
+     "id": "33b2d69d",
+     "text": "N"
+    },
+    {
+     "id": "91e64aa1",
+     "text": "H"
+    },
+    {
+     "id": "bea5e200",
+     "text": "A"
+    },
+    {
+     "id": "dd9c4528",
+     "text": "A"
+    },
+    {
+     "id": "e83de7d8",
+     "text": "O"
+    }
+   ]
+  },
+  "answer": {
+   "word": "PHARAON",
+   "display": "Pharaon"
+  },
+  "explanation": "Comme Toutânkhamon ou Ramsès II."
+ },
+ {
+  "id": "5bc4c63d-8931-458c-a13e-023d2d5d1ab5",
+  "type": "letters",
+  "domain_id": "history",
+  "subdomain_id": "history.middle_ages",
+  "prompt": "Empereur couronné en l'an 800.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "ffe81182",
+     "text": "A"
+    },
+    {
+     "id": "707d9a54",
+     "text": "E"
+    },
+    {
+     "id": "f0e2d936",
+     "text": "M"
+    },
+    {
+     "id": "7660a99a",
+     "text": "L"
+    },
+    {
+     "id": "9219774e",
+     "text": "H"
+    },
+    {
+     "id": "919132f1",
+     "text": "N"
+    },
+    {
+     "id": "37e164bd",
+     "text": "R"
+    },
+    {
+     "id": "2a6d9f8e",
+     "text": "A"
+    },
+    {
+     "id": "c94e2d39",
+     "text": "G"
+    },
+    {
+     "id": "b15edca5",
+     "text": "C"
+    },
+    {
+     "id": "3ea4ceea",
+     "text": "E"
+    }
+   ]
+  },
+  "answer": {
+   "word": "CHARLEMAGNE",
+   "display": "Charlemagne"
+  },
+  "explanation": "« Charles le Grand », roi des Francs."
+ },
+ {
+  "id": "f86e8538-7672-4c41-a36a-5c09a8bdd5b6",
+  "type": "letters",
+  "domain_id": "french",
+  "subdomain_id": "french.vocabulary",
+  "prompt": "Fromage à pâte dure du Jura.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "b71ef7f2",
+     "text": "M"
+    },
+    {
+     "id": "f090b4b9",
+     "text": "E"
+    },
+    {
+     "id": "46fa9608",
+     "text": "C"
+    },
+    {
+     "id": "f4944d42",
+     "text": "T"
+    },
+    {
+     "id": "bc481190",
+     "text": "O"
+    }
+   ]
+  },
+  "answer": {
+   "word": "COMTE",
+   "display": "Comté"
+  },
+  "explanation": "Il est affiné plusieurs mois, voire plusieurs années."
+ },
+ {
+  "id": "46f625e0-67d3-4b15-a563-24cd82c1b978",
+  "type": "map_pin",
+  "domain_id": "geography",
+  "subdomain_id": "geography.countries",
+  "prompt": "Épingle Lyon sur la carte.",
+  "payload": {
+   "region": {
+    "lat": 46.6,
+    "lon": 2.4,
+    "span": 11
+   },
+   "tolerance_km": 60
+  },
+  "answer": {
+   "lat": 45.76,
+   "lon": 4.84,
+   "tolerance_km": 60,
+   "place": "Lyon"
+  },
+  "explanation": "Au confluent du Rhône et de la Saône."
+ },
+ {
+  "id": "10b7372b-a377-4c2b-abbb-5ba332472f2f",
+  "type": "map_pin",
+  "domain_id": "geography",
+  "subdomain_id": "geography.capitals",
+  "prompt": "Épingle Moscou sur la carte.",
+  "payload": {
+   "region": {
+    "lat": 20,
+    "lon": 10,
+    "span": 170
+   },
+   "tolerance_km": 700
+  },
+  "answer": {
+   "lat": 55.76,
+   "lon": 37.62,
+   "tolerance_km": 700,
+   "place": "Moscou"
+  },
+  "explanation": "À l'ouest de la Russie, en Europe."
+ },
+ {
+  "id": "6d321eae-7050-4ad9-aa59-3189595f2aaa",
+  "type": "map_pin",
+  "domain_id": "geography",
+  "subdomain_id": "geography.countries",
+  "prompt": "Épingle Perpignan sur la carte.",
+  "payload": {
+   "region": {
+    "lat": 46.6,
+    "lon": 2.4,
+    "span": 11
+   },
+   "tolerance_km": 60
+  },
+  "answer": {
+   "lat": 42.7,
+   "lon": 2.9,
+   "tolerance_km": 60,
+   "place": "Perpignan"
+  },
+  "explanation": "Tout au sud, près des Pyrénées et de l'Espagne."
+ },
+ {
+  "id": "a84bd39f-92d8-49e7-a096-321823327152",
+  "type": "map_pin",
+  "domain_id": "geography",
+  "subdomain_id": "geography.monuments",
+  "prompt": "Épingle le Taj Mahal sur la carte.",
+  "payload": {
+   "region": {
+    "lat": 20,
+    "lon": 10,
+    "span": 170
+   },
+   "tolerance_km": 700
+  },
+  "answer": {
+   "lat": 27.18,
+   "lon": 78.04,
+   "tolerance_km": 700,
+   "place": "Le Taj Mahal"
+  },
+  "explanation": "À Agra, au nord de l'Inde."
+ },
+ {
+  "id": "da7ee5d4-695f-44f7-a812-191de005d1b3",
+  "type": "number_target",
+  "domain_id": "calc",
+  "subdomain_id": "calc.mental",
+  "prompt": "Atteins 42 avec ces nombres.",
+  "payload": {
+   "numbers": [
+    2,
+    3,
+    6,
+    20
+   ],
+   "target": 42
+  },
+  "answer": {
+   "numbers": [
+    2,
+    3,
+    6,
+    20
+   ],
+   "target": 42,
+   "steps": [
+    {
+     "a": 20,
+     "op": "-",
+     "b": 6
+    },
+    {
+     "a": 3,
+     "op": "*",
+     "b": 14
+    }
+   ],
+   "solution": [
+    "20 − 6 = 14",
+    "3 × 14 = 42"
+   ]
+  },
+  "explanation": "Une solution : 20 − 6 = 14, puis 3 × 14 = 42."
+ },
+ {
+  "id": "15a5e6af-4ea7-4b80-a3dd-43403a9a30f5",
+  "type": "number_target",
+  "domain_id": "calc",
+  "subdomain_id": "calc.mental",
+  "prompt": "Atteins 16 avec ces nombres.",
+  "payload": {
+   "numbers": [
+    5,
+    7,
+    7,
+    8
+   ],
+   "target": 16
+  },
+  "answer": {
+   "numbers": [
+    5,
+    7,
+    7,
+    8
+   ],
+   "target": 16,
+   "steps": [
+    {
+     "a": 7,
+     "op": "-",
+     "b": 5
+    },
+    {
+     "a": 2,
+     "op": "*",
+     "b": 8
+    }
+   ],
+   "solution": [
+    "7 − 5 = 2",
+    "2 × 8 = 16"
+   ]
+  },
+  "explanation": "Une solution : 7 − 5 = 2, puis 2 × 8 = 16."
+ },
+ {
+  "id": "df3b9c0a-3afe-4c2a-afc7-685a21174b7a",
+  "type": "number_target",
+  "domain_id": "calc",
+  "subdomain_id": "calc.mental",
+  "prompt": "Atteins 24 avec ces nombres.",
+  "payload": {
+   "numbers": [
+    2,
+    5,
+    8,
+    25
+   ],
+   "target": 24
+  },
+  "answer": {
+   "numbers": [
+    2,
+    5,
+    8,
+    25
+   ],
+   "target": 24,
+   "steps": [
+    {
+     "a": 5,
+     "op": "-",
+     "b": 2
+    },
+    {
+     "a": 3,
+     "op": "*",
+     "b": 8
+    }
+   ],
+   "solution": [
+    "5 − 2 = 3",
+    "3 × 8 = 24"
+   ]
+  },
+  "explanation": "Une solution : 5 − 2 = 3, puis 3 × 8 = 24."
+ },
+ {
+  "id": "527d8f7f-9af1-4609-a884-bdb8d678a54f",
+  "type": "number_target",
+  "domain_id": "calc",
+  "subdomain_id": "calc.mental",
+  "prompt": "Atteins 31 avec ces nombres.",
+  "payload": {
+   "numbers": [
+    2,
+    2,
+    6,
+    10
+   ],
+   "target": 31
+  },
+  "answer": {
+   "numbers": [
+    2,
+    2,
+    6,
+    10
+   ],
+   "target": 31,
+   "steps": [
+    {
+     "a": 6,
+     "op": "*",
+     "b": 10
+    },
+    {
+     "a": 2,
+     "op": "+",
+     "b": 60
+    },
+    {
+     "a": 62,
+     "op": "/",
+     "b": 2
+    }
+   ],
+   "solution": [
+    "6 × 10 = 60",
+    "2 + 60 = 62",
+    "62 ÷ 2 = 31"
+   ]
+  },
+  "explanation": "Une solution : 6 × 10 = 60, puis 2 + 60 = 62, puis 62 ÷ 2 = 31."
+ },
+ {
+  "id": "1ffd7743-4376-4ba7-a3dd-82f8aa4d82e1",
+  "type": "proportion",
+  "domain_id": "nature",
+  "subdomain_id": "nature.animals",
+  "prompt": "Étire l'éléphant d'Afrique à sa vraie hauteur (au garrot), à côté d'un adulte.",
+  "payload": {
+   "reference": {
+    "label": "Adulte",
+    "size": 1.75,
+    "icon": "person"
+   },
+   "item": {
+    "label": "Éléphant d'Afrique",
+    "icon": "elephant"
+   },
+   "unit": "m",
+   "dimension": "hauteur",
+   "max": 5.7,
+   "rel_tolerance": 0.15
+  },
+  "answer": {
+   "value": 3.3,
+   "rel_tolerance": 0.15
+  },
+  "explanation": "Environ 3,3 m au garrot pour un mâle : le plus grand animal terrestre."
+ },
+ {
+  "id": "4a4ed016-c1bf-416f-a6da-be59e2c14396",
+  "type": "proportion",
+  "domain_id": "nature",
+  "subdomain_id": "nature.marine",
+  "prompt": "Étire l'orque à sa vraie longueur, à côté d'une voiture.",
+  "payload": {
+   "reference": {
+    "label": "Voiture",
+    "size": 4.5,
+    "icon": "car"
+   },
+   "item": {
+    "label": "Orque",
+    "icon": "whale"
+   },
+   "unit": "m",
+   "dimension": "longueur",
+   "max": 13,
+   "rel_tolerance": 0.2
+  },
+  "answer": {
+   "value": 8,
+   "rel_tolerance": 0.2
+  },
+  "explanation": "Un mâle adulte mesure environ 8 m."
+ },
+ {
+  "id": "3cff573c-2804-4cc5-ad72-739338f0b939",
+  "type": "proportion",
+  "domain_id": "tech",
+  "subdomain_id": "tech.inventions",
+  "prompt": "Étire la rame de TGV à sa vraie longueur, à côté d'un terrain de football.",
+  "payload": {
+   "reference": {
+    "label": "Terrain de football",
+    "size": 105,
+    "icon": "field"
+   },
+   "item": {
+    "label": "Rame de TGV",
+    "icon": "train"
+   },
+   "unit": "m",
+   "dimension": "longueur",
+   "max": 350,
+   "rel_tolerance": 0.15
+  },
+  "answer": {
+   "value": 200,
+   "rel_tolerance": 0.15
+  },
+  "explanation": "Une rame simple mesure environ 200 m, presque deux terrains."
+ },
+ {
+  "id": "62124be4-e3d3-4bf6-a65f-a766bbd59ae4",
+  "type": "proportion",
+  "domain_id": "tech",
+  "subdomain_id": "tech.inventions",
+  "prompt": "Étire le porte-avions Charles-de-Gaulle à sa vraie longueur, à côté de la tour Eiffel couchée.",
+  "payload": {
+   "reference": {
+    "label": "Tour Eiffel",
+    "size": 330,
+    "icon": "tower"
+   },
+   "item": {
+    "label": "Charles-de-Gaulle",
+    "icon": "ship"
+   },
+   "unit": "m",
+   "dimension": "longueur",
+   "max": 570,
+   "rel_tolerance": 0.15
+  },
+  "answer": {
+   "value": 261,
+   "rel_tolerance": 0.15
+  },
+  "explanation": "261 m, un peu moins que la tour Eiffel."
+ },
+ {
+  "id": "6b9aa1ec-e844-4352-a8c4-8552ed31d8ce",
+  "type": "riddle",
+  "domain_id": "science",
+  "subdomain_id": "science.physics",
+  "prompt": "Qui suis-je ?",
+  "payload": {
+   "clues": [
+    "Pour me voir, il faut avoir le Soleil dans le dos.",
+    "Je suis fait de lumière décomposée par des gouttes d'eau.",
+    "J'ai sept couleurs, du rouge au violet."
+   ],
+   "options": [
+    {
+     "id": "2ab19192",
+     "text": "L'éclair"
+    },
+    {
+     "id": "0a24c3c2",
+     "text": "L'aurore boréale"
+    },
+    {
+     "id": "44654877",
+     "text": "L'arc-en-ciel"
+    },
+    {
+     "id": "7fbe22e5",
+     "text": "Le mirage"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "44654877"
+  },
+  "explanation": "Chaque goutte agit comme un petit prisme."
+ },
+ {
+  "id": "08df70c6-ff23-4991-a7ab-5bea6e74585b",
+  "type": "riddle",
+  "domain_id": "geography",
+  "subdomain_id": "geography.relief",
+  "prompt": "Qui suis-je ?",
+  "payload": {
+   "clues": [
+    "Il peut y geler la nuit, alors qu'il fait plus de 40 °C le jour.",
+    "Je couvre une dizaine de pays.",
+    "Je suis le plus grand désert chaud du monde."
+   ],
+   "options": [
+    {
+     "id": "822897a9",
+     "text": "Le Sahara"
+    },
+    {
+     "id": "da3c14df",
+     "text": "Le Kalahari"
+    },
+    {
+     "id": "03d87493",
+     "text": "L'Atacama"
+    },
+    {
+     "id": "155fce5e",
+     "text": "Le Gobi"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "822897a9"
+  },
+  "explanation": "Plus de 9 millions de km² en Afrique du Nord."
+ },
+ {
+  "id": "bf847678-2398-43b5-a6c2-6e2806a27938",
+  "type": "riddle",
+  "domain_id": "history",
+  "subdomain_id": "history.middle_ages",
+  "prompt": "Qui suis-je ?",
+  "payload": {
+   "clues": [
+    "J'ai entendu des voix dès l'âge de 13 ans.",
+    "J'ai fait sacrer le roi à Reims.",
+    "On m'appelle « la Pucelle d'Orléans »."
+   ],
+   "options": [
+    {
+     "id": "1bc950fc",
+     "text": "Aliénor d'Aquitaine"
+    },
+    {
+     "id": "d34fff70",
+     "text": "Jeanne d'Arc"
+    },
+    {
+     "id": "abbf4a27",
+     "text": "Marie Curie"
+    },
+    {
+     "id": "ab5d1fdd",
+     "text": "Catherine de Médicis"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "d34fff70"
+  },
+  "explanation": "Brûlée à Rouen en 1431, elle est devenue sainte en 1920."
+ },
+ {
+  "id": "49a195f9-4a5e-4093-ab88-1c8197ba9693",
+  "type": "riddle",
+  "domain_id": "geography",
+  "subdomain_id": "geography.relief",
+  "prompt": "Qui suis-je ?",
+  "payload": {
+   "clues": [
+    "Je traverse onze pays.",
+    "Mes crues ont nourri une civilisation pendant des millénaires.",
+    "Je me jette dans la Méditerranée, en Égypte."
+   ],
+   "options": [
+    {
+     "id": "920b6338",
+     "text": "Le Danube"
+    },
+    {
+     "id": "34d32f8a",
+     "text": "Le Nil"
+    },
+    {
+     "id": "c6c63871",
+     "text": "L'Amazone"
+    },
+    {
+     "id": "9f28e092",
+     "text": "Le Congo"
+    }
+   ]
+  },
+  "answer": {
+   "option_id": "34d32f8a"
+  },
+  "explanation": "L'un des deux plus longs fleuves du monde, avec l'Amazone."
+ },
+ {
+  "id": "4f79db88-f35c-46eb-a698-dc2008c87ab0",
+  "type": "sort",
+  "domain_id": "sport",
+  "subdomain_id": "sport.rules",
+  "prompt": "Ballon rond ou ovale ?",
+  "payload": {
+   "layout": "bins",
+   "groups": [
+    {
+     "id": "caa4d435",
+     "label": "Rond"
+    },
+    {
+     "id": "f8b78601",
+     "label": "Ovale"
+    }
+   ],
+   "items": [
+    {
+     "id": "e5b08ee3",
+     "text": "Football américain"
+    },
+    {
+     "id": "eeddd5cd",
+     "text": "Rugby"
+    },
+    {
+     "id": "d40919cd",
+     "text": "Football australien"
+    },
+    {
+     "id": "996f6fc9",
+     "text": "Basket"
+    },
+    {
+     "id": "0007c4ad",
+     "text": "Volley"
+    },
+    {
+     "id": "f2a3f2d0",
+     "text": "Football"
+    }
+   ]
+  },
+  "answer": {
+   "groups": {
+    "f2a3f2d0": "caa4d435",
+    "996f6fc9": "caa4d435",
+    "0007c4ad": "caa4d435",
+    "eeddd5cd": "f8b78601",
+    "e5b08ee3": "f8b78601",
+    "d40919cd": "f8b78601"
+   }
+  },
+  "explanation": "Le football australien se joue aussi avec un ballon ovale, sur un terrain… ovale."
+ },
+ {
+  "id": "dceda5cc-6708-43ed-a6e7-0f76cdf5c009",
+  "type": "sort",
+  "domain_id": "cinema",
+  "subdomain_id": "cinema.films",
+  "prompt": "Film français ou américain ?",
+  "payload": {
+   "layout": "bins",
+   "groups": [
+    {
+     "id": "de0d80c1",
+     "label": "Français"
+    },
+    {
+     "id": "0b808494",
+     "label": "Américain"
+    }
+   ],
+   "items": [
+    {
+     "id": "11828b43",
+     "text": "Titanic"
+    },
+    {
+     "id": "8731907a",
+     "text": "Jurassic Park"
+    },
+    {
+     "id": "ff8bd622",
+     "text": "Forrest Gump"
+    },
+    {
+     "id": "8026791e",
+     "text": "Intouchables"
+    },
+    {
+     "id": "419e8cb8",
+     "text": "Amélie Poulain"
+    },
+    {
+     "id": "f6a536ed",
+     "text": "Les Visiteurs"
+    }
+   ]
+  },
+  "answer": {
+   "groups": {
+    "8026791e": "de0d80c1",
+    "419e8cb8": "de0d80c1",
+    "f6a536ed": "de0d80c1",
+    "11828b43": "0b808494",
+    "ff8bd622": "0b808494",
+    "8731907a": "0b808494"
+   }
+  },
+  "explanation": "« Intouchables » est l'un des plus grands succès du cinéma français."
+ },
+ {
+  "id": "d155f1c3-f85f-4057-a5ac-c05169edbd3f",
+  "type": "sort",
+  "domain_id": "geography",
+  "subdomain_id": "geography.countries",
+  "prompt": "Hémisphère Nord ou Sud ?",
+  "payload": {
+   "layout": "bins",
+   "groups": [
+    {
+     "id": "ba50d957",
+     "label": "Nord"
+    },
+    {
+     "id": "ba2082a9",
+     "label": "Sud"
+    }
+   ],
+   "items": [
+    {
+     "id": "a5347c38",
+     "text": "Mexique"
+    },
+    {
+     "id": "a4b64d20",
+     "text": "Madagascar"
+    },
+    {
+     "id": "17210080",
+     "text": "Nouvelle-Zélande"
+    },
+    {
+     "id": "3958fd72",
+     "text": "Argentine"
+    },
+    {
+     "id": "7a8c7213",
+     "text": "Inde"
+    },
+    {
+     "id": "703da95c",
+     "text": "Égypte"
+    }
+   ]
+  },
+  "answer": {
+   "groups": {
+    "17210080": "ba2082a9",
+    "703da95c": "ba50d957",
+    "a5347c38": "ba50d957",
+    "7a8c7213": "ba50d957",
+    "3958fd72": "ba2082a9",
+    "a4b64d20": "ba2082a9"
+   }
+  },
+  "explanation": "L'équateur traverse notamment l'Équateur, le Kenya et l'Indonésie."
+ },
+ {
+  "id": "69a58d1b-aa56-4d0b-ad73-e959dd3a8675",
+  "type": "sort",
+  "domain_id": "history",
+  "subdomain_id": "history.contemporary",
+  "prompt": "Place chaque invention à son époque.",
+  "payload": {
+   "layout": "timeline",
+   "groups": [
+    {
+     "id": "6c97ca5e",
+     "label": "Antiquité",
+     "sub": "av. 476"
+    },
+    {
+     "id": "e564d9e4",
+     "label": "Moyen Âge",
+     "sub": "476 – 1492"
+    },
+    {
+     "id": "04a7b5c8",
+     "label": "Temps modernes",
+     "sub": "1492 – 1789"
+    },
+    {
+     "id": "becefa53",
+     "label": "Époque contemporaine",
+     "sub": "depuis 1789"
+    }
+   ],
+   "items": [
+    {
+     "id": "0b9a2ffa",
+     "text": "Le téléphone"
+    },
+    {
+     "id": "eb3d08c7",
+     "text": "L'imprimerie de Gutenberg"
+    },
+    {
+     "id": "00edb1a9",
+     "text": "La montgolfière"
+    },
+    {
+     "id": "46ccefc7",
+     "text": "L'écriture"
+    }
+   ]
+  },
+  "answer": {
+   "groups": {
+    "46ccefc7": "6c97ca5e",
+    "eb3d08c7": "e564d9e4",
+    "00edb1a9": "04a7b5c8",
+    "0b9a2ffa": "becefa53"
+   }
+  },
+  "explanation": "L'écriture vers 3300 av. J.-C. ; l'imprimerie vers 1450 ; la montgolfière en 1783, juste avant la Révolution ; le téléphone en 1876."
+ },
+ {
+  "id": "e36f0e31-5faa-4a43-aa1f-b5af2066b021",
+  "type": "sort",
+  "domain_id": "history",
+  "subdomain_id": "history.middle_ages",
+  "prompt": "Place chaque bataille à son époque.",
+  "payload": {
+   "layout": "timeline",
+   "groups": [
+    {
+     "id": "044f3c99",
+     "label": "Antiquité",
+     "sub": "av. 476"
+    },
+    {
+     "id": "f56d87f7",
+     "label": "Moyen Âge",
+     "sub": "476 – 1492"
+    },
+    {
+     "id": "06af60d1",
+     "label": "Temps modernes",
+     "sub": "1492 – 1789"
+    },
+    {
+     "id": "59ff69f5",
+     "label": "Époque contemporaine",
+     "sub": "depuis 1789"
+    }
+   ],
+   "items": [
+    {
+     "id": "83a22d0f",
+     "text": "Waterloo"
+    },
+    {
+     "id": "8f0ca8a6",
+     "text": "Alésia"
+    },
+    {
+     "id": "f215ee17",
+     "text": "Azincourt"
+    },
+    {
+     "id": "a00a7b42",
+     "text": "Marignan"
+    }
+   ]
+  },
+  "answer": {
+   "groups": {
+    "8f0ca8a6": "044f3c99",
+    "f215ee17": "f56d87f7",
+    "a00a7b42": "06af60d1",
+    "83a22d0f": "59ff69f5"
+   }
+  },
+  "explanation": "Alésia (52 av. J.-C.), Azincourt (1415), Marignan (1515), Waterloo (1815)."
+ },
+ {
+  "id": "71709d5d-84fd-4de3-af2f-e84d851e4e86",
+  "type": "sort",
+  "domain_id": "science",
+  "subdomain_id": "science.biology",
+  "prompt": "Place chaque découverte à son siècle.",
+  "payload": {
+   "layout": "timeline",
+   "groups": [
+    {
+     "id": "3513355c",
+     "label": "XVIIe siècle",
+     "sub": "1601 – 1700"
+    },
+    {
+     "id": "3be01177",
+     "label": "XVIIIe siècle",
+     "sub": "1701 – 1800"
+    },
+    {
+     "id": "5430a2a0",
+     "label": "XIXe siècle",
+     "sub": "1801 – 1900"
+    },
+    {
+     "id": "61445c08",
+     "label": "XXe siècle",
+     "sub": "1901 – 2000"
+    }
+   ],
+   "items": [
+    {
+     "id": "770cd210",
+     "text": "L'oxygène (Lavoisier)"
+    },
+    {
+     "id": "3c0fe5ef",
+     "text": "Le vaccin contre la rage (Pasteur)"
+    },
+    {
+     "id": "482c5034",
+     "text": "La pénicilline (Fleming)"
+    },
+    {
+     "id": "68c6e565",
+     "text": "La gravitation (Newton)"
+    }
+   ]
+  },
+  "answer": {
+   "groups": {
+    "68c6e565": "3513355c",
+    "770cd210": "3be01177",
+    "3c0fe5ef": "5430a2a0",
+    "482c5034": "61445c08"
+   }
+  },
+  "explanation": "Newton (1687), Lavoisier (années 1770), Pasteur (1885), Fleming (1928)."
+ },
+ {
+  "id": "a87c414d-584e-4035-aec1-e871a3f586b1",
+  "type": "timeline",
+  "domain_id": "cinema",
+  "subdomain_id": "cinema.animation",
+  "prompt": "En quelle année sort « Le Roi lion » de Disney ?",
+  "payload": {
+   "min": 1930,
+   "max": 2030,
+   "tolerance": 3
+  },
+  "answer": {
+   "value": 1994,
+   "tolerance": 3
+  },
+  "explanation": "Le plus grand succès de l'animation traditionnelle de l'époque, avec les chansons d'Elton John."
+ },
+ {
+  "id": "32844686-df63-48e8-a420-08d0b71aa97f",
+  "type": "timeline",
+  "domain_id": "tech",
+  "subdomain_id": "tech.computing",
+  "prompt": "En quelle année Apple lance-t-elle le premier Macintosh ?",
+  "payload": {
+   "min": 1930,
+   "max": 2030,
+   "tolerance": 3
+  },
+  "answer": {
+   "value": 1984,
+   "tolerance": 3
+  },
+  "explanation": "En janvier 1984, avec une célèbre pub inspirée du roman « 1984 »."
+ },
+ {
+  "id": "a6dc94d7-0f59-40cd-af36-501e3ec8875c",
+  "type": "timeline",
+  "domain_id": "history",
+  "subdomain_id": "history.middle_ages",
+  "prompt": "Quand a eu lieu la bataille de Manzikert ?",
+  "payload": {
+   "min": 1010,
+   "max": 1310,
+   "tolerance": 10
+  },
+  "answer": {
+   "value": 1071,
+   "tolerance": 10
+  },
+  "explanation": "La bataille de Manzikert a eu lieu le 1er septembre 1071. Contexte : bataille opposant les Byzantins aux Seldjoukides en 1071."
+ },
+ {
+  "id": "d748f6a8-639d-466e-a7ff-e8836c0d81c4",
+  "type": "timeline",
+  "domain_id": "history",
+  "subdomain_id": "history.middle_ages",
+  "prompt": "Quand a eu lieu la bataille de Legnica ?",
+  "payload": {
+   "min": 1130,
+   "max": 1430,
+   "tolerance": 10
+  },
+  "answer": {
+   "value": 1241,
+   "tolerance": 10
+  },
+  "explanation": "La bataille de Legnica a eu lieu le 16 avril 1241. Contexte : bataille près de Legnica, Basse-Silésie, entre Turco-Mongols et Polonais, XIIIe siècle."
+ },
+ {
+  "id": "b133632b-17bd-4be2-ab42-6032fe170fa6",
+  "type": "word_order",
+  "domain_id": "music",
+  "subdomain_id": "music.popular",
+  "prompt": "Remets dans l'ordre le début de la chanson.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "cc97822d",
+     "text": "nos"
+    },
+    {
+     "id": "f9721930",
+     "text": "vœux"
+    },
+    {
+     "id": "0d12cb67",
+     "text": "Joyeux"
+    },
+    {
+     "id": "59d15e4b",
+     "text": "les"
+    },
+    {
+     "id": "dacfa14b",
+     "text": "sincères"
+    },
+    {
+     "id": "d75c1174",
+     "text": "plus"
+    },
+    {
+     "id": "d61f3ae7",
+     "text": "anniversaire"
+    }
+   ]
+  },
+  "answer": {
+   "words": [
+    "Joyeux",
+    "anniversaire",
+    "nos",
+    "vœux",
+    "les",
+    "plus",
+    "sincères"
+   ],
+   "sentence": "Joyeux anniversaire, nos vœux les plus sincères."
+  },
+  "explanation": "La version française la plus chantée."
+ },
+ {
+  "id": "6cb6016b-24bc-47b5-a523-fb3821aede71",
+  "type": "word_order",
+  "domain_id": "french",
+  "subdomain_id": "french.expressions",
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "a8edd143",
+     "text": "en"
+    },
+    {
+     "id": "6df177c9",
+     "text": "faite"
+    },
+    {
+     "id": "275c991a",
+     "text": "ne"
+    },
+    {
+     "id": "526a3e01",
+     "text": "jour"
+    },
+    {
+     "id": "3b4adde9",
+     "text": "un"
+    },
+    {
+     "id": "1b6fb1e3",
+     "text": "s'est"
+    },
+    {
+     "id": "a17514e6",
+     "text": "Rome"
+    },
+    {
+     "id": "c8127208",
+     "text": "pas"
+    }
+   ]
+  },
+  "answer": {
+   "words": [
+    "Rome",
+    "ne",
+    "s'est",
+    "pas",
+    "faite",
+    "en",
+    "un",
+    "jour"
+   ],
+   "sentence": "Rome ne s'est pas faite en un jour."
+  },
+  "explanation": "Les grandes choses prennent du temps."
+ },
+ {
+  "id": "66f0321c-b0de-47cd-a412-0b97753d0410",
+  "type": "word_order",
+  "domain_id": "french",
+  "subdomain_id": "french.expressions",
+  "prompt": "Remets ce dicton dans l'ordre.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "a2bcc69a",
+     "text": "froides"
+    },
+    {
+     "id": "ed7f1f9c",
+     "text": "chaud"
+    },
+    {
+     "id": "ac79eb92",
+     "text": "cœur"
+    },
+    {
+     "id": "38fd4458",
+     "text": "Mains"
+    }
+   ]
+  },
+  "answer": {
+   "words": [
+    "Mains",
+    "froides",
+    "cœur",
+    "chaud"
+   ],
+   "sentence": "Mains froides, cœur chaud."
+  },
+  "explanation": "Un dicton pour consoler ceux qui ont toujours froid aux mains."
+ },
+ {
+  "id": "e000db40-f63c-42dd-a793-f9d777399475",
+  "type": "word_order",
+  "domain_id": "french",
+  "subdomain_id": "french.expressions",
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "payload": {
+   "tiles": [
+    {
+     "id": "a9ac0a8d",
+     "text": "chiens"
+    },
+    {
+     "id": "acac3e7d",
+     "text": "caravane"
+    },
+    {
+     "id": "2df52b15",
+     "text": "la"
+    },
+    {
+     "id": "4b644971",
+     "text": "Les"
+    },
+    {
+     "id": "696ef62e",
+     "text": "passe"
+    },
+    {
+     "id": "e67150bf",
+     "text": "aboient"
+    }
+   ]
+  },
+  "answer": {
+   "words": [
+    "Les",
+    "chiens",
+    "aboient",
+    "la",
+    "caravane",
+    "passe"
+   ],
+   "sentence": "Les chiens aboient, la caravane passe."
+  },
+  "explanation": "On avance sans se soucier des critiques."
+ }
+]

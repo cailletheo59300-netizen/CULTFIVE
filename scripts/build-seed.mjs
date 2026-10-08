@@ -363,6 +363,34 @@ if (process.argv.includes('--report')) {
   console.log(`  indices : ${withHint}/${questions.length} (${raw.filter((q) => q.hint).length} écrits à la main) · vrai/faux : ${Math.round(trueShare * 100)} % de « vrai »`);
 }
 
+// Aperçu des nouveaux types (écran réservé à TestFlight) : quelques vraies questions par type, au format de l'app.
+const previewAt = process.argv.indexOf('--preview');
+if (previewAt > 0) {
+  const uuid = (key) => { const h = createHash('sha1').update(`preview|${key}`).digest('hex');
+    return `${h.slice(0, 8)}-${h.slice(8, 12)}-4${h.slice(13, 16)}-a${h.slice(17, 20)}-${h.slice(20, 32)}`; };
+  const classic = new Set(['mcq', 'true_false', 'numeric', 'ordering', 'pairs', 'map_pick']);
+  const picks = [];
+  const byType = new Map();
+  for (const q of questions) {
+    if (classic.has(q.type) || q.status !== 'published') continue;
+    const k = q.type === 'sort' ? `sort:${q.payload.layout}` : q.type;
+    byType.set(k, [...(byType.get(k) ?? []), q]);
+  }
+  for (const [k, list] of [...byType].sort()) {
+    const n = k.startsWith('sort:') ? 3 : 4;
+    // Variété : des domaines différents, des difficultés étalées.
+    const sorted = [...list].sort((a, b) => a.difficulty - b.difficulty);
+    for (let i = 0; i < n && i < sorted.length; i++) picks.push(sorted[Math.floor((i + 0.5) * sorted.length / n)]);
+  }
+  const out = picks.map((q) => ({
+    id: uuid(q.external_key), type: q.type, domain_id: q.concept_id.split('.')[0],
+    subdomain_id: q.concept_id.split('.').slice(0, 2).join('.'), prompt: q.prompt, payload: q.payload,
+    answer: q.answer, explanation: q.explanation, ...(q.takeaway ? { takeaway: q.takeaway } : {}),
+  }));
+  writeFileSync(process.argv[previewAt + 1], JSON.stringify(out, null, 1) + '\n');
+  console.log(`✓ aperçu : ${out.length} questions`);
+}
+
 if (process.argv.includes('--check')) {
   console.log(`✓ ${questions.length} questions valides`);
 } else {

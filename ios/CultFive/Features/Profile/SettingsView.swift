@@ -24,6 +24,7 @@ struct SettingsView: View {
     @State private var exporting = false
     @State private var confirmSignOut = false
     @State private var error: String?
+    @State private var showTypesPreview = false
 
     private let ageRanges = ["13-17", "18-24", "25-34", "35-49", "50+"]
 
@@ -64,6 +65,11 @@ struct SettingsView: View {
                 section("Informations", footer: "Facultatif. Sert seulement à adapter les questions, jamais affiché.") { ageRow }
                 section("Compte") { account }
                 section("Aide & légal") { links }
+                if AppChannel.isTestBuild {
+                    section("TestFlight", footer: "Visible seulement dans les builds de test, jamais dans l'App Store.") {
+                        actionRow("Aperçu des nouveaux types", symbol: "sparkles", tint: Color.brand) { showTypesPreview = true }
+                    }
+                }
                 about
                 if let error {
                     Text(error).font(.cfFootnote).foregroundStyle(Color.wrong)
@@ -76,6 +82,7 @@ struct SettingsView: View {
         .clearsTabBar()
         .scrollDismissesKeyboard(.interactively)
         .background(Color.paper)
+        .navigationDestination(isPresented: $showTypesPreview) { NewTypesPreviewView() }
         .navigationTitle("Réglages")
         .navigationBarTitleDisplayMode(.large)
         .toolbar(.visible, for: .navigationBar)
