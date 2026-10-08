@@ -1,0 +1,452 @@
+[
+ {
+  "key": "acc-geo2-001",
+  "concept": "geography.countries.acc_bordeaux_vin",
+  "label": "Bordeaux",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle ville française est mondialement connue pour son vin et ses quais sur la Garonne ?",
+  "options": [
+   "Bordeaux*",
+   "Lyon",
+   "Dijon",
+   "Reims"
+  ],
+  "explanation": "Son centre historique, le « port de la Lune », est classé à l'UNESCO."
+ },
+ {
+  "key": "acc-geo2-002",
+  "concept": "geography.countries.acc_lille_braderie",
+  "label": "Braderie de Lille",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle ville a lieu une immense braderie chaque premier week-end de septembre ?",
+  "options": [
+   "Lille*",
+   "Nantes",
+   "Rouen",
+   "Metz"
+  ],
+  "explanation": "On y mange des moules-frites par tonnes."
+ },
+ {
+  "key": "acc-geo2-003",
+  "concept": "geography.countries.acc_nice_promenade",
+  "label": "Promenade des Anglais",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle ville se trouve la promenade des Anglais ?",
+  "options": [
+   "Nice*",
+   "Cannes",
+   "Marseille",
+   "Biarritz"
+  ],
+  "explanation": "Elle longe la baie des Anges sur 7 km."
+ },
+ {
+  "key": "acc-geo2-004",
+  "concept": "geography.countries.acc_cannes_festival",
+  "label": "Ville du festival",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quelle ville a lieu le plus célèbre festival de cinéma français ?",
+  "options": [
+   "Cannes*",
+   "Nice",
+   "Deauville",
+   "Paris"
+  ],
+  "explanation": "Chaque mois de mai, avec sa Palme d'or."
+ },
+ {
+  "key": "acc-geo2-005",
+  "concept": "geography.countries.acc_nantes_elephant",
+  "label": "Le grand éléphant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quelle ville peut-on monter sur un éléphant mécanique géant, aux Machines de l'île ?",
+  "options": [
+   "Nantes*",
+   "Bordeaux",
+   "Lyon",
+   "Toulouse"
+  ],
+  "explanation": "Il mesure 12 m de haut et se promène avec ses passagers."
+ },
+ {
+  "key": "acc-geo2-006",
+  "concept": "geography.countries.acc_lyon_gones",
+  "label": "Les bouchons",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle ville mange-t-on dans des « bouchons » ?",
+  "options": [
+   "Lyon*",
+   "Marseille",
+   "Lille",
+   "Strasbourg"
+  ],
+  "explanation": "Des restaurants traditionnels lyonnais, avec quenelles et saucissons."
+ },
+ {
+  "key": "acc-geo2-007",
+  "concept": "geography.countries.acc_strasbourg_parlement",
+  "label": "Parlement européen",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle ville française accueille le Parlement européen ?",
+  "options": [
+   "Strasbourg*",
+   "Paris",
+   "Lille",
+   "Metz"
+  ],
+  "explanation": "Il siège aussi à Bruxelles."
+ },
+ {
+  "key": "acc-geo2-008",
+  "concept": "geography.countries.acc_marseille_bonne_mere",
+  "label": "La Bonne Mère",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment les Marseillais surnomment-ils la basilique Notre-Dame-de-la-Garde ?",
+  "options": [
+   "La Bonne Mère*",
+   "La Vieille Dame",
+   "La Belle Étoile",
+   "La Sainte Mer"
+  ],
+  "explanation": "Elle veille sur la ville depuis sa colline."
+ },
+ {
+  "key": "acc-geo2-009",
+  "concept": "geography.countries.acc_montpellier",
+  "label": "Ville du sud",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Laquelle de ces villes est la plus proche de la mer Méditerranée ?",
+  "options": [
+   "Montpellier*",
+   "Toulouse",
+   "Lyon",
+   "Grenoble"
+  ],
+  "explanation": "À une dizaine de kilomètres des plages."
+ },
+ {
+  "key": "acc-geo2-010",
+  "concept": "geography.countries.acc_guadeloupe_papillon",
+  "label": "L'île papillon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle île des Antilles françaises a la forme d'un papillon ?",
+  "options": [
+   "La Guadeloupe*",
+   "La Martinique",
+   "Saint-Martin",
+   "Marie-Galante"
+  ],
+  "explanation": "Ses deux « ailes » sont Basse-Terre et Grande-Terre."
+ },
+ {
+  "key": "acc-geo2-011",
+  "concept": "geography.countries.acc_tahiti_polynesie",
+  "label": "Tahiti",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quel territoire français se trouve Tahiti ?",
+  "options": [
+   "La Polynésie française*",
+   "La Nouvelle-Calédonie",
+   "La Martinique",
+   "La Réunion"
+  ],
+  "explanation": "Au milieu du Pacifique."
+ },
+ {
+  "key": "acc-geo2-012",
+  "concept": "geography.countries.acc_reunion_volcan",
+  "label": "La Réunion",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel volcan très actif se trouve sur l'île de La Réunion ?",
+  "options": [
+   "Le piton de la Fournaise*",
+   "Le Vésuve",
+   "La Montagne Pelée",
+   "Le Kilimandjaro"
+  ],
+  "explanation": "Il entre en éruption presque chaque année."
+ },
+ {
+  "key": "acc-geo2-013",
+  "concept": "geography.countries.acc_royaume_uni_conduite",
+  "label": "Rouler à gauche",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quel pays d'Europe roule-t-on à gauche ?",
+  "options": [
+   "Le Royaume-Uni*",
+   "L'Espagne",
+   "L'Allemagne",
+   "La Suède"
+  ],
+  "explanation": "Comme en Irlande, à Malte et à Chypre."
+ },
+ {
+  "key": "acc-geo2-014",
+  "concept": "geography.countries.acc_amsterdam_velos",
+  "label": "Ville des vélos",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle capitale est célèbre pour ses canaux et ses très nombreux vélos ?",
+  "options": [
+   "Amsterdam*",
+   "Berlin",
+   "Copenhague",
+   "Vienne"
+  ],
+  "explanation": "On y compte plus de vélos que d'habitants."
+ },
+ {
+  "key": "acc-geo2-015",
+  "concept": "geography.countries.acc_london_bus",
+  "label": "Bus à impériale",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quelle ville roulent les célèbres bus rouges à impériale ?",
+  "options": [
+   "Londres*",
+   "Dublin",
+   "Édimbourg",
+   "Berlin"
+  ],
+  "explanation": "À deux étages, ils sont un symbole de la ville."
+ },
+ {
+  "key": "acc-geo2-016",
+  "concept": "geography.countries.acc_canada_langues",
+  "label": "Le Canada bilingue",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelles sont les deux langues officielles du Canada ?",
+  "options": [
+   "L'anglais et le français*",
+   "L'anglais et l'espagnol",
+   "Le français et l'inuktitut",
+   "L'anglais seulement"
+  ],
+  "explanation": "On parle surtout français au Québec."
+ },
+ {
+  "key": "acc-geo2-017",
+  "concept": "geography.countries.acc_islande_glace",
+  "label": "L'Islande",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "L'Islande a des volcans actifs et des geysers.",
+  "answer": true,
+  "explanation": "Le mot « geyser » vient même d'un geyser islandais, le Geysir."
+ },
+ {
+  "key": "acc-geo2-018",
+  "concept": "geography.relief.acc_loire_chateaux",
+  "label": "Les châteaux de la Loire",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au bord de quel fleuve trouve-t-on Chambord, Amboise et Chenonceau ?",
+  "options": [
+   "La Loire*",
+   "La Seine",
+   "Le Rhône",
+   "La Dordogne"
+  ],
+  "explanation": "Le plus long fleuve de France."
+ },
+ {
+  "key": "acc-geo2-019",
+  "concept": "geography.relief.acc_rhone_lyon",
+  "label": "Rhône et Saône",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel fleuve rejoint la Saône à Lyon ?",
+  "options": [
+   "Le Rhône*",
+   "La Loire",
+   "La Seine",
+   "Le Rhin"
+  ],
+  "explanation": "Ils se rejoignent au confluent, au sud de la ville."
+ },
+ {
+  "key": "acc-geo2-020",
+  "concept": "geography.relief.acc_rhin_frontiere",
+  "label": "Le Rhin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel fleuve sert de frontière entre la France et l'Allemagne en Alsace ?",
+  "options": [
+   "Le Rhin*",
+   "Le Rhône",
+   "La Moselle",
+   "La Meuse"
+  ],
+  "explanation": "Il passe à Strasbourg."
+ },
+ {
+  "key": "acc-geo2-021",
+  "concept": "geography.relief.acc_alpes_mont_blanc",
+  "label": "Le mont Blanc",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quel massif se trouve le mont Blanc ?",
+  "options": [
+   "Les Alpes*",
+   "Les Pyrénées",
+   "Le Massif central",
+   "Le Jura"
+  ],
+  "explanation": "Le plus haut sommet d'Europe occidentale."
+ },
+ {
+  "key": "acc-geo2-022",
+  "concept": "geography.relief.acc_massif_central_volcans",
+  "label": "Les volcans d'Auvergne",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle région se trouvent les volcans endormis comme le puy de Dôme ?",
+  "options": [
+   "L'Auvergne*",
+   "La Bretagne",
+   "L'Alsace",
+   "La Provence"
+  ],
+  "explanation": "La chaîne des Puys compte environ 80 volcans."
+ },
+ {
+  "key": "acc-geo2-023",
+  "concept": "geography.relief.acc_verdon",
+  "label": "Gorges du Verdon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Où se trouvent les gorges du Verdon, parmi les plus grands canyons d'Europe ?",
+  "options": [
+   "En Provence*",
+   "En Bretagne",
+   "En Normandie",
+   "En Alsace"
+  ],
+  "explanation": "L'eau y est d'un vert turquoise étonnant."
+ },
+ {
+  "key": "acc-geo2-024",
+  "concept": "geography.relief.acc_etretat",
+  "label": "Les falaises d'Étretat",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle région se trouvent les falaises d'Étretat ?",
+  "options": [
+   "La Normandie*",
+   "La Bretagne",
+   "Les Hauts-de-France",
+   "La Charente"
+  ],
+  "explanation": "Avec leurs arches de craie blanche, peintes par Monet."
+ },
+ {
+  "key": "acc-geo2-025",
+  "concept": "geography.relief.acc_dune_pilat",
+  "label": "Dune du Pilat",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Où se trouve la dune du Pilat, la plus haute d'Europe ?",
+  "options": [
+   "Près d'Arcachon, en Gironde*",
+   "En Bretagne",
+   "Dans le Nord",
+   "En Corse"
+  ],
+  "explanation": "Environ 100 m de haut, et elle avance chaque année."
+ },
+ {
+  "key": "acc-geo2-026",
+  "concept": "geography.relief.acc_amazone_foret",
+  "label": "L'Amazone",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel fleuve traverse la plus grande forêt tropicale du monde ?",
+  "options": [
+   "L'Amazone*",
+   "Le Nil",
+   "Le Mississippi",
+   "Le Congo"
+  ],
+  "explanation": "C'est le fleuve qui a le plus de débit au monde."
+ },
+ {
+  "key": "acc-geo2-027",
+  "concept": "geography.relief.acc_hemisphere_saisons",
+  "label": "Noël en été",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "En Australie, Noël tombe en plein été.",
+  "answer": true,
+  "explanation": "Dans l'hémisphère Sud, les saisons sont inversées."
+ },
+ {
+  "key": "acc-geo2-028",
+  "concept": "geography.relief.acc_pole_sud_continent",
+  "label": "Le pôle Sud",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Il y a un continent sous la glace du pôle Nord.",
+  "answer": false,
+  "explanation": "Au pôle Nord, c'est de la glace sur l'océan ; c'est au pôle Sud qu'il y a un continent, l'Antarctique."
+ },
+ {
+  "key": "acc-geo2-029",
+  "concept": "geography.monuments.acc_mont_saint_michel_marees",
+  "label": "Le Mont-Saint-Michel",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi le Mont-Saint-Michel devient-il parfois une île ?",
+  "options": [
+   "À cause des grandes marées*",
+   "À cause des crues",
+   "Parce qu'il flotte",
+   "À cause de la neige"
+  ],
+  "explanation": "La mer monte très vite autour de lui, « à la vitesse d'un cheval au galop »."
+ },
+ {
+  "key": "acc-geo2-030",
+  "concept": "geography.monuments.acc_sacre_coeur",
+  "label": "Le Sacré-Cœur",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Sur quelle colline de Paris se dresse la basilique du Sacré-Cœur ?",
+  "options": [
+   "Montmartre*",
+   "Belleville",
+   "Montparnasse",
+   "Ménilmontant"
+  ],
+  "explanation": "La butte Montmartre, le point le plus haut de Paris."
+ },
+ {
+  "key": "acc-geo2-031",
+  "concept": "geography.monuments.acc_carcassonne",
+  "label": "Carcassonne",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle ville est célèbre pour sa cité médiévale entourée de remparts ?",
+  "options": [
+   "Carcassonne*",
+   "Lyon",
+   "Lille",
+   "Biarritz"
+  ],
+  "explanation": "Elle compte 3 km de remparts et 52 tours."
+ }
+]

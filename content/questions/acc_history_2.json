@@ -1,0 +1,352 @@
+[
+ {
+  "key": "acc-history2-001",
+  "concept": "history.antiquity.acc_gladiateurs_colisee",
+  "label": "Les gladiateurs",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Où combattaient les gladiateurs à Rome ?",
+  "options": [
+   "Au Colisée*",
+   "Au Panthéon",
+   "Au Forum",
+   "Aux thermes"
+  ],
+  "explanation": "Un amphithéâtre de 50 000 places, inauguré en 80."
+ },
+ {
+  "key": "acc-history2-002",
+  "concept": "history.antiquity.acc_attila_huns",
+  "label": "Attila",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel peuple Attila était-il le roi ?",
+  "options": [
+   "Les Huns*",
+   "Les Vikings",
+   "Les Gaulois",
+   "Les Mongols"
+  ],
+  "explanation": "On disait que « l'herbe ne repoussait pas » sous les sabots de son cheval."
+ },
+ {
+  "key": "acc-history2-003",
+  "concept": "history.antiquity.acc_olympie_jeux",
+  "label": "Jeux antiques",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel pays sont nés les Jeux olympiques antiques ?",
+  "options": [
+   "La Grèce*",
+   "L'Italie",
+   "L'Égypte",
+   "La Turquie"
+  ],
+  "explanation": "À Olympie, à partir de 776 av. J.-C. selon la tradition."
+ },
+ {
+  "key": "acc-history2-004",
+  "concept": "history.antiquity.acc_neandertal",
+  "label": "Néandertal",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "L'homme de Néandertal a vécu en Europe en même temps que nos ancêtres directs, Homo sapiens.",
+  "answer": true,
+  "explanation": "Les deux ont cohabité ; nous portons même un peu de son ADN."
+ },
+ {
+  "key": "acc-history2-005",
+  "concept": "history.middle_ages.acc_pont_levis",
+  "label": "Le pont-levis",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "À quoi servait le pont-levis d'un château fort ?",
+  "options": [
+   "À fermer l'entrée en le relevant*",
+   "À traverser une rivière en bateau",
+   "À monter au donjon",
+   "À stocker les armes"
+  ],
+  "explanation": "On le relevait au-dessus des douves pour bloquer l'ennemi."
+ },
+ {
+  "key": "acc-history2-006",
+  "concept": "history.middle_ages.acc_donjon",
+  "label": "Le donjon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans un château fort, qu'est-ce que le donjon ?",
+  "options": [
+   "La plus haute tour, la plus protégée*",
+   "La prison souterraine",
+   "La salle de banquet",
+   "Le fossé rempli d'eau"
+  ],
+  "explanation": "Le mot « donjon » a pris le sens de prison bien plus tard."
+ },
+ {
+  "key": "acc-history2-007",
+  "concept": "history.middle_ages.acc_saint_louis",
+  "label": "Saint Louis",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel roi de France est devenu saint après sa mort ?",
+  "options": [
+   "Louis IX*",
+   "Louis XIV",
+   "Louis XI",
+   "Louis VII"
+  ],
+  "explanation": "Saint Louis rendait la justice sous un chêne, à Vincennes, selon la légende."
+ },
+ {
+  "key": "acc-history2-008",
+  "concept": "history.middle_ages.acc_vikings_drakkar",
+  "label": "Les Vikings",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appellent les bateaux des Vikings ?",
+  "options": [
+   "Les drakkars*",
+   "Les galères",
+   "Les caravelles",
+   "Les jonques"
+  ],
+  "explanation": "Avec leur tête de dragon à la proue."
+ },
+ {
+  "key": "acc-history2-009",
+  "concept": "history.middle_ages.acc_cornes_vikings",
+  "label": "Casques à cornes",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Les Vikings portaient des casques à cornes au combat.",
+  "answer": false,
+  "explanation": "C'est une image inventée au XIXe siècle ; aucun casque à cornes n'a été retrouvé."
+ },
+ {
+  "key": "acc-history2-010",
+  "concept": "history.modern.acc_francois_1er_leonard",
+  "label": "François Ier et Léonard",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel roi de France a invité Léonard de Vinci à finir sa vie en France ?",
+  "options": [
+   "François Ier*",
+   "Louis XII",
+   "Henri II",
+   "Charles VIII"
+  ],
+  "explanation": "Léonard meurt au Clos Lucé, près d'Amboise, en 1519."
+ },
+ {
+  "key": "acc-history2-011",
+  "concept": "history.modern.acc_richelieu",
+  "label": "Richelieu",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel cardinal fut le principal ministre de Louis XIII ?",
+  "options": [
+   "Richelieu*",
+   "Mazarin",
+   "Colbert",
+   "Fouquet"
+  ],
+  "explanation": "Il a aussi fondé l'Académie française en 1635."
+ },
+ {
+  "key": "acc-history2-012",
+  "concept": "history.modern.acc_versailles_roi",
+  "label": "Château de Versailles",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel roi a fait de Versailles le grand château royal ?",
+  "options": [
+   "Louis XIV*",
+   "Louis XIII",
+   "Louis XVI",
+   "Henri IV"
+  ],
+  "explanation": "Il s'y installe avec la cour en 1682."
+ },
+ {
+  "key": "acc-history2-013",
+  "concept": "history.modern.acc_marie_antoinette_brioche",
+  "label": "« Qu'ils mangent de la brioche »",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Il est prouvé que Marie-Antoinette a dit : « S'ils n'ont pas de pain, qu'ils mangent de la brioche. »",
+  "answer": false,
+  "explanation": "Aucune preuve : la phrase circulait déjà avant elle (Rousseau la cite)."
+ },
+ {
+  "key": "acc-history2-014",
+  "concept": "history.modern.acc_marianne",
+  "label": "Marianne",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui est Marianne ?",
+  "options": [
+   "Le symbole de la République française*",
+   "La femme de Napoléon",
+   "Une reine de France",
+   "Une héroïne de la Révolution qui a existé"
+  ],
+  "explanation": "Son buste trône dans les mairies."
+ },
+ {
+  "key": "acc-history2-015",
+  "concept": "history.modern.acc_josephine",
+  "label": "Joséphine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelait la première épouse de Napoléon, sacrée impératrice ?",
+  "options": [
+   "Joséphine*",
+   "Marie-Louise",
+   "Marie-Antoinette",
+   "Eugénie"
+  ],
+  "explanation": "Il divorce d'elle en 1809, faute d'héritier."
+ },
+ {
+  "key": "acc-history2-016",
+  "concept": "history.modern.acc_napoleon_petit",
+  "label": "Napoléon était-il petit ?",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Napoléon était très petit, bien plus que les hommes de son époque.",
+  "answer": false,
+  "explanation": "Il mesurait environ 1,68 m, une taille moyenne pour l'époque ; la légende vient de la propagande anglaise."
+ },
+ {
+  "key": "acc-history2-017",
+  "concept": "history.contemporary.acc_jules_ferry",
+  "label": "Jules Ferry",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi se souvient-on de Jules Ferry ?",
+  "options": [
+   "Il a rendu l'école gratuite et obligatoire*",
+   "Il a inventé le métro",
+   "Il a construit la tour Eiffel",
+   "Il a créé le Tour de France"
+  ],
+  "explanation": "Les lois Ferry, en 1881-1882, et une école laïque."
+ },
+ {
+  "key": "acc-history2-018",
+  "concept": "history.contemporary.acc_poilus",
+  "label": "Les poilus",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment surnommait-on les soldats français de la Première Guerre mondiale ?",
+  "options": [
+   "Les poilus*",
+   "Les grognards",
+   "Les bidasses",
+   "Les tommies"
+  ],
+  "explanation": "Ils vivaient dans les tranchées, souvent mal rasés."
+ },
+ {
+  "key": "acc-history2-019",
+  "concept": "history.contemporary.acc_tranchees",
+  "label": "Les tranchées",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Où vivaient la plupart des soldats sur le front pendant la guerre de 14-18 ?",
+  "options": [
+   "Dans des tranchées*",
+   "Dans des châteaux",
+   "Dans des bateaux",
+   "Dans des tentes en montagne"
+  ],
+  "explanation": "De longs fossés creusés dans la terre, face à l'ennemi."
+ },
+ {
+  "key": "acc-history2-020",
+  "concept": "history.contemporary.acc_clemenceau",
+  "label": "Le Tigre",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel président du Conseil était surnommé « le Tigre » pendant la Première Guerre mondiale ?",
+  "options": [
+   "Georges Clemenceau*",
+   "Raymond Poincaré",
+   "Jean Jaurès",
+   "Aristide Briand"
+  ],
+  "explanation": "On l'appelait aussi « le Père la Victoire »."
+ },
+ {
+  "key": "acc-history2-021",
+  "concept": "history.contemporary.acc_simone_veil",
+  "label": "Simone Veil",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Simone Veil a fait voter en 1975 une loi célèbre. Laquelle ?",
+  "options": [
+   "La loi autorisant l'IVG*",
+   "La loi sur le vote des femmes",
+   "L'abolition de la peine de mort",
+   "Le mariage pour tous"
+  ],
+  "explanation": "Rescapée d'Auschwitz, elle a aussi présidé le Parlement européen."
+ },
+ {
+  "key": "acc-history2-022",
+  "concept": "history.contemporary.acc_spoutnik",
+  "label": "Spoutnik",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que Spoutnik, lancé en 1957 ?",
+  "options": [
+   "Le premier satellite artificiel*",
+   "La première fusée habitée",
+   "Le premier robot sur la Lune",
+   "La première station spatiale"
+  ],
+  "explanation": "Un succès soviétique qui lance la course à l'espace."
+ },
+ {
+  "key": "acc-history2-023",
+  "concept": "history.contemporary.acc_mitterrand_1981",
+  "label": "Mitterrand",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui est élu président de la République en 1981 ?",
+  "options": [
+   "François Mitterrand*",
+   "Jacques Chirac",
+   "Valéry Giscard d'Estaing",
+   "Georges Pompidou"
+  ],
+  "explanation": "Le premier président de gauche de la Ve République."
+ },
+ {
+  "key": "acc-history2-024",
+  "concept": "history.contemporary.acc_vote_femmes_1944",
+  "label": "Vote des femmes",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Les femmes françaises ont obtenu le droit de vote après la Seconde Guerre mondiale.",
+  "answer": false,
+  "explanation": "L'ordonnance date d'avril 1944, et elles votent pour la première fois en 1945, avant la fin de la guerre en Europe."
+ },
+ {
+  "key": "acc-history2-025",
+  "concept": "history.contemporary.acc_gandhi",
+  "label": "Gandhi",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pour l'indépendance de quel pays Gandhi s'est-il battu ?",
+  "options": [
+   "L'Inde*",
+   "Le Pakistan",
+   "L'Afrique du Sud",
+   "Le Népal"
+  ],
+  "explanation": "Par la non-violence ; l'Inde devient indépendante en 1947."
+ }
+]

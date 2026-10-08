@@ -1,0 +1,287 @@
+[
+ {
+  "key": "acc-science2-001",
+  "concept": "science.physics.acc_vetement_noir",
+  "label": "Vêtement noir au soleil",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Au soleil, un t-shirt noir chauffe plus qu'un t-shirt blanc.",
+  "answer": true,
+  "explanation": "Le noir absorbe la lumière, le blanc la renvoie."
+ },
+ {
+  "key": "acc-science2-002",
+  "concept": "science.physics.acc_son_vide",
+  "label": "Le son dans l'espace",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Dans l'espace, une explosion ne fait aucun bruit.",
+  "answer": true,
+  "explanation": "Le son a besoin d'air (ou d'une matière) pour voyager ; dans le vide, il ne se propage pas."
+ },
+ {
+  "key": "acc-science2-003",
+  "concept": "science.physics.acc_eau_bout_100",
+  "label": "Ébullition de l'eau",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "À quelle température (en °C) l'eau bout-elle au niveau de la mer ?",
+  "answer": 100,
+  "explanation": "Et elle bout à plus basse température en altitude."
+ },
+ {
+  "key": "acc-science2-004",
+  "concept": "science.physics.acc_ombre_midi",
+  "label": "L'ombre à midi",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "À quel moment de la journée notre ombre est-elle la plus courte ?",
+  "options": [
+   "Vers midi*",
+   "Le matin",
+   "Le soir",
+   "Elle ne change pas"
+  ],
+  "explanation": "Le Soleil est alors au plus haut dans le ciel."
+ },
+ {
+  "key": "acc-science2-005",
+  "concept": "science.chemistry.acc_pomme_brunit",
+  "label": "La pomme qui brunit",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi une pomme coupée devient-elle brune ?",
+  "options": [
+   "Elle réagit avec l'oxygène de l'air*",
+   "Elle pourrit tout de suite",
+   "Elle sèche",
+   "À cause de la lumière"
+  ],
+  "explanation": "Un peu de citron ralentit cette oxydation."
+ },
+ {
+  "key": "acc-science2-006",
+  "concept": "science.chemistry.acc_rouille",
+  "label": "La rouille",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui fait rouiller le fer ?",
+  "options": [
+   "L'eau et l'oxygène*",
+   "Le froid",
+   "Le soleil",
+   "Le sable"
+  ],
+  "explanation": "La rouille est un oxyde de fer."
+ },
+ {
+  "key": "acc-science2-007",
+  "concept": "science.chemistry.acc_co2_bulles",
+  "label": "Les bulles du soda",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel gaz fait les bulles d'un soda ?",
+  "options": [
+   "Le dioxyde de carbone*",
+   "L'oxygène",
+   "L'azote",
+   "L'hélium"
+  ],
+  "explanation": "Il est dissous sous pression dans la bouteille."
+ },
+ {
+  "key": "acc-science2-008",
+  "concept": "science.chemistry.acc_or_rouille",
+  "label": "L'or ne rouille pas",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "L'or ne rouille pas et ne s'abîme presque pas avec le temps.",
+  "answer": true,
+  "explanation": "C'est pour cela qu'on retrouve des bijoux en or intacts après des milliers d'années."
+ },
+ {
+  "key": "acc-science2-009",
+  "concept": "science.biology.acc_pomme_trognon",
+  "label": "Les pépins",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Les pépins de pomme contiennent un composé qui peut libérer un poison, le cyanure.",
+  "answer": true,
+  "explanation": "En très petite quantité : avaler quelques pépins n'est pas dangereux."
+ },
+ {
+  "key": "acc-science2-010",
+  "concept": "science.biology.acc_levure_pain",
+  "label": "Le pain qui gonfle",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qui fait gonfler la pâte à pain ?",
+  "options": [
+   "La levure, un champignon microscopique*",
+   "Le sel",
+   "Le four",
+   "L'eau chaude"
+  ],
+  "explanation": "En mangeant les sucres, elle produit du gaz qui fait lever la pâte."
+ },
+ {
+  "key": "acc-science2-011",
+  "concept": "science.biology.acc_antibiotique_virus",
+  "label": "Antibiotiques et virus",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Les antibiotiques soignent la grippe et le rhume.",
+  "answer": false,
+  "explanation": "Ils agissent contre les bactéries, pas contre les virus. « Les antibiotiques, c'est pas automatique ! »"
+ },
+ {
+  "key": "acc-science2-012",
+  "concept": "science.biology.acc_vaccin",
+  "label": "Le vaccin",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert un vaccin ?",
+  "options": [
+   "À apprendre au corps à se défendre contre une maladie*",
+   "À soigner une maladie déjà là",
+   "À tuer tous les microbes",
+   "À donner de l'énergie"
+  ],
+  "explanation": "Il entraîne le système immunitaire à reconnaître le microbe."
+ },
+ {
+  "key": "acc-science2-013",
+  "concept": "science.biology.acc_plantes_oxygene",
+  "label": "Les plantes et l'oxygène",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que rejettent les plantes vertes à la lumière ?",
+  "options": [
+   "De l'oxygène*",
+   "Du gaz carbonique seulement",
+   "De l'azote",
+   "De la fumée"
+  ],
+  "explanation": "C'est la photosynthèse : elles absorbent du CO₂ et rejettent de l'oxygène."
+ },
+ {
+  "key": "acc-science2-014",
+  "concept": "science.human_body.acc_coeur_pompe",
+  "label": "Le rôle du cœur",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "À quoi sert le cœur ?",
+  "options": [
+   "À pomper le sang dans tout le corps*",
+   "À respirer",
+   "À digérer",
+   "À réfléchir"
+  ],
+  "explanation": "Il bat environ 100 000 fois par jour."
+ },
+ {
+  "key": "acc-science2-015",
+  "concept": "science.human_body.acc_eternuer_yeux",
+  "label": "Éternuer les yeux ouverts",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Il est presque impossible d'éternuer en gardant les yeux ouverts.",
+  "answer": true,
+  "explanation": "C'est un réflexe : les paupières se ferment toutes seules."
+ },
+ {
+  "key": "acc-science2-016",
+  "concept": "science.human_body.acc_ongles_poussent",
+  "label": "Ongles des mains",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui pousse le plus vite ?",
+  "options": [
+   "Les ongles des mains*",
+   "Les ongles des pieds",
+   "Ils poussent pareil",
+   "Ils ne poussent plus chez l'adulte"
+  ],
+  "explanation": "Environ 3 mm par mois pour les mains, deux à trois fois moins pour les pieds."
+ },
+ {
+  "key": "acc-science2-017",
+  "concept": "science.human_body.acc_bailler_contagieux",
+  "label": "Le bâillement",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Voir quelqu'un bâiller peut nous donner envie de bâiller.",
+  "answer": true,
+  "explanation": "Le bâillement est « contagieux », même en le lisant !"
+ },
+ {
+  "key": "acc-science2-018",
+  "concept": "science.human_body.acc_dents_lait",
+  "label": "Dents de lait",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Vers quel âge un enfant commence-t-il à perdre ses dents de lait ?",
+  "options": [
+   "Vers 6 ans*",
+   "Vers 2 ans",
+   "Vers 12 ans",
+   "Vers 15 ans"
+  ],
+  "explanation": "Elles laissent la place aux dents définitives."
+ },
+ {
+  "key": "acc-science2-019",
+  "concept": "science.human_body.acc_sang_bleu",
+  "label": "Le sang bleu",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Le sang est bleu dans nos veines, et devient rouge au contact de l'air.",
+  "answer": false,
+  "explanation": "Il est toujours rouge, plus sombre dans les veines ; les veines paraissent bleues à travers la peau."
+ },
+ {
+  "key": "acc-science2-020",
+  "concept": "science.human_body.acc_sens_gout",
+  "label": "Les saveurs",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Laquelle de ces saveurs fait partie des cinq saveurs de base ?",
+  "options": [
+   "L'umami*",
+   "Le piquant",
+   "Le gras",
+   "Le métallique"
+  ],
+  "explanation": "Sucré, salé, acide, amer et umami (le goût du bouillon)."
+ },
+ {
+  "key": "acc-science2-021",
+  "concept": "science.human_body.acc_piment_brule",
+  "label": "Le piment qui brûle",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que vaut-il mieux boire pour calmer la brûlure d'un piment ?",
+  "options": [
+   "Du lait*",
+   "De l'eau",
+   "Du soda",
+   "Du café"
+  ],
+  "explanation": "Le lait contient des graisses qui dissolvent la capsaïcine ; l'eau l'étale."
+ },
+ {
+  "key": "acc-science2-022",
+  "concept": "science.space.acc_etoile_berger",
+  "label": "L'étoile du Berger",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que l'« étoile du Berger », très brillante le soir ?",
+  "options": [
+   "La planète Vénus*",
+   "L'étoile Polaire",
+   "Sirius",
+   "Mars"
+  ],
+  "explanation": "Ce n'est pas une étoile mais une planète."
+ }
+]
