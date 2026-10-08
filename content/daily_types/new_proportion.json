@@ -1,0 +1,554 @@
+[
+ {
+  "key": "dt-prop-001",
+  "concept": "nature.animals.dt_girafe",
+  "label": "Taille de la girafe",
+  "type": "proportion",
+  "difficulty": 35,
+  "prompt": "Étire la girafe à sa vraie taille, à côté d'un adulte.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Girafe",
+   "icon": "giraffe"
+  },
+  "answer": 5.5,
+  "tolerance": 0.15,
+  "max": 8.1,
+  "explanation": "Une girafe adulte mesure environ 5,5 m, trois fois un humain."
+ },
+ {
+  "key": "dt-prop-002",
+  "concept": "nature.animals.dt_elephant",
+  "label": "Taille de l'éléphant",
+  "type": "proportion",
+  "difficulty": 40,
+  "prompt": "Étire l'éléphant d'Afrique à sa vraie hauteur (au garrot), à côté d'un adulte.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Éléphant d'Afrique",
+   "icon": "elephant"
+  },
+  "answer": 3.3,
+  "tolerance": 0.15,
+  "max": 5.7,
+  "explanation": "Environ 3,3 m au garrot pour un mâle : le plus grand animal terrestre."
+ },
+ {
+  "key": "dt-prop-003",
+  "concept": "nature.animals.dt_autruche",
+  "label": "Taille de l'autruche",
+  "type": "proportion",
+  "difficulty": 40,
+  "prompt": "Étire l'autruche à sa vraie taille, à côté d'un adulte.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Autruche",
+   "icon": "ostrich"
+  },
+  "answer": 2.5,
+  "tolerance": 0.15,
+  "max": 3.8,
+  "explanation": "Jusqu'à 2,5 m de haut : le plus grand oiseau vivant."
+ },
+ {
+  "key": "dt-prop-004",
+  "concept": "nature.marine.dt_baleine_bleue",
+  "label": "Longueur de la baleine bleue",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire la baleine bleue à sa vraie longueur, à côté d'un bus.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Bus",
+   "size": 12,
+   "icon": "bus"
+  },
+  "item": {
+   "label": "Baleine bleue",
+   "icon": "whale"
+  },
+  "answer": 25,
+  "tolerance": 0.2,
+  "max": 43,
+  "explanation": "Environ 25 m en moyenne, jusqu'à 30 m : le plus grand animal ayant jamais vécu."
+ },
+ {
+  "key": "dt-prop-005",
+  "concept": "nature.marine.dt_requin_blanc",
+  "label": "Longueur du grand requin blanc",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire le grand requin blanc à sa vraie longueur, à côté d'un adulte.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Grand requin blanc",
+   "icon": "shark"
+  },
+  "answer": 5,
+  "tolerance": 0.2,
+  "max": 7.2,
+  "explanation": "Environ 5 m pour un grand adulte, parfois 6."
+ },
+ {
+  "key": "dt-prop-006",
+  "concept": "nature.animals.dt_trex",
+  "label": "Longueur du T. rex",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire le tyrannosaure à sa vraie longueur, à côté d'une voiture.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Voiture",
+   "size": 4.5,
+   "icon": "car"
+  },
+  "item": {
+   "label": "Tyrannosaure",
+   "icon": "dinosaur"
+  },
+  "answer": 12,
+  "tolerance": 0.15,
+  "max": 18,
+  "explanation": "Environ 12 m de la tête à la queue."
+ },
+ {
+  "key": "dt-prop-007",
+  "concept": "nature.plants.dt_sequoia",
+  "label": "Le plus grand arbre",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire le plus grand arbre du monde (un séquoia de Californie) à sa vraie hauteur, à côté de l'Arc de triomphe.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Arc de triomphe",
+   "size": 50,
+   "icon": "arch"
+  },
+  "item": {
+   "label": "Séquoia « Hyperion »",
+   "icon": "tree"
+  },
+  "answer": 116,
+  "tolerance": 0.15,
+  "max": 190,
+  "explanation": "Environ 116 m : plus de deux fois l'Arc de triomphe."
+ },
+ {
+  "key": "dt-prop-008",
+  "concept": "geography.monuments.dt_eiffel_arc",
+  "label": "Tour Eiffel et Arc de triomphe",
+  "type": "proportion",
+  "difficulty": 30,
+  "prompt": "Étire la tour Eiffel à sa vraie hauteur, à côté de l'Arc de triomphe.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Arc de triomphe",
+   "size": 50,
+   "icon": "arch"
+  },
+  "item": {
+   "label": "Tour Eiffel",
+   "icon": "tower"
+  },
+  "answer": 330,
+  "tolerance": 0.15,
+  "max": 520,
+  "explanation": "330 m, contre 50 m pour l'Arc : plus de six fois plus haute."
+ },
+ {
+  "key": "dt-prop-009",
+  "concept": "geography.monuments.dt_liberte_arc",
+  "label": "Statue de la Liberté",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire la statue de la Liberté (avec son socle) à sa vraie hauteur, à côté de l'Arc de triomphe.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Arc de triomphe",
+   "size": 50,
+   "icon": "arch"
+  },
+  "item": {
+   "label": "Statue de la Liberté",
+   "icon": "statue"
+  },
+  "answer": 93,
+  "tolerance": 0.15,
+  "max": 150,
+  "explanation": "93 m avec le socle, presque deux Arcs de triomphe."
+ },
+ {
+  "key": "dt-prop-010",
+  "concept": "geography.monuments.dt_burj_khalifa",
+  "label": "Burj Khalifa",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire la Burj Khalifa, plus haute tour du monde, à sa vraie hauteur, à côté de la tour Eiffel.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Tour Eiffel",
+   "size": 330,
+   "icon": "tower"
+  },
+  "item": {
+   "label": "Burj Khalifa",
+   "icon": "skyscraper"
+  },
+  "answer": 828,
+  "tolerance": 0.15,
+  "max": 1300,
+  "explanation": "828 m, deux fois et demie la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-011",
+  "concept": "geography.monuments.dt_kheops_eiffel",
+  "label": "Pyramide de Khéops",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire la pyramide de Khéops à sa vraie hauteur, à côté de la tour Eiffel.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Tour Eiffel",
+   "size": 330,
+   "icon": "tower"
+  },
+  "item": {
+   "label": "Pyramide de Khéops",
+   "icon": "pyramid"
+  },
+  "answer": 138,
+  "tolerance": 0.15,
+  "max": 500,
+  "explanation": "Environ 138 m, un peu moins de la moitié de la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-012",
+  "concept": "geography.relief.dt_everest_mont_blanc",
+  "label": "Everest et mont Blanc",
+  "type": "proportion",
+  "difficulty": 40,
+  "prompt": "Étire l'Everest à sa vraie hauteur, à côté du mont Blanc.",
+  "dimension": "altitude",
+  "unit": "m",
+  "reference": {
+   "label": "Mont Blanc",
+   "size": 4806,
+   "icon": "mountain"
+  },
+  "item": {
+   "label": "Everest",
+   "icon": "mountain"
+  },
+  "answer": 8849,
+  "tolerance": 0.15,
+  "max": 14000,
+  "explanation": "8 849 m, contre environ 4 806 m pour le mont Blanc : presque le double."
+ },
+ {
+  "key": "dt-prop-013",
+  "concept": "geography.relief.dt_salto_angel",
+  "label": "Salto Angel",
+  "type": "proportion",
+  "difficulty": 65,
+  "prompt": "Étire le Salto Angel, plus haute chute d'eau du monde, à sa vraie hauteur, à côté de la tour Eiffel.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Tour Eiffel",
+   "size": 330,
+   "icon": "tower"
+  },
+  "item": {
+   "label": "Salto Angel",
+   "icon": "waterfall"
+  },
+  "answer": 979,
+  "tolerance": 0.15,
+  "max": 1700,
+  "explanation": "979 m de chute, au Venezuela : trois tours Eiffel."
+ },
+ {
+  "key": "dt-prop-014",
+  "concept": "geography.relief.dt_grand_canyon",
+  "label": "Profondeur du Grand Canyon",
+  "type": "proportion",
+  "difficulty": 65,
+  "prompt": "Étire le Grand Canyon à sa vraie profondeur, à côté de la tour Eiffel.",
+  "dimension": "profondeur",
+  "unit": "m",
+  "reference": {
+   "label": "Tour Eiffel",
+   "size": 330,
+   "icon": "tower"
+  },
+  "item": {
+   "label": "Grand Canyon",
+   "icon": "canyon"
+  },
+  "answer": 1800,
+  "tolerance": 0.15,
+  "max": 3200,
+  "explanation": "Jusqu'à environ 1 800 m de profondeur : plus de cinq tours Eiffel empilées."
+ },
+ {
+  "key": "dt-prop-015",
+  "concept": "science.space.dt_lune_terre",
+  "label": "La Lune et la Terre",
+  "type": "proportion",
+  "difficulty": 50,
+  "prompt": "Étire la Lune à son vrai diamètre, à côté de la Terre.",
+  "dimension": "diamètre",
+  "unit": "km",
+  "reference": {
+   "label": "Terre",
+   "size": 12742,
+   "icon": "earth"
+  },
+  "item": {
+   "label": "Lune",
+   "icon": "moon"
+  },
+  "answer": 3474,
+  "tolerance": 0.15,
+  "max": 18000,
+  "explanation": "3 474 km, un peu plus du quart du diamètre de la Terre."
+ },
+ {
+  "key": "dt-prop-016",
+  "concept": "science.space.dt_mars_terre",
+  "label": "Mars et la Terre",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire Mars à son vrai diamètre, à côté de la Terre.",
+  "dimension": "diamètre",
+  "unit": "km",
+  "reference": {
+   "label": "Terre",
+   "size": 12742,
+   "icon": "earth"
+  },
+  "item": {
+   "label": "Mars",
+   "icon": "planet"
+  },
+  "answer": 6779,
+  "tolerance": 0.15,
+  "max": 21000,
+  "explanation": "6 779 km, à peu près la moitié de la Terre."
+ },
+ {
+  "key": "dt-prop-017",
+  "concept": "science.space.dt_jupiter_terre",
+  "label": "Jupiter et la Terre",
+  "type": "proportion",
+  "difficulty": 60,
+  "prompt": "Étire Jupiter à son vrai diamètre, à côté de la Terre.",
+  "dimension": "diamètre",
+  "unit": "km",
+  "reference": {
+   "label": "Terre",
+   "size": 12742,
+   "icon": "earth"
+  },
+  "item": {
+   "label": "Jupiter",
+   "icon": "planet"
+  },
+  "answer": 139820,
+  "tolerance": 0.15,
+  "max": 250000,
+  "explanation": "Environ 140 000 km : onze fois la Terre."
+ },
+ {
+  "key": "dt-prop-018",
+  "concept": "tech.inventions.dt_saturn_v",
+  "label": "Fusée Saturn V",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire la fusée Saturn V, qui a emmené les astronautes vers la Lune, à côté de l'Arc de triomphe.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Arc de triomphe",
+   "size": 50,
+   "icon": "arch"
+  },
+  "item": {
+   "label": "Saturn V",
+   "icon": "rocket"
+  },
+  "answer": 110,
+  "tolerance": 0.15,
+  "max": 160,
+  "explanation": "110 m : plus de deux Arcs de triomphe."
+ },
+ {
+  "key": "dt-prop-019",
+  "concept": "tech.inventions.dt_titanic_eiffel",
+  "label": "Longueur du Titanic",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire le Titanic à sa vraie longueur, à côté de la tour Eiffel couchée.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Tour Eiffel",
+   "size": 330,
+   "icon": "tower"
+  },
+  "item": {
+   "label": "Titanic",
+   "icon": "ship"
+  },
+  "answer": 269,
+  "tolerance": 0.15,
+  "max": 500,
+  "explanation": "269 m, un peu moins que la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-020",
+  "concept": "tech.inventions.dt_a380",
+  "label": "Envergure de l'A380",
+  "type": "proportion",
+  "difficulty": 55,
+  "prompt": "Étire les ailes de l'Airbus A380 à leur vraie envergure, à côté d'un terrain de basket.",
+  "dimension": "envergure",
+  "unit": "m",
+  "reference": {
+   "label": "Terrain de basket",
+   "size": 28,
+   "icon": "court"
+  },
+  "item": {
+   "label": "Airbus A380",
+   "icon": "plane"
+  },
+  "answer": 80,
+  "tolerance": 0.15,
+  "max": 130,
+  "explanation": "Environ 80 m d'envergure, près de trois terrains de basket."
+ },
+ {
+  "key": "dt-prop-021",
+  "concept": "sport.rules.dt_but_foot",
+  "label": "Largeur d'un but",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire le but de football à sa vraie largeur, à côté d'un adulte couché.",
+  "dimension": "largeur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "But de football",
+   "icon": "goal"
+  },
+  "answer": 7.32,
+  "tolerance": 0.15,
+  "max": 10,
+  "explanation": "7,32 m de large (8 yards) et 2,44 m de haut."
+ },
+ {
+  "key": "dt-prop-022",
+  "concept": "sport.rules.dt_terrain_bassin",
+  "label": "Terrain de football",
+  "type": "proportion",
+  "difficulty": 40,
+  "prompt": "Étire le terrain de football à sa vraie longueur, à côté d'un bassin olympique.",
+  "dimension": "longueur",
+  "unit": "m",
+  "reference": {
+   "label": "Bassin olympique",
+   "size": 50,
+   "icon": "pool"
+  },
+  "item": {
+   "label": "Terrain de football",
+   "icon": "field"
+  },
+  "answer": 105,
+  "tolerance": 0.15,
+  "max": 160,
+  "explanation": "Environ 105 m pour un terrain international, deux bassins de 50 m."
+ },
+ {
+  "key": "dt-prop-023",
+  "concept": "sport.rules.dt_panier_basket",
+  "label": "Hauteur du panier",
+  "type": "proportion",
+  "difficulty": 35,
+  "prompt": "Étire le panier de basket à sa vraie hauteur, à côté d'un adulte.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Panier de basket",
+   "icon": "hoop"
+  },
+  "answer": 3.05,
+  "tolerance": 0.1,
+  "max": 5.2,
+  "explanation": "3,05 m : il faut sauter haut pour dunker."
+ },
+ {
+  "key": "dt-prop-024",
+  "concept": "sport.champions.dt_wembanyama",
+  "label": "Victor Wembanyama",
+  "type": "proportion",
+  "difficulty": 45,
+  "prompt": "Étire Victor Wembanyama à sa vraie taille, à côté d'un adulte moyen.",
+  "dimension": "hauteur",
+  "unit": "m",
+  "reference": {
+   "label": "Adulte",
+   "size": 1.75,
+   "icon": "person"
+  },
+  "item": {
+   "label": "Victor Wembanyama",
+   "icon": "person"
+  },
+  "answer": 2.22,
+  "tolerance": 0.08,
+  "max": 4,
+  "explanation": "Environ 2,22 m : l'un des plus grands joueurs de la NBA."
+ }
+]

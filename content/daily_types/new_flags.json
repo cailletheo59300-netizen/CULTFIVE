@@ -1,0 +1,552 @@
+[
+ {
+  "key": "dt-flag-001",
+  "concept": "geography.flags.dt_twin_tchad",
+  "label": "Tchad ou Roumanie",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 70,
+  "prompt": "Lequel est le drapeau du Tchad ?",
+  "options": [
+   {
+    "flag": "td",
+    "correct": true
+   },
+   {
+    "flag": "ro"
+   },
+   {
+    "flag": "md"
+   },
+   {
+    "flag": "ad"
+   }
+  ],
+  "explanation": "Bleu, jaune, rouge pour les deux ; le bleu du Tchad est un peu plus foncé. La Moldavie et l'Andorre ajoutent des armoiries."
+ },
+ {
+  "key": "dt-flag-002",
+  "concept": "geography.flags.dt_twin_indonesie",
+  "label": "Indonésie ou Monaco",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 65,
+  "prompt": "Lequel est le drapeau de l'Indonésie ?",
+  "options": [
+   {
+    "flag": "id",
+    "correct": true
+   },
+   {
+    "flag": "mc"
+   },
+   {
+    "flag": "pl"
+   },
+   {
+    "flag": "sg"
+   }
+  ],
+  "explanation": "Rouge en haut, blanc en bas pour les deux : celui de l'Indonésie est plus allongé. La Pologne a le blanc en haut."
+ },
+ {
+  "key": "dt-flag-003",
+  "concept": "geography.flags.dt_twin_irlande",
+  "label": "Irlande ou Côte d'Ivoire",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 45,
+  "prompt": "Lequel est le drapeau de l'Irlande ?",
+  "options": [
+   {
+    "flag": "ie",
+    "correct": true
+   },
+   {
+    "flag": "ci"
+   },
+   {
+    "flag": "it"
+   },
+   {
+    "flag": "in"
+   }
+  ],
+  "explanation": "Vert, blanc, orange : le vert est côté mât pour l'Irlande, l'orange pour la Côte d'Ivoire."
+ },
+ {
+  "key": "dt-flag-004",
+  "concept": "geography.flags.dt_twin_cote_ivoire",
+  "label": "Côte d'Ivoire ou Irlande",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 50,
+  "prompt": "Lequel est le drapeau de la Côte d'Ivoire ?",
+  "options": [
+   {
+    "flag": "ci",
+    "correct": true
+   },
+   {
+    "flag": "ie"
+   },
+   {
+    "flag": "it"
+   },
+   {
+    "flag": "ne"
+   }
+  ],
+  "explanation": "Orange, blanc, vert : l'orange côté mât. L'Irlande, c'est l'inverse."
+ },
+ {
+  "key": "dt-flag-005",
+  "concept": "geography.flags.dt_twin_pays_bas",
+  "label": "Pays-Bas ou Luxembourg",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 55,
+  "prompt": "Lequel est le drapeau des Pays-Bas ?",
+  "options": [
+   {
+    "flag": "nl",
+    "correct": true
+   },
+   {
+    "flag": "lu"
+   },
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "ru"
+   }
+  ],
+  "explanation": "Rouge, blanc, bleu en bandes horizontales ; le Luxembourg a un bleu plus clair."
+ },
+ {
+  "key": "dt-flag-006",
+  "concept": "geography.flags.dt_twin_luxembourg",
+  "label": "Luxembourg ou Pays-Bas",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 60,
+  "prompt": "Lequel est le drapeau du Luxembourg ?",
+  "options": [
+   {
+    "flag": "lu",
+    "correct": true
+   },
+   {
+    "flag": "nl"
+   },
+   {
+    "flag": "hr"
+   },
+   {
+    "flag": "py"
+   }
+  ],
+  "explanation": "Comme les Pays-Bas, mais avec un bleu ciel et un format plus allongé."
+ },
+ {
+  "key": "dt-flag-007",
+  "concept": "geography.flags.dt_twin_australie",
+  "label": "Australie ou Nouvelle-Zélande",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 50,
+  "prompt": "Lequel est le drapeau de l'Australie ?",
+  "options": [
+   {
+    "flag": "au",
+    "correct": true
+   },
+   {
+    "flag": "nz"
+   },
+   {
+    "flag": "tv"
+   },
+   {
+    "flag": "fj"
+   }
+  ],
+  "explanation": "L'Australie a des étoiles blanches, dont une grande à sept branches ; la Nouvelle-Zélande, quatre étoiles rouges."
+ },
+ {
+  "key": "dt-flag-008",
+  "concept": "geography.flags.dt_twin_nouvelle_zelande",
+  "label": "Nouvelle-Zélande ou Australie",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 50,
+  "prompt": "Lequel est le drapeau de la Nouvelle-Zélande ?",
+  "options": [
+   {
+    "flag": "nz",
+    "correct": true
+   },
+   {
+    "flag": "au"
+   },
+   {
+    "flag": "tv"
+   },
+   {
+    "flag": "ck"
+   }
+  ],
+  "explanation": "Quatre étoiles rouges bordées de blanc : la Croix du Sud."
+ },
+ {
+  "key": "dt-flag-009",
+  "concept": "geography.flags.dt_twin_norvege",
+  "label": "Norvège ou Islande",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 45,
+  "prompt": "Lequel est le drapeau de la Norvège ?",
+  "options": [
+   {
+    "flag": "no",
+    "correct": true
+   },
+   {
+    "flag": "is"
+   },
+   {
+    "flag": "dk"
+   },
+   {
+    "flag": "fi"
+   }
+  ],
+  "explanation": "Fond rouge et croix bleue bordée de blanc ; l'Islande fait l'inverse (fond bleu, croix rouge)."
+ },
+ {
+  "key": "dt-flag-010",
+  "concept": "geography.flags.dt_twin_islande",
+  "label": "Islande ou Norvège",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 50,
+  "prompt": "Lequel est le drapeau de l'Islande ?",
+  "options": [
+   {
+    "flag": "is",
+    "correct": true
+   },
+   {
+    "flag": "no"
+   },
+   {
+    "flag": "fo"
+   },
+   {
+    "flag": "se"
+   }
+  ],
+  "explanation": "Fond bleu, croix rouge bordée de blanc."
+ },
+ {
+  "key": "dt-flag-011",
+  "concept": "geography.flags.dt_twin_senegal",
+  "label": "Sénégal ou Mali",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 50,
+  "prompt": "Lequel est le drapeau du Sénégal ?",
+  "options": [
+   {
+    "flag": "sn",
+    "correct": true
+   },
+   {
+    "flag": "ml"
+   },
+   {
+    "flag": "gn"
+   },
+   {
+    "flag": "cm"
+   }
+  ],
+  "explanation": "Vert, jaune, rouge avec une étoile verte au centre ; le Mali n'a pas d'étoile, le Cameroun a une étoile jaune."
+ },
+ {
+  "key": "dt-flag-012",
+  "concept": "geography.flags.dt_twin_mali",
+  "label": "Mali ou Guinée",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 55,
+  "prompt": "Lequel est le drapeau du Mali ?",
+  "options": [
+   {
+    "flag": "ml",
+    "correct": true
+   },
+   {
+    "flag": "gn"
+   },
+   {
+    "flag": "sn"
+   },
+   {
+    "flag": "cm"
+   }
+  ],
+  "explanation": "Vert, jaune, rouge sans rien d'autre ; la Guinée a les mêmes couleurs dans l'ordre inverse."
+ },
+ {
+  "key": "dt-flag-013",
+  "concept": "geography.flags.dt_twin_colombie",
+  "label": "Colombie ou Équateur",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 55,
+  "prompt": "Lequel est le drapeau de la Colombie ?",
+  "options": [
+   {
+    "flag": "co",
+    "correct": true
+   },
+   {
+    "flag": "ec"
+   },
+   {
+    "flag": "ve"
+   },
+   {
+    "flag": "ro"
+   }
+  ],
+  "explanation": "Jaune (moitié), bleu, rouge, sans armoiries ; l'Équateur ajoute un écusson, le Venezuela des étoiles."
+ },
+ {
+  "key": "dt-flag-014",
+  "concept": "geography.flags.dt_twin_slovenie",
+  "label": "Slovénie ou Slovaquie",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 70,
+  "prompt": "Lequel est le drapeau de la Slovénie ?",
+  "options": [
+   {
+    "flag": "si",
+    "correct": true
+   },
+   {
+    "flag": "sk"
+   },
+   {
+    "flag": "ru"
+   },
+   {
+    "flag": "rs"
+   }
+  ],
+  "explanation": "Blanc, bleu, rouge avec un petit écusson montrant le mont Triglav ; la Slovaquie a un écusson plus grand avec une croix."
+ },
+ {
+  "key": "dt-flag-015",
+  "concept": "geography.flags.dt_twin_russie",
+  "label": "Russie",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 30,
+  "prompt": "Lequel est le drapeau de la Russie ?",
+  "options": [
+   {
+    "flag": "ru",
+    "correct": true
+   },
+   {
+    "flag": "si"
+   },
+   {
+    "flag": "sk"
+   },
+   {
+    "flag": "nl"
+   }
+  ],
+  "explanation": "Blanc, bleu, rouge, sans aucun écusson."
+ },
+ {
+  "key": "dt-flag-016",
+  "concept": "geography.flags.dt_twin_italie",
+  "label": "Italie ou Mexique",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 15,
+  "prompt": "Lequel est le drapeau de l'Italie ?",
+  "options": [
+   {
+    "flag": "it",
+    "correct": true
+   },
+   {
+    "flag": "mx"
+   },
+   {
+    "flag": "ie"
+   },
+   {
+    "flag": "hu"
+   }
+  ],
+  "explanation": "Vert, blanc, rouge, sans écusson ; le Mexique ajoute un aigle."
+ },
+ {
+  "key": "dt-flag-017",
+  "concept": "geography.flags.dt_twin_belgique",
+  "label": "Belgique ou Allemagne",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 20,
+  "prompt": "Lequel est le drapeau de la Belgique ?",
+  "options": [
+   {
+    "flag": "be",
+    "correct": true
+   },
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "ro"
+   },
+   {
+    "flag": "ml"
+   }
+  ],
+  "explanation": "Noir, jaune, rouge en bandes verticales ; l'Allemagne les met à l'horizontale."
+ },
+ {
+  "key": "dt-flag-018",
+  "concept": "geography.flags.dt_twin_autriche",
+  "label": "Autriche ou Lettonie",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 55,
+  "prompt": "Lequel est le drapeau de l'Autriche ?",
+  "options": [
+   {
+    "flag": "at",
+    "correct": true
+   },
+   {
+    "flag": "lv"
+   },
+   {
+    "flag": "pe"
+   },
+   {
+    "flag": "ca"
+   }
+  ],
+  "explanation": "Rouge, blanc, rouge à parts égales ; la Lettonie a un rouge plus sombre et une bande blanche plus fine."
+ },
+ {
+  "key": "dt-flag-019",
+  "concept": "geography.flags.dt_twin_finlande",
+  "label": "Finlande ou Suède",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 25,
+  "prompt": "Lequel est le drapeau de la Finlande ?",
+  "options": [
+   {
+    "flag": "fi",
+    "correct": true
+   },
+   {
+    "flag": "se"
+   },
+   {
+    "flag": "is"
+   },
+   {
+    "flag": "gr"
+   }
+  ],
+  "explanation": "Croix bleue sur fond blanc."
+ },
+ {
+  "key": "dt-flag-020",
+  "concept": "geography.flags.dt_twin_chili",
+  "label": "Chili ou Cuba",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 50,
+  "prompt": "Lequel est le drapeau du Chili ?",
+  "options": [
+   {
+    "flag": "cl",
+    "correct": true
+   },
+   {
+    "flag": "cu"
+   },
+   {
+    "flag": "pr"
+   },
+   {
+    "flag": "cz"
+   }
+  ],
+  "explanation": "Une étoile blanche sur un carré bleu, au-dessus d'une bande rouge ; Cuba et Porto Rico ont un triangle."
+ },
+ {
+  "key": "dt-flag-021",
+  "concept": "geography.flags.dt_twin_japon",
+  "label": "Japon ou Bangladesh",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 15,
+  "prompt": "Lequel est le drapeau du Japon ?",
+  "options": [
+   {
+    "flag": "jp",
+    "correct": true
+   },
+   {
+    "flag": "bd"
+   },
+   {
+    "flag": "pw"
+   },
+   {
+    "flag": "kr"
+   }
+  ],
+  "explanation": "Un disque rouge sur fond blanc : le « Soleil levant ». Le Bangladesh a un disque rouge sur fond vert."
+ },
+ {
+  "key": "dt-flag-022",
+  "concept": "geography.flags.dt_twin_suisse",
+  "label": "Suisse ou Danemark",
+  "type": "image_choice",
+  "kind": "flag",
+  "difficulty": 15,
+  "prompt": "Lequel est le drapeau de la Suisse ?",
+  "options": [
+   {
+    "flag": "ch",
+    "correct": true
+   },
+   {
+    "flag": "dk"
+   },
+   {
+    "flag": "to"
+   },
+   {
+    "flag": "ge"
+   }
+  ],
+  "explanation": "Une croix blanche sur un drapeau carré rouge."
+ }
+]

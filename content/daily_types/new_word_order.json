@@ -1,0 +1,679 @@
+[
+ {
+  "key": "dt-word-001",
+  "concept": "french.expressions.dt_petit_a_petit",
+  "label": "Petit à petit",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Petit à petit, l'oiseau fait son nid.",
+  "words": [
+   "Petit",
+   "à",
+   "petit",
+   "l'oiseau",
+   "fait",
+   "son",
+   "nid"
+  ],
+  "explanation": "À force de patience, on finit par arriver à ses fins."
+ },
+ {
+  "key": "dt-word-002",
+  "concept": "french.expressions.dt_chasse",
+  "label": "Qui va à la chasse",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Qui va à la chasse perd sa place.",
+  "words": [
+   "Qui",
+   "va",
+   "à",
+   "la",
+   "chasse",
+   "perd",
+   "sa",
+   "place"
+  ],
+  "explanation": "Si l'on quitte sa place, on risque de la perdre."
+ },
+ {
+  "key": "dt-word-003",
+  "concept": "french.expressions.dt_peau_ours",
+  "label": "La peau de l'ours",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Il ne faut pas vendre la peau de l'ours avant de l'avoir tué.",
+  "words": [
+   "Il",
+   "ne",
+   "faut",
+   "pas",
+   "vendre",
+   "la",
+   "peau",
+   "de",
+   "l'ours",
+   "avant",
+   "de",
+   "l'avoir",
+   "tué"
+  ],
+  "explanation": "Ne pas se réjouir d'un succès avant d'en être sûr."
+ },
+ {
+  "key": "dt-word-004",
+  "concept": "french.expressions.dt_ruisseaux",
+  "label": "Les petits ruisseaux",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Les petits ruisseaux font les grandes rivières.",
+  "words": [
+   "Les",
+   "petits",
+   "ruisseaux",
+   "font",
+   "les",
+   "grandes",
+   "rivières"
+  ],
+  "explanation": "De petites sommes accumulées finissent par faire beaucoup."
+ },
+ {
+  "key": "dt-word-005",
+  "concept": "french.expressions.dt_pierre_roule",
+  "label": "Pierre qui roule",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Pierre qui roule n'amasse pas mousse.",
+  "words": [
+   "Pierre",
+   "qui",
+   "roule",
+   "n'amasse",
+   "pas",
+   "mousse"
+  ],
+  "explanation": "À trop changer de place, on ne s'enrichit pas."
+ },
+ {
+  "key": "dt-word-006",
+  "concept": "french.expressions.dt_habit_moine",
+  "label": "L'habit ne fait pas le moine",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "L'habit ne fait pas le moine.",
+  "words": [
+   "L'habit",
+   "ne",
+   "fait",
+   "pas",
+   "le",
+   "moine"
+  ],
+  "explanation": "Il ne faut pas juger quelqu'un sur son apparence."
+ },
+ {
+  "key": "dt-word-007",
+  "concept": "french.expressions.dt_seme_vent",
+  "label": "Qui sème le vent",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Qui sème le vent récolte la tempête.",
+  "words": [
+   "Qui",
+   "sème",
+   "le",
+   "vent",
+   "récolte",
+   "la",
+   "tempête"
+  ],
+  "explanation": "Celui qui provoque des troubles en subit des pires."
+ },
+ {
+  "key": "dt-word-008",
+  "concept": "french.expressions.dt_point_attendre",
+  "label": "Tout vient à point",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Tout vient à point à qui sait attendre.",
+  "words": [
+   "Tout",
+   "vient",
+   "à",
+   "point",
+   "à",
+   "qui",
+   "sait",
+   "attendre"
+  ],
+  "explanation": "La patience finit par payer."
+ },
+ {
+  "key": "dt-word-009",
+  "concept": "french.expressions.dt_mieux_tard",
+  "label": "Mieux vaut tard",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Mieux vaut tard que jamais.",
+  "words": [
+   "Mieux",
+   "vaut",
+   "tard",
+   "que",
+   "jamais"
+  ],
+  "explanation": "Il vaut mieux faire les choses en retard que ne pas les faire."
+ },
+ {
+  "key": "dt-word-010",
+  "concept": "french.expressions.dt_apres_pluie",
+  "label": "Après la pluie",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Après la pluie, le beau temps.",
+  "words": [
+   "Après",
+   "la",
+   "pluie",
+   "le",
+   "beau",
+   "temps"
+  ],
+  "explanation": "Les moments difficiles finissent par passer."
+ },
+ {
+  "key": "dt-word-011",
+  "concept": "french.expressions.dt_chat_echaude",
+  "label": "Chat échaudé",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Chat échaudé craint l'eau froide.",
+  "words": [
+   "Chat",
+   "échaudé",
+   "craint",
+   "l'eau",
+   "froide"
+  ],
+  "explanation": "Après une mauvaise expérience, on se méfie de tout ce qui y ressemble."
+ },
+ {
+  "key": "dt-word-012",
+  "concept": "french.expressions.dt_battre_fer",
+  "label": "Battre le fer",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Il faut battre le fer pendant qu'il est chaud.",
+  "words": [
+   "Il",
+   "faut",
+   "battre",
+   "le",
+   "fer",
+   "pendant",
+   "qu'il",
+   "est",
+   "chaud"
+  ],
+  "explanation": "Il faut agir au bon moment, sans attendre."
+ },
+ {
+  "key": "dt-word-013",
+  "concept": "french.expressions.dt_souris_dansent",
+  "label": "Quand le chat n'est pas là",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Quand le chat n'est pas là, les souris dansent.",
+  "words": [
+   "Quand",
+   "le",
+   "chat",
+   "n'est",
+   "pas",
+   "là",
+   "les",
+   "souris",
+   "dansent"
+  ],
+  "explanation": "Sans surveillance, chacun en profite."
+ },
+ {
+  "key": "dt-word-014",
+  "concept": "french.expressions.dt_appetit",
+  "label": "L'appétit vient en mangeant",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "L'appétit vient en mangeant.",
+  "words": [
+   "L'appétit",
+   "vient",
+   "en",
+   "mangeant"
+  ],
+  "explanation": "Plus on a, plus on veut."
+ },
+ {
+  "key": "dt-word-015",
+  "concept": "french.expressions.dt_un_tiens",
+  "label": "Un tiens vaut mieux",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Un tiens vaut mieux que deux tu l'auras.",
+  "words": [
+   "Un",
+   "tiens",
+   "vaut",
+   "mieux",
+   "que",
+   "deux",
+   "tu",
+   "l'auras"
+  ],
+  "explanation": "Mieux vaut une chose sûre que deux promises."
+ },
+ {
+  "key": "dt-word-016",
+  "concept": "french.expressions.dt_rome_jour",
+  "label": "Rome ne s'est pas faite en un jour",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Rome ne s'est pas faite en un jour.",
+  "words": [
+   "Rome",
+   "ne",
+   "s'est",
+   "pas",
+   "faite",
+   "en",
+   "un",
+   "jour"
+  ],
+  "explanation": "Les grandes choses prennent du temps."
+ },
+ {
+  "key": "dt-word-017",
+  "concept": "french.expressions.dt_caravane",
+  "label": "Les chiens aboient",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "Les chiens aboient, la caravane passe.",
+  "words": [
+   "Les",
+   "chiens",
+   "aboient",
+   "la",
+   "caravane",
+   "passe"
+  ],
+  "explanation": "On avance sans se soucier des critiques."
+ },
+ {
+  "key": "dt-word-018",
+  "concept": "french.expressions.dt_nuit_conseil",
+  "label": "La nuit porte conseil",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "answer": "La nuit porte conseil.",
+  "words": [
+   "La",
+   "nuit",
+   "porte",
+   "conseil"
+  ],
+  "explanation": "Mieux vaut dormir avant de prendre une décision importante."
+ },
+ {
+  "key": "dt-word-019",
+  "concept": "arts.literature.dt_rien_ne_sert",
+  "label": "Rien ne sert de courir",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre ce vers de La Fontaine (« Le Lièvre et la Tortue »).",
+  "answer": "Rien ne sert de courir ; il faut partir à point.",
+  "words": [
+   "Rien",
+   "ne",
+   "sert",
+   "de",
+   "courir",
+   "il",
+   "faut",
+   "partir",
+   "à",
+   "point"
+  ],
+  "explanation": "La morale de la fable : la régularité bat la vitesse."
+ },
+ {
+  "key": "dt-word-020",
+  "concept": "arts.literature.dt_raison_plus_fort",
+  "label": "La raison du plus fort",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre ce vers de La Fontaine (« Le Loup et l'Agneau »).",
+  "answer": "La raison du plus fort est toujours la meilleure.",
+  "words": [
+   "La",
+   "raison",
+   "du",
+   "plus",
+   "fort",
+   "est",
+   "toujours",
+   "la",
+   "meilleure"
+  ],
+  "explanation": "Une morale ironique : le loup mange l'agneau malgré ses arguments."
+ },
+ {
+  "key": "dt-word-021",
+  "concept": "arts.literature.dt_tous_pour_un",
+  "label": "Tous pour un",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre la devise des Trois Mousquetaires.",
+  "answer": "Tous pour un, un pour tous !",
+  "words": [
+   "Tous",
+   "pour",
+   "un",
+   "un",
+   "pour",
+   "tous"
+  ],
+  "explanation": "La devise du roman d'Alexandre Dumas (1844)."
+ },
+ {
+  "key": "dt-word-022",
+  "concept": "arts.literature.dt_petit_prince_coeur",
+  "label": "On ne voit bien qu'avec le cœur",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre cette phrase du « Petit Prince ».",
+  "answer": "On ne voit bien qu'avec le cœur.",
+  "words": [
+   "On",
+   "ne",
+   "voit",
+   "bien",
+   "qu'avec",
+   "le",
+   "cœur"
+  ],
+  "explanation": "Le renard ajoute : « L'essentiel est invisible pour les yeux. »"
+ },
+ {
+  "key": "dt-word-023",
+  "concept": "arts.literature.dt_etre_ou_ne_pas",
+  "label": "Être ou ne pas être",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre cette réplique de Hamlet, chez Shakespeare.",
+  "answer": "Être ou ne pas être, telle est la question.",
+  "words": [
+   "Être",
+   "ou",
+   "ne",
+   "pas",
+   "être",
+   "telle",
+   "est",
+   "la",
+   "question"
+  ],
+  "explanation": "« To be or not to be », dans Hamlet (vers 1600)."
+ },
+ {
+  "key": "dt-word-024",
+  "concept": "arts.literature.dt_pascal_coeur",
+  "label": "Le cœur a ses raisons",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets dans l'ordre cette pensée de Pascal.",
+  "answer": "Le cœur a ses raisons que la raison ne connaît point.",
+  "words": [
+   "Le",
+   "cœur",
+   "a",
+   "ses",
+   "raisons",
+   "que",
+   "la",
+   "raison",
+   "ne",
+   "connaît",
+   "point"
+  ],
+  "explanation": "Blaise Pascal, dans ses « Pensées »."
+ },
+ {
+  "key": "dt-word-025",
+  "concept": "science.chemistry.dt_lavoisier",
+  "label": "Rien ne se perd",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Remets dans l'ordre cette phrase attribuée à Lavoisier.",
+  "answer": "Rien ne se perd, rien ne se crée, tout se transforme.",
+  "words": [
+   "Rien",
+   "ne",
+   "se",
+   "perd",
+   "rien",
+   "ne",
+   "se",
+   "crée",
+   "tout",
+   "se",
+   "transforme"
+  ],
+  "explanation": "Elle résume la conservation de la masse dans les réactions chimiques."
+ },
+ {
+  "key": "dt-word-026",
+  "concept": "logic.reasoning.dt_descartes",
+  "label": "Je pense, donc je suis",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre la célèbre phrase de Descartes.",
+  "answer": "Je pense, donc je suis.",
+  "words": [
+   "Je",
+   "pense",
+   "donc",
+   "je",
+   "suis"
+  ],
+  "explanation": "Dans le « Discours de la méthode » (1637)."
+ },
+ {
+  "key": "dt-word-027",
+  "concept": "history.antiquity.dt_veni_vidi",
+  "label": "Je suis venu, j'ai vu",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre la célèbre phrase de Jules César, en français.",
+  "answer": "Je suis venu, j'ai vu, j'ai vaincu.",
+  "words": [
+   "Je",
+   "suis",
+   "venu",
+   "j'ai",
+   "vu",
+   "j'ai",
+   "vaincu"
+  ],
+  "explanation": "« Veni, vidi, vici », après une victoire éclair en 47 av. J.-C."
+ },
+ {
+  "key": "dt-word-028",
+  "concept": "history.contemporary.dt_petit_pas",
+  "label": "Un petit pas pour l'homme",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre la phrase de Neil Armstrong sur la Lune, en français.",
+  "answer": "C'est un petit pas pour l'homme, mais un bond de géant pour l'humanité.",
+  "words": [
+   "C'est",
+   "un",
+   "petit",
+   "pas",
+   "pour",
+   "l'homme",
+   "mais",
+   "un",
+   "bond",
+   "de",
+   "géant",
+   "pour",
+   "l'humanité"
+  ],
+  "explanation": "Prononcée le 21 juillet 1969 (heure française)."
+ },
+ {
+  "key": "dt-word-029",
+  "concept": "history.contemporary.dt_impossible",
+  "label": "Impossible n'est pas français",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre cette phrase attribuée à Napoléon.",
+  "answer": "Impossible n'est pas français.",
+  "words": [
+   "Impossible",
+   "n'est",
+   "pas",
+   "français"
+  ],
+  "explanation": "Tirée d'une lettre de Napoléon de 1813."
+ },
+ {
+  "key": "dt-word-030",
+  "concept": "history.contemporary.dt_marseillaise",
+  "label": "La Marseillaise",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre le début de « La Marseillaise ».",
+  "answer": "Allons enfants de la Patrie, le jour de gloire est arrivé !",
+  "words": [
+   "Allons",
+   "enfants",
+   "de",
+   "la",
+   "Patrie",
+   "le",
+   "jour",
+   "de",
+   "gloire",
+   "est",
+   "arrivé"
+  ],
+  "explanation": "Écrite par Rouget de Lisle en 1792, hymne national depuis 1879."
+ },
+ {
+  "key": "dt-word-031",
+  "concept": "cinema.films.dt_force_avec_toi",
+  "label": "Que la Force soit avec toi",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre cette réplique culte de Star Wars.",
+  "answer": "Que la Force soit avec toi.",
+  "words": [
+   "Que",
+   "la",
+   "Force",
+   "soit",
+   "avec",
+   "toi"
+  ],
+  "explanation": "« May the Force be with you. »"
+ },
+ {
+  "key": "dt-word-032",
+  "concept": "cinema.films.dt_houston",
+  "label": "Houston, on a un problème",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre cette réplique célèbre d'Apollo 13.",
+  "answer": "Houston, nous avons un problème.",
+  "words": [
+   "Houston",
+   "nous",
+   "avons",
+   "un",
+   "problème"
+  ],
+  "explanation": "Le film de 1995 raconte la mission Apollo 13, en 1970."
+ },
+ {
+  "key": "dt-word-033",
+  "concept": "cinema.animation.dt_infini",
+  "label": "Vers l'infini",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre le cri de guerre de Buzz l'Éclair.",
+  "answer": "Vers l'infini et au-delà !",
+  "words": [
+   "Vers",
+   "l'infini",
+   "et",
+   "au-delà"
+  ],
+  "explanation": "Dans « Toy Story » (1995)."
+ },
+ {
+  "key": "dt-word-034",
+  "concept": "cinema.films.dt_deux_categories",
+  "label": "Deux catégories",
+  "type": "word_order",
+  "difficulty": 55,
+  "prompt": "Remets dans l'ordre cette réplique du « Bon, la Brute et le Truand ».",
+  "answer": "Le monde se divise en deux catégories.",
+  "words": [
+   "Le",
+   "monde",
+   "se",
+   "divise",
+   "en",
+   "deux",
+   "catégories"
+  ],
+  "explanation": "La suite : « … ceux qui ont un pistolet chargé et ceux qui creusent. Toi, tu creuses. »"
+ },
+ {
+  "key": "dt-word-035",
+  "concept": "music.popular.dt_ne_me_quitte_pas",
+  "label": "Ne me quitte pas",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre ce vers de Jacques Brel.",
+  "answer": "Il faut oublier, tout peut s'oublier.",
+  "words": [
+   "Il",
+   "faut",
+   "oublier",
+   "tout",
+   "peut",
+   "s'oublier"
+  ],
+  "explanation": "Dans « Ne me quitte pas » (1959)."
+ }
+]

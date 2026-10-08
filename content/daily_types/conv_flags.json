@@ -1,0 +1,5642 @@
+[
+ {
+  "key": "img-wd-flag-Q1000",
+  "from": "wd-flag-Q1000",
+  "concept": "geography.flags.gabon",
+  "label": "Drapeau du Gabon",
+  "difficulty": 58,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Gabon ?",
+  "options": [
+   {
+    "flag": "ga",
+    "label": "Gabon",
+    "correct": true
+   },
+   {
+    "flag": "ls",
+    "label": "Lesotho"
+   },
+   {
+    "flag": "gw",
+    "label": "Guinée-Bissau"
+   },
+   {
+    "flag": "gq",
+    "label": "Guinée équatoriale"
+   }
+  ],
+  "explanation": "C'est le drapeau du Gabon, dont la capitale est Libreville (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1005",
+  "from": "wd-flag-Q1005",
+  "concept": "geography.flags.the_gambia",
+  "label": "Drapeau de la Gambie",
+  "difficulty": 57,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Gambie ?",
+  "options": [
+   {
+    "flag": "gm",
+    "label": "Gambie",
+    "correct": true
+   },
+   {
+    "flag": "na",
+    "label": "Namibie"
+   },
+   {
+    "flag": "bw",
+    "label": "Botswana"
+   },
+   {
+    "flag": "ga",
+    "label": "Gabon"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Gambie, dont la capitale est Banjul (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1006",
+  "from": "wd-flag-Q1006",
+  "concept": "geography.flags.guinea",
+  "label": "Drapeau de la Guinée",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Guinée ?",
+  "options": [
+   {
+    "flag": "gn",
+    "label": "Guinée",
+    "correct": true
+   },
+   {
+    "flag": "mw",
+    "label": "Malawi"
+   },
+   {
+    "flag": "sn",
+    "label": "Sénégal"
+   },
+   {
+    "flag": "td",
+    "label": "Tchad"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Guinée, dont la capitale est Conakry (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1007",
+  "from": "wd-flag-Q1007",
+  "concept": "geography.flags.guinea_bissau",
+  "label": "Drapeau de la Guinée-Bissau",
+  "difficulty": 58,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Guinée-Bissau ?",
+  "options": [
+   {
+    "flag": "gw",
+    "label": "Guinée-Bissau",
+    "correct": true
+   },
+   {
+    "flag": "gq",
+    "label": "Guinée équatoriale"
+   },
+   {
+    "flag": "ls",
+    "label": "Lesotho"
+   },
+   {
+    "flag": "ga",
+    "label": "Gabon"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Guinée-Bissau, dont la capitale est Bissau (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1008",
+  "from": "wd-flag-Q1008",
+  "concept": "geography.flags.ivory_coast",
+  "label": "Drapeau de la Côte d'Ivoire",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Côte d'Ivoire ?",
+  "options": [
+   {
+    "flag": "ci",
+    "label": "Côte d'Ivoire",
+    "correct": true
+   },
+   {
+    "flag": "mg",
+    "label": "Madagascar"
+   },
+   {
+    "flag": "mz",
+    "label": "Mozambique"
+   },
+   {
+    "flag": "gh",
+    "label": "Ghana"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Côte d'Ivoire, dont la capitale est Yamoussoukro (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1009",
+  "from": "wd-flag-Q1009",
+  "concept": "geography.flags.cameroon",
+  "label": "Drapeau du Cameroun",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Cameroun ?",
+  "options": [
+   {
+    "flag": "cm",
+    "label": "Cameroun",
+    "correct": true
+   },
+   {
+    "flag": "mz",
+    "label": "Mozambique"
+   },
+   {
+    "flag": "ci",
+    "label": "Côte d'Ivoire"
+   },
+   {
+    "flag": "mg",
+    "label": "Madagascar"
+   }
+  ],
+  "explanation": "C'est le drapeau du Cameroun, dont la capitale est Yaoundé (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1011",
+  "from": "wd-flag-Q1011",
+  "concept": "geography.flags.cape_verde",
+  "label": "Drapeau du Cap-Vert",
+  "difficulty": 62,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Cap-Vert ?",
+  "options": [
+   {
+    "flag": "cv",
+    "label": "Cap-Vert",
+    "correct": true
+   },
+   {
+    "flag": "km",
+    "label": "Comores"
+   },
+   {
+    "flag": "dj",
+    "label": "Djibouti"
+   },
+   {
+    "flag": "sz",
+    "label": "Eswatini"
+   }
+  ],
+  "explanation": "C'est le drapeau du Cap-Vert, dont la capitale est Praia (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1013",
+  "from": "wd-flag-Q1013",
+  "concept": "geography.flags.lesotho",
+  "label": "Drapeau du Lesotho",
+  "difficulty": 58,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Lesotho ?",
+  "options": [
+   {
+    "flag": "ls",
+    "label": "Lesotho",
+    "correct": true
+   },
+   {
+    "flag": "ga",
+    "label": "Gabon"
+   },
+   {
+    "flag": "gw",
+    "label": "Guinée-Bissau"
+   },
+   {
+    "flag": "gq",
+    "label": "Guinée équatoriale"
+   }
+  ],
+  "explanation": "C'est le drapeau du Lesotho, dont la capitale est Maseru (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1014",
+  "from": "wd-flag-Q1014",
+  "concept": "geography.flags.liberia",
+  "label": "Drapeau du Liberia",
+  "difficulty": 55,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Liberia ?",
+  "options": [
+   {
+    "flag": "lr",
+    "label": "Liberia",
+    "correct": true
+   },
+   {
+    "flag": "cf",
+    "label": "République centrafricaine"
+   },
+   {
+    "flag": "mr",
+    "label": "Mauritanie"
+   },
+   {
+    "flag": "cg",
+    "label": "République du Congo"
+   }
+  ],
+  "explanation": "C'est le drapeau du Liberia, dont la capitale est Monrovia (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1016",
+  "from": "wd-flag-Q1016",
+  "concept": "geography.flags.libya",
+  "label": "Drapeau de la Libye",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Libye ?",
+  "options": [
+   {
+    "flag": "ly",
+    "label": "Libye",
+    "correct": true
+   },
+   {
+    "flag": "sl",
+    "label": "Sierra Leone"
+   },
+   {
+    "flag": "tg",
+    "label": "Togo"
+   },
+   {
+    "flag": "cg",
+    "label": "République du Congo"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Libye, dont la capitale est Tripoli (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1019",
+  "from": "wd-flag-Q1019",
+  "concept": "geography.flags.madagascar",
+  "label": "Drapeau de Madagascar",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Madagascar ?",
+  "options": [
+   {
+    "flag": "mg",
+    "label": "Madagascar",
+    "correct": true
+   },
+   {
+    "flag": "ci",
+    "label": "Côte d'Ivoire"
+   },
+   {
+    "flag": "gh",
+    "label": "Ghana"
+   },
+   {
+    "flag": "mz",
+    "label": "Mozambique"
+   }
+  ],
+  "explanation": "C'est le drapeau de Madagascar, dont la capitale est Antananarivo (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1020",
+  "from": "wd-flag-Q1020",
+  "concept": "geography.flags.malawi",
+  "label": "Drapeau du Malawi",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Malawi ?",
+  "options": [
+   {
+    "flag": "mw",
+    "label": "Malawi",
+    "correct": true
+   },
+   {
+    "flag": "gn",
+    "label": "Guinée"
+   },
+   {
+    "flag": "sn",
+    "label": "Sénégal"
+   },
+   {
+    "flag": "td",
+    "label": "Tchad"
+   }
+  ],
+  "explanation": "C'est le drapeau du Malawi, dont la capitale est Lilongwe (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1025",
+  "from": "wd-flag-Q1025",
+  "concept": "geography.flags.mauritania",
+  "label": "Drapeau de la Mauritanie",
+  "difficulty": 55,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Mauritanie ?",
+  "options": [
+   {
+    "flag": "mr",
+    "label": "Mauritanie",
+    "correct": true
+   },
+   {
+    "flag": "cf",
+    "label": "République centrafricaine"
+   },
+   {
+    "flag": "lr",
+    "label": "Liberia"
+   },
+   {
+    "flag": "cg",
+    "label": "République du Congo"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Mauritanie, dont la capitale est Nouakchott (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1027",
+  "from": "wd-flag-Q1027",
+  "concept": "geography.flags.mauritius",
+  "label": "Drapeau de Maurice",
+  "difficulty": 59,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Maurice ?",
+  "options": [
+   {
+    "flag": "mu",
+    "label": "Maurice",
+    "correct": true
+   },
+   {
+    "flag": "sz",
+    "label": "Eswatini"
+   },
+   {
+    "flag": "dj",
+    "label": "Djibouti"
+   },
+   {
+    "flag": "km",
+    "label": "Comores"
+   }
+  ],
+  "explanation": "C'est le drapeau de Maurice, dont la capitale est Port-Louis (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1028",
+  "from": "wd-flag-Q1028",
+  "concept": "geography.flags.morocco",
+  "label": "Drapeau du Maroc",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Maroc ?",
+  "options": [
+   {
+    "flag": "ma",
+    "label": "Maroc",
+    "correct": true
+   },
+   {
+    "flag": "ao",
+    "label": "Angola"
+   },
+   {
+    "flag": "sd",
+    "label": "Soudan"
+   },
+   {
+    "flag": "gh",
+    "label": "Ghana"
+   }
+  ],
+  "explanation": "C'est le drapeau du Maroc, dont la capitale est Rabat (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1029",
+  "from": "wd-flag-Q1029",
+  "concept": "geography.flags.mozambique",
+  "label": "Drapeau du Mozambique",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Mozambique ?",
+  "options": [
+   {
+    "flag": "mz",
+    "label": "Mozambique",
+    "correct": true
+   },
+   {
+    "flag": "cm",
+    "label": "Cameroun"
+   },
+   {
+    "flag": "ci",
+    "label": "Côte d'Ivoire"
+   },
+   {
+    "flag": "mg",
+    "label": "Madagascar"
+   }
+  ],
+  "explanation": "C'est le drapeau du Mozambique, dont la capitale est Maputo (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1030",
+  "from": "wd-flag-Q1030",
+  "concept": "geography.flags.namibia",
+  "label": "Drapeau de la Namibie",
+  "difficulty": 57,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Namibie ?",
+  "options": [
+   {
+    "flag": "na",
+    "label": "Namibie",
+    "correct": true
+   },
+   {
+    "flag": "bw",
+    "label": "Botswana"
+   },
+   {
+    "flag": "gm",
+    "label": "Gambie"
+   },
+   {
+    "flag": "ga",
+    "label": "Gabon"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Namibie, dont la capitale est Windhoek (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1032",
+  "from": "wd-flag-Q1032",
+  "concept": "geography.flags.niger",
+  "label": "Drapeau du Niger",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Niger ?",
+  "options": [
+   {
+    "flag": "ne",
+    "label": "Niger",
+    "correct": true
+   },
+   {
+    "flag": "ml",
+    "label": "Mali"
+   },
+   {
+    "flag": "bf",
+    "label": "Burkina Faso"
+   },
+   {
+    "flag": "zm",
+    "label": "Zambie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Niger, dont la capitale est Niamey (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1033",
+  "from": "wd-flag-Q1033",
+  "concept": "geography.flags.nigeria",
+  "label": "Drapeau du Nigeria",
+  "difficulty": 44,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Nigeria ?",
+  "options": [
+   {
+    "flag": "ng",
+    "label": "Nigeria",
+    "correct": true
+   },
+   {
+    "flag": "et",
+    "label": "Éthiopie"
+   },
+   {
+    "flag": "eg",
+    "label": "Égypte"
+   },
+   {
+    "flag": "cd",
+    "label": "République démocratique du Congo"
+   }
+  ],
+  "explanation": "C'est le drapeau du Nigeria, dont la capitale est Abuja (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1036",
+  "from": "wd-flag-Q1036",
+  "concept": "geography.flags.uganda",
+  "label": "Drapeau de l'Ouganda",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Ouganda ?",
+  "options": [
+   {
+    "flag": "ug",
+    "label": "Ouganda",
+    "correct": true
+   },
+   {
+    "flag": "dz",
+    "label": "Algérie"
+   },
+   {
+    "flag": "ke",
+    "label": "Kenya"
+   },
+   {
+    "flag": "sd",
+    "label": "Soudan"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Ouganda, dont la capitale est Kampala (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1037",
+  "from": "wd-flag-Q1037",
+  "concept": "geography.flags.rwanda",
+  "label": "Drapeau du Rwanda",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Rwanda ?",
+  "options": [
+   {
+    "flag": "rw",
+    "label": "Rwanda",
+    "correct": true
+   },
+   {
+    "flag": "bj",
+    "label": "Bénin"
+   },
+   {
+    "flag": "zw",
+    "label": "Zimbabwe"
+   },
+   {
+    "flag": "bi",
+    "label": "Burundi"
+   }
+  ],
+  "explanation": "C'est le drapeau du Rwanda, dont la capitale est Kigali (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1039",
+  "from": "wd-flag-Q1039",
+  "concept": "geography.flags.sao_tome_and_principe",
+  "label": "Drapeau de Sao Tomé-et-Principe",
+  "difficulty": 65,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Sao Tomé-et-Principe ?",
+  "options": [
+   {
+    "flag": "st",
+    "label": "Sao Tomé-et-Principe",
+    "correct": true
+   },
+   {
+    "flag": "sc",
+    "label": "Seychelles"
+   },
+   {
+    "flag": "cv",
+    "label": "Cap-Vert"
+   },
+   {
+    "flag": "km",
+    "label": "Comores"
+   }
+  ],
+  "explanation": "C'est le drapeau de Sao Tomé-et-Principe, dont la capitale est São Tomé (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1041",
+  "from": "wd-flag-Q1041",
+  "concept": "geography.flags.senegal",
+  "label": "Drapeau du Sénégal",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Sénégal ?",
+  "options": [
+   {
+    "flag": "sn",
+    "label": "Sénégal",
+    "correct": true
+   },
+   {
+    "flag": "gn",
+    "label": "Guinée"
+   },
+   {
+    "flag": "mw",
+    "label": "Malawi"
+   },
+   {
+    "flag": "zw",
+    "label": "Zimbabwe"
+   }
+  ],
+  "explanation": "C'est le drapeau du Sénégal, dont la capitale est Dakar (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1042",
+  "from": "wd-flag-Q1042",
+  "concept": "geography.flags.seychelles",
+  "label": "Drapeau des Seychelles",
+  "difficulty": 66,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Seychelles ?",
+  "options": [
+   {
+    "flag": "sc",
+    "label": "Seychelles",
+    "correct": true
+   },
+   {
+    "flag": "st",
+    "label": "Sao Tomé-et-Principe"
+   },
+   {
+    "flag": "cv",
+    "label": "Cap-Vert"
+   },
+   {
+    "flag": "km",
+    "label": "Comores"
+   }
+  ],
+  "explanation": "C'est le drapeau des Seychelles, dont la capitale est Victoria (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1044",
+  "from": "wd-flag-Q1044",
+  "concept": "geography.flags.sierra_leone",
+  "label": "Drapeau de la Sierra Leone",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Sierra Leone ?",
+  "options": [
+   {
+    "flag": "sl",
+    "label": "Sierra Leone",
+    "correct": true
+   },
+   {
+    "flag": "ly",
+    "label": "Libye"
+   },
+   {
+    "flag": "tg",
+    "label": "Togo"
+   },
+   {
+    "flag": "cg",
+    "label": "République du Congo"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Sierra Leone, dont la capitale est Freetown (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1045",
+  "from": "wd-flag-Q1045",
+  "concept": "geography.flags.somalia",
+  "label": "Drapeau de la Somalie",
+  "difficulty": 53,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Somalie ?",
+  "options": [
+   {
+    "flag": "so",
+    "label": "Somalie",
+    "correct": true
+   },
+   {
+    "flag": "tn",
+    "label": "Tunisie"
+   },
+   {
+    "flag": "ss",
+    "label": "Soudan du Sud"
+   },
+   {
+    "flag": "bi",
+    "label": "Burundi"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Somalie, dont la capitale est Mogadiscio (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1049",
+  "from": "wd-flag-Q1049",
+  "concept": "geography.flags.sudan",
+  "label": "Drapeau du Soudan",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Soudan ?",
+  "options": [
+   {
+    "flag": "sd",
+    "label": "Soudan",
+    "correct": true
+   },
+   {
+    "flag": "ma",
+    "label": "Maroc"
+   },
+   {
+    "flag": "ao",
+    "label": "Angola"
+   },
+   {
+    "flag": "dz",
+    "label": "Algérie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Soudan, dont la capitale est Khartoum (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q1050",
+  "from": "wd-flag-Q1050",
+  "concept": "geography.flags.eswatini",
+  "label": "Drapeau de l'Eswatini",
+  "difficulty": 59,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Eswatini ?",
+  "options": [
+   {
+    "flag": "sz",
+    "label": "Eswatini",
+    "correct": true
+   },
+   {
+    "flag": "mu",
+    "label": "Maurice"
+   },
+   {
+    "flag": "dj",
+    "label": "Djibouti"
+   },
+   {
+    "flag": "km",
+    "label": "Comores"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Eswatini (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q114",
+  "from": "wd-flag-Q114",
+  "concept": "geography.flags.kenya",
+  "label": "Drapeau du Kenya",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Kenya ?",
+  "options": [
+   {
+    "flag": "ke",
+    "label": "Kenya",
+    "correct": true
+   },
+   {
+    "flag": "ug",
+    "label": "Ouganda"
+   },
+   {
+    "flag": "dz",
+    "label": "Algérie"
+   },
+   {
+    "flag": "tz",
+    "label": "Tanzanie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Kenya, dont la capitale est Nairobi (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q115",
+  "from": "wd-flag-Q115",
+  "concept": "geography.flags.ethiopia",
+  "label": "Drapeau de l'Éthiopie",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Éthiopie ?",
+  "options": [
+   {
+    "flag": "et",
+    "label": "Éthiopie",
+    "correct": true
+   },
+   {
+    "flag": "eg",
+    "label": "Égypte"
+   },
+   {
+    "flag": "cd",
+    "label": "République démocratique du Congo"
+   },
+   {
+    "flag": "ng",
+    "label": "Nigeria"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Éthiopie, dont la capitale est Addis-Abeba (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q117",
+  "from": "wd-flag-Q117",
+  "concept": "geography.flags.ghana",
+  "label": "Drapeau du Ghana",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Ghana ?",
+  "options": [
+   {
+    "flag": "gh",
+    "label": "Ghana",
+    "correct": true
+   },
+   {
+    "flag": "mg",
+    "label": "Madagascar"
+   },
+   {
+    "flag": "ci",
+    "label": "Côte d'Ivoire"
+   },
+   {
+    "flag": "mz",
+    "label": "Mozambique"
+   }
+  ],
+  "explanation": "C'est le drapeau du Ghana, dont la capitale est Accra (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q142",
+  "from": "wd-flag-Q142",
+  "concept": "geography.flags.france",
+  "label": "Drapeau de la France",
+  "difficulty": 31,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la France ?",
+  "options": [
+   {
+    "flag": "fr",
+    "label": "France",
+    "correct": true
+   },
+   {
+    "flag": "gb",
+    "label": "Royaume-Uni"
+   },
+   {
+    "flag": "it",
+    "label": "Italie"
+   },
+   {
+    "flag": "de",
+    "label": "Allemagne"
+   }
+  ],
+  "explanation": "C'est le drapeau de la France, dont la capitale est Paris (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q145",
+  "from": "wd-flag-Q145",
+  "concept": "geography.flags.united_kingdom",
+  "label": "Drapeau du Royaume-Uni",
+  "difficulty": 31,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Royaume-Uni ?",
+  "options": [
+   {
+    "flag": "gb",
+    "label": "Royaume-Uni",
+    "correct": true
+   },
+   {
+    "flag": "fr",
+    "label": "France"
+   },
+   {
+    "flag": "it",
+    "label": "Italie"
+   },
+   {
+    "flag": "de",
+    "label": "Allemagne"
+   }
+  ],
+  "explanation": "C'est le drapeau du Royaume-Uni, dont la capitale est Londres (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q148",
+  "from": "wd-flag-Q148",
+  "concept": "geography.flags.people_s_republic_of_china",
+  "label": "Drapeau de la Chine",
+  "difficulty": 33,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Chine ?",
+  "options": [
+   {
+    "flag": "cn",
+    "label": "Chine",
+    "correct": true
+   },
+   {
+    "flag": "in",
+    "label": "Inde"
+   },
+   {
+    "flag": "id",
+    "label": "Indonésie"
+   },
+   {
+    "flag": "pk",
+    "label": "Pakistan"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Chine, dont la capitale est Pékin (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q155",
+  "from": "wd-flag-Q155",
+  "concept": "geography.flags.brazil",
+  "label": "Drapeau du Brésil",
+  "difficulty": 36,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Brésil ?",
+  "options": [
+   {
+    "flag": "br",
+    "label": "Brésil",
+    "correct": true
+   },
+   {
+    "flag": "co",
+    "label": "Colombie"
+   },
+   {
+    "flag": "ar",
+    "label": "Argentine"
+   },
+   {
+    "flag": "pe",
+    "label": "Pérou"
+   }
+  ],
+  "explanation": "C'est le drapeau du Brésil, dont la capitale est Brasilia (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q16",
+  "from": "wd-flag-Q16",
+  "concept": "geography.flags.canada",
+  "label": "Drapeau du Canada",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Canada ?",
+  "options": [
+   {
+    "flag": "ca",
+    "label": "Canada",
+    "correct": true
+   },
+   {
+    "flag": "gt",
+    "label": "Guatemala"
+   },
+   {
+    "flag": "cu",
+    "label": "Cuba"
+   },
+   {
+    "flag": "ht",
+    "label": "Haïti"
+   }
+  ],
+  "explanation": "C'est le drapeau du Canada, dont la capitale est Ottawa (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q17",
+  "from": "wd-flag-Q17",
+  "concept": "geography.flags.japan",
+  "label": "Drapeau du Japon",
+  "difficulty": 40,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Japon ?",
+  "options": [
+   {
+    "flag": "jp",
+    "label": "Japon",
+    "correct": true
+   },
+   {
+    "flag": "ph",
+    "label": "Philippines"
+   },
+   {
+    "flag": "vn",
+    "label": "Viêt Nam"
+   },
+   {
+    "flag": "ir",
+    "label": "Iran"
+   }
+  ],
+  "explanation": "C'est le drapeau du Japon, dont la capitale est Tokyo (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q183",
+  "from": "wd-flag-Q183",
+  "concept": "geography.flags.germany",
+  "label": "Drapeau de l'Allemagne",
+  "difficulty": 31,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Allemagne ?",
+  "options": [
+   {
+    "flag": "de",
+    "label": "Allemagne",
+    "correct": true
+   },
+   {
+    "flag": "fr",
+    "label": "France"
+   },
+   {
+    "flag": "gb",
+    "label": "Royaume-Uni"
+   },
+   {
+    "flag": "it",
+    "label": "Italie"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Allemagne, dont la capitale est Berlin (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q184",
+  "from": "wd-flag-Q184",
+  "concept": "geography.flags.belarus",
+  "label": "Drapeau de la Biélorussie",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Biélorussie ?",
+  "options": [
+   {
+    "flag": "by",
+    "label": "Biélorussie",
+    "correct": true
+   },
+   {
+    "flag": "ch",
+    "label": "Suisse"
+   },
+   {
+    "flag": "at",
+    "label": "Autriche"
+   },
+   {
+    "flag": "hu",
+    "label": "Hongrie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Biélorussie, dont la capitale est Minsk (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q189",
+  "from": "wd-flag-Q189",
+  "concept": "geography.flags.iceland",
+  "label": "Drapeau de l'Islande",
+  "difficulty": 47,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Islande ?",
+  "options": [
+   {
+    "flag": "is",
+    "label": "Islande",
+    "correct": true
+   },
+   {
+    "flag": "mt",
+    "label": "Malte"
+   },
+   {
+    "flag": "me",
+    "label": "Monténégro"
+   },
+   {
+    "flag": "lu",
+    "label": "Luxembourg"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Islande, dont la capitale est Reykjavik (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q191",
+  "from": "wd-flag-Q191",
+  "concept": "geography.flags.estonia",
+  "label": "Drapeau de l'Estonie",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Estonie ?",
+  "options": [
+   {
+    "flag": "ee",
+    "label": "Estonie",
+    "correct": true
+   },
+   {
+    "flag": "cy",
+    "label": "Chypre"
+   },
+   {
+    "flag": "mk",
+    "label": "Macédoine du Nord"
+   },
+   {
+    "flag": "lv",
+    "label": "Lettonie"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Estonie, dont la capitale est Tallinn (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q20",
+  "from": "wd-flag-Q20",
+  "concept": "geography.flags.norway",
+  "label": "Drapeau de la Norvège",
+  "difficulty": 39,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Norvège ?",
+  "options": [
+   {
+    "flag": "no",
+    "label": "Norvège",
+    "correct": true
+   },
+   {
+    "flag": "fi",
+    "label": "Finlande"
+   },
+   {
+    "flag": "sk",
+    "label": "Slovaquie"
+   },
+   {
+    "flag": "ie",
+    "label": "Irlande"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Norvège (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q211",
+  "from": "wd-flag-Q211",
+  "concept": "geography.flags.latvia",
+  "label": "Drapeau de la Lettonie",
+  "difficulty": 42,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Lettonie ?",
+  "options": [
+   {
+    "flag": "lv",
+    "label": "Lettonie",
+    "correct": true
+   },
+   {
+    "flag": "mk",
+    "label": "Macédoine du Nord"
+   },
+   {
+    "flag": "si",
+    "label": "Slovénie"
+   },
+   {
+    "flag": "md",
+    "label": "Moldavie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Lettonie, dont la capitale est Riga (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q212",
+  "from": "wd-flag-Q212",
+  "concept": "geography.flags.ukraine",
+  "label": "Drapeau de l'Ukraine",
+  "difficulty": 33,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Ukraine ?",
+  "options": [
+   {
+    "flag": "ua",
+    "label": "Ukraine",
+    "correct": true
+   },
+   {
+    "flag": "pl",
+    "label": "Pologne"
+   },
+   {
+    "flag": "es",
+    "label": "Espagne"
+   },
+   {
+    "flag": "it",
+    "label": "Italie"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Ukraine, dont la capitale est Kiev (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q213",
+  "from": "wd-flag-Q213",
+  "concept": "geography.flags.czech_republic",
+  "label": "Drapeau de la Tchéquie",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Tchéquie ?",
+  "options": [
+   {
+    "flag": "cz",
+    "label": "Tchéquie",
+    "correct": true
+   },
+   {
+    "flag": "se",
+    "label": "Suède"
+   },
+   {
+    "flag": "gr",
+    "label": "Grèce"
+   },
+   {
+    "flag": "pt",
+    "label": "Portugal"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Tchéquie, dont la capitale est Prague (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q214",
+  "from": "wd-flag-Q214",
+  "concept": "geography.flags.slovakia",
+  "label": "Drapeau de la Slovaquie",
+  "difficulty": 39,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Slovaquie ?",
+  "options": [
+   {
+    "flag": "sk",
+    "label": "Slovaquie",
+    "correct": true
+   },
+   {
+    "flag": "no",
+    "label": "Norvège"
+   },
+   {
+    "flag": "fi",
+    "label": "Finlande"
+   },
+   {
+    "flag": "ie",
+    "label": "Irlande"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Slovaquie, dont la capitale est Bratislava (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q215",
+  "from": "wd-flag-Q215",
+  "concept": "geography.flags.slovenia",
+  "label": "Drapeau de la Slovénie",
+  "difficulty": 42,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Slovénie ?",
+  "options": [
+   {
+    "flag": "si",
+    "label": "Slovénie",
+    "correct": true
+   },
+   {
+    "flag": "lv",
+    "label": "Lettonie"
+   },
+   {
+    "flag": "mk",
+    "label": "Macédoine du Nord"
+   },
+   {
+    "flag": "md",
+    "label": "Moldavie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Slovénie, dont la capitale est Ljubljana (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q217",
+  "from": "wd-flag-Q217",
+  "concept": "geography.flags.moldova",
+  "label": "Drapeau de la Moldavie",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Moldavie ?",
+  "options": [
+   {
+    "flag": "md",
+    "label": "Moldavie",
+    "correct": true
+   },
+   {
+    "flag": "si",
+    "label": "Slovénie"
+   },
+   {
+    "flag": "al",
+    "label": "Albanie"
+   },
+   {
+    "flag": "lt",
+    "label": "Lituanie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Moldavie, dont la capitale est Chișinău (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q218",
+  "from": "wd-flag-Q218",
+  "concept": "geography.flags.romania",
+  "label": "Drapeau de la Roumanie",
+  "difficulty": 35,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Roumanie ?",
+  "options": [
+   {
+    "flag": "ro",
+    "label": "Roumanie",
+    "correct": true
+   },
+   {
+    "flag": "nl",
+    "label": "Pays-Bas"
+   },
+   {
+    "flag": "be",
+    "label": "Belgique"
+   },
+   {
+    "flag": "cz",
+    "label": "Tchéquie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Roumanie, dont la capitale est Bucarest (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q219",
+  "from": "wd-flag-Q219",
+  "concept": "geography.flags.bulgaria",
+  "label": "Drapeau de la Bulgarie",
+  "difficulty": 38,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Bulgarie ?",
+  "options": [
+   {
+    "flag": "bg",
+    "label": "Bulgarie",
+    "correct": true
+   },
+   {
+    "flag": "rs",
+    "label": "Serbie"
+   },
+   {
+    "flag": "fi",
+    "label": "Finlande"
+   },
+   {
+    "flag": "no",
+    "label": "Norvège"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Bulgarie, dont la capitale est Sofia (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q221",
+  "from": "wd-flag-Q221",
+  "concept": "geography.flags.north_macedonia",
+  "label": "Drapeau de la Macédoine du Nord",
+  "difficulty": 42,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Macédoine du Nord ?",
+  "options": [
+   {
+    "flag": "mk",
+    "label": "Macédoine du Nord",
+    "correct": true
+   },
+   {
+    "flag": "lv",
+    "label": "Lettonie"
+   },
+   {
+    "flag": "si",
+    "label": "Slovénie"
+   },
+   {
+    "flag": "md",
+    "label": "Moldavie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Macédoine du Nord, dont la capitale est Skopje (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q222",
+  "from": "wd-flag-Q222",
+  "concept": "geography.flags.albania",
+  "label": "Drapeau de l'Albanie",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Albanie ?",
+  "options": [
+   {
+    "flag": "al",
+    "label": "Albanie",
+    "correct": true
+   },
+   {
+    "flag": "lt",
+    "label": "Lituanie"
+   },
+   {
+    "flag": "md",
+    "label": "Moldavie"
+   },
+   {
+    "flag": "ba",
+    "label": "Bosnie-Herzégovine"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Albanie, dont la capitale est Tirana (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q224",
+  "from": "wd-flag-Q224",
+  "concept": "geography.flags.croatia",
+  "label": "Drapeau de la Croatie",
+  "difficulty": 40,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Croatie ?",
+  "options": [
+   {
+    "flag": "hr",
+    "label": "Croatie",
+    "correct": true
+   },
+   {
+    "flag": "ba",
+    "label": "Bosnie-Herzégovine"
+   },
+   {
+    "flag": "ge",
+    "label": "Géorgie"
+   },
+   {
+    "flag": "ie",
+    "label": "Irlande"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Croatie, dont la capitale est Zagreb (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q225",
+  "from": "wd-flag-Q225",
+  "concept": "geography.flags.bosnia_and_herzegovina",
+  "label": "Drapeau de la Bosnie-Herzégovine",
+  "difficulty": 40,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Bosnie-Herzégovine ?",
+  "options": [
+   {
+    "flag": "ba",
+    "label": "Bosnie-Herzégovine",
+    "correct": true
+   },
+   {
+    "flag": "hr",
+    "label": "Croatie"
+   },
+   {
+    "flag": "ge",
+    "label": "Géorgie"
+   },
+   {
+    "flag": "lt",
+    "label": "Lituanie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Bosnie-Herzégovine, dont la capitale est Sarajevo (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q227",
+  "from": "wd-flag-Q227",
+  "concept": "geography.flags.azerbaijan",
+  "label": "Drapeau de l'Azerbaïdjan",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Azerbaïdjan ?",
+  "options": [
+   {
+    "flag": "az",
+    "label": "Azerbaïdjan",
+    "correct": true
+   },
+   {
+    "flag": "jo",
+    "label": "Jordanie"
+   },
+   {
+    "flag": "ae",
+    "label": "Émirats arabes unis"
+   },
+   {
+    "flag": "il",
+    "label": "Israël"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Azerbaïdjan, dont la capitale est Bakou (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q228",
+  "from": "wd-flag-Q228",
+  "concept": "geography.flags.andorra",
+  "label": "Drapeau de l'Andorre",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau d'Andorre ?",
+  "options": [
+   {
+    "flag": "ad",
+    "label": "Andorre",
+    "correct": true
+   },
+   {
+    "flag": "mc",
+    "label": "Monaco"
+   },
+   {
+    "flag": "li",
+    "label": "Liechtenstein"
+   },
+   {
+    "flag": "sm",
+    "label": "Saint-Marin"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Andorre, dont la capitale est Andorre-la-Vieille (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q229",
+  "from": "wd-flag-Q229",
+  "concept": "geography.flags.cyprus",
+  "label": "Drapeau de Chypre",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Chypre ?",
+  "options": [
+   {
+    "flag": "cy",
+    "label": "Chypre",
+    "correct": true
+   },
+   {
+    "flag": "ee",
+    "label": "Estonie"
+   },
+   {
+    "flag": "mk",
+    "label": "Macédoine du Nord"
+   },
+   {
+    "flag": "lv",
+    "label": "Lettonie"
+   }
+  ],
+  "explanation": "C'est le drapeau de Chypre, dont la capitale est Nicosie (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q230",
+  "from": "wd-flag-Q230",
+  "concept": "geography.flags.georgia",
+  "label": "Drapeau de la Géorgie",
+  "difficulty": 40,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Géorgie ?",
+  "options": [
+   {
+    "flag": "ge",
+    "label": "Géorgie",
+    "correct": true
+   },
+   {
+    "flag": "hr",
+    "label": "Croatie"
+   },
+   {
+    "flag": "ba",
+    "label": "Bosnie-Herzégovine"
+   },
+   {
+    "flag": "ie",
+    "label": "Irlande"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Géorgie, dont la capitale est Tbilissi (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q233",
+  "from": "wd-flag-Q233",
+  "concept": "geography.flags.malta",
+  "label": "Drapeau de Malte",
+  "difficulty": 46,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Malte ?",
+  "options": [
+   {
+    "flag": "mt",
+    "label": "Malte",
+    "correct": true
+   },
+   {
+    "flag": "me",
+    "label": "Monténégro"
+   },
+   {
+    "flag": "lu",
+    "label": "Luxembourg"
+   },
+   {
+    "flag": "is",
+    "label": "Islande"
+   }
+  ],
+  "explanation": "C'est le drapeau de Malte, dont la capitale est La Valette (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q235",
+  "from": "wd-flag-Q235",
+  "concept": "geography.flags.monaco",
+  "label": "Drapeau de Monaco",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Monaco ?",
+  "options": [
+   {
+    "flag": "mc",
+    "label": "Monaco",
+    "correct": true
+   },
+   {
+    "flag": "li",
+    "label": "Liechtenstein"
+   },
+   {
+    "flag": "sm",
+    "label": "Saint-Marin"
+   },
+   {
+    "flag": "ad",
+    "label": "Andorre"
+   }
+  ],
+  "explanation": "C'est le drapeau de Monaco, dont la capitale est Monaco (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q236",
+  "from": "wd-flag-Q236",
+  "concept": "geography.flags.montenegro",
+  "label": "Drapeau du Monténégro",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Monténégro ?",
+  "options": [
+   {
+    "flag": "me",
+    "label": "Monténégro",
+    "correct": true
+   },
+   {
+    "flag": "mt",
+    "label": "Malte"
+   },
+   {
+    "flag": "lu",
+    "label": "Luxembourg"
+   },
+   {
+    "flag": "is",
+    "label": "Islande"
+   }
+  ],
+  "explanation": "C'est le drapeau du Monténégro, dont la capitale est Podgorica (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q238",
+  "from": "wd-flag-Q238",
+  "concept": "geography.flags.san_marino",
+  "label": "Drapeau de Saint-Marin",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Saint-Marin ?",
+  "options": [
+   {
+    "flag": "sm",
+    "label": "Saint-Marin",
+    "correct": true
+   },
+   {
+    "flag": "li",
+    "label": "Liechtenstein"
+   },
+   {
+    "flag": "mc",
+    "label": "Monaco"
+   },
+   {
+    "flag": "ad",
+    "label": "Andorre"
+   }
+  ],
+  "explanation": "C'est le drapeau de Saint-Marin, dont la capitale est Saint-Marin (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q241",
+  "from": "wd-flag-Q241",
+  "concept": "geography.flags.cuba",
+  "label": "Drapeau de Cuba",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Cuba ?",
+  "options": [
+   {
+    "flag": "cu",
+    "label": "Cuba",
+    "correct": true
+   },
+   {
+    "flag": "ht",
+    "label": "Haïti"
+   },
+   {
+    "flag": "do",
+    "label": "République dominicaine"
+   },
+   {
+    "flag": "hn",
+    "label": "Honduras"
+   }
+  ],
+  "explanation": "C'est le drapeau de Cuba, dont la capitale est La Havane (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q242",
+  "from": "wd-flag-Q242",
+  "concept": "geography.flags.belize",
+  "label": "Drapeau du Belize",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Belize ?",
+  "options": [
+   {
+    "flag": "bz",
+    "label": "Belize",
+    "correct": true
+   },
+   {
+    "flag": "bs",
+    "label": "Bahamas"
+   },
+   {
+    "flag": "bb",
+    "label": "Barbade"
+   },
+   {
+    "flag": "lc",
+    "label": "Sainte-Lucie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Belize, dont la capitale est Belmopan (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q244",
+  "from": "wd-flag-Q244",
+  "concept": "geography.flags.barbados",
+  "label": "Drapeau de la Barbade",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Barbade ?",
+  "options": [
+   {
+    "flag": "bb",
+    "label": "Barbade",
+    "correct": true
+   },
+   {
+    "flag": "bs",
+    "label": "Bahamas"
+   },
+   {
+    "flag": "bz",
+    "label": "Belize"
+   },
+   {
+    "flag": "lc",
+    "label": "Sainte-Lucie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Barbade, dont la capitale est Bridgetown (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q252",
+  "from": "wd-flag-Q252",
+  "concept": "geography.flags.indonesia",
+  "label": "Drapeau de l'Indonésie",
+  "difficulty": 38,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Indonésie ?",
+  "options": [
+   {
+    "flag": "id",
+    "label": "Indonésie",
+    "correct": true
+   },
+   {
+    "flag": "pk",
+    "label": "Pakistan"
+   },
+   {
+    "flag": "bd",
+    "label": "Bangladesh"
+   },
+   {
+    "flag": "jp",
+    "label": "Japon"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Indonésie, dont la capitale est Jakarta (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q258",
+  "from": "wd-flag-Q258",
+  "concept": "geography.flags.south_africa",
+  "label": "Drapeau de l'Afrique du Sud",
+  "difficulty": 47,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Afrique du Sud ?",
+  "options": [
+   {
+    "flag": "za",
+    "label": "Afrique du Sud",
+    "correct": true
+   },
+   {
+    "flag": "tz",
+    "label": "Tanzanie"
+   },
+   {
+    "flag": "ke",
+    "label": "Kenya"
+   },
+   {
+    "flag": "ug",
+    "label": "Ouganda"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Afrique du Sud (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q262",
+  "from": "wd-flag-Q262",
+  "concept": "geography.flags.algeria",
+  "label": "Drapeau de l'Algérie",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Algérie ?",
+  "options": [
+   {
+    "flag": "dz",
+    "label": "Algérie",
+    "correct": true
+   },
+   {
+    "flag": "ug",
+    "label": "Ouganda"
+   },
+   {
+    "flag": "ke",
+    "label": "Kenya"
+   },
+   {
+    "flag": "sd",
+    "label": "Soudan"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Algérie, dont la capitale est Alger (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q265",
+  "from": "wd-flag-Q265",
+  "concept": "geography.flags.uzbekistan",
+  "label": "Drapeau de l'Ouzbékistan",
+  "difficulty": 44,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Ouzbékistan ?",
+  "options": [
+   {
+    "flag": "uz",
+    "label": "Ouzbékistan",
+    "correct": true
+   },
+   {
+    "flag": "my",
+    "label": "Malaisie"
+   },
+   {
+    "flag": "sa",
+    "label": "Arabie saoudite"
+   },
+   {
+    "flag": "iq",
+    "label": "Irak"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Ouzbékistan, dont la capitale est Tachkent (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q27",
+  "from": "wd-flag-Q27",
+  "concept": "geography.flags.ireland",
+  "label": "Drapeau de l'Irlande",
+  "difficulty": 39,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Irlande ?",
+  "options": [
+   {
+    "flag": "ie",
+    "label": "Irlande",
+    "correct": true
+   },
+   {
+    "flag": "sk",
+    "label": "Slovaquie"
+   },
+   {
+    "flag": "no",
+    "label": "Norvège"
+   },
+   {
+    "flag": "fi",
+    "label": "Finlande"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Irlande, dont la capitale est Dublin (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q28",
+  "from": "wd-flag-Q28",
+  "concept": "geography.flags.hungary",
+  "label": "Drapeau de la Hongrie",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Hongrie ?",
+  "options": [
+   {
+    "flag": "hu",
+    "label": "Hongrie",
+    "correct": true
+   },
+   {
+    "flag": "ch",
+    "label": "Suisse"
+   },
+   {
+    "flag": "by",
+    "label": "Biélorussie"
+   },
+   {
+    "flag": "at",
+    "label": "Autriche"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Hongrie, dont la capitale est Budapest (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q29",
+  "from": "wd-flag-Q29",
+  "concept": "geography.flags.spain",
+  "label": "Drapeau de l'Espagne",
+  "difficulty": 32,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Espagne ?",
+  "options": [
+   {
+    "flag": "es",
+    "label": "Espagne",
+    "correct": true
+   },
+   {
+    "flag": "ua",
+    "label": "Ukraine"
+   },
+   {
+    "flag": "it",
+    "label": "Italie"
+   },
+   {
+    "flag": "pl",
+    "label": "Pologne"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Espagne, dont la capitale est Madrid (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q298",
+  "from": "wd-flag-Q298",
+  "concept": "geography.flags.chile",
+  "label": "Drapeau du Chili",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Chili ?",
+  "options": [
+   {
+    "flag": "cl",
+    "label": "Chili",
+    "correct": true
+   },
+   {
+    "flag": "ec",
+    "label": "Équateur"
+   },
+   {
+    "flag": "bo",
+    "label": "Bolivie"
+   },
+   {
+    "flag": "ve",
+    "label": "Venezuela"
+   }
+  ],
+  "explanation": "C'est le drapeau du Chili, dont la capitale est Santiago (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q30",
+  "from": "wd-flag-Q30",
+  "concept": "geography.flags.united_states",
+  "label": "Drapeau des États-Unis",
+  "difficulty": 30,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des États-Unis ?",
+  "options": [
+   {
+    "flag": "us",
+    "label": "États-Unis",
+    "correct": true
+   },
+   {
+    "flag": "mx",
+    "label": "Mexique"
+   },
+   {
+    "flag": "ca",
+    "label": "Canada"
+   },
+   {
+    "flag": "gt",
+    "label": "Guatemala"
+   }
+  ],
+  "explanation": "C'est le drapeau des États-Unis, dont la capitale est Washington (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q31",
+  "from": "wd-flag-Q31",
+  "concept": "geography.flags.belgium",
+  "label": "Drapeau de la Belgique",
+  "difficulty": 36,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Belgique ?",
+  "options": [
+   {
+    "flag": "be",
+    "label": "Belgique",
+    "correct": true
+   },
+   {
+    "flag": "cz",
+    "label": "Tchéquie"
+   },
+   {
+    "flag": "se",
+    "label": "Suède"
+   },
+   {
+    "flag": "gr",
+    "label": "Grèce"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Belgique, dont la capitale est Bruxelles (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q32",
+  "from": "wd-flag-Q32",
+  "concept": "geography.flags.luxembourg",
+  "label": "Drapeau du Luxembourg",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Luxembourg ?",
+  "options": [
+   {
+    "flag": "lu",
+    "label": "Luxembourg",
+    "correct": true
+   },
+   {
+    "flag": "me",
+    "label": "Monténégro"
+   },
+   {
+    "flag": "mt",
+    "label": "Malte"
+   },
+   {
+    "flag": "is",
+    "label": "Islande"
+   }
+  ],
+  "explanation": "C'est le drapeau du Luxembourg, dont la capitale est Luxembourg (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q33",
+  "from": "wd-flag-Q33",
+  "concept": "geography.flags.finland",
+  "label": "Drapeau de la Finlande",
+  "difficulty": 39,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Finlande ?",
+  "options": [
+   {
+    "flag": "fi",
+    "label": "Finlande",
+    "correct": true
+   },
+   {
+    "flag": "no",
+    "label": "Norvège"
+   },
+   {
+    "flag": "sk",
+    "label": "Slovaquie"
+   },
+   {
+    "flag": "ie",
+    "label": "Irlande"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Finlande, dont la capitale est Helsinki (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q334",
+  "from": "wd-flag-Q334",
+  "concept": "geography.flags.singapore",
+  "label": "Drapeau de Singapour",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Singapour ?",
+  "options": [
+   {
+    "flag": "sg",
+    "label": "Singapour",
+    "correct": true
+   },
+   {
+    "flag": "lb",
+    "label": "Liban"
+   },
+   {
+    "flag": "tm",
+    "label": "Turkménistan"
+   },
+   {
+    "flag": "la",
+    "label": "Laos"
+   }
+  ],
+  "explanation": "C'est le drapeau de Singapour, dont la capitale est Singapour (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q34",
+  "from": "wd-flag-Q34",
+  "concept": "geography.flags.sweden",
+  "label": "Drapeau de la Suède",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Suède ?",
+  "options": [
+   {
+    "flag": "se",
+    "label": "Suède",
+    "correct": true
+   },
+   {
+    "flag": "gr",
+    "label": "Grèce"
+   },
+   {
+    "flag": "pt",
+    "label": "Portugal"
+   },
+   {
+    "flag": "cz",
+    "label": "Tchéquie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Suède, dont la capitale est Stockholm (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q347",
+  "from": "wd-flag-Q347",
+  "concept": "geography.flags.liechtenstein",
+  "label": "Drapeau du Liechtenstein",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Liechtenstein ?",
+  "options": [
+   {
+    "flag": "li",
+    "label": "Liechtenstein",
+    "correct": true
+   },
+   {
+    "flag": "mc",
+    "label": "Monaco"
+   },
+   {
+    "flag": "sm",
+    "label": "Saint-Marin"
+   },
+   {
+    "flag": "ad",
+    "label": "Andorre"
+   }
+  ],
+  "explanation": "C'est le drapeau du Liechtenstein, dont la capitale est Vaduz (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q36",
+  "from": "wd-flag-Q36",
+  "concept": "geography.flags.poland",
+  "label": "Drapeau de la Pologne",
+  "difficulty": 33,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Pologne ?",
+  "options": [
+   {
+    "flag": "pl",
+    "label": "Pologne",
+    "correct": true
+   },
+   {
+    "flag": "ua",
+    "label": "Ukraine"
+   },
+   {
+    "flag": "es",
+    "label": "Espagne"
+   },
+   {
+    "flag": "it",
+    "label": "Italie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Pologne, dont la capitale est Varsovie (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q37",
+  "from": "wd-flag-Q37",
+  "concept": "geography.flags.lithuania",
+  "label": "Drapeau de la Lituanie",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Lituanie ?",
+  "options": [
+   {
+    "flag": "lt",
+    "label": "Lituanie",
+    "correct": true
+   },
+   {
+    "flag": "al",
+    "label": "Albanie"
+   },
+   {
+    "flag": "md",
+    "label": "Moldavie"
+   },
+   {
+    "flag": "ba",
+    "label": "Bosnie-Herzégovine"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Lituanie, dont la capitale est Vilnius (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q38",
+  "from": "wd-flag-Q38",
+  "concept": "geography.flags.italy",
+  "label": "Drapeau de l'Italie",
+  "difficulty": 32,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Italie ?",
+  "options": [
+   {
+    "flag": "it",
+    "label": "Italie",
+    "correct": true
+   },
+   {
+    "flag": "gb",
+    "label": "Royaume-Uni"
+   },
+   {
+    "flag": "fr",
+    "label": "France"
+   },
+   {
+    "flag": "es",
+    "label": "Espagne"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Italie, dont la capitale est Rome (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q39",
+  "from": "wd-flag-Q39",
+  "concept": "geography.flags.switzerland",
+  "label": "Drapeau de la Suisse",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Suisse ?",
+  "options": [
+   {
+    "flag": "ch",
+    "label": "Suisse",
+    "correct": true
+   },
+   {
+    "flag": "by",
+    "label": "Biélorussie"
+   },
+   {
+    "flag": "at",
+    "label": "Autriche"
+   },
+   {
+    "flag": "hu",
+    "label": "Hongrie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Suisse, dont la capitale est Berne (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q398",
+  "from": "wd-flag-Q398",
+  "concept": "geography.flags.bahrain",
+  "label": "Drapeau de Bahreïn",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Bahreïn ?",
+  "options": [
+   {
+    "flag": "bh",
+    "label": "Bahreïn",
+    "correct": true
+   },
+   {
+    "flag": "tl",
+    "label": "Timor oriental"
+   },
+   {
+    "flag": "qa",
+    "label": "Qatar"
+   },
+   {
+    "flag": "am",
+    "label": "Arménie"
+   }
+  ],
+  "explanation": "C'est le drapeau de Bahreïn, dont la capitale est Manama (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q399",
+  "from": "wd-flag-Q399",
+  "concept": "geography.flags.armenia",
+  "label": "Drapeau de l'Arménie",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Arménie ?",
+  "options": [
+   {
+    "flag": "am",
+    "label": "Arménie",
+    "correct": true
+   },
+   {
+    "flag": "qa",
+    "label": "Qatar"
+   },
+   {
+    "flag": "mn",
+    "label": "Mongolie"
+   },
+   {
+    "flag": "kw",
+    "label": "Koweït"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Arménie, dont la capitale est Erevan (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q40",
+  "from": "wd-flag-Q40",
+  "concept": "geography.flags.austria",
+  "label": "Drapeau de l'Autriche",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Autriche ?",
+  "options": [
+   {
+    "flag": "at",
+    "label": "Autriche",
+    "correct": true
+   },
+   {
+    "flag": "by",
+    "label": "Biélorussie"
+   },
+   {
+    "flag": "ch",
+    "label": "Suisse"
+   },
+   {
+    "flag": "hu",
+    "label": "Hongrie"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Autriche, dont la capitale est Vienne (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q403",
+  "from": "wd-flag-Q403",
+  "concept": "geography.flags.serbia",
+  "label": "Drapeau de la Serbie",
+  "difficulty": 38,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Serbie ?",
+  "options": [
+   {
+    "flag": "rs",
+    "label": "Serbie",
+    "correct": true
+   },
+   {
+    "flag": "bg",
+    "label": "Bulgarie"
+   },
+   {
+    "flag": "fi",
+    "label": "Finlande"
+   },
+   {
+    "flag": "no",
+    "label": "Norvège"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Serbie, dont la capitale est Belgrade (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q408",
+  "from": "wd-flag-Q408",
+  "concept": "geography.flags.australia",
+  "label": "Drapeau de l'Australie",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Australie ?",
+  "options": [
+   {
+    "flag": "au",
+    "label": "Australie",
+    "correct": true
+   },
+   {
+    "flag": "pg",
+    "label": "Papouasie-Nouvelle-Guinée"
+   },
+   {
+    "flag": "nz",
+    "label": "Nouvelle-Zélande"
+   },
+   {
+    "flag": "fj",
+    "label": "Fidji"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Australie, dont la capitale est Canberra (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q41",
+  "from": "wd-flag-Q41",
+  "concept": "geography.flags.greece",
+  "label": "Drapeau de la Grèce",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Grèce ?",
+  "options": [
+   {
+    "flag": "gr",
+    "label": "Grèce",
+    "correct": true
+   },
+   {
+    "flag": "se",
+    "label": "Suède"
+   },
+   {
+    "flag": "pt",
+    "label": "Portugal"
+   },
+   {
+    "flag": "cz",
+    "label": "Tchéquie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Grèce, dont la capitale est Athènes (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q414",
+  "from": "wd-flag-Q414",
+  "concept": "geography.flags.argentina",
+  "label": "Drapeau de l'Argentine",
+  "difficulty": 40,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Argentine ?",
+  "options": [
+   {
+    "flag": "ar",
+    "label": "Argentine",
+    "correct": true
+   },
+   {
+    "flag": "co",
+    "label": "Colombie"
+   },
+   {
+    "flag": "pe",
+    "label": "Pérou"
+   },
+   {
+    "flag": "ve",
+    "label": "Venezuela"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Argentine, dont la capitale est Buenos Aires (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q419",
+  "from": "wd-flag-Q419",
+  "concept": "geography.flags.peru",
+  "label": "Drapeau du Pérou",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Pérou ?",
+  "options": [
+   {
+    "flag": "pe",
+    "label": "Pérou",
+    "correct": true
+   },
+   {
+    "flag": "ve",
+    "label": "Venezuela"
+   },
+   {
+    "flag": "ar",
+    "label": "Argentine"
+   },
+   {
+    "flag": "co",
+    "label": "Colombie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Pérou, dont la capitale est Lima (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q423",
+  "from": "wd-flag-Q423",
+  "concept": "geography.flags.north_korea",
+  "label": "Drapeau de la Corée du Nord",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Corée du Nord ?",
+  "options": [
+   {
+    "flag": "kp",
+    "label": "Corée du Nord",
+    "correct": true
+   },
+   {
+    "flag": "ye",
+    "label": "Yémen"
+   },
+   {
+    "flag": "np",
+    "label": "Népal"
+   },
+   {
+    "flag": "sy",
+    "label": "Syrie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Corée du Nord, dont la capitale est Pyongyang (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q424",
+  "from": "wd-flag-Q424",
+  "concept": "geography.flags.cambodia",
+  "label": "Drapeau du Cambodge",
+  "difficulty": 46,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Cambodge ?",
+  "options": [
+   {
+    "flag": "kh",
+    "label": "Cambodge",
+    "correct": true
+   },
+   {
+    "flag": "lk",
+    "label": "Sri Lanka"
+   },
+   {
+    "flag": "sy",
+    "label": "Syrie"
+   },
+   {
+    "flag": "kp",
+    "label": "Corée du Nord"
+   }
+  ],
+  "explanation": "C'est le drapeau du Cambodge, dont la capitale est Phnom Penh (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q45",
+  "from": "wd-flag-Q45",
+  "concept": "geography.flags.portugal",
+  "label": "Drapeau du Portugal",
+  "difficulty": 37,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Portugal ?",
+  "options": [
+   {
+    "flag": "pt",
+    "label": "Portugal",
+    "correct": true
+   },
+   {
+    "flag": "gr",
+    "label": "Grèce"
+   },
+   {
+    "flag": "se",
+    "label": "Suède"
+   },
+   {
+    "flag": "cz",
+    "label": "Tchéquie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Portugal, dont la capitale est Lisbonne (Europe)."
+ },
+ {
+  "key": "img-wd-flag-Q574",
+  "from": "wd-flag-Q574",
+  "concept": "geography.flags.timor_leste",
+  "label": "Drapeau du Timor oriental",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Timor oriental ?",
+  "options": [
+   {
+    "flag": "tl",
+    "label": "Timor oriental",
+    "correct": true
+   },
+   {
+    "flag": "bh",
+    "label": "Bahreïn"
+   },
+   {
+    "flag": "bt",
+    "label": "Bhoutan"
+   },
+   {
+    "flag": "qa",
+    "label": "Qatar"
+   }
+  ],
+  "explanation": "C'est le drapeau du Timor oriental, dont la capitale est Dili (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q657",
+  "from": "wd-flag-Q657",
+  "concept": "geography.flags.chad",
+  "label": "Drapeau du Tchad",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Tchad ?",
+  "options": [
+   {
+    "flag": "td",
+    "label": "Tchad",
+    "correct": true
+   },
+   {
+    "flag": "zm",
+    "label": "Zambie"
+   },
+   {
+    "flag": "mw",
+    "label": "Malawi"
+   },
+   {
+    "flag": "gn",
+    "label": "Guinée"
+   }
+  ],
+  "explanation": "C'est le drapeau du Tchad, dont la capitale est N'Djaména (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q664",
+  "from": "wd-flag-Q664",
+  "concept": "geography.flags.new_zealand",
+  "label": "Drapeau de la Nouvelle-Zélande",
+  "difficulty": 53,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Nouvelle-Zélande ?",
+  "options": [
+   {
+    "flag": "nz",
+    "label": "Nouvelle-Zélande",
+    "correct": true
+   },
+   {
+    "flag": "pg",
+    "label": "Papouasie-Nouvelle-Guinée"
+   },
+   {
+    "flag": "au",
+    "label": "Australie"
+   },
+   {
+    "flag": "fj",
+    "label": "Fidji"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Nouvelle-Zélande, dont la capitale est Wellington (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q668",
+  "from": "wd-flag-Q668",
+  "concept": "geography.flags.india",
+  "label": "Drapeau de l'Inde",
+  "difficulty": 33,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Inde ?",
+  "options": [
+   {
+    "flag": "in",
+    "label": "Inde",
+    "correct": true
+   },
+   {
+    "flag": "cn",
+    "label": "Chine"
+   },
+   {
+    "flag": "id",
+    "label": "Indonésie"
+   },
+   {
+    "flag": "pk",
+    "label": "Pakistan"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Inde, dont la capitale est New Delhi (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q672",
+  "from": "wd-flag-Q672",
+  "concept": "geography.flags.tuvalu",
+  "label": "Drapeau des Tuvalu",
+  "difficulty": 72,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Tuvalu ?",
+  "options": [
+   {
+    "flag": "tv",
+    "label": "Tuvalu",
+    "correct": true
+   },
+   {
+    "flag": "nr",
+    "label": "Nauru"
+   },
+   {
+    "flag": "pw",
+    "label": "Palaos"
+   },
+   {
+    "flag": "mh",
+    "label": "Îles Marshall"
+   }
+  ],
+  "explanation": "C'est le drapeau des Tuvalu, dont la capitale est Funafuti (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q678",
+  "from": "wd-flag-Q678",
+  "concept": "geography.flags.tonga",
+  "label": "Drapeau des Tonga",
+  "difficulty": 65,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Tonga ?",
+  "options": [
+   {
+    "flag": "to",
+    "label": "Tonga",
+    "correct": true
+   },
+   {
+    "flag": "ki",
+    "label": "Kiribati"
+   },
+   {
+    "flag": "fm",
+    "label": "Micronésie"
+   },
+   {
+    "flag": "ws",
+    "label": "Samoa"
+   }
+  ],
+  "explanation": "C'est le drapeau des Tonga, dont la capitale est Nukuʻalofa (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q683",
+  "from": "wd-flag-Q683",
+  "concept": "geography.flags.samoa",
+  "label": "Drapeau des Samoa",
+  "difficulty": 63,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Samoa ?",
+  "options": [
+   {
+    "flag": "ws",
+    "label": "Samoa",
+    "correct": true
+   },
+   {
+    "flag": "ki",
+    "label": "Kiribati"
+   },
+   {
+    "flag": "vu",
+    "label": "Vanuatu"
+   },
+   {
+    "flag": "to",
+    "label": "Tonga"
+   }
+  ],
+  "explanation": "C'est le drapeau des Samoa, dont la capitale est Apia (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q685",
+  "from": "wd-flag-Q685",
+  "concept": "geography.flags.solomon_islands",
+  "label": "Drapeau des Îles Salomon",
+  "difficulty": 59,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Îles Salomon ?",
+  "options": [
+   {
+    "flag": "sb",
+    "label": "Îles Salomon",
+    "correct": true
+   },
+   {
+    "flag": "fj",
+    "label": "Fidji"
+   },
+   {
+    "flag": "vu",
+    "label": "Vanuatu"
+   },
+   {
+    "flag": "ws",
+    "label": "Samoa"
+   }
+  ],
+  "explanation": "C'est le drapeau des Îles Salomon, dont la capitale est Honiara (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q686",
+  "from": "wd-flag-Q686",
+  "concept": "geography.flags.vanuatu",
+  "label": "Drapeau du Vanuatu",
+  "difficulty": 62,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Vanuatu ?",
+  "options": [
+   {
+    "flag": "vu",
+    "label": "Vanuatu",
+    "correct": true
+   },
+   {
+    "flag": "ws",
+    "label": "Samoa"
+   },
+   {
+    "flag": "sb",
+    "label": "Îles Salomon"
+   },
+   {
+    "flag": "ki",
+    "label": "Kiribati"
+   }
+  ],
+  "explanation": "C'est le drapeau du Vanuatu, dont la capitale est Port-Vila (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q691",
+  "from": "wd-flag-Q691",
+  "concept": "geography.flags.papua_new_guinea",
+  "label": "Drapeau de la Papouasie-Nouvelle-Guinée",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Papouasie-Nouvelle-Guinée ?",
+  "options": [
+   {
+    "flag": "pg",
+    "label": "Papouasie-Nouvelle-Guinée",
+    "correct": true
+   },
+   {
+    "flag": "nz",
+    "label": "Nouvelle-Zélande"
+   },
+   {
+    "flag": "au",
+    "label": "Australie"
+   },
+   {
+    "flag": "fj",
+    "label": "Fidji"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Papouasie-Nouvelle-Guinée, dont la capitale est Port Moresby (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q695",
+  "from": "wd-flag-Q695",
+  "concept": "geography.flags.palau",
+  "label": "Drapeau des Palaos",
+  "difficulty": 70,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Palaos ?",
+  "options": [
+   {
+    "flag": "pw",
+    "label": "Palaos",
+    "correct": true
+   },
+   {
+    "flag": "nr",
+    "label": "Nauru"
+   },
+   {
+    "flag": "tv",
+    "label": "Tuvalu"
+   },
+   {
+    "flag": "mh",
+    "label": "Îles Marshall"
+   }
+  ],
+  "explanation": "C'est le drapeau des Palaos, dont la capitale est Ngerulmud (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q697",
+  "from": "wd-flag-Q697",
+  "concept": "geography.flags.nauru",
+  "label": "Drapeau de Nauru",
+  "difficulty": 71,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Nauru ?",
+  "options": [
+   {
+    "flag": "nr",
+    "label": "Nauru",
+    "correct": true
+   },
+   {
+    "flag": "tv",
+    "label": "Tuvalu"
+   },
+   {
+    "flag": "pw",
+    "label": "Palaos"
+   },
+   {
+    "flag": "mh",
+    "label": "Îles Marshall"
+   }
+  ],
+  "explanation": "C'est le drapeau de Nauru, dont la capitale est Yaren (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q702",
+  "from": "wd-flag-Q702",
+  "concept": "geography.flags.federated_states_of_micronesia",
+  "label": "Drapeau de la Micronésie",
+  "difficulty": 66,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Micronésie ?",
+  "options": [
+   {
+    "flag": "fm",
+    "label": "Micronésie",
+    "correct": true
+   },
+   {
+    "flag": "to",
+    "label": "Tonga"
+   },
+   {
+    "flag": "mh",
+    "label": "Îles Marshall"
+   },
+   {
+    "flag": "ki",
+    "label": "Kiribati"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Micronésie, dont la capitale est Palikir (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q709",
+  "from": "wd-flag-Q709",
+  "concept": "geography.flags.marshall_islands",
+  "label": "Drapeau des Îles Marshall",
+  "difficulty": 67,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Îles Marshall ?",
+  "options": [
+   {
+    "flag": "mh",
+    "label": "Îles Marshall",
+    "correct": true
+   },
+   {
+    "flag": "fm",
+    "label": "Micronésie"
+   },
+   {
+    "flag": "to",
+    "label": "Tonga"
+   },
+   {
+    "flag": "pw",
+    "label": "Palaos"
+   }
+  ],
+  "explanation": "C'est le drapeau des Îles Marshall, dont la capitale est Majuro (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q710",
+  "from": "wd-flag-Q710",
+  "concept": "geography.flags.kiribati",
+  "label": "Drapeau des Kiribati",
+  "difficulty": 64,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Kiribati ?",
+  "options": [
+   {
+    "flag": "ki",
+    "label": "Kiribati",
+    "correct": true
+   },
+   {
+    "flag": "to",
+    "label": "Tonga"
+   },
+   {
+    "flag": "ws",
+    "label": "Samoa"
+   },
+   {
+    "flag": "fm",
+    "label": "Micronésie"
+   }
+  ],
+  "explanation": "C'est le drapeau des Kiribati, dont la capitale est Tarawa-Sud (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q711",
+  "from": "wd-flag-Q711",
+  "concept": "geography.flags.mongolia",
+  "label": "Drapeau de la Mongolie",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Mongolie ?",
+  "options": [
+   {
+    "flag": "mn",
+    "label": "Mongolie",
+    "correct": true
+   },
+   {
+    "flag": "am",
+    "label": "Arménie"
+   },
+   {
+    "flag": "qa",
+    "label": "Qatar"
+   },
+   {
+    "flag": "kw",
+    "label": "Koweït"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Mongolie, dont la capitale est Oulan-Bator (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q712",
+  "from": "wd-flag-Q712",
+  "concept": "geography.flags.fiji",
+  "label": "Drapeau des Fidji",
+  "difficulty": 58,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Fidji ?",
+  "options": [
+   {
+    "flag": "fj",
+    "label": "Fidji",
+    "correct": true
+   },
+   {
+    "flag": "sb",
+    "label": "Îles Salomon"
+   },
+   {
+    "flag": "vu",
+    "label": "Vanuatu"
+   },
+   {
+    "flag": "ws",
+    "label": "Samoa"
+   }
+  ],
+  "explanation": "C'est le drapeau des Fidji, dont la capitale est Suva (Océanie)."
+ },
+ {
+  "key": "img-wd-flag-Q717",
+  "from": "wd-flag-Q717",
+  "concept": "geography.flags.venezuela",
+  "label": "Drapeau du Venezuela",
+  "difficulty": 42,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Venezuela ?",
+  "options": [
+   {
+    "flag": "ve",
+    "label": "Venezuela",
+    "correct": true
+   },
+   {
+    "flag": "pe",
+    "label": "Pérou"
+   },
+   {
+    "flag": "ar",
+    "label": "Argentine"
+   },
+   {
+    "flag": "cl",
+    "label": "Chili"
+   }
+  ],
+  "explanation": "C'est le drapeau du Venezuela, dont la capitale est Caracas (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q730",
+  "from": "wd-flag-Q730",
+  "concept": "geography.flags.suriname",
+  "label": "Drapeau du Suriname",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Suriname ?",
+  "options": [
+   {
+    "flag": "sr",
+    "label": "Suriname",
+    "correct": true
+   },
+   {
+    "flag": "gy",
+    "label": "Guyana"
+   },
+   {
+    "flag": "uy",
+    "label": "Uruguay"
+   },
+   {
+    "flag": "py",
+    "label": "Paraguay"
+   }
+  ],
+  "explanation": "C'est le drapeau du Suriname, dont la capitale est Paramaribo (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q733",
+  "from": "wd-flag-Q733",
+  "concept": "geography.flags.paraguay",
+  "label": "Drapeau du Paraguay",
+  "difficulty": 46,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Paraguay ?",
+  "options": [
+   {
+    "flag": "py",
+    "label": "Paraguay",
+    "correct": true
+   },
+   {
+    "flag": "bo",
+    "label": "Bolivie"
+   },
+   {
+    "flag": "uy",
+    "label": "Uruguay"
+   },
+   {
+    "flag": "ec",
+    "label": "Équateur"
+   }
+  ],
+  "explanation": "C'est le drapeau du Paraguay, dont la capitale est Asuncion (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q734",
+  "from": "wd-flag-Q734",
+  "concept": "geography.flags.guyana",
+  "label": "Drapeau du Guyana",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Guyana ?",
+  "options": [
+   {
+    "flag": "gy",
+    "label": "Guyana",
+    "correct": true
+   },
+   {
+    "flag": "sr",
+    "label": "Suriname"
+   },
+   {
+    "flag": "uy",
+    "label": "Uruguay"
+   },
+   {
+    "flag": "py",
+    "label": "Paraguay"
+   }
+  ],
+  "explanation": "C'est le drapeau du Guyana, dont la capitale est Georgetown (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q736",
+  "from": "wd-flag-Q736",
+  "concept": "geography.flags.ecuador",
+  "label": "Drapeau de l'Équateur",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Équateur ?",
+  "options": [
+   {
+    "flag": "ec",
+    "label": "Équateur",
+    "correct": true
+   },
+   {
+    "flag": "cl",
+    "label": "Chili"
+   },
+   {
+    "flag": "bo",
+    "label": "Bolivie"
+   },
+   {
+    "flag": "ve",
+    "label": "Venezuela"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Équateur, dont la capitale est Quito (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q739",
+  "from": "wd-flag-Q739",
+  "concept": "geography.flags.colombia",
+  "label": "Drapeau de la Colombie",
+  "difficulty": 40,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Colombie ?",
+  "options": [
+   {
+    "flag": "co",
+    "label": "Colombie",
+    "correct": true
+   },
+   {
+    "flag": "ar",
+    "label": "Argentine"
+   },
+   {
+    "flag": "pe",
+    "label": "Pérou"
+   },
+   {
+    "flag": "ve",
+    "label": "Venezuela"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Colombie, dont la capitale est Bogota (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q750",
+  "from": "wd-flag-Q750",
+  "concept": "geography.flags.bolivia",
+  "label": "Drapeau de la Bolivie",
+  "difficulty": 44,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Bolivie ?",
+  "options": [
+   {
+    "flag": "bo",
+    "label": "Bolivie",
+    "correct": true
+   },
+   {
+    "flag": "ec",
+    "label": "Équateur"
+   },
+   {
+    "flag": "cl",
+    "label": "Chili"
+   },
+   {
+    "flag": "py",
+    "label": "Paraguay"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Bolivie (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q754",
+  "from": "wd-flag-Q754",
+  "concept": "geography.flags.trinidad_and_tobago",
+  "label": "Drapeau de Trinité-et-Tobago",
+  "difficulty": 47,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Trinité-et-Tobago ?",
+  "options": [
+   {
+    "flag": "tt",
+    "label": "Trinité-et-Tobago",
+    "correct": true
+   },
+   {
+    "flag": "jm",
+    "label": "Jamaïque"
+   },
+   {
+    "flag": "bz",
+    "label": "Belize"
+   },
+   {
+    "flag": "pa",
+    "label": "Panama"
+   }
+  ],
+  "explanation": "C'est le drapeau de Trinité-et-Tobago, dont la capitale est Port-d'Espagne (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q757",
+  "from": "wd-flag-Q757",
+  "concept": "geography.flags.saint_vincent_and_the_grenadines",
+  "label": "Drapeau de Saint-Vincent-et-les-Grenadines",
+  "difficulty": 55,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Saint-Vincent-et-les-Grenadines ?",
+  "options": [
+   {
+    "flag": "vc",
+    "label": "Saint-Vincent-et-les-Grenadines",
+    "correct": true
+   },
+   {
+    "flag": "gd",
+    "label": "Grenade"
+   },
+   {
+    "flag": "ag",
+    "label": "Antigua-et-Barbuda"
+   },
+   {
+    "flag": "dm",
+    "label": "Dominique"
+   }
+  ],
+  "explanation": "C'est le drapeau de Saint-Vincent-et-les-Grenadines, dont la capitale est Kingstown (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q760",
+  "from": "wd-flag-Q760",
+  "concept": "geography.flags.saint_lucia",
+  "label": "Drapeau de Sainte-Lucie",
+  "difficulty": 53,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Sainte-Lucie ?",
+  "options": [
+   {
+    "flag": "lc",
+    "label": "Sainte-Lucie",
+    "correct": true
+   },
+   {
+    "flag": "gd",
+    "label": "Grenade"
+   },
+   {
+    "flag": "vc",
+    "label": "Saint-Vincent-et-les-Grenadines"
+   },
+   {
+    "flag": "ag",
+    "label": "Antigua-et-Barbuda"
+   }
+  ],
+  "explanation": "C'est le drapeau de Sainte-Lucie, dont la capitale est Castries (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q763",
+  "from": "wd-flag-Q763",
+  "concept": "geography.flags.saint_kitts_and_nevis",
+  "label": "Drapeau de Saint-Christophe-et-Niévès",
+  "difficulty": 57,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Saint-Christophe-et-Niévès ?",
+  "options": [
+   {
+    "flag": "kn",
+    "label": "Saint-Christophe-et-Niévès",
+    "correct": true
+   },
+   {
+    "flag": "dm",
+    "label": "Dominique"
+   },
+   {
+    "flag": "ag",
+    "label": "Antigua-et-Barbuda"
+   },
+   {
+    "flag": "vc",
+    "label": "Saint-Vincent-et-les-Grenadines"
+   }
+  ],
+  "explanation": "C'est le drapeau de Saint-Christophe-et-Niévès, dont la capitale est Basseterre (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q766",
+  "from": "wd-flag-Q766",
+  "concept": "geography.flags.jamaica",
+  "label": "Drapeau de la Jamaïque",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Jamaïque ?",
+  "options": [
+   {
+    "flag": "jm",
+    "label": "Jamaïque",
+    "correct": true
+   },
+   {
+    "flag": "pa",
+    "label": "Panama"
+   },
+   {
+    "flag": "ni",
+    "label": "Nicaragua"
+   },
+   {
+    "flag": "cr",
+    "label": "Costa Rica"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Jamaïque, dont la capitale est Kingston (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q769",
+  "from": "wd-flag-Q769",
+  "concept": "geography.flags.grenada",
+  "label": "Drapeau de la Grenade",
+  "difficulty": 55,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Grenade ?",
+  "options": [
+   {
+    "flag": "gd",
+    "label": "Grenade",
+    "correct": true
+   },
+   {
+    "flag": "vc",
+    "label": "Saint-Vincent-et-les-Grenadines"
+   },
+   {
+    "flag": "ag",
+    "label": "Antigua-et-Barbuda"
+   },
+   {
+    "flag": "lc",
+    "label": "Sainte-Lucie"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Grenade, dont la capitale est Saint-Georges (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q77",
+  "from": "wd-flag-Q77",
+  "concept": "geography.flags.uruguay",
+  "label": "Drapeau de l'Uruguay",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Uruguay ?",
+  "options": [
+   {
+    "flag": "uy",
+    "label": "Uruguay",
+    "correct": true
+   },
+   {
+    "flag": "py",
+    "label": "Paraguay"
+   },
+   {
+    "flag": "bo",
+    "label": "Bolivie"
+   },
+   {
+    "flag": "gy",
+    "label": "Guyana"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Uruguay, dont la capitale est Montevideo (Amérique du Sud)."
+ },
+ {
+  "key": "img-wd-flag-Q774",
+  "from": "wd-flag-Q774",
+  "concept": "geography.flags.guatemala",
+  "label": "Drapeau du Guatemala",
+  "difficulty": 39,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Guatemala ?",
+  "options": [
+   {
+    "flag": "gt",
+    "label": "Guatemala",
+    "correct": true
+   },
+   {
+    "flag": "cu",
+    "label": "Cuba"
+   },
+   {
+    "flag": "ht",
+    "label": "Haïti"
+   },
+   {
+    "flag": "do",
+    "label": "République dominicaine"
+   }
+  ],
+  "explanation": "C'est le drapeau du Guatemala, dont la capitale est Guatemala (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q778",
+  "from": "wd-flag-Q778",
+  "concept": "geography.flags.the_bahamas",
+  "label": "Drapeau des Bahamas",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Bahamas ?",
+  "options": [
+   {
+    "flag": "bs",
+    "label": "Bahamas",
+    "correct": true
+   },
+   {
+    "flag": "bz",
+    "label": "Belize"
+   },
+   {
+    "flag": "bb",
+    "label": "Barbade"
+   },
+   {
+    "flag": "lc",
+    "label": "Sainte-Lucie"
+   }
+  ],
+  "explanation": "C'est le drapeau des Bahamas, dont la capitale est Nassau (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q781",
+  "from": "wd-flag-Q781",
+  "concept": "geography.flags.antigua_and_barbuda",
+  "label": "Drapeau d'Antigua-et-Barbuda",
+  "difficulty": 55,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau d'Antigua-et-Barbuda ?",
+  "options": [
+   {
+    "flag": "ag",
+    "label": "Antigua-et-Barbuda",
+    "correct": true
+   },
+   {
+    "flag": "vc",
+    "label": "Saint-Vincent-et-les-Grenadines"
+   },
+   {
+    "flag": "gd",
+    "label": "Grenade"
+   },
+   {
+    "flag": "dm",
+    "label": "Dominique"
+   }
+  ],
+  "explanation": "C'est le drapeau d'Antigua-et-Barbuda, dont la capitale est Saint John's (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q783",
+  "from": "wd-flag-Q783",
+  "concept": "geography.flags.honduras",
+  "label": "Drapeau du Honduras",
+  "difficulty": 42,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Honduras ?",
+  "options": [
+   {
+    "flag": "hn",
+    "label": "Honduras",
+    "correct": true
+   },
+   {
+    "flag": "do",
+    "label": "République dominicaine"
+   },
+   {
+    "flag": "ht",
+    "label": "Haïti"
+   },
+   {
+    "flag": "cu",
+    "label": "Cuba"
+   }
+  ],
+  "explanation": "C'est le drapeau du Honduras, dont la capitale est Tegucigalpa (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q784",
+  "from": "wd-flag-Q784",
+  "concept": "geography.flags.dominica",
+  "label": "Drapeau de la Dominique",
+  "difficulty": 56,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Dominique ?",
+  "options": [
+   {
+    "flag": "dm",
+    "label": "Dominique",
+    "correct": true
+   },
+   {
+    "flag": "ag",
+    "label": "Antigua-et-Barbuda"
+   },
+   {
+    "flag": "vc",
+    "label": "Saint-Vincent-et-les-Grenadines"
+   },
+   {
+    "flag": "gd",
+    "label": "Grenade"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Dominique, dont la capitale est Roseau (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q786",
+  "from": "wd-flag-Q786",
+  "concept": "geography.flags.dominican_republic",
+  "label": "Drapeau de la République dominicaine",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la République dominicaine ?",
+  "options": [
+   {
+    "flag": "do",
+    "label": "République dominicaine",
+    "correct": true
+   },
+   {
+    "flag": "ht",
+    "label": "Haïti"
+   },
+   {
+    "flag": "cu",
+    "label": "Cuba"
+   },
+   {
+    "flag": "hn",
+    "label": "Honduras"
+   }
+  ],
+  "explanation": "C'est le drapeau de la République dominicaine, dont la capitale est Saint-Domingue (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q79",
+  "from": "wd-flag-Q79",
+  "concept": "geography.flags.egypt",
+  "label": "Drapeau de l'Égypte",
+  "difficulty": 46,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Égypte ?",
+  "options": [
+   {
+    "flag": "eg",
+    "label": "Égypte",
+    "correct": true
+   },
+   {
+    "flag": "cd",
+    "label": "République démocratique du Congo"
+   },
+   {
+    "flag": "et",
+    "label": "Éthiopie"
+   },
+   {
+    "flag": "ng",
+    "label": "Nigeria"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Égypte, dont la capitale est Le Caire (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q790",
+  "from": "wd-flag-Q790",
+  "concept": "geography.flags.haiti",
+  "label": "Drapeau d'Haïti",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Haïti ?",
+  "options": [
+   {
+    "flag": "ht",
+    "label": "Haïti",
+    "correct": true
+   },
+   {
+    "flag": "cu",
+    "label": "Cuba"
+   },
+   {
+    "flag": "do",
+    "label": "République dominicaine"
+   },
+   {
+    "flag": "hn",
+    "label": "Honduras"
+   }
+  ],
+  "explanation": "C'est le drapeau d'Haïti, dont la capitale est Port-au-Prince (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q792",
+  "from": "wd-flag-Q792",
+  "concept": "geography.flags.el_salvador",
+  "label": "Drapeau du Salvador",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Salvador ?",
+  "options": [
+   {
+    "flag": "sv",
+    "label": "Salvador",
+    "correct": true
+   },
+   {
+    "flag": "cr",
+    "label": "Costa Rica"
+   },
+   {
+    "flag": "ni",
+    "label": "Nicaragua"
+   },
+   {
+    "flag": "pa",
+    "label": "Panama"
+   }
+  ],
+  "explanation": "C'est le drapeau du Salvador, dont la capitale est San Salvador (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q794",
+  "from": "wd-flag-Q794",
+  "concept": "geography.flags.iran",
+  "label": "Drapeau de l'Iran",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Iran ?",
+  "options": [
+   {
+    "flag": "ir",
+    "label": "Iran",
+    "correct": true
+   },
+   {
+    "flag": "vn",
+    "label": "Viêt Nam"
+   },
+   {
+    "flag": "ph",
+    "label": "Philippines"
+   },
+   {
+    "flag": "jp",
+    "label": "Japon"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Iran, dont la capitale est Téhéran (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q796",
+  "from": "wd-flag-Q796",
+  "concept": "geography.flags.iraq",
+  "label": "Drapeau de l'Irak",
+  "difficulty": 44,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Irak ?",
+  "options": [
+   {
+    "flag": "iq",
+    "label": "Irak",
+    "correct": true
+   },
+   {
+    "flag": "af",
+    "label": "Afghanistan"
+   },
+   {
+    "flag": "uz",
+    "label": "Ouzbékistan"
+   },
+   {
+    "flag": "my",
+    "label": "Malaisie"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Irak, dont la capitale est Bagdad (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q800",
+  "from": "wd-flag-Q800",
+  "concept": "geography.flags.costa_rica",
+  "label": "Drapeau du Costa Rica",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Costa Rica ?",
+  "options": [
+   {
+    "flag": "cr",
+    "label": "Costa Rica",
+    "correct": true
+   },
+   {
+    "flag": "ni",
+    "label": "Nicaragua"
+   },
+   {
+    "flag": "sv",
+    "label": "Salvador"
+   },
+   {
+    "flag": "pa",
+    "label": "Panama"
+   }
+  ],
+  "explanation": "C'est le drapeau du Costa Rica, dont la capitale est San José (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q801",
+  "from": "wd-flag-Q801",
+  "concept": "geography.flags.israel",
+  "label": "Drapeau d'Israël",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau d'Israël ?",
+  "options": [
+   {
+    "flag": "il",
+    "label": "Israël",
+    "correct": true
+   },
+   {
+    "flag": "ae",
+    "label": "Émirats arabes unis"
+   },
+   {
+    "flag": "az",
+    "label": "Azerbaïdjan"
+   },
+   {
+    "flag": "tj",
+    "label": "Tadjikistan"
+   }
+  ],
+  "explanation": "C'est le drapeau d'Israël, dont la capitale est Jérusalem (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q804",
+  "from": "wd-flag-Q804",
+  "concept": "geography.flags.panama",
+  "label": "Drapeau du Panama",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Panama ?",
+  "options": [
+   {
+    "flag": "pa",
+    "label": "Panama",
+    "correct": true
+   },
+   {
+    "flag": "ni",
+    "label": "Nicaragua"
+   },
+   {
+    "flag": "cr",
+    "label": "Costa Rica"
+   },
+   {
+    "flag": "sv",
+    "label": "Salvador"
+   }
+  ],
+  "explanation": "C'est le drapeau du Panama, dont la capitale est Panama (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q805",
+  "from": "wd-flag-Q805",
+  "concept": "geography.flags.yemen",
+  "label": "Drapeau du Yémen",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Yémen ?",
+  "options": [
+   {
+    "flag": "ye",
+    "label": "Yémen",
+    "correct": true
+   },
+   {
+    "flag": "np",
+    "label": "Népal"
+   },
+   {
+    "flag": "kp",
+    "label": "Corée du Nord"
+   },
+   {
+    "flag": "sa",
+    "label": "Arabie saoudite"
+   }
+  ],
+  "explanation": "C'est le drapeau du Yémen (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q810",
+  "from": "wd-flag-Q810",
+  "concept": "geography.flags.jordan",
+  "label": "Drapeau de la Jordanie",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Jordanie ?",
+  "options": [
+   {
+    "flag": "jo",
+    "label": "Jordanie",
+    "correct": true
+   },
+   {
+    "flag": "az",
+    "label": "Azerbaïdjan"
+   },
+   {
+    "flag": "ae",
+    "label": "Émirats arabes unis"
+   },
+   {
+    "flag": "il",
+    "label": "Israël"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Jordanie, dont la capitale est Amman (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q811",
+  "from": "wd-flag-Q811",
+  "concept": "geography.flags.nicaragua",
+  "label": "Drapeau du Nicaragua",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Nicaragua ?",
+  "options": [
+   {
+    "flag": "ni",
+    "label": "Nicaragua",
+    "correct": true
+   },
+   {
+    "flag": "cr",
+    "label": "Costa Rica"
+   },
+   {
+    "flag": "pa",
+    "label": "Panama"
+   },
+   {
+    "flag": "sv",
+    "label": "Salvador"
+   }
+  ],
+  "explanation": "C'est le drapeau du Nicaragua, dont la capitale est Managua (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q813",
+  "from": "wd-flag-Q813",
+  "concept": "geography.flags.kyrgyzstan",
+  "label": "Drapeau du Kirghizistan",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Kirghizistan ?",
+  "options": [
+   {
+    "flag": "kg",
+    "label": "Kirghizistan",
+    "correct": true
+   },
+   {
+    "flag": "la",
+    "label": "Laos"
+   },
+   {
+    "flag": "tm",
+    "label": "Turkménistan"
+   },
+   {
+    "flag": "lb",
+    "label": "Liban"
+   }
+  ],
+  "explanation": "C'est le drapeau du Kirghizistan, dont la capitale est Bichkek (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q817",
+  "from": "wd-flag-Q817",
+  "concept": "geography.flags.kuwait",
+  "label": "Drapeau du Koweït",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Koweït ?",
+  "options": [
+   {
+    "flag": "kw",
+    "label": "Koweït",
+    "correct": true
+   },
+   {
+    "flag": "om",
+    "label": "Oman"
+   },
+   {
+    "flag": "mn",
+    "label": "Mongolie"
+   },
+   {
+    "flag": "sg",
+    "label": "Singapour"
+   }
+  ],
+  "explanation": "C'est le drapeau du Koweït, dont la capitale est Koweït (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q819",
+  "from": "wd-flag-Q819",
+  "concept": "geography.flags.laos",
+  "label": "Drapeau du Laos",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Laos ?",
+  "options": [
+   {
+    "flag": "la",
+    "label": "Laos",
+    "correct": true
+   },
+   {
+    "flag": "kg",
+    "label": "Kirghizistan"
+   },
+   {
+    "flag": "tm",
+    "label": "Turkménistan"
+   },
+   {
+    "flag": "lb",
+    "label": "Liban"
+   }
+  ],
+  "explanation": "C'est le drapeau du Laos, dont la capitale est Vientiane (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q822",
+  "from": "wd-flag-Q822",
+  "concept": "geography.flags.lebanon",
+  "label": "Drapeau du Liban",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Liban ?",
+  "options": [
+   {
+    "flag": "lb",
+    "label": "Liban",
+    "correct": true
+   },
+   {
+    "flag": "tm",
+    "label": "Turkménistan"
+   },
+   {
+    "flag": "sg",
+    "label": "Singapour"
+   },
+   {
+    "flag": "la",
+    "label": "Laos"
+   }
+  ],
+  "explanation": "C'est le drapeau du Liban, dont la capitale est Beyrouth (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q826",
+  "from": "wd-flag-Q826",
+  "concept": "geography.flags.maldives",
+  "label": "Drapeau des Maldives",
+  "difficulty": 58,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Maldives ?",
+  "options": [
+   {
+    "flag": "mv",
+    "label": "Maldives",
+    "correct": true
+   },
+   {
+    "flag": "bn",
+    "label": "Brunei"
+   },
+   {
+    "flag": "bt",
+    "label": "Bhoutan"
+   },
+   {
+    "flag": "tl",
+    "label": "Timor oriental"
+   }
+  ],
+  "explanation": "C'est le drapeau des Maldives, dont la capitale est Malé (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q833",
+  "from": "wd-flag-Q833",
+  "concept": "geography.flags.malaysia",
+  "label": "Drapeau de la Malaisie",
+  "difficulty": 44,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Malaisie ?",
+  "options": [
+   {
+    "flag": "my",
+    "label": "Malaisie",
+    "correct": true
+   },
+   {
+    "flag": "uz",
+    "label": "Ouzbékistan"
+   },
+   {
+    "flag": "sa",
+    "label": "Arabie saoudite"
+   },
+   {
+    "flag": "iq",
+    "label": "Irak"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Malaisie, dont la capitale est Kuala Lumpur (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q836",
+  "from": "wd-flag-Q836",
+  "concept": "geography.flags.myanmar",
+  "label": "Drapeau de la Birmanie",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Birmanie ?",
+  "options": [
+   {
+    "flag": "mm",
+    "label": "Birmanie",
+    "correct": true
+   },
+   {
+    "flag": "kr",
+    "label": "Corée du Sud"
+   },
+   {
+    "flag": "th",
+    "label": "Thaïlande"
+   },
+   {
+    "flag": "af",
+    "label": "Afghanistan"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Birmanie, dont la capitale est Naypyidaw (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q837",
+  "from": "wd-flag-Q837",
+  "concept": "geography.flags.nepal",
+  "label": "Drapeau du Népal",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Népal ?",
+  "options": [
+   {
+    "flag": "np",
+    "label": "Népal",
+    "correct": true
+   },
+   {
+    "flag": "ye",
+    "label": "Yémen"
+   },
+   {
+    "flag": "kp",
+    "label": "Corée du Nord"
+   },
+   {
+    "flag": "sa",
+    "label": "Arabie saoudite"
+   }
+  ],
+  "explanation": "C'est le drapeau du Népal, dont la capitale est Katmandou (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q842",
+  "from": "wd-flag-Q842",
+  "concept": "geography.flags.oman",
+  "label": "Drapeau d'Oman",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau d'Oman ?",
+  "options": [
+   {
+    "flag": "om",
+    "label": "Oman",
+    "correct": true
+   },
+   {
+    "flag": "kw",
+    "label": "Koweït"
+   },
+   {
+    "flag": "sg",
+    "label": "Singapour"
+   },
+   {
+    "flag": "lb",
+    "label": "Liban"
+   }
+  ],
+  "explanation": "C'est le drapeau d'Oman, dont la capitale est Mascate (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q843",
+  "from": "wd-flag-Q843",
+  "concept": "geography.flags.pakistan",
+  "label": "Drapeau du Pakistan",
+  "difficulty": 39,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Pakistan ?",
+  "options": [
+   {
+    "flag": "pk",
+    "label": "Pakistan",
+    "correct": true
+   },
+   {
+    "flag": "id",
+    "label": "Indonésie"
+   },
+   {
+    "flag": "bd",
+    "label": "Bangladesh"
+   },
+   {
+    "flag": "jp",
+    "label": "Japon"
+   }
+  ],
+  "explanation": "C'est le drapeau du Pakistan (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q846",
+  "from": "wd-flag-Q846",
+  "concept": "geography.flags.qatar",
+  "label": "Drapeau du Qatar",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Qatar ?",
+  "options": [
+   {
+    "flag": "qa",
+    "label": "Qatar",
+    "correct": true
+   },
+   {
+    "flag": "am",
+    "label": "Arménie"
+   },
+   {
+    "flag": "mn",
+    "label": "Mongolie"
+   },
+   {
+    "flag": "bh",
+    "label": "Bahreïn"
+   }
+  ],
+  "explanation": "C'est le drapeau du Qatar, dont la capitale est Doha (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q851",
+  "from": "wd-flag-Q851",
+  "concept": "geography.flags.saudi_arabia",
+  "label": "Drapeau de l'Arabie saoudite",
+  "difficulty": 44,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Arabie saoudite ?",
+  "options": [
+   {
+    "flag": "sa",
+    "label": "Arabie saoudite",
+    "correct": true
+   },
+   {
+    "flag": "my",
+    "label": "Malaisie"
+   },
+   {
+    "flag": "uz",
+    "label": "Ouzbékistan"
+   },
+   {
+    "flag": "np",
+    "label": "Népal"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Arabie saoudite, dont la capitale est Riyad (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q854",
+  "from": "wd-flag-Q854",
+  "concept": "geography.flags.sri_lanka",
+  "label": "Drapeau du Sri Lanka",
+  "difficulty": 46,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Sri Lanka ?",
+  "options": [
+   {
+    "flag": "lk",
+    "label": "Sri Lanka",
+    "correct": true
+   },
+   {
+    "flag": "sy",
+    "label": "Syrie"
+   },
+   {
+    "flag": "kh",
+    "label": "Cambodge"
+   },
+   {
+    "flag": "kp",
+    "label": "Corée du Nord"
+   }
+  ],
+  "explanation": "C'est le drapeau du Sri Lanka (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q858",
+  "from": "wd-flag-Q858",
+  "concept": "geography.flags.syria",
+  "label": "Drapeau de la Syrie",
+  "difficulty": 45,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Syrie ?",
+  "options": [
+   {
+    "flag": "sy",
+    "label": "Syrie",
+    "correct": true
+   },
+   {
+    "flag": "kp",
+    "label": "Corée du Nord"
+   },
+   {
+    "flag": "lk",
+    "label": "Sri Lanka"
+   },
+   {
+    "flag": "ye",
+    "label": "Yémen"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Syrie, dont la capitale est Damas (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q863",
+  "from": "wd-flag-Q863",
+  "concept": "geography.flags.tajikistan",
+  "label": "Drapeau du Tadjikistan",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Tadjikistan ?",
+  "options": [
+   {
+    "flag": "tj",
+    "label": "Tadjikistan",
+    "correct": true
+   },
+   {
+    "flag": "il",
+    "label": "Israël"
+   },
+   {
+    "flag": "ae",
+    "label": "Émirats arabes unis"
+   },
+   {
+    "flag": "az",
+    "label": "Azerbaïdjan"
+   }
+  ],
+  "explanation": "C'est le drapeau du Tadjikistan, dont la capitale est Douchanbé (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q869",
+  "from": "wd-flag-Q869",
+  "concept": "geography.flags.thailand",
+  "label": "Drapeau de la Thaïlande",
+  "difficulty": 42,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Thaïlande ?",
+  "options": [
+   {
+    "flag": "th",
+    "label": "Thaïlande",
+    "correct": true
+   },
+   {
+    "flag": "mm",
+    "label": "Birmanie"
+   },
+   {
+    "flag": "kr",
+    "label": "Corée du Sud"
+   },
+   {
+    "flag": "ir",
+    "label": "Iran"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Thaïlande, dont la capitale est Bangkok (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q874",
+  "from": "wd-flag-Q874",
+  "concept": "geography.flags.turkmenistan",
+  "label": "Drapeau du Turkménistan",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Turkménistan ?",
+  "options": [
+   {
+    "flag": "tm",
+    "label": "Turkménistan",
+    "correct": true
+   },
+   {
+    "flag": "lb",
+    "label": "Liban"
+   },
+   {
+    "flag": "sg",
+    "label": "Singapour"
+   },
+   {
+    "flag": "la",
+    "label": "Laos"
+   }
+  ],
+  "explanation": "C'est le drapeau du Turkménistan, dont la capitale est Achgabat (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q878",
+  "from": "wd-flag-Q878",
+  "concept": "geography.flags.united_arab_emirates",
+  "label": "Drapeau des Émirats arabes unis",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Émirats arabes unis ?",
+  "options": [
+   {
+    "flag": "ae",
+    "label": "Émirats arabes unis",
+    "correct": true
+   },
+   {
+    "flag": "il",
+    "label": "Israël"
+   },
+   {
+    "flag": "az",
+    "label": "Azerbaïdjan"
+   },
+   {
+    "flag": "tj",
+    "label": "Tadjikistan"
+   }
+  ],
+  "explanation": "C'est le drapeau des Émirats arabes unis, dont la capitale est Abou Dabi (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q881",
+  "from": "wd-flag-Q881",
+  "concept": "geography.flags.vietnam",
+  "label": "Drapeau du Viêt Nam",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Viêt Nam ?",
+  "options": [
+   {
+    "flag": "vn",
+    "label": "Viêt Nam",
+    "correct": true
+   },
+   {
+    "flag": "ir",
+    "label": "Iran"
+   },
+   {
+    "flag": "ph",
+    "label": "Philippines"
+   },
+   {
+    "flag": "jp",
+    "label": "Japon"
+   }
+  ],
+  "explanation": "C'est le drapeau du Viêt Nam, dont la capitale est Hanoï (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q884",
+  "from": "wd-flag-Q884",
+  "concept": "geography.flags.south_korea",
+  "label": "Drapeau de la Corée du Sud",
+  "difficulty": 43,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Corée du Sud ?",
+  "options": [
+   {
+    "flag": "kr",
+    "label": "Corée du Sud",
+    "correct": true
+   },
+   {
+    "flag": "mm",
+    "label": "Birmanie"
+   },
+   {
+    "flag": "af",
+    "label": "Afghanistan"
+   },
+   {
+    "flag": "th",
+    "label": "Thaïlande"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Corée du Sud, dont la capitale est Séoul (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q889",
+  "from": "wd-flag-Q889",
+  "concept": "geography.flags.afghanistan",
+  "label": "Drapeau de l'Afghanistan",
+  "difficulty": 44,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Afghanistan ?",
+  "options": [
+   {
+    "flag": "af",
+    "label": "Afghanistan",
+    "correct": true
+   },
+   {
+    "flag": "iq",
+    "label": "Irak"
+   },
+   {
+    "flag": "uz",
+    "label": "Ouzbékistan"
+   },
+   {
+    "flag": "my",
+    "label": "Malaisie"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Afghanistan, dont la capitale est Kaboul (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q902",
+  "from": "wd-flag-Q902",
+  "concept": "geography.flags.bangladesh",
+  "label": "Drapeau du Bangladesh",
+  "difficulty": 39,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Bangladesh ?",
+  "options": [
+   {
+    "flag": "bd",
+    "label": "Bangladesh",
+    "correct": true
+   },
+   {
+    "flag": "pk",
+    "label": "Pakistan"
+   },
+   {
+    "flag": "jp",
+    "label": "Japon"
+   },
+   {
+    "flag": "ph",
+    "label": "Philippines"
+   }
+  ],
+  "explanation": "C'est le drapeau du Bangladesh, dont la capitale est Dacca (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q912",
+  "from": "wd-flag-Q912",
+  "concept": "geography.flags.mali",
+  "label": "Drapeau du Mali",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Mali ?",
+  "options": [
+   {
+    "flag": "ml",
+    "label": "Mali",
+    "correct": true
+   },
+   {
+    "flag": "bf",
+    "label": "Burkina Faso"
+   },
+   {
+    "flag": "ne",
+    "label": "Niger"
+   },
+   {
+    "flag": "zm",
+    "label": "Zambie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Mali, dont la capitale est Bamako (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q916",
+  "from": "wd-flag-Q916",
+  "concept": "geography.flags.angola",
+  "label": "Drapeau de l'Angola",
+  "difficulty": 49,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Angola ?",
+  "options": [
+   {
+    "flag": "ao",
+    "label": "Angola",
+    "correct": true
+   },
+   {
+    "flag": "ma",
+    "label": "Maroc"
+   },
+   {
+    "flag": "sd",
+    "label": "Soudan"
+   },
+   {
+    "flag": "gh",
+    "label": "Ghana"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Angola, dont la capitale est Luanda (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q917",
+  "from": "wd-flag-Q917",
+  "concept": "geography.flags.bhutan",
+  "label": "Drapeau du Bhoutan",
+  "difficulty": 56,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Bhoutan ?",
+  "options": [
+   {
+    "flag": "bt",
+    "label": "Bhoutan",
+    "correct": true
+   },
+   {
+    "flag": "bn",
+    "label": "Brunei"
+   },
+   {
+    "flag": "tl",
+    "label": "Timor oriental"
+   },
+   {
+    "flag": "mv",
+    "label": "Maldives"
+   }
+  ],
+  "explanation": "C'est le drapeau du Bhoutan, dont la capitale est Thimphou (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q921",
+  "from": "wd-flag-Q921",
+  "concept": "geography.flags.brunei",
+  "label": "Drapeau de Brunei",
+  "difficulty": 57,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Brunei ?",
+  "options": [
+   {
+    "flag": "bn",
+    "label": "Brunei",
+    "correct": true
+   },
+   {
+    "flag": "mv",
+    "label": "Maldives"
+   },
+   {
+    "flag": "bt",
+    "label": "Bhoutan"
+   },
+   {
+    "flag": "tl",
+    "label": "Timor oriental"
+   }
+  ],
+  "explanation": "C'est le drapeau de Brunei, dont la capitale est Bandar Seri Begawan (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q924",
+  "from": "wd-flag-Q924",
+  "concept": "geography.flags.tanzania",
+  "label": "Drapeau de la Tanzanie",
+  "difficulty": 48,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Tanzanie ?",
+  "options": [
+   {
+    "flag": "tz",
+    "label": "Tanzanie",
+    "correct": true
+   },
+   {
+    "flag": "za",
+    "label": "Afrique du Sud"
+   },
+   {
+    "flag": "ke",
+    "label": "Kenya"
+   },
+   {
+    "flag": "ug",
+    "label": "Ouganda"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Tanzanie, dont la capitale est Dodoma (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q928",
+  "from": "wd-flag-Q928",
+  "concept": "geography.flags.philippines",
+  "label": "Drapeau des Philippines",
+  "difficulty": 41,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Philippines ?",
+  "options": [
+   {
+    "flag": "ph",
+    "label": "Philippines",
+    "correct": true
+   },
+   {
+    "flag": "jp",
+    "label": "Japon"
+   },
+   {
+    "flag": "vn",
+    "label": "Viêt Nam"
+   },
+   {
+    "flag": "ir",
+    "label": "Iran"
+   }
+  ],
+  "explanation": "C'est le drapeau des Philippines, dont la capitale est Manille (Asie)."
+ },
+ {
+  "key": "img-wd-flag-Q929",
+  "from": "wd-flag-Q929",
+  "concept": "geography.flags.central_african_republic",
+  "label": "Drapeau de la République centrafricaine",
+  "difficulty": 55,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la République centrafricaine ?",
+  "options": [
+   {
+    "flag": "cf",
+    "label": "République centrafricaine",
+    "correct": true
+   },
+   {
+    "flag": "lr",
+    "label": "Liberia"
+   },
+   {
+    "flag": "mr",
+    "label": "Mauritanie"
+   },
+   {
+    "flag": "cg",
+    "label": "République du Congo"
+   }
+  ],
+  "explanation": "C'est le drapeau de la République centrafricaine, dont la capitale est Bangui (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q945",
+  "from": "wd-flag-Q945",
+  "concept": "geography.flags.togo",
+  "label": "Drapeau du Togo",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Togo ?",
+  "options": [
+   {
+    "flag": "tg",
+    "label": "Togo",
+    "correct": true
+   },
+   {
+    "flag": "sl",
+    "label": "Sierra Leone"
+   },
+   {
+    "flag": "ly",
+    "label": "Libye"
+   },
+   {
+    "flag": "cg",
+    "label": "République du Congo"
+   }
+  ],
+  "explanation": "C'est le drapeau du Togo, dont la capitale est Lomé (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q948",
+  "from": "wd-flag-Q948",
+  "concept": "geography.flags.tunisia",
+  "label": "Drapeau de la Tunisie",
+  "difficulty": 53,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Tunisie ?",
+  "options": [
+   {
+    "flag": "tn",
+    "label": "Tunisie",
+    "correct": true
+   },
+   {
+    "flag": "so",
+    "label": "Somalie"
+   },
+   {
+    "flag": "ss",
+    "label": "Soudan du Sud"
+   },
+   {
+    "flag": "bi",
+    "label": "Burundi"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Tunisie, dont la capitale est Tunis (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q953",
+  "from": "wd-flag-Q953",
+  "concept": "geography.flags.zambia",
+  "label": "Drapeau de la Zambie",
+  "difficulty": 51,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Zambie ?",
+  "options": [
+   {
+    "flag": "zm",
+    "label": "Zambie",
+    "correct": true
+   },
+   {
+    "flag": "td",
+    "label": "Tchad"
+   },
+   {
+    "flag": "ne",
+    "label": "Niger"
+   },
+   {
+    "flag": "mw",
+    "label": "Malawi"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Zambie, dont la capitale est Lusaka (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q954",
+  "from": "wd-flag-Q954",
+  "concept": "geography.flags.zimbabwe",
+  "label": "Drapeau du Zimbabwe",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Zimbabwe ?",
+  "options": [
+   {
+    "flag": "zw",
+    "label": "Zimbabwe",
+    "correct": true
+   },
+   {
+    "flag": "rw",
+    "label": "Rwanda"
+   },
+   {
+    "flag": "bj",
+    "label": "Bénin"
+   },
+   {
+    "flag": "bi",
+    "label": "Burundi"
+   }
+  ],
+  "explanation": "C'est le drapeau du Zimbabwe, dont la capitale est Harare (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q958",
+  "from": "wd-flag-Q958",
+  "concept": "geography.flags.south_sudan",
+  "label": "Drapeau du Soudan du Sud",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Soudan du Sud ?",
+  "options": [
+   {
+    "flag": "ss",
+    "label": "Soudan du Sud",
+    "correct": true
+   },
+   {
+    "flag": "tn",
+    "label": "Tunisie"
+   },
+   {
+    "flag": "bi",
+    "label": "Burundi"
+   },
+   {
+    "flag": "bj",
+    "label": "Bénin"
+   }
+  ],
+  "explanation": "C'est le drapeau du Soudan du Sud, dont la capitale est Djouba (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q96",
+  "from": "wd-flag-Q96",
+  "concept": "geography.flags.mexico",
+  "label": "Drapeau du Mexique",
+  "difficulty": 33,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Mexique ?",
+  "options": [
+   {
+    "flag": "mx",
+    "label": "Mexique",
+    "correct": true
+   },
+   {
+    "flag": "us",
+    "label": "États-Unis"
+   },
+   {
+    "flag": "ca",
+    "label": "Canada"
+   },
+   {
+    "flag": "gt",
+    "label": "Guatemala"
+   }
+  ],
+  "explanation": "C'est le drapeau du Mexique, dont la capitale est Mexico (Amérique du Nord)."
+ },
+ {
+  "key": "img-wd-flag-Q962",
+  "from": "wd-flag-Q962",
+  "concept": "geography.flags.benin",
+  "label": "Drapeau du Bénin",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Bénin ?",
+  "options": [
+   {
+    "flag": "bj",
+    "label": "Bénin",
+    "correct": true
+   },
+   {
+    "flag": "bi",
+    "label": "Burundi"
+   },
+   {
+    "flag": "rw",
+    "label": "Rwanda"
+   },
+   {
+    "flag": "zw",
+    "label": "Zimbabwe"
+   }
+  ],
+  "explanation": "C'est le drapeau du Bénin, dont la capitale est Porto-Novo (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q963",
+  "from": "wd-flag-Q963",
+  "concept": "geography.flags.botswana",
+  "label": "Drapeau du Botswana",
+  "difficulty": 57,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Botswana ?",
+  "options": [
+   {
+    "flag": "bw",
+    "label": "Botswana",
+    "correct": true
+   },
+   {
+    "flag": "na",
+    "label": "Namibie"
+   },
+   {
+    "flag": "gm",
+    "label": "Gambie"
+   },
+   {
+    "flag": "ga",
+    "label": "Gabon"
+   }
+  ],
+  "explanation": "C'est le drapeau du Botswana, dont la capitale est Gaborone (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q965",
+  "from": "wd-flag-Q965",
+  "concept": "geography.flags.burkina_faso",
+  "label": "Drapeau du Burkina Faso",
+  "difficulty": 50,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Burkina Faso ?",
+  "options": [
+   {
+    "flag": "bf",
+    "label": "Burkina Faso",
+    "correct": true
+   },
+   {
+    "flag": "ml",
+    "label": "Mali"
+   },
+   {
+    "flag": "ne",
+    "label": "Niger"
+   },
+   {
+    "flag": "zm",
+    "label": "Zambie"
+   }
+  ],
+  "explanation": "C'est le drapeau du Burkina Faso, dont la capitale est Ouagadougou (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q967",
+  "from": "wd-flag-Q967",
+  "concept": "geography.flags.burundi",
+  "label": "Drapeau du Burundi",
+  "difficulty": 52,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau du Burundi ?",
+  "options": [
+   {
+    "flag": "bi",
+    "label": "Burundi",
+    "correct": true
+   },
+   {
+    "flag": "bj",
+    "label": "Bénin"
+   },
+   {
+    "flag": "rw",
+    "label": "Rwanda"
+   },
+   {
+    "flag": "ss",
+    "label": "Soudan du Sud"
+   }
+  ],
+  "explanation": "C'est le drapeau du Burundi, dont la capitale est Gitega (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q970",
+  "from": "wd-flag-Q970",
+  "concept": "geography.flags.comoros",
+  "label": "Drapeau des Comores",
+  "difficulty": 60,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau des Comores ?",
+  "options": [
+   {
+    "flag": "km",
+    "label": "Comores",
+    "correct": true
+   },
+   {
+    "flag": "dj",
+    "label": "Djibouti"
+   },
+   {
+    "flag": "sz",
+    "label": "Eswatini"
+   },
+   {
+    "flag": "mu",
+    "label": "Maurice"
+   }
+  ],
+  "explanation": "C'est le drapeau des Comores, dont la capitale est Moroni (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q971",
+  "from": "wd-flag-Q971",
+  "concept": "geography.flags.republic_of_the_congo",
+  "label": "Drapeau de la République du Congo",
+  "difficulty": 54,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la République du Congo ?",
+  "options": [
+   {
+    "flag": "cg",
+    "label": "République du Congo",
+    "correct": true
+   },
+   {
+    "flag": "lr",
+    "label": "Liberia"
+   },
+   {
+    "flag": "cf",
+    "label": "République centrafricaine"
+   },
+   {
+    "flag": "ly",
+    "label": "Libye"
+   }
+  ],
+  "explanation": "C'est le drapeau de la République du Congo, dont la capitale est Brazzaville (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q974",
+  "from": "wd-flag-Q974",
+  "concept": "geography.flags.democratic_republic_of_the_congo",
+  "label": "Drapeau de la République démocratique du Congo",
+  "difficulty": 46,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la République démocratique du Congo ?",
+  "options": [
+   {
+    "flag": "cd",
+    "label": "République démocratique du Congo",
+    "correct": true
+   },
+   {
+    "flag": "eg",
+    "label": "Égypte"
+   },
+   {
+    "flag": "et",
+    "label": "Éthiopie"
+   },
+   {
+    "flag": "za",
+    "label": "Afrique du Sud"
+   }
+  ],
+  "explanation": "C'est le drapeau de la République démocratique du Congo, dont la capitale est Kinshasa (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q977",
+  "from": "wd-flag-Q977",
+  "concept": "geography.flags.djibouti",
+  "label": "Drapeau de Djibouti",
+  "difficulty": 60,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de Djibouti ?",
+  "options": [
+   {
+    "flag": "dj",
+    "label": "Djibouti",
+    "correct": true
+   },
+   {
+    "flag": "sz",
+    "label": "Eswatini"
+   },
+   {
+    "flag": "mu",
+    "label": "Maurice"
+   },
+   {
+    "flag": "km",
+    "label": "Comores"
+   }
+  ],
+  "explanation": "C'est le drapeau de Djibouti, dont la capitale est Djibouti (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q983",
+  "from": "wd-flag-Q983",
+  "concept": "geography.flags.equatorial_guinea",
+  "label": "Drapeau de la Guinée équatoriale",
+  "difficulty": 58,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de la Guinée équatoriale ?",
+  "options": [
+   {
+    "flag": "gq",
+    "label": "Guinée équatoriale",
+    "correct": true
+   },
+   {
+    "flag": "gw",
+    "label": "Guinée-Bissau"
+   },
+   {
+    "flag": "ls",
+    "label": "Lesotho"
+   },
+   {
+    "flag": "ga",
+    "label": "Gabon"
+   }
+  ],
+  "explanation": "C'est le drapeau de la Guinée équatoriale, dont la capitale est Ciudad de la Paz (Afrique)."
+ },
+ {
+  "key": "img-wd-flag-Q986",
+  "from": "wd-flag-Q986",
+  "concept": "geography.flags.eritrea",
+  "label": "Drapeau de l'Érythrée",
+  "difficulty": 56,
+  "type": "image_choice",
+  "kind": "flag",
+  "prompt": "Lequel est le drapeau de l'Érythrée ?",
+  "options": [
+   {
+    "flag": "er",
+    "label": "Érythrée",
+    "correct": true
+   },
+   {
+    "flag": "gm",
+    "label": "Gambie"
+   },
+   {
+    "flag": "mr",
+    "label": "Mauritanie"
+   },
+   {
+    "flag": "na",
+    "label": "Namibie"
+   }
+  ],
+  "explanation": "C'est le drapeau de l'Érythrée, dont la capitale est Asmara (Afrique)."
+ }
+]

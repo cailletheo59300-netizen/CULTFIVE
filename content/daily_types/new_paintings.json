@@ -1,0 +1,853 @@
+[
+ {
+  "key": "dt-paint-001",
+  "concept": "arts.painting.dt_impression",
+  "label": "Impression, soleil levant",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 45,
+  "prompt": "Lequel de ces tableaux est « Impression, soleil levant » de Monet ?",
+  "options": [
+   {
+    "title": "Impression, soleil levant",
+    "artist": "Claude Monet",
+    "year": 1872,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Pont de Narni",
+    "artist": "Camille Corot",
+    "year": 1826,
+    "image": null
+   },
+   {
+    "title": "Coucher de soleil à Lavacourt",
+    "artist": "Claude Monet",
+    "year": 1880,
+    "image": null
+   },
+   {
+    "title": "Le Port de Rouen",
+    "artist": "Camille Pissarro",
+    "year": 1883,
+    "image": null
+   }
+  ],
+  "explanation": "Le tableau qui a donné son nom à l'impressionnisme, au musée Marmottan, à Paris."
+ },
+ {
+  "key": "dt-paint-002",
+  "concept": "arts.painting.dt_liberte_guidant",
+  "label": "La Liberté guidant le peuple",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 25,
+  "prompt": "Lequel de ces tableaux est « La Liberté guidant le peuple » de Delacroix ?",
+  "options": [
+   {
+    "title": "La Liberté guidant le peuple",
+    "artist": "Eugène Delacroix",
+    "year": 1830,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Radeau de la Méduse",
+    "artist": "Théodore Géricault",
+    "year": 1819,
+    "image": null
+   },
+   {
+    "title": "Le Sacre de Napoléon",
+    "artist": "Jacques-Louis David",
+    "year": 1807,
+    "image": null
+   },
+   {
+    "title": "La Mort de Sardanapale",
+    "artist": "Eugène Delacroix",
+    "year": 1827,
+    "image": null
+   }
+  ],
+  "explanation": "Elle célèbre les Trois Glorieuses de juillet 1830."
+ },
+ {
+  "key": "dt-paint-003",
+  "concept": "arts.painting.dt_radeau_meduse",
+  "label": "Le Radeau de la Méduse",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 45,
+  "prompt": "Lequel de ces tableaux est « Le Radeau de la Méduse » de Géricault ?",
+  "options": [
+   {
+    "title": "Le Radeau de la Méduse",
+    "artist": "Théodore Géricault",
+    "year": 1819,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Liberté guidant le peuple",
+    "artist": "Eugène Delacroix",
+    "year": 1830,
+    "image": null
+   },
+   {
+    "title": "Le Naufrage",
+    "artist": "Joseph Vernet",
+    "year": 1772,
+    "image": null
+   },
+   {
+    "title": "La Barque de Dante",
+    "artist": "Eugène Delacroix",
+    "year": 1822,
+    "image": null
+   }
+  ],
+  "explanation": "Il montre les survivants d'un naufrage réel, en 1816, au large du Sénégal."
+ },
+ {
+  "key": "dt-paint-004",
+  "concept": "arts.painting.dt_jeune_fille_perle",
+  "label": "La Jeune Fille à la perle",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 30,
+  "prompt": "Lequel de ces tableaux est « La Jeune Fille à la perle » de Vermeer ?",
+  "options": [
+   {
+    "title": "La Jeune Fille à la perle",
+    "artist": "Johannes Vermeer",
+    "year": 1665,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Laitière",
+    "artist": "Johannes Vermeer",
+    "year": 1658,
+    "image": null
+   },
+   {
+    "title": "La Dentellière",
+    "artist": "Johannes Vermeer",
+    "year": 1670,
+    "image": null
+   },
+   {
+    "title": "Portrait de jeune femme",
+    "artist": "Rembrandt",
+    "year": 1632,
+    "image": null
+   }
+  ],
+  "explanation": "Le turban bleu et jaune, la perle et le regard par-dessus l'épaule."
+ },
+ {
+  "key": "dt-paint-005",
+  "concept": "arts.painting.dt_laitiere",
+  "label": "La Laitière",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 45,
+  "prompt": "Lequel de ces tableaux est « La Laitière » de Vermeer ?",
+  "options": [
+   {
+    "title": "La Laitière",
+    "artist": "Johannes Vermeer",
+    "year": 1658,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Jeune Fille à la perle",
+    "artist": "Johannes Vermeer",
+    "year": 1665,
+    "image": null
+   },
+   {
+    "title": "La Dentellière",
+    "artist": "Johannes Vermeer",
+    "year": 1670,
+    "image": null
+   },
+   {
+    "title": "La Liseuse à la fenêtre",
+    "artist": "Johannes Vermeer",
+    "year": 1657,
+    "image": null
+   }
+  ],
+  "explanation": "Une servante verse du lait, dans la lumière d'une fenêtre, au Rijksmuseum d'Amsterdam."
+ },
+ {
+  "key": "dt-paint-006",
+  "concept": "arts.painting.dt_cri",
+  "label": "Le Cri",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 20,
+  "prompt": "Lequel de ces tableaux est « Le Cri » de Munch ?",
+  "options": [
+   {
+    "title": "Le Cri",
+    "artist": "Edvard Munch",
+    "year": 1893,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Angoisse",
+    "artist": "Edvard Munch",
+    "year": 1894,
+    "image": null
+   },
+   {
+    "title": "Soirée sur l'avenue Karl Johan",
+    "artist": "Edvard Munch",
+    "year": 1892,
+    "image": null
+   },
+   {
+    "title": "Mélancolie",
+    "artist": "Edvard Munch",
+    "year": 1894,
+    "image": null
+   }
+  ],
+  "explanation": "Le personnage qui hurle sur un pont, sous un ciel rouge sang. Munch a peint plusieurs scènes très proches : attention aux pièges."
+ },
+ {
+  "key": "dt-paint-007",
+  "concept": "arts.painting.dt_tournesols",
+  "label": "Les Tournesols",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 30,
+  "prompt": "Lequel de ces tableaux est « Les Tournesols » de Van Gogh ?",
+  "options": [
+   {
+    "title": "Les Tournesols",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Les Iris",
+    "artist": "Vincent van Gogh",
+    "year": 1889,
+    "image": null
+   },
+   {
+    "title": "Vase avec des glaïeuls",
+    "artist": "Vincent van Gogh",
+    "year": 1886,
+    "image": null
+   },
+   {
+    "title": "Bouquet de fleurs",
+    "artist": "Paul Gauguin",
+    "year": 1897,
+    "image": null
+   }
+  ],
+  "explanation": "Van Gogh en a peint plusieurs versions, à Arles, pour décorer la chambre de Gauguin."
+ },
+ {
+  "key": "dt-paint-008",
+  "concept": "arts.painting.dt_chambre_arles",
+  "label": "La Chambre à Arles",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 40,
+  "prompt": "Lequel de ces tableaux est « La Chambre à Arles » de Van Gogh ?",
+  "options": [
+   {
+    "title": "La Chambre à Arles",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Café de nuit",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null
+   },
+   {
+    "title": "La Maison jaune",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null
+   },
+   {
+    "title": "Terrasse du café le soir",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "image": null
+   }
+  ],
+  "explanation": "Sa chambre, avec le lit en bois et les chaises jaunes. Les quatre tableaux ont été peints à Arles la même année."
+ },
+ {
+  "key": "dt-paint-009",
+  "concept": "arts.painting.dt_dejeuner_herbe",
+  "label": "Le Déjeuner sur l'herbe",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 40,
+  "prompt": "Lequel de ces tableaux est « Le Déjeuner sur l'herbe » de Manet ?",
+  "options": [
+   {
+    "title": "Le Déjeuner sur l'herbe",
+    "artist": "Édouard Manet",
+    "year": 1863,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Olympia",
+    "artist": "Édouard Manet",
+    "year": 1863,
+    "image": null
+   },
+   {
+    "title": "Bal du moulin de la Galette",
+    "artist": "Auguste Renoir",
+    "year": 1876,
+    "image": null
+   },
+   {
+    "title": "Le Déjeuner des canotiers",
+    "artist": "Auguste Renoir",
+    "year": 1881,
+    "image": null
+   }
+  ],
+  "explanation": "Il fait scandale au Salon des refusés de 1863."
+ },
+ {
+  "key": "dt-paint-010",
+  "concept": "arts.painting.dt_moulin_galette",
+  "label": "Bal du moulin de la Galette",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 50,
+  "prompt": "Lequel de ces tableaux est le « Bal du moulin de la Galette » de Renoir ?",
+  "options": [
+   {
+    "title": "Bal du moulin de la Galette",
+    "artist": "Auguste Renoir",
+    "year": 1876,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Déjeuner des canotiers",
+    "artist": "Auguste Renoir",
+    "year": 1881,
+    "image": null
+   },
+   {
+    "title": "La Grenouillère",
+    "artist": "Claude Monet",
+    "year": 1869,
+    "image": null
+   },
+   {
+    "title": "Un dimanche après-midi à l'île de la Grande Jatte",
+    "artist": "Georges Seurat",
+    "year": 1886,
+    "image": null
+   }
+  ],
+  "explanation": "Un bal populaire de Montmartre, au musée d'Orsay."
+ },
+ {
+  "key": "dt-paint-011",
+  "concept": "arts.painting.dt_grande_jatte",
+  "label": "La Grande Jatte",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 55,
+  "prompt": "Lequel de ces tableaux est « Un dimanche après-midi à l'île de la Grande Jatte » de Seurat ?",
+  "options": [
+   {
+    "title": "Un dimanche après-midi à l'île de la Grande Jatte",
+    "artist": "Georges Seurat",
+    "year": 1886,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Une baignade à Asnières",
+    "artist": "Georges Seurat",
+    "year": 1884,
+    "image": null
+   },
+   {
+    "title": "Bal du moulin de la Galette",
+    "artist": "Auguste Renoir",
+    "year": 1876,
+    "image": null
+   },
+   {
+    "title": "Le Déjeuner des canotiers",
+    "artist": "Auguste Renoir",
+    "year": 1881,
+    "image": null
+   }
+  ],
+  "explanation": "Peint par petits points : c'est le pointillisme."
+ },
+ {
+  "key": "dt-paint-012",
+  "concept": "arts.painting.dt_angelus",
+  "label": "L'Angélus",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 50,
+  "prompt": "Lequel de ces tableaux est « L'Angélus » de Millet ?",
+  "options": [
+   {
+    "title": "L'Angélus",
+    "artist": "Jean-François Millet",
+    "year": 1859,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Des glaneuses",
+    "artist": "Jean-François Millet",
+    "year": 1857,
+    "image": null
+   },
+   {
+    "title": "Les Cribleuses de blé",
+    "artist": "Gustave Courbet",
+    "year": 1854,
+    "image": null
+   },
+   {
+    "title": "Un enterrement à Ornans",
+    "artist": "Gustave Courbet",
+    "year": 1850,
+    "image": null
+   }
+  ],
+  "explanation": "Deux paysans prient au son de la cloche, à la tombée du jour."
+ },
+ {
+  "key": "dt-paint-013",
+  "concept": "arts.painting.dt_glaneuses",
+  "label": "Des glaneuses",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 55,
+  "prompt": "Lequel de ces tableaux est « Des glaneuses » de Millet ?",
+  "options": [
+   {
+    "title": "Des glaneuses",
+    "artist": "Jean-François Millet",
+    "year": 1857,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "L'Angélus",
+    "artist": "Jean-François Millet",
+    "year": 1859,
+    "image": null
+   },
+   {
+    "title": "Les Casseurs de pierres",
+    "artist": "Gustave Courbet",
+    "year": 1849,
+    "image": null
+   },
+   {
+    "title": "Les Cribleuses de blé",
+    "artist": "Gustave Courbet",
+    "year": 1854,
+    "image": null
+   }
+  ],
+  "explanation": "Trois paysannes ramassent les épis oubliés après la moisson."
+ },
+ {
+  "key": "dt-paint-014",
+  "concept": "arts.painting.dt_naissance_venus",
+  "label": "La Naissance de Vénus",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 35,
+  "prompt": "Lequel de ces tableaux est « La Naissance de Vénus » de Botticelli ?",
+  "options": [
+   {
+    "title": "La Naissance de Vénus",
+    "artist": "Sandro Botticelli",
+    "year": 1485,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Printemps",
+    "artist": "Sandro Botticelli",
+    "year": 1480,
+    "image": null
+   },
+   {
+    "title": "L'Annonciation",
+    "artist": "Léonard de Vinci",
+    "year": 1475,
+    "image": null
+   },
+   {
+    "title": "Vénus d'Urbino",
+    "artist": "Titien",
+    "year": 1538,
+    "image": null
+   }
+  ],
+  "explanation": "Vénus sort de la mer sur une coquille, aux Offices de Florence."
+ },
+ {
+  "key": "dt-paint-015",
+  "concept": "arts.painting.dt_ronde_nuit",
+  "label": "La Ronde de nuit",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 55,
+  "prompt": "Lequel de ces tableaux est « La Ronde de nuit » de Rembrandt ?",
+  "options": [
+   {
+    "title": "La Ronde de nuit",
+    "artist": "Rembrandt",
+    "year": 1642,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Leçon d'anatomie du docteur Tulp",
+    "artist": "Rembrandt",
+    "year": 1632,
+    "image": null
+   },
+   {
+    "title": "Les Syndics des drapiers",
+    "artist": "Rembrandt",
+    "year": 1662,
+    "image": null
+   },
+   {
+    "title": "Banquet des officiers",
+    "artist": "Frans Hals",
+    "year": 1616,
+    "image": null
+   }
+  ],
+  "explanation": "Une compagnie de miliciens d'Amsterdam ; il n'est pas si sombre qu'on le croit, c'est le vernis qui a noirci."
+ },
+ {
+  "key": "dt-paint-016",
+  "concept": "arts.painting.dt_las_meninas",
+  "label": "Les Ménines",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 60,
+  "prompt": "Lequel de ces tableaux est « Les Ménines » de Velázquez ?",
+  "options": [
+   {
+    "title": "Les Ménines",
+    "artist": "Diego Velázquez",
+    "year": 1656,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Les Fileuses",
+    "artist": "Diego Velázquez",
+    "year": 1657,
+    "image": null
+   },
+   {
+    "title": "La Reddition de Breda",
+    "artist": "Diego Velázquez",
+    "year": 1635,
+    "image": null
+   },
+   {
+    "title": "La Famille de Charles IV",
+    "artist": "Francisco de Goya",
+    "year": 1801,
+    "image": null
+   }
+  ],
+  "explanation": "L'infante entourée de ses demoiselles d'honneur, et Velázquez lui-même en train de peindre."
+ },
+ {
+  "key": "dt-paint-017",
+  "concept": "arts.painting.dt_tres_mayo",
+  "label": "Tres de Mayo",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 60,
+  "prompt": "Lequel de ces tableaux est « Tres de Mayo » de Goya ?",
+  "options": [
+   {
+    "title": "Tres de Mayo",
+    "artist": "Francisco de Goya",
+    "year": 1814,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Dos de Mayo",
+    "artist": "Francisco de Goya",
+    "year": 1814,
+    "image": null
+   },
+   {
+    "title": "La Liberté guidant le peuple",
+    "artist": "Eugène Delacroix",
+    "year": 1830,
+    "image": null
+   },
+   {
+    "title": "L'Exécution de Maximilien",
+    "artist": "Édouard Manet",
+    "year": 1868,
+    "image": null
+   }
+  ],
+  "explanation": "L'exécution de Madrilènes par les soldats de Napoléon, le 3 mai 1808."
+ },
+ {
+  "key": "dt-paint-018",
+  "concept": "arts.painting.dt_vague",
+  "label": "La Grande Vague",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 25,
+  "prompt": "Laquelle de ces estampes est « La Grande Vague de Kanagawa » d'Hokusai ?",
+  "options": [
+   {
+    "title": "La Grande Vague de Kanagawa",
+    "artist": "Katsushika Hokusai",
+    "year": 1831,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Fuji par temps clair",
+    "artist": "Katsushika Hokusai",
+    "year": 1831,
+    "image": null
+   },
+   {
+    "title": "Averse soudaine sur le pont Ōhashi",
+    "artist": "Utagawa Hiroshige",
+    "year": 1857,
+    "image": null
+   },
+   {
+    "title": "Le Tourbillon de Naruto",
+    "artist": "Utagawa Hiroshige",
+    "year": 1855,
+    "image": null
+   }
+  ],
+  "explanation": "La vague géante, avec le mont Fuji au loin ; tirée des « Trente-six vues du mont Fuji »."
+ },
+ {
+  "key": "dt-paint-019",
+  "concept": "arts.painting.dt_arnolfini",
+  "label": "Les Époux Arnolfini",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 65,
+  "prompt": "Lequel de ces tableaux est « Les Époux Arnolfini » de Van Eyck ?",
+  "options": [
+   {
+    "title": "Les Époux Arnolfini",
+    "artist": "Jan van Eyck",
+    "year": 1434,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Vierge du chancelier Rolin",
+    "artist": "Jan van Eyck",
+    "year": 1435,
+    "image": null
+   },
+   {
+    "title": "Le Prêteur et sa femme",
+    "artist": "Quentin Metsys",
+    "year": 1514,
+    "image": null
+   },
+   {
+    "title": "Portrait d'un homme au turban rouge",
+    "artist": "Jan van Eyck",
+    "year": 1433,
+    "image": null
+   }
+  ],
+  "explanation": "Un couple, un petit chien et un miroir convexe qui reflète la pièce entière."
+ },
+ {
+  "key": "dt-paint-020",
+  "concept": "arts.painting.dt_chasseurs_neige",
+  "label": "Chasseurs dans la neige",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 65,
+  "prompt": "Lequel de ces tableaux est « Chasseurs dans la neige » de Bruegel ?",
+  "options": [
+   {
+    "title": "Chasseurs dans la neige",
+    "artist": "Pieter Bruegel l'Ancien",
+    "year": 1565,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "La Moisson",
+    "artist": "Pieter Bruegel l'Ancien",
+    "year": 1565,
+    "image": null
+   },
+   {
+    "title": "Le Repas de noce",
+    "artist": "Pieter Bruegel l'Ancien",
+    "year": 1567,
+    "image": null
+   },
+   {
+    "title": "La Tour de Babel",
+    "artist": "Pieter Bruegel l'Ancien",
+    "year": 1563,
+    "image": null
+   }
+  ],
+  "explanation": "Des chasseurs rentrent au village, des patineurs sur les étangs gelés."
+ },
+ {
+  "key": "dt-paint-021",
+  "concept": "arts.painting.dt_voyageur_brume",
+  "label": "Le Voyageur contemplant une mer de nuages",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 55,
+  "prompt": "Lequel de ces tableaux est « Le Voyageur contemplant une mer de nuages » de Friedrich ?",
+  "options": [
+   {
+    "title": "Le Voyageur contemplant une mer de nuages",
+    "artist": "Caspar David Friedrich",
+    "year": 1818,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Le Moine au bord de la mer",
+    "artist": "Caspar David Friedrich",
+    "year": 1810,
+    "image": null
+   },
+   {
+    "title": "La Mer de glace",
+    "artist": "Caspar David Friedrich",
+    "year": 1824,
+    "image": null
+   },
+   {
+    "title": "Falaises de craie sur l'île de Rügen",
+    "artist": "Caspar David Friedrich",
+    "year": 1818,
+    "image": null
+   }
+  ],
+  "explanation": "Un homme de dos, au sommet d'un rocher : l'image du romantisme allemand."
+ },
+ {
+  "key": "dt-paint-022",
+  "concept": "arts.painting.dt_baiser_klimt",
+  "label": "Le Baiser",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 35,
+  "prompt": "Lequel de ces tableaux est « Le Baiser » de Klimt ?",
+  "options": [
+   {
+    "title": "Le Baiser",
+    "artist": "Gustav Klimt",
+    "year": 1908,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Portrait d'Adele Bloch-Bauer I",
+    "artist": "Gustav Klimt",
+    "year": 1907,
+    "image": null
+   },
+   {
+    "title": "Les Trois Âges de la femme",
+    "artist": "Gustav Klimt",
+    "year": 1905,
+    "image": null
+   },
+   {
+    "title": "Danaé",
+    "artist": "Gustav Klimt",
+    "year": 1907,
+    "image": null
+   }
+  ],
+  "explanation": "Un couple enlacé dans un manteau doré, au Belvédère de Vienne."
+ },
+ {
+  "key": "dt-paint-023",
+  "concept": "arts.painting.dt_nympheas",
+  "label": "Les Nymphéas",
+  "type": "image_choice",
+  "kind": "painting",
+  "difficulty": 30,
+  "prompt": "Lequel de ces tableaux de Monet fait partie de la série des « Nymphéas » ?",
+  "options": [
+   {
+    "title": "Nymphéas",
+    "artist": "Claude Monet",
+    "year": 1906,
+    "image": null,
+    "correct": true
+   },
+   {
+    "title": "Les Meules",
+    "artist": "Claude Monet",
+    "year": 1891,
+    "image": null
+   },
+   {
+    "title": "Les Coquelicots",
+    "artist": "Claude Monet",
+    "year": 1873,
+    "image": null
+   },
+   {
+    "title": "La Cathédrale de Rouen",
+    "artist": "Claude Monet",
+    "year": 1894,
+    "image": null
+   }
+  ],
+  "explanation": "Monet a peint près de 250 toiles des nénuphars de son étang de Giverny. Les quatre sont des séries ou des sujets célèbres de Monet."
+ }
+]
