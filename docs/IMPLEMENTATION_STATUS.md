@@ -100,7 +100,8 @@ Liste tenue à jour à chaque nouvelle demande. Rien de ceci ne touche la produc
 - [x] Règle confirmée : les nouveaux types ont une difficulté comme les autres et comptent pour l'Elo ; ils apparaissent dans les parties classées, mais davantage dans le 5 du jour.
 
 **Arbre de Léon (à valider)**
-- [ ] Arbre de la connaissance (maquette : https://claude.ai/artifact/DqQPtHtPYLcPm2964daQHz) : une branche par domaine, plus touffue selon les notions apprises (jamais une feuille par question), un fruit doré par rang atteint, des bourgeons gris pour les erreurs à corriger (bouton vers « Mes erreurs »). Léon prend la couleur du domaine le plus fort ; tenues gagnées par rang. Les graines ne font plus pousser l'arbre (elles servent aux aides et aux coffres).
+- [x] Maquette validée (v3) : https://claude.ai/artifact/DqQPtHtPYLcPm2964daQHz — l'arbre part d'une graine et grandit (tronc + couronne ronde) avec le total des notions apprises ; étape écrite en haut (Graine → Pousse → Jeune plant → Arbuste → Jeune arbre → Grand arbre → Arbre centenaire) avec jauge ; un gros fruit par domaine, toujours à la même place, qui grossit avec les notions du domaine (emplacement en pointillés tant qu'il n'est pas commencé) ; étoiles dorées = rangs ; bourgeons gris = erreurs à corriger (bouton vers « Mes erreurs ») ; Léon de la couleur du domaine le plus fort.
+- [ ] À coder (partie B, serveur + app) : fonction serveur « mon arbre » (notions apprises, rang et erreurs par domaine, à partir de user_concepts et des Elo par domaine) ; écran de l'arbre refait ; les graines ne nourrissent plus l'arbre (elles servent aux aides et aux coffres) ; arrosoir à repenser. Tenues de Léon gagnées par rang : maquette à faire.
 
 **Après la publication**
 - [ ] Lier l'app dans AdMob.
