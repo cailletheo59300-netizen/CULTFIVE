@@ -99,6 +99,9 @@ Liste tenue à jour à chaque nouvelle demande. Rien de ceci ne touche la produc
 - [x] Lot 2 codé (serveur 0040–0041, app, tests) : le compte est bon (60), mot mystère en 3 indices (40, +3 / +1 graine), épingle sur la carte (65), tri express (36) et pyramide des âges (19). Abandonnés : rébus, lequel d'abord, distance sur la carte, horloge, thermomètre, boussole, vases communicants. Encore en réserve : assemble le drapeau, le mot manquant, la balance, le cadenas à code.
 - [x] Règle confirmée : les nouveaux types ont une difficulté comme les autres et comptent pour l'Elo ; ils apparaissent dans les parties classées, mais davantage dans le 5 du jour.
 
+**Arbre de Léon (à valider)**
+- [ ] Arbre de la connaissance (maquette : https://claude.ai/artifact/DqQPtHtPYLcPm2964daQHz) : une branche par domaine, plus touffue selon les notions apprises (jamais une feuille par question), un fruit doré par rang atteint, des bourgeons gris pour les erreurs à corriger (bouton vers « Mes erreurs »). Léon prend la couleur du domaine le plus fort ; tenues gagnées par rang. Les graines ne font plus pousser l'arbre (elles servent aux aides et aux coffres).
+
 **Après la publication**
 - [ ] Lier l'app dans AdMob.
 - [ ] DSA : infos de commerçant à revalider dans App Store Connect (mail d'Apple du 6 octobre), sinon l'app n'est pas disponible dans l'UE.
