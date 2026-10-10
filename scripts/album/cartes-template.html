@@ -1,4 +1,4 @@
-<title>Cartes du Moyen Âge</title>
+<title>Cartes de l'album</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Big+Shoulders+Display:wght@800;900&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -77,6 +77,7 @@ h2{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--acce
 .r-epic::before,.r-legend::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:5;mix-blend-mode:color-dodge;opacity:.6;padding:calc(var(--w)*.036);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
   background:linear-gradient(115deg,transparent 28%,rgba(255,120,220,.55) 40%,rgba(120,220,255,.55) 50%,rgba(255,240,140,.55) 60%,transparent 74%);
   background-size:280% 100%;background-position:var(--holo,50%) 0}
+.face{--tone:var(--dtone)}
 .r-legend .face{box-shadow:0 0 0 1px rgba(120,80,10,.6) inset,0 0 0 calc(var(--w)*.012) #FBF0D6 inset,0 0 0 calc(var(--w)*.016) rgba(156,100,18,.45) inset}
 .corner{position:absolute;width:calc(var(--w)*.13);height:calc(var(--w)*.13);z-index:4;pointer-events:none}
 .corner.tl{left:calc(var(--w)*.01);top:calc(var(--w)*.01)}.corner.tr{right:calc(var(--w)*.01);top:calc(var(--w)*.01);transform:scaleX(-1)}
@@ -94,10 +95,10 @@ h2{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--acce
 
 <div class="wrap">
   <header>
-    <h1>Les cartes du Moyen Âge</h1>
-    <p class="lede">Première page fabriquée par le générateur : 18 cartes, chacune avec son dessin au trait, son chiffre clé, son nom et sa phrase. Les raretés et la carte brillante sont des exemples pour montrer les quatre matières de cadre : les vraies raretés viendront des réponses des joueurs. Passe la souris ou le doigt sur une carte pour la pencher.</p>
+    <h1>Les cartes de l'album</h1>
+    <p class="lede">Pages sorties du générateur : chaque carte a son dessin au trait, son chiffre clé, son nom et sa phrase. Les raretés affichées sont <b>ma proposition</b>, choisie au prestige du sujet (à toi de valider) : environ la moitié de communes, un quart de rares, quelques épiques et une seule légendaire par page. Passe la souris ou le doigt sur une carte pour la pencher.</p>
   </header>
-
+  <nav class="seg" id="pages" aria-label="Pages"></nav>
   <section class="hero" aria-label="Carte en grand">
     <div id="heroSlot"></div>
     <div class="ctrl">
@@ -111,21 +112,20 @@ h2{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--acce
       </div>
     </div>
   </section>
-
   <section>
-    <h2>La page complète</h2>
+    <h2 id="deckTitle">La page complète</h2>
+    <p class="lede" id="mix" style="margin:-4px 0 14px"></p>
     <div class="deck" id="deck"></div>
   </section>
-
-  <p class="note">Chaque dessin est tracé en une seule encre, avec des hachures pour les ombres et une touche de couleur du domaine, dans un médaillon gravé. Le chiffre clé a sa propre bande sous l'image, pour ne jamais recouvrir le dessin. Le même générateur produira les 525 cartes ; dans l'app, il fabriquera des images nettes pour chaque taille d'écran.</p>
+  <p class="note">Chaque dessin est tracé en une seule encre, avec des hachures pour les ombres et une touche de la couleur du domaine, dans un médaillon gravé propre au domaine (rayons pour l'Histoire, ciel étoilé pour l'Espace, courbes de niveau pour le Relief). Le chiffre clé a sa propre bande sous l'image ; les textes longs se resserrent tout seuls pour tenir en entier.</p>
 </div>
-
 <script>
-const CARDS=/*DATA*/;
-const DEMO_RARITY={1:'common',2:'rare',3:'common',4:'rare',5:'common',6:'common',7:'rare',8:'epic',9:'epic',10:'common',11:'rare',12:'common',13:'legend',14:'rare',15:'epic',16:'common',17:'rare',18:'common'};
-const DEMO_STARS={1:3,2:2,3:3,4:1,5:2,6:1,7:2,8:3,9:1,10:2,11:1,12:2,13:3,14:1,15:2,16:1,17:2,18:0};
+const PAGES=/*DATA*/;
+const SUBJECTS={};
 const RNAME={common:'Commune',rare:'Rare',epic:'Épique',legend:'Légendaire'};
-const INK='#2B1E14', TONE='#B5562A', GOLD='#C8932E', PAPER='#FBF4E8', WAX='#A8322A';
+const INK='#2B1E14', GOLD='#C8932E', PAPER='#FBF4E8', WAX='#A8322A';
+let TONE='#B5562A';
+const DOMS={history:{label:'Histoire',tone:'#B5562A',medal:'rays'},science:{label:'Sciences',tone:'#1F6E8C',medal:'stars'},geography:{label:'Géographie',tone:'#2F7D55',medal:'topo'}};
 
 /* --- outils de dessin : un trait d'encre, des hachures, une touche de couleur --- */
 const S=(d,fill='none',w=2.2,extra='')=>`<path d="${d}" fill="${fill}" stroke="${INK}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round" ${extra}/>`;
@@ -135,154 +135,36 @@ const L=(x1,y1,x2,y2,w=2.2,col=INK,o=1)=>`<line x1="${x1}" y1="${y1}" x2="${x2}"
 const T=(x,y,t,size=10,col=INK,anchor='middle',w=800)=>`<text x="${x}" y="${y}" font-family="Fraunces, Georgia, serif" font-weight="${w}" font-size="${size}" fill="${col}" text-anchor="${anchor}">${t}</text>`;
 function mirror(d){return `<g transform="translate(200 0) scale(-1 1)">${d}</g>`;}
 
-const SUBJECTS={
- 1:id=>{ // francisque
-   const blade='M114,44 C130,30 154,30 168,42 C166,60 156,78 140,90 C134,74 126,62 110,58 Z';
-   return S('M66,146 L120,42 L128,46 L74,150 Z',PAPER,2.2)+H('M70,148 L124,44 L128,46 L74,150 Z','c1')
-     +[0,1,2].map(i=>L(110-i*5,62+i*9,118-i*5,66+i*9,1.6)).join('')
-     +S(blade,PAPER,2.4)+H('M140,90 C134,74 126,62 110,58 L124,50 C140,58 150,72 152,80 Z','c1')
-     +S('M168,42 C166,60 156,78 140,90',`none`,3.4,'stroke-opacity=".9"')+L(146,44,160,48,1.4,INK,.6);},
- 2:id=>{ // couronne impériale
-   let p=S('M58,104 L142,104 L142,122 L58,122 Z',GOLD,2.4)+H('M58,114 L142,114 L142,122 L58,122 Z','c2');
-   p+=S('M60,104 C60,74 82,56 100,54 C118,56 140,74 140,104',`none`,2.4)+S('M80,104 C80,82 90,66 100,62 C110,66 120,82 120,104','none',2);
-   p+=S('M100,104 L100,52','none',2.4)+S('M94,44 L106,44 M100,36 L100,52','none',2.6);
-   p+=[70,85,100,115,130].map((x,i)=>C(x,113,i%2?3.2:4.2,i%2?PAPER:TONE,1.6)).join('');
-   p+=[64,82,100,118,136].map(x=>S(`M${x-6},104 L${x},94 L${x+6},104`,GOLD,1.8)).join('');
-   return p+C(100,54,4,TONE,1.6);},
- 3:id=>{ // drakkar
-   let p=S('M100,30 L100,98','none',2.6)+S('M70,38 L130,38 L136,84 L64,84 Z',PAPER,2.2);
-   p+=[0,2,4].map(i=>`<path d="M${70+i*10+(i*1.2)},38 L${80+i*10+(i*1.2)},38 L${82+i*10},84 L${70+i*10.8},84 Z" fill="${TONE}" opacity=".85"/>`).join('');
-   p+=S('M26,98 Q100,124 174,98 L166,90 Q100,112 34,90 Z',PAPER,2.4)+H('M28,99 Q100,124 172,99 L168,94 Q100,116 32,94 Z','c3');
-   p+=S('M166,90 C176,80 178,64 170,56 C166,52 160,54 160,60 C164,62 166,66 162,70','none',2.4)+C(166,59,1.4,INK,1);
-   p+=S('M34,90 C24,82 22,68 30,62 C36,58 42,64 38,70','none',2.4);
-   p+=[52,68,84,100,116,132,148].map(x=>C(x,100,6,(x/16)%2?GOLD:TONE,1.8)).join('');
-   p+=[0,1,2].map(i=>S(`M${30+i*12},${126+i*6} q14,-6 28,0 t28,0 t28,0 t28,0`,'none',1.4,'opacity=".55"')).join('');
-   return p;},
- 4:id=>{ // bouclier normand et lances
-   let p=L(46,150,128,24,3)+L(154,150,72,24,3)+S('M120,30 L136,22 L130,38 Z',TONE,1.6)+S('M80,30 L64,22 L70,38 Z',TONE,1.6);
-   p+=S('M100,36 C124,36 136,48 136,62 C136,96 118,122 100,144 C82,122 64,96 64,62 C64,48 76,36 100,36 Z',PAPER,2.6);
-   p+=H('M100,36 C124,36 136,48 136,62 C136,96 118,122 100,144 Z','c4');
-   p+=S('M100,40 L100,140 M70,64 L130,64','none',1.4,'opacity=".5"');
-   p+=S('M100,52 C112,58 118,70 116,84 C112,98 104,104 100,112 C96,104 88,98 84,84 C82,70 88,58 100,52 Z',TONE,1.8);
-   return p+C(100,82,6,GOLD,1.8);},
- 5:id=>{ // donjon et pont-levis
-   let p=S('M70,50 L130,50 L130,128 L70,128 Z',PAPER,2.4)+H('M108,50 L130,50 L130,128 L108,128 Z','c5');
-   p+=[70,84,98,112,126].map(x=>S(`M${x},50 L${x},40 L${x+8},40 L${x+8},50`,PAPER,2)).join('');
-   for(let y=62;y<128;y+=12)p+=L(70,y,130,y,1,INK,.35);
-   p+=S('M96,66 L96,80 M104,66 L104,80','none',2)+S('M88,128 L88,108 C88,98 112,98 112,108 L112,128 Z',INK,2);
-   p+=S('M84,140 L116,140 L120,128 L80,128 Z',GOLD,2)+L(88,104,82,138,1.4)+L(112,104,118,138,1.4);
-   p+=[0,1].map(i=>S(`M40,${146+i*7} q10,-5 20,0 t20,0 t20,0 t20,0 t20,0 t20,0`,'none',1.4,'opacity=".55"')).join('');
-   return p+S('M100,40 L100,26 L114,30 L100,34','none',1.8)+`<path d="M100,26 L114,30 L100,34 Z" fill="${TONE}"/>`;},
- 6:id=>{ // heaume et épée
-   let p=S('M44,140 L150,34 L158,42 L52,148 Z',PAPER,2)+L(50,142,152,40,1,INK,.4)+S('M38,128 L62,152','none',4)+C(36,154,5,GOLD,1.8);
-   p+=S('M70,52 C70,42 84,36 100,36 C116,36 130,42 130,52 L130,124 L70,124 Z',PAPER,2.6)+H('M100,36 C116,36 130,42 130,52 L130,124 L100,124 Z','c6');
-   p+=S('M74,76 L126,76','none',4)+S('M100,40 L100,120','none',1.6,'opacity=".6"');
-   p+=[0,1,2,3].map(i=>C(86+i*0,92+i*7,1.6,INK,1)+C(114,92+i*7,1.6,INK,1)).join('');
-   return p+`<path d="M70,124 L130,124" stroke="${TONE}" stroke-width="5"/>`;},
- 7:id=>{ // croix sur bouclier
-   let p=S('M62,40 L138,40 L138,80 C138,110 120,130 100,144 C80,130 62,110 62,80 Z',PAPER,2.6);
-   p+=H('M100,40 L138,40 L138,80 C138,110 120,130 100,144 Z','c7');
-   p+=`<path d="M92,40 L108,40 L108,72 L138,72 L138,88 L108,88 L108,140 L100,144 L92,140 L92,88 L62,88 L62,72 L92,72 Z" fill="${TONE}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/>`;
-   return p+S('M62,40 L138,40 L138,80 C138,110 120,130 100,144 C80,130 62,110 62,80 Z','none',2.6);},
- 8:id=>{ // fleur de lys
-   const half='M98,94 C84,98 62,92 58,72 C56,58 68,50 78,58 C72,64 74,76 82,80 C88,84 94,88 98,94 Z M94,104 C90,118 80,126 70,120 C66,116 70,110 76,112';
-   let p=S('M100,28 C114,46 116,72 100,98 C84,72 86,46 100,28 Z',GOLD,2.4)+H('M100,28 C114,46 116,72 100,98 Z','c8');
-   p+=S(half,GOLD,2.2)+mirror(S(half,GOLD,2.2));
-   p+=S('M74,94 L126,94 L126,106 L74,106 Z',TONE,2.2)+S('M100,106 C104,118 104,128 100,138 C96,128 96,118 100,106 Z',GOLD,2);
-   return p;},
- 9:id=>{ // sceau royal
-   let blob='';for(let i=0;i<=40;i++){const a=i/40*Math.PI*2,r=46+((i*37)%7-3)*.9;blob+=(i?'L':'M')+(100+Math.cos(a)*r).toFixed(1)+','+(78+Math.sin(a)*r).toFixed(1);}
-   let p=S('M86,116 L74,150 L84,144 L90,152 L96,118 Z',GOLD,1.8)+S('M114,116 L126,150 L116,144 L110,152 L104,118 Z',GOLD,1.8);
-   p+=S(blob+'Z',WAX,2.4)+C(100,78,34,'none',1.6)+C(100,78,30,'none',1);
-   p+=[...Array(24)].map((_,i)=>{const a=i/24*Math.PI*2;return L(100+Math.cos(a)*30.5,78+Math.sin(a)*30.5,100+Math.cos(a)*33.5,78+Math.sin(a)*33.5,1.2,PAPER,.9)}).join('');
-   p+=`<path d="M84,90 L86,68 L93,78 L100,62 L107,78 L114,68 L116,90 Z" fill="${GOLD}" stroke="${INK}" stroke-width="1.8" stroke-linejoin="round"/>`;
-   return p+C(100,58,2.6,GOLD,1.2)+`<ellipse cx="86" cy="56" rx="14" ry="6" fill="#fff" opacity=".18"/>`;},
- 10:id=>{ // plume de copiste, livre et encrier
-   let p=S('M30,126 C58,116 84,118 100,128 C116,118 142,116 170,126 L170,96 C142,86 116,88 100,98 C84,88 58,86 30,96 Z',PAPER,2.2);
-   p+=S('M100,98 L100,128','none',1.6);
-   for(let i=0;i<4;i++){p+=L(40,104+i*5,88,103+i*5-(i*.5),1,INK,.45)+L(112,103+i*5,160,104+i*5,1,INK,.45);}
-   p+=`<path d="M40,100 L48,100 L48,108 L40,108 Z" fill="${TONE}"/>`;
-   p+=S('M44,78 L64,78 L62,92 L46,92 Z',INK,1.8)+S('M50,78 L50,72 L58,72 L58,78','none',1.6);
-   p+=S('M160,24 C140,34 120,58 108,96 C126,70 146,52 160,24 Z',PAPER,2)+H('M160,24 C140,34 120,58 108,96 Z','c10')+L(160,24,106,100,1.4)+L(106,100,103,108,2.2);
-   return p;},
- 11:id=>{ // rat et puce
-   let p=S('M62,104 C56,84 76,74 100,76 C122,78 134,86 140,94 L164,102 C158,108 146,112 136,112 C124,122 92,124 74,118 C66,114 62,110 62,104 Z',PAPER,2.4);
-   p+=H('M62,104 C66,114 92,124 120,118 C110,108 80,110 62,104 Z','c11')+C(138,88,8,PAPER,2)+C(152,99,1.8,INK,1)+C(165,102,2,TONE,1);
-   p+=S('M64,108 C40,112 28,128 36,140 C44,150 60,146 66,138','none',2.2);
-   p+=S('M86,120 L82,132 M118,120 L122,132','none',2)+L(150,106,170,102,1,INK,.6)+L(150,108,170,110,1,INK,.6);
-   p+=`<ellipse cx="150" cy="44" rx="7" ry="5" fill="${TONE}" stroke="${INK}" stroke-width="1.6"/>`+S('M145,48 L140,56 M150,49 L150,58 M155,48 L160,56','none',1.4);
-   return p+T(150,32,'',8);},
- 12:id=>{ // arc long anglais
-   let p=S('M76,24 C126,52 126,118 76,146','none',4)+L(76,24,76,146,1.4);
-   p+=L(34,85,166,85,2.2)+S('M166,85 L154,79 L156,85 L154,91 Z',INK,1.4);
-   p+=S('M34,85 L46,77 L52,77 L42,85 L52,93 L46,93 Z',TONE,1.6)+S('M42,85 L54,79 M42,85 L54,91','none',1,'opacity=".5"');
-   p+=S('M70,74 L82,74 L82,96 L70,96 Z',GOLD,1.6);
-   return p;},
- 13:id=>{ // étendard de Jeanne d'Arc
-   let p=L(64,150,64,30,3.2)+S('M58,32 L64,18 L70,32 Z',GOLD,1.6);
-   p+=S('M66,34 C96,30 126,38 156,34 L140,58 L156,82 C126,86 96,78 66,82 Z',PAPER,2.4)+H('M120,34 C132,36 144,36 156,34 L140,58 L156,82 C144,82 132,84 120,82 Z','c13');
-   p+=`<path d="M66,58 C96,54 126,62 148,58" stroke="${TONE}" stroke-width="7" fill="none"/>`;
-   p+=`<g transform="translate(92 42) scale(.28)">${S('M100,28 C114,46 116,72 100,98 C84,72 86,46 100,28 Z',GOLD,6)}</g>`;
-   return p+C(64,150,4,INK,1);},
- 14:id=>{ // arc composite mongol et flèches
-   let p=S('M70,26 C64,32 66,40 74,42 C96,52 104,70 104,85 C104,100 96,118 74,128 C66,130 64,138 70,144','none',4);
-   p+=L(72,42,72,128,1.4);
-   p+=S('M122,58 L148,52 L156,128 L130,134 Z',TONE,2)+H('M139,55 L148,52 L156,128 L147,130 Z','c14');
-   p+=[0,1,2].map(i=>L(128+i*7,58-i*2,124+i*7,30-i*2,1.8)+S(`M${124+i*7},${30-i*2} l-3,-6 l6,0 z`,INK,1)+S(`M${125+i*7},${44-i*2} l-4,4 m4,-4 l4,4`,'none',1.2)).join('');
-   return p+L(122,90,156,84,1.2,INK,.6);},
- 15:id=>{ // coupoles de Sainte-Sophie
-   let p=S('M48,96 L152,96 L152,136 L48,136 Z',PAPER,2.2)+H('M118,96 L152,96 L152,136 L118,136 Z','c15');
-   p+=S('M64,96 C64,72 136,72 136,96',GOLD,2.4)+S('M100,74 L100,62','none',2)+C(100,60,3,GOLD,1.4);
-   p+=S('M50,96 C50,84 64,80 66,96','none',1.8)+S('M134,96 C136,80 150,84 150,96','none',1.8);
-   p+=[76,88,100,112,124].map(x=>S(`M${x-3},96 L${x-3},90 C${x-3},86 ${x+3},86 ${x+3},90 L${x+3},96`,INK,1)).join('');
-   for(const x of [34,166]){p+=S(`M${x-4},136 L${x-4},52 L${x+4},52 L${x+4},136`,PAPER,2)+S(`M${x-4},52 L${x},34 L${x+4},52`,TONE,1.8)+L(x-6,80,x+6,80,1.6)+L(x-6,110,x+6,110,1.6);}
-   return p+S('M84,136 L84,118 C84,110 116,110 116,118 L116,136','none',1.8);},
- 16:id=>{ // épées croisées
-   const sword=`${S('M58,140 L140,34 L146,40 L64,146 Z',PAPER,2)}${L(62,142,143,37,1,INK,.4)}${S('M50,120 L84,154','none',4.2)}${S('M50,150 L58,142','none',5)}${C(46,154,5,GOLD,1.8)}`;
-   return sword+mirror(sword)+C(100,92,6,TONE,1.8);},
- 17:id=>{ // boussole
-   let p=C(100,84,50,GOLD,2.6)+C(100,84,42,PAPER,2)+C(100,32,6,'none',2.2);
-   for(let i=0;i<32;i++){const a=i/32*Math.PI*2,r1=i%4?39:36;p+=L(100+Math.cos(a)*r1,84+Math.sin(a)*r1,100+Math.cos(a)*42,84+Math.sin(a)*42,i%4?.8:1.4);}
-   const pt=(a,len,w,fill)=>{const x=100+Math.cos(a)*len,y=84+Math.sin(a)*len,lx=100+Math.cos(a+Math.PI/2)*w,ly=84+Math.sin(a+Math.PI/2)*w,rx=100+Math.cos(a-Math.PI/2)*w,ry=84+Math.sin(a-Math.PI/2)*w;
-     return `<path d="M${lx.toFixed(1)},${ly.toFixed(1)} L${x.toFixed(1)},${y.toFixed(1)} L${rx.toFixed(1)},${ry.toFixed(1)} Z" fill="${fill}" stroke="${INK}" stroke-width="1.4" stroke-linejoin="round"/>`;};
-   for(let i=0;i<4;i++)p+=pt(Math.PI/4+i*Math.PI/2,24,5,PAPER);
-   for(let i=0;i<4;i++)p+=pt(-Math.PI/2+i*Math.PI/2,34,7,i===0?TONE:INK);
-   return p+C(100,84,3.4,GOLD,1.4)+T(100,64,'N',10,PAPER);},
- 18:id=>{ // frise chronologique
-   let p=L(26,86,174,86,3)+S('M168,80 L178,86 L168,92','none',2.4);
-   const marks=[[34,'476'],[74,'800'],[110,'1066'],[136,'1347'],[160,'1492']];
-   p+=marks.map(([x,t],i)=>L(x,78,x,94,2)+C(x,86,4.4,i===0||i===4?TONE:GOLD,1.6)+T(x,i%2?112:68,t,11,INK,'middle',800)).join('');
-   return p+`<rect x="34" y="83" width="126" height="6" fill="${TONE}" opacity=".18"/>`;},
-};
-
-function artSVG(n){
-  const id='c'+n;
+/*SUBJ*/
+function medal(kind){
+  let m=`<circle cx="100" cy="84" r="64" fill="#FFF8EA" stroke="${INK}" stroke-width="1" opacity=".9"/><circle cx="100" cy="84" r="59.5" fill="none" stroke="${INK}" stroke-width=".6" stroke-dasharray="1.2 2.6" opacity=".55"/>`;
+  if(kind==='rays')m+=[...Array(36)].map((_,i)=>{const a=i/36*Math.PI*2;return `<line x1="${(100+Math.cos(a)*65).toFixed(1)}" y1="${(84+Math.sin(a)*65).toFixed(1)}" x2="${(100+Math.cos(a)*71).toFixed(1)}" y2="${(84+Math.sin(a)*71).toFixed(1)}" stroke="${INK}" stroke-width=".7" opacity=".35"/>`}).join('');
+  if(kind==='stars'){let r=7;m+=[...Array(26)].map(()=>{r=(r*9301+49297)%233280;const a=r/233280*Math.PI*2;r=(r*9301+49297)%233280;const d=66+r/233280*24;return `<circle cx="${(100+Math.cos(a)*d).toFixed(1)}" cy="${(84+Math.sin(a)*d*.8).toFixed(1)}" r="${(.6+(r%3)*.35).toFixed(2)}" fill="${INK}" opacity=".45"/>`}).join('')+`<ellipse cx="100" cy="84" rx="78" ry="30" fill="none" stroke="${INK}" stroke-width=".6" opacity=".3" transform="rotate(-18 100 84)"/>`;}
+  if(kind==='topo')m+=[70,76,83,91].map((r,i)=>`<path d="M${100-r},84 C${100-r},${84-r*.9} ${100+r*.9},${84-r} ${100+r},${84-r*.1} C${100+r*1.05},${84+r*.7} ${100-r*.6},${84+r*1.02} ${100-r},84 Z" fill="none" stroke="${INK}" stroke-width=".6" opacity="${.32-i*.05}"/>`).join('');
+  return m;}
+function artSVG(page,n){
+  const id='c'+n, dom=DOMS[page.dom];
   return `<svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs>
-    <pattern id="${id}h" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="${INK}" stroke-width="1" opacity=".55"/></pattern>
     <pattern id="${id}bg" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><line x1="0" y1="0" x2="0" y2="5" stroke="${INK}" stroke-width=".55" opacity=".2"/></pattern>
     <radialGradient id="${id}glow" cx="50%" cy="48%" r="60%"><stop offset="0" stop-color="#FFF7E6"/><stop offset="1" stop-color="#E9D7B9"/></radialGradient>
-  </defs>
-  <rect width="200" height="160" fill="url(#${id}glow)"/><rect width="200" height="160" fill="url(#${id}bg)"/>
-  </svg><svg class="subj" viewBox="0 0 200 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><defs>
+  </defs><rect width="200" height="160" fill="url(#${id}glow)"/><rect width="200" height="160" fill="url(#${id}bg)"/></svg>
+  <svg class="subj" viewBox="0 0 200 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><defs>
     <pattern id="${id}h" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="${INK}" stroke-width="1" opacity=".55"/></pattern></defs>
-  <circle cx="100" cy="84" r="64" fill="#FFF8EA" stroke="${INK}" stroke-width="1" opacity=".9"/>
-  <circle cx="100" cy="84" r="59.5" fill="none" stroke="${INK}" stroke-width=".6" stroke-dasharray="1.2 2.6" opacity=".55"/>
-  ${[...Array(36)].map((_,i)=>{const a=i/36*Math.PI*2;return `<line x1="${(100+Math.cos(a)*65).toFixed(1)}" y1="${(84+Math.sin(a)*65).toFixed(1)}" x2="${(100+Math.cos(a)*71).toFixed(1)}" y2="${(84+Math.sin(a)*71).toFixed(1)}" stroke="${INK}" stroke-width=".7" opacity=".35"/>`}).join('')}
-  <g transform="translate(0 2)">${SUBJECTS[n](id)}</g></svg>`;
+  ${medal(dom.medal)}<g transform="translate(0 2)">${SUBJECTS[page.key][n](id)}</g></svg>`;
 }
 const CORNER=`<svg class="corner CL" viewBox="0 0 40 40" aria-hidden="true"><path d="M4,36 C4,16 16,4 36,4" fill="none" stroke="#7A4A08" stroke-width="2"/><path d="M10,36 C10,22 22,10 36,10" fill="none" stroke="#FFF1C2" stroke-width="1.2"/><circle cx="8" cy="8" r="3.4" fill="#FFF1C2" stroke="#7A4A08" stroke-width="1.2"/></svg>`;
 
 function figSize(f){const n=f.replace(/\s/g,'').length;return n<=3?'.26':n<=4?'.23':n<=5?'.19':n<=7?'.16':'.13';}
-function cardHTML(c,{big=false,rarity,shiny=false,stars}={}){
-  const [n,name,fig,unit,phrase]=c;rarity=rarity||DEMO_RARITY[n];stars=stars??DEMO_STARS[n];
+function cardHTML(page,c,{big=false,rarity,shiny=false,stars}={}){
+  const [n,name,fig,unit,phrase,rar]=c;rarity=rarity||rar;stars=stars??((n*7)%4);TONE=DOMS[page.dom].tone;
   const corners=rarity==='legend'?['tl','tr','bl','br'].map(k=>CORNER.replace('CL',k)).join(''):'';
   const sparkles=shiny?[[12,22],[80,14],[64,40],[22,58],[86,70]].map(([x,y],i)=>`<span class="sparkle" style="left:${x}%;top:${y}%;animation-delay:${i*.45}s"></span>`).join(''):'';
-  const stack=fig.replace(/\s/g,'').length>=5||unit.length>26||unit.split(' ').some(w=>w.length>9);
+  const stack=fig.length>=5||unit.length>22||unit.split(' ').some(w=>w.length>9);
   const tight=(stack&&name.length>18)||name.length>26||(stack&&phrase.length>80);
-  return `<div class="card r-${rarity}${big?' big':''}${shiny?' shiny':''}${tight?' tight':''}" tabindex="0" role="img" aria-label="${name}, carte ${RNAME[rarity].toLowerCase()}${shiny?' brillante':''}, ${fig} ${unit}">
+  return `<div style="--dtone:${TONE}" class="card r-${rarity}${big?' big':''}${shiny?' shiny':''}${tight?' tight':''}" tabindex="0" role="img" aria-label="${name}, carte ${RNAME[rarity].toLowerCase()}${shiny?' brillante':''}, ${fig} ${unit}">
    ${corners}<div class="face">
-    <div class="hd"><span>Histoire · Moyen Âge</span><span class="no">${n}<span style="opacity:.55">/18</span></span></div>
-    <div class="art">${artSVG(n)}</div>
+    <div class="hd"><span>${DOMS[page.dom].label} · ${page.title}</span><span class="no">${n}<span style="opacity:.55">/${page.cards.length}</span></span></div>
+    <div class="art">${artSVG(page,n)}</div>
     <div class="band${stack?' stack':''}"><span class="fig" style="--fs:calc(var(--w)*${figSize(fig)})">${fig}</span><span class="unit">${unit}</span></div>
     <div class="nm">${name}</div><div class="ph">${phrase}</div>
     <div class="ft"><span class="stars">${'★'.repeat(stars)}<i>${'★'.repeat(3-stars)}</i></span><span class="rar"><span class="gem"></span>${RNAME[rarity]}${shiny?' · brillante':''}</span></div>
@@ -300,20 +182,28 @@ function bindTilt(root){fit(root);root.querySelectorAll('.card').forEach(el=>{
   el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.classList.add('tilting');tilt(el,(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height);});
   el.addEventListener('pointerleave',()=>{el.classList.remove('tilting');if(!(auto&&el.closest('#heroSlot')))reset(el);});});}
 
-let heroN=13,heroR=DEMO_RARITY[13],heroShiny=false,auto=false,raf=0;
+let cur=0,heroN=1,heroR=null,heroShiny=false,auto=false,raf=0;
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function renderHero(){const slot=document.getElementById('heroSlot');slot.innerHTML=cardHTML(CARDS[heroN-1],{big:true,rarity:heroR,shiny:heroShiny});bindTilt(slot);
+const P=()=>PAGES[cur];
+function legendOf(p){return (p.cards.find(c=>c[5]==='legend')||p.cards[0])[0];}
+function renderHero(){const p=P(),c=p.cards[heroN-1];const slot=document.getElementById('heroSlot');slot.innerHTML=cardHTML(p,c,{big:true,rarity:heroR||c[5],shiny:heroShiny});bindTilt(slot);
   const el=slot.querySelector('.card');if(!auto&&!reduce)tilt(el,.7,.3);
   document.querySelectorAll('#pick button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.n===heroN));
-  document.querySelectorAll('#rarity button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.r===heroR));}
-document.getElementById('pick').innerHTML=[13,2,3,8,9,11,15,17].map(n=>`<button data-n="${n}">${CARDS[n-1][1]}</button>`).join('');
+  document.querySelectorAll('#rarity button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.r===(heroR||c[5])));}
+function renderPage(){const p=P();heroN=legendOf(p);heroR=null;
+  document.getElementById('pages').innerHTML=PAGES.map((q,i)=>`<button data-i="${i}" aria-pressed="${i===cur}">${DOMS[q.dom].label} · ${q.title}</button>`).join('');
+  document.getElementById('pick').innerHTML=p.cards.map(c=>`<button data-n="${c[0]}">${c[1]}</button>`).join('');
+  const cnt={common:0,rare:0,epic:0,legend:0};p.cards.forEach(c=>cnt[c[5]]++);
+  document.getElementById('deckTitle').textContent=`${p.title} : ${p.cards.length} cartes`;
+  document.getElementById('mix').textContent=`Raretés proposées : ${cnt.common} communes, ${cnt.rare} rares, ${cnt.epic} épiques, ${cnt.legend} légendaire (${p.cards.find(c=>c[5]==='legend')[1]}).`;
+  const deck=document.getElementById('deck');deck.innerHTML=p.cards.map(c=>cardHTML(p,c)).join('');bindTilt(deck);renderHero();}
 document.getElementById('rarity').innerHTML=Object.entries(RNAME).map(([k,v])=>`<button data-r="${k}">${v}</button>`).join('');
-document.getElementById('pick').onclick=e=>{const b=e.target.closest('button');if(!b)return;heroN=+b.dataset.n;heroR=DEMO_RARITY[heroN];renderHero();};
+document.getElementById('pages').onclick=e=>{const b=e.target.closest('button');if(!b)return;cur=+b.dataset.i;renderPage();};
+document.getElementById('pick').onclick=e=>{const b=e.target.closest('button');if(!b)return;heroN=+b.dataset.n;heroR=null;renderHero();};
 document.getElementById('rarity').onclick=e=>{const b=e.target.closest('button');if(!b)return;heroR=b.dataset.r;renderHero();};
 document.getElementById('shinyBtn').onclick=e=>{heroShiny=!heroShiny;e.currentTarget.setAttribute('aria-pressed',heroShiny);renderHero();};
 function loop(t){const el=document.querySelector('#heroSlot .card');if(el){el.classList.add('tilting');tilt(el,.5+Math.sin(t/900)*.42,.5+Math.cos(t/1250)*.36);}raf=requestAnimationFrame(loop);}
 document.getElementById('autoBtn').onclick=e=>{auto=!auto;e.currentTarget.setAttribute('aria-pressed',auto);if(auto)raf=requestAnimationFrame(loop);else{cancelAnimationFrame(raf);renderHero();}};
-renderHero();
-const deck=document.getElementById('deck');deck.innerHTML=CARDS.map(c=>cardHTML(c,{shiny:c[0]===2})).join('');bindTilt(deck);
-if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{fit(document);});
+renderPage();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>fit(document));
 </script>

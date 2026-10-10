@@ -1,7 +1,9 @@
 # Générateur de cartes (brouillon)
 
-`cartes-template.html` dessine les cartes d'une page de l'album : médaillon gravé, sujet au trait (une fonction de dessin par carte), bande du chiffre clé, nom, phrase, pied de carte, cadre selon la rareté (commune, rare, épique, légendaire), version brillante et inclinaison.
+`cartes-template.html` dessine les cartes : médaillon gravé selon le domaine, sujet au trait, bande du chiffre clé, nom, phrase, pied de carte, cadre selon la rareté (commune, rare, épique, légendaire), version brillante, inclinaison, et resserrement automatique des textes longs.
 
-Pour l'instant seule la page Moyen Âge est dessinée (fonctions `SUBJECTS` 1 à 18). On remplace `/*DATA*/` par la liste `[n, nom, chiffre, précision, phrase]` des cartes de `content/album/history.middle_ages.json` pour obtenir la planche.
+Les dessins sont dans `sujets/` : une fonction par carte, rangée par page (`SUBJECTS['history.middle_ages'][1] = …`). Pages dessinées : Moyen Âge, Espace, Relief.
 
-Prochaines étapes : valider le style avec le propriétaire, dessiner les sujets des 48 autres pages, puis exporter des images pour l'app.
+Planche : `python3 scripts/album/planche.py . history.middle_ages science.space geography.relief /tmp/planche.html`
+
+Prochaines étapes : dessiner les sujets des autres pages, puis exporter des images pour l'app.

@@ -14,7 +14,7 @@
    "figure": "8 min 20 s",
    "unit": "trajet de sa lumière",
    "phrase": "Une étoile ordinaire, une naine jaune, qui contient presque toute la masse du système solaire.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.space.acc_annee_terre",
     "science.space.acc_soleil_etoile",
@@ -37,7 +37,7 @@
    "figure": "384 400",
    "unit": "km de la Terre",
    "phrase": "Elle nous montre toujours la même face et ne brille que grâce au Soleil.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.space.acc_lune_lumiere",
     "science.space.acc_lune_unique",
@@ -61,7 +61,7 @@
    "figure": "464 °C",
    "unit": "à la surface de Vénus",
    "phrase": "Vénus, l'étoile du Berger, est plus chaude que Mercure pourtant plus proche du Soleil.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.acc_etoile_berger",
     "science.space.closest_planet_sun",
@@ -79,7 +79,7 @@
    "figure": "23 h 56",
    "unit": "pour un tour sur elle-même",
    "phrase": "La planète la plus dense du système solaire, penchée de 23 degrés : d'où les saisons.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.acc_jour_24h",
     "science.space.acc_terre_soleil_ete",
@@ -95,7 +95,7 @@
    "figure": "22 km",
    "unit": "de haut pour Olympus Mons",
    "phrase": "La planète rouge porte le plus grand volcan connu du système solaire.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.space.coucher_soleil_mars",
     "science.space.dt_lunes_mars",
@@ -116,7 +116,7 @@
    "figure": "×11",
    "unit": "le diamètre de la Terre",
    "phrase": "La plus grande planète, avec une tempête plus large que la Terre.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.space.dt_jupiter_terre",
     "science.space.dt_planetes_gazeuses",
@@ -143,7 +143,7 @@
    "figure": "0,69",
    "unit": "sa densité, moins que l'eau",
    "phrase": "Ses anneaux sont faits de glace et de roche ; elle flotterait dans une baignoire géante.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "science.space.anneaux_de_saturne",
     "science.space.dt_mystere_saturne",
@@ -169,7 +169,7 @@
    "figure": "98°",
    "unit": "l'inclinaison d'Uranus",
    "phrase": "Deux géantes glacées ; Neptune a été trouvée par le calcul avant d'être vue.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.decouverte_de_neptune",
     "science.space.dt_neptune",
@@ -193,7 +193,7 @@
    "figure": "2006",
    "unit": "Pluton n'est plus une planète",
    "phrase": "Astéroïdes, comètes, étoiles filantes : les poussières du système solaire.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.ceinture_d_asteroides",
     "science.space.composition_des_cometes",
@@ -212,7 +212,7 @@
    "figure": "8",
    "unit": "planètes",
    "phrase": "Huit planètes tournent autour du Soleil, comme l'avaient compris Copernic et Kepler.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.copernic",
     "science.space.dt_epoque_espace",
@@ -233,7 +233,7 @@
    "figure": "4,2",
    "unit": "années-lumière jusqu'à la plus proche",
    "phrase": "L'étoile polaire indique le nord ; la plus proche après le Soleil est Proxima du Centaure.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.acc_etoiles_jour",
     "science.space.closest_star",
@@ -252,7 +252,7 @@
    "figure": "13,8",
    "unit": "milliards d'années",
    "phrase": "Notre galaxie, la Voie lactée, n'est qu'une parmi des milliards.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "science.space.age_de_l_univers",
     "science.space.andromede",
@@ -273,7 +273,7 @@
    "figure": "1957",
    "unit": "premier satellite",
    "phrase": "Spoutnik, puis Gagarine en 1961 : les Soviétiques ouvrent la route de l'espace.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.dt_gagarine",
     "science.space.gagarin",
@@ -290,7 +290,7 @@
    "figure": "1969",
    "unit": "premiers pas sur la Lune",
    "phrase": "Neil Armstrong et Buzz Aldrin marchent sur la Lune le 21 juillet (heure de Paris).",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "science.space.annee_des_premiers_pas_sur_la_lune",
     "science.space.apollo_11"
@@ -305,7 +305,7 @@
    "figure": "400 km",
    "unit": "altitude de l'ISS",
    "phrase": "L'ISS fait le tour de la Terre en 90 minutes ; James Webb observe depuis le point L2.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.space.acc_station_spatiale",
     "science.space.altitude_de_l_iss",
@@ -320,5 +320,6 @@
     "science.space.voyager_1"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

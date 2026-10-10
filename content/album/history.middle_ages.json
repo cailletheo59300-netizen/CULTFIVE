@@ -14,7 +14,7 @@
    "figure": "496",
    "unit": "baptême à Reims (date traditionnelle)",
    "phrase": "Le roi des Francs se fait baptiser : la Gaule devient le royaume des Francs.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.bataille_de_poitiers_732",
     "history.middle_ages.clovis_baptism",
@@ -31,7 +31,7 @@
    "figure": "800",
    "unit": "sacré empereur",
    "phrase": "Couronné à Rome le jour de Noël, il règne sur presque toute l'Europe de l'Ouest.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "history.middle_ages.charlemagne_800",
     "history.middle_ages.dt_charlemagne",
@@ -50,7 +50,7 @@
    "figure": "911",
    "unit": "naissance de la Normandie",
    "phrase": "Venus de Scandinavie, ils pillent les côtes puis s'installent en Normandie.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "history.middle_ages.acc_cornes_vikings",
     "history.middle_ages.acc_vikings_drakkar",
@@ -69,7 +69,7 @@
    "figure": "1066",
    "unit": "bataille d'Hastings",
    "phrase": "Le duc de Normandie traverse la Manche et devient roi d'Angleterre.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.conquete_de_l_angleterre",
     "history.middle_ages.hastings",
@@ -85,7 +85,7 @@
    "figure": "XIe s.",
    "unit": "premiers donjons en pierre",
    "phrase": "Donjon, douves, pont-levis : la maison du seigneur est faite pour résister.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.acc_donjon",
     "history.middle_ages.acc_pont_levis",
@@ -101,7 +101,7 @@
    "figure": "3",
    "unit": "ordres de la société",
    "phrase": "Ceux qui prient, ceux qui combattent, ceux qui travaillent.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.acc_serf",
     "history.middle_ages.adoubement",
@@ -122,7 +122,7 @@
    "figure": "1095",
    "unit": "appel de Clermont",
    "phrase": "Pendant deux siècles, des armées d'Europe partent vers Jérusalem.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.acc_croisades",
     "history.middle_ages.appel_de_clermont",
@@ -141,7 +141,7 @@
    "figure": "987",
    "unit": "Hugues Capet roi",
    "phrase": "Une famille qui va régner sur la France pendant plus de huit siècles.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.acc_saint_louis",
     "history.middle_ages.expert_bouvines",
@@ -159,7 +159,7 @@
    "figure": "1215",
    "unit": "Grande Charte",
    "phrase": "Reine de France puis d'Angleterre, mère de Richard Cœur de Lion.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.alienor_d_aquitaine",
     "history.middle_ages.bataille_de_bosworth",
@@ -176,7 +176,7 @@
    "figure": "1054",
    "unit": "schisme d'Orient",
    "phrase": "Monastères, copistes et papes : l'Église est au cœur de la vie.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.cisterciens",
     "history.middle_ages.grand_schisme_d_occident",
@@ -194,7 +194,7 @@
    "figure": "1347",
    "unit": "arrivée en Europe",
    "phrase": "En quelques années, elle emporte près d'un Européen sur trois.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.black_death",
     "history.middle_ages.dt_peste_noire",
@@ -210,7 +210,7 @@
    "figure": "116",
    "unit": "ans de guerre",
    "phrase": "De 1337 à 1453, Français et Anglais se disputent le trône de France.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.acc_cent_ans_adversaire",
     "history.middle_ages.bataille_d_azincourt",
@@ -230,7 +230,7 @@
    "figure": "1429",
    "unit": "délivrance d'Orléans",
    "phrase": "Une jeune bergère lorraine délivre Orléans et fait sacrer le roi à Reims.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "history.middle_ages.dt_jeanne_arc",
     "history.middle_ages.dt_mystere_jeanne_arc",
@@ -248,7 +248,7 @@
    "figure": "1206",
    "unit": "Gengis Khan proclamé",
    "phrase": "Le plus grand empire d'un seul tenant de l'histoire, de la Chine à l'Europe.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.bataille_d_ain_djalout",
     "history.middle_ages.bataille_d_ankara",
@@ -268,7 +268,7 @@
    "figure": "1453",
    "unit": "chute de Constantinople",
    "phrase": "La fin de l'Empire byzantin marque souvent la fin du Moyen Âge.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.bataille_de_kosovo_polje",
     "history.middle_ages.bataille_de_las_navas_de_tolosa",
@@ -291,7 +291,7 @@
    "figure": "1314",
    "unit": "Bannockburn",
    "phrase": "Écossais, Teutoniques, Flamands : les batailles qui ont dessiné les pays.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.bataille_de_bannockburn",
     "history.middle_ages.bataille_de_courtrai",
@@ -312,7 +312,7 @@
    "figure": "24",
    "unit": "ans de voyage de Marco Polo",
    "phrase": "De Venise à Pékin, de Cordoue à Bagdad : les idées voyagent.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.century_averroes",
     "history.middle_ages.century_boccace",
@@ -342,7 +342,7 @@
    "figure": "476–1492",
    "unit": "mille ans d'histoire",
    "phrase": "De la chute de Rome à la découverte de l'Amérique.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.dt_epoque_rois_reines_ep",
     "history.middle_ages.events_order",
@@ -373,5 +373,6 @@
    "history.middle_ages.century_ulrich_zwingli",
    "history.middle_ages.century_vasco_nunez_de_balboa"
   ]
- }
+ },
+ "rarity_status": "proposée"
 }

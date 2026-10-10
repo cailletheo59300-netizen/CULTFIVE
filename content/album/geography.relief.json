@@ -14,7 +14,7 @@
    "figure": "8 849 m",
    "unit": "le toit du monde",
    "phrase": "Le plus haut sommet de la Terre, à la frontière du Népal et de la Chine.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "geography.relief.acc_himalaya",
     "geography.relief.dt_epingle_everest",
@@ -34,7 +34,7 @@
    "figure": "4 806 m",
    "unit": "plus haut sommet des Alpes",
    "phrase": "Le toit de l'Europe de l'Ouest, entre la France et l'Italie.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.relief.acc_alpes_mont_blanc",
     "geography.relief.alps_highest",
@@ -52,7 +52,7 @@
    "figure": "29",
    "unit": "sommets de pays européens",
    "phrase": "Chaque pays a son point le plus haut, du sommet alpin à la simple colline.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.relief.highest_albania",
     "geography.relief.highest_austria",
@@ -94,7 +94,7 @@
    "figure": "5 895 m",
    "unit": "le Kilimandjaro",
    "phrase": "Un volcan aux neiges éternelles, presque sur l'équateur.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.relief.africa_highest",
     "geography.relief.highest_algeria",
@@ -150,7 +150,7 @@
    "figure": "8 611 m",
    "unit": "le K2, deuxième sommet du monde",
    "phrase": "Les quatorze sommets de plus de 8 000 mètres sont tous en Asie.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.relief.highest_afghanistan",
     "geography.relief.highest_armenia",
@@ -201,7 +201,7 @@
    "figure": "6 961 m",
    "unit": "l'Aconcagua",
    "phrase": "Le plus haut sommet hors d'Asie se dresse dans les Andes argentines.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.relief.highest_argentina",
     "geography.relief.highest_australia",
@@ -238,7 +238,7 @@
    "figure": "79",
    "unit": "Pompéi ensevelie",
    "phrase": "Du Vésuve au mont Fuji, de l'Etna en Sicile au piton de la Fournaise à La Réunion.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.relief.acc_fuji",
     "geography.relief.acc_massif_central_volcans",
@@ -256,7 +256,7 @@
    "figure": "7 000 km",
    "unit": "longueur des Andes",
    "phrase": "Andes, Himalaya, Pyrénées : les plis de la croûte terrestre.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.relief.acc_pyrenees",
     "geography.relief.andes_longest",
@@ -272,7 +272,7 @@
    "figure": "25 km",
    "unit": "de gorges du Verdon",
    "phrase": "Falaises, dunes, gorges et châteaux : la France en cartes postales.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.relief.acc_dune_pilat",
     "geography.relief.acc_etretat",
@@ -289,7 +289,7 @@
    "figure": "6 650 km",
    "unit": "longueur du Nil",
    "phrase": "Le Nil et l'Amazone se disputent le titre de plus long fleuve du monde.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.relief.acc_amazone_foret",
     "geography.relief.acc_nil_egypte",
@@ -309,7 +309,7 @@
    "figure": "1 006 km",
    "unit": "la Loire, plus long fleuve de France",
    "phrase": "La Loire, la Seine, le Rhône, le Rhin et le lac Léman.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.relief.acc_leman",
     "geography.relief.acc_rhin_frontiere",
@@ -330,7 +330,7 @@
    "figure": "−430 m",
    "unit": "rive de la mer Morte",
    "phrase": "Le Pacifique couvre à lui seul un tiers de la planète.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.relief.acc_atlantique_ouest",
     "geography.relief.acc_manche",
@@ -351,7 +351,7 @@
    "figure": "979 m",
    "unit": "chute du Salto Ángel",
    "phrase": "La plus haute cascade, le plus grand désert chaud, les gorges les plus célèbres.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.relief.dt_epingle_niagara",
     "geography.relief.dt_grand_canyon",
@@ -369,7 +369,7 @@
    "figure": "−89 °C",
    "unit": "record de froid, en Antarctique",
    "phrase": "Quand c'est l'hiver chez nous, c'est l'été de l'autre côté de l'équateur.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.relief.acc_equateur",
     "geography.relief.acc_hemisphere_saisons",
@@ -377,5 +377,6 @@
     "geography.relief.acc_pole_sud_continent"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
