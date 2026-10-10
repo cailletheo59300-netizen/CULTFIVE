@@ -9,7 +9,7 @@ Champs d'une carte :
 - `figure` et `unit` : le chiffre clé écrit en grand sur la carte (1429, 8 849 m) et sa précision.
 - `kind` : composition de l'image — `trait` (sujet au trait), `carte` (contour géographique), `typo` (chiffre ou mot seul).
 - `subject` : ce que représente le dessin (drakkar, Saturne et ses anneaux…).
-- `rarity` : laissé vide. La rareté se calcule à partir du **taux de réussite réel** des questions de la carte, après le recalibrage de la banque (D-039, D-042), jamais d'après une estimation.
+- `rarity` : `common`, `rare`, `epic` ou `legend`, choisie au prestige du sujet avec une répartition fixe par page (D-043) ; vide tant qu'elle n'est pas validée.
 - `concepts` : les notions (`concept` des questions) rangées dans la carte.
 
 `to_move` liste les notions rangées dans le mauvais sous-thème, à déplacer dans le contenu.
