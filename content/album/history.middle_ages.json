@@ -1,0 +1,377 @@
+{
+ "page": "history.middle_ages",
+ "title": "Moyen Âge",
+ "domain": "history",
+ "motif": "gravure",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "history.middle_ages.clovis_et_les_francs",
+   "name": "Clovis et les Francs",
+   "kind": "trait",
+   "subject": "hache franque (francisque)",
+   "figure": "496",
+   "unit": "baptême à Reims (date traditionnelle)",
+   "phrase": "Le roi des Francs se fait baptiser : la Gaule devient le royaume des Francs.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.bataille_de_poitiers_732",
+    "history.middle_ages.clovis_baptism",
+    "history.middle_ages.dt_poitiers_732",
+    "history.middle_ages.dynastie_de_clovis"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "history.middle_ages.charlemagne",
+   "name": "Charlemagne",
+   "kind": "trait",
+   "subject": "couronne impériale",
+   "figure": "800",
+   "unit": "sacré empereur",
+   "phrase": "Couronné à Rome le jour de Noël, il règne sur presque toute l'Europe de l'Ouest.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.charlemagne_800",
+    "history.middle_ages.dt_charlemagne",
+    "history.middle_ages.dt_charlemagne_sacre",
+    "history.middle_ages.dynastie_de_pepin_le_bref",
+    "history.middle_ages.expert_verdun_843",
+    "history.middle_ages.roncevaux"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "history.middle_ages.les_vikings",
+   "name": "Les Vikings",
+   "kind": "trait",
+   "subject": "drakkar",
+   "figure": "911",
+   "unit": "naissance de la Normandie",
+   "phrase": "Venus de Scandinavie, ils pillent les côtes puis s'installent en Normandie.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.acc_cornes_vikings",
+    "history.middle_ages.acc_vikings_drakkar",
+    "history.middle_ages.acc_vikings_origine",
+    "history.middle_ages.bataille_de_stamford_bridge",
+    "history.middle_ages.normandie",
+    "history.middle_ages.traite_de_saint_clair_sur_epte"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "history.middle_ages.guillaume_le_conqurant",
+   "name": "Guillaume le Conquérant",
+   "kind": "trait",
+   "subject": "tapisserie de Bayeux (détail)",
+   "figure": "1066",
+   "unit": "bataille d'Hastings",
+   "phrase": "Le duc de Normandie traverse la Manche et devient roi d'Angleterre.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.conquete_de_l_angleterre",
+    "history.middle_ages.hastings",
+    "history.middle_ages.tapisserie_de_bayeux"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "history.middle_ages.le_chteau_fort",
+   "name": "Le château fort",
+   "kind": "trait",
+   "subject": "donjon et pont-levis",
+   "figure": "XIe s.",
+   "unit": "premiers donjons en pierre",
+   "phrase": "Donjon, douves, pont-levis : la maison du seigneur est faite pour résister.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.acc_donjon",
+    "history.middle_ages.acc_pont_levis",
+    "history.middle_ages.donjon"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "history.middle_ages.seigneurs_et_paysans",
+   "name": "Seigneurs et paysans",
+   "kind": "trait",
+   "subject": "heaume et épée",
+   "figure": "3",
+   "unit": "ordres de la société",
+   "phrase": "Ceux qui prient, ceux qui combattent, ceux qui travaillent.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.acc_serf",
+    "history.middle_ages.adoubement",
+    "history.middle_ages.animal_trials",
+    "history.middle_ages.devoirs_du_vassal",
+    "history.middle_ages.dt_chevalier",
+    "history.middle_ages.jacquerie",
+    "history.middle_ages.les_trois_ordres",
+    "history.middle_ages.serf"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "history.middle_ages.les_croisades",
+   "name": "Les croisades",
+   "kind": "trait",
+   "subject": "croix de croisé sur bouclier",
+   "figure": "1095",
+   "unit": "appel de Clermont",
+   "phrase": "Pendant deux siècles, des armées d'Europe partent vers Jérusalem.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.acc_croisades",
+    "history.middle_ages.appel_de_clermont",
+    "history.middle_ages.bataille_de_hattin",
+    "history.middle_ages.dt_premiere_croisade",
+    "history.middle_ages.fin_des_templiers",
+    "history.middle_ages.saladin"
+   ]
+  },
+  {
+   "n": 8,
+   "id": "history.middle_ages.les_rois_captiens",
+   "name": "Les rois capétiens",
+   "kind": "trait",
+   "subject": "fleur de lys",
+   "figure": "987",
+   "unit": "Hugues Capet roi",
+   "phrase": "Une famille qui va régner sur la France pendant plus de huit siècles.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.acc_saint_louis",
+    "history.middle_ages.expert_bouvines",
+    "history.middle_ages.hugues_capet",
+    "history.middle_ages.mort_de_saint_louis",
+    "history.middle_ages.robert_de_sorbon"
+   ]
+  },
+  {
+   "n": 9,
+   "id": "history.middle_ages.alinor_et_les_plantagents",
+   "name": "Aliénor et les Plantagenêts",
+   "kind": "trait",
+   "subject": "sceau royal",
+   "figure": "1215",
+   "unit": "Grande Charte",
+   "phrase": "Reine de France puis d'Angleterre, mère de Richard Cœur de Lion.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.alienor_d_aquitaine",
+    "history.middle_ages.bataille_de_bosworth",
+    "history.middle_ages.magna_carta",
+    "history.middle_ages.richard_cur_de_lion"
+   ]
+  },
+  {
+   "n": 10,
+   "id": "history.middle_ages.l_glise_au_moyen_ge",
+   "name": "L'Église au Moyen Âge",
+   "kind": "trait",
+   "subject": "plume de moine copiste",
+   "figure": "1054",
+   "unit": "schisme d'Orient",
+   "phrase": "Monastères, copistes et papes : l'Église est au cœur de la vie.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.cisterciens",
+    "history.middle_ages.grand_schisme_d_occident",
+    "history.middle_ages.moines_copistes",
+    "history.middle_ages.papes_d_avignon",
+    "history.middle_ages.schisme_de_1054"
+   ]
+  },
+  {
+   "n": 11,
+   "id": "history.middle_ages.la_peste_noire",
+   "name": "La peste noire",
+   "kind": "trait",
+   "subject": "rat et puce",
+   "figure": "1347",
+   "unit": "arrivée en Europe",
+   "phrase": "En quelques années, elle emporte près d'un Européen sur trois.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.black_death",
+    "history.middle_ages.dt_peste_noire",
+    "history.middle_ages.transmission_de_la_peste"
+   ]
+  },
+  {
+   "n": 12,
+   "id": "history.middle_ages.la_guerre_de_cent_ans",
+   "name": "La guerre de Cent Ans",
+   "kind": "trait",
+   "subject": "arc long anglais",
+   "figure": "116",
+   "unit": "ans de guerre",
+   "phrase": "De 1337 à 1453, Français et Anglais se disputent le trône de France.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.acc_cent_ans_adversaire",
+    "history.middle_ages.bataille_d_azincourt",
+    "history.middle_ages.bataille_de_crecy",
+    "history.middle_ages.dt_cent_ans",
+    "history.middle_ages.etienne_marcel",
+    "history.middle_ages.hundred_years",
+    "history.middle_ages.poitiers_1356"
+   ]
+  },
+  {
+   "n": 13,
+   "id": "history.middle_ages.jeanne_d_arc",
+   "name": "Jeanne d'Arc",
+   "kind": "trait",
+   "subject": "étendard",
+   "figure": "1429",
+   "unit": "délivrance d'Orléans",
+   "phrase": "Une jeune bergère lorraine délivre Orléans et fait sacrer le roi à Reims.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.dt_jeanne_arc",
+    "history.middle_ages.dt_mystere_jeanne_arc",
+    "history.middle_ages.joan_of_arc_death",
+    "history.middle_ages.sacre_de_charles_vii",
+    "history.middle_ages.siege_d_orleans"
+   ]
+  },
+  {
+   "n": 14,
+   "id": "history.middle_ages.l_empire_mongol",
+   "name": "L'Empire mongol",
+   "kind": "trait",
+   "subject": "arc et cavalier des steppes",
+   "figure": "1206",
+   "unit": "Gengis Khan proclamé",
+   "phrase": "Le plus grand empire d'un seul tenant de l'histoire, de la Chine à l'Europe.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.bataille_d_ain_djalout",
+    "history.middle_ages.bataille_d_ankara",
+    "history.middle_ages.bataille_de_bagdad",
+    "history.middle_ages.bataille_de_koulikovo",
+    "history.middle_ages.bataille_de_la_kalka",
+    "history.middle_ages.bataille_de_legnica",
+    "history.middle_ages.gengis_khan"
+   ]
+  },
+  {
+   "n": 15,
+   "id": "history.middle_ages.byzance_l_islam_et_les_ottomans",
+   "name": "Byzance, l'Islam et les Ottomans",
+   "kind": "trait",
+   "subject": "coupoles de Sainte-Sophie",
+   "figure": "1453",
+   "unit": "chute de Constantinople",
+   "phrase": "La fin de l'Empire byzantin marque souvent la fin du Moyen Âge.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.bataille_de_kosovo_polje",
+    "history.middle_ages.bataille_de_las_navas_de_tolosa",
+    "history.middle_ages.bataille_de_manzikert",
+    "history.middle_ages.bataille_de_nicopolis",
+    "history.middle_ages.bataille_de_sagrajas",
+    "history.middle_ages.bataille_de_varna",
+    "history.middle_ages.dt_constantinople",
+    "history.middle_ages.fin_de_la_reconquista",
+    "history.middle_ages.hegire",
+    "history.middle_ages.prise_de_constantinople"
+   ]
+  },
+  {
+   "n": 16,
+   "id": "history.middle_ages.grandes_batailles_d_europe",
+   "name": "Grandes batailles d'Europe",
+   "kind": "trait",
+   "subject": "épées croisées",
+   "figure": "1314",
+   "unit": "Bannockburn",
+   "phrase": "Écossais, Teutoniques, Flamands : les batailles qui ont dessiné les pays.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.bataille_de_bannockburn",
+    "history.middle_ages.bataille_de_courtrai",
+    "history.middle_ages.bataille_de_falkirk",
+    "history.middle_ages.bataille_de_grunwald",
+    "history.middle_ages.bataille_de_la_neva",
+    "history.middle_ages.bataille_du_lac_peipous",
+    "history.middle_ages.bataille_du_pont_de_stirling",
+    "history.middle_ages.dt_epoque_batailles"
+   ]
+  },
+  {
+   "n": 17,
+   "id": "history.middle_ages.voyageurs_et_savants",
+   "name": "Voyageurs et savants",
+   "kind": "trait",
+   "subject": "boussole",
+   "figure": "24",
+   "unit": "ans de voyage de Marco Polo",
+   "phrase": "De Venise à Pékin, de Cordoue à Bagdad : les idées voyagent.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.century_averroes",
+    "history.middle_ages.century_boccace",
+    "history.middle_ages.century_dante_alighieri",
+    "history.middle_ages.century_djalal_ad_din_rumi",
+    "history.middle_ages.century_francois_d_assise",
+    "history.middle_ages.century_geoffrey_chaucer",
+    "history.middle_ages.century_giotto",
+    "history.middle_ages.century_hafez",
+    "history.middle_ages.century_ibn_battuta",
+    "history.middle_ages.century_ibn_khaldoun",
+    "history.middle_ages.century_leonardo_fibonacci",
+    "history.middle_ages.century_marco_polo",
+    "history.middle_ages.century_petrarque",
+    "history.middle_ages.century_thomas_d_aquin",
+    "history.middle_ages.century_zheng_he",
+    "history.middle_ages.century_zhu_xi",
+    "history.middle_ages.marco_polo_en_chine"
+   ]
+  },
+  {
+   "n": 18,
+   "id": "history.middle_ages.les_repres_du_moyen_ge",
+   "name": "Les repères du Moyen Âge",
+   "kind": "typo",
+   "subject": "frise chronologique",
+   "figure": "476–1492",
+   "unit": "mille ans d'histoire",
+   "phrase": "De la chute de Rome à la découverte de l'Amérique.",
+   "rarity": null,
+   "concepts": [
+    "history.middle_ages.dt_epoque_rois_reines_ep",
+    "history.middle_ages.events_order",
+    "history.middle_ages.gutenberg_vs_columbus",
+    "history.middle_ages.reperes_du_moyen_age"
+   ]
+  }
+ ],
+ "to_move": {
+  "reason": "Notions de la Renaissance (XVe-XVIe siècles) rangées dans le Moyen Âge : à déplacer vers « Temps modernes ».",
+  "concepts": [
+   "history.middle_ages.century_afonso_de_albuquerque",
+   "history.middle_ages.century_albrecht_durer",
+   "history.middle_ages.century_amerigo_vespucci",
+   "history.middle_ages.century_bartolomeu_dias",
+   "history.middle_ages.century_donatello",
+   "history.middle_ages.century_fernand_de_magellan",
+   "history.middle_ages.century_henri_viii",
+   "history.middle_ages.century_hernan_cortes",
+   "history.middle_ages.century_jerome_bosch",
+   "history.middle_ages.century_juan_ponce_de_leon",
+   "history.middle_ages.century_martin_luther",
+   "history.middle_ages.century_michel_ange_buronarroti",
+   "history.middle_ages.century_nicolas_machiavel",
+   "history.middle_ages.century_pedro_alvares_cabral",
+   "history.middle_ages.century_sandro_botticelli",
+   "history.middle_ages.century_thomas_more",
+   "history.middle_ages.century_ulrich_zwingli",
+   "history.middle_ages.century_vasco_nunez_de_balboa"
+  ]
+ }
+}

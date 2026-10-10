@@ -1,0 +1,324 @@
+{
+ "page": "science.space",
+ "title": "Espace",
+ "domain": "science",
+ "motif": "plan technique et constellations",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "science.space.le_soleil",
+   "name": "Le Soleil",
+   "kind": "trait",
+   "subject": "Soleil et protubérances",
+   "figure": "8 min 20 s",
+   "unit": "trajet de sa lumière",
+   "phrase": "Une étoile ordinaire, une naine jaune, qui contient presque toute la masse du système solaire.",
+   "rarity": null,
+   "concepts": [
+    "science.space.acc_annee_terre",
+    "science.space.acc_soleil_etoile",
+    "science.space.acc_soleil_hydrogene",
+    "science.space.age_du_soleil",
+    "science.space.dt_lumiere_soleil",
+    "science.space.dt_masse_soleil",
+    "science.space.dt_soleil_jupiter",
+    "science.space.eclipse_de_soleil",
+    "science.space.lumiere_soleil_terre",
+    "science.space.naine_jaune"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "science.space.la_lune",
+   "name": "La Lune",
+   "kind": "trait",
+   "subject": "Lune et ses cratères",
+   "figure": "384 400",
+   "unit": "km de la Terre",
+   "phrase": "Elle nous montre toujours la même face et ne brille que grâce au Soleil.",
+   "rarity": null,
+   "concepts": [
+    "science.space.acc_lune_lumiere",
+    "science.space.acc_lune_unique",
+    "science.space.acc_phases_lune",
+    "science.space.dt_lune_terre",
+    "science.space.dt_mystere_lune",
+    "science.space.dt_phases_lune",
+    "science.space.eclipse_de_lune",
+    "science.space.face_visible_de_la_lune",
+    "science.space.great_wall_moon",
+    "science.space.moon_light",
+    "science.space.revolution_de_la_lune"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "science.space.mercure_et_vnus",
+   "name": "Mercure et Vénus",
+   "kind": "trait",
+   "subject": "Vénus voilée de nuages",
+   "figure": "464 °C",
+   "unit": "à la surface de Vénus",
+   "phrase": "Vénus, l'étoile du Berger, est plus chaude que Mercure pourtant plus proche du Soleil.",
+   "rarity": null,
+   "concepts": [
+    "science.space.acc_etoile_berger",
+    "science.space.closest_planet_sun",
+    "science.space.expert_venus_day",
+    "science.space.hottest_planet",
+    "science.space.rotation_de_venus"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "science.space.la_terre",
+   "name": "La Terre",
+   "kind": "trait",
+   "subject": "Terre et son axe incliné",
+   "figure": "23 h 56",
+   "unit": "pour un tour sur elle-même",
+   "phrase": "La planète la plus dense du système solaire, penchée de 23 degrés : d'où les saisons.",
+   "rarity": null,
+   "concepts": [
+    "science.space.acc_jour_24h",
+    "science.space.acc_terre_soleil_ete",
+    "science.space.planete_la_plus_dense"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "science.space.mars",
+   "name": "Mars",
+   "kind": "trait",
+   "subject": "Olympus Mons",
+   "figure": "22 km",
+   "unit": "de haut pour Olympus Mons",
+   "phrase": "La planète rouge porte le plus grand volcan connu du système solaire.",
+   "rarity": null,
+   "concepts": [
+    "science.space.coucher_soleil_mars",
+    "science.space.dt_lunes_mars",
+    "science.space.dt_mars_terre",
+    "science.space.expert_olympus_mons",
+    "science.space.moon_deimos",
+    "science.space.moon_phobos",
+    "science.space.perseverance",
+    "science.space.planete_rouge"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "science.space.jupiter",
+   "name": "Jupiter",
+   "kind": "trait",
+   "subject": "Jupiter et sa Grande Tache rouge",
+   "figure": "×11",
+   "unit": "le diamètre de la Terre",
+   "phrase": "La plus grande planète, avec une tempête plus large que la Terre.",
+   "rarity": null,
+   "concepts": [
+    "science.space.dt_jupiter_terre",
+    "science.space.dt_planetes_gazeuses",
+    "science.space.europe_ocean",
+    "science.space.grande_tache_rouge",
+    "science.space.jupiter_plus_grosse",
+    "science.space.moon_adrastee",
+    "science.space.moon_amalthee",
+    "science.space.moon_callisto",
+    "science.space.moon_europe",
+    "science.space.moon_ganymede",
+    "science.space.moon_io",
+    "science.space.moon_metis",
+    "science.space.moon_thebe",
+    "science.space.plus_grand_satellite"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "science.space.saturne",
+   "name": "Saturne",
+   "kind": "trait",
+   "subject": "Saturne et ses anneaux",
+   "figure": "0,69",
+   "unit": "sa densité, moins que l'eau",
+   "phrase": "Ses anneaux sont faits de glace et de roche ; elle flotterait dans une baignoire géante.",
+   "rarity": null,
+   "concepts": [
+    "science.space.anneaux_de_saturne",
+    "science.space.dt_mystere_saturne",
+    "science.space.dt_saturne",
+    "science.space.moon_dione",
+    "science.space.moon_encelade",
+    "science.space.moon_hyperion",
+    "science.space.moon_japet",
+    "science.space.moon_mimas",
+    "science.space.moon_rhea",
+    "science.space.moon_tethys",
+    "science.space.moon_titan",
+    "science.space.saturne_anneaux",
+    "science.space.titan_atmosphere"
+   ]
+  },
+  {
+   "n": 8,
+   "id": "science.space.uranus_et_neptune",
+   "name": "Uranus et Neptune",
+   "kind": "trait",
+   "subject": "Uranus couchée sur le côté",
+   "figure": "98°",
+   "unit": "l'inclinaison d'Uranus",
+   "phrase": "Deux géantes glacées ; Neptune a été trouvée par le calcul avant d'être vue.",
+   "rarity": null,
+   "concepts": [
+    "science.space.decouverte_de_neptune",
+    "science.space.dt_neptune",
+    "science.space.moon_ariel",
+    "science.space.moon_miranda",
+    "science.space.moon_nereide",
+    "science.space.moon_oberon",
+    "science.space.moon_protee",
+    "science.space.moon_titania",
+    "science.space.moon_triton",
+    "science.space.moon_umbriel",
+    "science.space.uranus_couchee"
+   ]
+  },
+  {
+   "n": 9,
+   "id": "science.space.pluton_et_les_petits_corps",
+   "name": "Pluton et les petits corps",
+   "kind": "trait",
+   "subject": "comète et sa queue",
+   "figure": "2006",
+   "unit": "Pluton n'est plus une planète",
+   "phrase": "Astéroïdes, comètes, étoiles filantes : les poussières du système solaire.",
+   "rarity": null,
+   "concepts": [
+    "science.space.ceinture_d_asteroides",
+    "science.space.composition_des_cometes",
+    "science.space.dt_comete",
+    "science.space.etoile_filante",
+    "science.space.hayabusa",
+    "science.space.pluton"
+   ]
+  },
+  {
+   "n": 10,
+   "id": "science.space.le_systme_solaire",
+   "name": "Le système solaire",
+   "kind": "trait",
+   "subject": "orbites des planètes",
+   "figure": "8",
+   "unit": "planètes",
+   "phrase": "Huit planètes tournent autour du Soleil, comme l'avaient compris Copernic et Kepler.",
+   "rarity": null,
+   "concepts": [
+    "science.space.copernic",
+    "science.space.dt_epoque_espace",
+    "science.space.dt_tri_planete",
+    "science.space.kepler_lois",
+    "science.space.planet_count",
+    "science.space.planetes_ordre",
+    "science.space.planets_order",
+    "science.space.planets_size_order"
+   ]
+  },
+  {
+   "n": 11,
+   "id": "science.space.les_toiles",
+   "name": "Les étoiles",
+   "kind": "trait",
+   "subject": "Grande Ourse et étoile polaire",
+   "figure": "4,2",
+   "unit": "années-lumière jusqu'à la plus proche",
+   "phrase": "L'étoile polaire indique le nord ; la plus proche après le Soleil est Proxima du Centaure.",
+   "rarity": null,
+   "concepts": [
+    "science.space.acc_etoiles_jour",
+    "science.space.closest_star",
+    "science.space.etoile_polaire",
+    "science.space.grande_ourse",
+    "science.space.light_year",
+    "science.space.proxima"
+   ]
+  },
+  {
+   "n": 12,
+   "id": "science.space.galaxies_et_univers",
+   "name": "Galaxies et Univers",
+   "kind": "trait",
+   "subject": "spirale de la Voie lactée",
+   "figure": "13,8",
+   "unit": "milliards d'années",
+   "phrase": "Notre galaxie, la Voie lactée, n'est qu'une parmi des milliards.",
+   "rarity": null,
+   "concepts": [
+    "science.space.age_de_l_univers",
+    "science.space.andromede",
+    "science.space.big_bang_age",
+    "science.space.dt_galaxie",
+    "science.space.dt_hydrogene_univers",
+    "science.space.son_espace",
+    "science.space.trou_noir",
+    "science.space.voie_lactee"
+   ]
+  },
+  {
+   "n": 13,
+   "id": "science.space.la_course_l_espace",
+   "name": "La course à l'espace",
+   "kind": "trait",
+   "subject": "Spoutnik",
+   "figure": "1957",
+   "unit": "premier satellite",
+   "phrase": "Spoutnik, puis Gagarine en 1961 : les Soviétiques ouvrent la route de l'espace.",
+   "rarity": null,
+   "concepts": [
+    "science.space.dt_gagarine",
+    "science.space.gagarin",
+    "science.space.premiere_femme_dans_l_espace",
+    "science.space.spoutnik"
+   ]
+  },
+  {
+   "n": 14,
+   "id": "science.space.apollo_11",
+   "name": "Apollo 11",
+   "kind": "trait",
+   "subject": "empreinte de pas sur la Lune",
+   "figure": "1969",
+   "unit": "premiers pas sur la Lune",
+   "phrase": "Neil Armstrong et Buzz Aldrin marchent sur la Lune le 21 juillet (heure de Paris).",
+   "rarity": null,
+   "concepts": [
+    "science.space.annee_des_premiers_pas_sur_la_lune",
+    "science.space.apollo_11"
+   ]
+  },
+  {
+   "n": 15,
+   "id": "science.space.stations_et_tlescopes",
+   "name": "Stations et télescopes",
+   "kind": "trait",
+   "subject": "Station spatiale internationale",
+   "figure": "400 km",
+   "unit": "altitude de l'ISS",
+   "phrase": "L'ISS fait le tour de la Terre en 90 minutes ; James Webb observe depuis le point L2.",
+   "rarity": null,
+   "concepts": [
+    "science.space.acc_station_spatiale",
+    "science.space.altitude_de_l_iss",
+    "science.space.apesanteur_dans_l_iss",
+    "science.space.base_de_kourou",
+    "science.space.dt_altitude_iss",
+    "science.space.james_webb",
+    "science.space.new_horizons",
+    "science.space.point_l2",
+    "science.space.premier_francais_dans_l_espace",
+    "science.space.thomas_pesquet",
+    "science.space.voyager_1"
+   ]
+  }
+ ]
+}
