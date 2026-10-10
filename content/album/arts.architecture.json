@@ -1,0 +1,173 @@
+{
+ "page": "arts.architecture",
+ "title": "Architecture",
+ "domain": "arts",
+ "motif": "plan d'architecte",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "arts.architecture.l_architecture_antique",
+   "name": "L'architecture antique",
+   "kind": "trait",
+   "subject": "colonnes grecques",
+   "figure": "3",
+   "unit": "ordres grecs : dorique, ionique, corinthien",
+   "phrase": "Le Parthénon, le Colisée, le pont du Gard, le Machu Picchu.",
+   "rarity": null,
+   "concepts": [
+    "arts.architecture.acc_colisee",
+    "arts.architecture.acc_pont_du_gard",
+    "arts.architecture.cle_de_voute",
+    "arts.architecture.colosseum",
+    "arts.architecture.dt_parthenon",
+    "arts.architecture.machu_picchu",
+    "arts.architecture.ordre_corinthien",
+    "arts.architecture.ordre_du_parthenon",
+    "arts.architecture.parthenon"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "arts.architecture.le_gothique",
+   "name": "Le gothique",
+   "kind": "trait",
+   "subject": "rosace",
+   "figure": "1163",
+   "unit": "début de Notre-Dame de Paris",
+   "phrase": "Arcs-boutants, gargouilles et rosaces : des cathédrales de lumière.",
+   "rarity": null,
+   "concepts": [
+    "arts.architecture.arc_boutant",
+    "arts.architecture.avant_le_gothique",
+    "arts.architecture.expert_saint_denis",
+    "arts.architecture.gargouilles",
+    "arts.architecture.gothic",
+    "arts.architecture.notre_dame",
+    "arts.architecture.rosace"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "arts.architecture.chateaux_et_palais",
+   "name": "Châteaux et palais",
+   "kind": "trait",
+   "subject": "galerie des Glaces",
+   "figure": "357",
+   "unit": "miroirs dans la galerie des Glaces",
+   "phrase": "Chambord et son escalier, Chenonceau, Versailles, les forts de Vauban.",
+   "rarity": null,
+   "concepts": [
+    "arts.architecture.acc_chambord",
+    "arts.architecture.chenonceau",
+    "arts.architecture.colombages",
+    "arts.architecture.colonnade_de_saint_pierre",
+    "arts.architecture.coupole_de_florence",
+    "arts.architecture.escalier_de_chambord",
+    "arts.architecture.galerie_des_glaces",
+    "arts.architecture.jardins_de_versailles",
+    "arts.architecture.louis_le_vau",
+    "arts.architecture.mansarde",
+    "arts.architecture.vauban",
+    "arts.architecture.versailles"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "arts.architecture.merveilles_du_monde",
+   "name": "Merveilles du monde",
+   "kind": "trait",
+   "subject": "coupoles de Saint-Basile",
+   "figure": "1882",
+   "unit": "début de la Sagrada Família",
+   "phrase": "Le Taj Mahal, Sainte-Sophie, Saint-Basile, Neuschwanstein, Big Ben.",
+   "rarity": null,
+   "concepts": [
+    "arts.architecture.arc_outrepasse",
+    "arts.architecture.big_ben",
+    "arts.architecture.gaudi",
+    "arts.architecture.hagia_sophia",
+    "arts.architecture.minaret",
+    "arts.architecture.neuschwanstein",
+    "arts.architecture.pisa",
+    "arts.architecture.sagrada_familia",
+    "arts.architecture.saint_basile",
+    "arts.architecture.taj_mahal",
+    "arts.architecture.tour_penchee"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "arts.architecture.paris_ville_d_architecture",
+   "name": "Paris, ville d'architecture",
+   "kind": "trait",
+   "subject": "pyramide du Louvre",
+   "figure": "673",
+   "unit": "losanges et triangles de verre",
+   "phrase": "Haussmann, l'Opéra Garnier, le métro Guimard, Beaubourg, la Grande Arche.",
+   "rarity": null,
+   "concepts": [
+    "arts.architecture.commande_de_l_arc_de_triomphe",
+    "arts.architecture.eiffel",
+    "arts.architecture.eiffel_1889",
+    "arts.architecture.grande_arche",
+    "arts.architecture.haussmann",
+    "arts.architecture.louvre_museum",
+    "arts.architecture.louvre_pyramid",
+    "arts.architecture.metro_guimard",
+    "arts.architecture.opera_garnier",
+    "arts.architecture.palais_ideal",
+    "arts.architecture.pantheon_de_soufflot",
+    "arts.architecture.philharmonie_de_paris",
+    "arts.architecture.pompidou",
+    "arts.architecture.pyramide_blanche",
+    "arts.architecture.pyramide_louvre",
+    "arts.architecture.tour_eiffel_provisoire"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "arts.architecture.les_gratte_ciel",
+   "name": "Les gratte-ciel",
+   "kind": "trait",
+   "subject": "Empire State Building",
+   "figure": "828 m",
+   "unit": "Burj Khalifa",
+   "phrase": "De Chicago à Dubaï, la course vers le ciel.",
+   "rarity": null,
+   "concepts": [
+    "arts.architecture.acc_statue_liberte",
+    "arts.architecture.burj_khalifa",
+    "arts.architecture.chrysler_building",
+    "arts.architecture.dt_statue_liberte",
+    "arts.architecture.empire_state_building",
+    "arts.architecture.premier_gratte_ciel"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "arts.architecture.l_architecture_moderne",
+   "name": "L'architecture moderne",
+   "kind": "trait",
+   "subject": "Opéra de Sydney",
+   "figure": "343 m",
+   "unit": "le viaduc de Millau",
+   "phrase": "Le Corbusier, le Bauhaus, Frank Lloyd Wright, Zaha Hadid.",
+   "rarity": null,
+   "concepts": [
+    "arts.architecture.bauhaus",
+    "arts.architecture.brasilia",
+    "arts.architecture.brutalisme",
+    "arts.architecture.expert_villa_savoye",
+    "arts.architecture.guggenheim",
+    "arts.architecture.le_corbusier",
+    "arts.architecture.louvre_abu_dhabi",
+    "arts.architecture.maison_sur_la_cascade",
+    "arts.architecture.prix_pritzker",
+    "arts.architecture.sydney_opera",
+    "arts.architecture.viaduc_de_millau",
+    "arts.architecture.zaha_hadid"
+   ]
+  }
+ ]
+}

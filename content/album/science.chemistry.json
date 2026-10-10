@@ -1,0 +1,172 @@
+{
+ "page": "science.chemistry",
+ "title": "Chimie",
+ "domain": "science",
+ "motif": "tableau périodique",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "science.chemistry.le_tableau_periodique",
+   "name": "Le tableau périodique",
+   "kind": "typo",
+   "subject": "tableau de Mendeleïev",
+   "figure": "118",
+   "unit": "éléments connus",
+   "phrase": "Tous les éléments rangés par numéro atomique.",
+   "rarity": null,
+   "concepts": [
+    "science.chemistry.dt_elements",
+    "science.chemistry.elements_pairs",
+    "science.chemistry.mendeleiev"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "science.chemistry.les_metaux",
+   "name": "Les métaux",
+   "kind": "typo",
+   "subject": "lingot",
+   "figure": "Au",
+   "unit": "l'or, du latin aurum",
+   "phrase": "Fe pour le fer, Cu pour le cuivre, Hg pour le mercure : des symboles venus du latin.",
+   "rarity": null,
+   "concepts": [
+    "science.chemistry.dt_tri_metal",
+    "science.chemistry.gold_symbol",
+    "science.chemistry.symbol_ag",
+    "science.chemistry.symbol_al",
+    "science.chemistry.symbol_ca",
+    "science.chemistry.symbol_co",
+    "science.chemistry.symbol_cr",
+    "science.chemistry.symbol_cu",
+    "science.chemistry.symbol_fe",
+    "science.chemistry.symbol_hg",
+    "science.chemistry.symbol_k",
+    "science.chemistry.symbol_li",
+    "science.chemistry.symbol_mg",
+    "science.chemistry.symbol_mn",
+    "science.chemistry.symbol_na",
+    "science.chemistry.symbol_ni",
+    "science.chemistry.symbol_pb",
+    "science.chemistry.symbol_pt",
+    "science.chemistry.symbol_ra",
+    "science.chemistry.symbol_sb",
+    "science.chemistry.symbol_sn",
+    "science.chemistry.symbol_ti",
+    "science.chemistry.symbol_u",
+    "science.chemistry.symbol_w",
+    "science.chemistry.symbol_zn"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "science.chemistry.les_gaz_et_non_metaux",
+   "name": "Les gaz et non-métaux",
+   "kind": "typo",
+   "subject": "ballon et bulles",
+   "figure": "He",
+   "unit": "l'hélium",
+   "phrase": "H, O, N, C : les éléments dont est fait le vivant.",
+   "rarity": null,
+   "concepts": [
+    "science.chemistry.symbol_ar",
+    "science.chemistry.symbol_br",
+    "science.chemistry.symbol_c",
+    "science.chemistry.symbol_cl",
+    "science.chemistry.symbol_f",
+    "science.chemistry.symbol_h",
+    "science.chemistry.symbol_he",
+    "science.chemistry.symbol_i",
+    "science.chemistry.symbol_n",
+    "science.chemistry.symbol_ne",
+    "science.chemistry.symbol_o",
+    "science.chemistry.symbol_p",
+    "science.chemistry.symbol_s",
+    "science.chemistry.symbol_si"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "science.chemistry.l_air",
+   "name": "L'air",
+   "kind": "trait",
+   "subject": "bulles d'air",
+   "figure": "78 %",
+   "unit": "d'azote dans l'air",
+   "phrase": "Surtout de l'azote, 21 % d'oxygène, un peu d'argon.",
+   "rarity": null,
+   "concepts": [
+    "science.chemistry.acc_azote_air",
+    "science.chemistry.acc_feu_oxygene",
+    "science.chemistry.acc_helium_ballon",
+    "science.chemistry.atmosphere_nitrogen",
+    "science.chemistry.dt_azote_air",
+    "science.chemistry.dt_hydrogene",
+    "science.chemistry.dt_oxygene",
+    "science.chemistry.dt_oxygene_air",
+    "science.chemistry.expert_argon"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "science.chemistry.l_eau",
+   "name": "L'eau",
+   "kind": "typo",
+   "subject": "molécule d'eau",
+   "figure": "H₂O",
+   "unit": "deux hydrogènes, un oxygène",
+   "phrase": "Elle ne se mélange pas à l'huile ; le sel l'empêche de geler.",
+   "rarity": null,
+   "concepts": [
+    "science.chemistry.acc_h2o",
+    "science.chemistry.acc_huile_eau",
+    "science.chemistry.acc_sel_formule",
+    "science.chemistry.acc_sel_routes",
+    "science.chemistry.dt_mystere_eau",
+    "science.chemistry.neutral_ph",
+    "science.chemistry.ph_neutre"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "science.chemistry.les_reactions_chimiques",
+   "name": "Les réactions chimiques",
+   "kind": "trait",
+   "subject": "éprouvette qui mousse",
+   "figure": "18/24",
+   "unit": "d'or dans l'or 18 carats",
+   "phrase": "« Rien ne se perd, rien ne se crée, tout se transforme » (Lavoisier).",
+   "rarity": null,
+   "concepts": [
+    "science.chemistry.acc_bicarbonate_vinaigre",
+    "science.chemistry.acc_co2_bulles",
+    "science.chemistry.acc_mercure_liquide",
+    "science.chemistry.acc_or_rouille",
+    "science.chemistry.acc_pomme_brunit",
+    "science.chemistry.acc_rouille",
+    "science.chemistry.dt_lavoisier",
+    "science.chemistry.dt_or_18_carats"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "science.chemistry.le_carbone",
+   "name": "Le carbone",
+   "kind": "trait",
+   "subject": "diamant et graphite",
+   "figure": "5 730",
+   "unit": "ans, demi-vie du carbone 14",
+   "phrase": "Diamant ou mine de crayon, et l'horloge des archéologues.",
+   "rarity": null,
+   "concepts": [
+    "science.chemistry.carbone_14",
+    "science.chemistry.dt_carbone",
+    "science.chemistry.expert_glucose_atoms",
+    "science.chemistry.hydrogene_univers",
+    "science.chemistry.isotope",
+    "science.chemistry.oxygene_de_la_croute"
+   ]
+  }
+ ]
+}

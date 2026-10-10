@@ -1,0 +1,211 @@
+{
+ "page": "science.biology",
+ "title": "Biologie",
+ "domain": "science",
+ "motif": "planche de microscope",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "science.biology.la_cellule",
+   "name": "La cellule",
+   "kind": "trait",
+   "subject": "cellule au microscope",
+   "figure": "37 000",
+   "unit": "milliards de cellules dans le corps",
+   "phrase": "La brique de tout être vivant, découverte au microscope.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.cell_unit",
+    "science.biology.enzyme",
+    "science.biology.expert_meiosis",
+    "science.biology.hemoglobine",
+    "science.biology.largest_cell",
+    "science.biology.mitochondria",
+    "science.biology.mitose",
+    "science.biology.neurone",
+    "science.biology.paroi_vegetale",
+    "science.biology.procaryotes",
+    "science.biology.ribosome",
+    "science.biology.van_leeuwenhoek"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "science.biology.l_adn",
+   "name": "L'ADN",
+   "kind": "trait",
+   "subject": "double hélice",
+   "figure": "46",
+   "unit": "chromosomes humains",
+   "phrase": "Une double hélice écrite avec quatre lettres : A, T, C, G.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.adn_du_chimpanze",
+    "science.biology.chromosomes_xy",
+    "science.biology.dna_letters",
+    "science.biology.dna_location",
+    "science.biology.dna_shape",
+    "science.biology.dt_adn_chimpanze",
+    "science.biology.expert_uracil",
+    "science.biology.human_chromosomes",
+    "science.biology.sigle_adn",
+    "science.biology.structure_de_l_adn"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "science.biology.l_heredite",
+   "name": "L'hérédité",
+   "kind": "trait",
+   "subject": "petits pois de Mendel",
+   "figure": "1996",
+   "unit": "naissance de la brebis Dolly",
+   "phrase": "Mendel et ses petits pois, jusqu'au premier mammifère cloné.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.brebis_dolly",
+    "science.biology.dt_dolly",
+    "science.biology.gene_recessif",
+    "science.biology.groupes_sanguins",
+    "science.biology.mendel",
+    "science.biology.mendel_pois",
+    "science.biology.ogm"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "science.biology.l_evolution",
+   "name": "L'évolution",
+   "kind": "trait",
+   "subject": "crâne et silhouettes des hominidés",
+   "figure": "3,2",
+   "unit": "millions d'années, l'âge de Lucy",
+   "phrase": "Darwin montre que les espèces se transforment au fil du temps.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.apparition_d_homo_sapiens",
+    "science.biology.clacanthe",
+    "science.biology.darwin",
+    "science.biology.darwin_galapagos",
+    "science.biology.fin_des_dinosaures",
+    "science.biology.lucy",
+    "science.biology.paleontologie"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "science.biology.les_microbes",
+   "name": "Les microbes",
+   "kind": "trait",
+   "subject": "boîte de Petri",
+   "figure": "1928",
+   "unit": "découverte de la pénicilline",
+   "phrase": "Bactéries et virus ; les antibiotiques ne marchent que contre les bactéries.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.acc_antibiotique_virus",
+    "science.biology.acc_levure_pain",
+    "science.biology.bacteria_everywhere",
+    "science.biology.dt_penicilline",
+    "science.biology.fleming",
+    "science.biology.levure_du_pain",
+    "science.biology.robert_koch",
+    "science.biology.virus",
+    "science.biology.virus_antibiotic",
+    "science.biology.virus_dangereux",
+    "science.biology.yaourt"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "science.biology.pasteur_et_les_vaccins",
+   "name": "Pasteur et les vaccins",
+   "kind": "trait",
+   "subject": "seringue et flacon",
+   "figure": "1885",
+   "unit": "premier vaccin contre la rage",
+   "phrase": "Pasteur prouve que les microbes ne naissent pas tout seuls.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.acc_vaccin",
+    "science.biology.anticorps",
+    "science.biology.dt_epoque_decouvertes",
+    "science.biology.generation_spontanee",
+    "science.biology.pasteur",
+    "science.biology.principe_du_vaccin"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "science.biology.la_photosynthese",
+   "name": "La photosynthèse",
+   "kind": "trait",
+   "subject": "feuille et soleil",
+   "figure": "50 %",
+   "unit": "de l'oxygène vient des océans",
+   "phrase": "Avec la lumière, les plantes changent le gaz carbonique en sucre et en oxygène.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.acc_chlorophylle",
+    "science.biology.acc_plantes_oxygene",
+    "science.biology.acc_pomme_trognon",
+    "science.biology.autotrophe",
+    "science.biology.photosynthesis_place",
+    "science.biology.plants_breathe",
+    "science.biology.produits_de_la_photosynthese",
+    "science.biology.transpiration_des_plantes"
+   ]
+  },
+  {
+   "n": 8,
+   "id": "science.biology.les_ecosystemes",
+   "name": "Les écosystèmes",
+   "kind": "trait",
+   "subject": "chaîne alimentaire",
+   "figure": "8,7",
+   "unit": "millions d'espèces estimées",
+   "phrase": "Producteurs, consommateurs, décomposeurs : tout le vivant est relié.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.biodiversite",
+    "science.biology.carnivore_herbivore",
+    "science.biology.champignons_et_animaux",
+    "science.biology.decomposeurs",
+    "science.biology.ecosysteme",
+    "science.biology.espece_endemique",
+    "science.biology.espece_invasive",
+    "science.biology.mutualisme",
+    "science.biology.parasite",
+    "science.biology.premier_maillon",
+    "science.biology.record_d_especes",
+    "science.biology.regimes_alimentaires"
+   ]
+  },
+  {
+   "n": 9,
+   "id": "science.biology.le_regne_animal",
+   "name": "Le règne animal",
+   "kind": "trait",
+   "subject": "papillon et chenille",
+   "figure": "22",
+   "unit": "mois de gestation pour l'éléphant",
+   "phrase": "Vertébrés, ovipares, métamorphoses : Linné a classé le vivant.",
+   "rarity": null,
+   "concepts": [
+    "science.biology.acc_nocturne",
+    "science.biology.axolotl",
+    "science.biology.caterpillar",
+    "science.biology.chauves_souris_aveugles",
+    "science.biology.dauphin_et_chauve_souris",
+    "science.biology.gestation_de_l_elephant",
+    "science.biology.linne",
+    "science.biology.metamorphosis",
+    "science.biology.mue_du_serpent",
+    "science.biology.ovipare",
+    "science.biology.plus_grand_animal",
+    "science.biology.vertebre"
+   ]
+  }
+ ]
+}

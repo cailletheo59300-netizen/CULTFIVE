@@ -1,0 +1,332 @@
+{
+ "page": "history.antiquity",
+ "title": "Antiquité",
+ "domain": "history",
+ "motif": "gravure",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "history.antiquity.la_prehistoire",
+   "name": "La préhistoire",
+   "kind": "trait",
+   "subject": "aurochs de Lascaux",
+   "figure": "17 000",
+   "unit": "ans, l'âge des peintures de Lascaux",
+   "phrase": "Bien avant l'écriture, les humains peignaient déjà les parois des grottes.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.acc_dinosaures_hommes",
+    "history.antiquity.acc_lascaux",
+    "history.antiquity.acc_neandertal"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "history.antiquity.la_mesopotamie_et_l_ecriture",
+   "name": "La Mésopotamie et l'écriture",
+   "kind": "trait",
+   "subject": "tablette d'argile en cunéiforme",
+   "figure": "−3300",
+   "unit": "premières écritures",
+   "phrase": "Entre le Tigre et l'Euphrate naissent les villes, les lois et l'écriture.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.alphabet_phenicien",
+    "history.antiquity.code_d_hammurabi",
+    "history.antiquity.cuneiform",
+    "history.antiquity.mesopotamie"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "history.antiquity.les_pyramides_d_egypte",
+   "name": "Les pyramides d'Égypte",
+   "kind": "trait",
+   "subject": "pyramides de Gizeh",
+   "figure": "146 m",
+   "unit": "hauteur d'origine de Khéops",
+   "phrase": "Tombeaux des pharaons, elles ont été le plus haut monument humain pendant près de 4 000 ans.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.acc_pyramides_role",
+    "history.antiquity.cleopatra_timeline",
+    "history.antiquity.dt_pharaon",
+    "history.antiquity.fleuve_de_l_egypte",
+    "history.antiquity.hieroglyphs",
+    "history.antiquity.momification",
+    "history.antiquity.pharaoh_pyramid",
+    "history.antiquity.pyramide_de_kheops",
+    "history.antiquity.pyramids_country"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "history.antiquity.toutankhamon_et_nefertiti",
+   "name": "Toutânkhamon et Néfertiti",
+   "kind": "trait",
+   "subject": "masque funéraire",
+   "figure": "1922",
+   "unit": "découverte du tombeau",
+   "phrase": "Le tombeau presque intact d'un jeune pharaon, retrouvé par Howard Carter.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.bataille_de_qadesh",
+    "history.antiquity.nefertiti",
+    "history.antiquity.toutankhamon",
+    "history.antiquity.tutankhamun_tomb"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "history.antiquity.cleopatre",
+   "name": "Cléopâtre",
+   "kind": "trait",
+   "subject": "profil de reine et serpent",
+   "figure": "−31",
+   "unit": "bataille d'Actium",
+   "phrase": "La dernière reine d'Égypte, alliée de César puis de Marc Antoine.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.acc_cleopatre_reine",
+    "history.antiquity.cleopatra",
+    "history.antiquity.dt_cleopatre",
+    "history.antiquity.dt_mystere_cleopatre",
+    "history.antiquity.dynastie_de_cleopatre",
+    "history.antiquity.expert_actium"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "history.antiquity.athenes_et_la_democratie",
+   "name": "Athènes et la démocratie",
+   "kind": "trait",
+   "subject": "Parthénon",
+   "figure": "−508",
+   "unit": "réformes de Clisthène",
+   "phrase": "Les citoyens votent eux-mêmes les lois sur la colline de la Pnyx.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.democracy_athens",
+    "history.antiquity.ecclesia",
+    "history.antiquity.guerre_du_peloponnese",
+    "history.antiquity.ostracisme",
+    "history.antiquity.siecle_de_pericles"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "history.antiquity.sparte_et_les_guerres_mediques",
+   "name": "Sparte et les guerres médiques",
+   "kind": "trait",
+   "subject": "casque hoplite",
+   "figure": "300",
+   "unit": "Spartiates aux Thermopyles",
+   "phrase": "Les cités grecques repoussent l'immense armée perse de Darius et Xerxès.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.bataille_de_marathon",
+    "history.antiquity.bataille_de_salamine",
+    "history.antiquity.guerres_mediques",
+    "history.antiquity.leonidas",
+    "history.antiquity.sparte",
+    "history.antiquity.xerxes"
+   ]
+  },
+  {
+   "n": 8,
+   "id": "history.antiquity.savants_et_philosophes_grecs",
+   "name": "Savants et philosophes grecs",
+   "kind": "trait",
+   "subject": "compas et cercle",
+   "figure": "40 000 km",
+   "unit": "la Terre mesurée par Ératosthène",
+   "phrase": "Socrate, Platon, Pythagore, Archimède : la Grèce invente la science et la philosophie.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.auteur_de_l_iliade",
+    "history.antiquity.bibliotheque_d_alexandrie",
+    "history.antiquity.eratosthene",
+    "history.antiquity.eureka",
+    "history.antiquity.herodote",
+    "history.antiquity.hippocrate",
+    "history.antiquity.platon",
+    "history.antiquity.pythagore",
+    "history.antiquity.pythie_de_delphes",
+    "history.antiquity.socrates"
+   ]
+  },
+  {
+   "n": 9,
+   "id": "history.antiquity.alexandre_le_grand",
+   "name": "Alexandre le Grand",
+   "kind": "trait",
+   "subject": "profil sur une pièce d'argent",
+   "figure": "32",
+   "unit": "ans à sa mort",
+   "phrase": "Élève d'Aristote, il conquiert un empire de la Grèce jusqu'à l'Inde.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.alexander",
+    "history.antiquity.cresus",
+    "history.antiquity.expert_alexander_father",
+    "history.antiquity.gaugameles"
+   ]
+  },
+  {
+   "n": 10,
+   "id": "history.antiquity.les_jeux_olympiques_antiques",
+   "name": "Les Jeux olympiques antiques",
+   "kind": "trait",
+   "subject": "discobole",
+   "figure": "−776",
+   "unit": "premiers Jeux",
+   "phrase": "Tous les quatre ans à Olympie, en l'honneur de Zeus.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.acc_jo_antiques",
+    "history.antiquity.acc_olympie_jeux",
+    "history.antiquity.olympics_ancient"
+   ]
+  },
+  {
+   "n": 11,
+   "id": "history.antiquity.rome_des_rois_a_la_republique",
+   "name": "Rome, des rois à la République",
+   "kind": "trait",
+   "subject": "louve et jumeaux",
+   "figure": "−753",
+   "unit": "fondation de Rome",
+   "phrase": "Selon la légende, Romulus fonde la ville ; les Romains chassent ensuite leur dernier roi.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.fondation_de_rome",
+    "history.antiquity.langue_des_romains",
+    "history.antiquity.loi_des_douze_tables",
+    "history.antiquity.rome_founding",
+    "history.antiquity.tarquin_le_superbe",
+    "history.antiquity.vestales",
+    "history.antiquity.via_appia"
+   ]
+  },
+  {
+   "n": 12,
+   "id": "history.antiquity.carthage_et_hannibal",
+   "name": "Carthage et Hannibal",
+   "kind": "trait",
+   "subject": "éléphant de guerre",
+   "figure": "37",
+   "unit": "éléphants à travers les Alpes",
+   "phrase": "Le général carthaginois qui fit trembler Rome.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.bataille_de_cannes",
+    "history.antiquity.chute_de_carthage",
+    "history.antiquity.expert_carthage",
+    "history.antiquity.hannibal"
+   ]
+  },
+  {
+   "n": 13,
+   "id": "history.antiquity.jules_cesar",
+   "name": "Jules César",
+   "kind": "trait",
+   "subject": "couronne de laurier",
+   "figure": "−44",
+   "unit": "assassinat aux ides de mars",
+   "phrase": "Conquérant de la Gaule, il franchit le Rubicon et prend le pouvoir à Rome.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.acc_cesar_gaule",
+    "history.antiquity.caesar_death",
+    "history.antiquity.cesar_empereur",
+    "history.antiquity.dt_cesar_mort",
+    "history.antiquity.dt_veni_vidi",
+    "history.antiquity.premier_triumvirat",
+    "history.antiquity.rubicon"
+   ]
+  },
+  {
+   "n": 14,
+   "id": "history.antiquity.la_gaule",
+   "name": "La Gaule",
+   "kind": "trait",
+   "subject": "casque gaulois",
+   "figure": "−52",
+   "unit": "Alésia",
+   "phrase": "Vercingétorix unit les Gaulois contre César, puis dépose les armes à Alésia.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.alesia",
+    "history.antiquity.druides",
+    "history.antiquity.dt_alesia",
+    "history.antiquity.gergovie",
+    "history.antiquity.lutece",
+    "history.antiquity.villes_gallo_romaines"
+   ]
+  },
+  {
+   "n": 15,
+   "id": "history.antiquity.l_empire_romain",
+   "name": "L'Empire romain",
+   "kind": "trait",
+   "subject": "Colisée",
+   "figure": "50 000",
+   "unit": "spectateurs au Colisée",
+   "phrase": "Routes, aqueducs, arènes : un empire autour de la Méditerranée.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.acc_gladiateurs_colisee",
+    "history.antiquity.amphitheatre_flavien",
+    "history.antiquity.aqueduc_romain",
+    "history.antiquity.constantin",
+    "history.antiquity.dt_pompei",
+    "history.antiquity.first_emperor",
+    "history.antiquity.gladiateurs",
+    "history.antiquity.mur_d_hadrien",
+    "history.antiquity.neron_et_l_incendie",
+    "history.antiquity.nouvelle_capitale_de_constantin",
+    "history.antiquity.pompeii",
+    "history.antiquity.roman_emperors_order",
+    "history.antiquity.seneque",
+    "history.antiquity.spartacus",
+    "history.antiquity.trajan"
+   ]
+  },
+  {
+   "n": 16,
+   "id": "history.antiquity.la_chute_de_rome",
+   "name": "La chute de Rome",
+   "kind": "trait",
+   "subject": "colonne brisée",
+   "figure": "476",
+   "unit": "fin de l'Empire d'Occident",
+   "phrase": "Les peuples venus de l'Est franchissent les frontières de l'Empire.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.acc_attila_huns",
+    "history.antiquity.fall_rome",
+    "history.antiquity.fin_de_l_empire_d_occident"
+   ]
+  },
+  {
+   "n": 17,
+   "id": "history.antiquity.les_reperes_de_l_antiquite",
+   "name": "Les repères de l'Antiquité",
+   "kind": "typo",
+   "subject": "frise chronologique et Grande Muraille",
+   "figure": "−3300 → 476",
+   "unit": "l'Antiquité",
+   "phrase": "De l'invention de l'écriture à la chute de Rome, et la Grande Muraille de Chine.",
+   "rarity": null,
+   "concepts": [
+    "history.antiquity.chronologie_de_l_antiquite",
+    "history.antiquity.chronology_set1",
+    "history.antiquity.dt_epoque_personnages_monde",
+    "history.antiquity.dt_tri_avant_apres_jc",
+    "history.antiquity.grandes_dates_de_l_antiquite",
+    "history.antiquity.great_wall"
+   ]
+  }
+ ]
+}

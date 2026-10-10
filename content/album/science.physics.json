@@ -1,0 +1,267 @@
+{
+ "page": "science.physics",
+ "title": "Physique",
+ "domain": "science",
+ "motif": "plan technique",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "science.physics.la_lumiere",
+   "name": "La lumière",
+   "kind": "trait",
+   "subject": "prisme et arc-en-ciel",
+   "figure": "300 000",
+   "unit": "km par seconde",
+   "phrase": "Le prisme la décompose en couleurs ; le ciel est bleu à cause de l'air.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.acc_ombre_midi",
+    "science.physics.acc_vetement_noir",
+    "science.physics.ciel_bleu",
+    "science.physics.couleurs_primaires_de_la_lumiere",
+    "science.physics.dt_mystere_arc_en_ciel",
+    "science.physics.hertz_ondes",
+    "science.physics.light_speed",
+    "science.physics.longueur_d_onde_du_rouge",
+    "science.physics.loupe",
+    "science.physics.lumiere_du_soleil",
+    "science.physics.paille_cassee",
+    "science.physics.photon",
+    "science.physics.prism",
+    "science.physics.rainbow_colors"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "science.physics.le_son",
+   "name": "Le son",
+   "kind": "trait",
+   "subject": "ondes sonores et haut-parleur",
+   "figure": "340 m/s",
+   "unit": "vitesse du son dans l'air",
+   "phrase": "Il voyage plus vite dans l'eau que dans l'air, et pas du tout dans le vide.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.acc_son_vide",
+    "science.physics.decibel",
+    "science.physics.echo",
+    "science.physics.effet_doppler",
+    "science.physics.lightning_thunder",
+    "science.physics.mur_du_son",
+    "science.physics.sound_vacuum",
+    "science.physics.sound_water",
+    "science.physics.speed_of_sound",
+    "science.physics.ultrasons"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "science.physics.la_gravite",
+   "name": "La gravité",
+   "kind": "trait",
+   "subject": "pomme qui tombe",
+   "figure": "9,81",
+   "unit": "m/s², la pesanteur sur Terre",
+   "phrase": "Sans air, une plume et un marteau tombent à la même vitesse.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.acc_gravite_chute",
+    "science.physics.acc_plumes_plomb",
+    "science.physics.chute_des_corps",
+    "science.physics.dt_gravite",
+    "science.physics.gravity_feather",
+    "science.physics.loi_de_la_gravitation",
+    "science.physics.masse_sur_la_lune",
+    "science.physics.newton_pomme",
+    "science.physics.orbite_de_la_lune",
+    "science.physics.pendule_de_foucault",
+    "science.physics.pesanteur_lunaire",
+    "science.physics.principe_d_inertie"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "science.physics.flotter_et_peser",
+   "name": "Flotter et peser",
+   "kind": "trait",
+   "subject": "bateau et poussée d'Archimède",
+   "figure": "1 013",
+   "unit": "hectopascals au niveau de la mer",
+   "phrase": "Tout corps plongé dans un liquide est poussé vers le haut : Archimède l'avait compris.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.acc_barometre",
+    "science.physics.frottements",
+    "science.physics.ice_floats",
+    "science.physics.objets_lourds_et_flottaison",
+    "science.physics.point_d_appui",
+    "science.physics.poussee_d_archimede",
+    "science.physics.pression_et_altitude",
+    "science.physics.pressure_unit"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "science.physics.le_chaud_et_le_froid",
+   "name": "Le chaud et le froid",
+   "kind": "trait",
+   "subject": "thermomètre",
+   "figure": "−273,15 °C",
+   "unit": "le zéro absolu",
+   "phrase": "Rien ne peut être plus froid ; et la tour Eiffel grandit un peu l'été.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.100_c_en_fahrenheit",
+    "science.physics.absolute_zero",
+    "science.physics.acc_buee_hiver",
+    "science.physics.acc_celsius",
+    "science.physics.acc_eau_bout_100",
+    "science.physics.boiling_point",
+    "science.physics.cuillere_en_metal",
+    "science.physics.dt_ebullition_everest",
+    "science.physics.eiffel_expansion",
+    "science.physics.kelvin",
+    "science.physics.lightning_heat",
+    "science.physics.water_boiling",
+    "science.physics.zero_absolu"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "science.physics.les_etats_de_la_matiere",
+   "name": "Les états de la matière",
+   "kind": "trait",
+   "subject": "glaçon, goutte et vapeur",
+   "figure": "4",
+   "unit": "états : solide, liquide, gaz, plasma",
+   "phrase": "La glace fond, l'eau bout, la neige carbonique se sublime.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.acc_eau_gele",
+    "science.physics.acc_eau_gonfle",
+    "science.physics.acc_etats_eau",
+    "science.physics.changements_d_etat",
+    "science.physics.plasma_etat",
+    "science.physics.sublimation",
+    "science.physics.verre_liquide"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "science.physics.l_electricite",
+   "name": "L'électricité",
+   "kind": "trait",
+   "subject": "ampoule et circuit",
+   "figure": "230 V",
+   "unit": "dans une prise française",
+   "phrase": "Le courant passe dans les métaux, pas dans le plastique ni le bois sec.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.acc_electricite_statique",
+    "science.physics.amperemetre",
+    "science.physics.circuit_en_serie",
+    "science.physics.dt_tri_conducteur",
+    "science.physics.electron",
+    "science.physics.isolant",
+    "science.physics.loi_d_ohm",
+    "science.physics.metal_conducts",
+    "science.physics.volt",
+    "science.physics.watt_unit"
+   ]
+  },
+  {
+   "n": 8,
+   "id": "science.physics.le_magnetisme",
+   "name": "Le magnétisme",
+   "kind": "trait",
+   "subject": "aimant en fer à cheval",
+   "figure": "2",
+   "unit": "pôles, nord et sud",
+   "phrase": "La Terre est un grand aimant : c'est pour ça que la boussole marche.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.acc_aimant_fer",
+    "science.physics.boussole",
+    "science.physics.magnet_poles"
+   ]
+  },
+  {
+   "n": 9,
+   "id": "science.physics.les_unites",
+   "name": "Les unités",
+   "kind": "trait",
+   "subject": "règle et balance",
+   "figure": "7",
+   "unit": "unités de base du système international",
+   "phrase": "Newton, pascal, hertz, ohm, joule : chaque unité porte le nom d'un savant.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.candela",
+    "science.physics.expert_farad",
+    "science.physics.newton_unit",
+    "science.physics.ohm",
+    "science.physics.unite_d_energie",
+    "science.physics.unite_de_charge_electrique",
+    "science.physics.unite_de_frequence",
+    "science.physics.unite_de_pression",
+    "science.physics.unite_de_tension"
+   ]
+  },
+  {
+   "n": 10,
+   "id": "science.physics.l_atome",
+   "name": "L'atome",
+   "kind": "trait",
+   "subject": "atome et ses électrons",
+   "figure": "0,1 nm",
+   "unit": "la taille d'un atome",
+   "phrase": "Un noyau de protons et de neutrons, entouré d'électrons.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.charge_neutron",
+    "science.physics.expert_higgs",
+    "science.physics.noyau_atome",
+    "science.physics.noyau_atomique"
+   ]
+  },
+  {
+   "n": 11,
+   "id": "science.physics.la_radioactivite",
+   "name": "La radioactivité",
+   "kind": "trait",
+   "subject": "symbole radioactif",
+   "figure": "1896",
+   "unit": "découverte par Becquerel",
+   "phrase": "Marie Curie, deux fois prix Nobel ; la fission fait tourner les centrales.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.decouverte_de_la_radioactivite",
+    "science.physics.deux_nobel_de_marie_curie",
+    "science.physics.energie_du_soleil",
+    "science.physics.energie_non_renouvelable",
+    "science.physics.fission_centrale",
+    "science.physics.fission_nucleaire",
+    "science.physics.fusion_soleil",
+    "science.physics.rayons_x"
+   ]
+  },
+  {
+   "n": 12,
+   "id": "science.physics.einstein",
+   "name": "Einstein",
+   "kind": "typo",
+   "subject": "E = mc² à la craie",
+   "figure": "1905",
+   "unit": "année de la relativité",
+   "phrase": "Une équation qui relie la masse et l'énergie.",
+   "rarity": null,
+   "concepts": [
+    "science.physics.einstein_formula",
+    "science.physics.einstein_nobel",
+    "science.physics.emc2",
+    "science.physics.relativite"
+   ]
+  }
+ ]
+}

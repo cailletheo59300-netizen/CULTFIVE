@@ -1,0 +1,213 @@
+{
+ "page": "arts.mythology",
+ "title": "Mythologie",
+ "domain": "arts",
+ "motif": "gravure",
+ "rarity_note": "Rareté calculée plus tard à partir du taux de réussite réel des questions de la carte, après le recalibrage (D-039, D-042).",
+ "cards": [
+  {
+   "n": 1,
+   "id": "arts.mythology.zeus_et_l_olympe",
+   "name": "Zeus et l'Olympe",
+   "kind": "trait",
+   "subject": "foudre de Zeus",
+   "figure": "12",
+   "unit": "dieux de l'Olympe",
+   "phrase": "Zeus, Héra, Poséidon, Athéna, Aphrodite ; et leurs noms romains.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.acc_cupidon",
+    "arts.mythology.acc_jupiter",
+    "arts.mythology.ares",
+    "arts.mythology.demeter",
+    "arts.mythology.dieu_des_enfers",
+    "arts.mythology.dionysos",
+    "arts.mythology.dt_mystere_zeus",
+    "arts.mythology.dt_olympiens",
+    "arts.mythology.dt_tri_grec_romain",
+    "arts.mythology.fratrie_de_zeus",
+    "arts.mythology.greek_roman",
+    "arts.mythology.hephaistos",
+    "arts.mythology.janus",
+    "arts.mythology.messager_des_dieux",
+    "arts.mythology.mnemosyne",
+    "arts.mythology.muses",
+    "arts.mythology.naissance_d_athena",
+    "arts.mythology.nee_de_l_ecume",
+    "arts.mythology.persephone_et_les_saisons",
+    "arts.mythology.poseidon_trident",
+    "arts.mythology.zeus",
+    "arts.mythology.zeus_roi"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "arts.mythology.heracles",
+   "name": "Héraclès",
+   "kind": "trait",
+   "subject": "massue et peau de lion",
+   "figure": "12",
+   "unit": "travaux",
+   "phrase": "Le lion de Némée, l'hydre de Lerne, les écuries d'Augias.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.dt_hercule",
+    "arts.mythology.hercule_et_heracles",
+    "arts.mythology.hercules_labors",
+    "arts.mythology.porteur_du_ciel"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "arts.mythology.la_guerre_de_troie",
+   "name": "La guerre de Troie",
+   "kind": "trait",
+   "subject": "cheval de Troie",
+   "figure": "10",
+   "unit": "ans de siège",
+   "phrase": "La pomme de Pâris, Hélène, Achille et son talon.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.achilles",
+    "arts.mythology.amazones",
+    "arts.mythology.dt_achille",
+    "arts.mythology.expert_thetis",
+    "arts.mythology.helene_de_troie",
+    "arts.mythology.jugement_de_paris",
+    "arts.mythology.mort_d_achille",
+    "arts.mythology.talon_achille",
+    "arts.mythology.trojan_horse"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "arts.mythology.l_odyssee_d_ulysse",
+   "name": "L'Odyssée d'Ulysse",
+   "kind": "trait",
+   "subject": "navire et sirènes",
+   "figure": "20",
+   "unit": "ans loin d'Ithaque",
+   "phrase": "Le cyclope, Circé, les sirènes ; Pénélope tisse en l'attendant.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.acc_ithaque",
+    "arts.mythology.chant_des_sirenes",
+    "arts.mythology.circe",
+    "arts.mythology.penelope",
+    "arts.mythology.polypheme",
+    "arts.mythology.ulysses_return"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "arts.mythology.les_creatures_fabuleuses",
+   "name": "Les créatures fabuleuses",
+   "kind": "trait",
+   "subject": "Minotaure",
+   "figure": "3",
+   "unit": "têtes pour Cerbère",
+   "phrase": "Le Minotaure dans son labyrinthe, Méduse, Pégase, le Sphinx.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.acc_meduse",
+    "arts.mythology.cerberus",
+    "arts.mythology.chimere",
+    "arts.mythology.dt_meduse",
+    "arts.mythology.dt_minotaure",
+    "arts.mythology.enigme_du_sphinx",
+    "arts.mythology.fil_d_ariane",
+    "arts.mythology.icarus",
+    "arts.mythology.medusa",
+    "arts.mythology.meduse_serpents",
+    "arts.mythology.minotaur",
+    "arts.mythology.pegase",
+    "arts.mythology.tueur_de_meduse"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "arts.mythology.chatiments_et_legendes",
+   "name": "Châtiments et légendes",
+   "kind": "trait",
+   "subject": "boîte de Pandore",
+   "figure": "5",
+   "unit": "fleuves des Enfers",
+   "phrase": "Prométhée, Pandore, Sisyphe, Tantale, Midas, Narcisse, Orphée.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.acc_pandore",
+    "arts.mythology.argonautes",
+    "arts.mythology.charon",
+    "arts.mythology.lethe",
+    "arts.mythology.narcissus",
+    "arts.mythology.orphee",
+    "arts.mythology.pandora",
+    "arts.mythology.prometheus",
+    "arts.mythology.rocher_eternel",
+    "arts.mythology.roi_midas",
+    "arts.mythology.supplice_de_tantale"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "arts.mythology.les_dieux_d_egypte",
+   "name": "Les dieux d'Égypte",
+   "kind": "trait",
+   "subject": "œil d'Horus",
+   "figure": "3",
+   "unit": "Osiris, Isis et Horus",
+   "phrase": "Râ le soleil, Anubis à tête de chacal, Bastet la chatte.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.anubis",
+    "arts.mythology.bastet",
+    "arts.mythology.horus",
+    "arts.mythology.isis",
+    "arts.mythology.maat",
+    "arts.mythology.osiris",
+    "arts.mythology.ra",
+    "arts.mythology.thot"
+   ]
+  },
+  {
+   "n": 8,
+   "id": "arts.mythology.les_dieux_nordiques",
+   "name": "Les dieux nordiques",
+   "kind": "trait",
+   "subject": "marteau de Thor",
+   "figure": "8",
+   "unit": "pattes pour Sleipnir, le cheval d'Odin",
+   "phrase": "Odin, Thor, Loki, les Valkyries et l'arbre Yggdrasil.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.acc_thor",
+    "arts.mythology.dieu_ruse_nordique",
+    "arts.mythology.expert_sleipnir",
+    "arts.mythology.fenrir",
+    "arts.mythology.freyja",
+    "arts.mythology.odin",
+    "arts.mythology.ragnarok",
+    "arts.mythology.thor_hammer",
+    "arts.mythology.valhalla",
+    "arts.mythology.valkyries",
+    "arts.mythology.yggdrasil"
+   ]
+  },
+  {
+   "n": 9,
+   "id": "arts.mythology.mythes_du_monde",
+   "name": "Mythes du monde",
+   "kind": "trait",
+   "subject": "tablette de Gilgamesh",
+   "figure": "−2100",
+   "unit": "premiers récits de Gilgamesh",
+   "phrase": "Gilgamesh en Mésopotamie, Ganesh en Inde, Quetzalcóatl au Mexique.",
+   "rarity": null,
+   "concepts": [
+    "arts.mythology.ganesh",
+    "arts.mythology.gilgamesh",
+    "arts.mythology.quetzalcoatl"
+   ]
+  }
+ ]
+}
