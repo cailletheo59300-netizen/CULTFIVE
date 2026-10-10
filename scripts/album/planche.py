@@ -7,6 +7,6 @@ for k in pages:
     d=json.load(open(f'{repo}/content/album/{k}.json'))
     data.append({'key':k,'title':d['title'],'dom':d['domain'],'cards':[[c['n'],c['name'],c['figure'],c['unit'],c['phrase'],c['rarity'] or 'common'] for c in d['cards']]})
 t=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"cartes-template.html")).read()
-subj=''.join(open(f).read()+'\n' for f in sorted(x for x in os.listdir('.') if x.startswith('subj_') and x.endswith('.js')))
+subj=''.join(open(os.path.join(SUJ,f)).read()+'\n' for f in sorted(os.listdir(SUJ)) if f.endswith('.js'))
 out=t.replace('/*DATA*/',json.dumps(data,ensure_ascii=False)).replace('/*SUBJ*/',subj)
 open(sys.argv[-1] if sys.argv[-1].endswith(".html") else "album-cartes.html","w").write(out); print(len(out)//1024,'Ko')
