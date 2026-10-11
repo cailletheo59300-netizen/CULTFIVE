@@ -217,9 +217,12 @@ SUBJECTS['science.physics']={
    p+=[0,120,240].map(a=>rot(a,100,80,S('M100,80 L84,50 A34,34 0 0 1 116,50 Z',INK,0))).join('')+C(100,80,9,'#F2D24A',0)+C(100,80,6,INK,0);
    p+=R(140,104,22,34,'#EAF4F8',2,4)+R(144,98,14,6,SILVER,1.4)+F('M142,120 L160,120 L160,134 C160,136 142,136 142,134 Z','#9CF0A0');
    return p+`<circle cx="151" cy="122" r="16" fill="#9CF0A0" opacity=".35"/>`;},
- 12:id=>{ // Einstein et E = mc²
-   let p=R(78,24,100,66,'#2F4A3E',2.4,3)+R(74,88,108,6,WOOD,1.6)+T(130,64,'E = mc²',20,'#F4F1EA','middle',700)+R(150,82,10,4,'#F4F1EA',.8);
-   let hair='';for(let i=0;i<13;i++){const a=(-200+i*19)*Math.PI/180,r0=24,r1=34+(i%3)*4;hair+=SC(`M${(Math.cos(a)*r0).toFixed(1)},${(-12+Math.sin(a)*r0).toFixed(1)} q${(Math.cos(a+.6)*8).toFixed(1)},${(Math.sin(a+.6)*8).toFixed(1)} ${(Math.cos(a)*(r1-r0)).toFixed(1)},${(Math.sin(a)*(r1-r0)).toFixed(1)}`,'#B9B4AC',3.2)+SC(`M${(Math.cos(a)*r0).toFixed(1)},${(-12+Math.sin(a)*r0).toFixed(1)} q${(Math.cos(a+.6)*8).toFixed(1)},${(Math.sin(a+.6)*8).toFixed(1)} ${(Math.cos(a)*(r1-r0)).toFixed(1)},${(Math.sin(a)*(r1-r0)).toFixed(1)}`,'#F4F1EA',1.8);}
-   const mus=S('M18,10 C24,6 34,8 38,10 C36,18 26,18 18,14 Z','#E2DDD6',1.4);
-   return p+head(62,96,.95,PAPER,{over:hair+mus+SC('M14,-16 C18,-20 24,-20 28,-16',INK,1.6)});},
+ 12:id=>{ // E = mc² et l'espace-temps courbé
+   let g='';const P=(u,v)=>{const k=.55+.45*v,x=100+(u-100)*k*1.25,y=98+v*50,d=Math.hypot((u-100)/60,(v-.55)/.4);return [x,y+26*Math.exp(-d*d*2.2)];};
+   for(let i=0;i<=8;i++){const v=i/8;let d='';for(let u=20;u<=180;u+=4){const [x,y]=P(u,v);d+=(u===20?'M':'L')+x.toFixed(1)+','+y.toFixed(1);}g+=SC(d,'#7E9CC8',1.2,`opacity="${(.35+.65*v).toFixed(2)}"`);}
+   for(let j=0;j<=16;j++){const u=20+j*10;let d='';for(let v=0;v<=1.001;v+=.05){const [x,y]=P(u,v);d+=(v===0?'M':'L')+x.toFixed(1)+','+y.toFixed(1);}g+=SC(d,'#7E9CC8',1.2,'opacity=".7"');}
+   let p=g+`<defs><radialGradient id="${id}pl" cx="40%" cy="35%"><stop offset="0" stop-color="#FFE8A3"/><stop offset="1" stop-color="#E9A84E"/></radialGradient></defs>`+C(100,136,13,`url(#${id}pl)`,2)+C(150,116,4,'#8FB8E8',1.2);
+   p+=SC('M34,104 C64,100 84,92 100,94 C118,96 140,104 168,96',GOLD,1.6,'stroke-dasharray="3 3"');
+   p+=R(40,22,120,58,'#2F4A3E',2.6,4)+R(36,78,128,6,WOOD,1.8)+T(100,62,'E = mc²',26,'#F4F1EA','middle',700);
+   return p+R(132,72,12,5,'#F4F1EA',.8,1)+SC('M52,34 C58,32 64,36 70,33 M130,32 C136,30 142,34 148,31',`#F4F1EA`,1,'opacity=".5"');},
 };
