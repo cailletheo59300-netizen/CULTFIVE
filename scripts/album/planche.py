@@ -5,7 +5,7 @@ pages=[a for a in sys.argv[2:] if not a.endswith('.html')]; repo=sys.argv[1]
 data=[]
 for k in pages:
     d=json.load(open(f'{repo}/content/album/{k}.json'))
-    data.append({'key':k,'title':d['title'],'dom':d['domain'],'cards':[[c['n'],c['name'],c['figure'],c['unit'],c['phrase'],c['rarity'] or 'common'] for c in d['cards']]})
+    data.append({'key':k,'title':d['title'],'dom':d['domain'],'status':d.get('rarity_status'),'cards':[[c['n'],c['name'],c['figure'],c['unit'],c['phrase'],c['rarity'] or 'common'] for c in d['cards']]})
 t=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"cartes-template.html")).read()
 subj=''.join(open(os.path.join(SUJ,f)).read()+'\n' for f in sorted(os.listdir(SUJ)) if f.endswith('.js'))
 out=t.replace('/*DATA*/',json.dumps(data,ensure_ascii=False)).replace('/*SUBJ*/',subj)

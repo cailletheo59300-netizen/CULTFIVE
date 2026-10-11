@@ -14,7 +14,7 @@
    "figure": "1492",
    "unit": "Colomb en Amérique",
    "phrase": "Caravelles et boussoles : les Européens font le tour du monde.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.century_afonso_de_albuquerque",
     "history.middle_ages.century_amerigo_vespucci",
@@ -51,7 +51,7 @@
    "figure": "1515",
    "unit": "Marignan",
    "phrase": "L'Italie redécouvre l'Antiquité ; François Ier invite Léonard de Vinci en France.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "history.middle_ages.century_albrecht_durer",
     "history.middle_ages.century_donatello",
@@ -77,7 +77,7 @@
    "figure": "1642",
    "unit": "La Ronde de nuit de Rembrandt",
    "phrase": "De Rembrandt à Vermeer, de Vélasquez à Hokusai : l'âge d'or de la peinture.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.modern.century_caspar_david_friedrich",
     "history.modern.century_diego_velasquez",
@@ -101,7 +101,7 @@
    "figure": "6",
    "unit": "épouses",
    "phrase": "Pour divorcer, le roi d'Angleterre rompt avec le pape.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.century_henri_viii",
     "history.modern.century_anne_boleyn",
@@ -117,7 +117,7 @@
    "figure": "1598",
    "unit": "édit de Nantes",
    "phrase": "Luther et Calvin divisent l'Église ; Henri IV ramène la paix en France.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.middle_ages.century_martin_luther",
     "history.middle_ages.century_ulrich_zwingli",
@@ -138,7 +138,7 @@
    "figure": "1630",
    "unit": "journée des Dupes",
    "phrase": "Le cardinal renforce le pouvoir du roi ; les nobles se révoltent pendant la Fronde.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.modern.acc_richelieu",
     "history.modern.expert_fouquet",
@@ -155,7 +155,7 @@
    "figure": "72",
    "unit": "ans de règne",
    "phrase": "Le plus long règne de l'histoire de France, à Versailles.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.modern.acc_roi_soleil",
     "history.modern.acc_versailles_roi",
@@ -175,7 +175,7 @@
    "figure": "1605",
    "unit": "Don Quichotte",
    "phrase": "De Rabelais à Jane Austen, de Molière à Goethe.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.modern.century_adelbert_von_chamisso",
     "history.modern.century_alexander_pope",
@@ -210,7 +210,7 @@
    "figure": "1751",
    "unit": "premier tome de l'Encyclopédie",
    "phrase": "Diderot, Kant, Hume : la raison contre les préjugés.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.modern.century_arthur_schopenhauer",
     "history.modern.century_baruch_spinoza",
@@ -238,7 +238,7 @@
    "figure": "1796",
    "unit": "premier vaccin, par Jenner",
    "phrase": "Kepler, Lavoisier, Volta, Euler : la révolution scientifique.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.modern.century_alessandro_volta",
     "history.modern.century_andre_marie_ampere",
@@ -272,7 +272,7 @@
    "figure": "9",
    "unit": "symphonies de Beethoven",
    "phrase": "De Palestrina à Beethoven, la musique devient un art de concert.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.modern.century_georg_friedrich_haendel",
     "history.modern.century_giovanni_pierluigi_da_palestrina",
@@ -289,7 +289,7 @@
    "figure": "1776",
    "unit": "Déclaration d'indépendance",
    "phrase": "Treize colonies se libèrent de l'Angleterre, avec l'aide de la France.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.modern.bataille_de_yorktown",
     "history.modern.century_james_madison",
@@ -310,7 +310,7 @@
    "figure": "1789",
    "unit": "prise de la Bastille",
    "phrase": "La fin de la monarchie absolue et la Déclaration des droits de l'homme.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "history.modern.acc_marianne",
     "history.modern.acc_marie_antoinette_brioche",
@@ -330,7 +330,7 @@
    "figure": "1804",
    "unit": "sacre de l'empereur",
    "phrase": "Né en Corse, il devient empereur des Français. Il n'était pas si petit.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "history.modern.acc_josephine",
     "history.modern.acc_napoleon_petit",
@@ -346,7 +346,7 @@
    "figure": "1683",
    "unit": "siège de Vienne",
    "phrase": "Ottomans, Russes, Suédois, Anglais : les empires se disputent l'Europe et l'Asie.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.modern.acc_tsar",
     "history.modern.bataille_de_culloden",
@@ -370,7 +370,7 @@
    "figure": "1492 → 1789",
    "unit": "les Temps modernes",
    "phrase": "Qui est né avant qui ? Les grandes périodes et les inventions dans l'ordre.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.modern.acc_ordre_inventions",
     "history.modern.acc_ordre_periodes",
@@ -389,5 +389,6 @@
     "history.modern.dt_epoque_monuments_hist"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

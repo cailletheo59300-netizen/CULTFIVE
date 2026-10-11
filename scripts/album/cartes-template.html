@@ -280,7 +280,7 @@ function renderPage(){const p=P();heroN=legendOf(p);heroR=null;
   document.getElementById('pick').innerHTML=p.cards.map(c=>`<button data-n="${c[0]}">${c[1]}</button>`).join('');
   const cnt={common:0,rare:0,epic:0,legend:0};p.cards.forEach(c=>cnt[c[5]]++);
   document.getElementById('deckTitle').textContent=`${p.title} : ${p.cards.length} cartes`;
-  document.getElementById('mix').textContent=`Raretés proposées : ${cnt.common} communes, ${cnt.rare} rares, ${cnt.epic} épiques, ${cnt.legend} légendaire (${p.cards.find(c=>c[5]==='legend')[1]}).`;
+  document.getElementById('mix').textContent=`Raretés ${p.status==="validée"?"validées":"proposées, à valider"} : ${cnt.common} communes, ${cnt.rare} rares, ${cnt.epic} épiques, ${cnt.legend} légendaire (${p.cards.find(c=>c[5]==='legend')[1]}).`;
   const L=p.cards[legendOf(p)-1];
   const rr=document.getElementById('rarRow');rr.innerHTML=['common','rare','epic','legend'].map(r=>cardHTML(p,L,{rarity:r})).join('');bindTilt(rr);
   const cr=document.getElementById('cosRow');cr.innerHTML=[{skin:'citrouille'},{skin:'vitrail'},{skin:'nuit'},{finish:'or'},{finish:'givre'}].map(o=>`<figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:10px">${cardHTML(p,L,{rarity:'rare',...o})}<figcaption style="font-weight:800;font-size:13px;color:var(--soft)">${o.skin?'Cadre « '+({citrouille:'Citrouille',vitrail:'Vitrail',nuit:'Nuit étoilée'})[o.skin]+' »':'Finition « '+({or:'Poussière d\'or',givre:'Givre'})[o.finish]+' »'}</figcaption></figure>`).join('');bindTilt(cr);

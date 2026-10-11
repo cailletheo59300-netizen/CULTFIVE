@@ -14,7 +14,7 @@
    "figure": "17 000",
    "unit": "ans, l'âge des peintures de Lascaux",
    "phrase": "Bien avant l'écriture, les humains peignaient déjà les parois des grottes.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.acc_dinosaures_hommes",
     "history.antiquity.acc_lascaux",
@@ -30,7 +30,7 @@
    "figure": "−3300",
    "unit": "premières écritures",
    "phrase": "Entre le Tigre et l'Euphrate naissent les villes, les lois et l'écriture.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.alphabet_phenicien",
     "history.antiquity.code_d_hammurabi",
@@ -47,7 +47,7 @@
    "figure": "146 m",
    "unit": "hauteur d'origine de Khéops",
    "phrase": "Tombeaux des pharaons, elles ont été le plus haut monument humain pendant près de 4 000 ans.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "history.antiquity.acc_pyramides_role",
     "history.antiquity.cleopatra_timeline",
@@ -69,7 +69,7 @@
    "figure": "1922",
    "unit": "découverte du tombeau",
    "phrase": "Le tombeau presque intact d'un jeune pharaon, retrouvé par Howard Carter.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.antiquity.bataille_de_qadesh",
     "history.antiquity.nefertiti",
@@ -86,7 +86,7 @@
    "figure": "−31",
    "unit": "bataille d'Actium",
    "phrase": "La dernière reine d'Égypte, alliée de César puis de Marc Antoine.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "history.antiquity.acc_cleopatre_reine",
     "history.antiquity.cleopatra",
@@ -105,7 +105,7 @@
    "figure": "−508",
    "unit": "réformes de Clisthène",
    "phrase": "Les citoyens votent eux-mêmes les lois sur la colline de la Pnyx.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.democracy_athens",
     "history.antiquity.ecclesia",
@@ -123,7 +123,7 @@
    "figure": "300",
    "unit": "Spartiates aux Thermopyles",
    "phrase": "Les cités grecques repoussent l'immense armée perse de Darius et Xerxès.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.bataille_de_marathon",
     "history.antiquity.bataille_de_salamine",
@@ -142,7 +142,7 @@
    "figure": "40 000 km",
    "unit": "la Terre mesurée par Ératosthène",
    "phrase": "Socrate, Platon, Pythagore, Archimède : la Grèce invente la science et la philosophie.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.auteur_de_l_iliade",
     "history.antiquity.bibliotheque_d_alexandrie",
@@ -165,7 +165,7 @@
    "figure": "32",
    "unit": "ans à sa mort",
    "phrase": "Élève d'Aristote, il conquiert un empire de la Grèce jusqu'à l'Inde.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.antiquity.alexander",
     "history.antiquity.cresus",
@@ -178,11 +178,11 @@
    "id": "history.antiquity.les_jeux_olympiques_antiques",
    "name": "Les Jeux olympiques antiques",
    "kind": "trait",
-   "subject": "discobole",
+   "subject": "amphore et couronne de laurier",
    "figure": "−776",
    "unit": "premiers Jeux",
    "phrase": "Tous les quatre ans à Olympie, en l'honneur de Zeus.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.acc_jo_antiques",
     "history.antiquity.acc_olympie_jeux",
@@ -194,11 +194,11 @@
    "id": "history.antiquity.rome_des_rois_a_la_republique",
    "name": "Rome, des rois à la République",
    "kind": "trait",
-   "subject": "louve et jumeaux",
+   "subject": "aigle de légion SPQR",
    "figure": "−753",
    "unit": "fondation de Rome",
    "phrase": "Selon la légende, Romulus fonde la ville ; les Romains chassent ensuite leur dernier roi.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.fondation_de_rome",
     "history.antiquity.langue_des_romains",
@@ -218,7 +218,7 @@
    "figure": "37",
    "unit": "éléphants à travers les Alpes",
    "phrase": "Le général carthaginois qui fit trembler Rome.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.antiquity.bataille_de_cannes",
     "history.antiquity.chute_de_carthage",
@@ -235,7 +235,7 @@
    "figure": "−44",
    "unit": "assassinat aux ides de mars",
    "phrase": "Conquérant de la Gaule, il franchit le Rubicon et prend le pouvoir à Rome.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "history.antiquity.acc_cesar_gaule",
     "history.antiquity.caesar_death",
@@ -251,11 +251,11 @@
    "id": "history.antiquity.la_gaule",
    "name": "La Gaule",
    "kind": "trait",
-   "subject": "casque gaulois",
+   "subject": "casque gaulois et torque",
    "figure": "−52",
    "unit": "Alésia",
    "phrase": "Vercingétorix unit les Gaulois contre César, puis dépose les armes à Alésia.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.alesia",
     "history.antiquity.druides",
@@ -274,7 +274,7 @@
    "figure": "50 000",
    "unit": "spectateurs au Colisée",
    "phrase": "Routes, aqueducs, arènes : un empire autour de la Méditerranée.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "history.antiquity.acc_gladiateurs_colisee",
     "history.antiquity.amphitheatre_flavien",
@@ -302,7 +302,7 @@
    "figure": "476",
    "unit": "fin de l'Empire d'Occident",
    "phrase": "Les peuples venus de l'Est franchissent les frontières de l'Empire.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.acc_attila_huns",
     "history.antiquity.fall_rome",
@@ -318,7 +318,7 @@
    "figure": "−3300 → 476",
    "unit": "l'Antiquité",
    "phrase": "De l'invention de l'écriture à la chute de Rome, et la Grande Muraille de Chine.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "history.antiquity.chronologie_de_l_antiquite",
     "history.antiquity.chronology_set1",
@@ -328,5 +328,6 @@
     "history.antiquity.great_wall"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
