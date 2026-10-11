@@ -36,5 +36,12 @@ const out={};
   out.globeAtlantic=globe([40,-25],54);
   const proj=d3.geoOrthographic().rotate([40,-25]).scale(54).translate([100,84]);
   out.globeAtlanticCities={Paris:pt(proj,[2.35,48.86]),'New York':pt(proj,[-74,40.7])};}
+{ // Pangée : Afrique et Amérique du Sud rapprochées
+  const land=feature(L110,L110.objects.land);const polys=land.features.flatMap(f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates);
+  const pick=([lo,la])=>polys.find(p=>d3.geoContains({type:'Polygon',coordinates:p},[lo,la]));
+  const afr={type:'Polygon',coordinates:pick([20,0])},sam={type:'Polygon',coordinates:pick([-60,-15])};
+  const pa=d3.geoOrthographic().rotate([-15,0]).fitExtent([[96,22],[176,146]],afr);
+  const ps=d3.geoOrthographic().rotate([60,15]).fitExtent([[24,40],[104,148]],sam);
+  out.pangea={afr:r1(d3.geoPath(pa)(afr),1.2),sam:r1(d3.geoPath(ps)(sam),1.2)};}
 const js='/* vrais contours (Natural Earth, domaine public, via world-atlas) ; généré par scripts/album/cartes-geo.mjs */\nconst MAPS='+JSON.stringify(out)+';\n';
 fs.writeFileSync(process.argv[2],js);console.log(Object.keys(out).map(k=>k+':'+JSON.stringify(out[k]).length).join(' '));

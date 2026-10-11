@@ -14,7 +14,7 @@
    "figure": "390 km/h",
    "unit": "le faucon pèlerin en piqué",
    "phrase": "Le guépard sur terre, le faucon dans les airs, la sterne pour les voyages.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.animals.acc_pigeon_voyageur",
     "nature.animals.dt_guepard_vitesse",
@@ -29,11 +29,11 @@
    "id": "nature.animals.les_geants",
    "name": "Les géants",
    "kind": "trait",
-   "subject": "girafe et éléphant",
+   "subject": "girafe",
    "figure": "7",
    "unit": "vertèbres dans le cou de la girafe",
    "phrase": "Autant de vertèbres que nous, mais chacune longue comme un avant-bras.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "nature.animals.dt_cornes_rhino",
     "nature.animals.dt_elephant",
@@ -57,11 +57,11 @@
    "id": "nature.animals.les_felins",
    "name": "Les félins",
    "kind": "trait",
-   "subject": "tête de lion",
+   "subject": "chat assis",
    "figure": "18",
    "unit": "doigts chez le chat",
    "phrase": "Du lion au chat de la maison, des chasseurs nés.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.animals.acc_chat_ronronne",
     "nature.animals.dt_dents_chat",
@@ -77,11 +77,11 @@
    "id": "nature.animals.le_chien_et_le_loup",
    "name": "Le chien et le loup",
    "kind": "trait",
-   "subject": "loup qui hurle",
+   "subject": "tête de chien et sa truffe",
    "figure": "300",
    "unit": "millions de capteurs d'odeurs dans le nez du chien",
    "phrase": "Le loup vit en meute ; le chien sent des odeurs que nous ignorons.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.animals.acc_chien_odorat",
     "nature.animals.dt_vie_chien",
@@ -97,7 +97,7 @@
    "figure": "200 kg",
    "unit": "pour un gorille mâle",
    "phrase": "Gorilles et orangs-outans, nos plus proches cousins.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.animals.gorille",
     "nature.animals.orang_outan",
@@ -109,11 +109,11 @@
    "id": "nature.animals.les_animaux_d_australie",
    "name": "Les animaux d'Australie",
    "kind": "trait",
-   "subject": "kangourou",
+   "subject": "koala sur sa branche",
    "figure": "20 h",
    "unit": "de sommeil par jour pour le koala",
    "phrase": "Kangourous, koalas et l'ornithorynque, un mammifère qui pond des œufs.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.animals.acc_koala_ours",
     "nature.animals.dt_kangourou",
@@ -135,7 +135,7 @@
    "figure": "270°",
    "unit": "rotation de la tête de la chouette",
    "phrase": "Du colibri à l'autruche, des hirondelles qui migrent au flamant rose.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.animals.acc_canard_cri",
     "nature.animals.acc_cigogne_alsace",
@@ -166,11 +166,11 @@
    "id": "nature.animals.les_animaux_des_poles",
    "name": "Les animaux des pôles",
    "kind": "trait",
-   "subject": "manchot empereur",
+   "subject": "manchot empereur qui plonge",
    "figure": "500 m",
    "unit": "de plongée pour le manchot empereur",
    "phrase": "Les manchots au sud, l'ours polaire au nord : jamais ils ne se croisent.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.animals.dt_manchot",
     "nature.animals.dt_mystere_manchot",
@@ -189,7 +189,7 @@
    "figure": "6",
    "unit": "pattes chez tous les insectes",
    "phrase": "Les abeilles dansent pour indiquer les fleurs ; une fourmi porte bien plus que son poids.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.animals.acc_coccinelle_points",
     "nature.animals.acc_coccinelle_pucerons",
@@ -221,7 +221,7 @@
    "figure": "8",
    "unit": "pattes pour l'araignée",
    "phrase": "Ni insectes ni poissons : huit pattes, trois cœurs, une coquille.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.animals.acc_limace_coquille",
     "nature.animals.dt_meduse_eau",
@@ -239,11 +239,11 @@
    "id": "nature.animals.reptiles_et_amphibiens",
    "name": "Reptiles et amphibiens",
    "kind": "trait",
-   "subject": "caméléon",
-   "figure": "1832",
-   "unit": "naissance estimée de Jonathan, la tortue",
-   "phrase": "Le caméléon change de couleur pour communiquer, pas pour se cacher.",
-   "rarity": null,
+   "subject": "python enroulé",
+   "figure": "10 m",
+   "unit": "pour le python réticulé, record de longueur",
+   "phrase": "Pythons, crocodiles, caméléons : des animaux à sang froid.",
+   "rarity": "common",
    "concepts": [
     "nature.animals.chameleon_colors",
     "nature.animals.dt_cameleon",
@@ -263,7 +263,7 @@
    "figure": "4",
    "unit": "poches dans l'estomac de la vache",
    "phrase": "Le bouc, la laie, l'ânon : chacun son nom, chacun son cri.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.animals.acc_chevre_petit",
     "nature.animals.acc_vache_lait",
@@ -286,11 +286,11 @@
    "id": "nature.animals.les_animaux_des_bois",
    "name": "Les animaux des bois",
    "kind": "trait",
-   "subject": "écureuil",
+   "subject": "marmotte",
    "figure": "6 mois",
    "unit": "d'hibernation pour la marmotte",
    "phrase": "Castors, hérissons, marmottes et chevreuils.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.animals.acc_blaireau",
     "nature.animals.acc_bouquetin",
@@ -318,7 +318,7 @@
    "figure": "1",
    "unit": "mammifère volant : la chauve-souris",
    "phrase": "Le paresseux, le panda, le dromadaire.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.animals.bat_echolocation",
     "nature.animals.bat_mammal",
@@ -343,7 +343,7 @@
    "figure": "200",
    "unit": "ans et plus pour certaines tortues",
    "phrase": "Qui vit le plus longtemps : la tortue, le poisson rouge ou l'éphémère ?",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.animals.baleine_boreale",
     "nature.animals.lifespan_order",
@@ -357,11 +357,11 @@
    "id": "nature.animals.classer_les_animaux",
    "name": "Classer les animaux",
    "kind": "trait",
-   "subject": "arbre du vivant",
+   "subject": "les cinq classes de vertébrés",
    "figure": "5",
    "unit": "classes de vertébrés",
    "phrase": "Mammifères, oiseaux, reptiles, amphibiens, poissons.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.animals.class_ant",
     "nature.animals.class_axolotl",
@@ -387,5 +387,6 @@
     "nature.animals.shark_skeleton"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

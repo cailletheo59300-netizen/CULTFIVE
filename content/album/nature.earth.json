@@ -10,11 +10,11 @@
    "id": "nature.earth.les_volcans",
    "name": "Les volcans",
    "kind": "trait",
-   "subject": "volcan en éruption",
+   "subject": "volcan et coulée de lave",
    "figure": "1 350",
    "unit": "volcans actifs sur Terre",
    "phrase": "L'Etna, le piton de la Fournaise, la ceinture de feu du Pacifique.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "nature.earth.active_volcano_fr",
     "nature.earth.basalte",
@@ -35,11 +35,11 @@
    "id": "nature.earth.les_seismes",
    "name": "Plaques et séismes",
    "kind": "trait",
-   "subject": "sismographe",
+   "subject": "Afrique et Amérique du Sud qui s'emboîtent",
    "figure": "200",
    "unit": "millions d'années",
    "phrase": "La Pangée se sépare : les continents dérivent.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.earth.derive_des_continents",
     "nature.earth.epicentre",
@@ -59,7 +59,7 @@
    "figure": "4,5",
    "unit": "milliards d'années",
    "phrase": "Croûte, manteau, noyau : la Terre est faite comme un fruit à noyau.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.earth.age_de_la_terre",
     "nature.earth.couches_terre",
@@ -73,11 +73,11 @@
    "id": "nature.earth.roches_et_mineraux",
    "name": "Roches et minéraux",
    "kind": "trait",
-   "subject": "cristal de quartz",
+   "subject": "diamant au sommet de l'échelle de Mohs",
    "figure": "10",
    "unit": "dureté du diamant, le maximum",
    "phrase": "Calcaire, granite, marbre ; charbon et pétrole viennent du vivant.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.earth.calcaire",
     "nature.earth.diamant_carbone",
@@ -101,7 +101,7 @@
    "figure": "30 000 °C",
    "unit": "dans un éclair",
    "phrase": "Cirrus, cumulonimbus, grêle, brouillard et rosée.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.earth.acc_arc_en_ciel_soleil",
     "nature.earth.acc_brouillard_nuage",
@@ -124,11 +124,11 @@
    "id": "nature.earth.vents_et_tempetes",
    "name": "Vents et tempêtes",
    "kind": "trait",
-   "subject": "tornade",
+   "subject": "manche à air",
    "figure": "12",
    "unit": "degrés sur l'échelle de Beaufort",
    "phrase": "Mistral, foehn, alizés, mousson ; et l'œil calme du cyclone.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.earth.alizes",
     "nature.earth.dt_tornade",
@@ -153,7 +153,7 @@
    "figure": "−18 °C",
    "unit": "sur Terre sans effet de serre",
    "phrase": "L'effet de serre nous garde au chaud ; trop, il réchauffe la planète.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.earth.effet_de_serre",
     "nature.earth.expert_stratosphere",
@@ -175,7 +175,7 @@
    "figure": "23,4°",
    "unit": "inclinaison de l'axe terrestre",
    "phrase": "Ce n'est pas la distance au Soleil qui fait les saisons, c'est l'inclinaison.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.earth.acc_saisons_axe",
     "nature.earth.aurora",
@@ -195,7 +195,7 @@
    "figure": "70 %",
    "unit": "de l'eau douce est en Antarctique",
    "phrase": "Groenland, Antarctique, fjords creusés par la glace.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.earth.arctique_et_antarctique",
     "nature.earth.calotte_du_groenland",
@@ -212,11 +212,11 @@
    "id": "nature.earth.le_cycle_de_l_eau",
    "name": "Le cycle de l'eau",
    "kind": "trait",
-   "subject": "goutte et nuage",
+   "subject": "cycle de l'eau",
    "figure": "2,5 %",
    "unit": "seulement d'eau douce sur Terre",
    "phrase": "L'eau s'évapore, forme des nuages, retombe et rejoint la mer.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.earth.acc_maree_lune",
     "nature.earth.atoll",
@@ -239,11 +239,11 @@
    "id": "nature.earth.les_records_de_la_planete",
    "name": "Les records de la planète",
    "kind": "trait",
-   "subject": "désert et cactus",
+   "subject": "Vallée de la Mort et cactus",
    "figure": "56,7 °C",
    "unit": "record de chaleur, Vallée de la Mort",
    "phrase": "Le Sahara, l'Antarctique, le désert d'Atacama ; l'Everest et le Chimborazo.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.earth.amazon_forest",
     "nature.earth.atacama",
@@ -261,5 +261,6 @@
     "nature.earth.vallee_mort"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

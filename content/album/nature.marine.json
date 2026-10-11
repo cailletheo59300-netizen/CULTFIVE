@@ -14,7 +14,7 @@
    "figure": "30 m",
    "unit": "la baleine bleue, plus grand animal",
    "phrase": "Elles chantent, plongent et respirent par un évent.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "nature.marine.beluga",
     "nature.marine.blue_whale_size",
@@ -37,7 +37,7 @@
    "figure": "½",
    "unit": "cerveau qui dort à la fois",
    "phrase": "Ils dorment avec un œil ouvert et se repèrent avec des sons.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.marine.dauphin_rose",
     "nature.marine.dauphins",
@@ -52,11 +52,11 @@
    "id": "nature.marine.les_requins",
    "name": "Les requins",
    "kind": "trait",
-   "subject": "aileron de requin",
+   "subject": "requin gueule ouverte",
    "figure": "300",
    "unit": "dents pour le grand requin blanc",
    "phrase": "Leur squelette n'a pas d'os : il est fait de cartilage.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.marine.dents_de_la_mer",
     "nature.marine.dt_requin_blanc",
@@ -76,7 +76,7 @@
    "figure": "3",
    "unit": "cœurs pour la pieuvre",
    "phrase": "Huit bras, du sang bleu et un nuage d'encre pour s'enfuir.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.marine.bras_de_la_pieuvre",
     "nature.marine.bras_du_calmar",
@@ -99,7 +99,7 @@
    "figure": "95 %",
    "unit": "d'eau dans une méduse",
    "phrase": "Pas de cerveau, pas de cœur ; l'une d'elles serait presque immortelle.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.marine.bioluminescence",
     "nature.marine.cubomeduse",
@@ -117,7 +117,7 @@
    "figure": "2 300 km",
    "unit": "de Grande Barrière de corail",
    "phrase": "Le corail est un animal ; l'hippocampe mâle porte les petits.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.marine.blanchissement_du_corail",
     "nature.marine.clownfish_anemone",
@@ -142,7 +142,7 @@
    "figure": "3 000 km",
    "unit": "de remontée pour certains saumons",
    "phrase": "Le poisson volant plane, le poisson-pierre pique, le poisson-lune flotte.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.marine.banc_poissons",
     "nature.marine.espadon",
@@ -158,11 +158,11 @@
    "id": "nature.marine.crustaces_et_coquillages",
    "name": "Crustacés et coquillages",
    "kind": "trait",
-   "subject": "crabe",
+   "subject": "homard",
    "figure": "10",
    "unit": "pattes pour le homard",
    "phrase": "Huîtres, moules, homards, bernard-l'ermite ; une perle naît d'un grain de sable.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.marine.acc_huitre_perle",
     "nature.marine.bernard_l_ermite",
@@ -184,7 +184,7 @@
    "figure": "3,5 m",
    "unit": "d'envergure pour l'albatros",
    "phrase": "Phoques, morses, lamantins, loutres de mer et tortues luth.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.marine.acc_mouette_goeland",
     "nature.marine.albatros",
@@ -205,11 +205,11 @@
    "id": "nature.marine.les_oceans",
    "name": "Les océans",
    "kind": "trait",
-   "subject": "vagues et abysses",
+   "subject": "bathyscaphe dans les abysses",
    "figure": "10 994 m",
    "unit": "fosse des Mariannes",
    "phrase": "Ils couvrent 71 % de la Terre et produisent une grande partie de notre oxygène.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.marine.deepest",
     "nature.marine.dt_tri_eau_douce",
@@ -234,5 +234,6 @@
     "nature.marine.sel_de_la_mer"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

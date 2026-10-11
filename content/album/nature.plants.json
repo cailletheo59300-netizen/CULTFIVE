@@ -14,7 +14,7 @@
    "figure": "116 m",
    "unit": "le plus haut arbre connu",
    "phrase": "Séquoias, baobabs, dragonniers : des arbres de plusieurs milliers d'années.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "nature.plants.baobab",
     "nature.plants.dragonnier_de_socotra",
@@ -35,7 +35,7 @@
    "figure": "31 %",
    "unit": "de la France couverte de forêts",
    "phrase": "Chênes, hêtres, sapins, bouleaux ; le houx et le gui en hiver.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.plants.acc_bouleau_blanc",
     "nature.plants.acc_chene_gland",
@@ -70,7 +70,7 @@
    "figure": "92 %",
    "unit": "d'eau dans la pastèque",
    "phrase": "Pour un botaniste, la tomate est un fruit et la banane une baie.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.plants.ananas_pousse",
     "nature.plants.banana_berry",
@@ -97,7 +97,7 @@
    "figure": "Andes",
    "unit": "berceau de la pomme de terre",
    "phrase": "La pomme de terre vient d'Amérique du Sud, le maïs du Mexique.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.plants.artichaut",
     "nature.plants.asperge_tige",
@@ -119,11 +119,11 @@
    "id": "nature.plants.epices_et_boissons",
    "name": "Épices et boissons",
    "kind": "trait",
-   "subject": "gousse de vanille",
+   "subject": "fleur de safran",
    "figure": "150 000",
    "unit": "fleurs pour un kilo de safran",
    "phrase": "Vanille, cannelle, poivre, café, thé, cacao : des plantes venues de loin.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.plants.albius_vanille",
     "nature.plants.cannelle",
@@ -143,11 +143,11 @@
    "id": "nature.plants.les_fleurs",
    "name": "Les fleurs",
    "kind": "trait",
-   "subject": "coquelicot",
+   "subject": "trèfle à quatre feuilles",
    "figure": "1/10 000",
    "unit": "chance de trouver un trèfle à quatre feuilles",
    "phrase": "Coquelicots, muguet, tulipes, tournesols ; les abeilles assurent la pollinisation.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.plants.acc_coquelicot_couleur",
     "nature.plants.acc_pissenlit_souffle",
@@ -171,11 +171,11 @@
    "id": "nature.plants.les_plantes_extraordinaires",
    "name": "Les plantes extraordinaires",
    "kind": "trait",
-   "subject": "plante carnivore",
+   "subject": "bambou",
    "figure": "91 cm",
    "unit": "de pousse par jour pour le bambou",
    "phrase": "Fleurs qui sentent la viande, plantes carnivores.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "nature.plants.arum_titan",
     "nature.plants.bamboo_grass",
@@ -203,7 +203,7 @@
    "figure": "9 km²",
    "unit": "pour le plus grand être vivant",
    "phrase": "Ni plantes ni animaux : un règne à part.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "nature.plants.acc_cepe_champignon",
     "nature.plants.acc_champignon_cueillette",
@@ -222,7 +222,7 @@
    "figure": "2",
    "unit": "sèves : brute et élaborée",
    "phrase": "Les racines boivent, les feuilles fabriquent le sucre grâce à la lumière.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "nature.plants.arbres_communiquent",
     "nature.plants.bulbe",
@@ -237,5 +237,6 @@
     "nature.plants.vivace"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
