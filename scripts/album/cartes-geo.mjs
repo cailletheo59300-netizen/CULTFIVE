@@ -34,6 +34,7 @@ const out={};
   out.globeEurAfr=globe([-10,-15],52);
   {const proj=d3.geoOrthographic().rotate([-10,-15]).scale(52).translate([100,84]);out.globeEurAfrCities=Object.fromEntries(Object.entries({Paris:[2.35,48.86],Moscou:[37.6,55.75],'Le Caire':[31.2,30],Nairobi:[36.8,-1.3],Dakar:[-17.4,14.7]}).map(([k,v])=>[k,pt(proj,v)]));}
   out.globeAtlantic=globe([40,-25],54);
+  out.globePacific=globe([170,10],56);
   const proj=d3.geoOrthographic().rotate([40,-25]).scale(54).translate([100,84]);
   out.globeAtlanticCities={Paris:pt(proj,[2.35,48.86]),'New York':pt(proj,[-74,40.7])};}
 { // Pangée : Afrique et Amérique du Sud rapprochées
