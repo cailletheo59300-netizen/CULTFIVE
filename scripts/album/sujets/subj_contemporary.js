@@ -162,11 +162,11 @@ SUBJECTS['history.contemporary']={
    return p+[...Array(8)].map((_,i)=>R(48+i*13,116,12,12,'#D9C9E6',1.1,1)).join('')+[...Array(8)].map((_,i)=>R(48+i*13,129,12,12,'#D9C9E6',1.1,1)).join('');},
  26:id=>{ // traîneau polaire
    let p=F('M20,20 L180,20 L180,160 L20,160 Z','#DCE7F0')+S('M10,134 C50,128 80,136 110,130 C140,124 160,130 190,128 L190,160 L10,160 Z',PAPER,1.8);
-   p+=L(140,130,140,40,2.2)+`<g transform="translate(-38 -6)"><rect x="150" y="46" width="28" height="20" fill="${WAX}"/><rect x="157" y="46" width="6" height="20" fill="${PAPER}"/><rect x="150" y="53" width="28" height="6" fill="${PAPER}"/><rect x="158.5" y="46" width="3" height="20" fill="${BLUE}"/><rect x="150" y="54.5" width="28" height="3" fill="${BLUE}"/>`+R(150,46,28,20,'none',1.2)+'</g>';
-   p+=SC('M32,126 L120,126 C128,126 134,122 136,114',INK,3);
-   p+=[44,68,92,114].map(x=>L(x,126,x,110,2)).join('')+L(36,110,124,110,2.4);
-   p+=S('M44,110 C44,90 56,82 80,82 C104,82 118,90 118,110 Z','#C9B48C',2)+SC('M60,84 L54,110 M84,82 L84,110 M106,86 L112,110',INK,1.2);
-   return inMedal(id+"tp",p+[[40,40],[70,30],[110,40],[60,58],[130,64]].map(([x,y])=>star4(x,y,3,PAPER)).join(''))+medalRing();},
+   let fg=L(140,130,140,40,2.2)+`<g transform="translate(-38 -6)"><rect x="150" y="46" width="28" height="20" fill="${WAX}"/><rect x="157" y="46" width="6" height="20" fill="${PAPER}"/><rect x="150" y="53" width="28" height="6" fill="${PAPER}"/><rect x="158.5" y="46" width="3" height="20" fill="${BLUE}"/><rect x="150" y="54.5" width="28" height="3" fill="${BLUE}"/>`+R(150,46,28,20,'none',1.2)+'</g>';
+   fg+=SC('M32,126 L120,126 C128,126 134,122 136,114',INK,3);
+   fg+=[44,68,92,114].map(x=>L(x,126,x,110,2)).join('')+L(36,110,124,110,2.4);
+   fg+=S('M44,110 C44,90 56,82 80,82 C104,82 118,90 118,110 Z','#C9B48C',2)+SC('M60,84 L54,110 M84,82 L84,110 M106,86 L112,110',INK,1.2);
+   return inMedal(id+"tp",p+[[40,40],[70,30],[110,40],[60,58],[130,64]].map(([x,y])=>star4(x,y,3,PAPER)).join(''))+medalRing()+`<g transform="translate(84 126) scale(1.18) translate(-84 -126)">${fg}</g>`;},
  27:id=>{ // livre ouvert et chouette
    let p=openBook(100,100,62,40,TONE);
    p+=S('M84,104 C78,84 82,60 100,56 C118,60 122,84 116,104 Z',WOOD,2.2)+S('M84,64 L86,50 L94,58 Z M116,64 L114,50 L106,58 Z',WOOD,2);
