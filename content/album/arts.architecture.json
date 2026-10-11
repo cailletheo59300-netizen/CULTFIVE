@@ -10,11 +10,11 @@
    "id": "arts.architecture.l_architecture_antique",
    "name": "L'architecture antique",
    "kind": "trait",
-   "subject": "colonnes grecques",
+   "subject": "chapiteaux dorique, ionique et corinthien",
    "figure": "3",
    "unit": "ordres grecs : dorique, ionique, corinthien",
    "phrase": "Le Parthénon, le Colisée, le pont du Gard, le Machu Picchu.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "arts.architecture.acc_colisee",
     "arts.architecture.acc_pont_du_gard",
@@ -36,7 +36,7 @@
    "figure": "1163",
    "unit": "début de Notre-Dame de Paris",
    "phrase": "Arcs-boutants, gargouilles et rosaces : des cathédrales de lumière.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "arts.architecture.arc_boutant",
     "arts.architecture.avant_le_gothique",
@@ -56,7 +56,7 @@
    "figure": "357",
    "unit": "miroirs dans la galerie des Glaces",
    "phrase": "Chambord et son escalier, Chenonceau, Versailles, les forts de Vauban.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "arts.architecture.acc_chambord",
     "arts.architecture.chenonceau",
@@ -77,11 +77,11 @@
    "id": "arts.architecture.merveilles_du_monde",
    "name": "Merveilles du monde",
    "kind": "trait",
-   "subject": "coupoles de Saint-Basile",
+   "subject": "Sagrada Família et sa grue",
    "figure": "1882",
    "unit": "début de la Sagrada Família",
    "phrase": "Le Taj Mahal, Sainte-Sophie, Saint-Basile, Neuschwanstein, Big Ben.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "arts.architecture.arc_outrepasse",
     "arts.architecture.big_ben",
@@ -105,7 +105,7 @@
    "figure": "673",
    "unit": "losanges et triangles de verre",
    "phrase": "Haussmann, l'Opéra Garnier, le métro Guimard, Beaubourg, la Grande Arche.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "arts.architecture.commande_de_l_arc_de_triomphe",
     "arts.architecture.eiffel",
@@ -130,11 +130,11 @@
    "id": "arts.architecture.les_gratte_ciel",
    "name": "Les gratte-ciel",
    "kind": "trait",
-   "subject": "Empire State Building",
+   "subject": "Burj Khalifa",
    "figure": "828 m",
    "unit": "Burj Khalifa",
    "phrase": "De Chicago à Dubaï, la course vers le ciel.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "arts.architecture.acc_statue_liberte",
     "arts.architecture.burj_khalifa",
@@ -149,11 +149,11 @@
    "id": "arts.architecture.l_architecture_moderne",
    "name": "L'architecture moderne",
    "kind": "trait",
-   "subject": "Opéra de Sydney",
+   "subject": "viaduc de Millau",
    "figure": "343 m",
    "unit": "le viaduc de Millau",
    "phrase": "Le Corbusier, le Bauhaus, Frank Lloyd Wright, Zaha Hadid.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "arts.architecture.bauhaus",
     "arts.architecture.brasilia",
@@ -169,5 +169,6 @@
     "arts.architecture.zaha_hadid"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
