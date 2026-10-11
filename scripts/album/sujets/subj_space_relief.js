@@ -4,12 +4,12 @@ function clipCircle(id,cx,cy,r,inner){return `<clipPath id="${id}"><circle cx="$
 const waves=(x,y,n,w=1.4,o=.55)=>[...Array(n)].map((_,i)=>S(`M${x},${y+i*7} q10,-5 20,0 t20,0 t20,0 t20,0 t20,0 t20,0`,'none',w,`opacity="${o}"`)).join('');
 
 SUBJECTS['science.space']={
- 1:id=>{ // le Soleil, ses éruptions et la Terre
+ 1:id=>{ // le Soleil et ses éruptions
    let p=`<defs><radialGradient id="${id}sun" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#FFE8A3"/><stop offset=".6" stop-color="#F2B441"/><stop offset="1" stop-color="#D9822B"/></radialGradient></defs>`;
    p+=`<defs><radialGradient id="${id}glo"><stop offset=".7" stop-color="#FFD66B" stop-opacity=".55"/><stop offset="1" stop-color="#FFD66B" stop-opacity="0"/></radialGradient></defs><circle cx="96" cy="86" r="66" fill="url(#${id}glo)"/>`+C(96,86,46,`url(#${id}sun)`,2.4);
    p+=SC('M54,64 C40,48 50,30 66,40',WAX,3)+SC('M134,58 C150,40 166,54 148,70',WAX,3)+SC('M136,118 C152,128 150,146 132,134',WAX,2.6)+SC('M58,116 C42,128 50,140 64,132',WAX,2.4);
    let r=5;for(let i=0;i<22;i++){r=(r*9301+49297)%233280;const a=r/233280*Math.PI*2;r=(r*9301+49297)%233280;const d=Math.sqrt(r/233280)*38;p+=C((96+Math.cos(a)*d).toFixed(1),(86+Math.sin(a)*d).toFixed(1),1.4,'#D9822B',0);}
-   return p+C(170,124,4,'#5B8FD0',1.2)+SC('M166,132 L150,140',INK,.8,'opacity=".6"');},
+   return p;},
  2:id=>{ // Lune et cratères
    let p=C(100,84,44,PAPER,2.4)+H('M100,40 A44,44 0 0 1 100,128 A30,44 0 0 0 100,40 Z','c2');
    p+=[[82,66,9],[112,98,12],[90,108,6],[118,62,5],[74,92,5],[104,76,4]].map(([x,y,r])=>C(x,y,r,'none',1.6)+`<path d="M${x-r*.7},${y+r*.3} A${r},${r} 0 0 0 ${x+r*.7},${y+r*.3}" fill="none" stroke="${INK}" stroke-width="1" opacity=".5"/>`).join('');
@@ -191,12 +191,11 @@ SUBJECTS['geography.relief']={
    g+=[[100,126,12],[88,124,8],[112,124,8]].map(([x,y,r])=>C(x,y,r,'#FFFFFF',1.2)).join('');
    g+=S('M10,124 C40,118 70,128 100,124 C130,120 160,128 190,124 L190,160 L10,160 Z','#3F6A2E',1.8)+[30,46,62,138,154,170].map(x=>C(x,126,8,'#4F7A3A',1.2)).join('');
    return inMedal(id+'sa',g)+medalRing();},
- 14:id=>{ // thermomètre gelé et manchot
-   let g=F('M20,20 L180,20 L180,130 L20,130 Z','#EAF2F8')+S('M10,128 C50,122 90,126 120,120 C150,116 170,122 190,120 L190,160 L10,160 Z','#FFFFFF',1.8);
-   g+=R(58,30,16,92,PAPER,2,8)+C(66,124,13,'#4C8FD6',2)+R(63,62,6,58,'#4C8FD6',0);
-   g+=[40,52,64,76,88,100].map((y,i)=>L(74,y,i%2?80:84,y,1.4)).join('')+T(94,104,'−89',9,INK,'start');
-   g+=S('M138,128 C120,126 116,96 124,76 C128,64 140,58 150,64 C158,70 160,92 158,110 C156,122 150,128 138,128 Z',INK,2)+S('M140,124 C128,120 126,98 132,84 C138,76 148,80 150,92 C152,108 150,122 140,124 Z',PAPER,1.2);
-   g+=C(142,70,1.6,PAPER,0)+S('M150,70 L160,73 L150,76 Z','#F2A33A',1)+S('M130,128 l-6,2 l8,0 Z M146,128 l6,2 l-8,0 Z','#F2A33A',1);
-   g+=star4(108,40,4,PAPER)+star4(40,56,3,PAPER)+star4(160,40,3,PAPER);
+ 14:id=>{ // manchot sur la banquise
+   let g=F('M20,20 L180,20 L180,160 L20,160 Z','#DCE7F0')+S('M10,118 C40,108 70,114 100,110 C130,106 160,112 190,108 L190,160 L10,160 Z','#FFFFFF',2)+S('M10,136 C50,130 100,140 190,132 L190,160 L10,160 Z','#BFD8E8',1.6);
+   g+=S('M100,124 C76,122 70,84 80,58 C86,42 102,36 114,44 C124,52 128,76 124,98 C122,114 114,124 100,124 Z',INK,2.4)+S('M102,120 C88,116 84,92 90,72 C96,60 110,62 114,74 C118,90 114,116 102,120 Z',PAPER,1.4);
+   g+=S('M90,58 C96,52 104,54 104,60 C100,64 94,64 90,58 Z','#F2C14E',0,'opacity=".8"')+C(108,52,2,PAPER,0)+C(108,52,1,INK,0)+S('M114,50 L130,55 L114,58 Z','#F2A33A',1.2);
+   g+=S('M80,82 C70,92 68,104 74,112 C80,104 82,94 84,86 Z',INK,1.4)+S('M90,124 l-8,4 l12,0 Z M108,124 l8,4 l-12,0 Z','#F2A33A',1);
+   g+=[[40,40],[62,60],[150,44],[140,76],[46,90],[166,96],[120,30]].map(([x,y])=>star4(x,y,3.4,PAPER)).join('');
    return inMedal(id+'pg',g)+medalRing();},
 };

@@ -59,13 +59,12 @@ SUBJECTS['science.biology']={
 };
 SUBJECTS['science.chemistry']={
  1:id=>{ // tableau de Mendeleïev
-   const rows=[[0,17],[0,1,12,13,14,15,16,17],[0,1,12,13,14,15,16,17],[...Array(18).keys()],[...Array(18).keys()],[...Array(18).keys()]];
-   const col=c=>c<2?'#F2A38A':c<12?'#F3D9A0':c<17?'#9FD3B8':'#B9C8F0';const s=8.4;
-   let p='';rows.forEach((r,y)=>r.forEach(c=>{p+=R((24+c*s).toFixed(1),(34+y*s).toFixed(1),s-1,s-1,col(c),.8,1);}));
-   p+=[...Array(14)].map((_,i)=>R((40+i*s).toFixed(1),(92).toFixed(1),s-1,s-1,'#D9C9E6',.8,1)).join('')+[...Array(14)].map((_,i)=>R((40+i*s).toFixed(1),(100.4).toFixed(1),s-1,s-1,'#E8D0E6',.8,1)).join('');
-   p+=R(24,34,s-1,s-1,GOLD,1.4,1)+T(27.7,40,'H',5.4)+T(169,40,'He',4.6)+T(78,57,'Fe',4.6)+T(161.3,57,'Ne',4.6);
-   p+=S('M86,116 L86,126 L74,146 C72,150 74,152 78,152 L118,152 C122,152 124,150 122,146 L110,126 L110,116 Z','#EAF4F8',2)+S('M80,138 L116,138 L122,146 C124,150 122,152 118,152 L78,152 C74,152 72,150 74,146 Z','#7FBCC4',1.4)+R(84,112,28,5,'#EAF4F8',1.6);
-   return p+[[96,132],[102,126],[92,124]].map(([x,y])=>C(x,y,2,'#EAF4F8',1)).join('');},
+   const rows=[[0,17],[0,1,12,13,14,15,16,17],[0,1,12,13,14,15,16,17],[...Array(18).keys()],[...Array(18).keys()],[...Array(18).keys()],[...Array(18).keys()]];
+   const col=c=>c<2?'#F2A38A':c<12?'#F3D9A0':c<17?'#9FD3B8':'#B9C8F0';const s=9.4,x0=100-9*s,y0=28;
+   let p='';rows.forEach((r,y)=>r.forEach(c=>{p+=R((x0+c*s).toFixed(1),(y0+y*s).toFixed(1),s-1.2,s-1.2,col(c),.9,1.2);}));
+   p+=[0,1].map(k=>[...Array(14)].map((_,i)=>R((x0+3*s+i*s).toFixed(1),(y0+7.5*s+k*s).toFixed(1),s-1.2,s-1.2,k?'#E8D0E6':'#D9C9E6',.9,1.2)).join('')).join('');
+   const lab=(c,r,t)=>T((x0+c*s+(s-1.2)/2).toFixed(1),(y0+r*s+6.2).toFixed(1),t,4.6);
+   return p+lab(0,0,'H')+lab(17,0,'He')+lab(0,1,'Li')+lab(13,1,'C')+lab(14,1,'N')+lab(15,1,'O')+lab(8,3,'Fe')+lab(10,4,'Ag')+lab(10,5,'Au');},
  2:id=>{ // lingots d'or
    const bar=(x,y)=>S(`M${x},${y} L${x+60},${y} L${x+70},${y+18} L${x-10},${y+18} Z`,'#E9B949',2)+S(`M${x},${y} L${x+60},${y} L${x+54},${y-10} L${x+6},${y-10} Z`,'#F6D77A',1.8)+H(`M${x+60},${y} L${x+70},${y+18} L${x+58},${y+18} Z`,id);
    let p=bar(40,112)+bar(102,112)+bar(70,86);
@@ -94,11 +93,10 @@ SUBJECTS['science.chemistry']={
    p+=tube(60,'#9FD3B8',10)+tube(124,'#F2A38A',10);
    p+=S('M88,40 L88,120 C88,130 112,130 112,120 L112,40','#EAF4F8',2.2)+F('M89,80 L89,120 C89,128 111,128 111,120 L111,80 Z','#B9A3F0')+L(84,40,116,40,2.2);
    return p+[[100,36,7],[92,28,6],[108,26,6],[100,18,5],[94,74,3],[104,66,2.6],[98,60,2]].map(([x,y,r])=>C(x,y,r,'#F3EEFF',1.2)).join('');},
- 7:id=>{ // diamant, crayon et sablier
-   let p=S('M60,64 L84,44 L116,44 L140,64 L100,120 Z','#DDF0F8',2.4)+S('M60,64 L140,64 M84,44 L92,64 L100,120 L108,64 L116,44 M92,64 L100,44 L108,64','none',1.4)+H('M108,64 L140,64 L100,120 Z',id);
-   p+=`<path d="M70,60 L84,48" stroke="#fff" stroke-width="2.4"/>`+star4(146,46,5,PAPER);
-   p+=rot(-20,70,130,R(30,124,70,10,GOLD,1.6)+S('M100,124 L114,129 L100,134 Z','#E8D3A3',1.4)+S('M110,127.6 L114,129 L110,130.4 Z',INK,0)+R(24,124,8,10,'#E8A0A0',1.4));
-   return p+S('M138,108 L162,108 L156,124 L162,140 L138,140 L144,124 Z','#EAF4F8',1.8)+F('M146,120 L154,120 L150,124 Z','#E8D3A3')+F('M141,138 L159,138 L156,132 L144,132 Z','#E8D3A3')+L(136,108,164,108,2.4)+L(136,140,164,140,2.4);},
+ 7:id=>{ // diamant
+   let p=S('M46,62 L76,32 L124,32 L154,62 L100,140 Z','#DDF0F8',2.6)+S('M46,62 L154,62 M76,32 L88,62 L100,140 L112,62 L124,32 M88,62 L100,32 L112,62','none',1.6);
+   p+=H('M112,62 L154,62 L100,140 Z',id)+F('M46,62 L76,32 L88,62 Z','#fff',.55)+F('M88,62 L100,140 L46,62 Z','#BFE0EC',.5);
+   return p+`<path d="M58,58 L76,40" stroke="#fff" stroke-width="2.6"/>`+star4(156,34,6,PAPER)+star4(44,104,4,PAPER)+star4(140,120,3.4,PAPER);},
 };
 SUBJECTS['science.human_body']={
  1:id=>{ // cœur anatomique
@@ -159,8 +157,7 @@ SUBJECTS['science.human_body']={
  11:id=>{ // silhouette remplie d'eau à 60 %
    const body='M100,26 C110,26 116,34 116,42 C116,50 110,56 100,56 C90,56 84,50 84,42 C84,34 90,26 100,26 Z M84,62 L116,62 C124,62 130,68 132,76 L140,108 C141,113 134,115 132,110 L124,84 L122,104 L124,146 C124,152 112,152 112,146 L104,108 L96,108 L88,146 C88,152 76,152 76,146 L78,104 L76,84 L68,110 C66,115 59,113 60,108 L68,76 C70,68 76,62 84,62 Z';
    let p=S(body,PAPER,2.2)+clipTo(id+'eau',body,`<rect x="50" y="86" width="100" height="70" fill="#7FBCC4"/>`+waves(56,90,1,1.2,.6))+S(body,'none',2.2);
-   p+=R(150,40,10,62,PAPER,1.8,5)+C(155,106,8,WAX,1.8)+R(153,70,4,34,WAX,0);
-   return p+T(156,32,'37 °C',8,INK)+SC('M134,86 L148,86',INK,1,'stroke-dasharray="2 2"');},
+   return p;},
 };
 SUBJECTS['science.physics']={
  1:id=>{ // prisme et arc-en-ciel
