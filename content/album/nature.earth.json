@@ -33,12 +33,12 @@
   {
    "n": 2,
    "id": "nature.earth.les_seismes",
-   "name": "Les séismes",
+   "name": "Plaques et séismes",
    "kind": "trait",
    "subject": "sismographe",
    "figure": "200",
-   "unit": "millions d'années : la Pangée se sépare",
-   "phrase": "Les continents bougent de quelques centimètres par an.",
+   "unit": "millions d'années",
+   "phrase": "La Pangée se sépare : les continents dérivent.",
    "rarity": null,
    "concepts": [
     "nature.earth.derive_des_continents",
@@ -193,8 +193,8 @@
    "kind": "trait",
    "subject": "iceberg",
    "figure": "70 %",
-   "unit": "de l'eau douce dans les glaces de l'Antarctique",
-   "phrase": "Le Groenland, l'Antarctique, les fjords creusés par les glaciers.",
+   "unit": "de l'eau douce est en Antarctique",
+   "phrase": "Groenland, Antarctique, fjords creusés par la glace.",
    "rarity": null,
    "concepts": [
     "nature.earth.arctique_et_antarctique",

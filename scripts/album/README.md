@@ -9,3 +9,5 @@ Les dessins sont dans `sujets/` : une fonction par carte, rangée par page (`SUB
 Planche : `python3 scripts/album/planche.py . history.antiquity history.middle_ages history.modern history.contemporary science.space geography.relief /tmp/planche.html`
 
 Prochaines étapes : dessiner les sujets des autres pages, puis exporter des images pour l'app.
+
+Contrôle des textes : `scripts/album/controle-textes.mjs` vérifie qu'aucun texte n'est coupé ni trop petit sur les 525 cartes (mode d'emploi en tête du fichier). Si une carte est signalée, raccourcir son unité ou sa phrase.

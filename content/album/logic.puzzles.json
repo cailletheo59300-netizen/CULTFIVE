@@ -84,7 +84,7 @@
    "kind": "trait",
    "subject": "horloge",
    "figure": "11",
-   "unit": "superpositions des aiguilles en 12 heures",
+   "unit": "rencontres des aiguilles en 12 h",
    "phrase": "Angles, horloge qui retarde, horloge qui sonne.",
    "rarity": null,
    "concepts": [
@@ -130,8 +130,8 @@
    "kind": "trait",
    "subject": "triangles imbriqués",
    "figure": "64",
-   "unit": "petits carrés sur un échiquier… mais bien plus de carrés en tout",
-   "phrase": "Carrés, triangles et rectangles cachés ; arêtes du cube, faces du dé.",
+   "unit": "cases sur un échiquier",
+   "phrase": "Carrés cachés : un échiquier en contient 204 en tout.",
    "rarity": null,
    "concepts": [
     "logic.puzzles.angle_droit_jour",
@@ -163,8 +163,8 @@
    "kind": "trait",
    "subject": "doigts qui comptent",
    "figure": "45",
-   "unit": "poignées de main entre 10 personnes",
-   "phrase": "Poignées de main, matchs d'un tournoi, pages, chiffres et zéros.",
+   "unit": "poignées de main à 10 personnes",
+   "phrase": "Poignées de main, matchs d'un tournoi, pages.",
    "rarity": null,
    "concepts": [
     "logic.puzzles.acc_enigme_coupes",
@@ -212,8 +212,8 @@
    "kind": "trait",
    "subject": "balance à plateaux",
    "figure": "2",
-   "unit": "pesées suffisent pour trouver la fausse pièce parmi 9",
-   "phrase": "Pesées, seaux de 3 et 5 litres, robinets, comprimés.",
+   "unit": "pesées : la fausse pièce sur 9",
+   "phrase": "Pesées, seaux de 3 et 5 litres, robinets.",
    "rarity": null,
    "concepts": [
     "logic.puzzles.acc_enigme_pilules",
