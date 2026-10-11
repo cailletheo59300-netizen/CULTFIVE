@@ -3,7 +3,7 @@
  "title": "Moyen Âge",
  "domain": "history",
  "motif": "gravure",
- "rarity_note": "Rareté choisie au prestige du sujet, répartition fixe par page (D-043) ; à proposer puis valider.",
+ "rarity_note": "Rareté choisie selon l'importance du sujet : 1 à 2 légendaires, 3 à 4 épiques, environ un quart de rares (D-043, D-045).",
  "cards": [
   {
    "n": 1,
@@ -14,7 +14,7 @@
    "figure": "496",
    "unit": "baptême à Reims (date traditionnelle)",
    "phrase": "Le roi des Francs se fait baptiser : la Gaule devient le royaume des Francs.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.bataille_de_poitiers_732",
     "history.middle_ages.clovis_baptism",
@@ -31,7 +31,7 @@
    "figure": "800",
    "unit": "sacré empereur",
    "phrase": "Couronné à Rome le jour de Noël, il règne sur presque toute l'Europe de l'Ouest.",
-   "rarity": "epic",
+   "rarity": "legend",
    "concepts": [
     "history.middle_ages.charlemagne_800",
     "history.middle_ages.dt_charlemagne",
@@ -85,7 +85,7 @@
    "figure": "XIe s.",
    "unit": "premiers donjons en pierre",
    "phrase": "Donjon, douves, pont-levis : la maison du seigneur est faite pour résister.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "history.middle_ages.acc_donjon",
     "history.middle_ages.acc_pont_levis",
@@ -97,7 +97,7 @@
    "id": "history.middle_ages.seigneurs_et_paysans",
    "name": "Seigneurs et paysans",
    "kind": "trait",
-   "subject": "heaume et épée",
+   "subject": "croix, épée et faucille : les trois ordres",
    "figure": "3",
    "unit": "ordres de la société",
    "phrase": "Ceux qui prient, ceux qui combattent, ceux qui travaillent.",
@@ -122,7 +122,7 @@
    "figure": "1095",
    "unit": "appel de Clermont",
    "phrase": "Pendant deux siècles, des armées d'Europe partent vers Jérusalem.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "history.middle_ages.acc_croisades",
     "history.middle_ages.appel_de_clermont",
@@ -155,9 +155,9 @@
    "id": "history.middle_ages.alinor_et_les_plantagents",
    "name": "Aliénor et les Plantagenêts",
    "kind": "trait",
-   "subject": "sceau royal",
-   "figure": "1215",
-   "unit": "Grande Charte",
+   "subject": "deux couronnes",
+   "figure": "2",
+   "unit": "fois reine : France, Angleterre",
    "phrase": "Reine de France puis d'Angleterre, mère de Richard Cœur de Lion.",
    "rarity": "common",
    "concepts": [
@@ -172,9 +172,9 @@
    "id": "history.middle_ages.l_glise_au_moyen_ge",
    "name": "L'Église au Moyen Âge",
    "kind": "trait",
-   "subject": "plume de moine copiste",
-   "figure": "1054",
-   "unit": "schisme d'Orient",
+   "subject": "abbaye",
+   "figure": "1098",
+   "unit": "fondation de l'abbaye de Cîteaux",
    "phrase": "Monastères, copistes et papes : l'Église est au cœur de la vie.",
    "rarity": "common",
    "concepts": [
@@ -194,7 +194,7 @@
    "figure": "1347",
    "unit": "arrivée en Europe",
    "phrase": "En quelques années, elle emporte près d'un Européen sur trois.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "history.middle_ages.black_death",
     "history.middle_ages.dt_peste_noire",
@@ -210,7 +210,7 @@
    "figure": "116",
    "unit": "ans de guerre",
    "phrase": "De 1337 à 1453, Français et Anglais se disputent le trône de France.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.acc_cent_ans_adversaire",
     "history.middle_ages.bataille_d_azincourt",
@@ -268,7 +268,7 @@
    "figure": "1453",
    "unit": "chute de Constantinople",
    "phrase": "La fin de l'Empire byzantin marque souvent la fin du Moyen Âge.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.bataille_de_kosovo_polje",
     "history.middle_ages.bataille_de_las_navas_de_tolosa",

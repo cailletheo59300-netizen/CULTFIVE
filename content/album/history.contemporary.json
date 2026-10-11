@@ -3,7 +3,7 @@
  "title": "Époque contemporaine",
  "domain": "history",
  "motif": "gravure",
- "rarity_note": "Rareté choisie au prestige du sujet, répartition fixe par page (D-043) ; à proposer puis valider.",
+ "rarity_note": "Rareté choisie selon l'importance du sujet : 1 à 2 légendaires, 3 à 4 épiques, environ un quart de rares (D-043, D-045).",
  "cards": [
   {
    "n": 1,
@@ -14,7 +14,7 @@
    "figure": "1793",
    "unit": "Louis XVI guillotiné",
    "phrase": "La Révolution abolit la royauté ; la Marseillaise devient un chant de guerre.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.contemporary.acc_louis_xvi",
     "history.contemporary.acc_marie_antoinette",
@@ -30,10 +30,10 @@
    "name": "Napoléon empereur",
    "kind": "trait",
    "subject": "aigle impériale",
-   "figure": "1821",
-   "unit": "mort à Sainte-Hélène",
-   "phrase": "Du sacre à l'exil : « Impossible n'est pas français ».",
-   "rarity": "rare",
+   "figure": "1804",
+   "unit": "sacre de l'empereur",
+   "phrase": "Du sacre à l'exil à Sainte-Hélène : « Impossible n'est pas français ».",
+   "rarity": "legend",
    "concepts": [
     "history.contemporary.acc_sacre_napoleon",
     "history.contemporary.acc_sainte_helene",
@@ -73,8 +73,8 @@
    "name": "Les guerres du XIXe siècle",
    "kind": "trait",
    "subject": "sabre de cavalerie",
-   "figure": "38",
-   "unit": "minutes, la guerre la plus courte",
+   "figure": "1854",
+   "unit": "charge de la brigade légère",
    "phrase": "Crimée, Italie, Sedan, Little Bighorn : un siècle de conflits.",
    "rarity": "common",
    "concepts": [
@@ -111,8 +111,8 @@
    "name": "La IIIe République",
    "kind": "trait",
    "subject": "Marianne et cocarde",
-   "figure": "1882",
-   "unit": "école obligatoire",
+   "figure": "1870",
+   "unit": "naissance de la IIIe République",
    "phrase": "L'école gratuite et laïque de Jules Ferry, l'affaire Dreyfus et « J'accuse ».",
    "rarity": "common",
    "concepts": [
@@ -134,7 +134,7 @@
    "figure": "1918",
    "unit": "armistice du 11 novembre",
    "phrase": "Quatre ans de tranchées, de Verdun à la Somme.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "history.contemporary.acc_armistice_1918",
     "history.contemporary.acc_poilus",
@@ -157,11 +157,11 @@
    "id": "history.contemporary.la_seconde_guerre_mondiale",
    "name": "La Seconde Guerre mondiale",
    "kind": "trait",
-   "subject": "carte d'état-major",
+   "subject": "soldat casqué devant Stalingrad en ruines",
    "figure": "6",
    "unit": "ans de guerre",
    "phrase": "De Dunkerque à Stalingrad, le monde entier en guerre.",
-   "rarity": "common",
+   "rarity": "legend",
    "concepts": [
     "history.contemporary.acc_duree_ww2",
     "history.contemporary.bataille_d_aix_la_chapelle",
@@ -183,7 +183,7 @@
    "id": "history.contemporary.la_guerre_du_pacifique",
    "name": "La guerre du Pacifique",
    "kind": "trait",
-   "subject": "porte-avions",
+   "subject": "dôme de Genbaku à Hiroshima",
    "figure": "1945",
    "unit": "Hiroshima",
    "phrase": "Du Japon à Singapour, jusqu'à la bombe atomique.",
@@ -223,7 +223,7 @@
    "figure": "1944",
    "unit": "6 juin, Normandie",
    "phrase": "Le jour J, puis la libération de Paris en août.",
-   "rarity": "legend",
+   "rarity": "epic",
    "concepts": [
     "history.contemporary.acc_debarquement",
     "history.contemporary.dt_debarquement",
@@ -264,7 +264,7 @@
    "figure": "1958",
    "unit": "naissance de la Ve République",
    "phrase": "De Gaulle, Pompidou, Mitterrand, Chirac : les présidents de la France d'aujourd'hui.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.contemporary.acc_mai_68",
     "history.contemporary.acc_mitterrand_1981",
@@ -358,7 +358,7 @@
    "id": "history.contemporary.les_dirigeants_du_monde",
    "name": "Les dirigeants du monde",
    "kind": "trait",
-   "subject": "globe terrestre",
+   "subject": "casque à pointe prussien",
    "figure": "1871",
    "unit": "naissance de l'Empire allemand",
    "phrase": "Bismarck, Atatürk, Mao, Theodore Roosevelt : ceux qui ont redessiné leur pays.",
@@ -420,7 +420,7 @@
    "id": "history.contemporary.les_ecrivains_de_langue_anglaise",
    "name": "Les écrivains de langue anglaise",
    "kind": "trait",
-   "subject": "machine à écrire",
+   "subject": "montre à gousset du Lapin blanc et carte à jouer",
    "figure": "1865",
    "unit": "Alice au pays des merveilles",
    "phrase": "Dickens, Twain, Woolf, Hemingway, Tolkien.",
@@ -661,7 +661,7 @@
    "subject": "livre ouvert et chouette",
    "figure": "1848",
    "unit": "le Manifeste communiste",
-   "phrase": "Comte, Durkheim, Jung, Bergson : penser la société et l'esprit.",
+   "phrase": "Engels, Tocqueville, Durkheim, Jung : penser la société et l'esprit.",
    "rarity": "common",
    "concepts": [
     "history.contemporary.century_albert_schweitzer",
@@ -718,5 +718,5 @@
    ]
   }
  ],
- "rarity_status": "proposée"
+ "rarity_status": "validée"
 }

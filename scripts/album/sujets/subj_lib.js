@@ -36,3 +36,5 @@ function timeline(marks){
   return p+`<rect x="${marks[0][0]}" y="83" width="${marks[marks.length-1][0]-marks[0][0]}" height="6" fill="${TONE}" opacity=".18"/>`;}
 const WOOD='#8A5A34', BLUE='#2F4E8C', SILVER='#D5DADF', GREEN='#4F7A3A';
 const SC=(d,col,w=2.2,extra='')=>`<path d="${d}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${extra}/>`;
+/* paysage découpé dans le médaillon (pas de bord droit visible) */
+const inMedal=(cid,inner,r=63)=>clipTo(cid,`M${100-r},84 A${r},${r} 0 1 1 ${100+r},84 A${r},${r} 0 1 1 ${100-r},84 Z`,inner);

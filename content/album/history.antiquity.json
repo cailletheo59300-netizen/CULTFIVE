@@ -3,7 +3,7 @@
  "title": "Antiquité",
  "domain": "history",
  "motif": "gravure",
- "rarity_note": "Rareté choisie au prestige du sujet, répartition fixe par page (D-043) ; à proposer puis valider.",
+ "rarity_note": "Rareté choisie selon l'importance du sujet : 1 à 2 légendaires, 3 à 4 épiques, environ un quart de rares (D-043, D-045).",
  "cards": [
   {
    "n": 1,
@@ -105,7 +105,7 @@
    "figure": "−508",
    "unit": "réformes de Clisthène",
    "phrase": "Les citoyens votent eux-mêmes les lois sur la colline de la Pnyx.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.antiquity.democracy_athens",
     "history.antiquity.ecclesia",
@@ -141,7 +141,7 @@
    "subject": "compas et cercle",
    "figure": "40 000 km",
    "unit": "la Terre mesurée par Ératosthène",
-   "phrase": "Socrate, Platon, Pythagore, Archimède : la Grèce invente la science et la philosophie.",
+   "phrase": "Ératosthène mesure la Terre ; Socrate, Platon et Pythagore inventent la philosophie.",
    "rarity": "common",
    "concepts": [
     "history.antiquity.auteur_de_l_iliade",
@@ -194,7 +194,7 @@
    "id": "history.antiquity.rome_des_rois_a_la_republique",
    "name": "Rome, des rois à la République",
    "kind": "trait",
-   "subject": "aigle de légion SPQR",
+   "subject": "louve et jumeaux",
    "figure": "−753",
    "unit": "fondation de Rome",
    "phrase": "Selon la légende, Romulus fonde la ville ; les Romains chassent ensuite leur dernier roi.",
@@ -235,7 +235,7 @@
    "figure": "−44",
    "unit": "assassinat aux ides de mars",
    "phrase": "Conquérant de la Gaule, il franchit le Rubicon et prend le pouvoir à Rome.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "history.antiquity.acc_cesar_gaule",
     "history.antiquity.caesar_death",
@@ -255,7 +255,7 @@
    "figure": "−52",
    "unit": "Alésia",
    "phrase": "Vercingétorix unit les Gaulois contre César, puis dépose les armes à Alésia.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.antiquity.alesia",
     "history.antiquity.druides",
@@ -329,5 +329,5 @@
    ]
   }
  ],
- "rarity_status": "proposée"
+ "rarity_status": "validée"
 }

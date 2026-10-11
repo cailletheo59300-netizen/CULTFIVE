@@ -3,7 +3,7 @@
  "title": "Espace",
  "domain": "science",
  "motif": "plan technique et constellations",
- "rarity_note": "Rareté choisie au prestige du sujet, répartition fixe par page (D-043) ; à proposer puis valider.",
+ "rarity_note": "Rareté choisie selon l'importance du sujet : 1 à 2 légendaires, 3 à 4 épiques, environ un quart de rares (D-043, D-045).",
  "cards": [
   {
    "n": 1,
@@ -14,7 +14,7 @@
    "figure": "8 min 20 s",
    "unit": "trajet de sa lumière",
    "phrase": "Une étoile ordinaire, une naine jaune, qui contient presque toute la masse du système solaire.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "science.space.acc_annee_terre",
     "science.space.acc_soleil_etoile",
@@ -37,7 +37,7 @@
    "figure": "384 400",
    "unit": "km de la Terre",
    "phrase": "Elle nous montre toujours la même face et ne brille que grâce au Soleil.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "science.space.acc_lune_lumiere",
     "science.space.acc_lune_unique",
@@ -79,7 +79,7 @@
    "figure": "23 h 56",
    "unit": "pour un tour sur elle-même",
    "phrase": "La planète la plus dense du système solaire, penchée de 23 degrés : d'où les saisons.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "science.space.acc_jour_24h",
     "science.space.acc_terre_soleil_ete",
@@ -189,7 +189,7 @@
    "id": "science.space.pluton_et_les_petits_corps",
    "name": "Pluton et les petits corps",
    "kind": "trait",
-   "subject": "comète et sa queue",
+   "subject": "Pluton et son cœur",
    "figure": "2006",
    "unit": "Pluton n'est plus une planète",
    "phrase": "Astéroïdes, comètes, étoiles filantes : les poussières du système solaire.",
@@ -212,7 +212,7 @@
    "figure": "8",
    "unit": "planètes",
    "phrase": "Huit planètes tournent autour du Soleil, comme l'avaient compris Copernic et Kepler.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "science.space.copernic",
     "science.space.dt_epoque_espace",
@@ -273,7 +273,7 @@
    "figure": "1957",
    "unit": "premier satellite",
    "phrase": "Spoutnik, puis Gagarine en 1961 : les Soviétiques ouvrent la route de l'espace.",
-   "rarity": "common",
+   "rarity": "epic",
    "concepts": [
     "science.space.dt_gagarine",
     "science.space.gagarin",
@@ -290,7 +290,7 @@
    "figure": "1969",
    "unit": "premiers pas sur la Lune",
    "phrase": "Neil Armstrong et Buzz Aldrin marchent sur la Lune le 21 juillet (heure de Paris).",
-   "rarity": "epic",
+   "rarity": "legend",
    "concepts": [
     "science.space.annee_des_premiers_pas_sur_la_lune",
     "science.space.apollo_11"

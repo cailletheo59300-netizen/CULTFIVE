@@ -3,7 +3,7 @@
  "title": "Temps modernes",
  "domain": "history",
  "motif": "gravure",
- "rarity_note": "Rareté choisie au prestige du sujet, répartition fixe par page (D-043) ; à proposer puis valider.",
+ "rarity_note": "Rareté choisie selon l'importance du sujet : 1 à 2 légendaires, 3 à 4 épiques, environ un quart de rares (D-043, D-045).",
  "cards": [
   {
    "n": 1,
@@ -14,7 +14,7 @@
    "figure": "1492",
    "unit": "Colomb en Amérique",
    "phrase": "Caravelles et boussoles : les Européens font le tour du monde.",
-   "rarity": "rare",
+   "rarity": "legend",
    "concepts": [
     "history.middle_ages.century_afonso_de_albuquerque",
     "history.middle_ages.century_amerigo_vespucci",
@@ -48,8 +48,8 @@
    "name": "La Renaissance",
    "kind": "trait",
    "subject": "Homme de Vitruve",
-   "figure": "1515",
-   "unit": "Marignan",
+   "figure": "1516",
+   "unit": "Léonard de Vinci arrive en France",
    "phrase": "L'Italie redécouvre l'Antiquité ; François Ier invite Léonard de Vinci en France.",
    "rarity": "epic",
    "concepts": [
@@ -101,7 +101,7 @@
    "figure": "6",
    "unit": "épouses",
    "phrase": "Pour divorcer, le roi d'Angleterre rompt avec le pape.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.century_henri_viii",
     "history.modern.century_anne_boleyn",
@@ -113,11 +113,11 @@
    "id": "history.modern.reformes_et_guerres_de_religion",
    "name": "Réformes et guerres de religion",
    "kind": "trait",
-   "subject": "Bible imprimée",
-   "figure": "1598",
-   "unit": "édit de Nantes",
+   "subject": "porte d'église, thèses et marteau",
+   "figure": "1517",
+   "unit": "les 95 thèses de Luther",
    "phrase": "Luther et Calvin divisent l'Église ; Henri IV ramène la paix en France.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.middle_ages.century_martin_luther",
     "history.middle_ages.century_ulrich_zwingli",
@@ -155,7 +155,7 @@
    "figure": "72",
    "unit": "ans de règne",
    "phrase": "Le plus long règne de l'histoire de France, à Versailles.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "history.modern.acc_roi_soleil",
     "history.modern.acc_versailles_roi",
@@ -171,10 +171,10 @@
    "id": "history.modern.les_ecrivains",
    "name": "Les écrivains",
    "kind": "trait",
-   "subject": "plume et encrier",
+   "subject": "lance de Don Quichotte et moulin",
    "figure": "1605",
    "unit": "Don Quichotte",
-   "phrase": "De Rabelais à Jane Austen, de Molière à Goethe.",
+   "phrase": "Cervantès, Molière, La Fontaine, Goethe, Jane Austen.",
    "rarity": "common",
    "concepts": [
     "history.modern.century_adelbert_von_chamisso",
@@ -210,7 +210,7 @@
    "figure": "1751",
    "unit": "premier tome de l'Encyclopédie",
    "phrase": "Diderot, Kant, Hume : la raison contre les préjugés.",
-   "rarity": "common",
+   "rarity": "rare",
    "concepts": [
     "history.modern.century_arthur_schopenhauer",
     "history.modern.century_baruch_spinoza",
@@ -235,10 +235,10 @@
    "name": "Les savants",
    "kind": "trait",
    "subject": "lunette astronomique",
-   "figure": "1796",
-   "unit": "premier vaccin, par Jenner",
+   "figure": "3",
+   "unit": "lois de Kepler sur les planètes",
    "phrase": "Kepler, Lavoisier, Volta, Euler : la révolution scientifique.",
-   "rarity": "rare",
+   "rarity": "common",
    "concepts": [
     "history.modern.century_alessandro_volta",
     "history.modern.century_andre_marie_ampere",
@@ -289,7 +289,7 @@
    "figure": "1776",
    "unit": "Déclaration d'indépendance",
    "phrase": "Treize colonies se libèrent de l'Angleterre, avec l'aide de la France.",
-   "rarity": "rare",
+   "rarity": "epic",
    "concepts": [
     "history.modern.bataille_de_yorktown",
     "history.modern.century_james_madison",
@@ -310,7 +310,7 @@
    "figure": "1789",
    "unit": "prise de la Bastille",
    "phrase": "La fin de la monarchie absolue et la Déclaration des droits de l'homme.",
-   "rarity": "epic",
+   "rarity": "legend",
    "concepts": [
     "history.modern.acc_marianne",
     "history.modern.acc_marie_antoinette_brioche",
@@ -327,10 +327,10 @@
    "name": "Napoléon Bonaparte",
    "kind": "trait",
    "subject": "bicorne",
-   "figure": "1804",
-   "unit": "sacre de l'empereur",
+   "figure": "1769",
+   "unit": "naissance à Ajaccio",
    "phrase": "Né en Corse, il devient empereur des Français. Il n'était pas si petit.",
-   "rarity": "legend",
+   "rarity": "rare",
    "concepts": [
     "history.modern.acc_josephine",
     "history.modern.acc_napoleon_petit",
@@ -390,5 +390,5 @@
    ]
   }
  ],
- "rarity_status": "proposée"
+ "rarity_status": "validée"
 }
