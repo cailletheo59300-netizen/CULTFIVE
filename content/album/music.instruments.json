@@ -14,7 +14,7 @@
    "figure": "88",
    "unit": "touches sur un piano",
    "phrase": "Le piano a des cordes frappées par des marteaux ; le clavecin les pince.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "music.instruments.acc_accordeon",
     "music.instruments.acc_piano_cordes",
@@ -40,7 +40,7 @@
    "figure": "4",
    "unit": "cordes sur un violon",
    "phrase": "Frottées, pincées ou frappées ; un Stradivarius vaut une fortune.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "music.instruments.acc_archet",
     "music.instruments.acc_guitare_electrique",
@@ -77,11 +77,11 @@
    "id": "music.instruments.les_bois",
    "name": "Les bois",
    "kind": "trait",
-   "subject": "clarinette",
+   "subject": "saxophone",
    "figure": "1846",
    "unit": "brevet du saxophone",
    "phrase": "Flûtes, clarinettes, hautbois ; le saxophone est un bois, même en métal.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.instruments.acc_souffle",
     "music.instruments.adolphe_sax",
@@ -116,7 +116,7 @@
    "figure": "1",
    "unit": "embouchure : les lèvres vibrent",
    "phrase": "Trompette, trombone, tuba ; Miles Davis.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.instruments.dt_trompette",
     "music.instruments.family_bugle",
@@ -137,10 +137,10 @@
    "name": "Les percussions",
    "kind": "trait",
    "subject": "batterie",
-   "figure": "1920",
-   "unit": "le thérémine, joué sans le toucher",
-   "phrase": "Tambours, timbales, xylophone, steelpan.",
-   "rarity": null,
+   "figure": "5",
+   "unit": "fûts dans une batterie classique",
+   "phrase": "Grosse caisse, caisse claire, toms ; timbales, xylophone, steelpan.",
+   "rarity": "common",
    "concepts": [
     "music.instruments.acc_baguettes",
     "music.instruments.acc_batterie_baguettes",
@@ -168,11 +168,11 @@
    "id": "music.instruments.instruments_du_monde",
    "name": "Instruments du monde",
    "kind": "trait",
-   "subject": "sitar",
+   "subject": "flûte préhistorique en os",
    "figure": "40 000",
    "unit": "ans, l'âge des plus vieilles flûtes",
    "phrase": "Sitar indien, koto japonais, oud arabe, didjeridoo australien.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.instruments.family_bandoura",
     "music.instruments.family_didjeridoo",
@@ -199,12 +199,13 @@
    "figure": "5",
    "unit": "lignes sur une portée",
    "phrase": "Cordes, bois, cuivres, percussions : la grande famille de l'orchestre.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.instruments.diapason",
     "music.instruments.families_pairs",
     "music.instruments.staff_lines"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

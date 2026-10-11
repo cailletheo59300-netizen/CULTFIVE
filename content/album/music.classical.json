@@ -10,11 +10,11 @@
    "id": "music.classical.mozart",
    "name": "Mozart",
    "kind": "trait",
-   "subject": "perruque et clavecin",
+   "subject": "clavecin",
    "figure": "35",
    "unit": "ans à sa mort",
    "phrase": "Enfant prodige à six ans, il compose la Flûte enchantée et un Requiem inachevé.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "music.classical.acc_mozart_enfant",
     "music.classical.dt_mozart_symphonies",
@@ -34,11 +34,11 @@
    "id": "music.classical.beethoven",
    "name": "Beethoven",
    "kind": "trait",
-   "subject": "cornet acoustique",
+   "subject": "partition de la 9e symphonie",
    "figure": "9",
    "unit": "symphonies",
    "phrase": "Devenu sourd, il écrit l'Hymne à la joie, devenu l'hymne européen.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "music.classical.acc_hymne_europe",
     "music.classical.beethoven_deaf",
@@ -60,7 +60,7 @@
    "figure": "1 100",
    "unit": "œuvres de Bach répertoriées",
    "phrase": "Bach, Vivaldi et ses Quatre Saisons, Haendel, Pachelbel.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "music.classical.bach_country",
     "music.classical.canon_de_pachelbel",
@@ -80,10 +80,10 @@
    "name": "Les romantiques",
    "kind": "trait",
    "subject": "piano à queue",
-   "figure": "1830",
-   "unit": "la Symphonie fantastique",
+   "figure": "1810",
+   "unit": "naissance de Chopin, poète du piano",
    "phrase": "Chopin, Liszt, Paganini, Clara Schumann, Saint-Saëns.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.classical.carnaval_des_animaux",
     "music.classical.chopin_instrument",
@@ -110,7 +110,7 @@
    "figure": "1778",
    "unit": "ouverture de la Scala",
    "phrase": "Carmen, Le Barbier de Séville, Madame Butterfly ; sopranos et ténors.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.classical.acc_opera_chante",
     "music.classical.barbier_de_seville",
@@ -137,7 +137,7 @@
    "figure": "1913",
    "unit": "scandale du Sacre du printemps",
    "phrase": "Tchaïkovski, Stravinsky, Prokofiev, Dvořák, Strauss.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.classical.antre_du_roi_de_la_montagne",
     "music.classical.beau_danube_bleu",
@@ -161,7 +161,7 @@
    "figure": "15 min",
    "unit": "le Boléro de Ravel",
    "phrase": "Ravel, Debussy, Satie, Holst, Gershwin et la musique de film.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.classical.acc_bolero_ravel",
     "music.classical.apprenti_sorcier",
@@ -182,11 +182,11 @@
    "id": "music.classical.l_orchestre",
    "name": "L'orchestre",
    "kind": "trait",
-   "subject": "baguette du chef",
+   "subject": "orchestre vu d'en haut",
    "figure": "100",
    "unit": "musiciens dans un grand orchestre",
    "phrase": "Le hautbois donne le la, le chef donne le tempo.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.classical.a_cappella",
     "music.classical.concerto",
@@ -205,11 +205,11 @@
    "id": "music.classical.le_solfege",
    "name": "Le solfège",
    "kind": "typo",
-   "subject": "portée et clé de sol",
+   "subject": "clavier d'une octave",
    "figure": "12",
    "unit": "demi-tons dans une octave",
    "phrase": "Do, ré, mi ; allegro, forte, crescendo.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.classical.allegro",
     "music.classical.blanche_duree",
@@ -233,12 +233,13 @@
    "figure": "1600 → 1750",
    "unit": "l'époque baroque",
    "phrase": "Baroque, classique, romantique, moderne : qui vient avant qui ?",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.classical.composers_order",
     "music.classical.dt_epoque_compositeurs",
     "music.classical.periodes_de_la_musique"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

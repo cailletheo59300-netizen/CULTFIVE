@@ -14,7 +14,7 @@
    "figure": "1963",
    "unit": "premier album",
    "phrase": "John, Paul, George et Ringo, de Liverpool au monde entier.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "music.popular.beatles_francais",
     "music.popular.beatles_membres",
@@ -35,7 +35,7 @@
    "figure": "1975",
    "unit": "Bohemian Rhapsody",
    "phrase": "Freddie Mercury, de son vrai nom Farrokh Bulsara.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "music.popular.bohemian_rhapsody",
     "music.popular.expert_freddie_mercury",
@@ -51,7 +51,7 @@
    "figure": "1982",
    "unit": "Thriller",
    "phrase": "Le roi de la pop et son moonwalk, depuis les Jackson 5.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "music.popular.acc_michael_jackson_moonwalk",
     "music.popular.band_the_jackson_5_q43267",
@@ -70,7 +70,7 @@
    "figure": "1969",
    "unit": "Woodstock",
    "phrase": "Elvis, Hendrix, Marley, Springsteen, Madonna, Prince, ABBA.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "music.popular.abba_pays",
     "music.popular.acc_bob_marley_reggae",
@@ -103,7 +103,7 @@
    "figure": "149",
    "unit": "concerts de l'Eras Tour",
    "phrase": "Beyoncé, Rihanna, Shakira, Taylor Swift, Billie Eilish, Ed Sheeran.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.popular.bad_guy",
     "music.popular.beyonce_groupe",
@@ -127,7 +127,7 @@
    "figure": "33",
    "unit": "tours par minute",
    "phrase": "Les Rolling Stones, les Doors, les Who, Fleetwood Mac, les Ramones.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.33_tours",
     "music.popular.band_blondie_q202741",
@@ -160,7 +160,7 @@
    "figure": "1980",
    "unit": "Back in Black d'AC/DC",
    "phrase": "AC/DC, Metallica, Iron Maiden, Guns N' Roses, Rammstein.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.band_ac_dc_q27593",
     "music.popular.band_aerosmith_q126826",
@@ -202,7 +202,7 @@
    "figure": "1991",
    "unit": "Nevermind de Nirvana",
    "phrase": "U2, The Cure, Depeche Mode, Nirvana, Radiohead, Bon Jovi.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.band_blur_q485820",
     "music.popular.band_bon_jovi_q259254",
@@ -232,7 +232,7 @@
    "figure": "2000",
    "unit": "Yellow, premier succès de Coldplay",
    "phrase": "Coldplay, Linkin Park, Arctic Monkeys, Imagine Dragons, Måneskin.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.band_30_seconds_to_mars_q40585",
     "music.popular.band_arctic_monkeys_q170599",
@@ -266,7 +266,7 @@
    "figure": "2012",
    "unit": "Gangnam Style",
    "phrase": "Backstreet Boys, One Direction, BTS, BLACKPINK.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.band_akb48_q51118",
     "music.popular.band_backstreet_boys_q17140",
@@ -290,7 +290,7 @@
    "figure": "1973",
    "unit": "naissance du hip-hop dans le Bronx",
    "phrase": "Daft Punk, Kraftwerk, David Guetta ; IAM et NTM en France.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.popular.acc_daft_punk",
     "music.popular.acc_guetta_dj",
@@ -317,7 +317,7 @@
    "figure": "1946",
    "unit": "La Vie en rose",
    "phrase": "Piaf, Brel, Brassens, Aznavour, Trenet, Barbara.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "music.popular.acc_brassens_gorille",
     "music.popular.acc_piaf_vie_en_rose",
@@ -339,11 +339,11 @@
    "id": "music.popular.les_idoles_francaises",
    "name": "Les idoles françaises",
    "kind": "trait",
-   "subject": "guitare et blouson",
+   "subject": "disque 45 tours",
    "figure": "1960",
    "unit": "premier disque de Johnny Hallyday",
    "phrase": "Johnny, Claude François, Dalida, Sardou, Goldman, Mylène Farmer.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.popular.acc_cloclo",
     "music.popular.acc_johnny",
@@ -372,7 +372,7 @@
    "figure": "2009",
    "unit": "Alors on danse",
    "phrase": "Stromae, Angèle, Indila, Aya Nakamura, Orelsan, Zaz.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "music.popular.acc_angele_belge",
     "music.popular.acc_orelsan_caen",
@@ -391,11 +391,11 @@
    "id": "music.popular.danses_du_monde",
    "name": "Danses du monde",
    "kind": "trait",
-   "subject": "danseurs de tango",
+   "subject": "mesure à trois temps",
    "figure": "3",
    "unit": "temps pour la valse",
    "phrase": "Tango, samba, flamenco, fado, valse.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.danses_pays",
     "music.popular.fado_origine",
@@ -414,7 +414,7 @@
    "figure": "1982",
    "unit": "première Fête de la musique",
    "phrase": "Eurovision, MTV, Victoires de la musique, karaoké et chansons d'enfance.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.acc_eurovision",
     "music.popular.acc_fete_musique",
@@ -439,16 +439,17 @@
    "id": "music.popular.les_reperes_de_la_musique",
    "name": "Les repères de la musique",
    "kind": "typo",
-   "subject": "frise de vinyles",
+   "subject": "phonographe à pavillon",
    "figure": "1877",
    "unit": "le phonographe d'Edison",
    "phrase": "Styles, musiciens, instruments : qui a fait quoi, et quand ?",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "music.popular.chronologie_styles",
     "music.popular.dt_epoque_tubes",
     "music.popular.musicians_instruments"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
