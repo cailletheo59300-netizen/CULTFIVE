@@ -14,7 +14,7 @@
    "figure": "8",
    "unit": "bits dans un octet",
    "phrase": "Tout l'ordinateur parle en 0 et en 1 ; 11111111 vaut 255.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.computing.11111111_en_binaire",
     "tech.computing.ascii",
@@ -41,7 +41,7 @@
    "figure": "1946",
    "unit": "ENIAC",
    "phrase": "Turing, Grace Hopper, le premier bug, l'Apple I, Deep Blue.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.computing.acc_bug_insecte",
     "tech.computing.apple_1",
@@ -67,11 +67,11 @@
    "id": "tech.computing.le_materiel",
    "name": "Le matériel",
    "kind": "trait",
-   "subject": "clavier et souris",
+   "subject": "pixels rouge, vert, bleu",
    "figure": "16,7",
    "unit": "millions de couleurs à l'écran",
    "phrase": "Processeur, mémoire, SSD, clavier AZERTY, souris, pixels.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.computing.acc_ctrl_alt_suppr",
     "tech.computing.azerty",
@@ -103,7 +103,7 @@
    "figure": "Ctrl+Z",
    "unit": "annuler",
    "phrase": "Copier-coller, capture d'écran, PDF, GIF, mode avion.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.computing.acc_copier_coller",
     "tech.computing.acc_pdf",
@@ -128,7 +128,7 @@
    "figure": "10",
    "unit": "jours pour créer JavaScript",
    "phrase": "« Hello, world » : C, Python, Java, HTML, Git et Linux.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.computing.algorithme",
     "tech.computing.api",
@@ -160,7 +160,7 @@
    "figure": "1991",
    "unit": "premier site web",
    "phrase": "ARPANET, Tim Berners-Lee, les adresses IP, le Minitel.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "tech.computing.acc_navigateur",
     "tech.computing.adresse_ip",
@@ -196,7 +196,7 @@
    "figure": "@",
    "unit": "l'arobase de nos adresses",
    "phrase": "Moteurs de recherche, Wikipédia, émojis, hashtags, selfies, QR codes.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.computing.acc_arobase",
     "tech.computing.acc_emoji_japon",
@@ -223,11 +223,11 @@
    "id": "tech.computing.les_geants_du_web",
    "name": "Les géants du Web",
    "kind": "trait",
-   "subject": "logos d'applications",
+   "subject": "bouton de lecture vidéo",
    "figure": "2005",
    "unit": "naissance de YouTube",
    "phrase": "Google, Facebook, YouTube, Instagram, TikTok et les tweets de 140 caractères.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.computing.dt_facebook",
     "tech.computing.dt_instagram",
@@ -248,7 +248,7 @@
    "figure": "160",
    "unit": "caractères dans un SMS",
    "phrase": "Le premier SMS, le premier iPhone, la 5G, le Wi-Fi et le Bluetooth.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "tech.computing.5g",
     "tech.computing.acc_carte_sim",
@@ -277,7 +277,7 @@
    "figure": "123456",
    "unit": "le pire mot de passe",
    "phrase": "Virus, hameçonnage, rançongiciels : se protéger en ligne.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.computing.acc_mdp_123456",
     "tech.computing.acc_spam",
@@ -306,12 +306,13 @@
    "figure": "1956",
    "unit": "naissance du mot « intelligence artificielle »",
    "phrase": "Des machines qui apprennent à partir d'exemples.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "tech.computing.apprentissage_automatique",
     "tech.computing.blockchain",
     "tech.computing.ia_mccarthy"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

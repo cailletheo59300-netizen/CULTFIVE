@@ -14,7 +14,7 @@
    "figure": "1930",
    "unit": "première édition, en Uruguay",
    "phrase": "Uruguay, Italie, Brésil de Pelé : les premières légendes.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.football.dt_premiere_cdm",
     "sport.football.world_cup_1930",
@@ -46,7 +46,7 @@
    "figure": "48",
    "unit": "équipes en 2026",
    "phrase": "Maradona, Zidane, Messi ; record de titres pour le Brésil.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "sport.football.bresil_record_cdm",
     "sport.football.expert_just_fontaine",
@@ -84,11 +84,11 @@
    "id": "sport.football.les_bleus_de_1998",
    "name": "Les Bleus de 1998",
    "kind": "typo",
-   "subject": "coq et étoile",
+   "subject": "coq et une étoile",
    "figure": "3-0",
    "unit": "en finale contre le Brésil",
    "phrase": "Deux têtes de Zidane, Deschamps capitaine, Jacquet sélectionneur.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "sport.football.capitaine_1998",
     "sport.football.clairefontaine",
@@ -104,11 +104,11 @@
    "id": "sport.football.les_bleus_de_2018",
    "name": "Les Bleus de 2018",
    "kind": "typo",
-   "subject": "deuxième étoile",
+   "subject": "coq et deux étoiles",
    "figure": "4-2",
    "unit": "en finale contre la Croatie",
    "phrase": "Mbappé, Griezmann, Lloris capitaine, Deschamps sélectionneur.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "sport.football.dt_france_2018",
     "sport.football.finale_2018_mbappe",
@@ -123,11 +123,11 @@
    "id": "sport.football.l_euro",
    "name": "L'Euro",
    "kind": "trait",
-   "subject": "trophée Henri-Delaunay",
+   "subject": "trophée de l'Euro",
    "figure": "1984",
    "unit": "premier Euro de la France",
    "phrase": "Platini en 1984, Trezeguet en 2000.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.football.acc_euro_selection",
     "sport.football.euro_2004_grece",
@@ -141,11 +141,11 @@
    "id": "sport.football.la_ligue_des_champions",
    "name": "La Ligue des champions",
    "kind": "trait",
-   "subject": "grandes oreilles",
+   "subject": "coupe aux grandes oreilles",
    "figure": "15",
    "unit": "titres pour le Real Madrid",
    "phrase": "Le Real, le Barça, Marseille en 1993, le PSG en 2025.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.football.acc_ldc_hymne",
     "sport.football.acc_mbappe_club",
@@ -168,7 +168,7 @@
    "figure": "1932",
    "unit": "premier championnat pro en France",
    "phrase": "Ligue 1, Premier League ; le Parc, le Vélodrome.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.football.acc_bundesliga",
     "sport.football.acc_ligue_1",
@@ -187,11 +187,11 @@
    "id": "sport.football.les_selections_du_monde",
    "name": "Les sélections du monde",
    "kind": "trait",
-   "subject": "maillots de sélections",
+   "subject": "maillot jaune à cinq étoiles",
    "figure": "5",
    "unit": "titres mondiaux pour le Brésil",
    "phrase": "L'Albiceleste, la Squadra Azzurra, les Three Lions, les Red Devils.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.football.angleterre_surnom",
     "sport.football.argentine_surnom",
@@ -212,7 +212,7 @@
    "figure": "1956",
    "unit": "premier Ballon d'or",
    "phrase": "Kopa, premier Français ; et le Soulier d'or, le Gant d'or.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.football.acc_ballon_or",
     "sport.football.creation_du_ballon_d_or",
@@ -227,11 +227,11 @@
    "id": "sport.football.les_regles_du_football",
    "name": "Les règles du football",
    "kind": "trait",
-   "subject": "sifflet et carton",
+   "subject": "sifflet et carton jaune",
    "figure": "90",
    "unit": "minutes de jeu",
    "phrase": "Hors-jeu, VAR, prolongations, tirs au but, panenka.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.football.acc_gardien_mains",
     "sport.football.acc_hors_jeu_corner",
@@ -254,5 +254,6 @@
     "sport.football.var"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

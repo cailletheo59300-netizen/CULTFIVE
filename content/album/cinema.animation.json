@@ -10,11 +10,11 @@
    "id": "cinema.animation.les_classiques_de_disney",
    "name": "Les classiques de Disney",
    "kind": "trait",
-   "subject": "silhouette de Mickey",
+   "subject": "pomme empoisonnée",
    "figure": "1937",
    "unit": "Blanche-Neige, premier long-métrage",
    "phrase": "Blanche-Neige, Pinocchio, Bambi, Cendrillon, Les 101 Dalmatiens.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "cinema.animation.acc_bambi_mere",
     "cinema.animation.acc_cendrillon_minuit",
@@ -39,7 +39,7 @@
    "figure": "1994",
    "unit": "Le Roi lion",
    "phrase": "La Petite Sirène, La Belle et la Bête, Aladdin, Le Roi lion, Mulan, Tarzan.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.animation.acc_aladdin_genie",
     "cinema.animation.acc_aladdin_tapis",
@@ -66,7 +66,7 @@
    "figure": "2013",
    "unit": "La Reine des neiges",
    "phrase": "Elsa et Olaf, Raiponce, Vaiana et Maui, Judy Hopps.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.animation.acc_reine_neiges",
     "cinema.animation.cruella",
@@ -86,11 +86,11 @@
    "id": "cinema.animation.pixar",
    "name": "Pixar",
    "kind": "trait",
-   "subject": "lampe de bureau qui saute",
+   "subject": "lampe de bureau",
    "figure": "1995",
    "unit": "premier long métrage tout en 3D",
    "phrase": "Toy Story, Nemo, Ratatouille, WALL-E, Coco.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "cinema.animation.acc_dory",
     "cinema.animation.acc_ratatouille",
@@ -129,7 +129,7 @@
    "figure": "2001",
    "unit": "Shrek",
    "phrase": "DreamWorks, Illumination et Blue Sky : Shrek, Kung Fu Panda, les Minions, Scrat.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.animation.acc_minions",
     "cinema.animation.acc_shrek",
@@ -152,11 +152,11 @@
    "id": "cinema.animation.le_studio_ghibli",
    "name": "Le Studio Ghibli",
    "kind": "trait",
-   "subject": "Totoro sous la pluie",
+   "subject": "parapluie sous la pluie",
    "figure": "1985",
    "unit": "création du Studio Ghibli",
    "phrase": "Miyazaki, Totoro, Princesse Mononoké ; et l'animation japonaise.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.animation.acc_totoro",
     "cinema.animation.fondateur_de_ghibli",
@@ -175,11 +175,11 @@
    "id": "cinema.animation.l_animation_europeenne",
    "name": "L'animation européenne",
    "kind": "trait",
-   "subject": "pâte à modeler",
+   "subject": "personnage en pâte à modeler",
    "figure": "2025",
    "unit": "Oscar pour Flow",
    "phrase": "Kirikou, Persepolis, les Triplettes de Belleville, Wallace et Gromit.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.animation.aardman",
     "cinema.animation.asterix_studio",
@@ -195,5 +195,6 @@
     "cinema.animation.tintin_spielberg"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

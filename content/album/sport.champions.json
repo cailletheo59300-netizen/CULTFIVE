@@ -10,11 +10,11 @@
    "id": "sport.champions.les_legendes_du_football",
    "name": "Les légendes du football",
    "kind": "trait",
-   "subject": "ballon et étoiles",
+   "subject": "ballon doré et huit étoiles",
    "figure": "8",
    "unit": "Ballons d'or pour Messi",
    "phrase": "Pelé, Cruyff, Platini, Zidane, Messi, Ronaldo, Mbappé.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "sport.champions.acc_griezmann",
     "sport.champions.acc_zlatan",
@@ -40,11 +40,11 @@
    "id": "sport.champions.les_rois_du_tennis",
    "name": "Les rois du tennis",
    "kind": "trait",
-   "subject": "raquette et balle jaune",
+   "subject": "raquette sur la terre battue",
    "figure": "14",
    "unit": "victoires de Nadal à Roland-Garros",
    "phrase": "Borg, Federer, Nadal, Serena Williams ; Noah, dernier Français à Roland-Garros.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "sport.champions.acc_nadal_terre",
     "sport.champions.alcaraz_rg",
@@ -69,11 +69,11 @@
    "id": "sport.champions.les_stars_de_l_athletisme",
    "name": "Les stars de l'athlétisme",
    "kind": "trait",
-   "subject": "piste et chronomètre",
+   "subject": "chronomètre à 9,58",
    "figure": "9,58",
    "unit": "secondes, le 100 m d'Usain Bolt",
    "phrase": "Owens, Lewis, Bolt, Kipchoge, Duplantis.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "sport.champions.bolt_country",
     "sport.champions.carl_lewis",
@@ -93,11 +93,11 @@
    "id": "sport.champions.nageurs_et_gymnastes",
    "name": "Nageurs et gymnastes",
    "kind": "trait",
-   "subject": "plongeoir",
+   "subject": "tableau d'affichage 1.00",
    "figure": "10",
    "unit": "la première note parfaite, Nadia Comăneci",
    "phrase": "Phelps, Spitz, les Manaudou, Léon Marchand, Simone Biles.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.champions.comaneci",
     "sport.champions.florent_manaudou",
@@ -118,7 +118,7 @@
    "figure": "1903",
    "unit": "premier Tour de France",
    "phrase": "Garin, Anquetil, Merckx, Hinault, Indurain, Pogačar.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.champions.acc_pogacar",
     "sport.champions.dt_premier_tour",
@@ -142,7 +142,7 @@
    "figure": "7",
    "unit": "titres pour Schumacher, Hamilton",
    "phrase": "Senna, Prost, Schumacher, Hamilton, Loeb.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.champions.acc_dakar_rallye",
     "sport.champions.alain_prost",
@@ -163,7 +163,7 @@
    "figure": "100",
    "unit": "points en un match, Wilt Chamberlain",
    "phrase": "Michael Jordan, Wembanyama, Babe Ruth, Gretzky, Tiger Woods.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.champions.acc_jordan_bulls",
     "sport.champions.babe_ruth",
@@ -184,11 +184,11 @@
    "id": "sport.champions.les_combattants",
    "name": "Les combattants",
    "kind": "trait",
-   "subject": "gants de boxe",
+   "subject": "kimono et ceinture noire",
    "figure": "11",
    "unit": "titres mondiaux pour Teddy Riner",
    "phrase": "Mohamed Ali, Mike Tyson, Pacquiao, Teddy Riner.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.champions.ali",
     "sport.champions.cassius_clay",
@@ -206,7 +206,7 @@
    "figure": "1987",
    "unit": "première Coupe du monde de rugby",
    "phrase": "Jonah Lomu, Antoine Dupont, Nikola Karabatic.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.champions.afrique_sud_rugby",
     "sport.champions.dupont",
@@ -222,11 +222,11 @@
    "id": "sport.champions.glisse_eau_et_aventure",
    "name": "Glisse, eau et aventure",
    "kind": "trait",
-   "subject": "skis croisés",
+   "subject": "trois médailles d'or",
    "figure": "3",
    "unit": "médailles d'or pour Killy en 1968",
    "phrase": "Killy, Fourcade, Shiffrin, Kelly Slater, le Vendée Globe et l'Everest.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.champions.desjoyeaux",
     "sport.champions.estanguet",
@@ -247,10 +247,11 @@
    "figure": "1",
    "unit": "champion, un sport",
    "phrase": "Relie chaque champion à son sport.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.champions.sportifs_sports"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

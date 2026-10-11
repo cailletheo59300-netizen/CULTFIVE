@@ -14,7 +14,7 @@
    "figure": "3",
    "unit": "Oscars",
    "phrase": "Les Dents de la mer, E.T., Jurassic Park, La Liste de Schindler.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "cinema.directors.film_il_faut_sauver_le_soldat_ryan_q165817",
     "cinema.directors.film_jurassic_park_q167726",
@@ -28,11 +28,11 @@
    "id": "cinema.directors.george_lucas",
    "name": "George Lucas",
    "kind": "trait",
-   "subject": "Faucon Millenium",
+   "subject": "deux soleils sur le désert",
    "figure": "1977",
    "unit": "La Guerre des étoiles",
    "phrase": "Il a imaginé Star Wars et Indiana Jones.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "cinema.directors.acc_lucas_star_wars",
     "cinema.directors.film_la_guerre_des_etoiles_q17738",
@@ -52,7 +52,7 @@
    "figure": "4",
    "unit": "réalisateurs pour Harry Potter",
    "phrase": "Peter Jackson pour la Terre du Milieu, Gore Verbinski pour les pirates.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.directors.film_harry_potter_a_l_ecole_des_sor_q102438",
     "cinema.directors.film_harry_potter_et_l_ordre_du_phe_q102235",
@@ -75,11 +75,11 @@
    "id": "cinema.directors.alfred_hitchcock",
    "name": "Alfred Hitchcock",
    "kind": "trait",
-   "subject": "profil d'Hitchcock",
+   "subject": "oiseaux sur un fil",
    "figure": "53",
    "unit": "longs-métrages",
    "phrase": "Le maître du suspense, de Psychose aux Oiseaux.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "cinema.directors.hitchcock_oscar",
     "cinema.directors.hitchcock_psychose",
@@ -91,11 +91,11 @@
    "id": "cinema.directors.les_visionnaires",
    "name": "Les visionnaires",
    "kind": "trait",
-   "subject": "monolithe de 2001",
+   "subject": "fusée dans l'œil de la Lune",
    "figure": "1902",
    "unit": "Le Voyage dans la Lune de Méliès",
    "phrase": "Méliès, Kubrick, Ridley Scott, James Cameron, Tim Burton, Wes Anderson.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.directors.besson",
     "cinema.directors.burton",
@@ -126,7 +126,7 @@
    "figure": "1972",
    "unit": "Le Parrain de Coppola",
    "phrase": "Chaplin, Coppola, Scorsese, Tarantino, Fincher, Zemeckis.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.directors.film_apocalypse_now_q182692",
     "cinema.directors.film_braveheart_q162729",
@@ -156,11 +156,11 @@
    "id": "cinema.directors.le_cinema_d_auteur_francais",
    "name": "Le cinéma d'auteur français",
    "kind": "trait",
-   "subject": "affiche des 400 coups",
+   "subject": "bicyclette et tour Eiffel en noir et blanc",
    "figure": "1959",
    "unit": "Les 400 coups et la Nouvelle Vague",
    "phrase": "Renoir, Truffaut, Godard, Varda, Tati, Jeunet, Kassovitz.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.directors.amelie",
     "cinema.directors.audiard_tontons",
@@ -188,7 +188,7 @@
    "figure": "1950",
    "unit": "Rashōmon de Kurosawa",
    "phrase": "Kurosawa, Ozu, Bergman, Fellini, Buñuel, Eisenstein, Bong Joon-ho.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.directors.acc_muet",
     "cinema.directors.bergman",
@@ -211,11 +211,12 @@
    "figure": "1",
    "unit": "film, un réalisateur",
    "phrase": "Saurais-tu relier chaque film à son réalisateur ?",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.directors.pairs_set1",
     "cinema.directors.realisateurs_films"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

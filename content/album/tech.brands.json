@@ -10,11 +10,11 @@
    "id": "tech.brands.les_geants_de_la_tech",
    "name": "Les géants de la tech",
    "kind": "trait",
-   "subject": "pomme croquée",
+   "subject": "garage des débuts",
    "figure": "1976",
    "unit": "naissance d'Apple dans un garage",
    "phrase": "Apple, Google, Microsoft, Samsung, Nvidia, Tesla.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "tech.brands.alexa",
     "tech.brands.alphabet",
@@ -53,7 +53,7 @@
    "figure": "2004",
    "unit": "naissance de Facebook",
    "phrase": "Instagram, TikTok, YouTube, Netflix, Spotify, Uber, Airbnb.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.brands.acc_netflix_dvd",
     "tech.brands.airbnb",
@@ -86,11 +86,11 @@
    "id": "tech.brands.les_jeux_video",
    "name": "Les jeux vidéo",
    "kind": "trait",
-   "subject": "manette",
+   "subject": "cartes à jouer hanafuda",
    "figure": "1889",
    "unit": "Nintendo vend des cartes à jouer",
    "phrase": "Mario, Pac-Man, Tetris, Pokémon, Minecraft.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "tech.brands.acc_luigi",
     "tech.brands.acc_mario_metier",
@@ -126,7 +126,7 @@
    "figure": "1958",
    "unit": "la brique LEGO actuelle",
    "phrase": "LEGO veut dire « joue bien » en danois.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.brands.dt_mystere_lego_s",
     "tech.brands.expert_lego",
@@ -142,11 +142,11 @@
    "id": "tech.brands.les_voitures",
    "name": "Les voitures",
    "kind": "trait",
-   "subject": "calandre et logo",
+   "subject": "moulin à café",
    "figure": "1810",
    "unit": "Peugeot fait des moulins à café",
    "phrase": "Les anneaux d'Audi, le cheval de Ferrari.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.brands.bibendum",
     "tech.brands.ceinture_volvo",
@@ -180,11 +180,11 @@
    "id": "tech.brands.mode_et_sport",
    "name": "Mode et sport",
    "kind": "trait",
-   "subject": "virgule de Nike",
+   "subject": "basket à trois bandes",
    "figure": "3",
    "unit": "bandes pour Adidas",
    "phrase": "Nike, Adidas, Puma, Lacoste et son crocodile, Chanel, Rolex.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.brands.air_jordan",
     "tech.brands.chanel_coco",
@@ -213,7 +213,7 @@
    "figure": "1886",
    "unit": "naissance du Coca-Cola",
    "phrase": "Coca-Cola, McDonald's, Nutella, Haribo, Toblerone.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.brands.coca_formule_annee",
     "tech.brands.danone_nom",
@@ -241,7 +241,7 @@
    "figure": "1943",
    "unit": "fondation d'IKEA",
    "phrase": "IKEA, Dyson, Tefal, le Post-it, le stylo Bic, Airbus, le Rafale.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.brands.acc_ikea_suede",
     "tech.brands.airbus",
@@ -265,16 +265,17 @@
    "id": "tech.brands.codes_et_numeros",
    "name": "Codes et numéros",
    "kind": "typo",
-   "subject": "code-barres",
+   "subject": "carte Vitale",
    "figure": "13",
    "unit": "chiffres du numéro de Sécurité sociale",
    "phrase": "Code postal, numéro de téléphone, numéro de Sécu : que veulent dire les chiffres ?",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.brands.dt_code_postal",
     "tech.brands.dt_secu",
     "tech.brands.dt_telephone"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

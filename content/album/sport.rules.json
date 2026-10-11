@@ -14,7 +14,7 @@
    "figure": "15-30-40",
    "unit": "le compte des points",
    "phrase": "Ace, tie-break, terre battue à Roland-Garros, gazon à Wimbledon.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "sport.rules.acc_tennis_zero",
     "sport.rules.acc_wimbledon_blanc",
@@ -45,7 +45,7 @@
    "figure": "5",
    "unit": "points pour un essai",
    "phrase": "Essai, transformation, drop, mêlée et touche.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.rules.dt_rugby_mi_temps",
     "sport.rules.dt_rugby_xv",
@@ -70,7 +70,7 @@
    "figure": "3,05 m",
    "unit": "hauteur du panier",
    "phrase": "24 secondes pour tirer, trois points de loin.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.rules.24_secondes",
     "sport.rules.basket_height",
@@ -95,7 +95,7 @@
    "figure": "11 m",
    "unit": "du penalty au but",
    "phrase": "Terrain, buts, cartons, remplacements.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "sport.rules.carton_blanc",
     "sport.rules.deux_cartons_jaunes",
@@ -119,7 +119,7 @@
    "figure": "25",
    "unit": "points pour un set de volley",
    "phrase": "Handball, volley, ping-pong, badminton, padel, water-polo, hockey.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.rules.acc_padel",
     "sport.rules.acc_ping_pong",
@@ -153,7 +153,7 @@
    "figure": "10",
    "unit": "épreuves du décathlon",
    "phrase": "Courir, sauter, lancer : du 100 m au marathon.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.rules.bolt_100m",
     "sport.rules.dt_marathon",
@@ -180,7 +180,7 @@
    "figure": "50 m",
    "unit": "longueur d'un bassin olympique",
    "phrase": "Papillon, dos, brasse, crawl ; nager, pédaler, courir au triathlon.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.rules.acc_aviron_dos",
     "sport.rules.bassin_olympique",
@@ -198,7 +198,7 @@
    "figure": "21",
    "unit": "étapes",
    "phrase": "Maillot jaune, maillot à pois, peloton, arrivée sur les Champs-Élysées.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "sport.rules.champs_elysees_tour",
     "sport.rules.dt_etapes_tour",
@@ -214,11 +214,11 @@
    "id": "sport.rules.moteurs_et_voiles",
    "name": "Moteurs et voiles",
    "kind": "trait",
-   "subject": "voilier de course",
+   "subject": "voiture de Formule 1",
    "figure": "25",
    "unit": "points pour une victoire en F1",
    "phrase": "Pole position, drapeau à damier, 24 Heures du Mans, Route du Rhum.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.rules.drapeau_a_damier",
     "sport.rules.f1_victoire_points",
@@ -237,7 +237,7 @@
    "figure": "18",
    "unit": "trous sur un parcours",
    "phrase": "Par, birdie, eagle, albatros et le rare trou en un.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "sport.rules.acc_caddie_golf",
     "sport.rules.birdie",
@@ -253,11 +253,11 @@
    "id": "sport.rules.les_sports_de_combat",
    "name": "Les sports de combat",
    "kind": "trait",
-   "subject": "ceinture noire",
+   "subject": "fleuret, épée et sabre",
    "figure": "3",
    "unit": "armes en escrime",
    "phrase": "Judo, boxe, escrime, sumo, capoeira, haltérophilie.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.rules.acc_escrime_armes",
     "sport.rules.acc_halteres",
@@ -280,11 +280,11 @@
    "id": "sport.rules.neige_et_glace",
    "name": "Neige et glace",
    "kind": "trait",
-   "subject": "skis et bâtons",
+   "subject": "cibles du biathlon",
    "figure": "5",
    "unit": "cibles au biathlon",
    "phrase": "Descente, slalom, biathlon, curling.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.rules.acc_ski_slalom_portes",
     "sport.rules.biathlon",
@@ -302,7 +302,7 @@
    "figure": "64",
    "unit": "cases sur l'échiquier",
    "phrase": "Roque, pat, échec et mat ; le pion peut devenir dame.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "sport.rules.cavalier",
     "sport.rules.chess_pieces",
@@ -324,7 +324,7 @@
    "figure": "13",
    "unit": "points pour gagner à la pétanque",
    "phrase": "Pétanque, belote, bowling, billard, fléchettes, escalade.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.rules.acc_escalade_bloc",
     "sport.rules.acc_tir_arc_cible",
@@ -347,7 +347,7 @@
    "figure": "9",
    "unit": "joueurs au baseball",
    "phrase": "Cricket, baseball, football américain, dressage.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "sport.rules.cricket_bowler",
     "sport.rules.dressage",
@@ -358,5 +358,6 @@
     "sport.rules.touchdown"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

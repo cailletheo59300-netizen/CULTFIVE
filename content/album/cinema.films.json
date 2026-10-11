@@ -14,7 +14,7 @@
    "figure": "1977",
    "unit": "La Guerre des étoiles",
    "phrase": "« Je suis ton père » : la saga de George Lucas.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "cinema.films.acc_star_wars_pere",
     "cinema.films.acc_yoda_couleur",
@@ -36,11 +36,11 @@
    "id": "cinema.films.harry_potter_au_cinema",
    "name": "Harry Potter au cinéma",
    "kind": "trait",
-   "subject": "baguette et lunettes rondes",
+   "subject": "baguette magique",
    "figure": "8",
    "unit": "films",
    "phrase": "Poudlard, Hermione et la cicatrice en éclair, de 2001 à 2011.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "cinema.films.acc_harry_ecole",
     "cinema.films.acc_harry_tomes",
@@ -61,11 +61,11 @@
    "id": "cinema.films.le_seigneur_des_anneaux",
    "name": "Le Seigneur des anneaux",
    "kind": "trait",
-   "subject": "anneau unique",
+   "subject": "anneau d'or",
    "figure": "11",
    "unit": "Oscars pour Le Retour du roi",
    "phrase": "Frodon, Gandalf et « Vous ne passerez pas ! ».",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "cinema.films.acc_gandalf",
     "cinema.films.acc_seigneur_anneau_frodon",
@@ -85,7 +85,7 @@
    "figure": "3 h 14",
    "unit": "de film",
    "phrase": "James Cameron, Jack et Rose, et onze Oscars.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "cinema.films.acc_titanic_iceberg",
     "cinema.films.dt_mystere_titanic_film",
@@ -102,11 +102,11 @@
    "id": "cinema.films.oscars_palmes_et_cesar",
    "name": "Oscars, Palmes et César",
    "kind": "trait",
-   "subject": "statuette dorée",
+   "subject": "palme d'or",
    "figure": "1946",
    "unit": "premier Festival de Cannes",
    "phrase": "Hollywood a ses Oscars, Cannes sa Palme d'or, la France ses César.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.films.acc_cesar",
     "cinema.films.acc_oscar_statuette",
@@ -138,7 +138,7 @@
    "figure": "1895",
    "unit": "première projection des frères Lumière",
    "phrase": "Un train qui entre en gare, Charlot, Nosferatu, le premier film parlant.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.films.arrivee_train",
     "cinema.films.charlot",
@@ -155,11 +155,11 @@
    "id": "cinema.films.les_classiques_d_hollywood",
    "name": "Les classiques d'Hollywood",
    "kind": "trait",
-   "subject": "étoile de Hollywood",
+   "subject": "étoile du trottoir de Hollywood",
    "figure": "1941",
    "unit": "Citizen Kane",
    "phrase": "Casablanca, Psychose, Le Parrain, Apocalypse Now.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.films.apocalypse_conrad",
     "cinema.films.bernard_herrmann",
@@ -185,11 +185,11 @@
    "id": "cinema.films.les_blockbusters",
    "name": "Les blockbusters",
    "kind": "trait",
-   "subject": "dinosaure de Jurassic Park",
+   "subject": "empreinte de dinosaure",
    "figure": "1975",
    "unit": "Les Dents de la mer, premier blockbuster",
    "phrase": "E.T., Jurassic Park, Retour vers le futur.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.films.acc_et_maison",
     "cinema.films.acc_jurassic_park",
@@ -226,7 +226,7 @@
    "figure": "1994",
    "unit": "Les Évadés",
    "phrase": "Gladiator, Matrix, Fight Club, La Liste de Schindler.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.films.year_blade_runner_q184843",
     "cinema.films.year_braveheart_q162729",
@@ -249,11 +249,11 @@
    "id": "cinema.films.james_bond",
    "name": "James Bond",
    "kind": "trait",
-   "subject": "pistolet et smoking",
+   "subject": "nœud papillon et smoking",
    "figure": "1962",
    "unit": "James Bond contre Dr No",
    "phrase": "« Bond, James Bond » : de Sean Connery à Daniel Craig.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "cinema.films.bond_craig",
     "cinema.films.premier_bond"
@@ -268,7 +268,7 @@
    "figure": "20,4",
    "unit": "millions d'entrées pour les Ch'tis",
    "phrase": "Amélie Poulain, Intouchables, Les Visiteurs.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.films.acc_asterix_mission",
     "cinema.films.acc_bienvenue_chtis",
@@ -301,11 +301,11 @@
    "id": "cinema.films.le_cinema_du_monde",
    "name": "Le cinéma du monde",
    "kind": "trait",
-   "subject": "sabre de samouraï",
+   "subject": "caméra de Bollywood",
    "figure": "1 800",
    "unit": "films par an en Inde",
    "phrase": "Bollywood, Nollywood, Kurosawa, Fellini et la fontaine de Trevi.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.films.bollywood",
     "cinema.films.echecs_mort",
@@ -325,7 +325,7 @@
    "figure": "1989",
    "unit": "premier épisode des Simpson",
    "phrase": "Friends, Game of Thrones, Stranger Things, Squid Game, Kaamelott.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.films.acc_casa_papel_masques",
     "cinema.films.acc_fort_boyard",
@@ -348,11 +348,11 @@
    "id": "cinema.films.le_langage_du_cinema",
    "name": "Le langage du cinéma",
    "kind": "typo",
-   "subject": "pellicule et clap",
+   "subject": "pellicule",
    "figure": "24",
    "unit": "images par seconde",
    "phrase": "Clap, travelling, plan-séquence, caméo, VO.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "cinema.films.acc_popcorn",
     "cinema.films.cameo",
@@ -364,5 +364,6 @@
     "cinema.films.vo"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

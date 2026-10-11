@@ -10,11 +10,11 @@
    "id": "tech.inventions.l_ecrit_et_l_imprimerie",
    "name": "L'écrit et l'imprimerie",
    "kind": "trait",
-   "subject": "presse de Gutenberg",
-   "figure": "1450",
-   "unit": "l'imprimerie de Gutenberg",
-   "phrase": "Du papier chinois au stylo à bille, en passant par le braille.",
-   "rarity": null,
+   "subject": "lettre en braille",
+   "figure": "6",
+   "unit": "points pour une lettre en braille",
+   "phrase": "Du papier chinois à l'imprimerie, jusqu'au stylo à bille.",
+   "rarity": "common",
    "concepts": [
     "tech.inventions.braille_points",
     "tech.inventions.dt_gutenberg",
@@ -34,7 +34,7 @@
    "figure": "1879",
    "unit": "l'ampoule d'Edison",
    "phrase": "La pile de Volta, le paratonnerre de Franklin, l'ampoule d'Edison.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "tech.inventions.acc_batterie_froid",
     "tech.inventions.acc_led_conso",
@@ -57,7 +57,7 @@
    "figure": "1876",
    "unit": "brevet du téléphone",
    "phrase": "Du télégraphe de Morse à Internet, en passant par la radio et la télé.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "tech.inventions.acc_telecommande",
     "tech.inventions.bluetooth",
@@ -86,7 +86,7 @@
    "figure": "1826",
    "unit": "la première photographie",
    "phrase": "Photographie, cinématographe, phonographe, vinyle, CD, MP3.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.inventions.acc_cd_disque",
     "tech.inventions.acc_vinyle",
@@ -107,11 +107,11 @@
    "id": "tech.inventions.le_train",
    "name": "Le train",
    "kind": "trait",
-   "subject": "locomotive à vapeur",
+   "subject": "TGV",
    "figure": "574,8",
    "unit": "km/h, record du TGV",
    "phrase": "De la machine à vapeur au TGV et au tunnel sous la Manche.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.inventions.dt_premier_metro",
     "tech.inventions.dt_tgv",
@@ -131,7 +131,7 @@
    "figure": "1817",
    "unit": "la draisienne, ancêtre du vélo",
    "phrase": "La draisienne, le pneu gonflable, l'automobile, le feu rouge.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.inventions.automobile_benz",
     "tech.inventions.feu_de_circulation",
@@ -149,7 +149,7 @@
    "figure": "1903",
    "unit": "premier vol motorisé",
    "phrase": "La montgolfière, les frères Wright, Blériot, le Concorde, l'A380.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "tech.inventions.acc_drone",
     "tech.inventions.aeroglisseur",
@@ -174,7 +174,7 @@
    "figure": "110 m",
    "unit": "de haut pour Saturn V",
    "phrase": "Boussole, télescope, radar, GPS : se repérer sur la mer et dans le ciel.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "tech.inventions.acc_gps_satellites",
     "tech.inventions.boussole_chine",
@@ -195,11 +195,11 @@
    "id": "tech.inventions.les_inventions_de_la_maison",
    "name": "Les inventions de la maison",
    "kind": "trait",
-   "subject": "réfrigérateur",
+   "subject": "four à micro-ondes",
    "figure": "1945",
    "unit": "invention du four à micro-ondes",
    "phrase": "Frigo, lave-linge, aspirateur, fermeture éclair, velcro.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.inventions.acc_frigo_porte",
     "tech.inventions.acc_lave_vaisselle",
@@ -236,7 +236,7 @@
    "figure": "1642",
    "unit": "la Pascaline de Blaise Pascal",
    "phrase": "De la machine de Pascal à la puce, au code-barres et à l'impression 3D.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.inventions.acc_code_barres",
     "tech.inventions.acc_imprimante_3d",
@@ -265,7 +265,7 @@
    "figure": "1816",
    "unit": "le stéthoscope de Laennec",
    "phrase": "Vaccins, pasteurisation ; la poudre et la dynamite.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.inventions.dynamite",
     "tech.inventions.expert_gunpowder",
@@ -283,7 +283,7 @@
    "figure": "1974",
    "unit": "invention du Rubik's Cube",
    "phrase": "Pâte à modeler, Rubik's Cube, grande roue, clarinette.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.inventions.clarinette",
     "tech.inventions.grande_roue",
@@ -296,11 +296,11 @@
    "id": "tech.inventions.les_reperes_des_inventions",
    "name": "Les repères des inventions",
    "kind": "typo",
-   "subject": "frise d'objets",
+   "subject": "brevet et son sceau",
    "figure": "20",
    "unit": "ans de protection pour un brevet",
    "phrase": "Qui a inventé quoi, et dans quel ordre ?",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "tech.inventions.chronology_set1",
     "tech.inventions.dt_brevet",
@@ -310,5 +310,6 @@
     "tech.inventions.unites_savants"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
