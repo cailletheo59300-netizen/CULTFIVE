@@ -15,3 +15,5 @@ Contrôle des textes : `scripts/album/controle-textes.mjs` vérifie, avec les vr
 Les dessins restent dans la fenêtre d'image : s'ils dépassent en haut ou en bas, la planche les réduit autour du centre (`keepIn`). Le bouton « Médaillon rond » de la planche permet de comparer avec et sans médaillon.
 
 Quand le dessin est déjà un rond (astre, pièce), la carte n'a pas de médaillon et le dessin est un peu agrandi : liste `NOMEDAL` dans `sujets/subj_lib.js`, à compléter pour les nouvelles pages.
+
+Formes de pays et continents : toujours les vrais contours (Natural Earth, domaine public), générés par `cartes-geo.mjs` dans `sujets/subj_maps.js`, jamais dessinés à la main.
