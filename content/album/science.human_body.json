@@ -14,7 +14,7 @@
    "figure": "100 000",
    "unit": "battements par jour",
    "phrase": "Un muscle qui ne s'arrête jamais, avec quatre cavités.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "science.human_body.acc_coeur_muscle",
     "science.human_body.acc_coeur_pompe",
@@ -38,7 +38,7 @@
    "figure": "5 L",
    "unit": "de sang dans le corps",
    "phrase": "Globules rouges, globules blancs, plaquettes ; il n'est jamais bleu.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.human_body.acc_sang_bleu",
     "science.human_body.blood_red",
@@ -66,7 +66,7 @@
    "figure": "20 000",
    "unit": "respirations par jour",
    "phrase": "Les alvéoles font passer l'oxygène de l'air dans le sang.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.human_body.acc_expirer_co2",
     "science.human_body.acc_respirer_oxygene",
@@ -86,7 +86,7 @@
    "figure": "206",
    "unit": "os chez l'adulte",
    "phrase": "Le plus petit est dans l'oreille, le plus long dans la cuisse.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "science.human_body.acc_calcium_os",
     "science.human_body.bones",
@@ -113,7 +113,7 @@
    "figure": "600",
    "unit": "muscles environ",
    "phrase": "Le plus gros est le fessier ; les tendons les attachent aux os.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.human_body.muscles_count",
     "science.human_body.plus_gros_muscle",
@@ -130,7 +130,7 @@
    "figure": "86",
    "unit": "milliards de neurones",
    "phrase": "Nous utilisons tout notre cerveau, pas seulement 10 %.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "science.human_body.acc_bailler_contagieux",
     "science.human_body.brain_ten_percent",
@@ -155,7 +155,7 @@
    "figure": "5",
    "unit": "sens",
    "phrase": "La vue, l'ouïe, le toucher, le goût et l'odorat.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.human_body.acc_eternuer_yeux",
     "science.human_body.acc_oeil_pupille",
@@ -181,7 +181,7 @@
    "figure": "7 m",
    "unit": "d'intestin grêle",
    "phrase": "De la salive à l'intestin, le voyage d'un repas ; le foie peut repousser.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.human_body.appendice",
     "science.human_body.dt_estomac",
@@ -201,11 +201,11 @@
    "id": "science.human_body.les_hormones",
    "name": "Les hormones",
    "kind": "trait",
-   "subject": "glande thyroïde",
+   "subject": "flacon d'insuline et sucre",
    "figure": "1921",
    "unit": "découverte de l'insuline",
    "phrase": "Adrénaline, insuline, mélatonine : les messagers chimiques du corps.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.human_body.adrenaline",
     "science.human_body.glucagon",
@@ -224,7 +224,7 @@
    "figure": "2 m²",
    "unit": "de peau",
    "phrase": "Le plus grand organe du corps ; même les vrais jumeaux ont des empreintes différentes.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.human_body.acc_dents_lait",
     "science.human_body.acc_keratine",
@@ -245,11 +245,11 @@
    "id": "science.human_body.le_corps_en_equilibre",
    "name": "Le corps en équilibre",
    "kind": "trait",
-   "subject": "goutte d'eau et thermomètre",
+   "subject": "silhouette remplie d'eau à 60 %",
    "figure": "60 %",
    "unit": "d'eau dans le corps",
    "phrase": "Une température autour de 37 °C, des vitamines, neuf mois pour naître.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.human_body.acc_organes_roles",
     "science.human_body.body_temp",
@@ -262,5 +262,6 @@
     "science.human_body.vitamine_des_agrumes"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

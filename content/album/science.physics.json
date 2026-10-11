@@ -14,7 +14,7 @@
    "figure": "300 000",
    "unit": "km par seconde",
    "phrase": "Le prisme la décompose en couleurs ; le ciel est bleu à cause de l'air.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "science.physics.acc_ombre_midi",
     "science.physics.acc_vetement_noir",
@@ -41,7 +41,7 @@
    "figure": "340 m/s",
    "unit": "vitesse du son dans l'air",
    "phrase": "Il voyage plus vite dans l'eau que dans l'air, et pas du tout dans le vide.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.physics.acc_son_vide",
     "science.physics.decibel",
@@ -64,7 +64,7 @@
    "figure": "9,81",
    "unit": "m/s², la pesanteur sur Terre",
    "phrase": "Sans air, une plume et un marteau tombent à la même vitesse.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "science.physics.acc_gravite_chute",
     "science.physics.acc_plumes_plomb",
@@ -86,10 +86,10 @@
    "name": "Flotter et peser",
    "kind": "trait",
    "subject": "bateau et poussée d'Archimède",
-   "figure": "1 013",
-   "unit": "hectopascals au niveau de la mer",
+   "figure": "Eurêka",
+   "unit": "s'écrie Archimède dans son bain",
    "phrase": "Tout corps plongé dans un liquide est poussé vers le haut : Archimède l'avait compris.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.physics.acc_barometre",
     "science.physics.frottements",
@@ -110,7 +110,7 @@
    "figure": "−273,15 °C",
    "unit": "le zéro absolu",
    "phrase": "Rien ne peut être plus froid ; et la tour Eiffel grandit un peu l'été.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.physics.100_c_en_fahrenheit",
     "science.physics.absolute_zero",
@@ -136,7 +136,7 @@
    "figure": "4",
    "unit": "états : solide, liquide, gaz, plasma",
    "phrase": "La glace fond, l'eau bout, la neige carbonique se sublime.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.physics.acc_eau_gele",
     "science.physics.acc_eau_gonfle",
@@ -152,11 +152,11 @@
    "id": "science.physics.l_electricite",
    "name": "L'électricité",
    "kind": "trait",
-   "subject": "ampoule et circuit",
+   "subject": "prise française et ampoule",
    "figure": "230 V",
    "unit": "dans une prise française",
    "phrase": "Le courant passe dans les métaux, pas dans le plastique ni le bois sec.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.physics.acc_electricite_statique",
     "science.physics.amperemetre",
@@ -179,7 +179,7 @@
    "figure": "2",
    "unit": "pôles, nord et sud",
    "phrase": "La Terre est un grand aimant : c'est pour ça que la boussole marche.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.physics.acc_aimant_fer",
     "science.physics.boussole",
@@ -195,7 +195,7 @@
    "figure": "7",
    "unit": "unités de base du SI",
    "phrase": "Mètre, kilo, seconde ; newton, pascal, hertz.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "science.physics.candela",
     "science.physics.expert_farad",
@@ -217,7 +217,7 @@
    "figure": "0,1 nm",
    "unit": "la taille d'un atome",
    "phrase": "Un noyau de protons et de neutrons, entouré d'électrons.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "science.physics.charge_neutron",
     "science.physics.expert_higgs",
@@ -234,7 +234,7 @@
    "figure": "1896",
    "unit": "découverte par Becquerel",
    "phrase": "Marie Curie, deux fois prix Nobel ; la fission fait tourner les centrales.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "science.physics.decouverte_de_la_radioactivite",
     "science.physics.deux_nobel_de_marie_curie",
@@ -255,7 +255,7 @@
    "figure": "1905",
    "unit": "année de la relativité",
    "phrase": "Une équation qui relie la masse et l'énergie.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "science.physics.einstein_formula",
     "science.physics.einstein_nobel",
@@ -263,5 +263,6 @@
     "science.physics.relativite"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
