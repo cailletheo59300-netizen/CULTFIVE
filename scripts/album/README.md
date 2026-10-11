@@ -10,4 +10,6 @@ Planche : `python3 scripts/album/planche.py . history.antiquity history.middle_a
 
 Prochaines étapes : dessiner les sujets des autres pages, puis exporter des images pour l'app.
 
-Contrôle des textes : `scripts/album/controle-textes.mjs` vérifie qu'aucun texte n'est coupé ni trop petit sur les 525 cartes (mode d'emploi en tête du fichier). Si une carte est signalée, raccourcir son unité ou sa phrase.
+Contrôle des textes : `scripts/album/controle-textes.mjs` vérifie, avec les vraies polices, qu'aucun texte n'est coupé ni trop petit, qu'aucun chiffre ne touche l'image ou le texte et qu'aucun dessin ne touche l'en-tête, sur les 525 cartes (mode d'emploi en tête du fichier). Si une carte est signalée, raccourcir son unité ou sa phrase.
+
+Les dessins restent dans la fenêtre d'image : s'ils dépassent en haut ou en bas, la planche les réduit autour du centre (`keepIn`). Le bouton « Médaillon rond » de la planche permet de comparer avec et sans médaillon.

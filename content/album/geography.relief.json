@@ -200,7 +200,7 @@
    "subject": "Aconcagua",
    "figure": "6 961 m",
    "unit": "l'Aconcagua",
-   "phrase": "Le plus haut sommet hors d'Asie se dresse dans les Andes argentines.",
+   "phrase": "Le plus haut sommet hors d'Asie, dans les Andes.",
    "rarity": "common",
    "concepts": [
     "geography.relief.highest_argentina",
@@ -234,7 +234,7 @@
    "id": "geography.relief.les_volcans",
    "name": "Les volcans",
    "kind": "trait",
-   "subject": "Vésuve en éruption",
+   "subject": "Vésuve en éruption au-dessus de Pompéi",
    "figure": "79",
    "unit": "Pompéi ensevelie",
    "phrase": "Du Vésuve au mont Fuji, de l'Etna en Sicile au piton de la Fournaise à La Réunion.",
@@ -329,7 +329,7 @@
    "subject": "mer Morte et blocs de sel",
    "figure": "−430 m",
    "unit": "rive de la mer Morte",
-   "phrase": "Le Pacifique couvre à lui seul un tiers de la planète.",
+   "phrase": "Si salée qu'on y flotte sans effort ; le Pacifique couvre un tiers du globe.",
    "rarity": "rare",
    "concepts": [
     "geography.relief.acc_atlantique_ouest",
@@ -368,7 +368,7 @@
    "subject": "thermomètre gelé et manchot",
    "figure": "−89 °C",
    "unit": "record de froid, en Antarctique",
-   "phrase": "Quand c'est l'hiver chez nous, c'est l'été de l'autre côté de l'équateur.",
+   "phrase": "Au pôle Sud, un continent gelé ; au pôle Nord, la banquise.",
    "rarity": "rare",
    "concepts": [
     "geography.relief.acc_equateur",

@@ -32,7 +32,7 @@ SUBJECTS['science.space']={
    g+=H('M100,58 C106,58 112,60 116,62 C140,72 160,104 190,112 L190,160 L100,160 Z',id)+SC('M60,88 C70,90 78,96 82,104 M140,88 C130,90 122,96 118,104',INK,1.2,'opacity=".5"');
    g+=S('M10,126 C50,118 100,126 190,120 L190,160 L10,160 Z','#D9784A',1.8)+[[46,138,6],[140,142,4],[96,148,3]].map(([x,y,r])=>E(x,y,r,r*.4,0,'#B5522E',1)).join('');
    g+=R(112,124,20,8,SILVER,1.4)+[114,122,130].map(x=>C(x+2,134,3,INK,0)).join('')+L(126,124,126,116,1.2)+R(122,112,8,5,SILVER,1);
-   return inMedal(id+'ma',g)+C(100,84,63,'none',2);},
+   return inMedal(id+'ma',g)+medalRing();},
  6:id=>{ // Jupiter et sa Grande Tache rouge
    let p=C(100,84,46,PAPER,2.4);
    p+=clipCircle('j6',100,84,46,[[-34,8,GOLD],[-18,6,TONE],[-4,10,GOLD],[14,7,TONE],[28,9,GOLD]].map(([y,h,c])=>`<rect x="50" y="${84+y}" width="100" height="${h}" fill="${c}" opacity=".8"/>`).join('')
@@ -40,27 +40,31 @@ SUBJECTS['science.space']={
    p+=`<ellipse cx="118" cy="104" rx="12" ry="7" fill="${WAX}" stroke="${INK}" stroke-width="1.6"/>`+C(100,84,46,'none',2.4);
    return p+C(162,46,4,PAPER,1.4)+C(40,120,3,PAPER,1.2);},
  7:id=>{ // Saturne et ses anneaux
-   const ringBack=`<path d="M48,92 A56,15 -14 0 1 152,72" fill="none" stroke="${INK}" stroke-width="2.4"/>`;
-   let p=`<g transform="rotate(-14 100 84)"><path d="M44,84 A56,15 0 0 1 156,84" fill="none" stroke="${INK}" stroke-width="2.2"/><path d="M54,84 A46,11 0 0 1 146,84" fill="none" stroke="${INK}" stroke-width="1" opacity=".6"/></g>`;
-   p+=C(100,84,30,GOLD,2.4)+clipCircle('s7',100,84,30,[-16,-6,4,14].map(y=>`<rect x="66" y="${84+y}" width="70" height="4" fill="${TONE}" opacity=".35"/>`).join('')+H('M100,54 A30,30 0 0 1 100,114 Z','c7'));
-   p+=`<g transform="rotate(-14 100 84)"><path d="M44,84 A56,15 0 0 0 156,84" fill="none" stroke="${INK}" stroke-width="2.6"/><path d="M54,84 A46,11 0 0 0 146,84" fill="none" stroke="${INK}" stroke-width="1.2" opacity=".7"/><path d="M50,84 A51,13 0 0 0 151,84" fill="none" stroke="${GOLD}" stroke-width="3" opacity=".7"/></g>`;
-   return `<g transform="translate(100 84) scale(1.3) translate(-100 -84)">${p}</g>`+star4(34,32,5)+star4(170,134,4)+C(166,36,3,PAPER,1.2);},
+   const ring=(half)=>`<g transform="rotate(-16 100 84)">`+[[70,19,'#E9D2A0',7],[60,15,'#D9B877',4],[52,12.5,'#F2E3BF',3]].map(([rx,ry,c,w])=>`<path d="M${100-rx},84 A${rx},${ry} 0 0 ${half} ${100+rx},84" fill="none" stroke="${c}" stroke-width="${w}"/>`).join('')+`<path d="M30,84 A70,19 0 0 ${half} 170,84 M48,84 A52,12 0 0 ${half} 152,84" fill="none" stroke="${INK}" stroke-width="1.6"/>`+`</g>`;
+   let p=ring(1);
+   p+=C(100,84,34,'#E2B865',2.4)+clipCircle(id+'sb',100,84,34,[-22,-12,-4,6,16,26].map((y,i)=>`<rect x="60" y="${84+y}" width="80" height="${i%2?4:6}" fill="${i%2?'#B9853C':'#F3D9A0'}" opacity=".7"/>`).join('')+`<path d="M100,50 A34,34 0 0 1 100,118 A22,34 0 0 0 100,50 Z" fill="${INK}" opacity=".18"/>`);
+   p+=ring(0)+C(100,84,34,'none',2.4);
+   return p+C(160,40,6,'#E9A84E',1.4)+C(44,128,3.4,'#D5DADF',1.1)+C(150,132,2.6,'#D5DADF',1)+star4(36,36,5)+star4(172,96,4)+star4(70,24,3);},
  8:id=>{ // Uranus couchée
    let p=L(40,84,160,84,1.6,INK,.8)+`<g transform="rotate(82 100 84)"><ellipse cx="100" cy="84" rx="54" ry="13" fill="none" stroke="${INK}" stroke-width="1.6"/></g>`;
    p+=C(100,84,30,'#BFE3E8',2.4)+H('M100,54 A30,30 0 0 1 100,114 Z','c8');
    p+=`<g transform="rotate(82 100 84)"><path d="M46,84 A54,13 0 0 0 154,84" fill="none" stroke="${INK}" stroke-width="2.2"/></g>`;
    return p+S('M150,70 L160,84 L150,98','none',1.6)+C(40,40,8,'#7FB3D5',1.8)+star4(160,36,5)+star4(36,128,4);},
  9:id=>{ // Pluton et son cœur
-   let g=F('M70,58 C90,52 104,60 102,74 C100,86 84,96 70,108 C60,94 50,78 56,66 C58,60 64,58 70,58 Z','#F4E6CF')+F('M40,96 C60,104 80,112 104,108 C104,124 80,140 56,132 C44,124 38,110 40,96 Z','#8A5A34',.75)+F('M108,60 C124,66 132,84 128,100 C120,96 110,86 106,74 Z','#C9A57A',.6);
-   let p=C(92,84,48,'#D9BE96',2.4)+clipTo(id+'pl','M44,84 A48,48 0 1 1 140,84 A48,48 0 1 1 44,84 Z',g+`<path d="M44,84 A48,48 0 0 0 140,84 A48,48 0 0 1 44,84 Z" fill="${INK}" opacity=".12"/>`)+C(92,84,48,'none',2.4);
-   p+=S('M74,64 C80,58 88,60 90,68 C92,60 100,58 104,64 C108,74 96,86 88,96 C80,86 70,74 74,64 Z','none',1,'opacity=".5"');
+   const heart='M92,70 C84,58 66,60 66,76 C66,90 82,100 92,112 C102,100 118,90 118,76 C118,60 100,58 92,70 Z';
+   let g=F('M44,96 C60,104 80,116 92,118 C80,128 60,132 48,120 C44,112 42,104 44,96 Z','#8A5A34',.7)+F('M118,60 C130,66 138,84 134,100 C126,96 120,86 118,74 Z','#B98B5E',.6);
+   g+=S(heart,'#F8EEDC',1.2,'stroke-opacity=".45"')+`<path d="M44,84 A48,48 0 0 0 140,84 A48,48 0 0 1 44,84 Z" fill="${INK}" opacity=".12"/>`;
+   let p=C(92,84,48,'#D9BE96',2.4)+clipTo(id+'pl','M44,84 A48,48 0 1 1 140,84 A48,48 0 1 1 44,84 Z',g)+C(92,84,48,'none',2.4);
    return p+C(154,44,12,'#B8B0A4',1.8)+star4(36,36,4)+star4(160,120,3)+star4(30,130,3);},
- 10:id=>{ // Le système solaire
-   let p=C(10,84,36,GOLD,2.4)+H('M10,48 A36,36 0 0 1 10,120 Z','c10');
-   const orbits=[52,70,88,108,132,156,176,194];
-   p+=orbits.map(r=>`<path d="M${10+r*Math.cos(-.6)},${84+r*Math.sin(-.6)} A${r},${r} 0 0 1 ${10+r*Math.cos(.6)},${84+r*Math.sin(.6)}" fill="none" stroke="${INK}" stroke-width=".9" opacity=".55"/>`).join('');
-   const pl=[[52,.1,3,PAPER],[70,-.3,4,GOLD],[88,.25,4.5,'#7FB3D5'],[108,-.15,3.6,TONE],[132,.3,9,GOLD],[156,-.25,7.5,PAPER],[176,.15,5.5,'#BFE3E8'],[194,-.05,5,'#7FB3D5']];
-   return p+pl.map(([r,a,s,c])=>C((10+r*Math.cos(a)).toFixed(1),(84+r*Math.sin(a)).toFixed(1),s,c,1.6)).join('');},
+ 10:id=>{ // le système solaire
+   let p=`<defs><radialGradient id="${id}ss"><stop offset="0" stop-color="#FFE8A3"/><stop offset="1" stop-color="#E9A84E"/></radialGradient></defs>`;
+   const orb=[18,27,36,46,60,72,84,96];
+   p+=orb.map(r=>`<ellipse cx="100" cy="84" rx="${r*.62}" ry="${r*.26}" fill="none" stroke="${INK}" stroke-width=".8" opacity=".45"/>`).join('');
+   p+=C(100,84,9,`url(#${id}ss)`,1.6);
+   const pl=[[.2,2,'#9C8F80'],[2.2,3,'#E2B865'],[3.6,3.2,'#5B8FD0'],[5,2.6,'#C2603A'],[.8,6,'#D9B877'],[2.7,5,'#E2B865'],[4.3,4,'#9FD3DC'],[5.7,3.8,'#4C6FD6']];
+   p+=pl.map(([a,r,c],i)=>C((100+Math.cos(a)*orb[i]*.62).toFixed(1),(84+Math.sin(a)*orb[i]*.26).toFixed(1),r,c,1.1)).join('');
+   const sx=(100+Math.cos(2.7)*72*.62).toFixed(1),sy=(84+Math.sin(2.7)*72*.26).toFixed(1);
+   return p+`<ellipse cx="${sx}" cy="${sy}" rx="9" ry="2.4" fill="none" stroke="${INK}" stroke-width="1"/>`+star4(40,40,4)+star4(160,130,4)+star4(150,36,3);},
  11:id=>{ // Grande Ourse et étoile polaire
    const st=[[40,112],[60,104],[78,104],[94,96],[104,76],[134,72],[132,98]];
    let p=`<path d="M${st.map(s=>s.join(',')).join(' L')} L94,96" fill="none" stroke="${INK}" stroke-width="1.4" stroke-dasharray="3 3"/>`;
@@ -74,10 +78,12 @@ SUBJECTS['science.space']={
    p+=C(100,84,10,'#FFF4D0',1.4);
    let r=3;for(let i=0;i<40;i++){r=(r*9301+49297)%233280;const x=30+r/233280*140;r=(r*9301+49297)%233280;const y=24+r/233280*120;p+=C(x.toFixed(1),y.toFixed(1),(.5+(i%3)*.4).toFixed(1),'#FFF0C2',0);}
    return p+star4(156,36,5)+star4(40,128,4);},
- 13:id=>{ // Spoutnik
-   let p=[[-.5,180],[-.2,186],[.15,186],[.45,180]].map(([a,len])=>{const x=100-Math.cos(a)*90,y=84+Math.sin(a)*70;return L(100,84,x.toFixed(1),y.toFixed(1),1.6)}).join('');
-   p+=C(110,72,20,PAPER,2.4)+H('M110,52 A20,20 0 0 1 110,92 Z','c13')+S('M90,72 L130,72','none',1,'opacity=".5"')+C(102,64,4,'#fff',0);
-   return p+S('M136,48 c6,6 6,14 0,20 M144,42 c10,10 10,26 0,36','none',1.4,'opacity=".6"')+star4(160,124,5)+star4(40,40,4);},
+ 13:id=>{ // Spoutnik au-dessus de la Terre
+   let p=S('M14,160 C40,124 160,124 186,160 Z','#5B8FD0',2.2)+F('M50,142 C64,134 80,138 86,146 C76,150 60,150 50,142 Z',GREEN,.8)+F('M120,136 C134,132 146,138 150,146 C138,148 126,146 120,136 Z',GREEN,.8);
+   p+=SC('M24,140 C50,118 150,118 176,140',PAPER,3,'stroke-opacity=".6"');
+   p+=L(92,64,40,92,1.4)+L(94,70,48,106,1.4)+L(98,72,70,112,1.4)+L(96,58,44,70,1.4);
+   p+=C(104,60,16,SILVER,2.2)+`<path d="M92,52 A16,16 0 0 1 116,50" fill="none" stroke="#fff" stroke-width="2.4" opacity=".8"/>`+SC('M104,76 L104,80',INK,1);
+   return p+[10,18,26].map(r=>SC(`M${122+r*.4},${46-r*.6} A${r},${r} 0 0 1 ${124+r},${58}`,INK,1.4,'opacity=".55"')).join('')+star4(160,34,4)+star4(40,36,3);},
  14:id=>{ // Apollo 11 : le module lunaire
    let p=C(48,36,14,'#5B8FD0',1.8)+F('M40,28 C46,24 52,30 48,36 C44,40 38,36 40,28 Z',GREEN,.8)+F('M52,40 C58,38 60,44 56,46 Z',GREEN,.8)+`<path d="M34,36 A14,14 0 0 0 62,36 A14,10 0 0 1 34,36 Z" fill="${INK}" opacity=".35"/>`;
    p+=[[150,30],[166,52],[30,70],[136,18]].map(([x,y])=>star4(x,y,3,PAPER)).join('');
@@ -110,7 +116,7 @@ SUBJECTS['geography.relief']={
    g+=S('M96,84 C100,100 96,118 106,130 L120,130 C112,116 116,98 112,84 Z','#BFE0EC',1.6)+SC('M100,96 L110,96 M100,108 L112,108',INK,.9,'opacity=".5"');
    g+=S('M150,70 L152,52 L154,70 Z',INK,1)+L(40,128,152,52,1.2)+R(88,86,10,8,WAX,1.2)+L(93,86,93,82,1);
    g+=S('M10,128 C40,122 70,126 100,124 C130,122 160,126 190,124 L190,160 L10,160 Z',GREEN,1.6)+[30,44,58,150,164].map(x=>S(`M${x},134 L${x+5},120 L${x+10},134 Z`,'#3F6A2E',1)).join('');
-   return inMedal(id+'mb',g)+C(100,84,63,'none',2);},
+   return inMedal(id+'mb',g)+medalRing();},
  3:id=>{ // Silhouette des Alpes (toits d'Europe)
    let p=S('M8,138 L40,90 L56,104 L78,62 L96,84 L112,70 L134,98 L150,80 L192,138 Z',PAPER,2.4)+H('M78,62 L96,84 L112,70 L134,98 L150,80 L192,138 L78,138 Z','c3');
    p+=S('M78,62 L70,74 L80,72 L86,76 Z M150,80 L144,90 L154,88 Z M40,90 L34,100 L44,98 Z','#fff',1.4);
@@ -130,26 +136,26 @@ SUBJECTS['geography.relief']={
    let p=S('M20,138 L84,46 L104,70 L120,58 L180,138 Z',PAPER,2.4)+H('M84,46 L104,70 L120,58 L180,138 L84,138 Z','c6');
    p+=S('M84,46 L76,60 L86,58 L92,64 L98,62 Z','#fff',1.4);
    return p+S('M128,36 C138,28 146,32 152,38 C158,32 166,28 176,36 C166,36 158,42 152,46 C146,42 138,36 128,36 Z',INK,1.2);},
- 7:id=>{ // Vésuve en éruption
-   let p=S('M20,138 L80,74 L120,74 L180,138 Z',PAPER,2.4)+H('M100,74 L120,74 L180,138 L100,138 Z','c7');
-   p+=S('M80,74 C70,58 74,40 90,40 C88,26 108,22 114,34 C126,24 142,36 132,48 C144,54 136,70 120,74 Z','#EFE7DA',2);
-   p+=S('M90,74 C92,96 82,112 86,138 L94,138 C94,112 104,96 100,74 Z',WAX,1.6)+S('M108,74 C114,94 124,108 128,138','none',2.6,`stroke="${TONE}"`);
-   return p+[[70,34],[60,52],[146,30]].map(([x,y])=>C(x,y,2.4,WAX,1)).join('');},
+ 7:id=>{ // le Vésuve en éruption au-dessus de Pompéi
+   let p=S('M76,70 C62,60 64,42 78,40 C76,28 92,20 102,30 C110,18 132,24 130,38 C146,40 146,60 128,66 C120,72 92,74 76,70 Z','#B8B0A4',2)+H('M110,40 C120,40 128,46 128,56 C128,62 124,66 118,68 C116,58 114,48 110,40 Z',id);
+   p+=S('M24,136 L82,74 L118,74 L176,136 Z','#C9B8A0',2.4)+H('M100,74 L118,74 L176,136 L112,136 Z',id);
+   p+=S('M88,74 C90,92 80,106 82,124 L90,124 C92,106 100,92 98,74 Z','#E9852B',1.6)+S('M104,74 C110,92 122,104 126,122 L134,120 C128,102 116,90 112,74 Z',WAX,1.6);
+   p+=[[66,48,2.6],[146,30,2.4],[58,30,2]].map(([x,y,r])=>C(x,y,r,'#E9852B',1)).join('');
+   p+=S('M30,148 L170,148 L170,138 L30,138 Z',PAPER,1.8);
+   return p+[44,58,72,128,142,156].map(x=>R(x-3,124,6,14,PAPER,1.4)+R(x-5,121,10,3,PAPER,1.2)).join('')+S('M86,138 L86,128 L114,128 L114,138',PAPER,1.4)+S('M84,128 L100,120 L116,128 Z',PAPER,1.4);},
  8:id=>{ // les Andes et un lama
    let p=S('M0,96 L30,70 L54,84 L86,52 L112,76 L140,58 L170,82 L200,66 L200,160 L0,160 Z','#EFE4D2',2)+H('M0,110 L200,96 L200,160 L0,160 Z',id);
    p+=S('M0,118 L40,96 L70,110 L100,86 L130,104 L160,90 L200,112 L200,160 L0,160 Z',PAPER,2.2);
    p+=S('M0,140 L50,124 L90,136 L130,120 L170,134 L200,126 L200,160 L0,160 Z',GREEN,2,'opacity=".85"');
    p+=S('M86,52 L80,62 L90,60 Z M140,58 L134,68 L144,66 Z','#fff',1.2);
    p+='<g transform="translate(-40 -4)">'+S('M120,140 L120,126 C120,120 126,118 134,118 L148,118 L150,100 C150,94 156,92 158,96 L160,102 L164,102 L158,108 L156,122 L156,140 L151,140 L150,128 L130,128 L128,140 Z','#F2E6D0',1.8)+L(152,96,150,90,1.4)+C(155,100,1,INK,0)+S('M132,118 L148,118 L148,128 L132,128 Z',WAX,1,'opacity=".8"')+'</g>';
-   return inMedal(id+'an',F('M20,20 L180,20 L180,160 L20,160 Z','#DCEBF0')+p)+C(100,84,63,'none',2);},
+   return inMedal(id+'an',F('M20,20 L180,20 L180,160 L20,160 Z','#DCEBF0')+p)+medalRing();},
  9:id=>{ // gorges du Verdon
-   let g=F('M20,20 L180,20 L180,150 L20,150 Z','#DCEBF0')+S('M60,64 C80,54 96,62 108,56 C122,50 134,58 146,56 L146,110 L60,110 Z','#7FA86A',1.4)+SC('M70,70 C84,64 96,70 110,64',INK,1,'opacity=".4"');
-   g+=S('M20,20 L70,20 L74,52 L64,74 L76,98 L66,120 L82,150 L20,150 Z','#D8C7A6',2.2)+S('M180,20 L130,20 L126,50 L138,72 L124,96 L136,118 L120,150 L180,150 Z','#D8C7A6',2.2);
-   g+=[40,58,76,94,112,130].map(y=>SC(`M22,${y} C36,${y-3} 50,${y+2} 64,${y}`,INK,1,'opacity=".45"')+SC(`M178,${y} C164,${y-3} 150,${y+2} 136,${y}`,INK,1,'opacity=".45"')).join('');
-   g+=H('M130,20 L180,20 L180,150 L120,150 L136,118 L124,96 L138,72 L126,50 Z',id);
-   g+=S('M82,150 L66,120 L76,98 C92,104 110,104 124,96 L136,118 L120,150 Z','#3FB0A8',2);
-   g+=SC('M84,136 C94,130 106,132 116,126',PAPER,1.6,'stroke-opacity=".7"')+SC('M78,114 C92,116 108,114 126,108',PAPER,1.2,'stroke-opacity=".6"')+S('M96,120 L110,118 L108,121 L94,123 Z',WAX,1);
-   return inMedal(id+'vd',g)+C(100,84,63,'none',2);},
+   let g=F('M20,20 L180,20 L180,160 L20,160 Z','#DCEBF0')+S('M40,70 C64,60 92,66 110,60 C130,54 148,60 166,56 L166,100 L40,100 Z','#7FA86A',1.4);
+   g+=S('M66,160 L62,96 C92,100 118,98 142,94 L132,160 Z','#3FB0A8',2)+SC('M78,124 C92,118 108,120 122,114 M74,142 C90,136 106,140 124,132',PAPER,1.6,'stroke-opacity=".7"')+S('M94,128 L110,126 L108,129 L92,131 Z',WAX,1);
+   g+=S('M10,20 L56,20 L62,40 L54,58 L70,78 L60,98 L78,118 L74,160 L10,160 Z','#D8C7A6',2.2)+S('M190,20 L150,20 L144,44 L152,62 L136,84 L146,104 L128,124 L132,160 L190,160 Z','#C9B08C',2.2);
+   g+=[40,58,76,94,112,130,148].map(y=>SC(`M12,${y} C30,${y-3} 46,${y+2} 58,${y}`,INK,1,'opacity=".4"')+SC(`M188,${y} C170,${y-3} 156,${y+2} 144,${y}`,INK,1,'opacity=".4"')).join('')+H('M150,20 L190,20 L190,160 L132,160 L128,124 L146,104 L136,84 L152,62 L144,44 Z',id);
+   return inMedal(id+'vd',g)+medalRing();},
  10:id=>{ // le Nil, ses palmiers et une felouque
    let g=F('M20,20 L180,20 L180,160 L20,160 Z','#F1DDB0')+S('M120,58 L132,40 L144,58 Z','#E3C38E',1.4)+S('M138,58 L146,46 L154,58 Z','#E3C38E',1.2);
    g+=S('M96,58 C104,60 108,64 104,70 C96,80 80,86 82,100 C84,116 120,118 122,134 C124,146 112,154 108,162 L60,162 C74,150 86,142 82,132 C76,118 46,112 50,94 C54,80 80,72 88,64 C90,60 92,58 96,58 Z','#5FA8C8',2);
@@ -157,7 +163,7 @@ SUBJECTS['geography.relief']={
    const palm=(x,y)=>SC(`M${x},${y} C${x-1},${y-10} ${x+1},${y-18} ${x+3},${y-24}`,'#6B4A2F',2)+[[-14,-4],[-10,6],[12,-6],[14,4],[0,-12]].map(([a,b])=>SC(`M${x+3},${y-24} q${a*.5},${b*.5-6} ${a},${b}`,GREEN,2)).join('');
    g+=palm(40,92)+palm(52,80)+palm(130,108)+palm(146,120)+palm(116,84);
    g+=S('M92,116 C96,122 112,122 116,116 Z',WOOD,1.4)+L(104,118,104,92,1.2)+S('M104,92 L118,112 L104,112 Z',PAPER,1.4);
-   return inMedal(id+'nl',g)+C(100,84,63,'none',2);},
+   return inMedal(id+'nl',g)+medalRing();},
  11:id=>{ // la Loire et un château
    let g=F('M20,20 L180,20 L180,100 L20,100 Z','#EEF4F6');
    let c=S('M30,96 L30,74 L44,74 L44,96 Z',PAPER,1.8)+S('M28,74 L37,56 L46,74 Z','#5C6E80',1.6);
@@ -169,7 +175,7 @@ SUBJECTS['geography.relief']={
    g+=S('M10,98 C60,94 140,94 190,98 L190,160 L10,160 Z','#9FC6D3',2);
    g+=S('M50,118 C70,112 96,114 108,120 C92,126 64,126 50,118 Z','#E8D3A3',1.6)+S('M110,136 C126,130 146,132 156,138 C142,142 122,142 110,136 Z','#E8D3A3',1.6);
    g+=waves(30,106,1,1.2,.5)+SC('M40,140 c10,-4 20,4 30,0',INK,1.2,'opacity=".5"');
-   return inMedal(id+'lo',g)+C(100,84,63,'none',2);},
+   return inMedal(id+'lo',g)+medalRing();},
  12:id=>{ // mer Morte : on y flotte
    let g=F('M20,20 L180,20 L180,80 L20,80 Z','#F6EBD6')+C(138,44,9,GOLD,1.6)+S('M10,74 C50,66 80,76 110,70 C140,64 160,72 190,68 L190,86 L10,86 Z','#C9A57A',1.8);
    g+=S('M10,86 L190,86 L190,160 L10,160 Z','#7FBCC4',2)+waves(36,124,3,1.2,.45);
@@ -177,7 +183,7 @@ SUBJECTS['geography.relief']={
    g+=S('M142,104 L156,96 L160,100 L148,108 Z','#E8B48A',1.6);
    g+=rot(-10,86,90,R(70,76,34,24,PAPER,1.8)+L(87,76,87,100,1)+[82,86,90,94].map(y=>L(74,y,84,y,.9,INK,.5)+L(90,y,100,y,.9,INK,.5)).join(''));
    g+=SC('M66,100 L74,92 M100,100 L98,90',INK,2.2)+S('M10,140 C40,134 70,142 100,138 L100,160 L10,160 Z',PAPER,1.6);
-   return inMedal(id+'mm',g)+C(100,84,63,'none',2);},
+   return inMedal(id+'mm',g)+medalRing();},
  13:id=>{ // Salto Ángel
    let g=F('M20,20 L180,20 L180,160 L20,160 Z','#DCEBF0');
    g+=S('M10,46 C60,38 120,38 190,44 L190,120 L10,120 Z','#B07A55',2.4)+S('M10,46 C60,38 120,38 190,44 L190,54 C120,48 60,48 10,56 Z',GREEN,1.6);
@@ -185,7 +191,7 @@ SUBJECTS['geography.relief']={
    g+=S('M92,46 C94,70 92,100 96,124 L108,124 C104,100 106,70 104,46 Z','#E6F4FA',1.4)+[56,70,84,98,112].map(y=>L(96,y,102,y+8,1,'#4C8FB8')).join('');
    g+=[[100,126,12],[88,124,8],[112,124,8]].map(([x,y,r])=>C(x,y,r,'#FFFFFF',1.2)).join('');
    g+=S('M10,124 C40,118 70,128 100,124 C130,120 160,128 190,124 L190,160 L10,160 Z','#3F6A2E',1.8)+[30,46,62,138,154,170].map(x=>C(x,126,8,'#4F7A3A',1.2)).join('');
-   return inMedal(id+'sa',g)+C(100,84,63,'none',2);},
+   return inMedal(id+'sa',g)+medalRing();},
  14:id=>{ // thermomètre gelé et manchot
    let g=F('M20,20 L180,20 L180,130 L20,130 Z','#EAF2F8')+S('M10,128 C50,122 90,126 120,120 C150,116 170,122 190,120 L190,160 L10,160 Z','#FFFFFF',1.8);
    g+=R(58,30,16,92,PAPER,2,8)+C(66,124,13,'#4C8FD6',2)+R(63,62,6,58,'#4C8FD6',0);
@@ -193,5 +199,5 @@ SUBJECTS['geography.relief']={
    g+=S('M138,128 C120,126 116,96 124,76 C128,64 140,58 150,64 C158,70 160,92 158,110 C156,122 150,128 138,128 Z',INK,2)+S('M140,124 C128,120 126,98 132,84 C138,76 148,80 150,92 C152,108 150,122 140,124 Z',PAPER,1.2);
    g+=C(142,70,1.6,PAPER,0)+S('M150,70 L160,73 L150,76 Z','#F2A33A',1)+S('M130,128 l-6,2 l8,0 Z M146,128 l6,2 l-8,0 Z','#F2A33A',1);
    g+=star4(108,40,4,PAPER)+star4(40,56,3,PAPER)+star4(160,40,3,PAPER);
-   return inMedal(id+'pg',g)+C(100,84,63,'none',2);},
+   return inMedal(id+'pg',g)+medalRing();},
 };

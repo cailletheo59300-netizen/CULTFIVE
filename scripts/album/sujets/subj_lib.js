@@ -37,4 +37,7 @@ function timeline(marks){
 const WOOD='#8A5A34', BLUE='#2F4E8C', SILVER='#D5DADF', GREEN='#4F7A3A';
 const SC=(d,col,w=2.2,extra='')=>`<path d="${d}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${extra}/>`;
 /* paysage découpé dans le médaillon (pas de bord droit visible) */
-const inMedal=(cid,inner,r=63)=>clipTo(cid,`M${100-r},84 A${r},${r} 0 1 1 ${100+r},84 A${r},${r} 0 1 1 ${100-r},84 Z`,inner);
+/* NOMED : essai sans médaillon rond (comparaison) ; la scène prend alors toute la fenêtre */
+let NOMED=false;
+const inMedal=(cid,inner,r=63)=>clipTo(cid,NOMED?'M18,8 L182,8 Q192,8 192,18 L192,150 Q192,160 182,160 L18,160 Q8,160 8,150 L8,18 Q8,8 18,8 Z':`M${100-r},84 A${r},${r} 0 1 1 ${100+r},84 A${r},${r} 0 1 1 ${100-r},84 Z`,inner);
+const medalRing=()=>NOMED?'':C(100,84,63,'none',2);

@@ -1,8 +1,8 @@
 SUBJECTS['history.modern']={
  1:id=>{ // caravelle et rose des vents
    const cross=(x,y,s)=>`<path d="M${x-s*.3},${y-s} h${s*.6} v${s*.7} h${s*.7} v${s*.6} h-${s*.7} v${s} h-${s*.6} v-${s} h-${s*.7} v-${s*.6} h${s*.7} z" fill="${WAX}"/>`;
-   let p='';for(let i=0;i<8;i++){const a=i*Math.PI/4,r=i%2?40:62,c=Math.cos(a),s=Math.sin(a),px=-s*7,py=c*7;p+=`<path d="M100,78 L${100+c*r},${78+s*r} L${100+px},${78+py} Z" fill="${i%2?'#E9D7B4':GOLD}" opacity=".55" stroke="${INK}" stroke-width=".8"/>`;}
-   p+=C(100,78,44,'none',1,'stroke-dasharray="2 3"').replace('<circle','<circle stroke-dasharray="2 3"')+T(100,12,'N',9,INK);
+   let p='';for(let i=0;i<8;i++){const a=i*Math.PI/4,r=i%2?36:52,c=Math.cos(a),s=Math.sin(a),px=-s*7,py=c*7;p+=`<path d="M100,78 L${100+c*r},${78+s*r} L${100+px},${78+py} Z" fill="${i%2?'#E9D7B4':GOLD}" opacity=".55" stroke="${INK}" stroke-width=".8"/>`;}
+   p+=`<circle cx="100" cy="78" r="44" fill="none" stroke="${INK}" stroke-width="1" stroke-dasharray="2 3"/>`;
    p+=L(66,44,66,104,2.4)+L(98,26,98,104,2.6)+L(134,44,134,104,2.2)+L(40,100,20,88,2);
    p+=S('M54,50 C60,53 72,53 79,50 L81,84 C72,88 60,88 52,84 Z',PAPER,2)+cross(66,68,8);
    p+=S('M80,36 C90,40 106,40 116,36 L120,84 C106,90 90,90 76,84 Z',PAPER,2.2)+cross(98,60,11)+H('M108,38 L116,36 L120,84 L112,86 Z',id);
@@ -61,12 +61,13 @@ SUBJECTS['history.modern']={
    const eye=S('M84,78 C88,74 92,74 95,78 C92,80 88,80 84,78 Z',PAPER,1.2)+C(89.5,77.6,1.6,INK,0)+S('M82,72 C86,69 92,69 96,71','none',1.6);
    return p+eye+mirror(eye)+S('M100,80 L97,92 C99,94 101,94 103,92','none',1.4)+S('M90,99 C96,103 104,103 110,99','none',1.8)+C(84,92,3,TONE,0)+C(116,92,3,TONE,0);},
  8:id=>{ // lance de Don Quichotte et moulin
-   let p=S('M20,150 C60,128 120,124 180,132 L180,160 L20,160 Z','#E8D3A3',1.8);
-   p+=S('M116,128 L122,70 L146,70 L152,128 Z',PAPER,2.2)+S('M118,72 L134,52 L150,72 Z','#9C8F80',2)+S('M130,128 L130,114 C130,108 138,108 138,114 L138,128 Z',INK,1)+R(130,88,6,8,INK,1);
-   const sail='M0,0 L-6,-50 L6,-50 Z';
-   p+=`<g transform="translate(134 66) rotate(20)">`+[0,90,180,270].map(a=>`<g transform="rotate(${a})">${S('M-2,-6 L-8,-52 L8,-52 L2,-6 Z',PAPER,1.6)+L(-5,-20,5,-20,.8)+L(-6,-34,6,-34,.8)+L(-7,-46,7,-46,.8)}</g>`).join('')+C(0,0,4,WOOD,1.4)+`</g>`;
-   p+=L(30,142,120,60,3)+S('M118,62 L126,52 L122,64 Z',SILVER,1.4)+S('M108,72 L94,66 L100,76 Z',WAX,1.2);
-   return p+S('M26,140 C30,128 46,126 50,136 Z',SILVER,1.8);},
+   let p=S('M24,150 C60,130 120,126 170,132 C178,136 178,146 172,150 Z','#E8D3A3',1.8);
+   p+=S('M104,136 L112,76 L140,76 L148,136 Z',PAPER,2.2)+H('M130,76 L140,76 L148,136 L136,136 Z',id)+S('M108,78 L126,58 L144,78 Z','#9C8F80',2);
+   p+=S('M120,136 L120,120 C120,114 132,114 132,120 L132,136 Z',INK,1)+R(122,92,8,9,INK,1);
+   const blade=a=>`<g transform="translate(126 70) rotate(${a})">${L(0,0,0,-50,2)+S('M3,-12 L3,-50 L14,-50 L14,-12 Z',PAPER,1.4)+[-20,-30,-40].map(y=>L(3,y,14,y,.8)).join('')+L(8.5,-12,8.5,-50,.8)}</g>`;
+   p+=[25,115,205,295].map(blade).join('')+C(126,70,4.4,WOOD,1.4);
+   p+=L(30,140,84,96,3)+S('M84,96 L92,88 L88,99 Z',SILVER,1.4)+S('M76,104 L66,98 L70,108 Z',WAX,1.2)+S('M38,134 L44,130 L46,136 Z',WOOD,1);
+   return p;},
  9:id=>{ // lampe à huile et livre ouvert
    let p=openBook(100,96,62,40,BLUE);
    p+=[...Array(9)].map((_,i)=>{const a=(-160+i*20)*Math.PI/180;return L(118+Math.cos(a)*16,46+Math.sin(a)*16,118+Math.cos(a)*30,46+Math.sin(a)*30,1.6,GOLD)}).join('');
@@ -97,7 +98,7 @@ SUBJECTS['history.modern']={
    p+=tower(34)+tower(144)+tower(78)+tower(100);
    p+=S('M88,140 L88,116 C88,104 112,104 112,116 L112,140 Z',INK,1.6);
    p+=L(111,58,111,20,2)+`<path d="M111,22 C122,18 132,26 146,22 L146,42 C132,46 122,38 111,42 Z" fill="${PAPER}" stroke="${INK}" stroke-width="1.6"/>`+clipTo(id+'fl','M111,22 C122,18 132,26 146,22 L146,42 C132,46 122,38 111,42 Z',`<rect x="110" y="16" width="12" height="32" fill="${BLUE}"/><rect x="134" y="16" width="14" height="32" fill="${WAX}"/>`)+SC('M111,22 C122,18 132,26 146,22 L146,42 C132,46 122,38 111,42 Z',INK,1.6);
-   return p+[[52,40,10],[64,32,8],[44,30,6]].map(([x,y,r])=>C(x,y,r,'#E6E1D7',1.2)).join('')+L(20,140,180,140,2);},
+   return p+L(20,140,180,140,2);},
  14:id=>{ // bicorne
    let p=`<ellipse cx="100" cy="122" rx="62" ry="8" fill="${INK}" opacity=".12"/>`;
    p+=S('M28,106 C42,86 64,56 100,52 C136,56 158,86 172,106 C150,114 126,106 100,106 C74,106 50,114 28,106 Z',INK,2.4);
