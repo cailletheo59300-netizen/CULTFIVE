@@ -2,7 +2,7 @@
 const keycap=(x,y,w,h,t,size=14)=>R(x,y+4,w,h,'#9FA8B4',2,6)+R(x,y,w,h,'#F4F1EA',2,6)+R(x+5,y+4,w-10,h-12,'#fff',0,4)+T(x+w/2,y+h/2+size*.3,t,size,INK,'middle',700);
 SUBJECTS['tech.brands']={
  1:id=>{ // garage des débuts (légendaire) : porte ouverte, établi et premier ordinateur
-   let g=`<defs><linearGradient id="${id}sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3B98A"/><stop offset="1" stop-color="#FBE6C8"/></linearGradient><radialGradient id="${id}in" cx=".5" cy=".6" r=".7"><stop offset="0" stop-color="#FFF3C0"/><stop offset="1" stop-color="#F2C46A"/></radialGradient></defs><rect x="0" y="0" width="200" height="160" fill="url(#${id}sk)"/>`;
+   let g=`<defs><linearGradient id="${id}sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3B98A"/><stop offset="1" stop-color="#FBE6C8"/></linearGradient><radialGradient id="${id}in" cx=".5" cy=".6" r=".7"><stop offset="0" stop-color="#FFF3C0"/><stop offset="1" stop-color="#F2C46A"/></radialGradient></defs><rect x="20" y="10" width="160" height="150" fill="url(#${id}sk)"/>`;
    g+=C(160,40,12,'#F2B441',0)+S('M10,136 C60,130 140,130 190,136 L190,160 L10,160 Z','#9CB48A',1.4);
    g+=S('M150,136 C140,108 142,86 160,76 C178,86 180,110 170,136 Z','#5E8A4A',1.6)+L(160,136,160,146,3,WOOD);
    const house=S('M26,146 L26,78 L100,30 L174,78 L174,146 Z','#F4E9D6',2.6)+S('M14,84 L100,24 L186,84 L180,92 L100,36 L20,92 Z','#8A5A34',2.4)+R(150,40,12,22,'#B5302A',2,1)

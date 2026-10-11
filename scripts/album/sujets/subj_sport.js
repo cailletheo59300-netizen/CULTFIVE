@@ -186,7 +186,7 @@ SUBJECTS['sport.rules']={
    const net=[0,1,2,3,4,5,6].map(i=>{const x=70+i*10;return SC(`M${x},106 L${82+i*6},144`,INK,1.2)+SC(`M${x},106 L${70+(i+1)*10},144`,INK,1,'opacity=".5"');}).join('')+SC('M72,118 L128,118 M76,130 L124,130 M80,144 L120,144',INK,1);
    return p+net+C(144,40,9,'#E8833A',1.6)+SC('M135,40 L153,40 M144,31 C140,36 140,44 144,49',INK,1);},
  4:id=>{ // cage de but (légendaire)
-   let g=`<defs><linearGradient id="${id}sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E2B4A"/><stop offset="1" stop-color="#3E5A8A"/></linearGradient></defs><rect x="0" y="0" width="200" height="160" fill="url(#${id}sk)"/>`;
+   let g=`<defs><linearGradient id="${id}sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E2B4A"/><stop offset="1" stop-color="#3E5A8A"/></linearGradient></defs><rect x="20" y="10" width="160" height="150" fill="url(#${id}sk)"/>`;
    g+=[...Array(18)].map((_,i)=>C(40+(i*29)%120,30+(i*13)%40,1.6,['#C9443A','#F4F1EA','#F2D24A','#2F4E8C'][i%4],0)).join('')+S('M10,64 C60,56 140,56 190,64 L190,80 L10,80 Z','#26365A',1);
    g+=F('M10,80 L190,80 L190,160 L10,160 Z','#4E9A4A')+[0,1,2,3].map(i=>F(`M${10+i*48},80 L${34+i*48},80 L${34+i*48},160 L${10+i*48},160 Z`,'#5AA856')).join('');
    g+=SC('M20,140 L180,140 M44,140 L58,104 L142,104 L156,140','#fff',2,'opacity=".85"')+C(100,128,2.4,'#fff',0);

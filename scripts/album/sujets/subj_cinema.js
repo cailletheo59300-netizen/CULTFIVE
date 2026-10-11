@@ -4,7 +4,7 @@ const saber=(col)=>rot(-40,100,90,`<rect x="96" y="14" width="8" height="82" rx=
 const statuette=(x,y,s)=>`<g transform="translate(${x} ${y}) scale(${s})">${R(-14,58,28,8,'#3B3A3A',1.6)+R(-10,50,20,8,'#3B3A3A',1.4)+S('M-4,50 L-5,20 C-9,18 -10,10 -6,6 C-8,0 -4,-6 0,-6 C4,-6 8,0 6,6 C10,10 9,18 5,20 L4,50 Z',GOLD,1.8)+SC('M-5,22 C-2,26 2,26 5,22',INK,1,'opacity=".5"')}</g>`;
 SUBJECTS['cinema.actors']={
  1:id=>{ // signal lumineux dans le ciel de la ville
-   let g=`<defs><linearGradient id="${id}nt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141C36"/><stop offset="1" stop-color="#2E3F6E"/></linearGradient></defs><rect x="0" y="0" width="200" height="160" fill="url(#${id}nt)"/>`;
+   let g=`<defs><linearGradient id="${id}nt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141C36"/><stop offset="1" stop-color="#2E3F6E"/></linearGradient></defs><rect x="20" y="10" width="160" height="150" fill="url(#${id}nt)"/>`;
    g+=[[40,30],[64,22],[150,26],[168,58],[34,64],[88,30],[176,90]].map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="${.8+i%2*.5}" fill="#fff"/>`).join('');
    g+=S('M30,60 C40,48 60,46 72,52 C82,40 110,38 124,48 C140,42 162,48 168,60 C160,68 40,70 30,60 Z','#4A5A82',0,'opacity=".8"');
    g+=`<path d="M62,124 L100,52 L144,52 L70,126 Z" fill="#FFF3B0" opacity=".28"/>`+E(122,52,30,15,0,'#FFF3C8',1.6)+star5(122,52,11,'#1E2440',0);
@@ -183,7 +183,7 @@ SUBJECTS['cinema.films']={
    p+=`<path d="M60,76 C66,62 82,54 100,54" fill="none" stroke="#FFF3B0" stroke-width="3"/>`+`<path d="M62,96 C70,108 86,116 104,116 C120,116 132,110 140,100" fill="none" stroke="#F28C3A" stroke-width="1.4" opacity=".7" stroke-dasharray="3 3"/>`;
    return p+[[150,40],[40,46],[156,136]].map(([x,y])=>star4(x,y,3.4,'#F2D24A')).join('');},
  4:id=>{ // proue du Titanic au coucher du soleil (légendaire)
-   let g=`<defs><linearGradient id="${id}sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8A0A8"/><stop offset=".6" stop-color="#F6C88A"/><stop offset="1" stop-color="#FBE6B8"/></linearGradient></defs><rect x="0" y="0" width="200" height="160" fill="url(#${id}sk)"/>`;
+   let g=`<defs><linearGradient id="${id}sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8A0A8"/><stop offset=".6" stop-color="#F6C88A"/><stop offset="1" stop-color="#FBE6B8"/></linearGradient></defs><rect x="20" y="10" width="160" height="150" fill="url(#${id}sk)"/>`;
    g+=C(60,112,18,'#F28C3A',0)+`<rect x="0" y="112" width="200" height="60" fill="#3E6E92"/>`+[118,126,134,142].map((y,i)=>L(30+i*6,y,90-i*4,y,1.4,'#F6C88A',.7)).join('')+waves(16,124,4,1,.35);
    const hull='M10,110 L176,58 L160,128 L10,140 Z',clip='M37,84 A63,63 0 1 1 163,84 A63,63 0 1 1 37,84 Z M118,0 L200,0 L200,160 L118,160 Z';
    let h=S(hull,'#1E1E22',2.4)+clipTo(id+'hl',hull,S('M0,130 L170,118 L170,170 L0,170 Z','#B5302A',0)+SC('M0,129 L170,117',PAPER,1.6));
