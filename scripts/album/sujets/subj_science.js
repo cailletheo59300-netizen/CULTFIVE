@@ -217,12 +217,9 @@ SUBJECTS['science.physics']={
    p+=[0,120,240].map(a=>rot(a,100,80,S('M100,80 L84,50 A34,34 0 0 1 116,50 Z',INK,0))).join('')+C(100,80,9,'#F2D24A',0)+C(100,80,6,INK,0);
    p+=R(140,104,22,34,'#EAF4F8',2,4)+R(144,98,14,6,SILVER,1.4)+F('M142,120 L160,120 L160,134 C160,136 142,136 142,134 Z','#9CF0A0');
    return p+`<circle cx="151" cy="122" r="16" fill="#9CF0A0" opacity=".35"/>`;},
- 12:id=>{ // E = mc² et l'espace-temps courbé
-   let g='';const P=(u,v)=>{const k=.55+.45*v,x=100+(u-100)*k*1.25,y=98+v*50,d=Math.hypot((u-100)/60,(v-.55)/.4);return [x,y+26*Math.exp(-d*d*2.2)];};
-   for(let i=0;i<=8;i++){const v=i/8;let d='';for(let u=20;u<=180;u+=4){const [x,y]=P(u,v);d+=(u===20?'M':'L')+x.toFixed(1)+','+y.toFixed(1);}g+=SC(d,'#7E9CC8',1.2,`opacity="${(.35+.65*v).toFixed(2)}"`);}
-   for(let j=0;j<=16;j++){const u=20+j*10;let d='';for(let v=0;v<=1.001;v+=.05){const [x,y]=P(u,v);d+=(v===0?'M':'L')+x.toFixed(1)+','+y.toFixed(1);}g+=SC(d,'#7E9CC8',1.2,'opacity=".7"');}
-   let p=g+`<defs><radialGradient id="${id}pl" cx="40%" cy="35%"><stop offset="0" stop-color="#FFE8A3"/><stop offset="1" stop-color="#E9A84E"/></radialGradient></defs>`+C(100,136,13,`url(#${id}pl)`,2)+C(150,116,4,'#8FB8E8',1.2);
-   p+=SC('M34,104 C64,100 84,92 100,94 C118,96 140,104 168,96',GOLD,1.6,'stroke-dasharray="3 3"');
-   p+=R(40,22,120,58,'#2F4A3E',2.6,4)+R(36,78,128,6,WOOD,1.8)+T(100,62,'E = mc²',26,'#F4F1EA','middle',700);
-   return p+R(132,72,12,5,'#F4F1EA',.8,1)+SC('M52,34 C58,32 64,36 70,33 M130,32 C136,30 142,34 148,31',`#F4F1EA`,1,'opacity=".5"');},
+ 12:id=>{ // E = mc² au tableau noir
+   let p=R(26,34,148,90,WOOD,2.6,5)+R(33,41,134,76,'#2F4A3E',1.6,2)+`<rect x="33" y="41" width="134" height="76" fill="#fff" opacity=".04"/>`;
+   p+=T(100,92,'E = mc²',34,'#F4F1EA','middle',700)+SC('M48,104 C70,100 92,106 116,102',`#F4F1EA`,1.2,'opacity=".45"');
+   p+=R(40,124,120,7,WOOD,1.8)+R(124,118,16,6,'#F4F1EA',1,1)+R(56,118,22,7,'#C9B48C',1.2,1);
+   return p+L(50,34,40,20,1.6)+L(150,34,160,20,1.6)+C(100,20,3,INK,0)+SC('M40,20 L100,20 L160,20',INK,1.2);},
 };
