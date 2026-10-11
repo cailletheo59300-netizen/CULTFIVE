@@ -14,7 +14,7 @@
    "figure": "1889",
    "unit": "Exposition universelle",
    "phrase": "Elle devait être démontée après vingt ans ; elle est devenue le symbole de Paris.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "geography.monuments.acc_sacre_coeur",
     "geography.monuments.dt_arc_triomphe",
@@ -34,7 +34,7 @@
    "figure": "1979",
    "unit": "Mont-Saint-Michel au patrimoine mondial",
    "phrase": "Le Mont-Saint-Michel, Carcassonne, Chambord, le pont du Gard.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.monuments.acc_carcassonne",
     "geography.monuments.acc_mont_saint_michel",
@@ -63,7 +63,7 @@
    "figure": "4°",
    "unit": "d'inclinaison pour la tour de Pise",
    "phrase": "Big Ben, la tour de Pise, l'Alhambra, l'Acropole.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.monuments.acc_tour_penchee",
     "geography.monuments.alhambra",
@@ -117,7 +117,7 @@
    "figure": "1886",
    "unit": "inauguration à New York",
    "phrase": "Un cadeau de la France aux États-Unis, construite par Bartholdi et Eiffel.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.monuments.dt_liberte_arc",
     "geography.monuments.dt_mystere_statue_liberte",
@@ -131,11 +131,11 @@
    "id": "geography.monuments.les_pyramides_de_gizeh",
    "name": "Les pyramides de Gizeh",
    "kind": "trait",
-   "subject": "pyramides et Sphinx",
+   "subject": "pyramide et ses blocs",
    "figure": "2,3",
    "unit": "millions de blocs pour Khéops",
    "phrase": "La seule des sept merveilles du monde antique encore debout.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.monuments.dt_epingle_gizeh",
     "geography.monuments.dt_kheops_eiffel",
@@ -151,7 +151,7 @@
    "figure": "1988",
    "unit": "Tombouctou au patrimoine mondial",
    "phrase": "Tombouctou, Leptis Magna, l'île de Gorée, Robben Island.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.monuments.wd_abou_mena_q9278",
     "geography.monuments.wd_aksoum_q5832",
@@ -183,7 +183,7 @@
    "figure": "1812",
    "unit": "Petra redécouverte par Burckhardt",
    "phrase": "Petra, Persépolis, Palmyre, Baalbek : les cités des déserts.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.monuments.dt_burj_khalifa",
     "geography.monuments.dt_epingle_petra",
@@ -218,7 +218,7 @@
    "figure": "1653",
    "unit": "achèvement du Taj Mahal",
    "phrase": "Le Taj Mahal, les grottes d'Ajantâ, le rocher de Sigirîya.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.monuments.dt_epingle_taj_mahal",
     "geography.monuments.wd_ajanta_q184427",
@@ -254,7 +254,7 @@
    "figure": "1113",
    "unit": "début de la construction d'Angkor Vat",
    "phrase": "Angkor, la Grande Muraille, Kyoto, Bagan.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.monuments.angkor",
     "geography.monuments.dt_mystere_grande_muraille",
@@ -282,7 +282,7 @@
    "figure": "2 430 m",
    "unit": "altitude du Machu Picchu",
    "phrase": "Machu Picchu, Chichén Itzá, le Christ Rédempteur, les moaï de l'île de Pâques.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.monuments.acc_christ_redempteur",
     "geography.monuments.dt_christ_redempteur",
@@ -309,11 +309,11 @@
    "id": "geography.monuments.parcs_et_merveilles_naturelles",
    "name": "Parcs et merveilles naturelles",
    "kind": "carte",
-   "subject": "chutes et montagnes",
+   "subject": "geyser Old Faithful à Yellowstone",
    "figure": "1872",
    "unit": "Yellowstone, premier parc national",
    "phrase": "Yellowstone, le Serengeti, les Galápagos, la baie d'Along.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.monuments.wd_aire_de_conservation_du_ngoron_q1217726",
     "geography.monuments.wd_baie_d_along_q190128",
@@ -365,5 +365,6 @@
     "geography.monuments.wd_yakushima_q242176"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

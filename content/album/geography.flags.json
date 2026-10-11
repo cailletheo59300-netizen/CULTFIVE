@@ -10,11 +10,11 @@
    "id": "geography.flags.drapeaux_d_europe_de_l_ouest",
    "name": "Drapeaux d'Europe de l'Ouest",
    "kind": "trait",
-   "subject": "drapeau tricolore",
+   "subject": "drapeau carré de la Suisse",
    "figure": "2",
    "unit": "drapeaux carrés : Suisse et Vatican",
    "phrase": "Bleu-blanc-rouge, croix scandinaves, croix suisse.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.flags.andorra",
     "geography.flags.austria",
@@ -53,7 +53,7 @@
    "figure": "3",
    "unit": "bandes pour la plupart",
    "phrase": "Rouge, blanc, bleu : les couleurs slaves.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.flags.albania",
     "geography.flags.belarus",
@@ -86,7 +86,7 @@
    "figure": "3",
    "unit": "couleurs panafricaines",
    "phrase": "Vert, jaune, rouge : les couleurs de l'Éthiopie.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.flags.algeria",
     "geography.flags.angola",
@@ -151,11 +151,11 @@
    "id": "geography.flags.drapeaux_du_moyen_orient",
    "name": "Drapeaux du Moyen-Orient",
    "kind": "trait",
-   "subject": "croissant et étoile",
+   "subject": "drapeau aux couleurs panarabes",
    "figure": "4",
    "unit": "couleurs panarabes",
    "phrase": "Rouge, blanc, vert et noir, et le cèdre du Liban.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.flags.bahrain",
     "geography.flags.dt_twin_israel",
@@ -183,7 +183,7 @@
    "figure": "1870",
    "unit": "adoption du soleil rouge japonais",
    "phrase": "Le soleil levant, le yin et le yang, le dragon du Bhoutan.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.flags.afghanistan",
     "geography.flags.armenia",
@@ -229,7 +229,7 @@
    "figure": "1965",
    "unit": "naissance de la feuille d'érable",
    "phrase": "Des Caraïbes à la Patagonie, du Canada au Brésil.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.flags.antigua_and_barbuda",
     "geography.flags.argentina",
@@ -278,7 +278,7 @@
    "figure": "4",
    "unit": "étoiles pour la Nouvelle-Zélande",
    "phrase": "La Croix du Sud brille sur les drapeaux du Pacifique.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.flags.australia",
     "geography.flags.federated_states_of_micronesia",
@@ -301,11 +301,11 @@
    "id": "geography.flags.etoiles_et_symboles",
    "name": "Étoiles et symboles",
    "kind": "trait",
-   "subject": "étoiles d'un drapeau",
+   "subject": "drapeau américain",
    "figure": "50",
    "unit": "étoiles, une par État américain",
    "phrase": "13 bandes, 12 étoiles européennes, un drapeau à deux faces.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "geography.flags.dt_bandes_usa",
     "geography.flags.dt_etoiles_ue",
@@ -324,7 +324,7 @@
    "figure": "≈",
    "unit": "Tchad ou Roumanie ?",
    "phrase": "Indonésie et Monaco, Irlande et Côte d'Ivoire : saurais-tu les distinguer ?",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.flags.dt_twin_allemagne",
     "geography.flags.dt_twin_argentine",
@@ -356,5 +356,6 @@
     "geography.flags.romania_chad"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

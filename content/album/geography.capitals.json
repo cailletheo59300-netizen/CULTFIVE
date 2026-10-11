@@ -10,11 +10,11 @@
    "id": "geography.capitals.capitales_d_europe_de_l_ouest",
    "name": "Europe de l'Ouest",
    "kind": "trait",
-   "subject": "Big Ben et toits de Paris",
+   "subject": "aurores boréales sur Reykjavik",
    "figure": "64° N",
    "unit": "Reykjavik, la plus au nord",
    "phrase": "De Lisbonne à Helsinki, de Dublin à Athènes.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.capitals.austria",
     "geography.capitals.belgium",
@@ -63,7 +63,7 @@
    "figure": "4",
    "unit": "capitales au bord du Danube",
    "phrase": "Vienne, Bratislava, Budapest et Belgrade sont toutes sur le même fleuve.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.capitals.albania",
     "geography.capitals.belarus",
@@ -98,11 +98,11 @@
    "id": "geography.capitals.capitales_d_afrique_du_nord_et_du_moyen_orient",
    "name": "Afrique du Nord et Moyen-Orient",
    "kind": "trait",
-   "subject": "minaret et palmier",
+   "subject": "panneau indicateur « Tripoli » dans deux directions",
    "figure": "2",
    "unit": "Tripoli : en Libye et au Liban",
    "phrase": "Le Caire, Rabat, Riyad, Téhéran : des villes millénaires.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.capitals.bahrain",
     "geography.capitals.egypt",
@@ -126,11 +126,11 @@
    "id": "geography.capitals.capitales_d_afrique_de_l_ouest",
    "name": "Afrique de l'Ouest",
    "kind": "trait",
-   "subject": "baobab",
+   "subject": "basilique de Yamoussoukro",
    "figure": "1983",
    "unit": "Yamoussoukro devient capitale",
    "phrase": "Dakar, Bamako, Accra, Ouagadougou.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.capitals.benin",
     "geography.capitals.burkina_faso",
@@ -154,11 +154,11 @@
    "id": "geography.capitals.capitales_d_afrique_centrale_de_l_est_et_australe",
    "name": "Afrique centrale, de l'Est et australe",
    "kind": "trait",
-   "subject": "girafe et acacia",
+   "subject": "trois épingles sur l'Afrique du Sud",
    "figure": "3",
    "unit": "capitales pour l'Afrique du Sud",
    "phrase": "Nairobi, Kinshasa, Addis-Abeba, Antananarivo.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.capitals.angola",
     "geography.capitals.botswana",
@@ -195,11 +195,11 @@
    "id": "geography.capitals.capitales_d_asie",
    "name": "Asie",
    "kind": "trait",
-   "subject": "pagode",
+   "subject": "pagode dorée",
    "figure": "2005",
    "unit": "Naypyidaw remplace Rangoun",
    "phrase": "Pékin, Tokyo, New Delhi, Bangkok : la moitié de l'humanité.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.capitals.afghanistan",
     "geography.capitals.armenia",
@@ -243,7 +243,7 @@
    "figure": "1800",
    "unit": "Washington devient capitale",
    "phrase": "Ni New York ni Toronto : Washington et Ottawa.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "geography.capitals.belize",
     "geography.capitals.canada",
@@ -265,7 +265,7 @@
    "figure": "13",
    "unit": "pays dans les Caraïbes",
    "phrase": "La Havane, Port-au-Prince, Kingston et une multitude d'îles.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "geography.capitals.antigua_and_barbuda",
     "geography.capitals.barbados",
@@ -286,11 +286,11 @@
    "id": "geography.capitals.capitales_d_amerique_du_sud",
    "name": "Amérique du Sud",
    "kind": "trait",
-   "subject": "Christ sur sa montagne",
+   "subject": "Congrès national de Brasilia",
    "figure": "1960",
    "unit": "Brasilia remplace Rio",
    "phrase": "Buenos Aires, Lima, Bogota : de la Cordillère à l'Atlantique.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.capitals.argentina",
     "geography.capitals.bolivia",
@@ -312,11 +312,11 @@
    "id": "geography.capitals.capitales_d_oceanie",
    "name": "Océanie",
    "kind": "trait",
-   "subject": "kangourou et Pacifique",
+   "subject": "Parlement de Canberra et son mât",
    "figure": "1913",
    "unit": "fondation de Canberra",
    "phrase": "Ni Sydney ni Melbourne : Canberra, construite pour départager.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "geography.capitals.australia",
     "geography.capitals.dt_canberra",
@@ -343,7 +343,7 @@
    "figure": "195",
    "unit": "pays dans le monde",
    "phrase": "Capitale ou pas ? Saurais-tu les relier à leur pays ?",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "geography.capitals.dt_tri_capitale",
     "geography.capitals.pairs_set1",
@@ -351,5 +351,6 @@
     "geography.capitals.pairs_set3"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
