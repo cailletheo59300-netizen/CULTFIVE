@@ -41,3 +41,5 @@ const SC=(d,col,w=2.2,extra='')=>`<path d="${d}" fill="none" stroke="${col}" str
 let NOMED=false;
 const inMedal=(cid,inner,r=63)=>clipTo(cid,NOMED?'M18,8 L182,8 Q192,8 192,18 L192,150 Q192,160 182,160 L18,160 Q8,160 8,150 L8,18 Q8,8 18,8 Z':`M${100-r},84 A${r},${r} 0 1 1 ${100+r},84 A${r},${r} 0 1 1 ${100-r},84 Z`,inner);
 const medalRing=()=>NOMED?'':C(100,84,63,'none',2);
+/* cartes dont le dessin est déjà un rond (astre, pièce, globe) : pas de médaillon, dessin un peu plus grand */
+const NOMEDAL={'science.space':[1,2,3,4,6,7,8,9,12],'history.antiquity':[9],'history.contemporary':[15,20]};

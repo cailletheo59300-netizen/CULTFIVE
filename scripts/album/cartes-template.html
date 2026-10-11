@@ -232,11 +232,12 @@ function artSVG(page,n,rarity='common'){
     <radialGradient id="${id}glow${rarity}" cx="50%" cy="48%" r="60%"><stop offset="0" stop-color="${g0}"/><stop offset="1" stop-color="${g1}"/></radialGradient>
   </defs><rect width="200" height="160" fill="url(#${id}glow${rarity})"/>${extra}<rect width="200" height="160" fill="url(#${id}bg${rarity})"/></svg>`;
   const ring=rarity==='rare'?`<circle cx="100" cy="84" r="66.5" fill="none" stroke="#3E6EA6" stroke-width="2"/>`:rarity==='epic'?`<circle cx="100" cy="84" r="66.5" fill="none" stroke="#C8932E" stroke-width="2.4"/><circle cx="100" cy="84" r="69.5" fill="none" stroke="#C8932E" stroke-width=".8"/>`:'';
-  const med=NOMED?'':rarity==='legend'?`<circle cx="100" cy="84" r="62" fill="#FFF8E4" opacity=".55"/>`:medal(dom.medal)+ring;
+  const solo=(typeof NOMEDAL!=='undefined')&&(NOMEDAL[page.key]||[]).includes(n);
+  const med=NOMED||solo?'':rarity==='legend'?`<circle cx="100" cy="84" r="62" fill="#FFF8E4" opacity=".55"/>`:medal(dom.medal)+ring;
   return `${rarity==='legend'?`<div class="bgwrap">${bg}</div>`:bg}
   <svg class="subj" viewBox="0 0 200 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><defs>
     <pattern id="${id}h" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="${INK}" stroke-width="1" opacity=".55"/></pattern></defs>
-  ${med}<g transform="translate(0 2)">${(SUBJECTS[page.key]||{})[n]?SUBJECTS[page.key][n](id):''}</g></svg>`;
+  ${med}<g data-base="${solo?1.12:1}" transform="${solo?'translate(100 86) scale(1.12) translate(-100 -84)':'translate(0 2)'}">${(SUBJECTS[page.key]||{})[n]?SUBJECTS[page.key][n](id):''}</g></svg>`;
 }
 const SKINDECO={citrouille:'<svg class="deco" style="left:-3px;top:-6px;width:calc(var(--w)*.15)" viewBox="0 0 40 36"><path d="M20,8 C10,6 2,12 2,21 C2,30 10,34 20,33 C30,34 38,30 38,21 C38,12 30,6 20,8 Z" fill="#F76707" stroke="#2B1E14" stroke-width="1.6"/><path d="M20,9 C15,14 15,28 20,33 M20,9 C25,14 25,28 20,33 M11,10 C7,16 8,28 12,32 M29,10 C33,16 32,28 28,32" fill="none" stroke="#2B1E14" stroke-width="1"/><path d="M19,9 C19,5 21,2 24,1" fill="none" stroke="#2F7D55" stroke-width="2.4" stroke-linecap="round"/></svg><svg class="deco" style="right:-8px;bottom:-8px;width:calc(var(--w)*.18)" viewBox="0 0 48 24"><path d="M24,8 C22,4 20,4 19,7 C14,2 6,2 1,8 C6,8 9,11 10,15 C13,12 17,13 19,17 C21,14 22,14 24,18 C26,14 27,14 29,17 C31,13 35,12 38,15 C39,11 42,8 47,8 C42,2 34,2 29,7 C28,4 26,4 24,8 Z" fill="#1E1424" stroke="#FFD43B" stroke-width=".8"/></svg>'};
 const CORNER=`<svg class="corner CL" viewBox="0 0 40 40" aria-hidden="true"><path d="M4,36 C4,16 16,4 36,4" fill="none" stroke="#7A4A08" stroke-width="2"/><path d="M10,36 C10,22 22,10 36,10" fill="none" stroke="#FFF1C2" stroke-width="1.2"/><circle cx="8" cy="8" r="3.4" fill="#FFF1C2" stroke="#7A4A08" stroke-width="1.2"/></svg>`;
@@ -277,7 +278,7 @@ function keepIn(card){const g=card.querySelector('.subj > g');if(!g||g.dataset.k
   [...g.children].forEach(walk);
   const sc=Math.min(1,(84-5)/Math.max(1e-3,84-t),(156-84)/Math.max(1e-3,b-84));
   card.dataset.subjscale=sc.toFixed(2);
-  if(sc<.999)g.setAttribute('transform',`translate(100 86) scale(${sc.toFixed(3)}) translate(-100 -84)`);}
+  if(sc<.999)g.setAttribute('transform',`translate(100 86) scale(${(sc*(+g.dataset.base||1)).toFixed(3)}) translate(-100 -84)`);}
 function fit(root){root.querySelectorAll('.card').forEach(card=>{keepIn(card);const w=card.getBoundingClientRect().width||212;
   const over=e=>e.scrollHeight>e.clientHeight+1, wide=e=>e.scrollWidth>e.clientWidth+1;
   const hd=card.querySelector('.hd .ti');let h=.04;hd.style.fontSize='';hd.style.letterSpacing='';

@@ -6,8 +6,7 @@ const waves=(x,y,n,w=1.4,o=.55)=>[...Array(n)].map((_,i)=>S(`M${x},${y+i*7} q10,
 SUBJECTS['science.space']={
  1:id=>{ // le Soleil, ses éruptions et la Terre
    let p=`<defs><radialGradient id="${id}sun" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#FFE8A3"/><stop offset=".6" stop-color="#F2B441"/><stop offset="1" stop-color="#D9822B"/></radialGradient></defs>`;
-   p+=C(96,86,58,'#FFE9B0',0).replace('stroke-width="0"','stroke-width="0" opacity=".45"')+C(96,86,46,`url(#${id}sun)`,2.4);
-   p+=[[40,52],[70,30],[150,48]].map(([x,y])=>'').join('');
+   p+=`<defs><radialGradient id="${id}glo"><stop offset=".7" stop-color="#FFD66B" stop-opacity=".55"/><stop offset="1" stop-color="#FFD66B" stop-opacity="0"/></radialGradient></defs><circle cx="96" cy="86" r="66" fill="url(#${id}glo)"/>`+C(96,86,46,`url(#${id}sun)`,2.4);
    p+=SC('M54,64 C40,48 50,30 66,40',WAX,3)+SC('M134,58 C150,40 166,54 148,70',WAX,3)+SC('M136,118 C152,128 150,146 132,134',WAX,2.6)+SC('M58,116 C42,128 50,140 64,132',WAX,2.4);
    let r=5;for(let i=0;i<22;i++){r=(r*9301+49297)%233280;const a=r/233280*Math.PI*2;r=(r*9301+49297)%233280;const d=Math.sqrt(r/233280)*38;p+=C((96+Math.cos(a)*d).toFixed(1),(86+Math.sin(a)*d).toFixed(1),1.4,'#D9822B',0);}
    return p+C(170,124,4,'#5B8FD0',1.2)+SC('M166,132 L150,140',INK,.8,'opacity=".6"');},

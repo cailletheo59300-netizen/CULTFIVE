@@ -13,3 +13,5 @@ Prochaines étapes : dessiner les sujets des autres pages, puis exporter des ima
 Contrôle des textes : `scripts/album/controle-textes.mjs` vérifie, avec les vraies polices, qu'aucun texte n'est coupé ni trop petit, qu'aucun chiffre ne touche l'image ou le texte et qu'aucun dessin ne touche l'en-tête, sur les 525 cartes (mode d'emploi en tête du fichier). Si une carte est signalée, raccourcir son unité ou sa phrase.
 
 Les dessins restent dans la fenêtre d'image : s'ils dépassent en haut ou en bas, la planche les réduit autour du centre (`keepIn`). Le bouton « Médaillon rond » de la planche permet de comparer avec et sans médaillon.
+
+Quand le dessin est déjà un rond (astre, pièce), la carte n'a pas de médaillon et le dessin est un peu agrandi : liste `NOMEDAL` dans `sujets/subj_lib.js`, à compléter pour les nouvelles pages.
