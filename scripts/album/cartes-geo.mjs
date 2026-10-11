@@ -36,7 +36,7 @@ const out={};
   out.globeAtlantic=globe([40,-25],54);
   out.globePacific=globe([170,10],56);
   const proj=d3.geoOrthographic().rotate([40,-25]).scale(54).translate([100,84]);
-  out.globeAtlanticCities={Paris:pt(proj,[2.35,48.86]),'New York':pt(proj,[-74,40.7])};}
+  out.globeAtlanticCities=Object.fromEntries(Object.entries({Paris:[2.35,48.86],'New York':[-74,40.7],'Genève':[6.14,46.2],Londres:[-0.1,51.5],Rio:[-43.2,-22.9],Dakar:[-17.4,14.7],'Montréal':[-73.6,45.5],Lagos:[3.4,6.5],Mexico:[-99.1,19.4],'Buenos Aires':[-58.4,-34.6],Madrid:[-3.7,40.4]}).map(([k,v])=>[k,pt(proj,v)]));}
 { // Pangée : Afrique et Amérique du Sud rapprochées
   const land=feature(L110,L110.objects.land);const polys=land.features.flatMap(f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates);
   const pick=([lo,la])=>polys.find(p=>d3.geoContains({type:'Polygon',coordinates:p},[lo,la]));
