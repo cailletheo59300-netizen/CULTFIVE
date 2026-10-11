@@ -14,7 +14,7 @@
    "figure": "Tous",
    "unit": "les hommes sont mortels",
    "phrase": "Tous, certains, aucun : ce qu'on peut vraiment conclure.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "logic.reasoning.acc_syllogisme_aucun",
     "logic.reasoning.acc_syllogisme_certains",
@@ -48,7 +48,7 @@
    "figure": "⇒",
    "unit": "si, alors",
    "phrase": "Contraposée, réciproque, négation : les règles du raisonnement.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "logic.reasoning.au_moins_une_erreur",
     "logic.reasoning.beau_ou_pluie",
@@ -83,7 +83,7 @@
    "figure": "2",
    "unit": "gardiens : l'un ment, l'autre dit vrai",
    "phrase": "Une seule question pour trouver la bonne porte.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "logic.reasoning.acc_qui_ment",
     "logic.reasoning.deux_gardiens",
@@ -104,7 +104,7 @@
    "figure": "1",
    "unit": "seul père pour le père et le fils",
    "phrase": "Le fils de ma sœur, le mari de ma sœur, l'enfant de ma tante.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.reasoning.acc_age_frere",
     "logic.reasoning.acc_famille_cousin",
@@ -130,7 +130,7 @@
    "figure": "1",
    "unit": "intrus dans la liste",
    "phrase": "Formes, villes, instruments, jours : lequel n'a rien à faire là ?",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.reasoning.carre_losange",
     "logic.reasoning.carres_et_rectangles",
@@ -160,7 +160,7 @@
    "figure": "ROT",
    "unit": "décaler l'alphabet",
    "phrase": "Codes chiffrés, anagrammes, palindromes, mots à l'envers.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "logic.reasoning.anagramme_argent",
     "logic.reasoning.anagramme_de_chien",
@@ -184,7 +184,7 @@
    "figure": "4",
    "unit": "lundis ou 5 dans un mois",
    "phrase": "Si hier était lundi, avant-hier, dans 30 jours.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.reasoning.acc_anniv_dimanche",
     "logic.reasoning.acc_feu_tricolore",
@@ -217,7 +217,7 @@
    "figure": "2e",
    "unit": "si tu dépasses le deuxième",
    "phrase": "Qui est le plus grand ? Qui est devant dans la file ?",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "logic.reasoning.acc_course_dernier",
     "logic.reasoning.acc_ordre_taille_cinq",
@@ -246,7 +246,7 @@
    "figure": "1/6",
    "unit": "chance de faire un 6",
    "phrase": "Pile ou face, Monty Hall, somme de deux dés.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "logic.reasoning.acc_piece_lancee",
     "logic.reasoning.des_double",
@@ -272,7 +272,7 @@
    "figure": "4",
    "unit": "pour diviser par 4, regarder les deux derniers chiffres",
    "phrase": "Divisibilité, nombres premiers, pairs et impairs, nombre mystère.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.reasoning.bottle_cork",
     "logic.reasoning.chiffres_somme_9",
@@ -293,5 +293,6 @@
     "logic.reasoning.somme_impairs"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

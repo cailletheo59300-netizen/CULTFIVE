@@ -14,7 +14,7 @@
    "figure": "999",
    "unit": "la plus grande cible du jeu",
    "phrase": "Six plaques, quatre opérations : atteindre le nombre tiré.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "calc.mental.dt_compte_1",
     "calc.mental.dt_compte_10",
@@ -87,7 +87,7 @@
    "figure": "7 × 8",
    "unit": "= 56, la plus redoutée",
    "phrase": "Décomposer, regrouper, multiplier des voisins.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "calc.mental.decimal_mult",
     "calc.mental.div_144_12",
@@ -116,7 +116,7 @@
    "figure": "1 024",
    "unit": "2 puissance 10",
    "phrase": "Le carré d'un nombre qui finit par 5 se calcule de tête.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "calc.mental.carre_99",
     "calc.mental.cube_4",
@@ -144,7 +144,7 @@
    "figure": "× 11",
    "unit": "l'astuce des deux chiffres",
    "phrase": "Par 5, 11, 25, 125, 99 : des raccourcis qui font gagner du temps.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.mental.acc_double_45",
     "calc.mental.gen_diff_squares_10",
@@ -195,7 +195,7 @@
    "figure": "÷ 0,5",
    "unit": "c'est multiplier par 2",
    "phrase": "Diviser par 4, c'est prendre deux fois la moitié.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.mental.acc_moitie_150",
     "calc.mental.div_by_25",
@@ -222,7 +222,7 @@
    "figure": "1 000 − 367",
    "unit": "= 633",
    "phrase": "Passer par un nombre rond, respecter les priorités.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "calc.mental.add_chain",
     "calc.mental.estimation",
@@ -254,7 +254,7 @@
    "figure": "50 €",
    "unit": "un billet à rendre",
    "phrase": "Rendre la monnaie, partager la note, remplir le panier.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "calc.mental.acc_abonnement_mois",
     "calc.mental.acc_baguettes",
@@ -279,11 +279,11 @@
    "id": "calc.mental.le_temps_de_tous_les_jours",
    "name": "Le temps de tous les jours",
    "kind": "trait",
-   "subject": "horloge murale",
+   "subject": "montre-bracelet",
    "figure": "52",
    "unit": "semaines dans une année",
    "phrase": "Le prochain bus, la fin du film, l'âge en 2040.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.mental.acc_age_dans",
     "calc.mental.acc_anniversaire_bougies",
@@ -303,5 +303,6 @@
     "calc.mental.dt_age_chien"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

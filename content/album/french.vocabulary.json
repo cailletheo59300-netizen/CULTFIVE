@@ -14,7 +14,7 @@
    "figure": "Abscons",
    "unit": "difficile à comprendre",
    "phrase": "Affable, belliqueux, candide, idoine, misanthrope, néophyte.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.vocabulary.acrimonie",
     "french.vocabulary.affable",
@@ -55,7 +55,7 @@
    "figure": "Ubuesque",
    "unit": "absurde, comme le roi Ubu",
    "phrase": "Panacée, procrastiner, sibyllin, sinécure, truculent.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.vocabulary.eclectique",
     "french.vocabulary.ephemeride",
@@ -95,7 +95,7 @@
    "figure": "Oxymore",
    "unit": "une obscure clarté",
    "phrase": "Euphémisme, hyperbole, pléonasme, palindrome, onomatopée.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "french.vocabulary.anachronisme",
     "french.vocabulary.aphorisme",
@@ -124,7 +124,7 @@
    "figure": "Hippo",
    "unit": "« cheval » en grec",
    "phrase": "Hippodrome, ornithologue, pédiatre : le grec et le latin cachés dans nos mots.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "french.vocabulary.bimensuel",
     "french.vocabulary.bouquiniste",
@@ -153,7 +153,7 @@
    "figure": "MDR",
    "unit": "mort de rire",
    "phrase": "Verlan, sigles, anglicismes et faux amis.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.vocabulary.acc_asap",
     "french.vocabulary.acc_cad",
@@ -183,7 +183,7 @@
    "figure": "250 g",
    "unit": "pour une baguette",
    "phrase": "Baguette, croissant, camembert, ratatouille : des mots que le monde nous emprunte.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.vocabulary.acc_bonne_appetit",
     "french.vocabulary.dt_baguette",
@@ -198,5 +198,6 @@
     "french.vocabulary.dt_ratatouille"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

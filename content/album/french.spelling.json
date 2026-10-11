@@ -14,7 +14,7 @@
    "figure": "a / à",
    "unit": "verbe ou préposition ?",
    "phrase": "Ces ou ses, on ou ont, où ou ou : un petit test suffit.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.spelling.a_accent",
     "french.spelling.accord_leur",
@@ -46,7 +46,7 @@
    "figure": "COD",
    "unit": "placé avant : on accorde",
    "phrase": "Ils ont peint, s'est lavé les mains, se sont partagé.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.spelling.acquerir_pp",
     "french.spelling.chaussures_marron",
@@ -69,7 +69,7 @@
    "figure": "80",
    "unit": "quatre-vingts, avec un s",
    "phrase": "Vingt et cent prennent un s quand ils terminent le nombre ; mille jamais.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "french.spelling.acc_cent_vingt",
     "french.spelling.deux_cent_trois",
@@ -88,7 +88,7 @@
    "figure": "7",
    "unit": "noms en -ou qui prennent un x",
    "phrase": "Bijou, caillou, chou, genou, hibou, joujou, pou.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.spelling.des_landaus",
     "french.spelling.dt_tri_accord_pluriel",
@@ -108,7 +108,7 @@
    "figure": "25",
    "unit": "lettres dans anticonstitutionnellement",
    "phrase": "Rythme, dilemme, occurrence, accueil : les pièges de l'orthographe.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "french.spelling.a_part",
     "french.spelling.acc_oignon",
@@ -161,7 +161,7 @@
    "figure": "26",
    "unit": "lettres dans l'alphabet",
    "phrase": "Cédille, tréma, circonflexe, guillemets, point-virgule.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.spelling.acc_cedille",
     "french.spelling.acc_guillemets",
@@ -174,5 +174,6 @@
     "french.spelling.dt_voyelles"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

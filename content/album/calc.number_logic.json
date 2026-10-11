@@ -10,11 +10,11 @@
    "id": "calc.number_logic.pairs_impairs_et_premiers",
    "name": "Pairs, impairs et premiers",
    "kind": "trait",
-   "subject": "dés",
+   "subject": "crible des nombres premiers",
    "figure": "2",
    "unit": "seul nombre premier pair",
    "phrase": "Un nombre premier n'a que deux diviseurs : 1 et lui-même.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "calc.number_logic.acc_pair_suivant",
     "calc.number_logic.acc_plus_petit_premier",
@@ -36,7 +36,7 @@
    "figure": "60",
    "unit": "plus petit nombre divisible par 1, 2, 3, 4, 5 et 6",
    "phrase": "PGCD, PPCM, et l'astuce de la somme des chiffres pour diviser par 3.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.number_logic.acc_multiple_5",
     "calc.number_logic.divisible_by_3",
@@ -75,7 +75,7 @@
    "figure": "5 050",
    "unit": "somme de 1 à 100",
    "phrase": "Le petit Gauss trouve la réponse en quelques secondes.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "calc.number_logic.gen_gauss_264",
     "calc.number_logic.gen_gauss_265",
@@ -100,7 +100,7 @@
    "figure": "MMXXVI",
    "unit": "2026 en chiffres romains",
    "phrase": "I, V, X, L, C, D, M : les Romains comptaient sans zéro.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "calc.number_logic.acc_chiffre_romain",
     "calc.number_logic.gen_roman_108",
@@ -118,11 +118,11 @@
    "id": "calc.number_logic.l_angle_des_aiguilles",
    "name": "L'angle des aiguilles",
    "kind": "typo",
-   "subject": "horloge",
+   "subject": "horloge et angle des aiguilles",
    "figure": "30°",
    "unit": "entre deux heures",
    "phrase": "À 3 h, les aiguilles font un angle droit ; à 6 h, un angle plat.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.number_logic.clock_angle",
     "calc.number_logic.gen_clock_104",
@@ -145,7 +145,7 @@
    "figure": "45",
    "unit": "poignées de main entre 10 personnes",
    "phrase": "Piquets, pages, poignées de main : le piège est dans l'énoncé.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.number_logic.average",
     "calc.number_logic.average_trap",
@@ -174,7 +174,7 @@
    "figure": "− × − = +",
    "unit": "moins par moins donne plus",
    "phrase": "On ne divise jamais par zéro ; zéro fois tout donne zéro.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "calc.number_logic.acc_carre_9",
     "calc.number_logic.acc_dizaine",
@@ -189,5 +189,6 @@
     "calc.number_logic.zero_division"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

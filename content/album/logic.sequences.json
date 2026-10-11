@@ -14,7 +14,7 @@
    "figure": "+7",
    "unit": "à chaque pas",
    "phrase": "De 5 en 5, +2 −1, écarts qui grandissent.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.sequences.acc_suite_5",
     "logic.sequences.acc_suite_alternee",
@@ -92,11 +92,11 @@
    "id": "logic.sequences.les_suites_qui_multiplient",
    "name": "Les suites qui multiplient",
    "kind": "typo",
-   "subject": "grain de riz sur un échiquier",
+   "subject": "grains qui doublent",
    "figure": "×2",
    "unit": "à chaque pas",
    "phrase": "Doubler, tripler, diviser : la croissance qui s'emballe.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "logic.sequences.acc_suite_moitie",
     "logic.sequences.decroissante_moitie",
@@ -145,7 +145,7 @@
    "figure": "1, 4, 9, 16",
    "unit": "les carrés",
    "phrase": "Les carrés, les cubes, les nombres triangulaires.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "logic.sequences.acc_suite_carres_debut",
     "logic.sequences.carres_0_4",
@@ -176,7 +176,7 @@
    "figure": "1, 1, 2, 3, 5, 8",
    "unit": "la suite de Fibonacci",
    "phrase": "Chaque nombre est la somme des deux précédents ; la suite de Conway se lit à voix haute.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "logic.sequences.expert_look_and_say",
     "logic.sequences.fibo_1_3",
@@ -197,7 +197,7 @@
    "figure": "L, M, M, J…",
    "unit": "les jours de la semaine",
    "phrase": "Mois, jours, notes, planètes, initiales des nombres.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.sequences.acc_suite_jours",
     "logic.sequences.acc_suite_lettres",
@@ -221,5 +221,6 @@
     "logic.sequences.weekdays"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

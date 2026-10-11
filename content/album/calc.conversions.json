@@ -14,7 +14,7 @@
    "figure": "10 000 m²",
    "unit": "dans un hectare",
    "phrase": "Kilomètres, mètres, mille marin, hectares.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "calc.conversions.acc_km_m",
     "calc.conversions.acc_marathon_heures",
@@ -43,7 +43,7 @@
    "figure": "1 000 cm³",
    "unit": "dans un litre",
    "phrase": "Grammes, kilos, litres, centilitres, douzaines.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.conversions.acc_canette_ml",
     "calc.conversions.acc_kg_g",
@@ -77,7 +77,7 @@
    "figure": "86 400",
    "unit": "secondes dans une journée",
    "phrase": "Minutes, heures, jours ; et février tous les quatre ans.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "calc.conversions.acc_minutes_heure_demie",
     "calc.conversions.acc_minutes_jour",
@@ -116,7 +116,7 @@
    "figure": "3,6",
    "unit": "pour passer des km/h aux m/s",
    "phrase": "Distance = vitesse × temps.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "calc.conversions.gen_speed_235",
     "calc.conversions.gen_speed_236",
@@ -148,7 +148,7 @@
    "figure": "100",
    "unit": "centimes dans un euro",
    "phrase": "Comparer les prix, c'est ramener au kilo.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.conversions.acc_euro_centimes",
     "calc.conversions.gen_unit_price_252",
@@ -158,5 +158,6 @@
     "calc.conversions.gen_unit_price_256"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

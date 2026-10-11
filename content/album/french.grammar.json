@@ -14,7 +14,7 @@
    "figure": "3",
    "unit": "groupes de verbes",
    "phrase": "Passé simple, subjonctif, conditionnel : « je courrai », « qu'il fût ».",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "french.grammar.apres_que",
     "french.grammar.conditionnel_si",
@@ -60,7 +60,7 @@
    "figure": "être",
    "unit": "on accorde avec le sujet",
    "phrase": "Avec être, avec avoir, avec le COD placé avant ; et les verbes pronominaux.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "french.grammar.accord_avec_etre",
     "french.grammar.accord_avec_le_cod_place_avant",
@@ -86,7 +86,7 @@
    "figure": "-aux",
    "unit": "un cheval, des chevaux",
    "phrase": "Des vitraux, des chacals, des arcs-en-ciel ; une vengeresse.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.grammar.acc_feminin_acteur",
     "french.grammar.acc_pluriel_bijou",
@@ -114,7 +114,7 @@
    "figure": "7",
    "unit": "conjonctions de coordination",
    "phrase": "Mais, ou, et, donc, or, ni, car ; sujet, COD, COI.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.grammar.adverbe_bien",
     "french.grammar.adverbe_ment",
@@ -144,7 +144,7 @@
    "figure": "et / est",
    "unit": "remplacer par « était »",
    "phrase": "A ou à, ce ou se, et ou est, ou ou où, quoique ou quoi que.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.grammar.acc_homophone_a",
     "french.grammar.acc_homophone_ce",
@@ -156,5 +156,6 @@
     "french.grammar.quoi_que"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

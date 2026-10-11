@@ -14,7 +14,7 @@
    "figure": "≠",
    "unit": "le contraire",
    "phrase": "Optimiste et pessimiste, prolixe et laconique, licite et illicite.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "french.synonyms.acceptable",
     "french.synonyms.altruiste",
@@ -63,7 +63,7 @@
    "figure": "=",
    "unit": "le même sens",
    "phrase": "Acerbe, ardu, exigu, fallacieux, farfelu.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.synonyms.desuet",
     "french.synonyms.dithyrambique",
@@ -103,7 +103,7 @@
    "figure": "Laconique",
    "unit": "qui parle peu",
    "phrase": "Loquace, magnanime, pérenne, sempiternel, vétuste.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.synonyms.adjectives_pairs",
     "french.synonyms.expert_velleitaire",
@@ -127,5 +127,6 @@
     "french.synonyms.verbs_pairs"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

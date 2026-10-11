@@ -14,7 +14,7 @@
    "figure": "1460",
    "unit": "« Revenons à nos moutons »",
    "phrase": "Poser un lapin, donner sa langue au chat.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "french.expressions.acc_froid_canard",
     "french.expressions.acc_mouche_piquee",
@@ -56,7 +56,7 @@
    "figure": "Main",
    "unit": "verte, à la pâte, dans la main",
    "phrase": "Avoir le bras long, coûter les yeux de la tête, mettre les pieds dans le plat.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.expressions.acc_bras_long",
     "french.expressions.acc_casser_pieds",
@@ -86,7 +86,7 @@
    "figure": "Fromage",
    "unit": "en faire tout un",
    "phrase": "La cerise sur le gâteau, du pain sur la planche, tomber dans les pommes.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.expressions.acc_cerise_gateau",
     "french.expressions.acc_occuper_oignons",
@@ -113,7 +113,7 @@
    "figure": "Avril",
    "unit": "ne te découvre pas d'un fil",
    "phrase": "Il pleut des cordes, être dans la lune, tirer des plans sur la comète.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "french.expressions.acc_tomber_eau",
     "french.expressions.avoir_le_vent_en_poupe",
@@ -139,7 +139,7 @@
    "figure": "Rome",
    "unit": "ne s'est pas faite en un jour",
    "phrase": "L'habit ne fait pas le moine ; la nuit porte conseil.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "french.expressions.battre_le_fer",
     "french.expressions.dt_absents",
@@ -168,7 +168,7 @@
    "figure": "Midi",
    "unit": "à quatorze heures",
    "phrase": "Filer à l'anglaise, vendre la mèche, tenir la chandelle : d'où viennent-elles ?",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "french.expressions.acc_coup_de_foudre",
     "french.expressions.acc_langue_de_bois",
@@ -207,5 +207,6 @@
     "french.expressions.vessies_pour_des_lanternes"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

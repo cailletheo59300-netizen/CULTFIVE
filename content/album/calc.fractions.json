@@ -14,7 +14,7 @@
    "figure": "¾",
    "unit": "trois quarts",
    "phrase": "Parts de pizza, recettes, trois quarts d'heure.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "calc.fractions.acc_bouteille_litre",
     "calc.fractions.acc_demi_heure",
@@ -53,7 +53,7 @@
    "figure": "½ + ¼",
    "unit": "= ¾",
    "phrase": "Pour additionner, il faut le même dénominateur.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "calc.fractions.add_3_4_1_8",
     "calc.fractions.compare",
@@ -81,7 +81,7 @@
    "figure": "÷ ⅔",
    "unit": "c'est multiplier par 3/2",
    "phrase": "Diviser par une fraction, c'est multiplier par son inverse.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.fractions.deux_tiers_trois_quarts",
     "calc.fractions.divide",
@@ -110,7 +110,7 @@
    "figure": "⅛",
    "unit": "= 0,125",
    "phrase": "Fractions, nombres décimaux, pourcentages : trois écritures du même nombre.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "calc.fractions.decimal_0125",
     "calc.fractions.decimal_0_2",
@@ -139,5 +139,6 @@
     "calc.fractions.simplify"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

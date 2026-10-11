@@ -14,7 +14,7 @@
    "figure": "?",
    "unit": "qu'est-ce que c'est ?",
    "phrase": "« Plus elle sèche, plus elle est mouillée » : la serviette !",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "logic.puzzles.acc_devinette_age",
     "logic.puzzles.acc_devinette_carte",
@@ -69,7 +69,7 @@
    "figure": "6",
    "unit": "allumettes pour 4 triangles",
    "phrase": "Déplacer une seule allumette pour que l'égalité devienne juste.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "logic.puzzles.allumette_d_abord",
     "logic.puzzles.allumettes_grille_2",
@@ -82,11 +82,11 @@
    "id": "logic.puzzles.les_horloges",
    "name": "Les horloges",
    "kind": "trait",
-   "subject": "horloge",
+   "subject": "réveil aux aiguilles superposées",
    "figure": "11",
    "unit": "rencontres des aiguilles en 12 h",
    "phrase": "Angles, horloge qui retarde, horloge qui sonne.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "logic.puzzles.aiguilles_superposees",
     "logic.puzzles.angle_2h",
@@ -109,11 +109,11 @@
    "id": "logic.puzzles.ages_et_familles",
    "name": "Âges et familles",
    "kind": "trait",
-   "subject": "arbre généalogique",
+   "subject": "gâteau d'anniversaire",
    "figure": "2×",
    "unit": "l'âge double",
    "phrase": "Frères et sœurs, âge de la fille, âge double.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.puzzles.age_de_la_fille",
     "logic.puzzles.age_double",
@@ -128,11 +128,11 @@
    "id": "logic.puzzles.compter_les_formes",
    "name": "Compter les formes",
    "kind": "trait",
-   "subject": "triangles imbriqués",
+   "subject": "échiquier et carrés cachés",
    "figure": "64",
    "unit": "cases sur un échiquier",
    "phrase": "Carrés cachés : un échiquier en contient 204 en tout.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.puzzles.angle_droit_jour",
     "logic.puzzles.aretes_du_cube",
@@ -161,11 +161,11 @@
    "id": "logic.puzzles.compter_malin",
    "name": "Compter malin",
    "kind": "trait",
-   "subject": "doigts qui comptent",
-   "figure": "45",
-   "unit": "poignées de main à 10 personnes",
+   "subject": "tableau de matchs",
+   "figure": "15",
+   "unit": "matchs si 6 équipes se rencontrent toutes",
    "phrase": "Poignées de main, matchs d'un tournoi, pages.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.puzzles.acc_enigme_coupes",
     "logic.puzzles.araignees_scarabees",
@@ -214,7 +214,7 @@
    "figure": "2",
    "unit": "pesées : la fausse pièce sur 9",
    "phrase": "Pesées, seaux de 3 et 5 litres, robinets.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "logic.puzzles.acc_enigme_pilules",
     "logic.puzzles.bat_ball",
@@ -242,7 +242,7 @@
    "figure": "km/h",
    "unit": "distance divisée par le temps",
    "phrase": "Deux trains, un tunnel, un escargot dans un puits, un escalier.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "logic.puzzles.acc_enigme_glace_vitre",
     "logic.puzzles.cycliste_45km",
@@ -269,7 +269,7 @@
    "figure": "2027",
    "unit": "le 1er janvier tombera un vendredi",
    "phrase": "Mois de 31 jours, jours de la semaine, années bissextiles.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "logic.puzzles.dt_jeu_oie",
     "logic.puzzles.fev_mars_avril",
@@ -287,11 +287,12 @@
    "figure": "7",
    "unit": "traversées pour le loup, la chèvre et le chou",
    "phrase": "Le Sphinx, le passeur et son bateau : des énigmes vieilles de plusieurs siècles.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "logic.puzzles.loup_chevre_et_chou",
     "logic.puzzles.sphinx"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }

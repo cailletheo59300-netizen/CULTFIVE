@@ -14,7 +14,7 @@
    "figure": "25 %",
    "unit": "c'est un quart",
    "phrase": "10 %, 25 %, 50 % : des fractions déguisées.",
-   "rarity": null,
+   "rarity": "rare",
    "concepts": [
     "calc.percent.15_of_60",
     "calc.percent.20_of_150",
@@ -59,7 +59,7 @@
    "figure": "−30 %",
    "unit": "pendant les soldes",
    "phrase": "Deux remises ne s'additionnent pas ; « 3 pour 2 » fait −33 %.",
-   "rarity": null,
+   "rarity": "epic",
    "concepts": [
     "calc.percent.acc_cent_pour_cent",
     "calc.percent.acc_deuxieme_moitie",
@@ -98,7 +98,7 @@
    "figure": "20 %",
    "unit": "la TVA normale",
    "phrase": "Prix HT, prix TTC, taux d'évolution.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.percent.acc_hausse_10",
     "calc.percent.deux_hausses_10",
@@ -139,7 +139,7 @@
    "figure": "−1 %",
    "unit": "après +10 % puis −10 %",
    "phrase": "Monter puis descendre du même pourcentage ne ramène pas au départ.",
-   "rarity": null,
+   "rarity": "legend",
    "concepts": [
     "calc.percent.expert_up50_down50",
     "calc.percent.gen_successive_174",
@@ -162,7 +162,7 @@
    "figure": "50 %",
    "unit": "de chances à pile ou face",
    "phrase": "Batterie, notes sur 20, degré d'alcool, pourboire.",
-   "rarity": null,
+   "rarity": "common",
    "concepts": [
     "calc.percent.acc_batterie",
     "calc.percent.acc_note_sur_20",
@@ -174,5 +174,6 @@
     "calc.percent.tip"
    ]
   }
- ]
+ ],
+ "rarity_status": "proposée"
 }
