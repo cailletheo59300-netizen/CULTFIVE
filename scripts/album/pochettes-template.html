@@ -50,10 +50,6 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 @media (max-width:460px){.odds{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .rules{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.45}
 .rules li::before{content:"◆";color:var(--accent);font-size:10px;margin-right:8px;vertical-align:2px}
-.pity{display:flex;flex-direction:column;gap:6px}
-.pity .bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}
-.pity .bar i{display:block;height:100%;background:linear-gradient(90deg,#E9B949,#F6DA7E);border-radius:inherit;transition:width .5s}
-.pity small{font-size:13px;color:var(--soft);font-weight:700}
 .stars-row{display:flex;gap:10px;overflow-x:auto;padding:6px 2px 10px}
 .stars-row .card{--w:104px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
@@ -158,7 +154,7 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 <div class="wrap">
   <header>
     <h1>Pochettes de cartes</h1>
-    <p class="lede">Maquette de l'ouverture. Choisis une série, puis ouvre la pochette : glisse le doigt le long du pointillé pour la déchirer, et touche le paquet pour retourner les cartes une à une, la meilleure en dernier. Les tirages suivent les vraies chances proposées ; ta collection de départ est simulée.</p>
+    <p class="lede">Maquette de l'ouverture. Choisis une série, puis ouvre la pochette : glisse le doigt le long du pointillé pour la déchirer, et touche le paquet pour retourner les cartes une à une, la meilleure en dernier. Les tirages suivent les vraies chances proposées ; ta collection de départ est simulée. La légendaire garantie à la 40e pochette reste cachée au joueur (ici, une légendaire tombe au plus tard à la 14e ouverture).</p>
   </header>
   <section aria-label="Choisir une série">
     <h2>Choisir une série</h2>
@@ -252,7 +248,7 @@ function renderDetail(){const s=SERIES[sel],d=document.getElementById('detail');
    <div><h3>${s.label}</h3><p class="sub">${s.desc} ${s.pool.length} cartes possibles sur ${s.pages.length} page${s.pages.length>1?'s':''} · tu en as ${ownedIn(s)}.</p></div>
    <div><h2>Chances pour chaque carte</h2><div class="odds">${ORDER.map(r=>`<div class="odd"><b>${String(ODDS[r]).replace('.',',')} %</b><span><i class="gem g-${r}"></i>${RNAME[r]} · ${cnt(r)}</span></div>`).join('')}</div></div>
    <ul class="rules"><li>5 cartes par pochette, dont au moins une rare (ou mieux).</li><li>Les cartes sont révélées de la plus commune à la plus rare.</li><li>Doublon : il devient des neurones (commune ${DUP.common}, rare ${DUP.rare}, épique ${DUP.epic}, légendaire ${DUP.legend}).</li></ul>
-   <div class="pity"><small>Légendaire garantie dans ${PITY-pity} pochette${PITY-pity>1?'s':''} (compteur commun à toutes les séries)</small><div class="bar"><i style="width:${pity/PITY*100}%"></i></div></div>
+   <!-- garantie de légendaire à la 40e pochette : appliquée, mais jamais affichée au joueur (D-046) -->
    <div><h2>Légendaires de la série</h2><div class="stars-row" id="starsRow">${stars.map(({p,c})=>cardHTML(p,c,{})).join('')}</div></div>
    <div class="actions"><button class="btn" id="openBtn" ${tickets?'':'disabled'}>Ouvrir la pochette</button><span class="tix">${tickets} ticket${tickets>1?'s':''} de pochette</span><button class="btn ghost" id="refill">Recharger (maquette)</button></div></div>`;
   fit(document.getElementById('starsRow'));
