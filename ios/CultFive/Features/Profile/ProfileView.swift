@@ -22,7 +22,7 @@ struct ProfileView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     portrait
                     if app.isAnonymous { AccountNudge() }
-                    treeCard
+                    if !AppChannel.isTestBuild { treeCard }
                     Button { showRankPath = true } label: { coteCard }
                         .buttonStyle(.row)
                         .accessibilityHint("Ouvre ton parcours : les rangs et ce qu'il te reste à gagner")
@@ -110,12 +110,18 @@ struct ProfileView: View {
                     }
                 }
                 Spacer()
-                Button { showTree = true } label: {
+                if AppChannel.isTestBuild {
+                    // Builds de test : plus d'arbre ni de tenue, Léon est un simple dessin.
                     Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
                         .frame(width: 120)
+                } else {
+                    Button { showTree = true } label: {
+                        Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
+                            .frame(width: 120)
+                    }
+                    .buttonStyle(.row)
+                    .accessibilityHint("Ouvre l'arbre de Léon et sa tenue")
                 }
-                .buttonStyle(.row)
-                .accessibilityHint("Ouvre l'arbre de Léon et sa tenue")
             }
         }
     }

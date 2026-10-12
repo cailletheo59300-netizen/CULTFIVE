@@ -676,7 +676,7 @@ private struct RewardCard: View {
 
     private var subtitle: String {
         switch reward {
-        case .seeds: return "Pour l'arbre de Léon et les aides"
+        case .seeds: return AppChannel.isTestBuild ? "Pour les aides en partie" : "Pour l'arbre de Léon et les aides"
         case .tickets(let kind, _): return kind == .fiftyFifty ? "Retire deux mauvaises réponses, sans graines" : "Un indice ou une seconde chance, sans graines"
         case .joker: return "Sauve ta série un jour où tu oublies de jouer"
         case .item: return "Nouveau pour Léon : il le porte déjà !"

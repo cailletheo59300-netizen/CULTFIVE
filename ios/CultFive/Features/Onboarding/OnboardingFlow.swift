@@ -527,7 +527,9 @@ struct OnboardingFlow: View {
             Spacer()
             Leon(color: .brand, pose: .proud).frame(width: 150)
             Text("Garde ta progression").font(.cfDisplay)
-            Text("Avec un compte, tu gardes ta série, tes amis, tes coffres et l'arbre de Léon. Ça se fait en un geste, et tu peux aussi le faire plus tard.")
+            Text(AppChannel.isTestBuild
+                 ? "Avec un compte, tu gardes ta série, tes amis, tes coffres et ton album. Ça se fait en un geste, et tu peux aussi le faire plus tard."
+                 : "Avec un compte, tu gardes ta série, tes amis, tes coffres et l'arbre de Léon. Ça se fait en un geste, et tu peux aussi le faire plus tard.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 .fixedSize(horizontal: false, vertical: true)
             Spacer()
@@ -580,8 +582,14 @@ struct OnboardingFlow: View {
                 howLine(title: "Des coffres à gagner", detail: "Défis du jour et de la semaine, niveaux, trophées, podium de ligue.") {
                     ChestView(tier: .gold).frame(width: 46)
                 }
-                howLine(title: "L'arbre de Léon", detail: "Nourris-le de tes graines : il grandit, puis donne des fruits rares.") {
-                    LeonTreeView(stage: 3).frame(width: 46, height: 46)
+                if AppChannel.isTestBuild {
+                    howLine(title: "L'album", detail: "Collectionne 525 cartes de culture générale.") {
+                        AlbumEmblem().frame(width: 46, height: 46)
+                    }
+                } else {
+                    howLine(title: "L'arbre de Léon", detail: "Nourris-le de tes graines : il grandit, puis donne des fruits rares.") {
+                        LeonTreeView(stage: 3).frame(width: 46, height: 46)
+                    }
                 }
             }
             Spacer()

@@ -27,7 +27,8 @@ struct BagView: View {
                         section("À ouvrir")
                         chestsRow(chests)
                     }
-                    if let items = progression?.items {
+                    // Builds de test : la garde-robe de Léon n'existe plus (l'album la remplace).
+                    if !AppChannel.isTestBuild, let items = progression?.items {
                         let won = items.filter { $0.owned && $0.rarity != "tree" }.count
                         let total = items.filter { $0.rarity != "tree" }.count
                         if total > 0 {
@@ -63,7 +64,7 @@ struct BagView: View {
                 Text("\(seeds) \(seeds > 1 ? Brand.currencyPlural : Brand.currencySingular)")
                     .font(.system(size: 28, weight: .black, design: .rounded)).monospacedDigit()
                     .lineLimit(1).minimumScaleFactor(0.7)
-                Text("Pour l'arbre de Léon et les aides en partie")
+                Text(AppChannel.isTestBuild ? "Pour les aides en partie" : "Pour l'arbre de Léon et les aides en partie")
                     .font(.cfFootnote).foregroundStyle(.white.opacity(0.8))
             }
             Spacer(minLength: 0)
