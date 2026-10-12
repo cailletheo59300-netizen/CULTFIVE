@@ -84,15 +84,18 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 .leaf .lf{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .leaf .lf.back{transform:rotateY(180deg)}
 .leaf .lf::after{content:"";position:absolute;inset:0;border-radius:8px;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.25),transparent 30%);opacity:var(--sh,0);transition:opacity .85s}
-.ghost{position:absolute;top:14px;bottom:14px;z-index:5}
+.turnghost{position:absolute;top:14px;bottom:14px;z-index:5}
 /* couverture fermée */
 .cover{position:absolute;inset:0;z-index:20;border-radius:16px;transform-origin:left center;transition:transform 1.1s cubic-bezier(.5,.05,.3,1),opacity .4s 1s;cursor:pointer;
-  background:radial-gradient(90% 70% at 40% 30%,#3B3470,#1C1838 70%);box-shadow:0 30px 50px -20px rgba(0,0,0,.8),0 2px 0 rgba(255,255,255,.15) inset;display:flex;align-items:center;justify-content:center;border:0;color:#F6E7B8;padding:0}
-.cover::before{content:"";position:absolute;inset:12px;border-radius:12px;border:2px solid rgba(233,197,102,.55)}
-.cover .em{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-.cover .em svg{width:120px}
-.cover .em b{font:900 clamp(30px,5vw,48px) var(--display);letter-spacing:.5px}
-.cover .em span{font:800 14px var(--ui);opacity:.8}
+  background:linear-gradient(150deg,#8E72FF,#7B5CFF 35%,#3A1FB8);box-shadow:0 30px 50px -20px rgba(0,0,0,.8),0 2px 0 rgba(255,255,255,.25) inset,0 -6px 0 rgba(0,0,0,.18) inset;display:flex;align-items:center;justify-content:center;border:0;color:#fff;padding:0;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:14px;border-radius:14px;border:2px solid rgba(255,255,255,.35);pointer-events:none}
+.cover .pat{position:absolute;inset:0;opacity:.09;pointer-events:none}
+.cover .shine{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.18) 45%,transparent 60%);pointer-events:none}
+.cover .em{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.cover .em .wm{font:900 clamp(40px,7vw,64px) var(--ui);letter-spacing:-1px;line-height:1;text-shadow:0 4px 0 rgba(0,0,0,.18)}
+.cover .em .sub{font:900 13px var(--ui);letter-spacing:3px;text-transform:uppercase;opacity:.85}
+.cover .em .pill{background:#FFD23F;color:#1A1830;font:900 15px var(--ui);border-radius:99px;padding:8px 16px;box-shadow:0 4px 0 #C99A00}
+.cover .em .tap{font:800 13px var(--ui);opacity:.75}
 .cover.open{transform:rotateY(-170deg);opacity:0;pointer-events:none}
 
 /* ===== états et habillage des cartes ===== */
@@ -180,6 +183,14 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 .states .card{--w:150px}
 .states figcaption b{display:block;font:900 15px var(--ui)}
 .states figcaption span{font-size:13px;color:var(--soft)}
+.backs{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:16px}
+.bk{border:0;background:none;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--fg);text-align:center}
+.bk .bkv{width:112px;aspect-ratio:100/140;border-radius:10px;box-shadow:0 12px 20px -10px rgba(20,10,40,.6);transition:transform .25s}
+.bk .bkv svg{display:block;width:100%;height:100%}
+.bk:hover .bkv{transform:translateY(-4px) rotate(-2deg)}
+.bk[aria-pressed="true"] .bkv{box-shadow:0 0 0 3px var(--accent),0 12px 20px -10px rgba(20,10,40,.6)}
+.bk b{font:900 13px var(--ui)}.bk small{font:800 11px var(--ui);color:var(--soft)}
+.bk.lock .bkv{filter:grayscale(.6) brightness(.85)}.bk.lock b::after{content:" 🔒";font-size:11px}
 .measure{position:absolute;left:-9999px;top:0;visibility:hidden}
 @media (prefers-reduced-motion: reduce){.leaf,.cover{transition-duration:.15s}.card.prestige .art::after,.card.master .face::before{animation:none}}
 
@@ -193,11 +204,11 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
     <p class="lede">Maquette de l'album : un classeur qu'on ouvre, des onglets pour changer de domaine, des pages qui se tournent. Touche une carte pour l'habiller ; touche une case vide pour la fabriquer. Ta collection et tes objets sont simulés.</p>
   </header>
   <section class="desk" aria-label="Album">
-    <div class="deskbar"><span class="where" id="where">Album</span><span class="coin"><i></i><span id="neu"></span> neurones</span></div>
+    <div class="deskbar"><span class="where" id="where">Album</span><span style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn ghost" id="unlock" style="padding:7px 13px;font-size:12px">Tout débloquer (maquette)</button><span class="coin"><i></i><span id="neu"></span> neurones</span></span></div>
     <div class="binder" id="binder">
       <div class="tabs" id="tabs" role="tablist" aria-label="Domaines"></div>
       <div class="book" id="book"><div class="slotL" id="L"></div><div class="slotR" id="R"></div></div>
-      <button class="cover" id="cover" aria-label="Ouvrir l'album"><span class="em"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54" fill="none" stroke="#E9C566" stroke-width="2"/><circle cx="60" cy="60" r="44" fill="none" stroke="#E9C566" stroke-width=".8" stroke-dasharray="2 3"/><circle cx="60" cy="60" r="30" fill="#2A2350" stroke="#E9C566" stroke-width="2"/><text x="60" y="72" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="900" font-size="34" fill="#E9C566">B</text></svg><b>Mon album</b><span id="coverCount"></span><span style="font-size:13px">Touche pour ouvrir</span></span></button>
+      <button class="cover" id="cover" aria-label="Ouvrir l'album"><span id="coverIn"></span></button>
     </div>
     <div class="navrow"><button class="arrow" id="prev" aria-label="Page précédente">‹</button><div class="chips" id="chips"></div><button class="arrow" id="next" aria-label="Page suivante">›</button></div>
   </section>
@@ -207,6 +218,10 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
     <div class="states" id="states"></div>
   </section>
 
+  <section class="panel" aria-label="Dos des cartes">
+    <div><h3>Le dos des cartes</h3><p class="sub">Il se voit chaque fois qu'une carte est face cachée : à l'ouverture des pochettes et sur les cartes à retourner. On le choisit une fois, pour tout l'album. D'autres dos arriveront avec chaque saison.</p></div>
+    <div class="backs" id="backs"></div>
+  </section>
   <section class="panel" aria-label="Vitrine du profil">
     <div><h3>La vitrine du profil</h3><p class="sub">Trois cartes choisies, posées sur leur socle, avec ton titre de joueur. C'est ce que voient tes amis.</p></div>
     <div class="vitrine" id="vitrine"></div>
@@ -224,6 +239,7 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 const PAGES=/*DATA*/;
 const SUBJECTS={};
 /*CARDJS*/
+/*DOS*/
 /* ---------- données simulées ---------- */
 const hx=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)), mix=(a,b,t)=>{const A=hx(a),B=hx(b);return '#'+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,'0')).join('');};
 const CRAFT={common:50,rare:150,epic:400,legend:1200}, fmt=n=>n.toLocaleString('fr-FR');
@@ -238,7 +254,7 @@ EX('geography.monuments#1',{brill:true,view:'brill',prestige:true,master:true,ti
 EX('cinema.films#4',{prestige:true,socle:'marbre',title:'Première trouvaille'});
 EX('history.modern#13',{master:true,tarnish:true});
 EX('science.space#14',{brill:true,view:'brill',finish:'or',sticker:'s1',socle:'neon'});
-let neurones=1650, jetons=1;
+let neurones=1650, jetons=Infinity;
 const INV={/* objets possédés par le joueur (maquette) */
   skin:{citrouille:'Pass gratuit · saison 1',vitrail:null,nuit:null},
   finish:{or:'Événement d\'Halloween',givre:null,holo:null},
@@ -318,9 +334,9 @@ async function turnTo(nd,ni,dir){if(busy)return;busy=true;
   const leaf=document.createElement('div');leaf.className='leaf';
   let ghost=null;
   if(wide()){
-    if(dir>0){ghost=Object.assign(document.createElement('div'),{className:'ghost',innerHTML:oldL});ghost.style.cssText=box(lr);
+    if(dir>0){ghost=Object.assign(document.createElement('div'),{className:'turnghost',innerHTML:oldL});ghost.style.cssText=box(lr);
       leaf.style.cssText=box(rr)+';transform-origin:left center';leaf.innerHTML=`<div class="lf front">${oldR}</div><div class="lf back">${newL}</div>`;}
-    else{ghost=Object.assign(document.createElement('div'),{className:'ghost',innerHTML:oldR});ghost.style.cssText=box(rr);
+    else{ghost=Object.assign(document.createElement('div'),{className:'turnghost',innerHTML:oldR});ghost.style.cssText=box(rr);
       leaf.style.cssText=box(lr)+';transform-origin:right center';leaf.innerHTML=`<div class="lf front">${oldL}</div><div class="lf back">${newR}</div>`;}
   }else{leaf.style.cssText=box(lr)+`;transform-origin:${dir>0?'left':'right'} center`;leaf.innerHTML=`<div class="lf front">${oldL}</div><div class="lf back"><div class="sheet blank"></div></div>`;}
   if(ghost)book.appendChild(ghost);book.appendChild(leaf);fit(leaf);if(ghost)fit(ghost);
@@ -361,7 +377,7 @@ function openCard(k){const [pk,n]=k.split('#'),p=PAGES.find(x=>x.key===pk),c=p.c
     if(tabSel==='etat'){
       body=opt(st.view==='normal',false,'Normale','La carte telle qu\'on l\'a obtenue.','','data-v="normal"')
        +opt(st.view==='brill',!st.brill,'Brillante','Reflet arc-en-ciel qui bouge et paillettes.',st.brill?'Obtenue · premier doublon':'Au premier doublon, ou dans un coffret','data-v="brill"')
-       +opt(!!st.prestige&&st.showPrestige!==false,!st.prestige&&!jetons,'Prestige','Le dessin occupe toute la carte, fond holographique. Définitif sur cette carte.',st.prestige?'Jeton posé':`${jetons} jeton${jetons>1?'s':''} · pass gratuit 1, pass payant 3 par saison`,'data-v="prestige"')
+       +opt(!!st.prestige&&st.showPrestige!==false,!st.prestige&&!jetons,'Prestige','Le dessin occupe toute la carte, fond holographique. Définitif sur cette carte.',st.prestige?'Jeton posé':`${jetons===Infinity?'Jetons illimités (maquette)':jetons+' jeton'+(jetons>1?'s':'')} · pass gratuit 1, pass payant 3 par saison`,'data-v="prestige"')
        +opt(!!st.master&&st.showMaster!==false,!st.master,'Chef-d\'œuvre',st.tarnish?'Ternie : rejoue les questions de cette carte pour la raviver.':'Triple cadre doré, plaque gravée à ton nom, reflet qui passe.',st.master?(st.tarnish?'À raviver':'Maîtrisée'):'Maîtrise la carte au quiz (3 étoiles)','data-v="master"');
     }else if(tabSel==='title'){
       body=opt(!st.title,false,'Aucun','','','data-t=""')+Object.keys(INV.title).map(t=>{const own=!!INV.title[t];return opt(st.title===t,!own,t,'',own?INV.title[t]:LOCK.title[t],`data-t="${t}"`);}).join('');
@@ -399,6 +415,10 @@ function renderStates(){const [p,c]=getPC('geography.monuments#1');
   const S=[['Normale',{},'La carte qu\'on obtient.'],['Brillante',{view:'brill'},'Au premier doublon (ou dans un coffret).'],['Prestige',{prestige:true},'Un jeton du pass, posé sur la carte de ton choix.'],['Chef-d\'œuvre',{master:true},'En maîtrisant la carte au quiz. Elle se ternit si on oublie.']];
   document.getElementById('states').innerHTML=S.map(([t,o,d])=>`<figure>${dressed(p,c,o)}<figcaption><b>${t}</b><span>${d}</span></figcaption></figure>`).join('');
   fit(document.getElementById('states'));}
+const DOSOWN={classique:true,soleil:true};let dosSel='classique';
+function renderBacks(){const el=document.getElementById('backs');
+  el.innerHTML=Object.entries(DOS).map(([k,d])=>{const own=!!DOSOWN[k];return `<button class="bk ${own?'':'lock'}" data-k="${k}" aria-pressed="${dosSel===k}" ${own?'':'aria-disabled="true"'}><span class="bkv">${cardBack(k)}</span><b>${d.name}</b><small>${dosSel===k?'Utilisé':own?'Choisir':d.src}</small></button>`;}).join('');
+  el.querySelectorAll('.bk:not(.lock)').forEach(b=>b.onclick=()=>{dosSel=b.dataset.k;renderBacks();toast('Dos « '+DOS[dosSel].name+' » choisi');});}
 let VIT=['geography.monuments#1','science.space#14','cinema.films#4'];
 function renderVitrine(){const el=document.getElementById('vitrine');
   el.innerHTML=`<div class="who"><span class="av">T</span><div><b>${PLAYER}</b><span>Titre : Encyclopédiste en herbe</span></div></div>
@@ -418,12 +438,18 @@ function renderCatalog(){
    ['Autocollants','Badge en coin : Jour 1, Saison 1, 100 %…',Y,Y,'',Y,''],
    ['Socles','Bois, marbre, or, néon (dans la vitrine)','',Y,Y,'','Boutique en euros, prix fixe'],
    ['grp','Album et profil'],
+   ['Dos des cartes','Classique, Soleil, Nuit étoilée, 12 domaines, Feuille d\'or…','',Y,Y,Y,'Classique offert'],
    ['Couverture et onglets','L\'apparence du classeur',Y,Y,Y,'','Boutique en euros, prix fixe'],
    ['Vitrine','3 cartes mises en avant sur le profil',Y,'','','','Pour tout le monde'],
    ['Titre de joueur','Sous le pseudo : « Encyclopédiste »…',Y,Y,Y,'','Ligues, succès']];
   document.getElementById('catalog').innerHTML=`<table><thead><tr><th>Objet</th><th>Ce que c'est</th><th>En jouant</th><th>Pass gratuit</th><th>Pass payant</th><th>Événements</th><th>Autre</th></tr></thead><tbody>${rows.map(r=>r[0]==='grp'?`<tr class="grp"><td colspan="7">${r[1]}</td></tr>`:`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td class="c">${r[2]}</td><td class="c">${r[3]}</td><td class="c">${r[4]}</td><td class="c">${r[5]}</td><td>${r[6]}</td></tr>`).join('')}</tbody></table>`;}
 
-document.getElementById('coverCount').textContent=`${Object.keys(ST).length} cartes sur ${PAGES.reduce((a,p)=>a+p.cards.length,0)}`;
-render();renderStates();renderVitrine();renderCatalog();
+function renderCover(){let pat='';for(let r=0;r<14;r++)for(let k=0;k<12;k++)pat+=`<g>${tally(20+k*44+(r%2)*22,22+r*40,16,'#fff','#fff',2.2)}</g>`;
+  document.getElementById('coverIn').innerHTML=`<svg class="pat" viewBox="0 0 540 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${pat}</svg><span class="shine"></span>
+   <span class="em">${emblem(150)}<span class="wm">Brainlix</span><span class="sub">Mon album</span><span class="pill">${Object.keys(ST).length} / ${PAGES.reduce((a,p)=>a+p.cards.length,0)} cartes</span><span class="tap">Touche pour ouvrir</span></span>`;}
+renderCover();
+render();renderStates();renderVitrine();renderCatalog();renderBacks();
+document.getElementById('unlock').onclick=e=>{for(const t of Object.keys(LOCK))for(const k of Object.keys(LOCK[t]))INV[t][k]=INV[t][k]||'Débloqué (maquette)';Object.keys(DOS).forEach(k=>DOSOWN[k]=true);
+  e.currentTarget.textContent='Tout est débloqué';e.currentTarget.disabled=true;renderBacks();toast('Tous les objets sont débloqués pour tester');};
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{fit(document);});
 </script>

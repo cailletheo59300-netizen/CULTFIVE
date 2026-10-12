@@ -145,15 +145,14 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 .slotc{position:absolute;inset:0;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .5s}
 .slotc.inpack{transform:translateY(34%) scale(.94)}
 .flipper{position:absolute;inset:0;transform-style:preserve-3d;cursor:pointer}
-.cback{position:absolute;inset:0;border-radius:6%;overflow:hidden;
-  background:radial-gradient(80% 60% at 50% 45%,#2C3E7A 0%,#16204A 60%,#0D1330 100%);
-  box-shadow:0 0 0 4px #C8932E inset,0 0 0 7px #16204A inset,0 0 0 8px rgba(200,147,46,.6) inset,0 22px 36px -12px rgba(0,0,0,.75);transition:box-shadow .5s}
+.cback{position:absolute;inset:0;border-radius:6%;overflow:hidden;background:none;box-shadow:0 22px 36px -12px rgba(0,0,0,.75);transition:box-shadow .5s}
 .cback svg{position:absolute;inset:0;width:100%;height:100%}
 .cback{backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .cback.rev{transform:rotateY(180deg)}
-.cback.glow-rare{box-shadow:0 0 0 4px #C8932E inset,0 0 0 7px #16204A inset,0 0 28px 8px rgba(80,150,255,.8)}
-.cback.glow-epic{box-shadow:0 0 0 4px #C8932E inset,0 0 0 7px #16204A inset,0 0 32px 12px rgba(170,110,255,.9)}
-.cback.glow-legend{box-shadow:0 0 0 4px #C8932E inset,0 0 0 7px #16204A inset,0 0 44px 16px rgba(255,200,80,1)}
+.cback.glow-rare{box-shadow:0 0 28px 8px rgba(80,150,255,.8)}
+.cback.glow-epic{box-shadow:0 0 32px 12px rgba(170,110,255,.9)}
+.cback.glow-legend{box-shadow:0 0 44px 16px rgba(255,200,80,1)}
+.slotc:focus-visible{outline:none}.slotc:focus-visible .flipper{border-radius:6%;box-shadow:0 0 0 3px #fff}
 .slotc.quake{animation:quake .12s linear infinite}
 @keyframes quake{0%{translate:0 0}25%{translate:-2px 1px}50%{translate:2px -1px}75%{translate:-1px -2px}100%{translate:1px 2px}}
 .cfront{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
@@ -229,6 +228,7 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 const PAGES=/*DATA*/;
 const SUBJECTS={};
 /*CARDJS*/
+/*DOS*/
 /* ---------- séries ---------- */
 const ODDS={common:70,rare:22,epic:6.5,legend:1.5}, ORDER=['common','rare','epic','legend'], DUP={common:5,rare:15,epic:40,legend:100}, PITY=40;
 const FEAT={history:'history.contemporary',science:'science.space',geography:'geography.monuments',nature:'nature.animals',arts:'arts.painting',music:'music.classical',cinema:'cinema.films',sport:'sport.olympics',tech:'tech.inventions',calc:'calc.fractions',french:'french.grammar',logic:'logic.sequences'};
@@ -333,11 +333,7 @@ function buzz(p){try{navigator.vibrate&&navigator.vibrate(p);}catch(e){}}
 /* rotation pilotée : la face n'existe pas tant que la carte n'est pas de profil */
 function spin(el,from,to,ms,ease){return new Promise(res=>{el.style.transition='none';el.style.transform=`rotateY(${from}deg)`;el.getBoundingClientRect();
   el.style.transition=`transform ${reduce?80:ms}ms ${ease}`;el.style.transform=`rotateY(${to}deg)`;setTimeout(res,reduce?90:ms);});}
-const backSVG=`<svg viewBox="0 0 100 140" aria-hidden="true"><defs><radialGradient id="bkg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#E9C566" stop-opacity=".25"/><stop offset="1" stop-color="#E9C566" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="50" cy="70" r="46" fill="url(#bkg)"/><g fill="none" stroke="#C8932E" stroke-width=".55" opacity=".5">${[...Array(9)].map((_,i)=>`<circle cx="50" cy="70" r="${8+i*7}"/>`).join('')}</g>
-  ${[...Array(16)].map((_,i)=>{const a=i/16*Math.PI*2;return `<line x1="${(50+Math.cos(a)*24).toFixed(1)}" y1="${(70+Math.sin(a)*24).toFixed(1)}" x2="${(50+Math.cos(a)*30).toFixed(1)}" y2="${(70+Math.sin(a)*30).toFixed(1)}" stroke="#E9C566" stroke-width=".8" opacity=".7"/>`}).join('')}
-  <circle cx="50" cy="70" r="20" fill="#16204A" stroke="#E9C566" stroke-width="1.6"/><text x="50" y="78.5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="900" font-size="24" fill="#E9C566">B</text>
-  <text x="50" y="116" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="6.4" letter-spacing="2.6" fill="#E9C566">BRAINLIX</text></svg>`;
+const backSVG=cardBack('classique');
 const dustHTML=()=>`<div class="dust">${[...Array(18)].map((_,i)=>`<i style="left:${(i*53)%100}%;animation-duration:${7+(i%5)*2}s;animation-delay:${-(i*.9)}s"></i>`).join('')}</div>`;
 
 /* ---------- ouverture ---------- */

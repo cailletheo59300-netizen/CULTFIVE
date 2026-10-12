@@ -10,6 +10,7 @@ for f in sorted(os.listdir(f'{repo}/content/album')):
 t2=open(os.path.join(ICI,'cartes-template.html')).read()
 css=t2[t2.index('/* ===== la carte ===== */'):t2.index('</style>')]
 js=t2[t2.index('const RNAME'):t2.index('let cur=0')]
+dos=open(os.path.join(ICI,'dos.js')).read()
 subj=''.join(open(os.path.join(SUJ,f)).read()+'\n' for f in sorted(os.listdir(SUJ)) if f.endswith('.js'))
-out=open(os.path.join(ICI,'album-template.html')).read().replace('/*SUBJ*/','').replace('/*CARDCSS*/',css).replace('/*CARDJS*/',js.replace('/*SUBJ*/',subj)).replace('/*DATA*/',json.dumps(data,ensure_ascii=False))
+out=open(os.path.join(ICI,'album-template.html')).read().replace('/*SUBJ*/','').replace('/*CARDCSS*/',css).replace('/*CARDJS*/',js.replace('/*SUBJ*/',subj)).replace('/*DOS*/',dos).replace('/*DATA*/',json.dumps(data,ensure_ascii=False))
 open(sys.argv[2] if len(sys.argv)>2 else 'album.html','w').write(out); print(len(out)//1024,'Ko')
