@@ -1,246 +1,246 @@
 <title>Pass de saison</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800;9..144,900&family=Big+Shoulders+Display:wght@800;900&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-/* Pass de saison « Monstres et légendes » : une frise nocturne de 30 paliers, piste gratuite en haut, piste payante en bas. La scène reste sombre dans les deux thèmes ; la page autour suit le thème. */
+/* Pass de saison dans l'identité Brainlix (direction « Pop ») : fond lavande, cartes blanches très arrondies à ombre violette,
+   dégradé violet pour les moments forts, jaune soleil pour ce qui se récupère, icônes 3D comme dans l'app. */
 :root{
-  --bg:#ECE9F2;--fg:#1A1830;--soft:#5E5A78;--line:#D8D3E4;--accent:#6A4CFF;--panel:#F7F5FB;
-  --night:#14102A;--night2:#2A1F55;--pump:#F76707;--sun:#FFD23F;--free:#3DDC97;--paid:#FF8FB1;
-  --display:'Fraunces',Georgia,serif;--figure:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;--ui:'Nunito',system-ui,-apple-system,sans-serif;
+  --paper:#F6F5FB;--raised:#FFFFFF;--ink:#1A1830;--soft:#6E6B85;--hair:#E9E7F2;--brand:#6A4CFF;--brand2:#3A1FB8;--pop1:#7B5CFF;
+  --sun:#FFD23F;--sunInk:#1A1830;--correct:#12B76A;--paidbg:#F1ECFF;--freebg:#FFFFFF;--track:#E4E0F3;
+  --shadow:0 10px 30px -14px rgba(74,48,190,.35);--ui:'Nunito','SF Pro Rounded',ui-rounded,system-ui,-apple-system,sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14121B;--fg:#ECEAF5;--soft:#A3A0B8;--line:#2B2838;--accent:#9C87FF;--panel:#1C1A26;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#14121B;--fg:#ECEAF5;--soft:#A3A0B8;--line:#2B2838;--accent:#9C87FF;--panel:#1C1A26;color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0E0D16;--raised:#1C1A2A;--ink:#F4F3FA;--soft:#A3A0B8;--hair:#2C2940;--brand:#8469FF;--paidbg:#241F3D;--freebg:#1C1A2A;--track:#2C2940;--shadow:0 10px 30px -14px rgba(0,0,0,.7);color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0E0D16;--raised:#1C1A2A;--ink:#F4F3FA;--soft:#A3A0B8;--hair:#2C2940;--brand:#8469FF;--paidbg:#241F3D;--freebg:#1C1A2A;--track:#2C2940;--shadow:0 10px 30px -14px rgba(0,0,0,.7);color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--ui);padding-block:28px 64px;padding-inline:16px;display:flex;justify-content:center}
-.wrap{width:100%;max-width:1080px;display:flex;flex-direction:column;gap:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);padding-block:24px 64px;padding-inline:16px;display:flex;justify-content:center}
+.wrap{width:100%;max-width:1080px;display:flex;flex-direction:column;gap:20px}
 .wrap>*{flex:none}
-h1{font-family:var(--display);font-weight:900;font-size:clamp(30px,6vw,44px);margin:0;letter-spacing:-.5px}
-.lede{margin:8px 0 0;color:var(--soft);font-size:15px;line-height:1.55;max-width:66ch}
-h2{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);margin:0 0 12px;font-weight:900}
+h1{font-weight:900;font-size:clamp(28px,6vw,38px);margin:0;letter-spacing:-.5px}
+.lede{margin:6px 0 0;color:var(--soft);font-size:15px;line-height:1.5;font-weight:700;max-width:66ch}
+.cap{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;font-weight:900;color:var(--brand);margin:0}
 button{font-family:var(--ui)}
-button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.btn{border:0;border-radius:99px;padding:11px 18px;font:900 14px var(--ui);cursor:pointer;background:var(--accent);color:#fff;box-shadow:0 6px 16px -6px var(--accent)}
-.btn.sun{background:var(--sun);color:#1A1830;box-shadow:0 4px 0 #C99A00}
-.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor;box-shadow:none;opacity:.9}
-.btn:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.btn{border:0;border-radius:99px;padding:12px 20px;font:900 15px var(--ui);cursor:pointer;background:var(--brand);color:#fff;box-shadow:0 4px 0 var(--brand2);transition:transform .12s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--brand2)}
+.btn.sun{background:var(--sun);color:var(--sunInk);box-shadow:0 4px 0 #C99A00}
+.btn.light{background:rgba(255,255,255,.16);color:#fff;box-shadow:none}
+.btn.soft{background:var(--paidbg);color:var(--brand);box-shadow:none}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.card{background:var(--raised);border-radius:28px;box-shadow:var(--shadow);padding:20px}
 
-/* ===== en-tête de saison ===== */
-.season{position:relative;overflow:hidden;border-radius:22px;padding:22px 22px 20px;color:#F3EFFF;background:radial-gradient(90% 120% at 85% 0%,#5A2D8A,transparent 60%),linear-gradient(160deg,var(--night2),var(--night));box-shadow:0 30px 60px -30px rgba(10,5,30,.6)}
-.season .moon{position:absolute;right:28px;top:-26px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#FFF6D6,#F6D98A 60%,#C99A3A);box-shadow:0 0 60px 10px rgba(255,214,110,.35);opacity:.9}
-.season .bats{position:absolute;right:120px;top:40px;width:120px;opacity:.85}
-.season .tag{display:inline-flex;gap:8px;align-items:center;font:900 12px var(--ui);letter-spacing:1.4px;text-transform:uppercase;color:var(--sun)}
-.season h3{font-family:var(--display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:6px 0 2px;position:relative}
-.season .meta{display:flex;flex-wrap:wrap;gap:14px;font:800 14px var(--ui);opacity:.85;position:relative}
-.lv{position:relative;display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap}
-.lv .big{width:74px;height:74px;border-radius:22px;display:grid;place-items:center;background:linear-gradient(150deg,#8E72FF,#3A1FB8);box-shadow:0 0 0 3px var(--sun),0 10px 20px -8px #000;flex:none}
-.lv .big b{font:900 34px var(--figure);line-height:1}
-.lv .big small{display:block;font:900 9px var(--ui);letter-spacing:1px;text-align:center;opacity:.8}
+/* ===== en-tête : dégradé violet, comme les moments forts de l'app ===== */
+.hero{position:relative;overflow:hidden;border-radius:28px;padding:22px;color:#fff;background:linear-gradient(150deg,#8E72FF,var(--pop1) 40%,var(--brand2));box-shadow:0 18px 40px -18px rgba(58,31,184,.7)}
+.hero .tally{position:absolute;right:-20px;top:-30px;width:240px;opacity:.12}
+.hero .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);border-radius:99px;padding:6px 12px;font:900 12px var(--ui);letter-spacing:.6px}
+.hero .chip img{width:22px;height:22px}
+.hero h2{margin:10px 0 2px;font-weight:900;font-size:clamp(28px,5vw,40px);letter-spacing:-.5px;position:relative}
+.hero .meta{font:800 14px var(--ui);opacity:.85;position:relative}
+.lv{position:relative;display:flex;align-items:center;gap:16px;margin-top:16px;flex-wrap:wrap}
+.lv .big{width:76px;height:76px;border-radius:24px;display:grid;place-items:center;background:var(--sun);color:var(--sunInk);box-shadow:0 4px 0 #C99A00;flex:none;text-align:center}
+.lv .big b{display:block;font:900 34px var(--ui);line-height:1;font-variant-numeric:tabular-nums}
+.lv .big small{font:900 10px var(--ui);letter-spacing:1px}
 .lv .bar{flex:1;min-width:220px}
-.lv .bar .t{display:flex;flex-wrap:wrap;column-gap:12px;row-gap:2px;justify-content:space-between;font:900 13px var(--ui);margin-bottom:6px}
-.lv .bar .g{height:14px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}
-.lv .bar .g i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--pump),var(--sun));transition:width .6s cubic-bezier(.2,.8,.2,1)}
-.lv .bar .eta{margin-top:6px;font:800 12px var(--ui);opacity:.75}
-.passbtn{position:relative;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.lv .bar .t{display:flex;flex-wrap:wrap;column-gap:12px;row-gap:2px;justify-content:space-between;font:900 14px var(--ui);margin-bottom:7px;font-variant-numeric:tabular-nums}
+.pills{display:flex;gap:4px;height:14px}
+.pills i{flex:1;border-radius:99px;background:rgba(255,255,255,.2);overflow:hidden;position:relative}
+.pills i b{position:absolute;inset:0;width:var(--f,0%);background:var(--sun);border-radius:inherit;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.lv .eta{margin-top:7px;font:800 13px var(--ui);opacity:.85}
+.hero .acts{display:flex;gap:10px;flex-wrap:wrap}
 
 /* ===== la frise ===== */
-.track{position:relative;border-radius:22px;padding:16px 0 18px;background:linear-gradient(180deg,var(--night2),var(--night));color:#F3EFFF}
-.rows{display:grid;grid-template-columns:96px minmax(0,1fr);}
-.lab{display:flex;flex-direction:column;justify-content:space-between;padding:6px 0 6px 14px;gap:10px}
-.lab div{height:132px;display:flex;flex-direction:column;justify-content:center;gap:4px;font:900 12px var(--ui);letter-spacing:1px;text-transform:uppercase}
-.lab .f{color:var(--free)}.lab .p{color:var(--paid)}
-.lab .mid{height:34px}
-.lab small{font:800 11px var(--ui);text-transform:none;letter-spacing:0;opacity:.75}
-.scroller{overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;padding:6px 14px 8px 4px}
-.cols{display:grid;grid-auto-flow:column;grid-auto-columns:112px;gap:10px}
-.col{display:flex;flex-direction:column;gap:10px;scroll-snap-align:start}
-.tile{position:relative;height:132px;border-radius:16px;padding:10px 8px 8px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;border:0;cursor:default;color:#F3EFFF;
-  background:rgba(255,255,255,.06);box-shadow:0 0 0 1.5px rgba(255,255,255,.08) inset}
-.tile.fr{background:linear-gradient(180deg,rgba(61,220,151,.14),rgba(61,220,151,.04))}
-.tile.pd{background:linear-gradient(180deg,rgba(255,143,177,.16),rgba(255,143,177,.04))}
-.tile.big{box-shadow:0 0 0 2px var(--sun) inset,0 0 18px rgba(255,210,63,.25)}
-.tile .ic{width:58px;height:58px;display:grid;place-items:center}
-.tile .ic svg{width:100%;height:100%;overflow:visible}
-.tile .nm{font:800 11px var(--ui);line-height:1.2;min-height:26px;display:flex;align-items:center}
-.tile.ready{cursor:pointer;animation:glow 1.6s ease-in-out infinite}
-.tile.ready::after{content:"Récupérer";position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:var(--sun);color:#1A1830;font:900 10px var(--ui);border-radius:99px;padding:3px 8px;white-space:nowrap}
-@keyframes glow{50%{box-shadow:0 0 0 2px var(--sun) inset,0 0 22px rgba(255,210,63,.55)}}
-.tile.got{opacity:.55}
-.tile.got::after{content:"✓";position:absolute;top:6px;right:8px;width:20px;height:20px;border-radius:50%;background:var(--free);color:#0E2A1E;font:900 12px var(--ui);display:grid;place-items:center}
-.tile.lock .ic{filter:grayscale(.4) brightness(.8)}
-.tile.lock::before{content:"";position:absolute;top:8px;right:8px;width:16px;height:16px;background:no-repeat center/contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect x='3' y='7' width='10' height='8' rx='2' fill='%23FF8FB1'/><path d='M5 7V5a3 3 0 0 1 6 0v2' fill='none' stroke='%23FF8FB1' stroke-width='1.8'/></svg>")}
-.tile.future{opacity:.85}
-.node{height:34px;position:relative;display:grid;place-items:center}
-.node::before{content:"";position:absolute;left:-10px;right:-10px;top:50%;height:6px;margin-top:-3px;background:rgba(255,255,255,.12)}
-.node.done::before{background:linear-gradient(90deg,var(--pump),var(--sun))}
-.node.cur::before{background:linear-gradient(90deg,var(--sun) 0,var(--sun) var(--p),rgba(255,255,255,.12) var(--p))}
-.node b{position:relative;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:900 14px var(--figure);background:#2A2350;box-shadow:0 0 0 2px rgba(255,255,255,.2)}
-.node.done b{background:var(--sun);color:#1A1830;box-shadow:none}
-.node.cur b{background:#fff;color:#1A1830;box-shadow:0 0 0 4px rgba(255,210,63,.6)}
-.jump{display:flex;gap:6px;padding:10px 14px 0;flex-wrap:wrap}
-.jump button{border:0;border-radius:99px;background:rgba(255,255,255,.08);color:#F3EFFF;font:800 12px var(--ui);padding:6px 11px;cursor:pointer}
+.trackcard{padding:18px 0 16px}
+.trackhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 20px 10px;flex-wrap:wrap}
+.legend{display:flex;gap:8px;flex-wrap:wrap}
+.tagf,.tagp{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:5px 11px;font:900 12px var(--ui)}
+.tagf{background:rgba(18,183,106,.12);color:var(--correct)}
+.tagp{background:linear-gradient(90deg,var(--pop1),#C2449A);color:#fff}
+.jump{display:flex;gap:6px;flex-wrap:wrap}
+.jump button{border:0;border-radius:99px;background:var(--paper);color:var(--soft);font:900 12px var(--ui);padding:7px 11px;cursor:pointer}
+.jump button[aria-current="true"]{background:var(--brand);color:#fff}
+.scroller{overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:20px;scrollbar-width:thin;padding:14px 20px 10px}
+.cols{display:grid;grid-auto-flow:column;grid-auto-columns:124px;gap:12px}
+.col{display:flex;flex-direction:column;gap:12px;scroll-snap-align:start}
+.tile{position:relative;height:150px;border-radius:22px;padding:8px 8px 10px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;border:0;cursor:default;color:var(--ink);transition:transform .15s}
+.tile.fr{background:var(--freebg);box-shadow:0 0 0 1.5px var(--hair) inset}
+.tile.pd{background:var(--paidbg)}
+.tile img{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(58,31,184,.18))}
+.tile .nm{font:900 11.5px var(--ui);line-height:1.2;min-height:28px;display:flex;align-items:center}
+.tile.star{box-shadow:0 0 0 2.5px var(--sun) inset}
+.tile.ready{cursor:pointer;box-shadow:0 0 0 2.5px var(--sun) inset,0 8px 18px -8px rgba(201,154,0,.7);animation:bob 1.6s ease-in-out infinite}
+.tile.ready::after{content:"Récupérer";position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--sun);color:var(--sunInk);font:900 11px var(--ui);border-radius:99px;padding:3px 10px;white-space:nowrap;box-shadow:0 2px 0 #C99A00}
+@keyframes bob{50%{transform:translateY(-3px)}}
+.tile.got img{opacity:.55}
+.tile.got::after{content:"✓";position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:var(--correct);color:#fff;font:900 13px var(--ui);display:grid;place-items:center}
+.tile.lock::before{content:"";position:absolute;top:9px;right:9px;width:20px;height:20px;border-radius:50%;background:var(--brand) no-repeat center/12px url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect x='3' y='7' width='10' height='8' rx='2' fill='white'/><path d='M5 7V5a3 3 0 0 1 6 0v2' fill='none' stroke='white' stroke-width='2'/></svg>")}
+.node{height:30px;position:relative;display:grid;place-items:center}
+.node::before{content:"";position:absolute;left:-12px;right:-12px;top:50%;height:8px;margin-top:-4px;background:var(--track)}
+.col:first-child .node::before{left:50%}.col:last-child .node::before{right:50%}
+.node.done::before{background:var(--brand)}
+.node.cur::before{background:linear-gradient(90deg,var(--brand) 0,var(--brand) var(--p),var(--track) var(--p))}
+.node b{position:relative;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:900 13px var(--ui);background:var(--raised);color:var(--soft);box-shadow:0 0 0 2.5px var(--track);font-variant-numeric:tabular-nums}
+.node.done b{background:var(--brand);color:#fff;box-shadow:none}
+.node.cur b{background:var(--sun);color:var(--sunInk);box-shadow:0 0 0 4px rgba(255,210,63,.35)}
 
-/* ===== points et missions ===== */
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:14px}
-.panel h3{font-family:var(--display);font-weight:900;font-size:24px;margin:0}
-.panel .sub{margin:2px 0 0;color:var(--soft);font-size:14px;line-height:1.5;max-width:66ch}
-.srcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-.src{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--bg);min-width:0}
-.src .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
-.src b{font:900 14px var(--ui)}
-.src .pts{font:900 16px var(--figure);color:var(--accent);white-space:nowrap}
-.src small{color:var(--soft);font-size:12px;font-weight:700}
-.src .g{height:6px;border-radius:99px;background:var(--line);overflow:hidden}.src .g i{display:block;height:100%;background:var(--accent)}
-.src .btn{padding:7px 12px;font-size:12px;align-self:flex-start}
-.mis{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
-.mi{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:9px 12px;background:var(--bg);font-size:13px;font-weight:700}
-.mi .ck{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;border:2px solid var(--line);font:900 12px var(--ui)}
-.mi.done .ck{background:#12B76A;border-color:#12B76A;color:#fff}
-.mi .r{margin-left:auto;font:900 13px var(--figure);color:var(--accent);white-space:nowrap}
-.mi.done span:not(.ck):not(.r){text-decoration:line-through;opacity:.6}
-.sim{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
-.sim .who{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--bg)}
-.sim .who b{display:block;font:900 14px var(--ui)}.sim .who span{font-size:13px;color:var(--soft)}
-.sim .who .n{font:900 30px var(--figure);color:var(--accent);line-height:1.1}
+/* ===== points ===== */
+.sec h3{margin:0;font-weight:900;font-size:22px}
+.sec .sub{margin:4px 0 0;color:var(--soft);font-size:14px;font-weight:700;line-height:1.5;max-width:70ch}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+.qbox{border-radius:22px;background:var(--paper);padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.qbox h4{margin:0 0 2px;font:900 15px var(--ui);display:flex;justify-content:space-between;gap:8px}
+.qbox h4 small{font:800 12px var(--ui);color:var(--soft)}
+.q{display:flex;align-items:center;gap:10px;background:var(--raised);border-radius:16px;padding:10px 12px;border:0;color:var(--ink);text-align:left;font:800 14px var(--ui);cursor:pointer;min-width:0}
+.q .ck{width:24px;height:24px;border-radius:50%;flex:none;display:grid;place-items:center;box-shadow:0 0 0 2px var(--hair) inset;font:900 13px var(--ui);color:#fff}
+.q.done{cursor:default}.q.done .ck{background:var(--correct);box-shadow:none}
+.q.done .lb{opacity:.55;text-decoration:line-through}
+.q .rw{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.rw span{font:900 11.5px var(--ui);border-radius:99px;padding:3px 8px;white-space:nowrap}
+.rw .old{background:var(--hair);color:var(--soft)}
+.rw .sp{background:var(--brand);color:#fff}
+.q.bonus{background:linear-gradient(90deg,rgba(255,210,63,.3),var(--raised));cursor:default}
+.mis{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;margin-top:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.sim{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+@media (max-width:640px){.sim{grid-template-columns:1fr}}
+.who{border-radius:22px;background:var(--paper);padding:14px}
+.who b{display:block;font:900 15px var(--ui)}.who span{font-size:13px;color:var(--soft);font-weight:700}
+.who .n{font:900 32px var(--ui);color:var(--brand);line-height:1.15;font-variant-numeric:tabular-nums}
 
-/* ===== récompense obtenue ===== */
-.modal{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:rgba(10,7,20,.82);backdrop-filter:blur(6px)}
-.gift{width:min(100%,360px);border-radius:22px;padding:26px 22px;text-align:center;color:#fff;background:radial-gradient(80% 70% at 50% 25%,#4B3590,#16122A);box-shadow:0 30px 60px -20px #000;display:flex;flex-direction:column;align-items:center;gap:10px;animation:pop .45s cubic-bezier(.2,.9,.3,1.25)}
+/* ===== récompense ===== */
+.modal{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:rgba(14,13,22,.55);backdrop-filter:blur(6px)}
+.gift{position:relative;overflow:hidden;width:min(100%,360px);border-radius:28px;padding:26px 22px 22px;text-align:center;color:#fff;background:linear-gradient(150deg,#8E72FF,var(--pop1) 40%,var(--brand2));box-shadow:0 30px 60px -20px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;gap:8px;animation:pop .45s cubic-bezier(.2,.9,.3,1.25)}
 @keyframes pop{from{transform:scale(.7);opacity:0}}
-.gift .ic{width:120px;height:120px}
-.gift .ic svg{width:100%;height:100%;overflow:visible}
-.gift small{font:900 11px var(--ui);letter-spacing:1.4px;text-transform:uppercase;color:var(--sun)}
-.gift h4{margin:0;font:900 24px var(--display)}
-.gift p{margin:0;font-size:14px;opacity:.85;line-height:1.45}
-.rays{position:absolute;inset:-40%;background:repeating-conic-gradient(rgba(255,214,110,.12) 0 6deg,transparent 6deg 15deg);animation:spin 20s linear infinite;pointer-events:none;border-radius:50%}
+.gift img{width:170px;height:170px;object-fit:contain;position:relative;filter:drop-shadow(0 14px 18px rgba(0,0,0,.35));animation:float 2.6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+.gift small{font:900 12px var(--ui);letter-spacing:1.2px;text-transform:uppercase;color:var(--sun);position:relative}
+.gift h4{margin:0;font:900 24px var(--ui);position:relative}
+.gift p{margin:0 0 6px;font:700 14px var(--ui);opacity:.9;line-height:1.45;position:relative}
+.rays{position:absolute;left:50%;top:38%;width:700px;height:700px;margin:-350px 0 0 -350px;background:repeating-conic-gradient(rgba(255,255,255,.1) 0 7deg,transparent 7deg 16deg);border-radius:50%;animation:spin 22s linear infinite;pointer-events:none}
 @keyframes spin{to{transform:rotate(360deg)}}
-.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 24px);transform:translateX(-50%);z-index:80;background:#F1EEF8;color:#1B1726;font:900 14px var(--ui);border-radius:99px;padding:10px 18px;box-shadow:0 10px 30px -10px #000;opacity:0;transition:opacity .3s}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 24px);transform:translateX(-50%);z-index:80;background:var(--ink);color:var(--paper);font:900 14px var(--ui);border-radius:99px;padding:11px 18px;box-shadow:0 10px 30px -10px #000;opacity:0;transition:opacity .3s;pointer-events:none}
 .toast.on{opacity:1}
-@media (max-width:600px){.rows{grid-template-columns:54px minmax(0,1fr)}.lab{padding-left:8px}.lab div{font-size:10px}.lab small{display:none}.cols{grid-auto-columns:100px}.season .moon{width:90px;height:90px;right:-20px;top:-30px;opacity:.55}.season .bats{display:none}}
-@media (prefers-reduced-motion: reduce){.tile.ready,.rays,.gift{animation:none}}
+@media (max-width:600px){.q{flex-wrap:wrap}.q .lb{flex:1;min-width:0}.q .rw{width:100%;justify-content:flex-start;padding-left:34px}.cols{grid-auto-columns:112px}.tile{height:142px}.tile img{width:82px;height:82px}.hero .tally{width:160px}}
+@media (prefers-reduced-motion: reduce){.tile.ready,.rays,.gift,.gift img{animation:none}}
 </style>
 
 <div class="wrap">
   <header>
+    <p class="cap">Maquette</p>
     <h1>Pass de saison</h1>
-    <p class="lede">Maquette du pass « Monstres et légendes » : 30 paliers sur deux mois, une piste gratuite et une piste payante. Simule une journée de jeu pour voir les paliers monter, puis récupère les récompenses. Tout est fictif.</p>
+    <p class="lede">30 paliers sur deux mois. Tes objectifs du jour et de la semaine font avancer le pass, et les missions de saison s'ajoutent en plus. Simule tes parties pour voir les paliers monter, puis récupère les récompenses. Tout est fictif.</p>
   </header>
-  <section class="season" aria-label="Saison en cours">
-    <span class="moon" aria-hidden="true"></span>
-    <svg class="bats" viewBox="0 0 120 50" aria-hidden="true"><g fill="#120B22"><path transform="translate(20 20) scale(.9)" d="M0,0 C-2,-3 -5,-3 -7,-1 C-9,-4 -13,-4 -15,0 C-12,0 -10,2 -10,4 C-8,2 -5,3 -4,5 C-3,3 -1,3 0,5 C1,3 3,3 4,5 C5,3 8,2 10,4 C10,2 12,0 15,0 C13,-4 9,-4 7,-1 C5,-3 2,-3 0,0 Z"/><path transform="translate(70 34) scale(.7)" d="M0,0 C-2,-3 -5,-3 -7,-1 C-9,-4 -13,-4 -15,0 C-12,0 -10,2 -10,4 C-8,2 -5,3 -4,5 C-3,3 -1,3 0,5 C1,3 3,3 4,5 C5,3 8,2 10,4 C10,2 12,0 15,0 C13,-4 9,-4 7,-1 C5,-3 2,-3 0,0 Z"/><path transform="translate(100 12) scale(.55)" d="M0,0 C-2,-3 -5,-3 -7,-1 C-9,-4 -13,-4 -15,0 C-12,0 -10,2 -10,4 C-8,2 -5,3 -4,5 C-3,3 -1,3 0,5 C1,3 3,3 4,5 C5,3 8,2 10,4 C10,2 12,0 15,0 C13,-4 9,-4 7,-1 C5,-3 2,-3 0,0 Z"/></g></svg>
-    <span class="tag">Saison 1 · octobre – novembre</span>
-    <h3>Monstres et légendes</h3>
-    <div class="meta"><span id="days"></span><span>30 paliers · 150 points par palier</span></div>
+
+  <section class="hero" aria-label="Saison en cours">
+    <svg class="tally" viewBox="0 0 120 100" aria-hidden="true"><g stroke="#fff" stroke-width="9" stroke-linecap="round"><line x1="22" y1="12" x2="22" y2="88"/><line x1="44" y1="12" x2="44" y2="88"/><line x1="66" y1="12" x2="66" y2="88"/><line x1="88" y1="12" x2="88" y2="88"/></g><line x1="8" y1="72" x2="104" y2="28" stroke="#FFD23F" stroke-width="10" stroke-linecap="round"/></svg>
+    <span class="chip"><img id="chipIc" alt="">Saison 1 · octobre – novembre</span>
+    <h2>Monstres et légendes</h2>
+    <div class="meta" id="days"></div>
     <div class="lv"><div class="big"><div><b id="lvl"></b><small>PALIER</small></div></div>
-      <div class="bar"><div class="t"><span id="ptsTxt"></span><span id="nextTxt"></span></div><div class="g"><i id="ptsBar"></i></div><div class="eta" id="eta"></div></div>
-      <div class="passbtn"><button class="btn sun" id="buyPass">Activer le pass payant (maquette)</button><button class="btn ghost" id="claimAll" style="color:#fff">Tout récupérer</button></div></div>
+      <div class="bar"><div class="t"><span id="ptsTxt"></span><span id="nextTxt"></span></div><div class="pills" id="pills"></div><div class="eta" id="eta"></div></div>
+      <div class="acts"><button class="btn sun" id="buyPass">Activer le Pass+ (maquette)</button><button class="btn light" id="claimAll">Tout récupérer</button></div></div>
   </section>
 
-  <section class="track" aria-label="Paliers du pass">
-    <div class="rows"><div class="lab"><div class="f">Gratuit<small>Pour tout le monde</small></div><div class="mid"></div><div class="p">Payant<small>Apparence et coffrets connus</small></div></div>
-      <div class="scroller" id="scroller"><div class="cols" id="cols"></div></div></div>
-    <div class="jump" id="jump"></div>
+  <section class="card trackcard" aria-label="Paliers du pass">
+    <div class="trackhead"><div class="legend"><span class="tagf">● Gratuit</span><span class="tagp">★ Pass+</span></div><div class="jump" id="jump"></div></div>
+    <div class="scroller" id="scroller"><div class="cols" id="cols"></div></div>
   </section>
 
-  <section class="panel" aria-label="Gagner des points">
-    <div><h3>Gagner des points de saison</h3><p class="sub">Tout se gagne en jouant. Les points sont comptés par le serveur à partir des vraies parties. Ici, les boutons simulent une action pour voir le pass avancer.</p></div>
-    <div class="srcs" id="srcs"></div>
-    <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="day">Simuler une journée complète (+90)</button><button class="btn ghost" id="week">Simuler une semaine assidue</button><button class="btn ghost" id="reset">Recommencer</button></div>
+  <section class="card sec" aria-label="Objectifs">
+    <h3>Tes objectifs font avancer le pass</h3>
+    <p class="sub">Ce sont les objectifs que tu as déjà dans l'app. Pendant la saison, chacun rapporte en plus des points de saison. Touche un objectif pour le valider (maquette).</p>
+    <div class="grid2"><div class="qbox" id="qday"></div><div class="qbox" id="qweek"></div></div>
+    <div class="row"><button class="btn" id="day">Simuler une journée complète</button><button class="btn soft" id="week">Simuler une semaine assidue</button><button class="btn soft" id="reset">Recommencer</button></div>
   </section>
 
-  <section class="panel" aria-label="Missions de saison">
-    <div><h3>Missions de saison</h3><p class="sub">12 missions sans date limite, 75 points chacune : de quoi rattraper si on a fait une pause. Touche une mission pour la valider (maquette).</p></div>
+  <section class="card sec" aria-label="Missions de saison">
+    <h3>Missions de saison · en plus</h3>
+    <p class="sub">12 missions sans date limite, 75 points chacune, pour toute la saison : de quoi rattraper après une pause.</p>
     <div class="mis" id="mis"></div>
   </section>
 
-  <section class="panel" aria-label="Qui finit le pass">
-    <div><h3>À quel rythme ?</h3><p class="sub">Estimations sur les 61 jours de la saison, missions comprises.</p></div>
+  <section class="card sec" aria-label="Rythme">
+    <h3>À quel rythme ?</h3>
+    <p class="sub">Estimations sur les 61 jours de la saison, missions comprises.</p>
     <div class="sim" id="sim"></div>
   </section>
 </div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
-/*DOS*/
-/* ---------- icônes des récompenses ---------- */
-const ICON={
- coffre:(c1,c2,band)=>`<svg viewBox="0 0 60 60"><path d="M8,26 C8,14 52,14 52,26 Z" fill="${c1}" stroke="#1A1830" stroke-width="2"/><rect x="8" y="26" width="44" height="24" rx="3" fill="${c2}" stroke="#1A1830" stroke-width="2"/><rect x="8" y="24" width="44" height="6" fill="${band}" stroke="#1A1830" stroke-width="1.6"/><rect x="25" y="28" width="10" height="10" rx="2" fill="${band}" stroke="#1A1830" stroke-width="1.6"/><circle cx="30" cy="33" r="1.6" fill="#1A1830"/></svg>`,
- ticket:()=>`<svg viewBox="0 0 60 60"><g transform="rotate(-12 30 30)"><path d="M8,18 L52,18 L52,25 C48,25 48,35 52,35 L52,42 L8,42 L8,35 C12,35 12,25 8,25 Z" fill="#FFD23F" stroke="#1A1830" stroke-width="2"/><line x1="20" y1="20" x2="20" y2="40" stroke="#1A1830" stroke-width="1.2" stroke-dasharray="2 2"/><rect x="26" y="24" width="16" height="12" rx="2" fill="#7B5CFF"/><text x="34" y="33" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="8" fill="#fff">×5</text></g></svg>`,
- jeton:()=>`<svg viewBox="0 0 60 60"><defs><linearGradient id="hl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6A88"/><stop offset=".25" stop-color="#F6C744"/><stop offset=".5" stop-color="#3FD0A0"/><stop offset=".75" stop-color="#4A9BFF"/><stop offset="1" stop-color="#B66BFF"/></linearGradient></defs><circle cx="30" cy="30" r="24" fill="url(#hl)" stroke="#1A1830" stroke-width="2"/><circle cx="30" cy="30" r="17" fill="#120E22" opacity=".85"/><path d="M30,17 L33.5,26 L43,26.5 L35.5,32.5 L38,42 L30,36.5 L22,42 L24.5,32.5 L17,26.5 L26.5,26 Z" fill="#FFE9A6"/></svg>`,
- dos:k=>`<svg viewBox="0 0 60 60"><g transform="rotate(6 30 30)">${cardBack(k).replace('<svg viewBox="0 0 100 140" aria-hidden="true">','<svg x="13" y="3" width="34" height="48" viewBox="0 0 100 140">')}</g></svg>`,
- cadre:(c)=>`<svg viewBox="0 0 60 60"><rect x="13" y="6" width="34" height="48" rx="5" fill="${c}" stroke="#1A1830" stroke-width="2"/><rect x="18" y="11" width="24" height="38" rx="3" fill="#FBF4E8" stroke="#1A1830" stroke-width="1.2"/><circle cx="30" cy="24" r="6" fill="#E9DCC4"/><rect x="21" y="35" width="18" height="3" rx="1.5" fill="#C8BFA8"/><rect x="21" y="40" width="12" height="2" rx="1" fill="#C8BFA8"/></svg>`,
- finition:(c1,c2)=>`<svg viewBox="0 0 60 60"><defs><linearGradient id="fn${c1.slice(1)}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><rect x="13" y="6" width="34" height="48" rx="5" fill="url(#fn${c1.slice(1)})" stroke="#1A1830" stroke-width="2"/>${[[20,14],[38,20],[24,38],[36,44],[30,28]].map(([x,y],i)=>`<path d="M${x},${y-4} Q${x},${y} ${x+4},${y} Q${x},${y} ${x},${y+4} Q${x},${y} ${x-4},${y} Q${x},${y} ${x},${y-4} Z" fill="#fff" opacity="${.6+i*.08}"/>`).join('')}</svg>`,
- titre:()=>`<svg viewBox="0 0 60 60"><path d="M4,22 L56,22 L50,30 L56,38 L4,38 L10,30 Z" fill="#8E1B1B" stroke="#1A1830" stroke-width="2"/><rect x="12" y="27" width="36" height="6" rx="3" fill="#F6E7B8"/></svg>`,
- titreJ:()=>`<svg viewBox="0 0 60 60"><circle cx="30" cy="22" r="11" fill="#7B5CFF" stroke="#1A1830" stroke-width="2"/><text x="30" y="27" text-anchor="middle" font-family="Fraunces" font-weight="900" font-size="13" fill="#fff">T</text><rect x="8" y="38" width="44" height="12" rx="6" fill="#FFD23F" stroke="#1A1830" stroke-width="2"/><rect x="15" y="42" width="30" height="4" rx="2" fill="#1A1830" opacity=".6"/></svg>`,
- autoc:(t,c)=>`<svg viewBox="0 0 60 60"><g transform="rotate(-12 30 30)"><circle cx="30" cy="30" r="22" fill="${c}" stroke="#fff" stroke-width="3"/><circle cx="30" cy="30" r="22" fill="none" stroke="#1A1830" stroke-width="1.6"/><text x="30" y="${t.length>3?34:36}" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="${t.length>3?11:16}" fill="#fff">${t}</text></g></svg>`,
- socle:(c1,c2,glow)=>`<svg viewBox="0 0 60 60"><rect x="20" y="8" width="20" height="28" rx="3" fill="#FBF4E8" stroke="#1A1830" stroke-width="1.6"/><ellipse cx="30" cy="44" rx="24" ry="8" fill="${c2}" ${glow?`style="filter:drop-shadow(0 0 5px ${glow})"`:''}/><ellipse cx="30" cy="40" rx="24" ry="8" fill="${c1}" stroke="#1A1830" stroke-width="1.6"/></svg>`,
- couv:(c1,c2)=>`<svg viewBox="0 0 60 60"><rect x="10" y="8" width="40" height="46" rx="5" fill="${c2}" stroke="#1A1830" stroke-width="2"/><rect x="10" y="8" width="38" height="44" rx="5" fill="${c1}" stroke="#1A1830" stroke-width="2"/><rect x="10" y="8" width="7" height="44" fill="#000" opacity=".2"/><circle cx="33" cy="28" r="8" fill="none" stroke="#fff" stroke-width="1.6" opacity=".8"/><rect x="24" y="40" width="18" height="3" rx="1.5" fill="#fff" opacity=".8"/></svg>`,
- coffret:()=>`<svg viewBox="0 0 60 60">${[-12,0,12].map((a,i)=>`<g transform="rotate(${a} 30 42)"><rect x="21" y="8" width="18" height="26" rx="3" fill="${['#9FD3F0','#F4F1EA','#E8A0B8'][i]}" stroke="#1A1830" stroke-width="1.4"/></g>`).join('')}<path d="M8,30 L52,30 L48,54 L12,54 Z" fill="#C2449A" stroke="#1A1830" stroke-width="2"/><rect x="8" y="28" width="44" height="6" rx="2" fill="#FF8FB1" stroke="#1A1830" stroke-width="1.6"/><text x="30" y="47" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-weight="900" font-size="9" fill="#fff">3 CARTES</text></svg>`,
- doree:()=>`<svg viewBox="0 0 60 60"><path d="M14,6 L46,6 L46,54 L14,54 Z" fill="#D9A441" stroke="#7A4A08" stroke-width="2"/><path d="M14,6 L46,6 L46,12 L14,12 Z" fill="#F6D98A"/><circle cx="30" cy="28" r="10" fill="#FFF8EA" stroke="#7A4A08" stroke-width="1.4"/><path d="M30,21 L32,26 L37,26.3 L33,29.5 L34.5,34.5 L30,31.5 L25.5,34.5 L27,29.5 L23,26.3 L28,26 Z" fill="#F2C14E"/><rect x="19" y="42" width="22" height="6" rx="3" fill="#FFF1C2"/></svg>`,
- onglets:()=>`<svg viewBox="0 0 60 60"><rect x="8" y="8" width="36" height="46" rx="4" fill="#3A1FB8" stroke="#1A1830" stroke-width="2"/>${['#F76707','#1098AD','#0CA678','#D6336C'].map((c,i)=>`<rect x="42" y="${12+i*10}" width="10" height="8" rx="2" fill="${c}" stroke="#1A1830" stroke-width="1.2"/>`).join('')}</svg>`,
- marque:()=>`<svg viewBox="0 0 60 60"><rect x="10" y="8" width="40" height="46" rx="4" fill="#F4E9D6" stroke="#1A1830" stroke-width="2"/><path d="M34,4 L44,4 L44,30 L39,25 L34,30 Z" fill="#C2449A" stroke="#1A1830" stroke-width="1.6"/></svg>`,
- vitrine:()=>`<svg viewBox="0 0 60 60"><path d="M30,4 L12,54 L48,54 Z" fill="#FFD23F" opacity=".25"/>${[[16,22],[30,18],[44,22]].map(([x,y])=>`<rect x="${x-6}" y="${y}" width="12" height="17" rx="2" fill="#FBF4E8" stroke="#1A1830" stroke-width="1.2"/><ellipse cx="${x}" cy="${y+20}" rx="8" ry="2.6" fill="#D9A441"/>`).join('')}</svg>`,
- flamme:()=>`<svg viewBox="0 0 60 60"><path d="M30,6 C40,18 46,26 42,38 C48,36 50,30 49,26 C56,38 50,54 30,54 C12,54 6,40 14,28 C14,34 18,38 22,40 C16,28 24,16 30,6 Z" fill="#F76707" stroke="#1A1830" stroke-width="2"/><path d="M30,26 C35,32 38,38 34,46 L26,46 C22,40 26,32 30,26 Z" fill="#FFD23F"/></svg>`};
-const R=(type,name,icon,o={})=>({type,name,icon,...o});
-const FREE=[R('coffre','Coffre en bois',ICON.coffre('#B07A4A','#8A5A34','#5A3A22')),R('autoc','Autocollant « Saison 1 »',ICON.autoc('S1','#C2449A')),R('ticket','Ticket de pochette',ICON.ticket()),R('coffre','Coffre en bois',ICON.coffre('#B07A4A','#8A5A34','#5A3A22')),R('titre','Titre de carte « Curieux »',ICON.titre()),
- R('ticket','Ticket de pochette',ICON.ticket()),R('coffre','Coffre en argent',ICON.coffre('#E8ECF0','#B9C2CC','#7A8794')),R('cadre','Cadre Citrouille',ICON.cadre('#F76707')),R('ticket','Ticket de pochette',ICON.ticket()),R('dos','Dos Soleil',ICON.dos('soleil'),{big:1}),
- R('coffre','Coffre en argent',ICON.coffre('#E8ECF0','#B9C2CC','#7A8794')),R('titre','Titre « Explorateur »',ICON.titreJ()),R('ticket','Ticket de pochette',ICON.ticket()),R('coffre','Coffre en argent',ICON.coffre('#E8ECF0','#B9C2CC','#7A8794')),R('socle','Socle Marbre',ICON.socle('#F4F1EA','#C9C2B6')),
- R('ticket','Ticket de pochette',ICON.ticket()),R('coffre','Coffre en argent',ICON.coffre('#E8ECF0','#B9C2CC','#7A8794')),R('autoc','Autocollant « Halloween »',ICON.autoc('🎃','#E8833A')),R('ticket','Ticket de pochette',ICON.ticket()),R('jeton','Jeton Prestige',ICON.jeton(),{big:1}),
- R('coffre','Coffre en or',ICON.coffre('#FFE27A','#E9B030','#9C6412')),R('titre','Titre de carte « Érudit »',ICON.titre()),R('ticket','Ticket de pochette',ICON.ticket()),R('coffre','Coffre en or',ICON.coffre('#FFE27A','#E9B030','#9C6412')),R('titre','Titre « Bâtisseur »',ICON.titreJ()),
- R('ticket','Ticket de pochette',ICON.ticket()),R('coffre','Coffre en or',ICON.coffre('#FFE27A','#E9B030','#9C6412')),R('couv','Couverture « Automne »',ICON.couv('#C2661F','#7A3A10')),R('coffre','Coffre Savant',ICON.coffre('#B66BFF','#6A4CFF','#FFD23F'),{big:1}),R('final','Dos Nuit étoilée + pochette dorée',ICON.dos('nuit'),{big:1,extra:ICON.doree()})];
-const PAID=[R('dos','Dos « Les 12 domaines »',ICON.dos('domaines')),R('autoc','Autocollant « Fondateur »',ICON.autoc('★','#3A1FB8')),R('titre','Titre « Grand curieux »',ICON.titre()),R('cadre','Cadre Vitrail',ICON.cadre('#4A9BFF')),R('jeton','Jeton Prestige n° 1',ICON.jeton(),{big:1}),
- R('onglets','Onglets d\'album colorés',ICON.onglets()),R('coffret','Coffret de catégorie n° 1',ICON.coffret(),{big:1}),R('finition','Finition Givre',ICON.finition('#DDF4FF','#8FC8F0')),R('titre','Titre « Savant »',ICON.titreJ()),R('cadre','Cadre Nuit étoilée',ICON.cadre('#1B1A4A')),
- R('socle','Socle Or',ICON.socle('#F6D98A','#9C6412','#F6D98A')),R('autoc','Autocollant « Chauve-souris »',ICON.autoc('🦇','#2B1636')),R('couv','Couverture « Grimoire »',ICON.couv('#3B1F5A','#1E0F30')),R('titre','Titre « Chasseur de légendes »',ICON.titre()),R('jeton','Jeton Prestige n° 2',ICON.jeton(),{big:1}),
- R('finition','Finition Poussière d\'or',ICON.finition('#FFF1C2','#D9A441')),R('cadre','Cadre « Toile d\'araignée »',ICON.cadre('#5A5A6A')),R('coffret','Coffret de catégorie n° 2',ICON.coffret(),{big:1}),R('socle','Socle Néon',ICON.socle('#120E22','#120E22','#5BF0FF')),R('titre','Titre « Légende vivante »',ICON.titreJ()),
- R('cadre','Cadre Marbre',ICON.cadre('#E8E2D8')),R('marque','Marque-page d\'album',ICON.marque()),R('flamme','Autocollant animé « Flamme »',ICON.flamme()),R('finition','Finition Holographique',ICON.finition('#FF6A88','#4A9BFF')),R('jeton','Jeton Prestige n° 3',ICON.jeton(),{big:1}),
- R('coffret','Coffret de catégorie n° 3',ICON.coffret(),{big:1}),R('titre','Titre « Pièce de musée »',ICON.titre()),R('couv','Couverture « Feuille d\'or »',ICON.couv('#E9C566','#9C6412')),R('vitrine','Vitrine lumineuse',ICON.vitrine()),R('final','Dos Feuille d\'or + cadre animé',ICON.dos('or'),{big:1,extra:ICON.flamme()})];
-const DESC={coffre:'Un coffre habituel : neurones, jokers, tickets d\'aide, parfois un ticket de pochette.',ticket:'Ouvre une pochette de 5 cartes de la série de ton choix.',jeton:'Pose-le sur la carte de ton choix : elle devient Prestige pour toujours.',dos:'Un nouveau dos pour toutes tes cartes.',cadre:'Un cadre à poser sur n\'importe quelle carte.',finition:'Un effet à poser sur n\'importe quelle carte.',titre:'Un titre à mettre sous une carte ou sous ton pseudo.',autoc:'Un autocollant à coller en coin de carte.',socle:'Un socle pour tes cartes en vitrine.',couv:'Une nouvelle couverture pour ton album.',coffret:'Choisis un thème parmi 12 : tu vois les 3 cartes avant de le prendre. Pas de hasard.',onglets:'Des onglets colorés pour ton classeur.',marque:'Un marque-page qui garde ta dernière page.',vitrine:'Une lumière qui tourne au-dessus de ta vitrine.',flamme:'Un autocollant qui bouge.',final:'La récompense finale de la saison.'};
+const IC=/*ICONS*/;
+/* ---------- récompenses (D-049) ---------- */
+const F=(ic,name,type,star)=>({ic,name,type,star});
+const FREE=[F('chest_wood','Coffre en bois','coffre'),F('autoc_s1','Autocollant « Saison 1 »','autoc'),F('ticket_pochette','Ticket de pochette','ticket'),F('chest_wood','Coffre en bois','coffre'),F('titre_curieux','Titre de carte « Curieux »','titre'),
+ F('ticket_pochette','Ticket de pochette','ticket'),F('chest_silver','Coffre en argent','coffre'),F('cadre_citrouille','Cadre Citrouille','cadre'),F('ticket_pochette','Ticket de pochette','ticket'),F('dos_soleil','Dos Soleil','dos',1),
+ F('chest_silver','Coffre en argent','coffre'),F('titrej_explorateur','Titre « Explorateur »','titrej'),F('ticket_pochette','Ticket de pochette','ticket'),F('chest_silver','Coffre en argent','coffre'),F('socle_marbre','Socle Marbre','socle'),
+ F('ticket_pochette','Ticket de pochette','ticket'),F('chest_silver','Coffre en argent','coffre'),F('autoc_halloween','Autocollant « Halloween »','autoc'),F('ticket_pochette','Ticket de pochette','ticket'),F('jeton','Jeton Prestige','jeton',1),
+ F('chest_gold','Coffre en or','coffre'),F('titre_erudit','Titre de carte « Érudit »','titre'),F('ticket_pochette','Ticket de pochette','ticket'),F('chest_gold','Coffre en or','coffre'),F('titrej_batisseur','Titre « Bâtisseur »','titrej'),
+ F('ticket_pochette','Ticket de pochette','ticket'),F('chest_gold','Coffre en or','coffre'),F('couv_automne','Couverture « Automne »','couv'),F('chest_savant','Coffre Savant','coffre',1),F('final_gratuit','Dos Nuit étoilée + pochette dorée','final',1)];
+const PAID=[F('dos_domaines','Dos « Les 12 domaines »','dos'),F('autoc_fondateur','Autocollant « Fondateur »','autoc'),F('titre_grand_curieux','Titre « Grand curieux »','titre'),F('cadre_vitrail','Cadre Vitrail','cadre'),F('jeton','Jeton Prestige n° 1','jeton',1),
+ F('onglets','Onglets d\'album colorés','onglets'),F('coffret','Coffret de catégorie n° 1','coffret',1),F('finition_givre','Finition Givre','finition'),F('titrej_savant','Titre « Savant »','titrej'),F('cadre_nuit','Cadre Nuit étoilée','cadre'),
+ F('socle_or','Socle Or','socle'),F('autoc_chauve','Autocollant « Chauve-souris »','autoc'),F('couv_grimoire','Couverture « Grimoire »','couv'),F('titre_chasseur','Titre « Chasseur de légendes »','titre'),F('jeton','Jeton Prestige n° 2','jeton',1),
+ F('finition_or','Finition Poussière d\'or','finition'),F('cadre_toile','Cadre « Toile d\'araignée »','cadre'),F('coffret','Coffret de catégorie n° 2','coffret',1),F('socle_neon','Socle Néon','socle'),F('titrej_legende','Titre « Légende vivante »','titrej'),
+ F('cadre_marbre','Cadre Marbre','cadre'),F('marque','Marque-page d\'album','marque'),F('flamme','Autocollant animé « Flamme »','autoc'),F('finition_holo','Finition Holographique','finition'),F('jeton','Jeton Prestige n° 3','jeton',1),
+ F('coffret','Coffret de catégorie n° 3','coffret',1),F('titre_musee','Titre « Pièce de musée »','titre'),F('couv_or','Couverture « Feuille d\'or »','couv'),F('vitrine','Vitrine lumineuse','vitrine'),F('final_payant','Dos Feuille d\'or + cadre animé','final',1)];
+const DESC={coffre:'Un coffre habituel : neurones, jokers, tickets d\'aide, parfois un ticket de pochette.',ticket:'Ouvre une pochette de 5 cartes de la série de ton choix.',jeton:'Pose-le sur la carte de ton choix : elle devient Prestige pour toujours.',dos:'Un nouveau dos pour toutes tes cartes.',
+ cadre:'Un cadre à poser sur n\'importe quelle carte.',finition:'Un effet à poser sur n\'importe quelle carte.',titre:'Une banderole à mettre sous une carte.',titrej:'Un titre affiché sous ton pseudo.',autoc:'Un autocollant à coller en coin de carte.',socle:'Un socle pour tes cartes en vitrine.',
+ couv:'Une nouvelle couverture pour ton album.',coffret:'Choisis un thème parmi les 12 : tu vois les 3 cartes avant de le prendre. Pas de hasard.',onglets:'Des onglets colorés pour ton classeur.',marque:'Un marque-page qui garde ta dernière page.',vitrine:'Une lumière qui tourne au-dessus de ta vitrine.',final:'La grande récompense de la saison.'};
 
-/* ---------- état ---------- */
+/* ---------- points : objectifs existants + missions de saison ---------- */
 const PER=150,N=30,DAYS=61;
-let pts=0,paid=false,day=12;const got={f:new Set(),p:new Set()};
-const SRC=[{id:'daily',name:'5 du jour',pts:20,cap:1,per:'par jour',done:0},{id:'ranked',name:'Partie classée',pts:5,cap:4,per:'par jour',done:0},{id:'obj',name:'Objectif du jour',pts:10,cap:3,per:'par jour',done:0},{id:'week',name:'Objectif de la semaine',pts:50,cap:3,per:'par semaine',done:0}];
-const MIS=['Finis une page de l\'album','Ouvre 5 pochettes Histoire','Fabrique une carte à l\'atelier','Obtiens une carte brillante','Gagne 3 duels','Fais 7 jours de suite','Réussis un 5 du jour parfait','Maîtrise 3 cartes (3 étoiles)','Complète 10 cartes Nature','Joue dans 8 domaines différents','Mets 3 cartes en vitrine','Trouve une légendaire'].map(t=>({t,done:false}));
+const QDAY=[{l:'Fais le 5 du jour',xp:20,s:3},{l:'Joue 2 parties classées',xp:30,s:3},{l:'Réponds à 20 questions',xp:20,s:3}], QD_PTS=15, QD_BONUS=15;
+const QWEEK=[{l:'Joue 8 parties classées',xp:80,s:10},{l:'Joue dans 4 domaines différents',xp:60,s:8},{l:'Fais un sans-faute au 5 du jour',xp:80,s:10}], QW_PTS=40, QW_BONUS=60;
+const MIS=['Finis une page de l\'album','Ouvre 5 pochettes Histoire','Fabrique une carte dans l\'album','Obtiens une carte brillante','Gagne 3 duels','Fais 7 jours de suite','Réussis un 5 du jour parfait','Maîtrise 3 cartes (3 étoiles)','Complète 10 cartes Nature','Joue dans 8 domaines différents','Mets 3 cartes en vitrine','Trouve une légendaire'];
+let pts,paid,day,dDone,wDone,mDone,got;
 const lvl=()=>Math.min(N,Math.floor(pts/PER)), fmt=n=>n.toLocaleString('fr-FR');
+function seed(){pts=1390;paid=false;day=12;dDone=[true,false,false];wDone=[true,false,false];mDone=MIS.map((_,i)=>i<2);got={f:new Set([0,1,2,3,4,5,6]),p:new Set()};}
 function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),2200);}
-function seed(){pts=0;day=12;got.f.clear();got.p.clear();SRC.forEach(s=>s.done=0);MIS.forEach((m,i)=>m.done=i<2);pts=1390;for(let i=0;i<7;i++)got.f.add(i);}
+
 /* ---------- rendu ---------- */
-function tile(r,i,side){const reached=i<lvl(),own=side==='f'?got.f.has(i):got.p.has(i),locked=side==='p'&&!paid;
-  const st=own?'got':locked?'lock':reached?'ready':'future';
-  return `<button class="tile ${side==='f'?'fr':'pd'} ${st} ${r.big?'big':''}" data-s="${side}" data-i="${i}" aria-label="Palier ${i+1}, ${side==='f'?'gratuit':'payant'} : ${r.name}${own?', récupéré':locked?', pass payant':reached?', à récupérer':''}"><span class="ic">${r.icon}</span><span class="nm">${r.name}</span></button>`;}
+function tile(r,i,side){const reached=i<lvl(),own=(side==='f'?got.f:got.p).has(i),locked=side==='p'&&!paid;
+  const st=own?'got':locked?'lock':reached?'ready':'';
+  return `<button class="tile ${side==='f'?'fr':'pd'} ${st} ${r.star?'star':''}" data-s="${side}" data-i="${i}" aria-label="Palier ${i+1}, ${side==='f'?'gratuit':'Pass+'} : ${r.name}${own?', récupéré':locked?', Pass+':reached?', à récupérer':''}"><img src="${IC[r.ic]}" alt=""><span class="nm">${r.name}</span></button>`;}
 function render(){const L=lvl(),rem=pts-L*PER;
   document.getElementById('lvl').textContent=L;
-  document.getElementById('ptsTxt').textContent=`${fmt(pts)} / ${fmt(PER*N)} points`;
-  document.getElementById('nextTxt').textContent=L>=N?'Pass terminé ! Bonus : un coffre en bois par 150 points':`${PER-rem} points avant le palier ${L+1}`;
-  document.getElementById('ptsBar').style.width=Math.min(100,pts/(PER*N)*100)+'%';
-  document.getElementById('days').textContent=`Jour ${day} sur ${DAYS} · fin dans ${DAYS-day} jours`;
-  const rate=day?pts/day:0,eta=rate?Math.ceil((PER*N-pts)/rate):null;
-  document.getElementById('eta').textContent=L>=N?'Bravo, tout est débloqué.':eta&&day+eta<=DAYS?`À ce rythme, tu finis le pass vers le jour ${day+eta}.`:`À ce rythme, tu atteins le palier ${Math.min(N,Math.floor(rate*DAYS/PER))} en fin de saison.`;
-  document.getElementById('buyPass').textContent=paid?'Pass payant actif':'Activer le pass payant (maquette)';document.getElementById('buyPass').disabled=paid;
+  document.getElementById('ptsTxt').textContent=`${fmt(pts)} / ${fmt(PER*N)} points de saison`;
+  document.getElementById('nextTxt').textContent=L>=N?'Pass terminé !':`${PER-rem} points avant le palier ${L+1}`;
+  document.getElementById('pills').innerHTML=[...Array(6)].map((_,k)=>{const lo=k*5*PER,hi=(k+1)*5*PER,f=Math.max(0,Math.min(1,(pts-lo)/(hi-lo)));return `<i title="Paliers ${k*5+1} à ${k*5+5}"><b style="--f:${f*100}%"></b></i>`;}).join('');
+  document.getElementById('days').textContent=`Jour ${day} sur ${DAYS} · encore ${DAYS-day} jours`;
+  const rate=pts/Math.max(1,day),eta=Math.ceil((PER*N-pts)/rate);
+  document.getElementById('eta').textContent=L>=N?'Bravo, tout est débloqué.':day+eta<=DAYS?`À ce rythme, tu finis le pass vers le jour ${day+eta}.`:`À ce rythme, tu atteins le palier ${Math.min(N,Math.floor(rate*DAYS/PER))} en fin de saison.`;
+  const bp=document.getElementById('buyPass');bp.textContent=paid?'Pass+ actif':'Activer le Pass+ (maquette)';bp.disabled=paid;
   document.getElementById('cols').innerHTML=FREE.map((f,i)=>`<div class="col" id="c${i}">${tile(f,i,'f')}<div class="node ${i<L?'done':i===L?'cur':''}" style="--p:${i===L?rem/PER*100:0}%"><b>${i+1}</b></div>${tile(PAID[i],i,'p')}</div>`).join('');
   document.querySelectorAll('.tile').forEach(b=>b.onclick=()=>claim(b.dataset.s,+b.dataset.i));
-  document.getElementById('srcs').innerHTML=SRC.map(s=>`<div class="src"><div class="top"><b>${s.name}</b><span class="pts">+${s.pts}</span></div><small>${s.cap} ${s.per} · ${s.done}/${s.cap} aujourd'hui</small><div class="g"><i style="width:${s.done/s.cap*100}%"></i></div><button class="btn" data-src="${s.id}" ${s.done>=s.cap?'disabled':''}>${s.done>=s.cap?'Fait':'Simuler'}</button></div>`).join('');
-  document.querySelectorAll('[data-src]').forEach(b=>b.onclick=()=>{const s=SRC.find(x=>x.id===b.dataset.src);s.done++;add(s.pts);});
-  document.getElementById('mis').innerHTML=MIS.map((m,i)=>`<button class="mi ${m.done?'done':''}" data-m="${i}" style="text-align:left;cursor:${m.done?'default':'pointer'};color:inherit;font-family:inherit"><span class="ck">${m.done?'✓':''}</span><span>${m.t}</span><span class="r">+75</span></button>`).join('');
-  document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{const m=MIS[+b.dataset.m];if(m.done)return;m.done=true;add(75);});}
+  const q=(o,done,i,kind,sp)=>`<button class="q ${done?'done':''}" data-q="${kind}${i}"><span class="ck">${done?'✓':''}</span><span class="lb">${o.l}</span><span class="rw"><span class="old">+${o.xp} XP · +${o.s} neurones</span><span class="sp">+${sp} saison</span></span></button>`;
+  const allD=dDone.every(Boolean),allW=wDone.every(Boolean);
+  document.getElementById('qday').innerHTML=`<h4>Objectifs du jour <small>3 par jour</small></h4>${QDAY.map((o,i)=>q(o,dDone[i],i,'d',QD_PTS)).join('')}<div class="q bonus ${allD?'done':''}"><span class="ck">${allD?'✓':''}</span><span class="lb">Bonus : les 3 objectifs du jour</span><span class="rw"><span class="sp">+${QD_BONUS} saison</span></span></div>`;
+  document.getElementById('qweek').innerHTML=`<h4>Objectifs de la semaine <small>3 par semaine</small></h4>${QWEEK.map((o,i)=>q(o,wDone[i],i,'w',QW_PTS)).join('')}<div class="q bonus ${allW?'done':''}"><span class="ck">${allW?'✓':''}</span><span class="lb">Bonus : les 3 objectifs de la semaine</span><span class="rw"><span class="sp">+${QW_BONUS} saison</span></span></div>`;
+  document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{const k=b.dataset.q[0],i=+b.dataset.q.slice(1),arr=k==='d'?dDone:wDone;if(arr[i])return;arr[i]=true;
+    let n=k==='d'?QD_PTS:QW_PTS;if(arr.every(Boolean))n+=k==='d'?QD_BONUS:QW_BONUS;add(n);});
+  document.getElementById('mis').innerHTML=MIS.map((t,i)=>`<button class="q ${mDone[i]?'done':''}" data-m="${i}"><span class="ck">${mDone[i]?'✓':''}</span><span class="lb">${t}</span><span class="rw"><span class="sp">+75 saison</span></span></button>`).join('');
+  document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{const i=+b.dataset.m;if(mDone[i])return;mDone[i]=true;add(75);});
+  document.querySelectorAll('.jump button').forEach(b=>b.setAttribute('aria-current',Math.min(5,Math.floor(L/5))===+b.dataset.k));}
 function add(n){const before=lvl();pts=Math.min(pts+n,PER*N+PER*10);render();const after=lvl();
-  if(after>before){toast(`Palier ${after} atteint !`);scrollTo(after);}else toast(`+${n} points`);}
-function scrollTo(i){const c=document.getElementById('c'+Math.max(0,i-2));if(c)c.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest',inline:'start'});}
+  if(after>before){toast(`Palier ${after} atteint ! Une récompense t'attend`);scrollToTier(after-1);}else toast(`+${n} points de saison`);}
+function scrollToTier(i){const c=document.getElementById('c'+Math.max(0,i-1)),sc=document.getElementById('scroller');if(c)sc.scrollTo({left:c.getBoundingClientRect().left-sc.getBoundingClientRect().left+sc.scrollLeft-20,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
 function claim(side,i){const r=(side==='f'?FREE:PAID)[i],set=side==='f'?got.f:got.p;
-  if(set.has(i))return;if(side==='p'&&!paid){toast('Récompense du pass payant');return;}
+  if(set.has(i))return;if(side==='p'&&!paid){toast('Récompense du Pass+');return;}
   if(i>=lvl()){toast(`Atteins le palier ${i+1} pour la débloquer`);return;}
   set.add(i);render();
   const m=document.createElement('div');m.className='modal';m.setAttribute('role','dialog');m.setAttribute('aria-label','Récompense');
-  m.innerHTML=`<div class="gift" style="position:relative;overflow:hidden"><span class="rays"></span><small style="position:relative">Palier ${i+1} · ${side==='f'?'gratuit':'pass payant'}</small><div class="ic" style="position:relative">${r.icon}</div>${r.extra?`<div class="ic" style="position:relative;width:70px;height:70px;margin-top:-20px">${r.extra}</div>`:''}<h4 style="position:relative">${r.name}</h4><p style="position:relative">${DESC[r.type]}</p><button class="btn sun" style="position:relative" id="ok">Super !</button></div>`;
-  document.body.appendChild(m);const c=()=>m.remove();m.querySelector('#ok').onclick=c;m.onclick=e=>{if(e.target===m)c();};m.querySelector('#ok').focus();}
-document.getElementById('buyPass').onclick=()=>{paid=true;render();toast('Pass payant activé : les récompenses déjà atteintes sont à récupérer');};
+  m.innerHTML=`<div class="gift"><span class="rays"></span><small>Palier ${i+1} · ${side==='f'?'gratuit':'Pass+'}</small><img src="${IC[r.ic]}" alt=""><h4>${r.name}</h4><p>${DESC[r.type]}</p><button class="btn sun" id="ok" style="position:relative">Super !</button></div>`;
+  document.body.appendChild(m);const c=()=>m.remove();m.querySelector('#ok').onclick=c;m.onclick=e=>{if(e.target===m)c();};m.addEventListener('keydown',e=>{if(e.key==='Escape')c();});m.querySelector('#ok').focus();}
+document.getElementById('buyPass').onclick=()=>{paid=true;render();toast('Pass+ activé : les récompenses atteintes sont à récupérer');};
 document.getElementById('claimAll').onclick=()=>{let n=0;for(let i=0;i<lvl();i++){if(!got.f.has(i)){got.f.add(i);n++;}if(paid&&!got.p.has(i)){got.p.add(i);n++;}}render();toast(n?`${n} récompense${n>1?'s':''} récupérée${n>1?'s':''}`:'Rien à récupérer pour l\'instant');};
-document.getElementById('day').onclick=()=>{day=Math.min(DAYS,day+1);SRC.forEach(s=>{if(s.id!=='week')s.done=0;});add(90);};
-document.getElementById('week').onclick=()=>{day=Math.min(DAYS,day+7);add(90*7);};
-document.getElementById('reset').onclick=()=>{seed();paid=false;render();scrollTo(lvl());};
-document.getElementById('jump').innerHTML=[1,6,11,16,21,26].map(n=>`<button data-j="${n-1}">Paliers ${n}–${n+4}</button>`).join('');
-document.querySelectorAll('[data-j]').forEach(b=>b.onclick=()=>{const c=document.getElementById('c'+b.dataset.j);c.scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});});
-/* qui finit le pass */
-document.getElementById('sim').innerHTML=[['Assidu','Tout, tous les jours',90,900],['Régulier','4 jours sur 7, le 5 du jour et un peu plus',35,600],['Occasionnel','2 jours sur 7, le 5 du jour',12,300]].map(([w,d,perDay,mis])=>{const tot=perDay*DAYS+mis,p=Math.min(N,Math.floor(tot/PER)),fin=p>=N?Math.ceil((PER*N-mis)/perDay):null;
-  return `<div class="who"><b>${w}</b><span>${d}</span><div class="n">${p>=N?'30 / 30':p+' / 30'}</div><span>${p>=N?`Pass fini vers le jour ${fin}`:'paliers en fin de saison'}</span></div>`;}).join('');
-seed();render();setTimeout(()=>scrollTo(lvl()),300);
+const dayPts=()=>QDAY.length*QD_PTS+QD_BONUS, weekPts=()=>QWEEK.length*QW_PTS+QW_BONUS;
+document.getElementById('day').onclick=()=>{day=Math.min(DAYS,day+1);const left=dDone.filter(x=>!x).length*QD_PTS+(dDone.every(Boolean)?0:QD_BONUS);dDone=[false,false,false];add(left);};
+document.getElementById('week').onclick=()=>{day=Math.min(DAYS,day+7);dDone=[false,false,false];wDone=[false,false,false];add(dayPts()*7+weekPts());};
+document.getElementById('reset').onclick=()=>{seed();render();scrollToTier(lvl());};
+document.getElementById('jump').innerHTML=[0,1,2,3,4,5].map(k=>`<button data-k="${k}">${k*5+1}–${k*5+5}</button>`).join('');
+document.querySelectorAll('.jump button').forEach(b=>b.onclick=()=>scrollToTier(+b.dataset.k*5));
+document.getElementById('chipIc').src=IC.autoc_halloween;
+/* rythmes */
+document.getElementById('sim').innerHTML=[['Assidu','Tous les objectifs, tous les jours',dayPts()+weekPts()/7,900],['Régulier','4 jours sur 7, 2 objectifs par jour, 2 de la semaine',(4/7)*2*QD_PTS+2*QW_PTS/7,600],['Occasionnel','2 jours sur 7, le 5 du jour, 1 objectif de la semaine',(2/7)*QD_PTS+QW_PTS/7,300]].map(([w,d,perDay,mis])=>{const tot=perDay*DAYS+mis,p=Math.min(N,Math.floor(tot/PER)),fin=p>=N?Math.ceil((PER*N-mis)/perDay):null;
+  return `<div class="who"><b>${w}</b><span>${d}</span><div class="n">${p} / 30</div><span>${p>=N?`Pass fini vers le jour ${fin}`:'paliers en fin de saison'}</span></div>`;}).join('');
+seed();render();setTimeout(()=>scrollToTier(lvl()),200);
 </script>
