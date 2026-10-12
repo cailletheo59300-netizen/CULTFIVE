@@ -98,7 +98,7 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 /* ===== états et habillage des cartes ===== */
 .card.prestige .face{background:#120E22}
 .card.prestige .art{position:absolute;inset:0;height:auto!important;margin:0;border-radius:inherit;box-shadow:none;z-index:0}
-.card.prestige .art .subj{inset:-2% -10% 30%;width:120%;height:auto}
+.card.prestige .art .subj{left:-2%;right:auto;top:6%;width:104%;height:40%}
 .card.prestige .subj>circle,.card.prestige .subj>line,.card.prestige .subj>ellipse{display:none}
 .card.prestige .art::after{content:"";position:absolute;inset:0;mix-blend-mode:color-dodge;opacity:.55;pointer-events:none;
   background:conic-gradient(from calc(var(--holo,50%) * 3.6deg) at 50% 40%,#ff6a88,#f6c744,#3fd0a0,#4a9bff,#b66bff,#ff6a88);animation:holo 6s linear infinite}
@@ -108,7 +108,7 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 .card.prestige .hd .no{color:#fff}
 .card.prestige .band{margin-top:auto}
 .card.prestige .face{display:flex;flex-direction:column}
-.card.prestige .pplate{position:absolute;left:0;right:0;bottom:0;height:52%;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,250,240,0),rgba(255,250,240,.92) 24%,rgba(255,250,240,.96))}
+.card.prestige .pplate{position:absolute;left:0;right:0;bottom:0;height:58%;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,250,240,0),rgba(255,250,240,.94) 11%,rgba(255,250,240,.97))}
 
 .card.prestige .stamp{position:absolute;right:calc(var(--w)*.05);top:calc(var(--w)*.13);z-index:3;font:900 calc(var(--w)*.032) var(--ui);letter-spacing:.12em;color:#1B1030;background:linear-gradient(90deg,#FFE9A6,#F6C2F0,#A8E6FF);border-radius:99px;padding:.35em .8em}
 .card.master{box-shadow:0 0 0 calc(var(--w)*.012) #7A4A08,0 0 0 calc(var(--w)*.03) #E9C566,0 0 0 calc(var(--w)*.036) #7A4A08,0 0 calc(var(--w)*.12) rgba(233,197,102,.65),0 18px 32px -14px rgba(25,15,40,.55)}
@@ -268,6 +268,11 @@ function dressed(p,c,st,o={}){
   return h;}
 const showcase=(p,c,st,o={})=>`<div class="showcase">${dressed(p,c,st,o)}${st.title?`<span class="ribbon">${st.title}</span>`:''}${o.socle!==false?`<span class="socle ${st.socle||'none'}"></span>`:''}</div>`;
 
+/* Prestige : chaque dessin est réduit juste assez pour ne jamais toucher le texte (contrôlé sur les 525 cartes) */
+function fitPrestige(root){(root.querySelectorAll?root:document).querySelectorAll('.card.prestige').forEach(c=>{const sv=c.querySelector('.art .subj'),g=sv&&sv.querySelector(':scope > g'),bd=c.querySelector('.band');if(!g||!bd)return;
+  sv.style.transform='';const a=g.getBoundingClientRect(),s=sv.getBoundingClientRect(),lim=bd.getBoundingClientRect().top-3;
+  if(a.height&&a.bottom>lim){const k=Math.max(.5,(lim-s.top)/(a.bottom-s.top));sv.style.transformOrigin='50% 0';sv.style.transform=`scale(${k.toFixed(3)})`;}});}
+const fit0=fit;fit=root=>{fit0(root);fitPrestige(root);};
 /* ---------- feuillets : une page de l'album = 1 ou plusieurs feuillets de 9 cartes ---------- */
 const PORDER=['history.antiquity','history.middle_ages','history.modern','history.contemporary'];
 const pagesOf=d=>PAGES.filter(p=>p.dom===d).sort((a,b)=>(PORDER.indexOf(a.key)+1||99)-(PORDER.indexOf(b.key)+1||99));

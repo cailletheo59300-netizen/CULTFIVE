@@ -222,8 +222,9 @@ function medal(kind){
   if(kind==='topo')m+=[70,76,83,91].map((r,i)=>`<path d="M${100-r},84 C${100-r},${84-r*.9} ${100+r*.9},${84-r} ${100+r},${84-r*.1} C${100+r*1.05},${84+r*.7} ${100-r*.6},${84+r*1.02} ${100-r},84 Z" fill="none" stroke="${INK}" stroke-width=".6" opacity="${.32-i*.05}"/>`).join('');
   return m;}
 const ARTBG={common:['#FFF7E6','#E9D7B9',INK,.2],rare:['#F6FAFF','#C9D8EA','#2F5F95',.22],epic:['#5B3FA0','#1B1035','#C8A8FF',.3],legend:['#FFF6D6','#E9C566','#9C6412',.25]};
+let CUID=0;/* identifiant unique par dessin : deux cartes de même numéro peuvent être affichées ensemble */
 function artSVG(page,n,rarity='common'){
-  const id='c'+n, dom=DOMS[page.dom], [g0,g1,lc,lo]=ARTBG[rarity];
+  const id='c'+n+'u'+(++CUID)+'_', dom=DOMS[page.dom], [g0,g1,lc,lo]=ARTBG[rarity];
   let extra='';
   if(rarity==='epic'){let r=11;extra=[...Array(34)].map(()=>{r=(r*9301+49297)%233280;const x=r/233280*200;r=(r*9301+49297)%233280;const y=r/233280*160;return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(.5+(r%4)*.3).toFixed(2)}" fill="#FFE9A6" opacity=".8"/>`}).join('');}
   if(rarity==='legend')extra=[...Array(24)].map((_,i)=>{const a1=i/24*Math.PI*2,a2=a1+Math.PI/24;return `<path d="M100,84 L${(100+Math.cos(a1)*200).toFixed(1)},${(84+Math.sin(a1)*200).toFixed(1)} L${(100+Math.cos(a2)*200).toFixed(1)},${(84+Math.sin(a2)*200).toFixed(1)} Z" fill="#FFF3C4" opacity=".55"/>`}).join('');
