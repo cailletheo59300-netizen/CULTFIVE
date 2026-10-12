@@ -2,6 +2,7 @@ import SwiftUI
 import CultFiveCore
 
 /// Navigation principale : Jouer · 5 DU JOUR · Amis · Profil. Le 5 du jour est l'objet central.
+/// Dans les builds de test, l'onglet Album s'ajoute à côté de Jouer (aperçu, collection simulée).
 struct MainTabView: View {
     @Environment(AppModel.self) private var model
     /// Hauteur réelle de la barre flottante, mesurée (elle varie avec la taille du texte et l'appareil).
@@ -16,6 +17,9 @@ struct MainTabView: View {
         @Bindable var model = model
         TabView(selection: $model.tab) {
             tab(PlayHomeView(), .play)
+            if AppChannel.isTestBuild {
+                tab(AlbumView(), .album)
+            }
             tab(DailyHomeView(), .daily)
             tab(FriendsView(), .friends)
             tab(ProfileView(), .profile)
@@ -52,6 +56,9 @@ struct CultTabBar: View {
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
             item(.play, title: "Jouer", symbol: "shuffle", selectedSymbol: "shuffle")
+            if AppChannel.isTestBuild {
+                item(.album, title: "Album", symbol: "books.vertical", selectedSymbol: "books.vertical.fill")
+            }
             centerItem
             item(.friends, title: "Amis", symbol: "person.2", selectedSymbol: "person.2.fill")
             item(.profile, title: "Profil", symbol: "person.crop.circle", selectedSymbol: "person.crop.circle.fill")

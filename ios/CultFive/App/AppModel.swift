@@ -16,7 +16,8 @@ final class AppModel {
         case updateRequired
     }
 
-    enum Tab: Hashable { case play, daily, friends, profile }
+    /// `album` : aperçu de l'album, seulement dans les builds de test (TestFlight, Xcode).
+    enum Tab: Hashable { case play, album, daily, friends, profile }
 
     var phase: Phase = .launching
     var tab: Tab = .daily
