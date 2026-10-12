@@ -535,7 +535,7 @@ struct NeuronesAmount: View {
     var body: some View {
         HStack(spacing: 3) {
             NeuroneIcon().frame(width: size, height: size)
-            Text(amount.formatted(.number.locale(Locale(identifier: "fr_FR")))).monospacedDigit()
+            Text(amount >= AlbumStore.unlimited ? "∞" : amount.formatted(.number.locale(Locale(identifier: "fr_FR")))).monospacedDigit()
         }
         .font(.system(.subheadline, design: .rounded).weight(.heavy))
         .foregroundStyle(color)

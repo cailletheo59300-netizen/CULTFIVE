@@ -132,7 +132,7 @@ struct CardDetailView: View {
     }
 
     private var prestigeButton: some View {
-        Button("Jeton (\(store.tokens))") {
+        Button(store.admin ? "Jeton (∞)" : "Jeton (\(store.tokens))") {
             if store.applyPrestige(card) { Haptics.success() }
         }
         .font(.system(.footnote, design: .rounded).weight(.heavy))

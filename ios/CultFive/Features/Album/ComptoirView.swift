@@ -152,7 +152,7 @@ struct ComptoirView: View {
                        fill: .brand, text: .white, enabled: store.neurones >= AlbumStore.packPrice) {
                 if let pulls = store.buyPack(series, useTicket: false) { onOpen(PackOpening(series: series, pulls: pulls)) }
             }
-            ShopButton(title: "Utiliser un ticket", price: store.tickets > 1 ? "\(store.tickets) restants" : "\(store.tickets) restant",
+            ShopButton(title: "Utiliser un ticket", price: store.admin ? "∞" : (store.tickets > 1 ? "\(store.tickets) restants" : "\(store.tickets) restant"),
                        icon: "ticket_pochette", fill: .sun, text: .inkFixed, enabled: store.tickets > 0) {
                 if let pulls = store.buyPack(series, useTicket: true) { onOpen(PackOpening(series: series, pulls: pulls)) }
             }
@@ -183,7 +183,7 @@ struct ComptoirView: View {
                 }
             }
             if store.goldPacks > 0 {
-                ShopButton(title: "Ouvrir celle du pass", price: "\(store.goldPacks)", icon: "doree", fill: .sun, text: .inkFixed, enabled: true) {
+                ShopButton(title: "Ouvrir celle du pass", price: store.admin ? "∞" : "\(store.goldPacks)", icon: "doree", fill: .sun, text: .inkFixed, enabled: true) {
                     if let pulls = store.openOwnedGoldPack() { onOpen(PackOpening(series: catalog.series[0], pulls: pulls, gold: true)) }
                 }
             }
@@ -245,7 +245,7 @@ struct ComptoirView: View {
             HStack(spacing: Space.s) {
                 AlbumImage(kind: .pass, name: "coffret").frame(width: 48, height: 48)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(store.coffrets > 0 ? "\(store.coffrets) coffret\(store.coffrets > 1 ? "s" : "") à choisir" : "Aucun coffret pour l'instant")
+                    Text(store.admin ? "Coffrets illimités" : store.coffrets > 0 ? "\(store.coffrets) coffret\(store.coffrets > 1 ? "s" : "") à choisir" : "Aucun coffret pour l'instant")
                         .font(.system(.subheadline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink).lineLimit(1)
                     Text("Tu choisis un thème et tu vois les 3 cartes avant : pas de hasard.")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
@@ -286,7 +286,7 @@ private struct WalletTile: View {
             AlbumImage(kind: .pass, name: icon)
                 .frame(width: 50, height: 50)
             VStack(alignment: .leading, spacing: 0) {
-                Text(value.formatted(.number.locale(Locale(identifier: "fr_FR"))))
+                Text(value >= AlbumStore.unlimited ? "∞" : value.formatted(.number.locale(Locale(identifier: "fr_FR"))))
                     .font(.system(.title2, design: .rounded).weight(.black))
                     .monospacedDigit()
                     .foregroundStyle(Color.inkFixed)

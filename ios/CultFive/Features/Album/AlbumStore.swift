@@ -135,21 +135,85 @@ final class AlbumStore {
     /// Missions de saison remplies (simulées).
     var missionsDone: Set<Int> = []
 
+    /// Mode admin (réservé aux pseudos de `adminHandles`) : une collection à part, tout illimité.
+    /// En le quittant, on retrouve la collection du joueur telle qu'il l'avait laissée.
+    private(set) var admin = UserDefaults.standard.bool(forKey: AlbumStore.adminFlagKey)
+    /// Admin : rareté imposée à la prochaine pochette (pour voir chaque animation).
+    var forcedRarity: CardRarity?
+
+    static let adminHandles: Set<String> = ["rudyc14ezz"]
+    static func isAdmin(handle: String?) -> Bool { handle.map { adminHandles.contains($0.lowercased()) } ?? false }
+
     private let catalog = AlbumCatalog.shared
-    private static let key = "album.preview.v1"
+    private static let normalKey = "album.preview.v1"
+    private static let adminKey = "album.preview.admin.v1"
+    private static let adminFlagKey = "album.preview.admin"
+    private var key: String { admin ? Self.adminKey : Self.normalKey }
+    /// Réserves « illimitées » du mode admin (affichées ∞).
+    static let unlimited = 999_999
 
     init() {
-        if let data = UserDefaults.standard.data(forKey: Self.key), let saved = try? JSONDecoder().decode(Saved.self, from: data) {
-            owned = saved.owned; neurones = saved.neurones; tickets = saved.tickets; tokens = saved.tokens
-            goldPacks = saved.goldPacks; goldBought = saved.goldBought; coffrets = saved.coffrets; pity = saved.pity
-            unlocked = saved.unlocked; back = saved.back; cover = saved.cover; points = saved.points; passPlus = saved.passPlus
-            claimedFree = saved.claimedFree; claimedPaid = saved.claimedPaid; packsOpened = saved.packsOpened
-            coffretsOpened = saved.coffretsOpened
-            credited = saved.credited ?? []
-            missionsDone = saved.missionsDone ?? []
+        load()
+    }
+
+    private func decode(_ key: String) -> Saved? {
+        guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
+        return try? JSONDecoder().decode(Saved.self, from: data)
+    }
+
+    private func restore(_ saved: Saved) {
+        owned = saved.owned; neurones = saved.neurones; tickets = saved.tickets; tokens = saved.tokens
+        goldPacks = saved.goldPacks; goldBought = saved.goldBought; coffrets = saved.coffrets; pity = saved.pity
+        unlocked = saved.unlocked; back = saved.back; cover = saved.cover; points = saved.points; passPlus = saved.passPlus
+        claimedFree = saved.claimedFree; claimedPaid = saved.claimedPaid; packsOpened = saved.packsOpened
+        coffretsOpened = saved.coffretsOpened
+        credited = saved.credited ?? []
+        missionsDone = saved.missionsDone ?? []
+    }
+
+    private func resetFields() {
+        neurones = 1_450; tickets = 5; tokens = 1; goldPacks = 0; goldBought = false; coffrets = 0; pity = 26
+        unlocked = ["dos.classique", "couv.classique"]; back = "classique"; cover = "classique"
+        points = 1_240; passPlus = false; claimedFree = []; claimedPaid = []; packsOpened = 0; coffretsOpened = 0
+        credited = []; missionsDone = []
+    }
+
+    private func load() {
+        if let saved = decode(key) {
+            restore(saved)
+        } else if admin {
+            // Première fois en admin : on part de la collection du joueur, puis on donne tout.
+            if let saved = decode(Self.normalKey) { restore(saved) } else { resetFields(); seed() }
+            grantAdmin()
         } else {
+            resetFields()
             seed()
         }
+    }
+
+    /// Active ou quitte le mode admin. Chaque mode garde sa propre collection.
+    func setAdmin(_ on: Bool) {
+        guard on != admin else { return }
+        save()
+        admin = on
+        UserDefaults.standard.set(on, forKey: Self.adminFlagKey)
+        forcedRarity = nil
+        load()
+    }
+
+    /// Admin : réserves illimitées, Pass+ actif et tous les paliers, tout l'habillage.
+    private func grantAdmin() {
+        neurones = Self.unlimited; tickets = Self.unlimited; tokens = Self.unlimited
+        goldPacks = Self.unlimited; coffrets = Self.unlimited; goldBought = false
+        passPlus = true
+        points = Self.tierPoints * Self.tiers
+        for item in Cosmetic.frames { unlocked.insert("cadre.\(item.id)") }
+        for item in Cosmetic.finishes { unlocked.insert("finition.\(item.id)") }
+        for item in Cosmetic.titles { unlocked.insert("titre.\(item.id)") }
+        for item in Cosmetic.backs { unlocked.insert("dos.\(item.id)") }
+        for item in Cosmetic.covers { unlocked.insert("couv.\(item.id)") }
+        unlocked.insert("cadre.anime")
+        save()
     }
 
     /// Collection de départ : environ un tiers des communes, quelques rares et épiques, aucune légendaire.
@@ -175,7 +239,7 @@ final class AlbumStore {
                           coffrets: coffrets, pity: pity, unlocked: unlocked, back: back, cover: cover, points: points, passPlus: passPlus,
                           claimedFree: claimedFree, claimedPaid: claimedPaid, packsOpened: packsOpened,
                           coffretsOpened: coffretsOpened, credited: credited, missionsDone: missionsDone)
-        if let data = try? JSONEncoder().encode(saved) { UserDefaults.standard.set(data, forKey: Self.key) }
+        if let data = try? JSONEncoder().encode(saved) { UserDefaults.standard.set(data, forKey: key) }
     }
 
     // MARK: - Lecture
@@ -195,6 +259,11 @@ final class AlbumStore {
         if gold && !rarities.contains(.legend) { rarities.sort(); rarities[4] = .legend }
         pity += 1
         if rarities.contains(.legend) { pity = 0 } else if pity >= Self.pity { rarities.sort(); rarities[4] = .legend; pity = 0 }
+        if let forced = forcedRarity {
+            rarities.sort()
+            rarities[4] = forced
+            forcedRarity = nil
+        }
         rarities.sort()
         var picked: Set<String> = []
         let pulls = rarities.map { rarity -> Pull in
@@ -254,9 +323,9 @@ final class AlbumStore {
     }
 
     func openCoffret(_ series: PackSeries) -> [Pull] {
-        guard coffrets > 0 else { return [] }
+        guard admin || coffrets > 0 else { return [] }
         let pulls = coffretCards(series).map { receive($0, fromCoffret: true) }
-        coffrets -= 1
+        if !admin { coffrets -= 1 }
         coffretsOpened += 1
         save()
         return pulls
@@ -265,6 +334,7 @@ final class AlbumStore {
     // MARK: - Achats en neurones (aucun argent réel ici)
 
     func buyPack(_ series: PackSeries, useTicket: Bool) -> [Pull]? {
+        if admin { return openPack(series) }
         if useTicket {
             guard tickets > 0 else { return nil }
             tickets -= 1
@@ -276,22 +346,24 @@ final class AlbumStore {
     }
 
     func buyGoldPack() -> [Pull]? {
-        guard !goldBought, neurones >= Self.goldPackPrice, let series = catalog.series.first else { return nil }
+        guard let series = catalog.series.first else { return nil }
+        if admin { return openPack(series, gold: true) }
+        guard !goldBought, neurones >= Self.goldPackPrice else { return nil }
         neurones -= Self.goldPackPrice
         goldBought = true
         return openPack(series, gold: true)
     }
 
     func openOwnedGoldPack() -> [Pull]? {
-        guard goldPacks > 0, let series = catalog.series.first else { return nil }
-        goldPacks -= 1
+        guard admin || goldPacks > 0, let series = catalog.series.first else { return nil }
+        if !admin { goldPacks -= 1 }
         return openPack(series, gold: true)
     }
 
     /// Fabriquer une carte manquante, depuis sa case vide.
     func craft(_ card: AlbumCard) -> Bool {
-        guard owned[card.id] == nil, neurones >= card.rarity.craftCost else { return false }
-        neurones -= card.rarity.craftCost
+        guard owned[card.id] == nil, admin || neurones >= card.rarity.craftCost else { return false }
+        if !admin { neurones -= card.rarity.craftCost }
         owned[card.id] = OwnedCard()
         save()
         return true
@@ -301,8 +373,8 @@ final class AlbumStore {
 
     /// Pose un jeton Prestige : définitif.
     func applyPrestige(_ card: AlbumCard) -> Bool {
-        guard tokens > 0, var state = owned[card.id], !state.prestige else { return false }
-        tokens -= 1
+        guard admin || tokens > 0, var state = owned[card.id], !state.prestige else { return false }
+        if !admin { tokens -= 1 }
         state.prestige = true
         owned[card.id] = state
         save()
@@ -400,12 +472,27 @@ final class AlbumStore {
     }
 
     func reset() {
-        UserDefaults.standard.removeObject(forKey: Self.key)
-        neurones = 1_450; tickets = 5; tokens = 1; goldPacks = 0; goldBought = false; coffrets = 0; pity = 26
-        unlocked = ["dos.classique", "couv.classique"]; back = "classique"; cover = "classique"
-        points = 1_240; passPlus = false; claimedFree = []; claimedPaid = []; packsOpened = 0; coffretsOpened = 0
-        credited = []; missionsDone = []
+        UserDefaults.standard.removeObject(forKey: key)
+        resetFields()
         seed()
+        if admin { grantAdmin() } else { save() }
+    }
+
+    // MARK: - Outils admin
+
+    /// Les 525 cartes dans l'album (brillantes si demandé), sans toucher à l'habillage déjà posé.
+    func ownAll(shiny: Bool) {
+        for card in catalog.cards {
+            var state = owned[card.id] ?? OwnedCard()
+            if shiny { state.shiny = true }
+            owned[card.id] = state
+        }
+        save()
+    }
+
+    /// Album vide, pour retester les ouvertures depuis zéro.
+    func emptyAlbum() {
+        owned = [:]
         save()
     }
 }

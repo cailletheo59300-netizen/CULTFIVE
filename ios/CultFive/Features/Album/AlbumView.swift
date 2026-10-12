@@ -46,7 +46,9 @@ struct AlbumView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     NeuronesAmount(amount: store.neurones, size: 24)
                 }
-                ToolbarItem(placement: .topBarTrailing) { testMenu }
+                ToolbarItem(placement: .topBarTrailing) {
+                    if AlbumStore.isAdmin(handle: app.profile?.handle) { adminMenu }
+                }
             }
             .navigationDestination(for: AlbumRoute.self) { route in
                 switch route {
@@ -69,7 +71,7 @@ struct AlbumView: View {
         .fullScreenCover(item: $opening) { open in
             PackOpeningView(opening: open, back: store.back) { opening = nil }
         }
-        .confirmationDialog("Repartir de la collection de départ ?", isPresented: $confirmReset, titleVisibility: .visible) {
+        .confirmationDialog("Repartir de zéro en mode admin ?", isPresented: $confirmReset, titleVisibility: .visible) {
             Button("Réinitialiser", role: .destructive) { store.reset() }
         }
     }
@@ -77,7 +79,7 @@ struct AlbumView: View {
     private var shortcuts: some View {
         HStack(spacing: Space.s) {
             NavigationLink(value: AlbumRoute.comptoir) {
-                ShortcutTile(title: "Comptoir", detail: store.tickets > 0 ? "\(store.tickets) ticket\(store.tickets > 1 ? "s" : "")" : "Pochettes",
+                ShortcutTile(title: "Comptoir", detail: store.admin ? "∞ tickets" : store.tickets > 0 ? "\(store.tickets) ticket\(store.tickets > 1 ? "s" : "")" : "Pochettes",
                              icon: "ticket_pochette", tint: Color(hex: 0xF0588F))
             }
             NavigationLink(value: AlbumRoute.pass) {
@@ -88,20 +90,49 @@ struct AlbumView: View {
         .buttonStyle(.row)
     }
 
-    private var testMenu: some View {
+    /// Menu admin, réservé aux pseudos admin : un interrupteur, et les outils quand il est activé.
+    /// Désactivé, l'album redevient celui d'un joueur normal (sa propre collection).
+    private var adminMenu: some View {
         Menu {
-            Section("Aperçu TestFlight") {
-                Button { store.unlockEverything() } label: { Label("Tout débloquer", systemImage: "sparkles") }
-                Button { store.simulateMastery() } label: { Label("Simuler des chefs-d'œuvre", systemImage: "star.fill") }
-                Button { store.addPoints(AlbumStore.tierPoints) } label: { Label("+1 palier de pass", systemImage: "arrow.up.circle") }
-                Button(role: .destructive) { confirmReset = true } label: { Label("Réinitialiser", systemImage: "arrow.counterclockwise") }
+            Toggle(isOn: Binding(get: { store.admin }, set: { on in withAnimation(Motion.standard) { store.setAdmin(on) } })) {
+                Label("Mode admin", systemImage: "crown.fill")
+            }
+            if store.admin {
+                Section("Cartes") {
+                    Button { store.ownAll(shiny: false) } label: { Label("Toutes les cartes", systemImage: "square.grid.3x3.fill") }
+                    Button { store.ownAll(shiny: true) } label: { Label("Toutes en brillantes", systemImage: "sparkles") }
+                    Button { store.simulateMastery() } label: { Label("Quelques chefs-d'œuvre", systemImage: "star.fill") }
+                    Button(role: .destructive) { store.emptyAlbum() } label: { Label("Vider l'album", systemImage: "trash") }
+                }
+                Section("Prochaine pochette") {
+                    ForEach([CardRarity.legend, .epic, .rare], id: \.self) { rarity in
+                        Button {
+                            store.forcedRarity = rarity
+                        } label: {
+                            if store.forcedRarity == rarity {
+                                Label("Avec une \(rarity.label.lowercased())", systemImage: "checkmark")
+                            } else {
+                                Text("Avec une \(rarity.label.lowercased())")
+                            }
+                        }
+                    }
+                }
+                Section {
+                    Button(role: .destructive) { confirmReset = true } label: { Label("Réinitialiser l'admin", systemImage: "arrow.counterclockwise") }
+                }
             }
         } label: {
-            Image(systemName: "wand.and.stars")
-                .font(.system(.body, design: .rounded).weight(.bold))
-                .foregroundStyle(Color.brand)
+            HStack(spacing: 4) {
+                Image(systemName: store.admin ? "crown.fill" : "wand.and.stars")
+                if store.admin { Text("ADMIN").font(.system(size: 11, weight: .black, design: .rounded)) }
+            }
+            .font(.system(.body, design: .rounded).weight(.bold))
+            .foregroundStyle(store.admin ? Color.inkFixed : Color.brand)
+            .padding(.horizontal, store.admin ? 8 : 0)
+            .padding(.vertical, store.admin ? 4 : 0)
+            .background(store.admin ? Color.sun : Color.clear, in: Capsule())
         }
-        .accessibilityLabel("Outils de test de l'album")
+        .accessibilityLabel(store.admin ? "Menu admin, mode admin activé" : "Menu admin")
     }
 }
 
