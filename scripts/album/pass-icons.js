@@ -28,11 +28,32 @@ const star5=(R,r)=>{const s=new THREE.Shape();for(let i=0;i<=10;i++){const a=Mat
 const VIOLET=0x7B5CFF,DEEP=0x3A1FB8,SUN=0xFFD23F,GOLD=0xFFC933;
 
 /* ---------- les récompenses ---------- */
-const TPACK=()=>ticket(0x7B5CFF,'#C9BCFF','#24127A',(c,x,y)=>{ // ticket de pochette : un petit sachet
-  c.fillStyle='#fff';rr(c,x-46,y-70,92,140,12);c.fill();c.fillStyle='#7B5CFF';rr(c,x-38,y-58,76,116,8);c.fill();
-  c.fillStyle='#FFD23F';c.beginPath();for(let i=0;i<9;i++){c.rect(x-40+i*10,y-74,6,8);c.rect(x-40+i*10,y+66,6,8);}c.fill();
-  c.strokeStyle='#fff';c.lineWidth=7;c.lineCap='round';for(let i=0;i<4;i++){c.beginPath();c.moveTo(x-18+i*12,y-20);c.lineTo(x-18+i*12,y+22);c.stroke();}
-  c.strokeStyle='#FFD23F';c.beginPath();c.moveTo(x-26,y+14);c.lineTo(x+26,y-12);c.stroke();});
+/* ticket de pochette : une petite pochette violette Brainlix, bords dentelés, grand point d'interrogation soleil */
+function TPACK(){const g=new THREE.Group();const W=1.3,H=1.9,n=10;
+  const sh=new THREE.Shape();sh.moveTo(-W/2,-H/2);
+  for(let i=0;i<n;i++){const x=-W/2+(i+.5)*W/n;sh.lineTo(x,-H/2-.07);sh.lineTo(-W/2+(i+1)*W/n,-H/2);}
+  sh.lineTo(W/2,H/2);for(let i=n-1;i>=0;i--){const x=-W/2+(i+.5)*W/n;sh.lineTo(x,H/2+.07);sh.lineTo(-W/2+i*W/n,H/2);}sh.lineTo(-W/2,-H/2);
+  const tex=canvasTex(390,570,(c,w,h)=>{const gr=c.createLinearGradient(0,0,w,h);gr.addColorStop(0,'#7B5CFF');gr.addColorStop(.5,'#5532F0');gr.addColorStop(1,'#2A1490');c.fillStyle=gr;c.fillRect(0,0,w,h);
+    // bandes serties en haut et en bas
+    c.fillStyle='rgba(255,255,255,.16)';c.fillRect(0,0,w,62);c.fillRect(0,h-62,w,62);c.strokeStyle='rgba(0,0,0,.18)';c.lineWidth=3;for(let x=12;x<w;x+=16){c.beginPath();c.moveTo(x,8);c.lineTo(x,54);c.moveTo(x,h-54);c.lineTo(x,h-8);c.stroke();}
+    c.setLineDash([12,9]);c.strokeStyle='rgba(255,255,255,.8)';c.lineWidth=4;c.beginPath();c.moveTo(10,66);c.lineTo(w-10,66);c.stroke();c.setLineDash([]);
+    // reflet
+    c.fillStyle='rgba(255,255,255,.14)';c.beginPath();c.moveTo(60,0);c.lineTo(140,0);c.lineTo(20,h);c.lineTo(-60,h);c.closePath();c.fill();
+    // médaillon et point d'interrogation
+    c.fillStyle='rgba(20,10,70,.35)';c.beginPath();c.arc(w/2,h*.53,128,0,Math.PI*2);c.fill();
+    c.fillStyle='#FFFFFF';c.beginPath();c.arc(w/2,h*.52,122,0,Math.PI*2);c.fill();
+    c.fillStyle='#FFB800';c.beginPath();c.arc(w/2,h*.52,110,0,Math.PI*2);c.fill();
+    // le point d'interrogation, tracé en gros traits (pas de police) : contour violet puis blanc
+    const q=(lw,col)=>{c.strokeStyle=col;c.fillStyle=col;c.lineWidth=lw;c.lineCap='round';c.lineJoin='round';const cx=w/2,cy=h*.5;
+      c.beginPath();c.arc(cx,cy-38,50,Math.PI*1.08,Math.PI*2.25);c.quadraticCurveTo(cx+8,cy+8,cx,cy+34);c.stroke();
+      c.beginPath();c.arc(cx,cy+86,lw*.6,0,Math.PI*2);c.fill();};
+    q(60,'#2A1490');q(36,'#FFFFFF');
+    c.font='900 30px Nunito, Arial Black, sans-serif';c.textAlign='center';c.textBaseline='middle';c.fillStyle='#fff';c.fillText('B R A I N L I X',w/2,112);});
+  tex.repeat.set(1/W,1/(H+.14));tex.offset.set(.5,.5-.07/(H+.14)+.035);
+  const side=phys(0x4B2FD6,{roughness:.35});const front=new THREE.MeshStandardMaterial({map:tex,roughness:.3,metalness:.1,emissive:0xffffff,emissiveMap:tex,emissiveIntensity:.25});
+  g.add(new THREE.Mesh(extrude(sh,.12,.05),side));const face=new THREE.Mesh(new THREE.ShapeGeometry(sh,24),front);face.position.z=.06+.05+.002;g.add(face);
+  [[.85,.95,.13],[-.9,-.7,.1]].forEach(([x,y,s])=>{const sp=spark(s,0xFFD23F);sp.position.set(x,y,.25);g.add(sp);});
+  g.rotation.set(-.08,-.38,.12);return {obj:g,cam:[0,.1,4.6,0,0,0]};}
 function JETON(){const g=new THREE.Group();
   const tex=canvasTex(512,512,(c,W,H)=>{const gr=c.createConicGradient?c.createConicGradient(0,W/2,H/2):null;
     if(gr){['#FF6A88','#F6C744','#3FD0A0','#4A9BFF','#B66BFF','#FF6A88'].forEach((col,i)=>gr.addColorStop(i/5,col));c.fillStyle=gr;}else c.fillStyle='#B66BFF';
@@ -149,24 +170,8 @@ function FLAMME(){const g=new THREE.Group();
   g.rotation.y=-.35;return {obj:g,cam:[0,.2,4.6,0,0,0]};}
 async function COMBO(a,b,sb=.62,ob=[.62,-.55,.35]){const A=await a(),B=await b();const g=new THREE.Group();A.obj.position.x=-.25;g.add(A.obj);B.obj.scale.setScalar(sb);B.obj.position.set(...ob);g.add(B.obj);return {obj:g,cam:[0,.2,4.8,0,0,0]};}
 
-/* le neurone, monnaie de l'album : un petit cerveau rose tout rond, en lobes, avec un éclat */
-function NEURONE(){const g=new THREE.Group();const gyr=phys(0xF7579A,{roughness:.36}),deep=phys(0x9E1F55,{roughness:.55}),back=phys(0xE04A8A,{roughness:.4});
-  let k=5;const rnd=()=>{k=(k*16807)%2147483647;return (k-1)/2147483646;};
-  // cerveau de profil : un ovale sombre couvert de circonvolutions roses bien rondes (des boudins sinueux)
-  const A=[1.1,.8,.7],O=new THREE.Vector3(0,.12,0);
-  const core=new THREE.Mesh(new THREE.SphereGeometry(1,64,40),deep);core.scale.set(A[0]*.93,A[1]*.93,A[2]*.93);core.position.copy(O);g.add(core);
-  const surf=(u,v)=>{const cu=Math.cos(u),su=Math.sin(u),cv=Math.cos(v),sv=Math.sin(v);return new THREE.Vector3(O.x+A[0]*cv*su*.9,O.y+A[1]*sv*.9,O.z+A[2]*cv*cu*.9);};
-  for(let c=0;c<64;c++){let u=-Math.PI+rnd()*Math.PI*2,v=-1.2+rnd()*2.4,dir=rnd()*Math.PI*2;const pts=[];
-    for(let t=0;t<16;t++){pts.push(surf(u,v));dir+=(rnd()-.5)*1.6;u+=Math.cos(dir)*.12;v+=Math.sin(dir)*.1;v=Math.max(-1.35,Math.min(1.35,v));}
-    g.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),80,.115,14,false),gyr));
-    [pts[0],pts[pts.length-1]].forEach(p=>{const cap=new THREE.Mesh(new THREE.SphereGeometry(.115,16,12),gyr);cap.position.copy(p);g.add(cap);});}
-  const cer=new THREE.Mesh(new THREE.SphereGeometry(1,48,32),back);cer.scale.set(.4,.27,.38);cer.position.set(.66,-.6,-.1);g.add(cer);
-  const stem=new THREE.Mesh(new THREE.CylinderGeometry(.16,.11,.55,24),back);stem.position.set(.2,-.8,-.12);stem.rotation.z=.28;g.add(stem);
-  [[1.32,.85,.15],[-1.35,-.55,.11]].forEach(([x,y,s])=>{const sp=spark(s,0xFFD23F);sp.position.set(x,y,.5);g.add(sp);});
-  g.rotation.set(.1,-.2,0);return {obj:g,cam:[0,0,4.3,0,0,0]};}
-
+/* le neurone (monnaie de l'album) est un dessin, pas une icône 3D : scripts/album/neurone.svg */
 window.PASS_ICONS={
-  neurone:NEURONE,
   ticket_pochette:TPACK, jeton:JETON,
   dos_soleil:()=>PDOS('soleil'), dos_nuit:()=>PDOS('nuit'), dos_domaines:()=>PDOS('domaines'), dos_or:()=>PDOS('or'),
   cadre_citrouille:()=>CADRE('citrouille'), cadre_vitrail:()=>CADRE('vitrail'), cadre_nuit:()=>CADRE('nuit'), cadre_marbre:()=>CADRE('marbre'), cadre_toile:()=>CADRE('toile'),

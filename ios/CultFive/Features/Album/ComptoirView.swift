@@ -55,7 +55,7 @@ struct ComptoirView: View {
         HStack(spacing: Space.s) {
             WalletTile(icon: "neurone", value: store.neurones, label: "Neurones",
                        tint: Color(hex: 0xF0588F), fill: [Color(hex: 0xFFF0F6), Color(hex: 0xFFE0EC)])
-            WalletTile(icon: "ticket_pochette", value: store.tickets, label: store.tickets > 1 ? "Tickets de pochette" : "Ticket de pochette",
+            WalletTile(icon: "ticket_pochette", value: store.tickets, label: store.tickets > 1 ? "Tickets" : "Ticket",
                        tint: .brand, fill: [Color(hex: 0xF3EFFF), Color(hex: 0xE6DEFF)])
         }
     }
@@ -290,13 +290,15 @@ private struct WalletTile: View {
                     .font(.system(.title2, design: .rounded).weight(.black))
                     .monospacedDigit()
                     .foregroundStyle(Color.inkFixed)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
                     .contentTransition(.numericText())
                 Text(label)
-                    .font(.system(.caption2, design: .rounded).weight(.heavy))
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
                     .foregroundStyle(tint)
+                    .lineLimit(1)
+                    .fixedSize()
             }
-            .lineLimit(1)
-            .minimumScaleFactor(0.7)
             Spacer(minLength: 0)
         }
         .padding(12)
@@ -328,8 +330,9 @@ struct ShopButton: View {
                 Text(title)
                     .font(.system(.body, design: .rounded).weight(.heavy))
                     .lineLimit(1)
-                    .minimumScaleFactor(0.75)
-                Spacer(minLength: Space.s)
+                    .minimumScaleFactor(0.6)
+                    .layoutPriority(0)
+                Spacer(minLength: 4)
                 HStack(spacing: 4) {
                     AlbumImage(kind: .pass, name: icon).frame(width: 24, height: 24)
                     if let price {
@@ -343,6 +346,8 @@ struct ShopButton: View {
                 .padding(.trailing, price == nil ? 6 : 10)
                 .padding(.vertical, 4)
                 .background(.white.opacity(0.25), in: Capsule())
+                .fixedSize()
+                .layoutPriority(1)
             }
             .foregroundStyle(text)
             .padding(.leading, 18)

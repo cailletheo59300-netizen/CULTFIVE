@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="256" height="256">
+  <!-- Le neurone, monnaie de l'album : un cerveau dessiné façon autocollant (contour encre, aplats doux). -->
+  <defs>
+    <linearGradient id="peau" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB8D2"/><stop offset=".6" stop-color="#FF97BE"/><stop offset="1" stop-color="#F277A8"/>
+    </linearGradient>
+    <path id="corps" d="M40,120 C22,118 18,96 30,86 C22,70 34,52 52,54 C56,36 80,30 94,40 C104,26 130,28 138,42 C156,38 176,52 172,70 C188,78 186,104 170,110 C174,126 160,138 146,134 C140,146 122,150 112,140 L104,140 C100,152 88,156 80,148 C66,154 50,146 52,134 C42,134 36,128 40,120 Z"/>
+    <path id="tige" d="M98,136 C100,152 104,162 112,172 L128,166 C120,156 118,146 120,134 Z"/>
+  </defs>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <!-- bord blanc d'autocollant -->
+    <use href="#tige" fill="#fff" stroke="#fff" stroke-width="22"/>
+    <use href="#corps" fill="#fff" stroke="#fff" stroke-width="22"/>
+    <use href="#tige" fill="#C9B8FF" stroke="#1A1830" stroke-width="7"/>
+    <use href="#corps" fill="url(#peau)" stroke="#1A1830" stroke-width="7"/>
+    <!-- sillons -->
+    <g fill="none" stroke="#1A1830" stroke-width="5">
+      <path d="M56,96 C72,88 86,100 102,92 C116,86 128,98 146,90"/>
+      <path d="M46,76 C56,70 64,78 72,72 C78,67 80,60 78,54"/>
+      <path d="M108,44 C110,54 120,58 130,54"/>
+      <path d="M150,56 C150,66 160,72 170,72"/>
+      <path d="M68,124 C76,116 88,124 96,116"/>
+      <path d="M116,118 C126,112 134,120 146,112 C154,107 160,110 166,104"/>
+      <path d="M136,138 C142,130 152,130 158,134"/>
+    </g>
+    <!-- reflets -->
+    <ellipse cx="74" cy="60" rx="13" ry="6" fill="#fff" opacity=".8" transform="rotate(-24 74 60)"/>
+    <circle cx="94" cy="54" r="3.2" fill="#fff" opacity=".8"/>
+    <!-- étincelle -->
+    <path d="M178,26 Q180,38 192,40 Q180,42 178,54 Q176,42 164,40 Q176,38 178,26 Z" fill="#FFD23F" stroke="#1A1830" stroke-width="3"/>
+  </g>
+</svg>

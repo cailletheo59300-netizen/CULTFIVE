@@ -153,10 +153,10 @@ struct SeasonPassView: View {
         HStack(alignment: .top, spacing: Space.s) {
             VStack(alignment: .leading, spacing: 8) {
                 TrackBadge(paid: false)
-                perk("chest_gold", "10 coffres")
-                perk("ticket_pochette", "8 tickets de pochette")
-                perk("jeton", "1 jeton Prestige")
-                perk("doree", "Pochette dorée au 30")
+                perk("10 coffres")
+                perk("8 tickets de pochette")
+                perk("1 jeton Prestige")
+                perk("Pochette dorée au 30")
                 Spacer(minLength: 0)
                 Text("Pour tout le monde")
                     .font(.system(.caption, design: .rounded).weight(.heavy))
@@ -168,10 +168,10 @@ struct SeasonPassView: View {
             .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(Color.hairline, lineWidth: 1.5))
             VStack(alignment: .leading, spacing: 8) {
                 TrackBadge(paid: true)
-                perk("jeton", "3 jetons Prestige", onDark: true)
-                perk("coffret", "3 coffrets de catégorie", onDark: true)
-                perk("cadre_vitrail", "Cadres, finitions, dos", onDark: true)
-                perk("final_payant", "Cadre animé au 30", onDark: true)
+                perk("3 jetons Prestige", onDark: true)
+                perk("3 coffrets de catégorie", onDark: true)
+                perk("Cadres, finitions, dos", onDark: true)
+                perk("Cadre animé au 30", onDark: true)
                 Spacer(minLength: 0)
                 if store.passPlus {
                     Label("Activé", systemImage: "checkmark.circle.fill")
@@ -204,9 +204,12 @@ struct SeasonPassView: View {
         .fixedSize(horizontal: false, vertical: true)
     }
 
-    private func perk(_ icon: String, _ text: String, onDark: Bool = false) -> some View {
-        HStack(spacing: 6) {
-            AlbumImage(kind: .pass, name: icon).frame(width: 26, height: 26)
+    private func perk(_ text: String, onDark: Bool = false) -> some View {
+        HStack(spacing: 7) {
+            // Puce simple aux couleurs de la piste (plus d'icône 3D ici).
+            Circle()
+                .fill(onDark ? Color.sun : Color.brand)
+                .frame(width: 6, height: 6)
             Text(text)
                 .font(.system(.caption, design: .rounded).weight(.bold))
                 .foregroundStyle(onDark ? Color.white : Color.ink)
@@ -403,12 +406,9 @@ private struct SeasonChallenges: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Space.m) {
             HStack(alignment: .center, spacing: Space.s) {
-                Image(systemName: "target")
-                    .font(.system(size: 22, weight: .bold))
-                    .foregroundStyle(.white)
-                    .frame(width: 46, height: 46)
-                    .background(LinearGradient(colors: [Color(hex: 0xFF8FB1), Color(hex: 0xF0588F)], startPoint: .top, endPoint: .bottom),
-                                in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                Capsule()
+                    .fill(LinearGradient(colors: [Color(hex: 0xFF8FB1), Color(hex: 0xF0588F)], startPoint: .top, endPoint: .bottom))
+                    .frame(width: 6, height: 40)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Défis de saison").font(.cfHeadline).foregroundStyle(Color.ink)
                     Text("Tes objectifs habituels font monter le pass.")
@@ -467,12 +467,7 @@ private struct SeasonChallenges: View {
                 row(items[i], index: i, accent: accent, points: points, bonus: bonus, total: items.count, done: done)
             }
             if let bonus {
-                HStack {
-                    Image(systemName: "gift.fill").foregroundStyle(count == items.count ? accent : Color.inkSoft.opacity(0.5))
-                    Text("Bonus : tous les défis").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    Spacer()
-                    Text("+\(bonus)").font(.cfNumber).foregroundStyle(count == items.count ? Color.correct : Color.inkSoft)
-                }
+                BonusBar(bonus: bonus, count: count, total: items.count, accent: accent)
             }
         }
         .popCard()
@@ -506,5 +501,49 @@ private struct SeasonChallenges: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+    }
+}
+
+/// Bonus d'un groupe de défis : une barre à la couleur du groupe qui se remplit à chaque défi, verte une fois gagnée.
+private struct BonusBar: View {
+    let bonus: Int
+    let count: Int
+    let total: Int
+    let accent: Color
+
+    private var won: Bool { count >= total }
+
+    var body: some View {
+        let color = won ? Color.correct : accent
+        let progress = CGFloat(min(count, total)) / CGFloat(max(total, 1))
+        VStack(alignment: .leading, spacing: 6) {
+            HStack(spacing: Space.s) {
+                Text(won ? "Bonus gagné" : "Bonus · fais les \(total) défis")
+                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(won ? Color.correct : Color.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                Spacer(minLength: 4)
+                Text("+\(bonus)")
+                    .font(.system(.subheadline, design: .rounded).weight(.black))
+                    .monospacedDigit()
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 3)
+                    .background(color, in: Capsule())
+                    .fixedSize()
+            }
+            GeometryReader { proxy in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(color.opacity(0.15))
+                    Capsule().fill(color).frame(width: max(8, proxy.size.width * progress))
+                }
+            }
+            .frame(height: 8)
+        }
+        .padding(12)
+        .background(color.opacity(0.08), in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+        .animation(Motion.standard, value: count)
+        .accessibilityElement(children: .combine)
     }
 }
