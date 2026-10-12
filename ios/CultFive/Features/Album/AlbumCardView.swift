@@ -132,21 +132,26 @@ private struct ShineLayer: View {
     let tilt: CGSize
     var strength: Double = 0.75
 
+    private var stops: [Gradient.Stop] {
+        let shift = Double(tilt.width + tilt.height) * 0.2
+        func at(_ base: Double) -> CGFloat { CGFloat(max(0, min(1, base + shift))) }
+        let pink = Color(hex: 0xFF8FB1).opacity(0.55)
+        let light = Color(hex: 0xFFF6C8).opacity(0.85)
+        let blue = Color(hex: 0x7BE3FF).opacity(0.55)
+        return [
+            Gradient.Stop(color: .clear, location: at(0.25)),
+            Gradient.Stop(color: pink, location: at(0.38)),
+            Gradient.Stop(color: light, location: at(0.46)),
+            Gradient.Stop(color: blue, location: at(0.54)),
+            Gradient.Stop(color: .clear, location: at(0.68)),
+        ]
+    }
+
     var body: some View {
-        GeometryReader { proxy in
-            let shift = (tilt.width + tilt.height) * 0.5
-            LinearGradient(stops: [
-                .init(color: .clear, location: max(0, 0.25 + shift * 0.4)),
-                .init(color: Color(hex: 0xFF8FB1).opacity(0.55), location: min(1, 0.38 + shift * 0.4)),
-                .init(color: Color(hex: 0xFFF6C8).opacity(0.85), location: min(1, 0.46 + shift * 0.4)),
-                .init(color: Color(hex: 0x7BE3FF).opacity(0.55), location: min(1, 0.54 + shift * 0.4)),
-                .init(color: .clear, location: min(1, 0.68 + shift * 0.4)),
-            ], startPoint: .topLeading, endPoint: .bottomTrailing)
-            .frame(width: proxy.size.width, height: proxy.size.height)
+        LinearGradient(stops: stops, startPoint: .topLeading, endPoint: .bottomTrailing)
             .blendMode(.overlay)
             .opacity(strength)
-        }
-        .allowsHitTesting(false)
+            .allowsHitTesting(false)
     }
 }
 
@@ -157,37 +162,47 @@ private struct FinishLayer: View {
 
     var body: some View {
         Canvas { context, size in
-            var generator = SeededGenerator(seed: kind == "or" ? 11 : 23)
-            switch kind {
-            case "givre":
-                for _ in 0..<70 {
-                    let x = Double.random(in: 0..<1, using: &generator) * size.width
-                    let y = Double.random(in: 0..<1, using: &generator) * size.height
-                    let r = 1 + Double.random(in: 0..<1, using: &generator) * 2.4
-                    context.fill(Path(ellipseIn: CGRect(x: x, y: y, width: r, height: r)), with: .color(.white.opacity(0.75)))
-                }
-                context.fill(Path(CGRect(origin: .zero, size: size)),
-                             with: .linearGradient(Gradient(colors: [Color(hex: 0xDDF4FF).opacity(0.45), .clear, Color(hex: 0xDDF4FF).opacity(0.35)]),
-                                                   startPoint: .zero, endPoint: CGPoint(x: size.width, y: size.height)))
-            case "or":
-                for _ in 0..<55 {
-                    let x = Double.random(in: 0..<1, using: &generator) * size.width
-                    let y = Double.random(in: 0..<1, using: &generator) * size.height
-                    let r = 1.2 + Double.random(in: 0..<1, using: &generator) * 2.2
-                    let twinkle = 0.45 + 0.55 * abs(sin(x * 0.05 + Double(tilt.width) * 6 + Double(tilt.height) * 4))
-                    context.fill(Path(ellipseIn: CGRect(x: x, y: y, width: r, height: r)), with: .color(Color(hex: 0xFFD23F).opacity(twinkle)))
-                }
-            default:
-                context.fill(Path(CGRect(origin: .zero, size: size)),
-                             with: .linearGradient(Gradient(colors: [Color(hex: 0xFF6A88), Color(hex: 0xF6C744), Color(hex: 0x3FD0A0),
-                                                                     Color(hex: 0x4A9BFF), Color(hex: 0xB66BFF)]),
-                                                   startPoint: CGPoint(x: size.width * (0.0 + tilt.width * 0.5), y: 0),
-                                                   endPoint: CGPoint(x: size.width * (1.0 + tilt.width * 0.5), y: size.height)))
-            }
+            draw(in: &context, size: size)
         }
         .blendMode(kind == "holo" ? .overlay : .normal)
         .opacity(kind == "holo" ? 0.55 : 1)
         .allowsHitTesting(false)
+    }
+
+    private func draw(in context: inout GraphicsContext, size: CGSize) {
+        var generator = SeededGenerator(seed: kind == "or" ? 11 : 23)
+        let w: CGFloat = size.width
+        let h: CGFloat = size.height
+        let tx = CGFloat(tilt.width)
+        let ty = CGFloat(tilt.height)
+        func unit() -> CGFloat { CGFloat(Double.random(in: 0..<1, using: &generator)) }
+        switch kind {
+        case "givre":
+            for _ in 0..<70 {
+                let x: CGFloat = unit() * w
+                let y: CGFloat = unit() * h
+                let r: CGFloat = 1 + unit() * 2.4
+                context.fill(Path(ellipseIn: CGRect(x: x, y: y, width: r, height: r)), with: .color(.white.opacity(0.75)))
+            }
+            let frost = Gradient(colors: [Color(hex: 0xDDF4FF).opacity(0.45), .clear, Color(hex: 0xDDF4FF).opacity(0.35)])
+            context.fill(Path(CGRect(origin: .zero, size: size)),
+                         with: .linearGradient(frost, startPoint: .zero, endPoint: CGPoint(x: w, y: h)))
+        case "or":
+            let gold = Color(hex: 0xFFD23F)
+            for _ in 0..<55 {
+                let x: CGFloat = unit() * w
+                let y: CGFloat = unit() * h
+                let r: CGFloat = 1.2 + unit() * 2.2
+                let phase: CGFloat = x * 0.05 + tx * 6 + ty * 4
+                let twinkle: Double = 0.45 + 0.55 * Double(abs(sin(phase)))
+                context.fill(Path(ellipseIn: CGRect(x: x, y: y, width: r, height: r)), with: .color(gold.opacity(twinkle)))
+            }
+        default:
+            let rainbow = Gradient(colors: [Color(hex: 0xFF6A88), Color(hex: 0xF6C744), Color(hex: 0x3FD0A0), Color(hex: 0x4A9BFF), Color(hex: 0xB66BFF)])
+            let shift: CGFloat = tx * 0.5 * w
+            context.fill(Path(CGRect(origin: .zero, size: size)),
+                         with: .linearGradient(rainbow, startPoint: CGPoint(x: shift, y: 0), endPoint: CGPoint(x: w + shift, y: h)))
+        }
     }
 }
 
@@ -201,12 +216,20 @@ private struct MasterpieceFrame: View {
                        startPoint: UnitPoint(x: 0 + tilt.width * 0.3, y: 0), endPoint: UnitPoint(x: 1 + tilt.width * 0.3, y: 1))
     }
 
+    private func ring(_ i: Int) -> some View {
+        let k = CGFloat(i)
+        let radius: CGFloat = width * (0.055 - k * 0.01)
+        let line: CGFloat = width * (i == 0 ? 0.03 : 0.008)
+        let inset: CGFloat = i == 0 ? 0 : width * (0.03 + k * 0.015)
+        return RoundedRectangle(cornerRadius: radius, style: .continuous)
+            .strokeBorder(gold, lineWidth: line)
+            .padding(inset)
+    }
+
     var body: some View {
         ZStack(alignment: .bottom) {
             ForEach(0..<3, id: \.self) { i in
-                RoundedRectangle(cornerRadius: width * (0.055 - Double(i) * 0.01), style: .continuous)
-                    .strokeBorder(gold, lineWidth: width * (i == 0 ? 0.03 : 0.008))
-                    .padding(width * (i == 0 ? 0 : 0.03 + Double(i) * 0.015))
+                ring(i)
             }
             Text("CHEF-D'ŒUVRE")
                 .font(.system(size: width * 0.036, weight: .black, design: .serif))
@@ -269,20 +292,27 @@ private struct StarDust: View {
 
     var body: some View {
         Canvas { context, size in
-            var generator = SeededGenerator(seed: 5)
-            for _ in 0..<40 {
-                let edge = Int.random(in: 0..<4, using: &generator)
-                let t = Double.random(in: 0..<1, using: &generator)
-                let inset = Double.random(in: 0..<1, using: &generator) * width * 0.035
-                let point: CGPoint
-                switch edge {
-                case 0: point = CGPoint(x: t * size.width, y: inset)
-                case 1: point = CGPoint(x: size.width - inset, y: t * size.height)
-                case 2: point = CGPoint(x: t * size.width, y: size.height - inset)
-                default: point = CGPoint(x: inset, y: t * size.height)
-                }
-                context.fill(Path(ellipseIn: CGRect(x: point.x, y: point.y, width: 1.6, height: 1.6)), with: .color(.white.opacity(0.9)))
+            draw(in: &context, size: size)
+        }
+    }
+
+    private func draw(in context: inout GraphicsContext, size: CGSize) {
+        var generator = SeededGenerator(seed: 5)
+        func unit() -> CGFloat { CGFloat(Double.random(in: 0..<1, using: &generator)) }
+        let w: CGFloat = size.width
+        let h: CGFloat = size.height
+        for _ in 0..<40 {
+            let edge = Int.random(in: 0..<4, using: &generator)
+            let t: CGFloat = unit()
+            let inset: CGFloat = unit() * width * 0.035
+            let point: CGPoint
+            switch edge {
+            case 0: point = CGPoint(x: t * w, y: inset)
+            case 1: point = CGPoint(x: w - inset, y: t * h)
+            case 2: point = CGPoint(x: t * w, y: h - inset)
+            default: point = CGPoint(x: inset, y: t * h)
             }
+            context.fill(Path(ellipseIn: CGRect(x: point.x, y: point.y, width: 1.6, height: 1.6)), with: .color(.white.opacity(0.9)))
         }
     }
 }
@@ -292,26 +322,34 @@ private struct WebCorners: View {
 
     var body: some View {
         Canvas { context, size in
-            let r = width * 0.28
-            for corner in [CGPoint.zero, CGPoint(x: size.width, y: 0)] {
-                let sx: CGFloat = corner.x == 0 ? 1 : -1
-                var path = Path()
-                for i in 0..<5 {
-                    let a = Double(i) / 4 * .pi / 2
-                    path.move(to: corner)
-                    path.addLine(to: CGPoint(x: corner.x + sx * r * cos(a), y: r * sin(a)))
-                }
-                for ring in 1...3 {
-                    let rr = r * Double(ring) / 3.4
-                    for i in 0..<4 {
-                        let a1 = Double(i) / 4 * .pi / 2, a2 = Double(i + 1) / 4 * .pi / 2
-                        path.move(to: CGPoint(x: corner.x + sx * rr * cos(a1), y: rr * sin(a1)))
-                        path.addQuadCurve(to: CGPoint(x: corner.x + sx * rr * cos(a2), y: rr * sin(a2)),
-                                          control: CGPoint(x: corner.x + sx * rr * 0.75 * cos((a1 + a2) / 2), y: rr * 0.75 * sin((a1 + a2) / 2)))
-                    }
-                }
-                context.stroke(path, with: .color(.white.opacity(0.85)), lineWidth: 0.8)
+            draw(in: &context, size: size)
+        }
+    }
+
+    private func point(_ corner: CGPoint, _ sx: CGFloat, _ radius: CGFloat, _ angle: CGFloat) -> CGPoint {
+        CGPoint(x: corner.x + sx * radius * cos(angle), y: radius * sin(angle))
+    }
+
+    private func draw(in context: inout GraphicsContext, size: CGSize) {
+        let r: CGFloat = width * 0.28
+        let quarter: CGFloat = .pi / 2
+        for corner in [CGPoint.zero, CGPoint(x: size.width, y: 0)] {
+            let sx: CGFloat = corner.x == 0 ? 1 : -1
+            var path = Path()
+            for i in 0..<5 {
+                path.move(to: corner)
+                path.addLine(to: point(corner, sx, r, CGFloat(i) / 4 * quarter))
             }
+            for ring in 1...3 {
+                let rr: CGFloat = r * CGFloat(ring) / 3.4
+                for i in 0..<4 {
+                    let a1: CGFloat = CGFloat(i) / 4 * quarter
+                    let a2: CGFloat = CGFloat(i + 1) / 4 * quarter
+                    path.move(to: point(corner, sx, rr, a1))
+                    path.addQuadCurve(to: point(corner, sx, rr, a2), control: point(corner, sx, rr * 0.75, (a1 + a2) / 2))
+                }
+            }
+            context.stroke(path, with: .color(.white.opacity(0.85)), lineWidth: 0.8)
         }
     }
 }
