@@ -14,26 +14,29 @@ struct AlbumCardView: View {
     /// Contour de couleur de la rareté (classeur).
     var outlined = false
 
+    /// Les états affichés (ceux que le joueur a masqués sont retirés).
+    private var shownState: OwnedCard? { state?.shown }
+
     var body: some View {
         GeometryReader { proxy in
             let w = proxy.size.width
             let radius = w * 0.06
             ZStack {
-                if state?.prestige == true {
+                if shownState?.prestige == true {
                     PrestigeFace(card: card, width: w, tilt: tilt)
                 } else {
                     AlbumImage(kind: .faces, name: card.id)
                 }
-                if state?.shiny == true {
-                    ShineLayer(tilt: tilt, strength: state?.prestige == true ? 0.5 : 0.75)
+                if shownState?.shiny == true {
+                    ShineLayer(tilt: tilt, strength: shownState?.prestige == true ? 0.5 : 0.75)
                 }
-                if dressed, let finish = state?.finish {
+                if dressed, let finish = shownState?.finish {
                     FinishLayer(kind: finish, tilt: tilt)
                 }
-                if state?.masterpiece == true {
+                if shownState?.masterpiece == true {
                     MasterpieceFrame(width: w, tilt: tilt)
                 }
-                if dressed, let frame = state?.frame {
+                if dressed, let frame = shownState?.frame {
                     CardFrame(kind: frame, width: w)
                 }
             }
@@ -42,7 +45,7 @@ struct AlbumCardView: View {
                 if outlined { Color.clear.rarityBorder(card.rarity, width: w) }
             }
             .overlay(alignment: .bottom) {
-                if dressed, let title = state?.title, let item = Cosmetic.titles.first(where: { $0.id == title }) {
+                if dressed, let title = shownState?.title, let item = Cosmetic.titles.first(where: { $0.id == title }) {
                     TitleRibbon(text: item.name, width: w)
                         .offset(y: w * 0.07)
                 }
@@ -55,9 +58,9 @@ struct AlbumCardView: View {
 
     private var accessibilityText: String {
         var parts = [card.name, card.rarity.label]
-        if state?.shiny == true { parts.append("brillante") }
-        if state?.prestige == true { parts.append("Prestige") }
-        if state?.masterpiece == true { parts.append("Chef-d'œuvre") }
+        if shownState?.shiny == true { parts.append("brillante") }
+        if shownState?.prestige == true { parts.append("Prestige") }
+        if shownState?.masterpiece == true { parts.append("Chef-d'œuvre") }
         return parts.joined(separator: ", ")
     }
 }

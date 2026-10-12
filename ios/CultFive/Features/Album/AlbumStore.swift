@@ -14,6 +14,32 @@ struct OwnedCard: Codable, Equatable {
     var frame: String?
     var finish: String?
     var title: String?
+    /// États obtenus mais que le joueur a choisi de ne pas afficher (ils restent gagnés).
+    var hidden: Set<CardStateKind>?
+
+    func isHidden(_ kind: CardStateKind) -> Bool { hidden?.contains(kind) ?? false }
+
+    /// Ce qui s'affiche : les états obtenus, moins ceux que le joueur a masqués.
+    var shown: OwnedCard {
+        var copy = self
+        if isHidden(.shiny) { copy.shiny = false }
+        if isHidden(.prestige) { copy.prestige = false }
+        if isHidden(.masterpiece) { copy.masterpiece = false }
+        return copy
+    }
+
+    func has(_ kind: CardStateKind) -> Bool {
+        switch kind {
+        case .shiny: return shiny
+        case .prestige: return prestige
+        case .masterpiece: return masterpiece
+        }
+    }
+}
+
+/// Les états d'une carte qu'on peut obtenir, masquer ou (en admin) poser librement.
+enum CardStateKind: String, Codable, CaseIterable {
+    case shiny, prestige, masterpiece
 }
 
 /// Habillage qu'on possède une fois et qu'on pose sur n'importe quelle carte.
@@ -379,6 +405,28 @@ final class AlbumStore {
         owned[card.id] = state
         save()
         return true
+    }
+
+    /// Afficher ou masquer un état obtenu (il reste gagné ; le jeton Prestige n'est pas rendu).
+    func setHidden(_ card: AlbumCard, _ kind: CardStateKind, _ hide: Bool) {
+        update(card) { state in
+            var set = state.hidden ?? []
+            if hide { set.insert(kind) } else { set.remove(kind) }
+            state.hidden = set.isEmpty ? nil : set
+        }
+    }
+
+    /// Admin : poser ou retirer un état librement, sans jeton ni condition.
+    func adminSet(_ card: AlbumCard, _ kind: CardStateKind, _ on: Bool) {
+        guard admin else { return }
+        update(card) { state in
+            switch kind {
+            case .shiny: state.shiny = on
+            case .prestige: state.prestige = on
+            case .masterpiece: state.masterpiece = on
+            }
+            state.hidden?.remove(kind)
+        }
     }
 
     func update(_ card: AlbumCard, _ change: (inout OwnedCard) -> Void) {

@@ -64,9 +64,9 @@ struct AlbumView: View {
             app.pendingPass = false
             path = [.pass]
         }
-        .sheet(item: $selected) { card in
+        // Fiche de carte en plein écran : on la ferme avec la croix, pas en glissant.
+        .fullScreenCover(item: $selected) { card in
             CardDetailView(card: card, store: store)
-                .presentationDragIndicator(.visible)
         }
         .fullScreenCover(item: $opening) { open in
             PackOpeningView(opening: open, back: store.back) { opening = nil }

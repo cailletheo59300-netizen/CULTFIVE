@@ -1,5 +1,4 @@
 import SwiftUI
-import CoreMotion
 
 /// Fiche d'une carte : la carte en grand qui s'incline (doigt ou téléphone), ses quatre états, son habillage et le dos.
 /// Case vide : la silhouette et le bouton pour la fabriquer.
@@ -11,14 +10,12 @@ struct CardDetailView: View {
 
     @State private var tab: Tab = .states
     @State private var drag: CGSize = .zero
-    @State private var motion = TiltMotion()
     @Environment(\.dismiss) private var dismiss
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var state: OwnedCard? { store.state(card) }
-    private var tilt: CGSize {
-        CGSize(width: max(-1, min(1, drag.width + motion.tilt.width)), height: max(-1, min(1, drag.height + motion.tilt.height)))
-    }
+    /// La carte reste droite : elle ne s'incline que sous le doigt, et revient en place quand on la lâche.
+    private var tilt: CGSize { drag }
 
     var body: some View {
         ScrollView {
@@ -42,8 +39,6 @@ struct CardDetailView: View {
             .padding(Space.gutter)
         }
         .background(Color.paper.ignoresSafeArea())
-        .onAppear { if !reduceMotion { motion.start() } }
-        .onDisappear { motion.stop() }
     }
 
     private var header: some View {
@@ -60,9 +55,17 @@ struct CardDetailView: View {
                 }
             }
             Spacer()
-            Button { dismiss() } label: { CloseCircle() }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Fermer")
+            Button { dismiss() } label: {
+                Image(systemName: "xmark")
+                    .font(.system(.body, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.ink)
+                    .frame(width: 40, height: 40)
+                    .background(Color.paperRaised, in: Circle())
+                    .shadow(color: Color(hex: 0x3A1FB8).opacity(0.12), radius: 6, y: 3)
+                    .frame(width: 48, height: 48)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Fermer")
         }
     }
 
@@ -116,14 +119,35 @@ struct CardDetailView: View {
     // MARK: - États
 
     private var statesPanel: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            stateRow("Normale", detail: "La carte telle qu'elle sort de la pochette.", done: true, symbol: "rectangle.portrait")
-            stateRow("Brillante", detail: state?.shiny == true ? "Reflet irisé : incline la carte." : "Au premier doublon de cette carte.",
-                     done: state?.shiny == true, symbol: "sparkles")
-            stateRow("Prestige", detail: state?.prestige == true ? "Le dessin occupe toute la carte, pour toujours." : "Pose un jeton Prestige : le dessin occupe toute la carte. Définitif.",
-                     done: state?.prestige == true, symbol: "crown.fill", trailing: state?.prestige == true ? nil : AnyView(prestigeButton))
-            stateRow("Chef-d'œuvre", detail: state?.masterpiece == true ? "Carte maîtrisée : triple cadre doré." : "Maîtrise cette carte au quiz (3 étoiles). Ne s'achète pas.",
-                     done: state?.masterpiece == true, symbol: "star.circle.fill")
+        VStack(alignment: .leading, spacing: Space.m) {
+            Text("Une carte peut avoir plusieurs états en même temps. Ce que tu as gagné reste à toi : tu peux juste choisir de l'afficher ou non.")
+                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            if store.admin {
+                Label("Mode admin : pose ou retire chaque état librement.", systemImage: "crown.fill")
+                    .font(.system(.caption, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.inkFixed)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(Color.sun, in: Capsule())
+            }
+            StateRow(card: card, preview: OwnedCard(), title: "Normale",
+                     what: "La carte telle qu'elle sort de la pochette.",
+                     how: nil, owned: true) { EmptyView() }
+            Hairline()
+            StateRow(card: card, preview: OwnedCard(shiny: true), title: "Brillante",
+                     what: "Un reflet irisé passe sur la carte quand tu la bouges.",
+                     how: "Tu l'obtiens au premier doublon de cette carte, ou avec un coffret.",
+                     owned: state?.shiny == true) { control(.shiny) }
+            Hairline()
+            StateRow(card: card, preview: OwnedCard(prestige: true), title: "Prestige",
+                     what: "Le dessin prend toute la carte, sur un fond holographique.",
+                     how: "Il faut un jeton Prestige : tu en gagnes 1 dans le pass gratuit et 3 dans le Pass+. Le jeton est utilisé pour toujours.",
+                     owned: state?.prestige == true) { control(.prestige) }
+            Hairline()
+            StateRow(card: card, preview: OwnedCard(masterpiece: true), title: "Chef-d'œuvre",
+                     what: "Un triple cadre doré et une plaque gravée.",
+                     how: "Il s'obtient en maîtrisant la carte au quiz (3 étoiles). Il ne s'achète pas.",
+                     owned: state?.masterpiece == true) { control(.masterpiece) }
             Text(card.phrase)
                 .font(.cfReading).foregroundStyle(Color.ink)
                 .padding(.top, Space.s)
@@ -131,30 +155,41 @@ struct CardDetailView: View {
         .popCard()
     }
 
-    private var prestigeButton: some View {
-        Button(store.admin ? "Jeton (∞)" : "Jeton (\(store.tokens))") {
-            if store.applyPrestige(card) { Haptics.success() }
-        }
-        .font(.system(.footnote, design: .rounded).weight(.heavy))
-        .buttonStyle(.borderedProminent)
-        .tint(Color.brand)
-        .disabled(store.tokens == 0)
-    }
-
-    private func stateRow(_ title: String, detail: String, done: Bool, symbol: String, trailing: AnyView? = nil) -> some View {
-        HStack(spacing: Space.s) {
-            Image(systemName: done ? "checkmark.circle.fill" : symbol)
-                .font(.system(.title3, design: .rounded).weight(.bold))
-                .foregroundStyle(done ? Color.correct : Color.inkSoft.opacity(0.6))
-                .frame(width: 30)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(title).font(.system(.subheadline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
-                Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+    /// Ce qu'on peut faire d'un état : l'afficher ou non s'il est obtenu ; le poser librement en admin ;
+    /// utiliser un jeton pour le Prestige.
+    @ViewBuilder private func control(_ kind: CardStateKind) -> some View {
+        if let state {
+            if store.admin {
+                Toggle("Activé", isOn: Binding(get: { state.has(kind) && !state.isHidden(kind) },
+                                               set: { on in withAnimation(Motion.standard) { store.adminSet(card, kind, on) } }))
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .tint(Color.brand)
+            } else if state.has(kind) {
+                Toggle("Afficher", isOn: Binding(get: { !state.isHidden(kind) },
+                                                 set: { on in withAnimation(Motion.standard) { store.setHidden(card, kind, !on) } }))
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .tint(Color.brand)
+            } else if kind == .prestige {
+                Button {
+                    if store.applyPrestige(card) { Haptics.success() }
+                } label: {
+                    HStack(spacing: 6) {
+                        AlbumImage(kind: .pass, name: "jeton").frame(width: 22, height: 22)
+                        Text(store.tokens > 0 ? "Utiliser un jeton (il t'en reste \(store.tokens))" : "Aucun jeton pour l'instant")
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .foregroundStyle(store.tokens > 0 ? Color.white : Color.inkSoft)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 8)
+                    .frame(maxWidth: .infinity)
+                    .background(store.tokens > 0 ? Color.brand : Color.hairline, in: Capsule())
+                }
+                .buttonStyle(.plain)
+                .disabled(store.tokens == 0)
             }
-            Spacer(minLength: 0)
-            if let trailing { trailing }
         }
-        .padding(.vertical, 4)
     }
 
     // MARK: - Habillage
@@ -258,21 +293,48 @@ struct CardDetailView: View {
     }
 }
 
-/// Inclinaison du téléphone (gravité), lissée, pour faire bouger les reflets.
-@Observable
-final class TiltMotion {
-    var tilt: CGSize = .zero
-    @ObservationIgnored private let manager = CMMotionManager()
+/// Une ligne de la partie « États » : la mini-carte dans cet état, ce que c'est, comment l'obtenir, et son statut.
+private struct StateRow<Control: View>: View {
+    let card: AlbumCard
+    let preview: OwnedCard
+    let title: String
+    let what: String
+    let how: String?
+    let owned: Bool
+    @ViewBuilder var control: Control
 
-    func start() {
-        guard manager.isDeviceMotionAvailable, !manager.isDeviceMotionActive else { return }
-        manager.deviceMotionUpdateInterval = 1.0 / 30
-        manager.startDeviceMotionUpdates(to: .main) { [weak self] data, _ in
-            guard let self, let gravity = data?.gravity else { return }
-            let target = CGSize(width: max(-1, min(1, gravity.x * 1.6)), height: max(-1, min(1, (gravity.y + 0.6) * 1.6)))
-            tilt = CGSize(width: tilt.width * 0.8 + target.width * 0.2, height: tilt.height * 0.8 + target.height * 0.2)
+    var body: some View {
+        VStack(alignment: .leading, spacing: Space.s) {
+            HStack(alignment: .top, spacing: Space.m) {
+                AlbumCardView(card: card, state: preview, dressed: false)
+                    .frame(width: 64)
+                    .shadow(color: .black.opacity(0.12), radius: 3, y: 2)
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack(spacing: 6) {
+                        Text(title)
+                            .font(.system(.headline, design: .rounded).weight(.heavy))
+                            .foregroundStyle(Color.ink)
+                        Spacer(minLength: 4)
+                        Text(owned ? "Obtenu" : "Pas encore")
+                            .font(.system(.caption2, design: .rounded).weight(.black))
+                            .foregroundStyle(owned ? Color.white : Color.inkSoft)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 3)
+                            .background(owned ? Color.correct : Color.hairline, in: Capsule())
+                            .fixedSize()
+                    }
+                    Text(what)
+                        .font(.cfFootnote).foregroundStyle(Color.ink)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if let how {
+                        Text(how)
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            control
         }
+        .accessibilityElement(children: .contain)
     }
-
-    func stop() { manager.stopDeviceMotionUpdates() }
 }
