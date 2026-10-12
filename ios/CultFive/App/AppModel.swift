@@ -45,6 +45,10 @@ final class AppModel {
     /// Notification ouverte : duel ou ligue à afficher dans l'onglet Amis.
     var pendingDuelId: UUID?
     var pendingLeagueId: UUID?
+    /// Aperçu de l'album : le bouton « Voir les défis » du pass demande à l'écran du 5 de descendre jusqu'aux défis.
+    var pendingChallenges = false
+    /// Aperçu de l'album : le lien du pass, depuis la carte Défis, ouvre le pass dans l'onglet Album.
+    var pendingPass = false
 
     let service: GameService
     let api: SupabaseAPI?

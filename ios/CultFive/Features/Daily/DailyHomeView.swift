@@ -22,6 +22,7 @@ struct DailyHomeView: View {
 
     var body: some View {
         NavigationStack {
+            ScrollViewReader { reader in
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
                     topLine
@@ -33,9 +34,20 @@ struct DailyHomeView: View {
                     }
                     StreakRescueOffer()
                     rendezVous
-                    if let quests { QuestsCard(overview: quests) }
-                    FreeChestOffer()
-                    today
+                    if AppChannel.isTestBuild {
+                        // Aperçu de l'album : les défis (jour, semaine, saison) rapportent neurones et points de saison ;
+                        // le bloc « Aujourd'hui » est retiré. La version de l'App Store garde l'écran habituel.
+                        SeasonChallengesCard(overview: quests, store: AlbumStore.shared) {
+                            app.pendingPass = true
+                            app.tab = .album
+                        }
+                        .id("defis")
+                        FreeChestOffer()
+                    } else {
+                        if let quests { QuestsCard(overview: quests) }
+                        FreeChestOffer()
+                        today
+                    }
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -48,6 +60,15 @@ struct DailyHomeView: View {
             .background(Color.paper)
             .refreshable { await reload() }
             .toolbar(.hidden, for: .navigationBar)
+            .onChange(of: app.pendingChallenges, initial: true) { _, go in
+                guard go else { return }
+                app.pendingChallenges = false
+                Task {
+                    try? await Task.sleep(for: .milliseconds(250))
+                    withAnimation(Motion.standard) { reader.scrollTo("defis", anchor: .top) }
+                }
+            }
+            }
         }
         .fullScreenCover(isPresented: $showDaily, onDismiss: { Task {
             await reload()
@@ -94,6 +115,8 @@ struct DailyHomeView: View {
         if let league { standings = try? await app.service.leagueStandings(league.id, offset: 0) } else { standings = nil }
         if let fresh = try? await app.service.quests() {
             quests = fresh
+            // Aperçu de l'album : les défis remplis font monter le pass simulé.
+            if AppChannel.isTestBuild { AlbumStore.shared.credit(fresh) }
             if !fresh.newly.isEmpty {
                 withAnimation(Motion.bounce) { rewards = fresh.newly }
                 questMoments = fresh.newly.map {

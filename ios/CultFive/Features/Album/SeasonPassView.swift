@@ -76,24 +76,42 @@ struct SeasonPassView: View {
     @State private var claimed: PassReward?
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: Space.l) {
-                hero
-                tracksCompare
-                VStack(alignment: .leading, spacing: Space.s) {
-                    Text("Les 30 paliers").font(.cfHeadline).foregroundStyle(Color.ink)
-                    PassTrack(store: store) { reward in
-                        withAnimation(Motion.standard) { claimed = reward }
-                        Task {
-                            try? await Task.sleep(for: .seconds(1.6))
-                            withAnimation(Motion.standard) { if claimed?.id == reward.id { claimed = nil } }
+        ScrollViewReader { reader in
+            ScrollView {
+                VStack(alignment: .leading, spacing: Space.l) {
+                    hero
+                    tracksCompare
+                    ChallengesLink()
+                    VStack(alignment: .leading, spacing: Space.s) {
+                        HStack {
+                            Text("Les 30 paliers").font(.cfHeadline).foregroundStyle(Color.ink)
+                            Spacer()
+                            if store.tier > 0 {
+                                Button {
+                                    withAnimation(Motion.standard) { reader.scrollTo(store.tier, anchor: .center) }
+                                } label: {
+                                    Label("Mon palier", systemImage: "arrow.down.circle.fill")
+                                        .font(.system(.caption, design: .rounded).weight(.heavy))
+                                        .foregroundStyle(Color.brand)
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 6)
+                                        .background(Color.brand.opacity(0.12), in: Capsule())
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                        PassTrack(store: store) { reward in
+                            withAnimation(Motion.standard) { claimed = reward }
+                            Task {
+                                try? await Task.sleep(for: .seconds(1.6))
+                                withAnimation(Motion.standard) { if claimed?.id == reward.id { claimed = nil } }
+                            }
                         }
                     }
                 }
-                SeasonChallenges(store: store)
+                .padding(.horizontal, Space.gutter)
+                .padding(.vertical, Space.m)
             }
-            .padding(.horizontal, Space.gutter)
-            .padding(.vertical, Space.m)
         }
         .clearsTabBar()
         .background(Color.paper.ignoresSafeArea())
@@ -246,79 +264,95 @@ struct TrackBadge: View {
     }
 }
 
-// MARK: - La frise des paliers
+// MARK: - Lien vers les défis
 
-/// Les deux pistes en frise : en haut la piste gratuite (cartes blanches), en bas le Pass+ (violet et or),
-/// au milieu les numéros de palier sur une barre remplie jusqu'au palier atteint.
+/// Les défis sont sur l'écran du 5 : ce bouton y mène.
+private struct ChallengesLink: View {
+    @Environment(AppModel.self) private var app
+
+    var body: some View {
+        HStack(spacing: Space.m) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Gagner des points").font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
+                Text("Tes défis du jour, de la semaine et de la saison font monter le pass.")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+            Button {
+                Haptics.selection()
+                app.pendingChallenges = true
+                app.tab = .daily
+            } label: {
+                HStack(spacing: 4) {
+                    Text("Voir les défis")
+                    Image(systemName: "chevron.right")
+                }
+                .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                .foregroundStyle(.white)
+                .lineLimit(1)
+                .fixedSize()
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+                .background(Color.brand, in: Capsule())
+                .shadow(color: Color.brand.opacity(0.3), radius: 8, y: 4)
+            }
+            .buttonStyle(.row)
+        }
+        .popCard()
+    }
+}
+
+// MARK: - Les paliers, à la verticale
+
+/// Une ligne par palier : à gauche la case Gratuit (blanche), au centre le numéro sur une barre verticale remplie
+/// jusqu'au palier atteint, à droite la case Pass+ (violette, liseré doré, cadenas tant qu'il n'est pas activé).
 private struct PassTrack: View {
     let store: AlbumStore
     var onClaim: (PassReward) -> Void
 
-    private let column: CGFloat = 92
-    private let gap: CGFloat = 10
-    private let cell: CGFloat = 122
-    private let node: CGFloat = 34
+    private let node: CGFloat = 36
+    private let rowGap: CGFloat = 10
 
     var body: some View {
-        ScrollViewReader { reader in
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .top, spacing: gap) {
-                    labels
-                    ForEach(1...AlbumStore.tiers, id: \.self) { tier in
-                        tierColumn(tier).id(tier)
-                    }
-                }
-                .background(alignment: .topLeading) { progressLine }
-                .padding(.horizontal, Space.gutter)
-                .padding(.vertical, 8)
+        VStack(spacing: rowGap) {
+            HStack(spacing: Space.s) {
+                TrackBadge(paid: false).frame(maxWidth: .infinity)
+                Color.clear.frame(width: node, height: 1)
+                TrackBadge(paid: true).frame(maxWidth: .infinity)
             }
-            .padding(.horizontal, -Space.gutter)
-            .onAppear { reader.scrollTo(max(1, store.tier), anchor: .center) }
+            ForEach(1...AlbumStore.tiers, id: \.self) { tier in
+                row(tier).id(tier)
+            }
         }
     }
 
-    /// Première colonne : le nom de chaque piste, face à sa ligne.
-    private var labels: some View {
-        VStack(spacing: gap) {
-            TrackBadge(paid: false)
-                .rotationEffect(.degrees(-90))
-                .frame(width: 26, height: cell)
-            Color.clear.frame(width: 26, height: node)
-            TrackBadge(paid: true)
-                .rotationEffect(.degrees(-90))
-                .frame(width: 26, height: cell)
-        }
-    }
-
-    private var progressLine: some View {
-        let start: CGFloat = 26 + gap + column / 2
-        let total: CGFloat = CGFloat(AlbumStore.tiers - 1) * (column + gap)
-        let reached: CGFloat = CGFloat(max(store.tier - 1, 0)) * (column + gap)
-        return ZStack(alignment: .leading) {
-            Capsule().fill(Color.hairline).frame(width: total, height: 6)
-            Capsule().fill(Color.sun).frame(width: store.tier > 0 ? reached : 0, height: 6)
-        }
-        .offset(x: start, y: cell + gap + node / 2 - 3)
-    }
-
-    private func tierColumn(_ tier: Int) -> some View {
+    private func row(_ tier: Int) -> some View {
         let reached = tier <= store.tier
-        return VStack(spacing: gap) {
-            cellView(PassReward.free[tier - 1], tier: tier, paid: false)
-            Text("\(tier)")
-                .font(.system(.subheadline, design: .rounded).weight(.black))
-                .monospacedDigit()
-                .foregroundStyle(reached ? Color.inkFixed : Color.inkSoft)
-                .frame(width: node, height: node)
-                .background(reached ? Color.sun : Color.paperRaised, in: Circle())
-                .overlay(Circle().strokeBorder(reached ? Color.white : Color.hairline, lineWidth: 2))
-                .shadow(color: reached ? Color.sun.opacity(0.5) : .clear, radius: 6)
-            cellView(PassReward.paid[tier - 1], tier: tier, paid: true)
+        return HStack(spacing: Space.s) {
+            cell(PassReward.free[tier - 1], tier: tier, paid: false)
+            ZStack {
+                // Morceau de barre verticale qui relie les paliers.
+                Rectangle()
+                    .fill(reached ? Color.sun : Color.hairline)
+                    .frame(width: 6)
+                    .padding(.vertical, -rowGap / 2 - 1)
+                Text("\(tier)")
+                    .font(.system(.subheadline, design: .rounded).weight(.black))
+                    .monospacedDigit()
+                    .foregroundStyle(reached ? Color.inkFixed : Color.inkSoft)
+                    .frame(width: node, height: node)
+                    .background(reached ? Color.sun : Color.paperRaised, in: Circle())
+                    .overlay(Circle().strokeBorder(reached ? Color.white : Color.hairline, lineWidth: 2))
+                    .shadow(color: reached ? Color.sun.opacity(0.5) : .clear, radius: 6)
+            }
+            .frame(width: node)
+            cell(PassReward.paid[tier - 1], tier: tier, paid: true)
         }
-        .frame(width: column)
+        .fixedSize(horizontal: false, vertical: true)
     }
 
-    private func cellView(_ reward: PassReward, tier: Int, paid: Bool) -> some View {
+    private func cell(_ reward: PassReward, tier: Int, paid: Bool) -> some View {
         let reached = tier <= store.tier
         let taken = paid ? store.claimedPaid.contains(tier) : store.claimedFree.contains(tier)
         let locked = paid && !store.passPlus
@@ -329,42 +363,44 @@ private struct PassTrack: View {
             store.claim(reward, tier: tier, paid: paid)
             onClaim(reward)
         } label: {
-            VStack(spacing: 4) {
+            HStack(spacing: 6) {
                 ZStack(alignment: .topTrailing) {
                     AlbumImage(kind: .pass, name: reward.icon)
-                        .frame(width: 60, height: 60)
+                        .frame(width: 48, height: 48)
                         .opacity(reached ? 1 : 0.55)
                     if taken {
                         Image(systemName: "checkmark.circle.fill")
-                            .font(.title3)
+                            .font(.system(size: 16))
                             .foregroundStyle(Color.correct)
                             .background(Circle().fill(.white))
                     } else if locked {
                         Image(systemName: "lock.fill")
-                            .font(.system(size: 11, weight: .bold))
+                            .font(.system(size: 9, weight: .bold))
                             .foregroundStyle(Color.inkFixed)
-                            .padding(5)
+                            .padding(4)
                             .background(Color.sun, in: Circle())
                     }
                 }
-                Text(reward.name)
-                    .font(.system(size: 11, weight: .bold, design: .rounded))
-                    .foregroundStyle(paid ? Color.white : Color.ink)
-                    .lineLimit(3)
-                    .minimumScaleFactor(0.85)
-                    .multilineTextAlignment(.center)
-                    .frame(maxHeight: .infinity, alignment: .top)
-                if ready {
-                    Text("Récupérer")
-                        .font(.system(size: 10, weight: .black, design: .rounded))
-                        .foregroundStyle(Color.inkFixed)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 3)
-                        .background(Color.sun, in: Capsule())
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(reward.name)
+                        .font(.system(size: 11, weight: .bold, design: .rounded))
+                        .foregroundStyle(paid ? Color.white : Color.ink)
+                        .lineLimit(3)
+                        .minimumScaleFactor(0.85)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if ready {
+                        Text("Récupérer")
+                            .font(.system(size: 10, weight: .black, design: .rounded))
+                            .foregroundStyle(Color.inkFixed)
+                            .padding(.horizontal, 7)
+                            .padding(.vertical, 2)
+                            .background(Color.sun, in: Capsule())
+                    }
                 }
+                Spacer(minLength: 0)
             }
-            .padding(6)
-            .frame(width: column, height: cell)
+            .padding(7)
+            .frame(maxWidth: .infinity, minHeight: 66, maxHeight: .infinity, alignment: .leading)
             .background {
                 if paid {
                     RoundedRectangle(cornerRadius: Radius.s, style: .continuous).fill(PassPlusFill())
@@ -386,130 +422,14 @@ private struct PassTrack: View {
     }
 }
 
-// MARK: - Défis de saison
-
-/// Les défis, dans leur propre partie : défis du jour, de la semaine et missions de saison, chacun avec son anneau.
-private struct SeasonChallenges: View {
-    let store: AlbumStore
-
-    @State private var doneDaily: Set<Int> = []
-    @State private var doneWeekly: Set<Int> = []
-    @State private var doneMissions: Set<Int> = []
-    @State private var gained = 0
-
-    private let daily = ["Fais le 5 du jour", "Joue 2 parties classées", "Réponds à 20 questions"]
-    private let weekly = ["Joue 8 parties classées", "Joue dans 4 domaines différents", "Fais un sans-faute au 5 du jour"]
-    private let missions = ["Finis une page de l'album", "Ouvre 5 pochettes Histoire", "Fabrique une carte dans l'album", "Obtiens une carte brillante",
-                            "Gagne 3 duels", "Fais 7 jours de suite", "Réussis un 5 du jour parfait", "Maîtrise 3 cartes (3 étoiles)",
-                            "Complète 10 cartes Nature", "Joue dans 8 domaines différents", "Mets 3 cartes en vitrine", "Trouve une légendaire"]
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: Space.m) {
-            HStack(alignment: .center, spacing: Space.s) {
-                Capsule()
-                    .fill(LinearGradient(colors: [Color(hex: 0xFF8FB1), Color(hex: 0xF0588F)], startPoint: .top, endPoint: .bottom))
-                    .frame(width: 6, height: 40)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Défis de saison").font(.cfHeadline).foregroundStyle(Color.ink)
-                    Text("Tes objectifs habituels font monter le pass.")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1).minimumScaleFactor(0.8)
-                }
-                Spacer(minLength: 0)
-                VStack(spacing: 0) {
-                    Text("+\(gained)").font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit().foregroundStyle(Color.brand)
-                    Text("points").font(.system(size: 10, weight: .bold, design: .rounded)).foregroundStyle(Color.inkSoft)
-                }
-            }
-            group("Défis du jour", subtitle: "Reviennent chaque jour", accent: Color(hex: 0xF76707), items: daily, points: 15, bonus: 15, done: $doneDaily)
-            group("Défis de la semaine", subtitle: "Reviennent chaque lundi", accent: .brand, items: weekly, points: 40, bonus: 60, done: $doneWeekly)
-            group("Missions de saison", subtitle: "En plus, sans date limite", accent: Color(hex: 0xF0588F), items: missions, points: 75, bonus: nil, done: $doneMissions)
-            Text("Aperçu : touche un défi pour le valider.")
-                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-        }
-        .padding(Space.m)
-        .background(Color(light: 0xFFF3F7, dark: 0x24172A), in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: Radius.l, style: .continuous).strokeBorder(Color(hex: 0xF0588F).opacity(0.2), lineWidth: 1.5))
-    }
-
-    private func group(_ title: String, subtitle: String, accent: Color, items: [String], points: Int, bonus: Int?,
-                       done: Binding<Set<Int>>) -> some View {
-        let count = done.wrappedValue.count
-        let progress = CGFloat(count) / CGFloat(max(items.count, 1))
-        return VStack(alignment: .leading, spacing: Space.s) {
-            HStack(spacing: Space.s) {
-                ZStack {
-                    Circle().stroke(accent.opacity(0.15), lineWidth: 5)
-                    Circle()
-                        .trim(from: 0, to: progress)
-                        .stroke(accent, style: StrokeStyle(lineWidth: 5, lineCap: .round))
-                        .rotationEffect(.degrees(-90))
-                    Text("\(count)/\(items.count)")
-                        .font(.system(size: 11, weight: .black, design: .rounded))
-                        .monospacedDigit()
-                        .foregroundStyle(accent)
-                }
-                .frame(width: 44, height: 44)
-                VStack(alignment: .leading, spacing: 1) {
-                    Text(title).font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
-                    Text(subtitle).font(.system(.caption, design: .rounded).weight(.semibold)).foregroundStyle(Color.inkSoft)
-                }
-                .lineLimit(1)
-                Spacer(minLength: 0)
-                Text("+\(points) chacun")
-                    .font(.system(.caption, design: .rounded).weight(.heavy))
-                    .foregroundStyle(accent)
-                    .lineLimit(1)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(accent.opacity(0.12), in: Capsule())
-            }
-            ForEach(items.indices, id: \.self) { i in
-                row(items[i], index: i, accent: accent, points: points, bonus: bonus, total: items.count, done: done)
-            }
-            if let bonus {
-                BonusBar(bonus: bonus, count: count, total: items.count, accent: accent)
-            }
-        }
-        .popCard()
-    }
-
-    private func row(_ text: String, index: Int, accent: Color, points: Int, bonus: Int?, total: Int, done: Binding<Set<Int>>) -> some View {
-        let isDone = done.wrappedValue.contains(index)
-        return Button {
-            guard !isDone else { return }
-            Haptics.selection()
-            done.wrappedValue.insert(index)
-            var value = points
-            if let bonus, done.wrappedValue.count == total { value += bonus }
-            gained += value
-            withAnimation(Motion.standard) { store.addPoints(value) }
-        } label: {
-            HStack(spacing: Space.s) {
-                Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(isDone ? Color.correct : accent.opacity(0.5))
-                Text(text)
-                    .font(.cfCallout)
-                    .foregroundStyle(isDone ? Color.inkSoft : Color.ink)
-                    .strikethrough(isDone, color: .inkSoft)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
-                Spacer(minLength: Space.s)
-                Text("+\(points)").font(.cfNumber).foregroundStyle(isDone ? Color.inkSoft : accent)
-            }
-            .padding(.vertical, 6)
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-    }
-}
-
 /// Bonus d'un groupe de défis : une barre à la couleur du groupe qui se remplit à chaque défi, verte une fois gagnée.
-private struct BonusBar: View {
+/// Le bonus est en points de saison ; `extra` dit ce qu'il donne en plus (un coffre).
+struct BonusBar: View {
     let bonus: Int
     let count: Int
     let total: Int
     let accent: Color
+    var extra: String? = nil
 
     private var won: Bool { count >= total }
 
@@ -518,13 +438,20 @@ private struct BonusBar: View {
         let progress = CGFloat(min(count, total)) / CGFloat(max(total, 1))
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: Space.s) {
-                Text(won ? "Bonus gagné" : "Bonus · fais les \(total) défis")
-                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
-                    .foregroundStyle(won ? Color.correct : Color.ink)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(won ? "Bonus gagné" : "Bonus · fais les \(total) défis")
+                        .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                        .foregroundStyle(won ? Color.correct : Color.ink)
+                    if let extra {
+                        Text(extra)
+                            .font(.system(.caption, design: .rounded).weight(.bold))
+                            .foregroundStyle(Color.inkSoft)
+                    }
+                }
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
                 Spacer(minLength: 4)
-                Text("+\(bonus)")
+                Text("+\(bonus) pts")
                     .font(.system(.subheadline, design: .rounded).weight(.black))
                     .monospacedDigit()
                     .foregroundStyle(.white)

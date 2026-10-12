@@ -1,4 +1,5 @@
 import SwiftUI
+import CultFiveCore
 
 // Collection simulée de l'album (aperçu TestFlight) : tout reste sur le téléphone, rien ne part au serveur.
 // Règles : D-046 (neurones, pochettes, fabrication), D-048 (états, doublons, habillage), D-049 (pass).
@@ -76,6 +77,14 @@ final class AlbumStore {
     static let pity = 40
     static let tierPoints = 150
     static let tiers = 30
+    /// Points de saison : défi du jour, de la semaine, mission de saison, et bonus des trois (D-049).
+    static let dayPoints = 15, dayBonus = 15, weekPoints = 40, weekBonus = 60, missionPoints = 75
+    static let missions = ["Finis une page de l'album", "Ouvre 5 pochettes Histoire", "Fabrique une carte dans l'album", "Obtiens une carte brillante",
+                           "Gagne 3 duels", "Fais 7 jours de suite", "Réussis un 5 du jour parfait", "Maîtrise 3 cartes (3 étoiles)",
+                           "Complète 10 cartes Nature", "Joue dans 8 domaines différents", "Mets 3 cartes en vitrine", "Trouve une légendaire"]
+
+    /// La même collection simulée pour toute l'app (album, Comptoir, pass, défis de l'écran du 5).
+    static let shared = AlbumStore()
 
     private struct Saved: Codable {
         var owned: [String: OwnedCard]
@@ -95,6 +104,8 @@ final class AlbumStore {
         var claimedPaid: Set<Int>
         var packsOpened: Int
         var coffretsOpened: Int
+        var credited: Set<String>?
+        var missionsDone: Set<Int>?
     }
 
     private(set) var owned: [String: OwnedCard] = [:]
@@ -119,6 +130,10 @@ final class AlbumStore {
     var claimedPaid: Set<Int> = []
     var packsOpened = 0
     var coffretsOpened = 0
+    /// Défis du serveur déjà comptés dans le pass (« jour:2026-10-12:1 »), pour ne les compter qu'une fois.
+    private var credited: Set<String> = []
+    /// Missions de saison remplies (simulées).
+    var missionsDone: Set<Int> = []
 
     private let catalog = AlbumCatalog.shared
     private static let key = "album.preview.v1"
@@ -130,6 +145,8 @@ final class AlbumStore {
             unlocked = saved.unlocked; back = saved.back; cover = saved.cover; points = saved.points; passPlus = saved.passPlus
             claimedFree = saved.claimedFree; claimedPaid = saved.claimedPaid; packsOpened = saved.packsOpened
             coffretsOpened = saved.coffretsOpened
+            credited = saved.credited ?? []
+            missionsDone = saved.missionsDone ?? []
         } else {
             seed()
         }
@@ -157,7 +174,7 @@ final class AlbumStore {
         let saved = Saved(owned: owned, neurones: neurones, tickets: tickets, tokens: tokens, goldPacks: goldPacks, goldBought: goldBought,
                           coffrets: coffrets, pity: pity, unlocked: unlocked, back: back, cover: cover, points: points, passPlus: passPlus,
                           claimedFree: claimedFree, claimedPaid: claimedPaid, packsOpened: packsOpened,
-                          coffretsOpened: coffretsOpened)
+                          coffretsOpened: coffretsOpened, credited: credited, missionsDone: missionsDone)
         if let data = try? JSONEncoder().encode(saved) { UserDefaults.standard.set(data, forKey: Self.key) }
     }
 
@@ -303,6 +320,34 @@ final class AlbumStore {
 
     var tier: Int { min(points / Self.tierPoints, Self.tiers) }
 
+    /// Compte dans le pass les vrais défis remplis (jour et semaine), une seule fois chacun, avec leurs neurones.
+    func credit(_ overview: QuestsOverview) {
+        var changed = false
+        func take(_ key: String, points value: Int, neurones gain: Int) {
+            guard !credited.contains(key) else { return }
+            credited.insert(key)
+            points = min(points + value, Self.tierPoints * Self.tiers)
+            neurones += gain
+            changed = true
+        }
+        for quest in overview.day.quests where quest.done {
+            take("jour:\(overview.day.periodStart):\(quest.slot)", points: Self.dayPoints, neurones: quest.seeds)
+        }
+        if overview.day.bonus.done { take("jour:\(overview.day.periodStart):bonus", points: Self.dayBonus, neurones: overview.day.bonus.seeds) }
+        for quest in overview.week.quests where quest.done {
+            take("semaine:\(overview.week.periodStart):\(quest.slot)", points: Self.weekPoints, neurones: quest.seeds)
+        }
+        if overview.week.bonus.done { take("semaine:\(overview.week.periodStart):bonus", points: Self.weekBonus, neurones: overview.week.bonus.seeds) }
+        if changed { save() }
+    }
+
+    /// Mission de saison remplie (aperçu : validée à la main).
+    func completeMission(_ index: Int) {
+        guard !missionsDone.contains(index) else { return }
+        missionsDone.insert(index)
+        addPoints(Self.missionPoints)
+    }
+
     func addPoints(_ value: Int) {
         points = min(points + value, Self.tierPoints * Self.tiers)
         save()
@@ -359,6 +404,7 @@ final class AlbumStore {
         neurones = 1_450; tickets = 5; tokens = 1; goldPacks = 0; goldBought = false; coffrets = 0; pity = 26
         unlocked = ["dos.classique", "couv.classique"]; back = "classique"; cover = "classique"
         points = 1_240; passPlus = false; claimedFree = []; claimedPaid = []; packsOpened = 0; coffretsOpened = 0
+        credited = []; missionsDone = []
         seed()
         save()
     }

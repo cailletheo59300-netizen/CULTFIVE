@@ -12,14 +12,16 @@ struct PackOpening: Identifiable {
 /// Onglet Album (aperçu TestFlight) : le classeur. Couverture Brainlix, intercalaires de couleur par domaine,
 /// feuillets de 9 pochettes qui tournent en 3D, cases vides à fabriquer. Collection simulée sur le téléphone.
 struct AlbumView: View {
-    @State private var store = AlbumStore()
+    @Environment(AppModel.self) private var app
+    @State private var store = AlbumStore.shared
+    @State private var path: [AlbumRoute] = []
     @State private var domain = AlbumCatalog.shared.domains.first?.id ?? "history"
     @State private var selected: AlbumCard?
     @State private var opening: PackOpening?
     @State private var confirmReset = false
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
                     AlbumCover(store: store)
@@ -54,6 +56,12 @@ struct AlbumView: View {
             }
         }
         .environment(store)
+        .onChange(of: app.pendingPass, initial: true) { _, go in
+            // Lien « Pass » de la carte Défis (écran du 5) : on ouvre directement le pass.
+            guard go else { return }
+            app.pendingPass = false
+            path = [.pass]
+        }
         .sheet(item: $selected) { card in
             CardDetailView(card: card, store: store)
                 .presentationDragIndicator(.visible)

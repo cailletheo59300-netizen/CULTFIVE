@@ -20,6 +20,10 @@ struct PackOpeningView: View {
     @State private var bob = false
     @State private var flash = 0.0
     @State private var leaving = false
+    /// La légendaire grossit en se retournant, puis se pose.
+    @State private var pop = false
+    /// Cartes du récapitulatif déjà apparues.
+    @State private var shown = 0
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var pull: Pull? { opening.pulls.indices.contains(index) ? opening.pulls[index] : nil }
@@ -192,16 +196,25 @@ struct PackOpeningView: View {
                             AlbumCardView(card: pull.card, state: displayState(pull))
                         } else {
                             AlbumCardBack(kind: back)
+                                .modifier(Tension(rarity: pull.card.rarity, active: !reduceMotion))
                         }
                     }
                     .frame(width: 240)
                     .shadow(color: faceUp ? pull.card.rarity.color.opacity(pull.card.rarity == .common ? 0.2 : 0.8) : .black.opacity(0.3),
                             radius: faceUp && pull.card.rarity >= .epic ? 30 : 12)
                     .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
-                    .scaleEffect(faceUp && pull.card.rarity == .legend ? 1.05 : 1)
+                    .scaleEffect(pop ? 1.22 : (faceUp && pull.card.rarity == .legend ? 1.04 : 1))
                     .offset(x: leaving ? -420 : 0)
                     .rotationEffect(.degrees(leaving ? -12 : 0))
                     .id(index)
+                }
+            }
+            .background {
+                // Derrière la carte, sans changer la mise en page.
+                if let pull, faceUp, !reduceMotion {
+                    RevealEffects(rarity: pull.card.rarity)
+                        .id(index)
+                        .allowsHitTesting(false)
                 }
             }
             .frame(height: 340)
@@ -241,9 +254,11 @@ struct PackOpeningView: View {
         if !faceUp {
             flipping = true
             let rarity = pull.card.rarity
-            withAnimation(.easeIn(duration: reduceMotion ? 0.01 : 0.16)) { angle = 90 }
+            // La légendaire se retourne plus lentement.
+            let half: Double = reduceMotion ? 0.01 : (rarity == .legend ? 0.34 : rarity == .epic ? 0.22 : 0.16)
+            withAnimation(.easeIn(duration: half)) { angle = 90 }
             Task {
-                try? await Task.sleep(for: .milliseconds(reduceMotion ? 10 : 170))
+                try? await Task.sleep(for: .milliseconds(Int(half * 1000) + 10))
                 // La face n'est posée qu'une fois la carte sur la tranche : on ne la voit jamais avant.
                 faceUp = true
                 angle = -90
@@ -252,10 +267,19 @@ struct PackOpeningView: View {
                 case .legend:
                     Haptics.success()
                     if !reduceMotion {
-                        withAnimation(.easeOut(duration: 0.1)) { flash = 0.6 }
-                        withAnimation(.easeOut(duration: 0.6).delay(0.1)) { flash = 0 }
+                        pop = true
+                        withAnimation(.easeOut(duration: 0.1)) { flash = 0.7 }
+                        withAnimation(.easeOut(duration: 0.7).delay(0.1)) { flash = 0 }
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.55).delay(0.15)) { pop = false }
+                        try? await Task.sleep(for: .milliseconds(220))
+                        Haptics.success()
                     }
-                case .epic: Haptics.success()
+                case .epic:
+                    Haptics.success()
+                    if !reduceMotion {
+                        withAnimation(.easeOut(duration: 0.08)) { flash = 0.25 }
+                        withAnimation(.easeOut(duration: 0.4).delay(0.08)) { flash = 0 }
+                    }
                 case .rare: Haptics.soft()
                 case .common: Haptics.selection()
                 }
@@ -282,12 +306,19 @@ struct PackOpeningView: View {
     private var summary: some View {
         VStack(spacing: Space.m) {
             Text("Dans ta pochette").font(.cfHeadline).foregroundStyle(.white)
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 14) {
-                ForEach(opening.pulls) { pull in
-                    VStack(spacing: 4) {
-                        AlbumCardView(card: pull.card, state: displayState(pull))
-                        OutcomeTag(outcome: pull.outcome, compact: true)
-                    }
+            // Rangées centrées : 3 en haut, 2 en bas (un coffret de 3 tient sur une ligne).
+            VStack(spacing: 14) {
+                summaryRow(Array(opening.pulls.prefix(3)), offset: 0)
+                if opening.pulls.count > 3 {
+                    summaryRow(Array(opening.pulls.dropFirst(3)), offset: 3)
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .task {
+                shown = reduceMotion ? opening.pulls.count : 0
+                while shown < opening.pulls.count {
+                    try? await Task.sleep(for: .milliseconds(120))
+                    withAnimation(Motion.bounce) { shown += 1 }
                 }
             }
             let gained = opening.pulls.reduce(0) { total, pull in
@@ -304,6 +335,22 @@ struct PackOpeningView: View {
         }
     }
 
+    private func summaryRow(_ pulls: [Pull], offset: Int) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            ForEach(Array(pulls.enumerated()), id: \.element.id) { i, pull in
+                VStack(spacing: 6) {
+                    AlbumCardView(card: pull.card, state: displayState(pull), outlined: true)
+                        .shadow(color: pull.card.rarity >= .epic ? pull.card.rarity.color.opacity(0.7) : .black.opacity(0.3),
+                                radius: pull.card.rarity >= .epic ? 12 : 6, y: 3)
+                    OutcomeTag(outcome: pull.outcome, compact: true)
+                }
+                .frame(width: 98)
+                .scaleEffect(offset + i < shown ? 1 : 0.6)
+                .opacity(offset + i < shown ? 1 : 0)
+            }
+        }
+    }
+
     private var footer: some View {
         Group {
             switch phase {
@@ -314,6 +361,101 @@ struct PackOpeningView: View {
                     .buttonStyle(.inverted)
             case .summary:
                 Button("Ranger dans l'album") { onDone() }.buttonStyle(.sun)
+            }
+        }
+    }
+}
+
+// MARK: - Effets de rareté
+
+/// Avant le retournement : le dos d'une épique ou d'une légendaire tremble et s'entoure d'une lueur de sa couleur.
+private struct Tension: ViewModifier {
+    let rarity: CardRarity
+    let active: Bool
+    @State private var on = false
+
+    func body(content: Content) -> some View {
+        let strong = active && rarity >= .epic
+        content
+            .shadow(color: strong ? rarity.color.opacity(on ? 0.9 : 0.35) : .clear, radius: on ? 26 : 12)
+            .rotationEffect(.degrees(strong ? (on ? 1.4 : -1.4) : 0))
+            .onAppear {
+                guard strong else { return }
+                let speed = rarity == .legend ? 0.09 : 0.14
+                withAnimation(.easeInOut(duration: speed).repeatForever(autoreverses: true)) { on = true }
+            }
+    }
+}
+
+/// Derrière la carte qui vient d'être retournée : anneau (rare), rayons et étincelles (épique), rayons dorés et
+/// pluie d'étoiles (légendaire). Rien pour une commune.
+private struct RevealEffects: View {
+    let rarity: CardRarity
+    @State private var go = false
+
+    private var color: Color { rarity == .legend ? Color(hex: 0xFFD23F) : rarity.color }
+
+    var body: some View {
+        ZStack {
+            if rarity >= .epic {
+                RotatingRays(color: color, count: rarity == .legend ? 18 : 12)
+                    .frame(width: 520, height: 520)
+                    .scaleEffect(go ? 1 : 0.3)
+                    .opacity(go ? 1 : 0)
+            }
+            if rarity >= .rare {
+                Circle()
+                    .stroke(color, lineWidth: rarity == .rare ? 6 : 9)
+                    .frame(width: 240, height: 240)
+                    .scaleEffect(go ? 1.9 : 0.5)
+                    .opacity(go ? 0 : 0.95)
+            }
+            if rarity >= .epic {
+                ForEach(0..<(rarity == .legend ? 28 : 14), id: \.self) { i in
+                    spark(i)
+                }
+            }
+        }
+        .onAppear { withAnimation(.easeOut(duration: rarity == .legend ? 1.4 : 0.9)) { go = true } }
+    }
+
+    private func spark(_ i: Int) -> some View {
+        let count = Double(rarity == .legend ? 28 : 14)
+        let angle = Double(i) / count * 2 * .pi + Double(i % 3) * 0.2
+        let distance: CGFloat = CGFloat(150 + (i * 37) % 110)
+        let size: CGFloat = CGFloat(rarity == .legend ? 12 + (i % 4) * 3 : 8 + (i % 3) * 2)
+        return Image(systemName: rarity == .legend ? "star.fill" : "sparkle")
+            .font(.system(size: size, weight: .bold))
+            .foregroundStyle(i % 4 == 0 ? Color.white : color)
+            .offset(x: go ? CGFloat(cos(angle)) * distance : 0, y: go ? CGFloat(sin(angle)) * distance : 0)
+            .opacity(go ? 0 : 1)
+            .scaleEffect(go ? 0.6 : 1.2)
+    }
+}
+
+/// Rayons de lumière qui tournent lentement.
+private struct RotatingRays: View {
+    let color: Color
+    let count: Int
+
+    var body: some View {
+        TimelineView(.animation) { timeline in
+            let t = timeline.date.timeIntervalSinceReferenceDate
+            Canvas { context, size in
+                let center = CGPoint(x: size.width / 2, y: size.height / 2)
+                let radius = min(size.width, size.height) / 2
+                let spin = t.truncatingRemainder(dividingBy: 12) / 12 * 2 * .pi
+                let width = Double.pi / Double(count) * 0.55
+                for i in 0..<count {
+                    let a = Double(i) / Double(count) * 2 * .pi + spin
+                    var path = Path()
+                    path.move(to: center)
+                    path.addLine(to: CGPoint(x: center.x + radius * CGFloat(cos(a - width)), y: center.y + radius * CGFloat(sin(a - width))))
+                    path.addLine(to: CGPoint(x: center.x + radius * CGFloat(cos(a + width)), y: center.y + radius * CGFloat(sin(a + width))))
+                    path.closeSubpath()
+                    context.fill(path, with: .radialGradient(Gradient(colors: [color.opacity(0.55), color.opacity(0)]),
+                                                             center: center, startRadius: 0, endRadius: radius))
+                }
             }
         }
     }
