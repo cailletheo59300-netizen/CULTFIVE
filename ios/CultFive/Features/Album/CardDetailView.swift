@@ -97,17 +97,13 @@ struct CardDetailView: View {
         return VStack(spacing: Space.m) {
             Text("Cette case est vide. Tu peux attendre de la trouver dans une pochette, ou la fabriquer tout de suite avec tes neurones.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
-            Button {
+            ShopButton(title: "Fabriquer cette carte", price: "\(cost)", icon: "neurone", fill: .brand, text: .white, enabled: enough) {
                 if store.craft(card) { Haptics.success() }
-            } label: {
-                HStack(spacing: 6) {
-                    Text("Fabriquer")
-                    Image(systemName: "brain.fill")
-                    Text("\(cost)")
-                }
             }
-            .buttonStyle(.ink)
-            .disabled(!enough)
+            if !enough {
+                Text("Il te manque \(cost - store.neurones) neurones.")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            }
             HStack(spacing: 4) {
                 Text("Tu as")
                 NeuronesAmount(amount: store.neurones, color: .inkSoft)

@@ -11,6 +11,8 @@ struct AlbumCardView: View {
     var tilt: CGSize = .zero
     /// Habillage et effets : coupés dans les petites vignettes si besoin.
     var dressed = true
+    /// Contour de couleur de la rareté (classeur).
+    var outlined = false
 
     var body: some View {
         GeometryReader { proxy in
@@ -36,6 +38,9 @@ struct AlbumCardView: View {
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: radius, style: .continuous))
+            .overlay {
+                if outlined { Color.clear.rarityBorder(card.rarity, width: w) }
+            }
             .overlay(alignment: .bottom) {
                 if dressed, let title = state?.title, let item = Cosmetic.titles.first(where: { $0.id == title }) {
                     TitleRibbon(text: item.name, width: w)
@@ -409,33 +414,42 @@ private struct RibbonShape: Shape {
 
 // MARK: - Case vide
 
-/// Pochette vide du classeur : silhouette du dessin, numéro et prix pour la fabriquer.
+/// Pochette vide du classeur : le dessin de la carte avec son décor, en gris et voilé (les textes restent cachés),
+/// son numéro et son prix pour la fabriquer. Le contour donne la rareté.
 struct EmptySlot: View {
     let card: AlbumCard
 
     var body: some View {
         GeometryReader { proxy in
             let w = proxy.size.width
-            ZStack {
-                RoundedRectangle(cornerRadius: w * 0.06, style: .continuous)
-                    .fill(Color.ink.opacity(0.04))
-                RoundedRectangle(cornerRadius: w * 0.06, style: .continuous)
-                    .strokeBorder(Color.ink.opacity(0.14), style: StrokeStyle(lineWidth: 1.2, dash: [4, 3]))
-                VStack(spacing: w * 0.03) {
-                    AlbumImage(kind: .art, name: card.id, template: true)
-                        .foregroundStyle(Color.ink.opacity(0.13))
-                        .padding(.horizontal, w * 0.08)
-                    Text("\(card.n)")
-                        .font(.system(size: w * 0.14, weight: .black, design: .rounded))
-                        .foregroundStyle(Color.ink.opacity(0.25))
-                    HStack(spacing: 3) {
-                        Image(systemName: "brain.fill")
-                        Text("\(card.rarity.craftCost)")
-                    }
-                    .font(.system(size: max(w * 0.085, 9), weight: .heavy, design: .rounded))
-                    .foregroundStyle(card.rarity.color)
+            let radius = w * 0.06
+            VStack(spacing: w * 0.05) {
+                ArtWindow(card: card, width: w * 0.84)
+                    .grayscale(1)
+                    .opacity(0.42)
+                    .clipShape(RoundedRectangle(cornerRadius: w * 0.04, style: .continuous))
+                    .padding(.top, w * 0.08)
+                Text("\(card.n)")
+                    .font(.system(size: w * 0.16, weight: .black, design: .rounded))
+                    .foregroundStyle(Color.ink.opacity(0.3))
+                    .lineLimit(1)
+                Spacer(minLength: 0)
+                HStack(spacing: 2) {
+                    NeuroneIcon().frame(width: w * 0.13, height: w * 0.13)
+                    Text("\(card.rarity.craftCost)").monospacedDigit()
                 }
+                .font(.system(size: max(w * 0.085, 9), weight: .heavy, design: .rounded))
+                .foregroundStyle(Color.ink.opacity(0.7))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .padding(.horizontal, w * 0.05)
+                .padding(.vertical, w * 0.015)
+                .background(Color.ink.opacity(0.06), in: Capsule())
+                .padding(.bottom, w * 0.07)
             }
+            .frame(width: w, height: proxy.size.height)
+            .background(Color.ink.opacity(0.035), in: RoundedRectangle(cornerRadius: radius, style: .continuous))
+            .rarityBorder(card.rarity, width: w, empty: true)
         }
         .aspectRatio(albumCardRatio, contentMode: .fit)
         .accessibilityElement()
@@ -443,18 +457,89 @@ struct EmptySlot: View {
     }
 }
 
+/// La fenêtre d'illustration d'une carte (dessin et décor), recadrée depuis l'image de la carte.
+/// Repères dans l'image de 600 × 838 : x 48 à 552, y 98 à 356 (zone commune à toutes les raretés).
+struct ArtWindow: View {
+    let card: AlbumCard
+    let width: CGFloat
+
+    var body: some View {
+        let scale: CGFloat = width / 504
+        AlbumImage(kind: .faces, name: card.id)
+            .frame(width: 600 * scale, height: 838 * scale)
+            .offset(x: -48 * scale, y: -98 * scale)
+            .frame(width: width, height: 258 * scale, alignment: .topLeading)
+            .clipped()
+    }
+}
+
+extension View {
+    /// Contour de rareté : gris commune, bleu rare, violet épique, or légendaire.
+    func rarityBorder(_ rarity: CardRarity, width: CGFloat, empty: Bool = false) -> some View {
+        overlay(
+            RoundedRectangle(cornerRadius: width * 0.06, style: .continuous)
+                .strokeBorder(rarity.border, lineWidth: max(width * (empty ? 0.025 : 0.02), 1.5))
+                .opacity(empty ? 0.75 : 1)
+        )
+    }
+}
+
+extension CardRarity {
+    /// Dégradé du contour de rareté.
+    var border: LinearGradient {
+        let colors: [Color]
+        switch self {
+        case .common: colors = [Color(hex: 0xC9C6D6), Color(hex: 0x8F8BA3)]
+        case .rare: colors = [Color(hex: 0x7FB0FF), Color(hex: 0x2F6BFF)]
+        case .epic: colors = [Color(hex: 0xC7A2FF), Color(hex: 0x7A3CF0)]
+        case .legend: colors = [Color(hex: 0xFFE38A), Color(hex: 0xD9961B)]
+        }
+        return LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}
+
+/// Légende des quatre couleurs de rareté.
+struct RarityLegend: View {
+    var body: some View {
+        HStack(spacing: Space.m) {
+            ForEach(CardRarity.allCases, id: \.self) { rarity in
+                HStack(spacing: 5) {
+                    RoundedRectangle(cornerRadius: 3, style: .continuous)
+                        .strokeBorder(rarity.border, lineWidth: 2.5)
+                        .frame(width: 11, height: 15)
+                    Text(rarity.label)
+                        .font(.system(.caption2, design: .rounded).weight(.bold))
+                        .foregroundStyle(Color.inkSoft)
+                        .lineLimit(1)
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .combine)
+    }
+}
+
+/// L'icône 3D du neurone, monnaie de l'album.
+struct NeuroneIcon: View {
+    var body: some View {
+        AlbumImage(kind: .pass, name: "neurone")
+    }
+}
+
 /// Montant de neurones (monnaie de l'album).
 struct NeuronesAmount: View {
     let amount: Int
     var color: Color = .ink
+    var size: CGFloat = 22
 
     var body: some View {
-        HStack(spacing: 4) {
-            Image(systemName: "brain.fill").foregroundStyle(Color(hex: 0xF0588F))
+        HStack(spacing: 3) {
+            NeuroneIcon().frame(width: size, height: size)
             Text(amount.formatted(.number.locale(Locale(identifier: "fr_FR")))).monospacedDigit()
         }
         .font(.system(.subheadline, design: .rounded).weight(.heavy))
         .foregroundStyle(color)
+        .lineLimit(1)
         .accessibilityElement()
         .accessibilityLabel("\(amount) neurones")
     }

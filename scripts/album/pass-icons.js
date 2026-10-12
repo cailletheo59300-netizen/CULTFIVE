@@ -149,7 +149,24 @@ function FLAMME(){const g=new THREE.Group();
   g.rotation.y=-.35;return {obj:g,cam:[0,.2,4.6,0,0,0]};}
 async function COMBO(a,b,sb=.62,ob=[.62,-.55,.35]){const A=await a(),B=await b();const g=new THREE.Group();A.obj.position.x=-.25;g.add(A.obj);B.obj.scale.setScalar(sb);B.obj.position.set(...ob);g.add(B.obj);return {obj:g,cam:[0,.2,4.8,0,0,0]};}
 
+/* le neurone, monnaie de l'album : un petit cerveau rose tout rond, en lobes, avec un éclat */
+function NEURONE(){const g=new THREE.Group();const gyr=phys(0xF7579A,{roughness:.36}),deep=phys(0x9E1F55,{roughness:.55}),back=phys(0xE04A8A,{roughness:.4});
+  let k=5;const rnd=()=>{k=(k*16807)%2147483647;return (k-1)/2147483646;};
+  // cerveau de profil : un ovale sombre couvert de circonvolutions roses bien rondes (des boudins sinueux)
+  const A=[1.1,.8,.7],O=new THREE.Vector3(0,.12,0);
+  const core=new THREE.Mesh(new THREE.SphereGeometry(1,64,40),deep);core.scale.set(A[0]*.93,A[1]*.93,A[2]*.93);core.position.copy(O);g.add(core);
+  const surf=(u,v)=>{const cu=Math.cos(u),su=Math.sin(u),cv=Math.cos(v),sv=Math.sin(v);return new THREE.Vector3(O.x+A[0]*cv*su*.9,O.y+A[1]*sv*.9,O.z+A[2]*cv*cu*.9);};
+  for(let c=0;c<64;c++){let u=-Math.PI+rnd()*Math.PI*2,v=-1.2+rnd()*2.4,dir=rnd()*Math.PI*2;const pts=[];
+    for(let t=0;t<16;t++){pts.push(surf(u,v));dir+=(rnd()-.5)*1.6;u+=Math.cos(dir)*.12;v+=Math.sin(dir)*.1;v=Math.max(-1.35,Math.min(1.35,v));}
+    g.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),80,.115,14,false),gyr));
+    [pts[0],pts[pts.length-1]].forEach(p=>{const cap=new THREE.Mesh(new THREE.SphereGeometry(.115,16,12),gyr);cap.position.copy(p);g.add(cap);});}
+  const cer=new THREE.Mesh(new THREE.SphereGeometry(1,48,32),back);cer.scale.set(.4,.27,.38);cer.position.set(.66,-.6,-.1);g.add(cer);
+  const stem=new THREE.Mesh(new THREE.CylinderGeometry(.16,.11,.55,24),back);stem.position.set(.2,-.8,-.12);stem.rotation.z=.28;g.add(stem);
+  [[1.32,.85,.15],[-1.35,-.55,.11]].forEach(([x,y,s])=>{const sp=spark(s,0xFFD23F);sp.position.set(x,y,.5);g.add(sp);});
+  g.rotation.set(.1,-.2,0);return {obj:g,cam:[0,0,4.3,0,0,0]};}
+
 window.PASS_ICONS={
+  neurone:NEURONE,
   ticket_pochette:TPACK, jeton:JETON,
   dos_soleil:()=>PDOS('soleil'), dos_nuit:()=>PDOS('nuit'), dos_domaines:()=>PDOS('domaines'), dos_or:()=>PDOS('or'),
   cadre_citrouille:()=>CADRE('citrouille'), cadre_vitrail:()=>CADRE('vitrail'), cadre_nuit:()=>CADRE('nuit'), cadre_marbre:()=>CADRE('marbre'), cadre_toile:()=>CADRE('toile'),
@@ -162,4 +179,4 @@ window.PASS_ICONS={
   coffret:COFFRET, doree:DOREE, onglets:ONGLETS, marque:MARQUE, vitrine:VITRINE, flamme:FLAMME,
   final_gratuit:()=>COMBO(()=>PDOS('nuit'),DOREE), final_payant:()=>COMBO(()=>PDOS('or'),FLAMME,.55,[.65,-.6,.4]),
 };
-window.renderPass=async(px)=>{const out={};for(const [k,b] of Object.entries(window.PASS_ICONS)){const built=await b();out[k]=snap(()=>built,px);}return out;};
+window.renderPass=async(px,only)=>{const out={};for(const [k,b] of Object.entries(window.PASS_ICONS)){if(only&&k!==only)continue;const built=await b();out[k]=snap(()=>built,px);}return out;};

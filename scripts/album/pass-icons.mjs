@@ -1,5 +1,5 @@
 // Rend les icônes 3D du pass (pass-icons.js, même moteur que scripts/icons/icons.html) dans scripts/album/pass-icons/.
-// Usage : node scripts/album/pass-icons.mjs [chemin/vers/three.min.js]   (Playwright + Chromium)
+// Usage : node scripts/album/pass-icons.mjs [chemin/vers/three.min.js] [une seule icône]   (Playwright + Chromium)
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync, copyFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -17,9 +17,10 @@ await p.addScriptTag({ path: join(here, 'dos.js') });
 await p.addScriptTag({ path: join(here, 'pass-icons.js') });
 await p.addStyleTag({ url: 'https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&display=swap' }).catch(() => console.warn('Nunito indisponible : police de secours'));
 await p.evaluate(async () => { try { await document.fonts.load('900 100px Nunito'); } catch (e) {} await document.fonts.ready; });
-const icons = await p.evaluate(() => window.renderPass(256));
+const only = process.argv[3];
+const icons = await p.evaluate((only) => window.renderPass(256, only), only);
 for (const [k, url] of Object.entries(icons)) writeFileSync(join(out, k + '.png'), Buffer.from(url.split(',')[1], 'base64'));
-for (const c of ['chest_wood', 'chest_silver', 'chest_gold', 'chest_savant'])
+if (!only) for (const c of ['chest_wood', 'chest_silver', 'chest_gold', 'chest_savant'])
   copyFileSync(resolve(here, `../../ios/CultFive/Resources/Assets.xcassets/Icons/${c}.imageset/${c}.png`), join(out, c + '.png'));
 await b.close();
 console.log(Object.keys(icons).length, 'icônes');
