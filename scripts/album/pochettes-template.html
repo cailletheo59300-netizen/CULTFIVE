@@ -235,7 +235,7 @@ const FEAT={history:'history.contemporary',science:'science.space',geography:'ge
 const pageByKey=Object.fromEntries(PAGES.map(p=>[p.key,p]));
 const legendOf=p=>(p.cards.find(c=>c[5]==='legend')||p.cards[0])[0];
 const of_=l=>/^[AEIOUÉH]/i.test(l)?"d'"+l:'de '+l;
-const SERIES=[{id:'culture',label:'Culture G',tone:'#6A4CFF',medal:'stars',pages:PAGES,featKey:'geography.countries',featN:19,desc:'Tous les thèmes mélangés : idéal pour remplir l\'album au hasard.'}]
+const SERIES=[{id:'encyclo',label:'Encyclopédie',tone:'#6A4CFF',medal:'stars',pages:PAGES,featKey:'geography.countries',featN:19,desc:'Tous les thèmes mélangés : idéal pour remplir l\'album au hasard.'}]
   .concat(Object.entries(DOMS).map(([k,d])=>({id:k,label:d.label,tone:d.tone,medal:d.medal,pages:PAGES.filter(p=>p.dom===k),featKey:FEAT[k],desc:`Seulement des cartes ${k==='arts'?'des Arts':of_(d.label)}.`})));
 SERIES.forEach(s=>{const p=pageByKey[s.featKey]||s.pages[0];s.feat=[p.key,s.featN||legendOf(p)];s.pool=s.pages.flatMap(p=>p.cards.map(c=>({p,c})));});
 
@@ -448,13 +448,13 @@ function renderShop(){const el=document.getElementById('shop'),all=SERIES[0];
   const pg=pageByKey[shopPage],pagePool=pg.cards.map(c=>({p:pg,c})),missPage=pagePool.filter(x=>!isOwned(x)).length;
   const off=dayOffer(all),offPrice=off?Math.round(CRAFT[off.c[5]]*.7):0;
   const can=n=>neurones>=n;
-  const rack=(kind,price)=>`<div class="rack" role="list">${SERIES.map((s,i)=>{const look=kind==='gold'?{...s,gold:true,pill:'1 LÉGENDAIRE'}:s;const ok=can(price)&&(kind!=='gold'||goldLeft);
+  const rack=(kind,price)=>`<div class="rack" role="list">${SERIES.filter((s,i)=>kind!=='gold'||i===0).map((s,i)=>{const look=kind==='gold'?{...s,gold:true,pill:'1 LÉGENDAIRE'}:s;const ok=can(price)&&(kind!=='gold'||goldLeft);
     return `<button class="rk" role="listitem" data-kind="${kind}" data-i="${i}" ${ok?'':'disabled'} aria-label="Acheter la pochette ${kind==='gold'?'dorée ':''}${s.label} pour ${price} neurones">${packHTML(look)}<span class="nm2">${s.label}</span><span class="price"><i></i>${fmt(price)}</span></button>`;}).join('')}</div>`;
   const item=(pk,title,txt,price,btn,lim,extra='')=>`<div class="item">${pk}<h4>${title}</h4><p>${txt}</p>${extra}${lim?`<span class="lim">${lim}</span>`:''}<div class="buy"><span class="price"><i></i>${price}</span>${btn}</div></div>`;
   el.innerHTML=`<div class="shop-h"><div><h3>Le Comptoir de Léon</h3><p>Tout ce qui est tiré au hasard se paie en neurones, jamais en argent. Les neurones se gagnent en jouant et avec les doublons.</p></div>
     <div class="wallet"><span class="coin"><i></i>${fmt(neurones)} neurones</span><button class="btn ghost" id="addN" style="padding:8px 14px;font-size:13px">+1 000 (maquette)</button></div></div>
    <div><h2 style="margin:0">Pochettes · 5 cartes du thème</h2>${rack('pack',PRICE.pack)}</div>
-   <div><h2 style="margin:0">Pochettes dorées · une légendaire garantie, tirée au hasard</h2><p class="lim" style="margin:4px 0 0">${goldLeft?'Une seule par semaine, tous thèmes confondus':'Déjà achetée cette semaine : de retour lundi'}</p>${rack('gold',PRICE.gold)}</div>
+   <div><h2 style="margin:0">Pochette dorée · une légendaire garantie, tirée parmi les ${SERIES[0].pool.filter(x=>x.c[5]==='legend').length} légendaires de tout l'album</h2><p class="lim" style="margin:4px 0 0">${goldLeft?'Une seule par semaine':'Déjà achetée cette semaine : de retour lundi'} · pour une légendaire précise, il y a l'atelier de l'album (1 200)</p>${rack('gold',PRICE.gold)}</div>
    <div class="items">
     ${off?item(cardHTML(off.p,off.c,{}),'Offre du jour',`« ${off.c[1]} » te manque : 30 % moins chère qu'à l'atelier. Change chaque jour.`,`${offPrice} <s>${CRAFT[off.c[5]]}</s>`,`<button class="btn" data-buy="offer" ${can(offPrice)?'':'disabled'}>Acheter</button>`):''}
     ${item('','Pochette de saison','« Monstres et légendes » : une série limitée, en vente seulement pendant l\'événement.',PRICE.season,'<button class="btn" disabled>Bientôt</button>','Du 20 au 31 octobre').replace('class="item"','class="item soon"')}
