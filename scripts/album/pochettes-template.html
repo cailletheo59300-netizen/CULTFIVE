@@ -76,6 +76,14 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 .price s{color:var(--soft);font-weight:700;font-size:13px}
 .item .btn{padding:9px 16px;font-size:14px}
 .lim{font-size:12px;font-weight:800;color:var(--accent)}
+.rack{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 4px 14px;margin:0 -4px}
+.rk{flex:none;width:112px;scroll-snap-align:start;border:0;background:none;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--fg);transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.rk:hover:not(:disabled){transform:translateY(-6px) rotate(-1.5deg)}
+.rk:disabled{opacity:.45;cursor:not-allowed}
+.rk .pack{width:100%}
+.rk .nm2{font:900 12px var(--ui)}
+.rk .price{font-size:14px}
+.pgsel{font:800 14px var(--ui);padding:9px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);max-width:420px}
 .item select{font:800 14px var(--ui);padding:8px;border-radius:10px;border:1.5px solid var(--line);background:var(--panel);color:var(--fg);width:100%}
 .item .card{--w:96px;align-self:center}
 .item.soon{opacity:.6}
@@ -85,7 +93,7 @@ button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);ou
 .atelier .cell .card{--w:104px}
 .atelier .cell.own{opacity:.4;cursor:default}
 .atelier .cell[aria-pressed="true"]{background:var(--bg);box-shadow:0 0 0 2px var(--accent)}
-.atelier .cell span{font:900 12px var(--ui)}
+.atelier .cell>span{font:900 12px var(--ui)}
 .bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-weight:800}
 .box-cards{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 10px}
 .box-cards .it{display:flex;flex-direction:column;align-items:center;gap:6px}
@@ -213,9 +221,9 @@ const FEAT={history:'history.contemporary',science:'science.space',geography:'ge
 const pageByKey=Object.fromEntries(PAGES.map(p=>[p.key,p]));
 const legendOf=p=>(p.cards.find(c=>c[5]==='legend')||p.cards[0])[0];
 const of_=l=>/^[AEIOUÉH]/i.test(l)?"d'"+l:'de '+l;
-const SERIES=[{id:'decouverte',label:'Découverte',tone:'#6A4CFF',medal:'stars',pages:PAGES,featKey:'nature.earth',desc:'Tous les domaines mélangés : idéal pour remplir l\'album au hasard.'}]
+const SERIES=[{id:'culture',label:'Culture G',tone:'#6A4CFF',medal:'stars',pages:PAGES,featKey:'geography.countries',featN:19,desc:'Tous les thèmes mélangés : idéal pour remplir l\'album au hasard.'}]
   .concat(Object.entries(DOMS).map(([k,d])=>({id:k,label:d.label,tone:d.tone,medal:d.medal,pages:PAGES.filter(p=>p.dom===k),featKey:FEAT[k],desc:`Seulement des cartes ${k==='arts'?'des Arts':of_(d.label)}.`})));
-SERIES.forEach(s=>{const p=pageByKey[s.featKey]||s.pages[0];s.feat=[p.key,legendOf(p)];s.pool=s.pages.flatMap(p=>p.cards.map(c=>({p,c})));});
+SERIES.forEach(s=>{const p=pageByKey[s.featKey]||s.pages[0];s.feat=[p.key,s.featN||legendOf(p)];s.pool=s.pages.flatMap(p=>p.cards.map(c=>({p,c})));});
 
 /* ---------- couleurs ---------- */
 const hx=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)), mix=(a,b,t)=>{const A=hx(a),B=hx(b);return '#'+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,'0')).join('');};
@@ -261,8 +269,8 @@ const packHTML=(s,cls='')=>`<span class="pack ${cls}">${packSVG(s)}<span class="
 /* ---------- collection simulée et compteur ---------- */
 let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646;};
 const owned=new Set();PAGES.forEach(p=>p.cards.forEach(c=>{const r=c[5];if(rnd()<(r==='common'?.35:r==='rare'?.18:r==='epic'?.06:0))owned.add(p.key+'#'+c[0]);}));
-let pity=26, tickets=5, sel=0, neurones=1450, goldLeft=1, pageLeft=2, shopPage=null, atelierSel=null;
-const PRICE={pack:150,gold:900,page:300,season:200}, CRAFT={common:50,rare:150,epic:400,legend:1200};
+let pity=26, tickets=5, sel=0, neurones=1450, goldLeft=1, shopPage=null, atelierSel=null;
+const PRICE={pack:150,gold:900,season:200}, CRAFT={common:50,rare:150,epic:400,legend:1200};
 const fmt=n=>n.toLocaleString('fr-FR');
 const isOwned=x=>owned.has(x.p.key+'#'+x.c[0]);
 const ownedIn=s=>s.pool.filter(x=>owned.has(x.p.key+'#'+x.c[0])).length;
@@ -285,7 +293,7 @@ function draw(s,o={}){
 /* ---------- présentoir ---------- */
 function renderShelf(){const sh=document.getElementById('shelf');
   sh.innerHTML=SERIES.map((s,i)=>`<button class="slot" data-i="${i}" aria-pressed="${i===sel}" aria-label="Série ${s.label}">${packHTML(s)}<span class="cap">${s.label}</span></button>`).join('');
-  sh.querySelectorAll('.slot').forEach(b=>b.onclick=()=>{sel=+b.dataset.i;sh.querySelectorAll('.slot').forEach(x=>x.setAttribute('aria-pressed',x===b));renderDetail();shopPage=null;atelierSel=null;renderShop();});}
+  sh.querySelectorAll('.slot').forEach(b=>b.onclick=()=>{sel=+b.dataset.i;sh.querySelectorAll('.slot').forEach(x=>x.setAttribute('aria-pressed',x===b));renderDetail();});}
 function renderDetail(){const s=SERIES[sel],d=document.getElementById('detail');
   const cnt=r=>s.pool.filter(x=>(x.c[5]||'common')===r).length;
   const stars=s.pages.map(p=>{const n=legendOf(p);return {p,c:p.cards[n-1]};}).slice(0,12);
@@ -421,38 +429,38 @@ function showRecap(st,s,pulls,o={}){
 /* ---------- Comptoir de Léon ---------- */
 const COFFRET={name:'Paris',cards:[['geography.monuments',1],['arts.architecture',5],['history.modern',7],['arts.architecture',2],['cinema.directors',7],['geography.relief',11]]};
 function dayOffer(s){const miss=s.pool.filter(x=>!isOwned(x)&&x.c[5]!=='legend');if(!miss.length)return null;const d=new Date();return miss[(d.getFullYear()*372+d.getMonth()*31+d.getDate())%miss.length];}
-function renderShop(){const s=SERIES[sel],el=document.getElementById('shop');
-  if(!shopPage||!s.pages.some(p=>p.key===shopPage))shopPage=s.pages[0].key;
+function renderShop(){const el=document.getElementById('shop'),all=SERIES[0];
+  if(!shopPage)shopPage=SERIES[sel].pages[0].key;
   const pg=pageByKey[shopPage],pagePool=pg.cards.map(c=>({p:pg,c})),missPage=pagePool.filter(x=>!isOwned(x)).length;
-  const off=dayOffer(s),offPrice=off?Math.round(CRAFT[off.c[5]]*.7):0;
-  const gold={...s,gold:true,pill:'1 LÉGENDAIRE'},mine={...s,pill:'MA PAGE'};
+  const off=dayOffer(all),offPrice=off?Math.round(CRAFT[off.c[5]]*.7):0;
   const can=n=>neurones>=n;
+  const rack=(kind,price)=>`<div class="rack" role="list">${SERIES.map((s,i)=>{const look=kind==='gold'?{...s,gold:true,pill:'1 LÉGENDAIRE'}:s;const ok=can(price)&&(kind!=='gold'||goldLeft);
+    return `<button class="rk" role="listitem" data-kind="${kind}" data-i="${i}" ${ok?'':'disabled'} aria-label="Acheter la pochette ${kind==='gold'?'dorée ':''}${s.label} pour ${price} neurones">${packHTML(look)}<span class="nm2">${s.label}</span><span class="price"><i></i>${fmt(price)}</span></button>`;}).join('')}</div>`;
   const item=(pk,title,txt,price,btn,lim,extra='')=>`<div class="item">${pk}<h4>${title}</h4><p>${txt}</p>${extra}${lim?`<span class="lim">${lim}</span>`:''}<div class="buy"><span class="price"><i></i>${price}</span>${btn}</div></div>`;
-  el.innerHTML=`<div class="shop-h"><div><h3>Le Comptoir de Léon</h3><p>Tout ce qui est tiré au hasard se paie en neurones, jamais en argent. Les neurones se gagnent en jouant et avec les doublons. Série choisie : <b>${s.label}</b> (change-la plus haut).</p></div>
+  el.innerHTML=`<div class="shop-h"><div><h3>Le Comptoir de Léon</h3><p>Tout ce qui est tiré au hasard se paie en neurones, jamais en argent. Les neurones se gagnent en jouant et avec les doublons.</p></div>
     <div class="wallet"><span class="coin"><i></i>${fmt(neurones)} neurones</span><button class="btn ghost" id="addN" style="padding:8px 14px;font-size:13px">+1 000 (maquette)</button></div></div>
+   <div><h2 style="margin:0">Pochettes · 5 cartes du thème</h2>${rack('pack',PRICE.pack)}</div>
+   <div><h2 style="margin:0">Pochettes dorées · une légendaire garantie, tirée au hasard</h2><p class="lim" style="margin:4px 0 0">${goldLeft?'Une seule par semaine, tous thèmes confondus':'Déjà achetée cette semaine : de retour lundi'}</p>${rack('gold',PRICE.gold)}</div>
    <div class="items">
-    ${item(`<span class="pk">${packHTML(s)}</span>`,'Pochette','5 cartes de la série, mêmes chances que d\'habitude.',PRICE.pack,`<button class="btn" data-buy="pack" ${can(PRICE.pack)?'':'disabled'}>Acheter</button>`)}
-    ${item(`<span class="pk">${packHTML(gold)}</span>`,'Pochette dorée','5 cartes de la série, dont <b>une légendaire garantie</b>, tirée au hasard.',PRICE.gold,`<button class="btn" data-buy="gold" ${can(PRICE.gold)&&goldLeft?'':'disabled'}>Acheter</button>`,goldLeft?'Encore 1 cette semaine':'Déjà achetée cette semaine')}
-    ${item(`<span class="pk">${packHTML(mine)}</span>`,'Pochette « Ma page »','5 cartes d\'une seule page, en priorité celles qui te manquent.',PRICE.page,`<button class="btn" data-buy="page" ${can(PRICE.page)&&pageLeft?'':'disabled'}>Acheter</button>`,`Encore ${pageLeft} cette semaine`,
-      `<label class="sr" for="pgSel" style="font-size:12px;font-weight:800;color:var(--soft)">Page</label><select id="pgSel">${s.pages.map(p=>{const m=p.cards.filter(c=>!owned.has(p.key+'#'+c[0])).length;return `<option value="${p.key}" ${p.key===shopPage?'selected':''}>${p.title} · ${m} manquante${m>1?'s':''}</option>`;}).join('')}</select>`)}
-    ${off?item(cardHTML(off.p,off.c,{}),'Offre du jour',`« ${off.c[1]} » te manque : 30 % moins chère qu\'à l\'atelier. Change chaque jour.`,`${offPrice} <s>${CRAFT[off.c[5]]}</s>`,`<button class="btn" data-buy="offer" ${can(offPrice)?'':'disabled'}>Acheter</button>`):''}
+    ${off?item(cardHTML(off.p,off.c,{}),'Offre du jour',`« ${off.c[1]} » te manque : 30 % moins chère qu'à l'atelier. Change chaque jour.`,`${offPrice} <s>${CRAFT[off.c[5]]}</s>`,`<button class="btn" data-buy="offer" ${can(offPrice)?'':'disabled'}>Acheter</button>`):''}
     ${item('','Pochette de saison','« Monstres et légendes » : une série limitée, en vente seulement pendant l\'événement.',PRICE.season,'<button class="btn" disabled>Bientôt</button>','Du 20 au 31 octobre').replace('class="item"','class="item soon"')}
    </div>
    <div class="atelier"><h2 style="margin:0">Atelier · fabriquer une carte précise</h2>
-    <p style="margin:0;color:var(--soft);font-size:14px">Commune ${CRAFT.common} · rare ${CRAFT.rare} · épique ${CRAFT.epic} · légendaire ${fmt(CRAFT.legend)}. Page : <b>${pg.title}</b> (${missPage} carte${missPage>1?'s':''} à fabriquer).</p>
+    <p style="margin:0;color:var(--soft);font-size:14px">Commune ${CRAFT.common} · rare ${CRAFT.rare} · épique ${CRAFT.epic} · légendaire ${fmt(CRAFT.legend)}.</p>
+    <label for="pgSel" style="font-size:12px;font-weight:800;color:var(--soft)">Page de l'album</label>
+    <select id="pgSel" class="pgsel">${Object.entries(DOMS).map(([k,d])=>`<optgroup label="${d.label}">${PAGES.filter(p=>p.dom===k).map(p=>{const m=p.cards.filter(c=>!owned.has(p.key+'#'+c[0])).length;return `<option value="${p.key}" ${p.key===shopPage?'selected':''}>${p.title} · ${m} à fabriquer</option>`;}).join('')}</optgroup>`).join('')}</select>
     <div class="grid">${pagePool.map(x=>{const own=isOwned(x),k=x.p.key+'#'+x.c[0];return `<div role="button" tabindex="${own?-1:0}" class="cell ${own?'own':''}" data-k="${k}" ${own?'aria-disabled="true" aria-label="Déjà dans ton album"':''} aria-pressed="${atelierSel===k}">${cardHTML(x.p,x.c,{})}<span>${own?'✓ dans l\'album':fmt(CRAFT[x.c[5]])+' neurones'}</span></div>`;}).join('')}</div>
     ${atelierSel&&pagePool.some(x=>x.p.key+'#'+x.c[0]===atelierSel)?(()=>{const x=pagePool.find(y=>y.p.key+'#'+y.c[0]===atelierSel),pr=CRAFT[x.c[5]];return `<div class="bar">Fabriquer « ${x.c[1]} » pour <span class="price"><i></i>${fmt(pr)}</span><button class="btn" id="craft" ${can(pr)?'':'disabled'}>Fabriquer</button>${can(pr)?'':'<span style="color:var(--soft)">Pas assez de neurones</span>'}</div>`;})():''}
    </div>`;
   fit(el);
   el.querySelector('#addN').onclick=()=>{neurones+=1000;renderShop();};
   el.querySelector('#pgSel').onchange=e=>{shopPage=e.target.value;atelierSel=null;renderShop();};
-  el.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{const k=b.dataset.buy;
-    if(k==='pack')openPack(s,{cost:PRICE.pack});
-    if(k==='gold')openPack(gold,{cost:PRICE.gold,gold:true,pool:s.pool,after:()=>{goldLeft--;},title:'Ta pochette dorée'});
-    if(k==='page')openPack(mine,{cost:PRICE.page,pool:pagePool,missingFirst:true,after:()=>{pageLeft--;},title:'Ta pochette « Ma page »'});
-    if(k==='offer'&&off){neurones-=offPrice;single(s,off,'Offre du jour');}});
+  el.querySelectorAll('.rk').forEach(b=>b.onclick=()=>{const s=SERIES[+b.dataset.i];
+    if(b.dataset.kind==='pack')openPack(s,{cost:PRICE.pack});
+    else openPack({...s,gold:true,pill:'1 LÉGENDAIRE'},{cost:PRICE.gold,gold:true,pool:s.pool,after:()=>{goldLeft--;},title:'Ta pochette dorée'});});
+  el.querySelectorAll('[data-buy="offer"]').forEach(b=>b.onclick=()=>{if(off){neurones-=offPrice;single(all,off,'Offre du jour');}});
   el.querySelectorAll('.cell:not(.own)').forEach(b=>{b.onclick=()=>{atelierSel=b.dataset.k;renderShop();};b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};});
-  const cr=el.querySelector('#craft');if(cr)cr.onclick=()=>{const x=pagePool.find(y=>y.p.key+'#'+y.c[0]===atelierSel);neurones-=CRAFT[x.c[5]];atelierSel=null;single(s,x,'Fabriquée à l\'atelier');};
+  const cr=el.querySelector('#craft');if(cr)cr.onclick=()=>{const x=pagePool.find(y=>y.p.key+'#'+y.c[0]===atelierSel);neurones-=CRAFT[x.c[5]];atelierSel=null;single(all,x,'Fabriquée à l\'atelier');};
   renderCoffret();}
 /* une seule carte (atelier, offre) : pas de pochette, retournement direct */
 function single(s,x,title){
