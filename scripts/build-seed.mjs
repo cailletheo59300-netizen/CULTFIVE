@@ -318,6 +318,25 @@ if (errors.length) {
   process.exit(1);
 }
 
+// Familles automatiques (variété) : les questions sans famille qui partagent le même début d'énoncé (« Quel nombre suit… »,
+// « Quel est le contraire de… », « Combien font # × #… ») forment une famille, pour qu'une partie n'en serve qu'une
+// (et pas celles de la partie précédente). Seulement pour l'envoi en base : les contrôles de doublons ci-dessus restent stricts.
+{
+  const skeleton = (q) => q.prompt.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/\d+([.,]\d+)?/g, ' n ').replace(/[^a-z ]+/g, ' ').split(/\s+/).filter(Boolean).slice(0, 4).join('_');
+  const groups = new Map();
+  for (const q of questions) {
+    if (q.family) continue;
+    const k = `${q.concept_id.split('.')[0]}:${skeleton(q)}`;
+    groups.set(k, [...(groups.get(k) ?? []), q]);
+  }
+  for (const [k, group] of groups) {
+    if (group.length < 5) continue;
+    const family = ('auto_' + k.replace(':', '_')).slice(0, 60);
+    for (const q of group) q.family = family;
+  }
+}
+
 const lit = (v) => `'${String(v).replace(/'/g, "''")}'`;
 const lines = [
   '-- GÉNÉRÉ par scripts/build-seed.mjs — ne pas éditer à la main.',
