@@ -32,7 +32,7 @@ struct EloExplainerSheet: View {
                     Image(systemName: "arrow.uturn.backward.circle.fill").font(.largeTitle).foregroundStyle(Color.brand)
                 }
                 step(5, "Le bouclier",
-                     "Active-le avant de répondre (15 graines ou un ticket) : si tu te trompes, tu as un 2e essai, pour la moitié des points. Il est consommé même si tu réponds juste.") {
+                     "Active-le avant de répondre (15 neurones ou un ticket) : si tu te trompes, tu as un 2e essai, pour la moitié des points. Il est consommé même si tu réponds juste.") {
                     Image(systemName: "shield.fill").font(.largeTitle).foregroundStyle(Color.sun)
                 }
 

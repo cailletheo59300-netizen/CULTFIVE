@@ -741,7 +741,7 @@ struct MarginVerdictCard: View {
                 HStack(spacing: 8) {
                     Text(title(margin)).font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(color(margin))
                     if margin == .exact {
-                        Text("+5 graines")
+                        Text("+5 neurones")
                             .font(.system(.caption, design: .rounded).weight(.heavy))
                             .foregroundStyle(Color.inkFixed)
                             .padding(.horizontal, 8).padding(.vertical, 3)

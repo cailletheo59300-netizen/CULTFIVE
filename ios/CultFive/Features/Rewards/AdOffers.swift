@@ -113,7 +113,7 @@ struct DoubleSeedsButton: View {
                 Button { Task { await run() } } label: {
                     HStack(spacing: 8) {
                         if busy { ProgressView().controlSize(.small) }
-                        Label("Doubler mes graines", systemImage: "play.rectangle.fill")
+                        Label("Doubler mes neurones", systemImage: "play.rectangle.fill")
                     }
                     .frame(maxWidth: .infinity)
                 }

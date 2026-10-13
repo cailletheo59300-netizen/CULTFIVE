@@ -10,8 +10,8 @@ enum Brand {
     static let onboardingHook = "Et toi, tu sais quoi ?"
 
     static let dailyName = "5 du jour"
-    static let currencySingular = "graine"
-    static let currencyPlural = "graines"
+    static let currencySingular = "neurone"
+    static let currencyPlural = "neurones"
     static let mascotName = "Léon"
 
     static let urlScheme = "brainlix"

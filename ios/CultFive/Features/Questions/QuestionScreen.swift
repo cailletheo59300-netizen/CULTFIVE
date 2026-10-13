@@ -211,7 +211,7 @@ struct RevealPanel: View {
                 } else if question.type == .mapPin {
                     DistanceVerdictCard(question: question, given: given, answer: reveal.answer)
                 } else if question.type == .riddle, isCorrect, case .riddle(_, let clues)? = given, clues <= 2 {
-                    Text(clues == 1 ? "💎 Trouvé dès le 1er indice : +3 graines" : "💎 Trouvé au 2e indice : +1 graine")
+                    Text(clues == 1 ? "💎 Trouvé dès le 1er indice : +3 neurones" : "💎 Trouvé au 2e indice : +1 neurone")
                         .font(.system(.callout, design: .rounded).weight(.heavy))
                         .foregroundStyle(Color(hex: 0x8A6400))
                 } else if let answerText = AnswerText.correct(for: question, answer: reveal.answer), !isCorrect || question.type == .numeric {

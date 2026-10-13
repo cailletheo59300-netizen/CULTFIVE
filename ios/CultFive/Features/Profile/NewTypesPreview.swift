@@ -47,7 +47,7 @@ struct NewTypesPreviewView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Space.m) {
-                Text("Réservé aux builds de test. Ces questions sont rangées dans l'app et corrigées sur ton téléphone : rien n'est envoyé au serveur, ni Elo, ni graines.")
+                Text("Réservé aux builds de test. Ces questions sont rangées dans l'app et corrigées sur ton téléphone : rien n'est envoyé au serveur, ni Elo, ni neurones.")
                     .font(.cfFootnote)
                     .foregroundStyle(Color.inkSoft)
                     .fixedSize(horizontal: false, vertical: true)

@@ -210,8 +210,8 @@ struct RiddleAnswerView: View {
 
     private var bonusText: String {
         switch shown {
-        case 1: return "💎 Trouve au 1er indice : +3 graines"
-        case 2: return "💎 Trouve au 2e indice : +1 graine"
+        case 1: return "💎 Trouve au 1er indice : +3 neurones"
+        case 2: return "💎 Trouve au 2e indice : +1 neurone"
         default: return "Dernier indice : pas de bonus"
         }
     }
@@ -474,7 +474,7 @@ struct DistanceVerdictCard: View {
                     Text(title(margin)).font(.system(.headline, design: .rounded).weight(.black))
                         .foregroundStyle(margin == .near ? Color.orange : (margin == .missed ? Color.wrong : Color.correct))
                     if margin == .exact {
-                        Text("+5 graines").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkFixed)
+                        Text("+5 neurones").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkFixed)
                             .padding(.horizontal, 8).padding(.vertical, 3).background(Color.sun, in: Capsule())
                     }
                 }

@@ -286,7 +286,7 @@ struct ChestsWaitingCard: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(count > 1 ? "\(count) coffres t'attendent" : "Un coffre t'attend")
                         .font(.cfTitle3).foregroundStyle(Color.ink)
-                    Text(count > 1 ? detail : "Graines, tickets d'aide, jokers, objets pour Léon…")
+                    Text(count > 1 ? detail : "Neurones, tickets d'aide, jokers, cartes de l'album…")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                 }
                 Spacer(minLength: 0)

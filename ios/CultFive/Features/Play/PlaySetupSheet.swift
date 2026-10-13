@@ -96,7 +96,7 @@ struct PlaySetupSheet: View {
     private var kindPicker: some View {
         VStack(spacing: 10) {
             kindCard(ranked: true, title: "Partie classée", symbol: "chart.line.uptrend.xyaxis",
-                     detail: "10 questions sur tous les thèmes du domaine, à la limite de ton niveau. Ton Elo et tes graines évoluent.")
+                     detail: "10 questions sur tous les thèmes du domaine, à la limite de ton niveau. Ton Elo et tes neurones évoluent.")
             kindCard(ranked: false, title: "Entraînement libre", symbol: "slider.horizontal.3",
                      detail: "Thèmes, nombre de questions, chrono et difficulté au choix. Sans effet sur ton Elo.")
         }

@@ -7,7 +7,6 @@ struct ProfileView: View {
     @Environment(AppModel.self) private var app
     @State private var skills: [SkillSummary] = []
     @State private var trophyOverview: TrophiesOverview?
-    @State private var showTree = false
     @State private var history: [DailyHistoryEntry] = []
     @State private var showHistory = false
     @State private var showSettings = false
@@ -22,7 +21,6 @@ struct ProfileView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     portrait
                     if app.isAnonymous { AccountNudge() }
-                    if !AppChannel.isTestBuild { treeCard }
                     Button { showRankPath = true } label: { coteCard }
                         .buttonStyle(.row)
                         .accessibilityHint("Ouvre ton parcours : les rangs et ce qu'il te reste à gagner")
@@ -46,7 +44,6 @@ struct ProfileView: View {
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: String.self) { DomainView(domainId: $0) }
             .navigationDestination(isPresented: $showSettings) { SettingsView() }
-            .navigationDestination(isPresented: $showTree) { LeonTreeScreen() }
             .navigationDestination(isPresented: $showRankPath) { RankPathView(global: CoteCULT.overall(skills)) }
             .refreshable { await load() }
         }
@@ -110,18 +107,8 @@ struct ProfileView: View {
                     }
                 }
                 Spacer()
-                if AppChannel.isTestBuild {
-                    // Builds de test : plus d'arbre ni de tenue, Léon est un simple dessin.
-                    Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
-                        .frame(width: 120)
-                } else {
-                    Button { showTree = true } label: {
-                        Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
-                            .frame(width: 120)
-                    }
-                    .buttonStyle(.row)
-                    .accessibilityHint("Ouvre l'arbre de Léon et sa tenue")
-                }
+                Leon(color: favoriteColor, pose: .rest, curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08))
+                    .frame(width: 120)
             }
         }
     }
@@ -195,31 +182,5 @@ struct ProfileView: View {
         .padding(Space.m)
         .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
         .accessibilityElement(children: .combine)
-    }
-
-    /// Entrée vers l'arbre de Léon : l'arbre en miniature, l'étape, la jauge.
-    @ViewBuilder private var treeCard: some View {
-        if let tree = app.progression?.tree {
-            Button { showTree = true } label: {
-                HStack(spacing: Space.m) {
-                    LeonTreeView(stage: tree.stage, fruits: tree.fruits).frame(width: 70, height: 70)
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("L'arbre de Léon").labelCaps()
-                        Text(tree.stageName).font(.cfTitle3).foregroundStyle(Color.ink)
-                        if let label = tree.nextLabel {
-                            ProgressView(value: tree.progress).tint(.correct).frame(maxWidth: 180)
-                            Text("Nourris-le pour atteindre : \(label.lowercased())").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                        } else {
-                            Text("Complet, avec tous ses fruits").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                        }
-                    }
-                    Spacer(minLength: 0)
-                    Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
-                }
-                .popCard(padding: 14)
-            }
-            .buttonStyle(.row)
-            .accessibilityHint("Nourrir l'arbre et habiller Léon")
-        }
     }
 }

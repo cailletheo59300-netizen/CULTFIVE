@@ -276,7 +276,8 @@ struct CloseCircle: View {
 
 /// La graine de Brainlix (monnaie) : l'icône 3D des graines.
 struct SeedIcon: View {
+    /// La monnaie s'appelle désormais « neurones » : le cerveau dessiné de l'album.
     var body: some View {
-        GameIcon.seeds.image
+        NeuroneIcon()
     }
 }

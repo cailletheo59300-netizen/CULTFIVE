@@ -183,7 +183,7 @@ struct CelebrationSequence: View {
         case .trophy(_, let detail, _): return detail ?? "Un nouveau trophée dans ta vitrine."
         case .streak(let n, _): return "Ton meilleur record ! Reviens demain pour faire \(n + 1)."
         case .quest(_, let seeds, _, let tier):
-            return tier != nil ? "Ton coffre t'attend." : seeds > 0 ? "Tes graines sont dans ton sac." : "Bien joué !"
+            return tier != nil ? "Ton coffre t'attend." : seeds > 0 ? "Tes neurones sont dans ton sac." : "Bien joué !"
         }
     }
 

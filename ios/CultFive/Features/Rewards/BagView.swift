@@ -16,9 +16,9 @@ struct BagView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     seedsCard
                     section("Tickets d'aide")
-                    row(icon: GameIcon.ticketFifty.image, title: "Ticket 50/50", detail: "Retire deux mauvaises réponses, sans graines",
+                    row(icon: GameIcon.ticketFifty.image, title: "Ticket 50/50", detail: "Retire deux mauvaises réponses, sans neurones",
                         value: "× \(progression?.tickets.fiftyFifty ?? 0)")
-                    row(icon: GameIcon.ticketHint.image, title: "Ticket indice", detail: "Un indice ou une seconde chance, sans graines",
+                    row(icon: GameIcon.ticketHint.image, title: "Ticket indice", detail: "Un indice ou une seconde chance, sans neurones",
                         value: "× \(progression?.tickets.hint ?? 0)")
                     section("Série")
                     row(icon: GameIcon.joker.image, title: "Jokers de série", detail: "Sauvent ta série si tu rates un jour (2 au plus)",
@@ -26,17 +26,6 @@ struct BagView: View {
                     if let chests = progression?.chests, !chests.isEmpty {
                         section("À ouvrir")
                         chestsRow(chests)
-                    }
-                    // Builds de test : la garde-robe de Léon n'existe plus (l'album la remplace).
-                    if !AppChannel.isTestBuild, let items = progression?.items {
-                        let won = items.filter { $0.owned && $0.rarity != "tree" }.count
-                        let total = items.filter { $0.rarity != "tree" }.count
-                        if total > 0 {
-                            section("Objets de Léon · \(won) sur \(total)")
-                            Text("Ses chapeaux, lunettes, écharpes… Tu les choisis dans l'onglet Léon, partie Tenue.")
-                                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                                .padding(.horizontal, 4)
-                        }
                     }
                 }
                 .padding(.horizontal, Space.gutter)
@@ -64,7 +53,7 @@ struct BagView: View {
                 Text("\(seeds) \(seeds > 1 ? Brand.currencyPlural : Brand.currencySingular)")
                     .font(.system(size: 28, weight: .black, design: .rounded)).monospacedDigit()
                     .lineLimit(1).minimumScaleFactor(0.7)
-                Text(AppChannel.isTestBuild ? "Pour les aides en partie" : "Pour l'arbre de Léon et les aides en partie")
+                Text("Pour les aides en partie et l'album")
                     .font(.cfFootnote).foregroundStyle(.white.opacity(0.8))
             }
             Spacer(minLength: 0)
@@ -102,7 +91,7 @@ struct BagView: View {
             ChestView(tier: best).frame(width: 56, height: 52)
             VStack(alignment: .leading, spacing: 2) {
                 Text(chests.count > 1 ? "\(chests.count) coffres" : "1 coffre").font(.cfHeadline).foregroundStyle(Color.ink)
-                Text("Graines, tickets, jokers, objets pour Léon…").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                Text("Neurones, tickets, jokers, cartes de l'album…").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
             Spacer(minLength: 0)
             Button("Ouvrir") {

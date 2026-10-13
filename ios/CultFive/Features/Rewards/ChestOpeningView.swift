@@ -206,7 +206,7 @@ struct ChestOpeningView: View {
                     }
                     .buttonStyle(InkButtonStyle(fill: Color.sun, text: Color(hex: 0x1E1340)))
                     .disabled(boosting)
-                    Text("Chances d'amélioration doublées, graines +50 %")
+                    Text("Chances d'amélioration doublées, neurones +50 %")
                         .font(.cfFootnote).foregroundStyle(.white.opacity(0.7))
                 }
                 Button("Plus tard") { onDone() }
@@ -676,8 +676,8 @@ private struct RewardCard: View {
 
     private var subtitle: String {
         switch reward {
-        case .seeds: return AppChannel.isTestBuild ? "Pour les aides en partie" : "Pour l'arbre de Léon et les aides"
-        case .tickets(let kind, _): return kind == .fiftyFifty ? "Retire deux mauvaises réponses, sans graines" : "Un indice ou une seconde chance, sans graines"
+        case .seeds: return "Pour les aides en partie"
+        case .tickets(let kind, _): return kind == .fiftyFifty ? "Retire deux mauvaises réponses, sans neurones" : "Un indice ou une seconde chance, sans neurones"
         case .joker: return "Sauve ta série un jour où tu oublies de jouer"
         case .item: return "Nouveau pour Léon : il le porte déjà !"
         }

@@ -16,8 +16,8 @@ struct CultFiveApp: App {
                 .environment(model)
                 .tint(Color.brand)
                 .preferredColorScheme(appearance.colorScheme)
-                // Builds de test : plus de garde-robe de Léon (D-040, l'album remplace l'arbre).
-                .environment(\.leonOutfit, AppChannel.isTestBuild ? LeonOutfit() : model.outfit)
+                // Plus de garde-robe de Léon (D-040, l'album remplace l'arbre) : Léon ne porte que ses tenues de saison.
+                .environment(\.leonOutfit, LeonOutfit())
                 .onOpenURL { model.handle(url: $0) }
                 .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in
                     if let url = activity.webpageURL { model.handle(url: url) }

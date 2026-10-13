@@ -186,7 +186,7 @@ struct DailyHomeView: View {
             }
             .buttonStyle(.row)
             .accessibilityLabel(chests > 0 ? "Mon sac, \(chests) coffre\(chests > 1 ? "s" : "") à ouvrir" : "Mon sac")
-            .accessibilityHint("Graines, tickets, jokers, coffres")
+            .accessibilityHint("Neurones, tickets, jokers, coffres")
         }
     }
 

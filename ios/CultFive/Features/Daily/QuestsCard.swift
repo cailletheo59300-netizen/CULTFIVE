@@ -156,7 +156,7 @@ struct QuestRewardBanner: View {
             ForEach(Array(rewards.enumerated()), id: \.offset) { _, reward in
                 CelebrationCard(kind: .quest, title: reward.label,
                                 detail: reward.chest.map { "\(ChestName.title($0)) gagné !" }
-                                    ?? "+\(reward.seeds) graines\(reward.xp > 0 ? " · +\(reward.xp) XP" : "")")
+                                    ?? "+\(reward.seeds) neurones\(reward.xp > 0 ? " · +\(reward.xp) XP" : "")")
             }
         }
     }
