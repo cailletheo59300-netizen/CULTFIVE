@@ -110,3 +110,21 @@ Questionnaire (réponses) :
 8. **Informations pour la revue** : notes de la section 3, contact (nom, e-mail, téléphone : vus seulement par Apple).
 9. **Publication** : « Publier automatiquement après approbation » + **sortie progressive sur 7 jours**.
 10. **Ajouter pour vérification** → **Envoyer**. Réponse d'Apple en général sous 24 à 48 h.
+
+## 6. Version 1.1
+
+**Build à envoyer** : lancer le workflow TestFlight avec l'option **« aperçu » décochée**. Les testeurs d'Apple ouvrent l'app comme un build de test : sans l'option, ils voient le jeu publié, sans l'album, les défis sous le 5 ni l'aperçu des nouveaux types. Les builds avec aperçu servent seulement à nos tests.
+
+**Nouveautés de cette version** (à coller dans App Store Connect) :
+
+> - Tout est plus beau : coffres, graines, tickets et emblèmes de rang en 3D.
+> - Les coffres s'ouvrent pour de vrai : le couvercle bascule, les récompenses se retournent une à une.
+> - Tes grands moments sont fêtés : nouveau niveau, nouveau rang, trophée, record de série, défi réussi.
+> - Nouveau : « Mon sac », pour voir d'un coup d'œil tes graines, tickets et jokers.
+> - « Ton parcours » : tous les rangs et ce qu'il te reste à gagner.
+> - L'arbre de Léon prend vie.
+> - Écrans Jouer et Profil repensés, aides plus lisibles en partie.
+
+**Notes pour Apple** : les mêmes qu'en section 3.
+
+**Serveur** : rien à déployer pour l'examen. Après la publication de la 1.1 seulement, déployer les migrations 0038 à 0041 et le seed (questions accessibles et nouveaux types), avec le feu vert du propriétaire.

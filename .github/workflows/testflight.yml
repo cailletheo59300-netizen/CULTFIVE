@@ -3,8 +3,15 @@ name: TestFlight
 # Construit l'app en version Release (serveur de production, sans mode démo), la signe et l'envoie sur App Store Connect.
 # Déclenchement manuel uniquement : onglet Actions → TestFlight → Run workflow.
 # Secrets du dépôt : ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 (clé App Store Connect API, contenu du fichier .p8).
+# Option « aperçu » : activée (par défaut) pour nos builds de test (album, défis sous le 5, aperçu des nouveaux types) ;
+# désactivée pour le build envoyé à Apple, que les testeurs d'Apple ouvrent eux aussi comme un build de test.
 on:
   workflow_dispatch:
+    inputs:
+      apercu:
+        description: "Aperçu (album, défis, nouveaux types). Décocher pour le build envoyé à Apple."
+        type: boolean
+        default: true
 
 concurrency:
   group: testflight
@@ -78,6 +85,9 @@ jobs:
       - name: Archive (signature automatique)
         run: |
           status=0
+          extra=()
+          if [ "${{ inputs.apercu }}" != "false" ]; then extra+=('SWIFT_ACTIVE_COMPILATION_CONDITIONS=$(inherited) APERCU'); fi
+          echo "Aperçu : ${{ inputs.apercu }}"
           xcodebuild archive \
             -project ios/CultFive.xcodeproj \
             -scheme CultFive \
@@ -88,6 +98,7 @@ jobs:
             -authenticationKeyPath "$ASC_KEY_PATH" \
             -authenticationKeyID "$ASC_KEY_ID" \
             -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            "${extra[@]}" \
             CURRENT_PROJECT_VERSION="$BUILD_NUMBER" > archive.log 2>&1 || status=$?
           grep -E "error:|warning: .*(sign|profile|entitlement)|ARCHIVE (SUCCEEDED|FAILED)" archive.log | tail -60
           exit $status

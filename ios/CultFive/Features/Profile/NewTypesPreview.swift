@@ -1,14 +1,17 @@
 import SwiftUI
 import CultFiveCore
 
-/// Canal de distribution : l'aperçu des nouveaux types n'existe que dans les builds de test (TestFlight, Xcode),
-/// jamais dans la version de l'App Store.
+/// Canal de distribution : les aperçus (nouveaux types, album, défis sous le 5) n'existent que dans les builds de test
+/// (Xcode, et TestFlight construits avec l'option « aperçu », condition `APERCU`), jamais dans la version de l'App Store.
+/// Le build envoyé à Apple est construit sans l'option : ses testeurs, eux aussi en « sandbox », voient le jeu publié.
 enum AppChannel {
     static var isTestBuild: Bool {
         #if DEBUG
         return true
-        #else
+        #elseif APERCU
         return Bundle.main.appStoreReceiptURL?.lastPathComponent == "sandboxReceipt"
+        #else
+        return false
         #endif
     }
 }
