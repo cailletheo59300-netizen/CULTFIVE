@@ -24,3 +24,18 @@ begin
                                               join public.questions q1 on q1.id = (e1 ->> 'id')::uuid);
   perform tst.ok(v_overlap <= 1, format('partie suivante : familles différentes (%s en commun)', v_overlap));
 end $$;
+
+-- Capitales revues pays par pays : Rome facile, Minsk et Bichkek difficiles ; une question déjà en base est mise à jour.
+do $$
+declare v_q uuid; v_rome real; v_minsk real; v_bichkek real;
+begin
+  select difficulty_initial into v_rome from public.questions where prompt = 'De quel pays Rome est-elle la capitale ?';
+  select difficulty_initial into v_minsk from public.questions where prompt = 'De quel pays Minsk est-elle la capitale ?';
+  select difficulty_initial into v_bichkek from public.questions where prompt = 'De quel pays Bichkek est-elle la capitale ?';
+  perform tst.ok(v_rome < 25 and v_minsk > 50 and v_bichkek > v_minsk, format('capitales : Rome %s, Minsk %s, Bichkek %s', v_rome, v_minsk, v_bichkek));
+  select id into v_q from public.questions where prompt = 'De quel pays Minsk est-elle la capitale ?';
+  update public.questions set difficulty_initial = 27, difficulty_observed = 27, difficulty_min = 17, difficulty_max = 37 where id = v_q;
+  perform public._upsert_question(jsonb_build_object('external_key', external_key, 'concept_id', concept_id, 'type', type, 'prompt', prompt,
+            'difficulty', v_minsk, 'reset_difficulty', true), 'import', null) from public.questions where id = v_q;
+  perform tst.ok((select difficulty_initial from public.questions where id = v_q) = v_minsk, 'question déjà en base mise à jour');
+end $$;

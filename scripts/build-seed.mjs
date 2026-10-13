@@ -68,6 +68,8 @@ function convert(q) {
     explanation: q.explanation, takeaway: q.takeaway, hint: q.hint ?? autoHint(q), context_note: q.context,
     source: q.source, fact_as_of: q.fact_as_of, difficulty: q.difficulty, status: q.status ?? 'published',
     origin: q.origin ?? 'human', family: q.family,
+    // Difficulté revue à la main : remplace aussi celle d'une question déjà en base, tant qu'elle a peu de réponses (0048).
+    ...(q.reset_difficulty ? { reset_difficulty: true } : {}),
   };
   if (q.family && !/^[a-z_]+$/.test(q.family)) fail(k, `famille invalide « ${q.family} »`);
   if (!/^[a-z_]+\.[a-z_]+\.[a-z0-9_]+$/.test(q.concept ?? '')) fail(k, `concept invalide « ${q.concept} »`);
@@ -258,6 +260,20 @@ for (const [theme, group] of byTheme) {
     q.difficulty = Math.round(Math.min(88, Math.max(15, before.mean + 10 * z)));
   }
   calibration.push({ theme, n: group.length, before, after: stats(group.map((q) => q.difficulty)) });
+}
+
+// Capitales et drapeaux : difficulté pays par pays (content/calibration/countries.json), à la place de l'estimation
+// importée qui jugeait « faciles » Minsk ou Tachkent. « De quel pays X est-elle la capitale ? » est un peu plus facile.
+{
+  const countries = JSON.parse(readFileSync(join(root, 'content/calibration/countries.json'), 'utf8'));
+  for (const q of raw) {
+    if (q.family !== 'capital' && q.family !== 'flag') continue;
+    const tier = countries[q.family][q.concept.split('.').pop()] ?? (q.family === 'flag' ? 4 : null);
+    if (tier == null) { fail(q.key, 'pays sans niveau dans content/calibration/countries.json'); continue; }
+    const reverse = q.family === 'capital' && /^De quel pays /.test(q.prompt);
+    q.difficulty = countries.difficulty[q.family][tier] + (reverse ? countries.reverse_bonus : 0);
+    q.reset_difficulty = true;
+  }
 }
 
 const questions = [];
