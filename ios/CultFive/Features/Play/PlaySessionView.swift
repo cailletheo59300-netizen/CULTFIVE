@@ -407,7 +407,6 @@ struct PlaySummaryView: View {
                 }
                 if let pull = summary.albumCard {
                     GameCardWon(pull: pull)
-                        .transition(.scale.combined(with: .opacity))
                 }
                 if summary.correction != nil || summary.correctionAvailable {
                     CorrectionCard(summary: summary, domainName: { app.domainName($0) }, onCorrect: onCorrect)
@@ -426,8 +425,11 @@ struct PlaySummaryView: View {
             }
             .padding(.horizontal, Space.gutter)
             .padding(.bottom, Space.xl)
+            // Largeur de l'écran, jamais plus : la page ne bouge que de haut en bas.
+            .containerRelativeFrame(.horizontal)
         }
         .scrollIndicators(.hidden)
+        .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
         .background(Color.paper)
         .overlay {
             if perfect {
@@ -475,10 +477,11 @@ struct PlaySummaryView: View {
     }
 
     /// Domaines dont le placement s'est terminé pendant cette partie : la cote se dévoile.
-    /// Les moments forts à fêter en plein écran, dans l'ordre : niveau, Elo confirmé, nouveau rang, trophées.
+    /// Les moments forts à fêter en plein écran, dans l'ordre : carte gagnée, niveau, Elo confirmé, nouveau rang, trophées.
     private var moments: [Celebration] {
         let chests = app.progression?.chests ?? []
         var items: [Celebration] = []
+        if let pull = summary.albumCard { items.append(.card(pull)) }
         if let levelUp {
             let chest = chests.first { $0.source == "level" && $0.ref == "\(levelUp)" } ?? chests.first { $0.source == "level" }
             items.append(.level(levelUp, xp: summary.xp, chest: chest?.tier))
@@ -864,17 +867,16 @@ private struct GameCardWon: View {
 
     var body: some View {
         HStack(spacing: Space.m) {
-            AlbumCardView(card: pull.card, state: OwnedCard(), outlined: true)
-                .frame(width: 74)
+            AlbumCardView(card: pull.card, state: OwnedCard(shiny: pull.outcome != .new), outlined: true)
+                .frame(width: 52)
             VStack(alignment: .leading, spacing: 4) {
-                Text("Nouvelle carte").labelCaps(DomainPalette.color(pull.card.domain))
+                Text(pull.outcome == .new ? "Nouvelle carte" : "Carte brillante").labelCaps(DomainPalette.color(pull.card.domain))
                 Text(pull.card.name)
-                    .font(.system(.headline, design: .rounded).weight(.heavy))
+                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
                     .foregroundStyle(Color.ink)
                     .lineLimit(2)
-                Text("Gagnée grâce à tes bonnes réponses. Elle rejoint ton album.")
+                Text("Dans ton album")
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    .fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 0)
         }

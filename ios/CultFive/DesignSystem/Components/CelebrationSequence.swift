@@ -11,6 +11,8 @@ enum Celebration: Hashable, Identifiable {
     /// Nouveau record de série ; `joker` : un joker de série gagné.
     case streak(Int, joker: Bool)
     case quest(label: String, seeds: Int, xp: Int, chest: ChestTier?)
+    /// Carte gagnée pour l'album (fin de partie classée).
+    case card(Pull)
 
     var id: String {
         switch self {
@@ -19,6 +21,7 @@ enum Celebration: Hashable, Identifiable {
         case .trophy(let name, _, _): return "trophy-\(name)"
         case .streak(let n, _): return "streak-\(n)"
         case .quest(let label, _, _, _): return "quest-\(label)"
+        case .card(let pull): return "card-\(pull.card.id)"
         }
     }
 }
@@ -149,6 +152,7 @@ struct CelebrationSequence: View {
             chest(tier)
             if tier == nil, seeds > 0 { chips.append(Chip(icon: AnyView(SeedIcon()), text: "+\(seeds) \(Brand.currencyPlural)")) }
             if tier == nil, xp > 0 { chips.append(Chip(icon: AnyView(EmptyView()), text: "+\(xp) XP")) }
+        case .card: break
         }
         return chips
     }
@@ -160,6 +164,7 @@ struct CelebrationSequence: View {
         case .trophy: return "TROPHÉE DÉBLOQUÉ"
         case .streak: return "NOUVEAU RECORD"
         case .quest: return "DÉFI RÉUSSI"
+        case .card(let pull): return pull.outcome == .new ? "NOUVELLE CARTE" : "CARTE BRILLANTE"
         }
     }
 
@@ -170,6 +175,7 @@ struct CelebrationSequence: View {
         case .trophy(let name, _, _): return name
         case .streak(let n, _): return "\(n) jours de suite"
         case .quest(let label, _, _, _): return label
+        case .card(let pull): return pull.card.name
         }
     }
 
@@ -184,6 +190,14 @@ struct CelebrationSequence: View {
         case .streak(let n, _): return "Ton meilleur record ! Reviens demain pour faire \(n + 1)."
         case .quest(_, let seeds, _, let tier):
             return tier != nil ? "Ton coffre t'attend." : seeds > 0 ? "Tes neurones sont dans ton sac." : "Bien joué !"
+        case .card(let pull):
+            let page = AlbumCatalog.shared.page(pull.card.pageKey)?.title ?? ""
+            switch pull.outcome {
+            case .new: return "Gagnée grâce à tes bonnes réponses. Elle rejoint ton album\(page.isEmpty ? "" : ", page « \(page) »")."
+            case .shiny: return "Tu l'avais déjà : elle devient brillante."
+            case .neurones(let n): return "Déjà brillante : +\(n) \(Brand.currencyPlural)."
+            case .nothing: return "Elle est déjà dans ton album."
+            }
         }
     }
 
@@ -242,7 +256,7 @@ struct CelebrationSequence: View {
     /// Animations qui continuent après l'entrée (étincelles, flamme).
     private func loops(_ item: Celebration) -> Bool {
         switch item {
-        case .level, .streak, .rank: return true
+        case .level, .streak, .rank, .card: return true
         default: return false
         }
     }
@@ -264,6 +278,7 @@ private struct CelebrationStage: View {
         case .trophy: return 0.8
         case .streak: return 1.3
         case .quest: return 0.95
+        case .card: return 1.35
         }
     }
 
@@ -274,6 +289,36 @@ private struct CelebrationStage: View {
         case .trophy: trophy
         case .streak(let n, _): streak(n)
         case .quest: quest
+        case .card(let pull): card(pull)
+        }
+    }
+
+    // Carte d'album : elle arrive de dos en tournant, se retourne face visible, puis flotte dans l'éclat de sa rareté.
+    private func card(_ pull: Pull) -> some View {
+        let k: Double = Self.clamp((elapsed - 0.1) / 1.1)
+        let turn: Double = (1 - Self.easeOutBack(k)) * 540
+        let angle: Double = turn.truncatingRemainder(dividingBy: 360)
+        let faceUp = angle < 90 || angle > 270
+        let scale: Double = 0.45 + 0.55 * Self.easeOutBack(Self.clamp((elapsed - 0.05) / 0.9))
+        let float: Double = k >= 1 ? sin(time * 1.6) * 6 : 0
+        let glow = pull.card.rarity.color
+        return ZStack {
+            Circle()
+                .fill(RadialGradient(colors: [glow.opacity(k >= 1 ? 0.75 : 0.35), .clear], center: .center, startRadius: 10, endRadius: 150))
+                .frame(width: 300, height: 300)
+            Group {
+                if faceUp {
+                    AlbumCardView(card: pull.card, state: OwnedCard(shiny: pull.outcome != .new), outlined: false)
+                } else {
+                    AlbumCardBack(kind: AlbumStore.shared.back)
+                }
+            }
+            .frame(width: 170)
+            .rotation3DEffect(.degrees(faceUp ? -angle : 180 - angle), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
+            .scaleEffect(scale)
+            .offset(y: float)
+            .shadow(color: glow.opacity(0.6), radius: k >= 1 ? 24 : 8)
+            if k >= 1 && pull.card.rarity != .common { Sparkles(time: time, radius: 130) }
         }
     }
 
