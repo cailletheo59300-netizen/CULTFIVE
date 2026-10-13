@@ -558,7 +558,7 @@ private struct RewardCard: View {
             }
             guard case .seeds(let n) = reward else { return }
             if compact { counted = n; return }
-            // Les graines défilent jusqu'au total, une fois la carte retournée.
+            // Les neurones défilent jusqu'au total, une fois la carte retournée.
             try? await Task.sleep(nanoseconds: 350_000_000)
             let steps = 14
             for step in 1 ... steps {
@@ -726,7 +726,7 @@ private struct RewardCard: View {
     @ViewBuilder
     private var art: some View {
         switch reward {
-        case .seeds: GameIcon.seeds.image
+        case .seeds: NeuroneIcon()
         case .tickets(let kind, _): (kind == .fiftyFifty ? GameIcon.ticketFifty : GameIcon.ticketHint).image
         case .joker: GameIcon.joker.image
         case .item(let item):

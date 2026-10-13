@@ -33,7 +33,7 @@ struct RankEmblem: View {
 
 /// Les autres icônes 3D de l'app (même fabrication que les coffres).
 enum GameIcon: String {
-    case seeds, flame, joker, bag
+    case flame, joker, bag
     case flameOff = "flame_off"
     case ticketFifty = "ticket_fifty"
     case ticketHint = "ticket_hint"
