@@ -133,12 +133,6 @@ function convert(q) {
       if (!(q.answer >= 0 && q.answer <= 100) || !(q.tolerance > 0)) fail(k, 'jauge : pourcentage 0–100 et marge > 0');
       return { ...base, payload: { tolerance: q.tolerance, unit: '%' }, answer: { value: q.answer, tolerance: q.tolerance } };
     }
-    case 'proportion': {
-      if (!(q.answer > 0 && q.reference?.size > 0 && q.max > Math.max(q.answer, q.reference.size))) fail(k, 'proportion : tailles invalides');
-      if (!(q.tolerance > 0 && q.tolerance < 0.3)) fail(k, 'proportion : marge relative entre 0 et 0,3');
-      return { ...base, payload: { reference: q.reference, item: q.item, unit: q.unit, dimension: q.dimension, max: q.max, rel_tolerance: q.tolerance },
-               answer: { value: q.answer, rel_tolerance: q.tolerance } };
-    }
     case 'letters': {
       if (!/^[A-Z]{4,12}$/.test(q.word ?? '')) fail(k, 'lettres : 4 à 12 majuscules sans accents');
       const tiles = shuffled(k, [...(q.word ?? '')].map((t, i) => ({ id: oid(k, `${i}:${t}`), text: t })));
@@ -162,7 +156,7 @@ function convert(q) {
                payload: { kind: q.kind, options: shuffled(k, options) },
                answer: { option_id: id(opts.find((o) => o.correct) ?? {}), labels } };
     }
-    // ─── Lot 2 (0040) : le compte est bon, mot mystère, épingle sur la carte, tri (paniers ou époques).
+    // ─── Lot 2 (0040) : le compte est bon, épingle sur la carte, tri (paniers ou époques). Proportions et mot mystère abandonnés (0049).
     case 'number_target': {
       const ok = Array.isArray(q.numbers) && q.numbers.length >= 3 && q.numbers.every(Number.isInteger) && Number.isInteger(q.target);
       if (!ok) fail(k, 'compte est bon : nombres entiers et cible entière');
@@ -174,14 +168,6 @@ function convert(q) {
       });
       return { ...base, payload: { numbers: q.numbers, target: q.target },
                answer: { numbers: q.numbers, target: q.target, steps, solution: q.solution } };
-    }
-    case 'riddle': {
-      const correct = (q.options ?? []).filter((o) => o.endsWith('*'));
-      if (correct.length !== 1 || q.options.length !== 4) fail(k, 'mot mystère : 4 options dont 1 marquée *');
-      if (!Array.isArray(q.clues) || q.clues.length !== 3) fail(k, 'mot mystère : 3 indices');
-      const options = q.options.map((o) => ({ id: oid(k, o.replace(/\*$/, '')), text: o.replace(/\*$/, '') }));
-      return { ...base, payload: { clues: q.clues, options: shuffled(k, options) },
-               answer: { option_id: oid(k, correct[0]?.replace(/\*$/, '')) } };
     }
     case 'map_pin': {
       if (!(Math.abs(q.lat) <= 90 && Math.abs(q.lon) <= 180) || !(q.tolerance_km > 0) || !q.region) fail(k, 'épingle : coordonnées, marge et région');
@@ -291,10 +277,9 @@ for (const q of raw) {
 // 1. Doublons : même énoncé et même réponse ; ou même thème, même réponse et énoncés très proches (hors même famille).
 const norm = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const answerOf = (q) => q.type === 'mcq' ? q.options.find((o) => o.endsWith('*')) ?? ''
-  : ['true_false', 'numeric', 'counter', 'timeline', 'gauge', 'proportion', 'word_order'].includes(q.type) ? String(q.answer)
+  : ['true_false', 'numeric', 'counter', 'timeline', 'gauge', 'word_order'].includes(q.type) ? String(q.answer)
   : q.type === 'letters' ? q.word
   : q.type === 'number_target' ? `${q.numbers}>${q.target}`
-  : q.type === 'riddle' ? q.options.find((o) => o.endsWith('*')) ?? ''
   : q.type === 'map_pin' ? q.place
   : q.type === 'sort' ? JSON.stringify(q.items)
   : q.type === 'image_choice' ? JSON.stringify(q.options.find((o) => o.correct) ?? '')

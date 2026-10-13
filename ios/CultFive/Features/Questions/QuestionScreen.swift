@@ -126,8 +126,6 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
             TimelineAnswerView(question: question, phase: phase, onSubmit: onSubmit)
         case .gauge:
             GaugeAnswerView(question: question, phase: phase, onSubmit: onSubmit)
-        case .proportion:
-            ProportionAnswerView(question: question, phase: phase, onSubmit: onSubmit)
         case .letters:
             TileOrderAnswerView(question: question, mode: .letters, phase: phase, onSubmit: onSubmit)
         case .wordOrder:
@@ -136,8 +134,6 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
             ImageChoiceAnswerView(question: question, phase: phase, onSubmit: onSubmit)
         case .numberTarget:
             NumberTargetAnswerView(question: question, phase: phase, onSubmit: onSubmit)
-        case .riddle:
-            RiddleAnswerView(question: question, phase: phase, onSubmit: onSubmit)
         case .mapPin:
             MapPinAnswerView(question: question, phase: phase, onSubmit: onSubmit)
         case .sort:
@@ -210,10 +206,6 @@ struct RevealPanel: View {
                     MarginVerdictCard(question: question, given: given, answer: reveal.answer)
                 } else if question.type == .mapPin {
                     DistanceVerdictCard(question: question, given: given, answer: reveal.answer)
-                } else if question.type == .riddle, isCorrect, case .riddle(_, let clues)? = given, clues <= 2 {
-                    Text(clues == 1 ? "💎 Trouvé dès le 1er indice : +3 neurones" : "💎 Trouvé au 2e indice : +1 neurone")
-                        .font(.system(.callout, design: .rounded).weight(.heavy))
-                        .foregroundStyle(Color(hex: 0x8A6400))
                 } else if let answerText = AnswerText.correct(for: question, answer: reveal.answer), !isCorrect || question.type == .numeric {
                     HStack(spacing: Space.s) {
                         Text("Réponse").labelCaps()
@@ -281,7 +273,7 @@ enum AnswerText {
             guard let value = answer.value?.doubleValue else { return nil }
             let text = NumberFormat.display(value)
             return question.payload.unit.map { "\(text) \($0)" } ?? text
-        case .counter, .timeline, .gauge, .proportion:
+        case .counter, .timeline, .gauge:
             guard let value = answer.value?.doubleValue else { return nil }
             return AnswerValueFormat.text(value, type: question.type, unit: question.payload.unit)
         case .letters:
@@ -290,8 +282,6 @@ enum AnswerText {
             return answer.sentence ?? answer.words?.joined(separator: " ")
         case .imageChoice:
             return answer.optionId.flatMap { answer.labels?[$0] }
-        case .riddle:
-            return question.payload.options?.first { $0.id == answer.optionId }?.text
         case .numberTarget:
             return answer.solution?.joined(separator: " · ")
         case .mapPin:

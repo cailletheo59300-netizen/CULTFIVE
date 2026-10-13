@@ -1,0 +1,587 @@
+[
+ {
+  "key": "dt-prop-001",
+  "concept": "nature.animals.dt_girafe",
+  "label": "Taille de la girafe",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle hauteur mesure une girafe adulte ?",
+  "options": [
+   "5,5 m*",
+   "3,5 m",
+   "7,5 m",
+   "9 m"
+  ],
+  "explanation": "Une girafe adulte mesure environ 5,5 m, trois fois un humain."
+ },
+ {
+  "key": "dt-prop-002",
+  "concept": "nature.animals.dt_elephant",
+  "label": "Taille de l'éléphant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle hauteur mesure un éléphant d'Afrique au garrot ?",
+  "options": [
+   "3,3 m*",
+   "2 m",
+   "4,8 m",
+   "6 m"
+  ],
+  "explanation": "Environ 3,3 m au garrot pour un mâle : le plus grand animal terrestre."
+ },
+ {
+  "key": "dt-prop-003",
+  "concept": "nature.animals.dt_autruche",
+  "label": "Taille de l'autruche",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle hauteur mesure une autruche adulte ?",
+  "options": [
+   "2,5 m*",
+   "1,5 m",
+   "3,5 m",
+   "1 m"
+  ],
+  "explanation": "Jusqu'à 2,5 m de haut : le plus grand oiseau vivant."
+ },
+ {
+  "key": "dt-prop-004",
+  "concept": "nature.marine.dt_baleine_bleue",
+  "label": "Longueur de la baleine bleue",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle longueur mesure une baleine bleue adulte, environ ?",
+  "options": [
+   "25 m*",
+   "12 m",
+   "50 m",
+   "8 m"
+  ],
+  "explanation": "Environ 25 m en moyenne, jusqu'à 30 m : le plus grand animal ayant jamais vécu."
+ },
+ {
+  "key": "dt-prop-005",
+  "concept": "nature.marine.dt_requin_blanc",
+  "label": "Longueur du grand requin blanc",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle longueur mesure un grand requin blanc adulte, environ ?",
+  "options": [
+   "5 m*",
+   "2 m",
+   "10 m",
+   "15 m"
+  ],
+  "explanation": "Environ 5 m pour un grand adulte, parfois 6."
+ },
+ {
+  "key": "dt-prop-006",
+  "concept": "nature.animals.dt_trex",
+  "label": "Longueur du T. rex",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle longueur mesurait un tyrannosaure adulte, environ ?",
+  "options": [
+   "12 m*",
+   "5 m",
+   "25 m",
+   "40 m"
+  ],
+  "explanation": "Environ 12 m de la tête à la queue."
+ },
+ {
+  "key": "dt-prop-007",
+  "concept": "nature.plants.dt_sequoia",
+  "label": "Le plus grand arbre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle hauteur mesure Hyperion, un séquoia de Californie et le plus grand arbre du monde ?",
+  "options": [
+   "116 m*",
+   "60 m",
+   "180 m",
+   "250 m"
+  ],
+  "explanation": "Environ 116 m : plus de deux fois l'Arc de triomphe."
+ },
+ {
+  "key": "dt-prop-008",
+  "concept": "geography.monuments.dt_eiffel_arc",
+  "label": "Tour Eiffel et Arc de triomphe",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle hauteur mesure la tour Eiffel, antennes comprises ?",
+  "options": [
+   "330 m*",
+   "220 m",
+   "450 m",
+   "540 m"
+  ],
+  "explanation": "330 m, contre 50 m pour l'Arc : plus de six fois plus haute."
+ },
+ {
+  "key": "dt-prop-009",
+  "concept": "geography.monuments.dt_liberte_arc",
+  "label": "Statue de la Liberté",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle hauteur mesure la statue de la Liberté, socle compris ?",
+  "options": [
+   "93 m*",
+   "46 m",
+   "150 m",
+   "30 m"
+  ],
+  "explanation": "93 m avec le socle, presque deux Arcs de triomphe."
+ },
+ {
+  "key": "dt-prop-010",
+  "concept": "geography.monuments.dt_burj_khalifa",
+  "label": "Burj Khalifa",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle hauteur mesure la Burj Khalifa, à Dubaï ?",
+  "options": [
+   "828 m*",
+   "540 m",
+   "1 000 m",
+   "632 m"
+  ],
+  "explanation": "828 m, deux fois et demie la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-011",
+  "concept": "geography.monuments.dt_kheops_eiffel",
+  "label": "Pyramide de Khéops",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle hauteur mesure aujourd'hui la pyramide de Khéops ?",
+  "options": [
+   "138 m*",
+   "70 m",
+   "210 m",
+   "300 m"
+  ],
+  "explanation": "Environ 138 m, un peu moins de la moitié de la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-012",
+  "concept": "geography.relief.dt_everest_mont_blanc",
+  "label": "Everest et mont Blanc",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle altitude atteint l'Everest ?",
+  "options": [
+   "8 849 m*",
+   "7 546 m",
+   "9 912 m",
+   "6 961 m"
+  ],
+  "explanation": "8 849 m, contre environ 4 806 m pour le mont Blanc : presque le double."
+ },
+ {
+  "key": "dt-prop-013",
+  "concept": "geography.relief.dt_salto_angel",
+  "label": "Salto Angel",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle hauteur mesure le Salto Angel, la plus haute chute d'eau du monde ?",
+  "options": [
+   "979 m*",
+   "300 m",
+   "1 800 m",
+   "540 m"
+  ],
+  "explanation": "979 m de chute, au Venezuela : trois tours Eiffel."
+ },
+ {
+  "key": "dt-prop-014",
+  "concept": "geography.relief.dt_grand_canyon",
+  "label": "Profondeur du Grand Canyon",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle profondeur atteint le Grand Canyon, environ ?",
+  "options": [
+   "1 800 m*",
+   "600 m",
+   "3 500 m",
+   "900 m"
+  ],
+  "explanation": "Jusqu'à environ 1 800 m de profondeur : plus de cinq tours Eiffel empilées."
+ },
+ {
+  "key": "dt-prop-015",
+  "concept": "science.space.dt_lune_terre",
+  "label": "La Lune et la Terre",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le diamètre de la Lune ?",
+  "options": [
+   "3 474 km*",
+   "1 200 km",
+   "6 371 km",
+   "12 742 km"
+  ],
+  "explanation": "3 474 km, un peu plus du quart du diamètre de la Terre."
+ },
+ {
+  "key": "dt-prop-016",
+  "concept": "science.space.dt_mars_terre",
+  "label": "Mars et la Terre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le diamètre de Mars ?",
+  "options": [
+   "6 779 km*",
+   "3 474 km",
+   "12 742 km",
+   "20 000 km"
+  ],
+  "explanation": "6 779 km, à peu près la moitié de la Terre."
+ },
+ {
+  "key": "dt-prop-017",
+  "concept": "science.space.dt_jupiter_terre",
+  "label": "Jupiter et la Terre",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le diamètre de Jupiter ?",
+  "options": [
+   "139 820 km*",
+   "49 000 km",
+   "1 392 700 km",
+   "400 000 km"
+  ],
+  "explanation": "Environ 140 000 km : onze fois la Terre."
+ },
+ {
+  "key": "dt-prop-018",
+  "concept": "tech.inventions.dt_saturn_v",
+  "label": "Fusée Saturn V",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle hauteur mesurait la fusée Saturn V, qui a emmené les astronautes vers la Lune ?",
+  "options": [
+   "110 m*",
+   "50 m",
+   "200 m",
+   "70 m"
+  ],
+  "explanation": "110 m : plus de deux Arcs de triomphe."
+ },
+ {
+  "key": "dt-prop-019",
+  "concept": "tech.inventions.dt_titanic_eiffel",
+  "label": "Longueur du Titanic",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle longueur mesurait le Titanic ?",
+  "options": [
+   "269 m*",
+   "150 m",
+   "400 m",
+   "90 m"
+  ],
+  "explanation": "269 m, un peu moins que la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-020",
+  "concept": "tech.inventions.dt_a380",
+  "label": "Envergure de l'A380",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle est l'envergure de l'Airbus A380 ?",
+  "options": [
+   "80 m*",
+   "45 m",
+   "120 m",
+   "60 m"
+  ],
+  "explanation": "Environ 80 m d'envergure, près de trois terrains de basket."
+ },
+ {
+  "key": "dt-prop-021",
+  "concept": "sport.rules.dt_but_foot",
+  "label": "Largeur d'un but",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle largeur mesure un but de football ?",
+  "options": [
+   "7,32 m*",
+   "5,5 m",
+   "9,15 m",
+   "11 m"
+  ],
+  "explanation": "7,32 m de large (8 yards) et 2,44 m de haut."
+ },
+ {
+  "key": "dt-prop-022",
+  "concept": "sport.rules.dt_terrain_bassin",
+  "label": "Terrain de football",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle longueur mesure un terrain de football de compétition, environ ?",
+  "options": [
+   "105 m*",
+   "80 m",
+   "130 m",
+   "150 m"
+  ],
+  "explanation": "Environ 105 m pour un terrain international, deux bassins de 50 m."
+ },
+ {
+  "key": "dt-prop-024",
+  "concept": "sport.champions.dt_wembanyama",
+  "label": "Victor Wembanyama",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien mesure le basketteur Victor Wembanyama, environ ?",
+  "options": [
+   "2,22 m*",
+   "2,05 m",
+   "2,40 m",
+   "1,98 m"
+  ],
+  "explanation": "Environ 2,22 m : l'un des plus grands joueurs de la NBA."
+ },
+ {
+  "key": "dt-prop-025",
+  "concept": "nature.animals.dt_ours_polaire",
+  "label": "Ours polaire debout",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle hauteur atteint un ours polaire mâle dressé sur ses pattes arrière, environ ?",
+  "options": [
+   "3 m*",
+   "2 m",
+   "4,5 m",
+   "1,5 m"
+  ],
+  "explanation": "Un grand mâle dressé atteint environ 3 m."
+ },
+ {
+  "key": "dt-prop-026",
+  "concept": "nature.animals.dt_crocodile",
+  "label": "Crocodile marin",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle longueur peut atteindre un grand crocodile marin ?",
+  "options": [
+   "6 m*",
+   "3 m",
+   "10 m",
+   "15 m"
+  ],
+  "explanation": "Les grands mâles mesurent environ 6 m, le plus grand reptile vivant."
+ },
+ {
+  "key": "dt-prop-027",
+  "concept": "nature.animals.dt_cheval",
+  "label": "Cheval au garrot",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle hauteur mesure un cheval de selle au garrot, environ ?",
+  "options": [
+   "1,60 m*",
+   "1 m",
+   "2,20 m",
+   "2,80 m"
+  ],
+  "explanation": "Environ 1,60 m au garrot pour un cheval de selle."
+ },
+ {
+  "key": "dt-prop-028",
+  "concept": "nature.marine.dt_orque",
+  "label": "Longueur de l'orque",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle longueur mesure une orque adulte, environ ?",
+  "options": [
+   "8 m*",
+   "3 m",
+   "15 m",
+   "25 m"
+  ],
+  "explanation": "Un mâle adulte mesure environ 8 m."
+ },
+ {
+  "key": "dt-prop-029",
+  "concept": "nature.marine.dt_dauphin_taille",
+  "label": "Longueur du dauphin",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle longueur mesure un grand dauphin adulte, environ ?",
+  "options": [
+   "3 m*",
+   "1,5 m",
+   "6 m",
+   "9 m"
+  ],
+  "explanation": "Environ 3 m pour un grand dauphin, le dauphin de Flipper."
+ },
+ {
+  "key": "dt-prop-030",
+  "concept": "nature.animals.dt_condor",
+  "label": "Envergure du condor",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle envergure atteignent les ailes du condor des Andes ?",
+  "options": [
+   "3,1 m*",
+   "1,5 m",
+   "5 m",
+   "2 m"
+  ],
+  "explanation": "Plus de 3 m d'envergure, l'un des plus grands oiseaux volants."
+ },
+ {
+  "key": "dt-prop-031",
+  "concept": "geography.monuments.dt_tour_montparnasse",
+  "label": "Tour Montparnasse",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle hauteur mesure la tour Montparnasse, à Paris ?",
+  "options": [
+   "210 m*",
+   "120 m",
+   "330 m",
+   "280 m"
+  ],
+  "explanation": "210 m, environ les deux tiers de la tour Eiffel."
+ },
+ {
+  "key": "dt-prop-032",
+  "concept": "geography.monuments.dt_notre_dame",
+  "label": "Tours de Notre-Dame",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle hauteur mesurent les tours de Notre-Dame de Paris ?",
+  "options": [
+   "69 m*",
+   "35 m",
+   "96 m",
+   "130 m"
+  ],
+  "explanation": "69 m pour les tours ; la flèche monte à 96 m."
+ },
+ {
+  "key": "dt-prop-033",
+  "concept": "geography.monuments.dt_big_ben",
+  "label": "Elizabeth Tower",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle hauteur mesure la tour de Big Ben, à Londres ?",
+  "options": [
+   "96 m*",
+   "50 m",
+   "150 m",
+   "210 m"
+  ],
+  "explanation": "96 m, presque deux Arcs de triomphe."
+ },
+ {
+  "key": "dt-prop-034",
+  "concept": "geography.monuments.dt_christ_redempteur",
+  "label": "Christ Rédempteur",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle hauteur mesure le Christ Rédempteur de Rio, socle compris ?",
+  "options": [
+   "38 m*",
+   "15 m",
+   "70 m",
+   "100 m"
+  ],
+  "explanation": "38 m avec le socle, 30 m pour la statue seule."
+ },
+ {
+  "key": "dt-prop-035",
+  "concept": "geography.relief.dt_puy_de_dome",
+  "label": "Mont Blanc et puy de Dôme",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle altitude atteint le mont Blanc ?",
+  "options": [
+   "4 806 m*",
+   "3 776 m",
+   "5 642 m",
+   "4 478 m"
+  ],
+  "explanation": "Environ 4 806 m, plus de trois fois le puy de Dôme."
+ },
+ {
+  "key": "dt-prop-036",
+  "concept": "science.space.dt_soleil_jupiter",
+  "label": "Le Soleil et Jupiter",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le diamètre du Soleil fait environ combien de fois celui de la Terre ?",
+  "options": [
+   "109 fois*",
+   "10 fois",
+   "1 000 fois",
+   "30 fois"
+  ],
+  "explanation": "Le Soleil est environ 10 fois plus large que Jupiter… et 109 fois plus que la Terre."
+ },
+ {
+  "key": "dt-prop-037",
+  "concept": "sport.rules.dt_terrain_tennis",
+  "label": "Court de tennis",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle longueur mesure un court de tennis ?",
+  "options": [
+   "23,77 m*",
+   "18 m",
+   "30 m",
+   "40 m"
+  ],
+  "explanation": "23,77 m de long, environ deux bus."
+ },
+ {
+  "key": "dt-prop-038",
+  "concept": "sport.rules.dt_perche_record",
+  "label": "Saut à la perche",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Jusqu'à quelle hauteur Armand Duplantis a-t-il porté le record du monde de saut à la perche ?",
+  "options": [
+   "Plus de 6 m*",
+   "Environ 5 m",
+   "Plus de 7 m",
+   "Environ 4 m"
+  ],
+  "explanation": "Armand Duplantis a franchi plus de 6,30 m, plus de trois fois la taille d'un adulte."
+ },
+ {
+  "key": "dt-prop-039",
+  "concept": "tech.inventions.dt_tgv",
+  "label": "Longueur d'un TGV",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle longueur mesure une rame simple de TGV, environ ?",
+  "options": [
+   "200 m*",
+   "80 m",
+   "400 m",
+   "1 km"
+  ],
+  "explanation": "Une rame simple mesure environ 200 m, presque deux terrains."
+ },
+ {
+  "key": "dt-prop-040",
+  "concept": "tech.inventions.dt_porte_avions",
+  "label": "Porte-avions Charles-de-Gaulle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle longueur mesure le porte-avions Charles-de-Gaulle ?",
+  "options": [
+   "261 m*",
+   "120 m",
+   "400 m",
+   "180 m"
+  ],
+  "explanation": "261 m, un peu moins que la tour Eiffel."
+ }
+]

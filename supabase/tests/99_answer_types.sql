@@ -12,8 +12,6 @@ begin
   perform tst.ok(not public._evaluate('counter', '{"value":15,"tolerance":0}', '{"value":14}'), 'compteur exact : faux à 1 près');
   perform tst.ok(public._evaluate('timeline', '{"value":-44,"tolerance":20}', '{"value":-60}'), 'frise : avant J.-C.');
   perform tst.ok(public._evaluate('gauge', '{"value":71,"tolerance":5}', '{"value":66}'), 'jauge : borne incluse');
-  perform tst.ok(public._evaluate('proportion', '{"value":5.5,"rel_tolerance":0.15}', '{"value":6.2}'), 'proportion : + 12,7 %');
-  perform tst.ok(not public._evaluate('proportion', '{"value":5.5,"rel_tolerance":0.15}', '{"value":6.4}'), 'proportion : + 16 %');
   perform tst.ok(public._evaluate('letters', '{"word":"BAGUETTE"}', '{"text":"baguette"}'), 'lettres : casse ignorée');
   perform tst.ok(not public._evaluate('letters', '{"word":"BAGUETTE"}', '{"text":"BAGEUTTE"}'), 'lettres : mauvais ordre');
   perform tst.ok(public._evaluate('word_order', '{"words":["Tous","pour","un","un","pour","tous"]}',
@@ -146,10 +144,8 @@ begin
   perform tst.app_v2(false);
 end $$;
 
--- 7. Lot 2 : le compte est bon, mot mystère, épingle, tri.
+-- 7. Lot 2 : le compte est bon, épingle, tri (le mot mystère et les proportions sont abandonnés, 0049).
 do $$
-declare
-  u uuid := tst.new_user(); v_q uuid; s0 int; r jsonb;
 begin
   perform tst.ok(public._number_target_ok('[3,6,5,2]', 27, '[{"a":6,"op":"+","b":5},{"a":11,"op":"-","b":2},{"a":9,"op":"*","b":3}]'), 'compte est bon : 6+5-2=9, 9×3=27');
   perform tst.ok(not public._number_target_ok('[3,6,5,2]', 27, '[{"a":9,"op":"*","b":3}]'), 'compte est bon : 9 n''est pas disponible');
@@ -162,16 +158,16 @@ begin
   perform tst.ok(public._is_exact('map_pin', '{"lat":48.58,"lon":7.75,"tolerance_km":60}', '{"lat":48.6,"lon":7.76}'), 'épingle : pile à 2 km');
   perform tst.ok(public._evaluate('sort', '{"groups":{"a":"x","b":"y"}}', '{"groups":{"b":"y","a":"x"}}'), 'tri : l''ordre des clés ne compte pas');
   perform tst.ok(not public._evaluate('sort', '{"groups":{"a":"x","b":"y"}}', '{"groups":{"a":"y","b":"y"}}'), 'tri : une étiquette mal rangée');
-  perform tst.ok((select count(*) from public.questions where type in ('number_target', 'riddle', 'map_pin', 'sort') and status = 'published') >= 200,
+  perform tst.ok((select count(*) from public.questions where type in ('number_target', 'map_pin', 'sort') and status = 'published') >= 150,
                  'lot 2 importé');
   -- Chaque question du lot 2 accepte sa propre bonne réponse (solution du compte est bon comprise).
-  perform tst.ok(not exists (select 1 from public.questions q where q.type in ('number_target', 'riddle', 'map_pin', 'sort')
+  perform tst.ok(not exists (select 1 from public.questions q where q.type in ('number_target', 'map_pin', 'sort')
                              and not public._evaluate(q.type, q.answer, tst.correct_given(q.id))), 'bonne réponse acceptée pour tout le lot 2');
-  -- Mot mystère trouvé au 1er indice : +3 graines.
-  select id into v_q from public.questions where type = 'riddle' and status = 'published' limit 1;
-  select seeds into s0 from public.profiles where id = u;
-  r := public._record_attempt(u, v_q, jsonb_build_object('option_id', (select answer ->> 'option_id' from public.questions where id = v_q), 'clues', 1),
-                              5000, 'training', null, gen_random_uuid(), false);
-  perform tst.ok((r ->> 'is_correct')::bool, 'mot mystère juste');
-  perform tst.ok((select seeds from public.profiles where id = u) = s0 + 3, 'mot mystère au 1er indice : +3 graines');
+  -- Proportions et mot mystère : plus aucune question publiée, jamais dans le 5 du jour.
+  perform tst.ok(not exists (select 1 from public.questions where type in ('proportion', 'riddle') and status = 'published'),
+                 'proportions et mot mystère : aucune question publiée');
+  perform tst.ok(pg_get_functiondef('public._generate_daily_set'::regproc) not like '%riddle%'
+                 and pg_get_functiondef('public._generate_daily_set'::regproc) not like '%proportion%', '5 du jour : types abandonnés retirés');
+  perform tst.ok(pg_get_functiondef('public._record_attempt'::regproc) not like '%riddle%', 'plus de bonus du mot mystère');
+  perform tst.ok((select type from public.questions where external_key = 'dt-rid-001') = 'mcq', 'ancien mot mystère devenu QCM');
 end $$;

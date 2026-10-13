@@ -9,7 +9,8 @@ Questions prêtes pour les nouveaux types validés (maquette v2). **Pas encore l
 | `new_counter.json` | `counter` | Compteur : nouvelles questions |
 | `new_timeline.json` | `timeline` | Frise : nouvelles questions |
 | `new_gauge.json` | `gauge` | Jauge de pourcentage |
-| `new_proportion.json` | `proportion` | Proportions (étirer à la vraie taille) |
+| `conv_proportion_mcq.json` | `mcq` | Anciennes « proportions » (type abandonné, 0049), devenues des QCM |
+| `conv_riddle_mcq.json` | `mcq` | Anciens « mots mystère » (type abandonné, 0049), devenus des QCM |
 | `new_letters.json` | `letters` | Lettres mélangées |
 | `new_word_order.json` | `word_order` | Mots dans l'ordre |
 | `new_flags.json` | `image_choice` (`kind: flag`) | Drapeaux « jumeaux » |
@@ -29,7 +30,6 @@ Questions prêtes pour les nouveaux types validés (maquette v2). **Pas encore l
 - **counter** : `answer` (entier), `tolerance` (0 = « nombre exact », sinon marge ±), `min`, `max`, `start`, `unit` (facultatif).
 - **timeline** : `answer` (année), `tolerance` (± années : 3 après 1900, 5 de 1500 à 1899, 10 de 1000 à 1499, 20 avant), `min`, `max` (bornes de la frise ; la bonne année n'est jamais au centre). Années négatives = avant J.-C. (afficher « 44 av. J.-C. »).
 - **gauge** : `answer` (%), `tolerance` (± points), `unit: "%"`.
-- **proportion** : `reference` `{label, size, icon}`, `item` `{label, icon}`, `answer` (vraie taille, même unité), `tolerance` (fraction : 0,15 = ± 15 %), `dimension`, `unit`, `max` (fin du curseur).
 - **letters** : `word` (tuiles, majuscules sans accents), `display` (mot affiché à la correction), indice dans `prompt`.
 - **word_order** : `answer` (phrase complète), `words` (tuiles dans le bon ordre, à mélanger). Certains mots se répètent (« un pour tous ») : comparer le texte, pas l'identité des tuiles.
 - **image_choice** : 4 `options`, une seule avec `correct: true`.

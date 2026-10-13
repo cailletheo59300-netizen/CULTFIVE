@@ -20,16 +20,10 @@ public enum AnswerEvaluator {
             let tolerance = answer.tolerance ?? 0
             let diff = abs(NSDecimalNumber(decimal: value).doubleValue - expected)
             return diff <= tolerance + 1e-9
-        case (.proportion, .number(let value)):
-            guard let expected = answer.value?.doubleValue else { return false }
-            let diff = abs(NSDecimalNumber(decimal: value).doubleValue - expected)
-            return diff <= abs(expected) * (answer.relTolerance ?? 0) + 1e-9
         case (.letters, .text(let text)):
             return text.uppercased() == answer.word
         case (.wordOrder, .words(let words)):
             return words == answer.words
-        case (.riddle, .riddle(let id, _)), (.riddle, .option(let id)):
-            return id == answer.optionId
         case (.numberTarget, .steps(let steps)):
             guard let numbers = answer.numbers, let target = answer.target else { return false }
             return reaches(target, from: numbers, with: steps)
@@ -63,12 +57,11 @@ public enum AnswerEvaluator {
         guard type.hasMargin, case .number(let decimal)? = given, let expected = answer.value?.doubleValue else { return nil }
         let value = NSDecimalNumber(decimal: decimal).doubleValue
         let diff = abs(value - expected)
-        let allowed = type == .proportion ? abs(expected) * (answer.relTolerance ?? 0) : (answer.tolerance ?? 0)
-        let exactLimit = type == .proportion ? abs(expected) * 0.01 : 0
-        if diff <= exactLimit + 1e-9 { return .exact }
+        let allowed = answer.tolerance ?? 0
+        if diff <= 1e-9 { return .exact }
         if diff <= allowed + 1e-9 { return .within }
         // Marge nulle (« nombre exact ») : à 1 près, c'est « presque ».
-        if diff <= max(allowed * 3, type == .proportion ? abs(expected) * 0.3 : 1) + 1e-9 { return .near }
+        if diff <= max(allowed * 3, 1) + 1e-9 { return .near }
         return .missed
     }
 

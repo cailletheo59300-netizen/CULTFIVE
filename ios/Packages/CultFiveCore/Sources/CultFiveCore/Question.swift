@@ -11,13 +11,12 @@ public enum QuestionType: String, Codable, Sendable, CaseIterable {
     case counter
     case timeline
     case gauge
-    case proportion
     case letters
     case wordOrder = "word_order"
     case imageChoice = "image_choice"
-    // Lot 2 (serveur 0040) : le compte est bon, mot mystère, épingle sur la carte, tri (paniers ou époques).
+    // Lot 2 (serveur 0040) : le compte est bon, épingle sur la carte, tri (paniers ou époques).
+    // Proportions et mot mystère abandonnés (serveur 0049) : reçus comme `unknown`.
     case numberTarget = "number_target"
-    case riddle
     case mapPin = "map_pin"
     case sort
     /// Type inconnu de cette version de l'app (ajouté plus tard côté serveur) : affiché comme indisponible, jamais un plantage.
@@ -31,7 +30,7 @@ public enum QuestionType: String, Codable, Sendable, CaseIterable {
     /// Types où l'on vise un nombre avec une marge annoncée (correction « Pile ! / Juste, dans la marge / Presque… / Raté »).
     public var hasMargin: Bool {
         switch self {
-        case .counter, .timeline, .gauge, .proportion: return true
+        case .counter, .timeline, .gauge: return true
         default: return false
         }
     }
@@ -96,19 +95,6 @@ public struct TargetStep: Codable, Hashable, Sendable {
     public var symbol: String { ["+": "+", "-": "−", "*": "×", "/": "÷"][op] ?? op }
 }
 
-/// Élément à l'échelle (jeu des proportions) : la référence a une taille connue, l'autre est à étirer.
-public struct ScaleItem: Codable, Hashable, Sendable {
-    public let label: String
-    public let size: Double?
-    public let icon: String?
-
-    public init(label: String, size: Double? = nil, icon: String? = nil) {
-        self.label = label
-        self.size = size
-        self.icon = icon
-    }
-}
-
 /// Silhouette d'un pays : contours normalisés dans [0, 1] (x vers la droite, y vers le bas).
 public struct CountryShape: Codable, Hashable, Sendable {
     public let paths: [[[Double]]]
@@ -137,33 +123,27 @@ public struct QuestionPayload: Codable, Hashable, Sendable {
     public var keepOrder: Bool?
     /// Silhouette à reconnaître (QCM « Quel pays a cette forme ? »).
     public var shape: CountryShape?
-    // Nouveaux types : bornes et marge annoncée (compteur, frise, jauge), échelle (proportions), tuiles (lettres, mots), images.
+    // Nouveaux types : bornes et marge annoncée (compteur, frise, jauge), tuiles (lettres, mots), images.
     public var min: Double?
     public var max: Double?
     public var start: Double?
     public var tolerance: Double?
-    public var relTolerance: Double?
-    public var reference: ScaleItem?
-    public var item: ScaleItem?
-    public var dimension: String?
     public var tiles: [Choice]?
     public var kind: String?
     // Lot 2.
     public var numbers: [Int]?
     public var target: Int?
-    public var clues: [String]?
     public var toleranceKm: Double?
     public var layout: String?
     public var groups: [SortGroup]?
 
     enum CodingKeys: String, CodingKey {
         case options, items, left, right, region, unit, decimals, shape
-        case min, max, start, tolerance, reference, item, dimension, tiles, kind
-        case numbers, target, clues, layout, groups
+        case min, max, start, tolerance, tiles, kind
+        case numbers, target, layout, groups
         case toleranceKm = "tolerance_km"
         case allowNegative = "allow_negative"
         case keepOrder = "keep_order"
-        case relTolerance = "rel_tolerance"
     }
 
     public init(options: [Choice]? = nil, items: [Choice]? = nil, left: [Choice]? = nil, right: [Choice]? = nil,
@@ -189,7 +169,6 @@ public struct CorrectAnswer: Codable, Hashable, Sendable {
     public var order: [String]?
     public var pairs: [String: String]?
     // Nouveaux types.
-    public var relTolerance: Double?
     public var word: String?
     public var display: String?
     public var words: [String]?
@@ -212,7 +191,6 @@ public struct CorrectAnswer: Codable, Hashable, Sendable {
         case value, tolerance, order, pairs, word, display, words, sentence, labels
         case numbers, target, steps, solution, lat, lon, place, groups
         case toleranceKm = "tolerance_km"
-        case relTolerance = "rel_tolerance"
     }
 
     public init(optionId: String? = nil, value: JSONValue? = nil, tolerance: Double? = nil,
@@ -345,8 +323,6 @@ public enum GivenAnswer: Hashable, Sendable {
     case words([String])
     /// Le compte est bon : les opérations faites, dans l'ordre.
     case steps([TargetStep])
-    /// Mot mystère : l'option choisie et le nombre d'indices vus (bonus si trouvé tôt).
-    case riddle(String, clues: Int)
     /// Épingle sur la carte.
     case pin(lat: Double, lon: Double)
     /// Tri : groupe choisi pour chaque étiquette.
@@ -363,7 +339,6 @@ public enum GivenAnswer: Hashable, Sendable {
         case .words(let words): return .object(["words": .array(words.map(JSONValue.string))])
         case .steps(let steps):
             return .object(["steps": .array(steps.map { .object(["a": .number(Double($0.a)), "op": .string($0.op), "b": .number(Double($0.b))]) })])
-        case .riddle(let id, let clues): return .object(["option_id": .string(id), "clues": .number(Double(clues))])
         case .pin(let lat, let lon): return .object(["lat": .number(lat), "lon": .number(lon)])
         case .groups(let map): return .object(["groups": .object(map.mapValues(JSONValue.string))])
         }
@@ -373,9 +348,7 @@ public enum GivenAnswer: Hashable, Sendable {
 extension GivenAnswer: Codable {
     public init(from decoder: Decoder) throws {
         let json = try JSONValue(from: decoder)
-        if let id = json["option_id"]?.stringValue, let clues = json["clues"]?.doubleValue {
-            self = .riddle(id, clues: Int(clues))
-        } else if let id = json["option_id"]?.stringValue {
+        if let id = json["option_id"]?.stringValue {
             self = .option(id)
         } else if let lat = json["lat"]?.doubleValue, let lon = json["lon"]?.doubleValue {
             self = .pin(lat: lat, lon: lon)

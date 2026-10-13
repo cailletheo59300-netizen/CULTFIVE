@@ -71,14 +71,6 @@ final class ShapeDecodingTests: XCTestCase {
         XCTAssertNil(AnswerEvaluator.margin(.option("a"), type: .mcq, answer: CorrectAnswer(optionId: "a")))
     }
 
-    func testProportion() {
-        var giraffe = CorrectAnswer(value: .number(5.5))
-        giraffe.relTolerance = 0.15
-        XCTAssertTrue(AnswerEvaluator.isCorrect(.number(Decimal(string: "6.2")!), type: .proportion, answer: giraffe))
-        XCTAssertFalse(AnswerEvaluator.isCorrect(.number(Decimal(string: "6.4")!), type: .proportion, answer: giraffe))
-        XCTAssertEqual(AnswerEvaluator.margin(.number(Decimal(string: "5.52")!), type: .proportion, answer: giraffe), .exact)
-    }
-
     func testLettersAndWords() {
         var word = CorrectAnswer()
         word.word = "BAGUETTE"
@@ -137,9 +129,9 @@ final class ShapeDecodingTests: XCTestCase {
         sorted.groups = ["a": "x", "b": "y"]
         XCTAssertTrue(AnswerEvaluator.isCorrect(.groups(["b": "y", "a": "x"]), type: .sort, answer: sorted))
         XCTAssertFalse(AnswerEvaluator.isCorrect(.groups(["a": "y", "b": "y"]), type: .sort, answer: sorted))
-        XCTAssertTrue(AnswerEvaluator.isCorrect(.riddle("o1", clues: 2), type: .riddle, answer: CorrectAnswer(optionId: "o1")))
-        let given = try JSONDecoder().decode(GivenAnswer.self, from: Data(#"{"option_id":"o1","clues":1}"#.utf8))
-        XCTAssertEqual(given, .riddle("o1", clues: 1))
+        // Ancien mot mystère (abandonné) : décodé comme un simple choix ; type inconnu de l'app.
+        XCTAssertEqual(try JSONDecoder().decode(GivenAnswer.self, from: Data(#"{"option_id":"o1","clues":1}"#.utf8)), .option("o1"))
+        XCTAssertEqual(try JSONDecoder().decode(QuestionType.self, from: Data(#""riddle""#.utf8)), .unknown)
         XCTAssertEqual(try JSONDecoder().decode(GivenAnswer.self, from: Data(#"{"lat":1.5,"lon":2}"#.utf8)), .pin(lat: 1.5, lon: 2))
     }
 }
