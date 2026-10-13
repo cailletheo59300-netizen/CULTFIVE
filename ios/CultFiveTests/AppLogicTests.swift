@@ -22,8 +22,8 @@ final class AppLogicTests: XCTestCase {
     func testBrandIsCentralised() {
         XCTAssertEqual(Brand.name, "Brainlix")
         XCTAssertEqual(Brand.inviteURL(code: "ABC").absoluteString, "https://brainlix.site/i/ABC")
-        XCTAssertEqual(Brand.currency(1), "1 graine")
-        XCTAssertEqual(Brand.currency(12), "12 graines")
+        XCTAssertEqual(Brand.currency(1), "1 neurone")
+        XCTAssertEqual(Brand.currency(12), "12 neurones")
     }
 
     func testCorrectAnswerText() {
