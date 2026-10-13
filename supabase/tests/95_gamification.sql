@@ -162,9 +162,9 @@ begin
   perform tst.login(u);
   -- Placement terminé, Elo ≈ 1 250 en histoire (μ ≈ 64,4).
   insert into public.user_skills (user_id, scope_id, mu, var, n, correct)
-  values (u, 'history', 64.4, 20, 60, 40)
+  values (u, 'history', 47.1, 20, 60, 40)
   on conflict (user_id, scope_id) do update set mu = excluded.mu, var = excluded.var, n = excluded.n;
-  perform tst.ok(public._cote(64.4) between 1200 and 1349, 'Elo de test entre argent et or');
+  perform tst.ok(public._cote(47.1) between 900 and 1049, 'Elo de test entre argent et or');
 
   -- Une partie classée parfaite (10/10) : sans-faute, placé, maîtrise bronze + argent.
   pack := public.play_pack('training', 'history', null, 10, true, null);
@@ -180,8 +180,8 @@ begin
                  and exists (select 1 from public.user_achievements where user_id = u and achievement_id = 'mastery_history_silver'),
                  'maîtrise bronze et argent');
   perform tst.ok(not exists (select 1 from public.user_achievements where user_id = u and achievement_id = 'mastery_history_gold')
-                 or public._cote((select mu from public.user_skills where user_id = u and scope_id = 'history')) >= 1350,
-                 'pas d''or sans 1 350');
+                 or public._cote((select mu from public.user_skills where user_id = u and scope_id = 'history')) >= 1050,
+                 'pas d''or sans 1 050');
   perform tst.ok((select tier from public.user_chests where user_id = u and idempotency_key = 'trophy:mastery_history_silver') = 'silver',
                  'maîtrise argent : coffre d''argent');
   perform tst.ok((select tier from public.user_chests where user_id = u and idempotency_key = 'trophy:ranked_perfect') = 'silver',

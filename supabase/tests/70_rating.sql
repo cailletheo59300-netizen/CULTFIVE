@@ -11,7 +11,7 @@ begin
 
   -- Nouveau joueur : placement 0/5, cote non « placée ».
   sk := (select s from jsonb_array_elements(public.skills_overview()) s where s ->> 'domain_id' = 'history');
-  perform tst.ok((sk ->> 'placement')::int = 0 and not (sk ->> 'placed')::bool and (sk ->> 'cote')::int = 1000, 'placement initial');
+  perform tst.ok((sk ->> 'placement')::int = 0 and not (sk ->> 'placed')::bool and (sk ->> 'cote')::int = 500, 'placement initial : Elo affiché 500 (0046)');
 
   -- Pack : difficulté et chances de réussite par question.
   pack := public.play_pack('training', 'history', null, 10, true, null);
@@ -32,9 +32,10 @@ begin
   perform tst.ok(jsonb_array_length(sub -> 'ratings') = 1 and sub -> 'ratings' -> 0 ->> 'domain_id' = 'history', 'variation de cote');
   perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int > (sub -> 'ratings' -> 0 ->> 'cote_before')::int, 'cote en hausse');
   perform tst.ok((sub -> 'ratings' -> 0 ->> 'placement')::int = 1, 'placement 1/5');
-  -- Placement : 10 bonnes réponses font nettement monter, mais jamais plus de 120 par partie (0027).
-  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int between 60 and 121,
-                 'placement : forte hausse plafonnée à 120 (' || ((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int) || ')');
+  -- Placement : 10 bonnes réponses font nettement monter. L'Elo affiché part de 500 et rejoint le vrai niveau (plafonné
+  -- à +120 par partie, 0027) au rythme du placement (0046) : après 1 partie sur 5, 500 + (vrai − 500) / 5, soit au plus +124.
+  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int between 60 and 125,
+                 'placement : forte hausse (' || ((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int) || ')');
 
   -- Renvoi identique (file hors-ligne) : mêmes points.
   perform tst.ok((public.play_submit((pack ->> 'session_id')::uuid, atts) ->> 'points')::int = (sub ->> 'points')::int, 'points idempotents');

@@ -93,10 +93,10 @@ begin
   pack := public.play_pack('training', 'geography', null, 10, true, null);
   perform tst.ok((select max(x.d) - min(x.d) from (select q3.difficulty_effective d from jsonb_array_elements(pack -> 'questions') e
                   join public.questions q3 on q3.id = (e ->> 'id')::uuid
-                  where q3.guess_rate < 0.5) x) < 25, 'partie classée : difficultés proches (hors vrai/faux, plus faciles à deviner)');
+                  where q3.guess_rate < 0.5) x) < 45, 'partie classée : mélange accessibles / niveau / qui piquent, sans écart extrême (0046)');
 
   select * into q from public.questions where status = 'published' and answer_count = 0 limit 1;
   for i in 1 .. 10 loop perform public._question_update(q.id, 95, 9, false); end loop;
-  perform tst.ok((select difficulty_observed from public.questions where id = q.id) <= q.difficulty_initial + 5.01,
-                 'calibration : pas plus de 5 points d''écart avant 20 réponses');
+  perform tst.ok((select difficulty_observed from public.questions where id = q.id) <= q.difficulty_initial + 10.01,
+                 'calibration : pas plus de 10 points d''écart avant 20 réponses (0046)');
 end $$;

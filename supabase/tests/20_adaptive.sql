@@ -60,7 +60,7 @@ declare
   strong uuid;
 begin
   perform tst.clock('2026-11-02 10:00:00+01');
-  select * into q from public.questions where external_key = 'fr-002';  -- 32, plage [22, 42]
+  select * into q from public.questions where external_key = 'fr-002';  -- 37 (32 + 5, 0046), plage [27, 47]
   for i in 1 .. 60 loop
     strong := tst.new_user();
     update public.user_skills set mu = 80 where user_id = strong;
@@ -70,7 +70,7 @@ begin
   select * into q from public.questions where id = q.id;
   perform tst.ok(q.difficulty_observed > q.difficulty_max, 'difficulté observée au-delà de la plage : ' || q.difficulty_observed);
   perform tst.ok(q.difficulty_effective = q.difficulty_max, 'difficulté effective plafonnée à max');
-  perform tst.ok(q.difficulty_max = 42, 'plage non élargie avant 300 réponses');
+  perform tst.ok(q.difficulty_max = 47, 'plage non élargie avant 300 réponses');
   perform tst.ok(q.answer_count = 60 and q.correct_count = 0, 'compteurs de la question');
   perform tst.ok(q.needs_review and q.review_reason = 'success_rate_below_5', 'question signalée problématique');
   perform tst.ok(q.confidence > 0, 'confiance de calibration > 0');
@@ -84,11 +84,11 @@ begin
   update public.questions set answer_count = 299, difficulty_observed = 90, difficulty_var = 4, last_widen_count = 0 where id = q.id;
   perform public._question_update(q.id, 90, 16, false);
   select * into q from public.questions where id = q.id;
-  perform tst.ok(q.difficulty_max = 65 + 5, 'borne max élargie de 5 : ' || q.difficulty_max);
+  perform tst.ok(q.difficulty_max = 70 + 5, 'borne max élargie de 5 (base 70 depuis 0046) : ' || q.difficulty_max);
   perform tst.ok(q.range_widenings = 1 and q.last_widen_count = 300, 'élargissement tracé');
   perform public._question_update(q.id, 90, 16, false);
   select * into q from public.questions where id = q.id;
-  perform tst.ok(q.difficulty_max = 70, 'pas de second élargissement avant 100 réponses de plus');
+  perform tst.ok(q.difficulty_max = 75, 'pas de second élargissement avant 100 réponses de plus');
 end $$;
 
 -- Sélection : filtres, pas de doublon de concept, questions du Daily protégées.
