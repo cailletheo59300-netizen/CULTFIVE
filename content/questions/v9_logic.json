@@ -1,0 +1,344 @@
+[
+ {
+  "key": "v9-logic-001",
+  "concept": "logic.sequences.v9_erreur_suite",
+  "label": "L'erreur dans la suite",
+  "type": "mcq",
+  "difficulty": 44,
+  "prompt": "Un nombre est faux dans cette suite : 2, 4, 8, 15, 32, 64. Lequel ?",
+  "options": [
+   "15*",
+   "8",
+   "32",
+   "4"
+  ],
+  "explanation": "On double à chaque fois : il fallait 16 à la place de 15."
+ },
+ {
+  "key": "v9-logic-002",
+  "concept": "logic.sequences.v9_erreur_carres",
+  "label": "L'intrus des carrés",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un nombre n'est pas à sa place : 1, 4, 9, 15, 25, 36. Lequel ?",
+  "options": [
+   "15*",
+   "9",
+   "25",
+   "36"
+  ],
+  "explanation": "Ce sont les carrés : 1, 4, 9, 16, 25, 36. Il fallait 16."
+ },
+ {
+  "key": "v9-logic-003",
+  "concept": "logic.sequences.v9_regle_suite",
+  "label": "Trouver la règle",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Quelle règle donne la suite 3, 7, 15, 31, 63 ?",
+  "options": [
+   "On double et on ajoute 1*",
+   "On ajoute 4, puis 8, puis 16 en recommençant",
+   "On multiplie par 2",
+   "On ajoute 4 à chaque fois"
+  ],
+  "explanation": "3 × 2 + 1 = 7, 7 × 2 + 1 = 15, 15 × 2 + 1 = 31…"
+ },
+ {
+  "key": "v9-logic-004",
+  "concept": "logic.sequences.v9_suites_regles",
+  "label": "Chaque suite sa règle",
+  "type": "pairs",
+  "difficulty": 34,
+  "prompt": "Associe chaque suite à sa règle.",
+  "pairs": [
+   [
+    "5, 10, 15, 20",
+    "On ajoute 5"
+   ],
+   [
+    "3, 6, 12, 24",
+    "On double"
+   ],
+   [
+    "1, 4, 9, 16",
+    "Les carrés"
+   ],
+   [
+    "1, 1, 2, 3, 5",
+    "Fibonacci"
+   ]
+  ],
+  "explanation": "+5 ; ×2 ; 1², 2², 3², 4² ; chaque terme est la somme des deux précédents."
+ },
+ {
+  "key": "v9-logic-005",
+  "concept": "logic.sequences.v9_fibo_lapins",
+  "label": "Les lapins de Fibonacci",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Fibonacci a inventé sa célèbre suite en 1202 pour compter…",
+  "options": [
+   "des couples de lapins*",
+   "des grains de blé",
+   "des pièces d'or",
+   "des marches d'escalier"
+  ],
+  "explanation": "Chaque couple de lapins donne un nouveau couple chaque mois à partir de son 2ᵉ mois : 1, 1, 2, 3, 5, 8…"
+ },
+ {
+  "key": "v9-logic-006",
+  "concept": "logic.sequences.v9_suite_decroissante",
+  "label": "Ordre des termes",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Range ces termes dans l'ordre de la suite qui commence à 50 et enlève 7 à chaque fois.",
+  "items": [
+   "50",
+   "43",
+   "36",
+   "29"
+  ],
+  "explanation": "50 − 7 = 43, 43 − 7 = 36, 36 − 7 = 29."
+ },
+ {
+  "key": "v9-logic-007",
+  "concept": "logic.reasoning.v9_analogie_gant",
+  "label": "Analogie : main et gant",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "La main est au gant ce que le pied est…",
+  "options": [
+   "à la chaussette*",
+   "à la jambe",
+   "à l'orteil",
+   "au genou"
+  ],
+  "explanation": "Le gant habille la main ; la chaussette habille le pied."
+ },
+ {
+  "key": "v9-logic-008",
+  "concept": "logic.reasoning.v9_analogie_fourchette",
+  "label": "Analogie : lire et manger",
+  "type": "mcq",
+  "difficulty": 24,
+  "prompt": "Le livre est à lire ce que la fourchette est…",
+  "options": [
+   "à manger*",
+   "à la cuisine",
+   "au couteau",
+   "à l'assiette"
+  ],
+  "explanation": "On se sert d'un livre pour lire, d'une fourchette pour manger."
+ },
+ {
+  "key": "v9-logic-009",
+  "concept": "logic.reasoning.v9_analogie_chiot",
+  "label": "Analogie : chien et chiot",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Le chien est au chiot ce que le cheval est…",
+  "options": [
+   "au poulain*",
+   "à la jument",
+   "à l'étalon",
+   "au poney"
+  ],
+  "explanation": "Le chiot est le petit du chien ; le poulain, celui du cheval."
+ },
+ {
+  "key": "v9-logic-010",
+  "concept": "logic.reasoning.v9_trois_menteurs",
+  "label": "Qui dit vrai ?",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Anne dit : « Bruno ment. » Bruno dit : « Chloé ment. » Chloé dit : « Anne et Bruno mentent. » Qui dit la vérité ?",
+  "options": [
+   "Bruno seulement*",
+   "Anne seulement",
+   "Chloé seulement",
+   "Anne et Chloé"
+  ],
+  "explanation": "Si Chloé disait vrai, Bruno mentirait, donc Chloé mentirait : impossible. Chloé ment, donc Bruno dit vrai, donc Anne ment."
+ },
+ {
+  "key": "v9-logic-011",
+  "concept": "logic.reasoning.v9_ordre_arrivee",
+  "label": "L'ordre d'arrivée",
+  "type": "ordering",
+  "difficulty": 38,
+  "prompt": "Dan arrive avant Anne. Anne arrive avant Bob. Clara arrive juste après Bob. Classe-les du premier au dernier.",
+  "items": [
+   "Dan",
+   "Anne",
+   "Bob",
+   "Clara"
+  ],
+  "explanation": "Dan avant Anne, Anne avant Bob, puis Clara juste derrière Bob."
+ },
+ {
+  "key": "v9-logic-012",
+  "concept": "logic.reasoning.v9_roi_jeu",
+  "label": "Tirer un roi",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "On tire une carte au hasard dans un jeu de 52 cartes. Quelle est la probabilité de tirer un roi ?",
+  "options": [
+   "1/13*",
+   "1/4",
+   "1/52",
+   "1/26"
+  ],
+  "explanation": "4 rois sur 52 cartes : 4/52 = 1/13."
+ },
+ {
+  "key": "v9-logic-013",
+  "concept": "logic.reasoning.v9_de_plus_4",
+  "label": "Plus de 4 au dé",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "On lance un dé. Quelle est la probabilité d'obtenir plus de 4 ?",
+  "options": [
+   "1/3*",
+   "1/2",
+   "1/6",
+   "2/3"
+  ],
+  "explanation": "5 ou 6 : 2 chances sur 6 = 1/3."
+ },
+ {
+  "key": "v9-logic-014",
+  "concept": "logic.reasoning.v9_cadenas",
+  "label": "Le cadenas",
+  "type": "mcq",
+  "difficulty": 34,
+  "prompt": "Un cadenas a 3 molettes de 0 à 9. Combien de codes possibles ?",
+  "options": [
+   "1 000*",
+   "999",
+   "30",
+   "729"
+  ],
+  "explanation": "10 × 10 × 10 = 1 000 (de 000 à 999)."
+ },
+ {
+  "key": "v9-logic-015",
+  "concept": "logic.reasoning.v9_menus",
+  "label": "Entrées et plats",
+  "type": "numeric",
+  "difficulty": 24,
+  "prompt": "Un restaurant propose 3 entrées et 4 plats. Combien de menus « entrée + plat » différents ?",
+  "answer": 12,
+  "explanation": "Pour chaque entrée, 4 plats : 3 × 4 = 12."
+ },
+ {
+  "key": "v9-logic-016",
+  "concept": "logic.reasoning.v9_aligner_trois",
+  "label": "Aligner trois amis",
+  "type": "numeric",
+  "difficulty": 36,
+  "prompt": "De combien de façons peut-on aligner 3 amis pour une photo ?",
+  "answer": 6,
+  "explanation": "3 choix pour la 1ʳᵉ place, 2 pour la 2ᵉ, 1 pour la 3ᵉ : 3 × 2 × 1 = 6."
+ },
+ {
+  "key": "v9-logic-017",
+  "concept": "logic.reasoning.v9_code_nombres",
+  "label": "Les lettres en nombres",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Si A = 1, B = 2, C = 3…, quel mot s'écrit 3 · 1 · 6 · 5 ?",
+  "options": [
+   "CAFE*",
+   "CAGE",
+   "BAFE",
+   "DAFE"
+  ],
+  "explanation": "3 = C, 1 = A, 6 = F, 5 = E."
+ },
+ {
+  "key": "v9-logic-018",
+  "concept": "logic.reasoning.v9_intrus_formes",
+  "label": "L'intrus des formes",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Quelle forme n'a pas sa place : carré, losange, triangle, rectangle ?",
+  "options": [
+   "Triangle*",
+   "Losange",
+   "Carré",
+   "Rectangle"
+  ],
+  "explanation": "Le carré, le losange et le rectangle ont 4 côtés ; le triangle en a 3."
+ },
+ {
+  "key": "v9-logic-019",
+  "concept": "logic.reasoning.v9_vendredi_13",
+  "label": "Le vendredi 13",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Le 13 du mois est un vendredi. Quel jour était le 1ᵉʳ ?",
+  "options": [
+   "Dimanche*",
+   "Lundi",
+   "Samedi",
+   "Vendredi"
+  ],
+  "explanation": "Du 1ᵉʳ au 13 : 12 jours = 1 semaine + 5 jours. Vendredi − 5 jours = dimanche."
+ },
+ {
+  "key": "v9-logic-020",
+  "concept": "logic.puzzles.v9_mere_25",
+  "label": "Mère et enfant",
+  "type": "numeric",
+  "difficulty": 44,
+  "prompt": "Ma mère avait 25 ans à ma naissance. Aujourd'hui, nos deux âges font 61 ans. Quel âge ai-je ?",
+  "answer": 18,
+  "explanation": "Moi + (moi + 25) = 61, donc 2 × moi = 36 : 18 ans."
+ },
+ {
+  "key": "v9-logic-021",
+  "concept": "logic.puzzles.v9_cube_peint",
+  "label": "Le cube peint",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Un grand cube peint en rouge est découpé en 27 petits cubes (3 × 3 × 3). Combien de petits cubes ont 3 faces rouges ?",
+  "answer": 8,
+  "explanation": "Seuls les coins ont 3 faces peintes, et un cube a 8 coins."
+ },
+ {
+  "key": "v9-logic-022",
+  "concept": "logic.puzzles.v9_carre_magique",
+  "label": "Le carré magique",
+  "type": "numeric",
+  "difficulty": 46,
+  "prompt": "On place les nombres de 1 à 9 dans une grille 3 × 3 pour que chaque ligne, colonne et diagonale ait la même somme. Quelle est cette somme ?",
+  "answer": 15,
+  "explanation": "1 + 2 + … + 9 = 45, réparti sur 3 lignes : 45 ÷ 3 = 15."
+ },
+ {
+  "key": "v9-logic-023",
+  "concept": "logic.puzzles.v9_centre_magique",
+  "label": "Le centre du carré magique",
+  "type": "numeric",
+  "difficulty": 54,
+  "prompt": "Dans un carré magique 3 × 3 avec les nombres de 1 à 9, quel nombre est forcément au centre ?",
+  "answer": 5,
+  "explanation": "Le centre est dans 4 alignements ; le seul qui marche est 5, le nombre du milieu (1 + 9, 2 + 8, 3 + 7, 4 + 6 autour)."
+ },
+ {
+  "key": "v9-logic-024",
+  "concept": "logic.puzzles.v9_sablier",
+  "label": "Les sabliers",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Avec un sablier de 3 minutes et un de 5 minutes, peut-on mesurer exactement 7 minutes ?",
+  "options": [
+   "Oui*",
+   "Non",
+   "Seulement 8 minutes",
+   "Seulement avec un 3ᵉ sablier"
+  ],
+  "explanation": "On lance les deux. À 3 min, on retourne le petit. À 5 min, le petit a coulé 2 min : on le retourne, il lui reste 2 min à couler. 5 + 2 = 7."
+ }
+]

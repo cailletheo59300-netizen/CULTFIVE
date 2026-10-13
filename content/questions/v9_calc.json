@@ -1,0 +1,409 @@
+[
+ {
+  "key": "v9-calc-001",
+  "concept": "calc.mental.v9_plein_trajet",
+  "label": "Carburant du trajet",
+  "type": "numeric",
+  "difficulty": 32,
+  "prompt": "Une voiture consomme 6 litres aux 100 km. Combien de litres faut-il pour un trajet de 350 km ?",
+  "answer": 21,
+  "explanation": "3,5 × 6 = 21 litres."
+ },
+ {
+  "key": "v9-calc-002",
+  "concept": "calc.mental.v9_carnet_tickets",
+  "label": "Le carnet de tickets",
+  "type": "numeric",
+  "difficulty": 24,
+  "prompt": "Un ticket coûte 2,10 €. Le carnet de 10 coûte 17,50 €. Combien économise-t-on avec le carnet, en euros ?",
+  "answer": 3.5,
+  "explanation": "10 tickets à l'unité : 21 €. 21 − 17,50 = 3,50 €."
+ },
+ {
+  "key": "v9-calc-003",
+  "concept": "calc.mental.v9_bouteille_litre",
+  "label": "Le meilleur prix au litre",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Laquelle est la moins chère au litre ?",
+  "options": [
+   "1,5 L à 1,20 €*",
+   "50 cl à 0,60 €",
+   "1 L à 0,95 €",
+   "33 cl à 0,40 €"
+  ],
+  "explanation": "Au litre : 0,80 € ; 1,20 € ; 0,95 € ; environ 1,21 €."
+ },
+ {
+  "key": "v9-calc-004",
+  "concept": "calc.mental.v9_fuseau_ny",
+  "label": "Heure à New York",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Il est 14 h à Paris. New York a 6 heures de retard sur Paris. Quelle heure est-il à New York ?",
+  "options": [
+   "8 h*",
+   "20 h",
+   "9 h",
+   "6 h"
+  ],
+  "explanation": "14 − 6 = 8 h du matin."
+ },
+ {
+  "key": "v9-calc-005",
+  "concept": "calc.mental.v9_vol_ny",
+  "label": "Arrivée à New York",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Un avion part de Paris à 10 h et vole 8 heures. New York a 6 heures de retard sur Paris. À quelle heure locale arrive-t-il ?",
+  "options": [
+   "12 h*",
+   "18 h",
+   "16 h",
+   "14 h"
+  ],
+  "explanation": "Il arrive à 18 h heure de Paris, soit 18 − 6 = 12 h à New York."
+ },
+ {
+  "key": "v9-calc-006",
+  "concept": "calc.mental.v9_battements",
+  "label": "Battements de cœur",
+  "type": "numeric",
+  "difficulty": 28,
+  "prompt": "Un cœur bat 70 fois par minute. Combien de fois bat-il en une heure ?",
+  "answer": 4200,
+  "explanation": "70 × 60 = 4 200."
+ },
+ {
+  "key": "v9-calc-007",
+  "concept": "calc.mental.v9_x49_51",
+  "label": "49 × 51",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Calcule de tête : 49 × 51.",
+  "options": [
+   "2 499*",
+   "2 500",
+   "2 501",
+   "2 449"
+  ],
+  "explanation": "(50 − 1)(50 + 1) = 50² − 1 = 2 499."
+ },
+ {
+  "key": "v9-calc-008",
+  "concept": "calc.mental.v9_x11_23",
+  "label": "L'astuce du 11",
+  "type": "numeric",
+  "difficulty": 36,
+  "prompt": "Calcule de tête : 23 × 11.",
+  "answer": 253,
+  "explanation": "Astuce : on écarte 2 et 3 et on met leur somme au milieu : 2 (5) 3 = 253."
+ },
+ {
+  "key": "v9-calc-009",
+  "concept": "calc.mental.v9_decimal_carre",
+  "label": "0,5 × 0,5",
+  "type": "mcq",
+  "difficulty": 34,
+  "prompt": "Combien vaut 0,5 × 0,5 ?",
+  "options": [
+   "0,25*",
+   "2,5",
+   "0,1",
+   "1"
+  ],
+  "explanation": "La moitié de la moitié : 0,25."
+ },
+ {
+  "key": "v9-calc-010",
+  "concept": "calc.mental.v9_moyenne_quatrieme",
+  "label": "La note qu'il faut",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Tu as eu 12, 15 et 9 à tes trois premiers contrôles. Quelle note faut-il au quatrième pour avoir 13 de moyenne ?",
+  "answer": 16,
+  "explanation": "Il faut 4 × 13 = 52 points. Tu en as 36 : il manque 16."
+ },
+ {
+  "key": "v9-calc-011",
+  "concept": "calc.percent.v9_ville_hausse_baisse",
+  "label": "Hausse ou baisse ?",
+  "type": "mcq",
+  "difficulty": 44,
+  "prompt": "Une ville passe de 20 000 à 25 000 habitants : c'est +25 %. Si elle redescend à 20 000, quelle baisse est-ce ?",
+  "options": [
+   "−20 %*",
+   "−25 %",
+   "−15 %",
+   "−30 %"
+  ],
+  "explanation": "La baisse se calcule sur 25 000 : 5 000 ÷ 25 000 = 20 %."
+ },
+ {
+  "key": "v9-calc-012",
+  "concept": "calc.percent.v9_pourboire",
+  "label": "Le pourboire",
+  "type": "numeric",
+  "difficulty": 22,
+  "prompt": "Au restaurant, l'addition est de 40 €. Tu laisses 15 % de pourboire. Combien, en euros ?",
+  "answer": 6,
+  "explanation": "10 % = 4 € et 5 % = 2 € : 6 €."
+ },
+ {
+  "key": "v9-calc-013",
+  "concept": "calc.percent.v9_livret",
+  "label": "L'argent placé",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Tu places 1 000 € à 3 % par an, et les intérêts restent placés. Combien as-tu après 2 ans ?",
+  "options": [
+   "1 060,90 €*",
+   "1 060 €",
+   "1 030 €",
+   "1 090 €"
+  ],
+  "explanation": "Après 1 an : 1 030 €. Après 2 ans : 1 030 × 1,03 = 1 060,90 €. Les intérêts de la 1ʳᵉ année rapportent aussi."
+ },
+ {
+  "key": "v9-calc-014",
+  "concept": "calc.percent.v9_pct_ordre",
+  "label": "Du plus petit au plus grand",
+  "type": "ordering",
+  "difficulty": 38,
+  "prompt": "Classe ces quantités de la plus petite à la plus grande.",
+  "items": [
+   "2/3",
+   "0,7",
+   "72 %",
+   "3/4"
+  ],
+  "explanation": "2/3 ≈ 0,667 ; 0,7 ; 72 % = 0,72 ; 3/4 = 0,75."
+ },
+ {
+  "key": "v9-calc-015",
+  "concept": "calc.percent.v9_pct_pairs",
+  "label": "Fractions et pourcentages",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque fraction à son pourcentage.",
+  "pairs": [
+   [
+    "1/4",
+    "25 %"
+   ],
+   [
+    "1/5",
+    "20 %"
+   ],
+   [
+    "1/8",
+    "12,5 %"
+   ],
+   [
+    "3/4",
+    "75 %"
+   ]
+  ],
+  "explanation": "1/4 = 25 %, 1/5 = 20 %, 1/8 = 12,5 %, 3/4 = 75 %."
+ },
+ {
+  "key": "v9-calc-016",
+  "concept": "calc.percent.v9_prix_avant_solde",
+  "label": "Le prix avant les soldes",
+  "type": "numeric",
+  "difficulty": 46,
+  "prompt": "Après une remise de 25 %, un pull coûte 30 €. Combien coûtait-il avant, en euros ?",
+  "answer": 40,
+  "explanation": "30 € = 75 % du prix. Prix de départ : 30 ÷ 0,75 = 40 €."
+ },
+ {
+  "key": "v9-calc-017",
+  "concept": "calc.fractions.v9_trajet_reste",
+  "label": "Le reste du trajet",
+  "type": "numeric",
+  "difficulty": 26,
+  "prompt": "Tu as fait les 3/5 d'un trajet de 40 km. Combien de km te reste-t-il ?",
+  "answer": 16,
+  "explanation": "Il reste 2/5 : 40 ÷ 5 × 2 = 16 km."
+ },
+ {
+  "key": "v9-calc-018",
+  "concept": "calc.fractions.v9_sirop",
+  "label": "Le sirop",
+  "type": "numeric",
+  "difficulty": 44,
+  "prompt": "Pour un sirop, on met 1 volume de sirop pour 7 volumes d'eau. Combien de cl de sirop pour 2 litres de boisson ?",
+  "answer": 25,
+  "explanation": "1 + 7 = 8 parts. 2 L = 200 cl, et 200 ÷ 8 = 25 cl."
+ },
+ {
+  "key": "v9-calc-019",
+  "concept": "calc.fractions.v9_moitie_de_moitie",
+  "label": "Moitié de moitié",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Combien vaut la moitié de la moitié de la moitié de 1 ?",
+  "options": [
+   "1/8*",
+   "1/6",
+   "1/4",
+   "3/2"
+  ],
+  "explanation": "1/2 × 1/2 × 1/2 = 1/8."
+ },
+ {
+  "key": "v9-calc-020",
+  "concept": "calc.fractions.v9_fraction_milieu",
+  "label": "Entre deux fractions",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle fraction est exactement au milieu de 1/3 et 1/2 ?",
+  "options": [
+   "5/12*",
+   "2/5",
+   "1/4",
+   "3/5"
+  ],
+  "explanation": "1/3 = 4/12 et 1/2 = 6/12 : le milieu est 5/12."
+ },
+ {
+  "key": "v9-calc-021",
+  "concept": "calc.conversions.v9_echelle_carte",
+  "label": "L'échelle de la carte",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Sur une carte au 1/25 000, 4 cm représentent…",
+  "options": [
+   "1 km*",
+   "100 m",
+   "10 km",
+   "4 km"
+  ],
+  "explanation": "4 × 25 000 = 100 000 cm = 1 000 m = 1 km."
+ },
+ {
+  "key": "v9-calc-022",
+  "concept": "calc.conversions.v9_carrelage",
+  "label": "Le carrelage",
+  "type": "numeric",
+  "difficulty": 44,
+  "prompt": "Une pièce de 3 m sur 4 m est couverte de carreaux de 50 cm de côté. Combien faut-il de carreaux ?",
+  "answer": 48,
+  "explanation": "6 carreaux sur 3 m et 8 sur 4 m : 6 × 8 = 48."
+ },
+ {
+  "key": "v9-calc-023",
+  "concept": "calc.conversions.v9_hectare",
+  "label": "Le terrain",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un terrain mesure 200 m sur 50 m. Quelle est sa surface ?",
+  "options": [
+   "1 hectare*",
+   "10 hectares",
+   "1 km²",
+   "100 ares de plus qu'un hectare"
+  ],
+  "explanation": "200 × 50 = 10 000 m² = 1 hectare."
+ },
+ {
+  "key": "v9-calc-024",
+  "concept": "calc.conversions.v9_pas_km",
+  "label": "10 000 pas",
+  "type": "numeric",
+  "difficulty": 26,
+  "prompt": "Un pas mesure 75 cm. Combien de km fait-on en 10 000 pas ?",
+  "answer": 7.5,
+  "explanation": "10 000 × 0,75 m = 7 500 m = 7,5 km."
+ },
+ {
+  "key": "v9-calc-025",
+  "concept": "calc.conversions.v9_miles",
+  "label": "Des miles aux km",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Un mile vaut environ 1,6 km. Combien font 50 miles, en km ?",
+  "answer": 80,
+  "explanation": "50 × 1,6 = 80 km."
+ },
+ {
+  "key": "v9-calc-026",
+  "concept": "calc.conversions.v9_heures_annee",
+  "label": "Heures dans une année",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "Combien y a-t-il d'heures environ dans une année ?",
+  "options": [
+   "8 760*",
+   "3 650",
+   "87 600",
+   "5 200"
+  ],
+  "explanation": "365 × 24 = 8 760."
+ },
+ {
+  "key": "v9-calc-027",
+  "concept": "calc.conversions.v9_baignoire",
+  "label": "La baignoire",
+  "type": "numeric",
+  "difficulty": 22,
+  "prompt": "Un robinet coule à 10 litres par minute. Combien de minutes pour remplir une baignoire de 150 litres ?",
+  "answer": 15,
+  "explanation": "150 ÷ 10 = 15 minutes."
+ },
+ {
+  "key": "v9-calc-028",
+  "concept": "calc.conversions.v9_deux_robinets",
+  "label": "Deux robinets",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un robinet remplit un seau en 6 minutes, un autre en 3 minutes. Ensemble, combien de temps leur faut-il ?",
+  "options": [
+   "2 min*",
+   "4 min 30",
+   "3 min",
+   "1 min 30"
+  ],
+  "explanation": "En une minute : 1/6 + 1/3 = 1/2 seau. Il faut donc 2 minutes."
+ },
+ {
+  "key": "v9-calc-029",
+  "concept": "calc.conversions.v9_vitesse_moyenne",
+  "label": "La vitesse moyenne",
+  "type": "mcq",
+  "difficulty": 58,
+  "prompt": "Tu fais 60 km à 60 km/h, puis tu reviens à 40 km/h. Quelle est ta vitesse moyenne sur l'aller-retour ?",
+  "options": [
+   "48 km/h*",
+   "50 km/h",
+   "45 km/h",
+   "52 km/h"
+  ],
+  "explanation": "Aller 1 h, retour 1 h 30 : 120 km en 2 h 30 = 48 km/h. Ce n'est pas la moyenne de 60 et 40."
+ },
+ {
+  "key": "v9-calc-030",
+  "concept": "calc.conversions.v9_allure_marathon",
+  "label": "L'allure du marathon",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Un coureur boucle un marathon (42,2 km) en 3 h 30. Quelle est son allure ?",
+  "options": [
+   "Environ 5 min par km*",
+   "Environ 4 min par km",
+   "Environ 6 min par km",
+   "Environ 7 min par km"
+  ],
+  "explanation": "210 min ÷ 42,2 km ≈ 5 min par km."
+ },
+ {
+  "key": "v9-calc-031",
+  "concept": "calc.number_logic.v9_bougies",
+  "label": "Les bougies d'anniversaire",
+  "type": "numeric",
+  "difficulty": 42,
+  "prompt": "De 1 à 10 ans, on a mis à chaque anniversaire autant de bougies que d'années. Combien de bougies en tout ?",
+  "answer": 55,
+  "explanation": "1 + 2 + … + 10 = 10 × 11 ÷ 2 = 55."
+ }
+]

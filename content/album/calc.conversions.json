@@ -31,7 +31,12 @@
     "calc.conversions.gen_area_volume_85",
     "calc.conversions.gen_area_volume_86",
     "calc.conversions.hectare",
-    "calc.conversions.km_to_m"
+    "calc.conversions.km_to_m",
+    "calc.conversions.v9_echelle_carte",
+    "calc.conversions.v9_carrelage",
+    "calc.conversions.v9_hectare",
+    "calc.conversions.v9_pas_km",
+    "calc.conversions.v9_miles"
    ]
   },
   {
@@ -65,7 +70,9 @@
     "calc.conversions.liters_cl",
     "calc.conversions.liters_order",
     "calc.conversions.litre_cm3",
-    "calc.conversions.units_pairs"
+    "calc.conversions.units_pairs",
+    "calc.conversions.v9_baignoire",
+    "calc.conversions.v9_deux_robinets"
    ]
   },
   {
@@ -104,7 +111,8 @@
     "calc.conversions.seconds_day",
     "calc.conversions.seconds_hour",
     "calc.conversions.seconds_to_min",
-    "calc.conversions.time_order"
+    "calc.conversions.time_order",
+    "calc.conversions.v9_heures_annee"
    ]
   },
   {
@@ -136,7 +144,9 @@
     "calc.conversions.gen_travel_81",
     "calc.conversions.gen_travel_82",
     "calc.conversions.kmh_ms",
-    "calc.conversions.speed_time"
+    "calc.conversions.speed_time",
+    "calc.conversions.v9_vitesse_moyenne",
+    "calc.conversions.v9_allure_marathon"
    ]
   },
   {

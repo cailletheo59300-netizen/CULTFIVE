@@ -36,7 +36,10 @@
     "logic.reasoning.syllogism_fish",
     "logic.reasoning.syllogisme_des_chats_noirs",
     "logic.reasoning.syllogisme_invalide",
-    "logic.reasoning.zorks_bleus"
+    "logic.reasoning.zorks_bleus",
+    "logic.reasoning.v9_analogie_gant",
+    "logic.reasoning.v9_analogie_fourchette",
+    "logic.reasoning.v9_analogie_chiot"
    ]
   },
   {
@@ -92,7 +95,8 @@
     "logic.reasoning.ile_b_ment",
     "logic.reasoning.liar",
     "logic.reasoning.menteur_frere_soeur",
-    "logic.reasoning.menteurs_honnetes"
+    "logic.reasoning.menteurs_honnetes",
+    "logic.reasoning.v9_trois_menteurs"
    ]
   },
   {
@@ -148,7 +152,8 @@
     "logic.reasoning.intrus_premiers",
     "logic.reasoning.odd_one_primes",
     "logic.reasoning.odd_word",
-    "logic.reasoning.rectangle_carre"
+    "logic.reasoning.rectangle_carre",
+    "logic.reasoning.v9_intrus_formes"
    ]
   },
   {
@@ -172,7 +177,8 @@
     "logic.reasoning.j_f_m_a_m_j",
     "logic.reasoning.l_m_m_j_v_s",
     "logic.reasoning.palindrome_kayak",
-    "logic.reasoning.u_d_t_q_c_s"
+    "logic.reasoning.u_d_t_q_c_s",
+    "logic.reasoning.v9_code_nombres"
    ]
   },
   {
@@ -205,7 +211,8 @@
     "logic.reasoning.samedi_10_25",
     "logic.reasoning.si_hier_etait_lundi",
     "logic.reasoning.vendredi_moins_10",
-    "logic.reasoning.weekday_logic"
+    "logic.reasoning.weekday_logic",
+    "logic.reasoning.v9_vendredi_13"
    ]
   },
   {
@@ -234,7 +241,8 @@
     "logic.reasoning.tallest",
     "logic.reasoning.the_et_cafe",
     "logic.reasoning.trois_pommes",
-    "logic.reasoning.water_lily"
+    "logic.reasoning.water_lily",
+    "logic.reasoning.v9_ordre_arrivee"
    ]
   },
   {
@@ -260,7 +268,9 @@
     "logic.reasoning.probabilite_du_6",
     "logic.reasoning.sac_bille_bleue",
     "logic.reasoning.socks_dark",
-    "logic.reasoning.somme_7_avec_deux_des"
+    "logic.reasoning.somme_7_avec_deux_des",
+    "logic.reasoning.v9_roi_jeu",
+    "logic.reasoning.v9_de_plus_4"
    ]
   },
   {
@@ -290,7 +300,10 @@
     "logic.reasoning.produit_impairs",
     "logic.reasoning.regle_divisible_9",
     "logic.reasoning.reverse_operation",
-    "logic.reasoning.somme_impairs"
+    "logic.reasoning.somme_impairs",
+    "logic.reasoning.v9_cadenas",
+    "logic.reasoning.v9_menus",
+    "logic.reasoning.v9_aligner_trois"
    ]
   }
  ],
