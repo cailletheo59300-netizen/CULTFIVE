@@ -34,20 +34,13 @@ struct DailyHomeView: View {
                     }
                     StreakRescueOffer()
                     rendezVous
-                    if AppChannel.isTestBuild {
-                        // Aperçu de l'album : les défis (jour, semaine, saison) rapportent neurones et points de saison ;
-                        // le bloc « Aujourd'hui » est retiré. La version de l'App Store garde l'écran habituel.
-                        SeasonChallengesCard(overview: quests, store: AlbumStore.shared) {
-                            app.pendingPass = true
-                            app.tab = .album
-                        }
-                        .id("defis")
-                        FreeChestOffer()
-                    } else {
-                        if let quests { QuestsCard(overview: quests) }
-                        FreeChestOffer()
-                        today
+                    // Les défis (jour, semaine, saison) rapportent neurones et points de saison.
+                    SeasonChallengesCard(overview: quests, store: AlbumStore.shared) {
+                        app.pendingPass = true
+                        app.tab = .album
                     }
+                    .id("defis")
+                    FreeChestOffer()
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -115,8 +108,8 @@ struct DailyHomeView: View {
         if let league { standings = try? await app.service.leagueStandings(league.id, offset: 0) } else { standings = nil }
         if let fresh = try? await app.service.quests() {
             quests = fresh
-            // Aperçu de l'album : les défis remplis font monter le pass simulé.
-            if AppChannel.isTestBuild { AlbumStore.shared.credit(fresh) }
+            // Les défis remplis font monter le pass : on relit le pass et l'album.
+            await AlbumStore.shared.refresh()
             if !fresh.newly.isEmpty {
                 withAnimation(Motion.bounce) { rewards = fresh.newly }
                 questMoments = fresh.newly.map {

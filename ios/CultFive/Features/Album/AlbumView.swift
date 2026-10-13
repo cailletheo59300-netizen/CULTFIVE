@@ -9,8 +9,8 @@ struct PackOpening: Identifiable {
     var coffret = false
 }
 
-/// Onglet Album (aperçu TestFlight) : le classeur. Couverture Brainlix, intercalaires de couleur par domaine,
-/// feuillets de 9 pochettes qui tournent en 3D, cases vides à fabriquer. Collection simulée sur le téléphone.
+/// Onglet Album : le classeur. Couverture Brainlix, intercalaires de couleur par domaine,
+/// feuillets de 9 pochettes qui tournent en 3D, cases vides à fabriquer. La collection vient du serveur.
 struct AlbumView: View {
     @Environment(AppModel.self) private var app
     @State private var store = AlbumStore.shared
@@ -18,7 +18,6 @@ struct AlbumView: View {
     @State private var domain = AlbumCatalog.shared.domains.first?.id ?? "history"
     @State private var selected: AlbumCard?
     @State private var opening: PackOpening?
-    @State private var confirmReset = false
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -38,6 +37,7 @@ struct AlbumView: View {
                 .padding(.horizontal, Space.gutter)
                 .padding(.top, Space.s)
             }
+            .refreshable { await store.refresh() }
             .clearsTabBar()
             .background(Color.paper.ignoresSafeArea())
             .navigationTitle("Album")
@@ -47,7 +47,7 @@ struct AlbumView: View {
                     NeuronesAmount(amount: store.neurones, size: 24)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    if AlbumStore.isAdmin(handle: app.profile?.handle) { adminMenu }
+                    if store.canAdmin { adminMenu }
                 }
             }
             .navigationDestination(for: AlbumRoute.self) { route in
@@ -58,6 +58,12 @@ struct AlbumView: View {
             }
         }
         .environment(store)
+        .task { await store.refresh() }
+        .alert("Album", isPresented: Binding(get: { store.errorMessage != nil }, set: { if !$0 { store.errorMessage = nil } })) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(store.errorMessage ?? "")
+        }
         .onChange(of: app.pendingPass, initial: true) { _, go in
             // Lien « Pass » de la carte Défis (écran du 5) : on ouvre directement le pass.
             guard go else { return }
@@ -71,9 +77,6 @@ struct AlbumView: View {
         .fullScreenCover(item: $opening) { open in
             PackOpeningView(opening: open, back: store.back) { opening = nil }
         }
-        .confirmationDialog("Repartir de zéro en mode admin ?", isPresented: $confirmReset, titleVisibility: .visible) {
-            Button("Réinitialiser", role: .destructive) { store.reset() }
-        }
     }
 
     private var shortcuts: some View {
@@ -83,31 +86,30 @@ struct AlbumView: View {
                              icon: "ticket_pochette", tint: Color(hex: 0xF0588F))
             }
             NavigationLink(value: AlbumRoute.pass) {
-                ShortcutTile(title: "Pass", detail: "Palier \(store.tier)/\(AlbumStore.tiers)",
+                ShortcutTile(title: "Pass", detail: "Palier \(store.tier)/\(store.tiers)",
                              icon: "final_gratuit", tint: .brand)
             }
         }
         .buttonStyle(.row)
     }
 
-    /// Menu admin, réservé aux pseudos admin : un interrupteur, et les outils quand il est activé.
+    /// Menu admin, réservé aux administrateurs (vérifié par le serveur) : un interrupteur, et les outils quand il est activé.
     /// Désactivé, l'album redevient celui d'un joueur normal (sa propre collection).
     private var adminMenu: some View {
         Menu {
-            Toggle(isOn: Binding(get: { store.admin }, set: { on in withAnimation(Motion.standard) { store.setAdmin(on) } })) {
+            Toggle(isOn: Binding(get: { store.admin }, set: { on in Task { await store.setAdmin(on) } })) {
                 Label("Mode admin", systemImage: "crown.fill")
             }
             if store.admin {
                 Section("Cartes") {
-                    Button { store.ownAll(shiny: false) } label: { Label("Toutes les cartes", systemImage: "square.grid.3x3.fill") }
-                    Button { store.ownAll(shiny: true) } label: { Label("Toutes en brillantes", systemImage: "sparkles") }
-                    Button { store.simulateMastery() } label: { Label("Quelques chefs-d'œuvre", systemImage: "star.fill") }
-                    Button(role: .destructive) { store.emptyAlbum() } label: { Label("Vider l'album", systemImage: "trash") }
+                    Button { Task { await store.ownAll(shiny: false) } } label: { Label("Toutes les cartes", systemImage: "square.grid.3x3.fill") }
+                    Button { Task { await store.ownAll(shiny: true) } } label: { Label("Toutes en brillantes", systemImage: "sparkles") }
+                    Button(role: .destructive) { Task { await store.emptyAlbum() } } label: { Label("Vider l'album", systemImage: "trash") }
                 }
                 Section("Prochaine pochette") {
                     ForEach([CardRarity.legend, .epic, .rare], id: \.self) { rarity in
                         Button {
-                            store.forcedRarity = rarity
+                            Task { await store.force(rarity) }
                         } label: {
                             if store.forcedRarity == rarity {
                                 Label("Avec une \(rarity.label.lowercased())", systemImage: "checkmark")
@@ -116,9 +118,6 @@ struct AlbumView: View {
                             }
                         }
                     }
-                }
-                Section {
-                    Button(role: .destructive) { confirmReset = true } label: { Label("Réinitialiser l'admin", systemImage: "arrow.counterclockwise") }
                 }
             }
         } label: {

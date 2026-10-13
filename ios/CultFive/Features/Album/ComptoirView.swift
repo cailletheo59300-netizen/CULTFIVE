@@ -1,13 +1,12 @@
 import SwiftUI
 
-/// Le Comptoir de Léon (aperçu TestFlight) : pochettes par thème payées en neurones ou en tickets, la pochette dorée,
-/// l'offre du jour et les coffrets de catégorie du Pass+ (cartes connues avant de choisir). Aucun argent réel ici.
+/// Le Comptoir de Léon : pochettes par thème payées en neurones ou en tickets, la pochette dorée et l'offre du jour.
+/// Tout passe par le serveur (album_open_pack, album_craft). Aucun argent réel ici.
 struct ComptoirView: View {
     let store: AlbumStore
     var onOpen: (PackOpening) -> Void
 
     @State private var selected = "encyclo"
-    @State private var coffretSeries = "history"
 
     private let catalog = AlbumCatalog.shared
     private var series: PackSeries { catalog.series.first { $0.id == selected } ?? catalog.series[0] }
@@ -26,8 +25,6 @@ struct ComptoirView: View {
                     section("Offre du jour", detail: "une carte qui te manque")
                     offerCard(offer)
                 }
-                section("Coffrets de catégorie", detail: "Pass+, cartes connues")
-                coffrets
                 Text("Chances pour chaque carte : commune 70 %, rare 22 %, épique 6,5 %, légendaire 1,5 %. Au moins une rare par pochette.")
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
@@ -149,12 +146,14 @@ struct ComptoirView: View {
                 }
             }
             ShopButton(title: "Ouvrir la pochette", price: "\(AlbumStore.packPrice)", icon: "neurone",
-                       fill: .brand, text: .white, enabled: store.neurones >= AlbumStore.packPrice) {
-                if let pulls = store.buyPack(series, useTicket: false) { onOpen(PackOpening(series: series, pulls: pulls)) }
+                       fill: .brand, text: .white, enabled: store.neurones >= AlbumStore.packPrice && !store.busy) {
+                let series = series
+                Task { if let pulls = await store.buyPack(series, useTicket: false) { onOpen(PackOpening(series: series, pulls: pulls)) } }
             }
             ShopButton(title: "Utiliser un ticket", price: store.admin ? "∞" : (store.tickets > 1 ? "\(store.tickets) restants" : "\(store.tickets) restant"),
-                       icon: "ticket_pochette", fill: .sun, text: .inkFixed, enabled: store.tickets > 0) {
-                if let pulls = store.buyPack(series, useTicket: true) { onOpen(PackOpening(series: series, pulls: pulls)) }
+                       icon: "ticket_pochette", fill: .sun, text: .inkFixed, enabled: store.tickets > 0 && !store.busy) {
+                let series = series
+                Task { if let pulls = await store.buyPack(series, useTicket: true) { onOpen(PackOpening(series: series, pulls: pulls)) } }
             }
             if missing > 0 {
                 Label("Il te manque \(missing) neurones pour l'ouvrir.", systemImage: "info.circle")
@@ -183,13 +182,13 @@ struct ComptoirView: View {
                 }
             }
             if store.goldPacks > 0 {
-                ShopButton(title: "Ouvrir celle du pass", price: store.admin ? "∞" : "\(store.goldPacks)", icon: "doree", fill: .sun, text: .inkFixed, enabled: true) {
-                    if let pulls = store.openOwnedGoldPack() { onOpen(PackOpening(series: catalog.series[0], pulls: pulls, gold: true)) }
+                ShopButton(title: "Ouvrir celle du pass", price: store.admin ? "∞" : "\(store.goldPacks)", icon: "doree", fill: .sun, text: .inkFixed, enabled: !store.busy) {
+                    Task { if let pulls = await store.openOwnedGoldPack() { onOpen(PackOpening(series: catalog.series[0], pulls: pulls, gold: true)) } }
                 }
             }
             ShopButton(title: store.goldBought ? "De retour lundi" : "Ouvrir la pochette dorée", price: "\(AlbumStore.goldPackPrice)", icon: "neurone",
-                       fill: Color(hex: 0xC8902E), text: .white, enabled: !store.goldBought && missing <= 0) {
-                if let pulls = store.buyGoldPack() { onOpen(PackOpening(series: catalog.series[0], pulls: pulls, gold: true)) }
+                       fill: Color(hex: 0xC8902E), text: .white, enabled: !store.goldBought && missing <= 0 && !store.busy) {
+                Task { if let pulls = await store.buyGoldPack() { onOpen(PackOpening(series: catalog.series[0], pulls: pulls, gold: true)) } }
             }
             if !store.goldBought && missing > 0 {
                 Label("Il te manque \(missing) neurones.", systemImage: "info.circle")
@@ -229,44 +228,8 @@ struct ComptoirView: View {
                 }
             }
             ShopButton(title: "Prendre cette carte", price: "\(card.rarity.craftCost)", icon: "neurone",
-                       fill: .brand, text: .white, enabled: store.neurones >= card.rarity.craftCost) {
-                if store.craft(card) { Haptics.success() }
-            }
-        }
-        .popCard()
-    }
-
-    // MARK: - Coffrets de catégorie (Pass+)
-
-    private var coffrets: some View {
-        let theme = catalog.series.first { $0.id == coffretSeries } ?? catalog.series[1]
-        let cards = store.coffretCards(theme)
-        return VStack(alignment: .leading, spacing: Space.m) {
-            HStack(spacing: Space.s) {
-                AlbumImage(kind: .pass, name: "coffret").frame(width: 48, height: 48)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(store.admin ? "Coffrets illimités" : store.coffrets > 0 ? "\(store.coffrets) coffret\(store.coffrets > 1 ? "s" : "") à choisir" : "Aucun coffret pour l'instant")
-                        .font(.system(.subheadline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink).lineLimit(1)
-                    Text("Tu choisis un thème et tu vois les 3 cartes avant : pas de hasard.")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                }
-            }
-            Picker("Thème", selection: $coffretSeries) {
-                ForEach(catalog.series.dropFirst()) { Text($0.label).tag($0.id) }
-            }
-            .pickerStyle(.menu)
-            .tint(Color.brand)
-            HStack(alignment: .top, spacing: Space.s) {
-                ForEach(cards) { card in
-                    VStack(spacing: 6) {
-                        AlbumCardView(card: card, state: nil, outlined: true)
-                        OutcomeTag(outcome: store.coffretOutcome(card), compact: true)
-                    }
-                }
-            }
-            ShopButton(title: "Prendre ce coffret", price: nil, icon: "coffret", fill: .brand, text: .white, enabled: store.coffrets > 0) {
-                let pulls = store.openCoffret(theme)
-                if !pulls.isEmpty { onOpen(PackOpening(series: theme, pulls: pulls, coffret: true)) }
+                       fill: .brand, text: .white, enabled: store.neurones >= card.rarity.craftCost && !store.busy) {
+                Task { if await store.craft(card) { Haptics.success() } }
             }
         }
         .popCard()

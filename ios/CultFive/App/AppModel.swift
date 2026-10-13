@@ -67,6 +67,7 @@ final class AppModel {
         self.domains = cache.load("domains") ?? []
         self.subdomains = cache.load("subdomains") ?? []
         self.pendingInvite = UserDefaults.standard.string(forKey: "pendingInvite")
+        AlbumStore.shared.configure(service)
     }
 
     static func live() -> AppModel {
@@ -361,6 +362,7 @@ final class AppModel {
         NotificationScheduler.cancelAll()
         profile = nil
         daily = nil
+        AlbumStore.shared.clear()
         phase = .launching
         await bootstrap()
     }
@@ -371,6 +373,7 @@ final class AppModel {
         NotificationScheduler.cancelAll()
         profile = nil
         daily = nil
+        AlbumStore.shared.clear()
         phase = .launching
         await bootstrap()
     }

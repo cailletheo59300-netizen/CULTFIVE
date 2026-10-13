@@ -1,7 +1,7 @@
 import SwiftUI
 import CultFiveCore
 
-// Collection simulée de l'album (aperçu TestFlight) : tout reste sur le téléphone, rien ne part au serveur.
+// Collection de l'album et pass de saison, lus et modifiés sur le serveur (album_*, season_*, migrations 0042–0045).
 // Règles : D-046 (neurones, pochettes, fabrication), D-048 (états, doublons, habillage), D-049 (pass).
 
 /// Ce que le joueur possède d'une carte.
@@ -9,8 +9,10 @@ struct OwnedCard: Codable, Equatable {
     var copies = 1
     var shiny = false
     var prestige = false
-    /// Maîtrisée au quiz (3 étoiles) : jamais achetable. Simulé ici avec « Tout débloquer ».
+    /// Maîtrisée au quiz (3 étoiles) : jamais achetable.
     var masterpiece = false
+    /// Étoiles de maîtrise au quiz (0 à 3, sur les 60 derniers jours).
+    var stars = 0
     var frame: String?
     var finish: String?
     var title: String?
@@ -89,183 +91,81 @@ enum Cosmetic {
 /// Une carte sortie d'une pochette ou d'un coffret, et ce qu'elle a donné.
 struct Pull: Identifiable, Hashable {
     enum Outcome: Hashable { case new, shiny, neurones(Int), nothing }
+
+    /// Carte reçue du serveur (pochette, coffre, fin de partie). nil si la carte manque au catalogue de l'app.
+    init?(_ pull: AlbumPull) {
+        guard let card = AlbumCatalog.shared.byServerId[pull.card] else { return nil }
+        self.card = card
+        switch pull.outcome {
+        case .new: outcome = .new
+        case .shiny: outcome = .shiny
+        case .neurones: outcome = .neurones(pull.neurones ?? 0)
+        }
+    }
+
+    init(card: AlbumCard, outcome: Outcome) {
+        self.card = card
+        self.outcome = outcome
+    }
     let id = UUID()
     let card: AlbumCard
     let outcome: Outcome
 }
 
+@MainActor
 @Observable
 final class AlbumStore {
     static let packPrice = 150
     static let goldPackPrice = 900
-    static let odds: [(CardRarity, Double)] = [(.legend, 1.5), (.epic, 6.5), (.rare, 22)]
-    /// La 40e pochette sans légendaire en donne une (jamais affiché au joueur, D-046).
-    static let pity = 40
-    static let tierPoints = 150
-    static let tiers = 30
-    /// Points de saison : défi du jour, de la semaine, mission de saison, et bonus des trois (D-049).
-    static let dayPoints = 15, dayBonus = 15, weekPoints = 40, weekBonus = 60, missionPoints = 75
-    static let missions = ["Finis une page de l'album", "Ouvre 5 pochettes Histoire", "Fabrique une carte dans l'album", "Obtiens une carte brillante",
-                           "Gagne 3 duels", "Fais 7 jours de suite", "Réussis un 5 du jour parfait", "Maîtrise 3 cartes (3 étoiles)",
-                           "Complète 10 cartes Nature", "Joue dans 8 domaines différents", "Mets 3 cartes en vitrine", "Trouve une légendaire"]
-
-    /// La même collection simulée pour toute l'app (album, Comptoir, pass, défis de l'écran du 5).
-    static let shared = AlbumStore()
-
-    private struct Saved: Codable {
-        var owned: [String: OwnedCard]
-        var neurones: Int
-        var tickets: Int
-        var tokens: Int
-        var goldPacks: Int
-        var goldBought: Bool
-        var coffrets: Int
-        var pity: Int
-        var unlocked: Set<String>
-        var back: String
-        var cover: String
-        var points: Int
-        var passPlus: Bool
-        var claimedFree: Set<Int>
-        var claimedPaid: Set<Int>
-        var packsOpened: Int
-        var coffretsOpened: Int
-        var credited: Set<String>?
-        var missionsDone: Set<Int>?
-    }
-
-    private(set) var owned: [String: OwnedCard] = [:]
-    var neurones = 1_450
-    var tickets = 5
-    /// Jetons Prestige à poser.
-    var tokens = 1
-    /// Pochettes dorées à ouvrir (pass, palier 30).
-    var goldPacks = 0
-    /// Pochette dorée du Comptoir déjà achetée cette semaine.
-    var goldBought = false
-    /// Coffrets de catégorie à choisir (Pass+).
-    var coffrets = 0
-    private var pity = 26
-    /// Habillage débloqué : « cadre.vitrail », « dos.soleil », « titre.curieux »…
-    var unlocked: Set<String> = ["dos.classique", "couv.classique"]
-    var back = "classique"
-    var cover = "classique"
-    var points = 1_240
-    var passPlus = false
-    var claimedFree: Set<Int> = []
-    var claimedPaid: Set<Int> = []
-    var packsOpened = 0
-    var coffretsOpened = 0
-    /// Défis du serveur déjà comptés dans le pass (« jour:2026-10-12:1 »), pour ne les compter qu'une fois.
-    private var credited: Set<String> = []
-    /// Missions de saison remplies (simulées).
-    var missionsDone: Set<Int> = []
-
-    /// Mode admin (réservé aux pseudos de `adminHandles`) : une collection à part, tout illimité.
-    /// En le quittant, on retrouve la collection du joueur telle qu'il l'avait laissée.
-    private(set) var admin = UserDefaults.standard.bool(forKey: AlbumStore.adminFlagKey)
-    /// Admin : rareté imposée à la prochaine pochette (pour voir chaque animation).
-    var forcedRarity: CardRarity?
-
-    static let adminHandles: Set<String> = ["rudyc14ezz"]
-    static func isAdmin(handle: String?) -> Bool { handle.map { adminHandles.contains($0.lowercased()) } ?? false }
-
-    private let catalog = AlbumCatalog.shared
-    private static let normalKey = "album.preview.v1"
-    private static let adminKey = "album.preview.admin.v1"
-    private static let adminFlagKey = "album.preview.admin"
-    private var key: String { admin ? Self.adminKey : Self.normalKey }
     /// Réserves « illimitées » du mode admin (affichées ∞).
     static let unlimited = 999_999
 
-    init() {
-        load()
+    /// La même collection pour toute l'app (album, Comptoir, pass, défis de l'écran du 5).
+    static let shared = AlbumStore()
+
+    private var service: GameService?
+    private let catalog = AlbumCatalog.shared
+
+    private(set) var owned: [String: OwnedCard] = [:]
+    private(set) var neurones = 0
+    private(set) var tickets = 0
+    /// Jetons Prestige à poser.
+    private(set) var tokens = 0
+    /// Pochettes dorées à ouvrir (gagnées dans le pass).
+    private(set) var goldPacks = 0
+    /// Pochette dorée du Comptoir déjà achetée cette semaine.
+    private(set) var goldBought = false
+    /// Habillage possédé : « cadre.vitrail », « dos.soleil », « titre.curieux »… (dos et couverture classiques pour tous).
+    private(set) var unlocked: Set<String> = AlbumStore.always
+    private(set) var back = "classique"
+    private(set) var cover = "classique"
+    /// Mode admin (administrateurs seulement) : une collection à part, tout illimité.
+    private(set) var admin = false
+    private(set) var canAdmin = false
+    /// Admin : rareté imposée à la prochaine pochette (pour voir chaque animation).
+    private(set) var forcedRarity: CardRarity?
+    /// Pass de saison (piste gratuite).
+    private(set) var season = SeasonOverview()
+    /// Album lu au moins une fois.
+    private(set) var loaded = false
+    /// Une action est en cours (ouverture, fabrication…) : les boutons attendent.
+    private(set) var busy = false
+    /// Dernière erreur à montrer au joueur.
+    var errorMessage: String?
+
+    private static let always: Set<String> = ["dos.classique", "couv.classique"]
+
+    /// À appeler une fois au lancement, avec le service de l'app.
+    func configure(_ service: GameService) {
+        self.service = service
     }
 
-    private func decode(_ key: String) -> Saved? {
-        guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
-        return try? JSONDecoder().decode(Saved.self, from: data)
-    }
-
-    private func restore(_ saved: Saved) {
-        owned = saved.owned; neurones = saved.neurones; tickets = saved.tickets; tokens = saved.tokens
-        goldPacks = saved.goldPacks; goldBought = saved.goldBought; coffrets = saved.coffrets; pity = saved.pity
-        unlocked = saved.unlocked; back = saved.back; cover = saved.cover; points = saved.points; passPlus = saved.passPlus
-        claimedFree = saved.claimedFree; claimedPaid = saved.claimedPaid; packsOpened = saved.packsOpened
-        coffretsOpened = saved.coffretsOpened
-        credited = saved.credited ?? []
-        missionsDone = saved.missionsDone ?? []
-    }
-
-    private func resetFields() {
-        neurones = 1_450; tickets = 5; tokens = 1; goldPacks = 0; goldBought = false; coffrets = 0; pity = 26
-        unlocked = ["dos.classique", "couv.classique"]; back = "classique"; cover = "classique"
-        points = 1_240; passPlus = false; claimedFree = []; claimedPaid = []; packsOpened = 0; coffretsOpened = 0
-        credited = []; missionsDone = []
-    }
-
-    private func load() {
-        if let saved = decode(key) {
-            restore(saved)
-        } else if admin {
-            // Première fois en admin : on part de la collection du joueur, puis on donne tout.
-            if let saved = decode(Self.normalKey) { restore(saved) } else { resetFields(); seed() }
-            grantAdmin()
-        } else {
-            resetFields()
-            seed()
-        }
-    }
-
-    /// Active ou quitte le mode admin. Chaque mode garde sa propre collection.
-    func setAdmin(_ on: Bool) {
-        guard on != admin else { return }
-        save()
-        admin = on
-        UserDefaults.standard.set(on, forKey: Self.adminFlagKey)
-        forcedRarity = nil
-        load()
-    }
-
-    /// Admin : réserves illimitées, Pass+ actif et tous les paliers, tout l'habillage.
-    private func grantAdmin() {
-        neurones = Self.unlimited; tickets = Self.unlimited; tokens = Self.unlimited
-        goldPacks = Self.unlimited; coffrets = Self.unlimited; goldBought = false
-        passPlus = true
-        points = Self.tierPoints * Self.tiers
-        for item in Cosmetic.frames { unlocked.insert("cadre.\(item.id)") }
-        for item in Cosmetic.finishes { unlocked.insert("finition.\(item.id)") }
-        for item in Cosmetic.titles { unlocked.insert("titre.\(item.id)") }
-        for item in Cosmetic.backs { unlocked.insert("dos.\(item.id)") }
-        for item in Cosmetic.covers { unlocked.insert("couv.\(item.id)") }
-        unlocked.insert("cadre.anime")
-        save()
-    }
-
-    /// Collection de départ : environ un tiers des communes, quelques rares et épiques, aucune légendaire.
-    private func seed() {
-        var generator = SeededGenerator(seed: 7)
-        owned = [:]
-        for card in catalog.cards {
-            let chance: Double
-            switch card.rarity {
-            case .common: chance = 0.35
-            case .rare: chance = 0.18
-            case .epic: chance = 0.06
-            case .legend: chance = 0
-            }
-            if Double.random(in: 0..<1, using: &generator) < chance {
-                owned[card.id] = OwnedCard(shiny: Double.random(in: 0..<1, using: &generator) < 0.12)
-            }
-        }
-    }
-
-    func save() {
-        let saved = Saved(owned: owned, neurones: neurones, tickets: tickets, tokens: tokens, goldPacks: goldPacks, goldBought: goldBought,
-                          coffrets: coffrets, pity: pity, unlocked: unlocked, back: back, cover: cover, points: points, passPlus: passPlus,
-                          claimedFree: claimedFree, claimedPaid: claimedPaid, packsOpened: packsOpened,
-                          coffretsOpened: coffretsOpened, credited: credited, missionsDone: missionsDone)
-        if let data = try? JSONEncoder().encode(saved) { UserDefaults.standard.set(data, forKey: key) }
+    /// Déconnexion : on oublie la collection du compte précédent.
+    func clear() {
+        apply(AlbumOverview())
+        loaded = false
+        season = SeasonOverview()
+        errorMessage = nil
     }
 
     // MARK: - Lecture
@@ -276,150 +176,119 @@ final class AlbumStore {
     var totalOwned: Int { owned.count }
     func has(_ unlock: String) -> Bool { unlocked.contains(unlock) }
 
+    var tier: Int { season.tier }
+    var points: Int { season.points }
+    var tiers: Int { season.tiers }
+    var tierPoints: Int { season.tierPoints }
+    var rules: SeasonOverview.Rules { season.pointsRules }
+
+    /// Relit l'album et le pass sur le serveur.
+    func refresh() async {
+        guard let service else { return }
+        async let album = service.albumOverview()
+        async let pass = service.seasonOverview()
+        do {
+            apply(try await album)
+            season = try await pass
+        } catch {
+            report(error)
+        }
+    }
+
+    private func apply(_ overview: AlbumOverview) {
+        var cards: [String: OwnedCard] = [:]
+        for c in overview.cards {
+            guard let card = catalog.byServerId[c.id] else { continue }
+            let hidden = Set(c.hidden.compactMap(CardStateKind.init(rawValue:)))
+            cards[card.id] = OwnedCard(copies: c.copies, shiny: c.shiny, prestige: c.prestige, masterpiece: c.masterpiece, stars: c.stars,
+                                       frame: c.frame, finish: c.finish, title: c.title, hidden: hidden.isEmpty ? nil : hidden)
+        }
+        owned = cards
+        neurones = overview.neurones
+        tickets = overview.tickets
+        tokens = overview.tokens
+        goldPacks = overview.goldPacks
+        goldBought = !overview.goldAvailable
+        unlocked = Self.always.union(overview.cosmetics)
+        back = overview.back
+        cover = overview.cover
+        admin = overview.admin
+        canAdmin = overview.canAdmin
+        forcedRarity = overview.forcedRarity.flatMap(CardRarity.init(rawValue:))
+        loaded = true
+    }
+
+    private func report(_ error: Error) {
+        errorMessage = (error as? LocalizedError)?.errorDescription ?? "Le serveur ne répond pas. Réessaie dans un instant."
+    }
+
+    /// Lance une action serveur, une à la fois ; en cas d'échec, montre l'erreur et relit l'album.
+    private func run<T>(_ action: (GameService) async throws -> T) async -> T? {
+        guard let service, !busy else { return nil }
+        busy = true
+        defer { busy = false }
+        do {
+            return try await action(service)
+        } catch {
+            report(error)
+            await refresh()
+            return nil
+        }
+    }
+
     // MARK: - Pochettes
 
-    /// Ouvre une pochette de 5 cartes : au moins une rare, légendaire garantie au 40e essai, dorée = une légendaire.
-    func openPack(_ series: PackSeries, gold: Bool = false) -> [Pull] {
-        var rarities = (0..<5).map { _ in rollRarity() }
-        if !rarities.contains(where: { $0 > .common }) { rarities[4] = .rare }
-        if gold && !rarities.contains(.legend) { rarities.sort(); rarities[4] = .legend }
-        pity += 1
-        if rarities.contains(.legend) { pity = 0 } else if pity >= Self.pity { rarities.sort(); rarities[4] = .legend; pity = 0 }
-        if let forced = forcedRarity {
-            rarities.sort()
-            rarities[4] = forced
-            forcedRarity = nil
-        }
-        rarities.sort()
-        var picked: Set<String> = []
-        let pulls = rarities.map { rarity -> Pull in
-            var pool = series.cards.filter { $0.rarity == rarity && !picked.contains($0.id) }
-            if pool.isEmpty { pool = catalog.cards.filter { $0.rarity == rarity && !picked.contains($0.id) } }
-            let card = pool.randomElement() ?? series.cards[0]
-            picked.insert(card.id)
-            return receive(card, fromCoffret: false)
-        }
-        packsOpened += 1
-        save()
+    /// Ouvre une pochette payée en neurones ou avec un ticket. Les cartes reçues sont ajoutées à l'album.
+    func buyPack(_ series: PackSeries, useTicket: Bool) async -> [Pull]? {
+        await open(series, pay: useTicket ? .ticket : .neurones)
+    }
+
+    /// Pochette dorée du Comptoir (une par semaine).
+    func buyGoldPack() async -> [Pull]? { await open(catalog.series[0], pay: .gold) }
+
+    /// Pochette dorée gagnée dans le pass.
+    func openOwnedGoldPack() async -> [Pull]? { await open(catalog.series[0], pay: .goldPass) }
+
+    private func open(_ series: PackSeries, pay: AlbumPayment) async -> [Pull]? {
+        let clientId = UUID()
+        guard let opening = await run({ try await $0.albumOpenPack(series: series.id, pay: pay, clientId: clientId) }) else { return nil }
+        // Les plus rares à la fin, pour le suspense.
+        let pulls = opening.pulls.compactMap(Pull.init).sorted { $0.card.rarity < $1.card.rarity }
+        await refresh()
         return pulls
     }
 
-    private func rollRarity() -> CardRarity {
-        var roll = Double.random(in: 0..<100)
-        for (rarity, odds) in Self.odds {
-            if roll < odds { return rarity }
-            roll -= odds
-        }
-        return .common
-    }
-
-    /// Une carte reçue : nouvelle ; sinon le premier doublon la rend brillante ; ensuite des neurones (pochette) ou rien (coffret).
-    @discardableResult
-    func receive(_ card: AlbumCard, fromCoffret: Bool) -> Pull {
-        guard var state = owned[card.id] else {
-            owned[card.id] = OwnedCard(shiny: fromCoffret)
-            return Pull(card: card, outcome: .new)
-        }
-        state.copies += 1
-        defer { owned[card.id] = state }
-        if !state.shiny {
-            state.shiny = true
-            return Pull(card: card, outcome: .shiny)
-        }
-        if fromCoffret { return Pull(card: card, outcome: .nothing) }
-        neurones += card.rarity.duplicateNeurones
-        return Pull(card: card, outcome: .neurones(card.rarity.duplicateNeurones))
-    }
-
-    /// Ce que donnerait une carte de coffret (affiché avant l'achat).
-    func coffretOutcome(_ card: AlbumCard) -> Pull.Outcome {
-        guard let state = owned[card.id] else { return .new }
-        return state.shiny ? .nothing : .shiny
-    }
-
-    /// Coffret de catégorie (Pass+) : les 3 cartes affichées avant, au plus une épique, pas de légendaire.
-    func coffretCards(_ series: PackSeries) -> [AlbumCard] {
-        // Graine stable (le hash de Swift change à chaque lancement) : le coffret montré reste le même.
-        let base = series.id.unicodeScalars.reduce(UInt64(17)) { $0 &* 31 &+ UInt64($1.value) }
-        var generator = SeededGenerator(seed: base &+ UInt64(coffretsOpened))
-        let commons = series.cards.filter { $0.rarity == .common }.shuffled(using: &generator)
-        let rares = series.cards.filter { $0.rarity == .rare }.shuffled(using: &generator)
-        let epics = series.cards.filter { $0.rarity == .epic }.shuffled(using: &generator)
-        return Array((epics.prefix(1) + rares.prefix(1) + commons.prefix(1)).prefix(3))
-    }
-
-    func openCoffret(_ series: PackSeries) -> [Pull] {
-        guard admin || coffrets > 0 else { return [] }
-        let pulls = coffretCards(series).map { receive($0, fromCoffret: true) }
-        if !admin { coffrets -= 1 }
-        coffretsOpened += 1
-        save()
-        return pulls
-    }
-
-    // MARK: - Achats en neurones (aucun argent réel ici)
-
-    func buyPack(_ series: PackSeries, useTicket: Bool) -> [Pull]? {
-        if admin { return openPack(series) }
-        if useTicket {
-            guard tickets > 0 else { return nil }
-            tickets -= 1
-        } else {
-            guard neurones >= Self.packPrice else { return nil }
-            neurones -= Self.packPrice
-        }
-        return openPack(series)
-    }
-
-    func buyGoldPack() -> [Pull]? {
-        guard let series = catalog.series.first else { return nil }
-        if admin { return openPack(series, gold: true) }
-        guard !goldBought, neurones >= Self.goldPackPrice else { return nil }
-        neurones -= Self.goldPackPrice
-        goldBought = true
-        return openPack(series, gold: true)
-    }
-
-    func openOwnedGoldPack() -> [Pull]? {
-        guard admin || goldPacks > 0, let series = catalog.series.first else { return nil }
-        if !admin { goldPacks -= 1 }
-        return openPack(series, gold: true)
-    }
-
-    /// Fabriquer une carte manquante, depuis sa case vide.
-    func craft(_ card: AlbumCard) -> Bool {
-        guard owned[card.id] == nil, admin || neurones >= card.rarity.craftCost else { return false }
-        if !admin { neurones -= card.rarity.craftCost }
-        owned[card.id] = OwnedCard()
-        save()
+    /// Fabriquer une carte manquante (case vide ou offre du jour).
+    func craft(_ card: AlbumCard) async -> Bool {
+        guard await run({ try await $0.albumCraft(card: card.serverId) }) != nil else { return false }
+        await refresh()
         return true
     }
 
     // MARK: - États et habillage
 
     /// Pose un jeton Prestige : définitif.
-    func applyPrestige(_ card: AlbumCard) -> Bool {
-        guard admin || tokens > 0, var state = owned[card.id], !state.prestige else { return false }
-        if !admin { tokens -= 1 }
-        state.prestige = true
-        owned[card.id] = state
-        save()
+    func applyPrestige(_ card: AlbumCard) async -> Bool {
+        guard let left = await run({ try await $0.albumPrestige(card: card.serverId) }) else { return false }
+        tokens = left
+        change(card) { $0.prestige = true; $0.hidden?.remove(.prestige) }
         return true
     }
 
     /// Afficher ou masquer un état obtenu (il reste gagné ; le jeton Prestige n'est pas rendu).
     func setHidden(_ card: AlbumCard, _ kind: CardStateKind, _ hide: Bool) {
-        update(card) { state in
+        change(card) { state in
             var set = state.hidden ?? []
             if hide { set.insert(kind) } else { set.remove(kind) }
             state.hidden = set.isEmpty ? nil : set
         }
+        send { try await $0.albumSetHidden(card: card.serverId, state: kind.rawValue, hidden: hide) }
     }
 
     /// Admin : poser ou retirer un état librement, sans jeton ni condition.
     func adminSet(_ card: AlbumCard, _ kind: CardStateKind, _ on: Bool) {
         guard admin else { return }
-        update(card) { state in
+        change(card) { state in
             switch kind {
             case .shiny: state.shiny = on
             case .prestige: state.prestige = on
@@ -427,121 +296,83 @@ final class AlbumStore {
             }
             state.hidden?.remove(kind)
         }
+        send { try await $0.albumAdminState(card: card.serverId, state: kind.rawValue, on: on) }
     }
 
-    func update(_ card: AlbumCard, _ change: (inout OwnedCard) -> Void) {
+    /// Habillage d'une carte : cadre, finition, titre.
+    func dress(_ card: AlbumCard, _ change: (inout OwnedCard) -> Void) {
+        self.change(card, change)
+        guard let state = owned[card.id] else { return }
+        send { try await $0.albumDress(card: card.serverId, frame: state.frame, finish: state.finish, title: state.title) }
+    }
+
+    /// Dos de toutes les cartes.
+    func setBack(_ id: String) {
+        back = id
+        send { try await $0.albumSetLook(back: id, cover: nil) }
+    }
+
+    /// Couverture de l'album.
+    func setCover(_ id: String) {
+        cover = id
+        send { try await $0.albumSetLook(back: nil, cover: id) }
+    }
+
+    private func change(_ card: AlbumCard, _ change: (inout OwnedCard) -> Void) {
         guard var state = owned[card.id] else { return }
         change(&state)
         owned[card.id] = state
-        save()
+    }
+
+    /// Changement déjà affiché : on l'envoie au serveur ; s'il est refusé, on relit l'album.
+    private func send(_ action: @escaping (GameService) async throws -> Void) {
+        guard let service else { return }
+        Task {
+            do {
+                try await action(service)
+            } catch {
+                report(error)
+                await refresh()
+            }
+        }
     }
 
     // MARK: - Pass de saison
 
-    var tier: Int { min(points / Self.tierPoints, Self.tiers) }
-
-    /// Compte dans le pass les vrais défis remplis (jour et semaine), une seule fois chacun, avec leurs neurones.
-    func credit(_ overview: QuestsOverview) {
-        var changed = false
-        func take(_ key: String, points value: Int, neurones gain: Int) {
-            guard !credited.contains(key) else { return }
-            credited.insert(key)
-            points = min(points + value, Self.tierPoints * Self.tiers)
-            neurones += gain
-            changed = true
-        }
-        for quest in overview.day.quests where quest.done {
-            take("jour:\(overview.day.periodStart):\(quest.slot)", points: Self.dayPoints, neurones: quest.seeds)
-        }
-        if overview.day.bonus.done { take("jour:\(overview.day.periodStart):bonus", points: Self.dayBonus, neurones: overview.day.bonus.seeds) }
-        for quest in overview.week.quests where quest.done {
-            take("semaine:\(overview.week.periodStart):\(quest.slot)", points: Self.weekPoints, neurones: quest.seeds)
-        }
-        if overview.week.bonus.done { take("semaine:\(overview.week.periodStart):bonus", points: Self.weekBonus, neurones: overview.week.bonus.seeds) }
-        if changed { save() }
+    /// Récupère la récompense d'un palier atteint.
+    func claim(tier: Int) async -> Bool {
+        guard await run({ try await $0.seasonClaim(tier: tier) }) != nil else { return false }
+        await refresh()
+        return true
     }
 
-    /// Mission de saison remplie (aperçu : validée à la main).
-    func completeMission(_ index: Int) {
-        guard !missionsDone.contains(index) else { return }
-        missionsDone.insert(index)
-        addPoints(Self.missionPoints)
+    /// Après le palier 30 : les coffres en bois gagnés. Renvoie le nombre récupéré.
+    func claimExtra() async -> Int {
+        guard let count = await run({ try await $0.seasonClaimExtra() }) else { return 0 }
+        await refresh()
+        return count
     }
 
-    func addPoints(_ value: Int) {
-        points = min(points + value, Self.tierPoints * Self.tiers)
-        save()
+    // MARK: - Mode admin
+
+    /// Active ou quitte le mode admin. Chaque mode garde sa propre collection, sur le serveur.
+    func setAdmin(_ on: Bool) async {
+        guard canAdmin, on != admin, let overview = await run({ try await $0.albumAdmin(on) }) else { return }
+        apply(overview)
     }
 
-    func claim(_ reward: PassReward, tier: Int, paid: Bool) {
-        guard tier <= self.tier, paid ? (passPlus && !claimedPaid.contains(tier)) : !claimedFree.contains(tier) else { return }
-        if paid { claimedPaid.insert(tier) } else { claimedFree.insert(tier) }
-        apply(reward)
-        save()
-    }
-
-    private func apply(_ reward: PassReward) {
-        switch reward.kind {
-        case .chest(let value): neurones += value
-        case .ticket: tickets += 1
-        case .token: tokens += 1
-        case .coffret: coffrets += 1
-        case .unlock(let ids): unlocked.formUnion(ids)
-        case .finalFree: unlocked.insert("dos.nuit"); goldPacks += 1
-        case .finalPaid: unlocked.formUnion(["dos.or", "cadre.anime"])
-        }
-    }
-
-    // MARK: - Outils de test
-
-    /// Tout l'habillage, des jetons et des neurones pour essayer (bouton réservé à l'aperçu).
-    func unlockEverything() {
-        for item in Cosmetic.frames { unlocked.insert("cadre.\(item.id)") }
-        for item in Cosmetic.finishes { unlocked.insert("finition.\(item.id)") }
-        for item in Cosmetic.titles { unlocked.insert("titre.\(item.id)") }
-        for item in Cosmetic.backs { unlocked.insert("dos.\(item.id)") }
-        for item in Cosmetic.covers { unlocked.insert("couv.\(item.id)") }
-        tokens += 10
-        neurones += 5_000
-        tickets += 10
-        goldPacks += 1
-        coffrets += 1
-        save()
-    }
-
-    /// Marque quelques cartes comme maîtrisées (Chef-d'œuvre), pour voir l'effet.
-    func simulateMastery() {
-        for (id, state) in owned.prefix(12) where !state.masterpiece {
-            var next = state
-            next.masterpiece = true
-            owned[id] = next
-        }
-        save()
-    }
-
-    func reset() {
-        UserDefaults.standard.removeObject(forKey: key)
-        resetFields()
-        seed()
-        if admin { grantAdmin() } else { save() }
-    }
-
-    // MARK: - Outils admin
-
-    /// Les 525 cartes dans l'album (brillantes si demandé), sans toucher à l'habillage déjà posé.
-    func ownAll(shiny: Bool) {
-        for card in catalog.cards {
-            var state = owned[card.id] ?? OwnedCard()
-            if shiny { state.shiny = true }
-            owned[card.id] = state
-        }
-        save()
-    }
+    /// Les 525 cartes dans l'album (brillantes si demandé).
+    func ownAll(shiny: Bool) async { await tool(shiny ? .ownAllShiny : .ownAll) }
 
     /// Album vide, pour retester les ouvertures depuis zéro.
-    func emptyAlbum() {
-        owned = [:]
-        save()
+    func emptyAlbum() async { await tool(.empty) }
+
+    /// Rareté imposée à la prochaine pochette.
+    func force(_ rarity: CardRarity) async { await tool(.force, arg: rarity.rawValue) }
+
+    private func tool(_ tool: AlbumAdminTool, arg: String? = nil) async {
+        guard admin, let overview = await run({ try await $0.albumAdminTool(tool, arg: arg) }) else { return }
+        apply(overview)
     }
 }
 

@@ -8,7 +8,8 @@ mkdir -p "$F"
 psql -X -q -At -d "${TEST_DB:-cultfive_test}" -f scripts/fixtures.sql | F="$F" python3 -c '
 import sys, json, os
 names = ["daily_status","daily_start","daily_question","daily_verdict","daily_result","daily_review","play_pack",
-         "play_submit","profile","skills","domain_stats","errors","friends","league","leagues","achievements","history","domains","quests","weekly_recap"]
+         "play_submit","profile","skills","domain_stats","errors","friends","league","leagues","achievements","history","domains","quests","weekly_recap",
+         "album_opening","album_overview","season_overview","chest_gold"]
 blocks = [b.strip() for b in sys.stdin.read().split("@@@") if b.strip()]
 assert len(blocks) == len(names), (len(blocks), len(names))
 for n, b in zip(names, blocks):

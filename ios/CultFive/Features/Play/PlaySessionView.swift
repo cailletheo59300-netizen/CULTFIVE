@@ -405,6 +405,10 @@ struct PlaySummaryView: View {
                     Label("Hors ligne : ta partie sera enregistrée dès le retour du réseau.", systemImage: "wifi.slash")
                         .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 }
+                if let pull = summary.albumCard {
+                    GameCardWon(pull: pull)
+                        .transition(.scale.combined(with: .opacity))
+                }
                 if summary.correction != nil || summary.correctionAvailable {
                     CorrectionCard(summary: summary, domainName: { app.domainName($0) }, onCorrect: onCorrect)
                 }
@@ -851,5 +855,32 @@ private struct CorrectionCard: View {
         }
         return refunds.map { "\(domainName($0.domainId)) : +\($0.coteRefund) d'Elo récupérés (\(CoteCULT.format($0.coteAfter)))" }
             .joined(separator: " · ")
+    }
+}
+
+/// Carte commune gagnée pendant la partie classée : elle rejoint l'album.
+private struct GameCardWon: View {
+    let pull: Pull
+
+    var body: some View {
+        HStack(spacing: Space.m) {
+            AlbumCardView(card: pull.card, state: OwnedCard(), outlined: true)
+                .frame(width: 74)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Nouvelle carte").labelCaps(DomainPalette.color(pull.card.domain))
+                Text(pull.card.name)
+                    .font(.system(.headline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.ink)
+                    .lineLimit(2)
+                Text("Gagnée grâce à tes bonnes réponses. Elle rejoint ton album.")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .popCard()
+        .accessibilityElement(children: .combine)
+        // L'album la montre tout de suite.
+        .task { await AlbumStore.shared.refresh() }
     }
 }

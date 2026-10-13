@@ -17,9 +17,7 @@ struct MainTabView: View {
         @Bindable var model = model
         TabView(selection: $model.tab) {
             tab(PlayHomeView(), .play)
-            if AppChannel.isTestBuild {
-                tab(AlbumView(), .album)
-            }
+            tab(AlbumView(), .album)
             tab(DailyHomeView(), .daily)
             tab(FriendsView(), .friends)
             tab(ProfileView(), .profile)
@@ -33,7 +31,11 @@ struct MainTabView: View {
         .fullScreenCover(isPresented: Binding(get: { model.chestQueue != nil }, set: { if !$0 { model.chestQueue = nil } })) {
             ChestOpeningView(chests: model.chestQueue ?? []) {
                 model.chestQueue = nil
-                Task { await model.refreshProfile() }
+                Task {
+                    await model.refreshProfile()
+                    // Un coffre peut donner des tickets de pochette, une carte ou un jeton Prestige.
+                    await AlbumStore.shared.refresh()
+                }
             }
         }
         .task { await model.refreshProgression() }
@@ -56,9 +58,7 @@ struct CultTabBar: View {
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
             item(.play, title: "Jouer", symbol: "shuffle", selectedSymbol: "shuffle")
-            if AppChannel.isTestBuild {
-                item(.album, title: "Album", symbol: "books.vertical", selectedSymbol: "books.vertical.fill")
-            }
+            item(.album, title: "Album", symbol: "books.vertical", selectedSymbol: "books.vertical.fill")
             centerItem
             item(.friends, title: "Amis", symbol: "person.2", selectedSymbol: "person.2.fill")
             item(.profile, title: "Profil", symbol: "person.crop.circle", selectedSymbol: "person.crop.circle.fill")

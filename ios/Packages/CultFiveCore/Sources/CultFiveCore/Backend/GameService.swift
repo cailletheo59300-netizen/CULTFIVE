@@ -59,6 +59,25 @@ public protocol GameService: Sendable {
     func shop() async throws -> ShopOverview
     func buy(_ item: String) async throws -> ShopPurchase
 
+    // Album de cartes et pass de saison
+    func albumOverview() async throws -> AlbumOverview
+    /// `series` : un domaine ou « encyclo ». `clientId` rend l'ouverture idempotente (renvoi réseau).
+    func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening
+    /// Fabrique une carte manquante. Renvoie le solde de neurones.
+    func albumCraft(card: String) async throws -> Int
+    /// Pose un jeton Prestige. Renvoie les jetons restants.
+    func albumPrestige(card: String) async throws -> Int
+    func albumSetHidden(card: String, state: String, hidden: Bool) async throws
+    func albumDress(card: String, frame: String?, finish: String?, title: String?) async throws
+    func albumSetLook(back: String?, cover: String?) async throws
+    func albumAdmin(_ on: Bool) async throws -> AlbumOverview
+    func albumAdminTool(_ tool: AlbumAdminTool, arg: String?) async throws -> AlbumOverview
+    func albumAdminState(card: String, state: String, on: Bool) async throws
+    func seasonOverview() async throws -> SeasonOverview
+    func seasonClaim(tier: Int) async throws
+    /// Coffres en bois gagnés après le palier 30. Renvoie le nombre récupéré.
+    func seasonClaimExtra() async throws -> Int
+
     // Social
     func friends() async throws -> FriendsOverview
     // Duels
@@ -440,6 +459,65 @@ public struct LiveGameService: GameService {
         try await api.rpc("league_standings", ["p_league": .string(id.uuidString), "p_offset": .number(Double(offset))])
     }
 
+    // MARK: Album et pass
+
+    private struct Balance: Decodable { let balance: Int }
+    private struct Tokens: Decodable { let tokens: Int }
+    private struct Claimed: Decodable { let claimed: Int }
+
+    public func albumOverview() async throws -> AlbumOverview { try await api.rpc("album_overview") }
+
+    public func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening {
+        try await api.rpc("album_open_pack", ["p_series": .string(series), "p_pay": .string(pay.rawValue),
+                                              "p_client_id": .string(clientId.uuidString)])
+    }
+
+    public func albumCraft(card: String) async throws -> Int {
+        let result: Balance = try await api.rpc("album_craft", ["p_card": .string(card)])
+        return result.balance
+    }
+
+    public func albumPrestige(card: String) async throws -> Int {
+        let result: Tokens = try await api.rpc("album_prestige", ["p_card": .string(card)])
+        return result.tokens
+    }
+
+    public func albumSetHidden(card: String, state: String, hidden: Bool) async throws {
+        try await api.rpcVoid("album_set_hidden", ["p_card": .string(card), "p_state": .string(state), "p_hidden": .bool(hidden)])
+    }
+
+    public func albumDress(card: String, frame: String?, finish: String?, title: String?) async throws {
+        try await api.rpcVoid("album_dress", ["p_card": .string(card), "p_frame": optional(frame), "p_finish": optional(finish),
+                                              "p_title": optional(title)])
+    }
+
+    public func albumSetLook(back: String?, cover: String?) async throws {
+        try await api.rpcVoid("album_set_look", ["p_back": optional(back), "p_cover": optional(cover)])
+    }
+
+    public func albumAdmin(_ on: Bool) async throws -> AlbumOverview {
+        try await api.rpc("album_admin", ["p_on": .bool(on)])
+    }
+
+    public func albumAdminTool(_ tool: AlbumAdminTool, arg: String?) async throws -> AlbumOverview {
+        try await api.rpc("album_admin_tool", ["p_tool": .string(tool.rawValue), "p_arg": optional(arg)])
+    }
+
+    public func albumAdminState(card: String, state: String, on: Bool) async throws {
+        try await api.rpcVoid("album_admin_state", ["p_card": .string(card), "p_state": .string(state), "p_on": .bool(on)])
+    }
+
+    public func seasonOverview() async throws -> SeasonOverview { try await api.rpc("season_overview") }
+
+    public func seasonClaim(tier: Int) async throws {
+        try await api.rpcVoid("season_claim", ["p_tier": .number(Double(tier))])
+    }
+
+    public func seasonClaimExtra() async throws -> Int {
+        let result: Claimed = try await api.rpc("season_claim_extra")
+        return result.claimed
+    }
+
     // MARK: Référentiel
 
     public func domains() async throws -> [DomainInfo] {
@@ -465,6 +543,23 @@ public extension GameService {
 public extension GameService {
     /// Par défaut (démo, service indisponible) : rien n'est envoyé.
     func trackEvents(_ events: [AppEvent]) async throws {}
+
+    // Album et pass : la démo n'a pas de collection.
+    func albumOverview() async throws -> AlbumOverview { AlbumOverview() }
+    func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening {
+        throw BackendError.server(status: 400, code: "album_unavailable", message: "")
+    }
+    func albumCraft(card: String) async throws -> Int { throw BackendError.server(status: 400, code: "album_unavailable", message: "") }
+    func albumPrestige(card: String) async throws -> Int { throw BackendError.server(status: 400, code: "album_unavailable", message: "") }
+    func albumSetHidden(card: String, state: String, hidden: Bool) async throws {}
+    func albumDress(card: String, frame: String?, finish: String?, title: String?) async throws {}
+    func albumSetLook(back: String?, cover: String?) async throws {}
+    func albumAdmin(_ on: Bool) async throws -> AlbumOverview { AlbumOverview() }
+    func albumAdminTool(_ tool: AlbumAdminTool, arg: String?) async throws -> AlbumOverview { AlbumOverview() }
+    func albumAdminState(card: String, state: String, on: Bool) async throws {}
+    func seasonOverview() async throws -> SeasonOverview { SeasonOverview() }
+    func seasonClaim(tier: Int) async throws { throw BackendError.server(status: 400, code: "no_season", message: "") }
+    func seasonClaimExtra() async throws -> Int { 0 }
 
     func correctionStart(session: UUID, test: Bool) async throws -> CorrectionStart {
         throw BackendError.server(status: 400, code: "correction_unavailable", message: "")

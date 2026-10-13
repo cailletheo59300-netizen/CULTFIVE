@@ -1,9 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Défis sous le 5 du jour (aperçu TestFlight) : Jour, Semaine, Saison. Chaque défi dit ce qu'il rapporte :
-/// des neurones et des points de saison qui font monter le pass. Les défis du jour et de la semaine sont les vrais
-/// (serveur) ; les missions de saison sont simulées et se valident à la main dans l'aperçu.
+/// Défis sous le 5 du jour : Jour, Semaine, Saison. Chaque défi dit ce qu'il rapporte : des neurones et des points
+/// de saison qui font monter le pass. Tout vient du serveur (quests_overview, season_overview).
 struct SeasonChallengesCard: View {
     let overview: QuestsOverview?
     let store: AlbumStore
@@ -26,8 +25,8 @@ struct SeasonChallengesCard: View {
             header
             picker
             switch tab {
-            case .day: period(overview?.day, points: AlbumStore.dayPoints, bonus: AlbumStore.dayBonus)
-            case .week: period(overview?.week, points: AlbumStore.weekPoints, bonus: AlbumStore.weekBonus)
+            case .day: period(overview?.day, points: store.rules.day, bonus: store.rules.dayBonus)
+            case .week: period(overview?.week, points: store.rules.week, bonus: store.rules.weekBonus)
             case .season: missions
             }
         }
@@ -53,14 +52,14 @@ struct SeasonChallengesCard: View {
             Button(action: onOpenPass) {
                 VStack(spacing: 0) {
                     Text("Pass").font(.system(size: 10, weight: .heavy, design: .rounded)).foregroundStyle(.white.opacity(0.85))
-                    Text("\(store.tier)/\(AlbumStore.tiers)").font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
+                    Text("\(store.tier)/\(store.tiers)").font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
                         .foregroundStyle(Color.sun)
                 }
                 .frame(width: 58, height: 46)
                 .background(Color.popGradient, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
             }
             .buttonStyle(.row)
-            .accessibilityLabel("Pass de saison, palier \(store.tier) sur \(AlbumStore.tiers)")
+            .accessibilityLabel("Pass de saison, palier \(store.tier) sur \(store.tiers)")
         }
     }
 
@@ -120,23 +119,21 @@ struct SeasonChallengesCard: View {
         return nil
     }
 
-    // MARK: - Saison (missions simulées)
+    // MARK: - Saison (missions)
 
-    private var missions: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("12 missions pour toute la saison, sans date limite. Aperçu : touche une mission pour la valider.")
+    @ViewBuilder private var missions: some View {
+        if store.season.missions.isEmpty {
+            Text(store.season.season == nil ? "Pas de saison en cours pour l'instant." : "Chargement des missions…")
                 .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-            ForEach(AlbumStore.missions.indices, id: \.self) { i in
-                let done = store.missionsDone.contains(i)
-                Button {
-                    guard !done else { return }
-                    Haptics.success()
-                    withAnimation(Motion.standard) { store.completeMission(i) }
-                } label: {
-                    ChallengeRow(label: AlbumStore.missions[i], progress: done ? 1 : 0, target: 1, done: done,
-                                 neurones: 0, points: AlbumStore.missionPoints, accent: accent)
+                .frame(maxWidth: .infinity, minHeight: 80)
+        } else {
+            VStack(alignment: .leading, spacing: 12) {
+                Text("\(store.season.missions.count) missions pour toute la saison. Elles se remplissent toutes seules en jouant.")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                ForEach(store.season.missions, id: \.slot) { mission in
+                    ChallengeRow(label: mission.label, progress: mission.progress, target: mission.target, done: mission.done,
+                                 neurones: 0, points: store.rules.mission, accent: accent)
                 }
-                .buttonStyle(.plain)
             }
         }
     }

@@ -489,6 +489,13 @@ public struct PlaySubmitResult: Codable, Hashable, Sendable {
     /// Points de la partie (difficulté + vitesse).
     public let points: Int?
     public let ratings: [RatingChange]?
+    /// Carte commune gagnée en fin de partie classée (serveur 0045), une au plus.
+    public let albumCard: AlbumPull?
+
+    enum CodingKeys: String, CodingKey {
+        case recorded, correct, xp, seeds, corrected, results, achievements, balance, points, ratings
+        case albumCard = "album_card"
+    }
 }
 
 public enum HelpKind: String, Codable, Sendable, CaseIterable {
@@ -1296,9 +1303,17 @@ public struct ChestContents: Codable, Hashable, Sendable {
     public let upgrades: Int?
     /// Objet exclusif du premier coffre Savant.
     public let bonusItem: ChestItem?
+    /// Album (serveur 0044) : tickets de pochette, carte surprise (or et Savant), jeton Prestige (Savant, 1 fois sur 10).
+    public let packTickets: Int?
+    public let card: AlbumPull?
+    public let prestigeToken: Bool?
 
     public init(tier: ChestTier, seeds: Int, tickets: Tickets, joker: Bool, item: ChestItem?, balance: Int?,
-                finalTier: ChestTier? = nil, upgrades: Int? = nil, bonusItem: ChestItem? = nil) {
+                finalTier: ChestTier? = nil, upgrades: Int? = nil, bonusItem: ChestItem? = nil,
+                packTickets: Int? = nil, card: AlbumPull? = nil, prestigeToken: Bool? = nil) {
+        self.packTickets = packTickets
+        self.card = card
+        self.prestigeToken = prestigeToken
         self.tier = tier
         self.seeds = seeds
         self.tickets = tickets
@@ -1317,6 +1332,9 @@ public struct ChestContents: Codable, Hashable, Sendable {
         case tier, seeds, tickets, joker, item, balance, upgrades
         case finalTier = "final_tier"
         case bonusItem = "bonus_item"
+        case packTickets = "pack_tickets"
+        case card
+        case prestigeToken = "prestige_token"
     }
 }
 

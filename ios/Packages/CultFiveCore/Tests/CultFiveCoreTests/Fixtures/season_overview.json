@@ -1,0 +1,321 @@
+{
+ "tier": 1,
+ "tiers": 30,
+ "points": 170,
+ "season": {
+  "id": 1,
+  "name": "Saison 1",
+  "ends_on": "2027-04-17",
+  "starts_on": "2027-02-15"
+ },
+ "rewards": [
+  {
+   "icon": "chest_wood",
+   "kind": "chest",
+   "tier": 1,
+   "label": "Coffre en bois",
+   "claimed": false
+  },
+  {
+   "icon": "autoc_s1",
+   "kind": "cosmetic",
+   "tier": 2,
+   "label": "Autocollant « Saison 1 »",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 3,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "chest_wood",
+   "kind": "chest",
+   "tier": 4,
+   "label": "Coffre en bois",
+   "claimed": false
+  },
+  {
+   "icon": "titre_curieux",
+   "kind": "cosmetic",
+   "tier": 5,
+   "label": "Titre « Curieux »",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 6,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "chest_silver",
+   "kind": "chest",
+   "tier": 7,
+   "label": "Coffre en argent",
+   "claimed": false
+  },
+  {
+   "icon": "cadre_citrouille",
+   "kind": "cosmetic",
+   "tier": 8,
+   "label": "Cadre Citrouille",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 9,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "dos_soleil",
+   "kind": "cosmetic",
+   "tier": 10,
+   "label": "Dos Soleil",
+   "claimed": false
+  },
+  {
+   "icon": "chest_silver",
+   "kind": "chest",
+   "tier": 11,
+   "label": "Coffre en argent",
+   "claimed": false
+  },
+  {
+   "icon": "titrej_explorateur",
+   "kind": "cosmetic",
+   "tier": 12,
+   "label": "Titre « Explorateur »",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 13,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "chest_silver",
+   "kind": "chest",
+   "tier": 14,
+   "label": "Coffre en argent",
+   "claimed": false
+  },
+  {
+   "icon": "socle_marbre",
+   "kind": "cosmetic",
+   "tier": 15,
+   "label": "Socle Marbre",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 16,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "chest_silver",
+   "kind": "chest",
+   "tier": 17,
+   "label": "Coffre en argent",
+   "claimed": false
+  },
+  {
+   "icon": "autoc_halloween",
+   "kind": "cosmetic",
+   "tier": 18,
+   "label": "Autocollant « Halloween »",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 19,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "jeton",
+   "kind": "token",
+   "tier": 20,
+   "label": "Jeton Prestige",
+   "claimed": false
+  },
+  {
+   "icon": "chest_gold",
+   "kind": "chest",
+   "tier": 21,
+   "label": "Coffre en or",
+   "claimed": false
+  },
+  {
+   "icon": "titre_erudit",
+   "kind": "cosmetic",
+   "tier": 22,
+   "label": "Titre « Érudit »",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 23,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "chest_gold",
+   "kind": "chest",
+   "tier": 24,
+   "label": "Coffre en or",
+   "claimed": false
+  },
+  {
+   "icon": "titrej_batisseur",
+   "kind": "cosmetic",
+   "tier": 25,
+   "label": "Titre « Bâtisseur »",
+   "claimed": false
+  },
+  {
+   "icon": "ticket_pochette",
+   "kind": "ticket",
+   "tier": 26,
+   "label": "Ticket de pochette",
+   "claimed": false
+  },
+  {
+   "icon": "chest_gold",
+   "kind": "chest",
+   "tier": 27,
+   "label": "Coffre en or",
+   "claimed": false
+  },
+  {
+   "icon": "couv_automne",
+   "kind": "cosmetic",
+   "tier": 28,
+   "label": "Couverture « Automne »",
+   "claimed": false
+  },
+  {
+   "icon": "chest_savant",
+   "kind": "chest",
+   "tier": 29,
+   "label": "Deux coffres en or",
+   "claimed": false
+  },
+  {
+   "icon": "final_gratuit",
+   "kind": "final",
+   "tier": 30,
+   "label": "Dos Nuit étoilée + pochette dorée",
+   "claimed": false
+  }
+ ],
+ "missions": [
+  {
+   "done": false,
+   "slot": 1,
+   "label": "Finis une page de l'album",
+   "target": 1,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 2,
+   "label": "Ouvre 5 pochettes Histoire",
+   "target": 5,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 3,
+   "label": "Fabrique une carte dans l'album",
+   "target": 1,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 4,
+   "label": "Obtiens une carte brillante",
+   "target": 1,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 5,
+   "label": "Trouve une légendaire",
+   "target": 1,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 6,
+   "label": "Ouvre 10 pochettes",
+   "target": 10,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 7,
+   "label": "Gagne 3 duels",
+   "target": 3,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 8,
+   "label": "Fais 7 jours de suite",
+   "target": 7,
+   "progress": 1
+  },
+  {
+   "done": false,
+   "slot": 9,
+   "label": "Réussis un 5 du jour parfait",
+   "target": 1,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 10,
+   "label": "Obtiens 3 étoiles sur 3 cartes",
+   "target": 3,
+   "progress": 0
+  },
+  {
+   "done": false,
+   "slot": 11,
+   "label": "Complète 10 cartes Nature",
+   "target": 10,
+   "progress": 0
+  },
+  {
+   "done": true,
+   "slot": 12,
+   "label": "Joue dans 8 domaines différents",
+   "target": 8,
+   "progress": 8
+  }
+ ],
+ "tier_points": 150,
+ "extra_chests": {
+  "earned": 0,
+  "claimed": 0
+ },
+ "points_rules": {
+  "day": 15,
+  "week": 40,
+  "mission": 75,
+  "day_bonus": 15,
+  "week_bonus": 60
+ }
+}

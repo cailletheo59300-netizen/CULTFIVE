@@ -88,6 +88,8 @@ final class PlaySessionModel {
         var points = 0
         /// Variation de cote par domaine (partie classée synchronisée).
         var ratings: [PlaySubmitResult.RatingChange] = []
+        /// Carte commune gagnée pour l'album (partie classée synchronisée).
+        var albumCard: Pull?
 
         /// Réponses de la partie par domaine (pour savoir si l'Elo vient d'être confirmé).
         var answeredByDomain: [String: Int] = [:]
@@ -99,7 +101,7 @@ final class PlaySessionModel {
 
         static func == (lhs: PlaySummary, rhs: PlaySummary) -> Bool {
             lhs.correct == rhs.correct && lhs.total == rhs.total && lhs.xp == rhs.xp && lhs.seeds == rhs.seeds
-                && lhs.corrected == rhs.corrected && lhs.synced == rhs.synced && lhs.syncing == rhs.syncing
+                && lhs.corrected == rhs.corrected && lhs.synced == rhs.synced && lhs.syncing == rhs.syncing && lhs.albumCard == rhs.albumCard
                 && lhs.correction == rhs.correction && lhs.correctionLoading == rhs.correctionLoading
                 && lhs.correctionError == rhs.correctionError && lhs.correctionAvailable == rhs.correctionAvailable
         }
@@ -356,6 +358,7 @@ final class PlaySessionModel {
             summary.synced = true
             if let serverPoints = result.points { summary.points = serverPoints }
             summary.ratings = config.countsForElo ? (result.ratings ?? []) : []
+            summary.albumCard = result.albumCard.flatMap(Pull.init)
             summary.correctionAvailable = !summary.missed.isEmpty && !usedOfflinePack && config.mode != .errors
             seedsBalance = result.balance
         } catch {

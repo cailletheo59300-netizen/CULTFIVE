@@ -34,7 +34,7 @@ targets:
       # Déclaration de confidentialité Apple : copiée telle quelle dans l'app.
       - path: CultFive/Resources/PrivacyInfo.xcprivacy
         buildPhase: resources
-      # Album (aperçu TestFlight) : cartes, dessins, pochettes, dos et icônes du pass, générés par scripts/album/export-app*.
+      # Album : cartes, dessins, pochettes, dos et icônes du pass, générés par scripts/album/export-app*.
       - path: AlbumData
         type: folder
         buildPhase: resources

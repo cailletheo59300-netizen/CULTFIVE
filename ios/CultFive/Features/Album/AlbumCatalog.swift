@@ -1,8 +1,8 @@
 import SwiftUI
 import UIKit
 
-// Album (aperçu TestFlight) : le catalogue des 525 cartes et leurs images, rangés dans l'app (dossier AlbumData,
-// généré par scripts/album/export-app.mjs). Aucune donnée ne vient du serveur.
+// Album : le catalogue des 525 cartes et leurs images, rangés dans l'app (dossier AlbumData, généré par
+// scripts/album/export-app.mjs puis scripts/album/card-ids.mjs). Ce que le joueur possède vient du serveur (AlbumStore).
 
 enum CardRarity: String, CaseIterable, Comparable {
     case common, rare, epic, legend
@@ -52,6 +52,8 @@ enum CardRarity: String, CaseIterable, Comparable {
 struct AlbumCard: Identifiable, Hashable {
     /// « <page>_<n> », aussi le nom des images.
     let id: String
+    /// Identifiant côté serveur (« history.antiquity.la_prehistoire »).
+    let serverId: String
     let pageKey: String
     let domain: String
     let n: Int
@@ -96,12 +98,13 @@ final class AlbumCatalog {
     let pages: [AlbumPage]
     let cards: [AlbumCard]
     let byId: [String: AlbumCard]
+    let byServerId: [String: AlbumCard]
     /// Domaines dans l'ordre de l'album, avec leur libellé.
     let domains: [AlbumDomain]
     let series: [PackSeries]
 
     private init() {
-        struct RawCard: Decodable { let n: Int; let name, figure, unit, phrase, rarity: String }
+        struct RawCard: Decodable { let n: Int; let id, name, figure, unit, phrase, rarity: String }
         struct RawPage: Decodable { let key, title, dom, domLabel, tone: String; let cards: [RawCard] }
         struct Raw: Decodable { let pages: [RawPage] }
 
@@ -112,7 +115,7 @@ final class AlbumCatalog {
             pages = raw.pages.map { p in
                 AlbumPage(key: p.key, title: p.title, domain: p.dom, domainLabel: p.domLabel, tone: Color(hexString: p.tone),
                           cards: p.cards.map { c in
-                              AlbumCard(id: "\(p.key)_\(c.n)", pageKey: p.key, domain: p.dom, n: c.n, name: c.name, figure: c.figure,
+                              AlbumCard(id: "\(p.key)_\(c.n)", serverId: c.id, pageKey: p.key, domain: p.dom, n: c.n, name: c.name, figure: c.figure,
                                         unit: c.unit, phrase: c.phrase, rarity: CardRarity(rawValue: c.rarity) ?? .common)
                           })
             }
@@ -120,6 +123,7 @@ final class AlbumCatalog {
         self.pages = pages
         cards = pages.flatMap(\.cards)
         byId = Dictionary(uniqueKeysWithValues: cards.map { ($0.id, $0) })
+        byServerId = Dictionary(uniqueKeysWithValues: cards.map { ($0.serverId, $0) })
         var seen: [String] = []
         var labels: [String: String] = [:]
         for page in pages where labels[page.domain] == nil {

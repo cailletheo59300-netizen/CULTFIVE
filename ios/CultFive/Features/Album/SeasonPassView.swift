@@ -1,56 +1,27 @@
 import SwiftUI
+import CultFiveCore
 
-/// Une récompense de palier du pass (D-049).
+/// Une récompense de palier du pass (D-049). La piste gratuite vient du serveur (season_overview) ;
+/// la piste Pass+ n'est encore qu'affichée (bientôt).
 struct PassReward: Identifiable {
-    enum Kind { case chest(Int), ticket, token, coffret, unlock([String]), finalFree, finalPaid }
-
     let id = UUID()
     /// Icône 3D (dossier AlbumData/pass).
     let icon: String
     let name: String
-    let kind: Kind
     var star = false
 
-    /// Le type se déduit de l'icône : coffres en neurones, tickets, jetons, coffrets, sinon un habillage à débloquer.
     init(_ icon: String, _ name: String, star: Bool = false) {
         self.icon = icon
         self.name = name
         self.star = star
-        switch icon {
-        case "chest_wood": kind = .chest(30)
-        case "chest_silver": kind = .chest(60)
-        case "chest_gold": kind = .chest(120)
-        case "chest_savant": kind = .chest(250)
-        case "ticket_pochette": kind = .ticket
-        case "jeton": kind = .token
-        case "coffret": kind = .coffret
-        case "final_gratuit": kind = .finalFree
-        case "final_payant": kind = .finalPaid
-        default:
-            // « cadre_vitrail » → « cadre.vitrail », « titre_grand_curieux » → « titre.grand_curieux ».
-            if let cut = icon.firstIndex(of: "_") {
-                kind = .unlock([String(icon[..<cut]) + "." + String(icon[icon.index(after: cut)...])])
-            } else {
-                kind = .unlock(["deco.\(icon)"])
-            }
-        }
     }
 
-    static let free: [PassReward] = [
-        .init("chest_wood", "Coffre en bois"), .init("autoc_s1", "Autocollant « Saison 1 »"), .init("ticket_pochette", "Ticket de pochette"),
-        .init("chest_wood", "Coffre en bois"), .init("titre_curieux", "Titre « Curieux »"),
-        .init("ticket_pochette", "Ticket de pochette"), .init("chest_silver", "Coffre en argent"), .init("cadre_citrouille", "Cadre Citrouille"),
-        .init("ticket_pochette", "Ticket de pochette"), .init("dos_soleil", "Dos Soleil", star: true),
-        .init("chest_silver", "Coffre en argent"), .init("titrej_explorateur", "Titre « Explorateur »"), .init("ticket_pochette", "Ticket de pochette"),
-        .init("chest_silver", "Coffre en argent"), .init("socle_marbre", "Socle Marbre"),
-        .init("ticket_pochette", "Ticket de pochette"), .init("chest_silver", "Coffre en argent"), .init("autoc_halloween", "Autocollant « Halloween »"),
-        .init("ticket_pochette", "Ticket de pochette"), .init("jeton", "Jeton Prestige", star: true),
-        .init("chest_gold", "Coffre en or"), .init("titre_erudit", "Titre « Érudit »"), .init("ticket_pochette", "Ticket de pochette"),
-        .init("chest_gold", "Coffre en or"), .init("titrej_batisseur", "Titre « Bâtisseur »"),
-        .init("ticket_pochette", "Ticket de pochette"), .init("chest_gold", "Coffre en or"), .init("couv_automne", "Couverture « Automne »"),
-        .init("chest_savant", "Coffre Savant", star: true), .init("final_gratuit", "Dos Nuit étoilée + pochette dorée", star: true),
-    ]
+    /// Récompense de la piste gratuite, telle que le serveur la décrit.
+    init(_ reward: SeasonOverview.Reward) {
+        self.init(reward.icon, reward.label, star: reward.kind == "final" || reward.kind == "token")
+    }
 
+    /// Piste Pass+ (bientôt) : affichée pour donner envie, pas encore achetable.
     static let paid: [PassReward] = [
         .init("dos_domaines", "Dos « Les 12 domaines »"), .init("autoc_fondateur", "Autocollant « Fondateur »"), .init("titre_grand_curieux", "Titre « Grand curieux »"),
         .init("cadre_vitrail", "Cadre Vitrail"), .init("jeton", "Jeton Prestige n° 1", star: true),
@@ -67,7 +38,7 @@ struct PassReward: Identifiable {
     ]
 }
 
-/// Pass de saison (aperçu TestFlight) : 30 paliers de 150 points sur deux mois, piste gratuite et piste Pass+.
+/// Pass de saison : 30 paliers de 150 points sur deux mois. La piste gratuite est réelle (serveur) ; le Pass+ arrive plus tard.
 /// Les points viennent des objectifs du jour et de la semaine qui existent déjà, plus 12 missions de saison.
 struct SeasonPassView: View {
     let store: AlbumStore
@@ -81,6 +52,7 @@ struct SeasonPassView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     hero
                     tracksCompare
+                    extraChests
                     ChallengesLink()
                     VStack(alignment: .leading, spacing: Space.s) {
                         HStack {
@@ -113,6 +85,8 @@ struct SeasonPassView: View {
                 .padding(.vertical, Space.m)
             }
         }
+        .refreshable { await store.refresh() }
+        .task { await store.refresh() }
         .clearsTabBar()
         .background(Color.paper.ignoresSafeArea())
         .navigationTitle("Pass de saison")
@@ -129,9 +103,9 @@ struct SeasonPassView: View {
     // MARK: - En-tête
 
     private var hero: some View {
-        let inTier = store.points % AlbumStore.tierPoints
-        let finished = store.tier >= AlbumStore.tiers
-        let progress = finished ? 1 : CGFloat(inTier) / CGFloat(AlbumStore.tierPoints)
+        let inTier = store.points % max(store.tierPoints, 1)
+        let finished = store.tier >= store.tiers
+        let progress = finished ? 1 : CGFloat(inTier) / CGFloat(max(store.tierPoints, 1))
         return HStack(spacing: Space.m) {
             ZStack {
                 Circle().stroke(.white.opacity(0.2), lineWidth: 8)
@@ -141,18 +115,18 @@ struct SeasonPassView: View {
                     .rotationEffect(.degrees(-90))
                 VStack(spacing: -2) {
                     Text("\(store.tier)").font(.system(size: 34, weight: .black, design: .rounded)).foregroundStyle(.white)
-                    Text("/ \(AlbumStore.tiers)").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(.white.opacity(0.7))
+                    Text("/ \(store.tiers)").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(.white.opacity(0.7))
                 }
                 .monospacedDigit()
             }
             .frame(width: 92, height: 92)
             VStack(alignment: .leading, spacing: 4) {
-                Text("SAISON 1 · 61 JOURS")
+                Text(seasonLine)
                     .font(.system(.caption2, design: .rounded).weight(.black)).tracking(2)
                     .foregroundStyle(.white.opacity(0.75))
                 Text("Palier \(store.tier)")
                     .font(.system(.title2, design: .rounded).weight(.heavy)).foregroundStyle(.white)
-                Text(finished ? "Tout le pass est débloqué." : "\(inTier)/\(AlbumStore.tierPoints) points vers le palier \(store.tier + 1)")
+                Text(finished ? "Tout le pass est débloqué." : "\(inTier)/\(store.tierPoints) points vers le palier \(store.tier + 1)")
                     .font(.system(.footnote, design: .rounded).weight(.bold))
                     .monospacedDigit()
                     .foregroundStyle(Color.sun)
@@ -166,12 +140,35 @@ struct SeasonPassView: View {
         .shadow(color: Color(hex: 0x3A1FB8).opacity(0.25), radius: 16, y: 8)
     }
 
+    /// « SAISON 1 · ENCORE 12 JOURS », d'après les dates du serveur.
+    private var seasonLine: String {
+        guard let season = store.season.season else { return "PAS DE SAISON EN COURS" }
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyy-MM-dd"
+        guard let end = formatter.date(from: season.endsOn) else { return season.name.uppercased() }
+        let days = max(0, Calendar.current.dateComponents([.day], from: Calendar.current.startOfDay(for: Date()), to: end).day ?? 0)
+        return "\(season.name.uppercased()) · ENCORE \(days) JOUR\(days > 1 ? "S" : "")"
+    }
+
+    /// Après le palier 30 : un coffre en bois tous les 150 points (10 au plus).
+    @ViewBuilder private var extraChests: some View {
+        if let extra = store.season.extraChests, extra.earned > extra.claimed {
+            let count = extra.earned - extra.claimed
+            ShopButton(title: "Récupérer \(count) coffre\(count > 1 ? "s" : "") en bois", price: nil, icon: "chest_wood",
+                       fill: .sun, text: .inkFixed, enabled: !store.busy) {
+                Task { if await store.claimExtra() > 0 { Haptics.success() } }
+            }
+        }
+    }
+
     /// Ce que donne chaque piste, côte à côte.
     private var tracksCompare: some View {
         HStack(alignment: .top, spacing: Space.s) {
             VStack(alignment: .leading, spacing: 8) {
                 TrackBadge(paid: false)
-                perk("10 coffres")
+                perk("11 coffres")
                 perk("8 tickets de pochette")
                 perk("1 jeton Prestige")
                 perk("Pochette dorée au 30")
@@ -191,28 +188,9 @@ struct SeasonPassView: View {
                 perk("Cadres, finitions, dos", onDark: true)
                 perk("Cadre animé au 30", onDark: true)
                 Spacer(minLength: 0)
-                if store.passPlus {
-                    Label("Activé", systemImage: "checkmark.circle.fill")
-                        .font(.system(.caption, design: .rounded).weight(.heavy))
-                        .foregroundStyle(Color.sun)
-                } else {
-                    Button {
-                        Haptics.success()
-                        withAnimation(Motion.standard) { store.passPlus = true }
-                        store.save()
-                    } label: {
-                        Text("Activer (simulation)")
-                            .font(.system(.caption, design: .rounded).weight(.heavy))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.8)
-                            .foregroundStyle(Color.inkFixed)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 7)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.sun, in: Capsule())
-                    }
-                    .buttonStyle(.plain)
-                }
+                Text("Bientôt")
+                    .font(.system(.caption, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.sun)
             }
             .padding(12)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -321,7 +299,7 @@ private struct PassTrack: View {
                 Color.clear.frame(width: node, height: 1)
                 TrackBadge(paid: true).frame(maxWidth: .infinity)
             }
-            ForEach(1...AlbumStore.tiers, id: \.self) { tier in
+            ForEach(1...max(store.tiers, 1), id: \.self) { tier in
                 row(tier).id(tier)
             }
         }
@@ -330,7 +308,11 @@ private struct PassTrack: View {
     private func row(_ tier: Int) -> some View {
         let reached = tier <= store.tier
         return HStack(spacing: Space.s) {
-            cell(PassReward.free[tier - 1], tier: tier, paid: false)
+            if let reward = store.season.rewards.first(where: { $0.tier == tier }) {
+                cell(PassReward(reward), tier: tier, paid: false, taken: reward.claimed)
+            } else {
+                Color.clear.frame(maxWidth: .infinity, minHeight: 66)
+            }
             ZStack {
                 // Morceau de barre verticale qui relie les paliers.
                 Rectangle()
@@ -347,21 +329,26 @@ private struct PassTrack: View {
                     .shadow(color: reached ? Color.sun.opacity(0.5) : .clear, radius: 6)
             }
             .frame(width: node)
-            cell(PassReward.paid[tier - 1], tier: tier, paid: true)
+            if tier <= PassReward.paid.count {
+                cell(PassReward.paid[tier - 1], tier: tier, paid: true, taken: false)
+            }
         }
         .fixedSize(horizontal: false, vertical: true)
     }
 
-    private func cell(_ reward: PassReward, tier: Int, paid: Bool) -> some View {
+    private func cell(_ reward: PassReward, tier: Int, paid: Bool, taken: Bool) -> some View {
         let reached = tier <= store.tier
-        let taken = paid ? store.claimedPaid.contains(tier) : store.claimedFree.contains(tier)
-        let locked = paid && !store.passPlus
-        let ready = reached && !taken && !locked
+        // Le Pass+ arrive plus tard : sa piste reste verrouillée.
+        let locked = paid
+        let ready = reached && !taken && !locked && !store.busy
         return Button {
             guard ready else { Haptics.error(); return }
-            Haptics.success()
-            store.claim(reward, tier: tier, paid: paid)
-            onClaim(reward)
+            Task {
+                if await store.claim(tier: tier) {
+                    Haptics.success()
+                    onClaim(reward)
+                }
+            }
         } label: {
             HStack(spacing: 6) {
                 ZStack(alignment: .topTrailing) {

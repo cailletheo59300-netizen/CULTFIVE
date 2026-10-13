@@ -435,8 +435,18 @@ enum ChestReward: Hashable {
     case tickets(HelpKind, Int)
     case joker
     case item(ChestItem)
+    /// Album : tickets de pochette, carte surprise, jeton Prestige.
+    case packTickets(Int)
+    case albumCard(Pull)
+    case prestigeToken
 
-    var isItem: Bool { if case .item = self { return true } else { return false } }
+    /// Récompense rare, qui mérite le son des grandes occasions.
+    var isItem: Bool {
+        switch self {
+        case .item, .albumCard, .prestigeToken: return true
+        default: return false
+        }
+    }
 
     static func list(_ contents: ChestContents) -> [ChestReward] {
         var list: [ChestReward] = [.seeds(contents.seeds)]
@@ -445,6 +455,9 @@ enum ChestReward: Hashable {
         if contents.joker { list.append(.joker) }
         if let item = contents.item { list.append(.item(item)) }
         if let bonus = contents.bonusItem { list.append(.item(bonus)) }
+        if let packs = contents.packTickets, packs > 0 { list.append(.packTickets(packs)) }
+        if let card = contents.card.flatMap(Pull.init) { list.append(.albumCard(card)) }
+        if contents.prestigeToken == true { list.append(.prestigeToken) }
         return list
     }
 }
@@ -456,9 +469,15 @@ private enum Rarity {
     init(_ reward: ChestReward) {
         switch reward {
         case .seeds: self = .common
-        case .tickets: self = .rare
+        case .tickets, .packTickets: self = .rare
         case .joker: self = .epic
-        case .item: self = .legendary
+        case .item, .prestigeToken: self = .legendary
+        case .albumCard(let pull):
+            switch pull.card.rarity {
+            case .common, .rare: self = .rare
+            case .epic: self = .epic
+            case .legend: self = .legendary
+            }
         }
     }
 
@@ -644,6 +663,9 @@ private struct RewardCard: View {
         case .tickets(_, let n): return "× \(n)"
         case .joker: return "× 1"
         case .item: return "Nouveau"
+        case .packTickets(let n): return "× \(n)"
+        case .albumCard(let pull): return pull.outcome == .new ? "Nouvelle" : "Doublon"
+        case .prestigeToken: return "× 1"
         }
     }
 
@@ -653,6 +675,9 @@ private struct RewardCard: View {
         case .tickets(let kind, let n): return "Ticket\(n > 1 ? "s" : "") \(kind == .fiftyFifty ? "50/50" : "indice")"
         case .joker: return "Joker de série"
         case .item(let item): return item.name
+        case .packTickets(let n): return "Ticket\(n > 1 ? "s" : "") de pochette"
+        case .albumCard(let pull): return pull.card.name
+        case .prestigeToken: return "Jeton Prestige"
         }
     }
 
@@ -662,6 +687,9 @@ private struct RewardCard: View {
         case .tickets(let kind, let n): return "\(n) \(kind == .fiftyFifty ? "50/50" : "indice")"
         case .joker: return "Joker"
         case .item(let item): return item.name
+        case .packTickets(let n): return "\(n) pochette\(n > 1 ? "s" : "")"
+        case .albumCard(let pull): return pull.card.name
+        case .prestigeToken: return "Jeton Prestige"
         }
     }
 
@@ -671,6 +699,9 @@ private struct RewardCard: View {
         case .tickets(let kind, let n): return "\(n) ticket\(n > 1 ? "s" : "") \(kind == .fiftyFifty ? "50/50" : "indice")"
         case .joker: return "Un joker de série"
         case .item(let item): return "\(item.name), nouveau pour Léon"
+        case .packTickets(let n): return "\(n) ticket\(n > 1 ? "s" : "") de pochette"
+        case .albumCard(let pull): return "Carte \(pull.card.rarity.label.lowercased()) : \(pull.card.name)"
+        case .prestigeToken: return "Un jeton Prestige"
         }
     }
 
@@ -680,6 +711,15 @@ private struct RewardCard: View {
         case .tickets(let kind, _): return kind == .fiftyFifty ? "Retire deux mauvaises réponses, sans neurones" : "Un indice ou une seconde chance, sans neurones"
         case .joker: return "Sauve ta série un jour où tu oublies de jouer"
         case .item: return "Nouveau pour Léon : il le porte déjà !"
+        case .packTickets: return "À ouvrir au Comptoir, dans l'album"
+        case .albumCard(let pull):
+            switch pull.outcome {
+            case .new: return "Elle rejoint ton album"
+            case .shiny: return "Ta carte devient brillante"
+            case .neurones(let n): return "Déjà brillante : +\(n) \(Brand.currencyPlural)"
+            case .nothing: return "Déjà dans ton album"
+            }
+        case .prestigeToken: return "À poser sur la carte de ton choix, dans l'album"
         }
     }
 
@@ -691,6 +731,9 @@ private struct RewardCard: View {
         case .joker: GameIcon.joker.image
         case .item(let item):
             Leon(color: .brand, pose: .proud, curl: 0.6, animated: !compact, outfit: LeonOutfit().trying(item.id, slot: item.slot))
+        case .packTickets: AlbumImage(kind: .pass, name: "ticket_pochette")
+        case .albumCard(let pull): AlbumCardView(card: pull.card, state: OwnedCard(shiny: pull.outcome != .new), outlined: false)
+        case .prestigeToken: AlbumImage(kind: .pass, name: "jeton")
         }
     }
 }

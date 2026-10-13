@@ -2,7 +2,7 @@
 //   faces/<page>_<n>.webp  la carte entière (rareté de la fiche), 600 × 838 px
 //   art/<page>_<n>.webp    le dessin seul, sans médaillon, fond transparent (silhouettes, Prestige)
 //   cards.json             pages et cartes (textes, rareté, domaine) lues par l'app
-// Usage : python3 scripts/album/planche.py . <toutes les pages> /tmp/toutes.html && node scripts/album/export-app.mjs /tmp/toutes.html && python3 scripts/album/export-webp.py
+// Usage : python3 scripts/album/planche.py . <toutes les pages> /tmp/toutes.html && node scripts/album/export-app.mjs /tmp/toutes.html && python3 scripts/album/export-webp.py && node scripts/album/card-ids.mjs
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';

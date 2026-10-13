@@ -65,3 +65,14 @@ select jsonb_agg(jsonb_build_object('id', id, 'name', name, 'daily_slot', daily_
 select public.quests_overview();
 \echo @@@
 select public.weekly_recap(4);
+\echo @@@
+select public._grant(:'a', 'seeds', 500, 'test', null, 'fx:seeds') \g /dev/null
+select public.album_open_pack('history', 'neurones', '00000000-0000-4000-8000-0000000000a1');
+\echo @@@
+select public.album_overview();
+\echo @@@
+update public.seasons set starts_on = '2027-02-15', ends_on = '2027-04-17' where id = 1 \g /dev/null
+select public.season_overview();
+\echo @@@
+select public._give_chest(:'a', 'gold', 'test', 'fx', 'fx:chest') \g /dev/null
+select public.chest_open((select id from public.user_chests where user_id = :'a' and opened_at is null and tier = 'gold' limit 1));

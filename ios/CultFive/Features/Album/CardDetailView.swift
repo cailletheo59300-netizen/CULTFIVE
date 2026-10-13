@@ -39,6 +39,12 @@ struct CardDetailView: View {
             .padding(Space.gutter)
         }
         .background(Color.paper.ignoresSafeArea())
+        // La fiche est en plein écran : elle montre elle-même les refus du serveur.
+        .alert("Album", isPresented: Binding(get: { store.errorMessage != nil }, set: { if !$0 { store.errorMessage = nil } })) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(store.errorMessage ?? "")
+        }
     }
 
     private var header: some View {
@@ -100,8 +106,8 @@ struct CardDetailView: View {
         return VStack(spacing: Space.m) {
             Text("Cette case est vide. Tu peux attendre de la trouver dans une pochette, ou la fabriquer tout de suite avec tes neurones.")
                 .font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
-            ShopButton(title: "Fabriquer cette carte", price: "\(cost)", icon: "neurone", fill: .brand, text: .white, enabled: enough) {
-                if store.craft(card) { Haptics.success() }
+            ShopButton(title: "Fabriquer cette carte", price: "\(cost)", icon: "neurone", fill: .brand, text: .white, enabled: enough && !store.busy) {
+                Task { if await store.craft(card) { Haptics.success() } }
             }
             if !enough {
                 Text("Il te manque \(cost - store.neurones) neurones.")
@@ -136,12 +142,12 @@ struct CardDetailView: View {
             Hairline()
             StateRow(card: card, preview: OwnedCard(shiny: true), title: "Brillante",
                      what: "Un reflet irisé passe sur la carte quand tu la bouges.",
-                     how: "Tu l'obtiens au premier doublon de cette carte, ou avec un coffret.",
+                     how: "Tu l'obtiens au premier doublon de cette carte.",
                      owned: state?.shiny == true) { control(.shiny) }
             Hairline()
             StateRow(card: card, preview: OwnedCard(prestige: true), title: "Prestige",
                      what: "Le dessin prend toute la carte, sur un fond holographique.",
-                     how: "Il faut un jeton Prestige : tu en gagnes 1 dans le pass gratuit et 3 dans le Pass+. Le jeton est utilisé pour toujours.",
+                     how: "Il faut un jeton Prestige : tu en gagnes 1 dans le pass, et parfois dans un coffre Savant. Le jeton est utilisé pour toujours.",
                      owned: state?.prestige == true) { control(.prestige) }
             Hairline()
             StateRow(card: card, preview: OwnedCard(masterpiece: true), title: "Chef-d'œuvre",
@@ -171,7 +177,7 @@ struct CardDetailView: View {
                     .tint(Color.brand)
             } else if kind == .prestige {
                 Button {
-                    if store.applyPrestige(card) { Haptics.success() }
+                    Task { if await store.applyPrestige(card) { Haptics.success() } }
                 } label: {
                     HStack(spacing: 6) {
                         AlbumImage(kind: .pass, name: "jeton").frame(width: 22, height: 22)
@@ -187,7 +193,7 @@ struct CardDetailView: View {
                     .background(store.tokens > 0 ? Color.brand : Color.hairline, in: Capsule())
                 }
                 .buttonStyle(.plain)
-                .disabled(store.tokens == 0)
+                .disabled(store.tokens == 0 || store.busy)
             }
         }
     }
@@ -199,9 +205,9 @@ struct CardDetailView: View {
             Text("L'habillage se gagne une fois (pass, événements) et se pose sur n'importe quelle carte. Il ne change ni la rareté ni le jeu.")
                 .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             dressRow("Cadre", items: Cosmetic.frames + (store.has("cadre.anime") ? [Cosmetic.Item(id: "anime", name: "Cadre animé", icon: "final_payant")] : []),
-                     prefix: "cadre", current: state?.frame) { id in store.update(card) { $0.frame = id } }
-            dressRow("Finition", items: Cosmetic.finishes, prefix: "finition", current: state?.finish) { id in store.update(card) { $0.finish = id } }
-            dressRow("Titre de carte", items: Cosmetic.titles, prefix: "titre", current: state?.title) { id in store.update(card) { $0.title = id } }
+                     prefix: "cadre", current: state?.frame) { id in store.dress(card) { $0.frame = id } }
+            dressRow("Finition", items: Cosmetic.finishes, prefix: "finition", current: state?.finish) { id in store.dress(card) { $0.finish = id } }
+            dressRow("Titre de carte", items: Cosmetic.titles, prefix: "titre", current: state?.title) { id in store.dress(card) { $0.title = id } }
         }
         .popCard()
     }
@@ -269,8 +275,7 @@ struct CardDetailView: View {
                     Button {
                         guard !locked else { Haptics.error(); return }
                         Haptics.selection()
-                        store.back = item.id
-                        store.save()
+                        store.setBack(item.id)
                     } label: {
                         VStack(spacing: 4) {
                             AlbumCardBack(kind: item.id)

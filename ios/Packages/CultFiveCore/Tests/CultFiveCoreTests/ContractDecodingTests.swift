@@ -76,6 +76,31 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertTrue(submit.results.allSatisfy { ($0.points ?? 0) > 0 })
     }
 
+    func testAlbumAndSeason() throws {
+        let opening: AlbumOpening = try fixture("album_opening")
+        XCTAssertEqual(opening.series, "history")
+        XCTAssertFalse(opening.gold)
+        XCTAssertEqual(opening.pulls.count, 5)
+        XCTAssertTrue(opening.pulls.contains { $0.rarity != "common" }, "au moins une rare")
+        let album: AlbumOverview = try fixture("album_overview")
+        XCTAssertFalse(album.admin)
+        XCTAssertEqual(album.neurones, opening.balance)
+        XCTAssertTrue(album.cosmetics.contains("dos.classique"))
+        XCTAssertGreaterThanOrEqual(album.cards.count, 5)
+        let season: SeasonOverview = try fixture("season_overview")
+        XCTAssertNotNil(season.season)
+        XCTAssertEqual(season.rewards.count, season.tiers)
+        XCTAssertEqual(season.missions.count, 12)
+        XCTAssertEqual(season.tier, season.points / season.tierPoints)
+        let chest: ChestContents = try fixture("chest_gold")
+        XCTAssertEqual(chest.reachedTier, .gold)
+        XCTAssertEqual(chest.packTickets, 1)
+        XCTAssertNotNil(chest.card)
+        let none = try SupabaseAPI.decoder.decode(SeasonOverview.self, from: Data(#"{"season":null}"#.utf8))
+        XCTAssertNil(none.season)
+        XCTAssertTrue(none.rewards.isEmpty)
+    }
+
     func testQuestsAndRecap() throws {
         let quests: QuestsOverview = try fixture("quests")
         XCTAssertEqual(quests.day.quests.count, 3)
