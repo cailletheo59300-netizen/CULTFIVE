@@ -159,3 +159,13 @@ Complément (D-049, propriétaire) : les points de saison s'ajoutent aux **objec
 
 ### D-050 · 2026-10-13 · Proportions et mot mystère abandonnés
 Pourquoi : le propriétaire ne garde finalement pas ces deux nouveaux types. Décidé : ils ne sont plus proposés (0049 : retirés du 5 du jour, plus de bonus du mot mystère, questions désactivées) ; leurs 80 questions deviennent des QCM avec la même clé et la même notion (les mots mystères gardent deux indices dans l'énoncé, le dernier passe dans l'explication). L'app ne connaît plus ces types (reçus comme « type inconnu »). Les 9 autres nouveaux types restent.
+
+### D-051 · 2026-10-13 · Elo plus simple : un par domaine, départ à 500
+Pourquoi : le propriétaire trouvait l'Elo bizarre et compliqué, tout en aimant avoir un Elo par domaine. Décidé : un Elo par domaine seulement (les thèmes affichent un pourcentage de réussite) ; départ affiché à 500, qui monte vers le vrai niveau pendant le placement (50 réponses), sans mention « provisoire » ; plus de points par réponse. Rangs : Curieux < 600, Amateur 600, Éclairé 750, Érudit 900, Expert 1 050, Encyclopédie 1 200 ; trophées de maîtrise à 750 / 900 / 1 050 / 1 200. Recalibrage : +5 de difficulté sur les questions peu jouées, calibration deux fois plus rapide, partie classée à 30 % accessibles / 50 % à son niveau / 20 % qui piquent (0046).
+
+### D-052 · 2026-10-13 · Album et coffres sur le serveur
+Pourquoi : passer de l'aperçu simulé au vrai jeu. Décidé : toutes les règles de l'album vivent sur le serveur (0042–0045) : pochette 150 neurones, dorée 900 (une par semaine), légendaire garantie à la 40e, 3 tickets de bienvenue, fabrication 50 / 150 / 400 / 1 200, doublons 5 / 15 / 40 / 100, étoiles de maîtrise sur 60 jours. Coffres : argent = 1 ticket de pochette 1 fois sur 3 ; or = 1 ticket et une carte rare ou mieux ; Savant = 2 tickets, une carte épique ou mieux (nouvelle si possible) et 1 chance sur 10 d'un jeton Prestige ; plus d'objets de Léon. Une carte commune pas encore possédée en fin de partie classée, tirée parmi les notions réussies. Pas de remboursement des graines dépensées dans l'arbre ou la boutique de Léon (pas encore de vrais joueurs).
+
+### D-053 · 2026-10-13 · La 1.1 sort tout d'un coup, sans « aperçu »
+Pourquoi : la 1.0 publiée est ancienne ; le propriétaire veut que la prochaine mise à jour apporte tout en même temps. Décidé : album, Comptoir, pass gratuit (le Pass+ viendra plus tard, affiché « bientôt »), défis sous le 5 et nouveaux types pour tout le monde ; l'option « aperçu » des builds TestFlight et l'écran d'aperçu des nouveaux types sont retirés. Le serveur (0038–0049 + seed) doit être déployé avant le build TestFlight de test, avec le feu vert du propriétaire.
+

@@ -113,7 +113,7 @@ Questionnaire (réponses) :
 
 ## 6. Version 1.1
 
-**Build à envoyer** : lancer le workflow TestFlight avec l'option **« aperçu » décochée**. Les testeurs d'Apple ouvrent l'app comme un build de test : sans l'option, ils voient le jeu publié, sans l'album, les défis sous le 5 ni l'aperçu des nouveaux types. Les builds avec aperçu servent seulement à nos tests.
+**Build à envoyer** : lancer le workflow TestFlight (il n'y a plus d'option « aperçu » : album, pass et nouveaux types sont dans tous les builds, D-053). Le serveur doit déjà avoir les migrations 0038–0049 et le seed.
 
 **Nouveautés de cette version** (à coller dans App Store Connect) :
 

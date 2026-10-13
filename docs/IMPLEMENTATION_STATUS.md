@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : 2026-10-01 (version 1.0.0 envoyée à Apple, build 30 ; plan 1.1 « difficulté et progression » décidé)_
+_Dernière mise à jour : 2026-10-13 (1.0 publiée ; 1.1 « tout d'un coup » codée et testée en local, pas encore déployée — voir ci-dessous)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -51,6 +51,20 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 - À régler dans le tableau de bord Supabase : connexions anonymes, modèle d'e-mail avec le code à 6 chiffres, connexion Apple (après le compte développeur).
 
 ## Prochaines étapes
+**Version 1.1 « tout d'un coup » (D-051 à D-053)** — tout part dans la même mise à jour : album, pass gratuit, neurones, Elo simplifié, nouvelles questions.
+| Partie | État |
+|---|---|
+| 1. Album sur le serveur (0042 : cartes, pochettes, fabrication, états, habillage, mode admin) | ✅ tests SQL `99_album.sql` |
+| 2. Pass de saison, piste gratuite (0043 : 30 paliers, missions, coffres après le 30) | ✅ `99_season.sql` |
+| 3. Neurones, coffres refaits (0044 : tickets de pochette, carte, jeton Prestige), arbre et tenue de Léon retirés de l'app | ✅ `99_neurones.sql` |
+| 4. Nouveaux types de réponses (0038–0041) ; proportions et mot mystère abandonnés (0049, D-050) | ✅ `99_answer_types.sql` |
+| 5. Carte commune en fin de partie classée (0045), Elo simplifié (0046), variété (0047), capitales et drapeaux revus (0048), nouvelles questions (lots v9 et v10) | ✅ |
+| 6. App branchée sur le serveur (album, Comptoir, pass, missions, coffres, carte de fin de partie), fin de l'option « aperçu » | ✅ codé, CI ; 🟡 à essayer sur TestFlight après le déploiement serveur |
+| 7. Mise en production (migrations 0038–0049 + seed, avec le feu vert du propriétaire), date de début de saison, envoi de la 1.1 à Apple | ⏳ |
+
+Compatibilité 1.0 : aucune fonction utilisée par la 1.0 n'est supprimée ; la forme des réponses est inchangée (comparaison des réponses de test d'avant la 1.0 et d'aujourd'hui) ; la 1.0 reçoit des remplaçants classiques pour les nouveaux types (en-tête `x-brainlix-types`).
+Reste à nettoyer côté app : le bloc « Aujourd'hui » de l'accueil n'est plus affiché (remplacé par les défis) mais son code est encore là.
+
 **Sortie 1.0.0 (en cours, 2026-10-01)** : fiche App Store remplie (textes et marche à suivre dans `APP_STORE.md`, captures dans `docs/screenshots/app-store` et `app-store-6.5`), statut de commerçant DSA déclaré (adresse modifiable dans App Store Connect → Business). Build 29 refusé au contrôle automatique (ITMS-91064 : `NSPrivacyTracking` vrai sans domaines) ; corrigé dans le build 30 (le suivi d'AdMob est déclaré par le SDK Google). Après publication : relier l'app dans AdMob, vérifier les premiers push et l'onglet Santé de l'admin.
 
 **Version 1.1 « difficulté et progression »** (décidée par le propriétaire, voir D-039 ; étapes détaillées à présenter avant de coder) :
