@@ -37,9 +37,10 @@ begin
     end if;
   end loop;
   perform tst.ok(n_savant between 10 and 60, 'or → Savant ≈ 5 % (' || n_savant || ' sur 600)');
-  perform tst.ok(exists (select 1 from public.user_items where user_id = u and item_id = 'mortarboard'), 'Mortier possédé');
-  perform tst.ok((select count(*) from public.user_chests where user_id = u and contents -> 'bonus_item' ->> 'id' = 'mortarboard') = 1,
-                 'Mortier donné une seule fois');
+  -- Depuis 0044 : plus d'objet exclusif ; le Savant donne 2 tickets de pochette et une carte épique ou mieux.
+  perform tst.ok((first_savant ->> 'pack_tickets')::int = 2 and first_savant -> 'card' ->> 'rarity' in ('epic', 'legend'),
+                 'Savant : 2 tickets de pochette et une carte épique ou mieux');
+  perform tst.ok(not exists (select 1 from public.user_items where user_id = u and item_id = 'mortarboard'), 'plus de Mortier');
 
   -- Ouvrir deux fois : même contenu.
   r := public.chest_open(c);

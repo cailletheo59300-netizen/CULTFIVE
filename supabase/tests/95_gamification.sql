@@ -25,8 +25,8 @@ begin
   perform tst.ok((r ->> 'seeds')::int between 60 and 80 or (r ->> 'final_tier' = 'savant' and (r ->> 'seeds')::int between 120 and 160),
                  'or : 60 à 80 graines (' || (r ->> 'seeds') || ')');
   perform tst.ok((r ->> 'joker')::bool and (select streak_freezes from public.profiles where id = u) = 1, 'or : joker garanti');
-  perform tst.ok(r -> 'item' ->> 'id' is not null
-                 and exists (select 1 from public.items where id = r -> 'item' ->> 'id' and rarity = 'chest'), 'or : un objet des coffres');
+  -- Depuis 0044 : plus d'objet de Léon, mais un ticket de pochette et une carte rare ou mieux.
+  perform tst.ok((r ->> 'pack_tickets')::int >= 1 and r -> 'card' ->> 'card' is not null, 'or : ticket de pochette et carte');
   perform tst.ok((select seeds from public.profiles where id = u) = seeds0 + (r ->> 'seeds')::int, 'graines versées');
   r2 := public.chest_open(c);
   perform tst.ok((r2 ->> 'already_opened')::bool and r2 ->> 'seeds' = r ->> 'seeds', 'deuxième ouverture : même contenu, rien de plus');
@@ -54,20 +54,17 @@ begin
     perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 2, 'argent : 2 tickets');
   end if;
 
-  -- Tous les objets des coffres possédés : l'objet est remplacé par des graines.
-  insert into public.user_items (user_id, item_id) select u, id from public.items where rarity = 'chest' on conflict do nothing;
+  -- Coffre d'or : plus d'objet de Léon (0044).
   perform public._give_chest(u, 'gold', 'test', null, 'test:gold');
   select id into c from public.user_chests where user_id = u and idempotency_key = 'test:gold';
   r := public.chest_open(c);
-  perform tst.ok(r -> 'item' = 'null'::jsonb or r -> 'item' is null, 'plus d''objet à gagner');
-  if r ->> 'final_tier' = 'gold' then
-    perform tst.ok((r ->> 'seeds')::int between 100 and 160, 'objet remplacé par 40 graines');
-  end if;
+  perform tst.ok(r -> 'item' = 'null'::jsonb or r -> 'item' is null, 'plus d''objet de Léon');
 
   -- Coffre d'un autre joueur : introuvable.
   perform tst.throws(format('select public.chest_open(%L)', gen_random_uuid()), 'chest_not_found');
 
-  -- Tenue de Léon : seulement ce qu'on possède, un objet par emplacement.
+  -- Tenue de Léon (anciennes versions de l'app) : seulement ce qu'on possède, un objet par emplacement.
+  insert into public.user_items (user_id, item_id) select u, id from public.items where rarity = 'chest' on conflict do nothing;
   o := public.leon_equip('hat', 'beret');
   perform tst.ok(o ->> 'hat' = 'beret', 'béret porté');
   o := public.leon_equip('hat', 'party_hat');
