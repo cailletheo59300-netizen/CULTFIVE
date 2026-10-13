@@ -69,7 +69,9 @@
     "music.instruments.harpe_47_cordes",
     "music.instruments.luthier",
     "music.instruments.stradivarius",
-    "music.instruments.violin_strings"
+    "music.instruments.violin_strings",
+    "music.instruments.v10_violoncelle",
+    "music.instruments.v10_harpe"
    ]
   },
   {
@@ -160,7 +162,8 @@
     "music.instruments.family_xylophone",
     "music.instruments.steelpan",
     "music.instruments.theremine",
-    "music.instruments.xylophone_bois"
+    "music.instruments.xylophone_bois",
+    "music.instruments.v10_tambour"
    ]
   },
   {
@@ -203,7 +206,8 @@
    "concepts": [
     "music.instruments.diapason",
     "music.instruments.families_pairs",
-    "music.instruments.staff_lines"
+    "music.instruments.staff_lines",
+    "music.instruments.v10_percussions_famille"
    ]
   }
  ],

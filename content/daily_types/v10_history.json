@@ -1,0 +1,202 @@
+[
+ {
+  "key": "v10-history-005",
+  "concept": "history.contemporary.v10_fin_ww2",
+  "label": "La fin de la guerre",
+  "type": "timeline",
+  "difficulty": 18,
+  "prompt": "En quelle année s'est terminée la Seconde Guerre mondiale ?",
+  "explanation": "En Europe le 8 mai 1945, et dans le monde le 2 septembre 1945, après la capitulation du Japon.",
+  "answer": 1945,
+  "tolerance": 3,
+  "min": 1900,
+  "max": 1970
+ },
+ {
+  "key": "v10-history-008",
+  "concept": "history.antiquity.v10_epoques_personnages",
+  "label": "Chacun à son époque",
+  "type": "sort",
+  "difficulty": 24,
+  "prompt": "Place chacun à son époque.",
+  "explanation": "Cléopâtre (Iᵉʳ siècle av. J.-C.), Charlemagne (vers 800), Louis XIV (1643-1715), de Gaulle (1890-1970).",
+  "layout": "timeline",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "Cléopâtre",
+    0
+   ],
+   [
+    "Charlemagne",
+    1
+   ],
+   [
+    "Louis XIV",
+    2
+   ],
+   [
+    "Charles de Gaulle",
+    3
+   ]
+  ]
+ },
+ {
+  "key": "v10-history-022",
+  "concept": "history.middle_ages.v10_siecles_moyen_age",
+  "label": "Les siècles du Moyen Âge",
+  "type": "counter",
+  "difficulty": 38,
+  "prompt": "Le Moyen Âge (476 – 1492) a duré environ combien de siècles ?",
+  "explanation": "Environ 1 000 ans, de la chute de Rome à la découverte de l'Amérique : 10 siècles.",
+  "answer": 10,
+  "tolerance": 0,
+  "min": 0,
+  "max": 20,
+  "start": 0,
+  "unit": "siècles"
+ },
+ {
+  "key": "v10-history-023",
+  "concept": "history.modern.v10_roi_ou_president",
+  "label": "Roi ou président ?",
+  "type": "sort",
+  "difficulty": 12,
+  "prompt": "Roi de France ou président de la République ?",
+  "explanation": "Les rois ont régné jusqu'en 1848 ; les présidents de la République depuis.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Roi"
+   },
+   {
+    "label": "Président"
+   }
+  ],
+  "items": [
+   [
+    "Henri IV",
+    0
+   ],
+   [
+    "François Iᵉʳ",
+    0
+   ],
+   [
+    "Louis XV",
+    0
+   ],
+   [
+    "Jacques Chirac",
+    1
+   ],
+   [
+    "Charles de Gaulle",
+    1
+   ],
+   [
+    "Emmanuel Macron",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v10-history-024",
+  "concept": "history.middle_ages.v10_douves",
+  "label": "Les douves",
+  "type": "letters",
+  "difficulty": 26,
+  "prompt": "Fossé rempli d'eau autour d'un château fort.",
+  "explanation": "Les douves empêchaient d'approcher des murs ; on les franchissait par le pont-levis.",
+  "word": "DOUVES",
+  "display": "Douves"
+ },
+ {
+  "key": "v10-history-025",
+  "concept": "history.antiquity.v10_legionnaire",
+  "label": "Le légionnaire",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Soldat de l'armée romaine.",
+  "explanation": "Il portait un casque, un grand bouclier et une courte épée, le glaive.",
+  "word": "LEGIONNAIRE",
+  "display": "Légionnaire"
+ },
+ {
+  "key": "v10-history-026",
+  "concept": "history.modern.v10_devise",
+  "label": "La devise",
+  "type": "word_order",
+  "difficulty": 8,
+  "prompt": "Remets dans l'ordre la devise de la République française.",
+  "explanation": "Née pendant la Révolution, elle est inscrite sur les mairies et les écoles.",
+  "answer": "Liberté, Égalité, Fraternité",
+  "words": [
+   "Liberté",
+   "Égalité",
+   "Fraternité"
+  ]
+ },
+ {
+  "key": "v10-history-027",
+  "concept": "history.modern.v10_etat_cest_moi",
+  "label": "L'État, c'est moi",
+  "type": "word_order",
+  "difficulty": 36,
+  "prompt": "Remets dans l'ordre cette phrase attribuée à Louis XIV.",
+  "explanation": "Elle résume la monarchie absolue, même si Louis XIV ne l'a sans doute jamais prononcée.",
+  "answer": "L'État, c'est moi.",
+  "words": [
+   "L'État",
+   "c'est",
+   "moi"
+  ]
+ },
+ {
+  "key": "v10-history-028",
+  "concept": "history.modern.v10_paris_messe",
+  "label": "Paris vaut bien une messe",
+  "type": "word_order",
+  "difficulty": 48,
+  "prompt": "Remets dans l'ordre cette phrase attribuée à Henri IV.",
+  "explanation": "Protestant, Henri IV se convertit au catholicisme en 1593 pour être accepté comme roi.",
+  "answer": "Paris vaut bien une messe.",
+  "words": [
+   "Paris",
+   "vaut",
+   "bien",
+   "une",
+   "messe"
+  ]
+ },
+ {
+  "key": "v10-history-029",
+  "concept": "history.contemporary.v10_tl_obama",
+  "label": "L'élection d'Obama",
+  "type": "timeline",
+  "difficulty": 34,
+  "prompt": "En quelle année Barack Obama a-t-il été élu président des États-Unis pour la première fois ?",
+  "explanation": "Le 4 novembre 2008, face à John McCain.",
+  "answer": 2008,
+  "tolerance": 3,
+  "min": 1980,
+  "max": 2024
+ }
+]

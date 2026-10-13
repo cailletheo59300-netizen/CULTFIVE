@@ -1,0 +1,257 @@
+[
+ {
+  "key": "v10-cinema-001",
+  "concept": "cinema.actors.v10_spiderman_araignee",
+  "label": "L'homme-araignée",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Quel super-héros a été piqué par une araignée ?",
+  "explanation": "Peter Parker, un lycéen de New York, gagne ainsi la force et l'agilité d'une araignée.",
+  "options": [
+   "Spider-Man*",
+   "Batman",
+   "Superman",
+   "Iron Man"
+  ]
+ },
+ {
+  "key": "v10-cinema-002",
+  "concept": "cinema.actors.v10_bruce_wayne",
+  "label": "Le vrai nom de Batman",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel est le vrai nom de Batman ?",
+  "explanation": "Clark Kent est Superman, Peter Parker Spider-Man et Tony Stark Iron Man.",
+  "options": [
+   "Bruce Wayne*",
+   "Clark Kent",
+   "Peter Parker",
+   "Tony Stark"
+  ]
+ },
+ {
+  "key": "v10-cinema-003",
+  "concept": "cinema.actors.v10_radcliffe",
+  "label": "L'acteur de Harry Potter",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel acteur joue Harry Potter au cinéma ?",
+  "explanation": "Il a 11 ans au premier film (2001). Rupert Grint joue Ron, Tom Felton Drago.",
+  "options": [
+   "Daniel Radcliffe*",
+   "Rupert Grint",
+   "Tom Felton",
+   "Robert Pattinson"
+  ]
+ },
+ {
+  "key": "v10-cinema-004",
+  "concept": "cinema.actors.v10_forrest_gump",
+  "label": "Forrest Gump",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Quel acteur joue Forrest Gump ?",
+  "explanation": "« Cours, Forrest, cours ! » Tom Hanks reçoit l'Oscar du meilleur acteur en 1995.",
+  "options": [
+   "Tom Hanks*",
+   "Tom Cruise",
+   "Brad Pitt",
+   "Robin Williams"
+  ]
+ },
+ {
+  "key": "v10-cinema-005",
+  "concept": "cinema.animation.v10_mowgli",
+  "label": "Le Livre de la jungle",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Dans « Le Livre de la jungle », comment s'appelle le petit garçon élevé par les loups ?",
+  "explanation": "Il est accompagné de l'ours Baloo et de la panthère Bagheera.",
+  "options": [
+   "Mowgli*",
+   "Tarzan",
+   "Peter Pan",
+   "Aladdin"
+  ]
+ },
+ {
+  "key": "v10-cinema-006",
+  "concept": "cinema.animation.v10_baloo",
+  "label": "L'ours de la jungle",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Quel ours chante « Il en faut peu pour être heureux » dans « Le Livre de la jungle » ?",
+  "explanation": "Baloo, l'ours insouciant ; Bagheera est la panthère, plus sérieuse.",
+  "options": [
+   "Baloo*",
+   "Winnie",
+   "Bagheera",
+   "Petit Jean"
+  ]
+ },
+ {
+  "key": "v10-cinema-007",
+  "concept": "cinema.animation.v10_belle_bete",
+  "label": "La Belle et la Bête",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans « La Belle et la Bête », comment s'appelle l'héroïne ?",
+  "explanation": "Une jeune fille qui adore les livres et voit au-delà de l'apparence de la Bête.",
+  "options": [
+   "Belle*",
+   "Ariel",
+   "Aurore",
+   "Jasmine"
+  ]
+ },
+ {
+  "key": "v10-cinema-008",
+  "concept": "cinema.animation.v10_walle",
+  "label": "WALL-E",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Comment s'appelle le petit robot de Pixar qui nettoie une Terre couverte de déchets ?",
+  "explanation": "WALL-E (2008) tombe amoureux d'EVE, une robot venue de l'espace.",
+  "options": [
+   "WALL-E*",
+   "Baymax",
+   "R2-D2",
+   "EVE"
+  ]
+ },
+ {
+  "key": "v10-cinema-009",
+  "concept": "cinema.animation.v10_vice_versa",
+  "label": "Vice-Versa",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Dans « Vice-Versa » (Pixar), que représentent Joie, Tristesse, Colère, Peur et Dégoût ?",
+  "explanation": "Ils pilotent depuis sa tête les émotions de Riley, 11 ans.",
+  "options": [
+   "Les émotions d'une petite fille*",
+   "Des jouets",
+   "Des monstres",
+   "Des super-héros"
+  ]
+ },
+ {
+  "key": "v10-cinema-010",
+  "concept": "cinema.animation.v10_disney_dates",
+  "label": "Les Disney dans l'ordre",
+  "type": "ordering",
+  "difficulty": 42,
+  "prompt": "Classe ces films du plus ancien au plus récent.",
+  "explanation": "1937, 1994, 2001, 2013.",
+  "items": [
+   "Blanche-Neige et les Sept Nains",
+   "Le Roi lion",
+   "Shrek",
+   "La Reine des neiges"
+  ]
+ },
+ {
+  "key": "v10-cinema-011",
+  "concept": "cinema.films.v10_voldemort",
+  "label": "Le méchant de Harry Potter",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Comment s'appelle le grand méchant de Harry Potter ?",
+  "explanation": "« Celui-dont-on-ne-doit-pas-prononcer-le-nom ».",
+  "options": [
+   "Voldemort*",
+   "Drago Malefoy",
+   "Rogue",
+   "Dumbledore"
+  ]
+ },
+ {
+  "key": "v10-cinema-012",
+  "concept": "cinema.films.v10_quidditch",
+  "label": "Le sport des sorciers",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "À quel sport les sorciers de Poudlard jouent-ils sur des balais volants ?",
+  "explanation": "Il faut marquer des buts avec le Souaffle et attraper le Vif d'or.",
+  "options": [
+   "Le Quidditch*",
+   "Le polo",
+   "Le Jokari",
+   "Le baseball"
+  ]
+ },
+ {
+  "key": "v10-cinema-014",
+  "concept": "cinema.films.v10_avatar_pandora",
+  "label": "Pandora",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel film de James Cameron se passe sur la planète Pandora, chez les Na'vi à la peau bleue ?",
+  "explanation": "Sorti en 2009, il reste le plus gros succès de l'histoire du cinéma.",
+  "options": [
+   "Avatar*",
+   "Interstellar",
+   "Dune",
+   "Star Trek"
+  ]
+ },
+ {
+  "key": "v10-cinema-015",
+  "concept": "cinema.films.v10_matrix_pilule",
+  "label": "La pilule de Matrix",
+  "type": "mcq",
+  "difficulty": 34,
+  "prompt": "Dans « Matrix », quelle pilule Neo choisit-il pour découvrir la vérité ?",
+  "explanation": "La bleue le laissait dans l'illusion ; la rouge lui montre le vrai monde.",
+  "options": [
+   "La rouge*",
+   "La bleue",
+   "La verte",
+   "La blanche"
+  ]
+ },
+ {
+  "key": "v10-cinema-016",
+  "concept": "cinema.films.v10_got",
+  "label": "Winter is coming",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "De quelle série vient la phrase « Winter is coming » (« L'hiver vient ») ?",
+  "explanation": "La devise de la famille Stark, dans la série tirée des romans de George R. R. Martin.",
+  "options": [
+   "Game of Thrones*",
+   "Stranger Things",
+   "The Witcher",
+   "Vikings"
+  ]
+ },
+ {
+  "key": "v10-cinema-017",
+  "concept": "cinema.films.v10_breaking_bad",
+  "label": "Breaking Bad",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Dans quelle série un professeur de chimie, Walter White, devient-il un grand trafiquant ?",
+  "explanation": "Diffusée de 2008 à 2013, souvent citée parmi les meilleures séries de tous les temps.",
+  "options": [
+   "Breaking Bad*",
+   "Narcos",
+   "Prison Break",
+   "Dexter"
+  ]
+ },
+ {
+  "key": "v10-cinema-020",
+  "concept": "cinema.directors.v10_nolan",
+  "label": "Inception",
+  "type": "mcq",
+  "difficulty": 44,
+  "prompt": "Qui a réalisé « Inception » et « Interstellar » ?",
+  "explanation": "Il a aussi réalisé la trilogie Batman « The Dark Knight » et « Oppenheimer ».",
+  "options": [
+   "Christopher Nolan*",
+   "James Cameron",
+   "Denis Villeneuve",
+   "Ridley Scott"
+  ]
+ }
+]

@@ -1,0 +1,264 @@
+[
+ {
+  "key": "v10-arts-001",
+  "concept": "arts.painting.v10_melanges",
+  "label": "Les mélanges de couleurs",
+  "type": "pairs",
+  "difficulty": 12,
+  "prompt": "Associe chaque mélange à la couleur obtenue.",
+  "explanation": "Avec les trois couleurs primaires (rouge, jaune, bleu), on obtient toutes les autres.",
+  "pairs": [
+   [
+    "Bleu + jaune",
+    "Vert"
+   ],
+   [
+    "Rouge + jaune",
+    "Orange"
+   ],
+   [
+    "Rouge + bleu",
+    "Violet"
+   ],
+   [
+    "Noir + blanc",
+    "Gris"
+   ]
+  ]
+ },
+ {
+  "key": "v10-arts-002",
+  "concept": "arts.painting.v10_nuit_etoilee",
+  "label": "La Nuit étoilée",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Quel peintre a peint « La Nuit étoilée », avec son ciel tourbillonnant ?",
+  "explanation": "Peinte en 1889 depuis sa chambre de l'asile de Saint-Rémy-de-Provence.",
+  "options": [
+   "Vincent van Gogh*",
+   "Claude Monet",
+   "Pablo Picasso",
+   "Salvador Dalí"
+  ]
+ },
+ {
+  "key": "v10-arts-003",
+  "concept": "arts.painting.v10_joconde_orsay",
+  "label": "La Joconde à Orsay",
+  "type": "true_false",
+  "difficulty": 22,
+  "prompt": "La Joconde est exposée au musée d'Orsay, à Paris.",
+  "explanation": "Faux : elle est au Louvre. Le musée d'Orsay expose surtout les impressionnistes.",
+  "answer": false
+ },
+ {
+  "key": "v10-arts-004",
+  "concept": "arts.painting.v10_picasso_nationalite",
+  "label": "Picasso",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quelle nationalité était Pablo Picasso ?",
+  "explanation": "Né à Malaga en 1881, il a pourtant vécu et travaillé surtout en France.",
+  "options": [
+   "Espagnole*",
+   "Française",
+   "Italienne",
+   "Mexicaine"
+  ]
+ },
+ {
+  "key": "v10-arts-005",
+  "concept": "arts.painting.v10_dejeuner_herbe",
+  "label": "Le Déjeuner sur l'herbe",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel peintre a fait scandale en 1863 avec « Le Déjeuner sur l'herbe » ?",
+  "explanation": "Édouard Manet, à ne pas confondre avec Claude Monet. Une femme nue y pique-nique avec deux hommes habillés.",
+  "options": [
+   "Édouard Manet*",
+   "Claude Monet",
+   "Auguste Renoir",
+   "Paul Cézanne"
+  ]
+ },
+ {
+  "key": "v10-arts-009",
+  "concept": "arts.literature.v10_romeo_juliette",
+  "label": "Roméo et Juliette",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Qui a écrit « Roméo et Juliette » ?",
+  "explanation": "Une tragédie de 1597 : deux jeunes amoureux de familles ennemies, à Vérone.",
+  "options": [
+   "William Shakespeare*",
+   "Molière",
+   "Victor Hugo",
+   "Charles Dickens"
+  ]
+ },
+ {
+  "key": "v10-arts-010",
+  "concept": "arts.literature.v10_lievre_tortue",
+  "label": "Le Lièvre et la Tortue",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Dans la fable de La Fontaine, qui gagne la course entre le lièvre et la tortue ?",
+  "explanation": "Le lièvre, trop sûr de lui, traîne en route : « Rien ne sert de courir ; il faut partir à point. »",
+  "options": [
+   "La tortue*",
+   "Le lièvre",
+   "Personne",
+   "Le renard"
+  ]
+ },
+ {
+  "key": "v10-arts-011",
+  "concept": "arts.literature.v10_cosette",
+  "label": "Cosette",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Dans « Les Misérables », comment s'appelle la petite fille maltraitée par les Thénardier ?",
+  "explanation": "Jean Valjean la recueille. Fantine est sa mère ; Esmeralda vient de « Notre-Dame de Paris ».",
+  "options": [
+   "Cosette*",
+   "Esmeralda",
+   "Fantine",
+   "Éponine"
+  ]
+ },
+ {
+  "key": "v10-arts-012",
+  "concept": "arts.literature.v10_dupondt",
+  "label": "Les jumeaux de Tintin",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Comment s'appellent les deux policiers qui se ressemblent, dans Tintin ?",
+  "explanation": "Dupond a la moustache droite, Dupont la moustache un peu relevée… et ils ne sont pas jumeaux.",
+  "options": [
+   "Dupond et Dupont*",
+   "Laurel et Hardy",
+   "Astérix et Obélix",
+   "Boule et Bill"
+  ]
+ },
+ {
+  "key": "v10-arts-013",
+  "concept": "arts.literature.v10_gaule",
+  "label": "Le village d'Astérix",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Dans quel pays se trouve le village d'Astérix ?",
+  "explanation": "Un petit village d'Armorique (la Bretagne) qui résiste encore et toujours à l'envahisseur romain.",
+  "options": [
+   "En Gaule*",
+   "En Grèce",
+   "En Égypte",
+   "En Italie"
+  ]
+ },
+ {
+  "key": "v10-arts-014",
+  "concept": "arts.literature.v10_germinal",
+  "label": "Germinal",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a écrit « Germinal », le roman des mineurs du Nord ?",
+  "explanation": "Zola, en 1885, après avoir lui-même visité les mines.",
+  "options": [
+   "Émile Zola*",
+   "Victor Hugo",
+   "Guy de Maupassant",
+   "Honoré de Balzac"
+  ]
+ },
+ {
+  "key": "v10-arts-015",
+  "concept": "arts.literature.v10_ecrivains_ordre",
+  "label": "Les écrivains dans l'ordre",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Classe ces écrivains du plus ancien au plus récent.",
+  "explanation": "Molière (1622), Victor Hugo (1802), Albert Camus (1913), J. K. Rowling (1965).",
+  "items": [
+   "Molière",
+   "Victor Hugo",
+   "Albert Camus",
+   "J. K. Rowling"
+  ]
+ },
+ {
+  "key": "v10-arts-016",
+  "concept": "arts.mythology.v10_aphrodite",
+  "label": "La déesse de l'amour",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Quelle déesse grecque est celle de l'amour et de la beauté ?",
+  "explanation": "Aphrodite, née de l'écume de la mer. Les Romains l'appelaient Vénus.",
+  "options": [
+   "Aphrodite*",
+   "Athéna",
+   "Héra",
+   "Artémis"
+  ]
+ },
+ {
+  "key": "v10-arts-017",
+  "concept": "arts.mythology.v10_thesee",
+  "label": "Le vainqueur du Minotaure",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "Quel héros grec a tué le Minotaure dans le labyrinthe ?",
+  "explanation": "Il retrouve la sortie grâce au fil que lui a donné Ariane.",
+  "options": [
+   "Thésée*",
+   "Héraclès",
+   "Persée",
+   "Ulysse"
+  ]
+ },
+ {
+  "key": "v10-arts-018",
+  "concept": "arts.mythology.v10_anubis",
+  "label": "La tête de chacal",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel dieu égyptien a une tête de chacal ?",
+  "explanation": "Anubis guide les morts et veille sur la momification. Horus a une tête de faucon.",
+  "options": [
+   "Anubis*",
+   "Râ",
+   "Osiris",
+   "Horus"
+  ]
+ },
+ {
+  "key": "v10-arts-019",
+  "concept": "arts.architecture.v10_arc_triomphe",
+  "label": "L'Arc de triomphe",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Quel monument parisien a été construit pour célébrer les victoires de Napoléon ?",
+  "explanation": "Il domine la place de l'Étoile ; la tombe du Soldat inconnu repose dessous depuis 1921.",
+  "options": [
+   "L'Arc de triomphe*",
+   "La tour Eiffel",
+   "Le Sacré-Cœur",
+   "Le Panthéon"
+  ]
+ },
+ {
+  "key": "v10-arts-020",
+  "concept": "arts.architecture.v10_gothique",
+  "label": "Le style gothique",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Comment s'appelle le style des cathédrales comme Notre-Dame de Paris, avec de grands vitraux et des arcs-boutants ?",
+  "explanation": "Né en France vers 1140, il permet des murs plus hauts et plus fins, percés de vitraux.",
+  "options": [
+   "Le style gothique*",
+   "Le style roman",
+   "Le style baroque",
+   "Le style Art déco"
+  ]
+ }
+]

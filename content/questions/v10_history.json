@@ -1,0 +1,287 @@
+[
+ {
+  "key": "v10-history-001",
+  "concept": "history.antiquity.v10_feu_prehistoire",
+  "label": "La grande découverte",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quelle découverte a permis aux humains préhistoriques de se chauffer, de cuire et de se protéger des bêtes ?",
+  "explanation": "Les humains maîtrisent le feu depuis au moins 400 000 ans. La roue et l'écriture arrivent bien plus tard.",
+  "options": [
+   "La maîtrise du feu*",
+   "La roue",
+   "Le fer",
+   "L'écriture"
+  ]
+ },
+ {
+  "key": "v10-history-002",
+  "concept": "history.antiquity.v10_vercingetorix",
+  "label": "Le chef gaulois",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quel chef gaulois a résisté à Jules César avant de se rendre à Alésia ?",
+  "explanation": "Vercingétorix se rend en 52 av. J.-C. Astérix, lui, n'existe que dans la bande dessinée.",
+  "options": [
+   "Vercingétorix*",
+   "Astérix",
+   "Clovis",
+   "Attila"
+  ]
+ },
+ {
+  "key": "v10-history-003",
+  "concept": "history.modern.v10_guillotine",
+  "label": "La guillotine",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Pendant la Révolution française, quel instrument servait à exécuter les condamnés ?",
+  "explanation": "La guillotine devait rendre la mort rapide et égale pour tous. Louis XVI y meurt en 1793.",
+  "options": [
+   "La guillotine*",
+   "Le bûcher",
+   "La potence",
+   "L'épée"
+  ]
+ },
+ {
+  "key": "v10-history-004",
+  "concept": "history.contemporary.v10_hitler",
+  "label": "Le dirigeant nazi",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui dirigeait l'Allemagne nazie pendant la Seconde Guerre mondiale ?",
+  "explanation": "Hitler arrive au pouvoir en 1933. Mussolini dirigeait l'Italie, Staline l'URSS.",
+  "options": [
+   "Adolf Hitler*",
+   "Joseph Staline",
+   "Benito Mussolini",
+   "Guillaume II"
+  ]
+ },
+ {
+  "key": "v10-history-006",
+  "concept": "history.contemporary.v10_mandela",
+  "label": "Nelson Mandela",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Quel homme, emprisonné 27 ans, est devenu président de l'Afrique du Sud en 1994 ?",
+  "explanation": "Mandela a lutté contre l'apartheid, la séparation imposée entre Noirs et Blancs.",
+  "options": [
+   "Nelson Mandela*",
+   "Martin Luther King",
+   "Gandhi",
+   "Barack Obama"
+  ]
+ },
+ {
+  "key": "v10-history-007",
+  "concept": "history.contemporary.v10_ordre_evenements",
+  "label": "Du plus ancien au plus récent",
+  "type": "ordering",
+  "difficulty": 28,
+  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "explanation": "1789, 1914-1918, 1969, 1989.",
+  "items": [
+   "La Révolution française",
+   "La Première Guerre mondiale",
+   "Les premiers pas sur la Lune",
+   "La chute du mur de Berlin"
+  ]
+ },
+ {
+  "key": "v10-history-009",
+  "concept": "history.middle_ages.v10_peste_noire_part",
+  "label": "La peste noire",
+  "type": "mcq",
+  "difficulty": 44,
+  "prompt": "Au XIVᵉ siècle, quelle part de la population européenne la peste noire a-t-elle tuée, environ ?",
+  "explanation": "Entre 1347 et 1352, environ 25 millions de morts en Europe, de 30 à 50 % des habitants.",
+  "options": [
+   "Un tiers à la moitié*",
+   "Un dixième",
+   "Les trois quarts",
+   "Moins de 1 %"
+  ]
+ },
+ {
+  "key": "v10-history-010",
+  "concept": "history.contemporary.v10_titanic_iceberg",
+  "label": "Le naufrage du Titanic",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Contre quoi le Titanic s'est-il heurté avant de couler, en 1912 ?",
+  "explanation": "Dans la nuit du 14 au 15 avril 1912, au large de Terre-Neuve. Plus de 1 500 personnes meurent.",
+  "options": [
+   "Un iceberg*",
+   "Un autre navire",
+   "Un récif de corail",
+   "Une baleine"
+  ]
+ },
+ {
+  "key": "v10-history-011",
+  "concept": "history.contemporary.v10_onze_septembre",
+  "label": "Le 11 septembre 2001",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Que s'est-il passé à New York le 11 septembre 2001 ?",
+  "explanation": "Des terroristes d'Al-Qaïda ont détourné quatre avions ; près de 3 000 personnes sont mortes.",
+  "options": [
+   "Des avions détournés ont frappé les tours jumelles*",
+   "Un tremblement de terre",
+   "Une panne géante d'électricité",
+   "L'élection d'un président"
+  ]
+ },
+ {
+  "key": "v10-history-012",
+  "concept": "history.contemporary.v10_obama_premier",
+  "label": "Barack Obama",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui a été le premier président noir des États-Unis ?",
+  "explanation": "Élu en 2008, réélu en 2012.",
+  "options": [
+   "Barack Obama*",
+   "Nelson Mandela",
+   "Martin Luther King",
+   "Joe Biden"
+  ]
+ },
+ {
+  "key": "v10-history-013",
+  "concept": "history.antiquity.v10_av_jc",
+  "label": "Avant Jésus-Christ",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Dans une date, que signifie « av. J.-C. » ?",
+  "explanation": "On compte les années à partir de la naissance supposée de Jésus. 52 av. J.-C. = 52 ans avant.",
+  "options": [
+   "Avant Jésus-Christ*",
+   "Avant Jules César",
+   "Après Jésus-Christ",
+   "Avant Jeanne d'Arc"
+  ]
+ },
+ {
+  "key": "v10-history-014",
+  "concept": "history.middle_ages.v10_siecle_1515",
+  "label": "Quel siècle ?",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "L'année 1515 (la bataille de Marignan) est au…",
+  "explanation": "Les années 1501 à 1600 forment le XVIᵉ siècle : on ajoute 1 au nombre des centaines.",
+  "options": [
+   "XVIᵉ siècle*",
+   "XVᵉ siècle",
+   "XIVᵉ siècle",
+   "XVIIᵉ siècle"
+  ]
+ },
+ {
+  "key": "v10-history-015",
+  "concept": "history.contemporary.v10_debut_xxie",
+  "label": "Le XXIᵉ siècle",
+  "type": "mcq",
+  "difficulty": 44,
+  "prompt": "En quelle année le XXIᵉ siècle a-t-il commencé, en toute rigueur ?",
+  "explanation": "Il n'y a pas d'an 0 : le Iᵉʳ siècle va de l'an 1 à l'an 100, et le XXIᵉ commence le 1ᵉʳ janvier 2001.",
+  "options": [
+   "2001*",
+   "2000",
+   "1999",
+   "2010"
+  ]
+ },
+ {
+  "key": "v10-history-016",
+  "concept": "history.antiquity.v10_legions",
+  "label": "Les légions",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Quelle armée était organisée en « légions » ?",
+  "explanation": "Une légion comptait environ 5 000 soldats, les légionnaires.",
+  "options": [
+   "L'armée romaine*",
+   "L'armée de Napoléon",
+   "Les Vikings",
+   "Les chevaliers du Moyen Âge"
+  ]
+ },
+ {
+  "key": "v10-history-017",
+  "concept": "history.antiquity.v10_attila",
+  "label": "Le fléau de Dieu",
+  "type": "mcq",
+  "difficulty": 38,
+  "prompt": "Quel chef des Huns était surnommé « le fléau de Dieu » ?",
+  "explanation": "Attila ravage une partie de l'Europe vers 450 ; il épargne Paris, selon la légende grâce à sainte Geneviève.",
+  "options": [
+   "Attila*",
+   "Gengis Khan",
+   "Hannibal",
+   "Vercingétorix"
+  ]
+ },
+ {
+  "key": "v10-history-018",
+  "concept": "history.middle_ages.v10_roi_arthur",
+  "label": "La Table ronde",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Selon la légende, quel roi réunissait ses chevaliers autour de la Table ronde ?",
+  "explanation": "Avec Lancelot, Perceval et l'enchanteur Merlin, à la recherche du Graal.",
+  "options": [
+   "Le roi Arthur*",
+   "Charlemagne",
+   "Richard Cœur de Lion",
+   "Louis IX"
+  ]
+ },
+ {
+  "key": "v10-history-019",
+  "concept": "history.middle_ages.v10_guillaume_tell",
+  "label": "Guillaume Tell",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Selon la légende suisse, sur quoi Guillaume Tell a-t-il dû tirer, posé sur la tête de son fils ?",
+  "explanation": "Il tire à l'arbalète et réussit. C'est le héros de l'indépendance suisse.",
+  "options": [
+   "Une pomme*",
+   "Une poire",
+   "Une orange",
+   "Un chapeau"
+  ]
+ },
+ {
+  "key": "v10-history-020",
+  "concept": "history.modern.v10_henri_viii",
+  "label": "Le roi aux six épouses",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel roi d'Angleterre a eu six épouses ?",
+  "explanation": "Deux ont été répudiées, deux exécutées, une est morte en couches, la dernière lui a survécu.",
+  "options": [
+   "Henri VIII*",
+   "Richard Cœur de Lion",
+   "Guillaume le Conquérant",
+   "Charles Iᵉʳ"
+  ]
+ },
+ {
+  "key": "v10-history-021",
+  "concept": "history.contemporary.v10_jean_moulin",
+  "label": "Jean Moulin",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Qui était Jean Moulin ?",
+  "explanation": "Envoyé par de Gaulle pour unifier la Résistance, il est arrêté en 1943 et meurt sous la torture.",
+  "options": [
+   "Un chef de la Résistance*",
+   "Un général de Napoléon",
+   "Un président de la République",
+   "Un inventeur"
+  ]
+ }
+]

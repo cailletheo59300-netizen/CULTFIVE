@@ -1,0 +1,68 @@
+[
+ {
+  "key": "v10-arts-006",
+  "concept": "arts.painting.v10_pinceau",
+  "label": "Le pinceau",
+  "type": "letters",
+  "difficulty": 8,
+  "prompt": "Outil du peintre, fait de poils au bout d'un manche.",
+  "explanation": "Les plus fins sont en poils de martre ; on en trouve aussi en poils synthétiques.",
+  "word": "PINCEAU",
+  "display": "Pinceau"
+ },
+ {
+  "key": "v10-arts-007",
+  "concept": "arts.painting.v10_sculpture",
+  "label": "La sculpture",
+  "type": "letters",
+  "difficulty": 18,
+  "prompt": "Œuvre d'art en trois dimensions, en pierre, en bois ou en bronze.",
+  "explanation": "Le Penseur de Rodin ou la Vénus de Milo sont des sculptures célèbres.",
+  "word": "SCULPTURE",
+  "display": "Sculpture"
+ },
+ {
+  "key": "v10-arts-008",
+  "concept": "arts.literature.v10_peintre_ou_ecrivain",
+  "label": "Peintre ou écrivain ?",
+  "type": "sort",
+  "difficulty": 22,
+  "prompt": "Peintre ou écrivain ?",
+  "explanation": "Monet, Picasso et Van Gogh peignaient ; Hugo, Molière et Zola écrivaient.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Peintre"
+   },
+   {
+    "label": "Écrivain"
+   }
+  ],
+  "items": [
+   [
+    "Claude Monet",
+    0
+   ],
+   [
+    "Pablo Picasso",
+    0
+   ],
+   [
+    "Vincent van Gogh",
+    0
+   ],
+   [
+    "Victor Hugo",
+    1
+   ],
+   [
+    "Molière",
+    1
+   ],
+   [
+    "Émile Zola",
+    1
+   ]
+  ]
+ }
+]

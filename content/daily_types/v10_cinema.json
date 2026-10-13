@@ -1,0 +1,37 @@
+[
+ {
+  "key": "v10-cinema-013",
+  "concept": "cinema.films.v10_tl_hp_film",
+  "label": "Le premier film Harry Potter",
+  "type": "timeline",
+  "difficulty": 36,
+  "prompt": "En quelle année sort le premier film Harry Potter au cinéma ?",
+  "explanation": "« Harry Potter à l'école des sorciers », en novembre 2001.",
+  "answer": 2001,
+  "tolerance": 3,
+  "min": 1960,
+  "max": 2025
+ },
+ {
+  "key": "v10-cinema-018",
+  "concept": "cinema.films.v10_avatar_l",
+  "label": "Avatar",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Film de James Cameron chez les Na'vi.",
+  "explanation": "Sorti en 2009, en 3D, il dépasse les 2,9 milliards de dollars de recettes.",
+  "word": "AVATAR",
+  "display": "Avatar"
+ },
+ {
+  "key": "v10-cinema-019",
+  "concept": "cinema.actors.v10_superman",
+  "label": "Superman",
+  "type": "letters",
+  "difficulty": 14,
+  "prompt": "Super-héros venu de la planète Krypton.",
+  "explanation": "Créé en 1938, c'est le premier grand super-héros de bande dessinée.",
+  "word": "SUPERMAN",
+  "display": "Superman"
+ }
+]

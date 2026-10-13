@@ -1,0 +1,87 @@
+[
+ {
+  "key": "v10-music-002",
+  "concept": "music.classical.v10_gamme_ordre",
+  "label": "La gamme",
+  "type": "word_order",
+  "difficulty": 8,
+  "prompt": "Remets les notes de la gamme dans l'ordre, en montant.",
+  "explanation": "Do, ré, mi, fa, sol, la, si… puis on recommence au do suivant.",
+  "answer": "Do ré mi fa sol la si",
+  "words": [
+   "Do",
+   "ré",
+   "mi",
+   "fa",
+   "sol",
+   "la",
+   "si"
+  ]
+ },
+ {
+  "key": "v10-music-006",
+  "concept": "music.instruments.v10_harpe",
+  "label": "La harpe",
+  "type": "letters",
+  "difficulty": 18,
+  "prompt": "Grand instrument à cordes pincées, en forme de triangle.",
+  "explanation": "La harpe de concert compte 47 cordes et 7 pédales.",
+  "word": "HARPE",
+  "display": "Harpe"
+ },
+ {
+  "key": "v10-music-007",
+  "concept": "music.instruments.v10_tambour",
+  "label": "Le tambour",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Instrument sur lequel on frappe une peau tendue.",
+  "explanation": "Le tambour existe depuis la Préhistoire, sur tous les continents.",
+  "word": "TAMBOUR",
+  "display": "Tambour"
+ },
+ {
+  "key": "v10-music-016",
+  "concept": "music.popular.v10_chanteur_ou_groupe",
+  "label": "Chanteur ou groupe ?",
+  "type": "sort",
+  "difficulty": 20,
+  "prompt": "Artiste solo ou groupe ?",
+  "explanation": "Coldplay, Indochine et les Rolling Stones sont des groupes ; les autres chantent sous leur propre nom (ou presque).",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Solo"
+   },
+   {
+    "label": "Groupe"
+   }
+  ],
+  "items": [
+   [
+    "Elvis Presley",
+    0
+   ],
+   [
+    "Madonna",
+    0
+   ],
+   [
+    "Stromae",
+    0
+   ],
+   [
+    "Coldplay",
+    1
+   ],
+   [
+    "Indochine",
+    1
+   ],
+   [
+    "Les Rolling Stones",
+    1
+   ]
+  ]
+ }
+]

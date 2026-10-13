@@ -1,0 +1,182 @@
+[
+ {
+  "key": "v10-music-001",
+  "concept": "music.classical.v10_chef_orchestre",
+  "label": "Le chef d'orchestre",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Quel est le rôle du chef d'orchestre ?",
+  "explanation": "Avec sa baguette et ses gestes, il donne le tempo et les nuances à tout l'orchestre.",
+  "options": [
+   "Il dirige les musiciens*",
+   "Il accorde les instruments",
+   "Il vend les billets",
+   "Il écrit les paroles"
+  ]
+ },
+ {
+  "key": "v10-music-003",
+  "concept": "music.classical.v10_lac_cygnes",
+  "label": "Le Lac des cygnes",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "« Le Lac des cygnes », c'est…",
+  "explanation": "Un ballet de Tchaïkovski (1877), où le prince Siegfried tombe amoureux d'Odette, transformée en cygne.",
+  "options": [
+   "Un ballet*",
+   "Un opéra",
+   "Une chanson pour enfants",
+   "Un film"
+  ]
+ },
+ {
+  "key": "v10-music-004",
+  "concept": "music.classical.v10_noces_figaro",
+  "label": "Les Noces de Figaro",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Qui a composé l'opéra « Les Noces de Figaro » ?",
+  "explanation": "Mozart, en 1786, d'après la pièce de Beaumarchais. Rossini a fait « Le Barbier de Séville », avec le même Figaro.",
+  "options": [
+   "Mozart*",
+   "Verdi",
+   "Rossini",
+   "Bizet"
+  ]
+ },
+ {
+  "key": "v10-music-005",
+  "concept": "music.instruments.v10_violoncelle",
+  "label": "Entre les jambes",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quel instrument à cordes joue-t-on assis, posé entre les jambes, avec un archet ?",
+  "explanation": "Le violoncelle repose sur le sol grâce à une pique ; le violon, lui, se cale sous le menton.",
+  "options": [
+   "Le violoncelle*",
+   "Le violon",
+   "La guitare",
+   "La harpe"
+  ]
+ },
+ {
+  "key": "v10-music-008",
+  "concept": "music.instruments.v10_percussions_famille",
+  "label": "Les percussions",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "La batterie, le tambourin et les maracas sont des instruments…",
+  "explanation": "On les frappe, on les secoue ou on les gratte pour produire le son.",
+  "options": [
+   "à percussion*",
+   "à vent",
+   "à cordes",
+   "à clavier"
+  ]
+ },
+ {
+  "key": "v10-music-009",
+  "concept": "music.popular.v10_we_will_rock",
+  "label": "We Will Rock You",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Quel groupe chante « We Will Rock You » et « We Are the Champions » ?",
+  "explanation": "Deux hymnes de 1977, repris dans tous les stades du monde.",
+  "options": [
+   "Queen*",
+   "Les Beatles",
+   "ABBA",
+   "Coldplay"
+  ]
+ },
+ {
+  "key": "v10-music-010",
+  "concept": "music.popular.v10_dancing_queen",
+  "label": "Dancing Queen",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel groupe suédois a chanté « Dancing Queen » et « Mamma Mia » ?",
+  "explanation": "ABBA a gagné l'Eurovision en 1974 avec « Waterloo ».",
+  "options": [
+   "ABBA*",
+   "Queen",
+   "Roxette",
+   "Daft Punk"
+  ]
+ },
+ {
+  "key": "v10-music-011",
+  "concept": "music.popular.v10_britney",
+  "label": "Baby One More Time",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Quelle chanteuse a chanté « …Baby One More Time » et « Toxic » ?",
+  "explanation": "Britney Spears devient une star mondiale à 16 ans, en 1998.",
+  "options": [
+   "Britney Spears*",
+   "Christina Aguilera",
+   "Madonna",
+   "Shakira"
+  ]
+ },
+ {
+  "key": "v10-music-012",
+  "concept": "music.popular.v10_uptown_funk",
+  "label": "Uptown Funk",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Qui chante « Uptown Funk » (2014) avec Mark Ronson ?",
+  "explanation": "Un des titres les plus écoutés des années 2010.",
+  "options": [
+   "Bruno Mars*",
+   "Pharrell Williams",
+   "Justin Timberlake",
+   "The Weeknd"
+  ]
+ },
+ {
+  "key": "v10-music-013",
+  "concept": "music.popular.v10_papaoutai",
+  "label": "Papaoutai",
+  "type": "mcq",
+  "difficulty": 18,
+  "prompt": "Quel chanteur belge a chanté « Papaoutai » et « Formidable » ?",
+  "explanation": "Deux titres de l'album « Racine carrée » (2013).",
+  "options": [
+   "Stromae*",
+   "Angèle",
+   "Orelsan",
+   "Maître Gims"
+  ]
+ },
+ {
+  "key": "v10-music-014",
+  "concept": "music.popular.v10_eminem",
+  "label": "Eminem",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel rappeur américain s'appelle en réalité Marshall Mathers ?",
+  "explanation": "Eminem, alias Slim Shady, né en 1972 à Détroit.",
+  "options": [
+   "Eminem*",
+   "Snoop Dogg",
+   "50 Cent",
+   "Jay-Z"
+  ]
+ },
+ {
+  "key": "v10-music-015",
+  "concept": "music.popular.v10_dark_side",
+  "label": "The Dark Side of the Moon",
+  "type": "mcq",
+  "difficulty": 48,
+  "prompt": "Quel groupe a sorti l'album « The Dark Side of the Moon » (1973), au prisme sur la pochette ?",
+  "explanation": "L'un des albums les plus vendus de tous les temps.",
+  "options": [
+   "Pink Floyd*",
+   "Led Zeppelin",
+   "The Rolling Stones",
+   "The Who"
+  ]
+ }
+]
