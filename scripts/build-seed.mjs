@@ -321,7 +321,7 @@ if (errors.length) {
 const lit = (v) => `'${String(v).replace(/'/g, "''")}'`;
 const lines = [
   '-- GÉNÉRÉ par scripts/build-seed.mjs — ne pas éditer à la main.',
-  '-- Source : content/taxonomy.json, content/questions/*.json',
+  '-- Source : content/taxonomy.json, content/questions/*.json, content/album/*.json',
   'begin;',
 ];
 taxonomy.domains.forEach((d, i) => {
@@ -338,6 +338,29 @@ lines.push(`update public.subdomains set is_active = (id in (${activeSubdomains.
 for (const origin of ['human', 'import']) {
   const group = questions.filter((q) => q.origin === origin).map(({ origin: _o, ...q }) => q);
   if (group.length) lines.push(`select public._upsert_question(q, '${origin}', null) from jsonb_array_elements(${lit(JSON.stringify(group))}::jsonb) q;`);
+}
+// Album : 49 pages, 525 cartes et leurs notions (content/album/*.json, vérifiées par scripts/check-album.mjs).
+// Ordre des pages : celui des domaines et des sous-thèmes de la taxonomie. Une notion absente des questions est ignorée.
+{
+  const order = taxonomy.domains.flatMap((d) => d.subdomains.map(([s]) => `${d.id}.${s}`));
+  const albumPages = readdirSync(join(root, 'content/album')).filter((f) => f.endsWith('.json'))
+    .map((f) => JSON.parse(readFileSync(join(root, 'content/album', f), 'utf8')))
+    .sort((a, b) => order.indexOf(a.page) - order.indexOf(b.page));
+  const pages = albumPages.map((p, i) => ({ key: p.page, title: p.title, domain: p.domain, sort: i }));
+  const cards = albumPages.flatMap((p) => p.cards.map((c) => ({ id: c.id, page: p.page, n: c.n, name: c.name, rarity: c.rarity || 'common' })));
+  const links = albumPages.flatMap((p) => p.cards.flatMap((c) => c.concepts.map((k) => ({ card: c.id, concept: k }))));
+  lines.push(`insert into public.album_pages (key, title, domain_id, sort)
+  select p ->> 'key', p ->> 'title', p ->> 'domain', (p ->> 'sort')::int from jsonb_array_elements(${lit(JSON.stringify(pages))}::jsonb) p
+  on conflict (key) do update set title = excluded.title, domain_id = excluded.domain_id, sort = excluded.sort;`);
+  lines.push(`insert into public.album_cards (id, page_key, n, name, rarity)
+  select c ->> 'id', c ->> 'page', (c ->> 'n')::int, c ->> 'name', (c ->> 'rarity')::public.card_rarity
+  from jsonb_array_elements(${lit(JSON.stringify(cards))}::jsonb) c
+  on conflict (id) do update set page_key = excluded.page_key, n = excluded.n, name = excluded.name, rarity = excluded.rarity;`);
+  lines.push(`delete from public.album_card_concepts;`);
+  lines.push(`insert into public.album_card_concepts (card_id, concept_id)
+  select l ->> 'card', l ->> 'concept' from jsonb_array_elements(${lit(JSON.stringify(links))}::jsonb) l
+  where exists (select 1 from public.concepts c where c.id = l ->> 'concept')
+  on conflict do nothing;`);
 }
 lines.push('commit;', '');
 
