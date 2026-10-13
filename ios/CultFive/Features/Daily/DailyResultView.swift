@@ -182,14 +182,15 @@ struct DailyResultView: View {
         .foregroundStyle(white)
     }
 
-    /// Évolution de la cote CULT : seulement les mouvements notables (≥ 5 points).
+    /// Évolution de l'Elo : seulement les domaines dont le placement est fini (l'Elo affiché y est le vrai niveau),
+    /// et seulement les mouvements notables (≥ 5 points).
     @ViewBuilder private var knowledge: some View {
         let moves = result.answers
             .compactMap { answer -> (String, Int, Int)? in
                 guard let before = answer.domainBefore, let after = answer.domainAfter else { return nil }
                 return (answer.domainId, CoteCULT.cote(level: before), CoteCULT.cote(level: after))
             }
-            .filter { abs($0.2 - $0.1) >= 5 }
+            .filter { placed.contains($0.0) && abs($0.2 - $0.1) >= 5 }
             .prefix(3)
         if !moves.isEmpty {
             VStack(alignment: .leading, spacing: 10) {
@@ -198,10 +199,7 @@ struct DailyResultView: View {
                     HStack {
                         DomainTag(domainId: move.0, name: app.domainName(move.0))
                         Spacer()
-                        Text(CoteCULT.format(move.2)).foregroundStyle(placed.contains(move.0) ? white : white.opacity(0.6))
-                        if !placed.contains(move.0) {
-                            Text("prov.").font(.cfFootnote.weight(.bold)).foregroundStyle(white.opacity(0.6))
-                        }
+                        Text(CoteCULT.format(move.2)).foregroundStyle(white)
                         Text(CoteCULT.formatDelta(move.2 - move.1))
                             .foregroundStyle(move.2 >= move.1 ? Color.sun : white.opacity(0.6))
                     }

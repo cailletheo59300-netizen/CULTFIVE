@@ -1,7 +1,7 @@
 import SwiftUI
 import CultFiveCore
 
-/// « Comment marche l'Elo » : le départ à 1000, l'Elo provisoire, la correction, le bouclier, les niveaux.
+/// « Comment marche l'Elo » : le départ à 500, le placement, la correction, le bouclier, les niveaux.
 struct EloExplainerSheet: View {
     @Environment(\.dismiss) private var dismiss
 
@@ -13,14 +13,14 @@ struct EloExplainerSheet: View {
                     .font(.cfCallout).foregroundStyle(Color.inkSoft)
                     .fixedSize(horizontal: false, vertical: true)
 
-                step(1, "Tout le monde part de 1000",
-                     "Ton Elo s'affiche dès ta 1re partie classée. Il bouge vite au début pour te trouver ta place (jusqu'à 120 points par partie), puis 40 points au plus.") {
-                    Text("1000")
+                step(1, "Tout le monde part de 500",
+                     "Dans chaque domaine, ton Elo part de 500 et monte vers ton vrai niveau pendant tes 5 premières parties classées. Ensuite, il bouge de 40 points au plus par partie.") {
+                    Text("500")
                         .font(.system(.title2, design: .rounded).weight(.black)).monospacedDigit()
                         .foregroundStyle(Color.brand)
                 }
-                step(2, "Provisoire pendant 5 parties",
-                     "Dans chaque domaine, chaque partie classée remplit un carré. Au 5e, ton Elo est confirmé et ton niveau se dévoile.") {
+                step(2, "5 parties de placement",
+                     "Chaque partie classée remplit un carré. Au 5e, ton Elo a rejoint ton vrai niveau et ton rang se dévoile.") {
                     PlacementSquares(done: 3, color: .brand, size: 12)
                 }
                 step(3, "Seules les parties classées comptent",
@@ -43,7 +43,7 @@ struct EloExplainerSheet: View {
                             RankEmblem(rank: rank).frame(width: 36, height: 36).accessibilityHidden(true)
                             Text(rank.name).font(.cfCallout.weight(.bold)).foregroundStyle(Color.ink)
                             Spacer()
-                            Text(rank == .curious ? "moins de 900" : "dès \(CoteCULT.format(rank.floor))")
+                            Text(rank == .curious ? "moins de 600" : "dès \(CoteCULT.format(rank.floor))")
                                 .font(.cfFootnote).monospacedDigit().foregroundStyle(Color.inkSoft)
                         }
                     }

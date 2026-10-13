@@ -9,17 +9,21 @@ final class RatingTests: XCTestCase {
     }
 
     func testRanks() {
-        XCTAssertEqual(CoteCULT.Rank(cote: 700), .curious)
-        XCTAssertEqual(CoteCULT.Rank(cote: 900), .amateur)
-        XCTAssertEqual(CoteCULT.Rank(cote: 1049), .amateur)
-        XCTAssertEqual(CoteCULT.Rank(cote: 1050), .enlightened)
-        XCTAssertEqual(CoteCULT.Rank(cote: 1342), .scholar)
-        XCTAssertEqual(CoteCULT.Rank(cote: 1499), .expert)
-        XCTAssertEqual(CoteCULT.Rank(cote: 1800), .encyclopedia)
+        XCTAssertEqual(CoteCULT.Rank(cote: 500), .curious)
+        XCTAssertEqual(CoteCULT.Rank(cote: 600), .amateur)
+        XCTAssertEqual(CoteCULT.Rank(cote: 749), .amateur)
+        XCTAssertEqual(CoteCULT.Rank(cote: 750), .enlightened)
+        XCTAssertEqual(CoteCULT.Rank(cote: 1000), .scholar)
+        XCTAssertEqual(CoteCULT.Rank(cote: 1199), .expert)
+        XCTAssertEqual(CoteCULT.Rank(cote: 1500), .encyclopedia)
         XCTAssertEqual(CoteCULT.Rank.expert.next, .encyclopedia)
         XCTAssertNil(CoteCULT.Rank.encyclopedia.next)
-        let next = try? XCTUnwrap(CoteCULT(cote: 1125, answered: 80).toNextRank)
+        let next = try? XCTUnwrap(CoteCULT(cote: 975, answered: 80).toNextRank)
         XCTAssertEqual(next?.missing, 75)
+        // Elo affiché : 500 au départ, le vrai niveau à la fin du placement.
+        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 0), 500)
+        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 25), 750)
+        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 80), 1000)
         XCTAssertEqual(next?.progress ?? 0, 0.5, accuracy: 0.001)
     }
 

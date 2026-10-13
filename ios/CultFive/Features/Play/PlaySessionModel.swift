@@ -293,9 +293,9 @@ final class PlaySessionModel {
     var badge: String? {
         guard case .revealed(_, true, _) = phase else { return nil }
         if config.mode == .errors { return "Erreur corrigée ✓" }
-        let gained = lastPoints > 0 ? "+\(lastPoints) pts" : nil
-        if streak >= 3 { return [gained, "🔥 \(streak) d'affilée"].compactMap { $0 }.joined(separator: " · ") }
-        return gained
+        // Plus de points par réponse affichés : seul l'Elo compte (0046).
+        if streak >= 3 { return "🔥 \(streak) d'affilée" }
+        return nil
     }
 
     func next() async {

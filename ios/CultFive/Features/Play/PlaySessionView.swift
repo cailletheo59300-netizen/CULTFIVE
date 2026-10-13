@@ -353,9 +353,8 @@ struct PlaySummaryView: View {
                 .frame(maxWidth: .infinity)
                 .accessibilityElement(children: .combine)
 
-                if summary.points > 0 || summary.synced {
+                if summary.synced {
                     HStack(spacing: Space.s) {
-                        chip(Text("\(CoteCULT.format(summary.points)) pts").monospacedDigit(), tint: Color(hex: 0xF76707))
                         if summary.synced { chip(Text("+\(summary.xp ?? 0) XP").monospacedDigit(), tint: .brand) }
                         if let seeds = summary.seeds, seeds > 0 {
                             chip(SeedsAmount(amount: seeds, signed: true, color: .correct), tint: .correct)
@@ -762,7 +761,7 @@ struct RatingChangeRow: View {
                     Text(CoteCULT.Rank(cote: change.coteAfter).name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
                 } else {
                     HStack(spacing: 6) {
-                        Text("provisoire").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                        Text("placement").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
                         PlacementSquares(done: change.placement, color: DomainPalette.color(change.domainId), size: 8)
                     }
                 }

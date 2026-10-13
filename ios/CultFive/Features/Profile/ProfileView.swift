@@ -129,7 +129,7 @@ struct ProfileView: View {
 
     /// Cote CULT globale : moyenne des domaines pondérée par les réponses, rang et progression vers le rang suivant.
     private var coteCard: some View {
-        // Même règle que l'écran Jouer : l'Elo se voit dès la 1re partie, « provisoire » tant qu'aucun domaine n'est confirmé.
+        // Même règle que l'écran Jouer : l'Elo se voit dès la 1re partie, « en placement » tant qu'aucun domaine ne l'a fini.
         let global = CoteCULT.overall(skills)
         let confirmed = skills.filter { $0.rating.placed }.count
         let played = skills.filter { $0.answered > 0 }.count
@@ -147,14 +147,14 @@ struct ProfileView: View {
                             Text("\(next.missing) pts avant \(rank.name)").font(.cfFootnote).foregroundStyle(.white.opacity(0.8))
                         }
                     } else {
-                        Text("Elo provisoire").font(.cfHeadline).foregroundStyle(Color.sun)
+                        Text("Elo en placement").font(.cfHeadline).foregroundStyle(Color.sun)
                         Text("Il se confirme après 5 parties classées dans un domaine.")
                             .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 } else {
-                    Text("1 000").numeral(size: 52).foregroundStyle(.white.opacity(0.75))
-                    Text("Tout le monde part de 1 000. Joue une partie classée pour voir ton Elo bouger.")
+                    Text("500").numeral(size: 52).foregroundStyle(.white.opacity(0.75))
+                    Text("Tout le monde part de 500. Joue une partie classée pour voir ton Elo monter.")
                         .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
                         .fixedSize(horizontal: false, vertical: true)
                 }

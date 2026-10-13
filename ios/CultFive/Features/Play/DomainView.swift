@@ -93,7 +93,7 @@ struct DomainView: View {
                         Text(stats.rating.formatted).numeral(size: 48).opacity(0.8)
                         Text("Elo \(stats.rating.provisionalLabel)").font(.cfFootnote.weight(.bold))
                     }
-                    Text("Encore \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") pour le confirmer.")
+                    Text("Encore \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") : ton Elo monte vers ton vrai niveau.")
                         .font(.cfFootnote)
                         .opacity(0.85)
                 }
@@ -140,8 +140,11 @@ struct DomainView: View {
                                     Text("à renforcer").labelCaps(color)
                                 }
                                 Spacer()
-                                if sub.rating.placed {
-                                    Text(sub.rating.formatted).font(.cfNumber).foregroundStyle(Color.ink)
+                                // Plus d'Elo par thème : la réussite suffit pour voir ses points forts.
+                                if sub.answered > 0 {
+                                    Text("\(Int((Double(sub.correct) / Double(sub.answered) * 100).rounded())) %")
+                                        .font(.cfNumber).foregroundStyle(Color.ink)
+                                        .accessibilityLabel("\(sub.correct) bonnes réponses sur \(sub.answered)")
                                 }
                                 Image(systemName: "play.fill").font(.caption).foregroundStyle(color)
                                     .accessibilityLabel("S'entraîner")

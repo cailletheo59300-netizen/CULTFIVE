@@ -74,10 +74,10 @@ struct PlayHomeView: View {
                 VStack(alignment: .trailing, spacing: 0) {
                     Text(global.formatted).font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
                         .foregroundStyle(global.placed ? Color.brand : Color.inkSoft)
-                    Text(global.placed ? global.rank.name : "Elo provisoire").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                    Text(global.placed ? global.rank.name : "Elo en placement").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
                 }
                 .accessibilityElement(children: .combine)
-                .accessibilityLabel(global.placed ? "Ton Elo : \(global.formatted), \(global.rank.name)" : "Ton Elo provisoire : \(global.formatted)")
+                .accessibilityLabel(global.placed ? "Ton Elo : \(global.formatted), \(global.rank.name)" : "Ton Elo en placement : \(global.formatted)")
             }
         }
         .padding(.top, Space.l)
@@ -271,13 +271,13 @@ private struct DomainTile: View {
             RankEmblem(rank: .curious).frame(width: 56, height: 56)
                 .saturation(0).opacity(0.5).accessibilityHidden(true)
             VStack(spacing: 0) {
-                Text("Provisoire").font(.system(.caption, design: .rounded).weight(.black))
+                Text("Placement").font(.system(.caption, design: .rounded).weight(.black))
                 Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames) parties")
                     .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit().opacity(0.88)
             }
             .foregroundStyle(on)
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Elo provisoire, \(skill.rating.placementGames) parties sur \(CoteCULT.placementGames)")
+            .accessibilityLabel("Elo en placement, \(skill.rating.placementGames) parties sur \(CoteCULT.placementGames)")
         } else {
             Spacer(minLength: 4)
             Image(systemName: "play.fill")

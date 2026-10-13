@@ -115,7 +115,7 @@ struct ProfileDomainsList: View {
                     Text(skill.name).font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
                         .lineLimit(1)
                 }
-                Text(rating.placed ? rating.rank.name : "Provisoire · \(rating.placementGames)/\(CoteCULT.placementGames) parties")
+                Text(rating.placed ? rating.rank.name : "Placement · \(rating.placementGames)/\(CoteCULT.placementGames) parties")
                     .font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
                 if rating.placed {
                     GeometryReader { geo in
@@ -137,7 +137,7 @@ struct ProfileDomainsList: View {
         .contentShape(Rectangle())
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(rating.placed ? "\(skill.name), \(rating.rank.name), Elo \(rating.formatted)"
-                                          : "\(skill.name), Elo provisoire, \(rating.placementGames) parties sur 5")
+                                          : "\(skill.name), Elo en placement, \(rating.placementGames) parties sur 5")
     }
 }
 

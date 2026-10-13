@@ -54,7 +54,7 @@ struct RankPathView: View {
                     Text("Rang maximal : bravo !").font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
                 }
             } else {
-                Text("Elo provisoire").font(.system(size: 26, weight: .black, design: .rounded)).foregroundStyle(.white)
+                Text("Elo en placement").font(.system(size: 26, weight: .black, design: .rounded)).foregroundStyle(.white)
                 Text("Ton rang apparaît après 5 parties classées dans un domaine.")
                     .font(.cfFootnote).foregroundStyle(.white.opacity(0.85)).multilineTextAlignment(.center)
             }

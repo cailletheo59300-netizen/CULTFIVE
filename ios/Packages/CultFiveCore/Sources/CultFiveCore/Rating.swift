@@ -2,7 +2,8 @@ import Foundation
 
 /// Cote CULT : lecture du niveau de connaissance μ (0–100) sur une échelle façon échecs.
 /// cote = 1000 + 17,37 × (μ − 50) : 400 points d'écart = 10 contre 1 de chances de réussite. 1000 = niveau médian.
-/// Tant que le domaine a moins de 50 réponses classées (≈ 5 parties), le joueur est en placement : la cote reste cachée.
+/// Elo affiché (serveur, 0046) : il part de 500 et rejoint le vrai niveau au fil des 50 premières réponses classées
+/// (≈ 5 parties de placement) ; ensuite c'est le vrai niveau.
 public struct CoteCULT: Hashable, Sendable {
     public static let placementAnswers = 50
     public static let placementGames = 5
@@ -19,6 +20,12 @@ public struct CoteCULT: Hashable, Sendable {
 
     public static func cote(level mu: Double) -> Int {
         Int((1000 + 17.37 * (mu - 50)).rounded())
+    }
+
+    /// Elo affiché : 500 au départ, puis le vrai niveau, atteint à la fin du placement (même règle que le serveur).
+    public static func shown(level mu: Double, answered: Int) -> Int {
+        let progress = min(max(Double(answered), 0) / Double(placementAnswers), 1)
+        return Int((500 + Double(cote(level: mu) - 500) * progress).rounded())
     }
 
     /// Parties de placement jouées (0–5), à raison de 10 réponses par partie.
@@ -40,8 +47,8 @@ public struct CoteCULT: Hashable, Sendable {
         return CoteCULT(cote: all.cote, answered: all.answered, placed: skills.contains { $0.rating.placed })
     }
 
-    /// « provisoire · 2/5 » : parties classées jouées sur les 5 qui confirment l'Elo d'un domaine.
-    public var provisionalLabel: String { "provisoire · \(placementGames)/\(CoteCULT.placementGames)" }
+    /// « placement 2/5 » : parties classées jouées sur les 5 qui amènent l'Elo d'un domaine à son vrai niveau.
+    public var provisionalLabel: String { "placement \(placementGames)/\(CoteCULT.placementGames)" }
 
     /// « 1 342 » (espace fine insécable des milliers, à la française).
     public var formatted: String { CoteCULT.format(cote) }
@@ -69,11 +76,11 @@ public struct CoteCULT: Hashable, Sendable {
         public var floor: Int {
             switch self {
             case .curious: return Int.min
-            case .amateur: return 900
-            case .enlightened: return 1050
-            case .scholar: return 1200
-            case .expert: return 1350
-            case .encyclopedia: return 1500
+            case .amateur: return 600
+            case .enlightened: return 750
+            case .scholar: return 900
+            case .expert: return 1050
+            case .encyclopedia: return 1200
             }
         }
 
