@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : 2026-10-13 (1.0 publiée ; 1.1 « tout d'un coup » codée et testée en local, pas encore déployée — voir ci-dessous)_
+_Dernière mise à jour : 2026-10-13 (1.0 publiée ; serveur de la 1.1 en production, build TestFlight 45 — voir ci-dessous)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
@@ -59,8 +59,9 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 | 3. Neurones, coffres refaits (0044 : tickets de pochette, carte, jeton Prestige), arbre et tenue de Léon retirés de l'app | ✅ `99_neurones.sql` |
 | 4. Nouveaux types de réponses (0038–0041) ; proportions et mot mystère abandonnés (0049, D-050) | ✅ `99_answer_types.sql` |
 | 5. Carte commune en fin de partie classée (0045), Elo simplifié (0046), variété (0047), capitales et drapeaux revus (0048), nouvelles questions (lots v9 et v10) | ✅ |
-| 6. App branchée sur le serveur (album, Comptoir, pass, missions, coffres, carte de fin de partie), fin de l'option « aperçu » | ✅ codé, CI ; 🟡 à essayer sur TestFlight après le déploiement serveur |
-| 7. Mise en production (migrations 0038–0049 + seed, avec le feu vert du propriétaire), date de début de saison, envoi de la 1.1 à Apple | ⏳ |
+| 6. App branchée sur le serveur (album, Comptoir, pass, missions, coffres, carte de fin de partie), fin de l'option « aperçu » | ✅ codé, CI ; 🟡 à essayer sur TestFlight (build 45) |
+| 7a. Mise en production (13/10) : sauvegarde, migrations 0038–0050 et seed (8 282 questions publiées, 525 cartes), essai en transaction annulée, contrôle de sécurité | ✅ |
+| 7b. Jour de la sortie : recaler la saison 1 (`update seasons set starts_on = <sortie>, ends_on = <sortie + 61>`), effacer les paliers récupérés pendant les tests (`delete from season_claims`), envoyer la 1.1 à Apple | ⏳ |
 
 Compatibilité 1.0 : aucune fonction utilisée par la 1.0 n'est supprimée ; la forme des réponses est inchangée (comparaison des réponses de test d'avant la 1.0 et d'aujourd'hui) ; la 1.0 reçoit des remplaçants classiques pour les nouveaux types (en-tête `x-brainlix-types`).
 Reste à nettoyer côté app : le bloc « Aujourd'hui » de l'accueil n'est plus affiché (remplacé par les défis) mais son code est encore là.
