@@ -1,0 +1,131 @@
+[
+ {
+  "key": "v9-word-001",
+  "concept": "calc.number_logic.v9_mo_facteurs",
+  "label": "L'ordre des facteurs",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets cette règle de calcul dans l'ordre.",
+  "explanation": "3 × 4 = 4 × 3 : on peut multiplier dans n'importe quel ordre (on dit que la multiplication est commutative).",
+  "answer": "L'ordre des facteurs ne change pas le produit.",
+  "words": [
+   "L'ordre",
+   "des",
+   "facteurs",
+   "ne",
+   "change",
+   "pas",
+   "le",
+   "produit"
+  ]
+ },
+ {
+  "key": "v9-word-002",
+  "concept": "calc.number_logic.v9_mo_moins_moins",
+  "label": "Moins par moins",
+  "type": "word_order",
+  "difficulty": 26,
+  "prompt": "Remets cette règle de calcul dans l'ordre.",
+  "explanation": "(−2) × (−3) = 6 : multiplier deux nombres négatifs donne un nombre positif.",
+  "answer": "Moins par moins donne plus.",
+  "words": [
+   "Moins",
+   "par",
+   "moins",
+   "donne",
+   "plus"
+  ]
+ },
+ {
+  "key": "v9-word-003",
+  "concept": "logic.reasoning.v9_mo_tout_partie",
+  "label": "Le tout et la partie",
+  "type": "word_order",
+  "difficulty": 36,
+  "prompt": "Remets dans l'ordre cette vérité d'Euclide.",
+  "explanation": "C'est l'une des « notions communes » des Éléments d'Euclide, vers 300 av. J.-C.",
+  "answer": "Le tout est plus grand que la partie.",
+  "words": [
+   "Le",
+   "tout",
+   "est",
+   "plus",
+   "grand",
+   "que",
+   "la",
+   "partie"
+  ]
+ },
+ {
+  "key": "v9-word-004",
+  "concept": "logic.reasoning.v9_mo_qui_peut_plus",
+  "label": "Qui peut le plus",
+  "type": "word_order",
+  "difficulty": 28,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "explanation": "Celui qui sait faire une chose difficile sait aussi faire la plus facile.",
+  "answer": "Qui peut le plus peut le moins.",
+  "words": [
+   "Qui",
+   "peut",
+   "le",
+   "plus",
+   "peut",
+   "le",
+   "moins"
+  ]
+ },
+ {
+  "key": "v9-word-005",
+  "concept": "logic.reasoning.v9_mo_exception",
+  "label": "L'exception et la règle",
+  "type": "word_order",
+  "difficulty": 26,
+  "prompt": "Remets cette expression dans l'ordre.",
+  "explanation": "À l'origine, l'expression latine veut dire qu'une exception annoncée prouve qu'il existe une règle pour les autres cas.",
+  "answer": "L'exception confirme la règle.",
+  "words": [
+   "L'exception",
+   "confirme",
+   "la",
+   "règle"
+  ]
+ },
+ {
+  "key": "v9-word-006",
+  "concept": "logic.reasoning.v9_mo_carre_rectangle",
+  "label": "Le carré et le rectangle",
+  "type": "word_order",
+  "difficulty": 38,
+  "prompt": "Remets cette phrase de géométrie dans l'ordre.",
+  "explanation": "Un carré a quatre angles droits, comme tout rectangle, avec en plus quatre côtés égaux.",
+  "answer": "Un carré est un rectangle particulier.",
+  "words": [
+   "Un",
+   "carré",
+   "est",
+   "un",
+   "rectangle",
+   "particulier"
+  ]
+ },
+ {
+  "key": "v9-word-007",
+  "concept": "logic.puzzles.v9_mo_paralleles",
+  "label": "Les parallèles",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets cette phrase de géométrie dans l'ordre.",
+  "explanation": "Dans un plan, deux droites parallèles restent toujours à la même distance l'une de l'autre.",
+  "answer": "Deux droites parallèles ne se croisent jamais.",
+  "words": [
+   "Deux",
+   "droites",
+   "parallèles",
+   "ne",
+   "se",
+   "croisent",
+   "jamais"
+  ]
+ }
+]

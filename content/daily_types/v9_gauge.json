@@ -1,0 +1,110 @@
+[
+ {
+  "key": "v9-gauge-001",
+  "concept": "logic.reasoning.v9_deux_pieces_pile",
+  "label": "Au moins un pile",
+  "type": "gauge",
+  "difficulty": 50,
+  "prompt": "On lance deux pièces. Quelle est la probabilité d'obtenir au moins un pile ?",
+  "explanation": "Seul « face-face » n'a pas de pile : 1 cas sur 4. Il reste 3 sur 4 = 75 %.",
+  "answer": 75,
+  "tolerance": 5,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-002",
+  "concept": "logic.reasoning.v9_billes_rouges",
+  "label": "La bille rouge",
+  "type": "gauge",
+  "difficulty": 26,
+  "prompt": "Un sac contient 3 billes rouges et 7 bleues. Quelle est la probabilité de tirer une rouge ?",
+  "explanation": "3 rouges sur 10 billes : 30 %.",
+  "answer": 30,
+  "tolerance": 3,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-003",
+  "concept": "logic.reasoning.v9_ne_le_weekend",
+  "label": "Né un week-end",
+  "type": "gauge",
+  "difficulty": 44,
+  "prompt": "Quelle est la probabilité qu'une personne prise au hasard soit née un samedi ou un dimanche ?",
+  "explanation": "2 jours sur 7 : environ 29 %.",
+  "answer": 29,
+  "tolerance": 3,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-004",
+  "concept": "calc.percent.v9_hausse_50_60",
+  "label": "De 50 à 60 €",
+  "type": "gauge",
+  "difficulty": 32,
+  "prompt": "Un prix passe de 50 € à 60 €. De combien de pour cent a-t-il augmenté ?",
+  "explanation": "+10 € sur 50 € : 10 ÷ 50 = 20 %.",
+  "answer": 20,
+  "tolerance": 2,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-005",
+  "concept": "calc.percent.v9_moins50_plus50",
+  "label": "−50 % puis +50 %",
+  "type": "gauge",
+  "difficulty": 46,
+  "prompt": "Un prix baisse de 50 %, puis augmente de 50 %. Quel pourcentage du prix de départ atteint-il ?",
+  "explanation": "100 → 50 → 75. Il ne revient pas à 100 : la hausse se calcule sur un prix plus petit.",
+  "answer": 75,
+  "tolerance": 3,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-006",
+  "concept": "calc.fractions.v9_sept_vingtiemes",
+  "label": "7/20 en %",
+  "type": "gauge",
+  "difficulty": 34,
+  "prompt": "7/20, c'est quel pourcentage ?",
+  "explanation": "7/20 = 35/100 = 35 %.",
+  "answer": 35,
+  "tolerance": 2,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-007",
+  "concept": "calc.percent.v9_vie_sommeil",
+  "label": "Une vie à dormir",
+  "type": "gauge",
+  "difficulty": 30,
+  "prompt": "Tu dors 8 heures par nuit. Quelle part de ta vie passes-tu à dormir ?",
+  "explanation": "8 heures sur 24 : un tiers, environ 33 %.",
+  "answer": 33,
+  "tolerance": 3,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-008",
+  "concept": "calc.percent.v9_victoires_14_40",
+  "label": "Les victoires",
+  "type": "gauge",
+  "difficulty": 38,
+  "prompt": "Une équipe a gagné 14 matchs sur 40. Quel est son pourcentage de victoires ?",
+  "explanation": "14 ÷ 40 = 0,35, soit 35 %.",
+  "answer": 35,
+  "tolerance": 3,
+  "unit": "%"
+ },
+ {
+  "key": "v9-gauge-009",
+  "concept": "calc.percent.v9_moins20_deux_fois",
+  "label": "Deux fois −20 %",
+  "type": "gauge",
+  "difficulty": 48,
+  "prompt": "Un article reçoit −20 %, puis encore −20 % sur le nouveau prix. Quelle est la remise totale ?",
+  "explanation": "100 → 80 → 64. La remise totale est de 36 %, pas de 40 %.",
+  "answer": 36,
+  "tolerance": 2,
+  "unit": "%"
+ }
+]

@@ -1,0 +1,67 @@
+[
+ {
+  "key": "v9-tl-001",
+  "concept": "calc.number_logic.v9_tl_fibonacci",
+  "label": "Les chiffres arrivent en Europe",
+  "type": "timeline",
+  "difficulty": 58,
+  "prompt": "En quelle année Fibonacci publie-t-il le « Liber abaci », qui fait connaître les chiffres indo-arabes en Europe ?",
+  "explanation": "En 1202, le Pisan Fibonacci montre que les chiffres de 0 à 9 calculent bien plus vite que les chiffres romains.",
+  "answer": 1202,
+  "tolerance": 10,
+  "min": 950,
+  "max": 1600
+ },
+ {
+  "key": "v9-tl-002",
+  "concept": "calc.number_logic.v9_tl_pascaline",
+  "label": "La Pascaline",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année Blaise Pascal invente-t-il sa machine à calculer, la Pascaline ?",
+  "explanation": "Pascal a 19 ans en 1642 ; il veut aider son père, collecteur d'impôts, à faire ses additions.",
+  "answer": 1642,
+  "tolerance": 5,
+  "min": 1500,
+  "max": 1900
+ },
+ {
+  "key": "v9-tl-003",
+  "concept": "calc.conversions.v9_tl_metre",
+  "label": "Le système métrique",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année la France adopte-t-elle le système métrique (mètre, gramme, litre) ?",
+  "explanation": "La loi du 7 avril 1795 crée le mètre, le gramme et le litre, pour remplacer des centaines de mesures locales.",
+  "answer": 1795,
+  "tolerance": 5,
+  "min": 1650,
+  "max": 1950
+ },
+ {
+  "key": "v9-tl-004",
+  "concept": "calc.number_logic.v9_tl_fermat",
+  "label": "Le théorème de Fermat",
+  "type": "timeline",
+  "difficulty": 62,
+  "prompt": "En quelle année Andrew Wiles démontre-t-il le grand théorème de Fermat, resté sans preuve pendant 350 ans ?",
+  "explanation": "Fermat l'avait énoncé vers 1637 « sans place dans la marge » pour la preuve. Wiles l'achève en 1994.",
+  "answer": 1994,
+  "tolerance": 3,
+  "min": 1900,
+  "max": 2020
+ },
+ {
+  "key": "v9-tl-005",
+  "concept": "logic.puzzles.v9_tl_euclide",
+  "label": "Les Éléments d'Euclide",
+  "type": "timeline",
+  "difficulty": 56,
+  "prompt": "Vers quelle année Euclide écrit-il ses « Éléments », le grand livre de géométrie de l'Antiquité ?",
+  "explanation": "Vers 300 av. J.-C., à Alexandrie. Le livre a servi à enseigner la géométrie pendant plus de 2 000 ans.",
+  "answer": -300,
+  "tolerance": 20,
+  "min": -800,
+  "max": 200
+ }
+]

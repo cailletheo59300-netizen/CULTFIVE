@@ -1,0 +1,496 @@
+[
+ {
+  "key": "v9-sort-001",
+  "concept": "calc.number_logic.v9_tri_div3",
+  "label": "Divisible par 3 ?",
+  "type": "sort",
+  "difficulty": 38,
+  "prompt": "Divisible par 3 ou pas ?",
+  "explanation": "Astuce : un nombre est divisible par 3 si la somme de ses chiffres l'est. 1+2+3 = 6, 4+7+1 = 12, 1+0+0+2 = 3 ; mais 2+5+0 = 7, 4, 1.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Divisible par 3"
+   },
+   {
+    "label": "Pas divisible"
+   }
+  ],
+  "items": [
+   [
+    "123",
+    0
+   ],
+   [
+    "471",
+    0
+   ],
+   [
+    "1 002",
+    0
+   ],
+   [
+    "250",
+    1
+   ],
+   [
+    "400",
+    1
+   ],
+   [
+    "1 000",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-002",
+  "concept": "calc.fractions.v9_tri_moitie",
+  "label": "Plus ou moins qu'une moitié",
+  "type": "sort",
+  "difficulty": 42,
+  "prompt": "Plus grand ou plus petit que 1/2 ?",
+  "explanation": "Une fraction dépasse 1/2 quand le haut fait plus de la moitié du bas : 3 < 3,5 ; 4 < 5 ; 5 > 4,5 ; 7 > 6.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Moins de 1/2"
+   },
+   {
+    "label": "Plus de 1/2"
+   }
+  ],
+  "items": [
+   [
+    "3/7",
+    0
+   ],
+   [
+    "4/10",
+    0
+   ],
+   [
+    "0,49",
+    0
+   ],
+   [
+    "5/9",
+    1
+   ],
+   [
+    "7/12",
+    1
+   ],
+   [
+    "51 %",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-003",
+  "concept": "calc.number_logic.v9_tri_signes",
+  "label": "Positif ou négatif ?",
+  "type": "sort",
+  "difficulty": 44,
+  "prompt": "Le résultat est-il positif ou négatif ?",
+  "explanation": "Moins par moins donne plus ; un nombre impair de signes « moins » dans un produit donne un résultat négatif.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Positif"
+   },
+   {
+    "label": "Négatif"
+   }
+  ],
+  "items": [
+   [
+    "(−3) × (−4)",
+    0
+   ],
+   [
+    "(−6) ÷ (−2)",
+    0
+   ],
+   [
+    "0 − (−5)",
+    0
+   ],
+   [
+    "(−2) × 5",
+    1
+   ],
+   [
+    "7 − 10",
+    1
+   ],
+   [
+    "(−1) × (−1) × (−1)",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-004",
+  "concept": "logic.puzzles.v9_tri_symetrie",
+  "label": "Lettres symétriques",
+  "type": "sort",
+  "difficulty": 36,
+  "prompt": "Ces lettres ont-elles un axe de symétrie vertical ?",
+  "explanation": "A, H, M et T sont identiques dans un miroir posé au milieu. F, G, J et R, non.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Oui"
+   },
+   {
+    "label": "Non"
+   }
+  ],
+  "items": [
+   [
+    "A",
+    0
+   ],
+   [
+    "H",
+    0
+   ],
+   [
+    "M",
+    0
+   ],
+   [
+    "T",
+    0
+   ],
+   [
+    "F",
+    1
+   ],
+   [
+    "G",
+    1
+   ],
+   [
+    "J",
+    1
+   ],
+   [
+    "R",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-005",
+  "concept": "calc.conversions.v9_tri_metre",
+  "label": "Plus ou moins d'un mètre",
+  "type": "sort",
+  "difficulty": 30,
+  "prompt": "Plus long ou plus court qu'un mètre ?",
+  "explanation": "1 m = 100 cm = 1 000 mm. 0,01 km = 10 m.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Moins d'1 m"
+   },
+   {
+    "label": "Plus d'1 m"
+   }
+  ],
+  "items": [
+   [
+    "95 cm",
+    0
+   ],
+   [
+    "0,9 m",
+    0
+   ],
+   [
+    "999 mm",
+    0
+   ],
+   [
+    "1 200 mm",
+    1
+   ],
+   [
+    "105 cm",
+    1
+   ],
+   [
+    "0,01 km",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-006",
+  "concept": "calc.conversions.v9_tri_heure",
+  "label": "Plus ou moins d'une heure",
+  "type": "sort",
+  "difficulty": 38,
+  "prompt": "Plus long ou plus court qu'une heure ?",
+  "explanation": "1 h = 60 min = 3 600 s. 0,8 h = 48 min ; 1/20 de journée = 72 min.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Moins d'1 h"
+   },
+   {
+    "label": "Plus d'1 h"
+   }
+  ],
+  "items": [
+   [
+    "3 000 s",
+    0
+   ],
+   [
+    "0,8 h",
+    0
+   ],
+   [
+    "59 min 59 s",
+    0
+   ],
+   [
+    "75 min",
+    1
+   ],
+   [
+    "4 000 s",
+    1
+   ],
+   [
+    "1/20 de journée",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-007",
+  "concept": "calc.mental.v9_tri_carres",
+  "label": "Carré parfait ou pas",
+  "type": "sort",
+  "difficulty": 34,
+  "prompt": "Carré parfait (le carré d'un nombre entier) ou pas ?",
+  "explanation": "49 = 7², 81 = 9², 144 = 12². 50, 90 et 120 tombent entre deux carrés.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Carré parfait"
+   },
+   {
+    "label": "Pas un carré"
+   }
+  ],
+  "items": [
+   [
+    "49",
+    0
+   ],
+   [
+    "81",
+    0
+   ],
+   [
+    "144",
+    0
+   ],
+   [
+    "50",
+    1
+   ],
+   [
+    "90",
+    1
+   ],
+   [
+    "120",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-008",
+  "concept": "logic.reasoning.v9_tri_dates",
+  "label": "Dates possibles",
+  "type": "sort",
+  "difficulty": 34,
+  "prompt": "Cette date existe-t-elle ?",
+  "explanation": "Avril et juin ont 30 jours. Février a 28 jours, 29 les années bissextiles comme 2024.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Existe"
+   },
+   {
+    "label": "N'existe pas"
+   }
+  ],
+  "items": [
+   [
+    "29 février 2024",
+    0
+   ],
+   [
+    "31 décembre",
+    0
+   ],
+   [
+    "31 août",
+    0
+   ],
+   [
+    "30 février",
+    1
+   ],
+   [
+    "31 avril",
+    1
+   ],
+   [
+    "31 juin",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-009",
+  "concept": "calc.number_logic.v9_tri_mult4",
+  "label": "Multiple de 4 ?",
+  "type": "sort",
+  "difficulty": 42,
+  "prompt": "Multiple de 4 ou pas ?",
+  "explanation": "Il suffit de regarder les deux derniers chiffres : 16, 24 et 00 sont multiples de 4 ; 14, 26 et 10, non.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Multiple de 4"
+   },
+   {
+    "label": "Pas multiple"
+   }
+  ],
+  "items": [
+   [
+    "116",
+    0
+   ],
+   [
+    "2 024",
+    0
+   ],
+   [
+    "1 000",
+    0
+   ],
+   [
+    "114",
+    1
+   ],
+   [
+    "2 026",
+    1
+   ],
+   [
+    "1 010",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-010",
+  "concept": "logic.sequences.v9_tri_suites",
+  "label": "Ajouter ou multiplier",
+  "type": "sort",
+  "difficulty": 32,
+  "prompt": "Comment avance chaque suite ?",
+  "explanation": "3, 6, 9 : +3 ; 2, 7, 12 : +5 ; 10, 20, 30 : +10. 3, 6, 12 : ×2 ; 1, 5, 25 : ×5 ; 10, 100 : ×10.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "On ajoute"
+   },
+   {
+    "label": "On multiplie"
+   }
+  ],
+  "items": [
+   [
+    "3, 6, 9, 12",
+    0
+   ],
+   [
+    "2, 7, 12, 17",
+    0
+   ],
+   [
+    "10, 20, 30, 40",
+    0
+   ],
+   [
+    "3, 6, 12, 24",
+    1
+   ],
+   [
+    "1, 5, 25, 125",
+    1
+   ],
+   [
+    "10, 100, 1 000",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v9-sort-011",
+  "concept": "calc.number_logic.v9_epoques_maths",
+  "label": "Les maths à travers les âges",
+  "type": "sort",
+  "difficulty": 44,
+  "prompt": "Place chaque découverte à son époque.",
+  "explanation": "Pythagore (VIᵉ siècle av. J.-C.), Fibonacci (1202), la Pascaline (1642), les premiers ordinateurs (années 1940).",
+  "layout": "timeline",
+  "groups": [
+   {
+    "label": "Antiquité",
+    "sub": "av. 476"
+   },
+   {
+    "label": "Moyen Âge",
+    "sub": "476 – 1492"
+   },
+   {
+    "label": "Temps modernes",
+    "sub": "1492 – 1789"
+   },
+   {
+    "label": "Époque contemporaine",
+    "sub": "depuis 1789"
+   }
+  ],
+  "items": [
+   [
+    "Le théorème de Pythagore",
+    0
+   ],
+   [
+    "Fibonacci et sa suite",
+    1
+   ],
+   [
+    "La machine à calculer de Pascal",
+    2
+   ],
+   [
+    "Le premier ordinateur",
+    3
+   ]
+  ]
+ }
+]
