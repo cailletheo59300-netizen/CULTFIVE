@@ -106,7 +106,9 @@
     "sport.champions.marchand_sport",
     "sport.champions.mark_spitz",
     "sport.champions.phelps",
-    "sport.champions.simone_biles"
+    "sport.champions.simone_biles",
+    "sport.champions.v10_leon_marchand",
+    "sport.champions.v10_phelps"
    ]
   },
   {
@@ -249,7 +251,8 @@
    "phrase": "Relie chaque champion à son sport.",
    "rarity": "common",
    "concepts": [
-    "sport.champions.sportifs_sports"
+    "sport.champions.sportifs_sports",
+    "sport.champions.v10_equipe_ou_individuel"
    ]
   }
  ],

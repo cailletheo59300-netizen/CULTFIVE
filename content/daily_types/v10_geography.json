@@ -1,0 +1,57 @@
+[
+ {
+  "key": "v10-geography-004",
+  "concept": "geography.countries.v10_ile_ou_pas",
+  "label": "Île ou pas ?",
+  "type": "sort",
+  "difficulty": 30,
+  "prompt": "Ce pays est-il une île (ou un groupe d'îles) ?",
+  "explanation": "La Bolivie, la Suisse et la Hongrie n'ont même pas d'accès à la mer.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Île"
+   },
+   {
+    "label": "Pas une île"
+   }
+  ],
+  "items": [
+   [
+    "Islande",
+    0
+   ],
+   [
+    "Madagascar",
+    0
+   ],
+   [
+    "Cuba",
+    0
+   ],
+   [
+    "Bolivie",
+    1
+   ],
+   [
+    "Suisse",
+    1
+   ],
+   [
+    "Hongrie",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v10-geography-008",
+  "concept": "geography.countries.v10_archipel",
+  "label": "L'archipel",
+  "type": "letters",
+  "difficulty": 36,
+  "prompt": "Groupe d'îles proches les unes des autres.",
+  "explanation": "Les Canaries, les Açores ou l'Indonésie sont des archipels.",
+  "word": "ARCHIPEL",
+  "display": "Archipel"
+ }
+]

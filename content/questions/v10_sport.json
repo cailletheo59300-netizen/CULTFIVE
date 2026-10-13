@@ -1,0 +1,122 @@
+[
+ {
+  "key": "v10-sport-001",
+  "concept": "sport.rules.v10_badminton_volant",
+  "label": "Le volant",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Dans quel sport frappe-t-on un volant avec une raquette ?",
+  "explanation": "Le volant peut dépasser 400 km/h sur un smash, un record parmi les sports de raquette.",
+  "options": [
+   "Le badminton*",
+   "Le tennis",
+   "Le squash",
+   "Le ping-pong"
+  ]
+ },
+ {
+  "key": "v10-sport-002",
+  "concept": "sport.rules.v10_palet_hockey",
+  "label": "Le palet",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel sport les joueurs se disputent-ils un palet avec une crosse ?",
+  "explanation": "Le palet (ou « puck ») est un disque de caoutchouc dur.",
+  "options": [
+   "Le hockey sur glace*",
+   "Le curling",
+   "Le golf",
+   "Le polo"
+  ]
+ },
+ {
+  "key": "v10-sport-003",
+  "concept": "sport.rules.v10_strike",
+  "label": "Le strike",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Dans quel jeu parle-t-on de « strike » quand on renverse toutes les quilles d'un coup ?",
+  "explanation": "Au bowling, 10 quilles ; trois strikes de suite s'appellent une « dinde ».",
+  "options": [
+   "Le bowling*",
+   "Le billard",
+   "La pétanque",
+   "Le baseball"
+  ]
+ },
+ {
+  "key": "v10-sport-004",
+  "concept": "sport.rules.v10_golf_parcours",
+  "label": "Le parcours de 18 trous",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Quel sport se joue avec des clubs et une petite balle blanche, sur un parcours de 18 trous ?",
+  "explanation": "Le but : mettre la balle dans chaque trou en un minimum de coups.",
+  "options": [
+   "Le golf*",
+   "Le croquet",
+   "Le cricket",
+   "Le hockey"
+  ]
+ },
+ {
+  "key": "v10-sport-006",
+  "concept": "sport.rules.v10_sets_gagnants",
+  "label": "Les sets à Roland-Garros",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "En simple messieurs à Roland-Garros, combien de sets faut-il gagner pour remporter un match ?",
+  "explanation": "Les matchs se jouent en 3 sets gagnants (5 au maximum) ; chez les femmes, en 2 sets gagnants.",
+  "options": [
+   "3*",
+   "2",
+   "4",
+   "5"
+  ]
+ },
+ {
+  "key": "v10-sport-009",
+  "concept": "sport.champions.v10_leon_marchand",
+  "label": "Léon Marchand",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Dans quel sport le Français Léon Marchand a-t-il gagné 4 médailles d'or aux Jeux de Paris 2024 ?",
+  "explanation": "Quatre titres individuels en quatre-nages et en brasse et papillon, dans la piscine de Paris La Défense Arena.",
+  "options": [
+   "La natation*",
+   "L'athlétisme",
+   "Le cyclisme",
+   "La gymnastique"
+  ]
+ },
+ {
+  "key": "v10-sport-010",
+  "concept": "sport.champions.v10_phelps",
+  "label": "Le recordman d'or",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel nageur américain détient le record de 23 médailles d'or olympiques ?",
+  "explanation": "Dont 8 titres aux seuls Jeux de Pékin, en 2008.",
+  "options": [
+   "Michael Phelps*",
+   "Mark Spitz",
+   "Ryan Lochte",
+   "Ian Thorpe"
+  ]
+ },
+ {
+  "key": "v10-sport-011",
+  "concept": "sport.football.v10_mbappe_2018",
+  "label": "Le jeune champion",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Quel jeune attaquant français a marqué en finale de la Coupe du monde 2018, à 19 ans ?",
+  "explanation": "Il devient le deuxième plus jeune buteur d'une finale de Coupe du monde, après Pelé.",
+  "options": [
+   "Kylian Mbappé*",
+   "Antoine Griezmann",
+   "Olivier Giroud",
+   "Karim Benzema"
+  ]
+ }
+]

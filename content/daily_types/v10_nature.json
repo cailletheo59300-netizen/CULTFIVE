@@ -1,0 +1,101 @@
+[
+ {
+  "key": "v10-nature-005",
+  "concept": "nature.animals.v10_papillon",
+  "label": "Le papillon",
+  "type": "letters",
+  "difficulty": 8,
+  "prompt": "Insecte aux ailes colorées, ancienne chenille.",
+  "explanation": "Ses ailes sont couvertes de minuscules écailles colorées.",
+  "word": "PAPILLON",
+  "display": "Papillon"
+ },
+ {
+  "key": "v10-nature-012",
+  "concept": "nature.marine.v10_mammifere_ou_poisson",
+  "label": "Mammifère ou poisson ?",
+  "type": "sort",
+  "difficulty": 28,
+  "prompt": "Mammifère marin ou poisson ?",
+  "explanation": "Les mammifères respirent de l'air avec des poumons et allaitent leurs petits.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Mammifère"
+   },
+   {
+    "label": "Poisson"
+   }
+  ],
+  "items": [
+   [
+    "Dauphin",
+    0
+   ],
+   [
+    "Phoque",
+    0
+   ],
+   [
+    "Orque",
+    0
+   ],
+   [
+    "Requin",
+    1
+   ],
+   [
+    "Thon",
+    1
+   ],
+   [
+    "Raie",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v10-nature-015",
+  "concept": "nature.plants.v10_feuilles_hiver",
+  "label": "Feuilles en hiver",
+  "type": "sort",
+  "difficulty": 30,
+  "prompt": "Cet arbre perd-il ses feuilles en hiver ?",
+  "explanation": "Le sapin, le pin et le houx sont « persistants ». Exception connue : le mélèze, un conifère qui perd ses aiguilles.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Perd ses feuilles"
+   },
+   {
+    "label": "Garde ses feuilles"
+   }
+  ],
+  "items": [
+   [
+    "Chêne",
+    0
+   ],
+   [
+    "Érable",
+    0
+   ],
+   [
+    "Hêtre",
+    0
+   ],
+   [
+    "Sapin",
+    1
+   ],
+   [
+    "Pin",
+    1
+   ],
+   [
+    "Houx",
+    1
+   ]
+  ]
+ }
+]

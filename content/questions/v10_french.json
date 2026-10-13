@@ -1,0 +1,227 @@
+[
+ {
+  "key": "v10-french-001",
+  "concept": "french.grammar.v10_pp_prendre",
+  "label": "Participe de prendre",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel est le participe passé du verbe « prendre » ?",
+  "explanation": "J'ai pris, tu as pris… On l'écrit avec un s : « prise » au féminin.",
+  "options": [
+   "Pris*",
+   "Prendu",
+   "Prit",
+   "Prenu"
+  ]
+ },
+ {
+  "key": "v10-french-002",
+  "concept": "french.grammar.v10_nous_faisons",
+  "label": "Nous faisons",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Complète : « Nous ___ nos devoirs. » (faire, au présent)",
+  "explanation": "Nous faisons, vous faites, ils font.",
+  "options": [
+   "faisons*",
+   "faison",
+   "fesons",
+   "faisont"
+  ]
+ },
+ {
+  "key": "v10-french-003",
+  "concept": "french.grammar.v10_subj_venir",
+  "label": "Il faut que je…",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "Complète : « Il faut que je ___ demain. » (venir)",
+  "explanation": "Après « il faut que », on met le subjonctif : que je vienne.",
+  "options": [
+   "vienne*",
+   "viens",
+   "viendrai",
+   "venais"
+  ]
+ },
+ {
+  "key": "v10-french-004",
+  "concept": "french.grammar.v10_verbe_phrase",
+  "label": "Trouver le verbe",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Dans la phrase « Le chat dort sur le canapé », quel mot est le verbe ?",
+  "explanation": "Le verbe indique l'action : dormir.",
+  "options": [
+   "dort*",
+   "chat",
+   "canapé",
+   "sur"
+  ]
+ },
+ {
+  "key": "v10-french-005",
+  "concept": "french.expressions.v10_tete_nuages",
+  "label": "La tête dans les nuages",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Que veut dire « avoir la tête dans les nuages » ?",
+  "explanation": "On pense à autre chose, loin de ce qui se passe autour.",
+  "options": [
+   "Être distrait, rêveur*",
+   "Être très grand",
+   "Avoir mal à la tête",
+   "Avoir peur de l'avion"
+  ]
+ },
+ {
+  "key": "v10-french-007",
+  "concept": "french.spelling.v10_rendez_vous",
+  "label": "Rendez-vous",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle est la bonne orthographe ?",
+  "explanation": "Avec un trait d'union, et un s même au singulier.",
+  "options": [
+   "Rendez-vous*",
+   "Rendez-vou",
+   "Randez-vous",
+   "Rendé-vous"
+  ]
+ },
+ {
+  "key": "v10-french-008",
+  "concept": "french.spelling.v10_parmi",
+  "label": "Parmi",
+  "type": "mcq",
+  "difficulty": 34,
+  "prompt": "Quelle est la bonne orthographe ?",
+  "explanation": "« Parmi » ne prend jamais de s, contrairement à « jamais » ou « toujours ».",
+  "options": [
+   "Parmi*",
+   "Parmis",
+   "Parmit",
+   "Parmie"
+  ]
+ },
+ {
+  "key": "v10-french-010",
+  "concept": "french.synonyms.v10_synonyme_rapide",
+  "label": "Rapide",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel mot est un synonyme de « rapide » ?",
+  "explanation": "Véloce vient du latin « velox », rapide, comme « vélocité ». Vorace veut dire qui mange beaucoup.",
+  "options": [
+   "Véloce*",
+   "Lent",
+   "Vélo",
+   "Vorace"
+  ]
+ },
+ {
+  "key": "v10-french-011",
+  "concept": "french.vocabulary.v10_vegetarien",
+  "label": "Sans viande",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment appelle-t-on une personne qui ne mange pas de viande ?",
+  "explanation": "Les végans, eux, ne consomment aucun produit d'origine animale (ni œufs, ni lait).",
+  "options": [
+   "Végétarien*",
+   "Carnivore",
+   "Gourmand",
+   "Omnivore"
+  ]
+ },
+ {
+  "key": "v10-french-012",
+  "concept": "french.vocabulary.v10_hebdomadaire",
+  "label": "Hebdomadaire",
+  "type": "mcq",
+  "difficulty": 28,
+  "prompt": "Que veut dire « hebdomadaire » ?",
+  "explanation": "Du grec « hebdomas », groupe de sept (jours). Chaque jour : quotidien ; chaque mois : mensuel.",
+  "options": [
+   "Chaque semaine*",
+   "Chaque jour",
+   "Chaque mois",
+   "Chaque année"
+  ]
+ },
+ {
+  "key": "v10-french-013",
+  "concept": "french.vocabulary.v10_procrastiner",
+  "label": "Procrastiner",
+  "type": "mcq",
+  "difficulty": 34,
+  "prompt": "Que veut dire « procrastiner » ?",
+  "explanation": "Du latin « cras », demain : repousser au lendemain ce qu'on pourrait faire aujourd'hui.",
+  "options": [
+   "Remettre à plus tard*",
+   "Se dépêcher",
+   "Faire la sieste",
+   "Se plaindre"
+  ]
+ },
+ {
+  "key": "v10-french-015",
+  "concept": "french.expressions.v10_cafard",
+  "label": "Avoir le cafard",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire « avoir le cafard » ?",
+  "explanation": "L'expression a été popularisée par Baudelaire au XIXᵉ siècle.",
+  "options": [
+   "Être triste, avoir des idées noires*",
+   "Avoir peur des insectes",
+   "Être sale",
+   "Avoir de la chance"
+  ]
+ },
+ {
+  "key": "v10-french-016",
+  "concept": "french.grammar.v10_sont_alles",
+  "label": "Ils sont allés",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Complète : « Hier, ils ___ à la plage. » (aller, au passé composé)",
+  "explanation": "« Aller » se conjugue avec l'auxiliaire être, et le participe s'accorde avec le sujet.",
+  "options": [
+   "sont allés*",
+   "ont allé",
+   "sont allé",
+   "ont allés"
+  ]
+ },
+ {
+  "key": "v10-french-017",
+  "concept": "french.vocabulary.v10_etc",
+  "label": "Etc.",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Que veut dire l'abréviation « etc. » ?",
+  "explanation": "Du latin « et cetera » : et les autres choses.",
+  "options": [
+   "Et le reste (et cetera)*",
+   "Et c'est tout",
+   "En tout cas",
+   "En tête de chapitre"
+  ]
+ },
+ {
+  "key": "v10-french-018",
+  "concept": "french.spelling.v10_mal_ecrit",
+  "label": "Le mot mal écrit",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Lequel de ces mots est mal écrit ?",
+  "explanation": "On écrit « développer » : deux p, un seul l.",
+  "options": [
+   "Dévelloper*",
+   "Appeler",
+   "Bibliothèque",
+   "Courrier"
+  ]
+ }
+]

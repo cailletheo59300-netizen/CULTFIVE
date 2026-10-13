@@ -1,0 +1,101 @@
+[
+ {
+  "key": "v10-sport-005",
+  "concept": "sport.rules.v10_peloton",
+  "label": "Le peloton",
+  "type": "letters",
+  "difficulty": 24,
+  "prompt": "Grand groupe de coureurs cyclistes qui roulent ensemble.",
+  "explanation": "Rouler dans le peloton fait économiser jusqu'à 40 % d'effort grâce à l'abri du vent.",
+  "word": "PELOTON",
+  "display": "Peloton"
+ },
+ {
+  "key": "v10-sport-007",
+  "concept": "sport.champions.v10_equipe_ou_individuel",
+  "label": "Équipe ou individuel ?",
+  "type": "sort",
+  "difficulty": 8,
+  "prompt": "Sport d'équipe ou sport individuel ?",
+  "explanation": "En natation, il existe des relais par équipe, mais chaque nageur court seul dans son couloir.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Équipe"
+   },
+   {
+    "label": "Individuel"
+   }
+  ],
+  "items": [
+   [
+    "Handball",
+    0
+   ],
+   [
+    "Volley-ball",
+    0
+   ],
+   [
+    "Water-polo",
+    0
+   ],
+   [
+    "Judo",
+    1
+   ],
+   [
+    "Golf",
+    1
+   ],
+   [
+    "Natation",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v10-sport-008",
+  "concept": "sport.olympics.v10_hiver_ou_ete",
+  "label": "Jeux d'hiver ou d'été ?",
+  "type": "sort",
+  "difficulty": 20,
+  "prompt": "Ce sport fait-il partie des Jeux d'hiver ou des Jeux d'été ?",
+  "explanation": "Le biathlon mêle ski de fond et tir à la carabine ; l'aviron se pratique en bateau à rames.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Hiver"
+   },
+   {
+    "label": "Été"
+   }
+  ],
+  "items": [
+   [
+    "Curling",
+    0
+   ],
+   [
+    "Biathlon",
+    0
+   ],
+   [
+    "Bobsleigh",
+    0
+   ],
+   [
+    "Aviron",
+    1
+   ],
+   [
+    "Escrime",
+    1
+   ],
+   [
+    "Tir à l'arc",
+    1
+   ]
+  ]
+ }
+]

@@ -1,0 +1,72 @@
+[
+ {
+  "key": "v10-french-006",
+  "concept": "french.expressions.v10_qui_vivra",
+  "label": "Qui vivra verra",
+  "type": "word_order",
+  "difficulty": 26,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "explanation": "On ne peut pas savoir l'avenir : il faut attendre pour voir.",
+  "answer": "Qui vivra verra.",
+  "words": [
+   "Qui",
+   "vivra",
+   "verra"
+  ]
+ },
+ {
+  "key": "v10-french-009",
+  "concept": "french.spelling.v10_orthographe_l",
+  "label": "Orthographe",
+  "type": "letters",
+  "difficulty": 18,
+  "prompt": "Manière correcte d'écrire les mots.",
+  "explanation": "Du grec « orthos » (droit) et « graphein » (écrire).",
+  "word": "ORTHOGRAPHE",
+  "display": "Orthographe"
+ },
+ {
+  "key": "v10-french-014",
+  "concept": "french.grammar.v10_masc_fem",
+  "label": "Masculin ou féminin ?",
+  "type": "sort",
+  "difficulty": 42,
+  "prompt": "Ces noms sont-ils masculins ou féminins ?",
+  "explanation": "Un avion, un orage, un pétale ; une écharpe, une armoire, une oasis. Pétale et oasis sont des pièges fréquents.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Masculin (un)"
+   },
+   {
+    "label": "Féminin (une)"
+   }
+  ],
+  "items": [
+   [
+    "Avion",
+    0
+   ],
+   [
+    "Orage",
+    0
+   ],
+   [
+    "Pétale",
+    0
+   ],
+   [
+    "Écharpe",
+    1
+   ],
+   [
+    "Armoire",
+    1
+   ],
+   [
+    "Oasis",
+    1
+   ]
+  ]
+ }
+]

@@ -1,0 +1,137 @@
+[
+ {
+  "key": "v10-science-001",
+  "concept": "science.human_body.v10_papilles",
+  "label": "Les papilles",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Où se trouvent les papilles qui nous permettent de sentir le goût des aliments ?",
+  "explanation": "Nous en avons des milliers ; le nez aide aussi beaucoup à reconnaître les saveurs.",
+  "options": [
+   "Sur la langue*",
+   "Dans le nez",
+   "Sur les dents",
+   "Dans l'oreille"
+  ]
+ },
+ {
+  "key": "v10-science-002",
+  "concept": "science.human_body.v10_estomac",
+  "label": "Après l'œsophage",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Dans quel organe les aliments arrivent-ils juste après l'œsophage ?",
+  "explanation": "L'estomac brasse les aliments avec des sucs acides pendant quelques heures.",
+  "options": [
+   "L'estomac*",
+   "Le foie",
+   "Les poumons",
+   "Le cœur"
+  ]
+ },
+ {
+  "key": "v10-science-003",
+  "concept": "science.human_body.v10_globules_blancs",
+  "label": "Les défenseurs du corps",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quels éléments du sang combattent les microbes ?",
+  "explanation": "Les globules rouges transportent l'oxygène ; les plaquettes aident à refermer les plaies.",
+  "options": [
+   "Les globules blancs*",
+   "Les globules rouges",
+   "Les plaquettes",
+   "Le plasma"
+  ]
+ },
+ {
+  "key": "v10-science-004",
+  "concept": "science.physics.v10_boussole_nord",
+  "label": "La boussole",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Vers quel point cardinal pointe l'aiguille d'une boussole ?",
+  "explanation": "L'aiguille aimantée s'aligne sur le champ magnétique de la Terre.",
+  "options": [
+   "Le nord*",
+   "Le sud",
+   "L'est",
+   "L'ouest"
+  ]
+ },
+ {
+  "key": "v10-science-005",
+  "concept": "science.physics.v10_cuivre_fils",
+  "label": "Les fils électriques",
+  "type": "mcq",
+  "difficulty": 26,
+  "prompt": "Quel métal trouve-t-on dans la plupart des fils électriques, car il conduit très bien le courant ?",
+  "explanation": "Le cuivre conduit presque aussi bien que l'argent, pour bien moins cher.",
+  "options": [
+   "Le cuivre*",
+   "Le fer",
+   "L'or",
+   "Le plomb"
+  ]
+ },
+ {
+  "key": "v10-science-008",
+  "concept": "science.physics.v10_curie_nobel",
+  "label": "Marie Curie",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle scientifique a été la première femme à recevoir un prix Nobel ?",
+  "explanation": "En 1903, en physique ; elle reçoit un second Nobel, de chimie, en 1911.",
+  "options": [
+   "Marie Curie*",
+   "Rosalind Franklin",
+   "Ada Lovelace",
+   "Irène Joliot-Curie"
+  ]
+ },
+ {
+  "key": "v10-science-010",
+  "concept": "science.physics.v10_watts",
+  "label": "Les watts",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle unité indique-t-on la puissance d'une ampoule ?",
+  "explanation": "Le watt doit son nom à James Watt, l'inventeur de la machine à vapeur moderne.",
+  "options": [
+   "Le watt*",
+   "Le volt",
+   "Le mètre",
+   "Le litre"
+  ]
+ },
+ {
+  "key": "v10-science-011",
+  "concept": "science.human_body.v10_reins",
+  "label": "Les reins",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Quels organes filtrent le sang et fabriquent l'urine ?",
+  "explanation": "Ils filtrent environ 180 litres de sang par jour.",
+  "options": [
+   "Les reins*",
+   "Les poumons",
+   "L'estomac",
+   "Le cœur"
+  ]
+ },
+ {
+  "key": "v10-science-012",
+  "concept": "science.human_body.v10_oreille_equilibre",
+  "label": "L'oreille et l'équilibre",
+  "type": "mcq",
+  "difficulty": 44,
+  "prompt": "En plus d'entendre, à quoi sert l'oreille interne ?",
+  "explanation": "De petits canaux remplis de liquide renseignent le cerveau sur les mouvements de la tête.",
+  "options": [
+   "À garder l'équilibre*",
+   "À sentir les odeurs",
+   "À régler la température",
+   "À avaler"
+  ]
+ }
+]

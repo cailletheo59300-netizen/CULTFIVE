@@ -1,0 +1,107 @@
+[
+ {
+  "key": "v10-basics-001",
+  "concept": "calc.mental.v10_moitie_3h",
+  "label": "La moitié de 3 heures",
+  "type": "numeric",
+  "difficulty": 12,
+  "prompt": "Combien de minutes fait la moitié de 3 heures ?",
+  "explanation": "3 heures = 180 minutes ; la moitié, 90 minutes (1 h 30).",
+  "answer": 90
+ },
+ {
+  "key": "v10-basics-002",
+  "concept": "calc.mental.v10_places_cinema",
+  "label": "Les places de cinéma",
+  "type": "numeric",
+  "difficulty": 14,
+  "prompt": "Tu as 20 €. Tu achètes 3 places de cinéma à 6 €. Combien te reste-t-il, en euros ?",
+  "explanation": "3 × 6 = 18 € ; 20 − 18 = 2 €.",
+  "answer": 2
+ },
+ {
+  "key": "v10-basics-003",
+  "concept": "calc.conversions.v10_mois_3ans",
+  "label": "Mois en 3 ans",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Combien de mois y a-t-il dans 3 ans ?",
+  "explanation": "12 × 3 = 36 mois.",
+  "answer": 36
+ },
+ {
+  "key": "v10-basics-004",
+  "concept": "calc.conversions.v10_g_15kg",
+  "label": "Grammes",
+  "type": "numeric",
+  "difficulty": 14,
+  "prompt": "Combien de grammes font 1,5 kg ?",
+  "explanation": "1 kg = 1 000 g, donc 1,5 kg = 1 500 g.",
+  "answer": 1500
+ },
+ {
+  "key": "v10-basics-005",
+  "concept": "logic.reasoning.v10_hier_lundi",
+  "label": "Hier",
+  "type": "mcq",
+  "difficulty": 6,
+  "prompt": "Si aujourd'hui est lundi, quel jour était-on hier ?",
+  "explanation": "La veille du lundi, c'est le dimanche.",
+  "options": [
+   "Dimanche*",
+   "Mardi",
+   "Samedi",
+   "Lundi"
+  ]
+ },
+ {
+  "key": "v10-basics-006",
+  "concept": "logic.reasoning.v10_intrus_fruits",
+  "label": "L'intrus du panier",
+  "type": "mcq",
+  "difficulty": 6,
+  "prompt": "Quel est l'intrus : pomme, banane, carotte, poire ?",
+  "explanation": "La carotte est un légume ; les autres sont des fruits.",
+  "options": [
+   "Carotte*",
+   "Pomme",
+   "Banane",
+   "Poire"
+  ]
+ },
+ {
+  "key": "v10-basics-007",
+  "concept": "logic.sequences.v10_jours_un_sur_deux",
+  "label": "Un jour sur deux",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Complète : lundi, mercredi, vendredi, …",
+  "explanation": "On saute un jour à chaque fois : lundi (mardi) mercredi (jeudi) vendredi (samedi) dimanche.",
+  "options": [
+   "Dimanche*",
+   "Samedi",
+   "Jeudi",
+   "Mardi"
+  ]
+ },
+ {
+  "key": "v10-basics-008",
+  "concept": "logic.puzzles.v10_paul_soeurs",
+  "label": "La famille de Paul",
+  "type": "numeric",
+  "difficulty": 18,
+  "prompt": "Paul a 2 sœurs et pas de frère. Combien d'enfants y a-t-il dans sa famille ?",
+  "explanation": "Paul et ses 2 sœurs : 3 enfants.",
+  "answer": 3
+ },
+ {
+  "key": "v10-basics-009",
+  "concept": "logic.puzzles.v10_pattes_ferme",
+  "label": "Les pattes de la ferme",
+  "type": "numeric",
+  "difficulty": 16,
+  "prompt": "Dans une ferme, il y a 3 vaches et 2 poules. Combien de pattes en tout ?",
+  "explanation": "3 × 4 = 12 pattes pour les vaches, 2 × 2 = 4 pour les poules : 16.",
+  "answer": 16
+ }
+]

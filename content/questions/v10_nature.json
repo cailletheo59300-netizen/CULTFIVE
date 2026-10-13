@@ -1,0 +1,192 @@
+[
+ {
+  "key": "v10-nature-001",
+  "concept": "nature.animals.v10_louveteau",
+  "label": "Le petit du loup",
+  "type": "mcq",
+  "difficulty": 24,
+  "prompt": "Comment s'appelle le petit du loup ?",
+  "explanation": "Les louveteaux naissent aveugles, au printemps, dans une tanière.",
+  "options": [
+   "Le louveteau*",
+   "Le loupiot",
+   "Le louvard",
+   "Le lionceau"
+  ]
+ },
+ {
+  "key": "v10-nature-002",
+  "concept": "nature.animals.v10_colibri_arriere",
+  "label": "Voler en arrière",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Quel oiseau est capable de voler en marche arrière ?",
+  "explanation": "Ses ailes battent jusqu'à 80 fois par seconde : il peut faire du surplace et reculer.",
+  "options": [
+   "Le colibri*",
+   "L'aigle",
+   "Le pigeon",
+   "Le perroquet"
+  ]
+ },
+ {
+  "key": "v10-nature-003",
+  "concept": "nature.animals.v10_chenille_papillon",
+  "label": "Avant le papillon",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Avant de devenir papillon, quel animal est-il ?",
+  "explanation": "La chenille s'enferme dans une chrysalide, puis en sort transformée en papillon.",
+  "options": [
+   "Une chenille*",
+   "Un ver de terre",
+   "Un têtard",
+   "Une larve de mouche"
+  ]
+ },
+ {
+  "key": "v10-nature-004",
+  "concept": "nature.animals.v10_herisson",
+  "label": "La boule de piquants",
+  "type": "mcq",
+  "difficulty": 6,
+  "prompt": "Quel petit animal des bois se roule en boule hérissée de piquants quand il a peur ?",
+  "explanation": "Un hérisson porte environ 6 000 piquants.",
+  "options": [
+   "Le hérisson*",
+   "L'écureuil",
+   "Le blaireau",
+   "La taupe"
+  ]
+ },
+ {
+  "key": "v10-nature-006",
+  "concept": "nature.earth.v10_thermometre",
+  "label": "Mesurer la température",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Quel instrument mesure la température ?",
+  "explanation": "Le baromètre mesure la pression de l'air, le sismographe les secousses du sol.",
+  "options": [
+   "Le thermomètre*",
+   "Le baromètre",
+   "La boussole",
+   "Le sismographe"
+  ]
+ },
+ {
+  "key": "v10-nature-007",
+  "concept": "nature.earth.v10_ete_21juin",
+  "label": "Le 21 juin",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "En France, quelle saison commence vers le 21 juin ?",
+  "explanation": "Le 21 juin est aussi le jour le plus long de l'année dans l'hémisphère Nord.",
+  "options": [
+   "L'été*",
+   "Le printemps",
+   "L'automne",
+   "L'hiver"
+  ]
+ },
+ {
+  "key": "v10-nature-008",
+  "concept": "nature.earth.v10_evaporation",
+  "label": "L'évaporation",
+  "type": "mcq",
+  "difficulty": 24,
+  "prompt": "Comment s'appelle le passage de l'eau liquide à l'état de vapeur ?",
+  "explanation": "La condensation est l'inverse : la vapeur redevient liquide, comme la buée.",
+  "options": [
+   "L'évaporation*",
+   "La condensation",
+   "La fusion",
+   "La solidification"
+  ]
+ },
+ {
+  "key": "v10-nature-009",
+  "concept": "nature.earth.v10_lave",
+  "label": "La lave",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle la roche fondue qui sort d'un volcan en éruption ?",
+  "explanation": "Sous terre on parle de magma ; à la surface, de lave, qui peut dépasser 1 000 °C.",
+  "options": [
+   "La lave*",
+   "Le magma solide",
+   "Le granite",
+   "Le sable"
+  ]
+ },
+ {
+  "key": "v10-nature-010",
+  "concept": "nature.marine.v10_branchies",
+  "label": "Respirer sous l'eau",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Grâce à quoi les poissons respirent-ils sous l'eau ?",
+  "explanation": "Les branchies captent l'oxygène dissous dans l'eau.",
+  "options": [
+   "Des branchies*",
+   "Des poumons",
+   "Leurs nageoires",
+   "Leurs écailles"
+  ]
+ },
+ {
+  "key": "v10-nature-011",
+  "concept": "nature.marine.v10_bernard_ermite",
+  "label": "La maison d'emprunt",
+  "type": "mcq",
+  "difficulty": 32,
+  "prompt": "Quel crustacé se protège en s'installant dans une coquille vide qui ne lui appartient pas ?",
+  "explanation": "Quand il grandit, il déménage dans une coquille plus grande.",
+  "options": [
+   "Le bernard-l'ermite*",
+   "Le homard",
+   "La crevette",
+   "L'oursin"
+  ]
+ },
+ {
+  "key": "v10-nature-013",
+  "concept": "nature.plants.v10_cacao",
+  "label": "Le chocolat",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Avec quoi fabrique-t-on le chocolat ?",
+  "explanation": "Les fèves poussent dans les cabosses du cacaoyer, un arbre des régions tropicales.",
+  "options": [
+   "Les fèves de cacao*",
+   "Les grains de café",
+   "Les noisettes",
+   "Les dattes"
+  ]
+ },
+ {
+  "key": "v10-nature-014",
+  "concept": "nature.plants.v10_champignon_plante",
+  "label": "Le champignon",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le champignon est une plante.",
+  "explanation": "Faux : les champignons forment un règne à part. Ils ne font pas de photosynthèse et ressemblent plus aux animaux qu'aux plantes par certains côtés.",
+  "answer": false
+ },
+ {
+  "key": "v10-nature-016",
+  "concept": "nature.animals.v10_tete_en_bas",
+  "label": "La tête en bas",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quel animal dort suspendu la tête en bas ?",
+  "explanation": "Ses pattes se bloquent automatiquement : elle ne fait aucun effort pour rester accrochée.",
+  "options": [
+   "La chauve-souris*",
+   "Le hibou",
+   "Le singe",
+   "L'écureuil"
+  ]
+ }
+]

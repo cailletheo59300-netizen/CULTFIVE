@@ -1,0 +1,106 @@
+[
+ {
+  "key": "v10-science-006",
+  "concept": "science.physics.v10_etats_tri",
+  "label": "Solide, liquide ou gaz",
+  "type": "sort",
+  "difficulty": 18,
+  "prompt": "Solide, liquide ou gaz, à température ambiante ?",
+  "explanation": "Le mercure est le seul métal liquide à température ambiante.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Solide"
+   },
+   {
+    "label": "Liquide"
+   },
+   {
+    "label": "Gaz"
+   }
+  ],
+  "items": [
+   [
+    "Fer",
+    0
+   ],
+   [
+    "Sel",
+    0
+   ],
+   [
+    "Huile",
+    1
+   ],
+   [
+    "Mercure",
+    1
+   ],
+   [
+    "Oxygène",
+    2
+   ],
+   [
+    "Hélium",
+    2
+   ]
+  ]
+ },
+ {
+  "key": "v10-science-007",
+  "concept": "science.space.v10_planete_ou_pas",
+  "label": "Planète ou pas ?",
+  "type": "sort",
+  "difficulty": 30,
+  "prompt": "Est-ce une planète ?",
+  "explanation": "La Lune est un satellite, le Soleil une étoile ; Pluton est une planète naine depuis 2006.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Planète"
+   },
+   {
+    "label": "Pas une planète"
+   }
+  ],
+  "items": [
+   [
+    "Mars",
+    0
+   ],
+   [
+    "Vénus",
+    0
+   ],
+   [
+    "Neptune",
+    0
+   ],
+   [
+    "La Lune",
+    1
+   ],
+   [
+    "Le Soleil",
+    1
+   ],
+   [
+    "Pluton",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v10-science-009",
+  "concept": "science.biology.v10_tl_rage",
+  "label": "Le vaccin contre la rage",
+  "type": "timeline",
+  "difficulty": 52,
+  "prompt": "En quelle année Louis Pasteur vaccine-t-il pour la première fois un enfant contre la rage ?",
+  "explanation": "Le jeune Joseph Meister, mordu par un chien enragé, survit grâce au vaccin, en juillet 1885.",
+  "answer": 1885,
+  "tolerance": 5,
+  "min": 1750,
+  "max": 1950
+ }
+]

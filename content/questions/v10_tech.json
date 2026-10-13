@@ -1,0 +1,77 @@
+[
+ {
+  "key": "v10-tech-001",
+  "concept": "tech.brands.v10_twitter_oiseau",
+  "label": "L'oiseau bleu",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Quel réseau social avait pour logo un oiseau bleu, avant de devenir « X » en 2023 ?",
+  "explanation": "Racheté par Elon Musk en 2022, Twitter est rebaptisé X l'année suivante.",
+  "options": [
+   "Twitter*",
+   "Facebook",
+   "Instagram",
+   "Snapchat"
+  ]
+ },
+ {
+  "key": "v10-tech-002",
+  "concept": "tech.brands.v10_tiktok",
+  "label": "Les vidéos courtes",
+  "type": "mcq",
+  "difficulty": 16,
+  "prompt": "Quelle application de vidéos courtes a été créée par une entreprise chinoise ?",
+  "explanation": "TikTok appartient à ByteDance, une société chinoise fondée en 2012.",
+  "options": [
+   "TikTok*",
+   "YouTube",
+   "Snapchat",
+   "Twitch"
+  ]
+ },
+ {
+  "key": "v10-tech-003",
+  "concept": "tech.brands.v10_playstation",
+  "label": "La console de Sony",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle console de jeux vidéo est fabriquée par Sony ?",
+  "explanation": "La Xbox est de Microsoft ; la Switch et la Wii de Nintendo.",
+  "options": [
+   "La PlayStation*",
+   "La Xbox",
+   "La Switch",
+   "La Wii"
+  ]
+ },
+ {
+  "key": "v10-tech-004",
+  "concept": "tech.brands.v10_minecraft",
+  "label": "Les blocs",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quel jeu vidéo construit-on un monde entier avec des blocs ?",
+  "explanation": "Le jeu vidéo le plus vendu de l'histoire, avec plus de 300 millions d'exemplaires.",
+  "options": [
+   "Minecraft*",
+   "Fortnite",
+   "Tetris",
+   "Mario Kart"
+  ]
+ },
+ {
+  "key": "v10-tech-007",
+  "concept": "tech.brands.v10_qr_code",
+  "label": "Le QR code",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que veut dire « QR » dans « QR code » ?",
+  "explanation": "Inventé au Japon en 1994 pour suivre des pièces automobiles.",
+  "options": [
+   "Quick Response (réponse rapide)*",
+   "Quality Rating",
+   "Quadruple Rectangle",
+   "Question-Réponse"
+  ]
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "key": "v10-geography-001",
+  "concept": "geography.countries.v10_bonne_mere",
+  "label": "La Bonne Mère",
+  "type": "mcq",
+  "difficulty": 14,
+  "prompt": "Dans quelle ville se trouvent le Vieux-Port et la basilique Notre-Dame-de-la-Garde, surnommée « la Bonne Mère » ?",
+  "explanation": "La basilique domine la ville du haut de sa colline.",
+  "options": [
+   "Marseille*",
+   "Nice",
+   "Bordeaux",
+   "Lyon"
+  ]
+ },
+ {
+  "key": "v10-geography-002",
+  "concept": "geography.countries.v10_bresil_portugais",
+  "label": "Le portugais en Amérique",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Dans quel pays d'Amérique du Sud parle-t-on portugais ?",
+  "explanation": "Le Brésil a été une colonie portugaise ; ses voisins parlent espagnol.",
+  "options": [
+   "Le Brésil*",
+   "L'Argentine",
+   "Le Pérou",
+   "Le Chili"
+  ]
+ },
+ {
+  "key": "v10-geography-003",
+  "concept": "geography.countries.v10_mexique_espagnol",
+  "label": "La langue du Mexique",
+  "type": "mcq",
+  "difficulty": 12,
+  "prompt": "Quelle langue parle-t-on au Mexique ?",
+  "explanation": "Le Mexique est le pays qui compte le plus d'hispanophones au monde.",
+  "options": [
+   "L'espagnol*",
+   "Le portugais",
+   "L'anglais",
+   "Le mexicain"
+  ]
+ },
+ {
+  "key": "v10-geography-005",
+  "concept": "geography.relief.v10_atlantique",
+  "label": "Entre l'Europe et l'Amérique",
+  "type": "mcq",
+  "difficulty": 8,
+  "prompt": "Quel océan sépare l'Europe de l'Amérique ?",
+  "explanation": "Le Pacifique, le plus grand, sépare l'Amérique de l'Asie.",
+  "options": [
+   "L'océan Atlantique*",
+   "L'océan Pacifique",
+   "L'océan Indien",
+   "L'océan Arctique"
+  ]
+ },
+ {
+  "key": "v10-geography-006",
+  "concept": "geography.relief.v10_groenland",
+  "label": "La plus grande île",
+  "type": "mcq",
+  "difficulty": 36,
+  "prompt": "Quelle est la plus grande île du monde ?",
+  "explanation": "L'Australie est considérée comme un continent. Le Groenland est quatre fois plus grand que la France.",
+  "options": [
+   "Le Groenland*",
+   "Madagascar",
+   "L'Australie",
+   "La Grande-Bretagne"
+  ]
+ },
+ {
+  "key": "v10-geography-007",
+  "concept": "geography.relief.v10_gibraltar",
+  "label": "Entre l'Espagne et le Maroc",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel détroit sépare l'Espagne du Maroc ?",
+  "explanation": "14 km seulement séparent l'Europe de l'Afrique.",
+  "options": [
+   "Le détroit de Gibraltar*",
+   "Le Bosphore",
+   "Le pas de Calais",
+   "Le détroit de Magellan"
+  ]
+ },
+ {
+  "key": "v10-geography-009",
+  "concept": "geography.monuments.v10_big_ben",
+  "label": "Big Ben",
+  "type": "mcq",
+  "difficulty": 6,
+  "prompt": "Dans quelle ville se trouve Big Ben ?",
+  "explanation": "Big Ben est le nom de la grosse cloche de la tour de l'horloge du palais de Westminster.",
+  "options": [
+   "Londres*",
+   "Paris",
+   "Rome",
+   "Berlin"
+  ]
+ },
+ {
+  "key": "v10-geography-010",
+  "concept": "geography.monuments.v10_taj_mahal",
+  "label": "Le Taj Mahal",
+  "type": "mcq",
+  "difficulty": 22,
+  "prompt": "Dans quel pays se trouve le Taj Mahal ?",
+  "explanation": "Un mausolée de marbre blanc, construit à Agra au XVIIᵉ siècle par un empereur pour son épouse.",
+  "options": [
+   "L'Inde*",
+   "Le Pakistan",
+   "La Thaïlande",
+   "L'Iran"
+  ]
+ },
+ {
+  "key": "v10-geography-011",
+  "concept": "geography.countries.v10_nigeria",
+  "label": "Le géant africain",
+  "type": "mcq",
+  "difficulty": 52,
+  "prompt": "Quel est le pays le plus peuplé d'Afrique ?",
+  "explanation": "Plus de 220 millions d'habitants.",
+  "options": [
+   "Le Nigeria*",
+   "L'Égypte",
+   "L'Éthiopie",
+   "L'Afrique du Sud"
+  ]
+ },
+ {
+  "key": "v10-geography-012",
+  "concept": "geography.countries.v10_kilimandjaro",
+  "label": "Le Kilimandjaro",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Dans quel pays se trouve le Kilimandjaro, le plus haut sommet d'Afrique ?",
+  "explanation": "Il culmine à 5 895 m, tout près de la frontière avec le Kenya.",
+  "options": [
+   "La Tanzanie*",
+   "Le Kenya",
+   "L'Éthiopie",
+   "L'Afrique du Sud"
+  ]
+ },
+ {
+  "key": "v10-geography-013",
+  "concept": "geography.countries.v10_toronto",
+  "label": "La plus grande ville du Canada",
+  "type": "mcq",
+  "difficulty": 46,
+  "prompt": "Quelle est la plus grande ville du Canada ?",
+  "explanation": "Ottawa est la capitale, mais Toronto compte bien plus d'habitants.",
+  "options": [
+   "Toronto*",
+   "Ottawa",
+   "Montréal",
+   "Vancouver"
+  ]
+ },
+ {
+  "key": "v10-geography-014",
+  "concept": "geography.countries.v10_barcelone",
+  "label": "Barcelone",
+  "type": "mcq",
+  "difficulty": 6,
+  "prompt": "Dans quel pays se trouve la ville de Barcelone ?",
+  "explanation": "Capitale de la Catalogne, au bord de la Méditerranée.",
+  "options": [
+   "L'Espagne*",
+   "L'Italie",
+   "Le Portugal",
+   "La France"
+  ]
+ }
+]

@@ -144,7 +144,8 @@
     "science.physics.changements_d_etat",
     "science.physics.plasma_etat",
     "science.physics.sublimation",
-    "science.physics.verre_liquide"
+    "science.physics.verre_liquide",
+    "science.physics.v10_etats_tri"
    ]
   },
   {
@@ -167,7 +168,9 @@
     "science.physics.loi_d_ohm",
     "science.physics.metal_conducts",
     "science.physics.volt",
-    "science.physics.watt_unit"
+    "science.physics.watt_unit",
+    "science.physics.v10_cuivre_fils",
+    "science.physics.v10_watts"
    ]
   },
   {
@@ -183,7 +186,8 @@
    "concepts": [
     "science.physics.acc_aimant_fer",
     "science.physics.boussole",
-    "science.physics.magnet_poles"
+    "science.physics.magnet_poles",
+    "science.physics.v10_boussole_nord"
    ]
   },
   {
@@ -222,7 +226,8 @@
     "science.physics.charge_neutron",
     "science.physics.expert_higgs",
     "science.physics.noyau_atome",
-    "science.physics.noyau_atomique"
+    "science.physics.noyau_atomique",
+    "science.physics.v10_curie_nobel"
    ]
   },
   {

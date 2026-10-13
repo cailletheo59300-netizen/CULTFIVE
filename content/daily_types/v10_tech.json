@@ -1,0 +1,57 @@
+[
+ {
+  "key": "v10-tech-005",
+  "concept": "tech.brands.v10_marque_francaise",
+  "label": "Marque française ?",
+  "type": "sort",
+  "difficulty": 18,
+  "prompt": "Cette marque est-elle française ?",
+  "explanation": "Fiat est italienne, Toyota japonaise, Volkswagen allemande.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Française"
+   },
+   {
+    "label": "Pas française"
+   }
+  ],
+  "items": [
+   [
+    "Renault",
+    0
+   ],
+   [
+    "Peugeot",
+    0
+   ],
+   [
+    "Michelin",
+    0
+   ],
+   [
+    "Fiat",
+    1
+   ],
+   [
+    "Toyota",
+    1
+   ],
+   [
+    "Volkswagen",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "v10-tech-006",
+  "concept": "tech.computing.v10_bluetooth",
+  "label": "Le Bluetooth",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Technologie sans fil pour relier un casque ou une enceinte à un téléphone.",
+  "explanation": "Son nom vient d'un roi viking, Harald « à la dent bleue ».",
+  "word": "BLUETOOTH",
+  "display": "Bluetooth"
+ }
+]
