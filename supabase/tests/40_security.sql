@@ -81,3 +81,15 @@ begin
                  'surcharge ignorée pour les requêtes API (horloge réelle)');
 end $$;
 reset session authorization;
+
+-- Toute fonction du jeu fixe son search_path (contrôle de sécurité Supabase « function_search_path_mutable »).
+do $$
+declare v_missing text;
+begin
+  select string_agg(p.proname, ', ' order by p.proname) into v_missing
+  from pg_proc p
+  where p.pronamespace = 'public'::regnamespace and p.prokind = 'f'
+    and not exists (select 1 from pg_depend d where d.objid = p.oid and d.deptype = 'e')
+    and not exists (select 1 from unnest(coalesce(p.proconfig, '{}')) c where c like 'search_path=%');
+  perform tst.ok(v_missing is null, 'search_path fixé partout (manque : ' || coalesce(v_missing, 'rien') || ')');
+end $$;
