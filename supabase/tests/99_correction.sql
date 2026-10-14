@@ -7,6 +7,8 @@ declare
   r jsonb; ids jsonb; ans jsonb := '[]'::jsonb; q uuid;
 begin
   perform tst.clock('2027-12-01 10:00:00+01');
+  -- Joueur placé, Elo 1 300 au-dessus de son niveau : les erreurs coûtent cher, les bonnes réponses rapportent peu.
+  insert into public.user_skills (user_id, scope_id, mu, var, n, correct, elo) values (u, 'history', 50, 30, 100, 70, 1300);
   perform tst.login(u);
 
   -- Partie classée : 3 bonnes réponses puis 5 erreurs.
@@ -18,7 +20,7 @@ begin
                                        'response_ms', 3000);
   end loop;
   perform public.play_submit(sid, atts);
-  mu0 := 500;  -- nouveau joueur : Elo de départ 500 (0054)
+  mu0 := 1300;  -- Elo avant la partie
   select elo into mu1 from public.user_skills where user_id = u and scope_id = 'history';
   select seeds, xp_total into seeds1, xp1 from public.profiles where id = u;
 
