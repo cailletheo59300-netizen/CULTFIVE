@@ -22,16 +22,16 @@ final class RatingTests: XCTestCase {
         XCTAssertEqual(next?.missing, 75)
         // Elo affiché : 500 au départ, le vrai niveau à la fin du placement.
         XCTAssertEqual(CoteCULT.shown(level: 50, answered: 0), 500)
-        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 25), 750)
+        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 10), 750)
         XCTAssertEqual(CoteCULT.shown(level: 50, answered: 80), 1000)
         XCTAssertEqual(next?.progress ?? 0, 0.5, accuracy: 0.001)
     }
 
     func testPlacement() {
-        XCTAssertFalse(CoteCULT(cote: 1100, answered: 49).placed)
-        XCTAssertEqual(CoteCULT(cote: 1100, answered: 27).placementGames, 2)
-        XCTAssertTrue(CoteCULT(cote: 1100, answered: 50).placed)
-        XCTAssertEqual(CoteCULT(cote: 1100, answered: 400).placementGames, 5)
+        XCTAssertFalse(CoteCULT(cote: 1100, answered: 19).placed)
+        XCTAssertEqual(CoteCULT(cote: 1100, answered: 13).placementGames, 1)
+        XCTAssertTrue(CoteCULT(cote: 1100, answered: 20).placed)
+        XCTAssertEqual(CoteCULT(cote: 1100, answered: 400).placementGames, 2)
         XCTAssertTrue(CoteCULT(cote: 1100, answered: 3, placed: true).placed, "le serveur fait foi")
     }
 

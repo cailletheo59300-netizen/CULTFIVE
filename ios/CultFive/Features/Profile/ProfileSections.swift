@@ -137,7 +137,7 @@ struct ProfileDomainsList: View {
         .contentShape(Rectangle())
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(rating.placed ? "\(skill.name), \(rating.rank.name), Elo \(rating.formatted)"
-                                          : "\(skill.name), Elo en placement, \(rating.placementGames) parties sur 5")
+                                          : "\(skill.name), Elo en placement, \(rating.placementGames) parties sur \(CoteCULT.placementGames)")
     }
 }
 

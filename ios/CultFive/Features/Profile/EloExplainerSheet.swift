@@ -14,14 +14,14 @@ struct EloExplainerSheet: View {
                     .fixedSize(horizontal: false, vertical: true)
 
                 step(1, "Tout le monde part de 500",
-                     "Dans chaque domaine, ton Elo part de 500 et monte vers ton vrai niveau pendant tes 5 premières parties classées. Ensuite, il bouge de 40 points au plus par partie.") {
+                     "Dans chaque domaine, ton Elo part de 500 et monte vers ton vrai niveau pendant tes 2 premières parties classées (20 réponses). Ensuite, il bouge de 40 points au plus par partie.") {
                     Text("500")
                         .font(.system(.title2, design: .rounded).weight(.black)).monospacedDigit()
                         .foregroundStyle(Color.brand)
                 }
-                step(2, "5 parties de placement",
-                     "Chaque partie classée remplit un carré. Au 5e, ton Elo a rejoint ton vrai niveau et ton rang se dévoile.") {
-                    PlacementSquares(done: 3, color: .brand, size: 12)
+                step(2, "2 parties de placement",
+                     "Chaque partie classée du domaine remplit un carré ; les parties rapides comptent aussi, question par question. Au 2e, ton Elo a rejoint ton vrai niveau et ton rang se dévoile.") {
+                    PlacementSquares(done: 1, color: .brand, size: 12)
                 }
                 step(3, "Seules les parties classées comptent",
                      "Une partie classée couvre tout le domaine. L'entraînement libre, les thèmes choisis et « Mes erreurs » ne changent pas ton Elo.") {

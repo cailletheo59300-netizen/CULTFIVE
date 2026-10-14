@@ -89,7 +89,7 @@ struct PlaySetupSheet: View {
     private func ratingLine(_ skill: SkillSummary) -> String {
         let rating = skill.rating
         if rating.placed { return "Elo \(rating.formatted) · \(rating.rank.name)" }
-        if rating.answered == 0 { return "Elo de départ : 500 · il monte vers ton vrai niveau en 5 parties classées" }
+        if rating.answered == 0 { return "Elo de départ : 500 · il monte vers ton vrai niveau en 2 parties classées" }
         return "Elo \(rating.formatted) · \(rating.provisionalLabel) · il monte vers ton vrai niveau"
     }
 

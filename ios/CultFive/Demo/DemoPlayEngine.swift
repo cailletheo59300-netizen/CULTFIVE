@@ -207,7 +207,7 @@ final class DemoPlayEngine: @unchecked Sendable {
             let expected = DemoPlayEngine.chance(mu: before, entry: entry)
             if ranked {
                 // Bayésien simplifié : on bouge plus sur une surprise (bonne réponse difficile, erreur facile).
-                // Placement (< 50 réponses) : pas doublé.
+                // Placement (< 20 réponses) : pas doublé.
                 let step: Double = (answered[domain] ?? 0) < CoteCULT.placementAnswers ? 8 : 4
                 after = min(100, max(0, before + step * ((ok ? 1 : 0) - expected)))
                 levels[domain] = after

@@ -148,7 +148,7 @@ struct ProfileView: View {
                         }
                     } else {
                         Text("Elo en placement").font(.cfHeadline).foregroundStyle(Color.sun)
-                        Text("Il se confirme après 5 parties classées dans un domaine.")
+                        Text("Il se confirme après 2 parties classées dans un domaine.")
                             .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
                             .fixedSize(horizontal: false, vertical: true)
                     }

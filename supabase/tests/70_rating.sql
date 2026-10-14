@@ -9,7 +9,7 @@ begin
 
   perform tst.ok(public._cote(50) = 1000 and public._cote(73.03) = 1400 and public._cote(26.97) = 600, 'échelle de la cote');
 
-  -- Nouveau joueur : placement 0/5, cote non « placée ».
+  -- Nouveau joueur : placement 0/2, cote non « placée ».
   sk := (select s from jsonb_array_elements(public.skills_overview()) s where s ->> 'domain_id' = 'history');
   perform tst.ok((sk ->> 'placement')::int = 0 and not (sk ->> 'placed')::bool and (sk ->> 'cote')::int = 500, 'placement initial : Elo affiché 500 (0046)');
 
@@ -20,7 +20,7 @@ begin
   -- Plus exigeant : chances moyennes nettement sous 75 %.
   perform tst.ok((select avg((q ->> 'expected')::real) from jsonb_array_elements(pack -> 'questions') q) between 0.45 and 0.85, 'pack autour de la cote');
 
-  -- Partie classée tout juste : points, cote qui monte, placement 1/5.
+  -- Partie classée tout juste : points, cote qui monte, placement 1/2.
   atts := '[]'::jsonb;
   for x in select * from jsonb_array_elements(pack -> 'questions') loop
     atts := atts || jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', x ->> 'id',
@@ -31,10 +31,11 @@ begin
   perform tst.ok((select bool_and((r ->> 'points')::int > 50) from jsonb_array_elements(sub -> 'results') r), 'points par question');
   perform tst.ok(jsonb_array_length(sub -> 'ratings') = 1 and sub -> 'ratings' -> 0 ->> 'domain_id' = 'history', 'variation de cote');
   perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int > (sub -> 'ratings' -> 0 ->> 'cote_before')::int, 'cote en hausse');
-  perform tst.ok((sub -> 'ratings' -> 0 ->> 'placement')::int = 1, 'placement 1/5');
+  perform tst.ok((sub -> 'ratings' -> 0 ->> 'placement')::int = 1, 'placement 1/2');
   -- Placement : 10 bonnes réponses font nettement monter. L'Elo affiché part de 500 et rejoint le vrai niveau (plafonné
-  -- à +120 par partie, 0027) au rythme du placement (0046) : après 1 partie sur 5, 500 + (vrai − 500) / 5, soit au plus +124.
-  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int between 60 and 125,
+  -- à +120 par partie, 0027) au rythme du placement (20 réponses, 0051) : après 1 partie sur 2, 500 + (vrai − 500) / 2,
+  -- soit entre +250 (vrai niveau 1 000) et +310 (1 120).
+  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int between 240 and 315,
                  'placement : forte hausse (' || ((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int) || ')');
 
   -- Renvoi identique (file hors-ligne) : mêmes points.
@@ -104,4 +105,26 @@ begin
   perform tst.ok((select bool_and((s ->> 'placed')::bool) from (
                     select (select s from jsonb_array_elements(public.skills_overview()) s where s ->> 'domain_id' = 'geography') s) t),
                  'placement terminé après 8 parties');
+end $$;
+
+-- Parties mélangées (0051) : un joueur neuf reçoit surtout des questions de ses domaines pas encore placés.
+do $$
+declare
+  u uuid := tst.new_user();
+  v_placed text[] := array['history', 'geography', 'science', 'arts', 'sport', 'nature'];
+  d text; v_new int := 0; v_total int := 0; pack jsonb;
+begin
+  -- Six domaines déjà placés (20 réponses classées), les six autres non.
+  foreach d in array v_placed loop
+    insert into public.user_skills (user_id, scope_id, mu, var, n) values (u, d, 50, 100, 25)
+    on conflict (user_id, scope_id) do update set n = 25;
+  end loop;
+  perform tst.login(u);
+  for i in 1 .. 12 loop
+    pack := public.play_pack('quick', null, null, 10);
+    select v_new + count(*) filter (where not (q ->> 'domain_id') = any (v_placed)), v_total + count(*)
+      into v_new, v_total from jsonb_array_elements(pack -> 'questions') q;
+  end loop;
+  raise notice 'parties rapides : % questions sur % dans les domaines non placés', v_new, v_total;
+  perform tst.ok(v_new::real / v_total between 0.6 and 0.85, 'parties rapides tournées vers les domaines non placés');
 end $$;

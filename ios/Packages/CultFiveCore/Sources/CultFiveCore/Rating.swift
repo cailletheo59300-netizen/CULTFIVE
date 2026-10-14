@@ -2,11 +2,11 @@ import Foundation
 
 /// Cote CULT : lecture du niveau de connaissance μ (0–100) sur une échelle façon échecs.
 /// cote = 1000 + 17,37 × (μ − 50) : 400 points d'écart = 10 contre 1 de chances de réussite. 1000 = niveau médian.
-/// Elo affiché (serveur, 0046) : il part de 500 et rejoint le vrai niveau au fil des 50 premières réponses classées
-/// (≈ 5 parties de placement) ; ensuite c'est le vrai niveau.
+/// Elo affiché (serveur, 0046 et 0051) : il part de 500 et rejoint le vrai niveau au fil des 20 premières réponses
+/// classées du domaine (2 parties de placement) ; ensuite c'est le vrai niveau.
 public struct CoteCULT: Hashable, Sendable {
-    public static let placementAnswers = 50
-    public static let placementGames = 5
+    public static let placementAnswers = 20
+    public static let placementGames = 2
 
     public let cote: Int
     public let answered: Int
@@ -28,11 +28,11 @@ public struct CoteCULT: Hashable, Sendable {
         return Int((500 + Double(cote(level: mu) - 500) * progress).rounded())
     }
 
-    /// Parties de placement jouées (0–5), à raison de 10 réponses par partie.
+    /// Parties de placement jouées (0–2), à raison de 10 réponses par partie.
     public var placementGames: Int { min(CoteCULT.placementGames, answered / 10) }
     public var rank: Rank { Rank(cote: cote) }
 
-    /// Cote globale : moyenne des domaines pondérée par le nombre de réponses. Placée dès 50 réponses classées au total.
+    /// Cote globale : moyenne des domaines pondérée par le nombre de réponses. Placée dès 20 réponses classées au total.
     public static func global(_ skills: [SkillSummary]) -> CoteCULT? {
         let played = skills.filter { $0.answered > 0 }
         let total = played.reduce(0) { $0 + $1.answered }
@@ -47,7 +47,7 @@ public struct CoteCULT: Hashable, Sendable {
         return CoteCULT(cote: all.cote, answered: all.answered, placed: skills.contains { $0.rating.placed })
     }
 
-    /// « placement 2/5 » : parties classées jouées sur les 5 qui amènent l'Elo d'un domaine à son vrai niveau.
+    /// « placement 1/2 » : parties classées jouées sur les 2 qui amènent l'Elo d'un domaine à son vrai niveau.
     public var provisionalLabel: String { "placement \(placementGames)/\(CoteCULT.placementGames)" }
 
     /// « 1 342 » (espace fine insécable des milliers, à la française).

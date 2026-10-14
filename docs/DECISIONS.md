@@ -168,4 +168,4 @@ Pourquoi : passer de l'aperçu simulé au vrai jeu. Décidé : toutes les règle
 
 ### D-053 · 2026-10-13 · La 1.1 sort tout d'un coup, sans « aperçu »
 Pourquoi : la 1.0 publiée est ancienne ; le propriétaire veut que la prochaine mise à jour apporte tout en même temps. Décidé : album, Comptoir, pass gratuit (le Pass+ viendra plus tard, affiché « bientôt »), défis sous le 5 et nouveaux types pour tout le monde ; l'option « aperçu » des builds TestFlight et l'écran d'aperçu des nouveaux types sont retirés. Le serveur (0038–0049 + seed) doit être déployé avant le build TestFlight de test, avec le feu vert du propriétaire.
-
+Complément (D-051, 2026-10-14, propriétaire) : placement en **20 réponses classées** par domaine (2 parties) au lieu de 50, et dans les parties mélangées (rapide, Surprise) les domaines pas encore placés sortent 2,5 fois plus souvent (0051). Un joueur qui ne fait que des parties rapides place ainsi ses domaines en une quinzaine de parties au lieu d'une soixantaine. Le calcul ne change pas : un Elo par domaine, même formule et mêmes plafonds dans tous les modes.

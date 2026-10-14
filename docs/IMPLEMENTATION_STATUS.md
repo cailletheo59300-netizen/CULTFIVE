@@ -60,6 +60,7 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 | 4. Nouveaux types de réponses (0038–0041) ; proportions et mot mystère abandonnés (0049, D-050) | ✅ `99_answer_types.sql` |
 | 5. Carte commune en fin de partie classée (0045), Elo simplifié (0046), variété (0047), capitales et drapeaux revus (0048), nouvelles questions (lots v9 et v10) | ✅ |
 | 6. App branchée sur le serveur (album, Comptoir, pass, missions, coffres, carte de fin de partie), fin de l'option « aperçu » | ✅ codé, CI ; 🟡 à essayer sur TestFlight (build 45) |
+| 6b. Placement en 20 réponses et parties rapides tournées vers les domaines non placés (0051) ; fin de partie fixe et carte fêtée en plein écran ; icône du neurone dans les coffres | ✅ CI ; serveur : voir 7a |
 | 7a. Mise en production (13/10) : sauvegarde, migrations 0038–0050 et seed (8 282 questions publiées, 525 cartes), essai en transaction annulée, contrôle de sécurité | ✅ |
 | 7b. Jour de la sortie : recaler la saison 1 (`update seasons set starts_on = <sortie>, ends_on = <sortie + 61>`), effacer les paliers récupérés pendant les tests (`delete from season_claims`), envoyer la 1.1 à Apple | ⏳ |
 
