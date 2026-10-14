@@ -4,6 +4,8 @@
 // par `ad_claim`, à la demande de l'app. Déployée sans vérification JWT : c'est Google qui appelle, pas un joueur.
 // Doc : https://developers.google.com/admob/ios/ssv
 
+import { verifyQuery } from "./ssv.ts";
+
 const KEYS_URL = "https://www.gstatic.com/admob/reward/verifier-keys.json";
 const KEYS_TTL_MS = 12 * 60 * 60 * 1000;
 
@@ -23,44 +25,8 @@ async function verifierKeys(force = false): Promise<Map<string, CryptoKey>> {
   return keys;
 }
 
-function base64UrlDecode(value: string): Uint8Array {
-  const b64 = value.replace(/-/g, "+").replace(/_/g, "/") + "=".repeat((4 - (value.length % 4)) % 4);
-  return Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
-}
-
-// Signature DER (SEQUENCE { INTEGER r, INTEGER s }) → format brut r‖s de 64 octets attendu par WebCrypto.
-function derToRaw(der: Uint8Array): Uint8Array {
-  let i = 2;
-  if (der[1] & 0x80) i = 2 + (der[1] & 0x7f);
-  const read = () => {
-    if (der[i] !== 0x02) throw new Error("bad der");
-    const len = der[i + 1];
-    let int = der.slice(i + 2, i + 2 + len);
-    i += 2 + len;
-    while (int.length > 32 && int[0] === 0) int = int.slice(1);
-    const out = new Uint8Array(32);
-    out.set(int, 32 - int.length);
-    return out;
-  };
-  const r = read();
-  const s = read();
-  const raw = new Uint8Array(64);
-  raw.set(r, 0);
-  raw.set(s, 32);
-  return raw;
-}
-
-async function verify(query: string, params: URLSearchParams): Promise<boolean> {
-  const cut = query.indexOf("&signature=");
-  const signature = params.get("signature");
-  const keyId = params.get("key_id");
-  if (cut < 0 || !signature || !keyId) return false;
-  const message = new TextEncoder().encode(query.slice(0, cut));
-  const raw = derToRaw(base64UrlDecode(signature));
-  let key = (await verifierKeys()).get(keyId);
-  if (!key) key = (await verifierKeys(true)).get(keyId);  // rotation des clés Google
-  if (!key) return false;
-  return crypto.subtle.verify({ name: "ECDSA", hash: "SHA-256" }, key, raw, message);
+async function verify(query: string): Promise<boolean> {
+  return verifyQuery(query, async (keyId) => (await verifierKeys()).get(keyId) ?? (await verifierKeys(true)).get(keyId));  // rotation des clés Google
 }
 
 Deno.serve(async (req) => {
@@ -72,7 +38,7 @@ Deno.serve(async (req) => {
 
   let valid = false;
   try {
-    valid = await verify(query, params);
+    valid = await verify(query);
   } catch (error) {
     console.error("verify", error);
   }

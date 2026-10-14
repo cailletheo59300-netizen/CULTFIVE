@@ -35,6 +35,8 @@ jobs:
         run: |
           node scripts/build-seed.mjs
           git diff --exit-code supabase/seed.sql
+      - name: Pubs AdMob (vérification SSV)
+        run: node scripts/test-ssv.mjs
       - name: Migrations + tests SQL
         run: scripts/test-db.sh
 
