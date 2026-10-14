@@ -184,7 +184,7 @@ struct CelebrationSequence: View {
         case .level(_, _, let tier):
             return tier != nil ? "Ton XP grimpe, et un coffre t'attend." : "Ton XP grimpe, continue comme ça !"
         case .rank(_, let domain, let cote, let confirmed):
-            return confirmed ? "\(domain) · Elo \(CoteCULT.format(cote)). Il bouge maintenant de 40 points au plus par partie."
+            return confirmed ? "\(domain) · Elo \(CoteCULT.format(cote)). À toi de grimper : +30 au plus par partie."
                 : "\(domain) · Elo \(CoteCULT.format(cote))"
         case .trophy(_, let detail, _): return detail ?? "Un nouveau trophée dans ta vitrine."
         case .streak(let n, _): return "Ton meilleur record ! Reviens demain pour faire \(n + 1)."

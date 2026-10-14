@@ -94,7 +94,7 @@ struct DomainView: View {
                         Text("Elo \(stats.rating.provisionalLabel)").font(.cfFootnote.weight(.bold))
                     }
                     let left = stats.rating.placementLeft
-                    Text("Encore \(left) question\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") du domaine (parties rapides comprises) : ton Elo monte vers ton vrai niveau.")
+                    Text("Encore \(left) question\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") du domaine (parties rapides comprises) avant de dévoiler ton rang.")
                         .font(.cfFootnote)
                         .opacity(0.85)
                 }

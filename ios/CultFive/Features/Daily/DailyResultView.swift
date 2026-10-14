@@ -182,7 +182,7 @@ struct DailyResultView: View {
         .foregroundStyle(white)
     }
 
-    /// Évolution de l'Elo : seulement les domaines dont le placement est fini (l'Elo affiché y est le vrai niveau),
+    /// Évolution de l'Elo (le serveur renvoie l'Elo dans l'unité « niveau ») : seulement les domaines placés,
     /// et seulement les mouvements notables (≥ 5 points).
     @ViewBuilder private var knowledge: some View {
         let moves = result.answers

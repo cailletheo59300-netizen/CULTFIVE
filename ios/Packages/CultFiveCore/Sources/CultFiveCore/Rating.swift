@@ -2,8 +2,9 @@ import Foundation
 
 /// Cote CULT : lecture du niveau de connaissance μ (0–100) sur une échelle façon échecs.
 /// cote = 1000 + 17,37 × (μ − 50) : 400 points d'écart = 10 contre 1 de chances de réussite. 1000 = niveau médian.
-/// Elo affiché (serveur, 0046 et 0051) : il part de 500 et rejoint le vrai niveau au fil des 20 premières réponses
-/// classées du domaine (2 parties de placement) ; ensuite c'est le vrai niveau.
+/// Elo affiché (serveur, 0054) : une progression séparée du niveau. Il part de 500 ; pendant les 20 premières réponses
+/// classées du domaine (placement), +150 au plus par partie (800 au plus à la fin) ; ensuite +30 au plus par partie,
+/// −40 (−80 dès 1 200) ; au-dessus de 1 000, les gains diminuent et les pertes augmentent.
 public struct CoteCULT: Hashable, Sendable {
     public static let placementAnswers = 20
     public static let placementGames = 2
@@ -20,12 +21,6 @@ public struct CoteCULT: Hashable, Sendable {
 
     public static func cote(level mu: Double) -> Int {
         Int((1000 + 17.37 * (mu - 50)).rounded())
-    }
-
-    /// Elo affiché : 500 au départ, puis le vrai niveau, atteint à la fin du placement (même règle que le serveur).
-    public static func shown(level mu: Double, answered: Int) -> Int {
-        let progress = min(max(Double(answered), 0) / Double(placementAnswers), 1)
-        return Int((500 + Double(cote(level: mu) - 500) * progress).rounded())
     }
 
     /// Parties de placement jouées (0–2), à raison de 10 réponses par partie.
@@ -50,7 +45,7 @@ public struct CoteCULT: Hashable, Sendable {
         return CoteCULT(cote: all.cote, answered: all.answered, placed: skills.contains { $0.rating.placed })
     }
 
-    /// « placement 7/20 » : réponses classées du domaine sur les 20 qui amènent son Elo au vrai niveau.
+    /// « placement 7/20 » : réponses classées du domaine sur les 20 du placement.
     public var provisionalLabel: String { "placement \(placementDone)/\(CoteCULT.placementAnswers)" }
 
     /// « 1 342 » (espace fine insécable des milliers, à la française).

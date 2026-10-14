@@ -32,10 +32,8 @@ begin
   perform tst.ok(jsonb_array_length(sub -> 'ratings') = 1 and sub -> 'ratings' -> 0 ->> 'domain_id' = 'history', 'variation de cote');
   perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int > (sub -> 'ratings' -> 0 ->> 'cote_before')::int, 'cote en hausse');
   perform tst.ok((sub -> 'ratings' -> 0 ->> 'placement')::int = 1, 'placement 1/2');
-  -- Placement : 10 bonnes réponses font nettement monter. L'Elo affiché part de 500 et rejoint le vrai niveau (plafonné
-  -- à +120 par partie, 0027) au rythme du placement (20 réponses, 0051) : après 1 partie sur 2, 500 + (vrai − 500) / 2,
-  -- soit entre +250 (vrai niveau 1 000) et +310 (1 120).
-  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int between 240 and 315,
+  -- Placement (0054) : 10 bonnes réponses font monter de +15 au plus chacune, +150 au plus par partie.
+  perform tst.ok((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int between 120 and 150,
                  'placement : forte hausse (' || ((sub -> 'ratings' -> 0 ->> 'cote_after')::int - (sub -> 'ratings' -> 0 ->> 'cote_before')::int) || ')');
 
   -- Renvoi identique (file hors-ligne) : mêmes points.

@@ -18,8 +18,8 @@ begin
                                        'response_ms', 3000);
   end loop;
   perform public.play_submit(sid, atts);
-  mu0 := 50;  -- nouveau joueur : départ à 1000
-  select mu into mu1 from public.user_skills where user_id = u and scope_id = 'history';
+  mu0 := 500;  -- nouveau joueur : Elo de départ 500 (0054)
+  select elo into mu1 from public.user_skills where user_id = u and scope_id = 'history';
   select seeds, xp_total into seeds1, xp1 from public.profiles where id = u;
 
   -- Sans pub vérifiée : refusé ; le gratuit n'existe plus.
@@ -37,7 +37,7 @@ begin
   ans := ans || jsonb_build_object('question_id', (ids ->> 4)::uuid, 'given', tst.wrong_given());
   r := public.play_correction_submit(sid, ans);
   perform tst.ok((r ->> 'corrected')::int = 4 and (r ->> 'total')::int = 5, '4 corrigées sur 5');
-  select mu into mu2 from public.user_skills where user_id = u and scope_id = 'history';
+  select elo into mu2 from public.user_skills where user_id = u and scope_id = 'history';
   perform tst.ok(mu2 > mu1, 'Elo en partie récupéré (' || mu1 || ' → ' || mu2 || ')');
   perform tst.ok(mu2 <= mu0 + 0.001, 'jamais au-dessus du niveau d''avant la partie');
   perform tst.ok((r -> 'refunds' -> 0 ->> 'cote_refund')::int > 0, 'remboursement affiché en points d''Elo');

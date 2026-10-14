@@ -20,10 +20,6 @@ final class RatingTests: XCTestCase {
         XCTAssertNil(CoteCULT.Rank.encyclopedia.next)
         let next = try? XCTUnwrap(CoteCULT(cote: 975, answered: 80).toNextRank)
         XCTAssertEqual(next?.missing, 75)
-        // Elo affiché : 500 au départ, le vrai niveau à la fin du placement.
-        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 0), 500)
-        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 10), 750)
-        XCTAssertEqual(CoteCULT.shown(level: 50, answered: 80), 1000)
         XCTAssertEqual(next?.progress ?? 0, 0.5, accuracy: 0.001)
     }
 
