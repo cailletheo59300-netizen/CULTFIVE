@@ -21,6 +21,8 @@ final class AdsController {
         .doubleSeeds: "ca-app-pub-1190519561086839/7044735086",
         .boostChest: "ca-app-pub-1190519561086839/4275015795",
         .freeChest: "ca-app-pub-1190519561086839/9555262634",
+        // Pochette gratuite : même bloc que le coffre offert, en attendant un bloc à part dans AdMob.
+        .freePack: "ca-app-pub-1190519561086839/9555262634",
         .streakRescue: "ca-app-pub-1190519561086839/8242180963",
         .correction: "ca-app-pub-1190519561086839/6929099296",
     ]

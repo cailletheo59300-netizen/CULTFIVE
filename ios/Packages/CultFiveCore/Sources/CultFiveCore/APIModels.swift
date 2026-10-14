@@ -1693,6 +1693,8 @@ public enum AdKind: String, Sendable, CaseIterable {
     case doubleSeeds = "double_seeds"
     case boostChest = "boost_chest"
     case freeChest = "free_chest"
+    /// Pochette gratuite (1 ticket de pochette), une par jour (serveur 0053).
+    case freePack = "free_pack"
     case streakRescue = "streak_rescue"
     case correction
 }
@@ -1702,16 +1704,19 @@ public struct AdStatus: Decodable, Hashable, Sendable {
     public var doubleSeeds: Int
     public var boostChest: Int
     public var freeChest: Int
+    /// Pochettes gratuites restantes aujourd'hui (0 ou 1).
+    public var freePack: Int
     /// Série perdue récupérable (sa longueur), sinon nil.
     public var streakRescue: Int?
     public var interstitial: Bool
     public var admin: Bool
 
-    public init(doubleSeeds: Int = 0, boostChest: Int = 0, freeChest: Int = 0, streakRescue: Int? = nil,
+    public init(doubleSeeds: Int = 0, boostChest: Int = 0, freeChest: Int = 0, freePack: Int = 0, streakRescue: Int? = nil,
                 interstitial: Bool = false, admin: Bool = false) {
         self.doubleSeeds = doubleSeeds
         self.boostChest = boostChest
         self.freeChest = freeChest
+        self.freePack = freePack
         self.streakRescue = streakRescue
         self.interstitial = interstitial
         self.admin = admin
@@ -1722,6 +1727,7 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         case doubleSeeds = "double_seeds"
         case boostChest = "boost_chest"
         case freeChest = "free_chest"
+        case freePack = "free_pack"
         case streakRescue = "streak_rescue"
     }
 
@@ -1730,6 +1736,7 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         doubleSeeds = try c.decodeIfPresent(Int.self, forKey: .doubleSeeds) ?? 0
         boostChest = try c.decodeIfPresent(Int.self, forKey: .boostChest) ?? 0
         freeChest = try c.decodeIfPresent(Int.self, forKey: .freeChest) ?? 0
+        freePack = try c.decodeIfPresent(Int.self, forKey: .freePack) ?? 0
         streakRescue = try c.decodeIfPresent(Int.self, forKey: .streakRescue)
         interstitial = try c.decodeIfPresent(Bool.self, forKey: .interstitial) ?? false
         admin = try c.decodeIfPresent(Bool.self, forKey: .admin) ?? false

@@ -1,4 +1,5 @@
 import SwiftUI
+import CultFiveCore
 
 /// Le Comptoir de Léon : pochettes par thème payées en neurones ou en tickets, la pochette dorée et l'offre du jour.
 /// Tout passe par le serveur (album_open_pack, album_craft). Aucun argent réel ici.
@@ -6,6 +7,7 @@ struct ComptoirView: View {
     let store: AlbumStore
     var onOpen: (PackOpening) -> Void
 
+    @Environment(AppModel.self) private var app
     @State private var selected = "encyclo"
 
     private let catalog = AlbumCatalog.shared
@@ -31,6 +33,7 @@ struct ComptoirView: View {
             .padding(.horizontal, Space.gutter)
             .padding(.vertical, Space.m)
         }
+        .task { await app.refreshAdStatus() }
         .clearsTabBar()
         .background(Color.paper.ignoresSafeArea())
         .navigationTitle("Comptoir de Léon")
@@ -154,6 +157,21 @@ struct ComptoirView: View {
                        icon: "ticket_pochette", fill: .sun, text: .inkFixed, enabled: store.tickets > 0 && !store.busy) {
                 let series = series
                 Task { if let pulls = await store.buyPack(series, useTicket: true) { onOpen(PackOpening(series: series, pulls: pulls)) } }
+            }
+            if (app.adStatus?.freePack ?? 0) > 0 {
+                // Une pochette gratuite par jour contre une pub (vérifiée par le serveur, 0053).
+                ShopButton(title: "Pochette gratuite", price: "1 pub", icon: "ticket_pochette",
+                           fill: Color(hex: 0x37B24D), text: .white, enabled: !store.busy) {
+                    let series = series
+                    Task {
+                        do {
+                            guard try await app.watchAd(.freePack) != nil else { return }
+                            if let pulls = await store.buyPack(series, useTicket: true) { onOpen(PackOpening(series: series, pulls: pulls)) }
+                        } catch {
+                            app.show((error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant.")
+                        }
+                    }
+                }
             }
             if missing > 0 {
                 Label("Il te manque \(missing) neurones pour l'ouvrir.", systemImage: "info.circle")

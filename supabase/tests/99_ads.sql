@@ -91,3 +91,20 @@ begin
   perform tst.ok(not has_function_privilege('authenticated', 'public.ad_ssv_record(text, text, text, text)', 'execute'), 'joueur : pas d''enregistrement de vue');
   perform tst.ok(not has_function_privilege('anon', 'public.ad_claim(text, text, bool)', 'execute'), 'anonyme : pas de récompense');
 end $$;
+
+-- Pochette gratuite (0053) : une pub par jour, vérifiée par Google, qui donne 1 ticket de pochette.
+do $$
+declare u uuid := tst.new_user(); r jsonb; t0 int;
+begin
+  perform tst.login(u);
+  perform public.album_overview();
+  t0 := (select tickets from public.user_album where user_id = u);
+  perform tst.ok((public.ad_status() ->> 'free_pack')::int = 1, 'pochette gratuite : 1 par jour');
+  perform tst.ok((public.ad_can('free_pack') ->> 'ok')::bool, 'pochette gratuite : possible');
+  perform tst.throws('select public.ad_claim(''free_pack'')', 'ad_pending');
+  perform tst.ok((public.ad_ssv_record('tx-pack-1', u::text, 'unit', 'free_pack:') ->> 'recorded')::bool, 'vue enregistrée');
+  r := public.ad_claim('free_pack');
+  perform tst.ok((r ->> 'pack_tickets')::int = 1 and (select tickets from public.user_album where user_id = u) = t0 + 1, '1 ticket de pochette');
+  perform tst.ok((public.ad_status() ->> 'free_pack')::int = 0, 'plus de pochette gratuite aujourd''hui');
+  perform tst.throws('select public.ad_can(''free_pack'')', 'ad_limit');
+end $$;
