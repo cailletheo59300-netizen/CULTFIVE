@@ -55,7 +55,7 @@ struct RankPathView: View {
                 }
             } else {
                 Text("Elo en placement").font(.system(size: 26, weight: .black, design: .rounded)).foregroundStyle(.white)
-                Text("Ton rang apparaît après 2 parties classées dans un domaine.")
+                Text("Ton rang apparaît après 20 réponses classées dans un domaine.")
                     .font(.cfFootnote).foregroundStyle(.white.opacity(0.85)).multilineTextAlignment(.center)
             }
         }

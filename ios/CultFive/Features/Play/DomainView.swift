@@ -93,7 +93,8 @@ struct DomainView: View {
                         Text(stats.rating.formatted).numeral(size: 48).opacity(0.8)
                         Text("Elo \(stats.rating.provisionalLabel)").font(.cfFootnote.weight(.bold))
                     }
-                    Text("Encore \(CoteCULT.placementGames - stats.rating.placementGames) partie\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") classée\(CoteCULT.placementGames - stats.rating.placementGames > 1 ? "s" : "") : ton Elo monte vers ton vrai niveau.")
+                    let left = stats.rating.placementLeft
+                    Text("Encore \(left) question\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") du domaine (parties rapides comprises) : ton Elo monte vers ton vrai niveau.")
                         .font(.cfFootnote)
                         .opacity(0.85)
                 }

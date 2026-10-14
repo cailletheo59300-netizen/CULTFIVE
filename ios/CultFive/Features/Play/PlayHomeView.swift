@@ -272,12 +272,12 @@ private struct DomainTile: View {
                 .saturation(0).opacity(0.5).accessibilityHidden(true)
             VStack(spacing: 0) {
                 Text("Placement").font(.system(.caption, design: .rounded).weight(.black))
-                Text("\(skill.rating.placementGames)/\(CoteCULT.placementGames) parties")
+                Text("\(skill.rating.placementDone)/\(CoteCULT.placementAnswers) réponses")
                     .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit().opacity(0.88)
             }
             .foregroundStyle(on)
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Elo en placement, \(skill.rating.placementGames) parties sur \(CoteCULT.placementGames)")
+            .accessibilityLabel("Elo en placement, \(skill.rating.placementDone) réponses sur \(CoteCULT.placementAnswers)")
         } else {
             Spacer(minLength: 4)
             Image(systemName: "play.fill")

@@ -32,6 +32,11 @@ final class RatingTests: XCTestCase {
         XCTAssertEqual(CoteCULT(cote: 1100, answered: 13).placementGames, 1)
         XCTAssertTrue(CoteCULT(cote: 1100, answered: 20).placed)
         XCTAssertEqual(CoteCULT(cote: 1100, answered: 400).placementGames, 2)
+        // Avancement réel : réponses classées sur 20.
+        XCTAssertEqual(CoteCULT(cote: 1100, answered: 7).placementDone, 7)
+        XCTAssertEqual(CoteCULT(cote: 1100, answered: 7).placementLeft, 13)
+        XCTAssertEqual(CoteCULT(cote: 1100, answered: 7).provisionalLabel, "placement 7/20")
+        XCTAssertEqual(CoteCULT(cote: 1100, answered: 400).placementLeft, 0)
         XCTAssertTrue(CoteCULT(cote: 1100, answered: 3, placed: true).placed, "le serveur fait foi")
     }
 

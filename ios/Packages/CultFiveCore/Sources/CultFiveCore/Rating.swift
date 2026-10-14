@@ -30,6 +30,9 @@ public struct CoteCULT: Hashable, Sendable {
 
     /// Parties de placement jouées (0–2), à raison de 10 réponses par partie.
     public var placementGames: Int { min(CoteCULT.placementGames, answered / 10) }
+    /// Réponses classées du placement (0–20) et celles qui restent : le vrai avancement, parties rapides comprises.
+    public var placementDone: Int { min(max(answered, 0), CoteCULT.placementAnswers) }
+    public var placementLeft: Int { CoteCULT.placementAnswers - placementDone }
     public var rank: Rank { Rank(cote: cote) }
 
     /// Cote globale : moyenne des domaines pondérée par le nombre de réponses. Placée dès 20 réponses classées au total.
@@ -47,8 +50,8 @@ public struct CoteCULT: Hashable, Sendable {
         return CoteCULT(cote: all.cote, answered: all.answered, placed: skills.contains { $0.rating.placed })
     }
 
-    /// « placement 1/2 » : parties classées jouées sur les 2 qui amènent l'Elo d'un domaine à son vrai niveau.
-    public var provisionalLabel: String { "placement \(placementGames)/\(CoteCULT.placementGames)" }
+    /// « placement 7/20 » : réponses classées du domaine sur les 20 qui amènent son Elo au vrai niveau.
+    public var provisionalLabel: String { "placement \(placementDone)/\(CoteCULT.placementAnswers)" }
 
     /// « 1 342 » (espace fine insécable des milliers, à la française).
     public var formatted: String { CoteCULT.format(cote) }

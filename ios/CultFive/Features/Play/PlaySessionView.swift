@@ -387,8 +387,8 @@ struct PlaySummaryView: View {
                             RatingChangeRow(change: r, domainName: app.domainName(r.domainId))
                         }
                         if let r = summary.ratings.first(where: { !$0.placed }) {
-                            let left = max(CoteCULT.placementGames - r.placement, 1)
-                            Text("Encore \(left) partie\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") en \(app.domainName(r.domainId)) pour confirmer ton Elo.")
+                            let left = max(CoteCULT.placementAnswers - r.answered, 1)
+                            Text("Encore \(left) question\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") en \(app.domainName(r.domainId)) pour confirmer ton Elo.")
                                 .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
@@ -769,7 +769,7 @@ struct RatingChangeRow: View {
                 } else {
                     HStack(spacing: 6) {
                         Text("placement").font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
-                        PlacementSquares(done: change.placement, color: DomainPalette.color(change.domainId), size: 8)
+                        PlacementBar(answered: change.answered, color: DomainPalette.color(change.domainId), width: 56)
                     }
                 }
             }
@@ -778,19 +778,27 @@ struct RatingChangeRow: View {
     }
 }
 
-/// Cinq petits carrés : un par partie classée. Pleins, l'Elo du domaine est confirmé et son niveau se dévoile.
-struct PlacementSquares: View {
-    let done: Int
+/// Avancement du placement : une barre qui se remplit à chaque réponse classée du domaine (sur 20), avec le compte.
+/// Pleine, l'Elo du domaine est confirmé et son niveau se dévoile.
+struct PlacementBar: View {
+    let answered: Int
     var color: Color = .brand
-    var empty: Color? = nil
-    var size: CGFloat = 9
+    var width: CGFloat = 80
+    var showsCount = true
+
+    private var done: Int { min(max(answered, 0), CoteCULT.placementAnswers) }
 
     var body: some View {
-        HStack(spacing: 3) {
-            ForEach(0 ..< CoteCULT.placementGames, id: \.self) { i in
-                RoundedRectangle(cornerRadius: size * 0.28, style: .continuous)
-                    .fill(i < done ? color : (empty ?? color.opacity(0.2)))
-                    .frame(width: size, height: size)
+        HStack(spacing: 6) {
+            ZStack(alignment: .leading) {
+                Capsule().fill(color.opacity(0.2))
+                Capsule().fill(color).frame(width: max(6, width * CGFloat(done) / CGFloat(CoteCULT.placementAnswers)))
+            }
+            .frame(width: width, height: 7)
+            if showsCount {
+                Text("\(done)/\(CoteCULT.placementAnswers)")
+                    .font(.system(.caption2, design: .rounded).weight(.heavy)).monospacedDigit()
+                    .foregroundStyle(Color.inkSoft)
             }
         }
         .accessibilityHidden(true)
