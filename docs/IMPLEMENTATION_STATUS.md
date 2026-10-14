@@ -143,7 +143,9 @@ Liste tenue à jour à chaque nouvelle demande. Rien de ceci ne touche la produc
 
 **Après la publication**
 - [ ] Lier l'app dans AdMob.
-- [ ] DSA : infos de commerçant à revalider dans App Store Connect (mail d'Apple du 6 octobre), sinon l'app n'est pas disponible dans l'UE.
+- [x] DSA : infos de commerçant revalidées (App Store Connect → Business → Conformité : « Active », 6 octobre).
+- [x] AdMob : paiements remplis, message RGPD publié (14/10) ; validation `app-ads.txt` en attente (fichier correct, délai AdMob).
+- [ ] Accepter le nouveau contrat de licence de l'Apple Developer Program (bandeau dans App Store Connect → Business), sinon aucune mise à jour ne peut être envoyée — à faire avant d'envoyer la 1.1.
 
 ## Commandes utiles
 `scripts/test-db.sh` · `scripts/gen-fixtures.sh` (après test-db) · `node scripts/build-seed.mjs` · `python3 scripts/make-icon.py <sortie>` · `node scripts/icons/render.mjs` (icônes 3D : coffres, graines, flamme, joker, tickets, arrosoir → `Assets.xcassets/Icons`) · `cd ios && xcodegen`
