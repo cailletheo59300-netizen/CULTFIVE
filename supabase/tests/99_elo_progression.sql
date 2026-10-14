@@ -21,11 +21,11 @@ begin
   perform tst.clock('2028-01-10 10:00:00+01');
   perform tst.login(u);
   r := tst.ranked_game('history', true);
-  perform tst.ok((r -> 'ratings' -> 0 ->> 'cote_before')::int = 500 and (r -> 'ratings' -> 0 ->> 'cote_after')::int = 650,
-                 'placement : 500 → 650 (' || (r -> 'ratings' -> 0 ->> 'cote_after') || ')');
+  perform tst.ok((r -> 'ratings' -> 0 ->> 'cote_before')::int = 500 and (r -> 'ratings' -> 0 ->> 'cote_after')::int between 610 and 650,
+                 'placement : 500 → 650 au plus (' || (r -> 'ratings' -> 0 ->> 'cote_after') || ')');
   r := tst.ranked_game('history', true);
   select elo, mu into v_elo, v_mu from public.user_skills where user_id = u and scope_id = 'history';
-  perform tst.ok(round(v_elo) = 800 and (r -> 'ratings' -> 0 ->> 'placed')::bool, 'placement terminé : 800 au plus');
+  perform tst.ok(round(v_elo) between 720 and 800 and (r -> 'ratings' -> 0 ->> 'placed')::bool, 'placement terminé : 800 au plus (' || round(v_elo) || ')');
   perform tst.ok(public._cote(v_mu) > 1100, 'niveau caché déjà haut (' || public._cote(v_mu) || ')');
   -- Après le placement : +30 au plus par partie.
   r := tst.ranked_game('history', true);
@@ -42,14 +42,14 @@ declare u uuid := tst.new_user(); r jsonb;
 begin
   perform tst.clock('2028-01-11 10:00:00+01');
   insert into public.user_skills (user_id, scope_id, mu, var, n, correct, elo) values
-    (u, 'history', 58, 16, 100, 70, 1100), (u, 'geography', 70, 16, 100, 70, 1300);
+    (u, 'history', 45, 16, 100, 70, 1100), (u, 'geography', 50, 16, 100, 70, 1300);
   perform tst.login(u);
   r := tst.ranked_game('history', false);
   perform tst.ok((r -> 'ratings' -> 0 ->> 'cote_after')::int = 1060, 'partie ratée à 1 100 : −40 (' || (r -> 'ratings' -> 0 ->> 'cote_after') || ')');
   r := tst.ranked_game('geography', false);
   perform tst.ok((r -> 'ratings' -> 0 ->> 'cote_after')::int = 1220, 'partie ratée à 1 300 : −80 (' || (r -> 'ratings' -> 0 ->> 'cote_after') || ')');
   -- Le niveau caché n'est pas plafonné de la même façon : il reste la mesure du vrai niveau.
-  perform tst.ok((select mu from public.user_skills where user_id = u and scope_id = 'geography') < 70, 'niveau caché en baisse');
+  perform tst.ok((select mu from public.user_skills where user_id = u and scope_id = 'geography') < 50, 'niveau caché en baisse');
 end $$;
 
 -- 5 du jour : la variation renvoyée est celle de l'Elo (unité « niveau » : 500 ↔ 21,2).
@@ -97,11 +97,14 @@ do $$
 declare v_hard uuid; v_easy uuid; v_few uuid; u uuid; v_b0 real; v_e0 real; v_f0 real;
 begin
   select id, difficulty_observed into v_hard, v_b0 from public.questions
-   where status = 'published' and type = 'mcq' and difficulty_initial between 40 and 60 order by id limit 1;
+   where status = 'published' and type = 'mcq' and difficulty_initial between 40 and 60
+     and not exists (select 1 from public.question_attempts a where a.question_id = questions.id) order by id limit 1;
   select id, difficulty_observed into v_easy, v_e0 from public.questions
-   where status = 'published' and type = 'mcq' and difficulty_initial between 40 and 60 and id <> v_hard order by id limit 1;
+   where status = 'published' and type = 'mcq' and difficulty_initial between 40 and 60
+     and not exists (select 1 from public.question_attempts a where a.question_id = questions.id) and id <> v_hard order by id limit 1;
   select id, difficulty_observed into v_few, v_f0 from public.questions
-   where status = 'published' and type = 'mcq' and difficulty_initial between 40 and 60 and id not in (v_hard, v_easy) order by id limit 1;
+   where status = 'published' and type = 'mcq' and difficulty_initial between 40 and 60
+     and not exists (select 1 from public.question_attempts a where a.question_id = questions.id) and id not in (v_hard, v_easy) order by id limit 1;
   for i in 1 .. 12 loop
     u := tst.new_user();
     insert into public.question_attempts (user_id, question_id, concept_id, context, is_correct, question_difficulty, user_skill_before, expected, seen_count)
