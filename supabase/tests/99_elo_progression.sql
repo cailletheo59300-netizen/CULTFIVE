@@ -70,8 +70,9 @@ end $$;
 do $$
 begin
   perform tst.ok(public._elo_mult(900, true) = 1 and public._elo_mult(900, false) = 1, 'sous 1 000 : symétrique');
-  perform tst.ok(public._elo_mult(1200, true) = 0.75 and public._elo_mult(1200, false) = 1.25, '1 200 : ×0,75 / ×1,25');
-  perform tst.ok(public._elo_mult(1500, true) = 0.5 and public._elo_mult(1500, false) = 1.5, 'dès 1 400 : ×0,5 / ×1,5');
+  perform tst.ok(public._elo_mult(1100, true) = 0.75 and public._elo_mult(1100, false) = 1.25, '1 100 : ×0,75 / ×1,25');
+  perform tst.ok(public._elo_mult(1200, true) = 0.5 and public._elo_mult(1200, false) = 1.5, '1 200 : ×0,5 / ×1,5');
+  perform tst.ok(abs(public._elo_mult(1500, true) - 0.35) < 1e-6 and public._elo_mult(1500, false) = 1.75, 'dès 1 400 : ×0,35 / ×1,75');
 end $$;
 
 -- Mélange de la partie classée : 30 % de questions qui piquent au-dessus de 1 200 (niveau), 20 % en dessous.

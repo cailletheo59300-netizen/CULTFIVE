@@ -6,9 +6,9 @@
 --  · attendu = hasard + (1 − hasard) / (1 + 10^((difficulté en Elo − Elo) / 400)) ; variation = K × (résultat − attendu) ;
 --  · placement (20 premières réponses) : K = 40, au plus +15 par réponse et ±150 par partie → 800 au plus à la fin ;
 --  · ensuite : K = 16, au plus +30 par partie, −40 (−80 si l'Elo était déjà à 1 200 ou plus au début de la partie) ;
---  · au-dessus de 1 000, les gains diminuent et les pertes augmentent : ×0,75 / ×1,25 à 1 200, ×0,5 / ×1,5 dès 1 400.
+--  · au-dessus de 1 000, les gains diminuent et les pertes augmentent : ×0,5 / ×1,5 à 1 200, ×0,35 / ×1,75 dès 1 400.
 -- Au-dessus de 1 200 (niveau μ), la partie classée mélange 20 % d'accessibles, 50 % à son niveau, 30 % qui piquent.
--- Joueurs actuels : leur Elo de départ est l'Elo affiché au moment de la migration.
+-- Joueurs actuels : leur Elo est recalculé en rejouant leurs réponses classées avec ces règles (niveau caché inchangé).
 -- Difficulté des questions : en plus de l'ajustement à chaque réponse, un recalcul chaque nuit pour les questions
 -- d'au moins 10 premières réponses classées : la difficulté qui explique le mieux les résultats, compte tenu du niveau
 -- de chaque joueur au moment de répondre (avec un léger rappel vers l'estimation de départ).
@@ -18,19 +18,6 @@ alter table public.user_skills add column elo real;
 alter table public.user_skill_snapshots add column elo real;
 alter table public.question_attempts add column dom_elo_before real, add column dom_elo_after real;
 alter table public.questions add column difficulty_batch real;
-
--- Elo de départ des joueurs actuels : l'Elo affiché (500 → vrai niveau pendant le placement).
-update public.user_skills set elo = public._cote_shown(mu, n) where is_domain;
--- Historique : même règle, avec le nombre de réponses classées du domaine à la fin de chaque jour.
-update public.user_skill_snapshots sn
-   set elo = public._cote_shown(sn.mu, greatest(us.n - (
-         select count(*) from public.question_attempts a
-         join public.questions q on q.id = a.question_id
-         left join public.play_sessions ps on ps.id = a.session_id
-         where a.user_id = sn.user_id and q.domain_id = sn.scope_id and coalesce(ps.ranked, true) and a.context <> 'errors'
-           and (a.created_at at time zone 'UTC')::date > sn.day)::int, 0))
-  from public.user_skills us
- where us.user_id = sn.user_id and us.scope_id = sn.scope_id and us.is_domain;
 
 -- ─────────────────────────────────────────── Constantes et calcul
 create or replace function public._elo_c(p_key text) returns real
@@ -49,11 +36,28 @@ language sql immutable set search_path = public, pg_temp as $$
   end::real
 $$;
 
--- Multiplicateurs au-dessus de 1 000 : gains ×(1 − t/2), pertes ×(1 + t/2), t de 0 (1 000) à 1 (1 400).
+-- Multiplicateurs au-dessus de 1 000 : gains ×0,5 et pertes ×1,5 à 1 200, gains ×0,35 et pertes ×1,75 dès 1 400 (linéaire entre).
 create or replace function public._elo_mult(p_elo real, p_gain bool) returns real
 language sql immutable set search_path = public, pg_temp as $$
-  select (1 + (case when p_gain then -0.5 else 0.5 end) * least(greatest((p_elo - 1000) / 400.0, 0), 1))::real
+  select (case when p_gain then 1 - 0.5 * t1 - 0.15 * t2 else 1 + 0.5 * t1 + 0.25 * t2 end)::real
+  from (select least(greatest((p_elo - 1000) / 200.0, 0), 1) as t1, least(greatest((p_elo - 1200) / 200.0, 0), 1) as t2) t
 $$;
+
+-- Elo après une réponse classée (avant le plafond de la partie). p_n_before : réponses classées du domaine avant celle-ci.
+create or replace function public._elo_step(p_elo real, p_n_before int, p_b real, p_guess real, p_score real) returns real
+language plpgsql immutable set search_path = public, pg_temp as $$
+declare
+  v_c double precision := coalesce(p_guess, 0);
+  v_e double precision;
+  v_d double precision;
+  v_placing bool := p_n_before < public._c_placement();
+begin
+  v_e := v_c + (1 - v_c) / (1 + power(10, (public._cote(p_b) - p_elo) / 400.0));
+  v_d := (case when v_placing then public._elo_c('k_placement') else public._elo_c('k') end) * (p_score - v_e);
+  v_d := v_d * public._elo_mult(p_elo, v_d > 0);
+  if v_placing then v_d := least(v_d, public._elo_c('answer_max_pl')); end if;
+  return greatest(p_elo + v_d, public._elo_c('floor'))::real;
+end $$;
 
 -- Elo exprimé dans l'unité « niveau » (l'app 1.0 convertit : Elo = 1 000 + 17,37 × (niveau − 50)).
 create or replace function public._elo_as_level(p_elo real) returns real
@@ -67,20 +71,11 @@ create or replace function public._elo_update(p_user uuid, p_domain text, p_b re
 language plpgsql set search_path = public, pg_temp as $$
 declare
   v_n int;
-  v_c double precision := coalesce(p_guess, 0);
-  v_e double precision;
-  v_d double precision;
-  v_placing bool;
 begin
   select coalesce(s.elo, public._elo_c('start')), s.n into elo_before, v_n
   from public.user_skills s where s.user_id = p_user and s.scope_id = p_domain for update;
   if not found then return; end if;
-  v_placing := v_n - 1 < public._c_placement();
-  v_e := v_c + (1 - v_c) / (1 + power(10, (public._cote(p_b) - elo_before) / 400.0));
-  v_d := (case when v_placing then public._elo_c('k_placement') else public._elo_c('k') end) * (p_score - v_e);
-  v_d := v_d * public._elo_mult(elo_before, v_d > 0);
-  if v_placing then v_d := least(v_d, public._elo_c('answer_max_pl')); end if;
-  elo_after := greatest(elo_before + v_d, public._elo_c('floor'));
+  elo_after := public._elo_step(elo_before, v_n - 1, p_b, p_guess, p_score);
 
   update public.user_skills set elo = elo_after where user_id = p_user and scope_id = p_domain;
   update public.user_skill_snapshots set elo = elo_after
@@ -492,9 +487,71 @@ exception when others then
   raise notice 'pg_cron indisponible : recalcul des difficultés non planifié (%)', sqlerrm;
 end $$;
 
+-- ─────────────────────────────────────────── Joueurs actuels : Elo recalculé
+-- On rejoue dans l'ordre les réponses qui ont fait bouger le niveau d'un domaine (difficulté de la question au moment de
+-- répondre), avec le plafond de chaque partie classée. Le 5 du jour n'a pas de plafond de partie (comme en direct).
+do $$
+declare
+  a record;
+  v_n int; v_elo real; v_new real;
+  g record;
+  v_up real; v_down real;
+begin
+  create temp table rp_state (user_id uuid, domain_id text, n int, elo real, primary key (user_id, domain_id)) on commit drop;
+  create temp table rp_game (user_id uuid, game uuid, domain_id text, elo real, n0 int, primary key (user_id, game, domain_id)) on commit drop;
+  update public.user_skill_snapshots set elo = null;
+  for a in
+    select qa.id, qa.user_id, q.domain_id, qa.question_difficulty, q.guess_rate, qa.is_correct, qa.second_chance, qa.created_at,
+           case when qa.context = 'daily' then null else qa.session_id end as game
+    from public.question_attempts qa
+    join public.questions q on q.id = qa.question_id
+    left join public.play_sessions ps on ps.id = qa.session_id
+    where (qa.dom_mu_before is not null
+           or (qa.context in ('onboarding', 'daily', 'quick_play', 'training') and coalesce(ps.ranked, true)
+               and qa.created_at < '2026-10-01'))
+      and exists (select 1 from public.user_skills us where us.user_id = qa.user_id and us.scope_id = q.domain_id)
+    order by qa.created_at, qa.id
+  loop
+    select s.n, s.elo into v_n, v_elo from rp_state s where s.user_id = a.user_id and s.domain_id = a.domain_id;
+    if not found then
+      v_n := 0; v_elo := public._elo_c('start');
+      insert into rp_state values (a.user_id, a.domain_id, 0, v_elo);
+    end if;
+    v_new := public._elo_step(v_elo, v_n, a.question_difficulty, a.guess_rate,
+                              case when a.is_correct and a.second_chance then 0.5 when a.is_correct then 1 else 0 end);
+    if a.game is not null then
+      insert into rp_game values (a.user_id, a.game, a.domain_id, v_elo, v_n) on conflict do nothing;
+      select * into g from rp_game where user_id = a.user_id and game = a.game and domain_id = a.domain_id;
+      if g.n0 < public._c_placement() then
+        v_up := public._elo_c('game_placement'); v_down := public._elo_c('game_placement');
+      else
+        v_up := public._elo_c('game_gain');
+        v_down := case when g.elo >= public._elo_c('high') then public._elo_c('game_loss_high') else public._elo_c('game_loss') end;
+      end if;
+      v_new := least(greatest(v_new, g.elo - v_down), g.elo + v_up);
+    end if;
+    update rp_state set n = v_n + 1, elo = v_new where user_id = a.user_id and domain_id = a.domain_id;
+    update public.question_attempts set dom_elo_before = v_elo, dom_elo_after = v_new where id = a.id;
+    update public.user_skill_snapshots set elo = v_new
+     where user_id = a.user_id and scope_id = a.domain_id and day = (a.created_at at time zone 'UTC')::date;
+  end loop;
+
+  update public.user_skills us set elo = coalesce((select s.elo from rp_state s where s.user_id = us.user_id and s.domain_id = us.scope_id),
+                                                  public._elo_c('start'))
+   where us.is_domain;
+  -- Jours sans réponse rejouée : dernier Elo connu (500 avant).
+  update public.user_skill_snapshots sn
+     set elo = coalesce((select p.elo from public.user_skill_snapshots p
+                         where p.user_id = sn.user_id and p.scope_id = sn.scope_id and p.day < sn.day and p.elo is not null
+                         order by p.day desc limit 1), public._elo_c('start'))
+    from public.user_skills us
+   where us.user_id = sn.user_id and us.scope_id = sn.scope_id and us.is_domain and sn.elo is null;
+end $$;
+
 -- ─────────────────────────────────────────── Droits
 revoke execute on function public._elo_c(text) from public, anon, authenticated;
 revoke execute on function public._elo_mult(real, bool) from public, anon, authenticated;
+revoke execute on function public._elo_step(real, int, real, real, real) from public, anon, authenticated;
 revoke execute on function public._elo_as_level(real) from public, anon, authenticated;
 revoke execute on function public._elo_update(uuid, text, real, real, real) from public, anon, authenticated;
 revoke execute on function public._cap_game_elo(uuid, uuid) from public, anon, authenticated;
