@@ -32,7 +32,7 @@ begin
       n_savant := n_savant + 1;
       if first_savant is null then first_savant := r; end if;
       perform tst.ok((r ->> 'seeds')::int >= 120, 'Savant : au moins 120 graines');
-      perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int = 1 and (r -> 'tickets' ->> 'hint')::int = 1, 'Savant : 2 tickets');
+      perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 1, 'Savant : 1 ticket (0052)');
       perform tst.ok((r ->> 'upgrades')::int = 1, 'Savant : une montée depuis l''or');
     end if;
   end loop;

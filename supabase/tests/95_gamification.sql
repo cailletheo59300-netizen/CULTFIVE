@@ -32,13 +32,13 @@ begin
   perform tst.ok((r2 ->> 'already_opened')::bool and r2 ->> 'seeds' = r ->> 'seeds', 'deuxième ouverture : même contenu, rien de plus');
   perform tst.ok((select seeds from public.profiles where id = u) = seeds0 + (r ->> 'seeds')::int, 'pas de double versement');
 
-  -- Coffre de bois : 10–20 graines (+10 si un joker tombe mais qu'on en a déjà 2), 1 ticket.
+  -- Coffre de bois : 10–20 graines (+10 si un joker tombe mais qu'on en a déjà 2), 1 ticket une fois sur 3 (0052).
   select id into c from public.user_chests where user_id = u and idempotency_key = 'level:2';
   r := public.chest_open(c);
   -- (La Recharge peut faire monter le coffre : on ne vérifie le contenu « bois » que s'il est resté en bois.)
   if r ->> 'final_tier' = 'wood' then
     perform tst.ok((r ->> 'seeds')::int between 10 and 30, 'bois : graines');
-    perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 1, 'bois : 1 ticket');
+    perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int <= 1, 'bois : 1 ticket au plus');
     perform tst.ok(r -> 'item' = 'null'::jsonb or r -> 'item' is null, 'bois : pas d''objet');
   else
     perform tst.ok((r ->> 'seeds')::int >= 30, 'coffre monté : plus de graines');
@@ -51,7 +51,7 @@ begin
   perform tst.ok(not (r ->> 'joker')::bool and (select streak_freezes from public.profiles where id = u) = 2, 'jamais plus de 2 jokers');
   if r ->> 'final_tier' = 'silver' then
     perform tst.ok((r ->> 'seeds')::int between 30 and 95, 'argent : graines (+ compensations)');
-    perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 2, 'argent : 2 tickets');
+    perform tst.ok((r -> 'tickets' ->> 'fifty_fifty')::int + (r -> 'tickets' ->> 'hint')::int = 1, 'argent : 1 ticket (0052)');
   end if;
 
   -- Coffre d'or : plus d'objet de Léon (0044).

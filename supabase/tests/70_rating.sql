@@ -101,7 +101,8 @@ begin
   end loop;
   perform tst.ok(mus[1] < mus[2] and mus[2] < mus[3], 'ordre des joueurs');
   raise notice 'simulation : réussite des trois joueurs après placement %/%', late_ok, late_n;
-  perform tst.ok(late_ok::real / late_n between 0.55 and 0.78, 'réussite ~65 %');
+  -- Mélange de 0046 (30 % accessibles, 50 % à son niveau, 20 % qui piquent) : ≈ 70 % de réussite visée.
+  perform tst.ok(late_ok::real / late_n between 0.58 and 0.85, 'réussite ≈ 70 % (' || late_ok || '/' || late_n || ')');
   perform tst.ok((select bool_and((s ->> 'placed')::bool) from (
                     select (select s from jsonb_array_elements(public.skills_overview()) s where s ->> 'domain_id' = 'geography') s) t),
                  'placement terminé après 8 parties');
