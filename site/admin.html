@@ -242,78 +242,91 @@ const fmt = (n) => (n ?? 0).toLocaleString('fr-FR');
 const ago = (t) => { if (!t) return '—'; const m = (Date.now() - new Date(t)) / 60000;
   return m < 60 ? `il y a ${Math.round(m)} min` : m < 1440 ? `il y a ${Math.round(m / 60)} h` : `il y a ${Math.round(m / 1440)} j`; };
 
+// Libellés lisibles des sources de neurones (devise interne « seeds »), des coffres, des pochettes et des pubs.
+const SEED_REASONS = { chest: 'Coffres', quest: 'Défis du jour et de la semaine', daily_complete: '5 du jour terminé',
+  daily_perfect: '5 du jour parfait', play_correct: 'Bonnes réponses en partie', duel_win: 'Duels gagnés',
+  error_corrected: 'Erreurs corrigées', pile: '« Pile ! »', achievement: 'Trophées', referral_invitee: 'Parrainage (filleul)',
+  referral_inviter: 'Parrainage (parrain)', ad_double_seeds: 'Pub : neurones doublés', album_pack: 'Pochettes achetées',
+  album_gold: 'Pochette dorée', album_craft: 'Cartes fabriquées', album_duplicate: 'Doublons de cartes',
+  tree_feed: 'Arbre (ancienne app)', shop: 'Boutique de Léon (ancienne app)' };
+const CHESTS = { wood: 'Bois', silver: 'Argent', gold: 'Or', savant: 'Savant' };
+const PACKS = { neurones: 'achetées en neurones', ticket: 'avec un ticket', gold: 'dorées', gold_pass: 'dorées (pass)' };
+const AD_KINDS = { free_chest: 'Coffre offert', free_pack: 'Pochette gratuite', boost_chest: 'Coffre boosté',
+  double_seeds: 'Neurones doublés', streak_rescue: 'Série sauvée', correction: 'Correction des erreurs' };
+const stats = (rows) => `<div class="grid">${rows.map(([l, v, hint]) =>
+  `<div class="card stat"${hint ? ` title="${esc(hint)}"` : ''}><b>${typeof v === 'string' ? v : fmt(v)}</b><span>${l}</span></div>`).join('')}</div>`;
+const how = (text) => `<p class="muted small">${text}</p>`;
+
 async function renderDashboard() {
-  const [d, k, ads] = await Promise.all([rpc('admin_dashboard'), rpc('admin_kpis', { p_days: 30 }),
-                                         rpc('admin_ads', { p_days: 30 }).catch(() => null)]);
-  const AD_KINDS = { double_seeds: 'Graines doublées', boost_chest: 'Coffre boosté', free_chest: 'Coffre offert',
-                     streak_rescue: 'Série sauvée', correction: 'Correction des erreurs' };
-  const adsHtml = ads ? `
-    <h2 style="margin-top:24px">Pubs</h2>
-    <div class="grid">
-      ${[['Pubs récompensées vues (7 j)', Object.values(ads.by_kind ?? {}).reduce((a, x) => a + x.views, 0)],
-         ['Joueurs ayant regardé (7 j)', ads.viewers_7d], ['Pubs entre les parties (7 j)', ads.interstitial_7d],
-         ['Graines doublées (7 j)', ads.seeds_doubled]]
-        .map(([l, v]) => `<div class="card stat"><b>${fmt(v)}</b><span>${l}</span></div>`).join('')}
-    </div>
+  const [k, ads] = await Promise.all([rpc('admin_kpis', { p_days: 30 }), rpc('admin_ads', { p_days: 30 }).catch(() => null)]);
+  const t = k.totals, f = k.funnel, ret = k.retention ?? {}, e = k.economy ?? {};
+  const funnelRows = [['Installations (30 jours)', f.created], ['Onboarding terminé', f.onboarded], ['Première réponse', f.first_answer],
+                      ['Premier 5 du jour', f.first_daily], ['Revenus un autre jour', f.came_back], ['Compte Apple ou e-mail', f.linked]];
+  const reasons = Object.entries(e.by_reason ?? {}).sort((x, y) => Math.abs(y[1]) - Math.abs(x[1]));
+  const tagList = (obj, labels) => Object.entries(obj ?? {}).map(([key, n]) => `<span class="pill">${esc(labels[key] ?? key)} · ${fmt(n)}</span>`).join(' ')
+    || '<span class="muted">Aucun</span>';
+  app.innerHTML = `
+    <h2>1. Joueurs</h2>
+    ${how(`Un joueur = quelqu'un qui a fini l'onboarding ou créé un compte (Apple ou e-mail). Les invités qui ont seulement ouvert l'app (${fmt(t.guests)}) ne sont pas comptés. Actif = a ouvert l'app ou répondu ce jour-là.`)}
+    ${stats([['Joueurs', t.players], ['Actifs aujourd\'hui', t.dau], ['Actifs sur 7 jours', t.wau], ['Actifs sur 30 jours', t.mau],
+             ['Nouveaux sur 7 jours', t.new_7d], ['Avec un compte', t.linked]])}
     <div class="two">
-      <div class="card"><h2>Pubs récompensées par jour</h2>${barChart(ads.series, 'rewarded', 'pubs récompensées')}</div>
-      <div class="card"><h2>Pubs entre les parties par jour</h2>${barChart(ads.series, 'interstitial', 'pubs entre les parties')}</div>
+      <div class="card"><h3>Joueurs actifs par jour</h3>${barChart(k.series, 'active', 'joueurs actifs')}</div>
+      <div class="card"><h3>Nouveaux joueurs par jour</h3>${barChart(k.series, 'new_players', 'nouveaux joueurs')}</div>
     </div>
-    <div class="card"><h2>Par récompense (7 jours)</h2><p class="muted small">Vues confirmées par Google · récompenses données. Les vues de test ne sont pas comptées ; les revenus sont dans la console AdMob.</p>
-      <table>${Object.entries(AD_KINDS).map(([key, label]) => { const x = ads.by_kind?.[key] ?? { views: 0, claimed: 0 };
-        return `<tr><td>${label}</td><td style="text-align:right"><b>${fmt(x.views)}</b> vues · ${fmt(x.claimed)} données</td></tr>`; }).join('')}</table></div>` : '';
-  const t = k.totals, f = k.funnel, ret = k.retention ?? {};
-  const funnelRows = [['Arrivés (30 derniers jours)', f.created], ['Onboarding terminé', f.onboarded], ['Première réponse', f.first_answer],
-                      ['Premier 5 du jour', f.first_daily], ['Revenus un autre jour', f.came_back], ['Compte créé (Apple ou e-mail)', f.linked]];
-  const kpiHtml = `
-    <div class="grid">
-      ${[['Joueurs', t.players], ['Actifs aujourd\'hui', t.dau], ['Actifs 7 jours', t.wau], ['Actifs 30 jours', t.mau],
-         ['Comptes créés', t.linked], ['Réponses (total)', t.answers]]
-        .map(([l, v]) => `<div class="card stat"><b>${fmt(v)}</b><span>${l}</span></div>`).join('')}
-    </div>
+
+    <h2 style="margin-top:24px">2. Ils reviennent ?</h2>
     <div class="two">
-      <div class="card"><h2>Joueurs actifs par jour</h2>${barChart(k.series, 'active', 'joueurs actifs')}</div>
-      <div class="card"><h2>Nouveaux joueurs par jour</h2>${barChart(k.series, 'new_players', 'nouveaux joueurs')}</div>
-      <div class="card"><h2>5 du jour terminés</h2>${barChart(k.series, 'daily_finished', '5 du jour terminés')}</div>
-      <div class="card"><h2>Parties terminées</h2>${barChart(k.series, 'games', 'parties')}</div>
-    </div>
-    <div class="two">
-      <div class="card"><h2>Rétention</h2><p class="muted small">Part des joueurs revenus exactement 1, 7 ou 30 jours après leur arrivée.</p>
-        <div class="grid">${[1, 7, 30].map((n) => { const r = ret[n] ?? {}; return `<div class="stat"><b>${pct(r.rate)}</b>
+      <div class="card"><h3>Rétention</h3>${how('Part des joueurs revenus exactement 1, 7 ou 30 jours après leur arrivée (seulement ceux arrivés assez tôt pour être comptés).')}
+        <div class="grid">${[1, 7, 30].map((n) => { const r = ret[n] ?? {}; return `<div class="stat"><b>${r.cohort ? pct(r.rate) : '—'}</b>
           <span>J${n} · ${fmt(r.returned)} sur ${fmt(r.cohort)}</span></div>`; }).join('')}</div></div>
-      <div class="card"><h2>Parcours des nouveaux joueurs</h2>
+      <div class="card"><h3>Parcours des nouveaux (30 jours)</h3>${how('Toutes les installations, puis combien vont à chaque étape.')}
         <table class="funnel">${funnelRows.map(([l, v]) => `<tr><td>${l}</td><td style="width:60px"><b>${fmt(v)}</b></td>
           <td><div class="bar"><i style="width:${f.created ? Math.round(100 * v / f.created) : 0}%"></i></div></td>
           <td style="width:50px" class="muted small">${f.created ? Math.round(100 * v / f.created) + ' %' : ''}</td></tr>`).join('')}</table></div>
     </div>
+
+    <h2 style="margin-top:24px">3. Jeu</h2>
+    ${stats([['Réponses sur 7 jours', t.answers_7d], ['Réponses en tout', t.answers]])}
     <div class="two">
-      <div class="card"><h2>Graines (7 jours)</h2>
-        <p><b>${fmt(k.economy.seeds_earned)}</b> gagnées · <b>${fmt(k.economy.seeds_spent)}</b> dépensées</p>
-        <table>${Object.entries(k.economy.by_reason ?? {}).map(([r, n]) => `<tr><td>${esc(r)}</td><td style="text-align:right"><b>${fmt(n)}</b></td></tr>`).join('')}</table>
-        <h3>Coffres ouverts (7 jours)</h3><p>${Object.entries(k.economy.chests_opened ?? {}).map(([t2, n]) => `<span class="pill">${esc(t2)} · ${n}</span>`).join(' ') || '<span class="muted">Aucun</span>'}</p></div>
-      <div class="card"><h2>Domaines joués (30 jours)</h2>
-        <table>${(k.domains ?? []).map((x) => `<tr><td>${chip(x.domain_id)}</td><td style="text-align:right"><b>${fmt(x.answers)}</b> réponses</td></tr>`).join('')}</table>
-        <h3>Versions de l'app (30 jours)</h3><p>${Object.entries(k.versions ?? {}).map(([v, n]) => `<span class="pill">${esc(v)} · ${n}</span>`).join(' ') || '<span class="muted">Pas encore de données</span>'}</p>
-        <h3>Événements (7 jours)</h3><p>${Object.entries(k.events ?? {}).map(([v, n]) => `<span class="pill">${esc(v)} · ${n}</span>`).join(' ') || '<span class="muted">Pas encore de données</span>'}</p></div>
-    </div>`;
+      <div class="card"><h3>5 du jour terminés par jour</h3>${barChart(k.series, 'daily_finished', '5 du jour terminés')}</div>
+      <div class="card"><h3>Parties terminées par jour</h3>${barChart(k.series, 'games', 'parties')}</div>
+    </div>
+    <div class="card"><h3>Domaines les plus joués (30 jours)</h3>
+      <table>${(k.domains ?? []).map((x) => `<tr><td>${chip(x.domain_id)}</td><td style="text-align:right"><b>${fmt(x.answers)}</b> réponses</td></tr>`).join('') || '<tr><td class="muted">Aucune réponse</td></tr>'}</table></div>
+
+    <h2 style="margin-top:24px">4. Économie et pubs (7 jours)</h2>
+    <div class="two">
+      <div class="card"><h3>Neurones</h3>
+        <p><b>${fmt(e.seeds_earned)}</b> gagnés · <b>${fmt(e.seeds_spent)}</b> dépensés</p>
+        <table>${reasons.map(([r, n]) => `<tr><td>${esc(SEED_REASONS[r] ?? r)}</td><td style="text-align:right"><b>${n > 0 ? '+' : ''}${fmt(n)}</b></td></tr>`).join('') || '<tr><td class="muted">Aucun mouvement</td></tr>'}</table></div>
+      <div class="card"><h3>Coffres ouverts</h3><p>${tagList(e.chests_opened, CHESTS)}</p>
+        <h3>Pochettes ouvertes</h3><p>${tagList(e.packs_opened, PACKS)}</p>
+        <h3>Cartes</h3><p><b>${fmt(e.cards_new)}</b> nouvelles cartes dans les albums · dont <b>${fmt(e.game_cards)}</b> gagnées en fin de partie</p></div>
+    </div>
+    ${ads ? `<div class="card"><h3>Pubs</h3>${how('Pubs récompensées : vues confirmées par Google (les pubs de test ne comptent pas). Pubs entre les parties : comptées par l\'app. Les revenus sont dans la console AdMob.')}
+      ${stats([['Pubs récompensées', ads.rewarded_7d], ['Joueurs qui en ont regardé', ads.viewers_7d], ['Pubs entre les parties', ads.interstitial_7d]])}
+      <table>${Object.entries(AD_KINDS).map(([key, label]) => { const x = ads.by_kind?.[key] ?? { views: 0, claimed: 0 };
+        return `<tr><td>${label}</td><td style="text-align:right"><b>${fmt(x.views)}</b> vue${x.views > 1 ? 's' : ''} · ${fmt(x.claimed)} récompense${x.claimed > 1 ? 's' : ''} donnée${x.claimed > 1 ? 's' : ''}</td></tr>`; }).join('')}</table>
+      <div class="two" style="margin-top:12px">
+        <div><h3>Pubs récompensées par jour</h3>${barChart(ads.series, 'rewarded', 'pubs récompensées')}</div>
+        <div><h3>Pubs entre les parties par jour</h3>${barChart(ads.series, 'interstitial', 'pubs entre les parties')}</div>
+      </div></div>` : ''}`;
+}
+
+// Contenu par thème (onglet Questions), replié par défaut.
+async function contentByTheme() {
+  const d = await rpc('admin_dashboard');
   const byTheme = d.published_by_subdomain ?? {};
   const themes = state.subdomains.filter((s) => s.is_active !== false);
-  app.innerHTML = kpiHtml + adsHtml + `
-    <h2 style="margin-top:24px">Contenu</h2>
-    <div class="grid">
-      ${[['Joueurs', d.users], ['5 du jour terminés aujourd\'hui', d.daily_players_today], ['Réponses (7 jours)', d.answers_7d],
-         ['Signalements ouverts', d.open_reports], ['Questions à revoir', d.needs_review],
-         ['Questions publiées', d.questions_by_status?.published ?? 0]]
-        .map(([l, v]) => `<div class="card stat"><b>${v ?? 0}</b><span>${l}</span></div>`).join('')}
-    </div>
-    <div class="card"><h2>Contenu par thème</h2>
-      <p class="muted small">Objectif : au moins ${MIN_PER_THEME} questions publiées par thème (en orange en dessous).</p>
+  return `<div class="card">${stats([['Questions publiées', d.questions_by_status?.published ?? 0], ['Brouillons', d.questions_by_status?.draft ?? 0],
+      ['À revoir', d.needs_review], ['Signalements ouverts', d.open_reports]])}
+    <details style="margin-top:12px"><summary><b>Questions publiées par thème</b> <span class="muted small">(objectif : au moins ${MIN_PER_THEME} par thème, en orange en dessous)</span></summary>
       ${state.domains.map((dom) => `<h3>${chip(dom.id)} <span class="muted small">${d.published_by_domain?.[dom.id] ?? 0} questions</span></h3>
-        <table>${themes.filter((t) => t.domain_id === dom.id).map((t) => { const n = byTheme[t.id] ?? 0; return `
-          <tr><td style="width:35%">${esc(t.name)}</td><td style="width:15%"><span class="pill ${n < MIN_PER_THEME ? 'warn' : ''}">${n}</span></td>
+        <table>${themes.filter((th) => th.domain_id === dom.id).map((th) => { const n = byTheme[th.id] ?? 0; return `
+          <tr><td style="width:35%">${esc(th.name)}</td><td style="width:15%"><span class="pill ${n < MIN_PER_THEME ? 'warn' : ''}">${n}</span></td>
           <td><div class="bar"><i style="width:${Math.min(100, n / 2)}%"></i></div></td></tr>`; }).join('')}</table>`).join('')}
-    </div>
-    <div class="card"><h2>5 du jour prévus</h2><p>${(d.upcoming_dailies ?? []).map((x) => `<span class="pill">${x}</span>`).join(' ') || '<span class="muted">Aucun</span>'}</p></div>`;
+    </details></div>`;
 }
 
 // ───────────────────────── Liste des questions
@@ -341,7 +354,8 @@ async function renderQuestions({ reported = false } = {}) {
   if (reported) state.filter = { reported: true, sort: 'reports' };
   const clean = Object.fromEntries(Object.entries(state.filter).filter(([, x]) => x !== undefined && x !== ''));
   const res = await rpc('admin_questions', { p_filter: clean, p_limit: 50, p_offset: state.page * 50 });
-  app.innerHTML = (reported ? `<div class="card"><h2>Signalements ouverts</h2><p class="muted small">Questions signalées par des joueurs. Corrige-les puis clos les signalements.</p></div>` : filterBar()) + `
+  const content = reported ? '' : await contentByTheme();
+  app.innerHTML = content + (reported ? `<div class="card"><h2>Signalements ouverts</h2><p class="muted small">Questions signalées par des joueurs. Corrige-les puis clos les signalements.</p></div>` : filterBar()) + `
     <div class="card"><div class="row"><div><b>${res.total}</b> question${res.total > 1 ? 's' : ''}</div>
       <div style="flex:0"><button class="btn ghost" id="prev" ${state.page === 0 ? 'disabled' : ''}>←</button></div>
       <div style="flex:0" class="muted small">page ${state.page + 1}/${Math.max(1, Math.ceil(res.total / 50))}</div>
@@ -512,8 +526,9 @@ function openEditor(q, onClose) {
 
 // ───────────────────────── 5 du jour
 async function renderDaily(date = new Date().toISOString().slice(0, 10)) {
-  let d = await rpc('admin_daily_get', { p_date: date });
-  app.innerHTML = `<div class="card"><div class="row">
+  const [d, dash] = await Promise.all([rpc('admin_daily_get', { p_date: date }), rpc('admin_dashboard')]);
+  app.innerHTML = `<div class="card"><p class="small"><b>Séries prêtes :</b> ${(dash.upcoming_dailies ?? []).map((x) => `<span class="pill">${new Date(x + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' })}</span>`).join(' ') || '<span class="muted">aucune</span>'}</p>
+    <div class="row">
       <div><label>Date</label><input id="dDate" type="date" value="${date}"></div>
       <div style="flex:0"><button class="btn ghost" id="dGen">Générer si absent</button></div></div>
       <p class="muted small">${d.runs_started ?? 0} partie(s) commencée(s) ce jour. Remplacer une question après le début est déconseillé (équité) et demande une confirmation.</p></div>
@@ -553,7 +568,11 @@ state.users = { search: '', sort: 'recent', page: 0 };
 // ───────────────────────── Santé : plantages, erreurs, tâches planifiées, notifications, version minimale
 const KINDS = { crash: 'Plantage', hang: 'Blocage', cpu: 'Processeur', disk: 'Disque', launch: 'Lancement' };
 async function renderHealth() {
-  const h = await rpc('admin_health');
+  const [h, k] = await Promise.all([rpc('admin_health'), rpc('admin_kpis', { p_days: 30 })]);
+  const EVENTS = { app_open: 'Ouvertures de l\'app', onboarding_step: 'Étapes d\'onboarding', onboarding_done: 'Onboardings finis',
+    ad_offer: 'Pubs proposées', ad_view: 'Pubs lancées', ad_reward: 'Récompenses de pub', interstitial: 'Pubs entre les parties',
+    client_error: 'Erreurs vues', share: 'Partages' };
+  const versions = Object.entries(k.versions ?? {}).sort((a, b) => b[1] - a[1]);
   const okPill = (s) => s === 'succeeded' ? '<span class="pill ok">ok</span>' : s ? `<span class="pill bad">${esc(s)}</span>` : '<span class="pill">—</span>';
   app.innerHTML = `
     <div class="grid">
@@ -580,6 +599,12 @@ async function renderHealth() {
         ${(h.diagnostics_7d ?? []).length === 0 ? '<p class="muted">Aucun.</p>' : `<table><thead><tr><th>Type</th><th>Version</th><th>Fois</th></tr></thead><tbody>
         ${h.diagnostics_7d.map((d) => `<tr><td>${KINDS[d.kind] ?? esc(d.kind)}</td><td>${esc(d.app_version ?? '')}</td><td>${d.count}</td></tr>`).join('')}</tbody></table>`}
         ${(h.recent_crashes ?? []).length ? `<h3>Derniers</h3>${h.recent_crashes.map((c) => `<details><summary class="small">${ago(c.at)} · ${KINDS[c.kind] ?? c.kind} · ${esc(c.app_version ?? '')} · iOS ${esc(c.os_version ?? '')}</summary><pre>${esc(JSON.stringify(c.payload, null, 1).slice(0, 4000))}</pre></details>`).join('')}` : ''}</div>
+    </div>
+    <div class="two">
+      <div class="card"><h2>Versions de l'app (30 jours)</h2><p class="muted small">Nombre de joueurs par version (numéro de build entre parenthèses).</p>
+        <table>${versions.map(([v, n]) => `<tr><td>${esc(v)}</td><td style="text-align:right"><b>${fmt(n)}</b> joueur${n > 1 ? 's' : ''}</td></tr>`).join('') || '<tr><td class="muted">Pas encore de données</td></tr>'}</table></div>
+      <div class="card"><h2>Journal de l'app (7 jours)</h2>
+        <table>${Object.entries(k.events ?? {}).sort((a, b) => b[1] - a[1]).map(([v, n]) => `<tr><td>${esc(EVENTS[v] ?? v)}</td><td style="text-align:right"><b>${fmt(n)}</b></td></tr>`).join('') || '<tr><td class="muted">Pas encore de données</td></tr>'}</table></div>
     </div>
     <div class="card"><h2>Notifications</h2>
       <p>${fmt(h.push.waiting)} en attente · ${fmt(h.push.errors_24h)} erreur${h.push.errors_24h > 1 ? 's' : ''} en 24 h${h.push.last_error ? ` · dernière : <code>${esc(h.push.last_error)}</code>` : ''}</p>
@@ -632,7 +657,7 @@ async function renderUsers() {
         <option value="all" ${u.scope === 'all' ? 'selected' : ''}>Tous (avec les invités)</option></select></div>
       <div><label>&nbsp;</label><button class="btn" id="uGo">Chercher</button></div></div></div>
     <div class="card"><p class="muted small">${fmt(res.total)} joueur${res.total > 1 ? 's' : ''}${u.scope === 'real' ? ' (vrais comptes : onboarding fini ou compte Apple / e-mail)' : ''}</p>
-    <table><thead><tr><th>Pseudo</th><th>Arrivé</th><th>Dernière activité</th><th>Réponses</th><th>Série</th><th>Graines</th><th>Compte</th></tr></thead><tbody>
+    <table><thead><tr><th>Pseudo</th><th>Arrivé</th><th>Dernière activité</th><th>Réponses</th><th>Série</th><th>Neurones</th><th>Compte</th></tr></thead><tbody>
     ${res.items.map((p) => `<tr class="click" data-id="${p.id}"><td><b>${esc(p.handle)}</b> ${p.banned_at ? '<span class="pill bad">banni</span>' : ''}</td>
       <td class="small">${new Date(p.created_at).toLocaleDateString('fr-FR')}</td><td class="small">${ago(p.last_active)}</td>
       <td>${fmt(p.questions_answered)}</td><td>${p.streak_current ?? 0}</td><td>${fmt(p.seeds)}</td>
@@ -657,14 +682,14 @@ async function openUser(id) {
     <p class="muted small">Arrivé le ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${d.anonymous ? 'invité (sans compte)' : 'compte ' + (d.providers ?? []).join(', ')}
       · ${d.devices} appareil(s) · fuseau ${esc(p.timezone)} · id <code>${esc(p.id)}</code></p>
     ${p.banned_at ? `<p class="pill bad">Banni le ${new Date(p.banned_at).toLocaleDateString('fr-FR')} : ${esc(p.ban_reason ?? '')}</p>` : ''}
-    <div class="grid">${[['XP', p.xp_total], ['Graines', p.seeds], ['Série', p.streak_current], ['Meilleure série', p.streak_best],
+    <div class="grid">${[['XP', p.xp_total], ['Neurones', p.seeds], ['Série', p.streak_current], ['Meilleure série', p.streak_best],
       ['Réponses', p.questions_answered], ['Bonnes réponses', p.questions_correct], ['Coffres en attente', d.chests.waiting], ['Signalements faits', d.reports]]
       .map(([l, v]) => `<div class="stat"><b>${fmt(v)}</b><span>${l}</span></div>`).join('')}</div>
     <h3>Elo par domaine</h3><p>${d.skills.map((s) => `${chip(s.domain_id)} <b>${s.cote}</b> <span class="muted small">(${s.n} rép.)</span>`).join(' &nbsp; ') || '<span class="muted">Aucun</span>'}</p>
     <h3>Dernières parties</h3><table>${d.games.map((g) => `<tr><td class="small">${new Date(g.created_at).toLocaleString('fr-FR')}</td><td>${esc(g.mode)}</td>
       <td>${g.domain_id ? chip(g.domain_id) : ''}</td><td>${g.correct}/${g.answers}</td><td>${g.completed ? '' : '<span class="pill">abandonnée</span>'}</td></tr>`).join('') || '<tr><td class="muted">Aucune</td></tr>'}</table>
     <h3>5 du jour (14 derniers)</h3><p>${d.dailies.map((x) => `<span class="pill">${x.date} · ${x.status === 'finished' ? x.score + '/5' : x.status}</span>`).join(' ') || '<span class="muted">Aucun</span>'}</p>
-    <h3>Graines et XP</h3><table>${d.ledger.map((l) => `<tr><td class="small">${new Date(l.at).toLocaleString('fr-FR')}</td><td>${esc(l.reason)}</td><td>${l.amount > 0 ? '+' : ''}${l.amount} ${l.currency === 'seeds' ? 'graines' : esc(l.currency)}</td></tr>`).join('')}</table>
+    <h3>Neurones et XP</h3><table>${d.ledger.map((l) => `<tr><td class="small">${new Date(l.at).toLocaleString('fr-FR')}</td><td>${esc(SEED_REASONS[l.reason] ?? l.reason)}</td><td>${l.amount > 0 ? '+' : ''}${l.amount} ${l.currency === 'seeds' ? 'neurones' : esc(l.currency)}</td></tr>`).join('')}</table>
     <h3>Journal de l'app</h3><table>${d.events.map((e) => `<tr><td class="small">${new Date(e.at).toLocaleString('fr-FR')}</td><td>${esc(e.name)}</td><td class="small muted">${esc(JSON.stringify(e.props))}</td><td class="small">${esc(e.app_version ?? '')}</td></tr>`).join('') || '<tr><td class="muted">Pas encore d\'événement</td></tr>'}</table>
     <h3>Modération</h3>
     <div class="row"><div style="flex:2"><label>Nouveau pseudo</label><input id="newHandle" value="${esc(p.handle)}"></div>

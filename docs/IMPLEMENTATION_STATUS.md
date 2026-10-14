@@ -63,6 +63,7 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 | 6b. Placement en 20 réponses et parties rapides tournées vers les domaines non placés (0051) ; fin de partie fixe et carte fêtée en plein écran ; icône du neurone dans les coffres | ✅ CI ; serveur : voir 7a |
 | 6c. Elo de progression séparé du niveau, plafonds, asymétrie en haut, mélange plus dur dès 1 200, recalcul de nuit des difficultés (0054, D-055) | ✅ tests SQL `99_elo_progression.sql` ; en production le 14/10 (sauvegarde, répétition en transaction annulée, Elo des joueurs recalculé, recalcul de nuit planifié à 3 h 23 UTC) |
 | 6d. Pubs réelles : la fonction `admob-ssv` refusait toutes les vraies vues (Google signe la requête décodée) ; corrigée et redéployée le 14/10 (version 6), test `scripts/test-ssv.mjs` en CI | ✅ |
+| 6e. Admin clair (0055) : un joueur = onboarding fini ou compte ; 4 blocs (joueurs, rétention, jeu, économie et pubs) ; contenu dans Questions, versions dans Santé ; neurones partout ; l'app ne crée plus de compte pendant les tests de la CI | ✅ |
 | 7a. Mise en production (13/10) : sauvegarde, migrations 0038–0050 et seed (8 282 questions publiées, 525 cartes), essai en transaction annulée, contrôle de sécurité | ✅ |
 | 7b. Jour de la sortie : recaler la saison 1 (`update seasons set starts_on = <sortie>, ends_on = <sortie + 61>`), effacer les paliers récupérés pendant les tests (`delete from season_claims`), envoyer la 1.1 à Apple | ⏳ |
 

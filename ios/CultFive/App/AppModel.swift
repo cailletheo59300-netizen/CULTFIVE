@@ -96,6 +96,8 @@ final class AppModel {
             await bootstrapDemo(screen)
             return
         }
+        // Tests unitaires (CI) : l'app hôte démarre aussi ; elle ne doit pas créer de compte sur le vrai serveur.
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil { return }
         #endif
         guard let api else { return }
         bootstrapAttempts += 1

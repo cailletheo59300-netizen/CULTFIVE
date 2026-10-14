@@ -3,7 +3,7 @@ do $$
 declare
   adm uuid := tst.new_user();
   u uuid := tst.new_user();
-  r jsonb; k jsonb; pack jsonb; atts jsonb := '[]'::jsonb; x jsonb;
+  r jsonb; k jsonb; k2 jsonb; ghost uuid; pack jsonb; atts jsonb := '[]'::jsonb; x jsonb;
 begin
   perform tst.clock('2027-11-02 10:00:00+01');
   insert into public.app_admins (user_id) values (adm);
@@ -31,6 +31,19 @@ begin
   perform tst.ok((k -> 'series' -> 29 ->> 'answers')::int >= 5, 'réponses du jour');
   perform tst.ok(k -> 'versions' ? '1.4.0', 'versions de l''app');
   perform tst.ok((k -> 'events' ->> 'share')::int >= 1, 'événements de la semaine');
+
+  -- Invité fantôme (app lancée, onboarding jamais fini) : compté seulement comme invité, jamais comme joueur ni actif.
+  ghost := tst.new_user(true);
+  perform tst.login(ghost);
+  perform public.track_events('[{"name":"app_open","app_version":"9.9.9 (1)"}]');
+  perform tst.login(adm);
+  k2 := public.admin_kpis(30);
+  perform tst.ok((k2 -> 'totals' ->> 'players') = (k -> 'totals' ->> 'players')
+                 and (k2 -> 'totals' ->> 'guests')::int = (k -> 'totals' ->> 'guests')::int + 1, 'fantôme : invité, pas joueur');
+  perform tst.ok((k2 -> 'totals' ->> 'dau') = (k -> 'totals' ->> 'dau') and not (k2 -> 'versions' ? '9.9.9 (1)'), 'fantôme : ni actif ni version');
+  perform tst.ok((k2 -> 'funnel' ->> 'created')::int = (k -> 'funnel' ->> 'created')::int + 1, 'fantôme : compté dans les installations');
+  perform tst.ok((public.admin_dashboard() ->> 'users')::int = (k -> 'totals' ->> 'players')::int, 'même nombre de joueurs partout');
+  perform tst.ok((public.admin_ads(30) ? 'rewarded_7d'), 'pubs : total de la semaine');
 
   r := public.admin_users((select handle from public.profiles where id = u), 'recent', 10, 0);
   perform tst.ok((r ->> 'total')::int = 1 and (r -> 'items' -> 0 ->> 'id')::uuid = u, 'recherche par pseudo');
