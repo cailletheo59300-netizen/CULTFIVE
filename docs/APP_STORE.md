@@ -113,18 +113,18 @@ Questionnaire (réponses) :
 
 ## 6. Version 1.1
 
-**Build à envoyer** : lancer le workflow TestFlight (il n'y a plus d'option « aperçu » : album, pass et nouveaux types sont dans tous les builds, D-053). Le serveur doit déjà avoir les migrations 0038–0049 et le seed.
+**Build à envoyer** : lancer le workflow TestFlight (il n'y a plus d'option « aperçu » : album, pass et nouveaux types sont dans tous les builds, D-053). Le serveur a déjà tout (migrations 0038–0054 et seed, en production).
 
 **Nouveautés de cette version** (à coller dans App Store Connect) :
 
-> - Tout est plus beau : coffres, graines, tickets et emblèmes de rang en 3D.
-> - Les coffres s'ouvrent pour de vrai : le couvercle bascule, les récompenses se retournent une à une.
-> - Tes grands moments sont fêtés : nouveau niveau, nouveau rang, trophée, record de série, défi réussi.
-> - Nouveau : « Mon sac », pour voir d'un coup d'œil tes graines, tickets et jokers.
-> - « Ton parcours » : tous les rangs et ce qu'il te reste à gagner.
-> - L'arbre de Léon prend vie.
-> - Écrans Jouer et Profil repensés, aides plus lisibles en partie.
+> - Nouveau : l'album ! Plus de 500 cartes de culture à collectionner, à gagner en jouant, dans des pochettes ou à fabriquer.
+> - Le Comptoir de Léon : pochettes de thème, pochette dorée avec une légendaire garantie, et une pochette offerte par jour contre une pub.
+> - Le pass de saison : 30 paliers de récompenses gratuites (coffres, tickets de pochette, dos de cartes, jeton Prestige).
+> - Les neurones remplacent les graines.
+> - Des milliers de nouvelles questions, dont des calculs, et de nouvelles façons de répondre : compteur, frise, jauge, lettres et mots à remettre dans l'ordre, choix d'images.
+> - Un Elo plus juste : il part de 500, se place en 20 réponses et se mérite partie après partie. Encyclopédie se gagne vraiment !
+> - Des coffres et des célébrations en 3D, et un écran de fin de partie qui fête tes cartes gagnées.
 
 **Notes pour Apple** : les mêmes qu'en section 3.
 
-**Serveur** : rien à déployer pour l'examen. Après la publication de la 1.1 seulement, déployer les migrations 0038 à 0041 et le seed (questions accessibles et nouveaux types), avec le feu vert du propriétaire.
+**Jour de la sortie** : recaler la saison 1 (`update seasons set starts_on = <sortie>, ends_on = <sortie + 61>`), effacer les paliers récupérés pendant les tests (`delete from season_claims`), puis envoyer la 1.1 à Apple — avec le feu vert du propriétaire.

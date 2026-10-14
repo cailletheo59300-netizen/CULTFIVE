@@ -66,7 +66,7 @@ Onboarding (accueil → 3 vraies questions → niveau → intérêts → compte 
 | 7b. Jour de la sortie : recaler la saison 1 (`update seasons set starts_on = <sortie>, ends_on = <sortie + 61>`), effacer les paliers récupérés pendant les tests (`delete from season_claims`), envoyer la 1.1 à Apple | ⏳ |
 
 Compatibilité 1.0 : aucune fonction utilisée par la 1.0 n'est supprimée ; la forme des réponses est inchangée (comparaison des réponses de test d'avant la 1.0 et d'aujourd'hui) ; la 1.0 reçoit des remplaçants classiques pour les nouveaux types (en-tête `x-brainlix-types`).
-Reste à nettoyer côté app : le bloc « Aujourd'hui » de l'accueil n'est plus affiché (remplacé par les défis) mais son code est encore là.
+Le code du bloc « Aujourd'hui » de l'accueil (remplacé par les défis) a été retiré.
 
 **Sortie 1.0.0 (en cours, 2026-10-01)** : fiche App Store remplie (textes et marche à suivre dans `APP_STORE.md`, captures dans `docs/screenshots/app-store` et `app-store-6.5`), statut de commerçant DSA déclaré (adresse modifiable dans App Store Connect → Business). Build 29 refusé au contrôle automatique (ITMS-91064 : `NSPrivacyTracking` vrai sans domaines) ; corrigé dans le build 30 (le suivi d'AdMob est déclaré par le SDK Google). Après publication : relier l'app dans AdMob, vérifier les premiers push et l'onglet Santé de l'admin.
 
