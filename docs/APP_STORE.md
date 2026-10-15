@@ -58,7 +58,9 @@ Réponses prêtes à recopier dans App Store Connect. À tenir à jour si l'app 
 | Diagnostics | Données de performance, autres données de diagnostic (AdMob) | Non | Non | Publicité tierce, Analyses |
 | Autres données | Tranche d'âge | Oui | Non | Fonctionnalité de l'app, Publicité tierce (pubs adaptées à l'âge) |
 
-Non collectés : nom, téléphone, adresse, santé, finances, contacts, photos, historique de navigation, localisation précise, données sensibles, achats.
+| Achats | Historique des achats (Pass+, depuis la 1.2) | Oui | Non | Fonctionnalité de l'app |
+
+Non collectés : nom, téléphone, adresse, santé, finances, contacts, photos, historique de navigation, localisation précise, données sensibles. (Le paiement lui-même reste chez Apple : Brainlix ne voit que la transaction signée.)
 
 **URL de la politique de confidentialité** : https://brainlix.site/confidentialite
 
@@ -130,3 +132,35 @@ Questionnaire (réponses) :
 **Notes pour Apple** : les mêmes qu'en section 3.
 
 **Jour de la sortie** : recaler la saison 1 (`update seasons set starts_on = <sortie>, ends_on = <sortie + 61>`), effacer les paliers récupérés pendant les tests (`delete from season_claims`), puis envoyer la 1.1 à Apple — avec le feu vert du propriétaire.
+
+## 7. Version 1.2 : le Pass+ (D-057)
+
+Le Pass+ (3,99 €, une saison) = **plus aucune pub** pendant la saison + **la piste Pass+ du pass**. Il est en vente à partir de la saison 2 (3 janvier 2027). Dans TestFlight et pendant l'examen d'Apple, il s'achète en Sandbox à tout moment (sans rien payer).
+
+### À faire dans App Store Connect (propriétaire, une seule fois)
+1. **Accords, taxes et banque** → accepter l'accord **« Apps payantes »**, puis remplir le compte bancaire et le formulaire fiscal (W-8BEN pour un particulier en France).
+2. **Programme App Store Small Business** (developer.apple.com/app-store/small-business-program) : commission de **15 %** au lieu de 30 %.
+3. **Apps → Brainlix → Monétisation → Achats intégrés → « + »** :
+   - Type : **Abonnement non renouvelable**
+   - Nom de référence : `Pass+` · Identifiant du produit : **`app.brainlix.passplus`** (exactement celui-ci)
+   - Prix : **3,99 €** (tous les pays)
+   - Localisation (français) : nom affiché « Pass+ », description « Plus de pub et la piste Pass+ du pass, pour toute la saison. »
+   - Informations pour la revue : une capture de l'écran Pass+ (Réglages → Pass+), et la note « Achat d'une saison : retire les pubs et débloque la piste Pass+ du pass. »
+4. **Apps → Brainlix → Informations générales → Notifications de serveur App Store** : URL **production** et **sandbox** = `https://sibpncsjsdtjcjxbfryk.supabase.co/functions/v1/iap-verify`, version 2 (sert à retirer un Pass+ remboursé).
+5. **Utilisateurs et accès → Sandbox → Testeurs** : créer un compte de test (une adresse e-mail jamais utilisée chez Apple) pour essayer l'achat sur TestFlight sans payer.
+6. **Confidentialité de l'app** : ajouter « Achats → Historique des achats » (voir section 1).
+7. Joindre l'achat intégré à la version 1.2 (case « Achats intégrés » de la page de la version) au moment de l'envoi.
+
+### Nouveautés de la 1.2 (à coller)
+> - Nouveau : le Pass+ ! Plus aucune pub pendant toute la saison, et toute la piste Pass+ du pass (jetons Prestige, coffrets de catégorie, cadres, dos de cartes, cadre animé…).
+> - Avec le Pass+, les bonus se prennent sans vidéo : pochette gratuite, neurones doublés, coffre offert, « Corrige tes erreurs », série sauvée.
+> - La saison 2 arrive le 3 janvier : un pass d'hiver tout neuf, avec ses cadres, dos de cartes et autocollants.
+> - Coffrets de catégorie : choisis ton domaine et vois les cartes avant d'ouvrir.
+
+### Notes pour Apple (en plus de la section 3)
+> The app offers one in-app purchase, "Pass+" (non-renewing subscription, one season ≈ 12 weeks): it removes all ads for the current season and unlocks the paid track of the season pass. Open Settings (profile tab → gear) → "Pass+", or the Album tab → season pass. Purchases are verified server-side (signed StoreKit 2 transaction). "Restore purchases" is on the same screen.
+
+### Avant d'envoyer
+- Serveur : migration **0056** et fonction **`iap-verify`** déployées en production (avec ton feu vert).
+- Site : ajouter le Pass+ aux **conditions** (prix, durée d'une saison, pas de renouvellement, remboursements par Apple) et les **achats** à la **politique de confidentialité**.
+- Captures : envoyer les nouvelles captures panoramiques (`docs/screenshots/app-store-fiche/`).
