@@ -297,6 +297,22 @@ public actor SupabaseAPI {
         }
     }
 
+    /// Fonction Edge (ex. `iap-verify`), appelée avec la session du joueur.
+    public func invoke<T: Decodable>(_ function: String, _ body: [String: JSONValue], as type: T.Type = T.self) async throws -> T {
+        let data: Data
+        do {
+            data = try await send(path: "functions/v1/\(function)", method: "POST", body: body, auth: .user)
+        } catch {
+            report(function, error)
+            throw error
+        }
+        do {
+            return try SupabaseAPI.decoder.decode(T.self, from: data)
+        } catch {
+            throw BackendError.decoding("\(function): \(error)")
+        }
+    }
+
     /// Lecture de tables de référentiel (RLS : lecture publique).
     public func select<T: Decodable>(_ table: String, query: [URLQueryItem], as type: T.Type = T.self) async throws -> T {
         let data = try await send(path: "rest/v1/\(table)", query: query, method: "GET", body: nil, auth: .user)

@@ -74,7 +74,13 @@ public protocol GameService: Sendable {
     func albumAdminTool(_ tool: AlbumAdminTool, arg: String?) async throws -> AlbumOverview
     func albumAdminState(card: String, state: String, on: Bool) async throws
     func seasonOverview() async throws -> SeasonOverview
-    func seasonClaim(tier: Int) async throws
+    func seasonClaim(tier: Int, track: SeasonTrack) async throws
+    /// Rattrapage : tous les paliers atteints d'une piste, d'un coup.
+    func seasonClaimAll(track: SeasonTrack) async throws -> [SeasonClaimed]
+    /// Coffret de catégorie (Pass+) ouvert sur le domaine choisi.
+    func albumOpenCoffret(_ coffret: UUID, domain: String) async throws -> AlbumOpening
+    /// Achat du Pass+ (transaction StoreKit 2 signée par Apple), vérifié par le serveur.
+    func passPlusVerify(signedTransaction: String) async throws -> PassPlusVerification
     /// Coffres en bois gagnés après le palier 30. Renvoie le nombre récupéré.
     func seasonClaimExtra() async throws -> Int
 
@@ -509,8 +515,23 @@ public struct LiveGameService: GameService {
 
     public func seasonOverview() async throws -> SeasonOverview { try await api.rpc("season_overview") }
 
-    public func seasonClaim(tier: Int) async throws {
-        try await api.rpcVoid("season_claim", ["p_tier": .number(Double(tier))])
+    public func seasonClaim(tier: Int, track: SeasonTrack) async throws {
+        try await api.rpcVoid("season_claim", ["p_tier": .number(Double(tier)), "p_track": .string(track.rawValue)])
+    }
+
+    private struct ClaimedAll: Decodable { let claimed: [SeasonClaimed] }
+
+    public func seasonClaimAll(track: SeasonTrack) async throws -> [SeasonClaimed] {
+        let result: ClaimedAll = try await api.rpc("season_claim_all", ["p_track": .string(track.rawValue)])
+        return result.claimed
+    }
+
+    public func albumOpenCoffret(_ coffret: UUID, domain: String) async throws -> AlbumOpening {
+        try await api.rpc("album_open_coffret", ["p_coffret": .string(coffret.uuidString), "p_domain": .string(domain)])
+    }
+
+    public func passPlusVerify(signedTransaction: String) async throws -> PassPlusVerification {
+        try await api.invoke("iap-verify", ["signedTransaction": .string(signedTransaction)])
     }
 
     public func seasonClaimExtra() async throws -> Int {
@@ -558,7 +579,14 @@ public extension GameService {
     func albumAdminTool(_ tool: AlbumAdminTool, arg: String?) async throws -> AlbumOverview { AlbumOverview() }
     func albumAdminState(card: String, state: String, on: Bool) async throws {}
     func seasonOverview() async throws -> SeasonOverview { SeasonOverview() }
-    func seasonClaim(tier: Int) async throws { throw BackendError.server(status: 400, code: "no_season", message: "") }
+    func seasonClaim(tier: Int, track: SeasonTrack) async throws { throw BackendError.server(status: 400, code: "no_season", message: "") }
+    func seasonClaimAll(track: SeasonTrack) async throws -> [SeasonClaimed] { [] }
+    func albumOpenCoffret(_ coffret: UUID, domain: String) async throws -> AlbumOpening {
+        throw BackendError.server(status: 400, code: "album_unavailable", message: "")
+    }
+    func passPlusVerify(signedTransaction: String) async throws -> PassPlusVerification {
+        throw BackendError.server(status: 400, code: "pass_not_on_sale", message: "")
+    }
     func seasonClaimExtra() async throws -> Int { 0 }
 
     func correctionStart(session: UUID, test: Bool) async throws -> CorrectionStart {

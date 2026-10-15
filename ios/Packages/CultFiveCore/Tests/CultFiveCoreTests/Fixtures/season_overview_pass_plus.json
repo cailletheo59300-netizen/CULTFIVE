@@ -1,0 +1,537 @@
+{
+  "tier": 14,
+  "tiers": 30,
+  "points": 2220,
+  "season": {
+    "id": 2,
+    "name": "Saison 2",
+    "ends_on": "2027-03-28",
+    "starts_on": "2027-01-03"
+  },
+  "rewards": [
+    {
+      "icon": "chest_wood",
+      "kind": "chest",
+      "tier": 1,
+      "label": "Coffre en bois",
+      "claimed": false
+    },
+    {
+      "icon": "autoc_s2",
+      "kind": "cosmetic",
+      "tier": 2,
+      "label": "Autocollant « Saison 2 »",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 3,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "chest_wood",
+      "kind": "chest",
+      "tier": 4,
+      "label": "Coffre en bois",
+      "claimed": false
+    },
+    {
+      "icon": "titre_polaire",
+      "kind": "cosmetic",
+      "tier": 5,
+      "label": "Titre « Esprit polaire »",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 6,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "chest_silver",
+      "kind": "chest",
+      "tier": 7,
+      "label": "Coffre en argent",
+      "claimed": false
+    },
+    {
+      "icon": "cadre_flocons",
+      "kind": "cosmetic",
+      "tier": 8,
+      "label": "Cadre Flocons",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 9,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "dos_hiver",
+      "kind": "cosmetic",
+      "tier": 10,
+      "label": "Dos « Nuit d'hiver »",
+      "claimed": false
+    },
+    {
+      "icon": "chest_silver",
+      "kind": "chest",
+      "tier": 11,
+      "label": "Coffre en argent",
+      "claimed": false
+    },
+    {
+      "icon": "titrej_givre",
+      "kind": "cosmetic",
+      "tier": 12,
+      "label": "Titre « Givré du savoir »",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 13,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "chest_silver",
+      "kind": "chest",
+      "tier": 14,
+      "label": "Coffre en argent",
+      "claimed": false
+    },
+    {
+      "icon": "socle_glace",
+      "kind": "cosmetic",
+      "tier": 15,
+      "label": "Socle Glace",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 16,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "chest_silver",
+      "kind": "chest",
+      "tier": 17,
+      "label": "Coffre en argent",
+      "claimed": false
+    },
+    {
+      "icon": "autoc_bonhomme",
+      "kind": "cosmetic",
+      "tier": 18,
+      "label": "Autocollant « Bonhomme de neige »",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 19,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "jeton",
+      "kind": "token",
+      "tier": 20,
+      "label": "Jeton Prestige",
+      "claimed": false
+    },
+    {
+      "icon": "chest_gold",
+      "kind": "chest",
+      "tier": 21,
+      "label": "Coffre en or",
+      "claimed": false
+    },
+    {
+      "icon": "titre_flocon",
+      "kind": "cosmetic",
+      "tier": 22,
+      "label": "Titre « Flocon savant »",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 23,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "chest_gold",
+      "kind": "chest",
+      "tier": 24,
+      "label": "Coffre en or",
+      "claimed": false
+    },
+    {
+      "icon": "titrej_banquise",
+      "kind": "cosmetic",
+      "tier": 25,
+      "label": "Titre « Explorateur polaire »",
+      "claimed": false
+    },
+    {
+      "icon": "ticket_pochette",
+      "kind": "ticket",
+      "tier": 26,
+      "label": "Ticket de pochette",
+      "claimed": false
+    },
+    {
+      "icon": "chest_gold",
+      "kind": "chest",
+      "tier": 27,
+      "label": "Coffre en or",
+      "claimed": false
+    },
+    {
+      "icon": "couv_hiver",
+      "kind": "cosmetic",
+      "tier": 28,
+      "label": "Couverture « Hiver »",
+      "claimed": false
+    },
+    {
+      "icon": "chest_savant",
+      "kind": "chest",
+      "tier": 29,
+      "label": "Deux coffres en or",
+      "claimed": false
+    },
+    {
+      "icon": "final_gratuit_s2",
+      "kind": "final",
+      "tier": 30,
+      "label": "Dos Aurore boréale + pochette dorée",
+      "claimed": false
+    }
+  ],
+  "missions": [
+    {
+      "done": false,
+      "slot": 1,
+      "label": "Finis une page de l'album",
+      "target": 1,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 2,
+      "label": "Ouvre 5 pochettes Histoire",
+      "target": 5,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 3,
+      "label": "Fabrique une carte dans l'album",
+      "target": 1,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 4,
+      "label": "Obtiens une carte brillante",
+      "target": 1,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 5,
+      "label": "Trouve une légendaire",
+      "target": 1,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 6,
+      "label": "Ouvre 10 pochettes",
+      "target": 10,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 7,
+      "label": "Gagne 3 duels",
+      "target": 3,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 8,
+      "label": "Fais 7 jours de suite",
+      "target": 7,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 9,
+      "label": "Réussis un 5 du jour parfait",
+      "target": 1,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 10,
+      "label": "Obtiens 3 étoiles sur 3 cartes",
+      "target": 3,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 11,
+      "label": "Complète 10 cartes Nature",
+      "target": 10,
+      "progress": 0
+    },
+    {
+      "done": false,
+      "slot": 12,
+      "label": "Joue dans 8 domaines différents",
+      "target": 8,
+      "progress": 0
+    }
+  ],
+  "pass_plus": {
+    "active": true,
+    "on_sale": true,
+    "rewards": [
+      {
+        "icon": "sans_pub",
+        "kind": "perk",
+        "tier": 1,
+        "label": "Plus de pub toute la saison",
+        "claimed": true
+      },
+      {
+        "icon": "dos_domaines",
+        "kind": "cosmetic",
+        "tier": 2,
+        "label": "Dos « Les 12 domaines »",
+        "claimed": true
+      },
+      {
+        "icon": "autoc_fondateur",
+        "kind": "cosmetic",
+        "tier": 3,
+        "label": "Autocollant « Fondateur »",
+        "claimed": true
+      },
+      {
+        "icon": "titre_grand_curieux",
+        "kind": "cosmetic",
+        "tier": 4,
+        "label": "Titre « Grand curieux »",
+        "claimed": true
+      },
+      {
+        "icon": "jeton",
+        "kind": "token",
+        "tier": 5,
+        "label": "Jeton Prestige",
+        "claimed": true
+      },
+      {
+        "icon": "cadre_vitrail",
+        "kind": "cosmetic",
+        "tier": 6,
+        "label": "Cadre Vitrail",
+        "claimed": true
+      },
+      {
+        "icon": "coffret",
+        "kind": "coffret",
+        "tier": 7,
+        "label": "Coffret de catégorie",
+        "claimed": true
+      },
+      {
+        "icon": "finition_givre",
+        "kind": "cosmetic",
+        "tier": 8,
+        "label": "Finition Givre",
+        "claimed": true
+      },
+      {
+        "icon": "titrej_savant",
+        "kind": "cosmetic",
+        "tier": 9,
+        "label": "Titre « Savant »",
+        "claimed": true
+      },
+      {
+        "icon": "cadre_nuit",
+        "kind": "cosmetic",
+        "tier": 10,
+        "label": "Cadre Nuit étoilée",
+        "claimed": true
+      },
+      {
+        "icon": "socle_or",
+        "kind": "cosmetic",
+        "tier": 11,
+        "label": "Socle Or",
+        "claimed": true
+      },
+      {
+        "icon": "autoc_flocon",
+        "kind": "cosmetic",
+        "tier": 12,
+        "label": "Autocollant « Flocon »",
+        "claimed": true
+      },
+      {
+        "icon": "couv_grimoire",
+        "kind": "cosmetic",
+        "tier": 13,
+        "label": "Couverture « Grimoire »",
+        "claimed": true
+      },
+      {
+        "icon": "titre_chasseur",
+        "kind": "cosmetic",
+        "tier": 14,
+        "label": "Titre « Chasseur de légendes »",
+        "claimed": true
+      },
+      {
+        "icon": "jeton",
+        "kind": "token",
+        "tier": 15,
+        "label": "Jeton Prestige",
+        "claimed": false
+      },
+      {
+        "icon": "finition_or",
+        "kind": "cosmetic",
+        "tier": 16,
+        "label": "Finition Poussière d'or",
+        "claimed": false
+      },
+      {
+        "icon": "cadre_aurore",
+        "kind": "cosmetic",
+        "tier": 17,
+        "label": "Cadre Aurore",
+        "claimed": false
+      },
+      {
+        "icon": "coffret",
+        "kind": "coffret",
+        "tier": 18,
+        "label": "Coffret de catégorie",
+        "claimed": false
+      },
+      {
+        "icon": "socle_neon",
+        "kind": "cosmetic",
+        "tier": 19,
+        "label": "Socle Néon",
+        "claimed": false
+      },
+      {
+        "icon": "titrej_legende",
+        "kind": "cosmetic",
+        "tier": 20,
+        "label": "Titre « Légende vivante »",
+        "claimed": false
+      },
+      {
+        "icon": "cadre_marbre",
+        "kind": "cosmetic",
+        "tier": 21,
+        "label": "Cadre Marbre",
+        "claimed": false
+      },
+      {
+        "icon": "chest_gold",
+        "kind": "chest",
+        "tier": 22,
+        "label": "Coffre en or",
+        "claimed": false
+      },
+      {
+        "icon": "autoc_yeti",
+        "kind": "cosmetic",
+        "tier": 23,
+        "label": "Autocollant « Yéti »",
+        "claimed": false
+      },
+      {
+        "icon": "finition_holo",
+        "kind": "cosmetic",
+        "tier": 24,
+        "label": "Finition Holographique",
+        "claimed": false
+      },
+      {
+        "icon": "jeton",
+        "kind": "token",
+        "tier": 25,
+        "label": "Jeton Prestige",
+        "claimed": false
+      },
+      {
+        "icon": "coffret",
+        "kind": "coffret",
+        "tier": 26,
+        "label": "Coffret de catégorie",
+        "claimed": false
+      },
+      {
+        "icon": "titre_musee",
+        "kind": "cosmetic",
+        "tier": 27,
+        "label": "Titre « Pièce de musée »",
+        "claimed": false
+      },
+      {
+        "icon": "couv_or",
+        "kind": "cosmetic",
+        "tier": 28,
+        "label": "Couverture « Feuille d'or »",
+        "claimed": false
+      },
+      {
+        "icon": "chest_savant",
+        "kind": "chest",
+        "tier": 29,
+        "label": "Deux coffres en or",
+        "claimed": false
+      },
+      {
+        "icon": "final_payant",
+        "kind": "cosmetic",
+        "tier": 30,
+        "label": "Dos Feuille d'or + cadre animé",
+        "claimed": false
+      }
+    ]
+  },
+  "tier_points": 150,
+  "extra_chests": {
+    "earned": 0,
+    "claimed": 0
+  },
+  "points_rules": {
+    "day": 15,
+    "week": 40,
+    "mission": 75,
+    "day_bonus": 15,
+    "week_bonus": 60
+  }
+}

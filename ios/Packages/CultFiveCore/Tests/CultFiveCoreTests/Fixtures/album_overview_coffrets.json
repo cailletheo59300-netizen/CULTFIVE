@@ -1,0 +1,95 @@
+{
+  "back": "classique",
+  "admin": false,
+  "cards": [],
+  "cover": "classique",
+  "tokens": 1,
+  "tickets": 3,
+  "coffrets": [
+    {
+      "id": "61fc806b-6bb2-4419-8557-e144c5cf601f",
+      "offers": {
+        "arts": [
+          "arts.painting.la_sculpture",
+          "arts.literature.des_epopees_a_shakespeare",
+          "arts.mythology.les_dieux_d_egypte"
+        ],
+        "calc": [
+          "calc.conversions.le_prix_au_kilo",
+          "calc.fractions.additionner_et_comparer",
+          "calc.conversions.vitesse_et_trajets"
+        ],
+        "tech": [
+          "tech.computing.la_securite",
+          "tech.brands.boire_et_manger",
+          "tech.computing.l_intelligence_artificielle"
+        ],
+        "logic": [
+          "logic.puzzles.compter_les_formes",
+          "logic.puzzles.calendriers",
+          "logic.puzzles.les_allumettes"
+        ],
+        "music": [
+          "music.instruments.les_percussions",
+          "music.popular.la_nouvelle_scene_francaise",
+          "music.classical.de_ravel_a_star_wars"
+        ],
+        "sport": [
+          "sport.rules.hand_volley_et_sports_de_raquette",
+          "sport.rules.le_golf",
+          "sport.champions.nageurs_et_gymnastes"
+        ],
+        "cinema": [
+          "cinema.directors.les_grands_realisateurs_americains",
+          "cinema.actors.pirates_des_caraibes",
+          "cinema.films.star_wars"
+        ],
+        "french": [
+          "french.spelling.les_pluriels",
+          "french.expressions.le_ciel_et_la_terre",
+          "french.spelling.accents_et_ponctuation"
+        ],
+        "nature": [
+          "nature.earth.vents_et_tempetes",
+          "nature.plants.les_fleurs",
+          "nature.earth.le_climat"
+        ],
+        "history": [
+          "history.modern.les_reperes_des_temps_modernes",
+          "history.contemporary.la_resistance",
+          "history.middle_ages.byzance_l_islam_et_les_ottomans"
+        ],
+        "science": [
+          "science.biology.l_heredite",
+          "science.space.la_terre",
+          "science.biology.la_cellule"
+        ],
+        "geography": [
+          "geography.relief.paysages_de_france",
+          "geography.countries.asie_centrale_et_du_sud",
+          "geography.relief.mers_et_ocans"
+        ]
+      }
+    }
+  ],
+  "neurones": 0,
+  "can_admin": false,
+  "cosmetics": [
+    "autoc.flocon",
+    "autoc.fondateur",
+    "cadre.nuit",
+    "cadre.vitrail",
+    "couv.classique",
+    "couv.grimoire",
+    "dos.classique",
+    "dos.domaines",
+    "finition.givre",
+    "socle.or",
+    "titre.chasseur",
+    "titre.grand_curieux",
+    "titrej.savant"
+  ],
+  "gold_packs": 0,
+  "forced_rarity": null,
+  "gold_available": true
+}

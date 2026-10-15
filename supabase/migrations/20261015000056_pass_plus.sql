@@ -56,7 +56,8 @@ create table public.user_coffrets (
   result      jsonb,
   created_at  timestamptz not null default now(),
   opened_at   timestamptz,
-  idempotency_key text unique
+  idempotency_key text,
+  unique (user_id, idempotency_key)
 );
 create index on public.user_coffrets (user_id) where opened_at is null;
 alter table public.user_coffrets enable row level security;
@@ -93,7 +94,7 @@ declare v_id uuid;
 begin
   insert into public.user_coffrets (user_id, source, offers, created_at, idempotency_key)
   values (p_user, p_source, public._coffret_offers(p_user), public._now(), p_key)
-  on conflict (idempotency_key) do nothing
+  on conflict (user_id, idempotency_key) do nothing
   returning id into v_id;
   return v_id;
 end $$;

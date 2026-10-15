@@ -1710,9 +1710,11 @@ public struct AdStatus: Decodable, Hashable, Sendable {
     public var streakRescue: Int?
     public var interstitial: Bool
     public var admin: Bool
+    /// Pass+ actif : plus de pub, les récompenses « bonus » se prennent sans vidéo.
+    public var passPlus: Bool
 
     public init(doubleSeeds: Int = 0, boostChest: Int = 0, freeChest: Int = 0, freePack: Int = 0, streakRescue: Int? = nil,
-                interstitial: Bool = false, admin: Bool = false) {
+                interstitial: Bool = false, admin: Bool = false, passPlus: Bool = false) {
         self.doubleSeeds = doubleSeeds
         self.boostChest = boostChest
         self.freeChest = freeChest
@@ -1720,10 +1722,12 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         self.streakRescue = streakRescue
         self.interstitial = interstitial
         self.admin = admin
+        self.passPlus = passPlus
     }
 
     enum CodingKeys: String, CodingKey {
         case interstitial, admin
+        case passPlus = "pass_plus"
         case doubleSeeds = "double_seeds"
         case boostChest = "boost_chest"
         case freeChest = "free_chest"
@@ -1740,6 +1744,7 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         streakRescue = try c.decodeIfPresent(Int.self, forKey: .streakRescue)
         interstitial = try c.decodeIfPresent(Bool.self, forKey: .interstitial) ?? false
         admin = try c.decodeIfPresent(Bool.self, forKey: .admin) ?? false
+        passPlus = try c.decodeIfPresent(Bool.self, forKey: .passPlus) ?? false
     }
 }
 

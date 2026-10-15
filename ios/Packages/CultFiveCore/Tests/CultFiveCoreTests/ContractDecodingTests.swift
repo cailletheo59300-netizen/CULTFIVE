@@ -101,6 +101,43 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertTrue(none.rewards.isEmpty)
     }
 
+    /// Pass+ (0056) : piste payante, plus de pub, coffrets, rattrapage.
+    func testPassPlus() throws {
+        let season: SeasonOverview = try fixture("season_overview_pass_plus")
+        let pass = try XCTUnwrap(season.passPlus)
+        XCTAssertTrue(pass.onSale)
+        XCTAssertTrue(pass.active)
+        XCTAssertEqual(pass.rewards.count, season.tiers)
+        XCTAssertEqual(pass.rewards.first?.kind, "perk", "palier 1 : plus de pub")
+        XCTAssertEqual(pass.rewards.filter { $0.kind == "coffret" }.count, 3)
+        // Ancienne réponse (sans Pass+) : rien à afficher.
+        let old: SeasonOverview = try fixture("season_overview")
+        XCTAssertNil(old.passPlus)
+
+        let ads: AdStatus = try fixture("ad_status_pass_plus")
+        XCTAssertTrue(ads.passPlus)
+        XCTAssertFalse(ads.interstitial)
+
+        let album: AlbumOverview = try fixture("album_overview_coffrets")
+        let coffret = try XCTUnwrap(album.coffrets.first)
+        XCTAssertFalse(coffret.offers.isEmpty)
+        XCTAssertTrue(coffret.offers.values.allSatisfy { $0.count == 3 })
+        let plain: AlbumOverview = try fixture("album_overview")
+        XCTAssertTrue(plain.coffrets.isEmpty)
+
+        let opening: AlbumOpening = try fixture("coffret_opening")
+        XCTAssertEqual(opening.pulls.count, 3)
+        XCTAssertEqual(coffret.offers[opening.series], opening.pulls.map(\.card), "ce qu'on voit est ce qu'on a")
+        let nothing = try SupabaseAPI.decoder.decode(AlbumPull.self,
+                                                     from: Data(#"{"card":"x","rarity":"rare","outcome":"nothing"}"#.utf8))
+        XCTAssertEqual(nothing.outcome, .nothing)
+
+        struct ClaimedAll: Decodable { let claimed: [SeasonClaimed] }
+        let claimed: ClaimedAll = try fixture("season_claim_all")
+        XCTAssertEqual(claimed.claimed.count, season.tier)
+        XCTAssertTrue(claimed.claimed.allSatisfy { $0.track == "paid" })
+    }
+
     func testQuestsAndRecap() throws {
         let quests: QuestsOverview = try fixture("quests")
         XCTAssertEqual(quests.day.quests.count, 3)

@@ -48,10 +48,23 @@ public struct AlbumOverview: Codable, Hashable, Sendable {
     /// Habillage possédé : « cadre.vitrail », « dos.soleil »…
     public let cosmetics: [String]
     public let cards: [Card]
+    /// Coffrets de catégorie à ouvrir (Pass+).
+    public let coffrets: [Coffret]
+
+    /// Coffret de catégorie : par domaine, les 3 cartes qu'il donnera (tirées d'avance, montrées avant d'ouvrir).
+    public struct Coffret: Codable, Hashable, Sendable, Identifiable {
+        public let id: UUID
+        public let offers: [String: [String]]
+
+        public init(id: UUID, offers: [String: [String]]) {
+            self.id = id
+            self.offers = offers
+        }
+    }
 
     public init(admin: Bool = false, canAdmin: Bool = false, neurones: Int = 0, tickets: Int = 0, tokens: Int = 0, goldPacks: Int = 0,
                 goldAvailable: Bool = true, forcedRarity: String? = nil, back: String = "classique", cover: String = "classique",
-                cosmetics: [String] = [], cards: [Card] = []) {
+                cosmetics: [String] = [], cards: [Card] = [], coffrets: [Coffret] = []) {
         self.admin = admin
         self.canAdmin = canAdmin
         self.neurones = neurones
@@ -64,14 +77,33 @@ public struct AlbumOverview: Codable, Hashable, Sendable {
         self.cover = cover
         self.cosmetics = cosmetics
         self.cards = cards
+        self.coffrets = coffrets
     }
 
     enum CodingKeys: String, CodingKey {
-        case admin, neurones, tickets, tokens, back, cover, cosmetics, cards
+        case admin, neurones, tickets, tokens, back, cover, cosmetics, cards, coffrets
         case canAdmin = "can_admin"
         case goldPacks = "gold_packs"
         case goldAvailable = "gold_available"
         case forcedRarity = "forced_rarity"
+    }
+
+    // Les coffrets n'existent que depuis le Pass+ (0056).
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        admin = try c.decode(Bool.self, forKey: .admin)
+        canAdmin = try c.decode(Bool.self, forKey: .canAdmin)
+        neurones = try c.decode(Int.self, forKey: .neurones)
+        tickets = try c.decode(Int.self, forKey: .tickets)
+        tokens = try c.decode(Int.self, forKey: .tokens)
+        goldPacks = try c.decode(Int.self, forKey: .goldPacks)
+        goldAvailable = try c.decode(Bool.self, forKey: .goldAvailable)
+        forcedRarity = try c.decodeIfPresent(String.self, forKey: .forcedRarity)
+        back = try c.decode(String.self, forKey: .back)
+        cover = try c.decode(String.self, forKey: .cover)
+        cosmetics = try c.decode([String].self, forKey: .cosmetics)
+        cards = try c.decode([Card].self, forKey: .cards)
+        coffrets = try c.decodeIfPresent([Coffret].self, forKey: .coffrets) ?? []
     }
 }
 
@@ -84,6 +116,8 @@ public struct AlbumPull: Codable, Hashable, Sendable {
         case shiny
         /// Doublon d'une brillante : des neurones.
         case neurones
+        /// Coffret : carte déjà brillante, rien de plus.
+        case nothing
     }
 
     public let card: String
@@ -135,8 +169,58 @@ public enum AlbumAdminTool: String, Sendable {
     case force
 }
 
-/// Pass de saison, piste gratuite (`season_overview`).
+/// Piste du pass : gratuite ou Pass+.
+public enum SeasonTrack: String, Sendable {
+    case free, paid
+}
+
+/// Palier récupéré (rattrapage du Pass+).
+public struct SeasonClaimed: Codable, Hashable, Sendable {
+    public let tier: Int
+    public let track: String
+    public let kind: String
+    public let label: String
+    public let icon: String
+}
+
+/// Achat du Pass+ vérifié par le serveur (`iap-verify`).
+public struct PassPlusVerification: Codable, Hashable, Sendable {
+    public let seasonId: Int?
+    public let active: Bool
+
+    public init(seasonId: Int?, active: Bool) {
+        self.seasonId = seasonId
+        self.active = active
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case active
+        case seasonId = "season_id"
+    }
+}
+
+/// Pass de saison : piste gratuite et Pass+ (`season_overview`).
 public struct SeasonOverview: Codable, Hashable, Sendable {
+    /// Pass+ : plus de pub toute la saison et piste payante.
+    public struct PassPlus: Codable, Hashable, Sendable {
+        /// En vente pour la saison en cours.
+        public let onSale: Bool
+        /// Acheté pour la saison en cours.
+        public let active: Bool
+        public let rewards: [Reward]
+
+        public init(onSale: Bool = false, active: Bool = false, rewards: [Reward] = []) {
+            self.onSale = onSale
+            self.active = active
+            self.rewards = rewards
+        }
+
+        enum CodingKeys: String, CodingKey {
+            case active, rewards
+            case onSale = "on_sale"
+        }
+    }
+
     public struct Season: Codable, Hashable, Sendable {
         public let id: Int
         public let name: String
@@ -152,7 +236,7 @@ public struct SeasonOverview: Codable, Hashable, Sendable {
 
     public struct Reward: Codable, Hashable, Sendable {
         public let tier: Int
-        /// chest · ticket · token · cosmetic · final
+        /// chest · ticket · token · cosmetic · final · perk (plus de pub) · coffret
         public let kind: String
         public let label: String
         /// Icône 3D du pass (dossier AlbumData/pass).
@@ -213,9 +297,11 @@ public struct SeasonOverview: Codable, Hashable, Sendable {
     public let extraChests: Extra?
     public let pointsRules: Rules
     public let missions: [Mission]
+    /// Absent avant le Pass+ (0056).
+    public let passPlus: PassPlus?
 
     public init(season: Season? = nil, points: Int = 0, tier: Int = 0, tierPoints: Int = 150, tiers: Int = 30, rewards: [Reward] = [],
-                extraChests: Extra? = nil, pointsRules: Rules = Rules(), missions: [Mission] = []) {
+                extraChests: Extra? = nil, pointsRules: Rules = Rules(), missions: [Mission] = [], passPlus: PassPlus? = nil) {
         self.season = season
         self.points = points
         self.tier = tier
@@ -225,6 +311,7 @@ public struct SeasonOverview: Codable, Hashable, Sendable {
         self.extraChests = extraChests
         self.pointsRules = pointsRules
         self.missions = missions
+        self.passPlus = passPlus
     }
 
     enum CodingKeys: String, CodingKey {
@@ -232,6 +319,7 @@ public struct SeasonOverview: Codable, Hashable, Sendable {
         case tierPoints = "tier_points"
         case extraChests = "extra_chests"
         case pointsRules = "points_rules"
+        case passPlus = "pass_plus"
     }
 
     // Sans saison en cours, le serveur ne renvoie que `season: null`.
@@ -246,5 +334,6 @@ public struct SeasonOverview: Codable, Hashable, Sendable {
         extraChests = try c.decodeIfPresent(Extra.self, forKey: .extraChests)
         pointsRules = try c.decodeIfPresent(Rules.self, forKey: .pointsRules) ?? Rules()
         missions = try c.decodeIfPresent([Mission].self, forKey: .missions) ?? []
+        passPlus = try c.decodeIfPresent(PassPlus.self, forKey: .passPlus)
     }
 }

@@ -56,6 +56,16 @@ begin
   perform tst.ok(jsonb_array_length(r -> 'claimed') = least(v_pts / 150, 30), format('rattrapage (%s paliers)', jsonb_array_length(r -> 'claimed')));
   perform tst.ok((select tokens from public.user_album where user_id = u) = v_tokens + 2, 'jetons des paliers 5 et 15');
   perform tst.ok((select count(*) from public.user_coffrets where user_id = u and opened_at is null) = 2, 'coffrets des paliers 7 et 18');
+  -- Un autre joueur Pass+ reçoit aussi les siens (clé propre à chaque joueur).
+  perform public.pass_plus_record(v, 'tx-pass-v', 'tx-pass-v', 'app.brainlix.passplus', 'Production', public._now());
+  perform tst.login(v);
+  insert into public.user_quests (user_id, period, period_start, slot, metric, target, label, xp, seeds, completed_at)
+  select v, 'day', d::date, s, 'answers', 1, 'x', 0, 0, public._now()
+  from generate_series('2027-01-03'::date, '2027-01-25'::date, interval '1 day') d, generate_series(1, 3) s;
+  perform public.season_claim_all('paid');
+  perform tst.ok((select count(*) from public.user_coffrets where user_id = v) = 1, 'coffret du palier 7 pour un 2e joueur');
+  perform public.pass_plus_revoke('tx-pass-v');
+  perform tst.login(u);
   perform tst.ok(exists (select 1 from public.user_cosmetics where user_id = u and item_id = 'cadre.vitrail'), 'cadre Vitrail');
   perform tst.ok(jsonb_array_length(public.season_claim_all('paid') -> 'claimed') = 0, 'rien à reprendre');
   perform tst.throws('select public.season_claim(6, ''paid'')', 'already_claimed');
