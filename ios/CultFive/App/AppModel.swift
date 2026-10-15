@@ -58,6 +58,10 @@ final class AppModel {
     let ads: AdsController
     /// Récompenses de pub restantes aujourd'hui, série à sauver, pub entre les parties autorisée.
     var adStatus: AdStatus?
+    /// Achat du Pass+ (StoreKit 2).
+    let passPlus = PassPlusStore()
+    /// Écran du Pass+ à montrer (depuis le pass, une offre de pub, les réglages).
+    var showPassPlus = false
 
     init(service: GameService, api: SupabaseAPI?, queue: OfflineAttemptQueue) {
         self.service = service
@@ -284,6 +288,7 @@ final class AppModel {
 
     /// Consentement (RGPD puis suivi Apple) et démarrage des pubs, après l'onboarding seulement.
     func startAds() async {
+        if api != nil { passPlus.start(app: self) }
         await refreshAdStatus()
         ads.adultAudience = isAdult
         await ads.start()
@@ -299,6 +304,27 @@ final class AppModel {
         if let status = try? await service.adStatus() { adStatus = status }
     }
 
+    // MARK: Pass+
+
+    /// Pass+ actif : plus de pub, les bonus se prennent sans vidéo.
+    var noAds: Bool { adStatus?.passPlus ?? false }
+    /// Pictogramme des boutons « bonus » : une pub, ou la couronne du Pass+.
+    var adSymbol: String { noAds ? "crown.fill" : "play.rectangle.fill" }
+    /// Le Pass+ s'achète maintenant (saison en vente, ou build de test).
+    var passPlusForSale: Bool { (AlbumStore.shared.season.passPlus?.onSale ?? false) || passPlus.sandbox }
+
+    /// Ouvre l'écran du Pass+.
+    func openPassPlus(from origin: String) {
+        track("pass_view", ["from": origin])
+        showPassPlus = true
+    }
+
+    /// Après un achat ou une restauration : pubs et pass relus.
+    func refreshPassPlus() async {
+        await refreshAdStatus()
+        await AlbumStore.shared.refresh()
+    }
+
     /// Pubs de test de Google : Google ne prévient pas notre serveur, qui accepte alors la récompense pour un admin.
     private var adTestClaims: Bool { ads.testAds && (adStatus?.admin ?? false) }
 
@@ -306,6 +332,14 @@ final class AppModel {
     /// (qui attend la confirmation de Google). `nil` si la pub a été fermée avant la fin.
     func watchAd(_ kind: AdKind, ref: String? = nil) async throws -> AdReward? {
         try await service.adCan(kind, ref: ref)
+        if noAds {
+            // Pass+ : la récompense, sans vidéo (mêmes limites, contrôlées par le serveur).
+            let reward = try await service.adClaim(kind, ref: ref, test: false)
+            track("pass_bonus", ["kind": kind.rawValue])
+            await refreshAdStatus()
+            await refreshProfile()
+            return reward
+        }
         guard let user = profile?.id else { throw BackendError.notAuthenticated }
         track("ad_offer", ["kind": kind.rawValue])
         ads.adultAudience = isAdult
@@ -324,6 +358,10 @@ final class AppModel {
     func watchCorrectionAd(session: UUID) async throws -> CorrectionStart? {
         let ref = session.uuidString.lowercased()
         try await service.adCan(.correction, ref: ref)
+        if noAds {
+            track("pass_bonus", ["kind": AdKind.correction.rawValue])
+            return try await service.correctionStart(session: session, test: false)
+        }
         guard let user = profile?.id else { throw BackendError.notAuthenticated }
         track("ad_offer", ["kind": AdKind.correction.rawValue])
         ads.adultAudience = isAdult
@@ -351,6 +389,7 @@ final class AppModel {
 
     /// Entre deux parties Jouer (après le bilan) : pub plein écran si elle est due.
     func interstitialBetweenGames() async {
+        guard !noAds else { return }
         ads.adultAudience = isAdult
         if await ads.showInterstitialIfDue(allowed: adStatus?.interstitial ?? false) {
             track("interstitial")

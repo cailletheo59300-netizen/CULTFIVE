@@ -201,7 +201,7 @@ struct ChestOpeningView: View {
                     Button { Task { await boost(chest) } } label: {
                         HStack(spacing: 8) {
                             if boosting { ProgressView().controlSize(.small) }
-                            Label("Booster avec une pub", systemImage: "play.rectangle.fill")
+                            Label(app.noAds ? "Booster avec le Pass+" : "Booster avec une pub", systemImage: app.adSymbol)
                         }
                     }
                     .buttonStyle(InkButtonStyle(fill: Color.sun, text: Color(hex: 0x1E1340)))

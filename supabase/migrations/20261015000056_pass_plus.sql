@@ -435,6 +435,13 @@ insert into public.season_rewards (season_id, track, tier, kind, item, qty, labe
   (2, 'paid', 30, 'cosmetic', 'dos.or,cadre.anime', 1, 'Dos Feuille d''or + cadre animé', 'final_payant')
 on conflict do nothing;
 
+-- ─────────────────────────────────────────── Journal d'usage : écran Pass+ vu, achat, bonus pris sans pub
+alter table public.app_events drop constraint app_events_name_check;
+alter table public.app_events add constraint app_events_name_check check (name in (
+  'app_open', 'onboarding_step', 'onboarding_done', 'share', 'reminder_optin', 'notif_permission',
+  'ad_offer', 'ad_view', 'ad_reward', 'interstitial', 'campaign', 'client_error',
+  'pass_view', 'pass_buy', 'pass_bonus'));
+
 -- ─────────────────────────────────────────── Droits
 do $$
 declare f record;

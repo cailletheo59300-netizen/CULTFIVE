@@ -812,6 +812,8 @@ private struct CorrectionCard: View {
     let domainName: (String) -> String
     let onCorrect: () -> Void
 
+    @Environment(AppModel.self) private var app
+
     var body: some View {
         VStack(alignment: .leading, spacing: Space.m) {
             HStack(alignment: .top, spacing: Space.m) {
@@ -829,7 +831,7 @@ private struct CorrectionCard: View {
                 Button(action: onCorrect) {
                     HStack(spacing: 8) {
                         if summary.correctionLoading { ProgressView().controlSize(.small) }
-                        Label("Corriger mes erreurs", systemImage: "play.rectangle.fill")
+                        Label("Corriger mes erreurs", systemImage: app.adSymbol)
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -856,9 +858,10 @@ private struct CorrectionCard: View {
 
     private var detail: String {
         guard let result = summary.correction else {
+            let lead = app.noAds ? "Avec ton Pass+, rejoue" : "Après une courte pub, rejoue"
             return summary.ranked
-                ? "Après une courte pub, rejoue les questions ratées : chaque bonne réponse annule l'Elo que l'erreur t'a fait perdre."
-                : "Après une courte pub, rejoue les questions ratées pour les retenir."
+                ? "\(lead) les questions ratées : chaque bonne réponse annule l'Elo que l'erreur t'a fait perdre."
+                : "\(lead) les questions ratées pour les retenir."
         }
         let refunds = result.refunds.filter { $0.coteRefund > 0 }
         if refunds.isEmpty {

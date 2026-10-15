@@ -244,7 +244,7 @@ struct PackOpeningView: View {
 
     private func displayState(_ pull: Pull) -> OwnedCard {
         switch pull.outcome {
-        case .new: return OwnedCard(shiny: opening.coffret)
+        case .new: return OwnedCard(shiny: false)
         case .shiny, .neurones, .nothing: return OwnedCard(shiny: true)
         }
     }

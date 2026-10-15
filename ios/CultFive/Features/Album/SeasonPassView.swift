@@ -1,8 +1,7 @@
 import SwiftUI
 import CultFiveCore
 
-/// Une récompense de palier du pass (D-049). La piste gratuite vient du serveur (season_overview) ;
-/// la piste Pass+ n'est encore qu'affichée (bientôt).
+/// Une récompense de palier du pass (D-049). Les deux pistes viennent du serveur (season_overview).
 struct PassReward: Identifiable {
     let id = UUID()
     /// Icône 3D (dossier AlbumData/pass).
@@ -16,34 +15,37 @@ struct PassReward: Identifiable {
         self.star = star
     }
 
-    /// Récompense de la piste gratuite, telle que le serveur la décrit.
+    /// Récompense d'une piste, telle que le serveur la décrit.
     init(_ reward: SeasonOverview.Reward) {
-        self.init(reward.icon, reward.label, star: reward.kind == "final" || reward.kind == "token")
+        self.init(reward.icon, reward.label, star: ["final", "token", "perk", "coffret"].contains(reward.kind))
     }
 
-    /// Piste Pass+ (bientôt) : affichée pour donner envie, pas encore achetable.
+    /// Piste Pass+ de la saison 2, en aperçu quand le serveur n'en renvoie pas (saison sans Pass+).
     static let paid: [PassReward] = [
-        .init("dos_domaines", "Dos « Les 12 domaines »"), .init("autoc_fondateur", "Autocollant « Fondateur »"), .init("titre_grand_curieux", "Titre « Grand curieux »"),
-        .init("cadre_vitrail", "Cadre Vitrail"), .init("jeton", "Jeton Prestige n° 1", star: true),
-        .init("onglets", "Onglets d'album colorés"), .init("coffret", "Coffret de catégorie n° 1", star: true), .init("finition_givre", "Finition Givre"),
-        .init("titrej_savant", "Titre « Savant »"), .init("cadre_nuit", "Cadre Nuit étoilée"),
-        .init("socle_or", "Socle Or"), .init("autoc_chauve", "Autocollant « Chauve-souris »"), .init("couv_grimoire", "Couverture « Grimoire »"),
-        .init("titre_chasseur", "Titre « Chasseur de légendes »"), .init("jeton", "Jeton Prestige n° 2", star: true),
-        .init("finition_or", "Finition Poussière d'or"), .init("cadre_toile", "Cadre « Toile d'araignée »"), .init("coffret", "Coffret de catégorie n° 2", star: true),
-        .init("socle_neon", "Socle Néon"), .init("titrej_legende", "Titre « Légende vivante »"),
-        .init("cadre_marbre", "Cadre Marbre"), .init("marque", "Marque-page d'album"), .init("flamme", "Autocollant animé « Flamme »"),
-        .init("finition_holo", "Finition Holographique"), .init("jeton", "Jeton Prestige n° 3", star: true),
-        .init("coffret", "Coffret de catégorie n° 3", star: true), .init("titre_musee", "Titre « Pièce de musée »"), .init("couv_or", "Couverture « Feuille d'or »"),
-        .init("vitrine", "Vitrine lumineuse"), .init("final_payant", "Dos Feuille d'or + cadre animé", star: true),
+        .init("sans_pub", "Plus de pub toute la saison", star: true), .init("dos_domaines", "Dos « Les 12 domaines »"),
+        .init("autoc_fondateur", "Autocollant « Fondateur »"), .init("titre_grand_curieux", "Titre « Grand curieux »"),
+        .init("jeton", "Jeton Prestige", star: true), .init("cadre_vitrail", "Cadre Vitrail"),
+        .init("coffret", "Coffret de catégorie", star: true), .init("finition_givre", "Finition Givre"),
+        .init("titrej_savant", "Titre « Savant »"), .init("cadre_nuit", "Cadre Nuit étoilée"), .init("socle_or", "Socle Or"),
+        .init("autoc_flocon", "Autocollant « Flocon »"), .init("couv_grimoire", "Couverture « Grimoire »"),
+        .init("titre_chasseur", "Titre « Chasseur de légendes »"), .init("jeton", "Jeton Prestige", star: true),
+        .init("finition_or", "Finition Poussière d'or"), .init("cadre_aurore", "Cadre Aurore"),
+        .init("coffret", "Coffret de catégorie", star: true), .init("socle_neon", "Socle Néon"),
+        .init("titrej_legende", "Titre « Légende vivante »"), .init("cadre_marbre", "Cadre Marbre"), .init("chest_gold", "Coffre en or"),
+        .init("autoc_yeti", "Autocollant « Yéti »"), .init("finition_holo", "Finition Holographique"),
+        .init("jeton", "Jeton Prestige", star: true), .init("coffret", "Coffret de catégorie", star: true),
+        .init("titre_musee", "Titre « Pièce de musée »"), .init("couv_or", "Couverture « Feuille d'or »"),
+        .init("chest_savant", "Deux coffres en or"), .init("final_payant", "Dos Feuille d'or + cadre animé", star: true),
     ]
 }
 
-/// Pass de saison : 30 paliers de 150 points sur deux mois. La piste gratuite est réelle (serveur) ; le Pass+ arrive plus tard.
+/// Pass de saison : 30 paliers de 150 points. Piste gratuite pour tous, piste Pass+ pour qui l'a acheté (avec plus de pub).
 /// Les points viennent des objectifs du jour et de la semaine qui existent déjà, plus 12 missions de saison.
 struct SeasonPassView: View {
     let store: AlbumStore
     var onOpen: (PackOpening) -> Void
 
+    @Environment(AppModel.self) private var app
     @State private var claimed: PassReward?
 
     var body: some View {
@@ -52,6 +54,7 @@ struct SeasonPassView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     hero
                     tracksCompare
+                    catchUp
                     extraChests
                     ChallengesLink()
                     VStack(alignment: .leading, spacing: Space.s) {
@@ -183,14 +186,12 @@ struct SeasonPassView: View {
             .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(Color.hairline, lineWidth: 1.5))
             VStack(alignment: .leading, spacing: 8) {
                 TrackBadge(paid: true)
+                perk("Plus de pub", onDark: true)
                 perk("3 jetons Prestige", onDark: true)
                 perk("3 coffrets de catégorie", onDark: true)
                 perk("Cadres, finitions, dos", onDark: true)
-                perk("Cadre animé au 30", onDark: true)
                 Spacer(minLength: 0)
-                Text("Bientôt")
-                    .font(.system(.caption, design: .rounded).weight(.heavy))
-                    .foregroundStyle(Color.sun)
+                passPlusAction
             }
             .padding(12)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -198,6 +199,48 @@ struct SeasonPassView: View {
             .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(CardRarity.legend.border, lineWidth: 2))
         }
         .fixedSize(horizontal: false, vertical: true)
+    }
+
+    /// Bas de la colonne Pass+ : actif, à activer, ou bientôt.
+    @ViewBuilder private var passPlusAction: some View {
+        if store.passPlusActive {
+            Label("Actif", systemImage: "checkmark.seal.fill")
+                .font(.system(.caption, design: .rounded).weight(.heavy))
+                .foregroundStyle(Color.sun)
+        } else if app.passPlusForSale {
+            Button {
+                Haptics.selection()
+                app.openPassPlus(from: "pass")
+            } label: {
+                Text(app.passPlus.price.map { "Activer · \($0)" } ?? "Activer")
+                    .font(.system(.caption, design: .rounded).weight(.black))
+                    .foregroundStyle(Color.inkFixed)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .background(Color.sun, in: Capsule())
+            }
+            .buttonStyle(.row)
+        } else {
+            Text("Bientôt")
+                .font(.system(.caption, design: .rounded).weight(.heavy))
+                .foregroundStyle(Color.sun)
+        }
+    }
+
+    /// Pass+ acheté en cours de saison : les paliers déjà atteints, d'un coup.
+    @ViewBuilder private var catchUp: some View {
+        let ready = store.season.passPlus?.rewards.filter { !$0.claimed && $0.tier <= store.tier }.count ?? 0
+        if store.passPlusActive && ready > 1 {
+            ShopButton(title: "Récupérer \(ready) paliers Pass+", price: nil, icon: "final_payant",
+                       fill: .sun, text: .inkFixed, enabled: !store.busy) {
+                Task {
+                    let claimed = await store.claimAllPaid()
+                    guard !claimed.isEmpty else { return }
+                    Haptics.success()
+                    app.show("\(claimed.count) récompenses Pass+ récupérées")
+                }
+            }
+        }
     }
 
     private func perk(_ text: String, onDark: Bool = false) -> some View {
@@ -289,6 +332,14 @@ private struct PassTrack: View {
     let store: AlbumStore
     var onClaim: (PassReward) -> Void
 
+    @Environment(AppModel.self) private var app
+
+    /// Piste Pass+ du serveur, ou l'aperçu de la saison 2.
+    private var paidRewards: [SeasonOverview.Reward]? {
+        guard let rewards = store.season.passPlus?.rewards, !rewards.isEmpty else { return nil }
+        return rewards
+    }
+
     private let node: CGFloat = 36
     private let rowGap: CGFloat = 10
 
@@ -329,7 +380,13 @@ private struct PassTrack: View {
                     .shadow(color: reached ? Color.sun.opacity(0.5) : .clear, radius: 6)
             }
             .frame(width: node)
-            if tier <= PassReward.paid.count {
+            if let paid = paidRewards {
+                if let reward = paid.first(where: { $0.tier == tier }) {
+                    cell(PassReward(reward), tier: tier, paid: true, taken: reward.claimed)
+                } else {
+                    Color.clear.frame(maxWidth: .infinity, minHeight: 66)
+                }
+            } else if tier <= PassReward.paid.count {
                 cell(PassReward.paid[tier - 1], tier: tier, paid: true, taken: false)
             }
         }
@@ -338,13 +395,18 @@ private struct PassTrack: View {
 
     private func cell(_ reward: PassReward, tier: Int, paid: Bool, taken: Bool) -> some View {
         let reached = tier <= store.tier
-        // Le Pass+ arrive plus tard : sa piste reste verrouillée.
-        let locked = paid
+        // Piste Pass+ verrouillée tant que le Pass+ n'est pas actif : la toucher ouvre l'écran du Pass+.
+        let locked = paid && (!store.passPlusActive || paidRewards == nil)
         let ready = reached && !taken && !locked && !store.busy
         return Button {
+            if locked && app.passPlusForSale {
+                Haptics.selection()
+                app.openPassPlus(from: "pass_tier")
+                return
+            }
             guard ready else { Haptics.error(); return }
             Task {
-                if await store.claim(tier: tier) {
+                if await store.claim(tier: tier, track: paid ? .paid : .free) {
                     Haptics.success()
                     onClaim(reward)
                 }

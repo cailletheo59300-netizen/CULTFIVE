@@ -100,6 +100,7 @@ struct Pull: Identifiable, Hashable {
         case .new: outcome = .new
         case .shiny: outcome = .shiny
         case .neurones: outcome = .neurones(pull.neurones ?? 0)
+        case .nothing: outcome = .nothing
         }
     }
 
@@ -144,8 +145,10 @@ final class AlbumStore {
     private(set) var canAdmin = false
     /// Admin : rareté imposée à la prochaine pochette (pour voir chaque animation).
     private(set) var forcedRarity: CardRarity?
-    /// Pass de saison (piste gratuite).
+    /// Pass de saison (piste gratuite et Pass+).
     private(set) var season = SeasonOverview()
+    /// Coffrets de catégorie à ouvrir (Pass+).
+    private(set) var coffrets: [AlbumOverview.Coffret] = []
     /// Album lu au moins une fois.
     private(set) var loaded = false
     /// Une action est en cours (ouverture, fabrication…) : les boutons attendent.
@@ -215,6 +218,7 @@ final class AlbumStore {
         admin = overview.admin
         canAdmin = overview.canAdmin
         forcedRarity = overview.forcedRarity.flatMap(CardRarity.init(rawValue:))
+        coffrets = overview.coffrets
         loaded = true
     }
 
@@ -339,11 +343,29 @@ final class AlbumStore {
 
     // MARK: - Pass de saison
 
-    /// Récupère la récompense d'un palier atteint.
-    func claim(tier: Int) async -> Bool {
-        guard await run({ try await $0.seasonClaim(tier: tier) }) != nil else { return false }
+    /// Pass+ actif pour la saison en cours.
+    var passPlusActive: Bool { season.passPlus?.active ?? false }
+
+    /// Récupère la récompense d'un palier atteint, sur la piste gratuite ou Pass+.
+    func claim(tier: Int, track: SeasonTrack = .free) async -> Bool {
+        guard await run({ try await $0.seasonClaim(tier: tier, track: track) }) != nil else { return false }
         await refresh()
         return true
+    }
+
+    /// Rattrapage du Pass+ : tous les paliers atteints d'un coup. Renvoie ce qui a été récupéré.
+    func claimAllPaid() async -> [SeasonClaimed] {
+        guard let claimed = await run({ try await $0.seasonClaimAll(track: .paid) }) else { return [] }
+        await refresh()
+        return claimed
+    }
+
+    /// Ouvre un coffret de catégorie sur le domaine choisi. Les cartes reçues sont ajoutées à l'album.
+    func openCoffret(_ coffret: AlbumOverview.Coffret, domain: String) async -> [Pull]? {
+        guard let opening = await run({ try await $0.albumOpenCoffret(coffret.id, domain: domain) }) else { return nil }
+        let pulls = opening.pulls.compactMap(Pull.init).sorted { $0.card.rarity < $1.card.rarity }
+        await refresh()
+        return pulls
     }
 
     /// Après le palier 30 : les coffres en bois gagnés. Renvoie le nombre récupéré.

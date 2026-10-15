@@ -62,6 +62,11 @@ struct SettingsView: View {
                     toggleRow("Vibrations", symbol: "iphone.radiowaves.left.and.right", tint: Color(hex: 0xF76707), isOn: $haptics)
                 }
                 section("Informations", footer: "Facultatif. Sert seulement à adapter les questions, jamais affiché.") { ageRow }
+                section("Pass+", footer: "Plus de pub pendant toute la saison, et la piste Pass+ du pass.") {
+                    actionRow(app.noAds ? "Mon Pass+ (actif)" : "Pass+ · plus de pub", symbol: "crown.fill", tint: Color(hex: 0xE9B949)) {
+                        app.openPassPlus(from: "settings")
+                    }
+                }
                 section("Compte") { account }
                 section("Aide & légal") { links }
                 about

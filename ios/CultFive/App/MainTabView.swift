@@ -38,6 +38,7 @@ struct MainTabView: View {
                 }
             }
         }
+        .sheet(isPresented: $model.showPassPlus) { PassPlusView() }
         .task { await model.refreshProgression() }
     }
 

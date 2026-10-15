@@ -9,6 +9,7 @@ struct ComptoirView: View {
 
     @Environment(AppModel.self) private var app
     @State private var selected = "encyclo"
+    @State private var coffret: AlbumOverview.Coffret?
 
     private let catalog = AlbumCatalog.shared
     private var series: PackSeries { catalog.series.first { $0.id == selected } ?? catalog.series[0] }
@@ -18,6 +19,10 @@ struct ComptoirView: View {
             VStack(alignment: .leading, spacing: Space.l) {
                 LeonSays(text: "Bienvenue au Comptoir ! Choisis une pochette : tu paies en neurones ou avec un ticket.", pose: .wave, size: 76)
                 wallet
+                if !store.coffrets.isEmpty {
+                    section("Coffrets à ouvrir", detail: "Pass+ · tu choisis le domaine")
+                    coffretRow
+                }
                 section("Pochettes", detail: "5 cartes, au moins 1 rare")
                 shelf
                 packPanel
@@ -38,6 +43,22 @@ struct ComptoirView: View {
         .background(Color.paper.ignoresSafeArea())
         .navigationTitle("Comptoir de Léon")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(item: $coffret) { item in
+            CoffretPicker(store: store, coffret: item) { opening in
+                coffret = nil
+                // La feuille se ferme d'abord, puis l'ouverture plein écran.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) { onOpen(opening) }
+            }
+        }
+    }
+
+    // MARK: - Coffrets de catégorie (Pass+)
+
+    private var coffretRow: some View {
+        ShopButton(title: store.coffrets.count > 1 ? "Ouvrir un coffret (\(store.coffrets.count))" : "Ouvrir mon coffret",
+                   price: nil, icon: "coffret", fill: .brand, text: .white, enabled: !store.busy) {
+            coffret = store.coffrets.first
+        }
     }
 
     private func section(_ title: String, detail: String) -> some View {
@@ -160,7 +181,7 @@ struct ComptoirView: View {
             }
             if (app.adStatus?.freePack ?? 0) > 0 {
                 // Une pochette gratuite par jour contre une pub (vérifiée par le serveur, 0053).
-                ShopButton(title: "Pochette gratuite", price: "1 pub", icon: "ticket_pochette",
+                ShopButton(title: "Pochette gratuite", price: app.noAds ? "Pass+" : "1 pub", icon: "ticket_pochette",
                            fill: Color(hex: 0x37B24D), text: .white, enabled: !store.busy) {
                     let series = series
                     Task {
@@ -348,5 +369,97 @@ private struct ShopPress: ButtonStyle {
         configuration.label
             .scaleEffect(configuration.isPressed ? 0.97 : 1)
             .animation(Motion.press, value: configuration.isPressed)
+    }
+}
+
+/// Coffret de catégorie : le joueur choisit un domaine et voit les 3 cartes (et ce qu'elles donneront) avant d'ouvrir.
+struct CoffretPicker: View {
+    let store: AlbumStore
+    let coffret: AlbumOverview.Coffret
+    var onOpen: (PackOpening) -> Void
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var domain: String?
+
+    private let catalog = AlbumCatalog.shared
+
+    /// Domaines proposés, dans l'ordre de l'album.
+    private var domains: [AlbumDomain] { catalog.domains.filter { coffret.offers[$0.id] != nil } }
+
+    private func cards(_ domain: String) -> [AlbumCard] {
+        (coffret.offers[domain] ?? []).compactMap { catalog.byServerId[$0] }
+    }
+
+    /// Ce que la carte donnera, d'après l'album actuel.
+    private func outcome(_ card: AlbumCard) -> Pull.Outcome {
+        guard let state = store.state(card) else { return .new }
+        return state.shiny ? .nothing : .shiny
+    }
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: Space.l) {
+                    Text("Choisis un domaine : le coffret donne ses 3 cartes. Au plus une épique, jamais de légendaire.")
+                        .font(.cfBody).foregroundStyle(Color.inkSoft)
+                        .fixedSize(horizontal: false, vertical: true)
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: Space.s)], spacing: Space.s) {
+                        ForEach(domains) { item in
+                            Button {
+                                Haptics.selection()
+                                withAnimation(Motion.standard) { domain = item.id }
+                            } label: {
+                                Text(item.label)
+                                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                                    .foregroundStyle(domain == item.id ? DomainPalette.onColor(item.id) : Color.ink)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.7)
+                                    .frame(maxWidth: .infinity, minHeight: 44)
+                                    .background(domain == item.id ? DomainPalette.color(item.id) : Color.paperRaised,
+                                                in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+                                    .overlay(RoundedRectangle(cornerRadius: Radius.s, style: .continuous)
+                                        .strokeBorder(DomainPalette.color(item.id).opacity(0.5), lineWidth: 1.5))
+                            }
+                            .buttonStyle(.row)
+                        }
+                    }
+                    if let domain {
+                        HStack(alignment: .top, spacing: Space.s) {
+                            ForEach(cards(domain)) { card in
+                                VStack(spacing: 6) {
+                                    AlbumCardView(card: card, state: store.state(card))
+                                        .aspectRatio(0.7, contentMode: .fit)
+                                    OutcomeTag(outcome: outcome(card), compact: true)
+                                }
+                                .frame(maxWidth: .infinity)
+                            }
+                        }
+                        Button {
+                            Task {
+                                guard let pulls = await store.openCoffret(coffret, domain: domain) else { return }
+                                let series = catalog.series.first { $0.id == domain } ?? catalog.series[0]
+                                onOpen(PackOpening(series: series, pulls: pulls, coffret: true))
+                            }
+                        } label: {
+                            Text("Ouvrir le coffret \(catalog.domains.first { $0.id == domain }?.label ?? "")")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.ink)
+                        .disabled(store.busy)
+                    }
+                    if let error = store.errorMessage {
+                        Text(error).font(.cfFootnote).foregroundStyle(Color.wrong)
+                    }
+                }
+                .padding(.horizontal, Space.gutter)
+                .padding(.vertical, Space.m)
+            }
+            .background(Color.paper.ignoresSafeArea())
+            .navigationTitle("Coffret de catégorie")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { Button("Plus tard") { dismiss() } }
+            }
+        }
     }
 }

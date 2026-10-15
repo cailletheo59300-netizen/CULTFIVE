@@ -143,6 +143,12 @@ public enum BackendError: Error, Equatable, LocalizedError {
         case "referral_requires_account": return "Crée ton compte pour profiter de l'invitation."
         case "email_exists", "email_address_exists": return "Cet e-mail a déjà un compte. Connecte-toi."
         case "otp_expired", "invalid_otp": return "Code invalide ou expiré."
+        case "pass_required": return "Réservé au Pass+."
+        case "pass_not_on_sale": return "Le Pass+ n'est pas en vente en ce moment."
+        case "wrong_account", "transaction_other_user": return "Cet achat appartient à un autre compte Brainlix. Connecte-toi à ce compte pour retrouver ton Pass+."
+        case "revoked": return "Cet achat a été remboursé."
+        case "coffret_opened": return "Ce coffret est déjà ouvert."
+        case "coffret_not_found": return "Coffret introuvable."
         default: return nil
         }
     }
