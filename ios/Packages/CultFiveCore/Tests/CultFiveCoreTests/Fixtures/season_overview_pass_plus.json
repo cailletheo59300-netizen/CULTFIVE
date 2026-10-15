@@ -224,6 +224,7 @@
     {
       "done": false,
       "slot": 1,
+      "goal": "album",
       "label": "Finis une page de l'album",
       "target": 1,
       "progress": 0
@@ -231,6 +232,7 @@
     {
       "done": false,
       "slot": 2,
+      "goal": "comptoir",
       "label": "Ouvre 5 pochettes Histoire",
       "target": 5,
       "progress": 0
@@ -238,6 +240,7 @@
     {
       "done": false,
       "slot": 3,
+      "goal": "album",
       "label": "Fabrique une carte dans l'album",
       "target": 1,
       "progress": 0
@@ -245,6 +248,7 @@
     {
       "done": false,
       "slot": 4,
+      "goal": "album",
       "label": "Obtiens une carte brillante",
       "target": 1,
       "progress": 0
@@ -252,6 +256,7 @@
     {
       "done": false,
       "slot": 5,
+      "goal": "album",
       "label": "Trouve une légendaire",
       "target": 1,
       "progress": 0
@@ -259,6 +264,7 @@
     {
       "done": false,
       "slot": 6,
+      "goal": "comptoir",
       "label": "Ouvre 10 pochettes",
       "target": 10,
       "progress": 0
@@ -266,6 +272,7 @@
     {
       "done": false,
       "slot": 7,
+      "goal": "duels",
       "label": "Gagne 3 duels",
       "target": 3,
       "progress": 0
@@ -273,6 +280,7 @@
     {
       "done": false,
       "slot": 8,
+      "goal": "daily",
       "label": "Fais 7 jours de suite",
       "target": 7,
       "progress": 0
@@ -280,6 +288,7 @@
     {
       "done": false,
       "slot": 9,
+      "goal": "daily",
       "label": "Réussis un 5 du jour parfait",
       "target": 1,
       "progress": 0
@@ -287,6 +296,7 @@
     {
       "done": false,
       "slot": 10,
+      "goal": "album",
       "label": "Obtiens 3 étoiles sur 3 cartes",
       "target": 3,
       "progress": 0
@@ -294,6 +304,7 @@
     {
       "done": false,
       "slot": 11,
+      "goal": "album",
       "label": "Complète 10 cartes Nature",
       "target": 10,
       "progress": 0
@@ -301,6 +312,7 @@
     {
       "done": false,
       "slot": 12,
+      "goal": "play",
       "label": "Joue dans 8 domaines différents",
       "target": 8,
       "progress": 0

@@ -47,8 +47,12 @@ final class AppModel {
     var pendingLeagueId: UUID?
     /// Aperçu de l'album : le bouton « Voir les défis » du pass demande à l'écran du 5 de descendre jusqu'aux défis.
     var pendingChallenges = false
-    /// Aperçu de l'album : le lien du pass, depuis la carte Défis, ouvre le pass dans l'onglet Album.
-    var pendingPass = false
+    /// Page de l'album à ouvrir (pass depuis la carte Défis ou une notification, comptoir depuis une mission).
+    var pendingAlbum: AlbumRoute?
+    /// Défi « bonnes réponses en … » touché : l'onglet Jouer ouvre ce domaine.
+    var pendingDomain: String?
+    /// Défi « Corrige … erreurs » touché : l'onglet Jouer lance « Revoir mes erreurs ».
+    var pendingErrors = false
 
     let service: GameService
     let api: SupabaseAPI?
@@ -164,7 +168,7 @@ final class AppModel {
         case .friends, .league: phase = .main; tab = .friends
         case .profile: phase = .main; tab = .profile
         case .album, .card: phase = .main; tab = .album
-        case .pass: phase = .main; tab = .album; pendingPass = true
+        case .pass: phase = .main; tab = .album; pendingAlbum = .pass
         default: phase = .main; tab = .daily
         }
     }
@@ -314,6 +318,21 @@ final class AppModel {
     var passPlusForSale: Bool { (AlbumStore.shared.season.passPlus?.onSale ?? false) || passPlus.sandbox }
 
     /// Ouvre l'écran du Pass+.
+    /// Défi touché : on emmène le joueur là où il se fait.
+    func go(to goal: ChallengeGoal) {
+        switch goal {
+        case .daily: tab = .daily
+        case .play: tab = .play
+        case .domain(let id): pendingDomain = id; tab = .play
+        case .errors:
+            if (profile?.activeErrors ?? 0) > 0 { pendingErrors = true }
+            tab = .play
+        case .album: tab = .album
+        case .comptoir: pendingAlbum = .comptoir; tab = .album
+        case .duels: tab = .friends
+        }
+    }
+
     func openPassPlus(from origin: String) {
         track("pass_view", ["from": origin])
         showPassPlus = true

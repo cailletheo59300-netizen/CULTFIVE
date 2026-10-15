@@ -21,6 +21,7 @@ struct DailyHomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
                     topLine
+                        .id("haut")
                     LeonSays(text: leonLine, color: .brand, pose: app.daily?.state == .done ? .proud : .wave,
                              curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08), size: 92)
                     if !rewards.isEmpty {
@@ -30,10 +31,21 @@ struct DailyHomeView: View {
                     StreakRescueOffer()
                     rendezVous
                     // Les défis (jour, semaine, saison) rapportent neurones et points de saison.
-                    SeasonChallengesCard(overview: quests, store: AlbumStore.shared) {
-                        app.pendingPass = true
+                    SeasonChallengesCard(overview: quests, store: AlbumStore.shared, onOpenPass: {
+                        app.pendingAlbum = .pass
                         app.tab = .album
-                    }
+                    }, onGo: { goal in
+                        // Le 5 du jour est sur cet écran : on le lance tout de suite s'il reste à faire.
+                        if goal == .daily {
+                            if app.daily?.state == .done {
+                                withAnimation(Motion.standard) { reader.scrollTo("haut", anchor: .top) }
+                            } else if app.daily != nil {
+                                showDaily = true
+                            }
+                        } else {
+                            app.go(to: goal)
+                        }
+                    })
                     .id("defis")
                     FreeChestOffer()
                 }

@@ -113,6 +113,8 @@ final class ContractDecodingTests: XCTestCase {
         // Ancienne réponse (sans Pass+) : rien à afficher.
         let old: SeasonOverview = try fixture("season_overview")
         XCTAssertNil(old.passPlus)
+        XCTAssertEqual(season.missions.map(\.destination).prefix(2), [.album, .comptoir], "missions cliquables (0057)")
+        XCTAssertTrue(old.missions.allSatisfy { $0.destination == nil }, "ancien serveur : missions sans but")
 
         let ads: AdStatus = try fixture("ad_status_pass_plus")
         XCTAssertTrue(ads.passPlus)
@@ -145,6 +147,7 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertEqual(quests.day.quests.first?.label, "Fais le 5 du jour")
         XCTAssertGreaterThan(quests.day.endsAt, quests.day.endsAt.addingTimeInterval(-86_400), "date ISO 8601 décodée")
         XCTAssertTrue(quests.day.quests.allSatisfy { $0.progress <= $0.target })
+        XCTAssertEqual(quests.day.quests.map(\.destination), [.daily, .domain("music"), .errors], "défis cliquables (0057)")
         let weeks: [WeekRecap] = try fixture("weekly_recap")
         XCTAssertFalse(weeks.isEmpty)
         XCTAssertGreaterThan(weeks[0].answers, 0)

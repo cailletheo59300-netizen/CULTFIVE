@@ -113,7 +113,7 @@ struct ProfileDomainsList: View {
                 HStack(spacing: 6) {
                     if rating.placed { Circle().fill(color).frame(width: 9, height: 9) }
                     Text(skill.name).font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
-                        .lineLimit(1)
+                        .lineLimit(1).minimumScaleFactor(0.75)
                 }
                 Text(rating.placed ? rating.rank.name : "Placement · \(rating.placementDone)/\(CoteCULT.placementAnswers) réponses")
                     .font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)

@@ -69,11 +69,11 @@ struct AlbumView: View {
         } message: {
             Text(store.errorMessage ?? "")
         }
-        .onChange(of: app.pendingPass, initial: true) { _, go in
-            // Lien « Pass » de la carte Défis (écran du 5) : on ouvre directement le pass.
-            guard go else { return }
-            app.pendingPass = false
-            path = [.pass]
+        .onChange(of: app.pendingAlbum, initial: true) { _, route in
+            // Lien « Pass » de la carte Défis (écran du 5), mission « Ouvre … pochettes » : on ouvre directement la page.
+            guard let route else { return }
+            app.pendingAlbum = nil
+            path = [route]
         }
         // Fiche de carte en plein écran : on la ferme avec la croix, pas en glissant.
         .fullScreenCover(item: $selected) { card in
@@ -578,8 +578,8 @@ private struct Binder: View {
                 Text(sheet.page.title)
                     .font(.system(.headline, design: .rounded).weight(.heavy))
                     .foregroundStyle(Color.ink)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.75)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.85)
                 Text(sheet.parts > 1 ? "\(owned)/\(total) cartes · partie \(sheet.part)/\(sheet.parts)" : "\(owned)/\(total) cartes")
                     .font(.system(.caption, design: .rounded).weight(.bold))
                     .monospacedDigit()

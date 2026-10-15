@@ -468,7 +468,7 @@ struct PlaySummaryView: View {
                                 .font(.system(.callout, design: .rounded).weight(.heavy)).foregroundStyle(Color.correct)
                         }
                         Text(reveal.takeaway ?? reveal.explanation).font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                            .lineLimit(3)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
                 .popCard(padding: 12, radius: Radius.s)

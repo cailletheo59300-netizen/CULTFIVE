@@ -711,7 +711,7 @@ private struct RewardCard: View {
         case .tickets(let kind, _): return kind == .fiftyFifty ? "Retire deux mauvaises réponses, sans neurones" : "Un indice ou une seconde chance, sans neurones"
         case .joker: return "Sauve ta série un jour où tu oublies de jouer"
         case .item: return "Nouveau pour Léon : il le porte déjà !"
-        case .packTickets: return "À ouvrir au Comptoir, dans l'album"
+        case .packTickets: return "À ouvrir au Comptoir (5 max, sinon 30 neurones chacun)"
         case .albumCard(let pull):
             switch pull.outcome {
             case .new: return "Elle rejoint ton album"

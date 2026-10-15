@@ -10,6 +10,8 @@ struct ComptoirView: View {
     @Environment(AppModel.self) private var app
     @State private var selected = "encyclo"
     @State private var coffret: AlbumOverview.Coffret?
+    /// Pochette touchée sur le rayon : la feuille des 3 façons de l'ouvrir.
+    @State private var choice: PackSeries?
 
     private let catalog = AlbumCatalog.shared
     private var series: PackSeries { catalog.series.first { $0.id == selected } ?? catalog.series[0] }
@@ -50,6 +52,11 @@ struct ComptoirView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) { onOpen(opening) }
             }
         }
+        .sheet(item: $choice) { item in
+            packSheet(item)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+        }
     }
 
     // MARK: - Coffrets de catégorie (Pass+)
@@ -63,9 +70,10 @@ struct ComptoirView: View {
 
     private func section(_ title: String, detail: String) -> some View {
         HStack(alignment: .firstTextBaseline) {
-            Text(title).font(.cfHeadline).foregroundStyle(Color.ink).lineLimit(1)
+            Text(title).font(.cfHeadline).foregroundStyle(Color.ink).fixedSize()
             Spacer(minLength: Space.s)
-            Text(detail).font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft).lineLimit(1)
+            Text(detail).font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+                .multilineTextAlignment(.trailing).lineLimit(2).minimumScaleFactor(0.85)
         }
         .padding(.bottom, -Space.s)
     }
@@ -76,7 +84,8 @@ struct ComptoirView: View {
         HStack(spacing: Space.s) {
             WalletTile(icon: "neurone", value: store.neurones, label: "Neurones",
                        tint: Color(hex: 0xF0588F), fill: [Color(hex: 0xFFF0F6), Color(hex: 0xFFE0EC)])
-            WalletTile(icon: "ticket_pochette", value: store.tickets, label: store.tickets > 1 ? "Tickets" : "Ticket",
+            WalletTile(icon: "ticket_pochette", value: store.tickets,
+                       label: store.admin ? "Tickets" : "\(store.tickets > 1 ? "Tickets" : "Ticket") · \(AlbumStore.ticketMax) max",
                        tint: .brand, fill: [Color(hex: 0xF3EFFF), Color(hex: 0xE6DEFF)])
         }
     }
@@ -104,6 +113,7 @@ struct ComptoirView: View {
         return Button {
             Haptics.selection()
             withAnimation(Motion.bounce) { selected = item.id }
+            choice = item
         } label: {
             VStack(spacing: 8) {
                 AlbumImage(kind: .packs, name: item.id)
@@ -136,12 +146,15 @@ struct ComptoirView: View {
     private var packPanel: some View {
         let owned = store.ownedCount(series.cards)
         let total = series.cards.count
-        let missing = AlbumStore.packPrice - store.neurones
         return VStack(alignment: .leading, spacing: Space.m) {
             HStack(alignment: .center, spacing: Space.m) {
-                AlbumImage(kind: .packs, name: series.id)
-                    .frame(width: 92, height: 138)
-                    .shadow(color: series.tone.opacity(0.45), radius: 12, y: 6)
+                Button { choice = series } label: {
+                    AlbumImage(kind: .packs, name: series.id)
+                        .frame(width: 92, height: 138)
+                        .shadow(color: series.tone.opacity(0.45), radius: 12, y: 6)
+                }
+                .buttonStyle(.row)
+                .accessibilityLabel("Ouvrir la pochette \(series.label)")
                 VStack(alignment: .leading, spacing: 6) {
                     Text(series.id == "encyclo" ? "Encyclopédie" : series.label)
                         .font(.system(.title3, design: .rounded).weight(.heavy))
@@ -169,25 +182,35 @@ struct ComptoirView: View {
                     }
                 }
             }
+            packButtons(series, then: onOpen)
+        }
+        .popCard()
+        .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(series.tone.opacity(0.35), lineWidth: 2))
+    }
+
+    // MARK: - Les 3 façons d'ouvrir une pochette
+
+    /// Neurones, ticket, ou pochette gratuite du jour (une pub, ou rien à regarder avec le Pass+).
+    private func packButtons(_ series: PackSeries, then: @escaping (PackOpening) -> Void) -> some View {
+        let missing = AlbumStore.packPrice - store.neurones
+        return VStack(alignment: .leading, spacing: Space.m) {
             ShopButton(title: "Ouvrir la pochette", price: "\(AlbumStore.packPrice)", icon: "neurone",
                        fill: .brand, text: .white, enabled: store.neurones >= AlbumStore.packPrice && !store.busy) {
-                let series = series
-                Task { if let pulls = await store.buyPack(series, useTicket: false) { onOpen(PackOpening(series: series, pulls: pulls)) } }
+                Task { if let pulls = await store.buyPack(series, useTicket: false) { then(PackOpening(series: series, pulls: pulls)) } }
             }
-            ShopButton(title: "Utiliser un ticket", price: store.admin ? "∞" : (store.tickets > 1 ? "\(store.tickets) restants" : "\(store.tickets) restant"),
+            // 5 tickets au plus : au-delà, chaque ticket gagné devient 30 neurones (serveur 0057).
+            ShopButton(title: "Utiliser un ticket", price: store.admin ? "∞" : "\(store.tickets)/\(AlbumStore.ticketMax)",
                        icon: "ticket_pochette", fill: .sun, text: .inkFixed, enabled: store.tickets > 0 && !store.busy) {
-                let series = series
-                Task { if let pulls = await store.buyPack(series, useTicket: true) { onOpen(PackOpening(series: series, pulls: pulls)) } }
+                Task { if let pulls = await store.buyPack(series, useTicket: true) { then(PackOpening(series: series, pulls: pulls)) } }
             }
-            if (app.adStatus?.freePack ?? 0) > 0 {
+            if let free = app.adStatus?.freePack {
                 // Une pochette gratuite par jour contre une pub (vérifiée par le serveur, 0053).
-                ShopButton(title: "Pochette gratuite", price: app.noAds ? "Pass+" : "1 pub", icon: "ticket_pochette",
-                           fill: Color(hex: 0x37B24D), text: .white, enabled: !store.busy) {
-                    let series = series
+                ShopButton(title: "Pochette gratuite", price: free == 0 ? "Demain" : app.noAds ? "Pass+" : "1 pub", icon: "ticket_pochette",
+                           fill: Color(hex: 0x37B24D), text: .white, enabled: free > 0 && !store.busy) {
                     Task {
                         do {
                             guard try await app.watchAd(.freePack) != nil else { return }
-                            if let pulls = await store.buyPack(series, useTicket: true) { onOpen(PackOpening(series: series, pulls: pulls)) }
+                            if let pulls = await store.buyPack(series, useTicket: true) { then(PackOpening(series: series, pulls: pulls)) }
                         } catch {
                             app.show((error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant.")
                         }
@@ -199,8 +222,33 @@ struct ComptoirView: View {
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
         }
-        .popCard()
-        .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(series.tone.opacity(0.35), lineWidth: 2))
+    }
+
+    /// Feuille d'une pochette touchée sur le rayon : la pochette, ce qu'il te manque, et les 3 façons de l'ouvrir.
+    private func packSheet(_ series: PackSeries) -> some View {
+        ScrollView {
+            VStack(spacing: Space.m) {
+                AlbumImage(kind: .packs, name: series.id)
+                    .frame(width: 110, height: 165)
+                    .shadow(color: series.tone.opacity(0.45), radius: 14, y: 8)
+                    .padding(.top, Space.l)
+                Text(series.id == "encyclo" ? "Encyclopédie" : series.label)
+                    .font(.system(.title2, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.ink)
+                    .multilineTextAlignment(.center)
+                Text("\(store.ownedCount(series.cards)) sur \(series.cards.count) cartes dans ton album · 5 cartes, au moins 1 rare")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    .multilineTextAlignment(.center)
+                packButtons(series) { opening in
+                    choice = nil
+                    // La feuille se ferme d'abord, puis l'ouverture plein écran.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) { onOpen(opening) }
+                }
+            }
+            .padding(.horizontal, Space.gutter)
+            .padding(.bottom, Space.l)
+        }
+        .background(Color.paper.ignoresSafeArea())
     }
 
     // MARK: - Pochette dorée
@@ -258,7 +306,7 @@ struct ComptoirView: View {
                         .font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
                         .lineLimit(2)
                     Text(AlbumCatalog.shared.page(card.pageKey)?.title ?? "")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1)
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(2)
                     Text(card.rarity.label)
                         .font(.system(.caption, design: .rounded).weight(.heavy))
                         .foregroundStyle(.white)
@@ -412,8 +460,9 @@ struct CoffretPicker: View {
                                 Text(item.label)
                                     .font(.system(.subheadline, design: .rounded).weight(.heavy))
                                     .foregroundStyle(domain == item.id ? DomainPalette.onColor(item.id) : Color.ink)
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.7)
+                                    .lineLimit(2)
+                                    .minimumScaleFactor(0.8)
+                                    .multilineTextAlignment(.center)
                                     .frame(maxWidth: .infinity, minHeight: 44)
                                     .background(domain == item.id ? DomainPalette.color(item.id) : Color.paperRaised,
                                                 in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))

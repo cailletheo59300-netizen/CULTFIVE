@@ -3,10 +3,12 @@ import CultFiveCore
 
 /// Défis sous le 5 du jour : Jour, Semaine, Saison. Chaque défi dit ce qu'il rapporte : des neurones et des points
 /// de saison qui font monter le pass. Tout vient du serveur (quests_overview, season_overview).
+/// Un défi pas encore rempli se touche : il emmène là où il se fait (`goal` du serveur).
 struct SeasonChallengesCard: View {
     let overview: QuestsOverview?
     let store: AlbumStore
     var onOpenPass: () -> Void
+    var onGo: (ChallengeGoal) -> Void = { _ in }
 
     private enum Tab: String, CaseIterable { case day = "Jour", week = "Semaine", season = "Saison" }
 
@@ -46,7 +48,7 @@ struct SeasonChallengesCard: View {
                 .font(.system(.caption, design: .rounded).weight(.bold))
                 .foregroundStyle(Color.inkSoft)
                 .lineLimit(1)
-                .minimumScaleFactor(0.75)
+                .minimumScaleFactor(0.6)
             }
             Spacer(minLength: Space.s)
             Button(action: onOpenPass) {
@@ -93,8 +95,10 @@ struct SeasonChallengesCard: View {
         if let period {
             VStack(alignment: .leading, spacing: 12) {
                 ForEach(period.quests) { quest in
-                    ChallengeRow(label: quest.label, progress: quest.progress, target: quest.target, done: quest.done,
-                                 neurones: quest.seeds, points: points, accent: accent)
+                    row(goal: quest.destination, done: quest.done) {
+                        ChallengeRow(label: quest.label, progress: quest.progress, target: quest.target, done: quest.done,
+                                     neurones: quest.seeds, points: points, accent: accent, tappable: quest.destination != nil)
+                    }
                 }
                 BonusBar(bonus: bonus, count: period.doneCount, total: period.quests.count, accent: accent,
                          extra: bonusExtra(period.bonus))
@@ -131,10 +135,29 @@ struct SeasonChallengesCard: View {
                 Text("\(store.season.missions.count) missions pour toute la saison. Elles se remplissent toutes seules en jouant.")
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                 ForEach(store.season.missions, id: \.slot) { mission in
-                    ChallengeRow(label: mission.label, progress: mission.progress, target: mission.target, done: mission.done,
-                                 neurones: 0, points: store.rules.mission, accent: accent)
+                    row(goal: mission.destination, done: mission.done) {
+                        ChallengeRow(label: mission.label, progress: mission.progress, target: mission.target, done: mission.done,
+                                     neurones: 0, points: store.rules.mission, accent: accent, tappable: mission.destination != nil)
+                    }
                 }
             }
+        }
+    }
+
+    /// Défi à faire : un bouton qui mène là où il se fait. Rempli (ou sans but) : une simple ligne.
+    @ViewBuilder
+    private func row<Content: View>(goal: ChallengeGoal?, done: Bool, @ViewBuilder content: () -> Content) -> some View {
+        if let goal, !done {
+            Button {
+                Haptics.selection()
+                onGo(goal)
+            } label: {
+                content().contentShape(Rectangle())
+            }
+            .buttonStyle(.row)
+            .accessibilityHint("Touche pour y aller")
+        } else {
+            content()
         }
     }
 
@@ -156,6 +179,7 @@ private struct ChallengeRow: View {
     let neurones: Int
     let points: Int
     let accent: Color
+    var tappable = false
 
     var body: some View {
         let ratio = CGFloat(min(progress, target)) / CGFloat(max(target, 1))
@@ -170,8 +194,8 @@ private struct ChallengeRow: View {
                         .font(.system(.subheadline, design: .rounded).weight(.bold))
                         .foregroundStyle(done ? Color.inkSoft : Color.ink)
                         .strikethrough(done, color: .inkSoft)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer(minLength: 4)
                     if target > 1 {
                         Text("\(progress)/\(target)")
@@ -207,6 +231,12 @@ private struct ChallengeRow: View {
             }
             .fixedSize()
             .opacity(done ? 0.5 : 1)
+            if tappable && !done {
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12, weight: .heavy))
+                    .foregroundStyle(Color.inkSoft.opacity(0.6))
+                    .accessibilityHidden(true)
+            }
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(label), \(progress) sur \(target)\(done ? ", rempli" : ""), \(neurones) neurones, \(points) points de saison")

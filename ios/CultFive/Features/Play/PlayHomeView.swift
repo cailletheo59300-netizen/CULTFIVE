@@ -49,6 +49,18 @@ struct PlayHomeView: View {
             PlaySetupSheet(domainId: request.domainId, preselected: request.preselected,
                            onStart: { pendingConfig = $0 }, onStats: { pendingStats = request.domainId })
         }
+        .onChange(of: app.pendingDomain, initial: true) { _, domain in
+            // Défi « bonnes réponses en … » touché : la feuille du domaine s'ouvre.
+            guard let domain else { return }
+            app.pendingDomain = nil
+            path = []
+            setup = PlaySetupRequest(domainId: domain)
+        }
+        .onChange(of: app.pendingErrors, initial: true) { _, go in
+            guard go else { return }
+            app.pendingErrors = false
+            playConfig = PlayConfig(mode: .errors)
+        }
         .task {
             await load()
             #if DEBUG
@@ -225,7 +237,7 @@ private struct DomainTile: View {
                     Image(systemName: "star.fill").font(.system(size: 8, weight: .bold)).accessibilityLabel("Favori")
                 }
                 Text(domain.name).font(.system(.caption, design: .rounded).weight(.black))
-                    .lineLimit(1).minimumScaleFactor(0.75)
+                    .lineLimit(2).minimumScaleFactor(0.85).multilineTextAlignment(.center)
             }
             .foregroundStyle(on)
             content(on: on)

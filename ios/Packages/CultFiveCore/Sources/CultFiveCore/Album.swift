@@ -285,6 +285,9 @@ public struct SeasonOverview: Codable, Hashable, Sendable {
         public let progress: Int
         public let target: Int
         public let done: Bool
+        /// Où aller pour la remplir (serveur 0057).
+        public let goal: String?
+        public var destination: ChallengeGoal? { ChallengeGoal(goal: goal, param: nil) }
     }
 
     /// nil : aucune saison en cours.

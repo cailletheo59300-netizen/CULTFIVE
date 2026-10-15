@@ -253,8 +253,7 @@ struct SeasonPassView: View {
             Text(text)
                 .font(.system(.caption, design: .rounded).weight(.bold))
                 .foregroundStyle(onDark ? Color.white : Color.ink)
-                .lineLimit(1)
-                .minimumScaleFactor(0.75)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 }

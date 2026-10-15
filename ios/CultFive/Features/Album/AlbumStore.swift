@@ -125,6 +125,9 @@ struct Pull: Identifiable, Hashable {
 final class AlbumStore {
     static let packPrice = 150
     static let goldPackPrice = 900
+    /// Tickets de pochette : 5 au plus ; au-delà, chaque ticket gagné devient 30 neurones (serveur 0057).
+    static let ticketMax = 5
+    static let ticketOverflow = 30
     /// Réserves « illimitées » du mode admin (affichées ∞).
     static let unlimited = 999_999
 

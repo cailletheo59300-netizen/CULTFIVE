@@ -227,6 +227,24 @@ public struct DailyHistoryEntry: Codable, Hashable, Sendable {
 
 // MARK: - Objectifs et récap
 
+/// Où mène un défi touché (jour, semaine ou mission de saison). Un but inconnu (serveur plus récent) ne mène nulle part.
+public enum ChallengeGoal: Hashable, Sendable {
+    case daily, play, domain(String), errors, album, comptoir, duels
+
+    public init?(goal: String?, param: String?) {
+        switch goal {
+        case "daily": self = .daily
+        case "play": self = .play
+        case "domain": self = param.map { .domain($0) } ?? .play
+        case "errors": self = .errors
+        case "album": self = .album
+        case "comptoir": self = .comptoir
+        case "duels": self = .duels
+        default: return nil
+        }
+    }
+}
+
 /// Objectifs du jour et de la semaine. La progression est calculée par le serveur ; les récompenses tombent à la lecture.
 public struct QuestsOverview: Codable, Hashable, Sendable {
     public struct Quest: Codable, Hashable, Identifiable, Sendable {
@@ -237,9 +255,14 @@ public struct QuestsOverview: Codable, Hashable, Sendable {
         public let done: Bool
         public let xp: Int
         public let seeds: Int
+        /// Où aller pour le remplir (serveur 0057) ; `param` : le domaine d'un défi « bonnes réponses en … ».
+        public let goal: String?
+        public let param: String?
         public var id: Int { slot }
+        public var destination: ChallengeGoal? { ChallengeGoal(goal: goal, param: param) }
 
-        public init(slot: Int, label: String, target: Int, progress: Int, done: Bool, xp: Int, seeds: Int) {
+        public init(slot: Int, label: String, target: Int, progress: Int, done: Bool, xp: Int, seeds: Int,
+                    goal: String? = nil, param: String? = nil) {
             self.slot = slot
             self.label = label
             self.target = target
@@ -247,6 +270,8 @@ public struct QuestsOverview: Codable, Hashable, Sendable {
             self.done = done
             self.xp = xp
             self.seeds = seeds
+            self.goal = goal
+            self.param = param
         }
     }
 

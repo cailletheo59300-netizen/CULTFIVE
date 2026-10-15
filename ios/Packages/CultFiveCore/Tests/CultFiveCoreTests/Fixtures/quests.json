@@ -13,7 +13,9 @@
     "label": "Fais le 5 du jour",
     "seeds": 2,
     "target": 1,
-    "progress": 1
+    "progress": 1,
+    "goal": "daily",
+    "param": null
    },
    {
     "xp": 15,
@@ -22,7 +24,9 @@
     "label": "5 bonnes réponses en Musique",
     "seeds": 2,
     "target": 5,
-    "progress": 0
+    "progress": 0,
+    "goal": "domain",
+    "param": "music"
    },
    {
     "xp": 15,
@@ -31,7 +35,9 @@
     "label": "Corrige 2 erreurs",
     "seeds": 2,
     "target": 2,
-    "progress": 0
+    "progress": 0,
+    "goal": "errors",
+    "param": null
    }
   ],
   "ends_at": "2027-03-01T23:00:00+00:00",
@@ -51,7 +57,9 @@
     "label": "Fais le 5 du jour 5 fois",
     "seeds": 8,
     "target": 5,
-    "progress": 1
+    "progress": 1,
+    "goal": "daily",
+    "param": null
    },
    {
     "xp": 50,
@@ -60,7 +68,9 @@
     "label": "Fais un sans-faute au 5 du jour",
     "seeds": 8,
     "target": 1,
-    "progress": 0
+    "progress": 0,
+    "goal": "daily",
+    "param": null
    },
    {
     "xp": 50,
@@ -69,7 +79,9 @@
     "label": "Gagne 30 points d'Elo dans un domaine",
     "seeds": 8,
     "target": 30,
-    "progress": 30
+    "progress": 30,
+    "goal": "play",
+    "param": null
    }
   ],
   "ends_at": "2027-03-07T23:00:00+00:00",

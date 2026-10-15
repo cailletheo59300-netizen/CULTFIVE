@@ -3,6 +3,7 @@
 -- 2. Questions « carte » (map_pick : « Touche l'emplacement de X ») : retirées du 5 du jour (trop répétitives),
 --    gardées dans les parties mais plus difficiles (+20 de difficulté).
 -- 3. 5 du jour un peu plus original : 2 questions d'un nouveau type plus souvent (65 % au lieu de 35 %).
+-- 4. Défis cliquables : chaque défi (jour, semaine, saison) dit où aller pour le faire.
 
 -- ─────────────────────────────────────────── 1. Tickets : 5 au plus
 create or replace function public._album_rule(p_key text) returns integer
@@ -65,3 +66,44 @@ update public.questions set
   difficulty_max = least(difficulty_max + 20, 100),
   difficulty_observed = least(difficulty_observed + 20, 100)
 where type = 'map_pick';
+
+-- ─────────────────────────────────────────── 4. Défis cliquables
+-- Chaque défi dit où aller pour le faire (« goal ») : l'app y emmène le joueur quand il le touche.
+-- daily : 5 du jour · play : Jouer · domain : un domaine (« param ») · errors : « Revoir mes erreurs »
+-- · album : l'album · comptoir : le comptoir (pochettes) · duels : l'onglet Amis.
+create or replace function public._quest_goal(p_metric text) returns text
+language sql immutable set search_path = public, pg_temp as $$
+  select case p_metric
+    when 'daily_done' then 'daily'
+    when 'daily_perfect' then 'daily'
+    when 'correct_domain' then 'domain'
+    when 'errors_corrected' then 'errors'
+    else 'play' end
+$$;
+
+-- Missions de saison, par numéro (même liste pour toutes les saisons, voir _season_missions).
+create or replace function public._mission_goal(p_slot int) returns text
+language sql immutable set search_path = public, pg_temp as $$
+  select case p_slot
+    when 2 then 'comptoir' when 6 then 'comptoir'
+    when 7 then 'duels'
+    when 8 then 'daily' when 9 then 'daily'
+    when 12 then 'play'
+    else 'album' end
+$$;
+
+do $$
+declare v_old text; v_new text;
+begin
+  v_old := pg_get_functiondef('public._quests_period(uuid, text, date, jsonb)'::regprocedure);
+  v_new := replace(v_old, $o$jsonb_build_object('slot', q.slot, 'label', q.label,$o$,
+                          $n$jsonb_build_object('slot', q.slot, 'goal', public._quest_goal(q.metric), 'param', q.param, 'label', q.label,$n$);
+  if v_new = v_old then raise exception '0057: _quests_period inchangée'; end if;
+  execute v_new;
+
+  v_old := pg_get_functiondef('public.season_overview()'::regprocedure);
+  v_new := replace(v_old, $o$jsonb_build_object('slot', m.slot, 'label', m.label,$o$,
+                          $n$jsonb_build_object('slot', m.slot, 'goal', public._mission_goal(m.slot), 'label', m.label,$n$);
+  if v_new = v_old then raise exception '0057: season_overview inchangée'; end if;
+  execute v_new;
+end $$;

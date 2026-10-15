@@ -47,3 +47,20 @@ begin
   perform tst.ok((select avg(difficulty_effective) from public.questions where type = 'map_pick') >= 65,
                  'questions carte : difficiles');
 end $$;
+
+-- 4. Défis : chaque défi dit où aller.
+do $$
+declare u uuid := tst.new_user(); o jsonb;
+begin
+  perform tst.login(u);
+  o := public.quests_overview();
+  perform tst.ok(not exists (select 1 from jsonb_array_elements(o -> 'day' -> 'quests' || o -> 'week' -> 'quests') e
+                             where e ->> 'goal' is null), 'défis : un but pour chacun');
+  perform tst.ok((o -> 'day' -> 'quests' -> 0 ->> 'goal') = 'daily', 'premier défi du jour : le 5 du jour');
+  perform tst.ok(not exists (select 1 from jsonb_array_elements(o -> 'day' -> 'quests') e
+                             where e ->> 'goal' = 'domain' and e ->> 'param' is null), 'domaine : précisé');
+  o := public.season_overview();
+  perform tst.ok(jsonb_array_length(o -> 'missions') = 12
+                 and not exists (select 1 from jsonb_array_elements(o -> 'missions') e where e ->> 'goal' is null),
+                 'missions : un but pour chacune');
+end $$;
