@@ -40,7 +40,7 @@ struct AlbumFilterBar: View {
                 }
                 Rectangle().fill(Color.hairline).frame(width: 1, height: 22).padding(.horizontal, 2)
                 ForEach(CardRarity.allCases, id: \.self) { rarity in
-                    chip(rarity.label, on: filter.rarity == rarity, color: rarity.color, border: rarity.border) {
+                    chip(rarity.label, on: filter.rarity == rarity, color: rarity.color, border: rarity.color.opacity(0.6)) {
                         filter.rarity = filter.rarity == rarity ? nil : rarity
                     }
                 }
