@@ -1,6 +1,6 @@
 // Règles d'un achat du Pass+ (transaction StoreKit 2 déjà vérifiée).
 export const BUNDLE_ID = "app.brainlix.ios";
-export const PASS_PRODUCT = "app.brainlix.passplus";
+export const PASS_PRODUCT = "app.brainlix.pass";
 
 export interface PassTransaction {
   transactionId: string;

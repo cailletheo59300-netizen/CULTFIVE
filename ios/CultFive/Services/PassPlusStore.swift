@@ -9,8 +9,8 @@ import CultFiveCore
 @MainActor
 @Observable
 final class PassPlusStore {
-    /// Produit App Store Connect : abonnement non renouvelable, 3,99 €.
-    static let productId = "app.brainlix.passplus"
+    /// Produit App Store Connect : consommable, 3,99 €, racheté à chaque saison. Le Pass+ vit sur le serveur (compte Brainlix).
+    static let productId = "app.brainlix.pass"
 
     private(set) var product: Product?
     private(set) var purchasing = false
@@ -84,20 +84,20 @@ final class PassPlusStore {
         }
     }
 
-    /// « Restaurer mes achats » : relit les achats sur l'App Store et les renvoie au serveur.
+    /// « Restaurer mes achats » : un achat pas encore validé (réseau coupé) est renvoyé au serveur, puis le Pass+ est relu.
+    /// Le Pass+ est lié au compte Brainlix (consommable) : sur un autre iPhone, il suffit de se connecter au même compte.
     func restore() async {
         errorMessage = nil
         purchasing = true
         defer { purchasing = false }
         try? await AppStore.sync()
-        var found = false
-        for await result in Transaction.all {
-            guard case .verified(let transaction) = result, transaction.productID == Self.productId else { continue }
-            found = true
+        for await result in Transaction.unfinished {
             await handle(result)
         }
-        if !found { errorMessage = "Aucun achat du Pass+ à restaurer sur ce compte Apple." }
         await app?.refreshPassPlus()
+        if app?.noAds != true {
+            errorMessage = "Aucun Pass+ sur ce compte. Ton Pass+ est lié à ton compte \(Brand.name) : connecte-toi au compte avec lequel tu l'as acheté."
+        }
     }
 
     /// Une transaction de l'App Store : envoyée au serveur, puis terminée s'il l'a acceptée (ou refusée pour de bon).

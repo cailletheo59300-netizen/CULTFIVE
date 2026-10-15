@@ -2,7 +2,7 @@ import SwiftUI
 import CultFiveCore
 
 /// Écran du Pass+ : d'abord « plus de pub pendant toute la saison », ensuite la piste payante du pass.
-/// Paiement unique pour la saison en cours (abonnement non renouvelable) : rien ne se renouvelle tout seul.
+/// Paiement unique pour la saison en cours (achat consommable, racheté à chaque saison) : rien ne se renouvelle tout seul.
 struct PassPlusView: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss

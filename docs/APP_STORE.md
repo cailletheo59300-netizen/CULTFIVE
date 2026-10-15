@@ -141,8 +141,8 @@ Le Pass+ (3,99 €, une saison) = **plus aucune pub** pendant la saison + **la p
 1. **Accords, taxes et banque** → accepter l'accord **« Apps payantes »**, puis remplir le compte bancaire et le formulaire fiscal (W-8BEN pour un particulier en France).
 2. **Programme App Store Small Business** (developer.apple.com/app-store/small-business-program) : commission de **15 %** au lieu de 30 %.
 3. **Apps → Brainlix → Monétisation → Achats intégrés → « + »** :
-   - Type : **Abonnement non renouvelable**
-   - Nom de référence : `Pass+` · Identifiant du produit : **`app.brainlix.passplus`** (exactement celui-ci)
+   - Type : **Consommable** (Apple ne propose plus l'abonnement non renouvelable à cet endroit ; le Pass+ vit sur notre serveur, lié au compte Brainlix, et se rachète à chaque saison)
+   - Nom de référence : `Pass+` · Identifiant du produit : **`app.brainlix.pass`** (exactement celui-ci ; `app.brainlix.passplus`, créé puis supprimé, ne peut plus servir)
    - Prix : **3,99 €** (tous les pays)
    - Localisation (français) : nom affiché « Pass+ », description « Plus de pub et la piste Pass+ du pass, pour toute la saison. »
    - Informations pour la revue : une capture de l'écran Pass+ (Réglages → Pass+), et la note « Achat d'une saison : retire les pubs et débloque la piste Pass+ du pass. »
@@ -157,7 +157,7 @@ Le Pass+ (3,99 €, une saison) = **plus aucune pub** pendant la saison + **la p
 > - Coffrets de catégorie : choisis ton domaine et vois les cartes avant d'ouvrir.
 
 ### Notes pour Apple (en plus de la section 3)
-> The app offers one in-app purchase, "Pass+" (non-renewing subscription, one season ≈ 12 weeks): it removes all ads for the current season and unlocks the paid track of the season pass. Open Settings (profile tab → gear) → "Pass+", or the Album tab → season pass. Purchases are verified server-side (signed StoreKit 2 transaction). "Restore purchases" is on the same screen.
+> The app offers one in-app purchase, "Pass+" (consumable, bought again each season ≈ 12 weeks; the benefit is stored server-side on the player's account): it removes all ads for the current season and unlocks the paid track of the season pass. Open Settings (profile tab → gear) → "Pass+", or the Album tab → season pass. Purchases are verified server-side (signed StoreKit 2 transaction). "Restore purchases" is on the same screen.
 
 ### Avant d'envoyer
 - Serveur : migration **0056** et fonction **`iap-verify`** déployées en production (avec ton feu vert).

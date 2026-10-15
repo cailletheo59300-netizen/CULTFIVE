@@ -44,8 +44,8 @@ function jws(c, payload) {
 
 const user = '6f9619ff-8b86-d011-b42d-00c04fc964ff';
 const transaction = {
-  transactionId: '2000000123', originalTransactionId: '2000000123', bundleId: 'app.brainlix.ios', productId: 'app.brainlix.passplus',
-  type: 'Non-Renewing Subscription', purchaseDate: Date.now(), signedDate: Date.now() + 600_000, environment: 'Sandbox',
+  transactionId: '2000000123', originalTransactionId: '2000000123', bundleId: 'app.brainlix.ios', productId: 'app.brainlix.pass',
+  type: 'Consumable', purchaseDate: Date.now(), signedDate: Date.now() + 600_000, environment: 'Sandbox',
   appAccountToken: user.toUpperCase(),
 };
 
