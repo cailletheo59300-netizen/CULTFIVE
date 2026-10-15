@@ -26,6 +26,8 @@ struct MainTabView: View {
             CultTabBar(selection: $model.tab, daily: model.daily)
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { barHeight = $0 }
         }
+        // Visite guidée d'un écran (première visite, ou bouton « ? »).
+        .overlay { TourOverlay() }
         .ignoresSafeArea(.keyboard, edges: .bottom)
         .environment(\.tabBarClearance, clearance)
         .fullScreenCover(isPresented: Binding(get: { model.chestQueue != nil }, set: { if !$0 { model.chestQueue = nil } })) {

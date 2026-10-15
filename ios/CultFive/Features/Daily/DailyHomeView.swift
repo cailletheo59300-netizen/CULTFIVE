@@ -60,6 +60,7 @@ struct DailyHomeView: View {
             .background(Color.paper)
             .refreshable { await reload() }
             .toolbar(.hidden, for: .navigationBar)
+            .guidedTour(.daily)
             .onChange(of: app.pendingChallenges, initial: true) { _, go in
                 guard go else { return }
                 app.pendingChallenges = false
@@ -142,6 +143,7 @@ struct DailyHomeView: View {
         return HStack(spacing: Space.s) {
             Text(shortDate ? DateText.short(date) : DateText.long(date)).labelCaps()
                 .lineLimit(1).minimumScaleFactor(0.7)
+            TourButton(id: .daily)
             Spacer(minLength: 0)
             if let streak = app.profile?.streak, streak > 0 {
                 let freezes = app.profile?.streakFreezes ?? 0

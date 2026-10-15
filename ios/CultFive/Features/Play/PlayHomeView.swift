@@ -28,6 +28,7 @@ struct PlayHomeView: View {
             .clearsTabBar()
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
+            .guidedTour(.play)
             .navigationDestination(for: String.self) { domain in
                 DomainView(domainId: domain)
             }
@@ -76,6 +77,7 @@ struct PlayHomeView: View {
     private var header: some View {
         HStack(alignment: .center) {
             Text("Jouer").font(.cfDisplay)
+            TourButton(id: .play)
             Spacer()
             if let global = CoteCULT.overall(skills) {
                 // Emblème et Elo centrés l'un sur l'autre.

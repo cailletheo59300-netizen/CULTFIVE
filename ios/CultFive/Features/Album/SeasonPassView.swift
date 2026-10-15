@@ -95,6 +95,10 @@ struct SeasonPassView: View {
         .background(Color.paper.ignoresSafeArea())
         .navigationTitle("Pass de saison")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) { TourButton(id: .pass) }
+        }
+        .guidedTour(.pass)
         .overlay(alignment: .top) {
             if let claimed {
                 Toast(text: "\(claimed.name) récupéré")

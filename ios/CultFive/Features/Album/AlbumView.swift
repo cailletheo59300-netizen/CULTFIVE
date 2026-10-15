@@ -62,6 +62,7 @@ struct AlbumView: View {
             .refreshable { await store.refresh() }
             .clearsTabBar()
             .background(Color.paper.ignoresSafeArea())
+            .guidedTour(.album)
             .navigationTitle("Album")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -69,7 +70,10 @@ struct AlbumView: View {
                     NeuronesAmount(amount: store.neurones, size: 24)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    if store.canAdmin { adminMenu }
+                    HStack(spacing: 0) {
+                        if store.canAdmin { adminMenu }
+                        TourButton(id: .album)
+                    }
                 }
             }
             .navigationDestination(for: AlbumRoute.self) { route in

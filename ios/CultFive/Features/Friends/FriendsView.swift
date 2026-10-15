@@ -39,6 +39,7 @@ struct FriendsView: View {
                         HStack(alignment: .firstTextBaseline) {
                             Text("Amis").font(.cfDisplay)
                             Spacer()
+                            TourButton(id: .friends)
                             addMenu
                         }
                         Text("Défie tes amis en duel : mêmes questions, chacun son tour.")
@@ -62,6 +63,7 @@ struct FriendsView: View {
             .clearsTabBar()
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
+            .guidedTour(.friends)
             .refreshable { await load() }
             .navigationDestination(for: Route.self) { route in
                 switch route {
