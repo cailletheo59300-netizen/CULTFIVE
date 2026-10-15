@@ -58,12 +58,13 @@ jobs:
           UDID: ${{ steps.sim.outputs.udid }}
         run: |
           if [ "${{ inputs.app_store }}" = "true" ]; then
-            # Fiche App Store : 1320 × 2868 (iPhone 6,9 pouces), mode clair, les écrans qui racontent l'app.
+            # Fiche App Store : 1320 × 2868 (iPhone 6,9 pouces), mode clair, les 10 écrans qui racontent l'app
+            # (habillés ensuite par scripts/app-store/frames.mjs).
             dir=docs/screenshots/app-store
-            mkdir -p "$dir"
+            rm -rf "$dir"; mkdir -p "$dir"
             xcrun simctl ui "$UDID" appearance light
             i=1
-            for s in home question reveal result play friends league profile; do
+            for s in home typed reveal result album card pass play league profile; do
               # En français (nombres « 3 120 »), sans la fiche des règles des ligues qui s'ouvre à la première visite.
               xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.ios -demo -demoScreen "$s" \
                 -AppleLanguages "(fr)" -AppleLocale fr_FR -leagueRulesSeenV2 YES > /dev/null

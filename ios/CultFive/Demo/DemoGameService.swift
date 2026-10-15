@@ -9,6 +9,13 @@ enum Demo {
     enum Screen: String {
         case onboarding, onboardingQuestion = "onboarding-question", home, question, reveal, result, share
         case play, domain, friends, league, profile
+        /// Fiche App Store : album, carte vedette, pass de saison, question d'un nouveau type (frise).
+        case album, card, pass, typed
+    }
+
+    /// Carte mise en avant (écran « card ») : la première légendaire d'histoire, brillante.
+    static var featuredCard: AlbumCard? {
+        AlbumCatalog.shared.cards.first { $0.domain == "history" && $0.rarity == .legend }
     }
 
     /// Actif avec l'argument `-demo`, ou automatiquement quand aucun serveur n'est configuré
@@ -54,7 +61,23 @@ struct DemoGameService: GameService {
         try SupabaseAPI.decoder.decode(T.self, from: JSONEncoder().encode(json))
     }
 
-    private var reviewItems: [ReviewItem] { (try? fixture("daily_review")) ?? [] }
+    private var reviewItems: [ReviewItem] {
+        var items: [ReviewItem] = (try? fixture("daily_review")) ?? []
+        if screen == .typed, !items.isEmpty, let timeline = try? decode(Self.timelineItem, as: ReviewItem.self) { items[0] = timeline }
+        return items
+    }
+
+    /// Question « frise » (nouveau type) pour l'écran « typed ».
+    private static let timelineItem: JSONValue = .object([
+        "id": .string("8a40a60b-61f0-498f-bdf4-9cd78a95301b"), "type": .string("timeline"),
+        "prompt": .string("En quelle année commence la Révolution française ?"),
+        "payload": .object(["min": .number(1710), "max": .number(1910), "tolerance": .number(5)]),
+        "answer": .object(["value": .number(1789), "tolerance": .number(5)]),
+        "given": .object(["value": .number(1789)]), "is_correct": .bool(true), "counted_ms": .number(7000),
+        "explanation": .string("1789 : réunion des États généraux, prise de la Bastille le 14 juillet, Déclaration des droits de l'homme en août."),
+        "takeaway": .null, "source": .null, "fact_as_of": .null, "position": .number(1),
+        "domain_id": .string("history"), "subdomain_id": .string("history.contemporary"),
+    ])
 
     // MARK: Daily
 
@@ -429,6 +452,38 @@ struct DemoGameService: GameService {
             })
     }
     func deleteAccount() async throws {}
+
+    // MARK: Album et pass
+
+    /// Collection d'exemple : l'histoire presque complète, ailleurs un peu plus d'une carte sur trois.
+    func albumOverview() async throws -> AlbumOverview {
+        let featured = Demo.featuredCard?.serverId
+        let cards: [JSONValue] = AlbumCatalog.shared.cards.enumerated().compactMap { i, card in
+            let owned = card.serverId == featured || (card.domain == "history" ? i % 7 != 3 : i % 3 == 0)
+            guard owned else { return nil }
+            return .object(["id": .string(card.serverId), "copies": .number(Double(1 + i % 3)),
+                            "shiny": .bool(card.serverId == featured || i % 5 == 0), "prestige": .bool(false),
+                            "masterpiece": .bool(i % 13 == 0), "stars": .number(Double(i % 4)), "hidden": .array([]),
+                            "frame": .null, "finish": .null, "title": .null])
+        }
+        return try decode(.object(["cards": .array(cards), "back": .string("classique"), "cover": .string("classique"),
+                                   "admin": .bool(false), "can_admin": .bool(false), "tokens": .number(1), "tickets": .number(3),
+                                   "neurones": .number(1_240), "cosmetics": .array([.string("couv.classique"), .string("dos.classique")]),
+                                   "gold_packs": .number(0), "gold_available": .bool(true), "forced_rarity": .null]))
+    }
+
+    /// Pass d'exemple : palier 9 sur 30, saison commencée il y a 12 jours.
+    func seasonOverview() async throws -> SeasonOverview {
+        var json: JSONValue = try fixture("season")
+        guard case .object(var dict) = json else { return try decode(json) }
+        let day = 86_400.0, format = ISO8601DateFormatter()
+        format.formatOptions = [.withFullDate]
+        dict["season"] = .object(["id": .number(1), "name": .string("Saison 1"),
+                                  "starts_on": .string(format.string(from: Date(timeIntervalSinceNow: -12 * day))),
+                                  "ends_on": .string(format.string(from: Date(timeIntervalSinceNow: 68 * day)))])
+        json = .object(dict)
+        return try decode(json)
+    }
 
     // MARK: Social
 

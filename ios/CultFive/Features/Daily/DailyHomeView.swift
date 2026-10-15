@@ -87,7 +87,7 @@ struct DailyHomeView: View {
         .task {
             await reload()
             #if DEBUG
-            if let screen = Demo.screen, [.question, .reveal, .result, .share].contains(screen) { showDaily = true }
+            if let screen = Demo.screen, [.question, .typed, .reveal, .result, .share].contains(screen) { showDaily = true }
             #endif
         }
     }

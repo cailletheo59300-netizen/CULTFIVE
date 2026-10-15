@@ -68,7 +68,7 @@ final class DemoPlayEngine: @unchecked Sendable {
     /// Champs de cote, comme public._rating_json.
     static func ratingFields(level: Double, answered: Int, threshold: Int = CoteCULT.placementAnswers) -> [String: JSONValue] {
         ["cote": .number(Double(CoteCULT.cote(level: level))), "answered": .number(Double(answered)),
-         "placement": .number(Double(min(5, answered * 5 / threshold))), "placed": .bool(answered >= threshold)]
+         "placement": .number(Double(min(2, answered * 2 / threshold))), "placed": .bool(answered >= threshold)]
     }
     func available(subdomain: String) -> Int { bank.filter { $0.question.subdomainId == subdomain }.count }
     func entry(_ id: UUID) -> Entry? { bank.first { $0.question.id == id } }

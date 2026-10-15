@@ -159,6 +159,8 @@ final class AppModel {
         case .play, .domain: phase = .main; tab = .play
         case .friends, .league: phase = .main; tab = .friends
         case .profile: phase = .main; tab = .profile
+        case .album, .card: phase = .main; tab = .album
+        case .pass: phase = .main; tab = .album; pendingPass = true
         default: phase = .main; tab = .daily
         }
     }

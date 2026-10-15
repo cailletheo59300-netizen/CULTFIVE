@@ -58,7 +58,12 @@ struct AlbumView: View {
             }
         }
         .environment(store)
-        .task { await store.refresh() }
+        .task {
+            await store.refresh()
+            #if DEBUG
+            if Demo.screen == .card { selected = Demo.featuredCard }
+            #endif
+        }
         .alert("Album", isPresented: Binding(get: { store.errorMessage != nil }, set: { if !$0 { store.errorMessage = nil } })) {
             Button("OK", role: .cancel) {}
         } message: {
