@@ -33,11 +33,6 @@ create or replace function public._has_pass(p_user uuid) returns bool language s
                  where sp.user_id = p_user and sp.revoked_at is null and sp.season_id = (public._season_current()).id)
 $$;
 
--- Saison à laquelle rattacher un achat : celle en cours, si le Pass+ y est en vente (pas de prévente).
-create or replace function public._pass_season() returns int language sql stable as $$
-  select s.id from public.seasons s where s.id = (public._season_current()).id and s.pass_plus
-$$;
-
 -- ─────────────────────────────────────────── Pistes gratuite et payante
 alter table public.season_rewards drop constraint season_rewards_kind_check;
 alter table public.season_rewards add constraint season_rewards_kind_check
@@ -342,7 +337,9 @@ begin
     return jsonb_build_object('season_id', sp.season_id, 'active', sp.revoked_at is null, 'recorded', false);
   end if;
   if not exists (select 1 from public.profiles where id = p_user) then raise exception 'user_not_found'; end if;
-  v_season := public._pass_season();
+  -- La saison de la date d'achat (un vieil achat restauré plus tard ne donne pas la saison suivante).
+  select s.id into v_season from public.seasons s
+  where s.pass_plus and (p_purchased_at at time zone 'UTC')::date >= s.starts_on and (p_purchased_at at time zone 'UTC')::date < s.ends_on;
   -- Achats de test (TestFlight, examen d'Apple) : acceptés hors période de vente, sur la saison en cours.
   if v_season is null and p_environment <> 'Production' then v_season := (public._season_current()).id; end if;
   if v_season is null then raise exception 'pass_not_on_sale'; end if;
@@ -444,7 +441,7 @@ begin
   for f in
     select p.oid::regprocedure as sig from pg_proc p
     where p.pronamespace = 'public'::regnamespace
-      and p.proname in ('_has_pass', '_pass_season', '_coffret_offers', '_give_coffret', '_season_give', '_season_claim_one')
+      and p.proname in ('_has_pass', '_coffret_offers', '_give_coffret', '_season_give', '_season_claim_one')
   loop
     execute format('revoke execute on function %s from public, anon, authenticated', f.sig);
     execute format('alter function %s set search_path = public, pg_temp', f.sig);

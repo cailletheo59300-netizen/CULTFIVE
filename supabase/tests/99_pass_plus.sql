@@ -120,6 +120,12 @@ begin
   perform tst.login(v);
   perform tst.ok(not (public.season_overview() -> 'pass_plus' ->> 'on_sale')::bool, 'pas en vente en saison 1');
   perform tst.ok((public.ad_status() ->> 'pass_plus')::bool, 'le testeur n''a plus de pub');
+  -- Un achat de la saison 2 restauré plus tard ne donne pas une autre saison.
+  perform tst.clock('2027-02-01 10:00:00+01');
+  r := public.pass_plus_record(v, 'tx-pass-4', 'tx-pass-4', 'p', 'Production', '2027-01-10 12:00:00+01');
+  perform tst.ok((r ->> 'season_id')::int = 2, 'saison de la date d''achat');
+  perform tst.throws(format('select public.pass_plus_record(%L, ''tx-pass-5'', ''tx-pass-5'', ''p'', ''Production'', %L)', v,
+                            '2026-12-01 12:00:00+01'), 'pass_not_on_sale');
 
   -- Droits : l'app ne peut ni enregistrer ni retirer un achat.
   perform tst.ok(not has_function_privilege('authenticated', 'public.pass_plus_record(uuid, text, text, text, text, timestamptz)', 'execute')
