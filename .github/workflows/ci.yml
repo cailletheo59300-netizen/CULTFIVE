@@ -83,3 +83,26 @@ jobs:
       - name: Journal de build
         if: failure()
         run: grep -E "error:" -A3 build.log | head -200
+
+  android:
+    name: App Android (build + tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Tests du module core (contrat partagé avec l'iPhone)
+        working-directory: android
+        run: ./gradlew --no-daemon :core:test
+      - name: Build de l'app (debug + release non signée)
+        working-directory: android
+        run: ./gradlew --no-daemon :app:assembleDebug :app:assembleRelease :app:lintDebug
+      - name: Rapports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-reports
+          path: android/**/build/reports/
