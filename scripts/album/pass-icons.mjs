@@ -15,7 +15,9 @@ await p.goto('file://' + resolve(here, '../icons/icons.html'));
 await p.waitForFunction(() => typeof window.renderIcons === 'function' && window.THREE);
 await p.addScriptTag({ path: join(here, 'dos.js') });
 await p.addScriptTag({ path: join(here, 'pass-icons.js') });
-await p.addStyleTag({ url: 'https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&display=swap' }).catch(() => console.warn('Nunito indisponible : police de secours'));
+// Nunito : Google Fonts, sinon la copie locale (scripts/app-store/fonts).
+await p.addStyleTag({ url: 'https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&display=swap' }).catch(() =>
+  p.addStyleTag({ content: `@font-face{font-family:Nunito;font-weight:200 1000;src:url(file://${resolve(here, '../app-store/fonts/nunito-latin.woff2')}) format('woff2');}` }));
 await p.evaluate(async () => { try { await document.fonts.load('900 100px Nunito'); } catch (e) {} await document.fonts.ready; });
 const only = process.argv[3];
 const icons = await p.evaluate((only) => window.renderPass(256, only), only);

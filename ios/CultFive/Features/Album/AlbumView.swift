@@ -187,6 +187,7 @@ struct AlbumCover: View {
         case "automne": return [Color(hex: 0xF08A3C), Color(hex: 0x8C3B12)]
         case "grimoire": return [Color(hex: 0x2F5D50), Color(hex: 0x13241F)]
         case "or": return [Color(hex: 0xE9C25E), Color(hex: 0x8A5A10)]
+        case "hiver": return [Color(hex: 0x4F8FD6), Color(hex: 0x16336B)]
         default: return [Color(hex: 0x7B5CFF), Color(hex: 0x3A1FB8)]
         }
     }

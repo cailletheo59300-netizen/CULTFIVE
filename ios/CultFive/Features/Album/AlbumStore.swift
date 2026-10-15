@@ -59,6 +59,8 @@ enum Cosmetic {
         Item(id: "nuit", name: "Nuit étoilée", icon: "cadre_nuit"),
         Item(id: "toile", name: "Toile d'araignée", icon: "cadre_toile"),
         Item(id: "marbre", name: "Marbre", icon: "cadre_marbre"),
+        Item(id: "flocons", name: "Flocons", icon: "cadre_flocons"),
+        Item(id: "aurore", name: "Aurore", icon: "cadre_aurore"),
     ]
     static let finishes = [
         Item(id: "givre", name: "Givre", icon: "finition_givre"),
@@ -71,6 +73,8 @@ enum Cosmetic {
         Item(id: "grand_curieux", name: "Grand curieux", icon: "titre_grand_curieux"),
         Item(id: "chasseur", name: "Chasseur de légendes", icon: "titre_chasseur"),
         Item(id: "musee", name: "Pièce de musée", icon: "titre_musee"),
+        Item(id: "polaire", name: "Esprit polaire", icon: "titre_polaire"),
+        Item(id: "flocon", name: "Flocon savant", icon: "titre_flocon"),
     ]
     static let backs = [
         Item(id: "classique", name: "Classique", icon: "classique"),
@@ -79,12 +83,15 @@ enum Cosmetic {
         Item(id: "domaines", name: "Les 12 domaines", icon: "dos_domaines"),
         Item(id: "or", name: "Feuille d'or", icon: "dos_or"),
         Item(id: "citrouille", name: "Citrouille", icon: "citrouille"),
+        Item(id: "hiver", name: "Nuit d'hiver", icon: "dos_hiver"),
+        Item(id: "aurore", name: "Aurore boréale", icon: "dos_aurore"),
     ]
     static let covers = [
         Item(id: "classique", name: "Brainlix", icon: "marque"),
         Item(id: "automne", name: "Automne", icon: "couv_automne"),
         Item(id: "grimoire", name: "Grimoire", icon: "couv_grimoire"),
         Item(id: "or", name: "Feuille d'or", icon: "couv_or"),
+        Item(id: "hiver", name: "Hiver", icon: "couv_hiver"),
     ]
 }
 

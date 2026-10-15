@@ -285,10 +285,44 @@ struct CardFrame: View {
                 WebCorners(width: width)
             case "anime":
                 AnimatedGoldFrame(width: width)
+            case "flocons":
+                shape.strokeBorder(LinearGradient(colors: [Color(hex: 0xE3F4FF), Color(hex: 0x7FC4F0), Color(hex: 0xE3F4FF)],
+                                                  startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: width * 0.04)
+                shape.strokeBorder(Color.white.opacity(0.9), lineWidth: width * 0.005).padding(width * 0.035)
+                Snowflakes(width: width)
+            case "aurore":
+                shape.strokeBorder(LinearGradient(colors: [Color(hex: 0x3DFFB0), Color(hex: 0x1098AD), Color(hex: 0xB66BFF)],
+                                                  startPoint: .top, endPoint: .bottom), lineWidth: width * 0.04)
+                    .shadow(color: Color(hex: 0x3DFFB0).opacity(0.6), radius: width * 0.03)
+                shape.strokeBorder(Color(hex: 0xE8FFF6).opacity(0.8), lineWidth: width * 0.005).padding(width * 0.035)
             default:
                 shape.strokeBorder(LinearGradient(colors: [Color(hex: 0xF4F1EA), Color(hex: 0xB9B4C4), Color(hex: 0xEDEAF2), Color(hex: 0x8D889B)],
                                                   startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: width * 0.04)
                 shape.strokeBorder(Color.white.opacity(0.8), lineWidth: width * 0.005).padding(width * 0.035)
+            }
+        }
+        .allowsHitTesting(false)
+    }
+}
+
+/// Petits flocons posés sur le cadre Flocons.
+private struct Snowflakes: View {
+    let width: CGFloat
+
+    var body: some View {
+        Canvas { context, size in
+            let spots: [(CGFloat, CGFloat, CGFloat)] = [(0.06, 0.08, 0.05), (0.94, 0.12, 0.04), (0.05, 0.55, 0.035), (0.95, 0.62, 0.045),
+                                                         (0.1, 0.93, 0.04), (0.9, 0.94, 0.05), (0.5, 0.02, 0.03), (0.5, 0.985, 0.03)]
+            for (x, y, r) in spots {
+                let center = CGPoint(x: x * size.width, y: y * size.height)
+                let radius = r * size.width
+                var path = Path()
+                for k in 0..<6 {
+                    let angle = CGFloat(k) / 6 * 2 * .pi
+                    path.move(to: center)
+                    path.addLine(to: CGPoint(x: center.x + cos(angle) * radius, y: center.y + sin(angle) * radius))
+                }
+                context.stroke(path, with: .color(.white), style: StrokeStyle(lineWidth: max(width * 0.006, 1), lineCap: .round))
             }
         }
         .allowsHitTesting(false)

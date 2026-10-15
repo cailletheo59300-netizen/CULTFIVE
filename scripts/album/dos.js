@@ -14,7 +14,9 @@ const DOS={
  nuit:{name:'Nuit étoilée',src:'Pass gratuit · palier 30'},
  domaines:{name:'Les 12 domaines',src:'Pass payant · palier 5'},
  or:{name:'Feuille d\'or',src:'Pass payant · palier 40'},
- citrouille:{name:'Citrouille',src:'Événement d\'Halloween'}};
+ citrouille:{name:'Citrouille',src:'Événement d\'Halloween'},
+ hiver:{name:'Nuit d\'hiver',src:'Saison 2 · pass gratuit · palier 10'},
+ aurore:{name:'Aurore boréale',src:'Saison 2 · pass gratuit · palier 30'}};
 function cardBack(kind){const id='dos'+(++DOSN);kind=DOS[kind]?kind:'classique';
   const frame=(c1,c2)=>`<rect x="1" y="1" width="98" height="138" rx="9" fill="url(#${id}g)"/><linearGradient id="${id}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient>`;
   const border=(c,o=.55)=>`<rect x="5" y="5" width="90" height="130" rx="6.5" fill="none" stroke="${c}" stroke-width="1.2" opacity="${o}"/>`;
@@ -28,6 +30,22 @@ function cardBack(kind){const id='dos'+(++DOSN);kind=DOS[kind]?kind:'classique';
   if(kind==='or')b=frame('#FFF1C2','#B8862A')+`<path d="M0,0 L40,0 L-30,140 L-70,140 Z" fill="#fff" opacity=".25"/>`+[...Array(8)].map((_,i)=>`<circle cx="50" cy="64" r="${10+i*6}" fill="none" stroke="#7A4A08" stroke-width=".5" opacity=".35"/>`).join('')+border('#7A4A08',.6)+`<circle cx="50" cy="64" r="22" fill="#F6D98A" stroke="#7A4A08" stroke-width="1.4"/>`+tally(50,64,22,'#7A4A08','#3A2408',2.7)+wordmark(50,113,8.4,'#5A3408');
   if(kind==='citrouille'){const bat=(x,y,s)=>`<path transform="translate(${x} ${y}) scale(${s})" d="M0,0 C-2,-3 -5,-3 -7,-1 C-9,-4 -13,-4 -15,0 C-12,0 -10,2 -10,4 C-8,2 -5,3 -4,5 C-3,3 -1,3 0,5 C1,3 3,3 4,5 C5,3 8,2 10,4 C10,2 12,0 15,0 C13,-4 9,-4 7,-1 C5,-3 2,-3 0,0 Z" fill="#2B1636"/>`;
     b=frame('#FF9A3C','#B8460A')+border('#2B1636',.5)+bat(22,22,.8)+bat(80,30,.6)+bat(72,118,.7)+`<path d="M50,44 C36,42 26,52 26,64 C26,78 36,86 50,85 C64,86 74,78 74,64 C74,52 64,42 50,44 Z" fill="#F76707" stroke="#2B1636" stroke-width="1.4"/>`+`<path d="M49,44 C49,39 51,37 54,36" fill="none" stroke="#2F7D55" stroke-width="2.4" stroke-linecap="round"/>`+tally(50,66,16,'#2B1636','#FFD23F',2.4)+wordmark(50,113,8.4,'#2B1636');}
+  /* flocon à 6 branches, centré en (x,y), rayon r */
+  const flake=(x,y,r,col,o=1,w=.6)=>{let f='';for(let i=0;i<6;i++){const a=i/6*Math.PI*2,c=Math.cos(a),sn=Math.sin(a);
+    f+=`<line x1="${x}" y1="${y}" x2="${(x+r*c).toFixed(1)}" y2="${(y+r*sn).toFixed(1)}"/>`;
+    const bx=x+r*.55*c,by=y+r*.55*sn;[a+.7,a-.7].forEach(b=>{f+=`<line x1="${bx.toFixed(1)}" y1="${by.toFixed(1)}" x2="${(bx+r*.3*Math.cos(b)).toFixed(1)}" y2="${(by+r*.3*Math.sin(b)).toFixed(1)}"/>`;});}
+    return `<g stroke="${col}" stroke-width="${w}" stroke-linecap="round" opacity="${o}">${f}</g>`;};
+  if(kind==='hiver'){let r=11,fl='';for(let i=0;i<22;i++){r=(r*9301+49297)%233280;const x=8+r/233280*84;r=(r*9301+49297)%233280;const y=8+r/233280*124;
+      if(Math.hypot(x-50,y-64)<30)continue;fl+=flake(+x.toFixed(1),+y.toFixed(1),1.6+(r%4)*.8,'#fff',.55+(r%3)*.12,.5);}
+    b=frame('#2B6CB0','#0B1F4A')+fl+border('#BFE6FF',.6)+`<path d="M1,118 C20,110 34,114 50,110 C66,106 80,112 99,106 L99,139 L1,139 Z" fill="#E3F4FF" opacity=".9"/>`
+      +`<circle cx="50" cy="64" r="23" fill="#0B1F4A" stroke="#BFE6FF" stroke-width="1.4"/>`+flake(50,64,19,'#BFE6FF',.25,1.2)+tally(50,64,22,'#fff','#7FD3FF',2.7)+wordmark(50,128,8.4,'#2B6CB0');}
+  if(kind==='aurore'){let r=5,st='';for(let i=0;i<40;i++){r=(r*9301+49297)%233280;const x=4+r/233280*92;r=(r*9301+49297)%233280;const y=4+r/233280*80;st+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(.35+(r%3)*.3).toFixed(2)}" fill="#fff" opacity=".8"/>`;}
+    const band=(d,c1,c2,o)=>`<linearGradient id="${id}${c1.slice(1)}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c1}" stop-opacity="0"/><stop offset=".55" stop-color="${c1}" stop-opacity="${o}"/><stop offset="1" stop-color="${c2}" stop-opacity="0"/></linearGradient><path d="${d}" fill="url(#${id}${c1.slice(1)})"/>`;
+    b=frame('#0B1A2E','#04060F')+st
+      +band('M-5,30 C20,18 35,52 55,34 C72,20 86,40 105,26 L105,70 C86,82 70,62 52,78 C34,92 18,64 -5,76 Z','#3DFFB0','#1098AD',.75)
+      +band('M-5,48 C18,40 40,66 60,52 C78,40 90,58 105,50 L105,84 C90,92 76,76 58,88 C40,100 20,80 -5,90 Z','#B66BFF','#5F3DC4',.55)
+      +border('#7DFFD0',.5)+`<path d="M1,112 L18,98 L30,108 L46,92 L62,108 L76,96 L99,114 L99,139 L1,139 Z" fill="#050913"/>`
+      +`<circle cx="50" cy="64" r="22" fill="#04060F" stroke="#7DFFD0" stroke-width="1.4" opacity=".9"/>`+tally(50,64,22,'#E8FFF6','#3DFFB0',2.7)+wordmark(50,127,8.4,'#7DFFD0');}
   return `<svg viewBox="0 0 100 140" aria-hidden="true">${b}</svg>`;}
 /* emblème rond (couverture d'album) */
 function emblem(size){return `<svg viewBox="0 0 120 120" width="${size}" aria-hidden="true"><defs><linearGradient id="emb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${BX.violet}"/><stop offset="1" stop-color="${BX.violet2}"/></linearGradient></defs>
