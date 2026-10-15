@@ -1,6 +1,6 @@
 # État d'implémentation
 
-_Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur de la 1.1 en production jusqu'à 0054, build TestFlight 45 — voir ci-dessous)_
+_Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en production jusqu'à 0055, build 46 sur l'App Store — voir ci-dessous)_
 
 ## Lire d'abord
 `README.md` → ce fichier → `ARCHITECTURE.md` → `DECISIONS.md`. Détails au besoin : `ADAPTIVE.md`, `DATABASE.md`, `DESIGN_SYSTEM.md`, `QUESTIONS.md`, `KNOWN_ISSUES.md`.
