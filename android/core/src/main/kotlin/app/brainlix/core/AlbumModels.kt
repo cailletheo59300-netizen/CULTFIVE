@@ -22,6 +22,14 @@ data class AlbumOverview(
     val cosmetics: List<String>,
     val cards: List<Card>,
 ) {
+    companion object {
+        /// Album vide (démo, service indisponible). Les clés restent obligatoires au décodage, comme sur iPhone.
+        val EMPTY = AlbumOverview(
+            admin = false, canAdmin = false, neurones = 0, tickets = 0, tokens = 0, goldPacks = 0, goldAvailable = true,
+            back = "classique", cover = "classique", cosmetics = emptyList(), cards = emptyList(),
+        )
+    }
+
     @Serializable
     data class Card(
         val id: String,
