@@ -94,6 +94,8 @@ Questionnaire (réponses) :
 
 ## 4. Rappels
 
+- **Lien à partager** (bio TikTok, Instagram…) : `brainlix.site/app`, redirection vers la fiche App Store (`https://apps.apple.com/fr/app/id6817053673`) définie dans `site/vercel.json`.
+
 - **Chiffrement** : `ITSAppUsesNonExemptEncryption = NO` (déjà dans l'app).
 - **Site de l'éditeur** sur la fiche App Store : https://brainlix.site (nécessaire pour que AdMob valide `app-ads.txt`).
 - Après publication : relier l'app dans AdMob (Applications → Brainlix → « Associer à une plate-forme »), pour lever l'« Examen requis ».
