@@ -135,7 +135,7 @@ Questionnaire (réponses) :
 
 ## 7. Version 1.2 : le Pass+ (D-057)
 
-Le Pass+ (3,99 €, une saison) = **plus aucune pub** pendant la saison + **la piste Pass+ du pass**. Il est en vente à partir de la saison 2 (3 janvier 2027). Dans TestFlight et pendant l'examen d'Apple, il s'achète en Sandbox à tout moment (sans rien payer).
+Le Pass+ (3,99 €, une saison) = **plus aucune pub** pendant la saison + **la piste Pass+ du pass**. Un Pass+ par saison : celui de la **saison 1** est en vente dès la sortie de la 1.2 (jusqu'au 3 janvier) ; celui de la saison 2 ouvrira avec sa piste d'hiver (migration de décembre). Dans TestFlight et pendant l'examen d'Apple, il s'achète en Sandbox à tout moment (sans rien payer).
 
 ### À faire dans App Store Connect (propriétaire, une seule fois)
 1. **Accords, taxes et banque** → accepter l'accord **« Apps payantes »**, puis remplir le compte bancaire et le formulaire fiscal (W-8BEN pour un particulier en France).
@@ -152,9 +152,8 @@ Le Pass+ (3,99 €, une saison) = **plus aucune pub** pendant la saison + **la p
 7. Joindre l'achat intégré à la version 1.2 (case « Achats intégrés » de la page de la version) au moment de l'envoi.
 
 ### Nouveautés de la 1.2 (à coller)
-> - Nouveau : le Pass+ ! Plus aucune pub pendant toute la saison, et toute la piste Pass+ du pass (jetons Prestige, coffrets de catégorie, cadres, dos de cartes, cadre animé…).
+> - Nouveau : le Pass+ de la saison 1 ! Plus aucune pub pendant toute la saison, et toute la piste Pass+ du pass (jetons Prestige, coffrets de catégorie, cadres, dos de cartes, cadre animé…). Déjà avancé ? Tu récupères d'un coup les paliers atteints.
 > - Avec le Pass+, les bonus se prennent sans vidéo : pochette gratuite, neurones doublés, coffre offert, « Corrige tes erreurs », série sauvée.
-> - La saison 2 arrive le 3 janvier : un pass d'hiver tout neuf, avec ses cadres, dos de cartes et autocollants.
 > - Coffrets de catégorie : choisis ton domaine et vois les cartes avant d'ouvrir.
 
 ### Notes pour Apple (en plus de la section 3)

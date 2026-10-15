@@ -8,13 +8,15 @@ declare
   v_pts int; v_tickets int; v_tokens int;
   v_coffret uuid; v_domain text; v_cards text[];
 begin
-  perform tst.clock('2027-02-10 10:00:00+01');
+  -- Saison 1 aux dates de la production (15 octobre 2026 → 3 janvier 2027).
+  update public.seasons set starts_on = '2026-10-15', ends_on = '2027-01-03' where id = 1;
+  perform tst.clock('2026-11-25 10:00:00+01');
   perform tst.login(u);
   update public.profiles set created_at = public._now() - interval '10 days' where id = u;
 
-  -- Saison 2 : en vente, piste payante visible mais verrouillée.
+  -- Saison 1 : en vente, piste payante visible mais verrouillée.
   o := public.season_overview();
-  perform tst.ok(o -> 'season' ->> 'name' = 'Saison 2', 'saison 2 en cours');
+  perform tst.ok(o -> 'season' ->> 'name' = 'Saison 1', 'saison 1 en cours');
   perform tst.ok((o -> 'pass_plus' ->> 'on_sale')::bool and not (o -> 'pass_plus' ->> 'active')::bool, 'Pass+ en vente, pas actif');
   perform tst.ok(jsonb_array_length(o -> 'rewards') = 30 and jsonb_array_length(o -> 'pass_plus' -> 'rewards') = 30, '30 + 30 paliers');
   perform tst.ok(o -> 'pass_plus' -> 'rewards' -> 0 ->> 'kind' = 'perk', 'palier 1 : plus de pub');
@@ -26,22 +28,22 @@ begin
   -- Des points : toute la saison de défis du jour.
   insert into public.user_quests (user_id, period, period_start, slot, metric, target, label, xp, seeds, completed_at)
   select u, 'day', d::date, s, 'answers', 1, 'x', 0, 0, public._now()
-  from generate_series('2027-01-03'::date, '2027-02-10'::date, interval '1 day') d, generate_series(1, 3) s;
+  from generate_series('2026-10-15'::date, '2026-11-25'::date, interval '1 day') d, generate_series(1, 3) s;
   insert into public.user_quests (user_id, period, period_start, slot, metric, target, label, xp, seeds, completed_at)
   select u, 'week', d::date, s, 'answers', 1, 'y', 0, 0, public._now()
-  from generate_series('2027-01-04'::date, '2027-02-08'::date, interval '7 days') d, generate_series(1, 3) s;
+  from generate_series('2026-10-26'::date, '2026-11-23'::date, interval '7 days') d, generate_series(1, 3) s;
   v_pts := (public.season_overview() ->> 'points')::int;
   perform tst.ok(v_pts between 18 * 150 and 24 * 150 - 1, format('entre 18 et 23 paliers (%s points)', v_pts));
   perform tst.throws('select public.season_claim(2, ''paid'')', 'pass_required');
   perform tst.throws('select public.season_claim_all(''paid'')', 'pass_required');
   -- L'ancienne app (un seul argument) récupère toujours la piste gratuite.
   perform public.season_claim(1);
-  perform tst.ok(exists (select 1 from public.season_claims where user_id = u and season_id = 2 and track = 'free' and tier = 1),
+  perform tst.ok(exists (select 1 from public.season_claims where user_id = u and season_id = 1 and track = 'free' and tier = 1),
                  'piste gratuite comme avant');
 
   -- Achat (clé de service), idempotent.
   r := public.pass_plus_record(u, 'tx-pass-1', 'tx-pass-1', 'app.brainlix.passplus', 'Production', public._now());
-  perform tst.ok((r ->> 'season_id')::int = 2 and (r ->> 'recorded')::bool, 'achat enregistré sur la saison 2');
+  perform tst.ok((r ->> 'season_id')::int = 1 and (r ->> 'recorded')::bool, 'achat enregistré sur la saison 1');
   r := public.pass_plus_record(u, 'tx-pass-1', 'tx-pass-1', 'app.brainlix.passplus', 'Production', public._now());
   perform tst.ok(not (r ->> 'recorded')::bool, 'achat renvoyé : une seule fois');
   perform tst.throws(format('select public.pass_plus_record(%L, ''tx-pass-1'', ''tx-pass-1'', ''p'', ''Production'', now())', v),
@@ -54,14 +56,14 @@ begin
   select tickets, tokens into v_tickets, v_tokens from public.user_album where user_id = u;
   r := public.season_claim_all('paid');
   perform tst.ok(jsonb_array_length(r -> 'claimed') = least(v_pts / 150, 30), format('rattrapage (%s paliers)', jsonb_array_length(r -> 'claimed')));
-  perform tst.ok((select tokens from public.user_album where user_id = u) = v_tokens + 2, 'jetons des paliers 5 et 15');
+  perform tst.ok((select tokens from public.user_album where user_id = u) = v_tokens + 2, 'jetons des paliers 6 et 15');
   perform tst.ok((select count(*) from public.user_coffrets where user_id = u and opened_at is null) = 2, 'coffrets des paliers 7 et 18');
   -- Un autre joueur Pass+ reçoit aussi les siens (clé propre à chaque joueur).
   perform public.pass_plus_record(v, 'tx-pass-v', 'tx-pass-v', 'app.brainlix.passplus', 'Production', public._now());
   perform tst.login(v);
   insert into public.user_quests (user_id, period, period_start, slot, metric, target, label, xp, seeds, completed_at)
   select v, 'day', d::date, s, 'answers', 1, 'x', 0, 0, public._now()
-  from generate_series('2027-01-03'::date, '2027-01-25'::date, interval '1 day') d, generate_series(1, 3) s;
+  from generate_series('2026-10-15'::date, '2026-11-08'::date, interval '1 day') d, generate_series(1, 3) s;
   perform public.season_claim_all('paid');
   perform tst.ok((select count(*) from public.user_coffrets where user_id = v) = 1, 'coffret du palier 7 pour un 2e joueur');
   perform public.pass_plus_revoke('tx-pass-v');
@@ -120,22 +122,20 @@ begin
   perform tst.tick('1 day');
   perform tst.throws('select public.ad_claim(''free_chest'', null)', 'ad_pending');  -- de nouveau une vraie pub à regarder
 
-  -- Hors période de vente (saison 1) : refusé en production, accepté pour un achat de test (TestFlight, examen d'Apple).
-  perform tst.clock('2026-11-20 10:00:00+01');
-  update public.seasons set starts_on = '2026-10-15', ends_on = '2027-01-03' where id = 1;
-  perform tst.throws(format('select public.pass_plus_record(%L, ''tx-pass-2'', ''tx-pass-2'', ''p'', ''Production'', now())', v),
+  -- Saison 2 (sa piste Pass+ viendra en décembre) : pas en vente ; refusé en production, accepté pour un achat de test
+  -- (TestFlight, examen d'Apple).
+  perform tst.clock('2027-02-01 10:00:00+01');
+  perform tst.throws(format('select public.pass_plus_record(%L, ''tx-pass-2'', ''tx-pass-2'', ''p'', ''Production'', public._now())', v),
                      'pass_not_on_sale');
   r := public.pass_plus_record(v, 'tx-pass-3', 'tx-pass-3', 'p', 'Sandbox', public._now());
-  perform tst.ok((r ->> 'season_id')::int = 1, 'achat de test accepté sur la saison 1');
+  perform tst.ok((r ->> 'season_id')::int = 2, 'achat de test accepté sur la saison 2');
   perform tst.login(v);
-  perform tst.ok(not (public.season_overview() -> 'pass_plus' ->> 'on_sale')::bool, 'pas en vente en saison 1');
+  perform tst.ok(not (public.season_overview() -> 'pass_plus' ->> 'on_sale')::bool, 'pas en vente en saison 2 pour l''instant');
+  perform tst.ok(jsonb_array_length(public.season_overview() -> 'pass_plus' -> 'rewards') = 0, 'pas encore de piste Pass+ d''hiver');
   perform tst.ok((public.ad_status() ->> 'pass_plus')::bool, 'le testeur n''a plus de pub');
-  -- Un achat de la saison 2 restauré plus tard ne donne pas une autre saison.
-  perform tst.clock('2027-02-01 10:00:00+01');
-  r := public.pass_plus_record(v, 'tx-pass-4', 'tx-pass-4', 'p', 'Production', '2027-01-10 12:00:00+01');
-  perform tst.ok((r ->> 'season_id')::int = 2, 'saison de la date d''achat');
-  perform tst.throws(format('select public.pass_plus_record(%L, ''tx-pass-5'', ''tx-pass-5'', ''p'', ''Production'', %L)', v,
-                            '2026-12-01 12:00:00+01'), 'pass_not_on_sale');
+  -- Un achat de la saison 1 restauré plus tard ne donne pas la saison 2.
+  r := public.pass_plus_record(v, 'tx-pass-4', 'tx-pass-4', 'p', 'Production', '2026-12-10 12:00:00+01');
+  perform tst.ok((r ->> 'season_id')::int = 1, 'saison de la date d''achat');
 
   -- Droits : l'app ne peut ni enregistrer ni retirer un achat.
   perform tst.ok(not has_function_privilege('authenticated', 'public.pass_plus_record(uuid, text, text, text, text, timestamptz)', 'execute')

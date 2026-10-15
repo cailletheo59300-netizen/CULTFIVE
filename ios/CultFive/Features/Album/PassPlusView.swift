@@ -153,7 +153,7 @@ struct PassPlusView: View {
                 .buttonStyle(.sun)
                 .disabled(passPlus.purchasing)
             } else {
-                Text("Le Pass+ arrive avec la saison 2, le 3 janvier.")
+                Text("Le Pass+ n'est pas encore en vente pour cette saison.")
                     .font(.cfHeadline)
                     .foregroundStyle(Color.inkSoft)
                     .multilineTextAlignment(.center)

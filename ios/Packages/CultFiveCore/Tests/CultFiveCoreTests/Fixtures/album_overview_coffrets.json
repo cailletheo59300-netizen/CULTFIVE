@@ -7,67 +7,67 @@
   "tickets": 3,
   "coffrets": [
     {
-      "id": "61fc806b-6bb2-4419-8557-e144c5cf601f",
+      "id": "24f0bd9e-9025-4747-a753-4494ae5d889f",
       "offers": {
         "arts": [
-          "arts.painting.la_sculpture",
-          "arts.literature.des_epopees_a_shakespeare",
-          "arts.mythology.les_dieux_d_egypte"
+          "arts.mythology.les_creatures_fabuleuses",
+          "arts.mythology.les_dieux_d_egypte",
+          "arts.literature.moliere_et_le_theatre"
         ],
         "calc": [
-          "calc.conversions.le_prix_au_kilo",
-          "calc.fractions.additionner_et_comparer",
+          "calc.conversions.masses_et_volumes",
+          "calc.number_logic.les_regles_du_calcul",
           "calc.conversions.vitesse_et_trajets"
         ],
         "tech": [
-          "tech.computing.la_securite",
-          "tech.brands.boire_et_manger",
-          "tech.computing.l_intelligence_artificielle"
+          "tech.brands.mode_et_sport",
+          "tech.inventions.la_mer_et_l_espace",
+          "tech.brands.les_jeux_video"
         ],
         "logic": [
-          "logic.puzzles.compter_les_formes",
-          "logic.puzzles.calendriers",
-          "logic.puzzles.les_allumettes"
+          "logic.reasoning.les_jours_et_le_calendrier",
+          "logic.sequences.carres_et_cubes",
+          "logic.puzzles.peser_et_mesurer"
         ],
         "music": [
-          "music.instruments.les_percussions",
-          "music.popular.la_nouvelle_scene_francaise",
-          "music.classical.de_ravel_a_star_wars"
+          "music.classical.l_orchestre",
+          "music.popular.electro_et_hip_hop",
+          "music.instruments.les_bois"
         ],
         "sport": [
-          "sport.rules.hand_volley_et_sports_de_raquette",
-          "sport.rules.le_golf",
-          "sport.champions.nageurs_et_gymnastes"
+          "sport.rules.les_sports_d_ailleurs",
+          "sport.champions.nageurs_et_gymnastes",
+          "sport.rules.le_tennis"
         ],
         "cinema": [
-          "cinema.directors.les_grands_realisateurs_americains",
-          "cinema.actors.pirates_des_caraibes",
-          "cinema.films.star_wars"
+          "cinema.actors.les_films_a_oscars",
+          "cinema.films.les_blockbusters",
+          "cinema.directors.alfred_hitchcock"
         ],
         "french": [
-          "french.spelling.les_pluriels",
-          "french.expressions.le_ciel_et_la_terre",
-          "french.spelling.accents_et_ponctuation"
+          "french.expressions.les_expressions_d_autrefois",
+          "french.spelling.accents_et_ponctuation",
+          "french.expressions.le_ciel_et_la_terre"
         ],
         "nature": [
-          "nature.earth.vents_et_tempetes",
-          "nature.plants.les_fleurs",
-          "nature.earth.le_climat"
+          "nature.plants.comment_vit_une_plante",
+          "nature.animals.les_animaux_d_australie",
+          "nature.earth.les_saisons"
         ],
         "history": [
-          "history.modern.les_reperes_des_temps_modernes",
-          "history.contemporary.la_resistance",
+          "history.modern.richelieu_et_la_fronde",
+          "history.modern.les_lumieres",
           "history.middle_ages.byzance_l_islam_et_les_ottomans"
         ],
         "science": [
-          "science.biology.l_heredite",
-          "science.space.la_terre",
-          "science.biology.la_cellule"
+          "science.biology.la_photosynthese",
+          "science.space.jupiter",
+          "science.biology.les_microbes"
         ],
         "geography": [
-          "geography.relief.paysages_de_france",
-          "geography.countries.asie_centrale_et_du_sud",
-          "geography.relief.mers_et_ocans"
+          "geography.monuments.parcs_et_merveilles_naturelles",
+          "geography.capitals.capitales_d_oceanie",
+          "geography.countries.moyen_orient"
         ]
       }
     }
@@ -75,7 +75,7 @@
   "neurones": 0,
   "can_admin": false,
   "cosmetics": [
-    "autoc.flocon",
+    "autoc.chauve",
     "autoc.fondateur",
     "cadre.nuit",
     "cadre.vitrail",

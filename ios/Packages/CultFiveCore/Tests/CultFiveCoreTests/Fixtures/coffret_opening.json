@@ -1,20 +1,20 @@
 {
-  "id": "61fc806b-6bb2-4419-8557-e144c5cf601f",
+  "id": "24f0bd9e-9025-4747-a753-4494ae5d889f",
   "gold": false,
   "pulls": [
     {
-      "card": "arts.painting.la_sculpture",
+      "card": "arts.mythology.les_creatures_fabuleuses",
       "rarity": "common",
-      "outcome": "new"
-    },
-    {
-      "card": "arts.literature.des_epopees_a_shakespeare",
-      "rarity": "rare",
       "outcome": "new"
     },
     {
       "card": "arts.mythology.les_dieux_d_egypte",
       "rarity": "rare",
+      "outcome": "new"
+    },
+    {
+      "card": "arts.literature.moliere_et_le_theatre",
+      "rarity": "epic",
       "outcome": "new"
     }
   ],

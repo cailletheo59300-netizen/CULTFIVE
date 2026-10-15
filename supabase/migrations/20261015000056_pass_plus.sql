@@ -358,17 +358,62 @@ begin
   return jsonb_build_object('revoked', found);
 end $$;
 
--- ─────────────────────────────────────────── Saison 2 : hiver (3 janvier → 28 mars 2027), première avec le Pass+
+-- ─────────────────────────────────────────── Saison 1 : le Pass+ annoncé devient réel (en vente jusqu'au 3 janvier)
+-- La liste affichée dans l'app depuis la 1.1, avec « Plus de pub » au palier 1 (les « Onglets d'album » sont retirés).
+insert into public.album_cosmetics (id, name) values
+  ('autoc.fondateur', 'Autocollant « Fondateur »'), ('titrej.savant', 'Titre « Savant »'), ('titrej.legende', 'Titre « Légende vivante »'),
+  ('autoc.chauve', 'Autocollant « Chauve-souris »'), ('deco.marque', 'Marque-page d''album'),
+  ('autoc.flamme', 'Autocollant animé « Flamme »'), ('deco.vitrine', 'Vitrine lumineuse')
+on conflict (id) do nothing;
+
+update public.seasons set pass_plus = true where id = 1;
+
+insert into public.season_rewards (season_id, track, tier, kind, item, qty, label, icon) values
+  (1, 'paid', 1, 'perk', null, 1, 'Plus de pub toute la saison', 'sans_pub'),
+  (1, 'paid', 2, 'cosmetic', 'dos.domaines', 1, 'Dos « Les 12 domaines »', 'dos_domaines'),
+  (1, 'paid', 3, 'cosmetic', 'autoc.fondateur', 1, 'Autocollant « Fondateur »', 'autoc_fondateur'),
+  (1, 'paid', 4, 'cosmetic', 'titre.grand_curieux', 1, 'Titre « Grand curieux »', 'titre_grand_curieux'),
+  (1, 'paid', 5, 'cosmetic', 'cadre.vitrail', 1, 'Cadre Vitrail', 'cadre_vitrail'),
+  (1, 'paid', 6, 'token', null, 1, 'Jeton Prestige n° 1', 'jeton'),
+  (1, 'paid', 7, 'coffret', null, 1, 'Coffret de catégorie n° 1', 'coffret'),
+  (1, 'paid', 8, 'cosmetic', 'finition.givre', 1, 'Finition Givre', 'finition_givre'),
+  (1, 'paid', 9, 'cosmetic', 'titrej.savant', 1, 'Titre « Savant »', 'titrej_savant'),
+  (1, 'paid', 10, 'cosmetic', 'cadre.nuit', 1, 'Cadre Nuit étoilée', 'cadre_nuit'),
+  (1, 'paid', 11, 'cosmetic', 'socle.or', 1, 'Socle Or', 'socle_or'),
+  (1, 'paid', 12, 'cosmetic', 'autoc.chauve', 1, 'Autocollant « Chauve-souris »', 'autoc_chauve'),
+  (1, 'paid', 13, 'cosmetic', 'couv.grimoire', 1, 'Couverture « Grimoire »', 'couv_grimoire'),
+  (1, 'paid', 14, 'cosmetic', 'titre.chasseur', 1, 'Titre « Chasseur de légendes »', 'titre_chasseur'),
+  (1, 'paid', 15, 'token', null, 1, 'Jeton Prestige n° 2', 'jeton'),
+  (1, 'paid', 16, 'cosmetic', 'finition.or', 1, 'Finition Poussière d''or', 'finition_or'),
+  (1, 'paid', 17, 'cosmetic', 'cadre.toile', 1, 'Cadre « Toile d''araignée »', 'cadre_toile'),
+  (1, 'paid', 18, 'coffret', null, 1, 'Coffret de catégorie n° 2', 'coffret'),
+  (1, 'paid', 19, 'cosmetic', 'socle.neon', 1, 'Socle Néon', 'socle_neon'),
+  (1, 'paid', 20, 'cosmetic', 'titrej.legende', 1, 'Titre « Légende vivante »', 'titrej_legende'),
+  (1, 'paid', 21, 'cosmetic', 'cadre.marbre', 1, 'Cadre Marbre', 'cadre_marbre'),
+  (1, 'paid', 22, 'cosmetic', 'deco.marque', 1, 'Marque-page d''album', 'marque'),
+  (1, 'paid', 23, 'cosmetic', 'autoc.flamme', 1, 'Autocollant animé « Flamme »', 'flamme'),
+  (1, 'paid', 24, 'cosmetic', 'finition.holo', 1, 'Finition Holographique', 'finition_holo'),
+  (1, 'paid', 25, 'token', null, 1, 'Jeton Prestige n° 3', 'jeton'),
+  (1, 'paid', 26, 'coffret', null, 1, 'Coffret de catégorie n° 3', 'coffret'),
+  (1, 'paid', 27, 'cosmetic', 'titre.musee', 1, 'Titre « Pièce de musée »', 'titre_musee'),
+  (1, 'paid', 28, 'cosmetic', 'couv.or', 1, 'Couverture « Feuille d''or »', 'couv_or'),
+  (1, 'paid', 29, 'cosmetic', 'deco.vitrine', 1, 'Vitrine lumineuse', 'vitrine'),
+  (1, 'paid', 30, 'cosmetic', 'dos.or,cadre.anime', 1, 'Dos Feuille d''or + cadre animé', 'final_payant')
+on conflict do nothing;
+
+-- ─────────────────────────────────────────── Saison 2 : hiver (3 janvier → 28 mars 2027)
+-- Piste gratuite seulement pour l'instant. Sa piste Pass+ (objets d'hiver tout neufs) viendra dans une migration de
+-- décembre, qui ouvrira aussi la vente (pass_plus = true).
 insert into public.album_cosmetics (id, name) values
   ('autoc.s2', 'Autocollant « Saison 2 »'), ('titre.polaire', 'Titre « Esprit polaire »'), ('cadre.flocons', 'Cadre Flocons'),
   ('dos.hiver', 'Dos « Nuit d''hiver »'), ('titrej.givre', 'Titre « Givré du savoir »'), ('socle.glace', 'Socle Glace'),
   ('autoc.bonhomme', 'Autocollant « Bonhomme de neige »'), ('titre.flocon', 'Titre « Flocon savant »'),
   ('titrej.banquise', 'Titre « Explorateur polaire »'), ('couv.hiver', 'Couverture « Hiver »'), ('dos.aurore', 'Dos Aurore boréale'),
-  ('autoc.fondateur', 'Autocollant « Fondateur »'), ('titrej.savant', 'Titre « Savant »'), ('autoc.flocon', 'Autocollant « Flocon »'),
-  ('cadre.aurore', 'Cadre Aurore'), ('titrej.legende', 'Titre « Légende vivante »'), ('autoc.yeti', 'Autocollant « Yéti »')
+  -- Déjà dessinés pour la future piste Pass+ d'hiver.
+  ('autoc.flocon', 'Autocollant « Flocon »'), ('cadre.aurore', 'Cadre Aurore'), ('autoc.yeti', 'Autocollant « Yéti »')
 on conflict (id) do nothing;
 
-insert into public.seasons (id, name, starts_on, ends_on, pass_plus) values (2, 'Saison 2', '2027-01-03', '2027-03-28', true)
+insert into public.seasons (id, name, starts_on, ends_on, pass_plus) values (2, 'Saison 2', '2027-01-03', '2027-03-28', false)
 on conflict (id) do nothing;
 
 insert into public.season_rewards (season_id, track, tier, kind, item, qty, label, icon) values
@@ -401,38 +446,7 @@ insert into public.season_rewards (season_id, track, tier, kind, item, qty, labe
   (2, 'free', 27, 'chest', 'gold', 1, 'Coffre en or', 'chest_gold'),
   (2, 'free', 28, 'cosmetic', 'couv.hiver', 1, 'Couverture « Hiver »', 'couv_hiver'),
   (2, 'free', 29, 'chest', 'gold', 2, 'Deux coffres en or', 'chest_savant'),
-  (2, 'free', 30, 'final', 'dos.aurore', 1, 'Dos Aurore boréale + pochette dorée', 'final_gratuit_s2'),
-
-  (2, 'paid', 1, 'perk', null, 1, 'Plus de pub toute la saison', 'sans_pub'),
-  (2, 'paid', 2, 'cosmetic', 'dos.domaines', 1, 'Dos « Les 12 domaines »', 'dos_domaines'),
-  (2, 'paid', 3, 'cosmetic', 'autoc.fondateur', 1, 'Autocollant « Fondateur »', 'autoc_fondateur'),
-  (2, 'paid', 4, 'cosmetic', 'titre.grand_curieux', 1, 'Titre « Grand curieux »', 'titre_grand_curieux'),
-  (2, 'paid', 5, 'token', null, 1, 'Jeton Prestige', 'jeton'),
-  (2, 'paid', 6, 'cosmetic', 'cadre.vitrail', 1, 'Cadre Vitrail', 'cadre_vitrail'),
-  (2, 'paid', 7, 'coffret', null, 1, 'Coffret de catégorie', 'coffret'),
-  (2, 'paid', 8, 'cosmetic', 'finition.givre', 1, 'Finition Givre', 'finition_givre'),
-  (2, 'paid', 9, 'cosmetic', 'titrej.savant', 1, 'Titre « Savant »', 'titrej_savant'),
-  (2, 'paid', 10, 'cosmetic', 'cadre.nuit', 1, 'Cadre Nuit étoilée', 'cadre_nuit'),
-  (2, 'paid', 11, 'cosmetic', 'socle.or', 1, 'Socle Or', 'socle_or'),
-  (2, 'paid', 12, 'cosmetic', 'autoc.flocon', 1, 'Autocollant « Flocon »', 'autoc_flocon'),
-  (2, 'paid', 13, 'cosmetic', 'couv.grimoire', 1, 'Couverture « Grimoire »', 'couv_grimoire'),
-  (2, 'paid', 14, 'cosmetic', 'titre.chasseur', 1, 'Titre « Chasseur de légendes »', 'titre_chasseur'),
-  (2, 'paid', 15, 'token', null, 1, 'Jeton Prestige', 'jeton'),
-  (2, 'paid', 16, 'cosmetic', 'finition.or', 1, 'Finition Poussière d''or', 'finition_or'),
-  (2, 'paid', 17, 'cosmetic', 'cadre.aurore', 1, 'Cadre Aurore', 'cadre_aurore'),
-  (2, 'paid', 18, 'coffret', null, 1, 'Coffret de catégorie', 'coffret'),
-  (2, 'paid', 19, 'cosmetic', 'socle.neon', 1, 'Socle Néon', 'socle_neon'),
-  (2, 'paid', 20, 'cosmetic', 'titrej.legende', 1, 'Titre « Légende vivante »', 'titrej_legende'),
-  (2, 'paid', 21, 'cosmetic', 'cadre.marbre', 1, 'Cadre Marbre', 'cadre_marbre'),
-  (2, 'paid', 22, 'chest', 'gold', 1, 'Coffre en or', 'chest_gold'),
-  (2, 'paid', 23, 'cosmetic', 'autoc.yeti', 1, 'Autocollant « Yéti »', 'autoc_yeti'),
-  (2, 'paid', 24, 'cosmetic', 'finition.holo', 1, 'Finition Holographique', 'finition_holo'),
-  (2, 'paid', 25, 'token', null, 1, 'Jeton Prestige', 'jeton'),
-  (2, 'paid', 26, 'coffret', null, 1, 'Coffret de catégorie', 'coffret'),
-  (2, 'paid', 27, 'cosmetic', 'titre.musee', 1, 'Titre « Pièce de musée »', 'titre_musee'),
-  (2, 'paid', 28, 'cosmetic', 'couv.or', 1, 'Couverture « Feuille d''or »', 'couv_or'),
-  (2, 'paid', 29, 'chest', 'gold', 2, 'Deux coffres en or', 'chest_savant'),
-  (2, 'paid', 30, 'cosmetic', 'dos.or,cadre.anime', 1, 'Dos Feuille d''or + cadre animé', 'final_payant')
+  (2, 'free', 30, 'final', 'dos.aurore', 1, 'Dos Aurore boréale + pochette dorée', 'final_gratuit_s2')
 on conflict do nothing;
 
 -- ─────────────────────────────────────────── Journal d'usage : écran Pass+ vu, achat, bonus pris sans pub

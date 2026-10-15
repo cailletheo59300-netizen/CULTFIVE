@@ -20,22 +20,23 @@ struct PassReward: Identifiable {
         self.init(reward.icon, reward.label, star: ["final", "token", "perk", "coffret"].contains(reward.kind))
     }
 
-    /// Piste Pass+ de la saison 2, en aperçu quand le serveur n'en renvoie pas (saison sans Pass+).
+    /// Piste Pass+ de la saison 1, en aperçu quand le serveur n'en renvoie pas encore.
     static let paid: [PassReward] = [
         .init("sans_pub", "Plus de pub toute la saison", star: true), .init("dos_domaines", "Dos « Les 12 domaines »"),
         .init("autoc_fondateur", "Autocollant « Fondateur »"), .init("titre_grand_curieux", "Titre « Grand curieux »"),
-        .init("jeton", "Jeton Prestige", star: true), .init("cadre_vitrail", "Cadre Vitrail"),
-        .init("coffret", "Coffret de catégorie", star: true), .init("finition_givre", "Finition Givre"),
+        .init("cadre_vitrail", "Cadre Vitrail"), .init("jeton", "Jeton Prestige n° 1", star: true),
+        .init("coffret", "Coffret de catégorie n° 1", star: true), .init("finition_givre", "Finition Givre"),
         .init("titrej_savant", "Titre « Savant »"), .init("cadre_nuit", "Cadre Nuit étoilée"), .init("socle_or", "Socle Or"),
-        .init("autoc_flocon", "Autocollant « Flocon »"), .init("couv_grimoire", "Couverture « Grimoire »"),
-        .init("titre_chasseur", "Titre « Chasseur de légendes »"), .init("jeton", "Jeton Prestige", star: true),
-        .init("finition_or", "Finition Poussière d'or"), .init("cadre_aurore", "Cadre Aurore"),
-        .init("coffret", "Coffret de catégorie", star: true), .init("socle_neon", "Socle Néon"),
-        .init("titrej_legende", "Titre « Légende vivante »"), .init("cadre_marbre", "Cadre Marbre"), .init("chest_gold", "Coffre en or"),
-        .init("autoc_yeti", "Autocollant « Yéti »"), .init("finition_holo", "Finition Holographique"),
-        .init("jeton", "Jeton Prestige", star: true), .init("coffret", "Coffret de catégorie", star: true),
-        .init("titre_musee", "Titre « Pièce de musée »"), .init("couv_or", "Couverture « Feuille d'or »"),
-        .init("chest_savant", "Deux coffres en or"), .init("final_payant", "Dos Feuille d'or + cadre animé", star: true),
+        .init("autoc_chauve", "Autocollant « Chauve-souris »"), .init("couv_grimoire", "Couverture « Grimoire »"),
+        .init("titre_chasseur", "Titre « Chasseur de légendes »"), .init("jeton", "Jeton Prestige n° 2", star: true),
+        .init("finition_or", "Finition Poussière d'or"), .init("cadre_toile", "Cadre « Toile d'araignée »"),
+        .init("coffret", "Coffret de catégorie n° 2", star: true), .init("socle_neon", "Socle Néon"),
+        .init("titrej_legende", "Titre « Légende vivante »"), .init("cadre_marbre", "Cadre Marbre"),
+        .init("marque", "Marque-page d'album"), .init("flamme", "Autocollant animé « Flamme »"),
+        .init("finition_holo", "Finition Holographique"), .init("jeton", "Jeton Prestige n° 3", star: true),
+        .init("coffret", "Coffret de catégorie n° 3", star: true), .init("titre_musee", "Titre « Pièce de musée »"),
+        .init("couv_or", "Couverture « Feuille d'or »"), .init("vitrine", "Vitrine lumineuse"),
+        .init("final_payant", "Dos Feuille d'or + cadre animé", star: true),
     ]
 }
 

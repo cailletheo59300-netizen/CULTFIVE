@@ -3,10 +3,10 @@
   "tiers": 30,
   "points": 2220,
   "season": {
-    "id": 2,
-    "name": "Saison 2",
-    "ends_on": "2027-03-28",
-    "starts_on": "2027-01-03"
+    "id": 1,
+    "name": "Saison 1",
+    "ends_on": "2027-01-03",
+    "starts_on": "2026-10-15"
   },
   "rewards": [
     {
@@ -17,10 +17,10 @@
       "claimed": false
     },
     {
-      "icon": "autoc_s2",
+      "icon": "autoc_s1",
       "kind": "cosmetic",
       "tier": 2,
-      "label": "Autocollant « Saison 2 »",
+      "label": "Autocollant « Saison 1 »",
       "claimed": false
     },
     {
@@ -38,10 +38,10 @@
       "claimed": false
     },
     {
-      "icon": "titre_polaire",
+      "icon": "titre_curieux",
       "kind": "cosmetic",
       "tier": 5,
-      "label": "Titre « Esprit polaire »",
+      "label": "Titre « Curieux »",
       "claimed": false
     },
     {
@@ -59,10 +59,10 @@
       "claimed": false
     },
     {
-      "icon": "cadre_flocons",
+      "icon": "cadre_citrouille",
       "kind": "cosmetic",
       "tier": 8,
-      "label": "Cadre Flocons",
+      "label": "Cadre Citrouille",
       "claimed": false
     },
     {
@@ -73,10 +73,10 @@
       "claimed": false
     },
     {
-      "icon": "dos_hiver",
+      "icon": "dos_soleil",
       "kind": "cosmetic",
       "tier": 10,
-      "label": "Dos « Nuit d'hiver »",
+      "label": "Dos Soleil",
       "claimed": false
     },
     {
@@ -87,10 +87,10 @@
       "claimed": false
     },
     {
-      "icon": "titrej_givre",
+      "icon": "titrej_explorateur",
       "kind": "cosmetic",
       "tier": 12,
-      "label": "Titre « Givré du savoir »",
+      "label": "Titre « Explorateur »",
       "claimed": false
     },
     {
@@ -108,10 +108,10 @@
       "claimed": false
     },
     {
-      "icon": "socle_glace",
+      "icon": "socle_marbre",
       "kind": "cosmetic",
       "tier": 15,
-      "label": "Socle Glace",
+      "label": "Socle Marbre",
       "claimed": false
     },
     {
@@ -129,10 +129,10 @@
       "claimed": false
     },
     {
-      "icon": "autoc_bonhomme",
+      "icon": "autoc_halloween",
       "kind": "cosmetic",
       "tier": 18,
-      "label": "Autocollant « Bonhomme de neige »",
+      "label": "Autocollant « Halloween »",
       "claimed": false
     },
     {
@@ -157,10 +157,10 @@
       "claimed": false
     },
     {
-      "icon": "titre_flocon",
+      "icon": "titre_erudit",
       "kind": "cosmetic",
       "tier": 22,
-      "label": "Titre « Flocon savant »",
+      "label": "Titre « Érudit »",
       "claimed": false
     },
     {
@@ -178,10 +178,10 @@
       "claimed": false
     },
     {
-      "icon": "titrej_banquise",
+      "icon": "titrej_batisseur",
       "kind": "cosmetic",
       "tier": 25,
-      "label": "Titre « Explorateur polaire »",
+      "label": "Titre « Bâtisseur »",
       "claimed": false
     },
     {
@@ -199,10 +199,10 @@
       "claimed": false
     },
     {
-      "icon": "couv_hiver",
+      "icon": "couv_automne",
       "kind": "cosmetic",
       "tier": 28,
-      "label": "Couverture « Hiver »",
+      "label": "Couverture « Automne »",
       "claimed": false
     },
     {
@@ -213,10 +213,10 @@
       "claimed": false
     },
     {
-      "icon": "final_gratuit_s2",
+      "icon": "final_gratuit",
       "kind": "final",
       "tier": 30,
-      "label": "Dos Aurore boréale + pochette dorée",
+      "label": "Dos Nuit étoilée + pochette dorée",
       "claimed": false
     }
   ],
@@ -339,24 +339,24 @@
         "claimed": true
       },
       {
-        "icon": "jeton",
-        "kind": "token",
+        "icon": "cadre_vitrail",
+        "kind": "cosmetic",
         "tier": 5,
-        "label": "Jeton Prestige",
+        "label": "Cadre Vitrail",
         "claimed": true
       },
       {
-        "icon": "cadre_vitrail",
-        "kind": "cosmetic",
+        "icon": "jeton",
+        "kind": "token",
         "tier": 6,
-        "label": "Cadre Vitrail",
+        "label": "Jeton Prestige n° 1",
         "claimed": true
       },
       {
         "icon": "coffret",
         "kind": "coffret",
         "tier": 7,
-        "label": "Coffret de catégorie",
+        "label": "Coffret de catégorie n° 1",
         "claimed": true
       },
       {
@@ -388,10 +388,10 @@
         "claimed": true
       },
       {
-        "icon": "autoc_flocon",
+        "icon": "autoc_chauve",
         "kind": "cosmetic",
         "tier": 12,
-        "label": "Autocollant « Flocon »",
+        "label": "Autocollant « Chauve-souris »",
         "claimed": true
       },
       {
@@ -412,7 +412,7 @@
         "icon": "jeton",
         "kind": "token",
         "tier": 15,
-        "label": "Jeton Prestige",
+        "label": "Jeton Prestige n° 2",
         "claimed": false
       },
       {
@@ -423,17 +423,17 @@
         "claimed": false
       },
       {
-        "icon": "cadre_aurore",
+        "icon": "cadre_toile",
         "kind": "cosmetic",
         "tier": 17,
-        "label": "Cadre Aurore",
+        "label": "Cadre « Toile d'araignée »",
         "claimed": false
       },
       {
         "icon": "coffret",
         "kind": "coffret",
         "tier": 18,
-        "label": "Coffret de catégorie",
+        "label": "Coffret de catégorie n° 2",
         "claimed": false
       },
       {
@@ -458,17 +458,17 @@
         "claimed": false
       },
       {
-        "icon": "chest_gold",
-        "kind": "chest",
+        "icon": "marque",
+        "kind": "cosmetic",
         "tier": 22,
-        "label": "Coffre en or",
+        "label": "Marque-page d'album",
         "claimed": false
       },
       {
-        "icon": "autoc_yeti",
+        "icon": "flamme",
         "kind": "cosmetic",
         "tier": 23,
-        "label": "Autocollant « Yéti »",
+        "label": "Autocollant animé « Flamme »",
         "claimed": false
       },
       {
@@ -482,14 +482,14 @@
         "icon": "jeton",
         "kind": "token",
         "tier": 25,
-        "label": "Jeton Prestige",
+        "label": "Jeton Prestige n° 3",
         "claimed": false
       },
       {
         "icon": "coffret",
         "kind": "coffret",
         "tier": 26,
-        "label": "Coffret de catégorie",
+        "label": "Coffret de catégorie n° 3",
         "claimed": false
       },
       {
@@ -507,10 +507,10 @@
         "claimed": false
       },
       {
-        "icon": "chest_savant",
-        "kind": "chest",
+        "icon": "vitrine",
+        "kind": "cosmetic",
         "tier": 29,
-        "label": "Deux coffres en or",
+        "label": "Vitrine lumineuse",
         "claimed": false
       },
       {
