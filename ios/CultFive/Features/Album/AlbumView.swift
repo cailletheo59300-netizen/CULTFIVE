@@ -18,6 +18,8 @@ struct AlbumView: View {
     @State private var domain = AlbumCatalog.shared.domains.first?.id ?? "history"
     @State private var selected: AlbumCard?
     @State private var opening: PackOpening?
+    @State private var filter = AlbumFilter()
+    @State private var showLegend = false
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -26,12 +28,32 @@ struct AlbumView: View {
                     AlbumCover(store: store)
                     shortcuts
                     VStack(spacing: Space.s) {
-                        VStack(spacing: 0) {
-                            DomainDividers(domain: $domain, store: store)
-                            Binder(domain: domain, store: store) { selected = $0 }
-                                .id(domain)
+                        AlbumFilterBar(filter: $filter, tone: DomainPalette.color(domain))
+                        if filter.isActive {
+                            Toggle("Dans tout l'album", isOn: $filter.allDomains.animation(Motion.standard))
+                                .font(.system(.footnote, design: .rounded).weight(.heavy))
+                                .foregroundStyle(Color.inkSoft)
+                                .tint(.brand)
                         }
-                        RarityLegend()
+                        VStack(spacing: 0) {
+                            if !(filter.isActive && filter.allDomains) {
+                                DomainDividers(domain: $domain, store: store)
+                            }
+                            if filter.isActive {
+                                FilteredCards(filter: filter, domain: domain, store: store) { selected = $0 }
+                            } else {
+                                Binder(domain: domain, store: store) { selected = $0 }
+                                    .id(domain)
+                            }
+                        }
+                        Button { showLegend = true } label: {
+                            HStack(spacing: Space.s) {
+                                RarityLegend()
+                                Image(systemName: "info.circle.fill").foregroundStyle(Color.brand)
+                            }
+                        }
+                        .buttonStyle(.row)
+                        .accessibilityLabel("Comprendre l'album : cases, raretés et états des cartes")
                     }
                 }
                 .padding(.horizontal, Space.gutter)
@@ -75,6 +97,7 @@ struct AlbumView: View {
             app.pendingAlbum = nil
             path = [route]
         }
+        .sheet(isPresented: $showLegend) { AlbumLegendSheet() }
         // Fiche de carte en plein écran : on la ferme avec la croix, pas en glissant.
         .fullScreenCover(item: $selected) { card in
             CardDetailView(card: card, store: store)
@@ -535,30 +558,6 @@ private struct Binder: View {
         .accessibilityLabel(symbol == "chevron.left" ? "Feuillet précédent" : "Feuillet suivant")
     }
 
-    /// Sommaire du domaine : saute à la première page choisie.
-    private func contents(_ sheets: [Sheet], current: Sheet) -> some View {
-        Menu {
-            ForEach(sheets.filter { $0.part == 1 }) { sheet in
-                Button {
-                    turn(to: sheet.id, count: sheets.count)
-                } label: {
-                    Text("\(sheet.page.title) · \(store.ownedCount(sheet.page.cards))/\(sheet.page.cards.count)")
-                }
-            }
-        } label: {
-            HStack(spacing: 4) {
-                Image(systemName: "list.bullet")
-                Text("Pages")
-            }
-            .font(.system(.caption, design: .rounded).weight(.heavy))
-            .foregroundStyle(tone)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 6)
-            .background(tone.opacity(0.12), in: Capsule())
-        }
-        .accessibilityLabel("Sommaire des pages")
-    }
-
     private func header(_ sheet: Sheet, sheets: [Sheet]) -> some View {
         let owned = store.ownedCount(sheet.page.cards)
         let total = sheet.page.cards.count
@@ -587,12 +586,17 @@ private struct Binder: View {
                     .lineLimit(1)
             }
             Spacer(minLength: 0)
-            contents(sheets, current: sheet)
         }
     }
 
     private func sheetView(_ sheet: Sheet, sheets: [Sheet]) -> some View {
         VStack(alignment: .leading, spacing: Space.m) {
+            if AlbumCatalog.shared.pages(of: domain).count > 1 {
+                PageTabs(pages: AlbumCatalog.shared.pages(of: domain), current: sheet.page.key, tone: tone, store: store) { page in
+                    if let first = sheets.first(where: { $0.page.key == page.key }) { turn(to: first.id, count: sheets.count) }
+                }
+                .padding(.trailing, -Space.m)
+            }
             header(sheet, sheets: sheets)
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 3), spacing: 10) {
                 ForEach(sheet.cards) { card in
@@ -649,7 +653,7 @@ private struct Binder: View {
 }
 
 /// Une pochette plastique du feuillet : léger creux et reflet.
-private struct Pocket<Content: View>: View {
+struct Pocket<Content: View>: View {
     @ViewBuilder var content: Content
 
     var body: some View {
