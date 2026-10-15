@@ -16,3 +16,10 @@ supabase/.temp/
 # Divers
 .DS_Store
 node_modules/
+# Android
+android/**/build/
+android/.gradle/
+android/.kotlin/
+android/local.properties
+android/*.jks
+android/*.keystore
