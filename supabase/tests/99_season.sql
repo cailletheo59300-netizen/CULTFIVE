@@ -68,6 +68,6 @@ begin
 
   -- Sécurité.
   perform tst.ok(not has_function_privilege('authenticated', 'public._season_points(uuid, public.seasons)', 'execute'), 'points : interne');
-  perform tst.ok(has_function_privilege('authenticated', 'public.season_claim(int)', 'execute'), 'récupérer : connectés');
+  perform tst.ok(has_function_privilege('authenticated', 'public.season_claim(int, text)', 'execute'), 'récupérer : connectés');
   perform tst.ok(not has_function_privilege('anon', 'public.season_overview()', 'execute'), 'fermé aux anonymes');
 end $$;
