@@ -2,6 +2,7 @@ package app.brainlix.android.design
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.ui.text.ExperimentalTextApi
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -14,6 +15,7 @@ import app.brainlix.android.R
 // Voix Pop : police arrondie (Nunito, l'équivalent de SF Pro Rounded), grasse et généreuse. Chiffres en « heavy ».
 // Les tailles sont en sp : elles suivent la taille de texte choisie dans Android.
 
+@OptIn(ExperimentalTextApi::class)
 private fun nunito(weight: FontWeight) =
     Font(R.font.nunito, weight, variationSettings = FontVariation.Settings(FontVariation.weight(weight.weight)))
 
