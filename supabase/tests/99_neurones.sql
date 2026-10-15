@@ -15,7 +15,9 @@ begin
     perform tst.ok(r -> 'card' ->> 'card' is not null and r -> 'card' ->> 'rarity' in ('rare', 'epic', 'legend'), 'or : carte rare ou mieux');
     perform tst.ok(r -> 'item' is null and r -> 'bonus_item' is null, 'plus d''objet de Léon');
   end loop;
-  perform tst.ok((select tickets from public.user_album where user_id = u) >= 3 + 20, 'tickets ajoutés à l''album');
+  perform tst.ok((select tickets from public.user_album where user_id = u) = 5, 'tickets ajoutés à l''album (5 au plus, 0057)');
+  perform tst.ok((select sum(amount) from public.ledger where user_id = u and reason = 'ticket_overflow') >= (3 + 20 - 5) * 30,
+                 'tickets en trop changés en neurones');
   perform tst.ok((select count(*) from public.user_cards where user_id = u and slot = 0) >= 1, 'cartes ajoutées à l''album');
   perform tst.ok(not exists (select 1 from public.user_items ui join public.items i on i.id = ui.item_id
                              where ui.user_id = u and i.kind = 'cosmetic'), 'aucune tenue reçue');

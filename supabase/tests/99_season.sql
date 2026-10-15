@@ -58,7 +58,9 @@ begin
   v_pts := (public.season_overview() ->> 'points')::int;
   perform tst.ok(v_pts >= 30 * 150 + 3 * 150, format('assez de points pour tout (%s)', v_pts));
   for i in 2..30 loop perform public.season_claim(i); end loop;
-  perform tst.ok((select tickets from public.user_album where user_id = u) = 3 + 8, '8 tickets gagnés (+3 de bienvenue)');
+  perform tst.ok((select tickets from public.user_album where user_id = u) = 5
+                 and (select sum(amount) from public.ledger where user_id = u and reason = 'ticket_overflow') = (3 + 8 - 5) * 30,
+                 '8 tickets gagnés (+3 de bienvenue) : 5 gardés, le reste en neurones (0057)');
   perform tst.ok((select tokens from public.user_album where user_id = u) = 1, '1 jeton Prestige');
   perform tst.ok((select gold_packs from public.user_album where user_id = u) = 1, 'pochette dorée finale');
   perform tst.ok(exists (select 1 from public.user_cosmetics where user_id = u and item_id = 'dos.nuit'), 'dos Nuit étoilée');

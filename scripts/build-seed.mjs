@@ -357,8 +357,10 @@ const activeSubdomains = taxonomy.domains.flatMap((d) => d.subdomains.map(([s]) 
 lines.push(`update public.subdomains set is_active = (id in (${activeSubdomains.join(', ')}));`);
 for (const origin of ['human', 'import']) {
   // +5 de difficulté (0046) : les estimations de départ se sont révélées trop optimistes (≈ 11 points de réussite).
+  // Questions carte : +20 de plus (0057), elles servent de questions difficiles.
   const group = questions.filter((q) => q.origin === origin)
-    .map(({ origin: _o, ...q }) => (q.difficulty == null ? q : { ...q, difficulty: Math.min(95, q.difficulty + 5) }));
+    .map(({ origin: _o, ...q }) => (q.difficulty == null ? q
+      : { ...q, difficulty: Math.min(95, q.difficulty + 5 + (q.type === 'map_pick' ? 20 : 0)) }));
   if (group.length) lines.push(`select public._upsert_question(q, '${origin}', null) from jsonb_array_elements(${lit(JSON.stringify(group))}::jsonb) q;`);
 }
 // Album : 49 pages, 525 cartes et leurs notions (content/album/*.json, vérifiées par scripts/check-album.mjs).
