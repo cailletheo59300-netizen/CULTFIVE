@@ -112,7 +112,7 @@ private struct UpdateRequiredView: View {
                 Text("Ouvrir TestFlight").frame(maxWidth: .infinity)
             }
             .buttonStyle(.ink)
-            Link(destination: URL(string: "https://apps.apple.com/search?term=Brainlix")!) {
+            Link(destination: URL(string: "https://apps.apple.com/fr/app/id6817053673")!) {
                 Text("Ouvrir l'App Store").frame(maxWidth: .infinity)
             }
             .buttonStyle(.textLink)
