@@ -381,7 +381,7 @@ final class AppModel {
         guard let user = profile?.id else { throw BackendError.notAuthenticated }
         track("ad_offer", ["kind": kind.rawValue])
         ads.adultAudience = isAdult
-        guard try await ads.showRewarded(kind, userId: user, ref: ref) else { return nil }
+        guard try await showRewarded(kind, user: user, ref: ref) else { return nil }
         track("ad_view", ["kind": kind.rawValue])
         let service = self.service
         let test = adTestClaims
@@ -403,13 +403,30 @@ final class AppModel {
         guard let user = profile?.id else { throw BackendError.notAuthenticated }
         track("ad_offer", ["kind": AdKind.correction.rawValue])
         ads.adultAudience = isAdult
-        guard try await ads.showRewarded(.correction, userId: user, ref: ref) else { return nil }
+        guard try await showRewarded(.correction, user: user, ref: ref) else { return nil }
         track("ad_view", ["kind": AdKind.correction.rawValue])
         let service = self.service
         let test = adTestClaims
         let start = try await claimAd { try await service.correctionStart(session: session, test: test) }
         track("ad_reward", ["kind": AdKind.correction.rawValue])
         return start
+    }
+
+    /// Montre la pub récompensée ; si elle ne peut pas s'afficher, la raison va dans le journal d'usage
+    /// (pas de pub en stock, consentement refusé, réseau…).
+    private func showRewarded(_ kind: AdKind, user: UUID, ref: String?) async throws -> Bool {
+        do {
+            return try await ads.showRewarded(kind, userId: user, ref: ref)
+        } catch {
+            track("ad_fail", ["kind": kind.rawValue, "reason": String((ads.lastFailure ?? "unknown").prefix(80))])
+            throw error
+        }
+    }
+
+    /// Réglages : rouvre les choix de confidentialité des pubs (message de Google).
+    func adPrivacyOptions() async {
+        track("ad_privacy")
+        await ads.presentPrivacyOptions()
     }
 
     /// Google confirme la vue en quelques secondes : on réessaie tant que le serveur répond « en attente ».

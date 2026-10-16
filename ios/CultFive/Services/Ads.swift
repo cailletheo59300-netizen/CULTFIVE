@@ -41,6 +41,8 @@ final class AdsController {
     var adultAudience = false
     /// Une pub récompensée a été vue depuis la dernière partie finie : pas de pub entre les parties juste après.
     private var rewardedSinceLastGame = false
+    /// Pourquoi la dernière pub récompensée n'a pas pu s'afficher (journal d'usage), `nil` si elle s'est affichée.
+    private(set) var lastFailure: String?
     private let defaults = UserDefaults.standard
 
     init(enabled: Bool) {
@@ -77,8 +79,24 @@ final class AdsController {
             _ = await ATTrackingManager.requestTrackingAuthorization()
         }
         guard consent.canRequestAds else { return }
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        MobileAds.shared.start(completionHandler: nil)
         started = true
+    }
+
+    /// Le joueur peut revoir ses choix de confidentialité des pubs (Europe : message RGPD de Google).
+    var privacyOptionsAvailable: Bool {
+        UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
+    }
+
+    /// Rouvre le message de Google pour changer ses choix, sans réinstaller l'app. Les pubs repartent ensuite
+    /// si le nouveau choix le permet.
+    func presentPrivacyOptions() async {
+        guard let root = Self.topViewController else { return }
+        try? await UMPConsentForm.presentPrivacyOptionsForm(from: root)
+        if !started, UMPConsentInformation.sharedInstance.canRequestAds {
+            MobileAds.shared.start(completionHandler: nil)
+            started = true
+        }
     }
 
     // MARK: Pubs récompensées
@@ -86,17 +104,23 @@ final class AdsController {
     /// Montre une pub récompensée. Renvoie `true` si elle a été vue jusqu'au bout. Google confirme ensuite la vue à notre
     /// serveur avec l'identifiant du joueur et « type:référence », ce qui permet au serveur de donner la bonne récompense.
     func showRewarded(_ kind: AdKind, userId: UUID, ref: String?) async throws -> Bool {
+        lastFailure = nil
         if !started { await start() }
-        guard started else { throw Self.unavailable }
-        let unit = testAds ? Self.testRewardedUnit : (Self.rewardedUnits[kind] ?? Self.testRewardedUnit)
-        let ad: GADRewardedAd
-        do {
-            applyAudience()
-            ad = try await GADRewardedAd.load(withAdUnitID: unit, request: GADRequest())
-        } catch {
+        guard started else {
+            lastFailure = "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
             throw Self.unavailable
         }
-        let options = GADServerSideVerificationOptions()
+        let unit = testAds ? Self.testRewardedUnit : (Self.rewardedUnits[kind] ?? Self.testRewardedUnit)
+        let ad: RewardedAd
+        do {
+            applyAudience()
+            ad = try await RewardedAd.load(with: unit, request: Request())
+        } catch {
+            let error = error as NSError
+            lastFailure = "load \(error.domain) \(error.code)"
+            throw Self.unavailable
+        }
+        let options = ServerSideVerificationOptions()
         options.userIdentifier = userId.uuidString.lowercased()
         options.customRewardString = "\(kind.rawValue):\(ref ?? "")"
         ad.serverSideVerificationOptions = options
@@ -105,7 +129,7 @@ final class AdsController {
         var earned = false
         await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
             waiter.continuation = continuation
-            ad.present(fromRootViewController: Self.topViewController) { earned = true }
+            ad.present(from: Self.topViewController) { earned = true }
         }
         // Le délégué est une référence faible du SDK : on garde la pub et l'attente en vie jusqu'à la fermeture.
         withExtendedLifetime((ad, waiter)) {}
@@ -134,12 +158,12 @@ final class AdsController {
         guard defaults.integer(forKey: Self.gamesKey) >= 3, shownToday < 3 else { return false }
         let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
         applyAudience()
-        guard let ad = try? await GADInterstitialAd.load(withAdUnitID: unit, request: GADRequest()) else { return false }
+        guard let ad = try? await InterstitialAd.load(with: unit, request: Request()) else { return false }
         let waiter = PresentationWaiter()
         ad.fullScreenContentDelegate = waiter
         await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
             waiter.continuation = continuation
-            ad.present(fromRootViewController: Self.topViewController)
+            ad.present(from: Self.topViewController)
         }
         withExtendedLifetime((ad, waiter)) {}
         defaults.set(0, forKey: Self.gamesKey)
@@ -152,7 +176,7 @@ final class AdsController {
 
     /// Classification maximale des pubs, appliquée avant chaque chargement.
     private func applyAudience() {
-        let configuration = GADMobileAds.sharedInstance().requestConfiguration
+        let configuration = MobileAds.shared.requestConfiguration
         configuration.maxAdContentRating = adultAudience ? .matureAudience : .teen
         configuration.tagForUnderAgeOfConsent = NSNumber(value: !adultAudience)
     }
@@ -177,7 +201,7 @@ final class AdsController {
 }
 
 /// Attend la fermeture d'une pub plein écran (ou son échec d'affichage).
-private final class PresentationWaiter: NSObject, GADFullScreenContentDelegate {
+private final class PresentationWaiter: NSObject, FullScreenContentDelegate {
     var continuation: CheckedContinuation<Void, Never>?
 
     private func finish() {
@@ -185,7 +209,7 @@ private final class PresentationWaiter: NSObject, GADFullScreenContentDelegate {
         continuation = nil
     }
 
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) { finish() }
+    func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd) { finish() }
 
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) { finish() }
+    func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) { finish() }
 }

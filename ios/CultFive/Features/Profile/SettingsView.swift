@@ -67,6 +67,13 @@ struct SettingsView: View {
                         app.openPassPlus(from: "settings")
                     }
                 }
+                if app.ads.privacyOptionsAvailable && !app.noAds {
+                    section("Publicité", footer: "Change ton choix de pubs personnalisées ou non. Refuser tout peut empêcher les vidéos bonus de s'afficher.") {
+                        actionRow("Choix de confidentialité des pubs", symbol: "hand.raised.fill", tint: Color(hex: 0x495057)) {
+                            Task { await app.adPrivacyOptions() }
+                        }
+                    }
+                }
                 section("Compte") { account }
                 section("Aide & légal") { links }
                 about
