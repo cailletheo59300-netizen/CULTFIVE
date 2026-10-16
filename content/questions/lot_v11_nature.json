@@ -1,0 +1,1758 @@
+[
+ {
+  "key": "nature-1101",
+  "concept": "nature.animals.v11_roi_animaux",
+  "label": "Roi des animaux",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal est surnommé « le roi des animaux » ?",
+  "options": [
+   "Le lion*",
+   "Le tigre",
+   "L'éléphant",
+   "L'ours"
+  ],
+  "explanation": "Sa crinière et son rugissement, qu'on entend à 8 km, en ont fait le roi des fables. Il vit surtout dans les savanes d'Afrique."
+ },
+ {
+  "key": "nature-1102",
+  "concept": "nature.animals.v11_pie_voleuse",
+  "label": "La pie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel oiseau a la réputation de voler les objets qui brillent ?",
+  "options": [
+   "La pie*",
+   "Le moineau",
+   "La mésange",
+   "Le merle"
+  ],
+  "explanation": "On parle de « pie voleuse » depuis des siècles. En réalité, des études montrent qu'elle se méfie plutôt des objets brillants !"
+ },
+ {
+  "key": "nature-1103",
+  "concept": "nature.animals.v11_chenille_mange",
+  "label": "Repas de la chenille",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que mange surtout une chenille ?",
+  "options": [
+   "Des feuilles*",
+   "Des insectes",
+   "Des graines",
+   "Du nectar"
+  ],
+  "explanation": "Elle grossit en dévorant des feuilles avant de se transformer. Devenue papillon, elle boira le nectar des fleurs."
+ },
+ {
+  "key": "nature-1104",
+  "concept": "nature.animals.v11_ruche",
+  "label": "Maison des abeilles",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle l'abri où l'apiculteur élève ses abeilles ?",
+  "options": [
+   "La ruche*",
+   "Le terrier",
+   "La fourmilière",
+   "Le guêpier"
+  ],
+  "explanation": "Une ruche peut abriter 40 000 à 60 000 abeilles en été, autour d'une seule reine."
+ },
+ {
+  "key": "nature-1105",
+  "concept": "nature.animals.v11_escargot_trace",
+  "label": "L'escargot",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal porte sa maison sur son dos et laisse une trace brillante derrière lui ?",
+  "options": [
+   "L'escargot*",
+   "La tortue",
+   "Le hérisson",
+   "Le crabe"
+  ],
+  "explanation": "Sa trace est du mucus, une bave qui l'aide à glisser et le protège des surfaces rugueuses."
+ },
+ {
+  "key": "nature-1106",
+  "concept": "nature.animals.v11_moustaches_chat",
+  "label": "Moustaches du chat",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi servent surtout les moustaches du chat ?",
+  "options": [
+   "À sentir ce qui l'entoure et se repérer*",
+   "À attraper les souris",
+   "À se nettoyer",
+   "À garder la chaleur"
+  ],
+  "explanation": "Très sensibles, elles captent le moindre souffle d'air et l'aident à savoir s'il peut passer dans un trou, même dans le noir."
+ },
+ {
+  "key": "nature-1107",
+  "concept": "nature.animals.v11_ours_hiver",
+  "label": "L'ours en hiver",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que fait l'ours brun pendant une grande partie de l'hiver ?",
+  "options": [
+   "Il dort dans sa tanière*",
+   "Il part vers le sud",
+   "Il pêche sous la glace",
+   "Son pelage devient blanc"
+  ],
+  "explanation": "Il dort sans manger pendant des mois, sur ses réserves de graisse. Les femelles mettent même bas pendant ce long sommeil."
+ },
+ {
+  "key": "nature-1108",
+  "concept": "nature.animals.v11_cochon_boue",
+  "label": "Le cochon",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal de la ferme aime se rouler dans la boue ?",
+  "options": [
+   "Le cochon*",
+   "Le mouton",
+   "Le cheval",
+   "La poule"
+  ],
+  "explanation": "Le cochon ne transpire presque pas : la boue le rafraîchit et protège sa peau du soleil et des insectes."
+ },
+ {
+  "key": "nature-1109",
+  "concept": "nature.animals.v11_couvaison_poule",
+  "label": "Couvaison",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de temps une poule couve-t-elle ses œufs avant l'éclosion ?",
+  "options": [
+   "Environ 3 semaines*",
+   "Environ 3 jours",
+   "Environ 2 mois",
+   "Environ 6 mois"
+  ],
+  "explanation": "21 jours en moyenne. Le poussin perce la coquille grâce à une petite pointe sur le bec, le « diamant », qui tombe ensuite."
+ },
+ {
+  "key": "nature-1110",
+  "concept": "nature.animals.v11_pic_bois",
+  "label": "Le pic",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel oiseau tape sur les troncs d'arbres avec son bec ?",
+  "options": [
+   "Le pic*",
+   "Le rouge-gorge",
+   "Le corbeau",
+   "Le merle"
+  ],
+  "explanation": "Il cherche des larves sous l'écorce et creuse son nid. Son crâne amortit les chocs, jusqu'à 20 coups par seconde."
+ },
+ {
+  "key": "nature-1111",
+  "concept": "nature.animals.v11_girafe_haute",
+  "label": "Le plus haut",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est l'animal le plus haut du monde ?",
+  "options": [
+   "La girafe*",
+   "L'éléphant",
+   "Le chameau",
+   "L'autruche"
+  ],
+  "explanation": "Une girafe mâle peut mesurer 5 à 6 mètres : elle mange les feuilles que les autres animaux n'atteignent pas."
+ },
+ {
+  "key": "nature-1112",
+  "concept": "nature.animals.v11_langue_cameleon",
+  "label": "Langue du caméléon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment le caméléon attrape-t-il les insectes ?",
+  "options": [
+   "En projetant sa langue collante*",
+   "En courant très vite",
+   "Avec ses pattes avant",
+   "En les piquant avec sa queue"
+  ],
+  "explanation": "Sa langue jaillit en une fraction de seconde et peut être plus longue que son corps."
+ },
+ {
+  "key": "nature-1113",
+  "concept": "nature.animals.v11_chat_retombe",
+  "label": "Le chat retombe",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Un chat qui tombe se retourne en l'air pour retomber sur ses pattes.",
+  "answer": true,
+  "explanation": "Vrai : c'est un réflexe qu'il a dès ses premières semaines. Une chute de haut reste quand même dangereuse pour lui."
+ },
+ {
+  "key": "nature-1114",
+  "concept": "nature.animals.v11_poule_dents",
+  "label": "Dents de la poule",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Les poules ont des dents.",
+  "answer": false,
+  "explanation": "Faux : aucun oiseau actuel n'a de dents. La poule avale de petits cailloux qui broient la nourriture dans son gésier."
+ },
+ {
+  "key": "nature-1115",
+  "concept": "nature.animals.v11_herisson_lait",
+  "label": "Hérisson et lait",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Il faut donner du lait à un hérisson qu'on trouve dans son jardin.",
+  "answer": false,
+  "explanation": "Faux : le lait le rend malade, il ne le digère pas. Il préfère de l'eau, et il mange insectes, vers et limaces."
+ },
+ {
+  "key": "nature-1116",
+  "concept": "nature.animals.v11_terrier_lapin",
+  "label": "Maison du lapin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle l'abri creusé sous terre par le lapin de garenne ?",
+  "options": [
+   "Le terrier*",
+   "Le nid",
+   "La tanière",
+   "L'étable"
+  ],
+  "explanation": "Les terriers forment parfois de vrais réseaux de galeries, appelés garennes. Le lièvre, lui, vit en surface."
+ },
+ {
+  "key": "nature-1117",
+  "concept": "nature.animals.v11_mue_serpent",
+  "label": "La mue",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel animal se débarrasse de toute sa peau d'un coup, en laissant une « mue » derrière lui ?",
+  "options": [
+   "Le serpent*",
+   "Le lapin",
+   "Le pigeon",
+   "Le cheval"
+  ],
+  "explanation": "En grandissant, le serpent change de peau plusieurs fois par an. On retrouve parfois sa mue entière, comme un fantôme de serpent."
+ },
+ {
+  "key": "nature-1118",
+  "concept": "nature.animals.v11_herbivore",
+  "label": "Herbivore",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire « herbivore » ?",
+  "options": [
+   "Qui mange des plantes*",
+   "Qui mange de la viande",
+   "Qui mange de tout",
+   "Qui vit dans l'herbe"
+  ],
+  "explanation": "La vache, le lapin ou l'éléphant sont herbivores. Ceux qui mangent de la viande sont carnivores."
+ },
+ {
+  "key": "nature-1119",
+  "concept": "nature.animals.v11_tetards",
+  "label": "Les têtards",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal commence sa vie dans l'eau sous forme de têtard ?",
+  "options": [
+   "La grenouille*",
+   "Le canard",
+   "La tortue",
+   "Le poisson rouge"
+  ],
+  "explanation": "Le têtard respire avec des branchies, puis ses pattes poussent et sa queue disparaît : c'est la métamorphose."
+ },
+ {
+  "key": "nature-1120",
+  "concept": "nature.animals.v11_miel",
+  "label": "Le miel",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel insecte fabrique le miel ?",
+  "options": [
+   "L'abeille*",
+   "La guêpe",
+   "La coccinelle",
+   "Le papillon"
+  ],
+  "explanation": "Pour un pot de 500 g, les abeilles butinent des millions de fleurs."
+ },
+ {
+  "key": "nature-1121",
+  "concept": "nature.animals.v11_chien_loup",
+  "label": "Ancêtre du chien",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quel animal sauvage descend le chien ?",
+  "options": [
+   "Du loup*",
+   "Du renard",
+   "Du chacal",
+   "De l'ours"
+  ],
+  "explanation": "Le loup a été apprivoisé il y a plus de 15 000 ans. Du chihuahua au dogue, tous les chiens viennent de lui."
+ },
+ {
+  "key": "nature-1122",
+  "concept": "nature.animals.v11_tortue_carapace",
+  "label": "La tortue",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal lent peut rentrer la tête dans sa carapace ?",
+  "options": [
+   "La tortue*",
+   "Le paresseux",
+   "L'escargot",
+   "Le hérisson"
+  ],
+  "explanation": "Sa carapace fait partie de son squelette : une tortue ne peut pas en sortir."
+ },
+ {
+  "key": "nature-1123",
+  "concept": "nature.animals.v11_abajoues",
+  "label": "Les abajoues",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel petit rongeur transporte des graines dans ses joues ?",
+  "options": [
+   "Le hamster*",
+   "Le lapin",
+   "Le hérisson",
+   "La taupe"
+  ],
+  "explanation": "Ses joues extensibles, les abajoues, lui servent de sacs à provisions qu'il vide ensuite dans sa réserve."
+ },
+ {
+  "key": "nature-1124",
+  "concept": "nature.animals.v11_ecureuil_automne",
+  "label": "L'écureuil en automne",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que fait l'écureuil roux à l'automne ?",
+  "options": [
+   "Il cache des noisettes et des glands*",
+   "Il part vers le sud",
+   "Il dort tout l'hiver sans manger",
+   "Il devient tout blanc"
+  ],
+  "explanation": "Il ne dort pas tout l'hiver : il vient puiser dans ses cachettes. Celles qu'il oublie donnent de nouveaux arbres !"
+ },
+ {
+  "key": "nature-1125",
+  "concept": "nature.animals.v11_wwf_panda",
+  "label": "Logo du WWF",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel animal figure sur le logo de l'organisation de protection de la nature WWF ?",
+  "options": [
+   "Le panda géant*",
+   "Le tigre",
+   "L'éléphant",
+   "Le koala"
+  ],
+  "explanation": "Choisi en 1961, le panda est devenu le symbole des espèces menacées. Il vit dans les forêts de bambous de Chine."
+ },
+ {
+  "key": "nature-1126",
+  "concept": "nature.animals.v11_taille_animaux",
+  "label": "Du plus petit au plus grand",
+  "type": "ordering",
+  "difficulty": 20,
+  "prompt": "Classe ces animaux du plus petit au plus grand.",
+  "items": [
+   "La fourmi",
+   "La souris",
+   "Le chat",
+   "Le cheval",
+   "L'éléphant"
+  ],
+  "explanation": "De quelques millimètres pour la fourmi à plus de 3 mètres de haut pour l'éléphant d'Afrique."
+ },
+ {
+  "key": "nature-1127",
+  "concept": "nature.animals.v11_abris",
+  "label": "Les abris des animaux",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque animal à son abri.",
+  "pairs": [
+   [
+    "L'abeille",
+    "La ruche"
+   ],
+   [
+    "Le lapin",
+    "Le terrier"
+   ],
+   [
+    "L'oiseau",
+    "Le nid"
+   ],
+   [
+    "L'ours",
+    "La tanière"
+   ]
+  ],
+  "explanation": "Chaque animal a son abri : la ruche pour les abeilles, le terrier pour le lapin, le nid pour l'oiseau, la tanière pour l'ours."
+ },
+ {
+  "key": "nature-1128",
+  "concept": "nature.animals.v11_pourquoi_migrer",
+  "label": "Pourquoi migrer ?",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi beaucoup d'oiseaux partent-ils vers le sud à l'automne ?",
+  "options": [
+   "Pour trouver de la nourriture et un climat plus doux*",
+   "Pour pondre dans le désert",
+   "Pour fuir les chats",
+   "Pour changer de plumes"
+  ],
+  "explanation": "En hiver, les insectes disparaissent de nos régions. Les oiseaux partent là où ils trouvent encore à manger, puis reviennent au printemps."
+ },
+ {
+  "key": "nature-1129",
+  "concept": "nature.animals.v11_cigale",
+  "label": "La cigale",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel insecte chante l'été dans le Sud de la France ?",
+  "options": [
+   "La cigale*",
+   "La fourmi",
+   "La coccinelle",
+   "La libellule"
+  ],
+  "explanation": "Seul le mâle chante, en faisant vibrer des membranes sous son ventre. Elle est l'héroïne d'une fable de La Fontaine."
+ },
+ {
+  "key": "nature-1130",
+  "concept": "nature.animals.v11_sommeil_chat",
+  "label": "Le sommeil du chat",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien d'heures un chat dort-il environ par jour ?",
+  "options": [
+   "De 12 à 16 heures*",
+   "4 heures",
+   "8 heures",
+   "22 heures"
+  ],
+  "explanation": "Le chat est un chasseur qui économise son énergie : il passe les deux tiers de sa vie à dormir ou somnoler."
+ },
+ {
+  "key": "nature-1131",
+  "concept": "nature.plants.v11_banane",
+  "label": "La banane",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel fruit jaune et allongé pousse en grappes appelées « régimes » ?",
+  "options": [
+   "La banane*",
+   "Le citron",
+   "La mangue",
+   "La poire"
+  ],
+  "explanation": "Un régime peut porter plus de 100 bananes. On les cueille vertes : elles mûrissent pendant le voyage."
+ },
+ {
+  "key": "nature-1132",
+  "concept": "nature.plants.v11_vigne",
+  "label": "La vigne",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle plante grimpante donne le raisin ?",
+  "options": [
+   "La vigne*",
+   "Le lierre",
+   "Le houblon",
+   "La glycine"
+  ],
+  "explanation": "On cultive la vigne depuis plus de 8 000 ans. Ses grappes donnent du raisin de table, du jus et du vin."
+ },
+ {
+  "key": "nature-1133",
+  "concept": "nature.plants.v11_cidre",
+  "label": "Le cidre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Avec quel fruit fabrique-t-on le cidre ?",
+  "options": [
+   "La pomme*",
+   "La poire",
+   "Le raisin",
+   "La cerise"
+  ],
+  "explanation": "Le cidre est une spécialité de Normandie et de Bretagne. Avec des poires, on fait du poiré."
+ },
+ {
+  "key": "nature-1134",
+  "concept": "nature.plants.v11_fleur_de_lys",
+  "label": "La fleur de lys",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle fleur, stylisée, était le symbole des rois de France ?",
+  "options": [
+   "Le lys*",
+   "La rose",
+   "La marguerite",
+   "Le muguet"
+  ],
+  "explanation": "La « fleur de lys » ornait les blasons et les drapeaux royaux. On la voit encore sur le drapeau du Québec."
+ },
+ {
+  "key": "nature-1135",
+  "concept": "nature.plants.v11_marguerite_effeuiller",
+  "label": "La marguerite",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle fleur blanche au cœur jaune effeuille-t-on en disant « je t'aime, un peu, beaucoup… » ?",
+  "options": [
+   "La marguerite*",
+   "Le coquelicot",
+   "La tulipe",
+   "Le bleuet"
+  ],
+  "explanation": "On arrache ses pétales un à un : le dernier donne la réponse. Ce qu'on appelle pétale est en fait une petite fleur !"
+ },
+ {
+  "key": "nature-1136",
+  "concept": "nature.plants.v11_printemps_fleurs",
+  "label": "Saison des fleurs",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "En France, à quelle saison la plupart des arbres fruitiers fleurissent-ils ?",
+  "options": [
+   "Au printemps*",
+   "En été",
+   "En automne",
+   "En hiver"
+  ],
+  "explanation": "Les jours rallongent et il fait plus doux : les bourgeons s'ouvrent et les abeilles reviennent butiner."
+ },
+ {
+  "key": "nature-1137",
+  "concept": "nature.plants.v11_pomme_de_pin",
+  "label": "Pommes de pin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel arbre a des aiguilles et produit des pommes de pin ?",
+  "options": [
+   "Le pin*",
+   "Le chêne",
+   "Le saule",
+   "Le peuplier"
+  ],
+  "explanation": "La pomme de pin protège les graines, les pignons. Elle s'ouvre par temps sec et se referme quand il pleut."
+ },
+ {
+  "key": "nature-1138",
+  "concept": "nature.plants.v11_saule_pleureur",
+  "label": "Le saule pleureur",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel arbre aux longues branches tombantes pousse souvent au bord de l'eau ?",
+  "options": [
+   "Le saule pleureur*",
+   "Le sapin",
+   "Le palmier",
+   "Le cèdre"
+  ],
+  "explanation": "Ses branches retombent jusqu'à l'eau, comme des larmes : d'où son nom. Il a besoin de beaucoup d'eau."
+ },
+ {
+  "key": "nature-1139",
+  "concept": "nature.plants.v11_pesto_basilic",
+  "label": "Le basilic",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle herbe aromatique est l'ingrédient principal du pesto ?",
+  "options": [
+   "Le basilic*",
+   "Le persil",
+   "Le thym",
+   "La ciboulette"
+  ],
+  "explanation": "Le pesto vient de Gênes, en Italie : basilic, pignons de pin, ail, huile d'olive et fromage."
+ },
+ {
+  "key": "nature-1140",
+  "concept": "nature.plants.v11_oignon_larmes",
+  "label": "L'oignon",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel légume fait pleurer quand on le coupe ?",
+  "options": [
+   "L'oignon*",
+   "La carotte",
+   "La courgette",
+   "Le concombre"
+  ],
+  "explanation": "En le coupant, on libère un gaz soufré qui irrite les yeux. Le passer au frais avant limite les larmes."
+ },
+ {
+  "key": "nature-1141",
+  "concept": "nature.plants.v11_guacamole",
+  "label": "Le guacamole",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Avec quel fruit prépare-t-on le guacamole ?",
+  "options": [
+   "L'avocat*",
+   "La mangue",
+   "Le kiwi",
+   "La papaye"
+  ],
+  "explanation": "Le guacamole vient du Mexique, comme l'avocat. On l'écrase avec du citron vert, de l'oignon et un peu de piment."
+ },
+ {
+  "key": "nature-1142",
+  "concept": "nature.plants.v11_trefle_quatre",
+  "label": "Trèfle porte-bonheur",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Combien de feuilles a le trèfle qui porte bonheur ?",
+  "options": [
+   "Quatre*",
+   "Trois",
+   "Cinq",
+   "Deux"
+  ],
+  "explanation": "Un trèfle a normalement trois folioles. Celui à quatre est rare : environ un sur 5 000."
+ },
+ {
+  "key": "nature-1143",
+  "concept": "nature.plants.v11_nenuphar",
+  "label": "Le nénuphar",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle plante aux grandes feuilles rondes flotte sur les étangs, et a été peinte par Claude Monet ?",
+  "options": [
+   "Le nénuphar*",
+   "Le bambou",
+   "La fougère",
+   "Le roseau"
+  ],
+  "explanation": "Monet a peint plus de 250 toiles de nénuphars (les « Nymphéas ») dans son jardin de Giverny."
+ },
+ {
+  "key": "nature-1144",
+  "concept": "nature.plants.v11_role_fleur",
+  "label": "À quoi sert la fleur ?",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi servent les fleurs pour une plante ?",
+  "options": [
+   "À se reproduire en faisant des graines*",
+   "À respirer",
+   "À boire",
+   "À se protéger du froid"
+  ],
+  "explanation": "Une fois pollinisée, la fleur se transforme en fruit qui contient les graines."
+ },
+ {
+  "key": "nature-1145",
+  "concept": "nature.plants.v11_datte",
+  "label": "La datte",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Lequel de ces fruits pousse sur un palmier ?",
+  "options": [
+   "La datte*",
+   "La figue",
+   "La prune",
+   "L'abricot"
+  ],
+  "explanation": "Le palmier dattier pousse dans les oasis des déserts chauds. Un seul arbre peut donner plus de 50 kg de dattes par an."
+ },
+ {
+  "key": "nature-1146",
+  "concept": "nature.plants.v11_epines_cactus",
+  "label": "Épines du cactus",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Les épines du cactus sont des feuilles transformées.",
+  "answer": true,
+  "explanation": "Vrai : de vraies feuilles perdraient trop d'eau au soleil. C'est la tige, verte et charnue, qui fabrique la nourriture du cactus."
+ },
+ {
+  "key": "nature-1147",
+  "concept": "nature.plants.v11_feuilles_mortes",
+  "label": "Les feuilles mortes",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "En se décomposant, les feuilles mortes nourrissent le sol.",
+  "answer": true,
+  "explanation": "Vrai : vers de terre, champignons et bactéries les transforment en humus, un engrais naturel pour les plantes."
+ },
+ {
+  "key": "nature-1148",
+  "concept": "nature.plants.v11_bambou_pousse",
+  "label": "Le bambou pousse vite",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Certains bambous peuvent grandir de plusieurs dizaines de centimètres en une seule journée.",
+  "answer": true,
+  "explanation": "Vrai : certaines espèces gagnent près d'un mètre par jour ! Le bambou est l'une des plantes qui poussent le plus vite au monde."
+ },
+ {
+  "key": "nature-1149",
+  "concept": "nature.plants.v11_chene_500",
+  "label": "L'âge du chêne",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Un chêne peut vivre plus de 500 ans.",
+  "answer": true,
+  "explanation": "Vrai : certains chênes en France ont plus de 1 000 ans, comme le chêne d'Allouville, en Normandie, qui abrite une chapelle."
+ },
+ {
+  "key": "nature-1150",
+  "concept": "nature.plants.v11_chataigne",
+  "label": "Les châtaignes",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel arbre produit les châtaignes qu'on mange grillées ?",
+  "options": [
+   "Le châtaignier*",
+   "Le marronnier",
+   "Le noisetier",
+   "Le hêtre"
+  ],
+  "explanation": "Elles poussent dans une bogue très piquante. Attention : le marron d'Inde du marronnier, lui, ne se mange pas."
+ },
+ {
+  "key": "nature-1151",
+  "concept": "nature.plants.v11_farine_ble",
+  "label": "La farine",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Avec quelle céréale fait-on surtout la farine du pain ?",
+  "options": [
+   "Le blé*",
+   "Le maïs",
+   "Le riz",
+   "Le sarrasin"
+  ],
+  "explanation": "Les grains de blé sont moulus en farine. Le sarrasin, lui, sert aux galettes bretonnes."
+ },
+ {
+  "key": "nature-1152",
+  "concept": "nature.plants.v11_brocoli",
+  "label": "Le brocoli",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel légume vert ressemble à un petit arbre ?",
+  "options": [
+   "Le brocoli*",
+   "Le poireau",
+   "Le haricot",
+   "Le concombre"
+  ],
+  "explanation": "On mange en fait ses boutons de fleurs, avant qu'ils ne s'ouvrent. C'est un cousin du chou."
+ },
+ {
+  "key": "nature-1153",
+  "concept": "nature.plants.v11_pollen",
+  "label": "Le pollen",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce que le pollen ?",
+  "options": [
+   "Une fine poudre produite par les fleurs pour se reproduire*",
+   "Le jus sucré des fleurs",
+   "La sève des arbres",
+   "Une maladie des plantes"
+  ],
+  "explanation": "Transporté par le vent ou les insectes, il permet aux fleurs de faire des graines. C'est aussi lui qui donne le rhume des foins."
+ },
+ {
+  "key": "nature-1154",
+  "concept": "nature.plants.v11_nectar",
+  "label": "Le nectar",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel liquide sucré les abeilles récoltent-elles dans les fleurs pour faire le miel ?",
+  "options": [
+   "Le nectar*",
+   "La sève",
+   "Le pollen",
+   "La rosée"
+  ],
+  "explanation": "Les fleurs offrent leur nectar aux insectes ; en échange, ils transportent leur pollen de fleur en fleur."
+ },
+ {
+  "key": "nature-1155",
+  "concept": "nature.plants.v11_plantes_produits",
+  "label": "Ce qu'on tire des plantes",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque plante à ce qu'on en tire.",
+  "pairs": [
+   [
+    "Le coton",
+    "Des tissus"
+   ],
+   [
+    "Le blé",
+    "De la farine"
+   ],
+   [
+    "La canne à sucre",
+    "Du sucre"
+   ],
+   [
+    "L'olivier",
+    "De l'huile"
+   ]
+  ],
+  "explanation": "Les plantes nous habillent et nous nourrissent : coton pour les tissus, blé pour la farine, canne pour le sucre, olives pour l'huile."
+ },
+ {
+  "key": "nature-1156",
+  "concept": "nature.plants.v11_vie_plante",
+  "label": "La vie d'une plante",
+  "type": "ordering",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre la vie d'une plante à fleurs.",
+  "items": [
+   "La graine",
+   "La petite pousse",
+   "La plante et ses feuilles",
+   "La fleur",
+   "Le fruit et ses graines"
+  ],
+  "explanation": "La graine germe, la plante grandit, fleurit, puis la fleur devient un fruit plein de nouvelles graines : le cycle recommence."
+ },
+ {
+  "key": "nature-1157",
+  "concept": "nature.plants.v11_cerisier_japon",
+  "label": "Cerisiers du Japon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel arbre aux fleurs roses est fêté chaque printemps au Japon ?",
+  "options": [
+   "Le cerisier*",
+   "Le pommier",
+   "Le magnolia",
+   "Le pin"
+  ],
+  "explanation": "Les Japonais pique-niquent sous les cerisiers en fleurs : c'est le « hanami ». La floraison ne dure qu'une à deux semaines."
+ },
+ {
+  "key": "nature-1158",
+  "concept": "nature.plants.v11_rhume_foins",
+  "label": "Le rhume des foins",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelles plantes font le plus éternuer les allergiques à la fin du printemps ?",
+  "options": [
+   "Les graminées (herbes des prés)*",
+   "Les cactus",
+   "Les nénuphars",
+   "Les champignons"
+  ],
+  "explanation": "Leur pollen, très léger, voyage avec le vent par milliards de grains. Le bouleau donne aussi beaucoup d'allergies."
+ },
+ {
+  "key": "nature-1159",
+  "concept": "nature.plants.v11_petits_pois",
+  "label": "Les petits pois",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel légume pousse dans une gousse ?",
+  "options": [
+   "Le petit pois*",
+   "La pomme de terre",
+   "La carotte",
+   "Le radis"
+  ],
+  "explanation": "On ouvre la gousse pour récupérer les petits pois, qui sont des graines. Les haricots poussent aussi en gousses."
+ },
+ {
+  "key": "nature-1160",
+  "concept": "nature.plants.v11_pasteque",
+  "label": "La pastèque",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel gros fruit à la chair rouge et aux pépins noirs est rafraîchissant l'été ?",
+  "options": [
+   "La pastèque*",
+   "Le melon",
+   "La citrouille",
+   "La papaye"
+  ],
+  "explanation": "La pastèque contient plus de 90 % d'eau. Elle vient d'Afrique et peut peser plus de 10 kg."
+ },
+ {
+  "key": "nature-1161",
+  "concept": "nature.marine.v11_crabe_cote",
+  "label": "Le crabe",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal à carapace marche de côté sur la plage ?",
+  "options": [
+   "Le crabe*",
+   "Le homard",
+   "La crevette",
+   "L'oursin"
+  ],
+  "explanation": "Ses pattes se plient sur le côté : c'est plus rapide pour lui de marcher en crabe !"
+ },
+ {
+  "key": "nature-1162",
+  "concept": "nature.marine.v11_oursin",
+  "label": "L'oursin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal marin couvert de piquants vit sur les rochers ?",
+  "options": [
+   "L'oursin*",
+   "L'étoile de mer",
+   "La moule",
+   "La méduse"
+  ],
+  "explanation": "Ses piquants le protègent et l'aident à se déplacer. Mieux vaut porter des sandales sur les rochers !"
+ },
+ {
+  "key": "nature-1163",
+  "concept": "nature.marine.v11_dauphin_sauts",
+  "label": "Le dauphin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel mammifère marin vit en groupe et fait souvent des sauts hors de l'eau ?",
+  "options": [
+   "Le dauphin*",
+   "Le requin",
+   "Le thon",
+   "La sardine"
+  ],
+  "explanation": "Très intelligent, il communique par sifflements. Ses sauts lui servent à respirer, à se déplacer et sans doute à jouer."
+ },
+ {
+  "key": "nature-1164",
+  "concept": "nature.marine.v11_phoque_repas",
+  "label": "Repas du phoque",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que mange surtout le phoque ?",
+  "options": [
+   "Des poissons*",
+   "Des algues",
+   "Des fruits de mer uniquement",
+   "Des oiseaux"
+  ],
+  "explanation": "Il plonge pour chasser poissons et calmars, et peut rester plus de 15 minutes sous l'eau."
+ },
+ {
+  "key": "nature-1165",
+  "concept": "nature.marine.v11_moules",
+  "label": "Les moules",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel coquillage s'accroche aux rochers en grappes et se mange avec des frites en Belgique ?",
+  "options": [
+   "La moule*",
+   "L'huître",
+   "La coque",
+   "Le bulot"
+  ],
+  "explanation": "Elle s'accroche grâce à des filaments, le byssus. En France, on l'élève sur des pieux en bois appelés bouchots."
+ },
+ {
+  "key": "nature-1166",
+  "concept": "nature.marine.v11_algue",
+  "label": "Les algues",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'une algue ?",
+  "options": [
+   "Un être vivant qui vit dans l'eau et fabrique sa nourriture avec la lumière*",
+   "Un petit poisson",
+   "Un morceau de corail",
+   "Un champignon de mer"
+  ],
+  "explanation": "Comme les plantes, les algues utilisent la lumière du soleil. Certaines se mangent, comme le nori des sushis."
+ },
+ {
+  "key": "nature-1167",
+  "concept": "nature.marine.v11_maree_basse",
+  "label": "Marée basse",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que se passe-t-il à marée basse ?",
+  "options": [
+   "La mer se retire et découvre la plage*",
+   "La mer monte très haut",
+   "L'eau devient douce",
+   "Les vagues s'arrêtent"
+  ],
+  "explanation": "C'est le moment d'aller à la pêche à pied : coques, crevettes et crabes restent dans les flaques."
+ },
+ {
+  "key": "nature-1168",
+  "concept": "nature.marine.v11_meduse",
+  "label": "La méduse",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel animal marin transparent, en forme de cloche, peut piquer les baigneurs ?",
+  "options": [
+   "La méduse*",
+   "L'étoile de mer",
+   "L'oursin",
+   "La crevette"
+  ],
+  "explanation": "Ses filaments portent de minuscules dards. Une méduse est faite à plus de 95 % d'eau."
+ },
+ {
+  "key": "nature-1169",
+  "concept": "nature.marine.v11_requins_dinosaures",
+  "label": "Requins et dinosaures",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Les requins existaient déjà avant les dinosaures.",
+  "answer": true,
+  "explanation": "Vrai : les premiers requins sont apparus il y a environ 450 millions d'années, plus de 200 millions d'années avant les dinosaures."
+ },
+ {
+  "key": "nature-1170",
+  "concept": "nature.marine.v11_eau_mer_soif",
+  "label": "Boire l'eau de mer",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Boire de l'eau de mer aide à étancher sa soif.",
+  "answer": false,
+  "explanation": "Faux : elle est bien trop salée. Pour éliminer ce sel, le corps perd encore plus d'eau qu'il n'en a bu."
+ },
+ {
+  "key": "nature-1171",
+  "concept": "nature.marine.v11_etoile_poisson",
+  "label": "L'étoile de mer",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "L'étoile de mer est un poisson.",
+  "answer": false,
+  "explanation": "Faux : c'est un échinoderme, comme l'oursin. Elle n'a ni nageoires ni branchies et se déplace grâce à des centaines de petits pieds."
+ },
+ {
+  "key": "nature-1172",
+  "concept": "nature.marine.v11_tortue_retour",
+  "label": "Le retour des tortues",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Les tortues marines reviennent souvent pondre sur la plage où elles sont nées.",
+  "answer": true,
+  "explanation": "Vrai : elles se repèrent notamment grâce au champ magnétique de la Terre, même après des milliers de kilomètres."
+ },
+ {
+  "key": "nature-1173",
+  "concept": "nature.marine.v11_phoque_apnee",
+  "label": "Plongée du phoque",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Un phoque peut rester plus d'un quart d'heure sous l'eau sans respirer.",
+  "answer": true,
+  "explanation": "Vrai : beaucoup de phoques tiennent 20 à 30 minutes. L'éléphant de mer peut même dépasser une heure."
+ },
+ {
+  "key": "nature-1174",
+  "concept": "nature.marine.v11_crevette_rose",
+  "label": "La crevette",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel petit crustacé devient rose à la cuisson et se mange souvent à l'apéritif ?",
+  "options": [
+   "La crevette*",
+   "Le crabe",
+   "La moule",
+   "L'oursin"
+  ],
+  "explanation": "La cuisson libère un pigment orangé caché dans sa carapace. Vivante, la crevette est souvent grise ou transparente."
+ },
+ {
+  "key": "nature-1175",
+  "concept": "nature.marine.v11_nageoire_caudale",
+  "label": "Nageoire de la queue",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle la nageoire de la queue d'un poisson ou d'une baleine ?",
+  "options": [
+   "La nageoire caudale*",
+   "La nageoire dorsale",
+   "La branchie",
+   "L'évent"
+  ],
+  "explanation": "Chez les poissons, elle est verticale. Chez les baleines et les dauphins, elle est horizontale et bat de haut en bas."
+ },
+ {
+  "key": "nature-1176",
+  "concept": "nature.marine.v11_poisson_plat",
+  "label": "Poisson plat",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel poisson plat vit couché sur le fond de la mer, avec les deux yeux du même côté ?",
+  "options": [
+   "La sole*",
+   "Le thon",
+   "Le saumon",
+   "La sardine"
+  ],
+  "explanation": "Bébé, la sole nage comme les autres poissons. En grandissant, un œil passe de l'autre côté de sa tête !"
+ },
+ {
+  "key": "nature-1177",
+  "concept": "nature.marine.v11_sardine",
+  "label": "La sardine",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel petit poisson argenté nage en immenses bancs et se mange souvent en boîte ?",
+  "options": [
+   "La sardine*",
+   "Le requin",
+   "La raie",
+   "L'espadon"
+  ],
+  "explanation": "Nager en banc la protège : face à des milliers de poissons, un prédateur a du mal à en viser un seul."
+ },
+ {
+  "key": "nature-1178",
+  "concept": "nature.marine.v11_raie",
+  "label": "La raie",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel poisson plat en forme de losange semble voler dans l'eau grâce à ses grandes nageoires ?",
+  "options": [
+   "La raie*",
+   "Le poisson-chat",
+   "L'anguille",
+   "Le hareng"
+  ],
+  "explanation": "Comme le requin, son cousin, la raie a un squelette en cartilage. La raie manta peut dépasser 6 mètres d'envergure."
+ },
+ {
+  "key": "nature-1179",
+  "concept": "nature.marine.v11_mediterranee",
+  "label": "La Méditerranée",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle mer borde le sud de la France ?",
+  "options": [
+   "La Méditerranée*",
+   "La mer du Nord",
+   "La Manche",
+   "La mer Baltique"
+  ],
+  "explanation": "Elle baigne la Provence, la Côte d'Azur, le Languedoc et la Corse. Ses marées sont presque invisibles."
+ },
+ {
+  "key": "nature-1180",
+  "concept": "nature.marine.v11_mer_du_nord",
+  "label": "La mer du Nord",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle mer borde la côte française de Dunkerque, jusqu'à la Belgique ?",
+  "options": [
+   "La mer du Nord*",
+   "La Méditerranée",
+   "La mer Baltique",
+   "La mer Noire"
+  ],
+  "explanation": "Peu profonde et souvent agitée, elle baigne aussi les Pays-Bas, l'Allemagne, le Danemark et la Norvège."
+ },
+ {
+  "key": "nature-1181",
+  "concept": "nature.marine.v11_vagues_vent",
+  "label": "D'où viennent les vagues ?",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui forme la plupart des vagues ?",
+  "options": [
+   "Le vent qui souffle sur la mer*",
+   "Les poissons",
+   "Le sel",
+   "Les bateaux"
+  ],
+  "explanation": "Plus le vent souffle fort, longtemps et loin, plus les vagues sont hautes."
+ },
+ {
+  "key": "nature-1182",
+  "concept": "nature.marine.v11_macareux",
+  "label": "Le macareux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel oiseau marin au bec coloré, surnommé « perroquet de mer », niche en Bretagne et en Islande ?",
+  "options": [
+   "Le macareux*",
+   "La mouette",
+   "Le pélican",
+   "Le cormoran"
+  ],
+  "explanation": "Il peut tenir plus de dix petits poissons à la fois dans son bec. En France, on le voit surtout aux Sept-Îles."
+ },
+ {
+  "key": "nature-1183",
+  "concept": "nature.marine.v11_seiche_couleur",
+  "label": "Camouflage",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel animal marin peut changer de couleur en un instant pour se cacher ?",
+  "options": [
+   "La seiche*",
+   "La moule",
+   "L'huître",
+   "Le thon"
+  ],
+  "explanation": "Sa peau contient des milliers de petites poches de couleur qu'elle contrôle. La pieuvre sait le faire aussi."
+ },
+ {
+  "key": "nature-1184",
+  "concept": "nature.marine.v11_coquillages",
+  "label": "Les coquillages",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que sont les coquillages ramassés sur la plage ?",
+  "options": [
+   "Les coquilles d'animaux, les mollusques*",
+   "Des pierres polies par la mer",
+   "Des os de poissons",
+   "Des morceaux de corail"
+  ],
+  "explanation": "Moules, coques, coquilles Saint-Jacques : l'animal fabrique lui-même sa coquille, qui reste après sa mort."
+ },
+ {
+  "key": "nature-1185",
+  "concept": "nature.marine.v11_defenses_marines",
+  "label": "Se protéger en mer",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque animal marin à sa façon de se protéger.",
+  "pairs": [
+   [
+    "La tortue",
+    "Sa carapace"
+   ],
+   [
+    "L'oursin",
+    "Ses piquants"
+   ],
+   [
+    "La pieuvre",
+    "Son encre"
+   ],
+   [
+    "Le poisson-globe",
+    "Il se gonfle"
+   ]
+  ],
+  "explanation": "Chacun sa défense : se cacher dans une carapace, piquer, disparaître dans un nuage d'encre ou devenir une grosse boule."
+ },
+ {
+  "key": "nature-1186",
+  "concept": "nature.marine.v11_taille_oceans",
+  "label": "Les océans",
+  "type": "ordering",
+  "difficulty": 35,
+  "prompt": "Classe ces océans du plus grand au plus petit.",
+  "items": [
+   "Pacifique",
+   "Atlantique",
+   "Indien",
+   "Austral",
+   "Arctique"
+  ],
+  "explanation": "Le Pacifique, à lui seul, est plus grand que toutes les terres émergées réunies. L'Arctique est le plus petit."
+ },
+ {
+  "key": "nature-1187",
+  "concept": "nature.marine.v11_maree_nom",
+  "label": "Monter et descendre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on le mouvement régulier de montée et de descente de la mer ?",
+  "options": [
+   "La marée*",
+   "La houle",
+   "Le courant",
+   "La vague"
+  ],
+  "explanation": "Sur l'Atlantique, la mer monte et descend environ deux fois par jour, à cause de la Lune."
+ },
+ {
+  "key": "nature-1188",
+  "concept": "nature.marine.v11_hippocampe_nom",
+  "label": "Cheval de mer",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel petit poisson a une tête qui ressemble à celle d'un cheval ?",
+  "options": [
+   "L'hippocampe*",
+   "Le poisson-clown",
+   "Le poisson-chat",
+   "L'espadon"
+  ],
+  "explanation": "Son nom vient du grec « cheval ». Il nage debout et s'accroche aux algues avec sa queue."
+ },
+ {
+  "key": "nature-1189",
+  "concept": "nature.marine.v11_plastique_tortues",
+  "label": "Danger pour les tortues",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel déchet les tortues marines confondent-elles avec des méduses ?",
+  "options": [
+   "Les sacs en plastique*",
+   "Le bois flotté",
+   "Les algues",
+   "Les coquillages"
+  ],
+  "explanation": "Elles les avalent en croyant manger, ce qui peut les tuer. Ramasser ses déchets à la plage les protège."
+ },
+ {
+  "key": "nature-1190",
+  "concept": "nature.marine.v11_abysses_noir",
+  "label": "Les abysses",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Dans les grandes profondeurs de l'océan, il fait toujours complètement noir.",
+  "answer": true,
+  "explanation": "Vrai : la lumière du soleil ne descend pas au-delà d'environ 1 000 mètres. Certains animaux y fabriquent leur propre lumière."
+ },
+ {
+  "key": "nature-1191",
+  "concept": "nature.earth.v11_mont_blanc",
+  "label": "Le mont Blanc",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le plus haut sommet de France ?",
+  "options": [
+   "Le mont Blanc*",
+   "Le puy de Dôme",
+   "Le mont Ventoux",
+   "Le Vignemale"
+  ],
+  "explanation": "Il culmine à environ 4 806 mètres, dans les Alpes, à la frontière entre la France et l'Italie."
+ },
+ {
+  "key": "nature-1192",
+  "concept": "nature.earth.v11_cratere",
+  "label": "Le cratère",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle l'ouverture au sommet d'un volcan ?",
+  "options": [
+   "Le cratère*",
+   "La faille",
+   "La vallée",
+   "La grotte"
+  ],
+  "explanation": "C'est par là que sortent la lave, les cendres et les gaz pendant une éruption."
+ },
+ {
+  "key": "nature-1193",
+  "concept": "nature.earth.v11_forme_terre",
+  "label": "Forme de la Terre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle est la forme de la Terre ?",
+  "options": [
+   "Une boule, un peu aplatie aux pôles*",
+   "Un disque plat",
+   "Un cube",
+   "Un ovale très allongé"
+  ],
+  "explanation": "Vue de l'espace, la Terre est presque ronde. Sa rotation l'aplatit très légèrement aux pôles."
+ },
+ {
+  "key": "nature-1194",
+  "concept": "nature.earth.v11_tour_soleil",
+  "label": "Le tour du Soleil",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Combien de temps la Terre met-elle pour faire le tour du Soleil ?",
+  "options": [
+   "Environ un an*",
+   "Un jour",
+   "Un mois",
+   "Dix ans"
+  ],
+  "explanation": "365 jours et 6 heures environ : c'est pour rattraper ces heures en trop qu'on ajoute un 29 février tous les quatre ans."
+ },
+ {
+  "key": "nature-1195",
+  "concept": "nature.earth.v11_tour_sur_elle",
+  "label": "Rotation de la Terre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Combien de temps la Terre met-elle pour tourner sur elle-même ?",
+  "options": [
+   "Environ 24 heures*",
+   "Une heure",
+   "Une semaine",
+   "Un an"
+  ],
+  "explanation": "C'est ce qui fait le jour et la nuit : la moitié de la Terre tournée vers le Soleil est dans le jour."
+ },
+ {
+  "key": "nature-1196",
+  "concept": "nature.earth.v11_jour_nuit",
+  "label": "Le jour et la nuit",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qui provoque l'alternance du jour et de la nuit ?",
+  "options": [
+   "La Terre qui tourne sur elle-même*",
+   "La Lune qui cache le Soleil",
+   "Le Soleil qui s'éteint",
+   "Les nuages"
+  ],
+  "explanation": "Le Soleil ne bouge pas autour de nous : c'est la Terre qui tourne, et nous emmène tour à tour vers sa lumière et vers l'ombre."
+ },
+ {
+  "key": "nature-1197",
+  "concept": "nature.earth.v11_nuages_eau",
+  "label": "Les nuages",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "De quoi sont faits les nuages ?",
+  "options": [
+   "De minuscules gouttes d'eau ou cristaux de glace*",
+   "De fumée",
+   "De poussière seulement",
+   "De gaz invisibles"
+  ],
+  "explanation": "Ces gouttes sont si petites qu'elles flottent dans l'air. Quand elles grossissent, elles tombent : il pleut."
+ },
+ {
+  "key": "nature-1198",
+  "concept": "nature.earth.v11_sahara",
+  "label": "Le Sahara",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Sur quel continent se trouve le désert du Sahara ?",
+  "options": [
+   "L'Afrique*",
+   "L'Asie",
+   "L'Amérique",
+   "L'Australie"
+  ],
+  "explanation": "C'est le plus grand désert chaud du monde, presque aussi grand que les États-Unis."
+ },
+ {
+  "key": "nature-1199",
+  "concept": "nature.earth.v11_ile",
+  "label": "Une île",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce qu'une île ?",
+  "options": [
+   "Une terre entourée d'eau de tous les côtés*",
+   "Une montagne sous la mer",
+   "Une plage au bord d'un lac",
+   "Un rocher au milieu d'un champ"
+  ],
+  "explanation": "La Corse, la Réunion ou l'île de Ré sont des îles. La plus grande du monde est le Groenland."
+ },
+ {
+  "key": "nature-1200",
+  "concept": "nature.earth.v11_presqu_ile",
+  "label": "Une presqu'île",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'une presqu'île ?",
+  "options": [
+   "Une terre entourée d'eau, sauf d'un côté*",
+   "Une très petite île",
+   "Une île qui flotte",
+   "Une île au milieu d'un fleuve"
+  ],
+  "explanation": "Elle est reliée au continent par un seul côté, comme la presqu'île de Quiberon ou celle de Giens."
+ },
+ {
+  "key": "nature-1201",
+  "concept": "nature.earth.v11_lac",
+  "label": "Un lac",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on une grande étendue d'eau douce entourée de terres ?",
+  "options": [
+   "Un lac*",
+   "Une mer",
+   "Un océan",
+   "Un golfe"
+  ],
+  "explanation": "Le lac Léman, entre la France et la Suisse, est l'un des plus grands lacs d'Europe de l'Ouest."
+ },
+ {
+  "key": "nature-1202",
+  "concept": "nature.earth.v11_source",
+  "label": "La source",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle l'endroit où naît une rivière ?",
+  "options": [
+   "La source*",
+   "L'embouchure",
+   "Le delta",
+   "L'estuaire"
+  ],
+  "explanation": "La rivière descend ensuite jusqu'à son embouchure, là où elle se jette dans un fleuve, un lac ou la mer."
+ },
+ {
+  "key": "nature-1203",
+  "concept": "nature.earth.v11_lune_soleil_distance",
+  "label": "Plus près du Soleil ?",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "La Lune est plus proche de la Terre que le Soleil.",
+  "answer": true,
+  "explanation": "Vrai : la Lune est à environ 384 000 km de nous, le Soleil à 150 millions de km, près de 400 fois plus loin."
+ },
+ {
+  "key": "nature-1204",
+  "concept": "nature.earth.v11_eau_gele_0",
+  "label": "L'eau gèle",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "L'eau douce gèle à 0 °C.",
+  "answer": true,
+  "explanation": "Vrai, à la pression habituelle. L'eau de mer, plus salée, ne gèle que vers -2 °C."
+ },
+ {
+  "key": "nature-1205",
+  "concept": "nature.earth.v11_pluie_bretagne",
+  "label": "Pluie en Bretagne",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Il pleut plus souvent à Brest qu'à Marseille.",
+  "answer": true,
+  "explanation": "Vrai : environ 160 jours de pluie par an à Brest, contre une soixantaine à Marseille, l'une des villes les plus ensoleillées de France."
+ },
+ {
+  "key": "nature-1206",
+  "concept": "nature.earth.v11_soleil_est",
+  "label": "Le lever du Soleil",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Le Soleil se lève à l'est.",
+  "answer": true,
+  "explanation": "Vrai : la Terre tourne d'ouest en est, donc le Soleil semble se lever à l'est et se coucher à l'ouest."
+ },
+ {
+  "key": "nature-1207",
+  "concept": "nature.earth.v11_seisme_france",
+  "label": "Séismes en France",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Il peut y avoir des tremblements de terre en France métropolitaine.",
+  "answer": true,
+  "explanation": "Vrai : surtout dans les Alpes, les Pyrénées et en Provence. En 1909, un séisme a fait une quarantaine de morts près d'Aix-en-Provence."
+ },
+ {
+  "key": "nature-1208",
+  "concept": "nature.earth.v11_forets_france",
+  "label": "Forêts françaises",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "La forêt couvre environ un tiers de la France métropolitaine.",
+  "answer": true,
+  "explanation": "Vrai : environ 31 % du territoire. Elle a même presque doublé depuis le milieu du XIXe siècle."
+ },
+ {
+  "key": "nature-1209",
+  "concept": "nature.earth.v11_cause_rechauffement",
+  "label": "Réchauffement",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle est la principale cause du réchauffement climatique actuel ?",
+  "options": [
+   "Les gaz à effet de serre émis par les activités humaines*",
+   "Le Soleil qui chauffe plus fort",
+   "Les éruptions volcaniques",
+   "La Lune qui s'éloigne"
+  ],
+  "explanation": "Brûler du pétrole, du charbon et du gaz rejette du CO2, qui retient la chaleur autour de la Terre."
+ },
+ {
+  "key": "nature-1210",
+  "concept": "nature.earth.v11_bouteille_plastique",
+  "label": "Bouteille en plastique",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Combien de temps faut-il à une bouteille en plastique pour se dégrader dans la nature ?",
+  "options": [
+   "Plusieurs centaines d'années*",
+   "Quelques jours",
+   "Un mois",
+   "Un an"
+  ],
+  "explanation": "Elle se casse en tout petits morceaux, les microplastiques, qui restent dans les sols et les océans."
+ },
+ {
+  "key": "nature-1211",
+  "concept": "nature.earth.v11_eolienne",
+  "label": "L'éolienne",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle énergie fait tourner une éolienne ?",
+  "options": [
+   "Le vent*",
+   "Le soleil",
+   "L'eau",
+   "Le charbon"
+  ],
+  "explanation": "Ses pales tournent avec le vent et font fonctionner un générateur, qui produit de l'électricité."
+ },
+ {
+  "key": "nature-1212",
+  "concept": "nature.earth.v11_renouvelable",
+  "label": "Énergie renouvelable",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Laquelle de ces énergies est renouvelable ?",
+  "options": [
+   "L'énergie solaire*",
+   "Le pétrole",
+   "Le charbon",
+   "Le gaz naturel"
+  ],
+  "explanation": "Le soleil, le vent et l'eau ne s'épuisent pas. Le pétrole, le charbon et le gaz ont mis des millions d'années à se former."
+ },
+ {
+  "key": "nature-1213",
+  "concept": "nature.earth.v11_atmosphere",
+  "label": "L'atmosphère",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle la couche d'air qui entoure la Terre ?",
+  "options": [
+   "L'atmosphère*",
+   "La croûte",
+   "Le manteau",
+   "La banquise"
+  ],
+  "explanation": "Elle contient l'air que nous respirons et nous protège des rayons du soleil. Plus on monte, plus l'air est rare."
+ },
+ {
+  "key": "nature-1214",
+  "concept": "nature.earth.v11_foret_tropicale",
+  "label": "Forêt tropicale",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment appelle-t-on la forêt très dense et humide des pays chauds ?",
+  "options": [
+   "La forêt tropicale*",
+   "La taïga",
+   "La lande",
+   "La toundra"
+  ],
+  "explanation": "Elle abrite plus de la moitié des espèces d'animaux et de plantes de la planète. L'Amazonie est la plus grande."
+ },
+ {
+  "key": "nature-1215",
+  "concept": "nature.earth.v11_savane",
+  "label": "La savane",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel paysage d'Afrique, couvert de hautes herbes et de quelques arbres, abrite lions et zèbres ?",
+  "options": [
+   "La savane*",
+   "La toundra",
+   "La banquise",
+   "La taïga"
+  ],
+  "explanation": "Il y alterne une saison sèche et une saison des pluies. Les grands troupeaux migrent pour suivre l'herbe fraîche."
+ },
+ {
+  "key": "nature-1216",
+  "concept": "nature.earth.v11_signes_saisons",
+  "label": "Les saisons",
+  "type": "pairs",
+  "difficulty": 15,
+  "prompt": "Associe chaque signe de la nature à sa saison, en France.",
+  "pairs": [
+   [
+    "Les feuilles tombent",
+    "L'automne"
+   ],
+   [
+    "Les bourgeons s'ouvrent",
+    "Le printemps"
+   ],
+   [
+    "Il neige",
+    "L'hiver"
+   ],
+   [
+    "On moissonne le blé",
+    "L'été"
+   ]
+  ],
+  "explanation": "Chaque saison a ses signes : bourgeons au printemps, moissons en été, feuilles mortes en automne et neige en hiver."
+ },
+ {
+  "key": "nature-1217",
+  "concept": "nature.earth.v11_hauteur_sommets",
+  "label": "Les sommets",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Classe ces sommets du plus haut au moins haut.",
+  "items": [
+   "L'Everest",
+   "Le Kilimandjaro",
+   "Le mont Blanc",
+   "Le puy de Dôme"
+  ],
+  "explanation": "Everest : 8 849 m. Kilimandjaro : 5 895 m. Mont Blanc : environ 4 806 m. Puy de Dôme : 1 465 m."
+ },
+ {
+  "key": "nature-1218",
+  "concept": "nature.earth.v11_iceberg",
+  "label": "L'iceberg",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle un gros bloc de glace qui flotte en mer après s'être détaché d'un glacier ?",
+  "options": [
+   "Un iceberg*",
+   "Un glaçon",
+   "Une avalanche",
+   "Un geyser"
+  ],
+  "explanation": "On n'en voit qu'environ un dixième : le reste est caché sous l'eau. C'est un iceberg qui a coulé le Titanic."
+ },
+ {
+  "key": "nature-1219",
+  "concept": "nature.earth.v11_avalanche",
+  "label": "L'avalanche",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce qu'une avalanche ?",
+  "options": [
+   "Une masse de neige qui dévale une pente*",
+   "Une pluie très forte",
+   "Un vent glacé",
+   "Une coulée de lave"
+  ],
+  "explanation": "En montagne, on surveille le risque d'avalanche chaque jour, surtout après de fortes chutes de neige."
+ },
+ {
+  "key": "nature-1220",
+  "concept": "nature.earth.v11_boussole",
+  "label": "La boussole",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel instrument indique le nord ?",
+  "options": [
+   "La boussole*",
+   "Le thermomètre",
+   "Le baromètre",
+   "Le sablier"
+  ],
+  "explanation": "Son aiguille aimantée s'aligne sur le champ magnétique de la Terre. Elle a été inventée en Chine."
+ }
+]
