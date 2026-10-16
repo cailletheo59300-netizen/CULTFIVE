@@ -122,7 +122,7 @@ final class AdsController {
         }
         let options = ServerSideVerificationOptions()
         options.userIdentifier = userId.uuidString.lowercased()
-        options.customRewardString = "\(kind.rawValue):\(ref ?? "")"
+        options.customRewardText = "\(kind.rawValue):\(ref ?? "")"
         ad.serverSideVerificationOptions = options
         let waiter = PresentationWaiter()
         ad.fullScreenContentDelegate = waiter
