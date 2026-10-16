@@ -152,9 +152,14 @@ Le Pass+ (3,99 €, une saison) = **plus aucune pub** pendant la saison + **la p
 7. Joindre l'achat intégré à la version 1.2 (case « Achats intégrés » de la page de la version) au moment de l'envoi.
 
 ### Nouveautés de la 1.2 (à coller)
-> - Nouveau : le Pass+ de la saison 1 ! Plus aucune pub pendant toute la saison, et toute la piste Pass+ du pass (jetons Prestige, coffrets de catégorie, cadres, dos de cartes, cadre animé…). Déjà avancé ? Tu récupères d'un coup les paliers atteints.
-> - Avec le Pass+, les bonus se prennent sans vidéo : pochette gratuite, neurones doublés, coffre offert, « Corrige tes erreurs », série sauvée.
-> - Coffrets de catégorie : choisis ton domaine et vois les cartes avant d'ouvrir.
+> - Nouveau : le Pass+ de la saison ! Plus aucune pub pendant toute la saison, et toute la piste Pass+ du pass (jetons Prestige, coffrets de catégorie, cadres, dos de cartes, cadre animé…). Déjà avancé ? Tu récupères d'un coup les paliers atteints.
+> - Ligues ouvertes : des quiz identiques pour tous, à jouer quand tu veux, sans chrono, et un classement général. Podium et trophée « Vainqueur de ligue » à la fin.
+> - Album plus clair : filtres (cartes manquantes, possédées, brillantes, par rareté), onglets de pages et légende des cartes.
+> - Touche un défi pour aller le faire directement.
+> - Pochettes : choisis comment l'ouvrir (neurones, ticket ou pochette gratuite) et fais glisser les cartes du doigt.
+> - Petites visites guidées sur chaque écran, à revoir avec le bouton « ? ».
+> - 120 nouvelles questions de nature, et un 5 du jour plus varié.
+> - L'app tient beaucoup mieux quand la connexion est mauvaise.
 
 ### Notes pour Apple (en plus de la section 3)
 > The app offers one in-app purchase, "Pass+" (consumable, bought again each season ≈ 12 weeks; the benefit is stored server-side on the player's account): it removes all ads for the current season and unlocks the paid track of the season pass. Open Settings (profile tab → gear) → "Pass+", or the Album tab → season pass. Purchases are verified server-side (signed StoreKit 2 transaction). "Restore purchases" is on the same screen.
