@@ -140,6 +140,19 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertTrue(claimed.claimed.allSatisfy { $0.track == "paid" })
     }
 
+    func testOpenLeague() throws {
+        let league: LeagueStandings = try fixture("league_open")
+        XCTAssertTrue(league.isOpen)
+        XCTAssertEqual(league.openEnded, true)
+        XCTAssertEqual(league.quizzes?.count, 3)
+        XCTAssertEqual(league.quizzes?.first?.state, "done")
+        XCTAssertEqual(league.standings.first?.points, 5, "classement général : le meilleur total en tête")
+        XCTAssertEqual(league.podium?.minPlayers, 3)
+        XCTAssertNil(league.myToday, "pas de quiz du jour dans une ligue ouverte")
+        let old: LeagueStandings = try fixture("league")
+        XCTAssertFalse(old.isOpen)
+    }
+
     func testQuestsAndRecap() throws {
         let quests: QuestsOverview = try fixture("quests")
         XCTAssertEqual(quests.day.quests.count, 3)

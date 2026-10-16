@@ -77,6 +77,7 @@ enum LeagueText {
         switch code {
         case "1w": return "1 semaine"
         case "2w": return "2 semaines"
+        case "open": return "sans fin"
         default: return "1 mois"
         }
     }
@@ -90,6 +91,9 @@ enum LeagueText {
         let domains = s.domains ?? []
         let where_ = domains.isEmpty ? "tous les domaines"
             : domains.count <= 2 ? domains.map(DomainPalette.fallbackName).joined(separator: ", ") : "\(domains.count) domaines"
+        if s.duration == "open" {
+            return "\(s.questionCount) questions par quiz · \(where_) · \(difficulty(s.difficulty).lowercased()) · sans chrono"
+        }
         return "\(s.questionCount) questions/jour · \(where_) · \(difficulty(s.difficulty).lowercased()) · \(duration(s.duration))"
     }
 
@@ -170,11 +174,24 @@ struct NewLeagueSheet: View {
                         .font(.cfTitle3)
                         .padding(.vertical, Space.s)
                         .overlay(alignment: .bottom) { Hairline(color: .ink) }
-                    Text("Chaque jour, un quiz propre à la ligue, le même pour tous les membres. Indépendant du \(Brand.dailyName) de Brainlix, sans effet sur l'Elo.")
+                    option("Format") {
+                        chip("Ouverte", on: open) { draft.format = "open" }
+                        chip("Quiz du jour", on: !open) { draft.format = "daily" }
+                    }
+                    Text(open ? "Des quiz identiques pour tous, à jouer quand on veut, sans chrono. Un classement général sur tous les quiz. Sans effet sur l'Elo."
+                              : "Chaque jour, un quiz propre à la ligue, le même pour tous les membres, à faire avant minuit. Indépendant du \(Brand.dailyName) de Brainlix, sans effet sur l'Elo.")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    option("Questions par jour") {
+                        .fixedSize(horizontal: false, vertical: true)
+                    option(open ? "Questions par quiz" : "Questions par jour") {
                         ForEach(LeagueSettings.counts, id: \.self) { n in
                             chip("\(n)", on: draft.settings.questionCount == n) { draft.settings.questionCount = n }
+                        }
+                    }
+                    if open {
+                        option("Quiz pour commencer") {
+                            ForEach(LeagueDraft.quizChoices, id: \.self) { n in
+                                chip("\(n)", on: draft.quizzes == n) { draft.quizzes = n }
+                            }
                         }
                     }
                     option("Domaines") {
@@ -190,24 +207,42 @@ struct NewLeagueSheet: View {
                             chip(level.title, on: draft.settings.difficulty == level.rawValue) { draft.settings.difficulty = level.rawValue }
                         }
                     }
-                    option("Durée") {
-                        ForEach(["1w", "2w", "1m"], id: \.self) { code in
-                            chip(LeagueText.duration(code), on: draft.settings.duration == code) { draft.settings.duration = code }
+                    if open {
+                        option("Fin") {
+                            chip("Pas de fin", on: draft.days == nil) { draft.days = nil }
+                            ForEach([7, 14, 30], id: \.self) { n in
+                                chip(n == 30 ? "1 mois" : n == 14 ? "2 semaines" : "1 semaine", on: draft.days == n) { draft.days = n }
+                            }
                         }
-                    }
-                    option("Début") {
-                        chip("Aujourd'hui", on: draft.startToday) { draft.startToday = true }
-                        chip("Demain", on: !draft.startToday) { draft.startToday = false }
+                    } else {
+                        option("Durée") {
+                            ForEach(["1w", "2w", "1m"], id: \.self) { code in
+                                chip(LeagueText.duration(code), on: draft.settings.duration == code) { draft.settings.duration = code }
+                            }
+                        }
+                        option("Début") {
+                            chip("Aujourd'hui", on: draft.startToday) { draft.startToday = true }
+                            chip("Demain", on: !draft.startToday) { draft.startToday = false }
+                        }
                     }
                     option("Membres au maximum") {
                         ForEach(LeagueSettings.memberLimits, id: \.self) { n in
                             chip("\(n)", on: draft.settings.maxMembers == n) { draft.settings.maxMembers = n }
                         }
                     }
-                    Label(LeagueText.plannedRange(duration: draft.settings.duration, startToday: draft.startToday), systemImage: "calendar")
-                        .font(.cfCallout.weight(.semibold)).foregroundStyle(Color.ink)
-                    Text("Points : 1 par bonne réponse. À égalité, le plus rapide passe devant. Un jour manqué compte 0.")
+                    if open {
+                        Text("Points : 1 par bonne réponse, sur tous les quiz. À égalité, le premier à avoir fini passe devant. Tu pourras ajouter des quiz et terminer la ligue quand tu veux.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            .fixedSize(horizontal: false, vertical: true)
+                    } else {
+                        Label(LeagueText.plannedRange(duration: draft.settings.duration, startToday: draft.startToday), systemImage: "calendar")
+                            .font(.cfCallout.weight(.semibold)).foregroundStyle(Color.ink)
+                        Text("Points : 1 par bonne réponse. À égalité, le plus rapide passe devant. Un jour manqué compte 0.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    }
+                    Text("À la fin : podium (1er, 2e, 3e) et trophée « Vainqueur de ligue » pour le 1er, dès 3 joueurs.")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        .fixedSize(horizontal: false, vertical: true)
                     if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
                 }
                 .padding(Space.gutter)
@@ -226,6 +261,8 @@ struct NewLeagueSheet: View {
             }
         }
     }
+
+    private var open: Bool { draft.format == "open" }
 
     private func option<Chips: View>(_ title: String, @ViewBuilder chips: () -> Chips) -> some View {
         VStack(alignment: .leading, spacing: Space.s) {
@@ -305,9 +342,14 @@ struct LeagueJoinSheet: View {
                     if let owner = preview.owner { Label("Créée par \(owner)", systemImage: "person.fill") }
                     Label("\(preview.members ?? 0) membre\((preview.members ?? 0) > 1 ? "s" : "") sur \(preview.maxMembers ?? 50)",
                           systemImage: "person.3.fill")
+                    if preview.format == "open" {
+                        Label("Ligue ouverte · \(preview.quizzes ?? 0) quiz à jouer quand tu veux", systemImage: "list.number")
+                    }
                     if let settings = preview.settings { Label(LeagueText.settings(settings), systemImage: "slider.horizontal.3") }
-                    Label(LeagueText.remaining(status: preview.status, daysLeft: preview.daysLeft, startsIn: nil,
-                                               endDate: preview.endsOn, endsAt: nil, timezone: nil), systemImage: "calendar")
+                    if preview.openEnded != true {
+                        Label(LeagueText.remaining(status: preview.status, daysLeft: preview.daysLeft, startsIn: nil,
+                                                   endDate: preview.endsOn, endsAt: nil, timezone: nil), systemImage: "calendar")
+                    }
                 }
                 .font(.cfCallout).foregroundStyle(Color.ink)
                 if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
@@ -365,6 +407,13 @@ struct LeagueRow: View {
     let league: LeagueSummary
 
     private var status: (String, Color) {
+        if league.isOpen {
+            switch (league.status, league.todayState) {
+            case ("finished", _): return ("Terminée", .inkSoft)
+            case (_, "todo"), (_, "in_progress"): return ("Un quiz t'attend", .brand)
+            default: return ("Tous les quiz faits", .correct)
+            }
+        }
         switch league.todayState {
         case "todo": return ("Quiz du jour à jouer", .brand)
         case "in_progress": return ("Quiz du jour à finir", .brand)
@@ -386,7 +435,11 @@ struct LeagueRow: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(league.name).font(.cfTitle3).foregroundStyle(Color.ink)
                 Text(status.0).font(.cfFootnote.weight(.bold)).foregroundStyle(status.1)
-                if league.status == "active", let left = league.daysLeft {
+                if league.isOpen, league.status == "active" {
+                    Text([league.myRank.map { $0 == 1 ? "1er" : "\($0)e" }, league.quizzes.map { "\($0) quiz" },
+                          "\(league.members) membres"].compactMap { $0 }.joined(separator: " · "))
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                } else if league.status == "active", let left = league.daysLeft {
                     Text([league.myRank.map { $0 == 1 ? "1er" : "\($0)e" }, left == 0 ? "dernier jour" : "\(left) j restants",
                           "\(league.members) membres"].compactMap { $0 }.joined(separator: " · "))
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
@@ -415,18 +468,27 @@ struct LeagueView: View {
     @State private var showRules = false
     @State private var playing = false
     @State private var showDay = false
+    /// Ligue ouverte : quiz à jouer, scores d'un quiz, fin demandée par le créateur.
+    @State private var playingQuiz: QuizPick?
+    @State private var quizScores: QuizPick?
+    @State private var confirmEnd = false
+    @State private var busy = false
     @State private var kick: LeagueStandings.Row?
     @State private var report: ReportTarget?
     @State private var error: String?
     /// L'explication s'ouvre toute seule la première fois qu'on entre dans une ligue.
-    @AppStorage("leagueRulesSeenV2") private var rulesSeen = false
+    @AppStorage("leagueRulesSeenV3") private var rulesSeen = false
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Space.l) {
                 if let standings {
                     header(standings)
-                    if offset == 0 { quizCard(standings) }
+                    if standings.isOpen {
+                        openQuizzes(standings)
+                    } else if offset == 0 {
+                        quizCard(standings)
+                    }
                     podiumCard(standings)
                     if standings.hasPrevious == true {
                         Picker("Saison", selection: $offset) {
@@ -473,6 +535,15 @@ struct LeagueView: View {
         .sheet(item: $report) { ContentReportSheet(target: $0) }
         .fullScreenCover(isPresented: $playing, onDismiss: { Task { await load() } }) {
             LeagueQuizView(leagueId: leagueId, name: standings?.name ?? "Ligue")
+        }
+        .fullScreenCover(item: $playingQuiz, onDismiss: { Task { await load() } }) { pick in
+            LeagueQuizView(leagueId: leagueId, name: standings?.name ?? "Ligue", quiz: pick.n)
+        }
+        .sheet(item: $quizScores) { pick in LeagueDaySheet(leagueId: leagueId, quiz: pick.n) }
+        .confirmationDialog("Terminer la ligue ?", isPresented: $confirmEnd, titleVisibility: .visible) {
+            Button("Terminer maintenant", role: .destructive) { endLeague() }
+        } message: {
+            Text("Le classement devient définitif : podium et trophée « Vainqueur de ligue » pour le 1er (dès 3 joueurs). Plus personne ne pourra jouer.")
         }
         .onAppear {
             if !rulesSeen {
@@ -522,12 +593,16 @@ struct LeagueView: View {
 
     private func header(_ s: LeagueStandings) -> some View {
         VStack(alignment: .leading, spacing: Space.xs) {
-            Text(s.season.map { "Ligue · saison \($0)" } ?? "Ligue").labelCaps()
+            Text(s.isOpen ? "Ligue ouverte" : s.season.map { "Ligue · saison \($0)" } ?? "Ligue").labelCaps()
             Text(s.name).font(.cfDisplay)
             HStack(spacing: 6) {
                 Image(systemName: s.status == "finished" ? "flag.checkered" : "clock.fill").foregroundStyle(Color.brand)
-                Text(LeagueText.remaining(status: s.status, daysLeft: s.daysLeft, startsIn: s.startsIn, endDate: s.endDate,
-                                          endsAt: s.endsAt, timezone: s.timezone))
+                if s.isOpen && s.status != "finished" && s.openEnded == true {
+                    Text("Sans fin · joue quand tu veux")
+                } else {
+                    Text(LeagueText.remaining(status: s.status, daysLeft: s.daysLeft, startsIn: s.startsIn, endDate: s.endDate,
+                                              endsAt: s.endsAt, timezone: s.timezone))
+                }
                 if s.status == "active", let day = s.dayIndex, let total = s.totalDays {
                     Text("· jour \(day) sur \(total)").foregroundStyle(Color.inkSoft)
                 }
@@ -600,7 +675,7 @@ struct LeagueView: View {
             HStack {
                 Text("Classement").labelCaps()
                 Spacer()
-                Text("points · jours joués").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                Text(s.isOpen ? "bonnes réponses · quiz joués" : "points · jours joués").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
             ForEach(s.standings) { row in
                 HStack(spacing: Space.m) {
@@ -618,13 +693,16 @@ struct LeagueView: View {
                                     .accessibilityLabel("créateur")
                             }
                         }
-                        Text("\(row.days)/\(s.totalDays ?? row.days) jour\(row.days > 1 ? "s" : "") · \(DurationFormat.clock(milliseconds: row.totalMs))")
+                        Text(rowDetail(row, in: s))
                             .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                     }
                     Spacer()
-                    if let tier = podiumTier(row, in: s) {
-                        ChestView(tier: tier, open: s.status == "finished").frame(width: 30)
-                            .accessibilityLabel("Podium : \(tier.title.lowercased())")
+                    if let place = podiumPlace(row, in: s) {
+                        Image(systemName: place == 1 ? "trophy.fill" : "medal.fill")
+                            .font(.title3)
+                            .foregroundStyle(medal(place, points: 1))
+                            .shadow(color: .black.opacity(0.15), radius: 1, y: 1)
+                            .accessibilityLabel("Podium : \(place == 1 ? "1er" : "\(place)e")")
                     }
                     Text("\(row.points)").font(.system(.title3, design: .rounded).weight(.bold)).monospacedDigit()
                 }
@@ -654,7 +732,9 @@ struct LeagueView: View {
             VStack(alignment: .leading, spacing: 6) {
                 Text("Réglages").labelCaps()
                 Text(LeagueText.settings(settings)).font(.cfCallout)
-                Text("\(s.members ?? s.standings.count) membre\((s.members ?? 0) > 1 ? "s" : "") sur \(settings.maxMembers) · du \(DateText.short(s.startDate)) au \(DateText.short(s.endDate))")
+                Text("\(s.members ?? s.standings.count) membre\((s.members ?? 0) > 1 ? "s" : "") sur \(settings.maxMembers) · "
+                     + (s.isOpen && s.openEnded == true ? "depuis le \(DateText.short(s.startDate))"
+                                                        : "du \(DateText.short(s.startDate)) au \(DateText.short(s.endDate))"))
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -700,6 +780,28 @@ struct LeagueView: View {
         }
     }
 
+    private func addQuiz() {
+        busy = true
+        Task {
+            do {
+                standings = try await app.service.leagueAddQuiz(league: leagueId)
+                Haptics.success()
+            } catch { self.error = (error as? LocalizedError)?.errorDescription }
+            busy = false
+        }
+    }
+
+    private func endLeague() {
+        busy = true
+        Task {
+            do {
+                standings = try await app.service.leagueEnd(league: leagueId)
+                Haptics.success()
+            } catch { self.error = (error as? LocalizedError)?.errorDescription }
+            busy = false
+        }
+    }
+
     private func remove(_ row: LeagueStandings.Row) {
         Task {
             do {
@@ -711,52 +813,150 @@ struct LeagueView: View {
     }
 }
 
+/// Un quiz d'une ligue ouverte (pour les feuilles et le plein écran).
+struct QuizPick: Identifiable {
+    let n: Int
+    var id: Int { n }
+}
+
 extension LeagueView {
-    /// Coffre du podium pour une ligne (seulement si la ligue compte assez de joueurs actifs et le joueur assez de jours).
-    fileprivate func podiumTier(_ row: LeagueStandings.Row, in standings: LeagueStandings) -> ChestTier? {
-        guard let podium = standings.podium, podium.activePlayers >= podium.minPlayers, row.days >= podium.minDays else { return nil }
-        let eligible = standings.standings.filter { $0.days >= podium.minDays }
+    /// Place sur le podium : définitive une fois la ligue terminée, sinon celle qu'on aurait maintenant
+    /// (seulement si la ligue compte assez de joueurs actifs).
+    fileprivate func podiumPlace(_ row: LeagueStandings.Row, in standings: LeagueStandings) -> Int? {
+        if let results = standings.results, !results.isEmpty {
+            return results.first { $0.id == row.id }?.place
+        }
+        guard standings.status != "finished", let podium = standings.podium, podium.activePlayers >= podium.minPlayers,
+              row.points > 0 else { return nil }
+        let eligible = standings.standings.filter { standings.isOpen ? ($0.answered ?? 0) > 0 : $0.days >= podium.minDays }
         guard let place = eligible.firstIndex(where: { $0.id == row.id }), place < 3 else { return nil }
-        return [ChestTier.gold, .silver, .wood][place]
+        return place + 1
     }
 
+    fileprivate func rowDetail(_ row: LeagueStandings.Row, in s: LeagueStandings) -> String {
+        if s.isOpen {
+            let total = s.quizzes?.count ?? 0
+            return (row.answered ?? 0) == 0 ? "pas encore joué" : "\(row.days)/\(total) quiz fini\(row.days > 1 ? "s" : "")"
+        }
+        return "\(row.days)/\(s.totalDays ?? row.days) jour\(row.days > 1 ? "s" : "") · \(DurationFormat.clock(milliseconds: row.totalMs))"
+    }
+
+    /// Ligue ouverte : la liste des quiz, à jouer dans l'ordre qu'on veut ; le créateur en ajoute et peut terminer la ligue.
+    @ViewBuilder
+    fileprivate func openQuizzes(_ s: LeagueStandings) -> some View {
+        let quizzes = s.quizzes ?? []
+        VStack(alignment: .leading, spacing: Space.s) {
+            HStack {
+                Text("Les quiz").labelCaps()
+                Spacer()
+                Text("sans chrono · une fois chacun").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            }
+            ForEach(quizzes) { quiz in
+                HStack(spacing: Space.m) {
+                    Text("\(quiz.n)")
+                        .font(.system(.headline, design: .rounded).weight(.black))
+                        .foregroundStyle(quiz.state == "done" ? Color.white : Color.inkFixed)
+                        .frame(width: 38, height: 38)
+                        .background(quiz.state == "done" ? Color.correct : Color.sun, in: Circle())
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Quiz \(quiz.n)").font(.cfTitle3)
+                        Text(quiz.state == "done" ? "Fait : \(quiz.score)/\(quiz.total)"
+                             : quiz.state == "in_progress" ? "En cours : \(quiz.answered)/\(quiz.total)" : "\(quiz.total) questions")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    }
+                    Spacer(minLength: 0)
+                    if quiz.state == "done" {
+                        Button("Scores") { quizScores = QuizPick(n: quiz.n) }
+                            .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                            .foregroundStyle(Color.brand)
+                    } else if s.status == "active" {
+                        Button(quiz.state == "in_progress" ? "Reprendre" : "Jouer") { playingQuiz = QuizPick(n: quiz.n) }
+                            .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                            .foregroundStyle(Color.inkFixed)
+                            .padding(.horizontal, 14).frame(minHeight: 38)
+                            .background(Color.sun, in: Capsule())
+                    }
+                }
+                .padding(12)
+                .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                .accessibilityElement(children: .combine)
+            }
+            if s.isOwner, s.status == "active" {
+                if quizzes.count < (s.quizMax ?? 30) {
+                    Button { addQuiz() } label: {
+                        Label("Ajouter un quiz", systemImage: "plus.circle.fill").frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.ink)
+                    .disabled(busy)
+                }
+                Button("Terminer la ligue") { confirmEnd = true }
+                    .buttonStyle(.textLink)
+                    .frame(maxWidth: .infinity)
+                    .disabled(busy)
+            } else if s.status == "finished" {
+                Label("Ligue terminée : le classement est définitif.", systemImage: "flag.checkered")
+                    .font(.cfCallout).foregroundStyle(Color.ink)
+                    .popCard(padding: 14)
+            }
+        }
+    }
+
+    /// Podium : à la fin, les 3 premiers (et le trophée du 1er) ; avant, la règle.
     @ViewBuilder
     fileprivate func podiumCard(_ standings: LeagueStandings) -> some View {
-        if let reward = standings.myReward {
-            let waiting = app.progression?.chests.contains { $0.source == "league" } ?? false
+        if let results = standings.results, !results.isEmpty {
+            VStack(alignment: .leading, spacing: Space.s) {
+                Text("Podium").labelCaps()
+                HStack(alignment: .bottom, spacing: Space.s) {
+                    ForEach([2, 1, 3], id: \.self) { place in
+                        if let r = results.first(where: { $0.place == place }) {
+                            VStack(spacing: 4) {
+                                Image(systemName: place == 1 ? "trophy.fill" : "medal.fill")
+                                    .font(place == 1 ? .title : .title3)
+                                    .foregroundStyle(medal(place, points: 1))
+                                Text(r.handle).font(.system(.footnote, design: .rounded).weight(.heavy))
+                                    .lineLimit(1).minimumScaleFactor(0.7)
+                                Text("\(r.points) pts").font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                    .fill(medal(place, points: 1).opacity(0.6))
+                                    .frame(height: place == 1 ? 46 : place == 2 ? 32 : 22)
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                    }
+                }
+                if let mine = standings.myPlace {
+                    Text(mine == 1 ? "Tu gagnes la ligue et le trophée « Vainqueur de ligue » !" : "Tu finis \(mine)e : bravo !")
+                        .font(.cfCallout.weight(.semibold)).foregroundStyle(Color.ink)
+                }
+            }
+            .popCard(padding: 14)
+        } else if let reward = standings.myReward {
+            // Saisons d'avant 1.2 : un coffre de podium.
             HStack(spacing: Space.m) {
-                ChestView(tier: reward.tier, open: !waiting).frame(width: 54)
+                ChestView(tier: reward.tier, open: true).frame(width: 54)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Tu as fini \(reward.place == 1 ? "1er" : "\(reward.place)e") !").font(.cfTitle3)
                     Text("\(reward.tier.title) gagné.").font(.cfFootnote).foregroundStyle(Color.inkSoft)
                 }
                 Spacer(minLength: 0)
-                if waiting {
-                    Button("Ouvrir") { app.openChests() }
-                        .font(.system(.subheadline, design: .rounded).weight(.heavy))
-                        .foregroundStyle(Color(hex: 0x1E1340))
-                        .padding(.horizontal, 14).frame(minHeight: 40)
-                        .background(Color.sun, in: Capsule())
-                }
             }
             .popCard(padding: 14)
         } else if standings.status != "finished", let podium = standings.podium {
             HStack(spacing: Space.m) {
-                HStack(alignment: .bottom, spacing: -4) {
-                    ChestView(tier: .silver).frame(width: 32)
-                    ChestView(tier: .gold).frame(width: 42).zIndex(1)
-                    ChestView(tier: .wood).frame(width: 28)
-                }
+                Image(systemName: "trophy.fill").font(.system(size: 34)).foregroundStyle(Color.sun)
+                    .frame(width: 54)
                 VStack(alignment: .leading, spacing: 2) {
                     if podium.activePlayers < podium.minPlayers {
                         let missing = podium.minPlayers - podium.activePlayers
                         Text("Encore \(missing) joueur\(missing > 1 ? "s" : "") actif\(missing > 1 ? "s" : "")")
                             .font(.system(.subheadline, design: .rounded).weight(.bold))
-                        Text("Il faut \(podium.minPlayers) joueurs qui font le quiz de la ligue pour que le podium gagne des coffres.")
+                        Text("Il faut \(podium.minPlayers) joueurs qui jouent pour qu'il y ait un podium à la fin.")
                             .font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
                     } else {
-                        Text("Le podium gagne un coffre").font(.system(.subheadline, design: .rounded).weight(.bold))
-                        Text("Or, argent et bois pour les 3 premiers ayant joué au moins \(podium.minDays) jours.")
+                        Text("Podium et trophée").font(.system(.subheadline, design: .rounded).weight(.bold))
+                        Text(standings.isOpen ? "À la fin : 1er, 2e et 3e, et le trophée « Vainqueur de ligue » pour le 1er."
+                             : "À la fin : 1er, 2e et 3e (au moins \(podium.minDays) jours joués), et le trophée « Vainqueur de ligue » pour le 1er.")
                             .font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
                     }
                 }
@@ -783,6 +983,8 @@ final class LeagueQuizModel {
     }
 
     let leagueId: UUID
+    /// Ligue ouverte : numéro du quiz (nil : quiz du jour).
+    let quiz: Int?
     private(set) var stage: Stage = .loading
     private(set) var question: Question?
     private(set) var phase: AnswerPhase = .answering
@@ -795,14 +997,20 @@ final class LeagueQuizModel {
     private var stopwatch = Stopwatch()
     private let service: GameService
 
-    init(leagueId: UUID, service: GameService) {
+    init(leagueId: UUID, quiz: Int? = nil, service: GameService) {
         self.leagueId = leagueId
+        self.quiz = quiz
         self.service = service
+    }
+
+    private func result() async throws -> LeagueDayResult {
+        if let quiz { return try await service.leagueQuizResult(league: leagueId, quiz: quiz) }
+        return try await service.leagueDayResult(league: leagueId)
     }
 
     func start() async {
         do {
-            let day = try await service.leagueDayResult(league: leagueId)
+            let day = try await result()
             total = day.total
             if day.me.answered >= day.total {
                 stage = .finished(day)
@@ -817,7 +1025,12 @@ final class LeagueQuizModel {
     private func load(position: Int) async {
         self.position = position
         do {
-            let response = try await service.leagueQuestion(league: leagueId, position: position)
+            let response: DailyQuestionResponse
+            if let quiz {
+                response = try await service.leagueQuizQuestion(league: leagueId, quiz: quiz, position: position)
+            } else {
+                response = try await service.leagueQuestion(league: leagueId, position: position)
+            }
             guard let q = response.question else { await showResult(); return }
             question = q
             phase = .answering
@@ -850,7 +1063,12 @@ final class LeagueQuizModel {
 
     private func send(given: GivenAnswer, ms: Int?) async {
         do {
-            let verdict = try await service.leagueAnswer(league: leagueId, position: position, given: given, clientMs: ms)
+            let verdict: DailyVerdict
+            if let quiz {
+                verdict = try await service.leagueQuizAnswer(league: leagueId, quiz: quiz, position: position, given: given)
+            } else {
+                verdict = try await service.leagueAnswer(league: leagueId, position: position, given: given, clientMs: ms)
+            }
             guard let reveal = verdict.reveal else { throw BackendError.decoding("verdict incomplet") }
             let correct = verdict.isCorrect ?? false
             lastVerdict = verdict
@@ -870,7 +1088,7 @@ final class LeagueQuizModel {
 
     private func showResult() async {
         stage = .loading
-        do { stage = .finished(try await service.leagueDayResult(league: leagueId)) } catch {
+        do { stage = .finished(try await result()) } catch {
             stage = .failed((error as? LocalizedError)?.errorDescription ?? "Résultat indisponible.")
         }
     }
@@ -879,6 +1097,7 @@ final class LeagueQuizModel {
 struct LeagueQuizView: View {
     let leagueId: UUID
     let name: String
+    var quiz: Int?
 
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
@@ -892,7 +1111,7 @@ struct LeagueQuizView: View {
         }
         .task {
             guard model == nil else { return }
-            let session = LeagueQuizModel(leagueId: leagueId, service: app.service)
+            let session = LeagueQuizModel(leagueId: leagueId, quiz: quiz, service: app.service)
             model = session
             await session.start()
         }
@@ -935,7 +1154,7 @@ struct LeagueQuizView: View {
                             Text("\(model.position) / \(model.total)").font(.cfNumber).foregroundStyle(Color.inkSoft)
                         }
                         Button { dismiss() } label: { CloseCircle() }
-                            .accessibilityLabel("Quitter (tu pourras reprendre avant minuit)")
+                            .accessibilityLabel(quiz == nil ? "Quitter (tu pourras reprendre avant minuit)" : "Quitter (tu pourras reprendre plus tard)")
                     }
                 }
                 .id(question.id)
@@ -971,7 +1190,7 @@ struct LeagueDayView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: Space.l) {
                 HStack {
-                    Text("\(name) · \(DateText.long(day.day))").labelCaps()
+                    Text(day.quiz.map { "\(name) · Quiz \($0)" } ?? "\(name) · \(DateText.long(day.day))").labelCaps()
                     Spacer()
                     Button(action: onClose) { CloseCircle() }.accessibilityLabel("Fermer")
                 }
@@ -981,11 +1200,12 @@ struct LeagueDayView: View {
                     Spacer()
                     TallyMark(results: day.myAnswers.compactMap(\.isCorrect)).frame(width: 60)
                 }
-                Text("\(day.me.score) point\(day.me.score > 1 ? "s" : "") pour la ligue · \(DurationFormat.clock(milliseconds: day.me.totalMs))")
+                Text("\(day.me.score) point\(day.me.score > 1 ? "s" : "") pour la ligue"
+                     + (day.quiz == nil ? " · \(DurationFormat.clock(milliseconds: day.me.totalMs))" : ""))
                     .font(.cfCallout).foregroundStyle(Color.inkSoft)
                 if let members = day.members {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Scores du jour").labelCaps()
+                        Text(day.quiz == nil ? "Scores du jour" : "Scores du quiz").labelCaps()
                         ForEach(members) { member in
                             HStack {
                                 Text(member.handle).font(.cfTitle3).fontWeight(member.isMe ? .bold : .semibold)
@@ -994,8 +1214,10 @@ struct LeagueDayView: View {
                                     Text("pas encore joué").font(.cfFootnote).foregroundStyle(Color.inkSoft)
                                 } else {
                                     Text("\(member.score)/\(day.total)").font(.cfNumber)
-                                    Text(DurationFormat.clock(milliseconds: member.totalMs)).font(.cfFootnote.monospacedDigit())
-                                        .foregroundStyle(Color.inkSoft)
+                                    if day.quiz == nil {
+                                        Text(DurationFormat.clock(milliseconds: member.totalMs)).font(.cfFootnote.monospacedDigit())
+                                            .foregroundStyle(Color.inkSoft)
+                                    }
                                 }
                             }
                             .padding(12)
@@ -1015,6 +1237,7 @@ struct LeagueDayView: View {
 /// Scores du jour, depuis la page de la ligue.
 struct LeagueDaySheet: View {
     let leagueId: UUID
+    var quiz: Int?
 
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
@@ -1023,14 +1246,20 @@ struct LeagueDaySheet: View {
     var body: some View {
         Group {
             if let day {
-                LeagueDayView(day: day, name: "Aujourd'hui", onClose: { dismiss() })
+                LeagueDayView(day: day, name: quiz == nil ? "Aujourd'hui" : "Ligue", onClose: { dismiss() })
             } else {
                 ProgressView().frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
         .background(Color.paper)
         .presentationDragIndicator(.visible)
-        .task { day = try? await app.service.leagueDayResult(league: leagueId) }
+        .task {
+            if let quiz {
+                day = try? await app.service.leagueQuizResult(league: leagueId, quiz: quiz)
+            } else {
+                day = try? await app.service.leagueDayResult(league: leagueId)
+            }
+        }
     }
 }
 
@@ -1044,26 +1273,26 @@ struct LeagueRulesSheet: View {
         ScrollView {
             VStack(alignment: .leading, spacing: Space.l) {
                 Text("Les ligues").font(.cfDisplay).padding(.top, Space.l)
-                Text("Une compétition privée entre amis, avec son propre quiz chaque jour.")
+                Text("Une compétition privée entre amis, en deux formats : « ouverte » (des quiz à jouer quand on veut, sans chrono) ou « quiz du jour ».")
                     .font(.cfCallout).foregroundStyle(Color.inkSoft)
-                step(1, "Crée ou rejoins une ligue", "Le créateur choisit les questions par jour, les domaines, la difficulté et la durée. Partage le lien ou le code.") {
+                step(1, "Crée ou rejoins une ligue", "Le créateur choisit le format, les questions, les domaines et la difficulté. Partage le lien ou le code.") {
                     Text("K7P2QXMA")
                         .font(.system(.callout, design: .monospaced).weight(.bold))
                         .foregroundStyle(Color.brand)
                         .padding(.horizontal, 10).padding(.vertical, 8)
                         .background(Color.brand.opacity(0.12), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                 }
-                step(2, "Fais le quiz de la ligue", "Chaque jour, le même quiz pour tous les membres, à faire avant minuit. 1 point par bonne réponse ; à égalité, le plus rapide passe devant. Distinct du \(Brand.dailyName) de Brainlix.") {
+                step(2, "Ligue ouverte", "Les mêmes quiz pour tous, chacun joué une fois, quand tu veux, sans chrono. 1 point par bonne réponse ; à égalité, le premier à avoir fini passe devant. Le créateur ajoute des quiz et termine la ligue quand il veut.") {
+                    Image(systemName: "list.number").font(.largeTitle).foregroundStyle(Color.brand)
+                }
+                step(3, "Quiz du jour", "Chaque jour, le même quiz pour tous, à faire avant minuit. À égalité, le plus rapide passe devant. Un jour manqué compte 0.") {
                     Image(systemName: "trophy.fill").font(.largeTitle).foregroundStyle(Color(hex: 0xE08A00))
                 }
-                step(3, "Un jour manqué compte 0", "Pas de rattrapage : reviens chaque jour pour garder ta place.") {
-                    TallyMark(strokes: [.correct, .correct, .wrong, .correct, .correct]).frame(width: 60)
-                }
-                step(4, "Le podium gagne un coffre", "À la fin : or pour le 1er, argent pour le 2e, bois pour le 3e, s'il y a au moins 4 joueurs actifs. Puis le créateur peut lancer une nouvelle saison.") {
+                step(4, "Podium et trophée", "À la fin : 1er, 2e et 3e, et le trophée « Vainqueur de ligue » pour le 1er, s'il y a au moins 3 joueurs.") {
                     HStack(alignment: .bottom, spacing: 2) {
-                        podiumStep(.silver, height: 16)
-                        podiumStep(.gold, height: 26)
-                        podiumStep(.wood, height: 10)
+                        podiumStep(2, height: 16)
+                        podiumStep(1, height: 26)
+                        podiumStep(3, height: 10)
                     }
                 }
                 Button("C'est compris") { dismiss() }.buttonStyle(.ink).padding(.top, Space.s)
@@ -1087,9 +1316,9 @@ struct LeagueRulesSheet: View {
         .accessibilityElement(children: .combine)
     }
 
-    private func podiumStep(_ tier: ChestTier, height: CGFloat) -> some View {
+    private func podiumStep(_ place: Int, height: CGFloat) -> some View {
         VStack(spacing: 1) {
-            ChestView(tier: tier).frame(width: 26)
+            Image(systemName: place == 1 ? "trophy.fill" : "medal.fill").foregroundStyle(medal(place, points: 1))
             Rectangle().fill(Color.brand.opacity(0.25)).frame(width: 22, height: height)
         }
     }

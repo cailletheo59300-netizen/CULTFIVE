@@ -1,0 +1,94 @@
+{
+    "id": "8ebfa230-e5ad-448c-8d18-967f2025c6b6",
+    "name": "Les Libres",
+    "today": "2026-10-16",
+    "format": "open",
+    "period": "month",
+    "podium": {
+        "min_days": 0,
+        "min_players": 3,
+        "active_players": 2
+    },
+    "season": 1,
+    "status": "active",
+    "ends_at": null,
+    "members": 2,
+    "quizzes": [
+        {
+            "n": 1,
+            "score": 4,
+            "state": "done",
+            "total": 5,
+            "answered": 5
+        },
+        {
+            "n": 2,
+            "score": 0,
+            "state": "todo",
+            "total": 5,
+            "answered": 0
+        },
+        {
+            "n": 3,
+            "score": 0,
+            "state": "todo",
+            "total": 5,
+            "answered": 0
+        }
+    ],
+    "results": [
+    ],
+    "end_date": "2999-12-31",
+    "ended_at": null,
+    "is_owner": true,
+    "my_place": null,
+    "quiz_max": 30,
+    "settings": {
+        "domains": null,
+        "duration": "open",
+        "difficulty": "auto",
+        "max_members": 50,
+        "question_count": 5
+    },
+    "timezone": "Europe/Paris",
+    "days_left": null,
+    "standings": [
+        {
+            "id": "adda96d6-740d-4eef-aa62-82f80f282d3b",
+            "days": 1,
+            "rank": 1,
+            "is_me": false,
+            "avatar": {
+                "pose": "rest",
+                "color": "chloro"
+            },
+            "handle": "vif_60586",
+            "points": 5,
+            "answered": 5,
+            "is_owner": false,
+            "total_ms": 0,
+            "quizzes_done": 1
+        },
+        {
+            "id": "c0058bbe-5b18-458a-8e72-a00c452c34db",
+            "days": 1,
+            "rank": 2,
+            "is_me": true,
+            "avatar": {
+                "pose": "rest",
+                "color": "chloro"
+            },
+            "handle": "fute_40887",
+            "points": 4,
+            "answered": 5,
+            "is_owner": true,
+            "total_ms": 0,
+            "quizzes_done": 1
+        }
+    ],
+    "open_ended": true,
+    "start_date": "2026-10-16",
+    "invite_code": "TWM4VXHZ",
+    "has_previous": false,
+    "current_season": 1
+}

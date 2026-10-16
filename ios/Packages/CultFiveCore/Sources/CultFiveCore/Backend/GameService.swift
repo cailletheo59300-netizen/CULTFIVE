@@ -133,6 +133,12 @@ public protocol GameService: Sendable {
     func leagueNewSeason(league: UUID, startToday: Bool) async throws -> LeagueStandings
     func leagueRegenerateCode(league: UUID) async throws -> String
     func leagueKick(league: UUID, user: UUID) async throws
+    // Ligues ouvertes (0058).
+    func leagueQuizQuestion(league: UUID, quiz: Int, position: Int) async throws -> DailyQuestionResponse
+    func leagueQuizAnswer(league: UUID, quiz: Int, position: Int, given: GivenAnswer?) async throws -> DailyVerdict
+    func leagueQuizResult(league: UUID, quiz: Int) async throws -> LeagueDayResult
+    func leagueAddQuiz(league: UUID) async throws -> LeagueStandings
+    func leagueEnd(league: UUID) async throws -> LeagueStandings
 
     // Référentiel
     func domains() async throws -> [DomainInfo]
@@ -419,6 +425,17 @@ public struct LiveGameService: GameService {
 
     public func createLeague(_ draft: LeagueDraft) async throws -> LeagueStandings {
         let domains = draft.settings.domains ?? []
+        if draft.format == "open" {
+            return try await api.rpc("league_create_open", [
+                "p_name": .string(draft.name),
+                "p_count": .number(Double(draft.settings.questionCount)),
+                "p_domains": domains.isEmpty ? .null : .array(domains.map(JSONValue.string)),
+                "p_difficulty": .string(draft.settings.difficulty),
+                "p_quizzes": .number(Double(draft.quizzes)),
+                "p_days": draft.days.map { .number(Double($0)) } ?? .null,
+                "p_max_members": .number(Double(draft.settings.maxMembers)),
+            ])
+        }
         return try await api.rpc("league_create", [
             "p_name": .string(draft.name),
             "p_count": .number(Double(draft.settings.questionCount)),
@@ -455,6 +472,29 @@ public struct LiveGameService: GameService {
     public func leagueRegenerateCode(league: UUID) async throws -> String {
         let result: [String: String] = try await api.rpc("league_regenerate_code", ["p_league": .string(league.uuidString)])
         return result["invite_code"] ?? ""
+    }
+
+    public func leagueQuizQuestion(league: UUID, quiz: Int, position: Int) async throws -> DailyQuestionResponse {
+        try await api.rpc("league_quiz_question", ["p_league": .string(league.uuidString), "p_quiz": .number(Double(quiz)),
+                                                   "p_position": .number(Double(position))])
+    }
+
+    public func leagueQuizAnswer(league: UUID, quiz: Int, position: Int, given: GivenAnswer?) async throws -> DailyVerdict {
+        try await api.rpc("league_quiz_answer", ["p_league": .string(league.uuidString), "p_quiz": .number(Double(quiz)),
+                                                 "p_position": .number(Double(position)),
+                                                 "p_given": given?.json ?? .null])
+    }
+
+    public func leagueQuizResult(league: UUID, quiz: Int) async throws -> LeagueDayResult {
+        try await api.rpc("league_quiz_result", ["p_league": .string(league.uuidString), "p_quiz": .number(Double(quiz))])
+    }
+
+    public func leagueAddQuiz(league: UUID) async throws -> LeagueStandings {
+        try await api.rpc("league_add_quiz", ["p_league": .string(league.uuidString)])
+    }
+
+    public func leagueEnd(league: UUID) async throws -> LeagueStandings {
+        try await api.rpc("league_end", ["p_league": .string(league.uuidString)])
     }
 
     public func leagueKick(league: UUID, user: UUID) async throws {
@@ -647,6 +687,26 @@ public extension GameService {
     }
 
     func leagueKick(league: UUID, user: UUID) async throws {
+        throw BackendError.server(status: 400, code: "forbidden", message: "")
+    }
+
+    func leagueQuizQuestion(league: UUID, quiz: Int, position: Int) async throws -> DailyQuestionResponse {
+        throw BackendError.server(status: 400, code: "league_not_active", message: "")
+    }
+
+    func leagueQuizAnswer(league: UUID, quiz: Int, position: Int, given: GivenAnswer?) async throws -> DailyVerdict {
+        throw BackendError.server(status: 400, code: "league_not_active", message: "")
+    }
+
+    func leagueQuizResult(league: UUID, quiz: Int) async throws -> LeagueDayResult {
+        throw BackendError.server(status: 400, code: "league_not_active", message: "")
+    }
+
+    func leagueAddQuiz(league: UUID) async throws -> LeagueStandings {
+        throw BackendError.server(status: 400, code: "forbidden", message: "")
+    }
+
+    func leagueEnd(league: UUID) async throws -> LeagueStandings {
         throw BackendError.server(status: 400, code: "forbidden", message: "")
     }
 

@@ -189,13 +189,13 @@ begin
 
   -- Vitrine.
   t := public.trophies_overview();
-  perform tst.ok(jsonb_array_length(t -> 'exploits') = 13, '13 exploits');
+  perform tst.ok(jsonb_array_length(t -> 'exploits') = 14, '14 exploits (dont Vainqueur de ligue, 0058)');
   perform tst.ok(jsonb_array_length(t -> 'mastery') = 12, 'un domaine par ligne');
   perform tst.ok((select m ->> 'tier' from jsonb_array_elements(t -> 'mastery') m where m ->> 'domain_id' = 'history') in ('silver', 'gold'),
                  'histoire : palier atteint');
   perform tst.ok((select (m ->> 'placed')::bool from jsonb_array_elements(t -> 'mastery') m where m ->> 'domain_id' = 'geography') = false,
                  'géographie : pas encore placé');
-  perform tst.ok(jsonb_array_length(public.achievements_mine()) = 13, 'profil : exploits seulement');
+  perform tst.ok(jsonb_array_length(public.achievements_mine()) = 14, 'profil : exploits seulement');
 end $$;
 
 -- Parrainage rééquilibré : paliers en coffres.

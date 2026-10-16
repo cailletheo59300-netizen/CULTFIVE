@@ -836,10 +836,17 @@ public struct LeagueSummary: Codable, Hashable, Identifiable, Sendable {
     public let startsIn: Int?
     public let questionCount: Int?
     /// Quiz du jour de la ligue : todo · in_progress · done (nil hors saison).
+    /// Ligue ouverte : todo s'il reste un quiz à jouer, done sinon.
     public let todayState: String?
+    /// daily · open (nil : ancien serveur, quiz du jour).
+    public let format: String?
+    /// Ligue ouverte : nombre de quiz.
+    public let quizzes: Int?
+
+    public var isOpen: Bool { format == "open" }
 
     enum CodingKeys: String, CodingKey {
-        case id, name, period, members, status
+        case id, name, period, members, status, format, quizzes
         case inviteCode = "invite_code"
         case myRank = "my_rank"
         case daysLeft = "days_left"
@@ -883,11 +890,22 @@ public struct LeagueDraft: Hashable, Sendable {
     public var name: String
     public var settings: LeagueSettings
     public var startToday: Bool
+    /// open (ligue ouverte, par défaut) · daily (quiz du jour).
+    public var format: String
+    /// Ligue ouverte : quiz au départ (1 à 10) et durée en jours (nil : pas de fin).
+    public var quizzes: Int
+    public var days: Int?
 
-    public init(name: String = "", settings: LeagueSettings = LeagueSettings(), startToday: Bool = true) {
+    public static let quizChoices = [1, 3, 5, 10]
+
+    public init(name: String = "", settings: LeagueSettings = LeagueSettings(), startToday: Bool = true,
+                format: String = "open", quizzes: Int = 3, days: Int? = nil) {
         self.name = name
         self.settings = settings
         self.startToday = startToday
+        self.format = format
+        self.quizzes = quizzes
+        self.days = days
     }
 }
 
@@ -906,9 +924,13 @@ public struct LeaguePreview: Decodable, Hashable, Sendable {
     public let endsOn: String?
     public let daysLeft: Int?
     public let settings: LeagueSettings?
+    public let format: String?
+    public let quizzes: Int?
+    public let openEnded: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case found, error, code, name, owner, members, status, settings
+        case found, error, code, name, owner, members, status, settings, format, quizzes
+        case openEnded = "open_ended"
         case maxMembers = "max_members"
         case isMember = "is_member"
         case startsOn = "starts_on"
@@ -950,9 +972,11 @@ public struct LeagueDayResult: Decodable, Hashable, Sendable {
     public let me: Me
     public let myAnswers: [Duel.Mark]
     public let members: [Member]?
+    /// Ligue ouverte : numéro du quiz (pas de date ni de temps).
+    public let quiz: Int?
 
     enum CodingKeys: String, CodingKey {
-        case day, total, me, members
+        case day, total, me, members, quiz
         case myAnswers = "my_answers"
     }
 }
@@ -967,9 +991,11 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
         public let totalMs: Int
         public let isMe: Bool
         public let isOwner: Bool?
+        /// Ligue ouverte : réponses données (0 : pas encore joué).
+        public let answered: Int?
 
         enum CodingKeys: String, CodingKey {
-            case rank, id, handle, points, days
+            case rank, id, handle, points, days, answered
             case totalMs = "total_ms"
             case isMe = "is_me"
             case isOwner = "is_owner"
@@ -1012,6 +1038,35 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
     public let members: Int?
     public let settings: LeagueSettings?
     public let myToday: Today?
+    // Ligues ouvertes et podium sans coffres (absents sur un ancien serveur).
+    /// daily · open
+    public let format: String?
+    public let openEnded: Bool?
+    public let quizzes: [Quiz]?
+    public let quizMax: Int?
+    /// Podium de la saison affichée (une fois terminée) et ma place.
+    public let results: [Result]?
+    public let myPlace: Int?
+
+    public var isOpen: Bool { format == "open" }
+
+    /// Un quiz d'une ligue ouverte, pour moi.
+    public struct Quiz: Codable, Hashable, Identifiable, Sendable {
+        public let n: Int
+        public let total: Int
+        public let answered: Int
+        public let score: Int
+        /// todo · in_progress · done
+        public let state: String
+        public var id: Int { n }
+    }
+
+    public struct Result: Codable, Hashable, Identifiable, Sendable {
+        public let place: Int
+        public let id: UUID
+        public let handle: String
+        public let points: Int
+    }
 
     public struct Podium: Codable, Hashable, Sendable {
         public let minPlayers: Int
@@ -1046,6 +1101,10 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
         case startsIn = "starts_in"
         case endsAt = "ends_at"
         case myToday = "my_today"
+        case format, quizzes, results
+        case openEnded = "open_ended"
+        case quizMax = "quiz_max"
+        case myPlace = "my_place"
     }
 }
 
