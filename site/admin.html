@@ -267,7 +267,7 @@ async function renderDashboard() {
     || '<span class="muted">Aucun</span>';
   app.innerHTML = `
     <h2>1. Joueurs</h2>
-    ${how(`Un joueur = un compte connecté (Apple ou e-mail), ou un invité qui a fini l'onboarding : compté ses 3 premiers jours, puis seulement s'il a au moins 10 réponses. Jamais les admins ni les comptes créés sur leur appareil (tests). Les invités qui ont seulement ouvert l'app (${fmt(t.guests)}) ne sont pas comptés. Actif = a ouvert l'app ou répondu ce jour-là.`)}
+    ${how(`Un joueur = un compte connecté (Apple ou e-mail), ou un invité qui a fini l'onboarding : compté ses 3 premiers jours, puis seulement s'il a au moins 10 réponses. Jamais les invités créés sur l'appareil d'un admin (tests). Les invités qui ont seulement ouvert l'app (${fmt(t.guests)}) ne sont pas comptés. Actif = a ouvert l'app ou répondu ce jour-là.`)}
     ${stats([['Joueurs', t.players], ['Actifs aujourd\'hui', t.dau], ['Actifs sur 7 jours', t.wau], ['Actifs sur 30 jours', t.mau],
              ['Nouveaux sur 7 jours', t.new_7d], ['Avec un compte', t.linked]])}
     <div class="two">
@@ -656,7 +656,7 @@ async function renderUsers() {
       <div><label>Comptes</label><select id="uScope"><option value="real" ${u.scope === 'real' ? 'selected' : ''}>Vrais comptes</option>
         <option value="all" ${u.scope === 'all' ? 'selected' : ''}>Tous (avec les invités)</option></select></div>
       <div><label>&nbsp;</label><button class="btn" id="uGo">Chercher</button></div></div></div>
-    <div class="card"><p class="muted small">${fmt(res.total)} joueur${res.total > 1 ? 's' : ''}${u.scope === 'real' ? ' (vrais comptes : compte Apple / e-mail, ou invité de moins de 3 jours ou avec 10 réponses ; sans les comptes de test)' : ''}</p>
+    <div class="card"><p class="muted small">${fmt(res.total)} joueur${res.total > 1 ? 's' : ''}${u.scope === 'real' ? ' (vrais comptes : tout compte Apple / e-mail, ou invité de moins de 3 jours ou avec 10 réponses, hors invités de test)' : ''}</p>
     <table><thead><tr><th>Pseudo</th><th>Arrivé</th><th>Dernière activité</th><th>Réponses</th><th>Série</th><th>Neurones</th><th>Compte</th></tr></thead><tbody>
     ${res.items.map((p) => `<tr class="click" data-id="${p.id}"><td><b>${esc(p.handle)}</b> ${p.banned_at ? '<span class="pill bad">banni</span>' : ''}</td>
       <td class="small">${new Date(p.created_at).toLocaleDateString('fr-FR')}</td><td class="small">${ago(p.last_active)}</td>

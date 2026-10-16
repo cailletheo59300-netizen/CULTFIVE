@@ -1,5 +1,5 @@
--- Admin (0059) : un joueur compté = compte connecté, ou invité récent (3 jours) ou actif (10 réponses) ;
--- jamais un admin ni un compte du même appareil qu'un admin.
+-- Admin (0059, 0060) : un joueur compté = compte connecté (même admin), ou invité récent (3 jours) ou actif
+-- (10 réponses) ; jamais un invité venu de l'appareil d'un admin.
 do $$
 declare
   connected uuid := tst.new_user(false);
@@ -38,7 +38,7 @@ begin
   perform tst.ok(not public._real_player(idle), 'invité de plus de 3 jours, 4 réponses : retiré');
   perform tst.ok(public._real_player(active), 'invité de plus de 3 jours, 12 réponses : compté');
   perform tst.ok(not public._real_player(never), 'invité sans onboarding : retiré');
-  perform tst.ok(not public._real_player(admin), 'admin : retiré');
+  perform tst.ok(public._real_player(admin), 'admin connecté : compté (il joue comme un joueur)');
   perform tst.ok(not public._real_player(test_guest), 'invité sur l''appareil de l''admin : retiré');
-  perform tst.ok(not public._real_player(test_connected), 'compte connecté sur l''appareil de l''admin : retiré');
+  perform tst.ok(public._real_player(test_connected), 'compte connecté sur l''appareil de l''admin : compté');
 end $$;
