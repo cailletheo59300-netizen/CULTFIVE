@@ -46,7 +46,12 @@ struct PlaySessionView: View {
                 Spacer()
                 Leon(color: accent, pose: .curious).frame(width: 160)
                 Text(message).font(.cfHeadline).fixedSize(horizontal: false, vertical: true)
-                Button("Fermer") { close() }.buttonStyle(.ink)
+                if case .failed = model.stage {
+                    Button("Réessayer") { Task { await model.start() } }.buttonStyle(.ink)
+                    Button("Fermer") { close() }.buttonStyle(.textLink)
+                } else {
+                    Button("Fermer") { close() }.buttonStyle(.ink)
+                }
                 Spacer()
             }
             .padding(Space.gutter)

@@ -165,12 +165,12 @@ final class PlaySessionModel {
     func start() async {
         stage = .loading
         do {
-            let pack = try await service.playPack(mode: config.mode, domain: config.domain, subdomains: config.subdomains,
-                                                  count: config.count, ranked: config.ranked, level: config.level)
+            let pack = try await loadPack()
             begin(pack)
             if config.mode == .quick { Task { await prefetchOfflinePack() } }
         } catch BackendError.offline {
-            if config.mode != .errors, let pack: PlayPack = cache.load("offline-pack") {
+            // La partie de secours (hors ligne) est une partie rapide, tous domaines mélangés : jamais pour un domaine.
+            if config.mode == .quick, config.domain == nil, let pack: PlayPack = cache.load("offline-pack") {
                 cache.remove("offline-pack")
                 usedOfflinePack = true
                 begin(pack)
@@ -179,6 +179,18 @@ final class PlaySessionModel {
             }
         } catch {
             stage = .failed((error as? LocalizedError)?.errorDescription ?? "Impossible de préparer la partie.")
+        }
+    }
+
+    /// Pack de la partie ; une coupure d'une seconde (fréquente en 4G) est réessayée une fois avant d'abandonner.
+    private func loadPack() async throws -> PlayPack {
+        do {
+            return try await service.playPack(mode: config.mode, domain: config.domain, subdomains: config.subdomains,
+                                              count: config.count, ranked: config.ranked, level: config.level)
+        } catch BackendError.offline {
+            try? await Task.sleep(for: .milliseconds(1200))
+            return try await service.playPack(mode: config.mode, domain: config.domain, subdomains: config.subdomains,
+                                              count: config.count, ranked: config.ranked, level: config.level)
         }
     }
 
