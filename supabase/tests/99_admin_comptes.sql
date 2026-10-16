@@ -42,3 +42,21 @@ begin
   perform tst.ok(not public._real_player(test_guest), 'invité sur l''appareil de l''admin : retiré');
   perform tst.ok(public._real_player(test_connected), 'compte connecté sur l''appareil de l''admin : compté');
 end $$;
+
+-- Liste des joueurs (0061) : « Vrais joueurs » suit la même règle ; « Comptes connectés » ; « Tous ».
+do $$
+declare a uuid := tst.new_user(false); g uuid := tst.new_user(true); r jsonb;
+begin
+  insert into public.app_admins (user_id) values (a) on conflict do nothing;
+  perform tst.login(a); perform public.profile_me();
+  perform tst.login(g); perform public.profile_me();
+  update public.profiles set created_at = public._now() - interval '10 days', onboarded_at = public._now() - interval '10 days'
+  where id = g;
+  perform tst.login(a);
+  r := public.admin_users((select handle from public.profiles where id = g), 'recent', 10, 0, 'real');
+  perform tst.ok((r ->> 'total')::int = 0, 'vrais joueurs : invité inactif retiré');
+  r := public.admin_users((select handle from public.profiles where id = g), 'recent', 10, 0, 'all');
+  perform tst.ok((r ->> 'total')::int = 1 and (r -> 'items' -> 0 ->> 'real_player')::bool = false, 'tous : visible, marqué hors stats');
+  r := public.admin_users((select handle from public.profiles where id = a), 'recent', 10, 0, 'connected');
+  perform tst.ok((r ->> 'total')::int = 1, 'comptes connectés : l''admin est là');
+end $$;
