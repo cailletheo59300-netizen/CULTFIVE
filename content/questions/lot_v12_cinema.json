@@ -1,0 +1,1663 @@
+[
+ {
+  "key": "cin12-001",
+  "concept": "cinema.films.v12_bronzes_ski",
+  "label": "Les Bronzés font du ski",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle station a été tourné « Les Bronzés font du ski » (1979) ?",
+  "explanation": "La bande du Splendid y a tourné en plein hiver. Le télésiège et le refuge du film sont devenus des lieux cultes.",
+  "options": [
+   "Val-d'Isère*",
+   "Chamonix",
+   "Courchevel",
+   "Les Deux Alpes"
+  ]
+ },
+ {
+  "key": "cin12-002",
+  "concept": "cinema.films.v12_pere_noel_ordure",
+  "label": "Le Père Noël est une ordure",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où se déroule « Le Père Noël est une ordure » (1982), le soir de Noël ?",
+  "explanation": "Pierre et Thérèse tiennent la permanence téléphonique d'une association d'écoute, où débarquent des visiteurs très encombrants.",
+  "options": [
+   "Dans les locaux de SOS Détresse Amitié*",
+   "Dans un grand magasin",
+   "Dans une station de ski",
+   "Dans un commissariat"
+  ]
+ },
+ {
+  "key": "cin12-003",
+  "concept": "cinema.films.v12_grande_vadrouille",
+  "label": "La Grande Vadrouille",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel duo d'acteurs porte « La Grande Vadrouille » (1966) ?",
+  "explanation": "Un peintre en bâtiment et un chef d'orchestre aident des aviateurs anglais pendant l'Occupation. Plus de 17 millions d'entrées !",
+  "options": [
+   "Bourvil et Louis de Funès*",
+   "Jean Gabin et Lino Ventura",
+   "Pierre Richard et Gérard Depardieu",
+   "Fernandel et Jean Marais"
+  ]
+ },
+ {
+  "key": "cin12-004",
+  "concept": "cinema.films.v12_grande_vadrouille_annee",
+  "label": "La Grande Vadrouille",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année sort « La Grande Vadrouille » ?",
+  "explanation": "En 1966. Il est resté plus de 40 ans le plus gros succès d'un film français en salles.",
+  "answer": 1966,
+  "tolerance": 4,
+  "min": 1940,
+  "max": 2000
+ },
+ {
+  "key": "cin12-005",
+  "concept": "cinema.films.v12_gendarme_cruchot",
+  "label": "Le gendarme Cruchot",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel acteur joue le gendarme Cruchot dans « Le Gendarme de Saint-Tropez » ?",
+  "explanation": "Six films de 1964 à 1982. Michel Galabru y joue son chef, l'adjudant Gerber.",
+  "options": [
+   "Louis de Funès*",
+   "Bourvil",
+   "Fernandel",
+   "Michel Galabru"
+  ]
+ },
+ {
+  "key": "cin12-006",
+  "concept": "cinema.films.v12_oss_117",
+  "label": "OSS 117",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel acteur joue l'agent Hubert Bonisseur de La Bath dans « OSS 117 » ?",
+  "explanation": "Un espion français sûr de lui et maladroit, dans une parodie des films d'espionnage des années 1950-1960.",
+  "options": [
+   "Jean Dujardin*",
+   "Gad Elmaleh",
+   "José Garcia",
+   "Kad Merad"
+  ]
+ },
+ {
+  "key": "cin12-007",
+  "concept": "cinema.films.v12_brice_nice",
+  "label": "Brice de Nice",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans « Brice de Nice », quel sport pratique Brice, même sans vagues ?",
+  "explanation": "Il attend la vague parfaite à Nice, où la mer est presque toujours plate. Son cri : « Cassé ! »",
+  "options": [
+   "Le surf*",
+   "Le ski nautique",
+   "La planche à voile",
+   "Le skateboard"
+  ]
+ },
+ {
+  "key": "cin12-008",
+  "concept": "cinema.films.v12_tuche_monaco",
+  "label": "Les Tuche",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans « Les Tuche », où la famille part-elle vivre après avoir gagné au loto ?",
+  "explanation": "Jeff Tuche et sa famille quittent leur village pour la Principauté, où leurs manières font sensation.",
+  "options": [
+   "À Monaco*",
+   "À Paris",
+   "Aux États-Unis",
+   "En Suisse"
+  ]
+ },
+ {
+  "key": "cin12-009",
+  "concept": "cinema.films.v12_bon_dieu_filles",
+  "label": "Les Verneuil",
+  "type": "counter",
+  "difficulty": 35,
+  "prompt": "Combien de filles ont les Verneuil dans « Qu'est-ce qu'on a fait au Bon Dieu ? » ?",
+  "explanation": "Quatre filles, qui épousent un musulman, un juif, un Chinois et un Ivoirien, au grand désarroi de leurs parents.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1
+ },
+ {
+  "key": "cin12-010",
+  "concept": "cinema.films.v12_taxi_ville",
+  "label": "Taxi",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle ville roule le taxi de Daniel dans « Taxi » (1998) ?",
+  "explanation": "Sa Peugeot 406 blanche file dans les rues de Marseille, avec Émilien, un policier qui ne sait pas conduire.",
+  "options": [
+   "Marseille*",
+   "Nice",
+   "Paris",
+   "Lyon"
+  ]
+ },
+ {
+  "key": "cin12-011",
+  "concept": "cinema.films.v12_taxi_besson",
+  "label": "Taxi et Luc Besson",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le film « Taxi » a été écrit et produit par Luc Besson.",
+  "explanation": "Vrai : Luc Besson l'a écrit et produit ; c'est Gérard Pirès qui l'a réalisé. Quatre suites ont suivi.",
+  "answer": true
+ },
+ {
+  "key": "cin12-012",
+  "concept": "cinema.films.v12_kaamelott",
+  "label": "Kaamelott",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel roi légendaire est le héros de « Kaamelott », la série puis les films d'Alexandre Astier ?",
+  "explanation": "Arthur et ses chevaliers de la Table ronde, souvent dépassés par la quête du Graal.",
+  "options": [
+   "Le roi Arthur*",
+   "Charlemagne",
+   "Louis XIV",
+   "Clovis"
+  ]
+ },
+ {
+  "key": "cin12-013",
+  "concept": "cinema.films.v12_grand_bleu",
+  "label": "Le Grand Bleu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel sport est au cœur du film « Le Grand Bleu » de Luc Besson (1988) ?",
+  "explanation": "Deux plongeurs rivaux descendent toujours plus profond sans bouteille. Le film a marqué toute une génération.",
+  "options": [
+   "La plongée en apnée*",
+   "La voile",
+   "Le surf",
+   "La natation synchronisée"
+  ]
+ },
+ {
+  "key": "cin12-014",
+  "concept": "cinema.films.v12_choristes",
+  "label": "Les Choristes",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « Les Choristes » (2004), que crée le surveillant Clément Mathieu dans l'internat ?",
+  "explanation": "Avec le chant, il redonne confiance à des enfants difficiles. La musique du film a été un énorme succès.",
+  "options": [
+   "Une chorale*",
+   "Un club de foot",
+   "Une troupe de théâtre",
+   "Un journal"
+  ]
+ },
+ {
+  "key": "cin12-015",
+  "concept": "cinema.films.v12_amelie_annee",
+  "label": "Amélie Poulain",
+  "type": "timeline",
+  "difficulty": 40,
+  "prompt": "En quelle année sort « Le Fabuleux Destin d'Amélie Poulain » ?",
+  "explanation": "En 2001. Il a fait découvrir Montmartre au monde entier.",
+  "answer": 2001,
+  "tolerance": 3,
+  "min": 1980,
+  "max": 2020
+ },
+ {
+  "key": "cin12-016",
+  "concept": "cinema.films.v12_cleopatre_annee",
+  "label": "Mission Cléopâtre",
+  "type": "timeline",
+  "difficulty": 40,
+  "prompt": "En quelle année sort « Astérix et Obélix : Mission Cléopâtre » ?",
+  "explanation": "En 2002, avec Jamel Debbouze en Numérobis et Alain Chabat en César.",
+  "answer": 2002,
+  "tolerance": 3,
+  "min": 1980,
+  "max": 2020
+ },
+ {
+  "key": "cin12-017",
+  "concept": "cinema.films.v12_comedies_fr_us",
+  "label": "Comédie française ou américaine ?",
+  "type": "sort",
+  "difficulty": 25,
+  "prompt": "Comédie française ou américaine ?",
+  "explanation": "Les quatre premières sont françaises ; les quatre autres viennent d'Hollywood.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Française"
+   },
+   {
+    "label": "Américaine"
+   }
+  ],
+  "items": [
+   [
+    "Les Bronzés",
+    0
+   ],
+   [
+    "Les Tuche",
+    0
+   ],
+   [
+    "OSS 117",
+    0
+   ],
+   [
+    "Brice de Nice",
+    0
+   ],
+   [
+    "Maman, j'ai raté l'avion",
+    1
+   ],
+   [
+    "Very Bad Trip",
+    1
+   ],
+   [
+    "Madame Doubtfire",
+    1
+   ],
+   [
+    "SOS Fantômes",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "cin12-018",
+  "concept": "cinema.films.v12_kevin",
+  "label": "Maman, j'ai raté l'avion",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le garçon oublié par sa famille dans « Maman, j'ai raté l'avion » ?",
+  "explanation": "Kevin McCallister, 8 ans, défend seul sa maison contre deux cambrioleurs à Noël.",
+  "options": [
+   "Kevin*",
+   "Kenny",
+   "Tommy",
+   "Billy"
+  ]
+ },
+ {
+  "key": "cin12-019",
+  "concept": "cinema.films.v12_forrest_chocolats",
+  "label": "Forrest Gump",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre la phrase célèbre de « Forrest Gump ».",
+  "explanation": "« … on ne sait jamais sur quoi on va tomber. » C'est ce que lui disait sa maman.",
+  "answer": "La vie, c'est comme une boîte de chocolats",
+  "words": [
+   "La",
+   "vie,",
+   "c'est",
+   "comme",
+   "une",
+   "boîte",
+   "de",
+   "chocolats"
+  ]
+ },
+ {
+  "key": "cin12-020",
+  "concept": "cinema.films.v12_parrain_famille",
+  "label": "Le Parrain",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'appelle la famille mafieuse du « Parrain » ?",
+  "explanation": "Vito Corleone, joué par Marlon Brando, puis son fils Michael, joué par Al Pacino.",
+  "options": [
+   "Les Corleone*",
+   "Les Soprano",
+   "Les Montana",
+   "Les Gambino"
+  ]
+ },
+ {
+  "key": "cin12-021",
+  "concept": "cinema.films.v12_rocky_ville",
+  "label": "Rocky",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle ville Rocky Balboa monte-t-il en courant les célèbres marches du musée ?",
+  "explanation": "Les « Rocky Steps » du musée d'Art de Philadelphie attirent encore des coureurs du monde entier.",
+  "options": [
+   "Philadelphie*",
+   "New York",
+   "Chicago",
+   "Boston"
+  ]
+ },
+ {
+  "key": "cin12-022",
+  "concept": "cinema.films.v12_delorean",
+  "label": "Retour vers le futur",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quoi Marty voyage-t-il dans le temps dans « Retour vers le futur » ?",
+  "explanation": "Il faut atteindre 88 miles à l'heure (environ 140 km/h) pour que le voyage commence.",
+  "options": [
+   "Une voiture DeLorean*",
+   "Une cabine téléphonique",
+   "Une machine à laver",
+   "Un ascenseur"
+  ]
+ },
+ {
+  "key": "cin12-023",
+  "concept": "cinema.films.v12_retour_futur_films",
+  "label": "Retour vers le futur",
+  "type": "counter",
+  "difficulty": 25,
+  "prompt": "Combien de films compte la saga « Retour vers le futur » ?",
+  "explanation": "Trois films (1985, 1989, 1990), qui emmènent Marty en 1955, en 2015 et au Far West.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1
+ },
+ {
+  "key": "cin12-024",
+  "concept": "cinema.films.v12_jurassic_adn",
+  "label": "Jurassic Park",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « Jurassic Park », comment les scientifiques recréent-ils les dinosaures ?",
+  "explanation": "Un moustique a piqué un dinosaure puis s'est retrouvé piégé dans la résine. Une jolie idée, mais impossible en vrai.",
+  "options": [
+   "Grâce à l'ADN trouvé dans des moustiques pris dans l'ambre*",
+   "Avec des œufs fossilisés",
+   "Grâce à des os congelés",
+   "En croisant des lézards"
+  ]
+ },
+ {
+  "key": "cin12-025",
+  "concept": "cinema.films.v12_gryffondor",
+  "label": "Harry Potter",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quelle maison de Poudlard Harry Potter est-il envoyé ?",
+  "explanation": "Le Choixpeau hésite à l'envoyer à Serpentard, mais Harry demande Gryffondor.",
+  "options": [
+   "Gryffondor*",
+   "Serpentard",
+   "Poufsouffle",
+   "Serdaigle"
+  ]
+ },
+ {
+  "key": "cin12-026",
+  "concept": "cinema.films.v12_hagrid",
+  "label": "Hagrid",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Demi-géant, garde-chasse de Poudlard et grand ami de Harry Potter.",
+  "explanation": "Rubeus Hagrid adore les créatures dangereuses, comme son dragon Norbert.",
+  "word": "HAGRID",
+  "display": "Hagrid"
+ },
+ {
+  "key": "cin12-027",
+  "concept": "cinema.films.v12_sabre_laser",
+  "label": "Star Wars",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle arme utilisent les chevaliers Jedi ?",
+  "explanation": "Sa couleur varie : bleu ou vert pour les Jedi, rouge pour les Sith.",
+  "options": [
+   "Le sabre laser*",
+   "L'arc",
+   "Le pistolet laser",
+   "La lance"
+  ]
+ },
+ {
+  "key": "cin12-028",
+  "concept": "cinema.films.v12_yoda",
+  "label": "Yoda",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Petit maître Jedi vert qui parle en inversant les mots.",
+  "explanation": "« Fort tu es devenu. » Il a près de 900 ans.",
+  "word": "YODA",
+  "display": "Yoda"
+ },
+ {
+  "key": "cin12-029",
+  "concept": "cinema.films.v12_super_heros_identites",
+  "label": "Super-héros",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque super-héros à sa véritable identité.",
+  "explanation": "Peter Parker est photographe, Bruce Wayne milliardaire, Clark Kent journaliste et Tony Stark inventeur.",
+  "pairs": [
+   [
+    "Spider-Man",
+    "Peter Parker"
+   ],
+   [
+    "Batman",
+    "Bruce Wayne"
+   ],
+   [
+    "Superman",
+    "Clark Kent"
+   ],
+   [
+    "Iron Man",
+    "Tony Stark"
+   ]
+  ]
+ },
+ {
+  "key": "cin12-030",
+  "concept": "cinema.films.v12_thor",
+  "label": "Thor",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel super-héros de Marvel manie le marteau Mjöllnir ?",
+  "explanation": "Le dieu du tonnerre, tiré de la mythologie nordique. Seuls ceux qui en sont dignes peuvent soulever son marteau.",
+  "options": [
+   "Thor*",
+   "Hulk",
+   "Captain America",
+   "Black Panther"
+  ]
+ },
+ {
+  "key": "cin12-031",
+  "concept": "cinema.films.v12_indiana_serpents",
+  "label": "Indiana Jones",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quels animaux Indiana Jones a-t-il une peur bleue ?",
+  "explanation": "« Des serpents… Pourquoi faut-il toujours que ce soit des serpents ? » dans « Les Aventuriers de l'arche perdue ».",
+  "options": [
+   "Les serpents*",
+   "Les araignées",
+   "Les chauves-souris",
+   "Les rats"
+  ]
+ },
+ {
+  "key": "cin12-032",
+  "concept": "cinema.films.v12_godzilla",
+  "label": "Godzilla",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel monstre géant, né au cinéma japonais en 1954, sort de la mer pour attaquer Tokyo ?",
+  "explanation": "Ce reptile géant est né d'essais nucléaires dans le film. Il est devenu une star mondiale.",
+  "options": [
+   "Godzilla*",
+   "King Kong",
+   "Mothra",
+   "Rodan"
+  ]
+ },
+ {
+  "key": "cin12-033",
+  "concept": "cinema.films.v12_magicien_oz",
+  "label": "Le Magicien d'Oz",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « Le Magicien d'Oz » (1939), quelle route suit Dorothy ?",
+  "explanation": "Avec l'Épouvantail, l'Homme de fer-blanc et le Lion peureux, elle part à la rencontre du magicien.",
+  "options": [
+   "Une route de briques jaunes*",
+   "Une route de nuages",
+   "Un chemin de pierres rouges",
+   "Une rivière de chocolat"
+  ]
+ },
+ {
+  "key": "cin12-034",
+  "concept": "cinema.films.v12_matrix_neo",
+  "label": "Matrix",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel personnage, joué par Keanu Reeves, découvre que le monde est une simulation dans « Matrix » ?",
+  "explanation": "Morpheus lui propose de choisir entre une pilule bleue et une pilule rouge.",
+  "options": [
+   "Neo*",
+   "Morpheus",
+   "Trinity",
+   "L'Agent Smith"
+  ]
+ },
+ {
+  "key": "cin12-035",
+  "concept": "cinema.films.v12_houston",
+  "label": "Apollo 13",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre la phrase célèbre de « Apollo 13 ».",
+  "explanation": "Inspirée d'une vraie phrase de l'équipage d'Apollo 13 en 1970. Tom Hanks joue le commandant.",
+  "answer": "Houston, on a un problème",
+  "words": [
+   "Houston,",
+   "on",
+   "a",
+   "un",
+   "problème"
+  ]
+ },
+ {
+  "key": "cin12-036",
+  "concept": "cinema.films.v12_mamma_mia",
+  "label": "Mamma Mia !",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Les chansons du film « Mamma Mia ! » sont celles de quel groupe ?",
+  "explanation": "Une comédie musicale tournée en Grèce, sur les tubes du groupe suédois.",
+  "options": [
+   "ABBA*",
+   "Queen",
+   "Les Beatles",
+   "Bee Gees"
+  ]
+ },
+ {
+  "key": "cin12-037",
+  "concept": "cinema.films.v12_bohemian_film",
+  "label": "Bohemian Rhapsody",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Le film « Bohemian Rhapsody » (2018) raconte l'histoire de quel groupe ?",
+  "explanation": "Rami Malek y joue Freddie Mercury et a reçu l'Oscar du meilleur acteur.",
+  "options": [
+   "Queen*",
+   "The Rolling Stones",
+   "Nirvana",
+   "Pink Floyd"
+  ]
+ },
+ {
+  "key": "cin12-038",
+  "concept": "cinema.films.v12_avant_apres_2000",
+  "label": "Avant ou après 2000 ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Ce film est sorti avant ou après l'an 2000 ?",
+  "explanation": "Les Visiteurs (1993), Le Roi lion (1994), Retour vers le futur (1985) ; Intouchables (2011), La Reine des neiges (2013), Avatar (2009).",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Avant 2000"
+   },
+   {
+    "label": "Après 2000"
+   }
+  ],
+  "items": [
+   [
+    "Les Visiteurs",
+    0
+   ],
+   [
+    "Le Roi lion",
+    0
+   ],
+   [
+    "Retour vers le futur",
+    0
+   ],
+   [
+    "Intouchables",
+    1
+   ],
+   [
+    "La Reine des neiges",
+    1
+   ],
+   [
+    "Avatar",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "cin12-039",
+  "concept": "cinema.animation.v12_hakuna_matata",
+  "label": "Hakuna Matata",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Le Roi lion », que veut dire « Hakuna Matata » ?",
+  "explanation": "Une expression en swahili, la philosophie de Timon et Pumbaa.",
+  "options": [
+   "Pas de soucis*",
+   "Bonjour l'ami",
+   "Le roi est mort",
+   "Bonne chance"
+  ]
+ },
+ {
+  "key": "cin12-040",
+  "concept": "cinema.animation.v12_roi_lion_annee",
+  "label": "Le Roi lion",
+  "type": "timeline",
+  "difficulty": 35,
+  "prompt": "En quelle année sort le dessin animé « Le Roi lion » ?",
+  "explanation": "En 1994. Une version en images de synthèse est sortie en 2019.",
+  "answer": 1994,
+  "tolerance": 3,
+  "min": 1970,
+  "max": 2015
+ },
+ {
+  "key": "cin12-041",
+  "concept": "cinema.animation.v12_olaf",
+  "label": "Olaf",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Bonhomme de neige qui rêve de l'été, dans « La Reine des neiges ».",
+  "explanation": "Créé par la magie d'Elsa, il adore les « câlins tout chauds ».",
+  "word": "OLAF",
+  "display": "Olaf"
+ },
+ {
+  "key": "cin12-042",
+  "concept": "cinema.animation.v12_liberee_delivree",
+  "label": "Libérée, délivrée",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel personnage chante « Libérée, délivrée » dans « La Reine des neiges » ?",
+  "explanation": "En anglais, « Let It Go ». La chanson a reçu l'Oscar de la meilleure chanson originale.",
+  "options": [
+   "Elsa*",
+   "Anna",
+   "Raiponce",
+   "Vaiana"
+  ]
+ },
+ {
+  "key": "cin12-043",
+  "concept": "cinema.animation.v12_ariel",
+  "label": "La Petite Sirène",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle la Petite Sirène de Disney ?",
+  "explanation": "Elle échange sa voix contre des jambes auprès de la sorcière Ursula.",
+  "options": [
+   "Ariel*",
+   "Aurore",
+   "Belle",
+   "Jasmine"
+  ]
+ },
+ {
+  "key": "cin12-044",
+  "concept": "cinema.animation.v12_shrek_ane",
+  "label": "Shrek",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel animal bavard accompagne Shrek dans ses aventures ?",
+  "explanation": "L'Âne ne s'arrête jamais de parler. Le Chat Potté arrive dans « Shrek 2 ».",
+  "options": [
+   "Un âne*",
+   "Un chat",
+   "Un dragon",
+   "Un cheval"
+  ]
+ },
+ {
+  "key": "cin12-045",
+  "concept": "cinema.animation.v12_shrek_annee",
+  "label": "Shrek",
+  "type": "timeline",
+  "difficulty": 40,
+  "prompt": "En quelle année sort le premier « Shrek » ?",
+  "explanation": "En 2001 : il a reçu le tout premier Oscar du meilleur film d'animation.",
+  "answer": 2001,
+  "tolerance": 2,
+  "min": 1985,
+  "max": 2015
+ },
+ {
+  "key": "cin12-046",
+  "concept": "cinema.animation.v12_scrat",
+  "label": "L'Âge de glace",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans « L'Âge de glace », que poursuit sans cesse Scrat ?",
+  "explanation": "Ce petit écureuil préhistorique provoque des catastrophes à chaque fois qu'il tente de cacher son gland.",
+  "options": [
+   "Son gland*",
+   "Un poisson",
+   "Une noisette géante",
+   "Un mammouth"
+  ]
+ },
+ {
+  "key": "cin12-047",
+  "concept": "cinema.animation.v12_elastigirl",
+  "label": "Les Indestructibles",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Les Indestructibles », quel est le pouvoir d'Elastigirl ?",
+  "explanation": "Sa fille Violette devient invisible, son fils Flèche court très vite.",
+  "options": [
+   "Son corps s'étire comme un élastique*",
+   "Elle devient invisible",
+   "Elle court très vite",
+   "Elle vole"
+  ]
+ },
+ {
+  "key": "cin12-048",
+  "concept": "cinema.animation.v12_coco_fete",
+  "label": "Coco",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pendant quelle fête mexicaine se déroule « Coco » (Pixar) ?",
+  "explanation": "Le Día de Muertos, où l'on honore les ancêtres avec des fleurs orange, les cempasúchil.",
+  "options": [
+   "Le Jour des morts*",
+   "Noël",
+   "Le carnaval",
+   "La fête de l'indépendance"
+  ]
+ },
+ {
+  "key": "cin12-049",
+  "concept": "cinema.animation.v12_vaiana_maui",
+  "label": "Vaiana",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel demi-dieu accompagne Vaiana sur l'océan ?",
+  "explanation": "Un demi-dieu farceur aux tatouages vivants, qui a volé le cœur de la déesse Te Fiti.",
+  "options": [
+   "Maui*",
+   "Hercule",
+   "Kamapua'a",
+   "Tamatoa"
+  ]
+ },
+ {
+  "key": "cin12-050",
+  "concept": "cinema.animation.v12_doigts_mickey",
+  "label": "Les doigts de Mickey",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien de doigts Mickey a-t-il à chaque main ?",
+  "explanation": "Trois doigts et un pouce : c'était plus simple et plus rapide à dessiner, et plus joli à l'écran.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 6,
+  "start": 1
+ },
+ {
+  "key": "cin12-051",
+  "concept": "cinema.animation.v12_mickey_1928",
+  "label": "Mickey",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Mickey Mouse est apparu pour la première fois au cinéma en 1928.",
+  "explanation": "Vrai, dans « Steamboat Willie », un des premiers dessins animés avec le son synchronisé.",
+  "answer": true
+ },
+ {
+  "key": "cin12-052",
+  "concept": "cinema.animation.v12_japon_usa",
+  "label": "Japonais ou américain ?",
+  "type": "sort",
+  "difficulty": 30,
+  "prompt": "Ce dessin animé vient du Japon ou des États-Unis ?",
+  "explanation": "Les quatre premiers sont japonais (Studio Ghibli, Toei, Makoto Shinkai) ; les autres sont américains.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Japon"
+   },
+   {
+    "label": "États-Unis"
+   }
+  ],
+  "items": [
+   [
+    "Le Voyage de Chihiro",
+    0
+   ],
+   [
+    "Princesse Mononoké",
+    0
+   ],
+   [
+    "Dragon Ball",
+    0
+   ],
+   [
+    "Your Name",
+    0
+   ],
+   [
+    "Shrek",
+    1
+   ],
+   [
+    "Le Roi lion",
+    1
+   ],
+   [
+    "Toy Story",
+    1
+   ],
+   [
+    "Les Simpson",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "cin12-053",
+  "concept": "cinema.animation.v12_shrek_studio",
+  "label": "DreamWorks",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel studio a créé « Shrek » et « Kung Fu Panda » ?",
+  "explanation": "DreamWorks Animation a été cofondé par Steven Spielberg.",
+  "options": [
+   "DreamWorks*",
+   "Pixar",
+   "Disney",
+   "Illumination"
+  ]
+ },
+ {
+  "key": "cin12-054",
+  "concept": "cinema.animation.v12_annecy",
+  "label": "Festival d'Annecy",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle ville accueille chaque année le plus grand festival de cinéma d'animation du monde ?",
+  "explanation": "Le Festival international du film d'animation d'Annecy existe depuis 1960. Angoulême, lui, est le festival de la BD.",
+  "options": [
+   "Annecy*",
+   "Angoulême",
+   "Cannes",
+   "Lyon"
+  ]
+ },
+ {
+  "key": "cin12-055",
+  "concept": "cinema.actors.v12_rocky_rambo",
+  "label": "Rocky et Rambo",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel acteur a joué à la fois Rocky et Rambo ?",
+  "explanation": "Il a aussi écrit le scénario du premier « Rocky » (1976).",
+  "options": [
+   "Sylvester Stallone*",
+   "Arnold Schwarzenegger",
+   "Bruce Willis",
+   "Jean-Claude Van Damme"
+  ]
+ },
+ {
+  "key": "cin12-056",
+  "concept": "cinema.actors.v12_terminator",
+  "label": "Terminator",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel acteur d'origine autrichienne joue le Terminator ?",
+  "explanation": "Ancien champion de culturisme, il a aussi été gouverneur de Californie. « I'll be back ! »",
+  "options": [
+   "Arnold Schwarzenegger*",
+   "Sylvester Stallone",
+   "Dolph Lundgren",
+   "Vin Diesel"
+  ]
+ },
+ {
+  "key": "cin12-057",
+  "concept": "cinema.actors.v12_hermione",
+  "label": "Hermione",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle actrice joue Hermione Granger dans les films Harry Potter ?",
+  "explanation": "Elle avait 9 ans lors du casting et a joué le rôle dans les huit films.",
+  "options": [
+   "Emma Watson*",
+   "Emma Stone",
+   "Keira Knightley",
+   "Kristen Stewart"
+  ]
+ },
+ {
+  "key": "cin12-058",
+  "concept": "cinema.actors.v12_wolverine",
+  "label": "Wolverine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel acteur australien a joué Wolverine dans les films X-Men ?",
+  "explanation": "Il a tenu le rôle pendant plus de 20 ans, de 2000 à « Deadpool & Wolverine » en 2024.",
+  "options": [
+   "Hugh Jackman*",
+   "Chris Hemsworth",
+   "Russell Crowe",
+   "Heath Ledger"
+  ]
+ },
+ {
+  "key": "cin12-059",
+  "concept": "cinema.actors.v12_dujardin_oscar",
+  "label": "Jean Dujardin",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Jean Dujardin a gagné l'Oscar du meilleur acteur pour « The Artist ».",
+  "explanation": "Vrai, en 2012 : le premier acteur français à le recevoir, pour un film muet en noir et blanc.",
+  "answer": true
+ },
+ {
+  "key": "cin12-060",
+  "concept": "cinema.actors.v12_acteurs_fr_films",
+  "label": "Acteurs français",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque acteur à un de ses films célèbres.",
+  "explanation": "Jean Reno est le tueur à gages de Luc Besson, Clavier joue Jacquouille, Belmondo est la star de la Nouvelle Vague.",
+  "pairs": [
+   [
+    "Jean Reno",
+    "Léon"
+   ],
+   [
+    "Christian Clavier",
+    "Les Visiteurs"
+   ],
+   [
+    "Jean-Paul Belmondo",
+    "À bout de souffle"
+   ],
+   [
+    "Omar Sy",
+    "Intouchables"
+   ]
+  ]
+ },
+ {
+  "key": "cin12-061",
+  "concept": "cinema.actors.v12_seydoux_bond",
+  "label": "Léa Seydoux",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle actrice française joue Madeleine Swann, aux côtés de James Bond, dans « Spectre » ?",
+  "explanation": "Elle revient dans « Mourir peut attendre » (2021). Eva Green, elle, était Vesper dans « Casino Royale ».",
+  "options": [
+   "Léa Seydoux*",
+   "Eva Green",
+   "Marion Cotillard",
+   "Audrey Tautou"
+  ]
+ },
+ {
+  "key": "cin12-062",
+  "concept": "cinema.actors.v12_lucy_johansson",
+  "label": "Lucy",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle actrice joue « Lucy » dans le film de Luc Besson (2014) ?",
+  "explanation": "Une femme qui utilise peu à peu 100 % de son cerveau. Le film a été un grand succès mondial.",
+  "options": [
+   "Scarlett Johansson*",
+   "Natalie Portman",
+   "Milla Jovovich",
+   "Charlize Theron"
+  ]
+ },
+ {
+  "key": "cin12-063",
+  "concept": "cinema.actors.v12_de_funes",
+  "label": "Louis de Funès",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Nom de famille de l'acteur de « La Grande Vadrouille » et de « Rabbi Jacob ».",
+  "explanation": "Louis de Funès, roi de la comédie française des années 1960-1970, célèbre pour ses grimaces et ses colères.",
+  "word": "FUNES",
+  "display": "de Funès"
+ },
+ {
+  "key": "cin12-064",
+  "concept": "cinema.actors.v12_dany_boon",
+  "label": "Dany Boon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel humoriste a réalisé « Bienvenue chez les Ch'tis » et y joue le facteur Antoine ?",
+  "explanation": "Né à Armentières, il a voulu faire aimer le Nord. Kad Merad joue le directeur de poste muté.",
+  "options": [
+   "Dany Boon*",
+   "Kad Merad",
+   "Gad Elmaleh",
+   "Franck Dubosc"
+  ]
+ },
+ {
+  "key": "cin12-065",
+  "concept": "cinema.actors.v12_mr_bean",
+  "label": "Mr. Bean",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel acteur britannique joue Mr. Bean ?",
+  "explanation": "Un personnage presque muet, qui fait rire dans le monde entier. Il a aussi joué Johnny English.",
+  "options": [
+   "Rowan Atkinson*",
+   "Hugh Grant",
+   "Mr. T",
+   "Benny Hill"
+  ]
+ },
+ {
+  "key": "cin12-066",
+  "concept": "cinema.actors.v12_joker_ledger",
+  "label": "Le Joker",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel acteur a joué le Joker face à Batman dans « The Dark Knight » (2008) ?",
+  "explanation": "Il a reçu un Oscar après sa mort pour ce rôle. Joaquin Phoenix a joué un autre Joker en 2019.",
+  "options": [
+   "Heath Ledger*",
+   "Jack Nicholson",
+   "Joaquin Phoenix",
+   "Jared Leto"
+  ]
+ },
+ {
+  "key": "cin12-067",
+  "concept": "cinema.directors.v12_tarantino",
+  "label": "Quentin Tarantino",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a réalisé « Pulp Fiction » et « Kill Bill » ?",
+  "explanation": "« Pulp Fiction » a reçu la Palme d'or à Cannes en 1994.",
+  "options": [
+   "Quentin Tarantino*",
+   "Martin Scorsese",
+   "Steven Spielberg",
+   "David Fincher"
+  ]
+ },
+ {
+  "key": "cin12-068",
+  "concept": "cinema.directors.v12_tim_burton",
+  "label": "Tim Burton",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel réalisateur est connu pour ses films gothiques comme « Edward aux mains d'argent » et « Beetlejuice » ?",
+  "explanation": "Il a souvent tourné avec Johnny Depp, et a aussi produit « L'Étrange Noël de monsieur Jack ».",
+  "options": [
+   "Tim Burton*",
+   "James Cameron",
+   "Ridley Scott",
+   "George Lucas"
+  ]
+ },
+ {
+  "key": "cin12-069",
+  "concept": "cinema.directors.v12_peter_jackson",
+  "label": "Peter Jackson",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a réalisé la trilogie « Le Seigneur des anneaux » ?",
+  "explanation": "Il l'a tournée dans son pays, la Nouvelle-Zélande. « Le Retour du roi » a remporté 11 Oscars.",
+  "options": [
+   "Peter Jackson*",
+   "George Lucas",
+   "Christopher Nolan",
+   "Ridley Scott"
+  ]
+ },
+ {
+  "key": "cin12-070",
+  "concept": "cinema.directors.v12_hitchcock_psychose",
+  "label": "Psychose",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel maître du suspense a réalisé « Psychose » (1960) ?",
+  "explanation": "La scène de la douche est l'une des plus célèbres du cinéma. Hitchcock apparaissait souvent en figurant dans ses films.",
+  "options": [
+   "Alfred Hitchcock*",
+   "Stanley Kubrick",
+   "Orson Welles",
+   "Billy Wilder"
+  ]
+ },
+ {
+  "key": "cin12-071",
+  "concept": "cinema.directors.v12_besson_cinquieme",
+  "label": "Le Cinquième Élément",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel réalisateur français a fait « Le Cinquième Élément » et « Léon » ?",
+  "explanation": "Il a imaginé l'histoire du « Cinquième Élément » quand il était adolescent.",
+  "options": [
+   "Luc Besson*",
+   "Jean-Pierre Jeunet",
+   "Jacques Audiard",
+   "Mathieu Kassovitz"
+  ]
+ },
+ {
+  "key": "cin12-072",
+  "concept": "cinema.directors.v12_realisateurs_fr_us",
+  "label": "Réalisateur français ou américain ?",
+  "type": "sort",
+  "difficulty": 40,
+  "prompt": "Réalisateur français ou américain ?",
+  "explanation": "Besson, Jeunet (« Amélie ») et Audiard (« Un prophète ») sont français ; Spielberg, Scorsese et Burton sont américains.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Français"
+   },
+   {
+    "label": "Américain"
+   }
+  ],
+  "items": [
+   [
+    "Luc Besson",
+    0
+   ],
+   [
+    "Jean-Pierre Jeunet",
+    0
+   ],
+   [
+    "Jacques Audiard",
+    0
+   ],
+   [
+    "Steven Spielberg",
+    1
+   ],
+   [
+    "Martin Scorsese",
+    1
+   ],
+   [
+    "Tim Burton",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "cin12-073",
+  "concept": "cinema.directors.v12_spielberg_ordre",
+  "label": "Films de Spielberg",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces films de Steven Spielberg du plus ancien au plus récent.",
+  "explanation": "Les Dents de la mer (1975), E.T. (1982), Jurassic Park (1993), Ready Player One (2018).",
+  "items": [
+   "Les Dents de la mer",
+   "E.T. l'extra-terrestre",
+   "Jurassic Park",
+   "Ready Player One"
+  ]
+ },
+ {
+  "key": "cin12-074",
+  "concept": "cinema.directors.v12_lion_or",
+  "label": "Le Lion d'or",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quel festival de cinéma remet-on le Lion d'or ?",
+  "explanation": "La Mostra de Venise, le plus ancien festival de cinéma du monde (1932). À Berlin, c'est l'Ours d'or.",
+  "options": [
+   "Venise*",
+   "Berlin",
+   "Cannes",
+   "Toronto"
+  ]
+ },
+ {
+  "key": "cin12-075",
+  "concept": "cinema.directors.v12_clap",
+  "label": "Le clap",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quoi sert le « clap » qu'on frappe au début de chaque prise ?",
+  "explanation": "Le bruit du clap et l'image du clap qui se ferme permettent de caler parfaitement le son sur l'image au montage.",
+  "options": [
+   "À synchroniser l'image et le son*",
+   "À réveiller les acteurs",
+   "À compter les spectateurs",
+   "À démarrer la caméra"
+  ]
+ },
+ {
+  "key": "cin12-076",
+  "concept": "cinema.directors.v12_avant_premiere",
+  "label": "Avant-première",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'une « avant-première » ?",
+  "explanation": "Souvent en présence de l'équipe du film, avec parfois un tapis rouge.",
+  "options": [
+   "La projection d'un film avant sa sortie officielle*",
+   "La bande-annonce",
+   "Le premier jour de tournage",
+   "La première scène d'un film"
+  ]
+ },
+ {
+  "key": "cin12-077",
+  "concept": "cinema.directors.v12_vostfr",
+  "label": "VOSTFR",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « VOSTFR » sur une affiche de cinéma ?",
+  "explanation": "On entend les vraies voix des acteurs, avec la traduction écrite en bas de l'écran. « VF », c'est la version doublée.",
+  "options": [
+   "Version originale sous-titrée en français*",
+   "Version officielle sans traduction",
+   "Vidéo originale sans titre",
+   "Version française doublée"
+  ]
+ },
+ {
+  "key": "cin12-078",
+  "concept": "cinema.directors.v12_bande_annonce",
+  "label": "La bande-annonce",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle la courte vidéo qui présente un film pour donner envie de le voir ?",
+  "explanation": "Elle passait autrefois après le film, d'où son nom anglais « trailer » (qui vient après).",
+  "options": [
+   "La bande-annonce*",
+   "Le générique",
+   "Le making-of",
+   "Le clap de fin"
+  ]
+ },
+ {
+  "key": "cin12-079",
+  "concept": "cinema.directors.v12_images_seconde",
+  "label": "24 images par seconde",
+  "type": "counter",
+  "difficulty": 45,
+  "prompt": "Combien d'images par seconde défilent dans un film de cinéma classique ?",
+  "explanation": "24 images par seconde : assez pour que l'œil voie un mouvement fluide. C'est le standard depuis l'arrivée du parlant.",
+  "answer": 24,
+  "tolerance": 0,
+  "min": 1,
+  "max": 60,
+  "start": 1,
+  "unit": "images"
+ },
+ {
+  "key": "cin12-080",
+  "concept": "cinema.directors.v12_john_williams",
+  "label": "John Williams",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel compositeur a écrit les musiques de « Star Wars », « Indiana Jones » et « E.T. » ?",
+  "explanation": "Il a reçu plus de 50 nominations aux Oscars, un record pour une personne vivante.",
+  "options": [
+   "John Williams*",
+   "Hans Zimmer",
+   "Ennio Morricone",
+   "Danny Elfman"
+  ]
+ },
+ {
+  "key": "cin12-081",
+  "concept": "cinema.directors.v12_morricone",
+  "label": "Ennio Morricone",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel compositeur italien a écrit la musique d'« Il était une fois dans l'Ouest » ?",
+  "explanation": "Ses musiques de westerns, avec harmonica et sifflements, sont parmi les plus célèbres du cinéma.",
+  "options": [
+   "Ennio Morricone*",
+   "Nino Rota",
+   "Hans Zimmer",
+   "Vladimir Cosma"
+  ]
+ },
+ {
+  "key": "cin12-082",
+  "concept": "cinema.directors.v12_hans_zimmer",
+  "label": "Hans Zimmer",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel compositeur allemand a écrit la musique du « Roi lion » et de « Gladiator » ?",
+  "explanation": "Il a reçu l'Oscar pour « Le Roi lion » (1995) puis pour « Dune » (2022).",
+  "options": [
+   "Hans Zimmer*",
+   "John Williams",
+   "Alexandre Desplat",
+   "Howard Shore"
+  ]
+ },
+ {
+  "key": "cin12-083",
+  "concept": "cinema.directors.v12_cesar_meilleur",
+  "label": "Les César",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle cérémonie récompense chaque année le cinéma français ?",
+  "explanation": "Les Molières récompensent le théâtre, les Victoires la musique.",
+  "options": [
+   "Les César*",
+   "Les Oscars",
+   "Les Molières",
+   "Les Victoires de la musique"
+  ]
+ },
+ {
+  "key": "cin12-084",
+  "concept": "cinema.directors.v12_lumiere_lyon",
+  "label": "Les frères Lumière",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Les frères Lumière, inventeurs du cinématographe, étaient de Lyon.",
+  "explanation": "Vrai : leur usine était à Lyon, où ils ont tourné « La Sortie de l'usine Lumière ». Un musée y raconte leur histoire.",
+  "answer": true
+ },
+ {
+  "key": "cin12-085",
+  "concept": "cinema.directors.v12_chaplin_muet",
+  "label": "Charlie Chaplin",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Charlie Chaplin a commencé sa carrière dans le cinéma muet.",
+  "explanation": "Vrai : Charlot, son vagabond, est né en 1914, bien avant le cinéma parlant.",
+  "answer": true
+ },
+ {
+  "key": "cin12-086",
+  "concept": "cinema.films.v12_avatar_succes",
+  "label": "Avatar",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "« Avatar » (2009) fait partie des plus gros succès de l'histoire du cinéma.",
+  "explanation": "Vrai : c'est le film qui a rapporté le plus d'argent au monde, devant « Avengers : Endgame ».",
+  "answer": true
+ },
+ {
+  "key": "cin12-087",
+  "concept": "cinema.films.v12_bronzes_mer",
+  "label": "Les Bronzés font du ski",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "« Les Bronzés font du ski » se déroule au bord de la mer.",
+  "explanation": "Faux : il se passe à la montagne. C'est le premier « Les Bronzés » (1978) qui se passait en vacances au soleil.",
+  "answer": false
+ },
+ {
+  "key": "cin12-088",
+  "concept": "cinema.films.v12_titanic_dicaprio_oscar",
+  "label": "DiCaprio",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Leonardo DiCaprio a reçu l'Oscar du meilleur acteur pour « Titanic ».",
+  "explanation": "Faux : il l'a reçu bien plus tard, en 2016, pour « The Revenant ».",
+  "answer": false
+ },
+ {
+  "key": "cin12-089",
+  "concept": "cinema.films.v12_star_wars_france",
+  "label": "Star Wars",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le premier « Star Wars » est sorti en 1977.",
+  "explanation": "Vrai : « La Guerre des étoiles » sort en 1977 aux États-Unis, puis en octobre 1977 en France.",
+  "answer": true
+ },
+ {
+  "key": "cin12-090",
+  "concept": "cinema.films.v12_pagnol_trilogie",
+  "label": "Marius, Fanny, César",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel auteur provençal a écrit la trilogie « Marius », « Fanny » et « César », portée au cinéma ?",
+  "explanation": "Une histoire d'amour sur le Vieux-Port de Marseille. La célèbre partie de cartes (« Tu me fends le cœur ! ») vient de « Marius ».",
+  "options": [
+   "Marcel Pagnol*",
+   "Jean Giono",
+   "Alphonse Daudet",
+   "Émile Zola"
+  ]
+ },
+ {
+  "key": "cin12-091",
+  "concept": "cinema.films.v12_camping_chirac",
+  "label": "Camping",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans le film « Camping » (2006), quel personnage joue Franck Dubosc ?",
+  "explanation": "Un habitué du camping des Flots Bleus, à Pyla-sur-Mer, en slip de bain et toujours sûr de son charme.",
+  "options": [
+   "Patrick Chirac*",
+   "Jeff Tuche",
+   "Brice",
+   "François Pignon"
+  ]
+ },
+ {
+  "key": "cin12-092",
+  "concept": "cinema.actors.v12_coluche_tchao",
+  "label": "Coluche",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Coluche a reçu le César du meilleur acteur pour un rôle dramatique, dans « Tchao Pantin ».",
+  "explanation": "Vrai, en 1984 : l'humoriste a surpris tout le monde dans ce rôle de pompiste triste. Il a ensuite fondé les Restos du cœur.",
+  "answer": true
+ },
+ {
+  "key": "cin12-093",
+  "concept": "cinema.films.v12_jumanji_jeu",
+  "label": "Jumanji",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans « Jumanji » (1995), qu'est-ce qui entraîne les héros dans une aventure pleine d'animaux sauvages ?",
+  "explanation": "Chaque lancer de dés libère un nouveau danger dans la maison. Robin Williams y joue Alan Parrish, prisonnier du jeu pendant 26 ans.",
+  "options": [
+   "Un jeu de société*",
+   "Une console de jeux",
+   "Une carte au trésor",
+   "Un livre magique"
+  ]
+ },
+ {
+  "key": "cin12-094",
+  "concept": "cinema.films.v12_grease_couple",
+  "label": "Grease",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel couple d'acteurs chante et danse dans « Grease » (1978) ?",
+  "explanation": "Danny et Sandy, dans un lycée américain des années 1950. « You're the One That I Want » est encore partout.",
+  "options": [
+   "John Travolta et Olivia Newton-John*",
+   "Patrick Swayze et Jennifer Grey",
+   "Fred Astaire et Ginger Rogers",
+   "Tom Cruise et Nicole Kidman"
+  ]
+ },
+ {
+  "key": "cin12-095",
+  "concept": "cinema.films.v12_sixieme_sens",
+  "label": "Sixième Sens",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets dans l'ordre la réplique culte de « Sixième Sens » (1999).",
+  "explanation": "Le petit Cole se confie à son psychologue, joué par Bruce Willis. La fin du film a surpris tout le monde.",
+  "answer": "Je vois des gens qui sont morts",
+  "words": [
+   "Je",
+   "vois",
+   "des",
+   "gens",
+   "qui",
+   "sont",
+   "morts"
+  ]
+ },
+ {
+  "key": "cin12-096",
+  "concept": "cinema.actors.v12_lacheau",
+  "label": "Philippe Lacheau",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel acteur-réalisateur a fait « Babysitting », « Alibi.com » et « Nicky Larson » avec sa « bande à Fifi » ?",
+  "explanation": "Avec ses amis Tarek Boudali, Julien Arruti et Élodie Fontan, il enchaîne les comédies à succès depuis 2014.",
+  "options": [
+   "Philippe Lacheau*",
+   "Kev Adams",
+   "Franck Dubosc",
+   "Dany Boon"
+  ]
+ },
+ {
+  "key": "cin12-097",
+  "concept": "cinema.actors.v12_ethan_hunt",
+  "label": "Mission impossible",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel acteur joue l'agent Ethan Hunt dans la saga « Mission impossible » ?",
+  "explanation": "Il fait lui-même ses cascades les plus folles, comme grimper sur la plus haute tour du monde à Dubaï.",
+  "options": [
+   "Tom Cruise*",
+   "Matt Damon",
+   "Brad Pitt",
+   "Keanu Reeves"
+  ]
+ },
+ {
+  "key": "cin12-098",
+  "concept": "cinema.films.v12_grinch",
+  "label": "Le Grinch",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel personnage vert et grincheux veut voler Noël aux habitants de Chouville ?",
+  "explanation": "Créé par le Dr Seuss, il a été joué par Jim Carrey en 2000, puis est revenu en film d'animation en 2018.",
+  "options": [
+   "Le Grinch*",
+   "Shrek",
+   "Hulk",
+   "Yoda"
+  ]
+ },
+ {
+  "key": "cin12-099",
+  "concept": "cinema.films.v12_gremlins_minuit",
+  "label": "Gremlins",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Dans « Gremlins », on peut nourrir le petit Gizmo à n'importe quelle heure sans danger.",
+  "explanation": "Faux : trois règles à respecter : pas de lumière vive, pas d'eau, et surtout ne jamais le nourrir après minuit !",
+  "answer": false
+ },
+ {
+  "key": "cin12-100",
+  "concept": "cinema.films.v12_wonka",
+  "label": "Charlie et la Chocolaterie",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans « Charlie et la Chocolaterie », comment s'appelle le patron de la chocolaterie ?",
+  "explanation": "Johnny Depp l'a joué en 2005, Timothée Chalamet en 2023 dans « Wonka ». Charlie a trouvé l'un des cinq tickets d'or.",
+  "options": [
+   "Willy Wonka*",
+   "Willy Wilson",
+   "Billy Bonka",
+   "Mister Choco"
+  ]
+ },
+ {
+  "key": "cin12-101",
+  "concept": "cinema.actors.v12_gabin",
+  "label": "Jean Gabin",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Nom de la star du « Quai des brumes » et du « Clan des Siciliens », prénom Jean.",
+  "explanation": "Un des plus grands acteurs français, du cinéma d'avant-guerre aux films policiers avec Alain Delon et Lino Ventura.",
+  "word": "GABIN",
+  "display": "Gabin"
+ },
+ {
+  "key": "cin12-102",
+  "concept": "cinema.films.v12_horreur_comedie",
+  "label": "Horreur ou comédie ?",
+  "type": "sort",
+  "difficulty": 20,
+  "prompt": "Film d'horreur ou comédie ?",
+  "explanation": "« Ça » met en scène le clown Pennywise. Les quatre autres sont des comédies françaises cultes.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Horreur"
+   },
+   {
+    "label": "Comédie"
+   }
+  ],
+  "items": [
+   [
+    "Scream",
+    0
+   ],
+   [
+    "Halloween",
+    0
+   ],
+   [
+    "Ça",
+    0
+   ],
+   [
+    "L'Exorciste",
+    0
+   ],
+   [
+    "Camping",
+    1
+   ],
+   [
+    "Babysitting",
+    1
+   ],
+   [
+    "Les Visiteurs",
+    1
+   ],
+   [
+    "Le Dîner de cons",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "cin12-103",
+  "concept": "cinema.animation.v12_disney_ordre",
+  "label": "Disney dans l'ordre",
+  "type": "ordering",
+  "difficulty": 35,
+  "prompt": "Classe ces dessins animés Disney du plus ancien au plus récent.",
+  "explanation": "Blanche-Neige (1937), le premier long-métrage de Disney ; Le Roi lion (1994) ; La Reine des neiges (2013) ; Encanto (2021).",
+  "items": [
+   "Blanche-Neige et les Sept Nains",
+   "Le Roi lion",
+   "La Reine des neiges",
+   "Encanto"
+  ]
+ }
+]

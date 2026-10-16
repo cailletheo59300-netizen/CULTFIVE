@@ -27,6 +27,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Retours 1.2 (D-058) : 5 tickets au plus (surplus = 30 neurones chacun), questions carte hors du 5 du jour et plus difficiles, 2 nouveaux types plus souvent dans le 5 du jour, défis cliquables, feuille des 3 façons d'ouvrir une pochette, textes coupés corrigés, filtres et légende de l'album, visites guidées avec « ? » | ✅ serveur en production (0057, 16/10) · 🟡 app 1.2 en examen chez Apple (build 47, 16/10) | `99_retours_12.sql`, `testQuestsAndRecap` (CI) |
 | Ligues ouvertes (D-059) : quiz identiques sans chrono, classement général, ajout de quiz et fin par le créateur ; podium + trophée « Vainqueur de ligue » à la place des coffres (tous formats) | ✅ serveur en production (0058, 16/10) · 🟡 app 1.2 en examen chez Apple (build 47, 16/10) | `99_ligues_ouvertes.sql`, `96_league_podium.sql`, `testOpenLeague` (CI) |
 | 120 questions de nature faciles (D-060) | ✅ en production (16/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
+| 204 questions cinéma (103) et musique (101), types variés (D-063) | ✅ en production (16/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |
 

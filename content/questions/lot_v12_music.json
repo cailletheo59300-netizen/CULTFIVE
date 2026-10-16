@@ -1,0 +1,1635 @@
+[
+ {
+  "key": "mus12-001",
+  "concept": "music.popular.v12_stromae",
+  "label": "Stromae",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Chanteur belge de « Papaoutai » ; son nom est le verlan de « maestro ».",
+  "explanation": "Paul Van Haver de son vrai nom. Il soigne aussi beaucoup ses clips et ses costumes.",
+  "word": "STROMAE",
+  "display": "Stromae"
+ },
+ {
+  "key": "mus12-002",
+  "concept": "music.popular.v12_indochine",
+  "label": "Indochine",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Groupe de Nicola Sirkis, auteur de « L'Aventurier » et « J'ai demandé à la lune ».",
+  "explanation": "Formé en 1981, c'est l'un des groupes de rock français les plus durables, qui remplit encore les stades.",
+  "word": "INDOCHINE",
+  "display": "Indochine"
+ },
+ {
+  "key": "mus12-003",
+  "concept": "music.popular.v12_johnny_smet",
+  "label": "Johnny Hallyday",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le vrai nom de Johnny Hallyday était Jean-Philippe Smet.",
+  "explanation": "Vrai. Son nom de scène s'inspire du mari américain de sa cousine, Lee Hallyday.",
+  "answer": true
+ },
+ {
+  "key": "mus12-004",
+  "concept": "music.popular.v12_allumer_le_feu",
+  "label": "Allumer le feu",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre ce titre de Johnny Hallyday (1998).",
+  "explanation": "Chantée au Stade de France en 1998, elle est devenue un hymne de ses concerts.",
+  "answer": "Allumer le feu",
+  "words": [
+   "Allumer",
+   "le",
+   "feu"
+  ]
+ },
+ {
+  "key": "mus12-005",
+  "concept": "music.popular.v12_bande_organisee",
+  "label": "Bande organisée",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel rappeur marseillais a rassemblé d'autres rappeurs du 13 sur « Bande organisée » (2020) ?",
+  "explanation": "Le projet « 13 Organisé » a réuni une cinquantaine de rappeurs marseillais. Jul est l'un des artistes qui vendent le plus en France.",
+  "options": [
+   "Jul*",
+   "Soprano",
+   "SCH",
+   "Alonzo"
+  ]
+ },
+ {
+  "key": "mus12-006",
+  "concept": "music.popular.v12_bigflo_oli",
+  "label": "Bigflo & Oli",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quelle ville viennent les frères rappeurs Bigflo & Oli ?",
+  "explanation": "Florian et Olivio Ordonez parlent souvent de Toulouse dans leurs chansons, comme « Dommage ».",
+  "options": [
+   "Toulouse*",
+   "Marseille",
+   "Lyon",
+   "Bordeaux"
+  ]
+ },
+ {
+  "key": "mus12-007",
+  "concept": "music.popular.v12_pnl",
+  "label": "PNL",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui forment le duo de rap PNL ?",
+  "explanation": "Ademo et N.O.S, deux frères de Corbeil-Essonnes, qui ne donnent presque jamais d'interviews.",
+  "options": [
+   "Deux frères*",
+   "Un père et son fils",
+   "Un frère et une sœur",
+   "Deux cousins"
+  ]
+ },
+ {
+  "key": "mus12-008",
+  "concept": "music.popular.v12_bouge_de_la",
+  "label": "Bouge de là",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui chante « Bouge de là » (1990), un des premiers grands tubes du rap français ?",
+  "explanation": "Connu pour ses jeux de mots, il a aussi chanté « Caroline » et « Nouveau Western ».",
+  "options": [
+   "MC Solaar*",
+   "IAM",
+   "NTM",
+   "Doc Gynéco"
+  ]
+ },
+ {
+  "key": "mus12-009",
+  "concept": "music.popular.v12_gims_sexion",
+  "label": "Gims",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Avant sa carrière solo, Gims faisait partie de quel groupe ?",
+  "explanation": "Avec Black M et d'autres. En solo, il a chanté « Sapés comme jamais » et « Est-ce que tu m'aimes ? ».",
+  "options": [
+   "Sexion d'Assaut*",
+   "IAM",
+   "113",
+   "Psy 4 de la rime"
+  ]
+ },
+ {
+  "key": "mus12-010",
+  "concept": "music.popular.v12_derniere_danse",
+  "label": "Dernière danse",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle chanteuse a eu un tube mondial avec « Dernière danse » (2013) ?",
+  "explanation": "Le clip, tourné à Paris, a dépassé le milliard de vues.",
+  "options": [
+   "Indila*",
+   "Zaz",
+   "Louane",
+   "Imany"
+  ]
+ },
+ {
+  "key": "mus12-011",
+  "concept": "music.popular.v12_voyage_voyage",
+  "label": "Voyage, voyage",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui chante « Voyage, voyage » (1986) ?",
+  "explanation": "Reconnaissable à sa coupe en brosse, elle a fait danser toute l'Europe avec ce tube.",
+  "options": [
+   "Desireless*",
+   "Mylène Farmer",
+   "Jeanne Mas",
+   "Elsa"
+  ]
+ },
+ {
+  "key": "mus12-012",
+  "concept": "music.popular.v12_resiste",
+  "label": "Résiste",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle chanteuse a interprété « Résiste » (1981), écrite par Michel Berger ?",
+  "explanation": "Michel Berger, son mari, lui a écrit de nombreux succès comme « Ella, elle l'a ».",
+  "options": [
+   "France Gall*",
+   "Véronique Sanson",
+   "Sylvie Vartan",
+   "Françoise Hardy"
+  ]
+ },
+ {
+  "key": "mus12-013",
+  "concept": "music.popular.v12_gainsbourg_javanaise",
+  "label": "La Javanaise",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Serge Gainsbourg a écrit « La Javanaise ».",
+  "explanation": "Vrai, en 1963, d'abord pour Juliette Gréco. Il jouait beaucoup avec les sons des mots : « J'avoue j'en ai bavé… »",
+  "answer": true
+ },
+ {
+  "key": "mus12-014",
+  "concept": "music.popular.v12_stromae_francais",
+  "label": "Stromae",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Stromae est un chanteur français.",
+  "explanation": "Faux : il est belge, né à Bruxelles (Etterbeek).",
+  "answer": false
+ },
+ {
+  "key": "mus12-015",
+  "concept": "music.popular.v12_vieilles_charrues",
+  "label": "Les Vieilles Charrues",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel grand festival de musique a lieu chaque été près de Carhaix, en Bretagne ?",
+  "explanation": "L'un des plus grands festivals de France, né d'une fête entre amis en 1992.",
+  "options": [
+   "Les Vieilles Charrues*",
+   "Les Francofolies",
+   "Le Printemps de Bourges",
+   "Rock en Seine"
+  ]
+ },
+ {
+  "key": "mus12-016",
+  "concept": "music.popular.v12_olympia",
+  "label": "L'Olympia",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle salle de spectacle mythique se trouve boulevard des Capucines, à Paris ?",
+  "explanation": "Piaf, Brel, les Beatles et bien d'autres y ont chanté. Y passer est un rêve pour beaucoup d'artistes.",
+  "options": [
+   "L'Olympia*",
+   "Le Zénith",
+   "Bercy",
+   "La Cigale"
+  ]
+ },
+ {
+  "key": "mus12-017",
+  "concept": "music.popular.v12_the_voice",
+  "label": "The Voice",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quelle émission de chant les coachs retournent-ils leur fauteuil quand une voix leur plaît ?",
+  "explanation": "Les coachs écoutent sans voir le candidat : seule la voix compte au début.",
+  "options": [
+   "The Voice*",
+   "Star Academy",
+   "Nouvelle Star",
+   "La France a un incroyable talent"
+  ]
+ },
+ {
+  "key": "mus12-018",
+  "concept": "music.popular.v12_celine_eurovision",
+  "label": "Céline Dion à l'Eurovision",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pour quel pays Céline Dion a-t-elle gagné l'Eurovision en 1988 ?",
+  "explanation": "Avec « Ne partez pas sans moi ». Le Canada ne participe pas à l'Eurovision, réservé aux pays européens (et quelques autres).",
+  "options": [
+   "La Suisse*",
+   "Le Canada",
+   "La France",
+   "La Belgique"
+  ]
+ },
+ {
+  "key": "mus12-019",
+  "concept": "music.popular.v12_eurovision_hote",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "En général, quel pays organise l'Eurovision ?",
+  "explanation": "C'est la tradition : le gagnant accueille l'édition suivante, sauf exception (le Royaume-Uni l'a organisé en 2023 à la place de l'Ukraine).",
+  "options": [
+   "Le pays qui a gagné l'année d'avant*",
+   "Toujours la France",
+   "Le pays tiré au sort",
+   "Toujours la Suisse"
+  ]
+ },
+ {
+  "key": "mus12-020",
+  "concept": "music.popular.v12_artistes_fr_tubes",
+  "label": "Artistes et tubes",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque artiste à son tube.",
+  "explanation": "Quatre tubes français des années 2010, souvent repris dans les fêtes et à la radio.",
+  "pairs": [
+   [
+    "Louane",
+    "Jour 1"
+   ],
+   [
+    "Zaz",
+    "Je veux"
+   ],
+   [
+    "Vianney",
+    "Je m'en vais"
+   ],
+   [
+    "Soprano",
+    "Cosmo"
+   ]
+  ]
+ },
+ {
+  "key": "mus12-021",
+  "concept": "music.popular.v12_francais_belge",
+  "label": "Français ou belge ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Cet artiste est français ou belge ?",
+  "explanation": "Stromae, Angèle et Jacques Brel sont belges, même si on les croit souvent français.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Français"
+   },
+   {
+    "label": "Belge"
+   }
+  ],
+  "items": [
+   [
+    "Johnny Hallyday",
+    0
+   ],
+   [
+    "Indochine",
+    0
+   ],
+   [
+    "Jul",
+    0
+   ],
+   [
+    "Édith Piaf",
+    0
+   ],
+   [
+    "Stromae",
+    1
+   ],
+   [
+    "Angèle",
+    1
+   ],
+   [
+    "Jacques Brel",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "mus12-022",
+  "concept": "music.popular.v12_groupe_solo",
+  "label": "Groupe ou solo ?",
+  "type": "sort",
+  "difficulty": 20,
+  "prompt": "Un groupe ou un artiste solo ?",
+  "explanation": "Indochine, Daft Punk (un duo), IAM et Coldplay sont des groupes.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Groupe"
+   },
+   {
+    "label": "Solo"
+   }
+  ],
+  "items": [
+   [
+    "Indochine",
+    0
+   ],
+   [
+    "Daft Punk",
+    0
+   ],
+   [
+    "IAM",
+    0
+   ],
+   [
+    "Coldplay",
+    0
+   ],
+   [
+    "Stromae",
+    1
+   ],
+   [
+    "Adele",
+    1
+   ],
+   [
+    "Jul",
+    1
+   ],
+   [
+    "Ed Sheeran",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "mus12-023",
+  "concept": "music.popular.v12_tubes_ordre",
+  "label": "Du plus ancien au plus récent",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces chansons de la plus ancienne à la plus récente.",
+  "explanation": "Édith Piaf (1960), Michael Jackson (1982), Stromae (2009), Aya Nakamura (2018).",
+  "items": [
+   "Non, je ne regrette rien",
+   "Thriller",
+   "Alors on danse",
+   "Djadja"
+  ]
+ },
+ {
+  "key": "mus12-024",
+  "concept": "music.popular.v12_paradis_polnareff",
+  "label": "On ira tous au paradis",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Remets dans l'ordre ce titre de Michel Polnareff (1972).",
+  "explanation": "Michel Polnareff, reconnaissable à ses grosses lunettes blanches, a aussi chanté « Lettre à France ».",
+  "answer": "On ira tous au paradis",
+  "words": [
+   "On",
+   "ira",
+   "tous",
+   "au",
+   "paradis"
+  ]
+ },
+ {
+  "key": "mus12-025",
+  "concept": "music.popular.v12_alors_on_danse_annee",
+  "label": "Alors on danse",
+  "type": "timeline",
+  "difficulty": 35,
+  "prompt": "En quelle année sort « Alors on danse » de Stromae ?",
+  "explanation": "En 2009 : il est numéro 1 dans une dizaine de pays européens.",
+  "answer": 2009,
+  "tolerance": 2,
+  "min": 1990,
+  "max": 2025
+ },
+ {
+  "key": "mus12-026",
+  "concept": "music.popular.v12_roi_pop",
+  "label": "Le roi de la pop",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel chanteur est surnommé « le roi de la pop » ?",
+  "explanation": "Son album « Thriller » (1982) reste l'un des plus vendus de tous les temps.",
+  "options": [
+   "Michael Jackson*",
+   "Elvis Presley",
+   "Prince",
+   "Justin Bieber"
+  ]
+ },
+ {
+  "key": "mus12-027",
+  "concept": "music.popular.v12_the_king",
+  "label": "The King",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel chanteur américain était surnommé « The King » (le roi du rock'n'roll) ?",
+  "explanation": "Célèbre pour son déhanché et ses rouflaquettes, il vivait à Graceland, dans le Tennessee.",
+  "options": [
+   "Elvis Presley*",
+   "Chuck Berry",
+   "Little Richard",
+   "Johnny Cash"
+  ]
+ },
+ {
+  "key": "mus12-028",
+  "concept": "music.popular.v12_bohemian_rhapsody",
+  "label": "Bohemian Rhapsody",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle chanson de Queen mélange opéra et rock pendant près de 6 minutes ?",
+  "explanation": "Sortie en 1975, elle était jugée trop longue pour la radio, et elle est pourtant devenue un tube.",
+  "options": [
+   "Bohemian Rhapsody*",
+   "We Will Rock You",
+   "Don't Stop Me Now",
+   "Another One Bites the Dust"
+  ]
+ },
+ {
+  "key": "mus12-029",
+  "concept": "music.popular.v12_bohemian_annee",
+  "label": "Bohemian Rhapsody",
+  "type": "timeline",
+  "difficulty": 45,
+  "prompt": "En quelle année sort « Bohemian Rhapsody » de Queen ?",
+  "explanation": "En 1975, sur l'album « A Night at the Opera ».",
+  "answer": 1975,
+  "tolerance": 3,
+  "min": 1955,
+  "max": 2000
+ },
+ {
+  "key": "mus12-030",
+  "concept": "music.popular.v12_queen",
+  "label": "Queen",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Groupe britannique de Freddie Mercury.",
+  "explanation": "Freddie Mercury, Brian May, Roger Taylor et John Deacon. « We Are the Champions » est chanté dans tous les stades.",
+  "word": "QUEEN",
+  "display": "Queen"
+ },
+ {
+  "key": "mus12-031",
+  "concept": "music.popular.v12_queen_b",
+  "label": "Queen B",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle chanteuse américaine est surnommée « Queen B » ?",
+  "explanation": "Ancienne chanteuse des Destiny's Child, elle est l'artiste la plus récompensée de l'histoire des Grammy Awards.",
+  "options": [
+   "Beyoncé*",
+   "Britney Spears",
+   "Billie Eilish",
+   "Lady Gaga"
+  ]
+ },
+ {
+  "key": "mus12-032",
+  "concept": "music.popular.v12_eras_tour",
+  "label": "Eras Tour",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle chanteuse a battu tous les records de recettes avec sa tournée « The Eras Tour » ?",
+  "explanation": "Une tournée de 2023 à 2024 qui a rapporté plus de deux milliards de dollars, passée notamment par Paris et Lyon.",
+  "options": [
+   "Taylor Swift*",
+   "Beyoncé",
+   "Adele",
+   "Rihanna"
+  ]
+ },
+ {
+  "key": "mus12-033",
+  "concept": "music.popular.v12_bts_membres",
+  "label": "BTS",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien de membres compte le groupe de K-pop BTS ?",
+  "explanation": "Sept : RM, Jin, Suga, J-Hope, Jimin, V et Jungkook.",
+  "answer": 7,
+  "tolerance": 0,
+  "min": 1,
+  "max": 12,
+  "start": 1
+ },
+ {
+  "key": "mus12-034",
+  "concept": "music.popular.v12_artistes_intl_tubes",
+  "label": "Artistes et tubes",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque artiste à sa chanson.",
+  "explanation": "Quatre classiques : de la pop (Thriller), du grunge (Nirvana), de l'électro française (Daft Punk) et du rock de stade (Queen).",
+  "pairs": [
+   [
+    "Michael Jackson",
+    "Thriller"
+   ],
+   [
+    "Nirvana",
+    "Smells Like Teen Spirit"
+   ],
+   [
+    "Daft Punk",
+    "One More Time"
+   ],
+   [
+    "Queen",
+    "We Will Rock You"
+   ]
+  ]
+ },
+ {
+  "key": "mus12-035",
+  "concept": "music.popular.v12_slim_shady",
+  "label": "Slim Shady",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel rappeur américain se fait aussi appeler « Slim Shady » ?",
+  "explanation": "Son film « 8 Mile » (2002) raconte en partie sa jeunesse à Detroit.",
+  "options": [
+   "Eminem*",
+   "Snoop Dogg",
+   "Jay-Z",
+   "50 Cent"
+  ]
+ },
+ {
+  "key": "mus12-036",
+  "concept": "music.popular.v12_waka_waka",
+  "label": "Waka Waka",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle chanteuse colombienne a chanté « Waka Waka » pour la Coupe du monde 2010 ?",
+  "explanation": "La Coupe du monde 2010 avait lieu en Afrique du Sud. Shakira est aussi connue pour « Hips Don't Lie ».",
+  "options": [
+   "Shakira*",
+   "Jennifer Lopez",
+   "Rihanna",
+   "Camila Cabello"
+  ]
+ },
+ {
+  "key": "mus12-037",
+  "concept": "music.popular.v12_despacito",
+  "label": "Despacito",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel chanteur portoricain a sorti « Despacito » avec Daddy Yankee ?",
+  "explanation": "Sortie en 2017, elle a longtemps été la vidéo la plus vue de YouTube.",
+  "options": [
+   "Luis Fonsi*",
+   "Ricky Martin",
+   "Enrique Iglesias",
+   "Bad Bunny"
+  ]
+ },
+ {
+  "key": "mus12-038",
+  "concept": "music.popular.v12_coldplay",
+  "label": "Coldplay",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel groupe britannique chante « Yellow » et « Viva la Vida » ?",
+  "explanation": "Le groupe de Chris Martin, connu pour ses concerts avec des bracelets lumineux distribués au public.",
+  "options": [
+   "Coldplay*",
+   "Muse",
+   "Radiohead",
+   "Oasis"
+  ]
+ },
+ {
+  "key": "mus12-039",
+  "concept": "music.popular.v12_rolling_stones",
+  "label": "Les Rolling Stones",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Les Rolling Stones sont un groupe américain.",
+  "explanation": "Faux : ils sont britanniques, formés à Londres en 1962 autour de Mick Jagger et Keith Richards.",
+  "answer": false
+ },
+ {
+  "key": "mus12-040",
+  "concept": "music.popular.v12_tomorrowland",
+  "label": "Tomorrowland",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel immense festival de musique électronique a lieu chaque été en Belgique ?",
+  "explanation": "À Boom, près d'Anvers, avec des décors féeriques. Coachella est en Californie, Glastonbury en Angleterre.",
+  "options": [
+   "Tomorrowland*",
+   "Coachella",
+   "Glastonbury",
+   "Les Eurockéennes"
+  ]
+ },
+ {
+  "key": "mus12-041",
+  "concept": "music.popular.v12_victoires",
+  "label": "Les Victoires de la musique",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle la grande cérémonie qui récompense la musique en France ?",
+  "explanation": "Elles existent depuis 1985 et récompensent l'album, la chanson, l'artiste ou le concert de l'année.",
+  "options": [
+   "Les Victoires de la musique*",
+   "Les César",
+   "Les Molières",
+   "Les NRJ Awards seulement"
+  ]
+ },
+ {
+  "key": "mus12-042",
+  "concept": "music.popular.v12_grammy",
+  "label": "Grammy Awards",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle récompense de la musique, aux États-Unis, a la forme d'un petit gramophone ?",
+  "explanation": "Le nom vient de « gramophone », l'ancêtre du tourne-disque.",
+  "options": [
+   "Les Grammy Awards*",
+   "Les Oscars",
+   "Les Emmy Awards",
+   "Les Golden Globes"
+  ]
+ },
+ {
+  "key": "mus12-043",
+  "concept": "music.popular.v12_featuring",
+  "label": "Featuring",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « feat. » à côté du titre d'une chanson ?",
+  "explanation": "« Featuring » veut dire « avec la participation de ». Le rap en est rempli.",
+  "options": [
+   "Qu'un artiste invité chante aussi*",
+   "Que c'est une reprise",
+   "Que c'est une version courte",
+   "Que la chanson est interdite aux mineurs"
+  ]
+ },
+ {
+  "key": "mus12-044",
+  "concept": "music.popular.v12_a_cappella",
+  "label": "A cappella",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que veut dire chanter « a cappella » ?",
+  "explanation": "L'expression italienne veut dire « comme à la chapelle », où l'on chantait souvent sans accompagnement.",
+  "options": [
+   "Chanter sans instrument*",
+   "Chanter très fort",
+   "Chanter en italien",
+   "Chanter en duo"
+  ]
+ },
+ {
+  "key": "mus12-045",
+  "concept": "music.popular.v12_vinyle_33",
+  "label": "Le vinyle",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "À combien de tours par minute tourne un disque vinyle d'album ?",
+  "explanation": "33 tours (et un tiers) pour les albums, 45 tours pour les singles, 78 tours pour les très vieux disques.",
+  "options": [
+   "33 tours*",
+   "45 tours",
+   "78 tours",
+   "100 tours"
+  ]
+ },
+ {
+  "key": "mus12-046",
+  "concept": "music.popular.v12_quatuor",
+  "label": "Quatuor",
+  "type": "counter",
+  "difficulty": 15,
+  "prompt": "Combien de musiciens jouent dans un quatuor ?",
+  "explanation": "Quatre, comme le quatuor à cordes : deux violons, un alto et un violoncelle. Un trio en compte trois.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "mus12-047",
+  "concept": "music.classical.v12_beethoven_sourd",
+  "label": "Beethoven",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel compositeur, devenu sourd, a pourtant écrit la « Neuvième Symphonie » ?",
+  "explanation": "Il dirigeait sans entendre l'orchestre. À la fin du premier concert, il a fallu le retourner pour qu'il voie le public applaudir.",
+  "options": [
+   "Ludwig van Beethoven*",
+   "Wolfgang Amadeus Mozart",
+   "Jean-Sébastien Bach",
+   "Frédéric Chopin"
+  ]
+ },
+ {
+  "key": "mus12-048",
+  "concept": "music.classical.v12_hymne_joie",
+  "label": "L'Hymne à la joie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "L'« Hymne à la joie », hymne de l'Union européenne, vient de quelle symphonie de Beethoven ?",
+  "explanation": "La Neuvième (1824) est l'une des premières symphonies avec des chanteurs et un chœur.",
+  "options": [
+   "La Neuvième*",
+   "La Cinquième",
+   "La Première",
+   "La Septième"
+  ]
+ },
+ {
+  "key": "mus12-049",
+  "concept": "music.classical.v12_mozart_prodige",
+  "label": "Enfant prodige",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel compositeur, enfant prodige, donnait des concerts devant les rois dès 6 ans ?",
+  "explanation": "Avec sa sœur Nannerl, il a fait le tour des cours d'Europe, jusqu'à Versailles.",
+  "options": [
+   "Mozart*",
+   "Beethoven",
+   "Vivaldi",
+   "Ravel"
+  ]
+ },
+ {
+  "key": "mus12-050",
+  "concept": "music.classical.v12_mozart_age",
+  "label": "Mozart",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Mozart a vécu plus de 60 ans.",
+  "explanation": "Faux : il est mort à 35 ans, à Vienne. Son « Requiem » est resté inachevé.",
+  "answer": false
+ },
+ {
+  "key": "mus12-051",
+  "concept": "music.classical.v12_casse_noisette",
+  "label": "Casse-Noisette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a composé les ballets « Casse-Noisette » et « Le Lac des cygnes » ?",
+  "explanation": "Piotr Ilitch Tchaïkovski, compositeur russe. « Casse-Noisette » est joué partout à Noël.",
+  "options": [
+   "Tchaïkovski*",
+   "Chopin",
+   "Debussy",
+   "Vivaldi"
+  ]
+ },
+ {
+  "key": "mus12-052",
+  "concept": "music.classical.v12_carmen",
+  "label": "Carmen",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel compositeur français a écrit l'opéra « Carmen » ?",
+  "explanation": "Créé en 1875 à Paris. Son air « L'amour est un oiseau rebelle » est connu dans le monde entier.",
+  "options": [
+   "Georges Bizet*",
+   "Hector Berlioz",
+   "Camille Saint-Saëns",
+   "Maurice Ravel"
+  ]
+ },
+ {
+  "key": "mus12-053",
+  "concept": "music.classical.v12_clair_de_lune",
+  "label": "Clair de lune",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel compositeur français a écrit le célèbre « Clair de lune » pour piano ?",
+  "explanation": "Il fait partie de la « Suite bergamasque ». On l'entend dans beaucoup de films.",
+  "options": [
+   "Claude Debussy*",
+   "Erik Satie",
+   "Maurice Ravel",
+   "Gabriel Fauré"
+  ]
+ },
+ {
+  "key": "mus12-054",
+  "concept": "music.classical.v12_bach_orgue",
+  "label": "Bach",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel compositeur allemand a écrit de nombreuses œuvres pour l'orgue, comme la « Toccata et fugue en ré mineur » ?",
+  "explanation": "Il était organiste dans des églises. La « Toccata » est souvent utilisée pour faire peur dans les films.",
+  "options": [
+   "Jean-Sébastien Bach*",
+   "Ludwig van Beethoven",
+   "Richard Wagner",
+   "Franz Schubert"
+  ]
+ },
+ {
+  "key": "mus12-055",
+  "concept": "music.classical.v12_carnaval_animaux",
+  "label": "Le Carnaval des animaux",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel compositeur français a écrit « Le Carnaval des animaux » ?",
+  "explanation": "Chaque morceau imite un animal : le lion, les éléphants, le cygne… Il le trouvait trop léger et ne voulait pas le publier.",
+  "options": [
+   "Camille Saint-Saëns*",
+   "Claude Debussy",
+   "Georges Bizet",
+   "Paul Dukas"
+  ]
+ },
+ {
+  "key": "mus12-056",
+  "concept": "music.classical.v12_chef_orchestre",
+  "label": "Chef d'orchestre",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle la personne qui dirige un orchestre ?",
+  "explanation": "Il donne le tempo, les départs et les nuances, souvent avec une baguette.",
+  "options": [
+   "Le chef d'orchestre*",
+   "Le soliste",
+   "Le compositeur",
+   "Le premier violon"
+  ]
+ },
+ {
+  "key": "mus12-057",
+  "concept": "music.classical.v12_baguette",
+  "label": "La baguette",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le petit bâton que tient le chef d'orchestre ?",
+  "explanation": "L'archet sert à jouer du violon, le diapason donne la note la, le métronome bat la mesure.",
+  "options": [
+   "La baguette*",
+   "L'archet",
+   "Le diapason",
+   "Le métronome"
+  ]
+ },
+ {
+  "key": "mus12-058",
+  "concept": "music.classical.v12_opera_definition",
+  "label": "L'opéra",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un opéra ?",
+  "explanation": "Décors, costumes, chanteurs et orchestre : un spectacle complet né en Italie vers 1600.",
+  "options": [
+   "Une pièce de théâtre entièrement chantée, avec un orchestre*",
+   "Un concert de piano seul",
+   "Un ballet sans musique",
+   "Une chanson très longue"
+  ]
+ },
+ {
+  "key": "mus12-059",
+  "concept": "music.classical.v12_compositeurs_ordre",
+  "label": "Compositeurs dans l'ordre",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces compositeurs du plus ancien au plus récent.",
+  "explanation": "Vivaldi (né en 1678), Mozart (1756), Beethoven (1770), Debussy (1862).",
+  "items": [
+   "Vivaldi",
+   "Mozart",
+   "Beethoven",
+   "Debussy"
+  ]
+ },
+ {
+  "key": "mus12-060",
+  "concept": "music.classical.v12_compositeurs_oeuvres",
+  "label": "Compositeurs et œuvres",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque compositeur à son œuvre.",
+  "explanation": "Quatre des œuvres classiques les plus connues, qu'on entend dans les publicités et au cinéma.",
+  "pairs": [
+   [
+    "Vivaldi",
+    "Les Quatre Saisons"
+   ],
+   [
+    "Ravel",
+    "Boléro"
+   ],
+   [
+    "Tchaïkovski",
+    "Le Lac des cygnes"
+   ],
+   [
+    "Bizet",
+    "Carmen"
+   ]
+  ]
+ },
+ {
+  "key": "mus12-061",
+  "concept": "music.classical.v12_beethoven_allemand",
+  "label": "Beethoven",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Beethoven était allemand.",
+  "explanation": "Vrai : il est né à Bonn en 1770, puis a vécu à Vienne, en Autriche.",
+  "answer": true
+ },
+ {
+  "key": "mus12-062",
+  "concept": "music.instruments.v12_contrebasse",
+  "label": "La contrebasse",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le plus grand instrument de la famille du violon ?",
+  "explanation": "Elle mesure près de 2 mètres : on en joue debout ou assis sur un haut tabouret.",
+  "options": [
+   "La contrebasse*",
+   "Le violoncelle",
+   "L'alto",
+   "La viole"
+  ]
+ },
+ {
+  "key": "mus12-063",
+  "concept": "music.instruments.v12_cordes_vents",
+  "label": "Cordes ou vents ?",
+  "type": "sort",
+  "difficulty": 20,
+  "prompt": "Instrument à cordes ou à vent ?",
+  "explanation": "On fait vibrer des cordes pour les uns, de l'air pour les autres.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Cordes"
+   },
+   {
+    "label": "Vents"
+   }
+  ],
+  "items": [
+   [
+    "Violon",
+    0
+   ],
+   [
+    "Harpe",
+    0
+   ],
+   [
+    "Guitare",
+    0
+   ],
+   [
+    "Violoncelle",
+    0
+   ],
+   [
+    "Flûte",
+    1
+   ],
+   [
+    "Trompette",
+    1
+   ],
+   [
+    "Clarinette",
+    1
+   ],
+   [
+    "Saxophone",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "mus12-064",
+  "concept": "music.instruments.v12_cornemuse",
+  "label": "La cornemuse",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel instrument à sac est typique de l'Écosse, et existe aussi en Bretagne sous le nom de biniou ?",
+  "explanation": "Le musicien souffle dans un sac en peau qui envoie l'air vers les tuyaux.",
+  "options": [
+   "La cornemuse*",
+   "L'accordéon",
+   "La vielle à roue",
+   "L'harmonica"
+  ]
+ },
+ {
+  "key": "mus12-065",
+  "concept": "music.instruments.v12_djembe",
+  "label": "Le djembé",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un djembé ?",
+  "explanation": "On en joue à mains nues. Il est devenu très populaire dans le monde entier.",
+  "options": [
+   "Un tambour d'Afrique de l'Ouest*",
+   "Une guitare indienne",
+   "Une flûte des Andes",
+   "Un piano africain"
+  ]
+ },
+ {
+  "key": "mus12-066",
+  "concept": "music.instruments.v12_accordeon",
+  "label": "L'accordéon",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quel style de musique populaire français l'accordéon est-il souvent associé ?",
+  "explanation": "La musique des guinguettes et des bals parisiens, au début du XXe siècle.",
+  "options": [
+   "Le bal musette*",
+   "Le rap",
+   "L'opéra",
+   "Le disco"
+  ]
+ },
+ {
+  "key": "mus12-067",
+  "concept": "music.instruments.v12_ukulele_hawai",
+  "label": "Le ukulélé",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel endroit vient le ukulélé ?",
+  "explanation": "Il a été inventé à Hawaï à la fin du XIXe siècle, à partir d'une petite guitare apportée par des Portugais.",
+  "options": [
+   "Hawaï*",
+   "Le Mexique",
+   "L'Espagne",
+   "La Jamaïque"
+  ]
+ },
+ {
+  "key": "mus12-068",
+  "concept": "music.instruments.v12_flute_bois",
+  "label": "La flûte traversière",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La flûte traversière fait partie de la famille des bois, même si elle est en métal.",
+  "explanation": "Vrai : à l'origine, elle était en bois. On la classe toujours avec les bois, comme le saxophone.",
+  "answer": true
+ },
+ {
+  "key": "mus12-069",
+  "concept": "music.instruments.v12_orgue_roi",
+  "label": "L'orgue",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel instrument, présent dans les églises, est surnommé « le roi des instruments » ?",
+  "explanation": "Certains ont des milliers de tuyaux. Mozart l'appelait déjà ainsi.",
+  "options": [
+   "L'orgue*",
+   "Le piano",
+   "La harpe",
+   "Le violon"
+  ]
+ },
+ {
+  "key": "mus12-070",
+  "concept": "music.instruments.v12_batterie",
+  "label": "La batterie",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Instrument fait de fûts et de cymbales, souvent au fond de la scène.",
+  "explanation": "Grosse caisse, caisse claire, toms et cymbales : le batteur tient le rythme du groupe.",
+  "word": "BATTERIE",
+  "display": "Batterie"
+ },
+ {
+  "key": "mus12-071",
+  "concept": "music.instruments.v12_harpe",
+  "label": "La harpe",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Grand instrument à cordes pincées, symbole de l'Irlande.",
+  "explanation": "On la voit sur les pièces de monnaie irlandaises et sur une célèbre marque de bière.",
+  "word": "HARPE",
+  "display": "Harpe"
+ },
+ {
+  "key": "mus12-072",
+  "concept": "music.instruments.v12_familles",
+  "label": "Familles d'instruments",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque instrument à sa famille.",
+  "explanation": "Les quatre grandes familles de l'orchestre symphonique.",
+  "pairs": [
+   [
+    "Trompette",
+    "Cuivres"
+   ],
+   [
+    "Violon",
+    "Cordes"
+   ],
+   [
+    "Clarinette",
+    "Bois"
+   ],
+   [
+    "Timbales",
+    "Percussions"
+   ]
+  ]
+ },
+ {
+  "key": "mus12-073",
+  "concept": "music.instruments.v12_xylophone",
+  "label": "Le xylophone",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "À quelle famille appartient le xylophone ?",
+  "explanation": "On frappe ses lames avec des baguettes. Son nom vient du grec « xylo », bois.",
+  "options": [
+   "Les percussions*",
+   "Les cordes",
+   "Les cuivres",
+   "Les bois"
+  ]
+ },
+ {
+  "key": "mus12-074",
+  "concept": "music.instruments.v12_synthetiseur",
+  "label": "Le synthétiseur",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel instrument à clavier électronique peut imiter des centaines de sons, très utilisé dans les années 1980 ?",
+  "explanation": "Jean-Michel Jarre en a fait sa spécialité avec « Oxygène » (1976).",
+  "options": [
+   "Le synthétiseur*",
+   "Le clavecin",
+   "L'orgue de Barbarie",
+   "Le célesta"
+  ]
+ },
+ {
+  "key": "mus12-075",
+  "concept": "music.instruments.v12_mediator",
+  "label": "Le médiator",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle la petite pièce plate qui sert à gratter les cordes d'une guitare ?",
+  "explanation": "Le capodastre, lui, se pince sur le manche pour changer la tonalité.",
+  "options": [
+   "Le médiator*",
+   "Le capodastre",
+   "Le chevalet",
+   "La clé"
+  ]
+ },
+ {
+  "key": "mus12-076",
+  "concept": "music.instruments.v12_violon_archet",
+  "label": "L'archet",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Avec quoi frotte-t-on les cordes d'un violon ?",
+  "explanation": "Il est tendu de crins de cheval, frottés avec de la colophane pour mieux accrocher les cordes.",
+  "options": [
+   "Un archet*",
+   "Une baguette",
+   "Un médiator",
+   "Un marteau"
+  ]
+ },
+ {
+  "key": "mus12-077",
+  "concept": "music.popular.v12_demons_minuit",
+  "label": "Les Démons de minuit",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel groupe a chanté « Les Démons de minuit » (1986), tube des soirées dansantes ?",
+  "explanation": "Un tube des années 1980 qui repasse encore dans tous les mariages.",
+  "options": [
+   "Images*",
+   "Gold",
+   "Début de soirée",
+   "Indochine"
+  ]
+ },
+ {
+  "key": "mus12-078",
+  "concept": "music.popular.v12_aziza",
+  "label": "L'Aziza",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel chanteur a sorti « L'Aziza » (1985), une chanson contre le racisme ?",
+  "explanation": "Balavoine, connu aussi pour « Le Chanteur » et « SOS d'un terrien en détresse », est mort en 1986 pendant le Paris-Dakar.",
+  "options": [
+   "Daniel Balavoine*",
+   "Jean-Jacques Goldman",
+   "Renaud",
+   "Alain Souchon"
+  ]
+ },
+ {
+  "key": "mus12-079",
+  "concept": "music.popular.v12_mourir_scene",
+  "label": "Mourir sur scène",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle chanteuse a chanté « Mourir sur scène » et « Laissez-moi danser » ?",
+  "explanation": "Née en Égypte de parents italiens, elle a chanté en plus de dix langues. Une place porte son nom à Montmartre.",
+  "options": [
+   "Dalida*",
+   "Mireille Mathieu",
+   "Sylvie Vartan",
+   "Sheila"
+  ]
+ },
+ {
+  "key": "mus12-080",
+  "concept": "music.popular.v12_goldman_celine",
+  "label": "Goldman et Céline Dion",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Jean-Jacques Goldman a écrit « Pour que tu m'aimes encore » pour Céline Dion.",
+  "explanation": "Vrai, en 1995, sur l'album « D'eux », l'album francophone le plus vendu de l'histoire.",
+  "answer": true
+ },
+ {
+  "key": "mus12-081",
+  "concept": "music.popular.v12_paris_s_eveille",
+  "label": "Paris s'éveille",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets dans l'ordre ce titre de Jacques Dutronc (1968).",
+  "explanation": "Une chanson qui décrit la ville au petit matin : les boulangers, les éboueurs, les cafés qui ouvrent…",
+  "answer": "Il est cinq heures, Paris s'éveille",
+  "words": [
+   "Il",
+   "est",
+   "cinq",
+   "heures,",
+   "Paris",
+   "s'éveille"
+  ]
+ },
+ {
+  "key": "mus12-082",
+  "concept": "music.popular.v12_chanteurs_tubes_fr",
+  "label": "Chanteurs et tubes",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque chanteur à son tube.",
+  "explanation": "Cabrel (1979), Bruel (1989), Mika (2011) et Kendji Girac, gagnant de The Voice en 2014.",
+  "pairs": [
+   [
+    "Francis Cabrel",
+    "Je l'aime à mourir"
+   ],
+   [
+    "Patrick Bruel",
+    "Place des grands hommes"
+   ],
+   [
+    "Mika",
+    "Elle me dit"
+   ],
+   [
+    "Kendji Girac",
+    "Andalouse"
+   ]
+  ]
+ },
+ {
+  "key": "mus12-083",
+  "concept": "music.popular.v12_je_vole",
+  "label": "Je vole",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel film Louane chante-t-elle « Je vole », de Michel Sardou ?",
+  "explanation": "Elle y joue Paula, seule entendante d'une famille sourde, qui rêve de chanter à Paris. Le film lui a valu le César du meilleur espoir.",
+  "options": [
+   "La Famille Bélier*",
+   "Intouchables",
+   "Les Choristes",
+   "Les Tuche"
+  ]
+ },
+ {
+  "key": "mus12-084",
+  "concept": "music.popular.v12_lion_mort",
+  "label": "Le lion est mort ce soir",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans la chanson « Le lion est mort ce soir », où dort le lion ?",
+  "explanation": "« Dans la jungle, terrible jungle… » Henri Salvador l'a chantée en 1962, puis le groupe Pow Wow en 1992.",
+  "options": [
+   "Dans la jungle*",
+   "Dans la savane",
+   "Au zoo",
+   "Dans la forêt"
+  ]
+ },
+ {
+  "key": "mus12-085",
+  "concept": "music.popular.v12_danse_canards",
+  "label": "La Danse des canards",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que fait-on avec les bras pendant « La Danse des canards » ?",
+  "explanation": "Bec avec les mains, ailes avec les coudes, on se dandine, puis on frappe des mains. Un tube des bals et des mariages depuis 1980.",
+  "options": [
+   "On bat des ailes avec les coudes*",
+   "On fait des moulinets",
+   "On tape dans les mains au-dessus de la tête",
+   "On fait la vague"
+  ]
+ },
+ {
+  "key": "mus12-086",
+  "concept": "music.popular.v12_macarena",
+  "label": "Macarena",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient le groupe Los del Río, qui a chanté « Macarena » (1995) ?",
+  "explanation": "Deux chanteurs de Séville. La chorégraphie, mains sur les bras, la tête, les hanches, a fait le tour du monde.",
+  "options": [
+   "L'Espagne*",
+   "Le Mexique",
+   "L'Argentine",
+   "Cuba"
+  ]
+ },
+ {
+  "key": "mus12-087",
+  "concept": "music.popular.v12_lambada",
+  "label": "Lambada",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quel pays vient la musique et la danse de la « Lambada », tube de l'été 1989 ?",
+  "explanation": "Chantée en portugais par le groupe Kaoma, formé en France. Ce fut le tube de l'été 1989.",
+  "options": [
+   "Le Brésil*",
+   "L'Espagne",
+   "La Jamaïque",
+   "Le Portugal"
+  ]
+ },
+ {
+  "key": "mus12-088",
+  "concept": "music.popular.v12_rap_rock",
+  "label": "Rap ou rock ?",
+  "type": "sort",
+  "difficulty": 30,
+  "prompt": "Cet artiste fait plutôt du rap ou du rock ?",
+  "explanation": "Noir Désir (« Le vent nous portera ») et Téléphone (« Un autre monde ») sont deux grands groupes de rock français.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Rap"
+   },
+   {
+    "label": "Rock"
+   }
+  ],
+  "items": [
+   [
+    "Booba",
+    0
+   ],
+   [
+    "Ninho",
+    0
+   ],
+   [
+    "Nekfeu",
+    0
+   ],
+   [
+    "SCH",
+    0
+   ],
+   [
+    "Noir Désir",
+    1
+   ],
+   [
+    "AC/DC",
+    1
+   ],
+   [
+    "Nirvana",
+    1
+   ],
+   [
+    "Téléphone",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "mus12-089",
+  "concept": "music.popular.v12_supports_ordre",
+  "label": "Écouter de la musique",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Classe ces façons d'écouter de la musique de la plus ancienne à la plus récente.",
+  "explanation": "Phonographe (1877), vinyle 33 tours (1948), cassette (1963), CD (1982), puis le streaming dans les années 2000-2010.",
+  "items": [
+   "Le phonographe",
+   "Le disque vinyle 33 tours",
+   "La cassette audio",
+   "Le CD",
+   "Le streaming"
+  ]
+ },
+ {
+  "key": "mus12-090",
+  "concept": "music.popular.v12_stade_france_98",
+  "label": "Le Stade de France",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel chanteur a été le premier à remplir le Stade de France en concert, en septembre 1998 ?",
+  "explanation": "Trois soirs de suite, quelques semaines après la victoire des Bleus en Coupe du monde, dans ce stade tout neuf.",
+  "options": [
+   "Johnny Hallyday*",
+   "Céline Dion",
+   "Mylène Farmer",
+   "Jean-Jacques Goldman"
+  ]
+ },
+ {
+  "key": "mus12-091",
+  "concept": "music.popular.v12_francoise_hardy",
+  "label": "Tous les garçons et les filles",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année Françoise Hardy chante-t-elle « Tous les garçons et les filles » ?",
+  "explanation": "En 1962, à 18 ans. La chanson l'a rendue célèbre du jour au lendemain, en pleine période yé-yé.",
+  "answer": 1962,
+  "tolerance": 4,
+  "min": 1940,
+  "max": 2000
+ },
+ {
+  "key": "mus12-092",
+  "concept": "music.popular.v12_sunlights",
+  "label": "Les Sunlights des tropiques",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel chanteur a fait danser la France avec « Les Sunlights des tropiques » (1984) ?",
+  "explanation": "Le chanteur aveugle aux lunettes noires a aussi chanté « On va s'aimer ».",
+  "options": [
+   "Gilbert Montagné*",
+   "Philippe Lavil",
+   "Herbert Léonard",
+   "Gérard Lenorman"
+  ]
+ },
+ {
+  "key": "mus12-093",
+  "concept": "music.classical.v12_soprano_voix",
+  "label": "La soprano",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on la voix de femme la plus aiguë ?",
+  "explanation": "Puis viennent mezzo-soprano et alto. Chez les hommes : ténor, baryton et basse, la plus grave.",
+  "options": [
+   "Soprano*",
+   "Alto",
+   "Ténor",
+   "Baryton"
+  ]
+ },
+ {
+  "key": "mus12-094",
+  "concept": "music.classical.v12_piano_doucement",
+  "label": "Piano",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Sur une partition, l'indication « piano » veut dire qu'il faut jouer doucement.",
+  "explanation": "Vrai : « piano » veut dire doux en italien, « forte » fort. Le piano s'appelait d'ailleurs « pianoforte », car il sait faire les deux.",
+  "answer": true
+ },
+ {
+  "key": "mus12-095",
+  "concept": "music.classical.v12_tempo",
+  "label": "Le tempo",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "En musique, qu'est-ce que le « tempo » ?",
+  "explanation": "Il se mesure en battements par minute. Un métronome aide les musiciens à le garder.",
+  "options": [
+   "La vitesse du morceau*",
+   "La note la plus aiguë",
+   "Le volume du son",
+   "Le nombre de musiciens"
+  ]
+ },
+ {
+  "key": "mus12-096",
+  "concept": "music.classical.v12_violoncelle_epaule",
+  "label": "Le violoncelle",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "On joue du violoncelle debout, posé sur l'épaule, comme un violon.",
+  "explanation": "Faux : il est trop grand. On en joue assis, l'instrument entre les genoux et posé au sol sur une pique.",
+  "answer": false
+ },
+ {
+  "key": "mus12-097",
+  "concept": "music.instruments.v12_clavecin",
+  "label": "Le clavecin",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le clavecin, ancêtre du piano, pince ses cordes au lieu de les frapper.",
+  "explanation": "Vrai : de petites pointes pincent les cordes. Le piano, lui, les frappe avec des marteaux feutrés.",
+  "answer": true
+ },
+ {
+  "key": "mus12-098",
+  "concept": "music.instruments.v12_trompette_bois",
+  "label": "La trompette",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "La trompette fait partie de la famille des bois.",
+  "explanation": "Faux : c'est un cuivre, comme le trombone, le cor et le tuba. On fait vibrer ses lèvres dans l'embouchure.",
+  "answer": false
+ },
+ {
+  "key": "mus12-099",
+  "concept": "music.instruments.v12_didgeridoo",
+  "label": "Le didgeridoo",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quel pays vient le didgeridoo, long tube de bois au son grave ?",
+  "explanation": "Joué depuis des siècles par les Aborigènes, souvent taillé dans une branche creusée par les termites.",
+  "options": [
+   "L'Australie*",
+   "Le Brésil",
+   "L'Inde",
+   "Le Kenya"
+  ]
+ },
+ {
+  "key": "mus12-100",
+  "concept": "music.instruments.v12_trompette",
+  "label": "La trompette",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Cuivre à trois pistons, le plus aigu de sa famille, star du jazz.",
+  "explanation": "Miles Davis et Louis Armstrong l'ont rendue célèbre. On joue en soufflant, lèvres serrées contre l'embouchure.",
+  "word": "TROMPETTE",
+  "display": "Trompette"
+ },
+ {
+  "key": "mus12-101",
+  "concept": "music.instruments.v12_steel_drum",
+  "label": "Le steel drum",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec quoi a-t-on fabriqué les premiers steel drums, ces percussions de Trinité-et-Tobago ?",
+  "explanation": "Le fond des bidons est martelé pour donner plusieurs notes. On l'entend dans la chanson « Sous l'océan » de La Petite Sirène.",
+  "options": [
+   "Des bidons de pétrole*",
+   "Des casseroles",
+   "Des carapaces de tortue",
+   "Des cloches d'église"
+  ]
+ }
+]
