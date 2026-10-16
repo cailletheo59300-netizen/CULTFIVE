@@ -20,6 +20,8 @@ struct PackOpeningView: View {
     @State private var bob = false
     @State private var flash = 0.0
     @State private var leaving = false
+    /// Carte suivie au doigt : on peut glisser (frotter) la carte au lieu de toucher.
+    @State private var drag: CGSize = .zero
     /// La légendaire grossit en se retournant, puis se pose.
     @State private var pop = false
     /// Cartes du récapitulatif déjà apparues.
@@ -204,8 +206,8 @@ struct PackOpeningView: View {
                             radius: faceUp && pull.card.rarity >= .epic ? 30 : 12)
                     .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
                     .scaleEffect(pop ? 1.22 : (faceUp && pull.card.rarity == .legend ? 1.04 : 1))
-                    .offset(x: leaving ? -420 : 0)
-                    .rotationEffect(.degrees(leaving ? -12 : 0))
+                    .offset(x: leaving ? -420 : drag.width, y: leaving ? 0 : drag.height * 0.25)
+                    .rotationEffect(.degrees(leaving ? -12 : Double(drag.width) / 22))
                     .id(index)
                 }
             }
@@ -220,6 +222,22 @@ struct PackOpeningView: View {
             .frame(height: 340)
             .contentShape(Rectangle())
             .onTapGesture { advance() }
+            // Glisser la carte : elle suit le doigt ; lâchée assez loin, elle se retourne ou laisse place à la suivante.
+            .simultaneousGesture(
+                DragGesture(minimumDistance: 8)
+                    .onChanged { value in
+                        guard !flipping else { return }
+                        drag = value.translation
+                    }
+                    .onEnded { value in
+                        let far = abs(value.translation.width) > 70 || abs(value.predictedEndTranslation.width) > 180
+                        withAnimation(Motion.bounce) { drag = .zero }
+                        if far {
+                            Haptics.selection()
+                            advance()
+                        }
+                    }
+            )
             .accessibilityElement()
             .accessibilityLabel(faceUp ? (pull.map { "\($0.card.name), \($0.card.rarity.label)" } ?? "") : "Carte face cachée")
             .accessibilityAddTraits(.isButton)
@@ -235,7 +253,7 @@ struct PackOpeningView: View {
                     }
                     .transition(.scale.combined(with: .opacity))
                 } else {
-                    Text("Touche la carte pour la retourner").font(.cfCallout).foregroundStyle(.white.opacity(0.8))
+                    Text("Touche ou glisse la carte pour la retourner").font(.cfCallout).foregroundStyle(.white.opacity(0.8))
                 }
             }
             .frame(height: 60)

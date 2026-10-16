@@ -196,18 +196,23 @@ struct ChestOpeningView: View {
                     .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.6))
                     .frame(minHeight: 44)
             case .closed:
+                // L'ouverture est le geste principal ; le boost par pub reste une petite option, jamais imposée.
+                Button("Ouvrir le coffre") { advance() }
+                    .buttonStyle(InkButtonStyle(fill: Color.sun, text: Color(hex: 0x1E1340)))
                 // Pas de pub sur le coffre de bienvenue.
                 if let chest, chest.source != "welcome", taps == 0, !boosted.contains(chest.id), (app.adStatus?.boostChest ?? 0) > 0 {
                     Button { Task { await boost(chest) } } label: {
-                        HStack(spacing: 8) {
-                            if boosting { ProgressView().controlSize(.small) }
-                            Label(app.noAds ? "Booster avec le Pass+" : "Booster avec une pub", systemImage: app.adSymbol)
+                        HStack(spacing: 6) {
+                            if boosting { ProgressView().controlSize(.mini) } else { Image(systemName: "bolt.fill") }
+                            Text(app.noAds ? "Option : booster (Pass+, sans pub)" : "Option : booster avec 1 pub")
                         }
+                        .font(.system(.footnote, design: .rounded).weight(.bold))
+                        .foregroundStyle(.white.opacity(0.75))
+                        .frame(minHeight: 36)
                     }
-                    .buttonStyle(InkButtonStyle(fill: Color.sun, text: Color(hex: 0x1E1340)))
+                    .buttonStyle(.plain)
                     .disabled(boosting)
-                    Text("Chances d'amélioration doublées, neurones +50 %")
-                        .font(.cfFootnote).foregroundStyle(.white.opacity(0.7))
+                    .accessibilityHint("Facultatif : chances d'amélioration doublées, neurones +50 %")
                 }
                 Button("Plus tard") { onDone() }
                     .font(.system(.subheadline, design: .rounded).weight(.bold))
