@@ -26,6 +26,10 @@ struct MainTabView: View {
             CultTabBar(selection: $model.tab, daily: model.daily)
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { barHeight = $0 }
         }
+        // Réseau coupé : un petit bandeau en haut, les écrans gardent ce qu'ils affichaient.
+        .overlay(alignment: .top) {
+            if model.networkTrouble { NetworkBanner() }
+        }
         // Visite guidée d'un écran (première visite, ou bouton « ? »).
         .overlay { TourOverlay() }
         .ignoresSafeArea(.keyboard, edges: .bottom)
@@ -138,6 +142,42 @@ struct CultTabBar: View {
         case .available: return [.correct, .correct, .correct, .correct, .ready]
         case .inProgress, .done: return daily.answers.map { $0 ? .correct : .wrong }
         }
+    }
+}
+
+/// « Connexion difficile » : discret, avec « Réessayer » ; disparaît dès qu'une requête passe.
+struct NetworkBanner: View {
+    @Environment(AppModel.self) private var app
+    @State private var retrying = false
+
+    var body: some View {
+        HStack(spacing: Space.s) {
+            Image(systemName: "wifi.exclamationmark").font(.system(size: 14, weight: .bold)).accessibilityHidden(true)
+            Text("Connexion difficile").font(.system(.footnote, design: .rounded).weight(.heavy))
+            Button {
+                retrying = true
+                Task {
+                    await app.retryNetwork()
+                    retrying = false
+                }
+            } label: {
+                if retrying {
+                    ProgressView().controlSize(.mini).tint(.white)
+                } else {
+                    Text("Réessayer").font(.system(.footnote, design: .rounded).weight(.black)).underline()
+                }
+            }
+            .buttonStyle(.plain)
+            .disabled(retrying)
+        }
+        .foregroundStyle(.white)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 8)
+        .background(Color.inkFixed.opacity(0.88), in: Capsule())
+        .padding(.top, 4)
+        .transition(.move(edge: .top).combined(with: .opacity))
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
     }
 }
 

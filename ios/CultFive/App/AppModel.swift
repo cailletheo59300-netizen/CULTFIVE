@@ -21,8 +21,16 @@ final class AppModel {
 
     var phase: Phase = .launching
     var tab: Tab = .daily
-    var profile: Profile?
-    var daily: DailyStatus?
+    var profile: Profile? {
+        didSet { if useCache, let profile { cache.save(profile, key: "profile") } }
+    }
+    var daily: DailyStatus? {
+        didSet { if useCache, let daily { cache.save(daily, key: "daily") } }
+    }
+    /// Le réseau a coupé : petit bandeau « Connexion difficile » jusqu'à la prochaine requête réussie.
+    var networkTrouble = false
+    /// Données gardées sur le téléphone pour démarrer sans attendre le réseau (jamais en démo).
+    private var useCache: Bool { api != nil }
     /// Coffres à ouvrir, arbre de Léon, tickets, tenue. Mis à jour après chaque partie et chaque ouverture.
     var progression: ProgressionOverview? {
         didSet {
@@ -75,7 +83,7 @@ final class AppModel {
         self.domains = cache.load("domains") ?? []
         self.subdomains = cache.load("subdomains") ?? []
         self.pendingInvite = UserDefaults.standard.string(forKey: "pendingInvite")
-        AlbumStore.shared.configure(service)
+        AlbumStore.shared.configure(service, cached: api != nil)
     }
 
     static func live() -> AppModel {
@@ -109,19 +117,29 @@ final class AppModel {
         #endif
         guard let api else { return }
         bootstrapAttempts += 1
+        // Lancement sans attendre le réseau : le dernier profil connu de ce compte ouvre l'accueil tout de suite.
+        if phase == .launching, profile == nil, let user = await api.userId,
+           let cached: Profile = cache.load("profile"), cached.id == user, cached.onboarded {
+            profile = cached
+            daily = cache.load("daily")
+            phase = .main
+        }
         do {
+            await startReliability(api: api)
             if await api.session == nil {
                 try await api.signInAnonymously()
             }
+            // Réglages et référentiel en même temps que le profil, plutôt qu'à la suite.
+            let service = self.service
+            async let settings = try? service.appSettings()
+            async let reference: Void = loadReference()
             try await loadProfile()
-            if let settings = try? await service.appSettings(), Bundle.main.buildNumber < settings.minBuild {
+            if let settings = await settings, Bundle.main.buildNumber < settings.minBuild {
                 phase = .updateRequired
                 return
             }
-            await startReliability(api: api)
-            await loadReference()
+            await reference
             // Fuseau et appareil : en arrière-plan, sans retarder l'accueil ; le fuseau seulement s'il a changé.
-            let service = self.service
             let timezone = TimeZone.current.identifier
             let sendTimezone = profile?.timezone != timezone
             let device = DeviceIdentity.hash
@@ -132,8 +150,9 @@ final class AppModel {
             track("app_open", ["os": UIDevice.current.systemVersion])
             phase = (profile?.onboarded ?? false) ? .main : .onboarding
             if phase == .main {
-                await refreshDaily()
-                await syncPending()
+                async let daily: Void = refreshDaily()
+                async let pending: Void = syncPending()
+                _ = await (daily, pending)
                 await NotificationScheduler.registerPushIfAuthorized()
                 if let token = AppDelegate.pendingToken {
                     AppDelegate.pendingToken = nil
@@ -424,6 +443,9 @@ final class AppModel {
         NotificationScheduler.cancelAll()
         profile = nil
         daily = nil
+        cache.remove("profile")
+        cache.remove("daily")
+        cache.remove("quests")
         AlbumStore.shared.clear()
         phase = .launching
         await bootstrap()
@@ -435,6 +457,9 @@ final class AppModel {
         NotificationScheduler.cancelAll()
         profile = nil
         daily = nil
+        cache.remove("profile")
+        cache.remove("daily")
+        cache.remove("quests")
         AlbumStore.shared.clear()
         phase = .launching
         await bootstrap()
@@ -452,6 +477,19 @@ final class AppModel {
         await api.setErrorHandler { [weak self] function, code in
             Task { @MainActor in self?.reportError(function: function, code: code) }
         }
+        await api.setNetworkHandler { [weak self] reachable in
+            Task { @MainActor in
+                withAnimation(.easeInOut(duration: 0.25)) { self?.networkTrouble = !reachable }
+            }
+        }
+    }
+
+    /// « Réessayer » du bandeau de connexion : on relit l'essentiel (une réponse suffit à retirer le bandeau).
+    func retryNetwork() async {
+        async let profile: Void = refreshProfile()
+        async let daily: Void = refreshDaily()
+        _ = await (profile, daily)
+        await syncPending()
     }
 
     private func reportError(function: String, code: String) {

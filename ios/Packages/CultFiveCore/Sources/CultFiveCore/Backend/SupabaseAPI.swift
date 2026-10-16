@@ -171,6 +171,44 @@ public actor SupabaseAPI {
     public private(set) var session: AuthSession?
 
     private let encoder = JSONEncoder()
+
+    /// Pour garder des réponses sur le téléphone (lancement sans réseau) : dates au même format que le serveur.
+    public static let cacheEncoder: JSONEncoder = {
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .custom { date, encoder in
+            var container = encoder.singleValueContainer()
+            try container.encode(ISO8601.format(date))
+        }
+        return encoder
+    }()
+
+    /// Appels sans effet en double : on peut les renvoyer sans risque si le réseau a coupé (lectures, et réponses
+    /// envoyées avec un identifiant que le serveur reconnaît). Délai court : mieux vaut un nouvel essai qu'une attente de 20 s.
+    static let retryableFunctions: Set<String> = [
+        "achievements_mine", "ad_status", "album_overview", "app_settings", "daily_history", "daily_question", "daily_result",
+        "daily_review", "daily_status", "domain_stats", "duel_question", "duel_result", "duels_mine", "errors_overview",
+        "friend_profile", "friends_overview", "handle_available", "league_day_result", "league_question", "league_quiz_question",
+        "league_quiz_result", "league_standings", "leagues_mine", "onboarding_pack", "play_pack", "profile_me",
+        "progression_overview", "quests_overview", "referral_overview", "search_handles", "season_overview", "shop_overview",
+        "skills_overview", "trophies_overview", "weekly_recap",
+        // Réponses dédoublonnées par le serveur (identifiant de tentative, position déjà répondue).
+        "play_submit", "daily_answer", "league_answer", "league_quiz_answer", "duel_answer", "track_events",
+    ]
+
+    /// État du réseau vu par l'app : faux après un échec de connexion, vrai dès qu'une requête aboutit.
+    private var networkHandler: (@Sendable (_ reachable: Bool) -> Void)?
+    private var reachable = true
+
+    public func setNetworkHandler(_ handler: @escaping @Sendable (_ reachable: Bool) -> Void) {
+        networkHandler = handler
+    }
+
+    private func noteNetwork(_ ok: Bool) {
+        guard ok != reachable else { return }
+        reachable = ok
+        networkHandler?(ok)
+    }
+
     public static let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .custom { decoder in
@@ -285,7 +323,8 @@ public actor SupabaseAPI {
     public func rpc<T: Decodable>(_ function: String, _ params: [String: JSONValue] = [:], as type: T.Type = T.self) async throws -> T {
         let data: Data
         do {
-            data = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user)
+            data = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user,
+                                  retryable: Self.retryableFunctions.contains(function))
         } catch {
             report(function, error)
             throw error
@@ -301,7 +340,8 @@ public actor SupabaseAPI {
 
     public func rpcVoid(_ function: String, _ params: [String: JSONValue] = [:]) async throws {
         do {
-            _ = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user)
+            _ = try await send(path: "rest/v1/rpc/\(function)", method: "POST", body: params, auth: .user,
+                               retryable: Self.retryableFunctions.contains(function))
         } catch {
             report(function, error)
             throw error
@@ -415,13 +455,14 @@ public actor SupabaseAPI {
     // MARK: HTTP
 
     private func send(path: String, query: [URLQueryItem] = [], method: String, body: [String: JSONValue]?,
-                      auth: AuthMode) async throws -> Data {
+                      auth: AuthMode, retryable: Bool = false) async throws -> Data {
         var components = URLComponents(url: config.url.appendingPathComponent(path), resolvingAgainstBaseURL: false)
         if !query.isEmpty { components?.queryItems = query }
         guard let url = components?.url else { throw BackendError.decoding("URL invalide") }
         var request = URLRequest(url: url)
         request.httpMethod = method
-        request.timeoutInterval = 20
+        // Lecture : 10 s puis nouvel essai. Écriture : 25 s, pour laisser passer une réponse sur un réseau lent.
+        request.timeoutInterval = retryable || method == "GET" ? 10 : 25
         request.setValue(config.anonKey, forHTTPHeaderField: "apikey")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
@@ -438,22 +479,41 @@ public actor SupabaseAPI {
             request.httpBody = try encoder.encode(body)
         }
 
-        let data: Data
-        let response: HTTPURLResponse
-        do {
-            (data, response) = try await transport.send(request)
-        } catch let error as URLError {
-            switch error.code {
-            case .notConnectedToInternet, .networkConnectionLost, .timedOut, .cannotConnectToHost, .dataNotAllowed:
-                throw BackendError.offline
-            default:
-                throw BackendError.server(status: 0, code: "network", message: error.localizedDescription)
-            }
-        }
+        let (data, response) = try await transmit(request, retryable: retryable || method == "GET")
         guard (200..<300).contains(response.statusCode) else {
             throw SupabaseAPI.parseError(status: response.statusCode, data: data)
         }
         return data
+    }
+
+    /// Envoi avec nouveaux essais (0,8 s puis 2 s) quand le réseau coupe. Une requête qui n'a pas pu partir
+    /// (pas de réseau, serveur injoignable) est toujours renvoyée ; une requête peut-être reçue (délai dépassé,
+    /// connexion perdue en route) ne l'est que si elle est sans effet en double.
+    private func transmit(_ request: URLRequest, retryable: Bool) async throws -> (Data, HTTPURLResponse) {
+        let delays: [UInt64] = [800_000_000, 2_000_000_000]
+        var attempt = 0
+        while true {
+            do {
+                let result = try await transport.send(request)
+                noteNetwork(true)
+                return result
+            } catch let error as URLError {
+                let notSent: Set<URLError.Code> = [.notConnectedToInternet, .cannotConnectToHost, .cannotFindHost,
+                                                   .dnsLookupFailed, .dataNotAllowed, .internationalRoamingOff]
+                let maybeSent: Set<URLError.Code> = [.timedOut, .networkConnectionLost]
+                let offline = notSent.contains(error.code) || maybeSent.contains(error.code)
+                if offline, attempt < delays.count, notSent.contains(error.code) || retryable {
+                    try await Task.sleep(nanoseconds: delays[attempt])
+                    attempt += 1
+                    continue
+                }
+                if offline {
+                    noteNetwork(false)
+                    throw BackendError.offline
+                }
+                throw BackendError.server(status: 0, code: "network", message: error.localizedDescription)
+            }
+        }
     }
 
     static func parseError(status: Int, data: Data) -> BackendError {
@@ -492,5 +552,9 @@ enum ISO8601 {
 
     static func parse(_ text: String) -> Date? {
         withFraction.date(from: text) ?? plain.date(from: text)
+    }
+
+    static func format(_ date: Date) -> String {
+        withFraction.string(from: date)
     }
 }

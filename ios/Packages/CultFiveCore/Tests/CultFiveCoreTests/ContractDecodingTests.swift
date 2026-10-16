@@ -140,6 +140,21 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertTrue(claimed.claimed.allSatisfy { $0.track == "paid" })
     }
 
+    /// Réponses gardées sur le téléphone (lancement sans réseau) : elles se relisent à l'identique, dates comprises.
+    func testCacheRoundTrip() throws {
+        let quests: QuestsOverview = try fixture("quests")
+        let again = try SupabaseAPI.decoder.decode(QuestsOverview.self, from: SupabaseAPI.cacheEncoder.encode(quests))
+        XCTAssertEqual(again, quests)
+        let album: AlbumOverview = try fixture("album_overview_coffrets")
+        XCTAssertEqual(try SupabaseAPI.decoder.decode(AlbumOverview.self, from: SupabaseAPI.cacheEncoder.encode(album)), album)
+        let season: SeasonOverview = try fixture("season_overview_pass_plus")
+        XCTAssertEqual(try SupabaseAPI.decoder.decode(SeasonOverview.self, from: SupabaseAPI.cacheEncoder.encode(season)), season)
+        let profile: Profile = try fixture("profile")
+        XCTAssertEqual(try SupabaseAPI.decoder.decode(Profile.self, from: SupabaseAPI.cacheEncoder.encode(profile)), profile)
+        let daily: DailyStatus = try fixture("daily_status")
+        XCTAssertEqual(try SupabaseAPI.decoder.decode(DailyStatus.self, from: SupabaseAPI.cacheEncoder.encode(daily)), daily)
+    }
+
     func testOpenLeague() throws {
         let league: LeagueStandings = try fixture("league_open")
         XCTAssertTrue(league.isOpen)

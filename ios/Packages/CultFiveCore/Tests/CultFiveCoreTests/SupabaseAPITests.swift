@@ -25,6 +25,30 @@ final class MockTransport: HTTPTransport, @unchecked Sendable {
     }
 }
 
+/// Réseau qui coupe : les `failures` premières requêtes échouent avec `code`.
+final class FlakyTransport: HTTPTransport, @unchecked Sendable {
+    private let lock = NSLock()
+    private var failures: Int
+    private let code: URLError.Code
+    private(set) var count = 0
+
+    init(failures: Int, code: URLError.Code) {
+        self.failures = failures
+        self.code = code
+    }
+
+    func send(_ request: URLRequest) async throws -> (Data, HTTPURLResponse) {
+        lock.lock()
+        count += 1
+        let fail = failures > 0
+        if fail { failures -= 1 }
+        lock.unlock()
+        if fail { throw URLError(code) }
+        let body = #"{"date":"2026-09-26","state":"available","answers":[],"streak":3,"streak_freezes":1,"seconds_until_next":600}"#
+        return (Data(body.utf8), HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!)
+    }
+}
+
 final class SupabaseAPITests: XCTestCase {
     let config = BackendConfig(url: URL(string: "https://example.supabase.co")!, anonKey: "anon-key")
     let userId = UUID()
@@ -64,6 +88,38 @@ final class SupabaseAPITests: XCTestCase {
         } catch let error as BackendError {
             XCTAssertEqual(error.code, "daily_closed")
         }
+    }
+
+    private func signedIn() -> InMemorySessionStore {
+        InMemorySessionStore(AuthSession(accessToken: "tok", refreshToken: "ref", expiresAt: Date().addingTimeInterval(3600),
+                                         userId: userId, isAnonymous: false, email: nil))
+    }
+
+    func testReadIsRetriedWhenNetworkDrops() async throws {
+        let transport = FlakyTransport(failures: 2, code: .timedOut)
+        let api = SupabaseAPI(config: config, store: signedIn(), transport: transport)
+        let status = try await LiveGameService(api: api).dailyStatus()
+        XCTAssertEqual(status.streak, 3)
+        XCTAssertEqual(transport.count, 3, "deux nouveaux essais")
+    }
+
+    func testWriteMaybeSentIsNotRetried() async throws {
+        let transport = FlakyTransport(failures: 1, code: .timedOut)
+        let api = SupabaseAPI(config: config, store: signedIn(), transport: transport)
+        do {
+            _ = try await LiveGameService(api: api).dailyStart()
+            XCTFail("doit échouer")
+        } catch let error as BackendError {
+            XCTAssertEqual(error, .offline)
+        }
+        XCTAssertEqual(transport.count, 1, "une écriture peut-être reçue n'est pas renvoyée")
+    }
+
+    func testWriteNotSentIsRetried() async throws {
+        let transport = FlakyTransport(failures: 1, code: .notConnectedToInternet)
+        let api = SupabaseAPI(config: config, store: signedIn(), transport: transport)
+        _ = try? await LiveGameService(api: api).dailyStart()
+        XCTAssertEqual(transport.count, 2, "une requête partie nulle part est renvoyée")
     }
 
     func testExpiredTokenIsRefreshedOnce() async throws {

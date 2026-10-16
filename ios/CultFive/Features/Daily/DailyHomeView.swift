@@ -98,6 +98,8 @@ struct DailyHomeView: View {
             }
         }
         .task {
+            // Derniers défis connus, affichés tout de suite (réseau lent), puis mis à jour.
+            if quests == nil, app.api != nil { quests = app.cache.load("quests") }
             await reload()
             #if DEBUG
             if let screen = Demo.screen, [.question, .typed, .reveal, .result, .share].contains(screen) { showDaily = true }
@@ -111,6 +113,7 @@ struct DailyHomeView: View {
         await app.refreshAdStatus()
         if let fresh = try? await app.service.quests() {
             quests = fresh
+            if app.api != nil { app.cache.save(fresh, key: "quests") }
             // Les défis remplis font monter le pass : on relit le pass et l'album.
             await AlbumStore.shared.refresh()
             if !fresh.newly.isEmpty {

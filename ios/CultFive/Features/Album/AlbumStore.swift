@@ -169,9 +169,17 @@ final class AlbumStore {
     private static let always: Set<String> = ["dos.classique", "couv.classique"]
 
     /// À appeler une fois au lancement, avec le service de l'app.
-    func configure(_ service: GameService) {
+    func configure(_ service: GameService, cached: Bool = false) {
         self.service = service
+        // Dernier album et dernier pass connus : affichés tout de suite, même sans réseau, puis mis à jour.
+        guard cached else { return }
+        useCache = true
+        if let album: AlbumOverview = cache.load("album") { apply(album) }
+        if let pass: SeasonOverview = cache.load("season") { season = pass }
     }
+
+    private let cache = DiskCache()
+    private var useCache = false
 
     /// Déconnexion : on oublie la collection du compte précédent.
     func clear() {
@@ -179,6 +187,8 @@ final class AlbumStore {
         loaded = false
         season = SeasonOverview()
         errorMessage = nil
+        cache.remove("album")
+        cache.remove("season")
     }
 
     // MARK: - Lecture
@@ -201,8 +211,13 @@ final class AlbumStore {
         async let album = service.albumOverview()
         async let pass = service.seasonOverview()
         do {
-            apply(try await album)
+            let fresh = try await album
+            apply(fresh)
             season = try await pass
+            if useCache {
+                cache.save(fresh, key: "album")
+                cache.save(season, key: "season")
+            }
         } catch {
             report(error)
         }

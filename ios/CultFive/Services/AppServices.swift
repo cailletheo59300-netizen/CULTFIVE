@@ -38,7 +38,7 @@ struct DiskCache {
     }
 
     func save<T: Encodable>(_ value: T, key: String) {
-        guard let data = try? JSONEncoder().encode(value) else { return }
+        guard let data = try? SupabaseAPI.cacheEncoder.encode(value) else { return }
         try? data.write(to: directory.appendingPathComponent("\(key).json"), options: .atomic)
     }
 
