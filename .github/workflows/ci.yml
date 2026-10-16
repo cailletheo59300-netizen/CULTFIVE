@@ -55,6 +55,12 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
+      # Même Xcode que le build TestFlight : le SDK Unity Ads demande Xcode 26 pour l'édition de liens.
+      - name: Xcode le plus récent
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | grep -v beta | sort -V | tail -1)
+          sudo xcode-select -s "$XCODE"
+          xcodebuild -version
       - name: XcodeGen
         run: |
           brew install xcodegen
