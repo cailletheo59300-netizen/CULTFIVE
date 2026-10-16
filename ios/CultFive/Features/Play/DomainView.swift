@@ -62,7 +62,7 @@ struct DomainView: View {
         do {
             stats = try await app.service.domainStats(domainId)
         } catch {
-            loadError = (error as? LocalizedError)?.errorDescription
+            loadError = error.userMessage
         }
     }
 

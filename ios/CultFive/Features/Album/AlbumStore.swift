@@ -219,6 +219,9 @@ final class AlbumStore {
                 cache.save(season, key: "season")
             }
         } catch {
+            // Album déjà affiché (cache ou chargement précédent) et réseau coupé : le bandeau « Connexion difficile »
+            // suffit, pas d'alerte en plus.
+            if loaded, case .offline? = error as? BackendError { return }
             report(error)
         }
     }
@@ -248,7 +251,7 @@ final class AlbumStore {
     }
 
     private func report(_ error: Error) {
-        errorMessage = (error as? LocalizedError)?.errorDescription ?? "Le serveur ne répond pas. Réessaie dans un instant."
+        errorMessage = error.userMessage("Le serveur ne répond pas. Réessaie dans un instant.")
     }
 
     /// Lance une action serveur, une à la fois ; en cas d'échec, montre l'erreur et relit l'album.

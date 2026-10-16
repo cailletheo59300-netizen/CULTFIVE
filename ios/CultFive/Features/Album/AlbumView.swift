@@ -95,6 +95,7 @@ struct AlbumView: View {
         } message: {
             Text(store.errorMessage ?? "")
         }
+        .onChange(of: app.reselected[.album]) { path = [] }
         .onChange(of: app.pendingAlbum, initial: true) { _, route in
             // Lien « Pass » de la carte Défis (écran du 5), mission « Ouvre … pochettes » : on ouvre directement la page.
             guard let route else { return }

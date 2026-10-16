@@ -404,7 +404,7 @@ struct SettingsView: View {
                 error = nil
                 Haptics.success()
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription
+                self.error = error.userMessage
             }
         }
     }
@@ -455,7 +455,7 @@ struct SettingsView: View {
                 try data.write(to: url, options: .atomic)
                 export = ExportFile(url: url)
             } catch {
-                app.show((error as? LocalizedError)?.errorDescription ?? "Export impossible pour l'instant.")
+                app.show(error, "Export impossible pour l'instant.")
             }
         }
     }
@@ -466,7 +466,7 @@ struct SettingsView: View {
                 try await app.deleteAccount()
                 dismiss()
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Suppression impossible. Réessaie."
+                self.error = error.userMessage("Suppression impossible. Réessaie.")
             }
         }
     }

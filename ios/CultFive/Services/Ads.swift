@@ -43,6 +43,13 @@ final class AdsController {
     private var rewardedSinceLastGame = false
     /// Pourquoi la dernière pub récompensée n'a pas pu s'afficher (journal d'usage), `nil` si elle s'est affichée.
     private(set) var lastFailure: String?
+    /// Pubs récompensées chargées à l'avance, par bloc : elles s'ouvrent tout de suite à l'appui.
+    /// Google les garde valables une heure ; au-delà de 50 min on en recharge une.
+    private var ready: [String: (ad: RewardedAd, loadedAt: Date)] = [:]
+    /// Chargements en cours, par bloc : un appui pendant le préchargement attend celui-ci au lieu d'en lancer un autre.
+    private var inFlight: [String: Task<RewardedAd?, Never>] = [:]
+    /// Blocs préchargés : les bonus les plus utilisés (coffre boosté, coffre offert et pochette gratuite, neurones doublés).
+    private static let preloadKinds: [AdKind] = [.boostChest, .freeChest, .doubleSeeds]
     private let defaults = UserDefaults.standard
 
     init(enabled: Bool) {
@@ -83,6 +90,51 @@ final class AdsController {
         started = true
     }
 
+    // MARK: Préchargement
+
+    private func rewardedUnit(for kind: AdKind) -> String {
+        testAds ? Self.testRewardedUnit : (Self.rewardedUnits[kind] ?? Self.testRewardedUnit)
+    }
+
+    /// Charge à l'avance les pubs des bonus les plus utilisés (sans Pass+ seulement, l'appelant le vérifie).
+    func preload() {
+        guard enabled, started else { return }
+        for kind in Self.preloadKinds { _ = loadTask(rewardedUnit(for: kind)) }
+    }
+
+    /// Chargement d'une pub du bloc, partagé : un seul à la fois par bloc. Le résultat va dans `ready`.
+    private func loadTask(_ unit: String) -> Task<RewardedAd?, Never>? {
+        if let fresh = ready[unit], Date().timeIntervalSince(fresh.loadedAt) < 50 * 60 { return nil }
+        if let running = inFlight[unit] { return running }
+        applyAudience()
+        let task = Task<RewardedAd?, Never> { [weak self] in
+            let ad: RewardedAd?
+            do {
+                ad = try await RewardedAd.load(with: unit, request: Request())
+            } catch {
+                let error = error as NSError
+                self?.lastFailure = "load \(error.domain) \(error.code)"
+                ad = nil
+            }
+            self?.inFlight[unit] = nil
+            if let ad { self?.ready[unit] = (ad, Date()) }
+            return ad
+        }
+        inFlight[unit] = task
+        return task
+    }
+
+    /// Une pub prête du bloc (préchargée, ou chargée maintenant), retirée de la réserve.
+    private func takeAd(_ unit: String) async -> RewardedAd? {
+        if let fresh = ready[unit], Date().timeIntervalSince(fresh.loadedAt) < 50 * 60 {
+            ready[unit] = nil
+            return fresh.ad
+        }
+        ready[unit] = nil
+        _ = await loadTask(unit)?.value
+        return ready.removeValue(forKey: unit)?.ad
+    }
+
     /// Le joueur peut revoir ses choix de confidentialité des pubs (Europe : message RGPD de Google).
     var privacyOptionsAvailable: Bool {
         UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
@@ -110,16 +162,12 @@ final class AdsController {
             lastFailure = "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
             throw Self.unavailable
         }
-        let unit = testAds ? Self.testRewardedUnit : (Self.rewardedUnits[kind] ?? Self.testRewardedUnit)
-        let ad: RewardedAd
-        do {
-            applyAudience()
-            ad = try await RewardedAd.load(with: unit, request: Request())
-        } catch {
-            let error = error as NSError
-            lastFailure = "load \(error.domain) \(error.code)"
+        let unit = rewardedUnit(for: kind)
+        guard let ad = await takeAd(unit) else {
+            if lastFailure == nil { lastFailure = "load none" }
             throw Self.unavailable
         }
+        lastFailure = nil
         let options = ServerSideVerificationOptions()
         options.userIdentifier = userId.uuidString.lowercased()
         options.customRewardText = "\(kind.rawValue):\(ref ?? "")"
@@ -127,6 +175,8 @@ final class AdsController {
         let waiter = PresentationWaiter()
         ad.fullScreenContentDelegate = waiter
         var earned = false
+        // Le voile « Chargement de la pub… » s'efface quand la pub prend l'écran.
+        LoadingOverlay.hide()
         await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
             waiter.continuation = continuation
             ad.present(from: Self.topViewController) { earned = true }
@@ -134,6 +184,8 @@ final class AdsController {
         // Le délégué est une référence faible du SDK : on garde la pub et l'attente en vie jusqu'à la fermeture.
         withExtendedLifetime((ad, waiter)) {}
         if earned { rewardedSinceLastGame = true }
+        // La suivante se charge déjà, pour le prochain bonus.
+        if Self.preloadKinds.contains(kind) { _ = loadTask(unit) }
         return earned
     }
 
@@ -142,6 +194,24 @@ final class AdsController {
     private static let gamesKey = "ads.gamesSinceInterstitial"
     private static let dayKey = "ads.interstitialDay"
     private static let countKey = "ads.interstitialCount"
+
+    /// Pub entre les parties chargée d'avance (pendant le bilan) : elle s'affiche sans faire attendre.
+    private var interstitialReady: (ad: InterstitialAd, loadedAt: Date)?
+    private var interstitialLoading = false
+
+    /// La pub entre les parties sera due au prochain passage : on la charge pendant que le joueur lit son bilan.
+    func preloadInterstitialIfSoon() {
+        guard enabled, started, !interstitialLoading, defaults.integer(forKey: Self.gamesKey) >= 3 else { return }
+        if let ready = interstitialReady, Date().timeIntervalSince(ready.loadedAt) < 50 * 60 { return }
+        interstitialLoading = true
+        let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
+        applyAudience()
+        Task { [weak self] in
+            let ad = try? await InterstitialAd.load(with: unit, request: Request())
+            self?.interstitialLoading = false
+            if let ad { self?.interstitialReady = (ad, Date()) }
+        }
+    }
 
     /// Une partie Jouer vient de finir.
     func noteGameFinished() {
@@ -156,9 +226,14 @@ final class AdsController {
         let today = Self.dayString(Date())
         let shownToday = defaults.string(forKey: Self.dayKey) == today ? defaults.integer(forKey: Self.countKey) : 0
         guard defaults.integer(forKey: Self.gamesKey) >= 3, shownToday < 3 else { return false }
-        let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
-        applyAudience()
-        guard let ad = try? await InterstitialAd.load(with: unit, request: Request()) else { return false }
+        // Jamais d'attente entre deux parties : sans pub prête, on n'en montre pas cette fois (elle se charge pour la suivante).
+        guard let ready = interstitialReady, Date().timeIntervalSince(ready.loadedAt) < 50 * 60 else {
+            interstitialReady = nil
+            preloadInterstitialIfSoon()
+            return false
+        }
+        interstitialReady = nil
+        let ad = ready.ad
         let waiter = PresentationWaiter()
         ad.fullScreenContentDelegate = waiter
         await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in

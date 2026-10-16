@@ -67,7 +67,7 @@ struct ContentReportSheet: View {
                 app.show("Merci, ton signalement a été envoyé.")
                 dismiss()
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Envoi impossible."
+                self.error = error.userMessage("Envoi impossible.")
             }
             busy = false
         }

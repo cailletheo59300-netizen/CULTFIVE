@@ -129,6 +129,7 @@ struct FriendsView: View {
                 activeDuel = DuelLaunch(id: id)
             }
         }
+        .onChange(of: app.reselected[.friends]) { path = [] }
         .task(id: app.pendingLeagueId) {
             if let id = app.pendingLeagueId {
                 app.pendingLeagueId = nil
@@ -143,7 +144,7 @@ struct FriendsView: View {
                     await load()
                     activeDuel = DuelLaunch(id: duel.id)
                 } catch {
-                    app.show((error as? LocalizedError)?.errorDescription ?? "Ce défi n'est plus disponible.")
+                    app.show(error, "Ce défi n'est plus disponible.")
                 }
             }
         }

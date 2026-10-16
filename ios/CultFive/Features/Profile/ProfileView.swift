@@ -14,9 +14,10 @@ struct ProfileView: View {
     @State private var showEloHelp = false
     @State private var showRankPath = false
     @State private var showTrophies = false
+    @State private var path = NavigationPath()
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
                     portrait
@@ -46,6 +47,11 @@ struct ProfileView: View {
             .navigationDestination(isPresented: $showSettings) { SettingsView() }
             .navigationDestination(isPresented: $showRankPath) { RankPathView(global: CoteCULT.overall(skills)) }
             .refreshable { await load() }
+        }
+        .onChange(of: app.reselected[.profile]) {
+            path = NavigationPath()
+            showSettings = false
+            showRankPath = false
         }
         .sheet(isPresented: $showHistory) {
             NavigationStack { DailyHistoryDetail() }

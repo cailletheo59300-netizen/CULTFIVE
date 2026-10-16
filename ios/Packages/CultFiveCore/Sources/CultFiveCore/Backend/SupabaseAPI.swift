@@ -65,6 +65,17 @@ public struct URLSessionTransport: HTTPTransport {
     }
 }
 
+public extension Error {
+    /// Requête annulée (l'écran a disparu, une autre a pris le relais) : rien à montrer au joueur.
+    var isCancellation: Bool { self is CancellationError || (self as? URLError)?.code == .cancelled }
+
+    /// Message pour le joueur, `nil` pour une requête annulée.
+    var userMessage: String? { isCancellation ? nil : (self as? LocalizedError)?.errorDescription }
+
+    /// Message pour le joueur (ou `fallback`), `nil` pour une requête annulée.
+    func userMessage(_ fallback: String) -> String? { isCancellation ? nil : (userMessage ?? fallback) }
+}
+
 public enum BackendError: Error, Equatable, LocalizedError {
     case notAuthenticated
     case offline
@@ -498,6 +509,8 @@ public actor SupabaseAPI {
                 noteNetwork(true)
                 return result
             } catch let error as URLError {
+                // Requête annulée (écran fermé, tâche remplacée) : ce n'est pas une panne, rien à montrer au joueur.
+                if error.code == .cancelled { throw CancellationError() }
                 let notSent: Set<URLError.Code> = [.notConnectedToInternet, .cannotConnectToHost, .cannotFindHost,
                                                    .dnsLookupFailed, .dataNotAllowed, .internationalRoamingOff]
                 let maybeSent: Set<URLError.Code> = [.timedOut, .networkConnectionLost]

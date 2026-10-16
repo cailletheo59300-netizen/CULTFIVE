@@ -23,7 +23,7 @@ struct MainTabView: View {
             tab(ProfileView(), .profile)
         }
         .overlay(alignment: .bottom) {
-            CultTabBar(selection: $model.tab, daily: model.daily)
+            CultTabBar(selection: $model.tab, daily: model.daily) { model.reselect($0) }
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { barHeight = $0 }
         }
         // Réseau coupé : un petit bandeau en haut, les écrans gardent ce qu'ils affichaient.
@@ -58,6 +58,8 @@ struct MainTabView: View {
 struct CultTabBar: View {
     @Binding var selection: AppModel.Tab
     let daily: DailyStatus?
+    /// Onglet touché alors qu'il est déjà ouvert : retour à sa page de départ.
+    var onReselect: (AppModel.Tab) -> Void = { _ in }
 
     /// La bulle du 5 dépasse de la barre : décalage de 22 pt, moins la marge intérieure de 6 pt.
     static let bubbleOverflow: CGFloat = 16
@@ -87,7 +89,7 @@ struct CultTabBar: View {
 
     private func item(_ tab: AppModel.Tab, title: String, symbol: String, selectedSymbol: String) -> some View {
         Button {
-            guard selection != tab else { return }
+            guard selection != tab else { return onReselect(tab) }
             Haptics.selection()
             selection = tab
         } label: {
@@ -110,6 +112,7 @@ struct CultTabBar: View {
     private var centerItem: some View {
         Button {
             Haptics.soft()
+            if selection == .daily { onReselect(.daily) }
             selection = .daily
         } label: {
             VStack(spacing: 3) {

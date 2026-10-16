@@ -49,7 +49,7 @@ struct DailyReviewView: View {
             do {
                 items = try await app.service.dailyReview(date: date)
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Revue indisponible."
+                self.error = error.userMessage("Revue indisponible.")
             }
         }
     }

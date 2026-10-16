@@ -270,7 +270,7 @@ struct ChestOpeningView: View {
                 await openUp(with: opened)
             }
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription ?? "Ouverture impossible. Réessaie."
+            self.error = error.userMessage("Ouverture impossible. Réessaie.")
             opening = nil
             withAnimation(Motion.standard) {
                 taps = 0
@@ -293,7 +293,7 @@ struct ChestOpeningView: View {
                 pulse(big: true)
             }
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant."
+            self.error = error.userMessage("Pub indisponible pour l'instant.")
         }
     }
 

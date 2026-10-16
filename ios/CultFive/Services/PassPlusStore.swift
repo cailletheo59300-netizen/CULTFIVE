@@ -115,7 +115,7 @@ final class PassPlusStore {
             errorMessage = error.errorDescription
             return false
         } catch {
-            errorMessage = (error as? LocalizedError)?.errorDescription ?? "Le serveur ne répond pas. Ton achat sera validé au prochain lancement."
+            errorMessage = error.userMessage("Le serveur ne répond pas. Ton achat sera validé au prochain lancement.")
             return false
         }
     }

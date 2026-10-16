@@ -337,7 +337,7 @@ struct OnboardingFlow: View {
             let loaded = try await app.service.onboardingPack()
             if loaded.questions.isEmpty { step = .result } else { pack = loaded }
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription ?? "Connexion impossible."
+            self.error = error.userMessage("Connexion impossible.")
         }
     }
 
@@ -516,7 +516,7 @@ struct OnboardingFlow: View {
             _ = try await app.service.completeOnboarding(level: level, interests: Array(interests))
             step = .handle
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription
+            self.error = error.userMessage
         }
     }
 
@@ -703,7 +703,7 @@ private struct HandleStep: View {
                 do {
                     app.profile = try await app.service.setHandle(handle)
                 } catch {
-                    status = (error as? LocalizedError)?.errorDescription
+                    status = error.userMessage
                     available = false
                     busy = false
                     return

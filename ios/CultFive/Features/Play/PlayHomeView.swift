@@ -50,6 +50,7 @@ struct PlayHomeView: View {
             PlaySetupSheet(domainId: request.domainId, preselected: request.preselected,
                            onStart: { pendingConfig = $0 }, onStats: { pendingStats = request.domainId })
         }
+        .onChange(of: app.reselected[.play]) { path = [] }
         .onChange(of: app.pendingDomain, initial: true) { _, domain in
             // Défi « bonnes réponses en … » touché : la feuille du domaine s'ouvre.
             guard let domain else { return }

@@ -113,7 +113,7 @@ struct FriendProfileView: View {
             profile = try await app.service.friendProfile(friendId)
             error = nil
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription ?? "Profil indisponible."
+            self.error = error.userMessage("Profil indisponible.")
         }
     }
 
@@ -320,7 +320,7 @@ struct DuelSetupSheet: View {
                 Haptics.soft()
                 onCreated(duel)
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Impossible de créer le duel."
+                self.error = error.userMessage("Impossible de créer le duel.")
             }
             busy = false
         }

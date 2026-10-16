@@ -63,7 +63,7 @@ struct AddFriendSheet: View {
                 sent.insert(result.id)
                 Haptics.success()
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription
+                self.error = error.userMessage
             }
         }
     }
@@ -285,7 +285,7 @@ struct NewLeagueSheet: View {
                 Haptics.success()
                 onCreated(standings)
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Création impossible."
+                self.error = error.userMessage("Création impossible.")
             }
             busy = false
         }
@@ -381,7 +381,7 @@ struct LeagueJoinSheet: View {
         .presentationDragIndicator(.visible)
         .task {
             do { preview = try await app.service.leaguePreview(code: code) } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Ligue introuvable."
+                self.error = error.userMessage("Ligue introuvable.")
             }
         }
     }
@@ -394,7 +394,7 @@ struct LeagueJoinSheet: View {
                 Haptics.success()
                 onJoined(standings)
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Impossible de rejoindre cette ligue."
+                self.error = error.userMessage("Impossible de rejoindre cette ligue.")
             }
             busy = false
         }
@@ -585,7 +585,7 @@ struct LeagueView: View {
             standings = try await app.service.leagueStandings(leagueId, offset: offset)
             error = nil
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription
+            self.error = error.userMessage
         }
     }
 
@@ -766,7 +766,7 @@ struct LeagueView: View {
             do {
                 _ = try await app.service.leagueRegenerateCode(league: leagueId)
                 await load()
-            } catch { self.error = (error as? LocalizedError)?.errorDescription }
+            } catch { self.error = error.userMessage }
         }
     }
 
@@ -776,7 +776,7 @@ struct LeagueView: View {
                 standings = try await app.service.leagueNewSeason(league: leagueId, startToday: today)
                 offset = 0
                 Haptics.success()
-            } catch { self.error = (error as? LocalizedError)?.errorDescription }
+            } catch { self.error = error.userMessage }
         }
     }
 
@@ -786,7 +786,7 @@ struct LeagueView: View {
             do {
                 standings = try await app.service.leagueAddQuiz(league: leagueId)
                 Haptics.success()
-            } catch { self.error = (error as? LocalizedError)?.errorDescription }
+            } catch { self.error = error.userMessage }
             busy = false
         }
     }
@@ -797,7 +797,7 @@ struct LeagueView: View {
             do {
                 standings = try await app.service.leagueEnd(league: leagueId)
                 Haptics.success()
-            } catch { self.error = (error as? LocalizedError)?.errorDescription }
+            } catch { self.error = error.userMessage }
             busy = false
         }
     }
@@ -807,7 +807,7 @@ struct LeagueView: View {
             do {
                 try await app.service.leagueKick(league: leagueId, user: row.id)
                 await load()
-            } catch { self.error = (error as? LocalizedError)?.errorDescription }
+            } catch { self.error = error.userMessage }
             kick = nil
         }
     }

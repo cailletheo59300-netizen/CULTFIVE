@@ -121,10 +121,10 @@ struct AccountSheet: View {
                     try await app.api?.sendEmailCode(email: address, convertAnonymous: false)
                     codeSent = true
                 } catch {
-                    self.error = (error as? LocalizedError)?.errorDescription
+                    self.error = error.userMessage
                 }
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription
+                self.error = error.userMessage
             }
             busy = false
         }
@@ -147,7 +147,7 @@ struct AccountSheet: View {
                 onDone?()
                 dismiss()
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Échec de la connexion."
+                self.error = error.userMessage("Échec de la connexion.")
             }
             busy = false
         }

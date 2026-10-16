@@ -62,7 +62,7 @@ struct FreeChestOffer: View {
                     await app.refreshProgression()
                     app.openChests(app.progression?.chests.filter { $0.id == id })
                 } catch {
-                    app.show((error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant.")
+                    app.show(error, "Pub indisponible pour l'instant.")
                 }
             }
         }
@@ -86,7 +86,7 @@ struct StreakRescueOffer: View {
                     app.show("Série sauvée : \(days) jour\(days > 1 ? "s" : "") !")
                     await app.refreshDaily()
                 } catch {
-                    app.show((error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant.")
+                    app.show(error, "Pub indisponible pour l'instant.")
                 }
             }
         }
@@ -142,7 +142,7 @@ struct DoubleSeedsButton: View {
             Haptics.success()
             withAnimation(Motion.bounce) { gained = reward.seeds ?? 0 }
         } catch {
-            self.error = (error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant."
+            self.error = error.userMessage("Pub indisponible pour l'instant.")
         }
     }
 }

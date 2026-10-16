@@ -418,7 +418,7 @@ final class PlaySessionModel {
             stage = .correction
         } catch {
             summary.correctionLoading = false
-            summary.correctionError = (error as? LocalizedError)?.errorDescription ?? "Correction impossible pour l'instant."
+            summary.correctionError = error.userMessage("Correction impossible pour l'instant.")
             stage = .summary(summary)
         }
     }
@@ -447,7 +447,7 @@ final class PlaySessionModel {
             summary.correctionAvailable = false
             if summary.correction?.corrected == summary.correction?.total { Haptics.success() }
         } catch {
-            summary.correctionError = (error as? LocalizedError)?.errorDescription ?? "Correction non enregistrée. Réessaie."
+            summary.correctionError = error.userMessage("Correction non enregistrée. Réessaie.")
         }
         summary.correctionLoading = false
         stage = .summary(summary)
@@ -511,7 +511,7 @@ final class PlaySessionModel {
         } catch {
             seedsBalance = previousSeeds
             tickets = previousTickets
-            helpError = (error as? LocalizedError)?.errorDescription ?? "Aide indisponible. Réessaie."
+            helpError = error.userMessage("Aide indisponible. Réessaie.")
         }
     }
 }

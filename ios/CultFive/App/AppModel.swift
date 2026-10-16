@@ -21,6 +21,10 @@ final class AppModel {
 
     var phase: Phase = .launching
     var tab: Tab = .daily
+    /// Onglet touché alors qu'on y est déjà : compteur par onglet, l'onglet revient à sa page de départ.
+    private(set) var reselected: [Tab: Int] = [:]
+
+    func reselect(_ tab: Tab) { reselected[tab, default: 0] += 1 }
     var profile: Profile? {
         didSet { if useCache, let profile { cache.save(profile, key: "profile") } }
     }
@@ -278,6 +282,11 @@ final class AppModel {
         if sent > 0 { await refreshProfile() }
     }
 
+    /// Erreur d'une action : son message (ou `fallback`) ; rien pour une requête annulée.
+    func show(_ error: Error, _ fallback: String) {
+        if let message = error.userMessage(fallback) { show(message) }
+    }
+
     func show(_ message: String) {
         withAnimation(Motion.standard) { toast = message }
         Task {
@@ -315,6 +324,8 @@ final class AppModel {
         await refreshAdStatus()
         ads.adultAudience = isAdult
         await ads.start()
+        // Les bonus les plus utilisés ont leur pub prête d'avance : elle s'ouvre tout de suite à l'appui.
+        if !noAds { ads.preload() }
     }
 
     /// Majeur d'après la tranche d'âge indiquée (facultative) : sans réponse, on reste prudent.
@@ -363,12 +374,23 @@ final class AppModel {
         await AlbumStore.shared.refresh()
     }
 
+    /// Une pub (ou un bonus Pass+) est en cours : un deuxième appui est ignoré.
+    private var adBusy = false
+
     /// Pubs de test de Google : Google ne prévient pas notre serveur, qui accepte alors la récompense pour un admin.
     private var adTestClaims: Bool { ads.testAds && (adStatus?.admin ?? false) }
 
     /// Pub récompensée : vérifie que la récompense est possible, montre la pub, puis demande la récompense au serveur
     /// (qui attend la confirmation de Google). `nil` si la pub a été fermée avant la fin.
     func watchAd(_ kind: AdKind, ref: String? = nil) async throws -> AdReward? {
+        // Un seul bonus à la fois : un deuxième appui pendant le chargement est ignoré.
+        guard !adBusy else { return nil }
+        adBusy = true
+        LoadingOverlay.show(noAds ? "Un instant…" : "Chargement de la pub…")
+        defer {
+            adBusy = false
+            LoadingOverlay.hide()
+        }
         try await service.adCan(kind, ref: ref)
         if noAds {
             // Pass+ : la récompense, sans vidéo (mêmes limites, contrôlées par le serveur).
@@ -382,6 +404,7 @@ final class AppModel {
         track("ad_offer", ["kind": kind.rawValue])
         ads.adultAudience = isAdult
         guard try await showRewarded(kind, user: user, ref: ref) else { return nil }
+        LoadingOverlay.show("Récompense en route…")
         track("ad_view", ["kind": kind.rawValue])
         let service = self.service
         let test = adTestClaims
@@ -394,6 +417,13 @@ final class AppModel {
 
     /// « Corrige tes erreurs » débloquée par une pub : renvoie les questions à rejouer.
     func watchCorrectionAd(session: UUID) async throws -> CorrectionStart? {
+        guard !adBusy else { return nil }
+        adBusy = true
+        LoadingOverlay.show(noAds ? "Un instant…" : "Chargement de la pub…")
+        defer {
+            adBusy = false
+            LoadingOverlay.hide()
+        }
         let ref = session.uuidString.lowercased()
         try await service.adCan(.correction, ref: ref)
         if noAds {
@@ -404,6 +434,7 @@ final class AppModel {
         track("ad_offer", ["kind": AdKind.correction.rawValue])
         ads.adultAudience = isAdult
         guard try await showRewarded(.correction, user: user, ref: ref) else { return nil }
+        LoadingOverlay.show("Récompense en route…")
         track("ad_view", ["kind": AdKind.correction.rawValue])
         let service = self.service
         let test = adTestClaims
@@ -443,6 +474,15 @@ final class AppModel {
     }
 
     /// Entre deux parties Jouer (après le bilan) : pub plein écran si elle est due.
+    /// Une partie Jouer vient de finir : si la pub entre les parties approche, elle se charge déjà (bilan à l'écran).
+    func noteGameFinished() {
+        ads.noteGameFinished()
+        if !noAds, adStatus?.interstitial ?? false {
+            ads.adultAudience = isAdult
+            ads.preloadInterstitialIfSoon()
+        }
+    }
+
     func interstitialBetweenGames() async {
         guard !noAds else { return }
         ads.adultAudience = isAdult

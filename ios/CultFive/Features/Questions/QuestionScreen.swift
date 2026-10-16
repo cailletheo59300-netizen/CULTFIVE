@@ -361,7 +361,7 @@ struct ReportSheet: View {
                 onDone()
                 dismiss()
             } catch {
-                self.error = (error as? LocalizedError)?.errorDescription ?? "Envoi impossible. Réessaie plus tard."
+                self.error = error.userMessage("Envoi impossible. Réessaie plus tard.")
             }
             sending = false
         }

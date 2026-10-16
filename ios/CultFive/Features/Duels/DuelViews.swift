@@ -220,7 +220,7 @@ struct DuelSessionView: View {
                 model = nil
                 currentId = next.id
             } catch {
-                rematchError = (error as? LocalizedError)?.errorDescription ?? "Revanche impossible pour l'instant."
+                rematchError = error.userMessage("Revanche impossible pour l'instant.")
             }
         }
     }

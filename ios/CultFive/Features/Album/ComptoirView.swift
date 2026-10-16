@@ -212,7 +212,7 @@ struct ComptoirView: View {
                             guard try await app.watchAd(.freePack) != nil else { return }
                             if let pulls = await store.buyPack(series, useTicket: true) { then(PackOpening(series: series, pulls: pulls)) }
                         } catch {
-                            app.show((error as? LocalizedError)?.errorDescription ?? "Pub indisponible pour l'instant.")
+                            app.show(error, "Pub indisponible pour l'instant.")
                         }
                     }
                 }

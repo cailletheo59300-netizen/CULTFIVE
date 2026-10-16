@@ -96,7 +96,7 @@ struct PlaySessionView: View {
                 .task(id: config.id) {
                     guard countedGame != config.id else { return }
                     countedGame = config.id
-                    app.ads.noteGameFinished()
+                    app.noteGameFinished()
                 }
         case .correction:
             if let question = model.correctionQuestion {
