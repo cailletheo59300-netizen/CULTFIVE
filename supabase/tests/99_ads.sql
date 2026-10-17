@@ -48,9 +48,12 @@ begin
   -- Limite quotidienne des graines doublées (3), statut.
   st := public.ad_status();
   perform tst.ok((st ->> 'double_seeds')::int = 2 and (st ->> 'free_chest')::int = 0 and (st ->> 'boost_chest')::int = 1, 'statut : restes du jour');
-  perform tst.ok(not (st ->> 'interstitial')::bool, 'pas de pub entre les parties les 3 premiers jours');
+  perform tst.ok(not (st ->> 'interstitial')::bool, 'pas de pub entre les parties le premier jour');
+  perform tst.tick('1 day');
+  perform tst.ok((public.ad_status() ->> 'interstitial')::bool, 'pub entre les parties dès le 2e jour (0066)');
+  perform tst.tick('-1 day');
   perform tst.tick('3 days');
-  perform tst.ok((public.ad_status() ->> 'interstitial')::bool, 'pub entre les parties après 3 jours');
+  perform tst.ok((public.ad_status() ->> 'interstitial')::bool, 'pub entre les parties après le premier jour');
   perform tst.ok((public.ad_status() ->> 'free_chest')::int = 1, 'nouveau jour : coffre offert de nouveau');
 
   -- Mode test : réservé aux admins.
