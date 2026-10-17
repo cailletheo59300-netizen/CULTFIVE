@@ -1,0 +1,2331 @@
+[
+ {
+  "key": "tec13-001",
+  "concept": "tech.computing.v13_reconnaissance_faciale",
+  "label": "Reconnaissance faciale",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Sur un smartphone, à quoi sert la reconnaissance faciale ?",
+  "explanation": "La caméra repère les traits du visage, même dans le noir sur certains modèles.",
+  "options": [
+   "À déverrouiller le téléphone avec son visage*",
+   "À retoucher les selfies",
+   "À compter ses amis",
+   "À traduire une langue"
+  ]
+ },
+ {
+  "key": "tec13-002",
+  "concept": "tech.computing.v13_ia_sigle",
+  "label": "IA",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que veut dire « IA » ?",
+  "explanation": "Des programmes capables d'apprendre à partir d'exemples, comme ChatGPT ou les filtres photo.",
+  "options": [
+   "Intelligence artificielle*",
+   "Internet automatique",
+   "Image animée",
+   "Informatique avancée"
+  ]
+ },
+ {
+  "key": "tec13-003",
+  "concept": "tech.computing.v13_chatbot",
+  "label": "Chatbot",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un « chatbot » ?",
+  "explanation": "De « chat » (discuter en anglais) et « bot » (robot). On en trouve sur beaucoup de sites pour répondre aux questions.",
+  "options": [
+   "Un programme qui discute avec toi par messages*",
+   "Un chat robot en peluche",
+   "Un virus de messagerie",
+   "Un forum de discussion"
+  ]
+ },
+ {
+  "key": "tec13-004",
+  "concept": "tech.computing.v13_touche_maj",
+  "label": "La touche Maj",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "À quoi sert la touche « Maj » (Shift) d'un clavier ?",
+  "explanation": "On la garde enfoncée en tapant la lettre. Le verrouillage majuscule, lui, les bloque toutes.",
+  "options": [
+   "À écrire une majuscule*",
+   "À effacer une lettre",
+   "À aller à la ligne",
+   "À éteindre l'ordinateur"
+  ]
+ },
+ {
+  "key": "tec13-005",
+  "concept": "tech.computing.v13_touche_cmd",
+  "label": "La touche Cmd",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur un Mac, quelle touche joue le rôle de « Ctrl » pour copier ou coller ?",
+  "explanation": "Cmd + C pour copier, Cmd + V pour coller. Son symbole vient d'un panneau suédois qui indique un site touristique.",
+  "options": [
+   "La touche Commande (⌘)*",
+   "La touche Option",
+   "La touche Fn",
+   "La touche Alt Gr"
+  ]
+ },
+ {
+  "key": "tec13-006",
+  "concept": "tech.computing.v13_ctrl_a",
+  "label": "Ctrl + A",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur un ordinateur Windows, quel raccourci sélectionne tout le texte d'un document ?",
+  "explanation": "« A » pour « all » (tout, en anglais).",
+  "options": [
+   "Ctrl + A*",
+   "Ctrl + T",
+   "Ctrl + S",
+   "Ctrl + E"
+  ]
+ },
+ {
+  "key": "tec13-007",
+  "concept": "tech.computing.v13_ctrl_s",
+  "label": "Ctrl + S",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur Windows, quel raccourci enregistre le document en cours ?",
+  "explanation": "« S » pour « save » (enregistrer). Un bon réflexe à prendre souvent !",
+  "options": [
+   "Ctrl + S*",
+   "Ctrl + E",
+   "Ctrl + R",
+   "Ctrl + Z"
+  ]
+ },
+ {
+  "key": "tec13-008",
+  "concept": "tech.computing.v13_ctrl_x",
+  "label": "Ctrl + X",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Sur Windows, quel raccourci « coupe » le texte sélectionné ?",
+  "explanation": "Le X ressemble à une paire de ciseaux. On colle ensuite avec Ctrl + V.",
+  "options": [
+   "Ctrl + X*",
+   "Ctrl + C",
+   "Ctrl + K",
+   "Ctrl + D"
+  ]
+ },
+ {
+  "key": "tec13-009",
+  "concept": "tech.computing.v13_ctrl_t",
+  "label": "Ctrl + T",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans un navigateur sur Windows, quel raccourci ouvre un nouvel onglet ?",
+  "explanation": "« T » pour « tab » (onglet). Ctrl + W le referme, et Ctrl + Maj + T rouvre le dernier onglet fermé.",
+  "options": [
+   "Ctrl + T*",
+   "Ctrl + N",
+   "Ctrl + O",
+   "Ctrl + W"
+  ]
+ },
+ {
+  "key": "tec13-010",
+  "concept": "tech.computing.v13_newsletter",
+  "label": "La newsletter",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce qu'une « newsletter » ?",
+  "explanation": "On s'y abonne sur un site ; un lien en bas permet toujours de se désabonner.",
+  "options": [
+   "Une lettre d'information envoyée régulièrement par e-mail*",
+   "Un journal papier",
+   "Un mot de passe",
+   "Une alerte de sécurité"
+  ]
+ },
+ {
+  "key": "tec13-011",
+  "concept": "tech.computing.v13_cc_mail",
+  "label": "CC",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans un e-mail, que veut dire « CC » ?",
+  "explanation": "« Copie carbone », un souvenir du papier carbone qui servait à faire des doubles à la machine à écrire.",
+  "options": [
+   "Envoyer une copie à d'autres personnes*",
+   "Courrier confidentiel",
+   "Corriger le contenu",
+   "Confirmation de commande"
+  ]
+ },
+ {
+  "key": "tec13-012",
+  "concept": "tech.computing.v13_cci_mail",
+  "label": "CCI",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans un e-mail, que permet la case « CCI » ?",
+  "explanation": "« Copie carbone invisible ». Pratique pour écrire à beaucoup de monde sans dévoiler toutes les adresses.",
+  "options": [
+   "Envoyer une copie sans que les autres voient cette adresse*",
+   "Joindre une image",
+   "Programmer l'envoi",
+   "Chiffrer le message"
+  ]
+ },
+ {
+  "key": "tec13-013",
+  "concept": "tech.computing.v13_story",
+  "label": "La story",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'une « story » sur Instagram ou Snapchat ?",
+  "explanation": "Le format a été inventé par Snapchat, puis repris par Instagram en 2016.",
+  "options": [
+   "Une publication qui disparaît au bout de 24 heures*",
+   "Un long article",
+   "Une vidéo de plus d'une heure",
+   "Un message privé"
+  ]
+ },
+ {
+  "key": "tec13-014",
+  "concept": "tech.computing.v13_podcast",
+  "label": "Le podcast",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce qu'un podcast ?",
+  "explanation": "Le mot mélange « iPod » et « broadcast » (diffusion).",
+  "options": [
+   "Une émission audio à écouter quand on veut*",
+   "Une chaîne de télé",
+   "Un jeu vidéo",
+   "Un type d'écouteurs"
+  ]
+ },
+ {
+  "key": "tec13-015",
+  "concept": "tech.computing.v13_tuto",
+  "label": "Le tuto",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qu'est-ce qu'un « tuto » ?",
+  "explanation": "Abréviation de « tutoriel ». YouTube en est rempli, du bricolage à la cuisine.",
+  "options": [
+   "Une vidéo ou un guide qui explique comment faire quelque chose*",
+   "Un petit programme gratuit",
+   "Un message d'erreur",
+   "Un réseau social"
+  ]
+ },
+ {
+  "key": "tec13-016",
+  "concept": "tech.computing.v13_debit",
+  "label": "Le débit",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "En quelle unité mesure-t-on le plus souvent la vitesse d'une connexion Internet ?",
+  "explanation": "Attention : un mégabit, c'est 8 fois moins qu'un mégaoctet.",
+  "options": [
+   "En mégabits par seconde (Mb/s)*",
+   "En gigaoctets",
+   "En hertz",
+   "En pixels"
+  ]
+ },
+ {
+  "key": "tec13-017",
+  "concept": "tech.computing.v13_gestionnaire_mdp",
+  "label": "Gestionnaire de mots de passe",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "À quoi sert un gestionnaire de mots de passe ?",
+  "explanation": "On ne retient plus qu'un seul mot de passe, celui du gestionnaire.",
+  "options": [
+   "À garder un mot de passe différent et solide pour chaque site*",
+   "À partager ses mots de passe sur les réseaux",
+   "À supprimer ses comptes",
+   "À accélérer Internet"
+  ]
+ },
+ {
+  "key": "tec13-018",
+  "concept": "tech.computing.v13_meme_mdp",
+  "label": "Les mots de passe",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Il vaut mieux utiliser le même mot de passe partout pour ne pas l'oublier.",
+  "explanation": "Faux : si un site se fait pirater, tous tes comptes deviennent accessibles. Un mot de passe différent par site, c'est la règle.",
+  "answer": false
+ },
+ {
+  "key": "tec13-019",
+  "concept": "tech.computing.v13_https_chiffre",
+  "label": "HTTPS",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Quand l'adresse d'un site commence par « https », les échanges avec ton navigateur sont chiffrés.",
+  "explanation": "Vrai : personne entre toi et le site ne peut lire ce que tu envoies. Mais cela ne prouve pas que le site soit honnête.",
+  "answer": true
+ },
+ {
+  "key": "tec13-020",
+  "concept": "tech.computing.v13_navigation_privee",
+  "label": "Navigation privée",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "La navigation privée rend complètement anonyme sur Internet.",
+  "explanation": "Faux : elle évite seulement de garder l'historique et les cookies sur ton appareil. Ton fournisseur d'accès et les sites te voient toujours.",
+  "answer": false
+ },
+ {
+  "key": "tec13-021",
+  "concept": "tech.computing.v13_realite_virtuelle",
+  "label": "Réalité virtuelle",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce que la réalité virtuelle ?",
+  "explanation": "On tourne la tête, et le décor tourne avec. Certains en ont le mal de mer !",
+  "options": [
+   "Un monde en 3D qu'on voit avec un casque qui suit ses mouvements*",
+   "Une photo retouchée",
+   "Un film en noir et blanc",
+   "Une appli de météo"
+  ]
+ },
+ {
+  "key": "tec13-022",
+  "concept": "tech.computing.v13_realite_augmentee",
+  "label": "Réalité augmentée",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce que la réalité augmentée ?",
+  "explanation": "Comme dans Pokémon Go, où les créatures apparaissent dans la rue, ou les filtres sur les visages.",
+  "options": [
+   "Des images ajoutées par-dessus le monde réel, vu à travers l'écran*",
+   "Une télé plus grande",
+   "Un son plus fort",
+   "Une réalité sans écran"
+  ]
+ },
+ {
+  "key": "tec13-023",
+  "concept": "tech.computing.v13_esport",
+  "label": "L'e-sport",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce que l'e-sport ?",
+  "explanation": "Certains tournois remplissent des stades et rapportent des millions aux joueurs.",
+  "options": [
+   "Des compétitions de jeux vidéo*",
+   "Du sport en ligne avec un coach",
+   "Une marque de vêtements",
+   "Du sport électrique"
+  ]
+ },
+ {
+  "key": "tec13-024",
+  "concept": "tech.computing.v13_twitch",
+  "label": "Twitch",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Sur quelle plateforme regarde-t-on surtout des « streamers » jouer en direct ?",
+  "explanation": "Les spectateurs discutent en direct dans le « chat » pendant que le streamer joue.",
+  "options": [
+   "Twitch*",
+   "LinkedIn",
+   "Pinterest",
+   "Deezer"
+  ]
+ },
+ {
+  "key": "tec13-025",
+  "concept": "tech.computing.v13_zevent",
+  "label": "Le ZEvent",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel streamer français a créé le ZEvent, qui récolte chaque année des millions d'euros pour des associations ?",
+  "explanation": "Des dizaines de streamers jouent en direct pendant tout un week-end au profit d'une cause.",
+  "options": [
+   "ZeratoR*",
+   "Squeezie",
+   "Cyprien",
+   "Norman"
+  ]
+ },
+ {
+  "key": "tec13-026",
+  "concept": "tech.computing.v13_extension",
+  "label": "Extension",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'une « extension » de navigateur ?",
+  "explanation": "Par exemple un bloqueur de pubs, un traducteur ou un gestionnaire de mots de passe.",
+  "options": [
+   "Un petit module qui ajoute une fonction au navigateur*",
+   "Une rallonge électrique",
+   "Un écran supplémentaire",
+   "Une adresse mail en plus"
+  ]
+ },
+ {
+  "key": "tec13-027",
+  "concept": "tech.computing.v13_qwant",
+  "label": "Qwant",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Lequel de ces moteurs de recherche est français ?",
+  "explanation": "Lancé en 2013, il se veut respectueux de la vie privée. Ecosia, qui plante des arbres, est allemand.",
+  "options": [
+   "Qwant*",
+   "Bing",
+   "DuckDuckGo",
+   "Ecosia"
+  ]
+ },
+ {
+  "key": "tec13-028",
+  "concept": "tech.computing.v13_franceconnect",
+  "label": "FranceConnect",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "À quoi sert le bouton FranceConnect sur les sites publics ?",
+  "explanation": "Un seul identifiant pour des centaines de services publics en ligne.",
+  "options": [
+   "À se connecter avec un compte qu'on a déjà, comme celui des impôts ou d'Ameli*",
+   "À payer ses amendes",
+   "À appeler un conseiller",
+   "À changer d'opérateur"
+  ]
+ },
+ {
+  "key": "tec13-029",
+  "concept": "tech.computing.v13_impots_gouv",
+  "label": "Les impôts en ligne",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Sur quel site déclare-t-on ses revenus en ligne, en France ?",
+  "explanation": "La déclaration en ligne est devenue la règle pour presque tout le monde.",
+  "options": [
+   "impots.gouv.fr*",
+   "service-public.fr",
+   "ameli.fr",
+   "caf.fr"
+  ]
+ },
+ {
+  "key": "tec13-030",
+  "concept": "tech.computing.v13_rgpd",
+  "label": "RGPD",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que veut dire « RGPD » ?",
+  "explanation": "Une loi européenne de 2018. C'est elle qui fait apparaître les bandeaux « cookies » sur les sites.",
+  "options": [
+   "Règlement général sur la protection des données*",
+   "Réseau général des postes de données",
+   "Registre gratuit des pages de discussion",
+   "Règle générale du paiement digital"
+  ]
+ },
+ {
+  "key": "tec13-031",
+  "concept": "tech.computing.v13_cnil",
+  "label": "La CNIL",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le rôle de la CNIL, en France ?",
+  "explanation": "La Commission nationale de l'informatique et des libertés, créée en 1978. Elle peut infliger de grosses amendes.",
+  "options": [
+   "Protéger les données personnelles des citoyens*",
+   "Contrôler la vitesse d'Internet",
+   "Distribuer les numéros de téléphone",
+   "Fabriquer les cartes d'identité"
+  ]
+ },
+ {
+  "key": "tec13-032",
+  "concept": "tech.computing.v13_fake_news",
+  "label": "Fake news",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qu'est-ce qu'une « fake news » ?",
+  "explanation": "Avant de partager, on vérifie la source. En français, on dit aussi « infox ».",
+  "options": [
+   "Une fausse information présentée comme vraie*",
+   "Une information très récente",
+   "Un journal satirique officiel",
+   "Une vidéo en direct"
+  ]
+ },
+ {
+  "key": "tec13-033",
+  "concept": "tech.computing.v13_irl",
+  "label": "IRL",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Sur Internet, que veut dire « IRL » ?",
+  "explanation": "« In real life », par opposition à ce qui se passe en ligne.",
+  "options": [
+   "Dans la vraie vie*",
+   "Je rigole",
+   "Ici, rien de louche",
+   "Internet en retard"
+  ]
+ },
+ {
+  "key": "tec13-034",
+  "concept": "tech.computing.v13_faq",
+  "label": "FAQ",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur un site, que veut dire « FAQ » ?",
+  "explanation": "En anglais, « Frequently Asked Questions » : les questions qu'on pose souvent.",
+  "options": [
+   "Foire aux questions*",
+   "Fiche d'aide rapide",
+   "Fichier à quitter",
+   "Formulaire à questions"
+  ]
+ },
+ {
+  "key": "tec13-035",
+  "concept": "tech.computing.v13_usb_u",
+  "label": "USB",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que veut dire le « U » de USB ?",
+  "explanation": "« Universal Serial Bus », créé en 1996 pour remplacer une foule de prises différentes.",
+  "options": [
+   "Universal (universel)*",
+   "Unique",
+   "Ultra",
+   "Utile"
+  ]
+ },
+ {
+  "key": "tec13-036",
+  "concept": "tech.computing.v13_usb_c_iphone",
+  "label": "L'USB-C",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle prise a remplacé le Lightning sur les iPhone, à partir de l'iPhone 15 ?",
+  "explanation": "Une loi européenne impose désormais le même chargeur pour presque tous les appareils.",
+  "options": [
+   "L'USB-C*",
+   "Le micro-USB",
+   "Le jack",
+   "Le HDMI"
+  ]
+ },
+ {
+  "key": "tec13-037",
+  "concept": "tech.computing.v13_go_capacite",
+  "label": "Les Go",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « 128 Go » sur la fiche d'un téléphone ?",
+  "explanation": "La place pour les photos, les vidéos et les applications.",
+  "options": [
+   "128 gigaoctets de stockage*",
+   "128 grammes",
+   "128 heures d'autonomie",
+   "128 photos maximum"
+  ]
+ },
+ {
+  "key": "tec13-038",
+  "concept": "tech.computing.v13_pin_cb",
+  "label": "Le code de la carte",
+  "type": "counter",
+  "difficulty": 15,
+  "prompt": "Combien de chiffres compte le code secret d'une carte bancaire, en France ?",
+  "explanation": "Quatre chiffres. Après trois erreurs, la carte se bloque.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1,
+  "unit": "chiffres"
+ },
+ {
+  "key": "tec13-039",
+  "concept": "tech.computing.v13_rangee_azerty",
+  "label": "La rangée AZERTY",
+  "type": "counter",
+  "difficulty": 45,
+  "prompt": "Combien de lettres compte la rangée du haut d'un clavier AZERTY, de A à P ?",
+  "explanation": "A, Z, E, R, T, Y, U, I, O, P : dix lettres. Le nom du clavier vient de ses six premières.",
+  "answer": 10,
+  "tolerance": 0,
+  "min": 4,
+  "max": 15,
+  "start": 4,
+  "unit": "lettres"
+ },
+ {
+  "key": "tec13-040",
+  "concept": "tech.computing.v13_webcam",
+  "label": "La webcam",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Petite caméra pour les appels vidéo sur ordinateur.",
+  "explanation": "Beaucoup de gens mettent un cache dessus, par prudence.",
+  "word": "WEBCAM",
+  "display": "Webcam"
+ },
+ {
+  "key": "tec13-041",
+  "concept": "tech.computing.v13_chargeur",
+  "label": "Le chargeur",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "On le branche pour remplir la batterie du téléphone.",
+  "explanation": "Depuis 2024, un seul chargeur USB-C pour (presque) tous les appareils en Europe.",
+  "word": "CHARGEUR",
+  "display": "Chargeur"
+ },
+ {
+  "key": "tec13-042",
+  "concept": "tech.computing.v13_ecouteurs",
+  "label": "Les écouteurs",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "On les met dans les oreilles pour écouter de la musique.",
+  "explanation": "Avec ou sans fil, les plus courants se relient en Bluetooth.",
+  "word": "ECOUTEURS",
+  "display": "Écouteurs"
+ },
+ {
+  "key": "tec13-043",
+  "concept": "tech.computing.v13_imprimante",
+  "label": "L'imprimante",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Elle met sur papier ce qui est à l'écran.",
+  "explanation": "Jet d'encre ou laser. Les imprimantes 3D, elles, fabriquent des objets.",
+  "word": "IMPRIMANTE",
+  "display": "Imprimante"
+ },
+ {
+  "key": "tec13-044",
+  "concept": "tech.computing.v13_reseau_messagerie",
+  "label": "Réseau social ou messagerie ?",
+  "type": "sort",
+  "difficulty": 30,
+  "prompt": "Plutôt un réseau social, ou une messagerie ?",
+  "explanation": "Sur un réseau social, on publie pour beaucoup de monde ; sur une messagerie, on écrit surtout à des contacts.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Réseau social"
+   },
+   {
+    "label": "Messagerie"
+   }
+  ],
+  "items": [
+   [
+    "Instagram",
+    0
+   ],
+   [
+    "TikTok",
+    0
+   ],
+   [
+    "X (Twitter)",
+    0
+   ],
+   [
+    "Facebook",
+    0
+   ],
+   [
+    "WhatsApp",
+    1
+   ],
+   [
+    "Signal",
+    1
+   ],
+   [
+    "Telegram",
+    1
+   ],
+   [
+    "iMessage",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "tec13-045",
+  "concept": "tech.computing.v13_navigateur_moteur",
+  "label": "Navigateur ou moteur de recherche ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Un navigateur, ou un moteur de recherche ?",
+  "explanation": "Le navigateur est le logiciel qui affiche les pages ; le moteur de recherche est un site qui trouve les pages.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Navigateur"
+   },
+   {
+    "label": "Moteur de recherche"
+   }
+  ],
+  "items": [
+   [
+    "Chrome",
+    0
+   ],
+   [
+    "Firefox",
+    0
+   ],
+   [
+    "Safari",
+    0
+   ],
+   [
+    "Edge",
+    0
+   ],
+   [
+    "Google",
+    1
+   ],
+   [
+    "Bing",
+    1
+   ],
+   [
+    "Qwant",
+    1
+   ],
+   [
+    "DuckDuckGo",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "tec13-046",
+  "concept": "tech.computing.v13_applis_usages",
+  "label": "Applis du quotidien",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque application à son usage.",
+  "explanation": "Doctolib est française, Vinted lituanienne, Waze israélienne et Duolingo américaine.",
+  "pairs": [
+   [
+    "Waze",
+    "Trouver son chemin en voiture"
+   ],
+   [
+    "Duolingo",
+    "Apprendre une langue"
+   ],
+   [
+    "Doctolib",
+    "Prendre rendez-vous chez le médecin"
+   ],
+   [
+    "Vinted",
+    "Vendre ses vêtements d'occasion"
+   ]
+  ]
+ },
+ {
+  "key": "tec13-047",
+  "concept": "tech.computing.v13_extensions_fichiers",
+  "label": "Extensions de fichiers",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque fin de nom de fichier à ce qu'il contient.",
+  "explanation": "Les lettres après le point s'appellent l'extension : elles disent quel logiciel ouvre le fichier.",
+  "pairs": [
+   [
+    ".mp3",
+    "De la musique"
+   ],
+   [
+    ".mp4",
+    "Une vidéo"
+   ],
+   [
+    ".docx",
+    "Un texte Word"
+   ],
+   [
+    ".xlsx",
+    "Un tableau Excel"
+   ]
+  ]
+ },
+ {
+  "key": "tec13-048",
+  "concept": "tech.computing.v13_stockage_ordre",
+  "label": "Supports de stockage",
+  "type": "ordering",
+  "difficulty": 35,
+  "prompt": "Classe ces supports de stockage, du plus ancien au plus récent.",
+  "explanation": "Cartes perforées (XIXe-XXe siècle), disquette (1971), CD-ROM (1985), clé USB (2000).",
+  "items": [
+   "La carte perforée",
+   "La disquette",
+   "Le CD-ROM",
+   "La clé USB"
+  ]
+ },
+ {
+  "key": "tec13-049",
+  "concept": "tech.computing.v13_full_hd",
+  "label": "Full HD",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de pixels compte une image « Full HD » ?",
+  "explanation": "Environ 2 millions de pixels. 3840 × 2160, c'est la 4K, quatre fois plus.",
+  "options": [
+   "1920 × 1080*",
+   "640 × 480",
+   "1280 × 720",
+   "3840 × 2160"
+  ]
+ },
+ {
+  "key": "tec13-050",
+  "concept": "tech.computing.v13_4k",
+  "label": "La 4K",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pour une télé, que veut dire « 4K » ?",
+  "explanation": "3840 pixels de large exactement, pour une image très nette.",
+  "options": [
+   "Une image d'environ 4 000 pixels de large*",
+   "Quatre écrans en un",
+   "Une télé de 4 kilos",
+   "Quatre chaînes en même temps"
+  ]
+ },
+ {
+  "key": "tec13-051",
+  "concept": "tech.computing.v13_windows95",
+  "label": "Windows 95",
+  "type": "timeline",
+  "difficulty": 15,
+  "prompt": "En quelle année est sorti Windows 95 ?",
+  "explanation": "En août 1995, avec le célèbre bouton « Démarrer ». Il a popularisé l'ordinateur dans les foyers.",
+  "answer": 1995,
+  "tolerance": 2,
+  "min": 1980,
+  "max": 2010
+ },
+ {
+  "key": "tec13-052",
+  "concept": "tech.computing.v13_minitel_annee",
+  "label": "Le Minitel",
+  "type": "timeline",
+  "difficulty": 45,
+  "prompt": "En quelle année le Minitel commence-t-il à être distribué partout en France ?",
+  "explanation": "À partir de 1982, prêté gratuitement par les PTT. Il a fermé en 2012.",
+  "answer": 1982,
+  "tolerance": 3,
+  "min": 1960,
+  "max": 2000
+ },
+ {
+  "key": "tec13-053",
+  "concept": "tech.computing.v13_whatsapp_annee",
+  "label": "WhatsApp",
+  "type": "timeline",
+  "difficulty": 45,
+  "prompt": "En quelle année l'application WhatsApp est-elle lancée ?",
+  "explanation": "En 2009, par deux anciens de Yahoo. Facebook l'a rachetée en 2014.",
+  "answer": 2009,
+  "tolerance": 2,
+  "min": 1995,
+  "max": 2020
+ },
+ {
+  "key": "tec13-054",
+  "concept": "tech.computing.v13_chatgpt_annee",
+  "label": "ChatGPT",
+  "type": "timeline",
+  "difficulty": 20,
+  "prompt": "En quelle année ChatGPT est-il ouvert au public ?",
+  "explanation": "Fin novembre 2022. Il a atteint 100 millions d'utilisateurs en deux mois, un record.",
+  "answer": 2022,
+  "tolerance": 1,
+  "min": 2010,
+  "max": 2025
+ },
+ {
+  "key": "tec13-055",
+  "concept": "tech.computing.v13_web_public",
+  "label": "Le Web pour tous",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année le CERN met-il le Web dans le domaine public, gratuit pour tous ?",
+  "explanation": "Le 30 avril 1993. Sans brevet, le Web a pu se répandre partout très vite.",
+  "answer": 1993,
+  "tolerance": 3,
+  "min": 1975,
+  "max": 2005
+ },
+ {
+  "key": "tec13-056",
+  "concept": "tech.computing.v13_portable_80",
+  "label": "L'ordinateur portable",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les premiers ordinateurs portables ont été vendus dans les années 1980.",
+  "explanation": "Vrai : l'Osborne 1, en 1981, pesait 11 kilos et avait un écran de 5 pouces. On parlait plutôt d'ordinateur « transportable ».",
+  "answer": true
+ },
+ {
+  "key": "tec13-057",
+  "concept": "tech.computing.v13_recharge_sans_fil",
+  "label": "La recharge sans fil",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "On peut recharger certains téléphones simplement en les posant sur un socle.",
+  "explanation": "Vrai : c'est la recharge par induction. Le courant passe sans fil grâce à un champ magnétique.",
+  "answer": true
+ },
+ {
+  "key": "tec13-058",
+  "concept": "tech.computing.v13_bluetooth_km",
+  "label": "Le Bluetooth",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Le Bluetooth fonctionne sur des centaines de kilomètres.",
+  "explanation": "Faux : en général une dizaine de mètres. C'est fait pour relier des appareils proches.",
+  "answer": false
+ },
+ {
+  "key": "tec13-059",
+  "concept": "tech.computing.v13_cle_usb_virus",
+  "label": "La clé USB",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Une clé USB trouvée par terre peut contenir un virus.",
+  "explanation": "Vrai : c'est même une ruse connue des pirates. Mieux vaut ne jamais brancher une clé inconnue.",
+  "answer": true
+ },
+ {
+  "key": "tec13-060",
+  "concept": "tech.computing.v13_eteindre_rallumer",
+  "label": "Éteindre et rallumer",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Éteindre puis rallumer un appareil règle souvent un petit bug.",
+  "explanation": "Vrai : la mémoire est vidée et les programmes repartent de zéro. C'est le premier conseil de tout dépanneur !",
+  "answer": true
+ },
+ {
+  "key": "tec13-061",
+  "concept": "tech.computing.v13_musk",
+  "label": "Elon Musk",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui dirige à la fois Tesla et SpaceX ?",
+  "explanation": "Il a aussi racheté Twitter en 2022, devenu X.",
+  "options": [
+   "Elon Musk*",
+   "Jeff Bezos",
+   "Mark Zuckerberg",
+   "Tim Cook"
+  ]
+ },
+ {
+  "key": "tec13-062",
+  "concept": "tech.computing.v13_xavier_niel",
+  "label": "Xavier Niel",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui est Xavier Niel ?",
+  "explanation": "Il a aussi créé l'école de code 42, gratuite et sans professeurs.",
+  "options": [
+   "Le fondateur de l'opérateur Free*",
+   "Le patron d'Orange",
+   "L'inventeur du Minitel",
+   "Le créateur de Deezer"
+  ]
+ },
+ {
+  "key": "tec13-063",
+  "concept": "tech.computing.v13_freebox",
+  "label": "La Freebox",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel opérateur français a lancé la « Freebox » ?",
+  "explanation": "En 2002, avec Internet, le téléphone et la télé dans une seule box.",
+  "options": [
+   "Free*",
+   "Orange",
+   "SFR",
+   "Bouygues Telecom"
+  ]
+ },
+ {
+  "key": "tec13-064",
+  "concept": "tech.computing.v13_livebox",
+  "label": "La Livebox",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle la box Internet d'Orange ?",
+  "explanation": "La Bbox est celle de Bouygues Telecom.",
+  "options": [
+   "La Livebox*",
+   "La Bbox",
+   "La Freebox",
+   "La Box+"
+  ]
+ },
+ {
+  "key": "tec13-065",
+  "concept": "tech.computing.v13_france_telecom",
+  "label": "France Télécom",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel était l'ancien nom de l'opérateur Orange, en France ?",
+  "explanation": "L'entreprise a pris le nom de sa marque Orange en 2013.",
+  "options": [
+   "France Télécom*",
+   "Les PTT",
+   "Télé France",
+   "Minitel SA"
+  ]
+ },
+ {
+  "key": "tec13-066",
+  "concept": "tech.computing.v13_gemini",
+  "label": "Gemini",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle l'intelligence artificielle de Google, concurrente de ChatGPT ?",
+  "explanation": "Siri est l'assistant d'Apple, Alexa celui d'Amazon, Cortana celui de Microsoft.",
+  "options": [
+   "Gemini*",
+   "Siri",
+   "Alexa",
+   "Cortana"
+  ]
+ },
+ {
+  "key": "tec13-067",
+  "concept": "tech.computing.v13_mistral_ai",
+  "label": "Mistral AI",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle entreprise française d'intelligence artificielle a créé l'assistant « Le Chat » ?",
+  "explanation": "Fondée à Paris en 2023, elle est vite devenue l'une des start-up d'IA les plus connues d'Europe.",
+  "options": [
+   "Mistral AI*",
+   "Dassault Systèmes",
+   "Ubisoft",
+   "Orange"
+  ]
+ },
+ {
+  "key": "tec13-068",
+  "concept": "tech.computing.v13_siri",
+  "label": "Siri",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle l'assistant vocal d'Apple ?",
+  "explanation": "On l'appelle en disant « Dis Siri ». Bixby est celui de Samsung ; Jarvis, celui d'Iron Man !",
+  "options": [
+   "Siri*",
+   "Alexa",
+   "Bixby",
+   "Jarvis"
+  ]
+ },
+ {
+  "key": "tec13-069",
+  "concept": "tech.inventions.v13_becquerel",
+  "label": "La radioactivité",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel physicien français a découvert la radioactivité en 1896 ?",
+  "explanation": "Il a partagé le prix Nobel de 1903 avec Pierre et Marie Curie. L'unité de radioactivité porte son nom.",
+  "options": [
+   "Henri Becquerel*",
+   "Pierre Curie",
+   "André-Marie Ampère",
+   "Louis de Broglie"
+  ]
+ },
+ {
+  "key": "tec13-070",
+  "concept": "tech.inventions.v13_curie",
+  "label": "Pierre et Marie Curie",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quels éléments chimiques Pierre et Marie Curie ont-ils découverts ?",
+  "explanation": "Le polonium doit son nom à la Pologne, le pays natal de Marie Curie.",
+  "options": [
+   "Le polonium et le radium*",
+   "L'uranium et le plutonium",
+   "L'oxygène et l'azote",
+   "Le néon et l'argon"
+  ]
+ },
+ {
+  "key": "tec13-071",
+  "concept": "tech.inventions.v13_louis_braille",
+  "label": "Louis Braille",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qui a inventé l'écriture en points en relief utilisée par les personnes aveugles ?",
+  "explanation": "Devenu aveugle enfant, il a mis au point son alphabet à 15 ans, vers 1824.",
+  "options": [
+   "Louis Braille*",
+   "Valentin Haüy",
+   "Louis Pasteur",
+   "Charles Barbier"
+  ]
+ },
+ {
+  "key": "tec13-072",
+  "concept": "tech.inventions.v13_cugnot",
+  "label": "Le fardier de Cugnot",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a construit en 1769 le premier véhicule qui avançait tout seul, grâce à la vapeur ?",
+  "explanation": "Son « fardier » devait tirer des canons. On raconte qu'il a fini contre un mur lors d'un essai.",
+  "options": [
+   "Nicolas-Joseph Cugnot*",
+   "James Watt",
+   "Denis Papin",
+   "Karl Benz"
+  ]
+ },
+ {
+  "key": "tec13-073",
+  "concept": "tech.inventions.v13_diesel",
+  "label": "Le moteur Diesel",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui a inventé le moteur diesel, à la fin du XIXe siècle ?",
+  "explanation": "Un ingénieur allemand, né à Paris en 1858. Le moteur porte son nom.",
+  "options": [
+   "Rudolf Diesel*",
+   "Gottlieb Daimler",
+   "Henry Ford",
+   "Étienne Lenoir"
+  ]
+ },
+ {
+  "key": "tec13-074",
+  "concept": "tech.inventions.v13_fleming",
+  "label": "La pénicilline",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a découvert la pénicilline, le premier antibiotique, en 1928 ?",
+  "explanation": "Par hasard : une moisissure avait poussé dans une de ses boîtes de culture et tuait les bactéries.",
+  "options": [
+   "Alexander Fleming*",
+   "Louis Pasteur",
+   "Robert Koch",
+   "Edward Jenner"
+  ]
+ },
+ {
+  "key": "tec13-075",
+  "concept": "tech.inventions.v13_eiffel",
+  "label": "Gustave Eiffel",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel ingénieur a construit la tour la plus célèbre de Paris, pour l'Exposition universelle de 1889 ?",
+  "explanation": "Son entreprise a aussi construit la structure de la statue de la Liberté.",
+  "options": [
+   "Gustave Eiffel*",
+   "Georges Haussmann",
+   "Le Corbusier",
+   "Charles Garnier"
+  ]
+ },
+ {
+  "key": "tec13-076",
+  "concept": "tech.inventions.v13_hauteur_eiffel",
+  "label": "La tour Eiffel",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle hauteur mesure la tour Eiffel, antennes comprises, environ ?",
+  "explanation": "Elle a été le plus haut monument du monde pendant 41 ans. Elle grandit de quelques centimètres en été, à cause de la chaleur.",
+  "options": [
+   "330 mètres*",
+   "120 mètres",
+   "210 mètres",
+   "450 mètres"
+  ]
+ },
+ {
+  "key": "tec13-077",
+  "concept": "tech.inventions.v13_eiffel_demontee",
+  "label": "La tour Eiffel",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "La tour Eiffel devait être démontée quelques années après sa construction.",
+  "explanation": "Vrai : elle était autorisée pour 20 ans. Elle a été sauvée notamment parce qu'elle servait d'antenne pour la radio.",
+  "answer": true
+ },
+ {
+  "key": "tec13-078",
+  "concept": "tech.inventions.v13_millau",
+  "label": "Le viaduc de Millau",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel pont, l'un des plus hauts du monde, traverse la vallée du Tarn ?",
+  "explanation": "Inauguré en 2004. Avec ses mâts, son point le plus haut dépasse la tour Eiffel.",
+  "options": [
+   "Le viaduc de Millau*",
+   "Le pont de Normandie",
+   "Le pont du Gard",
+   "Le pont de l'île de Ré"
+  ]
+ },
+ {
+  "key": "tec13-079",
+  "concept": "tech.inventions.v13_concorde",
+  "label": "Le Concorde",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel avion de ligne franco-britannique volait plus vite que le son ?",
+  "explanation": "Paris-New York en 3 h 30 environ. Il a cessé de voler en 2003.",
+  "options": [
+   "Le Concorde*",
+   "L'Airbus A380",
+   "La Caravelle",
+   "Le Boeing 747"
+  ]
+ },
+ {
+  "key": "tec13-080",
+  "concept": "tech.inventions.v13_a380_toulouse",
+  "label": "L'A380",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Où était assemblé l'Airbus A380, le plus gros avion de ligne du monde ?",
+  "explanation": "Il pouvait transporter plus de 800 passagers. Sa production s'est arrêtée en 2021.",
+  "options": [
+   "À Toulouse*",
+   "À Paris",
+   "À Seattle",
+   "À Marseille"
+  ]
+ },
+ {
+  "key": "tec13-081",
+  "concept": "tech.inventions.v13_ariane",
+  "label": "Ariane",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle la fusée européenne qui décolle de Guyane ?",
+  "explanation": "Ariane 6 a fait son premier vol en 2024. Falcon est la fusée de SpaceX.",
+  "options": [
+   "Ariane*",
+   "Saturn",
+   "Soyouz",
+   "Falcon"
+  ]
+ },
+ {
+  "key": "tec13-082",
+  "concept": "tech.inventions.v13_kourou",
+  "label": "Kourou",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où se trouve le Centre spatial guyanais, d'où partent les fusées européennes ?",
+  "explanation": "Près de l'équateur : la rotation de la Terre y donne un petit élan aux fusées.",
+  "options": [
+   "À Kourou*",
+   "À Cayenne",
+   "À Toulouse",
+   "À Pointe-à-Pitre"
+  ]
+ },
+ {
+  "key": "tec13-083",
+  "concept": "tech.inventions.v13_pesquet",
+  "label": "Thomas Pesquet",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel astronaute français a séjourné deux fois dans la Station spatiale internationale (2016-2017 et 2021) ?",
+  "explanation": "Il a partagé des centaines de photos de la Terre vue de l'espace.",
+  "options": [
+   "Thomas Pesquet*",
+   "Jean-Loup Chrétien",
+   "Claudie Haigneré",
+   "Patrick Baudry"
+  ]
+ },
+ {
+  "key": "tec13-084",
+  "concept": "tech.inventions.v13_spoutnik",
+  "label": "Spoutnik",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelait le premier satellite artificiel, lancé par l'URSS en 1957 ?",
+  "explanation": "Une boule de 58 cm qui faisait « bip-bip ». Elle a lancé la course à l'espace.",
+  "options": [
+   "Spoutnik*",
+   "Apollo",
+   "Explorer",
+   "Vostok"
+  ]
+ },
+ {
+  "key": "tec13-085",
+  "concept": "tech.inventions.v13_armstrong",
+  "label": "Neil Armstrong",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui est le premier homme à avoir marché sur la Lune ?",
+  "explanation": "Le 21 juillet 1969 (heure française), lors de la mission Apollo 11. Buzz Aldrin l'a suivi quelques minutes après.",
+  "options": [
+   "Neil Armstrong*",
+   "Buzz Aldrin",
+   "Youri Gagarine",
+   "Louis Armstrong"
+  ]
+ },
+ {
+  "key": "tec13-086",
+  "concept": "tech.inventions.v13_petit_pas",
+  "label": "Un petit pas",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre la phrase de Neil Armstrong en posant le pied sur la Lune.",
+  "explanation": "« That's one small step for man, one giant leap for mankind. » Plus de 600 millions de personnes ont regardé la scène à la télé.",
+  "answer": "Un petit pas pour l'homme, un bond de géant pour l'humanité",
+  "words": [
+   "Un",
+   "petit",
+   "pas",
+   "pour",
+   "l'homme,",
+   "un",
+   "bond",
+   "de",
+   "géant",
+   "pour",
+   "l'humanité"
+  ]
+ },
+ {
+  "key": "tec13-087",
+  "concept": "tech.inventions.v13_lune_annee",
+  "label": "Premiers pas sur la Lune",
+  "type": "timeline",
+  "difficulty": 20,
+  "prompt": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+  "explanation": "En juillet 1969. Douze astronautes ont marché sur la Lune, tous entre 1969 et 1972.",
+  "answer": 1969,
+  "tolerance": 2,
+  "min": 1950,
+  "max": 1990
+ },
+ {
+  "key": "tec13-088",
+  "concept": "tech.inventions.v13_james_webb",
+  "label": "James Webb",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel télescope spatial, lancé en décembre 2021, observe l'univers en infrarouge ?",
+  "explanation": "Son miroir doré de 6,5 m a dû se déplier dans l'espace, comme un origami. Une fusée Ariane 5 l'a lancé depuis Kourou.",
+  "options": [
+   "Le télescope James Webb*",
+   "Le télescope Hubble",
+   "Le télescope Kepler",
+   "Le télescope Galilée"
+  ]
+ },
+ {
+  "key": "tec13-089",
+  "concept": "tech.inventions.v13_iss",
+  "label": "L'ISS",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce que l'ISS ?",
+  "explanation": "Elle fait le tour de la Terre en environ 90 minutes, à 400 km d'altitude.",
+  "options": [
+   "La Station spatiale internationale*",
+   "Un satellite de télévision",
+   "Une fusée russe",
+   "Un télescope géant"
+  ]
+ },
+ {
+  "key": "tec13-090",
+  "concept": "tech.inventions.v13_eolienne",
+  "label": "L'éolienne",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que produit une éolienne ?",
+  "explanation": "Le vent fait tourner les pales, qui entraînent un alternateur.",
+  "options": [
+   "De l'électricité grâce au vent*",
+   "De l'eau potable",
+   "De la chaleur grâce au soleil",
+   "Du gaz"
+  ]
+ },
+ {
+  "key": "tec13-091",
+  "concept": "tech.inventions.v13_photovoltaique",
+  "label": "Le panneau solaire",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que fait un panneau solaire photovoltaïque ?",
+  "explanation": "Les panneaux qui chauffent de l'eau s'appellent des panneaux « thermiques ».",
+  "options": [
+   "Il transforme la lumière du soleil en électricité*",
+   "Il chauffe l'eau de la piscine",
+   "Il produit du vent",
+   "Il stocke la pluie"
+  ]
+ },
+ {
+  "key": "tec13-092",
+  "concept": "tech.inventions.v13_lithium",
+  "label": "Les batteries",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel métal se trouve au cœur de la plupart des batteries de téléphones et de voitures électriques ?",
+  "explanation": "Les batteries lithium-ion sont légères et se rechargent des centaines de fois. Leurs inventeurs ont reçu le prix Nobel en 2019.",
+  "options": [
+   "Le lithium*",
+   "Le plomb",
+   "L'or",
+   "Le fer"
+  ]
+ },
+ {
+  "key": "tec13-093",
+  "concept": "tech.inventions.v13_eurostar",
+  "label": "L'Eurostar",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel train relie Paris à Londres en passant sous la Manche ?",
+  "explanation": "Depuis 1994, en environ 2 h 15. Le Thalys allait vers la Belgique et les Pays-Bas.",
+  "options": [
+   "L'Eurostar*",
+   "Le Thalys",
+   "Le TER",
+   "L'Orient-Express"
+  ]
+ },
+ {
+  "key": "tec13-094",
+  "concept": "tech.inventions.v13_lille_val",
+  "label": "Le métro automatique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle ville française a inauguré en 1983 un métro sans conducteur, le VAL, une première pour une grande ville ?",
+  "explanation": "Le VAL, pour « véhicule automatique léger ». Toulouse et Rennes ont repris le système ensuite.",
+  "options": [
+   "Lille*",
+   "Paris",
+   "Lyon",
+   "Toulouse"
+  ]
+ },
+ {
+  "key": "tec13-095",
+  "concept": "tech.inventions.v13_minitel_2012",
+  "label": "Le Minitel",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le Minitel a fonctionné en France jusqu'en 2012.",
+  "explanation": "Vrai : le service a été arrêté le 30 juin 2012. Il restait encore des centaines de milliers d'utilisateurs.",
+  "answer": true
+ },
+ {
+  "key": "tec13-096",
+  "concept": "tech.inventions.v13_prise_230",
+  "label": "La prise électrique",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "L'électricité qui arrive dans les prises en France est en 230 volts.",
+  "explanation": "Vrai : 230 volts en Europe, contre 120 volts aux États-Unis. Les prises n'y ont d'ailleurs pas la même forme.",
+  "answer": true
+ },
+ {
+  "key": "tec13-097",
+  "concept": "tech.inventions.v13_jamais_contente",
+  "label": "La Jamais Contente",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "La première voiture à dépasser 100 km/h, en 1899, était électrique.",
+  "explanation": "Vrai : elle s'appelait « La Jamais Contente », pilotée par le Belge Camille Jenatzy, près de Paris.",
+  "answer": true
+ },
+ {
+  "key": "tec13-098",
+  "concept": "tech.inventions.v13_communication_ordre",
+  "label": "Moyens de communication",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Classe ces moyens de communication du plus ancien au plus récent.",
+  "explanation": "Télégraphe optique de Chappe (1794), téléphone (1876), Minitel (1982), premier SMS (1992).",
+  "items": [
+   "Le télégraphe Chappe",
+   "Le téléphone",
+   "Le Minitel",
+   "Le SMS"
+  ]
+ },
+ {
+  "key": "tec13-099",
+  "concept": "tech.inventions.v13_espace_ordre",
+  "label": "La conquête spatiale",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces événements de la conquête spatiale du plus ancien au plus récent.",
+  "explanation": "Spoutnik (1957), Gagarine (1961), Apollo 11 (1969), première équipe à bord de l'ISS (2000).",
+  "items": [
+   "Lancement de Spoutnik",
+   "Premier homme dans l'espace (Gagarine)",
+   "Premiers pas sur la Lune",
+   "Premiers occupants de l'ISS"
+  ]
+ },
+ {
+  "key": "tec13-100",
+  "concept": "tech.inventions.v13_noms_francais",
+  "label": "Noms français célèbres",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque nom à ce qu'il désigne.",
+  "explanation": "Quatre fiertés de l'industrie française, construites avec des partenaires européens pour Ariane et Concorde.",
+  "pairs": [
+   [
+    "Ariane",
+    "Une fusée"
+   ],
+   [
+    "Rafale",
+    "Un avion de combat"
+   ],
+   [
+    "TGV",
+    "Un train"
+   ],
+   [
+    "Concorde",
+    "Un avion supersonique"
+   ]
+  ]
+ },
+ {
+  "key": "tec13-101",
+  "concept": "tech.inventions.v13_invention_fr",
+  "label": "Invention française ou non ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Cette invention est-elle française ?",
+  "explanation": "Braille, Lumière, Montgolfier et Moreno sont français. Le téléphone vient de Bell, l'ampoule d'Edison, l'imprimerie de Gutenberg, Internet des États-Unis.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Française"
+   },
+   {
+    "label": "Pas française"
+   }
+  ],
+  "items": [
+   [
+    "L'écriture braille",
+    0
+   ],
+   [
+    "Le cinématographe",
+    0
+   ],
+   [
+    "La montgolfière",
+    0
+   ],
+   [
+    "La carte à puce",
+    0
+   ],
+   [
+    "Le téléphone",
+    1
+   ],
+   [
+    "L'ampoule électrique",
+    1
+   ],
+   [
+    "L'imprimerie",
+    1
+   ],
+   [
+    "Internet",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "tec13-102",
+  "concept": "tech.inventions.v13_fusee",
+  "label": "La fusée",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Elle décolle de Kourou pour envoyer des satellites dans l'espace.",
+  "explanation": "Ariane est la fusée de l'Europe.",
+  "word": "FUSEE",
+  "display": "Fusée"
+ },
+ {
+  "key": "tec13-103",
+  "concept": "tech.inventions.v13_satellite",
+  "label": "Le satellite",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Il tourne autour de la Terre et transmet la télé, le GPS ou la météo.",
+  "explanation": "Plus de 10 000 satellites actifs tournent aujourd'hui autour de la Terre.",
+  "word": "SATELLITE",
+  "display": "Satellite"
+ },
+ {
+  "key": "tec13-104",
+  "concept": "tech.inventions.v13_eolienne_lettres",
+  "label": "L'éolienne",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Grand moulin moderne qui produit de l'électricité avec le vent.",
+  "explanation": "Le mot vient d'Éole, le dieu grec des vents.",
+  "word": "EOLIENNE",
+  "display": "Éolienne"
+ },
+ {
+  "key": "tec13-105",
+  "concept": "tech.inventions.v13_ascenseur",
+  "label": "L'ascenseur",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Il monte et descend les étages des immeubles.",
+  "explanation": "Grâce au frein de sécurité d'Elisha Otis, en 1852, on a pu construire des gratte-ciel.",
+  "word": "ASCENSEUR",
+  "display": "Ascenseur"
+ },
+ {
+  "key": "tec13-106",
+  "concept": "tech.inventions.v13_watson",
+  "label": "Le premier appel",
+  "type": "word_order",
+  "difficulty": 45,
+  "prompt": "Remets dans l'ordre les premiers mots prononcés au téléphone par Graham Bell, en 1876.",
+  "explanation": "Il appelait son assistant, qui se trouvait dans la pièce d'à côté.",
+  "answer": "Monsieur Watson, venez ici, je veux vous voir",
+  "words": [
+   "Monsieur",
+   "Watson,",
+   "venez",
+   "ici,",
+   "je",
+   "veux",
+   "vous",
+   "voir"
+  ]
+ },
+ {
+  "key": "tec13-107",
+  "concept": "tech.brands.v13_chanel_logo",
+  "label": "Chanel",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle maison de luxe française a pour logo deux C entrelacés ?",
+  "explanation": "Les initiales de Gabrielle « Coco » Chanel. Son parfum N° 5 date de 1921.",
+  "options": [
+   "Chanel*",
+   "Cartier",
+   "Céline",
+   "Courrèges"
+  ]
+ },
+ {
+  "key": "tec13-108",
+  "concept": "tech.brands.v13_lv",
+  "label": "Louis Vuitton",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle maison française est célèbre pour son monogramme « LV » sur ses sacs ?",
+  "explanation": "Louis Vuitton a commencé en fabriquant des malles de voyage, en 1854.",
+  "options": [
+   "Louis Vuitton*",
+   "Lancôme",
+   "Lacoste",
+   "Longchamp"
+  ]
+ },
+ {
+  "key": "tec13-109",
+  "concept": "tech.brands.v13_lvmh",
+  "label": "LVMH",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel groupe français est le numéro 1 mondial du luxe ?",
+  "explanation": "Moët Hennessy Louis Vuitton : champagne, cognac, mode, parfums, montres… Plus de 75 marques.",
+  "options": [
+   "LVMH*",
+   "Kering",
+   "L'Oréal",
+   "Hermès"
+  ]
+ },
+ {
+  "key": "tec13-110",
+  "concept": "tech.brands.v13_loreal_slogan",
+  "label": "L'Oréal",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle marque a pour slogan « Parce que vous le valez bien » ?",
+  "explanation": "Un slogan créé en 1971, traduit dans des dizaines de langues.",
+  "options": [
+   "L'Oréal*",
+   "Garnier",
+   "Nivea",
+   "Dior"
+  ]
+ },
+ {
+  "key": "tec13-111",
+  "concept": "tech.brands.v13_decathlon",
+  "label": "Decathlon",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle enseigne française de sport a créé la tente « 2 Seconds », qui se déplie toute seule ?",
+  "explanation": "Quechua est l'une des marques maison de Decathlon, née à Lille en 1976.",
+  "options": [
+   "Decathlon*",
+   "Intersport",
+   "Go Sport",
+   "Quechua Sport"
+  ]
+ },
+ {
+  "key": "tec13-112",
+  "concept": "tech.brands.v13_fnac",
+  "label": "La Fnac",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle enseigne vend livres, disques et électronique, et s'appelait au départ « Fédération nationale d'achats des cadres » ?",
+  "explanation": "Fondée en 1954 par deux anciens militants, pour vendre du matériel photo moins cher.",
+  "options": [
+   "La Fnac*",
+   "Darty",
+   "Boulanger",
+   "Cultura"
+  ]
+ },
+ {
+  "key": "tec13-113",
+  "concept": "tech.brands.v13_opinel",
+  "label": "Opinel",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle marque savoyarde fabrique des couteaux pliants au manche en bois, avec une bague qui tourne ?",
+  "explanation": "Depuis 1890. La virole, cette bague, bloque la lame. Laguiole est un village, pas une seule marque.",
+  "options": [
+   "Opinel*",
+   "Laguiole",
+   "Victorinox",
+   "Thiers"
+  ]
+ },
+ {
+  "key": "tec13-114",
+  "concept": "tech.brands.v13_bic_4_couleurs",
+  "label": "Le Bic 4 couleurs",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle marque a créé le stylo 4 couleurs, en 1970 ?",
+  "explanation": "Bleu, rouge, vert et noir dans un seul stylo. Bic vend aussi des briquets et des rasoirs.",
+  "options": [
+   "Bic*",
+   "Stabilo",
+   "Parker",
+   "Pilot"
+  ]
+ },
+ {
+  "key": "tec13-115",
+  "concept": "tech.brands.v13_lu_ecolier",
+  "label": "LU",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle marque nantaise a pour emblème un petit écolier sur ses biscuits au chocolat ?",
+  "explanation": "LU, pour Lefèvre-Utile, du nom de ses fondateurs. Le Petit Beurre a 24 dents.",
+  "options": [
+   "LU*",
+   "BN",
+   "Bonne Maman",
+   "Gerblé"
+  ]
+ },
+ {
+  "key": "tec13-116",
+  "concept": "tech.brands.v13_perrier",
+  "label": "Perrier",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle eau gazeuse française vient d'une source du Gard ?",
+  "explanation": "Sa bouteille verte en forme de quille est connue dans le monde entier. Badoit vient de la Loire.",
+  "options": [
+   "Perrier*",
+   "Badoit",
+   "San Pellegrino",
+   "Vichy Célestins"
+  ]
+ },
+ {
+  "key": "tec13-117",
+  "concept": "tech.brands.v13_voitures_marques",
+  "label": "Voitures et marques",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque modèle de voiture à sa marque.",
+  "explanation": "La Sandero de Dacia et la Clio ont souvent été les voitures les plus vendues en France.",
+  "pairs": [
+   [
+    "Clio",
+    "Renault"
+   ],
+   [
+    "208",
+    "Peugeot"
+   ],
+   [
+    "C3",
+    "Citroën"
+   ],
+   [
+    "Sandero",
+    "Dacia"
+   ]
+  ]
+ },
+ {
+  "key": "tec13-118",
+  "concept": "tech.brands.v13_dacia",
+  "label": "Dacia",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel pays vient la marque Dacia, qui appartient au groupe Renault ?",
+  "explanation": "Renault l'a rachetée en 1999. La Logan et la Sandero en ont fait un grand succès.",
+  "options": [
+   "La Roumanie*",
+   "La Pologne",
+   "La Hongrie",
+   "La Turquie"
+  ]
+ },
+ {
+  "key": "tec13-119",
+  "concept": "tech.brands.v13_stellantis",
+  "label": "Stellantis",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel groupe automobile réunit Peugeot, Citroën, Fiat et Jeep depuis 2021 ?",
+  "explanation": "Né de la fusion de PSA et de Fiat Chrysler. Le nom vient du latin « stella », étoile.",
+  "options": [
+   "Stellantis*",
+   "Renault Group",
+   "Volkswagen",
+   "Toyota"
+  ]
+ },
+ {
+  "key": "tec13-120",
+  "concept": "tech.brands.v13_bugatti",
+  "label": "Bugatti",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle marque de voitures de sport, installée à Molsheim en Alsace, fabrique la Chiron ?",
+  "explanation": "Une des voitures les plus rapides du monde, à plus de 400 km/h.",
+  "options": [
+   "Bugatti*",
+   "Alpine",
+   "Ferrari",
+   "Lamborghini"
+  ]
+ },
+ {
+  "key": "tec13-121",
+  "concept": "tech.brands.v13_maserati",
+  "label": "Maserati",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle marque automobile a pour logo un trident ?",
+  "explanation": "Le trident de la statue de Neptune, sur une place de Bologne, la ville d'origine de la marque.",
+  "options": [
+   "Maserati*",
+   "Alfa Romeo",
+   "Lancia",
+   "Bentley"
+  ]
+ },
+ {
+  "key": "tec13-122",
+  "concept": "tech.brands.v13_alstom",
+  "label": "Alstom",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle entreprise française fabrique le TGV ?",
+  "explanation": "Elle construit aussi des métros et des tramways dans le monde entier.",
+  "options": [
+   "Alstom*",
+   "Airbus",
+   "Renault",
+   "Thales"
+  ]
+ },
+ {
+  "key": "tec13-123",
+  "concept": "tech.brands.v13_deux_cv",
+  "label": "La 2CV",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce que la 2CV ?",
+  "explanation": "Produite de 1948 à 1990, elle devait pouvoir traverser un champ avec un panier d'œufs sans en casser un seul.",
+  "options": [
+   "Une petite voiture populaire de Citroën*",
+   "Un modèle de vélo",
+   "Un avion",
+   "Un tracteur Renault"
+  ]
+ },
+ {
+  "key": "tec13-124",
+  "concept": "tech.brands.v13_quatre_l",
+  "label": "La 4L",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment surnomme-t-on la Renault 4, voiture culte des années 1960 à 1990 ?",
+  "explanation": "Plus de 8 millions d'exemplaires. La Deuche, c'est la 2CV ; la Coccinelle, une Volkswagen.",
+  "options": [
+   "La 4L*",
+   "La Deuche",
+   "La Coccinelle",
+   "La Dauphine"
+  ]
+ },
+ {
+  "key": "tec13-125",
+  "concept": "tech.brands.v13_assassins_creed",
+  "label": "Assassin's Creed",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel éditeur français a créé la série de jeux vidéo « Assassin's Creed » ?",
+  "explanation": "Un épisode se passe pendant la Révolution française. Ubisoft a été fondé par les cinq frères Guillemot, en Bretagne.",
+  "options": [
+   "Ubisoft*",
+   "Electronic Arts",
+   "Nintendo",
+   "Square Enix"
+  ]
+ },
+ {
+  "key": "tec13-126",
+  "concept": "tech.brands.v13_ea_fc",
+  "label": "EA Sports FC",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'appelle aujourd'hui la série de jeux de football d'Electronic Arts, autrefois appelée « FIFA » ?",
+  "explanation": "Le nom a changé en 2023, après la fin de l'accord avec la FIFA.",
+  "options": [
+   "EA Sports FC*",
+   "eFootball",
+   "Football Manager",
+   "PES"
+  ]
+ },
+ {
+  "key": "tec13-127",
+  "concept": "tech.brands.v13_fortnite_bus",
+  "label": "Fortnite",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quel jeu vidéo 100 joueurs sautent-ils d'un bus volant sur une île ?",
+  "explanation": "Le dernier survivant gagne la partie : c'est un « battle royale ».",
+  "options": [
+   "Fortnite*",
+   "Minecraft",
+   "Roblox",
+   "Among Us"
+  ]
+ },
+ {
+  "key": "tec13-128",
+  "concept": "tech.brands.v13_mario_kart",
+  "label": "Mario Kart",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel jeu de Nintendo fait s'affronter Mario et ses amis dans des courses de karts ?",
+  "explanation": "Les carapaces bleues font enrager les joueurs depuis 1992.",
+  "options": [
+   "Mario Kart*",
+   "Mario Party",
+   "Super Mario Bros.",
+   "Mario Tennis"
+  ]
+ },
+ {
+  "key": "tec13-129",
+  "concept": "tech.brands.v13_kirby",
+  "label": "Kirby",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel personnage de Nintendo est une petite boule rose qui avale ses ennemis ?",
+  "explanation": "En avalant un ennemi, il copie son pouvoir. Yoshi, lui, est un dinosaure vert.",
+  "options": [
+   "Kirby*",
+   "Yoshi",
+   "Jigglypuff",
+   "Toad"
+  ]
+ },
+ {
+  "key": "tec13-130",
+  "concept": "tech.brands.v13_salameche",
+  "label": "Salamèche",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans les premiers jeux Pokémon, quel est le Pokémon de départ de type Feu ?",
+  "explanation": "Bulbizarre est de type Plante, Carapuce de type Eau. Salamèche évolue en Dracaufeu.",
+  "options": [
+   "Salamèche*",
+   "Bulbizarre",
+   "Carapuce",
+   "Goupix"
+  ]
+ },
+ {
+  "key": "tec13-131",
+  "concept": "tech.brands.v13_candy_crush",
+  "label": "Candy Crush",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel jeu sur téléphone consiste à aligner des bonbons de la même couleur ?",
+  "explanation": "Sorti en 2012, il a été téléchargé des milliards de fois.",
+  "options": [
+   "Candy Crush*",
+   "Angry Birds",
+   "Clash of Clans",
+   "Subway Surfers"
+  ]
+ },
+ {
+  "key": "tec13-132",
+  "concept": "tech.brands.v13_tomb_raider",
+  "label": "Tomb Raider",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle série de jeux vidéo incarne-t-on l'aventurière Lara Croft ?",
+  "explanation": "Née en 1996, elle a aussi été jouée au cinéma par Angelina Jolie.",
+  "options": [
+   "Tomb Raider*",
+   "Uncharted",
+   "Resident Evil",
+   "Prince of Persia"
+  ]
+ },
+ {
+  "key": "tec13-133",
+  "concept": "tech.brands.v13_mega_drive",
+  "label": "La Mega Drive",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle console de Sega, avec Sonic, rivalisait avec la Super Nintendo dans les années 1990 ?",
+  "explanation": "La « guerre des consoles » Sega-Nintendo a marqué toute une génération.",
+  "options": [
+   "La Mega Drive*",
+   "La Dreamcast",
+   "La Master System",
+   "La Saturn"
+  ]
+ },
+ {
+  "key": "tec13-134",
+  "concept": "tech.brands.v13_pokemon_go",
+  "label": "Pokémon Go",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel jeu de 2016 faisait chasser des créatures dans les rues avec son téléphone ?",
+  "explanation": "Un jeu en réalité augmentée qui a fait sortir des millions de joueurs dehors.",
+  "options": [
+   "Pokémon Go*",
+   "Minecraft Earth",
+   "Clash Royale",
+   "Brawl Stars"
+  ]
+ },
+ {
+  "key": "tec13-135",
+  "concept": "tech.brands.v13_switch_annee",
+  "label": "Nintendo Switch",
+  "type": "timeline",
+  "difficulty": 35,
+  "prompt": "En quelle année sort la Nintendo Switch ?",
+  "explanation": "En mars 2017. Elle est devenue l'une des consoles les plus vendues de l'histoire, avant l'arrivée de la Switch 2 en 2025.",
+  "answer": 2017,
+  "tolerance": 2,
+  "min": 2005,
+  "max": 2025
+ },
+ {
+  "key": "tec13-136",
+  "concept": "tech.brands.v13_ps5_annee",
+  "label": "PlayStation 5",
+  "type": "timeline",
+  "difficulty": 30,
+  "prompt": "En quelle année sort la PlayStation 5 ?",
+  "explanation": "En novembre 2020, en pleine pénurie de composants : elle a été très difficile à trouver pendant des mois.",
+  "answer": 2020,
+  "tolerance": 1,
+  "min": 2010,
+  "max": 2025
+ },
+ {
+  "key": "tec13-137",
+  "concept": "tech.brands.v13_vinted",
+  "label": "Vinted",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel pays vient Vinted, le site de vente de vêtements d'occasion ?",
+  "explanation": "Créé à Vilnius en 2008. La France est l'un de ses plus gros marchés.",
+  "options": [
+   "La Lituanie*",
+   "La France",
+   "L'Allemagne",
+   "La Suède"
+  ]
+ },
+ {
+  "key": "tec13-138",
+  "concept": "tech.brands.v13_back_market",
+  "label": "Back Market",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que vend principalement Back Market, une start-up française ?",
+  "explanation": "Des téléphones et ordinateurs d'occasion, remis en état et garantis.",
+  "options": [
+   "Des appareils électroniques reconditionnés*",
+   "Des vêtements de luxe",
+   "Des billets de train",
+   "Des repas à emporter"
+  ]
+ },
+ {
+  "key": "tec13-139",
+  "concept": "tech.brands.v13_leboncoin",
+  "label": "Leboncoin",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel site français de petites annonces a un logo orange ?",
+  "explanation": "Meubles, voitures, appartements… On y trouve de tout, souvent près de chez soi.",
+  "options": [
+   "Leboncoin*",
+   "Vinted",
+   "eBay",
+   "Rakuten"
+  ]
+ },
+ {
+  "key": "tec13-140",
+  "concept": "tech.brands.v13_leboncoin_annee",
+  "label": "Leboncoin",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année le site Leboncoin a-t-il été lancé ?",
+  "explanation": "En 2006. Il est vite devenu l'un des sites les plus visités de France.",
+  "answer": 2006,
+  "tolerance": 3,
+  "min": 1995,
+  "max": 2020
+ },
+ {
+  "key": "tec13-141",
+  "concept": "tech.brands.v13_snake",
+  "label": "Snake",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel jeu était installé sur beaucoup de téléphones Nokia, où un serpent grandit en mangeant ?",
+  "explanation": "On le jouait sur le Nokia 3310, réputé indestructible.",
+  "options": [
+   "Snake*",
+   "Tetris",
+   "Pac-Man",
+   "Space Invaders"
+  ]
+ },
+ {
+  "key": "tec13-142",
+  "concept": "tech.brands.v13_nokia_3310",
+  "label": "Le Nokia 3310",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le célèbre Nokia 3310 est sorti en 2000.",
+  "explanation": "Vrai : il s'en est vendu plus de 120 millions. Nokia l'a même relancé en 2017.",
+  "answer": true
+ },
+ {
+  "key": "tec13-143",
+  "concept": "tech.brands.v13_ipod",
+  "label": "L'iPod",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel baladeur musical Apple lance-t-elle en 2001 ?",
+  "explanation": "« 1 000 chansons dans votre poche ». Il a été arrêté en 2022.",
+  "options": [
+   "L'iPod*",
+   "Le Walkman",
+   "Le Discman",
+   "L'iPad"
+  ]
+ },
+ {
+  "key": "tec13-144",
+  "concept": "tech.brands.v13_luxe_sport",
+  "label": "Luxe ou sport ?",
+  "type": "sort",
+  "difficulty": 15,
+  "prompt": "Marque de luxe ou marque de sport ?",
+  "explanation": "Les quatre premières sont des maisons de luxe françaises. Asics est japonaise, Puma et Adidas allemandes, Nike américaine.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Luxe"
+   },
+   {
+    "label": "Sport"
+   }
+  ],
+  "items": [
+   [
+    "Chanel",
+    0
+   ],
+   [
+    "Hermès",
+    0
+   ],
+   [
+    "Dior",
+    0
+   ],
+   [
+    "Louis Vuitton",
+    0
+   ],
+   [
+    "Nike",
+    1
+   ],
+   [
+    "Adidas",
+    1
+   ],
+   [
+    "Puma",
+    1
+   ],
+   [
+    "Asics",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "tec13-145",
+  "concept": "tech.brands.v13_chupa_dali",
+  "label": "Chupa Chups",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le logo des sucettes Chupa Chups a été dessiné par le peintre Salvador Dalí.",
+  "explanation": "Vrai, en 1969. Il a même conseillé de placer le logo sur le dessus de l'emballage pour qu'on le voie bien.",
+  "answer": true
+ },
+ {
+  "key": "tec13-146",
+  "concept": "tech.brands.v13_monopoly_france",
+  "label": "Le Monopoly",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le Monopoly a été inventé en France.",
+  "explanation": "Faux : il vient des États-Unis, dans les années 1930. La version française reprend les rues de Paris.",
+  "answer": false
+ },
+ {
+  "key": "tec13-147",
+  "concept": "tech.brands.v13_michelin_freres",
+  "label": "Michelin",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "L'entreprise Michelin a été fondée par deux frères.",
+  "explanation": "Vrai : André et Édouard Michelin, à Clermont-Ferrand, en 1889.",
+  "answer": true
+ },
+ {
+  "key": "tec13-148",
+  "concept": "tech.computing.v13_emoji_pouce",
+  "label": "L'émoji pouce",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans les messages, que veut dire en général l'émoji du pouce levé 👍 ?",
+  "explanation": "Attention : certains le trouvent un peu sec, surtout pour répondre à un long message.",
+  "options": [
+   "D'accord, c'est bon*",
+   "Je suis fâché",
+   "Je ne comprends pas",
+   "Au revoir"
+  ]
+ },
+ {
+  "key": "tec13-149",
+  "concept": "tech.computing.v13_capture_raccourci",
+  "label": "La capture d'écran",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Sur un iPhone récent, comment fait-on une capture d'écran ?",
+  "explanation": "Sur Windows, la touche « Impr écran » fait la même chose, et Windows + Maj + S permet de choisir une zone.",
+  "options": [
+   "On appuie en même temps sur le bouton latéral et le bouton volume haut*",
+   "On secoue le téléphone",
+   "On appuie deux fois sur l'écran",
+   "On dit « photo » à voix haute"
+  ]
+ },
+ {
+  "key": "tec13-150",
+  "concept": "tech.inventions.v13_papin",
+  "label": "Denis Papin",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel inventeur français a imaginé à la fin du XVIIe siècle un « digesteur », ancêtre de l'autocuiseur ?",
+  "explanation": "Une marmite fermée où la vapeur fait monter la pression, et donc la température. Il a aussi travaillé sur les premières machines à vapeur.",
+  "options": [
+   "Denis Papin*",
+   "Nicolas Appert",
+   "Blaise Pascal",
+   "Antoine Lavoisier"
+  ]
+ }
+]

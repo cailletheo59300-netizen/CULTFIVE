@@ -1,0 +1,1681 @@
+[
+ {
+  "key": "spo13-001",
+  "concept": "sport.football.v13_canaris",
+  "label": "Les Canaris",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel club de football est surnommé « les Canaris » ?",
+  "explanation": "À cause de son maillot jaune. Lens, ce sont « les Sang et Or », Lille « les Dogues ».",
+  "options": [
+   "Le FC Nantes*",
+   "Le RC Lens",
+   "Le LOSC Lille",
+   "Le Stade rennais"
+  ]
+ },
+ {
+  "key": "spo13-002",
+  "concept": "sport.football.v13_dogues",
+  "label": "Les Dogues",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel club est surnommé « les Dogues » ?",
+  "explanation": "Un surnom né dans les années 1920 pour ce club du Nord, qui joue au stade Pierre-Mauroy.",
+  "options": [
+   "Le LOSC Lille*",
+   "L'OGC Nice",
+   "Le FC Lorient",
+   "Le Toulouse FC"
+  ]
+ },
+ {
+  "key": "spo13-003",
+  "concept": "sport.football.v13_sang_et_or",
+  "label": "Les Sang et Or",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel club, au stade Bollaert, est surnommé « les Sang et Or » ?",
+  "explanation": "Rouge et jaune, comme les couleurs de l'Espagne d'où viendrait l'idée. Son public est l'un des plus fervents de France.",
+  "options": [
+   "Le RC Lens*",
+   "Le RC Strasbourg",
+   "Le Stade de Reims",
+   "L'AJ Auxerre"
+  ]
+ },
+ {
+  "key": "spo13-004",
+  "concept": "sport.football.v13_clubs_stades",
+  "label": "Clubs et stades",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque club à son stade.",
+  "explanation": "« Geoffroy-Guichard », surnommé « le Chaudron », est l'un des stades les plus bruyants de France.",
+  "pairs": [
+   [
+    "AS Saint-Étienne",
+    "Geoffroy-Guichard"
+   ],
+   [
+    "RC Lens",
+    "Bollaert-Delelis"
+   ],
+   [
+    "LOSC Lille",
+    "Pierre-Mauroy"
+   ],
+   [
+    "Olympique lyonnais",
+    "Groupama Stadium"
+   ]
+  ]
+ },
+ {
+  "key": "spo13-005",
+  "concept": "sport.football.v13_classique",
+  "label": "Le Classique",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment appelle-t-on le grand match entre le PSG et l'Olympique de Marseille ?",
+  "explanation": "La rivalité Paris-Marseille, la plus chaude du football français. En Espagne, Real-Barça, c'est le « Clásico ».",
+  "options": [
+   "Le Classique*",
+   "Le Derby du Sud",
+   "Le Grand Match",
+   "La Finale"
+  ]
+ },
+ {
+  "key": "spo13-006",
+  "concept": "sport.football.v13_clasico",
+  "label": "El Clásico",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quels clubs s'affrontent lors du « Clásico » espagnol ?",
+  "explanation": "Un des matchs les plus regardés au monde. Le derby de Madrid, contre l'Atlético, c'est autre chose.",
+  "options": [
+   "Le Real Madrid et le FC Barcelone*",
+   "Le Real Madrid et l'Atlético Madrid",
+   "Le FC Séville et le Betis",
+   "Valence et Villarreal"
+  ]
+ },
+ {
+  "key": "spo13-007",
+  "concept": "sport.football.v13_selecao",
+  "label": "La Seleção",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment surnomme-t-on l'équipe du Brésil de football ?",
+  "explanation": "« La sélection » en portugais. La Roja, c'est l'Espagne ; la Squadra Azzurra, l'Italie ; l'Albiceleste, l'Argentine.",
+  "options": [
+   "La Seleção*",
+   "La Roja",
+   "La Squadra Azzurra",
+   "L'Albiceleste"
+  ]
+ },
+ {
+  "key": "spo13-008",
+  "concept": "sport.football.v13_psg_fondation",
+  "label": "Le PSG",
+  "type": "timeline",
+  "difficulty": 45,
+  "prompt": "En quelle année le Paris Saint-Germain a-t-il été fondé ?",
+  "explanation": "En 1970, de la fusion du Paris FC et du Stade saint-germanois. C'est un club plutôt jeune face à Marseille (1899).",
+  "answer": 1970,
+  "tolerance": 3,
+  "min": 1890,
+  "max": 2010
+ },
+ {
+  "key": "spo13-009",
+  "concept": "sport.football.v13_trois_zero",
+  "label": "Et 1, et 2, et 3-0",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre le chant des supporters après la finale de 1998.",
+  "explanation": "La France bat le Brésil 3-0 le 12 juillet 1998 : deux buts de Zidane, un de Petit. La France entière l'a chanté.",
+  "answer": "Et un, et deux, et trois zéro",
+  "words": [
+   "Et",
+   "un,",
+   "et",
+   "deux,",
+   "et",
+   "trois",
+   "zéro"
+  ]
+ },
+ {
+  "key": "spo13-010",
+  "concept": "sport.football.v13_italie_espagne",
+  "label": "Club italien ou espagnol ?",
+  "type": "sort",
+  "difficulty": 25,
+  "prompt": "Ce club est italien ou espagnol ?",
+  "explanation": "La Juventus joue à Turin, l'Inter et l'AC Milan se partagent le stade San Siro.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Italien"
+   },
+   {
+    "label": "Espagnol"
+   }
+  ],
+  "items": [
+   [
+    "Juventus",
+    0
+   ],
+   [
+    "Inter Milan",
+    0
+   ],
+   [
+    "AC Milan",
+    0
+   ],
+   [
+    "AS Roma",
+    0
+   ],
+   [
+    "Real Madrid",
+    1
+   ],
+   [
+    "FC Barcelone",
+    1
+   ],
+   [
+    "Atlético Madrid",
+    1
+   ],
+   [
+    "FC Séville",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "spo13-011",
+  "concept": "sport.football.v13_touche_but",
+  "label": "La touche",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Au football, on peut marquer un but directement sur une remise en jeu à la main (une touche).",
+  "explanation": "Faux : si le ballon entre directement dans le but adverse sur une touche, c'est une sortie de but, pas un but.",
+  "answer": false
+ },
+ {
+  "key": "spo13-012",
+  "concept": "sport.football.v13_horsjeu_moitie",
+  "label": "Le hors-jeu",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Un joueur ne peut jamais être hors-jeu dans sa propre moitié de terrain.",
+  "explanation": "Vrai : la règle du hors-jeu ne s'applique que dans la moitié de terrain adverse.",
+  "answer": true
+ },
+ {
+  "key": "spo13-013",
+  "concept": "sport.football.v13_zidane_ballon_or",
+  "label": "Ballon d'or 1998",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel joueur a reçu le Ballon d'or en 1998, l'année du premier titre mondial des Bleus ?",
+  "explanation": "Son doublé de la tête en finale contre le Brésil a tout changé. C'était son seul Ballon d'or.",
+  "options": [
+   "Zinédine Zidane*",
+   "Thierry Henry",
+   "Didier Deschamps",
+   "Ronaldo"
+  ]
+ },
+ {
+  "key": "spo13-014",
+  "concept": "sport.football.v13_wenger",
+  "label": "Arsène Wenger",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel entraîneur français a dirigé le club anglais d'Arsenal pendant 22 ans ?",
+  "explanation": "De 1996 à 2018. En 2003-2004, son équipe a fini le championnat anglais sans perdre un seul match : les « Invincibles ».",
+  "options": [
+   "Arsène Wenger*",
+   "Gérard Houllier",
+   "Claude Puel",
+   "Rudi Garcia"
+  ]
+ },
+ {
+  "key": "spo13-015",
+  "concept": "sport.football.v13_henry_arsenal",
+  "label": "Thierry Henry",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quel club anglais Thierry Henry est-il devenu une légende ?",
+  "explanation": "Il en est le meilleur buteur de l'histoire. Une statue de lui se trouve devant le stade, à Londres.",
+  "options": [
+   "Arsenal*",
+   "Chelsea",
+   "Manchester United",
+   "Liverpool"
+  ]
+ },
+ {
+  "key": "spo13-016",
+  "concept": "sport.football.v13_ballons_or_fr",
+  "label": "Ballons d'or français",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces Ballons d'or français du plus ancien au plus récent.",
+  "explanation": "Kopa (1958), Platini (1983, 1984, 1985), Zidane (1998), Benzema (2022).",
+  "items": [
+   "Raymond Kopa",
+   "Michel Platini",
+   "Zinédine Zidane",
+   "Karim Benzema"
+  ]
+ },
+ {
+  "key": "spo13-017",
+  "concept": "sport.football.v13_les_bleues",
+  "label": "Les Bleues",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment surnomme-t-on l'équipe de France féminine de football ?",
+  "explanation": "Comme les garçons, « les Bleus », à cause de la couleur du maillot.",
+  "options": [
+   "Les Bleues*",
+   "Les Tricolores",
+   "Les Coqs",
+   "Les Gauloises"
+  ]
+ },
+ {
+  "key": "spo13-018",
+  "concept": "sport.football.v13_copa_2024",
+  "label": "Copa América 2024",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel pays a remporté la Copa América 2024, aux États-Unis ?",
+  "explanation": "L'Argentine de Messi a battu la Colombie en finale (1-0), après la Copa 2021 et la Coupe du monde 2022.",
+  "options": [
+   "L'Argentine*",
+   "Le Brésil",
+   "L'Uruguay",
+   "La Colombie"
+  ]
+ },
+ {
+  "key": "spo13-019",
+  "concept": "sport.rules.v13_haka",
+  "label": "Le haka",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle la danse guerrière des All Blacks avant les matchs ?",
+  "explanation": "Une tradition maorie. Les Néo-Zélandais la font face à leurs adversaires, qui l'écoutent sans bouger.",
+  "options": [
+   "Le haka*",
+   "Le tamuré",
+   "La capoeira",
+   "Le sirtaki"
+  ]
+ },
+ {
+  "key": "spo13-020",
+  "concept": "sport.rules.v13_top14",
+  "label": "Le Top 14",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle le championnat de France de rugby de première division ?",
+  "explanation": "Quatorze clubs. La finale se joue chaque année au Stade de France, au début de l'été.",
+  "options": [
+   "Le Top 14*",
+   "La Ligue 1",
+   "La Pro A",
+   "Le Championnat Élite"
+  ]
+ },
+ {
+  "key": "spo13-021",
+  "concept": "sport.rules.v13_toulouse_rugby",
+  "label": "Stade toulousain",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel club a remporté le plus de titres de champion de France de rugby ?",
+  "explanation": "Plus de 20 titres. Antoine Dupont y joue.",
+  "options": [
+   "Le Stade toulousain*",
+   "Le Stade français",
+   "L'ASM Clermont",
+   "Le RC Toulon"
+  ]
+ },
+ {
+  "key": "spo13-022",
+  "concept": "sport.rules.v13_chandelle",
+  "label": "La chandelle",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au rugby, qu'est-ce qu'une « chandelle » ?",
+  "explanation": "Le ballon monte presque à la verticale : les joueurs courent dessous pour le récupérer.",
+  "options": [
+   "Un coup de pied qui envoie le ballon très haut*",
+   "Une mêlée qui s'effondre",
+   "Un essai marqué en plongeant",
+   "Un carton jaune"
+  ]
+ },
+ {
+  "key": "spo13-023",
+  "concept": "sport.rules.v13_melee",
+  "label": "La mêlée",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Au rugby, les avants s'y poussent épaule contre épaule pour récupérer le ballon.",
+  "explanation": "Huit joueurs de chaque côté. Le demi de mêlée y introduit le ballon.",
+  "word": "MELEE",
+  "display": "Mêlée"
+ },
+ {
+  "key": "spo13-024",
+  "concept": "sport.rules.v13_rugby_pied",
+  "label": "Le jeu au pied",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Au rugby, on peut envoyer le ballon vers l'avant avec le pied.",
+  "explanation": "Vrai : la passe à la main doit aller en arrière, mais au pied, on peut l'envoyer vers l'avant.",
+  "answer": true
+ },
+ {
+  "key": "spo13-025",
+  "concept": "sport.rules.v13_rugby_2023",
+  "label": "Coupe du monde de rugby 2023",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel pays a remporté la Coupe du monde de rugby 2023, organisée en France ?",
+  "explanation": "Les Springboks ont battu les All Blacks 12-11 en finale. Ils avaient éliminé la France en quart de finale d'un point.",
+  "options": [
+   "L'Afrique du Sud*",
+   "La Nouvelle-Zélande",
+   "La France",
+   "L'Irlande"
+  ]
+ },
+ {
+  "key": "spo13-026",
+  "concept": "sport.rules.v13_us_open",
+  "label": "US Open",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle ville se joue l'US Open de tennis ?",
+  "explanation": "À Flushing Meadows, dans le quartier du Queens. C'est le dernier tournoi du Grand Chelem de l'année.",
+  "options": [
+   "New York*",
+   "Miami",
+   "Los Angeles",
+   "Chicago"
+  ]
+ },
+ {
+  "key": "spo13-027",
+  "concept": "sport.rules.v13_grand_chelem_ordre",
+  "label": "Le Grand Chelem",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Classe ces tournois du Grand Chelem dans l'ordre où ils se jouent dans l'année.",
+  "explanation": "Janvier à Melbourne, fin mai à Paris, juillet à Londres, fin août à New York.",
+  "items": [
+   "Open d'Australie",
+   "Roland-Garros",
+   "Wimbledon",
+   "US Open"
+  ]
+ },
+ {
+  "key": "spo13-028",
+  "concept": "sport.rules.v13_chatrier",
+  "label": "Court Philippe-Chatrier",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'appelle le court central de Roland-Garros ?",
+  "explanation": "Il porte le nom d'un ancien président de la Fédération. Le deuxième court s'appelle Suzanne-Lenglen.",
+  "options": [
+   "Le court Philippe-Chatrier*",
+   "Le court Suzanne-Lenglen",
+   "Le court Yannick-Noah",
+   "Le Central Court"
+  ]
+ },
+ {
+  "key": "spo13-029",
+  "concept": "sport.rules.v13_lenglen",
+  "label": "Suzanne Lenglen",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui était Suzanne Lenglen ?",
+  "explanation": "Surnommée « la Divine », elle a gagné six fois Wimbledon. Le deuxième court de Roland-Garros porte son nom.",
+  "options": [
+   "Une championne de tennis française des années 1920*",
+   "La première femme pilote d'avion",
+   "Une nageuse olympique",
+   "La fondatrice de Roland-Garros"
+  ]
+ },
+ {
+  "key": "spo13-030",
+  "concept": "sport.rules.v13_coupe_davis",
+  "label": "Coupe Davis",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle compétition oppose des équipes nationales masculines de tennis ?",
+  "explanation": "Créée en 1900. La France l'a gagnée dix fois, la dernière en 2017. La Ryder Cup, c'est du golf.",
+  "options": [
+   "La Coupe Davis*",
+   "La Ryder Cup",
+   "La Coupe Stanley",
+   "Le Masters"
+  ]
+ },
+ {
+  "key": "spo13-031",
+  "concept": "sport.rules.v13_volee",
+  "label": "La volée",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Au tennis, on a le droit de frapper la balle avant qu'elle ne rebondisse.",
+  "explanation": "Vrai : c'est une volée, souvent jouée près du filet.",
+  "answer": true
+ },
+ {
+  "key": "spo13-032",
+  "concept": "sport.rules.v13_alpe_huez",
+  "label": "L'Alpe d'Huez",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle montée célèbre du Tour de France compte 21 virages numérotés ?",
+  "explanation": "Chaque virage porte le nom d'un vainqueur d'étape. Les fans s'y massent par centaines de milliers.",
+  "options": [
+   "L'Alpe d'Huez*",
+   "Le mont Ventoux",
+   "Le Tourmalet",
+   "Le Galibier"
+  ]
+ },
+ {
+  "key": "spo13-033",
+  "concept": "sport.rules.v13_ventoux",
+  "label": "Le mont Ventoux",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle montagne du Tour de France est surnommée « le Géant de Provence » ?",
+  "explanation": "Son sommet pelé, presque lunaire, est souvent battu par le mistral.",
+  "options": [
+   "Le mont Ventoux*",
+   "Le mont Aigoual",
+   "Le puy de Dôme",
+   "Le col d'Izoard"
+  ]
+ },
+ {
+  "key": "spo13-034",
+  "concept": "sport.rules.v13_lanterne_rouge",
+  "label": "La lanterne rouge",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur le Tour de France, qu'est-ce que la « lanterne rouge » ?",
+  "explanation": "Comme la lanterne accrochée au dernier wagon d'un train. Le dernier est souvent très applaudi à Paris.",
+  "options": [
+   "Le dernier du classement général*",
+   "Le meilleur grimpeur",
+   "Le coureur le plus combatif",
+   "Le premier de l'étape du jour"
+  ]
+ },
+ {
+  "key": "spo13-035",
+  "concept": "sport.rules.v13_tour_femmes",
+  "label": "Tour de France Femmes",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle grande course cycliste a fait son retour en 2022 ?",
+  "explanation": "Une course de huit étapes, juste après le Tour des hommes. La première édition a été gagnée par la Néerlandaise Annemiek van Vleuten.",
+  "options": [
+   "Le Tour de France Femmes*",
+   "Le Paris-Nice",
+   "Le Tour de l'Avenir",
+   "La Grande Boucle juniors"
+  ]
+ },
+ {
+  "key": "spo13-036",
+  "concept": "sport.rules.v13_alaphilippe",
+  "label": "Julian Alaphilippe",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui est Julian Alaphilippe ?",
+  "explanation": "Champion du monde en 2020 et 2021. Il a porté le maillot jaune pendant 14 jours en 2019.",
+  "options": [
+   "Un coureur cycliste français, deux fois champion du monde*",
+   "Un skieur alpin",
+   "Un joueur de rugby",
+   "Un pilote de rallye"
+  ]
+ },
+ {
+  "key": "spo13-037",
+  "concept": "sport.rules.v13_velodrome",
+  "label": "Le vélodrome",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle la piste inclinée où se courent les courses cyclistes sur piste ?",
+  "explanation": "Ses virages sont très relevés, jusqu'à 45 degrés, pour que les coureurs ne glissent pas.",
+  "options": [
+   "Un vélodrome*",
+   "Un hippodrome",
+   "Un autodrome",
+   "Un cyclodrome"
+  ]
+ },
+ {
+  "key": "spo13-038",
+  "concept": "sport.rules.v13_relais_4x400",
+  "label": "Le 4×400 m",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle distance parcourt une équipe au total sur un relais 4×400 m ?",
+  "explanation": "Quatre coureurs font chacun un tour de piste. C'est souvent la dernière épreuve des championnats.",
+  "options": [
+   "1 600 m*",
+   "400 m",
+   "800 m",
+   "4 000 m"
+  ]
+ },
+ {
+  "key": "spo13-039",
+  "concept": "sport.rules.v13_planche",
+  "label": "Le saut en longueur",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au saut en longueur, que se passe-t-il si le pied dépasse la planche d'appel ?",
+  "explanation": "On dit que le sauteur a « mordu ». Un drapeau rouge est levé.",
+  "options": [
+   "Le saut est annulé*",
+   "On perd 10 centimètres",
+   "On recommence tout de suite",
+   "Rien, c'est autorisé"
+  ]
+ },
+ {
+  "key": "spo13-040",
+  "concept": "sport.rules.v13_marteau",
+  "label": "Le lancer du marteau",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au lancer du marteau, que lance l'athlète ?",
+  "explanation": "Il tourne plusieurs fois sur lui-même dans un cercle avant de la lâcher. La boule pèse 7,26 kg chez les hommes.",
+  "options": [
+   "Une boule de métal reliée à une poignée par un câble*",
+   "Un vrai marteau de bricolage",
+   "Un disque en bois",
+   "Une lance"
+  ]
+ },
+ {
+  "key": "spo13-041",
+  "concept": "sport.rules.v13_course_concours",
+  "label": "Course ou concours ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Une course, ou un concours (saut, lancer) ?",
+  "explanation": "En athlétisme, on oppose les courses aux concours, où l'on mesure une distance ou une hauteur.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Course"
+   },
+   {
+    "label": "Concours"
+   }
+  ],
+  "items": [
+   [
+    "100 m",
+    0
+   ],
+   [
+    "400 m haies",
+    0
+   ],
+   [
+    "3 000 m steeple",
+    0
+   ],
+   [
+    "Marathon",
+    0
+   ],
+   [
+    "Saut en hauteur",
+    1
+   ],
+   [
+    "Lancer du javelot",
+    1
+   ],
+   [
+    "Triple saut",
+    1
+   ],
+   [
+    "Saut à la perche",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "spo13-042",
+  "concept": "sport.rules.v13_steeple",
+  "label": "Le steeple",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au 3 000 m steeple, que doivent franchir les coureurs en plus des barrières ?",
+  "explanation": "Le nom vient des courses de chevaux d'obstacles anglaises. Beaucoup de coureurs finissent les pieds trempés.",
+  "options": [
+   "Une fosse remplie d'eau*",
+   "Un mur d'escalade",
+   "Une rangée de pneus",
+   "Un tapis de sable"
+  ]
+ },
+ {
+  "key": "spo13-043",
+  "concept": "sport.rules.v13_couloirs",
+  "label": "Les couloirs",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien de couloirs compte une piste d'athlétisme standard ?",
+  "explanation": "Huit couloirs en général (parfois neuf). Les meilleurs des séries courent au centre.",
+  "answer": 8,
+  "tolerance": 0,
+  "min": 2,
+  "max": 12,
+  "start": 2,
+  "unit": "couloirs"
+ },
+ {
+  "key": "spo13-044",
+  "concept": "sport.rules.v13_crawl",
+  "label": "Le crawl",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle nage est la plus utilisée en « nage libre » ?",
+  "explanation": "En nage libre, on peut nager comme on veut, mais presque tout le monde choisit le crawl, le plus rapide.",
+  "options": [
+   "Le crawl*",
+   "La brasse",
+   "Le dos",
+   "Le papillon"
+  ]
+ },
+ {
+  "key": "spo13-045",
+  "concept": "sport.rules.v13_papillon",
+  "label": "Le papillon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quelle nage les deux bras sortent-ils de l'eau en même temps, comme des ailes ?",
+  "explanation": "C'est la plus spectaculaire et l'une des plus fatigantes. Les jambes ondulent ensemble, comme un dauphin.",
+  "options": [
+   "Le papillon*",
+   "La brasse",
+   "Le crawl",
+   "Le dos"
+  ]
+ },
+ {
+  "key": "spo13-046",
+  "concept": "sport.rules.v13_longueurs_400",
+  "label": "Le 400 m nage libre",
+  "type": "counter",
+  "difficulty": 25,
+  "prompt": "Combien de longueurs de bassin olympique faut-il nager pour un 400 m ?",
+  "explanation": "Un bassin olympique mesure 50 m : 400 m, c'est donc 8 longueurs.",
+  "answer": 8,
+  "tolerance": 0,
+  "min": 1,
+  "max": 20,
+  "start": 1,
+  "unit": "longueurs"
+ },
+ {
+  "key": "spo13-047",
+  "concept": "sport.rules.v13_depart_dos",
+  "label": "Le départ du dos",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "En natation, le départ de la course de dos se fait dans l'eau.",
+  "explanation": "Vrai : les nageurs se tiennent aux poignées du mur, les pieds contre la paroi, puis se propulsent en arrière.",
+  "answer": true
+ },
+ {
+  "key": "spo13-048",
+  "concept": "sport.rules.v13_combine_nordique",
+  "label": "Le combiné nordique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que combine le combiné nordique ?",
+  "explanation": "Le biathlon, lui, combine ski de fond et tir à la carabine.",
+  "options": [
+   "Le saut à ski et le ski de fond*",
+   "Le ski alpin et le tir",
+   "Le patinage et le ski de fond",
+   "Le slalom et la descente"
+  ]
+ },
+ {
+  "key": "spo13-049",
+  "concept": "sport.rules.v13_curling_balai",
+  "label": "Le curling",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au curling, à quoi sert le balai ?",
+  "explanation": "Frotter réchauffe un peu la glace : la pierre glisse plus loin et tourne moins.",
+  "options": [
+   "À frotter la glace devant la pierre pour la guider*",
+   "À pousser la pierre",
+   "À nettoyer la piste entre les manches",
+   "À arrêter la pierre adverse"
+  ]
+ },
+ {
+  "key": "spo13-050",
+  "concept": "sport.rules.v13_hockey_penalite",
+  "label": "Le banc des pénalités",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Au hockey sur glace, où va un joueur qui a commis une faute ?",
+  "explanation": "Son équipe joue alors à un de moins : c'est le « jeu de puissance » pour l'adversaire.",
+  "options": [
+   "Sur le banc des pénalités, pendant quelques minutes*",
+   "Au vestiaire, jusqu'à la fin du match",
+   "Au centre de la patinoire",
+   "Derrière son but"
+  ]
+ },
+ {
+  "key": "spo13-051",
+  "concept": "sport.rules.v13_skeleton",
+  "label": "Le skeleton",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Sport olympique d'hiver où l'on descend une piste de glace à plat ventre, la tête en avant.",
+  "explanation": "Les pilotes frôlent les 130 km/h, le menton à quelques centimètres de la glace. En luge, on est sur le dos, les pieds devant.",
+  "word": "SKELETON",
+  "display": "Skeleton"
+ },
+ {
+  "key": "spo13-052",
+  "concept": "sport.rules.v13_dunk",
+  "label": "Le dunk",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Au basket, comment appelle-t-on un panier marqué en sautant et en enfonçant le ballon dans le cercle ?",
+  "explanation": "Un des gestes les plus spectaculaires. Victor Wembanyama peut le faire presque sans sauter.",
+  "options": [
+   "Un dunk*",
+   "Un lay-up",
+   "Un airball",
+   "Un rebond"
+  ]
+ },
+ {
+  "key": "spo13-053",
+  "concept": "sport.rules.v13_marcher",
+  "label": "Le marcher",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Au basket, qu'est-ce qu'un « marcher » ?",
+  "explanation": "L'arbitre fait tourner ses poings l'un autour de l'autre. Le ballon passe à l'adversaire.",
+  "options": [
+   "Faire trop de pas avec le ballon en main sans dribbler*",
+   "Toucher le ballon avec le pied",
+   "Rester trop longtemps dans la raquette",
+   "Tirer en dehors du terrain"
+  ]
+ },
+ {
+  "key": "spo13-054",
+  "concept": "sport.rules.v13_lakers",
+  "label": "Les Lakers",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans quelle ville jouent les Lakers, l'équipe de NBA de LeBron James ?",
+  "explanation": "Le nom (« lacs ») vient de leur première ville, Minneapolis, au pays des lacs.",
+  "options": [
+   "Los Angeles*",
+   "New York",
+   "Chicago",
+   "Boston"
+  ]
+ },
+ {
+  "key": "spo13-055",
+  "concept": "sport.rules.v13_dream_team",
+  "label": "La Dream Team",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel surnom portait l'équipe américaine de basket des JO de Barcelone, en 1992 ?",
+  "explanation": "Michael Jordan, Magic Johnson, Larry Bird… Les premiers joueurs de NBA aux Jeux. Ils ont gagné chaque match de plus de 40 points en moyenne.",
+  "options": [
+   "La Dream Team*",
+   "Les Galactiques",
+   "Les Invincibles",
+   "La Big Team"
+  ]
+ },
+ {
+  "key": "spo13-056",
+  "concept": "sport.rules.v13_experts",
+  "label": "Les Experts",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel surnom porte l'équipe de France masculine de handball ?",
+  "explanation": "Six fois champions du monde et trois fois champions olympiques. Avant eux, il y avait eu « les Barjots » des années 1990.",
+  "options": [
+   "Les Experts*",
+   "Les Barjots",
+   "Les Costauds",
+   "Les Bleus de glace"
+  ]
+ },
+ {
+  "key": "spo13-057",
+  "concept": "sport.rules.v13_handball_3s",
+  "label": "Le handball",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Au handball, on peut garder le ballon en main dix secondes sans le faire rebondir.",
+  "explanation": "Faux : trois secondes au plus, et trois pas au plus. Ensuite, il faut dribbler, passer ou tirer.",
+  "answer": false
+ },
+ {
+  "key": "spo13-058",
+  "concept": "sport.rules.v13_libero",
+  "label": "Le libéro",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au volley-ball, quel joueur porte un maillot de couleur différente et ne fait que défendre ?",
+  "explanation": "Il réceptionne les services et les attaques, mais n'a pas le droit d'attaquer au-dessus du filet ni de servir en compétition internationale.",
+  "options": [
+   "Le libéro*",
+   "Le passeur",
+   "Le pointu",
+   "Le capitaine"
+  ]
+ },
+ {
+  "key": "spo13-059",
+  "concept": "sport.rules.v13_carreau",
+  "label": "Le carreau",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À la pétanque, que réussit-on en faisant un « carreau » ?",
+  "explanation": "Le tir parfait : la boule de l'adversaire s'envole et la tienne reste à sa place, ou presque.",
+  "options": [
+   "Sa boule chasse celle de l'adversaire et prend sa place*",
+   "Sa boule touche le cochonnet",
+   "On marque 13 points d'un coup",
+   "On lance la boule en arrière"
+  ]
+ },
+ {
+  "key": "spo13-060",
+  "concept": "sport.rules.v13_fanny",
+  "label": "Faire Fanny",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "À la pétanque, que veut dire « faire Fanny » ?",
+  "explanation": "Le perdant doit, selon la tradition, embrasser les fesses d'une Fanny, souvent un dessin ou une statuette !",
+  "options": [
+   "Perdre 13 à 0*",
+   "Gagner sans jouer",
+   "Toucher le cochonnet du premier coup",
+   "Tricher en avançant le pied"
+  ]
+ },
+ {
+  "key": "spo13-061",
+  "concept": "sport.rules.v13_pelote",
+  "label": "La pelote basque",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel sport se joue en lançant une balle contre un mur, parfois avec un grand gant en osier, la chistera ?",
+  "explanation": "Très populaire au Pays basque. Le mur s'appelle le fronton.",
+  "options": [
+   "La pelote basque*",
+   "Le squash",
+   "Le jeu de paume",
+   "Le padel"
+  ]
+ },
+ {
+  "key": "spo13-062",
+  "concept": "sport.rules.v13_course_camarguaise",
+  "label": "La course camarguaise",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que la course camarguaise ?",
+  "explanation": "Une tradition de Provence et du Languedoc. La vedette, c'est le taureau, qui retourne au pré après la course.",
+  "options": [
+   "Des « raseteurs » attrapent des attributs sur les cornes d'un taureau, sans le blesser*",
+   "Une course de chevaux sur la plage",
+   "Une course à pied dans les marais",
+   "Une corrida à l'espagnole"
+  ]
+ },
+ {
+  "key": "spo13-063",
+  "concept": "sport.rules.v13_monaco_gp",
+  "label": "Grand Prix de Monaco",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel Grand Prix de Formule 1 se court dans les rues étroites d'une principauté ?",
+  "explanation": "Il est presque impossible d'y doubler : la place sur la grille de départ compte énormément.",
+  "options": [
+   "Le Grand Prix de Monaco*",
+   "Le Grand Prix de France",
+   "Le Grand Prix de Belgique",
+   "Le Grand Prix d'Italie"
+  ]
+ },
+ {
+  "key": "spo13-064",
+  "concept": "sport.rules.v13_pit_stop",
+  "label": "Le pit stop",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En Formule 1, qu'est-ce qu'un « pit stop » ?",
+  "explanation": "Les mécaniciens changent les quatre roues en moins de trois secondes.",
+  "options": [
+   "Un arrêt au stand pour changer les pneus*",
+   "Une pénalité de vitesse",
+   "Un tour de chauffe",
+   "Un accident"
+  ]
+ },
+ {
+  "key": "spo13-065",
+  "concept": "sport.rules.v13_drapeau_jaune",
+  "label": "Le drapeau jaune",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "En Formule 1, que signale un drapeau jaune ?",
+  "explanation": "Souvent une voiture arrêtée sur le bord de la piste. Le drapeau à damier, lui, marque l'arrivée.",
+  "options": [
+   "Un danger : il faut ralentir et ne pas dépasser*",
+   "La fin de la course",
+   "Une course arrêtée",
+   "Un pilote disqualifié"
+  ]
+ },
+ {
+  "key": "spo13-066",
+  "concept": "sport.rules.v13_gasly",
+  "label": "Pierre Gasly",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel pilote français a gagné le Grand Prix d'Italie de Formule 1, à Monza, en 2020 ?",
+  "explanation": "Une victoire surprise avec la petite écurie AlphaTauri. Charles Leclerc, lui, est monégasque.",
+  "options": [
+   "Pierre Gasly*",
+   "Esteban Ocon",
+   "Romain Grosjean",
+   "Charles Leclerc"
+  ]
+ },
+ {
+  "key": "spo13-067",
+  "concept": "sport.rules.v13_meca_nautique",
+  "label": "Sport mécanique ou nautique ?",
+  "type": "sort",
+  "difficulty": 15,
+  "prompt": "Sport mécanique (avec un moteur) ou sport nautique ?",
+  "explanation": "Les sports mécaniques utilisent un moteur ; les sports nautiques se pratiquent sur l'eau.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Mécanique"
+   },
+   {
+    "label": "Nautique"
+   }
+  ],
+  "items": [
+   [
+    "Formule 1",
+    0
+   ],
+   [
+    "MotoGP",
+    0
+   ],
+   [
+    "Rallye",
+    0
+   ],
+   [
+    "Karting",
+    0
+   ],
+   [
+    "Aviron",
+    1
+   ],
+   [
+    "Voile",
+    1
+   ],
+   [
+    "Kayak",
+    1
+   ],
+   [
+    "Surf",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "spo13-068",
+  "concept": "sport.rules.v13_sport_objet",
+  "label": "Sports et objets",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque sport à ce que l'on y fait glisser ou frapper.",
+  "explanation": "La pierre de curling pèse près de 20 kg. Le palet de hockey est en caoutchouc dur.",
+  "pairs": [
+   [
+    "Curling",
+    "Une pierre"
+   ],
+   [
+    "Hockey sur glace",
+    "Un palet"
+   ],
+   [
+    "Badminton",
+    "Un volant"
+   ],
+   [
+    "Cricket",
+    "Une balle avec une batte"
+   ]
+  ]
+ },
+ {
+  "key": "spo13-069",
+  "concept": "sport.rules.v13_plongeoir",
+  "label": "Le plongeoir",
+  "type": "counter",
+  "difficulty": 30,
+  "prompt": "À quelle hauteur se trouve le plus haut plongeoir des Jeux olympiques ?",
+  "explanation": "10 mètres, la hauteur d'un immeuble de trois étages. Les plongeurs entrent dans l'eau à près de 50 km/h.",
+  "answer": 10,
+  "tolerance": 0,
+  "min": 1,
+  "max": 20,
+  "start": 1,
+  "unit": "mètres"
+ },
+ {
+  "key": "spo13-070",
+  "concept": "sport.rules.v13_ring",
+  "label": "Le ring",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle l'espace carré entouré de cordes où se déroule un combat de boxe ?",
+  "explanation": "Il est carré, même si « ring » veut dire « anneau » en anglais. Au judo, on combat sur un tatami.",
+  "options": [
+   "Le ring*",
+   "L'arène",
+   "Le tatami",
+   "La cage"
+  ]
+ },
+ {
+  "key": "spo13-071",
+  "concept": "sport.rules.v13_hajime",
+  "label": "Hajime",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Au judo, que veut dire « Hajime » ?",
+  "explanation": "L'arbitre le dit pour lancer le combat. « Matte » veut dire « arrêtez », et « ippon », c'est la victoire immédiate.",
+  "options": [
+   "Commencez*",
+   "Arrêtez",
+   "Victoire",
+   "Saluez"
+  ]
+ },
+ {
+  "key": "spo13-072",
+  "concept": "sport.rules.v13_taekwondo",
+  "label": "Le taekwondo",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel art martial coréen, olympique, est célèbre pour ses coups de pied ?",
+  "explanation": "Les combattants portent des protections électroniques qui comptent les coups. Le karaté vient du Japon.",
+  "options": [
+   "Le taekwondo*",
+   "Le karaté",
+   "Le kung-fu",
+   "L'aïkido"
+  ]
+ },
+ {
+  "key": "spo13-073",
+  "concept": "sport.rules.v13_mma",
+  "label": "Le MMA",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que veut dire « MMA » ?",
+  "explanation": "« Mixed Martial Arts » : on y mélange boxe, lutte, judo… Il est légal en France depuis 2020.",
+  "options": [
+   "Arts martiaux mixtes*",
+   "Méthode moderne d'athlétisme",
+   "Marathon mondial amateur",
+   "Moto magnétique automatique"
+  ]
+ },
+ {
+  "key": "spo13-074",
+  "concept": "sport.rules.v13_ollie",
+  "label": "Le ollie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel sport fait-on un « ollie », un saut sans les mains ?",
+  "explanation": "On tape l'arrière de la planche et elle décolle avec les pieds. C'est la base de presque toutes les figures.",
+  "options": [
+   "Le skateboard*",
+   "Le ski",
+   "Le BMX",
+   "Le surf"
+  ]
+ },
+ {
+  "key": "spo13-075",
+  "concept": "sport.rules.v13_parkour",
+  "label": "Le parkour",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que le parkour, né en banlieue parisienne ?",
+  "explanation": "Né à Lisses et Évry, dans l'Essonne, autour de David Belle et des Yamakasi.",
+  "options": [
+   "Se déplacer en franchissant les obstacles de la ville*",
+   "Une course de voitures en ville",
+   "Un jeu de piste à vélo",
+   "Une danse de rue"
+  ]
+ },
+ {
+  "key": "spo13-076",
+  "concept": "sport.rules.v13_assureur",
+  "label": "L'assureur",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "En escalade, comment appelle-t-on la personne qui tient la corde du grimpeur ?",
+  "explanation": "Il bloque la corde si le grimpeur tombe. Celui qui grimpe en tête est le « premier de cordée ».",
+  "options": [
+   "L'assureur*",
+   "Le premier de cordée",
+   "Le guide",
+   "Le garde"
+  ]
+ },
+ {
+  "key": "spo13-077",
+  "concept": "sport.rules.v13_trail",
+  "label": "Le trail",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un « trail » en course à pied ?",
+  "explanation": "Sur des sentiers, avec beaucoup de montées et de descentes. Les plus longs durent plus d'une journée.",
+  "options": [
+   "Une course en pleine nature, souvent en montagne*",
+   "Une course sur piste",
+   "Un sprint en ville",
+   "Une course de relais"
+  ]
+ },
+ {
+  "key": "spo13-078",
+  "concept": "sport.rules.v13_utmb",
+  "label": "L'UTMB",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle célèbre course de trail fait le tour du mont Blanc, sur environ 170 km ?",
+  "explanation": "Elle part de Chamonix et traverse la France, l'Italie et la Suisse. La Diagonale des fous, c'est à La Réunion.",
+  "options": [
+   "L'UTMB*",
+   "La Diagonale des fous",
+   "Le Marathon des sables",
+   "La SaintéLyon"
+  ]
+ },
+ {
+  "key": "spo13-079",
+  "concept": "sport.rules.v13_green",
+  "label": "Le green",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Au golf, comment s'appelle la zone d'herbe très rase autour du trou ?",
+  "explanation": "On y joue au putter. Le bunker, c'est le trou de sable ; le rough, l'herbe haute.",
+  "options": [
+   "Le green*",
+   "Le fairway",
+   "Le rough",
+   "Le bunker"
+  ]
+ },
+ {
+  "key": "spo13-080",
+  "concept": "sport.rules.v13_ryder_cup",
+  "label": "La Ryder Cup",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle compétition de golf oppose tous les deux ans l'Europe et les États-Unis ?",
+  "explanation": "La France l'a accueillie en 2018, près de Versailles : l'Europe avait gagné.",
+  "options": [
+   "La Ryder Cup*",
+   "La Coupe Davis",
+   "Le Masters",
+   "Le British Open"
+  ]
+ },
+ {
+  "key": "spo13-081",
+  "concept": "sport.rules.v13_cso",
+  "label": "Le saut d'obstacles",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En équitation, comment s'appelle l'épreuve où le cheval saute des barres sur un parcours ?",
+  "explanation": "On l'appelle aussi CSO (concours de saut d'obstacles). Une barre tombée coûte des points.",
+  "options": [
+   "Le saut d'obstacles*",
+   "Le dressage",
+   "L'endurance",
+   "Le polo"
+  ]
+ },
+ {
+  "key": "spo13-082",
+  "concept": "sport.olympics.v13_surf_tokyo",
+  "label": "Le surf aux JO",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le surf est entré aux Jeux olympiques à Tokyo.",
+  "explanation": "Vrai, aux Jeux de Tokyo (disputés en 2021). À Paris 2024, les épreuves ont eu lieu à Tahiti.",
+  "answer": true
+ },
+ {
+  "key": "spo13-083",
+  "concept": "sport.olympics.v13_breaking_la",
+  "label": "Le breaking",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le breaking (breakdance) est au programme des Jeux de Los Angeles 2028.",
+  "explanation": "Faux : le breaking n'a été olympique qu'à Paris 2024. Il ne revient pas en 2028.",
+  "answer": false
+ },
+ {
+  "key": "spo13-084",
+  "concept": "sport.olympics.v13_rugby7_olympique",
+  "label": "Le rugby à 7",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le rugby à 7 est un sport olympique.",
+  "explanation": "Vrai, depuis Rio 2016. À Paris 2024, la France a gagné l'or chez les hommes.",
+  "answer": true
+ },
+ {
+  "key": "spo13-085",
+  "concept": "sport.olympics.v13_karate_paris",
+  "label": "Le karaté",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le karaté était au programme des Jeux de Paris 2024.",
+  "explanation": "Faux : il n'a été olympique qu'à Tokyo, au Japon, son pays d'origine.",
+  "answer": false
+ },
+ {
+  "key": "spo13-086",
+  "concept": "sport.olympics.v13_beach_volley_paris",
+  "label": "Paris 2024",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au pied de quel monument se sont joués les matchs de beach-volley de Paris 2024 ?",
+  "explanation": "Un stade éphémère sur le Champ-de-Mars. Ces Jeux voulaient mettre Paris en décor.",
+  "options": [
+   "La tour Eiffel*",
+   "L'Arc de triomphe",
+   "Le Louvre",
+   "Notre-Dame"
+  ]
+ },
+ {
+  "key": "spo13-087",
+  "concept": "sport.olympics.v13_versailles",
+  "label": "Paris 2024",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Où se sont déroulées les épreuves d'équitation de Paris 2024 ?",
+  "explanation": "Dans les jardins du château, devant le Grand Canal.",
+  "options": [
+   "Au château de Versailles*",
+   "À Chantilly",
+   "À Fontainebleau",
+   "Au bois de Boulogne"
+  ]
+ },
+ {
+  "key": "spo13-088",
+  "concept": "sport.olympics.v13_seine",
+  "label": "Paris 2024",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans quel fleuve a nagé le triathlon des Jeux de Paris 2024 ?",
+  "explanation": "Une première depuis plus de cent ans : la baignade y était interdite depuis 1923.",
+  "options": [
+   "La Seine*",
+   "La Loire",
+   "La Marne",
+   "Le Rhône"
+  ]
+ },
+ {
+  "key": "spo13-089",
+  "concept": "sport.olympics.v13_dupont_or",
+  "label": "Antoine Dupont",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Avec quelle équipe Antoine Dupont a-t-il été champion olympique à Paris 2024 ?",
+  "explanation": "Il a mis le XV de côté pour le rugby à 7, et a gagné la finale contre les Fidji.",
+  "options": [
+   "L'équipe de France de rugby à 7*",
+   "Le XV de France",
+   "L'équipe de France de handball",
+   "L'équipe de France de football"
+  ]
+ },
+ {
+  "key": "spo13-090",
+  "concept": "sport.olympics.v13_cecifoot",
+  "label": "Le cécifoot",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que le cécifoot, sport paralympique ?",
+  "explanation": "Le ballon contient des grelots. Les joueurs portent un bandeau sur les yeux ; seul le gardien voit. La France a été médaillée d'argent en 2024.",
+  "options": [
+   "Du football pour joueurs aveugles ou malvoyants*",
+   "Du football en fauteuil roulant",
+   "Du football sur sable",
+   "Du football à une jambe"
+  ]
+ },
+ {
+  "key": "spo13-091",
+  "concept": "sport.olympics.v13_participer",
+  "label": "L'esprit olympique",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre cette célèbre phrase de l'esprit olympique.",
+  "explanation": "Souvent attribuée à Pierre de Coubertin, qui l'avait reprise d'un évêque américain, en 1908.",
+  "answer": "L'important, c'est de participer",
+  "words": [
+   "L'important,",
+   "c'est",
+   "de",
+   "participer"
+  ]
+ },
+ {
+  "key": "spo13-092",
+  "concept": "sport.olympics.v13_devise",
+  "label": "La devise olympique",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre la devise olympique, en français.",
+  "explanation": "« Citius, Altius, Fortius » en latin. Le mot « ensemble » y a été ajouté en 2021.",
+  "answer": "Plus vite, plus haut, plus fort",
+  "words": [
+   "Plus",
+   "vite,",
+   "plus",
+   "haut,",
+   "plus",
+   "fort"
+  ]
+ },
+ {
+  "key": "spo13-093",
+  "concept": "sport.olympics.v13_stade_france",
+  "label": "Le Stade de France",
+  "type": "timeline",
+  "difficulty": 40,
+  "prompt": "En quelle année le Stade de France, à Saint-Denis, a-t-il été inauguré ?",
+  "explanation": "En janvier 1998, pour accueillir la Coupe du monde. Six mois plus tard, les Bleus y devenaient champions du monde.",
+  "answer": 1998,
+  "tolerance": 2,
+  "min": 1960,
+  "max": 2020
+ },
+ {
+  "key": "spo13-094",
+  "concept": "sport.olympics.v13_perrine_laffont",
+  "label": "Perrine Laffont",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle discipline Perrine Laffont a-t-elle été championne olympique en 2018 ?",
+  "explanation": "Elle a gagné à 19 ans, en Corée du Sud. Une Ariégeoise qui saute entre des bosses à toute vitesse.",
+  "options": [
+   "Le ski de bosses*",
+   "Le saut à ski",
+   "Le patinage artistique",
+   "Le snowboard"
+  ]
+ },
+ {
+  "key": "spo13-095",
+  "concept": "sport.olympics.v13_clement_noel",
+  "label": "Clément Noël",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quelle discipline Clément Noël a-t-il été champion olympique en 2022 ?",
+  "explanation": "Un Vosgien, champion olympique de slalom à Pékin.",
+  "options": [
+   "Le slalom (ski alpin)*",
+   "Le biathlon",
+   "Le ski de fond",
+   "Le snowboard cross"
+  ]
+ },
+ {
+  "key": "spo13-096",
+  "concept": "sport.champions.v13_poulidor",
+  "label": "Raymond Poulidor",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel coureur français très populaire, surnommé « Poupou », n'a jamais porté le maillot jaune ?",
+  "explanation": "Huit fois sur le podium du Tour, mais jamais en jaune. Son petit-fils, Mathieu van der Poel, est un grand champion.",
+  "options": [
+   "Raymond Poulidor*",
+   "Bernard Hinault",
+   "Jacques Anquetil",
+   "Laurent Fignon"
+  ]
+ },
+ {
+  "key": "spo13-097",
+  "concept": "sport.champions.v13_bochet",
+  "label": "Marie Bochet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui est Marie Bochet ?",
+  "explanation": "Née sans avant-bras gauche, elle a gagné huit médailles d'or paralympiques en ski alpin.",
+  "options": [
+   "Une skieuse paralympique française aux nombreux titres*",
+   "Une patineuse artistique",
+   "Une nageuse en eau libre",
+   "Une biathlète norvégienne"
+  ]
+ },
+ {
+  "key": "spo13-098",
+  "concept": "sport.champions.v13_djokovic_or",
+  "label": "Novak Djokovic",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel joueur a enfin remporté l'or olympique en simple à Paris 2024, sur la terre battue de Roland-Garros ?",
+  "explanation": "Le seul grand titre qui lui manquait. Il a battu Carlos Alcaraz en finale, en larmes.",
+  "options": [
+   "Novak Djokovic*",
+   "Carlos Alcaraz",
+   "Rafael Nadal",
+   "Jannik Sinner"
+  ]
+ },
+ {
+  "key": "spo13-099",
+  "concept": "sport.champions.v13_mahut_isner",
+  "label": "Le plus long match",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Un match de tennis a déjà duré plus de 11 heures.",
+  "explanation": "Vrai : à Wimbledon en 2010, le Français Nicolas Mahut et l'Américain John Isner ont joué 11 h 05, sur trois jours. Le dernier set s'est fini à 70-68.",
+  "answer": true
+ },
+ {
+  "key": "spo13-100",
+  "concept": "sport.football.v13_mondial_feminin_2023",
+  "label": "Coupe du monde féminine 2023",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel pays a remporté la Coupe du monde féminine de football 2023 ?",
+  "explanation": "En Australie et en Nouvelle-Zélande. L'Espagne a battu l'Angleterre en finale.",
+  "options": [
+   "L'Espagne*",
+   "Les États-Unis",
+   "L'Angleterre",
+   "La France"
+  ]
+ },
+ {
+  "key": "spo13-101",
+  "concept": "sport.football.v13_ol_feminin",
+  "label": "OL féminin",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel club français a remporté huit fois la Ligue des champions féminine ?",
+  "explanation": "Un record. Les Lyonnaises ont dominé l'Europe pendant plus de dix ans.",
+  "options": [
+   "L'Olympique lyonnais*",
+   "Le Paris Saint-Germain",
+   "Montpellier",
+   "Le Paris FC"
+  ]
+ },
+ {
+  "key": "spo13-102",
+  "concept": "sport.football.v13_mondial_2030",
+  "label": "Coupe du monde 2030",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quels pays accueilleront l'essentiel de la Coupe du monde de football 2030 ?",
+  "explanation": "Pour fêter le centenaire, trois matchs auront aussi lieu en Amérique du Sud, où tout a commencé en 1930.",
+  "options": [
+   "Le Maroc, l'Espagne et le Portugal*",
+   "La France et la Belgique",
+   "L'Arabie saoudite",
+   "Le Brésil et l'Argentine"
+  ]
+ },
+ {
+  "key": "spo13-103",
+  "concept": "sport.football.v13_frequence_mondial",
+  "label": "La Coupe du monde",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Tous les combien d'années a lieu la Coupe du monde de football ?",
+  "explanation": "Comme les Jeux olympiques. L'Euro aussi a lieu tous les quatre ans, deux ans après la Coupe du monde.",
+  "options": [
+   "Tous les 4 ans*",
+   "Tous les ans",
+   "Tous les 2 ans",
+   "Tous les 5 ans"
+  ]
+ },
+ {
+  "key": "spo13-104",
+  "concept": "sport.rules.v13_judo_duree",
+  "label": "Le combat de judo",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de temps dure un combat de judo chez les seniors (sans prolongation) ?",
+  "explanation": "Si personne n'a marqué, on passe au « golden score » : le premier qui marque gagne.",
+  "options": [
+   "4 minutes*",
+   "2 minutes",
+   "10 minutes",
+   "3 rounds de 3 minutes"
+  ]
+ },
+ {
+  "key": "spo13-105",
+  "concept": "sport.rules.v13_en_avant",
+  "label": "L'en-avant",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au rugby, qu'est-ce qu'un « en-avant » ?",
+  "explanation": "La faute la plus courante. Elle donne une mêlée à l'adversaire.",
+  "options": [
+   "Laisser tomber ou passer le ballon vers l'avant avec la main*",
+   "Un coup de pied vers l'avant",
+   "Un essai marqué en courant",
+   "Un plaquage par derrière"
+  ]
+ },
+ {
+  "key": "spo13-106",
+  "concept": "sport.rules.v13_tatami",
+  "label": "Le tatami",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Sur quoi combattent les judokas ?",
+  "explanation": "Un tapis souple qui amortit les chutes, à l'origine fait de paille de riz au Japon.",
+  "options": [
+   "Un tatami*",
+   "Un ring",
+   "Une piste",
+   "Un parquet"
+  ]
+ },
+ {
+  "key": "spo13-107",
+  "concept": "sport.rules.v13_vendee_premiere",
+  "label": "Le Vendée Globe",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année a eu lieu le premier Vendée Globe, le tour du monde à la voile en solitaire ?",
+  "explanation": "Départ des Sables-d'Olonne en novembre 1989. Titouan Lamazou l'a gagné en 109 jours ; aujourd'hui, on le boucle en moins de 75.",
+  "answer": 1989,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2015
+ }
+]
