@@ -26,14 +26,17 @@
   "type": "word_order",
   "difficulty": 26,
   "prompt": "Remets cette règle de calcul dans l'ordre.",
-  "explanation": "(−2) × (−3) = 6 : multiplier deux nombres négatifs donne un nombre positif.",
-  "answer": "Moins par moins donne plus.",
+  "explanation": "(−2) × (−3) = 6 : c'est la règle « moins par moins donne plus ».",
+  "answer": "Le produit de deux nombres négatifs est positif.",
   "words": [
-   "Moins",
-   "par",
-   "moins",
-   "donne",
-   "plus"
+   "Le",
+   "produit",
+   "de",
+   "deux",
+   "nombres",
+   "négatifs",
+   "est",
+   "positif"
   ]
  },
  {
@@ -98,15 +101,15 @@
   "type": "word_order",
   "difficulty": 38,
   "prompt": "Remets cette phrase de géométrie dans l'ordre.",
-  "explanation": "Un carré a quatre angles droits, comme tout rectangle, avec en plus quatre côtés égaux.",
-  "answer": "Un carré est un rectangle particulier.",
+  "explanation": "Un carré a quatre angles droits, comme un rectangle : c'est un rectangle particulier, aux quatre côtés égaux.",
+  "answer": "Tout carré est aussi un rectangle.",
   "words": [
-   "Un",
+   "Tout",
    "carré",
    "est",
+   "aussi",
    "un",
-   "rectangle",
-   "particulier"
+   "rectangle"
   ]
  },
  {
@@ -116,16 +119,16 @@
   "type": "word_order",
   "difficulty": 30,
   "prompt": "Remets cette phrase de géométrie dans l'ordre.",
-  "explanation": "Dans un plan, deux droites parallèles restent toujours à la même distance l'une de l'autre.",
-  "answer": "Deux droites parallèles ne se croisent jamais.",
+  "explanation": "Deux droites parallèles (et distinctes) ne se croisent jamais : elles n'ont aucun point commun.",
+  "answer": "Deux droites parallèles n'ont aucun point commun.",
   "words": [
    "Deux",
    "droites",
    "parallèles",
-   "ne",
-   "se",
-   "croisent",
-   "jamais"
+   "n'ont",
+   "aucun",
+   "point",
+   "commun"
   ]
  }
 ]

@@ -930,28 +930,6 @@
   ]
  },
  {
-  "key": "fra14-054",
-  "concept": "french.grammar.v14_phrase_chat",
-  "label": "Phrase correcte",
-  "type": "word_order",
-  "difficulty": 10,
-  "prompt": "Remets ces mots dans l'ordre pour former une phrase correcte.",
-  "explanation": "Sujet (le petit chat de ma voisine), verbe (dort), complément (sur le muret).",
-  "answer": "Le petit chat de ma voisine dort sur le muret",
-  "words": [
-   "Le",
-   "petit",
-   "chat",
-   "de",
-   "ma",
-   "voisine",
-   "dort",
-   "sur",
-   "le",
-   "muret"
-  ]
- },
- {
   "key": "fra14-055",
   "concept": "french.grammar.v14_si_aurais",
   "label": "Si j'aurais",

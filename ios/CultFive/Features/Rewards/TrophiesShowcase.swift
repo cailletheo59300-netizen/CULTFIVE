@@ -1,30 +1,54 @@
 import SwiftUI
 import CultFiveCore
 
-/// Vitrine des exploits (Profil). La maîtrise par domaine (Bronze, Argent, Or, Diamant) s'affiche sur les cartes
-/// de « Ce que tu sais », à côté de l'Elo : pas de doublon. Chaque trophée a donné un coffre.
+/// Écran « Tout voir » des trophées (Profil) : bilan, médailles de maîtrise par domaine, puis vitrine des exploits.
+/// Même style que l'étagère du profil (images de médailles et de coupe, grisées tant qu'elles sont à gagner).
 struct TrophiesShowcase: View {
     let trophies: TrophiesOverview
     @State private var selected: TrophiesOverview.Exploit?
 
+    private var unlockedExploits: Int { trophies.exploits.filter { $0.unlockedAt != nil }.count }
+    private var medals: Int { trophies.mastery.filter { $0.tier != nil }.count }
+
+    /// Exploits gagnés d'abord (les plus récents en tête), puis ceux à gagner.
+    private var sortedExploits: [TrophiesOverview.Exploit] {
+        let won = trophies.exploits.filter { $0.unlockedAt != nil }
+            .sorted { ($0.unlockedAt ?? .distantPast) > ($1.unlockedAt ?? .distantPast) }
+        return won + trophies.exploits.filter { $0.unlockedAt == nil }
+    }
+
     var body: some View {
-        exploits
-        .sheet(item: $selected) { exploit in
-            VStack(spacing: Space.m) {
-                Medal(unlocked: exploit.unlockedAt != nil, size: 72)
-                Text(exploit.name).font(.cfHeadline).multilineTextAlignment(.center)
-                Text(exploit.description).font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
-                if let chest = exploit.chest {
-                    HStack(spacing: Space.s) {
-                        ChestView(tier: chest, open: exploit.unlockedAt != nil).frame(width: 40)
-                        Text(exploit.unlockedAt != nil ? "\(chest.title) gagné" : "Récompense : \(chest.title.lowercased())")
-                            .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
-                    }
+        VStack(alignment: .leading, spacing: Space.l) {
+            summary
+            if !trophies.mastery.isEmpty { mastery }
+            exploits
+        }
+        .sheet(item: $selected) { ExploitDetail(exploit: $0) }
+    }
+
+    // MARK: Bilan
+
+    private var summary: some View {
+        HStack(spacing: 10) {
+            SummaryTile(image: "trophy_cup", value: "\(unlockedExploits)/\(trophies.exploits.count)", label: "Exploits")
+            SummaryTile(image: "medal_gold", value: "\(medals)/\(trophies.mastery.count)", label: "Domaines médaillés")
+        }
+    }
+
+    // MARK: Maîtrise
+
+    private var mastery: some View {
+        VStack(alignment: .leading, spacing: Space.s) {
+            Text("Maîtrise").font(.cfHeadline)
+            Text("Une médaille par domaine, selon ta cote : bronze, argent, or puis diamant.")
+                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            VStack(spacing: 0) {
+                ForEach(Array(trophies.mastery.enumerated()), id: \.element.id) { i, m in
+                    if i > 0 { Divider().overlay(Color.hairline).padding(.leading, 66) }
+                    MasteryRow(mastery: m)
                 }
             }
-            .padding(Space.l)
-            .presentationDetents([.height(320)])
-            .presentationDragIndicator(.visible)
+            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         }
     }
 
@@ -32,30 +56,32 @@ struct TrophiesShowcase: View {
 
     private var exploits: some View {
         VStack(alignment: .leading, spacing: Space.s) {
-            HStack(alignment: .firstTextBaseline) {
-                Text("Trophées").font(.cfHeadline)
-                Spacer()
-                Text("\(trophies.exploits.filter { $0.unlockedAt != nil }.count)/\(trophies.exploits.count)")
-                    .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
-            }
+            Text("Exploits").font(.cfHeadline)
+            Text("Chaque exploit réussi rapporte un coffre.")
+                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 10) {
-                ForEach(trophies.exploits) { exploit in
+                ForEach(sortedExploits) { exploit in
+                    let won = exploit.unlockedAt != nil
                     Button { selected = exploit } label: {
-                        VStack(spacing: 6) {
-                            Medal(unlocked: exploit.unlockedAt != nil, size: 44)
+                        VStack(spacing: 4) {
+                            Image("trophy_cup").resizable().scaledToFit().frame(width: 56, height: 56)
+                                .saturation(won ? 1 : 0).opacity(won ? 1 : 0.4)
                             Text(exploit.name)
-                                .font(.system(.caption, design: .rounded).weight(.bold))
-                                .foregroundStyle(exploit.unlockedAt != nil ? Color.ink : Color.inkSoft)
+                                .font(.system(.caption, design: .rounded).weight(.black))
+                                .foregroundStyle(won ? Color.ink : Color.inkSoft)
                                 .multilineTextAlignment(.center)
                                 .lineLimit(2).minimumScaleFactor(0.8)
+                            Text(won ? "Gagné" : "À gagner")
+                                .font(.system(.caption2, design: .rounded).weight(.bold))
+                                .foregroundStyle(won ? Color.correct : Color.inkSoft)
                         }
-                        .frame(maxWidth: .infinity, minHeight: 96)
-                        .padding(6)
-                        .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+                        .frame(maxWidth: .infinity, minHeight: 124, alignment: .top)
+                        .padding(.vertical, 10).padding(.horizontal, 4)
+                        .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
                     }
                     .buttonStyle(.row)
                     .accessibilityLabel(exploit.name)
-                    .accessibilityValue(exploit.unlockedAt != nil ? "débloqué" : "à débloquer")
+                    .accessibilityValue(won ? "gagné" : "à gagner")
                     .accessibilityHint(exploit.description)
                 }
             }
@@ -63,21 +89,87 @@ struct TrophiesShowcase: View {
     }
 }
 
-/// Médaille d'exploit : soleil doré (débloquée) ou cercle gris verrouillé.
-private struct Medal: View {
-    let unlocked: Bool
-    let size: CGFloat
+/// Case du bilan (image, valeur, libellé).
+private struct SummaryTile: View {
+    let image: String
+    let value: String
+    let label: String
 
     var body: some View {
-        ZStack {
-            Circle().fill(unlocked ? Color.sun : Color.hairline)
-            Circle().strokeBorder(unlocked ? Color(hex: 0xE0A300) : Color.inkSoft.opacity(0.2), lineWidth: size * 0.07)
-            Image(systemName: unlocked ? "star.fill" : "lock.fill")
-                .font(.system(size: size * 0.42, weight: .black))
-                .foregroundStyle(unlocked ? Color.white : Color.inkSoft.opacity(0.5))
+        HStack(spacing: 10) {
+            Image(image).resizable().scaledToFit().frame(width: 40, height: 40)
+            VStack(alignment: .leading, spacing: 0) {
+                Text(value).font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                Text(label).font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+                    .lineLimit(1).minimumScaleFactor(0.8)
+            }
+            Spacer(minLength: 0)
         }
-        .frame(width: size, height: size)
-        .accessibilityHidden(true)
+        .padding(12)
+        .frame(maxWidth: .infinity)
+        .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+}
+
+/// Ligne d'un domaine : médaille actuelle (grisée si aucune), nom, paliers et prochain objectif.
+private struct MasteryRow: View {
+    let mastery: TrophiesOverview.Mastery
+
+    private var tierName: String? {
+        guard let tier = mastery.tier else { return nil }
+        return TrophiesOverview.tiers.first { $0.id == tier }?.name ?? tier
+    }
+
+    private var status: String {
+        if let tierName { return tierName }
+        return mastery.placed ? "Pas encore de médaille" : "Joue pour être classé"
+    }
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image("medal_\(mastery.tier ?? "bronze")").resizable().scaledToFit().frame(width: 42, height: 42)
+                .saturation(mastery.tier != nil ? 1 : 0).opacity(mastery.tier != nil ? 1 : 0.35)
+            VStack(alignment: .leading, spacing: 4) {
+                HStack(alignment: .firstTextBaseline) {
+                    Text(mastery.name).font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                    Spacer(minLength: 4)
+                    Text(status).font(.system(.caption, design: .rounded).weight(.bold))
+                        .foregroundStyle(mastery.tier != nil ? Color.ink : Color.inkSoft)
+                }
+                MasteryMedals(mastery: mastery)
+            }
+        }
+        .padding(.horizontal, 12).padding(.vertical, 10)
+    }
+}
+
+/// Fiche d'un exploit : grande coupe, description, coffre et date d'obtention.
+private struct ExploitDetail: View {
+    let exploit: TrophiesOverview.Exploit
+
+    var body: some View {
+        let won = exploit.unlockedAt != nil
+        VStack(spacing: Space.m) {
+            Image("trophy_cup").resizable().scaledToFit().frame(width: 96, height: 96)
+                .saturation(won ? 1 : 0).opacity(won ? 1 : 0.4)
+            Text(exploit.name).font(.cfHeadline).multilineTextAlignment(.center)
+            Text(exploit.description).font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
+            if let chest = exploit.chest {
+                HStack(spacing: Space.s) {
+                    ChestView(tier: chest, open: won).frame(width: 40)
+                    Text(won ? "\(chest.title) gagné" : "Récompense : \(chest.title.lowercased())")
+                        .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
+                }
+            }
+            if let date = exploit.unlockedAt {
+                Text("Gagné le \(date.formatted(.dateTime.day().month(.wide).year()))")
+                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+            }
+        }
+        .padding(Space.l)
+        .presentationDetents([.height(380)])
+        .presentationDragIndicator(.visible)
     }
 }
 
