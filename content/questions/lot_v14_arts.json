@@ -1,0 +1,921 @@
+[
+ {
+  "key": "art14-001",
+  "concept": "arts.literature.v14_cyrano",
+  "label": "Cyrano de Bergerac",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel héros d'Edmond Rostand est célèbre pour son très grand nez ?",
+  "explanation": "La pièce de 1897 et sa « tirade du nez » : « C'est un roc ! c'est un pic ! c'est un cap ! »",
+  "options": [
+   "Cyrano de Bergerac*",
+   "Don Juan",
+   "Tartuffe",
+   "Figaro"
+  ]
+ },
+ {
+  "key": "art14-002",
+  "concept": "arts.literature.v14_le_cid",
+  "label": "Le Cid",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a écrit « Le Cid », tragédie de 1637 ?",
+  "explanation": "Rodrigue doit choisir entre son amour pour Chimène et l'honneur de son père. On parle depuis de « dilemme cornélien ».",
+  "options": [
+   "Pierre Corneille*",
+   "Jean Racine",
+   "Molière",
+   "Victor Hugo"
+  ]
+ },
+ {
+  "key": "art14-003",
+  "concept": "arts.literature.v14_rodrigue_coeur",
+  "label": "Le Cid",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets dans l'ordre cette réplique célèbre du « Cid ».",
+  "explanation": "Don Diègue demande à son fils s'il a le courage de le venger. Réponse : « Tout autre que mon père l'éprouverait sur l'heure. »",
+  "answer": "Rodrigue, as-tu du cœur ?",
+  "words": [
+   "Rodrigue,",
+   "as-tu",
+   "du",
+   "cœur",
+   "?"
+  ]
+ },
+ {
+  "key": "art14-004",
+  "concept": "arts.literature.v14_figaro",
+  "label": "Figaro",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel auteur a créé Figaro, le valet malin du « Mariage de Figaro » ?",
+  "explanation": "La pièce, jouée en 1784, se moquait des privilèges des nobles. Mozart en a tiré un opéra.",
+  "options": [
+   "Beaumarchais*",
+   "Marivaux",
+   "Molière",
+   "Voltaire"
+  ]
+ },
+ {
+  "key": "art14-005",
+  "concept": "arts.literature.v14_gargantua",
+  "label": "Gargantua",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel auteur de la Renaissance a raconté les aventures des géants Gargantua et Pantagruel ?",
+  "explanation": "Des géants qui mangent et boivent énormément. L'adjectif « gargantuesque » vient de là.",
+  "options": [
+   "François Rabelais*",
+   "Michel de Montaigne",
+   "Pierre de Ronsard",
+   "Jean de La Fontaine"
+  ]
+ },
+ {
+  "key": "art14-006",
+  "concept": "arts.literature.v14_maigret",
+  "label": "Le commissaire Maigret",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel écrivain belge a créé le commissaire Maigret, qui fume la pipe ?",
+  "explanation": "Plus de 75 romans de Maigret. Maurice Leblanc, lui, a créé Arsène Lupin.",
+  "options": [
+   "Georges Simenon*",
+   "Hergé",
+   "Maurice Leblanc",
+   "Gaston Leroux"
+  ]
+ },
+ {
+  "key": "art14-007",
+  "concept": "arts.literature.v14_lupin",
+  "label": "Arsène Lupin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment surnomme-t-on Arsène Lupin, le héros de Maurice Leblanc ?",
+  "explanation": "Un voleur élégant et plein d'humour. La série « Lupin » avec Omar Sy l'a remis à la mode.",
+  "options": [
+   "Le gentleman cambrioleur*",
+   "Le prince des voleurs",
+   "L'homme au masque de fer",
+   "Le chevalier noir"
+  ]
+ },
+ {
+  "key": "art14-008",
+  "concept": "arts.literature.v14_maupassant",
+  "label": "Maupassant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel écrivain normand, élève de Flaubert, a écrit « Bel-Ami » et « Le Horla » ?",
+  "explanation": "Il a écrit plus de 300 nouvelles en une dizaine d'années.",
+  "options": [
+   "Guy de Maupassant*",
+   "Émile Zola",
+   "Alphonse Daudet",
+   "Honoré de Balzac"
+  ]
+ },
+ {
+  "key": "art14-009",
+  "concept": "arts.literature.v14_lettres_moulin",
+  "label": "Les Lettres de mon moulin",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui a écrit « Les Lettres de mon moulin », avec la chèvre de M. Seguin ?",
+  "explanation": "Des histoires de Provence, en 1869. La petite chèvre Blanquette affronte le loup toute la nuit.",
+  "options": [
+   "Alphonse Daudet*",
+   "Marcel Pagnol",
+   "Jean Giono",
+   "Frédéric Mistral"
+  ]
+ },
+ {
+  "key": "art14-010",
+  "concept": "arts.literature.v14_pagnol_gloire",
+  "label": "Marcel Pagnol",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel livre de souvenirs d'enfance Marcel Pagnol a-t-il écrit sur ses vacances en Provence ?",
+  "explanation": "Suivi du « Château de ma mère ». Pagnol y raconte les collines autour d'Aubagne.",
+  "options": [
+   "La Gloire de mon père*",
+   "Le Grand Meaulnes",
+   "La Guerre des boutons",
+   "Le Petit Chose"
+  ]
+ },
+ {
+  "key": "art14-011",
+  "concept": "arts.literature.v14_guerre_boutons",
+  "label": "La Guerre des boutons",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans « La Guerre des boutons », que prennent les enfants à leurs prisonniers ?",
+  "explanation": "Le roman de Louis Pergaud (1912) : deux villages d'enfants rivaux. « Si j'aurais su, j'aurais pas v'nu ! » vient du film.",
+  "options": [
+   "Les boutons de leurs vêtements*",
+   "Leurs billes",
+   "Leurs chaussures",
+   "Leurs cartables"
+  ]
+ },
+ {
+  "key": "art14-012",
+  "concept": "arts.literature.v14_prevert",
+  "label": "Jacques Prévert",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel poète a écrit « Paroles », avec « Le Cancre » et « Pour faire le portrait d'un oiseau » ?",
+  "explanation": "Des poèmes simples qu'on apprend à l'école. Il a aussi écrit la chanson « Les Feuilles mortes ».",
+  "options": [
+   "Jacques Prévert*",
+   "Paul Éluard",
+   "Guillaume Apollinaire",
+   "Arthur Rimbaud"
+  ]
+ },
+ {
+  "key": "art14-013",
+  "concept": "arts.literature.v14_rimbaud",
+  "label": "Arthur Rimbaud",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel jeune poète, né à Charleville, a écrit « Le Dormeur du val » à 16 ans ?",
+  "explanation": "Il a arrêté d'écrire à 20 ans pour voyager jusqu'en Afrique.",
+  "options": [
+   "Arthur Rimbaud*",
+   "Paul Verlaine",
+   "Charles Baudelaire",
+   "Alfred de Musset"
+  ]
+ },
+ {
+  "key": "art14-014",
+  "concept": "arts.literature.v14_ronsard",
+  "label": "Ronsard",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel poète a écrit « Mignonne, allons voir si la rose » ?",
+  "explanation": "Un poème de 1545 qui invite à profiter de la jeunesse avant qu'elle fane, comme la rose.",
+  "options": [
+   "Pierre de Ronsard*",
+   "Joachim du Bellay",
+   "Clément Marot",
+   "François Villon"
+  ]
+ },
+ {
+  "key": "art14-015",
+  "concept": "arts.literature.v14_camus_peste",
+  "label": "La Peste",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quelle ville se déroule « La Peste » d'Albert Camus ?",
+  "explanation": "Une épidémie isole la ville. Le roman a été beaucoup relu pendant le confinement de 2020.",
+  "options": [
+   "Oran, en Algérie*",
+   "Marseille",
+   "Paris",
+   "Alger"
+  ]
+ },
+ {
+  "key": "art14-016",
+  "concept": "arts.literature.v14_goncourt",
+  "label": "Le prix Goncourt",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le prix littéraire le plus célèbre de France, remis chaque automne ?",
+  "explanation": "Le gagnant ne reçoit qu'un chèque de 10 euros, mais ses ventes explosent.",
+  "options": [
+   "Le prix Goncourt*",
+   "Le prix Nobel",
+   "Le César",
+   "Le Molière"
+  ]
+ },
+ {
+  "key": "art14-017",
+  "concept": "arts.literature.v14_immortels",
+  "label": "Les Immortels",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment surnomme-t-on les membres de l'Académie française ?",
+  "explanation": "À cause de la devise « À l'immortalité ». Ils sont 40 et rédigent le dictionnaire de l'Académie.",
+  "options": [
+   "Les Immortels*",
+   "Les Sages",
+   "Les Gardiens",
+   "Les Lettrés"
+  ]
+ },
+ {
+  "key": "art14-018",
+  "concept": "arts.literature.v14_moliere_scene",
+  "label": "La mort de Molière",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Molière est mort sur scène, en jouant « Le Malade imaginaire ».",
+  "explanation": "Faux, de peu : il a été pris d'un malaise pendant la quatrième représentation, en 1673, et il est mort quelques heures plus tard chez lui.",
+  "answer": false
+ },
+ {
+  "key": "art14-019",
+  "concept": "arts.literature.v14_hugo_exil",
+  "label": "Victor Hugo",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Victor Hugo a vécu près de vingt ans en exil, notamment sur l'île de Guernesey.",
+  "explanation": "Vrai : opposé à Napoléon III, il est parti de 1851 à 1870. Il y a écrit une grande partie des « Misérables ».",
+  "answer": true
+ },
+ {
+  "key": "art14-020",
+  "concept": "arts.literature.v14_verne_lune",
+  "label": "Jules Verne",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Jules Verne a écrit « De la Terre à la Lune » après les premiers pas d'Apollo 11.",
+  "explanation": "Faux : un siècle avant, en 1865. Son canon géant tirait même depuis la Floride, comme Apollo.",
+  "answer": false
+ },
+ {
+  "key": "art14-021",
+  "concept": "arts.literature.v14_blake_mortimer",
+  "label": "Blake et Mortimer",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le duo de héros britanniques créé par Edgar P. Jacobs ?",
+  "explanation": "Un capitaine des services secrets et un savant. « La Marque jaune » est leur album le plus célèbre.",
+  "options": [
+   "Blake et Mortimer*",
+   "Spirou et Fantasio",
+   "Boule et Bill",
+   "Ric Hochet et Bob"
+  ]
+ },
+ {
+  "key": "art14-022",
+  "concept": "arts.literature.v14_boule_bill",
+  "label": "Boule et Bill",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui est Bill, dans la bande dessinée « Boule et Bill » ?",
+  "explanation": "Créé par Jean Roba en 1959. Bill a une amie tortue, Caroline.",
+  "options": [
+   "Un cocker roux*",
+   "Un petit frère",
+   "Un chat",
+   "Un robot"
+  ]
+ },
+ {
+  "key": "art14-023",
+  "concept": "arts.literature.v14_angouleme",
+  "label": "Angoulême",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle ville accueille chaque année le grand festival de la bande dessinée ?",
+  "explanation": "Depuis 1974. Annecy, c'est le cinéma d'animation.",
+  "options": [
+   "Angoulême*",
+   "Annecy",
+   "Bruxelles",
+   "Cannes"
+  ]
+ },
+ {
+  "key": "art14-024",
+  "concept": "arts.literature.v14_heros_bd",
+  "label": "Héros de BD",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque héros de BD à son compagnon.",
+  "explanation": "Milou est un fox-terrier, Jolly Jumper un cheval qui joue aux échecs.",
+  "pairs": [
+   [
+    "Tintin",
+    "Milou"
+   ],
+   [
+    "Lucky Luke",
+    "Jolly Jumper"
+   ],
+   [
+    "Spirou",
+    "Fantasio"
+   ],
+   [
+    "Astérix",
+    "Obélix"
+   ]
+  ]
+ },
+ {
+  "key": "art14-025",
+  "concept": "arts.literature.v14_siecles_auteurs",
+  "label": "Auteurs dans l'ordre",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Classe ces auteurs du plus ancien au plus récent.",
+  "explanation": "Rabelais (XVIe siècle), Molière (XVIIe), Hugo (XIXe), Camus (XXe).",
+  "items": [
+   "Rabelais",
+   "Molière",
+   "Victor Hugo",
+   "Albert Camus"
+  ]
+ },
+ {
+  "key": "art14-026",
+  "concept": "arts.literature.v14_roman_theatre",
+  "label": "Roman ou théâtre ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Un roman, ou une pièce de théâtre ?",
+  "explanation": "Les romans se lisent, les pièces de théâtre sont faites pour être jouées sur scène.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Roman"
+   },
+   {
+    "label": "Théâtre"
+   }
+  ],
+  "items": [
+   [
+    "Les Misérables",
+    0
+   ],
+   [
+    "Madame Bovary",
+    0
+   ],
+   [
+    "Germinal",
+    0
+   ],
+   [
+    "Le Comte de Monte-Cristo",
+    0
+   ],
+   [
+    "Le Cid",
+    1
+   ],
+   [
+    "L'Avare",
+    1
+   ],
+   [
+    "Cyrano de Bergerac",
+    1
+   ],
+   [
+    "Le Mariage de Figaro",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "art14-027",
+  "concept": "arts.literature.v14_fable",
+  "label": "La fable",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Court récit en vers, souvent avec des animaux, qui se termine par une morale.",
+  "explanation": "La Fontaine en a écrit plus de 240, en s'inspirant d'Ésope, un auteur grec.",
+  "word": "FABLE",
+  "display": "Fable"
+ },
+ {
+  "key": "art14-028",
+  "concept": "arts.literature.v14_rimes",
+  "label": "La rime",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Même son répété à la fin de deux vers.",
+  "explanation": "« Maître Corbeau, sur un arbre perché, / Tenait en son bec un fromage » : ici, pas de rime entre ces deux vers !",
+  "word": "RIME",
+  "display": "Rime"
+ },
+ {
+  "key": "art14-029",
+  "concept": "arts.painting.v14_orsay_gare",
+  "label": "Le musée d'Orsay",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'était le bâtiment du musée d'Orsay, à Paris, avant d'être un musée ?",
+  "explanation": "La gare d'Orsay, construite pour l'Exposition universelle de 1900. On y voit Monet, Renoir et Van Gogh.",
+  "options": [
+   "Une gare*",
+   "Un palais royal",
+   "Une usine",
+   "Un hôpital"
+  ]
+ },
+ {
+  "key": "art14-030",
+  "concept": "arts.painting.v14_rodin_baiser",
+  "label": "Rodin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel sculpteur a créé « Le Baiser », un couple enlacé en marbre ?",
+  "explanation": "Son musée, à Paris, est installé dans un hôtel particulier avec un grand jardin de sculptures.",
+  "options": [
+   "Auguste Rodin*",
+   "Camille Claudel",
+   "Aristide Maillol",
+   "Antoine Bourdelle"
+  ]
+ },
+ {
+  "key": "art14-031",
+  "concept": "arts.painting.v14_claudel",
+  "label": "Camille Claudel",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qui était Camille Claudel ?",
+  "explanation": "Une artiste de grand talent, longtemps oubliée. Un musée lui est consacré à Nogent-sur-Seine.",
+  "options": [
+   "Une sculptrice, élève puis compagne de Rodin*",
+   "Une peintre impressionniste",
+   "Une chanteuse d'opéra",
+   "Une romancière"
+  ]
+ },
+ {
+  "key": "art14-032",
+  "concept": "arts.painting.v14_lautrec",
+  "label": "Toulouse-Lautrec",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel peintre a réalisé les célèbres affiches du Moulin-Rouge, à Montmartre ?",
+  "explanation": "Il peignait les cabarets, les danseuses de french cancan et la vie de nuit à Paris.",
+  "options": [
+   "Henri de Toulouse-Lautrec*",
+   "Edgar Degas",
+   "Paul Cézanne",
+   "Claude Monet"
+  ]
+ },
+ {
+  "key": "art14-033",
+  "concept": "arts.painting.v14_fauvisme",
+  "label": "Le fauvisme",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel peintre, chef de file du fauvisme, a aussi créé de grands papiers découpés ?",
+  "explanation": "« Fauves » parce qu'on trouvait leurs couleurs violentes. À la fin de sa vie, Matisse découpait des formes colorées.",
+  "options": [
+   "Henri Matisse*",
+   "Pablo Picasso",
+   "Paul Gauguin",
+   "Georges Braque"
+  ]
+ },
+ {
+  "key": "art14-034",
+  "concept": "arts.painting.v14_cubisme",
+  "label": "Le cubisme",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel mouvement de Picasso et Braque montre les objets sous plusieurs angles à la fois, en formes géométriques ?",
+  "explanation": "Vers 1907-1914. « Les Demoiselles d'Avignon » (1907) en est souvent vu comme le point de départ.",
+  "options": [
+   "Le cubisme*",
+   "L'impressionnisme",
+   "Le surréalisme",
+   "Le pointillisme"
+  ]
+ },
+ {
+  "key": "art14-035",
+  "concept": "arts.painting.v14_pointillisme",
+  "label": "Le pointillisme",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle la technique de Seurat, qui peint avec de petits points de couleur ?",
+  "explanation": "De près, on voit des points ; de loin, l'œil mélange les couleurs.",
+  "options": [
+   "Le pointillisme*",
+   "Le cubisme",
+   "La fresque",
+   "Le fauvisme"
+  ]
+ },
+ {
+  "key": "art14-036",
+  "concept": "arts.painting.v14_impression_nom",
+  "label": "L'impressionnisme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "D'où vient le nom « impressionnisme » ?",
+  "explanation": "Un critique s'en est moqué en 1874 en traitant les peintres d'« impressionnistes ». Le mot est resté.",
+  "options": [
+   "D'un tableau de Monet, « Impression, soleil levant »*",
+   "D'un livre de Zola",
+   "D'un quartier de Paris",
+   "D'une marque de peinture"
+  ]
+ },
+ {
+  "key": "art14-037",
+  "concept": "arts.painting.v14_nana",
+  "label": "Les Nanas",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle artiste française a créé les « Nanas », de grandes sculptures de femmes très colorées ?",
+  "explanation": "Ses sculptures colorées animent aussi la fontaine Stravinsky, à côté du Centre Pompidou.",
+  "options": [
+   "Niki de Saint Phalle*",
+   "Louise Bourgeois",
+   "Sonia Delaunay",
+   "Berthe Morisot"
+  ]
+ },
+ {
+  "key": "art14-038",
+  "concept": "arts.painting.v14_banksy",
+  "label": "Banksy",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel artiste de rue anonyme a vu un de ses tableaux s'autodétruire juste après sa vente aux enchères ?",
+  "explanation": "En 2018, « La Petite Fille au ballon » s'est à moitié déchiquetée dans son cadre. Le Français Invader colle des mosaïques de jeux vidéo.",
+  "options": [
+   "Banksy*",
+   "Invader",
+   "JR",
+   "Keith Haring"
+  ]
+ },
+ {
+  "key": "art14-039",
+  "concept": "arts.painting.v14_jr",
+  "label": "JR",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel artiste français colle d'immenses portraits photo sur les murs, et a même fait « disparaître » la pyramide du Louvre ?",
+  "explanation": "En 2016, une photo collée sur la pyramide donnait l'impression qu'elle n'était plus là.",
+  "options": [
+   "JR*",
+   "Banksy",
+   "Invader",
+   "Christo"
+  ]
+ },
+ {
+  "key": "art14-040",
+  "concept": "arts.painting.v14_christo",
+  "label": "Christo",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel artiste a emballé l'Arc de triomphe dans du tissu argenté, en 2021 ?",
+  "explanation": "Un projet imaginé depuis les années 1960. Il avait aussi emballé le Pont-Neuf en 1985.",
+  "options": [
+   "Christo (et Jeanne-Claude)*",
+   "Daniel Buren",
+   "Jeff Koons",
+   "JR"
+  ]
+ },
+ {
+  "key": "art14-041",
+  "concept": "arts.painting.v14_buren",
+  "label": "Les colonnes de Buren",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où se trouvent les colonnes rayées noir et blanc de Daniel Buren ?",
+  "explanation": "Installées en 1986, elles ont d'abord fait scandale. Aujourd'hui, tout le monde s'y prend en photo.",
+  "options": [
+   "Dans la cour du Palais-Royal, à Paris*",
+   "Au château de Versailles",
+   "Devant le Centre Pompidou",
+   "Sur le parvis de la Défense"
+  ]
+ },
+ {
+  "key": "art14-042",
+  "concept": "arts.painting.v14_aquarelle",
+  "label": "L'aquarelle",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle peinture se dilue dans l'eau et donne des couleurs transparentes ?",
+  "explanation": "On la pose sur un papier épais. Le pastel, lui, se présente en bâtonnets.",
+  "options": [
+   "L'aquarelle*",
+   "La peinture à l'huile",
+   "L'acrylique en tube",
+   "Le pastel"
+  ]
+ },
+ {
+  "key": "art14-043",
+  "concept": "arts.painting.v14_chevalet",
+  "label": "Le chevalet",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Support en bois sur lequel le peintre pose sa toile.",
+  "explanation": "Le peintre s'en sert pour travailler debout, en extérieur comme en atelier.",
+  "word": "CHEVALET",
+  "display": "Chevalet"
+ },
+ {
+  "key": "art14-044",
+  "concept": "arts.painting.v14_palette",
+  "label": "La palette",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Plaque sur laquelle le peintre mélange ses couleurs.",
+  "explanation": "Par extension, la « palette » d'un peintre, ce sont les couleurs qu'il aime utiliser.",
+  "word": "PALETTE",
+  "display": "Palette"
+ },
+ {
+  "key": "art14-045",
+  "concept": "arts.painting.v14_van_gogh_vente",
+  "label": "Van Gogh",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "De son vivant, Van Gogh n'a vendu presque aucun tableau.",
+  "explanation": "Vrai : on ne connaît qu'une vente sûre, « La Vigne rouge ». Aujourd'hui, ses toiles valent des dizaines de millions.",
+  "answer": true
+ },
+ {
+  "key": "art14-046",
+  "concept": "arts.painting.v14_joconde_vitre",
+  "label": "La Joconde",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "La Joconde est protégée par une vitre blindée au Louvre.",
+  "explanation": "Vrai : elle a déjà été visée par des jets de pierre, de peinture et même de soupe, en 2024.",
+  "answer": true
+ },
+ {
+  "key": "art14-047",
+  "concept": "arts.painting.v14_musees_paris",
+  "label": "Quel musée ?",
+  "type": "sort",
+  "difficulty": 40,
+  "prompt": "Cette œuvre est-elle au Louvre ou au musée d'Orsay ?",
+  "explanation": "En gros, le Louvre s'arrête vers 1848 ; Orsay prend la suite, avec les impressionnistes.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Louvre"
+   },
+   {
+    "label": "Orsay"
+   }
+  ],
+  "items": [
+   [
+    "La Joconde",
+    0
+   ],
+   [
+    "La Vénus de Milo",
+    0
+   ],
+   [
+    "Le Radeau de la Méduse",
+    0
+   ],
+   [
+    "La Victoire de Samothrace",
+    0
+   ],
+   [
+    "Le Déjeuner sur l'herbe",
+    1
+   ],
+   [
+    "Bal du moulin de la Galette",
+    1
+   ],
+   [
+    "L'Origine du monde",
+    1
+   ],
+   [
+    "Les Coquelicots",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "art14-048",
+  "concept": "arts.painting.v14_victoire_samothrace",
+  "label": "La Victoire de Samothrace",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle statue grecque ailée, sans tête, accueille les visiteurs en haut d'un grand escalier du Louvre ?",
+  "explanation": "Elle représente Niké, la déesse de la victoire, posée sur la proue d'un navire.",
+  "options": [
+   "La Victoire de Samothrace*",
+   "La Vénus de Milo",
+   "L'Aphrodite de Cnide",
+   "La Dame d'Auxerre"
+  ]
+ },
+ {
+  "key": "art14-049",
+  "concept": "arts.architecture.v14_mont_saint_michel",
+  "label": "Le Mont-Saint-Michel",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel monument français est construit sur un rocher entouré par la mer à marée haute ?",
+  "explanation": "Une abbaye perchée entre la Normandie et la Bretagne. Les marées y sont parmi les plus fortes d'Europe.",
+  "options": [
+   "Le Mont-Saint-Michel*",
+   "Le château d'If",
+   "Fort Boyard",
+   "Carcassonne"
+  ]
+ },
+ {
+  "key": "art14-050",
+  "concept": "arts.architecture.v14_carcassonne",
+  "label": "Carcassonne",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle ville de l'Aude est célèbre pour sa cité médiévale entourée de deux remparts ?",
+  "explanation": "Restaurée au XIXe siècle par Viollet-le-Duc, qui lui a ajouté ses toits pointus.",
+  "options": [
+   "Carcassonne*",
+   "Avignon",
+   "Saint-Malo",
+   "Aigues-Mortes"
+  ]
+ },
+ {
+  "key": "art14-051",
+  "concept": "arts.architecture.v14_viollet",
+  "label": "Viollet-le-Duc",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel architecte a restauré Notre-Dame de Paris au XIXe siècle et dessiné sa flèche ?",
+  "explanation": "Sa flèche s'est effondrée dans l'incendie de 2019 ; elle a été reconstruite à l'identique.",
+  "options": [
+   "Eugène Viollet-le-Duc*",
+   "Charles Garnier",
+   "Gustave Eiffel",
+   "Jules Hardouin-Mansart"
+  ]
+ },
+ {
+  "key": "art14-052",
+  "concept": "arts.architecture.v14_palais_papes",
+  "label": "Le palais des Papes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle ville se trouve le palais des Papes ?",
+  "explanation": "Les papes y ont vécu au XIVe siècle. Le pont d'Avignon, celui de la chanson, est tout près.",
+  "options": [
+   "Avignon*",
+   "Rome",
+   "Lyon",
+   "Reims"
+  ]
+ },
+ {
+  "key": "art14-053",
+  "concept": "arts.architecture.v14_pont_avignon",
+  "label": "Le pont d'Avignon",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le pont d'Avignon, celui de la chanson, traverse encore tout le Rhône.",
+  "explanation": "Faux : il n'en reste que quatre arches, les autres ont été emportées par les crues du fleuve.",
+  "answer": false
+ },
+ {
+  "key": "art14-054",
+  "concept": "arts.mythology.v14_promethee_aigle",
+  "label": "Prométhée",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle punition Zeus inflige-t-il à Prométhée ?",
+  "explanation": "Son foie repousse chaque nuit. Héraclès finit par le délivrer.",
+  "options": [
+   "Un aigle vient chaque jour lui dévorer le foie*",
+   "Il doit porter le ciel",
+   "Il est changé en pierre",
+   "Il doit remplir un tonneau percé"
+  ]
+ },
+ {
+  "key": "art14-055",
+  "concept": "arts.mythology.v14_arachne",
+  "label": "Arachné",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "En quel animal la déesse Athéna transforme-t-elle Arachné, qui se vantait de mieux tisser qu'elle ?",
+  "explanation": "C'est pour ça qu'on appelle les araignées des « arachnides ».",
+  "options": [
+   "Une araignée*",
+   "Un papillon",
+   "Un ver à soie",
+   "Une chouette"
+  ]
+ },
+ {
+  "key": "art14-056",
+  "concept": "arts.mythology.v14_echo",
+  "label": "La nymphe Écho",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle nymphe, condamnée à ne répéter que la fin des phrases des autres, a donné son nom à un phénomène ?",
+  "explanation": "Amoureuse de Narcisse, elle dépérit jusqu'à ne plus être qu'une voix.",
+  "options": [
+   "Écho*",
+   "Calypso",
+   "Daphné",
+   "Psyché"
+  ]
+ },
+ {
+  "key": "art14-057",
+  "concept": "arts.mythology.v14_expressions_mythe",
+  "label": "Mythes et expressions",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque expression au mythe qui l'a inspirée.",
+  "explanation": "La mythologie grecque a laissé des dizaines d'expressions dans le français de tous les jours.",
+  "pairs": [
+   [
+    "Le talon d'Achille",
+    "Un point faible"
+   ],
+   [
+    "Le fil d'Ariane",
+    "Ce qui guide pour s'en sortir"
+   ],
+   [
+    "Le supplice de Tantale",
+    "Voir ce qu'on désire sans l'atteindre"
+   ],
+   [
+    "Une boîte de Pandore",
+    "Une source de malheurs"
+   ]
+  ]
+ },
+ {
+  "key": "art14-058",
+  "concept": "arts.literature.v14_hugo_mousquetaires",
+  "label": "Les Trois Mousquetaires",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Victor Hugo a écrit « Les Trois Mousquetaires ».",
+  "explanation": "Faux : c'est Alexandre Dumas, en 1844. Hugo a écrit « Les Misérables » et « Notre-Dame de Paris ».",
+  "answer": false
+ }
+]

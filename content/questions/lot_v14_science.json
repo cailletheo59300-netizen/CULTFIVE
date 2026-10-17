@@ -1,0 +1,1419 @@
+[
+ {
+  "key": "sci14-001",
+  "concept": "science.biology.v14_branchies",
+  "label": "Les branchies",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Grâce à quel organe un poisson respire-t-il sous l'eau ?",
+  "explanation": "Elles captent l'oxygène dissous dans l'eau. La vessie natatoire, elle, aide le poisson à flotter.",
+  "options": [
+   "Les branchies*",
+   "Les nageoires",
+   "Les écailles",
+   "La vessie natatoire"
+  ]
+ },
+ {
+  "key": "sci14-002",
+  "concept": "science.biology.v14_ornithorynque",
+  "label": "L'ornithorynque",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel mammifère étonnant pond des œufs ?",
+  "explanation": "Il vit en Australie, a un bec de canard et allaite ses petits après l'éclosion.",
+  "options": [
+   "L'ornithorynque*",
+   "Le kangourou",
+   "La chauve-souris",
+   "Le koala"
+  ]
+ },
+ {
+  "key": "sci14-003",
+  "concept": "science.biology.v14_pollinisation",
+  "label": "La pollinisation",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce que la pollinisation ?",
+  "explanation": "Les abeilles, papillons, oiseaux ou le vent permettent ainsi aux plantes de faire des fruits et des graines.",
+  "options": [
+   "Le transport du pollen d'une fleur à une autre*",
+   "La chute des feuilles en automne",
+   "La fabrication du miel",
+   "La germination d'une graine"
+  ]
+ },
+ {
+  "key": "sci14-004",
+  "concept": "science.biology.v14_danse_abeilles",
+  "label": "La danse des abeilles",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment une abeille indique-t-elle aux autres où trouver des fleurs ?",
+  "explanation": "Sa « danse frétillante » indique la direction et la distance. Cette découverte a valu un prix Nobel en 1973.",
+  "options": [
+   "En faisant une danse*",
+   "En laissant une trace de miel",
+   "En bourdonnant plus fort",
+   "En changeant de couleur"
+  ]
+ },
+ {
+  "key": "sci14-005",
+  "concept": "science.biology.v14_microbe",
+  "label": "Le microbe",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce qu'un microbe ?",
+  "explanation": "Bactéries, levures, certains champignons… Il faut un microscope pour les voir. Beaucoup sont utiles.",
+  "options": [
+   "Un être vivant trop petit pour être vu à l'œil nu*",
+   "Un petit insecte",
+   "Un grain de poussière",
+   "Une cellule de la peau"
+  ]
+ },
+ {
+  "key": "sci14-006",
+  "concept": "science.biology.v14_gene",
+  "label": "Le gène",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un gène ?",
+  "explanation": "Nous avons environ 20 000 gènes. Ils influencent par exemple la couleur des yeux.",
+  "options": [
+   "Un morceau d'ADN qui porte une information héréditaire*",
+   "Une cellule du sang",
+   "Un organe du ventre",
+   "Une sorte de microbe"
+  ]
+ },
+ {
+  "key": "sci14-007",
+  "concept": "science.biology.v14_jumeaux_adn",
+  "label": "Les vrais jumeaux",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Les vrais jumeaux ont le même ADN.",
+  "explanation": "Vrai : ils viennent du même œuf, qui s'est séparé en deux. Leurs empreintes digitales sont pourtant différentes.",
+  "answer": true
+ },
+ {
+  "key": "sci14-008",
+  "concept": "science.biology.v14_plantes_carnivores",
+  "label": "Les plantes carnivores",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Certaines plantes attrapent et digèrent des insectes.",
+  "explanation": "Vrai : la dionée referme ses feuilles comme une mâchoire. Elle vit dans des sols pauvres et trouve ainsi ce qui lui manque.",
+  "answer": true
+ },
+ {
+  "key": "sci14-009",
+  "concept": "science.biology.v14_feuilles_automne",
+  "label": "Les feuilles d'automne",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Pourquoi les feuilles changent-elles de couleur en automne ?",
+  "explanation": "Le jaune et l'orange étaient là tout l'été, cachés sous le vert.",
+  "options": [
+   "La chlorophylle verte disparaît et laisse voir d'autres couleurs*",
+   "Elles rouillent avec la pluie",
+   "Le froid les peint",
+   "Elles brûlent au soleil"
+  ]
+ },
+ {
+  "key": "sci14-010",
+  "concept": "science.biology.v14_fossile",
+  "label": "Le fossile",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un fossile ?",
+  "explanation": "Os, coquillages, empreintes de pas… Ils racontent l'histoire de la vie sur Terre.",
+  "options": [
+   "La trace d'un être vivant ancien conservée dans la roche*",
+   "Une pierre précieuse",
+   "Un os de vache",
+   "Un météorite"
+  ]
+ },
+ {
+  "key": "sci14-011",
+  "concept": "science.human_body.v14_allergie",
+  "label": "L'allergie",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'une allergie ?",
+  "explanation": "Pollen, arachides, poils de chat… Le système immunitaire les prend pour des ennemis.",
+  "options": [
+   "Une réaction trop forte du corps à une chose souvent inoffensive*",
+   "Une maladie due à un virus",
+   "Un manque de vitamines",
+   "Une fatigue des yeux"
+  ]
+ },
+ {
+  "key": "sci14-012",
+  "concept": "science.human_body.v14_chair_de_poule",
+  "label": "La chair de poule",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que se passe-t-il quand on a la chair de poule ?",
+  "explanation": "Un réflexe hérité de nos ancêtres plus poilus : les poils dressés gardaient la chaleur ou faisaient paraître plus gros.",
+  "options": [
+   "De petits muscles redressent les poils*",
+   "La peau gèle",
+   "Le sang quitte la peau",
+   "Les pores se bouchent"
+  ]
+ },
+ {
+  "key": "sci14-013",
+  "concept": "science.human_body.v14_hoquet",
+  "label": "Le hoquet",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui provoque le hoquet ?",
+  "explanation": "Le « hic » vient de la fermeture brusque des cordes vocales juste après.",
+  "options": [
+   "Des contractions involontaires du diaphragme*",
+   "De l'air coincé dans le cœur",
+   "Un muscle de la langue",
+   "Un nerf de l'oreille"
+  ]
+ },
+ {
+  "key": "sci14-014",
+  "concept": "science.human_body.v14_sommeil_adulte",
+  "label": "Le sommeil",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Combien d'heures de sommeil conseille-t-on à un adulte, par nuit ?",
+  "explanation": "Les ados ont besoin d'un peu plus, entre 8 et 10 heures.",
+  "options": [
+   "Entre 7 et 9 heures*",
+   "Entre 3 et 4 heures",
+   "Entre 12 et 14 heures",
+   "Exactement 5 heures"
+  ]
+ },
+ {
+  "key": "sci14-015",
+  "concept": "science.human_body.v14_crampe",
+  "label": "La crampe",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'une crampe ?",
+  "explanation": "C'est douloureux mais souvent bref. On étire doucement le muscle pour le soulager.",
+  "options": [
+   "Un muscle qui se contracte tout seul et reste bloqué*",
+   "Un os qui se déboîte",
+   "Un nerf coupé",
+   "Une ampoule au pied"
+  ]
+ },
+ {
+  "key": "sci14-016",
+  "concept": "science.human_body.v14_sans_eau",
+  "label": "Vivre sans eau",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Combien de temps peut-on vivre sans boire, en général ?",
+  "explanation": "Sans manger, on tient plusieurs semaines ; sans boire, quelques jours seulement.",
+  "options": [
+   "Environ 3 jours*",
+   "Environ 3 heures",
+   "Environ 3 semaines",
+   "Environ 3 mois"
+  ]
+ },
+ {
+  "key": "sci14-017",
+  "concept": "science.human_body.v14_oignon",
+  "label": "L'oignon qui fait pleurer",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi pleure-t-on en coupant un oignon ?",
+  "explanation": "Les larmes servent à rincer l'œil. Un oignon bien froid en libère moins.",
+  "options": [
+   "Il libère un gaz qui irrite les yeux*",
+   "Son odeur rend triste",
+   "Il contient du sel",
+   "Le couteau fait de la vapeur"
+  ]
+ },
+ {
+  "key": "sci14-018",
+  "concept": "science.human_body.v14_myopie",
+  "label": "La myopie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce que la myopie ?",
+  "explanation": "Voir flou de près, c'est plutôt l'hypermétropie, ou la presbytie avec l'âge.",
+  "options": [
+   "Voir flou de loin*",
+   "Voir flou de près",
+   "Ne pas voir les couleurs",
+   "Voir double"
+  ]
+ },
+ {
+  "key": "sci14-019",
+  "concept": "science.human_body.v14_cycle_sommeil",
+  "label": "Le cycle du sommeil",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien de temps dure environ un cycle de sommeil ?",
+  "explanation": "On en enchaîne 4 à 6 par nuit. Se réveiller entre deux cycles est plus facile.",
+  "options": [
+   "Environ 90 minutes*",
+   "Environ 10 minutes",
+   "Environ 4 heures",
+   "Toute la nuit"
+  ]
+ },
+ {
+  "key": "sci14-020",
+  "concept": "science.human_body.v14_salive",
+  "label": "La salive",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "À quoi sert la salive ?",
+  "explanation": "On en produit environ 1 litre par jour.",
+  "options": [
+   "À humidifier les aliments et commencer leur digestion*",
+   "À refroidir la bouche",
+   "À fabriquer les dents",
+   "À sentir les odeurs"
+  ]
+ },
+ {
+  "key": "sci14-021",
+  "concept": "science.human_body.v14_transit",
+  "label": "La digestion",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de temps faut-il, en général, pour qu'un repas traverse tout le tube digestif ?",
+  "explanation": "L'estomac ne garde les aliments que quelques heures ; c'est l'intestin qui prend le plus de temps.",
+  "options": [
+   "De 1 à 3 jours*",
+   "Environ 1 heure",
+   "Environ 10 minutes",
+   "Environ 2 semaines"
+  ]
+ },
+ {
+  "key": "sci14-022",
+  "concept": "science.human_body.v14_coeur_sport",
+  "label": "Le cœur pendant le sport",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi le cœur bat-il plus vite pendant le sport ?",
+  "explanation": "Le sang apporte l'oxygène aux muscles qui travaillent : il doit circuler plus vite.",
+  "options": [
+   "Les muscles ont besoin de plus d'oxygène*",
+   "Le cœur a peur",
+   "Le sang devient plus épais",
+   "Les poumons se ferment"
+  ]
+ },
+ {
+  "key": "sci14-023",
+  "concept": "science.human_body.v14_eau_jour",
+  "label": "Boire de l'eau",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle quantité d'eau conseille-t-on de boire par jour à un adulte, environ ?",
+  "explanation": "Une partie de l'eau vient aussi des aliments. Il faut boire plus quand il fait chaud ou qu'on fait du sport.",
+  "options": [
+   "1,5 litre*",
+   "Un verre",
+   "5 litres",
+   "10 litres"
+  ]
+ },
+ {
+  "key": "sci14-024",
+  "concept": "science.human_body.v14_fracture",
+  "label": "La fracture",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qu'est-ce qu'une fracture ?",
+  "explanation": "On la soigne souvent avec un plâtre : l'os se ressoude tout seul en quelques semaines.",
+  "options": [
+   "Un os cassé*",
+   "Un muscle froissé",
+   "Une coupure de la peau",
+   "Une dent cariée"
+  ]
+ },
+ {
+  "key": "sci14-025",
+  "concept": "science.human_body.v14_entorse",
+  "label": "L'entorse",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'une entorse ?",
+  "explanation": "Souvent à la cheville. On met de la glace et on la surélève.",
+  "options": [
+   "Un ligament étiré ou déchiré*",
+   "Un os cassé",
+   "Une crampe",
+   "Une bosse"
+  ]
+ },
+ {
+  "key": "sci14-026",
+  "concept": "science.human_body.v14_cheveux_mouilles",
+  "label": "Le rhume",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Sortir les cheveux mouillés quand il fait froid donne le rhume.",
+  "explanation": "Faux : le rhume est causé par des virus. Le froid peut juste rendre un peu plus fragile.",
+  "answer": false
+ },
+ {
+  "key": "sci14-027",
+  "concept": "science.human_body.v14_cheveux_blancs",
+  "label": "Les cheveux blancs",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Les cheveux deviennent blancs parce qu'ils contiennent de moins en moins de pigment.",
+  "explanation": "Vrai : avec l'âge, les cellules qui fabriquent la mélanine, le pigment, s'arrêtent peu à peu.",
+  "answer": true
+ },
+ {
+  "key": "sci14-028",
+  "concept": "science.human_body.v14_carte_langue",
+  "label": "La langue",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Chaque zone de la langue ne sent qu'une seule saveur : le sucré au bout, l'amer au fond…",
+  "explanation": "Faux : c'est une vieille erreur. Toutes les zones de la langue sentent toutes les saveurs.",
+  "answer": false
+ },
+ {
+  "key": "sci14-029",
+  "concept": "science.human_body.v14_cerveau_douleur",
+  "label": "Le cerveau",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le cerveau lui-même ne ressent pas la douleur.",
+  "explanation": "Vrai : il n'a pas de capteurs de douleur. Certaines opérations du cerveau se font même avec le patient éveillé.",
+  "answer": true
+ },
+ {
+  "key": "sci14-030",
+  "concept": "science.human_body.v14_cerveau",
+  "label": "Le cerveau",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Organe qui commande tout le corps, protégé par le crâne.",
+  "explanation": "Il pèse environ 1,4 kg et contient près de 86 milliards de neurones.",
+  "word": "CERVEAU",
+  "display": "Cerveau"
+ },
+ {
+  "key": "sci14-031",
+  "concept": "science.human_body.v14_vertebre",
+  "label": "La vertèbre",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Chacun des petits os empilés qui forment la colonne.",
+  "explanation": "La moelle épinière passe à l'intérieur, bien protégée.",
+  "word": "VERTEBRE",
+  "display": "Vertèbre"
+ },
+ {
+  "key": "sci14-032",
+  "concept": "science.human_body.v14_muscle",
+  "label": "Le muscle",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Il se contracte pour faire bouger les os.",
+  "explanation": "Il en existe plus de 600 dans le corps.",
+  "word": "MUSCLE",
+  "display": "Muscle"
+ },
+ {
+  "key": "sci14-033",
+  "concept": "science.human_body.v14_crane",
+  "label": "Le crâne",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Boîte osseuse qui protège le cerveau.",
+  "explanation": "Chez le bébé, ses os ne sont pas encore soudés : ce sont les fontanelles.",
+  "word": "CRANE",
+  "display": "Crâne"
+ },
+ {
+  "key": "sci14-034",
+  "concept": "science.physics.v14_montgolfiere",
+  "label": "La montgolfière",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi une montgolfière s'élève-t-elle ?",
+  "explanation": "Le brûleur chauffe l'air de l'enveloppe. Pour descendre, on le laisse refroidir.",
+  "options": [
+   "L'air chaud est plus léger que l'air froid*",
+   "Le vent la pousse vers le haut",
+   "Elle contient de l'hydrogène",
+   "Son panier est très léger"
+  ]
+ },
+ {
+  "key": "sci14-035",
+  "concept": "science.physics.v14_aile_avion",
+  "label": "L'aile d'avion",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qui permet à un avion de tenir en l'air ?",
+  "explanation": "C'est la « portance ». Elle n'existe que si l'avion va assez vite, d'où la longue course au décollage.",
+  "options": [
+   "La forme de ses ailes, qui les pousse vers le haut en avançant*",
+   "Ses réservoirs remplis de gaz léger",
+   "Les moteurs qui soufflent vers le bas",
+   "La vitesse de rotation de la Terre"
+  ]
+ },
+ {
+  "key": "sci14-036",
+  "concept": "science.physics.v14_sismographe",
+  "label": "Le sismographe",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que mesure un sismographe ?",
+  "explanation": "Il enregistre les vibrations du sol, même très lointaines.",
+  "options": [
+   "Les tremblements de terre*",
+   "La force du vent",
+   "La quantité de pluie",
+   "La hauteur des vagues"
+  ]
+ },
+ {
+  "key": "sci14-037",
+  "concept": "science.physics.v14_energie_cinetique",
+  "label": "L'énergie cinétique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'appelle-t-on l'« énergie cinétique » ?",
+  "explanation": "Elle augmente très vite avec la vitesse : à 100 km/h, une voiture en a quatre fois plus qu'à 50 km/h.",
+  "options": [
+   "L'énergie liée au mouvement*",
+   "L'énergie du cinéma",
+   "L'énergie de la chaleur",
+   "L'énergie du son"
+  ]
+ },
+ {
+  "key": "sci14-038",
+  "concept": "science.physics.v14_unite_vitesse",
+  "label": "La vitesse",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans le Système international, en quelle unité mesure-t-on la vitesse ?",
+  "explanation": "Les km/h sont pratiques au quotidien : 1 m/s = 3,6 km/h.",
+  "options": [
+   "En mètres par seconde*",
+   "En kilomètres par heure",
+   "En nœuds",
+   "En watts"
+  ]
+ },
+ {
+  "key": "sci14-039",
+  "concept": "science.physics.v14_unite_masse",
+  "label": "La masse",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle est l'unité de masse du Système international ?",
+  "explanation": "Pendant plus d'un siècle, il a été défini par un cylindre de métal gardé à Sèvres, près de Paris.",
+  "options": [
+   "Le kilogramme*",
+   "Le gramme",
+   "Le newton",
+   "La tonne"
+  ]
+ },
+ {
+  "key": "sci14-040",
+  "concept": "science.physics.v14_court_circuit",
+  "label": "Le court-circuit",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'un court-circuit ?",
+  "explanation": "C'est pour ça qu'il y a des fusibles et des disjoncteurs : ils coupent le courant tout de suite.",
+  "options": [
+   "Le courant passe par un chemin sans obstacle et chauffe dangereusement*",
+   "Un circuit électrique très petit",
+   "Une panne de batterie",
+   "Un éclair dans une maison"
+  ]
+ },
+ {
+  "key": "sci14-041",
+  "concept": "science.physics.v14_oiseaux_fil",
+  "label": "Les oiseaux sur les fils",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi les oiseaux posés sur un fil électrique ne sont-ils pas électrocutés ?",
+  "explanation": "Le danger, ce serait de toucher deux fils à la fois, ou un fil et le poteau.",
+  "options": [
+   "Ils ne touchent qu'un seul fil : le courant ne passe pas par eux*",
+   "Leurs plumes sont isolantes",
+   "Les fils n'ont pas de courant",
+   "Ils sont trop légers"
+  ]
+ },
+ {
+  "key": "sci14-042",
+  "concept": "science.physics.v14_frotter_mains",
+  "label": "Se frotter les mains",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Pourquoi se frotte-t-on les mains quand on a froid ?",
+  "explanation": "Le frottement transforme le mouvement en chaleur, comme les freins d'un vélo.",
+  "options": [
+   "Le frottement produit de la chaleur*",
+   "Pour chasser l'humidité",
+   "Pour faire circuler l'air",
+   "Ça ne sert à rien"
+  ]
+ },
+ {
+  "key": "sci14-043",
+  "concept": "science.physics.v14_coquillage",
+  "label": "Le bruit de la mer",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi croit-on entendre la mer dans un gros coquillage ?",
+  "explanation": "Avec un bol ou une tasse contre l'oreille, on entend le même genre de bruit.",
+  "options": [
+   "Il amplifie les bruits qui nous entourent*",
+   "Il garde le son des vagues",
+   "Le sang de l'oreille fait des vagues",
+   "Il contient encore de l'eau"
+  ]
+ },
+ {
+  "key": "sci14-044",
+  "concept": "science.physics.v14_manche_casserole",
+  "label": "Le manche de la casserole",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pourquoi les manches de casseroles sont-ils souvent en bois ou en plastique ?",
+  "explanation": "Ce sont des isolants thermiques : on peut tenir la casserole sans se brûler.",
+  "options": [
+   "Ces matériaux conduisent mal la chaleur*",
+   "Ils sont plus jolis",
+   "Ils sont plus solides que le métal",
+   "Ils chauffent plus vite"
+  ]
+ },
+ {
+  "key": "sci14-045",
+  "concept": "science.physics.v14_thermos",
+  "label": "La bouteille isotherme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment une bouteille isotherme garde-t-elle un liquide chaud ou froid ?",
+  "explanation": "La chaleur passe très mal à travers le vide. Les parois brillantes renvoient aussi la chaleur.",
+  "options": [
+   "Grâce à du vide entre deux parois*",
+   "Grâce à une pile cachée",
+   "Grâce à de la glace dans le bouchon",
+   "Grâce à un aimant"
+  ]
+ },
+ {
+  "key": "sci14-046",
+  "concept": "science.physics.v14_kwh",
+  "label": "Le kilowattheure",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Sur une facture d'électricité, que mesurent les kWh ?",
+  "explanation": "1 kWh, c'est par exemple un appareil de 1 000 watts allumé pendant une heure.",
+  "options": [
+   "L'énergie consommée*",
+   "La puissance du compteur",
+   "La tension du courant",
+   "Le nombre d'appareils"
+  ]
+ },
+ {
+  "key": "sci14-047",
+  "concept": "science.physics.v14_laser",
+  "label": "Le laser",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qui caractérise la lumière d'un laser ?",
+  "explanation": "On l'utilise pour lire des codes-barres, opérer les yeux ou découper le métal.",
+  "options": [
+   "Un faisceau très concentré, d'une seule couleur*",
+   "Une lumière blanche très douce",
+   "Une lumière invisible et chaude",
+   "Une lumière qui tourne"
+  ]
+ },
+ {
+  "key": "sci14-048",
+  "concept": "science.physics.v14_effet_serre",
+  "label": "L'effet de serre",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce que l'effet de serre ?",
+  "explanation": "Sans lui, il ferait -18 °C en moyenne sur Terre. Le problème, c'est qu'on l'a renforcé.",
+  "options": [
+   "Des gaz de l'atmosphère retiennent une partie de la chaleur de la Terre*",
+   "La chaleur produite par les serres de jardin",
+   "Un trou dans la couche d'ozone",
+   "La lumière de la Lune"
+  ]
+ },
+ {
+  "key": "sci14-049",
+  "concept": "science.physics.v14_vitesses_ordre",
+  "label": "Du plus lent au plus rapide",
+  "type": "ordering",
+  "difficulty": 25,
+  "prompt": "Classe du plus lent au plus rapide.",
+  "explanation": "L'escargot fait environ 1 m par minute ; la lumière, 300 000 km par seconde.",
+  "items": [
+   "Un escargot",
+   "Un humain qui marche",
+   "Un guépard",
+   "Le son",
+   "La lumière"
+  ]
+ },
+ {
+  "key": "sci14-050",
+  "concept": "science.physics.v14_temperatures_ordre",
+  "label": "Du plus froid au plus chaud",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Classe ces températures de la plus froide à la plus chaude.",
+  "explanation": "-273 °C, 0 °C, 37 °C, 100 °C et environ 5 500 °C.",
+  "items": [
+   "Le zéro absolu",
+   "La glace qui fond",
+   "Le corps humain",
+   "L'eau qui bout",
+   "La surface du Soleil"
+  ]
+ },
+ {
+  "key": "sci14-051",
+  "concept": "science.physics.v14_renouvelables",
+  "label": "Renouvelable ou pas ?",
+  "type": "sort",
+  "difficulty": 25,
+  "prompt": "Cette énergie est-elle renouvelable ?",
+  "explanation": "Les énergies renouvelables ne s'épuisent pas à notre échelle. Le pétrole, le charbon, le gaz et l'uranium sont des stocks limités.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Renouvelable"
+   },
+   {
+    "label": "Pas renouvelable"
+   }
+  ],
+  "items": [
+   [
+    "Solaire",
+    0
+   ],
+   [
+    "Éolien",
+    0
+   ],
+   [
+    "Hydraulique",
+    0
+   ],
+   [
+    "Géothermie",
+    0
+   ],
+   [
+    "Pétrole",
+    1
+   ],
+   [
+    "Charbon",
+    1
+   ],
+   [
+    "Gaz naturel",
+    1
+   ],
+   [
+    "Uranium",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "sci14-052",
+  "concept": "science.physics.v14_transparent",
+  "label": "Transparent ou opaque ?",
+  "type": "sort",
+  "difficulty": 10,
+  "prompt": "Laisse-t-il passer la lumière ?",
+  "explanation": "Un objet opaque arrête la lumière : c'est pour ça qu'il fait de l'ombre.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Transparent"
+   },
+   {
+    "label": "Opaque"
+   }
+  ],
+  "items": [
+   [
+    "Verre",
+    0
+   ],
+   [
+    "Eau claire",
+    0
+   ],
+   [
+    "Air",
+    0
+   ],
+   [
+    "Film plastique",
+    0
+   ],
+   [
+    "Bois",
+    1
+   ],
+   [
+    "Métal",
+    1
+   ],
+   [
+    "Carton",
+    1
+   ],
+   [
+    "Pierre",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "sci14-053",
+  "concept": "science.physics.v14_instruments_mesure",
+  "label": "Instruments de mesure",
+  "type": "pairs",
+  "difficulty": 15,
+  "prompt": "Associe chaque instrument à ce qu'il mesure.",
+  "explanation": "Le pluviomètre est un simple récipient gradué qui recueille la pluie.",
+  "pairs": [
+   [
+    "Thermomètre",
+    "La température"
+   ],
+   [
+    "Balance",
+    "La masse"
+   ],
+   [
+    "Chronomètre",
+    "Une durée"
+   ],
+   [
+    "Pluviomètre",
+    "La pluie tombée"
+   ]
+  ]
+ },
+ {
+  "key": "sci14-054",
+  "concept": "science.chemistry.v14_co2_formule",
+  "label": "Le dioxyde de carbone",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle est la formule chimique du dioxyde de carbone ?",
+  "explanation": "Un atome de carbone et deux d'oxygène. CH₄, c'est le méthane.",
+  "options": [
+   "CO₂*",
+   "O₂",
+   "H₂O",
+   "CH₄"
+  ]
+ },
+ {
+  "key": "sci14-055",
+  "concept": "science.chemistry.v14_vinaigre_acide",
+  "label": "Le vinaigre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Le vinaigre est plutôt…",
+  "explanation": "Il contient de l'acide acétique. C'est ce qui lui donne son goût piquant.",
+  "options": [
+   "Acide*",
+   "Basique",
+   "Neutre",
+   "Salé"
+  ]
+ },
+ {
+  "key": "sci14-056",
+  "concept": "science.chemistry.v14_citron_ph",
+  "label": "Le jus de citron",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Le jus de citron a un pH…",
+  "explanation": "Environ 2. Plus le pH est bas, plus c'est acide.",
+  "options": [
+   "Inférieur à 7 (acide)*",
+   "Égal à 7 (neutre)",
+   "Supérieur à 7 (basique)",
+   "Égal à 14"
+  ]
+ },
+ {
+  "key": "sci14-057",
+  "concept": "science.chemistry.v14_acide_basique",
+  "label": "Acide ou basique ?",
+  "type": "sort",
+  "difficulty": 40,
+  "prompt": "Plutôt acide, ou plutôt basique ?",
+  "explanation": "Les produits d'entretien sont souvent basiques ; ce qui est acide a souvent un goût piquant.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Acide"
+   },
+   {
+    "label": "Basique"
+   }
+  ],
+  "items": [
+   [
+    "Jus de citron",
+    0
+   ],
+   [
+    "Vinaigre",
+    0
+   ],
+   [
+    "Soda",
+    0
+   ],
+   [
+    "Jus d'orange",
+    0
+   ],
+   [
+    "Savon",
+    1
+   ],
+   [
+    "Eau de Javel",
+    1
+   ],
+   [
+    "Bicarbonate de soude",
+    1
+   ],
+   [
+    "Lessive",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "sci14-058",
+  "concept": "science.chemistry.v14_alliage",
+  "label": "L'alliage",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un alliage ?",
+  "explanation": "L'acier (fer et carbone) ou le laiton (cuivre et zinc) en sont aussi.",
+  "options": [
+   "Un mélange de métaux*",
+   "Un métal pur",
+   "Une pierre précieuse",
+   "Un gaz liquide"
+  ]
+ },
+ {
+  "key": "sci14-059",
+  "concept": "science.chemistry.v14_bronze",
+  "label": "Le bronze",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quoi le bronze est-il fait ?",
+  "explanation": "Il a donné son nom à l'âge du bronze, il y a environ 5 000 ans.",
+  "options": [
+   "De cuivre et d'étain*",
+   "De fer et de carbone",
+   "D'or et d'argent",
+   "De zinc et de plomb"
+  ]
+ },
+ {
+  "key": "sci14-060",
+  "concept": "science.chemistry.v14_verre_sable",
+  "label": "Le verre",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Avec quoi fabrique-t-on surtout le verre ?",
+  "explanation": "Le sable (la silice) fond vers 1 700 °C. On ajoute d'autres matières pour baisser cette température.",
+  "options": [
+   "Du sable fondu*",
+   "De l'argile cuite",
+   "Du plastique chauffé",
+   "De la glace"
+  ]
+ },
+ {
+  "key": "sci14-061",
+  "concept": "science.chemistry.v14_diamant_graphite",
+  "label": "Le diamant",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le diamant et la mine d'un crayon de papier sont faits du même élément.",
+  "explanation": "Vrai : tous deux sont du carbone pur. Seule la façon dont les atomes sont rangés change tout.",
+  "answer": true
+ },
+ {
+  "key": "sci14-062",
+  "concept": "science.chemistry.v14_dissolution",
+  "label": "La dissolution",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment appelle-t-on le fait que le sucre « disparaisse » dans l'eau ?",
+  "explanation": "Le sucre est toujours là : l'eau reste sucrée. La fusion, c'est quand un solide devient liquide en chauffant.",
+  "options": [
+   "La dissolution*",
+   "L'évaporation",
+   "La fusion",
+   "La combustion"
+  ]
+ },
+ {
+  "key": "sci14-063",
+  "concept": "science.chemistry.v14_triangle_feu",
+  "label": "Le triangle du feu",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quels sont les trois éléments nécessaires à un feu ?",
+  "explanation": "Pour éteindre un feu, il suffit d'en supprimer un : c'est le principe des extincteurs.",
+  "options": [
+   "Un combustible, de l'oxygène et de la chaleur*",
+   "Du bois, du vent et du papier",
+   "De l'eau, de l'air et de la terre",
+   "Du gaz, du métal et de l'électricité"
+  ]
+ },
+ {
+  "key": "sci14-064",
+  "concept": "science.chemistry.v14_monoxyde",
+  "label": "Le monoxyde de carbone",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel gaz toxique, sans odeur, peut s'échapper d'un chauffage mal réglé ?",
+  "explanation": "Il est très dangereux car on ne le sent pas. Un détecteur et l'aération de la maison protègent.",
+  "options": [
+   "Le monoxyde de carbone*",
+   "L'azote",
+   "L'hélium",
+   "La vapeur d'eau"
+  ]
+ },
+ {
+  "key": "sci14-065",
+  "concept": "science.chemistry.v14_odeur_gaz",
+  "label": "L'odeur du gaz",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi le gaz de cuisine sent-il mauvais ?",
+  "explanation": "Le gaz naturel ne sent rien. On y ajoute un produit à l'odeur forte pour la sécurité.",
+  "options": [
+   "On lui ajoute une odeur pour repérer les fuites*",
+   "Il est mal filtré",
+   "Il pourrit dans les tuyaux",
+   "C'est son odeur naturelle"
+  ]
+ },
+ {
+  "key": "sci14-066",
+  "concept": "science.chemistry.v14_ozone",
+  "label": "L'ozone",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce que la couche d'ozone ?",
+  "explanation": "L'ozone est fait de trois atomes d'oxygène (O₃). Elle se reconstitue lentement depuis l'interdiction de certains gaz.",
+  "options": [
+   "Une couche de gaz en altitude qui filtre les rayons UV du Soleil*",
+   "La couche de nuages la plus haute",
+   "La croûte de la Terre",
+   "Une couche de glace aux pôles"
+  ]
+ },
+ {
+  "key": "sci14-067",
+  "concept": "science.chemistry.v14_feux_artifice",
+  "label": "Les feux d'artifice",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qui donne leurs couleurs aux feux d'artifice ?",
+  "explanation": "Le strontium donne du rouge, le sodium du jaune, le cuivre du bleu-vert.",
+  "options": [
+   "Différents métaux qui colorent la flamme*",
+   "Des peintures fluorescentes",
+   "Des ampoules cachées",
+   "La couleur du ciel"
+  ]
+ },
+ {
+  "key": "sci14-068",
+  "concept": "science.chemistry.v14_atome",
+  "label": "L'atome",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Minuscule brique de la matière, avec un noyau et des électrons.",
+  "explanation": "Le mot vient du grec « atomos », qui ne peut pas être coupé… même si on a appris à le faire.",
+  "word": "ATOME",
+  "display": "Atome"
+ },
+ {
+  "key": "sci14-069",
+  "concept": "science.chemistry.v14_molecule",
+  "label": "La molécule",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Assemblage d'atomes, comme H₂O pour l'eau.",
+  "explanation": "Une molécule d'eau compte deux atomes d'hydrogène et un d'oxygène.",
+  "word": "MOLECULE",
+  "display": "Molécule"
+ },
+ {
+  "key": "sci14-070",
+  "concept": "science.chemistry.v14_co2_serre",
+  "label": "Le CO₂",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel gaz rejeté par les activités humaines renforce le plus l'effet de serre ?",
+  "explanation": "Il vient surtout du pétrole, du charbon et du gaz brûlés. Le méthane joue aussi un grand rôle.",
+  "options": [
+   "Le dioxyde de carbone (CO₂)*",
+   "L'oxygène",
+   "L'azote",
+   "L'hélium"
+  ]
+ },
+ {
+  "key": "sci14-071",
+  "concept": "science.space.v14_mars_dieu",
+  "label": "Mars",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle planète porte le nom du dieu romain de la guerre ?",
+  "explanation": "Sa couleur rouge, comme le sang, a inspiré ce nom.",
+  "options": [
+   "Mars*",
+   "Jupiter",
+   "Saturne",
+   "Mercure"
+  ]
+ },
+ {
+  "key": "sci14-072",
+  "concept": "science.space.v14_exoplanete",
+  "label": "Les exoplanètes",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'une exoplanète ?",
+  "explanation": "La première autour d'une étoile comme le Soleil a été découverte en 1995, par deux Suisses. On en connaît aujourd'hui des milliers.",
+  "options": [
+   "Une planète qui tourne autour d'une autre étoile que le Soleil*",
+   "Une planète morte",
+   "Une étoile filante",
+   "Une planète sans lune"
+  ]
+ },
+ {
+  "key": "sci14-073",
+  "concept": "science.space.v14_apollo_trajet",
+  "label": "Le voyage vers la Lune",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Combien de temps mettaient les astronautes d'Apollo pour aller de la Terre à la Lune ?",
+  "explanation": "Environ 384 000 km. Le retour prenait à peu près le même temps.",
+  "options": [
+   "Environ 3 jours*",
+   "Environ 3 heures",
+   "Environ 3 semaines",
+   "Environ 3 mois"
+  ]
+ },
+ {
+  "key": "sci14-074",
+  "concept": "science.space.v14_supernova",
+  "label": "La supernova",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce qu'une supernova ?",
+  "explanation": "Elle peut briller autant qu'une galaxie entière pendant quelques semaines.",
+  "options": [
+   "L'explosion d'une étoile en fin de vie*",
+   "Une nouvelle planète",
+   "Une étoile qui vient de naître",
+   "Une très grosse comète"
+  ]
+ },
+ {
+  "key": "sci14-075",
+  "concept": "science.space.v14_aurore",
+  "label": "L'aurore boréale",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qui crée les aurores boréales ?",
+  "explanation": "Surtout près des pôles. En 2024, des aurores ont même été visibles depuis la France.",
+  "options": [
+   "Des particules venues du Soleil qui illuminent le haut de l'atmosphère*",
+   "Le reflet de la glace polaire",
+   "Des éclairs très lents",
+   "La lumière de la Lune"
+  ]
+ },
+ {
+  "key": "sci14-076",
+  "concept": "science.space.v14_constellations",
+  "label": "Les constellations",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien de constellations officielles compte le ciel ?",
+  "explanation": "88, fixées en 1922. La Grande Ourse et Orion sont parmi les plus connues.",
+  "answer": 88,
+  "tolerance": 0
+ },
+ {
+  "key": "sci14-077",
+  "concept": "science.space.v14_ciel_lune_noir",
+  "label": "Le ciel de la Lune",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Sur la Lune, le ciel est bleu en plein jour, comme sur Terre.",
+  "explanation": "Faux : il est noir, même en plein jour. Il n'y a pas d'atmosphère pour diffuser la lumière du Soleil et colorer le ciel.",
+  "answer": false
+ },
+ {
+  "key": "sci14-078",
+  "concept": "science.space.v14_jour_mars",
+  "label": "La journée sur Mars",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Une journée sur Mars dure deux fois plus longtemps qu'une journée sur Terre.",
+  "explanation": "Faux : elle dure environ 24 h 40, presque comme chez nous. Les équipes des robots martiens vivent parfois à l'« heure de Mars ».",
+  "answer": false
+ },
+ {
+  "key": "sci14-079",
+  "concept": "science.space.v14_tailles_astres",
+  "label": "Du plus petit au plus grand",
+  "type": "ordering",
+  "difficulty": 15,
+  "prompt": "Classe ces astres du plus petit au plus grand.",
+  "explanation": "La Terre est environ 4 fois plus large que la Lune ; Jupiter 11 fois plus que la Terre ; le Soleil 10 fois plus que Jupiter.",
+  "items": [
+   "La Lune",
+   "La Terre",
+   "Jupiter",
+   "Le Soleil"
+  ]
+ },
+ {
+  "key": "sci14-080",
+  "concept": "science.space.v14_distances_ordre",
+  "label": "Du plus près au plus loin",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces distances de la plus courte à la plus longue.",
+  "explanation": "384 000 km, 150 millions de km, 4,5 milliards de km, puis plus de 40 000 milliards de km.",
+  "items": [
+   "De la Terre à la Lune",
+   "De la Terre au Soleil",
+   "Du Soleil à Neptune",
+   "Du Soleil à l'étoile la plus proche"
+  ]
+ },
+ {
+  "key": "sci14-081",
+  "concept": "science.space.v14_lumiere_lune",
+  "label": "La lumière de la Lune",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de temps met la lumière renvoyée par la Lune pour arriver jusqu'à nous ?",
+  "explanation": "La Lune est à environ 384 000 km. La lumière du Soleil, elle, met 8 minutes.",
+  "options": [
+   "Un peu plus d'une seconde*",
+   "8 minutes",
+   "Une heure",
+   "Une journée"
+  ]
+ },
+ {
+  "key": "sci14-082",
+  "concept": "science.space.v14_petite_planete",
+  "label": "La plus petite planète",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle est la plus petite planète du Système solaire ?",
+  "explanation": "Mercure est à peine plus grande que la Lune. Pluton n'est plus une planète depuis 2006.",
+  "options": [
+   "Mercure*",
+   "Mars",
+   "Vénus",
+   "Pluton"
+  ]
+ },
+ {
+  "key": "sci14-083",
+  "concept": "science.space.v14_jour_jupiter",
+  "label": "La journée la plus courte",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Sur quelle planète la journée est-elle la plus courte ?",
+  "explanation": "Elle tourne si vite sur elle-même qu'elle est aplatie aux pôles.",
+  "options": [
+   "Jupiter, environ 10 heures*",
+   "Mercure",
+   "La Terre",
+   "Vénus"
+  ]
+ },
+ {
+  "key": "sci14-084",
+  "concept": "science.chemistry.v14_levure_chimique",
+  "label": "La levure chimique",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que fait la levure chimique dans un gâteau ?",
+  "explanation": "Avec la chaleur et l'humidité, elle dégage du dioxyde de carbone. Les bulles restent prisonnières de la pâte.",
+  "options": [
+   "Elle libère du gaz qui fait gonfler la pâte*",
+   "Elle sucre le gâteau",
+   "Elle colore la croûte",
+   "Elle empêche le gâteau de coller"
+  ]
+ },
+ {
+  "key": "sci14-085",
+  "concept": "science.chemistry.v14_fer_metal",
+  "label": "Le fer",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel métal est le plus utilisé au monde ?",
+  "explanation": "L'acier, du fer avec un peu de carbone, sert aux immeubles, aux voitures, aux rails…",
+  "options": [
+   "Le fer, surtout sous forme d'acier*",
+   "L'or",
+   "Le cuivre",
+   "L'aluminium"
+  ]
+ },
+ {
+  "key": "sci14-086",
+  "concept": "science.chemistry.v14_aluminium_rouille",
+  "label": "L'aluminium",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi l'aluminium ne rouille-t-il pas comme le fer ?",
+  "explanation": "Cette couche d'oxyde, invisible, empêche l'air d'attaquer le métal en dessous.",
+  "options": [
+   "Une fine couche protectrice se forme à sa surface*",
+   "Il ne touche jamais l'oxygène",
+   "Il est trop léger",
+   "Il est recouvert de peinture"
+  ]
+ },
+ {
+  "key": "sci14-087",
+  "concept": "science.physics.v14_paratonnerre",
+  "label": "Le paratonnerre",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert un paratonnerre ?",
+  "explanation": "Une tige de métal reliée à la terre par un câble. On le doit à Benjamin Franklin.",
+  "options": [
+   "À attirer la foudre et la conduire sans danger dans le sol*",
+   "À repousser les nuages",
+   "À produire de l'électricité",
+   "À mesurer le vent"
+  ]
+ },
+ {
+  "key": "sci14-088",
+  "concept": "science.physics.v14_regarder_soleil",
+  "label": "Le Soleil",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pourquoi ne faut-il jamais regarder le Soleil en face ?",
+  "explanation": "Même pendant une éclipse : il faut des lunettes spéciales. Les dégâts peuvent être définitifs.",
+  "options": [
+   "Sa lumière peut brûler la rétine*",
+   "Il rend les yeux bleus",
+   "Il fait éternuer",
+   "Il fait perdre l'équilibre"
+  ]
+ },
+ {
+  "key": "sci14-089",
+  "concept": "science.space.v14_curiosity",
+  "label": "Curiosity",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel robot de la NASA explore Mars depuis 2012 ?",
+  "explanation": "Un véhicule de la taille d'une voiture. Il embarque un laser franco-américain, ChemCam, qui analyse les roches à distance.",
+  "options": [
+   "Curiosity*",
+   "Spirit",
+   "Sojourner",
+   "Hubble"
+  ]
+ },
+ {
+  "key": "sci14-090",
+  "concept": "science.human_body.v14_clignements",
+  "label": "Cligner des yeux",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de fois cligne-t-on des yeux par minute, environ ?",
+  "explanation": "Chaque clignement étale des larmes qui protègent l'œil. Devant un écran, on cligne beaucoup moins.",
+  "options": [
+   "15 à 20 fois*",
+   "1 à 2 fois",
+   "100 fois",
+   "Jamais quand on est concentré"
+  ]
+ },
+ {
+  "key": "sci14-091",
+  "concept": "science.space.v14_etoile_couleur",
+  "label": "La couleur des étoiles",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que nous apprend la couleur d'une étoile ?",
+  "explanation": "Les étoiles rouges sont les plus « froides » (3 000 °C), les bleues dépassent 20 000 °C. Le Soleil est jaune.",
+  "options": [
+   "Sa température : les bleues sont les plus chaudes*",
+   "Son âge exact",
+   "Sa distance",
+   "Le nombre de ses planètes"
+  ]
+ }
+]

@@ -29,6 +29,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | 120 questions de nature faciles (D-060) | ✅ en production (16/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | 204 questions cinéma (103) et musique (101), types variés (D-063) | ✅ en production (16/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Sport (655) et technologie (653) : +257 questions, types variés (D-065) | ✅ en production (17/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
+| Arts (656), logique (650), science (654), français (653) : +409 questions (D-066) | ✅ en production (17/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Pubs : Unity Ads en enchères, choix de confidentialité, raison des échecs (D-064) | 🟡 app 1.3 (TestFlight), serveur 0062 | `99_pubs_unity.sql` |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |

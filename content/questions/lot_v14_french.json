@@ -1,0 +1,2359 @@
+[
+ {
+  "key": "fra14-001",
+  "concept": "french.expressions.v14_tete_guidon",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Avoir la tête dans le guidon », c'est…",
+  "explanation": "L'image du cycliste qui pédale, le nez sur son guidon, sans voir la route.",
+  "options": [
+   "Être trop pris par ce qu'on fait pour prendre du recul*",
+   "Faire du vélo très vite",
+   "Avoir mal à la tête",
+   "Ne rien comprendre"
+  ]
+ },
+ {
+  "key": "fra14-002",
+  "concept": "french.expressions.v14_dents_longues",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Avoir les dents longues », c'est…",
+  "explanation": "Celui qui a « les dents qui rayent le parquet » est encore plus ambitieux !",
+  "options": [
+   "Être très ambitieux*",
+   "Avoir très faim",
+   "Mentir souvent",
+   "Être vieux"
+  ]
+ },
+ {
+  "key": "fra14-003",
+  "concept": "french.expressions.v14_coeur_artichaut",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Avoir « un cœur d'artichaut », c'est…",
+  "explanation": "Comme l'artichaut dont on donne les feuilles une à une, on offre son cœur à tout le monde.",
+  "options": [
+   "Tomber amoureux très facilement*",
+   "Être très gourmand",
+   "Être sans cœur",
+   "Être timide"
+  ]
+ },
+ {
+  "key": "fra14-004",
+  "concept": "french.expressions.v14_trois_pattes",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Ça ne casse pas trois pattes à un canard » veut dire…",
+  "explanation": "Un canard à trois pattes serait extraordinaire : ici, rien d'exceptionnel.",
+  "options": [
+   "Ce n'est pas extraordinaire*",
+   "C'est très dangereux",
+   "C'est très solide",
+   "C'est interdit"
+  ]
+ },
+ {
+  "key": "fra14-005",
+  "concept": "french.expressions.v14_trente_et_un",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Être « sur son trente-et-un », c'est…",
+  "explanation": "L'origine est discutée, mais le sens est clair : on a mis ses plus beaux habits.",
+  "options": [
+   "Être très bien habillé*",
+   "Avoir 31 ans",
+   "Être en retard",
+   "Être fatigué"
+  ]
+ },
+ {
+  "key": "fra14-006",
+  "concept": "french.expressions.v14_faim_loup",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Avoir « une faim de loup », c'est…",
+  "explanation": "Le loup affamé est l'image même de l'appétit.",
+  "options": [
+   "Avoir très faim*",
+   "Avoir peur",
+   "Être en colère",
+   "Manger de la viande"
+  ]
+ },
+ {
+  "key": "fra14-007",
+  "concept": "french.expressions.v14_poser_colle",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Poser une colle » à quelqu'un, c'est…",
+  "explanation": "Une « colle » est aussi une interrogation dans les classes préparatoires.",
+  "options": [
+   "Lui poser une question difficile*",
+   "Le punir",
+   "Réparer un objet",
+   "Lui faire une farce"
+  ]
+ },
+ {
+  "key": "fra14-008",
+  "concept": "french.expressions.v14_langue_pendue",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Avoir « la langue bien pendue », c'est…",
+  "explanation": "Celui qui parle sans jamais s'arrêter.",
+  "options": [
+   "Parler beaucoup et facilement*",
+   "Avoir soif",
+   "Dire des gros mots",
+   "Être muet"
+  ]
+ },
+ {
+  "key": "fra14-009",
+  "concept": "french.expressions.v14_anguille_roche",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Il y a anguille sous roche » signifie…",
+  "explanation": "L'anguille se cache sous les pierres, invisible.",
+  "options": [
+   "Quelque chose de caché se prépare*",
+   "Il va pleuvoir",
+   "La pêche est bonne",
+   "Tout est clair"
+  ]
+ },
+ {
+  "key": "fra14-010",
+  "concept": "french.expressions.v14_main_au_feu",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« J'en mettrais ma main au feu » veut dire…",
+  "explanation": "Au Moyen Âge, on prouvait parfois sa bonne foi en tenant un fer rouge.",
+  "options": [
+   "J'en suis absolument sûr*",
+   "Je me suis brûlé",
+   "Je n'en sais rien",
+   "J'ai froid aux mains"
+  ]
+ },
+ {
+  "key": "fra14-011",
+  "concept": "french.expressions.v14_cheveux_quatre",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Couper les cheveux en quatre », c'est…",
+  "explanation": "Couper un cheveu en quatre dans sa longueur : un travail inutilement minutieux.",
+  "options": [
+   "Compliquer les choses pour des détails*",
+   "Aller chez le coiffeur",
+   "Partager équitablement",
+   "Travailler vite"
+  ]
+ },
+ {
+  "key": "fra14-012",
+  "concept": "french.expressions.v14_bonne_pate",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Être « une bonne pâte », c'est…",
+  "explanation": "Une pâte souple, qu'on modèle facilement.",
+  "options": [
+   "Être gentil et facile à vivre*",
+   "Être bon cuisinier",
+   "Être un peu mou",
+   "Être gourmand"
+  ]
+ },
+ {
+  "key": "fra14-013",
+  "concept": "french.expressions.v14_salades",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Raconter des salades », c'est…",
+  "explanation": "Une salade mélange tout : une histoire embrouillée et fausse.",
+  "options": [
+   "Raconter des mensonges*",
+   "Parler de cuisine",
+   "Parler trop vite",
+   "Faire un régime"
+  ]
+ },
+ {
+  "key": "fra14-014",
+  "concept": "french.expressions.v14_gros_patate",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« En avoir gros sur la patate », c'est…",
+  "explanation": "La « patate » désigne ici le cœur.",
+  "options": [
+   "Avoir beaucoup de chagrin ou de rancœur*",
+   "Avoir trop mangé",
+   "Être très riche",
+   "Être fatigué"
+  ]
+ },
+ {
+  "key": "fra14-015",
+  "concept": "french.expressions.v14_la_frite",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Avoir la frite », c'est…",
+  "explanation": "Une expression familière, comme « avoir la pêche » ou « avoir la banane ».",
+  "options": [
+   "Être en pleine forme*",
+   "Avoir faim",
+   "Être en retard",
+   "Être de mauvaise humeur"
+  ]
+ },
+ {
+  "key": "fra14-016",
+  "concept": "french.expressions.v14_carottes_cuites",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Les carottes sont cuites » signifie…",
+  "explanation": "Ce message codé a même été utilisé par la Résistance à la radio.",
+  "options": [
+   "C'est fichu, il n'y a plus rien à faire*",
+   "Le repas est prêt",
+   "Il faut se dépêcher",
+   "Tout va bien"
+  ]
+ },
+ {
+  "key": "fra14-017",
+  "concept": "french.expressions.v14_mauvais_sang",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Se faire du mauvais sang », c'est…",
+  "explanation": "On croyait autrefois que les émotions changeaient la qualité du sang.",
+  "options": [
+   "S'inquiéter beaucoup*",
+   "Être malade",
+   "Se mettre en colère",
+   "Se blesser"
+  ]
+ },
+ {
+  "key": "fra14-018",
+  "concept": "french.expressions.v14_petrin",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Être « dans le pétrin », c'est…",
+  "explanation": "Le pétrin est le coffre où le boulanger pétrit la pâte : on s'y retrouve collé.",
+  "options": [
+   "Être dans une situation difficile*",
+   "Faire du pain",
+   "Être très occupé",
+   "Être heureux"
+  ]
+ },
+ {
+  "key": "fra14-019",
+  "concept": "french.expressions.v14_prendre_mouche",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Prendre la mouche », c'est…",
+  "explanation": "Comme un cheval agacé par une mouche qui le pique.",
+  "options": [
+   "Se vexer pour un rien*",
+   "Attraper un insecte",
+   "Partir en vacances",
+   "Changer d'avis"
+  ]
+ },
+ {
+  "key": "fra14-020",
+  "concept": "french.expressions.v14_passer_eponge",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Passer l'éponge », c'est…",
+  "explanation": "On efface tout, comme sur une ardoise.",
+  "options": [
+   "Pardonner et oublier*",
+   "Faire le ménage",
+   "Abandonner",
+   "Pleurer"
+  ]
+ },
+ {
+  "key": "fra14-021",
+  "concept": "french.expressions.v14_tomber_nues",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Tomber des nues », c'est…",
+  "explanation": "Les « nues », ce sont les nuages : on tombe de très haut.",
+  "options": [
+   "Être extrêmement surpris*",
+   "Tomber d'un avion",
+   "Être très triste",
+   "S'endormir"
+  ]
+ },
+ {
+  "key": "fra14-022",
+  "concept": "french.expressions.v14_moutarde_nez",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« La moutarde lui monte au nez » signifie qu'il…",
+  "explanation": "Comme le picotement de la moutarde forte, l'énervement monte.",
+  "options": [
+   "Commence à se mettre en colère*",
+   "A trop mangé",
+   "Est enrhumé",
+   "Va éternuer"
+  ]
+ },
+ {
+  "key": "fra14-023",
+  "concept": "french.expressions.v14_pluie_beau_temps",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Faire la pluie et le beau temps », c'est…",
+  "explanation": "Comme si l'on commandait au ciel lui-même.",
+  "options": [
+   "Décider de tout, avoir beaucoup d'influence*",
+   "Présenter la météo",
+   "Changer d'humeur",
+   "Être imprévisible"
+  ]
+ },
+ {
+  "key": "fra14-024",
+  "concept": "french.expressions.v14_points_sur_i",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Mettre les points sur les i », c'est…",
+  "explanation": "Au Moyen Âge, on a ajouté un point sur le i pour ne pas le confondre avec d'autres lettres.",
+  "options": [
+   "Dire les choses très clairement*",
+   "Apprendre à écrire",
+   "Faire des fautes",
+   "Signer un document"
+  ]
+ },
+ {
+  "key": "fra14-025",
+  "concept": "french.expressions.v14_derniere_pluie",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Ne pas être « tombé de la dernière pluie », c'est…",
+  "explanation": "On n'est pas né d'hier, comme les champignons après la pluie.",
+  "options": [
+   "Avoir de l'expérience, ne pas être naïf*",
+   "Être toujours au sec",
+   "Être très âgé",
+   "Aimer le soleil"
+  ]
+ },
+ {
+  "key": "fra14-026",
+  "concept": "french.expressions.v14_vieux_ours",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dire de quelqu'un que c'est « un ours », c'est dire qu'il…",
+  "explanation": "Un « ours mal léché » est en plus un peu bourru.",
+  "options": [
+   "Fuit la compagnie des autres*",
+   "Est très fort",
+   "Mange beaucoup",
+   "Dort tout l'hiver"
+  ]
+ },
+ {
+  "key": "fra14-027",
+  "concept": "french.expressions.v14_bouche_cousue",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "« Bouche cousue ! » veut dire…",
+  "explanation": "On fait souvent le geste de fermer une fermeture éclair sur ses lèvres.",
+  "options": [
+   "Garde le secret*",
+   "Arrête de manger",
+   "Tu as mal aux dents",
+   "Parle plus fort"
+  ]
+ },
+ {
+  "key": "fra14-028",
+  "concept": "french.expressions.v14_creuser_tete",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "« Se creuser la tête », c'est…",
+  "explanation": "On cherche au fond de sa mémoire, comme en creusant un trou.",
+  "options": [
+   "Réfléchir beaucoup*",
+   "Avoir mal à la tête",
+   "Jardiner",
+   "Tomber"
+  ]
+ },
+ {
+  "key": "fra14-029",
+  "concept": "french.expressions.v14_prov_fumee",
+  "label": "Proverbe",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Un proverbe sur les rumeurs : remets ses mots dans l'ordre.",
+  "explanation": "Une rumeur a souvent une part de vérité.",
+  "answer": "Il n'y a pas de fumée sans feu",
+  "words": [
+   "Il",
+   "n'y",
+   "a",
+   "pas",
+   "de",
+   "fumée",
+   "sans",
+   "feu"
+  ]
+ },
+ {
+  "key": "fra14-030",
+  "concept": "french.expressions.v14_prov_silence",
+  "label": "Proverbe",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Un proverbe qui vante le silence : reconstitue-le.",
+  "explanation": "Savoir se taire vaut parfois mieux que bien parler.",
+  "answer": "La parole est d'argent, mais le silence est d'or",
+  "words": [
+   "La",
+   "parole",
+   "est",
+   "d'argent,",
+   "mais",
+   "le",
+   "silence",
+   "est",
+   "d'or"
+  ]
+ },
+ {
+  "key": "fra14-031",
+  "concept": "french.expressions.v14_prov_comptes",
+  "label": "Proverbe",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Un proverbe sur l'argent entre amis : retrouve-le.",
+  "explanation": "Pour rester amis, mieux vaut que les dettes soient réglées.",
+  "answer": "Les bons comptes font les bons amis",
+  "words": [
+   "Les",
+   "bons",
+   "comptes",
+   "font",
+   "les",
+   "bons",
+   "amis"
+  ]
+ },
+ {
+  "key": "fra14-032",
+  "concept": "french.expressions.v14_prov_risque",
+  "label": "Proverbe",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Un proverbe pour les audacieux : recolle les morceaux.",
+  "explanation": "Il faut oser pour obtenir quelque chose.",
+  "answer": "Qui ne risque rien n'a rien",
+  "words": [
+   "Qui",
+   "ne",
+   "risque",
+   "rien",
+   "n'a",
+   "rien"
+  ]
+ },
+ {
+  "key": "fra14-033",
+  "concept": "french.expressions.v14_prov_hirondelle",
+  "label": "Proverbe",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Un proverbe venu des oiseaux migrateurs : mets-le en ordre.",
+  "explanation": "Un seul signe ne suffit pas pour conclure.",
+  "answer": "Une hirondelle ne fait pas le printemps",
+  "words": [
+   "Une",
+   "hirondelle",
+   "ne",
+   "fait",
+   "pas",
+   "le",
+   "printemps"
+  ]
+ },
+ {
+  "key": "fra14-034",
+  "concept": "french.expressions.v14_prov_mal_acquis",
+  "label": "Proverbe",
+  "type": "word_order",
+  "difficulty": 35,
+  "prompt": "Un proverbe sur l'argent volé : reconstitue-le.",
+  "explanation": "Ce qu'on obtient malhonnêtement ne rend pas heureux.",
+  "answer": "Bien mal acquis ne profite jamais",
+  "words": [
+   "Bien",
+   "mal",
+   "acquis",
+   "ne",
+   "profite",
+   "jamais"
+  ]
+ },
+ {
+  "key": "fra14-035",
+  "concept": "french.expressions.v14_comme_animaux",
+  "label": "Comparaisons animales",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Complète chaque comparaison.",
+  "explanation": "Le français adore comparer les gens aux animaux.",
+  "pairs": [
+   [
+    "Muet comme",
+    "une carpe"
+   ],
+   [
+    "Têtu comme",
+    "une mule"
+   ],
+   [
+    "Rusé comme",
+    "un renard"
+   ],
+   [
+    "Malin comme",
+    "un singe"
+   ]
+  ]
+ },
+ {
+  "key": "fra14-036",
+  "concept": "french.expressions.v14_comme_choses",
+  "label": "Comparaisons",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Complète chaque comparaison.",
+  "explanation": "« Long comme un jour sans pain » : quelque chose qui n'en finit pas.",
+  "pairs": [
+   [
+    "Rouge comme",
+    "une tomate"
+   ],
+   [
+    "Blanc comme",
+    "un linge"
+   ],
+   [
+    "Doux comme",
+    "un agneau"
+   ],
+   [
+    "Long comme",
+    "un jour sans pain"
+   ]
+  ]
+ },
+ {
+  "key": "fra14-037",
+  "concept": "french.grammar.v14_pluriel_oeil",
+  "label": "Pluriel",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est le pluriel d'« œil » ?",
+  "explanation": "Un des pluriels les plus irréguliers du français. On dit pourtant « des œils-de-bœuf » pour des fenêtres rondes !",
+  "options": [
+   "Des yeux*",
+   "Des œils",
+   "Des œuils",
+   "Des yeuils"
+  ]
+ },
+ {
+  "key": "fra14-038",
+  "concept": "french.grammar.v14_pluriel_ciel",
+  "label": "Pluriel",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est le pluriel le plus courant de « ciel » ?",
+  "explanation": "« Ciels » existe aussi, par exemple pour des tableaux : « les ciels de Turner ».",
+  "options": [
+   "Des cieux*",
+   "Des ciels",
+   "Des cielx",
+   "Des ciaux"
+  ]
+ },
+ {
+  "key": "fra14-039",
+  "concept": "french.grammar.v14_pluriel_monsieur",
+  "label": "Pluriel",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le pluriel de « monsieur » ?",
+  "explanation": "« Monsieur » vient de « mon sieur » : au pluriel, « mon » devient « mes ».",
+  "options": [
+   "Messieurs*",
+   "Monsieurs",
+   "Messieur",
+   "Mes sieurs"
+  ]
+ },
+ {
+  "key": "fra14-040",
+  "concept": "french.grammar.v14_feminin_heros",
+  "label": "Féminin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est le féminin de « héros » ?",
+  "explanation": "Le mot « héroïne » désigne aussi une drogue, d'où parfois la confusion.",
+  "options": [
+   "Héroïne*",
+   "Hérosse",
+   "Héroïse",
+   "Héraute"
+  ]
+ },
+ {
+  "key": "fra14-041",
+  "concept": "french.grammar.v14_feminins_animaux",
+  "label": "Mâles et femelles",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque animal mâle à sa femelle.",
+  "explanation": "Pour le sanglier, c'est la laie ; pour le cerf, la biche.",
+  "pairs": [
+   [
+    "Cheval",
+    "Jument"
+   ],
+   [
+    "Canard",
+    "Cane"
+   ],
+   [
+    "Lièvre",
+    "Hase"
+   ],
+   [
+    "Bouc",
+    "Chèvre"
+   ]
+  ]
+ },
+ {
+  "key": "fra14-042",
+  "concept": "french.grammar.v14_futur_aller",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Futur de « aller » : « Demain, nous ___ au marché. »",
+  "explanation": "Le futur d'« aller » se construit sur « ir- » : j'irai, tu iras, nous irons.",
+  "options": [
+   "irons*",
+   "allerons",
+   "irions",
+   "allons"
+  ]
+ },
+ {
+  "key": "fra14-043",
+  "concept": "french.grammar.v14_vous_dites",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Présent de « dire » : « Vous ___ la vérité. »",
+  "explanation": "« Vous disez » est une erreur fréquente. Mais attention : « vous contredisez » et « vous interdisez ».",
+  "options": [
+   "dites*",
+   "disez",
+   "dîtes",
+   "disiez"
+  ]
+ },
+ {
+  "key": "fra14-044",
+  "concept": "french.grammar.v14_vous_faites",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Présent de « faire » : « Que ___ -vous ce soir ? »",
+  "explanation": "Comme « vous dites » et « vous êtes », une des trois formes en « -tes ».",
+  "options": [
+   "faites*",
+   "faisez",
+   "fêtes",
+   "faisiez"
+  ]
+ },
+ {
+  "key": "fra14-045",
+  "concept": "french.grammar.v14_imparfait_manger",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Imparfait de « manger » : « Autrefois, nous ___ tard. »",
+  "explanation": "Le e après le g n'est utile que devant a ou o : « nous mangeons », mais « nous mangions ».",
+  "options": [
+   "mangions*",
+   "mangeions",
+   "mangeâmes",
+   "mangons"
+  ]
+ },
+ {
+  "key": "fra14-046",
+  "concept": "french.grammar.v14_passe_simple_etre",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Passé simple de « être » : « Ce ___ une belle journée. »",
+  "explanation": "« Fût », avec un accent, c'est le subjonctif imparfait.",
+  "options": [
+   "fut*",
+   "était",
+   "fût",
+   "fus"
+  ]
+ },
+ {
+  "key": "fra14-047",
+  "concept": "french.grammar.v14_subj_aller",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Subjonctif de « aller » : « Il faut que j'___ chez le dentiste. »",
+  "explanation": "Que j'aille, que tu ailles, qu'il aille… mais que nous allions.",
+  "options": [
+   "aille*",
+   "alle",
+   "aie",
+   "irai"
+  ]
+ },
+ {
+  "key": "fra14-048",
+  "concept": "french.grammar.v14_cond_vouloir",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pour demander poliment : « Je ___ un café, s'il vous plaît. »",
+  "explanation": "Le conditionnel adoucit la demande. « Je voudrai » (sans s) serait le futur.",
+  "options": [
+   "voudrais*",
+   "voudrai",
+   "veux bien que",
+   "voulais"
+  ]
+ },
+ {
+  "key": "fra14-049",
+  "concept": "french.grammar.v14_nature_la",
+  "label": "Nature des mots",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans « Je la vois », quelle est la nature de « la » ?",
+  "explanation": "« La » remplace un nom (la voisine, la mer…). Devant un nom, ce serait un article : « la maison ».",
+  "options": [
+   "Un pronom personnel*",
+   "Un article",
+   "Un adjectif",
+   "Une note de musique"
+  ]
+ },
+ {
+  "key": "fra14-050",
+  "concept": "french.grammar.v14_adjectif_jolie",
+  "label": "Nature des mots",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans « une jolie maison », quelle est la nature de « jolie » ?",
+  "explanation": "Il donne une qualité au nom et s'accorde avec lui.",
+  "options": [
+   "Un adjectif qualificatif*",
+   "Un nom",
+   "Un verbe",
+   "Un adverbe"
+  ]
+ },
+ {
+  "key": "fra14-051",
+  "concept": "french.grammar.v14_cod_sigle",
+  "label": "COD",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En grammaire, que veut dire « COD » ?",
+  "explanation": "Dans « Je mange une pomme », « une pomme » est COD : on la trouve en demandant « je mange quoi ? ».",
+  "options": [
+   "Complément d'objet direct*",
+   "Complément obligatoire du discours",
+   "Conjugaison ordinaire directe",
+   "Complément d'opposition directe"
+  ]
+ },
+ {
+  "key": "fra14-052",
+  "concept": "french.grammar.v14_groupes_tri",
+  "label": "1er ou 2e groupe ?",
+  "type": "sort",
+  "difficulty": 25,
+  "prompt": "Ce verbe est-il du 1er ou du 2e groupe ?",
+  "explanation": "1er groupe : infinitif en -er (sauf aller). 2e groupe : en -ir, avec « nous …issons » (nous choisissons).",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "1er groupe"
+   },
+   {
+    "label": "2e groupe"
+   }
+  ],
+  "items": [
+   [
+    "chanter",
+    0
+   ],
+   [
+    "manger",
+    0
+   ],
+   [
+    "aimer",
+    0
+   ],
+   [
+    "jouer",
+    0
+   ],
+   [
+    "choisir",
+    1
+   ],
+   [
+    "grandir",
+    1
+   ],
+   [
+    "rougir",
+    1
+   ],
+   [
+    "obéir",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-053",
+  "concept": "french.grammar.v14_nom_verbe",
+  "label": "Nom ou verbe ?",
+  "type": "sort",
+  "difficulty": 10,
+  "prompt": "Un nom, ou un verbe à l'infinitif ?",
+  "explanation": "On peut mettre « le » ou « la » devant un nom ; un verbe à l'infinitif peut se conjuguer.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Nom"
+   },
+   {
+    "label": "Verbe"
+   }
+  ],
+  "items": [
+   [
+    "maison",
+    0
+   ],
+   [
+    "chanson",
+    0
+   ],
+   [
+    "bonheur",
+    0
+   ],
+   [
+    "soleil",
+    0
+   ],
+   [
+    "courir",
+    1
+   ],
+   [
+    "manger",
+    1
+   ],
+   [
+    "dormir",
+    1
+   ],
+   [
+    "chanter",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-054",
+  "concept": "french.grammar.v14_phrase_chat",
+  "label": "Phrase correcte",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets ces mots dans l'ordre pour former une phrase correcte.",
+  "explanation": "Sujet (le petit chat de ma voisine), verbe (dort), complément (sur le muret).",
+  "answer": "Le petit chat de ma voisine dort sur le muret",
+  "words": [
+   "Le",
+   "petit",
+   "chat",
+   "de",
+   "ma",
+   "voisine",
+   "dort",
+   "sur",
+   "le",
+   "muret"
+  ]
+ },
+ {
+  "key": "fra14-055",
+  "concept": "french.grammar.v14_si_aurais",
+  "label": "Si j'aurais",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "On peut dire « si j'aurais su, je serais venu ».",
+  "explanation": "Faux : après « si », pas de conditionnel. On dit « si j'avais su ». (La phrase culte de « La Guerre des boutons » est volontairement fautive.)",
+  "answer": false
+ },
+ {
+  "key": "fra14-056",
+  "concept": "french.grammar.v14_rappeler_de",
+  "label": "Se rappeler",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Je me rappelle de cette histoire » est la forme recommandée.",
+  "explanation": "Faux : on dit « je me rappelle cette histoire » (sans « de »), mais « je me souviens de cette histoire ».",
+  "answer": false
+ },
+ {
+  "key": "fra14-057",
+  "concept": "french.grammar.v14_chez_coiffeur",
+  "label": "Chez le coiffeur",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Il vaut mieux dire « je vais chez le coiffeur » que « je vais au coiffeur ».",
+  "explanation": "Vrai : on va « chez » une personne, « à » un lieu. On dit donc « au salon de coiffure » ou « chez le coiffeur ».",
+  "answer": true
+ },
+ {
+  "key": "fra14-058",
+  "concept": "french.grammar.v14_temps_indicatif",
+  "label": "L'indicatif",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien de temps compte le mode indicatif ?",
+  "explanation": "Quatre simples (présent, imparfait, passé simple, futur simple) et quatre composés (passé composé, plus-que-parfait, passé antérieur, futur antérieur).",
+  "answer": 8,
+  "tolerance": 0,
+  "min": 1,
+  "max": 12,
+  "start": 1,
+  "unit": "temps"
+ },
+ {
+  "key": "fra14-059",
+  "concept": "french.spelling.v14_a_ou_a",
+  "label": "« a » ou « à » ?",
+  "type": "sort",
+  "difficulty": 15,
+  "prompt": "Faut-il écrire « a » ou « à » ?",
+  "explanation": "Astuce : si on peut remplacer par « avait », c'est le verbe avoir, sans accent.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "a (verbe avoir)"
+   },
+   {
+    "label": "à"
+   }
+  ],
+  "items": [
+   [
+    "Il … faim",
+    0
+   ],
+   [
+    "Elle … un vélo",
+    0
+   ],
+   [
+    "On … gagné",
+    0
+   ],
+   [
+    "Il y … du monde",
+    0
+   ],
+   [
+    "Je vais … Paris",
+    1
+   ],
+   [
+    "Une tarte … la fraise",
+    1
+   ],
+   [
+    "… demain !",
+    1
+   ],
+   [
+    "Un verre … pied",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-060",
+  "concept": "french.spelling.v14_et_ou_est",
+  "label": "« et » ou « est » ?",
+  "type": "sort",
+  "difficulty": 15,
+  "prompt": "Faut-il écrire « et » ou « est » ?",
+  "explanation": "Astuce : si on peut remplacer par « était », c'est le verbe être : « est ».",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "et"
+   },
+   {
+    "label": "est"
+   }
+  ],
+  "items": [
+   [
+    "Du pain … du beurre",
+    0
+   ],
+   [
+    "Toi … moi",
+    0
+   ],
+   [
+    "Grand … fort",
+    0
+   ],
+   [
+    "Il chante … danse",
+    0
+   ],
+   [
+    "Il … gentil",
+    1
+   ],
+   [
+    "Le ciel … bleu",
+    1
+   ],
+   [
+    "Elle … partie",
+    1
+   ],
+   [
+    "C'… vrai",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-061",
+  "concept": "french.spelling.v14_on_ou_ont",
+  "label": "« on » ou « ont » ?",
+  "type": "sort",
+  "difficulty": 20,
+  "prompt": "Faut-il écrire « on » ou « ont » ?",
+  "explanation": "Astuce : si on peut remplacer par « avaient », c'est le verbe avoir : « ont ». Sinon, « on » remplace « il » ou « nous ».",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "on"
+   },
+   {
+    "label": "ont"
+   }
+  ],
+  "items": [
+   [
+    "… y va !",
+    0
+   ],
+   [
+    "… dit que…",
+    0
+   ],
+   [
+    "Demain, … verra",
+    0
+   ],
+   [
+    "Ici, … mange bien",
+    0
+   ],
+   [
+    "Ils … faim",
+    1
+   ],
+   [
+    "Elles … gagné",
+    1
+   ],
+   [
+    "Ils … un chien",
+    1
+   ],
+   [
+    "Les enfants … ri",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-062",
+  "concept": "french.spelling.v14_ca_ou_sa",
+  "label": "« ça » ou « sa » ?",
+  "type": "sort",
+  "difficulty": 15,
+  "prompt": "Faut-il écrire « ça » ou « sa » ?",
+  "explanation": "« Ça », c'est « cela ». « Sa » est un déterminant : on peut le remplacer par « ma » ou « ta ».",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "ça"
+   },
+   {
+    "label": "sa"
+   }
+  ],
+  "items": [
+   [
+    "… alors !",
+    0
+   ],
+   [
+    "Comment … va ?",
+    0
+   ],
+   [
+    "Donne-moi …",
+    0
+   ],
+   [
+    "… me plaît",
+    0
+   ],
+   [
+    "Il a perdu … montre",
+    1
+   ],
+   [
+    "Elle range … chambre",
+    1
+   ],
+   [
+    "… sœur arrive",
+    1
+   ],
+   [
+    "Il a pris … voiture",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-063",
+  "concept": "french.spelling.v14_rythme",
+  "label": "Rythme",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Cadence régulière en musique (attention au y et au h).",
+  "explanation": "Il vient du grec « rhuthmos ». Le h se place juste après le t.",
+  "word": "RYTHME",
+  "display": "Rythme"
+ },
+ {
+  "key": "fra14-064",
+  "concept": "french.spelling.v14_bizarre",
+  "label": "Bizarre",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Étrange, inhabituel (un z, deux r).",
+  "explanation": "À ne pas confondre avec « bazar », un seul r.",
+  "word": "BIZARRE",
+  "display": "Bizarre"
+ },
+ {
+  "key": "fra14-065",
+  "concept": "french.spelling.v14_dilemme",
+  "label": "Dilemme",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Choix difficile entre deux possibilités (deux m).",
+  "explanation": "Du grec « di- » (deux) et « lemma » (argument). On voit souvent la faute « dilemne ».",
+  "word": "DILEMME",
+  "display": "Dilemme"
+ },
+ {
+  "key": "fra14-066",
+  "concept": "french.spelling.v14_accueil",
+  "label": "Accueil",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Façon de recevoir quelqu'un (attention à l'ordre u-e-i).",
+  "explanation": "Après c ou g, on écrit « ueil » pour garder le son dur : accueil, cercueil, orgueil.",
+  "word": "ACCUEIL",
+  "display": "Accueil"
+ },
+ {
+  "key": "fra14-067",
+  "concept": "french.spelling.v14_vingt_et_un",
+  "label": "Les nombres",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment écrit-on 21 en lettres ?",
+  "explanation": "Traditionnellement, « vingt et un » s'écrit sans trait d'union. Depuis 1990, « vingt-et-un » est aussi admis.",
+  "options": [
+   "vingt et un*",
+   "vingt-et-un (seule forme possible)",
+   "vingts et un",
+   "vint et un"
+  ]
+ },
+ {
+  "key": "fra14-068",
+  "concept": "french.spelling.v14_deux_t",
+  "label": "Doubles lettres",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Lequel de ces mots s'écrit avec deux « t » ?",
+  "explanation": "Mais « rattraper » prend lui aussi deux t, et deux r !",
+  "options": [
+   "attraper*",
+   "atelier",
+   "atomique",
+   "atout"
+  ]
+ },
+ {
+  "key": "fra14-069",
+  "concept": "french.spelling.v14_un_seul_p",
+  "label": "Doubles lettres",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Lequel de ces mots s'écrit avec un seul « p » ?",
+  "explanation": "Une exception classique : « apercevoir » n'a qu'un p.",
+  "options": [
+   "apercevoir*",
+   "apporter",
+   "appeler",
+   "applaudir"
+  ]
+ },
+ {
+  "key": "fra14-070",
+  "concept": "french.spelling.v14_circonflexe",
+  "label": "L'accent circonflexe",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Lequel de ces mots prend un accent circonflexe ?",
+  "explanation": "Le ê de « fenêtre » rappelle un s disparu : en latin, « fenestra ».",
+  "options": [
+   "fenêtre*",
+   "planète",
+   "poète",
+   "fièvre"
+  ]
+ },
+ {
+  "key": "fra14-071",
+  "concept": "french.spelling.v14_se_telephoner",
+  "label": "Accord du participe",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Complète : « Elles se sont ___ hier soir. » (téléphoner)",
+  "explanation": "On téléphone « à » quelqu'un : « se » est complément indirect, donc pas d'accord.",
+  "options": [
+   "téléphoné*",
+   "téléphonées",
+   "téléphonés",
+   "téléphoner"
+  ]
+ },
+ {
+  "key": "fra14-072",
+  "concept": "french.spelling.v14_robes_orange",
+  "label": "Les couleurs",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment accorde-t-on la couleur dans « des robes … » (orange) ?",
+  "explanation": "Les couleurs qui viennent d'un nom (orange, marron, cerise) restent invariables. Exceptions : rose, mauve, pourpre…",
+  "options": [
+   "orange, sans s*",
+   "oranges",
+   "orangées",
+   "orangés"
+  ]
+ },
+ {
+  "key": "fra14-073",
+  "concept": "french.spelling.v14_tout_le_monde",
+  "label": "Accord du verbe",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Complète : « Tout le monde ___ là. »",
+  "explanation": "« Tout le monde » est singulier, même s'il désigne beaucoup de gens.",
+  "options": [
+   "est*",
+   "sont",
+   "ont",
+   "es"
+  ]
+ },
+ {
+  "key": "fra14-074",
+  "concept": "french.spelling.v14_davantage",
+  "label": "Davantage",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Complète : « Il en veut ___ . »",
+  "explanation": "En un mot, il veut dire « plus ». « D'avantages », c'est « de bénéfices ».",
+  "options": [
+   "davantage*",
+   "d'avantage",
+   "d'avantages",
+   "davantages"
+  ]
+ },
+ {
+  "key": "fra14-075",
+  "concept": "french.spelling.v14_pret_pres",
+  "label": "Prêt ou près",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Complète : « Je suis ___ à partir. »",
+  "explanation": "« Prêt » veut dire préparé. « Près » veut dire « à côté ».",
+  "options": [
+   "prêt*",
+   "près",
+   "prés",
+   "prèt"
+  ]
+ },
+ {
+  "key": "fra14-076",
+  "concept": "french.spelling.v14_quant_quand",
+  "label": "Quand ou quant",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Complète : « ___ à moi, je reste ici. »",
+  "explanation": "« Quant à » veut dire « pour ce qui est de ». « Quand » parle du temps.",
+  "options": [
+   "Quant*",
+   "Quand",
+   "Qu'en",
+   "Camp"
+  ]
+ },
+ {
+  "key": "fra14-077",
+  "concept": "french.spelling.v14_peut_peu",
+  "label": "Peut ou peu",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Complète : « Il ___ venir demain. »",
+  "explanation": "Avec « il », le verbe pouvoir s'écrit « peut ». « Peu » veut dire « pas beaucoup ».",
+  "options": [
+   "peut*",
+   "peu",
+   "peux",
+   "peus"
+  ]
+ },
+ {
+  "key": "fra14-078",
+  "concept": "french.spelling.v14_cle_clef",
+  "label": "Clé ou clef",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le mot « clé » peut aussi s'écrire « clef ».",
+  "explanation": "Vrai : les deux orthographes sont correctes et se prononcent de la même façon.",
+  "answer": true
+ },
+ {
+  "key": "fra14-079",
+  "concept": "french.spelling.v14_ressasser_s",
+  "label": "Ressasser",
+  "type": "counter",
+  "difficulty": 30,
+  "prompt": "Combien de « s » compte le mot « ressasser » ?",
+  "explanation": "R-E-S-S-A-S-S-E-R : quatre s. Et il se lit dans les deux sens !",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1,
+  "unit": "s"
+ },
+ {
+  "key": "fra14-080",
+  "concept": "french.spelling.v14_oiseau_lettres",
+  "label": "Oiseau",
+  "type": "counter",
+  "difficulty": 25,
+  "prompt": "Combien de lettres compte « oiseau », qui contient presque toutes les voyelles ?",
+  "explanation": "O-I-S-E-A-U : six lettres, dont cinq voyelles différentes. Il ne manque que le y.",
+  "answer": 6,
+  "tolerance": 0,
+  "min": 2,
+  "max": 10,
+  "start": 2,
+  "unit": "lettres"
+ },
+ {
+  "key": "fra14-081",
+  "concept": "french.synonyms.v14_syn_courageux",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel mot est le synonyme de « courageux » ?",
+  "explanation": "« Brave » est le synonyme de « courageux ».",
+  "options": [
+   "brave*",
+   "peureux",
+   "timide",
+   "lent"
+  ]
+ },
+ {
+  "key": "fra14-082",
+  "concept": "french.synonyms.v14_syn_commencer",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel mot est le synonyme de « commencer » ?",
+  "explanation": "« Débuter » est le synonyme de « commencer ».",
+  "options": [
+   "débuter*",
+   "finir",
+   "attendre",
+   "arrêter"
+  ]
+ },
+ {
+  "key": "fra14-083",
+  "concept": "french.synonyms.v14_syn_malin",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel mot est le synonyme de « malin » ?",
+  "explanation": "« Rusé » est le synonyme de « malin ».",
+  "options": [
+   "rusé*",
+   "naïf",
+   "lent",
+   "maladroit"
+  ]
+ },
+ {
+  "key": "fra14-084",
+  "concept": "french.synonyms.v14_syn_triste",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel mot est le synonyme de « triste » ?",
+  "explanation": "« Mélancolique » est le synonyme de « triste ».",
+  "options": [
+   "mélancolique*",
+   "joyeux",
+   "nerveux",
+   "fatigué"
+  ]
+ },
+ {
+  "key": "fra14-085",
+  "concept": "french.synonyms.v14_syn_drole",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel mot est le synonyme de « drôle » ?",
+  "explanation": "« Cocasse » est le synonyme de « drôle ».",
+  "options": [
+   "cocasse*",
+   "sinistre",
+   "banal",
+   "sérieux"
+  ]
+ },
+ {
+  "key": "fra14-086",
+  "concept": "french.synonyms.v14_syn_fatigue",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel mot est le synonyme de « fatigué » ?",
+  "explanation": "« Épuisé » est le synonyme de « fatigué ».",
+  "options": [
+   "épuisé*",
+   "reposé",
+   "énervé",
+   "affamé"
+  ]
+ },
+ {
+  "key": "fra14-087",
+  "concept": "french.synonyms.v14_syn_regarder",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel mot est le synonyme de « regarder longuement » ?",
+  "explanation": "« Contempler » est le synonyme de « regarder longuement ».",
+  "options": [
+   "contempler*",
+   "ignorer",
+   "cligner",
+   "écouter"
+  ]
+ },
+ {
+  "key": "fra14-088",
+  "concept": "french.synonyms.v14_syn_briller",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel mot est le synonyme de « briller » ?",
+  "explanation": "« Scintiller » est le synonyme de « briller ».",
+  "options": [
+   "scintiller*",
+   "s'éteindre",
+   "noircir",
+   "fondre"
+  ]
+ },
+ {
+  "key": "fra14-089",
+  "concept": "french.synonyms.v14_syn_effraye",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel mot est le synonyme de « effrayé » ?",
+  "explanation": "« Apeuré » est le synonyme de « effrayé ».",
+  "options": [
+   "apeuré*",
+   "rassuré",
+   "fâché",
+   "surpris"
+  ]
+ },
+ {
+  "key": "fra14-090",
+  "concept": "french.synonyms.v14_ant_courageux",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel mot est le contraire de « courageux » ?",
+  "explanation": "« Lâche » est le contraire de « courageux ».",
+  "options": [
+   "lâche*",
+   "brave",
+   "fort",
+   "fier"
+  ]
+ },
+ {
+  "key": "fra14-091",
+  "concept": "french.synonyms.v14_ant_accepter",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel mot est le contraire de « accepter » ?",
+  "explanation": "« Refuser » est le contraire de « accepter ».",
+  "options": [
+   "refuser*",
+   "recevoir",
+   "prendre",
+   "admettre"
+  ]
+ },
+ {
+  "key": "fra14-092",
+  "concept": "french.synonyms.v14_ant_ancien",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel mot est le contraire de « ancien » ?",
+  "explanation": "« Moderne » est le contraire de « ancien ».",
+  "options": [
+   "moderne*",
+   "vieux",
+   "antique",
+   "usé"
+  ]
+ },
+ {
+  "key": "fra14-093",
+  "concept": "french.synonyms.v14_ant_augmenter",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel mot est le contraire de « augmenter » ?",
+  "explanation": "« Diminuer » est le contraire de « augmenter ».",
+  "options": [
+   "diminuer*",
+   "grandir",
+   "ajouter",
+   "gonfler"
+  ]
+ },
+ {
+  "key": "fra14-094",
+  "concept": "french.synonyms.v14_ant_paresseux",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel mot est le contraire de « paresseux » ?",
+  "explanation": "« Travailleur » est le contraire de « paresseux ».",
+  "options": [
+   "travailleur*",
+   "fainéant",
+   "lent",
+   "endormi"
+  ]
+ },
+ {
+  "key": "fra14-095",
+  "concept": "french.synonyms.v14_ant_humble",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel mot est le contraire de « humble » ?",
+  "explanation": "« Orgueilleux » est le contraire de « humble ».",
+  "options": [
+   "orgueilleux*",
+   "modeste",
+   "simple",
+   "discret"
+  ]
+ },
+ {
+  "key": "fra14-096",
+  "concept": "french.synonyms.v14_ant_bavard",
+  "label": "Synonymes et contraires",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel mot est le contraire de « bavard » ?",
+  "explanation": "« Silencieux » est le contraire de « bavard ».",
+  "options": [
+   "silencieux*",
+   "causant",
+   "loquace",
+   "volubile"
+  ]
+ },
+ {
+  "key": "fra14-097",
+  "concept": "french.synonyms.v14_paires_synonymes",
+  "label": "Synonymes",
+  "type": "pairs",
+  "difficulty": 25,
+  "prompt": "Associe chaque verbe à son synonyme.",
+  "explanation": "Des synonymes permettent d'éviter les répétitions dans un texte.",
+  "pairs": [
+   [
+    "Débuter",
+    "Commencer"
+   ],
+   [
+    "Achever",
+    "Terminer"
+   ],
+   [
+    "Dérober",
+    "Voler"
+   ],
+   [
+    "Bâtir",
+    "Construire"
+   ]
+  ]
+ },
+ {
+  "key": "fra14-098",
+  "concept": "french.synonyms.v14_paires_contraires",
+  "label": "Contraires",
+  "type": "pairs",
+  "difficulty": 10,
+  "prompt": "Associe chaque verbe à son contraire.",
+  "explanation": "Des contraires, ou « antonymes ».",
+  "pairs": [
+   [
+    "Monter",
+    "Descendre"
+   ],
+   [
+    "Gagner",
+    "Perdre"
+   ],
+   [
+    "Entrer",
+    "Sortir"
+   ],
+   [
+    "Remplir",
+    "Vider"
+   ]
+  ]
+ },
+ {
+  "key": "fra14-099",
+  "concept": "french.synonyms.v14_grand_tri",
+  "label": "Synonyme ou contraire ?",
+  "type": "sort",
+  "difficulty": 15,
+  "prompt": "Synonyme ou contraire de « grand » ?",
+  "explanation": "Un synonyme a un sens proche ; un contraire (antonyme), un sens opposé.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Synonyme"
+   },
+   {
+    "label": "Contraire"
+   }
+  ],
+  "items": [
+   [
+    "immense",
+    0
+   ],
+   [
+    "géant",
+    0
+   ],
+   [
+    "vaste",
+    0
+   ],
+   [
+    "haut",
+    0
+   ],
+   [
+    "petit",
+    1
+   ],
+   [
+    "minuscule",
+    1
+   ],
+   [
+    "nain",
+    1
+   ],
+   [
+    "minime",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-100",
+  "concept": "french.synonyms.v14_etrange",
+  "label": "Étrange",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Synonyme de « bizarre », en 7 lettres.",
+  "explanation": "Il vient du latin « extraneus », « qui vient du dehors », comme « étranger ».",
+  "word": "ETRANGE",
+  "display": "Étrange"
+ },
+ {
+  "key": "fra14-101",
+  "concept": "french.vocabulary.v14_acronyme",
+  "label": "L'acronyme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'un acronyme ?",
+  "explanation": "SNCF se lit lettre par lettre : c'est un sigle. OVNI, ONU ou laser se prononcent comme des mots : ce sont des acronymes.",
+  "options": [
+   "Un sigle qui se prononce comme un mot, comme OVNI*",
+   "Un mot très long",
+   "Un mot qui a deux sens",
+   "Un mot venu de l'anglais"
+  ]
+ },
+ {
+  "key": "fra14-102",
+  "concept": "french.vocabulary.v14_quotidien",
+  "label": "Quotidien",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Un journal « quotidien » paraît…",
+  "explanation": "Du latin « quotidie », chaque jour.",
+  "options": [
+   "Tous les jours*",
+   "Toutes les semaines",
+   "Tous les mois",
+   "Tous les ans"
+  ]
+ },
+ {
+  "key": "fra14-103",
+  "concept": "french.vocabulary.v14_monegasques",
+  "label": "Les habitants",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on les habitants de Monaco ?",
+  "explanation": "Ils sont moins de 10 000 à avoir la nationalité.",
+  "options": [
+   "Les Monégasques*",
+   "Les Monacois",
+   "Les Monaciens",
+   "Les Monaquais"
+  ]
+ },
+ {
+  "key": "fra14-104",
+  "concept": "french.vocabulary.v14_bisontins",
+  "label": "Les habitants",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment appelle-t-on les habitants de Besançon ?",
+  "explanation": "Le nom vient de l'ancien nom latin de la ville, « Vesontio ».",
+  "options": [
+   "Les Bisontins*",
+   "Les Besançonnais",
+   "Les Bésontiers",
+   "Les Bisançais"
+  ]
+ },
+ {
+  "key": "fra14-105",
+  "concept": "french.vocabulary.v14_metiers_artisans",
+  "label": "Les artisans",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque artisan à ce qu'il fabrique ou entretient.",
+  "explanation": "Le mot « ébéniste » vient de l'ébène, un bois précieux.",
+  "pairs": [
+   [
+    "Ébéniste",
+    "Des meubles"
+   ],
+   [
+    "Cordonnier",
+    "Des chaussures"
+   ],
+   [
+    "Luthier",
+    "Des violons"
+   ],
+   [
+    "Maraîcher",
+    "Des légumes"
+   ]
+  ]
+ },
+ {
+  "key": "fra14-106",
+  "concept": "french.vocabulary.v14_sommelier",
+  "label": "Le sommelier",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Dans un restaurant, quel est le rôle du sommelier ?",
+  "explanation": "La France compte de nombreux concours du « meilleur sommelier ».",
+  "options": [
+   "Conseiller et servir les vins*",
+   "Préparer les desserts",
+   "Faire la vaisselle",
+   "Accueillir les clients"
+  ]
+ },
+ {
+  "key": "fra14-107",
+  "concept": "french.vocabulary.v14_chiner",
+  "label": "Chiner",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que veut dire « chiner » ?",
+  "explanation": "On chine aux puces, dans les vide-greniers, à la recherche de la bonne affaire.",
+  "options": [
+   "Chercher des objets anciens dans les brocantes*",
+   "Voyager en Chine",
+   "Se moquer gentiment",
+   "Faire la cuisine"
+  ]
+ },
+ {
+  "key": "fra14-108",
+  "concept": "french.vocabulary.v14_bouquiner",
+  "label": "Bouquiner",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « bouquiner » ?",
+  "explanation": "Un « bouquin », c'est un livre en langage familier.",
+  "options": [
+   "Lire*",
+   "Cueillir des fleurs",
+   "Ranger sa chambre",
+   "Dormir"
+  ]
+ },
+ {
+  "key": "fra14-109",
+  "concept": "french.vocabulary.v14_flaner",
+  "label": "Flâner",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que veut dire « flâner » ?",
+  "explanation": "Le « flâneur » est un personnage typique de Paris au XIXe siècle.",
+  "options": [
+   "Se promener sans but, tranquillement*",
+   "Courir vite",
+   "Bavarder",
+   "Faire la sieste"
+  ]
+ },
+ {
+  "key": "fra14-110",
+  "concept": "french.vocabulary.v14_chocolatine",
+  "label": "Chocolatine",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans le Sud-Ouest, comment appelle-t-on souvent le pain au chocolat ?",
+  "explanation": "Un débat sans fin entre le nord et le sud de la France !",
+  "options": [
+   "Une chocolatine*",
+   "Une chocolade",
+   "Un petit noir",
+   "Une couque"
+  ]
+ },
+ {
+  "key": "fra14-111",
+  "concept": "french.vocabulary.v14_drache",
+  "label": "La drache",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans le Nord et en Belgique, que veut dire « une drache » ?",
+  "explanation": "« Il drache ! » : il pleut à verse.",
+  "options": [
+   "Une grosse averse*",
+   "Une fête de village",
+   "Une bière forte",
+   "Un vent froid"
+  ]
+ },
+ {
+  "key": "fra14-112",
+  "concept": "french.vocabulary.v14_septante",
+  "label": "Septante",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En Belgique et en Suisse, que veut dire « septante » ?",
+  "explanation": "Plus logique que « soixante-dix » ! De même, « nonante » veut dire 90.",
+  "options": [
+   "70*",
+   "17",
+   "700",
+   "7"
+  ]
+ },
+ {
+  "key": "fra14-113",
+  "concept": "french.vocabulary.v14_huitante",
+  "label": "Huitante",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans certains cantons suisses, que veut dire « huitante » ?",
+  "explanation": "Utilisé notamment dans le canton de Vaud. En Belgique, on garde « quatre-vingts ».",
+  "options": [
+   "80*",
+   "18",
+   "800",
+   "8"
+  ]
+ },
+ {
+  "key": "fra14-114",
+  "concept": "french.vocabulary.v14_magasiner",
+  "label": "Magasiner",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Au Québec, que veut dire « magasiner » ?",
+  "explanation": "Les Québécois préfèrent souvent les mots français aux anglicismes, comme ici pour « shopping ».",
+  "options": [
+   "Faire les magasins*",
+   "Ranger un entrepôt",
+   "Ouvrir une boutique",
+   "Travailler à la caisse"
+  ]
+ },
+ {
+  "key": "fra14-115",
+  "concept": "french.vocabulary.v14_char_quebec",
+  "label": "Le char",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Au Québec, qu'est-ce qu'un « char » ?",
+  "explanation": "Un mot ancien du français, gardé au Québec.",
+  "options": [
+   "Une voiture*",
+   "Un tank",
+   "Un chariot de supermarché",
+   "Une charrette"
+  ]
+ },
+ {
+  "key": "fra14-116",
+  "concept": "french.vocabulary.v14_cagnard",
+  "label": "Le cagnard",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans le Sud, que veut dire « le cagnard » ?",
+  "explanation": "« On est en plein cagnard » : il faut vite trouver de l'ombre.",
+  "options": [
+   "Le soleil brûlant, la forte chaleur*",
+   "Un petit chien",
+   "Une sieste",
+   "Un bateau de pêche"
+  ]
+ },
+ {
+  "key": "fra14-117",
+  "concept": "french.vocabulary.v14_peuchere",
+  "label": "Peuchère",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans le Midi, que veut dire « Peuchère ! » ?",
+  "explanation": "Une interjection provençale, souvent dite avec tendresse.",
+  "options": [
+   "Le pauvre ! (pour plaindre quelqu'un)*",
+   "Bonjour !",
+   "Dépêche-toi !",
+   "C'est cher !"
+  ]
+ },
+ {
+  "key": "fra14-118",
+  "concept": "french.vocabulary.v14_bouchon_lyon",
+  "label": "Le bouchon lyonnais",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À Lyon, qu'est-ce qu'un « bouchon » ?",
+  "explanation": "On y mange quenelles, saucisson brioché ou tarte aux pralines.",
+  "options": [
+   "Un petit restaurant traditionnel*",
+   "Un embouteillage",
+   "Une spécialité de fromage",
+   "Un pont sur la Saône"
+  ]
+ },
+ {
+  "key": "fra14-119",
+  "concept": "french.vocabulary.v14_kouign_amann",
+  "label": "Le kouign-amann",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce que le kouign-amann, spécialité bretonne ?",
+  "explanation": "En breton, « kouign » veut dire gâteau et « amann », beurre.",
+  "options": [
+   "Un gâteau très riche en beurre et en sucre*",
+   "Une crêpe salée",
+   "Une boisson au cidre",
+   "Une danse traditionnelle"
+  ]
+ },
+ {
+  "key": "fra14-120",
+  "concept": "french.vocabulary.v14_anglais_arabe",
+  "label": "D'où vient ce mot ?",
+  "type": "sort",
+  "difficulty": 45,
+  "prompt": "Ce mot vient-il de l'anglais ou de l'arabe ?",
+  "explanation": "Le français a emprunté des centaines de mots à l'arabe au Moyen Âge, surtout en sciences et en commerce.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Anglais"
+   },
+   {
+    "label": "Arabe"
+   }
+  ],
+  "items": [
+   [
+    "week-end",
+    0
+   ],
+   [
+    "parking",
+    0
+   ],
+   [
+    "sandwich",
+    0
+   ],
+   [
+    "football",
+    0
+   ],
+   [
+    "algèbre",
+    1
+   ],
+   [
+    "chiffre",
+    1
+   ],
+   [
+    "hasard",
+    1
+   ],
+   [
+    "sirop",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "fra14-121",
+  "concept": "french.vocabulary.v14_bagnole",
+  "label": "Bagnole",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Mot familier pour « voiture ».",
+  "explanation": "On dit aussi « caisse » ou « tire » en argot.",
+  "word": "BAGNOLE",
+  "display": "Bagnole"
+ },
+ {
+  "key": "fra14-122",
+  "concept": "french.vocabulary.v14_boulot",
+  "label": "Boulot",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Mot familier pour « travail ».",
+  "explanation": "« Métro, boulot, dodo » résume une vie bien réglée.",
+  "word": "BOULOT",
+  "display": "Boulot"
+ },
+ {
+  "key": "fra14-123",
+  "concept": "french.vocabulary.v14_courriel",
+  "label": "Courriel",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "« Courriel » est le mot français recommandé pour dire « e-mail ».",
+  "explanation": "Vrai : il a été créé au Québec. On peut aussi dire « message électronique ».",
+  "answer": true
+ },
+ {
+  "key": "fra14-124",
+  "concept": "french.vocabulary.v14_orange_fruit",
+  "label": "Orange",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le mot « orange » a désigné le fruit avant la couleur.",
+  "explanation": "Vrai : on a d'abord nommé le fruit, puis la couleur qui lui ressemble. Avant, on disait « jaune-rouge ».",
+  "answer": true
+ },
+ {
+  "key": "fra14-125",
+  "concept": "french.vocabulary.v14_mots_arabes",
+  "label": "Emprunts",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le mot « abricot » vient de l'anglais.",
+  "explanation": "Faux : il vient de l'arabe, comme « alcool », « coton », « sucre » ou « zéro ». Ces mots sont arrivés au Moyen Âge, souvent par l'espagnol ou l'italien.",
+  "answer": false
+ },
+ {
+  "key": "fra14-126",
+  "concept": "french.spelling.v14_prie_s",
+  "label": "Je vous en prie",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Dans « je vous en prie », le verbe « prie » prend un s.",
+  "explanation": "Faux : c'est le verbe prier conjugué avec « je » : « je prie », sans s.",
+  "answer": false
+ },
+ {
+  "key": "fra14-127",
+  "concept": "french.vocabulary.v14_pseudonyme",
+  "label": "Le pseudonyme",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Qu'est-ce qu'un pseudonyme ?",
+  "explanation": "Molière s'appelait Jean-Baptiste Poquelin ; George Sand, Aurore Dupin.",
+  "options": [
+   "Un nom d'emprunt choisi par un auteur ou un artiste*",
+   "Un mot mal écrit",
+   "Un surnom méchant",
+   "Un nom de famille composé"
+  ]
+ },
+ {
+  "key": "fra14-128",
+  "concept": "french.vocabulary.v14_homonyme",
+  "label": "L'homonyme",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qu'un homonyme ?",
+  "explanation": "Par exemple « vert », « verre », « ver », « vers » et « vair ».",
+  "options": [
+   "Un mot qui se prononce pareil qu'un autre mais n'a pas le même sens*",
+   "Un mot de même sens",
+   "Un mot contraire",
+   "Un mot très ancien"
+  ]
+ },
+ {
+  "key": "fra14-129",
+  "concept": "french.grammar.v14_abat_jour",
+  "label": "Pluriel",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le pluriel d'« un abat-jour » ?",
+  "explanation": "Le verbe « abat » ne prend pas de s, et on abat « le jour » (la lumière) : le mot reste invariable.",
+  "options": [
+   "Des abat-jour*",
+   "Des abats-jours",
+   "Des abat-jours",
+   "Des abats-jour"
+  ]
+ },
+ {
+  "key": "fra14-130",
+  "concept": "french.expressions.v14_tete_epaules",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Avoir « la tête sur les épaules », c'est…",
+  "explanation": "Celui qui a la tête bien fixée ne fait pas de bêtises.",
+  "options": [
+   "Être raisonnable*",
+   "Être très grand",
+   "Avoir mal au cou",
+   "Être distrait"
+  ]
+ },
+ {
+  "key": "fra14-131",
+  "concept": "french.expressions.v14_trou_memoire",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Avoir « un trou de mémoire », c'est…",
+  "explanation": "En général, ça revient un peu plus tard.",
+  "options": [
+   "Oublier quelque chose sur le moment*",
+   "Être blessé à la tête",
+   "Avoir une très bonne mémoire",
+   "Dormir debout"
+  ]
+ },
+ {
+  "key": "fra14-132",
+  "concept": "french.expressions.v14_quatre_epingles",
+  "label": "Expression",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Être « tiré à quatre épingles », c'est…",
+  "explanation": "Comme un vêtement dont chaque coin serait épinglé pour ne pas faire un pli.",
+  "options": [
+   "Être habillé avec grand soin*",
+   "Être très pressé",
+   "Être mal coiffé",
+   "Être piqué par un insecte"
+  ]
+ },
+ {
+  "key": "fra14-133",
+  "concept": "french.vocabulary.v14_coquille",
+  "label": "La coquille",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans un texte imprimé, qu'est-ce qu'une « coquille » ?",
+  "explanation": "Une lettre oubliée ou mal placée, qui a échappé à la relecture.",
+  "options": [
+   "Une faute de frappe*",
+   "Un dessin dans la marge",
+   "Un chapitre très court",
+   "Une page blanche"
+  ]
+ },
+ {
+  "key": "fra14-134",
+  "concept": "french.grammar.v14_taisez_vous",
+  "label": "Conjugaison",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Impératif de « se taire » : « Les enfants, ___ -vous ! »",
+  "explanation": "Tais-toi, taisons-nous, taisez-vous.",
+  "options": [
+   "taisez*",
+   "taisiez",
+   "tairez",
+   "tait"
+  ]
+ },
+ {
+  "key": "fra14-135",
+  "concept": "french.vocabulary.v14_syllabes_ordinateur",
+  "label": "Syllabes",
+  "type": "counter",
+  "difficulty": 15,
+  "prompt": "Combien de syllabes compte le mot « ordinateur » ?",
+  "explanation": "Or-di-na-teur : quatre syllabes. Le mot a été inventé en 1955 pour IBM France.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1,
+  "unit": "syllabes"
+ }
+]

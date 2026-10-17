@@ -1,0 +1,1755 @@
+[
+ {
+  "key": "log14-001",
+  "concept": "logic.sequences.v14_cent_dix",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Quel nombre vient ensuite : 100, 90, 80, 70, … ?",
+  "explanation": "On enlève 10 à chaque fois.",
+  "answer": 60,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-002",
+  "concept": "logic.sequences.v14_quatre_quatre",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Quel nombre vient ensuite : 4, 8, 12, 16, 20, … ?",
+  "explanation": "La table de 4 : on ajoute 4 à chaque fois.",
+  "answer": 24,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-003",
+  "concept": "logic.sequences.v14_cinquante_moins5",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Quel nombre vient ensuite : 50, 45, 40, 35, … ?",
+  "explanation": "On enlève 5 à chaque fois.",
+  "answer": 30,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-004",
+  "concept": "logic.sequences.v14_un_plus3",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 1, 4, 7, 10, 13, … ?",
+  "explanation": "On ajoute 3 à chaque fois.",
+  "answer": 16,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-005",
+  "concept": "logic.sequences.v14_deux_plus4",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 2, 6, 10, 14, 18, … ?",
+  "explanation": "On ajoute 4 à chaque fois.",
+  "answer": 22,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-006",
+  "concept": "logic.sequences.v14_table7",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 7, 14, 21, 28, 35, … ?",
+  "explanation": "La table de 7.",
+  "answer": 42,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-007",
+  "concept": "logic.sequences.v14_table9",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 9, 18, 27, 36, 45, … ?",
+  "explanation": "La table de 9 : les chiffres des dizaines montent, ceux des unités descendent.",
+  "answer": 54,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-008",
+  "concept": "logic.sequences.v14_semaines",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 20,
+  "prompt": "Quel nombre vient ensuite : 1, 8, 15, 22, 29, … ?",
+  "explanation": "On ajoute 7 à chaque fois, comme les dates d'un même jour de la semaine sur un calendrier.",
+  "answer": 36,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-009",
+  "concept": "logic.sequences.v14_six_plus5",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 6, 11, 16, 21, 26, … ?",
+  "explanation": "On ajoute 5 à chaque fois.",
+  "answer": 31,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-010",
+  "concept": "logic.sequences.v14_divise2",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Quel nombre vient ensuite : 96, 48, 24, 12, … ?",
+  "explanation": "On divise par 2 à chaque fois.",
+  "answer": 6,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-011",
+  "concept": "logic.sequences.v14_ecarts_croissants",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre vient ensuite : 2, 3, 5, 8, 12, 17, … ?",
+  "explanation": "Les écarts augmentent de 1 : +1, +2, +3, +4, +5, puis +6.",
+  "answer": 23,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-012",
+  "concept": "logic.sequences.v14_puissances6",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre vient ensuite : 1, 6, 36, 216, … ?",
+  "explanation": "On multiplie par 6 à chaque fois : 216 × 6 = 1 296.",
+  "answer": 1296,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-013",
+  "concept": "logic.sequences.v14_ecarts_5",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre vient ensuite : 5, 6, 8, 11, 15, 20, … ?",
+  "explanation": "Les écarts sont +1, +2, +3, +4, +5, puis +6.",
+  "answer": 26,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-014",
+  "concept": "logic.sequences.v14_ecarts_carres",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre vient ensuite : 1, 2, 6, 15, 31, … ?",
+  "explanation": "On ajoute les carrés : +1, +4, +9, +16, puis +25.",
+  "answer": 56,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-015",
+  "concept": "logic.sequences.v14_fois_croissant",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre vient ensuite : 2, 4, 12, 48, 240, … ?",
+  "explanation": "On multiplie par 2, puis 3, puis 4, puis 5, puis 6 : 240 × 6 = 1 440.",
+  "answer": 1440,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-016",
+  "concept": "logic.sequences.v14_plus10_moins5",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Quel nombre vient ensuite : 10, 20, 15, 25, 20, 30, … ?",
+  "explanation": "On ajoute 10, puis on enlève 5, et ainsi de suite.",
+  "answer": 25,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-017",
+  "concept": "logic.sequences.v14_plus1_plus2",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre vient ensuite : 1, 2, 4, 5, 7, 8, … ?",
+  "explanation": "On ajoute 1, puis 2, puis 1, puis 2… : ce sont les nombres qui ne sont pas dans la table de 3.",
+  "answer": 10,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-018",
+  "concept": "logic.sequences.v14_double_moins1",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre vient ensuite : 3, 6, 5, 10, 9, 18, … ?",
+  "explanation": "On double, puis on enlève 1, et on recommence.",
+  "answer": 17,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-019",
+  "concept": "logic.sequences.v14_moitie_plus2",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre vient ensuite : 100, 50, 52, 26, 28, 14, … ?",
+  "explanation": "On divise par 2, puis on ajoute 2, et on recommence.",
+  "answer": 16,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-020",
+  "concept": "logic.sequences.v14_uns",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 1, 11, 111, 1 111, … ?",
+  "explanation": "On ajoute un chiffre 1 à chaque fois.",
+  "answer": 11111,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-021",
+  "concept": "logic.sequences.v14_onze_moins",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Quel nombre vient ensuite : 99, 88, 77, 66, … ?",
+  "explanation": "On enlève 11 à chaque fois.",
+  "answer": 55,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-022",
+  "concept": "logic.sequences.v14_double_plus2",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre vient ensuite : 1, 4, 10, 22, 46, … ?",
+  "explanation": "On double et on ajoute 2 : 46 × 2 + 2 = 94.",
+  "answer": 94,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-023",
+  "concept": "logic.sequences.v14_rectangles",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre vient ensuite : 0, 2, 6, 12, 20, 30, … ?",
+  "explanation": "Les écarts sont 2, 4, 6, 8, 10, puis 12. Ce sont aussi les produits 0×1, 1×2, 2×3… jusqu'à 6×7 = 42.",
+  "answer": 42,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-024",
+  "concept": "logic.sequences.v14_tribonacci",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre vient ensuite : 1, 2, 3, 6, 11, 20, … ?",
+  "explanation": "Chaque nombre est la somme des trois précédents : 6 + 11 + 20 = 37.",
+  "answer": 37,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-025",
+  "concept": "logic.sequences.v14_soixante_divise",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre vient ensuite : 60, 30, 20, 15, 12, … ?",
+  "explanation": "On divise 60 par 1, 2, 3, 4, 5, puis 6 : 60 ÷ 6 = 10.",
+  "answer": 10,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-026",
+  "concept": "logic.sequences.v14_mois_31",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre vient ensuite : 1, 3, 5, 7, 8, 10, … ?",
+  "explanation": "Ce sont les numéros des mois de 31 jours : janvier, mars, mai, juillet, août, octobre… et décembre.",
+  "answer": 12,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-027",
+  "concept": "logic.sequences.v14_jours_mois",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Quel nombre vient ensuite : 31, 28, 31, 30, 31, … ?",
+  "explanation": "Le nombre de jours des mois (année normale) : janvier à mai, puis juin a 30 jours.",
+  "answer": 30,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-028",
+  "concept": "logic.sequences.v14_cinq_fois3",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Quel nombre vient ensuite : 5, 15, 45, … ?",
+  "explanation": "On multiplie par 3 à chaque fois.",
+  "answer": 135,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-029",
+  "concept": "logic.sequences.v14_plus8",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 3, 11, 19, 27, 35, … ?",
+  "explanation": "On ajoute 8 à chaque fois.",
+  "answer": 43,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-030",
+  "concept": "logic.sequences.v14_moins6",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Quel nombre vient ensuite : 70, 64, 58, 52, 46, … ?",
+  "explanation": "On enlève 6 à chaque fois.",
+  "answer": 40,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-031",
+  "concept": "logic.sequences.v14_carres_impairs",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre vient ensuite : 1, 9, 25, 49, 81, … ?",
+  "explanation": "Ce sont les carrés des nombres impairs : 1², 3², 5², 7², 9², puis 11² = 121.",
+  "answer": 121,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-032",
+  "concept": "logic.sequences.v14_ecarts_doubles",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre vient ensuite : 1, 2, 4, 8, 16, 32, … ?",
+  "explanation": "On double à chaque fois : 32 × 2 = 64.",
+  "answer": 64,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-033",
+  "concept": "logic.sequences.v14_alternes_100",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Quel nombre vient ensuite : 100, 1, 90, 2, 80, 3, … ?",
+  "explanation": "Deux suites mélangées : 100, 90, 80, 70… et 1, 2, 3…",
+  "answer": 70,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-034",
+  "concept": "logic.sequences.v14_plus_puis_fois",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre vient ensuite : 2, 4, 8, 10, 20, 22, … ?",
+  "explanation": "On ajoute 2, puis on double, et on recommence : 22 × 2 = 44.",
+  "answer": 44,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-035",
+  "concept": "logic.sequences.v14_lettres_trois",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle lettre vient ensuite : A, D, G, J, … ?",
+  "explanation": "On avance de 3 lettres à chaque fois : A (1), D (4), G (7), J (10), M (13).",
+  "options": [
+   "M*",
+   "K",
+   "L",
+   "N"
+  ]
+ },
+ {
+  "key": "log14-036",
+  "concept": "logic.sequences.v14_lettres_premiers",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans la série B, C, E, G, K, laquelle de ces lettres vient juste après ?",
+  "explanation": "Ce sont les lettres aux rangs 2, 3, 5, 7, 11 : des nombres premiers. Le suivant est 13, la lettre M.",
+  "options": [
+   "M*",
+   "L",
+   "N",
+   "O"
+  ]
+ },
+ {
+  "key": "log14-037",
+  "concept": "logic.sequences.v14_arc_en_ciel",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "R, O, J, V, B, I… Quelle initiale termine cette série bien colorée ?",
+  "explanation": "Rouge, orange, jaune, vert, bleu, indigo… violet : les couleurs de l'arc-en-ciel.",
+  "options": [
+   "V*",
+   "N",
+   "M",
+   "R"
+  ]
+ },
+ {
+  "key": "log14-038",
+  "concept": "logic.sequences.v14_notes_lettres",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle lettre vient ensuite : D, R, M, F, S, … ?",
+  "explanation": "Do, ré, mi, fa, sol… la.",
+  "options": [
+   "L*",
+   "T",
+   "D",
+   "P"
+  ]
+ },
+ {
+  "key": "log14-039",
+  "concept": "logic.sequences.v14_lettres_retour",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle lettre vient ensuite : Z, Y, X, W, … ?",
+  "explanation": "L'alphabet à l'envers.",
+  "options": [
+   "V*",
+   "U",
+   "T",
+   "A"
+  ]
+ },
+ {
+  "key": "log14-040",
+  "concept": "logic.sequences.v14_doigts",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Regarde ta main : P, I, M, A… Quelle initiale complète la série ?",
+  "explanation": "Pouce, index, majeur, annulaire… auriculaire : les doigts de la main.",
+  "options": [
+   "A (auriculaire)*",
+   "P",
+   "O",
+   "D"
+  ]
+ },
+ {
+  "key": "log14-041",
+  "concept": "logic.reasoning.v14_tailles_ordre",
+  "label": "Du plus petit au plus grand",
+  "type": "ordering",
+  "difficulty": 35,
+  "prompt": "Ana est plus grande que Ben. Ben est plus grand que Cléo. Dan est plus grand qu'Ana. Classe-les du plus petit au plus grand.",
+  "explanation": "Cléo < Ben < Ana < Dan.",
+  "items": [
+   "Cléo",
+   "Ben",
+   "Ana",
+   "Dan"
+  ]
+ },
+ {
+  "key": "log14-042",
+  "concept": "logic.reasoning.v14_arrivee_course",
+  "label": "L'arrivée de la course",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Course : Léo arrive juste après Mia. Noé arrive avant Mia. Zoé arrive en dernier. Classe-les du premier au dernier.",
+  "explanation": "Noé est avant Mia, Léo juste après Mia, et Zoé ferme la marche.",
+  "items": [
+   "Noé",
+   "Mia",
+   "Léo",
+   "Zoé"
+  ]
+ },
+ {
+  "key": "log14-043",
+  "concept": "logic.reasoning.v14_ages_ordre",
+  "label": "Du plus jeune au plus âgé",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Inès est plus âgée que Tom mais plus jeune que Sarah. Hugo est le plus jeune. Classe-les du plus jeune au plus âgé.",
+  "explanation": "Hugo est le plus jeune ; puis Tom < Inès < Sarah.",
+  "items": [
+   "Hugo",
+   "Tom",
+   "Inès",
+   "Sarah"
+  ]
+ },
+ {
+  "key": "log14-044",
+  "concept": "logic.reasoning.v14_fractions_ordre",
+  "label": "Du plus petit au plus grand",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Range ces nombres du plus petit au plus grand.",
+  "explanation": "1/3 vaut environ 0,33 et 3/4 vaut 0,75.",
+  "items": [
+   "0,25",
+   "1/3",
+   "0,5",
+   "3/4"
+  ]
+ },
+ {
+  "key": "log14-045",
+  "concept": "logic.reasoning.v14_durees_ordre",
+  "label": "Du plus court au plus long",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Range du plus court au plus long.",
+  "explanation": "1 000 secondes, c'est un peu moins de 17 minutes ; 100 minutes, 1 h 40.",
+  "items": [
+   "1 000 secondes",
+   "1 heure",
+   "100 minutes",
+   "1 jour"
+  ]
+ },
+ {
+  "key": "log14-046",
+  "concept": "logic.reasoning.v14_longueurs_ordre",
+  "label": "Du plus court au plus long",
+  "type": "ordering",
+  "difficulty": 10,
+  "prompt": "Range ces longueurs de la plus petite à la plus grande.",
+  "explanation": "Chacune vaut 10 fois la précédente.",
+  "items": [
+   "1 millimètre",
+   "1 centimètre",
+   "1 décimètre",
+   "1 mètre"
+  ]
+ },
+ {
+  "key": "log14-047",
+  "concept": "logic.reasoning.v14_premiers_tri",
+  "label": "Premier ou pas ?",
+  "type": "sort",
+  "difficulty": 40,
+  "prompt": "Ce nombre est-il premier ?",
+  "explanation": "Un nombre premier a exactement deux diviseurs : 1 et lui-même. 1 n'en a qu'un, il n'est donc pas premier.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Premier"
+   },
+   {
+    "label": "Pas premier"
+   }
+  ],
+  "items": [
+   [
+    "2",
+    0
+   ],
+   [
+    "3",
+    0
+   ],
+   [
+    "7",
+    0
+   ],
+   [
+    "13",
+    0
+   ],
+   [
+    "1",
+    1
+   ],
+   [
+    "9",
+    1
+   ],
+   [
+    "15",
+    1
+   ],
+   [
+    "21",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "log14-048",
+  "concept": "logic.reasoning.v14_multiples3_tri",
+  "label": "Multiple de 3 ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Ce nombre est-il un multiple de 3 ?",
+  "explanation": "Astuce : un nombre est multiple de 3 si la somme de ses chiffres l'est. 1 + 1 + 1 = 3, 1 + 0 + 0 + 2 = 3.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Multiple de 3"
+   },
+   {
+    "label": "Pas multiple de 3"
+   }
+  ],
+  "items": [
+   [
+    "12",
+    0
+   ],
+   [
+    "27",
+    0
+   ],
+   [
+    "111",
+    0
+   ],
+   [
+    "1 002",
+    0
+   ],
+   [
+    "10",
+    1
+   ],
+   [
+    "25",
+    1
+   ],
+   [
+    "101",
+    1
+   ],
+   [
+    "1 000",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "log14-049",
+  "concept": "logic.reasoning.v14_palindromes_tri",
+  "label": "Palindrome ?",
+  "type": "sort",
+  "difficulty": 25,
+  "prompt": "Ce mot se lit-il pareil dans les deux sens ?",
+  "explanation": "« Ressasser » est l'un des plus longs palindromes de la langue française.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Palindrome"
+   },
+   {
+    "label": "Non"
+   }
+  ],
+  "items": [
+   [
+    "kayak",
+    0
+   ],
+   [
+    "radar",
+    0
+   ],
+   [
+    "ressasser",
+    0
+   ],
+   [
+    "été",
+    0
+   ],
+   [
+    "arbre",
+    1
+   ],
+   [
+    "maison",
+    1
+   ],
+   [
+    "sauce",
+    1
+   ],
+   [
+    "rivière",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "log14-050",
+  "concept": "logic.reasoning.v14_animaux_abris",
+  "label": "Chacun chez soi",
+  "type": "pairs",
+  "difficulty": 15,
+  "prompt": "Associe chaque animal à son abri.",
+  "explanation": "Le renard, lui, vit dans un terrier qu'on appelle une tanière.",
+  "pairs": [
+   [
+    "Oiseau",
+    "Nid"
+   ],
+   [
+    "Abeille",
+    "Ruche"
+   ],
+   [
+    "Lapin",
+    "Terrier"
+   ],
+   [
+    "Cheval",
+    "Écurie"
+   ]
+  ]
+ },
+ {
+  "key": "log14-051",
+  "concept": "logic.reasoning.v14_metiers_outils",
+  "label": "Métiers et outils",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque métier à son outil.",
+  "explanation": "Le bistouri est un petit couteau très fin utilisé pour opérer.",
+  "pairs": [
+   [
+    "Peintre",
+    "Pinceau"
+   ],
+   [
+    "Chirurgien",
+    "Bistouri"
+   ],
+   [
+    "Bûcheron",
+    "Hache"
+   ],
+   [
+    "Plombier",
+    "Clé à molette"
+   ]
+  ]
+ },
+ {
+  "key": "log14-052",
+  "concept": "logic.reasoning.v14_ana_limace",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Anagramme de « LIMACE » : un peu d'espièglerie.",
+  "explanation": "Mêmes lettres : L, I, M, A, C, E.",
+  "word": "MALICE",
+  "display": "Malice"
+ },
+ {
+  "key": "log14-053",
+  "concept": "logic.reasoning.v14_ana_notre",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Anagramme de « NOTRE » : une voix d'homme aiguë, à l'opéra.",
+  "explanation": "Un ténor chante les notes aiguës ; le baryton et la basse, les plus graves.",
+  "word": "TENOR",
+  "display": "Ténor"
+ },
+ {
+  "key": "log14-054",
+  "concept": "logic.reasoning.v14_ana_corde",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Anagramme de « CORDE » : ce qui entoure les acteurs sur scène.",
+  "explanation": "Mêmes lettres : C, O, R, D, E.",
+  "word": "DECOR",
+  "display": "Décor"
+ },
+ {
+  "key": "log14-055",
+  "concept": "logic.reasoning.v14_ana_pierre",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Anagramme de « PIERRE » : on la récite à voix basse.",
+  "explanation": "Mêmes lettres, accents mis à part.",
+  "word": "PRIERE",
+  "display": "Prière"
+ },
+ {
+  "key": "log14-056",
+  "concept": "logic.reasoning.v14_ana_monde",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Anagramme de « MONDE » : un être maléfique.",
+  "explanation": "Mêmes lettres : M, O, N, D, E.",
+  "word": "DEMON",
+  "display": "Démon"
+ },
+ {
+  "key": "log14-057",
+  "concept": "logic.reasoning.v14_ana_crime",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Anagramme de « CRIME » : un mot de politesse.",
+  "explanation": "Un bel exemple d'anagramme qui change complètement de sens !",
+  "word": "MERCI",
+  "display": "Merci"
+ },
+ {
+  "key": "log14-058",
+  "concept": "logic.reasoning.v14_ana_ocean",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Anagramme de « OCÉAN » : un petit bateau qu'on fait avancer à la pagaie.",
+  "explanation": "Mêmes lettres : O, C, E, A, N.",
+  "word": "CANOE",
+  "display": "Canoë"
+ },
+ {
+  "key": "log14-059",
+  "concept": "logic.reasoning.v14_multiple9",
+  "label": "Multiples",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Tout multiple de 9 est aussi un multiple de 3.",
+  "explanation": "Vrai : 9 = 3 × 3. Si un nombre est 9 fois quelque chose, il est aussi 3 fois quelque chose.",
+  "answer": true
+ },
+ {
+  "key": "log14-060",
+  "concept": "logic.reasoning.v14_deux_angles_droits",
+  "label": "Le triangle",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Un triangle peut avoir deux angles droits.",
+  "explanation": "Faux : les trois angles d'un triangle font 180° en tout. Deux angles droits font déjà 180°, il ne resterait rien pour le troisième.",
+  "answer": false
+ },
+ {
+  "key": "log14-061",
+  "concept": "logic.reasoning.v14_un_premier",
+  "label": "Le nombre 1",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le nombre 1 est un nombre premier.",
+  "explanation": "Faux : un nombre premier a exactement deux diviseurs. 1 n'en a qu'un seul : lui-même.",
+  "answer": false
+ },
+ {
+  "key": "log14-062",
+  "concept": "logic.reasoning.v14_zero_pair",
+  "label": "Le zéro",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Zéro est un nombre pair.",
+  "explanation": "Vrai : il est divisible par 2 (0 ÷ 2 = 0), et il se trouve entre deux nombres impairs, -1 et 1.",
+  "answer": true
+ },
+ {
+  "key": "log14-063",
+  "concept": "logic.reasoning.v14_pas_tous",
+  "label": "Tous ou aucun ?",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "« Tous les chats ne sont pas noirs » veut dire « aucun chat n'est noir ».",
+  "explanation": "Faux : cela veut dire que certains chats ne sont pas noirs. Il peut très bien y avoir des chats noirs.",
+  "answer": false
+ },
+ {
+  "key": "log14-064",
+  "concept": "logic.reasoning.v14_bissextile_366",
+  "label": "Année bissextile",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Une année bissextile compte 366 jours.",
+  "explanation": "Vrai : le 29 février est ajouté, en général tous les quatre ans.",
+  "answer": true
+ },
+ {
+  "key": "log14-065",
+  "concept": "logic.reasoning.v14_deux_des_six",
+  "label": "Le dé",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "En lançant un dé deux fois, on est sûr d'obtenir au moins un 6.",
+  "explanation": "Faux : on a même environ 69 % de chances de ne pas en avoir.",
+  "answer": false
+ },
+ {
+  "key": "log14-066",
+  "concept": "logic.reasoning.v14_pairs_impairs_100",
+  "label": "Pairs et impairs",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Entre 1 et 100, il y a plus de nombres pairs que de nombres impairs.",
+  "explanation": "Faux : il y en a exactement 50 de chaque. Ils alternent : 1, 2, 3, 4… 99, 100.",
+  "answer": false
+ },
+ {
+  "key": "log14-067",
+  "concept": "logic.reasoning.v14_carte_rouge",
+  "label": "Probabilité",
+  "type": "gauge",
+  "difficulty": 20,
+  "prompt": "On tire une carte au hasard dans un jeu de 52. Quelle est la probabilité qu'elle soit rouge ?",
+  "explanation": "La moitié des cartes sont rouges (cœur et carreau) : 26 sur 52, soit 50 %.",
+  "answer": 50,
+  "tolerance": 5,
+  "unit": "%"
+ },
+ {
+  "key": "log14-068",
+  "concept": "logic.reasoning.v14_de_pair",
+  "label": "Probabilité",
+  "type": "gauge",
+  "difficulty": 15,
+  "prompt": "On lance un dé. Quelle est la probabilité d'obtenir un nombre pair ?",
+  "explanation": "Trois faces sur six : 2, 4 et 6. Soit une chance sur deux.",
+  "answer": 50,
+  "tolerance": 5,
+  "unit": "%"
+ },
+ {
+  "key": "log14-069",
+  "concept": "logic.reasoning.v14_roue_rouge",
+  "label": "Probabilité",
+  "type": "gauge",
+  "difficulty": 15,
+  "prompt": "Une roue a 10 cases identiques, dont 3 rouges. Quelle est la probabilité de tomber sur le rouge ?",
+  "explanation": "3 cases sur 10, soit 30 %.",
+  "answer": 30,
+  "tolerance": 5,
+  "unit": "%"
+ },
+ {
+  "key": "log14-070",
+  "concept": "logic.reasoning.v14_trois_piles",
+  "label": "Probabilité",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "On lance trois pièces. Quelle est la probabilité d'obtenir trois fois « pile » ?",
+  "explanation": "Une chance sur 2 pour chaque pièce : 1/2 × 1/2 × 1/2 = 1/8.",
+  "options": [
+   "1 chance sur 8*",
+   "1 chance sur 3",
+   "1 chance sur 6",
+   "1 chance sur 2"
+  ]
+ },
+ {
+  "key": "log14-071",
+  "concept": "logic.puzzles.v14_hanoi",
+  "label": "La tour de Hanoï",
+  "type": "counter",
+  "difficulty": 55,
+  "prompt": "Combien de coups faut-il au minimum pour déplacer une tour de Hanoï de 3 disques ?",
+  "explanation": "7 coups. Avec 4 disques, il en faut 15 ; avec n disques, 2ⁿ − 1.",
+  "answer": 7,
+  "tolerance": 0,
+  "min": 1,
+  "max": 20,
+  "start": 1,
+  "unit": "coups"
+ },
+ {
+  "key": "log14-072",
+  "concept": "logic.puzzles.v14_tetraedre",
+  "label": "Le tétraèdre",
+  "type": "counter",
+  "difficulty": 35,
+  "prompt": "Combien de faces a une pyramide à base triangulaire (un tétraèdre) ?",
+  "explanation": "Quatre triangles : la base et trois côtés. C'est la forme des dés à 4 faces.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1,
+  "unit": "faces"
+ },
+ {
+  "key": "log14-073",
+  "concept": "logic.puzzles.v14_octogone",
+  "label": "L'octogone",
+  "type": "counter",
+  "difficulty": 10,
+  "prompt": "Combien de côtés a un octogone, comme le panneau « Stop » ?",
+  "explanation": "« Octo » veut dire huit, comme dans « octobre », qui était le 8e mois du calendrier romain.",
+  "answer": 8,
+  "tolerance": 0,
+  "min": 3,
+  "max": 12,
+  "start": 3,
+  "unit": "côtés"
+ },
+ {
+  "key": "log14-074",
+  "concept": "logic.puzzles.v14_secondes_heure",
+  "label": "Secondes dans une heure",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Combien de secondes compte une heure ?",
+  "explanation": "60 minutes × 60 secondes = 3 600 secondes.",
+  "answer": 3600,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-075",
+  "concept": "logic.puzzles.v14_minutes_jour",
+  "label": "Minutes dans un jour",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien de minutes compte une journée ?",
+  "explanation": "24 heures × 60 minutes = 1 440 minutes.",
+  "answer": 1440,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-076",
+  "concept": "logic.puzzles.v14_tete_queue",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qui a une tête et une queue, mais pas de corps ?",
+  "explanation": "Pile ou face : on dit aussi « tête » pour le côté face.",
+  "options": [
+   "Une pièce de monnaie*",
+   "Un serpent",
+   "Une comète",
+   "Un têtard"
+  ]
+ },
+ {
+  "key": "log14-077",
+  "concept": "logic.puzzles.v14_montagne",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Plus haute que les arbres, elle a des racines que personne ne voit et elle ne grandit jamais. Qui est-elle ?",
+  "explanation": "Ses « racines » sont sous terre, et elle ne pousse pas.",
+  "options": [
+   "La montagne*",
+   "La tour Eiffel",
+   "La lune",
+   "La pluie"
+  ]
+ },
+ {
+  "key": "log14-078",
+  "concept": "logic.puzzles.v14_soleil",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Il se lève le matin et se couche le soir, mais ne dort jamais. Qui est-il ?",
+  "explanation": "Il ne se lève et ne se couche qu'en apparence : c'est la Terre qui tourne.",
+  "options": [
+   "Le Soleil*",
+   "Le coq",
+   "Le réveil",
+   "Le boulanger"
+  ]
+ },
+ {
+  "key": "log14-079",
+  "concept": "logic.puzzles.v14_pain",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Plus il est chaud, plus il est frais. Qui est-il ?",
+  "explanation": "Du pain encore chaud vient d'être cuit : il est tout frais !",
+  "options": [
+   "Le pain*",
+   "Le café",
+   "Le soleil",
+   "Le radiateur"
+  ]
+ },
+ {
+  "key": "log14-080",
+  "concept": "logic.puzzles.v14_timbre",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Il fait le tour du monde en restant toujours dans un coin. Qui est-il ?",
+  "explanation": "Collé dans le coin d'une enveloppe, il voyage avec elle.",
+  "options": [
+   "Le timbre*",
+   "Le globe",
+   "L'avion",
+   "Le coin de la rue"
+  ]
+ },
+ {
+  "key": "log14-081",
+  "concept": "logic.puzzles.v14_champignon",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Il a un chapeau mais pas de tête, un pied mais pas de chaussure. Qui est-il ?",
+  "explanation": "Le haut d'un champignon s'appelle le chapeau, et sa tige le pied.",
+  "options": [
+   "Le champignon*",
+   "Le clou",
+   "L'épouvantail",
+   "Le parasol"
+  ]
+ },
+ {
+  "key": "log14-082",
+  "concept": "logic.puzzles.v14_ancre",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "On me jette quand on a besoin de moi, et on me remonte quand on n'en a plus besoin. Qui suis-je ?",
+  "explanation": "On la jette pour immobiliser le bateau, on la remonte pour repartir.",
+  "options": [
+   "L'ancre*",
+   "La poubelle",
+   "Le seau",
+   "Le filet de pêche"
+  ]
+ },
+ {
+  "key": "log14-083",
+  "concept": "logic.puzzles.v14_savon",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Plus on l'utilise, plus il rapetisse, et il sent bon. Qui est-il ?",
+  "explanation": "Le crayon rapetisse aussi, mais il ne sent pas bon !",
+  "options": [
+   "Le savon*",
+   "Le crayon",
+   "La bougie",
+   "Le parfum"
+  ]
+ },
+ {
+  "key": "log14-084",
+  "concept": "logic.puzzles.v14_vent",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Il passe devant le soleil sans jamais faire d'ombre. Qui est-il ?",
+  "explanation": "Invisible, il ne cache jamais la lumière.",
+  "options": [
+   "Le vent*",
+   "L'avion",
+   "Le nuage",
+   "L'oiseau"
+  ]
+ },
+ {
+  "key": "log14-085",
+  "concept": "logic.puzzles.v14_mal_ecrit",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel mot s'écrit toujours mal ?",
+  "explanation": "Il s'écrit M-A-L… donc « mal », à chaque fois !",
+  "options": [
+   "Le mot « mal »*",
+   "Le mot « orthographe »",
+   "Le mot « faute »",
+   "Aucun"
+  ]
+ },
+ {
+  "key": "log14-086",
+  "concept": "logic.puzzles.v14_lettres_alphabet",
+  "label": "Piège",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien de lettres compte le mot « alphabet » ?",
+  "explanation": "A-L-P-H-A-B-E-T : 8 lettres. L'alphabet, lui, en compte 26.",
+  "options": [
+   "8*",
+   "26",
+   "9",
+   "7"
+  ]
+ },
+ {
+  "key": "log14-087",
+  "concept": "logic.puzzles.v14_coq_oeuf",
+  "label": "Piège",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Un coq pond un œuf pile sur le faîte d'un toit. De quel côté tombe l'œuf ?",
+  "explanation": "Seules les poules pondent.",
+  "options": [
+   "Aucun : un coq ne pond pas d'œufs*",
+   "À gauche",
+   "À droite",
+   "Il reste en équilibre"
+  ]
+ },
+ {
+  "key": "log14-088",
+  "concept": "logic.puzzles.v14_ampoule_interrupteurs",
+  "label": "L'énigme des interrupteurs",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Trois interrupteurs dans le couloir, une ampoule dans une pièce fermée. Tu ne peux entrer qu'une fois. Comment savoir quel interrupteur l'allume ?",
+  "explanation": "Allumée : c'est le 2e. Éteinte mais chaude : le 1er. Éteinte et froide : le 3e.",
+  "options": [
+   "Allumer le 1er quelques minutes, l'éteindre, allumer le 2e, puis entrer et toucher l'ampoule*",
+   "Allumer les trois en même temps",
+   "Écouter le bruit de l'ampoule",
+   "C'est impossible"
+  ]
+ },
+ {
+  "key": "log14-089",
+  "concept": "logic.puzzles.v14_peres_fils",
+  "label": "Deux pères et deux fils",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Deux pères et deux fils pêchent 3 poissons ; chacun en rapporte un. Comment est-ce possible ?",
+  "explanation": "Le père est à la fois père (du fils) et fils (du grand-père).",
+  "options": [
+   "Ils ne sont que trois : le grand-père, le père et le fils*",
+   "Un poisson a été coupé en deux",
+   "L'un d'eux a triché",
+   "Ils en ont relâché un"
+  ]
+ },
+ {
+  "key": "log14-090",
+  "concept": "logic.puzzles.v14_zero_multiplie",
+  "label": "Le nombre mystère",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel nombre, multiplié par n'importe quel autre, donne toujours le même résultat ?",
+  "explanation": "Tout nombre multiplié par 0 donne 0.",
+  "options": [
+   "0*",
+   "1",
+   "10",
+   "100"
+  ]
+ },
+ {
+  "key": "log14-091",
+  "concept": "logic.puzzles.v14_six_neuf",
+  "label": "Le chiffre retourné",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel chiffre devient plus grand quand on le retourne la tête en bas ?",
+  "explanation": "Retourné, le 6 devient un 9. Le 8 reste un 8.",
+  "options": [
+   "Le 6*",
+   "Le 9",
+   "Le 1",
+   "Le 8"
+  ]
+ },
+ {
+  "key": "log14-092",
+  "concept": "logic.puzzles.v14_anniversaire_20",
+  "label": "17 ans, puis 20 ans",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Avant-hier, j'avais 17 ans. L'an prochain, j'aurai 20 ans. » Comment est-ce possible ?",
+  "explanation": "Le 30 décembre, 17 ans ; le 31 décembre, 18 ans ; cette année, 19 ans ; l'an prochain, 20 ans.",
+  "options": [
+   "Nous sommes le 1er janvier, et je suis né le 31 décembre*",
+   "C'est impossible",
+   "Je suis né un 29 février",
+   "Je mens"
+  ]
+ },
+ {
+  "key": "log14-093",
+  "concept": "logic.puzzles.v14_tas_foin",
+  "label": "Les tas de foin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Un fermier a 3 tas de foin dans un champ et 5 dans un autre. Il les rassemble tous. Combien de tas a-t-il ?",
+  "explanation": "En rassemblant tous les tas, il n'en fait plus qu'un.",
+  "options": [
+   "Un seul, très gros*",
+   "8",
+   "15",
+   "2"
+  ]
+ },
+ {
+  "key": "log14-094",
+  "concept": "logic.reasoning.v14_avant_hier_mardi",
+  "label": "Quel jour ?",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Avant-hier était le lendemain de mardi. Quel jour sommes-nous ?",
+  "explanation": "Le lendemain de mardi, c'est mercredi : avant-hier était mercredi, donc aujourd'hui vendredi.",
+  "options": [
+   "Vendredi*",
+   "Jeudi",
+   "Mercredi",
+   "Samedi"
+  ]
+ },
+ {
+  "key": "log14-095",
+  "concept": "logic.reasoning.v14_analogie_plume",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Le pinceau est au peintre ce que la plume est…",
+  "explanation": "Chacun est l'outil de son métier.",
+  "options": [
+   "À l'écrivain*",
+   "À l'oiseau",
+   "Au coussin",
+   "Au chapeau"
+  ]
+ },
+ {
+  "key": "log14-096",
+  "concept": "logic.reasoning.v14_analogie_air",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "L'eau est au poisson ce que l'air est…",
+  "explanation": "Chacun vit et se déplace dans son élément.",
+  "options": [
+   "À l'oiseau*",
+   "Au vent",
+   "Au ballon",
+   "Au feu"
+  ]
+ },
+ {
+  "key": "log14-097",
+  "concept": "logic.reasoning.v14_analogie_rome",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Paris est à la France ce que Rome est…",
+  "explanation": "Chacune est la capitale de son pays.",
+  "options": [
+   "À l'Italie*",
+   "À l'Espagne",
+   "Au Vatican",
+   "Aux Romains"
+  ]
+ },
+ {
+  "key": "log14-098",
+  "concept": "logic.reasoning.v14_intrus_loup",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel est l'intrus : lion, tigre, loup, guépard ?",
+  "explanation": "Les trois autres sont des félins. Le loup est un canidé, cousin du chien.",
+  "options": [
+   "Le loup*",
+   "Le lion",
+   "Le tigre",
+   "Le guépard"
+  ]
+ },
+ {
+  "key": "log14-099",
+  "concept": "logic.reasoning.v14_intrus_vert",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "En peinture, quel est l'intrus : rouge, bleu, jaune, vert ?",
+  "explanation": "Rouge, bleu et jaune sont les couleurs primaires ; le vert s'obtient en mélangeant le bleu et le jaune.",
+  "options": [
+   "Le vert*",
+   "Le rouge",
+   "Le bleu",
+   "Le jaune"
+  ]
+ },
+ {
+  "key": "log14-100",
+  "concept": "logic.reasoning.v14_intrus_leman",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel est l'intrus : Seine, Loire, Rhône, Léman ?",
+  "explanation": "Le Léman est un lac. Les trois autres sont des fleuves… même si le Rhône traverse le Léman !",
+  "options": [
+   "Le Léman*",
+   "La Seine",
+   "La Loire",
+   "Le Rhône"
+  ]
+ },
+ {
+  "key": "log14-101",
+  "concept": "logic.reasoning.v14_intrus_mozart",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel est l'intrus : Picasso, Monet, Mozart, Van Gogh ?",
+  "explanation": "Mozart est un compositeur ; les trois autres sont des peintres.",
+  "options": [
+   "Mozart*",
+   "Picasso",
+   "Monet",
+   "Van Gogh"
+  ]
+ },
+ {
+  "key": "log14-102",
+  "concept": "logic.reasoning.v14_intrus_cubes",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est l'intrus : 8, 27, 64, 100 ?",
+  "explanation": "8, 27 et 64 sont des cubes (2³, 3³, 4³). 100 est un carré (10²), pas un cube.",
+  "options": [
+   "100*",
+   "8",
+   "27",
+   "64"
+  ]
+ },
+ {
+  "key": "log14-103",
+  "concept": "logic.reasoning.v14_intrus_juin",
+  "label": "L'intrus",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est l'intrus : janvier, mars, juin, août ?",
+  "explanation": "Juin compte 30 jours ; les trois autres en ont 31.",
+  "options": [
+   "Juin*",
+   "Janvier",
+   "Mars",
+   "Août"
+  ]
+ },
+ {
+  "key": "log14-104",
+  "concept": "logic.puzzles.v14_palindrome_horloge",
+  "label": "L'heure palindrome",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Une horloge affiche 12:21, une heure qui se lit dans les deux sens. Dans combien de minutes affichera-t-elle la suivante ?",
+  "explanation": "La suivante est 13:31 : 1 h 10 plus tard, soit 70 minutes.",
+  "answer": 70,
+  "tolerance": 0,
+  "unit": "minutes"
+ },
+ {
+  "key": "log14-105",
+  "concept": "logic.puzzles.v14_deux_chiffres_inverses",
+  "label": "Le nombre mystère",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Je suis un nombre à deux chiffres. En inversant mes chiffres, on obtient un nombre plus grand de 9. La somme de mes chiffres vaut 5. Qui suis-je ?",
+  "explanation": "23 : inversé, il donne 32, soit 9 de plus, et 2 + 3 = 5.",
+  "answer": 23,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-106",
+  "concept": "logic.puzzles.v14_plus_grand_7",
+  "label": "Multiple de 7",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Quel est le plus grand nombre à deux chiffres divisible par 7 ?",
+  "explanation": "7 × 14 = 98. Le suivant, 105, a trois chiffres.",
+  "answer": 98,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-107",
+  "concept": "logic.puzzles.v14_moitie_moitie",
+  "label": "La moitié de la moitié",
+  "type": "numeric",
+  "difficulty": 10,
+  "prompt": "Combien vaut la moitié de la moitié de 100 ?",
+  "explanation": "La moitié de 100, c'est 50 ; la moitié de 50, c'est 25.",
+  "answer": 25,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-108",
+  "concept": "logic.puzzles.v14_marches",
+  "label": "L'escalier",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Chaque marche d'un escalier mesure 20 cm de haut. Combien de marches faut-il pour monter 3 mètres ?",
+  "explanation": "3 m = 300 cm, et 300 ÷ 20 = 15 marches.",
+  "answer": 15,
+  "tolerance": 0,
+  "unit": "marches"
+ },
+ {
+  "key": "log14-109",
+  "concept": "logic.puzzles.v14_podiums",
+  "label": "Les podiums",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Dans une course de 8 coureurs, combien de podiums différents (or, argent, bronze) sont possibles ?",
+  "explanation": "8 choix pour l'or, puis 7 pour l'argent, puis 6 pour le bronze : 8 × 7 × 6 = 336.",
+  "answer": 336,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-110",
+  "concept": "logic.puzzles.v14_billes_boites",
+  "label": "Boîtes et sacs",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "5 boîtes contiennent chacune 5 sacs, et chaque sac contient 5 billes. Combien de billes en tout ?",
+  "explanation": "5 × 5 × 5 = 125 billes.",
+  "answer": 125,
+  "tolerance": 0,
+  "unit": "billes"
+ },
+ {
+  "key": "log14-111",
+  "concept": "logic.puzzles.v14_pages_jour",
+  "label": "Le livre",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Tom lit 15 pages par jour. En combien de jours lit-il un livre de 180 pages ?",
+  "explanation": "180 ÷ 15 = 12 jours.",
+  "answer": 12,
+  "tolerance": 0,
+  "unit": "jours"
+ },
+ {
+  "key": "log14-112",
+  "concept": "logic.puzzles.v14_concert_fin",
+  "label": "L'heure de fin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Un concert commence à 20 h 30 et dure 1 h 50. À quelle heure se termine-t-il ?",
+  "explanation": "20 h 30 + 1 h = 21 h 30 ; + 50 minutes = 22 h 20.",
+  "options": [
+   "22 h 20*",
+   "22 h 80",
+   "21 h 80",
+   "22 h 50"
+  ]
+ },
+ {
+  "key": "log14-113",
+  "concept": "logic.puzzles.v14_pizza_reste",
+  "label": "La pizza",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Une pizza est coupée en 8 parts. Tu en manges 3 et ton ami 2. Quelle part de la pizza reste-t-il ?",
+  "explanation": "8 − 3 − 2 = 3 parts sur 8.",
+  "options": [
+   "3/8*",
+   "5/8",
+   "1/2",
+   "1/4"
+  ]
+ },
+ {
+  "key": "log14-114",
+  "concept": "logic.reasoning.v14_carre_axes",
+  "label": "Symétrie",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Un carré a quatre axes de symétrie.",
+  "explanation": "Vrai : deux qui passent par le milieu des côtés, et deux qui suivent les diagonales.",
+  "answer": true
+ },
+ {
+  "key": "log14-115",
+  "concept": "logic.reasoning.v14_cercle_axes",
+  "label": "Symétrie",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Un cercle a une infinité d'axes de symétrie.",
+  "explanation": "Vrai : n'importe quelle droite qui passe par son centre le coupe en deux moitiés identiques.",
+  "answer": true
+ },
+ {
+  "key": "log14-116",
+  "concept": "logic.reasoning.v14_premier_pair",
+  "label": "Le nombre mystère",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est le seul nombre premier pair ?",
+  "explanation": "Tous les autres nombres pairs sont divisibles par 2, donc pas premiers.",
+  "options": [
+   "2*",
+   "0",
+   "4",
+   "Il n'y en a aucun"
+  ]
+ },
+ {
+  "key": "log14-117",
+  "concept": "logic.reasoning.v14_animaux_poids",
+  "label": "Du plus léger au plus lourd",
+  "type": "ordering",
+  "difficulty": 15,
+  "prompt": "Classe ces animaux du plus léger au plus lourd.",
+  "explanation": "Une souris pèse environ 20 g, un chat 4 kg, un labrador 30 kg, un cheval 500 kg.",
+  "items": [
+   "Souris",
+   "Chat",
+   "Labrador",
+   "Cheval"
+  ]
+ },
+ {
+  "key": "log14-118",
+  "concept": "logic.reasoning.v14_plante_ordre",
+  "label": "Dans l'ordre logique",
+  "type": "ordering",
+  "difficulty": 10,
+  "prompt": "Remets ces étapes dans l'ordre logique.",
+  "explanation": "On ne peut pas récolter avant d'avoir planté !",
+  "items": [
+   "Planter la graine",
+   "Arroser",
+   "La plante pousse",
+   "Cueillir les fruits"
+  ]
+ },
+ {
+  "key": "log14-119",
+  "concept": "logic.reasoning.v14_romains",
+  "label": "Chiffres romains",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque chiffre romain à sa valeur.",
+  "explanation": "Avec I (1), V (5) et D (500), ce sont les sept symboles des chiffres romains.",
+  "pairs": [
+   [
+    "X",
+    "10"
+   ],
+   [
+    "L",
+    "50"
+   ],
+   [
+    "C",
+    "100"
+   ],
+   [
+    "M",
+    "1 000"
+   ]
+  ]
+ },
+ {
+  "key": "log14-120",
+  "concept": "logic.puzzles.v14_mmxxvi",
+  "label": "Chiffres romains",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel nombre s'écrit MMXXVI en chiffres romains ?",
+  "explanation": "MM = 2 000, XX = 20, VI = 6 : 2 026.",
+  "answer": 2026,
+  "tolerance": 0
+ },
+ {
+  "key": "log14-121",
+  "concept": "logic.puzzles.v14_semaines_jours",
+  "label": "Semaines et jours",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de jours font 3 semaines et 4 jours ?",
+  "explanation": "3 × 7 = 21, plus 4 : 25 jours.",
+  "answer": 25,
+  "tolerance": 0,
+  "unit": "jours"
+ },
+ {
+  "key": "log14-122",
+  "concept": "logic.puzzles.v14_trains_20min",
+  "label": "Les départs",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Un train part toutes les 20 minutes à partir de 6 h. Combien de trains partent avant 8 h ?",
+  "explanation": "6 h, 6 h 20, 6 h 40, 7 h, 7 h 20 et 7 h 40 : 6 trains.",
+  "answer": 6,
+  "tolerance": 0,
+  "unit": "trains"
+ },
+ {
+  "key": "log14-123",
+  "concept": "logic.reasoning.v14_divisible5",
+  "label": "Divisible par 5",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment reconnaît-on un nombre divisible par 5 ?",
+  "explanation": "Par exemple 35, 120 ou 2 025.",
+  "options": [
+   "Il se termine par 0 ou par 5*",
+   "Il est impair",
+   "La somme de ses chiffres fait 5",
+   "Il commence par 5"
+  ]
+ },
+ {
+  "key": "log14-124",
+  "concept": "logic.puzzles.v14_oiseaux_branche",
+  "label": "Piège",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Cinq oiseaux sont posés sur une branche. Un bruit fait s'envoler l'un d'eux. Combien en reste-t-il, en général ?",
+  "explanation": "Au moindre bruit, tout le groupe part.",
+  "options": [
+   "Aucun : les autres s'envolent aussi*",
+   "4",
+   "5",
+   "1"
+  ]
+ },
+ {
+  "key": "log14-125",
+  "concept": "logic.puzzles.v14_medecin_frere",
+  "label": "Énigme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un médecin a un frère, mais ce frère n'a pas de frère. Comment est-ce possible ?",
+  "explanation": "Le frère a une sœur, médecin. Une énigme qui joue sur nos idées toutes faites.",
+  "options": [
+   "Le médecin est une femme*",
+   "Le frère est fils unique",
+   "C'est impossible",
+   "Ils sont jumeaux"
+  ]
+ }
+]
