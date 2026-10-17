@@ -488,6 +488,8 @@ final class AppModel {
         ads.adultAudience = isAdult
         if await ads.showInterstitialIfDue(allowed: adStatus?.interstitial ?? false) {
             track("interstitial")
+        } else if let reason = ads.interstitialFailure {
+            track("ad_fail", ["kind": "interstitial", "reason": String(reason.prefix(80))])
         }
     }
 

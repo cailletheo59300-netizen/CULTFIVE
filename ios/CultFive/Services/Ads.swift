@@ -198,6 +198,10 @@ final class AdsController {
     /// Pub entre les parties chargée d'avance (pendant le bilan) : elle s'affiche sans faire attendre.
     private var interstitialReady: (ad: InterstitialAd, loadedAt: Date)?
     private var interstitialLoading = false
+    /// Dernier échec de chargement de la pub entre les parties (« load <domaine> <code> »).
+    private var interstitialLoadError: String?
+    /// Pourquoi la pub entre les parties, due, ne s'est pas affichée (journal d'usage `ad_fail`) ; nil si rien à signaler.
+    private(set) var interstitialFailure: String?
 
     /// La pub entre les parties sera due au prochain passage : on la charge pendant que le joueur lit son bilan.
     func preloadInterstitialIfSoon() {
@@ -207,9 +211,15 @@ final class AdsController {
         let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
         applyAudience()
         Task { [weak self] in
-            let ad = try? await InterstitialAd.load(with: unit, request: Request())
+            do {
+                let ad = try await InterstitialAd.load(with: unit, request: Request())
+                self?.interstitialReady = (ad, Date())
+                self?.interstitialLoadError = nil
+            } catch {
+                let error = error as NSError
+                self?.interstitialLoadError = "load \(error.domain) \(error.code)"
+            }
             self?.interstitialLoading = false
-            if let ad { self?.interstitialReady = (ad, Date()) }
         }
     }
 
@@ -222,12 +232,20 @@ final class AdsController {
     /// Montre la pub entre les parties si elle est due. `allowed` : autorisation du serveur (pas les 3 premiers jours).
     /// Renvoie `true` si une pub a été montrée.
     func showInterstitialIfDue(allowed: Bool) async -> Bool {
-        guard enabled, started, allowed, !rewardedSinceLastGame else { return false }
+        interstitialFailure = nil
+        guard enabled, allowed, !rewardedSinceLastGame else { return false }
         let today = Self.dayString(Date())
         let shownToday = defaults.string(forKey: Self.dayKey) == today ? defaults.integer(forKey: Self.countKey) : 0
         guard defaults.integer(forKey: Self.gamesKey) >= 3, shownToday < 3 else { return false }
+        // Due mais impossible : on note pourquoi.
+        guard started else {
+            interstitialFailure = "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
+            return false
+        }
         // Jamais d'attente entre deux parties : sans pub prête, on n'en montre pas cette fois (elle se charge pour la suivante).
         guard let ready = interstitialReady, Date().timeIntervalSince(ready.loadedAt) < 50 * 60 else {
+            interstitialFailure = interstitialReady != nil ? "expired"
+                : interstitialLoading ? "loading" : (interstitialLoadError ?? "not_loaded")
             interstitialReady = nil
             preloadInterstitialIfSoon()
             return false
@@ -241,6 +259,10 @@ final class AdsController {
             ad.present(from: Self.topViewController)
         }
         withExtendedLifetime((ad, waiter)) {}
+        if let error = waiter.failure as NSError? {
+            interstitialFailure = "present \(error.domain) \(error.code)"
+            return false
+        }
         defaults.set(0, forKey: Self.gamesKey)
         defaults.set(today, forKey: Self.dayKey)
         defaults.set(shownToday + 1, forKey: Self.countKey)
@@ -278,6 +300,8 @@ final class AdsController {
 /// Attend la fermeture d'une pub plein écran (ou son échec d'affichage).
 private final class PresentationWaiter: NSObject, FullScreenContentDelegate {
     var continuation: CheckedContinuation<Void, Never>?
+    /// La pub n'a pas pu s'afficher.
+    private(set) var failure: Error?
 
     private func finish() {
         continuation?.resume()
@@ -286,5 +310,8 @@ private final class PresentationWaiter: NSObject, FullScreenContentDelegate {
 
     func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd) { finish() }
 
-    func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) { finish() }
+    func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        failure = error
+        finish()
+    }
 }
