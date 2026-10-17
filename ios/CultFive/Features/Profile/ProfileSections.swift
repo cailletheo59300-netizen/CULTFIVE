@@ -233,7 +233,7 @@ struct ProfileMonthCalendar: View {
 
 // MARK: - Trophées
 
-/// Étagère qui défile : médailles de maîtrise gagnées, exploits débloqués, puis ceux à gagner (grisés).
+/// Étagère qui défile : exploits débloqués, puis quelques-uns à gagner (grisés).
 struct ProfileTrophyShelf: View {
     let trophies: TrophiesOverview
 
@@ -246,16 +246,11 @@ struct ProfileTrophyShelf: View {
     }
 
     private var items: [Item] {
-        let tierNames = Dictionary(uniqueKeysWithValues: TrophiesOverview.tiers.map { ($0.id, $0.name) })
-        let masteries = trophies.mastery.compactMap { m -> Item? in
-            guard let tier = m.tier else { return nil }
-            return Item(id: "m-\(m.domainId)", image: "medal_\(tier)", title: m.name, subtitle: tierNames[tier] ?? tier, unlocked: true)
-        }
         let unlocked = trophies.exploits.filter { $0.unlockedAt != nil }
             .map { Item(id: "e-\($0.id)", image: "trophy_cup", title: $0.name, subtitle: "Exploit", unlocked: true) }
         let locked = trophies.exploits.filter { $0.unlockedAt == nil }.prefix(3)
             .map { Item(id: "e-\($0.id)", image: "trophy_cup", title: $0.name, subtitle: "À gagner", unlocked: false) }
-        return masteries + unlocked + locked
+        return unlocked + locked
     }
 
     var body: some View {

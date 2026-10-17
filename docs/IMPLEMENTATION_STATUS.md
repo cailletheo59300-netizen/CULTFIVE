@@ -32,6 +32,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Arts (656), logique (650), science (654), français (653) : +409 questions (D-066) | ✅ en production (17/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Pubs : Unity Ads en enchères, choix de confidentialité, raison des échecs (D-064) | 🟡 app 1.3 (TestFlight), serveur 0062 | `99_pubs_unity.sql` |
 | Vitrine du profil sur un socle, vue par les amis ; écran des trophées refait (D-067) | 🟡 app 1.3 (à construire), serveur 0063 | `99_vitrine.sql`, `ContractDecodingTests.testShowcase` |
+| Trophées : plus de maîtrise par domaine, 12 nouveaux exploits ; vitrine en bas du profil, socles admin (D-068) | 🟡 app 1.3 (à construire), serveur 0064 | `95_gamification.sql`, `99_exploits.sql` |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |
 

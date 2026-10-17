@@ -24,10 +24,6 @@ struct ProfileView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     portrait
                     if app.isAnonymous { AccountNudge() }
-                    if let showcase {
-                        ProfileSectionTitle(title: "Ma vitrine", action: "Modifier") { editShowcase = true }
-                        ProfileShowcaseBlock(showcase: showcase) { editShowcase = true }
-                    }
                     Button { showRankPath = true } label: { coteCard }
                         .buttonStyle(.row)
                         .accessibilityHint("Ouvre ton parcours : les rangs et ce qu'il te reste à gagner")
@@ -37,6 +33,10 @@ struct ProfileView: View {
                     ProfileDomainsList(skills: skills)
                     ProfileSectionTitle(title: "Ton mois", action: "Historique") { showHistory = true }
                     ProfileMonthCalendar(history: history)
+                    if let showcase {
+                        ProfileSectionTitle(title: "Ma vitrine", action: "Modifier") { editShowcase = true }
+                        ProfileShowcaseBlock(showcase: showcase) { editShowcase = true }
+                    }
                     if let trophyOverview {
                         ProfileSectionTitle(title: "Trophées", action: "Tout voir") { showTrophies = true }
                         ProfileTrophyShelf(trophies: trophyOverview)

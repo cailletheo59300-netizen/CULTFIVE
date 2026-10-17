@@ -175,27 +175,21 @@ begin
   r := public.play_submit((pack ->> 'session_id')::uuid, atts);
   perform tst.ok(r -> 'achievements' ? 'Sans-faute classé', 'fin de partie : nom du trophée, pas son identifiant');
   perform tst.ok(r -> 'achievements' ? 'Placé', 'placé');
-  perform tst.ok(exists (select 1 from public.user_achievements where user_id = u and achievement_id = 'mastery_history_bronze')
-                 and exists (select 1 from public.user_achievements where user_id = u and achievement_id = 'mastery_history_silver'),
-                 'maîtrise bronze et argent');
-  perform tst.ok(not exists (select 1 from public.user_achievements where user_id = u and achievement_id = 'mastery_history_gold')
-                 or (select elo from public.user_skills where user_id = u and scope_id = 'history') >= 1050,
-                 'pas d''or sans 1 050');
-  perform tst.ok((select tier from public.user_chests where user_id = u and idempotency_key = 'trophy:mastery_history_silver') = 'silver',
-                 'maîtrise argent : coffre d''argent');
+  -- 0064 : plus de maîtrise par domaine ; le rang Érudit (900) devient un exploit.
+  perform tst.ok(not exists (select 1 from public.user_achievements where user_id = u and achievement_id like 'mastery_%'),
+                 'plus de médaille de maîtrise');
+  perform tst.ok(r -> 'achievements' ? 'Érudit', 'exploit Érudit en fin de partie');
+  perform tst.ok(not exists (select 1 from public.user_achievements where user_id = u and achievement_id = 'rank_encyclopedia'),
+                 'pas d''Encyclopédie sans 1 200');
   perform tst.ok((select tier from public.user_chests where user_id = u and idempotency_key = 'trophy:ranked_perfect') = 'silver',
                  'sans-faute : coffre d''argent');
   perform tst.ok(not exists (select 1 from public.ledger where user_id = u and reason = 'achievement'), 'plus de graines directes pour les trophées');
 
   -- Vitrine.
   t := public.trophies_overview();
-  perform tst.ok(jsonb_array_length(t -> 'exploits') = 14, '14 exploits (dont Vainqueur de ligue, 0058)');
-  perform tst.ok(jsonb_array_length(t -> 'mastery') = 12, 'un domaine par ligne');
-  perform tst.ok((select m ->> 'tier' from jsonb_array_elements(t -> 'mastery') m where m ->> 'domain_id' = 'history') in ('silver', 'gold'),
-                 'histoire : palier atteint');
-  perform tst.ok((select (m ->> 'placed')::bool from jsonb_array_elements(t -> 'mastery') m where m ->> 'domain_id' = 'geography') = false,
-                 'géographie : pas encore placé');
-  perform tst.ok(jsonb_array_length(public.achievements_mine()) = 14, 'profil : exploits seulement');
+  perform tst.ok(jsonb_array_length(t -> 'exploits') = 26, '26 exploits (14 + 12 nouveaux, 0064)');
+  perform tst.ok(jsonb_array_length(t -> 'mastery') = 0, 'maîtrise vide (0064)');
+  perform tst.ok(jsonb_array_length(public.achievements_mine()) = 26, 'profil : exploits seulement');
 end $$;
 
 -- Parrainage rééquilibré : paliers en coffres.
