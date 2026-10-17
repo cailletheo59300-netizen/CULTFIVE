@@ -14,6 +14,8 @@ struct ProfileView: View {
     @State private var showEloHelp = false
     @State private var showRankPath = false
     @State private var showTrophies = false
+    @State private var showcase: Showcase?
+    @State private var editShowcase = false
     @State private var path = NavigationPath()
 
     var body: some View {
@@ -22,6 +24,10 @@ struct ProfileView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     portrait
                     if app.isAnonymous { AccountNudge() }
+                    if let showcase {
+                        ProfileSectionTitle(title: "Ma vitrine", action: "Modifier") { editShowcase = true }
+                        ProfileShowcaseBlock(showcase: showcase) { editShowcase = true }
+                    }
                     Button { showRankPath = true } label: { coteCard }
                         .buttonStyle(.row)
                         .accessibilityHint("Ouvre ton parcours : les rangs et ce qu'il te reste à gagner")
@@ -63,6 +69,9 @@ struct ProfileView: View {
             }
         }
         .sheet(isPresented: $showEloHelp) { EloExplainerSheet() }
+        .sheet(isPresented: $editShowcase) {
+            ShowcaseEditor(initial: showcase ?? Showcase()) { showcase = $0 }
+        }
         .sheet(isPresented: $showTrophies) {
             if let trophyOverview {
                 NavigationStack {
@@ -83,9 +92,11 @@ struct ProfileView: View {
         async let s = try? service.skills()
         async let a = try? service.trophies()
         async let h = try? service.dailyHistory(days: 35)
+        async let v = try? service.showcase()
         skills = await s ?? []
         trophyOverview = await a ?? trophyOverview
         history = await h ?? []
+        showcase = await v ?? showcase
     }
 
     // MARK: Blocs

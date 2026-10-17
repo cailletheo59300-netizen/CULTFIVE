@@ -1287,13 +1287,51 @@ public struct FriendProfile: Decodable, Hashable, Sendable {
     public let today: FriendToday?
     public let headToHead: HeadToHead
     public let duels: [Duel]
+    /// Vitrine du profil (absente avant la migration 0063).
+    public let showcase: Showcase?
 
     enum CodingKeys: String, CodingKey {
-        case id, handle, streak, cote, today, duels
+        case id, handle, streak, cote, today, duels, showcase
         case streakBest = "streak_best"
         case xpTotal = "xp_total"
         case cotePlaced = "cote_placed"
         case headToHead = "head_to_head"
+    }
+}
+
+/// Vitrine du profil (D-067) : jusqu'à 3 cartes posées sur un socle du pass, vue par les amis.
+public struct Showcase: Codable, Hashable, Sendable {
+    /// Une carte exposée et ce qu'elle affiche (états masqués déjà retirés).
+    public struct Card: Codable, Hashable, Sendable {
+        /// Identifiant serveur de la carte.
+        public let card: String
+        public let shiny: Bool
+        public let prestige: Bool
+        public let masterpiece: Bool
+        public let frame: String?
+        public let finish: String?
+        public let title: String?
+
+        public init(card: String, shiny: Bool = false, prestige: Bool = false, masterpiece: Bool = false,
+                    frame: String? = nil, finish: String? = nil, title: String? = nil) {
+            self.card = card
+            self.shiny = shiny
+            self.prestige = prestige
+            self.masterpiece = masterpiece
+            self.frame = frame
+            self.finish = finish
+            self.title = title
+        }
+    }
+
+    /// « marbre », « or », « neon », « glace » ; nil : présentoir simple.
+    public let socle: String?
+    /// Dans l'ordre : la première au centre.
+    public let cards: [Card]
+
+    public init(socle: String? = nil, cards: [Card] = []) {
+        self.socle = socle
+        self.cards = cards
     }
 }
 

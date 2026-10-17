@@ -216,4 +216,16 @@ final class ContractDecodingTests: XCTestCase {
         let leagues: [LeagueSummary] = try fixture("leagues")
         XCTAssertEqual(leagues.first?.members, 1)
     }
+
+    /// Vitrine du profil (0063) : socle et cartes dans l'ordre ; vide par défaut.
+    func testShowcase() throws {
+        let showcase: Showcase = try fixture("showcase")
+        XCTAssertEqual(showcase.socle, "or")
+        XCTAssertEqual(showcase.cards.count, 2)
+        XCTAssertEqual(showcase.cards.first?.frame, "vitrail")
+        XCTAssertEqual(showcase.cards.last?.title, "curieux")
+        let empty: Showcase = try JSONDecoder().decode(Showcase.self, from: Data(#"{"socle": null, "cards": []}"#.utf8))
+        XCTAssertNil(empty.socle)
+        XCTAssertTrue(empty.cards.isEmpty)
+    }
 }

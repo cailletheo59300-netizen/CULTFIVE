@@ -24,6 +24,16 @@ struct FriendProfileView: View {
             VStack(alignment: .leading, spacing: Space.l) {
                 header
                 if let profile {
+                    if let showcase = profile.showcase, !showcase.isEmpty {
+                        VStack(alignment: .leading, spacing: Space.s) {
+                            Text("Sa vitrine").labelCaps()
+                            ShowcaseStage(socle: showcase.socleStyle, slots: ShowcaseSlot.slots(of: showcase))
+                                .padding(Space.m)
+                                .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+                                .accessibilityElement(children: .combine)
+                                .accessibilityLabel("Vitrine de \(handle)")
+                        }
+                    }
                     todayCard(profile)
                     Button { showSetup = true } label: {
                         Label("Défier \(handle)", systemImage: "bolt.fill").frame(maxWidth: .infinity)

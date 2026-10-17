@@ -61,6 +61,10 @@ public protocol GameService: Sendable {
 
     // Album de cartes et pass de saison
     func albumOverview() async throws -> AlbumOverview
+    /// Vitrine du profil (cartes et socle exposés).
+    func showcase() async throws -> Showcase
+    /// `socle` : « marbre », « or »… ou nil ; `cards` : identifiants serveur, 3 au plus, le premier au centre.
+    func setShowcase(socle: String?, cards: [String]) async throws -> Showcase
     /// `series` : un domaine ou « encyclo ». `clientId` rend l'ouverture idempotente (renvoi réseau).
     func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening
     /// Fabrique une carte manquante. Renvoie le solde de neurones.
@@ -513,6 +517,13 @@ public struct LiveGameService: GameService {
 
     public func albumOverview() async throws -> AlbumOverview { try await api.rpc("album_overview") }
 
+    public func showcase() async throws -> Showcase { try await api.rpc("showcase_get") }
+
+    public func setShowcase(socle: String?, cards: [String]) async throws -> Showcase {
+        try await api.rpc("showcase_set", ["p_socle": socle.map { .string($0) } ?? .null,
+                                           "p_cards": .array(cards.map { .string($0) })])
+    }
+
     public func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening {
         try await api.rpc("album_open_pack", ["p_series": .string(series), "p_pay": .string(pay.rawValue),
                                               "p_client_id": .string(clientId.uuidString)])
@@ -607,6 +618,8 @@ public extension GameService {
 
     // Album et pass : la démo n'a pas de collection.
     func albumOverview() async throws -> AlbumOverview { AlbumOverview() }
+    func showcase() async throws -> Showcase { Showcase() }
+    func setShowcase(socle: String?, cards: [String]) async throws -> Showcase { Showcase(socle: socle) }
     func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening {
         throw BackendError.server(status: 400, code: "album_unavailable", message: "")
     }
