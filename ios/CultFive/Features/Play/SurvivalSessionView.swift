@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 import CultFiveCore
 
 // Mode Survie (D-072) : on répond jusqu'à la première erreur. Le serveur sert une question à la fois sans sa réponse
@@ -142,6 +143,7 @@ struct SurvivalSessionView: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.requestReview) private var requestReview
     @State private var model: SurvivalSessionModel?
 
     private static let flame = Color(hex: 0xFF6B2C)
@@ -288,6 +290,13 @@ struct SurvivalSessionView: View {
         .padding(Space.gutter)
         .onAppear {
             if result.newRecord { Haptics.success() }
+        }
+        .task {
+            // Nouveau record : un bon moment pour la demande de note d'Apple (une fois, joueur actif 3 jours).
+            guard result.newRecord, result.score >= 5, ReviewPrompt.isDue else { return }
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            ReviewPrompt.markAsked()
+            requestReview()
         }
     }
 

@@ -24,13 +24,15 @@ create index on public.survival_runs (user_id, started_at desc);
 alter table public.survival_runs enable row level security;
 revoke all on public.survival_runs from public, anon, authenticated;
 
-create or replace function public._survival_rule(p_key text) returns int language sql immutable as $$
+create or replace function public._survival_rule(p_key text) returns int
+language sql immutable set search_path = public, pg_temp as $$
   select case p_key when 'seconds' then 20 when 'grace' then 3 when 'per_correct' then 3 when 'record_bonus' then 20
                     when 'daily_cap' then 150 when 'per_hour' then 30 end
 $$;
 
 -- Record du joueur (meilleur score d'une partie finie).
-create or replace function public._survival_record(p_user uuid) returns int language sql stable as $$
+create or replace function public._survival_record(p_user uuid) returns int
+language sql stable set search_path = public, pg_temp as $$
   select coalesce(max(score), 0) from public.survival_runs where user_id = p_user and ended_at is not null
 $$;
 

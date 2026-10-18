@@ -17,9 +17,9 @@ struct BagView: View {
                     seedsCard
                     section("Tickets d'aide")
                     row(icon: GameIcon.ticketFifty.image, title: "Ticket 50/50", detail: "Retire deux mauvaises réponses, sans neurones",
-                        value: "× \(progression?.tickets.fiftyFifty ?? 0)")
+                        value: "\(min(progression?.tickets.fiftyFifty ?? 0, 5))/5")
                     row(icon: GameIcon.ticketHint.image, title: "Ticket indice", detail: "Un indice ou une seconde chance, sans neurones",
-                        value: "× \(progression?.tickets.hint ?? 0)")
+                        value: "\(min(progression?.tickets.hint ?? 0, 5))/5")
                     section("Série")
                     row(icon: GameIcon.joker.image, title: "Jokers de série", detail: "Sauvent ta série si tu rates un jour (2 au plus)",
                         value: "\(app.profile?.streakFreezes ?? progression?.streakFreezes ?? 0)/2")

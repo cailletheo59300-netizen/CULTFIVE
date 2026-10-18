@@ -287,8 +287,13 @@ struct FriendsView: View {
             played.append(FriendRankEntry(id: "moi", friend: nil, handle: "Toi", score: mine.score, totalMs: mine.totalMs,
                                           streak: mine.streak, me: true))
         }
-        played.sort { a, b in
-            a.score != b.score ? a.score > b.score : (a.totalMs ?? .max) < (b.totalMs ?? .max)
+        played.sort { (a: FriendRankEntry, b: FriendRankEntry) -> Bool in
+            let scoreA: Int = a.score ?? 0
+            let scoreB: Int = b.score ?? 0
+            if scoreA != scoreB { return scoreA > scoreB }
+            let timeA: Int = a.totalMs ?? Int.max
+            let timeB: Int = b.totalMs ?? Int.max
+            return timeA < timeB
         }
         for index in played.indices { played[index].rank = index + 1 }
         let waiting = friends.filter { $0.today?.score == nil }

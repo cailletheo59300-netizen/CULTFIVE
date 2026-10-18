@@ -37,6 +37,8 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Fin du 5 du jour : classement du jour, sans case de rappel (D-073) | 🟡 app 1.4 (à construire), serveur 0070 | `99_classement_du_jour.sql`, `ContractDecodingTests.testDailyLeaderboard` |
 | Accueil : coffres à ouvrir, barre du pass, « Tout réclamer » ; amis en classement ; aides en partie (D-074) | 🟡 app 1.4 (à construire) | build iOS |
 | Objectifs d'album : coffre en argent par page complète (D-075) | 🟡 app 1.4 (à construire), serveur 0071 | `99_exploits.sql` |
+| Tickets d'aide : 5 au plus par sorte (D-076) | 🟡 serveur 0072 | `99_exploits.sql` |
+| Demande de note App Store (D-077) | 🟡 app 1.4 (à construire) | build iOS |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |
 

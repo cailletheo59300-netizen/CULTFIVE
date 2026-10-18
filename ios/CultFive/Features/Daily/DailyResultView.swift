@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 import CultFiveCore
 
 /// Résultat du 5 du jour : le moment de satisfaction. Fond violet, score géant en jaune soleil, Léon qui réagit,
@@ -11,6 +12,7 @@ struct DailyResultView: View {
 
     @Environment(AppModel.self) private var app
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.requestReview) private var requestReview
     @State private var appeared = false
     @State private var shownScore = 0
     /// Domaines dont la cote est dévoilée (placement terminé).
@@ -66,10 +68,17 @@ struct DailyResultView: View {
         .task {
             if !celebrated {
                 celebrated = true
+                ReviewPrompt.noteActiveDay()
                 let items = await moments()
                 // Après l'apparition du score : le résultat d'abord, puis la fête.
                 try? await Task.sleep(nanoseconds: 1_200_000_000)
                 celebrations = items
+                // Bon moment, sans fête en cours : la demande de note d'Apple (une fois, joueur actif 3 jours).
+                if items.isEmpty, result.score >= 4, ReviewPrompt.isDue {
+                    try? await Task.sleep(nanoseconds: 1_500_000_000)
+                    ReviewPrompt.markAsked()
+                    requestReview()
+                }
             }
             board = try? await app.service.dailyLeaderboard(date: result.date)
             if let skills = try? await app.service.skills() {

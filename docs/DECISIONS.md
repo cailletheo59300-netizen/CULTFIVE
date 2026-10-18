@@ -246,3 +246,9 @@ Pourquoi : 86 coffres jamais ouverts, 1 joueur sur 47 réclame le pass ; le prop
 
 ### D-075 · 2026-10-18 · Objectifs d'album
 Pourquoi : rendre l'album plus explicite (propriétaire). Décidé (0071, app 1.4) : chaque **page complétée donne un coffre en argent**, une seule fois (rattrapage des pages déjà complètes à la mise en ligne). En-tête de chaque page : le coffre et « Plus que N », ou « Complète ».
+
+### D-076 · 2026-10-18 · Tickets d'aide : 5 au plus
+Pourquoi : des joueurs avaient jusqu'à 17 tickets 50/50 et 12 tickets Indice ; le propriétaire voulait 5 au plus (la limite de 0057 ne concernait que les tickets de pochette). Décidé (0072, serveur seulement) : **5 au plus par sorte** (50/50, Indice) ; au-delà, le ticket gagné est perdu, sans neurones (décision du propriétaire) ; les joueurs au-dessus redescendent à 5.
+
+### D-077 · 2026-10-18 · Demande de note App Store
+Pourquoi : obtenir des notes (propriétaire). Décidé (app 1.4) : la fenêtre officielle d'Apple (étoiles), **une seule fois** de notre part, à un joueur actif **au moins 3 jours différents**, juste après un bon moment : 5 du jour à 4 ou 5 sur 5 (sans fête en cours), ou nouveau record de Survie d'au moins 5. Jamais pendant une partie. Apple décide ensuite de l'afficher (3 fois par an au plus).

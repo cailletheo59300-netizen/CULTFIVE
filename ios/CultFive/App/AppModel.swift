@@ -152,6 +152,7 @@ final class AppModel {
                 try? await service.registerDevice(hash: device)
             }
             track("app_open", ["os": UIDevice.current.systemVersion])
+            ReviewPrompt.noteActiveDay()
             phase = (profile?.onboarded ?? false) ? .main : .onboarding
             if phase == .main {
                 async let daily: Void = refreshDaily()
@@ -476,6 +477,7 @@ final class AppModel {
     /// Entre deux parties Jouer (après le bilan) : pub plein écran si elle est due.
     /// Une partie Jouer vient de finir : si la pub entre les parties approche, elle se charge déjà (bilan à l'écran).
     func noteGameFinished() {
+        ReviewPrompt.noteActiveDay()
         ads.noteGameFinished()
         if !noAds, adStatus?.interstitial ?? false {
             ads.adultAudience = isAdult
