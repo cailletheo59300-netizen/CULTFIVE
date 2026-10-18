@@ -38,7 +38,10 @@ begin
   perform tst.login(b);
   r := public.domain_leaderboard('sport');
   perform tst.ok((r -> 'rows') @> '[{"me": true, "elo": 1110}]', 'ma ligne avec mon Elo');
-  perform tst.ok((select (x ->> 'rank')::int from jsonb_array_elements(r -> 'rows') x where x ->> 'elo' = '1111')
-                 < (r ->> 'rank')::int, 'meilleur Elo devant');
+  perform tst.ok((select rank from public._domain_ranks('sport', b) where user_id = a)
+                 < (select rank from public._domain_ranks('sport', b) where user_id = b), 'meilleur Elo devant');
+  -- 0075 : un joueur pas encore placé (quelques réponses) est aussi classé.
+  insert into public.user_skills (user_id, scope_id, mu, var, n, correct, elo) values (tst.new_user(), 'sport', 50, 20, 3, 2, 520);
+  perform tst.ok(exists (select 1 from public._domain_ranks('sport', b) where elo = 520), 'non placé : classé aussi');
   perform tst.throws('select public.domain_leaderboard(''nope'')', 'invalid_domain');
 end $$;

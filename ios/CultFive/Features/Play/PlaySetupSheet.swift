@@ -99,7 +99,7 @@ struct PlaySetupSheet: View {
         return "Elo \(rating.formatted) · \(rating.provisionalLabel)"
     }
 
-    /// Classement Elo du domaine : podium animé, puis toi et tes voisins. Pas encore placé : ta place viendra.
+    /// Classement Elo du domaine : podium animé, puis toi et tes voisins. Jamais joué en classé : ta place viendra.
     @ViewBuilder private var leaderboard: some View {
         if let board, !board.rows.isEmpty {
             VStack(alignment: .leading, spacing: Space.s) {
@@ -113,7 +113,7 @@ struct PlaySetupSheet: View {
                               me: row.me, elo: row.elo)
                 }, style: .onPaper)
                 if board.rank == nil {
-                    Text("Termine ton placement (20 réponses classées) pour entrer dans le classement.")
+                    Text("Joue une partie classée dans ce domaine pour entrer dans le classement.")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                         .fixedSize(horizontal: false, vertical: true)
                 }
