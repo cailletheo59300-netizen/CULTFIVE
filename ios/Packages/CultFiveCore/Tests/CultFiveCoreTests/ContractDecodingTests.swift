@@ -228,4 +228,21 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertNil(empty.socle)
         XCTAssertTrue(empty.cards.isEmpty)
     }
+
+    /// Survie (0069) : aperçu, départ, bilan ; la question et le verdict réutilisent ceux du 5 du jour.
+    func testSurvival() throws {
+        let decoder = SupabaseAPI.decoder
+        let overview = try decoder.decode(SurvivalOverview.self, from: Data(#"{"record": 12, "best_today": 4, "seconds": 20}"#.utf8))
+        XCTAssertEqual(overview.record, 12)
+        XCTAssertEqual(overview.bestToday, 4)
+        let start = try decoder.decode(SurvivalStart.self,
+                                       from: Data(#"{"run_id": "6f1c1f9e-8f1e-4c55-9d1a-2b8d6b6f0a11", "record": 12, "seconds": 20}"#.utf8))
+        XCTAssertEqual(start.seconds, 20)
+        let result = try decoder.decode(SurvivalResult.self,
+                                        from: Data(#"{"score": 13, "record": 13, "new_record": true, "reward": 59}"#.utf8))
+        XCTAssertTrue(result.newRecord)
+        XCTAssertEqual(result.reward, 59)
+        let ended = try decoder.decode(DailyQuestionResponse.self, from: Data(#"{"expired": true}"#.utf8))
+        XCTAssertTrue(ended.expired)
+    }
 }

@@ -1299,6 +1299,65 @@ public struct FriendProfile: Decodable, Hashable, Sendable {
     }
 }
 
+/// Mode Survie (D-072) : record et meilleure partie du jour.
+public struct SurvivalOverview: Codable, Hashable, Sendable {
+    public let record: Int
+    public let bestToday: Int
+    /// Secondes par question.
+    public let seconds: Int
+
+    enum CodingKeys: String, CodingKey {
+        case record, seconds
+        case bestToday = "best_today"
+    }
+
+    public init(record: Int = 0, bestToday: Int = 0, seconds: Int = 20) {
+        self.record = record
+        self.bestToday = bestToday
+        self.seconds = seconds
+    }
+}
+
+/// Nouvelle partie de Survie.
+public struct SurvivalStart: Codable, Hashable, Sendable {
+    public let runId: UUID
+    public let record: Int
+    public let seconds: Int
+
+    enum CodingKeys: String, CodingKey {
+        case record, seconds
+        case runId = "run_id"
+    }
+
+    public init(runId: UUID, record: Int, seconds: Int) {
+        self.runId = runId
+        self.record = record
+        self.seconds = seconds
+    }
+}
+
+/// Bilan d'une partie de Survie.
+public struct SurvivalResult: Codable, Hashable, Sendable {
+    /// Bonnes réponses.
+    public let score: Int
+    public let record: Int
+    public let newRecord: Bool
+    /// Neurones gagnés.
+    public let reward: Int
+
+    enum CodingKeys: String, CodingKey {
+        case score, record, reward
+        case newRecord = "new_record"
+    }
+
+    public init(score: Int, record: Int, newRecord: Bool, reward: Int) {
+        self.score = score
+        self.record = record
+        self.newRecord = newRecord
+        self.reward = reward
+    }
+}
+
 /// Vitrine du profil (D-067) : jusqu'à 3 cartes posées sur un socle du pass, vue par les amis.
 public struct Showcase: Codable, Hashable, Sendable {
     /// Une carte exposée et ce qu'elle affiche (états masqués déjà retirés).

@@ -61,6 +61,13 @@ public protocol GameService: Sendable {
 
     // Album de cartes et pass de saison
     func albumOverview() async throws -> AlbumOverview
+    /// Mode Survie : une question à la fois jusqu'à la première erreur (serveur seul juge, comme le 5 du jour).
+    func survivalOverview() async throws -> SurvivalOverview
+    func survivalStart() async throws -> SurvivalStart
+    func survivalQuestion(run: UUID, position: Int) async throws -> DailyQuestionResponse
+    /// `given` nul : temps écoulé.
+    func survivalAnswer(run: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict
+    func survivalResult(run: UUID) async throws -> SurvivalResult
     /// Vitrine du profil (cartes et socle exposés).
     func showcase() async throws -> Showcase
     /// `socle` : « marbre », « or »… ou nil ; `cards` : identifiants serveur, 3 au plus, le premier au centre.
@@ -519,6 +526,24 @@ public struct LiveGameService: GameService {
 
     public func showcase() async throws -> Showcase { try await api.rpc("showcase_get") }
 
+    public func survivalOverview() async throws -> SurvivalOverview { try await api.rpc("survival_overview") }
+
+    public func survivalStart() async throws -> SurvivalStart { try await api.rpc("survival_start") }
+
+    public func survivalQuestion(run: UUID, position: Int) async throws -> DailyQuestionResponse {
+        try await api.rpc("survival_question", ["p_run": .string(run.uuidString), "p_position": .number(Double(position))])
+    }
+
+    public func survivalAnswer(run: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict {
+        try await api.rpc("survival_answer", ["p_run": .string(run.uuidString), "p_position": .number(Double(position)),
+                                              "p_given": given?.json ?? .null,
+                                              "p_client_ms": clientMs.map { .number(Double($0)) } ?? .null])
+    }
+
+    public func survivalResult(run: UUID) async throws -> SurvivalResult {
+        try await api.rpc("survival_result", ["p_run": .string(run.uuidString)])
+    }
+
     public func setShowcase(socle: String?, cards: [String]) async throws -> Showcase {
         try await api.rpc("showcase_set", ["p_socle": socle.map { .string($0) } ?? .null,
                                            "p_cards": .array(cards.map { .string($0) })])
@@ -619,6 +644,20 @@ public extension GameService {
     // Album et pass : la démo n'a pas de collection.
     func albumOverview() async throws -> AlbumOverview { AlbumOverview() }
     func showcase() async throws -> Showcase { Showcase() }
+    // Survie : en ligne seulement (démo et service indisponible : pas de partie).
+    func survivalOverview() async throws -> SurvivalOverview { SurvivalOverview() }
+    func survivalStart() async throws -> SurvivalStart {
+        throw BackendError.server(status: 400, code: "survival_unavailable", message: "")
+    }
+    func survivalQuestion(run: UUID, position: Int) async throws -> DailyQuestionResponse {
+        throw BackendError.server(status: 400, code: "survival_unavailable", message: "")
+    }
+    func survivalAnswer(run: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict {
+        throw BackendError.server(status: 400, code: "survival_unavailable", message: "")
+    }
+    func survivalResult(run: UUID) async throws -> SurvivalResult {
+        throw BackendError.server(status: 400, code: "survival_unavailable", message: "")
+    }
     func setShowcase(socle: String?, cards: [String]) async throws -> Showcase { Showcase(socle: socle) }
     func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening {
         throw BackendError.server(status: 400, code: "album_unavailable", message: "")

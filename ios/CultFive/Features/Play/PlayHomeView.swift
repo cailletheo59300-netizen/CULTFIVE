@@ -1,7 +1,7 @@
 import SwiftUI
 import CultFiveCore
 
-/// Jouer : compact et coloré. Une grande carte « Partie rapide », « Mes erreurs » quand il y en a, puis les domaines
+/// Jouer : compact et coloré. Une grande carte « Partie rapide », la carte « Survie », « Mes erreurs » quand il y en a, puis les domaines
 /// en grille de 3 cases pleines (couleur du domaine, pictogramme, cote ou placement) : presque tout tient sur un écran.
 struct PlayHomeView: View {
     @Environment(AppModel.self) private var app
@@ -12,6 +12,8 @@ struct PlayHomeView: View {
     /// Choix fait dans la feuille : lancé à sa fermeture.
     @State private var pendingConfig: PlayConfig?
     @State private var pendingStats: String?
+    @State private var survival = SurvivalOverview()
+    @State private var showSurvival = false
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -43,6 +45,15 @@ struct PlayHomeView: View {
         }) { config in
             PlaySessionView(config: config)
         }
+        .fullScreenCover(isPresented: $showSurvival, onDismiss: {
+            Task {
+                await load()
+                await app.refreshProgression()
+                app.openNewChests()
+            }
+        }) {
+            SurvivalSessionView(overview: survival)
+        }
         .sheet(item: $setup, onDismiss: {
             if let config = pendingConfig { pendingConfig = nil; playConfig = config }
             if let domain = pendingStats { pendingStats = nil; path.append(domain) }
@@ -72,7 +83,11 @@ struct PlayHomeView: View {
     }
 
     private func load() async {
-        if let fresh = try? await app.service.skills() { skills = fresh }
+        let service = app.service
+        async let freshSkills = try? service.skills()
+        async let freshSurvival = try? service.survivalOverview()
+        if let fresh = await freshSkills { skills = fresh }
+        if let fresh = await freshSurvival { survival = fresh }
     }
 
     private var header: some View {
@@ -102,6 +117,7 @@ struct PlayHomeView: View {
         let errors = app.profile?.activeErrors ?? 0
         return VStack(spacing: 10) {
             QuickPlayCard { playConfig = PlayConfig(mode: .quick) }
+            SurvivalCard(record: survival.record) { showSurvival = true }
             // Plus dur ? L'entraînement libre d'un domaine, en difficulté Expert. Plus de modes « Défi » ni « Surprise ».
             if errors > 0 {
                 ModePill(title: "Revoir mes erreurs", symbol: "arrow.uturn.backward", tint: Color(hex: 0x0CA678),
@@ -187,6 +203,44 @@ private struct QuickPlayCard: View {
         .buttonStyle(.row)
         .accessibilityElement(children: .combine)
         .accessibilityHint("Partie classée : 10 questions de tous les domaines, compte pour ton Elo")
+    }
+}
+
+/// Survie : carte orange, record à droite.
+private struct SurvivalCard: View {
+    let record: Int
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 14) {
+                Image(systemName: "flame.fill")
+                    .font(.system(.title3, design: .rounded).weight(.heavy))
+                    .foregroundStyle(.white)
+                    .frame(width: 44, height: 44)
+                    .background(.white.opacity(0.2), in: Circle())
+                VStack(alignment: .leading, spacing: 1) {
+                    Text("Survie").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
+                    Text("Jusqu'à la première erreur").font(.cfFootnote).foregroundStyle(.white.opacity(0.88))
+                }
+                Spacer(minLength: 0)
+                if record > 0 {
+                    VStack(spacing: 0) {
+                        Text("\(record)").font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
+                        Text("record").font(.system(.caption2, design: .rounded).weight(.heavy))
+                    }
+                    .foregroundStyle(.white)
+                }
+            }
+            .padding(14)
+            .background(LinearGradient(colors: [Color(hex: 0xFF8A3D), Color(hex: 0xE8452C)], startPoint: .topLeading,
+                                       endPoint: .bottomTrailing),
+                        in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+            .shadow(color: Color(hex: 0xE8452C).opacity(0.25), radius: 10, y: 5)
+        }
+        .buttonStyle(.row)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Réponds jusqu'à la première erreur, de plus en plus dur")
     }
 }
 
