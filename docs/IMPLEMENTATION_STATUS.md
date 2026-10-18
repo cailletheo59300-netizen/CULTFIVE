@@ -40,7 +40,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Tickets d'aide : 5 au plus par sorte (D-076) | ✅ serveur 0072 en production (18/10) | `99_exploits.sql` |
 | Demande de note App Store (D-077) | 🟡 app 1.4 (TestFlight) | build iOS |
 | Retours 1.4 : podium, amis avec trait de cinq, Survie par domaine, solde de l'album (D-078) | 🟡 app 1.4 (TestFlight), serveur 0073 en production | `99_survie.sql` |
-| Classements : vrais joueurs sur 3 jours, podium animé, médailles des amis, Elo par domaine ; Comptoir (D-079) | 🟡 app 1.4 (à reconstruire), serveur 0074 | `99_classement_du_jour.sql`, `ContractDecodingTests.testDomainLeaderboard` |
+| Classements : vrais joueurs sur 3 jours, podium animé, médailles des amis, Elo par domaine ; Comptoir (D-079) | 🟡 app 1.4 (TestFlight), serveur 0074 en production | `99_classement_du_jour.sql`, `ContractDecodingTests.testDomainLeaderboard` |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |
 
