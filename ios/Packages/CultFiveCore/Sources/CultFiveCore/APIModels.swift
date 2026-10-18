@@ -1304,23 +1304,27 @@ public struct DailyLeaderboard: Codable, Hashable, Sendable {
     public struct Row: Codable, Hashable, Sendable, Identifiable {
         public let rank: Int
         public let handle: String
-        public let score: Int
+        /// 5 du jour : score sur 5 ; classement d'un domaine : nil (voir `elo`).
+        public let score: Int?
         public let totalMs: Int?
         public let streak: Int?
+        /// Classement d'un domaine (D-079) : Elo du joueur dans ce domaine.
+        public let elo: Int?
         public let me: Bool
         public var id: Int { rank }
 
         enum CodingKeys: String, CodingKey {
-            case rank, handle, score, streak, me
+            case rank, handle, score, streak, elo, me
             case totalMs = "total_ms"
         }
 
-        public init(rank: Int, handle: String, score: Int, totalMs: Int?, streak: Int?, me: Bool) {
+        public init(rank: Int, handle: String, score: Int?, totalMs: Int?, streak: Int?, elo: Int? = nil, me: Bool) {
             self.rank = rank
             self.handle = handle
             self.score = score
             self.totalMs = totalMs
             self.streak = streak
+            self.elo = elo
             self.me = me
         }
     }

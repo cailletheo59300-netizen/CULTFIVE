@@ -63,6 +63,8 @@ public protocol GameService: Sendable {
     func albumOverview() async throws -> AlbumOverview
     /// Classement du 5 du jour (date nil : aujourd'hui pour le joueur).
     func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard
+    /// Classement Elo d'un domaine (joueurs placés).
+    func domainLeaderboard(domain: String) async throws -> DailyLeaderboard
     /// Mode Survie : une question à la fois jusqu'à la première erreur (serveur seul juge, comme le 5 du jour).
     /// `domain` nil : Survie tous domaines ; sinon un seul domaine (record à part).
     func survivalOverview(domain: String?) async throws -> SurvivalOverview
@@ -537,6 +539,10 @@ public struct LiveGameService: GameService {
         try await api.rpc("daily_leaderboard", ["p_date": date.map { .string($0) } ?? .null])
     }
 
+    public func domainLeaderboard(domain: String) async throws -> DailyLeaderboard {
+        try await api.rpc("domain_leaderboard", ["p_domain": .string(domain)])
+    }
+
     public func survivalStart(domain: String?) async throws -> SurvivalStart {
         try await api.rpc("survival_start", ["p_domain": domain.map { .string($0) } ?? .null])
     }
@@ -656,6 +662,7 @@ public extension GameService {
     func albumOverview() async throws -> AlbumOverview { AlbumOverview() }
     func showcase() async throws -> Showcase { Showcase() }
     func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard { DailyLeaderboard() }
+    func domainLeaderboard(domain: String) async throws -> DailyLeaderboard { DailyLeaderboard() }
     // Survie : en ligne seulement (démo et service indisponible : pas de partie).
     func survivalOverview(domain: String?) async throws -> SurvivalOverview { SurvivalOverview() }
     func survivalStart(domain: String?) async throws -> SurvivalStart {

@@ -256,20 +256,9 @@ struct FriendsView: View {
                 }
                 .padding(.vertical, Space.s)
             } else {
-                let entries = rankedEntries(friends)
-                let podium = entries.filter { ($0.rank ?? 99) <= 3 }
-                let rest = entries.filter { ($0.rank ?? 0) > 3 || $0.rank == nil }
-                VStack(spacing: 8) {
-                    if !podium.isEmpty {
-                        PodiumView(entries: podium, style: .onPaper) { entry in
-                            if let friend = friends.first(where: { $0.id.uuidString == entry.id }) {
-                                path.append(.friend(friend.id, friend.handle))
-                            }
-                        }
-                        .padding(.horizontal, 4)
-                        .padding(.top, 4)
-                    }
-                    ForEach(rest) { entry in
+                // Liste simple (pas de podium) : médailles en relief pour 1, 2, 3, temps en petit, trait de cinq.
+                VStack(spacing: 6) {
+                    ForEach(rankedEntries(friends)) { entry in
                         if let friend = friends.first(where: { $0.id.uuidString == entry.id }) {
                             NavigationLink(value: Route.friend(friend.id, friend.handle)) {
                                 RankRow(entry: entry, style: .onPaper, showsChevron: true)

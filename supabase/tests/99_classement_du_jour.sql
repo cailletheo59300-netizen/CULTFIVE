@@ -28,3 +28,17 @@ begin
   r := public.daily_leaderboard();
   perform tst.ok(r ->> 'rank' is null and (r ->> 'participants')::int = v_before + 8, 'sans partie : pas de rang');
 end $$;
+
+-- 0074 : classement Elo d'un domaine (joueurs placés), le joueur qui regarde a sa ligne.
+do $$
+declare a uuid := tst.new_user(); b uuid := tst.new_user(); r jsonb;
+begin
+  insert into public.user_skills (user_id, scope_id, mu, var, n, correct, elo) values
+    (a, 'sport', 50, 20, 60, 40, 1111), (b, 'sport', 50, 20, 60, 40, 1110);
+  perform tst.login(b);
+  r := public.domain_leaderboard('sport');
+  perform tst.ok((r -> 'rows') @> '[{"me": true, "elo": 1110}]', 'ma ligne avec mon Elo');
+  perform tst.ok((select (x ->> 'rank')::int from jsonb_array_elements(r -> 'rows') x where x ->> 'elo' = '1111')
+                 < (r ->> 'rank')::int, 'meilleur Elo devant');
+  perform tst.throws('select public.domain_leaderboard(''nope'')', 'invalid_domain');
+end $$;

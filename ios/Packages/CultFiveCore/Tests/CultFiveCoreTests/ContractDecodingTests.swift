@@ -259,4 +259,12 @@ final class ContractDecodingTests: XCTestCase {
                                                    from: Data(#"{"participants": 0, "rank": null, "week_beaten_pct": null, "rows": []}"#.utf8))
         XCTAssertNil(empty.rank)
     }
+
+    /// Classement d'un domaine (0074) : Elo à la place du score.
+    func testDomainLeaderboard() throws {
+        let json = #"{"participants": 12, "rank": 5, "rows": [{"rank": 1, "handle": "ana", "elo": 1180, "me": false}]}"#
+        let board = try SupabaseAPI.decoder.decode(DailyLeaderboard.self, from: Data(json.utf8))
+        XCTAssertEqual(board.rows.first?.elo, 1180)
+        XCTAssertNil(board.rows.first?.score)
+    }
 }

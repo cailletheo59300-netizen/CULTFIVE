@@ -21,6 +21,8 @@ struct PlaySetupSheet: View {
     @State private var selected: Set<String> = []
     @State private var available: [String: Int] = [:]
     @State private var skill: SkillSummary?
+    /// Classement Elo du domaine (D-079).
+    @State private var board: DailyLeaderboard?
 
     private var color: Color { DomainPalette.color(domainId) }
     private var onColor: Color { DomainPalette.onColor(domainId) }
@@ -40,6 +42,7 @@ struct PlaySetupSheet: View {
                         if themes.count > 1 { themePicker }
                         freeOptions
                     }
+                    leaderboard
                 }
                 .padding(Space.gutter)
             }
@@ -64,6 +67,7 @@ struct PlaySetupSheet: View {
                 available = Dictionary(uniqueKeysWithValues: stats.subdomains.map { ($0.id, $0.available) })
             }
             skill = (try? await app.service.skills())?.first { $0.domainId == domainId }
+            board = try? await app.service.domainLeaderboard(domain: domainId)
         }
     }
 
@@ -93,6 +97,29 @@ struct PlaySetupSheet: View {
         if rating.placed { return "Elo \(rating.formatted) · \(rating.rank.name)" }
         if rating.answered == 0 { return "Elo de départ : 500 · 20 réponses classées de placement" }
         return "Elo \(rating.formatted) · \(rating.provisionalLabel)"
+    }
+
+    /// Classement Elo du domaine : podium animé, puis toi et tes voisins. Pas encore placé : ta place viendra.
+    @ViewBuilder private var leaderboard: some View {
+        if let board, !board.rows.isEmpty {
+            VStack(alignment: .leading, spacing: Space.s) {
+                HStack(alignment: .firstTextBaseline) {
+                    Text("Classement").font(.cfHeadline).foregroundStyle(Color.ink)
+                    Spacer()
+                    Text("Elo").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkSoft)
+                }
+                LeaderboardBody(entries: board.rows.map { row in
+                    RankEntry(id: "\(row.rank)", rank: row.rank, handle: row.handle, score: nil, totalMs: nil, streak: nil,
+                              me: row.me, elo: row.elo)
+                }, style: .onPaper)
+                if board.rank == nil {
+                    Text("Termine ton placement (20 réponses classées) pour entrer dans le classement.")
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            .padding(.top, Space.s)
+        }
     }
 
     private var kindPicker: some View {

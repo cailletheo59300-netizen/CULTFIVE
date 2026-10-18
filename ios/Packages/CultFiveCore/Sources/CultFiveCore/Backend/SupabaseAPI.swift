@@ -201,7 +201,7 @@ public actor SupabaseAPI {
         "friend_profile", "friends_overview", "handle_available", "league_day_result", "league_question", "league_quiz_question",
         "league_quiz_result", "league_standings", "leagues_mine", "onboarding_pack", "play_pack", "profile_me",
         "progression_overview", "quests_overview", "referral_overview", "search_handles", "season_overview", "shop_overview",
-        "daily_leaderboard", "showcase_get", "skills_overview", "survival_overview", "survival_question", "survival_result", "trophies_overview",
+        "daily_leaderboard", "domain_leaderboard", "showcase_get", "skills_overview", "survival_overview", "survival_question", "survival_result", "trophies_overview",
         "weekly_recap",
         // Réponses dédoublonnées par le serveur (identifiant de tentative, position déjà répondue).
         "play_submit", "daily_answer", "league_answer", "league_quiz_answer", "duel_answer", "survival_answer", "track_events",

@@ -1,24 +1,28 @@
 import SwiftUI
 import CultFiveCore
 
-// Classements (D-073, D-074) : un vrai podium pour le top 3, puis des lignes. Partagé entre la fin du 5 du jour
-// (fond violet) et l'écran Amis (fond clair).
+// Classements (D-073, D-074, D-079) : un podium animé pour le top 3 (fin du 5 du jour, fiche d'un domaine), des
+// lignes avec médailles en relief (Amis, et sous le podium).
 
 /// Une place de classement.
 struct RankEntry: Identifiable {
     let id: String
     var rank: Int?
     let handle: String
-    /// nil : pas encore joué.
+    /// 5 du jour : score sur 5 (nil : pas encore joué).
     let score: Int?
     let totalMs: Int?
     let streak: Int?
     let me: Bool
     /// Bonnes et mauvaises réponses, dans l'ordre (le trait de cinq) ; nil : non affiché.
     var answers: [Bool]? = nil
+    /// Classement d'un domaine : Elo (à la place du score).
+    var elo: Int? = nil
+
+    var played: Bool { score != nil || elo != nil }
 }
 
-/// Fond du classement : violet (fin du 5 du jour) ou clair (Amis).
+/// Fond du classement : violet (fin du 5 du jour) ou clair (Amis, fiche d'un domaine).
 enum RankStyle {
     case onInk, onPaper
 
@@ -30,19 +34,68 @@ enum RankStyle {
 enum Medal {
     static func colors(_ rank: Int) -> [Color] {
         switch rank {
-        case 1: return [Color(hex: 0xFFE066), Color(hex: 0xF2B705)]
-        case 2: return [Color(hex: 0xF1F3F5), Color(hex: 0xADB5BD)]
-        default: return [Color(hex: 0xF4C08E), Color(hex: 0xCD7F32)]
+        case 1: return [Color(hex: 0xFFE680), Color(hex: 0xF2B705), Color(hex: 0xC98A00)]
+        case 2: return [Color(hex: 0xFFFFFF), Color(hex: 0xC4CAD0), Color(hex: 0x8D959E)]
+        default: return [Color(hex: 0xF8CFA0), Color(hex: 0xD08A4E), Color(hex: 0x9C5A24)]
         }
     }
 }
 
-/// Podium : 2e à gauche, 1er au centre (plus haut, couronné), 3e à droite.
+/// Médaille en relief (1, 2, 3) : disque dégradé, liseré clair, petit ruban, numéro gravé. Au-delà : numéro sobre.
+struct MedalBadge: View {
+    let rank: Int?
+    var size: CGFloat = 30
+    var style: RankStyle = .onPaper
+    var me = false
+
+    var body: some View {
+        if let rank, rank <= 3 {
+            ZStack(alignment: .top) {
+                // Ruban derrière la médaille.
+                HStack(spacing: size * 0.08) {
+                    Rectangle().fill(rank == 1 ? Color(hex: 0xE8452C) : rank == 2 ? Color(hex: 0x2F6BFF) : Color(hex: 0x12B76A))
+                        .frame(width: size * 0.22, height: size * 0.5)
+                        .rotationEffect(.degrees(18), anchor: .top)
+                    Rectangle().fill(rank == 1 ? Color(hex: 0xFF8A3D) : rank == 2 ? Color(hex: 0x6A9BFF) : Color(hex: 0x3DDC97))
+                        .frame(width: size * 0.22, height: size * 0.5)
+                        .rotationEffect(.degrees(-18), anchor: .top)
+                }
+                .offset(y: -size * 0.12)
+                Circle()
+                    .fill(LinearGradient(colors: Medal.colors(rank), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .overlay(Circle().inset(by: size * 0.1).strokeBorder(.white.opacity(0.55), lineWidth: max(1, size * 0.05)))
+                    .overlay(
+                        Text("\(rank)")
+                            .font(.system(size: size * 0.48, weight: .black, design: .rounded))
+                            .foregroundStyle(Medal.colors(rank)[2])
+                            .shadow(color: .white.opacity(0.6), radius: 0, y: 1)
+                    )
+                    .frame(width: size, height: size)
+                    .shadow(color: Medal.colors(rank)[2].opacity(0.45), radius: 3, y: 2)
+                    .offset(y: size * 0.12)
+            }
+            .frame(width: size, height: size * 1.2)
+            .accessibilityHidden(true)
+        } else {
+            Text(rank.map(String.init) ?? "–")
+                .font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
+                .foregroundStyle(me ? Color(hex: 0x1E1340) : style.soft)
+                .frame(width: size)
+                .accessibilityHidden(true)
+        }
+    }
+}
+
+/// Podium animé : les marches montent (3e, 2e, puis 1er), la couronne tombe sur le 1er, un reflet passe sur les
+/// médailles. 2e à gauche, 1er au centre, 3e à droite.
 struct PodiumView: View {
     let entries: [RankEntry]
     var style: RankStyle = .onInk
-    /// Une place touchée (profil d'un ami) ; nil : podium non touchable.
+    /// Une place touchée ; nil : podium non touchable.
     var onSelect: ((RankEntry) -> Void)? = nil
+
+    @State private var shown = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var ordered: [RankEntry] {
         let byRank = Dictionary(entries.compactMap { e in e.rank.map { ($0, e) } }, uniquingKeysWith: { a, _ in a })
@@ -52,50 +105,67 @@ struct PodiumView: View {
     var body: some View {
         HStack(alignment: .bottom, spacing: 8) {
             ForEach(ordered) { entry in
+                let column = PodiumColumn(entry: entry, style: style, shown: shown || reduceMotion)
+                    .frame(maxWidth: .infinity)
                 if let onSelect, !entry.me {
-                    Button { onSelect(entry) } label: {
-                        PodiumColumn(entry: entry, style: style).frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.row)
-                    .accessibilityHint("Ouvre son profil")
+                    Button { onSelect(entry) } label: { column }
+                        .buttonStyle(.row)
+                        .accessibilityHint("Ouvre son profil")
                 } else {
-                    PodiumColumn(entry: entry, style: style).frame(maxWidth: .infinity)
+                    column
                 }
             }
         }
         .accessibilityElement(children: .contain)
+        .onAppear {
+            guard !shown else { return }
+            Task {
+                try? await Task.sleep(nanoseconds: 150_000_000)
+                shown = true
+                Haptics.soft()
+            }
+        }
     }
 }
 
 private struct PodiumColumn: View {
     let entry: RankEntry
     let style: RankStyle
+    let shown: Bool
 
     private var rank: Int { entry.rank ?? 3 }
-    private var height: CGFloat { rank == 1 ? 74 : rank == 2 ? 54 : 40 }
+    private var height: CGFloat { rank == 1 ? 78 : rank == 2 ? 56 : 42 }
+    /// Ordre d'apparition : 3e, 2e, puis 1er.
+    private var delay: Double { rank == 3 ? 0 : rank == 2 ? 0.18 : 0.36 }
 
     var body: some View {
-        VStack(spacing: 6) {
+        VStack(spacing: 5) {
             ZStack(alignment: .top) {
                 Circle()
                     .fill(LinearGradient(colors: Medal.colors(rank), startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .frame(width: rank == 1 ? 58 : 48, height: rank == 1 ? 58 : 48)
-                    .overlay(Circle().strokeBorder(entry.me ? Color.sun : .white.opacity(0.7), lineWidth: entry.me ? 3 : 2))
+                    .frame(width: rank == 1 ? 60 : 48, height: rank == 1 ? 60 : 48)
+                    .overlay(Circle().strokeBorder(entry.me ? Color.sun : .white.opacity(0.8), lineWidth: entry.me ? 3 : 2))
                     .overlay(
                         Text(initial)
                             .font(.system(rank == 1 ? .title2 : .title3, design: .rounded).weight(.black))
-                            .foregroundStyle(Color(hex: 0x1E1340).opacity(0.8))
+                            .foregroundStyle(Medal.colors(rank)[2])
                     )
-                    .shadow(color: Medal.colors(rank)[1].opacity(0.5), radius: 8, y: 3)
+                    .overlay(Shine(active: shown, delay: delay + 0.5).clipShape(Circle()))
+                    .shadow(color: Medal.colors(rank)[1].opacity(0.6), radius: shown ? 12 : 0, y: 3)
                 if rank == 1 {
                     Image(systemName: "crown.fill")
-                        .font(.system(size: 18, weight: .black))
+                        .font(.system(size: 20, weight: .black))
                         .foregroundStyle(LinearGradient(colors: Medal.colors(1), startPoint: .top, endPoint: .bottom))
-                        .shadow(color: .black.opacity(0.2), radius: 1, y: 1)
-                        .offset(y: -18)
+                        .shadow(color: .black.opacity(0.25), radius: 1, y: 1)
+                        .offset(y: shown ? -20 : -60)
+                        .opacity(shown ? 1 : 0)
+                        .animation(.spring(response: 0.45, dampingFraction: 0.55).delay(delay + 0.35), value: shown)
                 }
             }
-            .padding(.top, rank == 1 ? 14 : 0)
+            .padding(.top, rank == 1 ? 16 : 0)
+            .scaleEffect(shown ? 1 : 0.4)
+            .opacity(shown ? 1 : 0)
+            .animation(.spring(response: 0.5, dampingFraction: 0.62).delay(delay + 0.15), value: shown)
             Text(entry.me ? "Toi" : entry.handle)
                 .font(.system(.caption, design: .rounded).weight(.black))
                 .foregroundStyle(entry.me ? Color.sun : style.text)
@@ -103,26 +173,32 @@ private struct PodiumColumn: View {
             if let score = entry.score {
                 Text("\(score)/5").font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
                     .foregroundStyle(style.text)
+            } else if let elo = entry.elo {
+                Text(CoteCULT.format(elo)).font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
+                    .foregroundStyle(style.text)
             }
             if let answers = entry.answers {
                 TallyMark(results: answers, onInk: style == .onInk).frame(width: 34)
-            } else if let totalMs = entry.totalMs {
+            }
+            if let totalMs = entry.totalMs {
                 Text(DurationFormat.clock(milliseconds: totalMs))
                     .font(.system(.caption2, design: .rounded).weight(.bold)).monospacedDigit()
                     .foregroundStyle(style.soft)
             }
-            // La marche du podium, aux couleurs de la médaille.
-            UnevenRoundedRectangle(topLeadingRadius: 10, topTrailingRadius: 10, style: .continuous)
-                .fill(LinearGradient(colors: Medal.colors(rank).map { $0.opacity(style == .onInk ? 0.9 : 0.75) },
+            // La marche du podium, aux couleurs de la médaille : elle monte à l'arrivée.
+            UnevenRoundedRectangle(topLeadingRadius: 12, topTrailingRadius: 12, style: .continuous)
+                .fill(LinearGradient(colors: Medal.colors(rank).map { $0.opacity(style == .onInk ? 0.95 : 0.85) },
                                      startPoint: .top, endPoint: .bottom))
-                .frame(height: height)
                 .overlay(alignment: .top) {
                     Text("\(rank)")
-                        .font(.system(.title2, design: .rounded).weight(.black))
+                        .font(.system(.title, design: .rounded).weight(.black))
                         .foregroundStyle(.white)
-                        .shadow(color: .black.opacity(0.15), radius: 1, y: 1)
+                        .shadow(color: .black.opacity(0.2), radius: 1, y: 1)
                         .padding(.top, 6)
+                        .opacity(shown ? 1 : 0)
                 }
+                .frame(height: shown ? height : 4)
+                .animation(.spring(response: 0.55, dampingFraction: 0.68).delay(delay), value: shown)
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityText)
@@ -133,24 +209,43 @@ private struct PodiumColumn: View {
     private var accessibilityText: String {
         var parts = ["\(rank)e", entry.me ? "toi" : entry.handle]
         if let score = entry.score { parts.append("\(score) sur 5") }
+        if let elo = entry.elo { parts.append("Elo \(elo)") }
         if let totalMs = entry.totalMs { parts.append(DurationFormat.clock(milliseconds: totalMs)) }
         return parts.joined(separator: ", ")
     }
 }
 
-/// Ligne de classement (hors podium) : rang, pseudo et série, score, temps ou trait de cinq ; « pas encore joué » grisé.
+/// Reflet qui traverse la médaille une fois.
+private struct Shine: View {
+    let active: Bool
+    let delay: Double
+    @State private var offset: CGFloat = -1.2
+
+    var body: some View {
+        GeometryReader { proxy in
+            LinearGradient(colors: [.clear, .white.opacity(0.75), .clear], startPoint: .leading, endPoint: .trailing)
+                .frame(width: proxy.size.width * 0.45)
+                .rotationEffect(.degrees(20))
+                .offset(x: offset * proxy.size.width)
+        }
+        .allowsHitTesting(false)
+        .onChange(of: active, initial: true) { _, on in
+            guard on else { return }
+            withAnimation(.easeInOut(duration: 0.7).delay(delay)) { offset = 1.4 }
+        }
+    }
+}
+
+/// Ligne de classement : médaille en relief (1 à 3) ou rang, pseudo et série, score ou Elo, temps en petit et trait
+/// de cinq ; « pas encore joué » grisé ; ta ligne surlignée.
 struct RankRow: View {
     let entry: RankEntry
     var style: RankStyle = .onInk
     var showsChevron = false
 
     var body: some View {
-        let played = entry.score != nil
         HStack(spacing: 10) {
-            Text(entry.rank.map(String.init) ?? "–")
-                .font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
-                .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.soft)
-                .frame(width: 26)
+            MedalBadge(rank: entry.rank, size: 28, style: style, me: entry.me)
             VStack(alignment: .leading, spacing: 1) {
                 Text(entry.me ? "Toi" : entry.handle)
                     .font(.system(.callout, design: .rounded).weight(.black))
@@ -163,17 +258,26 @@ struct RankRow: View {
                 }
             }
             Spacer(minLength: 4)
-            if let score = entry.score {
+            if entry.played {
+                VStack(alignment: .trailing, spacing: 2) {
+                    if let score = entry.score {
+                        Text("\(score)/5")
+                            .font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
+                            .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
+                    } else if let elo = entry.elo {
+                        Text(CoteCULT.format(elo))
+                            .font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
+                            .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
+                    }
+                    if let totalMs = entry.totalMs {
+                        Text(DurationFormat.clock(milliseconds: totalMs))
+                            .font(.system(.caption2, design: .rounded).weight(.bold)).monospacedDigit()
+                            .foregroundStyle(entry.me ? Color(hex: 0x1E1340).opacity(0.65) : style.soft)
+                    }
+                }
                 if let answers = entry.answers {
                     TallyMark(results: answers, onInk: style == .onInk && !entry.me).frame(width: 34)
-                } else if let totalMs = entry.totalMs {
-                    Text(DurationFormat.clock(milliseconds: totalMs))
-                        .font(.system(.caption, design: .rounded).weight(.bold)).monospacedDigit()
-                        .foregroundStyle(entry.me ? Color(hex: 0x1E1340).opacity(0.7) : style.soft)
                 }
-                Text("\(score)/5")
-                    .font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
-                    .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
             } else {
                 Text("pas encore joué").font(.cfFootnote).foregroundStyle(style.soft)
             }
@@ -182,9 +286,9 @@ struct RankRow: View {
             }
         }
         .padding(.horizontal, 12)
-        .frame(minHeight: 46)
+        .frame(minHeight: 50)
         .background(entry.me ? Color.sun : style.rowFill, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-        .opacity(played ? 1 : 0.6)
+        .opacity(entry.played ? 1 : 0.6)
         .accessibilityElement(children: .combine)
     }
 }
@@ -197,5 +301,42 @@ struct RankGap: View {
         Text("···").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(style.soft.opacity(0.7))
             .frame(maxWidth: .infinity)
             .accessibilityHidden(true)
+    }
+}
+
+/// Classement complet : podium animé, puis « ··· », toi et tes voisins (lignes qui glissent après le podium).
+struct LeaderboardBody: View {
+    let entries: [RankEntry]
+    var style: RankStyle = .onInk
+
+    @State private var rowsShown = false
+
+    var body: some View {
+        let podium = entries.filter { ($0.rank ?? 99) <= 3 }
+        let others = entries.filter { ($0.rank ?? 0) > 3 }
+        VStack(spacing: 10) {
+            if !podium.isEmpty { PodiumView(entries: podium, style: style) }
+            if !others.isEmpty {
+                VStack(spacing: 6) {
+                    ForEach(Array(others.enumerated()), id: \.element.id) { index, entry in
+                        let previous = index == 0 ? 3 : (others[index - 1].rank ?? 0)
+                        if (entry.rank ?? 0) - previous > 1 { RankGap(style: style) }
+                        RankRow(entry: entry, style: style)
+                            .scaleEffect(entry.me && rowsShown ? 1.0 : (entry.me ? 0.9 : 1))
+                            .offset(x: rowsShown ? 0 : 40)
+                            .opacity(rowsShown ? 1 : 0)
+                            .animation(.spring(response: 0.45, dampingFraction: 0.7).delay(0.8 + Double(index) * 0.08),
+                                       value: rowsShown)
+                    }
+                }
+            }
+        }
+        .onAppear {
+            guard !rowsShown else { return }
+            rowsShown = true
+            if others.contains(where: \.me) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { Haptics.selection() }
+            }
+        }
     }
 }

@@ -10,35 +10,42 @@ struct ComptoirView: View {
     @Environment(AppModel.self) private var app
     @State private var selected = "encyclo"
     @State private var coffret: AlbumOverview.Coffret?
-    /// Pochette touchée sur le rayon : la feuille des 3 façons de l'ouvrir.
+    /// Feuille des 3 façons d'ouvrir une pochette (touche sur la grande pochette du panneau).
     @State private var choice: PackSeries?
+    /// Pochette touchée sur le rayon : elle passe au centre du rayon et le panneau d'achat se centre à l'écran.
+    @State private var focusPanel = 0
 
     private let catalog = AlbumCatalog.shared
     private var series: PackSeries { catalog.series.first { $0.id == selected } ?? catalog.series[0] }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: Space.l) {
-                LeonSays(text: "Bienvenue au Comptoir ! Choisis une pochette : tu paies en neurones ou avec un ticket.", pose: .wave, size: 76)
-                wallet
-                if !store.coffrets.isEmpty {
-                    section("Coffrets à ouvrir", detail: "Pass+ · tu choisis le domaine")
-                    coffretRow
+        ScrollViewReader { page in
+            ScrollView {
+                VStack(alignment: .leading, spacing: Space.l) {
+                    LeonSays(text: "Bienvenue au Comptoir ! Choisis une pochette : tu paies en neurones ou avec un ticket.", pose: .wave, size: 76)
+                    wallet
+                    if !store.coffrets.isEmpty {
+                        section("Coffrets à ouvrir", detail: "Pass+ · tu choisis le domaine")
+                        coffretRow
+                    }
+                    section("Pochettes", detail: "5 cartes, au moins 1 rare")
+                    shelf
+                    packPanel.id("achat")
+                    section("Pochette dorée", detail: "1 légendaire garantie")
+                    gold
+                    if let offer = dailyOffer {
+                        section("Offre du jour", detail: "une carte qui te manque")
+                        offerCard(offer)
+                    }
+                    Text("Chances pour chaque carte : commune 70 %, rare 22 %, épique 6,5 %, légendaire 1,5 %. Au moins une rare par pochette.")
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                 }
-                section("Pochettes", detail: "5 cartes, au moins 1 rare")
-                shelf
-                packPanel
-                section("Pochette dorée", detail: "1 légendaire garantie")
-                gold
-                if let offer = dailyOffer {
-                    section("Offre du jour", detail: "une carte qui te manque")
-                    offerCard(offer)
-                }
-                Text("Chances pour chaque carte : commune 70 %, rare 22 %, épique 6,5 %, légendaire 1,5 %. Au moins une rare par pochette.")
-                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                .padding(.horizontal, Space.gutter)
+                .padding(.vertical, Space.m)
             }
-            .padding(.horizontal, Space.gutter)
-            .padding(.vertical, Space.m)
+            .onChange(of: focusPanel) {
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) { page.scrollTo("achat", anchor: .center) }
+            }
         }
         .task { await app.refreshAdStatus() }
         .clearsTabBar()
@@ -105,6 +112,9 @@ struct ComptoirView: View {
             }
             .padding(.horizontal, -Space.gutter)
             .onAppear { reader.scrollTo(selected, anchor: .center) }
+            .onChange(of: selected) {
+                withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) { reader.scrollTo(selected, anchor: .center) }
+            }
         }
     }
 
@@ -113,7 +123,7 @@ struct ComptoirView: View {
         return Button {
             Haptics.selection()
             withAnimation(Motion.bounce) { selected = item.id }
-            choice = item
+            focusPanel += 1
         } label: {
             VStack(spacing: 8) {
                 AlbumImage(kind: .packs, name: item.id)
