@@ -85,7 +85,7 @@ struct DailyHomeView: View {
             // Un défi rempli est d'abord fêté ; son coffre s'ouvre à la fin de la fête.
             if questMoments.isEmpty { app.openNewChests() }
         } }) { config in
-            PlaySessionView(config: config)
+            GameCover(config: config)
         }
         .sheet(isPresented: $showBag) { BagView() }
         .fullScreenCover(isPresented: Binding(get: { !questMoments.isEmpty }, set: { if !$0 { questMoments = [] } })) {

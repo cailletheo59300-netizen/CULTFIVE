@@ -13,6 +13,8 @@ struct PlaySetupSheet: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @State private var ranked = true
+    /// Survie dans ce domaine (D-078) : jusqu'à la première erreur.
+    @State private var survival = false
     @State private var count = 10
     @State private var timed = false
     @State private var level: PlayLevel = .adaptive
@@ -34,7 +36,7 @@ struct PlaySetupSheet: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
                     kindPicker
-                    if !ranked {
+                    if !ranked && !survival {
                         if themes.count > 1 { themePicker }
                         freeOptions
                     }
@@ -57,7 +59,7 @@ struct PlaySetupSheet: View {
         .presentationDragIndicator(.visible)
         .task {
             selected = Set(preselected)
-            if !preselected.isEmpty { ranked = false }
+            if !preselected.isEmpty { ranked = false; survival = false }
             if let stats = try? await app.service.domainStats(domainId) {
                 available = Dictionary(uniqueKeysWithValues: stats.subdomains.map { ($0.id, $0.available) })
             }
@@ -95,18 +97,24 @@ struct PlaySetupSheet: View {
 
     private var kindPicker: some View {
         VStack(spacing: 10) {
-            kindCard(ranked: true, title: "Partie classée", symbol: "chart.line.uptrend.xyaxis",
+            kindCard(ranked: true, survival: false, title: "Partie classée", symbol: "chart.line.uptrend.xyaxis",
                      detail: "10 questions sur tous les thèmes du domaine, à la limite de ton niveau. Ton Elo et tes neurones évoluent.")
-            kindCard(ranked: false, title: "Entraînement libre", symbol: "slider.horizontal.3",
+            kindCard(ranked: false, survival: true, title: "Survie", symbol: "flame.fill",
+                     detail: "Jusqu'à la première erreur, 20 s par question, de plus en plus dur. Bats ton record.")
+            kindCard(ranked: false, survival: false, title: "Entraînement libre", symbol: "slider.horizontal.3",
                      detail: "Thèmes, nombre de questions, chrono et difficulté au choix. Sans effet sur ton Elo.")
         }
     }
 
-    private func kindCard(ranked value: Bool, title: String, symbol: String, detail: String) -> some View {
-        let on = ranked == value
+    private func kindCard(ranked value: Bool, survival isSurvival: Bool, title: String, symbol: String,
+                          detail: String) -> some View {
+        let on = ranked == value && survival == isSurvival
         return Button {
             Haptics.selection()
-            withAnimation(Motion.standard) { ranked = value }
+            withAnimation(Motion.standard) {
+                ranked = value
+                survival = isSurvival
+            }
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: symbol)
@@ -191,6 +199,11 @@ struct PlaySetupSheet: View {
     }
 
     private func start() {
+        if survival {
+            dismiss()
+            onStart(PlayConfig(mode: .training, domain: domainId, ranked: false, survival: true))
+            return
+        }
         let config = PlayConfig(mode: .training, domain: domainId, subdomains: ranked ? [] : Array(selected).sorted(),
                                 count: ranked ? 10 : count, ranked: ranked, level: ranked ? .adaptive : level,
                                 timer: !ranked && timed ? 20 : nil)

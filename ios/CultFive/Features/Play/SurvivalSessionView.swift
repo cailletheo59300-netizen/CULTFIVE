@@ -28,12 +28,22 @@ final class SurvivalSessionModel {
     private(set) var finished = false
 
     private let service: GameService
+    /// nil : tous domaines.
+    let domain: String?
     private var runId: UUID?
     private var stopwatch = Stopwatch()
     private var pending: (given: GivenAnswer?, ms: Int?)?
 
-    init(service: GameService, overview: SurvivalOverview) {
+    init(service: GameService, domain: String?, overview: SurvivalOverview?) {
         self.service = service
+        self.domain = domain
+        record = overview?.record ?? 0
+        seconds = overview?.seconds ?? 20
+    }
+
+    /// Record du domaine, quand l'écran s'ouvre depuis la fiche d'un domaine.
+    func loadRecord() async {
+        guard let overview = try? await service.survivalOverview(domain: domain) else { return }
         record = overview.record
         seconds = overview.seconds
     }
@@ -44,7 +54,7 @@ final class SurvivalSessionModel {
         position = 0
         finished = false
         do {
-            let start = try await service.survivalStart()
+            let start = try await service.survivalStart(domain: domain)
             runId = start.runId
             record = start.record
             seconds = start.seconds
@@ -138,7 +148,9 @@ final class SurvivalSessionModel {
 
 /// Partie de Survie en plein écran : intro, questions, bilan.
 struct SurvivalSessionView: View {
-    let overview: SurvivalOverview
+    /// nil : tous domaines.
+    var domain: String? = nil
+    var overview: SurvivalOverview? = nil
 
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
@@ -154,7 +166,11 @@ struct SurvivalSessionView: View {
             if let model { content(model) } else { ProgressView() }
         }
         .task {
-            if model == nil { model = SurvivalSessionModel(service: app.service, overview: overview) }
+            if model == nil {
+                let session = SurvivalSessionModel(service: app.service, domain: domain, overview: overview)
+                model = session
+                if overview == nil { await session.loadRecord() }
+            }
         }
     }
 
@@ -233,6 +249,9 @@ struct SurvivalSessionView: View {
                 .frame(width: 120, height: 120)
                 .background(Self.flame.opacity(0.14), in: Circle())
             Text("Survie").font(.cfDisplay)
+            if let domain {
+                DomainTag(domainId: domain, name: app.domainName(domain))
+            }
             VStack(alignment: .leading, spacing: 12) {
                 rule("xmark.octagon.fill", "Une erreur et c'est fini")
                 rule("timer", "\(model.seconds) s par question")
@@ -343,5 +362,18 @@ private struct ScoreFlame: View {
         .animation(Motion.standard, value: score)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(score) bonnes réponses")
+    }
+}
+
+/// Partie lancée depuis Jouer ou la fiche d'un domaine : Survie ou partie classique.
+struct GameCover: View {
+    let config: PlayConfig
+
+    var body: some View {
+        if config.survival {
+            SurvivalSessionView(domain: config.domain)
+        } else {
+            PlaySessionView(config: config)
+        }
     }
 }

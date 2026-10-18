@@ -14,6 +14,8 @@ struct PlayConfig: Identifiable, Hashable {
     var level: PlayLevel = .adaptive
     /// Secondes par question (entraînement libre) ; nil = sans chrono.
     var timer: Int? = nil
+    /// Survie dans ce domaine (D-078) : jusqu'à la première erreur, jouée par `SurvivalSessionView`.
+    var survival = false
 
     /// L'Elo ne bouge que sur une partie classée couvrant tout le domaine ; jamais en « Mes erreurs » (règle appliquée aussi par le serveur).
     var countsForElo: Bool { ranked && mode != .errors && subdomains.isEmpty }

@@ -55,3 +55,21 @@ begin
   perform tst.login(tst.new_user());
   perform tst.throws(format('select public.survival_result(%L)', v_run), 'survival_not_found');
 end $$;
+
+-- 0073 : Survie dans un domaine, record à part.
+do $$
+declare u uuid := tst.new_user(); v_run uuid; q jsonb;
+begin
+  perform tst.clock('2027-03-11 10:00:00+01');
+  perform tst.login(u);
+  perform tst.throws('select public.survival_start(''nope'')', 'invalid_domain');
+  v_run := (public.survival_start('history') ->> 'run_id')::uuid;
+  for i in 1 .. 3 loop
+    q := public.survival_question(v_run, i);
+    perform tst.ok(q ->> 'domain_id' = 'history', 'question d''histoire ' || i);
+    perform public.survival_answer(v_run, i, tst.correct_given((q ->> 'id')::uuid), 3000);
+  end loop;
+  perform public.survival_result(v_run);
+  perform tst.ok((public.survival_overview('history') ->> 'record')::int = 3, 'record histoire : 3');
+  perform tst.ok((public.survival_overview() ->> 'record')::int = 0, 'record tous domaines : à part');
+end $$;

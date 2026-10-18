@@ -43,7 +43,7 @@ struct PlayHomeView: View {
                 app.openNewChests()
             }
         }) { config in
-            PlaySessionView(config: config)
+            GameCover(config: config)
         }
         .fullScreenCover(isPresented: $showSurvival, onDismiss: {
             Task {
@@ -85,7 +85,7 @@ struct PlayHomeView: View {
     private func load() async {
         let service = app.service
         async let freshSkills = try? service.skills()
-        async let freshSurvival = try? service.survivalOverview()
+        async let freshSurvival = try? service.survivalOverview(domain: nil)
         if let fresh = await freshSkills { skills = fresh }
         if let fresh = await freshSurvival { survival = fresh }
     }

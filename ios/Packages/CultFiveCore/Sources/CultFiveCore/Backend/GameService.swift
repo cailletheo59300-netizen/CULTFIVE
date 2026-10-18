@@ -64,8 +64,9 @@ public protocol GameService: Sendable {
     /// Classement du 5 du jour (date nil : aujourd'hui pour le joueur).
     func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard
     /// Mode Survie : une question à la fois jusqu'à la première erreur (serveur seul juge, comme le 5 du jour).
-    func survivalOverview() async throws -> SurvivalOverview
-    func survivalStart() async throws -> SurvivalStart
+    /// `domain` nil : Survie tous domaines ; sinon un seul domaine (record à part).
+    func survivalOverview(domain: String?) async throws -> SurvivalOverview
+    func survivalStart(domain: String?) async throws -> SurvivalStart
     func survivalQuestion(run: UUID, position: Int) async throws -> DailyQuestionResponse
     /// `given` nul : temps écoulé.
     func survivalAnswer(run: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict
@@ -528,13 +529,17 @@ public struct LiveGameService: GameService {
 
     public func showcase() async throws -> Showcase { try await api.rpc("showcase_get") }
 
-    public func survivalOverview() async throws -> SurvivalOverview { try await api.rpc("survival_overview") }
+    public func survivalOverview(domain: String?) async throws -> SurvivalOverview {
+        try await api.rpc("survival_overview", ["p_domain": domain.map { .string($0) } ?? .null])
+    }
 
     public func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard {
         try await api.rpc("daily_leaderboard", ["p_date": date.map { .string($0) } ?? .null])
     }
 
-    public func survivalStart() async throws -> SurvivalStart { try await api.rpc("survival_start") }
+    public func survivalStart(domain: String?) async throws -> SurvivalStart {
+        try await api.rpc("survival_start", ["p_domain": domain.map { .string($0) } ?? .null])
+    }
 
     public func survivalQuestion(run: UUID, position: Int) async throws -> DailyQuestionResponse {
         try await api.rpc("survival_question", ["p_run": .string(run.uuidString), "p_position": .number(Double(position))])
@@ -652,8 +657,8 @@ public extension GameService {
     func showcase() async throws -> Showcase { Showcase() }
     func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard { DailyLeaderboard() }
     // Survie : en ligne seulement (démo et service indisponible : pas de partie).
-    func survivalOverview() async throws -> SurvivalOverview { SurvivalOverview() }
-    func survivalStart() async throws -> SurvivalStart {
+    func survivalOverview(domain: String?) async throws -> SurvivalOverview { SurvivalOverview() }
+    func survivalStart(domain: String?) async throws -> SurvivalStart {
         throw BackendError.server(status: 400, code: "survival_unavailable", message: "")
     }
     func survivalQuestion(run: UUID, position: Int) async throws -> DailyQuestionResponse {

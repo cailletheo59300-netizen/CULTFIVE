@@ -48,7 +48,7 @@ struct DomainView: View {
         .toolbarBackground(color, for: .navigationBar)
         .toolbarColorScheme(domainId == "music" ? .light : .dark, for: .navigationBar)
         .fullScreenCover(item: $playConfig, onDismiss: { Task { await load() } }) { config in
-            PlaySessionView(config: config)
+            GameCover(config: config)
         }
         .sheet(item: $setup, onDismiss: {
             if let config = pendingConfig { pendingConfig = nil; playConfig = config }

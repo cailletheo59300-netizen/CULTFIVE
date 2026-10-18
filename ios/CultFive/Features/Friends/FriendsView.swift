@@ -257,15 +257,26 @@ struct FriendsView: View {
                 .padding(.vertical, Space.s)
             } else {
                 let entries = rankedEntries(friends)
-                VStack(spacing: 6) {
-                    ForEach(entries) { entry in
-                        if let friend = entry.friend {
+                let podium = entries.filter { ($0.rank ?? 99) <= 3 }
+                let rest = entries.filter { ($0.rank ?? 0) > 3 || $0.rank == nil }
+                VStack(spacing: 8) {
+                    if !podium.isEmpty {
+                        PodiumView(entries: podium, style: .onPaper) { entry in
+                            if let friend = friends.first(where: { $0.id.uuidString == entry.id }) {
+                                path.append(.friend(friend.id, friend.handle))
+                            }
+                        }
+                        .padding(.horizontal, 4)
+                        .padding(.top, 4)
+                    }
+                    ForEach(rest) { entry in
+                        if let friend = friends.first(where: { $0.id.uuidString == entry.id }) {
                             NavigationLink(value: Route.friend(friend.id, friend.handle)) {
-                                FriendRankRow(entry: entry)
+                                RankRow(entry: entry, style: .onPaper, showsChevron: true)
                             }
                             .buttonStyle(.row)
                         } else {
-                            FriendRankRow(entry: entry)
+                            RankRow(entry: entry, style: .onPaper)
                         }
                     }
                 }
@@ -277,17 +288,17 @@ struct FriendsView: View {
         }
     }
 
-    private func rankedEntries(_ friends: [Friend]) -> [FriendRankEntry] {
-        var played: [FriendRankEntry] = friends.compactMap { friend in
+    private func rankedEntries(_ friends: [Friend]) -> [RankEntry] {
+        var played: [RankEntry] = friends.compactMap { friend in
             guard let today = friend.today, let score = today.score else { return nil }
-            return FriendRankEntry(id: friend.id.uuidString, friend: friend, handle: friend.handle, score: score,
-                                   totalMs: today.totalMs, streak: friend.streak, me: false)
+            return RankEntry(id: friend.id.uuidString, handle: friend.handle, score: score, totalMs: today.totalMs,
+                             streak: friend.streak, me: false, answers: today.answers)
         }
         if let mine = myToday {
-            played.append(FriendRankEntry(id: "moi", friend: nil, handle: "Toi", score: mine.score, totalMs: mine.totalMs,
-                                          streak: mine.streak, me: true))
+            played.append(RankEntry(id: "moi", handle: "Toi", score: mine.score, totalMs: mine.totalMs, streak: mine.streak,
+                                    me: true, answers: mine.answers.map(\.isCorrect)))
         }
-        played.sort { (a: FriendRankEntry, b: FriendRankEntry) -> Bool in
+        played.sort { (a: RankEntry, b: RankEntry) -> Bool in
             let scoreA: Int = a.score ?? 0
             let scoreB: Int = b.score ?? 0
             if scoreA != scoreB { return scoreA > scoreB }
@@ -296,9 +307,8 @@ struct FriendsView: View {
             return timeA < timeB
         }
         for index in played.indices { played[index].rank = index + 1 }
-        let waiting = friends.filter { $0.today?.score == nil }
-            .map { FriendRankEntry(id: $0.id.uuidString, friend: $0, handle: $0.handle, score: nil, totalMs: nil,
-                                   streak: $0.streak, me: false) }
+        let waiting: [RankEntry] = friends.filter { $0.today?.score == nil }
+            .map { RankEntry(id: $0.id.uuidString, handle: $0.handle, score: nil, totalMs: nil, streak: $0.streak, me: false) }
         return played + waiting
     }
 
@@ -348,77 +358,6 @@ struct FriendsView: View {
 }
 
 /// Un ami dans la liste : pseudo, série, son 5 du jour. Toucher ouvre son profil.
-/// Une place du classement des amis.
-private struct FriendRankEntry: Identifiable {
-    let id: String
-    let friend: Friend?
-    let handle: String
-    let score: Int?
-    let totalMs: Int?
-    let streak: Int
-    let me: Bool
-    var rank: Int?
-
-    init(id: String, friend: Friend?, handle: String, score: Int?, totalMs: Int?, streak: Int, me: Bool) {
-        self.id = id
-        self.friend = friend
-        self.handle = handle
-        self.score = score
-        self.totalMs = totalMs
-        self.streak = streak
-        self.me = me
-    }
-}
-
-/// Ligne du classement : rang (médaille sur le podium), pseudo et série, score et temps ; « pas encore joué » grisé.
-private struct FriendRankRow: View {
-    let entry: FriendRankEntry
-
-    private static let medals: [Int: Color] = [1: Color(hex: 0xF2B705), 2: Color(hex: 0xADB5BD), 3: Color(hex: 0xCD7F32)]
-
-    var body: some View {
-        let played = entry.score != nil
-        HStack(spacing: 12) {
-            ZStack {
-                Circle().fill(entry.rank.flatMap { Self.medals[$0] } ?? Color.hairline)
-                Text(entry.rank.map(String.init) ?? "–")
-                    .font(.system(.caption, design: .rounded).weight(.black)).monospacedDigit()
-                    .foregroundStyle(entry.rank.flatMap { Self.medals[$0] } != nil ? Color.white : Color.inkSoft)
-            }
-            .frame(width: 28, height: 28)
-            VStack(alignment: .leading, spacing: 1) {
-                Text(entry.handle).font(.system(.callout, design: .rounded).weight(.black))
-                    .foregroundStyle(played ? Color.ink : Color.inkSoft).lineLimit(1)
-                if entry.streak > 0 {
-                    Label("\(entry.streak)", systemImage: "flame.fill")
-                        .font(.system(.caption2, design: .rounded).weight(.heavy))
-                        .foregroundStyle(Color(hex: 0xE8452C).opacity(played ? 1 : 0.5))
-                }
-            }
-            Spacer(minLength: 4)
-            if let score = entry.score {
-                if let totalMs = entry.totalMs {
-                    Text(DurationFormat.clock(milliseconds: totalMs))
-                        .font(.system(.caption, design: .rounded).weight(.bold)).monospacedDigit()
-                        .foregroundStyle(Color.inkSoft)
-                }
-                Text("\(score)/5").font(.cfNumber).foregroundStyle(Color.ink)
-            } else {
-                Text("pas encore joué").font(.cfFootnote).foregroundStyle(Color.inkSoft)
-            }
-            if entry.friend != nil {
-                Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.5))
-            }
-        }
-        .padding(.horizontal, 12).padding(.vertical, 10)
-        .background(entry.me ? Color.sun.opacity(0.35) : Color.paperRaised,
-                    in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
-        .opacity(played ? 1 : 0.6)
-        .accessibilityElement(children: .combine)
-        .accessibilityHint(entry.friend != nil ? "Ouvre son profil" : "")
-    }
-}
-
 /// Rappel discret : les fonctions sociales demandent un compte.
 struct AccountNudge: View {
     @State private var showAccount = false

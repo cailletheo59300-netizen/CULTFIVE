@@ -67,7 +67,10 @@ struct AlbumView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
+                    // Taille fixe : la barre du haut ne doit jamais couper le solde (« 1 2… »).
                     NeuronesAmount(amount: store.neurones, size: 24)
+                        .fixedSize()
+                        .padding(.horizontal, 4)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack(spacing: 0) {
