@@ -15,8 +15,8 @@ struct DailyResultView: View {
     @State private var shownScore = 0
     /// Domaines dont la cote est dévoilée (placement terminé).
     @State private var placed: Set<String> = []
-    /// Le rappel quotidien est proposé une seule fois, après le premier 5 du jour (jamais pendant l'onboarding).
-    @AppStorage("reminderOfferAnswered") private var reminderAsked = false
+    /// Classement du jour (chargé à l'arrivée sur le résultat).
+    @State private var board: DailyLeaderboard?
     /// Moments forts (niveau, record de série, trophées), fêtés en plein écran une seule fois.
     @State private var celebrations: [Celebration] = []
     @State private var celebrated = false
@@ -42,16 +42,13 @@ struct DailyResultView: View {
                         .foregroundStyle(white)
                         .fixedSize(horizontal: false, vertical: true)
                         .stagger(appeared, index: 1, reduceMotion: reduceMotion)
-                    figures.stagger(appeared, index: 2, reduceMotion: reduceMotion)
+                    DailyLeaderboardCard(result: result, board: board)
+                        .stagger(appeared, index: 2, reduceMotion: reduceMotion)
                     rewards.stagger(appeared, index: 3, reduceMotion: reduceMotion)
                     if result.seeds > 0 {
                         DoubleSeedsButton(ref: "daily:\(result.runId.uuidString.lowercased())", onInk: true)
                     }
                     knowledge.stagger(appeared, index: 4, reduceMotion: reduceMotion)
-                    if !reminderAsked {
-                        ReminderOfferCard { reminderAsked = true }
-                            .stagger(appeared, index: 6, reduceMotion: reduceMotion)
-                    }
                     actions.padding(.top, Space.s)
                 }
                 .padding(.horizontal, Space.gutter)
@@ -74,6 +71,7 @@ struct DailyResultView: View {
                 try? await Task.sleep(nanoseconds: 1_200_000_000)
                 celebrations = items
             }
+            board = try? await app.service.dailyLeaderboard(date: result.date)
             if let skills = try? await app.service.skills() {
                 placed = Set(skills.filter { $0.rating.placed }.map(\.domainId))
             }
@@ -144,28 +142,6 @@ struct DailyResultView: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Score : \(result.score) sur 5")
-    }
-
-    private var figures: some View {
-        HStack(alignment: .top, spacing: 10) {
-            figure(value: result.percentile?.top.map { "Top \($0) %" } ?? "—",
-                   label: result.percentile?.source == .estimate ? "estimation" : "des joueurs du jour", symbol: "chart.bar.fill")
-            figure(value: DurationFormat.clock(milliseconds: result.totalMs), label: "temps", symbol: "stopwatch.fill")
-            figure(value: "\(result.streak)", label: result.streak > 1 ? "jours de série" : "jour de série", symbol: "flame.fill")
-        }
-    }
-
-    private func figure(value: String, label: String, symbol: String) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Image(systemName: symbol).font(.callout).foregroundStyle(Color.sun)
-            Text(value).font(.system(.title3, design: .rounded).weight(.heavy)).monospacedDigit().foregroundStyle(white)
-                .minimumScaleFactor(0.6).lineLimit(1)
-            Text(label).font(.cfFootnote).foregroundStyle(white.opacity(0.65)).lineLimit(2)
-        }
-        .padding(12)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(white.opacity(0.13), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
-        .accessibilityElement(children: .combine)
     }
 
     private var rewards: some View {
@@ -304,69 +280,5 @@ private extension View {
             .opacity(visible ? 1 : 0)
             .offset(y: visible || reduceMotion ? 0 : 12)
             .animation(reduceMotion ? .easeIn(duration: 0.15) : Motion.moment.delay(0.08 * Double(index)), value: visible)
-    }
-}
-
-/// « Un rappel demain pour ton 5 du jour ? » : l'heure, puis Oui (demande l'autorisation de l'iPhone) ou Non merci.
-/// Proposé une fois, après le premier 5 du jour ; modifiable ensuite dans Réglages.
-private struct ReminderOfferCard: View {
-    var onAnswered: () -> Void
-
-    @Environment(AppModel.self) private var app
-    @State private var time = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date()) ?? Date()
-    @State private var busy = false
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: Space.m) {
-            Text("Un rappel demain ?").font(.system(.title3, design: .rounded).weight(.heavy)).foregroundStyle(.white)
-            Text("Une notification quand ton prochain \(Brand.dailyName) est prêt, jamais plus de deux par jour, et aucune si tu l'as déjà fait.")
-                .font(.cfFootnote).foregroundStyle(.white.opacity(0.85))
-                .fixedSize(horizontal: false, vertical: true)
-            HStack {
-                Text("Vers").font(.cfCallout.weight(.bold)).foregroundStyle(.white)
-                DatePicker("Heure du rappel", selection: $time, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
-                    .colorScheme(.dark)
-                Spacer()
-            }
-            HStack(spacing: Space.s) {
-                Button("Oui, me le rappeler") { Task { await answer(true) } }
-                    .buttonStyle(InkButtonStyle(fill: Color.sun, text: Color(hex: 0x1E1340)))
-                Button("Non merci") { Task { await answer(false) } }
-                    .font(.system(.subheadline, design: .rounded).weight(.bold))
-                    .foregroundStyle(.white.opacity(0.8))
-                    .frame(minHeight: 44)
-            }
-            .disabled(busy)
-        }
-        .padding(Space.m)
-        .background(.white.opacity(0.12), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
-        .onAppear {
-            if let saved = app.profile?.notifDailyTime {
-                let parts = saved.split(separator: ":").compactMap { Int($0) }
-                if parts.count >= 2, let date = Calendar.current.date(bySettingHour: parts[0], minute: parts[1], second: 0, of: Date()) {
-                    time = date
-                }
-            }
-        }
-    }
-
-    private func answer(_ yes: Bool) async {
-        busy = true
-        defer { busy = false }
-        Haptics.selection()
-        let parts = Calendar.current.dateComponents([.hour, .minute], from: time)
-        var fields: [String: JSONValue] = ["notif_daily": .bool(yes), "notif_reminder": .bool(yes)]
-        if yes {
-            fields["notif_daily_time"] = .string(String(format: "%02d:%02d", parts.hour ?? 8, parts.minute ?? 30))
-            let granted = await NotificationScheduler.requestAuthorization()
-            app.track("notif_permission", ["granted": granted ? "yes" : "no", "from": "daily_result"])
-        }
-        app.track("reminder_optin", ["answer": yes ? "yes" : "no"])
-        if let profile = try? await app.service.updateProfile(fields) {
-            app.profile = profile
-            await NotificationScheduler.refresh(profile: profile, dailyDone: true)
-        }
-        withAnimation(Motion.standard) { onAnswered() }
     }
 }

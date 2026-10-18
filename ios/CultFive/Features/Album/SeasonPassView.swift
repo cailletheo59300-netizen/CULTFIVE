@@ -54,8 +54,8 @@ struct SeasonPassView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
                     hero
-                    tracksCompare
                     catchUp
+                    tracksCompare
                     extraChests
                     ChallengesLink()
                     VStack(alignment: .leading, spacing: Space.s) {
@@ -232,17 +232,17 @@ struct SeasonPassView: View {
         }
     }
 
-    /// Pass+ acheté en cours de saison : les paliers déjà atteints, d'un coup.
+    /// Paliers atteints à récupérer (gratuit et Pass+) : un seul bouton, tout d'un coup.
     @ViewBuilder private var catchUp: some View {
-        let ready = store.season.passPlus?.rewards.filter { !$0.claimed && $0.tier <= store.tier }.count ?? 0
-        if store.passPlusActive && ready > 1 {
-            ShopButton(title: "Récupérer \(ready) paliers Pass+", price: nil, icon: "final_payant",
-                       fill: .sun, text: .inkFixed, enabled: !store.busy) {
+        let ready = store.claimableCount
+        if ready > 0 {
+            ShopButton(title: ready > 1 ? "Tout réclamer · \(ready) récompenses" : "Réclamer ma récompense", price: nil,
+                       icon: "final_gratuit", fill: .sun, text: .inkFixed, enabled: !store.busy) {
                 Task {
-                    let claimed = await store.claimAllPaid()
+                    let claimed = await store.claimAll()
                     guard !claimed.isEmpty else { return }
                     Haptics.success()
-                    app.show("\(claimed.count) récompenses Pass+ récupérées")
+                    app.show(claimed.count > 1 ? "\(claimed.count) récompenses récupérées" : "Récompense récupérée")
                 }
             }
         }

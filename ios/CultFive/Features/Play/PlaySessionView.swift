@@ -234,20 +234,29 @@ struct PlaySessionView: View {
             Task { await model.useHelp(kind) }
         } label: {
             HStack(spacing: 8) {
-                helpIcon(kind, ticket: tickets > 0).frame(width: 30, height: 30)
+                helpIcon(kind)
                 Text(title(kind)).lineLimit(1).minimumScaleFactor(0.8)
                 Spacer(minLength: 4)
                 if model.pendingHelp == kind {
                     ProgressView().controlSize(.mini)
                 } else if tickets > 0 {
-                    Text("× \(tickets)").monospacedDigit()
-                        .accessibilityLabel("\(tickets) ticket\(tickets > 1 ? "s" : "")")
+                    // Un ticket couvre l'aide : une seule étiquette, aux couleurs de l'aide.
+                    HStack(spacing: 3) {
+                        Image(systemName: "ticket.fill").font(.system(size: 11, weight: .black))
+                        Text("\(tickets)").monospacedDigit()
+                    }
+                    .font(.system(.caption, design: .rounded).weight(.black))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 8).frame(minHeight: 24)
+                    .background(helpColor(kind), in: Capsule())
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel("\(tickets) ticket\(tickets > 1 ? "s" : "")")
                 } else {
                     SeedsAmount(amount: kind.cost, color: .inkSoft)
                 }
             }
             .font(.system(.subheadline, design: .rounded).weight(.heavy))
-            .padding(.horizontal, 12)
+            .padding(.horizontal, 10)
             .frame(maxWidth: .infinity, minHeight: 48)
             .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
             .shadow(color: Color(hex: 0x3A1FB8).opacity(0.08), radius: 6, y: 3)
@@ -258,17 +267,29 @@ struct PlaySessionView: View {
         .opacity(model.pendingHelp == kind ? 0.75 : 1)
     }
 
-    /// Ticket 3D quand on en a un, sinon le symbole de l'aide.
-    @ViewBuilder
-    private func helpIcon(_ kind: HelpKind, ticket: Bool) -> some View {
+    private func helpColor(_ kind: HelpKind) -> Color {
         switch kind {
-        case .fiftyFifty where ticket: GameIcon.ticketFifty.image
-        case .hint where ticket: GameIcon.ticketHint.image
-        case .fiftyFifty: Text("½").font(.system(size: 20, weight: .black, design: .rounded)).foregroundStyle(Color(hex: 0x1C7ED6))
-        case .hint: Image(systemName: "lightbulb.fill").foregroundStyle(Color(hex: 0xF2A900))
-        case .context: Image(systemName: "text.book.closed.fill").foregroundStyle(Color.brand)
-        case .secondChance: Image(systemName: "shield.fill").foregroundStyle(Color.brand)
+        case .fiftyFifty: return Color(hex: 0x1C7ED6)
+        case .hint: return Color(hex: 0xE8A200)
+        case .context, .secondChance: return .brand
         }
+    }
+
+    /// Même pastille ronde pour toutes les aides : le symbole sur un fond léger de sa couleur.
+    private func helpIcon(_ kind: HelpKind) -> some View {
+        let color = helpColor(kind)
+        return Group {
+            switch kind {
+            case .fiftyFifty: Text("½").font(.system(size: 17, weight: .black, design: .rounded))
+            case .hint: Image(systemName: "lightbulb.fill").font(.system(size: 14, weight: .bold))
+            case .context: Image(systemName: "text.book.closed.fill").font(.system(size: 14, weight: .bold))
+            case .secondChance: Image(systemName: "shield.fill").font(.system(size: 14, weight: .bold))
+            }
+        }
+        .foregroundStyle(color)
+        .frame(width: 30, height: 30)
+        .background(color.opacity(0.14), in: Circle())
+        .accessibilityHidden(true)
     }
 
     private func title(_ kind: HelpKind) -> String {

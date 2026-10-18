@@ -591,6 +591,7 @@ private struct Binder: View {
                     .lineLimit(1)
             }
             Spacer(minLength: 0)
+            PageGoal(missing: total - owned)
         }
     }
 
@@ -703,5 +704,26 @@ extension AnyTransition {
         let turned = AnyTransition.modifier(active: PageTurn(angle: -95), identity: PageTurn(angle: 0))
         let under = AnyTransition.modifier(active: PageShade(amount: 0.12), identity: PageShade(amount: 0))
         return forward ? .asymmetric(insertion: under, removal: turned) : .asymmetric(insertion: turned, removal: under)
+    }
+}
+
+/// Objectif de la page (D-075) : le coffre en argent qu'elle rapporte une fois complète, et ce qu'il manque.
+private struct PageGoal: View {
+    let missing: Int
+
+    var body: some View {
+        HStack(spacing: 6) {
+            ChestView(tier: .silver, open: missing == 0).frame(width: 30, height: 30)
+            Text(missing == 0 ? "Complète" : "Plus que \(missing)")
+                .font(.system(.caption, design: .rounded).weight(.black)).monospacedDigit()
+                .foregroundStyle(missing == 0 ? Color.correct : Color.ink)
+                .lineLimit(1)
+        }
+        .padding(.leading, 6).padding(.trailing, 10).frame(minHeight: 36)
+        .background((missing == 0 ? Color.correct : Color.sun).opacity(0.18), in: Capsule())
+        .fixedSize()
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(missing == 0 ? "Page complète, coffre en argent gagné"
+                                         : "Plus que \(missing) carte\(missing > 1 ? "s" : "") pour un coffre en argent")
     }
 }

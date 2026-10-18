@@ -1,14 +1,13 @@
 import SwiftUI
 import CultFiveCore
 
-/// Défis sous le 5 du jour : Jour, Semaine, Saison. Chaque défi dit ce qu'il rapporte : des neurones et des points
-/// de saison qui font monter le pass. Tout vient du serveur (quests_overview, season_overview).
+/// Défis sous le 5 du jour et la barre du pass : Jour, Semaine, Saison. Chaque défi montre sa jauge et ce qu'il
+/// rapporte : des neurones et des points de saison qui font monter le pass. Tout vient du serveur (quests_overview, season_overview).
 /// Un défi pas encore rempli se touche : il emmène là où il se fait (`goal` du serveur).
 struct SeasonChallengesCard: View {
     let overview: QuestsOverview?
     let store: AlbumStore
-    var onOpenPass: () -> Void
-    var onGo: (ChallengeGoal) -> Void = { _ in }
+        var onGo: (ChallengeGoal) -> Void = { _ in }
 
     private enum Tab: String, CaseIterable { case day = "Jour", week = "Semaine", season = "Saison" }
 
@@ -37,31 +36,24 @@ struct SeasonChallengesCard: View {
     }
 
     private var header: some View {
-        HStack(alignment: .center, spacing: Space.s) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text("Défis").font(.cfHeadline).foregroundStyle(Color.ink)
-                HStack(spacing: 4) {
-                    Text("Gagne des")
-                    NeuroneIcon().frame(width: 16, height: 16)
-                    Text("neurones et des points de saison")
-                }
-                .font(.system(.caption, design: .rounded).weight(.bold))
-                .foregroundStyle(Color.inkSoft)
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
-            }
+        HStack(alignment: .firstTextBaseline, spacing: Space.s) {
+            Text("Défis").font(.cfHeadline).foregroundStyle(Color.ink)
             Spacer(minLength: Space.s)
-            Button(action: onOpenPass) {
-                VStack(spacing: 0) {
-                    Text("Pass").font(.system(size: 10, weight: .heavy, design: .rounded)).foregroundStyle(.white.opacity(0.85))
-                    Text("\(store.tier)/\(store.tiers)").font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
-                        .foregroundStyle(Color.sun)
-                }
-                .frame(width: 58, height: 46)
-                .background(Color.popGradient, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+            if let end = currentEnd {
+                Label("Nouveaux \(remaining(end))", systemImage: "clock")
+                    .font(.system(.caption, design: .rounded).weight(.bold))
+                    .foregroundStyle(Color.inkSoft)
+                    .lineLimit(1)
             }
-            .buttonStyle(.row)
-            .accessibilityLabel("Pass de saison, palier \(store.tier) sur \(store.tiers)")
+        }
+    }
+
+    /// Fin de la période affichée (jour ou semaine).
+    private var currentEnd: Date? {
+        switch tab {
+        case .day: return overview?.day.endsAt
+        case .week: return overview?.week.endsAt
+        case .season: return nil
         }
     }
 
@@ -102,11 +94,6 @@ struct SeasonChallengesCard: View {
                 }
                 BonusBar(bonus: bonus, count: period.doneCount, total: period.quests.count, accent: accent,
                          extra: bonusExtra(period.bonus))
-                HStack(spacing: 4) {
-                    Image(systemName: "clock").accessibilityHidden(true)
-                    Text("Nouveaux défis \(remaining(period.endsAt))")
-                }
-                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
         } else {
             HStack(spacing: Space.s) {

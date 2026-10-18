@@ -381,6 +381,28 @@ final class AlbumStore {
         return true
     }
 
+    /// Paliers atteints mais pas encore récupérés (piste gratuite, et Pass+ s'il est actif).
+    var claimableCount: Int {
+        let free = season.rewards.filter { !$0.claimed && $0.tier <= season.tier }.count
+        let paid = passPlusActive ? (season.passPlus?.rewards.filter { !$0.claimed && $0.tier <= season.tier }.count ?? 0) : 0
+        return free + paid
+    }
+
+    /// Progression dans le palier en cours : points gagnés et points du palier (nil une fois le pass fini).
+    var tierProgress: (points: Int, total: Int)? {
+        guard season.season != nil, season.tier < season.tiers else { return nil }
+        let total = max(season.tierPoints, 1)
+        return (max(0, season.points - season.tier * total), total)
+    }
+
+    /// « Tout réclamer » : tous les paliers atteints, piste gratuite puis Pass+. Renvoie ce qui a été récupéré.
+    func claimAll() async -> [SeasonClaimed] {
+        var claimed = await run({ try await $0.seasonClaimAll(track: .free) }) ?? []
+        if passPlusActive { claimed += await run({ try await $0.seasonClaimAll(track: .paid) }) ?? [] }
+        await refresh()
+        return claimed
+    }
+
     /// Rattrapage du Pass+ : tous les paliers atteints d'un coup. Renvoie ce qui a été récupéré.
     func claimAllPaid() async -> [SeasonClaimed] {
         guard let claimed = await run({ try await $0.seasonClaimAll(track: .paid) }) else { return [] }

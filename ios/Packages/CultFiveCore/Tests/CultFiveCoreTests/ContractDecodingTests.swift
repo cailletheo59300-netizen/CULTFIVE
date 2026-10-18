@@ -245,4 +245,18 @@ final class ContractDecodingTests: XCTestCase {
         let ended = try decoder.decode(DailyQuestionResponse.self, from: Data(#"{"expired": true}"#.utf8))
         XCTAssertTrue(ended.expired)
     }
+
+    /// Classement du 5 du jour (0070) : podium + joueur, part de la semaine battue.
+    func testDailyLeaderboard() throws {
+        let json = #"{"date": "2027-04-02", "participants": 8, "rank": 4, "week_beaten_pct": 57,"#
+            + #""rows": [{"rank": 1, "handle": "ana", "score": 5, "total_ms": 31000, "streak": 1, "me": false},"#
+            + #"{"rank": 4, "handle": "moi", "score": 4, "total_ms": 40000, "streak": 3, "me": true}]}"#
+        let board = try SupabaseAPI.decoder.decode(DailyLeaderboard.self, from: Data(json.utf8))
+        XCTAssertEqual(board.rank, 4)
+        XCTAssertEqual(board.weekBeatenPct, 57)
+        XCTAssertEqual(board.rows.last?.me, true)
+        let empty = try SupabaseAPI.decoder.decode(DailyLeaderboard.self,
+                                                   from: Data(#"{"participants": 0, "rank": null, "week_beaten_pct": null, "rows": []}"#.utf8))
+        XCTAssertNil(empty.rank)
+    }
 }

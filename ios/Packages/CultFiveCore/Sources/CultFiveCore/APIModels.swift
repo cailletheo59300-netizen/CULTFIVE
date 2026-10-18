@@ -1299,6 +1299,54 @@ public struct FriendProfile: Decodable, Hashable, Sendable {
     }
 }
 
+/// Classement du 5 du jour (D-073) : podium, le joueur et ses voisins ; part des 7 derniers jours battue.
+public struct DailyLeaderboard: Codable, Hashable, Sendable {
+    public struct Row: Codable, Hashable, Sendable, Identifiable {
+        public let rank: Int
+        public let handle: String
+        public let score: Int
+        public let totalMs: Int?
+        public let streak: Int?
+        public let me: Bool
+        public var id: Int { rank }
+
+        enum CodingKeys: String, CodingKey {
+            case rank, handle, score, streak, me
+            case totalMs = "total_ms"
+        }
+
+        public init(rank: Int, handle: String, score: Int, totalMs: Int?, streak: Int?, me: Bool) {
+            self.rank = rank
+            self.handle = handle
+            self.score = score
+            self.totalMs = totalMs
+            self.streak = streak
+            self.me = me
+        }
+    }
+
+    public let participants: Int
+    public let rank: Int?
+    /// Part (%) des parties des 7 derniers jours que le joueur bat ; nil sans autre partie.
+    public let weekBeatenPct: Int?
+    public let rows: [Row]
+
+    enum CodingKeys: String, CodingKey {
+        case participants, rank, rows
+        case weekBeatenPct = "week_beaten_pct"
+    }
+
+    public init(participants: Int = 0, rank: Int? = nil, weekBeatenPct: Int? = nil, rows: [Row] = []) {
+        self.participants = participants
+        self.rank = rank
+        self.weekBeatenPct = weekBeatenPct
+        self.rows = rows
+    }
+
+    /// Le classement s'affiche dès 5 joueurs ; avant, la comparaison sur 7 jours.
+    public static let minimumPlayers = 5
+}
+
 /// Mode Survie (D-072) : record et meilleure partie du jour.
 public struct SurvivalOverview: Codable, Hashable, Sendable {
     public let record: Int

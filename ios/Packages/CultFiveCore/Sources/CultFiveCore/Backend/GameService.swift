@@ -61,6 +61,8 @@ public protocol GameService: Sendable {
 
     // Album de cartes et pass de saison
     func albumOverview() async throws -> AlbumOverview
+    /// Classement du 5 du jour (date nil : aujourd'hui pour le joueur).
+    func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard
     /// Mode Survie : une question à la fois jusqu'à la première erreur (serveur seul juge, comme le 5 du jour).
     func survivalOverview() async throws -> SurvivalOverview
     func survivalStart() async throws -> SurvivalStart
@@ -528,6 +530,10 @@ public struct LiveGameService: GameService {
 
     public func survivalOverview() async throws -> SurvivalOverview { try await api.rpc("survival_overview") }
 
+    public func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard {
+        try await api.rpc("daily_leaderboard", ["p_date": date.map { .string($0) } ?? .null])
+    }
+
     public func survivalStart() async throws -> SurvivalStart { try await api.rpc("survival_start") }
 
     public func survivalQuestion(run: UUID, position: Int) async throws -> DailyQuestionResponse {
@@ -644,6 +650,7 @@ public extension GameService {
     // Album et pass : la démo n'a pas de collection.
     func albumOverview() async throws -> AlbumOverview { AlbumOverview() }
     func showcase() async throws -> Showcase { Showcase() }
+    func dailyLeaderboard(date: String?) async throws -> DailyLeaderboard { DailyLeaderboard() }
     // Survie : en ligne seulement (démo et service indisponible : pas de partie).
     func survivalOverview() async throws -> SurvivalOverview { SurvivalOverview() }
     func survivalStart() async throws -> SurvivalStart {

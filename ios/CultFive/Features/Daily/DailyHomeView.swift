@@ -30,11 +30,13 @@ struct DailyHomeView: View {
                     }
                     StreakRescueOffer()
                     rendezVous
-                    // Les défis (jour, semaine, saison) rapportent neurones et points de saison.
-                    SeasonChallengesCard(overview: quests, store: AlbumStore.shared, onOpenPass: {
+                    ChestsReadyRow()
+                    // Le pass, puis les défis (jour, semaine, saison) qui le font monter.
+                    SeasonPassBar(store: AlbumStore.shared) {
                         app.pendingAlbum = .pass
                         app.tab = .album
-                    }, onGo: { goal in
+                    }
+                    SeasonChallengesCard(overview: quests, store: AlbumStore.shared, onGo: { goal in
                         // Le 5 du jour est sur cet écran : on le lance tout de suite s'il reste à faire.
                         if goal == .daily {
                             if app.daily?.state == .done {

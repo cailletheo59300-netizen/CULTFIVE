@@ -25,6 +25,8 @@ struct FriendsView: View {
     @State private var pendingLaunch: DuelLaunch?
     /// Code de ligue à confirmer (saisi ou reçu par lien) : aperçu avant de rejoindre.
     @State private var joinRequest: LeagueJoinRequest?
+    /// Mon 5 du jour (score et temps) pour me placer dans le classement des amis.
+    @State private var myToday: DailyResult?
 
     /// Duels qui attendent le joueur, ou un adversaire par lien.
     private var waitingDuels: [Duel] {
@@ -162,7 +164,9 @@ struct FriendsView: View {
         async let mine = try? service.leagues()
         async let referralInfo = try? service.referralOverview()
         async let myDuels = try? service.duels()
+        async let today: DailyResult? = app.daily?.state == .done ? (try? service.dailyResult(date: nil)) : nil
         duels = await myDuels ?? []
+        myToday = await today
         overview = await friends
         leagues = await mine ?? []
         referral = await referralInfo
@@ -230,10 +234,19 @@ struct FriendsView: View {
         }
     }
 
+    /// Amis classés sur le 5 du jour (D-074) : ceux qui l'ont fait par score puis temps, toi compris ; ceux qui ne
+    /// l'ont pas encore fait en bas, grisés. Un ami se touche : son profil (duel, face-à-face).
     @ViewBuilder private var friendsList: some View {
         let friends = overview?.friends ?? []
         VStack(alignment: .leading, spacing: Space.s) {
-            Text("Mes amis").labelCaps()
+            HStack(alignment: .firstTextBaseline) {
+                Text("Mes amis").labelCaps()
+                Spacer()
+                if !friends.isEmpty {
+                    Text("Classement du 5 du jour").font(.system(.caption, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color.inkSoft)
+                }
+            }
             if friends.isEmpty {
                 HStack(alignment: .center, spacing: Space.m) {
                     Leon(color: .brand, pose: .curious).frame(width: 90)
@@ -243,11 +256,18 @@ struct FriendsView: View {
                 }
                 .padding(.vertical, Space.s)
             } else {
-                ForEach(friends) { friend in
-                    NavigationLink(value: Route.friend(friend.id, friend.handle)) {
-                        FriendRow(friend: friend)
+                let entries = rankedEntries(friends)
+                VStack(spacing: 6) {
+                    ForEach(entries) { entry in
+                        if let friend = entry.friend {
+                            NavigationLink(value: Route.friend(friend.id, friend.handle)) {
+                                FriendRankRow(entry: entry)
+                            }
+                            .buttonStyle(.row)
+                        } else {
+                            FriendRankRow(entry: entry)
+                        }
                     }
-                    .buttonStyle(.row)
                 }
             }
             if let outgoing = overview?.outgoing, !outgoing.isEmpty {
@@ -255,6 +275,26 @@ struct FriendsView: View {
                     .font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
         }
+    }
+
+    private func rankedEntries(_ friends: [Friend]) -> [FriendRankEntry] {
+        var played: [FriendRankEntry] = friends.compactMap { friend in
+            guard let today = friend.today, let score = today.score else { return nil }
+            return FriendRankEntry(id: friend.id.uuidString, friend: friend, handle: friend.handle, score: score,
+                                   totalMs: today.totalMs, streak: friend.streak, me: false)
+        }
+        if let mine = myToday {
+            played.append(FriendRankEntry(id: "moi", friend: nil, handle: "Toi", score: mine.score, totalMs: mine.totalMs,
+                                          streak: mine.streak, me: true))
+        }
+        played.sort { a, b in
+            a.score != b.score ? a.score > b.score : (a.totalMs ?? .max) < (b.totalMs ?? .max)
+        }
+        for index in played.indices { played[index].rank = index + 1 }
+        let waiting = friends.filter { $0.today?.score == nil }
+            .map { FriendRankEntry(id: $0.id.uuidString, friend: $0, handle: $0.handle, score: nil, totalMs: nil,
+                                   streak: $0.streak, me: false) }
+        return played + waiting
     }
 
     @ViewBuilder private var leaguesBlock: some View {
@@ -303,30 +343,74 @@ struct FriendsView: View {
 }
 
 /// Un ami dans la liste : pseudo, série, son 5 du jour. Toucher ouvre son profil.
-private struct FriendRow: View {
-    let friend: Friend
+/// Une place du classement des amis.
+private struct FriendRankEntry: Identifiable {
+    let id: String
+    let friend: Friend?
+    let handle: String
+    let score: Int?
+    let totalMs: Int?
+    let streak: Int
+    let me: Bool
+    var rank: Int?
+
+    init(id: String, friend: Friend?, handle: String, score: Int?, totalMs: Int?, streak: Int, me: Bool) {
+        self.id = id
+        self.friend = friend
+        self.handle = handle
+        self.score = score
+        self.totalMs = totalMs
+        self.streak = streak
+        self.me = me
+    }
+}
+
+/// Ligne du classement : rang (médaille sur le podium), pseudo et série, score et temps ; « pas encore joué » grisé.
+private struct FriendRankRow: View {
+    let entry: FriendRankEntry
+
+    private static let medals: [Int: Color] = [1: Color(hex: 0xF2B705), 2: Color(hex: 0xADB5BD), 3: Color(hex: 0xCD7F32)]
 
     var body: some View {
-        HStack(spacing: Space.m) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text(friend.handle).font(.cfTitle3).foregroundStyle(Color.ink)
-                Text(friend.streak > 0 ? "\(friend.streak) jour\(friend.streak > 1 ? "s" : "") de série" : "pas de série en cours")
-                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+        let played = entry.score != nil
+        HStack(spacing: 12) {
+            ZStack {
+                Circle().fill(entry.rank.flatMap { Self.medals[$0] } ?? Color.hairline)
+                Text(entry.rank.map(String.init) ?? "–")
+                    .font(.system(.caption, design: .rounded).weight(.black)).monospacedDigit()
+                    .foregroundStyle(entry.rank.flatMap { Self.medals[$0] } != nil ? Color.white : Color.inkSoft)
             }
-            Spacer()
-            if let today = friend.today, let answers = today.answers {
-                HStack(spacing: Space.s) {
-                    Text("\(today.score ?? 0)/5").font(.cfNumber).foregroundStyle(Color.ink)
-                    TallyMark(results: answers).frame(width: 34)
+            .frame(width: 28, height: 28)
+            VStack(alignment: .leading, spacing: 1) {
+                Text(entry.handle).font(.system(.callout, design: .rounded).weight(.black))
+                    .foregroundStyle(played ? Color.ink : Color.inkSoft).lineLimit(1)
+                if entry.streak > 0 {
+                    Label("\(entry.streak)", systemImage: "flame.fill")
+                        .font(.system(.caption2, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color(hex: 0xE8452C).opacity(played ? 1 : 0.5))
                 }
+            }
+            Spacer(minLength: 4)
+            if let score = entry.score {
+                if let totalMs = entry.totalMs {
+                    Text(DurationFormat.clock(milliseconds: totalMs))
+                        .font(.system(.caption, design: .rounded).weight(.bold)).monospacedDigit()
+                        .foregroundStyle(Color.inkSoft)
+                }
+                Text("\(score)/5").font(.cfNumber).foregroundStyle(Color.ink)
             } else {
                 Text("pas encore joué").font(.cfFootnote).foregroundStyle(Color.inkSoft)
             }
-            Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
+            if entry.friend != nil {
+                Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.5))
+            }
         }
-        .popCard(padding: 14)
+        .padding(.horizontal, 12).padding(.vertical, 10)
+        .background(entry.me ? Color.sun.opacity(0.35) : Color.paperRaised,
+                    in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+        .opacity(played ? 1 : 0.6)
         .accessibilityElement(children: .combine)
-        .accessibilityHint("Ouvre son profil")
+        .accessibilityHint(entry.friend != nil ? "Ouvre son profil" : "")
     }
 }
 

@@ -49,7 +49,7 @@ final class SurvivalSessionModel {
             seconds = start.seconds
             await load()
         } catch {
-            stage = .failed(error.userMessage("Impossible de lancer la partie. Réessaie."))
+            stage = .failed(error.userMessage ?? "Impossible de lancer la partie. Réessaie.")
         }
     }
 
@@ -65,7 +65,7 @@ final class SurvivalSessionModel {
             stopwatch.reset()
             stage = .question
         } catch {
-            stage = .failed(error.userMessage("Question indisponible. Réessaie."))
+            stage = .failed(error.userMessage ?? "Question indisponible. Réessaie.")
         }
     }
 
@@ -124,7 +124,7 @@ final class SurvivalSessionModel {
             record = result.record
             stage = .result(result)
         } catch {
-            stage = .failed(error.userMessage("Bilan indisponible. Réessaie."))
+            stage = .failed(error.userMessage ?? "Bilan indisponible. Réessaie.")
         }
     }
 
