@@ -88,6 +88,8 @@ struct PlayHomeView: View {
         async let freshSurvival = try? service.survivalOverview(domain: nil)
         if let fresh = await freshSkills { skills = fresh }
         if let fresh = await freshSurvival { survival = fresh }
+        // Classements des domaines prêts avant d'ouvrir une fiche (D-080).
+        await Leaderboards.shared.prefetchDomains(service, ids: app.domains.map(\.id))
     }
 
     private var header: some View {

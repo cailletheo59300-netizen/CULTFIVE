@@ -134,7 +134,8 @@ private struct PodiumColumn: View {
     let shown: Bool
 
     private var rank: Int { entry.rank ?? 3 }
-    private var height: CGFloat { rank == 1 ? 78 : rank == 2 ? 56 : 42 }
+    private var height: CGFloat { rank == 1 ? 96 : rank == 2 ? 70 : 54 }
+    private var avatar: CGFloat { rank == 1 ? 74 : 56 }
     /// Ordre d'apparition : 3e, 2e, puis 1er.
     private var delay: Double { rank == 3 ? 0 : rank == 2 ? 0.18 : 0.36 }
 
@@ -143,38 +144,47 @@ private struct PodiumColumn: View {
             ZStack(alignment: .top) {
                 Circle()
                     .fill(LinearGradient(colors: Medal.colors(rank), startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .frame(width: rank == 1 ? 60 : 48, height: rank == 1 ? 60 : 48)
+                    .frame(width: avatar, height: avatar)
                     .overlay(Circle().strokeBorder(entry.me ? Color.sun : .white.opacity(0.8), lineWidth: entry.me ? 3 : 2))
                     .overlay(
                         Text(initial)
-                            .font(.system(rank == 1 ? .title2 : .title3, design: .rounded).weight(.black))
+                            .font(.system(size: avatar * 0.44, weight: .black, design: .rounded))
                             .foregroundStyle(Medal.colors(rank)[2])
                     )
                     .overlay(Shine(active: shown, delay: delay + 0.5).clipShape(Circle()))
-                    .shadow(color: Medal.colors(rank)[1].opacity(0.6), radius: shown ? 12 : 0, y: 3)
+                    .shadow(color: Medal.colors(rank)[1].opacity(0.75), radius: shown ? 16 : 0, y: 3)
+                    .background {
+                        if rank == 1 {
+                            // Rayons de lumière qui tournent doucement derrière le 1er (sans changer la mise en page).
+                            LightRays(color: Medal.colors(1)[0])
+                                .frame(width: avatar * 2.2, height: avatar * 2.2)
+                                .opacity(shown ? 1 : 0)
+                                .animation(.easeOut(duration: 0.8).delay(delay + 0.4), value: shown)
+                        }
+                    }
                 if rank == 1 {
                     Image(systemName: "crown.fill")
-                        .font(.system(size: 20, weight: .black))
+                        .font(.system(size: 26, weight: .black))
                         .foregroundStyle(LinearGradient(colors: Medal.colors(1), startPoint: .top, endPoint: .bottom))
                         .shadow(color: .black.opacity(0.25), radius: 1, y: 1)
-                        .offset(y: shown ? -20 : -60)
+                        .offset(y: shown ? -26 : -70)
                         .opacity(shown ? 1 : 0)
                         .animation(.spring(response: 0.45, dampingFraction: 0.55).delay(delay + 0.35), value: shown)
                 }
             }
-            .padding(.top, rank == 1 ? 16 : 0)
+            .padding(.top, rank == 1 ? 22 : 0)
             .scaleEffect(shown ? 1 : 0.4)
             .opacity(shown ? 1 : 0)
             .animation(.spring(response: 0.5, dampingFraction: 0.62).delay(delay + 0.15), value: shown)
             Text(entry.me ? "Toi" : entry.handle)
-                .font(.system(.caption, design: .rounded).weight(.black))
+                .font(.system(.subheadline, design: .rounded).weight(.black))
                 .foregroundStyle(entry.me ? Color.sun : style.text)
                 .lineLimit(1).minimumScaleFactor(0.7)
             if let score = entry.score {
-                Text("\(score)/5").font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
+                Text("\(score)/5").font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit()
                     .foregroundStyle(style.text)
             } else if let elo = entry.elo {
-                Text(CoteCULT.format(elo)).font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
+                Text(CoteCULT.format(elo)).font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit()
                     .foregroundStyle(style.text)
             }
             if let answers = entry.answers {
@@ -191,7 +201,7 @@ private struct PodiumColumn: View {
                                      startPoint: .top, endPoint: .bottom))
                 .overlay(alignment: .top) {
                     Text("\(rank)")
-                        .font(.system(.title, design: .rounded).weight(.black))
+                        .font(.system(size: rank == 1 ? 40 : 32, weight: .black, design: .rounded))
                         .foregroundStyle(.white)
                         .shadow(color: .black.opacity(0.2), radius: 1, y: 1)
                         .padding(.top, 6)
@@ -212,6 +222,28 @@ private struct PodiumColumn: View {
         if let elo = entry.elo { parts.append("Elo \(elo)") }
         if let totalMs = entry.totalMs { parts.append(DurationFormat.clock(milliseconds: totalMs)) }
         return parts.joined(separator: ", ")
+    }
+}
+
+/// Rayons de lumière qui tournent lentement (derrière le 1er du podium).
+private struct LightRays: View {
+    let color: Color
+    @State private var turning = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var body: some View {
+        AngularGradient(gradient: Gradient(colors: (0..<12).flatMap { _ in [color.opacity(0.55), .clear] }),
+                        center: .center)
+            .mask(RadialGradient(colors: [.white, .white.opacity(0.4), .clear], center: .center,
+                                 startRadius: 0, endRadius: 90))
+            .clipShape(Circle())
+            .rotationEffect(.degrees(turning ? 360 : 0))
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+            .onAppear {
+                guard !reduceMotion else { return }
+                withAnimation(.linear(duration: 24).repeatForever(autoreverses: false)) { turning = true }
+            }
     }
 }
 
@@ -337,6 +369,87 @@ struct LeaderboardBody: View {
             if others.contains(where: \.me) {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { Haptics.selection() }
             }
+        }
+    }
+}
+
+/// Grande carte du classement (D-080) : fond nuit dégradé, halo coloré derrière le podium, titre bien visible.
+struct LeaderboardHeroCard<Accessory: View, Content: View>: View {
+    var title = "Classement"
+    /// Couleur du halo (or si tu es 1er, couleur du domaine…).
+    var glow: Color = Color(hex: 0xFFC83D)
+    @ViewBuilder var accessory: Accessory
+    @ViewBuilder var content: Content
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 8) {
+                Image(systemName: "trophy.fill")
+                    .font(.system(.headline, design: .rounded).weight(.black))
+                    .foregroundStyle(LinearGradient(colors: Medal.colors(1), startPoint: .top, endPoint: .bottom))
+                Text(title)
+                    .font(.system(.title3, design: .rounded).weight(.black))
+                    .foregroundStyle(.white)
+                Spacer(minLength: 4)
+                accessory
+            }
+            content
+        }
+        .padding(16)
+        .background {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .fill(LinearGradient(colors: [Color(hex: 0x1B1040), Color(hex: 0x33186E), Color(hex: 0x5A1F7E)],
+                                     startPoint: .top, endPoint: .bottom))
+                .overlay(alignment: .top) {
+                    RadialGradient(colors: [glow.opacity(0.55), glow.opacity(0.12), .clear], center: .top,
+                                   startRadius: 0, endRadius: 220)
+                        .frame(height: 260)
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        }
+        .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous)
+            .strokeBorder(LinearGradient(colors: [.white.opacity(0.35), .white.opacity(0.05)],
+                                         startPoint: .top, endPoint: .bottom), lineWidth: 1))
+        .shadow(color: Color(hex: 0x1B1040).opacity(0.35), radius: 14, y: 8)
+        .environment(\.colorScheme, .dark)
+    }
+}
+
+extension LeaderboardHeroCard where Accessory == EmptyView {
+    init(title: String = "Classement", glow: Color = Color(hex: 0xFFC83D), @ViewBuilder content: () -> Content) {
+        self.init(title: title, glow: glow, accessory: { EmptyView() }, content: content)
+    }
+}
+
+/// Classement en cours de chargement : un podium et deux lignes fantômes qui scintillent, au lieu d'un vide.
+struct LeaderboardSkeleton: View {
+    @State private var pulse = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var body: some View {
+        VStack(spacing: 10) {
+            HStack(alignment: .bottom, spacing: 8) {
+                ForEach([2, 1, 3], id: \.self) { rank in
+                    VStack(spacing: 6) {
+                        Circle().frame(width: rank == 1 ? 74 : 56, height: rank == 1 ? 74 : 56)
+                        Capsule().frame(width: 54, height: 10)
+                        UnevenRoundedRectangle(topLeadingRadius: 12, topTrailingRadius: 12, style: .continuous)
+                            .frame(height: rank == 1 ? 96 : rank == 2 ? 70 : 54)
+                    }
+                    .padding(.top, rank == 1 ? 22 : 0)
+                    .frame(maxWidth: .infinity)
+                }
+            }
+            ForEach(0..<2, id: \.self) { _ in
+                RoundedRectangle(cornerRadius: 14, style: .continuous).frame(height: 50)
+            }
+        }
+        .foregroundStyle(.white.opacity(pulse ? 0.16 : 0.08))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Chargement du classement")
+        .onAppear {
+            guard !reduceMotion else { return }
+            withAnimation(.easeInOut(duration: 0.8).repeatForever()) { pulse = true }
         }
     }
 }

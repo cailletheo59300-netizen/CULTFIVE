@@ -1,12 +1,14 @@
 import SwiftUI
 import CultFiveCore
 
-/// Classement, sur le fond violet du résultat (D-073, D-079) : les vrais joueurs qui ont fait un 5 du jour ces 3
-/// derniers jours, chacun avec son dernier. Podium animé pour le top 3, puis « ··· », toi et tes voisins ; confettis
-/// si tu es sur le podium ; seul classé : « 1er pour l'instant ».
+/// Classement en grande carte nuit (D-073, D-079, D-080) : les vrais joueurs qui ont fait un 5 du jour ces 3 derniers
+/// jours, chacun avec son dernier. Podium animé pour le top 3, puis « ··· », toi et tes voisins ; confettis si tu es
+/// sur le podium ; seul classé : « 1er pour l'instant ». Pas encore chargé : podium fantôme.
 struct DailyLeaderboardCard: View {
     let result: DailyResult
     let board: DailyLeaderboard?
+    /// La demande au serveur est terminée (réussie ou non).
+    var loaded = true
 
     private var entries: [RankEntry] {
         (board?.rows ?? []).map { row in
@@ -22,21 +24,26 @@ struct DailyLeaderboardCard: View {
 
     private var onPodium: Bool { (board?.rank ?? 99) <= 3 && showsBoard }
 
+    /// Halo : or pour le 1er, rose sur le podium, violet sinon.
+    private var glow: Color {
+        guard showsBoard, let rank = board?.rank else { return Color(hex: 0xB57CFF) }
+        return rank == 1 ? Color(hex: 0xFFC83D) : rank <= 3 ? Color(hex: 0xFF6FB5) : Color(hex: 0xB57CFF)
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                Text("Classement").labelCaps(.white.opacity(0.7))
-                Spacer()
-                if onPodium, let rank = board?.rank {
-                    Text(rank == 1 ? "🏆 Tu es 1er !" : "🎉 Tu es sur le podium !")
-                        .font(.system(.caption, design: .rounded).weight(.black))
-                        .foregroundStyle(Color(hex: 0x1E1340))
-                        .padding(.horizontal, 10).padding(.vertical, 4)
-                        .background(Color.sun, in: Capsule())
-                }
+        LeaderboardHeroCard(glow: glow) {
+            if onPodium, let rank = board?.rank {
+                Text(rank == 1 ? "🏆 Tu es 1er !" : "🎉 Sur le podium !")
+                    .font(.system(.caption, design: .rounded).weight(.black))
+                    .foregroundStyle(Color(hex: 0x1E1340))
+                    .padding(.horizontal, 10).padding(.vertical, 5)
+                    .background(Color.sun, in: Capsule())
             }
+        } content: {
             if showsBoard {
                 LeaderboardBody(entries: entries, style: .onInk)
+            } else if board == nil && !loaded {
+                LeaderboardSkeleton()
             } else {
                 if board?.rank == 1 {
                     Text("🏆 1er pour l'instant")
@@ -47,10 +54,9 @@ struct DailyLeaderboardCard: View {
                                          totalMs: result.totalMs, streak: result.streak, me: true), style: .onInk)
             }
         }
-        .padding(14)
-        .background(.white.opacity(0.12), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+        .animation(.easeInOut(duration: 0.25), value: board == nil)
         .overlay {
-            if onPodium { Confetti().allowsHitTesting(false).clipShape(RoundedRectangle(cornerRadius: Radius.m)) }
+            if onPodium { Confetti().allowsHitTesting(false).clipShape(RoundedRectangle(cornerRadius: 24)) }
         }
     }
 }

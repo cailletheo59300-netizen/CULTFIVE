@@ -508,6 +508,7 @@ final class AppModel {
         cache.remove("daily")
         cache.remove("quests")
         AlbumStore.shared.clear()
+        Leaderboards.shared.clear()
         phase = .launching
         await bootstrap()
     }
@@ -522,6 +523,7 @@ final class AppModel {
         cache.remove("daily")
         cache.remove("quests")
         AlbumStore.shared.clear()
+        Leaderboards.shared.clear()
         phase = .launching
         await bootstrap()
     }

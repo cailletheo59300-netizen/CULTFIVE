@@ -114,7 +114,14 @@ final class DailySessionModel {
             pendingGiven = nil
             if verdict.finished == true || position >= 5 {
                 let service = service
-                preparedResult = Task { try? await service.dailyResult(date: nil) }
+                let prepared = Task { try? await service.dailyResult(date: nil) }
+                preparedResult = prepared
+                // Le classement se charge pendant la correction : il est prêt à l'arrivée sur le résultat (D-080).
+                Task { @MainActor in
+                    if let result = await prepared.value {
+                        await Leaderboards.shared.refreshDaily(service, date: result.date)
+                    }
+                }
             }
         } catch {
             isRetrying = true

@@ -17,8 +17,8 @@ struct DailyResultView: View {
     @State private var shownScore = 0
     /// Domaines dont la cote est dévoilée (placement terminé).
     @State private var placed: Set<String> = []
-    /// Classement du jour (chargé à l'arrivée sur le résultat).
-    @State private var board: DailyLeaderboard?
+    /// Classement du jour : déjà chargé pendant la correction, ou gardé sur le téléphone (D-080).
+    @State private var boardLoaded = false
     /// Moments forts (niveau, record de série, trophées), fêtés en plein écran une seule fois.
     @State private var celebrations: [Celebration] = []
     @State private var celebrated = false
@@ -44,7 +44,8 @@ struct DailyResultView: View {
                         .foregroundStyle(white)
                         .fixedSize(horizontal: false, vertical: true)
                         .stagger(appeared, index: 1, reduceMotion: reduceMotion)
-                    DailyLeaderboardCard(result: result, board: board)
+                    DailyLeaderboardCard(result: result, board: Leaderboards.shared.board(Leaderboards.daily(result.date)),
+                                         loaded: boardLoaded)
                         .stagger(appeared, index: 2, reduceMotion: reduceMotion)
                     rewards.stagger(appeared, index: 3, reduceMotion: reduceMotion)
                     if result.seeds > 0 {
@@ -80,10 +81,13 @@ struct DailyResultView: View {
                     requestReview()
                 }
             }
-            board = try? await app.service.dailyLeaderboard(date: result.date)
             if let skills = try? await app.service.skills() {
                 placed = Set(skills.filter { $0.rating.placed }.map(\.domainId))
             }
+        }
+        .task {
+            await Leaderboards.shared.refreshDaily(app.service, date: result.date, maxAge: 30)
+            boardLoaded = true
         }
         .onAppear {
             withAnimation(Motion.adaptive(Motion.moment, reduceMotion: reduceMotion)) { appeared = true }

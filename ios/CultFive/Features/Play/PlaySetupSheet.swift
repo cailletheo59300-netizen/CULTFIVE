@@ -21,8 +21,9 @@ struct PlaySetupSheet: View {
     @State private var selected: Set<String> = []
     @State private var available: [String: Int] = [:]
     @State private var skill: SkillSummary?
-    /// Classement Elo du domaine (D-079).
-    @State private var board: DailyLeaderboard?
+    /// Classement Elo du domaine (D-079), gardé sur le téléphone (D-080).
+    private var board: DailyLeaderboard? { Leaderboards.shared.board(Leaderboards.domain(domainId)) }
+    @State private var boardLoaded = false
 
     private var color: Color { DomainPalette.color(domainId) }
     private var onColor: Color { DomainPalette.onColor(domainId) }
@@ -63,11 +64,17 @@ struct PlaySetupSheet: View {
         .task {
             selected = Set(preselected)
             if !preselected.isEmpty { ranked = false; survival = false }
-            if let stats = try? await app.service.domainStats(domainId) {
+            // Tout en même temps : le classement n'attend plus les stats ni l'Elo.
+            let service = app.service, domainId = domainId, boards = Leaderboards.shared
+            async let stats = try? service.domainStats(domainId)
+            async let skills = try? service.skills()
+            async let refreshed: Void = boards.refreshDomain(service, domain: domainId, maxAge: 20)
+            await refreshed
+            boardLoaded = true
+            if let stats = await stats {
                 available = Dictionary(uniqueKeysWithValues: stats.subdomains.map { ($0.id, $0.available) })
             }
-            skill = (try? await app.service.skills())?.first { $0.domainId == domainId }
-            board = try? await app.service.domainLeaderboard(domain: domainId)
+            skill = await skills?.first { $0.domainId == domainId }
         }
     }
 
@@ -99,26 +106,27 @@ struct PlaySetupSheet: View {
         return "Elo \(rating.formatted) · \(rating.provisionalLabel)"
     }
 
-    /// Classement Elo du domaine : podium animé, puis toi et tes voisins. Jamais joué en classé : ta place viendra.
+    /// Classement Elo du domaine en grande carte (D-080) : podium animé, puis toi et tes voisins ; podium fantôme
+    /// pendant le premier chargement. Jamais joué en classé : ta place viendra.
     @ViewBuilder private var leaderboard: some View {
         if let board, !board.rows.isEmpty {
-            VStack(alignment: .leading, spacing: Space.s) {
-                HStack(alignment: .firstTextBaseline) {
-                    Text("Classement").font(.cfHeadline).foregroundStyle(Color.ink)
-                    Spacer()
-                    Text("Elo").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkSoft)
-                }
+            LeaderboardHeroCard(glow: color) {
+                Text("Elo").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(.white.opacity(0.7))
+            } content: {
                 LeaderboardBody(entries: board.rows.map { row in
                     RankEntry(id: "\(row.rank)", rank: row.rank, handle: row.handle, score: nil, totalMs: nil, streak: nil,
                               me: row.me, elo: row.elo)
-                }, style: .onPaper)
+                }, style: .onInk)
                 if board.rank == nil {
                     Text("Joue une partie classée dans ce domaine pour entrer dans le classement.")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        .font(.cfFootnote).foregroundStyle(.white.opacity(0.7))
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
             .padding(.top, Space.s)
+        } else if board == nil && !boardLoaded {
+            LeaderboardHeroCard(glow: color) { LeaderboardSkeleton() }
+                .padding(.top, Space.s)
         }
     }
 
