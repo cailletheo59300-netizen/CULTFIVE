@@ -1299,7 +1299,7 @@ public struct FriendProfile: Decodable, Hashable, Sendable {
     }
 }
 
-/// Classement du 5 du jour (D-073) : podium, le joueur et ses voisins ; part des 7 derniers jours battue.
+/// Classement du 5 du jour (D-073) : chaque joueur avec son dernier 5 du jour ; podium, le joueur et ses voisins.
 public struct DailyLeaderboard: Codable, Hashable, Sendable {
     public struct Row: Codable, Hashable, Sendable, Identifiable {
         public let rank: Int
@@ -1327,7 +1327,7 @@ public struct DailyLeaderboard: Codable, Hashable, Sendable {
 
     public let participants: Int
     public let rank: Int?
-    /// Part (%) des parties des 7 derniers jours que le joueur bat ; nil sans autre partie.
+    /// Ancien champ (comparaison sur 7 jours), plus envoyé : toujours nil.
     public let weekBeatenPct: Int?
     public let rows: [Row]
 
@@ -1343,8 +1343,8 @@ public struct DailyLeaderboard: Codable, Hashable, Sendable {
         self.rows = rows
     }
 
-    /// Le classement s'affiche dès 5 joueurs ; avant, la comparaison sur 7 jours.
-    public static let minimumPlayers = 5
+    /// Le classement s'affiche dès 2 joueurs ; seul : « 1er pour l'instant ».
+    public static let minimumPlayers = 2
 }
 
 /// Mode Survie (D-072) : record et meilleure partie du jour.

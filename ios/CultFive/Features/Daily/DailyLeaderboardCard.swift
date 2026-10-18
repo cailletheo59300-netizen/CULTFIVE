@@ -1,8 +1,8 @@
 import SwiftUI
 import CultFiveCore
 
-/// Classement du 5 du jour, sur le fond violet du résultat (D-073). Dès 5 joueurs : podium, toi et tes voisins.
-/// Avant : ta ligne et la part des parties de la semaine que tu bats (« 1er pour l'instant » si tu ouvres le bal).
+/// Classement, sur le fond violet du résultat (D-073) : chaque joueur avec son dernier 5 du jour, quelle que soit sa
+/// date (tant qu'il y a peu de joueurs). Podium, toi et tes voisins ; seul classé : « 1er pour l'instant ».
 /// Score, temps et série sont dans ta ligne : plus de cases séparées.
 struct DailyLeaderboardCard: View {
     let result: DailyResult
@@ -18,7 +18,7 @@ struct DailyLeaderboardCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
-                Text("Classement du jour").labelCaps(white.opacity(0.7))
+                Text("Classement").labelCaps(white.opacity(0.7))
                 Spacer()
                 if showsBoard, let board {
                     Text("\(board.participants) joueurs")
@@ -42,12 +42,9 @@ struct DailyLeaderboardCard: View {
         .background(white.opacity(0.12), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
     }
 
-    /// Avant 5 joueurs : jamais « pas assez de joueurs », toujours une comparaison qui a du sens.
+    /// Seul classé : jamais « pas assez de joueurs ».
     private var headline: String? {
-        guard let board else { return nil }
-        if board.rank == 1 { return "🏆 1er pour l'instant" }
-        if let pct = board.weekBeatenPct { return "Mieux que \(pct) % des joueurs cette semaine" }
-        return nil
+        board?.rank == 1 ? "🏆 1er pour l'instant" : nil
     }
 
     /// Lignes affichées, avec « ··· » entre deux rangs non consécutifs.

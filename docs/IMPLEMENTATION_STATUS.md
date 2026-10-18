@@ -34,7 +34,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Vitrine du profil sur un socle, vue par les amis ; écran des trophées refait (D-067) | 🟡 app 1.3 (à construire), serveur 0063 | `99_vitrine.sql`, `ContractDecodingTests.testShowcase` |
 | Trophées : plus de maîtrise par domaine, 12 nouveaux exploits ; vitrine en bas du profil, socles admin (D-068) | 🟡 app 1.3 (à construire), serveur 0064–0065 | `95_gamification.sql`, `99_exploits.sql` |
 | Mode Survie : jusqu'à la première erreur, 20 s, de plus en plus dur, record (D-072) | 🟡 app 1.4 (à construire), serveur 0069 | `99_survie.sql`, `ContractDecodingTests.testSurvival` |
-| Fin du 5 du jour : classement du jour, sans case de rappel (D-073) | 🟡 app 1.4 (à construire), serveur 0070 | `99_classement_du_jour.sql`, `ContractDecodingTests.testDailyLeaderboard` |
+| Fin du 5 du jour : classement (dernier 5 du jour de chaque joueur), sans case de rappel (D-073) | 🟡 app 1.4 (à construire), serveur 0070 | `99_classement_du_jour.sql`, `ContractDecodingTests.testDailyLeaderboard` |
 | Accueil : coffres à ouvrir, barre du pass, « Tout réclamer » ; amis en classement ; aides en partie (D-074) | 🟡 app 1.4 (à construire) | build iOS |
 | Objectifs d'album : coffre en argent par page complète (D-075) | 🟡 app 1.4 (à construire), serveur 0071 | `99_exploits.sql` |
 | Tickets d'aide : 5 au plus par sorte (D-076) | 🟡 serveur 0072 | `99_exploits.sql` |
