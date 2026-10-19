@@ -273,3 +273,6 @@ Pourquoi : le propriétaire veut voir les pubs de chaque joueur. Décidé (0077,
 
 ### D-084 · 2026-10-19 · Admin : joueurs triés par pubs vues
 Pourquoi : le propriétaire veut voir qui regarde le plus de pubs. Décidé (0078, site seulement) : la liste des joueurs a une colonne **Pubs vues** (total · récompensées validées par Google · entre les parties) et trois tris : plus de pubs vues au total, plus de pubs récompensées, plus de pubs entre les parties. Changer le tri relance la liste.
+
+### D-085 · 2026-10-20 · Admin : pubs comptées sans doublons
+Pourquoi : des joueurs semblaient voir plus de 3 pubs entre les parties par jour ; en réalité les versions 1.1 et 1.2 enregistrent parfois la même pub 2 à 4 fois, à 0 ou 1 seconde d'écart (nouvel essai d'envoi quand le réseau est lent juste après la pub). Aucun doublon en 1.3. Décidé (0080, serveur seulement) : pour toutes les statistiques de pubs de l'admin (tableau de bord, pubs jour par jour, fiche et liste des joueurs), un même événement de pub d'un joueur moins de 10 s après le précédent n'est compté qu'une fois. Aucun effet pour les joueurs : ces événements ne servent qu'à l'admin, la limite de 3 pubs par jour est tenue par l'app.

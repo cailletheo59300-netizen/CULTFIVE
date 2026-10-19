@@ -45,6 +45,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Admin : pubs jour par jour (D-081) | ✅ serveur 0076 en production, site en ligne | `99_admin_analytics.sql` |
 | Admin : pubs dans la fiche d'un joueur (D-083) | ✅ serveur 0077 en production, site en ligne | `99_admin_analytics.sql` |
 | Admin : joueurs triés par pubs vues (D-084) | ✅ serveur 0078 en production, site en ligne | `99_admin_analytics.sql` |
+| Admin : pubs comptées sans doublons (D-085) | 🟡 serveur 0080 | `99_admin_analytics.sql` |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |
 

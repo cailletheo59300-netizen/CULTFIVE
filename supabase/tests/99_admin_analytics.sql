@@ -14,7 +14,7 @@ begin
   r := public.track_events('[{"name":"app_open","app_version":"1.4.0"},{"name":"hack","props":{}},{"name":"share","props":{"what":"daily"}}]');
   perform tst.ok((r ->> 'recorded')::int = 2, 'deux événements valides enregistrés');
   perform tst.login(w);
-  perform public.track_events('[{"name":"app_open"},{"name":"interstitial"},{"name":"ad_fail","props":{"kind":"interstitial","reason":"no fill"}},{"name":"ad_offer","props":{"kind":"free_pack"}}]');
+  perform public.track_events('[{"name":"app_open"},{"name":"interstitial"},{"name":"interstitial"},{"name":"ad_fail","props":{"kind":"interstitial","reason":"no fill"}},{"name":"ad_offer","props":{"kind":"free_pack"}}]');
   perform tst.login(u);
   pack := public.play_pack('training', 'history', null, 5, true, null);
   for x in select * from jsonb_array_elements(pack -> 'questions') loop
@@ -61,7 +61,7 @@ begin
   r := public.admin_user_ads(w);
   perform tst.ok((r -> 'total' ->> 'interstitial')::int = 1 and (r -> 'total' ->> 'interstitial_failed')::int = 1
                  and (r -> 'week' ->> 'offered')::int = 1 and (r -> 'today' ->> 'interstitial')::int = 1 and (r -> 'by_kind' -> 'free_pack' ->> 'offered')::int = 1
-                 and (r -> 'fail_reasons' ->> 'Entre les parties : no fill')::int = 1, 'pubs d''un joueur');
+                 and (r -> 'fail_reasons' ->> 'Entre les parties : no fill')::int = 1, 'pubs d''un joueur (doublon d''envoi compté une fois)');
   r := public.admin_ads_daily(30);
   perform tst.ok((r -> 'days' -> 0 -> 'by_kind' -> 'free_pack' ->> 'offered')::int >= 1
                  and (r -> 'days' -> 0 -> 'fail_reasons' ->> 'Entre les parties : no fill')::int >= 1, 'pubs jour par jour : détail');
