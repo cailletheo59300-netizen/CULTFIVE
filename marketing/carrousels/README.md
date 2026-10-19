@@ -6,3 +6,5 @@ Images 1080 × 1920, fonds « peinture ancienne » générés (aucun droit d'ima
 - Contenu : `carrousels.json` (accroche, questions, bonne réponse, explication, % de joueurs qui ont trouvé).
 - Un vrai tableau du domaine public en fond : ajouter `"bg": "chemin/image.jpg"` à une question.
 - Générer : `NODE_PATH=$(npm root -g) node generer.js dossier-de-sortie`
+- Style de la 1re image : `ACCROCHE=elegant` (par défaut, italique Playfair et ornement doré) ou `ACCROCHE=tiktok` (Montserrat, gros texte blanc).
+- Polices (licence libre SIL OFL, Google Fonts) dans `polices/` : Playfair Display, EB Garamond, Montserrat.

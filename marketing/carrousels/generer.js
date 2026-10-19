@@ -11,6 +11,12 @@ const data = JSON.parse(fs.readFileSync(path.join(here, 'carrousels.json'), 'utf
 const asset = (p) => 'data:' + (p.endsWith('.ttf') ? 'font/ttf' : p.endsWith('.png') ? 'image/png' : 'image/jpeg') +
   ';base64,' + fs.readFileSync(path.resolve(here, p)).toString('base64');
 const nunito = asset('../../android/app/src/main/res/font/nunito.ttf');
+const playfair = asset('polices/playfair-italic-800.ttf');
+const garamond = asset('polices/ebgaramond-500.ttf');
+const garamondBold = asset('polices/ebgaramond-700.ttf');
+const montserrat = asset('polices/montserrat-800.ttf');
+// Style de la 1re image : "elegant" (italique, ornement doré) ou "tiktok" (gros texte blanc, comme les mèmes).
+const hookStyle = process.env.ACCROCHE || 'elegant';
 const icon = asset('../../ios/CultFive/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png');
 // Typographie française : espace insécable avant ? ! : ; et dans « », pour ne jamais laisser un signe seul en début de ligne.
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -45,28 +51,39 @@ function painting(kind, seed, glow) {
 
 const css = `
   @font-face { font-family: Nunito; src: url(${nunito}); font-weight: 200 1000; }
+  @font-face { font-family: Playfair; src: url(${playfair}); font-style: italic; font-weight: 800; }
+  @font-face { font-family: Garamond; src: url(${garamond}); font-weight: 400 500; }
+  @font-face { font-family: Garamond; src: url(${garamondBold}); font-weight: 600 800; }
+  @font-face { font-family: Montserrat; src: url(${montserrat}); font-weight: 800; }
   * { margin: 0; box-sizing: border-box; }
   body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
   .slide { position: relative; width: 1080px; height: 1920px; overflow: hidden; color: #f4ecdf; }
   .bg, .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .photo + .shade { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, rgba(0,0,0,.15), rgba(0,0,0,.7)); }
   .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 90px; text-align: center; }
-  .hook { font: 900 92px/1.12 Nunito, sans-serif; color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,.75), 0 0 3px #000; letter-spacing: -1px; }
+  .hook-tiktok { font: 800 80px/1.18 Montserrat, sans-serif; color: #fff; letter-spacing: -1px;
+                 text-shadow: 0 0 2px #000, 0 3px 6px rgba(0,0,0,.9), 0 8px 30px rgba(0,0,0,.7); }
+  .kicker { font: 800 28px Nunito, sans-serif; letter-spacing: 8px; text-transform: uppercase; color: #e9c27a; }
+  .hook { margin-top: 46px; font: italic 800 98px/1.1 Playfair, serif; color: #fbf3e4; text-shadow: 0 4px 24px rgba(0,0,0,.85); }
+  .orn { display: flex; align-items: center; gap: 22px; width: 520px; color: #e9c27a; }
+  .orn i { flex: 1; height: 1.5px; background: linear-gradient(90deg, transparent, #e9c27a, transparent); }
+  .orn b { font: 30px serif; }
+  .orn.top { margin-bottom: 46px; } .orn.bottom { margin-top: 56px; }
   .tag { font: 800 30px Nunito, sans-serif; letter-spacing: 6px; text-transform: uppercase; color: #e9c27a; margin-bottom: 40px; }
-  .q { font: 700 74px/1.18 "Liberation Serif", Georgia, serif; text-shadow: 0 3px 16px rgba(0,0,0,.8); }
+  .q { font: 700 74px/1.18 Garamond, serif; text-shadow: 0 3px 16px rgba(0,0,0,.8); }
   .choices { margin-top: 70px; display: grid; gap: 22px; width: 100%; }
-  .choice { font: 400 46px "Liberation Serif", Georgia, serif; padding: 22px 34px; border: 1.5px solid rgba(244,236,223,.45);
+  .choice { font: 400 46px Garamond, serif; padding: 22px 34px; border: 1.5px solid rgba(244,236,223,.45);
             border-radius: 18px; background: rgba(12,8,5,.35); text-align: left; display: flex; gap: 26px; }
   .choice b { font-family: Nunito, sans-serif; font-weight: 900; color: #e9c27a; }
   .swipe { position: absolute; bottom: 230px; left: 0; right: 0; text-align: center; font: 800 36px Nunito, sans-serif; color: rgba(244,236,223,.8); }
-  .answer { font: 700 112px/1.05 "Liberation Serif", Georgia, serif; text-shadow: 0 4px 20px rgba(0,0,0,.85); }
-  .why { margin-top: 44px; font: 400 52px/1.35 "Liberation Serif", Georgia, serif; text-shadow: 0 2px 12px rgba(0,0,0,.9); }
+  .answer { font: 700 112px/1.05 Garamond, serif; text-shadow: 0 4px 20px rgba(0,0,0,.85); }
+  .why { margin-top: 44px; font: 400 52px/1.35 Garamond, serif; text-shadow: 0 2px 12px rgba(0,0,0,.9); }
   .pct { margin-top: 70px; font: 800 36px Nunito, sans-serif; color: #1c1206; background: #e9c27a; padding: 16px 32px; border-radius: 999px; }
-  .num { position: absolute; top: 170px; left: 0; right: 0; text-align: center; font: 700 40px "Liberation Serif", serif; color: rgba(244,236,223,.7); letter-spacing: 4px; }
+  .num { position: absolute; top: 170px; left: 0; right: 0; text-align: center; font: 700 40px Garamond, serif; color: rgba(244,236,223,.7); letter-spacing: 4px; }
   .icon { width: 300px; height: 300px; border-radius: 68px; box-shadow: 0 18px 60px rgba(0,0,0,.6); margin: 60px 0 26px; }
   .name { font: 900 64px Nunito, sans-serif; letter-spacing: 10px; }
   .cta { font: 900 86px/1.1 Nunito, sans-serif; text-shadow: 0 4px 18px rgba(0,0,0,.8); }
-  .sub { margin-top: 26px; font: 400 46px/1.3 "Liberation Serif", serif; color: rgba(244,236,223,.85); }
+  .sub { margin-top: 26px; font: 400 46px/1.3 Garamond, serif; color: rgba(244,236,223,.85); }
   .badge { margin-top: 70px; background: #000; border: 2px solid #8a8a8a; border-radius: 26px; padding: 22px 54px; text-align: left; }
   .badge small { display: block; font: 600 30px Nunito, sans-serif; color: #ddd; }
   .badge span { font: 800 64px Nunito, sans-serif; color: #fff; }
@@ -80,7 +97,10 @@ const bg = (q, kind, seed, glow) => q && q.bg
 function slides(c, ci) {
   const s = [];
   const seed = (n) => ci * 40 + n;
-  s.push(`<div class="slide">${painting('bougie', seed(1), c.glow)}<div class="center"><div class="hook">${esc(c.hook)}</div></div></div>`);
+  const hook = hookStyle === 'tiktok'
+    ? `<div class="hook-tiktok">${esc(c.hook)}</div>`
+    : `<div class="kicker">Brainlix · Culture G</div><div class="hook">${esc(c.hook)}</div><div class="orn bottom"><i></i><b>◆</b><i></i></div>`;
+  s.push(`<div class="slide">${painting('bougie', seed(1), c.glow)}<div class="center">${hook}</div></div>`);
   c.questions.forEach((q, i) => {
     const kind = i % 2 ? 'bougie' : 'paysage';
     s.push(`<div class="slide">${bg(q, kind, seed(10 + i), c.glow)}<div class="num">${i + 1} / 3</div><div class="center">
