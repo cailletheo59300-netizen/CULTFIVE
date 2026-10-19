@@ -264,3 +264,6 @@ Pourquoi : le propriétaire trouvait que les classements mettaient du temps à s
 
 ### D-081 · 2026-10-19 · Admin : pubs jour par jour
 Pourquoi : le propriétaire veut voir précisément, chaque jour, combien de pubs sont regardées. Décidé (0076, site seulement) : onglet **Pubs** de l'admin, une ligne par jour sur 30 jours (aujourd'hui en haut), vrais joueurs seulement, sans les pubs de test : joueurs actifs, pubs entre les parties affichées et ratées (taux d'affichage), pubs récompensées proposées, lancées et vérifiées par Google, joueurs qui ont vu une pub, pubs par joueur actif ; un jour touché montre le détail par type et les raisons des pubs ratées (comptées depuis la 1.3). Les revenus et l'eCPM restent dans la console AdMob (Google ne les envoie pas au serveur).
+
+### D-082 · 2026-10-19 · Réseaux publicitaires de Unity déclarés
+Pourquoi : le tableau de bord Unity signalait des identifiants SKAdNetwork manquants (Unity ne faisait aucune offre dans les enchères AdMob). Décidé (app 1.4) : les 76 identifiants de la liste Unity sont déclarés dans l'app (42 nouveaux, les autres y étaient déjà par la liste Google) ; 89 en tout, sans doublon. À revérifier chaque mois dans le tableau de bord Unity (Réseau), et la liste d'AppLovin à son arrivée.

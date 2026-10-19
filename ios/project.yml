@@ -76,7 +76,7 @@ targets:
         CFBundleURLTypes:
           - CFBundleURLName: app.brainlix.ios
             CFBundleURLSchemes: [brainlix]
-        # AdMob : identifiant de l'app (public), demande de suivi Apple, réseaux publicitaires (liste Google).
+        # AdMob : identifiant de l'app (public), demande de suivi Apple, réseaux publicitaires (listes Google et Unity).
         GADApplicationIdentifier: ca-app-pub-1190519561086839~7599268856
         NSUserTrackingUsageDescription: "Brainlix affiche des pubs pour rester gratuit. Si tu acceptes, elles seront plus adaptées à tes goûts ; sinon, tu verras simplement des pubs moins ciblées."
         SKAdNetworkItems:
@@ -127,6 +127,49 @@ targets:
           - SKAdNetworkIdentifier: 3rd42ekr43.skadnetwork
           - SKAdNetworkIdentifier: 97r2b46745.skadnetwork
           - SKAdNetworkIdentifier: 3qcr597p9d.skadnetwork
+          # Unity Ads (liste du tableau de bord Unity, D-082).
+          - SKAdNetworkIdentifier: a8cz6cu7e5.skadnetwork
+          - SKAdNetworkIdentifier: mj797d8u6f.skadnetwork
+          - SKAdNetworkIdentifier: prcb7njmu6.skadnetwork
+          - SKAdNetworkIdentifier: 4pfyvq9l8r.skadnetwork
+          - SKAdNetworkIdentifier: pwa73g5rt2.skadnetwork
+          - SKAdNetworkIdentifier: v79kvwwj4g.skadnetwork
+          - SKAdNetworkIdentifier: 5a6flpkh64.skadnetwork
+          - SKAdNetworkIdentifier: lr83yxwka7.skadnetwork
+          - SKAdNetworkIdentifier: 4w7y6s5ca2.skadnetwork
+          - SKAdNetworkIdentifier: 6yxyv74ff7.skadnetwork
+          - SKAdNetworkIdentifier: 5l3tpt7t6e.skadnetwork
+          - SKAdNetworkIdentifier: w9q455wk68.skadnetwork
+          - SKAdNetworkIdentifier: mp6xlyr22a.skadnetwork
+          - SKAdNetworkIdentifier: vhf287vqwu.skadnetwork
+          - SKAdNetworkIdentifier: n9x2a789qt.skadnetwork
+          - SKAdNetworkIdentifier: 238da6jt44.skadnetwork
+          - SKAdNetworkIdentifier: 294l99pt4k.skadnetwork
+          - SKAdNetworkIdentifier: f73kdq92p3.skadnetwork
+          - SKAdNetworkIdentifier: f7s53z58qe.skadnetwork
+          - SKAdNetworkIdentifier: av6w8kgt66.skadnetwork
+          - SKAdNetworkIdentifier: 5f5u5tfb26.skadnetwork
+          - SKAdNetworkIdentifier: 77y3x8wds4.skadnetwork
+          - SKAdNetworkIdentifier: 9rd848q2bz.skadnetwork
+          - SKAdNetworkIdentifier: x44k69ngh6.skadnetwork
+          - SKAdNetworkIdentifier: wg4vff78zm.skadnetwork
+          - SKAdNetworkIdentifier: 9nlqeag3gk.skadnetwork
+          - SKAdNetworkIdentifier: g6gcrrvk4p.skadnetwork
+          - SKAdNetworkIdentifier: zq492l623r.skadnetwork
+          - SKAdNetworkIdentifier: 32z4fx6l9h.skadnetwork
+          - SKAdNetworkIdentifier: 5lm9lj6jb7.skadnetwork
+          - SKAdNetworkIdentifier: feyaarzu9v.skadnetwork
+          - SKAdNetworkIdentifier: xga6mpmplv.skadnetwork
+          - SKAdNetworkIdentifier: k6y4y55b64.skadnetwork
+          - SKAdNetworkIdentifier: 424m5254lk.skadnetwork
+          - SKAdNetworkIdentifier: 5tjdwbrq8w.skadnetwork
+          - SKAdNetworkIdentifier: t38b2kh725.skadnetwork
+          - SKAdNetworkIdentifier: glqzh8vgby.skadnetwork
+          - SKAdNetworkIdentifier: mqn7fxpca7.skadnetwork
+          - SKAdNetworkIdentifier: 488r3q3dtq.skadnetwork
+          - SKAdNetworkIdentifier: f38h382jlk.skadnetwork
+          - SKAdNetworkIdentifier: zmvfpc5aq8.skadnetwork
+          - SKAdNetworkIdentifier: m8dbw4sv7c.skadnetwork
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: app.brainlix.ios
