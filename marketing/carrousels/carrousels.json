@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-culture-g-ratee",
+    "hook": "moi quand je sors une culture G que personne ne m'a demandée",
+    "glow": "#d39a4a",
+    "questions": [
+      {"q": "Lequel de ces phénomènes est le plus chaud ?", "choices": ["La surface du Soleil", "Un éclair", "De la lave en fusion", "La flamme d'un chalumeau"], "a": "Un éclair", "why": "Un éclair chauffe l'air à environ 30 000 °C : cinq fois plus que la surface du Soleil.", "pct": 11},
+      {"q": "Quel organe humain peut repousser après en avoir perdu une grande partie ?", "choices": ["Le cœur", "Le cerveau", "Le foie", "Les reins"], "a": "Le foie", "why": "Il retrouve sa taille même quand on en retire plus de la moitié.", "pct": 17},
+      {"q": "Pour un botaniste, lequel de ces fruits est une baie ?", "choices": ["La fraise", "La banane", "La framboise", "La mûre"], "a": "La banane", "why": "Une baie vient d'une seule fleur et garde ses graines dans la chair. La fraise, elle, n'en est pas une.", "pct": 17}
+    ]
+  },
+  {
+    "id": "02-faits-impossibles",
+    "hook": "quand tu découvres que l'histoire est encore plus bizarre que tes rêves",
+    "glow": "#8fa3b8",
+    "questions": [
+      {"q": "Au Moyen Âge, qu'arrivait-il parfois à un animal accusé d'avoir tué quelqu'un ?", "choices": ["On l'offrait au roi", "Il avait droit à un procès", "On l'exilait sur une île", "Rien, c'était interdit"], "a": "Il avait droit à un procès", "why": "Cochons, chiens, même insectes : ils ont été jugés, parfois avec un avocat.", "pct": 25},
+      {"q": "Quel est l'animal national officiel de l'Écosse ?", "choices": ["Le cerf", "L'aigle royal", "La licorne", "Le lion"], "a": "La licorne", "why": "Symbole de pureté et de force, elle figure sur les armoiries écossaises depuis le Moyen Âge.", "pct": 38},
+      {"q": "Combien de cœurs a une pieuvre ?", "choices": ["1", "2", "3", "8"], "a": "3", "why": "Deux pour les branchies, un pour le reste du corps. Et son sang est bleu.", "pct": 40}
+    ]
+  },
+  {
+    "id": "03-francais-pieges",
+    "hook": "moi quand quelqu'un écrit « voir même » dans le groupe de la famille",
+    "glow": "#c9784a",
+    "questions": [
+      {"q": "Complète : « C'est difficile, ___ impossible. »", "choices": ["voir", "voire", "voir même", "voirent"], "a": "voire", "why": "Voire, avec un e, veut dire « et même ». Voir, c'est le verbe.", "pct": 20},
+      {"q": "À quel mode est le verbe dans « Qu'il vienne ! » ?", "choices": ["Impératif", "Indicatif", "Subjonctif", "Conditionnel"], "a": "Subjonctif", "why": "L'impératif n'existe pas à la 3e personne : on emprunte le subjonctif.", "pct": 20},
+      {"q": "Dans quelle ville ont lieu les premiers Jeux olympiques modernes, en 1896 ?", "choices": ["Paris", "Londres", "Athènes", "Rome"], "a": "Athènes", "why": "En hommage à l'Antiquité grecque. Paris accueille les suivants, en 1900.", "pct": 25}
+    ]
+  }
+]
