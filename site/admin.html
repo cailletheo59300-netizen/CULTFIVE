@@ -652,23 +652,25 @@ async function renderUsers() {
   const res = await rpc('admin_users', { p_search: u.search || null, p_sort: u.sort, p_limit: 50, p_offset: u.page * 50, p_scope: u.scope });
   app.innerHTML = `<div class="card"><div class="row">
       <div style="flex:3"><label>Pseudo ou identifiant</label><input id="uSearch" value="${esc(u.search)}"></div>
-      <div><label>Tri</label><select id="uSort">${[['recent', 'Plus récents'], ['active', 'Derniers actifs'], ['answers', 'Plus de réponses'], ['streak', 'Plus longue série']]
+      <div><label>Tri</label><select id="uSort">${[['recent', 'Plus récents'], ['active', 'Derniers actifs'], ['answers', 'Plus de réponses'], ['streak', 'Plus longue série'],
+        ['ads', 'Plus de pubs vues (total)'], ['ads_rewarded', 'Plus de pubs récompensées vues'], ['ads_interstitial', 'Plus de pubs entre les parties vues']]
         .map(([key, v]) => `<option value="${key}" ${u.sort === key ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
       <div><label>Comptes</label><select id="uScope"><option value="real" ${u.scope === 'real' ? 'selected' : ''}>Vrais joueurs</option>
         <option value="connected" ${u.scope === 'connected' ? 'selected' : ''}>Comptes connectés</option>
         <option value="all" ${u.scope === 'all' ? 'selected' : ''}>Tous (avec les invités et les tests)</option></select></div>
       <div><label>&nbsp;</label><button class="btn" id="uGo">Chercher</button></div></div></div>
     <div class="card"><p class="muted small">${fmt(res.total)} joueur${res.total > 1 ? 's' : ''}${u.scope === 'real' ? ' (vrais joueurs : tout compte Apple / e-mail, ou invité de moins de 3 jours ou avec 10 réponses, hors invités de test — les mêmes que dans les chiffres)' : u.scope === 'connected' ? ' (comptes Apple ou e-mail)' : ''}</p>
-    <table><thead><tr><th>Pseudo</th><th>Arrivé</th><th>Dernière activité</th><th>Réponses</th><th>Série</th><th>Neurones</th><th>Compte</th></tr></thead><tbody>
+    <table><thead><tr><th>Pseudo</th><th>Arrivé</th><th>Dernière activité</th><th>Réponses</th><th>Série</th><th>Neurones</th><th>Pubs vues</th><th>Compte</th></tr></thead><tbody>
     ${res.items.map((p) => `<tr class="click" data-id="${p.id}"><td><b>${esc(p.handle)}</b> ${p.banned_at ? '<span class="pill bad">banni</span>' : ''}</td>
       <td class="small">${new Date(p.created_at).toLocaleDateString('fr-FR')}</td><td class="small">${ago(p.last_active)}</td>
       <td>${fmt(p.questions_answered)}</td><td>${p.streak_current ?? 0}</td><td>${fmt(p.seeds)}</td>
+      <td class="small"${(p.ads_rewarded ?? 0) + (p.ads_interstitial ?? 0) ? '' : ' style="opacity:.5"'}><b>${fmt((p.ads_rewarded ?? 0) + (p.ads_interstitial ?? 0))}</b> · ${fmt(p.ads_rewarded)} récomp. · ${fmt(p.ads_interstitial)} entre parties</td>
       <td>${p.anonymous ? '<span class="pill">invité</span>' : '<span class="pill ok">compte</span>'}${p.real_player === false ? ' <span class="pill bad">hors stats</span>' : ''}</td></tr>`).join('')}
     </tbody></table>
     <p class="row"><button class="btn ghost" id="uPrev" ${u.page === 0 ? 'disabled' : ''}>Précédents</button>
       <button class="btn ghost" id="uNext" ${(u.page + 1) * 50 >= res.total ? 'disabled' : ''}>Suivants</button></p></div>`;
   const go = () => { u.search = $('#uSearch').value.trim(); u.sort = $('#uSort').value; u.scope = $('#uScope').value; u.page = 0; renderUsers(); };
-  $('#uScope').onchange = go;
+  $('#uScope').onchange = go; $('#uSort').onchange = go;
   $('#uGo').onclick = go; $('#uSearch').onkeydown = (e) => { if (e.key === 'Enter') go(); };
   $('#uPrev').onclick = () => { u.page--; renderUsers(); }; $('#uNext').onclick = () => { u.page++; renderUsers(); };
   app.querySelectorAll('tr[data-id]').forEach((tr) => tr.onclick = () => openUser(tr.dataset.id));

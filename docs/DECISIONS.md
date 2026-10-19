@@ -270,3 +270,6 @@ Pourquoi : le tableau de bord Unity signalait des identifiants SKAdNetwork manqu
 
 ### D-083 · 2026-10-19 · Admin : pubs dans la fiche d'un joueur
 Pourquoi : le propriétaire veut voir les pubs de chaque joueur. Décidé (0077, site seulement) : dans la fiche d'un joueur, un bloc **Pubs** (en tout et sur 7 jours) : récompensées demandées, vues jusqu'au bout, validées par Google, en erreur ; entre les parties vues et ratées ; détail par type, raisons des erreurs (1.3 et plus), version de l'app ; les pubs de test sont signalées à part et non comptées.
+
+### D-084 · 2026-10-19 · Admin : joueurs triés par pubs vues
+Pourquoi : le propriétaire veut voir qui regarde le plus de pubs. Décidé (0078, site seulement) : la liste des joueurs a une colonne **Pubs vues** (total · récompensées validées par Google · entre les parties) et trois tris : plus de pubs vues au total, plus de pubs récompensées, plus de pubs entre les parties. Changer le tri relance la liste.
