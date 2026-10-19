@@ -677,7 +677,7 @@ async function renderUsers() {
 }
 // Fiche joueur : ses pubs (D-083), en tout et sur 7 jours, détail par type et raisons des erreurs.
 function userAds(a) {
-  const t = a.total ?? {}, w = a.week ?? {};
+  const t = a.total ?? {}, w = a.week ?? {}, d = a.today ?? {};
   const rows = [['Récompensées : demandées (appui)', 'offered'], ['Récompensées : vues jusqu\'au bout', 'launched'],
                 ['Récompensées : validées par Google', 'verified'], ['Récompensées : en erreur', 'rewarded_failed'],
                 ['Entre les parties : vues', 'interstitial'], ['Entre les parties : ratées', 'interstitial_failed']];
@@ -685,8 +685,8 @@ function userAds(a) {
   const fails = Object.entries(a.fail_reasons ?? {}).sort((x, y) => y[1] - x[1]);
   return `<h3>Pubs</h3>
     <p class="muted small">Version de l'app : <b>${esc(a.app_version ?? 'inconnue')}</b>${a.test_claims ? ` · ${fmt(a.test_claims)} pub(s) de test (non comptées)` : ''}. Une pub demandée mais pas vue = pub qui n'a pas pu s'afficher, ou fermée avant la fin. Raisons des erreurs : à partir de la 1.3.</p>
-    <table><thead><tr><th>Pubs</th><th>En tout</th><th>7 derniers jours</th></tr></thead><tbody>
-      ${rows.map(([l, k]) => `<tr><td>${l}</td><td><b>${fmt(t[k])}</b></td><td>${fmt(w[k])}</td></tr>`).join('')}</tbody></table>
+    <table><thead><tr><th>Pubs</th><th>Aujourd'hui</th><th>7 derniers jours</th><th>En tout</th></tr></thead><tbody>
+      ${rows.map(([l, k]) => `<tr><td>${l}</td><td><b>${fmt(d[k])}</b></td><td>${fmt(w[k])}</td><td>${fmt(t[k])}</td></tr>`).join('')}</tbody></table>
     ${kinds.length ? `<p class="small" style="margin-top:8px">${kinds.map(([k, x]) => `<span class="pill">${esc(AD_KINDS[k] ?? k)} · ${fmt(x.offered)} demandées · ${fmt(x.launched)} vues · ${fmt(x.verified)} validées</span>`).join(' ')}</p>` : ''}
     ${fails.length ? `<p class="small">${fails.map(([k, n]) => `<span class="pill warn">${esc(k)} · ${fmt(n)}</span>`).join(' ')}</p>` : ''}`;
 }

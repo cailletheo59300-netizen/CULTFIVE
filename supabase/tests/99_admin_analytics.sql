@@ -60,7 +60,7 @@ begin
   perform tst.ok(r -> 'items' -> 0 ? 'ads_rewarded' and (r -> 'items' -> 0 ->> 'ads_interstitial')::int >= 1, 'joueurs triés par pubs entre les parties');
   r := public.admin_user_ads(w);
   perform tst.ok((r -> 'total' ->> 'interstitial')::int = 1 and (r -> 'total' ->> 'interstitial_failed')::int = 1
-                 and (r -> 'week' ->> 'offered')::int = 1 and (r -> 'by_kind' -> 'free_pack' ->> 'offered')::int = 1
+                 and (r -> 'week' ->> 'offered')::int = 1 and (r -> 'today' ->> 'interstitial')::int = 1 and (r -> 'by_kind' -> 'free_pack' ->> 'offered')::int = 1
                  and (r -> 'fail_reasons' ->> 'Entre les parties : no fill')::int = 1, 'pubs d''un joueur');
   r := public.admin_ads_daily(30);
   perform tst.ok((r -> 'days' -> 0 -> 'by_kind' -> 'free_pack' ->> 'offered')::int >= 1
