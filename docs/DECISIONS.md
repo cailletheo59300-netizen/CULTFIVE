@@ -267,3 +267,6 @@ Pourquoi : le propriétaire veut voir précisément, chaque jour, combien de pub
 
 ### D-082 · 2026-10-19 · Réseaux publicitaires de Unity déclarés
 Pourquoi : le tableau de bord Unity signalait des identifiants SKAdNetwork manquants (Unity ne faisait aucune offre dans les enchères AdMob). Décidé (app 1.4) : les 76 identifiants de la liste Unity sont déclarés dans l'app (42 nouveaux, les autres y étaient déjà par la liste Google) ; 89 en tout, sans doublon. À revérifier chaque mois dans le tableau de bord Unity (Réseau), et la liste d'AppLovin à son arrivée.
+
+### D-083 · 2026-10-19 · Admin : pubs dans la fiche d'un joueur
+Pourquoi : le propriétaire veut voir les pubs de chaque joueur. Décidé (0077, site seulement) : dans la fiche d'un joueur, un bloc **Pubs** (en tout et sur 7 jours) : récompensées demandées, vues jusqu'au bout, validées par Google, en erreur ; entre les parties vues et ratées ; détail par type, raisons des erreurs (1.3 et plus), version de l'app ; les pubs de test sont signalées à part et non comptées.
