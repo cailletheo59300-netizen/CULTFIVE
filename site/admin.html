@@ -104,6 +104,7 @@
     <button data-view="questions">Questions</button>
     <button data-view="reports">Signalements</button>
     <button data-view="moderation">Modération</button>
+    <button data-view="ads">Pubs</button>
     <button data-view="health">Santé</button>
     <button data-view="daily">5 du jour</button>
     <button data-view="new">Nouvelle question</button>
@@ -718,6 +719,39 @@ async function openUser(id) {
   };
 }
 
+// Pubs jour par jour (D-081) : vrais joueurs seulement, pubs de test exclues ; un jour touché montre son détail.
+async function renderAds() {
+  const r = await rpc('admin_ads_daily', { p_days: 30 });
+  const days = r.days ?? [];
+  const sum = (key) => days.slice(0, 7).reduce((n, d) => n + (d[key] ?? 0), 0);
+  const perPlayer = (d) => d.active ? ((d.interstitial + d.verified) / d.active).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) : '—';
+  const rate = (ok, ko) => ok + ko ? Math.round(100 * ok / (ok + ko)) + ' %' : '—';
+  const dayLabel = (s) => new Date(s + 'T12:00:00').toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' });
+  const detail = (d) => {
+    const kinds = Object.entries(d.by_kind ?? {});
+    const fails = Object.entries(d.fail_reasons ?? {}).sort((a, b) => b[1] - a[1]);
+    return `<div class="two"><div><h3>Pubs récompensées par type</h3>${kinds.length ? `<table>${kinds.map(([k, x]) =>
+        `<tr><td>${esc(AD_KINDS[k] ?? k)}</td><td style="text-align:right">${fmt(x.offered)} proposées · ${fmt(x.launched)} lancées · <b>${fmt(x.verified)}</b> vérifiées${x.failed ? ` · ${fmt(x.failed)} ratées` : ''}</td></tr>`).join('')}</table>` : '<p class="muted">Aucune</p>'}</div>
+      <div><h3>Pubs ratées : raisons</h3>${fails.length ? `<table>${fails.map(([k, n]) => `<tr><td>${esc(k)}</td><td style="text-align:right"><b>${fmt(n)}</b></td></tr>`).join('')}</table>` : '<p class="muted">Aucune</p>'}</div></div>`;
+  };
+  app.innerHTML = `
+    <h2>Pubs jour par jour</h2>
+    ${how('Vrais joueurs seulement (même règle que le tableau de bord), sans les pubs de test. Entre les parties : pubs plein écran affichées ou ratées, comptées par l\'app. Récompensées : proposées et lancées (app), puis vérifiées par Google. Les ratées ne sont comptées qu\'à partir de la 1.3. Les revenus et l\'eCPM sont dans la console AdMob. Touche un jour pour le détail.')}
+    ${stats([['Entre les parties (7 j)', sum('interstitial')], ['Ratées entre les parties (7 j)', sum('interstitial_failed')],
+             ['Récompensées vérifiées (7 j)', sum('verified')], ['Récompensées lancées (7 j)', sum('launched')]])}
+    <div class="card"><table id="adsTable">
+      <thead><tr><th>Jour</th><th>Actifs</th><th>Entre les parties</th><th>Ratées</th><th>Affichage</th><th>Proposées</th><th>Lancées</th><th>Vérifiées</th><th>Joueurs avec pub</th><th>Pubs / actif</th></tr></thead>
+      <tbody>${days.map((d, i) => `<tr class="click" data-i="${i}">
+        <td><b>${esc(dayLabel(d.day))}</b>${i === 0 ? ' <span class="pill ok">aujourd\'hui</span>' : ''}</td>
+        <td>${fmt(d.active)}</td><td><b>${fmt(d.interstitial)}</b></td><td>${fmt(d.interstitial_failed)}</td>
+        <td class="muted">${rate(d.interstitial, d.interstitial_failed)}</td>
+        <td>${fmt(d.offered)}</td><td>${fmt(d.launched)}</td><td><b>${fmt(d.verified)}</b></td>
+        <td>${fmt(d.viewers)}</td><td>${perPlayer(d)}</td></tr>
+        <tr class="hidden" id="adsDetail${i}"><td colspan="10" data-label="">${detail(d)}</td></tr>`).join('')}</tbody>
+    </table></div>`;
+  app.querySelectorAll('#adsTable tr.click').forEach((tr) => tr.onclick = () => $('#adsDetail' + tr.dataset.i).classList.toggle('hidden'));
+}
+
 // ───────────────────────── Navigation
 async function render() {
   $('#nav').classList.toggle('hidden', !state.session);
@@ -737,6 +771,7 @@ async function render() {
     else if (state.view === 'daily') await renderDaily();
     else if (state.view === 'moderation') await renderModeration();
     else if (state.view === 'health') await renderHealth();
+    else if (state.view === 'ads') await renderAds();
     else if (state.view === 'new') { app.innerHTML = '<div class="card"><p class="muted">Nouvelle question : elle est créée en brouillon, puis publiée depuis l\'éditeur.</p></div>'; openEditor({}, () => { state.view = 'questions'; render(); }); }
   } catch (e) { app.innerHTML = `<div class="card"><h2>Erreur</h2><pre>${esc(e.message)}</pre></div>`; }
 }

@@ -3,6 +3,7 @@ do $$
 declare
   adm uuid := tst.new_user();
   u uuid := tst.new_user();
+  w uuid := tst.new_user();
   r jsonb; k jsonb; k2 jsonb; ghost uuid; pack jsonb; atts jsonb := '[]'::jsonb; x jsonb;
 begin
   perform tst.clock('2027-11-02 10:00:00+01');
@@ -12,6 +13,9 @@ begin
   perform tst.login(u);
   r := public.track_events('[{"name":"app_open","app_version":"1.4.0"},{"name":"hack","props":{}},{"name":"share","props":{"what":"daily"}}]');
   perform tst.ok((r ->> 'recorded')::int = 2, 'deux événements valides enregistrés');
+  perform tst.login(w);
+  perform public.track_events('[{"name":"app_open"},{"name":"interstitial"},{"name":"ad_fail","props":{"kind":"interstitial","reason":"no fill"}},{"name":"ad_offer","props":{"kind":"free_pack"}}]');
+  perform tst.login(u);
   pack := public.play_pack('training', 'history', null, 5, true, null);
   for x in select * from jsonb_array_elements(pack -> 'questions') loop
     atts := atts || jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', x ->> 'id',
@@ -21,6 +25,7 @@ begin
 
   -- Un joueur ordinaire n'a pas accès aux outils d'admin.
   perform tst.throws('select public.admin_kpis(30)', 'forbidden');
+  perform tst.throws('select public.admin_ads_daily(30)', 'forbidden');
   perform tst.throws(format('select public.admin_user_ban(%L)', adm), 'forbidden');
 
   perform tst.login(adm);
@@ -44,6 +49,14 @@ begin
   perform tst.ok((k2 -> 'funnel' ->> 'created')::int = (k -> 'funnel' ->> 'created')::int + 1, 'fantôme : compté dans les installations');
   perform tst.ok((public.admin_dashboard() ->> 'users')::int = (k -> 'totals' ->> 'players')::int, 'même nombre de joueurs partout');
   perform tst.ok((public.admin_ads(30) ? 'rewarded_7d'), 'pubs : total de la semaine');
+  r := public.admin_ads_daily(30);
+  perform tst.ok(jsonb_array_length(r -> 'days') = 30 and (r -> 'days' -> 0 ->> 'day')::date = date '2027-11-02',
+                 'pubs jour par jour : 30 jours, aujourd''hui en premier');
+  perform tst.ok((r -> 'days' -> 0 ->> 'active')::int >= 1, 'pubs jour par jour : actifs du jour');
+  perform tst.ok((r -> 'days' -> 0 ->> 'interstitial')::int >= 1 and (r -> 'days' -> 0 ->> 'interstitial_failed')::int >= 1
+                 and (r -> 'days' -> 0 ->> 'viewers')::int >= 1, 'pubs jour par jour : entre les parties vue et ratée');
+  perform tst.ok((r -> 'days' -> 0 -> 'by_kind' -> 'free_pack' ->> 'offered')::int >= 1
+                 and (r -> 'days' -> 0 -> 'fail_reasons' ->> 'Entre les parties : no fill')::int >= 1, 'pubs jour par jour : détail');
 
   r := public.admin_users((select handle from public.profiles where id = u), 'recent', 10, 0);
   perform tst.ok((r ->> 'total')::int = 1 and (r -> 'items' -> 0 ->> 'id')::uuid = u, 'recherche par pseudo');
