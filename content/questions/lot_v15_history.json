@@ -1,0 +1,2336 @@
+[
+ {
+  "key": "hist15-001",
+  "concept": "history.antiquity.v15_toutankhamon",
+  "label": "Toutânkhamon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel pharaon a vu sa tombe découverte presque intacte en 1922 ?",
+  "explanation": "Howard Carter l'ouvre dans la Vallée des Rois : plus de 5 000 objets, dont le célèbre masque d'or.",
+  "options": [
+   "Toutânkhamon*",
+   "Ramsès II",
+   "Khéops",
+   "Akhenaton"
+  ]
+ },
+ {
+  "key": "hist15-002",
+  "concept": "history.antiquity.v15_phare_alexandrie",
+  "label": "Phare d'Alexandrie",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle merveille du monde antique se trouvait à Alexandrie ?",
+  "explanation": "Haut d'une centaine de mètres, il a guidé les marins pendant des siècles avant d'être détruit par des séismes.",
+  "options": [
+   "Le phare*",
+   "Les jardins suspendus",
+   "Le colosse",
+   "Le mausolée"
+  ]
+ },
+ {
+  "key": "hist15-003",
+  "concept": "history.antiquity.v15_merveille_debout",
+  "label": "Seule merveille debout",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle est la seule des sept merveilles du monde antique encore debout ?",
+  "explanation": "C'est aussi la plus ancienne des sept : elle a plus de 4 500 ans.",
+  "options": [
+   "La pyramide de Khéops*",
+   "Le phare d'Alexandrie",
+   "Le colosse de Rhodes",
+   "Le temple d'Artémis"
+  ]
+ },
+ {
+  "key": "hist15-004",
+  "concept": "history.antiquity.v15_romains_urine",
+  "label": "Les Romains et l'urine",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les Romains utilisaient de l'urine pour laver leurs vêtements.",
+  "explanation": "Vrai : l'ammoniaque qu'elle contient nettoie. Les blanchisseurs la récoltaient, et l'empereur Vespasien a même taxé les urinoirs.",
+  "answer": true
+ },
+ {
+  "key": "hist15-005",
+  "concept": "history.antiquity.v15_pompei",
+  "label": "Pompéi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle ville romaine a été ensevelie par l'éruption du Vésuve en 79 ?",
+  "explanation": "Recouverte de cendres, elle a été figée telle quelle : on y voit encore les rues, les fresques et les boulangeries.",
+  "options": [
+   "Pompéi*",
+   "Rome",
+   "Carthage",
+   "Ravenne"
+  ]
+ },
+ {
+  "key": "hist15-006",
+  "concept": "history.antiquity.v15_hannibal_alpes",
+  "label": "Hannibal",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a franchi les Alpes avec des éléphants pour attaquer Rome ?",
+  "explanation": "Le général carthaginois a surpris Rome en passant par les montagnes, avec une trentaine d'éléphants au départ.",
+  "options": [
+   "Hannibal*",
+   "Jules César",
+   "Alexandre le Grand",
+   "Attila"
+  ]
+ },
+ {
+  "key": "hist15-007",
+  "concept": "history.antiquity.v15_socrate_cigue",
+  "label": "Socrate",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel philosophe grec a été condamné à boire la ciguë ?",
+  "explanation": "Accusé de corrompre la jeunesse d'Athènes, il a accepté sa condamnation plutôt que de fuir.",
+  "options": [
+   "Socrate*",
+   "Platon",
+   "Aristote",
+   "Diogène"
+  ]
+ },
+ {
+  "key": "hist15-008",
+  "concept": "history.antiquity.v15_aristote_alexandre",
+  "label": "Aristote précepteur",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel futur conquérant Aristote a-t-il été le professeur ?",
+  "explanation": "Le philosophe a enseigné au jeune prince macédonien pendant plusieurs années.",
+  "options": [
+   "Alexandre le Grand*",
+   "Jules César",
+   "Périclès",
+   "Ramsès II"
+  ]
+ },
+ {
+  "key": "hist15-009",
+  "concept": "history.antiquity.v15_cleopatre_grecque",
+  "label": "Origines de Cléopâtre",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Cléopâtre était d'origine égyptienne.",
+  "explanation": "Faux : elle descendait des Ptolémées, une dynastie d'origine grecque macédonienne. Elle aurait été la première de sa famille à parler égyptien.",
+  "answer": false
+ },
+ {
+  "key": "hist15-010",
+  "concept": "history.antiquity.v15_pierre_rosette",
+  "label": "Pierre de Rosette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle pierre a permis de déchiffrer les hiéroglyphes ?",
+  "explanation": "Le même texte y est gravé en hiéroglyphes, en démotique et en grec : Champollion a pu comparer.",
+  "options": [
+   "La pierre de Rosette*",
+   "Le code d'Hammurabi",
+   "La pierre philosophale",
+   "La pierre de Coronation"
+  ]
+ },
+ {
+  "key": "hist15-011",
+  "concept": "history.antiquity.v15_caligula_cheval",
+  "label": "Le cheval de Caligula",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel empereur romain aurait voulu faire de son cheval un consul ?",
+  "explanation": "Le cheval s'appelait Incitatus. L'histoire est racontée par Suétone, peut-être pour ridiculiser l'empereur.",
+  "options": [
+   "Caligula*",
+   "Néron",
+   "Auguste",
+   "Trajan"
+  ]
+ },
+ {
+  "key": "hist15-012",
+  "concept": "history.antiquity.v15_gergovie",
+  "label": "Gergovie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel chef gaulois a battu Jules César à Gergovie ?",
+  "explanation": "Une rare défaite de César, en 52 av. J.-C., quelques mois avant la reddition gauloise à Alésia.",
+  "options": [
+   "Vercingétorix*",
+   "Ambiorix",
+   "Brennus",
+   "Diviciacos"
+  ]
+ },
+ {
+  "key": "hist15-013",
+  "concept": "history.antiquity.v15_mur_hadrien",
+  "label": "Mur d'Hadrien",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'appelle le mur construit par les Romains au nord de l'Angleterre ?",
+  "explanation": "Long d'environ 117 km, il marquait la frontière nord de l'Empire face aux peuples de l'actuelle Écosse.",
+  "options": [
+   "Le mur d'Hadrien*",
+   "Le mur d'Auguste",
+   "Le mur de Néron",
+   "Le mur de Constantin"
+  ]
+ },
+ {
+  "key": "hist15-014",
+  "concept": "history.antiquity.v15_cuneiforme",
+  "label": "Écriture cunéiforme",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel peuple a inventé l'écriture cunéiforme ?",
+  "explanation": "En Mésopotamie, on écrivait en enfonçant un roseau taillé dans l'argile fraîche : d'où les traits en forme de clous.",
+  "options": [
+   "Les Sumériens*",
+   "Les Égyptiens",
+   "Les Grecs",
+   "Les Romains"
+  ]
+ },
+ {
+  "key": "hist15-015",
+  "concept": "history.antiquity.v15_pheniciens_alphabet",
+  "label": "L'alphabet phénicien",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel peuple vient l'alphabet dont descendent le grec et le latin ?",
+  "explanation": "Ces marins commerçants utilisaient une vingtaine de signes, un pour chaque son : bien plus simple que les hiéroglyphes.",
+  "options": [
+   "Les Phéniciens*",
+   "Les Égyptiens",
+   "Les Perses",
+   "Les Mayas"
+  ]
+ },
+ {
+  "key": "hist15-016",
+  "concept": "history.antiquity.v15_spqr",
+  "label": "SPQR",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que signifie « SPQR », la devise de Rome ?",
+  "explanation": "En latin : Senatus Populusque Romanus. On la voit encore aujourd'hui sur les plaques d'égout de Rome.",
+  "options": [
+   "Le Sénat et le peuple romain*",
+   "Seul le peuple romain règne",
+   "Sous la protection de Rome",
+   "Soldats pour la paix romaine"
+  ]
+ },
+ {
+  "key": "hist15-017",
+  "concept": "history.antiquity.v15_monuments_civilisations",
+  "label": "Monuments antiques",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque monument à la civilisation qui l'a bâti.",
+  "explanation": "Temple d'Athéna à Athènes, amphithéâtre à Rome, tombeaux de pharaons et tour à étages de Mésopotamie.",
+  "pairs": [
+   [
+    "Le Parthénon",
+    "Les Grecs"
+   ],
+   [
+    "Le Colisée",
+    "Les Romains"
+   ],
+   [
+    "Les pyramides de Gizeh",
+    "Les Égyptiens"
+   ],
+   [
+    "La ziggourat d'Ur",
+    "Les Sumériens"
+   ]
+  ]
+ },
+ {
+  "key": "hist15-018",
+  "concept": "history.antiquity.v15_grec_romain",
+  "label": "Grec ou Romain ?",
+  "type": "sort",
+  "difficulty": 40,
+  "prompt": "Grec ou Romain ?",
+  "explanation": "Les quatre premiers sont grecs : un homme d'État, un roi de Sparte, un philosophe et un poète. Les autres sont romains.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Grec"
+   },
+   {
+    "label": "Romain"
+   }
+  ],
+  "items": [
+   [
+    "Périclès",
+    0
+   ],
+   [
+    "Léonidas",
+    0
+   ],
+   [
+    "Socrate",
+    0
+   ],
+   [
+    "Homère",
+    0
+   ],
+   [
+    "Cicéron",
+    1
+   ],
+   [
+    "Néron",
+    1
+   ],
+   [
+    "Virgile",
+    1
+   ],
+   [
+    "Auguste",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "hist15-019",
+  "concept": "history.antiquity.v15_alexandre_inde",
+  "label": "Alexandre le Grand",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel roi de Macédoine a conquis un empire allant jusqu'à l'Inde ?",
+  "explanation": "Il est mort à 32 ans à Babylone, sans avoir jamais perdu une bataille.",
+  "options": [
+   "Alexandre le Grand*",
+   "Philippe II",
+   "Darius",
+   "Xerxès"
+  ]
+ },
+ {
+  "key": "hist15-020",
+  "concept": "history.antiquity.v15_spartacus",
+  "label": "Spartacus",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel esclave a mené la plus grande révolte contre Rome ?",
+  "explanation": "Ce gladiateur a réuni des dizaines de milliers d'esclaves et tenu tête aux légions pendant deux ans.",
+  "options": [
+   "Spartacus*",
+   "Vercingétorix",
+   "Hannibal",
+   "Brutus"
+  ]
+ },
+ {
+  "key": "hist15-021",
+  "concept": "history.antiquity.v15_ides_mars",
+  "label": "Les ides de mars",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a été assassiné aux ides de mars, en plein Sénat ?",
+  "explanation": "Poignardé par des sénateurs, dont Brutus, qu'il considérait presque comme un fils.",
+  "options": [
+   "Jules César*",
+   "Auguste",
+   "Néron",
+   "Caligula"
+  ]
+ },
+ {
+  "key": "hist15-022",
+  "concept": "history.antiquity.v15_chats_momies",
+  "label": "Chats momifiés",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Les Égyptiens momifiaient aussi des chats.",
+  "explanation": "Vrai : les chats étaient associés à la déesse Bastet. On a retrouvé des centaines de milliers de chats momifiés.",
+  "answer": true
+ },
+ {
+  "key": "hist15-023",
+  "concept": "history.antiquity.v15_carthage_caton",
+  "label": "Carthage",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle cité Caton répétait-il devoir être détruite ?",
+  "explanation": "« Carthago delenda est. » Rome a fini par raser sa grande rivale d'Afrique du Nord.",
+  "options": [
+   "Carthage*",
+   "Athènes",
+   "Troie",
+   "Sparte"
+  ]
+ },
+ {
+  "key": "hist15-024",
+  "concept": "history.antiquity.v15_louve_romulus",
+  "label": "La louve",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Selon la légende, quel animal a nourri Romulus et Rémus ?",
+  "explanation": "La louve allaitant les jumeaux est restée le symbole de Rome.",
+  "options": [
+   "Une louve*",
+   "Une ourse",
+   "Une chèvre",
+   "Une biche"
+  ]
+ },
+ {
+  "key": "hist15-025",
+  "concept": "history.antiquity.v15_salamine",
+  "label": "Salamine",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle bataille navale a vu les Grecs battre la flotte perse en 480 av. J.-C. ?",
+  "explanation": "Dans un détroit étroit, les trières grecques ont piégé la grande flotte de Xerxès.",
+  "options": [
+   "Salamine*",
+   "Actium",
+   "Lépante",
+   "Trafalgar"
+  ]
+ },
+ {
+  "key": "hist15-026",
+  "concept": "history.antiquity.v15_civilisations_ordre",
+  "label": "Civilisations antiques",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces civilisations de la plus ancienne à la plus récente.",
+  "explanation": "Sumer vers 3500 av. J.-C., l'Égypte unifiée vers 3100 av. J.-C., Périclès au Ve siècle av. J.-C., l'Empire romain à partir de 27 av. J.-C.",
+  "items": [
+   "Les cités de Sumer",
+   "L'Égypte des premiers pharaons",
+   "La Grèce de Périclès",
+   "L'Empire romain"
+  ]
+ },
+ {
+  "key": "hist15-027",
+  "concept": "history.antiquity.v15_constantinople",
+  "label": "Constantinople",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel empereur a fait de Constantinople la nouvelle capitale de l'Empire romain ?",
+  "explanation": "Il a rebaptisé l'ancienne Byzance de son propre nom. C'est aujourd'hui Istanbul.",
+  "options": [
+   "Constantin*",
+   "Justinien",
+   "Auguste",
+   "Néron"
+  ]
+ },
+ {
+  "key": "hist15-028",
+  "concept": "history.antiquity.v15_forum",
+  "label": "Le forum",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment s'appelait la grande place publique au cœur des villes romaines ?",
+  "explanation": "On y faisait du commerce, de la politique et de la justice. L'agora, c'est l'équivalent grec.",
+  "options": [
+   "Le forum*",
+   "L'agora",
+   "L'acropole",
+   "L'atrium"
+  ]
+ },
+ {
+  "key": "hist15-029",
+  "concept": "history.antiquity.v15_agora",
+  "label": "L'agora",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment s'appelait la place publique des cités grecques ?",
+  "explanation": "Lieu de marché et de débat : à Athènes, Socrate y discutait avec les passants.",
+  "options": [
+   "L'agora*",
+   "Le forum",
+   "Le gymnase",
+   "Le théâtre"
+  ]
+ },
+ {
+  "key": "hist15-030",
+  "concept": "history.antiquity.v15_jo_femmes",
+  "label": "Les femmes aux Jeux antiques",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les femmes pouvaient participer aux Jeux olympiques antiques.",
+  "explanation": "Faux : seuls les hommes concouraient. Les femmes mariées n'avaient même pas le droit d'y assister.",
+  "answer": false
+ },
+ {
+  "key": "hist15-031",
+  "concept": "history.antiquity.v15_hammurabi",
+  "label": "Hammurabi",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel roi de Babylone est célèbre pour ses lois gravées dans la pierre ?",
+  "explanation": "Son code, gravé sur une stèle de basalte, est exposé au Louvre. On y trouve « œil pour œil, dent pour dent ».",
+  "options": [
+   "Hammurabi*",
+   "Nabuchodonosor",
+   "Darius",
+   "Gilgamesh"
+  ]
+ },
+ {
+  "key": "hist15-032",
+  "concept": "history.antiquity.v15_acropole",
+  "label": "L'Acropole",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans quelle ville se trouve l'Acropole et son Parthénon ?",
+  "explanation": "Colline sacrée qui domine la ville, consacrée à la déesse Athéna.",
+  "options": [
+   "Athènes*",
+   "Rome",
+   "Sparte",
+   "Alexandrie"
+  ]
+ },
+ {
+  "key": "hist15-033",
+  "concept": "history.antiquity.v15_route_soie",
+  "label": "Route de la soie",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle route commerciale reliait la Chine à la Méditerranée ?",
+  "explanation": "Un réseau de pistes sur des milliers de kilomètres : soie, épices, idées et religions y circulaient.",
+  "options": [
+   "La route de la soie*",
+   "La voie Appienne",
+   "La route du sel",
+   "Le chemin de Compostelle"
+  ]
+ },
+ {
+  "key": "hist15-034",
+  "concept": "history.antiquity.v15_qin_terre_cuite",
+  "label": "L'armée de terre cuite",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel empereur chinois est enterré avec une armée de soldats en terre cuite ?",
+  "explanation": "Plus de 7 000 soldats, tous différents, découverts par hasard par des paysans en 1974.",
+  "options": [
+   "Qin Shi Huang*",
+   "Kubilai Khan",
+   "Puyi",
+   "Confucius"
+  ]
+ },
+ {
+  "key": "hist15-035",
+  "concept": "history.antiquity.v15_champollion",
+  "label": "Champollion",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a réussi le premier à déchiffrer les hiéroglyphes ?",
+  "explanation": "En 1822, grâce à la pierre de Rosette. Il se serait évanoui d'émotion en criant « Je tiens l'affaire ! ».",
+  "options": [
+   "Jean-François Champollion*",
+   "Howard Carter",
+   "Napoléon Bonaparte",
+   "Auguste Mariette"
+  ]
+ },
+ {
+  "key": "hist15-036",
+  "concept": "history.antiquity.v15_vesta",
+  "label": "Les vestales",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle était la mission des vestales à Rome ?",
+  "explanation": "Ces prêtresses devaient veiller à ce que le feu de la déesse Vesta ne s'éteigne jamais.",
+  "options": [
+   "Entretenir le feu sacré*",
+   "Garder le trésor",
+   "Soigner les blessés",
+   "Élever les enfants de l'empereur"
+  ]
+ },
+ {
+  "key": "hist15-037",
+  "concept": "history.middle_ages.v15_charlemagne_800",
+  "label": "Charlemagne empereur",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel roi des Francs a été couronné empereur à Rome en l'an 800 ?",
+  "explanation": "Couronné par le pape le jour de Noël, il règne sur une grande partie de l'Europe de l'Ouest.",
+  "options": [
+   "Charlemagne*",
+   "Clovis",
+   "Pépin le Bref",
+   "Hugues Capet"
+  ]
+ },
+ {
+  "key": "hist15-038",
+  "concept": "history.middle_ages.v15_clovis_reims",
+  "label": "Baptême de Clovis",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel roi des Francs s'est fait baptiser à Reims ?",
+  "explanation": "Par l'évêque Remi. Plus tard, presque tous les rois de France seront sacrés à Reims.",
+  "options": [
+   "Clovis*",
+   "Charlemagne",
+   "Dagobert",
+   "Hugues Capet"
+  ]
+ },
+ {
+  "key": "hist15-039",
+  "concept": "history.middle_ages.v15_charlemagne_ecole",
+  "label": "Charlemagne et l'école",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Charlemagne a inventé l'école.",
+  "explanation": "Faux : des écoles existaient bien avant lui. Il a surtout encouragé leur développement auprès des églises et des monastères.",
+  "answer": false
+ },
+ {
+  "key": "hist15-040",
+  "concept": "history.middle_ages.v15_peste_noire_tiers",
+  "label": "La peste noire",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle épidémie a tué environ un tiers des Européens au Moyen Âge ?",
+  "explanation": "Arrivée en 1347 par les navires marchands, elle a fait des dizaines de millions de morts en quelques années.",
+  "options": [
+   "La peste noire*",
+   "La grippe espagnole",
+   "Le choléra",
+   "La variole"
+  ]
+ },
+ {
+  "key": "hist15-041",
+  "concept": "history.middle_ages.v15_cent_ans_duree",
+  "label": "Guerre de Cent Ans",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de temps a vraiment duré la guerre de Cent Ans ?",
+  "explanation": "De 1337 à 1453, avec de longues trêves entre les combats.",
+  "options": [
+   "116 ans*",
+   "100 ans",
+   "99 ans",
+   "132 ans"
+  ]
+ },
+ {
+  "key": "hist15-042",
+  "concept": "history.middle_ages.v15_guillaume_1066",
+  "label": "Guillaume le Conquérant",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a mené les Normands à la conquête de l'Angleterre en 1066 ?",
+  "explanation": "Vainqueur à Hastings, ce duc de Normandie devient roi d'Angleterre.",
+  "options": [
+   "Guillaume le Conquérant*",
+   "Richard Cœur de Lion",
+   "Rollon",
+   "Charlemagne"
+  ]
+ },
+ {
+  "key": "hist15-043",
+  "concept": "history.middle_ages.v15_tapisserie_bayeux",
+  "label": "Tapisserie de Bayeux",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle broderie de près de 70 mètres raconte la conquête de l'Angleterre ?",
+  "explanation": "Une véritable bande dessinée du Moyen Âge, brodée de laine sur du lin.",
+  "options": [
+   "La tapisserie de Bayeux*",
+   "La Dame à la licorne",
+   "La tenture de l'Apocalypse",
+   "Les Gobelins"
+  ]
+ },
+ {
+  "key": "hist15-044",
+  "concept": "history.middle_ages.v15_jeanne_fin",
+  "label": "Mort de Jeanne d'Arc",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment est morte Jeanne d'Arc ?",
+  "explanation": "Capturée par les Bourguignons, livrée aux Anglais et jugée pour hérésie, elle meurt sur le bûcher à 19 ans.",
+  "options": [
+   "Brûlée vive à Rouen*",
+   "Tuée au combat à Orléans",
+   "Exécutée à Paris",
+   "De vieillesse à Domrémy"
+  ]
+ },
+ {
+  "key": "hist15-045",
+  "concept": "history.middle_ages.v15_leif_erikson",
+  "label": "Leif Erikson",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel Viking serait arrivé en Amérique vers l'an 1000, bien avant Colomb ?",
+  "explanation": "Des vestiges vikings ont été retrouvés à Terre-Neuve, au Canada. Erik le Rouge, son père, avait colonisé le Groenland.",
+  "options": [
+   "Leif Erikson*",
+   "Erik le Rouge",
+   "Ragnar Lodbrok",
+   "Harald à la Dent bleue"
+  ]
+ },
+ {
+  "key": "hist15-046",
+  "concept": "history.middle_ages.v15_marco_polo",
+  "label": "Marco Polo",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel marchand vénitien a raconté son voyage en Chine dans « Le Livre des merveilles » ?",
+  "explanation": "Il aurait passé 17 ans au service de l'empereur mongol Kubilai Khan.",
+  "options": [
+   "Marco Polo*",
+   "Christophe Colomb",
+   "Ibn Battuta",
+   "Vasco de Gama"
+  ]
+ },
+ {
+  "key": "hist15-047",
+  "concept": "history.middle_ages.v15_gengis_khan",
+  "label": "Gengis Khan",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel chef a fondé l'Empire mongol ?",
+  "explanation": "Son empire est devenu le plus grand empire d'un seul tenant de l'histoire, de la Chine à l'Europe de l'Est.",
+  "options": [
+   "Gengis Khan*",
+   "Attila",
+   "Tamerlan",
+   "Kubilai Khan"
+  ]
+ },
+ {
+  "key": "hist15-048",
+  "concept": "history.middle_ages.v15_croisades_jerusalem",
+  "label": "Les croisades",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle ville les croisés voulaient-ils prendre ?",
+  "explanation": "Ville sainte pour les chrétiens, les juifs et les musulmans, elle est prise par les croisés en 1099.",
+  "options": [
+   "Jérusalem*",
+   "Constantinople",
+   "Rome",
+   "Le Caire"
+  ]
+ },
+ {
+  "key": "hist15-049",
+  "concept": "history.middle_ages.v15_chute_constantinople",
+  "label": "Chute de Constantinople",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle ville prise par les Ottomans en 1453 marque la fin de l'Empire byzantin ?",
+  "explanation": "Le sultan Mehmed II en fait sa capitale. Elle deviendra Istanbul.",
+  "options": [
+   "Constantinople*",
+   "Jérusalem",
+   "Venise",
+   "Athènes"
+  ]
+ },
+ {
+  "key": "hist15-050",
+  "concept": "history.middle_ages.v15_dime",
+  "label": "La dîme",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment s'appelait l'impôt d'environ un dixième des récoltes versé à l'Église ?",
+  "explanation": "Le mot vient du latin decima, « dixième ».",
+  "options": [
+   "La dîme*",
+   "La gabelle",
+   "La taille",
+   "Le cens"
+  ]
+ },
+ {
+  "key": "hist15-051",
+  "concept": "history.middle_ages.v15_gabelle",
+  "label": "La gabelle",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sur quel produit portait l'impôt de la gabelle ?",
+  "explanation": "Le sel servait à conserver la nourriture : impossible de s'en passer. Cet impôt était détesté.",
+  "options": [
+   "Le sel*",
+   "Le blé",
+   "Le vin",
+   "Le bois"
+  ]
+ },
+ {
+  "key": "hist15-052",
+  "concept": "history.middle_ages.v15_templiers",
+  "label": "Les Templiers",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel ordre de moines-chevaliers le roi Philippe le Bel a-t-il fait arrêter ?",
+  "explanation": "Le roi, endetté auprès d'eux, les fait arrêter en 1307. Leur dernier grand maître meurt sur le bûcher.",
+  "options": [
+   "Les Templiers*",
+   "Les Hospitaliers",
+   "Les Chevaliers teutoniques",
+   "Les Jésuites"
+  ]
+ },
+ {
+  "key": "hist15-053",
+  "concept": "history.middle_ages.v15_terre_plate",
+  "label": "La Terre plate",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Au Moyen Âge, les savants pensaient que la Terre était plate.",
+  "explanation": "Faux : depuis l'Antiquité, les savants savaient que la Terre est ronde. Ce mythe a été inventé au XIXe siècle.",
+  "answer": false
+ },
+ {
+  "key": "hist15-054",
+  "concept": "history.middle_ages.v15_saint_louis",
+  "label": "Saint Louis",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel roi de France a été proclamé saint ?",
+  "explanation": "Mort en croisade à Tunis en 1270, il est canonisé moins de 30 ans plus tard.",
+  "options": [
+   "Louis IX*",
+   "Philippe Auguste",
+   "Louis XI",
+   "Charles VII"
+  ]
+ },
+ {
+  "key": "hist15-055",
+  "concept": "history.middle_ages.v15_gothique",
+  "label": "Le gothique",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel style se reconnaît à ses arcs brisés, ses voûtes très hautes et ses grands vitraux ?",
+  "explanation": "Notre-Dame de Paris, Chartres ou Reims : des cathédrales toujours plus hautes et plus lumineuses.",
+  "options": [
+   "Le gothique*",
+   "Le roman",
+   "Le baroque",
+   "Le classique"
+  ]
+ },
+ {
+  "key": "hist15-056",
+  "concept": "history.middle_ages.v15_magna_carta",
+  "label": "La Grande Charte",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel texte de 1215 a limité les pouvoirs du roi d'Angleterre ?",
+  "explanation": "Les barons l'imposent à Jean sans Terre. C'est l'un des textes fondateurs des libertés anglaises.",
+  "options": [
+   "La Magna Carta*",
+   "La Bulle d'or",
+   "L'édit de Nantes",
+   "Le Bill of Rights"
+  ]
+ },
+ {
+  "key": "hist15-057",
+  "concept": "history.middle_ages.v15_jean_sans_terre",
+  "label": "Jean sans Terre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel roi d'Angleterre était surnommé « sans Terre » ?",
+  "explanation": "Dernier fils d'Henri II, il n'avait reçu aucune terre à sa naissance, d'où son surnom.",
+  "options": [
+   "Jean*",
+   "Henri",
+   "Édouard",
+   "Richard"
+  ]
+ },
+ {
+  "key": "hist15-058",
+  "concept": "history.middle_ages.v15_surnoms_rois",
+  "label": "Surnoms de rois",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque surnom au roi de France qui le portait.",
+  "explanation": "Philippe le Bel, Saint Louis, Jean le Bon et Charles le Chauve, petit-fils de Charlemagne.",
+  "pairs": [
+   [
+    "Le Bel",
+    "Philippe IV"
+   ],
+   [
+    "Saint",
+    "Louis IX"
+   ],
+   [
+    "Le Bon",
+    "Jean II"
+   ],
+   [
+    "Le Chauve",
+    "Charles II"
+   ]
+  ]
+ },
+ {
+  "key": "hist15-059",
+  "concept": "history.middle_ages.v15_gutenberg",
+  "label": "Gutenberg",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle invention de Gutenberg a révolutionné l'Europe ?",
+  "explanation": "Vers 1450 : les livres ne sont plus copiés à la main, ils deviennent bien plus nombreux et moins chers.",
+  "options": [
+   "L'imprimerie à caractères mobiles*",
+   "Le papier",
+   "La boussole",
+   "La poudre"
+  ]
+ },
+ {
+  "key": "hist15-060",
+  "concept": "history.middle_ages.v15_armure_grue",
+  "label": "Armures et grues",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les chevaliers en armure devaient être hissés sur leur cheval avec une grue.",
+  "explanation": "Faux : une armure pesait 20 à 25 kg, bien répartis sur le corps. Un chevalier entraîné montait seul à cheval.",
+  "answer": false
+ },
+ {
+  "key": "hist15-061",
+  "concept": "history.middle_ages.v15_charles_martel",
+  "label": "Charles Martel",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Près de quelle ville Charles Martel a-t-il arrêté une armée omeyyade en 732 ?",
+  "explanation": "Une bataille restée célèbre en France, même si les historiens en discutent encore la portée.",
+  "options": [
+   "Poitiers*",
+   "Hastings",
+   "Orléans",
+   "Bouvines"
+  ]
+ },
+ {
+  "key": "hist15-062",
+  "concept": "history.middle_ages.v15_cordoue",
+  "label": "Cordoue",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle ville d'Al-Andalus abrite une grande mosquée aux centaines de colonnes ?",
+  "explanation": "Capitale d'un califat brillant, elle était l'une des plus grandes villes d'Europe vers l'an 1000.",
+  "options": [
+   "Cordoue*",
+   "Madrid",
+   "Barcelone",
+   "Lisbonne"
+  ]
+ },
+ {
+  "key": "hist15-063",
+  "concept": "history.middle_ages.v15_douves",
+  "label": "Les douves",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle le fossé, souvent rempli d'eau, autour d'un château fort ?",
+  "explanation": "Elles empêchaient les ennemis d'approcher des murailles ou d'y creuser des tunnels.",
+  "options": [
+   "Les douves*",
+   "Le donjon",
+   "La herse",
+   "Les mâchicoulis"
+  ]
+ },
+ {
+  "key": "hist15-064",
+  "concept": "history.middle_ages.v15_antiquite_moyen_age",
+  "label": "Antiquité ou Moyen Âge ?",
+  "type": "sort",
+  "difficulty": 35,
+  "prompt": "Antiquité ou Moyen Âge ?",
+  "explanation": "Le Moyen Âge commence avec la chute de l'Empire romain d'Occident, en 476.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Antiquité"
+   },
+   {
+    "label": "Moyen Âge"
+   }
+  ],
+  "items": [
+   [
+    "Jules César",
+    0
+   ],
+   [
+    "Cléopâtre",
+    0
+   ],
+   [
+    "Périclès",
+    0
+   ],
+   [
+    "Hannibal",
+    0
+   ],
+   [
+    "Charlemagne",
+    1
+   ],
+   [
+    "Jeanne d'Arc",
+    1
+   ],
+   [
+    "Gengis Khan",
+    1
+   ],
+   [
+    "Saint Louis",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "hist15-065",
+  "concept": "history.middle_ages.v15_boussole",
+  "label": "La boussole",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle invention chinoise a aidé les marins à s'orienter ?",
+  "explanation": "Une aiguille aimantée qui indique le nord, arrivée en Europe au Moyen Âge.",
+  "options": [
+   "La boussole*",
+   "Le sextant",
+   "Le gouvernail",
+   "Le télescope"
+  ]
+ },
+ {
+  "key": "hist15-066",
+  "concept": "history.middle_ages.v15_scriptorium",
+  "label": "Le scriptorium",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans un monastère, comment s'appelait la salle où les moines copiaient les livres à la main ?",
+  "explanation": "Copier une Bible entière pouvait prendre plus d'un an.",
+  "options": [
+   "Le scriptorium*",
+   "Le cloître",
+   "Le réfectoire",
+   "La sacristie"
+  ]
+ },
+ {
+  "key": "hist15-067",
+  "concept": "history.middle_ages.v15_urbain_ii",
+  "label": "Urbain II",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel pape a appelé à la première croisade ?",
+  "explanation": "En 1095, à Clermont, devant une foule immense.",
+  "options": [
+   "Urbain II*",
+   "Grégoire VII",
+   "Innocent III",
+   "Léon III"
+  ]
+ },
+ {
+  "key": "hist15-068",
+  "concept": "history.middle_ages.v15_jeanne_sainte",
+  "label": "Sainte Jeanne d'Arc",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Jeanne d'Arc a été proclamée sainte par l'Église.",
+  "explanation": "Vrai, en 1920, presque cinq siècles après sa mort. Elle est l'une des saintes patronnes de la France.",
+  "answer": true
+ },
+ {
+  "key": "hist15-069",
+  "concept": "history.middle_ages.v15_mansa_moussa",
+  "label": "Mansa Moussa",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel empire africain Mansa Moussa, souvent cité comme l'homme le plus riche de l'histoire, était-il le souverain ?",
+  "explanation": "Lors de son pèlerinage à La Mecque, il aurait distribué tant d'or que son prix a chuté en Égypte.",
+  "options": [
+   "L'empire du Mali*",
+   "L'Éthiopie",
+   "Le royaume zoulou",
+   "Carthage"
+  ]
+ },
+ {
+  "key": "hist15-070",
+  "concept": "history.middle_ages.v15_machu_picchu",
+  "label": "Machu Picchu",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel peuple a bâti la cité de Machu Picchu ?",
+  "explanation": "Perchée dans les Andes, au Pérou, elle n'a été révélée au monde qu'en 1911.",
+  "options": [
+   "Les Incas*",
+   "Les Aztèques",
+   "Les Mayas",
+   "Les Olmèques"
+  ]
+ },
+ {
+  "key": "hist15-071",
+  "concept": "history.middle_ages.v15_chevalerie_adoubement",
+  "label": "L'adoubement",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment s'appelait la cérémonie qui faisait d'un jeune homme un chevalier ?",
+  "explanation": "On lui remettait ses armes, et un coup du plat de l'épée sur l'épaule ou la nuque.",
+  "options": [
+   "L'adoubement*",
+   "Le sacre",
+   "L'hommage",
+   "La croisade"
+  ]
+ },
+ {
+  "key": "hist15-072",
+  "concept": "history.modern.v15_colomb_1492",
+  "label": "Christophe Colomb",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel navigateur a atteint l'Amérique en 1492 ?",
+  "explanation": "Il pensait arriver aux Indes : c'est pour cela qu'on a appelé « Indiens » les peuples d'Amérique.",
+  "options": [
+   "Christophe Colomb*",
+   "Magellan",
+   "Vasco de Gama",
+   "Jacques Cartier"
+  ]
+ },
+ {
+  "key": "hist15-073",
+  "concept": "history.modern.v15_premier_tour_monde",
+  "label": "Premier tour du monde",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle expédition a réalisé le premier tour du monde ?",
+  "explanation": "Partie en 1519 avec cinq navires, elle revient trois ans plus tard avec un seul.",
+  "options": [
+   "Celle de Magellan*",
+   "Celle de Christophe Colomb",
+   "Celle de Vasco de Gama",
+   "Celle de James Cook"
+  ]
+ },
+ {
+  "key": "hist15-074",
+  "concept": "history.modern.v15_magellan_retour",
+  "label": "Le retour de Magellan",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Magellan a terminé lui-même le premier tour du monde.",
+  "explanation": "Faux : il est tué aux Philippines en 1521. C'est Juan Sebastián Elcano qui ramène le dernier navire en Espagne.",
+  "answer": false
+ },
+ {
+  "key": "hist15-075",
+  "concept": "history.modern.v15_francois_leonard",
+  "label": "François Ier et Léonard",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel roi de France a fait venir Léonard de Vinci à Amboise ?",
+  "explanation": "Léonard y passe ses dernières années et y meurt en 1519. Il avait apporté la Joconde avec lui.",
+  "options": [
+   "François Ier*",
+   "Louis XII",
+   "Henri IV",
+   "Louis XIV"
+  ]
+ },
+ {
+  "key": "hist15-076",
+  "concept": "history.modern.v15_versailles",
+  "label": "Versailles",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel château Louis XIV a-t-il transformé pour y installer la cour ?",
+  "explanation": "L'ancien pavillon de chasse de Louis XIII devient le plus grand palais d'Europe.",
+  "options": [
+   "Versailles*",
+   "Chambord",
+   "Fontainebleau",
+   "Le Louvre"
+  ]
+ },
+ {
+  "key": "hist15-077",
+  "concept": "history.modern.v15_edit_nantes",
+  "label": "Édit de Nantes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel roi a signé l'édit de Nantes, qui accordait des droits aux protestants ?",
+  "explanation": "En 1598, pour mettre fin aux guerres de Religion.",
+  "options": [
+   "Henri IV*",
+   "Louis XIV",
+   "François Ier",
+   "Louis XIII"
+  ]
+ },
+ {
+  "key": "hist15-078",
+  "concept": "history.modern.v15_revocation_nantes",
+  "label": "Révocation de l'édit de Nantes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel roi a révoqué l'édit de Nantes ?",
+  "explanation": "En 1685 : des centaines de milliers de protestants quittent alors la France.",
+  "options": [
+   "Louis XIV*",
+   "Henri IV",
+   "Louis XV",
+   "Louis XVI"
+  ]
+ },
+ {
+  "key": "hist15-079",
+  "concept": "history.modern.v15_saint_barthelemy",
+  "label": "La Saint-Barthélemy",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel massacre de protestants a eu lieu à Paris en 1572 ?",
+  "explanation": "Des milliers de protestants sont tués, à Paris puis dans d'autres villes de France.",
+  "options": [
+   "La Saint-Barthélemy*",
+   "La Saint-Jean",
+   "Les Vêpres siciliennes",
+   "La Fronde"
+  ]
+ },
+ {
+  "key": "hist15-080",
+  "concept": "history.modern.v15_luther",
+  "label": "Martin Luther",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel moine allemand a lancé la Réforme protestante ?",
+  "explanation": "En 1517, il dénonce la vente des indulgences par l'Église.",
+  "options": [
+   "Martin Luther*",
+   "Jean Calvin",
+   "Érasme",
+   "Jan Hus"
+  ]
+ },
+ {
+  "key": "hist15-081",
+  "concept": "history.modern.v15_cortes",
+  "label": "Hernán Cortés",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel empire Hernán Cortés a-t-il conquis ?",
+  "explanation": "Avec quelques centaines d'Espagnols et de nombreux alliés locaux, il prend Tenochtitlan, l'actuelle Mexico.",
+  "options": [
+   "L'empire aztèque*",
+   "L'empire inca",
+   "L'empire maya",
+   "L'empire ottoman"
+  ]
+ },
+ {
+  "key": "hist15-082",
+  "concept": "history.modern.v15_pizarro",
+  "label": "Francisco Pizarro",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel conquistador a conquis l'empire inca ?",
+  "explanation": "Il capture l'empereur Atahualpa en 1532 et s'empare de son empire.",
+  "options": [
+   "Francisco Pizarro*",
+   "Hernán Cortés",
+   "Magellan",
+   "Amerigo Vespucci"
+  ]
+ },
+ {
+  "key": "hist15-083",
+  "concept": "history.modern.v15_vespucci",
+  "label": "Amerigo Vespucci",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quel navigateur le continent américain tient-il son nom ?",
+  "explanation": "Il a compris qu'il s'agissait d'un nouveau continent, et non des Indes.",
+  "options": [
+   "Amerigo Vespucci*",
+   "Christophe Colomb",
+   "Jacques Cartier",
+   "Pedro Álvares Cabral"
+  ]
+ },
+ {
+  "key": "hist15-084",
+  "concept": "history.modern.v15_jacques_cartier",
+  "label": "Jacques Cartier",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel explorateur français a remonté le Saint-Laurent, au Canada ?",
+  "explanation": "Le Malouin est envoyé par François Ier en 1534 chercher un passage vers l'Asie.",
+  "options": [
+   "Jacques Cartier*",
+   "Samuel de Champlain",
+   "La Fayette",
+   "Bougainville"
+  ]
+ },
+ {
+  "key": "hist15-085",
+  "concept": "history.modern.v15_champlain_quebec",
+  "label": "Samuel de Champlain",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle ville Samuel de Champlain a-t-il fondée en 1608 ?",
+  "explanation": "Elle devient la capitale de la Nouvelle-France.",
+  "options": [
+   "Québec*",
+   "Montréal",
+   "La Nouvelle-Orléans",
+   "Ottawa"
+  ]
+ },
+ {
+  "key": "hist15-086",
+  "concept": "history.modern.v15_louis_xiv_72",
+  "label": "Règne de Louis XIV",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Louis XIV a régné 72 ans, le plus long règne de l'histoire de France.",
+  "explanation": "Vrai : roi à 4 ans en 1643, il meurt en 1715. Sa mère, puis Mazarin, gouvernent pendant son enfance.",
+  "answer": true
+ },
+ {
+  "key": "hist15-087",
+  "concept": "history.modern.v15_colbert",
+  "label": "Colbert",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel ministre de Louis XIV a développé la marine et les manufactures ?",
+  "explanation": "Il crée notamment les Gobelins et la manufacture de glaces, qui fournira la galerie des Glaces.",
+  "options": [
+   "Colbert*",
+   "Mazarin",
+   "Richelieu",
+   "Fouquet"
+  ]
+ },
+ {
+  "key": "hist15-088",
+  "concept": "history.modern.v15_fouquet",
+  "label": "Fouquet",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel ministre fut arrêté peu après une fête trop fastueuse dans son château de Vaux-le-Vicomte ?",
+  "explanation": "Le jeune Louis XIV, jaloux de ce luxe, le fait arrêter par d'Artagnan en 1661.",
+  "options": [
+   "Nicolas Fouquet*",
+   "Colbert",
+   "Mazarin",
+   "Louvois"
+  ]
+ },
+ {
+  "key": "hist15-089",
+  "concept": "history.modern.v15_declaration_independance",
+  "label": "Indépendance américaine",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel texte de 1776 a proclamé la naissance des États-Unis ?",
+  "explanation": "Rédigée surtout par Thomas Jefferson, signée le 4 juillet, devenu la fête nationale américaine.",
+  "options": [
+   "La Déclaration d'indépendance*",
+   "La Constitution",
+   "Le traité de Versailles",
+   "La Magna Carta"
+  ]
+ },
+ {
+  "key": "hist15-090",
+  "concept": "history.modern.v15_la_fayette",
+  "label": "La Fayette",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel Français est allé aider les Américains dans leur guerre d'indépendance ?",
+  "explanation": "Parti à 19 ans, il devient général et ami de George Washington.",
+  "options": [
+   "La Fayette*",
+   "Robespierre",
+   "Talleyrand",
+   "Napoléon"
+  ]
+ },
+ {
+  "key": "hist15-091",
+  "concept": "history.modern.v15_bastille",
+  "label": "La Bastille",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle prison a été prise par les Parisiens le 14 juillet 1789 ?",
+  "explanation": "Elle ne comptait que sept prisonniers ce jour-là, mais elle symbolisait le pouvoir du roi.",
+  "options": [
+   "La Bastille*",
+   "La Conciergerie",
+   "Le Temple",
+   "La Santé"
+  ]
+ },
+ {
+  "key": "hist15-092",
+  "concept": "history.modern.v15_louis_xvi_guillotine",
+  "label": "Louis XVI",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel roi de France a été guillotiné en 1793 ?",
+  "explanation": "Jugé par la Convention sous le nom de « Louis Capet », il est exécuté le 21 janvier 1793.",
+  "options": [
+   "Louis XVI*",
+   "Louis XV",
+   "Louis XVIII",
+   "Charles X"
+  ]
+ },
+ {
+  "key": "hist15-093",
+  "concept": "history.modern.v15_marie_antoinette",
+  "label": "Marie-Antoinette",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle reine de France a été guillotinée en 1793 ?",
+  "explanation": "Née archiduchesse d'Autriche, elle est exécutée neuf mois après Louis XVI.",
+  "options": [
+   "Marie-Antoinette*",
+   "Catherine de Médicis",
+   "Anne d'Autriche",
+   "Joséphine"
+  ]
+ },
+ {
+  "key": "hist15-094",
+  "concept": "history.modern.v15_terreur",
+  "label": "La Terreur",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment appelle-t-on la période de la Révolution marquée par des milliers d'exécutions, en 1793-1794 ?",
+  "explanation": "Elle s'achève avec la chute et l'exécution de Robespierre, en juillet 1794.",
+  "options": [
+   "La Terreur*",
+   "La Restauration",
+   "Le Directoire",
+   "La Fronde"
+  ]
+ },
+ {
+  "key": "hist15-095",
+  "concept": "history.modern.v15_incorruptible",
+  "label": "L'Incorruptible",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel révolutionnaire était surnommé « l'Incorruptible » ?",
+  "explanation": "Avocat d'Arras, réputé intègre, il domine le Comité de salut public pendant la Terreur.",
+  "options": [
+   "Robespierre*",
+   "Danton",
+   "Marat",
+   "Mirabeau"
+  ]
+ },
+ {
+  "key": "hist15-096",
+  "concept": "history.modern.v15_marat_baignoire",
+  "label": "Mort de Marat",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel révolutionnaire a été assassiné dans sa baignoire ?",
+  "explanation": "Malade de la peau, il travaillait dans son bain. Le peintre David a immortalisé la scène.",
+  "options": [
+   "Marat*",
+   "Robespierre",
+   "Danton",
+   "Saint-Just"
+  ]
+ },
+ {
+  "key": "hist15-097",
+  "concept": "history.modern.v15_charlotte_corday",
+  "label": "Charlotte Corday",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a assassiné Marat en 1793 ?",
+  "explanation": "Une jeune Normande qui le jugeait responsable des violences. Elle est guillotinée quatre jours plus tard.",
+  "options": [
+   "Charlotte Corday*",
+   "Olympe de Gouges",
+   "Madame Roland",
+   "Théroigne de Méricourt"
+  ]
+ },
+ {
+  "key": "hist15-098",
+  "concept": "history.modern.v15_metre",
+  "label": "Le mètre",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle unité de mesure la Révolution française a-t-elle créée ?",
+  "explanation": "Défini à l'origine comme une fraction de la distance entre le pôle Nord et l'équateur.",
+  "options": [
+   "Le mètre*",
+   "Le pied",
+   "Le pouce",
+   "Le mile"
+  ]
+ },
+ {
+  "key": "hist15-099",
+  "concept": "history.modern.v15_sainte_helene",
+  "label": "Sainte-Hélène",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur quelle île Napoléon est-il mort en exil ?",
+  "explanation": "Une île perdue au milieu de l'Atlantique sud, où les Anglais l'envoient après Waterloo.",
+  "options": [
+   "Sainte-Hélène*",
+   "L'île d'Elbe",
+   "La Corse",
+   "Jersey"
+  ]
+ },
+ {
+  "key": "hist15-100",
+  "concept": "history.modern.v15_ile_elbe",
+  "label": "L'île d'Elbe",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sur quelle île Napoléon a-t-il été exilé une première fois, en 1814 ?",
+  "explanation": "Il s'en échappe moins d'un an plus tard pour reprendre le pouvoir : ce sont les Cent-Jours.",
+  "options": [
+   "L'île d'Elbe*",
+   "Sainte-Hélène",
+   "Malte",
+   "La Sardaigne"
+  ]
+ },
+ {
+  "key": "hist15-101",
+  "concept": "history.modern.v15_waterloo",
+  "label": "Waterloo",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle bataille de 1815 a marqué la défaite définitive de Napoléon ?",
+  "explanation": "En Belgique, face aux Anglais de Wellington et aux Prussiens de Blücher.",
+  "options": [
+   "Waterloo*",
+   "Austerlitz",
+   "Iéna",
+   "Trafalgar"
+  ]
+ },
+ {
+  "key": "hist15-102",
+  "concept": "history.modern.v15_austerlitz",
+  "label": "Austerlitz",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle victoire de 1805 est restée la plus célèbre de Napoléon ?",
+  "explanation": "La « bataille des Trois Empereurs », un an jour pour jour après son sacre.",
+  "options": [
+   "Austerlitz*",
+   "Waterloo",
+   "Trafalgar",
+   "Leipzig"
+  ]
+ },
+ {
+  "key": "hist15-103",
+  "concept": "history.modern.v15_napoleon_petit",
+  "label": "La taille de Napoléon",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Napoléon était particulièrement petit pour son époque.",
+  "explanation": "Faux : il mesurait environ 1,69 m, un peu plus que la moyenne des Français de son temps. La caricature anglaise a créé le mythe.",
+  "answer": false
+ },
+ {
+  "key": "hist15-104",
+  "concept": "history.modern.v15_evenements_modernes",
+  "label": "Du plus ancien au plus récent",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "explanation": "1492, 1598, 1789 et 1815.",
+  "items": [
+   "Christophe Colomb atteint l'Amérique",
+   "Henri IV signe l'édit de Nantes",
+   "Prise de la Bastille",
+   "Bataille de Waterloo"
+  ]
+ },
+ {
+  "key": "hist15-105",
+  "concept": "history.modern.v15_explorateurs",
+  "label": "Grands explorateurs",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque explorateur à ce qui l'a rendu célèbre.",
+  "explanation": "Colomb en 1492, Vasco de Gama en 1498, Cartier en 1534 et l'expédition de Magellan de 1519 à 1522.",
+  "pairs": [
+   [
+    "Christophe Colomb",
+    "L'arrivée en Amérique"
+   ],
+   [
+    "Vasco de Gama",
+    "La route maritime des Indes"
+   ],
+   [
+    "Jacques Cartier",
+    "Le fleuve Saint-Laurent"
+   ],
+   [
+    "Magellan",
+    "Le premier tour du monde"
+   ]
+  ]
+ },
+ {
+  "key": "hist15-106",
+  "concept": "history.modern.v15_code_civil",
+  "label": "Code civil",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel recueil de lois Napoléon a-t-il fait adopter en 1804 ?",
+  "explanation": "Il fixe les règles sur la famille, la propriété et les contrats. Il est toujours en vigueur, très modifié.",
+  "options": [
+   "Le Code civil*",
+   "La Déclaration des droits de l'homme",
+   "La Charte",
+   "Le Code de la route"
+  ]
+ },
+ {
+  "key": "hist15-107",
+  "concept": "history.contemporary.v15_sarajevo",
+  "label": "Attentat de Sarajevo",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel événement a déclenché la Première Guerre mondiale ?",
+  "explanation": "Le 28 juin 1914 à Sarajevo. Par le jeu des alliances, l'Europe entière entre en guerre en quelques semaines.",
+  "options": [
+   "L'assassinat de l'archiduc François-Ferdinand*",
+   "L'invasion de la Pologne",
+   "Le naufrage du Titanic",
+   "La révolution russe"
+  ]
+ },
+ {
+  "key": "hist15-108",
+  "concept": "history.contemporary.v15_verdun",
+  "label": "Verdun",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle bataille de 1916 est devenue le symbole de la Grande Guerre en France ?",
+  "explanation": "Dix mois de combats et plus de 300 000 morts, français et allemands.",
+  "options": [
+   "Verdun*",
+   "La Marne",
+   "Stalingrad",
+   "Waterloo"
+  ]
+ },
+ {
+  "key": "hist15-109",
+  "concept": "history.contemporary.v15_11_novembre",
+  "label": "Le 11 novembre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel jour commémore-t-on l'armistice de 1918 ?",
+  "explanation": "Signé à 5 heures du matin dans un wagon, en forêt de Compiègne ; il entre en vigueur à 11 heures.",
+  "options": [
+   "Le 11 novembre*",
+   "Le 8 mai",
+   "Le 14 juillet",
+   "Le 6 juin"
+  ]
+ },
+ {
+  "key": "hist15-110",
+  "concept": "history.contemporary.v15_8_mai",
+  "label": "Le 8 mai",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel jour commémore-t-on la victoire de 1945 en Europe ?",
+  "explanation": "L'Allemagne nazie capitule sans conditions le 8 mai 1945.",
+  "options": [
+   "Le 8 mai*",
+   "Le 11 novembre",
+   "Le 6 juin",
+   "Le 14 juillet"
+  ]
+ },
+ {
+  "key": "hist15-111",
+  "concept": "history.contemporary.v15_overlord",
+  "label": "Opération Overlord",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel était le nom de code du débarquement allié en Normandie ?",
+  "explanation": "Le 6 juin 1944, plus de 150 000 soldats débarquent sur les plages normandes.",
+  "options": [
+   "L'opération Overlord*",
+   "L'opération Barbarossa",
+   "L'opération Dynamo",
+   "L'opération Torch"
+  ]
+ },
+ {
+  "key": "hist15-112",
+  "concept": "history.contemporary.v15_appel_18_juin",
+  "label": "L'appel du 18 juin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Depuis quelle ville le général de Gaulle a-t-il lancé l'appel du 18 juin 1940 ?",
+  "explanation": "À la radio de la BBC, il appelle les Français à continuer le combat.",
+  "options": [
+   "Londres*",
+   "Alger",
+   "Bordeaux",
+   "Paris"
+  ]
+ },
+ {
+  "key": "hist15-113",
+  "concept": "history.contemporary.v15_titanic",
+  "label": "Le Titanic",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel paquebot réputé insubmersible a coulé lors de son premier voyage, en 1912 ?",
+  "explanation": "Il heurte un iceberg dans l'Atlantique Nord : plus de 1 500 morts.",
+  "options": [
+   "Le Titanic*",
+   "Le Lusitania",
+   "Le Queen Mary",
+   "Le Normandie"
+  ]
+ },
+ {
+  "key": "hist15-114",
+  "concept": "history.contemporary.v15_mur_berlin",
+  "label": "Le mur de Berlin",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel mur est tombé en 1989 ?",
+  "explanation": "Il séparait Berlin-Est et Berlin-Ouest depuis 1961. L'Allemagne est réunifiée l'année suivante.",
+  "options": [
+   "Le mur de Berlin*",
+   "La Grande Muraille",
+   "Le mur d'Hadrien",
+   "Le mur des Lamentations"
+  ]
+ },
+ {
+  "key": "hist15-115",
+  "concept": "history.contemporary.v15_aldrin",
+  "label": "Buzz Aldrin",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui est le deuxième homme à avoir marché sur la Lune ?",
+  "explanation": "Quelques minutes après Neil Armstrong, en juillet 1969. Michael Collins, lui, était resté en orbite.",
+  "options": [
+   "Buzz Aldrin*",
+   "Michael Collins",
+   "Youri Gagarine",
+   "John Glenn"
+  ]
+ },
+ {
+  "key": "hist15-116",
+  "concept": "history.contemporary.v15_watergate",
+  "label": "Le Watergate",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel président américain a démissionné après le scandale du Watergate ?",
+  "explanation": "En 1974 : c'est le seul président américain à avoir démissionné.",
+  "options": [
+   "Richard Nixon*",
+   "John F. Kennedy",
+   "Ronald Reagan",
+   "Bill Clinton"
+  ]
+ },
+ {
+  "key": "hist15-117",
+  "concept": "history.contemporary.v15_mandela_prison",
+  "label": "Mandela en prison",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien d'années Nelson Mandela a-t-il passées en prison ?",
+  "explanation": "Libéré en 1990, il devient en 1994 le premier président noir de l'Afrique du Sud.",
+  "options": [
+   "27 ans*",
+   "7 ans",
+   "15 ans",
+   "40 ans"
+  ]
+ },
+ {
+  "key": "hist15-118",
+  "concept": "history.contemporary.v15_rosa_parks",
+  "label": "Rosa Parks",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle femme a refusé de céder sa place à un passager blanc dans un bus, en 1955 ?",
+  "explanation": "Son arrestation à Montgomery déclenche un boycott des bus qui dure plus d'un an.",
+  "options": [
+   "Rosa Parks*",
+   "Angela Davis",
+   "Harriet Tubman",
+   "Michelle Obama"
+  ]
+ },
+ {
+  "key": "hist15-119",
+  "concept": "history.contemporary.v15_vote_femmes_1944",
+  "label": "Le vote des femmes",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les Françaises ont obtenu le droit de vote en 1944.",
+  "explanation": "Vrai : par une ordonnance du gouvernement provisoire. Elles votent pour la première fois en 1945.",
+  "answer": true
+ },
+ {
+  "key": "hist15-120",
+  "concept": "history.contemporary.v15_nouvelle_zelande_vote",
+  "label": "Premier vote des femmes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pays a été le premier à accorder le droit de vote aux femmes, en 1893 ?",
+  "explanation": "Grâce à une grande pétition menée par Kate Sheppard.",
+  "options": [
+   "La Nouvelle-Zélande*",
+   "Les États-Unis",
+   "La France",
+   "Le Royaume-Uni"
+  ]
+ },
+ {
+  "key": "hist15-121",
+  "concept": "history.contemporary.v15_crise_cuba",
+  "label": "Crise de Cuba",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle crise de 1962 a failli déclencher une guerre nucléaire ?",
+  "explanation": "L'URSS installe des missiles à Cuba ; après 13 jours de tension, elle accepte de les retirer.",
+  "options": [
+   "La crise des missiles de Cuba*",
+   "La crise de Suez",
+   "La guerre de Corée",
+   "Le blocus de Berlin"
+  ]
+ },
+ {
+  "key": "hist15-122",
+  "concept": "history.contemporary.v15_guerre_froide",
+  "label": "Guerre froide",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on l'opposition entre les États-Unis et l'URSS après 1945 ?",
+  "explanation": "« Froide » car les deux puissances ne se sont jamais affrontées directement.",
+  "options": [
+   "La guerre froide*",
+   "La guerre éclair",
+   "La guerre de position",
+   "La drôle de guerre"
+  ]
+ },
+ {
+  "key": "hist15-123",
+  "concept": "history.contemporary.v15_revolution_octobre",
+  "label": "Révolution d'Octobre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment s'appelle la révolution de 1917 qui porte les bolcheviks au pouvoir en Russie ?",
+  "explanation": "Elle a lieu en novembre de notre calendrier : la Russie utilisait encore l'ancien calendrier julien.",
+  "options": [
+   "La révolution d'Octobre*",
+   "La révolution des Œillets",
+   "La révolution de Velours",
+   "La révolution culturelle"
+  ]
+ },
+ {
+  "key": "hist15-124",
+  "concept": "history.contemporary.v15_lenine",
+  "label": "Lénine",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a dirigé la révolution bolchevique de 1917 ?",
+  "explanation": "Il fonde l'État soviétique et le dirige jusqu'à sa mort, en 1924.",
+  "options": [
+   "Lénine*",
+   "Staline",
+   "Khrouchtchev",
+   "Gorbatchev"
+  ]
+ },
+ {
+  "key": "hist15-125",
+  "concept": "history.contemporary.v15_gorbatchev",
+  "label": "Gorbatchev",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel dirigeant soviétique a lancé la « perestroïka » ?",
+  "explanation": "La « restructuration » de l'économie, avec la glasnost, la transparence. L'URSS disparaît en 1991.",
+  "options": [
+   "Mikhaïl Gorbatchev*",
+   "Joseph Staline",
+   "Leonid Brejnev",
+   "Boris Eltsine"
+  ]
+ },
+ {
+  "key": "hist15-126",
+  "concept": "history.contemporary.v15_hiroshima",
+  "label": "Hiroshima",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle ville a été la première frappée par une bombe atomique ?",
+  "explanation": "Le 6 août 1945. Nagasaki est frappée trois jours plus tard.",
+  "options": [
+   "Hiroshima*",
+   "Nagasaki",
+   "Tokyo",
+   "Kyoto"
+  ]
+ },
+ {
+  "key": "hist15-127",
+  "concept": "history.contemporary.v15_onu",
+  "label": "L'ONU",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle organisation a été créée en 1945 pour maintenir la paix dans le monde ?",
+  "explanation": "Elle remplace la Société des Nations, qui n'avait pas empêché la Seconde Guerre mondiale.",
+  "options": [
+   "L'ONU*",
+   "L'OTAN",
+   "L'Union européenne",
+   "La Croix-Rouge"
+  ]
+ },
+ {
+  "key": "hist15-128",
+  "concept": "history.contemporary.v15_gandhi",
+  "label": "Gandhi",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel pays Gandhi a-t-il mené vers l'indépendance par la non-violence ?",
+  "explanation": "L'Inde devient indépendante en 1947. Gandhi est assassiné l'année suivante.",
+  "options": [
+   "L'Inde*",
+   "Le Pakistan",
+   "L'Afrique du Sud",
+   "Le Népal"
+  ]
+ },
+ {
+  "key": "hist15-129",
+  "concept": "history.contemporary.v15_traite_versailles",
+  "label": "Traité de Versailles",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel traité a mis fin à la Première Guerre mondiale avec l'Allemagne ?",
+  "explanation": "Signé en 1919 dans la galerie des Glaces, il impose de lourdes conditions à l'Allemagne.",
+  "options": [
+   "Le traité de Versailles*",
+   "Le traité de Rome",
+   "Le traité de Maastricht",
+   "Le traité de Vienne"
+  ]
+ },
+ {
+  "key": "hist15-130",
+  "concept": "history.contemporary.v15_mai_68",
+  "label": "Mai 68",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel mouvement étudiant et ouvrier a secoué la France au printemps 1968 ?",
+  "explanation": "Barricades, grève générale de millions de travailleurs et slogans restés célèbres.",
+  "options": [
+   "Mai 68*",
+   "Le Front populaire",
+   "La Commune",
+   "La Fronde"
+  ]
+ },
+ {
+  "key": "hist15-131",
+  "concept": "history.contemporary.v15_conges_payes",
+  "label": "Congés payés",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel gouvernement a créé les premiers congés payés en France, en 1936 ?",
+  "explanation": "Deux semaines par an : pour beaucoup d'ouvriers, ce sont les premières vacances, et parfois la première fois à la mer.",
+  "options": [
+   "Le Front populaire*",
+   "Le Second Empire",
+   "Le gouvernement de Vichy",
+   "Le Directoire"
+  ]
+ },
+ {
+  "key": "hist15-132",
+  "concept": "history.contemporary.v15_commune_paris",
+  "label": "Commune de Paris",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle insurrection parisienne de 1871 a duré 72 jours ?",
+  "explanation": "Elle s'achève dans la répression de la « Semaine sanglante ».",
+  "options": [
+   "La Commune de Paris*",
+   "La Fronde",
+   "Les Trois Glorieuses",
+   "Mai 68"
+  ]
+ },
+ {
+  "key": "hist15-133",
+  "concept": "history.contemporary.v15_evenements_xxe",
+  "label": "Du plus ancien au plus récent",
+  "type": "ordering",
+  "difficulty": 35,
+  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "explanation": "1917, 1929, 1944 et 1989.",
+  "items": [
+   "La révolution russe",
+   "Le krach de Wall Street",
+   "Le débarquement en Normandie",
+   "La chute du mur de Berlin"
+  ]
+ },
+ {
+  "key": "hist15-134",
+  "concept": "history.contemporary.v15_dirigeants_39_45",
+  "label": "Dirigeants de 39-45",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque dirigeant de la Seconde Guerre mondiale à son pays.",
+  "explanation": "Les trois premiers étaient alliés contre l'Allemagne ; Mussolini était l'allié d'Hitler.",
+  "pairs": [
+   [
+    "Winston Churchill",
+    "Le Royaume-Uni"
+   ],
+   [
+    "Franklin Roosevelt",
+    "Les États-Unis"
+   ],
+   [
+    "Joseph Staline",
+    "L'URSS"
+   ],
+   [
+    "Benito Mussolini",
+    "L'Italie"
+   ]
+  ]
+ },
+ {
+  "key": "hist15-135",
+  "concept": "history.contemporary.v15_premiere_seconde",
+  "label": "Première ou Seconde Guerre ?",
+  "type": "sort",
+  "difficulty": 40,
+  "prompt": "Première ou Seconde Guerre mondiale ?",
+  "explanation": "La Première de 1914 à 1918, la Seconde de 1939 à 1945.",
+  "layout": "bins",
+  "groups": [
+   {
+    "label": "Première"
+   },
+   {
+    "label": "Seconde"
+   }
+  ],
+  "items": [
+   [
+    "Verdun",
+    0
+   ],
+   [
+    "Les tranchées",
+    0
+   ],
+   [
+    "Le Chemin des Dames",
+    0
+   ],
+   [
+    "L'attentat de Sarajevo",
+    0
+   ],
+   [
+    "Stalingrad",
+    1
+   ],
+   [
+    "Pearl Harbor",
+    1
+   ],
+   [
+    "L'appel du 18 juin",
+    1
+   ],
+   [
+    "Le débarquement en Normandie",
+    1
+   ]
+  ]
+ },
+ {
+  "key": "hist15-136",
+  "concept": "history.contemporary.v15_der_des_ders",
+  "label": "La der des ders",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "On surnommait la Première Guerre mondiale « la der des ders ».",
+  "explanation": "Vrai : « la dernière des dernières ». On espérait qu'elle serait la dernière guerre… 21 ans plus tard commençait la Seconde.",
+  "answer": true
+ },
+ {
+  "key": "hist15-137",
+  "concept": "history.contemporary.v15_laika",
+  "label": "Laïka",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment s'appelait la chienne soviétique envoyée en orbite en 1957 ?",
+  "explanation": "Premier animal envoyé en orbite autour de la Terre, à bord de Spoutnik 2. Elle n'est pas revenue.",
+  "options": [
+   "Laïka*",
+   "Belka",
+   "Strelka",
+   "Lassie"
+  ]
+ },
+ {
+  "key": "hist15-138",
+  "concept": "history.contemporary.v15_spoutnik",
+  "label": "Spoutnik",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel pays a lancé le premier satellite artificiel, Spoutnik ?",
+  "explanation": "En 1957 : son « bip-bip » capté partout dans le monde lance la course à l'espace.",
+  "options": [
+   "L'URSS*",
+   "Les États-Unis",
+   "La Chine",
+   "La France"
+  ]
+ },
+ {
+  "key": "hist15-139",
+  "concept": "history.antiquity.v15_pyramides_esclaves",
+  "label": "Bâtisseurs des pyramides",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les pyramides d'Égypte ont été construites par des esclaves.",
+  "explanation": "Faux selon les archéologues : des ouvriers payés et nourris, logés près des chantiers. On a même retrouvé leurs tombes.",
+  "answer": false
+ },
+ {
+  "key": "hist15-140",
+  "concept": "history.antiquity.v15_marathon",
+  "label": "Origine du marathon",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "D'où vient le nom de la course du marathon ?",
+  "explanation": "Selon la légende, un messager aurait couru de Marathon à Athènes pour annoncer la victoire, avant de mourir d'épuisement.",
+  "options": [
+   "D'une bataille contre les Perses*",
+   "D'un dieu grec",
+   "D'un roi de Sparte",
+   "D'une ville romaine"
+  ]
+ },
+ {
+  "key": "hist15-141",
+  "concept": "history.middle_ages.v15_bouvines",
+  "label": "Bouvines",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel roi de France a remporté la bataille de Bouvines, en 1214 ?",
+  "explanation": "Il bat une coalition menée par l'empereur germanique, ce qui renforce beaucoup le pouvoir royal.",
+  "options": [
+   "Philippe Auguste*",
+   "Saint Louis",
+   "Philippe le Bel",
+   "Louis VI"
+  ]
+ },
+ {
+  "key": "hist15-142",
+  "concept": "history.middle_ages.v15_hugues_capet",
+  "label": "Hugues Capet",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle dynastie de rois de France commence avec Hugues Capet, en 987 ?",
+  "explanation": "Ses descendants, directs ou par des branches cousines, régneront jusqu'à la Révolution.",
+  "options": [
+   "Les Capétiens*",
+   "Les Carolingiens",
+   "Les Mérovingiens",
+   "Les Romanov"
+  ]
+ },
+ {
+  "key": "hist15-143",
+  "concept": "history.modern.v15_mazarin",
+  "label": "Mazarin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel cardinal d'origine italienne a gouverné la France pendant l'enfance de Louis XIV ?",
+  "explanation": "Avec la reine mère Anne d'Autriche, il affronte la révolte de la Fronde.",
+  "options": [
+   "Mazarin*",
+   "Richelieu",
+   "Colbert",
+   "Fouquet"
+  ]
+ },
+ {
+  "key": "hist15-144",
+  "concept": "history.modern.v15_fronde",
+  "label": "La Fronde",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelle la révolte des nobles et du Parlement pendant l'enfance de Louis XIV ?",
+  "explanation": "Le jeune roi doit fuir Paris en pleine nuit : un souvenir qui compte dans son choix de s'installer plus tard à Versailles.",
+  "options": [
+   "La Fronde*",
+   "La Jacquerie",
+   "La Ligue",
+   "La Terreur"
+  ]
+ },
+ {
+  "key": "hist15-145",
+  "concept": "history.modern.v15_guillotine_inventeur",
+  "label": "La guillotine",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "La guillotine a été inventée par le docteur Guillotin.",
+  "explanation": "Faux : il a proposé qu'on exécute tout le monde de la même façon, sans souffrance. La machine a été mise au point par le chirurgien Antoine Louis.",
+  "answer": false
+ },
+ {
+  "key": "hist15-146",
+  "concept": "history.contemporary.v15_suffragettes",
+  "label": "Suffragettes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment appelait-on les militantes britanniques qui réclamaient le droit de vote des femmes ?",
+  "explanation": "Au début du XXe siècle, elles manifestent, s'enchaînent aux grilles et font des grèves de la faim.",
+  "options": [
+   "Les suffragettes*",
+   "Les précieuses",
+   "Les garçonnes",
+   "Les amazones"
+  ]
+ },
+ {
+  "key": "hist15-147",
+  "concept": "history.contemporary.v15_pearl_harbor",
+  "label": "Pearl Harbor",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle attaque japonaise de 1941 a fait entrer les États-Unis dans la Seconde Guerre mondiale ?",
+  "explanation": "Le 7 décembre 1941, l'aviation japonaise frappe la flotte américaine à Hawaï.",
+  "options": [
+   "Pearl Harbor*",
+   "Midway",
+   "Okinawa",
+   "Iwo Jima"
+  ]
+ },
+ {
+  "key": "hist15-148",
+  "concept": "history.contemporary.v15_plan_marshall",
+  "label": "Plan Marshall",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle l'aide américaine à la reconstruction de l'Europe après 1945 ?",
+  "explanation": "Plus de 13 milliards de dollars versés de 1948 à 1952.",
+  "options": [
+   "Le plan Marshall*",
+   "Le New Deal",
+   "Le pacte de Varsovie",
+   "Le plan Schuman"
+  ]
+ },
+ {
+  "key": "hist15-149",
+  "concept": "history.contemporary.v15_fin_urss",
+  "label": "Fin de l'URSS",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel État a officiellement disparu le 26 décembre 1991 ?",
+  "explanation": "La veille, Gorbatchev avait démissionné. Quinze pays indépendants naissent, dont la Russie et l'Ukraine.",
+  "options": [
+   "L'URSS*",
+   "La Tchécoslovaquie",
+   "L'Allemagne de l'Est",
+   "L'Autriche-Hongrie"
+  ]
+ },
+ {
+  "key": "hist15-150",
+  "concept": "history.contemporary.v15_front_populaire_blum",
+  "label": "Léon Blum",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui dirigeait le gouvernement du Front populaire, en 1936 ?",
+  "explanation": "Premier président du Conseil socialiste, il fait voter les congés payés et la semaine de 40 heures.",
+  "options": [
+   "Léon Blum*",
+   "Jean Jaurès",
+   "Georges Clemenceau",
+   "Charles de Gaulle"
+  ]
+ }
+]

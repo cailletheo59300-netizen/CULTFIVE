@@ -27,7 +27,8 @@ struct CenturyAnswerView: View {
     private var correct: Int? {
         guard let reveal = phase.revealed?.reveal else { return nil }
         if let century = reveal.answer.century { return century }
-        return question.payload.options?.first { $0.id == reveal.answer.optionId }.flatMap { Century.parse($0.text) }
+        let text = question.payload.options?.first { $0.id == reveal.answer.optionId }?.text
+        return text.flatMap { Century.parse($0) }
     }
 
     /// Départ au milieu de la frise : il ne doit rien laisser deviner.
