@@ -30,6 +30,11 @@ struct DailyHomeView: View {
                     }
                     StreakRescueOffer()
                     rendezVous
+                    // 5 du jour fait : on montre qu'il y a bien plus à jouer (D-089).
+                    if app.daily?.state == .done {
+                        PlayMoreCard { app.tab = .play }
+                            .transition(.opacity)
+                    }
                     ChestsReadyRow()
                     // Le pass, puis les défis (jour, semaine, saison) qui le font monter.
                     SeasonPassBar(store: AlbumStore.shared) {
@@ -270,7 +275,7 @@ struct DailyHomeView: View {
         let hello = hour >= 18 || hour < 5 ? "Bonsoir" : "Coucou"
         let name = app.profile.map { " \($0.handle)" } ?? ""
         switch app.daily?.state {
-        case .done: return "Bravo\(name) ! On se retrouve demain."
+        case .done: return "Bravo\(name) ! On se retrouve demain pour un nouveau \(Brand.dailyName)."
         case .inProgress: return "Tu t'es arrêté en route. On finit ?"
         case .available: return "\(hello)\(name) ! Ton 5 du jour t'attend."
         case nil: return "\(hello)\(name) !"
@@ -341,5 +346,59 @@ struct EditorialRow: View {
         }
         .popCard(padding: 14)
         .accessibilityElement(children: .combine)
+    }
+}
+
+/// Après le 5 du jour (D-089) : « Envie d'en faire plus ? », les modes de Jouer et un gros bouton vers l'onglet.
+struct PlayMoreCard: View {
+    let onPlay: () -> Void
+
+    @Environment(AppModel.self) private var app
+    @State private var survivalRecord: Int?
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Space.m) {
+            HStack(alignment: .top, spacing: Space.m) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Envie d'en faire plus ?")
+                        .font(.system(.title3, design: .rounded).weight(.black))
+                        .foregroundStyle(Color.ink)
+                    Text("Le \(Brand.dailyName) n'est que le début : joue autant que tu veux.")
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+                Image(systemName: "gamecontroller.fill")
+                    .font(.system(.title2, design: .rounded).weight(.bold))
+                    .foregroundStyle(Color.brand)
+                    .frame(width: 52, height: 52)
+                    .background(Color.brand.opacity(0.14), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            }
+            HStack(spacing: 8) {
+                mode("chart.line.uptrend.xyaxis", "Parties classées", Color.brand)
+                mode("flame.fill", survivalRecord.map { $0 > 0 ? "Survie · record \($0)" : "Survie" } ?? "Survie", Color(hex: 0xE8452C))
+                mode("person.2.fill", "Défis", Color(hex: 0x12B76A))
+            }
+            Button {
+                Haptics.selection()
+                onPlay()
+            } label: {
+                Label("Jouer maintenant", systemImage: "play.fill")
+            }
+            .buttonStyle(.ink)
+        }
+        .popCard()
+        .task {
+            if let overview = try? await app.service.survivalOverview(domain: nil) { survivalRecord = overview.record }
+        }
+    }
+
+    private func mode(_ symbol: String, _ title: String, _ tint: Color) -> some View {
+        Label(title, systemImage: symbol)
+            .font(.system(.caption, design: .rounded).weight(.heavy))
+            .foregroundStyle(tint)
+            .lineLimit(1).minimumScaleFactor(0.75)
+            .padding(.horizontal, 10).padding(.vertical, 6)
+            .background(tint.opacity(0.12), in: Capsule())
     }
 }

@@ -224,11 +224,19 @@ struct DailyResultView: View {
 
     private var actions: some View {
         VStack(spacing: Space.s) {
+            // Le 5 du jour fini, on enchaîne : direction l'onglet Jouer (D-089).
+            Button {
+                app.tab = .play
+                onClose()
+            } label: {
+                Label("Continuer à jouer", systemImage: "play.fill")
+            }
+            .buttonStyle(.sun)
             Button(action: onShare) { Label("Partager mon résultat", systemImage: "square.and.arrow.up") }
-                .buttonStyle(.sun)
+                .buttonStyle(.inverted)
             HStack(spacing: Space.l) {
                 Button("Revoir mes réponses", action: onReview).buttonStyle(TextLinkStyle(color: white))
-                Button("Continuer", action: onClose).buttonStyle(TextLinkStyle(color: white.opacity(0.75)))
+                Button("Fermer", action: onClose).buttonStyle(TextLinkStyle(color: white.opacity(0.75)))
             }
             .frame(maxWidth: .infinity)
         }
