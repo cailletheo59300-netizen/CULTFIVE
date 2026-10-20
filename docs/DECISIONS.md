@@ -300,3 +300,6 @@ Pourquoi : compte AppLovin validé (propriétaire, 21/10) ; plus de régies en c
 
 ### D-093 · 2026-10-21 · Double appui sur « Question suivante »
 Pourquoi : en Survie (TestFlight 1.4), un double appui sur « Question suivante » demandait la question deux fois ; l'app se décalait d'une position et le serveur refusait ensuite chaque réponse (`survival_not_served`, 15 fois), d'où un chargement sans fin. Même risque en défi et en ligue (une question sautée). Décidé (app 1.4) : passage à la question suivante protégé contre le double appui (Survie, défis, ligues ; le 5 du jour l'était déjà) ; en Survie, la position vient du serveur, et une partie close ou une réponse hors de propos mène au bilan au lieu de réessayer sans fin.
+
+### D-094 · 2026-10-21 · Classement du 5 du jour : seulement les joueurs du jour
+Pourquoi : sans les mentions « hier » (que le propriétaire ne veut pas), mettre les joueurs du jour devant ceux des jours précédents donnait des rangs incohérents (un 5/5 d'hier derrière un 1/5 du jour). Décidé (0084, app 1.4 ; remplace le complément par les jours précédents de D-091) : le classement et le podium ne comptent **que les joueurs du jour** (le joueur qui regarde garde sa ligne) ; plus aucune date affichée. Le matin, le podium peut avoir moins de 3 marches ; un seul joueur : « 1er pour l'instant ».

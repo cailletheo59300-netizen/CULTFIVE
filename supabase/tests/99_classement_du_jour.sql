@@ -7,6 +7,7 @@ declare
   r jsonb;
   v_before int;
 begin
+  perform tst.clock('2027-04-12 12:00:00+02');
   perform tst.login(me);
   v_before := (public.daily_leaderboard() ->> 'participants')::int;
   for i in 1 .. 7 loop
@@ -14,8 +15,8 @@ begin
     -- Une vieille partie ratée, puis la dernière (celle qui compte), à des dates différentes selon les joueurs.
     insert into public.daily_runs (user_id, daily_date, status, started_at, deadline_at, finished_at, score, total_ms, streak_after)
     values (u, date '2027-03-20' + i, 'finished', '2027-03-20 08:00+00', '2027-03-20 09:00+00', '2027-03-20 08:05+00', 0, 90000, 1),
-           (u, date '2027-04-01' + i, 'finished', '2027-04-01 08:00+00', '2027-04-01 09:00+00',
-            '2027-04-01 08:05+00'::timestamptz + i * interval '1 minute', case when i <= 3 then 5 else 2 end, 30000 + i * 1000, i);
+           (u, date '2027-04-12', 'finished', '2027-04-12 08:00+00', '2027-04-12 09:00+00',
+            '2027-04-12 08:05+00'::timestamptz + i * interval '1 minute', case when i <= 3 then 5 else 2 end, 30000 + i * 1000, i);
   end loop;
   insert into public.daily_runs (user_id, daily_date, status, started_at, deadline_at, finished_at, score, total_ms, streak_after)
   values (me, '2027-04-12', 'finished', '2027-04-12 08:00+00', '2027-04-12 09:00+00', '2027-04-12 08:30+00', 4, 40000, 3);
@@ -46,8 +47,7 @@ begin
   perform tst.throws('select public.domain_leaderboard(''nope'')', 'invalid_domain');
 end $$;
 
--- 0083 : podium du jour — les joueurs d'aujourd'hui passent devant, même avec un moins bon score ; les autres suivent
--- avec l'ancienneté de leur partie.
+-- 0083 : ancienneté de la partie envoyée à l'app (0 = aujourd'hui).
 do $$
 declare
   me uuid := tst.new_user();
@@ -59,10 +59,18 @@ begin
   values (old, '2027-05-09', 'finished', '2027-05-09 08:00+00', '2027-05-09 09:00+00', '2027-05-09 08:01+00', 5, 20000, 4),
          (me, '2027-05-10', 'finished', '2027-05-10 08:00+00', '2027-05-10 09:00+00', '2027-05-10 08:05+00', 2, 60000, 1);
   perform tst.login(me);
-  perform tst.ok((select rank from public._daily_ranks(me) where user_id = me)
-                 < (select rank from public._daily_ranks(me) where user_id = old), 'joueur du jour devant un 5/5 d''hier');
-  perform tst.ok((select ago from public._daily_ranks(me) where user_id = old) = 1
-                 and (select ago from public._daily_ranks(me) where user_id = me) = 0, 'ancienneté : hier = 1, aujourd''hui = 0');
   r := public.daily_leaderboard();
   perform tst.ok((r -> 'rows') @> '[{"me": true, "ago": 0}]', 'ancienneté envoyée à l''app');
+end $$;
+
+-- 0084 : seulement les joueurs du jour (le joueur qui regarde garde sa ligne).
+do $$
+declare me uuid := tst.new_user(); old uuid := tst.new_user();
+begin
+  perform tst.clock('2027-06-10 12:00:00+02');
+  insert into public.daily_runs (user_id, daily_date, status, started_at, deadline_at, finished_at, score, total_ms, streak_after)
+  values (old, '2027-06-09', 'finished', '2027-06-09 08:00+00', '2027-06-09 09:00+00', '2027-06-09 08:01+00', 5, 20000, 4),
+         (me, '2027-06-10', 'finished', '2027-06-10 08:00+00', '2027-06-10 09:00+00', '2027-06-10 08:05+00', 2, 60000, 1);
+  perform tst.ok(not exists (select 1 from public._daily_ranks(me) where user_id = old), 'joueur d''hier hors du classement du jour');
+  perform tst.ok(exists (select 1 from public._daily_ranks(me) where user_id = me), 'ma ligne');
 end $$;

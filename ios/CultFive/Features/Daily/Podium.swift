@@ -192,11 +192,6 @@ private struct PodiumColumn: View {
                 .font(.system(.subheadline, design: .rounded).weight(.black))
                 .foregroundStyle(entry.me ? Color.sun : empty ? style.soft : style.text)
                 .lineLimit(1).minimumScaleFactor(0.7)
-            if let ago = entry.ago, ago > 0 {
-                Text(ago == 1 ? "hier" : "avant-hier")
-                    .font(.system(.caption2, design: .rounded).weight(.heavy))
-                    .foregroundStyle(style.soft)
-            }
             if empty {
                 Text("Joue pour la prendre !")
                     .font(.system(.caption2, design: .rounded).weight(.bold))
@@ -309,14 +304,6 @@ struct RankRow: View {
                         .font(.system(.callout, design: .rounded).weight(.black))
                         .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
                         .lineLimit(1)
-                    // Partie d'un jour précédent (D-091) : l'ancienneté en petit.
-                    if let ago = entry.ago, ago > 0 {
-                        Text(ago == 1 ? "hier" : "avant-hier")
-                            .font(.system(.caption2, design: .rounded).weight(.heavy))
-                            .foregroundStyle(entry.me ? Color(hex: 0x1E1340).opacity(0.65) : style.soft)
-                            .padding(.horizontal, 6).padding(.vertical, 1)
-                            .background((entry.me ? Color(hex: 0x1E1340) : style.text).opacity(0.1), in: Capsule())
-                    }
                 }
                 if let streak = entry.streak, streak > 0 {
                     Label("\(streak)", systemImage: "flame.fill")
