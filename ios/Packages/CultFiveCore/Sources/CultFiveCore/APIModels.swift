@@ -1310,21 +1310,25 @@ public struct DailyLeaderboard: Codable, Hashable, Sendable {
         public let streak: Int?
         /// Classement d'un domaine (D-079) : Elo du joueur dans ce domaine.
         public let elo: Int?
+        /// 5 du jour (D-091) : ancienneté de la partie (0 aujourd'hui, 1 hier, 2 avant-hier).
+        public let ago: Int?
         public let me: Bool
         public var id: Int { rank }
 
         enum CodingKeys: String, CodingKey {
-            case rank, handle, score, streak, elo, me
+            case rank, handle, score, streak, elo, ago, me
             case totalMs = "total_ms"
         }
 
-        public init(rank: Int, handle: String, score: Int?, totalMs: Int?, streak: Int?, elo: Int? = nil, me: Bool) {
+        public init(rank: Int, handle: String, score: Int?, totalMs: Int?, streak: Int?, elo: Int? = nil, ago: Int? = nil,
+                    me: Bool) {
             self.rank = rank
             self.handle = handle
             self.score = score
             self.totalMs = totalMs
             self.streak = streak
             self.elo = elo
+            self.ago = ago
             self.me = me
         }
     }

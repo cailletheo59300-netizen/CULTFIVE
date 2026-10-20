@@ -13,7 +13,7 @@ struct DailyLeaderboardCard: View {
     private var entries: [RankEntry] {
         (board?.rows ?? []).map { row in
             RankEntry(id: "\(row.rank)", rank: row.rank, handle: row.handle, score: row.score, totalMs: row.totalMs,
-                      streak: row.me ? result.streak : nil, me: row.me)
+                      streak: row.me ? result.streak : nil, me: row.me, ago: row.ago)
         }
     }
 
@@ -22,12 +22,16 @@ struct DailyLeaderboardCard: View {
         return board.participants >= DailyLeaderboard.minimumPlayers && board.rank != nil
     }
 
-    private var onPodium: Bool { (board?.rank ?? 99) <= 3 && showsBoard }
+    /// Sur le podium du jour : dans les 3 premiers, avec le 5 du jour d'aujourd'hui (D-091).
+    private var onPodium: Bool {
+        guard showsBoard, let rank = board?.rank, rank <= 3 else { return false }
+        return (board?.rows.first { $0.me }?.ago ?? 0) == 0
+    }
 
     /// Halo : or pour le 1er, rose sur le podium, violet sinon.
     private var glow: Color {
-        guard showsBoard, let rank = board?.rank else { return Color(hex: 0xB57CFF) }
-        return rank == 1 ? Color(hex: 0xFFC83D) : rank <= 3 ? Color(hex: 0xFF6FB5) : Color(hex: 0xB57CFF)
+        guard onPodium, let rank = board?.rank else { return Color(hex: 0xB57CFF) }
+        return rank == 1 ? Color(hex: 0xFFC83D) : Color(hex: 0xFF6FB5)
     }
 
     var body: some View {
@@ -41,7 +45,7 @@ struct DailyLeaderboardCard: View {
             }
         } content: {
             if showsBoard {
-                LeaderboardBody(entries: entries, style: .onInk)
+                LeaderboardBody(entries: entries, style: .onInk, podiumOfToday: true)
             } else if board == nil && !loaded {
                 LeaderboardSkeleton()
             } else {

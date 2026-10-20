@@ -25,6 +25,10 @@ packages:
   GoogleMobileAdsMediationUnity:
     url: https://github.com/googleads/googleads-mobile-ios-mediation-unity
     majorVersion: 4.21.0
+  # AppLovin participe aussi aux enchères AdMob (D-092). La clé SDK est réglée dans AdMob, pas dans l'app.
+  GoogleMobileAdsMediationAppLovin:
+    url: https://github.com/googleads/googleads-mobile-ios-mediation-applovin
+    majorVersion: 13.6.0
   GoogleUserMessagingPlatform:
     url: https://github.com/googleads/swift-package-manager-google-user-messaging-platform
     majorVersion: 2.1.0
@@ -48,6 +52,8 @@ targets:
         product: GoogleMobileAds
       - package: GoogleMobileAdsMediationUnity
         product: UnityAdapterTarget
+      - package: GoogleMobileAdsMediationAppLovin
+        product: AppLovinAdapterTarget
       - package: GoogleUserMessagingPlatform
         product: GoogleUserMessagingPlatform
     configFiles:

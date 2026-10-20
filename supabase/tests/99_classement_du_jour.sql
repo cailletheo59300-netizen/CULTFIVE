@@ -45,3 +45,24 @@ begin
   perform tst.ok(exists (select 1 from public._domain_ranks('sport', b) where elo = 520), 'non placé : classé aussi');
   perform tst.throws('select public.domain_leaderboard(''nope'')', 'invalid_domain');
 end $$;
+
+-- 0083 : podium du jour — les joueurs d'aujourd'hui passent devant, même avec un moins bon score ; les autres suivent
+-- avec l'ancienneté de leur partie.
+do $$
+declare
+  me uuid := tst.new_user();
+  old uuid := tst.new_user();
+  r jsonb;
+begin
+  perform tst.clock('2027-05-10 12:00:00+02');
+  insert into public.daily_runs (user_id, daily_date, status, started_at, deadline_at, finished_at, score, total_ms, streak_after)
+  values (old, '2027-05-09', 'finished', '2027-05-09 08:00+00', '2027-05-09 09:00+00', '2027-05-09 08:01+00', 5, 20000, 4),
+         (me, '2027-05-10', 'finished', '2027-05-10 08:00+00', '2027-05-10 09:00+00', '2027-05-10 08:05+00', 2, 60000, 1);
+  perform tst.login(me);
+  perform tst.ok((select rank from public._daily_ranks(me) where user_id = me)
+                 < (select rank from public._daily_ranks(me) where user_id = old), 'joueur du jour devant un 5/5 d''hier');
+  perform tst.ok((select ago from public._daily_ranks(me) where user_id = old) = 1
+                 and (select ago from public._daily_ranks(me) where user_id = me) = 0, 'ancienneté : hier = 1, aujourd''hui = 0');
+  r := public.daily_leaderboard();
+  perform tst.ok((r -> 'rows') @> '[{"me": true, "ago": 0}]', 'ancienneté envoyée à l''app');
+end $$;

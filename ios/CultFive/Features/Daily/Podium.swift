@@ -18,8 +18,11 @@ struct RankEntry: Identifiable {
     var answers: [Bool]? = nil
     /// Classement d'un domaine : Elo (à la place du score).
     var elo: Int? = nil
+    /// 5 du jour (D-091) : partie d'hier (1) ou d'avant-hier (2) ; pas de rang ni de podium.
+    var ago: Int? = nil
 
     var played: Bool { score != nil || elo != nil }
+    var isPast: Bool { (ago ?? 0) > 0 }
 }
 
 /// Fond du classement : violet (fin du 5 du jour) ou clair (Amis, fiche d'un domaine).
@@ -93,13 +96,18 @@ struct PodiumView: View {
     var style: RankStyle = .onInk
     /// Une place touchée ; nil : podium non touchable.
     var onSelect: ((RankEntry) -> Void)? = nil
+    /// 5 du jour (D-091) : une place sans joueur aujourd'hui s'affiche « Place libre ».
+    var fillEmpty = false
 
     @State private var shown = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var ordered: [RankEntry] {
         let byRank = Dictionary(entries.compactMap { e in e.rank.map { ($0, e) } }, uniquingKeysWith: { a, _ in a })
-        return [2, 1, 3].compactMap { byRank[$0] }
+        return [2, 1, 3].compactMap { rank in
+            byRank[rank] ?? (fillEmpty ? RankEntry(id: "libre-\(rank)", rank: rank, handle: "Place libre", score: nil,
+                                                   totalMs: nil, streak: nil, me: false) : nil)
+        }
     }
 
     var body: some View {
@@ -107,7 +115,7 @@ struct PodiumView: View {
             ForEach(ordered) { entry in
                 let column = PodiumColumn(entry: entry, style: style, shown: shown || reduceMotion)
                     .frame(maxWidth: .infinity)
-                if let onSelect, !entry.me {
+                if let onSelect, !entry.me, entry.played {
                     Button { onSelect(entry) } label: { column }
                         .buttonStyle(.row)
                         .accessibilityHint("Ouvre son profil")
@@ -134,6 +142,8 @@ private struct PodiumColumn: View {
     let shown: Bool
 
     private var rank: Int { entry.rank ?? 3 }
+    /// « Place libre » (D-091) : personne n'a encore pris cette place aujourd'hui.
+    private var empty: Bool { !entry.played }
     private var height: CGFloat { rank == 1 ? 96 : rank == 2 ? 70 : 54 }
     private var avatar: CGFloat { rank == 1 ? 74 : 56 }
     /// Ordre d'apparition : 3e, 2e, puis 1er.
@@ -143,18 +153,20 @@ private struct PodiumColumn: View {
         VStack(spacing: 5) {
             ZStack(alignment: .top) {
                 Circle()
-                    .fill(LinearGradient(colors: Medal.colors(rank), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .fill(empty ? AnyShapeStyle(style.text.opacity(0.1))
+                                : AnyShapeStyle(LinearGradient(colors: Medal.colors(rank), startPoint: .topLeading, endPoint: .bottomTrailing)))
                     .frame(width: avatar, height: avatar)
-                    .overlay(Circle().strokeBorder(entry.me ? Color.sun : .white.opacity(0.8), lineWidth: entry.me ? 3 : 2))
+                    .overlay(Circle().strokeBorder(entry.me ? Color.sun : style.text.opacity(empty ? 0.35 : 0.8),
+                                                   style: StrokeStyle(lineWidth: entry.me ? 3 : 2, dash: empty ? [5, 4] : [])))
                     .overlay(
-                        Text(initial)
+                        Text(empty ? "?" : initial)
                             .font(.system(size: avatar * 0.44, weight: .black, design: .rounded))
-                            .foregroundStyle(Medal.colors(rank)[2])
+                            .foregroundStyle(empty ? style.soft : Medal.colors(rank)[2])
                     )
                     .overlay(Shine(active: shown, delay: delay + 0.5).clipShape(Circle()))
                     .shadow(color: Medal.colors(rank)[1].opacity(0.75), radius: shown ? 16 : 0, y: 3)
                     .background {
-                        if rank == 1 {
+                        if rank == 1 && !empty {
                             // Rayons de lumière qui tournent doucement derrière le 1er (sans changer la mise en page).
                             LightRays(color: Medal.colors(1)[0])
                                 .frame(width: avatar * 2.2, height: avatar * 2.2)
@@ -162,7 +174,7 @@ private struct PodiumColumn: View {
                                 .animation(.easeOut(duration: 0.8).delay(delay + 0.4), value: shown)
                         }
                     }
-                if rank == 1 {
+                if rank == 1 && !empty {
                     Image(systemName: "crown.fill")
                         .font(.system(size: 26, weight: .black))
                         .foregroundStyle(LinearGradient(colors: Medal.colors(1), startPoint: .top, endPoint: .bottom))
@@ -178,8 +190,15 @@ private struct PodiumColumn: View {
             .animation(.spring(response: 0.5, dampingFraction: 0.62).delay(delay + 0.15), value: shown)
             Text(entry.me ? "Toi" : entry.handle)
                 .font(.system(.subheadline, design: .rounded).weight(.black))
-                .foregroundStyle(entry.me ? Color.sun : style.text)
+                .foregroundStyle(entry.me ? Color.sun : empty ? style.soft : style.text)
                 .lineLimit(1).minimumScaleFactor(0.7)
+            if empty {
+                Text("Joue pour la prendre !")
+                    .font(.system(.caption2, design: .rounded).weight(.bold))
+                    .foregroundStyle(style.soft)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
             if let score = entry.score {
                 Text("\(score)/5").font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit()
                     .foregroundStyle(style.text)
@@ -197,7 +216,7 @@ private struct PodiumColumn: View {
             }
             // La marche du podium, aux couleurs de la médaille : elle monte à l'arrivée.
             UnevenRoundedRectangle(topLeadingRadius: 12, topTrailingRadius: 12, style: .continuous)
-                .fill(LinearGradient(colors: Medal.colors(rank).map { $0.opacity(style == .onInk ? 0.95 : 0.85) },
+                .fill(LinearGradient(colors: Medal.colors(rank).map { $0.opacity(empty ? 0.3 : style == .onInk ? 0.95 : 0.85) },
                                      startPoint: .top, endPoint: .bottom))
                 .overlay(alignment: .top) {
                     Text("\(rank)")
@@ -217,6 +236,7 @@ private struct PodiumColumn: View {
     private var initial: String { String((entry.me ? "Toi" : entry.handle).prefix(1)).uppercased() }
 
     private var accessibilityText: String {
+        if empty { return "\(rank)e place libre : joue pour la prendre" }
         var parts = ["\(rank)e", entry.me ? "toi" : entry.handle]
         if let score = entry.score { parts.append("\(score) sur 5") }
         if let elo = entry.elo { parts.append("Elo \(elo)") }
@@ -277,12 +297,22 @@ struct RankRow: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            MedalBadge(rank: entry.rank, size: 28, style: style, me: entry.me)
+            MedalBadge(rank: entry.isPast ? nil : entry.rank, size: 28, style: style, me: entry.me)
             VStack(alignment: .leading, spacing: 1) {
-                Text(entry.me ? "Toi" : entry.handle)
-                    .font(.system(.callout, design: .rounded).weight(.black))
-                    .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
-                    .lineLimit(1)
+                HStack(spacing: 6) {
+                    Text(entry.me ? "Toi" : entry.handle)
+                        .font(.system(.callout, design: .rounded).weight(.black))
+                        .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
+                        .lineLimit(1)
+                    // Partie d'un jour précédent (D-091) : pas de rang, l'ancienneté en petit.
+                    if let ago = entry.ago, ago > 0 {
+                        Text(ago == 1 ? "hier" : "avant-hier")
+                            .font(.system(.caption2, design: .rounded).weight(.heavy))
+                            .foregroundStyle(entry.me ? Color(hex: 0x1E1340).opacity(0.65) : style.soft)
+                            .padding(.horizontal, 6).padding(.vertical, 1)
+                            .background((entry.me ? Color(hex: 0x1E1340) : style.text).opacity(0.1), in: Capsule())
+                    }
+                }
                 if let streak = entry.streak, streak > 0 {
                     Label("\(streak)", systemImage: "flame.fill")
                         .font(.system(.caption2, design: .rounded).weight(.heavy))
@@ -340,19 +370,21 @@ struct RankGap: View {
 struct LeaderboardBody: View {
     let entries: [RankEntry]
     var style: RankStyle = .onInk
+    /// 5 du jour (D-091) : podium des seuls joueurs du jour, places vides « Place libre ».
+    var podiumOfToday = false
 
     @State private var rowsShown = false
 
     var body: some View {
-        let podium = entries.filter { ($0.rank ?? 99) <= 3 }
-        let others = entries.filter { ($0.rank ?? 0) > 3 }
+        let podium = entries.filter { ($0.rank ?? 99) <= 3 && !$0.isPast }
+        let others = entries.filter { entry in !podium.contains { $0.id == entry.id } }
         VStack(spacing: 10) {
-            if !podium.isEmpty { PodiumView(entries: podium, style: style) }
+            if !podium.isEmpty || podiumOfToday { PodiumView(entries: podium, style: style, fillEmpty: podiumOfToday) }
             if !others.isEmpty {
                 VStack(spacing: 6) {
                     ForEach(Array(others.enumerated()), id: \.element.id) { index, entry in
                         let previous = index == 0 ? 3 : (others[index - 1].rank ?? 0)
-                        if (entry.rank ?? 0) - previous > 1 { RankGap(style: style) }
+                        if !entry.isPast, (entry.rank ?? 0) - previous > 1 { RankGap(style: style) }
                         RankRow(entry: entry, style: style)
                             .scaleEffect(entry.me && rowsShown ? 1.0 : (entry.me ? 0.9 : 1))
                             .offset(x: rowsShown ? 0 : 40)
