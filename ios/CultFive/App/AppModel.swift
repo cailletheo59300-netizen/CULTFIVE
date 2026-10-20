@@ -325,6 +325,12 @@ final class AppModel {
         await refreshAdStatus()
         ads.adultAudience = isAdult
         await ads.start()
+        // Message de confidentialité toujours sans réponse (fermé, ou affiché trop tôt au lancement) : on le
+        // présente de nouveau un peu plus tard, une fois l'accueil posé (D-090).
+        if !noAds, !ads.started {
+            try? await Task.sleep(for: .seconds(2))
+            await ads.askConsentAgain()
+        }
         // Les bonus les plus utilisés ont leur pub prête d'avance : elle s'ouvre tout de suite à l'appui.
         if !noAds { ads.preload() }
     }

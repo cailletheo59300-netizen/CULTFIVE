@@ -161,7 +161,7 @@ final class AdsController {
 
     /// Consentement encore demandé mais jamais donné (message fermé ou qui n'a pas pu s'afficher) : on le réaffiche.
     /// Accepter comme refuser débloque les pubs (personnalisées ou non) ; on démarre alors le SDK.
-    private func askConsentAgain() async {
+    func askConsentAgain() async {
         let consent = UMPConsentInformation.sharedInstance
         guard enabled, !started, consent.consentStatus == .required else { return }
         LoadingOverlay.hide()
