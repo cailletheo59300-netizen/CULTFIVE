@@ -18,7 +18,7 @@ struct RankEntry: Identifiable {
     var answers: [Bool]? = nil
     /// Classement d'un domaine : Elo (à la place du score).
     var elo: Int? = nil
-    /// 5 du jour (D-091) : partie d'hier (1) ou d'avant-hier (2) ; pas de rang ni de podium.
+    /// 5 du jour (D-091) : partie d'hier (1) ou d'avant-hier (2), affichée en petit.
     var ago: Int? = nil
 
     var played: Bool { score != nil || elo != nil }
@@ -192,6 +192,11 @@ private struct PodiumColumn: View {
                 .font(.system(.subheadline, design: .rounded).weight(.black))
                 .foregroundStyle(entry.me ? Color.sun : empty ? style.soft : style.text)
                 .lineLimit(1).minimumScaleFactor(0.7)
+            if let ago = entry.ago, ago > 0 {
+                Text(ago == 1 ? "hier" : "avant-hier")
+                    .font(.system(.caption2, design: .rounded).weight(.heavy))
+                    .foregroundStyle(style.soft)
+            }
             if empty {
                 Text("Joue pour la prendre !")
                     .font(.system(.caption2, design: .rounded).weight(.bold))
@@ -297,14 +302,14 @@ struct RankRow: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            MedalBadge(rank: entry.isPast ? nil : entry.rank, size: 28, style: style, me: entry.me)
+            MedalBadge(rank: entry.rank, size: 28, style: style, me: entry.me)
             VStack(alignment: .leading, spacing: 1) {
                 HStack(spacing: 6) {
                     Text(entry.me ? "Toi" : entry.handle)
                         .font(.system(.callout, design: .rounded).weight(.black))
                         .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
                         .lineLimit(1)
-                    // Partie d'un jour précédent (D-091) : pas de rang, l'ancienneté en petit.
+                    // Partie d'un jour précédent (D-091) : l'ancienneté en petit.
                     if let ago = entry.ago, ago > 0 {
                         Text(ago == 1 ? "hier" : "avant-hier")
                             .font(.system(.caption2, design: .rounded).weight(.heavy))
@@ -370,21 +375,19 @@ struct RankGap: View {
 struct LeaderboardBody: View {
     let entries: [RankEntry]
     var style: RankStyle = .onInk
-    /// 5 du jour (D-091) : podium des seuls joueurs du jour, places vides « Place libre ».
-    var podiumOfToday = false
 
     @State private var rowsShown = false
 
     var body: some View {
-        let podium = entries.filter { ($0.rank ?? 99) <= 3 && !$0.isPast }
-        let others = entries.filter { entry in !podium.contains { $0.id == entry.id } }
+        let podium = entries.filter { ($0.rank ?? 99) <= 3 }
+        let others = entries.filter { ($0.rank ?? 0) > 3 }
         VStack(spacing: 10) {
-            if !podium.isEmpty || podiumOfToday { PodiumView(entries: podium, style: style, fillEmpty: podiumOfToday) }
+            if !podium.isEmpty { PodiumView(entries: podium, style: style) }
             if !others.isEmpty {
                 VStack(spacing: 6) {
                     ForEach(Array(others.enumerated()), id: \.element.id) { index, entry in
                         let previous = index == 0 ? 3 : (others[index - 1].rank ?? 0)
-                        if !entry.isPast, (entry.rank ?? 0) - previous > 1 { RankGap(style: style) }
+                        if (entry.rank ?? 0) - previous > 1 { RankGap(style: style) }
                         RankRow(entry: entry, style: style)
                             .scaleEffect(entry.me && rowsShown ? 1.0 : (entry.me ? 0.9 : 1))
                             .offset(x: rowsShown ? 0 : 40)

@@ -45,7 +45,7 @@ struct DailyLeaderboardCard: View {
             }
         } content: {
             if showsBoard {
-                LeaderboardBody(entries: entries, style: .onInk, podiumOfToday: true)
+                LeaderboardBody(entries: entries, style: .onInk)
             } else if board == nil && !loaded {
                 LeaderboardSkeleton()
             } else {

@@ -1,7 +1,7 @@
 -- Podium du jour (D-091) : le classement du 5 du jour reste bien rempli (dernier 5 du jour de chaque vrai joueur sur
--- 3 jours), mais les joueurs du jour passent devant : le podium n'est fait que de joueurs d'aujourd'hui et change donc
--- chaque jour. Les autres suivent, avec l'ancienneté de leur partie (`ago` : 1 = hier, 2 = avant-hier), que l'app
--- affiche en petit, sans rang.
+-- 3 jours), mais les parties les plus récentes passent devant : d'abord les joueurs d'aujourd'hui, puis ceux d'hier,
+-- puis d'avant-hier (par score à chaque fois). Le podium change donc chaque jour, sans jamais rester vide. L'ancienneté
+-- de la partie (`ago` : 1 = hier, 2 = avant-hier) est affichée en petit par l'app.
 drop function if exists public._daily_ranks(uuid);
 create or replace function public._daily_ranks(p_viewer uuid)
 returns table (rank int, user_id uuid, score int, total_ms int, streak int, daily_date date, ago int)
@@ -13,7 +13,7 @@ language sql stable set search_path = public, pg_temp as $$
     where r.status = 'finished' and p.banned_at is null
     order by r.user_id, r.daily_date desc, r.finished_at desc
   )
-  select row_number() over (order by l.daily_date = t.d desc, l.score desc, l.total_ms, l.finished_at, l.id)::int,
+  select row_number() over (order by l.daily_date desc, l.score desc, l.total_ms, l.finished_at, l.id)::int,
          l.user_id, l.score::int, l.total_ms, l.streak_after, l.daily_date, greatest(t.d - l.daily_date, 0)::int
   from last l cross join today t
   where l.user_id = p_viewer
