@@ -10,6 +10,26 @@ final class AnswerEvaluatorTests: XCTestCase {
         XCTAssertFalse(AnswerEvaluator.isCorrect(.bool(true), type: .mcq, answer: answer), "type incohérent ⇒ faux")
     }
 
+    func testCenturyScale() throws {
+        var answer = CorrectAnswer(optionId: "c")
+        answer.century = 18
+        XCTAssertTrue(AnswerEvaluator.isCorrect(.century(18), type: .mcq, answer: answer))
+        XCTAssertFalse(AnswerEvaluator.isCorrect(.century(17), type: .mcq, answer: answer))
+        XCTAssertTrue(AnswerEvaluator.isCorrect(.option("c"), type: .mcq, answer: answer), "le choix classique reste juste")
+        XCTAssertEqual(Century.parse("XVIIIe siècle"), 18)
+        XCTAssertEqual(Century.parse("XIVᵉ siècle"), 14)
+        XCTAssertEqual(Century.parse("Ier siècle"), 1)
+        XCTAssertNil(Century.parse("Un siècle"))
+        XCTAssertEqual(Century.label(19), "XIXe siècle")
+        XCTAssertEqual(Century.roman(1), "Ier")
+        XCTAssertEqual(Century.roman(21), "XXIe")
+        let data = try JSONEncoder().encode(GivenAnswer.century(18))
+        XCTAssertEqual(String(data: data, encoding: .utf8), #"{"century":18}"#)
+        XCTAssertEqual(try JSONDecoder().decode(GivenAnswer.self, from: data), .century(18))
+        let payload = try JSONDecoder().decode(QuestionPayload.self, from: Data(#"{"century_scale":{"min":1,"max":21}}"#.utf8))
+        XCTAssertEqual(payload.centuryScale, CenturyScale(min: 1, max: 21))
+    }
+
     func testTrueFalse() {
         let answer = CorrectAnswer(value: .bool(false))
         XCTAssertTrue(AnswerEvaluator.isCorrect(.bool(false), type: .trueFalse, answer: answer))

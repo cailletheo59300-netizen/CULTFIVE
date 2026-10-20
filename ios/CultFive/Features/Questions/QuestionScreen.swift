@@ -98,6 +98,10 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
     @ViewBuilder private var answerArea: some View {
         switch question.type {
         case .mcq:
+            // QCM de siècles : la frise (D-087), sauf après un 50/50 (on revient alors aux 2 choix restants).
+            if let scale = question.payload.centuryScale, removedOptions.isEmpty {
+                CenturyAnswerView(question: question, scale: scale, phase: phase, onSubmit: onSubmit)
+            } else {
             if let shape = question.payload.shape {
                 CountryShapeView(shape: shape, color: DomainPalette.color(question.domainId))
                     .frame(height: 200)
@@ -107,6 +111,7 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
             }
             ChoiceAnswerView(options: question.payload.options ?? [], phase: phase, removed: removedOptions,
                              accent: DomainPalette.color(question.domainId), onSubmit: onSubmit)
+            }
         case .trueFalse:
             TrueFalseAnswerView(phase: phase, onSubmit: onSubmit)
         case .numeric:

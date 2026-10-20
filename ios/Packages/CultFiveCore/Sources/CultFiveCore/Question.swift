@@ -136,6 +136,8 @@ public struct QuestionPayload: Codable, Hashable, Sendable {
     public var toleranceKm: Double?
     public var layout: String?
     public var groups: [SortGroup]?
+    /// QCM de siècles (D-087) : la 1.4 affiche une frise des siècles à la place des 4 choix.
+    public var centuryScale: CenturyScale?
 
     enum CodingKeys: String, CodingKey {
         case options, items, left, right, region, unit, decimals, shape
@@ -144,6 +146,7 @@ public struct QuestionPayload: Codable, Hashable, Sendable {
         case toleranceKm = "tolerance_km"
         case allowNegative = "allow_negative"
         case keepOrder = "keep_order"
+        case centuryScale = "century_scale"
     }
 
     public init(options: [Choice]? = nil, items: [Choice]? = nil, left: [Choice]? = nil, right: [Choice]? = nil,
@@ -185,9 +188,12 @@ public struct CorrectAnswer: Codable, Hashable, Sendable {
     public var toleranceKm: Double?
     public var place: String?
     public var groups: [String: String]?
+    /// QCM de siècles : le bon siècle, en nombre (18 pour le XVIIIe).
+    public var century: Int?
 
     enum CodingKeys: String, CodingKey {
         case optionId = "option_id"
+        case century
         case value, tolerance, order, pairs, word, display, words, sentence, labels
         case numbers, target, steps, solution, lat, lon, place, groups
         case toleranceKm = "tolerance_km"
@@ -327,6 +333,8 @@ public enum GivenAnswer: Hashable, Sendable {
     case pin(lat: Double, lon: Double)
     /// Tri : groupe choisi pour chaque étiquette.
     case groups([String: String])
+    /// Frise des siècles : le siècle choisi (18 pour le XVIIIe).
+    case century(Int)
 
     public var json: JSONValue {
         switch self {
@@ -341,6 +349,7 @@ public enum GivenAnswer: Hashable, Sendable {
             return .object(["steps": .array(steps.map { .object(["a": .number(Double($0.a)), "op": .string($0.op), "b": .number(Double($0.b))]) })])
         case .pin(let lat, let lon): return .object(["lat": .number(lat), "lon": .number(lon)])
         case .groups(let map): return .object(["groups": .object(map.mapValues(JSONValue.string))])
+        case .century(let value): return .object(["century": .number(Double(value))])
         }
     }
 }
@@ -350,6 +359,8 @@ extension GivenAnswer: Codable {
         let json = try JSONValue(from: decoder)
         if let id = json["option_id"]?.stringValue {
             self = .option(id)
+        } else if let century = json["century"]?.doubleValue {
+            self = .century(Int(century))
         } else if let lat = json["lat"]?.doubleValue, let lon = json["lon"]?.doubleValue {
             self = .pin(lat: lat, lon: lon)
         } else if case .array(let items)? = json["steps"] {
@@ -378,5 +389,73 @@ extension GivenAnswer: Codable {
 
     public func encode(to encoder: Encoder) throws {
         try json.encode(to: encoder)
+    }
+}
+
+/// Bornes de la frise des siècles (du Ier au XXIe siècle).
+public struct CenturyScale: Codable, Hashable, Sendable {
+    public let min: Int
+    public let max: Int
+
+    public init(min: Int, max: Int) {
+        self.min = min
+        self.max = max
+    }
+}
+
+/// Siècles écrits en chiffres romains, comme dans les choix (« XVIIIe siècle »). Miroir de `public._century_of`.
+public enum Century {
+    /// « XVIIIe siècle », « XIVᵉ siècle », « Ier siècle » → 18, 14, 1 ; sinon nil.
+    public static func parse(_ text: String) -> Int? {
+        let trimmed = text.trimmingCharacters(in: .whitespaces)
+        guard trimmed.hasSuffix(" siècle") else { return nil }
+        let head = trimmed.dropLast(" siècle".count)
+        let roman = head.prefix { "IVXLC".contains($0) }
+        let suffix = head.dropFirst(roman.count)
+        guard !roman.isEmpty, ["e", "ᵉ", "er", "ᵉʳ"].contains(String(suffix)) else { return nil }
+        return romanValue(String(roman))
+    }
+
+    /// 18 → « XVIIIe », 1 → « Ier ».
+    public static func roman(_ value: Int) -> String {
+        "\(romanNumeral(value))\(value == 1 ? "er" : "e")"
+    }
+
+    /// 18 → « XVIIIe siècle ».
+    public static func label(_ value: Int) -> String { "\(roman(value)) siècle" }
+
+    /// Grande période d'un siècle, pour se repérer sur la frise.
+    public static func era(_ value: Int) -> String {
+        switch value {
+        case ...5: return "Antiquité"
+        case 6...15: return "Moyen Âge"
+        case 16: return "Renaissance"
+        case 17...18: return "Temps modernes"
+        default: return "Époque contemporaine"
+        }
+    }
+
+    static func romanNumeral(_ value: Int) -> String {
+        let table: [(Int, String)] = [(100, "C"), (90, "XC"), (50, "L"), (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")]
+        var rest = value
+        var text = ""
+        for (amount, symbol) in table {
+            while rest >= amount {
+                text += symbol
+                rest -= amount
+            }
+        }
+        return text
+    }
+
+    static func romanValue(_ text: String) -> Int? {
+        let values: [Character: Int] = ["I": 1, "V": 5, "X": 10, "L": 50, "C": 100]
+        var total = 0
+        var previous = 0
+        for char in text.reversed() {
+            guard let value = values[char] else { return nil }
+            if value < previous { total -= value } else { total += value; previous = value }
+        }
+        return total
     }
 }

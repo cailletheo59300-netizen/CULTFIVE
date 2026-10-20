@@ -137,6 +137,8 @@ enum GivenText {
         case .pin(let lat, let lon):
             guard let answer = question.reveal?.answer, let km = AnswerEvaluator.distanceKm(lat: lat, lon: lon, answer: answer) else { return "une épingle" }
             return "une épingle à \(NumberFormat.display(km.rounded())) km"
+        case .century(let value):
+            return Century.label(value)
         case .groups:
             return nil
         case .order, .pairs:

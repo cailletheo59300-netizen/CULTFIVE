@@ -13,6 +13,8 @@ public enum AnswerEvaluator {
         switch (type, given) {
         case (.mcq, .option(let id)), (.mapPick, .option(let id)), (.imageChoice, .option(let id)):
             return id == answer.optionId
+        case (.mcq, .century(let value)):
+            return answer.century == value
         case (.trueFalse, .bool(let value)):
             return answer.value?.boolValue == value
         case (.numeric, .number(let value)), (.counter, .number(let value)), (.timeline, .number(let value)), (.gauge, .number(let value)):
