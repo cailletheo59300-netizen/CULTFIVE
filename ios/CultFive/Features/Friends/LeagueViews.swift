@@ -1082,7 +1082,13 @@ final class LeagueQuizModel {
 
     var isLast: Bool { position >= total }
 
+    /// Passage à la question suivante en cours : un double appui ne doit pas sauter une question.
+    private var advancing = false
+
     func next() async {
+        guard !advancing else { return }
+        advancing = true
+        defer { advancing = false }
         if lastVerdict?.finished == true || isLast { await showResult() } else { await load(position: position + 1) }
     }
 

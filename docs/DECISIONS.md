@@ -297,3 +297,6 @@ Pourquoi : avec le dernier 5 du jour sur 3 jours (D-079), un joueur pouvait rest
 
 ### D-092 · 2026-10-21 · AppLovin dans les enchères AdMob
 Pourquoi : compte AppLovin validé (propriétaire, 21/10) ; plus de régies en concurrence = meilleur prix par pub. Décidé (app 1.4) : adaptateur officiel Google `GoogleMobileAdsMediationAppLovin` (SDK AppLovin MAX 13.6), comme Unity (D-064). Rien côté serveur : la clé SDK AppLovin se règle dans AdMob (source « AppLovin » dans les groupes de médiation). Identifiants SKAdNetwork d'AppLovin à ajouter (liste fournie par le tableau de bord AppLovin).
+
+### D-093 · 2026-10-21 · Double appui sur « Question suivante »
+Pourquoi : en Survie (TestFlight 1.4), un double appui sur « Question suivante » demandait la question deux fois ; l'app se décalait d'une position et le serveur refusait ensuite chaque réponse (`survival_not_served`, 15 fois), d'où un chargement sans fin. Même risque en défi et en ligue (une question sautée). Décidé (app 1.4) : passage à la question suivante protégé contre le double appui (Survie, défis, ligues ; le 5 du jour l'était déjà) ; en Survie, la position vient du serveur, et une partie close ou une réponse hors de propos mène au bilan au lieu de réessayer sans fin.

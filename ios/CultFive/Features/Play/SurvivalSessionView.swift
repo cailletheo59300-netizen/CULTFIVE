@@ -33,6 +33,8 @@ final class SurvivalSessionModel {
     private var runId: UUID?
     private var stopwatch = Stopwatch()
     private var pending: (given: GivenAnswer?, ms: Int?)?
+    /// Passage à la question suivante en cours : un double appui ne doit pas la demander deux fois.
+    private var advancing = false
 
     init(service: GameService, domain: String?, overview: SurvivalOverview?) {
         self.service = service
@@ -69,7 +71,8 @@ final class SurvivalSessionModel {
         do {
             let response = try await service.survivalQuestion(run: runId, position: position + 1)
             guard let next = response.question else { await showResult(); return }
-            position += 1
+            // La position vient du serveur : jamais de décalage, même si la question a été redemandée.
+            position = next.position ?? position + 1
             question = next
             phase = .answering
             deadline = nil
@@ -118,12 +121,21 @@ final class SurvivalSessionModel {
             finished = verdict.finished ?? !correct
             phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
             pending = nil
+        } catch let error as BackendError where Self.closedCodes.contains(error.code ?? "") {
+            // Partie déjà close ou réponse hors de propos : on montre le bilan plutôt que de réessayer sans fin.
+            pending = nil
+            await showResult()
         } catch {
             isRetrying = true
         }
     }
 
+    private static let closedCodes: Set<String> = ["survival_not_served", "survival_closed", "survival_out_of_order"]
+
     func next() async {
+        guard !advancing, !phase.isAnswering || stage != .question else { return }
+        advancing = true
+        defer { advancing = false }
         if finished { await showResult() } else { await load() }
     }
 
