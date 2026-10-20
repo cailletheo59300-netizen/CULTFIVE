@@ -54,7 +54,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Podium du jour (D-091) | ✅ serveur 0083 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |
 | AppLovin dans les enchères AdMob (D-092) | 🟡 app 1.4 ; AdMob à configurer | CI (build) |
 | Double appui sur « Question suivante » (D-093) | 🟡 app 1.4 | CI (build) |
-| Classement du 5 du jour : seulement les joueurs du jour (D-094) | 🟡 serveur 0084, app 1.4 | `99_classement_du_jour.sql` |
+| Classement du 5 du jour : seulement les joueurs du jour (D-094) | ✅ serveur 0084 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |
 
