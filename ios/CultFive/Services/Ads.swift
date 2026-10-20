@@ -75,11 +75,16 @@ final class AdsController {
         parameters.tagForUnderAgeOfConsent = !adultAudience
         do {
             try await consent.requestConsentInfoUpdate(with: parameters)
+            // Le voile « Chargement… » est une fenêtre au-dessus de tout : il cacherait le message de Google.
+            LoadingOverlay.hide()
             if let root = Self.topViewController {
                 try await UMPConsentForm.loadAndPresentIfRequired(from: root)
             }
+            consentError = nil
         } catch {
-            // Réseau ou formulaire indisponible : on réessaiera au prochain lancement.
+            // Réseau ou formulaire indisponible : on réessaiera à la prochaine pub ou au prochain lancement.
+            let error = error as NSError
+            consentError = "form \(error.domain) \(error.code)"
         }
         // Demande de suivi Apple seulement aux majeurs : aux autres, aucune pub personnalisée n'est montrée.
         if adultAudience, ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
@@ -151,6 +156,30 @@ final class AdsController {
         }
     }
 
+    /// Dernier échec d'affichage du message de confidentialité (journal d'usage `ad_fail`).
+    private var consentError: String?
+
+    /// Consentement encore demandé mais jamais donné (message fermé ou qui n'a pas pu s'afficher) : on le réaffiche.
+    /// Accepter comme refuser débloque les pubs (personnalisées ou non) ; on démarre alors le SDK.
+    private func askConsentAgain() async {
+        let consent = UMPConsentInformation.sharedInstance
+        guard enabled, !started, consent.consentStatus == .required else { return }
+        LoadingOverlay.hide()
+        do {
+            guard let root = Self.topViewController else { return }
+            let form = try await UMPConsentForm.load()
+            try await form.present(from: root)
+            consentError = nil
+        } catch {
+            let error = error as NSError
+            consentError = "form \(error.domain) \(error.code)"
+        }
+        if consent.canRequestAds {
+            MobileAds.shared.start(completionHandler: nil)
+            started = true
+        }
+    }
+
     // MARK: Pubs récompensées
 
     /// Montre une pub récompensée. Renvoie `true` si elle a été vue jusqu'au bout. Google confirme ensuite la vue à notre
@@ -158,8 +187,12 @@ final class AdsController {
     func showRewarded(_ kind: AdKind, userId: UUID, ref: String?) async throws -> Bool {
         lastFailure = nil
         if !started { await start() }
+        // Message de confidentialité jamais terminé (D-090) : on le présente de nouveau, au moment où le joueur
+        // demande une pub, plutôt que de répondre « Aucune pub disponible ».
+        if !started { await askConsentAgain() }
         guard started else {
             lastFailure = "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
+                + (consentError.map { " \($0)" } ?? "")
             throw Self.unavailable
         }
         let unit = rewardedUnit(for: kind)
@@ -289,7 +322,9 @@ final class AdsController {
     static var topViewController: UIViewController? {
         let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
         let scene = scenes.first { $0.activationState == .foregroundActive } ?? scenes.first
-        var controller = scene?.windows.first { $0.isKeyWindow }?.rootViewController ?? scene?.windows.first?.rootViewController
+        // Fenêtres normales seulement : jamais le voile « Chargement… », posé au-dessus de tout.
+        let windows = scene?.windows.filter { $0.windowLevel == .normal } ?? []
+        var controller = windows.first { $0.isKeyWindow }?.rootViewController ?? windows.first?.rootViewController
         while let presented = controller?.presentedViewController, !presented.isBeingDismissed {
             controller = presented
         }

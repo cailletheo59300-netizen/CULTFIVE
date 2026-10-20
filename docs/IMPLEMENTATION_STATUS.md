@@ -50,6 +50,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Frise des siècles (D-087) | ✅ serveur 0082 en production · 🟡 app 1.4 (TestFlight) | `99_frise_siecles.sql`, `testCenturyScale` |
 | 150 questions d'histoire sans siècle à deviner (D-088) | ✅ en production (20/10), histoire : 1 010 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Après le 5 du jour, on continue à jouer (D-089) | 🟡 app 1.4 | CI (build) |
+| Message de confidentialité réaffiché à la demande d'une pub (D-090) | 🟡 app 1.4 | CI (build) |
 | Réseau faible (D-061) : nouveaux essais automatiques, délais adaptés, lancement depuis les données gardées, bandeau « Connexion difficile », pas de partie mélangée à la place d'un domaine | 🟡 app 1.2 en examen (build 47) | `SupabaseAPITests` (essais), `testCacheRoundTrip` (CI) |
 | Admin : vrais joueurs sans les invités de test (D-062) | ✅ en production (0059 à 0061, 16/10) | `99_admin_comptes.sql` |
 
