@@ -126,45 +126,76 @@ function slides(c, ci) {
   return s;
 }
 
-// Carrousel « fait » : accroche, un fait par image (titre + explication), puis l'appli conseillée comme par un abonné.
+// Compte 2, style « carnet » : page de cahier (papier crème, lignes, marge rouge), titre manuscrit, texte machine à écrire,
+// mots clés au surligneur. Un fait par page, puis l'appli conseillée, scotchée sur la dernière page.
+const caveat = asset('polices/caveat.ttf');
+const courier = asset('polices/courierprime-400.ttf');
+const courierBold = asset('polices/courierprime-700.ttf');
+const notebookCss = `
+  @font-face { font-family: Caveat; src: url(${caveat}); font-weight: 400 700; }
+  @font-face { font-family: Courier; src: url(${courier}); font-weight: 400; }
+  @font-face { font-family: Courier; src: url(${courierBold}); font-weight: 700; }
+  .paper { position: absolute; inset: 0; background-color: #f5eedc;
+           background-image: linear-gradient(90deg, transparent 118px, rgba(214,72,72,.55) 118px, rgba(214,72,72,.55) 121px, transparent 121px),
+                             repeating-linear-gradient(180deg, transparent 0 70px, rgba(70,110,170,.22) 70px 72px); }
+  .paper::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 160px rgba(120,90,40,.28); }
+  .page { position: absolute; inset: 0; padding: 230px 96px 0 170px; color: #1f2430; }
+  .page.mid { display: flex; flex-direction: column; justify-content: center; padding-top: 0; }
+  .pnum { position: absolute; top: 96px; right: 100px; font: 700 60px Caveat, cursive; color: #2b4a8b; transform: rotate(-4deg); }
+  .hand { font: 700 132px/1.02 Caveat, cursive; color: #1d2f5e; }
+  .hand.big { font-size: 150px; }
+  .typed { margin-top: 64px; font: 400 47px/1.55 Courier, monospace; }
+  .typed b, .hand b { font-weight: 700; background: linear-gradient(transparent 52%, rgba(255,222,60,.85) 52%, rgba(255,222,60,.85) 92%, transparent 92%);
+                      padding: 0 6px; margin: 0 -6px; }
+  .scribble { display: block; margin-top: 18px; }
+  .note { position: absolute; bottom: 210px; right: 110px; font: 700 64px Caveat, cursive; color: #2b4a8b; transform: rotate(-3deg); }
+  .grain { position: absolute; inset: 0; pointer-events: none; }
+  .taped { position: relative; display: inline-block; margin: 70px 0 30px 40px; transform: rotate(-4deg); }
+  .taped img { width: 300px; height: 300px; border-radius: 66px; box-shadow: 0 14px 30px rgba(60,40,10,.35); display: block; }
+  .tape { position: absolute; width: 170px; height: 52px; background: rgba(240,228,180,.75); box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+  .store { font: 700 50px Courier, monospace; margin-top: 30px; }
+`;
+const grain = (seed) => `<svg class="grain" width="1080" height="1920" xmlns="http://www.w3.org/2000/svg">
+  <filter id="pg${seed}"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="${seed}"/>
+  <feColorMatrix values="0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .25  0 0 0 .13 0"/></filter>
+  <rect width="1080" height="1920" filter="url(#pg${seed})"/></svg>`;
+// Trait à main levée sous un titre (vague légère, deux passages de stylo).
+const underline = (w) => `<svg class="scribble" width="${w}" height="40" viewBox="0 0 ${w} 40" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 22 C ${w * .25} 8, ${w * .5} 34, ${w * .75} 16 S ${w - 20} 20, ${w - 6} 14" fill="none" stroke="#d64848" stroke-width="7" stroke-linecap="round"/>
+  <path d="M30 30 C ${w * .3} 20, ${w * .6} 36, ${w - 40} 26" fill="none" stroke="#d64848" stroke-width="4" stroke-linecap="round" opacity=".7"/></svg>`;
+const marks = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+const sheet = (seed, inner) => `<style>${notebookCss}</style><div class="slide"><div class="paper"></div>${grain(seed)}${inner}</div>`;
+
 function factSlides(c, ci) {
   const s = [];
   const seed = (n) => ci * 40 + n;
-  s.push(`<div class="slide">${painting('bougie', seed(1), c.glow)}<div class="center">
-    <div class="hook">${esc(c.hook)}</div><div class="orn bottom"><i></i><b>◆</b><i></i></div></div></div>`);
+  s.push(sheet(seed(1), `<div class="page mid"><div class="hand big">${marks(c.hook)}</div>${underline(620)}</div>
+    <div class="note">swipe →</div>`));
   c.facts.forEach((f, i) => {
-    s.push(`<div class="slide">${bg(f, i % 2 ? 'bougie' : 'paysage', seed(10 + i), c.glow)}<div class="center">
-      <div class="count">${i + 1} / ${c.facts.length}</div><div class="fact">${esc(f.title)}</div>
-      <div class="fact-text">${esc(f.text).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</div></div></div>`);
+    s.push(sheet(seed(10 + i), `<div class="pnum">${i + 1}/${c.facts.length}</div><div class="page mid">
+      <div class="hand">${marks(f.title)}</div>${underline(Math.min(860, 120 + f.title.length * 38))}
+      <div class="typed">${marks(f.text)}</div></div>`));
   });
-  s.push(`<div class="slide">${painting('bougie', seed(30), c.glow)}<div class="center">
-    <div class="plug">${esc(c.plug).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</div>
-    <img class="icon" src="${icon}"><div class="name">BRAINLIX</div>
-    <div class="badge"><small>Gratuit sur</small><span>l'App Store</span></div></div></div>`);
+  s.push(sheet(seed(30), `<div class="page mid"><div class="hand">${marks(c.plug)}</div>
+    <div class="taped"><img src="${icon}"><div class="tape" style="top:-22px;left:-40px;transform:rotate(-28deg)"></div>
+    <div class="tape" style="bottom:-20px;right:-46px;transform:rotate(-24deg)"></div></div>
+    <div class="store">Brainlix<br>gratuit sur l'App Store</div></div>`));
   return s;
 }
 
-// Photo de profil (1080 × 1080) du compte « faits » : une bougie dans le clair-obscur, sans marque.
+// Photo de profil (1080 × 1080) du compte 2 : une ampoule dessinée au stylo sur une page de cahier, sans marque.
 function avatar() {
-  return `<div class="slide" style="width:1080px;height:1080px">${painting('bougie', 5, '#e0a24a')}
-    <div class="avatar"><svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
-      <defs><radialGradient id="halo" cx=".5" cy=".38" r=".42"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/>
-        <stop offset=".5" stop-color="#d08a2e" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-        <linearGradient id="wax" x1="0" x2="1"><stop offset="0" stop-color="#8a7356"/><stop offset=".45" stop-color="#efe2c6"/>
-        <stop offset="1" stop-color="#6b5840"/></linearGradient>
-        <radialGradient id="flame" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#fffbe8"/><stop offset=".45" stop-color="#ffd36b"/>
-        <stop offset="1" stop-color="#e2731f" stop-opacity="0"/></radialGradient>
-        <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter></defs>
-      <rect width="1080" height="1080" fill="url(#halo)"/>
-      <path d="M540 245 C 590 330 585 395 540 425 C 495 395 490 330 540 245 Z" fill="url(#flame)" filter="url(#soft)"/>
-      <path d="M540 300 C 562 350 560 390 540 405 C 520 390 518 350 540 300 Z" fill="#fffdf2" opacity=".9"/>
-      <line x1="540" y1="400" x2="540" y2="440" stroke="#2a1a0c" stroke-width="6"/>
-      <rect x="485" y="438" width="110" height="380" rx="10" fill="url(#wax)"/>
-      <path d="M485 448 q 20 40 8 90 q 10 -40 22 -70 z" fill="#f6ecd6" opacity=".7"/>
-      <ellipse cx="540" cy="830" rx="190" ry="34" fill="#3b2a18"/>
-      <ellipse cx="540" cy="822" rx="170" ry="24" fill="#8a6a3e"/>
-      <ellipse cx="540" cy="816" rx="120" ry="14" fill="#b38b52" opacity=".8"/>
-    </svg></div></div>`;
+  return `<style>${notebookCss}</style><div class="slide" style="width:1080px;height:1080px"><div class="paper"></div>${grain(5)}
+    <svg style="position:absolute;inset:0" width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+      <filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+      <ellipse cx="560" cy="470" rx="200" ry="70" fill="rgba(255,222,60,.8)" transform="rotate(-6 560 470)"/>
+      <g filter="url(#ink)" fill="none" stroke="#1d2f5e" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M540 230 C 410 230 340 330 360 440 C 375 520 450 560 460 640 L 620 640 C 630 560 705 520 720 440 C 740 330 670 230 540 230 Z"/>
+        <path d="M470 690 L 610 690 M 480 740 L 600 740 M 505 790 L 575 790"/>
+        <path d="M500 640 L 520 470 L 560 520 L 580 470 L 580 640" stroke-width="10"/>
+        <path d="M540 130 L 540 175 M 360 190 L 390 225 M 720 190 L 690 225 M 250 360 L 295 375 M 830 360 L 785 375"/>
+      </g>
+    </svg></div>`;
 }
 
 (async () => {
