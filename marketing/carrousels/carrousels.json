@@ -4,9 +4,42 @@
     "hook": "moi quand je sors une culture G que personne ne m'a demandée",
     "glow": "#d39a4a",
     "questions": [
-      {"q": "Lequel de ces phénomènes est le plus chaud ?", "choices": ["La surface du Soleil", "Un éclair", "De la lave en fusion", "La flamme d'un chalumeau"], "a": "Un éclair", "why": "Un éclair chauffe l'air à environ 30 000 °C : cinq fois plus que la surface du Soleil.", "pct": 11},
-      {"q": "Quel organe humain peut repousser après en avoir perdu une grande partie ?", "choices": ["Le cœur", "Le cerveau", "Le foie", "Les reins"], "a": "Le foie", "why": "Il retrouve sa taille même quand on en retire plus de la moitié.", "pct": 17},
-      {"q": "Pour un botaniste, lequel de ces fruits est une baie ?", "choices": ["La fraise", "La banane", "La framboise", "La mûre"], "a": "La banane", "why": "Une baie vient d'une seule fleur et garde ses graines dans la chair. La fraise, elle, n'en est pas une.", "pct": 17}
+      {
+        "q": "Lequel de ces phénomènes est le plus chaud ?",
+        "choices": [
+          "La surface du Soleil",
+          "Un éclair",
+          "De la lave en fusion",
+          "La flamme d'un chalumeau"
+        ],
+        "a": "Un éclair",
+        "why": "Un éclair chauffe l'air à environ 30 000 °C : cinq fois plus que la surface du Soleil.",
+        "pct": 11
+      },
+      {
+        "q": "Quel organe humain peut repousser après en avoir perdu une grande partie ?",
+        "choices": [
+          "Le cœur",
+          "Le cerveau",
+          "Le foie",
+          "Les reins"
+        ],
+        "a": "Le foie",
+        "why": "Il retrouve sa taille même quand on en retire plus de la moitié.",
+        "pct": 17
+      },
+      {
+        "q": "Pour un botaniste, lequel de ces fruits est une baie ?",
+        "choices": [
+          "La fraise",
+          "La banane",
+          "La framboise",
+          "La mûre"
+        ],
+        "a": "La banane",
+        "why": "Une baie vient d'une seule fleur et garde ses graines dans la chair. La fraise, elle, n'en est pas une.",
+        "pct": 17
+      }
     ]
   },
   {
@@ -14,9 +47,42 @@
     "hook": "quand tu découvres que l'histoire est encore plus bizarre que tes rêves",
     "glow": "#8fa3b8",
     "questions": [
-      {"q": "Au Moyen Âge, qu'arrivait-il parfois à un animal accusé d'avoir tué quelqu'un ?", "choices": ["On l'offrait au roi", "Il avait droit à un procès", "On l'exilait sur une île", "Rien, c'était interdit"], "a": "Il avait droit à un procès", "why": "Cochons, chiens, même insectes : ils ont été jugés, parfois avec un avocat.", "pct": 25},
-      {"q": "Quel est l'animal national officiel de l'Écosse ?", "choices": ["Le cerf", "L'aigle royal", "La licorne", "Le lion"], "a": "La licorne", "why": "Symbole de pureté et de force, elle figure sur les armoiries écossaises depuis le Moyen Âge.", "pct": 38},
-      {"q": "Combien de cœurs a une pieuvre ?", "choices": ["1", "2", "3", "8"], "a": "3", "why": "Deux pour les branchies, un pour le reste du corps. Et son sang est bleu.", "pct": 40}
+      {
+        "q": "Au Moyen Âge, qu'arrivait-il parfois à un animal accusé d'avoir tué quelqu'un ?",
+        "choices": [
+          "On l'offrait au roi",
+          "Il avait droit à un procès",
+          "On l'exilait sur une île",
+          "Rien, c'était interdit"
+        ],
+        "a": "Il avait droit à un procès",
+        "why": "Cochons, chiens, même insectes : ils ont été jugés, parfois avec un avocat.",
+        "pct": 25
+      },
+      {
+        "q": "Quel est l'animal national officiel de l'Écosse ?",
+        "choices": [
+          "Le cerf",
+          "L'aigle royal",
+          "La licorne",
+          "Le lion"
+        ],
+        "a": "La licorne",
+        "why": "Symbole de pureté et de force, elle figure sur les armoiries écossaises depuis le Moyen Âge.",
+        "pct": 38
+      },
+      {
+        "q": "Combien de cœurs a une pieuvre ?",
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "8"
+        ],
+        "a": "3",
+        "why": "Deux pour les branchies, un pour le reste du corps. Et son sang est bleu.",
+        "pct": 40
+      }
     ]
   },
   {
@@ -24,9 +90,171 @@
     "hook": "moi quand quelqu'un écrit « voir même » dans le groupe de la famille",
     "glow": "#c9784a",
     "questions": [
-      {"q": "Complète : « C'est difficile, ___ impossible. »", "choices": ["voir", "voire", "voir même", "voirent"], "a": "voire", "why": "Voire, avec un e, veut dire « et même ». Voir, c'est le verbe.", "pct": 20},
-      {"q": "À quel mode est le verbe dans « Qu'il vienne ! » ?", "choices": ["Impératif", "Indicatif", "Subjonctif", "Conditionnel"], "a": "Subjonctif", "why": "L'impératif n'existe pas à la 3e personne : on emprunte le subjonctif.", "pct": 20},
-      {"q": "Dans quelle ville ont lieu les premiers Jeux olympiques modernes, en 1896 ?", "choices": ["Paris", "Londres", "Athènes", "Rome"], "a": "Athènes", "why": "En hommage à l'Antiquité grecque. Paris accueille les suivants, en 1900.", "pct": 25}
+      {
+        "q": "Complète : « C'est difficile, ___ impossible. »",
+        "choices": [
+          "voir",
+          "voire",
+          "voir même",
+          "voirent"
+        ],
+        "a": "voire",
+        "why": "Voire, avec un e, veut dire « et même ». Voir, c'est le verbe.",
+        "pct": 20
+      },
+      {
+        "q": "À quel mode est le verbe dans « Qu'il vienne ! » ?",
+        "choices": [
+          "Impératif",
+          "Indicatif",
+          "Subjonctif",
+          "Conditionnel"
+        ],
+        "a": "Subjonctif",
+        "why": "L'impératif n'existe pas à la 3e personne : on emprunte le subjonctif.",
+        "pct": 20
+      },
+      {
+        "q": "Dans quelle ville ont lieu les premiers Jeux olympiques modernes, en 1896 ?",
+        "choices": [
+          "Paris",
+          "Londres",
+          "Athènes",
+          "Rome"
+        ],
+        "a": "Athènes",
+        "why": "En hommage à l'Antiquité grecque. Paris accueille les suivants, en 1900.",
+        "pct": 25
+      }
+    ]
+  },
+  {
+    "id": "04-histoire-de-france",
+    "hook": "moi qui pensais avoir le niveau en histoire de France",
+    "glow": "#b8863a",
+    "questions": [
+      {
+        "q": "Quel roi voulait que chaque paysan puisse mettre « la poule au pot » le dimanche ?",
+        "choices": [
+          "Louis XIV",
+          "Saint Louis",
+          "Henri IV",
+          "François Ier"
+        ],
+        "a": "Henri IV",
+        "why": "Le « bon roi Henri », resté dans les mémoires comme un roi proche du peuple.",
+        "pct": 13
+      },
+      {
+        "q": "Richard Cœur de Lion était roi…",
+        "choices": [
+          "de France",
+          "d'Angleterre",
+          "d'Écosse",
+          "de Jérusalem"
+        ],
+        "a": "d'Angleterre",
+        "why": "Mais il parlait français et a passé presque tout son règne hors d'Angleterre.",
+        "pct": 17
+      },
+      {
+        "q": "Quelle rivière César franchit-il en disant « Le sort en est jeté » ?",
+        "choices": [
+          "Le Tibre",
+          "Le Pô",
+          "Le Rhône",
+          "Le Rubicon"
+        ],
+        "a": "Le Rubicon",
+        "why": "La franchir en armes, c'était déclarer la guerre à Rome. D'où « franchir le Rubicon ».",
+        "pct": 17
+      }
+    ]
+  },
+  {
+    "id": "05-nature-trompeuse",
+    "hook": "la nature quand elle décide de troller tout le monde",
+    "glow": "#7fa36a",
+    "questions": [
+      {
+        "q": "Quel animal a des empreintes digitales presque identiques aux nôtres ?",
+        "choices": [
+          "Le chimpanzé",
+          "Le koala",
+          "Le panda",
+          "Le raton laveur"
+        ],
+        "a": "Le koala",
+        "why": "Au point qu'on pourrait les confondre sur une scène de crime.",
+        "pct": 26
+      },
+      {
+        "q": "De quelle plante est tirée la tequila ?",
+        "choices": [
+          "Un cactus",
+          "Le maïs",
+          "L'agave bleu",
+          "La canne à sucre"
+        ],
+        "a": "L'agave bleu",
+        "why": "Et non, l'agave n'est pas un cactus.",
+        "pct": 33
+      },
+      {
+        "q": "Quel arbre produit des marrons qu'on ne peut pas manger ?",
+        "choices": [
+          "Le châtaignier",
+          "Le noisetier",
+          "Le hêtre",
+          "Le marronnier d'Inde"
+        ],
+        "a": "Le marronnier d'Inde",
+        "why": "Ses marrons sont toxiques. Les « marrons chauds » de l'hiver sont en fait des châtaignes.",
+        "pct": 33
+      }
+    ]
+  },
+  {
+    "id": "06-enigmes-piege",
+    "hook": "mon groupe d'amis quand je sors ces 3 énigmes à l'apéro",
+    "glow": "#8a7fc0",
+    "questions": [
+      {
+        "q": "Une horloge sonne 6 coups en 5 secondes. Combien de temps pour 12 coups ?",
+        "choices": [
+          "10 secondes",
+          "12 secondes",
+          "11 secondes",
+          "6 secondes"
+        ],
+        "a": "11 secondes",
+        "why": "6 coups, c'est 5 intervalles d'une seconde. 12 coups, c'est 11 intervalles.",
+        "pct": 21
+      },
+      {
+        "q": "Un nénuphar double chaque jour et couvre l'étang en 30 jours. Quand en couvrait-il la moitié ?",
+        "choices": [
+          "15 jours",
+          "29 jours",
+          "20 jours",
+          "28 jours"
+        ],
+        "a": "29 jours",
+        "why": "Il double chaque jour : la veille, il en couvrait la moitié.",
+        "pct": 31
+      },
+      {
+        "q": "Un escargot dans un puits de 10 m monte de 3 m le jour et glisse de 2 m la nuit. Il sort au bout de…",
+        "choices": [
+          "10 jours",
+          "7 jours",
+          "9 jours",
+          "8 jours"
+        ],
+        "a": "8 jours",
+        "why": "Après 7 jours et 7 nuits, il est à 7 m. Le 8e jour, il grimpe ses 3 m et sort.",
+        "pct": 33
+      }
     ]
   }
 ]
