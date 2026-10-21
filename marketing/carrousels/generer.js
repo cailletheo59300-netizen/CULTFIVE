@@ -7,7 +7,8 @@ const path = require('path');
 
 const out = path.resolve(process.argv[2] || 'sortie');
 const here = __dirname;
-const data = JSON.parse(fs.readFileSync(path.join(here, 'carrousels.json'), 'utf8'));
+// FICHIER=faits.json : carrousels « tu savais ? » (un fait par image, appli recommandée à la fin) ; sinon les quiz.
+const data = JSON.parse(fs.readFileSync(path.join(here, process.env.FICHIER || 'carrousels.json'), 'utf8'));
 const asset = (p) => 'data:' + (p.endsWith('.ttf') ? 'font/ttf' : p.endsWith('.png') ? 'image/png' : 'image/jpeg') +
   ';base64,' + fs.readFileSync(path.resolve(here, p)).toString('base64');
 const nunito = asset('../../android/app/src/main/res/font/nunito.ttf');
@@ -87,6 +88,13 @@ const css = `
   .badge { margin-top: 70px; background: #000; border: 2px solid #8a8a8a; border-radius: 26px; padding: 22px 54px; text-align: left; }
   .badge small { display: block; font: 600 30px Nunito, sans-serif; color: #ddd; }
   .badge span { font: 800 64px Nunito, sans-serif; color: #fff; }
+  .count { font: 700 34px Garamond, serif; letter-spacing: 6px; color: #e9c27a; margin-bottom: 44px; }
+  .fact { font: italic 800 92px/1.08 Playfair, serif; color: #fbf3e4; text-shadow: 0 4px 24px rgba(0,0,0,.85); }
+  .fact-text { margin-top: 56px; font: 400 54px/1.38 Garamond, serif; text-shadow: 0 2px 12px rgba(0,0,0,.9); }
+  .fact-text b { font-weight: 700; color: #f3d28f; }
+  .plug { font: 500 60px/1.32 Garamond, serif; text-shadow: 0 2px 12px rgba(0,0,0,.9); }
+  .plug b { font-weight: 700; color: #f3d28f; }
+  .avatar { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
 `;
 
 const page = (inner) => `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body>${inner}</body></html>`;
@@ -118,18 +126,65 @@ function slides(c, ci) {
   return s;
 }
 
+// Carrousel « fait » : accroche, un fait par image (titre + explication), puis l'appli conseillée comme par un abonné.
+function factSlides(c, ci) {
+  const s = [];
+  const seed = (n) => ci * 40 + n;
+  s.push(`<div class="slide">${painting('bougie', seed(1), c.glow)}<div class="center">
+    <div class="hook">${esc(c.hook)}</div><div class="orn bottom"><i></i><b>◆</b><i></i></div></div></div>`);
+  c.facts.forEach((f, i) => {
+    s.push(`<div class="slide">${bg(f, i % 2 ? 'bougie' : 'paysage', seed(10 + i), c.glow)}<div class="center">
+      <div class="count">${i + 1} / ${c.facts.length}</div><div class="fact">${esc(f.title)}</div>
+      <div class="fact-text">${esc(f.text).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</div></div></div>`);
+  });
+  s.push(`<div class="slide">${painting('bougie', seed(30), c.glow)}<div class="center">
+    <div class="plug">${esc(c.plug).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</div>
+    <img class="icon" src="${icon}"><div class="name">BRAINLIX</div>
+    <div class="badge"><small>Gratuit sur</small><span>l'App Store</span></div></div></div>`);
+  return s;
+}
+
+// Photo de profil (1080 × 1080) du compte « faits » : une bougie dans le clair-obscur, sans marque.
+function avatar() {
+  return `<div class="slide" style="width:1080px;height:1080px">${painting('bougie', 5, '#e0a24a')}
+    <div class="avatar"><svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+      <defs><radialGradient id="halo" cx=".5" cy=".38" r=".42"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/>
+        <stop offset=".5" stop-color="#d08a2e" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <linearGradient id="wax" x1="0" x2="1"><stop offset="0" stop-color="#8a7356"/><stop offset=".45" stop-color="#efe2c6"/>
+        <stop offset="1" stop-color="#6b5840"/></linearGradient>
+        <radialGradient id="flame" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#fffbe8"/><stop offset=".45" stop-color="#ffd36b"/>
+        <stop offset="1" stop-color="#e2731f" stop-opacity="0"/></radialGradient>
+        <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter></defs>
+      <rect width="1080" height="1080" fill="url(#halo)"/>
+      <path d="M540 245 C 590 330 585 395 540 425 C 495 395 490 330 540 245 Z" fill="url(#flame)" filter="url(#soft)"/>
+      <path d="M540 300 C 562 350 560 390 540 405 C 520 390 518 350 540 300 Z" fill="#fffdf2" opacity=".9"/>
+      <line x1="540" y1="400" x2="540" y2="440" stroke="#2a1a0c" stroke-width="6"/>
+      <rect x="485" y="438" width="110" height="380" rx="10" fill="url(#wax)"/>
+      <path d="M485 448 q 20 40 8 90 q 10 -40 22 -70 z" fill="#f6ecd6" opacity=".7"/>
+      <ellipse cx="540" cy="830" rx="190" ry="34" fill="#3b2a18"/>
+      <ellipse cx="540" cy="822" rx="170" ry="24" fill="#8a6a3e"/>
+      <ellipse cx="540" cy="816" rx="120" ry="14" fill="#b38b52" opacity=".8"/>
+    </svg></div></div>`;
+}
+
 (async () => {
   const browser = await chromium.launch();
   const tab = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
   for (const [ci, c] of data.entries()) {
     const dir = path.join(out, c.id);
     fs.mkdirSync(dir, { recursive: true });
-    for (const [i, html] of slides(c, ci).entries()) {
+    for (const [i, html] of (c.facts ? factSlides : slides)(c, ci).entries()) {
       await tab.setContent(page(html), { waitUntil: 'load' });
       await tab.evaluate(() => document.fonts.ready);
       await tab.screenshot({ path: path.join(dir, `${String(i + 1).padStart(2, '0')}.png`) });
     }
     console.log(c.id, 'ok');
+  }
+  if (process.env.FICHIER === 'faits.json') {
+    await tab.setViewportSize({ width: 1080, height: 1080 });
+    await tab.setContent(page(avatar()), { waitUntil: 'load' });
+    await tab.screenshot({ path: path.join(out, 'photo-de-profil.png') });
+    console.log('photo-de-profil ok');
   }
   await browser.close();
 })();
