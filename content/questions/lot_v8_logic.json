@@ -697,7 +697,7 @@
    "« Quelle porte l'autre m'indiquerait ? », puis prendre l'autre*",
    "« Es-tu le menteur ? »",
    "« Quelle est la bonne porte ? »",
-   "« Il fait beau ? »"
+   "« L'autre gardien ment-il ? »"
   ],
   "explanation": "Dans les deux cas, la réponse désigne la mauvaise porte : le sincère rapporte le mensonge de l'autre, le menteur ment sur la vérité de l'autre.",
   "hint": "Fais parler un gardien de l'autre."
@@ -750,7 +750,6 @@
   "options": [
    "Il pleut*",
    "Il neige",
-   "Il fait beau quand même",
    "On ne peut rien conclure"
   ],
   "explanation": "Si l'une des deux possibilités est exclue, c'est l'autre.",
@@ -1372,7 +1371,7 @@
   "prompt": "Un train part à 8 h 45 et arrive à 11 h 20. Combien de temps dure le trajet ?",
   "options": [
    "2 h 35*",
-   "2 h 75",
+   "2 h 45",
    "3 h 35",
    "2 h 25"
   ],
@@ -1559,7 +1558,7 @@
   "prompt": "Quel être marche à quatre pattes le matin, sur deux au midi et sur trois le soir ?",
   "options": [
    "L'humain*",
-   "Le chat",
+   "Le singe",
    "Le kangourou",
    "Le cheval"
   ],
@@ -1624,7 +1623,7 @@
   "options": [
    "Un fauteuil*",
    "Un singe",
-   "Une pieuvre",
+   "Un manchot",
    "Une horloge"
   ],
   "explanation": "Les accoudoirs d'un fauteuil s'appellent aussi des bras.",
@@ -1821,9 +1820,9 @@
    "Le 29 février*",
    "Le 31 décembre",
    "Le 1er janvier",
-   "Le 30 février"
+   "Le 28 février"
   ],
-  "explanation": "Le 29 février n'existe que les années bissextiles. Le 30 février n'existe jamais.",
+  "explanation": "Le 29 février n'existe que les années bissextiles, en général une année sur quatre.",
   "hint": "Une année sur quatre a un jour de plus."
  },
  {
@@ -1852,8 +1851,8 @@
   "options": [
    "U*",
    "Y",
-   "P",
-   "Q"
+   "A",
+   "E"
   ],
   "explanation": "Ce sont les voyelles dans l'ordre de l'alphabet (Y est parfois compté à part).",
   "hint": "Quel est le point commun de ces lettres ?"
@@ -2040,22 +2039,24 @@
   "concept": "logic.sequences.arith_34_12",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 34, 46, 58, 70, 82, … ?",
-  "answer": 94,
-  "explanation": "On ajoute 12 à chaque fois : 82 + 12 = 94.",
-  "hint": "Regarde l'écart entre deux nombres voisins."
+  "difficulty": 25,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 46, 58, 70, 82 ?",
+  "answer": 34,
+  "explanation": "On ajoute 12 à chaque fois. En remontant à partir de 46, on trouve 34.",
+  "hint": "Regarde l'écart entre deux nombres voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-656",
   "concept": "logic.sequences.arith_45_8",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 45, 53, 61, 69, 77, … ?",
-  "answer": 85,
-  "explanation": "On ajoute 8 à chaque fois : 77 + 8 = 85.",
-  "hint": "Regarde l'écart entre deux nombres voisins."
+  "difficulty": 30,
+  "prompt": "Dans la suite 45, 53, 61, 69…, à quelle position se trouve le nombre 149 ?",
+  "answer": 14,
+  "explanation": "On ajoute 8 à chaque fois. De 45 à 149, il y a 13 pas de 8 : 149 est le 14e nombre.",
+  "hint": "Regarde l'écart entre deux nombres voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-657",
@@ -2063,10 +2064,11 @@
   "label": "Suite régulière",
   "type": "numeric",
   "difficulty": 20,
-  "prompt": "Quel nombre suit : 48, 57, 66, 75, 84, … ?",
-  "answer": 93,
-  "explanation": "On ajoute 9 à chaque fois : 84 + 9 = 93.",
-  "hint": "Regarde l'écart entre deux nombres voisins."
+  "prompt": "Une tirelire contient 48 €. Chaque semaine, on y ajoute 9 €. Combien contient-elle au bout de 10 semaines ?",
+  "answer": 138,
+  "explanation": "C'est une suite : 48, 57, 66… 48 + 10 × 9 = 138.",
+  "hint": "Regarde l'écart entre deux nombres voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-658",
@@ -2084,33 +2086,36 @@
   "concept": "logic.sequences.arith_50_12",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 50, 62, 74, 86, 98, … ?",
-  "answer": 110,
-  "explanation": "On ajoute 12 à chaque fois : 98 + 12 = 110.",
-  "hint": "Regarde l'écart entre deux nombres voisins."
+  "difficulty": 30,
+  "prompt": "Dans la suite 50, 62, 74, 86…, quel est le 12e nombre ?",
+  "answer": 182,
+  "explanation": "On ajoute 12 à chaque fois : le 12e nombre vaut 50 + 11 × 12 = 182.",
+  "hint": "Regarde l'écart entre deux nombres voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-660",
   "concept": "logic.sequences.arith_57_4",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 57, 61, 65, 69, 73, … ?",
-  "answer": 77,
-  "explanation": "On ajoute 4 à chaque fois : 73 + 4 = 77.",
-  "hint": "Regarde l'écart entre deux nombres voisins."
+  "difficulty": 25,
+  "prompt": "Par quel nombre commence cette suite : ?, 61, 65, 69, 73 ?",
+  "answer": 57,
+  "explanation": "On ajoute 4 à chaque fois. En remontant à partir de 61, on trouve 57.",
+  "hint": "Regarde l'écart entre deux nombres voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-661",
   "concept": "logic.sequences.arith_41_9",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 41, 50, 59, 68, 77, … ?",
-  "answer": 86,
-  "explanation": "On ajoute 9 à chaque fois : 77 + 9 = 86.",
-  "hint": "Regarde l'écart entre deux nombres voisins."
+  "difficulty": 30,
+  "prompt": "Dans la suite 41, 50, 59, 68…, à quelle position se trouve le nombre 185 ?",
+  "answer": 17,
+  "explanation": "On ajoute 9 à chaque fois. De 41 à 185, il y a 16 pas de 9 : 185 est le 17e nombre.",
+  "hint": "Regarde l'écart entre deux nombres voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-662",
@@ -2128,11 +2133,12 @@
   "concept": "logic.sequences.geo_3_2",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 38,
-  "prompt": "Quel nombre suit : 3, 6, 12, 24, … ?",
-  "answer": 48,
-  "explanation": "Chaque nombre est multiplié par 2 : 24 × 2 = 48.",
-  "hint": "Divise un nombre par celui qui le précède."
+  "difficulty": 43,
+  "prompt": "Quel nombre manque dans cette suite : 3, 6, ?, 24, 48, 96 ?",
+  "answer": 12,
+  "explanation": "On multiplie par 2 à chaque fois. Le nombre manquant est 12.",
+  "hint": "Divise un nombre par celui qui le précède.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-664",
@@ -2150,33 +2156,36 @@
   "concept": "logic.sequences.geo_2_4",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 45,
-  "prompt": "Quel nombre suit : 2, 8, 32, 128, … ?",
+  "difficulty": 50,
+  "prompt": "Le premier jour, 2 personnes connaissent une rumeur. Chaque jour, leur nombre est multiplié par 4. Combien la connaissent le 5e jour ?",
   "answer": 512,
-  "explanation": "Chaque nombre est multiplié par 4 : 128 × 4 = 512.",
-  "hint": "Divise un nombre par celui qui le précède."
+  "explanation": "2, 8, 32, 128, 512 : on multiplie par 4 chaque jour. C'est la force des suites qui se multiplient.",
+  "hint": "Divise un nombre par celui qui le précède.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-666",
   "concept": "logic.sequences.geo_5_3",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 38,
-  "prompt": "Quel nombre suit : 5, 15, 45, 135, … ?",
-  "answer": 405,
-  "explanation": "Chaque nombre est multiplié par 3 : 135 × 3 = 405.",
-  "hint": "Divise un nombre par celui qui le précède."
+  "difficulty": 43,
+  "prompt": "Il manque un nombre au milieu : 5, 15, 45, ?, 405, 1215. Lequel ?",
+  "answer": 135,
+  "explanation": "On multiplie par 3 à chaque fois. Le nombre manquant est 135.",
+  "hint": "Divise un nombre par celui qui le précède.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-667",
   "concept": "logic.sequences.geo_7_2",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 38,
-  "prompt": "Quel nombre suit : 7, 14, 28, 56, … ?",
-  "answer": 112,
-  "explanation": "Chaque nombre est multiplié par 2 : 56 × 2 = 112.",
-  "hint": "Divise un nombre par celui qui le précède."
+  "difficulty": 43,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 14, 28, 56, 112 ?",
+  "answer": 7,
+  "explanation": "On multiplie par 2 à chaque fois. En remontant à partir de 14, on trouve 7.",
+  "hint": "Divise un nombre par celui qui le précède.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-668",
@@ -2194,33 +2203,36 @@
   "concept": "logic.sequences.geo_6_2",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 38,
-  "prompt": "Quel nombre suit : 6, 12, 24, 48, … ?",
-  "answer": 96,
-  "explanation": "Chaque nombre est multiplié par 2 : 48 × 2 = 96.",
-  "hint": "Divise un nombre par celui qui le précède."
+  "difficulty": 43,
+  "prompt": "Quel nombre manque dans cette suite : 6, 12, ?, 48, 96, 192 ?",
+  "answer": 24,
+  "explanation": "On multiplie par 2 à chaque fois. Le nombre manquant est 24.",
+  "hint": "Divise un nombre par celui qui le précède.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-670",
   "concept": "logic.sequences.ecarts_3_1",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 48,
-  "prompt": "Quel nombre suit : 3, 4, 6, 9, 13, … ?",
-  "answer": 18,
-  "explanation": "Les écarts augmentent de 1 : +1, +2, +3, +4, puis +5. 13 + 5 = 18.",
-  "hint": "Écris les écarts entre voisins."
+  "difficulty": 58,
+  "prompt": "Un nombre est faux dans cette suite : 3, 4, 6, 9, 15, 18. Par quel nombre faut-il le remplacer ?",
+  "answer": 13,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (1, 2, 3…). Il fallait 13 au lieu de 15.",
+  "hint": "Écris les écarts entre voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-671",
   "concept": "logic.sequences.ecarts_10_2",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 48,
-  "prompt": "Quel nombre suit : 10, 12, 15, 19, 24, … ?",
-  "answer": 30,
-  "explanation": "Les écarts augmentent de 1 : +2, +3, +4, +5, puis +6. 24 + 6 = 30.",
-  "hint": "Écris les écarts entre voisins."
+  "difficulty": 53,
+  "prompt": "Quel nombre manque dans cette suite : 10, 12, ?, 19, 24, 30 ?",
+  "answer": 15,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (2, 3, 4…). Le nombre manquant est 15.",
+  "hint": "Écris les écarts entre voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-672",
@@ -2238,33 +2250,36 @@
   "concept": "logic.sequences.ecarts_5_3",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 48,
-  "prompt": "Quel nombre suit : 5, 8, 12, 17, 23, … ?",
-  "answer": 30,
-  "explanation": "Les écarts augmentent de 1 : +3, +4, +5, +6, puis +7. 23 + 7 = 30.",
-  "hint": "Écris les écarts entre voisins."
+  "difficulty": 53,
+  "prompt": "Quel nombre manque dans cette suite : 5, 8, ?, 17, 23, 30 ?",
+  "answer": 12,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (3, 4, 5…). Le nombre manquant est 12.",
+  "hint": "Écris les écarts entre voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-674",
   "concept": "logic.sequences.ecarts_2_2",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 48,
-  "prompt": "Quel nombre suit : 2, 4, 7, 11, 16, … ?",
-  "answer": 22,
-  "explanation": "Les écarts augmentent de 1 : +2, +3, +4, +5, puis +6. 16 + 6 = 22.",
-  "hint": "Écris les écarts entre voisins."
+  "difficulty": 58,
+  "prompt": "Un nombre est faux dans cette suite : 2, 4, 7, 11, 18, 22. Par quel nombre faut-il le remplacer ?",
+  "answer": 16,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (2, 3, 4…). Il fallait 16 au lieu de 18.",
+  "hint": "Écris les écarts entre voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-675",
   "concept": "logic.sequences.ecarts_30_4",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 48,
-  "prompt": "Quel nombre suit : 30, 34, 39, 45, 52, … ?",
-  "answer": 60,
-  "explanation": "Les écarts augmentent de 1 : +4, +5, +6, +7, puis +8. 52 + 8 = 60.",
-  "hint": "Écris les écarts entre voisins."
+  "difficulty": 53,
+  "prompt": "Quel nombre manque dans cette suite : 30, 34, ?, 45, 52, 60 ?",
+  "answer": 39,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (4, 5, 6…). Le nombre manquant est 39.",
+  "hint": "Écris les écarts entre voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-676",
@@ -2282,33 +2297,36 @@
   "concept": "logic.sequences.ecarts_8_5",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 48,
-  "prompt": "Quel nombre suit : 8, 13, 19, 26, 34, … ?",
-  "answer": 43,
-  "explanation": "Les écarts augmentent de 1 : +5, +6, +7, +8, puis +9. 34 + 9 = 43.",
-  "hint": "Écris les écarts entre voisins."
+  "difficulty": 53,
+  "prompt": "Quel nombre manque dans cette suite : 8, 13, ?, 26, 34, 43 ?",
+  "answer": 19,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (5, 6, 7…). Le nombre manquant est 19.",
+  "hint": "Écris les écarts entre voisins.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-679",
   "concept": "logic.sequences.ecarts_doubles_5_2",
   "label": "Écarts qui doublent",
   "type": "numeric",
-  "difficulty": 62,
-  "prompt": "Quel nombre suit : 5, 7, 11, 19, 35, … ?",
-  "answer": 67,
-  "explanation": "Les écarts doublent : +2, +4, +8, +16, puis +32. 35 + 32 = 67.",
-  "hint": "Regarde les écarts : ils suivent une autre règle."
+  "difficulty": 67,
+  "prompt": "Il manque un nombre au milieu : 5, 7, 11, ?, 35, 67. Lequel ?",
+  "answer": 19,
+  "explanation": "On multiplie par 2 puis on enlève 3. Le nombre manquant est 19.",
+  "hint": "Regarde les écarts : ils suivent une autre règle.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-681",
   "concept": "logic.sequences.ecarts_doubles_10_1",
   "label": "Écarts qui doublent",
   "type": "numeric",
-  "difficulty": 62,
-  "prompt": "Quel nombre suit : 10, 11, 13, 17, 25, … ?",
-  "answer": 41,
-  "explanation": "Les écarts doublent : +1, +2, +4, +8, puis +16. 25 + 16 = 41.",
-  "hint": "Regarde les écarts : ils suivent une autre règle."
+  "difficulty": 67,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 11, 13, 17, 25 ?",
+  "answer": 10,
+  "explanation": "On multiplie par 2 puis on enlève 9. En remontant à partir de 11, on trouve 10.",
+  "hint": "Regarde les écarts : ils suivent une autre règle.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-682",
@@ -2326,11 +2344,12 @@
   "concept": "logic.sequences.entrelacees_2_50",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 2, 50, 5, 45, 8, 40, … ?",
-  "answer": 11,
-  "explanation": "Deux suites alternent : 2, 5, 8… (+3) et 50, 45, 40… (−5). La suivante est 11.",
-  "hint": "Lis un nombre sur deux."
+  "difficulty": 70,
+  "prompt": "Quel est le 10e nombre de la suite 2, 50, 5, 45, 8, 40… ?",
+  "answer": 30,
+  "explanation": "Deux suites alternent : 2, 5, 8… (on ajoute 3) et 50, 45, 40… (on enlève 5). Le 10e nombre appartient à la seconde : 30.",
+  "hint": "Lis un nombre sur deux.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-684",
@@ -2348,33 +2367,36 @@
   "concept": "logic.sequences.entrelacees_5_40",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 5, 40, 10, 36, 15, 32, … ?",
-  "answer": 20,
-  "explanation": "Deux suites alternent : 5, 10, 15… (+5) et 40, 36, 32… (−4). La suivante est 20.",
-  "hint": "Lis un nombre sur deux."
+  "difficulty": 70,
+  "prompt": "Quel est le 10e nombre de la suite 5, 40, 10, 36, 15, 32… ?",
+  "answer": 24,
+  "explanation": "Deux suites alternent : 5, 10, 15… (on ajoute 5) et 40, 36, 32… (on enlève 4). Le 10e nombre appartient à la seconde : 24.",
+  "hint": "Lis un nombre sur deux.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-686",
   "concept": "logic.sequences.entrelacees_1_100",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 1, 100, 3, 90, 5, 80, … ?",
-  "answer": 7,
-  "explanation": "Deux suites alternent : 1, 3, 5… (+2) et 100, 90, 80… (−10). La suivante est 7.",
-  "hint": "Lis un nombre sur deux."
+  "difficulty": 65,
+  "prompt": "Il manque un nombre au milieu : 1, 100, 3, ?, 5, 80. Lequel ?",
+  "answer": 90,
+  "explanation": "Deux suites alternent : 1, 3, 5… (on ajoute 2) et 100, 90, 80… (on enlève 10). Le nombre manquant est 90.",
+  "hint": "Lis un nombre sur deux.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-687",
   "concept": "logic.sequences.entrelacees_7_3",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 7, 3, 14, 6, 21, 9, … ?",
-  "answer": 28,
-  "explanation": "Deux suites alternent : 7, 14, 21… (+7) et 3, 6, 9… (+3). La suivante est 28.",
-  "hint": "Lis un nombre sur deux."
+  "difficulty": 70,
+  "prompt": "Quel est le 10e nombre de la suite 7, 3, 14, 6, 21, 9… ?",
+  "answer": 15,
+  "explanation": "Deux suites alternent : 7, 14, 21… (on ajoute 7) et 3, 6, 9… (on ajoute 3). Le 10e nombre appartient à la seconde : 15.",
+  "hint": "Lis un nombre sur deux.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-688",
@@ -2392,33 +2414,36 @@
   "concept": "logic.sequences.mult_plus_2_2_2",
   "label": "Multiplier puis ajouter",
   "type": "numeric",
-  "difficulty": 64,
-  "prompt": "Quel nombre suit : 2, 6, 14, 30, 62, … ?",
-  "answer": 126,
-  "explanation": "Chaque terme vaut le précédent × 2 + 2 : 62 × 2 + 2 = 126.",
-  "hint": "Deux opérations à chaque étape."
+  "difficulty": 69,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 6, 14, 30, 62 ?",
+  "answer": 2,
+  "explanation": "On multiplie par 2 puis on ajoute 2. En remontant à partir de 6, on trouve 2.",
+  "hint": "Deux opérations à chaque étape.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-690",
   "concept": "logic.sequences.mult_plus_3_2_m1",
   "label": "Multiplier puis ajouter",
   "type": "numeric",
-  "difficulty": 64,
-  "prompt": "Quel nombre suit : 3, 5, 9, 17, 33, … ?",
-  "answer": 65,
-  "explanation": "Chaque terme vaut le précédent × 2 − 1 : 33 × 2 − 1 = 65.",
-  "hint": "Deux opérations à chaque étape."
+  "difficulty": 69,
+  "prompt": "Il manque un nombre au milieu : 3, 5, 9, ?, 33, 65. Lequel ?",
+  "answer": 17,
+  "explanation": "On multiplie par 2 puis on enlève 1. Le nombre manquant est 17.",
+  "hint": "Deux opérations à chaque étape.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-691",
   "concept": "logic.sequences.mult_plus_1_3_1",
   "label": "Multiplier puis ajouter",
   "type": "numeric",
-  "difficulty": 64,
-  "prompt": "Quel nombre suit : 1, 4, 13, 40, 121, … ?",
-  "answer": 364,
-  "explanation": "Chaque terme vaut le précédent × 3 + 1 : 121 × 3 + 1 = 364.",
-  "hint": "Deux opérations à chaque étape."
+  "difficulty": 69,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 4, 13, 40, 121 ?",
+  "answer": 1,
+  "explanation": "On multiplie par 3 puis on ajoute 1. En remontant à partir de 4, on trouve 1.",
+  "hint": "Deux opérations à chaque étape.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-692",
@@ -2436,33 +2461,36 @@
   "concept": "logic.sequences.mult_plus_4_2_3",
   "label": "Multiplier puis ajouter",
   "type": "numeric",
-  "difficulty": 64,
-  "prompt": "Quel nombre suit : 4, 11, 25, 53, 109, … ?",
-  "answer": 221,
-  "explanation": "Chaque terme vaut le précédent × 2 + 3 : 109 × 2 + 3 = 221.",
-  "hint": "Deux opérations à chaque étape."
+  "difficulty": 69,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 11, 25, 53, 109 ?",
+  "answer": 4,
+  "explanation": "On multiplie par 2 puis on ajoute 3. En remontant à partir de 11, on trouve 4.",
+  "hint": "Deux opérations à chaque étape.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-694",
   "concept": "logic.sequences.carres_1_1",
   "label": "Carrés",
   "type": "numeric",
-  "difficulty": 58,
-  "prompt": "Quel nombre suit : 2, 5, 10, 17, 26, … ?",
-  "answer": 37,
-  "explanation": "Ce sont les carrés plus 1 : 6 × 6 + 1 = 37.",
-  "hint": "Pense aux nombres multipliés par eux-mêmes."
+  "difficulty": 68,
+  "prompt": "Un nombre est faux dans cette suite : 2, 5, 10, 17, 28, 37. Par quel nombre faut-il le remplacer ?",
+  "answer": 26,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (3, 5, 7…). Il fallait 26 au lieu de 28.",
+  "hint": "Pense aux nombres multipliés par eux-mêmes.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-695",
   "concept": "logic.sequences.carres_m1_2",
   "label": "Carrés",
   "type": "numeric",
-  "difficulty": 58,
-  "prompt": "Quel nombre suit : 3, 8, 15, 24, 35, … ?",
-  "answer": 48,
-  "explanation": "Ce sont les carrés moins 1 : 7 × 7 − 1 = 48.",
-  "hint": "Pense aux nombres multipliés par eux-mêmes."
+  "difficulty": 63,
+  "prompt": "Quel nombre manque dans cette suite : 3, 8, ?, 24, 35, 48 ?",
+  "answer": 15,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (5, 7, 9…). Le nombre manquant est 15.",
+  "hint": "Pense aux nombres multipliés par eux-mêmes.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-696",
@@ -2480,11 +2508,12 @@
   "concept": "logic.sequences.carres_0_4",
   "label": "Carrés",
   "type": "numeric",
-  "difficulty": 58,
-  "prompt": "Quel nombre suit : 16, 25, 36, 49, 64, … ?",
-  "answer": 81,
-  "explanation": "Ce sont les carrés : 9 × 9 = 81.",
-  "hint": "Pense aux nombres multipliés par eux-mêmes."
+  "difficulty": 63,
+  "prompt": "Quel nombre manque dans cette suite : 16, 25, ?, 49, 64, 81 ?",
+  "answer": 36,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (9, 11, 13…). Le nombre manquant est 36.",
+  "hint": "Pense aux nombres multipliés par eux-mêmes.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-698",
@@ -2612,11 +2641,12 @@
   "concept": "logic.sequences.puissances_2_moins_1",
   "label": "Puissances de 2 moins 1",
   "type": "numeric",
-  "difficulty": 62,
-  "prompt": "Quel nombre suit : 1, 3, 7, 15, 31, 63, … ?",
-  "answer": 127,
-  "explanation": "Chaque terme vaut 2ⁿ − 1 (ou le double du précédent plus 1) : 2⁷ − 1 = 127.",
-  "hint": "Compare avec 2, 4, 8, 16…"
+  "difficulty": 67,
+  "prompt": "Il manque un nombre au milieu : 1, 3, 7, ?, 31, 63. Lequel ?",
+  "answer": 15,
+  "explanation": "On multiplie par 2 puis on ajoute 1. Le nombre manquant est 15.",
+  "hint": "Compare avec 2, 4, 8, 16…",
+  "reset_difficulty": true
  },
  {
   "key": "logic-710",
@@ -2667,21 +2697,23 @@
   "concept": "logic.sequences.miroir_11",
   "label": "Multiples de 11",
   "type": "numeric",
-  "difficulty": 40,
-  "prompt": "Quel nombre suit : 11, 22, 33, 44, 55, … ?",
-  "answer": 66,
-  "explanation": "On ajoute 11 à chaque fois : 55 + 11 = 66.",
-  "hint": "Des chiffres jumeaux."
+  "difficulty": 45,
+  "prompt": "Quel nombre manque dans cette suite : 11, 22, ?, 44, 55, 66 ?",
+  "answer": 33,
+  "explanation": "On ajoute 11 à chaque fois. Le nombre manquant est 33.",
+  "hint": "Des chiffres jumeaux.",
+  "reset_difficulty": true
  },
  {
   "key": "logic-715",
   "concept": "logic.sequences.tables_9_decroissant",
   "label": "Table de 9 à l'envers",
   "type": "numeric",
-  "difficulty": 30,
-  "prompt": "Quel nombre suit : 90, 81, 72, 63, 54, … ?",
-  "answer": 45,
-  "explanation": "On retire 9 à chaque fois : 54 − 9 = 45.",
-  "hint": "Une table de multiplication, à l'envers."
+  "difficulty": 40,
+  "prompt": "Dans la suite 90, 81, 72, 63…, quel est le 15e nombre ?",
+  "answer": -36,
+  "explanation": "On enlève 9 à chaque fois : le 15e nombre vaut 90 − 14 × 9 = -36.",
+  "hint": "Une table de multiplication, à l'envers.",
+  "reset_difficulty": true
  }
 ]

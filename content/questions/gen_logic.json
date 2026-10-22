@@ -4,30 +4,33 @@
   "concept": "logic.sequences.gen_arith_1",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 8, 11, 14, 17, 20, … ?",
-  "answer": 23,
-  "explanation": "On ajoute 3 à chaque fois : 20 + 3 = 23."
+  "difficulty": 25,
+  "prompt": "Quel nombre manque dans cette suite : 8, 11, ?, 17, 20, 23 ?",
+  "answer": 14,
+  "explanation": "On ajoute 3 à chaque fois. Le nombre manquant est 14.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-002",
   "concept": "logic.sequences.gen_arith_2",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 4, 10, 16, 22, 28, … ?",
-  "answer": 34,
-  "explanation": "On ajoute 6 à chaque fois : 28 + 6 = 34."
+  "difficulty": 30,
+  "prompt": "Dans la suite 4, 10, 16, 22…, quel est le 15e nombre ?",
+  "answer": 88,
+  "explanation": "On ajoute 6 à chaque fois : le 15e nombre vaut 4 + 14 × 6 = 88.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-003",
   "concept": "logic.sequences.gen_arith_3",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 40, 49, 58, 67, 76, … ?",
-  "answer": 85,
-  "explanation": "On ajoute 9 à chaque fois : 76 + 9 = 85."
+  "difficulty": 25,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 49, 58, 67, 76 ?",
+  "answer": 40,
+  "explanation": "On ajoute 9 à chaque fois. En remontant à partir de 49, on trouve 40.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-004",
@@ -45,29 +48,32 @@
   "label": "Suite régulière",
   "type": "numeric",
   "difficulty": 20,
-  "prompt": "Quel nombre suit : 38, 49, 60, 71, 82, … ?",
-  "answer": 93,
-  "explanation": "On ajoute 11 à chaque fois : 82 + 11 = 93."
+  "prompt": "Une tirelire contient 38 €. Chaque semaine, on y ajoute 11 €. Combien contient-elle au bout de 10 semaines ?",
+  "answer": 148,
+  "explanation": "C'est une suite : 38, 49, 60… 38 + 10 × 11 = 148.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-006",
   "concept": "logic.sequences.gen_arith_6",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 21, 28, 35, 42, 49, … ?",
-  "answer": 56,
-  "explanation": "On ajoute 7 à chaque fois : 49 + 7 = 56."
+  "difficulty": 25,
+  "prompt": "Il manque un nombre au milieu : 21, 28, 35, ?, 49, 56. Lequel ?",
+  "answer": 42,
+  "explanation": "On ajoute 7 à chaque fois. Le nombre manquant est 42.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-007",
   "concept": "logic.sequences.gen_arith_7",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 15, 24, 33, 42, 51, … ?",
-  "answer": 60,
-  "explanation": "On ajoute 9 à chaque fois : 51 + 9 = 60."
+  "difficulty": 30,
+  "prompt": "Dans la suite 15, 24, 33, 42…, quel est le 20e nombre ?",
+  "answer": 186,
+  "explanation": "On ajoute 9 à chaque fois : le 20e nombre vaut 15 + 19 × 9 = 186.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-008",
@@ -84,10 +90,11 @@
   "concept": "logic.sequences.gen_arith_9",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 19, 25, 31, 37, 43, … ?",
-  "answer": 49,
-  "explanation": "On ajoute 6 à chaque fois : 43 + 6 = 49."
+  "difficulty": 30,
+  "prompt": "Dans la suite 19, 25, 31, 37…, à quelle position se trouve le nombre 79 ?",
+  "answer": 11,
+  "explanation": "On ajoute 6 à chaque fois. De 19 à 79, il y a 10 pas de 6 : 79 est le 11e nombre.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-010",
@@ -95,19 +102,21 @@
   "label": "Suite régulière",
   "type": "numeric",
   "difficulty": 20,
-  "prompt": "Quel nombre suit : 20, 29, 38, 47, 56, … ?",
-  "answer": 65,
-  "explanation": "On ajoute 9 à chaque fois : 56 + 9 = 65."
+  "prompt": "Un arbre mesure 20 cm à la plantation et grandit de 9 cm par an. Combien mesure-t-il au bout de 10 ans ?",
+  "answer": 110,
+  "explanation": "C'est une suite : 20, 29, 38… 20 + 10 × 9 = 110.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-011",
   "concept": "logic.sequences.gen_arith_11",
   "label": "Suite régulière",
   "type": "numeric",
-  "difficulty": 20,
-  "prompt": "Quel nombre suit : 37, 52, 67, 82, 97, … ?",
-  "answer": 112,
-  "explanation": "On ajoute 15 à chaque fois : 97 + 15 = 112."
+  "difficulty": 25,
+  "prompt": "Quel nombre manque dans cette suite : 37, 52, ?, 82, 97, 112 ?",
+  "answer": 67,
+  "explanation": "On ajoute 15 à chaque fois. Le nombre manquant est 67.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-012",
@@ -124,30 +133,33 @@
   "concept": "logic.sequences.gen_geom_13",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 36,
-  "prompt": "Quel nombre suit : 2, 4, 8, 16, … ?",
-  "answer": 32,
-  "explanation": "On multiplie par 2 : 16 × 2 = 32."
+  "difficulty": 41,
+  "prompt": "Quel nombre manque dans cette suite : 2, 4, ?, 16, 32, 64 ?",
+  "answer": 8,
+  "explanation": "On multiplie par 2 à chaque fois. Le nombre manquant est 8.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-014",
   "concept": "logic.sequences.gen_geom_14",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 39,
-  "prompt": "Quel nombre suit : 2, 6, 18, 54, … ?",
-  "answer": 162,
-  "explanation": "On multiplie par 3 : 54 × 3 = 162."
+  "difficulty": 44,
+  "prompt": "Par quel nombre commence cette suite : ?, 6, 18, 54, 162 ?",
+  "answer": 2,
+  "explanation": "On multiplie par 3 à chaque fois. En remontant à partir de 6, on trouve 2.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-015",
   "concept": "logic.sequences.gen_geom_15",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 42,
-  "prompt": "Quel nombre suit : 3, 12, 48, 192, … ?",
+  "difficulty": 47,
+  "prompt": "Le premier jour, 3 personnes connaissent une rumeur. Chaque jour, leur nombre est multiplié par 4. Combien la connaissent le 5e jour ?",
   "answer": 768,
-  "explanation": "On multiplie par 4 : 192 × 4 = 768."
+  "explanation": "3, 12, 48, 192, 768 : on multiplie par 4 chaque jour. C'est la force des suites qui se multiplient.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-016",
@@ -164,50 +176,55 @@
   "concept": "logic.sequences.gen_geom_17",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 36,
-  "prompt": "Quel nombre suit : 5, 10, 20, 40, … ?",
-  "answer": 80,
-  "explanation": "On multiplie par 2 : 40 × 2 = 80."
+  "difficulty": 41,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 10, 20, 40, 80 ?",
+  "answer": 5,
+  "explanation": "On multiplie par 2 à chaque fois. En remontant à partir de 10, on trouve 5.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-018",
   "concept": "logic.sequences.gen_geom_18",
   "label": "Suite multipliée",
   "type": "numeric",
-  "difficulty": 39,
-  "prompt": "Quel nombre suit : 4, 12, 36, 108, … ?",
+  "difficulty": 44,
+  "prompt": "Le premier jour, 4 personnes connaissent une rumeur. Chaque jour, leur nombre est multiplié par 3. Combien la connaissent le 5e jour ?",
   "answer": 324,
-  "explanation": "On multiplie par 3 : 108 × 3 = 324."
+  "explanation": "4, 12, 36, 108, 324 : on multiplie par 3 chaque jour. C'est la force des suites qui se multiplient.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-021",
   "concept": "logic.sequences.gen_growing_21",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 50,
-  "prompt": "Quel nombre suit : 7, 11, 16, 22, 29, … ?",
-  "answer": 37,
-  "explanation": "Les écarts augmentent de 1 à chaque fois : +4, +5, +6, +7, puis +8. 29 + 8 = 37."
+  "difficulty": 55,
+  "prompt": "Quel nombre manque dans cette suite : 7, 11, ?, 22, 29, 37 ?",
+  "answer": 16,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (4, 5, 6…). Le nombre manquant est 16.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-022",
   "concept": "logic.sequences.gen_growing_22",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 50,
-  "prompt": "Quel nombre suit : 7, 9, 12, 16, 21, … ?",
-  "answer": 27,
-  "explanation": "Les écarts augmentent de 1 à chaque fois : +2, +3, +4, +5, puis +6. 21 + 6 = 27."
+  "difficulty": 60,
+  "prompt": "Un nombre est faux dans cette suite : 7, 9, 12, 16, 23, 27. Par quel nombre faut-il le remplacer ?",
+  "answer": 21,
+  "explanation": "Les écarts augmentent de 1 à chaque fois (2, 3, 4…). Il fallait 21 au lieu de 23.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-023",
   "concept": "logic.sequences.gen_growing_23",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 50,
-  "prompt": "Quel nombre suit : 1, 5, 12, 22, 35, … ?",
-  "answer": 51,
-  "explanation": "Les écarts augmentent de 3 à chaque fois : +4, +7, +10, +13, puis +16. 35 + 16 = 51."
+  "difficulty": 55,
+  "prompt": "Quel nombre manque dans cette suite : 1, 5, ?, 22, 35, 51 ?",
+  "answer": 12,
+  "explanation": "Les écarts augmentent de 3 à chaque fois (4, 7, 10…). Le nombre manquant est 12.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-024",
@@ -224,30 +241,33 @@
   "concept": "logic.sequences.gen_growing_25",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 50,
-  "prompt": "Quel nombre suit : 17, 18, 21, 26, 33, … ?",
-  "answer": 42,
-  "explanation": "Les écarts augmentent de 2 à chaque fois : +1, +3, +5, +7, puis +9. 33 + 9 = 42."
+  "difficulty": 55,
+  "prompt": "Quel nombre manque dans cette suite : 17, 18, ?, 26, 33, 42 ?",
+  "answer": 21,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (1, 3, 5…). Le nombre manquant est 21.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-026",
   "concept": "logic.sequences.gen_growing_26",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 50,
-  "prompt": "Quel nombre suit : 4, 5, 8, 13, 20, … ?",
-  "answer": 29,
-  "explanation": "Les écarts augmentent de 2 à chaque fois : +1, +3, +5, +7, puis +9. 20 + 9 = 29."
+  "difficulty": 60,
+  "prompt": "Un nombre est faux dans cette suite : 4, 5, 8, 13, 22, 29. Par quel nombre faut-il le remplacer ?",
+  "answer": 20,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (1, 3, 5…). Il fallait 20 au lieu de 22.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-027",
   "concept": "logic.sequences.gen_growing_27",
   "label": "Écarts qui grandissent",
   "type": "numeric",
-  "difficulty": 50,
-  "prompt": "Quel nombre suit : 12, 15, 21, 30, 42, … ?",
-  "answer": 57,
-  "explanation": "Les écarts augmentent de 3 à chaque fois : +3, +6, +9, +12, puis +15. 42 + 15 = 57."
+  "difficulty": 55,
+  "prompt": "Quel nombre manque dans cette suite : 12, 15, ?, 30, 42, 57 ?",
+  "answer": 21,
+  "explanation": "Les écarts augmentent de 3 à chaque fois (3, 6, 9…). Le nombre manquant est 21.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-028",
@@ -264,30 +284,33 @@
   "concept": "logic.sequences.gen_interleaved_29",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 6, 34, 9, 28, 12, 22, … ?",
-  "answer": 15,
-  "explanation": "Deux suites alternent : 6, 9, 12… (+3) et 34, 28, 22… (−6). Le suivant appartient à la première : 15."
+  "difficulty": 70,
+  "prompt": "Quel est le 10e nombre de la suite 6, 34, 9, 28, 12, 22… ?",
+  "answer": 10,
+  "explanation": "Deux suites alternent : 6, 9, 12… (on ajoute 3) et 34, 28, 22… (on enlève 6). Le 10e nombre appartient à la seconde : 10.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-030",
   "concept": "logic.sequences.gen_interleaved_30",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 3, 48, 7, 43, 11, 38, … ?",
-  "answer": 15,
-  "explanation": "Deux suites alternent : 3, 7, 11… (+4) et 48, 43, 38… (−5). Le suivant appartient à la première : 15."
+  "difficulty": 65,
+  "prompt": "Il manque un nombre au milieu : 3, 48, 7, ?, 11, 38. Lequel ?",
+  "answer": 43,
+  "explanation": "Deux suites alternent : 3, 7, 11… (on ajoute 4) et 48, 43, 38… (on enlève 5). Le nombre manquant est 43.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-031",
   "concept": "logic.sequences.gen_interleaved_31",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 7, 27, 10, 25, 13, 23, … ?",
-  "answer": 16,
-  "explanation": "Deux suites alternent : 7, 10, 13… (+3) et 27, 25, 23… (−2). Le suivant appartient à la première : 16."
+  "difficulty": 70,
+  "prompt": "Quel est le 10e nombre de la suite 7, 27, 10, 25, 13, 23… ?",
+  "answer": 19,
+  "explanation": "Deux suites alternent : 7, 10, 13… (on ajoute 3) et 27, 25, 23… (on enlève 2). Le 10e nombre appartient à la seconde : 19.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-032",
@@ -304,50 +327,55 @@
   "concept": "logic.sequences.gen_interleaved_33",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 3, 28, 8, 22, 13, 16, … ?",
-  "answer": 18,
-  "explanation": "Deux suites alternent : 3, 8, 13… (+5) et 28, 22, 16… (−6). Le suivant appartient à la première : 18."
+  "difficulty": 70,
+  "prompt": "Quel est le 10e nombre de la suite 3, 28, 8, 22, 13, 16… ?",
+  "answer": 4,
+  "explanation": "Deux suites alternent : 3, 8, 13… (on ajoute 5) et 28, 22, 16… (on enlève 6). Le 10e nombre appartient à la seconde : 4.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-034",
   "concept": "logic.sequences.gen_interleaved_34",
   "label": "Deux suites mêlées",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 9, 33, 11, 29, 13, 25, … ?",
-  "answer": 15,
-  "explanation": "Deux suites alternent : 9, 11, 13… (+2) et 33, 29, 25… (−4). Le suivant appartient à la première : 15."
+  "difficulty": 65,
+  "prompt": "Il manque un nombre au milieu : 9, 33, 11, ?, 13, 25. Lequel ?",
+  "answer": 29,
+  "explanation": "Deux suites alternent : 9, 11, 13… (on ajoute 2) et 33, 29, 25… (on enlève 4). Le nombre manquant est 29.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-035",
   "concept": "logic.sequences.gen_double_35",
   "label": "Doubler et ajuster",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 2, 5, 11, 23, 47, … ?",
-  "answer": 95,
-  "explanation": "On double puis on ajoute 1 : 47 × 2 + 1 = 95."
+  "difficulty": 65,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 5, 11, 23, 47 ?",
+  "answer": 2,
+  "explanation": "On multiplie par 2 puis on ajoute 1. En remontant à partir de 5, on trouve 2.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-036",
   "concept": "logic.sequences.gen_double_36",
   "label": "Doubler et ajuster",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 3, 8, 18, 38, 78, … ?",
-  "answer": 158,
-  "explanation": "On double puis on ajoute 2 : 78 × 2 + 2 = 158."
+  "difficulty": 65,
+  "prompt": "Il manque un nombre au milieu : 3, 8, 18, ?, 78, 158. Lequel ?",
+  "answer": 38,
+  "explanation": "On multiplie par 2 puis on ajoute 2. Le nombre manquant est 38.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-037",
   "concept": "logic.sequences.gen_double_37",
   "label": "Doubler et ajuster",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 1, 5, 13, 29, 61, … ?",
-  "answer": 125,
-  "explanation": "On double puis on ajoute 3 : 61 × 2 + 3 = 125."
+  "difficulty": 65,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 5, 13, 29, 61 ?",
+  "answer": 1,
+  "explanation": "On multiplie par 2 puis on ajoute 3. En remontant à partir de 5, on trouve 1.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-038",
@@ -374,40 +402,44 @@
   "concept": "logic.sequences.gen_double_40",
   "label": "Doubler et ajuster",
   "type": "numeric",
-  "difficulty": 60,
-  "prompt": "Quel nombre suit : 6, 14, 30, 62, 126, … ?",
-  "answer": 254,
-  "explanation": "On double puis on ajoute 2 : 126 × 2 + 2 = 254."
+  "difficulty": 65,
+  "prompt": "Quel nombre se cache au début de cette suite : ?, 14, 30, 62, 126 ?",
+  "answer": 6,
+  "explanation": "On multiplie par 2 puis on ajoute 2. En remontant à partir de 14, on trouve 6.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-041",
   "concept": "logic.sequences.gen_squares_41",
   "label": "Carrés décalés",
   "type": "numeric",
-  "difficulty": 65,
-  "prompt": "Quel nombre suit : 22, 31, 42, 55, 70, … ?",
-  "answer": 87,
-  "explanation": "Ce sont les carrés plus 6 : 4², 5²… donc 9² + 6 = 87."
+  "difficulty": 70,
+  "prompt": "Quel nombre manque dans cette suite : 22, 31, ?, 55, 70, 87 ?",
+  "answer": 42,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (9, 11, 13…). Le nombre manquant est 42.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-042",
   "concept": "logic.sequences.gen_squares_42",
   "label": "Carrés décalés",
   "type": "numeric",
-  "difficulty": 65,
-  "prompt": "Quel nombre suit : 5, 12, 21, 32, 45, … ?",
-  "answer": 60,
-  "explanation": "Ce sont les carrés moins 4 : 3², 4²… donc 8² − 4 = 60."
+  "difficulty": 75,
+  "prompt": "Un nombre est faux dans cette suite : 5, 12, 21, 32, 47, 60. Par quel nombre faut-il le remplacer ?",
+  "answer": 45,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (7, 9, 11…). Il fallait 45 au lieu de 47.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-043",
   "concept": "logic.sequences.gen_squares_43",
   "label": "Carrés décalés",
   "type": "numeric",
-  "difficulty": 65,
-  "prompt": "Quel nombre suit : 16, 23, 32, 43, 56, … ?",
-  "answer": 71,
-  "explanation": "Ce sont les carrés plus 7 : 3², 4²… donc 8² + 7 = 71."
+  "difficulty": 70,
+  "prompt": "Quel nombre manque dans cette suite : 16, 23, ?, 43, 56, 71 ?",
+  "answer": 32,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (7, 9, 11…). Le nombre manquant est 32.",
+  "reset_difficulty": true
  },
  {
   "key": "glog-044",
@@ -424,9 +456,10 @@
   "concept": "logic.sequences.gen_squares_45",
   "label": "Carrés décalés",
   "type": "numeric",
-  "difficulty": 65,
-  "prompt": "Quel nombre suit : 10, 15, 22, 31, 42, … ?",
-  "answer": 55,
-  "explanation": "Ce sont les carrés plus 6 : 2², 3²… donc 7² + 6 = 55."
+  "difficulty": 70,
+  "prompt": "Quel nombre manque dans cette suite : 10, 15, ?, 31, 42, 55 ?",
+  "answer": 22,
+  "explanation": "Les écarts augmentent de 2 à chaque fois (5, 7, 9…). Le nombre manquant est 22.",
+  "reset_difficulty": true
  }
 ]

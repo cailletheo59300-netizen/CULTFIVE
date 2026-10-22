@@ -115,7 +115,7 @@
   "options": [
    "Un escalier*",
    "Un ascenseur",
-   "Un oiseau",
+   "Un yoyo",
    "La marée"
   ],
   "explanation": "On le monte et on le descend, mais lui ne bouge pas.",
@@ -465,7 +465,7 @@
    "1 chance sur 2*",
    "Plus d'une chance sur 2",
    "Moins d'une chance sur 2",
-   "5 chances sur 6"
+   "Presque 1 : « pile » doit bien finir par sortir"
   ],
   "explanation": "La pièce n'a pas de mémoire : chaque lancer est indépendant. Croire le contraire, c'est « l'erreur du joueur ».",
   "hint": "La pièce n'a pas de mémoire."
@@ -481,7 +481,7 @@
    "1 chance sur 6*",
    "1 chance sur 2",
    "1 chance sur 3",
-   "6 chances sur 6"
+   "1 chance sur 5"
   ],
   "explanation": "Six faces, une seule porte le 6.",
   "hint": "Combien de faces ?"
