@@ -1,0 +1,4664 @@
+[
+ {
+  "key": "log21-001",
+  "concept": "logic.sequences.v21_tribonacci",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Quel nombre vient ensuite : 1, 1, 2, 4, 7, 13, 24, … ?",
+  "explanation": "Chaque nombre est la somme des trois précédents : 7 + 13 + 24 = 44.",
+  "answer": 44,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-002",
+  "concept": "logic.sequences.v21_moins_un_plus_deux",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre vient ensuite : 10, 9, 11, 8, 12, 7, … ?",
+  "explanation": "Deux suites mêlées : 10, 11, 12, 13 (qui monte) et 9, 8, 7 (qui descend).",
+  "answer": 13,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-003",
+  "concept": "logic.sequences.v21_carres_inverses",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 90,
+  "prompt": "Quel nombre vient ensuite : 1, 4, 9, 61, 52, 63, 94, … ?",
+  "explanation": "Ce sont les carrés (1, 4, 9, 16, 25, 36, 49, 64) écrits à l'envers : 64 devient 46.",
+  "answer": 46,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-004",
+  "concept": "logic.sequences.v21_divise_croissant",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre vient ensuite : 720, 360, 120, 30, … ?",
+  "explanation": "On divise par 2, puis par 3, puis par 4, puis par 5 : 30 ÷ 5 = 6.",
+  "answer": 6,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-005",
+  "concept": "logic.sequences.v21_premiers_onze",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre vient ensuite : 11, 13, 17, 19, 23, … ?",
+  "explanation": "Ce sont les nombres premiers : 25 et 27 ne le sont pas (5 × 5 et 3 × 9).",
+  "answer": 29,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-006",
+  "concept": "logic.sequences.v21_somme_des_carres",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Quel nombre vient ensuite : 1, 5, 14, 30, 55, … ?",
+  "explanation": "On ajoute les carrés : 1, 1+4, 1+4+9, 1+4+9+16, 1+4+9+16+25, puis + 36 = 91.",
+  "answer": 91,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-007",
+  "concept": "logic.sequences.v21_fois_trois_plus_un_alt",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Quel nombre vient ensuite : 2, 6, 7, 21, 22, 66, … ?",
+  "explanation": "On alterne « × 3 » et « + 1 » : 66 + 1 = 67.",
+  "answer": 67,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-008",
+  "concept": "logic.sequences.v21_moins_deux_fois",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre vient ensuite : 6, 11, 21, 41, … ?",
+  "explanation": "On double et on enlève 1 : 41 × 2 − 1 = 81.",
+  "answer": 81,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-009",
+  "concept": "logic.sequences.v21_fois_croissant_trois",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Quel nombre vient ensuite : 3, 6, 18, 72, … ?",
+  "explanation": "On multiplie par 2, puis 3, puis 4, puis 5 : 72 × 5 = 360.",
+  "answer": 360,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-010",
+  "concept": "logic.sequences.v21_cubes_moins",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Quel nombre vient ensuite : 0, 7, 26, 63, … ?",
+  "explanation": "Les cubes moins 1 : 1 − 1, 8 − 1, 27 − 1, 64 − 1, puis 125 − 1 = 124.",
+  "answer": 124,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-011",
+  "concept": "logic.sequences.v21_heures_horloge",
+  "label": "Suite logique",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Quel nombre vient ensuite : 9, 12, 3, 6, 9, … ? (ce sont des heures sur une horloge)",
+  "explanation": "On avance de 3 heures, et après 12 on repart à 1 : 9, 12, 3, 6, 9, puis 12.",
+  "answer": 12,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-012",
+  "concept": "logic.sequences.v21_lettres_puissances",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans la série A, B, D, H, le rang des lettres suit une règle. Quelle lettre vient après H ?",
+  "explanation": "Les rangs doublent : A (1), B (2), D (4), H (8), puis P (16). L serait « + 4 », I la lettre juste après H.",
+  "options": [
+   "P*",
+   "L",
+   "I",
+   "O"
+  ]
+ },
+ {
+  "key": "log21-013",
+  "concept": "logic.sequences.v21_lettres_moins_trois",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "On écrit Z, puis W, puis T, puis Q. Quelle lettre écrira-t-on ensuite ?",
+  "explanation": "On recule de 3 lettres : Q, P, O, N. Attention à ne pas compter Q dans le recul.",
+  "options": [
+   "N*",
+   "O",
+   "M",
+   "P"
+  ]
+ },
+ {
+  "key": "log21-014",
+  "concept": "logic.sequences.v21_machine_trois",
+  "label": "Machine à nombres",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Une machine transforme 3 en 10, 5 en 16 et 7 en 22. Que donne-t-elle pour 10 ?",
+  "explanation": "Elle multiplie par 3 et ajoute 1 : 10 × 3 + 1 = 31. Continuer « + 6 » donnerait 28, mais l'entrée n'avance plus de 2.",
+  "options": [
+   "31*",
+   "29",
+   "28",
+   "30"
+  ]
+ },
+ {
+  "key": "log21-015",
+  "concept": "logic.sequences.v21_analogie_cube",
+  "label": "Analogie de nombres",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "2 est à 8 ce que 3 est à…",
+  "explanation": "8 est le cube de 2 (2 × 2 × 2), donc la réponse est 3 × 3 × 3 = 27. 12 suppose « × 4 », 9 « au carré ».",
+  "options": [
+   "27*",
+   "12",
+   "9",
+   "6"
+  ]
+ },
+ {
+  "key": "log21-016",
+  "concept": "logic.sequences.v21_romains_carres",
+  "label": "Suite en chiffres romains",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel nombre suit : I, IV, IX, XVI, XXV, … ?",
+  "explanation": "Ce sont les carrés : 1, 4, 9, 16, 25, puis 36, qui s'écrit XXXVI.",
+  "options": [
+   "XXXVI*",
+   "XXXV",
+   "XXXIV",
+   "XXX"
+  ]
+ },
+ {
+  "key": "log21-017",
+  "concept": "logic.sequences.v21_binaire",
+  "label": "Suite cachée",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel nombre suit : 1, 10, 11, 100, 101, … ?",
+  "explanation": "C'est l'écriture en binaire de 1, 2, 3, 4, 5, puis 6 = 110. On n'utilise que des 0 et des 1.",
+  "options": [
+   "110*",
+   "102",
+   "111",
+   "1000"
+  ]
+ },
+ {
+  "key": "log21-018",
+  "concept": "logic.sequences.v21_regle_fois_trois",
+  "label": "Quelle règle ?",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle règle donne la suite 2, 6, 18, 54 ?",
+  "explanation": "« + 4 » et « double + 2 » marchent pour passer de 2 à 6… mais plus pour aller de 6 à 18. Seul « × 3 » marche partout.",
+  "options": [
+   "On multiplie par 3*",
+   "On ajoute 4",
+   "On double et on ajoute 2",
+   "On ajoute 12"
+  ]
+ },
+ {
+  "key": "log21-019",
+  "concept": "logic.sequences.v21_regle_carres",
+  "label": "Quelle règle ?",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle règle donne la suite 1, 4, 9, 16, 25 ?",
+  "explanation": "Les écarts (3, 5, 7, 9) ne sont pas constants : « + 3 » ne marche qu'au début.",
+  "options": [
+   "Ce sont les carrés des nombres 1, 2, 3, 4, 5*",
+   "On ajoute 3 à chaque fois",
+   "On multiplie par 4",
+   "On ajoute 5 à chaque fois"
+  ]
+ },
+ {
+  "key": "log21-020",
+  "concept": "logic.sequences.v21_heures_cinq",
+  "label": "Suite d'heures",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle heure suit : 1 h 00, 2 h 05, 3 h 10, 4 h 15, … ?",
+  "explanation": "On avance d'une heure et cinq minutes à chaque fois.",
+  "options": [
+   "5 h 20*",
+   "5 h 15",
+   "5 h 25",
+   "6 h 20"
+  ]
+ },
+ {
+  "key": "log21-021",
+  "concept": "logic.sequences.v21_dates_bimestre",
+  "label": "Suite de dates",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle date suit : 1er janvier, 1er mars, 1er mai, … ?",
+  "explanation": "On avance de deux mois à chaque fois.",
+  "options": [
+   "1er juillet*",
+   "1er juin",
+   "1er août",
+   "1er septembre"
+  ]
+ },
+ {
+  "key": "log21-022",
+  "concept": "logic.sequences.v21_mots_longueur",
+  "label": "Suite de mots",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel mot continue la suite : « a », « le », « bus », « chat », « table », … ?",
+  "explanation": "Chaque mot a une lettre de plus : 1, 2, 3, 4, 5, puis 6 lettres. « Pomme » en a 5, comme « table », et « éléphant » 8.",
+  "options": [
+   "Cheval*",
+   "Lion",
+   "Pomme",
+   "Éléphant"
+  ]
+ },
+ {
+  "key": "log21-023",
+  "concept": "logic.sequences.v21_lettres_voyelles_sautees",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "B, C, D, F, G, H… Quelle est la prochaine lettre de cette liste ?",
+  "explanation": "Ce sont les consonnes dans l'ordre : on saute les voyelles (A, E, I). Après H vient donc J.",
+  "options": [
+   "J*",
+   "I",
+   "K",
+   "L"
+  ]
+ },
+ {
+  "key": "log21-024",
+  "concept": "logic.sequences.v21_premieres_lettres_nombres",
+  "label": "Suite cachée",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle lettre suit : D, V, T, Q, C, S, … ? (Indice : 10, 20, 30…)",
+  "explanation": "Dix, Vingt, Trente, Quarante, Cinquante, Soixante, puis Soixante-dix : S.",
+  "options": [
+   "S*",
+   "Q",
+   "C",
+   "N"
+  ]
+ },
+ {
+  "key": "log21-025",
+  "concept": "logic.sequences.v21_chiffres_segments",
+  "label": "Suite cachée",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Sur un réveil à chiffres lumineux, 1 utilise 2 segments, 7 en utilise 3 et 4 en utilise 4. Combien de segments utilise 8 ?",
+  "explanation": "Le 8 allume tous les segments de l'afficheur : il y en a 7.",
+  "options": [
+   "7*",
+   "8",
+   "6",
+   "5"
+  ]
+ },
+ {
+  "key": "log21-026",
+  "concept": "logic.sequences.v21_intrus_suite_premiers",
+  "label": "Intrus dans une suite",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel nombre est l'intrus : 2, 3, 5, 7, 9, 11 ?",
+  "explanation": "Tous sont des nombres premiers, sauf 9 (3 × 3). 2 est pair, mais il est bien premier.",
+  "options": [
+   "9*",
+   "2",
+   "11",
+   "3"
+  ]
+ },
+ {
+  "key": "log21-027",
+  "concept": "logic.sequences.v21_intrus_suite_fibo",
+  "label": "Intrus dans une suite",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Un nombre est faux dans cette suite : 1, 1, 2, 3, 5, 8, 12, 21. Lequel ?",
+  "explanation": "Chaque nombre est la somme des deux précédents : après 5 et 8 vient 13, pas 12. Et 8 + 13 = 21 confirme.",
+  "options": [
+   "12*",
+   "21",
+   "8",
+   "5"
+  ]
+ },
+ {
+  "key": "log21-028",
+  "concept": "logic.sequences.v21_calendrier_semaines",
+  "label": "Suite de dates",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Le 3, le 10, le 17… : ce sont tous des mardis. Quel jour est le 31 du même mois ?",
+  "explanation": "On ajoute 7 : 17, 24, 31. Le 31 est donc aussi un mardi.",
+  "options": [
+   "Un mardi*",
+   "Un lundi",
+   "Un mercredi",
+   "Un jeudi"
+  ]
+ },
+ {
+  "key": "log21-029",
+  "concept": "logic.sequences.v21_suite_lettres_alpha_omega",
+  "label": "Suite de lettres",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle paire suit : AZ, BY, CX, DW, … ?",
+  "explanation": "La première lettre avance (A, B, C, D, E), la seconde recule depuis Z (Z, Y, X, W, V).",
+  "options": [
+   "EV*",
+   "EU",
+   "FV",
+   "EW"
+  ]
+ },
+ {
+  "key": "log21-030",
+  "concept": "logic.sequences.v21_machine_carre",
+  "label": "Machine à nombres",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une machine transforme 2 en 5, 3 en 10 et 4 en 17. Que donne-t-elle pour 6 ?",
+  "explanation": "Elle met au carré et ajoute 1 : 6 × 6 + 1 = 37. 26 correspond à 5, et 36 oublie le « + 1 ».",
+  "options": [
+   "37*",
+   "26",
+   "31",
+   "36"
+  ]
+ },
+ {
+  "key": "log21-031",
+  "concept": "logic.sequences.v21_analogie_moitie",
+  "label": "Analogie de nombres",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "50 est à 25 ce que 18 est à…",
+  "explanation": "25 est la moitié de 50, donc on prend la moitié de 18. 43 viendrait de « − 25 », 36 du double.",
+  "options": [
+   "9*",
+   "43",
+   "36",
+   "7"
+  ]
+ },
+ {
+  "key": "log21-032",
+  "concept": "logic.sequences.v21_suite_formes",
+  "label": "Suite de formes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Triangle (3 côtés), carré (4), pentagone (5)… Quelle forme vient ensuite ?",
+  "explanation": "L'hexagone a 6 côtés. Le losange en a 4, l'octogone 8.",
+  "options": [
+   "L'hexagone*",
+   "L'octogone",
+   "Le cercle",
+   "Le losange"
+  ]
+ },
+ {
+  "key": "log21-033",
+  "concept": "logic.sequences.v21_lettre_rang_somme",
+  "label": "Code de lettres",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Si A = 1, B = 2, C = 3…, quel mot vaut 10 quand on additionne ses lettres ?",
+  "explanation": "B (2) + E (5) + C (3) = 10. « Bac » vaut 6, « dé » 9 et « fée » 16.",
+  "options": [
+   "Bec*",
+   "Bac",
+   "Dé",
+   "Fée"
+  ]
+ },
+ {
+  "key": "log21-034",
+  "concept": "logic.sequences.v21_suites_suivant",
+  "label": "Suites logiques",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque suite au nombre qui la continue.",
+  "explanation": "De haut en bas : + 2, × 2, les carrés, et la somme des deux précédents (Fibonacci).",
+  "pairs": [
+   [
+    "2, 4, 6, 8",
+    "10"
+   ],
+   [
+    "2, 4, 8, 16",
+    "32"
+   ],
+   [
+    "1, 4, 9, 16",
+    "25"
+   ],
+   [
+    "1, 2, 3, 5, 8",
+    "13"
+   ]
+  ]
+ },
+ {
+  "key": "log21-035",
+  "concept": "logic.sequences.v21_suites_regles_2",
+  "label": "Suites logiques",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque suite à sa règle.",
+  "explanation": "La dernière mêle 5, 6, 7 (qui monte) et 4, 3 (qui descend).",
+  "pairs": [
+   [
+    "5, 10, 20, 40",
+    "× 2"
+   ],
+   [
+    "5, 10, 15, 20",
+    "+ 5"
+   ],
+   [
+    "5, 6, 8, 11",
+    "+ 1, + 2, + 3…"
+   ],
+   [
+    "5, 4, 6, 3, 7",
+    "Deux suites mêlées"
+   ]
+  ]
+ },
+ {
+  "key": "log21-036",
+  "concept": "logic.sequences.v21_suites_cachees",
+  "label": "Suites cachées",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque suite de lettres à ce qu'elle cache.",
+  "explanation": "Ce sont les initiales : Lundi, Mardi… ; Janvier, Février… ; Un, Deux… ; Mercure, Vénus, Terre…",
+  "pairs": [
+   [
+    "L, M, M, J, V",
+    "Les jours"
+   ],
+   [
+    "J, F, M, A, M",
+    "Les mois"
+   ],
+   [
+    "U, D, T, Q, C",
+    "Les nombres"
+   ],
+   [
+    "M, V, T, M, J",
+    "Les planètes"
+   ]
+  ]
+ },
+ {
+  "key": "log21-037",
+  "concept": "logic.sequences.v21_ordre_double",
+  "label": "Suites logiques",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Remets ces nombres dans l'ordre pour former une suite où l'on double à chaque fois.",
+  "explanation": "3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24, 24 × 2 = 48.",
+  "items": [
+   "3",
+   "6",
+   "12",
+   "24",
+   "48"
+  ]
+ },
+ {
+  "key": "log21-038",
+  "concept": "logic.sequences.v21_ordre_fibo",
+  "label": "Suites logiques",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Remets ces nombres dans l'ordre pour que chacun soit la somme des deux précédents (en partant de 2 et 3).",
+  "explanation": "2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13.",
+  "items": [
+   "2",
+   "3",
+   "5",
+   "8",
+   "13"
+  ]
+ },
+ {
+  "key": "log21-039",
+  "concept": "logic.sequences.v21_ordre_croissance",
+  "label": "Suites logiques",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Ces quatre suites partent toutes de 1. Classe-les selon leur 10e nombre, du plus petit au plus grand.",
+  "explanation": "Au 10e terme : 1 + 9 × 3 = 28 ; 10² = 100 ; 2⁹ = 512 ; 3⁹ = 19 683. Les multiplications finissent toujours par écraser les additions.",
+  "items": [
+   "+ 3 à chaque fois",
+   "Les carrés",
+   "× 2 à chaque fois",
+   "× 3 à chaque fois"
+  ]
+ },
+ {
+  "key": "log21-040",
+  "concept": "logic.sequences.v21_co_termes_sous_cent",
+  "label": "Suites logiques",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien de nombres de la suite 7, 14, 21, 28… sont plus petits que 100 ?",
+  "explanation": "Ce sont les multiples de 7 : 7 × 14 = 98, et 7 × 15 = 105 dépasse.",
+  "answer": 14,
+  "tolerance": 0,
+  "min": 5,
+  "max": 20,
+  "start": 5
+ },
+ {
+  "key": "log21-041",
+  "concept": "logic.sequences.v21_co_doublements_mille",
+  "label": "Suites logiques",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "En partant de 1 et en doublant à chaque fois, combien de doublements faut-il pour dépasser 1 000 ?",
+  "explanation": "2¹⁰ = 1 024. C'est pour ça qu'un kilo-octet vaut parfois 1 024 octets.",
+  "answer": 10,
+  "tolerance": 0,
+  "min": 5,
+  "max": 15,
+  "start": 5
+ },
+ {
+  "key": "log21-042",
+  "concept": "logic.sequences.v21_tf_fibo_pair",
+  "label": "Suites logiques",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Dans la suite 1, 1, 2, 3, 5, 8, 13…, un nombre sur trois est pair.",
+  "explanation": "1, 1, 2, 3, 5, 8, 13, 21, 34 : impair + impair donne pair, puis pair + impair donne impair deux fois.",
+  "answer": true
+ },
+ {
+  "key": "log21-043",
+  "concept": "logic.sequences.v21_tf_double_impair",
+  "label": "Suites logiques",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "En doublant 1 plusieurs fois, on peut tomber sur un nombre impair.",
+  "explanation": "Après 1, tous les doubles sont pairs : 2, 4, 8, 16…",
+  "answer": false
+ },
+ {
+  "key": "log21-044",
+  "concept": "logic.sequences.v21_tf_carre_finit_sept",
+  "label": "Suites logiques",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Un nombre au carré peut se terminer par 7.",
+  "explanation": "Un carré se termine toujours par 0, 1, 4, 5, 6 ou 9. Jamais par 2, 3, 7 ou 8.",
+  "answer": false
+ },
+ {
+  "key": "log21-045",
+  "concept": "logic.sequences.v21_tf_somme_impairs",
+  "label": "Suites logiques",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "La somme des premiers nombres impairs (1 + 3 + 5 + …) donne toujours un carré.",
+  "explanation": "1 = 1², 1 + 3 = 2², 1 + 3 + 5 = 3², 1 + 3 + 5 + 7 = 4²…",
+  "answer": true
+ },
+ {
+  "key": "log21-046",
+  "concept": "logic.sequences.v21_tf_trois_termes",
+  "label": "Suites logiques",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Trois premiers nombres suffisent toujours pour connaître la suite avec certitude.",
+  "explanation": "1, 2, 4 peut continuer par 8 (on double) ou par 7 (on ajoute 1, 2, 3…). Il faut connaître la règle.",
+  "answer": false
+ },
+ {
+  "key": "log21-047",
+  "concept": "logic.sequences.v21_tf_multiple_neuf",
+  "label": "Suites logiques",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Dans la suite 9, 18, 27, 36…, la somme des chiffres de chaque nombre vaut 9, au moins jusqu'à 90.",
+  "explanation": "1 + 8, 2 + 7, 3 + 6… jusqu'à 9 + 0. Après, 99 donne 18, un multiple de 9 lui aussi.",
+  "answer": true
+ },
+ {
+  "key": "log21-048",
+  "concept": "logic.reasoning.v21_enquete_un_vrai",
+  "label": "Enquête",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un seul des trois suspects est coupable, et un seul dit la vérité. Alex : « C'est Bilal. » Bilal : « Ce n'est pas moi. » Camille : « Ce n'est pas moi. » Qui est coupable ?",
+  "explanation": "Si c'était Alex ou Bilal, deux personnes diraient vrai. Si c'est Camille, seul Bilal dit vrai : ça marche.",
+  "options": [
+   "Camille*",
+   "Bilal",
+   "Alex",
+   "Impossible à savoir"
+  ]
+ },
+ {
+  "key": "log21-049",
+  "concept": "logic.reasoning.v21_enquete_un_menteur",
+  "label": "Enquête",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un seul coupable, et un seul menteur parmi les trois. Dora : « C'est Enzo. » Enzo : « C'est Flora. » Flora : « Je suis innocente. » Qui est coupable ?",
+  "explanation": "Si c'est Enzo, seul Enzo ment : ça marche. Si c'était Flora ou Dora, il y aurait deux menteurs.",
+  "options": [
+   "Enzo*",
+   "Flora",
+   "Dora",
+   "Impossible à savoir"
+  ]
+ },
+ {
+  "key": "log21-050",
+  "concept": "logic.reasoning.v21_enquete_vase",
+  "label": "Enquête",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelqu'un a cassé le vase, et un seul enfant dit la vérité. Léo : « C'est Mia. » Mia : « C'est Noé. » Noé : « Mia ment. » Zoé : « Ce n'est pas moi. » Qui a cassé le vase ?",
+  "explanation": "Mia et Noé se contredisent : l'un des deux dit forcément vrai. Donc Léo et Zoé mentent… et Zoé est coupable.",
+  "options": [
+   "Zoé*",
+   "Mia",
+   "Noé",
+   "Léo"
+  ]
+ },
+ {
+  "key": "log21-051",
+  "concept": "logic.reasoning.v21_enquete_deux_vrais",
+  "label": "Enquête",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Un des trois a mangé le gâteau, et deux disent la vérité. Gina : « C'est Hugo. » Hugo : « C'est Ivan. » Ivan : « Ce n'est ni moi ni Gina. » Qui l'a mangé ?",
+  "explanation": "Si c'est Hugo, Gina et Ivan disent vrai, et Hugo ment : deux vérités, ça marche. Les autres cas donnent une vérité ou aucune.",
+  "options": [
+   "Hugo*",
+   "Ivan",
+   "Gina",
+   "Personne"
+  ]
+ },
+ {
+  "key": "log21-052",
+  "concept": "logic.reasoning.v21_boites_or",
+  "label": "Enquête",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Une seule des trois boîtes contient de l'or, et une seule inscription est vraie. Boîte 1 : « L'or n'est pas ici. » Boîte 2 : « L'or n'est pas ici. » Boîte 3 : « L'or est dans la boîte 2. » Où est l'or ?",
+  "explanation": "Or en 1 : seule l'inscription 2 est vraie. Or en 2 : les inscriptions 1 et 3 seraient vraies. Or en 3 : les 1 et 2 seraient vraies.",
+  "options": [
+   "Dans la boîte 1*",
+   "Dans la boîte 2",
+   "Dans la boîte 3",
+   "Impossible à savoir"
+  ]
+ },
+ {
+  "key": "log21-053",
+  "concept": "logic.reasoning.v21_chevaliers_differents",
+  "label": "Menteurs et chevaliers",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sur une île, les chevaliers disent toujours vrai et les fripons mentent toujours. A dit : « B est un chevalier. » B dit : « A et moi sommes de types différents. » Que sont-ils ?",
+  "explanation": "Si A disait vrai, B serait chevalier… mais alors B mentirait en disant qu'ils sont différents. Donc A ment, B est fripon, et B ment bien : ils sont du même type.",
+  "options": [
+   "Deux fripons*",
+   "Deux chevaliers",
+   "A chevalier, B fripon",
+   "A fripon, B chevalier"
+  ]
+ },
+ {
+  "key": "log21-054",
+  "concept": "logic.reasoning.v21_chevaliers_au_moins_un",
+  "label": "Menteurs et chevaliers",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sur la même île, A dit : « Au moins l'un de nous deux est un fripon. » Que sont A et B ?",
+  "explanation": "Si A était fripon, sa phrase serait vraie, ce qui est impossible. Donc A dit vrai… et il faut bien un fripon : c'est B.",
+  "options": [
+   "A chevalier, B fripon*",
+   "Deux fripons",
+   "Deux chevaliers",
+   "A fripon, B chevalier"
+  ]
+ },
+ {
+  "key": "log21-055",
+  "concept": "logic.reasoning.v21_chevaliers_tresor",
+  "label": "Menteurs et chevaliers",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "L'un dit toujours vrai, l'autre ment toujours. A : « Le trésor est à gauche. » B : « A et moi disons tous les deux la vérité. » Où est le trésor ?",
+  "explanation": "B ne peut pas dire vrai, puisque l'un des deux ment. B est donc le menteur, et A dit vrai : le trésor est à gauche.",
+  "options": [
+   "À gauche*",
+   "À droite",
+   "Impossible à savoir",
+   "Il n'y a pas de trésor"
+  ]
+ },
+ {
+  "key": "log21-056",
+  "concept": "logic.reasoning.v21_lion_jours",
+  "label": "Menteurs et chevaliers",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Un lion ment le lundi, le mardi et le mercredi, et dit vrai les autres jours. Il déclare : « Hier, je mentais. » Quel jour peut-on être ?",
+  "explanation": "Jeudi, il dit vrai : mercredi il mentait. Lundi, il ment : dimanche il disait vrai. Les autres jours, la phrase ne colle pas.",
+  "options": [
+   "Lundi ou jeudi*",
+   "Mardi ou mercredi",
+   "Jeudi seulement",
+   "Dimanche ou lundi"
+  ]
+ },
+ {
+  "key": "log21-057",
+  "concept": "logic.reasoning.v21_wason_cartes",
+  "label": "Le piège des cartes",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quatre cartes ont une lettre d'un côté et un nombre de l'autre : A, K, 4, 7. Règle : « Une voyelle a toujours un nombre pair au dos. » Quelles cartes faut-il retourner pour vérifier ?",
+  "explanation": "A, pour voir s'il y a un nombre pair. 7, car une voyelle derrière casserait la règle. Le 4 ne prouve rien : la règle ne dit pas que les consonnes ont des nombres impairs. Moins de 10 % des gens trouvent.",
+  "options": [
+   "A et 7*",
+   "A et 4",
+   "A seulement",
+   "Les quatre"
+  ]
+ },
+ {
+  "key": "log21-058",
+  "concept": "logic.reasoning.v21_wason_bar",
+  "label": "Le piège des cartes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Règle : « Pour boire de l'alcool, il faut avoir 18 ans. » Au bar : Ana boit une bière, Ben un soda, Cléo a 25 ans, Dan a 16 ans. Qui faut-il contrôler ?",
+  "explanation": "Il faut vérifier l'âge d'Ana et le verre de Dan. C'est le même raisonnement que le piège des cartes A, K, 4, 7… mais ici presque tout le monde trouve.",
+  "options": [
+   "Ana et Dan*",
+   "Ana et Cléo",
+   "Ana seulement",
+   "Dan seulement"
+  ]
+ },
+ {
+  "key": "log21-059",
+  "concept": "logic.reasoning.v21_grille_animaux",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Bruno a le chien. Anna n'a pas le chat. Associe chaque enfant à son animal.",
+  "explanation": "Bruno a le chien, et Anna ne peut avoir que le lapin. Il reste le chat pour Chloé.",
+  "pairs": [
+   [
+    "Anna",
+    "Le lapin"
+   ],
+   [
+    "Bruno",
+    "Le chien"
+   ],
+   [
+    "Chloé",
+    "Le chat"
+   ]
+  ]
+ },
+ {
+  "key": "log21-060",
+  "concept": "logic.reasoning.v21_grille_couleurs",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Léa n'aime pas le rouge. Max n'aime ni le rouge ni le vert. Associe chacun à sa couleur préférée.",
+  "explanation": "Max ne peut aimer que le bleu. Léa n'aime pas le rouge : c'est le vert. Nora a le rouge.",
+  "pairs": [
+   [
+    "Léa",
+    "Le vert"
+   ],
+   [
+    "Max",
+    "Le bleu"
+   ],
+   [
+    "Nora",
+    "Le rouge"
+   ]
+  ]
+ },
+ {
+  "key": "log21-061",
+  "concept": "logic.reasoning.v21_grille_repas",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Ugo mange des sushis. Vic ne mange ni pizza ni burger. Wil ne mange pas de pizza. Associe chacun à son plat.",
+  "explanation": "Vic n'a plus que les tacos. Wil, sans pizza, prend le burger. Tom a la pizza.",
+  "pairs": [
+   [
+    "Tom",
+    "Pizza"
+   ],
+   [
+    "Ugo",
+    "Sushis"
+   ],
+   [
+    "Vic",
+    "Tacos"
+   ],
+   [
+    "Wil",
+    "Burger"
+   ]
+  ]
+ },
+ {
+  "key": "log21-062",
+  "concept": "logic.reasoning.v21_grille_metiers",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Bob a peur de l'avion. Carl ne sait ni peindre ni cuisiner. Le médecin est une femme. Dina a peint le portrait de son amie médecin. Associe chacun à son métier (médecin, pilote, cuisinier, peintre).",
+  "explanation": "Dina est peintre, donc la médecin est Alice. Carl ne peut plus être que pilote, et Bob cuisinier.",
+  "pairs": [
+   [
+    "Alice",
+    "Médecin"
+   ],
+   [
+    "Bob",
+    "Cuisinier"
+   ],
+   [
+    "Carl",
+    "Pilote"
+   ],
+   [
+    "Dina",
+    "Peintre"
+   ]
+  ]
+ },
+ {
+  "key": "log21-063",
+  "concept": "logic.reasoning.v21_grille_maisons",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Quatre maisons en ligne, numérotées de 1 à 4 depuis la gauche. La rouge est juste à gauche de la bleue. La verte n'est pas à un bout. La rouge est à un bout. Associe chaque maison à sa couleur.",
+  "explanation": "La rouge ne peut pas être à droite (la bleue doit la suivre) : elle est en 1, la bleue en 2. La verte, pas au bout, est en 3.",
+  "pairs": [
+   [
+    "Maison 1",
+    "Rouge"
+   ],
+   [
+    "Maison 2",
+    "Bleue"
+   ],
+   [
+    "Maison 3",
+    "Verte"
+   ],
+   [
+    "Maison 4",
+    "Jaune"
+   ]
+  ]
+ },
+ {
+  "key": "log21-064",
+  "concept": "logic.reasoning.v21_grille_ages",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Ana, Ben et Cléa ont 8, 10 et 12 ans. Ana n'a pas 12 ans. Ben a 2 ans de plus qu'Ana. Cléa n'est pas la plus jeune. Associe chacun à son âge.",
+  "explanation": "Ana a 8 ou 10 ans. Si elle avait 10 ans, Ben aurait 12 ans et Cléa 8 ans… la plus jeune. Donc Ana a 8 ans, Ben 10 et Cléa 12.",
+  "pairs": [
+   [
+    "Ana",
+    "8 ans"
+   ],
+   [
+    "Ben",
+    "10 ans"
+   ],
+   [
+    "Cléa",
+    "12 ans"
+   ]
+  ]
+ },
+ {
+  "key": "log21-065",
+  "concept": "logic.reasoning.v21_grille_activites",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Trois activités ont lieu le lundi, le mercredi et le vendredi. Le judo a lieu juste avant la danse. La piscine n'est pas le lundi. Associe chaque jour à son activité.",
+  "explanation": "Si le judo était le mercredi, la danse serait le vendredi et la piscine le lundi : interdit. Donc judo lundi, danse mercredi.",
+  "pairs": [
+   [
+    "Lundi",
+    "Judo"
+   ],
+   [
+    "Mercredi",
+    "Danse"
+   ],
+   [
+    "Vendredi",
+    "Piscine"
+   ]
+  ]
+ },
+ {
+  "key": "log21-066",
+  "concept": "logic.reasoning.v21_grille_voyages",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Jules n'est allé ni en Asie ni en Amérique. Lou est allée en Afrique ou en Asie. Kim n'est allé ni en Italie ni au Japon. Inès a vu le Colisée. Associe chacun à son voyage.",
+  "explanation": "Le Colisée est à Rome : Inès était en Italie. Jules ne peut plus aller qu'au Maroc, Lou au Japon, et Kim au Pérou.",
+  "pairs": [
+   [
+    "Inès",
+    "Italie"
+   ],
+   [
+    "Jules",
+    "Maroc"
+   ],
+   [
+    "Kim",
+    "Pérou"
+   ],
+   [
+    "Lou",
+    "Japon"
+   ]
+  ]
+ },
+ {
+  "key": "log21-067",
+  "concept": "logic.reasoning.v21_grille_musique",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Ni Bea ni Cyril ne jouent de la flûte. La batterie est à Dora ou à Amir. Dora déteste les instruments à vent. Cyril n'a jamais touché un archet. Associe chacun à son instrument (flûte, violon, piano, batterie).",
+  "explanation": "Seul Amir peut jouer de la flûte, donc la batterie est à Dora. Cyril, sans archet, joue du piano, et Bea du violon.",
+  "pairs": [
+   [
+    "Amir",
+    "Flûte"
+   ],
+   [
+    "Bea",
+    "Violon"
+   ],
+   [
+    "Cyril",
+    "Piano"
+   ],
+   [
+    "Dora",
+    "Batterie"
+   ]
+  ]
+ },
+ {
+  "key": "log21-068",
+  "concept": "logic.reasoning.v21_ordre_course_indices",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Basile arrive avant Alix mais après Daphné. Côme n'est pas dernier, et il arrive après Basile. Classe-les du premier au dernier.",
+  "explanation": "Daphné, puis Basile, puis Alix et Côme. Côme n'étant pas dernier, il passe devant Alix.",
+  "items": [
+   "Daphné",
+   "Basile",
+   "Côme",
+   "Alix"
+  ]
+ },
+ {
+  "key": "log21-069",
+  "concept": "logic.reasoning.v21_ordre_etages",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Quatre voisins vivent chacun à un étage différent, du 1er au 4e. Jade habite juste au-dessus d'Iris. Lina habite plus haut que Jade. Kenzo habite plus bas qu'Iris. Classe-les du plus bas au plus haut.",
+  "explanation": "Kenzo est sous Iris, Jade juste au-dessus d'Iris, et Lina encore au-dessus : 1er, 2e, 3e, 4e.",
+  "items": [
+   "Kenzo",
+   "Iris",
+   "Jade",
+   "Lina"
+  ]
+ },
+ {
+  "key": "log21-070",
+  "concept": "logic.reasoning.v21_ordre_poids_animaux",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Le chat pèse plus que le lapin, mais moins que le chien. Le hamster est le plus léger. Classe-les du plus léger au plus lourd.",
+  "explanation": "Lapin < chat < chien, et le hamster est sous tout le monde.",
+  "items": [
+   "Le hamster",
+   "Le lapin",
+   "Le chat",
+   "Le chien"
+  ]
+ },
+ {
+  "key": "log21-071",
+  "concept": "logic.reasoning.v21_ordre_naissances",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Inès est née en mars. Jules est né deux mois avant elle. Kylian est né entre Jules et Inès. Lola est née la dernière dans l'année. Classe-les dans l'ordre de leur mois de naissance.",
+  "explanation": "Jules en janvier, Kylian en février, Inès en mars, puis Lola.",
+  "items": [
+   "Jules",
+   "Kylian",
+   "Inès",
+   "Lola"
+  ]
+ },
+ {
+  "key": "log21-072",
+  "concept": "logic.reasoning.v21_ordre_course_cinq",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Paul finit 3e. Rémi finit juste devant Paul. Sara finit avant Rémi. Théo n'est pas dernier. Classe les cinq coureurs (avec Ugo) du premier au dernier.",
+  "explanation": "Rémi est 2e, donc Sara 1re. Restent les places 4 et 5 : Théo n'étant pas dernier, il est 4e, et Ugo 5e.",
+  "items": [
+   "Sara",
+   "Rémi",
+   "Paul",
+   "Théo",
+   "Ugo"
+  ]
+ },
+ {
+  "key": "log21-073",
+  "concept": "logic.reasoning.v21_ordre_ages_calcul",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Max a 2 ans de plus que Noa. Noa a 3 ans de moins qu'Oli. Pia est plus jeune que tous les autres. Classe-les du plus jeune au plus âgé.",
+  "explanation": "Si Noa a N ans, Max a N + 2 et Oli N + 3. Pia est la plus jeune.",
+  "items": [
+   "Pia",
+   "Noa",
+   "Max",
+   "Oli"
+  ]
+ },
+ {
+  "key": "log21-074",
+  "concept": "logic.reasoning.v21_ordre_recette",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 35,
+  "prompt": "La tarte a été préparée en premier. Le gâteau avant la soupe, et la salade après la soupe. Classe-les dans l'ordre de préparation.",
+  "explanation": "Tarte d'abord, puis gâteau, soupe et salade.",
+  "items": [
+   "La tarte",
+   "Le gâteau",
+   "La soupe",
+   "La salade"
+  ]
+ },
+ {
+  "key": "log21-075",
+  "concept": "logic.reasoning.v21_linda",
+  "label": "Piège de probabilité",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Marie, 31 ans, milite depuis ses études pour le climat. Qu'est-ce qui est le plus probable ?",
+  "explanation": "Être « banquière et écologiste » est forcément moins probable que « banquière » tout court, qui inclut ce cas. C'est le célèbre « problème de Linda » : la plupart des gens se trompent.",
+  "options": [
+   "Marie est banquière*",
+   "Marie est banquière et militante écologiste",
+   "Les deux sont aussi probables"
+  ]
+ },
+ {
+  "key": "log21-076",
+  "concept": "logic.reasoning.v21_test_medical",
+  "label": "Piège de probabilité",
+  "type": "mcq",
+  "difficulty": 90,
+  "prompt": "Une maladie touche 1 personne sur 1 000. Un test repère tous les malades, mais se trompe aussi pour 1 % des gens en bonne santé. Ton test est positif. Quelle est à peu près la probabilité que tu sois malade ?",
+  "explanation": "Sur 1 000 personnes : 1 malade positif, et environ 10 bien portants positifs par erreur. Seul 1 positif sur 11 est malade, soit environ 9 %.",
+  "options": [
+   "Environ 9 %*",
+   "99 %",
+   "90 %",
+   "50 %"
+  ]
+ },
+ {
+  "key": "log21-077",
+  "concept": "logic.reasoning.v21_avions_impacts",
+  "label": "Piège de raisonnement",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pendant la guerre, les avions qui rentrent ont des impacts de balles surtout sur les ailes. Où faut-il renforcer le blindage ?",
+  "explanation": "Les avions touchés aux moteurs ne sont pas rentrés : on ne les voit pas. C'est le « biais du survivant », repéré par le mathématicien Abraham Wald.",
+  "options": [
+   "Là où il n'y a pas d'impacts, comme les moteurs*",
+   "Sur les ailes",
+   "Partout de la même façon",
+   "Nulle part"
+  ]
+ },
+ {
+  "key": "log21-078",
+  "concept": "logic.reasoning.v21_prix_moitie",
+  "label": "Piège de pourcentages",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un prix augmente de 50 %, puis baisse de 50 %. Par rapport au prix de départ…",
+  "explanation": "100 € deviennent 150 €, puis la moitié de 150 € : 75 €. La baisse porte sur un prix plus grand.",
+  "options": [
+   "Il a baissé de 25 %*",
+   "Il est revenu au prix de départ",
+   "Il a baissé de 50 %",
+   "Il a augmenté de 25 %"
+  ]
+ },
+ {
+  "key": "log21-079",
+  "concept": "logic.reasoning.v21_pommes_de_terre",
+  "label": "Piège de pourcentages",
+  "type": "mcq",
+  "difficulty": 90,
+  "prompt": "100 kg de pommes de terre contiennent 99 % d'eau. Elles sèchent jusqu'à ne plus contenir que 98 % d'eau. Combien pèsent-elles ?",
+  "explanation": "Il y a 1 kg de matière sèche, qui ne change pas. Pour qu'il fasse 2 % du total, le total doit peser 50 kg.",
+  "options": [
+   "50 kg*",
+   "99 kg",
+   "98 kg",
+   "90 kg"
+  ]
+ },
+ {
+  "key": "log21-080",
+  "concept": "logic.reasoning.v21_corde_terre",
+  "label": "Piège d'intuition",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "On entoure la Terre d'une corde bien serrée, puis on rallonge la corde d'un mètre et on la soulève partout pareil. À quelle hauteur passe-t-elle au-dessus du sol ?",
+  "explanation": "Un mètre de plus de tour ajoute 1 ÷ (2 × 3,14) ≈ 16 cm de rayon… quelle que soit la taille de la boule, Terre ou ballon.",
+  "options": [
+   "Environ 16 cm*",
+   "Moins d'un millimètre",
+   "Environ 1 cm",
+   "Environ 1 m"
+  ]
+ },
+ {
+  "key": "log21-081",
+  "concept": "logic.reasoning.v21_aine_fille",
+  "label": "Piège de probabilité",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une famille a deux enfants. L'aînée est une fille. Quelle est la probabilité que les deux soient des filles ?",
+  "explanation": "Seul le second enfant compte : fille ou garçon, une chance sur deux.",
+  "options": [
+   "1 chance sur 2*",
+   "1 chance sur 3",
+   "1 chance sur 4",
+   "3 chances sur 4"
+  ]
+ },
+ {
+  "key": "log21-082",
+  "concept": "logic.reasoning.v21_cartes_bicolores",
+  "label": "Piège de probabilité",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Trois cartes : une rouge des deux côtés, une blanche des deux côtés, une rouge d'un côté et blanche de l'autre. On en pose une au hasard : la face visible est rouge. Quelle est la probabilité que l'autre face soit rouge ?",
+  "explanation": "Il y a trois faces rouges possibles, dont deux appartiennent à la carte rouge-rouge.",
+  "options": [
+   "2 chances sur 3*",
+   "1 chance sur 2",
+   "1 chance sur 3",
+   "3 chances sur 4"
+  ]
+ },
+ {
+  "key": "log21-083",
+  "concept": "logic.reasoning.v21_pompiers",
+  "label": "Corrélation ou cause ?",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Plus il y a de pompiers sur un incendie, plus les dégâts sont importants. Que peut-on en conclure ?",
+  "explanation": "Deux choses qui varient ensemble n'ont pas forcément de lien de cause : ici, la taille du feu explique les deux.",
+  "options": [
+   "Les gros incendies font plus de dégâts et attirent plus de pompiers*",
+   "Les pompiers causent des dégâts",
+   "Il faut envoyer moins de pompiers",
+   "Les petits incendies sont mal éteints"
+  ]
+ },
+ {
+  "key": "log21-084",
+  "concept": "logic.reasoning.v21_glaces_noyades",
+  "label": "Corrélation ou cause ?",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Les ventes de glaces et les noyades augmentent en même temps. Pourquoi ?",
+  "explanation": "Un troisième facteur, l'été, fait grimper les deux. On parle de « facteur caché ».",
+  "options": [
+   "La chaleur de l'été augmente les deux*",
+   "Manger une glace fait couler",
+   "Les noyés achètent des glaces",
+   "C'est un pur hasard"
+  ]
+ },
+ {
+  "key": "log21-085",
+  "concept": "logic.reasoning.v21_loto_jouer",
+  "label": "Nécessaire ou suffisant ?",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Pour gagner au loto, il faut jouer. » Jouer est donc…",
+  "explanation": "Sans jouer, on ne gagne pas (nécessaire). Mais jouer ne garantit pas de gagner (pas suffisant).",
+  "options": [
+   "Nécessaire, mais pas suffisant*",
+   "Suffisant, mais pas nécessaire",
+   "Nécessaire et suffisant",
+   "Ni nécessaire ni suffisant"
+  ]
+ },
+ {
+  "key": "log21-086",
+  "concept": "logic.reasoning.v21_vingt_sur_vingt",
+  "label": "Nécessaire ou suffisant ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "« Avoir 20 sur 20 suffit pour être reçu. » Paul est reçu. Que peut-on en conclure ?",
+  "explanation": "20 sur 20 suffit, mais on peut aussi être reçu avec moins. Le fait d'être reçu ne dit rien de sa note exacte.",
+  "options": [
+   "On ne sait pas s'il a eu 20*",
+   "Il a eu 20",
+   "Il n'a pas eu 20",
+   "Il a eu plus de 15"
+  ]
+ },
+ {
+  "key": "log21-087",
+  "concept": "logic.reasoning.v21_pair_divisible_quatre",
+  "label": "Nécessaire ou suffisant ?",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pour qu'un nombre soit divisible par 4, être pair est…",
+  "explanation": "Un multiple de 4 est toujours pair. Mais 6 est pair sans être divisible par 4.",
+  "options": [
+   "Nécessaire, mais pas suffisant*",
+   "Suffisant, mais pas nécessaire",
+   "Nécessaire et suffisant",
+   "Ni nécessaire ni suffisant"
+  ]
+ },
+ {
+  "key": "log21-088",
+  "concept": "logic.reasoning.v21_finit_par_quatre",
+  "label": "Nécessaire ou suffisant ?",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pour qu'un nombre soit pair, se terminer par 4 est…",
+  "explanation": "Tout nombre finissant par 4 est pair. Mais 12, qui finit par 2, est pair aussi.",
+  "options": [
+   "Suffisant, mais pas nécessaire*",
+   "Nécessaire, mais pas suffisant",
+   "Nécessaire et suffisant",
+   "Ni nécessaire ni suffisant"
+  ]
+ },
+ {
+  "key": "log21-089",
+  "concept": "logic.reasoning.v21_contraire_personne",
+  "label": "Le contraire logique",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le contraire logique de « Personne n'est venu » ?",
+  "explanation": "Il suffit d'une seule personne pour rendre la phrase fausse. « Tout le monde est venu » est un cas extrême, pas le contraire.",
+  "options": [
+   "Au moins une personne est venue*",
+   "Tout le monde est venu",
+   "Quelqu'un n'est pas venu",
+   "Personne n'est parti"
+  ]
+ },
+ {
+  "key": "log21-090",
+  "concept": "logic.reasoning.v21_contraire_ni_ni",
+  "label": "Le contraire logique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le contraire logique de « Il ne mange ni viande ni poisson » ?",
+  "explanation": "« Ni… ni » est faux dès qu'il mange l'un des deux.",
+  "options": [
+   "Il mange de la viande ou du poisson, ou les deux*",
+   "Il mange de la viande et du poisson",
+   "Il ne mange que du poisson",
+   "Il mange de tout"
+  ]
+ },
+ {
+  "key": "log21-091",
+  "concept": "logic.reasoning.v21_contraire_si_alors",
+  "label": "Le contraire logique",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel est le contraire logique de « S'il pleut, je prends mon parapluie » ?",
+  "explanation": "La promesse n'est rompue que dans un cas : il pleut, et pas de parapluie. S'il ne pleut pas, elle n'est jamais fausse.",
+  "options": [
+   "Il pleut et je ne prends pas mon parapluie*",
+   "S'il pleut, je ne prends pas mon parapluie",
+   "S'il ne pleut pas, je prends mon parapluie",
+   "Il ne pleut pas et je prends mon parapluie"
+  ]
+ },
+ {
+  "key": "log21-092",
+  "concept": "logic.reasoning.v21_contraire_au_moins",
+  "label": "Le contraire logique",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le contraire logique de « J'ai au moins 3 billes » ?",
+  "explanation": "Le contraire de « 3 ou plus », c'est « 0, 1 ou 2 ».",
+  "options": [
+   "J'ai au plus 2 billes*",
+   "J'ai au plus 3 billes",
+   "J'ai exactement 3 billes",
+   "J'ai moins de 2 billes"
+  ]
+ },
+ {
+  "key": "log21-093",
+  "concept": "logic.reasoning.v21_contraire_toujours",
+  "label": "Le contraire logique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le contraire logique de « Il y a toujours quelqu'un à la maison » ?",
+  "explanation": "Un seul moment sans personne suffit à rendre la phrase fausse.",
+  "options": [
+   "Il arrive que la maison soit vide*",
+   "La maison est toujours vide",
+   "Quelqu'un est toujours absent",
+   "Il y a parfois quelqu'un"
+  ]
+ },
+ {
+  "key": "log21-094",
+  "concept": "logic.reasoning.v21_ga_anniversaire_23",
+  "label": "Le paradoxe des anniversaires",
+  "type": "gauge",
+  "difficulty": 80,
+  "prompt": "Dans un groupe de 23 personnes, quelle est la probabilité que deux d'entre elles aient le même anniversaire ?",
+  "explanation": "Environ 51 % ! Avec 23 personnes, il y a 253 paires possibles. Avec 50 personnes, on passe à 97 %.",
+  "answer": 51,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "log21-095",
+  "concept": "logic.reasoning.v21_ga_meme_anniv_que_toi",
+  "label": "Le paradoxe des anniversaires",
+  "type": "gauge",
+  "difficulty": 75,
+  "prompt": "Dans un groupe de 23 personnes, quelle est la probabilité que l'une d'elles ait le même anniversaire que TOI ?",
+  "explanation": "Seulement 6 % environ : cette fois, on ne compare qu'avec une seule date, la tienne. D'où la surprise de la question des 23 personnes.",
+  "answer": 6,
+  "tolerance": 5,
+  "unit": "%"
+ },
+ {
+  "key": "log21-096",
+  "concept": "logic.reasoning.v21_ga_un_six_quatre",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "On lance un dé 4 fois. Quelle est la probabilité d'obtenir au moins un 6 ?",
+  "explanation": "Environ 52 % : la probabilité de n'avoir aucun 6 est (5/6)⁴ ≈ 48 %. Ce pari a fait la fortune du chevalier de Méré au XVIIe siècle.",
+  "answer": 52,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "log21-097",
+  "concept": "logic.reasoning.v21_ga_deux_des_un_six",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 60,
+  "prompt": "On lance deux dés. Quelle est la probabilité d'obtenir au moins un 6 ?",
+  "explanation": "11 cas sur 36, soit environ 31 %. Pas 2 sur 6 (33 %) : on compterait deux fois le double 6.",
+  "answer": 31,
+  "tolerance": 8,
+  "unit": "%"
+ },
+ {
+  "key": "log21-098",
+  "concept": "logic.reasoning.v21_ga_trois_pieces_pile",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 50,
+  "prompt": "On lance trois pièces. Quelle est la probabilité d'obtenir au moins un « pile » ?",
+  "explanation": "Il n'y a qu'un cas sans pile (face, face, face) sur 8 : 7 chances sur 8, soit 87,5 %.",
+  "answer": 88,
+  "tolerance": 8,
+  "unit": "%"
+ },
+ {
+  "key": "log21-099",
+  "concept": "logic.reasoning.v21_ga_deux_rouges",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 65,
+  "prompt": "On tire deux cartes d'un jeu de 52. Quelle est la probabilité qu'elles soient rouges toutes les deux ?",
+  "explanation": "26/52 × 25/51 ≈ 24,5 %. Un peu moins d'un quart, car la première carte rouge en laisse une de moins.",
+  "answer": 25,
+  "tolerance": 8,
+  "unit": "%"
+ },
+ {
+  "key": "log21-100",
+  "concept": "logic.reasoning.v21_ga_chiffre_sept",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "On choisit un nombre au hasard de 1 à 100. Quelle est la probabilité qu'il contienne le chiffre 7 ?",
+  "explanation": "7, 17, 27… 97 (10 nombres) et 70 à 79 (10 nombres), mais 77 est compté deux fois : 19 sur 100.",
+  "answer": 19,
+  "tolerance": 6,
+  "unit": "%"
+ },
+ {
+  "key": "log21-101",
+  "concept": "logic.reasoning.v21_ga_trois_des_differents",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 75,
+  "prompt": "On lance trois dés. Quelle est la probabilité que les trois résultats soient tous différents ?",
+  "explanation": "6 × 5 × 4 = 120 cas sur 216, soit environ 56 %.",
+  "answer": 56,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "log21-102",
+  "concept": "logic.reasoning.v21_ga_meme_sexe",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 60,
+  "prompt": "Une famille a trois enfants. Quelle est la probabilité qu'ils soient tous du même sexe ?",
+  "explanation": "Trois filles (1 chance sur 8) ou trois garçons (1 sur 8) : 2 sur 8, soit 25 %.",
+  "answer": 25,
+  "tolerance": 8,
+  "unit": "%"
+ },
+ {
+  "key": "log21-103",
+  "concept": "logic.reasoning.v21_tf_necessaire_suffit",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« Il faut un billet pour entrer » veut dire qu'avoir un billet suffit pour entrer.",
+  "explanation": "Le billet est nécessaire, pas suffisant : on peut aussi être refoulé pour une autre raison.",
+  "answer": false
+ },
+ {
+  "key": "log21-104",
+  "concept": "logic.reasoning.v21_tf_seuls_membres_entre",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« Seuls les membres peuvent entrer. » Paul est entré. Donc Paul est membre.",
+  "explanation": "« Seuls les membres » veut dire que tous ceux qui entrent sont membres.",
+  "answer": true
+ },
+ {
+  "key": "log21-105",
+  "concept": "logic.reasoning.v21_tf_seuls_membres_membre",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« Seuls les membres peuvent entrer. » Paul est membre. Donc Paul est entré.",
+  "explanation": "Être membre permet d'entrer, mais Paul a pu rester dehors.",
+  "answer": false
+ },
+ {
+  "key": "log21-106",
+  "concept": "logic.reasoning.v21_tf_personne_parfait",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "« Personne n'est parfait. Léo est une personne. » Donc Léo n'est pas parfait.",
+  "explanation": "Ce qui est vrai pour tout le monde l'est pour Léo.",
+  "answer": true
+ },
+ {
+  "key": "log21-107",
+  "concept": "logic.reasoning.v21_tf_de_morgan",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 80,
+  "prompt": "Le contraire de « Il pleut et il ne fait pas froid » est « Il ne pleut pas, ou il fait froid ».",
+  "explanation": "Pour nier « A et B », on dit « non A ou non B ». Ce sont les lois de De Morgan.",
+  "answer": true
+ },
+ {
+  "key": "log21-108",
+  "concept": "logic.reasoning.v21_tf_pas_tous",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Tous les élèves n'ont pas réussi » peut vouloir dire que certains élèves ont réussi.",
+  "explanation": "En général, la phrase signifie « pas tous » : certains ont réussi, d'autres non. Pour dire que personne n'a réussi, on dit « aucun élève n'a réussi ».",
+  "answer": true
+ },
+ {
+  "key": "log21-109",
+  "concept": "logic.reasoning.v21_tf_au_moins_deux",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le contraire de « au plus un » est « au moins deux ».",
+  "explanation": "« 0 ou 1 » d'un côté, « 2 ou plus » de l'autre : tous les cas sont couverts, sans chevauchement.",
+  "answer": true
+ },
+ {
+  "key": "log21-110",
+  "concept": "logic.reasoning.v21_tf_toujours_jamais",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le contraire logique de « toujours » est « jamais ».",
+  "explanation": "C'est « pas toujours », c'est-à-dire « au moins une fois non ». « Jamais » est un extrême.",
+  "answer": false
+ },
+ {
+  "key": "log21-111",
+  "concept": "logic.reasoning.v21_tf_faim_mange",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« Si j'ai faim, je mange. » Je mange. Donc j'ai faim.",
+  "explanation": "On peut manger sans avoir faim, par gourmandise. La règle ne dit rien de ce cas.",
+  "answer": false
+ },
+ {
+  "key": "log21-112",
+  "concept": "logic.reasoning.v21_tf_seulement_si",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "« Je mange seulement si j'ai faim. » Je mange. Donc j'ai faim.",
+  "explanation": "« Seulement si » change tout : manger n'arrive que quand on a faim.",
+  "answer": true
+ },
+ {
+  "key": "log21-113",
+  "concept": "logic.reasoning.v21_tf_syllo_aucun",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "« Tous les A sont des B. Aucun B n'est un C. » Donc aucun A n'est un C.",
+  "explanation": "Les A sont à l'intérieur des B, et les B sont tous loin des C.",
+  "answer": true
+ },
+ {
+  "key": "log21-114",
+  "concept": "logic.reasoning.v21_tf_syllo_inverse",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« Aucun A n'est un B. Tous les C sont des B. » Donc aucun C n'est un A.",
+  "explanation": "Les C sont tous des B, et aucun B n'est un A.",
+  "answer": true
+ },
+ {
+  "key": "log21-115",
+  "concept": "logic.reasoning.v21_tf_plupart_plupart",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 85,
+  "prompt": "« La plupart des X sont des Y. La plupart des Y sont des Z. » Donc au moins un X est un Z.",
+  "explanation": "Les Y peuvent être bien plus nombreux que les X, et les Z se trouver tous parmi les Y qui ne sont pas des X.",
+  "answer": false
+ },
+ {
+  "key": "log21-116",
+  "concept": "logic.reasoning.v21_tf_plupart_deux_sports",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 80,
+  "prompt": "Dans une classe, la plupart des élèves aiment le foot, et la plupart aiment le basket. Donc au moins un élève aime les deux.",
+  "explanation": "Plus de la moitié d'un côté, plus de la moitié de l'autre : les deux groupes se chevauchent forcément.",
+  "answer": true
+ },
+ {
+  "key": "log21-117",
+  "concept": "logic.reasoning.v21_tf_pas_grand_et_blond",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« Il est faux que Paul soit grand et blond. » Donc Paul n'est ni grand ni blond.",
+  "explanation": "Il suffit qu'il ne soit pas l'un des deux : il peut être grand et brun.",
+  "answer": false
+ },
+ {
+  "key": "log21-118",
+  "concept": "logic.reasoning.v21_tf_ni_lea_ni_tom",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "« Ni Léa ni Tom ne sont venus. » Donc Léa n'est pas venue.",
+  "explanation": "« Ni… ni » nie les deux.",
+  "answer": true
+ },
+ {
+  "key": "log21-119",
+  "concept": "logic.reasoning.v21_tf_corbeaux_contraposee",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Si « Tous les corbeaux sont noirs » est vrai, alors un objet qui n'est pas noir n'est pas un corbeau.",
+  "explanation": "C'est la « contraposée » : elle dit exactement la même chose que la phrase de départ.",
+  "answer": true
+ },
+ {
+  "key": "log21-120",
+  "concept": "logic.reasoning.v21_tf_phrase_et_negation",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Une phrase et sa négation peuvent être fausses en même temps.",
+  "explanation": "L'une des deux est toujours vraie : « il pleut » ou « il ne pleut pas ».",
+  "answer": false
+ },
+ {
+  "key": "log21-121",
+  "concept": "logic.reasoning.v21_tf_contraires_faux",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "« Tous les chats sont gris » et « Aucun chat n'est gris » peuvent être fausses en même temps.",
+  "explanation": "Il suffit que certains chats soient gris et d'autres non. Ces deux phrases sont des extrêmes, pas la négation l'une de l'autre.",
+  "answer": true
+ },
+ {
+  "key": "log21-122",
+  "concept": "logic.reasoning.v21_tf_valide_conclusion_fausse",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 80,
+  "prompt": "Un raisonnement peut être valide même si sa conclusion est fausse.",
+  "explanation": "« Tous les poissons volent. Le saumon est un poisson. Donc le saumon vole. » Le raisonnement est valide, mais la première phrase est fausse.",
+  "answer": true
+ },
+ {
+  "key": "log21-123",
+  "concept": "logic.reasoning.v21_tf_conclusion_vraie_prouve",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Si la conclusion d'un raisonnement est vraie, c'est que le raisonnement est valide.",
+  "explanation": "« Les chats ont quatre pattes. Paris est en France. Donc la Terre est ronde. » Tout est vrai, et pourtant rien ne s'enchaîne.",
+  "answer": false
+ },
+ {
+  "key": "log21-124",
+  "concept": "logic.reasoning.v21_tf_chaque_enfant_mere",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "« Chaque enfant a une mère » veut dire que tous les enfants ont la même mère.",
+  "explanation": "Chacun a la sienne. L'ordre des mots compte : « il existe une mère de tous les enfants » dirait autre chose.",
+  "answer": false
+ },
+ {
+  "key": "log21-125",
+  "concept": "logic.reasoning.v21_tf_pas_plus_grand",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Ana est plus grande que Ben, et Ben n'est pas plus grand que Cléo. Donc Ana est plus grande que Cléo.",
+  "explanation": "Cléo peut dépasser Ben… et même Ana. On ne sait rien de Cléo par rapport à Ana.",
+  "answer": false
+ },
+ {
+  "key": "log21-126",
+  "concept": "logic.reasoning.v21_tf_tout_le_monde_aime",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "« Tout le monde aime quelqu'un » veut dire qu'il existe une personne que tout le monde aime.",
+  "explanation": "Chacun peut aimer une personne différente. La seconde phrase est beaucoup plus forte.",
+  "answer": false
+ },
+ {
+  "key": "log21-127",
+  "concept": "logic.reasoning.v21_tf_au_plus_un_gagnant",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« Il y a au plus un gagnant » reste vrai s'il n'y a aucun gagnant.",
+  "explanation": "« Au plus un » veut dire « 0 ou 1 ».",
+  "answer": true
+ },
+ {
+  "key": "log21-128",
+  "concept": "logic.reasoning.v21_tf_pas_de_dessert",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "« Pas de dessert sans légumes » veut dire qu'il faut manger ses légumes pour avoir un dessert.",
+  "explanation": "Les légumes sont une condition nécessaire du dessert… mais pas forcément suffisante.",
+  "answer": true
+ },
+ {
+  "key": "log21-129",
+  "concept": "logic.reasoning.v21_tf_ou_exclusif",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "En logique, « fromage ou dessert » est vrai si l'on prend les deux.",
+  "explanation": "Le « ou » logique est inclusif. Au restaurant, c'est souvent un « ou » exclusif : l'un ou l'autre, pas les deux.",
+  "answer": true
+ },
+ {
+  "key": "log21-130",
+  "concept": "logic.reasoning.v21_tf_rare_donc_impossible",
+  "label": "Probabilités",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Si une chose a une chance sur un million d'arriver, elle n'arrivera jamais.",
+  "explanation": "Sur des millions d'essais, elle arrivera souvent. Des gens gagnent bien au loto chaque semaine.",
+  "answer": false
+ },
+ {
+  "key": "log21-131",
+  "concept": "logic.reasoning.v21_tf_coincidence",
+  "label": "Probabilités",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Dans une classe de 30 élèves, il est plus probable que deux élèves aient le même anniversaire que le contraire.",
+  "explanation": "Environ 70 % de chances. C'est le paradoxe des anniversaires.",
+  "answer": true
+ },
+ {
+  "key": "log21-132",
+  "concept": "logic.reasoning.v21_nu_poignees_ronde",
+  "label": "Raisonnement",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "À une table ronde de 8 personnes, chacun serre la main à tout le monde, sauf à ses deux voisins. Combien de poignées de main en tout ?",
+  "explanation": "Chacun serre 5 mains (8 − 1 − 2) : 8 × 5 = 40, divisé par 2 car chaque poignée compte deux personnes.",
+  "answer": 20,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-133",
+  "concept": "logic.reasoning.v21_nu_menteurs_cercle",
+  "label": "Menteurs et chevaliers",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Dix personnes sont en cercle. Chacune dit : « Mon voisin de droite est un menteur. » Chacun dit toujours vrai ou ment toujours. Combien y a-t-il de menteurs ?",
+  "explanation": "Un honnête a un menteur à sa droite, et un menteur a un honnête à sa droite : ils alternent, donc 5 sur 10.",
+  "answer": 5,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-134",
+  "concept": "logic.reasoning.v21_nu_tournoi_poules",
+  "label": "Raisonnement",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Dans un tournoi, chaque équipe joue une fois contre chacune des autres. Il y a eu 10 matchs. Combien y a-t-il d'équipes ?",
+  "explanation": "Avec 5 équipes : 5 × 4 ÷ 2 = 10 matchs.",
+  "answer": 5,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-135",
+  "concept": "logic.reasoning.v21_nu_chaussettes_trois_couleurs",
+  "label": "Raisonnement",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Un tiroir contient des chaussettes rouges, vertes et bleues, mélangées. Dans le noir, combien faut-il en prendre au minimum pour être sûr d'avoir une paire de la même couleur ?",
+  "explanation": "Avec 3 chaussettes, on peut tomber sur trois couleurs différentes. La 4e forme forcément une paire.",
+  "answer": 4,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-136",
+  "concept": "logic.reasoning.v21_nu_age_capitaine",
+  "label": "Raisonnement",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Dans 6 ans, Zoé aura le triple de l'âge qu'elle avait il y a 6 ans. Quel âge a-t-elle ?",
+  "explanation": "À 12 ans : dans 6 ans elle aura 18 ans, et il y a 6 ans elle en avait 6. 18 = 3 × 6.",
+  "answer": 12,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-137",
+  "concept": "logic.reasoning.v21_nu_ascenseur",
+  "label": "Raisonnement",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Pour aller du rez-de-chaussée au 2e étage, il faut 20 secondes. Combien de secondes pour aller du rez-de-chaussée au 6e, au même rythme ?",
+  "explanation": "Rez-de-chaussée → 2e, c'est deux étages : 10 s par étage. Pour six étages : 60 s.",
+  "answer": 60,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-138",
+  "concept": "logic.puzzles.v21_ch_chapeau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Mon premier ronronne, mon second recouvre ton corps, mon tout se porte sur la tête.",
+  "explanation": "Chat + peau = chapeau.",
+  "word": "CHAPEAU",
+  "display": "Chapeau"
+ },
+ {
+  "key": "log21-139",
+  "concept": "logic.puzzles.v21_ch_bateau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Mon premier se porte au pied, mon second est le contraire de « tard », mon tout flotte sur l'eau.",
+  "explanation": "Bas + tôt = bateau.",
+  "word": "BATEAU",
+  "display": "Bateau"
+ },
+ {
+  "key": "log21-140",
+  "concept": "logic.puzzles.v21_ch_chameau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Mon premier chasse les souris, mon second s'écrit avec des lettres, mon tout a des bosses.",
+  "explanation": "Chat + mot = chameau.",
+  "word": "CHAMEAU",
+  "display": "Chameau"
+ },
+ {
+  "key": "log21-141",
+  "concept": "logic.puzzles.v21_ch_pinson",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Mon premier est un arbre à aiguilles, mon second s'entend, mon tout chante dans les branches.",
+  "explanation": "Pin + son = pinson.",
+  "word": "PINSON",
+  "display": "Pinson"
+ },
+ {
+  "key": "log21-142",
+  "concept": "logic.puzzles.v21_ch_mouton",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Mon premier n'est pas dur, mon second est un gros poisson, mon tout donne de la laine.",
+  "explanation": "Mou + thon = mouton.",
+  "word": "MOUTON",
+  "display": "Mouton"
+ },
+ {
+  "key": "log21-143",
+  "concept": "logic.puzzles.v21_ch_corbeau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Mon premier, c'est tout ton être de la tête aux pieds, mon second n'est pas laid, mon tout est un oiseau noir.",
+  "explanation": "Corps + beau = corbeau.",
+  "word": "CORBEAU",
+  "display": "Corbeau"
+ },
+ {
+  "key": "log21-144",
+  "concept": "logic.puzzles.v21_ch_baleine",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Mon premier n'est pas haut, mon second vient du mouton, mon tout est le plus gros animal du monde.",
+  "explanation": "Bas + laine = baleine. La baleine bleue peut dépasser 30 mètres.",
+  "word": "BALEINE",
+  "display": "Baleine"
+ },
+ {
+  "key": "log21-145",
+  "concept": "logic.puzzles.v21_ch_marteau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Mon premier est une petite étendue d'eau, mon second n'est pas tard, mon tout enfonce les clous.",
+  "explanation": "Mare + tôt = marteau.",
+  "word": "MARTEAU",
+  "display": "Marteau"
+ },
+ {
+  "key": "log21-146",
+  "concept": "logic.puzzles.v21_ch_dauphin",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Mon premier est derrière toi, mon second termine les films, mon tout saute dans les vagues.",
+  "explanation": "Dos + fin = dauphin.",
+  "word": "DAUPHIN",
+  "display": "Dauphin"
+ },
+ {
+  "key": "log21-147",
+  "concept": "logic.puzzles.v21_ch_lapin",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Mon premier est une note de musique, mon second un arbre, mon tout a de longues oreilles.",
+  "explanation": "La + pin = lapin.",
+  "word": "LAPIN",
+  "display": "Lapin"
+ },
+ {
+  "key": "log21-148",
+  "concept": "logic.puzzles.v21_ch_orange",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Mon premier est un métal précieux, mon second a des ailes et une auréole, mon tout est un fruit.",
+  "explanation": "Or + ange = orange.",
+  "word": "ORANGE",
+  "display": "Orange"
+ },
+ {
+  "key": "log21-149",
+  "concept": "logic.puzzles.v21_ch_pigeon",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Mon premier est un oiseau noir et blanc qui aime ce qui brille, mon second une plante du bord de l'eau, mon tout roucoule sur les places.",
+  "explanation": "Pie + jonc = pigeon.",
+  "word": "PIGEON",
+  "display": "Pigeon"
+ },
+ {
+  "key": "log21-150",
+  "concept": "logic.puzzles.v21_ch_rideau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Mon premier se mange en grains, mon second est derrière toi, mon tout se tire devant la fenêtre.",
+  "explanation": "Riz + dos = rideau.",
+  "word": "RIDEAU",
+  "display": "Rideau"
+ },
+ {
+  "key": "log21-151",
+  "concept": "logic.puzzles.v21_ch_cadeau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Mon premier est la onzième lettre de l'alphabet, mon second est derrière toi, mon tout attend sous le sapin.",
+  "explanation": "K + dos = cadeau.",
+  "word": "CADEAU",
+  "display": "Cadeau"
+ },
+ {
+  "key": "log21-152",
+  "concept": "logic.puzzles.v21_ch_carotte",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Mon premier transporte des voyageurs, mon second aspire les odeurs de la cuisine, mon tout est un légume orange.",
+  "explanation": "Car + hotte = carotte.",
+  "word": "CAROTTE",
+  "display": "Carotte"
+ },
+ {
+  "key": "log21-153",
+  "concept": "logic.puzzles.v21_ch_maison",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Mon premier est le mois du muguet, mon second s'entend, mon tout abrite une famille.",
+  "explanation": "Mai + son = maison.",
+  "word": "MAISON",
+  "display": "Maison"
+ },
+ {
+  "key": "log21-154",
+  "concept": "logic.puzzles.v21_ch_pantalon",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Mon premier fait la roue, mon second est à l'arrière de ton pied, mon tout se porte sur les jambes.",
+  "explanation": "Paon (qui se prononce « pan ») + talon = pantalon.",
+  "word": "PANTALON",
+  "display": "Pantalon"
+ },
+ {
+  "key": "log21-155",
+  "concept": "logic.puzzles.v21_ch_chapitre",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Mon premier a des moustaches, mon second fait le clown, mon tout découpe un livre.",
+  "explanation": "Chat + pitre = chapitre.",
+  "word": "CHAPITRE",
+  "display": "Chapitre"
+ },
+ {
+  "key": "log21-156",
+  "concept": "logic.puzzles.v21_ch_domino",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Mon premier et mon second sont des notes de musique, mon troisième veut dire « non » en anglais, mon tout se joue avec des petits rectangles à points.",
+  "explanation": "Do + mi + no = domino.",
+  "word": "DOMINO",
+  "display": "Domino"
+ },
+ {
+  "key": "log21-157",
+  "concept": "logic.puzzles.v21_ch_champignon",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 70,
+  "prompt": "Mon premier est cultivé par l'agriculteur, mon second est la graine de certains pins, mon tout pousse en forêt après la pluie.",
+  "explanation": "Champ + pignon = champignon.",
+  "word": "CHAMPIGNON",
+  "display": "Champignon"
+ },
+ {
+  "key": "log21-158",
+  "concept": "logic.puzzles.v21_ch_tomate",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Mon premier n'est pas tard, mon second termine une partie d'échecs, mon tout est rouge et rond.",
+  "explanation": "Tôt + mat = tomate.",
+  "word": "TOMATE",
+  "display": "Tomate"
+ },
+ {
+  "key": "log21-159",
+  "concept": "logic.puzzles.v21_ch_souci",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Mon premier est une ancienne petite pièce, mon second coupe le bois, mon tout t'empêche de dormir.",
+  "explanation": "Sou + scie = souci. C'est aussi une fleur orange.",
+  "word": "SOUCI",
+  "display": "Souci"
+ },
+ {
+  "key": "log21-160",
+  "concept": "logic.puzzles.v21_ch_verseau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Mon premier vit dans la terre, mon second porte de l'eau, mon tout est un signe du zodiaque.",
+  "explanation": "Ver + seau = verseau.",
+  "word": "VERSEAU",
+  "display": "Verseau"
+ },
+ {
+  "key": "log21-161",
+  "concept": "logic.puzzles.v21_ch_bouchon",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Mon premier sert à manger et à parler, mon second est un pronom, mon tout ferme une bouteille.",
+  "explanation": "Bouche + on = bouchon.",
+  "word": "BOUCHON",
+  "display": "Bouchon"
+ },
+ {
+  "key": "log21-162",
+  "concept": "logic.puzzles.v21_ch_serpent",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Mon premier abrite les plantes du froid, mon second fait la roue, mon tout rampe et siffle.",
+  "explanation": "Serre + paon = serpent.",
+  "word": "SERPENT",
+  "display": "Serpent"
+ },
+ {
+  "key": "log21-163",
+  "concept": "logic.puzzles.v21_ch_taureau",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Mon premier n'est pas tard, mon second est un bruit malpoli après le repas, mon tout a des cornes.",
+  "explanation": "Tôt + rot = taureau.",
+  "word": "TAUREAU",
+  "display": "Taureau"
+ },
+ {
+  "key": "log21-164",
+  "concept": "logic.puzzles.v21_code_042",
+  "label": "Code secret",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Trouve le code à 3 chiffres. 682 : un chiffre bon et bien placé. 614 : un chiffre bon mais mal placé. 206 : deux chiffres bons mais mal placés. 738 : rien de bon. 780 : un chiffre bon mais mal placé.",
+  "explanation": "738 élimine 7, 3 et 8, donc dans 780 c'est le 0, mal placé. 206 donne 0 et 2 ou 6 mal placés… Seul 042 respecte tous les indices.",
+  "options": [
+   "042*",
+   "026",
+   "062",
+   "204"
+  ]
+ },
+ {
+  "key": "log21-165",
+  "concept": "logic.puzzles.v21_code_132",
+  "label": "Code secret",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Trouve le code à 3 chiffres différents. 512 : un chiffre bien placé et un mal placé. 325 : deux chiffres mal placés. 901 : un chiffre mal placé. 874 : rien de bon. 602 : un chiffre bien placé.",
+  "explanation": "602 et 512 montrent que le 2 est bien placé, à la fin. Dans 512, le 1 est alors mal placé : il n'est pas au milieu, donc au début. 325 apporte le 3, qui va au milieu : 132.",
+  "options": [
+   "132*",
+   "152",
+   "312",
+   "123"
+  ]
+ },
+ {
+  "key": "log21-166",
+  "concept": "logic.puzzles.v21_op_6_3_2",
+  "label": "Opérations manquantes",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quels signes faut-il mettre : 6 ? 3 ? 2 = 12 ?",
+  "explanation": "6 + 3 × 2 = 6 + 6 = 12. Attention : on fait la multiplication avant l'addition. 6 × 3 − 2 donne 16.",
+  "options": [
+   "+ puis ×*",
+   "× puis −",
+   "+ puis +",
+   "× puis ÷"
+  ]
+ },
+ {
+  "key": "log21-167",
+  "concept": "logic.puzzles.v21_op_9_3_3",
+  "label": "Opérations manquantes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Remplace les « ? » par des signes d'opération pour que l'égalité soit juste : 9 ? 3 ? 3 = 6.",
+  "explanation": "9 ÷ 3 + 3 = 3 + 3 = 6. 9 − 3 + 3 donne 9, et 9 − 3 × 3 donne 0.",
+  "options": [
+   "÷ puis +*",
+   "− puis +",
+   "− puis ×",
+   "+ puis −"
+  ]
+ },
+ {
+  "key": "log21-168",
+  "concept": "logic.puzzles.v21_op_10_2_4",
+  "label": "Opérations manquantes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Il manque deux signes dans ce calcul : 10 ? 2 ? 4 = 1. Lesquels ?",
+  "explanation": "10 ÷ 2 − 4 = 5 − 4 = 1. 10 − 2 ÷ 4 donnerait 9,5.",
+  "options": [
+   "÷ puis −*",
+   "− puis ÷",
+   "− puis −",
+   "÷ puis ÷"
+  ]
+ },
+ {
+  "key": "log21-169",
+  "concept": "logic.puzzles.v21_op_8_2_3",
+  "label": "Opérations manquantes",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pour que « 8 ? 2 ? 3 » fasse 12, quels signes choisir ?",
+  "explanation": "8 ÷ 2 × 3 = 4 × 3 = 12. 8 + 2 + 3 donne 13, 8 × 2 − 3 donne 13 aussi : deux pièges.",
+  "options": [
+   "÷ puis ×*",
+   "+ puis +",
+   "× puis −",
+   "− puis ×"
+  ]
+ },
+ {
+  "key": "log21-170",
+  "concept": "logic.puzzles.v21_op_7_2_3",
+  "label": "Opérations manquantes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Complète avec les bons signes, en respectant les priorités de calcul : 7 ? 2 ? 3 = 13.",
+  "explanation": "7 + 2 × 3 = 7 + 6 = 13. 7 × 2 − 3 donne 11, et 7 × 2 + 3 donne 17.",
+  "options": [
+   "+ puis ×*",
+   "× puis −",
+   "× puis +",
+   "+ puis +"
+  ]
+ },
+ {
+  "key": "log21-171",
+  "concept": "logic.puzzles.v21_nu_chiffres_identiques",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 25,
+  "prompt": "Je suis un nombre à deux chiffres. Mes deux chiffres sont identiques et leur somme vaut 14. Qui suis-je ?",
+  "explanation": "7 + 7 = 14.",
+  "answer": 77,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-172",
+  "concept": "logic.puzzles.v21_nu_somme_vingt",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Quel est le plus petit nombre à trois chiffres dont la somme des chiffres vaut 20 ?",
+  "explanation": "Avec un 1 devant, on atteint au mieux 1 + 9 + 9 = 19. Il faut donc un 2 devant, et 9 + 9 derrière : 299.",
+  "answer": 299,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-173",
+  "concept": "logic.puzzles.v21_nu_moitie_plus_dix",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "La moitié d'un nombre, plus 10, est égale à ce nombre. Quel est-il ?",
+  "explanation": "La moitié de 20 est 10, et 10 + 10 = 20. Le « + 10 » vaut donc l'autre moitié.",
+  "answer": 20,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-174",
+  "concept": "logic.puzzles.v21_nu_somme_difference",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Deux nombres ont pour somme 20 et pour différence 4. Quel est le plus grand ?",
+  "explanation": "12 + 8 = 20 et 12 − 8 = 4. Astuce : (20 + 4) ÷ 2 = 12.",
+  "answer": 12,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-175",
+  "concept": "logic.puzzles.v21_nu_consecutifs_produit",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Le produit de deux nombres entiers qui se suivent vaut 132. Quel est le plus petit des deux ?",
+  "explanation": "11 × 12 = 132.",
+  "answer": 11,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-176",
+  "concept": "logic.puzzles.v21_nu_363",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Je suis un nombre à trois chiffres. Mon premier et mon dernier chiffre sont égaux, celui du milieu est leur somme, et la somme de mes trois chiffres vaut 12. Qui suis-je ?",
+  "explanation": "Si les bouts valent a, le milieu vaut 2a, et le total 4a = 12 : a = 3.",
+  "answer": 363,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-177",
+  "concept": "logic.puzzles.v21_nu_age_moitie",
+  "label": "Âges",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Il y a 4 ans, Tom avait la moitié de l'âge qu'il aura dans 8 ans. Quel âge a-t-il ?",
+  "explanation": "À 16 ans : il y a 4 ans il avait 12 ans, et dans 8 ans il en aura 24, soit le double.",
+  "answer": 16,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-178",
+  "concept": "logic.puzzles.v21_nu_bouteille_vide",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Une bouteille pleine d'eau pèse 1 000 g. À moitié pleine, elle pèse 600 g. Combien pèse la bouteille vide, en grammes ?",
+  "explanation": "La moitié de l'eau pèse 1 000 − 600 = 400 g. Toute l'eau pèse 800 g, donc la bouteille 200 g.",
+  "answer": 200,
+  "tolerance": 0,
+  "unit": "g"
+ },
+ {
+  "key": "log21-179",
+  "concept": "logic.puzzles.v21_nu_livre_moities",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Je lis la moitié d'un livre le premier jour, puis la moitié de ce qui reste le deuxième jour. Il me reste 30 pages. Combien de pages a le livre ?",
+  "explanation": "Il reste un quart du livre : 30 × 4 = 120 pages.",
+  "answer": 120,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-180",
+  "concept": "logic.puzzles.v21_nu_marchand_velo",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Un marchand achète un vélo 100 €, le revend 120 €, le rachète 140 €, puis le revend 160 €. Combien a-t-il gagné en tout, en euros ?",
+  "explanation": "Il a dépensé 100 + 140 = 240 € et encaissé 120 + 160 = 280 € : 40 € de gain. Beaucoup répondent 20 €.",
+  "answer": 40,
+  "tolerance": 0,
+  "unit": "€"
+ },
+ {
+  "key": "log21-181",
+  "concept": "logic.puzzles.v21_nu_quatre_enfants",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quatre enfants ont chacun 1 € de plus que le précédent. À eux quatre, ils ont 26 €. Combien a le plus riche, en euros ?",
+  "explanation": "5 + 6 + 7 + 8 = 26.",
+  "answer": 8,
+  "tolerance": 0,
+  "unit": "€"
+ },
+ {
+  "key": "log21-182",
+  "concept": "logic.puzzles.v21_nu_produit_24",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Quel est le plus petit nombre entier dont le produit des chiffres vaut 24 ?",
+  "explanation": "3 × 8 = 24. Les autres candidats à deux chiffres (46, 64, 83) sont plus grands.",
+  "answer": 38,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-183",
+  "concept": "logic.puzzles.v21_nu_gauss",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Combien vaut 1 + 2 + 3 + … + 100 ?",
+  "explanation": "On fait des paires : 1 + 100, 2 + 99… 50 paires de 101 = 5 050. Le petit Gauss l'aurait trouvé à 9 ans.",
+  "answer": 5050,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-184",
+  "concept": "logic.puzzles.v21_nu_carres_cent",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien de nombres entre 1 et 100 (inclus) sont des carrés parfaits (comme 4 ou 9) ?",
+  "explanation": "1, 4, 9, 16, 25, 36, 49, 64, 81 et 100 : de 1² à 10².",
+  "answer": 10,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-185",
+  "concept": "logic.puzzles.v21_nu_balance_fruits",
+  "label": "Balance",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Sur une balance, 2 pommes pèsent autant que 3 poires, et 3 poires autant que 6 prunes. Combien de prunes faut-il pour équilibrer 4 pommes ?",
+  "explanation": "4 pommes = 6 poires = 12 prunes.",
+  "answer": 12,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-186",
+  "concept": "logic.puzzles.v21_nu_chat_et_demi",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Un chat et demi mange un rat et demi en un jour et demi. Combien de rats 9 chats mangent-ils en 9 jours ?",
+  "explanation": "Un chat mange un rat en un jour et demi. En 9 jours, il en mange 6. Neuf chats : 54.",
+  "answer": 54,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-187",
+  "concept": "logic.puzzles.v21_nu_bonbons_ecart",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "On partage 15 bonbons entre 3 enfants : chacun en a 2 de plus que le précédent. Combien en a le plus gâté ?",
+  "explanation": "3 + 5 + 7 = 15.",
+  "answer": 7,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-188",
+  "concept": "logic.puzzles.v21_nu_cube_deux_faces",
+  "label": "Cubes peints",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Un cube de 4 cm de côté est peint, puis découpé en petits cubes de 1 cm. Combien de petits cubes ont exactement 2 faces peintes ?",
+  "explanation": "Ils sont sur les arêtes, sans les coins : 12 arêtes × 2 cubes = 24.",
+  "answer": 24,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-189",
+  "concept": "logic.puzzles.v21_nu_train_pont",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Un train de 500 m de long traverse entièrement un pont de 1 km en 1 minute. Quelle est sa vitesse, en km/h ?",
+  "explanation": "Pour sortir du pont, l'avant parcourt 1 km + 500 m = 1,5 km en 1 minute, soit 90 km/h.",
+  "answer": 90,
+  "tolerance": 0,
+  "unit": "km/h"
+ },
+ {
+  "key": "log21-190",
+  "concept": "logic.puzzles.v21_nu_jours_mars_juin",
+  "label": "Calendrier",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Combien de jours y a-t-il du 1er mars au 31 mai, inclus ?",
+  "explanation": "Mars (31) + avril (30) + mai (31) = 92 jours.",
+  "answer": 92,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-191",
+  "concept": "logic.puzzles.v21_nu_angle_huit",
+  "label": "Horloges",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "À 8 h pile, quel est le plus petit angle entre les deux aiguilles, en degrés ?",
+  "explanation": "Il y a 4 « heures » d'écart entre le 8 et le 12, chacune vaut 30° : 120°.",
+  "answer": 120,
+  "tolerance": 0,
+  "unit": "°"
+ },
+ {
+  "key": "log21-192",
+  "concept": "logic.puzzles.v21_nu_angle_midi_trente",
+  "label": "Horloges",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "À 12 h 30, quel angle forment les deux aiguilles, en degrés ?",
+  "explanation": "La grande aiguille est sur le 6 (180°). La petite a fait la moitié du chemin entre 12 et 1, soit 15°. Écart : 165°.",
+  "answer": 165,
+  "tolerance": 0,
+  "unit": "°"
+ },
+ {
+  "key": "log21-193",
+  "concept": "logic.puzzles.v21_nu_angle_plat",
+  "label": "Horloges",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Combien de fois par jour (24 h) les deux aiguilles d'une horloge sont-elles exactement opposées, en ligne droite ?",
+  "explanation": "11 fois en 12 heures, car la grande aiguille rattrape la petite 11 fois. Donc 22 fois par jour.",
+  "answer": 22,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-194",
+  "concept": "logic.puzzles.v21_nu_paiement_cinq",
+  "label": "Dénombrement",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Avec des pièces de 1 €, 2 € et 5 €, de combien de façons peut-on payer exactement 5 € ?",
+  "explanation": "5 ; 2 + 2 + 1 ; 2 + 1 + 1 + 1 ; 1 + 1 + 1 + 1 + 1.",
+  "answer": 4,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-195",
+  "concept": "logic.puzzles.v21_co_mots_quatre_lettres",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien de « mots » de 3 lettres toutes différentes peut-on former avec A, B, C et D (même sans sens) ?",
+  "explanation": "4 choix pour la 1re lettre, 3 pour la 2e, 2 pour la 3e : 4 × 3 × 2 = 24.",
+  "answer": 24,
+  "tolerance": 0,
+  "min": 0,
+  "max": 40,
+  "start": 0
+ },
+ {
+  "key": "log21-196",
+  "concept": "logic.puzzles.v21_co_glaces_deux",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 45,
+  "prompt": "Un glacier propose 5 parfums. Combien de coupes de 2 parfums différents peut-on composer (l'ordre ne compte pas) ?",
+  "explanation": "5 × 4 = 20 paires ordonnées, divisées par 2 : 10.",
+  "answer": 10,
+  "tolerance": 0,
+  "min": 0,
+  "max": 25,
+  "start": 0
+ },
+ {
+  "key": "log21-197",
+  "concept": "logic.puzzles.v21_co_dominos",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "Combien de pièces compte un jeu de dominos classique (de double blanc à double six) ?",
+  "explanation": "Chaque paire de valeurs de 0 à 6, doubles compris : 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28.",
+  "answer": 28,
+  "tolerance": 0,
+  "min": 10,
+  "max": 50,
+  "start": 10
+ },
+ {
+  "key": "log21-198",
+  "concept": "logic.puzzles.v21_co_jours_avec_r",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 30,
+  "prompt": "Combien de jours de la semaine contiennent la lettre R dans leur nom ?",
+  "explanation": "Mardi, mercredi et vendredi.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 0,
+  "max": 7,
+  "start": 0
+ },
+ {
+  "key": "log21-199",
+  "concept": "logic.puzzles.v21_co_mois_quatre_lettres",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 35,
+  "prompt": "Combien de mois de l'année ont un nom de 4 lettres exactement ?",
+  "explanation": "Mars, juin et août. Mai n'en a que 3.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 0,
+  "max": 12,
+  "start": 0
+ },
+ {
+  "key": "log21-200",
+  "concept": "logic.puzzles.v21_co_lettres_anticonst",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 65,
+  "prompt": "Combien de lettres différentes y a-t-il dans « anticonstitutionnellement » ?",
+  "explanation": "A, N, T, I, C, O, S, U, E, L et M : 11 lettres différentes pour 25 lettres au total.",
+  "answer": 11,
+  "tolerance": 1,
+  "min": 5,
+  "max": 25,
+  "start": 5
+ },
+ {
+  "key": "log21-201",
+  "concept": "logic.puzzles.v21_co_somme_dix",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien de nombres à deux chiffres ont des chiffres dont la somme vaut 10 ?",
+  "explanation": "19, 28, 37, 46, 55, 64, 73, 82 et 91.",
+  "answer": 9,
+  "tolerance": 0,
+  "min": 0,
+  "max": 20,
+  "start": 0
+ },
+ {
+  "key": "log21-202",
+  "concept": "logic.puzzles.v21_co_palindromes_trois",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "Combien existe-t-il de nombres à 3 chiffres qui se lisent pareil dans les deux sens (comme 353) ?",
+  "explanation": "9 choix pour le premier chiffre (pas 0), 10 pour celui du milieu, et le dernier est imposé : 90.",
+  "answer": 90,
+  "tolerance": 5,
+  "min": 10,
+  "max": 150,
+  "start": 10
+ },
+ {
+  "key": "log21-203",
+  "concept": "logic.puzzles.v21_co_heures_palindromes",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 80,
+  "prompt": "Sur un réveil de 00:00 à 23:59, combien d'heures se lisent pareil dans les deux sens (comme 12:21) ?",
+  "explanation": "De 00:00 à 05:50 (6), de 10:01 à 15:51 (6) et de 20:02 à 23:32 (4). 06:60 n'existe pas.",
+  "answer": 16,
+  "tolerance": 2,
+  "min": 0,
+  "max": 40,
+  "start": 0
+ },
+ {
+  "key": "log21-204",
+  "concept": "logic.puzzles.v21_co_vendredis_13_2027",
+  "label": "Calendrier",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien y aura-t-il de vendredis 13 en 2027 ?",
+  "explanation": "Un seul, en août. Une année en compte toujours au moins un, et au plus trois.",
+  "answer": 1,
+  "tolerance": 0,
+  "min": 0,
+  "max": 4,
+  "start": 0
+ },
+ {
+  "key": "log21-205",
+  "concept": "logic.puzzles.v21_co_tour_minutes",
+  "label": "Horloges",
+  "type": "counter",
+  "difficulty": 20,
+  "prompt": "Combien de tours de cadran la grande aiguille fait-elle en une journée ?",
+  "explanation": "Un tour par heure, donc 24 tours.",
+  "answer": 24,
+  "tolerance": 0,
+  "min": 0,
+  "max": 48,
+  "start": 0
+ },
+ {
+  "key": "log21-206",
+  "concept": "logic.puzzles.v21_noel_jour_an",
+  "label": "Calendrier",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Noël 2026 tombe un vendredi. Quel jour sera le 1er janvier 2027 ?",
+  "explanation": "Le 1er janvier arrive exactement une semaine après Noël.",
+  "options": [
+   "Vendredi*",
+   "Samedi",
+   "Jeudi",
+   "Lundi"
+  ]
+ },
+ {
+  "key": "log21-207",
+  "concept": "logic.puzzles.v21_quatorze_juillet",
+  "label": "Calendrier",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Le 1er janvier 2027 est un vendredi. Quel jour sera le 14 juillet 2027 ?",
+  "explanation": "Il y a 194 jours d'écart. 194 = 27 semaines + 5 jours : vendredi + 5 jours = mercredi.",
+  "options": [
+   "Mercredi*",
+   "Vendredi",
+   "Jeudi",
+   "Mardi"
+  ]
+ },
+ {
+  "key": "log21-208",
+  "concept": "logic.puzzles.v21_premier_mars",
+  "label": "Calendrier",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Une année non bissextile commence un lundi. Quel jour sera le 1er mars ?",
+  "explanation": "Janvier et février font 59 jours, soit 8 semaines + 3 jours : lundi + 3 = jeudi. Une année bissextile donnerait vendredi.",
+  "options": [
+   "Jeudi*",
+   "Mercredi",
+   "Vendredi",
+   "Lundi"
+  ]
+ },
+ {
+  "key": "log21-209",
+  "concept": "logic.puzzles.v21_montre_avance",
+  "label": "Horloges",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Une montre avance de 5 minutes par heure. On la règle à midi pile. Quelle heure affiche-t-elle à 18 h ?",
+  "explanation": "Six heures passent, soit 6 × 5 = 30 minutes d'avance.",
+  "options": [
+   "18 h 30*",
+   "18 h 05",
+   "18 h 25",
+   "19 h"
+  ]
+ },
+ {
+  "key": "log21-210",
+  "concept": "logic.puzzles.v21_mot_sans_premiere",
+  "label": "Jeu de mots",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel mot donne un autre mot quand on lui retire sa première lettre ?",
+  "explanation": "Amer sans son A donne « mer ». Les autres donnent « vril », « rbre » et « imer ».",
+  "options": [
+   "Amer*",
+   "Avril",
+   "Arbre",
+   "Aimer"
+  ]
+ },
+ {
+  "key": "log21-211",
+  "concept": "logic.puzzles.v21_animal_cache",
+  "label": "Jeu de mots",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans lequel de ces mots se cache un animal ?",
+  "explanation": "Élancé contient « élan », un grand cerf du Nord.",
+  "options": [
+   "Élancé*",
+   "Rapide",
+   "Courage",
+   "Patience"
+  ]
+ },
+ {
+  "key": "log21-212",
+  "concept": "logic.puzzles.v21_contraire_in",
+  "label": "Jeu de mots",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel mot devient son contraire quand on ajoute « in » devant ?",
+  "explanation": "Juste → injuste. « Informer », « intenter » et « insigne » existent, mais ne sont pas des contraires.",
+  "options": [
+   "Juste*",
+   "Former",
+   "Tenter",
+   "Signe"
+  ]
+ },
+ {
+  "key": "log21-213",
+  "concept": "logic.puzzles.v21_mot_porte",
+  "label": "Jeu de mots",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel mot peut se placer devant « -monnaie », « -clés » et « -manteau » ?",
+  "explanation": "Porte-monnaie, porte-clés, porte-manteau. « Garde-manteau » n'existe pas.",
+  "options": [
+   "Porte*",
+   "Garde",
+   "Sac",
+   "Main"
+  ]
+ },
+ {
+  "key": "log21-214",
+  "concept": "logic.puzzles.v21_lettre_frequente",
+  "label": "Jeu de mots",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est la lettre la plus fréquente dans les textes en français ?",
+  "explanation": "Le E représente environ 15 % des lettres. Georges Perec a pourtant écrit tout un roman sans E : « La Disparition ».",
+  "options": [
+   "E*",
+   "A",
+   "S",
+   "I"
+  ]
+ },
+ {
+  "key": "log21-215",
+  "concept": "logic.puzzles.v21_tf_gateau_huit",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Avec seulement 3 coups de couteau, on peut couper un gâteau rond en 8 parts égales.",
+  "explanation": "Deux coupes en croix donnent 4 parts, puis une coupe à l'horizontale, dans l'épaisseur, les double.",
+  "answer": true
+ },
+ {
+  "key": "log21-216",
+  "concept": "logic.puzzles.v21_tf_cinq_weekends",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un mois peut compter 5 samedis et 5 dimanches.",
+  "explanation": "C'est le cas d'un mois de 31 jours qui commence un samedi.",
+  "answer": true
+ },
+ {
+  "key": "log21-217",
+  "concept": "logic.puzzles.v21_tf_53_lundis",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Une année peut compter 53 lundis.",
+  "explanation": "365 jours font 52 semaines et 1 jour : le jour de départ revient 53 fois.",
+  "answer": true
+ },
+ {
+  "key": "log21-218",
+  "concept": "logic.puzzles.v21_tf_fevrier_cinq_dimanches",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Il arrive que février ait cinq dimanches.",
+  "explanation": "Une année bissextile, si le 1er février est un dimanche, le 29 l'est aussi.",
+  "answer": true
+ },
+ {
+  "key": "log21-219",
+  "concept": "logic.puzzles.v21_tf_aucun_vendredi_13",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Une année peut ne compter aucun vendredi 13.",
+  "explanation": "Il y en a toujours au moins un par an, et au plus trois.",
+  "answer": false
+ },
+ {
+  "key": "log21-220",
+  "concept": "logic.puzzles.v21_tf_double_soi",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Il existe un nombre égal à son propre double.",
+  "explanation": "Zéro : 0 × 2 = 0.",
+  "answer": true
+ },
+ {
+  "key": "log21-221",
+  "concept": "logic.puzzles.v21_tf_seaux_4_9",
+  "label": "Transvasement",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Avec un seau de 4 L et un seau de 9 L (sans graduations) et un robinet, on peut obtenir exactement 1 L.",
+  "explanation": "On remplit le 9 L, puis on vide deux fois dans le 4 L : il reste 9 − 4 − 4 = 1 L.",
+  "answer": true
+ },
+ {
+  "key": "log21-222",
+  "concept": "logic.puzzles.v21_tf_pieces_3_5_sept",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Avec uniquement des pièces de 3 € et de 5 €, on peut payer exactement 7 €.",
+  "explanation": "3, 5, 6, 8, 9, 10… mais jamais 7 : c'est le plus grand montant impossible.",
+  "answer": false
+ },
+ {
+  "key": "log21-223",
+  "concept": "logic.puzzles.v21_tf_pieces_3_5_huit",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Avec des pièces de 3 € et de 5 €, on peut payer n'importe quel montant entier à partir de 8 €.",
+  "explanation": "8 = 3 + 5, 9 = 3 + 3 + 3, 10 = 5 + 5, puis on ajoute une pièce de 3 à chaque fois.",
+  "answer": true
+ },
+ {
+  "key": "log21-224",
+  "concept": "logic.puzzles.v21_tf_triangle_3_4_8",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "On peut construire un triangle avec des côtés de 3 cm, 4 cm et 8 cm.",
+  "explanation": "3 + 4 = 7, c'est moins que 8 : les deux petits côtés ne peuvent pas se rejoindre.",
+  "answer": false
+ },
+ {
+  "key": "log21-225",
+  "concept": "logic.puzzles.v21_tf_maison_crayon",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "On peut dessiner une « enveloppe » (un carré avec ses deux diagonales et un toit) sans lever le crayon ni repasser sur un trait.",
+  "explanation": "À condition de partir d'un des coins du bas. C'est la « maison du père Noël », un jeu très connu en Allemagne.",
+  "answer": true
+ },
+ {
+  "key": "log21-226",
+  "concept": "logic.puzzles.v21_tf_ponts_konigsberg",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "À Königsberg, on pouvait traverser chacun des 7 ponts une seule fois au cours d'une même promenade.",
+  "explanation": "Le mathématicien Euler a prouvé en 1736 que c'était impossible, en inventant au passage la théorie des graphes.",
+  "answer": false
+ },
+ {
+  "key": "log21-227",
+  "concept": "logic.puzzles.v21_tf_de_un_deux_trois",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Sur un dé classique, les faces 1, 2 et 3 se touchent en un même coin.",
+  "explanation": "Comme les faces opposées font 7, les faces 1, 2 et 3 ne sont jamais opposées entre elles : elles partagent un coin.",
+  "answer": true
+ },
+ {
+  "key": "log21-228",
+  "concept": "logic.puzzles.v21_tf_carre_aire",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Si on double le côté d'un carré, son aire double aussi.",
+  "explanation": "Elle est multipliée par 4 : un carré de 2 × 2 contient quatre carrés de 1 × 1.",
+  "answer": false
+ },
+ {
+  "key": "log21-229",
+  "concept": "logic.puzzles.v21_tf_trente_jours_mercredis",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Un mois de 30 jours peut compter 5 mercredis.",
+  "explanation": "30 jours font 4 semaines et 2 jours : les deux premiers jours du mois reviennent 5 fois.",
+  "answer": true
+ },
+ {
+  "key": "log21-230",
+  "concept": "logic.puzzles.v21_tf_horloge_arretee",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Une horloge à aiguilles arrêtée indique la bonne heure deux fois par jour.",
+  "explanation": "Une fois le matin, une fois le soir.",
+  "answer": true
+ },
+ {
+  "key": "log21-231",
+  "concept": "logic.puzzles.v21_tf_zero_virgule_neuf",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 90,
+  "prompt": "0,999… (avec des 9 à l'infini) est exactement égal à 1.",
+  "explanation": "1/3 = 0,333…, donc 3 × 1/3 = 0,999… = 1. Les deux écritures désignent le même nombre.",
+  "answer": true
+ },
+ {
+  "key": "log21-232",
+  "concept": "logic.puzzles.v21_tf_echiquier_dominos",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 85,
+  "prompt": "On peut couvrir un échiquier privé de deux coins opposés avec 31 dominos de 2 cases.",
+  "explanation": "Les deux coins opposés sont de la même couleur. Il reste 32 cases d'une couleur et 30 de l'autre, alors que chaque domino couvre une case de chaque couleur.",
+  "answer": false
+ },
+ {
+  "key": "log21-233",
+  "concept": "logic.puzzles.v21_tf_plus_grand_premier",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Il existe un nombre premier plus grand que tous les autres.",
+  "explanation": "Euclide a prouvé, il y a plus de 2 000 ans, qu'il y en a une infinité.",
+  "answer": false
+ },
+ {
+  "key": "log21-234",
+  "concept": "logic.puzzles.v21_tf_deux_puissance_cent",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 85,
+  "prompt": "2 multiplié 100 fois par lui-même (2¹⁰⁰) se termine par un 0.",
+  "explanation": "Les puissances de 2 finissent par 2, 4, 8, 6, puis encore 2, 4, 8, 6… 2¹⁰⁰ se termine par 6.",
+  "answer": false
+ },
+ {
+  "key": "log21-235",
+  "concept": "logic.puzzles.v21_tf_rectangle_perimetre",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Deux rectangles de même périmètre ont forcément la même aire.",
+  "explanation": "Un rectangle de 1 × 9 et un carré de 5 × 5 ont tous deux 20 cm de tour, mais 9 et 25 cm² d'aire.",
+  "answer": false
+ },
+ {
+  "key": "log21-236",
+  "concept": "logic.puzzles.v21_tf_produit_plus_grand",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Quand on multiplie deux nombres, le résultat est toujours plus grand que chacun d'eux.",
+  "explanation": "3 × 0,5 = 1,5, et 5 × 1 = 5. Sans parler de 0.",
+  "answer": false
+ },
+ {
+  "key": "log21-237",
+  "concept": "logic.puzzles.v21_tf_premier_finit_cinq",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un nombre premier peut se terminer par 5.",
+  "explanation": "Un seul : 5 lui-même. Tous les autres nombres finissant par 5 sont divisibles par 5.",
+  "answer": true
+ },
+ {
+  "key": "log21-238",
+  "concept": "logic.puzzles.v21_tf_moitie_deux_plus_deux",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La moitié de 2 plus 2, ça fait 3.",
+  "explanation": "La moitié de 2 vaut 1, plus 2 : 3. Mais « la moitié de (2 + 2) » ferait 2 : tout dépend de la façon de lire.",
+  "answer": true
+ },
+ {
+  "key": "log21-239",
+  "concept": "logic.puzzles.v21_tf_siecle_00",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Un siècle commence toujours par une année qui se termine par 00.",
+  "explanation": "Il n'y a pas d'année 0 : le XXIe siècle a commencé le 1er janvier 2001.",
+  "answer": false
+ },
+ {
+  "key": "log21-240",
+  "concept": "logic.puzzles.v21_tl_xxie_siecle",
+  "label": "Calendrier",
+  "type": "timeline",
+  "difficulty": 55,
+  "prompt": "En quelle année a commencé le XXIe siècle ?",
+  "explanation": "Le 1er siècle va de l'an 1 à l'an 100. Le XXIe va donc de 2001 à 2100.",
+  "answer": 2001,
+  "tolerance": 0,
+  "min": 1990,
+  "max": 2010
+ },
+ {
+  "key": "log21-241",
+  "concept": "logic.puzzles.v21_tl_annee_palindrome",
+  "label": "Calendrier",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "Après 2002, quelle est la prochaine année qui se lit pareil dans les deux sens ?",
+  "explanation": "2112. Après, il faudra attendre 2222.",
+  "answer": 2112,
+  "tolerance": 0,
+  "min": 2000,
+  "max": 2200
+ },
+ {
+  "key": "log21-242",
+  "concept": "logic.puzzles.v21_tl_29_fevrier",
+  "label": "Calendrier",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "Un bébé né le 29 février 2000 fête son 6e « vrai » anniversaire (un 29 février) en quelle année ?",
+  "explanation": "2004, 2008, 2012, 2016, 2020, 2024 : il aura 24 ans.",
+  "answer": 2024,
+  "tolerance": 0,
+  "min": 2000,
+  "max": 2050
+ },
+ {
+  "key": "log21-243",
+  "concept": "logic.puzzles.v21_tl_romain_1984",
+  "label": "Chiffres romains",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "Quelle année s'écrit MCMLXXXIV en chiffres romains ?",
+  "explanation": "M (1000) + CM (900) + L (50) + XXX (30) + IV (4) = 1984.",
+  "answer": 1984,
+  "tolerance": 0,
+  "min": 1900,
+  "max": 2100
+ },
+ {
+  "key": "log21-244",
+  "concept": "logic.puzzles.v21_tl_chiffres_differents",
+  "label": "Calendrier",
+  "type": "timeline",
+  "difficulty": 55,
+  "prompt": "Après 2026, quelle est la première année dont les quatre chiffres sont tous différents ?",
+  "explanation": "2027, 2028 et 2029 répètent le 2, et 2030 répète le 0. 2031 : 2, 0, 3, 1, tous différents.",
+  "answer": 2031,
+  "tolerance": 0,
+  "min": 2026,
+  "max": 2100
+ },
+ {
+  "key": "log21-245",
+  "concept": "logic.reasoning.v21_enquete_deux_menteurs",
+  "label": "Enquête",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Un seul des trois a mangé les cookies, et exactement deux mentent. Paul : « C'est Rémi. » Rémi : « Paul ment. » Sam : « Ce n'est pas moi. » Qui a mangé les cookies ?",
+  "explanation": "Paul et Rémi se contredisent : l'un des deux dit vrai. Pour avoir deux menteurs, Sam doit mentir… donc c'est lui.",
+  "options": [
+   "Sam*",
+   "Rémi",
+   "Paul",
+   "Impossible à savoir"
+  ]
+ },
+ {
+  "key": "log21-246",
+  "concept": "logic.reasoning.v21_enquete_quatre",
+  "label": "Enquête",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Un coupable parmi quatre, et un seul menteur. A : « C'est B ou C. » B : « Ce n'est pas moi. » C : « C'est D. » D : « C ment. » Qui est coupable ?",
+  "explanation": "C et D se contredisent, donc le menteur est l'un d'eux, et A et B disent vrai : c'est C. Alors C ment et D dit vrai : tout colle.",
+  "options": [
+   "C*",
+   "D",
+   "B",
+   "A"
+  ]
+ },
+ {
+  "key": "log21-247",
+  "concept": "logic.reasoning.v21_chevaliers_trois",
+  "label": "Menteurs et chevaliers",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "A dit : « Nous sommes tous les trois des fripons. » B dit : « Exactement l'un de nous trois est chevalier. » Les chevaliers disent toujours vrai, les fripons mentent toujours. Qui est chevalier ?",
+  "explanation": "A ne peut pas dire vrai, sinon il serait fripon. Il ment, donc il y a au moins un chevalier. Si B mentait, C serait le seul chevalier… et B aurait dit vrai. Donc B est le seul chevalier.",
+  "options": [
+   "B seulement*",
+   "A seulement",
+   "B et C",
+   "Personne"
+  ]
+ },
+ {
+  "key": "log21-248",
+  "concept": "logic.reasoning.v21_chevaliers_ou",
+  "label": "Menteurs et chevaliers",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "A dit : « Je suis un fripon, ou B est un chevalier. » Que sont A et B ?",
+  "explanation": "Un fripon ne peut pas dire « je suis un fripon ou… » : la phrase serait vraie. A est donc chevalier, et comme il n'est pas fripon, B doit être chevalier.",
+  "options": [
+   "Deux chevaliers*",
+   "Deux fripons",
+   "A chevalier, B fripon",
+   "A fripon, B chevalier"
+  ]
+ },
+ {
+  "key": "log21-249",
+  "concept": "logic.reasoning.v21_grille_ages_quatre",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Lou, Max, Noé et Ola ont 6, 7, 8 et 9 ans. Max est plus âgé que Noé mais plus jeune qu'Ola. Lou n'a ni 6 ni 9 ans, et il est plus âgé que Max. Associe chacun à son âge.",
+  "explanation": "Lou a 7 ou 8 ans et dépasse Max : Lou 8, Max 7. Noé, plus jeune que Max, a 6 ans, et Ola 9.",
+  "pairs": [
+   [
+    "Lou",
+    "8 ans"
+   ],
+   [
+    "Max",
+    "7 ans"
+   ],
+   [
+    "Noé",
+    "6 ans"
+   ],
+   [
+    "Ola",
+    "9 ans"
+   ]
+  ]
+ },
+ {
+  "key": "log21-250",
+  "concept": "logic.reasoning.v21_grille_parking",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Quatre voitures sont garées aux places 1 à 4. La noire est juste à côté de la rouge et de la blanche. La grise n'est pas à la place 1. La rouge a un numéro plus petit que la blanche. Associe chaque place à sa voiture.",
+  "explanation": "La noire est entourée de la rouge et de la blanche : ces trois voitures se suivent, et la grise est au bout, à la place 4.",
+  "pairs": [
+   [
+    "Place 1",
+    "Rouge"
+   ],
+   [
+    "Place 2",
+    "Noire"
+   ],
+   [
+    "Place 3",
+    "Blanche"
+   ],
+   [
+    "Place 4",
+    "Grise"
+   ]
+  ]
+ },
+ {
+  "key": "log21-251",
+  "concept": "logic.reasoning.v21_grille_gateaux",
+  "label": "Grille logique",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Ana et Ben ne prennent pas de parfum aux fruits. Cléo n'aime pas le citron. Ben n'aime pas le chocolat. Associe chacun à son gâteau.",
+  "explanation": "Ana et Ben se partagent chocolat et vanille : Ben prend la vanille. Cléo prend la fraise, et Dan le citron.",
+  "pairs": [
+   [
+    "Ana",
+    "Chocolat"
+   ],
+   [
+    "Ben",
+    "Vanille"
+   ],
+   [
+    "Cléo",
+    "Fraise"
+   ],
+   [
+    "Dan",
+    "Citron"
+   ]
+  ]
+ },
+ {
+  "key": "log21-252",
+  "concept": "logic.reasoning.v21_ordre_etagere",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Cinq livres sont rangés sur une étagère. Le dictionnaire est juste à droite de l'atlas. La BD est à gauche de l'atlas. Le conte est tout à droite, et l'essai juste à côté de lui. Classe-les de gauche à droite.",
+  "explanation": "Conte en 5, essai en 4. L'atlas et le dictionnaire se suivent dans les places 1 à 3, avec la BD avant l'atlas : BD, atlas, dictionnaire.",
+  "items": [
+   "La BD",
+   "L'atlas",
+   "Le dictionnaire",
+   "L'essai",
+   "Le conte"
+  ]
+ },
+ {
+  "key": "log21-253",
+  "concept": "logic.reasoning.v21_ordre_arrivees",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Gabin arrive juste après Fanny, et Igor juste après Gabin. Hana n'arrive pas en dernier. Classe-les dans l'ordre d'arrivée.",
+  "explanation": "Fanny, Gabin et Igor se suivent. Hana, pas dernière, arrive donc avant eux.",
+  "items": [
+   "Hana",
+   "Fanny",
+   "Gabin",
+   "Igor"
+  ]
+ },
+ {
+  "key": "log21-254",
+  "concept": "logic.reasoning.v21_ordre_tailles_quatre",
+  "label": "Classement par indices",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Jade est plus grande que Kim. Léon est plus petit que Kim. Kim est plus petit que Maya, qui n'est pas la plus grande. Classe-les du plus petit au plus grand.",
+  "explanation": "Léon < Kim < Maya, et Maya n'étant pas la plus grande, Jade passe devant.",
+  "items": [
+   "Léon",
+   "Kim",
+   "Maya",
+   "Jade"
+  ]
+ },
+ {
+  "key": "log21-255",
+  "concept": "logic.puzzles.v21_monopoly",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un homme pousse sa voiture jusqu'à un hôtel et s'écrie qu'il est ruiné. Pourquoi ?",
+  "explanation": "Sur le plateau du Monopoly, tomber sur une case avec un hôtel peut coûter très cher.",
+  "options": [
+   "Il joue au Monopoly*",
+   "Sa voiture est en panne",
+   "L'hôtel est trop cher",
+   "Il a perdu son portefeuille"
+  ]
+ },
+ {
+  "key": "log21-256",
+  "concept": "logic.puzzles.v21_ascenseur_petit",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Un homme vit au 10e étage. Le matin, il descend en ascenseur. Le soir, il monte jusqu'au 7e puis finit à pied, sauf les jours de pluie. Pourquoi ?",
+  "explanation": "Les jours de pluie, il a son parapluie pour appuyer sur le bouton du 10e étage.",
+  "options": [
+   "Il est petit : il n'atteint le bouton du 10e qu'avec son parapluie*",
+   "Il fait du sport",
+   "L'ascenseur est en panne au 8e",
+   "Il rend visite à un voisin"
+  ]
+ },
+ {
+  "key": "log21-257",
+  "concept": "logic.puzzles.v21_photographe",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Une femme tire sur son mari, le plonge sous l'eau cinq minutes puis le pend. Une heure après, ils dînent ensemble. Comment est-ce possible ?",
+  "explanation": "Avec les appareils argentiques, on développait les photos dans des bains, puis on les suspendait pour les faire sécher.",
+  "options": [
+   "Elle est photographe : elle prend sa photo, la développe et la fait sécher*",
+   "C'est un film",
+   "Elle a raté son tir",
+   "C'est un rêve"
+  ]
+ },
+ {
+  "key": "log21-258",
+  "concept": "logic.puzzles.v21_chirurgienne",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un père et son fils ont un accident. À l'hôpital, le chirurgien voit le garçon et dit : « Je ne peux pas l'opérer, c'est mon fils. » Comment est-ce possible ?",
+  "explanation": "Beaucoup cherchent longtemps, car on imagine spontanément un homme derrière le mot « chirurgien ».",
+  "options": [
+   "Le chirurgien est sa mère*",
+   "Le père est chirurgien",
+   "Il a été adopté",
+   "C'est un autre garçon"
+  ]
+ },
+ {
+  "key": "log21-259",
+  "concept": "logic.puzzles.v21_plaques_egout",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi les plaques d'égout sont-elles rondes ?",
+  "explanation": "Un carré, posé en diagonale, pourrait passer par le trou. Un rond, jamais. (Et en plus, on peut les faire rouler !)",
+  "options": [
+   "Un disque ne peut pas tomber dans son propre trou*",
+   "C'est moins cher à fabriquer",
+   "Pour qu'on puisse les faire rouler",
+   "C'est plus joli"
+  ]
+ },
+ {
+  "key": "log21-260",
+  "concept": "logic.puzzles.v21_chien_riviere",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Un homme est d'un côté de la rivière, son chien de l'autre. Il l'appelle, et le chien traverse sans pont, sans bateau, sans se mouiller. Comment ?",
+  "explanation": "Il traverse sur la glace.",
+  "options": [
+   "La rivière est gelée*",
+   "Le chien saute très loin",
+   "Il passe sous l'eau",
+   "L'homme le porte"
+  ]
+ },
+ {
+  "key": "log21-261",
+  "concept": "logic.puzzles.v21_camion_pont",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un camion est coincé sous un pont : il est trop haut de quelques centimètres. Que faire sans rien démolir ?",
+  "explanation": "Le camion descend de quelques centimètres, assez pour passer.",
+  "options": [
+   "Dégonfler un peu ses pneus*",
+   "Attendre la marée basse",
+   "Retirer le chargement",
+   "Le pousser plus fort"
+  ]
+ },
+ {
+  "key": "log21-262",
+  "concept": "logic.puzzles.v21_cheval_vendredi",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Un cow-boy arrive en ville un vendredi, y reste trois jours, et repart le vendredi. Comment est-ce possible ?",
+  "explanation": "Il est arrivé « sur » Vendredi, et reparti dessus.",
+  "options": [
+   "Son cheval s'appelle Vendredi*",
+   "Il compte mal",
+   "Il reste une semaine",
+   "Il change de fuseau horaire"
+  ]
+ },
+ {
+  "key": "log21-263",
+  "concept": "logic.puzzles.v21_barbier",
+  "label": "Paradoxe",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Dans un village, le barbier, un homme, rase tous les hommes qui ne se rasent pas eux-mêmes, et seulement eux. Qui rase le barbier ?",
+  "explanation": "S'il se rase, il ne devrait pas. S'il ne se rase pas, il devrait. C'est le paradoxe du barbier, imaginé par Bertrand Russell.",
+  "options": [
+   "Un tel barbier ne peut pas exister*",
+   "Il se rase lui-même",
+   "Personne",
+   "Le barbier du village voisin"
+  ]
+ },
+ {
+  "key": "log21-264",
+  "concept": "logic.puzzles.v21_triples",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Deux garçons sont nés le même jour, la même année, de la même mère… mais ils ne sont pas jumeaux. Comment ?",
+  "explanation": "Ils ont un troisième frère ou une sœur né le même jour.",
+  "options": [
+   "Ce sont des triplés*",
+   "L'un est adopté",
+   "Ils sont nés dans deux pays",
+   "Ce sont des cousins"
+  ]
+ },
+ {
+  "key": "log21-265",
+  "concept": "logic.puzzles.v21_avant_jc",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Un fils est né en 1990, et son père en 1995. Comment est-ce possible ?",
+  "explanation": "Avant notre ère, on compte à rebours : 1995 av. J.-C. vient avant 1990 av. J.-C.",
+  "options": [
+   "Ce sont des années avant Jésus-Christ*",
+   "Le fils a été adopté",
+   "C'est une erreur d'état civil",
+   "Ils vivent dans deux pays"
+  ]
+ },
+ {
+  "key": "log21-266",
+  "concept": "logic.puzzles.v21_electricien_plombier",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un électricien et une plombière attendent devant une école. L'un des deux est le père du fils de l'autre. Comment ?",
+  "explanation": "L'électricien est le père, et la plombière la mère, du même enfant.",
+  "options": [
+   "Ils sont mari et femme*",
+   "Ils sont frère et sœur",
+   "C'est impossible",
+   "Ce sont deux pères"
+  ]
+ },
+ {
+  "key": "log21-267",
+  "concept": "logic.puzzles.v21_queue_patte",
+  "label": "Énigme",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Si on appelle la queue d'une vache une « patte », combien de pattes a la vache ?",
+  "explanation": "Appeler une queue une patte n'en fait pas une patte. Une énigme attribuée au président américain Abraham Lincoln.",
+  "options": [
+   "4*",
+   "5",
+   "3",
+   "6"
+  ]
+ },
+ {
+  "key": "log21-268",
+  "concept": "logic.puzzles.v21_cordes_45",
+  "label": "Énigme",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Deux cordes brûlent chacune en exactement 1 heure, mais pas régulièrement. Comment mesurer 45 minutes ?",
+  "explanation": "Allumée des deux côtés, la 1re dure 30 min. Il reste alors 30 min de la 2e, qui allumée aux deux bouts n'en dure plus que 15. Couper ne marche pas, car la corde brûle de façon irrégulière.",
+  "options": [
+   "Allumer la 1re aux deux bouts et la 2e à un bout ; quand la 1re a brûlé, allumer l'autre bout de la 2e*",
+   "Couper chaque corde en quatre morceaux égaux",
+   "Allumer les deux cordes à un bout et attendre la moitié",
+   "Mesurer les trois quarts de la longueur d'une corde"
+  ]
+ },
+ {
+  "key": "log21-269",
+  "concept": "logic.puzzles.v21_pole_nord",
+  "label": "Énigme",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Tu marches 1 km vers le sud, 1 km vers l'est, 1 km vers le nord… et tu reviens à ton point de départ. Où es-tu parti ?",
+  "explanation": "Depuis le pôle Nord, tous les chemins vers le nord y ramènent. (Il existe aussi d'autres points, près du pôle Sud !)",
+  "options": [
+   "Du pôle Nord*",
+   "De l'équateur",
+   "Du pôle Sud",
+   "C'est impossible"
+  ]
+ },
+ {
+  "key": "log21-270",
+  "concept": "logic.puzzles.v21_mouche_cyclistes",
+  "label": "Énigme",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Deux cyclistes à 20 km l'un de l'autre roulent l'un vers l'autre à 10 km/h. Une mouche vole de l'un à l'autre à 15 km/h jusqu'à ce qu'ils se croisent. Quelle distance parcourt-elle ?",
+  "explanation": "Ils se croisent au bout d'une heure. La mouche vole pendant une heure à 15 km/h : 15 km. Inutile de calculer chaque aller-retour !",
+  "options": [
+   "15 km*",
+   "20 km",
+   "10 km",
+   "30 km"
+  ]
+ },
+ {
+  "key": "log21-271",
+  "concept": "logic.reasoning.v21_ana_ruche",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "L'abeille est à la ruche ce que l'oiseau est…",
+  "explanation": "La ruche est la maison de l'abeille, le nid celle de l'oiseau. L'arbre porte le nid, mais ce n'est pas sa maison.",
+  "options": [
+   "Au nid*",
+   "À la plume",
+   "À l'arbre",
+   "Au ciel"
+  ]
+ },
+ {
+  "key": "log21-272",
+  "concept": "logic.reasoning.v21_ana_hier",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Hier est à aujourd'hui ce qu'aujourd'hui est…",
+  "explanation": "On avance d'un jour à chaque fois.",
+  "options": [
+   "À demain*",
+   "À hier",
+   "À maintenant",
+   "À avant-hier"
+  ]
+ },
+ {
+  "key": "log21-273",
+  "concept": "logic.reasoning.v21_ana_compositeur",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "L'écrivain est au roman ce que le compositeur est…",
+  "explanation": "L'écrivain crée le roman, le compositeur crée la symphonie. Le piano n'est que l'outil.",
+  "options": [
+   "À la symphonie*",
+   "Au piano",
+   "À l'orchestre",
+   "Au chef d'orchestre"
+  ]
+ },
+ {
+  "key": "log21-274",
+  "concept": "logic.reasoning.v21_ana_oreille",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "L'œil est à voir ce que l'oreille est…",
+  "explanation": "Chaque organe et son sens.",
+  "options": [
+   "À entendre*",
+   "À parler",
+   "À sentir",
+   "À toucher"
+  ]
+ },
+ {
+  "key": "log21-275",
+  "concept": "logic.reasoning.v21_ana_cidre",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Le raisin est au vin ce que la pomme est…",
+  "explanation": "Le vin vient du raisin fermenté, le cidre de la pomme fermentée.",
+  "options": [
+   "Au cidre*",
+   "Au verger",
+   "Au pépin",
+   "Au pommier"
+  ]
+ },
+ {
+  "key": "log21-276",
+  "concept": "logic.reasoning.v21_ana_leger",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Chaud est à froid ce que lourd est…",
+  "explanation": "Ce sont des contraires.",
+  "options": [
+   "À léger*",
+   "À gros",
+   "À pesant",
+   "À grand"
+  ]
+ },
+ {
+  "key": "log21-277",
+  "concept": "logic.reasoning.v21_ana_fevrier",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Lundi est à mardi ce que janvier est…",
+  "explanation": "Le suivant dans la liste.",
+  "options": [
+   "À février*",
+   "À mars",
+   "À décembre",
+   "À mercredi"
+  ]
+ },
+ {
+  "key": "log21-278",
+  "concept": "logic.reasoning.v21_ana_balance",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Le thermomètre est à la température ce que la balance est…",
+  "explanation": "Chaque instrument et ce qu'il mesure.",
+  "options": [
+   "Au poids*",
+   "À la cuisine",
+   "Au plateau",
+   "À la taille"
+  ]
+ },
+ {
+  "key": "log21-279",
+  "concept": "logic.reasoning.v21_ana_yen",
+  "label": "Analogie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "L'euro est à la France ce que le yen est…",
+  "explanation": "La Chine utilise le yuan (ou renminbi), un piège fréquent ; la Corée du Sud le won, l'Inde la roupie.",
+  "options": [
+   "Au Japon*",
+   "À la Chine",
+   "À la Corée",
+   "À l'Inde"
+  ]
+ },
+ {
+  "key": "log21-280",
+  "concept": "logic.reasoning.v21_intrus_carres",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est l'intrus : 64, 81, 100, 125 ?",
+  "explanation": "64, 81 et 100 sont des carrés (8², 9², 10²). 125 n'en est pas un. Piège : 64 est aussi un cube, comme 125.",
+  "options": [
+   "125*",
+   "64",
+   "81",
+   "100"
+  ]
+ },
+ {
+  "key": "log21-281",
+  "concept": "logic.reasoning.v21_intrus_palindromes",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est l'intrus : radar, kayak, rotor, piano ?",
+  "explanation": "Radar, kayak et rotor se lisent pareil dans les deux sens.",
+  "options": [
+   "Piano*",
+   "Radar",
+   "Kayak",
+   "Rotor"
+  ]
+ },
+ {
+  "key": "log21-282",
+  "concept": "logic.reasoning.v21_intrus_puissances",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est l'intrus : 2, 4, 8, 16, 24, 32 ?",
+  "explanation": "Les autres sont des puissances de 2 : on double à chaque fois. Après 16 vient 32.",
+  "options": [
+   "24*",
+   "2",
+   "16",
+   "32"
+  ]
+ },
+ {
+  "key": "log21-283",
+  "concept": "logic.reasoning.v21_intrus_oiseaux",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel est l'intrus : aigle, autruche, manchot, émeu ?",
+  "explanation": "Ce sont tous des oiseaux, mais seul l'aigle sait voler.",
+  "options": [
+   "L'aigle*",
+   "L'autruche",
+   "Le manchot",
+   "L'émeu"
+  ]
+ },
+ {
+  "key": "log21-284",
+  "concept": "logic.reasoning.v21_intrus_oceans",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est l'intrus : Pacifique, Atlantique, Méditerranée, Indien ?",
+  "explanation": "La Méditerranée est une mer. Les trois autres sont des océans.",
+  "options": [
+   "Méditerranée*",
+   "Pacifique",
+   "Atlantique",
+   "Indien"
+  ]
+ },
+ {
+  "key": "log21-285",
+  "concept": "logic.reasoning.v21_intrus_pierres",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est l'intrus : rubis, émeraude, saphir, perle ?",
+  "explanation": "La perle est fabriquée par un coquillage. Les trois autres sont des pierres minérales.",
+  "options": [
+   "La perle*",
+   "Le rubis",
+   "L'émeraude",
+   "Le saphir"
+  ]
+ },
+ {
+  "key": "log21-286",
+  "concept": "logic.reasoning.v21_intrus_compositeurs",
+  "label": "Intrus",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel est l'intrus : Chopin, Bach, Molière, Mozart ?",
+  "explanation": "Molière écrivait des pièces de théâtre. Les trois autres sont des compositeurs.",
+  "options": [
+   "Molière*",
+   "Chopin",
+   "Bach",
+   "Mozart"
+  ]
+ },
+ {
+  "key": "log21-287",
+  "concept": "logic.reasoning.v21_pa_contraires",
+  "label": "Le contraire logique",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque phrase à son contraire logique.",
+  "explanation": "Le contraire de « tous » est « au moins un… ne pas », et celui de « aucun » est « au moins un ».",
+  "pairs": [
+   [
+    "Tout le monde rit",
+    "Quelqu'un ne rit pas"
+   ],
+   [
+    "Personne ne rit",
+    "Quelqu'un rit"
+   ],
+   [
+    "Il rit toujours",
+    "Il lui arrive de ne pas rire"
+   ],
+   [
+    "Il rit parfois",
+    "Il ne rit jamais"
+   ]
+  ]
+ },
+ {
+  "key": "log21-288",
+  "concept": "logic.reasoning.v21_pa_probabilites",
+  "label": "Probabilités",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque événement à sa probabilité.",
+  "explanation": "Il y a 4 as sur 52 cartes, soit 1 sur 13. Le double 6 est 1 cas sur 6 × 6 = 36.",
+  "pairs": [
+   [
+    "Pile, avec une pièce",
+    "1 chance sur 2"
+   ],
+   [
+    "Un 6, avec un dé",
+    "1 chance sur 6"
+   ],
+   [
+    "Un as, dans un jeu de 52",
+    "1 chance sur 13"
+   ],
+   [
+    "Un double 6, avec deux dés",
+    "1 chance sur 36"
+   ]
+  ]
+ },
+ {
+  "key": "log21-289",
+  "concept": "logic.puzzles.v21_pa_devinettes",
+  "label": "Devinettes",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque devinette à sa réponse.",
+  "explanation": "Le feu meurt sous l'eau, la rivière a un lit et elle « court » vers la mer.",
+  "pairs": [
+   [
+    "Je grandis quand on me nourrit, je meurs quand on me donne à boire",
+    "Le feu"
+   ],
+   [
+    "Plus j'en fais, plus j'en laisse derrière moi",
+    "Des pas"
+   ],
+   [
+    "On doit me casser avant de m'utiliser",
+    "Un œuf"
+   ],
+   [
+    "Je cours sans jambes et j'ai un lit sans dormir",
+    "Une rivière"
+   ]
+  ]
+ },
+ {
+  "key": "log21-290",
+  "concept": "logic.puzzles.v21_pa_nombres_types",
+  "label": "Nombres",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque nombre à ce qu'il est.",
+  "explanation": "9 = 3², 8 = 2³. 6 est « parfait » : il est égal à la somme de ses diviseurs, 1 + 2 + 3.",
+  "pairs": [
+   [
+    "7",
+    "Un nombre premier"
+   ],
+   [
+    "9",
+    "Un carré"
+   ],
+   [
+    "8",
+    "Un cube"
+   ],
+   [
+    "6",
+    "Un nombre parfait"
+   ]
+  ]
+ },
+ {
+  "key": "log21-291",
+  "concept": "logic.puzzles.v21_ana_maire",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Anagramme de « MARIE » : il dirige la commune.",
+  "explanation": "Marie, maire, aimer : trois mots avec les mêmes lettres.",
+  "word": "MAIRE",
+  "display": "Maire"
+ },
+ {
+  "key": "log21-292",
+  "concept": "logic.puzzles.v21_ana_nacre",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Anagramme de « ÉCRAN » : elle fait briller l'intérieur des coquillages.",
+  "explanation": "Avec les mêmes lettres, on peut aussi écrire « rance ».",
+  "word": "NACRE",
+  "display": "Nacre"
+ },
+ {
+  "key": "log21-293",
+  "concept": "logic.puzzles.v21_ana_signe",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Anagramme de « SINGE » : on le fait de la main pour dire au revoir.",
+  "explanation": "Singe et signe : les mêmes cinq lettres, dans un autre ordre.",
+  "word": "SIGNE",
+  "display": "Signe"
+ },
+ {
+  "key": "log21-294",
+  "concept": "logic.puzzles.v21_ana_genie",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Anagramme de « NEIGE » : il sort de la lampe d'Aladin.",
+  "explanation": "Neige, génie : les mêmes cinq lettres.",
+  "word": "GENIE",
+  "display": "Génie"
+ },
+ {
+  "key": "log21-295",
+  "concept": "logic.puzzles.v21_ana_latent",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 70,
+  "prompt": "Anagramme de « TALENT » : caché, qui ne se voit pas encore.",
+  "explanation": "Un talent peut rester latent… jusqu'à ce qu'on le découvre.",
+  "word": "LATENT",
+  "display": "Latent"
+ },
+ {
+  "key": "log21-296",
+  "concept": "logic.puzzles.v21_ana_proie",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Anagramme de « POIRE » : ce que chasse le prédateur.",
+  "explanation": "Poire, proie : les mêmes lettres.",
+  "word": "PROIE",
+  "display": "Proie"
+ },
+ {
+  "key": "log21-297",
+  "concept": "logic.puzzles.v21_ana_charme",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Anagramme de « MARCHE » : un pouvoir de séduction, et aussi un arbre.",
+  "explanation": "Marche et charme : les mêmes six lettres.",
+  "word": "CHARME",
+  "display": "Charme"
+ },
+ {
+  "key": "log21-298",
+  "concept": "logic.puzzles.v21_ana_partie",
+  "label": "Anagramme",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Anagramme de « PIRATE » : on en fait une aux cartes.",
+  "explanation": "Pirate, partie… et aussi « patrie » !",
+  "word": "PARTIE",
+  "display": "Partie"
+ },
+ {
+  "key": "log21-299",
+  "concept": "logic.puzzles.v21_nu_chiffres_deux_cents",
+  "label": "Dénombrement",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien de chiffres faut-il écrire pour numéroter les pages d'un livre de 1 à 200 ?",
+  "explanation": "9 pages à 1 chiffre, 90 à 2 chiffres (180 chiffres), et 101 pages à 3 chiffres (303 chiffres) : 9 + 180 + 303 = 492.",
+  "answer": 492,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-300",
+  "concept": "logic.puzzles.v21_nu_freres_soeurs_min",
+  "label": "Raisonnement",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Dans une famille, chaque enfant a au moins un frère et au moins une sœur. Combien d'enfants au minimum ?",
+  "explanation": "Un garçon doit avoir un frère : au moins 2 garçons. Une fille doit avoir une sœur : au moins 2 filles.",
+  "answer": 4,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-301",
+  "concept": "logic.puzzles.v21_nu_couples_mains",
+  "label": "Dénombrement",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "À une fête, 10 couples sont réunis. Chaque personne serre la main de tout le monde, sauf de son conjoint. Combien de poignées de main en tout ?",
+  "explanation": "20 personnes donneraient 20 × 19 ÷ 2 = 190 poignées. On retire les 10 entre conjoints : 180.",
+  "answer": 180,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-302",
+  "concept": "logic.puzzles.v21_nu_zeros_factorielle",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Par combien de zéros se termine 1 × 2 × 3 × … × 10 ?",
+  "explanation": "Chaque zéro vient d'un 2 × 5. Il y a deux 5 (5 et 10) : 3 628 800 finit par deux zéros.",
+  "answer": 2,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-303",
+  "concept": "logic.puzzles.v21_nu_premiers_vingt",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 40,
+  "prompt": "Combien y a-t-il de nombres premiers entre 1 et 20 ?",
+  "explanation": "2, 3, 5, 7, 11, 13, 17 et 19. Rappel : 1 n'est pas premier.",
+  "answer": 8,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-304",
+  "concept": "logic.puzzles.v21_nu_diagonales_octogone",
+  "label": "Dénombrement",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Combien de diagonales compte un octogone (8 côtés) ?",
+  "explanation": "Chaque sommet se relie à 5 autres (pas à lui-même ni à ses deux voisins) : 8 × 5 ÷ 2 = 20.",
+  "answer": 20,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-305",
+  "concept": "logic.puzzles.v21_nu_treize",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Je suis un nombre premier entre 10 et 20. Mon chiffre des unités est le triple de celui des dizaines. Qui suis-je ?",
+  "explanation": "1 et 3 : 3 = 3 × 1.",
+  "answer": 13,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-306",
+  "concept": "logic.puzzles.v21_nu_mere_fille",
+  "label": "Âges",
+  "type": "numeric",
+  "difficulty": 60,
+  "prompt": "Une mère et sa fille ont 50 ans à elles deux. Dans 5 ans, la mère aura trois fois l'âge de sa fille. Quel âge a la fille ?",
+  "explanation": "Fille 10 ans, mère 40 ans : dans 5 ans, 15 et 45 = 3 × 15.",
+  "answer": 10,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-307",
+  "concept": "logic.puzzles.v21_nu_aller_retour",
+  "label": "Dénombrement",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Dans un championnat de 12 équipes, chacune rencontre toutes les autres deux fois (aller et retour). Combien de matchs ?",
+  "explanation": "12 × 11 = 132 : chaque équipe reçoit les 11 autres une fois.",
+  "answer": 132,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-308",
+  "concept": "logic.puzzles.v21_nu_pyramide_cubes",
+  "label": "Dénombrement",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Une pyramide de cubes a 4 étages : 1 cube en haut, puis 2 × 2, puis 3 × 3, puis 4 × 4 à la base. Combien de cubes en tout ?",
+  "explanation": "1 + 4 + 9 + 16 = 30.",
+  "answer": 30,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-309",
+  "concept": "logic.puzzles.v21_nu_unite_sept",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 65,
+  "prompt": "Par quel chiffre se termine 7 × 7 × 7 × 7 ?",
+  "explanation": "7, 49, 343, 2 401 : les derniers chiffres font 7, 9, 3, 1, puis recommencent.",
+  "answer": 1,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-310",
+  "concept": "logic.puzzles.v21_co_segments_six",
+  "label": "Dénombrement",
+  "type": "counter",
+  "difficulty": 45,
+  "prompt": "Combien de segments faut-il pour relier 6 points deux à deux ?",
+  "explanation": "6 × 5 ÷ 2 = 15.",
+  "answer": 15,
+  "tolerance": 0,
+  "min": 0,
+  "max": 30,
+  "start": 0
+ },
+ {
+  "key": "log21-311",
+  "concept": "logic.reasoning.v21_ga_trente_anniv",
+  "label": "Le paradoxe des anniversaires",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "Dans une classe de 30 élèves, quelle est la probabilité que deux élèves aient le même anniversaire ?",
+  "explanation": "Environ 71 %. Il y a 435 paires d'élèves à comparer.",
+  "answer": 71,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "log21-312",
+  "concept": "logic.reasoning.v21_ga_somme_dix",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 65,
+  "prompt": "On lance deux dés. Quelle est la probabilité que la somme fasse au moins 10 ?",
+  "explanation": "10 (3 façons), 11 (2) ou 12 (1) : 6 cas sur 36, soit environ 17 %.",
+  "answer": 17,
+  "tolerance": 6,
+  "unit": "%"
+ },
+ {
+  "key": "log21-313",
+  "concept": "logic.reasoning.v21_ga_famille_garcon",
+  "label": "Probabilités",
+  "type": "gauge",
+  "difficulty": 55,
+  "prompt": "Une famille a trois enfants. Quelle est la probabilité qu'il y ait au moins un garçon ?",
+  "explanation": "Le seul cas sans garçon est « fille, fille, fille » : 1 sur 8. Donc 7 sur 8, environ 88 %.",
+  "answer": 88,
+  "tolerance": 8,
+  "unit": "%"
+ },
+ {
+  "key": "log21-314",
+  "concept": "logic.reasoning.v21_tf_oncle_jeune",
+  "label": "Liens de famille",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Mon oncle peut être plus jeune que moi.",
+  "explanation": "Si ma grand-mère a eu un enfant tard, il peut être né après moi.",
+  "answer": true
+ },
+ {
+  "key": "log21-315",
+  "concept": "logic.reasoning.v21_tf_de_pairs_premiers",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un dé classique a plus de faces paires que de faces avec un nombre premier.",
+  "explanation": "Faces paires : 2, 4, 6. Faces premières : 2, 3, 5. Il y en a trois de chaque.",
+  "answer": false
+ },
+ {
+  "key": "log21-316",
+  "concept": "logic.reasoning.v21_tf_semaine_dimanche",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Sept jours qui se suivent contiennent toujours exactement un dimanche.",
+  "explanation": "Chaque jour de la semaine apparaît une fois sur sept jours consécutifs.",
+  "answer": true
+ },
+ {
+  "key": "log21-317",
+  "concept": "logic.reasoning.v21_tf_bissextile_div4",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Toutes les années bissextiles sont divisibles par 4.",
+  "explanation": "C'est vrai. Mais l'inverse est faux : voir 1900 ou 2100.",
+  "answer": true
+ },
+ {
+  "key": "log21-318",
+  "concept": "logic.reasoning.v21_tf_div4_bissextile",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Toute année divisible par 4 est bissextile.",
+  "explanation": "1900 et 2100 ne le sont pas : les années en 00 doivent être divisibles par 400 (comme 2000).",
+  "answer": false
+ },
+ {
+  "key": "log21-319",
+  "concept": "logic.reasoning.v21_tf_an_2000",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "L'an 2000 était une année bissextile.",
+  "explanation": "2000 est divisible par 400 : exception à l'exception !",
+  "answer": true
+ },
+ {
+  "key": "log21-320",
+  "concept": "logic.reasoning.v21_tf_lundi_29",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Si le 1er du mois est un lundi, le 29 est aussi un lundi.",
+  "explanation": "28 jours plus tard, soit exactement quatre semaines.",
+  "answer": true
+ },
+ {
+  "key": "log21-321",
+  "concept": "logic.reasoning.v21_tf_premier_dernier_jour",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Dans une année non bissextile, le 1er janvier et le 31 décembre tombent le même jour de la semaine.",
+  "explanation": "Ils sont séparés de 364 jours, soit 52 semaines pile.",
+  "answer": true
+ },
+ {
+  "key": "log21-322",
+  "concept": "logic.reasoning.v21_tf_pile_face_suite",
+  "label": "Probabilités",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "En lançant une pièce 10 fois, obtenir « face » 10 fois de suite est moins probable qu'obtenir la suite précise P F P F F P P F P F.",
+  "explanation": "Chaque suite précise a exactement la même probabilité : 1 sur 1 024. La première nous semble juste plus « remarquable ».",
+  "answer": false
+ },
+ {
+  "key": "log21-323",
+  "concept": "logic.reasoning.v21_tf_loto_123456",
+  "label": "Probabilités",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Au loto, jouer 1-2-3-4-5-6 donne moins de chances de gagner qu'une autre grille.",
+  "explanation": "Toutes les grilles ont la même chance. Mais si elle sortait, il faudrait partager le gain avec beaucoup de monde !",
+  "answer": false
+ },
+ {
+  "key": "log21-324",
+  "concept": "logic.reasoning.v21_tf_moitie_reciproque",
+  "label": "Logique des mots",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Si la moitié des A sont des B, alors la moitié des B sont des A.",
+  "explanation": "La moitié des Français sont des femmes, mais les Françaises ne sont pas la moitié des femmes du monde.",
+  "answer": false
+ },
+ {
+  "key": "log21-325",
+  "concept": "logic.reasoning.v21_tf_double_parite",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Un nombre entier et son double sont toujours tous les deux pairs, ou tous les deux impairs.",
+  "explanation": "3 est impair, 6 est pair. Le double est toujours pair.",
+  "answer": false
+ },
+ {
+  "key": "log21-326",
+  "concept": "logic.reasoning.v21_tf_double_pair",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Le double d'un nombre entier est toujours pair.",
+  "explanation": "Doubler, c'est multiplier par 2.",
+  "answer": true
+ },
+ {
+  "key": "log21-327",
+  "concept": "logic.reasoning.v21_tf_trois_impairs",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La somme de trois nombres impairs est toujours impaire.",
+  "explanation": "Deux impairs font un pair, et un pair plus un impair fait un impair. Exemple : 1 + 3 + 5 = 9.",
+  "answer": true
+ },
+ {
+  "key": "log21-328",
+  "concept": "logic.reasoning.v21_tf_carre_plus_grand",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le carré d'un nombre est toujours plus grand que ce nombre.",
+  "explanation": "1 × 1 = 1, et 0,5 × 0,5 = 0,25, qui est plus petit que 0,5.",
+  "answer": false
+ },
+ {
+  "key": "log21-329",
+  "concept": "logic.reasoning.v21_tf_diviser_demi",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Diviser par 0,5 revient à multiplier par 2.",
+  "explanation": "Combien de demis dans 3 ? Six : 3 ÷ 0,5 = 6 = 3 × 2.",
+  "answer": true
+ },
+ {
+  "key": "log21-330",
+  "concept": "logic.reasoning.v21_tf_dix_pourcent",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "10 % de 50, c'est la même chose que 50 % de 10.",
+  "explanation": "Les deux font 5. Astuce : x % de y = y % de x.",
+  "answer": true
+ },
+ {
+  "key": "log21-331",
+  "concept": "logic.reasoning.v21_tf_avant_hier_samedi",
+  "label": "Calendrier",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Si avant-hier était samedi, demain sera mardi.",
+  "explanation": "Avant-hier samedi, hier dimanche, aujourd'hui lundi, demain mardi.",
+  "answer": true
+ },
+ {
+  "key": "log21-332",
+  "concept": "logic.reasoning.v21_tf_triangle_droit_obtus",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Un triangle peut avoir à la fois un angle droit et un angle obtus.",
+  "explanation": "90° plus un angle de plus de 90° dépassent déjà les 180° que valent les trois angles réunis.",
+  "answer": false
+ },
+ {
+  "key": "log21-333",
+  "concept": "logic.reasoning.v21_tf_tiroirs_chaussettes",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "On peut ranger 10 chaussettes dans 9 tiroirs sans jamais en mettre deux dans le même tiroir.",
+  "explanation": "C'est le « principe des tiroirs » : avec plus d'objets que de tiroirs, un tiroir en reçoit forcément au moins deux.",
+  "answer": false
+ },
+ {
+  "key": "log21-334",
+  "concept": "logic.reasoning.v21_tf_treize_mois",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Dans un groupe de 13 personnes, deux sont forcément nées le même mois.",
+  "explanation": "13 personnes pour 12 mois : le principe des tiroirs s'applique.",
+  "answer": true
+ },
+ {
+  "key": "log21-335",
+  "concept": "logic.reasoning.v21_tf_minutes_secondes",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Il y a plus de minutes dans une semaine que de secondes dans une journée.",
+  "explanation": "Une semaine : 7 × 24 × 60 = 10 080 minutes. Une journée : 24 × 60 × 60 = 86 400 secondes.",
+  "answer": false
+ },
+ {
+  "key": "log21-336",
+  "concept": "logic.puzzles.v21_ch_parapluie",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Mon premier veut dire « à travers », mon second est la première lettre de l'alphabet, mon troisième tombe du ciel, mon tout s'ouvre quand il pleut.",
+  "explanation": "Par + a + pluie = parapluie.",
+  "word": "PARAPLUIE",
+  "display": "Parapluie"
+ },
+ {
+  "key": "log21-337",
+  "concept": "logic.puzzles.v21_ch_saucisson",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Mon premier transporte l'eau, mon second coupe le bois, mon troisième s'entend, mon tout se mange en tranches.",
+  "explanation": "Seau + scie + son = saucisson.",
+  "word": "SAUCISSON",
+  "display": "Saucisson"
+ },
+ {
+  "key": "log21-338",
+  "concept": "logic.puzzles.v21_ch_moustique",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Mon premier pousse sur les pierres humides, mon second s'accroche aux poils des chiens, mon tout pique la nuit.",
+  "explanation": "Mousse + tique = moustique.",
+  "word": "MOUSTIQUE",
+  "display": "Moustique"
+ },
+ {
+  "key": "log21-339",
+  "concept": "logic.puzzles.v21_ch_chaussette",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Mon premier n'est pas froid, mon second vient après six, mon tout se porte au pied.",
+  "explanation": "Chaud + sept = chaussette.",
+  "word": "CHAUSSETTE",
+  "display": "Chaussette"
+ },
+ {
+  "key": "log21-340",
+  "concept": "logic.puzzles.v21_ch_poisson",
+  "label": "Charade",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Mon premier est un petit légume vert et rond, mon second s'entend, mon tout nage.",
+  "explanation": "Pois + son = poisson.",
+  "word": "POISSON",
+  "display": "Poisson"
+ },
+ {
+  "key": "log21-341",
+  "concept": "logic.puzzles.v21_fenetre_vingtieme",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un homme saute par la fenêtre du 20e étage et n'a pas une égratignure. Comment ?",
+  "explanation": "Laveur de vitres, il était sur le rebord, à l'extérieur… et il a sauté dans la pièce.",
+  "options": [
+   "Il a sauté du rebord vers l'intérieur de la pièce*",
+   "Il avait un parachute",
+   "Il est tombé dans une piscine",
+   "C'était un cascadeur"
+  ]
+ },
+ {
+  "key": "log21-342",
+  "concept": "logic.puzzles.v21_hoquet",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Un homme entre dans un café et demande un verre d'eau. Le serveur sort un pistolet et le pointe vers lui. L'homme le remercie et repart. Pourquoi ?",
+  "explanation": "Un grand sursaut est un remède de grand-mère contre le hoquet. Le verre d'eau ne servait plus à rien.",
+  "options": [
+   "Il avait le hoquet, et la peur l'a fait passer*",
+   "C'était un jeu",
+   "Le pistolet était un jouet",
+   "Il n'avait plus soif"
+  ]
+ },
+ {
+  "key": "log21-343",
+  "concept": "logic.puzzles.v21_romeo_juliette",
+  "label": "Énigme à histoire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Roméo et Juliette sont retrouvés sans vie sur le sol, dans une flaque d'eau, au milieu de morceaux de verre. La fenêtre est ouverte. Que s'est-il passé ?",
+  "explanation": "Un coup de vent par la fenêtre ouverte a fait tomber le bocal.",
+  "options": [
+   "Ce sont des poissons rouges : le vent a renversé leur bocal*",
+   "Ils sont tombés de la fenêtre",
+   "Ils se sont disputés",
+   "Un voleur est entré"
+  ]
+ },
+ {
+  "key": "log21-344",
+  "concept": "logic.puzzles.v21_parapluie_monte",
+  "label": "Devinette",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'est-ce qui monte quand la pluie descend ?",
+  "explanation": "Quand il pleut, on ouvre et on lève le parapluie.",
+  "options": [
+   "Le parapluie*",
+   "La rivière",
+   "Le nuage",
+   "L'arc-en-ciel"
+  ]
+ },
+ {
+  "key": "log21-345",
+  "concept": "logic.puzzles.v21_nu_plus_son_quart",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Si l'on ajoute à un nombre son quart, on obtient 15. Quel est ce nombre ?",
+  "explanation": "12 + 3 = 15, car le quart de 12 vaut 3.",
+  "answer": 12,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-346",
+  "concept": "logic.puzzles.v21_nu_echange_chiffres",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Un nombre à deux chiffres augmente de 27 quand on inverse ses chiffres. La somme de ses chiffres vaut 11. Quel est-il ?",
+  "explanation": "74 − 47 = 27, et 4 + 7 = 11.",
+  "answer": 47,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-347",
+  "concept": "logic.puzzles.v21_nu_ascenseur_depart",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 35,
+  "prompt": "Dans un ascenseur, je monte de 4 étages, descends de 2, monte de 7, puis descends de 5. J'arrive au 9e étage. À quel étage étais-je parti ?",
+  "explanation": "Au total, je suis monté de 4 étages : 9 − 4 = 5.",
+  "answer": 5,
+  "tolerance": 0
+ },
+ {
+  "key": "log21-348",
+  "concept": "logic.puzzles.v21_nu_rectangle_largeur",
+  "label": "Devinette de nombres",
+  "type": "numeric",
+  "difficulty": 45,
+  "prompt": "Un rectangle a 30 cm de tour, et sa longueur vaut le double de sa largeur. Combien mesure sa largeur, en cm ?",
+  "explanation": "Le tour vaut 2 longueurs + 2 largeurs = 6 largeurs = 30 cm : une largeur fait 5 cm.",
+  "answer": 5,
+  "tolerance": 0,
+  "unit": "cm"
+ },
+ {
+  "key": "log21-349",
+  "concept": "logic.reasoning.v21_tf_impair_fois_pair",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Un nombre impair multiplié par un nombre pair donne toujours un nombre pair.",
+  "explanation": "Le facteur 2 du nombre pair reste dans le résultat : 3 × 4 = 12.",
+  "answer": true
+ },
+ {
+  "key": "log21-350",
+  "concept": "logic.reasoning.v21_tf_heure_jour",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Une heure compte plus de secondes qu'une journée ne compte de minutes.",
+  "explanation": "3 600 secondes dans une heure, contre 1 440 minutes dans une journée.",
+  "answer": true
+ },
+ {
+  "key": "log21-351",
+  "concept": "logic.reasoning.v21_tf_deux_piles_trois",
+  "label": "Probabilités",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "En lançant trois pièces, on a plus de chances d'obtenir exactement deux « pile » que trois « pile ».",
+  "explanation": "Deux piles : 3 cas sur 8 (PPF, PFP, FPP). Trois piles : 1 cas sur 8.",
+  "answer": true
+ },
+ {
+  "key": "log21-352",
+  "concept": "logic.reasoning.v21_tf_moyenne_quatre",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "La moyenne de 2, 4 et 9 est 4.",
+  "explanation": "2 + 4 + 9 = 15, divisé par 3 : 5. Le nombre du milieu (4) n'est pas la moyenne.",
+  "answer": false
+ },
+ {
+  "key": "log21-353",
+  "concept": "logic.reasoning.v21_tf_bleus_rouges",
+  "label": "Syllogismes",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "« Tous les Bleus sont des Rouges. Bob n'est pas un Rouge. » Donc Bob est un Bleu.",
+  "explanation": "C'est l'inverse : s'il n'est pas Rouge, il ne peut pas être Bleu.",
+  "answer": false
+ },
+ {
+  "key": "log21-354",
+  "concept": "logic.reasoning.v21_tf_losange_cotes",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Un losange a toujours quatre côtés de même longueur.",
+  "explanation": "C'est sa définition. Ses angles, eux, ne sont pas forcément droits.",
+  "answer": true
+ },
+ {
+  "key": "log21-355",
+  "concept": "logic.reasoning.v21_tf_cube_faces_sommets",
+  "label": "Énigme",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Un cube a autant de faces que de sommets.",
+  "explanation": "6 faces, mais 8 sommets (et 12 arêtes).",
+  "answer": false
+ }
+]
