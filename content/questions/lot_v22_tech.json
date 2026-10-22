@@ -1,0 +1,4994 @@
+[
+ {
+  "key": "tec22-001",
+  "concept": "tech.computing.v22_tactile_gants",
+  "label": "Écran tactile",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi un écran de smartphone ne réagit-il pas quand on le touche avec des gants en laine ?",
+  "explanation": "Les écrans « capacitifs » repèrent le doigt, conducteur d'électricité. La laine isole. Certains gants ont des bouts de doigts conducteurs.",
+  "options": [
+   "Il détecte la petite charge électrique du doigt*",
+   "Il détecte la chaleur du doigt",
+   "Il mesure la pression du doigt",
+   "Il détecte les empreintes digitales"
+  ]
+ },
+ {
+  "key": "tec22-002",
+  "concept": "tech.computing.v22_disque_931",
+  "label": "Stockage",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi un disque vendu « 1 To » n'affiche-t-il qu'environ 931 Go sur un ordinateur ?",
+  "explanation": "1 To vendu = 1 000 000 000 000 octets. Divisé trois fois par 1 024, cela donne environ 931 « Go » au sens de l'ordinateur.",
+  "options": [
+   "Le fabricant compte en milliers, l'ordinateur en multiples de 1 024*",
+   "Une partie est réservée aux virus",
+   "Le disque perd de la place en vieillissant",
+   "Le système d'exploitation occupe 69 Go"
+  ]
+ },
+ {
+  "key": "tec22-003",
+  "concept": "tech.computing.v22_oled_pixels",
+  "label": "Écrans",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est la particularité d'un écran OLED ?",
+  "explanation": "Un pixel noir est simplement éteint : d'où des noirs parfaits, et une économie de batterie avec le mode sombre.",
+  "options": [
+   "Chaque pixel produit sa propre lumière*",
+   "Il est éclairé par un seul néon",
+   "Il n'affiche que du noir et blanc",
+   "Il fonctionne sans électricité"
+  ]
+ },
+ {
+  "key": "tec22-004",
+  "concept": "tech.computing.v22_wifi_5ghz",
+  "label": "Wi-Fi",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le Wi-Fi existe en 2,4 GHz et en 5 GHz. Quel est le défaut du 5 GHz ?",
+  "explanation": "Le 5 GHz est plus rapide et moins encombré, mais ses ondes s'atténuent plus vite dans les obstacles.",
+  "options": [
+   "Il traverse moins bien les murs et porte moins loin*",
+   "Il est plus lent",
+   "Il n'existe que dans les avions",
+   "Il consomme dix fois plus"
+  ]
+ },
+ {
+  "key": "tec22-005",
+  "concept": "tech.computing.v22_ping_latence",
+  "label": "Réseau",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans un jeu en ligne, que mesure le « ping » ?",
+  "explanation": "Il se compte en millisecondes. Un ping élevé, c'est du « lag » : le jeu réagit en retard.",
+  "options": [
+   "Le temps d'aller-retour d'un message vers le serveur*",
+   "Le nombre d'images par seconde",
+   "La taille du jeu",
+   "Le nombre de joueurs connectés"
+  ]
+ },
+ {
+  "key": "tec22-006",
+  "concept": "tech.computing.v22_fps_images",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans un jeu vidéo, que veut dire « 60 FPS » ?",
+  "explanation": "FPS signifie « frames per second ». Au cinéma, on en projette traditionnellement 24.",
+  "options": [
+   "60 images affichées par seconde*",
+   "60 joueurs par partie",
+   "60 heures de jeu",
+   "60 points de vie"
+  ]
+ },
+ {
+  "key": "tec22-007",
+  "concept": "tech.computing.v22_routeur_role",
+  "label": "Réseau",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "À quoi sert le routeur de ta box Internet ?",
+  "explanation": "Il aiguille chaque paquet de données vers le bon appareil de la maison, ou vers l'extérieur.",
+  "options": [
+   "À diriger les données entre tes appareils et Internet*",
+   "À stocker tes photos",
+   "À recharger tes appareils",
+   "À bloquer toutes les publicités"
+  ]
+ },
+ {
+  "key": "tec22-008",
+  "concept": "tech.computing.v22_ssd_sigle",
+  "label": "Stockage",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que veut dire « SSD », pour un disque d'ordinateur ?",
+  "explanation": "Les données sont stockées dans des puces de mémoire flash, comme dans une clé USB.",
+  "options": [
+   "Solid State Drive : un disque sans pièce qui tourne*",
+   "Super Speed Disk : un disque très rapide",
+   "Secure Storage Device : un disque chiffré",
+   "Single Sided Disk : un disque à une face"
+  ]
+ },
+ {
+  "key": "tec22-009",
+  "concept": "tech.computing.v22_mise_en_tampon",
+  "label": "Streaming",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quand une vidéo en ligne affiche un petit cercle qui tourne avant de reprendre, que fait-elle ?",
+  "explanation": "C'est la « mise en mémoire tampon » (buffering) : la connexion n'arrive pas à suivre la lecture.",
+  "options": [
+   "Elle charge à l'avance la suite de la vidéo*",
+   "Elle analyse ton visage",
+   "Elle efface la vidéo",
+   "Elle cherche un virus"
+  ]
+ },
+ {
+  "key": "tec22-010",
+  "concept": "tech.computing.v22_cadenas_https",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Un petit cadenas s'affiche à côté de l'adresse d'un site. Que garantit-il ?",
+  "explanation": "Un faux site peut très bien avoir un cadenas. Il faut toujours vérifier l'adresse exacte.",
+  "options": [
+   "Que les échanges sont chiffrés, pas que le site est honnête*",
+   "Que le site est officiel et sans arnaque",
+   "Que le site n'a pas de publicité",
+   "Que le site est français"
+  ]
+ },
+ {
+  "key": "tec22-011",
+  "concept": "tech.computing.v22_colis_sms",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Tu reçois un SMS : « Votre colis est bloqué, payez 1,99 € ici » avec un lien. Que faut-il faire ?",
+  "explanation": "C'est du « smishing » (hameçonnage par SMS). Le but : voler tes coordonnées bancaires. On peut le signaler au 33700.",
+  "options": [
+   "Ne pas cliquer : c'est sans doute une arnaque*",
+   "Payer vite pour récupérer le colis",
+   "Répondre « STOP » avec ton adresse",
+   "Transférer le lien à tes amis"
+  ]
+ },
+ {
+  "key": "tec22-012",
+  "concept": "tech.computing.v22_qr_piege",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi faut-il se méfier d'un QR code collé sur un parcmètre ?",
+  "explanation": "Des escrocs collent leurs propres QR codes sur les vrais. On parle de « quishing ».",
+  "options": [
+   "Il peut renvoyer vers un faux site de paiement*",
+   "Il peut abîmer l'appareil photo",
+   "Il peut vider la batterie",
+   "Il est toujours payant"
+  ]
+ },
+ {
+  "key": "tec22-013",
+  "concept": "tech.computing.v22_mot_de_passe_phrase",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Lequel de ces mots de passe est le plus difficile à deviner pour un ordinateur ?",
+  "explanation": "La longueur compte plus que les symboles. Une phrase de plusieurs mots est longue et facile à retenir. Les remplacements comme « 0 » pour « o » sont connus des pirates.",
+  "options": [
+   "cheval-agrafe-pile-correcte*",
+   "Tr0ub4dor",
+   "P@ssw0rd!",
+   "azerty123"
+  ]
+ },
+ {
+  "key": "tec22-014",
+  "concept": "tech.computing.v22_deux_facteurs_sms",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un site t'envoie un code par SMS après ton mot de passe. Pourquoi ?",
+  "explanation": "C'est la double authentification : il faut quelque chose que tu sais (le mot de passe) et quelque chose que tu as (ton téléphone).",
+  "options": [
+   "Pour vérifier que c'est bien toi, même si ton mot de passe a fui*",
+   "Pour te faire payer un SMS",
+   "Pour vérifier ton forfait",
+   "Pour t'abonner à sa newsletter"
+  ]
+ },
+ {
+  "key": "tec22-015",
+  "concept": "tech.computing.v22_mode_sombre",
+  "label": "Écrans",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le mode sombre économise surtout la batterie sur quel type d'écran ?",
+  "explanation": "Sur un écran OLED, un pixel noir est éteint. Sur un LCD, le rétroéclairage reste allumé derrière.",
+  "options": [
+   "OLED*",
+   "LCD",
+   "À tube cathodique",
+   "Sur tous de la même façon"
+  ]
+ },
+ {
+  "key": "tec22-016",
+  "concept": "tech.computing.v22_cookies_role",
+  "label": "Internet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi un site te demande-t-il d'accepter les « cookies » ?",
+  "explanation": "La loi européenne (RGPD) oblige à demander ton accord pour les cookies qui ne sont pas indispensables.",
+  "options": [
+   "Il veut enregistrer des informations sur ta visite, souvent pour la publicité*",
+   "Il veut t'offrir des biscuits",
+   "Il veut installer un antivirus",
+   "Il veut accélérer ta connexion"
+  ]
+ },
+ {
+  "key": "tec22-017",
+  "concept": "tech.computing.v22_reconnaissance_vocale",
+  "label": "Intelligence artificielle",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que veut dire le « GPT » de ChatGPT ?",
+  "explanation": "Un « transformeur » est un type de réseau de neurones inventé en 2017. « Pré-entraîné » : il a appris sur d'immenses quantités de textes.",
+  "options": [
+   "Generative Pre-trained Transformer*",
+   "Global Personal Translator",
+   "Google Powered Technology",
+   "General Purpose Terminal"
+  ]
+ },
+ {
+  "key": "tec22-018",
+  "concept": "tech.computing.v22_hallucination_ia",
+  "label": "Intelligence artificielle",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que veut-on dire quand on dit qu'une IA « hallucine » ?",
+  "explanation": "Une IA de texte prédit des mots plausibles : elle peut inventer une date, une citation ou une source. Il faut vérifier.",
+  "options": [
+   "Elle invente une réponse fausse, mais avec assurance*",
+   "Elle tombe en panne",
+   "Elle voit des images",
+   "Elle refuse de répondre"
+  ]
+ },
+ {
+  "key": "tec22-019",
+  "concept": "tech.computing.v22_prompt_ia",
+  "label": "Intelligence artificielle",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment appelle-t-on la consigne qu'on écrit à une IA comme ChatGPT ?",
+  "explanation": "En français, on dit aussi « requête » ou « instruction ».",
+  "options": [
+   "Un prompt*",
+   "Un patch",
+   "Un plug-in",
+   "Un pixel"
+  ]
+ },
+ {
+  "key": "tec22-020",
+  "concept": "tech.computing.v22_alphago",
+  "label": "Intelligence artificielle",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En 2016, le programme AlphaGo a battu l'un des meilleurs joueurs du monde. À quel jeu ?",
+  "explanation": "Le go, avec ses innombrables positions possibles, semblait hors de portée des machines. AlphaGo a battu le Coréen Lee Sedol 4 à 1.",
+  "options": [
+   "Le go*",
+   "Les échecs",
+   "Le poker",
+   "Le Scrabble"
+  ]
+ },
+ {
+  "key": "tec22-021",
+  "concept": "tech.computing.v22_lol",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Sur Internet, que veut dire « LOL » ?",
+  "explanation": "De l'anglais « laughing out loud ». En France, on écrit aussi « MDR » (mort de rire).",
+  "options": [
+   "Je ris beaucoup*",
+   "Je suis en retard",
+   "Bonne nuit",
+   "À plus tard"
+  ]
+ },
+ {
+  "key": "tec22-022",
+  "concept": "tech.computing.v22_ptdr",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que veut dire « PTDR » dans un message ?",
+  "explanation": "C'est l'expression la plus forte de la famille, après « MDR ».",
+  "options": [
+   "Pété de rire*",
+   "Pas trop de retard",
+   "Pour ton dernier repas",
+   "Plus tard dans la route"
+  ]
+ },
+ {
+  "key": "tec22-023",
+  "concept": "tech.computing.v22_gg",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À la fin d'une partie en ligne, que veut dire « GG » ?",
+  "explanation": "C'est la formule de fair-play du jeu vidéo, envers l'adversaire comme envers son équipe.",
+  "options": [
+   "Bien joué (« good game »)*",
+   "Gagné, gagné",
+   "Grosse galère",
+   "Game over"
+  ]
+ },
+ {
+  "key": "tec22-024",
+  "concept": "tech.computing.v22_afk",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Un joueur écrit « AFK ». Que fait-il ?",
+  "explanation": "De l'anglais « away from keyboard ».",
+  "options": [
+   "Il s'éloigne de son clavier*",
+   "Il abandonne la partie",
+   "Il demande de l'aide",
+   "Il a gagné"
+  ]
+ },
+ {
+  "key": "tec22-025",
+  "concept": "tech.computing.v22_meme",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur Internet, qu'est-ce qu'un « mème » ?",
+  "explanation": "Le mot a été inventé en 1976 par le biologiste Richard Dawkins, pour une idée qui se recopie d'une personne à l'autre.",
+  "options": [
+   "Une image ou une vidéo humoristique reprise et détournée par plein de gens*",
+   "Un virus informatique",
+   "Un message privé",
+   "Une publicité cachée"
+  ]
+ },
+ {
+  "key": "tec22-026",
+  "concept": "tech.computing.v22_rickroll",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Se faire « rickroller », c'est cliquer sur un lien et tomber par surprise sur…",
+  "explanation": "Une blague née en 2007. Le clip de 1987 a dépassé le milliard de vues sur YouTube.",
+  "options": [
+   "Le clip de « Never Gonna Give You Up » de Rick Astley*",
+   "Une vidéo de chat",
+   "Un écran noir",
+   "Une publicité pour des rouleaux de printemps"
+  ]
+ },
+ {
+  "key": "tec22-027",
+  "concept": "tech.computing.v22_troll",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Sur Internet, qu'est-ce qu'un « troll » ?",
+  "explanation": "Le conseil habituel : « Ne pas nourrir le troll », c'est-à-dire ne pas lui répondre.",
+  "options": [
+   "Quelqu'un qui provoque exprès pour créer des disputes*",
+   "Un expert qui répond aux questions",
+   "Un robot qui modère les messages",
+   "Un jeu de rôle"
+  ]
+ },
+ {
+  "key": "tec22-028",
+  "concept": "tech.computing.v22_dm",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Sur les réseaux sociaux, « envoyer un DM », c'est…",
+  "explanation": "De l'anglais « direct message ».",
+  "options": [
+   "Envoyer un message privé*",
+   "Publier une story",
+   "Bloquer quelqu'un",
+   "Faire un direct"
+  ]
+ },
+ {
+  "key": "tec22-029",
+  "concept": "tech.computing.v22_doomscrolling",
+  "label": "Langage d'Internet",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce que le « doomscrolling » ?",
+  "explanation": "De l'anglais « doom », la catastrophe. Une habitude qui augmente l'anxiété.",
+  "options": [
+   "Faire défiler sans fin des mauvaises nouvelles sur son écran*",
+   "Un jeu vidéo d'horreur",
+   "Un virus qui fait défiler l'écran",
+   "Une technique de lecture rapide"
+  ]
+ },
+ {
+  "key": "tec22-030",
+  "concept": "tech.computing.v22_mot_diese",
+  "label": "Mots de l'informatique",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel mot français est recommandé officiellement à la place de « hashtag » ?",
+  "explanation": "Recommandé en 2013 par la Commission d'enrichissement de la langue française. Le signe # ressemble au dièse de la musique.",
+  "options": [
+   "Mot-dièse*",
+   "Mot-clé",
+   "Mot-croisé",
+   "Mot-dièze"
+  ]
+ },
+ {
+  "key": "tec22-031",
+  "concept": "tech.computing.v22_courriel_quebec",
+  "label": "Mots de l'informatique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "D'où vient le mot « courriel », pour un e-mail ?",
+  "explanation": "C'est la contraction de « courrier électronique », proposée au Québec dans les années 1990.",
+  "options": [
+   "Du Québec*",
+   "De Belgique",
+   "De Suisse",
+   "De l'Académie française en 1950"
+  ]
+ },
+ {
+  "key": "tec22-032",
+  "concept": "tech.computing.v22_mot_ordinateur",
+  "label": "Mots de l'informatique",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pour quelle entreprise le mot « ordinateur » a-t-il été inventé, en 1955 ?",
+  "explanation": "Le latiniste Jacques Perret l'a proposé : un ordinateur est « Dieu qui met de l'ordre dans le monde ».",
+  "options": [
+   "IBM France*",
+   "Bull",
+   "Apple",
+   "Thomson"
+  ]
+ },
+ {
+  "key": "tec22-033",
+  "concept": "tech.computing.v22_mot_informatique",
+  "label": "Mots de l'informatique",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le mot « informatique » a été créé en 1962 à partir de deux mots. Lesquels ?",
+  "explanation": "On le doit à l'ingénieur Philippe Dreyfus.",
+  "options": [
+   "Information et automatique*",
+   "Information et mathématique",
+   "Informer et pratique",
+   "Information et électronique"
+  ]
+ },
+ {
+  "key": "tec22-034",
+  "concept": "tech.computing.v22_symbolics",
+  "label": "Histoire d'Internet",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quel a été le tout premier nom de domaine en « .com » enregistré, en 1985 ?",
+  "explanation": "Il appartenait à un fabricant d'ordinateurs du Massachusetts. Google.com n'a été enregistré qu'en 1997.",
+  "options": [
+   "symbolics.com*",
+   "google.com",
+   "apple.com",
+   "microsoft.com"
+  ]
+ },
+ {
+  "key": "tec22-035",
+  "concept": "tech.computing.v22_premier_tweet",
+  "label": "Histoire d'Internet",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel était le tout premier message publié sur Twitter, en 2006, par son cofondateur Jack Dorsey ?",
+  "explanation": "Le message a été vendu aux enchères 2,9 millions de dollars en 2021, sous forme de NFT.",
+  "options": [
+   "« just setting up my twttr »*",
+   "« Hello world »",
+   "« Bonjour Twitter »",
+   "« Is anybody out there? »"
+  ]
+ },
+ {
+  "key": "tec22-036",
+  "concept": "tech.computing.v22_me_at_the_zoo",
+  "label": "Histoire d'Internet",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que montre « Me at the zoo », la toute première vidéo publiée sur YouTube en 2005 ?",
+  "explanation": "Elle dure 19 secondes. Jawed Karim y explique que les éléphants ont « de très, très, très longues trompes ».",
+  "options": [
+   "Un des fondateurs devant des éléphants*",
+   "Un chat qui joue du piano",
+   "Un bébé qui rit",
+   "Un concert de rock"
+  ]
+ },
+ {
+  "key": "tec22-037",
+  "concept": "tech.computing.v22_ibm_pc",
+  "label": "Histoire de l'informatique",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle entreprise lance en 1981 le « PC », qui donnera son nom à tous les ordinateurs personnels ?",
+  "explanation": "L'IBM PC tournait avec MS-DOS, fourni par une petite entreprise : Microsoft.",
+  "options": [
+   "IBM*",
+   "Apple",
+   "Microsoft",
+   "Atari"
+  ]
+ },
+ {
+  "key": "tec22-038",
+  "concept": "tech.computing.v22_macintosh_1984",
+  "label": "Histoire de l'informatique",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De quel roman s'inspirait la célèbre publicité du premier Macintosh, en 1984 ?",
+  "explanation": "Réalisée par Ridley Scott et diffusée pendant le Super Bowl, elle montrait une femme brisant l'écran de « Big Brother ».",
+  "options": [
+   "« 1984 » de George Orwell*",
+   "« Le Meilleur des mondes »",
+   "« Fahrenheit 451 »",
+   "« La Guerre des mondes »"
+  ]
+ },
+ {
+  "key": "tec22-039",
+  "concept": "tech.computing.v22_margaret_hamilton",
+  "label": "Pionnières",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'a programmé Margaret Hamilton, photographiée à côté d'une pile de listings aussi haute qu'elle ?",
+  "explanation": "Son logiciel a évité l'annulation de l'alunissage d'Apollo 11, en 1969, en gérant une surcharge de l'ordinateur.",
+  "options": [
+   "Le logiciel de vol des missions Apollo*",
+   "Le premier jeu vidéo",
+   "Le moteur de recherche Google",
+   "Le premier virus"
+  ]
+ },
+ {
+  "key": "tec22-040",
+  "concept": "tech.computing.v22_katherine_johnson",
+  "label": "Pionnières",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel film raconte l'histoire de Katherine Johnson et d'autres mathématiciennes noires de la NASA ?",
+  "explanation": "Sorti en 2016. Katherine Johnson a calculé les trajectoires des premiers vols spatiaux américains.",
+  "options": [
+   "Les Figures de l'ombre*",
+   "Apollo 13",
+   "Interstellar",
+   "Seul sur Mars"
+  ]
+ },
+ {
+  "key": "tec22-041",
+  "concept": "tech.computing.v22_linux_android",
+  "label": "Systèmes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Sur quel système le système Android est-il construit ?",
+  "explanation": "Android utilise le noyau Linux. Il équipe environ 7 smartphones sur 10 dans le monde.",
+  "options": [
+   "Linux*",
+   "Windows",
+   "macOS",
+   "MS-DOS"
+  ]
+ },
+ {
+  "key": "tec22-042",
+  "concept": "tech.computing.v22_raspberry_pi",
+  "label": "Ordinateurs",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qu'un Raspberry Pi ?",
+  "explanation": "Conçu au Royaume-Uni pour apprendre la programmation, il coûte quelques dizaines d'euros.",
+  "options": [
+   "Un ordinateur grand comme une carte de crédit*",
+   "Un dessert anglais",
+   "Un virus informatique",
+   "Un langage de programmation"
+  ]
+ },
+ {
+  "key": "tec22-043",
+  "concept": "tech.computing.v22_scratch",
+  "label": "Programmation",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec quel outil beaucoup d'élèves apprennent-ils à programmer en assemblant des blocs colorés ?",
+  "explanation": "Créé au MIT en 2007, il a pour mascotte un chat orange.",
+  "options": [
+   "Scratch*",
+   "Excel",
+   "Photoshop",
+   "Word"
+  ]
+ },
+ {
+  "key": "tec22-044",
+  "concept": "tech.computing.v22_bug_boucle",
+  "label": "Programmation",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "En programmation, qu'est-ce qu'une « boucle infinie » ?",
+  "explanation": "Souvent un oubli : la condition d'arrêt n'est jamais remplie, et le programme tourne pour rien.",
+  "options": [
+   "Des instructions qui se répètent sans jamais s'arrêter*",
+   "Un câble branché sur lui-même",
+   "Un jeu sans fin",
+   "Un écran qui clignote"
+  ]
+ },
+ {
+  "key": "tec22-045",
+  "concept": "tech.computing.v22_open_ai_fr",
+  "label": "Intelligence artificielle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi dit-on qu'une IA « apprend » ?",
+  "explanation": "C'est l'apprentissage automatique : on lui montre des millions d'exemples, et elle corrige peu à peu ses erreurs.",
+  "options": [
+   "Elle ajuste ses réglages internes à partir de très nombreux exemples*",
+   "Elle lit des livres chaque nuit",
+   "Des humains réécrivent son code chaque jour",
+   "Elle copie Wikipédia mot pour mot"
+  ]
+ },
+ {
+  "key": "tec22-046",
+  "concept": "tech.computing.v22_navigateur_vs_moteur",
+  "label": "Internet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Google Chrome est un navigateur. Et Google Search, c'est…",
+  "explanation": "Le navigateur affiche les pages web. Le moteur de recherche trouve les pages qui répondent à ta question.",
+  "options": [
+   "Un moteur de recherche*",
+   "Un navigateur aussi",
+   "Un système d'exploitation",
+   "Un réseau social"
+  ]
+ },
+ {
+  "key": "tec22-047",
+  "concept": "tech.computing.v22_onglets_raccourcis",
+  "label": "Raccourcis",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Tu as fermé un onglet par erreur. Quel raccourci le rouvre, dans la plupart des navigateurs sur Windows ?",
+  "explanation": "Ctrl + Z annule une action dans un texte, mais pas la fermeture d'un onglet. Alt + F4 fermerait toute la fenêtre !",
+  "options": [
+   "Ctrl + Maj + T*",
+   "Ctrl + Z",
+   "Ctrl + R",
+   "Alt + F4"
+  ]
+ },
+ {
+  "key": "tec22-048",
+  "concept": "tech.computing.v22_ctrl_f",
+  "label": "Raccourcis",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel raccourci permet de chercher un mot dans une page web ou un document, sur Windows ?",
+  "explanation": "F comme « find » (trouver). Sur Mac, c'est Cmd + F.",
+  "options": [
+   "Ctrl + F*",
+   "Ctrl + R",
+   "Ctrl + M",
+   "Ctrl + W"
+  ]
+ },
+ {
+  "key": "tec22-049",
+  "concept": "tech.computing.v22_alt_tab",
+  "label": "Raccourcis",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sur Windows, à quoi sert le raccourci Alt + Tab ?",
+  "explanation": "On garde Alt enfoncé et on appuie plusieurs fois sur Tab pour choisir.",
+  "options": [
+   "Passer d'une fenêtre ouverte à une autre*",
+   "Fermer toutes les fenêtres",
+   "Ouvrir un nouvel onglet",
+   "Éteindre l'ordinateur"
+  ]
+ },
+ {
+  "key": "tec22-050",
+  "concept": "tech.computing.v22_touche_windows_l",
+  "label": "Raccourcis",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Tu quittes ton bureau quelques minutes. Quel raccourci verrouille vite un ordinateur Windows ?",
+  "explanation": "L comme « lock » (verrouiller). Un bon réflexe au travail ou à l'école.",
+  "options": [
+   "Touche Windows + L*",
+   "Ctrl + L",
+   "Alt + L",
+   "Maj + L"
+  ]
+ },
+ {
+  "key": "tec22-051",
+  "concept": "tech.computing.v22_pa_raccourcis",
+  "label": "Raccourcis",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque raccourci (sur Windows) à son action.",
+  "explanation": "Ctrl + Y refait ce que Ctrl + Z vient d'annuler.",
+  "pairs": [
+   [
+    "Ctrl + P",
+    "Imprimer"
+   ],
+   [
+    "Ctrl + F",
+    "Rechercher"
+   ],
+   [
+    "Ctrl + W",
+    "Fermer l'onglet"
+   ],
+   [
+    "Ctrl + Y",
+    "Rétablir"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-052",
+  "concept": "tech.computing.v22_pa_unites",
+  "label": "Unités",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque unité à ce qu'elle mesure.",
+  "explanation": "Un processeur à 3 GHz fait 3 milliards de cycles par seconde.",
+  "pairs": [
+   [
+    "Octet",
+    "Une quantité de données"
+   ],
+   [
+    "Hertz",
+    "Une fréquence"
+   ],
+   [
+    "Watt",
+    "Une puissance"
+   ],
+   [
+    "Pixel",
+    "Un point d'une image"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-053",
+  "concept": "tech.computing.v22_pa_prises",
+  "label": "Câbles et prises",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque prise à son usage principal.",
+  "explanation": "L'USB-C est devenu obligatoire dans l'Union européenne pour charger les téléphones depuis fin 2024.",
+  "pairs": [
+   [
+    "HDMI",
+    "Image et son vers une télé"
+   ],
+   [
+    "Ethernet",
+    "Réseau par câble"
+   ],
+   [
+    "Jack 3,5 mm",
+    "Casque audio"
+   ],
+   [
+    "USB-C",
+    "Charge et données"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-054",
+  "concept": "tech.computing.v22_pa_internet_sigles",
+  "label": "Langage d'Internet",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque abréviation à son sens.",
+  "explanation": "« OKLM » a été popularisé par le rappeur Booba en 2014.",
+  "pairs": [
+   [
+    "MDR",
+    "Mort de rire"
+   ],
+   [
+    "STP",
+    "S'il te plaît"
+   ],
+   [
+    "JPP",
+    "J'en peux plus"
+   ],
+   [
+    "OKLM",
+    "Au calme"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-055",
+  "concept": "tech.computing.v22_pa_createurs_jeux",
+  "label": "Jeux vidéo",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque jeu à son pays d'origine.",
+  "explanation": "Minecraft a été créé par le Suédois Markus Persson, Angry Birds par le studio finlandais Rovio, Rayman par Michel Ancel chez Ubisoft.",
+  "pairs": [
+   [
+    "Tetris",
+    "Russie (URSS)"
+   ],
+   [
+    "Minecraft",
+    "Suède"
+   ],
+   [
+    "Angry Birds",
+    "Finlande"
+   ],
+   [
+    "Rayman",
+    "France"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-056",
+  "concept": "tech.computing.v22_or_stockage_capacite",
+  "label": "Stockage",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces supports du plus petit au plus grand en capacité.",
+  "explanation": "Une disquette : 1,44 Mo. Un CD : 700 Mo. Un DVD : 4,7 Go. Un Blu-ray : 25 Go par couche.",
+  "items": [
+   "Disquette",
+   "CD",
+   "DVD",
+   "Blu-ray"
+  ]
+ },
+ {
+  "key": "tec22-057",
+  "concept": "tech.computing.v22_or_unites_octets",
+  "label": "Unités",
+  "type": "ordering",
+  "difficulty": 40,
+  "prompt": "Classe ces unités de la plus petite à la plus grande.",
+  "explanation": "On multiplie par 1 000 à chaque étape. Un pétaoctet, c'est un million de gigaoctets.",
+  "items": [
+   "Kilooctet",
+   "Mégaoctet",
+   "Gigaoctet",
+   "Téraoctet",
+   "Pétaoctet"
+  ]
+ },
+ {
+  "key": "tec22-058",
+  "concept": "tech.computing.v22_or_reseaux_sociaux_2",
+  "label": "Histoire d'Internet",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces services du plus ancien au plus récent.",
+  "explanation": "YouTube en 2005, Instagram en 2010, Snapchat en 2011, et TikTok (hors de Chine) en 2017-2018.",
+  "items": [
+   "YouTube",
+   "Instagram",
+   "Snapchat",
+   "TikTok"
+  ]
+ },
+ {
+  "key": "tec22-059",
+  "concept": "tech.computing.v22_or_consoles",
+  "label": "Jeux vidéo",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces consoles de la plus ancienne à la plus récente.",
+  "explanation": "1989, 1994, 2006 et 2017.",
+  "items": [
+   "Game Boy",
+   "PlayStation",
+   "Wii",
+   "Nintendo Switch"
+  ]
+ },
+ {
+  "key": "tec22-060",
+  "concept": "tech.computing.v22_or_resolutions",
+  "label": "Écrans",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces définitions d'écran de la plus faible à la plus fine.",
+  "explanation": "La 4K compte environ 8 millions de pixels, quatre fois plus que le Full HD.",
+  "items": [
+   "720p (HD)",
+   "1080p (Full HD)",
+   "4K",
+   "8K"
+  ]
+ },
+ {
+  "key": "tec22-061",
+  "concept": "tech.computing.v22_nu_binaire_1100",
+  "label": "Binaire",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "Combien vaut le nombre binaire 1100 en décimal ?",
+  "explanation": "1100 = 8 + 4 + 0 + 0 = 12.",
+  "answer": 12,
+  "tolerance": 0
+ },
+ {
+  "key": "tec22-062",
+  "concept": "tech.computing.v22_nu_binaire_100000",
+  "label": "Binaire",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien vaut le nombre binaire 100000 en décimal ?",
+  "explanation": "Un 1 suivi de cinq 0 : 2⁵ = 32.",
+  "answer": 32,
+  "tolerance": 0
+ },
+ {
+  "key": "tec22-063",
+  "concept": "tech.computing.v22_nu_hexa_1f",
+  "label": "Hexadécimal",
+  "type": "numeric",
+  "difficulty": 75,
+  "prompt": "Combien vaut « 1F » en hexadécimal, en décimal ?",
+  "explanation": "1 × 16 + F (15) = 31. En hexadécimal, on compte de 0 à 9 puis de A (10) à F (15).",
+  "answer": 31,
+  "tolerance": 0
+ },
+ {
+  "key": "tec22-064",
+  "concept": "tech.computing.v22_nu_mo_go",
+  "label": "Unités",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de mégaoctets (Mo) y a-t-il dans un gigaoctet (Go), au sens décimal ?",
+  "explanation": "Kilo, méga, giga : on multiplie par 1 000 à chaque fois.",
+  "answer": 1000,
+  "tolerance": 0
+ },
+ {
+  "key": "tec22-065",
+  "concept": "tech.computing.v22_nu_bits_ko",
+  "label": "Unités",
+  "type": "numeric",
+  "difficulty": 55,
+  "prompt": "Combien de bits y a-t-il dans un kilooctet de 1 000 octets ?",
+  "explanation": "Chaque octet contient 8 bits : 1 000 × 8 = 8 000.",
+  "answer": 8000,
+  "tolerance": 0
+ },
+ {
+  "key": "tec22-066",
+  "concept": "tech.computing.v22_nu_ascii",
+  "label": "Codage",
+  "type": "numeric",
+  "difficulty": 80,
+  "prompt": "Combien de caractères différents la table ASCII d'origine permet-elle de coder (sur 7 bits) ?",
+  "explanation": "2⁷ = 128 caractères : lettres, chiffres, ponctuation et signes de contrôle.",
+  "answer": 128,
+  "tolerance": 0
+ },
+ {
+  "key": "tec22-067",
+  "concept": "tech.computing.v22_co_usbc_broches",
+  "label": "Câbles et prises",
+  "type": "counter",
+  "difficulty": 85,
+  "prompt": "Combien de broches (contacts) compte une prise USB-C ?",
+  "explanation": "12 de chaque côté : c'est pour ça qu'elle se branche dans les deux sens.",
+  "answer": 24,
+  "tolerance": 2,
+  "min": 4,
+  "max": 40,
+  "start": 4
+ },
+ {
+  "key": "tec22-068",
+  "concept": "tech.computing.v22_co_imei",
+  "label": "Téléphones",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien de chiffres compte le numéro IMEI qui identifie chaque téléphone portable ?",
+  "explanation": "On l'affiche en tapant *#06#. Il sert à bloquer un téléphone volé.",
+  "answer": 15,
+  "tolerance": 1,
+  "min": 5,
+  "max": 25,
+  "start": 5
+ },
+ {
+  "key": "tec22-069",
+  "concept": "tech.computing.v22_co_emojis_annee",
+  "label": "Émojis",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien d'émojis comptait la toute première série, créée au Japon en 1999 par Shigetaka Kurita ?",
+  "explanation": "Ils mesuraient 12 × 12 pixels. Ils sont aujourd'hui exposés au musée d'art moderne de New York (MoMA).",
+  "answer": 176,
+  "tolerance": 20,
+  "min": 50,
+  "max": 400,
+  "start": 50
+ },
+ {
+  "key": "tec22-070",
+  "concept": "tech.computing.v22_ga_google_part",
+  "label": "Internet",
+  "type": "gauge",
+  "difficulty": 55,
+  "prompt": "Quelle part des recherches sur Internet dans le monde passe par Google ?",
+  "explanation": "Environ 9 recherches sur 10. Bing, Yandex ou Baidu se partagent le reste.",
+  "answer": 90,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "tec22-071",
+  "concept": "tech.computing.v22_ga_android_part",
+  "label": "Téléphones",
+  "type": "gauge",
+  "difficulty": 60,
+  "prompt": "Quelle part des smartphones dans le monde fonctionne avec Android ?",
+  "explanation": "Environ 7 sur 10. Les autres, presque tous des iPhone, tournent sous iOS.",
+  "answer": 72,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "tec22-072",
+  "concept": "tech.computing.v22_le_routeur",
+  "label": "Réseau",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Boîtier qui aiguille les données entre la maison et Internet.",
+  "explanation": "Il est souvent intégré à la box.",
+  "word": "ROUTEUR",
+  "display": "Routeur"
+ },
+ {
+  "key": "tec22-073",
+  "concept": "tech.computing.v22_le_pixel",
+  "label": "Écrans",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Le plus petit point d'une image numérique.",
+  "explanation": "Contraction de l'anglais « picture element ».",
+  "word": "PIXEL",
+  "display": "Pixel"
+ },
+ {
+  "key": "tec22-074",
+  "concept": "tech.computing.v22_le_algorithme",
+  "label": "Programmation",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Suite d'instructions pour résoudre un problème, comme une recette.",
+  "explanation": "Le mot vient du nom du savant persan Al-Khwârizmî, au IXe siècle.",
+  "word": "ALGORITHME",
+  "display": "Algorithme"
+ },
+ {
+  "key": "tec22-075",
+  "concept": "tech.computing.v22_le_logiciel",
+  "label": "Informatique",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Programme qu'on installe sur un ordinateur.",
+  "explanation": "Le contraire du « matériel » : on ne peut pas le toucher.",
+  "word": "LOGICIEL",
+  "display": "Logiciel"
+ },
+ {
+  "key": "tec22-076",
+  "concept": "tech.computing.v22_le_octet",
+  "label": "Unités",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Groupe de 8 bits.",
+  "explanation": "« Octo » veut dire huit en latin.",
+  "word": "OCTET",
+  "display": "Octet"
+ },
+ {
+  "key": "tec22-077",
+  "concept": "tech.computing.v22_le_disquette",
+  "label": "Stockage",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Petit carré de plastique qui stockait 1,44 Mo, devenu l'icône « Enregistrer ».",
+  "explanation": "Beaucoup de jeunes connaissent l'icône sans avoir jamais vu l'objet.",
+  "word": "DISQUETTE",
+  "display": "Disquette"
+ },
+ {
+  "key": "tec22-078",
+  "concept": "tech.computing.v22_le_antivirus",
+  "label": "Sécurité",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Logiciel qui protège des programmes malveillants.",
+  "explanation": "Windows en intègre un, appelé Microsoft Defender.",
+  "word": "ANTIVIRUS",
+  "display": "Antivirus"
+ },
+ {
+  "key": "tec22-079",
+  "concept": "tech.computing.v22_wo_stay_hungry",
+  "label": "Steve Jobs",
+  "type": "word_order",
+  "difficulty": 55,
+  "prompt": "Remets dans l'ordre le célèbre conseil de Steve Jobs aux étudiants de Stanford, en 2005.",
+  "explanation": "« Restez affamés, restez fous » : il invitait à garder l'envie d'apprendre et d'oser.",
+  "answer": "Stay hungry, stay foolish",
+  "words": [
+   "Stay",
+   "hungry,",
+   "stay",
+   "foolish"
+  ]
+ },
+ {
+  "key": "tec22-080",
+  "concept": "tech.computing.v22_wo_microsoft_mission",
+  "label": "Microsoft",
+  "type": "word_order",
+  "difficulty": 60,
+  "prompt": "Remets dans l'ordre l'ambition de Microsoft à ses débuts.",
+  "explanation": "Une idée folle en 1975, quand les ordinateurs remplissaient des pièces entières.",
+  "answer": "Un ordinateur sur chaque bureau et dans chaque maison",
+  "words": [
+   "Un",
+   "ordinateur",
+   "sur",
+   "chaque",
+   "bureau",
+   "et",
+   "dans",
+   "chaque",
+   "maison"
+  ]
+ },
+ {
+  "key": "tec22-081",
+  "concept": "tech.computing.v22_tl_bitcoin",
+  "label": "Cryptomonnaies",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année le bitcoin a-t-il été lancé ?",
+  "explanation": "Son créateur, caché sous le nom de Satoshi Nakamoto, n'a jamais été identifié.",
+  "answer": 2009,
+  "tolerance": 2,
+  "min": 1995,
+  "max": 2020
+ },
+ {
+  "key": "tec22-082",
+  "concept": "tech.computing.v22_tl_ibm_pc",
+  "label": "Histoire de l'informatique",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année est sorti l'IBM PC, premier « ordinateur personnel » de ce nom ?",
+  "explanation": "Il coûtait environ 1 500 dollars de l'époque.",
+  "answer": 1981,
+  "tolerance": 3,
+  "min": 1960,
+  "max": 2000
+ },
+ {
+  "key": "tec22-083",
+  "concept": "tech.computing.v22_tl_premier_email",
+  "label": "Histoire d'Internet",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année Ray Tomlinson a-t-il envoyé le premier e-mail avec un @ ?",
+  "explanation": "Il l'a envoyé entre deux ordinateurs placés côte à côte. Il ne se souvenait plus du texte, sans doute « QWERTYUIOP ».",
+  "answer": 1971,
+  "tolerance": 4,
+  "min": 1950,
+  "max": 2000
+ },
+ {
+  "key": "tec22-084",
+  "concept": "tech.computing.v22_tf_mode_avion_wifi",
+  "label": "Téléphones",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "En mode avion, on peut quand même réactiver le Wi-Fi.",
+  "explanation": "La plupart des compagnies le permettent, et beaucoup d'avions proposent même le Wi-Fi à bord.",
+  "answer": true
+ },
+ {
+  "key": "tec22-085",
+  "concept": "tech.computing.v22_tf_incognito",
+  "label": "Internet",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "En navigation privée, ton fournisseur d'accès ne peut plus voir les sites que tu visites.",
+  "explanation": "La navigation privée efface seulement l'historique sur ton appareil. Ton fournisseur, ton employeur ou le site lui-même te voient toujours.",
+  "answer": false
+ },
+ {
+  "key": "tec22-086",
+  "concept": "tech.computing.v22_tf_aimant_ssd",
+  "label": "Stockage",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Un aimant de frigo peut effacer les données d'un SSD.",
+  "explanation": "Un SSD stocke ses données dans des puces électroniques, pas sur un support magnétique. Même un vieux disque dur résiste à un petit aimant.",
+  "answer": false
+ },
+ {
+  "key": "tec22-087",
+  "concept": "tech.computing.v22_tf_batterie_20_80",
+  "label": "Téléphones",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Pour ménager une batterie au lithium, il vaut mieux éviter de la laisser souvent à 0 % ou à 100 %.",
+  "explanation": "Les batteries s'usent plus vite aux extrêmes. Beaucoup de téléphones proposent d'arrêter la charge à 80 %.",
+  "answer": true
+ },
+ {
+  "key": "tec22-088",
+  "concept": "tech.computing.v22_tf_cloud_nuage",
+  "label": "Internet",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Les données « dans le cloud » sont stockées dans les nuages, au sens propre.",
+  "explanation": "Elles sont dans d'immenses salles d'ordinateurs, les data centers, bien sur le sol.",
+  "answer": false
+ },
+ {
+  "key": "tec22-089",
+  "concept": "tech.computing.v22_tf_internet_cables",
+  "label": "Internet",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "La plus grande partie des données d'Internet entre continents passe par des satellites.",
+  "explanation": "Plus de 95 % passent par des câbles posés au fond des océans.",
+  "answer": false
+ },
+ {
+  "key": "tec22-090",
+  "concept": "tech.computing.v22_tf_premier_virus_jeu",
+  "label": "Sécurité",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le mot « virus » informatique vient d'une comparaison avec les virus des êtres vivants.",
+  "explanation": "Comme eux, le programme se recopie et se propage d'un hôte à l'autre. Le terme a été popularisé en 1983 par Fred Cohen.",
+  "answer": true
+ },
+ {
+  "key": "tec22-091",
+  "concept": "tech.computing.v22_tf_ia_comprend",
+  "label": "Intelligence artificielle",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Une IA comme ChatGPT vérifie chaque information sur Internet avant de répondre.",
+  "explanation": "Par défaut, elle génère du texte à partir de ce qu'elle a appris. Certaines versions peuvent chercher sur le web, mais il faut toujours vérifier.",
+  "answer": false
+ },
+ {
+  "key": "tec22-092",
+  "concept": "tech.computing.v22_tf_emoji_unicode",
+  "label": "Émojis",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Un même émoji peut avoir un dessin différent sur un iPhone et sur un téléphone Android.",
+  "explanation": "Le consortium Unicode définit le sens de chaque émoji, mais chaque fabricant le dessine à sa façon.",
+  "answer": true
+ },
+ {
+  "key": "tec22-093",
+  "concept": "tech.computing.v22_tf_ram_plus_vite",
+  "label": "Matériel",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "La mémoire vive (RAM) est beaucoup plus rapide qu'un disque de stockage.",
+  "explanation": "C'est pourquoi l'ordinateur y charge les programmes en cours d'utilisation.",
+  "answer": true
+ },
+ {
+  "key": "tec22-094",
+  "concept": "tech.computing.v22_tf_spam_conserve",
+  "label": "Mots de l'informatique",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Le mot « spam » vient d'une marque de viande en conserve.",
+  "explanation": "Via un sketch des Monty Python où le mot « Spam » est répété sans fin, comme les messages indésirables.",
+  "answer": true
+ },
+ {
+  "key": "tec22-095",
+  "concept": "tech.computing.v22_tf_apple_garage_jobs",
+  "label": "Histoire de l'informatique",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Bill Gates a fondé Apple avec Steve Jobs.",
+  "explanation": "Apple a été fondée par Steve Jobs, Steve Wozniak et Ronald Wayne. Bill Gates a cofondé Microsoft avec Paul Allen.",
+  "answer": false
+ },
+ {
+  "key": "tec22-096",
+  "concept": "tech.inventions.v22_acc_spencer_chocolat",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qui a fondu dans la poche de Percy Spencer en 1945, lui donnant l'idée du four à micro-ondes ?",
+  "explanation": "Il travaillait près d'un radar. Il a ensuite testé avec du maïs à pop-corn… qui a éclaté.",
+  "options": [
+   "Une barre de chocolat*",
+   "Un glaçon",
+   "Une bougie",
+   "Un bonbon à la menthe"
+  ]
+ },
+ {
+  "key": "tec22-097",
+  "concept": "tech.inventions.v22_acc_teflon",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que cherchait le chimiste Roy Plunkett quand il a découvert par hasard le Téflon, en 1938 ?",
+  "explanation": "Une bouteille de gaz s'est transformée en poudre blanche glissante. Elle tapissera plus tard les poêles antiadhésives.",
+  "options": [
+   "Un nouveau gaz pour les réfrigérateurs*",
+   "Une colle très forte",
+   "Un médicament",
+   "Une peinture pour bateaux"
+  ]
+ },
+ {
+  "key": "tec22-098",
+  "concept": "tech.inventions.v22_acc_super_glue",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pour quoi Harry Coover cherchait-il un plastique transparent quand il a inventé la super glue, en 1942 ?",
+  "explanation": "Le produit collait à tout : il l'a d'abord trouvé inutile. Il l'a commercialisé seulement en 1958.",
+  "options": [
+   "Des viseurs pour les fusils*",
+   "Des lunettes de soleil",
+   "Des pare-brise",
+   "Des bocaux"
+  ]
+ },
+ {
+  "key": "tec22-099",
+  "concept": "tech.inventions.v22_acc_slinky",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le jouet Slinky, un ressort qui « descend » les escaliers, est né quand un ingénieur…",
+  "explanation": "Richard James travaillait sur des ressorts pour stabiliser les instruments des navires, en 1943.",
+  "options": [
+   "A vu un ressort tomber d'une étagère et continuer à bouger*",
+   "A voulu fabriquer un bracelet",
+   "A raté une montre",
+   "Cherchait une antenne de radio"
+  ]
+ },
+ {
+  "key": "tec22-100",
+  "concept": "tech.inventions.v22_acc_rayons_x",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que montre la toute première radiographie, réalisée par Wilhelm Röntgen en 1895 ?",
+  "explanation": "Elle se serait écriée : « J'ai vu ma mort ! ». Röntgen a reçu le tout premier prix Nobel de physique, en 1901.",
+  "options": [
+   "La main de sa femme, avec sa bague*",
+   "Le crâne d'un chat",
+   "Sa propre jambe",
+   "Une pièce de monnaie"
+  ]
+ },
+ {
+  "key": "tec22-101",
+  "concept": "tech.inventions.v22_acc_corn_flakes",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Où sont nés les Corn Flakes, à la fin du XIXe siècle ?",
+  "explanation": "Les frères Kellogg ont laissé reposer une pâte de céréales trop longtemps. Aplatie et cuite, elle s'est transformée en flocons.",
+  "options": [
+   "Dans un établissement de santé, pour un régime de patients*",
+   "Dans une boulangerie",
+   "Dans une ferme de maïs",
+   "Dans une usine de jouets"
+  ]
+ },
+ {
+  "key": "tec22-102",
+  "concept": "tech.inventions.v22_acc_goodyear",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment Charles Goodyear a-t-il découvert la vulcanisation, qui rend le caoutchouc solide, en 1839 ?",
+  "explanation": "Sans vulcanisation, le caoutchouc devient collant à la chaleur et cassant au froid. Les pneus Goodyear portent son nom… mais il n'a pas fondé l'entreprise.",
+  "options": [
+   "En faisant tomber un mélange de caoutchouc et de soufre sur un poêle chaud*",
+   "En laissant du caoutchouc au soleil",
+   "En mélangeant du caoutchouc et du sucre",
+   "En congelant du latex"
+  ]
+ },
+ {
+  "key": "tec22-103",
+  "concept": "tech.inventions.v22_acc_popsicle",
+  "label": "Inventions par accident",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel âge avait Frank Epperson quand il a inventé la glace à l'eau en laissant un verre de soda dehors une nuit d'hiver, en 1905 ?",
+  "explanation": "Le bâtonnet de mélange avait gelé dans le verre. Il l'a breveté bien plus tard, sous le nom de « Popsicle ».",
+  "options": [
+   "11 ans*",
+   "25 ans",
+   "40 ans",
+   "6 ans"
+  ]
+ },
+ {
+  "key": "tec22-104",
+  "concept": "tech.inventions.v22_fr_chappe",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'a inventé Claude Chappe en 1794, pour transmettre des messages de colline en colline ?",
+  "explanation": "Un message traversait la France en quelques heures, bras après bras, observés à la longue-vue.",
+  "options": [
+   "Le télégraphe optique, avec des bras articulés*",
+   "Le téléphone",
+   "La radio",
+   "Le pigeon voyageur"
+  ]
+ },
+ {
+  "key": "tec22-105",
+  "concept": "tech.inventions.v22_fr_cornu",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'a réussi le Français Paul Cornu en 1907, près de Lisieux ?",
+  "explanation": "Son appareil s'est élevé d'environ 30 cm pendant 20 secondes. Un début modeste, mais historique.",
+  "options": [
+   "Le premier vol d'un hélicoptère avec un pilote à bord*",
+   "Le premier vol en avion",
+   "Le premier saut en parachute",
+   "La première traversée de la Manche"
+  ]
+ },
+ {
+  "key": "tec22-106",
+  "concept": "tech.inventions.v22_fr_monier",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel était le métier de Joseph Monier, qui a breveté le béton armé en 1867 ?",
+  "explanation": "Il cherchait à fabriquer des bacs à fleurs plus solides, en noyant un grillage métallique dans du ciment.",
+  "options": [
+   "Jardinier*",
+   "Architecte",
+   "Boulanger",
+   "Forgeron"
+  ]
+ },
+ {
+  "key": "tec22-107",
+  "concept": "tech.inventions.v22_fr_cousteau",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'ont mis au point Jacques-Yves Cousteau et Émile Gagnan en 1943 ?",
+  "explanation": "Leur « détendeur » délivre l'air de la bouteille à la bonne pression. Il est toujours utilisé en plongée.",
+  "options": [
+   "Le scaphandre autonome, pour respirer sous l'eau*",
+   "Le sous-marin nucléaire",
+   "Le sonar",
+   "La combinaison de ski"
+  ]
+ },
+ {
+  "key": "tec22-108",
+  "concept": "tech.inventions.v22_fr_lenoir",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quel ingénieur, installé à Paris, a construit l'un des premiers moteurs à combustion interne commercialisés, en 1860 ?",
+  "explanation": "Son moteur fonctionnait au gaz d'éclairage. Il a fait rouler un véhicule entre Paris et Joinville-le-Pont en 1863.",
+  "options": [
+   "Étienne Lenoir*",
+   "Louis Renault",
+   "Armand Peugeot",
+   "Gustave Eiffel"
+  ]
+ },
+ {
+  "key": "tec22-109",
+  "concept": "tech.inventions.v22_fr_michaux",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'ont ajouté Pierre et Ernest Michaux à la draisienne, vers 1861 ?",
+  "explanation": "Plus besoin de pousser avec les pieds au sol ! La chaîne viendra plus tard, vers 1880.",
+  "options": [
+   "Des pédales sur la roue avant*",
+   "Un moteur",
+   "Une chaîne",
+   "Des freins"
+  ]
+ },
+ {
+  "key": "tec22-110",
+  "concept": "tech.inventions.v22_fr_michelin_demontable",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle innovation les frères Michelin ont-ils brevetée en 1891 ?",
+  "explanation": "Avant, un pneu collé à la jante demandait des heures de réparation. Le cycliste Charles Terront a gagné Paris-Brest-Paris avec.",
+  "options": [
+   "Un pneu de vélo démontable, réparable en quelques minutes*",
+   "Le premier pneu de voiture",
+   "Le caoutchouc",
+   "La roue de secours"
+  ]
+ },
+ {
+  "key": "tec22-111",
+  "concept": "tech.inventions.v22_fr_solex",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce que le VéloSoleX, très populaire en France à partir de 1946 ?",
+  "explanation": "Le moteur entraînait la roue par un galet. Il s'en est vendu des millions.",
+  "options": [
+   "Un vélo avec un petit moteur sur la roue avant*",
+   "Une montre solaire",
+   "Un vélo pliant",
+   "Une trottinette électrique"
+  ]
+ },
+ {
+  "key": "tec22-112",
+  "concept": "tech.inventions.v22_fr_cocotte",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle marque française a lancé la « Cocotte-Minute » en 1953 ?",
+  "explanation": "L'autocuiseur fait monter la pression, donc la température d'ébullition : la cuisson va beaucoup plus vite.",
+  "options": [
+   "SEB*",
+   "Tefal",
+   "Moulinex",
+   "Le Creuset"
+  ]
+ },
+ {
+  "key": "tec22-113",
+  "concept": "tech.inventions.v22_fr_ader_avion",
+  "label": "Inventions françaises",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel mot doit-on à l'ingénieur français Clément Ader, qui a fait décoller son « Éole » en 1890 ?",
+  "explanation": "Il a baptisé ses appareils « Avion », du latin « avis », l'oiseau. Le mot est resté.",
+  "options": [
+   "Avion*",
+   "Hélicoptère",
+   "Aéroport",
+   "Pilote"
+  ]
+ },
+ {
+  "key": "tec22-114",
+  "concept": "tech.inventions.v22_fr_blue_led",
+  "label": "Inventions",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi la LED bleue a-t-elle valu le prix Nobel de physique 2014 à trois chercheurs nés au Japon ?",
+  "explanation": "Le rouge et le vert existaient depuis longtemps. Avec le bleu, on peut enfin obtenir de la lumière blanche.",
+  "options": [
+   "Elle a permis de fabriquer des LED blanches, donc l'éclairage basse consommation*",
+   "Elle a permis de voir dans le noir",
+   "Elle a permis les lasers médicaux",
+   "Elle a créé la couleur bleue des écrans de cinéma"
+  ]
+ },
+ {
+  "key": "tec22-115",
+  "concept": "tech.inventions.v22_obj_tamagotchi",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'était un Tamagotchi, très à la mode à la fin des années 1990 ?",
+  "explanation": "Créé par Bandai en 1996. S'il n'était pas nourri ou soigné, il « mourait ».",
+  "options": [
+   "Un petit animal virtuel dont il fallait s'occuper*",
+   "Un téléphone portable",
+   "Une console de salon",
+   "Un appareil photo"
+  ]
+ },
+ {
+  "key": "tec22-116",
+  "concept": "tech.inventions.v22_obj_crayon_cassette",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Avec les cassettes audio, à quoi pouvait bien servir un crayon ?",
+  "explanation": "On glissait le crayon dans la bobine et on tournait, pour économiser les piles du baladeur.",
+  "options": [
+   "À rembobiner la bande à la main*",
+   "À écrire le titre sur l'écran",
+   "À nettoyer la tête de lecture",
+   "À enregistrer plus fort"
+  ]
+ },
+ {
+  "key": "tec22-117",
+  "concept": "tech.inventions.v22_obj_telecarte",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "À quoi servait une « télécarte » ?",
+  "explanation": "Lancée en France dans les années 1980, avec une puce comptant les unités. Elle est devenue un objet de collection.",
+  "options": [
+   "À téléphoner depuis une cabine publique*",
+   "À regarder la télé",
+   "À ouvrir sa porte",
+   "À prendre le métro"
+  ]
+ },
+ {
+  "key": "tec22-118",
+  "concept": "tech.inventions.v22_obj_tatoo",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Que faisaient les « Tatoo » et « Tam-Tam », populaires chez les ados français des années 1990 ?",
+  "explanation": "Pour envoyer un message, il fallait appeler un service et le dicter. Le SMS les a remplacés.",
+  "options": [
+   "Ils recevaient de courts messages : c'étaient des récepteurs de poche*",
+   "Ils jouaient de la musique",
+   "Ils prenaient des photos",
+   "Ils donnaient l'heure en Morse"
+  ]
+ },
+ {
+  "key": "tec22-119",
+  "concept": "tech.inventions.v22_obj_magnetoscope",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "À quoi servait un magnétoscope ?",
+  "explanation": "Le format VHS a dominé, après une longue « guerre » contre le Betamax de Sony.",
+  "options": [
+   "À enregistrer et regarder des cassettes vidéo*",
+   "À mesurer le magnétisme",
+   "À écouter la radio",
+   "À faire des photocopies"
+  ]
+ },
+ {
+  "key": "tec22-120",
+  "concept": "tech.inventions.v22_obj_polaroid",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle était la particularité des appareils Polaroid ?",
+  "explanation": "Le premier modèle date de 1948. On secouait souvent la photo… ce qui ne servait à rien.",
+  "options": [
+   "La photo sortait et se développait en quelques minutes*",
+   "Ils filmaient en couleur",
+   "Ils prenaient des photos en 3D",
+   "Ils fonctionnaient sans pellicule ni papier"
+  ]
+ },
+ {
+  "key": "tec22-121",
+  "concept": "tech.inventions.v22_obj_minidisc",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'était le MiniDisc, lancé par Sony en 1992 ?",
+  "explanation": "Il devait remplacer la cassette, mais le CD gravable puis le MP3 l'ont doublé.",
+  "options": [
+   "Un petit disque enregistrable pour la musique, dans un boîtier*",
+   "Une console de jeux portable",
+   "Un mini-ordinateur",
+   "Un disque vinyle de poche"
+  ]
+ },
+ {
+  "key": "tec22-122",
+  "concept": "tech.inventions.v22_obj_blackberry",
+  "label": "Objets d'hier",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qui distinguait les téléphones BlackBerry, très populaires dans les années 2000 ?",
+  "explanation": "Une marque canadienne. Barack Obama a longtemps gardé le sien à la Maison-Blanche.",
+  "options": [
+   "Un vrai petit clavier physique pour écrire des e-mails*",
+   "Un écran pliable",
+   "Une coque en bois",
+   "L'absence d'écran"
+  ]
+ },
+ {
+  "key": "tec22-123",
+  "concept": "tech.inventions.v22_cm_induction",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment une plaque à induction chauffe-t-elle une casserole ?",
+  "explanation": "La plaque elle-même chauffe peu : il faut une casserole qui attire un aimant.",
+  "options": [
+   "Un champ magnétique fait chauffer directement le fond métallique*",
+   "Une flamme cachée sous la vitre",
+   "Une résistance rouge sous la vitre",
+   "Des micro-ondes"
+  ]
+ },
+ {
+  "key": "tec22-124",
+  "concept": "tech.inventions.v22_cm_thermos",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment une bouteille thermos garde-t-elle le café chaud des heures ?",
+  "explanation": "Sans air, la chaleur ne peut presque pas traverser. Le vide garde aussi le froid.",
+  "options": [
+   "Grâce au vide entre ses deux parois*",
+   "Grâce à une petite pile chauffante",
+   "Grâce à une couche de laine",
+   "Grâce à un liquide chaud dans la paroi"
+  ]
+ },
+ {
+  "key": "tec22-125",
+  "concept": "tech.inventions.v22_cm_frigo",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment un réfrigérateur produit-il du froid ?",
+  "explanation": "La chaleur retirée est rejetée à l'arrière : c'est pour cela que la grille derrière le frigo est chaude.",
+  "options": [
+   "Un fluide qui s'évapore dans les tuyaux absorbe la chaleur de l'intérieur*",
+   "De la glace cachée dans les parois",
+   "Un ventilateur souffle de l'air de dehors",
+   "Un aimant refroidit l'air"
+  ]
+ },
+ {
+  "key": "tec22-126",
+  "concept": "tech.inventions.v22_cm_fusee",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment une fusée peut-elle avancer dans le vide de l'espace, où il n'y a pas d'air sur lequel s'appuyer ?",
+  "explanation": "C'est le principe d'action-réaction, comme un ballon qu'on lâche gonflé.",
+  "options": [
+   "Elle éjecte des gaz vers l'arrière, ce qui la pousse vers l'avant*",
+   "Elle s'appuie sur la gravité de la Lune",
+   "Elle utilise des hélices spéciales",
+   "Elle glisse sur les ondes radio"
+  ]
+ },
+ {
+  "key": "tec22-127",
+  "concept": "tech.inventions.v22_cm_aile_avion",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce qui fait tenir un avion dans les airs ?",
+  "explanation": "En poussant l'air vers le bas, l'aile est poussée vers le haut : c'est la « portance ». Il faut de la vitesse pour qu'elle suffise.",
+  "options": [
+   "La forme et l'inclinaison des ailes, qui dévient l'air vers le bas*",
+   "Le gaz léger caché dans le fuselage",
+   "Les moteurs tournés vers le bas",
+   "La rotation de la Terre"
+  ]
+ },
+ {
+  "key": "tec22-128",
+  "concept": "tech.inventions.v22_cm_quartz",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans une montre à quartz, que fait le petit cristal de quartz ?",
+  "explanation": "Il vibre 32 768 fois par seconde, soit 2¹⁵ : facile à diviser par 2 jusqu'à obtenir une seconde.",
+  "options": [
+   "Il vibre à une fréquence très régulière qui sert à compter le temps*",
+   "Il stocke l'énergie comme une pile",
+   "Il éclaire le cadran",
+   "Il fait tourner les aiguilles par magnétisme"
+  ]
+ },
+ {
+  "key": "tec22-129",
+  "concept": "tech.inventions.v22_cm_pile_batterie",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle est la principale différence entre une pile et une batterie, dans le langage courant ?",
+  "explanation": "Les deux stockent de l'énergie chimique. Une pile « jetable » ne doit jamais être rechargée.",
+  "options": [
+   "La batterie se recharge, la pile classique non*",
+   "La pile est plus puissante",
+   "La batterie ne contient pas de produits chimiques",
+   "La pile marche sans électricité"
+  ]
+ },
+ {
+  "key": "tec22-130",
+  "concept": "tech.inventions.v22_cm_hybride",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'une voiture hybride ?",
+  "explanation": "Le moteur électrique récupère notamment de l'énergie au freinage.",
+  "options": [
+   "Une voiture avec un moteur thermique et un moteur électrique*",
+   "Une voiture qui roule à l'eau",
+   "Une voiture qui vole",
+   "Une voiture à deux volants"
+  ]
+ },
+ {
+  "key": "tec22-131",
+  "concept": "tech.inventions.v22_cm_kwh",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Sur une facture d'électricité, que mesure le kilowattheure (kWh) ?",
+  "explanation": "Un appareil de 1 000 watts qui fonctionne une heure consomme 1 kWh.",
+  "options": [
+   "Une quantité d'énergie consommée*",
+   "La vitesse du courant",
+   "La puissance maximale du compteur",
+   "La tension de la prise"
+  ]
+ },
+ {
+  "key": "tec22-132",
+  "concept": "tech.inventions.v22_cm_capteur_photo",
+  "label": "Comment ça marche ?",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans un appareil photo numérique, qu'est-ce qui remplace la pellicule ?",
+  "explanation": "Chaque cellule mesure la lumière reçue et devient un pixel. La carte mémoire, elle, ne fait que stocker.",
+  "options": [
+   "Un capteur fait de millions de petites cellules sensibles à la lumière*",
+   "Un petit écran",
+   "Une carte mémoire",
+   "Un miroir"
+  ]
+ },
+ {
+  "key": "tec22-133",
+  "concept": "tech.inventions.v22_mes_anemometre",
+  "label": "Instruments de mesure",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que mesure un anémomètre ?",
+  "explanation": "Ses petites coupelles tournent d'autant plus vite que le vent souffle fort.",
+  "options": [
+   "La vitesse du vent*",
+   "La pression de l'air",
+   "La pluie tombée",
+   "L'humidité"
+  ]
+ },
+ {
+  "key": "tec22-134",
+  "concept": "tech.inventions.v22_mes_sismographe",
+  "label": "Instruments de mesure",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que mesure un sismographe ?",
+  "explanation": "Le premier détecteur de séismes connu a été construit en Chine, en l'an 132, par Zhang Heng.",
+  "options": [
+   "Les mouvements du sol, comme les séismes*",
+   "La hauteur des vagues",
+   "La force du vent",
+   "La température du sol"
+  ]
+ },
+ {
+  "key": "tec22-135",
+  "concept": "tech.inventions.v22_mes_sextant",
+  "label": "Instruments de mesure",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À quoi servait le sextant des marins ?",
+  "explanation": "Il est encore enseigné aux navigateurs, au cas où le GPS tomberait en panne.",
+  "options": [
+   "À mesurer la hauteur du Soleil ou des étoiles pour calculer sa position*",
+   "À mesurer la profondeur de l'eau",
+   "À mesurer la vitesse du bateau",
+   "À prévoir les tempêtes"
+  ]
+ },
+ {
+  "key": "tec22-136",
+  "concept": "tech.inventions.v22_pa_instruments",
+  "label": "Instruments de mesure",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque instrument à ce qu'il mesure.",
+  "explanation": "Ce sont les quatre instruments de base d'une station météo, avec l'anémomètre.",
+  "pairs": [
+   [
+    "Baromètre",
+    "La pression de l'air"
+   ],
+   [
+    "Hygromètre",
+    "L'humidité"
+   ],
+   [
+    "Pluviomètre",
+    "La pluie tombée"
+   ],
+   [
+    "Thermomètre",
+    "La température"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-137",
+  "concept": "tech.inventions.v22_tf_fax_telephone",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 80,
+  "prompt": "Le fax a été inventé avant le téléphone.",
+  "explanation": "L'Écossais Alexander Bain a breveté un télécopieur en 1843, plus de trente ans avant le téléphone de Bell (1876).",
+  "answer": true
+ },
+ {
+  "key": "tec22-138",
+  "concept": "tech.inventions.v22_tf_briquet_allumette",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 80,
+  "prompt": "Le briquet a été inventé avant l'allumette moderne.",
+  "explanation": "La « lampe de Döbereiner », un briquet chimique, date de 1823. L'allumette à friction de John Walker, de 1826.",
+  "answer": true
+ },
+ {
+  "key": "tec22-139",
+  "concept": "tech.inventions.v22_tf_jeu_video_espace",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Le premier jeu vidéo a été créé avant que le premier homme aille dans l'espace.",
+  "explanation": "« Tennis for Two » date de 1958, sur un écran d'oscilloscope. Gagarine a volé en 1961.",
+  "answer": true
+ },
+ {
+  "key": "tec22-140",
+  "concept": "tech.inventions.v22_tf_papier_toilette",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Le papier toilette en rouleau est plus ancien que le téléphone.",
+  "explanation": "Le rouleau prédécoupé a été breveté en 1891, quinze ans après le téléphone.",
+  "answer": false
+ },
+ {
+  "key": "tec22-141",
+  "concept": "tech.inventions.v22_tf_tele_stylo",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "La télévision a été présentée au public avant l'invention du stylo à bille moderne.",
+  "explanation": "John Logie Baird l'a montrée en 1926, et László Bíró a breveté son stylo en 1938.",
+  "answer": true
+ },
+ {
+  "key": "tec22-142",
+  "concept": "tech.inventions.v22_tf_sous_marin_montgolfiere",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 85,
+  "prompt": "Un sous-marin a navigué sous l'eau plus de 150 ans avant le premier vol en montgolfière.",
+  "explanation": "Cornelis Drebbel a fait naviguer un sous-marin à rames dans la Tamise vers 1620. La montgolfière date de 1783.",
+  "answer": true
+ },
+ {
+  "key": "tec22-143",
+  "concept": "tech.inventions.v22_tf_cd_cassette",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le CD est plus ancien que la cassette audio.",
+  "explanation": "La cassette audio date de 1963, le CD de 1982.",
+  "answer": false
+ },
+ {
+  "key": "tec22-144",
+  "concept": "tech.inventions.v22_tf_portable_arpanet",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le premier appel avec un téléphone portable a eu lieu avant la mise en service d'Arpanet, l'ancêtre d'Internet.",
+  "explanation": "Arpanet date de 1969. Le premier appel depuis un portable, par Martin Cooper, date de 1973.",
+  "answer": false
+ },
+ {
+  "key": "tec22-145",
+  "concept": "tech.inventions.v22_tf_couleur_lune",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "La télévision en couleur est arrivée en France avant le premier pas sur la Lune.",
+  "explanation": "La deuxième chaîne passe à la couleur le 1er octobre 1967, deux ans avant Apollo 11.",
+  "answer": true
+ },
+ {
+  "key": "tec22-146",
+  "concept": "tech.inventions.v22_tf_microondes_guerre",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le four à micro-ondes existait déjà avant la Seconde Guerre mondiale.",
+  "explanation": "Il a été inventé en 1945, à partir de la technologie des radars développée pendant la guerre.",
+  "answer": false
+ },
+ {
+  "key": "tec22-147",
+  "concept": "tech.inventions.v22_tf_photo_cinema",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Le cinéma a été inventé avant la photographie.",
+  "explanation": "La photographie date des années 1820, le cinématographe des frères Lumière de 1895.",
+  "answer": false
+ },
+ {
+  "key": "tec22-148",
+  "concept": "tech.inventions.v22_tf_feu_rouge_voiture",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Les feux de circulation sont apparus avant la voiture à essence.",
+  "explanation": "Un feu à gaz a été installé à Londres en 1868 pour les calèches. Il a explosé quelques semaines plus tard. La voiture de Benz date de 1886.",
+  "answer": true
+ },
+ {
+  "key": "tec22-149",
+  "concept": "tech.inventions.v22_tf_ouvre_boite",
+  "label": "Qui est venu en premier ?",
+  "type": "true_false",
+  "difficulty": 80,
+  "prompt": "L'ouvre-boîte a été inventé près de cinquante ans après la boîte de conserve.",
+  "explanation": "Les premières boîtes en fer, vers 1810, s'ouvraient au marteau et au burin !",
+  "answer": true
+ },
+ {
+  "key": "tec22-150",
+  "concept": "tech.inventions.v22_tf_ascenseur_escalator",
+  "label": "Inventions",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "L'escalator a été inventé avant l'ascenseur moderne.",
+  "explanation": "L'ascenseur sécurisé d'Otis date de 1852. Les premiers escaliers mécaniques, des années 1890.",
+  "answer": false
+ },
+ {
+  "key": "tec22-151",
+  "concept": "tech.inventions.v22_tf_velcro_nasa",
+  "label": "Inventions",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le Velcro a été inventé par la NASA.",
+  "explanation": "Par l'ingénieur suisse George de Mestral, en 1955. La NASA l'a beaucoup utilisé, d'où la légende.",
+  "answer": false
+ },
+ {
+  "key": "tec22-152",
+  "concept": "tech.inventions.v22_tf_lune_ordinateur",
+  "label": "Inventions",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "L'ordinateur de bord d'Apollo 11 était bien moins puissant qu'un smartphone d'aujourd'hui.",
+  "explanation": "Il avait environ 4 Ko de mémoire vive. Un téléphone actuel est des millions de fois plus puissant.",
+  "answer": true
+ },
+ {
+  "key": "tec22-153",
+  "concept": "tech.inventions.v22_tf_eclairage_led_chaleur",
+  "label": "Inventions",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Une ampoule LED ne chauffe pas du tout.",
+  "explanation": "Elle chauffe beaucoup moins qu'une ampoule à filament, mais son culot peut devenir chaud.",
+  "answer": false
+ },
+ {
+  "key": "tec22-154",
+  "concept": "tech.inventions.v22_esp_hubble",
+  "label": "Espace",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel télescope spatial, lancé en 1990, a envoyé pendant des décennies des images célèbres de l'Univers ?",
+  "explanation": "Il a d'abord eu un défaut de miroir, corrigé en 1993 par des astronautes venus lui poser des « lunettes ».",
+  "options": [
+   "Hubble*",
+   "James-Webb",
+   "Kepler",
+   "Galileo"
+  ]
+ },
+ {
+  "key": "tec22-155",
+  "concept": "tech.inventions.v22_esp_ingenuity",
+  "label": "Espace",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qu'Ingenuity, qui a volé sur Mars à partir de 2021 ?",
+  "explanation": "Premier vol motorisé sur une autre planète. Prévu pour 5 vols, il en a réalisé 72.",
+  "options": [
+   "Un petit hélicoptère*",
+   "Un avion",
+   "Un ballon",
+   "Un drone à ailes"
+  ]
+ },
+ {
+  "key": "tec22-156",
+  "concept": "tech.inventions.v22_esp_fusee_reutilisable",
+  "label": "Espace",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle innovation a rendu célèbres les fusées Falcon 9 de SpaceX ?",
+  "explanation": "Réutiliser le premier étage fait baisser fortement le prix d'un lancement.",
+  "options": [
+   "Leur premier étage revient se poser à la verticale pour être réutilisé*",
+   "Elles fonctionnent à l'énergie solaire",
+   "Elles décollent d'un avion",
+   "Elles n'ont pas de moteur"
+  ]
+ },
+ {
+  "key": "tec22-157",
+  "concept": "tech.inventions.v22_esp_iss_vitesse",
+  "label": "Espace",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En combien de temps environ la Station spatiale internationale fait-elle le tour de la Terre ?",
+  "explanation": "Elle file à environ 28 000 km/h, à 400 km d'altitude.",
+  "options": [
+   "1 h 30*",
+   "24 heures",
+   "10 minutes",
+   "1 semaine"
+  ]
+ },
+ {
+  "key": "tec22-158",
+  "concept": "tech.inventions.v22_trans_metro_londres",
+  "label": "Transports",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle ville a inauguré le premier métro du monde, en 1863 ?",
+  "explanation": "Les premières rames étaient tirées par des locomotives à vapeur, dans les tunnels !",
+  "options": [
+   "Londres*",
+   "Paris",
+   "New York",
+   "Berlin"
+  ]
+ },
+ {
+  "key": "tec22-159",
+  "concept": "tech.inventions.v22_trans_lindbergh",
+  "label": "Transports",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'a réussi Charles Lindbergh en 1927, à bord du « Spirit of Saint Louis » ?",
+  "explanation": "De New York à Paris en 33 heures et demie. 100 000 personnes l'attendaient au Bourget.",
+  "options": [
+   "La première traversée de l'Atlantique en avion, seul et sans escale*",
+   "Le premier tour du monde en avion",
+   "Le premier vol en hélicoptère",
+   "Le premier vol au-dessus de l'Everest"
+  ]
+ },
+ {
+  "key": "tec22-160",
+  "concept": "tech.inventions.v22_trans_dab",
+  "label": "Inventions",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quel pays a été installé le premier distributeur automatique de billets, en 1967 ?",
+  "explanation": "Devant une banque de Londres. On l'utilisait avec des chèques spéciaux, avant les cartes.",
+  "options": [
+   "Au Royaume-Uni*",
+   "Aux États-Unis",
+   "En France",
+   "Au Japon"
+  ]
+ },
+ {
+  "key": "tec22-161",
+  "concept": "tech.inventions.v22_pa_successeurs",
+  "label": "Objets d'hier",
+  "type": "pairs",
+  "difficulty": 35,
+  "prompt": "Associe chaque objet à ce qui l'a remplacé.",
+  "explanation": "Chaque remplaçant a lui-même été en partie remplacé… par le smartphone et le cloud.",
+  "pairs": [
+   [
+    "Disquette",
+    "Clé USB"
+   ],
+   [
+    "Cassette vidéo",
+    "DVD"
+   ],
+   [
+    "Pellicule photo",
+    "Carte mémoire"
+   ],
+   [
+    "Cabine téléphonique",
+    "Téléphone portable"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-162",
+  "concept": "tech.inventions.v22_pa_accidents",
+  "label": "Inventions par accident",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque invention à ce qui l'a fait naître par hasard.",
+  "explanation": "Des hasards… remarqués par des esprits curieux.",
+  "pairs": [
+   [
+    "Micro-ondes",
+    "Un chocolat fondu près d'un radar"
+   ],
+   [
+    "Pénicilline",
+    "Une moisissure dans une boîte de culture"
+   ],
+   [
+    "Slinky",
+    "Un ressort tombé d'une étagère"
+   ],
+   [
+    "Glace à l'eau",
+    "Un verre de soda oublié dehors"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-163",
+  "concept": "tech.inventions.v22_pa_inventions_fr",
+  "label": "Inventions françaises",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque invention française à son inventeur.",
+  "explanation": "Des inventions qui ont marqué les télécommunications, le bâtiment, la mer et l'air.",
+  "pairs": [
+   [
+    "Télégraphe optique",
+    "Claude Chappe"
+   ],
+   [
+    "Béton armé",
+    "Joseph Monier"
+   ],
+   [
+    "Scaphandre autonome",
+    "Cousteau et Gagnan"
+   ],
+   [
+    "Mot « avion »",
+    "Clément Ader"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-164",
+  "concept": "tech.inventions.v22_or_musique_supports",
+  "label": "Écouter de la musique",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces façons d'écouter de la musique de la plus ancienne à la plus récente.",
+  "explanation": "1877, 1948, 1963, 1982, puis le streaming dans les années 2000.",
+  "items": [
+   "Phonographe",
+   "Disque vinyle 33 tours",
+   "Cassette audio",
+   "CD",
+   "Streaming"
+  ]
+ },
+ {
+  "key": "tec22-165",
+  "concept": "tech.inventions.v22_or_eclairage",
+  "label": "Éclairage",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces éclairages du plus ancien au plus récent.",
+  "explanation": "Antiquité, début du XIXe siècle, 1879, 1910, puis années 1990.",
+  "items": [
+   "Lampe à huile",
+   "Bec de gaz",
+   "Ampoule à incandescence",
+   "Tube néon",
+   "LED blanche"
+  ]
+ },
+ {
+  "key": "tec22-166",
+  "concept": "tech.inventions.v22_or_vitesse_vehicules",
+  "label": "Transports",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces véhicules selon leur vitesse habituelle, du plus lent au plus rapide.",
+  "explanation": "Environ 50 km/h en course, 320 km/h en service pour le TGV, 900 km/h pour un avion de ligne, 2 200 km/h pour le Concorde.",
+  "items": [
+   "Vélo de course sur route",
+   "TGV",
+   "Avion de ligne",
+   "Concorde"
+  ]
+ },
+ {
+  "key": "tec22-167",
+  "concept": "tech.inventions.v22_co_hommes_lune",
+  "label": "Espace",
+  "type": "counter",
+  "difficulty": 55,
+  "prompt": "Combien d'astronautes ont marché sur la Lune ?",
+  "explanation": "Douze, tous américains, entre 1969 et 1972 (missions Apollo 11 à 17, sauf Apollo 13).",
+  "answer": 12,
+  "tolerance": 0,
+  "min": 2,
+  "max": 30,
+  "start": 2
+ },
+ {
+  "key": "tec22-168",
+  "concept": "tech.inventions.v22_co_satellites_gps",
+  "label": "GPS",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien de satellites un GPS doit-il capter au minimum pour donner une position précise en 3D ?",
+  "explanation": "Trois pour la position, et un quatrième pour corriger l'horloge du récepteur.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "tec22-169",
+  "concept": "tech.inventions.v22_co_couleurs_rubik",
+  "label": "Jouets",
+  "type": "counter",
+  "difficulty": 15,
+  "prompt": "Combien de couleurs différentes compte un Rubik's Cube classique ?",
+  "explanation": "Une par face : blanc, jaune, rouge, orange, bleu et vert.",
+  "answer": 6,
+  "tolerance": 0,
+  "min": 2,
+  "max": 12,
+  "start": 2
+ },
+ {
+  "key": "tec22-170",
+  "concept": "tech.inventions.v22_co_code_barres",
+  "label": "Commerce",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "Combien de chiffres compte le code-barres EAN des produits de supermarché européens ?",
+  "explanation": "Les premiers chiffres indiquent le pays d'enregistrement : 30 à 37 pour la France.",
+  "answer": 13,
+  "tolerance": 0,
+  "min": 5,
+  "max": 20,
+  "start": 5
+ },
+ {
+  "key": "tec22-171",
+  "concept": "tech.inventions.v22_co_levers_soleil_iss",
+  "label": "Espace",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien de levers de soleil les astronautes de l'ISS voient-ils environ chaque jour ?",
+  "explanation": "Un tour de Terre toutes les 90 minutes environ : 16 levers et 16 couchers par 24 heures.",
+  "answer": 16,
+  "tolerance": 1,
+  "min": 1,
+  "max": 30,
+  "start": 1
+ },
+ {
+  "key": "tec22-172",
+  "concept": "tech.inventions.v22_le_sextant",
+  "label": "Instruments de mesure",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Instrument de marin pour mesurer la hauteur des astres.",
+  "explanation": "Son arc fait un sixième de cercle, d'où son nom.",
+  "word": "SEXTANT",
+  "display": "Sextant"
+ },
+ {
+  "key": "tec22-173",
+  "concept": "tech.inventions.v22_le_thermos",
+  "label": "Objets",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Bouteille qui garde les boissons chaudes grâce au vide.",
+  "explanation": "C'est à l'origine une marque, devenue un nom commun.",
+  "word": "THERMOS",
+  "display": "Thermos"
+ },
+ {
+  "key": "tec22-174",
+  "concept": "tech.inventions.v22_le_tamagotchi",
+  "label": "Objets d'hier",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Animal virtuel japonais des années 1990, à nourrir et soigner.",
+  "explanation": "De « tamago », œuf en japonais.",
+  "word": "TAMAGOTCHI",
+  "display": "Tamagotchi"
+ },
+ {
+  "key": "tec22-175",
+  "concept": "tech.inventions.v22_le_magnetoscope",
+  "label": "Objets d'hier",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Appareil qui enregistrait les émissions sur cassette VHS.",
+  "explanation": "Il fallait souvent programmer l'heure… qui clignotait « 00:00 ».",
+  "word": "MAGNETOSCOPE",
+  "display": "Magnétoscope"
+ },
+ {
+  "key": "tec22-176",
+  "concept": "tech.inventions.v22_le_scaphandre",
+  "label": "Inventions françaises",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Équipement pour respirer sous l'eau, perfectionné par Cousteau.",
+  "explanation": "Du grec « skaphê », la barque, et « andros », l'homme.",
+  "word": "SCAPHANDRE",
+  "display": "Scaphandre"
+ },
+ {
+  "key": "tec22-177",
+  "concept": "tech.inventions.v22_le_periscope",
+  "label": "Inventions",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Tube à miroirs qui permet de voir au-dessus de soi, sur les sous-marins.",
+  "explanation": "Deux miroirs inclinés à 45° suffisent pour en fabriquer un.",
+  "word": "PERISCOPE",
+  "display": "Périscope"
+ },
+ {
+  "key": "tec22-178",
+  "concept": "tech.inventions.v22_le_helice",
+  "label": "Transports",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Elle tourne pour faire avancer un bateau ou un avion.",
+  "explanation": "Léonard de Vinci a dessiné une « vis aérienne », ancêtre de l'hélicoptère.",
+  "word": "HELICE",
+  "display": "Hélice"
+ },
+ {
+  "key": "tec22-179",
+  "concept": "tech.inventions.v22_tl_hubble",
+  "label": "Espace",
+  "type": "timeline",
+  "difficulty": 55,
+  "prompt": "En quelle année le télescope spatial Hubble a-t-il été lancé ?",
+  "explanation": "À bord de la navette spatiale Discovery.",
+  "answer": 1990,
+  "tolerance": 3,
+  "min": 1960,
+  "max": 2020
+ },
+ {
+  "key": "tec22-180",
+  "concept": "tech.inventions.v22_tl_lindbergh",
+  "label": "Transports",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année Charles Lindbergh a-t-il traversé l'Atlantique en avion, seul et sans escale ?",
+  "explanation": "Il avait 25 ans.",
+  "answer": 1927,
+  "tolerance": 4,
+  "min": 1890,
+  "max": 1960
+ },
+ {
+  "key": "tec22-181",
+  "concept": "tech.inventions.v22_tl_tunnel_manche",
+  "label": "Transports",
+  "type": "timeline",
+  "difficulty": 45,
+  "prompt": "En quelle année le tunnel sous la Manche a-t-il été inauguré ?",
+  "explanation": "Par la reine Élisabeth II et le président François Mitterrand, le 6 mai 1994.",
+  "answer": 1994,
+  "tolerance": 2,
+  "min": 1960,
+  "max": 2020
+ },
+ {
+  "key": "tec22-182",
+  "concept": "tech.inventions.v22_tl_metro_londres",
+  "label": "Transports",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a ouvert le premier métro du monde, à Londres ?",
+  "explanation": "La ligne Metropolitan, d'environ 6 km.",
+  "answer": 1863,
+  "tolerance": 5,
+  "min": 1800,
+  "max": 1950
+ },
+ {
+  "key": "tec22-183",
+  "concept": "tech.inventions.v22_tl_a380",
+  "label": "Transports",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année l'Airbus A380 a-t-il fait son premier vol ?",
+  "explanation": "Depuis Toulouse-Blagnac. Il peut transporter plus de 800 passagers.",
+  "answer": 2005,
+  "tolerance": 2,
+  "min": 1980,
+  "max": 2020
+ },
+ {
+  "key": "tec22-184",
+  "concept": "tech.brands.v22_nom_yahoo",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le nom « Yahoo » ?",
+  "explanation": "Les fondateurs se trouvaient eux-mêmes un peu rustres. Ils ont aussi inventé un sigle après coup.",
+  "options": [
+   "Des Yahoos, des créatures grossières des « Voyages de Gulliver »*",
+   "D'un cri de cow-boy",
+   "D'un mot japonais",
+   "Des initiales des fondateurs"
+  ]
+ },
+ {
+  "key": "tec22-185",
+  "concept": "tech.brands.v22_nom_wikipedia",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le « wiki » de Wikipédia vient d'un mot hawaïen. Que veut-il dire ?",
+  "explanation": "« Wiki wiki » signifie « très vite » : un wiki se modifie rapidement, par tout le monde.",
+  "options": [
+   "Vite*",
+   "Savoir",
+   "Ensemble",
+   "Livre"
+  ]
+ },
+ {
+  "key": "tec22-186",
+  "concept": "tech.brands.v22_nom_adobe",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "D'où vient le nom de l'entreprise Adobe, qui édite Photoshop ?",
+  "explanation": "L'Adobe Creek, en Californie. Le mot désigne aussi une brique de terre séchée, mais ce n'est pas l'origine du nom.",
+  "options": [
+   "D'un ruisseau qui coulait derrière la maison d'un fondateur*",
+   "D'un mot latin signifiant « image »",
+   "D'une brique de terre crue",
+   "D'un logiciel plus ancien"
+  ]
+ },
+ {
+  "key": "tec22-187",
+  "concept": "tech.brands.v22_nom_skype",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "De quels mots anglais vient le nom « Skype » ?",
+  "explanation": "Le projet s'appelait d'abord « Sky peer-to-peer », puis « Skyper ». Le nom Skyper était déjà pris !",
+  "options": [
+   "« Sky » et « peer-to-peer »*",
+   "« Skip » et « type »",
+   "« Sky » et « pipe »",
+   "« Speak » et « hype »"
+  ]
+ },
+ {
+  "key": "tec22-188",
+  "concept": "tech.brands.v22_nom_kodak",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi George Eastman a-t-il choisi le nom « Kodak » ?",
+  "explanation": "Il trouvait le K « fort et incisif ». Kodak ne veut rien dire.",
+  "options": [
+   "Il aimait la lettre K, et voulait un mot court qui se dit pareil partout*",
+   "C'était le nom de son chien",
+   "C'est le bruit d'un appareil photo en japonais",
+   "C'était le nom de sa ville natale"
+  ]
+ },
+ {
+  "key": "tec22-189",
+  "concept": "tech.brands.v22_nom_haagen_dazs",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "D'où vient le nom des glaces « Häagen-Dazs » ?",
+  "explanation": "Le fondateur, installé dans le Bronx, voulait un nom à l'air nordique et chic. Il ne veut rien dire.",
+  "options": [
+   "Il a été inventé pour sonner danois, par une entreprise de New York*",
+   "D'un village danois",
+   "Des noms de deux glaciers suédois",
+   "D'un mot allemand signifiant « crème »"
+  ]
+ },
+ {
+  "key": "tec22-190",
+  "concept": "tech.brands.v22_nom_sony",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le nom « Sony » ?",
+  "explanation": "Les fondateurs voulaient un nom court et prononçable dans toutes les langues.",
+  "options": [
+   "Du latin « sonus » (le son) et de l'anglais « sonny » (petit garçon)*",
+   "Des initiales de ses fondateurs",
+   "D'un mot japonais signifiant « soleil »",
+   "Du nom d'une rivière"
+  ]
+ },
+ {
+  "key": "tec22-191",
+  "concept": "tech.brands.v22_nom_volvo",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que signifie « Volvo » en latin ?",
+  "explanation": "Le nom était d'abord prévu pour une marque de roulements à billes, en 1915.",
+  "options": [
+   "Je roule*",
+   "Je vole",
+   "Je veux",
+   "Voiture"
+  ]
+ },
+ {
+  "key": "tec22-192",
+  "concept": "tech.brands.v22_nom_asus",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "De quel animal mythologique vient le nom de la marque Asus ?",
+  "explanation": "On a retiré les trois premières lettres de « Pegasus » pour apparaître en tête des listes alphabétiques.",
+  "options": [
+   "Pégase, le cheval ailé*",
+   "Le phénix",
+   "Le sphinx",
+   "La licorne"
+  ]
+ },
+ {
+  "key": "tec22-193",
+  "concept": "tech.brands.v22_nom_reebok",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Que désigne le mot afrikaans qui a donné son nom à Reebok ?",
+  "explanation": "Le « rhebok » est une petite antilope rapide et agile.",
+  "options": [
+   "Une antilope d'Afrique*",
+   "Un coureur",
+   "Une chaussure",
+   "Le vent"
+  ]
+ },
+ {
+  "key": "tec22-194",
+  "concept": "tech.brands.v22_nom_fanta",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "D'où vient le nom « Fanta » ?",
+  "explanation": "La boisson est née en Allemagne pendant la Seconde Guerre mondiale, faute d'ingrédients pour le Coca-Cola.",
+  "options": [
+   "De l'allemand « Fantasie », l'imagination*",
+   "D'une orange italienne",
+   "Du prénom de la fille du créateur",
+   "Du mot « fantôme »"
+  ]
+ },
+ {
+  "key": "tec22-195",
+  "concept": "tech.brands.v22_nom_velcro",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quels deux mots français vient le nom « Velcro » ?",
+  "explanation": "Un côté est doux comme du velours, l'autre couvert de petits crochets.",
+  "options": [
+   "Velours et crochet*",
+   "Vélo et croc",
+   "Velouté et croix",
+   "Veille et crochet"
+  ]
+ },
+ {
+  "key": "tec22-196",
+  "concept": "tech.brands.v22_nom_toyota",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi la famille Toyoda a-t-elle appelé sa marque « Toyota », avec un T ?",
+  "explanation": "Le chiffre 8 est associé à la prospérité au Japon. Et le son était jugé plus clair.",
+  "options": [
+   "En japonais, ce nom s'écrit en 8 traits, un chiffre porte-bonheur*",
+   "Pour faire plus américain",
+   "À cause d'une faute d'orthographe",
+   "Parce que « Toyoda » était déjà pris"
+  ]
+ },
+ {
+  "key": "tec22-197",
+  "concept": "tech.brands.v22_nom_subaru",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Que représentent les six étoiles du logo Subaru ?",
+  "explanation": "La plus grande étoile représenterait l'entreprise mère, et les cinq autres les sociétés qui l'ont formée.",
+  "options": [
+   "L'amas des Pléiades, « Subaru » en japonais*",
+   "Les six fondateurs",
+   "Les six usines de la marque",
+   "Les six roues de son premier camion"
+  ]
+ },
+ {
+  "key": "tec22-198",
+  "concept": "tech.brands.v22_nom_sega",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "D'où vient le nom « Sega » ?",
+  "explanation": "L'entreprise installait des jukebox et des machines à sous sur les bases américaines.",
+  "options": [
+   "De « Service Games », une entreprise de jeux pour bases militaires*",
+   "D'un mot japonais signifiant « victoire »",
+   "Du prénom du fondateur",
+   "D'un personnage de dessin animé"
+  ]
+ },
+ {
+  "key": "tec22-199",
+  "concept": "tech.brands.v22_nom_netflix",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quels mots anglais vient « Netflix » ?",
+  "explanation": "« Flicks » est un mot familier américain pour les films.",
+  "options": [
+   "« Net » (Internet) et « flicks » (les films)*",
+   "« Net » et « flash »",
+   "« Next » et « flix »",
+   "« Network » et « fix »"
+  ]
+ },
+ {
+  "key": "tec22-200",
+  "concept": "tech.brands.v22_nom_instagram",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quels mots vient le nom « Instagram » ?",
+  "explanation": "Comme un appareil photo instantané, et un message qu'on envoie.",
+  "options": [
+   "« Instant » et « télégramme »*",
+   "« Instagram » est un mot grec",
+   "« Insta » (beau) et « gram » (photo)",
+   "« Instinct » et « programme »"
+  ]
+ },
+ {
+  "key": "tec22-201",
+  "concept": "tech.brands.v22_nom_mozilla",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "D'où vient le nom « Mozilla », la fondation qui développe Firefox ?",
+  "explanation": "Il fallait battre Mosaic, le navigateur dominant de l'époque. La mascotte était un dinosaure.",
+  "options": [
+   "De « Mosaic Killer », avec un clin d'œil à Godzilla*",
+   "D'un dinosaure découvert en Californie",
+   "D'un personnage de dessin animé",
+   "De Mozart et de Zilla, ses créateurs"
+  ]
+ },
+ {
+  "key": "tec22-202",
+  "concept": "tech.brands.v22_nom_mattel",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le nom de l'entreprise Mattel, qui fabrique Barbie ?",
+  "explanation": "Harold « Matt » Matson et Elliot Handler. Ruth Handler, épouse d'Elliot, a créé Barbie en 1959.",
+  "options": [
+   "Des prénoms de ses fondateurs, Matt et Elliot*",
+   "D'un mot latin signifiant « jouet »",
+   "D'une ville californienne",
+   "Du nom d'une poupée"
+  ]
+ },
+ {
+  "key": "tec22-203",
+  "concept": "tech.brands.v22_nom_hasbro",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "D'où vient le nom « Hasbro », l'entreprise du Monopoly et du Cluedo ?",
+  "explanation": "Les trois frères vendaient d'abord des chutes de tissu, en 1923.",
+  "options": [
+   "De « Hassenfeld Brothers », les frères qui l'ont fondée*",
+   "D'un mot hébreu",
+   "D'une ville anglaise",
+   "De « has brought », « a apporté »"
+  ]
+ },
+ {
+  "key": "tec22-204",
+  "concept": "tech.brands.v22_nom_lu",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que signifient les lettres « LU », la marque de biscuits nantaise ?",
+  "explanation": "Jean-Romain Lefèvre et Pauline-Isabelle Utile se sont mariés en 1850 et ont fondé la biscuiterie.",
+  "options": [
+   "Lefèvre-Utile, les noms des fondateurs*",
+   "Les Usines",
+   "Loire Unie",
+   "Lait Unique"
+  ]
+ },
+ {
+  "key": "tec22-205",
+  "concept": "tech.brands.v22_nom_toblerone",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le nom « Toblerone » ?",
+  "explanation": "Le chocolat contient du nougat au miel et aux amandes.",
+  "options": [
+   "De Tobler, le fondateur, et de « torrone », le nougat en italien*",
+   "D'une montagne suisse",
+   "D'un village du Valais",
+   "De « table » et « ronde »"
+  ]
+ },
+ {
+  "key": "tec22-206",
+  "concept": "tech.brands.v22_nom_decathlon",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "D'où vient le nom de l'enseigne Decathlon ?",
+  "explanation": "L'idée : un seul magasin pour tous les sports. Le premier a ouvert près de Lille, en 1976.",
+  "options": [
+   "D'une épreuve d'athlétisme en dix disciplines*",
+   "Du prénom du fondateur",
+   "D'une marathon de dix jours",
+   "De dix magasins ouverts le même jour"
+  ]
+ },
+ {
+  "key": "tec22-207",
+  "concept": "tech.brands.v22_nom_xiaomi",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Que signifie « Xiaomi », le nom de la marque chinoise de téléphones ?",
+  "explanation": "Une référence modeste, inspirée d'un concept bouddhiste : un petit grain peut valoir une montagne.",
+  "options": [
+   "Grain de millet*",
+   "Petit dragon",
+   "Téléphone intelligent",
+   "Étoile du matin"
+  ]
+ },
+ {
+  "key": "tec22-208",
+  "concept": "tech.brands.v22_logo_amazon",
+  "label": "Logos cachés",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que relie la flèche-sourire du logo d'Amazon ?",
+  "explanation": "Un message caché : le site vend de tout… et rend les clients souriants.",
+  "options": [
+   "Le A et le Z : on y trouve tout, de A à Z*",
+   "Les deux O",
+   "Le M et le N",
+   "Rien, c'est seulement un sourire"
+  ]
+ },
+ {
+  "key": "tec22-209",
+  "concept": "tech.brands.v22_logo_toblerone",
+  "label": "Logos cachés",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel animal se cache dans la montagne du logo Toblerone ?",
+  "explanation": "L'ours, symbole de Berne, la ville où le chocolat est né.",
+  "options": [
+   "Un ours*",
+   "Un aigle",
+   "Une vache",
+   "Un bouquetin"
+  ]
+ },
+ {
+  "key": "tec22-210",
+  "concept": "tech.brands.v22_logo_carrefour",
+  "label": "Logos cachés",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle lettre se cache dans l'espace blanc du logo Carrefour ?",
+  "explanation": "Entre les deux flèches rouge et bleue, le blanc dessine la première lettre de la marque.",
+  "options": [
+   "Un C*",
+   "Un F",
+   "Un R",
+   "Un X"
+  ]
+ },
+ {
+  "key": "tec22-211",
+  "concept": "tech.brands.v22_logo_fedex",
+  "label": "Logos cachés",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que cache l'espace entre le E et le x du logo FedEx ?",
+  "explanation": "Elle évoque la vitesse et la précision des livraisons. Une fois vue, impossible de ne plus la voir !",
+  "options": [
+   "Une flèche*",
+   "Un avion",
+   "Un colis",
+   "Une étoile"
+  ]
+ },
+ {
+  "key": "tec22-212",
+  "concept": "tech.brands.v22_logo_tour_france",
+  "label": "Logos cachés",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que dessine la lettre R dans le logo du Tour de France ?",
+  "explanation": "Le « o » de « Tour » forme la roue avant, et le soleil jaune la roue arrière.",
+  "options": [
+   "Un cycliste*",
+   "Une montagne",
+   "Un maillot jaune",
+   "Une roue"
+  ]
+ },
+ {
+  "key": "tec22-213",
+  "concept": "tech.brands.v22_logo_wikipedia",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que représente le logo de Wikipédia ?",
+  "explanation": "Chaque pièce porte une lettre d'un alphabet différent. Le trou en haut rappelle que le savoir n'est jamais complet.",
+  "options": [
+   "Un globe fait de pièces de puzzle, incomplet*",
+   "Un livre ouvert",
+   "Une ampoule",
+   "Une loupe"
+  ]
+ },
+ {
+  "key": "tec22-214",
+  "concept": "tech.brands.v22_logo_starbucks",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que représente le logo vert de Starbucks ?",
+  "explanation": "Une figure de la mythologie marine, pour rappeler les marins et le port de Seattle.",
+  "options": [
+   "Une sirène à deux queues*",
+   "Une reine",
+   "Un grain de café",
+   "Une étoile de mer"
+  ]
+ },
+ {
+  "key": "tec22-215",
+  "concept": "tech.brands.v22_logo_alfa",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quel animal figure sur le logo d'Alfa Romeo, à côté de la croix rouge de Milan ?",
+  "explanation": "Le « biscione », emblème de la famille Visconti, qui régnait sur Milan.",
+  "options": [
+   "Un serpent qui avale un homme*",
+   "Un cheval cabré",
+   "Un lion",
+   "Un aigle"
+  ]
+ },
+ {
+  "key": "tec22-216",
+  "concept": "tech.brands.v22_logo_mitsubishi",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de losanges forment le logo de Mitsubishi ?",
+  "explanation": "Le nom signifie justement « trois diamants » en japonais.",
+  "options": [
+   "Trois*",
+   "Deux",
+   "Quatre",
+   "Cinq"
+  ]
+ },
+ {
+  "key": "tec22-217",
+  "concept": "tech.brands.v22_logo_apple_premier",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Que montrait le tout premier logo d'Apple, en 1976 ?",
+  "explanation": "Un dessin à la plume, vite remplacé par la pomme croquée aux couleurs de l'arc-en-ciel.",
+  "options": [
+   "Isaac Newton assis sous un pommier*",
+   "Une pomme arc-en-ciel",
+   "Steve Jobs",
+   "Un ordinateur"
+  ]
+ },
+ {
+  "key": "tec22-218",
+  "concept": "tech.brands.v22_slogan_mcdo",
+  "label": "Slogans",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle marque utilise le slogan « I'm lovin' it » ?",
+  "explanation": "Lancé en 2003, chanté à l'origine par Justin Timberlake.",
+  "options": [
+   "McDonald's*",
+   "Burger King",
+   "KFC",
+   "Coca-Cola"
+  ]
+ },
+ {
+  "key": "tec22-219",
+  "concept": "tech.brands.v22_slogan_red_bull",
+  "label": "Slogans",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quelle boisson « donne des ailes » ?",
+  "explanation": "Un slogan qui lui a valu un procès aux États-Unis… pour publicité mensongère.",
+  "options": [
+   "Red Bull*",
+   "Monster",
+   "Coca-Cola",
+   "Orangina"
+  ]
+ },
+ {
+  "key": "tec22-220",
+  "concept": "tech.brands.v22_slogan_audi",
+  "label": "Slogans",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle marque automobile a pour slogan « Vorsprung durch Technik » (« L'avance par la technologie ») ?",
+  "explanation": "L'une des rares marques à garder son slogan en allemand partout dans le monde.",
+  "options": [
+   "Audi*",
+   "BMW",
+   "Mercedes",
+   "Porsche"
+  ]
+ },
+ {
+  "key": "tec22-221",
+  "concept": "tech.brands.v22_slogan_darty",
+  "label": "Slogans",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle enseigne française promet « le contrat de confiance » ?",
+  "explanation": "Un slogan lancé en 1973, avec la promesse du prix le plus bas et du service après-vente.",
+  "options": [
+   "Darty*",
+   "Boulanger",
+   "Fnac",
+   "Leroy Merlin"
+  ]
+ },
+ {
+  "key": "tec22-222",
+  "concept": "tech.brands.v22_slogan_kitkat",
+  "label": "Slogans",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quelle barre chocolatée invite à « faire une pause » (« Have a break ») ?",
+  "explanation": "Ses barres se cassent à la main, comme une pause qu'on partage.",
+  "options": [
+   "Kit Kat*",
+   "Twix",
+   "Mars",
+   "Lion"
+  ]
+ },
+ {
+  "key": "tec22-223",
+  "concept": "tech.brands.v22_slogan_moulinex",
+  "label": "Slogans",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle marque française d'électroménager avait pour slogan « … libère la femme » ?",
+  "explanation": "Un slogan des années 1960, devenu célèbre… et beaucoup critiqué depuis.",
+  "options": [
+   "Moulinex*",
+   "Seb",
+   "Tefal",
+   "Rowenta"
+  ]
+ },
+ {
+  "key": "tec22-224",
+  "concept": "tech.brands.v22_pa_slogans",
+  "label": "Slogans",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque slogan à sa marque.",
+  "explanation": "Nespresso a rendu célèbre son slogan grâce à George Clooney.",
+  "pairs": [
+   [
+    "« Impossible is nothing »",
+    "Adidas"
+   ],
+   [
+    "« Connecting People »",
+    "Nokia"
+   ],
+   [
+    "« What else? »",
+    "Nespresso"
+   ],
+   [
+    "« Das Auto »",
+    "Volkswagen"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-225",
+  "concept": "tech.brands.v22_wo_haribo",
+  "label": "Slogans",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre le célèbre slogan de Haribo.",
+  "explanation": "La marque allemande l'utilise en France depuis les années 1990.",
+  "answer": "Haribo, c'est beau la vie, pour les grands et les petits",
+  "words": [
+   "Haribo,",
+   "c'est",
+   "beau",
+   "la",
+   "vie,",
+   "pour",
+   "les",
+   "grands",
+   "et",
+   "les",
+   "petits"
+  ]
+ },
+ {
+  "key": "tec22-226",
+  "concept": "tech.brands.v22_wo_red_bull",
+  "label": "Slogans",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets dans l'ordre le slogan de la boisson énergisante.",
+  "explanation": "En anglais : « Red Bull gives you wings ».",
+  "answer": "Red Bull donne des ailes",
+  "words": [
+   "Red",
+   "Bull",
+   "donne",
+   "des",
+   "ailes"
+  ]
+ },
+ {
+  "key": "tec22-227",
+  "concept": "tech.brands.v22_pa_mascottes",
+  "label": "Mascottes",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque mascotte à sa marque.",
+  "explanation": "Duo est devenu un mème : il « menace » les élèves qui oublient leur leçon du jour.",
+  "pairs": [
+   [
+    "Ronald, le clown",
+    "McDonald's"
+   ],
+   [
+    "Quicky, le lapin",
+    "Nesquik"
+   ],
+   [
+    "Duo, le hibou vert",
+    "Duolingo"
+   ],
+   [
+    "Le lapin rose à tambour",
+    "Duracell"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-228",
+  "concept": "tech.brands.v22_vache_qui_rit",
+  "label": "Mascottes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel illustrateur a dessiné la Vache qui rit, en 1923 ?",
+  "explanation": "Elle porte des boîtes de fromage en boucles d'oreilles, qui contiennent elles-mêmes la vache… à l'infini.",
+  "options": [
+   "Benjamin Rabier*",
+   "Hergé",
+   "Albert Uderzo",
+   "Jean-Jacques Sempé"
+  ]
+ },
+ {
+  "key": "tec22-229",
+  "concept": "tech.brands.v22_hello_kitty",
+  "label": "Mascottes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Hello Kitty, créée en 1974 par l'entreprise japonaise Sanrio, est…",
+  "explanation": "En 2014, Sanrio a surpris le monde en précisant qu'elle n'est pas un chat, mais une petite fille qui vit à Londres.",
+  "options": [
+   "Une petite fille anglaise, selon Sanrio, et non un chat*",
+   "Un chat japonais",
+   "Un lapin",
+   "Une souris"
+  ]
+ },
+ {
+  "key": "tec22-230",
+  "concept": "tech.brands.v22_milka_vache",
+  "label": "Mascottes",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "De quelle couleur est la vache de Milka ?",
+  "explanation": "En 1995, une enquête allemande a révélé que des enfants dessinaient des vaches… violettes.",
+  "options": [
+   "Violette*",
+   "Marron",
+   "Bleue",
+   "Rose"
+  ]
+ },
+ {
+  "key": "tec22-231",
+  "concept": "tech.brands.v22_vuitton_malles",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'a d'abord fabriqué Louis Vuitton, à partir de 1854 ?",
+  "explanation": "Ses malles plates pouvaient s'empiler, contrairement aux malles bombées de l'époque.",
+  "options": [
+   "Des malles de voyage*",
+   "Des chaussures",
+   "Des parfums",
+   "Des montres"
+  ]
+ },
+ {
+  "key": "tec22-232",
+  "concept": "tech.brands.v22_hermes_sellier",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel était le métier de Thierry Hermès, fondateur de la maison Hermès en 1837 ?",
+  "explanation": "D'où la calèche du logo. Les célèbres carrés de soie datent de 1937.",
+  "options": [
+   "Harnacheur, il fabriquait des harnais pour chevaux*",
+   "Bijoutier",
+   "Tailleur",
+   "Parfumeur"
+  ]
+ },
+ {
+  "key": "tec22-233",
+  "concept": "tech.brands.v22_chanel_5",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi le parfum de Chanel s'appelle-t-il « N° 5 » ?",
+  "explanation": "Le parfumeur Ernest Beaux lui avait présenté plusieurs essais numérotés, en 1921. Le 5 était aussi son chiffre porte-bonheur.",
+  "options": [
+   "Coco Chanel a choisi le cinquième échantillon proposé*",
+   "C'était son cinquième parfum",
+   "Il contient cinq fleurs",
+   "Il est sorti le 5 mai"
+  ]
+ },
+ {
+  "key": "tec22-234",
+  "concept": "tech.brands.v22_renault_marne",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel rôle ont joué des taxis Renault en septembre 1914 ?",
+  "explanation": "Environ 600 taxis parisiens réquisitionnés : les « taxis de la Marne ». Les compteurs tournaient, et l'armée a payé la course.",
+  "options": [
+   "Ils ont transporté des soldats vers la bataille de la Marne*",
+   "Ils ont servi d'ambulances à Verdun",
+   "Ils ont défilé sur les Champs-Élysées",
+   "Ils ont été transformés en chars"
+  ]
+ },
+ {
+  "key": "tec22-235",
+  "concept": "tech.brands.v22_ds_deesse",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi la Citroën DS, sortie en 1955, est-elle surnommée « la Déesse » ?",
+  "explanation": "Avec sa suspension hydropneumatique et sa ligne futuriste, elle a sauvé le général de Gaulle lors d'un attentat en 1962.",
+  "options": [
+   "Parce que « DS » se prononce comme « déesse »*",
+   "À cause de sa couleur dorée",
+   "Parce qu'elle volait",
+   "À cause d'une statue sur le capot"
+  ]
+ },
+ {
+  "key": "tec22-236",
+  "concept": "tech.brands.v22_alpine_dieppe",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quelle ville normande sont construites les voitures de sport Alpine ?",
+  "explanation": "Jean Rédélé y a fondé la marque en 1955. Alpine appartient aujourd'hui à Renault.",
+  "options": [
+   "Dieppe*",
+   "Rouen",
+   "Caen",
+   "Le Havre"
+  ]
+ },
+ {
+  "key": "tec22-237",
+  "concept": "tech.brands.v22_carrefour_hyper",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle enseigne a ouvert le premier hypermarché de France, en 1963 ?",
+  "explanation": "À Sainte-Geneviève-des-Bois, près de Paris : 2 500 m² et un parking de 400 places.",
+  "options": [
+   "Carrefour*",
+   "Auchan",
+   "Leclerc",
+   "Casino"
+  ]
+ },
+ {
+  "key": "tec22-238",
+  "concept": "tech.brands.v22_auchan_nom",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "D'où vient le nom « Auchan » ?",
+  "explanation": "Gérard Mulliez y a ouvert son premier magasin en 1961.",
+  "options": [
+   "Du quartier des Hauts-Champs, à Roubaix, où a ouvert le premier magasin*",
+   "Du nom du fondateur",
+   "Du mot « achat »",
+   "D'un mot flamand"
+  ]
+ },
+ {
+  "key": "tec22-239",
+  "concept": "tech.brands.v22_doctolib",
+  "label": "Entreprises françaises",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "À quoi sert principalement le site français Doctolib ?",
+  "explanation": "Créé en 2013, il est devenu incontournable pendant la vaccination contre le Covid-19.",
+  "options": [
+   "À prendre rendez-vous chez un médecin*",
+   "À acheter des médicaments",
+   "À réserver un train",
+   "À trouver un logement"
+  ]
+ },
+ {
+  "key": "tec22-240",
+  "concept": "tech.brands.v22_dailymotion",
+  "label": "Entreprises françaises",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel site de vidéos français a été lancé en 2005, la même année que YouTube ?",
+  "explanation": "Il a été créé à Paris. Twitch et Vimeo sont américains.",
+  "options": [
+   "Dailymotion*",
+   "Vimeo",
+   "Twitch",
+   "Molotov"
+  ]
+ },
+ {
+  "key": "tec22-241",
+  "concept": "tech.brands.v22_ovh_roubaix",
+  "label": "Entreprises françaises",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Que fait l'entreprise OVHcloud, née à Roubaix en 1999 ?",
+  "explanation": "C'est le premier hébergeur européen, présent dans le monde entier.",
+  "options": [
+   "Elle héberge des sites et des données dans ses centres de serveurs*",
+   "Elle fabrique des téléphones",
+   "Elle vend des billets d'avion",
+   "Elle produit des jeux vidéo"
+  ]
+ },
+ {
+  "key": "tec22-242",
+  "concept": "tech.brands.v22_redbull_thai",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient la boisson qui a inspiré Red Bull ?",
+  "explanation": "L'Autrichien Dietrich Mateschitz a découvert la « Krating Daeng » (« taureau rouge ») en voyage, et l'a adaptée.",
+  "options": [
+   "La Thaïlande*",
+   "Le Japon",
+   "Le Brésil",
+   "Les États-Unis"
+  ]
+ },
+ {
+  "key": "tec22-243",
+  "concept": "tech.brands.v22_crocs_bateau",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pour quelle activité les chaussures Crocs ont-elles été conçues, en 2002 ?",
+  "explanation": "Elles ne glissent pas, sèchent vite et flottent. Les soignants les ont adoptées ensuite.",
+  "options": [
+   "La navigation en bateau*",
+   "L'hôpital",
+   "Le jardinage",
+   "La course à pied"
+  ]
+ },
+ {
+  "key": "tec22-244",
+  "concept": "tech.brands.v22_youtube_rencontres",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "À quoi YouTube devait-il servir à ses tout débuts, en 2005 ?",
+  "explanation": "Le slogan était « Tune In, Hook Up ». Faute de succès, le site s'est ouvert à toutes les vidéos.",
+  "options": [
+   "À un site de rencontres en vidéo*",
+   "À vendre des voitures",
+   "À regarder des films",
+   "À partager des recettes"
+  ]
+ },
+ {
+  "key": "tec22-245",
+  "concept": "tech.brands.v22_instagram_burbn",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment s'appelait l'application qui est devenue Instagram ?",
+  "explanation": "Une application de géolocalisation, du nom d'un whisky américain. Seule sa partie photo avait du succès.",
+  "options": [
+   "Burbn*",
+   "Picstr",
+   "Snaply",
+   "Photogram"
+  ]
+ },
+ {
+  "key": "tec22-246",
+  "concept": "tech.brands.v22_playstation_nintendo",
+  "label": "Débuts d'entreprises",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Avec quelle entreprise Sony devait-il au départ créer la PlayStation ?",
+  "explanation": "Il s'agissait d'un lecteur CD pour la Super Nintendo. Nintendo a rompu l'accord en 1991, et Sony a fait cavalier seul.",
+  "options": [
+   "Nintendo*",
+   "Sega",
+   "Microsoft",
+   "Atari"
+  ]
+ },
+ {
+  "key": "tec22-247",
+  "concept": "tech.brands.v22_tesla_nom",
+  "label": "D'où vient le nom ?",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "À qui l'entreprise Tesla doit-elle son nom ?",
+  "explanation": "Nikola Tesla, pionnier de l'électricité, a inventé le moteur à courant alternatif qui équipait les premières Tesla.",
+  "options": [
+   "À l'inventeur Nikola Tesla*",
+   "À un modèle de voiture ancien",
+   "À une ville du Nevada",
+   "À un mot grec signifiant « éclair »"
+  ]
+ },
+ {
+  "key": "tec22-248",
+  "concept": "tech.brands.v22_jeu_among_us",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans Among Us, que doivent démasquer les membres de l'équipage ?",
+  "explanation": "Sorti en 2018, le jeu a explosé pendant le confinement de 2020.",
+  "options": [
+   "Les imposteurs*",
+   "Les zombies",
+   "Les voleurs",
+   "Les fantômes"
+  ]
+ },
+ {
+  "key": "tec22-249",
+  "concept": "tech.brands.v22_jeu_sims",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a créé Les Sims, sortis en 2000 ?",
+  "explanation": "Il avait déjà créé SimCity. Les Sims parlent une langue inventée, le « simlish ».",
+  "options": [
+   "Will Wright*",
+   "Shigeru Miyamoto",
+   "Hideo Kojima",
+   "Michel Ancel"
+  ]
+ },
+ {
+  "key": "tec22-250",
+  "concept": "tech.brands.v22_jeu_gta_ecosse",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quel pays a été créé le premier GTA (Grand Theft Auto), en 1997 ?",
+  "explanation": "Par le studio DMA Design, à Dundee, devenu Rockstar North. Il avait aussi créé Lemmings.",
+  "options": [
+   "L'Écosse*",
+   "Les États-Unis",
+   "Le Canada",
+   "Le Japon"
+  ]
+ },
+ {
+  "key": "tec22-251",
+  "concept": "tech.brands.v22_jeu_space_invaders",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel jeu japonais de 1978, où l'on tire sur des extraterrestres qui descendent, a lancé la folie des jeux d'arcade ?",
+  "explanation": "Selon une légende tenace, il aurait provoqué une pénurie de pièces de 100 yens au Japon.",
+  "options": [
+   "Space Invaders*",
+   "Pac-Man",
+   "Asteroids",
+   "Galaga"
+  ]
+ },
+ {
+  "key": "tec22-252",
+  "concept": "tech.brands.v22_jeu_jumpman",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Sous quel nom Mario est-il apparu pour la première fois, dans Donkey Kong en 1981 ?",
+  "explanation": "Il ne prendra le nom de Mario qu'ensuite, d'après le propriétaire des locaux de Nintendo aux États-Unis.",
+  "options": [
+   "Jumpman*",
+   "Luigi",
+   "Plumber",
+   "Super Man"
+  ]
+ },
+ {
+  "key": "tec22-253",
+  "concept": "tech.brands.v22_jeu_puckman",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel était le nom japonais de Pac-Man, à sa sortie en 1980 ?",
+  "explanation": "Il a été renommé aux États-Unis, de peur que des petits malins transforment le P en une autre lettre…",
+  "options": [
+   "Puck-Man*",
+   "Pakku-Boy",
+   "Paku-Paku",
+   "Pie-Man"
+  ]
+ },
+ {
+  "key": "tec22-254",
+  "concept": "tech.brands.v22_jeu_rayman",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle est la particularité physique de Rayman, le héros d'Ubisoft ?",
+  "explanation": "Une contrainte technique de 1995 : moins de membres à animer.",
+  "options": [
+   "Il n'a ni bras ni jambes, ses mains et ses pieds flottent*",
+   "Il n'a pas de tête",
+   "Il est invisible",
+   "Il a quatre bras"
+  ]
+ },
+ {
+  "key": "tec22-255",
+  "concept": "tech.brands.v22_jeu_roblox",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'a de particulier la plateforme Roblox ?",
+  "explanation": "Des millions de mini-jeux y ont été créés par sa communauté.",
+  "options": [
+   "Les jeux y sont créés par les joueurs eux-mêmes*",
+   "Elle ne fonctionne que sur console",
+   "Elle n'a qu'un seul jeu",
+   "Elle est réservée aux adultes"
+  ]
+ },
+ {
+  "key": "tec22-256",
+  "concept": "tech.brands.v22_jeu_steam",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce que Steam ?",
+  "explanation": "Elle appartient à Valve, le studio de Half-Life.",
+  "options": [
+   "Une plateforme d'achat et de lancement de jeux sur ordinateur*",
+   "Une console de jeux",
+   "Un jeu de course",
+   "Un réseau social de photos"
+  ]
+ },
+ {
+  "key": "tec22-257",
+  "concept": "tech.brands.v22_jeu_wii",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle était la grande nouveauté de la Wii, en 2006 ?",
+  "explanation": "Avec Wii Sports, on jouait au tennis ou au bowling en faisant les gestes.",
+  "options": [
+   "Une manette qui détecte les mouvements*",
+   "Un écran 3D sans lunettes",
+   "La réalité virtuelle",
+   "Un clavier intégré"
+  ]
+ },
+ {
+  "key": "tec22-258",
+  "concept": "tech.brands.v22_jeu_ds",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Combien d'écrans avait la Nintendo DS ?",
+  "explanation": "DS pour « Dual Screen ». L'écran du bas était tactile, avec un stylet.",
+  "options": [
+   "Deux*",
+   "Un",
+   "Trois",
+   "Quatre"
+  ]
+ },
+ {
+  "key": "tec22-259",
+  "concept": "tech.brands.v22_jouet_scrabble",
+  "label": "Jeux et jouets",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel était le métier d'Alfred Butts, l'inventeur du Scrabble, en 1938 ?",
+  "explanation": "Il a compté les lettres dans les journaux pour fixer le nombre de jetons et les points.",
+  "options": [
+   "Architecte au chômage*",
+   "Professeur de français",
+   "Journaliste",
+   "Imprimeur"
+  ]
+ },
+ {
+  "key": "tec22-260",
+  "concept": "tech.brands.v22_jouet_uno",
+  "label": "Jeux et jouets",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a inventé le jeu de cartes Uno, en 1971 ?",
+  "explanation": "Merle Robbins l'a créé en famille, et a vendu les premières boîtes dans son salon de coiffure.",
+  "options": [
+   "Un barbier de l'Ohio*",
+   "Un professeur de mathématiques",
+   "Un magicien",
+   "Un ingénieur de Mattel"
+  ]
+ },
+ {
+  "key": "tec22-261",
+  "concept": "tech.brands.v22_jouet_kapla",
+  "label": "Jeux et jouets",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que sont les Kapla, inventés en France en 1987 ?",
+  "explanation": "Leurs proportions (1 × 3 × 15) permettent des constructions impressionnantes, sans colle.",
+  "options": [
+   "Des planchettes de bois toutes identiques*",
+   "Des briques en plastique",
+   "Des cartes à jouer",
+   "Des billes en verre"
+  ]
+ },
+ {
+  "key": "tec22-262",
+  "concept": "tech.brands.v22_jouet_cluedo",
+  "label": "Jeux et jouets",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans le Cluedo, que doit-on découvrir ?",
+  "explanation": "Le jeu a été inventé en Angleterre pendant la Seconde Guerre mondiale.",
+  "options": [
+   "Le coupable, l'arme et la pièce du crime*",
+   "Le trésor caché",
+   "Le mot secret",
+   "La carte manquante"
+  ]
+ },
+ {
+  "key": "tec22-263",
+  "concept": "tech.brands.v22_pa_noms_sens",
+  "label": "D'où vient le nom ?",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque marque au sens de son nom.",
+  "explanation": "Volvo est du latin, Kinder et Uber (über) de l'allemand, Hyundai du coréen.",
+  "pairs": [
+   [
+    "Volvo",
+    "Je roule"
+   ],
+   [
+    "Kinder",
+    "Enfants"
+   ],
+   [
+    "Uber",
+    "Au-dessus"
+   ],
+   [
+    "Hyundai",
+    "Modernité"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-264",
+  "concept": "tech.brands.v22_pa_jeux_studios",
+  "label": "Jeux vidéo",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque jeu à l'entreprise qui l'a créé.",
+  "explanation": "Ubisoft est français, Nintendo japonais, Valve et Electronic Arts américains.",
+  "pairs": [
+   [
+    "Les Sims",
+    "Maxis (Electronic Arts)"
+   ],
+   [
+    "Zelda",
+    "Nintendo"
+   ],
+   [
+    "Half-Life",
+    "Valve"
+   ],
+   [
+    "Assassin's Creed",
+    "Ubisoft"
+   ]
+  ]
+ },
+ {
+  "key": "tec22-265",
+  "concept": "tech.brands.v22_or_constructeurs_fr",
+  "label": "Automobile",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces constructeurs français du plus ancien au plus récent.",
+  "explanation": "Peugeot remonte à 1810 (outils et moulins), Renault à 1899, Citroën à 1919, Alpine à 1955.",
+  "items": [
+   "Peugeot",
+   "Renault",
+   "Citroën",
+   "Alpine"
+  ]
+ },
+ {
+  "key": "tec22-266",
+  "concept": "tech.brands.v22_or_jouets_dates",
+  "label": "Jeux et jouets",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces jouets du plus ancien au plus récent.",
+  "explanation": "1935, 1959, 1974 et 1996.",
+  "items": [
+   "Monopoly",
+   "Barbie",
+   "Rubik's Cube",
+   "Tamagotchi"
+  ]
+ },
+ {
+  "key": "tec22-267",
+  "concept": "tech.brands.v22_co_etoiles_subaru",
+  "label": "Logos",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien d'étoiles figurent sur le logo de Subaru ?",
+  "explanation": "Six étoiles, pour l'amas des Pléiades.",
+  "answer": 6,
+  "tolerance": 0,
+  "min": 1,
+  "max": 12,
+  "start": 1
+ },
+ {
+  "key": "tec22-268",
+  "concept": "tech.brands.v22_co_couleurs_google",
+  "label": "Logos",
+  "type": "counter",
+  "difficulty": 30,
+  "prompt": "Combien de couleurs différentes compte le logo Google en lettres ?",
+  "explanation": "Bleu, rouge, jaune et vert. Le L vert « casse » l'ordre des couleurs primaires, pour montrer que Google ne suit pas les règles.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1
+ },
+ {
+  "key": "tec22-269",
+  "concept": "tech.brands.v22_le_nutella",
+  "label": "Marques",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Pâte à tartiner italienne aux noisettes.",
+  "explanation": "Créée par Ferrero en 1964. « Nut » veut dire noisette en anglais.",
+  "word": "NUTELLA",
+  "display": "Nutella"
+ },
+ {
+  "key": "tec22-270",
+  "concept": "tech.brands.v22_le_carambar",
+  "label": "Marques",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Bonbon au caramel avec une blague sur son emballage.",
+  "explanation": "Né à Marcq-en-Barœul en 1954, à cause d'une machine mal réglée qui a fait des barres trop longues.",
+  "word": "CARAMBAR",
+  "display": "Carambar"
+ },
+ {
+  "key": "tec22-271",
+  "concept": "tech.brands.v22_le_orangina",
+  "label": "Marques",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Boisson pétillante à l'orange, dans une petite bouteille ronde.",
+  "explanation": "Le slogan disait : « Secouez-moi ! », pour remettre la pulpe en suspension.",
+  "word": "ORANGINA",
+  "display": "Orangina"
+ },
+ {
+  "key": "tec22-272",
+  "concept": "tech.brands.v22_le_tupperware",
+  "label": "Marques",
+  "type": "letters",
+  "difficulty": 65,
+  "prompt": "Boîtes de conservation en plastique, vendues lors de réunions à domicile.",
+  "explanation": "Du nom de leur inventeur, Earl Tupper, en 1946.",
+  "word": "TUPPERWARE",
+  "display": "Tupperware"
+ },
+ {
+  "key": "tec22-273",
+  "concept": "tech.brands.v22_le_playmobil",
+  "label": "Marques",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Petits personnages allemands au grand sourire, nés en 1974.",
+  "explanation": "Le fabricant, Geobra Brandstätter, cherchait des jouets peu coûteux à produire pendant la crise du pétrole.",
+  "word": "PLAYMOBIL",
+  "display": "Playmobil"
+ },
+ {
+  "key": "tec22-274",
+  "concept": "tech.brands.v22_le_malabar",
+  "label": "Marques",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Chewing-gum rose avec un tatouage dans l'emballage.",
+  "explanation": "Sa mascotte est un grand gaillard musclé, Mr Malabar.",
+  "word": "MALABAR",
+  "display": "Malabar"
+ },
+ {
+  "key": "tec22-275",
+  "concept": "tech.brands.v22_tl_ikea",
+  "label": "Entreprises",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année Ingvar Kamprad a-t-il fondé Ikea, à 17 ans ?",
+  "explanation": "Il vendait d'abord des stylos, des portefeuilles et des cadres, avant les meubles.",
+  "answer": 1943,
+  "tolerance": 5,
+  "min": 1900,
+  "max": 2000
+ },
+ {
+  "key": "tec22-276",
+  "concept": "tech.brands.v22_tl_lego",
+  "label": "Entreprises",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année l'entreprise Lego a-t-elle été fondée au Danemark ?",
+  "explanation": "Par le menuisier Ole Kirk Christiansen. La brique moderne date de 1958.",
+  "answer": 1932,
+  "tolerance": 5,
+  "min": 1900,
+  "max": 1980
+ },
+ {
+  "key": "tec22-277",
+  "concept": "tech.brands.v22_tl_microsoft",
+  "label": "Entreprises",
+  "type": "timeline",
+  "difficulty": 55,
+  "prompt": "En quelle année Bill Gates et Paul Allen ont-ils fondé Microsoft ?",
+  "explanation": "À Albuquerque, au Nouveau-Mexique, un an avant Apple.",
+  "answer": 1975,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2000
+ },
+ {
+  "key": "tec22-278",
+  "concept": "tech.brands.v22_tl_amazon",
+  "label": "Entreprises",
+  "type": "timeline",
+  "difficulty": 55,
+  "prompt": "En quelle année Jeff Bezos a-t-il fondé Amazon ?",
+  "explanation": "Dans son garage, à Seattle. Le site a ouvert en 1995.",
+  "answer": 1994,
+  "tolerance": 2,
+  "min": 1970,
+  "max": 2010
+ },
+ {
+  "key": "tec22-279",
+  "concept": "tech.brands.v22_tf_bmw_helice",
+  "label": "Logos",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le logo de BMW représente une hélice d'avion qui tourne.",
+  "explanation": "Les quatre quarts bleus et blancs reprennent les couleurs de la Bavière. L'histoire de l'hélice vient d'une publicité des années 1920.",
+  "answer": false
+ },
+ {
+  "key": "tec22-280",
+  "concept": "tech.brands.v22_tf_mms_soldats",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les M&M's ont été créés pour les soldats américains.",
+  "explanation": "En 1941. Leur coque de sucre empêchait le chocolat de fondre dans les poches.",
+  "answer": true
+ },
+ {
+  "key": "tec22-281",
+  "concept": "tech.brands.v22_tf_toyota_tisser",
+  "label": "Débuts d'entreprises",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Toyota fabriquait des métiers à tisser avant de construire des voitures.",
+  "explanation": "Sakichi Toyoda a inventé un métier à tisser automatique. La vente du brevet a financé les premières voitures.",
+  "answer": true
+ },
+ {
+  "key": "tec22-282",
+  "concept": "tech.brands.v22_tf_mattel_cadres",
+  "label": "Débuts d'entreprises",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Mattel fabriquait des cadres photo avant de fabriquer des jouets.",
+  "explanation": "Avec les chutes de bois, les fondateurs ont fabriqué des meubles de poupée… qui se vendaient mieux.",
+  "answer": true
+ },
+ {
+  "key": "tec22-283",
+  "concept": "tech.brands.v22_tf_ferrari_pilote",
+  "label": "Débuts d'entreprises",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Enzo Ferrari a été pilote de course avant de fonder sa marque.",
+  "explanation": "Il courait pour Alfa Romeo dans les années 1920. Le cheval cabré lui a été offert par la mère d'un aviateur.",
+  "answer": true
+ },
+ {
+  "key": "tec22-284",
+  "concept": "tech.brands.v22_tf_bic_milliards",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Il s'est vendu plus de 100 milliards de stylos Bic Cristal.",
+  "explanation": "Depuis 1950. C'est l'un des objets les plus vendus de l'histoire.",
+  "answer": true
+ },
+ {
+  "key": "tec22-285",
+  "concept": "tech.brands.v22_tf_postit_jaune",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Les Post-it sont jaunes parce que c'était la couleur du papier brouillon disponible au laboratoire.",
+  "explanation": "C'est ce que raconte l'entreprise 3M : le labo voisin n'avait que du papier jaune.",
+  "answer": true
+ },
+ {
+  "key": "tec22-286",
+  "concept": "tech.brands.v22_tf_coca_vert",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le Coca-Cola était vert à l'origine.",
+  "explanation": "Une légende : il a toujours été brun caramel. Les bouteilles, elles, étaient en verre vert.",
+  "answer": false
+ },
+ {
+  "key": "tec22-287",
+  "concept": "tech.brands.v22_tf_kinder_chocolat",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "« Kinder » veut dire « chocolat » en allemand.",
+  "explanation": "Kinder veut dire « enfants ». Chocolat se dit « Schokolade ».",
+  "answer": false
+ },
+ {
+  "key": "tec22-288",
+  "concept": "tech.brands.v22_tf_iphone_stylet",
+  "label": "Téléphones",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le premier iPhone, en 2007, s'utilisait avec un stylet.",
+  "explanation": "Steve Jobs s'en moquait : « Qui veut d'un stylet ? » Tout se faisait au doigt.",
+  "answer": false
+ },
+ {
+  "key": "tec22-289",
+  "concept": "tech.brands.v22_tf_sega_consoles",
+  "label": "Jeux vidéo",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Sega fabrique encore des consoles de salon aujourd'hui.",
+  "explanation": "Sega a arrêté après la Dreamcast, en 2001, pour se consacrer aux jeux. Sonic tourne désormais sur les consoles de ses anciens rivaux.",
+  "answer": false
+ },
+ {
+  "key": "tec22-290",
+  "concept": "tech.brands.v22_tf_nespresso_coca",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Nespresso appartient à Coca-Cola.",
+  "explanation": "Nespresso appartient au groupe suisse Nestlé, d'où le « Nes » de son nom.",
+  "answer": false
+ },
+ {
+  "key": "tec22-291",
+  "concept": "tech.computing.v22_touche_suppr",
+  "label": "Clavier",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans un texte, que fait la touche « Suppr » ?",
+  "explanation": "La touche « Retour arrière » (←), elle, efface le caractère à gauche.",
+  "options": [
+   "Elle efface le caractère à droite du curseur*",
+   "Elle efface tout le document",
+   "Elle enregistre le texte",
+   "Elle passe à la ligne"
+  ]
+ },
+ {
+  "key": "tec22-292",
+  "concept": "tech.computing.v22_telecharger",
+  "label": "Internet",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Télécharger un fichier, c'est…",
+  "explanation": "En anglais, « download ». L'inverse, envoyer un fichier vers Internet, c'est « téléverser » (upload).",
+  "options": [
+   "Le récupérer depuis Internet sur son appareil*",
+   "L'imprimer",
+   "Le supprimer",
+   "Le partager sur un réseau social"
+  ]
+ },
+ {
+  "key": "tec22-293",
+  "concept": "tech.computing.v22_favori",
+  "label": "Internet",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans un navigateur, à quoi sert un « favori » ?",
+  "explanation": "On l'ajoute souvent en cliquant sur une petite étoile.",
+  "options": [
+   "À retrouver vite un site qu'on a enregistré*",
+   "À noter un site sur 5",
+   "À bloquer un site",
+   "À accélérer un site"
+  ]
+ },
+ {
+  "key": "tec22-294",
+  "concept": "tech.computing.v22_corbeille",
+  "label": "Informatique",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quand on met un fichier dans la corbeille de l'ordinateur…",
+  "explanation": "Il faut vider la corbeille pour le supprimer vraiment. Et même là, des logiciels spécialisés peuvent parfois le récupérer.",
+  "options": [
+   "Il n'est pas encore effacé : on peut le restaurer*",
+   "Il disparaît pour toujours",
+   "Il est envoyé par e-mail",
+   "Il est copié sur Internet"
+  ]
+ },
+ {
+  "key": "tec22-295",
+  "concept": "tech.computing.v22_icone",
+  "label": "Informatique",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on le petit dessin sur lequel on clique pour ouvrir une application ?",
+  "explanation": "Le mot vient du grec « eikôn », l'image.",
+  "options": [
+   "Une icône*",
+   "Un pixel",
+   "Un curseur",
+   "Un onglet"
+  ]
+ },
+ {
+  "key": "tec22-296",
+  "concept": "tech.computing.v22_influenceur",
+  "label": "Réseaux sociaux",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Qu'est-ce qu'un « influenceur » ?",
+  "explanation": "Les marques les paient souvent pour présenter leurs produits. En France, une loi de 2023 encadre ces publicités.",
+  "options": [
+   "Une personne suivie par beaucoup de gens sur les réseaux sociaux*",
+   "Un logiciel espion",
+   "Un journaliste de télévision",
+   "Un virus informatique"
+  ]
+ },
+ {
+  "key": "tec22-297",
+  "concept": "tech.computing.v22_fond_ecran",
+  "label": "Informatique",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment appelle-t-on l'image affichée derrière les icônes, sur un ordinateur ou un téléphone ?",
+  "explanation": "On peut y mettre une photo de vacances ou de son animal.",
+  "options": [
+   "Le fond d'écran*",
+   "L'économiseur",
+   "Le bureau virtuel",
+   "La barre des tâches"
+  ]
+ },
+ {
+  "key": "tec22-298",
+  "concept": "tech.computing.v22_beta",
+  "label": "Logiciels",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que la version « bêta » d'un logiciel ou d'un jeu ?",
+  "explanation": "Après la version « alpha », testée en interne, la bêta est souvent ouverte au public pour trouver les bugs.",
+  "options": [
+   "Une version de test, pas encore terminée*",
+   "La version la plus chère",
+   "La version pour les professionnels",
+   "Une version piratée"
+  ]
+ },
+ {
+  "key": "tec22-299",
+  "concept": "tech.computing.v22_patch",
+  "label": "Logiciels",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans un jeu ou un logiciel, qu'est-ce qu'un « patch » ?",
+  "explanation": "En anglais, une « pièce » cousue sur un trou : on « rapièce » le programme.",
+  "options": [
+   "Une mise à jour qui corrige des problèmes*",
+   "Un nouveau personnage",
+   "Un code de triche",
+   "Un jeu gratuit"
+  ]
+ },
+ {
+  "key": "tec22-300",
+  "concept": "tech.computing.v22_bande_passante",
+  "label": "Réseau",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que désigne la « bande passante » d'une connexion Internet ?",
+  "explanation": "Comme la largeur d'un tuyau : plus elle est grande, plus il passe de données en même temps.",
+  "options": [
+   "La quantité de données qu'elle peut transporter par seconde*",
+   "La longueur du câble",
+   "Le nombre d'appareils connectés",
+   "Le prix de l'abonnement"
+  ]
+ },
+ {
+  "key": "tec22-301",
+  "concept": "tech.computing.v22_data_center",
+  "label": "Internet",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'un « data center » ?",
+  "explanation": "Ils consomment beaucoup d'électricité, en partie pour refroidir les machines.",
+  "options": [
+   "Un bâtiment rempli de serveurs qui stockent et traitent des données*",
+   "Un magasin d'informatique",
+   "Un musée de l'informatique",
+   "Un centre d'appels"
+  ]
+ },
+ {
+  "key": "tec22-302",
+  "concept": "tech.computing.v22_ia_generative",
+  "label": "Intelligence artificielle",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que fait une « IA générative » ?",
+  "explanation": "ChatGPT, Mistral ou les générateurs d'images en sont des exemples.",
+  "options": [
+   "Elle crée du texte, des images ou des sons à partir d'une demande*",
+   "Elle répare les ordinateurs",
+   "Elle produit de l'électricité",
+   "Elle génère des mots de passe uniquement"
+  ]
+ },
+ {
+  "key": "tec22-303",
+  "concept": "tech.computing.v22_nft",
+  "label": "Cryptomonnaies",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'est-ce qu'un NFT ?",
+  "explanation": "Il atteste qu'on possède un objet numérique. La mode a culminé en 2021, avant de s'effondrer.",
+  "options": [
+   "Un certificat numérique unique, enregistré sur une blockchain*",
+   "Un nouveau format de fichier vidéo",
+   "Une carte bancaire virtuelle",
+   "Un réseau Wi-Fi gratuit"
+  ]
+ },
+ {
+  "key": "tec22-304",
+  "concept": "tech.computing.v22_metavers",
+  "label": "Internet",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'appelle-t-on le « métavers » ?",
+  "explanation": "Le mot vient du roman « Le Samouraï virtuel » (1992). Facebook s'est rebaptisé Meta en 2021 pour miser dessus.",
+  "options": [
+   "Un monde virtuel en 3D où l'on se retrouve grâce à des avatars*",
+   "Un moteur de recherche",
+   "Un poème numérique",
+   "Un réseau de satellites"
+  ]
+ },
+ {
+  "key": "tec22-305",
+  "concept": "tech.computing.v22_qubit",
+  "label": "Informatique",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Comment s'appelle l'unité d'information d'un ordinateur quantique ?",
+  "explanation": "Contrairement au bit (0 ou 1), un qubit peut être dans une superposition des deux états.",
+  "options": [
+   "Le qubit*",
+   "Le quantabit",
+   "Le quark",
+   "Le photon"
+  ]
+ },
+ {
+  "key": "tec22-306",
+  "concept": "tech.computing.v22_obsolescence",
+  "label": "Numérique responsable",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'appelle-t-on « l'obsolescence programmée » ?",
+  "explanation": "En France, c'est un délit depuis 2015.",
+  "options": [
+   "Le fait de réduire volontairement la durée de vie d'un produit*",
+   "Une mise à jour automatique",
+   "Un programme qui vieillit les photos",
+   "La programmation des réveils"
+  ]
+ },
+ {
+  "key": "tec22-307",
+  "concept": "tech.computing.v22_indice_reparabilite",
+  "label": "Numérique responsable",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "En 2021, quelle note la France a-t-elle rendue obligatoire sur les téléphones et ordinateurs neufs ?",
+  "explanation": "Il tient compte de la facilité de démontage, du prix et de la disponibilité des pièces.",
+  "options": [
+   "Un indice de réparabilité, sur 10*",
+   "Une note de rapidité, sur 20",
+   "Une note de beauté, sur 5",
+   "Un indice de solidité, sur 100"
+  ]
+ },
+ {
+  "key": "tec22-308",
+  "concept": "tech.computing.v22_or_telephone",
+  "label": "Numérique responsable",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel métal précieux trouve-t-on en petite quantité dans les téléphones portables ?",
+  "explanation": "Quelques centièmes de gramme par téléphone. Une tonne de téléphones contient plus d'or qu'une tonne de minerai : d'où l'intérêt du recyclage.",
+  "options": [
+   "De l'or*",
+   "Du platine pur en lingot",
+   "De l'argent massif",
+   "Aucun"
+  ]
+ },
+ {
+  "key": "tec22-309",
+  "concept": "tech.computing.v22_minecraft_java",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quel langage de programmation la première version de Minecraft a-t-elle été écrite ?",
+  "explanation": "C'est pourquoi on parle encore de « Minecraft Java Edition », à côté de la « Bedrock Edition ».",
+  "options": [
+   "Java*",
+   "Python",
+   "C",
+   "JavaScript"
+  ]
+ },
+ {
+  "key": "tec22-310",
+  "concept": "tech.computing.v22_dark_web",
+  "label": "Internet",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce que le « dark web » ?",
+  "explanation": "Il sert à des activités illégales, mais aussi à des journalistes et opposants qui doivent rester anonymes.",
+  "options": [
+   "Une partie d'Internet accessible seulement avec des logiciels spéciaux, qui cachent l'identité*",
+   "Internet la nuit",
+   "Les sites en mode sombre",
+   "Un réseau réservé à l'armée"
+  ]
+ },
+ {
+  "key": "tec22-311",
+  "concept": "tech.computing.v22_hacker_ethique",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que fait un « hacker éthique » ?",
+  "explanation": "Des entreprises offrent même des récompenses, les « bug bounties », à ceux qui signalent leurs failles.",
+  "options": [
+   "Il cherche les failles d'un système pour aider à les corriger*",
+   "Il vole des données pour les revendre",
+   "Il crée des virus pour s'amuser",
+   "Il pirate des jeux vidéo"
+  ]
+ },
+ {
+  "key": "tec22-312",
+  "concept": "tech.computing.v22_arduino",
+  "label": "Électronique",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce qu'Arduino, né en Italie en 2005 ?",
+  "explanation": "Très utilisée par les bricoleurs et dans les écoles, pour piloter des lumières, des moteurs ou des capteurs.",
+  "options": [
+   "Une petite carte électronique programmable pour créer ses propres objets*",
+   "Un fabricant de voitures",
+   "Un système d'exploitation pour téléphones",
+   "Un jeu de construction en bois"
+  ]
+ },
+ {
+  "key": "tec22-313",
+  "concept": "tech.computing.v22_domotique",
+  "label": "Maison connectée",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'appelle-t-on la « domotique » ?",
+  "explanation": "Du latin « domus », la maison.",
+  "options": [
+   "L'automatisation de la maison : volets, chauffage, lumières…*",
+   "L'étude des animaux domestiques",
+   "Le ménage fait par des robots uniquement",
+   "La construction de maisons en bois"
+  ]
+ },
+ {
+  "key": "tec22-314",
+  "concept": "tech.computing.v22_emulateur",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'est-ce qu'un « émulateur » ?",
+  "explanation": "Il permet de faire tourner d'anciens jeux sur un ordinateur moderne.",
+  "options": [
+   "Un logiciel qui imite une autre machine, par exemple une vieille console*",
+   "Un concurrent dans un tournoi",
+   "Un écran tactile",
+   "Un antivirus"
+  ]
+ },
+ {
+  "key": "tec22-315",
+  "concept": "tech.computing.v22_cloud_gaming",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'est-ce que le « cloud gaming » ?",
+  "explanation": "Plus besoin d'une machine puissante… mais il faut une très bonne connexion.",
+  "options": [
+   "Jouer à un jeu qui tourne sur un serveur distant, l'image arrivant par Internet*",
+   "Jouer dehors",
+   "Un jeu sur les nuages",
+   "Télécharger un jeu plus vite"
+  ]
+ },
+ {
+  "key": "tec22-316",
+  "concept": "tech.computing.v22_tf_sms_sans_internet",
+  "label": "Téléphones",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "On peut envoyer un SMS classique sans connexion Internet.",
+  "explanation": "Le SMS passe par le réseau mobile, pas par Internet. Il suffit d'avoir du réseau.",
+  "answer": true
+ },
+ {
+  "key": "tec22-317",
+  "concept": "tech.computing.v22_tf_wifi_internet",
+  "label": "Internet",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le Wi-Fi et Internet, c'est la même chose.",
+  "explanation": "Le Wi-Fi relie tes appareils à ta box, sans fil. Internet, c'est le réseau mondial auquel la box est reliée.",
+  "answer": false
+ },
+ {
+  "key": "tec22-318",
+  "concept": "tech.computing.v22_tf_avion_photo",
+  "label": "Téléphones",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Un téléphone en mode avion peut toujours prendre des photos.",
+  "explanation": "Le mode avion coupe seulement les communications sans fil.",
+  "answer": true
+ },
+ {
+  "key": "tec22-319",
+  "concept": "tech.computing.v22_tf_riz_telephone",
+  "label": "Téléphones",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Mettre un téléphone mouillé dans du riz est la méthode recommandée par Apple pour le sécher.",
+  "explanation": "Apple le déconseille : des grains de poussière peuvent abîmer le téléphone. Mieux vaut le laisser sécher à l'air.",
+  "answer": false
+ },
+ {
+  "key": "tec22-320",
+  "concept": "tech.computing.v22_tf_fermer_applis",
+  "label": "Téléphones",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Fermer toutes les applications en arrière-plan fait toujours économiser de la batterie.",
+  "explanation": "Les relancer ensuite consomme souvent plus. Les systèmes récents gèrent très bien les applications en pause.",
+  "answer": false
+ },
+ {
+  "key": "tec22-321",
+  "concept": "tech.computing.v22_tf_cookies_virus",
+  "label": "Internet",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Les cookies sont de petits programmes qui peuvent infecter un ordinateur.",
+  "explanation": "Ce sont de simples fichiers texte. Ils posent surtout des questions de vie privée.",
+  "answer": false
+ },
+ {
+  "key": "tec22-322",
+  "concept": "tech.computing.v22_tf_qr_lien",
+  "label": "Internet",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Un QR code peut contenir l'adresse d'un site web.",
+  "explanation": "Il peut aussi contenir un texte, un code Wi-Fi ou un numéro de téléphone.",
+  "answer": true
+ },
+ {
+  "key": "tec22-323",
+  "concept": "tech.computing.v22_tf_email_annuler",
+  "label": "Internet",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Un e-mail envoyé peut toujours être annulé.",
+  "explanation": "Certaines messageries laissent quelques secondes pour annuler. Après, le message est parti.",
+  "answer": false
+ },
+ {
+  "key": "tec22-324",
+  "concept": "tech.computing.v22_tf_mots_passe_navigateur",
+  "label": "Sécurité",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Utiliser un gestionnaire de mots de passe permet d'avoir un mot de passe différent pour chaque site sans tous les retenir.",
+  "explanation": "Il suffit de retenir un seul mot de passe principal, très solide.",
+  "answer": true
+ },
+ {
+  "key": "tec22-325",
+  "concept": "tech.computing.v22_tf_mise_a_jour_inutile",
+  "label": "Sécurité",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Les mises à jour d'un téléphone ne servent qu'à changer son apparence.",
+  "explanation": "Elles corrigent surtout des failles de sécurité. Il vaut mieux les installer.",
+  "answer": false
+ },
+ {
+  "key": "tec22-326",
+  "concept": "tech.inventions.v22_tf_led_lumiere_bleue",
+  "label": "Écrans",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les écrans émettent une lumière bleue qui peut perturber l'endormissement.",
+  "explanation": "Elle freine la production de mélatonine, l'hormone du sommeil. D'où les modes « nuit » aux couleurs plus chaudes.",
+  "answer": true
+ },
+ {
+  "key": "tec22-327",
+  "concept": "tech.inventions.v22_tf_voiture_electrique_ancienne",
+  "label": "Transports",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Les voitures électriques existaient déjà au XIXe siècle.",
+  "explanation": "Vers 1900, un tiers des voitures américaines étaient électriques. L'essence, moins chère et plus pratique, les a remplacées.",
+  "answer": true
+ },
+ {
+  "key": "tec22-328",
+  "concept": "tech.inventions.v22_tf_ascenseur_vertige",
+  "label": "Inventions",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le jour de l'ouverture de la tour Eiffel au public, en 1889, les visiteurs pouvaient déjà prendre l'ascenseur.",
+  "explanation": "Les ascenseurs n'étaient pas encore prêts : les premiers visiteurs ont dû monter à pied, plus de 1 700 marches jusqu'au sommet.",
+  "answer": false
+ },
+ {
+  "key": "tec22-329",
+  "concept": "tech.brands.v22_facile_bigmac",
+  "label": "Marques",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quelle chaîne de restaurants peut-on commander un « Big Mac » ?",
+  "explanation": "Il a été créé en 1967 par un franchisé de Pennsylvanie.",
+  "options": [
+   "McDonald's*",
+   "Burger King",
+   "Quick",
+   "KFC"
+  ]
+ },
+ {
+  "key": "tec22-330",
+  "concept": "tech.brands.v22_facile_ipad",
+  "label": "Marques",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle marque fabrique l'iPad ?",
+  "explanation": "Le premier iPad est sorti en 2010.",
+  "options": [
+   "Apple*",
+   "Samsung",
+   "Sony",
+   "Microsoft"
+  ]
+ },
+ {
+  "key": "tec22-331",
+  "concept": "tech.brands.v22_facile_trois_bandes",
+  "label": "Marques",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quelle marque de sport est reconnaissable à ses trois bandes ?",
+  "explanation": "Elles décorent ses chaussures depuis les années 1950.",
+  "options": [
+   "Adidas*",
+   "Nike",
+   "Puma",
+   "Reebok"
+  ]
+ },
+ {
+  "key": "tec22-332",
+  "concept": "tech.brands.v22_facile_twingo",
+  "label": "Marques",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel constructeur fabrique la Twingo ?",
+  "explanation": "Lancée en 1993, elle a marqué par sa forme de « smiley ».",
+  "options": [
+   "Renault*",
+   "Peugeot",
+   "Citroën",
+   "Fiat"
+  ]
+ },
+ {
+  "key": "tec22-333",
+  "concept": "tech.brands.v22_facile_coca_bouteille",
+  "label": "Marques",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle boisson est célèbre pour sa bouteille en verre aux formes arrondies, reconnaissable même dans le noir ?",
+  "explanation": "Dessinée en 1915, elle devait pouvoir être reconnue au toucher, et même brisée au sol.",
+  "options": [
+   "Coca-Cola*",
+   "Orangina",
+   "Perrier",
+   "Schweppes"
+  ]
+ },
+ {
+  "key": "tec22-334",
+  "concept": "tech.brands.v22_tiffany_bleu",
+  "label": "Marques",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle couleur sont les célèbres boîtes du bijoutier Tiffany & Co. ?",
+  "explanation": "Un bleu « œuf de rouge-gorge », déposé comme marque.",
+  "options": [
+   "Bleu clair*",
+   "Rouge",
+   "Noir",
+   "Doré"
+  ]
+ },
+ {
+  "key": "tec22-335",
+  "concept": "tech.brands.v22_opel_eclair",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle marque automobile a pour logo un éclair ?",
+  "explanation": "L'éclair vient d'un camion Opel de 1937, le « Blitz », qui veut dire « éclair » en allemand.",
+  "options": [
+   "Opel*",
+   "Tesla",
+   "Dacia",
+   "Kia"
+  ]
+ },
+ {
+  "key": "tec22-336",
+  "concept": "tech.brands.v22_facebook_bleu",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "De quelle couleur est principalement le logo de Facebook ?",
+  "explanation": "Le « f » blanc sur fond bleu est l'une des images les plus connues du monde.",
+  "options": [
+   "Bleu*",
+   "Rouge",
+   "Vert",
+   "Jaune"
+  ]
+ },
+ {
+  "key": "tec22-337",
+  "concept": "tech.brands.v22_vinted_seconde_main",
+  "label": "Entreprises",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que vend-on sur Vinted ?",
+  "explanation": "Créé en 2008 en Lituanie, le site compte des millions d'utilisateurs en France.",
+  "options": [
+   "Surtout des vêtements d'occasion*",
+   "Des billets de concert",
+   "Des voitures",
+   "Des repas"
+  ]
+ },
+ {
+  "key": "tec22-338",
+  "concept": "tech.brands.v22_nintendo_switch2",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle console Nintendo a succédé à la Switch, en 2025 ?",
+  "explanation": "Elle reprend le principe d'une console à la fois portable et de salon.",
+  "options": [
+   "La Switch 2*",
+   "La Wii U",
+   "La Switch Pro",
+   "La GameCube 2"
+  ]
+ },
+ {
+  "key": "tec22-339",
+  "concept": "tech.brands.v22_spotify_suede",
+  "label": "Entreprises",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel pays la plateforme de musique Spotify est-elle née ?",
+  "explanation": "Lancée en 2008 à Stockholm. Le rival français s'appelle Deezer.",
+  "options": [
+   "La Suède*",
+   "Les États-Unis",
+   "Le Royaume-Uni",
+   "La France"
+  ]
+ },
+ {
+  "key": "tec22-340",
+  "concept": "tech.brands.v22_leclerc_fondateur",
+  "label": "Entreprises",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quelle région Édouard Leclerc a-t-il ouvert son premier magasin, en 1949 ?",
+  "explanation": "À Landerneau, dans le Finistère. Il voulait vendre moins cher en supprimant des intermédiaires.",
+  "options": [
+   "En Bretagne*",
+   "En Alsace",
+   "En Provence",
+   "En Normandie"
+  ]
+ },
+ {
+  "key": "tec22-341",
+  "concept": "tech.brands.v22_nespresso_clooney",
+  "label": "Publicité",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel acteur américain a longtemps été le visage des publicités Nespresso ?",
+  "explanation": "Depuis 2006, avec la réplique « What else? ».",
+  "options": [
+   "George Clooney*",
+   "Brad Pitt",
+   "Tom Cruise",
+   "Leonardo DiCaprio"
+  ]
+ },
+ {
+  "key": "tec22-342",
+  "concept": "tech.brands.v22_kfc_colonel",
+  "label": "Marques",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui est le vieux monsieur à barbichette du logo de KFC ?",
+  "explanation": "Harland Sanders a créé sa recette de poulet frit dans une station-service du Kentucky.",
+  "options": [
+   "Le colonel Sanders, fondateur de la chaîne*",
+   "Un acteur",
+   "Un général américain",
+   "Le grand-père d'un fondateur"
+  ]
+ },
+ {
+  "key": "tec22-343",
+  "concept": "tech.brands.v22_tf_facebook_daltonien",
+  "label": "Logos",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le logo de Facebook est bleu en partie parce que son fondateur est daltonien.",
+  "explanation": "Mark Zuckerberg l'a lui-même expliqué : le bleu est la couleur qu'il voit le mieux.",
+  "answer": true
+ },
+ {
+  "key": "tec22-344",
+  "concept": "tech.brands.v22_tf_adidas_bandes_achetees",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Les trois bandes d'Adidas ont été achetées à une autre marque.",
+  "explanation": "À la marque finlandaise Karhu, en 1952.",
+  "answer": true
+ },
+ {
+  "key": "tec22-345",
+  "concept": "tech.brands.v22_tf_mcdo_premier_fr",
+  "label": "Marques",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "McDonald's est une entreprise française.",
+  "explanation": "Elle est américaine, née en Californie en 1940.",
+  "answer": false
+ },
+ {
+  "key": "tec22-346",
+  "concept": "tech.brands.v22_tf_ikea_meubles_debut",
+  "label": "Débuts d'entreprises",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Ikea a vendu des meubles dès sa création.",
+  "explanation": "Ingvar Kamprad vendait d'abord des stylos, des portefeuilles, des cadres et des montres. Les meubles sont arrivés en 1948.",
+  "answer": false
+ },
+ {
+  "key": "tec22-347",
+  "concept": "tech.brands.v22_android_robot",
+  "label": "Logos",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que représente le logo d'Android ?",
+  "explanation": "Il s'inspirerait des pictogrammes « Hommes » et « Femmes » des toilettes.",
+  "options": [
+   "Un petit robot vert*",
+   "Une pomme verte",
+   "Un oiseau bleu",
+   "Un téléphone"
+  ]
+ },
+ {
+  "key": "tec22-348",
+  "concept": "tech.brands.v22_lego_minifig",
+  "label": "Jeux et jouets",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment s'appelle le petit personnage Lego, apparu en 1978 ?",
+  "explanation": "Elle mesure environ 4 centimètres. Pendant ses premières années, elle avait toujours le même sourire jaune.",
+  "options": [
+   "La minifig*",
+   "Le Legoman",
+   "Le Playmo",
+   "Le Brickboy"
+  ]
+ },
+ {
+  "key": "tec22-349",
+  "concept": "tech.computing.v22_emoji_oxford",
+  "label": "Émojis",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel émoji le dictionnaire Oxford a-t-il élu « mot de l'année » en 2015 ?",
+  "explanation": "C'était l'émoji le plus utilisé au monde cette année-là.",
+  "options": [
+   "Le visage qui pleure de rire 😂*",
+   "Le cœur rouge ❤️",
+   "Le pouce levé 👍",
+   "Le visage qui sourit 🙂"
+  ]
+ },
+ {
+  "key": "tec22-350",
+  "concept": "tech.computing.v22_barre_espace",
+  "label": "Clavier",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle est la touche la plus large d'un clavier d'ordinateur ?",
+  "explanation": "C'est aussi la touche la plus utilisée : on tape un espace tous les cinq ou six caractères.",
+  "options": [
+   "La barre d'espace*",
+   "La touche Entrée",
+   "La touche Maj",
+   "La touche Échap"
+  ]
+ }
+]
