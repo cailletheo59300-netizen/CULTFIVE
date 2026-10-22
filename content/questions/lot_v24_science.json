@@ -1,0 +1,4900 @@
+[
+ {
+  "key": "sci24-001",
+  "concept": "science.physics.v24_glace_glisse",
+  "label": "Physique du quotidien",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi glisse-t-on si facilement sur la glace ?",
+  "explanation": "Même très en dessous de 0 °C, les molécules de la surface restent mobiles, comme un film d'eau. Les scientifiques en débattent encore les détails.",
+  "options": [
+   "Sa surface est couverte d'une très fine couche d'eau*",
+   "La glace est parfaitement lisse",
+   "Nos chaussures fondent",
+   "Le froid durcit les semelles"
+  ]
+ },
+ {
+  "key": "sci24-002",
+  "concept": "science.physics.v24_patineuse_bras",
+  "label": "Physique du quotidien",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi une patineuse tourne-t-elle plus vite quand elle ramène ses bras contre elle ?",
+  "explanation": "C'est la conservation du « moment cinétique ». Les étoiles qui s'effondrent tournent aussi de plus en plus vite.",
+  "options": [
+   "Sa masse se rapproche de l'axe de rotation, ce qui accélère sa rotation*",
+   "Elle pousse plus fort avec ses patins",
+   "L'air la freine moins",
+   "Ses bras pèsent moins lourd"
+  ]
+ },
+ {
+  "key": "sci24-003",
+  "concept": "science.physics.v24_couvercle_bouillir",
+  "label": "Physique du quotidien",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi l'eau des pâtes bout-elle plus vite avec un couvercle ?",
+  "explanation": "Cela économise aussi de l'énergie, jusqu'à un tiers environ.",
+  "options": [
+   "La chaleur et la vapeur s'échappent moins*",
+   "Le couvercle chauffe l'eau",
+   "L'eau devient plus légère",
+   "Le couvercle fait monter le sel"
+  ]
+ },
+ {
+  "key": "sci24-004",
+  "concept": "science.physics.v24_trainees_avion",
+  "label": "Physique du quotidien",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "D'où viennent les traînées blanches laissées par les avions dans le ciel ?",
+  "explanation": "À 10 km d'altitude, il fait souvent −40 °C : la vapeur gèle aussitôt, comme notre souffle en hiver.",
+  "options": [
+   "La vapeur d'eau des moteurs se transforme en cristaux de glace*",
+   "De la fumée colorée",
+   "Du carburant non brûlé",
+   "De la poussière soulevée"
+  ]
+ },
+ {
+  "key": "sci24-005",
+  "concept": "science.physics.v24_ciel_noir_nuit",
+  "label": "Physique",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Si l'Univers contient d'innombrables étoiles, pourquoi le ciel est-il noir la nuit ?",
+  "explanation": "C'est le « paradoxe d'Olbers ». L'expansion de l'Univers étire aussi la lumière, qui devient invisible.",
+  "options": [
+   "L'Univers a un âge et s'étend : la lumière des plus lointaines ne nous est pas encore parvenue*",
+   "Les nuages cachent les étoiles",
+   "Les étoiles s'éteignent la nuit",
+   "La Lune absorbe leur lumière"
+  ]
+ },
+ {
+  "key": "sci24-006",
+  "concept": "science.physics.v24_bulles_couleurs",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi les bulles de savon sont-elles colorées ?",
+  "explanation": "Ce sont des « interférences ». Juste avant d'éclater, la bulle, devenue très fine, paraît noire.",
+  "options": [
+   "La lumière se reflète sur les deux faces de leur fine paroi, et certaines couleurs se renforcent*",
+   "Le savon contient des colorants",
+   "Elles reflètent le ciel",
+   "L'air à l'intérieur est coloré"
+  ]
+ },
+ {
+  "key": "sci24-007",
+  "concept": "science.physics.v24_miroir_inverse",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Un miroir semble inverser la gauche et la droite. Que fait-il vraiment ?",
+  "explanation": "Ton reflet a la main levée du même côté que toi. C'est notre cerveau qui imagine quelqu'un s'étant retourné en face de nous.",
+  "options": [
+   "Il inverse l'avant et l'arrière*",
+   "Il inverse le haut et le bas",
+   "Il inverse tout",
+   "Il n'inverse rien du tout"
+  ]
+ },
+ {
+  "key": "sci24-008",
+  "concept": "science.physics.v24_voix_helium",
+  "label": "Son",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi la voix devient-elle aiguë quand on respire de l'hélium ?",
+  "explanation": "Les cordes vocales vibrent pareil, mais la « caisse de résonance » de la gorge renforce des sons plus aigus. Attention : en respirer est dangereux.",
+  "options": [
+   "Le son va plus vite dans l'hélium, ce qui change la résonance de la voix*",
+   "L'hélium rétrécit les cordes vocales",
+   "L'hélium chatouille la gorge",
+   "L'hélium fait vibrer les dents"
+  ]
+ },
+ {
+  "key": "sci24-009",
+  "concept": "science.physics.v24_verre_buee",
+  "label": "Physique du quotidien",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi des gouttes se forment-elles sur un verre d'eau très froide, en été ?",
+  "explanation": "C'est le même phénomène que la buée sur un miroir de salle de bains.",
+  "options": [
+   "La vapeur d'eau de l'air se condense au contact du verre froid*",
+   "L'eau traverse le verre",
+   "Le verre transpire",
+   "C'est de l'eau qui a débordé"
+  ]
+ },
+ {
+  "key": "sci24-010",
+  "concept": "science.physics.v24_sous_marin",
+  "label": "Physique",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment un sous-marin fait-il pour plonger ?",
+  "explanation": "Pour remonter, il chasse l'eau des ballasts avec de l'air comprimé.",
+  "options": [
+   "Il remplit d'eau des réservoirs, les ballasts*",
+   "Il éteint ses moteurs",
+   "Il devient plus froid",
+   "Il aspire l'air extérieur"
+  ]
+ },
+ {
+  "key": "sci24-011",
+  "concept": "science.physics.v24_satellite_tombe",
+  "label": "Physique",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi un satellite ne retombe-t-il pas sur la Terre ?",
+  "explanation": "Newton l'avait imaginé avec un boulet de canon tiré de plus en plus fort depuis une montagne.",
+  "options": [
+   "Il tombe sans cesse, mais va si vite de côté qu'il « rate » toujours la Terre*",
+   "Il n'y a pas de gravité dans l'espace",
+   "Ses moteurs le poussent en permanence",
+   "Il est accroché à une orbite invisible"
+  ]
+ },
+ {
+  "key": "sci24-012",
+  "concept": "science.physics.v24_balle_train",
+  "label": "Physique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans un train qui roule tout droit à vitesse constante, tu lâches une balle. Où tombe-t-elle ?",
+  "explanation": "La balle avance déjà à la vitesse du train. C'est l'idée de la relativité de Galilée.",
+  "options": [
+   "À tes pieds, comme à l'arrêt*",
+   "Derrière toi",
+   "Devant toi",
+   "Elle flotte un instant"
+  ]
+ },
+ {
+  "key": "sci24-013",
+  "concept": "science.physics.v24_pendule",
+  "label": "Physique",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quoi dépend le temps que met un pendule pour faire un aller-retour ?",
+  "explanation": "Galilée l'aurait remarqué en observant un lustre dans la cathédrale de Pise, en mesurant le temps avec son pouls.",
+  "options": [
+   "Surtout de la longueur de son fil*",
+   "Surtout de la masse accrochée",
+   "De la couleur du fil",
+   "De la force avec laquelle on le lance"
+  ]
+ },
+ {
+  "key": "sci24-014",
+  "concept": "science.physics.v24_metal_bois_froid",
+  "label": "Chaleur",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "En hiver, une poignée en métal paraît plus froide qu'une poignée en bois, à la même température. Pourquoi ?",
+  "explanation": "Nos doigts ne mesurent pas la température, mais la vitesse à laquelle ils perdent de la chaleur.",
+  "options": [
+   "Le métal emporte plus vite la chaleur de la main*",
+   "Le métal est vraiment plus froid",
+   "Le bois produit de la chaleur",
+   "Le métal attire le froid"
+  ]
+ },
+ {
+  "key": "sci24-015",
+  "concept": "science.physics.v24_souffler_soupe",
+  "label": "Chaleur",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi souffler sur une soupe chaude la refroidit-il ?",
+  "explanation": "C'est la même raison pour laquelle on a froid en sortant de l'eau, quand il y a du vent.",
+  "options": [
+   "On chasse la vapeur, ce qui accélère l'évaporation qui emporte la chaleur*",
+   "Le souffle est glacé",
+   "On ajoute de l'air froid dans la soupe",
+   "On fait descendre la soupe"
+  ]
+ },
+ {
+  "key": "sci24-016",
+  "concept": "science.physics.v24_cage_faraday",
+  "label": "Électricité",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi est-on en général protégé de la foudre à l'intérieur d'une voiture ?",
+  "explanation": "C'est l'effet « cage de Faraday ». Contrairement à une idée reçue, les pneus n'y sont pour rien.",
+  "options": [
+   "La carrosserie métallique fait passer le courant autour des passagers*",
+   "Les pneus en caoutchouc isolent",
+   "La foudre ne tombe jamais sur une voiture",
+   "Les vitres arrêtent l'électricité"
+  ]
+ },
+ {
+  "key": "sci24-017",
+  "concept": "science.physics.v24_fil_terre",
+  "label": "Électricité",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quelle couleur est le fil de terre dans une installation électrique, en France ?",
+  "explanation": "Il évacue le courant vers le sol en cas de défaut, pour éviter l'électrocution.",
+  "options": [
+   "Vert et jaune*",
+   "Rouge",
+   "Bleu",
+   "Noir"
+  ]
+ },
+ {
+  "key": "sci24-018",
+  "concept": "science.physics.v24_mains_mouillees",
+  "label": "Électricité",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pourquoi ne faut-il pas toucher un appareil électrique avec les mains mouillées ?",
+  "explanation": "Une peau mouillée résiste beaucoup moins au courant qu'une peau sèche.",
+  "options": [
+   "L'eau laisse passer plus facilement le courant dans le corps*",
+   "L'eau abîme seulement l'appareil",
+   "Les mains glissent",
+   "L'appareil s'éteint"
+  ]
+ },
+ {
+  "key": "sci24-019",
+  "concept": "science.physics.v24_objets_couleurs",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi une tomate paraît-elle rouge ?",
+  "explanation": "Sous une lumière bleue pure, elle paraîtrait presque noire.",
+  "options": [
+   "Elle renvoie surtout la lumière rouge et absorbe les autres couleurs*",
+   "Elle produit de la lumière rouge",
+   "Elle chauffe la lumière",
+   "Elle filtre le bleu du ciel"
+  ]
+ },
+ {
+  "key": "sci24-020",
+  "concept": "science.physics.v24_voix_enregistree",
+  "label": "Son",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi notre voix enregistrée nous semble-t-elle étrange ?",
+  "explanation": "Les os transmettent mieux les sons graves : on se croit la voix plus grave qu'elle ne l'est.",
+  "options": [
+   "Quand on parle, on l'entend aussi à travers les os du crâne*",
+   "Les micros déforment toujours la voix",
+   "Nos oreilles sont trop proches de la bouche",
+   "La voix change avec l'âge"
+  ]
+ },
+ {
+  "key": "sci24-021",
+  "concept": "science.physics.v24_krakatoa",
+  "label": "Son",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel événement a produit l'un des sons les plus forts de l'histoire, entendu à 4 800 km de là, en 1883 ?",
+  "explanation": "On l'aurait entendu jusqu'à l'île Rodrigues, dans l'océan Indien, comme des coups de canon lointains.",
+  "options": [
+   "L'éruption du Krakatoa*",
+   "Le premier essai nucléaire",
+   "La chute d'une météorite en Sibérie",
+   "Un orage en Inde"
+  ]
+ },
+ {
+  "key": "sci24-022",
+  "concept": "science.physics.v24_echographie",
+  "label": "Son",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'utilise une échographie pour voir à l'intérieur du corps ?",
+  "explanation": "Comme la chauve-souris, l'appareil écoute l'écho des sons sur les organes. C'est sans danger pour le bébé.",
+  "options": [
+   "Des ultrasons*",
+   "Des rayons X",
+   "Des aimants",
+   "De la lumière infrarouge"
+  ]
+ },
+ {
+  "key": "sci24-023",
+  "concept": "science.physics.v24_aluminium_cote",
+  "label": "Idées reçues",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Le papier d'aluminium a un côté brillant et un côté mat. Pourquoi ?",
+  "explanation": "Les deux côtés font presque exactement le même effet en cuisine.",
+  "options": [
+   "À cause de la fabrication : la dernière feuille passe entre des rouleaux polis d'un seul côté*",
+   "Pour cuire plus vite côté brillant",
+   "Pour garder le froid côté mat",
+   "Le côté mat est en plastique"
+  ]
+ },
+ {
+  "key": "sci24-024",
+  "concept": "science.physics.v24_calorie",
+  "label": "Énergie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une « calorie » sur un emballage alimentaire correspond en réalité à…",
+  "explanation": "C'est l'énergie qu'il faut pour chauffer d'un degré un litre d'eau.",
+  "options": [
+   "1 000 calories des physiciens (une kilocalorie)*",
+   "Un gramme de sucre",
+   "Un joule",
+   "Un gramme de graisse"
+  ]
+ },
+ {
+  "key": "sci24-025",
+  "concept": "science.physics.v24_barrage_energie",
+  "label": "Énergie",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle énergie un barrage hydroélectrique transforme-t-il en électricité ?",
+  "explanation": "L'eau retenue en hauteur dévale des conduites et fait tourner des turbines.",
+  "options": [
+   "L'énergie de l'eau qui tombe*",
+   "La chaleur de l'eau",
+   "Le sel de l'eau",
+   "L'énergie du vent sur le lac"
+  ]
+ },
+ {
+  "key": "sci24-026",
+  "concept": "science.physics.v24_archimede_eureka",
+  "label": "Savants",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Selon la légende, où Archimède s'est-il écrié « Eurêka ! » (« J'ai trouvé ! ») ?",
+  "explanation": "En voyant l'eau déborder, il aurait compris comment vérifier si une couronne était en or pur, en mesurant son volume.",
+  "options": [
+   "Dans son bain*",
+   "Au sommet d'une tour",
+   "Sous un pommier",
+   "Sur un bateau"
+  ]
+ },
+ {
+  "key": "sci24-027",
+  "concept": "science.physics.v24_newton_pomme",
+  "label": "Savants",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel fruit, en tombant, aurait inspiré à Newton sa réflexion sur la gravitation ?",
+  "explanation": "L'anecdote vient de Newton lui-même, qui la racontait à la fin de sa vie. Le pommier existerait toujours, en Angleterre.",
+  "options": [
+   "Une pomme*",
+   "Une poire",
+   "Une orange",
+   "Une cerise"
+  ]
+ },
+ {
+  "key": "sci24-028",
+  "concept": "science.physics.v24_faraday",
+  "label": "Savants",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Michael Faraday, pionnier de l'électricité et du moteur électrique, avait une particularité. Laquelle ?",
+  "explanation": "Fils de forgeron, apprenti relieur, il a appris la science en lisant les livres qu'il reliait.",
+  "options": [
+   "Il était autodidacte et ne connaissait presque pas les mathématiques*",
+   "Il était aveugle",
+   "Il était roi d'Angleterre",
+   "Il n'a jamais vu d'aimant"
+  ]
+ },
+ {
+  "key": "sci24-029",
+  "concept": "science.physics.v24_fresnel",
+  "label": "Savants",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'a inventé le physicien français Augustin Fresnel, au XIXe siècle ?",
+  "explanation": "Ses lentilles plus fines et légères concentrent la lumière : les phares portent bien plus loin. On les retrouve dans les rétroprojecteurs.",
+  "options": [
+   "Une lentille à anneaux pour les phares*",
+   "Le microscope",
+   "La loupe",
+   "Les lunettes de soleil"
+  ]
+ },
+ {
+  "key": "sci24-030",
+  "concept": "science.physics.v24_ampere",
+  "label": "Savants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le physicien André-Marie Ampère, qui a donné son nom à l'unité de l'intensité électrique, était originaire de…",
+  "explanation": "Il a été l'un des fondateurs de l'électromagnétisme, au début du XIXe siècle.",
+  "options": [
+   "Lyon*",
+   "Paris",
+   "Marseille",
+   "Lille"
+  ]
+ },
+ {
+  "key": "sci24-031",
+  "concept": "science.physics.v24_pascal_tonneau",
+  "label": "Savants",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle expérience aurait faite Blaise Pascal pour montrer la puissance de la pression de l'eau ?",
+  "explanation": "Quelques litres d'eau dans un tube très haut suffisent à faire céder le tonneau : seule la hauteur compte.",
+  "options": [
+   "Faire éclater un tonneau avec un long tube rempli d'eau*",
+   "Faire flotter un bateau en fer",
+   "Geler un lac",
+   "Faire bouillir de l'eau en montagne"
+  ]
+ },
+ {
+  "key": "sci24-032",
+  "concept": "science.physics.v24_schrodinger",
+  "label": "Savants",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel animal est enfermé dans la célèbre « expérience de pensée » du physicien Erwin Schrödinger ?",
+  "explanation": "Le chat serait à la fois mort et vivant tant qu'on n'ouvre pas la boîte. Schrödinger voulait montrer l'absurdité de certaines idées quantiques.",
+  "options": [
+   "Un chat*",
+   "Un chien",
+   "Une souris",
+   "Un perroquet"
+  ]
+ },
+ {
+  "key": "sci24-033",
+  "concept": "science.physics.v24_pa_savants_unites",
+  "label": "Savants",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque savant à ce que mesure l'unité qui porte son nom.",
+  "explanation": "Volta a donné le volt, Watt le watt, Newton le newton et Pascal le pascal.",
+  "pairs": [
+   [
+    "Newton",
+    "Une force"
+   ],
+   [
+    "Watt",
+    "Une puissance"
+   ],
+   [
+    "Volta",
+    "Une tension"
+   ],
+   [
+    "Pascal",
+    "Une pression"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-034",
+  "concept": "science.physics.v24_pa_ondes",
+  "label": "Lumière",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque type d'ondes à un usage courant.",
+  "explanation": "Toutes ces ondes sont de la même famille que la lumière visible, avec des longueurs d'onde différentes.",
+  "pairs": [
+   [
+    "Rayons X",
+    "Radiographie"
+   ],
+   [
+    "Infrarouges",
+    "Télécommande"
+   ],
+   [
+    "Ultraviolets",
+    "Bronzage"
+   ],
+   [
+    "Micro-ondes",
+    "Réchauffer un plat"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-035",
+  "concept": "science.physics.v24_or_vitesses",
+  "label": "Physique",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces vitesses de la plus lente à la plus rapide.",
+  "explanation": "Environ 2 m/s, 340 m/s, 1 000 m/s et 300 000 km/s.",
+  "items": [
+   "Un nageur olympique",
+   "Le son dans l'air",
+   "Une balle de fusil",
+   "La lumière"
+  ]
+ },
+ {
+  "key": "sci24-036",
+  "concept": "science.physics.v24_or_echelles",
+  "label": "Physique",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces objets du plus petit au plus grand.",
+  "explanation": "Un dixième de milliardième de mètre, une centaine de nanomètres, quelques micromètres, puis environ un millimètre.",
+  "items": [
+   "Atome",
+   "Virus",
+   "Bactérie",
+   "Grain de sable"
+  ]
+ },
+ {
+  "key": "sci24-037",
+  "concept": "science.physics.v24_co_frequence_prise",
+  "label": "Électricité",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "À quelle fréquence (en hertz) change de sens le courant des prises françaises ?",
+  "explanation": "Le courant alterne 50 fois par seconde. En Amérique du Nord, c'est 60 Hz.",
+  "answer": 50,
+  "tolerance": 0,
+  "min": 0,
+  "max": 120,
+  "start": 0
+ },
+ {
+  "key": "sci24-038",
+  "concept": "science.physics.v24_co_lhc",
+  "label": "Physique",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien de kilomètres mesure l'anneau du grand collisionneur de particules du CERN (LHC), sous la frontière franco-suisse ?",
+  "explanation": "Les particules y font plus de 11 000 tours par seconde, presque à la vitesse de la lumière.",
+  "answer": 27,
+  "tolerance": 2,
+  "min": 5,
+  "max": 60,
+  "start": 5
+ },
+ {
+  "key": "sci24-039",
+  "concept": "science.physics.v24_ga_gravite_mars",
+  "label": "Physique",
+  "type": "gauge",
+  "difficulty": 65,
+  "prompt": "Sur Mars, on pèse quelle part de notre poids terrestre ?",
+  "explanation": "Environ 38 % : un enfant de 30 kg aurait l'impression d'en peser 11.",
+  "answer": 38,
+  "tolerance": 8,
+  "unit": "%"
+ },
+ {
+  "key": "sci24-040",
+  "concept": "science.physics.v24_vitesse_liberation",
+  "label": "Physique",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle vitesse faut-il atteindre pour échapper à l'attraction de la Terre (vitesse de libération) ?",
+  "explanation": "Plus de 40 000 km/h. Pour rester en orbite basse, « seulement » 8 km/s suffisent.",
+  "options": [
+   "Environ 11 km par seconde*",
+   "Environ 1 km par seconde",
+   "Environ 100 km par seconde",
+   "La vitesse de la lumière"
+  ]
+ },
+ {
+  "key": "sci24-041",
+  "concept": "science.physics.v24_mach1",
+  "label": "Son",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "À quelle vitesse environ va un avion qui atteint « Mach 1 » au niveau de la mer ?",
+  "explanation": "Mach 1, c'est la vitesse du son. Elle baisse en altitude, là où l'air est plus froid.",
+  "options": [
+   "Environ 1 200 km/h*",
+   "Environ 300 km/h",
+   "Environ 5 000 km/h",
+   "Environ 100 km/h"
+  ]
+ },
+ {
+  "key": "sci24-042",
+  "concept": "science.physics.v24_le_aimant",
+  "label": "Magnétisme",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Objet qui attire le fer.",
+  "explanation": "Les plus anciens aimants connus étaient des pierres naturelles, la magnétite.",
+  "word": "AIMANT",
+  "display": "Aimant"
+ },
+ {
+  "key": "sci24-043",
+  "concept": "science.physics.v24_le_prisme",
+  "label": "Lumière",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Bloc de verre qui décompose la lumière blanche en couleurs.",
+  "explanation": "C'est avec lui que Newton a étudié les couleurs de la lumière.",
+  "word": "PRISME",
+  "display": "Prisme"
+ },
+ {
+  "key": "sci24-044",
+  "concept": "science.physics.v24_le_levier",
+  "label": "Physique",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Barre qui permet de soulever une lourde charge avec peu d'effort.",
+  "explanation": "Une paire de ciseaux, une brouette ou un casse-noix en sont des exemples.",
+  "word": "LEVIER",
+  "display": "Levier"
+ },
+ {
+  "key": "sci24-045",
+  "concept": "science.physics.v24_le_pendule",
+  "label": "Physique",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Masse suspendue qui oscille, utilisée dans les vieilles horloges.",
+  "explanation": "Au masculin, c'est l'objet qui oscille. Au féminin, une pendule est une horloge.",
+  "word": "PENDULE",
+  "display": "Pendule"
+ },
+ {
+  "key": "sci24-046",
+  "concept": "science.physics.v24_tl_ondes_grav",
+  "label": "Physique",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année a-t-on détecté pour la première fois des ondes gravitationnelles, prédites par Einstein ?",
+  "explanation": "Elles venaient de la fusion de deux trous noirs, à plus d'un milliard d'années-lumière. Annoncée en 2016, la découverte a valu un prix Nobel en 2017.",
+  "answer": 2015,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2025
+ },
+ {
+  "key": "sci24-047",
+  "concept": "science.physics.v24_tf_blanc_reflechit",
+  "label": "Lumière",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Un objet blanc renvoie presque toutes les couleurs de la lumière.",
+  "explanation": "C'est pour ça qu'il chauffe moins au soleil qu'un objet noir.",
+  "answer": true
+ },
+ {
+  "key": "sci24-048",
+  "concept": "science.physics.v24_tf_champ_inverse",
+  "label": "Magnétisme",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Le nord et le sud magnétiques de la Terre se sont déjà inversés plusieurs fois.",
+  "explanation": "Des centaines de fois en des millions d'années. Les roches volcaniques en gardent la trace.",
+  "answer": true
+ },
+ {
+  "key": "sci24-049",
+  "concept": "science.physics.v24_tf_foudre_pneus",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Dans une voiture, ce sont les pneus en caoutchouc qui protègent de la foudre.",
+  "explanation": "La foudre a traversé des kilomètres d'air : quelques centimètres de caoutchouc ne l'arrêtent pas. C'est la carrosserie métallique qui protège.",
+  "answer": false
+ },
+ {
+  "key": "sci24-050",
+  "concept": "science.physics.v24_tf_eau_chaude_canalisations",
+  "label": "Physique du quotidien",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le sel fait bouillir l'eau des pâtes beaucoup plus vite.",
+  "explanation": "Il augmente même un tout petit peu la température d'ébullition. On sale pour le goût.",
+  "answer": false
+ },
+ {
+  "key": "sci24-051",
+  "concept": "science.physics.v24_tf_atome_vide",
+  "label": "Physique",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un atome est presque entièrement fait de vide.",
+  "explanation": "Si le noyau avait la taille d'une bille au centre d'un stade, les électrons tourneraient au niveau des tribunes.",
+  "answer": true
+ },
+ {
+  "key": "sci24-052",
+  "concept": "science.physics.v24_tf_glace_conduit",
+  "label": "Électricité",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "L'eau parfaitement pure conduit très mal l'électricité.",
+  "explanation": "Ce sont les sels dissous qui rendent l'eau du robinet ou de la mer conductrice.",
+  "answer": true
+ },
+ {
+  "key": "sci24-053",
+  "concept": "science.physics.v24_tf_ballon_froid",
+  "label": "Physique du quotidien",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Un ballon gonflé se dégonfle un peu quand on le met au froid.",
+  "explanation": "L'air se contracte quand il refroidit. Il regonfle en se réchauffant.",
+  "answer": true
+ },
+ {
+  "key": "sci24-054",
+  "concept": "science.physics.v24_tf_lumiere_tourne",
+  "label": "Lumière",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "La lumière peut être déviée par la gravité d'une étoile.",
+  "explanation": "Einstein l'avait prédit. Une éclipse de 1919 l'a confirmé, ce qui l'a rendu mondialement célèbre.",
+  "answer": true
+ },
+ {
+  "key": "sci24-055",
+  "concept": "science.physics.v24_tf_vitesse_son_froid",
+  "label": "Son",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le son va plus vite dans l'air chaud que dans l'air froid.",
+  "explanation": "Environ 331 m/s à 0 °C et 343 m/s à 20 °C.",
+  "answer": true
+ },
+ {
+  "key": "sci24-056",
+  "concept": "science.chemistry.v24_maillard",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment s'appelle la réaction qui fait dorer le pain grillé, la croûte du gâteau ou la viande grillée ?",
+  "explanation": "Elle porte le nom du chimiste français Louis-Camille Maillard, qui l'a décrite en 1912. Elle crée des centaines d'arômes.",
+  "options": [
+   "La réaction de Maillard*",
+   "La fermentation",
+   "L'oxydation",
+   "La caramélisation du sel"
+  ]
+ },
+ {
+  "key": "sci24-057",
+  "concept": "science.chemistry.v24_mentos_coca",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi un bonbon Mentos jeté dans du soda provoque-t-il un geyser ?",
+  "explanation": "Ce n'est pas une réaction chimique, mais physique : le gaz carbonique trouve des milliers de points pour former des bulles.",
+  "options": [
+   "Sa surface pleine de petits creux fait se libérer d'un coup le gaz du soda*",
+   "Il réagit chimiquement avec le sucre",
+   "Il contient un produit explosif",
+   "Il chauffe le soda"
+  ]
+ },
+ {
+  "key": "sci24-058",
+  "concept": "science.chemistry.v24_javel_vinaigre",
+  "label": "Chimie à la maison",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi ne faut-il jamais mélanger de l'eau de Javel avec du vinaigre ou un détartrant ?",
+  "explanation": "Le chlore irrite gravement les yeux et les poumons. Il faut toujours utiliser la Javel seule, diluée dans de l'eau froide.",
+  "options": [
+   "Le mélange dégage un gaz toxique, le chlore*",
+   "Il devient explosif",
+   "Il ne nettoie plus du tout",
+   "Il tache les tissus"
+  ]
+ },
+ {
+  "key": "sci24-059",
+  "concept": "science.chemistry.v24_ph_estomac",
+  "label": "Acides et bases",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est à peu près le pH du suc de notre estomac ?",
+  "explanation": "Assez acide pour attaquer du métal. La paroi de l'estomac se protège avec une couche de mucus.",
+  "options": [
+   "Entre 1 et 2, très acide*",
+   "Environ 7, neutre",
+   "Environ 10, basique",
+   "Environ 14"
+  ]
+ },
+ {
+  "key": "sci24-060",
+  "concept": "science.chemistry.v24_savon_basique",
+  "label": "Acides et bases",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le savon est plutôt…",
+  "explanation": "Il est fabriqué en faisant réagir des graisses avec une base, la soude : c'est la saponification.",
+  "options": [
+   "Basique*",
+   "Acide",
+   "Neutre",
+   "Ni l'un ni l'autre"
+  ]
+ },
+ {
+  "key": "sci24-061",
+  "concept": "science.chemistry.v24_argent_noircit",
+  "label": "Chimie à la maison",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi les bijoux en argent noircissent-ils avec le temps ?",
+  "explanation": "Il se forme une fine couche de sulfure d'argent. Un peu de bicarbonate et d'aluminium suffisent à la retirer.",
+  "options": [
+   "Ils réagissent avec le soufre présent dans l'air*",
+   "Ils rouillent comme le fer",
+   "La lumière les brûle",
+   "La sueur les teint"
+  ]
+ },
+ {
+  "key": "sci24-062",
+  "concept": "science.chemistry.v24_liberte_verte",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi la statue de la Liberté, à New York, est-elle verte ?",
+  "explanation": "À l'origine, elle avait la couleur d'une pièce neuve. Cette couche, le vert-de-gris, protège le cuivre.",
+  "options": [
+   "Son cuivre s'est couvert d'une couche verte en réagissant avec l'air*",
+   "Elle a été peinte en vert",
+   "Des algues la recouvrent",
+   "Elle est en jade"
+  ]
+ },
+ {
+  "key": "sci24-063",
+  "concept": "science.chemistry.v24_oeuf_cuit",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi le blanc d'un œuf devient-il blanc et dur en cuisant ?",
+  "explanation": "C'est irréversible : impossible de « décuire » un œuf… ou presque, des chimistes y sont parvenus en 2015 !",
+  "options": [
+   "Ses protéines se déplient et s'emmêlent avec la chaleur*",
+   "L'eau s'évapore entièrement",
+   "Le jaune se mélange au blanc",
+   "Il absorbe l'air de la casserole"
+  ]
+ },
+ {
+  "key": "sci24-064",
+  "concept": "science.chemistry.v24_sucre_saccharose",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle chimiquement le sucre de table ?",
+  "explanation": "Il est formé d'une molécule de glucose et d'une de fructose. On le tire de la betterave ou de la canne.",
+  "options": [
+   "Le saccharose*",
+   "Le glucose",
+   "L'amidon",
+   "Le lactose"
+  ]
+ },
+ {
+  "key": "sci24-065",
+  "concept": "science.chemistry.v24_odeur_piscine",
+  "label": "Chimie à la maison",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient surtout la forte « odeur de piscine » ?",
+  "explanation": "Ces composés, les chloramines, piquent les yeux. Une eau qui sent fort le « chlore » est en réalité une eau à renouveler.",
+  "options": [
+   "Du chlore qui réagit avec la sueur et l'urine des baigneurs*",
+   "Du chlore pur",
+   "De l'eau chaude",
+   "Du plastique des bassins"
+  ]
+ },
+ {
+  "key": "sci24-066",
+  "concept": "science.chemistry.v24_calcaire",
+  "label": "Chimie à la maison",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi le vinaigre blanc enlève-t-il le calcaire ?",
+  "explanation": "Le calcaire réagit avec l'acide en faisant de petites bulles de gaz carbonique.",
+  "options": [
+   "C'est un acide, qui dissout le calcaire*",
+   "Il le fait fondre par la chaleur",
+   "Il le colle",
+   "Il le rend invisible"
+  ]
+ },
+ {
+  "key": "sci24-067",
+  "concept": "science.chemistry.v24_catalyseur",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que fait un catalyseur, comme celui du pot d'échappement des voitures ?",
+  "explanation": "Dans le pot catalytique, des métaux comme le platine transforment des gaz toxiques en gaz moins nocifs.",
+  "options": [
+   "Il accélère une réaction chimique sans être consommé*",
+   "Il refroidit les gaz",
+   "Il filtre la poussière",
+   "Il stocke le carburant"
+  ]
+ },
+ {
+  "key": "sci24-068",
+  "concept": "science.chemistry.v24_polymere",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quoi sont faits la plupart des plastiques ?",
+  "explanation": "Le plus souvent fabriqués à partir de pétrole. La nature en produit aussi : la cellulose ou la soie sont des polymères.",
+  "options": [
+   "De longues chaînes de molécules répétées, les polymères*",
+   "De sable fondu",
+   "De métal léger",
+   "De cristaux de sel"
+  ]
+ },
+ {
+  "key": "sci24-069",
+  "concept": "science.chemistry.v24_nylon",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel produit a fait le succès du nylon, inventé en 1935 ?",
+  "explanation": "À leur sortie en 1940, des millions de paires se sont vendues en quelques jours.",
+  "options": [
+   "Les bas pour femmes*",
+   "Les pneus",
+   "Les bouteilles",
+   "Les sacs plastiques"
+  ]
+ },
+ {
+  "key": "sci24-070",
+  "concept": "science.chemistry.v24_glace_carbonique",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce que la « glace carbonique », qui fait de la fumée dans les spectacles ?",
+  "explanation": "Elle passe directement de l'état solide à l'état gazeux, à −78 °C, sans devenir liquide.",
+  "options": [
+   "Du dioxyde de carbone solide*",
+   "De l'eau gelée très froide",
+   "De l'azote liquide",
+   "Du sel congelé"
+  ]
+ },
+ {
+  "key": "sci24-071",
+  "concept": "science.chemistry.v24_azote_liquide",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À quelle température l'azote devient-il liquide ?",
+  "explanation": "On l'utilise pour conserver des cellules, enlever des verrues ou faire des glaces instantanées.",
+  "options": [
+   "Environ −196 °C*",
+   "Environ −20 °C",
+   "Environ 0 °C",
+   "Environ −500 °C"
+  ]
+ },
+ {
+  "key": "sci24-072",
+  "concept": "science.chemistry.v24_helium_soleil",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Où l'hélium a-t-il été découvert, en 1868, avant d'être trouvé sur Terre ?",
+  "explanation": "Les astronomes ont repéré une raie jaune inconnue pendant une éclipse. D'où son nom, du grec « hêlios », le soleil.",
+  "options": [
+   "Dans la lumière du Soleil*",
+   "Dans un volcan",
+   "Dans l'eau de mer",
+   "Dans une météorite"
+  ]
+ },
+ {
+  "key": "sci24-073",
+  "concept": "science.chemistry.v24_francium",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel élément chimique doit son nom à la France ?",
+  "explanation": "Découvert en 1939 par Marguerite Perey, à l'Institut Curie. Le gallium, lui, viendrait du nom latin de la Gaule.",
+  "options": [
+   "Le francium*",
+   "Le francique",
+   "Le parisium",
+   "Le gaulium"
+  ]
+ },
+ {
+  "key": "sci24-074",
+  "concept": "science.chemistry.v24_curium",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel élément chimique porte le nom de Marie et Pierre Curie ?",
+  "explanation": "Marie Curie avait elle-même nommé le polonium en l'honneur de la Pologne, son pays natal.",
+  "options": [
+   "Le curium*",
+   "Le polonium",
+   "Le radium",
+   "Le mariium"
+  ]
+ },
+ {
+  "key": "sci24-075",
+  "concept": "science.chemistry.v24_gaz_nobles",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi les gaz nobles (hélium, néon, argon…) s'appellent-ils ainsi ?",
+  "explanation": "Comme des aristocrates qui ne se mêlent pas aux autres. On les appelle aussi gaz rares.",
+  "options": [
+   "Ils ne réagissent presque jamais avec les autres éléments*",
+   "Ils sont très chers",
+   "Ils ont été découverts par des nobles",
+   "Ils sont dorés"
+  ]
+ },
+ {
+  "key": "sci24-076",
+  "concept": "science.chemistry.v24_tableau_colonnes",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans le tableau périodique, que partagent les éléments d'une même colonne ?",
+  "explanation": "Par exemple, la dernière colonne regroupe les gaz nobles, la première les métaux qui réagissent violemment avec l'eau.",
+  "options": [
+   "Des propriétés chimiques semblables*",
+   "Le même poids",
+   "La même couleur",
+   "La même date de découverte"
+  ]
+ },
+ {
+  "key": "sci24-077",
+  "concept": "science.chemistry.v24_methane_combustion",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que produit la combustion du gaz naturel (méthane) dans une gazinière ?",
+  "explanation": "Si l'air manque, il se forme aussi du monoxyde de carbone, très dangereux.",
+  "options": [
+   "Du dioxyde de carbone et de l'eau*",
+   "De l'oxygène et de l'azote",
+   "Du sel et du sucre",
+   "Seulement de la lumière"
+  ]
+ },
+ {
+  "key": "sci24-078",
+  "concept": "science.chemistry.v24_avogadro",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Environ combien de molécules d'eau y a-t-il dans une cuillère à soupe d'eau ?",
+  "explanation": "Plus qu'il n'y a d'étoiles dans tout l'Univers observable, selon certaines estimations.",
+  "options": [
+   "Environ 500 000 milliards de milliards*",
+   "Environ un million",
+   "Environ un milliard",
+   "Environ mille"
+  ]
+ },
+ {
+  "key": "sci24-079",
+  "concept": "science.chemistry.v24_eau_oxygenee",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle est la formule de l'eau oxygénée, utilisée pour désinfecter ?",
+  "explanation": "Elle mousse sur une plaie car une enzyme du sang la décompose en eau et en oxygène.",
+  "options": [
+   "H₂O₂*",
+   "H₂O",
+   "O₂",
+   "HO"
+  ]
+ },
+ {
+  "key": "sci24-080",
+  "concept": "science.chemistry.v24_pa_noms_elements",
+  "label": "Éléments",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque élément à l'origine de son nom.",
+  "explanation": "L'einsteinium a été découvert en 1952 dans les débris de la première bombe H.",
+  "pairs": [
+   [
+    "Hélium",
+    "Le Soleil"
+   ],
+   [
+    "Polonium",
+    "La Pologne"
+   ],
+   [
+    "Mercure",
+    "Un dieu romain"
+   ],
+   [
+    "Einsteinium",
+    "Un savant"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-081",
+  "concept": "science.chemistry.v24_pa_ph",
+  "label": "Acides et bases",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque produit à son caractère.",
+  "explanation": "L'échelle de pH va de 0 (très acide) à 14 (très basique).",
+  "pairs": [
+   [
+    "Jus de citron",
+    "Très acide"
+   ],
+   [
+    "Eau pure",
+    "Neutre"
+   ],
+   [
+    "Savon",
+    "Basique"
+   ],
+   [
+    "Soude caustique",
+    "Très basique"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-082",
+  "concept": "science.chemistry.v24_or_fusion",
+  "label": "Chimie",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces matières de la plus facile à faire fondre à la plus difficile.",
+  "explanation": "Environ 0 °C, 35 °C, 327 °C et 1 538 °C. Le chocolat fond dans la bouche, presque à la température du corps.",
+  "items": [
+   "Glace",
+   "Chocolat",
+   "Plomb",
+   "Fer"
+  ]
+ },
+ {
+  "key": "sci24-083",
+  "concept": "science.chemistry.v24_le_polymere",
+  "label": "Chimie",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Longue chaîne de molécules qui forme les plastiques.",
+  "explanation": "Du grec « poly », plusieurs, et « meros », partie.",
+  "word": "POLYMERE",
+  "display": "Polymère"
+ },
+ {
+  "key": "sci24-084",
+  "concept": "science.chemistry.v24_le_acide",
+  "label": "Acides et bases",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Le citron et le vinaigre en sont.",
+  "explanation": "Leur pH est inférieur à 7.",
+  "word": "ACIDE",
+  "display": "Acide"
+ },
+ {
+  "key": "sci24-085",
+  "concept": "science.chemistry.v24_tf_diamant_brule",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Un diamant peut brûler.",
+  "explanation": "C'est du carbone pur : chauffé à environ 800 °C avec de l'oxygène, il brûle. Lavoisier l'a montré au XVIIIe siècle.",
+  "answer": true
+ },
+ {
+  "key": "sci24-086",
+  "concept": "science.chemistry.v24_tf_eau_gele_chaude",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Ajouter de l'huile dans l'eau des pâtes les empêche de coller.",
+  "explanation": "L'huile flotte à la surface et ne touche presque pas les pâtes. Il vaut mieux beaucoup d'eau et remuer au début.",
+  "answer": false
+ },
+ {
+  "key": "sci24-087",
+  "concept": "science.chemistry.v24_tf_plomb_essence",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "On a longtemps ajouté du plomb à l'essence des voitures.",
+  "explanation": "Pour améliorer les moteurs. Toxique, il a été interdit en France en 2000.",
+  "answer": true
+ },
+ {
+  "key": "sci24-088",
+  "concept": "science.chemistry.v24_tf_or_pur_mou",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "L'or pur est si mou qu'on peut le rayer avec un ongle.",
+  "explanation": "C'est pourquoi les bijoux sont faits d'alliages d'or avec du cuivre ou de l'argent.",
+  "answer": true
+ },
+ {
+  "key": "sci24-089",
+  "concept": "science.chemistry.v24_tf_naturel_sans_chimie",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Un produit « naturel » ne contient aucun produit chimique.",
+  "explanation": "Tout est chimique, y compris l'eau, une pomme ou l'air. Et beaucoup de substances naturelles sont très toxiques.",
+  "answer": false
+ },
+ {
+  "key": "sci24-090",
+  "concept": "science.chemistry.v24_tf_bougie_cire",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Une bougie qui brûle fait surtout disparaître sa cire en gaz et en vapeur d'eau.",
+  "explanation": "La cire fondue monte par la mèche, se vaporise et brûle. Elle devient dioxyde de carbone et eau.",
+  "answer": true
+ },
+ {
+  "key": "sci24-091",
+  "concept": "science.biology.v24_nombre_cellules",
+  "label": "Cellules",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de cellules compte environ le corps d'un adulte ?",
+  "explanation": "La grande majorité sont des globules rouges.",
+  "options": [
+   "Environ 30 000 milliards*",
+   "Environ 1 million",
+   "Environ 1 milliard",
+   "Environ 100"
+  ]
+ },
+ {
+  "key": "sci24-092",
+  "concept": "science.biology.v24_plus_longue_cellule",
+  "label": "Cellules",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle est la cellule la plus longue du corps humain, qui peut mesurer près d'un mètre ?",
+  "explanation": "Son corps est dans le dos, et son long prolongement descend jusqu'aux orteils.",
+  "options": [
+   "Un neurone qui va de la moelle épinière au pied*",
+   "Un globule rouge",
+   "Une cellule de peau",
+   "Une cellule du cœur"
+  ]
+ },
+ {
+  "key": "sci24-093",
+  "concept": "science.biology.v24_crispr",
+  "label": "Génétique",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'ont mis au point la Française Emmanuelle Charpentier et l'Américaine Jennifer Doudna, prix Nobel de chimie 2020 ?",
+  "explanation": "La technique CRISPR-Cas9 permet de couper et corriger l'ADN avec une grande précision.",
+  "options": [
+   "Des « ciseaux génétiques » pour modifier l'ADN*",
+   "Un vaccin contre le paludisme",
+   "Un microscope géant",
+   "Un antibiotique"
+  ]
+ },
+ {
+  "key": "sci24-094",
+  "concept": "science.biology.v24_nombre_genes",
+  "label": "Génétique",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de gènes compte environ l'être humain ?",
+  "explanation": "Bien moins qu'on le pensait avant 2003. Une plante comme le riz en a davantage !",
+  "options": [
+   "Environ 20 000*",
+   "Environ 200",
+   "Environ 2 millions",
+   "Environ 1 milliard"
+  ]
+ },
+ {
+  "key": "sci24-095",
+  "concept": "science.biology.v24_girafe_lamarck",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Selon Darwin, pourquoi les girafes ont-elles un long cou ?",
+  "explanation": "L'idée d'un cou qui s'allonge à force d'effort était celle de Lamarck. Darwin a proposé la sélection naturelle.",
+  "options": [
+   "Les girafes nées avec un cou plus long survivaient mieux et le transmettaient*",
+   "Elles l'ont étiré à force de tendre la tête",
+   "Un dieu le leur a donné",
+   "Elles mangent beaucoup"
+  ]
+ },
+ {
+  "key": "sci24-096",
+  "concept": "science.biology.v24_lamarck",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel naturaliste français a proposé, dès 1809, une théorie de l'évolution des espèces ?",
+  "explanation": "Il a aussi créé le mot « biologie ». Son explication de l'évolution s'est révélée fausse, mais l'idée était révolutionnaire.",
+  "options": [
+   "Jean-Baptiste de Lamarck*",
+   "Georges Cuvier",
+   "Louis Pasteur",
+   "Buffon"
+  ]
+ },
+ {
+  "key": "sci24-097",
+  "concept": "science.biology.v24_microbiote",
+  "label": "Corps et microbes",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce que le « microbiote intestinal » ?",
+  "explanation": "Ils pèsent environ 2 kg, nous aident à digérer et entraînent notre système immunitaire.",
+  "options": [
+   "Les milliards de micro-organismes qui vivent dans nos intestins*",
+   "Une maladie de l'intestin",
+   "Un médicament",
+   "Une partie de l'estomac"
+  ]
+ },
+ {
+  "key": "sci24-098",
+  "concept": "science.biology.v24_arn_messager",
+  "label": "Corps et microbes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Sur quelle technologie reposent plusieurs vaccins contre le Covid-19 ?",
+  "explanation": "L'ARN donne à nos cellules la recette d'une protéine du virus, pour que le corps apprenne à la reconnaître. Ses pionniers ont reçu le prix Nobel en 2023.",
+  "options": [
+   "L'ARN messager*",
+   "Les virus vivants",
+   "Les antibiotiques",
+   "Les rayons X"
+  ]
+ },
+ {
+  "key": "sci24-099",
+  "concept": "science.biology.v24_baleine_hippo",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel animal terrestre est le plus proche parent vivant des baleines ?",
+  "explanation": "Les ancêtres des baleines marchaient sur terre il y a environ 50 millions d'années.",
+  "options": [
+   "L'hippopotame*",
+   "L'éléphant",
+   "Le phoque",
+   "Le crocodile"
+  ]
+ },
+ {
+  "key": "sci24-100",
+  "concept": "science.biology.v24_chimiosynthese",
+  "label": "Vie extrême",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Près des sources chaudes des grands fonds, sans lumière, de quoi tirent leur énergie les bactéries à la base de la chaîne alimentaire ?",
+  "explanation": "C'est la chimiosynthèse. Des vers géants, des crabes et des crevettes vivent autour de ces « fumeurs noirs ».",
+  "options": [
+   "De substances chimiques comme le soufre*",
+   "De la lumière des poissons",
+   "De la chaleur du Soleil",
+   "Du sel de mer"
+  ]
+ },
+ {
+  "key": "sci24-101",
+  "concept": "science.biology.v24_age_vie",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Depuis combien de temps environ la vie existe-t-elle sur Terre ?",
+  "explanation": "Les premiers êtres vivants étaient des micro-organismes. La Terre elle-même a 4,5 milliards d'années.",
+  "options": [
+   "Environ 3,5 à 4 milliards d'années*",
+   "Environ 10 000 ans",
+   "Environ 65 millions d'années",
+   "Environ 13 milliards d'années"
+  ]
+ },
+ {
+  "key": "sci24-102",
+  "concept": "science.biology.v24_stromatolithes",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Que sont les stromatolithes, parmi les plus anciennes traces de vie ?",
+  "explanation": "Ces bactéries ont produit l'oxygène qui a transformé l'atmosphère de la Terre. On en trouve encore de vivants en Australie.",
+  "options": [
+   "Des roches formées couche après couche par des bactéries*",
+   "Des dents de requin fossiles",
+   "Des os de dinosaures",
+   "Des cristaux de glace"
+  ]
+ },
+ {
+  "key": "sci24-103",
+  "concept": "science.biology.v24_neandertal_adn",
+  "label": "Évolution humaine",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que reste-t-il de l'homme de Néandertal en nous ?",
+  "explanation": "Environ 1 à 2 % chez les personnes d'origine non africaine. Le Suédois Svante Pääbo a reçu le prix Nobel en 2022 pour cette découverte.",
+  "options": [
+   "Un petit pourcentage de notre ADN, chez beaucoup de gens*",
+   "Rien du tout",
+   "Nos dents de sagesse uniquement",
+   "La moitié de nos gènes"
+  ]
+ },
+ {
+  "key": "sci24-104",
+  "concept": "science.biology.v24_floresiensis",
+  "label": "Évolution humaine",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel petit humain, mesurant environ 1 mètre, a été surnommé « le Hobbit » après sa découverte en Indonésie, en 2003 ?",
+  "explanation": "Il vivait sur l'île de Flores, il y a au moins 50 000 ans.",
+  "options": [
+   "Homo floresiensis*",
+   "Homo erectus",
+   "Lucy",
+   "Toumaï"
+  ]
+ },
+ {
+  "key": "sci24-105",
+  "concept": "science.biology.v24_toumai",
+  "label": "Évolution humaine",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Toumaï, découvert au Tchad en 2001 par une équipe franco-tchadienne, aurait vécu il y a environ…",
+  "explanation": "Son nom veut dire « espoir de vie » en langue goran. Il serait l'un des plus anciens membres connus de la lignée humaine.",
+  "options": [
+   "7 millions d'années*",
+   "3 millions d'années",
+   "300 000 ans",
+   "50 000 ans"
+  ]
+ },
+ {
+  "key": "sci24-106",
+  "concept": "science.biology.v24_resistance_antibiotiques",
+  "label": "Corps et microbes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi faut-il éviter de prendre des antibiotiques sans raison ?",
+  "explanation": "« Les antibiotiques, c'est pas automatique », disait une campagne française de 2002.",
+  "options": [
+   "Les bactéries peuvent devenir résistantes*",
+   "Ils font grossir",
+   "Ils rendent aveugle",
+   "Ils détruisent les virus utiles"
+  ]
+ },
+ {
+  "key": "sci24-107",
+  "concept": "science.biology.v24_shinkansen",
+  "label": "Biomimétisme",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De quel oiseau s'est inspiré le nez du train à grande vitesse japonais Shinkansen, pour faire moins de bruit en sortant des tunnels ?",
+  "explanation": "Le martin-pêcheur plonge dans l'eau sans éclaboussure grâce à son long bec. On appelle biomimétisme le fait de s'inspirer de la nature.",
+  "options": [
+   "Le martin-pêcheur*",
+   "Le faucon",
+   "Le pélican",
+   "L'aigle"
+  ]
+ },
+ {
+  "key": "sci24-108",
+  "concept": "science.biology.v24_mimivirus",
+  "label": "Corps et microbes",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qu'a-t-on découvert à Marseille en 2003, en étudiant une amibe ?",
+  "explanation": "Le Mimivirus a bousculé l'idée que les virus sont toujours minuscules.",
+  "options": [
+   "Un virus géant, plus gros que certaines bactéries*",
+   "Une nouvelle espèce de poisson",
+   "Une bactérie mangeuse de plastique",
+   "Le plus petit animal du monde"
+  ]
+ },
+ {
+  "key": "sci24-109",
+  "concept": "science.biology.v24_sol_bacteries",
+  "label": "Corps et microbes",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de bactéries peut contenir une seule cuillère de terre de jardin ?",
+  "explanation": "Le sol est l'un des milieux les plus riches en vie de la planète.",
+  "options": [
+   "Plus d'un milliard*",
+   "Une dizaine",
+   "Mille environ",
+   "Aucune"
+  ]
+ },
+ {
+  "key": "sci24-110",
+  "concept": "science.biology.v24_cellule_souche",
+  "label": "Cellules",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'a de particulier une cellule souche ?",
+  "explanation": "On en trouve dans l'embryon, mais aussi dans la moelle osseuse adulte.",
+  "options": [
+   "Elle peut se transformer en différents types de cellules*",
+   "Elle vit éternellement",
+   "Elle ne se divise jamais",
+   "Elle se trouve seulement dans les plantes"
+  ]
+ },
+ {
+  "key": "sci24-111",
+  "concept": "science.biology.v24_archees",
+  "label": "Vie extrême",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quels êtres vivants microscopiques prospèrent dans les sources brûlantes, comme celles du parc de Yellowstone ?",
+  "explanation": "Ces micro-organismes, longtemps confondus avec les bactéries, forment un groupe à part. Certains vivent au-delà de 100 °C.",
+  "options": [
+   "Des archées*",
+   "Des poissons",
+   "Des mousses",
+   "Des moustiques"
+  ]
+ },
+ {
+  "key": "sci24-112",
+  "concept": "science.biology.v24_pa_decouvertes_bio",
+  "label": "Biologie",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque découverte à son auteur.",
+  "explanation": "Rosalind Franklin a aussi joué un rôle essentiel dans la découverte de la structure de l'ADN.",
+  "pairs": [
+   [
+    "La pénicilline",
+    "Alexander Fleming"
+   ],
+   [
+    "La double hélice de l'ADN",
+    "Watson et Crick"
+   ],
+   [
+    "La sélection naturelle",
+    "Charles Darwin"
+   ],
+   [
+    "Les ciseaux génétiques CRISPR",
+    "Charpentier et Doudna"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-113",
+  "concept": "science.biology.v24_or_apparition",
+  "label": "Évolution",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces êtres vivants du plus ancien au plus récent sur Terre.",
+  "explanation": "Environ 3,5 milliards d'années, 500 millions, 230 millions, 5 millions et 300 000 ans.",
+  "items": [
+   "Bactéries",
+   "Poissons",
+   "Dinosaures",
+   "Mammouths",
+   "Homo sapiens"
+  ]
+ },
+ {
+  "key": "sci24-114",
+  "concept": "science.biology.v24_ga_neandertal",
+  "label": "Évolution humaine",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "Chez une personne d'origine européenne, quelle part environ de l'ADN vient de l'homme de Néandertal ?",
+  "explanation": "Environ 1 à 2 %, hérités de rencontres il y a plus de 40 000 ans.",
+  "answer": 2,
+  "tolerance": 2,
+  "unit": "%"
+ },
+ {
+  "key": "sci24-115",
+  "concept": "science.biology.v24_co_genome_lettres",
+  "label": "Génétique",
+  "type": "counter",
+  "difficulty": 85,
+  "prompt": "Le génome humain compte environ combien de milliards de « lettres » (paires de bases) ?",
+  "explanation": "Environ 3 milliards. Imprimé, il remplirait plus de 100 gros annuaires.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "sci24-116",
+  "concept": "science.biology.v24_tl_genome",
+  "label": "Génétique",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année le séquençage du génome humain a-t-il été annoncé comme achevé ?",
+  "explanation": "Un projet international de 13 ans. Il est complètement terminé depuis 2022.",
+  "answer": 2003,
+  "tolerance": 3,
+  "min": 1970,
+  "max": 2020
+ },
+ {
+  "key": "sci24-117",
+  "concept": "science.biology.v24_tl_crispr_nobel",
+  "label": "Génétique",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année Emmanuelle Charpentier et Jennifer Doudna ont-elles reçu le prix Nobel pour CRISPR ?",
+  "explanation": "Le premier prix Nobel scientifique remis à deux femmes seules.",
+  "answer": 2020,
+  "tolerance": 2,
+  "min": 2000,
+  "max": 2025
+ },
+ {
+  "key": "sci24-118",
+  "concept": "science.biology.v24_le_genome",
+  "label": "Génétique",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Ensemble de toute l'information génétique d'un être vivant.",
+  "explanation": "Celui de l'humain a été lu entièrement au début des années 2000.",
+  "word": "GENOME",
+  "display": "Génome"
+ },
+ {
+  "key": "sci24-119",
+  "concept": "science.biology.v24_le_bacterie",
+  "label": "Corps et microbes",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Micro-organisme d'une seule cellule, sans noyau.",
+  "explanation": "On en trouve partout : dans le sol, dans l'eau et sur notre peau.",
+  "word": "BACTERIE",
+  "display": "Bactérie"
+ },
+ {
+  "key": "sci24-120",
+  "concept": "science.biology.v24_tf_mammouth",
+  "label": "Évolution",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Les derniers mammouths vivaient encore quand les Égyptiens construisaient les pyramides.",
+  "explanation": "Sur l'île Wrangel, en Sibérie, ils ont survécu jusqu'à il y a environ 4 000 ans. La grande pyramide a environ 4 500 ans.",
+  "answer": true
+ },
+ {
+  "key": "sci24-121",
+  "concept": "science.biology.v24_tf_homme_descend_singe",
+  "label": "Évolution",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "L'être humain descend du chimpanzé.",
+  "explanation": "Nous avons un ancêtre commun avec lui, qui vivait il y a 6 à 7 millions d'années. Le chimpanzé a lui aussi évolué depuis.",
+  "answer": false
+ },
+ {
+  "key": "sci24-122",
+  "concept": "science.biology.v24_tf_virus_vivant",
+  "label": "Corps et microbes",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Un virus ne peut pas se reproduire tout seul.",
+  "explanation": "Il doit entrer dans une cellule et utiliser sa machinerie. C'est pourquoi on débat encore pour savoir s'il est « vivant ».",
+  "answer": true
+ },
+ {
+  "key": "sci24-123",
+  "concept": "science.biology.v24_tf_evolution_but",
+  "label": "Évolution",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Les espèces évoluent dans le but de devenir parfaites.",
+  "explanation": "L'évolution n'a pas de but : les variations utiles dans un milieu donné se transmettent simplement mieux.",
+  "answer": false
+ },
+ {
+  "key": "sci24-124",
+  "concept": "science.biology.v24_tf_bacteries_utiles",
+  "label": "Corps et microbes",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "La plupart des bactéries sont dangereuses pour nous.",
+  "explanation": "La grande majorité sont inoffensives, et beaucoup sont indispensables : digestion, fromages, yaourts…",
+  "answer": false
+ },
+ {
+  "key": "sci24-125",
+  "concept": "science.space.v24_voyage_mars",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien de temps faut-il environ à une sonde pour aller de la Terre à Mars ?",
+  "explanation": "Il faut partir quand les deux planètes sont bien placées, ce qui n'arrive que tous les 26 mois environ.",
+  "options": [
+   "Environ 7 mois*",
+   "Environ 3 jours",
+   "Environ 5 ans",
+   "Environ 1 semaine"
+  ]
+ },
+ {
+  "key": "sci24-126",
+  "concept": "science.space.v24_valles_marineris",
+  "label": "Planètes",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce que Valles Marineris, sur Mars ?",
+  "explanation": "Il s'étend sur environ 4 000 km, presque la largeur des États-Unis.",
+  "options": [
+   "Un immense canyon, dix fois plus long que le Grand Canyon*",
+   "Une mer gelée",
+   "Un volcan géant",
+   "Une chaîne de montagnes"
+  ]
+ },
+ {
+  "key": "sci24-127",
+  "concept": "science.space.v24_neptune_vents",
+  "label": "Planètes",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sur quelle planète souffle-t-on les vents les plus rapides du Système solaire, à plus de 2 000 km/h ?",
+  "explanation": "Étonnant pour la planète la plus éloignée du Soleil, qui reçoit si peu d'énergie.",
+  "options": [
+   "Neptune*",
+   "Mercure",
+   "Mars",
+   "Vénus"
+  ]
+ },
+ {
+  "key": "sci24-128",
+  "concept": "science.space.v24_mercure_temperatures",
+  "label": "Planètes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi les températures sur Mercure passent-elles d'environ 430 °C le jour à −180 °C la nuit ?",
+  "explanation": "Vénus, plus loin du Soleil, est pourtant plus chaude, grâce à son épaisse atmosphère.",
+  "options": [
+   "Elle n'a presque pas d'atmosphère pour garder la chaleur*",
+   "Elle tourne très vite",
+   "Elle s'éloigne du Soleil chaque nuit",
+   "Elle est faite de glace"
+  ]
+ },
+ {
+  "key": "sci24-129",
+  "concept": "science.space.v24_lune_crateres",
+  "label": "La Lune",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi les cratères de la Lune restent-ils visibles pendant des milliards d'années ?",
+  "explanation": "Sur Terre, l'érosion efface la plupart des cratères. Les traces de pas des astronautes y resteront aussi très longtemps.",
+  "options": [
+   "Il n'y a ni vent, ni pluie, ni plaques qui bougent pour les effacer*",
+   "Ils sont protégés par de la glace",
+   "Ils sont trop profonds",
+   "Ils se reforment sans cesse"
+  ]
+ },
+ {
+  "key": "sci24-130",
+  "concept": "science.space.v24_lune_formation",
+  "label": "La Lune",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Selon l'hypothèse la plus admise, comment la Lune s'est-elle formée ?",
+  "explanation": "Les débris de l'impact se sont rassemblés pour former la Lune. On appelle parfois cette planète disparue Théia.",
+  "options": [
+   "Après une collision géante entre la jeune Terre et une planète de la taille de Mars*",
+   "Elle a été capturée en passant près de la Terre",
+   "Elle s'est détachée de la Terre en tournant trop vite",
+   "Elle est née en même temps que le Soleil"
+  ]
+ },
+ {
+  "key": "sci24-131",
+  "concept": "science.space.v24_halley",
+  "label": "Comètes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Tous les combien d'années la comète de Halley revient-elle près de la Terre ?",
+  "explanation": "Son dernier passage date de 1986, le prochain est attendu en 2061. Certains ne la voient qu'une fois dans leur vie.",
+  "options": [
+   "Environ 76 ans*",
+   "Chaque année",
+   "Environ 10 ans",
+   "Environ 1 000 ans"
+  ]
+ },
+ {
+  "key": "sci24-132",
+  "concept": "science.space.v24_perseides",
+  "label": "Ciel",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quel moment de l'année peut-on voir beaucoup d'étoiles filantes, les Perséides ?",
+  "explanation": "La Terre traverse alors les poussières laissées par une comète. On les appelle aussi « larmes de saint Laurent ».",
+  "options": [
+   "Mi-août*",
+   "À Noël",
+   "En mars",
+   "Le 1er mai"
+  ]
+ },
+ {
+  "key": "sci24-133",
+  "concept": "science.space.v24_betelgeuse",
+  "label": "Étoiles",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'est-ce que Bételgeuse, l'étoile rouge de la constellation d'Orion ?",
+  "explanation": "Elle est si grosse que, placée à la place du Soleil, elle engloutirait Mars et peut-être Jupiter.",
+  "options": [
+   "Une supergéante rouge qui pourrait exploser en supernova*",
+   "Une planète",
+   "Une étoile naine",
+   "Une galaxie"
+  ]
+ },
+ {
+  "key": "sci24-134",
+  "concept": "science.space.v24_sirius",
+  "label": "Étoiles",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est l'étoile la plus brillante du ciel nocturne ?",
+  "explanation": "Dans la constellation du Grand Chien. Elle est proche de nous : environ 8,6 années-lumière.",
+  "options": [
+   "Sirius*",
+   "L'étoile Polaire",
+   "Bételgeuse",
+   "Véga"
+  ]
+ },
+ {
+  "key": "sci24-135",
+  "concept": "science.space.v24_voie_lactee_taille",
+  "label": "Galaxies",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est la taille approximative de notre galaxie, la Voie lactée ?",
+  "explanation": "La lumière met cent mille ans à la traverser. Le Soleil se trouve dans un de ses bras, loin du centre.",
+  "options": [
+   "Environ 100 000 années-lumière de diamètre*",
+   "Environ 1 année-lumière",
+   "Environ 100 années-lumière",
+   "Environ 1 milliard d'années-lumière"
+  ]
+ },
+ {
+  "key": "sci24-136",
+  "concept": "science.space.v24_etoiles_voie_lactee",
+  "label": "Galaxies",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien d'étoiles compte environ la Voie lactée ?",
+  "explanation": "Et il existerait des centaines de milliards de galaxies dans l'Univers observable.",
+  "options": [
+   "Entre 100 et 400 milliards*",
+   "Environ 10 000",
+   "Environ un million",
+   "Exactement mille milliards"
+  ]
+ },
+ {
+  "key": "sci24-137",
+  "concept": "science.space.v24_image_trou_noir",
+  "label": "Trous noirs",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'a-t-on réussi à photographier pour la première fois en 2019 ?",
+  "explanation": "Celui de la galaxie M87, grâce à un réseau de radiotélescopes répartis sur toute la Terre. Celui de notre galaxie a suivi en 2022.",
+  "options": [
+   "L'ombre d'un trou noir*",
+   "Une planète d'une autre étoile",
+   "Le Big Bang",
+   "Un extraterrestre"
+  ]
+ },
+ {
+  "key": "sci24-138",
+  "concept": "science.space.v24_premiere_exoplanete",
+  "label": "Exoplanètes",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a découvert en 1995 la première planète tournant autour d'une étoile semblable au Soleil ?",
+  "explanation": "Une géante gazeuse, 51 Pegasi b. Ils ont reçu le prix Nobel de physique en 2019.",
+  "options": [
+   "Les Suisses Michel Mayor et Didier Queloz*",
+   "Galilée",
+   "La NASA avec Hubble",
+   "Thomas Pesquet"
+  ]
+ },
+ {
+  "key": "sci24-139",
+  "concept": "science.space.v24_nombre_exoplanetes",
+  "label": "Exoplanètes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien d'exoplanètes connaît-on aujourd'hui ?",
+  "explanation": "La plupart ont été repérées par la légère baisse de lumière de leur étoile quand elles passent devant.",
+  "options": [
+   "Plus de 5 000*",
+   "Une dizaine",
+   "Environ 100",
+   "Aucune n'a été confirmée"
+  ]
+ },
+ {
+  "key": "sci24-140",
+  "concept": "science.space.v24_tiangong",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel pays exploite sa propre station spatiale, Tiangong (« Palais céleste ») ?",
+  "explanation": "Achevée en 2022, elle accueille en permanence trois astronautes chinois, les « taïkonautes ».",
+  "options": [
+   "La Chine*",
+   "L'Inde",
+   "Le Japon",
+   "La Russie"
+  ]
+ },
+ {
+  "key": "sci24-141",
+  "concept": "science.space.v24_leonov",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a été le premier humain à sortir dans l'espace, hors de son vaisseau, en 1965 ?",
+  "explanation": "Sa combinaison a tellement gonflé qu'il a dû la dégonfler en partie pour rentrer dans la capsule.",
+  "options": [
+   "Alexeï Leonov*",
+   "Neil Armstrong",
+   "Youri Gagarine",
+   "John Glenn"
+  ]
+ },
+ {
+  "key": "sci24-142",
+  "concept": "science.space.v24_laika",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel animal est devenu en 1957 le premier être vivant mis en orbite autour de la Terre ?",
+  "explanation": "Elle n'a malheureusement pas survécu au voyage, qui était sans retour.",
+  "options": [
+   "La chienne Laïka*",
+   "Le singe Ham",
+   "Une souris",
+   "Un chat"
+  ]
+ },
+ {
+  "key": "sci24-143",
+  "concept": "science.space.v24_haignere",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui est la première Française à être allée dans l'espace, en 1996 ?",
+  "explanation": "Médecin rhumatologue, elle est ensuite devenue ministre de la Recherche.",
+  "options": [
+   "Claudie Haigneré*",
+   "Thomas Pesquet",
+   "Sophie Adenot",
+   "Marie Curie"
+  ]
+ },
+ {
+  "key": "sci24-144",
+  "concept": "science.space.v24_disque_or",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que transportent les sondes Voyager, au cas où des extraterrestres les trouveraient ?",
+  "explanation": "On y entend des saluts en 55 langues, des chants de baleines et de la musique de Bach à Chuck Berry.",
+  "options": [
+   "Un disque doré avec des sons et des images de la Terre*",
+   "Un drapeau américain",
+   "Des graines de plantes",
+   "Une lettre du président"
+  ]
+ },
+ {
+  "key": "sci24-145",
+  "concept": "science.space.v24_journee_lune",
+  "label": "La Lune",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de temps dure une journée complète (jour + nuit) sur la Lune ?",
+  "explanation": "Environ deux semaines de jour, puis deux semaines de nuit glaciale.",
+  "options": [
+   "Environ 29 jours terrestres*",
+   "24 heures",
+   "1 heure",
+   "1 an"
+  ]
+ },
+ {
+  "key": "sci24-146",
+  "concept": "science.space.v24_point_nemo",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'appelle-t-on le « point Nemo », dans le Pacifique Sud ?",
+  "explanation": "Les astronautes de la Station spatiale sont souvent les humains les plus proches : à 400 km au-dessus !",
+  "options": [
+   "Le point le plus éloigné de toute terre, où l'on fait retomber les vieux engins spatiaux*",
+   "L'endroit le plus profond de l'océan",
+   "Le lieu de naissance des cyclones",
+   "Une île découverte en 2020"
+  ]
+ },
+ {
+  "key": "sci24-147",
+  "concept": "science.space.v24_debris",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi les débris spatiaux sont-ils dangereux ?",
+  "explanation": "Un éclat de peinture à 28 000 km/h peut fissurer un hublot de la Station spatiale.",
+  "options": [
+   "Même minuscules, ils filent à des vitesses énormes et peuvent percer un engin*",
+   "Ils sont radioactifs",
+   "Ils peuvent tomber sur les maisons chaque jour",
+   "Ils cachent les étoiles"
+  ]
+ },
+ {
+  "key": "sci24-148",
+  "concept": "science.space.v24_rosetta",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'a réussi la mission européenne Rosetta en 2014 ?",
+  "explanation": "La comète « Tchouri » est un caillou de 4 km, à plus de 500 millions de km de la Terre.",
+  "options": [
+   "Poser un petit robot, Philae, sur une comète*",
+   "Ramener des roches de Mars",
+   "Photographier un trou noir",
+   "Envoyer des humains vers la Lune"
+  ]
+ },
+ {
+  "key": "sci24-149",
+  "concept": "science.space.v24_nebuleuse",
+  "label": "Étoiles",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans l'espace, qu'appelle-t-on une « pouponnière d'étoiles » ?",
+  "explanation": "La nébuleuse d'Orion, visible à l'œil nu, en est une.",
+  "options": [
+   "Une nébuleuse, un nuage de gaz et de poussière où naissent des étoiles*",
+   "Le centre de la Lune",
+   "Une galaxie toute jeune",
+   "Le cœur du Soleil"
+  ]
+ },
+ {
+  "key": "sci24-150",
+  "concept": "science.space.v24_big_bang_nom",
+  "label": "Univers",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "D'où vient l'expression « Big Bang » ?",
+  "explanation": "Fred Hoyle l'a utilisée à la radio en 1949. Le nom moqueur est resté.",
+  "options": [
+   "D'un astronome qui n'y croyait pas et voulait se moquer de l'idée*",
+   "Du bruit enregistré par un télescope",
+   "D'un titre de film",
+   "D'une formule mathématique"
+  ]
+ },
+ {
+  "key": "sci24-151",
+  "concept": "science.space.v24_lemaitre",
+  "label": "Univers",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qui a été l'un des premiers à proposer, en 1927, que l'Univers est en expansion et a un commencement ?",
+  "explanation": "Il parlait d'un « atome primitif ». Edwin Hubble a confirmé l'expansion par ses observations.",
+  "options": [
+   "Georges Lemaître, un prêtre et physicien belge*",
+   "Albert Einstein",
+   "Isaac Newton",
+   "Galilée"
+  ]
+ },
+ {
+  "key": "sci24-152",
+  "concept": "science.space.v24_hubble_expansion",
+  "label": "Univers",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'a montré l'astronome Edwin Hubble à la fin des années 1920 ?",
+  "explanation": "Plus une galaxie est lointaine, plus elle s'éloigne vite. Le télescope spatial Hubble porte son nom.",
+  "options": [
+   "Les galaxies s'éloignent de nous : l'Univers est en expansion*",
+   "La Terre tourne autour du Soleil",
+   "Les étoiles sont fixes",
+   "Pluton est une planète"
+  ]
+ },
+ {
+  "key": "sci24-153",
+  "concept": "science.space.v24_ceres",
+  "label": "Système solaire",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le plus gros objet de la ceinture d'astéroïdes, classé « planète naine » ?",
+  "explanation": "Elle mesure environ 950 km de diamètre. Pluton, elle, est bien plus loin, dans la ceinture de Kuiper.",
+  "options": [
+   "Cérès*",
+   "Pluton",
+   "Vesta",
+   "Éris"
+  ]
+ },
+ {
+  "key": "sci24-154",
+  "concept": "science.space.v24_soleil_avenir",
+  "label": "Étoiles",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que deviendra le Soleil dans environ 5 milliards d'années ?",
+  "explanation": "Il n'est pas assez massif pour exploser ou devenir un trou noir. En gonflant, il pourrait avaler Mercure et Vénus.",
+  "options": [
+   "Une géante rouge, puis une naine blanche*",
+   "Un trou noir",
+   "Une supernova",
+   "Il restera identique"
+  ]
+ },
+ {
+  "key": "sci24-155",
+  "concept": "science.space.v24_vitesse_rotation",
+  "label": "La Terre",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À l'équateur, à quelle vitesse sommes-nous emportés par la rotation de la Terre ?",
+  "explanation": "Nous ne le sentons pas, car tout tourne avec nous, l'air compris.",
+  "options": [
+   "Environ 1 670 km/h*",
+   "Environ 10 km/h",
+   "Environ 100 km/h",
+   "Elle ne tourne pas assez pour le mesurer"
+  ]
+ },
+ {
+  "key": "sci24-156",
+  "concept": "science.space.v24_vitesse_orbite",
+  "label": "La Terre",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "À quelle vitesse la Terre file-t-elle autour du Soleil ?",
+  "explanation": "Environ 30 km par seconde. Elle parcourt près d'un milliard de kilomètres par an.",
+  "options": [
+   "Environ 107 000 km/h*",
+   "Environ 1 000 km/h",
+   "Environ 10 km/h",
+   "Environ 1 million de km/h"
+  ]
+ },
+ {
+  "key": "sci24-157",
+  "concept": "science.space.v24_ariane6",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle fusée européenne a effectué son premier vol en juillet 2024, depuis Kourou ?",
+  "explanation": "Elle succède à Ariane 5, qui a volé de 1996 à 2023.",
+  "options": [
+   "Ariane 6*",
+   "Ariane 5",
+   "Falcon 9",
+   "Soyouz"
+  ]
+ },
+ {
+  "key": "sci24-158",
+  "concept": "science.space.v24_pa_missions",
+  "label": "Exploration",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque engin à sa mission.",
+  "explanation": "Voyager 1, lancée en 1977, est l'objet humain le plus lointain.",
+  "pairs": [
+   [
+    "Rosetta",
+    "Explorer une comète"
+   ],
+   [
+    "Perseverance",
+    "Rouler sur Mars"
+   ],
+   [
+    "Voyager 1",
+    "Quitter le Système solaire"
+   ],
+   [
+    "James-Webb",
+    "Observer l'Univers en infrarouge"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-159",
+  "concept": "science.space.v24_pa_premieres",
+  "label": "Exploration",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque « première » spatiale à son héros.",
+  "explanation": "Toutes ces premières ont eu lieu entre 1957 et 1969.",
+  "pairs": [
+   [
+    "Premier animal en orbite",
+    "Laïka"
+   ],
+   [
+    "Premier humain dans l'espace",
+    "Youri Gagarine"
+   ],
+   [
+    "Première sortie dans l'espace",
+    "Alexeï Leonov"
+   ],
+   [
+    "Premier pas sur la Lune",
+    "Neil Armstrong"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-160",
+  "concept": "science.space.v24_or_etoiles",
+  "label": "Étoiles",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces astres du plus petit au plus grand.",
+  "explanation": "Jupiter est onze fois plus large que la Terre, le Soleil dix fois plus que Jupiter, et Bételgeuse des centaines de fois plus que le Soleil.",
+  "items": [
+   "La Terre",
+   "Jupiter",
+   "Le Soleil",
+   "Bételgeuse"
+  ]
+ },
+ {
+  "key": "sci24-161",
+  "concept": "science.space.v24_or_dates_espace",
+  "label": "Exploration",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces événements du plus ancien au plus récent.",
+  "explanation": "1957, 1969, 1990 et 2019.",
+  "items": [
+   "Laïka en orbite",
+   "Premier pas sur la Lune",
+   "Lancement de Hubble",
+   "Première image d'un trou noir"
+  ]
+ },
+ {
+  "key": "sci24-162",
+  "concept": "science.space.v24_ga_energie_noire",
+  "label": "Univers",
+  "type": "gauge",
+  "difficulty": 85,
+  "prompt": "Selon les astrophysiciens, quelle part du contenu de l'Univers est faite de la mystérieuse « énergie sombre » ?",
+  "explanation": "Environ 68 %. La matière noire en ferait environ 27 %, et la matière ordinaire (étoiles, planètes, nous) seulement 5 %.",
+  "answer": 68,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "sci24-163",
+  "concept": "science.space.v24_le_nebuleuse",
+  "label": "Étoiles",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Nuage de gaz et de poussière où naissent les étoiles.",
+  "explanation": "Du latin « nebula », le brouillard.",
+  "word": "NEBULEUSE",
+  "display": "Nébuleuse"
+ },
+ {
+  "key": "sci24-164",
+  "concept": "science.space.v24_le_orbite",
+  "label": "Exploration",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Trajectoire d'un astre ou d'un satellite autour d'un autre.",
+  "explanation": "La Terre est en orbite autour du Soleil, la Lune autour de la Terre.",
+  "word": "ORBITE",
+  "display": "Orbite"
+ },
+ {
+  "key": "sci24-165",
+  "concept": "science.space.v24_le_cratere",
+  "label": "La Lune",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Trou rond creusé par une météorite.",
+  "explanation": "La face cachée de la Lune en compte bien plus que la face visible.",
+  "word": "CRATERE",
+  "display": "Cratère"
+ },
+ {
+  "key": "sci24-166",
+  "concept": "science.space.v24_le_eclipse",
+  "label": "Ciel",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Quand la Lune cache le Soleil.",
+  "explanation": "La Lune est 400 fois plus petite que le Soleil, mais 400 fois plus proche : elle peut le cacher exactement.",
+  "word": "ECLIPSE",
+  "display": "Éclipse"
+ },
+ {
+  "key": "sci24-167",
+  "concept": "science.space.v24_tf_traces_pas",
+  "label": "La Lune",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les traces de pas des astronautes sont toujours visibles sur la Lune.",
+  "explanation": "Sans vent ni pluie, elles peuvent rester des millions d'années. Seules de petites météorites les effacent très lentement.",
+  "answer": true
+ },
+ {
+  "key": "sci24-168",
+  "concept": "science.space.v24_tf_astronautes_grandissent",
+  "label": "Exploration",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les astronautes grandissent de quelques centimètres dans l'espace.",
+  "explanation": "Sans la gravité, leur colonne vertébrale s'étire. Ils retrouvent leur taille en rentrant sur Terre.",
+  "answer": true
+ },
+ {
+  "key": "sci24-169",
+  "concept": "science.space.v24_tf_soleil_jaune",
+  "label": "Étoiles",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Vu depuis l'espace, le Soleil est plutôt blanc que jaune.",
+  "explanation": "Il émet toutes les couleurs. C'est notre atmosphère qui le fait paraître jaune.",
+  "answer": true
+ },
+ {
+  "key": "sci24-170",
+  "concept": "science.space.v24_tf_espace_froid_absolu",
+  "label": "Univers",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Dans l'espace, une tasse de café chaude gèlerait instantanément.",
+  "explanation": "Le vide isole très bien : la chaleur s'échappe lentement, par rayonnement. L'eau se mettrait d'abord à bouillir à cause de la très faible pression.",
+  "answer": false
+ },
+ {
+  "key": "sci24-171",
+  "concept": "science.space.v24_tf_mars_eau",
+  "label": "Planètes",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Il y a de l'eau gelée sur Mars.",
+  "explanation": "Ses calottes polaires contiennent de la glace d'eau, et on en trouve aussi sous la surface.",
+  "answer": true
+ },
+ {
+  "key": "sci24-172",
+  "concept": "science.space.v24_tf_soleil_centre_univers",
+  "label": "Univers",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le Soleil est au centre de l'Univers.",
+  "explanation": "Il est au centre du Système solaire, mais n'est qu'une étoile parmi des centaines de milliards dans notre galaxie.",
+  "answer": false
+ },
+ {
+  "key": "sci24-173",
+  "concept": "science.space.v24_tf_pluton_plus_petit",
+  "label": "Système solaire",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Pluton est plus petite que notre Lune.",
+  "explanation": "Environ 2 400 km de diamètre, contre 3 500 km pour la Lune.",
+  "answer": true
+ },
+ {
+  "key": "sci24-174",
+  "concept": "science.space.v24_tf_jupiter_solide",
+  "label": "Planètes",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "On pourrait se poser à la surface de Jupiter.",
+  "explanation": "C'est une planète géante faite surtout de gaz. Un engin s'enfoncerait jusqu'à être écrasé par la pression.",
+  "answer": false
+ },
+ {
+  "key": "sci24-175",
+  "concept": "science.space.v24_tf_lune_cachee_noire",
+  "label": "La Lune",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "La face cachée de la Lune est toujours plongée dans le noir.",
+  "explanation": "Elle reçoit autant de soleil que l'autre. On l'appelle « cachée » parce qu'on ne la voit jamais depuis la Terre.",
+  "answer": false
+ },
+ {
+  "key": "sci24-176",
+  "concept": "science.space.v24_tf_etoile_morte",
+  "label": "Étoiles",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Certaines étoiles que l'on voit dans le ciel n'existent peut-être plus.",
+  "explanation": "Leur lumière a voyagé des milliers d'années : nous voyons ces étoiles telles qu'elles étaient dans le passé.",
+  "answer": true
+ },
+ {
+  "key": "sci24-177",
+  "concept": "science.human_body.v24_doigts_frippes",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi le bout des doigts se ride-t-il après un long bain ?",
+  "explanation": "C'est une réaction commandée par les nerfs : des doigts aux nerfs coupés ne se rident pas. Comme les pneus, les rides évacuent l'eau.",
+  "options": [
+   "Le corps réagit pour mieux agripper les objets mouillés*",
+   "La peau absorbe trop d'eau et éclate",
+   "Le sang quitte les doigts à cause du froid",
+   "Le savon abîme la peau"
+  ]
+ },
+ {
+  "key": "sci24-178",
+  "concept": "science.human_body.v24_cerveau_gele",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi a-t-on parfois mal à la tête en mangeant une glace trop vite ?",
+  "explanation": "La douleur ne dure que quelques secondes. Appuyer la langue contre le palais aide à la faire passer.",
+  "options": [
+   "Le froid sur le palais fait brusquement varier le diamètre des vaisseaux sanguins*",
+   "Le cerveau gèle vraiment",
+   "Le sucre monte au cerveau",
+   "Les dents transmettent le froid aux oreilles"
+  ]
+ },
+ {
+  "key": "sci24-179",
+  "concept": "science.human_body.v24_fourmis_jambes",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi a-t-on des « fourmis » dans la jambe après être resté longtemps assis en tailleur ?",
+  "explanation": "Les picotements sont les signaux du nerf qui reprend son activité normale.",
+  "options": [
+   "Un nerf a été comprimé et se « réveille »*",
+   "Le sang a gelé",
+   "Des muscles se sont déchirés",
+   "La jambe s'est vidée d'eau"
+  ]
+ },
+ {
+  "key": "sci24-180",
+  "concept": "science.human_body.v24_oreilles_avion",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi les oreilles se bouchent-elles en avion ?",
+  "explanation": "Avaler ou bâiller ouvre la trompe d'Eustache, un petit canal qui rééquilibre la pression.",
+  "options": [
+   "La pression de l'air change plus vite que celle à l'intérieur de l'oreille*",
+   "Le bruit des moteurs",
+   "L'air est trop sec",
+   "L'altitude refroidit les oreilles"
+  ]
+ },
+ {
+  "key": "sci24-181",
+  "concept": "science.human_body.v24_chatouiller_soi",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi ne peut-on pas se chatouiller soi-même ?",
+  "explanation": "Le cervelet anticipe la sensation. Avec un robot qui ajoute un petit délai, on peut presque y arriver !",
+  "options": [
+   "Le cerveau prévoit le mouvement et en atténue la sensation*",
+   "Nos doigts ne sont pas assez sensibles",
+   "Il faut être deux pour rire",
+   "La peau ne réagit pas à nos propres doigts"
+  ]
+ },
+ {
+  "key": "sci24-182",
+  "concept": "science.human_body.v24_cheveux_pousse",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De combien poussent environ les cheveux en un mois ?",
+  "explanation": "Un cheveu vit en moyenne de 3 à 7 ans avant de tomber et d'être remplacé.",
+  "options": [
+   "Environ 1 cm*",
+   "Environ 1 mm",
+   "Environ 5 cm",
+   "Environ 10 cm"
+  ]
+ },
+ {
+  "key": "sci24-183",
+  "concept": "science.human_body.v24_cheveux_nombre",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de cheveux une personne a-t-elle en moyenne sur la tête ?",
+  "explanation": "On en perd 50 à 100 par jour, tout à fait normalement.",
+  "options": [
+   "Environ 100 000*",
+   "Environ 1 000",
+   "Environ 10 millions",
+   "Environ 500"
+  ]
+ },
+ {
+  "key": "sci24-184",
+  "concept": "science.human_body.v24_masseter",
+  "label": "Muscles",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel muscle, dans la mâchoire, est l'un des plus puissants du corps par rapport à sa taille ?",
+  "explanation": "Il permet de mordre avec une force de plusieurs dizaines de kilos sur les molaires.",
+  "options": [
+   "Le masséter*",
+   "Le biceps",
+   "Le mollet",
+   "Le diaphragme"
+  ]
+ },
+ {
+  "key": "sci24-185",
+  "concept": "science.human_body.v24_vaisseaux_longueur",
+  "label": "Cœur et sang",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Mis bout à bout, quelle longueur feraient tous les vaisseaux sanguins d'un adulte ?",
+  "explanation": "La plus grande partie est faite de minuscules capillaires, plus fins qu'un cheveu.",
+  "options": [
+   "Environ 100 000 km, plus de deux fois le tour de la Terre*",
+   "Environ 10 km",
+   "Environ 1 km",
+   "Environ 1 million de km"
+  ]
+ },
+ {
+  "key": "sci24-186",
+  "concept": "science.human_body.v24_poumons_surface",
+  "label": "Respiration",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Si on dépliait toutes les petites alvéoles des poumons, quelle surface couvriraient-elles ?",
+  "explanation": "Une immense surface d'échange pour faire passer l'oxygène dans le sang.",
+  "options": [
+   "Environ 70 m², la surface d'un appartement*",
+   "Environ 1 m²",
+   "Environ 1 km²",
+   "Environ la taille d'une feuille A4"
+  ]
+ },
+ {
+  "key": "sci24-187",
+  "concept": "science.human_body.v24_tour_sang",
+  "label": "Cœur et sang",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de temps met le sang pour faire le tour complet du corps, au repos ?",
+  "explanation": "Le cœur pompe environ 5 litres par minute, soit tout le sang du corps.",
+  "options": [
+   "Environ une minute*",
+   "Environ une heure",
+   "Environ une journée",
+   "Environ une seconde"
+  ]
+ },
+ {
+  "key": "sci24-188",
+  "concept": "science.human_body.v24_plus_grand_matin",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quel moment de la journée est-on le plus grand ?",
+  "explanation": "Pendant la journée, les disques entre les vertèbres se tassent : on perd environ 1 cm.",
+  "options": [
+   "Le matin, au réveil*",
+   "Le soir, au coucher",
+   "À midi",
+   "Toujours pareil"
+  ]
+ },
+ {
+  "key": "sci24-189",
+  "concept": "science.human_body.v24_image_inversee",
+  "label": "Les sens",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment l'image d'un objet se forme-t-elle au fond de notre œil ?",
+  "explanation": "Le cristallin agit comme la lentille d'un appareil photo, qui inverse aussi l'image.",
+  "options": [
+   "À l'envers, et le cerveau la remet à l'endroit*",
+   "À l'endroit, comme une photo",
+   "En noir et blanc seulement",
+   "En deux moitiés séparées"
+  ]
+ },
+ {
+  "key": "sci24-190",
+  "concept": "science.human_body.v24_tache_aveugle",
+  "label": "Les sens",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'est-ce que la « tache aveugle » de l'œil ?",
+  "explanation": "Nous ne remarquons pas ce trou dans notre vision : le cerveau le comble avec ce qu'il y a autour.",
+  "options": [
+   "L'endroit où le nerf optique quitte la rétine, sans cellules sensibles à la lumière*",
+   "Une maladie de l'œil",
+   "La pupille",
+   "Une poussière dans l'œil"
+  ]
+ },
+ {
+  "key": "sci24-191",
+  "concept": "science.human_body.v24_couleurs_oeil",
+  "label": "Les sens",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien de nuances de couleurs l'œil humain peut-il distinguer, environ ?",
+  "explanation": "Grâce à trois sortes de cellules, les cônes, sensibles au rouge, au vert et au bleu.",
+  "options": [
+   "Environ un million*",
+   "Environ 7",
+   "Environ 100",
+   "Environ 1 000"
+  ]
+ },
+ {
+  "key": "sci24-192",
+  "concept": "science.human_body.v24_cones_batonnets",
+  "label": "Les sens",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelles cellules de l'œil nous permettent de voir dans la pénombre, mais sans les couleurs ?",
+  "explanation": "C'est pourquoi, la nuit, « tous les chats sont gris ».",
+  "options": [
+   "Les bâtonnets*",
+   "Les cônes",
+   "Les neurones moteurs",
+   "Les globules rouges"
+  ]
+ },
+ {
+  "key": "sci24-193",
+  "concept": "science.human_body.v24_fievre_utile",
+  "label": "Défenses du corps",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À quoi sert la fièvre ?",
+  "explanation": "Beaucoup de microbes se multiplient moins bien quand la température monte, et nos défenses deviennent plus actives.",
+  "options": [
+   "À aider le corps à lutter contre les microbes*",
+   "À rien, c'est un simple bug",
+   "À brûler les graisses",
+   "À faire dormir"
+  ]
+ },
+ {
+  "key": "sci24-194",
+  "concept": "science.human_body.v24_premiere_greffe_visage",
+  "label": "Médecine",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quel pays a été réalisée la première greffe partielle du visage, en 2005 ?",
+  "explanation": "À Amiens, par l'équipe du professeur Bernard Devauchelle.",
+  "options": [
+   "La France*",
+   "Les États-Unis",
+   "Le Japon",
+   "L'Allemagne"
+  ]
+ },
+ {
+  "key": "sci24-195",
+  "concept": "science.human_body.v24_variole",
+  "label": "Médecine",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle maladie a été la première à être complètement éradiquée de la planète grâce à la vaccination, en 1980 ?",
+  "explanation": "Elle a tué des centaines de millions de personnes au cours de l'histoire. Il n'en reste que quelques échantillons dans deux laboratoires.",
+  "options": [
+   "La variole*",
+   "La grippe",
+   "La rougeole",
+   "Le paludisme"
+  ]
+ },
+ {
+  "key": "sci24-196",
+  "concept": "science.human_body.v24_anesthesie",
+  "label": "Médecine",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Avec quel produit a-t-on réalisé en 1846 l'une des premières opérations publiques sous anesthésie générale, à Boston ?",
+  "explanation": "Avant, on opérait les patients éveillés. Le chloroforme a suivi l'année suivante.",
+  "options": [
+   "L'éther*",
+   "L'alcool",
+   "Le chloroforme",
+   "L'opium"
+  ]
+ },
+ {
+  "key": "sci24-197",
+  "concept": "science.human_body.v24_hippocrate",
+  "label": "Médecine",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel serment prêtent traditionnellement les médecins ?",
+  "explanation": "Hippocrate était un médecin grec du Ve siècle avant J.-C., souvent appelé « le père de la médecine ».",
+  "options": [
+   "Le serment d'Hippocrate*",
+   "Le serment de Galien",
+   "Le serment de Pasteur",
+   "Le serment du Jeu de paume"
+  ]
+ },
+ {
+  "key": "sci24-198",
+  "concept": "science.human_body.v24_scorbut",
+  "label": "Nutrition",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle maladie touchait les marins privés de fruits et légumes frais pendant les longs voyages ?",
+  "explanation": "Il est dû au manque de vitamine C. Les marins anglais embarquaient des citrons verts, d'où leur surnom de « limeys ».",
+  "options": [
+   "Le scorbut*",
+   "La lèpre",
+   "La peste",
+   "Le choléra"
+  ]
+ },
+ {
+  "key": "sci24-199",
+  "concept": "science.human_body.v24_anemie_fer",
+  "label": "Nutrition",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel manque provoque le plus souvent une anémie, avec fatigue et teint pâle ?",
+  "explanation": "Le fer sert à fabriquer l'hémoglobine, qui transporte l'oxygène dans le sang.",
+  "options": [
+   "Le manque de fer*",
+   "Le manque de sucre",
+   "Le manque de sel",
+   "Le manque d'eau"
+  ]
+ },
+ {
+  "key": "sci24-200",
+  "concept": "science.human_body.v24_salive_quantite",
+  "label": "Digestion",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de salive produit-on environ par jour ?",
+  "explanation": "Elle commence la digestion de l'amidon et protège les dents.",
+  "options": [
+   "Environ 1 litre*",
+   "Environ un verre",
+   "Environ 10 litres",
+   "Environ une cuillère"
+  ]
+ },
+ {
+  "key": "sci24-201",
+  "concept": "science.human_body.v24_neurones_nombre",
+  "label": "Cerveau",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien de neurones compte environ le cerveau humain ?",
+  "explanation": "Chacun peut être relié à des milliers d'autres : le réseau le plus complexe connu.",
+  "options": [
+   "Environ 86 milliards*",
+   "Environ 1 million",
+   "Environ 10 000",
+   "Environ mille milliards de milliards"
+  ]
+ },
+ {
+  "key": "sci24-202",
+  "concept": "science.human_body.v24_hippocampe_memoire",
+  "label": "Cerveau",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle partie du cerveau, nommée d'après un animal marin, joue un rôle clé dans la mémoire ?",
+  "explanation": "Sa forme rappelle celle du petit poisson. Chez les chauffeurs de taxi de Londres, il serait plus développé.",
+  "options": [
+   "L'hippocampe*",
+   "La pieuvre",
+   "Le dauphin",
+   "L'étoile de mer"
+  ]
+ },
+ {
+  "key": "sci24-203",
+  "concept": "science.human_body.v24_dix_mille_pas",
+  "label": "Idées reçues",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le fameux objectif de « 10 000 pas par jour » ?",
+  "explanation": "Le chiffre sonnait bien. Les études récentes montrent des bienfaits nets dès 7 000 pas environ.",
+  "options": [
+   "D'une publicité japonaise pour un podomètre, dans les années 1960*",
+   "D'une grande étude médicale",
+   "De l'Organisation mondiale de la santé",
+   "D'un entraînement militaire"
+  ]
+ },
+ {
+  "key": "sci24-204",
+  "concept": "science.human_body.v24_langue_muscles",
+  "label": "Muscles",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quoi est faite la langue ?",
+  "explanation": "Huit muscles qui lui permettent de bouger dans toutes les directions, sans aucun os.",
+  "options": [
+   "De plusieurs muscles*",
+   "D'un seul os",
+   "De cartilage",
+   "De graisse"
+  ]
+ },
+ {
+  "key": "sci24-205",
+  "concept": "science.human_body.v24_muscle_oeil",
+  "label": "Muscles",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quels muscles comptent parmi les plus actifs du corps, avec des dizaines de milliers de mouvements par jour ?",
+  "explanation": "Nos yeux bougent sans cesse, même pendant certaines phases du sommeil.",
+  "options": [
+   "Les muscles des yeux*",
+   "Les muscles des jambes",
+   "Les muscles du dos",
+   "Les muscles des oreilles"
+  ]
+ },
+ {
+  "key": "sci24-206",
+  "concept": "science.human_body.v24_gaucher_cerveau",
+  "label": "Cerveau",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quand on a des « papillons dans le ventre » avant un examen, que se passe-t-il ?",
+  "explanation": "Le corps se prépare à « fuir ou combattre » et envoie le sang vers les muscles.",
+  "options": [
+   "Le stress réduit l'afflux de sang vers l'estomac*",
+   "L'estomac se remplit d'air",
+   "Le cœur descend",
+   "On a faim"
+  ]
+ },
+ {
+  "key": "sci24-207",
+  "concept": "science.human_body.v24_pa_vitamines",
+  "label": "Nutrition",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque vitamine à un aliment qui en contient beaucoup.",
+  "explanation": "La vitamine D se fabrique aussi grâce au soleil, sur la peau.",
+  "pairs": [
+   [
+    "Vitamine C",
+    "Kiwi"
+   ],
+   [
+    "Vitamine D",
+    "Poissons gras"
+   ],
+   [
+    "Vitamine A",
+    "Carotte"
+   ],
+   [
+    "Vitamine B12",
+    "Viande"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-208",
+  "concept": "science.human_body.v24_pa_medecine",
+  "label": "Médecine",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque découverte médicale à son pays.",
+  "explanation": "Le premier vaccin, celui d'Edward Jenner en 1796, venait du mot latin « vacca », la vache.",
+  "pairs": [
+   [
+    "Première greffe du visage",
+    "France"
+   ],
+   [
+    "Premier vaccin (variole)",
+    "Angleterre"
+   ],
+   [
+    "Première greffe du cœur",
+    "Afrique du Sud"
+   ],
+   [
+    "Première anesthésie publique",
+    "États-Unis"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-209",
+  "concept": "science.human_body.v24_or_croissance",
+  "label": "Corps étonnant",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces parties du corps de celle qui pousse le plus lentement à celle qui pousse le plus vite.",
+  "explanation": "Environ 1 mm par mois, 3 mm par mois et 1 cm par mois.",
+  "items": [
+   "Ongles des pieds",
+   "Ongles des mains",
+   "Cheveux"
+  ]
+ },
+ {
+  "key": "sci24-210",
+  "concept": "science.human_body.v24_or_organes_poids",
+  "label": "Organes",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces organes du plus léger au plus lourd, chez un adulte.",
+  "explanation": "Environ 300 g, 1,4 kg, 1,5 kg et près de 4 kg pour la peau, le plus grand organe.",
+  "items": [
+   "Cœur",
+   "Cerveau",
+   "Foie",
+   "Peau"
+  ]
+ },
+ {
+  "key": "sci24-211",
+  "concept": "science.human_body.v24_ga_temps_ecran",
+  "label": "Corps étonnant",
+  "type": "gauge",
+  "difficulty": 55,
+  "prompt": "Quelle part de la journée passe-t-on, en moyenne, les yeux fermés en clignant des paupières, quand on est éveillé ?",
+  "explanation": "Environ 5 à 10 % : chaque clignement dure environ 0,3 seconde, et on cligne 15 à 20 fois par minute.",
+  "answer": 8,
+  "tolerance": 6,
+  "unit": "%"
+ },
+ {
+  "key": "sci24-212",
+  "concept": "science.human_body.v24_co_muscles_langue",
+  "label": "Muscles",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien de muscles forment la langue ?",
+  "explanation": "Quatre muscles intérieurs et quatre qui la rattachent aux os.",
+  "answer": 8,
+  "tolerance": 1,
+  "min": 1,
+  "max": 15,
+  "start": 1
+ },
+ {
+  "key": "sci24-213",
+  "concept": "science.human_body.v24_co_os_crane",
+  "label": "Squelette",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien d'os forment le crâne d'un adulte, mâchoire comprise ?",
+  "explanation": "Ils sont soudés entre eux, sauf la mâchoire inférieure qui bouge.",
+  "answer": 22,
+  "tolerance": 2,
+  "min": 5,
+  "max": 40,
+  "start": 5
+ },
+ {
+  "key": "sci24-214",
+  "concept": "science.human_body.v24_le_alveole",
+  "label": "Respiration",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Petit sac des poumons où l'oxygène passe dans le sang.",
+  "explanation": "Nos poumons en comptent des centaines de millions.",
+  "word": "ALVEOLE",
+  "display": "Alvéole"
+ },
+ {
+  "key": "sci24-215",
+  "concept": "science.human_body.v24_le_retine",
+  "label": "Les sens",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Membrane au fond de l'œil qui capte la lumière.",
+  "explanation": "Elle transforme la lumière en signaux électriques envoyés au cerveau.",
+  "word": "RETINE",
+  "display": "Rétine"
+ },
+ {
+  "key": "sci24-216",
+  "concept": "science.human_body.v24_le_tendon",
+  "label": "Muscles",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Il relie un muscle à un os.",
+  "explanation": "Le tendon d'Achille, à l'arrière de la cheville, est le plus solide du corps.",
+  "word": "TENDON",
+  "display": "Tendon"
+ },
+ {
+  "key": "sci24-217",
+  "concept": "science.human_body.v24_tf_appendice_utile",
+  "label": "Organes",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "L'appendice pourrait servir de réserve de bonnes bactéries pour l'intestin.",
+  "explanation": "Longtemps jugé inutile, il aiderait à recoloniser l'intestin après une diarrhée.",
+  "answer": true
+ },
+ {
+  "key": "sci24-218",
+  "concept": "science.human_body.v24_tf_bebe_rotule",
+  "label": "Squelette",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Un bébé naît avec des rotules en os, comme un adulte.",
+  "explanation": "Ses rotules sont en cartilage. Elles se transforment en os entre 3 et 5 ans.",
+  "answer": false
+ },
+ {
+  "key": "sci24-219",
+  "concept": "science.human_body.v24_tf_grandir_sommeil",
+  "label": "Corps étonnant",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "L'hormone de croissance est surtout produite pendant le sommeil.",
+  "explanation": "Surtout pendant le sommeil profond, en début de nuit. Bien dormir aide à grandir.",
+  "answer": true
+ },
+ {
+  "key": "sci24-220",
+  "concept": "science.human_body.v24_tf_doigts_craquer",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Faire craquer ses doigts donne de l'arthrose.",
+  "explanation": "Un médecin a fait craquer les doigts d'une seule main pendant 60 ans : aucune différence avec l'autre. Il a reçu un prix Ig Nobel.",
+  "answer": false
+ },
+ {
+  "key": "sci24-221",
+  "concept": "science.human_body.v24_tf_carottes_vue",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Manger beaucoup de carottes permet de voir dans le noir.",
+  "explanation": "Elles apportent de la vitamine A, utile aux yeux, mais pas de super-pouvoir. Le mythe viendrait d'une ruse britannique pendant la guerre, pour cacher l'usage des radars.",
+  "answer": false
+ },
+ {
+  "key": "sci24-222",
+  "concept": "science.human_body.v24_tf_lire_noir",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Lire dans la pénombre abîme les yeux pour toujours.",
+  "explanation": "Cela fatigue les yeux et peut donner mal à la tête, mais sans dommage durable.",
+  "answer": false
+ },
+ {
+  "key": "sci24-223",
+  "concept": "science.human_body.v24_tf_odeur_memoire",
+  "label": "Les sens",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les odeurs sont particulièrement liées aux souvenirs.",
+  "explanation": "Le circuit des odeurs passe directement par des zones du cerveau liées à la mémoire et aux émotions.",
+  "answer": true
+ },
+ {
+  "key": "sci24-224",
+  "concept": "science.human_body.v24_tf_coeur_droite",
+  "label": "Organes",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le cœur est situé tout à fait à gauche de la poitrine.",
+  "explanation": "Il est presque au centre, juste un peu penché vers la gauche.",
+  "answer": false
+ },
+ {
+  "key": "sci24-225",
+  "concept": "science.human_body.v24_tf_eternuer_vitesse",
+  "label": "Corps étonnant",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un éternuement projette des gouttelettes à plusieurs mètres.",
+  "explanation": "Jusqu'à 6 à 8 mètres pour les plus fines. D'où le geste d'éternuer dans son coude.",
+  "answer": true
+ },
+ {
+  "key": "sci24-226",
+  "concept": "science.chemistry.v24_patates_vertes",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi faut-il éplucher largement une pomme de terre devenue verte ?",
+  "explanation": "Le vert vient de la chlorophylle, mais la plante fabrique en même temps de la solanine, toxique. On conserve les pommes de terre à l'abri de la lumière.",
+  "options": [
+   "Le vert signale une substance toxique produite à la lumière, la solanine*",
+   "Elle est moisie",
+   "Elle a gelé",
+   "Elle est trop mûre"
+  ]
+ },
+ {
+  "key": "sci24-227",
+  "concept": "science.chemistry.v24_lait_tourne",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi le lait « tourne-t-il » quand il est trop vieux ?",
+  "explanation": "Le même principe sert à fabriquer le yaourt et le fromage, mais de façon contrôlée.",
+  "options": [
+   "Des bactéries produisent de l'acide qui fait coaguler ses protéines*",
+   "Il gèle",
+   "Il s'évapore",
+   "Il absorbe l'air"
+  ]
+ },
+ {
+  "key": "sci24-228",
+  "concept": "science.chemistry.v24_caramel",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment obtient-on du caramel ?",
+  "explanation": "Vers 170 °C, le sucre fond puis se transforme en centaines de nouvelles molécules brunes et parfumées.",
+  "options": [
+   "En chauffant du sucre*",
+   "En congelant du lait",
+   "En mélangeant du sel et de l'eau",
+   "En séchant des fruits"
+  ]
+ },
+ {
+  "key": "sci24-229",
+  "concept": "science.chemistry.v24_mayonnaise",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qui permet à l'huile et au jaune d'œuf de se mélanger dans une mayonnaise ?",
+  "explanation": "On appelle ce mélange une « émulsion » : de minuscules gouttes d'huile dispersées dans l'eau du jaune.",
+  "options": [
+   "Une molécule du jaune d'œuf, la lécithine, qui s'accroche à l'eau et à l'huile*",
+   "Le sel",
+   "Le froid",
+   "Le fouet seul"
+  ]
+ },
+ {
+  "key": "sci24-230",
+  "concept": "science.chemistry.v24_oxygene_corps",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel élément chimique est le plus abondant dans le corps humain, en masse ?",
+  "explanation": "Environ 65 % de notre masse, surtout parce que nous sommes faits en grande partie d'eau (H₂O).",
+  "options": [
+   "L'oxygène*",
+   "Le carbone",
+   "Le calcium",
+   "Le fer"
+  ]
+ },
+ {
+  "key": "sci24-231",
+  "concept": "science.chemistry.v24_argent_conducteur",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel métal conduit le mieux l'électricité ?",
+  "explanation": "Le cuivre, presque aussi bon et bien moins cher, est utilisé dans les câbles.",
+  "options": [
+   "L'argent*",
+   "Le cuivre",
+   "L'or",
+   "Le fer"
+  ]
+ },
+ {
+  "key": "sci24-232",
+  "concept": "science.chemistry.v24_lithium_leger",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le métal le plus léger, au cœur des batteries de téléphones ?",
+  "explanation": "Il est si léger qu'il flotte sur l'huile.",
+  "options": [
+   "Le lithium*",
+   "L'aluminium",
+   "Le titane",
+   "Le magnésium"
+  ]
+ },
+ {
+  "key": "sci24-233",
+  "concept": "science.chemistry.v24_osmium",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quel est l'élément le plus dense connu, deux fois plus que le plomb ?",
+  "explanation": "Un litre d'osmium pèserait plus de 22 kg.",
+  "options": [
+   "L'osmium*",
+   "L'or",
+   "L'uranium",
+   "Le mercure"
+  ]
+ },
+ {
+  "key": "sci24-234",
+  "concept": "science.chemistry.v24_titane_protheses",
+  "label": "Éléments",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel métal léger et solide utilise-t-on souvent pour les prothèses de hanche et les implants dentaires ?",
+  "explanation": "Le corps le tolère très bien, et l'os peut même s'y souder.",
+  "options": [
+   "Le titane*",
+   "Le plomb",
+   "Le cuivre",
+   "Le mercure"
+  ]
+ },
+ {
+  "key": "sci24-235",
+  "concept": "science.chemistry.v24_acier",
+  "label": "Alliages",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "L'acier est un alliage de fer et de…",
+  "explanation": "Un tout petit peu de carbone rend le fer beaucoup plus dur. Avec du chrome, il devient inoxydable.",
+  "options": [
+   "Carbone*",
+   "Cuivre",
+   "Or",
+   "Plomb"
+  ]
+ },
+ {
+  "key": "sci24-236",
+  "concept": "science.chemistry.v24_laiton",
+  "label": "Alliages",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quoi est fait le laiton, le métal doré des poignées de porte et des instruments de fanfare ?",
+  "explanation": "Le bronze, lui, mélange le cuivre et l'étain.",
+  "options": [
+   "De cuivre et de zinc*",
+   "D'or et d'argent",
+   "De fer et de carbone",
+   "D'étain et de plomb"
+  ]
+ },
+ {
+  "key": "sci24-237",
+  "concept": "science.chemistry.v24_fluor_dents",
+  "label": "Chimie à la maison",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi ajoute-t-on du fluor dans le dentifrice ?",
+  "explanation": "Il aide l'émail à se reconstruire après les attaques acides des bactéries.",
+  "options": [
+   "Il renforce l'émail des dents contre les caries*",
+   "Il donne le goût de menthe",
+   "Il fait mousser",
+   "Il blanchit les dents"
+  ]
+ },
+ {
+  "key": "sci24-238",
+  "concept": "science.chemistry.v24_pa_gaz_usages",
+  "label": "Éléments",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque gaz à un de ses usages.",
+  "explanation": "Le néon donne une lumière rouge-orangé. Les autres couleurs des « néons » viennent d'autres gaz.",
+  "pairs": [
+   [
+    "Hélium",
+    "Gonfler des ballons qui s'envolent"
+   ],
+   [
+    "Néon",
+    "Enseignes lumineuses"
+   ],
+   [
+    "Dioxyde de carbone",
+    "Bulles des sodas"
+   ],
+   [
+    "Azote liquide",
+    "Congeler très vite"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-239",
+  "concept": "science.chemistry.v24_co_gaz_nobles",
+  "label": "Éléments",
+  "type": "counter",
+  "difficulty": 80,
+  "prompt": "Combien de gaz nobles naturels compte-t-on (hélium, néon, argon…) ?",
+  "explanation": "Hélium, néon, argon, krypton, xénon et radon. Un septième, l'oganesson, a été fabriqué en laboratoire.",
+  "answer": 6,
+  "tolerance": 0,
+  "min": 1,
+  "max": 12,
+  "start": 1
+ },
+ {
+  "key": "sci24-240",
+  "concept": "science.chemistry.v24_tf_point_triple",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 85,
+  "prompt": "Dans certaines conditions, l'eau peut à la fois bouillir et geler.",
+  "explanation": "Au « point triple », à très basse pression et vers 0 °C, la glace, l'eau liquide et la vapeur coexistent.",
+  "answer": true
+ },
+ {
+  "key": "sci24-241",
+  "concept": "science.chemistry.v24_tf_sel_mer",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le sel de mer et le sel de table sont surtout fait de la même molécule.",
+  "explanation": "Du chlorure de sodium, NaCl. Le sel de mer contient en plus des traces d'autres minéraux.",
+  "answer": true
+ },
+ {
+  "key": "sci24-242",
+  "concept": "science.chemistry.v24_tf_air_melange",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "L'air que nous respirons est un mélange de plusieurs gaz.",
+  "explanation": "Surtout de l'azote et de l'oxygène, avec un peu d'argon, de vapeur d'eau et de CO₂.",
+  "answer": true
+ },
+ {
+  "key": "sci24-243",
+  "concept": "science.biology.v24_roquefort",
+  "label": "Microbes utiles",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qui forme les veines bleues du roquefort ?",
+  "explanation": "Penicillium roqueforti, cousin de celui de la pénicilline. Le fromage s'affine dans les caves de Roquefort-sur-Soulzon.",
+  "options": [
+   "Un champignon microscopique, une moisissure*",
+   "Un colorant naturel",
+   "De l'encre de seiche",
+   "Des herbes"
+  ]
+ },
+ {
+  "key": "sci24-244",
+  "concept": "science.biology.v24_beagle",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelait le navire sur lequel Charles Darwin a fait le tour du monde ?",
+  "explanation": "Le voyage a duré cinq ans, de 1831 à 1836. Darwin avait 22 ans au départ.",
+  "options": [
+   "Le Beagle*",
+   "Le Victory",
+   "La Calypso",
+   "Le Titanic"
+  ]
+ },
+ {
+  "key": "sci24-245",
+  "concept": "science.biology.v24_mitochondries_bacteries",
+  "label": "Cellules",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Selon la théorie la plus admise, d'où viennent les mitochondries, les « centrales énergétiques » de nos cellules ?",
+  "explanation": "Elles ont même gardé leur propre petit ADN, qu'on hérite uniquement de sa mère.",
+  "options": [
+   "D'anciennes bactéries qui se sont installées dans d'autres cellules*",
+   "D'un virus",
+   "D'un champignon",
+   "Elles sont apparues par hasard dans les animaux"
+  ]
+ },
+ {
+  "key": "sci24-246",
+  "concept": "science.biology.v24_tf_levures_champignons",
+  "label": "Microbes utiles",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les levures qui font lever le pain sont des champignons.",
+  "explanation": "Des champignons microscopiques d'une seule cellule. Elles produisent du gaz carbonique qui fait gonfler la pâte.",
+  "answer": true
+ },
+ {
+  "key": "sci24-247",
+  "concept": "science.biology.v24_tf_adn_mere",
+  "label": "Génétique",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "L'ADN de nos mitochondries nous vient uniquement de notre mère.",
+  "explanation": "Ce qui permet de remonter les lignées maternelles sur des dizaines de milliers d'années.",
+  "answer": true
+ },
+ {
+  "key": "sci24-248",
+  "concept": "science.biology.v24_tf_plantes_sentent",
+  "label": "Biologie",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Certaines plantes produisent leur propre chaleur.",
+  "explanation": "Le philodendron ou l'arum peuvent réchauffer leur fleur pour diffuser leur odeur et attirer les insectes.",
+  "answer": true
+ },
+ {
+  "key": "sci24-249",
+  "concept": "science.biology.v24_tl_origine_especes",
+  "label": "Évolution",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année Charles Darwin a-t-il publié « L'Origine des espèces » ?",
+  "explanation": "Les 1 250 exemplaires de la première édition ont été vendus le jour même.",
+  "answer": 1859,
+  "tolerance": 10,
+  "min": 1750,
+  "max": 1950
+ },
+ {
+  "key": "sci24-250",
+  "concept": "science.biology.v24_or_decouvertes",
+  "label": "Histoire des sciences",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces découvertes de la plus ancienne à la plus récente.",
+  "explanation": "1687, 1859, 1905 et 1953.",
+  "items": [
+   "Loi de la gravitation (Newton)",
+   "Évolution des espèces (Darwin)",
+   "Relativité (Einstein)",
+   "Double hélice de l'ADN"
+  ]
+ },
+ {
+  "key": "sci24-251",
+  "concept": "science.physics.v24_wo_pourtant_tourne",
+  "label": "Savants",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets dans l'ordre la phrase que Galilée aurait murmurée après son procès.",
+  "explanation": "Il venait d'être forcé de renier l'idée que la Terre tourne autour du Soleil, en 1633. La phrase est sans doute une légende.",
+  "answer": "Et pourtant elle tourne",
+  "words": [
+   "Et",
+   "pourtant",
+   "elle",
+   "tourne"
+  ]
+ },
+ {
+  "key": "sci24-252",
+  "concept": "science.physics.v24_wo_einstein_des",
+  "label": "Savants",
+  "type": "word_order",
+  "difficulty": 60,
+  "prompt": "Remets dans l'ordre la célèbre phrase d'Einstein contre le hasard en physique.",
+  "explanation": "Il n'aimait pas l'idée que les lois de la nature reposent sur des probabilités, au cœur de la physique quantique.",
+  "answer": "Dieu ne joue pas aux dés",
+  "words": [
+   "Dieu",
+   "ne",
+   "joue",
+   "pas",
+   "aux",
+   "dés"
+  ]
+ },
+ {
+  "key": "sci24-253",
+  "concept": "science.biology.v24_wo_pasteur_hasard",
+  "label": "Savants",
+  "type": "word_order",
+  "difficulty": 60,
+  "prompt": "Remets dans l'ordre cette phrase de Louis Pasteur.",
+  "explanation": "Une découverte « par hasard » n'arrive qu'à ceux qui savent la remarquer.",
+  "answer": "Le hasard ne favorise que les esprits préparés",
+  "words": [
+   "Le",
+   "hasard",
+   "ne",
+   "favorise",
+   "que",
+   "les",
+   "esprits",
+   "préparés"
+  ]
+ },
+ {
+  "key": "sci24-254",
+  "concept": "science.physics.v24_tl_relativite",
+  "label": "Savants",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année Einstein a-t-il publié sa théorie de la relativité restreinte, son « année miraculeuse » ?",
+  "explanation": "La même année, il publie aussi ses travaux sur la lumière qui lui vaudront le prix Nobel.",
+  "answer": 1905,
+  "tolerance": 5,
+  "min": 1850,
+  "max": 1950
+ },
+ {
+  "key": "sci24-255",
+  "concept": "science.physics.v24_tl_curie_nobel",
+  "label": "Savants",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année Marie Curie a-t-elle reçu son premier prix Nobel ?",
+  "explanation": "Le prix Nobel de physique, partagé avec Pierre Curie et Henri Becquerel. Le second, en chimie, date de 1911.",
+  "answer": 1903,
+  "tolerance": 5,
+  "min": 1850,
+  "max": 1950
+ },
+ {
+  "key": "sci24-256",
+  "concept": "science.physics.v24_ballon_zigzag",
+  "label": "Physique du quotidien",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Pourquoi un ballon gonflé qu'on lâche sans le nouer file-t-il à travers la pièce ?",
+  "explanation": "C'est le même principe d'action-réaction qui fait avancer les fusées.",
+  "options": [
+   "L'air qui s'échappe le pousse dans l'autre sens*",
+   "Il est attiré par le plafond",
+   "Il est plus léger que l'air",
+   "Le vent de la pièce l'emporte"
+  ]
+ },
+ {
+  "key": "sci24-257",
+  "concept": "science.physics.v24_circuit_ferme",
+  "label": "Électricité",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Que faut-il pour qu'une ampoule branchée sur une pile s'allume ?",
+  "explanation": "Un interrupteur sert justement à ouvrir ou fermer le circuit.",
+  "options": [
+   "Que le circuit soit fermé, sans interruption*",
+   "Que la pile soit chaude",
+   "Que l'ampoule soit neuve et brillante",
+   "Qu'il fasse nuit"
+  ]
+ },
+ {
+  "key": "sci24-258",
+  "concept": "science.physics.v24_ombre",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qu'est-ce qu'une ombre ?",
+  "explanation": "Elle est plus longue le matin et le soir, quand le Soleil est bas.",
+  "options": [
+   "Une zone où la lumière est bloquée par un objet*",
+   "Un reflet de l'objet",
+   "De la fumée noire",
+   "Un trou dans le sol"
+  ]
+ },
+ {
+  "key": "sci24-259",
+  "concept": "science.physics.v24_flotte_bois",
+  "label": "Physique du quotidien",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Lequel de ces objets flotte sur l'eau ?",
+  "explanation": "Le liège est plein d'air, bien plus léger que l'eau pour sa taille.",
+  "options": [
+   "Un bouchon en liège*",
+   "Une clé en fer",
+   "Une pièce de monnaie",
+   "Un caillou"
+  ]
+ },
+ {
+  "key": "sci24-260",
+  "concept": "science.physics.v24_tf_glacon_deborde",
+  "label": "Physique du quotidien",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Un verre rempli à ras bord d'eau avec des glaçons déborde quand les glaçons fondent.",
+  "explanation": "Le glaçon qui flotte déplace déjà exactement le volume d'eau qu'il deviendra en fondant.",
+  "answer": false
+ },
+ {
+  "key": "sci24-261",
+  "concept": "science.physics.v24_tf_foudre_hauteur",
+  "label": "Électricité",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "La foudre tombe plus souvent sur les objets élevés, comme les arbres isolés ou les clochers.",
+  "explanation": "C'est pourquoi il ne faut jamais s'abriter sous un arbre isolé pendant un orage.",
+  "answer": true
+ },
+ {
+  "key": "sci24-262",
+  "concept": "science.space.v24_facile_soleil",
+  "label": "Système solaire",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quel astre nous éclaire et nous réchauffe le jour ?",
+  "explanation": "C'est une étoile, à environ 150 millions de km de nous.",
+  "options": [
+   "Le Soleil*",
+   "La Lune",
+   "Mars",
+   "L'étoile Polaire"
+  ]
+ },
+ {
+  "key": "sci24-263",
+  "concept": "science.space.v24_facile_fusee",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel engin utilise-t-on pour envoyer des astronautes dans l'espace ?",
+  "explanation": "Elle doit atteindre près de 28 000 km/h pour se mettre en orbite.",
+  "options": [
+   "Une fusée*",
+   "Un avion de ligne",
+   "Une montgolfière",
+   "Un hélicoptère"
+  ]
+ },
+ {
+  "key": "sci24-264",
+  "concept": "science.space.v24_facile_astronaute_casque",
+  "label": "Exploration",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Pourquoi les astronautes portent-ils un scaphandre pour sortir dans l'espace ?",
+  "explanation": "Le scaphandre est un vrai petit vaisseau, avec de l'oxygène, du chauffage et de la climatisation.",
+  "options": [
+   "Il n'y a pas d'air à respirer et les températures sont extrêmes*",
+   "Pour être plus beaux",
+   "Pour aller plus vite",
+   "Pour ne pas être vus"
+  ]
+ },
+ {
+  "key": "sci24-265",
+  "concept": "science.human_body.v24_facile_odorat",
+  "label": "Les sens",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quel sens utilise-t-on avec le nez ?",
+  "explanation": "Il est aussi indispensable au goût : un nez bouché rend les aliments fades.",
+  "options": [
+   "L'odorat*",
+   "Le goût",
+   "L'ouïe",
+   "Le toucher"
+  ]
+ },
+ {
+  "key": "sci24-266",
+  "concept": "science.human_body.v24_facile_poumons_place",
+  "label": "Organes",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Où se trouvent les poumons ?",
+  "explanation": "Le poumon gauche est un peu plus petit, pour laisser de la place au cœur.",
+  "options": [
+   "Dans la poitrine, protégés par les côtes*",
+   "Dans le ventre, sous l'estomac",
+   "Dans le cou",
+   "Dans le dos, sous la peau"
+  ]
+ },
+ {
+  "key": "sci24-267",
+  "concept": "science.human_body.v24_facile_brosser_dents",
+  "label": "Santé",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Pourquoi faut-il se brosser les dents ?",
+  "explanation": "On conseille de les brosser deux minutes, deux fois par jour.",
+  "options": [
+   "Pour retirer les bactéries et les restes de nourriture qui donnent des caries*",
+   "Pour les faire pousser",
+   "Pour les rendre plus longues",
+   "Pour éviter le rhume"
+  ]
+ },
+ {
+  "key": "sci24-268",
+  "concept": "science.human_body.v24_facile_squelette",
+  "label": "Squelette",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "À quoi sert le squelette ?",
+  "explanation": "Il fabrique aussi les cellules du sang, dans la moelle des os.",
+  "options": [
+   "À soutenir le corps et protéger les organes*",
+   "À digérer",
+   "À respirer",
+   "À fabriquer la salive"
+  ]
+ },
+ {
+  "key": "sci24-269",
+  "concept": "science.human_body.v24_co_cones",
+  "label": "Les sens",
+  "type": "counter",
+  "difficulty": 65,
+  "prompt": "Combien de sortes de cônes (cellules des couleurs) possède l'œil humain ?",
+  "explanation": "Sensibles au rouge, au vert et au bleu. Certaines crevettes-mantes en auraient plus d'une douzaine !",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1
+ },
+ {
+  "key": "sci24-270",
+  "concept": "science.human_body.v24_tf_bebe_os",
+  "label": "Squelette",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le fémur est l'os le plus solide du corps.",
+  "explanation": "Il supporte des charges de plusieurs centaines de kilos. C'est aussi le plus long.",
+  "answer": true
+ },
+ {
+  "key": "sci24-271",
+  "concept": "science.human_body.v24_tf_sucre_hyperactif",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Il est prouvé que le sucre rend les enfants hyperactifs.",
+  "explanation": "Des études en double aveugle n'ont pas trouvé d'effet. Ce sont souvent les fêtes, où l'on mange du sucre, qui excitent les enfants.",
+  "answer": false
+ },
+ {
+  "key": "sci24-272",
+  "concept": "science.space.v24_qsj_venus",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui suis-je ? « Je suis la planète la plus chaude, mes nuages sont faits d'acide sulfurique, et je brille comme l'étoile du Berger. »",
+  "explanation": "Son atmosphère de CO₂ crée un effet de serre extrême : environ 460 °C au sol, assez pour faire fondre du plomb.",
+  "options": [
+   "Vénus*",
+   "Mars",
+   "Mercure",
+   "Jupiter"
+  ]
+ },
+ {
+  "key": "sci24-273",
+  "concept": "science.space.v24_qsj_encelade",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui suis-je ? « Je suis une petite lune de Saturne. Des geysers de glace jaillissent de mon pôle sud, depuis un océan caché. »",
+  "explanation": "La sonde Cassini a traversé ces geysers. Encelade est l'un des meilleurs endroits pour chercher de la vie dans le Système solaire.",
+  "options": [
+   "Encelade*",
+   "Titan",
+   "Europe",
+   "Phobos"
+  ]
+ },
+ {
+  "key": "sci24-274",
+  "concept": "science.space.v24_qsj_pulsar",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qui suis-je ? « Je suis le cœur ultra-dense d'une étoile morte. Je tourne sur moi-même jusqu'à des centaines de fois par seconde en envoyant des faisceaux comme un phare. »",
+  "explanation": "Le premier a été découvert en 1967 par Jocelyn Bell. Ses signaux si réguliers ont d'abord été surnommés « LGM », pour « petits hommes verts » !",
+  "options": [
+   "Un pulsar*",
+   "Un trou noir",
+   "Une comète",
+   "Une naine brune"
+  ]
+ },
+ {
+  "key": "sci24-275",
+  "concept": "science.chemistry.v24_qsj_oeuf_pourri",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui suis-je ? « Je suis un gaz qui sent l'œuf pourri, et on me trouve près des volcans et dans les égouts. »",
+  "explanation": "Notre nez le détecte à des doses infimes. Mais à forte dose, il paralyse l'odorat… et devient très dangereux.",
+  "options": [
+   "Le sulfure d'hydrogène*",
+   "Le méthane",
+   "L'hélium",
+   "Le dioxyde de carbone"
+  ]
+ },
+ {
+  "key": "sci24-276",
+  "concept": "science.human_body.v24_qsj_larmes",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui suis-je ? « Je suis une petite glande au-dessus de chaque œil. Je fabrique un liquide salé qui nettoie et protège l'œil. »",
+  "explanation": "On produit des larmes en permanence, pas seulement quand on pleure. Elles s'écoulent ensuite par un petit canal vers le nez.",
+  "options": [
+   "La glande lacrymale*",
+   "La thyroïde",
+   "L'amygdale",
+   "La rétine"
+  ]
+ },
+ {
+  "key": "sci24-277",
+  "concept": "science.biology.v24_bacteries_division",
+  "label": "Microbes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans de bonnes conditions, toutes les combien une bactérie comme E. coli peut-elle se diviser en deux ?",
+  "explanation": "En une seule nuit, une bactérie pourrait donner des milliards de descendantes. Heureusement, la nourriture vient vite à manquer.",
+  "options": [
+   "Toutes les 20 minutes environ*",
+   "Une fois par jour",
+   "Une fois par an",
+   "Toutes les secondes"
+  ]
+ },
+ {
+  "key": "sci24-278",
+  "concept": "science.biology.v24_espece_definition",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Selon la définition la plus courante, deux animaux sont de la même espèce si…",
+  "explanation": "Un âne et une jument peuvent avoir un petit, le mulet, mais il est presque toujours stérile : ce sont deux espèces différentes.",
+  "options": [
+   "Ils peuvent avoir ensemble des petits eux-mêmes capables de se reproduire*",
+   "Ils se ressemblent",
+   "Ils vivent au même endroit",
+   "Ils mangent la même chose"
+  ]
+ },
+ {
+  "key": "sci24-279",
+  "concept": "science.biology.v24_mulet",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel animal naît d'un âne et d'une jument ?",
+  "explanation": "Robuste et endurant, il est presque toujours stérile.",
+  "options": [
+   "Le mulet*",
+   "Le poney",
+   "Le zèbre",
+   "L'onagre"
+  ]
+ },
+ {
+  "key": "sci24-280",
+  "concept": "science.biology.v24_ligre",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel animal naît d'un lion et d'une tigresse, uniquement en captivité ?",
+  "explanation": "C'est le plus grand félin du monde : il peut dépasser 400 kg. Le tigron, lui, naît d'un tigre et d'une lionne.",
+  "options": [
+   "Le ligre*",
+   "Le tigron",
+   "Le léopon",
+   "Le jaglion"
+  ]
+ },
+ {
+  "key": "sci24-281",
+  "concept": "science.biology.v24_homeotherme",
+  "label": "Biologie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que veut dire « à sang chaud », pour un animal ?",
+  "explanation": "Mammifères et oiseaux le sont. Les reptiles, eux, dépendent de la chaleur extérieure : ils se chauffent au soleil.",
+  "options": [
+   "Il garde une température corporelle à peu près constante*",
+   "Son sang est brûlant",
+   "Il vit dans les pays chauds",
+   "Il est agressif"
+  ]
+ },
+ {
+  "key": "sci24-282",
+  "concept": "science.biology.v24_grippe_vaccin",
+  "label": "Maladies",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi faut-il refaire le vaccin contre la grippe chaque année ?",
+  "explanation": "Chaque année, l'OMS choisit les souches qui ont le plus de chances de circuler l'hiver suivant.",
+  "options": [
+   "Le virus de la grippe change sans cesse*",
+   "Le vaccin s'abîme dans le corps",
+   "On l'oublie",
+   "Il faut vacciner les adultes plusieurs fois"
+  ]
+ },
+ {
+  "key": "sci24-283",
+  "concept": "science.biology.v24_epidemie_pandemie",
+  "label": "Maladies",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle est la différence entre une épidémie et une pandémie ?",
+  "explanation": "Du grec « pan », tout, et « dêmos », le peuple.",
+  "options": [
+   "Une pandémie s'étend à une grande partie du monde*",
+   "Une épidémie est toujours plus grave",
+   "Une pandémie ne touche que les animaux",
+   "Il n'y a aucune différence"
+  ]
+ },
+ {
+  "key": "sci24-284",
+  "concept": "science.biology.v24_peste_puces",
+  "label": "Maladies",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment la peste noire se transmettait-elle surtout, au Moyen Âge ?",
+  "explanation": "Elle a tué entre le tiers et la moitié de la population européenne entre 1347 et 1352. La bactérie a été découverte par Alexandre Yersin en 1894.",
+  "options": [
+   "Par les puces des rats*",
+   "Par l'eau des puits",
+   "Par les moustiques",
+   "Par le blé"
+  ]
+ },
+ {
+  "key": "sci24-285",
+  "concept": "science.biology.v24_immunite_collective",
+  "label": "Maladies",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'appelle-t-on l'« immunité collective » ?",
+  "explanation": "Elle protège notamment les personnes qui ne peuvent pas être vaccinées, comme les nouveau-nés.",
+  "options": [
+   "Quand assez de gens sont protégés, le microbe circule mal et protège aussi les autres*",
+   "Un vaccin qu'on prend tous ensemble",
+   "Une maladie qui touche tout le monde",
+   "Un hôpital spécialisé"
+  ]
+ },
+ {
+  "key": "sci24-286",
+  "concept": "science.biology.v24_tf_paludisme",
+  "label": "Maladies",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le paludisme est causé par un moustique.",
+  "explanation": "Il est causé par un parasite, le plasmodium. Le moustique ne fait que le transporter d'une personne à l'autre.",
+  "answer": false
+ },
+ {
+  "key": "sci24-287",
+  "concept": "science.chemistry.v24_feu_huile",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que faut-il faire si l'huile d'une poêle prend feu ?",
+  "explanation": "L'eau se vaporise instantanément et projette l'huile enflammée partout. Sans air, le feu s'éteint.",
+  "options": [
+   "Couper le feu et couvrir la poêle avec un couvercle*",
+   "Jeter de l'eau dessus",
+   "Souffler dessus",
+   "Emporter la poêle dehors en courant"
+  ]
+ },
+ {
+  "key": "sci24-288",
+  "concept": "science.chemistry.v24_extincteur_co2",
+  "label": "Sécurité",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment un extincteur au dioxyde de carbone éteint-il le feu ?",
+  "explanation": "Sans oxygène, l'un des trois éléments du « triangle du feu », la combustion s'arrête.",
+  "options": [
+   "Il chasse l'oxygène autour des flammes*",
+   "Il refroidit l'air à −100 °C",
+   "Il absorbe la fumée",
+   "Il éteint l'électricité"
+  ]
+ },
+ {
+  "key": "sci24-289",
+  "concept": "science.chemistry.v24_soda_dents",
+  "label": "Chimie à la maison",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi les sodas abîment-ils les dents, même « sans sucre » ?",
+  "explanation": "Les versions sucrées ajoutent en plus le sucre, dont se nourrissent les bactéries des caries.",
+  "options": [
+   "Ils sont acides et attaquent l'émail*",
+   "Ils sont trop froids",
+   "Leurs bulles cassent les dents",
+   "Ils colorent les dents"
+  ]
+ },
+ {
+  "key": "sci24-290",
+  "concept": "science.chemistry.v24_demi_vie",
+  "label": "Radioactivité",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Que désigne la « demi-vie » d'un élément radioactif ?",
+  "explanation": "Pour le carbone 14, elle est d'environ 5 700 ans, ce qui permet de dater des objets anciens.",
+  "options": [
+   "Le temps au bout duquel la moitié de ses atomes s'est transformée*",
+   "La moitié de sa durée de vie totale",
+   "Le temps qu'il met à fondre",
+   "Le temps avant qu'il devienne dangereux"
+  ]
+ },
+ {
+  "key": "sci24-291",
+  "concept": "science.chemistry.v24_tf_corps_fer_clou",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le corps d'un adulte contient assez de fer pour fabriquer un petit clou.",
+  "explanation": "Environ 3 à 4 grammes, surtout dans l'hémoglobine du sang.",
+  "answer": true
+ },
+ {
+  "key": "sci24-292",
+  "concept": "science.chemistry.v24_tf_eau_feu_electrique",
+  "label": "Sécurité",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "On peut éteindre un appareil électrique en feu avec de l'eau.",
+  "explanation": "L'eau conduit le courant : risque d'électrocution. Il faut couper le courant et utiliser un extincteur adapté.",
+  "answer": false
+ },
+ {
+  "key": "sci24-293",
+  "concept": "science.physics.v24_arc_double",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quand on voit un double arc-en-ciel, qu'a de particulier le second arc ?",
+  "explanation": "La lumière s'est réfléchie deux fois dans les gouttes. Le ciel entre les deux arcs paraît plus sombre : c'est la « bande d'Alexandre ».",
+  "options": [
+   "Ses couleurs sont dans l'ordre inverse*",
+   "Il est toujours blanc",
+   "Il est plus brillant",
+   "Il est sous le premier"
+  ]
+ },
+ {
+  "key": "sci24-294",
+  "concept": "science.physics.v24_tonnerre",
+  "label": "Son",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qui produit le bruit du tonnerre ?",
+  "explanation": "L'éclair chauffe l'air à environ 30 000 °C en une fraction de seconde.",
+  "options": [
+   "L'air chauffé brutalement par l'éclair, qui se dilate comme une explosion*",
+   "Les nuages qui se cognent",
+   "La pluie qui tombe",
+   "Le vent qui tourne"
+  ]
+ },
+ {
+  "key": "sci24-295",
+  "concept": "science.physics.v24_mirage",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi voit-on parfois des « flaques d'eau » sur une route très chaude, qui disparaissent quand on approche ?",
+  "explanation": "C'est un mirage : la « flaque » est en réalité une image du ciel.",
+  "options": [
+   "L'air chaud près du sol courbe la lumière du ciel vers nos yeux*",
+   "De l'eau s'évapore du goudron",
+   "Le goudron fond",
+   "Le soleil se reflète sur la peinture"
+  ]
+ },
+ {
+  "key": "sci24-296",
+  "concept": "science.physics.v24_avion_altitude",
+  "label": "Physique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi les avions de ligne volent-ils si haut, vers 10 000 mètres ?",
+  "explanation": "Ils volent aussi au-dessus de la plupart des nuages et des turbulences.",
+  "options": [
+   "L'air y est moins dense, donc l'avion est moins freiné et consomme moins*",
+   "Pour éviter les oiseaux uniquement",
+   "Pour être plus près du Soleil",
+   "Parce que les moteurs ne marchent pas plus bas"
+  ]
+ },
+ {
+  "key": "sci24-297",
+  "concept": "science.physics.v24_tf_etoiles_scintillent",
+  "label": "Lumière",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Les étoiles scintillent à cause des mouvements de l'air de notre atmosphère.",
+  "explanation": "Vues depuis l'espace, elles ne scintillent pas. C'est pourquoi les télescopes spatiaux voient si net.",
+  "answer": true
+ },
+ {
+  "key": "sci24-298",
+  "concept": "science.space.v24_mars_rouge",
+  "label": "Planètes",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi Mars est-elle rouge ?",
+  "explanation": "Cette fine poussière est soulevée par d'immenses tempêtes qui couvrent parfois toute la planète.",
+  "options": [
+   "Son sol est couvert de poussière riche en oxyde de fer, comme de la rouille*",
+   "Elle est très chaude",
+   "Elle est couverte de lave",
+   "Son atmosphère est rouge sang"
+  ]
+ },
+ {
+  "key": "sci24-299",
+  "concept": "science.space.v24_saturne_anneaux",
+  "label": "Planètes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quoi sont faits surtout les anneaux de Saturne ?",
+  "explanation": "Des grains de la taille d'un caillou ou d'une maison. Les anneaux sont larges de centaines de milliers de km, mais épais de quelques dizaines de mètres.",
+  "options": [
+   "De morceaux de glace*",
+   "De gaz",
+   "De sable",
+   "De métal"
+  ]
+ },
+ {
+  "key": "sci24-300",
+  "concept": "science.space.v24_co_annee_mars",
+  "label": "Planètes",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien de jours terrestres dure une année sur Mars ?",
+  "explanation": "Presque deux années terrestres. Un enfant de 10 ans sur Terre n'aurait qu'environ 5 ans sur Mars.",
+  "answer": 687,
+  "tolerance": 30,
+  "min": 300,
+  "max": 1000,
+  "start": 300
+ },
+ {
+  "key": "sci24-301",
+  "concept": "science.space.v24_pa_annees_planetes",
+  "label": "Planètes",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque planète à la durée de son année (un tour du Soleil).",
+  "explanation": "Plus une planète est loin du Soleil, plus son tour est long… et plus elle va lentement.",
+  "pairs": [
+   [
+    "Mercure",
+    "88 jours"
+   ],
+   [
+    "Terre",
+    "365 jours"
+   ],
+   [
+    "Mars",
+    "687 jours"
+   ],
+   [
+    "Jupiter",
+    "Environ 12 ans"
+   ]
+  ]
+ },
+ {
+  "key": "sci24-302",
+  "concept": "science.space.v24_tf_andromede_collision",
+  "label": "Galaxies",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "La galaxie d'Andromède se rapproche de la nôtre.",
+  "explanation": "À environ 110 km par seconde. Une collision est possible dans plusieurs milliards d'années, mais les étoiles, très éloignées les unes des autres, ne se percuteraient presque jamais.",
+  "answer": true
+ },
+ {
+  "key": "sci24-303",
+  "concept": "science.space.v24_tf_glace_lune",
+  "label": "La Lune",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Il y a de la glace d'eau sur la Lune.",
+  "explanation": "Au fond de cratères des pôles, jamais éclairés par le Soleil. Une ressource précieuse pour de futures bases lunaires.",
+  "answer": true
+ },
+ {
+  "key": "sci24-304",
+  "concept": "science.space.v24_tf_seismes_lune",
+  "label": "La Lune",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Il y a des tremblements de terre sur la Lune.",
+  "explanation": "Des « séismes lunaires », mesurés par les instruments laissés par les missions Apollo. Certains durent plus d'une heure.",
+  "answer": true
+ },
+ {
+  "key": "sci24-305",
+  "concept": "science.human_body.v24_air_jour",
+  "label": "Respiration",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de litres d'air respire environ un adulte en une journée ?",
+  "explanation": "De quoi remplir une petite pièce. On respire 12 à 20 fois par minute au repos.",
+  "options": [
+   "Environ 10 000 litres*",
+   "Environ 100 litres",
+   "Environ 1 000 000 litres",
+   "Environ 10 litres"
+  ]
+ },
+ {
+  "key": "sci24-306",
+  "concept": "science.human_body.v24_courbatures",
+  "label": "Idées reçues",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Selon les connaissances actuelles, d'où viennent surtout les courbatures après le sport ?",
+  "explanation": "L'acide lactique disparaît en une heure environ. Les courbatures, elles, apparaissent le lendemain.",
+  "options": [
+   "De petites lésions des fibres musculaires*",
+   "De l'acide lactique coincé dans les muscles",
+   "Des os qui grandissent",
+   "Du manque d'eau"
+  ]
+ },
+ {
+  "key": "sci24-307",
+  "concept": "science.human_body.v24_coeur_electrique",
+  "label": "Cœur et sang",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce qui donne le signal de chaque battement du cœur ?",
+  "explanation": "C'est le « nœud sinusal », un stimulateur naturel. Un cœur greffé continue de battre sans être relié aux nerfs.",
+  "options": [
+   "Un petit groupe de cellules du cœur qui produit une impulsion électrique*",
+   "Le cerveau, à chaque battement",
+   "Les poumons",
+   "L'estomac"
+  ]
+ },
+ {
+  "key": "sci24-308",
+  "concept": "science.human_body.v24_groupe_rare",
+  "label": "Cœur et sang",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel groupe sanguin est le plus rare en France ?",
+  "explanation": "Moins de 1 % des Français. Les groupes O et A sont de loin les plus répandus.",
+  "options": [
+   "AB négatif*",
+   "O positif",
+   "A positif",
+   "B positif"
+  ]
+ },
+ {
+  "key": "sci24-309",
+  "concept": "science.human_body.v24_tf_sommeil_memoire",
+  "label": "Cerveau",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le sommeil aide le cerveau à fixer ce que l'on a appris dans la journée.",
+  "explanation": "Pendant la nuit, le cerveau « rejoue » et trie les souvenirs. Réviser puis bien dormir est une bonne stratégie.",
+  "answer": true
+ },
+ {
+  "key": "sci24-310",
+  "concept": "science.human_body.v24_ga_oxygene_expire",
+  "label": "Respiration",
+  "type": "gauge",
+  "difficulty": 75,
+  "prompt": "Quelle part d'oxygène contient encore l'air que nous expirons ?",
+  "explanation": "Environ 16 %, contre 21 % dans l'air inspiré. C'est ce qui rend possible le bouche-à-bouche.",
+  "answer": 16,
+  "tolerance": 4,
+  "unit": "%"
+ },
+ {
+  "key": "sci24-311",
+  "concept": "science.physics.v24_tf_foudre_mer",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "La foudre ne tombe jamais sur la mer.",
+  "explanation": "Elle frappe aussi la mer, même si les orages sont plus fréquents au-dessus des terres. Le courant se disperse alors dans l'eau salée.",
+  "answer": false
+ },
+ {
+  "key": "sci24-312",
+  "concept": "science.space.v24_tf_soleil_tourne_terre",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Le Soleil tourne autour de la Terre.",
+  "explanation": "C'est la Terre qui tourne autour du Soleil, en un an. Le Soleil semble bouger dans le ciel parce que la Terre tourne sur elle-même.",
+  "answer": false
+ },
+ {
+  "key": "sci24-313",
+  "concept": "science.biology.v24_tf_plantes_terre",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Un arbre fabrique l'essentiel de son bois à partir de la terre où il pousse.",
+  "explanation": "Il le fabrique surtout à partir du CO₂ de l'air et de l'eau. Au XVIIe siècle, Van Helmont a vu qu'un saule avait grossi de 74 kg sans que la terre de son pot diminue vraiment.",
+  "answer": false
+ },
+ {
+  "key": "sci24-314",
+  "concept": "science.chemistry.v24_tf_diamant_incassable",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le diamant est si dur qu'il est impossible à casser.",
+  "explanation": "Il est très difficile à rayer, mais un bon coup de marteau peut le briser : il est dur, pas incassable.",
+  "answer": false
+ },
+ {
+  "key": "sci24-315",
+  "concept": "science.physics.v24_tf_atomes_microscope",
+  "label": "Physique",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "On peut voir un atome avec un microscope d'école.",
+  "explanation": "Un atome est des milliers de fois trop petit. Il faut des microscopes très spéciaux, comme le microscope à effet tunnel.",
+  "answer": false
+ },
+ {
+  "key": "sci24-316",
+  "concept": "science.physics.v24_tf_ondes_radioactives",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les ondes d'un téléphone portable sont radioactives.",
+  "explanation": "Ce sont des ondes radio, pas des rayonnements radioactifs. Leurs effets sont surveillés, mais ce n'est pas la même chose.",
+  "answer": false
+ },
+ {
+  "key": "sci24-317",
+  "concept": "science.chemistry.v24_tf_or_magnetique",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Un aimant attire l'or.",
+  "explanation": "L'or n'est pas magnétique. C'est même un petit test pour repérer certains faux bijoux.",
+  "answer": false
+ },
+ {
+  "key": "sci24-318",
+  "concept": "science.physics.v24_tf_plus_vite_lumiere",
+  "label": "Physique",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Une fusée assez puissante pourrait dépasser la vitesse de la lumière.",
+  "explanation": "Selon la relativité d'Einstein, aucun objet ayant une masse ne peut l'atteindre, et encore moins la dépasser.",
+  "answer": false
+ },
+ {
+  "key": "sci24-319",
+  "concept": "science.biology.v24_tf_vaccin_maladie",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Un vaccin contient la maladie sous sa forme dangereuse.",
+  "explanation": "Il contient un microbe affaibli, tué, un morceau de microbe ou la « recette » d'une de ses protéines : de quoi entraîner le corps sans le rendre malade.",
+  "answer": false
+ },
+ {
+  "key": "sci24-320",
+  "concept": "science.biology.v24_tf_bacterie_oeil",
+  "label": "Biologie",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "On peut voir une bactérie seule à l'œil nu.",
+  "explanation": "Elle mesure quelques millièmes de millimètre. Il faut un microscope. On ne voit à l'œil nu que des colonies de milliards de bactéries.",
+  "answer": false
+ },
+ {
+  "key": "sci24-321",
+  "concept": "science.biology.v24_tf_adn_humains",
+  "label": "Biologie",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Seuls les êtres humains ont de l'ADN.",
+  "explanation": "Tous les êtres vivants en ont : animaux, plantes, champignons et bactéries.",
+  "answer": false
+ },
+ {
+  "key": "sci24-322",
+  "concept": "science.physics.v24_tf_eau_mer_100",
+  "label": "Physique",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "L'eau de mer bout exactement à 100 °C au niveau de la mer.",
+  "explanation": "Le sel fait un peu monter la température d'ébullition, d'environ un demi-degré.",
+  "answer": false
+ },
+ {
+  "key": "sci24-323",
+  "concept": "science.chemistry.v24_tf_aluminium_rare",
+  "label": "Chimie",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "L'aluminium est un métal rare sur Terre.",
+  "explanation": "C'est le métal le plus abondant de la croûte terrestre. Au XIXe siècle pourtant, difficile à extraire, il était plus cher que l'or !",
+  "answer": false
+ },
+ {
+  "key": "sci24-324",
+  "concept": "science.space.v24_tf_os_espace",
+  "label": "Exploration",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Dans l'espace, les astronautes perdent de la masse osseuse.",
+  "explanation": "Sans la gravité, les os travaillent moins et s'affaiblissent. C'est pourquoi ils font environ deux heures de sport par jour.",
+  "answer": true
+ },
+ {
+  "key": "sci24-325",
+  "concept": "science.physics.v24_facile_vapeur",
+  "label": "États de la matière",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que devient l'eau quand elle bout ?",
+  "explanation": "Les petits nuages au-dessus d'une casserole sont en fait de minuscules gouttes : la vapeur elle-même est invisible.",
+  "options": [
+   "De la vapeur*",
+   "De la glace",
+   "Du sel",
+   "Du sable"
+  ]
+ },
+ {
+  "key": "sci24-326",
+  "concept": "science.biology.v24_facile_microscope",
+  "label": "Biologie",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Avec quel instrument observe-t-on les microbes ?",
+  "explanation": "Le microscope grossit des centaines ou des milliers de fois.",
+  "options": [
+   "Un microscope*",
+   "Un télescope",
+   "Des jumelles",
+   "Une loupe de poche"
+  ]
+ },
+ {
+  "key": "sci24-327",
+  "concept": "science.space.v24_facile_terre",
+  "label": "Système solaire",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Sur quelle planète vivons-nous ?",
+  "explanation": "C'est la troisième planète en partant du Soleil, et la seule connue pour abriter la vie.",
+  "options": [
+   "La Terre*",
+   "Mars",
+   "Vénus",
+   "Jupiter"
+  ]
+ },
+ {
+  "key": "sci24-328",
+  "concept": "science.human_body.v24_facile_jeune",
+  "label": "Corps humain",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Combien de temps peut-on survivre sans manger, si l'on boit de l'eau ?",
+  "explanation": "Le corps puise dans ses réserves de graisse. Sans boire, en revanche, on ne tient que quelques jours.",
+  "options": [
+   "Plusieurs semaines*",
+   "Deux jours",
+   "Un an",
+   "Quelques heures"
+  ]
+ },
+ {
+  "key": "sci24-329",
+  "concept": "science.chemistry.v24_pain_rassis",
+  "label": "Chimie en cuisine",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi le pain devient-il rassis ?",
+  "explanation": "C'est pour cela qu'un pain rassis redevient moelleux quelques minutes au four : la chaleur défait ces cristaux.",
+  "options": [
+   "L'amidon se réorganise en cristaux durs, même sans sécher*",
+   "Il perd tout son sel",
+   "Des bactéries le mangent",
+   "Le gluten s'évapore"
+  ]
+ },
+ {
+  "key": "sci24-330",
+  "concept": "science.chemistry.v24_chimie_organique",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "En chimie, que désigne une molécule « organique » ?",
+  "explanation": "Le sucre, les protéines, le plastique ou l'essence sont des molécules organiques.",
+  "options": [
+   "Une molécule construite autour d'atomes de carbone*",
+   "Une molécule issue de l'agriculture biologique",
+   "Une molécule vivante",
+   "Une molécule sans danger"
+  ]
+ },
+ {
+  "key": "sci24-331",
+  "concept": "science.space.v24_distance_soleil",
+  "label": "Système solaire",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "À quelle distance moyenne la Terre se trouve-t-elle du Soleil ?",
+  "explanation": "Cette distance sert d'unité aux astronomes : l'unité astronomique.",
+  "options": [
+   "Environ 150 millions de km*",
+   "Environ 1 million de km",
+   "Environ 15 milliards de km",
+   "Environ 384 000 km"
+  ]
+ },
+ {
+  "key": "sci24-332",
+  "concept": "science.space.v24_co_distance_lune",
+  "label": "La Lune",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "À combien de milliers de kilomètres en moyenne la Lune se trouve-t-elle de la Terre ?",
+  "explanation": "Environ 384 000 km : on pourrait aligner une trentaine de Terres entre les deux.",
+  "answer": 384,
+  "tolerance": 20,
+  "min": 100,
+  "max": 1000,
+  "start": 100
+ },
+ {
+  "key": "sci24-333",
+  "concept": "science.space.v24_terres_soleil",
+  "label": "Système solaire",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de Terres faudrait-il environ pour remplir le volume du Soleil ?",
+  "explanation": "Le Soleil est 109 fois plus large que la Terre, donc 109 × 109 × 109 fois plus volumineux.",
+  "options": [
+   "Environ 1,3 million*",
+   "Environ 100",
+   "Environ 1 000",
+   "Environ 1 milliard"
+  ]
+ },
+ {
+  "key": "sci24-334",
+  "concept": "science.space.v24_tl_blue_marble",
+  "label": "Exploration",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année a été prise « La Bille bleue », célèbre photo de la Terre entière, par l'équipage d'Apollo 17 ?",
+  "explanation": "Le 7 décembre 1972. C'est l'une des photos les plus reproduites de l'histoire.",
+  "answer": 1972,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2000
+ },
+ {
+  "key": "sci24-335",
+  "concept": "science.biology.v24_arbre_vie_racine",
+  "label": "Biologie",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien d'espèces vivantes a-t-on déjà décrites et nommées sur Terre ?",
+  "explanation": "Mais il en resterait des millions à découvrir, surtout des insectes, des champignons et des micro-organismes.",
+  "options": [
+   "Environ 2 millions*",
+   "Environ 10 000",
+   "Environ 100 millions",
+   "Environ 500"
+  ]
+ },
+ {
+  "key": "sci24-336",
+  "concept": "science.physics.v24_arc_en_ciel_rond",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Vu depuis un avion, quelle forme peut avoir un arc-en-ciel ?",
+  "explanation": "Depuis le sol, l'horizon en cache la moitié du bas. Vu d'en haut, on peut voir le cercle entier.",
+  "options": [
+   "Un cercle complet*",
+   "Un carré",
+   "Une ligne droite",
+   "Une spirale"
+  ]
+ },
+ {
+  "key": "sci24-337",
+  "concept": "science.biology.v24_coeur_battements_vie",
+  "label": "Biologie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel animal a l'une des espérances de vie les plus longues parmi les mammifères terrestres, en dehors de l'humain ?",
+  "explanation": "Il peut vivre 60 à 70 ans dans la nature.",
+  "options": [
+   "L'éléphant*",
+   "Le chat",
+   "Le cheval",
+   "Le lapin"
+  ]
+ },
+ {
+  "key": "sci24-338",
+  "concept": "science.human_body.v24_jeanne_calment",
+  "label": "Corps humain",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel âge avait la Française Jeanne Calment, la doyenne de l'humanité, à sa mort en 1997 ?",
+  "explanation": "Née en 1875 à Arles, elle avait croisé Vincent van Gogh dans le magasin de son oncle.",
+  "options": [
+   "122 ans*",
+   "105 ans",
+   "115 ans",
+   "130 ans"
+  ]
+ },
+ {
+  "key": "sci24-339",
+  "concept": "science.physics.v24_arc_en_ciel_dos",
+  "label": "Lumière",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Le matin, pour voir un arc-en-ciel, de quel côté du ciel faut-il regarder ?",
+  "explanation": "L'arc-en-ciel se forme toujours à l'opposé du Soleil. Le soir, il faut donc regarder vers l'est.",
+  "options": [
+   "Vers l'ouest, le dos au Soleil levant*",
+   "Vers l'est, face au Soleil",
+   "Vers le haut, au zénith",
+   "N'importe où"
+  ]
+ },
+ {
+  "key": "sci24-340",
+  "concept": "science.chemistry.v24_sel_glace_fondre",
+  "label": "Chimie",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi met-on du sel dans la glace pour fabriquer une glace maison à l'ancienne ?",
+  "explanation": "En fondant avec le sel, la glace absorbe de la chaleur : le mélange descend vers −20 °C et fait prendre la crème.",
+  "options": [
+   "Le mélange devient beaucoup plus froid que 0 °C*",
+   "Pour donner du goût",
+   "Pour que la glace fonde moins vite",
+   "Pour la rendre plus dure"
+  ]
+ },
+ {
+  "key": "sci24-341",
+  "concept": "science.biology.v24_insectes_respiration",
+  "label": "Biologie",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment respirent les insectes ?",
+  "explanation": "Ce système limite leur taille : c'est une raison pour laquelle il n'existe plus d'insectes géants aujourd'hui.",
+  "options": [
+   "Par de petits trous sur les côtés du corps, reliés à des tubes*",
+   "Avec des poumons",
+   "Avec des branchies",
+   "Par la bouche uniquement"
+  ]
+ },
+ {
+  "key": "sci24-342",
+  "concept": "science.human_body.v24_sang_quantite_don",
+  "label": "Cœur et sang",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle quantité de sang prélève-t-on environ lors d'un don du sang ?",
+  "explanation": "Le corps reconstitue le volume en quelques heures, et les globules rouges en quelques semaines.",
+  "options": [
+   "Environ un demi-litre*",
+   "Environ 5 litres",
+   "Environ un verre à liqueur",
+   "Environ 2 litres"
+  ]
+ },
+ {
+  "key": "sci24-343",
+  "concept": "science.human_body.v24_bailler_age",
+  "label": "Corps étonnant",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dès quand un être humain bâille-t-il ?",
+  "explanation": "Les échographies montrent des fœtus qui bâillent. Le bâillement « contagieux », lui, n'apparaît que vers 4 ou 5 ans.",
+  "options": [
+   "Avant même la naissance, dans le ventre de sa mère*",
+   "Vers 2 ans",
+   "Vers 10 ans",
+   "À l'âge adulte seulement"
+  ]
+ },
+ {
+  "key": "sci24-344",
+  "concept": "science.space.v24_tf_comete_queue",
+  "label": "Comètes",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "La queue d'une comète pointe toujours à l'opposé du Soleil.",
+  "explanation": "Elle est poussée par la lumière et le vent solaire, quelle que soit la direction dans laquelle la comète voyage.",
+  "answer": true
+ },
+ {
+  "key": "sci24-345",
+  "concept": "science.physics.v24_tf_glace_chaud",
+  "label": "Physique",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "De la glace peut être plus froide que 0 °C.",
+  "explanation": "La glace du congélateur est souvent vers −18 °C. 0 °C est seulement la température à laquelle elle fond.",
+  "answer": true
+ },
+ {
+  "key": "sci24-346",
+  "concept": "science.chemistry.v24_tf_chewing_gum_7_ans",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Un chewing-gum avalé reste sept ans dans l'estomac.",
+  "explanation": "Il n'est pas digéré, mais il traverse le tube digestif et ressort en quelques jours, comme le reste.",
+  "answer": false
+ },
+ {
+  "key": "sci24-347",
+  "concept": "science.human_body.v24_tf_bebe_nager",
+  "label": "Corps étonnant",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Un nouveau-né retient automatiquement sa respiration quand on le plonge sous l'eau.",
+  "explanation": "C'est un réflexe de plongée, qui disparaît en quelques mois. Ce n'est pas pour autant qu'il sait nager !",
+  "answer": true
+ },
+ {
+  "key": "sci24-348",
+  "concept": "science.biology.v24_tf_dauphins_poissons_sci",
+  "label": "Biologie",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le requin et le dauphin sont proches parents.",
+  "explanation": "Le requin est un poisson, le dauphin un mammifère. Leur forme semblable vient d'une adaptation à la même vie dans l'eau.",
+  "answer": false
+ },
+ {
+  "key": "sci24-349",
+  "concept": "science.biology.v24_convergence",
+  "label": "Évolution",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment appelle-t-on le fait que des animaux sans lien de parenté proche finissent par se ressembler, comme le requin et le dauphin ?",
+  "explanation": "Un même milieu « sculpte » des formes semblables : les ailes des chauves-souris et des oiseaux en sont un autre exemple.",
+  "options": [
+   "La convergence évolutive*",
+   "Le clonage",
+   "La métamorphose",
+   "L'hybridation"
+  ]
+ }
+]
