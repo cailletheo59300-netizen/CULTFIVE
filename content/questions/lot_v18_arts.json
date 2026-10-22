@@ -1,0 +1,5718 @@
+[
+ {
+  "key": "art18-001",
+  "concept": "arts.painting.v18_joconde_vol",
+  "label": "Le vol de la Joconde",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a volé la Joconde au Louvre, en 1911 ?",
+  "explanation": "Vincenzo Peruggia la cacha sous sa blouse. On la retrouva deux ans plus tard à Florence. Picasso et Apollinaire furent un temps soupçonnés !",
+  "options": [
+   "Un vitrier italien qui travaillait au musée*",
+   "Pablo Picasso",
+   "Arsène Lupin",
+   "Un gardien du Louvre"
+  ]
+ },
+ {
+  "key": "art18-002",
+  "concept": "arts.painting.v18_joconde_taille",
+  "label": "La Joconde",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est à peu près la taille de la Joconde ?",
+  "explanation": "Beaucoup de visiteurs sont surpris par sa petite taille. Elle est peinte sur un panneau de bois de peuplier.",
+  "options": [
+   "77 cm sur 53 cm*",
+   "2 m sur 1,50 m",
+   "30 cm sur 20 cm",
+   "5 m sur 3 m"
+  ]
+ },
+ {
+  "key": "art18-003",
+  "concept": "arts.painting.v18_joconde_francois",
+  "label": "La Joconde",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment la Joconde est-elle arrivée en France ?",
+  "explanation": "Léonard l'a gardée jusqu'à sa mort à Amboise, en 1519. Elle est ensuite entrée dans la collection royale.",
+  "options": [
+   "Léonard de Vinci l'a emportée en venant travailler pour François Ier*",
+   "Napoléon l'a rapportée d'Italie",
+   "Elle a été achetée en 1900",
+   "Elle a été offerte par le pape"
+  ]
+ },
+ {
+  "key": "art18-004",
+  "concept": "arts.painting.v18_cri_versions",
+  "label": "Le Cri",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de versions du « Cri » Edvard Munch a-t-il réalisées ?",
+  "explanation": "Deux peintures, deux pastels et de nombreuses lithographies. Deux versions ont été volées, puis retrouvées.",
+  "options": [
+   "Plusieurs : peintures, pastels et lithographies*",
+   "Une seule",
+   "Deux, dont une détruite",
+   "Plus de cent"
+  ]
+ },
+ {
+  "key": "art18-005",
+  "concept": "arts.painting.v18_nuit_etoilee_asile",
+  "label": "La Nuit étoilée",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Où Van Gogh a-t-il peint « La Nuit étoilée », en 1889 ?",
+  "explanation": "Il s'y était fait interner volontairement. Le tableau est aujourd'hui au MoMA de New York.",
+  "options": [
+   "Depuis la fenêtre de sa chambre à l'asile de Saint-Rémy-de-Provence*",
+   "À Paris, depuis Montmartre",
+   "À Amsterdam",
+   "À Arles, sur le port"
+  ]
+ },
+ {
+  "key": "art18-006",
+  "concept": "arts.painting.v18_van_gogh_frere",
+  "label": "Van Gogh",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui soutenait financièrement Vincent van Gogh et recevait ses nombreuses lettres ?",
+  "explanation": "Plus de 600 lettres de Vincent à Theo nous sont parvenues. Theo est mort six mois après son frère.",
+  "options": [
+   "Son frère Theo*",
+   "Son ami Gauguin",
+   "Sa mère",
+   "Un riche marchand parisien"
+  ]
+ },
+ {
+  "key": "art18-007",
+  "concept": "arts.painting.v18_van_gogh_tableaux",
+  "label": "Van Gogh",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Environ combien de tableaux Van Gogh a-t-il peints, en à peine dix ans ? (à 100 près)",
+  "explanation": "Environ 860 peintures et plus de 1 200 dessins, de 1880 à 1890.",
+  "answer": 860,
+  "tolerance": 100
+ },
+ {
+  "key": "art18-008",
+  "concept": "arts.painting.v18_guernica_bombardement",
+  "label": "Guernica",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Guernica » de Picasso dénonce…",
+  "explanation": "Pendant la guerre d'Espagne, l'aviation allemande alliée de Franco a rasé la ville. Picasso l'a peint en noir, blanc et gris.",
+  "options": [
+   "Le bombardement d'une ville basque en 1937*",
+   "La Première Guerre mondiale",
+   "Une corrida",
+   "Un tremblement de terre"
+  ]
+ },
+ {
+  "key": "art18-009",
+  "concept": "arts.painting.v18_guernica_officier",
+  "label": "Guernica",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Selon une anecdote célèbre, un officier allemand demande à Picasso, devant une photo de « Guernica » : « C'est vous qui avez fait ça ? » Que répond-il ?",
+  "explanation": "Une réponse qui résume le sens du tableau : les vrais auteurs, ce sont ceux qui ont bombardé la ville.",
+  "options": [
+   "« Non, c'est vous. »*",
+   "« Oui, et j'en suis fier. »",
+   "« C'est un ami. »",
+   "« Je ne sais pas. »"
+  ]
+ },
+ {
+  "key": "art18-010",
+  "concept": "arts.painting.v18_picasso_nom",
+  "label": "Picasso",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le nom complet de Picasso comptait…",
+  "explanation": "Pablo Diego José Francisco de Paula Juan Nepomuceno María de los Remedios Cipriano de la Santísima Trinidad Ruiz y Picasso !",
+  "options": [
+   "Plus de dix prénoms*",
+   "Un seul prénom",
+   "Trois noms de famille",
+   "Un surnom seulement"
+  ]
+ },
+ {
+  "key": "art18-011",
+  "concept": "arts.painting.v18_picasso_periodes",
+  "label": "Picasso",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment appelle-t-on la période où Picasso peignait presque tout en bleu, au début des années 1900 ?",
+  "explanation": "Après la mort d'un ami, il peint la misère en bleu. Vient ensuite la période rose, plus joyeuse.",
+  "options": [
+   "La période bleue*",
+   "La période triste",
+   "La période marine",
+   "La période froide"
+  ]
+ },
+ {
+  "key": "art18-012",
+  "concept": "arts.painting.v18_radeau_meduse",
+  "label": "Le Radeau de la Méduse",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Le Radeau de la Méduse » de Géricault s'inspire…",
+  "explanation": "La frégate « La Méduse » a échoué au large du Sénégal. Sur les 147 naufragés du radeau, 15 ont survécu.",
+  "options": [
+   "D'un vrai naufrage de 1816*",
+   "D'une légende grecque",
+   "D'un roman de Jules Verne",
+   "D'une tempête imaginaire"
+  ]
+ },
+ {
+  "key": "art18-013",
+  "concept": "arts.painting.v18_liberte_delacroix",
+  "label": "La Liberté guidant le peuple",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle révolution célèbre « La Liberté guidant le peuple » de Delacroix ?",
+  "explanation": "Trois journées de juillet 1830 qui ont chassé le roi Charles X. On croit souvent, à tort, qu'il s'agit de 1789.",
+  "options": [
+   "Les Trois Glorieuses de 1830*",
+   "La Révolution de 1789",
+   "La Commune de 1871",
+   "Mai 68"
+  ]
+ },
+ {
+  "key": "art18-014",
+  "concept": "arts.painting.v18_impressionnisme_nom",
+  "label": "L'impressionnisme",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "D'où vient le nom « impressionnisme » ?",
+  "explanation": "En 1874, le critique Louis Leroy se moque de « Impression, soleil levant ». Les peintres ont gardé le nom.",
+  "options": [
+   "D'un critique qui s'est moqué d'un tableau de Monet*",
+   "D'un manifeste écrit par Renoir",
+   "D'une imprimerie",
+   "D'un poème de Baudelaire"
+  ]
+ },
+ {
+  "key": "art18-015",
+  "concept": "arts.painting.v18_monet_cataracte",
+  "label": "Monet",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi les dernières toiles de Monet sont-elles dominées par le rouge et le brun ?",
+  "explanation": "La maladie jaunissait sa vision. Après une opération, il a retouché certaines toiles.",
+  "options": [
+   "Il souffrait de la cataracte*",
+   "Il manquait de peinture bleue",
+   "Il peignait seulement la nuit",
+   "Il voulait choquer"
+  ]
+ },
+ {
+  "key": "art18-016",
+  "concept": "arts.painting.v18_monet_nympheas_orangerie",
+  "label": "Monet",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Où peut-on voir les immenses panneaux des « Nymphéas » que Monet a offerts à la France ?",
+  "explanation": "Deux salles ovales conçues selon ses indications, ouvertes en 1927, peu après sa mort.",
+  "options": [
+   "Au musée de l'Orangerie, à Paris*",
+   "Au Louvre",
+   "Au musée d'Orsay",
+   "À Giverny"
+  ]
+ },
+ {
+  "key": "art18-017",
+  "concept": "arts.painting.v18_degas_danseuses",
+  "label": "Degas",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel peintre impressionniste a peint et sculpté de nombreuses danseuses de l'Opéra ?",
+  "explanation": "Sa sculpture « La Petite Danseuse de quatorze ans » portait un vrai tutu et de vrais cheveux.",
+  "options": [
+   "Edgar Degas*",
+   "Claude Monet",
+   "Alfred Sisley",
+   "Camille Pissarro"
+  ]
+ },
+ {
+  "key": "art18-018",
+  "concept": "arts.painting.v18_toulouse_lautrec",
+  "label": "Toulouse-Lautrec",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel peintre de petite taille a dessiné les affiches du Moulin-Rouge ?",
+  "explanation": "Ses jambes avaient cessé de grandir après deux fractures à l'adolescence. Il mesurait 1,52 m.",
+  "options": [
+   "Henri de Toulouse-Lautrec*",
+   "Edgar Degas",
+   "Alfons Mucha",
+   "Pierre Bonnard"
+  ]
+ },
+ {
+  "key": "art18-019",
+  "concept": "arts.painting.v18_gauguin_tahiti",
+  "label": "Gauguin",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sur quelle île Paul Gauguin est-il parti peindre, loin de la France ?",
+  "explanation": "Il a fini sa vie aux Marquises, où il est enterré, comme plus tard Jacques Brel.",
+  "options": [
+   "Tahiti*",
+   "La Réunion",
+   "Madagascar",
+   "La Martinique"
+  ]
+ },
+ {
+  "key": "art18-020",
+  "concept": "arts.painting.v18_cezanne_sainte_victoire",
+  "label": "Cézanne",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle montagne Paul Cézanne a-t-il peinte des dizaines de fois ?",
+  "explanation": "Près d'Aix-en-Provence, sa ville natale. Plus de 80 œuvres la représentent.",
+  "options": [
+   "La montagne Sainte-Victoire*",
+   "Le mont Blanc",
+   "Le mont Ventoux",
+   "Le puy de Dôme"
+  ]
+ },
+ {
+  "key": "art18-021",
+  "concept": "arts.painting.v18_magritte_pipe",
+  "label": "Magritte",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle phrase René Magritte a-t-il écrite sous un tableau représentant une pipe ?",
+  "explanation": "Ce n'est en effet pas une pipe… mais l'image d'une pipe. Le tableau s'appelle « La Trahison des images » (1929).",
+  "options": [
+   "« Ceci n'est pas une pipe »*",
+   "« Ceci est une pipe »",
+   "« Fumer tue »",
+   "« La pipe de mon père »"
+  ]
+ },
+ {
+  "key": "art18-022",
+  "concept": "arts.painting.v18_dali_moustache",
+  "label": "Dalí",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quel peintre surréaliste était célèbre pour sa moustache aux pointes relevées ?",
+  "explanation": "Il la cirait pour qu'elle tienne. Elle est devenue une œuvre à part entière.",
+  "options": [
+   "Salvador Dalí*",
+   "René Magritte",
+   "Joan Miró",
+   "Max Ernst"
+  ]
+ },
+ {
+  "key": "art18-023",
+  "concept": "arts.painting.v18_kahlo_autoportraits",
+  "label": "Frida Kahlo",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle peintre mexicaine a réalisé de nombreux autoportraits après un grave accident de bus ?",
+  "explanation": "Clouée au lit, elle peignait grâce à un miroir fixé au-dessus d'elle. Elle était mariée au peintre Diego Rivera.",
+  "options": [
+   "Frida Kahlo*",
+   "Tamara de Lempicka",
+   "Georgia O'Keeffe",
+   "Louise Bourgeois"
+  ]
+ },
+ {
+  "key": "art18-024",
+  "concept": "arts.painting.v18_hokusai_vague",
+  "label": "Hokusai",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle célèbre estampe japonaise montre une immense vague devant le mont Fuji ?",
+  "explanation": "Par Katsushika Hokusai, vers 1831. Elle fait partie des « Trente-six vues du mont Fuji ».",
+  "options": [
+   "La Grande Vague de Kanagawa*",
+   "La Vague de Tokyo",
+   "Le Tsunami d'Osaka",
+   "La Mer de Kyoto"
+  ]
+ },
+ {
+  "key": "art18-025",
+  "concept": "arts.painting.v18_klimt_or",
+  "label": "Klimt",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Avec quoi Gustav Klimt décorait-il certains de ses tableaux, comme « Le Baiser » ?",
+  "explanation": "Son père était graveur sur or. On parle de sa « période dorée ».",
+  "options": [
+   "De la feuille d'or*",
+   "Des diamants",
+   "Des plumes",
+   "Du sable"
+  ]
+ },
+ {
+  "key": "art18-026",
+  "concept": "arts.painting.v18_vermeer_peu",
+  "label": "Vermeer",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de tableaux de Vermeer connaît-on aujourd'hui ?",
+  "explanation": "Le peintre de Delft travaillait lentement. On a même découvert de faux Vermeer, peints par Han van Meegeren.",
+  "options": [
+   "Environ 35*",
+   "Environ 350",
+   "Environ 3 500",
+   "Seulement 3"
+  ]
+ },
+ {
+  "key": "art18-027",
+  "concept": "arts.painting.v18_faussaire_vermeer",
+  "label": "Faussaires",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Le faussaire Han van Meegeren a vendu un faux Vermeer à…",
+  "explanation": "Accusé après la guerre d'avoir vendu un trésor national, il prouva son innocence en peignant un faux devant les experts.",
+  "options": [
+   "Hermann Göring, chef nazi*",
+   "Le Louvre",
+   "Napoléon III",
+   "Un milliardaire américain"
+  ]
+ },
+ {
+  "key": "art18-028",
+  "concept": "arts.painting.v18_rembrandt_autoportraits",
+  "label": "Rembrandt",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien d'autoportraits Rembrandt a-t-il réalisés environ ?",
+  "explanation": "Peintures, dessins et gravures : un véritable journal intime de son visage, de la jeunesse à la vieillesse.",
+  "options": [
+   "Près de 80*",
+   "Un seul",
+   "Une dizaine",
+   "Plus de 500"
+  ]
+ },
+ {
+  "key": "art18-029",
+  "concept": "arts.painting.v18_caravage_meurtre",
+  "label": "Le Caravage",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi le Caravage a-t-il dû fuir Rome en 1606 ?",
+  "explanation": "Condamné à mort, il a passé ses dernières années en exil à Naples, Malte et en Sicile.",
+  "options": [
+   "Il avait tué un homme lors d'une bagarre*",
+   "Il avait volé un tableau",
+   "Le pape l'avait banni pour ses dettes",
+   "Il fuyait la peste"
+  ]
+ },
+ {
+  "key": "art18-030",
+  "concept": "arts.painting.v18_michel_ange_sixtine_couche",
+  "label": "La chapelle Sixtine",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien d'années Michel-Ange a-t-il mis à peindre le plafond de la chapelle Sixtine ?",
+  "explanation": "De 1508 à 1512, debout sur un échafaudage, la tête renversée, et non couché comme on le dit souvent.",
+  "options": [
+   "Environ 4 ans*",
+   "6 mois",
+   "20 ans",
+   "1 an"
+  ]
+ },
+ {
+  "key": "art18-031",
+  "concept": "arts.painting.v18_michel_ange_david",
+  "label": "Le David",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quelle ville se trouve le « David » de Michel-Ange ?",
+  "explanation": "Sculpté dans un seul bloc de marbre entre 1501 et 1504. Il mesure plus de 5 mètres.",
+  "options": [
+   "Florence*",
+   "Rome",
+   "Venise",
+   "Milan"
+  ]
+ },
+ {
+  "key": "art18-032",
+  "concept": "arts.painting.v18_leonard_ecriture",
+  "label": "Léonard de Vinci",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment Léonard de Vinci écrivait-il dans ses carnets ?",
+  "explanation": "Gaucher, il écrivait à l'envers : il faut un miroir pour lire ses notes facilement.",
+  "options": [
+   "En écriture miroir, de droite à gauche*",
+   "En latin seulement",
+   "En code secret chiffré",
+   "Avec des dessins uniquement"
+  ]
+ },
+ {
+  "key": "art18-033",
+  "concept": "arts.painting.v18_leonard_cene",
+  "label": "La Cène",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi « La Cène » de Léonard de Vinci, à Milan, s'est-elle très vite abîmée ?",
+  "explanation": "Au lieu de la fresque sur enduit frais, il a essayé une peinture à la détrempe sur mur sec, qui s'est écaillée dès son vivant.",
+  "options": [
+   "Il l'a peinte sur un mur sec avec une technique expérimentale*",
+   "Elle a été bombardée",
+   "Elle était peinte sur du papier",
+   "Elle a été inondée"
+  ]
+ },
+ {
+  "key": "art18-034",
+  "concept": "arts.painting.v18_salvator_mundi",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel tableau attribué à Léonard de Vinci a été vendu 450 millions de dollars en 2017 ?",
+  "explanation": "Le tableau le plus cher jamais vendu aux enchères. Son attribution à Léonard reste discutée.",
+  "options": [
+   "Salvator Mundi*",
+   "La Joconde",
+   "La Dame à l'hermine",
+   "L'Annonciation"
+  ]
+ },
+ {
+  "key": "art18-035",
+  "concept": "arts.painting.v18_banksy_destruction",
+  "label": "Banksy",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "En 2018, que s'est-il passé juste après la vente aux enchères d'une œuvre de Banksy ?",
+  "explanation": "« La Petite Fille au ballon » est devenue « L'amour est dans la poubelle »… et a pris de la valeur !",
+  "options": [
+   "Elle s'est autodétruite en passant dans une broyeuse cachée dans le cadre*",
+   "Elle a pris feu",
+   "Elle a disparu",
+   "Elle a été volée"
+  ]
+ },
+ {
+  "key": "art18-036",
+  "concept": "arts.painting.v18_banksy_identite",
+  "label": "Banksy",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qu'a de particulier l'artiste de rue Banksy ?",
+  "explanation": "Personne ne sait officiellement qui il est. On sait seulement qu'il est britannique.",
+  "options": [
+   "Son identité est secrète*",
+   "Il n'a qu'un bras",
+   "Il peint uniquement en noir",
+   "Il est un robot"
+  ]
+ },
+ {
+  "key": "art18-037",
+  "concept": "arts.painting.v18_invader",
+  "label": "Art urbain",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel artiste colle des mosaïques de petits personnages de jeu vidéo sur les murs du monde entier ?",
+  "explanation": "Inspirés du jeu « Space Invaders ». Il en a même envoyé une dans la Station spatiale internationale.",
+  "options": [
+   "Invader*",
+   "Banksy",
+   "JR",
+   "Shepard Fairey"
+  ]
+ },
+ {
+  "key": "art18-038",
+  "concept": "arts.painting.v18_jr_photos",
+  "label": "Art urbain",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "L'artiste français JR est connu pour…",
+  "explanation": "Il a notamment fait « disparaître » la pyramide du Louvre en 2016 grâce à un trompe-l'œil photographique.",
+  "options": [
+   "Coller d'immenses portraits photographiques dans la rue*",
+   "Peindre des fresques en 3D",
+   "Sculpter la glace",
+   "Graver les arbres"
+  ]
+ },
+ {
+  "key": "art18-039",
+  "concept": "arts.painting.v18_klein_bleu",
+  "label": "Yves Klein",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel artiste français a fait enregistrer la formule de sa propre couleur bleue, l'IKB ?",
+  "explanation": "« International Klein Blue », un bleu outremer très intense. Il a peint des centaines de monochromes.",
+  "options": [
+   "Yves Klein*",
+   "Pierre Soulages",
+   "Henri Matisse",
+   "Fernand Léger"
+  ]
+ },
+ {
+  "key": "art18-040",
+  "concept": "arts.painting.v18_soulages_noir",
+  "label": "Soulages",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle couleur Pierre Soulages a-t-il explorée toute sa vie, au point d'inventer l'« outrenoir » ?",
+  "explanation": "Un noir travaillé qui reflète la lumière. Un musée lui est consacré à Rodez, sa ville natale.",
+  "options": [
+   "Le noir*",
+   "Le blanc",
+   "Le rouge",
+   "L'or"
+  ]
+ },
+ {
+  "key": "art18-041",
+  "concept": "arts.painting.v18_pollock_dripping",
+  "label": "Pollock",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment Jackson Pollock peignait-il ses grandes toiles ?",
+  "explanation": "C'est le « dripping ». On a surnommé Pollock « Jack the Dripper ».",
+  "options": [
+   "En faisant couler et éclabousser la peinture sur la toile posée au sol*",
+   "Avec ses doigts",
+   "Avec un pistolet à peinture",
+   "En peignant les yeux fermés"
+  ]
+ },
+ {
+  "key": "art18-042",
+  "concept": "arts.painting.v18_mondrian",
+  "label": "Mondrian",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel peintre néerlandais est célèbre pour ses tableaux faits de lignes noires et de carrés rouges, jaunes et bleus ?",
+  "explanation": "Ses compositions ont inspiré la mode (la robe Mondrian d'Yves Saint Laurent) et le design.",
+  "options": [
+   "Piet Mondrian*",
+   "Vincent van Gogh",
+   "Rembrandt",
+   "Johannes Vermeer"
+  ]
+ },
+ {
+  "key": "art18-043",
+  "concept": "arts.painting.v18_warhol_15_minutes",
+  "label": "Warhol",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Selon une phrase attribuée à Andy Warhol, à l'avenir, chacun sera célèbre pendant…",
+  "explanation": "Une prédiction souvent citée à l'ère des réseaux sociaux.",
+  "options": [
+   "15 minutes*",
+   "15 secondes",
+   "15 jours",
+   "15 ans"
+  ]
+ },
+ {
+  "key": "art18-044",
+  "concept": "arts.painting.v18_arcimboldo",
+  "label": "Arcimboldo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel peintre italien composait des portraits avec des fruits, des légumes et des fleurs ?",
+  "explanation": "Ses « Quatre Saisons » sont des visages faits de produits de la nature. Il travaillait pour les empereurs Habsbourg.",
+  "options": [
+   "Giuseppe Arcimboldo*",
+   "Le Caravage",
+   "Raphaël",
+   "Titien"
+  ]
+ },
+ {
+  "key": "art18-045",
+  "concept": "arts.painting.v18_bosch_monstres",
+  "label": "Jérôme Bosch",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel peintre flamand a rempli ses tableaux de créatures étranges et de monstres, vers 1500 ?",
+  "explanation": "On le considère parfois comme un ancêtre du surréalisme.",
+  "options": [
+   "Jérôme Bosch*",
+   "Jan van Eyck",
+   "Rubens",
+   "Brueghel l'Ancien"
+  ]
+ },
+ {
+  "key": "art18-046",
+  "concept": "arts.painting.v18_rubens_formes",
+  "label": "Rubens",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel adjectif a-t-on tiré du nom de Rubens, peintre de femmes aux formes généreuses ?",
+  "explanation": "On parle de « formes rubéniennes ». En anglais, on dit « Rubenesque ».",
+  "options": [
+   "Rubénien*",
+   "Rubensque",
+   "Rubicond",
+   "Rubescent"
+  ]
+ },
+ {
+  "key": "art18-047",
+  "concept": "arts.painting.v18_rodin_porte_enfer",
+  "label": "Rodin",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Le Penseur » de Rodin faisait d'abord partie d'une œuvre plus grande. Laquelle ?",
+  "explanation": "Inspirée de « La Divine Comédie » de Dante. Le Penseur représentait à l'origine Dante lui-même.",
+  "options": [
+   "La Porte de l'Enfer*",
+   "Le Baiser",
+   "Les Bourgeois de Calais",
+   "Le Monument à Balzac"
+  ]
+ },
+ {
+  "key": "art18-048",
+  "concept": "arts.painting.v18_camille_claudel",
+  "label": "Camille Claudel",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle sculptrice a été l'élève et la compagne de Rodin ?",
+  "explanation": "Une immense artiste, qui a passé les trente dernières années de sa vie internée. Son frère était l'écrivain Paul Claudel.",
+  "options": [
+   "Camille Claudel*",
+   "Niki de Saint Phalle",
+   "Louise Bourgeois",
+   "Berthe Morisot"
+  ]
+ },
+ {
+  "key": "art18-049",
+  "concept": "arts.painting.v18_giacometti",
+  "label": "Giacometti",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel sculpteur suisse est célèbre pour ses personnages très minces et allongés, comme « L'Homme qui marche » ?",
+  "explanation": "« L'Homme qui marche I » a été vendu plus de 100 millions de dollars en 2010.",
+  "options": [
+   "Alberto Giacometti*",
+   "Auguste Rodin",
+   "Constantin Brâncuși",
+   "Henry Moore"
+  ]
+ },
+ {
+  "key": "art18-050",
+  "concept": "arts.painting.v18_bourgeois_araignee",
+  "label": "Louise Bourgeois",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel animal géant Louise Bourgeois a-t-elle sculpté, sous le nom de « Maman » ?",
+  "explanation": "Plus de 9 mètres de haut, en hommage à sa mère, restauratrice de tapisseries, patiente et protectrice comme l'araignée.",
+  "options": [
+   "Une araignée*",
+   "Un éléphant",
+   "Une baleine",
+   "Un oiseau"
+  ]
+ },
+ {
+  "key": "art18-051",
+  "concept": "arts.painting.v18_niki_nanas",
+  "label": "Niki de Saint Phalle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appellent les grandes sculptures de femmes colorées de Niki de Saint Phalle ?",
+  "explanation": "Elle a aussi créé, avec Jean Tinguely, la fontaine Stravinsky à côté du centre Pompidou.",
+  "options": [
+   "Les Nanas*",
+   "Les Mamas",
+   "Les Belles",
+   "Les Poupées"
+  ]
+ },
+ {
+  "key": "art18-052",
+  "concept": "arts.painting.v18_koons_chien",
+  "label": "Jeff Koons",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle œuvre de Jeff Koons ressemble à un ballon de baudruche géant en acier brillant ?",
+  "explanation": "Une version orange a été vendue 58 millions de dollars en 2013.",
+  "options": [
+   "Balloon Dog*",
+   "Balloon Cat",
+   "Big Bear",
+   "Shiny Rabbit"
+  ]
+ },
+ {
+  "key": "art18-053",
+  "concept": "arts.painting.v18_doisneau_baiser",
+  "label": "Doisneau",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle photo célèbre de Robert Doisneau (1950) montre un couple qui s'embrasse dans la rue ?",
+  "explanation": "On a appris plus tard que la scène avait été jouée par deux jeunes comédiens, à la demande du photographe.",
+  "options": [
+   "Le Baiser de l'hôtel de ville*",
+   "Le Baiser de la tour Eiffel",
+   "Les Amoureux du métro",
+   "Le Baiser de la Bastille"
+  ]
+ },
+ {
+  "key": "art18-054",
+  "concept": "arts.painting.v18_cartier_bresson",
+  "label": "Cartier-Bresson",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel photographe français a théorisé « l'instant décisif » ?",
+  "explanation": "Cofondateur de l'agence Magnum en 1947, il photographiait avec un petit Leica, sans jamais recadrer.",
+  "options": [
+   "Henri Cartier-Bresson*",
+   "Robert Doisneau",
+   "Brassaï",
+   "Willy Ronis"
+  ]
+ },
+ {
+  "key": "art18-056",
+  "concept": "arts.painting.v18_moebius",
+  "label": "Bande dessinée",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sous quel pseudonyme Jean Giraud a-t-il dessiné des BD de science-fiction culte ?",
+  "explanation": "Sous son vrai nom, il dessinait le western « Blueberry ». Son style a inspiré « Star Wars » et « Alien ».",
+  "options": [
+   "Moebius*",
+   "Hergé",
+   "Franquin",
+   "Enki Bilal"
+  ]
+ },
+ {
+  "key": "art18-057",
+  "concept": "arts.painting.v18_herge_nom",
+  "label": "Hergé",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "D'où vient le pseudonyme « Hergé » ?",
+  "explanation": "G.R. retourné donne R.G., qui se prononce « Hergé ».",
+  "options": [
+   "Des initiales R.G. de Georges Remi, à l'envers*",
+   "D'un village belge",
+   "Du nom de son chien",
+   "D'un mot flamand"
+  ]
+ },
+ {
+  "key": "art18-058",
+  "concept": "arts.painting.v18_tintin_lune",
+  "label": "Tintin",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "En quelle année Tintin a-t-il marché sur la Lune, en BD ?",
+  "explanation": "« On a marché sur la Lune », publié en album en 1954.",
+  "options": [
+   "1954, quinze ans avant Neil Armstrong*",
+   "1969, comme Neil Armstrong",
+   "1975",
+   "1940"
+  ]
+ },
+ {
+  "key": "art18-059",
+  "concept": "arts.painting.v18_gaston",
+  "label": "Bande dessinée",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel personnage de Franquin est un employé maladroit et paresseux du journal Spirou ?",
+  "explanation": "Apparu en 1957. Son « M'enfin ! » est resté célèbre.",
+  "options": [
+   "Gaston Lagaffe*",
+   "Spirou",
+   "Fantasio",
+   "Le Marsupilami"
+  ]
+ },
+ {
+  "key": "art18-060",
+  "concept": "arts.painting.v18_angouleme",
+  "label": "Bande dessinée",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Dans quelle ville se tient le grand festival international de la bande dessinée en France ?",
+  "explanation": "Chaque janvier depuis 1974. Le « Fauve d'or » récompense le meilleur album.",
+  "options": [
+   "Angoulême*",
+   "Bruxelles",
+   "Lyon",
+   "Annecy"
+  ]
+ },
+ {
+  "key": "art18-061",
+  "concept": "arts.painting.v18_manga_sens",
+  "label": "Manga",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quel sens lit-on un manga traditionnel ?",
+  "explanation": "Comme les livres japonais : la première page est donc à la fin pour nous !",
+  "options": [
+   "De droite à gauche*",
+   "De gauche à droite",
+   "De bas en haut",
+   "En spirale"
+  ]
+ },
+ {
+  "key": "art18-062",
+  "concept": "arts.painting.v18_one_piece_record",
+  "label": "Manga",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel manga détient le record du plus grand nombre d'exemplaires vendus pour une BD d'un même auteur ?",
+  "explanation": "Plus de 500 millions d'exemplaires dans le monde pour la série d'Eiichirō Oda.",
+  "options": [
+   "One Piece*",
+   "Dragon Ball",
+   "Naruto",
+   "Astérix"
+  ]
+ },
+ {
+  "key": "art18-063",
+  "concept": "arts.painting.v18_techniques",
+  "label": "Les techniques",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque technique à sa définition.",
+  "explanation": "Le sfumato, c'est le flou mystérieux du sourire de la Joconde.",
+  "pairs": [
+   [
+    "La fresque",
+    "Peinture sur un enduit encore frais"
+   ],
+   [
+    "L'aquarelle",
+    "Couleurs diluées dans l'eau"
+   ],
+   [
+    "Le sfumato",
+    "Contours flous et vaporeux"
+   ],
+   [
+    "Le trompe-l'œil",
+    "Illusion de relief et de réalité"
+   ]
+  ]
+ },
+ {
+  "key": "art18-064",
+  "concept": "arts.painting.v18_clair_obscur",
+  "label": "Les techniques",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment appelle-t-on les forts contrastes entre ombre et lumière, chers au Caravage et à Rembrandt ?",
+  "explanation": "En italien : « chiaroscuro ». Les personnages semblent surgir de l'obscurité.",
+  "options": [
+   "Le clair-obscur*",
+   "Le contre-jour",
+   "Le pointillisme",
+   "Le camaïeu"
+  ]
+ },
+ {
+  "key": "art18-065",
+  "concept": "arts.painting.v18_perspective",
+  "label": "La perspective",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel architecte florentin a mis au point la perspective linéaire, vers 1415 ?",
+  "explanation": "Le même qui a construit l'immense coupole de la cathédrale de Florence.",
+  "options": [
+   "Filippo Brunelleschi*",
+   "Léonard de Vinci",
+   "Michel-Ange",
+   "Giotto"
+  ]
+ },
+ {
+  "key": "art18-066",
+  "concept": "arts.painting.v18_nature_morte",
+  "label": "Les genres",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment appelle-t-on un tableau qui représente des objets (fruits, vases, fleurs) ?",
+  "explanation": "Les Anglais disent « still life », la vie immobile.",
+  "options": [
+   "Une nature morte*",
+   "Un paysage",
+   "Un portrait",
+   "Une marine"
+  ]
+ },
+ {
+  "key": "art18-067",
+  "concept": "arts.painting.v18_vanite",
+  "label": "Les genres",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans la peinture du XVIIe siècle, une « vanité » est une nature morte avec…",
+  "explanation": "Bougie éteinte, sablier, fleurs fanées… tout rappelle que l'on va mourir.",
+  "options": [
+   "Un crâne, pour rappeler que la vie est courte*",
+   "Un miroir, pour se regarder",
+   "Beaucoup d'or",
+   "Des bijoux uniquement"
+  ]
+ },
+ {
+  "key": "art18-068",
+  "concept": "arts.painting.v18_triptyque",
+  "label": "Les formats",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle une œuvre en trois panneaux, souvent dans les églises ?",
+  "explanation": "Deux volets latéraux se referment sur le panneau central. Avec deux panneaux, c'est un diptyque.",
+  "options": [
+   "Un triptyque*",
+   "Un trièdre",
+   "Un trilogue",
+   "Un tripode"
+  ]
+ },
+ {
+  "key": "art18-069",
+  "concept": "arts.painting.v18_couleurs_complementaires",
+  "label": "Les couleurs",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est la couleur complémentaire du rouge ?",
+  "explanation": "Placées côte à côte, deux couleurs complémentaires se renforcent. Van Gogh adorait ces contrastes.",
+  "options": [
+   "Le vert*",
+   "Le bleu",
+   "Le jaune",
+   "Le noir"
+  ]
+ },
+ {
+  "key": "art18-070",
+  "concept": "arts.painting.v18_mecene",
+  "label": "Les mécènes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle famille florentine a été le plus grand mécène de la Renaissance ?",
+  "explanation": "Banquiers, ils ont soutenu Botticelli, Michel-Ange et Léonard. Deux reines de France en sont issues.",
+  "options": [
+   "Les Médicis*",
+   "Les Borgia",
+   "Les Sforza",
+   "Les Habsbourg"
+  ]
+ },
+ {
+  "key": "art18-071",
+  "concept": "arts.painting.v18_mouvements_ordre",
+  "label": "Les mouvements",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces mouvements artistiques du plus ancien au plus récent.",
+  "explanation": "XVe-XVIe s., XVIIe s., fin XIXe s., années 1960.",
+  "items": [
+   "La Renaissance",
+   "Le baroque",
+   "L'impressionnisme",
+   "Le pop art"
+  ]
+ },
+ {
+  "key": "art18-072",
+  "concept": "arts.painting.v18_peintres_ordre",
+  "label": "Les peintres",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces peintres du plus ancien au plus récent.",
+  "explanation": "Van Eyck (vers 1390), Rembrandt (1606), Monet (1840), Warhol (1928).",
+  "items": [
+   "Jan van Eyck",
+   "Rembrandt",
+   "Claude Monet",
+   "Andy Warhol"
+  ]
+ },
+ {
+  "key": "art18-073",
+  "concept": "arts.painting.v18_oeuvres_ordre",
+  "label": "Les œuvres",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces œuvres de la plus ancienne à la plus récente.",
+  "explanation": "Vers 1503, 1642, 1819 et 1937.",
+  "items": [
+   "La Joconde",
+   "La Ronde de nuit",
+   "Le Radeau de la Méduse",
+   "Guernica"
+  ]
+ },
+ {
+  "key": "art18-074",
+  "concept": "arts.painting.v18_musees_oeuvres",
+  "label": "Les musées",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque œuvre au musée où on peut la voir.",
+  "explanation": "Quatre chefs-d'œuvre, quatre grands musées du monde.",
+  "pairs": [
+   [
+    "La Nuit étoilée",
+    "MoMA, New York"
+   ],
+   [
+    "La Naissance de Vénus",
+    "Offices, Florence"
+   ],
+   [
+    "Les Ménines",
+    "Prado, Madrid"
+   ],
+   [
+    "La Jeune Fille à la perle",
+    "Mauritshuis, La Haye"
+   ]
+  ]
+ },
+ {
+  "key": "art18-075",
+  "concept": "arts.painting.v18_louvre_visiteurs",
+  "label": "Le Louvre",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le musée le plus visité au monde ?",
+  "explanation": "Près de 9 millions de visiteurs par an. C'était d'abord un château fort, puis un palais royal.",
+  "options": [
+   "Le Louvre*",
+   "Le British Museum",
+   "Le Metropolitan Museum",
+   "Les musées du Vatican"
+  ]
+ },
+ {
+  "key": "art18-076",
+  "concept": "arts.painting.v18_louvre_forteresse",
+  "label": "Le Louvre",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Avant d'être un palais puis un musée, le Louvre était…",
+  "explanation": "Vers 1190, pour protéger Paris. On peut encore voir ses fondations au sous-sol du musée.",
+  "options": [
+   "Une forteresse construite par Philippe Auguste*",
+   "Une cathédrale",
+   "Une prison",
+   "Un marché couvert"
+  ]
+ },
+ {
+  "key": "art18-077",
+  "concept": "arts.painting.v18_tl_louvre_musee",
+  "label": "Le Louvre",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année le Louvre est-il devenu un musée ouvert au public ?",
+  "explanation": "Pendant la Révolution, pour montrer au peuple les collections royales.",
+  "answer": 1793,
+  "tolerance": 10,
+  "min": 1600,
+  "max": 1950
+ },
+ {
+  "key": "art18-078",
+  "concept": "arts.painting.v18_tl_joconde_vol",
+  "label": "Le vol de la Joconde",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année la Joconde a-t-elle été volée au Louvre ?",
+  "explanation": "Le 21 août 1911. Elle est revenue en 1914.",
+  "answer": 1911,
+  "tolerance": 5,
+  "min": 1800,
+  "max": 2000
+ },
+ {
+  "key": "art18-079",
+  "concept": "arts.painting.v18_tl_impression",
+  "label": "L'impressionnisme",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année a eu lieu la première exposition des impressionnistes, à Paris ?",
+  "explanation": "Dans l'atelier du photographe Nadar, boulevard des Capucines.",
+  "answer": 1874,
+  "tolerance": 5,
+  "min": 1800,
+  "max": 1950
+ },
+ {
+  "key": "art18-080",
+  "concept": "arts.painting.v18_ga_femmes_musees",
+  "label": "Les femmes artistes",
+  "type": "gauge",
+  "difficulty": 75,
+  "prompt": "Dans les collections des grands musées, quelle part des œuvres est signée par des femmes, environ ? (à 10 % près)",
+  "explanation": "Selon plusieurs études, moins de 10 à 15 % des œuvres. Les choses changent lentement, avec plus d'expositions consacrées aux artistes femmes.",
+  "answer": 10,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "art18-081",
+  "concept": "arts.painting.v18_le_monet",
+  "label": "Monet",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Peintre des Nymphéas, à Giverny.",
+  "explanation": "Claude Monet (1840-1926).",
+  "word": "MONET",
+  "display": "Monet"
+ },
+ {
+  "key": "art18-082",
+  "concept": "arts.painting.v18_le_fresque",
+  "label": "Fresque",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Peinture réalisée sur un mur, sur un enduit encore frais.",
+  "explanation": "Le plafond de la chapelle Sixtine est une fresque.",
+  "word": "FRESQUE",
+  "display": "Fresque"
+ },
+ {
+  "key": "art18-083",
+  "concept": "arts.painting.v18_le_pinceau",
+  "label": "Pinceau",
+  "type": "letters",
+  "difficulty": 5,
+  "prompt": "Outil du peintre, avec des poils au bout.",
+  "explanation": "Les plus fins sont en poils de martre.",
+  "word": "PINCEAU",
+  "display": "Pinceau"
+ },
+ {
+  "key": "art18-084",
+  "concept": "arts.painting.v18_le_palette",
+  "label": "Palette",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Planchette où le peintre mélange ses couleurs.",
+  "explanation": "Au figuré, la « palette » d'un artiste, c'est l'ensemble de ses couleurs.",
+  "word": "PALETTE",
+  "display": "Palette"
+ },
+ {
+  "key": "art18-085",
+  "concept": "arts.painting.v18_le_chevalet",
+  "label": "Chevalet",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Support en bois qui tient la toile du peintre.",
+  "explanation": "Son nom vient de « cheval », car il porte la toile comme un cheval porte un cavalier.",
+  "word": "CHEVALET",
+  "display": "Chevalet"
+ },
+ {
+  "key": "art18-086",
+  "concept": "arts.painting.v18_le_kahlo",
+  "label": "Kahlo",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Peintre mexicaine aux célèbres autoportraits et aux sourcils qui se rejoignent.",
+  "explanation": "Frida Kahlo (1907-1954).",
+  "word": "KAHLO",
+  "display": "Kahlo"
+ },
+ {
+  "key": "art18-087",
+  "concept": "arts.painting.v18_le_banksy",
+  "label": "Banksy",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Artiste de rue britannique dont l'identité est secrète.",
+  "explanation": "Ses pochoirs apparaissent sans prévenir sur les murs du monde entier.",
+  "word": "BANKSY",
+  "display": "Banksy"
+ },
+ {
+  "key": "art18-088",
+  "concept": "arts.painting.v18_tf_van_gogh_oreille_entiere",
+  "label": "Van Gogh",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Van Gogh s'est coupé l'oreille entière.",
+  "explanation": "D'après les recherches récentes, il s'est coupé une grande partie de l'oreille gauche, mais les témoignages divergent sur la quantité.",
+  "answer": false
+ },
+ {
+  "key": "art18-089",
+  "concept": "arts.painting.v18_tf_mona_lisa_sourcils",
+  "label": "La Joconde",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Des analyses ont montré que la Joconde avait peut-être des sourcils, effacés avec le temps.",
+  "explanation": "Un ingénieur français, Pascal Cotte, a repéré la trace d'un sourcil grâce à des scans à très haute résolution.",
+  "answer": true
+ },
+ {
+  "key": "art18-090",
+  "concept": "arts.painting.v18_tf_picasso_dessin_enfant",
+  "label": "Picasso",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Picasso aurait dit : « À douze ans, je dessinais comme Raphaël, il m'a fallu toute une vie pour dessiner comme un enfant. »",
+  "explanation": "Enfant prodige, formé par son père professeur de dessin, il a cherché toute sa vie la spontanéité.",
+  "answer": true
+ },
+ {
+  "key": "art18-091",
+  "concept": "arts.painting.v18_tf_monet_aveugle",
+  "label": "Monet",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Claude Monet a peint jusqu'à la fin de sa vie, malgré une maladie des yeux.",
+  "explanation": "Opéré de la cataracte à 82 ans, il a continué à peindre les Nymphéas jusqu'à sa mort, en 1926.",
+  "answer": true
+ },
+ {
+  "key": "art18-092",
+  "concept": "arts.painting.v18_tf_michel_ange_peintre",
+  "label": "Michel-Ange",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Michel-Ange se considérait avant tout comme un peintre.",
+  "explanation": "Il se voyait d'abord comme un sculpteur et a accepté le plafond de la Sixtine à contrecœur.",
+  "answer": false
+ },
+ {
+  "key": "art18-093",
+  "concept": "arts.painting.v18_tf_cri_vole",
+  "label": "Le Cri",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Une version du « Cri » de Munch a été volée pendant les Jeux olympiques d'hiver de 1994.",
+  "explanation": "Volée à Oslo le jour de l'ouverture des JO de Lillehammer, elle a été retrouvée trois mois plus tard.",
+  "answer": true
+ },
+ {
+  "key": "art18-094",
+  "concept": "arts.painting.v18_tf_rembrandt_hollandais",
+  "label": "Rembrandt",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Rembrandt était un peintre hollandais.",
+  "explanation": "Né à Leyde en 1606, il a fait carrière à Amsterdam.",
+  "answer": true
+ },
+ {
+  "key": "art18-095",
+  "concept": "arts.painting.v18_tf_tintin_age",
+  "label": "Tintin",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Hergé a toujours précisé l'âge exact de Tintin.",
+  "explanation": "On ne connaît pas son âge. Hergé disait qu'il avait « 14 ou 15 ans » au début, mais il n'a jamais vieilli.",
+  "answer": false
+ },
+ {
+  "key": "art18-096",
+  "concept": "arts.painting.v18_co_couleurs_primaires",
+  "label": "Les couleurs",
+  "type": "counter",
+  "difficulty": 15,
+  "prompt": "Combien y a-t-il de couleurs primaires en peinture ?",
+  "explanation": "Rouge (magenta), jaune et bleu (cyan) : en les mélangeant, on obtient presque toutes les autres.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "art18-097",
+  "concept": "arts.painting.v18_co_arc_en_ciel",
+  "label": "Les couleurs",
+  "type": "counter",
+  "difficulty": 20,
+  "prompt": "Combien de couleurs compte-t-on traditionnellement dans un arc-en-ciel ?",
+  "explanation": "Rouge, orange, jaune, vert, bleu, indigo, violet. Le chiffre 7 vient d'Isaac Newton.",
+  "answer": 7,
+  "tolerance": 0,
+  "min": 1,
+  "max": 12,
+  "start": 1
+ },
+ {
+  "key": "art18-098",
+  "concept": "arts.literature.v18_wo_etranger",
+  "label": "Incipit",
+  "type": "word_order",
+  "difficulty": 45,
+  "prompt": "Remets dans l'ordre la première phrase de « L'Étranger » de Camus.",
+  "explanation": "Une phrase sèche et célèbre, qui suit : « Ou peut-être hier, je ne sais pas. »",
+  "answer": "Aujourd'hui, maman est morte.",
+  "words": [
+   "Aujourd'hui,",
+   "maman",
+   "est",
+   "morte."
+  ]
+ },
+ {
+  "key": "art18-099",
+  "concept": "arts.literature.v18_wo_proust",
+  "label": "Incipit",
+  "type": "word_order",
+  "difficulty": 55,
+  "prompt": "Remets dans l'ordre la première phrase d'« À la recherche du temps perdu ».",
+  "explanation": "Le début d'un roman de plus de 3 000 pages en sept volumes.",
+  "answer": "Longtemps, je me suis couché de bonne heure.",
+  "words": [
+   "Longtemps,",
+   "je",
+   "me",
+   "suis",
+   "couché",
+   "de",
+   "bonne",
+   "heure."
+  ]
+ },
+ {
+  "key": "art18-100",
+  "concept": "arts.literature.v18_wo_dickens",
+  "label": "Incipit",
+  "type": "word_order",
+  "difficulty": 70,
+  "prompt": "Remets dans l'ordre le début du « Conte de deux cités » de Dickens.",
+  "explanation": "Le roman se déroule à Londres et à Paris pendant la Révolution française.",
+  "answer": "C'était le meilleur des temps, c'était le pire des temps",
+  "words": [
+   "C'était",
+   "le",
+   "meilleur",
+   "des",
+   "temps,",
+   "c'était",
+   "le",
+   "pire",
+   "des",
+   "temps"
+  ]
+ },
+ {
+  "key": "art18-101",
+  "concept": "arts.literature.v18_wo_etre",
+  "label": "Réplique",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre la réplique la plus célèbre d'« Hamlet ».",
+  "explanation": "« To be, or not to be, that is the question. » Hamlet hésite entre la vie et la mort.",
+  "answer": "Être ou ne pas être, telle est la question",
+  "words": [
+   "Être",
+   "ou",
+   "ne",
+   "pas",
+   "être,",
+   "telle",
+   "est",
+   "la",
+   "question"
+  ]
+ },
+ {
+  "key": "art18-102",
+  "concept": "arts.literature.v18_wo_petit_prince",
+  "label": "Citation",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre cette phrase célèbre du « Petit Prince ».",
+  "explanation": "C'est le renard qui confie ce secret au Petit Prince : « On ne voit bien qu'avec le cœur. »",
+  "answer": "L'essentiel est invisible pour les yeux",
+  "words": [
+   "L'essentiel",
+   "est",
+   "invisible",
+   "pour",
+   "les",
+   "yeux"
+  ]
+ },
+ {
+  "key": "art18-103",
+  "concept": "arts.literature.v18_wo_un_pour_tous",
+  "label": "Devise",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre la devise des Trois Mousquetaires.",
+  "explanation": "D'Artagnan, Athos, Porthos et Aramis, chez Alexandre Dumas (1844).",
+  "answer": "Un pour tous, tous pour un",
+  "words": [
+   "Un",
+   "pour",
+   "tous,",
+   "tous",
+   "pour",
+   "un"
+  ]
+ },
+ {
+  "key": "art18-104",
+  "concept": "arts.literature.v18_wo_jaccuse",
+  "label": "Article",
+  "type": "word_order",
+  "difficulty": 60,
+  "prompt": "Remets dans l'ordre le titre de l'article de Zola sur l'affaire Dreyfus (1898).",
+  "explanation": "Publié en une du journal « L'Aurore ». Un titre devenu synonyme de dénonciation courageuse.",
+  "answer": "J'accuse… ! Lettre au président de la République",
+  "words": [
+   "J'accuse…",
+   "!",
+   "Lettre",
+   "au",
+   "président",
+   "de",
+   "la",
+   "République"
+  ]
+ },
+ {
+  "key": "art18-105",
+  "concept": "arts.literature.v18_incipit_moby",
+  "label": "Incipit",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Appelez-moi Ismaël. » Quel roman commence ainsi ?",
+  "explanation": "Herman Melville, 1851. Le narrateur s'embarque sur le baleinier du capitaine Achab.",
+  "options": [
+   "Moby Dick*",
+   "L'Île au trésor",
+   "Robinson Crusoé",
+   "Le Vieil Homme et la Mer"
+  ]
+ },
+ {
+  "key": "art18-106",
+  "concept": "arts.literature.v18_incipit_anna",
+  "label": "Incipit",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "« Toutes les familles heureuses se ressemblent ; chaque famille malheureuse l'est à sa façon. » Quel roman commence ainsi ?",
+  "explanation": "Une des premières phrases les plus célèbres de la littérature mondiale (1877).",
+  "options": [
+   "Anna Karénine, de Tolstoï*",
+   "Guerre et Paix, de Tolstoï",
+   "Crime et Châtiment, de Dostoïevski",
+   "Madame Bovary, de Flaubert"
+  ]
+ },
+ {
+  "key": "art18-107",
+  "concept": "arts.literature.v18_incipit_1984",
+  "label": "Incipit",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "« C'était une journée d'avril froide et claire, et les horloges sonnaient treize heures. » Quel roman commence ainsi ?",
+  "explanation": "Les horloges qui sonnent treize heures annoncent tout de suite un monde déréglé.",
+  "options": [
+   "1984, de George Orwell*",
+   "Le Meilleur des mondes",
+   "Fahrenheit 451",
+   "La Ferme des animaux"
+  ]
+ },
+ {
+  "key": "art18-108",
+  "concept": "arts.literature.v18_incipit_metamorphose",
+  "label": "Incipit",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans « La Métamorphose » de Kafka, en quoi Gregor Samsa se réveille-t-il transformé ?",
+  "explanation": "Un matin, il se découvre en « monstrueuse vermine ». Sa première pensée : il va être en retard au travail.",
+  "options": [
+   "En un insecte géant*",
+   "En chien",
+   "En statue",
+   "En vieillard"
+  ]
+ },
+ {
+  "key": "art18-109",
+  "concept": "arts.literature.v18_cyrano_tirade",
+  "label": "Cyrano",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans « Cyrano de Bergerac », la célèbre tirade de Cyrano se moque…",
+  "explanation": "« C'est un roc !… c'est un pic !… c'est un cap ! Que dis-je, c'est un cap ?… C'est une péninsule ! »",
+  "options": [
+   "De son propre nez*",
+   "De son rival",
+   "Du roi",
+   "Des femmes"
+  ]
+ },
+ {
+  "key": "art18-110",
+  "concept": "arts.literature.v18_cid_choix",
+  "label": "Le Cid",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans « Le Cid » de Corneille, Rodrigue doit choisir entre…",
+  "explanation": "Pour venger son père, il doit tuer le père de Chimène, la femme qu'il aime : le fameux « dilemme cornélien ».",
+  "options": [
+   "Son amour et l'honneur de sa famille*",
+   "L'argent et la gloire",
+   "Deux femmes",
+   "Deux royaumes"
+  ]
+ },
+ {
+  "key": "art18-111",
+  "concept": "arts.literature.v18_hugo_funerailles",
+  "label": "Victor Hugo",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de personnes environ ont suivi les funérailles de Victor Hugo, en 1885 ?",
+  "explanation": "Il a été exposé sous l'Arc de triomphe puis conduit au Panthéon, dans le corbillard des pauvres, selon son souhait.",
+  "options": [
+   "Environ deux millions*",
+   "Environ 10 000",
+   "Environ 100 000",
+   "Environ 500"
+  ]
+ },
+ {
+  "key": "art18-112",
+  "concept": "arts.literature.v18_hugo_lettre",
+  "label": "Victor Hugo",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Selon une anecdote célèbre, quelle lettre Victor Hugo a-t-il envoyée à son éditeur pour connaître les ventes des « Misérables » ?",
+  "explanation": "L'éditeur lui aurait répondu : « ! ». La lettre la plus courte de l'histoire.",
+  "options": [
+   "« ? »*",
+   "« ! »",
+   "« … »",
+   "« M »"
+  ]
+ },
+ {
+  "key": "art18-113",
+  "concept": "arts.literature.v18_balzac_cafe",
+  "label": "Balzac",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle boisson Honoré de Balzac buvait-il en énormes quantités pour écrire la nuit ?",
+  "explanation": "On parle de dizaines de tasses par jour. Il écrivait souvent de minuit à midi.",
+  "options": [
+   "Du café*",
+   "Du vin",
+   "Du thé",
+   "De l'absinthe"
+  ]
+ },
+ {
+  "key": "art18-114",
+  "concept": "arts.literature.v18_balzac_comedie",
+  "label": "Balzac",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle l'ensemble des romans de Balzac, où les personnages passent d'un livre à l'autre ?",
+  "explanation": "Près de 90 romans et nouvelles. « Les Rougon-Macquart », c'est Zola.",
+  "options": [
+   "La Comédie humaine*",
+   "Les Rougon-Macquart",
+   "Le Grand Théâtre",
+   "La Vie parisienne"
+  ]
+ },
+ {
+  "key": "art18-115",
+  "concept": "arts.literature.v18_zola_rougon",
+  "label": "Zola",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de romans compte la série des « Rougon-Macquart » d'Émile Zola ?",
+  "explanation": "L'histoire d'une famille sous le Second Empire, avec « Germinal », « L'Assommoir » ou « Nana ».",
+  "options": [
+   "20*",
+   "5",
+   "12",
+   "50"
+  ]
+ },
+ {
+  "key": "art18-116",
+  "concept": "arts.literature.v18_flaubert_proces",
+  "label": "Flaubert",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi Flaubert a-t-il été jugé en 1857 ?",
+  "explanation": "Il a été acquitté. La même année, Baudelaire a été condamné pour « Les Fleurs du mal ».",
+  "options": [
+   "Pour « outrage aux bonnes mœurs » avec « Madame Bovary »*",
+   "Pour avoir insulté l'empereur",
+   "Pour une dette",
+   "Pour plagiat"
+  ]
+ },
+ {
+  "key": "art18-117",
+  "concept": "arts.literature.v18_flaubert_bovary",
+  "label": "Flaubert",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À qui attribue-t-on la phrase « Madame Bovary, c'est moi » ?",
+  "explanation": "Une phrase rapportée par un témoin, mais que Flaubert n'a jamais écrite lui-même.",
+  "options": [
+   "Gustave Flaubert*",
+   "Emma Bovary",
+   "Guy de Maupassant",
+   "George Sand"
+  ]
+ },
+ {
+  "key": "art18-118",
+  "concept": "arts.literature.v18_george_sand",
+  "label": "George Sand",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui se cachait derrière le pseudonyme masculin de George Sand ?",
+  "explanation": "Elle portait souvent des vêtements d'homme et fumait le cigare, ce qui choquait son époque.",
+  "options": [
+   "Aurore Dupin, une femme*",
+   "Alfred de Musset",
+   "Frédéric Chopin",
+   "Deux frères"
+  ]
+ },
+ {
+  "key": "art18-119",
+  "concept": "arts.literature.v18_pseudonymes",
+  "label": "Pseudonymes",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque écrivain à son vrai nom.",
+  "explanation": "Le père de Molière était tapissier du roi. Le fils a pris un nom de scène en devenant comédien.",
+  "pairs": [
+   [
+    "Voltaire",
+    "François-Marie Arouet"
+   ],
+   [
+    "Molière",
+    "Jean-Baptiste Poquelin"
+   ],
+   [
+    "George Sand",
+    "Aurore Dupin"
+   ],
+   [
+    "Colette",
+    "Sidonie-Gabrielle Colette"
+   ]
+  ]
+ },
+ {
+  "key": "art18-120",
+  "concept": "arts.literature.v18_dumas_maquet",
+  "label": "Dumas",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui aidait Alexandre Dumas à écrire ses romans, comme « Les Trois Mousquetaires » ?",
+  "explanation": "Un collaborateur de l'ombre, qui a fini par réclamer en justice d'être reconnu.",
+  "options": [
+   "Auguste Maquet*",
+   "Victor Hugo",
+   "Son fils",
+   "Jules Verne"
+  ]
+ },
+ {
+  "key": "art18-121",
+  "concept": "arts.literature.v18_dumas_grand_pere",
+  "label": "Dumas",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Le grand-père d'Alexandre Dumas était…",
+  "explanation": "Son père, le général Dumas, né esclave, devint général des armées de la Révolution.",
+  "options": [
+   "Un marquis normand ; sa grand-mère, une esclave de Saint-Domingue*",
+   "Un roi africain",
+   "Un pirate",
+   "Un général russe"
+  ]
+ },
+ {
+  "key": "art18-122",
+  "concept": "arts.literature.v18_verne_tour_monde",
+  "label": "Jules Verne",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "En combien de jours Phileas Fogg fait-il le tour du monde chez Jules Verne ?",
+  "explanation": "Il gagne son pari… grâce au décalage horaire, qui lui fait gagner une journée.",
+  "options": [
+   "80 jours*",
+   "30 jours",
+   "100 jours",
+   "365 jours"
+  ]
+ },
+ {
+  "key": "art18-123",
+  "concept": "arts.literature.v18_verne_nantes",
+  "label": "Jules Verne",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle ville est né Jules Verne ?",
+  "explanation": "Il a passé la fin de sa vie à Amiens, où l'on peut visiter sa maison.",
+  "options": [
+   "Nantes*",
+   "Amiens",
+   "Paris",
+   "Le Havre"
+  ]
+ },
+ {
+  "key": "art18-124",
+  "concept": "arts.literature.v18_saint_ex_avion",
+  "label": "Saint-Exupéry",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel était le métier d'Antoine de Saint-Exupéry, l'auteur du « Petit Prince » ?",
+  "explanation": "Pilote de l'Aéropostale, il a disparu en mer en 1944, lors d'une mission de reconnaissance.",
+  "options": [
+   "Aviateur*",
+   "Médecin",
+   "Professeur",
+   "Marin"
+  ]
+ },
+ {
+  "key": "art18-125",
+  "concept": "arts.literature.v18_petit_prince_traductions",
+  "label": "Le Petit Prince",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le Petit Prince est le livre le plus traduit au monde après…",
+  "explanation": "Il a été traduit dans plus de 500 langues et dialectes.",
+  "options": [
+   "La Bible*",
+   "Harry Potter",
+   "Don Quichotte",
+   "Les Misérables"
+  ]
+ },
+ {
+  "key": "art18-126",
+  "concept": "arts.literature.v18_rimbaud_age",
+  "label": "Rimbaud",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À quel âge Arthur Rimbaud a-t-il arrêté d'écrire de la poésie ?",
+  "explanation": "Il est ensuite devenu négociant en Afrique, à Harar, en Éthiopie.",
+  "options": [
+   "Vers 20 ans*",
+   "Vers 40 ans",
+   "À 60 ans",
+   "Il n'a jamais arrêté"
+  ]
+ },
+ {
+  "key": "art18-127",
+  "concept": "arts.literature.v18_verlaine_rimbaud",
+  "label": "Verlaine et Rimbaud",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'a fait Verlaine à Rimbaud, à Bruxelles, en 1873 ?",
+  "explanation": "Il l'a blessé au poignet et a fait deux ans de prison.",
+  "options": [
+   "Il lui a tiré dessus au revolver*",
+   "Il lui a volé ses poèmes",
+   "Il l'a présenté au roi",
+   "Il l'a enfermé à clé"
+  ]
+ },
+ {
+  "key": "art18-128",
+  "concept": "arts.literature.v18_apollinaire_pont",
+  "label": "Apollinaire",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel poème d'Apollinaire commence par « Sous le pont Mirabeau coule la Seine » ?",
+  "explanation": "Écrit après sa séparation d'avec la peintre Marie Laurencin.",
+  "options": [
+   "Le Pont Mirabeau*",
+   "Zone",
+   "La Chanson du mal-aimé",
+   "Calligrammes"
+  ]
+ },
+ {
+  "key": "art18-129",
+  "concept": "arts.literature.v18_calligramme",
+  "label": "Calligrammes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qu'un « calligramme » ?",
+  "explanation": "Apollinaire en a écrit en forme de pluie, de cœur ou de tour Eiffel.",
+  "options": [
+   "Un poème dont les mots dessinent une forme*",
+   "Un poème sans rimes",
+   "Une écriture chinoise",
+   "Un poème de trois vers"
+  ]
+ },
+ {
+  "key": "art18-130",
+  "concept": "arts.literature.v18_haiku",
+  "label": "Le haïku",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien de vers compte un haïku japonais ?",
+  "explanation": "Trois vers de 5, 7 et 5 syllabes, qui saisissent un instant de la nature.",
+  "options": [
+   "3*",
+   "5",
+   "14",
+   "1"
+  ]
+ },
+ {
+  "key": "art18-132",
+  "concept": "arts.literature.v18_oulipo",
+  "label": "L'Oulipo",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce que l'Oulipo, fondé en 1960 par Raymond Queneau ?",
+  "explanation": "L'« Ouvroir de littérature potentielle ». Perec y a écrit « La Disparition », sans la lettre E.",
+  "options": [
+   "Un groupe d'écrivains qui écrivent sous contraintes*",
+   "Un prix littéraire",
+   "Une revue de poésie",
+   "Une maison d'édition"
+  ]
+ },
+ {
+  "key": "art18-133",
+  "concept": "arts.literature.v18_queneau_exercices",
+  "label": "Queneau",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans « Exercices de style » (1947), Raymond Queneau raconte la même petite histoire…",
+  "explanation": "Une anecdote banale dans un autobus, racontée en alexandrins, en argot, à l'envers…",
+  "options": [
+   "De 99 façons différentes*",
+   "En 99 langues",
+   "En 99 pages",
+   "Avec 99 personnages"
+  ]
+ },
+ {
+  "key": "art18-134",
+  "concept": "arts.literature.v18_proust_madeleine",
+  "label": "Proust",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans l'œuvre de Proust, quel petit gâteau fait ressurgir les souvenirs d'enfance du narrateur ?",
+  "explanation": "Trempée dans du thé. « La madeleine de Proust » désigne depuis tout ce qui réveille un souvenir.",
+  "options": [
+   "Une madeleine*",
+   "Un macaron",
+   "Un croissant",
+   "Une crêpe"
+  ]
+ },
+ {
+  "key": "art18-135",
+  "concept": "arts.literature.v18_camus_nobel",
+  "label": "Camus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À quel âge Albert Camus a-t-il reçu le prix Nobel de littérature, en 1957 ?",
+  "explanation": "Un des plus jeunes lauréats. Il meurt dans un accident de voiture trois ans plus tard.",
+  "options": [
+   "44 ans*",
+   "30 ans",
+   "60 ans",
+   "75 ans"
+  ]
+ },
+ {
+  "key": "art18-136",
+  "concept": "arts.literature.v18_sartre_refus",
+  "label": "Sartre",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'a fait Jean-Paul Sartre du prix Nobel de littérature, en 1964 ?",
+  "explanation": "Il refusait toutes les distinctions officielles, pour rester un écrivain libre.",
+  "options": [
+   "Il l'a refusé*",
+   "Il l'a partagé avec Simone de Beauvoir",
+   "Il l'a offert aux pauvres",
+   "Il l'a perdu"
+  ]
+ },
+ {
+  "key": "art18-137",
+  "concept": "arts.literature.v18_nobel_francais",
+  "label": "Le prix Nobel",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pays compte le plus de prix Nobel de littérature ?",
+  "explanation": "Plus de quinze lauréats, de Sully Prudhomme (le tout premier, en 1901) à Annie Ernaux (2022).",
+  "options": [
+   "La France*",
+   "Les États-Unis",
+   "Le Royaume-Uni",
+   "L'Allemagne"
+  ]
+ },
+ {
+  "key": "art18-138",
+  "concept": "arts.literature.v18_ernaux",
+  "label": "Le prix Nobel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle écrivaine française a reçu le prix Nobel de littérature en 2022 ?",
+  "explanation": "La première Française à le recevoir, pour ses récits autobiographiques comme « Les Années ».",
+  "options": [
+   "Annie Ernaux*",
+   "Marguerite Duras",
+   "Leïla Slimani",
+   "Amélie Nothomb"
+  ]
+ },
+ {
+  "key": "art18-139",
+  "concept": "arts.literature.v18_goncourt_10",
+  "label": "Le Goncourt",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien d'euros reçoit le lauréat du prix Goncourt ?",
+  "explanation": "Un chèque symbolique de dix euros… mais le livre se vend souvent à des centaines de milliers d'exemplaires.",
+  "options": [
+   "10 euros*",
+   "10 000 euros",
+   "100 000 euros",
+   "Rien du tout"
+  ]
+ },
+ {
+  "key": "art18-140",
+  "concept": "arts.literature.v18_gary_ajar",
+  "label": "Romain Gary",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel écrivain a gagné deux fois le prix Goncourt, ce qui est normalement interdit ?",
+  "explanation": "Il a reçu le Goncourt en 1956 puis en 1975 pour « La Vie devant soi », signé Émile Ajar. La supercherie n'a été révélée qu'après sa mort.",
+  "options": [
+   "Romain Gary, la seconde fois sous le nom d'Émile Ajar*",
+   "Victor Hugo",
+   "Marcel Proust",
+   "Michel Houellebecq"
+  ]
+ },
+ {
+  "key": "art18-141",
+  "concept": "arts.literature.v18_academie_fauteuils",
+  "label": "L'Académie française",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de membres compte l'Académie française ?",
+  "explanation": "Quarante « Immortels », élus à vie, qui siègent en habit vert.",
+  "options": [
+   "40*",
+   "12",
+   "100",
+   "365"
+  ]
+ },
+ {
+  "key": "art18-142",
+  "concept": "arts.literature.v18_yourcenar",
+  "label": "L'Académie française",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui a été la première femme élue à l'Académie française, en 1980 ?",
+  "explanation": "Il a fallu attendre plus de 340 ans après la création de l'Académie (1635).",
+  "options": [
+   "Marguerite Yourcenar*",
+   "Simone de Beauvoir",
+   "Colette",
+   "Marguerite Duras"
+  ]
+ },
+ {
+  "key": "art18-143",
+  "concept": "arts.literature.v18_shakespeare_mots",
+  "label": "Shakespeare",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "On dit que Shakespeare a inventé ou popularisé environ combien de mots anglais ?",
+  "explanation": "Comme « bedroom », « lonely » ou « fashionable ».",
+  "options": [
+   "Plus de 1 500*",
+   "Une dizaine",
+   "Une centaine",
+   "Aucun"
+  ]
+ },
+ {
+  "key": "art18-144",
+  "concept": "arts.literature.v18_shakespeare_globe",
+  "label": "Shakespeare",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelait le théâtre de Londres où jouait la troupe de Shakespeare ?",
+  "explanation": "Un théâtre rond en bois, reconstruit à l'identique en 1997 sur les bords de la Tamise.",
+  "options": [
+   "Le Globe*",
+   "Le Royal",
+   "Le Palace",
+   "L'Odéon"
+  ]
+ },
+ {
+  "key": "art18-145",
+  "concept": "arts.literature.v18_cervantes_shakespeare",
+  "label": "Cervantès",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle coïncidence relie Cervantès et Shakespeare ?",
+  "explanation": "Le 23 avril 1616, mais pas le même jour en réalité : l'Espagne et l'Angleterre n'utilisaient pas le même calendrier. Cette date est devenue la Journée mondiale du livre.",
+  "options": [
+   "Ils sont officiellement morts à la même date, en 1616*",
+   "Ils étaient cousins",
+   "Ils ont écrit ensemble",
+   "Ils sont nés le même jour"
+  ]
+ },
+ {
+  "key": "art18-146",
+  "concept": "arts.literature.v18_tolkien_langues",
+  "label": "Tolkien",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qu'a inventé J. R. R. Tolkien avant même d'écrire « Le Seigneur des anneaux » ?",
+  "explanation": "Professeur de langues anciennes à Oxford, il disait avoir créé ses histoires pour faire vivre ses langues.",
+  "options": [
+   "Des langues elfiques complètes*",
+   "Un jeu de société",
+   "Une machine à écrire",
+   "Un alphabet pour aveugles"
+  ]
+ },
+ {
+  "key": "art18-147",
+  "concept": "arts.literature.v18_hobbit",
+  "label": "Tolkien",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'appelle le hobbit héros de « Bilbo le Hobbit » (1937) ?",
+  "explanation": "Frodon, son neveu, sera le héros du « Seigneur des anneaux ».",
+  "options": [
+   "Bilbo Sacquet*",
+   "Frodon Sacquet",
+   "Sam Gamegie",
+   "Gandalf"
+  ]
+ },
+ {
+  "key": "art18-148",
+  "concept": "arts.literature.v18_rowling_refus",
+  "label": "Harry Potter",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien d'éditeurs ont refusé le premier « Harry Potter » avant qu'il soit publié ?",
+  "explanation": "Bloomsbury l'a finalement accepté en 1997, en partie parce que la fille du patron l'avait adoré.",
+  "options": [
+   "Une douzaine*",
+   "Aucun",
+   "Un seul",
+   "Plus de cent"
+  ]
+ },
+ {
+  "key": "art18-149",
+  "concept": "arts.literature.v18_rowling_initiales",
+  "label": "Harry Potter",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi l'éditeur a-t-il demandé à Joanne Rowling de signer « J. K. Rowling » ?",
+  "explanation": "Elle n'avait pas de deuxième prénom : elle a ajouté le K de Kathleen, sa grand-mère.",
+  "options": [
+   "Pour que les garçons n'hésitent pas à lire un livre écrit par une femme*",
+   "Pour la protéger de la presse",
+   "Parce que son prénom était trop long",
+   "Par superstition"
+  ]
+ },
+ {
+  "key": "art18-150",
+  "concept": "arts.literature.v18_sherlock_adresse",
+  "label": "Sherlock Holmes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quelle adresse habite Sherlock Holmes ?",
+  "explanation": "Un musée Sherlock Holmes y a ouvert à Londres, même si l'adresse n'existait pas à l'époque.",
+  "options": [
+   "221B Baker Street*",
+   "10 Downing Street",
+   "4 Privet Drive",
+   "12 Grimmauld Place"
+  ]
+ },
+ {
+  "key": "art18-151",
+  "concept": "arts.literature.v18_sherlock_mort",
+  "label": "Sherlock Holmes",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi Arthur Conan Doyle a-t-il fait revenir Sherlock Holmes après l'avoir fait mourir ?",
+  "explanation": "Holmes tombait dans les chutes de Reichenbach en 1893. Devant la colère des lecteurs, il revient en 1903.",
+  "options": [
+   "Les lecteurs étaient furieux*",
+   "Il avait besoin d'un héros pour la guerre",
+   "Un juge l'a obligé",
+   "Il avait rêvé de son retour"
+  ]
+ },
+ {
+  "key": "art18-152",
+  "concept": "arts.literature.v18_agatha_ventes",
+  "label": "Agatha Christie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel auteur de romans est le plus vendu de tous les temps, avec plus de 2 milliards de livres ?",
+  "explanation": "Avec ses détectives Hercule Poirot et Miss Marple. Seuls Shakespeare et la Bible feraient mieux.",
+  "options": [
+   "Agatha Christie*",
+   "Stephen King",
+   "J. K. Rowling",
+   "Victor Hugo"
+  ]
+ },
+ {
+  "key": "art18-153",
+  "concept": "arts.literature.v18_agatha_disparition",
+  "label": "Agatha Christie",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel mystère a entouré Agatha Christie en 1926 ?",
+  "explanation": "Retrouvée dans un hôtel sous un faux nom, elle n'a jamais expliqué ce qui s'était passé.",
+  "options": [
+   "Elle a disparu pendant onze jours*",
+   "Elle a été accusée de meurtre",
+   "Elle a écrit un livre en une nuit",
+   "Elle a été enlevée par des pirates"
+  ]
+ },
+ {
+  "key": "art18-154",
+  "concept": "arts.literature.v18_frankenstein_age",
+  "label": "Frankenstein",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel âge avait Mary Shelley quand elle a commencé à écrire « Frankenstein » ?",
+  "explanation": "Lors d'un concours d'histoires d'horreur, un été pluvieux de 1816, en Suisse, avec Lord Byron.",
+  "options": [
+   "18 ans*",
+   "35 ans",
+   "50 ans",
+   "12 ans"
+  ]
+ },
+ {
+  "key": "art18-155",
+  "concept": "arts.literature.v18_frankenstein_nom",
+  "label": "Frankenstein",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans le roman de Mary Shelley, qui s'appelle Frankenstein ?",
+  "explanation": "Victor Frankenstein. La créature, elle, n'a pas de nom.",
+  "options": [
+   "Le savant qui crée la créature*",
+   "La créature elle-même",
+   "Le village",
+   "Le chien du savant"
+  ]
+ },
+ {
+  "key": "art18-156",
+  "concept": "arts.literature.v18_dracula_auteur",
+  "label": "Dracula",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel écrivain irlandais a écrit « Dracula » (1897) ?",
+  "explanation": "Le personnage s'inspire en partie de Vlad l'Empaleur, prince de Valachie.",
+  "options": [
+   "Bram Stoker*",
+   "Oscar Wilde",
+   "Edgar Allan Poe",
+   "Mary Shelley"
+  ]
+ },
+ {
+  "key": "art18-157",
+  "concept": "arts.literature.v18_grimm_freres",
+  "label": "Les frères Grimm",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Les frères Grimm, auteurs de contes, étaient au départ…",
+  "explanation": "Jacob et Wilhelm ont aussi commencé un énorme dictionnaire de la langue allemande.",
+  "options": [
+   "Des linguistes qui collectaient des récits populaires*",
+   "Des acteurs",
+   "Des imprimeurs",
+   "Des instituteurs"
+  ]
+ },
+ {
+  "key": "art18-158",
+  "concept": "arts.literature.v18_andersen_sirene",
+  "label": "Andersen",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle ville se trouve la statue de la Petite Sirène d'Andersen ?",
+  "explanation": "Une petite statue en bronze installée en 1913. Elle a été décapitée deux fois par des vandales.",
+  "options": [
+   "Copenhague*",
+   "Oslo",
+   "Stockholm",
+   "Amsterdam"
+  ]
+ },
+ {
+  "key": "art18-159",
+  "concept": "arts.literature.v18_chaperon_fin",
+  "label": "Le Petit Chaperon rouge",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment se termine « Le Petit Chaperon rouge » dans la version de Perrault (1697) ?",
+  "explanation": "Perrault y ajoute une morale contre les « loups » séducteurs. C'est chez les frères Grimm que le chasseur arrive.",
+  "options": [
+   "Le loup mange la fillette, sans sauvetage*",
+   "Un chasseur la sauve",
+   "Elle s'enfuit",
+   "Le loup devient gentil"
+  ]
+ },
+ {
+  "key": "art18-160",
+  "concept": "arts.literature.v18_mille_nuits",
+  "label": "Les Mille et Une Nuits",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans « Les Mille et Une Nuits », pourquoi Shéhérazade raconte-t-elle des histoires au sultan ?",
+  "explanation": "Le sultan tue chaque épouse au matin. Elle s'arrête toujours au meilleur moment, pour qu'il la garde en vie un jour de plus.",
+  "options": [
+   "Pour échapper à la mort*",
+   "Pour l'endormir",
+   "Pour gagner de l'or",
+   "Pour apprendre à lire"
+  ]
+ },
+ {
+  "key": "art18-161",
+  "concept": "arts.literature.v18_don_quichotte_cheval",
+  "label": "Don Quichotte",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelle le cheval de Don Quichotte ?",
+  "explanation": "Un vieux cheval maigre. Bucéphale est le cheval d'Alexandre le Grand.",
+  "options": [
+   "Rossinante*",
+   "Bucéphale",
+   "Jolly Jumper",
+   "Tornado"
+  ]
+ },
+ {
+  "key": "art18-162",
+  "concept": "arts.literature.v18_robinson_reel",
+  "label": "Robinson Crusoé",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le roman « Robinson Crusoé » s'inspire de l'histoire vraie…",
+  "explanation": "Alexander Selkirk, sur une île au large du Chili, aujourd'hui rebaptisée « île Robinson Crusoé ».",
+  "options": [
+   "D'un marin écossais abandonné quatre ans sur une île*",
+   "D'un pirate pendu à Londres",
+   "D'un naufragé du Titanic",
+   "D'un explorateur français"
+  ]
+ },
+ {
+  "key": "art18-163",
+  "concept": "arts.literature.v18_orwell_ferme",
+  "label": "La Ferme des animaux",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans « La Ferme des animaux » d'Orwell, quels animaux prennent le pouvoir ?",
+  "explanation": "« Tous les animaux sont égaux, mais certains sont plus égaux que d'autres. »",
+  "options": [
+   "Les cochons*",
+   "Les chevaux",
+   "Les poules",
+   "Les chiens"
+  ]
+ },
+ {
+  "key": "art18-164",
+  "concept": "arts.literature.v18_fahrenheit",
+  "label": "Fahrenheit 451",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans « Fahrenheit 451 » de Ray Bradbury, que font les pompiers ?",
+  "explanation": "451 degrés Fahrenheit (environ 233 °C) serait la température à laquelle le papier s'enflamme.",
+  "options": [
+   "Ils brûlent les livres*",
+   "Ils éteignent les incendies",
+   "Ils construisent des maisons",
+   "Ils surveillent la météo"
+  ]
+ },
+ {
+  "key": "art18-165",
+  "concept": "arts.literature.v18_gatsby",
+  "label": "Gatsby",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans « Gatsby le Magnifique », que fixe Gatsby chaque nuit, de l'autre côté de la baie ?",
+  "explanation": "La lumière au bout du ponton de Daisy, la femme qu'il aime : le symbole de son rêve inaccessible.",
+  "options": [
+   "Une lumière verte*",
+   "Une étoile",
+   "Un phare rouge",
+   "Une fenêtre éclairée"
+  ]
+ },
+ {
+  "key": "art18-166",
+  "concept": "arts.literature.v18_marquez",
+  "label": "García Márquez",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quel village imaginaire se déroule « Cent ans de solitude » de Gabriel García Márquez ?",
+  "explanation": "Le grand roman du « réalisme magique » latino-américain (1967).",
+  "options": [
+   "Macondo*",
+   "Comala",
+   "Yoknapatawpha",
+   "Santa Teresa"
+  ]
+ },
+ {
+  "key": "art18-167",
+  "concept": "arts.literature.v18_manga_light",
+  "label": "Littérature japonaise",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a écrit « Le Dit du Genji », souvent considéré comme le premier roman au monde, vers l'an 1000 ?",
+  "explanation": "Les aventures du prince Genji, à la cour de Kyoto, en plus de 50 chapitres.",
+  "options": [
+   "Murasaki Shikibu, une dame de la cour impériale japonaise*",
+   "Confucius",
+   "Un moine chinois",
+   "Un samouraï anonyme"
+  ]
+ },
+ {
+  "key": "art18-168",
+  "concept": "arts.literature.v18_detectives",
+  "label": "Les détectives",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque détective à son créateur.",
+  "explanation": "Lupin est un cambrioleur, mais il mène souvent des enquêtes. Leblanc l'a même fait affronter Sherlock Holmes !",
+  "pairs": [
+   [
+    "Hercule Poirot",
+    "Agatha Christie"
+   ],
+   [
+    "Sherlock Holmes",
+    "Arthur Conan Doyle"
+   ],
+   [
+    "Le commissaire Maigret",
+    "Georges Simenon"
+   ],
+   [
+    "Arsène Lupin",
+    "Maurice Leblanc"
+   ]
+  ]
+ },
+ {
+  "key": "art18-169",
+  "concept": "arts.literature.v18_heros_auteurs",
+  "label": "Héros de romans",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque héros à son auteur.",
+  "explanation": "Valjean (« Les Misérables »), Sorel (« Le Rouge et le Noir »), Emma (« Madame Bovary »), Rastignac (« Le Père Goriot »).",
+  "pairs": [
+   [
+    "Jean Valjean",
+    "Victor Hugo"
+   ],
+   [
+    "Julien Sorel",
+    "Stendhal"
+   ],
+   [
+    "Emma Bovary",
+    "Gustave Flaubert"
+   ],
+   [
+    "Eugène de Rastignac",
+    "Honoré de Balzac"
+   ]
+  ]
+ },
+ {
+  "key": "art18-170",
+  "concept": "arts.literature.v18_heros_monde",
+  "label": "Héros du monde",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque héros à son pays d'origine.",
+  "explanation": "Collodi, Astrid Lindgren, Johanna Spyri et J. M. Barrie.",
+  "pairs": [
+   [
+    "Pinocchio",
+    "Italie"
+   ],
+   [
+    "Fifi Brindacier",
+    "Suède"
+   ],
+   [
+    "Heidi",
+    "Suisse"
+   ],
+   [
+    "Peter Pan",
+    "Royaume-Uni"
+   ]
+  ]
+ },
+ {
+  "key": "art18-171",
+  "concept": "arts.literature.v18_auteurs_ordre_3",
+  "label": "Écrivains",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces écrivains du plus ancien au plus récent.",
+  "explanation": "Homère (VIIIe siècle av. J.-C.), Dante (1265), Shakespeare (1564), Tolstoï (1828).",
+  "items": [
+   "Homère",
+   "Dante",
+   "Shakespeare",
+   "Tolstoï"
+  ]
+ },
+ {
+  "key": "art18-172",
+  "concept": "arts.literature.v18_romans_ordre",
+  "label": "Romans",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces romans du plus ancien au plus récent.",
+  "explanation": "1605, 1862, 1943 et 1997.",
+  "items": [
+   "Don Quichotte",
+   "Les Misérables",
+   "Le Petit Prince",
+   "Harry Potter à l'école des sorciers"
+  ]
+ },
+ {
+  "key": "art18-173",
+  "concept": "arts.literature.v18_francais_ordre",
+  "label": "Écrivains français",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces écrivains français du plus ancien au plus récent.",
+  "explanation": "Montaigne (1533), Voltaire (1694), Zola (1840), Annie Ernaux (1940).",
+  "items": [
+   "Montaigne",
+   "Voltaire",
+   "Zola",
+   "Annie Ernaux"
+  ]
+ },
+ {
+  "key": "art18-174",
+  "concept": "arts.literature.v18_tl_petit_prince",
+  "label": "Le Petit Prince",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année a été publié « Le Petit Prince » ?",
+  "explanation": "À New York, d'abord en anglais et en français. Il n'est publié en France qu'en 1946, après la guerre.",
+  "answer": 1943,
+  "tolerance": 5,
+  "min": 1900,
+  "max": 2000
+ },
+ {
+  "key": "art18-176",
+  "concept": "arts.literature.v18_tl_gutenberg",
+  "label": "Gutenberg",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "Vers quelle année Gutenberg a-t-il imprimé sa célèbre Bible, à Mayence ?",
+  "explanation": "Vers 1455, avec des caractères mobiles en métal. Il en reste une cinquantaine d'exemplaires dans le monde.",
+  "answer": 1455,
+  "tolerance": 20,
+  "min": 1200,
+  "max": 1700
+ },
+ {
+  "key": "art18-177",
+  "concept": "arts.literature.v18_tl_encyclopedie",
+  "label": "L'Encyclopédie",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année a commencé la publication de l'« Encyclopédie » de Diderot et d'Alembert ?",
+  "explanation": "28 volumes jusqu'en 1772. Un monument des Lumières, plusieurs fois interdit.",
+  "answer": 1751,
+  "tolerance": 10,
+  "min": 1600,
+  "max": 1900
+ },
+ {
+  "key": "art18-179",
+  "concept": "arts.literature.v18_co_rougon",
+  "label": "Les Rougon-Macquart",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "Combien de générations de la famille Rougon-Macquart Zola raconte-t-il ? (à 1 près)",
+  "explanation": "Cinq générations, sous le Second Empire.",
+  "answer": 5,
+  "tolerance": 1,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "art18-180",
+  "concept": "arts.literature.v18_le_hugo",
+  "label": "Hugo",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Auteur des « Misérables » et de « Notre-Dame de Paris ».",
+  "explanation": "Victor Hugo (1802-1885).",
+  "word": "HUGO",
+  "display": "Hugo"
+ },
+ {
+  "key": "art18-182",
+  "concept": "arts.literature.v18_le_sonnet",
+  "label": "Sonnet",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Poème de 14 vers.",
+  "explanation": "Venu d'Italie avec Pétrarque, il a été adopté en France par Ronsard et du Bellay.",
+  "word": "SONNET",
+  "display": "Sonnet"
+ },
+ {
+  "key": "art18-183",
+  "concept": "arts.literature.v18_le_roman",
+  "label": "Roman",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Long récit en prose, comme « Les Misérables ».",
+  "explanation": "À l'origine, un récit écrit en langue « romane », et non en latin.",
+  "word": "ROMAN",
+  "display": "Roman"
+ },
+ {
+  "key": "art18-184",
+  "concept": "arts.literature.v18_le_tragedie",
+  "label": "Tragédie",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Pièce de théâtre qui finit mal, chère à Racine.",
+  "explanation": "Le mot vient du grec et voudrait dire « chant du bouc ».",
+  "word": "TRAGEDIE",
+  "display": "Tragédie"
+ },
+ {
+  "key": "art18-185",
+  "concept": "arts.literature.v18_le_alexandrin",
+  "label": "Alexandrin",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Vers de douze syllabes.",
+  "explanation": "Le vers de la tragédie classique, chez Racine et Corneille.",
+  "word": "ALEXANDRIN",
+  "display": "Alexandrin"
+ },
+ {
+  "key": "art18-186",
+  "concept": "arts.literature.v18_tf_moliere_sur_scene",
+  "label": "Molière",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Molière est mort quelques heures après une représentation du « Malade imaginaire ».",
+  "explanation": "Pris d'un malaise sur scène, il est mort chez lui le soir même, le 17 février 1673. D'où la superstition du vert au théâtre, dit-on.",
+  "answer": true
+ },
+ {
+  "key": "art18-187",
+  "concept": "arts.literature.v18_tf_verne_voyages",
+  "label": "Jules Verne",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Jules Verne a voyagé dans tous les pays qu'il décrit.",
+  "explanation": "Il a peu voyagé. Il se documentait énormément dans les bibliothèques et les journaux.",
+  "answer": false
+ },
+ {
+  "key": "art18-188",
+  "concept": "arts.literature.v18_tf_balzac_particule",
+  "label": "Balzac",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "La particule « de » de Balzac était d'origine noble.",
+  "explanation": "Il l'a ajoutée lui-même. Son père s'appelait Balssa, un nom paysan.",
+  "answer": false
+ },
+ {
+  "key": "art18-189",
+  "concept": "arts.literature.v18_tf_sand_chopin",
+  "label": "George Sand",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "George Sand a vécu une histoire d'amour avec Frédéric Chopin.",
+  "explanation": "Pendant près de dix ans, notamment à Nohant, dans le Berry, et sur l'île de Majorque.",
+  "answer": true
+ },
+ {
+  "key": "art18-190",
+  "concept": "arts.literature.v18_tf_proust_volumes",
+  "label": "Proust",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« À la recherche du temps perdu » compte sept volumes.",
+  "explanation": "De « Du côté de chez Swann » (1913) au « Temps retrouvé » (1927), publié après sa mort.",
+  "answer": true
+ },
+ {
+  "key": "art18-191",
+  "concept": "arts.literature.v18_tf_baudelaire_condamne",
+  "label": "Baudelaire",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Six poèmes des « Fleurs du mal » ont été interdits par la justice en 1857.",
+  "explanation": "Ils n'ont été officiellement réhabilités qu'en 1949.",
+  "answer": true
+ },
+ {
+  "key": "art18-192",
+  "concept": "arts.literature.v18_tf_homere_existe",
+  "label": "Homère",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "On sait avec certitude qu'Homère a écrit seul l'« Iliade » et l'« Odyssée ».",
+  "explanation": "On ne sait presque rien de lui. Certains pensent même qu'il n'a jamais existé et que ces poèmes sont le fruit de plusieurs auteurs.",
+  "answer": false
+ },
+ {
+  "key": "art18-193",
+  "concept": "arts.literature.v18_tf_shakespeare_francais",
+  "label": "Shakespeare",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Shakespeare était français.",
+  "explanation": "Il était anglais, né à Stratford-upon-Avon en 1564.",
+  "answer": false
+ },
+ {
+  "key": "art18-194",
+  "concept": "arts.literature.v18_tf_tolkien_anglais",
+  "label": "Tolkien",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Tolkien est né en Afrique du Sud.",
+  "explanation": "À Bloemfontein, en 1892. Sa famille est rentrée en Angleterre quand il avait trois ans.",
+  "answer": true
+ },
+ {
+  "key": "art18-195",
+  "concept": "arts.literature.v18_tf_pinocchio_disney",
+  "label": "Pinocchio",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Pinocchio a été inventé par Walt Disney.",
+  "explanation": "Par l'Italien Carlo Collodi, en 1881. Le film de Disney date de 1940.",
+  "answer": false
+ },
+ {
+  "key": "art18-196",
+  "concept": "arts.mythology.v18_daphne_laurier",
+  "label": "Daphné",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pour échapper à Apollon, la nymphe Daphné est changée en…",
+  "explanation": "Apollon fait du laurier son arbre sacré. On en couronne depuis les vainqueurs et les poètes.",
+  "options": [
+   "Laurier*",
+   "Rose",
+   "Biche",
+   "Source"
+  ]
+ },
+ {
+  "key": "art18-197",
+  "concept": "arts.mythology.v18_pygmalion",
+  "label": "Pygmalion",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans le mythe, le sculpteur Pygmalion tombe amoureux…",
+  "explanation": "Aphrodite donne vie à la statue, qu'on appellera plus tard Galatée. L'« effet Pygmalion » désigne l'influence de nos attentes sur les autres.",
+  "options": [
+   "D'une statue qu'il a sculptée et qui prend vie*",
+   "De la déesse Athéna",
+   "D'une sirène",
+   "D'une étoile"
+  ]
+ },
+ {
+  "key": "art18-198",
+  "concept": "arts.mythology.v18_europe_taureau",
+  "label": "Europe",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "En quel animal Zeus se transforme-t-il pour enlever la princesse Europe ?",
+  "explanation": "Il l'emmène en Crète. Le continent porte son nom, et on la voit sur les billets de banque européens.",
+  "options": [
+   "Un taureau blanc*",
+   "Un aigle",
+   "Un cygne",
+   "Un cheval"
+  ]
+ },
+ {
+  "key": "art18-199",
+  "concept": "arts.mythology.v18_leda_cygne",
+  "label": "Léda",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sous quelle forme Zeus séduit-il la reine Léda ?",
+  "explanation": "Leurs enfants naissent dans des œufs, dont Hélène de Troie. La pluie d'or, c'est pour Danaé.",
+  "options": [
+   "Un cygne*",
+   "Un taureau",
+   "Une pluie d'or",
+   "Un aigle"
+  ]
+ },
+ {
+  "key": "art18-200",
+  "concept": "arts.mythology.v18_ganymede",
+  "label": "Ganymède",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel jeune berger Zeus enlève-t-il, sous la forme d'un aigle, pour en faire l'échanson des dieux ?",
+  "explanation": "Il sert le nectar sur l'Olympe. Une lune de Jupiter, la plus grande du système solaire, porte son nom.",
+  "options": [
+   "Ganymède*",
+   "Adonis",
+   "Narcisse",
+   "Hyacinthe"
+  ]
+ },
+ {
+  "key": "art18-201",
+  "concept": "arts.mythology.v18_phaeton",
+  "label": "Phaéton",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que fait Phaéton, fils du Soleil, qui provoque une catastrophe ?",
+  "explanation": "Le char brûle la Terre ; Zeus le foudroie pour arrêter le désastre. On dit que les déserts d'Afrique viennent de là.",
+  "options": [
+   "Il conduit le char du Soleil et perd le contrôle*",
+   "Il éteint le Soleil",
+   "Il vole le feu",
+   "Il ouvre une boîte"
+  ]
+ },
+ {
+  "key": "art18-202",
+  "concept": "arts.mythology.v18_tiresias",
+  "label": "Tirésias",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel devin aveugle de Thèbes a vécu sept ans transformé en femme ?",
+  "explanation": "Il est consulté par Ulysse aux Enfers et révèle à Œdipe la terrible vérité.",
+  "options": [
+   "Tirésias*",
+   "Calchas",
+   "Cassandre",
+   "Œdipe"
+  ]
+ },
+ {
+  "key": "art18-203",
+  "concept": "arts.mythology.v18_cassandre",
+  "label": "Cassandre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle malédiction frappe Cassandre, princesse de Troie ?",
+  "explanation": "Apollon lui a donné le don de prophétie, puis l'a maudite quand elle l'a repoussé. Elle avait prédit la chute de Troie.",
+  "options": [
+   "Elle prédit l'avenir, mais personne ne la croit*",
+   "Elle ne peut plus parler",
+   "Elle change en pierre ceux qu'elle regarde",
+   "Elle ne peut pas dormir"
+  ]
+ },
+ {
+  "key": "art18-204",
+  "concept": "arts.mythology.v18_psyche",
+  "label": "Éros et Psyché",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle interdiction Éros impose-t-il à Psyché, son épouse ?",
+  "explanation": "Une nuit, elle l'éclaire avec une lampe : une goutte d'huile le réveille et il s'envole. Elle devra traverser des épreuves pour le retrouver.",
+  "options": [
+   "Ne jamais voir son visage*",
+   "Ne jamais quitter le palais",
+   "Ne jamais chanter",
+   "Ne jamais manger de grenade"
+  ]
+ },
+ {
+  "key": "art18-205",
+  "concept": "arts.mythology.v18_hestia",
+  "label": "Hestia",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle déesse grecque veille sur le foyer, le feu de la maison ?",
+  "explanation": "Chez les Romains, c'est Vesta, dont les prêtresses, les Vestales, entretenaient un feu qui ne devait jamais s'éteindre.",
+  "options": [
+   "Hestia*",
+   "Héra",
+   "Déméter",
+   "Artémis"
+  ]
+ },
+ {
+  "key": "art18-206",
+  "concept": "arts.mythology.v18_hephaistos_epouse",
+  "label": "Héphaïstos",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui est l'épouse d'Héphaïstos, le dieu forgeron boiteux ?",
+  "explanation": "Un mariage malheureux : Aphrodite le trompe avec Arès, que le forgeron piège dans un filet invisible.",
+  "options": [
+   "Aphrodite*",
+   "Athéna",
+   "Héra",
+   "Perséphone"
+  ]
+ },
+ {
+  "key": "art18-207",
+  "concept": "arts.mythology.v18_hermes_bebe",
+  "label": "Hermès",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le jour même de sa naissance, que fait le petit Hermès ?",
+  "explanation": "Avec une carapace de tortue, il fabrique la lyre et l'offre à Apollon pour se faire pardonner.",
+  "options": [
+   "Il vole le troupeau de vaches d'Apollon et invente la lyre*",
+   "Il tue un serpent",
+   "Il parle toutes les langues",
+   "Il monte sur l'Olympe"
+  ]
+ },
+ {
+  "key": "art18-208",
+  "concept": "arts.mythology.v18_pan_flute",
+  "label": "Pan",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "D'où vient la flûte de Pan, selon le mythe ?",
+  "explanation": "La nymphe Syrinx fuyait Pan ; changée en roseaux, elle chante désormais quand il souffle dedans.",
+  "options": [
+   "D'une nymphe changée en roseaux*",
+   "D'un os de géant",
+   "D'un cadeau d'Apollon",
+   "D'une corne de chèvre"
+  ]
+ },
+ {
+  "key": "art18-209",
+  "concept": "arts.mythology.v18_niobe",
+  "label": "Niobé",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Pourquoi la reine Niobé est-elle punie par Apollon et Artémis ?",
+  "explanation": "Ses quatorze enfants sont tués ; changée en rocher, elle pleure éternellement. Une source coule toujours de la pierre, dit-on.",
+  "options": [
+   "Elle s'est vantée d'avoir plus d'enfants que leur mère*",
+   "Elle a volé une lyre",
+   "Elle a tué un cerf sacré",
+   "Elle a refusé d'épouser Apollon"
+  ]
+ },
+ {
+  "key": "art18-210",
+  "concept": "arts.mythology.v18_andromede",
+  "label": "Andromède",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Persée sauve la princesse Andromède…",
+  "explanation": "Elle a donné son nom à une constellation et à la grande galaxie la plus proche de la nôtre.",
+  "options": [
+   "Enchaînée à un rocher, livrée à un monstre marin*",
+   "Enfermée dans une tour",
+   "Prisonnière des Enfers",
+   "Changée en statue"
+  ]
+ },
+ {
+  "key": "art18-211",
+  "concept": "arts.mythology.v18_castor_pollux",
+  "label": "Castor et Pollux",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle constellation du zodiaque représente les jumeaux Castor et Pollux ?",
+  "explanation": "Pollux, immortel, a partagé son immortalité avec son frère : ils passent un jour sur l'Olympe, un jour aux Enfers.",
+  "options": [
+   "Les Gémeaux*",
+   "La Balance",
+   "Le Sagittaire",
+   "Les Poissons"
+  ]
+ },
+ {
+  "key": "art18-212",
+  "concept": "arts.mythology.v18_orion",
+  "label": "Orion",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Selon un des récits, qu'est-ce qui tue le chasseur géant Orion ?",
+  "explanation": "Les deux constellations, Orion et le Scorpion, ne sont jamais dans le ciel en même temps : l'une se lève quand l'autre se couche.",
+  "options": [
+   "Un scorpion*",
+   "Un loup",
+   "Une flèche de Zeus",
+   "Un serpent"
+  ]
+ },
+ {
+  "key": "art18-213",
+  "concept": "arts.mythology.v18_romulus_louve",
+  "label": "Romulus et Rémus",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Selon la légende, quel animal a nourri Romulus et Rémus, fondateurs de Rome ?",
+  "explanation": "La Louve capitoline est devenue le symbole de Rome et de son club de football, l'AS Roma.",
+  "options": [
+   "Une louve*",
+   "Une chèvre",
+   "Une ourse",
+   "Une biche"
+  ]
+ },
+ {
+  "key": "art18-214",
+  "concept": "arts.mythology.v18_romulus_remus_fin",
+  "label": "Romulus et Rémus",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Selon la légende, comment se termine l'histoire de Romulus et Rémus ?",
+  "explanation": "Rémus aurait franchi par moquerie le sillon tracé par Romulus. Rome porte le nom du survivant, en 753 av. J.-C. selon la tradition.",
+  "options": [
+   "Romulus tue son frère*",
+   "Ils règnent ensemble",
+   "Rémus fonde une autre ville",
+   "Ils sont changés en étoiles"
+  ]
+ },
+ {
+  "key": "art18-215",
+  "concept": "arts.mythology.v18_enee",
+  "label": "Énée",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Selon Virgile, quel héros troyen a fui sa ville en flammes et est devenu l'ancêtre des Romains ?",
+  "explanation": "L'« Énéide » raconte son voyage jusqu'en Italie, avec son père Anchise sur le dos.",
+  "options": [
+   "Énée*",
+   "Hector",
+   "Pâris",
+   "Priam"
+  ]
+ },
+ {
+  "key": "art18-216",
+  "concept": "arts.mythology.v18_hydre",
+  "label": "L'Hydre",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que se passait-il quand Héraclès coupait une tête de l'Hydre de Lerne ?",
+  "explanation": "Son neveu Iolaos brûlait chaque cou tranché pour empêcher la repousse.",
+  "options": [
+   "Deux têtes repoussaient*",
+   "Elle se transformait en pierre",
+   "Elle crachait du feu",
+   "Elle mourait aussitôt"
+  ]
+ },
+ {
+  "key": "art18-217",
+  "concept": "arts.mythology.v18_ecuries_augias",
+  "label": "Les écuries d'Augias",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment Héraclès nettoie-t-il les écuries d'Augias, sales depuis trente ans ?",
+  "explanation": "L'Alphée et le Pénée lavent tout en une journée. « Nettoyer les écuries d'Augias », c'est remettre de l'ordre dans une situation pourrie.",
+  "options": [
+   "En détournant deux fleuves*",
+   "Avec mille esclaves",
+   "Avec le feu",
+   "Avec une pelle géante"
+  ]
+ },
+ {
+  "key": "art18-218",
+  "concept": "arts.mythology.v18_charybde",
+  "label": "Charybde et Scylla",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Tomber de Charybde en Scylla », c'est…",
+  "explanation": "Deux monstres de part et d'autre d'un détroit, entre lesquels Ulysse doit passer.",
+  "options": [
+   "Éviter un danger pour tomber dans un autre, pire*",
+   "Réussir de justesse",
+   "Changer d'avis",
+   "Se noyer"
+  ]
+ },
+ {
+  "key": "art18-219",
+  "concept": "arts.mythology.v18_odyssee_chien",
+  "label": "Argos",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui reconnaît Ulysse en premier, à son retour à Ithaque, après vingt ans ?",
+  "explanation": "Le chien remue la queue, puis meurt, heureux d'avoir revu son maître.",
+  "options": [
+   "Son vieux chien Argos*",
+   "Sa femme Pénélope",
+   "Son fils Télémaque",
+   "Son père Laërte"
+  ]
+ },
+ {
+  "key": "art18-220",
+  "concept": "arts.mythology.v18_penelope_ruse",
+  "label": "Pénélope",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle ruse utilise Pénélope pour faire patienter ses prétendants ?",
+  "explanation": "Elle promettait de choisir un époux une fois le linceul de son beau-père achevé.",
+  "options": [
+   "Elle défait la nuit la toile tissée le jour*",
+   "Elle se déguise en homme",
+   "Elle les endort avec du vin",
+   "Elle leur pose des énigmes"
+  ]
+ },
+ {
+  "key": "art18-221",
+  "concept": "arts.mythology.v18_achille_cache",
+  "label": "Achille",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pour éviter qu'Achille parte à la guerre de Troie, où le cache sa mère ?",
+  "explanation": "Ulysse le démasque en apportant des bijoux… et des armes, sur lesquelles Achille se précipite.",
+  "options": [
+   "Parmi des jeunes filles, déguisé en fille*",
+   "Dans une grotte",
+   "Sur l'Olympe",
+   "Dans un tonneau"
+  ]
+ },
+ {
+  "key": "art18-222",
+  "concept": "arts.mythology.v18_midas_oreilles",
+  "label": "Midas",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle autre punition le roi Midas a-t-il reçue, après avoir préféré la flûte de Pan à la lyre d'Apollon ?",
+  "explanation": "Il les cachait sous un bonnet. Son barbier, incapable de garder le secret, le chuchota dans un trou… et les roseaux le répétèrent.",
+  "options": [
+   "Des oreilles d'âne*",
+   "Une queue de cochon",
+   "Un nez géant",
+   "Des cornes"
+  ]
+ },
+ {
+  "key": "art18-223",
+  "concept": "arts.mythology.v18_mots_mythologie",
+  "label": "Mots venus des dieux",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque mot au personnage mythologique qui lui a donné son nom.",
+  "explanation": "Cérès, déesse des moissons ; Vulcain, dieu forgeron ; Hypnos, dieu du sommeil ; Morphée, dieu des rêves.",
+  "pairs": [
+   [
+    "Céréale",
+    "Cérès"
+   ],
+   [
+    "Volcan",
+    "Vulcain"
+   ],
+   [
+    "Hypnose",
+    "Hypnos"
+   ],
+   [
+    "Morphine",
+    "Morphée"
+   ]
+  ]
+ },
+ {
+  "key": "art18-224",
+  "concept": "arts.mythology.v18_mots_mythologie_2",
+  "label": "Mots venus des dieux",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque mot au personnage mythologique qui lui a donné son nom.",
+  "explanation": "Le musée était le « temple des Muses ». Mercator a mis Atlas en couverture de son recueil de cartes.",
+  "pairs": [
+   [
+    "Musée",
+    "Les Muses"
+   ],
+   [
+    "Océan",
+    "Océanos"
+   ],
+   [
+    "Panique",
+    "Pan"
+   ],
+   [
+    "Atlas",
+    "Le titan Atlas"
+   ]
+  ]
+ },
+ {
+  "key": "art18-225",
+  "concept": "arts.mythology.v18_planetes_dieux",
+  "label": "Planètes et dieux",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque planète au dieu romain qu'elle évoque.",
+  "explanation": "Mercure fait le tour du Soleil en 88 jours seulement : le plus rapide des messagers.",
+  "pairs": [
+   [
+    "Mars",
+    "Dieu de la guerre, pour sa couleur rouge sang"
+   ],
+   [
+    "Vénus",
+    "Déesse de la beauté, pour son éclat"
+   ],
+   [
+    "Jupiter",
+    "Roi des dieux, pour sa taille"
+   ],
+   [
+    "Mercure",
+    "Messager rapide, pour sa vitesse"
+   ]
+  ]
+ },
+ {
+  "key": "art18-226",
+  "concept": "arts.mythology.v18_nike_marque",
+  "label": "Niké",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "La marque Nike tient son nom d'une déesse grecque de…",
+  "explanation": "Niké, déesse ailée de la victoire. La célèbre « Victoire de Samothrace » du Louvre, c'est elle.",
+  "options": [
+   "La victoire*",
+   "La course",
+   "La beauté",
+   "La sagesse"
+  ]
+ },
+ {
+  "key": "art18-227",
+  "concept": "arts.mythology.v18_achille_tendon",
+  "label": "Le tendon d'Achille",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle partie du corps porte le nom du héros Achille ?",
+  "explanation": "Le tendon d'Achille relie le mollet au talon, là où le héros était vulnérable.",
+  "options": [
+   "Un tendon du talon*",
+   "Un muscle du bras",
+   "Un os du crâne",
+   "Une veine du cou"
+  ]
+ },
+ {
+  "key": "art18-228",
+  "concept": "arts.mythology.v18_oedipe_complexe",
+  "label": "Œdipe",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel médecin a donné le nom d'Œdipe à un « complexe » ?",
+  "explanation": "Sans le savoir, Œdipe tue son père et épouse sa mère. Freud y voyait un stade du développement des enfants.",
+  "options": [
+   "Sigmund Freud*",
+   "Carl Jung",
+   "Hippocrate",
+   "Louis Pasteur"
+  ]
+ },
+ {
+  "key": "art18-229",
+  "concept": "arts.mythology.v18_genealogie_ordre",
+  "label": "Les générations divines",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces générations divines de la plus ancienne à la plus récente.",
+  "explanation": "Ouranos (le Ciel) est renversé par son fils Cronos, lui-même renversé par son fils Zeus, père d'Athéna.",
+  "items": [
+   "Ouranos",
+   "Cronos",
+   "Zeus",
+   "Athéna"
+  ]
+ },
+ {
+  "key": "art18-230",
+  "concept": "arts.mythology.v18_olympiens",
+  "label": "Les Olympiens",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien de dieux principaux siègent traditionnellement sur l'Olympe ?",
+  "explanation": "Les douze Olympiens, avec Zeus, Héra, Poséidon, Athéna, Apollon, Artémis, Arès, Aphrodite, Héphaïstos, Hermès, Déméter et Hestia (ou Dionysos).",
+  "answer": 12,
+  "tolerance": 0,
+  "min": 5,
+  "max": 20,
+  "start": 5
+ },
+ {
+  "key": "art18-231",
+  "concept": "arts.mythology.v18_argos_yeux",
+  "label": "Argos",
+  "type": "counter",
+  "difficulty": 80,
+  "prompt": "Combien d'yeux avait le géant Argos, qu'Héra chargea de surveiller Io ? (à 10 près)",
+  "explanation": "Cent yeux, dont certains restaient toujours ouverts. Héra les plaça ensuite sur la queue du paon.",
+  "answer": 100,
+  "tolerance": 10,
+  "min": 10,
+  "max": 200,
+  "start": 10
+ },
+ {
+  "key": "art18-232",
+  "concept": "arts.mythology.v18_odin_oeil",
+  "label": "Odin",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'a sacrifié Odin pour boire à la source de la sagesse ?",
+  "explanation": "Il a laissé son œil dans le puits du géant Mímir. On le représente borgne, avec un grand chapeau.",
+  "options": [
+   "Un œil*",
+   "Une main",
+   "Son cheval",
+   "Son marteau"
+  ]
+ },
+ {
+  "key": "art18-233",
+  "concept": "arts.mythology.v18_odin_corbeaux",
+  "label": "Odin",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que font les deux corbeaux d'Odin, Hugin et Munin ?",
+  "explanation": "Leurs noms veulent dire « Pensée » et « Mémoire ».",
+  "options": [
+   "Ils parcourent le monde et lui rapportent tout ce qu'ils voient*",
+   "Ils gardent son trône",
+   "Ils guident les morts",
+   "Ils chantent la nuit"
+  ]
+ },
+ {
+  "key": "art18-234",
+  "concept": "arts.mythology.v18_baldr",
+  "label": "Baldr",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Avec quoi Loki fait-il tuer Baldr, le plus beau des dieux nordiques, réputé invulnérable ?",
+  "explanation": "Sa mère avait fait jurer à toutes choses de ne pas le blesser, sauf au gui, jugé trop jeune.",
+  "options": [
+   "Une branche de gui*",
+   "Une épée en or",
+   "Une pierre",
+   "Un serpent"
+  ]
+ },
+ {
+  "key": "art18-235",
+  "concept": "arts.mythology.v18_jours_anglais",
+  "label": "Les jours anglais",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque jour anglais au dieu nordique qui lui a donné son nom.",
+  "explanation": "Le « jour de Thor » est notre jeudi, le jour de Jupiter, autre dieu du tonnerre.",
+  "pairs": [
+   [
+    "Tuesday",
+    "Tyr"
+   ],
+   [
+    "Wednesday",
+    "Odin (Woden)"
+   ],
+   [
+    "Thursday",
+    "Thor"
+   ],
+   [
+    "Friday",
+    "Frigg ou Freyja"
+   ]
+  ]
+ },
+ {
+  "key": "art18-236",
+  "concept": "arts.mythology.v18_midgard",
+  "label": "Les mondes nordiques",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans la mythologie nordique, comment s'appelle le monde des humains ?",
+  "explanation": "Le « domaine du milieu ». Asgard est le monde des dieux, Jotunheim celui des géants.",
+  "options": [
+   "Midgard*",
+   "Asgard",
+   "Jotunheim",
+   "Niflheim"
+  ]
+ },
+ {
+  "key": "art18-237",
+  "concept": "arts.mythology.v18_bifrost",
+  "label": "Bifröst",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce que le Bifröst dans la mythologie nordique ?",
+  "explanation": "Il est gardé par le dieu Heimdall, qui soufflera dans son cor au moment du Ragnarök.",
+  "options": [
+   "Un pont arc-en-ciel entre le monde des hommes et celui des dieux*",
+   "Un loup géant",
+   "Une épée magique",
+   "Un navire fait d'ongles"
+  ]
+ },
+ {
+  "key": "art18-238",
+  "concept": "arts.mythology.v18_naglfar",
+  "label": "Naglfar",
+  "type": "mcq",
+  "difficulty": 90,
+  "prompt": "Dans la mythologie nordique, avec quoi est construit le navire Naglfar, qui apparaîtra au Ragnarök ?",
+  "explanation": "C'est pour cela qu'on coupait les ongles des défunts : pour retarder sa construction.",
+  "options": [
+   "Les ongles des morts*",
+   "Des os de dragon",
+   "Du bois d'Yggdrasil",
+   "De la glace"
+  ]
+ },
+ {
+  "key": "art18-239",
+  "concept": "arts.mythology.v18_jormungand",
+  "label": "Jörmungand",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce que Jörmungand ?",
+  "explanation": "Fils de Loki, il se mord la queue au fond de l'océan. Thor et lui s'entretueront au Ragnarök.",
+  "options": [
+   "Un serpent si grand qu'il entoure le monde*",
+   "Le cheval d'Odin",
+   "Un géant de glace",
+   "Le palais de Thor"
+  ]
+ },
+ {
+  "key": "art18-240",
+  "concept": "arts.mythology.v18_pesee_coeur",
+  "label": "La pesée du cœur",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Selon les Égyptiens, contre quoi pesait-on le cœur d'un mort pour le juger ?",
+  "explanation": "La plume de Maât, déesse de la vérité. Si le cœur était plus lourd, un monstre le dévorait.",
+  "options": [
+   "Une plume*",
+   "Une pièce d'or",
+   "Une pierre",
+   "Une goutte d'eau"
+  ]
+ },
+ {
+  "key": "art18-241",
+  "concept": "arts.mythology.v18_seth",
+  "label": "Seth",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel dieu égyptien tue son frère Osiris et le découpe en morceaux ?",
+  "explanation": "Isis retrouve les morceaux et ramène Osiris à la vie. Leur fils Horus vengera son père.",
+  "options": [
+   "Seth*",
+   "Horus",
+   "Anubis",
+   "Râ"
+  ]
+ },
+ {
+  "key": "art18-242",
+  "concept": "arts.mythology.v18_scarabee",
+  "label": "Le scarabée",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi le scarabée était-il sacré dans l'Égypte antique ?",
+  "explanation": "Le scarabée roule sa boule de bouse comme le dieu Khépri pousse le Soleil dans le ciel.",
+  "options": [
+   "Il évoquait le Soleil qui renaît chaque matin*",
+   "Il protégeait des serpents",
+   "Il annonçait les crues",
+   "Il était le chat des pauvres"
+  ]
+ },
+ {
+  "key": "art18-243",
+  "concept": "arts.mythology.v18_nout",
+  "label": "Nout",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle déesse égyptienne du ciel avale le Soleil chaque soir et le remet au monde chaque matin ?",
+  "explanation": "On la représente penchée au-dessus de la Terre, le corps couvert d'étoiles.",
+  "options": [
+   "Nout*",
+   "Isis",
+   "Hathor",
+   "Bastet"
+  ]
+ },
+ {
+  "key": "art18-244",
+  "concept": "arts.mythology.v18_gilgamesh_deluge",
+  "label": "Gilgamesh",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel récit, proche de l'arche de Noé, trouve-t-on dans l'épopée de Gilgamesh ?",
+  "explanation": "Le récit d'Utnapishtim, écrit sur des tablettes d'argile bien avant la Bible.",
+  "options": [
+   "Un déluge et un homme qui sauve les animaux dans un bateau*",
+   "Une tour qui monte jusqu'au ciel",
+   "Une mer qui s'ouvre",
+   "Un jardin interdit"
+  ]
+ },
+ {
+  "key": "art18-245",
+  "concept": "arts.mythology.v18_ishtar",
+  "label": "Ishtar",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle déesse mésopotamienne a donné son nom à une célèbre porte bleue de Babylone ?",
+  "explanation": "La porte d'Ishtar, couverte de briques bleues et d'animaux, est reconstruite au musée de Pergame, à Berlin.",
+  "options": [
+   "Ishtar*",
+   "Tiamat",
+   "Inanna",
+   "Ninsun"
+  ]
+ },
+ {
+  "key": "art18-246",
+  "concept": "arts.mythology.v18_amaterasu",
+  "label": "Amaterasu",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans la mythologie japonaise, que se passe-t-il quand la déesse du Soleil Amaterasu se cache dans une grotte ?",
+  "explanation": "Les dieux la font sortir par la curiosité, en riant et dansant devant la grotte. Les empereurs du Japon se disaient ses descendants.",
+  "options": [
+   "Le monde est plongé dans l'obscurité*",
+   "Il neige pendant cent ans",
+   "La mer monte",
+   "Les animaux parlent"
+  ]
+ },
+ {
+  "key": "art18-247",
+  "concept": "arts.mythology.v18_kitsune",
+  "label": "Kitsune",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans le folklore japonais, quel animal rusé peut avoir jusqu'à neuf queues ?",
+  "explanation": "Plus il a de queues, plus il est vieux et puissant.",
+  "options": [
+   "Le renard (kitsune)*",
+   "Le chat",
+   "Le tanuki",
+   "Le serpent"
+  ]
+ },
+ {
+  "key": "art18-248",
+  "concept": "arts.mythology.v18_zodiaque_chinois",
+  "label": "Le zodiaque chinois",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Selon la légende, comment a été fixé l'ordre des animaux du zodiaque chinois ?",
+  "explanation": "Le rat a gagné en se faisant porter par le bœuf et en sautant au dernier moment. Le chat, trompé par le rat, n'y est pas.",
+  "options": [
+   "Par une course organisée par l'Empereur de jade*",
+   "Par tirage au sort",
+   "Par ordre de taille",
+   "Par un vote des animaux"
+  ]
+ },
+ {
+  "key": "art18-249",
+  "concept": "arts.mythology.v18_zodiaque_animaux",
+  "label": "Le zodiaque chinois",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien d'animaux compte le zodiaque chinois ?",
+  "explanation": "Rat, bœuf, tigre, lapin, dragon, serpent, cheval, chèvre, singe, coq, chien et cochon.",
+  "answer": 12,
+  "tolerance": 0,
+  "min": 5,
+  "max": 20,
+  "start": 5
+ },
+ {
+  "key": "art18-250",
+  "concept": "arts.mythology.v18_vishnu_avatars",
+  "label": "Vishnou",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans l'hindouisme, comment appelle-t-on les incarnations du dieu Vishnou sur Terre, comme Rama ou Krishna ?",
+  "explanation": "Le mot est passé dans les jeux vidéo pour désigner le personnage qui nous représente !",
+  "options": [
+   "Des avatars*",
+   "Des mantras",
+   "Des karmas",
+   "Des gourous"
+  ]
+ },
+ {
+  "key": "art18-251",
+  "concept": "arts.mythology.v18_hanuman",
+  "label": "Hanuman",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel animal est le dieu hindou Hanuman, fidèle allié de Rama ?",
+  "explanation": "Capable de voler et de soulever des montagnes, il aurait inspiré le Roi des singes de la légende chinoise.",
+  "options": [
+   "Un singe*",
+   "Un éléphant",
+   "Un tigre",
+   "Un serpent"
+  ]
+ },
+ {
+  "key": "art18-252",
+  "concept": "arts.mythology.v18_shiva_danse",
+  "label": "Shiva",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment représente-t-on souvent Shiva, en roi de la danse (Nataraja) ?",
+  "explanation": "Sa danse cosmique crée et détruit l'univers. Une statue de Shiva dansant se trouve au CERN, à Genève.",
+  "options": [
+   "Dansant dans un cercle de flammes*",
+   "Assis sur un éléphant",
+   "Endormi sur un serpent",
+   "Volant sur un aigle"
+  ]
+ },
+ {
+  "key": "art18-253",
+  "concept": "arts.mythology.v18_baba_yaga",
+  "label": "Baba Yaga",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans les contes russes, où vit la sorcière Baba Yaga ?",
+  "explanation": "Elle se déplace dans un mortier qu'elle dirige avec un pilon.",
+  "options": [
+   "Dans une cabane montée sur des pattes de poulet*",
+   "Au fond d'un lac",
+   "Dans une tour de glace",
+   "Dans un arbre creux"
+  ]
+ },
+ {
+  "key": "art18-254",
+  "concept": "arts.mythology.v18_golem",
+  "label": "Le Golem",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans la légende juive de Prague, de quoi est fait le Golem ?",
+  "explanation": "Le rabbin Loew l'aurait animé en inscrivant un mot sacré sur son front.",
+  "options": [
+   "D'argile*",
+   "De fer",
+   "De bois",
+   "De pierre précieuse"
+  ]
+ },
+ {
+  "key": "art18-255",
+  "concept": "arts.mythology.v18_kraken",
+  "label": "Le Kraken",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Le Kraken des légendes scandinaves ressemble à…",
+  "explanation": "Il s'inspire peut-être des calmars géants, qui existent vraiment et peuvent dépasser 10 mètres.",
+  "options": [
+   "Un poulpe ou calmar géant*",
+   "Un dragon de feu",
+   "Un loup de mer",
+   "Une baleine blanche"
+  ]
+ },
+ {
+  "key": "art18-256",
+  "concept": "arts.mythology.v18_popol_vuh",
+  "label": "Le Popol Vuh",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Selon le Popol Vuh, livre sacré des Mayas, de quoi les dieux ont-ils finalement fait les humains ?",
+  "explanation": "Après des essais ratés avec la boue et le bois, c'est la pâte de maïs qui a réussi.",
+  "options": [
+   "De maïs*",
+   "D'argile",
+   "De bois",
+   "De sable"
+  ]
+ },
+ {
+  "key": "art18-257",
+  "concept": "arts.mythology.v18_inti",
+  "label": "Inti",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel était le dieu principal des Incas, celui du Soleil ?",
+  "explanation": "L'empereur inca était considéré comme le fils d'Inti. Pachamama, c'est la Terre-Mère.",
+  "options": [
+   "Inti*",
+   "Viracocha",
+   "Pachamama",
+   "Quetzalcóatl"
+  ]
+ },
+ {
+  "key": "art18-258",
+  "concept": "arts.mythology.v18_excalibur",
+  "label": "Excalibur",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Selon une version de la légende, comment Arthur devient-il roi ?",
+  "explanation": "Dans d'autres versions, Excalibur lui est donnée par la Dame du Lac.",
+  "options": [
+   "En retirant une épée plantée dans une pierre*",
+   "En battant un dragon",
+   "En épousant une reine",
+   "En gagnant une course"
+  ]
+ },
+ {
+  "key": "art18-259",
+  "concept": "arts.mythology.v18_graal",
+  "label": "Le Graal",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que cherchent les chevaliers de la Table ronde ?",
+  "explanation": "Une coupe mystérieuse, que seul le pur Galaad finit par trouver.",
+  "options": [
+   "Le Saint-Graal*",
+   "La Toison d'or",
+   "L'anneau unique",
+   "La pierre philosophale"
+  ]
+ },
+ {
+  "key": "art18-260",
+  "concept": "arts.mythology.v18_table_ronde",
+  "label": "La Table ronde",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi la table du roi Arthur est-elle ronde ?",
+  "explanation": "Pas de bout de table, donc pas de place d'honneur : tous sont égaux.",
+  "options": [
+   "Pour qu'aucun chevalier ne soit au-dessus des autres*",
+   "Pour économiser de la place",
+   "Pour danser autour",
+   "Par superstition"
+  ]
+ },
+ {
+  "key": "art18-261",
+  "concept": "arts.mythology.v18_broceliande",
+  "label": "Brocéliande",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quelle région française situe-t-on la forêt de Brocéliande, liée à Merlin ?",
+  "explanation": "On y montre le tombeau de Merlin et la fontaine de Barenton.",
+  "options": [
+   "La Bretagne*",
+   "L'Alsace",
+   "Le Jura",
+   "Les Vosges"
+  ]
+ },
+ {
+  "key": "art18-262",
+  "concept": "arts.mythology.v18_merlin_viviane",
+  "label": "Merlin",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui enferme l'enchanteur Merlin, par amour, dans une prison invisible ?",
+  "explanation": "Viviane, la Dame du Lac, élève aussi Lancelot.",
+  "options": [
+   "La fée Viviane*",
+   "La fée Morgane",
+   "La reine Guenièvre",
+   "Iseut"
+  ]
+ },
+ {
+  "key": "art18-263",
+  "concept": "arts.mythology.v18_lancelot_guenievre",
+  "label": "Lancelot",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De qui le chevalier Lancelot est-il amoureux ?",
+  "explanation": "Cet amour interdit contribuera à la chute du royaume d'Arthur.",
+  "options": [
+   "De la reine Guenièvre, épouse d'Arthur*",
+   "De la fée Morgane",
+   "D'Iseut",
+   "De la Dame du Lac"
+  ]
+ },
+ {
+  "key": "art18-264",
+  "concept": "arts.mythology.v18_tristan_iseut",
+  "label": "Tristan et Iseut",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi Tristan et Iseut tombent-ils éperdument amoureux ?",
+  "explanation": "Le philtre était destiné à Iseut et au roi Marc, qu'elle devait épouser.",
+  "options": [
+   "Ils boivent par erreur un philtre d'amour*",
+   "Ils se rencontrent à un bal",
+   "Une fée les a mariés",
+   "Ils se sont sauvé la vie"
+  ]
+ },
+ {
+  "key": "art18-265",
+  "concept": "arts.mythology.v18_korrigans",
+  "label": "Les korrigans",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que sont les korrigans, dans les légendes bretonnes ?",
+  "explanation": "Ils dansent la nuit autour des menhirs et jouent des tours aux voyageurs.",
+  "options": [
+   "De petits lutins farceurs*",
+   "Des géants de pierre",
+   "Des sirènes",
+   "Des dragons"
+  ]
+ },
+ {
+  "key": "art18-266",
+  "concept": "arts.mythology.v18_le_zeus",
+  "label": "Zeus",
+  "type": "letters",
+  "difficulty": 5,
+  "prompt": "Roi des dieux grecs, maître de la foudre.",
+  "explanation": "Il règne sur l'Olympe avec son épouse Héra.",
+  "word": "ZEUS",
+  "display": "Zeus"
+ },
+ {
+  "key": "art18-267",
+  "concept": "arts.mythology.v18_le_odin",
+  "label": "Odin",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Dieu borgne, père de Thor, chef des dieux nordiques.",
+  "explanation": "Il chevauche Sleipnir, son cheval à huit jambes.",
+  "word": "ODIN",
+  "display": "Odin"
+ },
+ {
+  "key": "art18-268",
+  "concept": "arts.mythology.v18_le_merlin",
+  "label": "Merlin",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Enchanteur du roi Arthur.",
+  "explanation": "Selon la légende, il était le fils d'un démon et d'une religieuse.",
+  "word": "MERLIN",
+  "display": "Merlin"
+ },
+ {
+  "key": "art18-269",
+  "concept": "arts.mythology.v18_le_pegase",
+  "label": "Pégase",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Cheval ailé né du sang de Méduse.",
+  "explanation": "Il est devenu une constellation.",
+  "word": "PEGASE",
+  "display": "Pégase"
+ },
+ {
+  "key": "art18-270",
+  "concept": "arts.mythology.v18_le_olympe",
+  "label": "Olympe",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Montagne grecque où vivent les dieux.",
+  "explanation": "Le mont Olympe existe vraiment : c'est le plus haut sommet de Grèce, à 2 918 m.",
+  "word": "OLYMPE",
+  "display": "Olympe"
+ },
+ {
+  "key": "art18-271",
+  "concept": "arts.mythology.v18_le_minotaure",
+  "label": "Minotaure",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Monstre mi-homme mi-taureau, enfermé dans le labyrinthe.",
+  "explanation": "Il dévorait chaque année sept jeunes hommes et sept jeunes filles d'Athènes.",
+  "word": "MINOTAURE",
+  "display": "Minotaure"
+ },
+ {
+  "key": "art18-272",
+  "concept": "arts.mythology.v18_tf_olympe_reel",
+  "label": "L'Olympe",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Le mont Olympe, demeure des dieux, existe vraiment en Grèce.",
+  "explanation": "C'est le plus haut sommet du pays (2 918 m), entre la Thessalie et la Macédoine.",
+  "answer": true
+ },
+ {
+  "key": "art18-273",
+  "concept": "arts.mythology.v18_tf_thor_fils",
+  "label": "Les dieux nordiques",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Thor est le fils d'Odin.",
+  "explanation": "Fils d'Odin et de Jörd, une géante qui incarne la Terre.",
+  "answer": true
+ },
+ {
+  "key": "art18-274",
+  "concept": "arts.mythology.v18_tf_loki_cheval",
+  "label": "Loki",
+  "type": "true_false",
+  "difficulty": 85,
+  "prompt": "Selon la mythologie nordique, Loki a donné naissance à Sleipnir, le cheval à huit jambes d'Odin.",
+  "explanation": "Transformé en jument, il a séduit l'étalon d'un géant bâtisseur… et a mis au monde Sleipnir.",
+  "answer": true
+ },
+ {
+  "key": "art18-275",
+  "concept": "arts.mythology.v18_tf_mercure_grec",
+  "label": "Mercure",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Mercure est un dieu grec.",
+  "explanation": "C'est un dieu romain. Son équivalent grec est Hermès.",
+  "answer": false
+ },
+ {
+  "key": "art18-276",
+  "concept": "arts.mythology.v18_tf_sphinx_grec",
+  "label": "Le Sphinx",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le Sphinx de la légende d'Œdipe et le Sphinx de Gizeh sont la même créature.",
+  "explanation": "Le Sphinx grec est une femme ailée à corps de lion. Celui de Gizeh, égyptien, a une tête d'homme : le pharaon.",
+  "answer": false
+ },
+ {
+  "key": "art18-277",
+  "concept": "arts.mythology.v18_tf_arthur_existe",
+  "label": "Le roi Arthur",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les historiens ont prouvé que le roi Arthur avait vraiment existé.",
+  "explanation": "On n'en a aucune preuve. Il s'inspire peut-être d'un chef breton qui aurait combattu les Saxons vers l'an 500.",
+  "answer": false
+ },
+ {
+  "key": "art18-278",
+  "concept": "arts.mythology.v18_tf_romulus_jumeaux",
+  "label": "Romulus et Rémus",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Romulus et Rémus étaient jumeaux.",
+  "explanation": "Fils de Mars et de la prêtresse Rhéa Silvia, abandonnés sur le Tibre.",
+  "answer": true
+ },
+ {
+  "key": "art18-279",
+  "concept": "arts.mythology.v18_tf_icare_pere",
+  "label": "Icare",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le père d'Icare est Dédale, l'architecte du labyrinthe.",
+  "explanation": "Prisonnier du roi Minos, il fabrique des ailes de plumes et de cire pour s'évader avec son fils.",
+  "answer": true
+ },
+ {
+  "key": "art18-280",
+  "concept": "arts.mythology.v18_tl_rome_fondation",
+  "label": "La fondation de Rome",
+  "type": "timeline",
+  "difficulty": 55,
+  "prompt": "En quelle année la tradition situe-t-elle la fondation de Rome ? (avant J.-C.)",
+  "explanation": "Le 21 avril 753 av. J.-C. Les Romains comptaient les années « depuis la fondation de la ville ».",
+  "answer": 753,
+  "tolerance": 25,
+  "min": 400,
+  "max": 1200
+ },
+ {
+  "key": "art18-281",
+  "concept": "arts.mythology.v18_nu_travaux",
+  "label": "Les travaux d'Héraclès",
+  "type": "numeric",
+  "difficulty": 30,
+  "prompt": "Combien de travaux Héraclès devait-il accomplir à l'origine, avant qu'Eurysthée en refuse deux ?",
+  "explanation": "Dix travaux, puis douze, car deux furent jugés non valables : l'Hydre (aidé par son neveu) et les écuries (il s'était fait payer).",
+  "answer": 10,
+  "tolerance": 0
+ },
+ {
+  "key": "art18-282",
+  "concept": "arts.architecture.v18_petra",
+  "label": "Pétra",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel pays se trouve Pétra, cité taillée dans la roche rose ?",
+  "explanation": "Capitale des Nabatéens. Son « Trésor » apparaît dans « Indiana Jones et la Dernière Croisade ».",
+  "options": [
+   "La Jordanie*",
+   "L'Égypte",
+   "La Turquie",
+   "Le Maroc"
+  ]
+ },
+ {
+  "key": "art18-283",
+  "concept": "arts.architecture.v18_angkor",
+  "label": "Angkor",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel pays se trouve le temple d'Angkor Vat, le plus grand monument religieux du monde ?",
+  "explanation": "Construit au XIIe siècle, d'abord hindou puis bouddhiste. Il figure sur le drapeau cambodgien.",
+  "options": [
+   "Le Cambodge*",
+   "La Thaïlande",
+   "Le Vietnam",
+   "L'Inde"
+  ]
+ },
+ {
+  "key": "art18-284",
+  "concept": "arts.architecture.v18_muraille_espace",
+  "label": "La Grande Muraille",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Voit-on la Grande Muraille de Chine à l'œil nu depuis la Lune ?",
+  "explanation": "Elle est trop étroite : même depuis la Station spatiale, à 400 km, on la distingue à peine.",
+  "options": [
+   "Non, c'est une légende*",
+   "Oui, très nettement",
+   "Oui, mais seulement la nuit",
+   "Seulement avec des lunettes de soleil"
+  ]
+ },
+ {
+  "key": "art18-285",
+  "concept": "arts.architecture.v18_muraille_longueur",
+  "label": "La Grande Muraille",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Quelle est la longueur totale de la Grande Muraille de Chine, toutes sections confondues, en kilomètres ? (à 4 000 près)",
+  "explanation": "Plus de 21 000 km selon le relevé chinois de 2012, construits sur près de 2 000 ans.",
+  "answer": 21000,
+  "tolerance": 4000,
+  "unit": "km"
+ },
+ {
+  "key": "art18-286",
+  "concept": "arts.architecture.v18_kremlin",
+  "label": "Le Kremlin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que veut dire le mot russe « kremlin » ?",
+  "explanation": "Beaucoup de vieilles villes russes ont leur kremlin. Celui de Moscou est le siège du pouvoir.",
+  "options": [
+   "Forteresse*",
+   "Palais",
+   "Église",
+   "Place"
+  ]
+ },
+ {
+  "key": "art18-287",
+  "concept": "arts.architecture.v18_alhambra",
+  "label": "L'Alhambra",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quelle ville espagnole se trouve l'Alhambra, palais des rois musulmans ?",
+  "explanation": "Son nom vient de l'arabe « la rouge ». Les derniers rois nasrides l'ont quitté en 1492.",
+  "options": [
+   "Grenade*",
+   "Séville",
+   "Cordoue",
+   "Tolède"
+  ]
+ },
+ {
+  "key": "art18-288",
+  "concept": "arts.architecture.v18_stonehenge",
+  "label": "Stonehenge",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que pensent la plupart des chercheurs du rôle de Stonehenge ?",
+  "explanation": "Construit il y a environ 5 000 ans, en Angleterre. Certaines pierres viennent du pays de Galles, à plus de 200 km.",
+  "options": [
+   "Un lieu de cérémonie aligné sur le soleil des solstices*",
+   "Une forteresse",
+   "Une maison de chef",
+   "Un marché"
+  ]
+ },
+ {
+  "key": "art18-289",
+  "concept": "arts.architecture.v18_moai",
+  "label": "Les moaï",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Sur quelle île se trouvent les célèbres statues géantes appelées moaï ?",
+  "explanation": "Près de 900 statues, sculptées par les Rapa Nui. Elles ont presque toutes le dos tourné à la mer.",
+  "options": [
+   "L'île de Pâques*",
+   "Tahiti",
+   "Hawaï",
+   "Madagascar"
+  ]
+ },
+ {
+  "key": "art18-290",
+  "concept": "arts.architecture.v18_chichen_itza",
+  "label": "Chichén Itzá",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel phénomène se produit sur la pyramide de Chichén Itzá aux équinoxes ?",
+  "explanation": "Le serpent à plumes Kukulcán semble glisser jusqu'à sa tête sculptée en bas de l'escalier.",
+  "options": [
+   "Une ombre en forme de serpent descend l'escalier*",
+   "Le sommet s'illumine",
+   "La pyramide « chante »",
+   "L'eau jaillit du sommet"
+  ]
+ },
+ {
+  "key": "art18-291",
+  "concept": "arts.architecture.v18_borobudur",
+  "label": "Borobudur",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quel pays se trouve Borobudur, le plus grand temple bouddhiste du monde ?",
+  "explanation": "Sur l'île de Java, construit vers l'an 800, oublié sous les cendres volcaniques et la jungle pendant des siècles.",
+  "options": [
+   "L'Indonésie*",
+   "La Thaïlande",
+   "Le Népal",
+   "Le Japon"
+  ]
+ },
+ {
+  "key": "art18-292",
+  "concept": "arts.architecture.v18_colisee_places",
+  "label": "Le Colisée",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Environ combien de spectateurs pouvait accueillir le Colisée de Rome ?",
+  "explanation": "Il pouvait même être recouvert d'un immense voile (le velarium) pour protéger du soleil.",
+  "options": [
+   "50 000*",
+   "5 000",
+   "500",
+   "500 000"
+  ]
+ },
+ {
+  "key": "art18-293",
+  "concept": "arts.architecture.v18_pantheon_rome",
+  "label": "Le Panthéon de Rome",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'a de particulier la coupole du Panthéon de Rome ?",
+  "explanation": "Construite vers 125, c'est toujours la plus grande coupole en béton non armé du monde. La pluie tombe dans le temple !",
+  "options": [
+   "Un grand trou ouvert au sommet, l'oculus*",
+   "Elle est en or massif",
+   "Elle tourne sur elle-même",
+   "Elle est en verre"
+  ]
+ },
+ {
+  "key": "art18-294",
+  "concept": "arts.architecture.v18_pise_angle",
+  "label": "La tour de Pise",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quand la tour de Pise a-t-elle commencé à pencher ?",
+  "explanation": "Le sol meuble s'est affaissé dès le troisième étage. Des travaux l'ont redressée de 40 cm au début des années 2000.",
+  "options": [
+   "Pendant sa construction, au XIIe siècle*",
+   "Après un séisme en 1900",
+   "Pendant la Seconde Guerre mondiale",
+   "Elle a été construite penchée exprès"
+  ]
+ },
+ {
+  "key": "art18-295",
+  "concept": "arts.architecture.v18_taj_couleur",
+  "label": "Le Taj Mahal",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi le Taj Mahal semble-t-il changer de couleur au cours de la journée ?",
+  "explanation": "Rose le matin, blanc à midi, doré le soir. Il est construit en marbre blanc du Rajasthan.",
+  "options": [
+   "Son marbre blanc reflète la lumière du ciel*",
+   "Il est repeint chaque jour",
+   "Des projecteurs l'éclairent",
+   "Il est couvert de cristaux"
+  ]
+ },
+ {
+  "key": "art18-296",
+  "concept": "arts.architecture.v18_big_ben_tour",
+  "label": "Big Ben",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment s'appelle officiellement la tour de Big Ben depuis 2012 ?",
+  "explanation": "Rebaptisée pour le jubilé de diamant d'Élisabeth II. Big Ben, c'est la cloche.",
+  "options": [
+   "Elizabeth Tower*",
+   "Victoria Tower",
+   "Queen's Tower",
+   "Westminster Clock"
+  ]
+ },
+ {
+  "key": "art18-297",
+  "concept": "arts.architecture.v18_tower_bridge",
+  "label": "Tower Bridge",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'a de particulier Tower Bridge, à Londres ?",
+  "explanation": "On le confond souvent avec le « London Bridge », un pont beaucoup plus simple juste à côté.",
+  "options": [
+   "Il s'ouvre en deux pour laisser passer les bateaux*",
+   "Il tourne sur lui-même",
+   "Il est en verre",
+   "Il est souterrain"
+  ]
+ },
+ {
+  "key": "art18-298",
+  "concept": "arts.architecture.v18_golden_gate_couleur",
+  "label": "Le Golden Gate",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle couleur est le pont du Golden Gate, à San Francisco ?",
+  "explanation": "Une couleur choisie pour être bien visible dans le brouillard. Le nom vient du détroit, la « Porte dorée ».",
+  "options": [
+   "Orange (« orange international »)*",
+   "Doré",
+   "Rouge vif",
+   "Gris"
+  ]
+ },
+ {
+  "key": "art18-299",
+  "concept": "arts.architecture.v18_statue_liberte_couleur",
+  "label": "La statue de la Liberté",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi la statue de la Liberté est-elle verte ?",
+  "explanation": "Elle était brune et brillante à l'origine, comme une casserole en cuivre. La couche verte la protège.",
+  "options": [
+   "Son cuivre s'est oxydé avec le temps*",
+   "Elle a été peinte en vert",
+   "Elle est en jade",
+   "À cause des algues"
+  ]
+ },
+ {
+  "key": "art18-300",
+  "concept": "arts.architecture.v18_liberte_eiffel",
+  "label": "La statue de la Liberté",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel ingénieur français a conçu la structure intérieure de la statue de la Liberté ?",
+  "explanation": "Bartholdi l'a sculptée ; Eiffel a conçu son squelette métallique.",
+  "options": [
+   "Gustave Eiffel*",
+   "Auguste Bartholdi",
+   "Viollet-le-Duc",
+   "Charles Garnier"
+  ]
+ },
+ {
+  "key": "art18-301",
+  "concept": "arts.architecture.v18_sydney_coques",
+  "label": "L'opéra de Sydney",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "À quoi font penser les toits de l'opéra de Sydney ?",
+  "explanation": "Leur forme vient de morceaux d'une même sphère. L'architecte Jørn Utzon n'a jamais vu son œuvre terminée.",
+  "options": [
+   "À des voiles de bateau ou des coquillages*",
+   "À des feuilles d'arbre",
+   "À des montagnes",
+   "À des ailes d'oiseau"
+  ]
+ },
+ {
+  "key": "art18-302",
+  "concept": "arts.architecture.v18_burj_hauteur",
+  "label": "Burj Khalifa",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle est la hauteur de la Burj Khalifa, la plus haute tour du monde ?",
+  "explanation": "Inaugurée en 2010 à Dubaï. On voit son sommet à près de 100 km.",
+  "options": [
+   "828 m*",
+   "541 m",
+   "1 200 m",
+   "330 m"
+  ]
+ },
+ {
+  "key": "art18-303",
+  "concept": "arts.architecture.v18_tours_hauteur",
+  "label": "Les gratte-ciel",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces tours de la plus haute à la plus basse.",
+  "explanation": "828 m, 634 m, 541 m et 330 m (avec ses antennes).",
+  "items": [
+   "Burj Khalifa",
+   "Tokyo Skytree",
+   "One World Trade Center",
+   "Tour Eiffel"
+  ]
+ },
+ {
+  "key": "art18-304",
+  "concept": "arts.architecture.v18_monuments_age",
+  "label": "Monuments",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces monuments du plus ancien au plus récent.",
+  "explanation": "Vers 2560 av. J.-C., 80 apr. J.-C., XIIe-XIVe siècles et 1889.",
+  "items": [
+   "Les pyramides de Gizeh",
+   "Le Colisée",
+   "Notre-Dame de Paris",
+   "La tour Eiffel"
+  ]
+ },
+ {
+  "key": "art18-305",
+  "concept": "arts.architecture.v18_merveilles_ordre",
+  "label": "Monuments",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces monuments du plus ancien au plus récent.",
+  "explanation": "Vers 3000 av. J.-C., Ve siècle av. J.-C., XIIe siècle, XVIIe siècle.",
+  "items": [
+   "Stonehenge",
+   "Le Parthénon",
+   "Angkor Vat",
+   "Le Taj Mahal"
+  ]
+ },
+ {
+  "key": "art18-306",
+  "concept": "arts.architecture.v18_monuments_pays",
+  "label": "Monuments du monde",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque monument à son pays.",
+  "explanation": "Quatre sites classés au patrimoine mondial de l'UNESCO.",
+  "pairs": [
+   [
+    "Machu Picchu",
+    "Pérou"
+   ],
+   [
+    "Pétra",
+    "Jordanie"
+   ],
+   [
+    "Angkor Vat",
+    "Cambodge"
+   ],
+   [
+    "L'Alhambra",
+    "Espagne"
+   ]
+  ]
+ },
+ {
+  "key": "art18-307",
+  "concept": "arts.architecture.v18_sept_merveilles",
+  "label": "Les Sept Merveilles",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque merveille du monde antique à sa ville.",
+  "explanation": "Des Sept Merveilles du monde antique, seule la grande pyramide de Gizeh existe encore.",
+  "pairs": [
+   [
+    "Le phare",
+    "Alexandrie"
+   ],
+   [
+    "Les jardins suspendus",
+    "Babylone"
+   ],
+   [
+    "Le colosse",
+    "Rhodes"
+   ],
+   [
+    "Le mausolée",
+    "Halicarnasse"
+   ]
+  ]
+ },
+ {
+  "key": "art18-308",
+  "concept": "arts.architecture.v18_merveilles_restantes",
+  "label": "Les Sept Merveilles",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien des Sept Merveilles du monde antique existent encore aujourd'hui ?",
+  "explanation": "Une seule : la grande pyramide de Gizeh, la plus ancienne de toutes.",
+  "answer": 1,
+  "tolerance": 0,
+  "min": 0,
+  "max": 7,
+  "start": 0
+ },
+ {
+  "key": "art18-309",
+  "concept": "arts.architecture.v18_pyramide_record",
+  "label": "La grande pyramide",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pendant combien de temps la grande pyramide de Gizeh a-t-elle été la plus haute construction humaine ?",
+  "explanation": "Jusqu'à la flèche de la cathédrale de Lincoln, en Angleterre, vers 1311.",
+  "options": [
+   "Environ 3 800 ans*",
+   "Environ 100 ans",
+   "Environ 1 000 ans",
+   "Environ 10 000 ans"
+  ]
+ },
+ {
+  "key": "art18-310",
+  "concept": "arts.architecture.v18_eiffel_peinture",
+  "label": "La tour Eiffel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Tous les combien d'années environ repeint-on la tour Eiffel ?",
+  "explanation": "Il faut environ 60 tonnes de peinture, appliquée à la main, pour la protéger de la rouille.",
+  "options": [
+   "Tous les 7 ans*",
+   "Chaque année",
+   "Tous les 50 ans",
+   "Jamais"
+  ]
+ },
+ {
+  "key": "art18-311",
+  "concept": "arts.architecture.v18_eiffel_ete",
+  "label": "La tour Eiffel",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De combien la tour Eiffel peut-elle grandir en été, avec la chaleur ?",
+  "explanation": "Le fer se dilate à la chaleur. Son sommet s'écarte aussi un peu du côté opposé au soleil.",
+  "options": [
+   "Jusqu'à une quinzaine de centimètres*",
+   "D'un mètre",
+   "De 5 mètres",
+   "Elle ne bouge pas"
+  ]
+ },
+ {
+  "key": "art18-312",
+  "concept": "arts.architecture.v18_eiffel_mal_aimee",
+  "label": "La tour Eiffel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment des artistes ont-ils accueilli la construction de la tour Eiffel, en 1887 ?",
+  "explanation": "Maupassant aurait déjeuné dans son restaurant parce que c'était le seul endroit de Paris d'où on ne la voyait pas.",
+  "options": [
+   "Par une pétition contre cette « tour inutile et monstrueuse »*",
+   "Par une grande fête",
+   "En la peignant en rouge",
+   "En réclamant qu'elle soit plus haute"
+  ]
+ },
+ {
+  "key": "art18-313",
+  "concept": "arts.architecture.v18_mont_st_michel_archange",
+  "label": "Le Mont-Saint-Michel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle statue domine la flèche de l'abbaye du Mont-Saint-Michel ?",
+  "explanation": "Il terrasse un dragon. La statue dorée a été restaurée et replacée par hélicoptère en 2016.",
+  "options": [
+   "L'archange saint Michel*",
+   "La Vierge Marie",
+   "Un dragon",
+   "Un coq"
+  ]
+ },
+ {
+  "key": "art18-314",
+  "concept": "arts.architecture.v18_chambord_leonard",
+  "label": "Chambord",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel grand artiste aurait inspiré l'escalier à double révolution du château de Chambord ?",
+  "explanation": "Il est mort à Amboise peu avant le début des travaux, en 1519. Deux personnes peuvent monter sans jamais se croiser.",
+  "options": [
+   "Léonard de Vinci*",
+   "Michel-Ange",
+   "Raphaël",
+   "Le Bernin"
+  ]
+ },
+ {
+  "key": "art18-315",
+  "concept": "arts.architecture.v18_chambord_cheminees",
+  "label": "Chambord",
+  "type": "counter",
+  "difficulty": 85,
+  "prompt": "Combien de cheminées compte environ le château de Chambord ? (à 50 près)",
+  "explanation": "Environ 280 cheminées, et 426 pièces. Les toits ressemblent à une petite ville.",
+  "answer": 280,
+  "tolerance": 50,
+  "min": 100,
+  "max": 500,
+  "start": 100
+ },
+ {
+  "key": "art18-316",
+  "concept": "arts.architecture.v18_versailles_pieces",
+  "label": "Versailles",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de miroirs compte la galerie des Glaces de Versailles ?",
+  "explanation": "À l'époque, le verre plat était très cher : les miroirs montraient la richesse du royaume.",
+  "options": [
+   "357*",
+   "12",
+   "1 000",
+   "72"
+  ]
+ },
+ {
+  "key": "art18-317",
+  "concept": "arts.architecture.v18_notre_dame_charpente",
+  "label": "Notre-Dame de Paris",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment surnommait-on la charpente de Notre-Dame, détruite par l'incendie de 2019 ?",
+  "explanation": "Elle était faite de plus de 1 300 chênes, abattus au XIIIe siècle.",
+  "options": [
+   "La forêt*",
+   "La cage",
+   "Le squelette",
+   "La toile"
+  ]
+ },
+ {
+  "key": "art18-318",
+  "concept": "arts.architecture.v18_tl_notre_dame_reouverture",
+  "label": "Notre-Dame de Paris",
+  "type": "timeline",
+  "difficulty": 45,
+  "prompt": "En quelle année Notre-Dame de Paris a-t-elle rouvert après l'incendie ?",
+  "explanation": "Le 7 décembre 2024, cinq ans et demi après l'incendie du 15 avril 2019.",
+  "answer": 2024,
+  "tolerance": 1,
+  "min": 2015,
+  "max": 2035
+ },
+ {
+  "key": "art18-319",
+  "concept": "arts.architecture.v18_notre_dame_kilometre",
+  "label": "Notre-Dame de Paris",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que trouve-t-on sur le parvis de Notre-Dame de Paris ?",
+  "explanation": "Une plaque de bronze en forme d'étoile, d'où sont mesurées les distances depuis Paris.",
+  "options": [
+   "Le point zéro des routes de France*",
+   "La tombe de Victor Hugo",
+   "Un méridien en or",
+   "La première borne kilométrique d'Europe"
+  ]
+ },
+ {
+  "key": "art18-320",
+  "concept": "arts.architecture.v18_sacre_coeur_pierre",
+  "label": "Le Sacré-Cœur",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi la basilique du Sacré-Cœur reste-t-elle toute blanche ?",
+  "explanation": "Le travertin de Château-Landon libère du calcaire blanc quand il pleut : elle se nettoie toute seule.",
+  "options": [
+   "Sa pierre blanchit au contact de la pluie*",
+   "On la nettoie chaque semaine",
+   "Elle est peinte",
+   "Elle est en marbre"
+  ]
+ },
+ {
+  "key": "art18-321",
+  "concept": "arts.architecture.v18_haut_koenigsbourg",
+  "label": "Le Haut-Kœnigsbourg",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel empereur allemand a fait reconstruire le château du Haut-Kœnigsbourg, en Alsace ?",
+  "explanation": "Au début du XXe siècle, quand l'Alsace était allemande. Une reconstruction très « rêvée » du Moyen Âge.",
+  "options": [
+   "Guillaume II*",
+   "Charlemagne",
+   "Napoléon III",
+   "Frédéric Barberousse"
+  ]
+ },
+ {
+  "key": "art18-322",
+  "concept": "arts.architecture.v18_carcassonne_viollet",
+  "label": "Carcassonne",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi reproche-t-on aux toits pointus en ardoise de la cité de Carcassonne de ne pas être authentiques ?",
+  "explanation": "Dans le Sud, les toits étaient plutôt plats, couverts de tuiles. La restauration a fait débat.",
+  "options": [
+   "Viollet-le-Duc les a imaginés au XIXe siècle, plutôt dans un style du Nord*",
+   "Ils sont en plastique",
+   "Ils datent de 1990",
+   "Ils viennent d'un parc d'attractions"
+  ]
+ },
+ {
+  "key": "art18-323",
+  "concept": "arts.architecture.v18_pompidou_tuyaux",
+  "label": "Le centre Pompidou",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi les tuyaux du centre Pompidou sont-ils de couleurs différentes ?",
+  "explanation": "Bleu pour l'air, vert pour l'eau, jaune pour l'électricité, rouge pour les escaliers et ascenseurs.",
+  "options": [
+   "Chaque couleur correspond à une fonction : eau, air, électricité, circulation*",
+   "Pour faire joli seulement",
+   "Pour suivre le drapeau français",
+   "Ils ont été peints par des enfants"
+  ]
+ },
+ {
+  "key": "art18-324",
+  "concept": "arts.architecture.v18_montparnasse_vue",
+  "label": "La tour Montparnasse",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle blague dit-on à propos de la tour Montparnasse ?",
+  "explanation": "Elle a été longtemps critiquée. Après sa construction (1973), Paris a interdit les tours dans le centre.",
+  "options": [
+   "Que sa terrasse offre la plus belle vue de Paris, car c'est le seul endroit d'où on ne la voit pas*",
+   "Qu'elle penche",
+   "Qu'elle est hantée",
+   "Qu'elle est plus haute que la tour Eiffel"
+  ]
+ },
+ {
+  "key": "art18-325",
+  "concept": "arts.architecture.v18_grande_arche_cube",
+  "label": "La Grande Arche",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "La Grande Arche de la Défense est…",
+  "explanation": "Inaugurée en 1989, pour le bicentenaire de la Révolution. Elle est assez grande pour contenir Notre-Dame.",
+  "options": [
+   "Un cube évidé, dans l'axe de l'Arc de triomphe*",
+   "Une pyramide",
+   "Une sphère",
+   "Une tour penchée"
+  ]
+ },
+ {
+  "key": "art18-326",
+  "concept": "arts.architecture.v18_millau_hauteur",
+  "label": "Le viaduc de Millau",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui a conçu le viaduc de Millau, avec l'ingénieur Michel Virlogeux ?",
+  "explanation": "Inauguré en 2004, il franchit la vallée du Tarn.",
+  "options": [
+   "L'architecte Norman Foster*",
+   "Gustave Eiffel",
+   "Jean Nouvel",
+   "Frank Gehry"
+  ]
+ },
+ {
+  "key": "art18-327",
+  "concept": "arts.architecture.v18_haussmann_balcons",
+  "label": "L'immeuble haussmannien",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans un immeuble haussmannien, quels étages ont souvent un long balcon filant ?",
+  "explanation": "Le 2e était l'étage « noble », le plus cher, avant l'arrivée des ascenseurs. Les domestiques logeaient sous les toits.",
+  "options": [
+   "Le 2e et le 5e*",
+   "Tous les étages",
+   "Le rez-de-chaussée",
+   "Le dernier seulement"
+  ]
+ },
+ {
+  "key": "art18-328",
+  "concept": "arts.architecture.v18_palais_ideal",
+  "label": "Le Palais idéal",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de temps le facteur Cheval a-t-il mis à construire son Palais idéal ?",
+  "explanation": "De 1879 à 1912, seul, avec des pierres ramassées pendant ses tournées.",
+  "options": [
+   "33 ans*",
+   "3 ans",
+   "10 ans",
+   "60 ans"
+  ]
+ },
+ {
+  "key": "art18-329",
+  "concept": "arts.architecture.v18_tour_eiffel_couleur",
+  "label": "La tour Eiffel",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De quelle couleur est peinte la tour Eiffel ?",
+  "explanation": "Une couleur spéciale, un peu plus claire en haut pour qu'elle paraisse uniforme sur le fond du ciel.",
+  "options": [
+   "« Brun tour Eiffel », un brun-bronze*",
+   "Gris acier",
+   "Noir",
+   "Rouge"
+  ]
+ },
+ {
+  "key": "art18-330",
+  "concept": "arts.architecture.v18_art_nouveau",
+  "label": "L'Art nouveau",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelles formes caractérisent l'Art nouveau, vers 1900 ?",
+  "explanation": "Les entrées du métro de Guimard, l'école de Nancy, Gaudí à Barcelone ou Horta à Bruxelles.",
+  "options": [
+   "Des courbes inspirées des plantes et des fleurs*",
+   "Des cubes et des lignes droites",
+   "Des colonnes grecques",
+   "Du béton brut"
+  ]
+ },
+ {
+  "key": "art18-331",
+  "concept": "arts.architecture.v18_art_deco",
+  "label": "L'Art déco",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel style des années 1920-1930, aux formes géométriques élégantes, tient son nom d'une exposition parisienne de 1925 ?",
+  "explanation": "L'Exposition internationale des arts décoratifs. Le Chrysler Building en est un chef-d'œuvre.",
+  "options": [
+   "L'Art déco*",
+   "L'Art nouveau",
+   "Le Bauhaus",
+   "Le brutalisme"
+  ]
+ },
+ {
+  "key": "art18-332",
+  "concept": "arts.architecture.v18_corbusier_modulor",
+  "label": "Le Corbusier",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'est-ce que le « Modulor » inventé par Le Corbusier ?",
+  "explanation": "Un homme de 1,83 m, le bras levé : toutes les proportions de ses bâtiments en découlent.",
+  "options": [
+   "Un système de mesures basé sur la taille humaine*",
+   "Un béton spécial",
+   "Un modèle de chaise",
+   "Une maison préfabriquée"
+  ]
+ },
+ {
+  "key": "art18-333",
+  "concept": "arts.architecture.v18_corbusier_billet",
+  "label": "Le Corbusier",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sur quel billet de banque figurait le portrait de Le Corbusier ?",
+  "explanation": "Né en Suisse sous le nom de Charles-Édouard Jeanneret, il a été naturalisé français en 1930.",
+  "options": [
+   "Le billet suisse de 10 francs*",
+   "Le billet français de 100 francs",
+   "Le billet de 50 euros",
+   "Aucun"
+  ]
+ },
+ {
+  "key": "art18-334",
+  "concept": "arts.architecture.v18_cite_radieuse",
+  "label": "Le Corbusier",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quelle ville se trouve la Cité radieuse de Le Corbusier, « village vertical » de 1952 ?",
+  "explanation": "Commerces, école et piscine sur le toit dans le même immeuble.",
+  "options": [
+   "Marseille*",
+   "Lyon",
+   "Paris",
+   "Nantes"
+  ]
+ },
+ {
+  "key": "art18-335",
+  "concept": "arts.architecture.v18_gaudi_mort",
+  "label": "Gaudí",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment est mort Antoni Gaudí, en 1926 ?",
+  "explanation": "Mal habillé, il fut d'abord pris pour un mendiant et soigné à l'hôpital des pauvres.",
+  "options": [
+   "Renversé par un tramway*",
+   "Tombé d'un échafaudage",
+   "Pendant une guerre",
+   "De vieillesse, très âgé"
+  ]
+ },
+ {
+  "key": "art18-336",
+  "concept": "arts.architecture.v18_gaudi_sagrada_fin",
+  "label": "Gaudí",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quand la Sagrada Família de Gaudí doit-elle être achevée, selon les prévisions ?",
+  "explanation": "Gaudí disait : « Mon client n'est pas pressé. » La tour de Jésus doit culminer à 172,5 m.",
+  "options": [
+   "Vers 2026-2034, plus d'un siècle après sa mort*",
+   "Elle est finie depuis 1950",
+   "Jamais, c'est interdit",
+   "En 1926"
+  ]
+ },
+ {
+  "key": "art18-337",
+  "concept": "arts.architecture.v18_gehry_bilbao_titane",
+  "label": "Frank Gehry",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Avec quel métal sont recouvertes les courbes du musée Guggenheim de Bilbao ?",
+  "explanation": "Plus de 33 000 plaques fines comme du papier. On parle d'« effet Bilbao » quand un musée transforme une ville.",
+  "options": [
+   "Le titane*",
+   "L'or",
+   "Le cuivre",
+   "L'acier rouillé"
+  ]
+ },
+ {
+  "key": "art18-338",
+  "concept": "arts.architecture.v18_zaha_hadid",
+  "label": "Zaha Hadid",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle architecte surnommée « la reine des courbes » a conçu le centre aquatique des JO de Londres 2012 ?",
+  "explanation": "Née à Bagdad, elle est morte en 2016. Ses bâtiments semblent fluides, comme en mouvement.",
+  "options": [
+   "Zaha Hadid*",
+   "Kazuyo Sejima",
+   "Odile Decq",
+   "Jeanne Gang"
+  ]
+ },
+ {
+  "key": "art18-339",
+  "concept": "arts.architecture.v18_pei_pyramide_vitres",
+  "label": "La pyramide du Louvre",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "La rumeur prétend que la pyramide du Louvre compte 666 vitres. Combien en a-t-elle vraiment ?",
+  "explanation": "Selon le Louvre, 603 losanges et 70 triangles. La légende du « chiffre de la Bête » est née d'une brochure des années 1980.",
+  "options": [
+   "673*",
+   "666",
+   "1 000",
+   "365"
+  ]
+ },
+ {
+  "key": "art18-340",
+  "concept": "arts.architecture.v18_nouvel_institut",
+  "label": "Jean Nouvel",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel bâtiment parisien de Jean Nouvel a une façade de diaphragmes qui s'ouvrent selon la lumière, comme des appareils photo ?",
+  "explanation": "Ses moucharabiehs mécaniques s'inspirent de l'architecture arabe. Inauguré en 1987.",
+  "options": [
+   "L'Institut du monde arabe*",
+   "La Philharmonie",
+   "Le musée du quai Branly",
+   "La Fondation Cartier"
+  ]
+ },
+ {
+  "key": "art18-341",
+  "concept": "arts.architecture.v18_bauhaus_idee",
+  "label": "Le Bauhaus",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle était l'idée principale de l'école du Bauhaus ?",
+  "explanation": "« La forme suit la fonction. » Ses chaises en tube d'acier sont encore fabriquées aujourd'hui.",
+  "options": [
+   "Unir art, artisanat et industrie, avec des formes simples et utiles*",
+   "Revenir au style gothique",
+   "Construire uniquement en bois",
+   "Décorer chaque objet au maximum"
+  ]
+ },
+ {
+  "key": "art18-342",
+  "concept": "arts.architecture.v18_brunelleschi_dome",
+  "label": "La coupole de Florence",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment Brunelleschi a-t-il construit l'immense coupole de Florence sans échafaudage central ?",
+  "explanation": "Une prouesse de 1420 à 1436, encore plus grande que celle du Panthéon de Rome à l'époque.",
+  "options": [
+   "Avec des briques posées en arêtes de poisson et une double coque*",
+   "Avec des colonnes de fer",
+   "Avec du béton armé",
+   "En la construisant au sol puis en la soulevant"
+  ]
+ },
+ {
+  "key": "art18-343",
+  "concept": "arts.architecture.v18_ordres_grecs",
+  "label": "Les ordres grecs",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel ordre grec a des chapiteaux ornés de volutes en forme d'escargot ?",
+  "explanation": "Le dorique est le plus simple, le corinthien est orné de feuilles d'acanthe.",
+  "options": [
+   "L'ionique*",
+   "Le dorique",
+   "Le corinthien",
+   "Le toscan"
+  ]
+ },
+ {
+  "key": "art18-344",
+  "concept": "arts.architecture.v18_caryatide",
+  "label": "Les caryatides",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qu'une « caryatide » ?",
+  "explanation": "Les plus célèbres soutiennent un portique de l'Érechthéion, à Athènes. L'une d'elles est au British Museum.",
+  "options": [
+   "Une colonne en forme de statue de femme*",
+   "Un toit en forme de coupole",
+   "Une fenêtre ronde",
+   "Un escalier en spirale"
+  ]
+ },
+ {
+  "key": "art18-345",
+  "concept": "arts.architecture.v18_vocabulaire_eglise",
+  "label": "Le vocabulaire des églises",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque partie d'une église à sa définition.",
+  "explanation": "Vue du ciel, une cathédrale avec son transept dessine une croix.",
+  "pairs": [
+   [
+    "La nef",
+    "La grande allée centrale"
+   ],
+   [
+    "Le transept",
+    "La partie qui croise la nef"
+   ],
+   [
+    "Le chœur",
+    "L'espace autour de l'autel"
+   ],
+   [
+    "L'abside",
+    "Le fond arrondi"
+   ]
+  ]
+ },
+ {
+  "key": "art18-346",
+  "concept": "arts.architecture.v18_architectes_oeuvres",
+  "label": "Les architectes",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque architecte à son œuvre.",
+  "explanation": "Trois prix Pritzker, et Gaudí, mort bien avant la création du prix.",
+  "pairs": [
+   [
+    "Jørn Utzon",
+    "L'opéra de Sydney"
+   ],
+   [
+    "Frank Gehry",
+    "Le Guggenheim de Bilbao"
+   ],
+   [
+    "Oscar Niemeyer",
+    "Brasília"
+   ],
+   [
+    "Antoni Gaudí",
+    "La Casa Batlló"
+   ]
+  ]
+ },
+ {
+  "key": "art18-347",
+  "concept": "arts.architecture.v18_styles_epoques",
+  "label": "Les styles",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque style à son époque.",
+  "explanation": "Le roman a des murs épais et des arcs en plein cintre ; le gothique, des arcs brisés et de grands vitraux.",
+  "pairs": [
+   [
+    "Roman",
+    "XIe-XIIe siècles"
+   ],
+   [
+    "Gothique",
+    "XIIe-XVe siècles"
+   ],
+   [
+    "Baroque",
+    "XVIIe siècle"
+   ],
+   [
+    "Art nouveau",
+    "Vers 1900"
+   ]
+  ]
+ },
+ {
+  "key": "art18-348",
+  "concept": "arts.architecture.v18_styles_ordre",
+  "label": "Les styles",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces styles du plus ancien au plus récent.",
+  "explanation": "Le roman avant 1150, le gothique jusqu'au XVe siècle, le baroque au XVIIe, l'Art déco dans les années 1920.",
+  "items": [
+   "Roman",
+   "Gothique",
+   "Baroque",
+   "Art déco"
+  ]
+ },
+ {
+  "key": "art18-349",
+  "concept": "arts.architecture.v18_tl_empire_state",
+  "label": "L'Empire State Building",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a été inauguré l'Empire State Building, à New York ?",
+  "explanation": "Inauguré en 1931 après seulement 410 jours de travaux. Il est resté le plus haut du monde pendant près de 40 ans.",
+  "answer": 1931,
+  "tolerance": 3,
+  "min": 1880,
+  "max": 1980
+ },
+ {
+  "key": "art18-350",
+  "concept": "arts.architecture.v18_tl_pompidou",
+  "label": "Le centre Pompidou",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a ouvert le centre Pompidou ?",
+  "explanation": "Le 31 janvier 1977. Il a fermé en 2025 pour cinq ans de travaux.",
+  "answer": 1977,
+  "tolerance": 3,
+  "min": 1940,
+  "max": 2010
+ },
+ {
+  "key": "art18-351",
+  "concept": "arts.architecture.v18_le_gothique",
+  "label": "Gothique",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Style des cathédrales aux arcs brisés et aux grands vitraux.",
+  "explanation": "Le mot était au départ péjoratif : « barbare, digne des Goths ».",
+  "word": "GOTHIQUE",
+  "display": "Gothique"
+ },
+ {
+  "key": "art18-352",
+  "concept": "arts.architecture.v18_le_pyramide",
+  "label": "Pyramide",
+  "type": "letters",
+  "difficulty": 5,
+  "prompt": "Monument égyptien à quatre faces triangulaires.",
+  "explanation": "La grande pyramide de Gizeh mesurait 146 mètres.",
+  "word": "PYRAMIDE",
+  "display": "Pyramide"
+ },
+ {
+  "key": "art18-353",
+  "concept": "arts.architecture.v18_le_gargouille",
+  "label": "Gargouille",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Statue monstrueuse qui évacue l'eau de pluie des cathédrales.",
+  "explanation": "De « gargouiller », le bruit de l'eau dans la gorge.",
+  "word": "GARGOUILLE",
+  "display": "Gargouille"
+ },
+ {
+  "key": "art18-354",
+  "concept": "arts.architecture.v18_le_vitrail",
+  "label": "Vitrail",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Fenêtre faite de morceaux de verre colorés.",
+  "explanation": "Pluriel : des vitraux.",
+  "word": "VITRAIL",
+  "display": "Vitrail"
+ },
+ {
+  "key": "art18-355",
+  "concept": "arts.architecture.v18_le_coupole",
+  "label": "Coupole",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Toit arrondi en forme de demi-sphère.",
+  "explanation": "« Être reçu sous la Coupole », c'est entrer à l'Académie française.",
+  "word": "COUPOLE",
+  "display": "Coupole"
+ },
+ {
+  "key": "art18-356",
+  "concept": "arts.architecture.v18_le_colisee",
+  "label": "Colisée",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Grand amphithéâtre de Rome, où combattaient les gladiateurs.",
+  "explanation": "Son nom viendrait d'une statue colossale de Néron qui se dressait à côté.",
+  "word": "COLISEE",
+  "display": "Colisée"
+ },
+ {
+  "key": "art18-357",
+  "concept": "arts.architecture.v18_tf_eiffel_temporaire",
+  "label": "La tour Eiffel",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "La tour Eiffel a été sauvée de la démolition notamment grâce à son utilité pour la radio.",
+  "explanation": "Eiffel y a installé des antennes et des expériences scientifiques. En 1914, elle a intercepté des messages ennemis.",
+  "answer": true
+ },
+ {
+  "key": "art18-358",
+  "concept": "arts.architecture.v18_tf_pyramides_esclaves",
+  "label": "Les pyramides",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les pyramides d'Égypte ont été construites par des milliers d'esclaves.",
+  "explanation": "Selon les archéologues, c'étaient surtout des ouvriers payés et nourris, dont on a retrouvé les villages et les tombes.",
+  "answer": false
+ },
+ {
+  "key": "art18-359",
+  "concept": "arts.architecture.v18_tf_versailles_toilettes",
+  "label": "Versailles",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le château de Versailles n'avait aucune toilette.",
+  "explanation": "Il y avait des chaises percées et quelques « lieux à l'anglaise » ; mais avec des milliers d'habitants, l'hygiène était difficile.",
+  "answer": false
+ },
+ {
+  "key": "art18-360",
+  "concept": "arts.architecture.v18_tf_tour_pise_seule",
+  "label": "La tour de Pise",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "La tour de Pise est la seule tour penchée d'Italie.",
+  "explanation": "Plusieurs autres penchent, comme les tours de Bologne ou le campanile de Burano, près de Venise.",
+  "answer": false
+ },
+ {
+  "key": "art18-361",
+  "concept": "arts.architecture.v18_tf_colisee_eau",
+  "label": "Le Colisée",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Selon des historiens antiques, l'arène du Colisée aurait pu être inondée pour des batailles navales.",
+  "explanation": "Des combats de bateaux y auraient été donnés à l'inauguration, avant la construction des souterrains.",
+  "answer": true
+ },
+ {
+  "key": "art18-362",
+  "concept": "arts.architecture.v18_tf_muraille_pierre",
+  "label": "La Grande Muraille",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La Grande Muraille de Chine est entièrement faite de pierre.",
+  "explanation": "Certaines parties sont en terre tassée, en bois, en briques… et même liées avec du riz gluant mélangé à la chaux.",
+  "answer": false
+ },
+ {
+  "key": "art18-363",
+  "concept": "arts.architecture.v18_tf_burj_desert",
+  "label": "Burj Khalifa",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "La Burj Khalifa se trouve à Dubaï, aux Émirats arabes unis.",
+  "explanation": "Inaugurée en 2010, elle mesure 828 mètres.",
+  "answer": true
+ },
+ {
+  "key": "art18-364",
+  "concept": "arts.architecture.v18_tf_eiffel_plus_haute",
+  "label": "La tour Eiffel",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "À son inauguration, en 1889, la tour Eiffel était la plus haute construction du monde.",
+  "explanation": "Avec 300 mètres, elle l'est restée jusqu'au Chrysler Building de New York, en 1930.",
+  "answer": true
+ },
+ {
+  "key": "art18-365",
+  "concept": "arts.painting.v18_f_sculpteur_outil",
+  "label": "Le sculpteur",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Avec quel outil un sculpteur taille-t-il la pierre ?",
+  "explanation": "Le maillet frappe le ciseau, qui enlève la pierre éclat par éclat.",
+  "options": [
+   "Un ciseau et un maillet*",
+   "Un pinceau",
+   "Une aiguille",
+   "Une plume"
+  ]
+ },
+ {
+  "key": "art18-366",
+  "concept": "arts.painting.v18_f_musee_louvre_ville",
+  "label": "Le Louvre",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Dans quelle ville se trouve le musée du Louvre ?",
+  "explanation": "Sur la rive droite de la Seine, dans un ancien palais royal.",
+  "options": [
+   "Paris*",
+   "Lyon",
+   "Londres",
+   "Rome"
+  ]
+ },
+ {
+  "key": "art18-367",
+  "concept": "arts.painting.v18_f_autoportrait",
+  "label": "Les genres",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment appelle-t-on le portrait qu'un artiste fait de lui-même ?",
+  "explanation": "Van Gogh en a peint plus de trente, souvent faute d'argent pour payer un modèle.",
+  "options": [
+   "Un autoportrait*",
+   "Un selfie",
+   "Un miroir",
+   "Un croquis"
+  ]
+ },
+ {
+  "key": "art18-368",
+  "concept": "arts.painting.v18_f_paysage",
+  "label": "Les genres",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment appelle-t-on un tableau qui représente la nature, la campagne ou la montagne ?",
+  "explanation": "Quand il représente la mer, on parle d'une marine.",
+  "options": [
+   "Un paysage*",
+   "Un portrait",
+   "Une nature morte",
+   "Un plan"
+  ]
+ },
+ {
+  "key": "art18-370",
+  "concept": "arts.painting.v18_f_bd_bulles",
+  "label": "La bande dessinée",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans une bande dessinée, où écrit-on ce que disent les personnages ?",
+  "explanation": "On les appelle aussi des phylactères.",
+  "options": [
+   "Dans des bulles*",
+   "Sous les cases",
+   "Au dos de la page",
+   "Dans la marge"
+  ]
+ },
+ {
+  "key": "art18-371",
+  "concept": "arts.painting.v18_f_tf_joconde_louvre",
+  "label": "La Joconde",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "La Joconde est exposée au Louvre.",
+  "explanation": "C'est l'œuvre la plus visitée du musée, derrière une vitre blindée.",
+  "answer": true
+ },
+ {
+  "key": "art18-372",
+  "concept": "arts.painting.v18_f_tf_picasso_italien",
+  "label": "Picasso",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Pablo Picasso était italien.",
+  "explanation": "Il était espagnol, né à Malaga en 1881, mais il a passé la plus grande partie de sa vie en France.",
+  "answer": false
+ },
+ {
+  "key": "art18-373",
+  "concept": "arts.literature.v18_f_fable_morale",
+  "label": "Les fables",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment s'appelle la leçon à la fin d'une fable ?",
+  "explanation": "Chez La Fontaine, elle est parfois au début, parfois à la fin.",
+  "options": [
+   "La morale*",
+   "La chute",
+   "Le refrain",
+   "Le titre"
+  ]
+ },
+ {
+  "key": "art18-374",
+  "concept": "arts.literature.v18_f_conte_debut",
+  "label": "Les contes",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Par quels mots commencent traditionnellement les contes ?",
+  "explanation": "Et ils se terminent souvent par « Ils vécurent heureux et eurent beaucoup d'enfants ».",
+  "options": [
+   "Il était une fois*",
+   "Bonjour à tous",
+   "Au commencement",
+   "Dans un pays lointain"
+  ]
+ },
+ {
+  "key": "art18-375",
+  "concept": "arts.literature.v18_f_bibliotheque",
+  "label": "Les livres",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Comment s'appelle le lieu où l'on emprunte des livres ?",
+  "explanation": "À la librairie, on les achète.",
+  "options": [
+   "Une bibliothèque*",
+   "Une librairie",
+   "Une papeterie",
+   "Une imprimerie"
+  ]
+ },
+ {
+  "key": "art18-376",
+  "concept": "arts.literature.v18_f_trois_petits_cochons",
+  "label": "Les contes",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans « Les Trois Petits Cochons », quelle maison résiste au loup ?",
+  "explanation": "Le loup a beau souffler, elle tient bon.",
+  "options": [
+   "La maison en briques*",
+   "La maison en paille",
+   "La maison en bois",
+   "Aucune"
+  ]
+ },
+ {
+  "key": "art18-378",
+  "concept": "arts.literature.v18_f_poete",
+  "label": "La poésie",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment appelle-t-on une personne qui écrit des poèmes ?",
+  "explanation": "Le féminin est « poète » ou « poétesse ».",
+  "options": [
+   "Un poète*",
+   "Un romancier",
+   "Un journaliste",
+   "Un acteur"
+  ]
+ },
+ {
+  "key": "art18-379",
+  "concept": "arts.literature.v18_f_tf_harry_ecole",
+  "label": "Harry Potter",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "L'école de sorcellerie de Harry Potter s'appelle Poudlard.",
+  "explanation": "Hogwarts en anglais. Elle est dirigée par Albus Dumbledore.",
+  "answer": true
+ },
+ {
+  "key": "art18-380",
+  "concept": "arts.literature.v18_f_tf_petit_prince_rose",
+  "label": "Le Petit Prince",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Sur sa planète, le Petit Prince prend soin d'une rose.",
+  "explanation": "Une rose orgueilleuse qu'il protège sous un globe de verre.",
+  "answer": true
+ },
+ {
+  "key": "art18-381",
+  "concept": "arts.mythology.v18_f_zeus_foudre",
+  "label": "Zeus",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle arme lance Zeus quand il est en colère ?",
+  "explanation": "Elle lui a été forgée par les Cyclopes.",
+  "options": [
+   "La foudre*",
+   "Des flèches",
+   "Un trident",
+   "Des boules de feu"
+  ]
+ },
+ {
+  "key": "art18-382",
+  "concept": "arts.mythology.v18_f_sirene",
+  "label": "Les sirènes",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Dans les contes, à quoi ressemble une sirène ?",
+  "explanation": "Dans la mythologie grecque, les sirènes étaient d'abord des femmes-oiseaux !",
+  "options": [
+   "À une femme avec une queue de poisson*",
+   "À un cheval ailé",
+   "À un oiseau géant",
+   "À un serpent"
+  ]
+ },
+ {
+  "key": "art18-383",
+  "concept": "arts.mythology.v18_f_dragon_chine",
+  "label": "Le dragon",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "En Chine, le dragon est plutôt…",
+  "explanation": "Contrairement aux dragons européens, souvent terrifiants, le dragon chinois apporte la pluie et la prospérité.",
+  "options": [
+   "Un symbole de chance et de puissance*",
+   "Un monstre méchant",
+   "Un animal ridicule",
+   "Un signe de malheur"
+  ]
+ },
+ {
+  "key": "art18-384",
+  "concept": "arts.mythology.v18_f_licorne",
+  "label": "La licorne",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle créature légendaire ressemble à un cheval avec une corne sur le front ?",
+  "explanation": "C'est l'animal national officiel de l'Écosse !",
+  "options": [
+   "La licorne*",
+   "Pégase",
+   "Le centaure",
+   "Le griffon"
+  ]
+ },
+ {
+  "key": "art18-385",
+  "concept": "arts.mythology.v18_f_centaure",
+  "label": "Le centaure",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un centaure ?",
+  "explanation": "Le sage centaure Chiron a été le professeur d'Achille et d'Héraclès.",
+  "options": [
+   "Mi-homme, mi-cheval*",
+   "Mi-homme, mi-taureau",
+   "Mi-femme, mi-poisson",
+   "Mi-lion, mi-aigle"
+  ]
+ },
+ {
+  "key": "art18-386",
+  "concept": "arts.mythology.v18_f_tf_thor_marteau",
+  "label": "Thor",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Thor, le dieu nordique, se bat avec un marteau.",
+  "explanation": "Mjöllnir, qui revient toujours dans sa main après avoir été lancé.",
+  "answer": true
+ },
+ {
+  "key": "art18-387",
+  "concept": "arts.mythology.v18_f_tf_hercule_faible",
+  "label": "Hercule",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Hercule est célèbre pour sa très grande force.",
+  "explanation": "Fils de Zeus, il a étranglé deux serpents dans son berceau.",
+  "answer": true
+ },
+ {
+  "key": "art18-388",
+  "concept": "arts.architecture.v18_f_architecte",
+  "label": "L'architecte",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle la personne qui dessine les plans des bâtiments ?",
+  "explanation": "Du grec « architektôn », le « chef des charpentiers ».",
+  "options": [
+   "Un architecte*",
+   "Un maçon",
+   "Un plombier",
+   "Un géomètre"
+  ]
+ },
+ {
+  "key": "art18-389",
+  "concept": "arts.architecture.v18_f_igloo",
+  "label": "L'igloo",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Avec quoi construit-on un igloo ?",
+  "explanation": "La neige isole très bien : il peut faire 0 °C dedans quand il fait −30 °C dehors.",
+  "options": [
+   "Des blocs de neige*",
+   "Des pierres",
+   "Du bois",
+   "Des peaux de bêtes"
+  ]
+ },
+ {
+  "key": "art18-390",
+  "concept": "arts.architecture.v18_f_chateau_fort",
+  "label": "Le château fort",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Comment s'appelle le fossé rempli d'eau qui entoure un château fort ?",
+  "explanation": "On les franchissait par un pont-levis, qu'on relevait en cas d'attaque.",
+  "options": [
+   "Les douves*",
+   "Le donjon",
+   "Les remparts",
+   "Le pont-levis"
+  ]
+ },
+ {
+  "key": "art18-391",
+  "concept": "arts.architecture.v18_f_donjon",
+  "label": "Le château fort",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Comment s'appelle la plus grande tour d'un château fort, dernier refuge en cas d'attaque ?",
+  "explanation": "Le seigneur y vivait souvent avec sa famille.",
+  "options": [
+   "Le donjon*",
+   "Le beffroi",
+   "Le clocher",
+   "La tourelle"
+  ]
+ },
+ {
+  "key": "art18-392",
+  "concept": "arts.architecture.v18_f_tour_eiffel_ville",
+  "label": "La tour Eiffel",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Dans quelle ville se trouve la tour Eiffel ?",
+  "explanation": "Sur le Champ-de-Mars, au bord de la Seine.",
+  "options": [
+   "Paris*",
+   "Lyon",
+   "Bruxelles",
+   "Londres"
+  ]
+ },
+ {
+  "key": "art18-393",
+  "concept": "arts.architecture.v18_f_tf_pyramides_egypte",
+  "label": "Les pyramides",
+  "type": "true_false",
+  "difficulty": 5,
+  "prompt": "Les grandes pyramides de Gizeh se trouvent en Égypte.",
+  "explanation": "Près du Caire, au bord du désert.",
+  "answer": true
+ },
+ {
+  "key": "art18-394",
+  "concept": "arts.architecture.v18_f_tf_colisee_paris",
+  "label": "Le Colisée",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Le Colisée se trouve à Paris.",
+  "explanation": "Il se trouve à Rome, en Italie.",
+  "answer": false
+ },
+ {
+  "key": "art18-395",
+  "concept": "arts.architecture.v18_f_le_chateau",
+  "label": "Château",
+  "type": "letters",
+  "difficulty": 5,
+  "prompt": "Grande demeure de roi ou de seigneur.",
+  "explanation": "La France en compte des milliers, dont ceux de la Loire.",
+  "word": "CHATEAU",
+  "display": "Château"
+ },
+ {
+  "key": "art18-396",
+  "concept": "arts.literature.v18_f_le_conte",
+  "label": "Conte",
+  "type": "letters",
+  "difficulty": 5,
+  "prompt": "Histoire merveilleuse pour enfants, avec fées et ogres.",
+  "explanation": "Perrault, Grimm et Andersen en sont les maîtres.",
+  "word": "CONTE",
+  "display": "Conte"
+ },
+ {
+  "key": "art18-397",
+  "concept": "arts.painting.v18_f_pa_artistes_outils",
+  "label": "Les artistes",
+  "type": "pairs",
+  "difficulty": 15,
+  "prompt": "Associe chaque artiste à son outil principal.",
+  "explanation": "Aujourd'hui, beaucoup d'écrivains utilisent plutôt un ordinateur !",
+  "pairs": [
+   [
+    "Le peintre",
+    "Le pinceau"
+   ],
+   [
+    "Le sculpteur",
+    "Le ciseau"
+   ],
+   [
+    "Le photographe",
+    "L'appareil photo"
+   ],
+   [
+    "L'écrivain",
+    "La plume"
+   ]
+  ]
+ }
+]
