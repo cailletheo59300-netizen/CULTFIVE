@@ -303,3 +303,6 @@ Pourquoi : en Survie (TestFlight 1.4), un double appui sur « Question suivante 
 
 ### D-094 · 2026-10-21 · Classement du 5 du jour : seulement les joueurs du jour
 Pourquoi : sans les mentions « hier » (que le propriétaire ne veut pas), mettre les joueurs du jour devant ceux des jours précédents donnait des rangs incohérents (un 5/5 d'hier derrière un 1/5 du jour). Décidé (0084, app 1.4 ; remplace le complément par les jours précédents de D-091) : le classement et le podium ne comptent **que les joueurs du jour** (le joueur qui regarde garde sa ligne) ; plus aucune date affichée. Le matin, le podium peut avoir moins de 3 marches ; un seul joueur : « 1er pour l'instant ».
+
+### D-095 · 2026-10-22 · Admin : version de l'app de chaque joueur
+Pourquoi : pour suivre qui est encore sur une ancienne version (bugs de pub de la 1.1/1.2, consentement en 1.3), le propriétaire veut voir la version de chaque joueur et filtrer la liste. Décidé (0085) : `admin_users` renvoie la version du dernier événement du joueur (« 1.3.0 (52) ») et la liste des versions présentes ; filtre `p_version` (« 1.3.0 » = tous les builds de la 1.3, « none » = inconnue). Onglet Joueurs : colonne « Version » et menu « Version ».

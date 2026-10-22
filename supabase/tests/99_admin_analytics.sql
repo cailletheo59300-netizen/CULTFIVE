@@ -68,6 +68,14 @@ begin
 
   r := public.admin_users((select handle from public.profiles where id = u), 'recent', 10, 0);
   perform tst.ok((r ->> 'total')::int = 1 and (r -> 'items' -> 0 ->> 'id')::uuid = u, 'recherche par pseudo');
+  perform tst.ok(r -> 'items' -> 0 ->> 'app_version' = '1.4.0', 'version de l''app du joueur');
+  r := public.admin_users(null, 'recent', 200, 0, 'all', '1.4.0');
+  perform tst.ok(exists (select 1 from jsonb_array_elements(r -> 'items') i where (i ->> 'id')::uuid = u)
+                 and not exists (select 1 from jsonb_array_elements(r -> 'items') i where (i ->> 'id')::uuid = w)
+                 and r -> 'versions' @> '[{"version": "1.4.0"}]', 'filtre par version');
+  r := public.admin_users(null, 'recent', 200, 0, 'all', 'none');
+  perform tst.ok(exists (select 1 from jsonb_array_elements(r -> 'items') i where (i ->> 'id')::uuid = w)
+                 and not exists (select 1 from jsonb_array_elements(r -> 'items') i where (i ->> 'id')::uuid = u), 'filtre : version inconnue');
   r := public.admin_user(u);
   perform tst.ok(jsonb_array_length(r -> 'games') = 1 and jsonb_array_length(r -> 'events') = 2, 'fiche joueur');
 
