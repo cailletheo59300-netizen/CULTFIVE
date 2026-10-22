@@ -53,6 +53,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | 425 questions de musique, tous types (D-097) | ✅ en production (22/10), musique : 1 021 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | 390 questions d'arts, tous types (D-098) | ✅ en production (22/10), arts : 1 011 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | 354 questions de cinéma, tous types (D-099) | ✅ en production (22/10), cinéma : 1 001 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
+| 349 questions de sport, tous types (D-100) | ✅ en production (22/10), sport : 1 004 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Après le 5 du jour, on continue à jouer (D-089) | 🟡 app 1.4 | CI (build) |
 | Message de confidentialité réaffiché à la demande d'une pub (D-090) | 🟡 app 1.4 | CI (build) |
 | Podium du jour (D-091) | ✅ serveur 0083 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |

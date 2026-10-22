@@ -1,0 +1,4993 @@
+[
+ {
+  "key": "spo20-001",
+  "concept": "sport.football.v20_pickles_coupe",
+  "label": "La Coupe du monde volée",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En 1966, qui a retrouvé la Coupe du monde, volée à Londres quelques mois avant le tournoi ?",
+  "explanation": "Le petit chien l'a flairée sous une haie, emballée dans du papier journal. Il a été invité au banquet des champions.",
+  "options": [
+   "Un chien nommé Pickles*",
+   "Un policier",
+   "Un enfant",
+   "Le capitaine anglais"
+  ]
+ },
+ {
+  "key": "spo20-002",
+  "concept": "sport.football.v20_trophee_rimet_vole",
+  "label": "La Coupe Jules-Rimet",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est devenu le trophée Jules-Rimet original, offert définitivement au Brésil après sa troisième victoire en 1970 ?",
+  "explanation": "On pense qu'il a été fondu par les voleurs. Le trophée actuel date de 1974.",
+  "options": [
+   "Il a été volé en 1983 et n'a jamais été retrouvé*",
+   "Il est au musée de la FIFA",
+   "Il a été fondu pour faire le nouveau",
+   "Il est enterré sous le Maracanã"
+  ]
+ },
+ {
+  "key": "spo20-003",
+  "concept": "sport.football.v20_maracanazo",
+  "label": "Le Maracanazo",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'appelle-t-on le « Maracanazo », en 1950 ?",
+  "explanation": "Près de 200 000 spectateurs au Maracanã, réduits au silence. Un traumatisme national au Brésil.",
+  "options": [
+   "La défaite surprise du Brésil contre l'Uruguay en finale de la Coupe du monde, chez lui*",
+   "La construction du stade",
+   "Un but de Pelé",
+   "Une émeute de supporters"
+  ]
+ },
+ {
+  "key": "spo20-004",
+  "concept": "sport.football.v20_panenka",
+  "label": "La Panenka",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qu'une « Panenka » ?",
+  "explanation": "Du nom du Tchécoslovaque Antonín Panenka, qui a osé ce geste en finale de l'Euro 1976 contre l'Allemagne.",
+  "options": [
+   "Un penalty tiré doucement, en lob, au milieu du but*",
+   "Un dribble en arrière",
+   "Une reprise de volée acrobatique",
+   "Un coup franc enroulé"
+  ]
+ },
+ {
+  "key": "spo20-005",
+  "concept": "sport.football.v20_cartons_origine",
+  "label": "Les cartons",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où est venue l'idée des cartons jaune et rouge à l'arbitre Ken Aston ?",
+  "explanation": "Arrêté à un feu à Londres, il a pensé « jaune : attention, rouge : stop ». Les cartons sont apparus en 1970.",
+  "options": [
+   "D'un feu de circulation*",
+   "D'un drapeau de course automobile",
+   "D'un jeu de cartes",
+   "Des couleurs d'un club"
+  ]
+ },
+ {
+  "key": "spo20-006",
+  "concept": "sport.football.v20_zidane_coup_tete",
+  "label": "Zidane",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Lors de la finale de la Coupe du monde 2006, que fait Zinédine Zidane qui provoque son expulsion ?",
+  "explanation": "Son dernier match en pro. L'Italie gagne la finale aux tirs au but.",
+  "options": [
+   "Un coup de tête à Marco Materazzi*",
+   "Il frappe l'arbitre",
+   "Il quitte le terrain",
+   "Il touche le ballon de la main"
+  ]
+ },
+ {
+  "key": "spo20-007",
+  "concept": "sport.football.v20_france_1998_stade",
+  "label": "France 1998",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel stade la France a-t-elle remporté la Coupe du monde 1998 ?",
+  "explanation": "Victoire 3-0 contre le Brésil, le 12 juillet 1998, avec deux buts de la tête de Zidane.",
+  "options": [
+   "Le Stade de France*",
+   "Le Parc des Princes",
+   "Le Vélodrome",
+   "Le stade de Gerland"
+  ]
+ },
+ {
+  "key": "spo20-008",
+  "concept": "sport.football.v20_france_2018_finale",
+  "label": "France 2018",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Contre quel pays la France a-t-elle remporté la finale de la Coupe du monde 2018 ?",
+  "explanation": "Victoire 4-2 à Moscou. Didier Deschamps devient champion du monde comme joueur et comme sélectionneur.",
+  "options": [
+   "La Croatie*",
+   "La Belgique",
+   "L'Argentine",
+   "Le Brésil"
+  ]
+ },
+ {
+  "key": "spo20-009",
+  "concept": "sport.football.v20_finale_2022",
+  "label": "Coupe du monde 2022",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Comment s'est terminée la finale de la Coupe du monde 2022 entre l'Argentine et la France ?",
+  "explanation": "Mbappé y a marqué un triplé, une première en finale depuis 1966. Messi a enfin gagné la Coupe du monde.",
+  "options": [
+   "L'Argentine a gagné aux tirs au but après 3-3*",
+   "La France a gagné 2-1",
+   "L'Argentine a gagné 1-0",
+   "Le match a été rejoué"
+  ]
+ },
+ {
+  "key": "spo20-010",
+  "concept": "sport.football.v20_premier_mondial",
+  "label": "La première Coupe du monde",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien d'équipes européennes ont fait le voyage en Uruguay pour la première Coupe du monde, en 1930 ?",
+  "explanation": "La traversée de l'Atlantique en bateau prenait deux semaines. La France, la Belgique, la Roumanie et la Yougoslavie y sont allées.",
+  "options": [
+   "4*",
+   "16",
+   "10",
+   "1"
+  ]
+ },
+ {
+  "key": "spo20-011",
+  "concept": "sport.football.v20_premier_but_mondial",
+  "label": "La première Coupe du monde",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a marqué le tout premier but de l'histoire de la Coupe du monde, en 1930 ?",
+  "explanation": "Contre le Mexique, le 13 juillet 1930. Il travaillait alors chez Peugeot.",
+  "options": [
+   "Le Français Lucien Laurent*",
+   "Le Brésilien Pelé",
+   "L'Uruguayen Héctor Castro",
+   "L'Argentin Guillermo Stábile"
+  ]
+ },
+ {
+  "key": "spo20-013",
+  "concept": "sport.football.v20_co_bresil_titres",
+  "label": "Coupe du monde",
+  "type": "counter",
+  "difficulty": 35,
+  "prompt": "Combien de Coupes du monde le Brésil a-t-il remportées ?",
+  "explanation": "En 1958, 1962, 1970, 1994 et 2002.",
+  "answer": 5,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "spo20-014",
+  "concept": "sport.football.v20_pele_tres_coeurs",
+  "label": "Pelé",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de Coupes du monde Pelé a-t-il remportées comme joueur ?",
+  "explanation": "En 1958 (à 17 ans), 1962 et 1970. Un record toujours inégalé.",
+  "options": [
+   "3*",
+   "1",
+   "2",
+   "4"
+  ]
+ },
+ {
+  "key": "spo20-015",
+  "concept": "sport.football.v20_main_de_dieu",
+  "label": "Maradona",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel autre but célèbre Maradona a-t-il marqué contre l'Angleterre, quelques minutes après la « main de Dieu », en 1986 ?",
+  "explanation": "Parti de son propre camp, il élimine cinq Anglais et le gardien en dix secondes.",
+  "options": [
+   "Le « but du siècle », après avoir dribblé la moitié de l'équipe*",
+   "Un coup franc de 40 mètres",
+   "Un but de la tête",
+   "Un penalty"
+  ]
+ },
+ {
+  "key": "spo20-016",
+  "concept": "sport.football.v20_ballon_or_messi",
+  "label": "Le Ballon d'or",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel joueur a remporté le plus de Ballons d'or ?",
+  "explanation": "Huit Ballons d'or, de 2009 à 2023.",
+  "options": [
+   "Lionel Messi*",
+   "Cristiano Ronaldo",
+   "Michel Platini",
+   "Johan Cruyff"
+  ]
+ },
+ {
+  "key": "spo20-017",
+  "concept": "sport.football.v20_ballon_or_francais",
+  "label": "Le Ballon d'or",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel Français a remporté le Ballon d'or en 2022 ?",
+  "explanation": "Vingt-quatre ans après Zinédine Zidane. Ousmane Dembélé l'a ensuite remporté en 2025.",
+  "options": [
+   "Karim Benzema*",
+   "Kylian Mbappé",
+   "Antoine Griezmann",
+   "N'Golo Kanté"
+  ]
+ },
+ {
+  "key": "spo20-018",
+  "concept": "sport.football.v20_dembele_ballon",
+  "label": "Le Ballon d'or",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel attaquant français a remporté le Ballon d'or 2025, après une saison exceptionnelle avec le PSG ?",
+  "explanation": "Le PSG a remporté la Ligue des champions pour la première fois en 2025.",
+  "options": [
+   "Ousmane Dembélé*",
+   "Kylian Mbappé",
+   "Bradley Barcola",
+   "Michael Olise"
+  ]
+ },
+ {
+  "key": "spo20-019",
+  "concept": "sport.football.v20_psg_ldc",
+  "label": "Le PSG",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "En quelle année le PSG a-t-il remporté sa première Ligue des champions ?",
+  "explanation": "Victoire 5-0 contre l'Inter Milan à Munich, le plus large écart de l'histoire d'une finale de Ligue des champions.",
+  "options": [
+   "2025*",
+   "2020",
+   "1993",
+   "Jamais"
+  ]
+ },
+ {
+  "key": "spo20-022",
+  "concept": "sport.football.v20_leicester_miracle",
+  "label": "Leicester",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel club anglais a remporté la Premier League en 2016 alors que les bookmakers le donnaient à 5 000 contre 1 ?",
+  "explanation": "Un des plus grands exploits de l'histoire du sport, avec Riyad Mahrez et N'Golo Kanté.",
+  "options": [
+   "Leicester City*",
+   "Liverpool",
+   "Tottenham",
+   "Everton"
+  ]
+ },
+ {
+  "key": "spo20-023",
+  "concept": "sport.football.v20_calais_1999",
+  "label": "Coupe de France",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel club amateur a atteint la finale de la Coupe de France en 2000, un exploit historique ?",
+  "explanation": "Des joueurs qui étaient profs, employés ou dockers. Calais a perdu 2-1 contre Nantes.",
+  "options": [
+   "Calais*",
+   "Quevilly",
+   "Les Herbiers",
+   "Carquefou"
+  ]
+ },
+ {
+  "key": "spo20-024",
+  "concept": "sport.football.v20_coupe_france_trophee",
+  "label": "Coupe de France",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment surnomme-t-on la Coupe de France, que peuvent jouer même les petits clubs ?",
+  "explanation": "Plus de 7 000 clubs y participent chaque année, des amateurs aux professionnels.",
+  "options": [
+   "La Vieille Dame*",
+   "La Grande Coupe",
+   "La Petite Reine",
+   "Le Graal"
+  ]
+ },
+ {
+  "key": "spo20-025",
+  "concept": "sport.football.v20_hors_jeu_origine",
+  "label": "Le hors-jeu",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi a-t-on inventé la règle du hors-jeu ?",
+  "explanation": "Sans elle, des joueurs resteraient en permanence devant le gardien adverse.",
+  "options": [
+   "Pour empêcher les attaquants d'attendre près du but adverse*",
+   "Pour ralentir le jeu",
+   "Pour protéger le gardien des coups",
+   "Pour faire plus de pauses"
+  ]
+ },
+ {
+  "key": "spo20-026",
+  "concept": "sport.football.v20_var",
+  "label": "La VAR",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Que veut dire « VAR », l'assistance vidéo à l'arbitrage ?",
+  "explanation": "Utilisée en Coupe du monde pour la première fois en 2018, en Russie.",
+  "options": [
+   "Video Assistant Referee*",
+   "Vision Arbitrale Rapide",
+   "Vérification Après Replay",
+   "Video Action Review"
+  ]
+ },
+ {
+  "key": "spo20-027",
+  "concept": "sport.football.v20_ballon_poids",
+  "label": "Le ballon",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien pèse environ un ballon de football officiel ?",
+  "explanation": "Entre 410 et 450 grammes au début du match. Les anciens ballons en cuir devenaient très lourds sous la pluie.",
+  "options": [
+   "Environ 430 grammes*",
+   "Environ 100 grammes",
+   "Environ 1 kilo",
+   "Environ 2 kilos"
+  ]
+ },
+ {
+  "key": "spo20-028",
+  "concept": "sport.football.v20_coup_du_chapeau",
+  "label": "Le coup du chapeau",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que veut dire « réussir un coup du chapeau » ?",
+  "explanation": "L'expression vient du cricket, où l'on offrait un chapeau au lanceur qui éliminait trois batteurs de suite.",
+  "options": [
+   "Marquer trois buts dans le même match*",
+   "Marquer de la tête",
+   "Marquer en retournée",
+   "Marquer contre son camp"
+  ]
+ },
+ {
+  "key": "spo20-029",
+  "concept": "sport.football.v20_csc",
+  "label": "Le but contre son camp",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qu'est-ce qu'un « CSC » ?",
+  "explanation": "Le but compte pour l'équipe adverse.",
+  "options": [
+   "Un but contre son camp*",
+   "Un carton sans contestation",
+   "Un corner sans conséquence",
+   "Un changement sans consigne"
+  ]
+ },
+ {
+  "key": "spo20-030",
+  "concept": "sport.football.v20_stade_plus_grand",
+  "label": "Les stades",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quel pays se trouve le plus grand stade de football du monde, avec plus de 110 000 places ?",
+  "explanation": "Le stade du Premier-Mai, à Pyongyang. En Europe, le plus grand est le Camp Nou de Barcelone.",
+  "options": [
+   "La Corée du Nord*",
+   "Le Brésil",
+   "L'Espagne",
+   "L'Angleterre"
+  ]
+ },
+ {
+  "key": "spo20-032",
+  "concept": "sport.football.v20_barca_maillot",
+  "label": "Le FC Barcelone",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle est la devise du FC Barcelone ?",
+  "explanation": "Le club se veut un symbole de l'identité catalane.",
+  "options": [
+   "« Més que un club » (plus qu'un club)*",
+   "« Toujours plus loin »",
+   "« Ensemble nous gagnons »",
+   "« Vive la Catalogne »"
+  ]
+ },
+ {
+  "key": "spo20-033",
+  "concept": "sport.football.v20_ajax_nom",
+  "label": "L'Ajax",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "D'où vient le nom du club d'Amsterdam, l'Ajax ?",
+  "explanation": "Son logo montre d'ailleurs le profil du guerrier Ajax.",
+  "options": [
+   "D'un héros grec de la guerre de Troie*",
+   "D'une marque de lessive",
+   "D'un fondateur du club",
+   "D'une rue d'Amsterdam"
+  ]
+ },
+ {
+  "key": "spo20-034",
+  "concept": "sport.football.v20_manchester_munich",
+  "label": "Manchester United",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel drame a frappé l'équipe de Manchester United en 1958 ?",
+  "explanation": "Huit joueurs sont morts. L'équipe s'est reconstruite et a gagné la Coupe d'Europe dix ans plus tard.",
+  "options": [
+   "Un accident d'avion à Munich*",
+   "Un incendie du stade",
+   "Une épidémie",
+   "Un naufrage"
+  ]
+ },
+ {
+  "key": "spo20-035",
+  "concept": "sport.football.v20_euro_1984",
+  "label": "L'Euro",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "En quelle année la France a-t-elle remporté son premier Euro, avec Michel Platini ?",
+  "explanation": "À domicile. Platini a marqué neuf buts en cinq matchs, un record pour une phase finale.",
+  "options": [
+   "1984*",
+   "1976",
+   "1998",
+   "2000"
+  ]
+ },
+ {
+  "key": "spo20-036",
+  "concept": "sport.football.v20_euro_2000_trezeguet",
+  "label": "L'Euro",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment la France a-t-elle remporté l'Euro 2000 en finale contre l'Italie ?",
+  "explanation": "Sylvain Wiltord avait égalisé à la dernière minute. Le « but en or » arrêtait immédiatement le match.",
+  "options": [
+   "Sur un but en or de David Trezeguet en prolongation*",
+   "Aux tirs au but",
+   "Sur un penalty de Zidane",
+   "1-0 dans le temps réglementaire"
+  ]
+ },
+ {
+  "key": "spo20-037",
+  "concept": "sport.football.v20_feminine_coupe",
+  "label": "Le football féminin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel pays a remporté le plus de Coupes du monde féminines ?",
+  "explanation": "Quatre titres. L'Espagne a gagné en 2023.",
+  "options": [
+   "Les États-Unis*",
+   "L'Allemagne",
+   "La Norvège",
+   "Le Japon"
+  ]
+ },
+ {
+  "key": "spo20-038",
+  "concept": "sport.football.v20_lyon_feminin",
+  "label": "Le football féminin",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel club français domine le football féminin européen, avec plusieurs Ligues des champions ?",
+  "explanation": "Huit titres européens, dont cinq d'affilée de 2016 à 2020.",
+  "options": [
+   "L'Olympique lyonnais*",
+   "Le PSG",
+   "Montpellier",
+   "Juvisy"
+  ]
+ },
+ {
+  "key": "spo20-040",
+  "concept": "sport.football.v20_cruyff_virgule",
+  "label": "Cruyff",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel geste technique porte le nom du Néerlandais Johan Cruyff ?",
+  "explanation": "Il l'a montré au monde à la Coupe du monde 1974, contre la Suède.",
+  "options": [
+   "Un crochet en faisant passer le ballon derrière la jambe d'appui*",
+   "Une frappe de l'extérieur du pied",
+   "Un coup du sombrero",
+   "Une talonnade"
+  ]
+ },
+ {
+  "key": "spo20-041",
+  "concept": "sport.football.v20_clubs_villes",
+  "label": "Les clubs",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque club à sa ville.",
+  "explanation": "Quatre clubs mythiques qui ont tous gagné la Coupe d'Europe.",
+  "pairs": [
+   [
+    "La Juventus",
+    "Turin"
+   ],
+   [
+    "Le Bayern",
+    "Munich"
+   ],
+   [
+    "L'Ajax",
+    "Amsterdam"
+   ],
+   [
+    "Benfica",
+    "Lisbonne"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-042",
+  "concept": "sport.football.v20_surnoms_equipes",
+  "label": "Les surnoms",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque équipe nationale à son surnom.",
+  "explanation": "L'Albiceleste doit son nom à son maillot blanc et bleu ciel.",
+  "pairs": [
+   [
+    "La France",
+    "Les Bleus"
+   ],
+   [
+    "L'Italie",
+    "La Squadra Azzurra"
+   ],
+   [
+    "Les Pays-Bas",
+    "Les Oranje"
+   ],
+   [
+    "L'Argentine",
+    "L'Albiceleste"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-043",
+  "concept": "sport.football.v20_surnoms_joueurs",
+  "label": "Les surnoms",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque joueur à son surnom.",
+  "explanation": "Beckenbauer a gagné la Coupe du monde comme joueur (1974) puis comme sélectionneur (1990).",
+  "pairs": [
+   [
+    "Zinédine Zidane",
+    "Zizou"
+   ],
+   [
+    "Pelé",
+    "Le Roi"
+   ],
+   [
+    "Cristiano Ronaldo",
+    "CR7"
+   ],
+   [
+    "Franz Beckenbauer",
+    "Le Kaiser"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-044",
+  "concept": "sport.football.v20_mondiaux_france_ordre",
+  "label": "Coupes du monde",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces Coupes du monde de la plus ancienne à la plus récente.",
+  "explanation": "La France a gagné en 1998 et 2018, et a été finaliste en 2006 et 2022.",
+  "items": [
+   "France 1998",
+   "Allemagne 2006",
+   "Russie 2018",
+   "Qatar 2022"
+  ]
+ },
+ {
+  "key": "spo20-045",
+  "concept": "sport.football.v20_legendes_ordre",
+  "label": "Légendes",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces joueurs du plus ancien (date de naissance) au plus récent.",
+  "explanation": "1940, 1960, 1972 et 1998.",
+  "items": [
+   "Pelé",
+   "Diego Maradona",
+   "Zinédine Zidane",
+   "Kylian Mbappé"
+  ]
+ },
+ {
+  "key": "spo20-047",
+  "concept": "sport.football.v20_tl_euro_premier",
+  "label": "L'Euro",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a eu lieu le premier championnat d'Europe des nations (Euro) ?",
+  "explanation": "En France. L'URSS l'a remporté.",
+  "answer": 1960,
+  "tolerance": 3,
+  "min": 1930,
+  "max": 2000
+ },
+ {
+  "key": "spo20-048",
+  "concept": "sport.football.v20_tl_fifa",
+  "label": "La FIFA",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année la FIFA a-t-elle été fondée, à Paris ?",
+  "explanation": "Par sept pays européens, dont la France. Son siège est aujourd'hui à Zurich.",
+  "answer": 1904,
+  "tolerance": 5,
+  "min": 1850,
+  "max": 1960
+ },
+ {
+  "key": "spo20-050",
+  "concept": "sport.football.v20_co_cdm_2026",
+  "label": "Coupe du monde 2026",
+  "type": "counter",
+  "difficulty": 55,
+  "prompt": "Combien d'équipes participent à la Coupe du monde 2026, la plus grande de l'histoire ?",
+  "explanation": "Organisée par les États-Unis, le Canada et le Mexique. Il y en avait 32 depuis 1998.",
+  "answer": 48,
+  "tolerance": 0,
+  "min": 16,
+  "max": 64,
+  "start": 16
+ },
+ {
+  "key": "spo20-051",
+  "concept": "sport.football.v20_nu_duree_match",
+  "label": "Les règles",
+  "type": "numeric",
+  "difficulty": 15,
+  "prompt": "Combien de minutes dure un match de football sans le temps additionnel ni prolongation ?",
+  "explanation": "Deux mi-temps de 45 minutes.",
+  "answer": 90,
+  "tolerance": 0
+ },
+ {
+  "key": "spo20-052",
+  "concept": "sport.football.v20_ga_penalties",
+  "label": "Les penalties",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "Quelle part des penalties sont transformés en but, en moyenne, dans les grands championnats ? (à 10 % près)",
+  "explanation": "Environ trois sur quatre. Le gardien doit deviner, car il n'a pas le temps de réagir.",
+  "answer": 75,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "spo20-053",
+  "concept": "sport.football.v20_le_penalty",
+  "label": "Penalty",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Tir à 11 mètres face au gardien, après une faute dans la surface.",
+  "explanation": "Le point de penalty est à 11 mètres de la ligne de but.",
+  "word": "PENALTY",
+  "display": "Penalty"
+ },
+ {
+  "key": "spo20-054",
+  "concept": "sport.football.v20_le_corner",
+  "label": "Corner",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Coup de pied de coin.",
+  "explanation": "On le tire depuis le coin du terrain, près du petit drapeau.",
+  "word": "CORNER",
+  "display": "Corner"
+ },
+ {
+  "key": "spo20-055",
+  "concept": "sport.football.v20_le_zidane",
+  "label": "Zidane",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Zizou, champion du monde 1998.",
+  "explanation": "Il a ensuite entraîné le Real Madrid, avec trois Ligues des champions de suite.",
+  "word": "ZIDANE",
+  "display": "Zidane"
+ },
+ {
+  "key": "spo20-056",
+  "concept": "sport.football.v20_le_mbappe",
+  "label": "Mbappé",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Attaquant français champion du monde 2018 à 19 ans.",
+  "explanation": "Né à Paris en 1998, l'année du premier titre mondial des Bleus.",
+  "word": "MBAPPE",
+  "display": "Mbappé"
+ },
+ {
+  "key": "spo20-057",
+  "concept": "sport.football.v20_le_dribble",
+  "label": "Dribble",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Geste pour passer un adversaire en gardant le ballon.",
+  "explanation": "Du verbe anglais « to dribble », faire tomber goutte à goutte.",
+  "word": "DRIBBLE",
+  "display": "Dribble"
+ },
+ {
+  "key": "spo20-058",
+  "concept": "sport.football.v20_tf_france_2002",
+  "label": "Coupe du monde 2002",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "La France, championne du monde en titre, a été éliminée dès le premier tour de la Coupe du monde 2002 sans marquer un seul but.",
+  "explanation": "Trois matchs, zéro but. Zidane, blessé, n'a joué qu'un seul match.",
+  "answer": true
+ },
+ {
+  "key": "spo20-059",
+  "concept": "sport.football.v20_tf_angleterre_titre",
+  "label": "L'Angleterre",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "L'Angleterre a remporté la Coupe du monde 1966.",
+  "explanation": "Chez elle, contre l'Allemagne de l'Ouest (4-2). Son seul titre mondial.",
+  "answer": true
+ },
+ {
+  "key": "spo20-060",
+  "concept": "sport.football.v20_tf_gardien_main_passe",
+  "label": "Les règles",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le gardien peut prendre à la main une passe volontaire au pied d'un coéquipier.",
+  "explanation": "Interdit depuis 1992, pour empêcher de perdre du temps. Sinon, coup franc indirect.",
+  "answer": false
+ },
+ {
+  "key": "spo20-061",
+  "concept": "sport.football.v20_tf_messi_france",
+  "label": "Messi",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Lionel Messi a joué au PSG.",
+  "explanation": "De 2021 à 2023, avant de partir à l'Inter Miami.",
+  "answer": true
+ },
+ {
+  "key": "spo20-062",
+  "concept": "sport.football.v20_tf_ronaldo_bresilien",
+  "label": "Cristiano Ronaldo",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Cristiano Ronaldo est brésilien.",
+  "explanation": "Il est portugais, né à Madère. Le Brésilien, c'est Ronaldo « le Phénomène ».",
+  "answer": false
+ },
+ {
+  "key": "spo20-063",
+  "concept": "sport.football.v20_tf_mondial_hiver",
+  "label": "Coupe du monde 2022",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La Coupe du monde 2022 au Qatar s'est jouée en novembre et décembre.",
+  "explanation": "Une première, à cause de la chaleur de l'été au Qatar.",
+  "answer": true
+ },
+ {
+  "key": "spo20-064",
+  "concept": "sport.football.v20_tf_hors_jeu_corner",
+  "label": "Le hors-jeu",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "On ne peut pas être hors-jeu sur une touche.",
+  "explanation": "Ni sur un corner, ni sur un coup de pied de but.",
+  "answer": true
+ },
+ {
+  "key": "spo20-065",
+  "concept": "sport.football.v20_tf_france_mondial_1938",
+  "label": "Coupe du monde 1938",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "La France a organisé la Coupe du monde 1938.",
+  "explanation": "Elle a été remportée par l'Italie, qui avait aussi gagné en 1934.",
+  "answer": true
+ },
+ {
+  "key": "spo20-066",
+  "concept": "sport.football.v20_tf_but_or_actuel",
+  "label": "Le but en or",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le « but en or » est toujours utilisé en prolongation dans les grandes compétitions.",
+  "explanation": "Il a été abandonné en 2004. On joue désormais toute la prolongation, puis les tirs au but si besoin.",
+  "answer": false
+ },
+ {
+  "key": "spo20-067",
+  "concept": "sport.olympics.v20_antiques_nus",
+  "label": "Les Jeux antiques",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment les athlètes des Jeux olympiques antiques concouraient-ils ?",
+  "explanation": "Le mot « gymnase » vient du grec « gymnos », nu. Seuls les hommes libres grecs pouvaient participer.",
+  "options": [
+   "Nus*",
+   "En armure",
+   "En tunique blanche",
+   "Pieds et mains attachés"
+  ]
+ },
+ {
+  "key": "spo20-068",
+  "concept": "sport.olympics.v20_antiques_recompense",
+  "label": "Les Jeux antiques",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que recevait le vainqueur d'une épreuve aux Jeux olympiques antiques ?",
+  "explanation": "Une simple couronne… mais sa ville le couvrait ensuite de cadeaux et d'honneurs.",
+  "options": [
+   "Une couronne d'olivier*",
+   "Une médaille d'or",
+   "Un sac de pièces",
+   "Une statue de Zeus"
+  ]
+ },
+ {
+  "key": "spo20-069",
+  "concept": "sport.olympics.v20_antiques_femmes",
+  "label": "Les Jeux antiques",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans la Grèce antique, que risquait une femme mariée qui assistait en cachette aux Jeux d'Olympie ?",
+  "explanation": "Selon l'auteur antique Pausanias, une seule femme aurait été surprise, et épargnée. Les femmes avaient leurs propres jeux, les Héraia.",
+  "options": [
+   "D'être jetée du haut d'une falaise*",
+   "Une amende",
+   "D'être exilée",
+   "Rien du tout"
+  ]
+ },
+ {
+  "key": "spo20-070",
+  "concept": "sport.olympics.v20_antiques_treve",
+  "label": "Les Jeux antiques",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que se passait-il entre les cités grecques pendant les Jeux antiques ?",
+  "explanation": "La trêve olympique permettait aux athlètes et aux spectateurs de voyager en sécurité. L'ONU l'a remise à l'honneur.",
+  "options": [
+   "Une trêve sacrée suspendait les guerres*",
+   "Elles s'échangeaient des esclaves",
+   "Elles fermaient leurs frontières",
+   "Elles élisaient un roi commun"
+  ]
+ },
+ {
+  "key": "spo20-071",
+  "concept": "sport.olympics.v20_antiques_duree",
+  "label": "Les Jeux antiques",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pendant combien de siècles les Jeux olympiques antiques ont-ils été organisés ?",
+  "explanation": "De 776 av. J.-C. (selon la tradition) jusqu'à leur interdiction vers 393 apr. J.-C.",
+  "options": [
+   "Plus de 11 siècles*",
+   "Environ 2 siècles",
+   "Environ 5 siècles",
+   "Seulement 50 ans"
+  ]
+ },
+ {
+  "key": "spo20-072",
+  "concept": "sport.olympics.v20_antiques_stade",
+  "label": "Les Jeux antiques",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "D'où vient le mot « stade » ?",
+  "explanation": "Le « stadion » était la course reine des premiers Jeux, puis le lieu où on la courait.",
+  "options": [
+   "D'une course et d'une unité de longueur d'environ 192 mètres à Olympie*",
+   "D'un mot latin pour « gradin »",
+   "D'un dieu grec",
+   "D'une ville grecque"
+  ]
+ },
+ {
+  "key": "spo20-073",
+  "concept": "sport.olympics.v20_marathon_legende",
+  "label": "Le marathon",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Selon la légende, quelle course a inspiré le marathon ?",
+  "explanation": "Il aurait couru de Marathon à Athènes, en 490 av. J.-C., pour annoncer la victoire sur les Perses.",
+  "options": [
+   "Un messager grec qui courut annoncer une victoire avant de mourir*",
+   "Une course de chars",
+   "Une poursuite entre deux rois",
+   "Un pèlerinage religieux"
+  ]
+ },
+ {
+  "key": "spo20-074",
+  "concept": "sport.olympics.v20_marathon_1908",
+  "label": "Le marathon",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi le marathon mesure-t-il 42,195 km et non 40 ?",
+  "explanation": "Le départ a été placé sous les fenêtres du château de Windsor, l'arrivée devant la loge royale.",
+  "options": [
+   "Aux Jeux de Londres 1908, on a allongé le parcours pour la famille royale*",
+   "C'est la distance exacte entre Marathon et Athènes",
+   "Pour battre un record",
+   "Par erreur de mesure"
+  ]
+ },
+ {
+  "key": "spo20-075",
+  "concept": "sport.olympics.v20_coubertin_sports",
+  "label": "Coubertin",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pierre de Coubertin a remporté une médaille d'or olympique en 1912. Dans quelle discipline ?",
+  "explanation": "Il y avait des concours d'art aux Jeux de 1912 à 1948. Coubertin avait signé sous un faux nom.",
+  "options": [
+   "La littérature, pour un poème*",
+   "L'escrime",
+   "L'équitation",
+   "Le tir"
+  ]
+ },
+ {
+  "key": "spo20-076",
+  "concept": "sport.olympics.v20_jo_art",
+  "label": "Les concours d'art",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Entre 1912 et 1948, quelles épreuves inattendues décernaient aussi des médailles olympiques ?",
+  "explanation": "Les œuvres devaient être inspirées par le sport.",
+  "options": [
+   "La peinture, la sculpture, la musique, la littérature et l'architecture*",
+   "Les échecs et le bridge",
+   "La cuisine",
+   "La danse classique"
+  ]
+ },
+ {
+  "key": "spo20-077",
+  "concept": "sport.olympics.v20_paris_1900_epreuves",
+  "label": "Paris 1900",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle épreuve étrange figurait aux Jeux de Paris 1900 ?",
+  "explanation": "La seule fois de l'histoire olympique où des animaux ont été tués volontairement. Les Jeux de 1900 étaient mêlés à l'Exposition universelle.",
+  "options": [
+   "Le tir sur pigeons vivants*",
+   "Le lancer de fromage",
+   "La course en sac",
+   "La pêche à la ligne"
+  ]
+ },
+ {
+  "key": "spo20-078",
+  "concept": "sport.olympics.v20_charlotte_cooper",
+  "label": "Paris 1900",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui fut la première championne olympique de l'histoire, en 1900 ?",
+  "explanation": "La Britannique a gagné le tournoi de tennis en simple. Margaret Abbott a gagné le golf, sans savoir que c'était les Jeux !",
+  "options": [
+   "La joueuse de tennis Charlotte Cooper*",
+   "La nageuse Fanny Durack",
+   "L'athlète Babe Didrikson",
+   "La golfeuse Margaret Abbott"
+  ]
+ },
+ {
+  "key": "spo20-079",
+  "concept": "sport.olympics.v20_owens_luz_long",
+  "label": "Jesse Owens",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel athlète allemand aurait conseillé Jesse Owens en saut en longueur à Berlin, avant de devenir son ami ?",
+  "explanation": "Il lui a conseillé de prendre son élan plus tôt. Il a été le premier à le féliciter, devant le stade nazi.",
+  "options": [
+   "Luz Long*",
+   "Max Schmeling",
+   "Carl Diem",
+   "Rudolf Harbig"
+  ]
+ },
+ {
+  "key": "spo20-080",
+  "concept": "sport.olympics.v20_beamon_saut",
+  "label": "Bob Beamon",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En 1968 à Mexico, de combien Bob Beamon a-t-il battu le record du monde du saut en longueur ?",
+  "explanation": "Il a sauté 8,90 m. L'appareil de mesure n'allait pas aussi loin : il a fallu un mètre ruban !",
+  "options": [
+   "De 55 centimètres*",
+   "De 2 centimètres",
+   "De 10 centimètres",
+   "De 1 mètre"
+  ]
+ },
+ {
+  "key": "spo20-081",
+  "concept": "sport.olympics.v20_poings_leves",
+  "label": "Mexico 1968",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi Tommie Smith et John Carlos ont-ils levé un poing ganté de noir sur le podium de Mexico 1968 ?",
+  "explanation": "Un des gestes les plus célèbres de l'histoire du sport. Ils ont été exclus des Jeux.",
+  "options": [
+   "Pour protester contre le racisme aux États-Unis*",
+   "Pour saluer leur entraîneur",
+   "Pour fêter un record",
+   "Pour se protéger du soleil"
+  ]
+ },
+ {
+  "key": "spo20-082",
+  "concept": "sport.olympics.v20_fosbury_1968",
+  "label": "Le Fosbury",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle révolution Dick Fosbury a-t-il apportée au saut en hauteur, en 1968 ?",
+  "explanation": "Tout le monde le copie aujourd'hui. Avant, on sautait en ciseaux ou en rouleau ventral.",
+  "options": [
+   "Sauter sur le dos, la tête en premier*",
+   "Sauter à pieds joints",
+   "Utiliser une perche",
+   "Sauter en courant à reculons"
+  ]
+ },
+ {
+  "key": "spo20-083",
+  "concept": "sport.olympics.v20_comaneci_tableau",
+  "label": "Nadia Comăneci",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi le tableau d'affichage a-t-il affiché « 1.00 » après le passage de Nadia Comăneci, à Montréal en 1976 ?",
+  "explanation": "Premier 10 de l'histoire de la gymnastique olympique. Elle avait 14 ans.",
+  "options": [
+   "Il ne pouvait pas afficher la note parfaite de 10.00*",
+   "Elle était tombée",
+   "C'était son rang",
+   "C'était une panne de courant"
+  ]
+ },
+ {
+  "key": "spo20-084",
+  "concept": "sport.olympics.v20_munich_1972",
+  "label": "Munich 1972",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel drame a marqué les Jeux de Munich en 1972 ?",
+  "explanation": "Onze membres de l'équipe d'Israël ont été tués. Les Jeux ont été suspendus une journée.",
+  "options": [
+   "Une prise d'otages d'athlètes israéliens*",
+   "Un incendie du stade",
+   "Un tremblement de terre",
+   "Une épidémie"
+  ]
+ },
+ {
+  "key": "spo20-085",
+  "concept": "sport.olympics.v20_boycott_1984",
+  "label": "Los Angeles 1984",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quels pays ont boycotté les Jeux de Los Angeles en 1984, en représailles au boycott de Moscou ?",
+  "explanation": "La Roumanie a été la seule exception notable.",
+  "options": [
+   "L'URSS et la plupart des pays du bloc de l'Est*",
+   "Les pays d'Afrique",
+   "La Chine et le Japon",
+   "Les pays européens"
+  ]
+ },
+ {
+  "key": "spo20-086",
+  "concept": "sport.olympics.v20_eddie_eagle",
+  "label": "Eddie l'Aigle",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi le Britannique « Eddie l'Aigle » est-il devenu célèbre aux Jeux de Calgary, en 1988 ?",
+  "explanation": "Myope, plâtrier de métier, presque sans entraînement : le public l'a adoré. Un film raconte son histoire.",
+  "options": [
+   "Il a fini dernier en saut à ski avec un enthousiasme fou*",
+   "Il a gagné trois médailles d'or",
+   "Il a sauté sans skis",
+   "Il était le plus vieux participant"
+  ]
+ },
+ {
+  "key": "spo20-087",
+  "concept": "sport.olympics.v20_jamaique_bobsleigh",
+  "label": "Rasta Rockett",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel pays tropical a envoyé une équipe de bobsleigh aux Jeux d'hiver de 1988, histoire racontée dans « Rasta Rockett » ?",
+  "explanation": "Ils n'avaient jamais vu de neige avant de s'entraîner. Ils ont chuté, mais sont devenus des héros.",
+  "options": [
+   "La Jamaïque*",
+   "Cuba",
+   "Le Brésil",
+   "Haïti"
+  ]
+ },
+ {
+  "key": "spo20-088",
+  "concept": "sport.olympics.v20_bolt_records",
+  "label": "Usain Bolt",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel est le record du monde du 100 m d'Usain Bolt, établi en 2009 ?",
+  "explanation": "À Berlin. Sa vitesse de pointe a dépassé 44 km/h.",
+  "options": [
+   "9,58 secondes*",
+   "9,85 secondes",
+   "10,02 secondes",
+   "9,12 secondes"
+  ]
+ },
+ {
+  "key": "spo20-089",
+  "concept": "sport.olympics.v20_phelps_or",
+  "label": "Michael Phelps",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien de médailles d'or olympiques Michael Phelps a-t-il remportées ?",
+  "explanation": "Vingt-trois médailles d'or sur 28 médailles, de 2004 à 2016. Dont huit aux seuls Jeux de Pékin 2008.",
+  "answer": 23,
+  "tolerance": 0,
+  "min": 10,
+  "max": 30,
+  "start": 10
+ },
+ {
+  "key": "spo20-090",
+  "concept": "sport.olympics.v20_phelps_pekin",
+  "label": "Michael Phelps",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de médailles d'or Michael Phelps a-t-il remportées aux seuls Jeux de Pékin 2008, un record ?",
+  "explanation": "Il a battu le record de Mark Spitz (sept en 1972).",
+  "options": [
+   "8*",
+   "5",
+   "6",
+   "10"
+  ]
+ },
+ {
+  "key": "spo20-091",
+  "concept": "sport.olympics.v20_biles_mouvements",
+  "label": "Simone Biles",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi plusieurs figures de gymnastique portent-elles le nom de Simone Biles ?",
+  "explanation": "Elle a été sacrée championne olympique du concours général en 2016 et en 2024.",
+  "options": [
+   "Elle a été la première à les réussir en compétition*",
+   "Elle les a dessinées",
+   "Elle les a interdites",
+   "Par hommage à sa retraite"
+  ]
+ },
+ {
+  "key": "spo20-092",
+  "concept": "sport.olympics.v20_riner_titres",
+  "label": "Teddy Riner",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de titres olympiques individuels Teddy Riner a-t-il remportés en judo ?",
+  "explanation": "En 2012, 2016 et 2024, plus des titres par équipes. Il compte aussi onze titres de champion du monde.",
+  "options": [
+   "3*",
+   "1",
+   "2",
+   "5"
+  ]
+ },
+ {
+  "key": "spo20-093",
+  "concept": "sport.olympics.v20_fourcade",
+  "label": "Martin Fourcade",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel sport Martin Fourcade est-il le Français le plus titré aux Jeux d'hiver ?",
+  "explanation": "Cinq titres olympiques. Le biathlon associe ski de fond et tir à la carabine.",
+  "options": [
+   "Le biathlon*",
+   "Le ski alpin",
+   "Le patinage",
+   "Le snowboard"
+  ]
+ },
+ {
+  "key": "spo20-094",
+  "concept": "sport.olympics.v20_paralympiques_nom",
+  "label": "Les Jeux paralympiques",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que veut dire le « para » de « paralympiques » ?",
+  "explanation": "Depuis 1988, ils ont lieu juste après les Jeux olympiques, dans la même ville.",
+  "options": [
+   "« À côté », car ils se tiennent à côté des Jeux olympiques*",
+   "« Paraplégique »",
+   "« Pour tous »",
+   "« Parfait »"
+  ]
+ },
+ {
+  "key": "spo20-095",
+  "concept": "sport.olympics.v20_flamme_relais",
+  "label": "La flamme",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Depuis quand la flamme olympique est-elle portée en relais d'Olympie jusqu'à la ville hôte ?",
+  "explanation": "Une idée des organisateurs nazis, reprise ensuite par toutes les éditions.",
+  "options": [
+   "Depuis les Jeux de Berlin, en 1936*",
+   "Depuis l'Antiquité",
+   "Depuis 1896",
+   "Depuis 2000"
+  ]
+ },
+ {
+  "key": "spo20-096",
+  "concept": "sport.olympics.v20_flamme_espace",
+  "label": "La flamme",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Lors du relais de 2013-2014 pour les Jeux de Sotchi, où la torche olympique a-t-elle été emportée ?",
+  "explanation": "Éteinte pour des raisons de sécurité, elle a été portée lors d'une sortie dans l'espace.",
+  "options": [
+   "Dans l'espace, à bord de la Station spatiale*",
+   "Au fond de l'océan",
+   "Au pôle Sud",
+   "Sur la Lune"
+  ]
+ },
+ {
+  "key": "spo20-097",
+  "concept": "sport.olympics.v20_medaille_or_composition",
+  "label": "Les médailles",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "En quoi est faite principalement une médaille d'or olympique ?",
+  "explanation": "Il faut au moins 6 grammes d'or. Les dernières médailles en or massif datent de 1912.",
+  "options": [
+   "En argent, recouvert d'or*",
+   "En or massif",
+   "En bronze doré",
+   "En plastique doré"
+  ]
+ },
+ {
+  "key": "spo20-098",
+  "concept": "sport.olympics.v20_medailles_paris_tour",
+  "label": "Paris 2024",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel morceau de monument était inséré dans les médailles de Paris 2024 ?",
+  "explanation": "Des pièces de fer retirées lors de rénovations de la tour, taillées en hexagone.",
+  "options": [
+   "Un morceau de fer de la tour Eiffel*",
+   "Une pierre de Notre-Dame",
+   "Un bout de vitrail",
+   "Un fragment de l'Arc de triomphe"
+  ]
+ },
+ {
+  "key": "spo20-099",
+  "concept": "sport.olympics.v20_paris_2024_ceremonie",
+  "label": "Paris 2024",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Où s'est déroulée la cérémonie d'ouverture des Jeux de Paris 2024 ?",
+  "explanation": "La première cérémonie d'ouverture en dehors d'un stade.",
+  "options": [
+   "Sur la Seine, avec les délégations en bateau*",
+   "Au Stade de France",
+   "Sur les Champs-Élysées",
+   "Au château de Versailles"
+  ]
+ },
+ {
+  "key": "spo20-100",
+  "concept": "sport.olympics.v20_sports_hiver_ete",
+  "label": "Sports olympiques",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque sport à son équipement.",
+  "explanation": "Le pentathlon moderne mêle escrime, natation, équitation (remplacée par une course d'obstacles après 2024), course et tir.",
+  "pairs": [
+   [
+    "Curling",
+    "Une pierre de granit"
+   ],
+   [
+    "Escrime",
+    "Un fleuret"
+   ],
+   [
+    "Biathlon",
+    "Une carabine"
+   ],
+   [
+    "Pentathlon moderne",
+    "Un pistolet laser"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-101",
+  "concept": "sport.olympics.v20_champions_disciplines",
+  "label": "Champions olympiques",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque champion à sa discipline.",
+  "explanation": "Quatre des plus grands champions olympiques de l'histoire.",
+  "pairs": [
+   [
+    "Usain Bolt",
+    "Sprint"
+   ],
+   [
+    "Michael Phelps",
+    "Natation"
+   ],
+   [
+    "Teddy Riner",
+    "Judo"
+   ],
+   [
+    "Simone Biles",
+    "Gymnastique"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-102",
+  "concept": "sport.olympics.v20_jo_paris_ordre",
+  "label": "Jeux à Paris",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces Jeux d'été organisés à Paris du plus ancien au plus récent.",
+  "explanation": "Paris est la deuxième ville à avoir accueilli trois fois les Jeux d'été, après Londres (1908, 1948, 2012).",
+  "items": [
+   "1900",
+   "1924",
+   "2024"
+  ]
+ },
+ {
+  "key": "spo20-103",
+  "concept": "sport.olympics.v20_records_100m",
+  "label": "Le 100 m",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces sprinteurs du plus ancien détenteur du record du monde du 100 m au plus récent.",
+  "explanation": "Owens (10,2 en 1936), Lewis (années 1980), Greene (1999), Bolt (depuis 2008).",
+  "items": [
+   "Jesse Owens",
+   "Carl Lewis",
+   "Maurice Greene",
+   "Usain Bolt"
+  ]
+ },
+ {
+  "key": "spo20-104",
+  "concept": "sport.olympics.v20_tl_coubertin",
+  "label": "Les Jeux modernes",
+  "type": "timeline",
+  "difficulty": 55,
+  "prompt": "En quelle année Pierre de Coubertin a-t-il fondé le Comité international olympique, à la Sorbonne ?",
+  "explanation": "Deux ans avant les premiers Jeux modernes, à Athènes.",
+  "answer": 1894,
+  "tolerance": 5,
+  "min": 1850,
+  "max": 1950
+ },
+ {
+  "key": "spo20-105",
+  "concept": "sport.olympics.v20_tl_paralympiques",
+  "label": "Les Jeux paralympiques",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année ont eu lieu les premiers Jeux paralympiques officiels, à Rome ?",
+  "explanation": "Quatre cents athlètes en fauteuil roulant, venus de 23 pays.",
+  "answer": 1960,
+  "tolerance": 5,
+  "min": 1900,
+  "max": 2000
+ },
+ {
+  "key": "spo20-106",
+  "concept": "sport.olympics.v20_tl_femmes_tous_sports",
+  "label": "Les femmes aux Jeux",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année les femmes ont-elles pu concourir dans tous les sports olympiques d'été, avec l'arrivée de la boxe féminine ?",
+  "explanation": "À Londres. Paris 2024 a été les premiers Jeux avec autant d'athlètes femmes que d'hommes.",
+  "answer": 2012,
+  "tolerance": 4,
+  "min": 1900,
+  "max": 2024
+ },
+ {
+  "key": "spo20-107",
+  "concept": "sport.olympics.v20_ga_parite_paris",
+  "label": "Paris 2024",
+  "type": "gauge",
+  "difficulty": 50,
+  "prompt": "Quelle part des athlètes des Jeux de Paris 2024 étaient des femmes ? (à 5 % près)",
+  "explanation": "Une parité parfaite, pour la première fois dans l'histoire des Jeux.",
+  "answer": 50,
+  "tolerance": 5,
+  "unit": "%"
+ },
+ {
+  "key": "spo20-108",
+  "concept": "sport.olympics.v20_le_olympie",
+  "label": "Olympie",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Site grec où l'on allume la flamme olympique.",
+  "explanation": "Dans le Péloponnèse, au sanctuaire de Zeus.",
+  "word": "OLYMPIE",
+  "display": "Olympie"
+ },
+ {
+  "key": "spo20-109",
+  "concept": "sport.olympics.v20_le_podium",
+  "label": "Podium",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Estrade à trois marches pour les médaillés.",
+  "explanation": "Le vainqueur se tient sur la plus haute marche, au milieu.",
+  "word": "PODIUM",
+  "display": "Podium"
+ },
+ {
+  "key": "spo20-110",
+  "concept": "sport.olympics.v20_le_flamme",
+  "label": "Flamme",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Elle brûle pendant toute la durée des Jeux.",
+  "explanation": "On l'allume avec les rayons du soleil et un miroir.",
+  "word": "FLAMME",
+  "display": "Flamme"
+ },
+ {
+  "key": "spo20-111",
+  "concept": "sport.olympics.v20_le_phryge",
+  "label": "Phryge",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Mascotte des Jeux de Paris 2024, en forme de bonnet.",
+  "explanation": "Inspirée du bonnet phrygien de Marianne et des révolutionnaires.",
+  "word": "PHRYGE",
+  "display": "Phryge"
+ },
+ {
+  "key": "spo20-112",
+  "concept": "sport.olympics.v20_tf_marathon_femmes_1984",
+  "label": "Le marathon",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le marathon féminin n'est apparu aux Jeux olympiques qu'en 1984.",
+  "explanation": "On pensait auparavant, à tort, que les femmes ne pouvaient pas courir aussi longtemps.",
+  "answer": true
+ },
+ {
+  "key": "spo20-113",
+  "concept": "sport.olympics.v20_tf_flamme_eteinte",
+  "label": "La flamme",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "La flamme olympique ne s'est jamais éteinte pendant un relais.",
+  "explanation": "Elle s'est éteinte plusieurs fois, par la pluie ou le vent. On la rallume avec une « flamme mère » transportée en lanterne.",
+  "answer": false
+ },
+ {
+  "key": "spo20-114",
+  "concept": "sport.olympics.v20_tf_jo_tous_4_ans",
+  "label": "Les Jeux d'hiver",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Les Jeux d'hiver ont lieu tous les deux ans.",
+  "explanation": "Tous les quatre ans, comme les Jeux d'été, mais décalés de deux ans depuis 1994.",
+  "answer": false
+ },
+ {
+  "key": "spo20-115",
+  "concept": "sport.olympics.v20_tf_bolt_jamaicain",
+  "label": "Usain Bolt",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Usain Bolt est jamaïcain.",
+  "explanation": "Né en 1986 en Jamaïque, il a gagné huit médailles d'or olympiques.",
+  "answer": true
+ },
+ {
+  "key": "spo20-116",
+  "concept": "sport.olympics.v20_tf_dupont_rugby_7",
+  "label": "Antoine Dupont",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Antoine Dupont a été sacré champion olympique de rugby à 15.",
+  "explanation": "C'était au rugby à 7, la seule version olympique du rugby.",
+  "answer": false
+ },
+ {
+  "key": "spo20-117",
+  "concept": "sport.olympics.v20_tf_cricket_2028",
+  "label": "Los Angeles 2028",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le cricket sera au programme des Jeux de Los Angeles 2028.",
+  "explanation": "Pour la première fois depuis 1900, où il n'y avait eu qu'un seul match, entre la Grande-Bretagne et la France.",
+  "answer": true
+ },
+ {
+  "key": "spo20-118",
+  "concept": "sport.olympics.v20_tf_anneaux_drapeaux",
+  "label": "Les anneaux",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les couleurs des anneaux, avec le fond blanc, permettent de dessiner le drapeau de chaque pays.",
+  "explanation": "C'est l'explication de Coubertin : au moins une de ces six couleurs figure sur chaque drapeau.",
+  "answer": true
+ },
+ {
+  "key": "spo20-119",
+  "concept": "sport.rules.v20_basket_naismith",
+  "label": "Le basket",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'utilisait James Naismith comme paniers quand il a inventé le basket, en 1891 ?",
+  "explanation": "Il fallait aller chercher le ballon avec une échelle après chaque panier ! On a percé le fond quelques années plus tard.",
+  "options": [
+   "Des paniers à pêches*",
+   "Des seaux",
+   "Des chapeaux",
+   "Des filets de pêche"
+  ]
+ },
+ {
+  "key": "spo20-120",
+  "concept": "sport.rules.v20_basket_canadien",
+  "label": "Le basket",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De quelle nationalité était James Naismith, l'inventeur du basket ?",
+  "explanation": "Professeur d'éducation physique dans le Massachusetts, il cherchait un sport d'intérieur pour l'hiver.",
+  "options": [
+   "Canadienne*",
+   "Américaine",
+   "Anglaise",
+   "Française"
+  ]
+ },
+ {
+  "key": "spo20-121",
+  "concept": "sport.rules.v20_volley_morgan",
+  "label": "Le volley-ball",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le volley-ball a été inventé en 1895 comme une version plus douce…",
+  "explanation": "William Morgan, dans une salle de sport du Massachusetts, à quelques kilomètres de là où était né le basket.",
+  "options": [
+   "Du basket, pour des hommes d'affaires*",
+   "Du tennis, pour les enfants",
+   "Du football, pour la plage",
+   "Du badminton, pour l'extérieur"
+  ]
+ },
+ {
+  "key": "spo20-122",
+  "concept": "sport.rules.v20_rugby_webb_ellis",
+  "label": "Le rugby",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Selon la légende, comment est né le rugby, en 1823 ?",
+  "explanation": "William Webb Ellis, élève de l'école de Rugby, en Angleterre. Le trophée de la Coupe du monde porte son nom.",
+  "options": [
+   "Un élève a pris le ballon à la main pendant un match de football*",
+   "Des soldats ont joué avec un casque",
+   "Un roi a inventé les règles",
+   "Des marins jouaient sur le pont"
+  ]
+ },
+ {
+  "key": "spo20-123",
+  "concept": "sport.rules.v20_badminton_nom",
+  "label": "Le badminton",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "D'où vient le nom du badminton ?",
+  "explanation": "Badminton House, propriété du duc de Beaufort. Le jeu venait d'Inde, où les officiers britanniques l'avaient découvert.",
+  "options": [
+   "D'un château anglais où l'on y jouait*",
+   "D'un mot indien",
+   "D'un joueur célèbre",
+   "D'une plume d'oiseau"
+  ]
+ },
+ {
+  "key": "spo20-124",
+  "concept": "sport.rules.v20_volant_plumes",
+  "label": "Le badminton",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de plumes compte un volant de badminton de compétition ?",
+  "explanation": "Des plumes d'oie, de préférence de l'aile gauche, pour que le volant tourne toujours dans le même sens.",
+  "options": [
+   "16*",
+   "8",
+   "24",
+   "32"
+  ]
+ },
+ {
+  "key": "spo20-125",
+  "concept": "sport.rules.v20_ping_pong_nom",
+  "label": "Le ping-pong",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "D'où vient le nom « ping-pong » ?",
+  "explanation": "Une marque déposée au départ. Le nom officiel du sport est « tennis de table ».",
+  "options": [
+   "Du bruit de la balle sur la raquette et la table*",
+   "D'un mot chinois",
+   "D'un inventeur",
+   "D'une ville anglaise"
+  ]
+ },
+ {
+  "key": "spo20-126",
+  "concept": "sport.rules.v20_judo_kano",
+  "label": "Le judo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a créé le judo, au Japon, en 1882 ?",
+  "explanation": "Judo veut dire « la voie de la souplesse ». Ueshiba a créé l'aïkido, Funakoshi le karaté moderne.",
+  "options": [
+   "Jigoro Kano*",
+   "Bruce Lee",
+   "Morihei Ueshiba",
+   "Gichin Funakoshi"
+  ]
+ },
+ {
+  "key": "spo20-127",
+  "concept": "sport.rules.v20_karate_okinawa",
+  "label": "Le karaté",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sur quelle île japonaise le karaté est-il né ?",
+  "explanation": "Karaté veut dire « main vide » : un combat sans arme.",
+  "options": [
+   "Okinawa*",
+   "Hokkaido",
+   "Kyushu",
+   "Honshu"
+  ]
+ },
+ {
+  "key": "spo20-128",
+  "concept": "sport.rules.v20_golf_18_trous",
+  "label": "Le golf",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi un parcours de golf compte-t-il 18 trous ?",
+  "explanation": "Le célèbre parcours écossais est passé de 22 à 18 trous, et tout le monde l'a copié.",
+  "options": [
+   "Le parcours de Saint Andrews, en Écosse, a fixé ce nombre en 1764*",
+   "C'est le nombre de jours d'un tournoi",
+   "Pour l'âge minimum des joueurs",
+   "Par superstition"
+  ]
+ },
+ {
+  "key": "spo20-129",
+  "concept": "sport.rules.v20_golf_balle_alveoles",
+  "label": "Le golf",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi les balles de golf sont-elles couvertes de petits creux (alvéoles) ?",
+  "explanation": "Une balle lisse irait environ deux fois moins loin. On l'a découvert en voyant que les vieilles balles abîmées volaient mieux !",
+  "options": [
+   "Pour aller plus loin, en réduisant la résistance de l'air*",
+   "Pour les rendre plus légères",
+   "Pour qu'elles flottent",
+   "Pour la décoration"
+  ]
+ },
+ {
+  "key": "spo20-130",
+  "concept": "sport.rules.v20_tennis_jeu_paume",
+  "label": "Le tennis",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quel jeu ancien, très populaire chez les rois de France, le tennis est-il issu ?",
+  "explanation": "On frappait d'abord la balle avec la paume de la main, puis avec une raquette.",
+  "options": [
+   "Le jeu de paume*",
+   "Le jeu de quilles",
+   "La soule",
+   "Le bilboquet"
+  ]
+ },
+ {
+  "key": "spo20-131",
+  "concept": "sport.rules.v20_tennis_balle_jaune",
+  "label": "Le tennis",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi les balles de tennis sont-elles devenues jaunes, dans les années 1970 ?",
+  "explanation": "Wimbledon a résisté jusqu'en 1986 avec ses balles blanches.",
+  "options": [
+   "Pour être plus visibles à la télévision en couleurs*",
+   "Pour être moins chères",
+   "Pour rebondir plus haut",
+   "Par décision d'un joueur"
+  ]
+ },
+ {
+  "key": "spo20-132",
+  "concept": "sport.rules.v20_tennis_15_30_40",
+  "label": "Le tennis",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Selon une explication répandue, d'où vient le décompte 15, 30, 40 au tennis ?",
+  "explanation": "On aurait ensuite raccourci « 45 » en « 40 ». Une autre théorie parle des pas au jeu de paume : le mystère reste entier.",
+  "options": [
+   "D'une horloge divisée en quarts d'heure*",
+   "Du nombre de pas pour avancer vers le filet",
+   "De l'âge des joueurs",
+   "Du prix des balles"
+  ]
+ },
+ {
+  "key": "spo20-133",
+  "concept": "sport.rules.v20_tennis_love",
+  "label": "Le tennis",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Selon une explication, pourquoi dit-on « love » pour zéro au tennis ?",
+  "explanation": "Une théorie amusante. Beaucoup pensent plutôt qu'on jouait « pour l'amour », sans rien miser.",
+  "options": [
+   "De « l'œuf », dont la forme rappelle un zéro*",
+   "Parce qu'on joue pour l'amour du jeu",
+   "D'un joueur nommé Love",
+   "D'un mot latin"
+  ]
+ },
+ {
+  "key": "spo20-134",
+  "concept": "sport.rules.v20_handball_allemand",
+  "label": "Le handball",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quel pays le handball moderne a-t-il été codifié, au début du XXe siècle ?",
+  "explanation": "D'abord joué en extérieur à 11, sur un terrain de football, avant la version en salle à 7.",
+  "options": [
+   "L'Allemagne et le Danemark*",
+   "La France",
+   "L'Espagne",
+   "La Russie"
+  ]
+ },
+ {
+  "key": "spo20-135",
+  "concept": "sport.rules.v20_hockey_palet",
+  "label": "Le hockey sur glace",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi congèle-t-on les palets avant un match de hockey professionnel ?",
+  "explanation": "Un palet en caoutchouc gelé glisse mieux et ne saute pas. Il peut dépasser 160 km/h.",
+  "options": [
+   "Pour qu'ils rebondissent moins*",
+   "Pour qu'ils brillent",
+   "Pour qu'ils soient plus légers",
+   "Pour les désinfecter"
+  ]
+ },
+ {
+  "key": "spo20-136",
+  "concept": "sport.rules.v20_rugby_ballon_vessie",
+  "label": "Le rugby",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Avec quoi étaient fabriqués les premiers ballons de rugby, d'où leur forme ovale ?",
+  "explanation": "La vessie gonflée prenait naturellement une forme allongée.",
+  "options": [
+   "Une vessie de porc entourée de cuir*",
+   "Une calebasse",
+   "Du caoutchouc d'Amazonie",
+   "Du bois creusé"
+  ]
+ },
+ {
+  "key": "spo20-137",
+  "concept": "sport.rules.v20_derby_origine",
+  "label": "Le derby",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le mot « derby » pour un match entre deux équipes voisines ?",
+  "explanation": "Le mot désigne aussi une course hippique créée par le comte de Derby. Les deux histoires sont avancées.",
+  "options": [
+   "D'une ville anglaise où l'on jouait un match géant entre deux quartiers*",
+   "D'un chapeau",
+   "D'une course de chevaux seulement",
+   "D'un joueur"
+  ]
+ },
+ {
+  "key": "spo20-138",
+  "concept": "sport.rules.v20_caddie_cadet",
+  "label": "Le golf",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "D'où vient le mot « caddie », celui qui porte le sac du golfeur ?",
+  "explanation": "Marie Stuart, reine d'Écosse élevée en France, aurait employé de jeunes « cadets » pour porter ses clubs.",
+  "options": [
+   "Du français « cadet »*",
+   "D'un mot écossais pour « sac »",
+   "D'une marque de chariot",
+   "D'un mot latin"
+  ]
+ },
+ {
+  "key": "spo20-139",
+  "concept": "sport.rules.v20_sepak_takraw",
+  "label": "Sports du monde",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qu'est-ce que le « sepak takraw », très populaire en Asie du Sud-Est ?",
+  "explanation": "Les joueurs font des retournés acrobatiques pour smasher par-dessus le filet.",
+  "options": [
+   "Du volley joué avec les pieds et une balle en rotin*",
+   "Un combat au bâton",
+   "Une course de bateaux",
+   "Un jeu de cartes"
+  ]
+ },
+ {
+  "key": "spo20-140",
+  "concept": "sport.rules.v20_kabaddi",
+  "label": "Sports du monde",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Au kabaddi, sport très populaire en Inde, que doit faire l'attaquant pendant son raid ?",
+  "explanation": "Il doit toucher des adversaires et revenir dans son camp sans respirer, en chantant le mot.",
+  "options": [
+   "Répéter « kabaddi » sans reprendre son souffle*",
+   "Rester les yeux fermés",
+   "Porter un ballon sur la tête",
+   "Sauter à cloche-pied"
+  ]
+ },
+ {
+  "key": "spo20-141",
+  "concept": "sport.rules.v20_lacrosse",
+  "label": "Sports du monde",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui pratiquait la crosse (lacrosse) bien avant les Européens ?",
+  "explanation": "Certains matchs réunissaient des centaines de joueurs sur des kilomètres. Les Français lui ont donné son nom.",
+  "options": [
+   "Les peuples autochtones d'Amérique du Nord*",
+   "Les Vikings",
+   "Les Aztèques",
+   "Les Mongols"
+  ]
+ },
+ {
+  "key": "spo20-142",
+  "concept": "sport.rules.v20_hurling",
+  "label": "Sports du monde",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le « hurling », sport très rapide joué avec une crosse et une petite balle, est un sport national de…",
+  "explanation": "Un des plus anciens sports de terrain du monde, pratiqué depuis plus de 3 000 ans selon les légendes irlandaises.",
+  "options": [
+   "L'Irlande*",
+   "L'Écosse",
+   "Le Canada",
+   "L'Australie"
+  ]
+ },
+ {
+  "key": "spo20-143",
+  "concept": "sport.rules.v20_pelote_cesta",
+  "label": "La pelote basque",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Au cesta punta, une forme de pelote basque, la balle peut atteindre environ…",
+  "explanation": "C'est souvent présenté comme le jeu de balle le plus rapide du monde.",
+  "options": [
+   "300 km/h*",
+   "50 km/h",
+   "100 km/h",
+   "500 km/h"
+  ]
+ },
+ {
+  "key": "spo20-144",
+  "concept": "sport.rules.v20_snooker_147",
+  "label": "Le snooker",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel est le meilleur score possible en une seule série au snooker ?",
+  "explanation": "Quinze rouges suivies de la noire, puis toutes les couleurs. Au jeu de fléchettes, le maximum en trois flèches est 180.",
+  "options": [
+   "147*",
+   "100",
+   "180",
+   "200"
+  ]
+ },
+ {
+  "key": "spo20-145",
+  "concept": "sport.rules.v20_flechettes_180",
+  "label": "Les fléchettes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le meilleur score possible avec trois fléchettes ?",
+  "explanation": "Trois fléchettes dans le triple 20. Les commentateurs le crient : « One hundred and eighty ! »",
+  "options": [
+   "180*",
+   "150",
+   "100",
+   "300"
+  ]
+ },
+ {
+  "key": "spo20-146",
+  "concept": "sport.rules.v20_esport",
+  "label": "L'e-sport",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce que l'« e-sport » ?",
+  "explanation": "Des tournois remplissent des stades. Les Jeux olympiques de l'e-sport ont été annoncés.",
+  "options": [
+   "La compétition de jeux vidéo*",
+   "Le sport sur écran tactile",
+   "Le sport électrique",
+   "Le sport en ligne en visioconférence"
+  ]
+ },
+ {
+  "key": "spo20-147",
+  "concept": "sport.rules.v20_skate_ollie",
+  "label": "Le skateboard",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel pays a remporté de nombreuses médailles de skateboard aux Jeux de Tokyo 2020, avec de très jeunes champions ?",
+  "explanation": "Momiji Nishiya a été sacrée à 13 ans. Le skate faisait son entrée aux Jeux.",
+  "options": [
+   "Le Japon*",
+   "Les États-Unis",
+   "Le Brésil",
+   "L'Australie"
+  ]
+ },
+ {
+  "key": "spo20-148",
+  "concept": "sport.rules.v20_tour_distance",
+  "label": "Le Tour de France",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Environ combien de kilomètres parcourent les coureurs du Tour de France ? (à 300 près)",
+  "explanation": "Environ 3 300 à 3 500 km en trois semaines et 21 étapes. Les premiers Tours dépassaient 5 000 km !",
+  "answer": 3400,
+  "tolerance": 300,
+  "unit": "km"
+ },
+ {
+  "key": "spo20-150",
+  "concept": "sport.rules.v20_maillots_tour",
+  "label": "Le Tour de France",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel maillot récompense le meilleur grimpeur du Tour de France ?",
+  "explanation": "Le vert récompense le meilleur sprinteur, le blanc le meilleur jeune.",
+  "options": [
+   "Le maillot à pois rouges*",
+   "Le maillot vert",
+   "Le maillot blanc",
+   "Le maillot jaune"
+  ]
+ },
+ {
+  "key": "spo20-151",
+  "concept": "sport.rules.v20_maillots_pairs",
+  "label": "Le Tour de France",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque maillot à ce qu'il récompense.",
+  "explanation": "Le maillot à pois aurait été inspiré par un maillot de jockey… ou par le chocolat Poulain, sponsor de l'époque.",
+  "pairs": [
+   [
+    "Jaune",
+    "Le premier au classement général"
+   ],
+   [
+    "Vert",
+    "Le meilleur sprinteur"
+   ],
+   [
+    "À pois",
+    "Le meilleur grimpeur"
+   ],
+   [
+    "Blanc",
+    "Le meilleur jeune"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-152",
+  "concept": "sport.rules.v20_le_mans_heures",
+  "label": "Les 24 Heures du Mans",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Combien de pilotes se relaient généralement dans une voiture aux 24 Heures du Mans ?",
+  "explanation": "Les voitures parcourent plus de 5 000 km en une journée.",
+  "options": [
+   "3*",
+   "1",
+   "2",
+   "6"
+  ]
+ },
+ {
+  "key": "spo20-153",
+  "concept": "sport.rules.v20_formule1_vitesse",
+  "label": "La Formule 1",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi les Formule 1 pourraient-elles, en théorie, rouler au plafond d'un tunnel ?",
+  "explanation": "À grande vitesse, l'appui aérodynamique dépasse le poids de la voiture… même si personne ne l'a essayé.",
+  "options": [
+   "Leurs ailerons les plaquent au sol avec une force supérieure à leur poids*",
+   "Elles ont des ventouses",
+   "Elles sont aimantées",
+   "Elles sont très légères"
+  ]
+ },
+ {
+  "key": "spo20-154",
+  "concept": "sport.rules.v20_monaco_champagne",
+  "label": "La Formule 1",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que font traditionnellement les pilotes sur le podium d'un Grand Prix de Formule 1 ?",
+  "explanation": "Une tradition lancée par Dan Gurney au Mans, en 1967.",
+  "options": [
+   "Ils s'arrosent au champagne ou au vin pétillant*",
+   "Ils lancent leur casque",
+   "Ils chantent",
+   "Ils mangent un gâteau"
+  ]
+ },
+ {
+  "key": "spo20-155",
+  "concept": "sport.rules.v20_boxe_categories",
+  "label": "La boxe",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi la boxe est-elle divisée en catégories de poids ?",
+  "explanation": "Des « poids mouches » aux « poids lourds ». Les boxeurs se pèsent la veille du combat.",
+  "options": [
+   "Pour que les combats soient équitables*",
+   "Pour faire plus de champions",
+   "Pour vendre plus de billets",
+   "Par tradition anglaise"
+  ]
+ },
+ {
+  "key": "spo20-156",
+  "concept": "sport.rules.v20_marathon_plus_rapide",
+  "label": "Le marathon",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est environ le record du monde masculin du marathon ?",
+  "explanation": "Établi par le Kényan Kelvin Kiptum à Chicago en 2023, quelques mois avant sa mort dans un accident.",
+  "options": [
+   "2 h 00 min 35 s*",
+   "2 h 30 min",
+   "1 h 45 min",
+   "3 h 00 min"
+  ]
+ },
+ {
+  "key": "spo20-157",
+  "concept": "sport.rules.v20_everest_altitude",
+  "label": "L'alpinisme",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle est l'altitude de l'Everest, le plus haut sommet du monde ?",
+  "explanation": "Mesuré à 8 848,86 m en 2020. 4 810 m, c'est à peu près le mont Blanc.",
+  "options": [
+   "Environ 8 849 m*",
+   "Environ 6 000 m",
+   "Environ 10 000 m",
+   "Environ 4 810 m"
+  ]
+ },
+ {
+  "key": "spo20-158",
+  "concept": "sport.rules.v20_vitesse_service",
+  "label": "Le tennis",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle vitesse peut atteindre un service au tennis, chez les meilleurs joueurs ?",
+  "explanation": "Le record officiel est d'environ 263 km/h, par l'Australien Sam Groth en 2012.",
+  "options": [
+   "Plus de 250 km/h*",
+   "Environ 100 km/h",
+   "Environ 150 km/h",
+   "Plus de 400 km/h"
+  ]
+ },
+ {
+  "key": "spo20-159",
+  "concept": "sport.rules.v20_volant_vitesse",
+  "label": "Le badminton",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel objet de sport détient le record de vitesse, à plus de 500 km/h ?",
+  "explanation": "Il part comme une fusée mais freine très vite grâce à ses plumes.",
+  "options": [
+   "Le volant de badminton*",
+   "La balle de tennis",
+   "La balle de golf",
+   "Le palet de hockey"
+  ]
+ },
+ {
+  "key": "spo20-160",
+  "concept": "sport.rules.v20_piscine_profondeur",
+  "label": "La natation",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi les bassins olympiques sont-ils profonds (au moins 2 mètres) ?",
+  "explanation": "Moins de vagues qui rebondissent sur le fond : l'eau est plus « rapide ».",
+  "options": [
+   "Pour réduire les vagues et nager plus vite*",
+   "Pour les plongeons",
+   "Pour la sécurité des nageurs",
+   "Pour économiser l'eau"
+  ]
+ },
+ {
+  "key": "spo20-161",
+  "concept": "sport.rules.v20_ga_nadal_rg",
+  "label": "Rafael Nadal",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "Quelle part de ses matchs Rafael Nadal a-t-il gagnés à Roland-Garros, sur toute sa carrière ? (à 5 % près)",
+  "explanation": "112 victoires pour 4 défaites, avec 14 titres. Un record presque impossible à battre.",
+  "answer": 97,
+  "tolerance": 3,
+  "unit": "%"
+ },
+ {
+  "key": "spo20-163",
+  "concept": "sport.rules.v20_co_rugby_xiii",
+  "label": "Le rugby à XIII",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "Combien de joueurs compte une équipe de rugby à XIII sur le terrain ?",
+  "explanation": "Le rugby à XIII, plus rapide, est né d'une séparation avec le XV en 1895, autour de la question des joueurs payés.",
+  "answer": 13,
+  "tolerance": 0,
+  "min": 7,
+  "max": 15,
+  "start": 7
+ },
+ {
+  "key": "spo20-165",
+  "concept": "sport.rules.v20_co_quilles",
+  "label": "Le bowling",
+  "type": "counter",
+  "difficulty": 20,
+  "prompt": "Combien de quilles y a-t-il au départ au bowling ?",
+  "explanation": "Disposées en triangle. Les quilles sont un jeu très ancien, déjà connu des Égyptiens.",
+  "answer": 10,
+  "tolerance": 0,
+  "min": 5,
+  "max": 15,
+  "start": 5
+ },
+ {
+  "key": "spo20-168",
+  "concept": "sport.rules.v20_distances_ordre",
+  "label": "Les distances",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces courses de la plus courte à la plus longue.",
+  "explanation": "Le semi-marathon mesure 21,0975 km, la moitié d'un marathon.",
+  "items": [
+   "100 m",
+   "1 500 m",
+   "Semi-marathon",
+   "Marathon"
+  ]
+ },
+ {
+  "key": "spo20-169",
+  "concept": "sport.rules.v20_ballons_ordre",
+  "label": "Les balles",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces balles de la plus petite à la plus grande.",
+  "explanation": "La balle de ping-pong mesure 4 cm de diamètre, le ballon de basket environ 24 cm.",
+  "items": [
+   "Balle de ping-pong",
+   "Balle de tennis",
+   "Ballon de handball",
+   "Ballon de basket"
+  ]
+ },
+ {
+  "key": "spo20-170",
+  "concept": "sport.rules.v20_sports_inventes_ordre",
+  "label": "L'histoire des sports",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces sports du plus ancien au plus récent (date d'invention).",
+  "explanation": "Rugby (1823, selon la légende), basket (1891), volley (1895), snowboard (années 1960).",
+  "items": [
+   "Le rugby",
+   "Le basket",
+   "Le volley-ball",
+   "Le snowboard"
+  ]
+ },
+ {
+  "key": "spo20-171",
+  "concept": "sport.rules.v20_sports_origines",
+  "label": "Les origines",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque sport au pays où il est né.",
+  "explanation": "Le basket a été inventé aux États-Unis… par un Canadien.",
+  "pairs": [
+   [
+    "Le judo",
+    "Japon"
+   ],
+   [
+    "Le basket",
+    "États-Unis"
+   ],
+   [
+    "Le golf",
+    "Écosse"
+   ],
+   [
+    "La capoeira",
+    "Brésil"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-172",
+  "concept": "sport.rules.v20_vocabulaire_golf",
+  "label": "Le golf",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque terme de golf à son sens.",
+  "explanation": "Plus on est sous le par, plus l'oiseau est grand et rare !",
+  "pairs": [
+   [
+    "Birdie",
+    "Un coup sous le par"
+   ],
+   [
+    "Eagle",
+    "Deux coups sous le par"
+   ],
+   [
+    "Bogey",
+    "Un coup au-dessus du par"
+   ],
+   [
+    "Albatros",
+    "Trois coups sous le par"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-173",
+  "concept": "sport.rules.v20_terrains",
+  "label": "Les terrains",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque sport au nom de son terrain.",
+  "explanation": "Le « court » vient du français « cour », où se jouait le jeu de paume.",
+  "pairs": [
+   [
+    "Le tennis",
+    "Le court"
+   ],
+   [
+    "La boxe",
+    "Le ring"
+   ],
+   [
+    "Le judo",
+    "Le tatami"
+   ],
+   [
+    "Le hockey sur glace",
+    "La patinoire"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-174",
+  "concept": "sport.rules.v20_arbitres",
+  "label": "Les arbitres",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque sport à l'outil ou au geste de son arbitre.",
+  "explanation": "Au judo, l'arbitre annonce « Hajime » pour commencer et « Ippon » pour la victoire.",
+  "pairs": [
+   [
+    "Le football",
+    "Un sifflet et des cartons"
+   ],
+   [
+    "Le tennis",
+    "Une chaise haute"
+   ],
+   [
+    "La boxe",
+    "Le compte jusqu'à 10"
+   ],
+   [
+    "Le judo",
+    "Des mots japonais"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-175",
+  "concept": "sport.rules.v20_tl_basket",
+  "label": "Le basket",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année James Naismith a-t-il inventé le basket ?",
+  "explanation": "Le premier match s'est terminé sur le score de… 1 à 0.",
+  "answer": 1891,
+  "tolerance": 5,
+  "min": 1800,
+  "max": 1950
+ },
+ {
+  "key": "spo20-176",
+  "concept": "sport.rules.v20_tl_tour_1903",
+  "label": "Le Tour de France",
+  "type": "timeline",
+  "difficulty": 50,
+  "prompt": "En quelle année a eu lieu le premier Tour de France ?",
+  "explanation": "Créé par le journal L'Auto pour vendre plus d'exemplaires. Six étapes seulement, mais certaines de plus de 400 km.",
+  "answer": 1903,
+  "tolerance": 3,
+  "min": 1850,
+  "max": 1960
+ },
+ {
+  "key": "spo20-177",
+  "concept": "sport.rules.v20_tl_roland_garros",
+  "label": "Roland-Garros",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a été inauguré le stade Roland-Garros ?",
+  "explanation": "Construit pour la Coupe Davis, que les « Mousquetaires » français venaient de gagner.",
+  "answer": 1928,
+  "tolerance": 5,
+  "min": 1880,
+  "max": 1980
+ },
+ {
+  "key": "spo20-178",
+  "concept": "sport.rules.v20_tl_wimbledon",
+  "label": "Wimbledon",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année a eu lieu le premier tournoi de Wimbledon ?",
+  "explanation": "Le plus ancien tournoi de tennis du monde. Il n'y avait que des hommes, et 200 spectateurs pour la finale.",
+  "answer": 1877,
+  "tolerance": 10,
+  "min": 1800,
+  "max": 1950
+ },
+ {
+  "key": "spo20-179",
+  "concept": "sport.rules.v20_le_raquette",
+  "label": "Raquette",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "On frappe la balle de tennis avec.",
+  "explanation": "Les premières raquettes étaient en bois, les modernes en fibre de carbone.",
+  "word": "RAQUETTE",
+  "display": "Raquette"
+ },
+ {
+  "key": "spo20-180",
+  "concept": "sport.rules.v20_le_sifflet",
+  "label": "Sifflet",
+  "type": "letters",
+  "difficulty": 5,
+  "prompt": "L'arbitre souffle dedans.",
+  "explanation": "Utilisé pour la première fois au football en 1878, en Angleterre.",
+  "word": "SIFFLET",
+  "display": "Sifflet"
+ },
+ {
+  "key": "spo20-181",
+  "concept": "sport.rules.v20_le_tatami",
+  "label": "Tatami",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Tapis sur lequel combattent les judokas.",
+  "explanation": "Au Japon, ce sont aussi les nattes de paille qui couvrent le sol des maisons.",
+  "word": "TATAMI",
+  "display": "Tatami"
+ },
+ {
+  "key": "spo20-182",
+  "concept": "sport.rules.v20_le_peloton",
+  "label": "Peloton",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Le gros groupe des coureurs cyclistes.",
+  "explanation": "Rouler dans le peloton économise beaucoup d'énergie, à l'abri du vent.",
+  "word": "PELOTON",
+  "display": "Peloton"
+ },
+ {
+  "key": "spo20-183",
+  "concept": "sport.rules.v20_le_volant",
+  "label": "Volant",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "On se le renvoie au badminton.",
+  "explanation": "Il est fait de 16 plumes d'oie et d'une base en liège.",
+  "word": "VOLANT",
+  "display": "Volant"
+ },
+ {
+  "key": "spo20-184",
+  "concept": "sport.rules.v20_le_echecs",
+  "label": "Échecs",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Jeu de stratégie avec un roi, une dame et des pions.",
+  "explanation": "Il est reconnu comme un sport par le Comité international olympique.",
+  "word": "ECHECS",
+  "display": "Échecs"
+ },
+ {
+  "key": "spo20-185",
+  "concept": "sport.rules.v20_tf_echecs_sport",
+  "label": "Les échecs",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les échecs sont reconnus comme un sport par le Comité international olympique.",
+  "explanation": "Ils n'ont pourtant jamais été au programme des Jeux olympiques.",
+  "answer": true
+ },
+ {
+  "key": "spo20-186",
+  "concept": "sport.rules.v20_tf_basket_ballon_marron",
+  "label": "Le basket",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Les premiers ballons de basket étaient orange.",
+  "explanation": "Ils étaient marron. L'orange a été adopté à la fin des années 1950, pour être plus visible des spectateurs.",
+  "answer": false
+ },
+ {
+  "key": "spo20-187",
+  "concept": "sport.rules.v20_tf_golf_lune",
+  "label": "Le golf",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un astronaute a joué au golf sur la Lune.",
+  "explanation": "Alan Shepard, en 1971, avec un club bricolé. Sa balle serait allée « à des kilomètres ».",
+  "answer": true
+ },
+ {
+  "key": "spo20-188",
+  "concept": "sport.rules.v20_tf_tour_france_jamais_annule",
+  "label": "Le Tour de France",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le Tour de France n'a jamais été annulé depuis sa création.",
+  "explanation": "Il n'a pas eu lieu pendant les deux guerres mondiales.",
+  "answer": false
+ },
+ {
+  "key": "spo20-189",
+  "concept": "sport.rules.v20_tf_volley_plage_jo",
+  "label": "Le beach-volley",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le beach-volley est un sport olympique.",
+  "explanation": "Depuis les Jeux d'Atlanta, en 1996.",
+  "answer": true
+ },
+ {
+  "key": "spo20-190",
+  "concept": "sport.rules.v20_tf_sumo_japon",
+  "label": "Le sumo",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le sumo est le sport national du Japon.",
+  "explanation": "Un sport millénaire, lié à des rites shintoïstes. Les lutteurs vivent ensemble dans des « écuries ».",
+  "answer": true
+ },
+ {
+  "key": "spo20-191",
+  "concept": "sport.rules.v20_tf_tennis_table_jo_1900",
+  "label": "Le tennis de table",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le tennis de table est olympique depuis les premiers Jeux de 1896.",
+  "explanation": "Il n'est entré aux Jeux qu'en 1988, à Séoul.",
+  "answer": false
+ },
+ {
+  "key": "spo20-192",
+  "concept": "sport.rules.v20_tf_handball_pieds",
+  "label": "Le handball",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Au handball, un joueur de champ a le droit de toucher volontairement le ballon avec le pied.",
+  "explanation": "C'est une faute pour les joueurs de champ. Seul le gardien peut utiliser ses pieds dans sa zone.",
+  "answer": false
+ },
+ {
+  "key": "spo20-193",
+  "concept": "sport.rules.v20_tf_marathon_42",
+  "label": "Le marathon",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Un marathon mesure plus de 40 kilomètres.",
+  "explanation": "Exactement 42,195 km.",
+  "answer": true
+ },
+ {
+  "key": "spo20-194",
+  "concept": "sport.rules.v20_tf_basket_3pts",
+  "label": "Le basket",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Au basket, un tir de loin peut rapporter 3 points.",
+  "explanation": "Derrière la ligne à 3 points, à 6,75 m du panier dans les règles internationales.",
+  "answer": true
+ },
+ {
+  "key": "spo20-195",
+  "concept": "sport.champions.v20_roland_garros_aviateur",
+  "label": "Roland Garros",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui était Roland Garros, qui a donné son nom au tournoi parisien ?",
+  "explanation": "Il a relié la France à la Tunisie en 1913. Il est mort en combat aérien en 1918.",
+  "options": [
+   "Un aviateur, premier à traverser la Méditerranée en avion*",
+   "Un champion de tennis",
+   "Un maire de Paris",
+   "Un architecte"
+  ]
+ },
+ {
+  "key": "spo20-196",
+  "concept": "sport.champions.v20_mousquetaires",
+  "label": "Les Mousquetaires",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment surnommait-on les quatre Français qui ont dominé le tennis mondial à la fin des années 1920 ?",
+  "explanation": "Borotra, Brugnon, Cochet et Lacoste ont gagné six Coupes Davis de suite, de 1927 à 1932.",
+  "options": [
+   "Les Mousquetaires*",
+   "Les Experts",
+   "Les Barjots",
+   "Les Bleus"
+  ]
+ },
+ {
+  "key": "spo20-197",
+  "concept": "sport.champions.v20_lacoste_crocodile",
+  "label": "René Lacoste",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel animal est le logo de la marque créée par le tennisman René Lacoste ?",
+  "explanation": "Son surnom venait d'un pari sur une valise en peau de crocodile. Il a aussi inventé le polo de tennis.",
+  "options": [
+   "Un crocodile*",
+   "Un coq",
+   "Un aigle",
+   "Un tigre"
+  ]
+ },
+ {
+  "key": "spo20-198",
+  "concept": "sport.champions.v20_laver_grand_chelem",
+  "label": "Rod Laver",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel joueur australien est le seul à avoir réussi deux fois le Grand Chelem (les quatre tournois majeurs la même année) ?",
+  "explanation": "En 1962 et en 1969. Le court central de l'Open d'Australie porte son nom.",
+  "options": [
+   "Rod Laver*",
+   "Roger Federer",
+   "Björn Borg",
+   "Pete Sampras"
+  ]
+ },
+ {
+  "key": "spo20-199",
+  "concept": "sport.champions.v20_ashe_wimbledon",
+  "label": "Arthur Ashe",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel joueur américain est devenu en 1975 le premier homme noir à remporter Wimbledon ?",
+  "explanation": "Le plus grand court du monde, à l'US Open, porte son nom.",
+  "options": [
+   "Arthur Ashe*",
+   "Yannick Noah",
+   "James Blake",
+   "Michael Chang"
+  ]
+ },
+ {
+  "key": "spo20-200",
+  "concept": "sport.champions.v20_graf_golden_slam",
+  "label": "Steffi Graf",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'a réussi l'Allemande Steffi Graf en 1988, une première dans l'histoire du tennis ?",
+  "explanation": "On l'appelle le « Golden Slam ». Elle a épousé un autre champion, Andre Agassi.",
+  "options": [
+   "Les quatre tournois du Grand Chelem et l'or olympique la même année*",
+   "Gagner sans perdre un seul jeu",
+   "Battre un homme en finale",
+   "Jouer de la main gauche et de la main droite"
+  ]
+ },
+ {
+  "key": "spo20-201",
+  "concept": "sport.champions.v20_pierce_rg_2000",
+  "label": "Mary Pierce",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle Française a remporté Roland-Garros en 2000, dernière victoire française chez les femmes à Paris ?",
+  "explanation": "Née au Canada, elle avait aussi gagné l'Open d'Australie en 1995.",
+  "options": [
+   "Mary Pierce*",
+   "Amélie Mauresmo",
+   "Nathalie Tauziat",
+   "Marion Bartoli"
+  ]
+ },
+ {
+  "key": "spo20-202",
+  "concept": "sport.champions.v20_tsonga_2008",
+  "label": "Jo-Wilfried Tsonga",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel Français a atteint la finale de l'Open d'Australie en 2008, battu par Novak Djokovic ?",
+  "explanation": "Sa ressemblance avec le boxeur Mohamed Ali lui a valu un surnom : « Ali ».",
+  "options": [
+   "Jo-Wilfried Tsonga*",
+   "Gaël Monfils",
+   "Richard Gasquet",
+   "Gilles Simon"
+  ]
+ },
+ {
+  "key": "spo20-203",
+  "concept": "sport.champions.v20_king_riggs",
+  "label": "Billie Jean King",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En 1973, Billie Jean King a battu Bobby Riggs lors d'un match très médiatisé. Comment l'a-t-on appelé ?",
+  "explanation": "Riggs, ancien champion, affirmait qu'une femme ne pouvait pas battre un homme. Un film en a été tiré en 2017.",
+  "options": [
+   "La Bataille des sexes*",
+   "Le Match du siècle",
+   "Le Duel des légendes",
+   "La Grande Finale"
+  ]
+ },
+ {
+  "key": "spo20-204",
+  "concept": "sport.champions.v20_agassi_perruque",
+  "label": "Andre Agassi",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel secret Andre Agassi a-t-il révélé dans son autobiographie « Open » ?",
+  "explanation": "Il raconte aussi qu'il détestait le tennis, que son père lui avait imposé dès l'enfance.",
+  "options": [
+   "Il portait une perruque au début de sa carrière*",
+   "Il était gaucher",
+   "Il ne savait pas nager",
+   "Il avait un frère jumeau"
+  ]
+ },
+ {
+  "key": "spo20-205",
+  "concept": "sport.champions.v20_becker_17",
+  "label": "Boris Becker",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À quel âge l'Allemand Boris Becker a-t-il remporté Wimbledon pour la première fois, en 1985 ?",
+  "explanation": "Il reste le plus jeune vainqueur du tournoi chez les hommes, connu pour ses plongeons au filet.",
+  "options": [
+   "17 ans*",
+   "15 ans",
+   "21 ans",
+   "25 ans"
+  ]
+ },
+ {
+  "key": "spo20-206",
+  "concept": "sport.champions.v20_monfils_svitolina",
+  "label": "Gaël Monfils",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle championne de tennis ukrainienne a épousé le Français Gaël Monfils ?",
+  "explanation": "Ils se sont mariés en 2021. Monfils est réputé pour ses gestes spectaculaires.",
+  "options": [
+   "Elina Svitolina*",
+   "Maria Sharapova",
+   "Victoria Azarenka",
+   "Iga Świątek"
+  ]
+ },
+ {
+  "key": "spo20-207",
+  "concept": "sport.champions.v20_anquetil_cinq",
+  "label": "Jacques Anquetil",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel coureur français a été le premier à remporter cinq Tours de France ?",
+  "explanation": "En 1957 puis de 1961 à 1964. Sa rivalité avec Raymond Poulidor a passionné la France.",
+  "options": [
+   "Jacques Anquetil*",
+   "Bernard Hinault",
+   "Louison Bobet",
+   "Laurent Fignon"
+  ]
+ },
+ {
+  "key": "spo20-208",
+  "concept": "sport.champions.v20_lemond_8s",
+  "label": "Le Tour de France",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De combien l'Américain Greg LeMond a-t-il battu Laurent Fignon au Tour de France 1989, le plus petit écart de l'histoire ?",
+  "explanation": "Tout s'est joué lors du contre-la-montre final sur les Champs-Élysées, avec un guidon de triathlète.",
+  "options": [
+   "8 secondes*",
+   "1 minute",
+   "30 secondes",
+   "2 secondes"
+  ]
+ },
+ {
+  "key": "spo20-209",
+  "concept": "sport.champions.v20_co_cavendish",
+  "label": "Mark Cavendish",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien d'étapes du Tour de France le sprinteur Mark Cavendish a-t-il remportées, un record ?",
+  "explanation": "Il a battu en 2024 le record d'Eddy Merckx (34 victoires). Il est surnommé « le Cav ».",
+  "answer": 35,
+  "tolerance": 2,
+  "min": 20,
+  "max": 50,
+  "start": 20
+ },
+ {
+  "key": "spo20-210",
+  "concept": "sport.champions.v20_simpson_ventoux",
+  "label": "Le Tour de France",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Sur quelle montagne le Britannique Tom Simpson est-il mort pendant le Tour de France 1967 ?",
+  "explanation": "Une stèle lui rend hommage près du sommet. Les cyclistes y laissent souvent un bidon ou une casquette.",
+  "options": [
+   "Le mont Ventoux*",
+   "L'Alpe d'Huez",
+   "Le Tourmalet",
+   "Le puy de Dôme"
+  ]
+ },
+ {
+  "key": "spo20-211",
+  "concept": "sport.champions.v20_longo_sept_jo",
+  "label": "Jeannie Longo",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À combien de Jeux olympiques la cycliste française Jeannie Longo a-t-elle participé ?",
+  "explanation": "De 1984 à 2008. Elle a été championne olympique sur route à Atlanta, en 1996.",
+  "options": [
+   "Sept*",
+   "Trois",
+   "Cinq",
+   "Dix"
+  ]
+ },
+ {
+  "key": "spo20-212",
+  "concept": "sport.champions.v20_coppi_campionissimo",
+  "label": "Fausto Coppi",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel coureur italien était surnommé « il Campionissimo », le champion des champions ?",
+  "explanation": "Il a gagné cinq Tours d'Italie et deux Tours de France, dans les années 1940 et 1950.",
+  "options": [
+   "Fausto Coppi*",
+   "Gino Bartali",
+   "Marco Pantani",
+   "Felice Gimondi"
+  ]
+ },
+ {
+  "key": "spo20-213",
+  "concept": "sport.champions.v20_ferrand_prevot",
+  "label": "Pauline Ferrand-Prévot",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle Française a remporté le Tour de France Femmes en 2025 ?",
+  "explanation": "Elle avait déjà été championne olympique de VTT à Paris en 2024.",
+  "options": [
+   "Pauline Ferrand-Prévot*",
+   "Juliette Labous",
+   "Audrey Cordon-Ragot",
+   "Évita Muzic"
+  ]
+ },
+ {
+  "key": "spo20-214",
+  "concept": "sport.champions.v20_vdp_poulidor",
+  "label": "Mathieu van der Poel",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel lien de famille unit le coureur néerlandais Mathieu van der Poel à Raymond Poulidor ?",
+  "explanation": "Sa mère est la fille de « Poupou ». Mathieu, lui, a porté le maillot jaune en 2021.",
+  "options": [
+   "Poulidor est son grand-père*",
+   "Poulidor est son oncle",
+   "Poulidor est son parrain",
+   "Aucun"
+  ]
+ },
+ {
+  "key": "spo20-215",
+  "concept": "sport.champions.v20_hinault_blaireau",
+  "label": "Bernard Hinault",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel surnom portait Bernard Hinault, cinq fois vainqueur du Tour de France ?",
+  "explanation": "Un surnom né dans le peloton, pour son caractère de bagarreur.",
+  "options": [
+   "Le Blaireau*",
+   "Le Cannibale",
+   "Le Renard",
+   "Le Taureau"
+  ]
+ },
+ {
+  "key": "spo20-216",
+  "concept": "sport.champions.v20_giro_rose",
+  "label": "Le Tour d'Italie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi le leader du Tour d'Italie porte-t-il un maillot rose ?",
+  "explanation": "La Gazzetta dello Sport est imprimée sur papier rose, comme L'Auto était jaune pour le Tour de France.",
+  "options": [
+   "C'est la couleur du papier du journal qui a créé la course*",
+   "C'est la couleur de la ville de Milan",
+   "En hommage à une fleur",
+   "Par tirage au sort"
+  ]
+ },
+ {
+  "key": "spo20-217",
+  "concept": "sport.champions.v20_senna_imola",
+  "label": "Ayrton Senna",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Sur quel circuit le pilote brésilien Ayrton Senna est-il mort, en 1994 ?",
+  "explanation": "Lors du Grand Prix de Saint-Marin, le 1er mai. Il avait été trois fois champion du monde.",
+  "options": [
+   "Imola, en Italie*",
+   "Monaco",
+   "Spa-Francorchamps, en Belgique",
+   "Interlagos, au Brésil"
+  ]
+ },
+ {
+  "key": "spo20-218",
+  "concept": "sport.champions.v20_fangio_cinq",
+  "label": "Juan Manuel Fangio",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel pilote argentin a été cinq fois champion du monde de Formule 1 dans les années 1950 ?",
+  "explanation": "Son record de cinq titres a tenu 46 ans, jusqu'à Michael Schumacher.",
+  "options": [
+   "Juan Manuel Fangio*",
+   "Ayrton Senna",
+   "Nelson Piquet",
+   "Emerson Fittipaldi"
+  ]
+ },
+ {
+  "key": "spo20-219",
+  "concept": "sport.champions.v20_lauda_brule",
+  "label": "Niki Lauda",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Gravement brûlé dans un accident en 1976, au bout de combien de temps Niki Lauda est-il remonté dans sa Formule 1 ?",
+  "explanation": "Il a reçu l'extrême-onction à l'hôpital, puis a couru à Monza 42 jours plus tard. Le film « Rush » raconte cette saison.",
+  "options": [
+   "Six semaines environ*",
+   "Deux ans",
+   "Six mois",
+   "Jamais"
+  ]
+ },
+ {
+  "key": "spo20-220",
+  "concept": "sport.champions.v20_rossi_46",
+  "label": "Valentino Rossi",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel numéro est indissociable du pilote de moto italien Valentino Rossi ?",
+  "explanation": "Celui de son père, pilote lui aussi. Le numéro a été retiré du MotoGP après sa retraite.",
+  "options": [
+   "46*",
+   "1",
+   "93",
+   "7"
+  ]
+ },
+ {
+  "key": "spo20-221",
+  "concept": "sport.champions.v20_leclerc_monaco",
+  "label": "Charles Leclerc",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel pilote monégasque a enfin remporté le Grand Prix de Monaco de F1 en 2024, chez lui ?",
+  "explanation": "Avant lui, aucun Monégasque n'avait gagné ce Grand Prix depuis Louis Chiron, en 1931.",
+  "options": [
+   "Charles Leclerc*",
+   "Pierre Gasly",
+   "Esteban Ocon",
+   "Olivier Panis"
+  ]
+ },
+ {
+  "key": "spo20-222",
+  "concept": "sport.champions.v20_co_peterhansel",
+  "label": "Stéphane Peterhansel",
+  "type": "counter",
+  "difficulty": 80,
+  "prompt": "Combien de fois le Français Stéphane Peterhansel a-t-il remporté le Dakar, à moto et en voiture ?",
+  "explanation": "Six fois à moto et huit fois en voiture : on le surnomme « Monsieur Dakar ».",
+  "answer": 14,
+  "tolerance": 0,
+  "min": 5,
+  "max": 20,
+  "start": 5
+ },
+ {
+  "key": "spo20-223",
+  "concept": "sport.champions.v20_co_kristensen",
+  "label": "Tom Kristensen",
+  "type": "counter",
+  "difficulty": 85,
+  "prompt": "Combien de fois le Danois Tom Kristensen a-t-il gagné les 24 Heures du Mans, un record ?",
+  "explanation": "Entre 1997 et 2013. On le surnomme « Monsieur Le Mans ».",
+  "answer": 9,
+  "tolerance": 0,
+  "min": 3,
+  "max": 15,
+  "start": 3
+ },
+ {
+  "key": "spo20-224",
+  "concept": "sport.champions.v20_tyson_oreille",
+  "label": "Mike Tyson",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'a fait Mike Tyson à Evander Holyfield lors de leur combat de 1997 ?",
+  "explanation": "Il a été disqualifié. Des années plus tard, les deux boxeurs se sont réconciliés.",
+  "options": [
+   "Il lui a mordu l'oreille*",
+   "Il l'a mis K.-O. au premier round",
+   "Il a refusé de monter sur le ring",
+   "Il lui a serré la main"
+  ]
+ },
+ {
+  "key": "spo20-225",
+  "concept": "sport.champions.v20_ali_kinshasa",
+  "label": "Mohamed Ali",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Où s'est déroulé le combat « Rumble in the Jungle » entre Mohamed Ali et George Foreman, en 1974 ?",
+  "explanation": "Ali a laissé Foreman s'épuiser contre les cordes avant de le mettre K.-O. au 8e round.",
+  "options": [
+   "À Kinshasa, au Zaïre*",
+   "À Las Vegas",
+   "À Manille",
+   "À New York"
+  ]
+ },
+ {
+  "key": "spo20-226",
+  "concept": "sport.champions.v20_wo_ali_papillon",
+  "label": "Mohamed Ali",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre la célèbre phrase de Mohamed Ali.",
+  "explanation": "En anglais : « Float like a butterfly, sting like a bee ». Elle décrivait sa boxe tout en légèreté.",
+  "answer": "Vole comme le papillon, pique comme l'abeille",
+  "words": [
+   "Vole",
+   "comme",
+   "le",
+   "papillon,",
+   "pique",
+   "comme",
+   "l'abeille"
+  ]
+ },
+ {
+  "key": "spo20-227",
+  "concept": "sport.champions.v20_cerdan_piaf",
+  "label": "Marcel Cerdan",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quelle chanteuse le boxeur français Marcel Cerdan était-il le grand amour ?",
+  "explanation": "Il est mort dans un accident d'avion en 1949. Piaf lui a dédié « L'Hymne à l'amour ».",
+  "options": [
+   "Édith Piaf*",
+   "Dalida",
+   "Juliette Gréco",
+   "Barbara"
+  ]
+ },
+ {
+  "key": "spo20-228",
+  "concept": "sport.champions.v20_co_marciano",
+  "label": "Rocky Marciano",
+  "type": "counter",
+  "difficulty": 80,
+  "prompt": "Rocky Marciano a pris sa retraite invaincu. Combien de combats professionnels avait-il gagnés ?",
+  "explanation": "Floyd Mayweather a battu ce record en 2017 avec 50 victoires sans défaite.",
+  "answer": 49,
+  "tolerance": 0,
+  "min": 30,
+  "max": 60,
+  "start": 30
+ },
+ {
+  "key": "spo20-229",
+  "concept": "sport.champions.v20_mossely_yoka",
+  "label": "Les JO de Rio",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel couple de boxeurs français a remporté deux médailles d'or le même jour, aux JO de Rio en 2016 ?",
+  "explanation": "Ils se sont mariés l'année suivante.",
+  "options": [
+   "Estelle Mossely et Tony Yoka*",
+   "Sarah Ourahmoune et Souleymane Cissokho",
+   "Brahim Asloum et Myriam Lamare",
+   "Mathieu Bauderlique et Estelle Yoka"
+  ]
+ },
+ {
+  "key": "spo20-230",
+  "concept": "sport.champions.v20_douillet",
+  "label": "David Douillet",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quel sport David Douillet a-t-il été deux fois champion olympique ?",
+  "explanation": "En 1996 et en 2000. Il a aussi été quatre fois champion du monde, puis ministre des Sports.",
+  "options": [
+   "Le judo*",
+   "La lutte",
+   "La boxe",
+   "L'haltérophilie"
+  ]
+ },
+ {
+  "key": "spo20-231",
+  "concept": "sport.champions.v20_akebono",
+  "label": "Le sumo",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "D'où venait Akebono, premier lutteur né hors du Japon à devenir yokozuna (grand champion de sumo), en 1993 ?",
+  "explanation": "Il mesurait 2,03 m. Depuis, plusieurs Mongols sont devenus yokozuna.",
+  "options": [
+   "De Hawaï*",
+   "De Mongolie",
+   "De Corée",
+   "Du Brésil"
+  ]
+ },
+ {
+  "key": "spo20-232",
+  "concept": "sport.champions.v20_flessel_guepe",
+  "label": "Laura Flessel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel surnom portait l'escrimeuse Laura Flessel, double championne olympique ?",
+  "explanation": "Pour sa vitesse de piqûre à l'épée. Elle a ensuite été ministre des Sports.",
+  "options": [
+   "La Guêpe*",
+   "L'Abeille",
+   "La Panthère",
+   "La Flèche"
+  ]
+ },
+ {
+  "key": "spo20-233",
+  "concept": "sport.champions.v20_jordan_baseball",
+  "label": "Michael Jordan",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel sport Michael Jordan a-t-il pratiqué en professionnel pendant sa première retraite, en 1994 ?",
+  "explanation": "Il a joué dans une petite équipe, les Birmingham Barons, avant de revenir au basket en 1995.",
+  "options": [
+   "Le baseball*",
+   "Le golf",
+   "Le football américain",
+   "Le tennis"
+  ]
+ },
+ {
+  "key": "spo20-234",
+  "concept": "sport.champions.v20_air_jordan",
+  "label": "Michael Jordan",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle marque a créé en 1985 la chaussure « Air Jordan » ?",
+  "explanation": "Elle rapporte encore des milliards de dollars par an. Le film « Air » (2023) raconte sa naissance.",
+  "options": [
+   "Nike*",
+   "Adidas",
+   "Puma",
+   "Reebok"
+  ]
+ },
+ {
+  "key": "spo20-235",
+  "concept": "sport.champions.v20_kobe_81",
+  "label": "Kobe Bryant",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de points Kobe Bryant a-t-il marqués lors d'un match en 2006, le 2e record de l'histoire de la NBA ?",
+  "explanation": "Contre les Toronto Raptors. Seul Wilt Chamberlain a fait mieux, avec 100 points en 1962.",
+  "options": [
+   "81*",
+   "62",
+   "100",
+   "55"
+  ]
+ },
+ {
+  "key": "spo20-236",
+  "concept": "sport.champions.v20_globetrotters",
+  "label": "Les Harlem Globetrotters",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que sont les Harlem Globetrotters ?",
+  "explanation": "Créée en 1926, l'équipe mêle acrobaties et humour. Elle a joué dans plus de 120 pays.",
+  "options": [
+   "Une équipe de basket qui fait des matchs-spectacles*",
+   "Un club de football de New York",
+   "Une troupe de danse",
+   "Un groupe de musique"
+  ]
+ },
+ {
+  "key": "spo20-237",
+  "concept": "sport.champions.v20_co_russell",
+  "label": "Bill Russell",
+  "type": "counter",
+  "difficulty": 85,
+  "prompt": "Combien de titres NBA Bill Russell a-t-il remportés avec les Boston Celtics, un record ?",
+  "explanation": "Entre 1957 et 1969. Le trophée de meilleur joueur des finales porte son nom.",
+  "answer": 11,
+  "tolerance": 0,
+  "min": 5,
+  "max": 15,
+  "start": 5
+ },
+ {
+  "key": "spo20-238",
+  "concept": "sport.champions.v20_curry_3pts",
+  "label": "Stephen Curry",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel record détient Stephen Curry, joueur des Golden State Warriors ?",
+  "explanation": "Il a changé la façon de jouer : les équipes tirent bien plus de loin depuis lui.",
+  "options": [
+   "Le plus de paniers à 3 points de l'histoire de la NBA*",
+   "Le plus de points en un match",
+   "Le plus de titres",
+   "Le joueur le plus grand"
+  ]
+ },
+ {
+  "key": "spo20-239",
+  "concept": "sport.champions.v20_magic_1991",
+  "label": "Magic Johnson",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'a annoncé le basketteur Magic Johnson en novembre 1991, choquant le monde du sport ?",
+  "explanation": "Il a pris sa retraite, puis a joué avec la Dream Team en 1992. Il est toujours en vie et en bonne santé.",
+  "options": [
+   "Qu'il était séropositif*",
+   "Qu'il devenait acteur",
+   "Qu'il changeait de sport",
+   "Qu'il rachetait les Lakers"
+  ]
+ },
+ {
+  "key": "spo20-240",
+  "concept": "sport.champions.v20_gobert_defenseur",
+  "label": "Rudy Gobert",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pivot français a été élu quatre fois meilleur défenseur de la NBA ?",
+  "explanation": "En 2018, 2019, 2021 et 2024, ce qui égale le record. Il mesure 2,16 m.",
+  "options": [
+   "Rudy Gobert*",
+   "Joakim Noah",
+   "Boris Diaw",
+   "Nicolas Batum"
+  ]
+ },
+ {
+  "key": "spo20-241",
+  "concept": "sport.champions.v20_wilkinson_drop",
+  "label": "Jonny Wilkinson",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment Jonny Wilkinson a-t-il donné la Coupe du monde 2003 à l'Angleterre ?",
+  "explanation": "Du pied droit, son « mauvais » pied, contre l'Australie à Sydney. Il a ensuite joué à Toulon.",
+  "options": [
+   "Par un drop dans les dernières secondes de la prolongation*",
+   "Par un essai de 80 mètres",
+   "Par une pénalité à la 1re minute",
+   "Par un plaquage décisif"
+  ]
+ },
+ {
+  "key": "spo20-242",
+  "concept": "sport.champions.v20_blanco_1987",
+  "label": "Serge Blanco",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel arrière français a marqué l'essai de la victoire contre l'Australie en demi-finale de la Coupe du monde 1987 ?",
+  "explanation": "Un essai considéré comme l'un des plus beaux de l'histoire, au bout d'une longue course.",
+  "options": [
+   "Serge Blanco*",
+   "Philippe Sella",
+   "Franck Mesnel",
+   "Jean-Pierre Rives"
+  ]
+ },
+ {
+  "key": "spo20-243",
+  "concept": "sport.champions.v20_haka_ka_mate",
+  "label": "Les All Blacks",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment s'appelle le haka le plus célèbre exécuté par les All Blacks ?",
+  "explanation": "Composé vers 1820 par le chef maori Te Rauparaha. Les All Blacks ont aussi un autre haka, le Kapa o Pango.",
+  "options": [
+   "Ka Mate*",
+   "Aloha",
+   "Kia Ora",
+   "Tamure"
+  ]
+ },
+ {
+  "key": "spo20-244",
+  "concept": "sport.champions.v20_mandela_1995",
+  "label": "Nelson Mandela",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel geste de Nelson Mandela a marqué la finale de la Coupe du monde de rugby 1995 ?",
+  "explanation": "Un symbole d'unité pour l'Afrique du Sud après l'apartheid. Clint Eastwood l'a raconté dans « Invictus ».",
+  "options": [
+   "Il a porté le maillot des Springboks pour remettre la coupe*",
+   "Il a donné le coup d'envoi",
+   "Il a chanté l'hymne seul",
+   "Il a joué quelques minutes"
+  ]
+ },
+ {
+  "key": "spo20-245",
+  "concept": "sport.champions.v20_chabal_caverne",
+  "label": "Sébastien Chabal",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel surnom avait le rugbyman Sébastien Chabal, célèbre pour sa barbe et ses cheveux longs ?",
+  "explanation": "En anglais « Caveman ». Il était très populaire en Angleterre, où il a joué à Sale.",
+  "options": [
+   "L'homme des cavernes*",
+   "Le Viking",
+   "L'ours",
+   "Le géant vert"
+  ]
+ },
+ {
+  "key": "spo20-246",
+  "concept": "sport.champions.v20_co_hirscher",
+  "label": "Marcel Hirscher",
+  "type": "counter",
+  "difficulty": 80,
+  "prompt": "Combien de gros globes de cristal consécutifs le skieur autrichien Marcel Hirscher a-t-il remportés ?",
+  "explanation": "De 2012 à 2019, un record. Le gros globe récompense le meilleur skieur de la saison.",
+  "answer": 8,
+  "tolerance": 0,
+  "min": 3,
+  "max": 12,
+  "start": 3
+ },
+ {
+  "key": "spo20-247",
+  "concept": "sport.champions.v20_pinturault_globe",
+  "label": "Alexis Pinturault",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel Français a remporté le gros globe de cristal du ski alpin en 2021 ?",
+  "explanation": "Le premier Français depuis Luc Alphand en 1997.",
+  "options": [
+   "Alexis Pinturault*",
+   "Clément Noël",
+   "Luc Alphand",
+   "Jean-Baptiste Grange"
+  ]
+ },
+ {
+  "key": "spo20-248",
+  "concept": "sport.champions.v20_qfm_pekin",
+  "label": "Quentin Fillon Maillet",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de médailles le biathlète Quentin Fillon Maillet a-t-il remportées aux JO de Pékin 2022 ?",
+  "explanation": "Deux en or et trois en argent : un record pour un Français sur une même édition des JO d'hiver.",
+  "options": [
+   "Cinq*",
+   "Deux",
+   "Trois",
+   "Huit"
+  ]
+ },
+ {
+  "key": "spo20-249",
+  "concept": "sport.champions.v20_bonaly_salto",
+  "label": "Surya Bonaly",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle figure interdite la patineuse française Surya Bonaly a-t-elle réalisée aux JO de Nagano en 1998 ?",
+  "explanation": "Elle savait qu'elle serait pénalisée, mais elle voulait marquer l'histoire. C'est réussi.",
+  "options": [
+   "Un salto arrière sur une seule lame*",
+   "Une pirouette de deux minutes",
+   "Un saut par-dessus la juge",
+   "Un patinage à reculons les yeux bandés"
+  ]
+ },
+ {
+  "key": "spo20-250",
+  "concept": "sport.champions.v20_candeloro",
+  "label": "Philippe Candeloro",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel personnage le patineur Philippe Candeloro a-t-il interprété aux JO de Nagano, en 1998 ?",
+  "explanation": "Il mimait des duels à l'épée sur la glace. Il a remporté le bronze.",
+  "options": [
+   "D'Artagnan*",
+   "Zorro",
+   "Napoléon",
+   "Robin des bois"
+  ]
+ },
+ {
+  "key": "spo20-251",
+  "concept": "sport.champions.v20_papadakis_cizeron",
+  "label": "Le patinage",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quelle discipline Gabriella Papadakis et Guillaume Cizeron sont-ils devenus champions olympiques en 2022 ?",
+  "explanation": "Ils ont aussi été cinq fois champions du monde.",
+  "options": [
+   "La danse sur glace*",
+   "Le bobsleigh à deux",
+   "Le patinage de vitesse",
+   "Le curling mixte"
+  ]
+ },
+ {
+  "key": "spo20-252",
+  "concept": "sport.champions.v20_shaun_white",
+  "label": "Shaun White",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel snowboardeur américain, surnommé « la Tomate volante » pour ses cheveux roux, a gagné trois fois l'or olympique ?",
+  "explanation": "En half-pipe, en 2006, 2010 et 2018.",
+  "options": [
+   "Shaun White*",
+   "Tony Hawk",
+   "Travis Rice",
+   "Mark McMorris"
+  ]
+ },
+ {
+  "key": "spo20-253",
+  "concept": "sport.champions.v20_bubka_6m",
+  "label": "Sergueï Bubka",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel perchiste ukrainien a été le premier à franchir 6 mètres, en 1985 ?",
+  "explanation": "À Paris. Il a battu 35 fois le record du monde, souvent d'un seul centimètre.",
+  "options": [
+   "Sergueï Bubka*",
+   "Renaud Lavillenie",
+   "Armand Duplantis",
+   "Thierry Vigneron"
+  ]
+ },
+ {
+  "key": "spo20-254",
+  "concept": "sport.champions.v20_zatopek_locomotive",
+  "label": "Emil Zátopek",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel exploit a réussi le Tchèque Emil Zátopek, « la Locomotive », aux JO d'Helsinki en 1952 ?",
+  "explanation": "Il n'avait jamais couru de marathon avant ! Il a décidé de s'y inscrire au dernier moment.",
+  "options": [
+   "L'or au 5 000 m, au 10 000 m et au marathon*",
+   "Battre Usain Bolt",
+   "L'or au 100 m et au saut en longueur",
+   "Courir pieds nus"
+  ]
+ },
+ {
+  "key": "spo20-255",
+  "concept": "sport.champions.v20_bikila_pieds_nus",
+  "label": "Abebe Bikila",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment l'Éthiopien Abebe Bikila a-t-il couru le marathon olympique de Rome, qu'il a gagné en 1960 ?",
+  "explanation": "Premier champion olympique d'Afrique noire. Il a regagné le marathon en 1964, en chaussures cette fois.",
+  "options": [
+   "Pieds nus*",
+   "Avec un sac à dos",
+   "En marchant la moitié du temps",
+   "Avec des chaussures en bois"
+  ]
+ },
+ {
+  "key": "spo20-256",
+  "concept": "sport.champions.v20_lemaitre_10s",
+  "label": "Christophe Lemaitre",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel Français est devenu en 2010 le premier athlète français à courir le 100 m en moins de 10 secondes ?",
+  "explanation": "En 9,98 s. Il a ensuite remporté le bronze olympique du 200 m en 2016.",
+  "options": [
+   "Christophe Lemaitre*",
+   "Jimmy Vicaut",
+   "Ronald Pognon",
+   "Marie-José Pérec"
+  ]
+ },
+ {
+  "key": "spo20-257",
+  "concept": "sport.champions.v20_doucoure_2005",
+  "label": "Ladji Doucouré",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quelle épreuve Ladji Doucouré est-il devenu champion du monde en 2005 ?",
+  "explanation": "À Helsinki. Il a aussi gagné le relais 4 x 100 m avec l'équipe de France.",
+  "options": [
+   "Le 110 m haies*",
+   "Le saut en hauteur",
+   "Le 400 m",
+   "Le lancer de javelot"
+  ]
+ },
+ {
+  "key": "spo20-258",
+  "concept": "sport.champions.v20_diagana_400h",
+  "label": "Stéphane Diagana",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel Français a été le premier champion du monde d'athlétisme de l'histoire du pays, en 1997 ?",
+  "explanation": "Au 400 m haies, à Athènes.",
+  "options": [
+   "Stéphane Diagana*",
+   "Jean Galfione",
+   "Christophe Lemaitre",
+   "Ladji Doucouré"
+  ]
+ },
+ {
+  "key": "spo20-259",
+  "concept": "sport.champions.v20_galfione_1996",
+  "label": "Jean Galfione",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quelle discipline Jean Galfione est-il devenu champion olympique à Atlanta, en 1996 ?",
+  "explanation": "Il a franchi 5,92 m.",
+  "options": [
+   "Le saut à la perche*",
+   "Le saut en longueur",
+   "Le décathlon",
+   "Le 1 500 m"
+  ]
+ },
+ {
+  "key": "spo20-260",
+  "concept": "sport.champions.v20_le_fur",
+  "label": "Marie-Amélie Le Fur",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel sport Marie-Amélie Le Fur a-t-elle remporté trois titres paralympiques ?",
+  "explanation": "Amputée d'une jambe après un accident de scooter à 15 ans, elle est devenue présidente du Comité paralympique français.",
+  "options": [
+   "L'athlétisme*",
+   "La natation",
+   "L'escrime",
+   "Le cyclisme"
+  ]
+ },
+ {
+  "key": "spo20-261",
+  "concept": "sport.champions.v20_latynina",
+  "label": "Larissa Latynina",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quelle gymnaste soviétique a détenu pendant 48 ans le record de médailles olympiques (18), avant Michael Phelps ?",
+  "explanation": "Entre 1956 et 1964. Phelps a battu son record en 2012.",
+  "options": [
+   "Larissa Latynina*",
+   "Olga Korbut",
+   "Nadia Comaneci",
+   "Věra Čáslavská"
+  ]
+ },
+ {
+  "key": "spo20-262",
+  "concept": "sport.champions.v20_nurmi",
+  "label": "Paavo Nurmi",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel coureur de fond, surnommé « le Finlandais volant », a remporté neuf médailles d'or olympiques dans les années 1920 ?",
+  "explanation": "Il courait avec un chronomètre à la main pour contrôler son allure.",
+  "options": [
+   "Paavo Nurmi*",
+   "Lasse Virén",
+   "Emil Zátopek",
+   "Hannes Kolehmainen"
+  ]
+ },
+ {
+  "key": "spo20-263",
+  "concept": "sport.champions.v20_wilma_rudolph",
+  "label": "Wilma Rudolph",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle sprinteuse américaine, qui portait des appareils aux jambes après une polio dans l'enfance, a gagné trois fois l'or en 1960 ?",
+  "explanation": "Les médecins pensaient qu'elle ne marcherait plus. On l'a surnommée « la Gazelle noire ».",
+  "options": [
+   "Wilma Rudolph*",
+   "Florence Griffith-Joyner",
+   "Jackie Joyner-Kersee",
+   "Allyson Felix"
+  ]
+ },
+ {
+  "key": "spo20-264",
+  "concept": "sport.champions.v20_blankers_koen",
+  "label": "Fanny Blankers-Koen",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Pourquoi la Néerlandaise Fanny Blankers-Koen, quatre fois championne olympique en 1948, a-t-elle surpris tout le monde ?",
+  "explanation": "La presse l'a surnommée « la ménagère volante ». Elle a gagné le 100 m, le 200 m, le 80 m haies et le relais.",
+  "options": [
+   "Elle avait 30 ans et deux enfants, et on la disait trop âgée*",
+   "Elle courait pieds nus",
+   "Elle n'avait jamais couru avant",
+   "Elle avait 15 ans"
+  ]
+ },
+ {
+  "key": "spo20-265",
+  "concept": "sport.champions.v20_jim_thorpe",
+  "label": "Jim Thorpe",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Pourquoi les médailles d'or de Jim Thorpe, aux JO de 1912, lui ont-elles été retirées ?",
+  "explanation": "Ses titres ont été rétablis en 1982, puis il a été reconnu seul vainqueur en 2022, bien après sa mort.",
+  "options": [
+   "Il avait été payé pour jouer au baseball, ce qui violait les règles de l'amateurisme*",
+   "Il s'était dopé",
+   "Il avait triché sur son âge",
+   "Il avait coupé le parcours"
+  ]
+ },
+ {
+  "key": "spo20-266",
+  "concept": "sport.champions.v20_alain_bernard",
+  "label": "Alain Bernard",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel Français a remporté la course reine de la natation, le 100 m nage libre, aux JO de Pékin en 2008 ?",
+  "explanation": "Il mesurait 1,96 m. La même année, il avait battu le record du monde.",
+  "options": [
+   "Alain Bernard*",
+   "Florent Manaudou",
+   "Yannick Agnel",
+   "Frédérick Bousquet"
+  ]
+ },
+ {
+  "key": "spo20-267",
+  "concept": "sport.champions.v20_weissmuller_tarzan",
+  "label": "Johnny Weissmuller",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel rôle célèbre le nageur Johnny Weissmuller, cinq fois champion olympique, a-t-il joué au cinéma ?",
+  "explanation": "Dans douze films, de 1932 à 1948. Son cri de Tarzan est resté célèbre.",
+  "options": [
+   "Tarzan*",
+   "Superman",
+   "Zorro",
+   "Robin des bois"
+  ]
+ },
+ {
+  "key": "spo20-268",
+  "concept": "sport.champions.v20_kahanamoku",
+  "label": "Duke Kahanamoku",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel nageur hawaïen, champion olympique en 1912, est considéré comme le père du surf moderne ?",
+  "explanation": "Il a fait découvrir le surf en Australie et en Californie lors de ses voyages.",
+  "options": [
+   "Duke Kahanamoku*",
+   "Kelly Slater",
+   "Johnny Weissmuller",
+   "Laird Hamilton"
+  ]
+ },
+ {
+  "key": "spo20-269",
+  "concept": "sport.champions.v20_ledecky",
+  "label": "Katie Ledecky",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quelles courses l'Américaine Katie Ledecky domine-t-elle la natation depuis 2012 ?",
+  "explanation": "Elle a gagné l'or à quatre Jeux de suite sur 800 m, de 2012 à 2024.",
+  "options": [
+   "Les longues distances en nage libre (800 m, 1 500 m)*",
+   "Le 50 m papillon",
+   "La brasse",
+   "Le plongeon"
+  ]
+ },
+ {
+  "key": "spo20-270",
+  "concept": "sport.champions.v20_tiger_masters",
+  "label": "Tiger Woods",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À quel âge Tiger Woods a-t-il remporté son premier Masters d'Augusta, en 1997 ?",
+  "explanation": "Avec 12 coups d'avance, un record. Il a gagné cinq fois ce tournoi.",
+  "options": [
+   "21 ans*",
+   "17 ans",
+   "30 ans",
+   "35 ans"
+  ]
+ },
+ {
+  "key": "spo20-271",
+  "concept": "sport.champions.v20_boutier_evian",
+  "label": "Céline Boutier",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle golfeuse française a remporté en 2023 l'Evian Championship, un tournoi majeur ?",
+  "explanation": "Première Française à gagner un tournoi majeur en France.",
+  "options": [
+   "Céline Boutier*",
+   "Marie-Laure de Lorenzi",
+   "Karine Icher",
+   "Perrine Delacour"
+  ]
+ },
+ {
+  "key": "spo20-272",
+  "concept": "sport.champions.v20_carlsen_pays",
+  "label": "Magnus Carlsen",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quel pays est Magnus Carlsen, champion du monde d'échecs de 2013 à 2023 ?",
+  "explanation": "Il a atteint le meilleur classement Elo de l'histoire : 2 882.",
+  "options": [
+   "La Norvège*",
+   "La Russie",
+   "Les États-Unis",
+   "L'Inde"
+  ]
+ },
+ {
+  "key": "spo20-273",
+  "concept": "sport.champions.v20_kasparov_deep_blue",
+  "label": "Garry Kasparov",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Contre qui Garry Kasparov a-t-il perdu un match d'échecs historique, en 1997 ?",
+  "explanation": "C'était la première fois qu'un ordinateur battait un champion du monde en match.",
+  "options": [
+   "L'ordinateur Deep Blue d'IBM*",
+   "Magnus Carlsen",
+   "Bobby Fischer",
+   "Un enfant de 10 ans"
+  ]
+ },
+ {
+  "key": "spo20-274",
+  "concept": "sport.champions.v20_fischer_spassky",
+  "label": "Bobby Fischer",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Où s'est joué le célèbre match d'échecs entre l'Américain Bobby Fischer et le Soviétique Boris Spassky, en pleine guerre froide ?",
+  "explanation": "Fischer a gagné en 1972, mettant fin à 24 ans de domination soviétique.",
+  "options": [
+   "À Reykjavik, en Islande*",
+   "À Genève",
+   "À Paris",
+   "À Berlin"
+  ]
+ },
+ {
+  "key": "spo20-275",
+  "concept": "sport.champions.v20_osullivan_rapide",
+  "label": "Ronnie O'Sullivan",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "En combien de temps environ Ronnie O'Sullivan a-t-il réussi un 147 parfait au snooker, en 1997, un record ?",
+  "explanation": "En 5 minutes et 8 secondes : moins de 9 secondes par coup.",
+  "options": [
+   "Un peu plus de 5 minutes*",
+   "Une heure",
+   "30 secondes",
+   "20 minutes"
+  ]
+ },
+ {
+  "key": "spo20-276",
+  "concept": "sport.champions.v20_arthaud",
+  "label": "Florence Arthaud",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle navigatrice, surnommée « la petite fiancée de l'Atlantique », a remporté la Route du Rhum en 1990 ?",
+  "explanation": "Première femme à gagner une grande course au large en solitaire face aux hommes.",
+  "options": [
+   "Florence Arthaud*",
+   "Isabelle Autissier",
+   "Ellen MacArthur",
+   "Clarisse Crémer"
+  ]
+ },
+ {
+  "key": "spo20-277",
+  "concept": "sport.champions.v20_tabarly_pen_duick",
+  "label": "Éric Tabarly",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelaient les bateaux du navigateur Éric Tabarly ?",
+  "explanation": "Ce nom breton signifie « mésange à tête noire ». Il a disparu en mer en 1998.",
+  "options": [
+   "Pen Duick*",
+   "Pourquoi Pas ?",
+   "Belle Île",
+   "Marie-Galante"
+  ]
+ },
+ {
+  "key": "spo20-278",
+  "concept": "sport.champions.v20_dalin_vendee",
+  "label": "Charlie Dalin",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En combien de jours environ Charlie Dalin a-t-il bouclé le Vendée Globe 2024-2025, un record ?",
+  "explanation": "Il a battu de près de 10 jours le record d'Armel Le Cléac'h (74 jours, en 2017).",
+  "options": [
+   "64 jours*",
+   "100 jours",
+   "45 jours",
+   "80 jours"
+  ]
+ },
+ {
+  "key": "spo20-279",
+  "concept": "sport.champions.v20_messner",
+  "label": "Reinhold Messner",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel exploit a réussi l'alpiniste italien Reinhold Messner en 1978 ?",
+  "explanation": "Avec Peter Habeler. Il a ensuite été le premier à gravir les quatorze sommets de plus de 8 000 m.",
+  "options": [
+   "Gravir l'Everest sans bouteille d'oxygène*",
+   "Traverser l'Atlantique à la nage",
+   "Faire le tour du monde à pied",
+   "Sauter de l'Everest en parachute"
+  ]
+ },
+ {
+  "key": "spo20-280",
+  "concept": "sport.champions.v20_honnold",
+  "label": "Alex Honnold",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'a fait l'Américain Alex Honnold en 2017, sur la paroi d'El Capitan (900 m) ?",
+  "explanation": "L'exploit est raconté dans le documentaire « Free Solo », Oscar 2019.",
+  "options": [
+   "Il l'a escaladée sans corde ni protection*",
+   "Il a sauté en parachute",
+   "Il y a dormi un mois",
+   "Il l'a descendue à ski"
+  ]
+ },
+ {
+  "key": "spo20-281",
+  "concept": "sport.champions.v20_alain_robert",
+  "label": "Alain Robert",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi le Français Alain Robert est-il surnommé « Spider-Man » ?",
+  "explanation": "Tour Eiffel, Burj Khalifa, Empire State Building… souvent sans autorisation.",
+  "options": [
+   "Il escalade des gratte-ciel à mains nues*",
+   "Il fabrique des toiles d'araignée",
+   "Il joue dans les films Marvel",
+   "Il nage très vite"
+  ]
+ },
+ {
+  "key": "spo20-282",
+  "concept": "sport.champions.v20_mayol_maiorca",
+  "label": "Le Grand Bleu",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quels deux champions de plongée en apnée ont inspiré le film « Le Grand Bleu » de Luc Besson ?",
+  "explanation": "Jacques Mayol a été le premier à descendre à 100 m de profondeur sans bouteille, en 1976.",
+  "options": [
+   "Jacques Mayol et Enzo Maiorca*",
+   "Jacques Cousteau et Éric Tabarly",
+   "Guillaume Néry et Laure Manaudou",
+   "Alain Bernard et Yannick Agnel"
+  ]
+ },
+ {
+  "key": "spo20-283",
+  "concept": "sport.champions.v20_tony_hawk",
+  "label": "Tony Hawk",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle figure le skateur Tony Hawk a-t-il été le premier à réussir en compétition, en 1999 ?",
+  "explanation": "Aux X Games. Il a ensuite prêté son nom à une célèbre série de jeux vidéo.",
+  "options": [
+   "Le 900 (deux tours et demi en l'air)*",
+   "Le ollie",
+   "Le kickflip",
+   "Le grind"
+  ]
+ },
+ {
+  "key": "spo20-284",
+  "concept": "sport.champions.v20_jappeloup",
+  "label": "Jappeloup",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment s'appelait le petit cheval avec lequel Pierre Durand a été champion olympique de saut d'obstacles en 1988 ?",
+  "explanation": "Il mesurait seulement 1,58 m. Un film lui a été consacré en 2013, avec Guillaume Canet.",
+  "options": [
+   "Jappeloup*",
+   "Ourasi",
+   "Milton",
+   "Galoubet"
+  ]
+ },
+ {
+  "key": "spo20-285",
+  "concept": "sport.champions.v20_jackie_robinson",
+  "label": "Jackie Robinson",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel numéro a été retiré dans toutes les équipes de baseball américaines, en hommage à Jackie Robinson ?",
+  "explanation": "En 1947, il est devenu le premier joueur noir de la ligue majeure. Chaque 15 avril, tous les joueurs portent le 42.",
+  "options": [
+   "Le 42*",
+   "Le 1",
+   "Le 23",
+   "Le 99"
+  ]
+ },
+ {
+  "key": "spo20-286",
+  "concept": "sport.champions.v20_co_brady",
+  "label": "Tom Brady",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "Combien de Super Bowl le quarterback Tom Brady a-t-il remportés, un record ?",
+  "explanation": "Six avec les New England Patriots et un avec les Tampa Bay Buccaneers, à 43 ans.",
+  "answer": 7,
+  "tolerance": 0,
+  "min": 1,
+  "max": 12,
+  "start": 1
+ },
+ {
+  "key": "spo20-287",
+  "concept": "sport.champions.v20_tendulkar",
+  "label": "Sachin Tendulkar",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quel sport l'Indien Sachin Tendulkar est-il une idole nationale ?",
+  "explanation": "Il est le seul joueur à avoir marqué 100 « centuries » (100 points en une manche) en matchs internationaux.",
+  "options": [
+   "Le cricket*",
+   "Le hockey sur gazon",
+   "Le badminton",
+   "Le kabaddi"
+  ]
+ },
+ {
+  "key": "spo20-288",
+  "concept": "sport.champions.v20_co_karabatic",
+  "label": "Nikola Karabatić",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien de médailles d'or olympiques le handballeur Nikola Karabatić a-t-il remportées ?",
+  "explanation": "En 2008, 2012 et 2021. Il a pris sa retraite après les JO de Paris, en 2024.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 0,
+  "max": 6,
+  "start": 0
+ },
+ {
+  "key": "spo20-289",
+  "concept": "sport.champions.v20_volley_or",
+  "label": "Le volley-ball",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle équipe de France a remporté l'or olympique à Tokyo en 2021, puis de nouveau à Paris en 2024 ?",
+  "explanation": "Menée par Earvin Ngapeth, qui a gagné en grande partie grâce à ses gestes fous.",
+  "options": [
+   "Le volley-ball masculin*",
+   "Le football féminin",
+   "Le basket masculin",
+   "Le water-polo"
+  ]
+ },
+ {
+  "key": "spo20-290",
+  "concept": "sport.champions.v20_felix_lebrun",
+  "label": "Félix Lebrun",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel pongiste français, né en 2006, a remporté le bronze en simple aux JO de Paris 2024 ?",
+  "explanation": "Son grand frère Alexis joue aussi en équipe de France. Les deux ont remporté le bronze par équipes.",
+  "options": [
+   "Félix Lebrun*",
+   "Alexis Lebrun",
+   "Simon Gauzy",
+   "Jean-Philippe Gatien"
+  ]
+ },
+ {
+  "key": "spo20-291",
+  "concept": "sport.champions.v20_beaugrand",
+  "label": "Cassandre Beaugrand",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel sport Cassandre Beaugrand est-elle devenue championne olympique à Paris, en 2024 ?",
+  "explanation": "Avec une épreuve de natation dans la Seine, longtemps menacée par la qualité de l'eau.",
+  "options": [
+   "Le triathlon*",
+   "L'aviron",
+   "Le pentathlon",
+   "Le canoë"
+  ]
+ },
+ {
+  "key": "spo20-292",
+  "concept": "sport.champions.v20_bmx_triple",
+  "label": "Paris 2024",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quelle discipline la France a-t-elle réalisé un triplé (or, argent, bronze) aux JO de Paris 2024 ?",
+  "explanation": "Joris Daudet, Sylvain André et Romain Mahieu, à Saint-Quentin-en-Yvelines.",
+  "options": [
+   "Le BMX course*",
+   "Le judo",
+   "L'escrime",
+   "Le skateboard"
+  ]
+ },
+ {
+  "key": "spo20-293",
+  "concept": "sport.champions.v20_surnoms",
+  "label": "Les surnoms",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque surnom à son champion.",
+  "explanation": "Prost devait son surnom à sa façon calculée de piloter. Ali s'était lui-même proclamé « le plus grand ».",
+  "pairs": [
+   [
+    "Le Professeur",
+    "Alain Prost"
+   ],
+   [
+    "The Greatest",
+    "Mohamed Ali"
+   ],
+   [
+    "Le Kaiser",
+    "Franz Beckenbauer"
+   ],
+   [
+    "La Locomotive",
+    "Emil Zátopek"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-294",
+  "concept": "sport.champions.v20_champions_sports_rares",
+  "label": "Les champions",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque champion à son sport.",
+  "explanation": "Quatre légendes dans des sports moins médiatisés.",
+  "pairs": [
+   [
+    "Ronnie O'Sullivan",
+    "Le snooker"
+   ],
+   [
+    "Magnus Carlsen",
+    "Les échecs"
+   ],
+   [
+    "Tony Hawk",
+    "Le skateboard"
+   ],
+   [
+    "Alex Honnold",
+    "L'escalade"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-295",
+  "concept": "sport.champions.v20_pilotes_pays",
+  "label": "La Formule 1",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque pilote de Formule 1 à son pays.",
+  "explanation": "Tous ont été plusieurs fois champions du monde.",
+  "pairs": [
+   [
+    "Juan Manuel Fangio",
+    "Argentine"
+   ],
+   [
+    "Ayrton Senna",
+    "Brésil"
+   ],
+   [
+    "Niki Lauda",
+    "Autriche"
+   ],
+   [
+    "Michael Schumacher",
+    "Allemagne"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-296",
+  "concept": "sport.champions.v20_trophees",
+  "label": "Les trophées",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque compétition à la récompense originale de son vainqueur.",
+  "explanation": "Le pavé rappelle les secteurs de route pavée de « l'Enfer du Nord ».",
+  "pairs": [
+   [
+    "Le Masters de golf",
+    "Une veste verte"
+   ],
+   [
+    "Paris-Roubaix",
+    "Un pavé"
+   ],
+   [
+    "Les 500 miles d'Indianapolis",
+    "Une bouteille de lait"
+   ],
+   [
+    "Wimbledon (dames)",
+    "Un plateau d'argent"
+   ]
+  ]
+ },
+ {
+  "key": "spo20-297",
+  "concept": "sport.champions.v20_tour_vainqueurs_ordre",
+  "label": "Le Tour de France",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces vainqueurs du Tour de France du plus ancien au plus récent.",
+  "explanation": "Anquetil a commencé à gagner en 1957, Merckx en 1969, Hinault en 1978 et Pogačar en 2020.",
+  "items": [
+   "Jacques Anquetil",
+   "Eddy Merckx",
+   "Bernard Hinault",
+   "Tadej Pogačar"
+  ]
+ },
+ {
+  "key": "spo20-298",
+  "concept": "sport.champions.v20_grand_chelem_ordre",
+  "label": "Le tennis",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe les tournois du Grand Chelem dans l'ordre où ils se jouent dans l'année.",
+  "explanation": "Janvier, mai-juin, juillet, puis fin août-septembre.",
+  "items": [
+   "Open d'Australie",
+   "Roland-Garros",
+   "Wimbledon",
+   "US Open"
+  ]
+ },
+ {
+  "key": "spo20-299",
+  "concept": "sport.champions.v20_f1_champions_ordre",
+  "label": "La Formule 1",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces champions du monde de F1 du plus ancien au plus récent.",
+  "explanation": "Fangio dans les années 1950, Prost dans les années 1980, Schumacher autour de 2000, Verstappen depuis 2021.",
+  "items": [
+   "Juan Manuel Fangio",
+   "Alain Prost",
+   "Michael Schumacher",
+   "Max Verstappen"
+  ]
+ },
+ {
+  "key": "spo20-300",
+  "concept": "sport.champions.v20_boxeurs_ordre",
+  "label": "La boxe",
+  "type": "ordering",
+  "difficulty": 75,
+  "prompt": "Classe ces champions du monde des poids lourds du plus ancien au plus récent.",
+  "explanation": "Marciano dans les années 1950, Ali dans les années 1960-1970, Tyson en 1986, Fury en 2015.",
+  "items": [
+   "Rocky Marciano",
+   "Mohamed Ali",
+   "Mike Tyson",
+   "Tyson Fury"
+  ]
+ },
+ {
+  "key": "spo20-301",
+  "concept": "sport.champions.v20_tl_deep_blue",
+  "label": "Les échecs",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année l'ordinateur Deep Blue a-t-il battu Garry Kasparov ?",
+  "explanation": "Kasparov avait gagné le premier match, en 1996. Il a accusé IBM de tricherie, sans preuve.",
+  "answer": 1997,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2020
+ },
+ {
+  "key": "spo20-302",
+  "concept": "sport.champions.v20_tl_fischer_spassky",
+  "label": "Les échecs",
+  "type": "timeline",
+  "difficulty": 80,
+  "prompt": "En quelle année s'est joué le match Fischer-Spassky, à Reykjavik ?",
+  "explanation": "On l'a appelé « le match du siècle ».",
+  "answer": 1972,
+  "tolerance": 4,
+  "min": 1940,
+  "max": 2000
+ },
+ {
+  "key": "spo20-303",
+  "concept": "sport.champions.v20_tl_mandela_rugby",
+  "label": "Le rugby",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année l'Afrique du Sud a-t-elle remporté sa première Coupe du monde de rugby, devant Nelson Mandela ?",
+  "explanation": "C'était aussi la première Coupe du monde organisée par le pays, après la fin de l'apartheid.",
+  "answer": 1995,
+  "tolerance": 3,
+  "min": 1960,
+  "max": 2020
+ },
+ {
+  "key": "spo20-304",
+  "concept": "sport.champions.v20_tl_bataille_sexes",
+  "label": "Billie Jean King",
+  "type": "timeline",
+  "difficulty": 80,
+  "prompt": "En quelle année a eu lieu la « Bataille des sexes » entre Billie Jean King et Bobby Riggs ?",
+  "explanation": "Plus de 90 millions de téléspectateurs l'ont regardée.",
+  "answer": 1973,
+  "tolerance": 4,
+  "min": 1940,
+  "max": 2000
+ },
+ {
+  "key": "spo20-305",
+  "concept": "sport.champions.v20_tl_jackie_robinson",
+  "label": "Le baseball",
+  "type": "timeline",
+  "difficulty": 80,
+  "prompt": "En quelle année Jackie Robinson est-il devenu le premier joueur noir de la ligue majeure de baseball ?",
+  "explanation": "Avec les Brooklyn Dodgers. Il a été élu meilleur débutant de l'année.",
+  "answer": 1947,
+  "tolerance": 5,
+  "min": 1900,
+  "max": 1990
+ },
+ {
+  "key": "spo20-306",
+  "concept": "sport.champions.v20_tl_tiger_masters",
+  "label": "Tiger Woods",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année Tiger Woods a-t-il remporté son premier Masters ?",
+  "explanation": "Il a gagné son dernier Masters en 2019, après de graves blessures.",
+  "answer": 1997,
+  "tolerance": 3,
+  "min": 1970,
+  "max": 2020
+ },
+ {
+  "key": "spo20-307",
+  "concept": "sport.champions.v20_co_federer_wimbledon",
+  "label": "Roger Federer",
+  "type": "counter",
+  "difficulty": 40,
+  "prompt": "Combien de fois Roger Federer a-t-il remporté Wimbledon, un record chez les hommes ?",
+  "explanation": "Le dernier en 2017, à presque 36 ans.",
+  "answer": 8,
+  "tolerance": 0,
+  "min": 3,
+  "max": 12,
+  "start": 3
+ },
+ {
+  "key": "spo20-308",
+  "concept": "sport.champions.v20_co_navratilova",
+  "label": "Martina Navratilova",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien de fois Martina Navratilova a-t-elle gagné Wimbledon en simple, un record ?",
+  "explanation": "Entre 1978 et 1990. Elle a aussi gagné des titres en double jusqu'à presque 50 ans.",
+  "answer": 9,
+  "tolerance": 0,
+  "min": 3,
+  "max": 12,
+  "start": 3
+ },
+ {
+  "key": "spo20-309",
+  "concept": "sport.champions.v20_le_senna",
+  "label": "Senna",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Pilote brésilien, trois fois champion du monde de F1.",
+  "explanation": "Ayrton Senna (1960-1994), réputé imbattable sous la pluie.",
+  "word": "SENNA",
+  "display": "Senna"
+ },
+ {
+  "key": "spo20-310",
+  "concept": "sport.champions.v20_le_lenglen",
+  "label": "Lenglen",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Joueuse française surnommée « la Divine ».",
+  "explanation": "Suzanne Lenglen (1899-1938).",
+  "word": "LENGLEN",
+  "display": "Lenglen"
+ },
+ {
+  "key": "spo20-311",
+  "concept": "sport.champions.v20_le_carlsen",
+  "label": "Carlsen",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Champion d'échecs norvégien.",
+  "explanation": "Magnus Carlsen, né en 1990.",
+  "word": "CARLSEN",
+  "display": "Carlsen"
+ },
+ {
+  "key": "spo20-312",
+  "concept": "sport.champions.v20_le_tyson",
+  "label": "Tyson",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Boxeur surnommé « Iron Mike ».",
+  "explanation": "Mike Tyson, né en 1966 à New York.",
+  "word": "TYSON",
+  "display": "Tyson"
+ },
+ {
+  "key": "spo20-313",
+  "concept": "sport.champions.v20_le_jordan",
+  "label": "Jordan",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Basketteur légendaire des Chicago Bulls, numéro 23.",
+  "explanation": "Michael Jordan, considéré par beaucoup comme le meilleur joueur de l'histoire.",
+  "word": "JORDAN",
+  "display": "Jordan"
+ },
+ {
+  "key": "spo20-314",
+  "concept": "sport.champions.v20_tf_ali_vietnam",
+  "label": "Mohamed Ali",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Mohamed Ali a été privé de son titre pour avoir refusé d'aller combattre au Vietnam.",
+  "explanation": "En 1967. Il n'a pas pu boxer pendant trois ans et demi, avant d'être blanchi par la Cour suprême.",
+  "answer": true
+ },
+ {
+  "key": "spo20-315",
+  "concept": "sport.champions.v20_tf_jordan_lycee",
+  "label": "Michael Jordan",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Michael Jordan n'a pas été retenu dans l'équipe première de son lycée lors d'une sélection.",
+  "explanation": "Il a été placé dans l'équipe réserve. Cet échec l'a poussé à s'entraîner encore plus.",
+  "answer": true
+ },
+ {
+  "key": "spo20-316",
+  "concept": "sport.champions.v20_tf_senna_argentin",
+  "label": "Ayrton Senna",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Ayrton Senna était argentin.",
+  "explanation": "Il était brésilien, né à São Paulo. L'Argentin célèbre de la F1, c'est Juan Manuel Fangio.",
+  "answer": false
+ },
+ {
+  "key": "spo20-317",
+  "concept": "sport.champions.v20_tf_parker_belgique",
+  "label": "Tony Parker",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Tony Parker est né en Belgique.",
+  "explanation": "À Bruges, en 1982, d'un père américain basketteur et d'une mère néerlandaise. Il a grandi en Normandie.",
+  "answer": true
+ },
+ {
+  "key": "spo20-318",
+  "concept": "sport.champions.v20_tf_federer_ramasseur",
+  "label": "Roger Federer",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Roger Federer a été ramasseur de balles au tournoi de Bâle, avant d'y être champion.",
+  "explanation": "Dans sa ville natale. Il a ensuite gagné ce tournoi dix fois.",
+  "answer": true
+ },
+ {
+  "key": "spo20-319",
+  "concept": "sport.champions.v20_tf_nadal_gaucher",
+  "label": "Rafael Nadal",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Rafael Nadal écrit de la main gauche.",
+  "explanation": "Il est droitier dans la vie. Il joue au tennis de la main gauche, peut-être sur les conseils de son oncle Toni.",
+  "answer": false
+ },
+ {
+  "key": "spo20-320",
+  "concept": "sport.champions.v20_tf_tiger_prenom",
+  "label": "Tiger Woods",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "« Tiger » est le vrai prénom du golfeur Tiger Woods.",
+  "explanation": "Il s'appelle Eldrick. « Tiger » est un surnom donné par son père, en hommage à un ami soldat.",
+  "answer": false
+ },
+ {
+  "key": "spo20-321",
+  "concept": "sport.champions.v20_tf_carlsen_13",
+  "label": "Magnus Carlsen",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Magnus Carlsen est devenu grand maître international d'échecs à 13 ans.",
+  "explanation": "En 2004, à 13 ans et 4 mois, l'un des plus jeunes de l'histoire.",
+  "answer": true
+ },
+ {
+  "key": "spo20-322",
+  "concept": "sport.champions.v20_tf_indy_lait",
+  "label": "Indianapolis",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le vainqueur des 500 miles d'Indianapolis boit traditionnellement du lait.",
+  "explanation": "Une tradition lancée en 1936 par Louis Meyer, qui avait demandé un verre de babeurre.",
+  "answer": true
+ },
+ {
+  "key": "spo20-323",
+  "concept": "sport.champions.v20_tf_manaudou_freres",
+  "label": "Les Manaudou",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Laure et Florent Manaudou, tous deux champions olympiques de natation, sont frère et sœur.",
+  "explanation": "Laure a gagné l'or en 2004, Florent en 2012. Leur frère Nicolas nageait aussi.",
+  "answer": true
+ },
+ {
+  "key": "spo20-324",
+  "concept": "sport.champions.v20_tf_loeb_gym",
+  "label": "Sébastien Loeb",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Avant de piloter, Sébastien Loeb pratiquait la gymnastique à un bon niveau.",
+  "explanation": "Il a été champion d'Alsace. Il dit que cela l'a aidé pour l'équilibre et les réflexes.",
+  "answer": true
+ },
+ {
+  "key": "spo20-325",
+  "concept": "sport.champions.v20_tf_tyson_invaincu",
+  "label": "Mike Tyson",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Mike Tyson n'a jamais perdu un combat professionnel.",
+  "explanation": "Il a perdu six fois, dont une défaite surprise contre Buster Douglas en 1990.",
+  "answer": false
+ },
+ {
+  "key": "spo20-326",
+  "concept": "sport.champions.v20_tf_bartoli_set",
+  "label": "Marion Bartoli",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Marion Bartoli a gagné Wimbledon 2013 sans perdre un seul set.",
+  "explanation": "Sept matchs, quatorze sets gagnés. Elle a pris sa retraite quelques semaines plus tard.",
+  "answer": true
+ },
+ {
+  "key": "spo20-327",
+  "concept": "sport.champions.v20_tf_brady_une_equipe",
+  "label": "Tom Brady",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Tom Brady a joué toute sa carrière dans la même équipe.",
+  "explanation": "Vingt saisons aux New England Patriots, puis trois aux Tampa Bay Buccaneers.",
+  "answer": false
+ },
+ {
+  "key": "spo20-328",
+  "concept": "sport.champions.v20_tf_hinault_trois_tours",
+  "label": "Bernard Hinault",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Bernard Hinault a remporté le Tour de France, le Tour d'Italie et le Tour d'Espagne.",
+  "explanation": "Cinq Tours de France, trois Tours d'Italie et deux Tours d'Espagne.",
+  "answer": true
+ },
+ {
+  "key": "spo20-329",
+  "concept": "sport.champions.v20_tf_tendulkar_pakistan",
+  "label": "Sachin Tendulkar",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le joueur de cricket Sachin Tendulkar est pakistanais.",
+  "explanation": "Il est indien, né à Bombay en 1973. Il a été élu au Parlement indien.",
+  "answer": false
+ },
+ {
+  "key": "spo20-330",
+  "concept": "sport.champions.v20_tf_borg_26",
+  "label": "Björn Borg",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Björn Borg a arrêté sa carrière à seulement 26 ans.",
+  "explanation": "En 1983, après 11 titres du Grand Chelem. Il a ensuite lancé une marque de sous-vêtements.",
+  "answer": true
+ },
+ {
+  "key": "spo20-331",
+  "concept": "sport.champions.v20_tf_djokovic_croate",
+  "label": "Novak Djokovic",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Novak Djokovic est croate.",
+  "explanation": "Il est serbe, né à Belgrade en 1987.",
+  "answer": false
+ },
+ {
+  "key": "spo20-332",
+  "concept": "sport.champions.v20_tf_osullivan_flechettes",
+  "label": "Ronnie O'Sullivan",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Ronnie O'Sullivan est un champion de fléchettes.",
+  "explanation": "C'est une légende du snooker, sept fois champion du monde.",
+  "answer": false
+ },
+ {
+  "key": "spo20-333",
+  "concept": "sport.champions.v20_tf_messner_oxygene",
+  "label": "Reinhold Messner",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Reinhold Messner a gravi l'Everest seul, sans oxygène et sans aide, en 1980.",
+  "explanation": "Deux ans après sa première ascension sans oxygène avec Peter Habeler.",
+  "answer": true
+ },
+ {
+  "key": "spo20-334",
+  "concept": "sport.champions.v20_tf_weissmuller_nageur",
+  "label": "Johnny Weissmuller",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "L'acteur de Tarzan, Johnny Weissmuller, n'avait jamais nagé en compétition.",
+  "explanation": "Il a été cinq fois champion olympique de natation, en 1924 et 1928.",
+  "answer": false
+ },
+ {
+  "key": "spo20-335",
+  "concept": "sport.champions.v20_tf_chabal_footballeur",
+  "label": "Sébastien Chabal",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Sébastien Chabal était footballeur.",
+  "explanation": "Il était rugbyman, troisième ligne ou deuxième ligne, international français.",
+  "answer": false
+ },
+ {
+  "key": "spo20-336",
+  "concept": "sport.champions.v20_pantani_pirate",
+  "label": "Marco Pantani",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel surnom portait le grimpeur italien Marco Pantani, vainqueur du Tour de France 1998 ?",
+  "explanation": "Pour son bandana et sa boucle d'oreille. Il a gagné le Tour d'Italie et le Tour de France la même année.",
+  "options": [
+   "Le Pirate*",
+   "Le Cannibale",
+   "L'Aigle",
+   "Le Chat"
+  ]
+ },
+ {
+  "key": "spo20-337",
+  "concept": "sport.champions.v20_virenque_pois",
+  "label": "Richard Virenque",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien de fois Richard Virenque a-t-il remporté le maillot à pois du meilleur grimpeur du Tour, un record ?",
+  "explanation": "Entre 1994 et 2004. Il a dépassé le record de Federico Bahamontes et Lucien Van Impe (six).",
+  "options": [
+   "Sept fois*",
+   "Deux fois",
+   "Quatre fois",
+   "Dix fois"
+  ]
+ },
+ {
+  "key": "spo20-338",
+  "concept": "sport.champions.v20_vonn_retour",
+  "label": "Lindsey Vonn",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel retour surprenant la skieuse américaine Lindsey Vonn a-t-elle fait fin 2024 ?",
+  "explanation": "Elle avait arrêté en 2019. Elle est remontée sur des podiums à plus de 40 ans.",
+  "options": [
+   "Revenir en Coupe du monde à 40 ans, avec un genou artificiel*",
+   "Passer au saut à ski",
+   "Devenir entraîneuse de l'équipe de France",
+   "Skier sur une seule jambe"
+  ]
+ },
+ {
+  "key": "spo20-339",
+  "concept": "sport.champions.v20_ali_atlanta",
+  "label": "Mohamed Ali",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle légende de la boxe a allumé la vasque olympique aux JO d'Atlanta, en 1996 ?",
+  "explanation": "Atteint de la maladie de Parkinson, il tremblait en tenant la flamme. Un moment très émouvant.",
+  "options": [
+   "Mohamed Ali*",
+   "Mike Tyson",
+   "George Foreman",
+   "Joe Frazier"
+  ]
+ },
+ {
+  "key": "spo20-340",
+  "concept": "sport.champions.v20_mayweather_money",
+  "label": "Floyd Mayweather",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel surnom s'est donné le boxeur américain Floyd Mayweather, l'un des sportifs les mieux payés de l'histoire ?",
+  "explanation": "Il a pris sa retraite invaincu, avec 50 victoires en 50 combats.",
+  "options": [
+   "Money*",
+   "The Greatest",
+   "Iron",
+   "Golden Boy"
+  ]
+ },
+ {
+  "key": "spo20-341",
+  "concept": "sport.champions.v20_mcenroe_serious",
+  "label": "John McEnroe",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel joueur, célèbre pour ses colères, a crié « You cannot be serious ! » à un arbitre de Wimbledon ?",
+  "explanation": "En 1981. La phrase est devenue le titre de son autobiographie.",
+  "options": [
+   "John McEnroe*",
+   "Björn Borg",
+   "Roger Federer",
+   "Ivan Lendl"
+  ]
+ },
+ {
+  "key": "spo20-342",
+  "concept": "sport.champions.v20_rodman_cheveux",
+  "label": "Dennis Rodman",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pour quoi le basketteur Dennis Rodman, coéquipier de Michael Jordan, était-il célèbre en dehors des terrains ?",
+  "explanation": "C'était aussi l'un des meilleurs rebondeurs de l'histoire de la NBA.",
+  "options": [
+   "Ses cheveux teints de toutes les couleurs*",
+   "Ses talents de pianiste",
+   "Sa très petite taille",
+   "Son refus de parler aux journalistes"
+  ]
+ },
+ {
+  "key": "spo20-343",
+  "concept": "sport.champions.v20_alonso_2005",
+  "label": "Fernando Alonso",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pilote espagnol a été champion du monde de Formule 1 en 2005 et 2006, mettant fin au règne de Schumacher ?",
+  "explanation": "Il court encore en F1 plus de vingt ans après ses débuts, en 2001.",
+  "options": [
+   "Fernando Alonso*",
+   "Carlos Sainz",
+   "Pedro de la Rosa",
+   "Marc Márquez"
+  ]
+ },
+ {
+  "key": "spo20-344",
+  "concept": "sport.champions.v20_johnson_dorees",
+  "label": "Michael Johnson",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle particularité avaient les chaussures de Michael Johnson lors de son doublé 200 m-400 m aux JO d'Atlanta ?",
+  "explanation": "Il a aussi battu le record du monde du 200 m, en 19,32 s, avec sa façon de courir très droite.",
+  "options": [
+   "Elles étaient dorées*",
+   "Elles n'avaient pas de pointes",
+   "Elles étaient dépareillées",
+   "Elles étaient en bois"
+  ]
+ },
+ {
+  "key": "spo20-345",
+  "concept": "sport.champions.v20_thorpe_thorpedo",
+  "label": "Ian Thorpe",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel nageur australien était surnommé « Thorpedo » ?",
+  "explanation": "Cinq fois champion olympique, il a pris sa retraite à 24 ans à peine.",
+  "options": [
+   "Ian Thorpe*",
+   "Michael Phelps",
+   "Mark Spitz",
+   "Grant Hackett"
+  ]
+ },
+ {
+  "key": "spo20-346",
+  "concept": "sport.champions.v20_agnel_2012",
+  "label": "Yannick Agnel",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel Français est devenu champion olympique du 200 m nage libre à Londres, en 2012 ?",
+  "explanation": "Il a aussi gagné le relais 4 x 100 m nage libre, en battant les Américains.",
+  "options": [
+   "Yannick Agnel*",
+   "Alain Bernard",
+   "Camille Lacourt",
+   "Fabien Gilot"
+  ]
+ },
+ {
+  "key": "spo20-347",
+  "concept": "sport.champions.v20_macarthur_2005",
+  "label": "Ellen MacArthur",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel record la navigatrice britannique Ellen MacArthur a-t-elle battu en 2005 ?",
+  "explanation": "En 71 jours. La reine Élisabeth II l'a ensuite anoblie.",
+  "options": [
+   "Le tour du monde à la voile en solitaire le plus rapide*",
+   "La traversée de la Manche à la nage",
+   "Le saut en parachute le plus haut",
+   "La plus longue course de kayak"
+  ]
+ },
+ {
+  "key": "spo20-348",
+  "concept": "sport.champions.v20_tabei",
+  "label": "Junko Tabei",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qui a été, en 1975, la première femme à atteindre le sommet de l'Everest ?",
+  "explanation": "Elle a ensuite été la première femme à gravir le plus haut sommet de chaque continent.",
+  "options": [
+   "La Japonaise Junko Tabei*",
+   "La Française Catherine Destivelle",
+   "L'Américaine Lynn Hill",
+   "La Népalaise Pasang Lhamu"
+  ]
+ },
+ {
+  "key": "spo20-349",
+  "concept": "sport.champions.v20_noah_chanteur",
+  "label": "Yannick Noah",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle carrière Yannick Noah a-t-il menée après le tennis ?",
+  "explanation": "Avec des tubes comme « Saga Africa » et « Simon Papa Tara ». Il est souvent la personnalité préférée des Français.",
+  "options": [
+   "Chanteur*",
+   "Acteur de cinéma",
+   "Pilote de course",
+   "Ministre"
+  ]
+ },
+ {
+  "key": "spo20-350",
+  "concept": "sport.champions.v20_henie_hollywood",
+  "label": "Sonja Henie",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Après trois titres olympiques en patinage artistique, la Norvégienne Sonja Henie est devenue…",
+  "explanation": "Championne olympique en 1928, 1932 et 1936, elle a joué dans une dizaine de films.",
+  "options": [
+   "Une star de cinéma à Hollywood*",
+   "Reine de Norvège",
+   "Présidente du CIO",
+   "Aviatrice"
+  ]
+ },
+ {
+  "key": "spo20-351",
+  "concept": "sport.champions.v20_chavanel_tours",
+  "label": "Le Tour de France",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel record détient le Français Sylvain Chavanel sur le Tour de France ?",
+  "explanation": "Entre 2001 et 2018. Il a gagné trois étapes et porté deux jours le maillot jaune.",
+  "options": [
+   "Le plus grand nombre de participations (18)*",
+   "Le plus de victoires d'étapes",
+   "Le plus de maillots jaunes",
+   "La plus grande vitesse en descente"
+  ]
+ },
+ {
+  "key": "spo20-352",
+  "concept": "sport.champions.v20_ngapeth",
+  "label": "Earvin Ngapeth",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel sport Earvin Ngapeth est-il une star, connu pour ses gestes spectaculaires ?",
+  "explanation": "Double champion olympique avec la France, en 2021 et 2024. Son père Éric a aussi joué en équipe de France.",
+  "options": [
+   "Le volley-ball*",
+   "Le handball",
+   "Le basket",
+   "Le rugby"
+  ]
+ },
+ {
+  "key": "spo20-353",
+  "concept": "sport.champions.v20_agbegnenou",
+  "label": "Clarisse Agbégnénou",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel sport Clarisse Agbégnénou a-t-elle été six fois championne du monde ?",
+  "explanation": "Née prématurément, elle a dû se battre dès sa naissance, d'où son surnom de « guerrière ».",
+  "options": [
+   "Le judo*",
+   "La lutte",
+   "Le taekwondo",
+   "La boxe"
+  ]
+ },
+ {
+  "key": "spo20-354",
+  "concept": "sport.champions.v20_co_hinault_giro",
+  "label": "Le Tour de France",
+  "type": "counter",
+  "difficulty": 85,
+  "prompt": "Combien de fois Bernard Hinault a-t-il remporté le Tour d'Italie ?",
+  "explanation": "En 1980, 1982 et 1985. Le maillot de leader y est rose.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 0,
+  "max": 8,
+  "start": 0
+ },
+ {
+  "key": "spo20-355",
+  "concept": "sport.champions.v20_le_pantani",
+  "label": "Pantani",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Grimpeur italien surnommé « le Pirate ».",
+  "explanation": "Marco Pantani (1970-2004).",
+  "word": "PANTANI",
+  "display": "Pantani"
+ },
+ {
+  "key": "spo20-356",
+  "concept": "sport.champions.v20_le_bolt",
+  "label": "Bolt",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Sprinteur jamaïcain, recordman du 100 m.",
+  "explanation": "Usain Bolt, 9,58 s en 2009 à Berlin.",
+  "word": "BOLT",
+  "display": "Bolt"
+ },
+ {
+  "key": "spo20-357",
+  "concept": "sport.champions.v20_tf_mcenroe_gaucher",
+  "label": "John McEnroe",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "John McEnroe jouait au tennis de la main gauche.",
+  "explanation": "Comme Rod Laver, Martina Navratilova et Rafael Nadal.",
+  "answer": true
+ },
+ {
+  "key": "spo20-358",
+  "concept": "sport.champions.v20_tf_tour_etranger",
+  "label": "Le Tour de France",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le Tour de France est déjà parti d'un autre pays que la France.",
+  "explanation": "Souvent : Florence en 2024, Bilbao en 2023, Copenhague en 2022, Barcelone prévu en 2026.",
+  "answer": true
+ },
+ {
+  "key": "spo20-359",
+  "concept": "sport.champions.v20_tf_henie_hiver",
+  "label": "Sonja Henie",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Sonja Henie a participé à ses premiers Jeux olympiques à 11 ans.",
+  "explanation": "En 1924, à Chamonix. Elle a fini dernière… avant de tout gagner les trois Jeux suivants.",
+  "answer": true
+ },
+ {
+  "key": "spo20-360",
+  "concept": "sport.champions.v20_tf_noah_footballeur",
+  "label": "Yannick Noah",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le fils de Yannick Noah, Joakim, a fait carrière dans le football.",
+  "explanation": "Joakim Noah a été un joueur de basket NBA, élu meilleur défenseur de la ligue en 2014.",
+  "answer": false
+ },
+ {
+  "key": "spo20-361",
+  "concept": "sport.champions.v20_tf_virenque_tour",
+  "label": "Richard Virenque",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Richard Virenque a remporté le Tour de France.",
+  "explanation": "Son meilleur classement est 2e, en 1997, derrière Jan Ullrich. Il a gagné sept étapes.",
+  "answer": false
+ }
+]
