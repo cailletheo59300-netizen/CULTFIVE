@@ -1,0 +1,6221 @@
+[
+ {
+  "key": "mus17-001",
+  "concept": "music.classical.v17_mozart_enfant",
+  "label": "Mozart enfant",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quel âge Mozart aurait-il composé ses premiers petits morceaux ?",
+  "explanation": "Son père Leopold notait ses premières pièces pour clavier, écrites vers 5 ans. Il partit en tournée en Europe dès 6 ans.",
+  "options": [
+   "Vers 5 ans*",
+   "Vers 10 ans",
+   "Vers 15 ans",
+   "Vers 20 ans"
+  ]
+ },
+ {
+  "key": "mus17-002",
+  "concept": "music.classical.v17_mozart_age_mort",
+  "label": "Mort de Mozart",
+  "type": "numeric",
+  "difficulty": 50,
+  "prompt": "À quel âge Mozart est-il mort, en 1791 ?",
+  "explanation": "Né en 1756 à Salzbourg, il meurt à Vienne à 35 ans, en laissant son « Requiem » inachevé.",
+  "answer": 35,
+  "tolerance": 0
+ },
+ {
+  "key": "mus17-004",
+  "concept": "music.classical.v17_mozart_amadeus",
+  "label": "Amadeus",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel film de Miloš Forman (1984) raconte la rivalité entre Mozart et Salieri ?",
+  "explanation": "Le film a remporté huit Oscars. La rivalité y est très romancée : Salieri n'a sans doute pas empoisonné Mozart.",
+  "options": [
+   "Amadeus*",
+   "Requiem",
+   "Le Maître de Vienne",
+   "La Flûte"
+  ]
+ },
+ {
+  "key": "mus17-006",
+  "concept": "music.classical.v17_beethoven_elise",
+  "label": "Lettre à Élise",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel compositeur a écrit le célèbre morceau de piano « Lettre à Élise » ?",
+  "explanation": "Une bagatelle de 1810, publiée après sa mort. On ne sait toujours pas qui était cette Élise.",
+  "options": [
+   "Beethoven*",
+   "Mozart",
+   "Chopin",
+   "Schubert"
+  ]
+ },
+ {
+  "key": "mus17-007",
+  "concept": "music.classical.v17_beethoven_5_destin",
+  "label": "La 5e de Beethoven",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Les quatre notes « ta-ta-ta-taaa » ouvrent quelle symphonie de Beethoven ?",
+  "explanation": "On l'a surnommée « le destin qui frappe à la porte ». Ce motif a même servi d'indicatif à la BBC pendant la Seconde Guerre mondiale.",
+  "options": [
+   "La 5e*",
+   "La 9e",
+   "La 3e",
+   "La 7e"
+  ]
+ },
+ {
+  "key": "mus17-009",
+  "concept": "music.classical.v17_bach_enfants",
+  "label": "Bach",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Jean-Sébastien Bach a eu combien d'enfants environ ?",
+  "explanation": "Vingt enfants de deux mariages, dont la moitié sont morts jeunes. Plusieurs fils sont devenus compositeurs à leur tour.",
+  "options": [
+   "20*",
+   "5",
+   "10",
+   "35"
+  ]
+ },
+ {
+  "key": "mus17-010",
+  "concept": "music.classical.v17_bach_instrument",
+  "label": "Bach",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel instrument Jean-Sébastien Bach était-il un virtuose célèbre ?",
+  "explanation": "Organiste dans plusieurs églises, il a écrit la célèbre « Toccata et fugue en ré mineur ».",
+  "options": [
+   "L'orgue*",
+   "Le violon",
+   "La flûte",
+   "La harpe"
+  ]
+ },
+ {
+  "key": "mus17-011",
+  "concept": "music.classical.v17_bach_toccata",
+  "label": "Toccata et fugue",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "La « Toccata et fugue en ré mineur », musique de film d'horreur par excellence, est jouée à…",
+  "explanation": "Ses premières notes, très sombres, sont devenues le cliché du château hanté et du savant fou.",
+  "options": [
+   "L'orgue*",
+   "Au piano",
+   "Au clavecin",
+   "À l'orchestre"
+  ]
+ },
+ {
+  "key": "mus17-012",
+  "concept": "music.classical.v17_vivaldi_pretre",
+  "label": "Vivaldi",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel surnom avait Antonio Vivaldi, qui était prêtre ?",
+  "explanation": "« Il Prete rosso », à cause de ses cheveux roux. Il enseignait la musique aux orphelines d'un hospice de Venise.",
+  "options": [
+   "Le Prêtre roux*",
+   "Le Moine chantant",
+   "Le Petit Père",
+   "L'Abbé de Venise"
+  ]
+ },
+ {
+  "key": "mus17-013",
+  "concept": "music.classical.v17_chopin_pays",
+  "label": "Chopin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "De quel pays était originaire Frédéric Chopin ?",
+  "explanation": "Né près de Varsovie d'un père français, il s'installe à Paris à 21 ans et n'en repartira plus.",
+  "options": [
+   "La Pologne*",
+   "La France",
+   "L'Autriche",
+   "La Russie"
+  ]
+ },
+ {
+  "key": "mus17-014",
+  "concept": "music.classical.v17_chopin_coeur",
+  "label": "Chopin",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Où repose le cœur de Chopin ?",
+  "explanation": "Son corps est à Paris, mais sa sœur rapporta son cœur en Pologne, dans un bocal de cognac, selon son vœu.",
+  "options": [
+   "Dans une église de Varsovie*",
+   "Au Père-Lachaise, à Paris",
+   "Dans un musée de Vienne",
+   "Sur l'île de Majorque"
+  ]
+ },
+ {
+  "key": "mus17-015",
+  "concept": "music.classical.v17_chopin_instrument",
+  "label": "Chopin",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Pour quel instrument Chopin a-t-il écrit presque toutes ses œuvres ?",
+  "explanation": "On l'appelle « le poète du piano » : nocturnes, valses, polonaises, mazurkas…",
+  "options": [
+   "Le piano*",
+   "Le violon",
+   "L'orgue",
+   "La harpe"
+  ]
+ },
+ {
+  "key": "mus17-016",
+  "concept": "music.classical.v17_liszt_rockstar",
+  "label": "Liszt",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pianiste du XIXe siècle provoquait de telles crises d'hystérie chez ses fans qu'on a parlé de « lisztomania » ?",
+  "explanation": "Les dames se battaient pour ses gants ou ses mèches de cheveux : la première rock star de l'histoire.",
+  "options": [
+   "Franz Liszt*",
+   "Frédéric Chopin",
+   "Robert Schumann",
+   "Johannes Brahms"
+  ]
+ },
+ {
+  "key": "mus17-017",
+  "concept": "music.classical.v17_paganini",
+  "label": "Paganini",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel violoniste italien jouait si bien qu'on l'accusait d'avoir vendu son âme au diable ?",
+  "explanation": "Sa virtuosité semblait surnaturelle. Ses « 24 Caprices » restent parmi les pièces les plus difficiles du répertoire.",
+  "options": [
+   "Niccolò Paganini*",
+   "Antonio Vivaldi",
+   "Arcangelo Corelli",
+   "Giuseppe Tartini"
+  ]
+ },
+ {
+  "key": "mus17-018",
+  "concept": "music.classical.v17_handel_messie",
+  "label": "Le Messie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel compositeur a écrit l'oratorio « Le Messie » et son célèbre « Alléluia » ?",
+  "explanation": "Créé à Dublin en 1742. Selon la tradition, le public se lève pendant l'« Alléluia ».",
+  "options": [
+   "Haendel*",
+   "Bach",
+   "Vivaldi",
+   "Haydn"
+  ]
+ },
+ {
+  "key": "mus17-019",
+  "concept": "music.classical.v17_haendel_feu_artifice",
+  "label": "Haendel",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pour quel roi Haendel a-t-il écrit « Water Music », jouée sur une barque sur la Tamise ?",
+  "explanation": "En 1717, l'orchestre suivait la barge royale sur la Tamise. Le roi aurait fait rejouer la musique trois fois.",
+  "options": [
+   "George Ier d'Angleterre*",
+   "Louis XIV",
+   "Frédéric II de Prusse",
+   "Henri VIII"
+  ]
+ },
+ {
+  "key": "mus17-020",
+  "concept": "music.classical.v17_haydn_surprise",
+  "label": "Haydn",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi la 94e symphonie de Haydn s'appelle-t-elle « La Surprise » ?",
+  "explanation": "Un passage tout doux, puis soudain un grand accord fortissimo. Les musiciens qui partent un à un, c'est sa symphonie « Les Adieux » !",
+  "options": [
+   "Un coup de timbale très fort réveille l'auditoire*",
+   "Elle se termine au milieu d'une phrase",
+   "Les musiciens quittent la scène un à un",
+   "Elle n'a pas été écrite par Haydn"
+  ]
+ },
+ {
+  "key": "mus17-021",
+  "concept": "music.classical.v17_haydn_adieux",
+  "label": "Haydn",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Dans la symphonie « Les Adieux » de Haydn, que font les musiciens à la fin ?",
+  "explanation": "Une manière polie de dire au prince Esterházy que ses musiciens voulaient rentrer chez eux.",
+  "options": [
+   "Ils quittent la scène un par un*",
+   "Ils chantent",
+   "Ils jouent de plus en plus fort",
+   "Ils échangent leurs instruments"
+  ]
+ },
+ {
+  "key": "mus17-022",
+  "concept": "music.classical.v17_schubert_lieder",
+  "label": "Schubert",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de « lieder » (chansons) Franz Schubert a-t-il composés environ ?",
+  "explanation": "Plus de 600 lieder en à peine 31 ans de vie, dont « Le Roi des aulnes » d'après Goethe.",
+  "options": [
+   "Plus de 600*",
+   "Une cinquantaine",
+   "Environ 150",
+   "Une dizaine"
+  ]
+ },
+ {
+  "key": "mus17-023",
+  "concept": "music.classical.v17_schubert_inachevee",
+  "label": "L'Inachevée",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel compositeur a laissé une célèbre symphonie « Inachevée » ?",
+  "explanation": "Sa 8e symphonie ne compte que deux mouvements au lieu de quatre. On ignore pourquoi il ne l'a jamais terminée.",
+  "options": [
+   "Franz Schubert*",
+   "Ludwig van Beethoven",
+   "Johannes Brahms",
+   "Antonín Dvořák"
+  ]
+ },
+ {
+  "key": "mus17-024",
+  "concept": "music.classical.v17_dvorak_nouveau_monde",
+  "label": "Symphonie du Nouveau Monde",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui a composé la symphonie « Du Nouveau Monde » (1893), écrite aux États-Unis ?",
+  "explanation": "Le compositeur tchèque dirigeait alors le conservatoire de New York. Neil Armstrong aurait emporté un enregistrement sur la Lune.",
+  "options": [
+   "Antonín Dvořák*",
+   "Bedřich Smetana",
+   "Gustav Mahler",
+   "Piotr Ilitch Tchaïkovski"
+  ]
+ },
+ {
+  "key": "mus17-025",
+  "concept": "music.classical.v17_smetana_moldau",
+  "label": "La Moldau",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "« La Moldau » de Smetana décrit…",
+  "explanation": "On y suit la Vltava (Moldau en allemand), de sa source jusqu'à Prague.",
+  "options": [
+   "Une rivière de Bohême*",
+   "Une montagne",
+   "Une forêt enchantée",
+   "Une bataille"
+  ]
+ },
+ {
+  "key": "mus17-026",
+  "concept": "music.classical.v17_grieg_troll",
+  "label": "Peer Gynt",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "« Dans l'antre du roi de la montagne » est un morceau de quel compositeur norvégien ?",
+  "explanation": "Il fait partie de la musique de scène de « Peer Gynt » (1876). Il accélère jusqu'à la frénésie.",
+  "options": [
+   "Edvard Grieg*",
+   "Jean Sibelius",
+   "Carl Nielsen",
+   "Ole Bull"
+  ]
+ },
+ {
+  "key": "mus17-027",
+  "concept": "music.classical.v17_sibelius_finlande",
+  "label": "Sibelius",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De quel pays Jean Sibelius est-il le compositeur national ?",
+  "explanation": "Son poème symphonique « Finlandia » (1899) est devenu un symbole de l'indépendance finlandaise.",
+  "options": [
+   "La Finlande*",
+   "La Suède",
+   "La Norvège",
+   "Le Danemark"
+  ]
+ },
+ {
+  "key": "mus17-028",
+  "concept": "music.classical.v17_rachmaninov_mains",
+  "label": "Rachmaninov",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le pianiste Rachmaninov était célèbre pour…",
+  "explanation": "Il pouvait couvrir un intervalle de treize touches blanches d'une seule main.",
+  "options": [
+   "Ses mains immenses*",
+   "Sa surdité",
+   "Son jeu les yeux bandés",
+   "Ses improvisations au violon"
+  ]
+ },
+ {
+  "key": "mus17-029",
+  "concept": "music.classical.v17_satie_vexations",
+  "label": "Erik Satie",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "« Vexations » d'Erik Satie est un court motif à répéter… combien de fois ?",
+  "explanation": "Une exécution complète dure entre 15 et 20 heures. John Cage l'a organisée pour la première fois en 1963.",
+  "options": [
+   "840 fois*",
+   "10 fois",
+   "100 fois",
+   "1 000 000 de fois"
+  ]
+ },
+ {
+  "key": "mus17-030",
+  "concept": "music.classical.v17_satie_gymnopedies",
+  "label": "Erik Satie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel compositeur français a écrit les « Gymnopédies » ?",
+  "explanation": "Trois pièces lentes et rêveuses pour piano, de 1888, très utilisées au cinéma et dans la publicité.",
+  "options": [
+   "Erik Satie*",
+   "Claude Debussy",
+   "Gabriel Fauré",
+   "Maurice Ravel"
+  ]
+ },
+ {
+  "key": "mus17-031",
+  "concept": "music.classical.v17_debussy_mer",
+  "label": "La Mer",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel compositeur a écrit « La Mer », trois esquisses symphoniques (1905) ?",
+  "explanation": "La couverture de la partition reprenait « La Grande Vague » du peintre japonais Hokusai.",
+  "options": [
+   "Claude Debussy*",
+   "Maurice Ravel",
+   "Camille Saint-Saëns",
+   "Hector Berlioz"
+  ]
+ },
+ {
+  "key": "mus17-032",
+  "concept": "music.classical.v17_ravel_bolero_repetition",
+  "label": "Le Boléro",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Ce qui rend le « Boléro » de Ravel unique, c'est…",
+  "explanation": "Un seul thème et un rythme de caisse claire répétés pendant environ quinze minutes, avec de plus en plus d'instruments.",
+  "options": [
+   "La même mélodie répétée en grossissant jusqu'à la fin*",
+   "Il n'utilise que des percussions",
+   "Il dure plus de deux heures",
+   "Il n'a aucun rythme"
+  ]
+ },
+ {
+  "key": "mus17-033",
+  "concept": "music.classical.v17_saint_saens_carnaval",
+  "label": "Le Carnaval des animaux",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Qui a composé « Le Carnaval des animaux », avec son célèbre « Cygne » ?",
+  "explanation": "Saint-Saëns jugeait l'œuvre trop légère et a interdit qu'on la publie de son vivant… sauf « Le Cygne ».",
+  "options": [
+   "Camille Saint-Saëns*",
+   "Maurice Ravel",
+   "Georges Bizet",
+   "Paul Dukas"
+  ]
+ },
+ {
+  "key": "mus17-034",
+  "concept": "music.classical.v17_dukas_apprenti",
+  "label": "L'Apprenti sorcier",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« L'Apprenti sorcier », que Mickey dirige dans « Fantasia », est de…",
+  "explanation": "Un poème symphonique de 1897, d'après Goethe. Disney l'a rendu célèbre en 1940.",
+  "options": [
+   "Paul Dukas*",
+   "Igor Stravinsky",
+   "Camille Saint-Saëns",
+   "Modeste Moussorgski"
+  ]
+ },
+ {
+  "key": "mus17-035",
+  "concept": "music.classical.v17_stravinsky_sacre",
+  "label": "Le Sacre du printemps",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel ballet de Stravinsky a provoqué une émeute lors de sa création à Paris, en 1913 ?",
+  "explanation": "Musique sauvage et danse inhabituelle : le public a sifflé, crié et même échangé des coups au Théâtre des Champs-Élysées.",
+  "options": [
+   "Le Sacre du printemps*",
+   "L'Oiseau de feu",
+   "Petrouchka",
+   "Casse-Noisette"
+  ]
+ },
+ {
+  "key": "mus17-036",
+  "concept": "music.classical.v17_berlioz_fantastique",
+  "label": "La Symphonie fantastique",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel compositeur français a écrit la « Symphonie fantastique » (1830), inspirée d'un amour fou ?",
+  "explanation": "Berlioz y raconte les rêves d'un artiste obsédé par une femme : l'actrice Harriet Smithson, qu'il finit par épouser.",
+  "options": [
+   "Hector Berlioz*",
+   "Georges Bizet",
+   "Charles Gounod",
+   "Jules Massenet"
+  ]
+ },
+ {
+  "key": "mus17-037",
+  "concept": "music.classical.v17_orff_carmina",
+  "label": "Carmina Burana",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le chœur « O Fortuna », très utilisé dans les films et publicités, vient de…",
+  "explanation": "Une cantate de 1937 sur des poèmes du Moyen Âge, écrits en latin par des moines et des étudiants.",
+  "options": [
+   "Carmina Burana, de Carl Orff*",
+   "Le Requiem de Mozart",
+   "Le Messie de Haendel",
+   "Aïda de Verdi"
+  ]
+ },
+ {
+  "key": "mus17-038",
+  "concept": "music.classical.v17_barber_adagio",
+  "label": "Adagio pour cordes",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel compositeur américain a écrit le célèbre « Adagio pour cordes », joué lors de funérailles nationales ?",
+  "explanation": "On l'entend dans le film « Platoon ». Il a été diffusé à la mort de Franklin Roosevelt puis de John F. Kennedy.",
+  "options": [
+   "Samuel Barber*",
+   "George Gershwin",
+   "Aaron Copland",
+   "Leonard Bernstein"
+  ]
+ },
+ {
+  "key": "mus17-039",
+  "concept": "music.classical.v17_gershwin_rhapsody",
+  "label": "Rhapsody in Blue",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel compositeur a mêlé jazz et classique dans « Rhapsody in Blue » (1924) ?",
+  "explanation": "Elle commence par un célèbre glissando de clarinette, qui monte comme une plainte.",
+  "options": [
+   "George Gershwin*",
+   "Duke Ellington",
+   "Leonard Bernstein",
+   "Cole Porter"
+  ]
+ },
+ {
+  "key": "mus17-040",
+  "concept": "music.classical.v17_bernstein_westside",
+  "label": "West Side Story",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a composé la musique de la comédie musicale « West Side Story » (1957) ?",
+  "explanation": "Sondheim en a écrit les paroles. C'est « Roméo et Juliette » chez les gangs de New York.",
+  "options": [
+   "Leonard Bernstein*",
+   "George Gershwin",
+   "Andrew Lloyd Webber",
+   "Stephen Sondheim"
+  ]
+ },
+ {
+  "key": "mus17-041",
+  "concept": "music.classical.v17_pachelbel_canon",
+  "label": "Le Canon de Pachelbel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel compositeur allemand a écrit le célèbre « Canon en ré », souvent joué aux mariages ?",
+  "explanation": "Écrit vers 1680, oublié pendant des siècles, il est devenu un tube dans les années 1970.",
+  "options": [
+   "Johann Pachelbel*",
+   "Georg Philipp Telemann",
+   "Johann Sebastian Bach",
+   "Dietrich Buxtehude"
+  ]
+ },
+ {
+  "key": "mus17-042",
+  "concept": "music.classical.v17_albinoni_adagio",
+  "label": "L'Adagio d'Albinoni",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Le fameux « Adagio d'Albinoni » a en réalité été composé…",
+  "explanation": "Giazotto disait l'avoir reconstitué à partir d'un fragment d'Albinoni, mais ce fragment n'a jamais été retrouvé.",
+  "options": [
+   "Au XXe siècle, par le musicologue Remo Giazotto*",
+   "Par Albinoni en 1708",
+   "Par Vivaldi",
+   "Par un moine anonyme"
+  ]
+ },
+ {
+  "key": "mus17-043",
+  "concept": "music.classical.v17_mahler_symphonie_mille",
+  "label": "Mahler",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Pourquoi la 8e symphonie de Mahler est-elle surnommée « Symphonie des Mille » ?",
+  "explanation": "À sa création à Munich en 1910, plus de 1 000 musiciens et choristes étaient sur scène.",
+  "options": [
+   "Elle fait jouer et chanter près de mille musiciens*",
+   "Elle dure mille secondes",
+   "Elle a été jouée mille fois du vivant de Mahler",
+   "Elle compte mille mesures"
+  ]
+ },
+ {
+  "key": "mus17-044",
+  "concept": "music.classical.v17_cage_433",
+  "label": "4'33\"",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que joue le pianiste dans l'œuvre « 4'33\" » de John Cage (1952) ?",
+  "explanation": "Quatre minutes et trente-trois secondes de silence : la musique, ce sont les bruits de la salle.",
+  "options": [
+   "Rien du tout*",
+   "Une seule note",
+   "Toutes les touches du piano",
+   "Le même accord en boucle"
+  ]
+ },
+ {
+  "key": "mus17-045",
+  "concept": "music.classical.v17_lully_baton",
+  "label": "Lully",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Comment est mort Jean-Baptiste Lully, musicien de Louis XIV, en 1687 ?",
+  "explanation": "Il battait la mesure avec une lourde canne qu'il se planta dans le pied. La gangrène l'emporta.",
+  "options": [
+   "D'une blessure au pied faite avec son bâton de direction*",
+   "Empoisonné",
+   "Dans un duel",
+   "Tombé d'un carrosse"
+  ]
+ },
+ {
+  "key": "mus17-046",
+  "concept": "music.classical.v17_rameau",
+  "label": "Rameau",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel compositeur français du XVIIIe siècle a écrit « Les Indes galantes » ?",
+  "explanation": "Un opéra-ballet de 1735, devenu célèbre récemment grâce à une version avec des danseurs de krump.",
+  "options": [
+   "Jean-Philippe Rameau*",
+   "François Couperin",
+   "Jean-Baptiste Lully",
+   "Marc-Antoine Charpentier"
+  ]
+ },
+ {
+  "key": "mus17-047",
+  "concept": "music.classical.v17_charpentier_te_deum",
+  "label": "L'Eurovision",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "L'indicatif de l'Eurovision est le prélude du « Te Deum » de quel compositeur français ?",
+  "explanation": "Une musique du XVIIe siècle choisie dans les années 1950 pour annoncer les émissions européennes.",
+  "options": [
+   "Marc-Antoine Charpentier*",
+   "Jean-Baptiste Lully",
+   "Jean-Philippe Rameau",
+   "François Couperin"
+  ]
+ },
+ {
+  "key": "mus17-048",
+  "concept": "music.classical.v17_opera_carmen_lieu",
+  "label": "Carmen",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quelle ville se déroule l'opéra « Carmen » de Bizet ?",
+  "explanation": "Carmen travaille dans une manufacture de tabac de Séville. Elle séduit le soldat Don José, puis le toréador Escamillo.",
+  "options": [
+   "Séville*",
+   "Madrid",
+   "Barcelone",
+   "Grenade"
+  ]
+ },
+ {
+  "key": "mus17-049",
+  "concept": "music.classical.v17_opera_traviata",
+  "label": "La Traviata",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel opéra de Verdi s'inspire de « La Dame aux camélias » d'Alexandre Dumas fils ?",
+  "explanation": "Violetta, une courtisane parisienne, sacrifie son amour pour Alfredo. Créé à Venise en 1853.",
+  "options": [
+   "La Traviata*",
+   "Rigoletto",
+   "Aïda",
+   "Nabucco"
+  ]
+ },
+ {
+  "key": "mus17-050",
+  "concept": "music.classical.v17_opera_aida_egypte",
+  "label": "Aïda",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Où se déroule l'opéra « Aïda » de Verdi ?",
+  "explanation": "Commandé pour le nouvel opéra du Caire et créé en 1871. Sa « Marche triomphale » est célèbre.",
+  "options": [
+   "En Égypte ancienne*",
+   "En Inde",
+   "En Grèce antique",
+   "À Rome"
+  ]
+ },
+ {
+  "key": "mus17-051",
+  "concept": "music.classical.v17_opera_madame_butterfly",
+  "label": "Madame Butterfly",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel pays se déroule « Madame Butterfly » de Puccini ?",
+  "explanation": "Une jeune geisha attend en vain le retour d'un officier américain.",
+  "options": [
+   "Au Japon*",
+   "En Chine",
+   "En Inde",
+   "En Italie"
+  ]
+ },
+ {
+  "key": "mus17-052",
+  "concept": "music.classical.v17_opera_tosca",
+  "label": "Tosca",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À la fin de l'opéra « Tosca » de Puccini, l'héroïne…",
+  "explanation": "Comme souvent à l'opéra, ça finit mal. L'action se passe à Rome, en 1800.",
+  "options": [
+   "Se jette du haut du château Saint-Ange*",
+   "Épouse son amoureux",
+   "Devient reine",
+   "Part pour l'Amérique"
+  ]
+ },
+ {
+  "key": "mus17-053",
+  "concept": "music.classical.v17_opera_nessun_dorma",
+  "label": "Nessun dorma",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quel opéra vient l'air « Nessun dorma », rendu célèbre par Pavarotti ?",
+  "explanation": "Le dernier opéra de Puccini, inachevé à sa mort. L'air a été l'hymne de la Coupe du monde de football 1990.",
+  "options": [
+   "Turandot*",
+   "La Bohème",
+   "Tosca",
+   "Rigoletto"
+  ]
+ },
+ {
+  "key": "mus17-054",
+  "concept": "music.classical.v17_opera_reine_nuit",
+  "label": "La Reine de la nuit",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans quel opéra de Mozart la Reine de la nuit chante-t-elle un air aux notes extrêmement aiguës ?",
+  "explanation": "L'air « Der Hölle Rache » monte jusqu'au contre-fa, une des notes les plus hautes du répertoire.",
+  "options": [
+   "La Flûte enchantée*",
+   "Don Giovanni",
+   "Les Noces de Figaro",
+   "Così fan tutte"
+  ]
+ },
+ {
+  "key": "mus17-055",
+  "concept": "music.classical.v17_opera_wagner_duree",
+  "label": "Wagner",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Combien de temps dure environ « L'Anneau du Nibelung » de Wagner, en quatre opéras ?",
+  "explanation": "Quatre opéras joués sur quatre soirées. Wagner a fait construire un théâtre exprès à Bayreuth.",
+  "options": [
+   "Environ 15 heures*",
+   "Environ 3 heures",
+   "Environ 6 heures",
+   "Environ 30 heures"
+  ]
+ },
+ {
+  "key": "mus17-056",
+  "concept": "music.classical.v17_opera_chevauchee",
+  "label": "La Chevauchée des Walkyries",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel film de guerre a rendu « La Chevauchée des Walkyries » de Wagner célèbre, avec une attaque d'hélicoptères ?",
+  "explanation": "Francis Ford Coppola, 1979 : les hélicoptères attaquent un village au son de Wagner.",
+  "options": [
+   "Apocalypse Now*",
+   "Platoon",
+   "Il faut sauver le soldat Ryan",
+   "Full Metal Jacket"
+  ]
+ },
+ {
+  "key": "mus17-057",
+  "concept": "music.classical.v17_opera_castrat",
+  "label": "Les castrats",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qu'est-ce qu'un « castrat », à l'opéra baroque ?",
+  "explanation": "Une pratique cruelle qui a duré jusqu'au XIXe siècle. Farinelli en fut la grande star.",
+  "options": [
+   "Un chanteur opéré enfant pour garder une voix aiguë*",
+   "Un chanteur sans voix",
+   "Un chef d'orchestre",
+   "Un rôle de méchant"
+  ]
+ },
+ {
+  "key": "mus17-058",
+  "concept": "music.classical.v17_opera_garnier_fantome",
+  "label": "L'Opéra Garnier",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel roman se déroule dans l'Opéra Garnier de Paris ?",
+  "explanation": "Gaston Leroux, 1910. Sous l'Opéra, il y a vraiment une réserve d'eau, qui a inspiré le lac du fantôme.",
+  "options": [
+   "Le Fantôme de l'Opéra*",
+   "Notre-Dame de Paris",
+   "Les Misérables",
+   "Le Comte de Monte-Cristo"
+  ]
+ },
+ {
+  "key": "mus17-059",
+  "concept": "music.classical.v17_opera_garnier_plafond",
+  "label": "L'Opéra Garnier",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel peintre a réalisé le plafond actuel de la salle de l'Opéra Garnier (1964) ?",
+  "explanation": "Commandé par André Malraux. Il rend hommage à quatorze compositeurs.",
+  "options": [
+   "Marc Chagall*",
+   "Pablo Picasso",
+   "Henri Matisse",
+   "Salvador Dalí"
+  ]
+ },
+ {
+  "key": "mus17-060",
+  "concept": "music.classical.v17_operas_compositeurs",
+  "label": "Opéras",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque opéra à son compositeur.",
+  "explanation": "Quatre des opéras les plus joués au monde.",
+  "pairs": [
+   [
+    "Carmen",
+    "Bizet"
+   ],
+   [
+    "La Bohème",
+    "Puccini"
+   ],
+   [
+    "Les Noces de Figaro",
+    "Mozart"
+   ],
+   [
+    "Rigoletto",
+    "Verdi"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-061",
+  "concept": "music.classical.v17_voix_registres",
+  "label": "Les voix",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque voix à sa tessiture.",
+  "explanation": "Entre le ténor et la basse, il y a le baryton. Au-dessus du ténor, le contre-ténor.",
+  "pairs": [
+   [
+    "Soprano",
+    "Femme, voix aiguë"
+   ],
+   [
+    "Mezzo-soprano",
+    "Femme, voix moyenne"
+   ],
+   [
+    "Ténor",
+    "Homme, voix aiguë"
+   ],
+   [
+    "Basse",
+    "Homme, voix grave"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-062",
+  "concept": "music.classical.v17_voix_ordre",
+  "label": "Les voix",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces voix de la plus aiguë à la plus grave.",
+  "explanation": "Les quatre voix d'un chœur classique : soprano et alto (voix de femmes ou d'enfants), ténor et basse (voix d'hommes).",
+  "items": [
+   "Soprano",
+   "Alto",
+   "Ténor",
+   "Basse"
+  ]
+ },
+ {
+  "key": "mus17-063",
+  "concept": "music.classical.v17_ballet_giselle",
+  "label": "Giselle",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans le ballet « Giselle » (1841), que deviennent les jeunes filles mortes avant leur mariage ?",
+  "explanation": "Un grand ballet romantique français, sur une musique d'Adolphe Adam.",
+  "options": [
+   "Des Wilis, des esprits qui font danser les hommes jusqu'à la mort*",
+   "Des cygnes",
+   "Des étoiles",
+   "Des poupées"
+  ]
+ },
+ {
+  "key": "mus17-064",
+  "concept": "music.classical.v17_ballet_sylphide",
+  "label": "Les pointes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi les danseuses classiques dansent-elles sur les « pointes » ?",
+  "explanation": "Popularisées dans les années 1830 par Marie Taglioni dans « La Sylphide » : la ballerine semble flotter.",
+  "options": [
+   "Pour paraître légères, presque en apesanteur*",
+   "Pour aller plus vite",
+   "Pour faire du bruit",
+   "Pour être plus grandes que les danseurs"
+  ]
+ },
+ {
+  "key": "mus17-065",
+  "concept": "music.classical.v17_ballet_tutu",
+  "label": "Le tutu",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appelle la jupe de tulle des danseuses classiques ?",
+  "explanation": "Le tutu peut être long (romantique) ou court et plat (le tutu « plateau »).",
+  "options": [
+   "Le tutu*",
+   "Le tulle",
+   "La crinoline",
+   "Le jupon"
+  ]
+ },
+ {
+  "key": "mus17-066",
+  "concept": "music.classical.v17_ballet_romeo_prokofiev",
+  "label": "Roméo et Juliette",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a composé le ballet « Roméo et Juliette » (1938), avec la célèbre « Danse des chevaliers » ?",
+  "explanation": "Ce thème menaçant est devenu célèbre dans la publicité et au cinéma.",
+  "options": [
+   "Sergueï Prokofiev*",
+   "Piotr Ilitch Tchaïkovski",
+   "Igor Stravinsky",
+   "Dmitri Chostakovitch"
+  ]
+ },
+ {
+  "key": "mus17-067",
+  "concept": "music.classical.v17_pierre_loup",
+  "label": "Pierre et le Loup",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans « Pierre et le Loup » de Prokofiev, quel instrument représente le canard ?",
+  "explanation": "La flûte est l'oiseau, la clarinette le chat, le basson le grand-père, les cors le loup, et les cordes Pierre.",
+  "options": [
+   "Le hautbois*",
+   "La flûte",
+   "La clarinette",
+   "Le basson"
+  ]
+ },
+ {
+  "key": "mus17-068",
+  "concept": "music.classical.v17_pierre_loup_pairs",
+  "label": "Pierre et le Loup",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Dans « Pierre et le Loup », associe chaque personnage à son instrument.",
+  "explanation": "Prokofiev l'a écrit en 1936 pour faire découvrir l'orchestre aux enfants.",
+  "pairs": [
+   [
+    "L'oiseau",
+    "La flûte"
+   ],
+   [
+    "Le chat",
+    "La clarinette"
+   ],
+   [
+    "Le grand-père",
+    "Le basson"
+   ],
+   [
+    "Le loup",
+    "Les cors"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-069",
+  "concept": "music.classical.v17_tempos",
+  "label": "Les tempos",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque indication de tempo à sa vitesse.",
+  "explanation": "Les tempos s'écrivent en italien, la langue des grands compositeurs baroques.",
+  "pairs": [
+   [
+    "Largo",
+    "Très lent"
+   ],
+   [
+    "Andante",
+    "Allant, au pas"
+   ],
+   [
+    "Allegro",
+    "Rapide et joyeux"
+   ],
+   [
+    "Presto",
+    "Très rapide"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-070",
+  "concept": "music.classical.v17_tempos_ordre",
+  "label": "Les tempos",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces tempos du plus lent au plus rapide.",
+  "explanation": "Adagio (à l'aise, lent), andante (allant), allegro (vif), presto (très vite).",
+  "items": [
+   "Adagio",
+   "Andante",
+   "Allegro",
+   "Presto"
+  ]
+ },
+ {
+  "key": "mus17-071",
+  "concept": "music.classical.v17_pizzicato",
+  "label": "Pizzicato",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Jouer « pizzicato » sur un violon, c'est…",
+  "explanation": "De l'italien « pizzicare », pincer.",
+  "options": [
+   "Pincer les cordes avec les doigts*",
+   "Jouer très vite",
+   "Jouer très fort",
+   "Jouer avec deux archets"
+  ]
+ },
+ {
+  "key": "mus17-072",
+  "concept": "music.classical.v17_crescendo",
+  "label": "Nuances",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Un « crescendo », c'est…",
+  "explanation": "Le contraire est le « decrescendo » ou « diminuendo ».",
+  "options": [
+   "Une augmentation progressive du volume*",
+   "Une note tenue",
+   "Un silence",
+   "Un changement de tonalité"
+  ]
+ },
+ {
+  "key": "mus17-073",
+  "concept": "music.classical.v17_symphonie_mouvements",
+  "label": "La symphonie",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de mouvements compte en général une symphonie classique ?",
+  "explanation": "En général : un mouvement rapide, un lent, un menuet ou scherzo, puis un final rapide.",
+  "options": [
+   "Quatre*",
+   "Deux",
+   "Six",
+   "Dix"
+  ]
+ },
+ {
+  "key": "mus17-074",
+  "concept": "music.classical.v17_concerto",
+  "label": "Le concerto",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'un « concerto » ?",
+  "explanation": "Le soliste (violon, piano…) dialogue avec l'orchestre. Vivaldi en a écrit plus de 500.",
+  "options": [
+   "Une œuvre pour un soliste et un orchestre*",
+   "Un concert gratuit",
+   "Une œuvre pour chœur seul",
+   "Une pièce pour deux pianos"
+  ]
+ },
+ {
+  "key": "mus17-075",
+  "concept": "music.classical.v17_requiem",
+  "label": "Le requiem",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce qu'un « requiem » ?",
+  "explanation": "Du premier mot latin de la messe des morts : « Requiem aeternam », « le repos éternel ».",
+  "options": [
+   "Une messe pour les morts*",
+   "Un chant de Noël",
+   "Une danse de cour",
+   "Une berceuse"
+  ]
+ },
+ {
+  "key": "mus17-076",
+  "concept": "music.classical.v17_quatuor_cordes",
+  "label": "Le quatuor",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un quatuor à cordes classique réunit…",
+  "explanation": "Haydn est considéré comme le « père » du quatuor à cordes.",
+  "options": [
+   "Deux violons, un alto et un violoncelle*",
+   "Quatre violons",
+   "Un violon, un piano, une flûte et une harpe",
+   "Deux violoncelles et deux contrebasses"
+  ]
+ },
+ {
+  "key": "mus17-077",
+  "concept": "music.classical.v17_premier_violon",
+  "label": "L'orchestre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment appelle-t-on le premier violon d'un orchestre, qui en est le chef des musiciens ?",
+  "explanation": "Il s'assoit à gauche du chef et serre sa main au début et à la fin du concert.",
+  "options": [
+   "Le violon solo, ou « konzertmeister »*",
+   "Le maestro",
+   "Le premier pupitre",
+   "Le soliste invité"
+  ]
+ },
+ {
+  "key": "mus17-078",
+  "concept": "music.classical.v17_orchestre_musiciens",
+  "label": "L'orchestre",
+  "type": "counter",
+  "difficulty": 55,
+  "prompt": "Environ combien de musiciens compte un grand orchestre symphonique ? (à 20 près)",
+  "explanation": "Entre 80 et 120 musiciens, dont plus de la moitié aux cordes.",
+  "answer": 100,
+  "tolerance": 20,
+  "min": 20,
+  "max": 200,
+  "start": 20
+ },
+ {
+  "key": "mus17-079",
+  "concept": "music.classical.v17_baroque_epoque",
+  "label": "Les époques",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle période musicale va environ de 1600 à 1750, avec Bach, Vivaldi et Haendel ?",
+  "explanation": "Elle se termine symboliquement avec la mort de Bach en 1750. Viennent ensuite le classicisme (Mozart, Haydn) puis le romantisme.",
+  "options": [
+   "Le baroque*",
+   "Le classicisme",
+   "Le romantisme",
+   "La Renaissance"
+  ]
+ },
+ {
+  "key": "mus17-080",
+  "concept": "music.classical.v17_epoques_ordre",
+  "label": "Les époques",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces périodes de la musique de la plus ancienne à la plus récente.",
+  "explanation": "Renaissance (XVe-XVIe s.), baroque (1600-1750), classique (1750-1820), romantique (XIXe s.).",
+  "items": [
+   "Renaissance",
+   "Baroque",
+   "Classique",
+   "Romantique"
+  ]
+ },
+ {
+  "key": "mus17-081",
+  "concept": "music.classical.v17_compositeurs_ordre_2",
+  "label": "Compositeurs",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces compositeurs du plus ancien au plus récent.",
+  "explanation": "Lully (1632), Haydn (1732), Chopin (1810), Stravinsky (1882).",
+  "items": [
+   "Lully",
+   "Haydn",
+   "Chopin",
+   "Stravinsky"
+  ]
+ },
+ {
+  "key": "mus17-082",
+  "concept": "music.classical.v17_compositeurs_ordre_3",
+  "label": "Compositeurs",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces compositeurs du plus ancien au plus récent.",
+  "explanation": "Monteverdi (1567), Haendel (1685), Schubert (1797), Ravel (1875).",
+  "items": [
+   "Monteverdi",
+   "Haendel",
+   "Schubert",
+   "Ravel"
+  ]
+ },
+ {
+  "key": "mus17-083",
+  "concept": "music.classical.v17_compositeurs_pays",
+  "label": "Compositeurs",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque compositeur à son pays.",
+  "explanation": "Chacun s'est inspiré des musiques populaires de son pays.",
+  "pairs": [
+   [
+    "Edvard Grieg",
+    "Norvège"
+   ],
+   [
+    "Manuel de Falla",
+    "Espagne"
+   ],
+   [
+    "Béla Bartók",
+    "Hongrie"
+   ],
+   [
+    "Edward Elgar",
+    "Angleterre"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-084",
+  "concept": "music.classical.v17_oeuvres_compositeurs",
+  "label": "Œuvres célèbres",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque œuvre à son compositeur.",
+  "explanation": "« Le Beau Danube bleu » est la valse jouée chaque année au concert du Nouvel An à Vienne.",
+  "pairs": [
+   [
+    "Les Quatre Saisons",
+    "Vivaldi"
+   ],
+   [
+    "La Truite",
+    "Schubert"
+   ],
+   [
+    "La Danse macabre",
+    "Saint-Saëns"
+   ],
+   [
+    "Le Beau Danube bleu",
+    "Johann Strauss fils"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-085",
+  "concept": "music.classical.v17_tl_flute_enchantee",
+  "label": "La Flûte enchantée",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a été créée « La Flûte enchantée » de Mozart, quelques mois avant sa mort ?",
+  "explanation": "Créée à Vienne le 30 septembre 1791. Mozart meurt le 5 décembre de la même année.",
+  "answer": 1791,
+  "tolerance": 5,
+  "min": 1700,
+  "max": 1850
+ },
+ {
+  "key": "mus17-086",
+  "concept": "music.classical.v17_tl_neuvieme",
+  "label": "La 9e de Beethoven",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année a été créée la 9e symphonie de Beethoven ?",
+  "explanation": "À Vienne, le 7 mai 1824. Beethoven, sourd, ne s'est retourné vers le public qu'au moment où un musicien l'y a invité, pour voir les applaudissements.",
+  "answer": 1824,
+  "tolerance": 10,
+  "min": 1750,
+  "max": 1900
+ },
+ {
+  "key": "mus17-087",
+  "concept": "music.classical.v17_tl_sacre",
+  "label": "Le Sacre du printemps",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a eu lieu le scandale du « Sacre du printemps » à Paris ?",
+  "explanation": "Le 29 mai 1913, au Théâtre des Champs-Élysées, tout juste inauguré.",
+  "answer": 1913,
+  "tolerance": 5,
+  "min": 1850,
+  "max": 1960
+ },
+ {
+  "key": "mus17-088",
+  "concept": "music.classical.v17_tl_vivaldi_saisons",
+  "label": "Les Quatre Saisons",
+  "type": "timeline",
+  "difficulty": 80,
+  "prompt": "En quelle année ont été publiées « Les Quatre Saisons » de Vivaldi ?",
+  "explanation": "Publiées à Amsterdam en 1725, dans un recueil de douze concertos.",
+  "answer": 1725,
+  "tolerance": 10,
+  "min": 1600,
+  "max": 1850
+ },
+ {
+  "key": "mus17-089",
+  "concept": "music.classical.v17_le_mozart",
+  "label": "Mozart",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Compositeur autrichien de « La Flûte enchantée ».",
+  "explanation": "Wolfgang Amadeus Mozart (1756-1791).",
+  "word": "MOZART",
+  "display": "Mozart"
+ },
+ {
+  "key": "mus17-090",
+  "concept": "music.classical.v17_le_vivaldi",
+  "label": "Vivaldi",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Compositeur vénitien des « Quatre Saisons ».",
+  "explanation": "Antonio Vivaldi (1678-1741), le « Prêtre roux ».",
+  "word": "VIVALDI",
+  "display": "Vivaldi"
+ },
+ {
+  "key": "mus17-091",
+  "concept": "music.classical.v17_le_opera",
+  "label": "Opéra",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Spectacle où les acteurs chantent toute l'histoire, avec un orchestre.",
+  "explanation": "Le premier grand opéra connu est « L'Orfeo » de Monteverdi, en 1607.",
+  "word": "OPERA",
+  "display": "Opéra"
+ },
+ {
+  "key": "mus17-092",
+  "concept": "music.classical.v17_le_symphonie",
+  "label": "Symphonie",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Grande œuvre pour orchestre, souvent en quatre mouvements.",
+  "explanation": "Haydn en a écrit 104 !",
+  "word": "SYMPHONIE",
+  "display": "Symphonie"
+ },
+ {
+  "key": "mus17-093",
+  "concept": "music.classical.v17_le_maestro",
+  "label": "Maestro",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Mot italien pour un grand chef d'orchestre.",
+  "explanation": "Il veut dire « maître ».",
+  "word": "MAESTRO",
+  "display": "Maestro"
+ },
+ {
+  "key": "mus17-094",
+  "concept": "music.classical.v17_tf_beethoven_sourd_concert",
+  "label": "Beethoven",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Beethoven a dirigé la création de sa 9e symphonie alors qu'il était presque totalement sourd.",
+  "explanation": "Un autre chef dirigeait en parallèle pour les musiciens. Il a fallu le retourner vers la salle pour qu'il voie les applaudissements.",
+  "answer": true
+ },
+ {
+  "key": "mus17-095",
+  "concept": "music.classical.v17_tf_mozart_salieri",
+  "label": "Mozart et Salieri",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Il est prouvé que Salieri a empoisonné Mozart.",
+  "explanation": "Une rumeur reprise par Pouchkine puis par le film « Amadeus », mais sans aucune preuve. Salieri a même enseigné au fils de Mozart.",
+  "answer": false
+ },
+ {
+  "key": "mus17-096",
+  "concept": "music.classical.v17_tf_vivaldi_violon",
+  "label": "Vivaldi",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Vivaldi était violoniste.",
+  "explanation": "Un violoniste virtuose, qui a écrit des centaines de concertos, surtout pour violon.",
+  "answer": true
+ },
+ {
+  "key": "mus17-097",
+  "concept": "music.classical.v17_tf_bolero_ravel_aime",
+  "label": "Le Boléro",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Ravel considérait son « Boléro » comme son chef-d'œuvre.",
+  "explanation": "Il le voyait plutôt comme un exercice d'orchestration : « un tissu orchestral sans musique », disait-il.",
+  "answer": false
+ },
+ {
+  "key": "mus17-098",
+  "concept": "music.classical.v17_tf_chopin_concert",
+  "label": "Chopin",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Chopin a donné très peu de concerts publics : une trentaine dans toute sa vie.",
+  "explanation": "Il préférait jouer dans les salons, devant un petit public. Liszt, lui, en donnait des centaines.",
+  "answer": true
+ },
+ {
+  "key": "mus17-099",
+  "concept": "music.classical.v17_tf_tchaikovski_casse",
+  "label": "Casse-Noisette",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le ballet « Casse-Noisette » de Tchaïkovski se passe le soir de Noël.",
+  "explanation": "La petite Clara reçoit un casse-noisette qui prend vie la nuit de Noël. Le ballet est joué partout chaque mois de décembre.",
+  "answer": true
+ },
+ {
+  "key": "mus17-100",
+  "concept": "music.classical.v17_wo_quatre_saisons",
+  "label": "Vivaldi",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre le titre de l'œuvre la plus célèbre de Vivaldi.",
+  "explanation": "Quatre concertos pour violon : le printemps, l'été, l'automne et l'hiver.",
+  "answer": "Les Quatre Saisons",
+  "words": [
+   "Les",
+   "Quatre",
+   "Saisons"
+  ]
+ },
+ {
+  "key": "mus17-101",
+  "concept": "music.classical.v17_wo_flute",
+  "label": "Mozart",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre le titre de cet opéra de Mozart.",
+  "explanation": "Un opéra en allemand, plein de magie, avec un oiseleur nommé Papageno.",
+  "answer": "La Flûte enchantée",
+  "words": [
+   "La",
+   "Flûte",
+   "enchantée"
+  ]
+ },
+ {
+  "key": "mus17-107",
+  "concept": "music.instruments.v17_harpe_cordes",
+  "label": "La harpe",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien de cordes a une grande harpe de concert ? (à 5 près)",
+  "explanation": "Environ 47 cordes et 7 pédales qui permettent de changer la hauteur des notes.",
+  "answer": 47,
+  "tolerance": 5,
+  "min": 20,
+  "max": 80,
+  "start": 20
+ },
+ {
+  "key": "mus17-109",
+  "concept": "music.instruments.v17_balalaika_cordes",
+  "label": "La balalaïka",
+  "type": "counter",
+  "difficulty": 60,
+  "prompt": "Combien de cordes a une balalaïka russe ?",
+  "explanation": "Trois cordes et une caisse en forme de triangle.",
+  "answer": 3,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "mus17-110",
+  "concept": "music.instruments.v17_stradivarius_nombre",
+  "label": "Stradivarius",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Environ combien d'instruments de Stradivarius existent encore ? (à 150 près)",
+  "explanation": "Environ 650 instruments, sur plus de 1 000 fabriqués. Certains violons se vendent plus de 15 millions de dollars.",
+  "answer": 650,
+  "tolerance": 150
+ },
+ {
+  "key": "mus17-111",
+  "concept": "music.instruments.v17_stradivarius_ville",
+  "label": "Stradivarius",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quelle ville italienne Antonio Stradivari fabriquait-il ses violons ?",
+  "explanation": "Crémone, en Lombardie, est encore aujourd'hui la capitale mondiale de la lutherie.",
+  "options": [
+   "Crémone*",
+   "Venise",
+   "Florence",
+   "Naples"
+  ]
+ },
+ {
+  "key": "mus17-112",
+  "concept": "music.instruments.v17_luthier",
+  "label": "Le luthier",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment s'appelle l'artisan qui fabrique les violons et les guitares ?",
+  "explanation": "De « luth », l'ancêtre de la guitare. Celui qui fabrique les pianos ou les orgues s'appelle un « facteur ».",
+  "options": [
+   "Un luthier*",
+   "Un ébéniste",
+   "Un facteur",
+   "Un accordeur"
+  ]
+ },
+ {
+  "key": "mus17-113",
+  "concept": "music.instruments.v17_facteur_orgue",
+  "label": "Le facteur d'orgue",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle l'artisan qui fabrique les orgues ?",
+  "explanation": "Le même mot sert pour les pianos : un facteur de pianos. Rien à voir avec la Poste !",
+  "options": [
+   "Un facteur d'orgues*",
+   "Un organiste",
+   "Un luthier",
+   "Un souffleur"
+  ]
+ },
+ {
+  "key": "mus17-114",
+  "concept": "music.instruments.v17_orgue_plus_grand",
+  "label": "L'orgue",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel instrument est souvent le plus grand de tous, avec des milliers de tuyaux ?",
+  "explanation": "Certains orgues comptent plus de 30 000 tuyaux. L'orgue de Notre-Dame de Paris en a environ 8 000.",
+  "options": [
+   "L'orgue*",
+   "La contrebasse",
+   "Le tuba",
+   "Le gong"
+  ]
+ },
+ {
+  "key": "mus17-116",
+  "concept": "music.instruments.v17_piccolo",
+  "label": "Les bois",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel instrument est une petite flûte qui joue une octave plus haut que la flûte traversière ?",
+  "explanation": "De l'italien « piccolo », petit. C'est l'instrument le plus aigu de l'orchestre.",
+  "options": [
+   "Le piccolo*",
+   "Le fifre",
+   "Le flageolet",
+   "Le pipeau"
+  ]
+ },
+ {
+  "key": "mus17-117",
+  "concept": "music.instruments.v17_contrebasson",
+  "label": "Les bois",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est l'instrument le plus grave de la famille des bois ?",
+  "explanation": "Son tube replié mesure près de six mètres de long.",
+  "options": [
+   "Le contrebasson*",
+   "La clarinette basse",
+   "Le hautbois",
+   "Le cor anglais"
+  ]
+ },
+ {
+  "key": "mus17-118",
+  "concept": "music.instruments.v17_cor_anglais",
+  "label": "Les bois",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le « cor anglais » est en réalité…",
+  "explanation": "Ni cor, ni anglais ! Son nom viendrait d'une déformation de « cor anglé », à cause de sa forme coudée.",
+  "options": [
+   "Un instrument à anche de la famille du hautbois*",
+   "Un cuivre anglais",
+   "Un cor de chasse",
+   "Une cornemuse"
+  ]
+ },
+ {
+  "key": "mus17-119",
+  "concept": "music.instruments.v17_saxophone_famille",
+  "label": "Le saxophone",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Bien qu'il soit en métal, le saxophone fait partie de quelle famille ?",
+  "explanation": "Il produit le son avec une anche en roseau, comme la clarinette : c'est donc un « bois ».",
+  "options": [
+   "Les bois*",
+   "Les cuivres",
+   "Les percussions",
+   "Les cordes"
+  ]
+ },
+ {
+  "key": "mus17-120",
+  "concept": "music.instruments.v17_flute_traversiere_famille",
+  "label": "La flûte",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "La flûte traversière, en métal, appartient à quelle famille ?",
+  "explanation": "Elle était en bois autrefois, et le son ne naît pas des lèvres qui vibrent comme pour un cuivre.",
+  "options": [
+   "Les bois*",
+   "Les cuivres",
+   "Les cordes",
+   "Les claviers"
+  ]
+ },
+ {
+  "key": "mus17-121",
+  "concept": "music.instruments.v17_piano_famille",
+  "label": "Le piano",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Techniquement, le son du piano est produit par…",
+  "explanation": "C'est pour cela qu'on le classe parfois parmi les cordes frappées, ou les percussions.",
+  "options": [
+   "Des marteaux qui frappent des cordes*",
+   "Des cordes pincées",
+   "De l'air dans des tuyaux",
+   "Des lames de métal"
+  ]
+ },
+ {
+  "key": "mus17-122",
+  "concept": "music.instruments.v17_clavecin",
+  "label": "Le clavecin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle est la différence entre un clavecin et un piano ?",
+  "explanation": "Le clavecin ne permet pas de jouer plus ou moins fort : d'où l'invention du « piano-forte » vers 1700.",
+  "options": [
+   "Les cordes du clavecin sont pincées, celles du piano frappées*",
+   "Le clavecin n'a pas de cordes",
+   "Le clavecin est électrique",
+   "Aucune, c'est le même instrument"
+  ]
+ },
+ {
+  "key": "mus17-123",
+  "concept": "music.instruments.v17_pianoforte",
+  "label": "Le piano",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le nom complet du piano, « pianoforte », veut dire…",
+  "explanation": "Inventé par Bartolomeo Cristofori vers 1700, il pouvait enfin jouer doucement (piano) ou fort (forte).",
+  "options": [
+   "Doux-fort*",
+   "Petit-grand",
+   "Lent-rapide",
+   "Bas-haut"
+  ]
+ },
+ {
+  "key": "mus17-124",
+  "concept": "music.instruments.v17_pedale_piano",
+  "label": "Le piano",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "À quoi sert la pédale de droite d'un piano ?",
+  "explanation": "Elle lève les étouffoirs : les cordes continuent de vibrer. La pédale de gauche adoucit le son.",
+  "options": [
+   "À faire résonner les notes plus longtemps*",
+   "À jouer moins fort",
+   "À changer d'octave",
+   "À accorder le piano"
+  ]
+ },
+ {
+  "key": "mus17-125",
+  "concept": "music.instruments.v17_archet_crins",
+  "label": "L'archet",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Avec quoi sont faits les crins d'un archet de violon ?",
+  "explanation": "On les frotte de colophane, une résine de pin, pour qu'ils accrochent les cordes.",
+  "options": [
+   "Des crins de cheval*",
+   "Du nylon",
+   "Des cheveux humains",
+   "De la soie"
+  ]
+ },
+ {
+  "key": "mus17-126",
+  "concept": "music.instruments.v17_colophane",
+  "label": "L'archet",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle substance frotte-t-on sur l'archet pour qu'il fasse vibrer les cordes ?",
+  "explanation": "Une résine tirée du pin. Sans elle, l'archet glisse sans produire de son.",
+  "options": [
+   "La colophane*",
+   "La cire d'abeille",
+   "Le talc",
+   "L'huile de lin"
+  ]
+ },
+ {
+  "key": "mus17-127",
+  "concept": "music.instruments.v17_diapason_la",
+  "label": "Le diapason",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "À quelle fréquence vibre le « la » de référence des musiciens aujourd'hui ?",
+  "explanation": "Le diapason moderne est fixé à 440 Hz, même si certains orchestres jouent un peu plus haut (442 Hz).",
+  "options": [
+   "440 hertz*",
+   "100 hertz",
+   "1 000 hertz",
+   "220 hertz"
+  ]
+ },
+ {
+  "key": "mus17-128",
+  "concept": "music.instruments.v17_timbales",
+  "label": "Les percussions",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Les timbales de l'orchestre ont une particularité. Laquelle ?",
+  "explanation": "En tendant plus ou moins la peau, le timbalier règle la hauteur de la note.",
+  "options": [
+   "On peut changer leur note avec une pédale*",
+   "Elles n'ont pas de peau",
+   "On en joue avec les mains",
+   "Elles sont en verre"
+  ]
+ },
+ {
+  "key": "mus17-129",
+  "concept": "music.instruments.v17_triangle",
+  "label": "Les percussions",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel petit instrument en métal, en forme de figure géométrique, tinte dans l'orchestre ?",
+  "explanation": "Une simple barre d'acier pliée, frappée avec une baguette de métal.",
+  "options": [
+   "Le triangle*",
+   "Le carré",
+   "Le cercle",
+   "Le losange"
+  ]
+ },
+ {
+  "key": "mus17-130",
+  "concept": "music.instruments.v17_castagnettes",
+  "label": "Les percussions",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quel instrument, tenu dans la main, accompagne souvent le flamenco ?",
+  "explanation": "Deux coquilles de bois qui claquent l'une contre l'autre. Leur nom vient de « châtaigne ».",
+  "options": [
+   "Les castagnettes*",
+   "Les maracas",
+   "Le tambourin",
+   "Les claves"
+  ]
+ },
+ {
+  "key": "mus17-131",
+  "concept": "music.instruments.v17_cymbales_turquie",
+  "label": "Les percussions",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "De quel pays viennent les cymbales les plus réputées, fabriquées par la même famille depuis le XVIIe siècle ?",
+  "explanation": "La famille Zildjian fabriquait des cymbales à Constantinople dès 1623, avant de s'installer aux États-Unis.",
+  "options": [
+   "La Turquie*",
+   "La Chine",
+   "L'Italie",
+   "L'Inde"
+  ]
+ },
+ {
+  "key": "mus17-132",
+  "concept": "music.instruments.v17_monde_pays",
+  "label": "Instruments du monde",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque instrument à son pays d'origine.",
+  "explanation": "Le bandonéon a été inventé en Allemagne, mais c'est en Argentine qu'il est devenu l'âme du tango.",
+  "pairs": [
+   [
+    "La balalaïka",
+    "Russie"
+   ],
+   [
+    "Le bandonéon",
+    "Argentine (tango)"
+   ],
+   [
+    "La cornemuse",
+    "Écosse"
+   ],
+   [
+    "Le didgeridoo",
+    "Australie"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-133",
+  "concept": "music.instruments.v17_monde_2",
+  "label": "Instruments du monde",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque instrument à sa région.",
+  "explanation": "La kora, harpe-luth à 21 cordes, est l'instrument des griots mandingues.",
+  "pairs": [
+   [
+    "La kora",
+    "Afrique de l'Ouest"
+   ],
+   [
+    "Le oud",
+    "Monde arabe"
+   ],
+   [
+    "Le koto",
+    "Japon"
+   ],
+   [
+    "Le steel drum",
+    "Trinité-et-Tobago"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-134",
+  "concept": "music.instruments.v17_kora",
+  "label": "La kora",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de cordes compte traditionnellement une kora ?",
+  "explanation": "Une calebasse recouverte de peau, un long manche et 21 cordes : l'instrument des griots d'Afrique de l'Ouest.",
+  "options": [
+   "21*",
+   "6",
+   "12",
+   "40"
+  ]
+ },
+ {
+  "key": "mus17-135",
+  "concept": "music.instruments.v17_djembe_peau",
+  "label": "Le djembé",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec quoi est faite la peau d'un djembé traditionnel ?",
+  "explanation": "Le fût est taillé dans un tronc d'arbre, et la peau de chèvre est tendue par des cordes.",
+  "options": [
+   "De la peau de chèvre*",
+   "Du plastique",
+   "De la peau de vache",
+   "Du papier"
+  ]
+ },
+ {
+  "key": "mus17-136",
+  "concept": "music.instruments.v17_cajon",
+  "label": "Le cajón",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le « cajón », percussion péruvienne, est…",
+  "explanation": "Son nom veut dire « grande caisse » en espagnol. Il a été adopté par le flamenco dans les années 1970.",
+  "options": [
+   "Une caisse en bois sur laquelle on s'assoit pour la frapper*",
+   "Un tambour d'eau",
+   "Une flûte en roseau",
+   "Un xylophone en pierre"
+  ]
+ },
+ {
+  "key": "mus17-137",
+  "concept": "music.instruments.v17_hang",
+  "label": "Le hang",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le « hang », instrument en forme de soucoupe volante, a été inventé…",
+  "explanation": "Inventé à Berne par Felix Rohner et Sabina Schärer. On en joue avec les doigts.",
+  "options": [
+   "En Suisse, en 2000*",
+   "En Inde, il y a 2 000 ans",
+   "Au Japon, au Moyen Âge",
+   "En Jamaïque, dans les années 1960"
+  ]
+ },
+ {
+  "key": "mus17-138",
+  "concept": "music.instruments.v17_theremine",
+  "label": "Le thérémine",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le thérémine est un instrument électronique dont on joue…",
+  "explanation": "Inventé en 1920 par le Russe Léon Theremin. Son son étrange a accompagné beaucoup de films de science-fiction.",
+  "options": [
+   "Sans le toucher, en bougeant les mains dans l'air*",
+   "Avec les pieds",
+   "Avec un archet",
+   "En soufflant dedans"
+  ]
+ },
+ {
+  "key": "mus17-139",
+  "concept": "music.instruments.v17_ondes_martenot",
+  "label": "Les ondes Martenot",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Les « ondes Martenot », instrument électronique de 1928, ont été inventées…",
+  "explanation": "Par Maurice Martenot. Messiaen et Radiohead les ont utilisées.",
+  "options": [
+   "En France*",
+   "Aux États-Unis",
+   "En Allemagne",
+   "Au Japon"
+  ]
+ },
+ {
+  "key": "mus17-140",
+  "concept": "music.instruments.v17_moog",
+  "label": "Le synthétiseur",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Robert Moog est célèbre pour avoir inventé…",
+  "explanation": "Le Moog des années 1960 a changé la musique pop, du rock progressif à l'électro.",
+  "options": [
+   "Un des premiers synthétiseurs commerciaux*",
+   "La guitare électrique",
+   "Le micro",
+   "La boîte à rythmes"
+  ]
+ },
+ {
+  "key": "mus17-141",
+  "concept": "music.instruments.v17_tr808",
+  "label": "La TR-808",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "La « 808 », boîte à rythmes au son de basse si utilisé dans le rap, a été fabriquée par…",
+  "explanation": "La Roland TR-808, sortie en 1980, fut d'abord un échec commercial avant de devenir légendaire.",
+  "options": [
+   "Roland*",
+   "Yamaha",
+   "Casio",
+   "Moog"
+  ]
+ },
+ {
+  "key": "mus17-142",
+  "concept": "music.instruments.v17_cornemuse_poche",
+  "label": "La cornemuse",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans une cornemuse, à quoi sert la poche ?",
+  "explanation": "Le joueur souffle dans la poche et la presse avec le bras : le son ne s'arrête jamais, même quand il respire.",
+  "options": [
+   "À garder une réserve d'air pour jouer sans interruption*",
+   "À ranger les partitions",
+   "À amplifier le son",
+   "À accorder l'instrument"
+  ]
+ },
+ {
+  "key": "mus17-143",
+  "concept": "music.instruments.v17_biniou",
+  "label": "Le biniou",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le « biniou » est une petite cornemuse de quelle région française ?",
+  "explanation": "Il joue souvent en couple avec la bombarde, une sorte de hautbois.",
+  "options": [
+   "La Bretagne*",
+   "L'Auvergne",
+   "La Corse",
+   "L'Alsace"
+  ]
+ },
+ {
+  "key": "mus17-144",
+  "concept": "music.instruments.v17_vielle_roue",
+  "label": "La vielle à roue",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Dans une vielle à roue, comment les cordes sont-elles mises en vibration ?",
+  "explanation": "Un instrument du Moyen Âge, toujours joué dans les musiques traditionnelles du Berry et d'Auvergne.",
+  "options": [
+   "Par une roue frottée de colophane qu'on tourne avec une manivelle*",
+   "Par un archet",
+   "Par des marteaux",
+   "Avec les doigts"
+  ]
+ },
+ {
+  "key": "mus17-145",
+  "concept": "music.instruments.v17_sitar_cordes",
+  "label": "Le sitar",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Les cordes « sympathiques » du sitar…",
+  "explanation": "On ne les touche pas : elles résonnent par sympathie et donnent au sitar son halo sonore.",
+  "options": [
+   "Vibrent toutes seules quand on joue les autres*",
+   "Sont jouées avec un archet",
+   "Sont en or",
+   "Servent seulement à décorer"
+  ]
+ },
+ {
+  "key": "mus17-146",
+  "concept": "music.instruments.v17_harmonica",
+  "label": "L'harmonica",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pour jouer de l'harmonica, on…",
+  "explanation": "Les notes changent selon qu'on souffle ou qu'on aspire. C'est l'instrument roi du blues.",
+  "options": [
+   "Souffle et aspire*",
+   "Souffle seulement",
+   "Pince des cordes",
+   "Frappe des lames"
+  ]
+ },
+ {
+  "key": "mus17-147",
+  "concept": "music.instruments.v17_accordeon_inventeur",
+  "label": "L'accordéon",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quel pays l'accordéon a-t-il été breveté, en 1829 ?",
+  "explanation": "Cyrill Demian l'a breveté à Vienne. Il est ensuite devenu l'instrument du bal musette en France.",
+  "options": [
+   "En Autriche*",
+   "En France",
+   "En Italie",
+   "En Argentine"
+  ]
+ },
+ {
+  "key": "mus17-148",
+  "concept": "music.instruments.v17_banjo",
+  "label": "Le banjo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Le banjo, emblème de la musique country, a des origines…",
+  "explanation": "Il descend d'instruments apportés par les esclaves africains en Amérique.",
+  "options": [
+   "Africaines*",
+   "Irlandaises",
+   "Mexicaines",
+   "Chinoises"
+  ]
+ },
+ {
+  "key": "mus17-149",
+  "concept": "music.instruments.v17_fender_strat",
+  "label": "La guitare électrique",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel modèle de guitare électrique, lancé en 1954, a été rendu célèbre par Jimi Hendrix ?",
+  "explanation": "Hendrix, gaucher, jouait une Stratocaster de droitier retournée.",
+  "options": [
+   "La Fender Stratocaster*",
+   "La Gibson Les Paul",
+   "La Gibson SG",
+   "La Rickenbacker"
+  ]
+ },
+ {
+  "key": "mus17-150",
+  "concept": "music.instruments.v17_les_paul",
+  "label": "La guitare électrique",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "La Gibson « Les Paul » doit son nom…",
+  "explanation": "Les Paul était un guitariste et inventeur, pionnier de l'enregistrement en plusieurs pistes.",
+  "options": [
+   "À un guitariste américain*",
+   "À une ville",
+   "Au fils du fondateur",
+   "À un saint"
+  ]
+ },
+ {
+  "key": "mus17-151",
+  "concept": "music.instruments.v17_ampli_11",
+  "label": "L'ampli",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Dans le film « Spinal Tap » (1984), l'ampli d'un guitariste va jusqu'à…",
+  "explanation": "« Ça va jusqu'à onze », une réplique culte : plus fort que fort. Certains vrais amplis ont ensuite été gradués jusqu'à 11.",
+  "options": [
+   "11*",
+   "10",
+   "20",
+   "100"
+  ]
+ },
+ {
+  "key": "mus17-152",
+  "concept": "music.instruments.v17_mediator_autre",
+  "label": "La guitare",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "À quoi sert un « capodastre » sur une guitare ?",
+  "explanation": "On le pose sur le manche : il raccourcit toutes les cordes d'un coup.",
+  "options": [
+   "À changer la tonalité en pinçant toutes les cordes sur une case*",
+   "À gratter les cordes",
+   "À accorder la guitare",
+   "À tenir la guitare"
+  ]
+ },
+ {
+  "key": "mus17-153",
+  "concept": "music.instruments.v17_larsen",
+  "label": "L'effet Larsen",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle le sifflement aigu qui se produit quand un micro capte le son de son propre haut-parleur ?",
+  "explanation": "Du nom du physicien danois Søren Larsen. Les guitaristes rock s'en servent parfois volontairement.",
+  "options": [
+   "L'effet Larsen*",
+   "L'effet Doppler",
+   "L'écho",
+   "La saturation"
+  ]
+ },
+ {
+  "key": "mus17-154",
+  "concept": "music.instruments.v17_wah_wah",
+  "label": "Les effets",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle pédale d'effet donne à la guitare un son qui semble dire « ouah-ouah » ?",
+  "explanation": "Rendue célèbre par Jimi Hendrix, notamment dans « Voodoo Child ».",
+  "options": [
+   "La wah-wah*",
+   "La fuzz",
+   "La reverb",
+   "Le delay"
+  ]
+ },
+ {
+  "key": "mus17-155",
+  "concept": "music.instruments.v17_notes_gamme",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quelle note vient juste après « sol » dans la gamme ?",
+  "explanation": "Do, ré, mi, fa, sol, la, si… do !",
+  "options": [
+   "La*",
+   "Fa",
+   "Si",
+   "Ré"
+  ]
+ },
+ {
+  "key": "mus17-156",
+  "concept": "music.instruments.v17_notes_origine",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "D'où viennent les noms des notes « ut, ré, mi, fa, sol, la » ?",
+  "explanation": "Guido d'Arezzo, moine du XIe siècle, les a tirées de l'« Hymne à saint Jean-Baptiste ». « Ut » est devenu « do ».",
+  "options": [
+   "Des premières syllabes d'un chant religieux latin*",
+   "Des noms de six saints",
+   "D'un poème grec",
+   "Des initiales de musiciens"
+  ]
+ },
+ {
+  "key": "mus17-157",
+  "concept": "music.instruments.v17_notes_anglais",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "En notation anglaise, la note « la » s'écrit…",
+  "explanation": "A = la, B = si, C = do, D = ré, E = mi, F = fa, G = sol.",
+  "options": [
+   "A*",
+   "L",
+   "C",
+   "G"
+  ]
+ },
+ {
+  "key": "mus17-158",
+  "concept": "music.instruments.v17_notes_lettres",
+  "label": "Le solfège",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque lettre anglaise à sa note.",
+  "explanation": "La notation anglaise commence au la (A). Les accords de guitare utilisent ces lettres.",
+  "pairs": [
+   [
+    "C",
+    "Do"
+   ],
+   [
+    "E",
+    "Mi"
+   ],
+   [
+    "G",
+    "Sol"
+   ],
+   [
+    "B",
+    "Si"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-159",
+  "concept": "music.instruments.v17_diese",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Que fait un « dièse » devant une note ?",
+  "explanation": "Le bémol, lui, la descend d'un demi-ton. Le bécarre annule les deux.",
+  "options": [
+   "Il la monte d'un demi-ton*",
+   "Il la descend d'un demi-ton",
+   "Il la rend plus longue",
+   "Il la supprime"
+  ]
+ },
+ {
+  "key": "mus17-160",
+  "concept": "music.instruments.v17_gamme_notes",
+  "label": "Le solfège",
+  "type": "counter",
+  "difficulty": 20,
+  "prompt": "Combien de notes différentes compte la gamme de do majeur (do, ré, mi…) ?",
+  "explanation": "Sept notes, puis on retrouve le do à l'octave supérieure.",
+  "answer": 7,
+  "tolerance": 0,
+  "min": 1,
+  "max": 12,
+  "start": 1
+ },
+ {
+  "key": "mus17-161",
+  "concept": "music.instruments.v17_demi_tons",
+  "label": "Le solfège",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien de demi-tons y a-t-il dans une octave ?",
+  "explanation": "Les douze touches, blanches et noires, entre deux do sur un piano.",
+  "answer": 12,
+  "tolerance": 0,
+  "min": 1,
+  "max": 20,
+  "start": 1
+ },
+ {
+  "key": "mus17-162",
+  "concept": "music.instruments.v17_croches_ronde",
+  "label": "Les durées",
+  "type": "counter",
+  "difficulty": 55,
+  "prompt": "Combien de croches faut-il pour faire une ronde ?",
+  "explanation": "Une ronde = 2 blanches = 4 noires = 8 croches = 16 doubles-croches.",
+  "answer": 8,
+  "tolerance": 0,
+  "min": 1,
+  "max": 16,
+  "start": 1
+ },
+ {
+  "key": "mus17-163",
+  "concept": "music.instruments.v17_durees_ordre",
+  "label": "Les durées",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces notes de la plus longue à la plus courte.",
+  "explanation": "Chacune vaut la moitié de la précédente.",
+  "items": [
+   "Ronde",
+   "Blanche",
+   "Noire",
+   "Croche"
+  ]
+ },
+ {
+  "key": "mus17-164",
+  "concept": "music.instruments.v17_portee",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Sur combien de lignes écrit-on la musique (la portée) ?",
+  "explanation": "La portée a cinq lignes et quatre interlignes.",
+  "options": [
+   "5*",
+   "4",
+   "6",
+   "7"
+  ]
+ },
+ {
+  "key": "mus17-165",
+  "concept": "music.instruments.v17_cle_fa",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle clé utilise-t-on pour écrire la musique des instruments graves, comme le violoncelle ?",
+  "explanation": "La clé de sol sert aux instruments aigus, la clé de fa aux graves, et la clé d'ut à l'alto.",
+  "options": [
+   "La clé de fa*",
+   "La clé de sol",
+   "La clé de do",
+   "La clé de mi"
+  ]
+ },
+ {
+  "key": "mus17-166",
+  "concept": "music.instruments.v17_point_orgue",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sur une partition, que demande un « point d'orgue » ?",
+  "explanation": "Le petit arc avec un point au-dessus de la note : le musicien prolonge librement. Au figuré, c'est le moment culminant.",
+  "options": [
+   "De tenir la note aussi longtemps qu'on le souhaite*",
+   "De jouer sur l'orgue",
+   "De s'arrêter net",
+   "De jouer très vite"
+  ]
+ },
+ {
+  "key": "mus17-167",
+  "concept": "music.instruments.v17_soupir",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment appelle-t-on le silence qui dure le temps d'une noire ?",
+  "explanation": "La pause vaut une ronde, la demi-pause une blanche, le soupir une noire, le demi-soupir une croche.",
+  "options": [
+   "Un soupir*",
+   "Une pause",
+   "Une demi-pause",
+   "Un silence"
+  ]
+ },
+ {
+  "key": "mus17-168",
+  "concept": "music.instruments.v17_accord_majeur",
+  "label": "Le solfège",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelles notes forment l'accord de do majeur ?",
+  "explanation": "Do, mi, sol : la base de milliers de chansons. Avec mi bémol, l'accord devient mineur, plus triste.",
+  "options": [
+   "Do, mi, sol*",
+   "Do, ré, mi",
+   "Do, fa, la",
+   "Do, mi bémol, sol"
+  ]
+ },
+ {
+  "key": "mus17-169",
+  "concept": "music.instruments.v17_cordes_orchestre_part",
+  "label": "L'orchestre",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "Quelle part des musiciens d'un grand orchestre joue d'un instrument à cordes ? (à 10 % près)",
+  "explanation": "Environ 60 % : une soixantaine de violons, altos, violoncelles et contrebasses sur une centaine de musiciens.",
+  "answer": 60,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "mus17-170",
+  "concept": "music.instruments.v17_tl_saxophone",
+  "label": "Le saxophone",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année Adolphe Sax a-t-il breveté le saxophone ?",
+  "explanation": "À Paris, en 1846. L'instrument a d'abord été utilisé dans les fanfares militaires avant de devenir la voix du jazz.",
+  "answer": 1846,
+  "tolerance": 10,
+  "min": 1700,
+  "max": 1950
+ },
+ {
+  "key": "mus17-171",
+  "concept": "music.instruments.v17_tl_strat",
+  "label": "La Stratocaster",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année est sortie la Fender Stratocaster ?",
+  "explanation": "Avec sa forme arrondie et ses trois micros, elle reste une des guitares les plus vendues au monde.",
+  "answer": 1954,
+  "tolerance": 5,
+  "min": 1900,
+  "max": 2000
+ },
+ {
+  "key": "mus17-172",
+  "concept": "music.instruments.v17_tl_piano_invention",
+  "label": "Le piano",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "Vers quelle année Bartolomeo Cristofori a-t-il inventé le piano, à Florence ?",
+  "explanation": "Vers 1700. Les trois plus anciens pianos conservés datent des années 1720.",
+  "answer": 1700,
+  "tolerance": 15,
+  "min": 1500,
+  "max": 1900
+ },
+ {
+  "key": "mus17-173",
+  "concept": "music.instruments.v17_inventions_ordre",
+  "label": "Inventions",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces instruments du plus ancien au plus récent.",
+  "explanation": "L'orgue existe depuis l'Antiquité grecque, le piano vers 1700, le saxophone en 1846, la guitare électrique dans les années 1930.",
+  "items": [
+   "L'orgue",
+   "Le piano",
+   "Le saxophone",
+   "La guitare électrique"
+  ]
+ },
+ {
+  "key": "mus17-176",
+  "concept": "music.instruments.v17_le_tambour",
+  "label": "Tambour",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "On le frappe avec des baguettes : boum boum !",
+  "explanation": "Un des plus vieux instruments du monde.",
+  "word": "TAMBOUR",
+  "display": "Tambour"
+ },
+ {
+  "key": "mus17-177",
+  "concept": "music.instruments.v17_le_clarinette",
+  "label": "Clarinette",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Instrument à vent en bois noir, à anche simple, qui joue le chat dans « Pierre et le Loup ».",
+  "explanation": "Mozart l'adorait et lui a consacré un concerto.",
+  "word": "CLARINETTE",
+  "display": "Clarinette"
+ },
+ {
+  "key": "mus17-178",
+  "concept": "music.instruments.v17_le_xylophone",
+  "label": "Xylophone",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Percussion faite de lames de bois qu'on frappe avec des maillets.",
+  "explanation": "Du grec « xylon », le bois, et « phônê », le son.",
+  "word": "XYLOPHONE",
+  "display": "Xylophone"
+ },
+ {
+  "key": "mus17-179",
+  "concept": "music.instruments.v17_le_bandoneon",
+  "label": "Bandonéon",
+  "type": "letters",
+  "difficulty": 65,
+  "prompt": "Instrument à soufflet, cousin de l'accordéon, roi du tango argentin.",
+  "explanation": "Inventé en Allemagne par Heinrich Band, d'où son nom.",
+  "word": "BANDONEON",
+  "display": "Bandonéon"
+ },
+ {
+  "key": "mus17-180",
+  "concept": "music.instruments.v17_le_diapason",
+  "label": "Diapason",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Petite fourche en métal qui donne le « la » pour accorder les instruments.",
+  "explanation": "Au figuré, « être au diapason », c'est être en accord avec les autres.",
+  "word": "DIAPASON",
+  "display": "Diapason"
+ },
+ {
+  "key": "mus17-181",
+  "concept": "music.instruments.v17_tf_saxophone_belge",
+  "label": "Le saxophone",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le saxophone a été inventé par un Belge.",
+  "explanation": "Adolphe Sax, né à Dinant en 1814. La ville a d'ailleurs un pont orné de saxophones géants.",
+  "answer": true
+ },
+ {
+  "key": "mus17-182",
+  "concept": "music.instruments.v17_tf_violon_alto_meme",
+  "label": "L'alto",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "L'alto est simplement un violon plus petit.",
+  "explanation": "L'alto est un peu plus grand que le violon, et il joue plus grave.",
+  "answer": false
+ },
+ {
+  "key": "mus17-183",
+  "concept": "music.instruments.v17_tf_contrebasse_debout",
+  "label": "La contrebasse",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "On joue généralement de la contrebasse debout, ou assis sur un haut tabouret.",
+  "explanation": "Elle mesure environ 1,80 m : plus grande que beaucoup de musiciens !",
+  "answer": true
+ },
+ {
+  "key": "mus17-184",
+  "concept": "music.instruments.v17_tf_guitare_espagne",
+  "label": "La guitare",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La guitare classique est souvent appelée « guitare espagnole ».",
+  "explanation": "La guitare moderne a pris sa forme en Espagne au XIXe siècle, avec le luthier Antonio de Torres.",
+  "answer": true
+ },
+ {
+  "key": "mus17-185",
+  "concept": "music.instruments.v17_tf_piano_cordes",
+  "label": "Le piano",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Un piano à queue contient plus de 200 cordes.",
+  "explanation": "Environ 230 cordes : les notes aiguës ont deux ou trois cordes chacune pour sonner plus fort.",
+  "answer": true
+ },
+ {
+  "key": "mus17-186",
+  "concept": "music.instruments.v17_tf_trompette_pistons",
+  "label": "La trompette",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Une trompette moderne a trois pistons.",
+  "explanation": "En combinant les trois pistons et la pression des lèvres, on obtient toutes les notes.",
+  "answer": true
+ },
+ {
+  "key": "mus17-187",
+  "concept": "music.instruments.v17_tf_trombone_coulisse",
+  "label": "Le trombone",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Le trombone à coulisse change de note en allongeant ou en raccourcissant un tube.",
+  "explanation": "Le tromboniste fait glisser la coulisse sur sept positions.",
+  "answer": true
+ },
+ {
+  "key": "mus17-188",
+  "concept": "music.popular.v17_piaf_hymne_cerdan",
+  "label": "L'Hymne à l'amour",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pour qui Édith Piaf a-t-elle écrit « L'Hymne à l'amour » ?",
+  "explanation": "Le champion du monde de boxe, son grand amour, mort dans un accident d'avion en 1949.",
+  "options": [
+   "Le boxeur Marcel Cerdan*",
+   "Yves Montand",
+   "Charles Aznavour",
+   "Son père"
+  ]
+ },
+ {
+  "key": "mus17-189",
+  "concept": "music.popular.v17_piaf_taille",
+  "label": "Édith Piaf",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi Édith Piaf a-t-elle été surnommée « la Môme Piaf » ?",
+  "explanation": "Elle mesurait 1,47 m. Un « piaf », en argot, c'est un moineau.",
+  "options": [
+   "Elle était toute petite, comme un moineau*",
+   "Elle sifflait comme un oiseau",
+   "Elle était née dans une volière",
+   "Elle portait des plumes sur scène"
+  ]
+ },
+ {
+  "key": "mus17-190",
+  "concept": "music.popular.v17_brassens_gorille",
+  "label": "Brassens",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle chanson de Brassens a été interdite à la radio dans les années 1950 ?",
+  "explanation": "Un gorille échappé y choisit un juge pour victime. La chanson a été jugée trop subversive.",
+  "options": [
+   "Le Gorille*",
+   "Les Copains d'abord",
+   "Chanson pour l'Auvergnat",
+   "La Mauvaise Réputation"
+  ]
+ },
+ {
+  "key": "mus17-191",
+  "concept": "music.popular.v17_brassens_pipe",
+  "label": "Brassens",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel objet ne quittait jamais Georges Brassens ?",
+  "explanation": "Avec sa moustache et sa guitare, la pipe complétait son portrait.",
+  "options": [
+   "Sa pipe*",
+   "Son chapeau",
+   "Ses lunettes noires",
+   "Son écharpe rouge"
+  ]
+ },
+ {
+  "key": "mus17-192",
+  "concept": "music.popular.v17_brassens_sete",
+  "label": "Brassens",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle ville est né Georges Brassens, qui l'a chantée dans « Supplique pour être enterré à la plage de Sète » ?",
+  "explanation": "Il repose au cimetière du Py, à Sète, où un espace lui est consacré.",
+  "options": [
+   "Sète*",
+   "Marseille",
+   "Nice",
+   "Montpellier"
+  ]
+ },
+ {
+  "key": "mus17-193",
+  "concept": "music.popular.v17_brel_marquises",
+  "label": "Brel",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Où Jacques Brel a-t-il passé ses dernières années ?",
+  "explanation": "Il y pilotait son petit avion. Il est enterré à Hiva Oa, à quelques mètres du peintre Gauguin.",
+  "options": [
+   "Aux îles Marquises*",
+   "À Bruxelles",
+   "À New York",
+   "En Provence"
+  ]
+ },
+ {
+  "key": "mus17-194",
+  "concept": "music.popular.v17_brel_amsterdam",
+  "label": "Brel",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quel port « il y a des marins qui chantent », selon une chanson de Brel ?",
+  "explanation": "« Dans le port d'Amsterdam… » (1964). Brel ne l'a jamais enregistrée en studio, seulement en concert.",
+  "options": [
+   "Amsterdam*",
+   "Marseille",
+   "Le Havre",
+   "Anvers"
+  ]
+ },
+ {
+  "key": "mus17-195",
+  "concept": "music.popular.v17_aznavour_ventes",
+  "label": "Aznavour",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "D'où étaient originaires les parents de Charles Aznavour ?",
+  "explanation": "Né à Paris de parents arméniens, il a beaucoup œuvré pour l'Arménie, dont il est devenu ambassadeur.",
+  "options": [
+   "D'Arménie*",
+   "De Grèce",
+   "D'Italie",
+   "Du Liban"
+  ]
+ },
+ {
+  "key": "mus17-196",
+  "concept": "music.popular.v17_aznavour_comme_ils_disent",
+  "label": "Aznavour",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "En 1972, quelle chanson d'Aznavour abordait l'homosexualité, un sujet tabou à l'époque ?",
+  "explanation": "Elle raconte la vie d'un artiste de cabaret travesti. Une chanson très courageuse pour l'époque.",
+  "options": [
+   "Comme ils disent*",
+   "La Bohème",
+   "Emmenez-moi",
+   "Hier encore"
+  ]
+ },
+ {
+  "key": "mus17-197",
+  "concept": "music.popular.v17_trenet_fou_chantant",
+  "label": "Trenet",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel était le surnom de Charles Trenet ?",
+  "explanation": "Il a chanté « La Mer », « Y'a d'la joie » et « Douce France ».",
+  "options": [
+   "Le Fou chantant*",
+   "Le Roi du swing",
+   "Le Poète du jazz",
+   "Le Petit Prince"
+  ]
+ },
+ {
+  "key": "mus17-198",
+  "concept": "music.popular.v17_trenet_mer_train",
+  "label": "La Mer",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Selon la légende, où Charles Trenet aurait-il écrit « La Mer », en 1943 ?",
+  "explanation": "En dix minutes, sur du papier toilette, raconte-t-on. Elle est devenue une des chansons françaises les plus reprises au monde.",
+  "options": [
+   "Dans un train, en longeant l'étang de Thau*",
+   "Sur une plage de Bretagne",
+   "Dans un bateau",
+   "En prison"
+  ]
+ },
+ {
+  "key": "mus17-199",
+  "concept": "music.popular.v17_gainsbourg_billet",
+  "label": "Gainsbourg",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "En 1984, qu'a fait Serge Gainsbourg en direct à la télévision pour protester contre les impôts ?",
+  "explanation": "Le scandale a été énorme. Sa « Marseillaise » en reggae (« Aux armes et cætera ») datait de 1979.",
+  "options": [
+   "Il a brûlé un billet de 500 francs*",
+   "Il a déchiré sa feuille d'impôts",
+   "Il a quitté le plateau",
+   "Il a chanté la Marseillaise en reggae"
+  ]
+ },
+ {
+  "key": "mus17-200",
+  "concept": "music.popular.v17_gainsbourg_marseillaise",
+  "label": "Gainsbourg",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelle la version reggae de la Marseillaise enregistrée par Gainsbourg en Jamaïque ?",
+  "explanation": "Enregistrée à Kingston en 1979 avec Sly & Robbie et les choristes de Bob Marley.",
+  "options": [
+   "Aux armes et cætera*",
+   "Allons enfants",
+   "Marseillaise Rasta",
+   "Jour de gloire"
+  ]
+ },
+ {
+  "key": "mus17-201",
+  "concept": "music.popular.v17_barbara_gottingen",
+  "label": "Barbara",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle chanson de Barbara (1964) est devenue un symbole de la réconciliation franco-allemande ?",
+  "explanation": "Écrite après un concert dans cette ville universitaire d'Allemagne, où elle avait été très bien accueillie.",
+  "options": [
+   "Göttingen*",
+   "L'Aigle noir",
+   "Nantes",
+   "Dis, quand reviendras-tu ?"
+  ]
+ },
+ {
+  "key": "mus17-203",
+  "concept": "music.popular.v17_cloclo_mort",
+  "label": "Claude François",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment est mort Claude François, en 1978 ?",
+  "explanation": "Il voulut redresser une ampoule en étant dans son bain. Il avait 39 ans.",
+  "options": [
+   "Électrocuté dans sa baignoire*",
+   "Dans un accident de voiture",
+   "D'une crise cardiaque sur scène",
+   "Dans un accident d'avion"
+  ]
+ },
+ {
+  "key": "mus17-204",
+  "concept": "music.popular.v17_dalida_paroles",
+  "label": "Dalida",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec quel acteur Dalida chante-t-elle le duo « Paroles… paroles… » (1973) ?",
+  "explanation": "Il parle, elle chante : « Encore des mots, toujours des mots… »",
+  "options": [
+   "Alain Delon*",
+   "Jean-Paul Belmondo",
+   "Yves Montand",
+   "Jean Gabin"
+  ]
+ },
+ {
+  "key": "mus17-205",
+  "concept": "music.popular.v17_dalida_naissance",
+  "label": "Dalida",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel pays est née Dalida ?",
+  "explanation": "Née au Caire de parents italiens, elle fut élue Miss Égypte en 1954.",
+  "options": [
+   "En Égypte*",
+   "En Italie",
+   "En Grèce",
+   "En Tunisie"
+  ]
+ },
+ {
+  "key": "mus17-206",
+  "concept": "music.popular.v17_joe_dassin_americain",
+  "label": "Joe Dassin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quel pays était originaire Joe Dassin, le chanteur des « Champs-Élysées » ?",
+  "explanation": "Né à New York, fils du cinéaste Jules Dassin. « Les Champs-Élysées » est l'adaptation d'une chanson anglaise.",
+  "options": [
+   "Des États-Unis*",
+   "Du Canada",
+   "De Belgique",
+   "De Suisse"
+  ]
+ },
+ {
+  "key": "mus17-207",
+  "concept": "music.popular.v17_balavoine",
+  "label": "Balavoine",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment est mort Daniel Balavoine, en 1986 ?",
+  "explanation": "Il soutenait une opération humanitaire au Mali pendant le rallye. Il avait 33 ans.",
+  "options": [
+   "Dans un accident d'hélicoptère au Paris-Dakar*",
+   "Dans un accident de moto",
+   "D'une maladie",
+   "Dans un naufrage"
+  ]
+ },
+ {
+  "key": "mus17-208",
+  "concept": "music.popular.v17_renaud_mistral",
+  "label": "Mistral gagnant",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans « Mistral gagnant », le Mistral gagnant est…",
+  "explanation": "Une confiserie en poudre de l'enfance de Renaud. Il chante cette chanson pour sa fille.",
+  "options": [
+   "Un bonbon*",
+   "Un vent",
+   "Un cheval de course",
+   "Un billet de loterie"
+  ]
+ },
+ {
+  "key": "mus17-209",
+  "concept": "music.popular.v17_goldman_enfoires",
+  "label": "Les Enfoirés",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel chanteur a écrit « La Chanson des Restos », l'hymne des Restos du Cœur ?",
+  "explanation": "En 1985, pour l'association créée par Coluche. Goldman a ensuite organisé les concerts des Enfoirés pendant des années.",
+  "options": [
+   "Jean-Jacques Goldman*",
+   "Coluche",
+   "Renaud",
+   "Michel Berger"
+  ]
+ },
+ {
+  "key": "mus17-210",
+  "concept": "music.popular.v17_berger_starmania",
+  "label": "Starmania",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qui a composé l'opéra-rock « Starmania » (1978) ?",
+  "explanation": "Sur des paroles du Québécois Luc Plamondon. On y entend « Le Blues du businessman » et « Les Uns contre les autres ».",
+  "options": [
+   "Michel Berger*",
+   "Jean-Jacques Goldman",
+   "Luc Plamondon",
+   "Michel Legrand"
+  ]
+ },
+ {
+  "key": "mus17-211",
+  "concept": "music.popular.v17_starmania_ville",
+  "label": "Starmania",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quelle ville imaginaire se déroule « Starmania » ?",
+  "explanation": "Une mégapole du futur, « capitale de l'Occident ».",
+  "options": [
+   "Monopolis*",
+   "Métropolis",
+   "Gotham",
+   "Utopia"
+  ]
+ },
+ {
+  "key": "mus17-212",
+  "concept": "music.popular.v17_notre_dame_belle",
+  "label": "Notre-Dame de Paris",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "De quelle comédie musicale vient la chanson « Belle » (1998) ?",
+  "explanation": "Chantée par Garou, Daniel Lavoie et Patrick Fiori, elle est restée 18 semaines numéro un en France.",
+  "options": [
+   "Notre-Dame de Paris*",
+   "Les Dix Commandements",
+   "Roméo et Juliette",
+   "Starmania"
+  ]
+ },
+ {
+  "key": "mus17-213",
+  "concept": "music.popular.v17_miserables_paris",
+  "label": "Les Misérables",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "La comédie musicale « Les Misérables », triomphe à Londres et à Broadway, a d'abord été créée…",
+  "explanation": "Une création française de Claude-Michel Schönberg et Alain Boublil, adaptée ensuite en anglais.",
+  "options": [
+   "À Paris, en 1980*",
+   "À Londres, en 1985",
+   "À New York, en 1987",
+   "À Montréal, en 1990"
+  ]
+ },
+ {
+  "key": "mus17-214",
+  "concept": "music.popular.v17_sardou_connemara",
+  "label": "Les Lacs du Connemara",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel pays se trouve le Connemara, chanté par Michel Sardou ?",
+  "explanation": "Une région sauvage de l'ouest de l'Irlande. La chanson est devenue l'hymne des fins de soirées.",
+  "options": [
+   "L'Irlande*",
+   "L'Écosse",
+   "Le pays de Galles",
+   "La Bretagne"
+  ]
+ },
+ {
+  "key": "mus17-215",
+  "concept": "music.popular.v17_cabrel_astaffort",
+  "label": "Francis Cabrel",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel village du Lot-et-Garonne Francis Cabrel vit-il et organise-t-il des rencontres d'auteurs ?",
+  "explanation": "Il y a grandi et n'en est jamais parti. Les « Rencontres d'Astaffort » forment de jeunes auteurs-compositeurs.",
+  "options": [
+   "Astaffort*",
+   "Agen",
+   "Nérac",
+   "Marmande"
+  ]
+ },
+ {
+  "key": "mus17-216",
+  "concept": "music.popular.v17_polnareff_fesses",
+  "label": "Polnareff",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "En 1972, l'affiche de la tournée de Michel Polnareff a fait scandale. Pourquoi ?",
+  "explanation": "Il a été condamné à une amende pour outrage à la pudeur. Ses lunettes blanches sont aussi restées célèbres.",
+  "options": [
+   "Il y montrait ses fesses*",
+   "Elle insultait le président",
+   "Elle était en anglais",
+   "Elle était entièrement noire"
+  ]
+ },
+ {
+  "key": "mus17-217",
+  "concept": "music.popular.v17_souchon_voulzy",
+  "label": "Souchon et Voulzy",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Avec quel complice Alain Souchon a-t-il écrit la plupart de ses chansons ?",
+  "explanation": "Souchon écrit les paroles, Voulzy compose la musique. Ensemble : « Rockollection », « Foule sentimentale »…",
+  "options": [
+   "Laurent Voulzy*",
+   "Francis Cabrel",
+   "Maxime Le Forestier",
+   "Julien Clerc"
+  ]
+ },
+ {
+  "key": "mus17-218",
+  "concept": "music.popular.v17_mylene_farmer",
+  "label": "Mylène Farmer",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quel pays est originaire Mylène Farmer ?",
+  "explanation": "Née à Pierrefonds, au Québec, en 1961. Elle est arrivée en France à 8 ans.",
+  "options": [
+   "Du Canada*",
+   "De Belgique",
+   "De Suisse",
+   "De France"
+  ]
+ },
+ {
+  "key": "mus17-219",
+  "concept": "music.popular.v17_patricia_kaas",
+  "label": "Patricia Kaas",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quelle région française vient Patricia Kaas, qui chante « Mademoiselle chante le blues » ?",
+  "explanation": "Née à Forbach, en Moselle, d'un père mineur et d'une mère allemande.",
+  "options": [
+   "La Lorraine*",
+   "La Bretagne",
+   "La Provence",
+   "L'Alsace"
+  ]
+ },
+ {
+  "key": "mus17-220",
+  "concept": "music.popular.v17_stromae_maestro",
+  "label": "Stromae",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Le nom « Stromae » est le verlan de…",
+  "explanation": "Maes-tro devient « Stro-mae ».",
+  "options": [
+   "Maestro*",
+   "Amour",
+   "Stéréo",
+   "Tempo"
+  ]
+ },
+ {
+  "key": "mus17-222",
+  "concept": "music.popular.v17_christine_queens",
+  "label": "Christine and the Queens",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "D'où vient le nom de scène « Christine and the Queens » ?",
+  "explanation": "Héloïse Letissier a imaginé ce personnage après avoir rencontré des drag-queens à Londres.",
+  "options": [
+   "Des drag-queens rencontrées à Londres*",
+   "D'une reine d'Angleterre",
+   "Du prénom de sa mère",
+   "D'un groupe de rock des années 1970"
+  ]
+ },
+ {
+  "key": "mus17-223",
+  "concept": "music.popular.v17_louane_voice",
+  "label": "Louane",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Dans quelle émission Louane s'est-elle fait connaître ?",
+  "explanation": "Elle a participé à la saison 2 de « The Voice », en 2013, avant de jouer dans « La Famille Bélier ».",
+  "options": [
+   "The Voice*",
+   "La Nouvelle Star",
+   "Star Academy",
+   "L'École des fans"
+  ]
+ },
+ {
+  "key": "mus17-224",
+  "concept": "music.popular.v17_zaz",
+  "label": "Zaz",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui chante « Je veux d'l'amour, d'la joie, de la bonne humeur » dans « Je veux » (2010) ?",
+  "explanation": "Isabelle Geffroy, de son vrai nom, chantait d'abord dans la rue, à Montmartre.",
+  "options": [
+   "Zaz*",
+   "Louane",
+   "Camille",
+   "Olivia Ruiz"
+  ]
+ },
+ {
+  "key": "mus17-225",
+  "concept": "music.popular.v17_vrais_noms_fr",
+  "label": "Les vrais noms",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque chanteur à son vrai nom.",
+  "explanation": "Beaucoup d'artistes ont choisi un nom de scène plus court ou plus marquant.",
+  "pairs": [
+   [
+    "Johnny Hallyday",
+    "Jean-Philippe Smet"
+   ],
+   [
+    "Dalida",
+    "Iolanda Gigliotti"
+   ],
+   [
+    "Renaud",
+    "Renaud Séchan"
+   ],
+   [
+    "Barbara",
+    "Monique Serf"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-226",
+  "concept": "music.popular.v17_chansons_fr_annees",
+  "label": "Chansons et décennies",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque chanson à sa décennie.",
+  "explanation": "1947, 1975, 1993 et 2013 : près de 70 ans de chanson française.",
+  "pairs": [
+   [
+    "La Vie en rose",
+    "Années 1940"
+   ],
+   [
+    "Le Sud",
+    "Années 1970"
+   ],
+   [
+    "Foule sentimentale",
+    "Années 1990"
+   ],
+   [
+    "Papaoutai",
+    "Années 2010"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-227",
+  "concept": "music.popular.v17_chanteurs_fr_ordre",
+  "label": "Chanson française",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces chansons de la plus ancienne à la plus récente.",
+  "explanation": "1946, 1959, 1985 et 2013.",
+  "items": [
+   "La Mer (Trenet)",
+   "Ne me quitte pas (Brel)",
+   "Mistral gagnant (Renaud)",
+   "Formidable (Stromae)"
+  ]
+ },
+ {
+  "key": "mus17-228",
+  "concept": "music.popular.v17_tl_ne_me_quitte_pas",
+  "label": "Ne me quitte pas",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année Jacques Brel a-t-il enregistré « Ne me quitte pas » ?",
+  "explanation": "En 1959. Elle a été reprise par Nina Simone, Sting ou Céline Dion.",
+  "answer": 1959,
+  "tolerance": 5,
+  "min": 1930,
+  "max": 2000
+ },
+ {
+  "key": "mus17-229",
+  "concept": "music.popular.v17_tl_vie_en_rose",
+  "label": "La Vie en rose",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année est sortie « La Vie en rose » d'Édith Piaf ?",
+  "explanation": "Écrite en 1945, enregistrée en 1947, elle est devenue l'hymne de la chanson française dans le monde.",
+  "answer": 1947,
+  "tolerance": 5,
+  "min": 1920,
+  "max": 1990
+ },
+ {
+  "key": "mus17-230",
+  "concept": "music.popular.v17_tl_starmania",
+  "label": "Starmania",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année est sorti l'album de « Starmania » ?",
+  "explanation": "En 1978, avant les premières représentations au Palais des congrès en 1979.",
+  "answer": 1978,
+  "tolerance": 5,
+  "min": 1950,
+  "max": 2010
+ },
+ {
+  "key": "mus17-232",
+  "concept": "music.popular.v17_wo_ne_me_quitte",
+  "label": "Jacques Brel",
+  "type": "word_order",
+  "difficulty": 15,
+  "prompt": "Remets dans l'ordre ce titre de Jacques Brel.",
+  "explanation": "Une des chansons d'amour les plus célèbres en français.",
+  "answer": "Ne me quitte pas",
+  "words": [
+   "Ne",
+   "me",
+   "quitte",
+   "pas"
+  ]
+ },
+ {
+  "key": "mus17-233",
+  "concept": "music.popular.v17_wo_douce_france",
+  "label": "Charles Trenet",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre le début de cette chanson de Charles Trenet.",
+  "explanation": "Écrite pendant l'Occupation, elle a été reprise par le groupe Carte de Séjour en 1986.",
+  "answer": "Douce France, cher pays de mon enfance",
+  "words": [
+   "Douce",
+   "France,",
+   "cher",
+   "pays",
+   "de",
+   "mon",
+   "enfance"
+  ]
+ },
+ {
+  "key": "mus17-235",
+  "concept": "music.popular.v17_le_piaf",
+  "label": "Piaf",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "La Môme qui chantait « Non, je ne regrette rien ».",
+  "explanation": "Édith Piaf (1915-1963).",
+  "word": "PIAF",
+  "display": "Piaf"
+ },
+ {
+  "key": "mus17-236",
+  "concept": "music.popular.v17_le_brassens",
+  "label": "Brassens",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Le poète moustachu de Sète, auteur des « Copains d'abord ».",
+  "explanation": "Georges Brassens (1921-1981).",
+  "word": "BRASSENS",
+  "display": "Brassens"
+ },
+ {
+  "key": "mus17-237",
+  "concept": "music.popular.v17_le_aznavour",
+  "label": "Aznavour",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Chanteur de « La Bohème » et « Emmenez-moi ».",
+  "explanation": "Charles Aznavour (1924-2018), qui a chanté jusqu'à plus de 90 ans.",
+  "word": "AZNAVOUR",
+  "display": "Aznavour"
+ },
+ {
+  "key": "mus17-238",
+  "concept": "music.popular.v17_le_dalida",
+  "label": "Dalida",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Chanteuse née au Caire, interprète de « Gigi l'amoroso ».",
+  "explanation": "Elle a vendu des dizaines de millions de disques.",
+  "word": "DALIDA",
+  "display": "Dalida"
+ },
+ {
+  "key": "mus17-239",
+  "concept": "music.popular.v17_tf_comme_dhab",
+  "label": "Comme d'habitude",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "« My Way » de Frank Sinatra est l'adaptation d'une chanson française.",
+  "explanation": "« Comme d'habitude », de Claude François et Jacques Revaux (1967).",
+  "answer": true
+ },
+ {
+  "key": "mus17-240",
+  "concept": "music.popular.v17_tf_feuilles_mortes",
+  "label": "Les Feuilles mortes",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "« Les Feuilles mortes » (Prévert et Kosma) est devenue un standard de jazz américain, « Autumn Leaves ».",
+  "explanation": "Reprise par Miles Davis, Nat King Cole, Frank Sinatra… Une des chansons françaises les plus jouées au monde.",
+  "answer": true
+ },
+ {
+  "key": "mus17-241",
+  "concept": "music.popular.v17_tf_brel_francais",
+  "label": "Jacques Brel",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Jacques Brel était français.",
+  "explanation": "Il était belge, né à Schaerbeek, près de Bruxelles, en 1929.",
+  "answer": false
+ },
+ {
+  "key": "mus17-242",
+  "concept": "music.popular.v17_tf_goldman_fredericks",
+  "label": "Goldman",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Jean-Jacques Goldman a fait partie d'un trio avec Michael Jones et Carole Fredericks.",
+  "explanation": "Le trio Fredericks Goldman Jones, au début des années 1990 : « À nos actes manqués ».",
+  "answer": true
+ },
+ {
+  "key": "mus17-243",
+  "concept": "music.popular.v17_tf_marseillaise_marseille",
+  "label": "La Marseillaise",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "« La Marseillaise » a été écrite à Marseille.",
+  "explanation": "À Strasbourg, en 1792, par Rouget de Lisle. Elle doit son nom aux volontaires marseillais qui la chantaient en montant à Paris.",
+  "answer": false
+ },
+ {
+  "key": "mus17-244",
+  "concept": "music.popular.v17_marseillaise_auteur",
+  "label": "La Marseillaise",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui a écrit « La Marseillaise », en 1792 ?",
+  "explanation": "Un officier du génie, poète et musicien, à Strasbourg. Elle s'appelait d'abord « Chant de guerre pour l'armée du Rhin ».",
+  "options": [
+   "Rouget de Lisle*",
+   "Victor Hugo",
+   "Napoléon Bonaparte",
+   "Danton"
+  ]
+ },
+ {
+  "key": "mus17-245",
+  "concept": "music.popular.v17_marseillaise_hymne",
+  "label": "La Marseillaise",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "En quelle année « La Marseillaise » est-elle devenue l'hymne national pour la première fois ?",
+  "explanation": "Le 14 juillet 1795. Interdite sous l'Empire et la Restauration, elle est redevenue hymne national en 1879.",
+  "options": [
+   "1795*",
+   "1792",
+   "1830",
+   "1958"
+  ]
+ },
+ {
+  "key": "mus17-246",
+  "concept": "music.popular.v17_marseillaise_couplets",
+  "label": "La Marseillaise",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien de couplets compte « La Marseillaise » officielle (sans le refrain) ?",
+  "explanation": "Sept couplets, dont le dernier, « couplet des enfants », a été ajouté plus tard. On ne chante en général que le premier.",
+  "answer": 7,
+  "tolerance": 0,
+  "min": 1,
+  "max": 15,
+  "start": 1
+ },
+ {
+  "key": "mus17-248",
+  "concept": "music.popular.v17_ntm_saint_denis",
+  "label": "NTM",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle ville de banlieue parisienne vient le groupe Suprême NTM ?",
+  "explanation": "JoeyStarr et Kool Shen, dans le 93. Leur titre « Seine-Saint-Denis Style » (1998) est un hommage.",
+  "options": [
+   "Saint-Denis*",
+   "Sarcelles",
+   "Évry",
+   "Boulogne"
+  ]
+ },
+ {
+  "key": "mus17-249",
+  "concept": "music.popular.v17_mc_solaar_senegal",
+  "label": "MC Solaar",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quel pays est né MC Solaar ?",
+  "explanation": "Né à Dakar de parents tchadiens, il a grandi en région parisienne.",
+  "options": [
+   "Au Sénégal*",
+   "En France",
+   "Au Tchad",
+   "Au Cameroun"
+  ]
+ },
+ {
+  "key": "mus17-250",
+  "concept": "music.popular.v17_nekfeu_1995",
+  "label": "Nekfeu",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quel collectif de rap Nekfeu s'est-il fait connaître ?",
+  "explanation": "Le groupe 1995, nommé en hommage au rap des années 1990, puis le collectif L'Entourage.",
+  "options": [
+   "1995*",
+   "Sexion d'Assaut",
+   "L'Entourage seulement",
+   "Bréhat"
+  ]
+ },
+ {
+  "key": "mus17-251",
+  "concept": "music.popular.v17_jul_record",
+  "label": "Jul",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pour quoi le rappeur marseillais Jul est-il réputé ?",
+  "explanation": "Il est l'un des artistes qui a vendu le plus de disques en France. Son geste « de la main » est célèbre.",
+  "options": [
+   "Sortir énormément d'albums, souvent plusieurs par an*",
+   "Ne jamais montrer son visage",
+   "Rapper uniquement en anglais",
+   "N'avoir sorti qu'un seul album"
+  ]
+ },
+ {
+  "key": "mus17-252",
+  "concept": "music.popular.v17_soprano_psy4",
+  "label": "Soprano",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel groupe marseillais Soprano a-t-il commencé ?",
+  "explanation": "Avec Alonzo, Vincenzo et Sya Styles, avant une carrière solo pleine de tubes comme « Cosmo ».",
+  "options": [
+   "Psy 4 de la rime*",
+   "IAM",
+   "Fonky Family",
+   "113"
+  ]
+ },
+ {
+  "key": "mus17-253",
+  "concept": "music.popular.v17_booba_92i",
+  "label": "Booba",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment s'appelle le label du rappeur Booba ?",
+  "explanation": "Le « 92 » de son département, les Hauts-de-Seine. QLF est le label de PNL.",
+  "options": [
+   "92i*",
+   "Def Jam",
+   "QLF",
+   "Rec. 118"
+  ]
+ },
+ {
+  "key": "mus17-254",
+  "concept": "music.popular.v17_tl_rap_fr_bouge",
+  "label": "Rap français",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année est sorti « Bouge de là » de MC Solaar, un des premiers grands tubes du rap français ?",
+  "explanation": "En 1990. L'année suivante, son album « Qui sème le vent récolte le tempo » est un succès.",
+  "answer": 1990,
+  "tolerance": 3,
+  "min": 1970,
+  "max": 2010
+ },
+ {
+  "key": "mus17-255",
+  "concept": "music.popular.v17_genres_villes",
+  "label": "Berceaux des genres",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque genre à la ville où il est né.",
+  "explanation": "Le jazz au début du XXe siècle, la house et la techno dans les années 1980, le grunge à la fin des années 1980.",
+  "pairs": [
+   [
+    "Le jazz",
+    "La Nouvelle-Orléans"
+   ],
+   [
+    "La techno",
+    "Detroit"
+   ],
+   [
+    "La house",
+    "Chicago"
+   ],
+   [
+    "Le grunge",
+    "Seattle"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-256",
+  "concept": "music.popular.v17_genres_pays",
+  "label": "Genres du monde",
+  "type": "pairs",
+  "difficulty": 50,
+  "prompt": "Associe chaque genre musical à son pays d'origine.",
+  "explanation": "Le zouk est né en Guadeloupe et en Martinique avec le groupe Kassav' au début des années 1980.",
+  "pairs": [
+   [
+    "La bossa nova",
+    "Brésil"
+   ],
+   [
+    "Le raï",
+    "Algérie"
+   ],
+   [
+    "Le zouk",
+    "Antilles françaises"
+   ],
+   [
+    "La salsa",
+    "Cuba et New York"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-257",
+  "concept": "music.popular.v17_blues_delta",
+  "label": "Le blues",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quelle région américaine le blues est-il né, à la fin du XIXe siècle ?",
+  "explanation": "Il est né chez les Afro-Américains du Sud, héritiers des chants de travail des esclaves.",
+  "options": [
+   "Le delta du Mississippi*",
+   "La Californie",
+   "L'Alaska",
+   "Le Texas"
+  ]
+ },
+ {
+  "key": "mus17-258",
+  "concept": "music.popular.v17_gospel",
+  "label": "Le gospel",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Le « gospel » est un chant…",
+  "explanation": "De « God spell », la parole de Dieu. Il a donné naissance à la soul.",
+  "options": [
+   "Religieux, né dans les églises afro-américaines*",
+   "De marins",
+   "De guerre",
+   "De Noël anglais"
+  ]
+ },
+ {
+  "key": "mus17-259",
+  "concept": "music.popular.v17_kassav",
+  "label": "Le zouk",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel groupe antillais a popularisé le zouk dans le monde, avec « Zouk-la sé sèl médikaman nou ni » ?",
+  "explanation": "Formé en 1979 en Guadeloupe. « Zouk » voulait dire « fête » en créole.",
+  "options": [
+   "Kassav'*",
+   "Malavoi",
+   "La Compagnie créole",
+   "Magic System"
+  ]
+ },
+ {
+  "key": "mus17-260",
+  "concept": "music.popular.v17_khaled",
+  "label": "Le raï",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel chanteur algérien est surnommé « le roi du raï » ?",
+  "explanation": "Il a connu un succès mondial avec « Didi » (1992) puis « Aïcha » (1996), écrite par Jean-Jacques Goldman.",
+  "options": [
+   "Khaled*",
+   "Cheb Mami",
+   "Rachid Taha",
+   "Faudel"
+  ]
+ },
+ {
+  "key": "mus17-261",
+  "concept": "music.popular.v17_bossa_garota",
+  "label": "La bossa nova",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle chanson brésilienne de 1962 est l'une des plus enregistrées au monde ?",
+  "explanation": "« Garota de Ipanema », d'Antônio Carlos Jobim et Vinícius de Moraes. Ipanema est une plage de Rio.",
+  "options": [
+   "La Fille d'Ipanema*",
+   "Mas que nada",
+   "Aquarela do Brasil",
+   "Tico-tico"
+  ]
+ },
+ {
+  "key": "mus17-262",
+  "concept": "music.popular.v17_punk_londres",
+  "label": "Le punk",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel groupe anglais a incarné le punk en 1976-1977 avec « God Save the Queen » ?",
+  "explanation": "Leur chanson, sortie pour le jubilé de la reine en 1977, a été interdite à la BBC.",
+  "options": [
+   "Les Sex Pistols*",
+   "The Clash",
+   "The Cure",
+   "The Police"
+  ]
+ },
+ {
+  "key": "mus17-263",
+  "concept": "music.popular.v17_ska",
+  "label": "Le ska",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le ska, ancêtre du reggae, est né…",
+  "explanation": "Puis il a ralenti pour devenir le rocksteady, puis le reggae.",
+  "options": [
+   "En Jamaïque, à la fin des années 1950*",
+   "En Angleterre, dans les années 1980",
+   "Au Mexique",
+   "À Cuba"
+  ]
+ },
+ {
+  "key": "mus17-264",
+  "concept": "music.popular.v17_hiphop_kool_herc",
+  "label": "Le hip-hop",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel DJ est considéré comme le père du hip-hop, pour ses fêtes dans le Bronx en 1973 ?",
+  "explanation": "Il faisait tourner deux disques identiques pour allonger les passages rythmés, sur lesquels les danseurs s'éclataient.",
+  "options": [
+   "DJ Kool Herc*",
+   "Grandmaster Flash",
+   "Afrika Bambaataa",
+   "Dr. Dre"
+  ]
+ },
+ {
+  "key": "mus17-265",
+  "concept": "music.popular.v17_beatbox",
+  "label": "Le beatbox",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qu'est-ce que le « beatbox » ?",
+  "explanation": "Né avec le hip-hop dans les années 1980. Les Français sont parmi les meilleurs au monde.",
+  "options": [
+   "Imiter une boîte à rythmes avec la bouche*",
+   "Une enceinte portable",
+   "Un concours de DJ",
+   "Un instrument électronique"
+  ]
+ },
+ {
+  "key": "mus17-266",
+  "concept": "music.popular.v17_auto_tune",
+  "label": "L'Auto-Tune",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle chanson de Cher (1998) a rendu célèbre l'effet Auto-Tune sur la voix ?",
+  "explanation": "Un logiciel conçu pour corriger la justesse, utilisé ici à l'excès pour créer un effet robotique.",
+  "options": [
+   "Believe*",
+   "Strong Enough",
+   "Gypsys, Tramps & Thieves",
+   "If I Could Turn Back Time"
+  ]
+ },
+ {
+  "key": "mus17-267",
+  "concept": "music.popular.v17_genres_ordre",
+  "label": "Histoire des genres",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces genres du plus ancien au plus récent.",
+  "explanation": "Le blues (fin XIXe), le rock'n'roll (années 1950), le punk (années 1970), le grunge (fin des années 1980).",
+  "items": [
+   "Le blues",
+   "Le rock'n'roll",
+   "Le punk",
+   "Le grunge"
+  ]
+ },
+ {
+  "key": "mus17-268",
+  "concept": "music.popular.v17_beatles_abbey_road",
+  "label": "Les Beatles",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Sur la pochette de quel album les Beatles traversent-ils un passage piéton ?",
+  "explanation": "Le passage piéton, devant les studios de Londres, attire des touristes du monde entier. Paul McCartney y est pieds nus.",
+  "options": [
+   "Abbey Road*",
+   "Let It Be",
+   "Revolver",
+   "Help!"
+  ]
+ },
+ {
+  "key": "mus17-269",
+  "concept": "music.popular.v17_beatles_dernier_concert",
+  "label": "Les Beatles",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Où les Beatles ont-ils donné leur dernier concert surprise, en 1969 ?",
+  "explanation": "Le fameux « rooftop concert » du 30 janvier 1969, interrompu par la police au bout de 42 minutes.",
+  "options": [
+   "Sur le toit de leur maison de disques, à Londres*",
+   "Au Shea Stadium de New York",
+   "Dans un pub de Liverpool",
+   "À l'Olympia de Paris"
+  ]
+ },
+ {
+  "key": "mus17-270",
+  "concept": "music.popular.v17_beatles_ventes",
+  "label": "Les Beatles",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel groupe est généralement considéré comme celui qui a vendu le plus de disques de l'histoire ?",
+  "explanation": "Les estimations dépassent 600 millions de disques.",
+  "options": [
+   "Les Beatles*",
+   "Queen",
+   "ABBA",
+   "Les Rolling Stones"
+  ]
+ },
+ {
+  "key": "mus17-271",
+  "concept": "music.popular.v17_stones_langue",
+  "label": "Les Rolling Stones",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le célèbre logo des Rolling Stones représente…",
+  "explanation": "Dessiné en 1970 par l'étudiant John Pasche, inspiré de la bouche de Mick Jagger.",
+  "options": [
+   "Une bouche qui tire la langue*",
+   "Une pierre qui roule",
+   "Une guitare en feu",
+   "Une étoile"
+  ]
+ },
+ {
+  "key": "mus17-272",
+  "concept": "music.popular.v17_stones_nom",
+  "label": "Les Rolling Stones",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le nom des Rolling Stones ?",
+  "explanation": "« Rollin' Stone », de Muddy Waters (1950). Le groupe était fou de blues américain.",
+  "options": [
+   "D'une chanson du bluesman Muddy Waters*",
+   "D'un proverbe anglais",
+   "D'une marque de bière",
+   "D'un film"
+  ]
+ },
+ {
+  "key": "mus17-273",
+  "concept": "music.popular.v17_queen_live_aid",
+  "label": "Queen",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Lors de quel concert géant de 1985 la prestation de Queen est-elle restée légendaire ?",
+  "explanation": "Organisé à Londres et Philadelphie pour lutter contre la famine en Éthiopie. Le film « Bohemian Rhapsody » le reconstitue.",
+  "options": [
+   "Live Aid*",
+   "Woodstock",
+   "Glastonbury",
+   "Concert pour le Bangladesh"
+  ]
+ },
+ {
+  "key": "mus17-274",
+  "concept": "music.popular.v17_queen_brian_may",
+  "label": "Queen",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le guitariste de Queen, Brian May, est aussi docteur en…",
+  "explanation": "Il a terminé sa thèse sur la poussière interplanétaire en 2007, plus de 30 ans après l'avoir commencée.",
+  "options": [
+   "Astrophysique*",
+   "Médecine",
+   "Histoire",
+   "Chimie"
+  ]
+ },
+ {
+  "key": "mus17-275",
+  "concept": "music.popular.v17_acdc_australie",
+  "label": "AC/DC",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "De quel pays vient le groupe AC/DC ?",
+  "explanation": "Formé à Sydney par les frères Malcolm et Angus Young. Angus joue en uniforme d'écolier.",
+  "options": [
+   "L'Australie*",
+   "Les États-Unis",
+   "Le Royaume-Uni",
+   "Le Canada"
+  ]
+ },
+ {
+  "key": "mus17-276",
+  "concept": "music.popular.v17_led_zep_stairway",
+  "label": "Led Zeppelin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel groupe a écrit « Stairway to Heaven » (1971) ?",
+  "explanation": "Une chanson de 8 minutes qui commence doucement et finit en déluge de guitares.",
+  "options": [
+   "Led Zeppelin*",
+   "Deep Purple",
+   "Pink Floyd",
+   "The Who"
+  ]
+ },
+ {
+  "key": "mus17-277",
+  "concept": "music.popular.v17_pink_floyd_wall",
+  "label": "Pink Floyd",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel album de Pink Floyd (1979) contient « Another Brick in the Wall » ?",
+  "explanation": "Avec un chœur d'enfants qui chante « We don't need no education ».",
+  "options": [
+   "The Wall*",
+   "The Dark Side of the Moon",
+   "Wish You Were Here",
+   "Animals"
+  ]
+ },
+ {
+  "key": "mus17-278",
+  "concept": "music.popular.v17_who_guitare",
+  "label": "The Who",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel guitariste avait l'habitude de détruire sa guitare sur scène ?",
+  "explanation": "Il a commencé par accident en 1964, en cassant le manche contre le plafond, puis en a fait un rituel.",
+  "options": [
+   "Pete Townshend, des Who*",
+   "Eric Clapton",
+   "Keith Richards",
+   "Brian May"
+  ]
+ },
+ {
+  "key": "mus17-279",
+  "concept": "music.popular.v17_hendrix_hymne",
+  "label": "Jimi Hendrix",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À Woodstock, en 1969, Jimi Hendrix a joué une version saturée de…",
+  "explanation": "Son « Star-Spangled Banner » imitait les bombes et les sirènes, en pleine guerre du Vietnam.",
+  "options": [
+   "L'hymne américain*",
+   "Une valse de Strauss",
+   "Une chanson des Beatles",
+   "La Marseillaise"
+  ]
+ },
+ {
+  "key": "mus17-280",
+  "concept": "music.popular.v17_club_27",
+  "label": "Le club des 27",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel point commun ont Jimi Hendrix, Janis Joplin, Jim Morrison, Kurt Cobain et Amy Winehouse ?",
+  "explanation": "On parle du « club des 27 », une triste coïncidence.",
+  "options": [
+   "Ils sont tous morts à 27 ans*",
+   "Ils sont tous nés le même jour",
+   "Ils ont joué ensemble",
+   "Ils étaient tous gauchers"
+  ]
+ },
+ {
+  "key": "mus17-281",
+  "concept": "music.popular.v17_morrison_pere_lachaise",
+  "label": "Jim Morrison",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Où est enterré Jim Morrison, le chanteur des Doors ?",
+  "explanation": "Mort à Paris en 1971, sa tombe est une des plus visitées du cimetière.",
+  "options": [
+   "Au cimetière du Père-Lachaise, à Paris*",
+   "À Los Angeles",
+   "À New York",
+   "À Londres"
+  ]
+ },
+ {
+  "key": "mus17-282",
+  "concept": "music.popular.v17_nirvana_nevermind",
+  "label": "Nirvana",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Sur la pochette de « Nevermind » de Nirvana (1991), on voit…",
+  "explanation": "Le bébé, Spencer Elden, a reproduit la photo plusieurs fois, adulte.",
+  "options": [
+   "Un bébé qui nage vers un billet d'un dollar*",
+   "Un ange qui tombe",
+   "Un pistolet",
+   "Une fleur fanée"
+  ]
+ },
+ {
+  "key": "mus17-283",
+  "concept": "music.popular.v17_u2_irlande",
+  "label": "U2",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel pays vient le groupe U2 ?",
+  "explanation": "Formé à Dublin en 1976 par des lycéens, dont Bono et The Edge.",
+  "options": [
+   "L'Irlande*",
+   "L'Écosse",
+   "L'Angleterre",
+   "Le pays de Galles"
+  ]
+ },
+ {
+  "key": "mus17-284",
+  "concept": "music.popular.v17_kiss_maquillage",
+  "label": "Kiss",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel groupe de rock américain est célèbre pour ses maquillages noir et blanc et ses costumes de super-héros ?",
+  "explanation": "Chaque membre avait son personnage : le Démon, l'Enfant des étoiles, l'Homme de l'espace et le Chat.",
+  "options": [
+   "Kiss*",
+   "Metallica",
+   "Aerosmith",
+   "Guns N' Roses"
+  ]
+ },
+ {
+  "key": "mus17-285",
+  "concept": "music.popular.v17_metallica_nom",
+  "label": "Metallica",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel groupe a fait du « heavy metal » un succès mondial avec le « Black Album » (1991) ?",
+  "explanation": "Avec les tubes « Enter Sandman » et « Nothing Else Matters ».",
+  "options": [
+   "Metallica*",
+   "Iron Maiden",
+   "Black Sabbath",
+   "Slayer"
+  ]
+ },
+ {
+  "key": "mus17-286",
+  "concept": "music.popular.v17_black_sabbath_ozzy",
+  "label": "Black Sabbath",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel chanteur, surnommé « le Prince des Ténèbres », a été la voix de Black Sabbath ?",
+  "explanation": "Black Sabbath est souvent considéré comme le premier groupe de heavy metal (Birmingham, 1968).",
+  "options": [
+   "Ozzy Osbourne*",
+   "Alice Cooper",
+   "Marilyn Manson",
+   "Rob Halford"
+  ]
+ },
+ {
+  "key": "mus17-287",
+  "concept": "music.popular.v17_bowie_ziggy",
+  "label": "David Bowie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel personnage extraterrestre David Bowie a-t-il incarné sur scène au début des années 1970 ?",
+  "explanation": "Un rockeur venu de l'espace, aux cheveux rouges. Major Tom, lui, est l'astronaute de sa chanson « Space Oddity ».",
+  "options": [
+   "Ziggy Stardust*",
+   "Major Tom",
+   "Starman",
+   "Space Oddity"
+  ]
+ },
+ {
+  "key": "mus17-288",
+  "concept": "music.popular.v17_bowie_yeux",
+  "label": "David Bowie",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi David Bowie semblait-il avoir des yeux de couleurs différentes ?",
+  "explanation": "À 15 ans, un ami le frappa à l'œil lors d'une bagarre pour une fille. Ils restèrent amis toute leur vie.",
+  "options": [
+   "Une pupille restée dilatée après un coup de poing*",
+   "Il portait une lentille colorée",
+   "Une maladie de naissance",
+   "C'était un maquillage"
+  ]
+ },
+ {
+  "key": "mus17-289",
+  "concept": "music.popular.v17_freddie_dents",
+  "label": "Freddie Mercury",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Pourquoi Freddie Mercury n'a-t-il jamais fait corriger ses dents en avant ?",
+  "explanation": "Il avait quatre dents de plus que la normale et croyait qu'elles lui donnaient sa tessiture exceptionnelle.",
+  "options": [
+   "Il pensait que cela changerait sa voix*",
+   "Il avait peur du dentiste",
+   "Il n'avait pas d'argent",
+   "Son groupe le lui interdisait"
+  ]
+ },
+ {
+  "key": "mus17-290",
+  "concept": "music.popular.v17_freddie_zanzibar",
+  "label": "Freddie Mercury",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Sur quelle île Freddie Mercury est-il né ?",
+  "explanation": "Né Farrokh Bulsara à Zanzibar (aujourd'hui en Tanzanie), en 1946.",
+  "options": [
+   "Zanzibar*",
+   "Madagascar",
+   "Maurice",
+   "Ceylan"
+  ]
+ },
+ {
+  "key": "mus17-291",
+  "concept": "music.popular.v17_vrais_noms_monde",
+  "label": "Les vrais noms",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque star à son vrai nom.",
+  "explanation": "Sting doit son surnom à un pull rayé jaune et noir, comme une guêpe.",
+  "pairs": [
+   [
+    "Elton John",
+    "Reginald Dwight"
+   ],
+   [
+    "Lady Gaga",
+    "Stefani Germanotta"
+   ],
+   [
+    "Bruno Mars",
+    "Peter Hernandez"
+   ],
+   [
+    "Sting",
+    "Gordon Sumner"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-292",
+  "concept": "music.popular.v17_sting_nom",
+  "label": "Sting",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le surnom de Sting, le chanteur de The Police ?",
+  "explanation": "Un musicien trouvait qu'il ressemblait à une guêpe (« sting » veut dire « piqûre »).",
+  "options": [
+   "D'un pull rayé jaune et noir*",
+   "De son caractère piquant",
+   "De son premier tube",
+   "D'un tatouage"
+  ]
+ },
+ {
+  "key": "mus17-293",
+  "concept": "music.popular.v17_tl_woodstock_beatles",
+  "label": "Abbey Road",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année est sorti l'album « Abbey Road » des Beatles ?",
+  "explanation": "Le dernier album enregistré par les quatre ensemble, même si « Let It Be » est sorti après.",
+  "answer": 1969,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2000
+ },
+ {
+  "key": "mus17-294",
+  "concept": "music.popular.v17_tl_nevermind",
+  "label": "Nevermind",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année est sorti « Nevermind » de Nirvana ?",
+  "explanation": "Avec « Smells Like Teen Spirit », il a fait exploser le grunge dans le monde entier.",
+  "answer": 1991,
+  "tolerance": 3,
+  "min": 1970,
+  "max": 2010
+ },
+ {
+  "key": "mus17-295",
+  "concept": "music.popular.v17_tl_rock_around",
+  "label": "Rock Around the Clock",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année « Rock Around the Clock » de Bill Haley a-t-il lancé la folie du rock'n'roll ?",
+  "explanation": "Enregistré en 1954, il devient numéro un en 1955 grâce au film « Graine de violence ».",
+  "answer": 1954,
+  "tolerance": 5,
+  "min": 1930,
+  "max": 1990
+ },
+ {
+  "key": "mus17-296",
+  "concept": "music.popular.v17_ella_scat",
+  "label": "Ella Fitzgerald",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle chanteuse de jazz, surnommée « la First Lady of Song », était la reine du « scat » ?",
+  "explanation": "Le scat : chanter des onomatopées comme un instrument. Elle pouvait improviser des minutes entières.",
+  "options": [
+   "Ella Fitzgerald*",
+   "Billie Holiday",
+   "Nina Simone",
+   "Aretha Franklin"
+  ]
+ },
+ {
+  "key": "mus17-297",
+  "concept": "music.popular.v17_billie_strange_fruit",
+  "label": "Billie Holiday",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "De quoi parle « Strange Fruit », chantée par Billie Holiday en 1939 ?",
+  "explanation": "Les « fruits étranges » sont les corps pendus aux arbres. Une des premières grandes chansons contre le racisme.",
+  "options": [
+   "Des lynchages des Noirs dans le sud des États-Unis*",
+   "D'un fruit exotique",
+   "D'un amour impossible",
+   "De la vie à la campagne"
+  ]
+ },
+ {
+  "key": "mus17-298",
+  "concept": "music.popular.v17_aretha_respect",
+  "label": "Aretha Franklin",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle chanteuse, surnommée « la reine de la soul », a chanté « Respect » (1967) ?",
+  "explanation": "La chanson, écrite par Otis Redding, est devenue un hymne des droits civiques et du féminisme.",
+  "options": [
+   "Aretha Franklin*",
+   "Diana Ross",
+   "Tina Turner",
+   "Whitney Houston"
+  ]
+ },
+ {
+  "key": "mus17-299",
+  "concept": "music.popular.v17_coltrane_sax",
+  "label": "John Coltrane",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel instrument jouait John Coltrane, auteur de « A Love Supreme » ?",
+  "explanation": "Un géant du saxophone ténor et soprano, mort en 1967 à 40 ans.",
+  "options": [
+   "Du saxophone*",
+   "De la trompette",
+   "Du piano",
+   "De la batterie"
+  ]
+ },
+ {
+  "key": "mus17-300",
+  "concept": "music.popular.v17_django_doigts",
+  "label": "Django Reinhardt",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le guitariste Django Reinhardt a révolutionné le jazz malgré…",
+  "explanation": "Brûlé dans l'incendie de sa roulotte à 18 ans, il invente une technique à deux doigts. Il crée le jazz manouche.",
+  "options": [
+   "Deux doigts paralysés par un incendie*",
+   "Le fait d'être aveugle",
+   "L'absence de guitare jusqu'à 20 ans",
+   "Une surdité totale"
+  ]
+ },
+ {
+  "key": "mus17-301",
+  "concept": "music.popular.v17_nina_simone_pianiste",
+  "label": "Nina Simone",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Avant de chanter du jazz, Nina Simone rêvait de devenir…",
+  "explanation": "Refusée dans un grand conservatoire, elle a toujours pensé que c'était à cause de sa couleur de peau.",
+  "options": [
+   "Pianiste classique*",
+   "Avocate",
+   "Actrice",
+   "Danseuse"
+  ]
+ },
+ {
+  "key": "mus17-302",
+  "concept": "music.popular.v17_motown",
+  "label": "La Motown",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "La Motown, maison de disques de Stevie Wonder et des Jackson Five, venait de…",
+  "explanation": "Son nom vient de « Motor Town », le surnom de Detroit, ville de l'automobile.",
+  "options": [
+   "Detroit*",
+   "Chicago",
+   "Memphis",
+   "Los Angeles"
+  ]
+ },
+ {
+  "key": "mus17-303",
+  "concept": "music.popular.v17_stevie_wonder_aveugle",
+  "label": "Stevie Wonder",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Stevie Wonder a signé son premier contrat à quel âge ?",
+  "explanation": "Aveugle de naissance, il a signé chez Motown à 11 ans. On l'appelait « Little Stevie Wonder ».",
+  "options": [
+   "11 ans*",
+   "18 ans",
+   "25 ans",
+   "7 ans"
+  ]
+ },
+ {
+  "key": "mus17-304",
+  "concept": "music.popular.v17_james_brown",
+  "label": "James Brown",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel chanteur était surnommé « le Parrain de la soul » (« Godfather of Soul ») ?",
+  "explanation": "Inventeur du funk, il a influencé tout le hip-hop. Son cri « I feel good ! » est célèbre.",
+  "options": [
+   "James Brown*",
+   "Ray Charles",
+   "Marvin Gaye",
+   "Otis Redding"
+  ]
+ },
+ {
+  "key": "mus17-305",
+  "concept": "music.popular.v17_ray_charles",
+  "label": "Ray Charles",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle chanson de Ray Charles est devenue l'hymne officiel de l'État de Géorgie ?",
+  "explanation": "En 1979, l'État de Géorgie l'a adoptée, alors qu'il avait refusé en 1961 de jouer devant un public séparé entre Noirs et Blancs dans cet État.",
+  "options": [
+   "Georgia on My Mind*",
+   "Hit the Road Jack",
+   "What'd I Say",
+   "I Got a Woman"
+  ]
+ },
+ {
+  "key": "mus17-306",
+  "concept": "music.popular.v17_mj_thriller_record",
+  "label": "Thriller",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est l'album le plus vendu de l'histoire ?",
+  "explanation": "Plus de 70 millions d'exemplaires selon les estimations.",
+  "options": [
+   "Thriller, de Michael Jackson*",
+   "Back in Black, d'AC/DC",
+   "The Dark Side of the Moon, de Pink Floyd",
+   "Abbey Road, des Beatles"
+  ]
+ },
+ {
+  "key": "mus17-307",
+  "concept": "music.popular.v17_mj_jackson5",
+  "label": "Michael Jackson",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Avec quel groupe familial Michael Jackson a-t-il commencé ?",
+  "explanation": "Il avait 5 ans. Ses frères Jackie, Tito, Jermaine et Marlon formaient le groupe.",
+  "options": [
+   "Les Jackson Five*",
+   "Les Osmonds",
+   "Les Temptations",
+   "Les Supremes"
+  ]
+ },
+ {
+  "key": "mus17-308",
+  "concept": "music.popular.v17_mj_gant",
+  "label": "Michael Jackson",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel accessoire Michael Jackson portait-il souvent à une seule main ?",
+  "explanation": "Avec le chapeau noir et les chaussettes blanches, c'était sa signature.",
+  "options": [
+   "Un gant blanc à paillettes*",
+   "Une montre en or",
+   "Une bague géante",
+   "Un bracelet de cuir"
+  ]
+ },
+ {
+  "key": "mus17-309",
+  "concept": "music.popular.v17_madonna_reine",
+  "label": "Madonna",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel surnom porte Madonna ?",
+  "explanation": "Comme Michael Jackson est le roi de la pop.",
+  "options": [
+   "La reine de la pop*",
+   "La diva du disco",
+   "La princesse du rock",
+   "La dame de fer"
+  ]
+ },
+ {
+  "key": "mus17-310",
+  "concept": "music.popular.v17_whitney_bodyguard",
+  "label": "Whitney Houston",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "De quel film vient « I Will Always Love You », chantée par Whitney Houston ?",
+  "explanation": "Une chanson écrite par Dolly Parton en 1973. La version de Whitney (1992) est un des singles les plus vendus.",
+  "options": [
+   "Bodyguard*",
+   "Titanic",
+   "Pretty Woman",
+   "Ghost"
+  ]
+ },
+ {
+  "key": "mus17-311",
+  "concept": "music.popular.v17_celine_titanic",
+  "label": "Céline Dion",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Quelle chanson de Céline Dion est le thème du film « Titanic » (1997) ?",
+  "explanation": "La chanson a reçu l'Oscar de la meilleure chanson originale.",
+  "options": [
+   "My Heart Will Go On*",
+   "Pour que tu m'aimes encore",
+   "All by Myself",
+   "The Power of Love"
+  ]
+ },
+ {
+  "key": "mus17-312",
+  "concept": "music.popular.v17_adele_ages",
+  "label": "Adele",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment Adele a-t-elle nommé ses premiers albums ?",
+  "explanation": "Chaque album porte l'âge qu'elle avait au moment de l'écrire.",
+  "options": [
+   "D'après son âge : 19, 21, 25, 30*",
+   "D'après ses villes préférées",
+   "D'après les prénoms de ses proches",
+   "D'après des couleurs"
+  ]
+ },
+ {
+  "key": "mus17-313",
+  "concept": "music.popular.v17_ed_sheeran_loop",
+  "label": "Ed Sheeran",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel appareil Ed Sheeran utilise-t-il sur scène pour jouer seul comme un groupe entier ?",
+  "explanation": "Il enregistre en direct sa guitare, ses percussions et ses voix, puis les superpose.",
+  "options": [
+   "Une pédale de boucle (loop station)*",
+   "Un orchestre en hologramme",
+   "Un piano automatique",
+   "Une boîte à musique"
+  ]
+ },
+ {
+  "key": "mus17-314",
+  "concept": "music.popular.v17_taylor_rerecord",
+  "label": "Taylor Swift",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi Taylor Swift a-t-elle réenregistré ses anciens albums (les « Taylor's Version ») ?",
+  "explanation": "Les enregistrements originaux appartenaient à son ancienne maison de disques, vendue sans son accord.",
+  "options": [
+   "Pour récupérer les droits sur ses chansons*",
+   "Parce que les originaux avaient été perdus",
+   "Pour les chanter en français",
+   "Pour un film"
+  ]
+ },
+ {
+  "key": "mus17-315",
+  "concept": "music.popular.v17_billie_eilish_frere",
+  "label": "Billie Eilish",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec qui Billie Eilish écrit-elle et produit-elle ses chansons ?",
+  "explanation": "Leurs premiers albums ont été enregistrés dans la chambre de Finneas, chez leurs parents.",
+  "options": [
+   "Son frère Finneas*",
+   "Son père",
+   "Son professeur de chant",
+   "Ed Sheeran"
+  ]
+ },
+ {
+  "key": "mus17-316",
+  "concept": "music.popular.v17_abba_nom",
+  "label": "ABBA",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "D'où vient le nom du groupe ABBA ?",
+  "explanation": "Agnetha, Björn, Benny et Anni-Frid. Une marque suédoise de conserves de poisson s'appelait déjà Abba !",
+  "options": [
+   "Des initiales des prénoms des quatre membres*",
+   "D'une marque de poisson",
+   "D'une ville suédoise",
+   "D'un mot qui veut dire « père »"
+  ]
+ },
+ {
+  "key": "mus17-317",
+  "concept": "music.popular.v17_kpop_gangnam",
+  "label": "Gangnam Style",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel chanteur sud-coréen a fait danser la planète avec « Gangnam Style » (2012) ?",
+  "explanation": "Premier clip à dépasser le milliard de vues sur YouTube, en décembre 2012.",
+  "options": [
+   "Psy*",
+   "BTS",
+   "Big Bang",
+   "G-Dragon"
+  ]
+ },
+ {
+  "key": "mus17-318",
+  "concept": "music.popular.v17_despacito_record",
+  "label": "Despacito",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "En quelle langue est chanté « Despacito », longtemps la vidéo la plus vue de YouTube ?",
+  "explanation": "Par les Portoricains Luis Fonsi et Daddy Yankee, en 2017. Il a dépassé les 8 milliards de vues.",
+  "options": [
+   "L'espagnol*",
+   "Le portugais",
+   "L'italien",
+   "L'anglais"
+  ]
+ },
+ {
+  "key": "mus17-320",
+  "concept": "music.popular.v17_spice_girls",
+  "label": "Spice Girls",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Combien de chanteuses comptaient les Spice Girls ?",
+  "explanation": "Scary, Sporty, Baby, Ginger et Posh (Victoria, future épouse de David Beckham).",
+  "options": [
+   "5*",
+   "3",
+   "4",
+   "6"
+  ]
+ },
+ {
+  "key": "mus17-321",
+  "concept": "music.popular.v17_rihanna_barbade",
+  "label": "Rihanna",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quelle chanteuse a été nommée « héroïne nationale » de la Barbade, son pays natal ?",
+  "explanation": "En 2021, lors du passage de la Barbade en république.",
+  "options": [
+   "Rihanna*",
+   "Nicki Minaj",
+   "Shakira",
+   "Beyoncé"
+  ]
+ },
+ {
+  "key": "mus17-323",
+  "concept": "music.popular.v17_eminem_slim",
+  "label": "Eminem",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le double maléfique d'Eminem, dans ses chansons ?",
+  "explanation": "Marshall Mathers est son vrai nom ; « Stan » et « Lose Yourself » sont des chansons.",
+  "options": [
+   "Slim Shady*",
+   "Marshall Mathers",
+   "Stan",
+   "Lose Yourself"
+  ]
+ },
+ {
+  "key": "mus17-324",
+  "concept": "music.popular.v17_eminem_oscar",
+  "label": "Eminem",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle chanson d'Eminem a remporté l'Oscar de la meilleure chanson en 2003 ?",
+  "explanation": "Tirée du film « 8 Mile », où il joue presque son propre rôle. Premier morceau de rap oscarisé.",
+  "options": [
+   "Lose Yourself*",
+   "Stan",
+   "The Real Slim Shady",
+   "Without Me"
+  ]
+ },
+ {
+  "key": "mus17-325",
+  "concept": "music.popular.v17_tubes_ordre",
+  "label": "Tubes",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces tubes du plus ancien au plus récent.",
+  "explanation": "1984, 1996, 2003 et 2019.",
+  "items": [
+   "Like a Virgin",
+   "Wannabe",
+   "Crazy in Love",
+   "Blinding Lights"
+  ]
+ },
+ {
+  "key": "mus17-326",
+  "concept": "music.popular.v17_albums_ordre",
+  "label": "Albums cultes",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces albums du plus ancien au plus récent.",
+  "explanation": "1967, 1982, 1991 et 2011.",
+  "items": [
+   "Sgt. Pepper's (Beatles)",
+   "Thriller (Michael Jackson)",
+   "Nevermind (Nirvana)",
+   "21 (Adele)"
+  ]
+ },
+ {
+  "key": "mus17-327",
+  "concept": "music.popular.v17_streaming_part",
+  "label": "Le streaming",
+  "type": "gauge",
+  "difficulty": 75,
+  "prompt": "Environ quelle part des revenus de la musique enregistrée vient du streaming dans le monde ? (à 10 % près)",
+  "explanation": "Environ deux tiers des revenus en 2023, selon la fédération internationale de l'industrie du disque (IFPI). Le CD et le vinyle font le reste, avec les droits.",
+  "answer": 67,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "mus17-328",
+  "concept": "music.popular.v17_woodstock_jours",
+  "label": "Woodstock",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de jours était prévu le festival de Woodstock, en août 1969 ?",
+  "explanation": "« Trois jours de paix et de musique », qui ont débordé sur un quatrième matin. Environ 400 000 personnes sont venues.",
+  "options": [
+   "3 jours*",
+   "1 jour",
+   "7 jours",
+   "2 semaines"
+  ]
+ },
+ {
+  "key": "mus17-329",
+  "concept": "music.popular.v17_live_aid_villes",
+  "label": "Live Aid",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quelles deux villes s'est tenu le Live Aid, le 13 juillet 1985 ?",
+  "explanation": "Phil Collins a même joué dans les deux, en prenant le Concorde entre les deux concerts.",
+  "options": [
+   "Londres et Philadelphie*",
+   "Paris et New York",
+   "Berlin et Los Angeles",
+   "Dublin et Chicago"
+  ]
+ },
+ {
+  "key": "mus17-330",
+  "concept": "music.popular.v17_vieilles_charrues",
+  "label": "Les festivals",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quelle région se tient le festival des Vieilles Charrues, un des plus grands de France ?",
+  "explanation": "À Carhaix, dans le Finistère, depuis 1992.",
+  "options": [
+   "En Bretagne*",
+   "En Provence",
+   "En Alsace",
+   "En Normandie"
+  ]
+ },
+ {
+  "key": "mus17-331",
+  "concept": "music.popular.v17_hellfest",
+  "label": "Les festivals",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel style de musique est à l'honneur au Hellfest, à Clisson ?",
+  "explanation": "Un des plus grands festivals de métal au monde, près de Nantes.",
+  "options": [
+   "Le métal et le rock dur*",
+   "L'électro",
+   "Le jazz",
+   "Le rap"
+  ]
+ },
+ {
+  "key": "mus17-332",
+  "concept": "music.popular.v17_glastonbury",
+  "label": "Les festivals",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le célèbre festival anglais de Glastonbury a lieu…",
+  "explanation": "Sur la ferme de Michael Eavis, dans le Somerset, depuis 1970. Les vaches laissent la place à 200 000 festivaliers.",
+  "options": [
+   "Dans une ferme*",
+   "Dans un stade",
+   "Sur une plage",
+   "Dans un château"
+  ]
+ },
+ {
+  "key": "mus17-333",
+  "concept": "music.popular.v17_rod_stewart_copacabana",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel chanteur a attiré environ 3,5 millions de personnes sur la plage de Copacabana le soir du Nouvel An 1994 ?",
+  "explanation": "Un des plus grands concerts gratuits de l'histoire, selon les chiffres de l'époque.",
+  "options": [
+   "Rod Stewart*",
+   "Mick Jagger",
+   "Paul McCartney",
+   "Michael Jackson"
+  ]
+ },
+ {
+  "key": "mus17-334",
+  "concept": "music.popular.v17_grammy",
+  "label": "Les Grammy Awards",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Les « Grammy Awards » sont des récompenses…",
+  "explanation": "Leur trophée est un petit gramophone doré. En France, l'équivalent, ce sont les Victoires de la musique.",
+  "options": [
+   "Musicales, aux États-Unis*",
+   "De cinéma, en France",
+   "De télévision, au Royaume-Uni",
+   "De théâtre, à New York"
+  ]
+ },
+ {
+  "key": "mus17-335",
+  "concept": "music.popular.v17_vinyle_retour",
+  "label": "Le vinyle",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le disque vinyle, presque disparu dans les années 2000, est…",
+  "explanation": "Ses ventes ont été multipliées depuis 2008. Aux États-Unis, il a même dépassé le CD en 2020.",
+  "options": [
+   "Revenu à la mode, ses ventes remontent depuis 2008*",
+   "Totalement interdit",
+   "Uniquement vendu aux musées",
+   "Remplacé par la cassette"
+  ]
+ },
+ {
+  "key": "mus17-336",
+  "concept": "music.popular.v17_cassette_annee",
+  "label": "La cassette",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle marque a inventé la cassette audio compacte, en 1963 ?",
+  "explanation": "Sony a ensuite lancé le Walkman en 1979, qui a permis d'écouter des cassettes partout.",
+  "options": [
+   "Philips*",
+   "Sony",
+   "Apple",
+   "Panasonic"
+  ]
+ },
+ {
+  "key": "mus17-337",
+  "concept": "music.popular.v17_walkman",
+  "label": "Le Walkman",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle marque a lancé le baladeur « Walkman » en 1979 ?",
+  "explanation": "Pour la première fois, on pouvait écouter sa musique dans la rue, avec un casque.",
+  "options": [
+   "Sony*",
+   "Philips",
+   "Panasonic",
+   "Samsung"
+  ]
+ },
+ {
+  "key": "mus17-338",
+  "concept": "music.popular.v17_ipod",
+  "label": "L'iPod",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle entreprise a lancé l'iPod en 2001, avec « 1 000 chansons dans votre poche » ?",
+  "explanation": "Il a été arrêté en 2022, remplacé par les smartphones.",
+  "options": [
+   "Apple*",
+   "Sony",
+   "Microsoft",
+   "Samsung"
+  ]
+ },
+ {
+  "key": "mus17-339",
+  "concept": "music.popular.v17_spotify",
+  "label": "Le streaming",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quel pays vient le service de streaming musical Spotify ?",
+  "explanation": "Fondé à Stockholm en 2006. Deezer, lui, est français.",
+  "options": [
+   "La Suède*",
+   "Les États-Unis",
+   "La France",
+   "Le Royaume-Uni"
+  ]
+ },
+ {
+  "key": "mus17-340",
+  "concept": "music.popular.v17_mtv",
+  "label": "MTV",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que voulaient dire les lettres de la chaîne MTV, lancée en 1981 ?",
+  "explanation": "Une chaîne entièrement consacrée aux clips. Elle a changé la façon de faire carrière dans la musique.",
+  "options": [
+   "Music Television*",
+   "Modern TV",
+   "Movie Television",
+   "My TV"
+  ]
+ },
+ {
+  "key": "mus17-341",
+  "concept": "music.popular.v17_tl_walkman",
+  "label": "Le Walkman",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année Sony a-t-il lancé le Walkman ?",
+  "explanation": "Le TPS-L2 bleu et argent : un succès mondial immédiat.",
+  "answer": 1979,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2010
+ },
+ {
+  "key": "mus17-342",
+  "concept": "music.popular.v17_tl_cd",
+  "label": "Le CD",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année le CD audio a-t-il été lancé dans le commerce ?",
+  "explanation": "Développé par Philips et Sony. Le premier album commercialisé fut « 52nd Street » de Billy Joel.",
+  "answer": 1982,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2010
+ },
+ {
+  "key": "mus17-343",
+  "concept": "music.popular.v17_tl_live_aid",
+  "label": "Live Aid",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année a eu lieu le Live Aid ?",
+  "explanation": "Le 13 juillet 1985, regardé par plus d'un milliard de téléspectateurs.",
+  "answer": 1985,
+  "tolerance": 3,
+  "min": 1960,
+  "max": 2010
+ },
+ {
+  "key": "mus17-344",
+  "concept": "music.popular.v17_le_beatles",
+  "label": "Beatles",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Les quatre garçons de Liverpool.",
+  "explanation": "John, Paul, George et Ringo.",
+  "word": "BEATLES",
+  "display": "Beatles"
+ },
+ {
+  "key": "mus17-345",
+  "concept": "music.popular.v17_le_nirvana",
+  "label": "Nirvana",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Le groupe grunge de Kurt Cobain.",
+  "explanation": "Le mot désigne, dans le bouddhisme, l'extinction de la souffrance.",
+  "word": "NIRVANA",
+  "display": "Nirvana"
+ },
+ {
+  "key": "mus17-346",
+  "concept": "music.popular.v17_le_bowie",
+  "label": "Bowie",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Le caméléon du rock, créateur de Ziggy Stardust.",
+  "explanation": "David Robert Jones a pris le nom de Bowie pour ne pas être confondu avec Davy Jones, des Monkees.",
+  "word": "BOWIE",
+  "display": "Bowie"
+ },
+ {
+  "key": "mus17-347",
+  "concept": "music.popular.v17_le_jazz",
+  "label": "Jazz",
+  "type": "letters",
+  "difficulty": 15,
+  "prompt": "Musique née à La Nouvelle-Orléans, pleine d'improvisation.",
+  "explanation": "Ses premiers enregistrements datent de 1917.",
+  "word": "JAZZ",
+  "display": "Jazz"
+ },
+ {
+  "key": "mus17-348",
+  "concept": "music.popular.v17_le_reggae",
+  "label": "Reggae",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Musique jamaïcaine de Bob Marley.",
+  "explanation": "Son grand ambassadeur, Bob Marley, est mort en 1981, à 36 ans.",
+  "word": "REGGAE",
+  "display": "Reggae"
+ },
+ {
+  "key": "mus17-349",
+  "concept": "music.popular.v17_le_rihanna",
+  "label": "Rihanna",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Chanteuse de « Umbrella » et « Diamonds », née à la Barbade.",
+  "explanation": "Robyn Rihanna Fenty de son vrai nom.",
+  "word": "RIHANNA",
+  "display": "Rihanna"
+ },
+ {
+  "key": "mus17-350",
+  "concept": "music.popular.v17_tf_elvis_brun",
+  "label": "Elvis Presley",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Elvis Presley était naturellement blond.",
+  "explanation": "Il teignait ses cheveux en noir, sans doute pour ressembler à ses idoles du cinéma comme Tony Curtis.",
+  "answer": true
+ },
+ {
+  "key": "mus17-351",
+  "concept": "music.popular.v17_tf_beatles_lecture",
+  "label": "Les Beatles",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Les Beatles ne savaient pas lire les partitions.",
+  "explanation": "Ils composaient d'oreille. Leur producteur George Martin écrivait les arrangements pour l'orchestre.",
+  "answer": true
+ },
+ {
+  "key": "mus17-352",
+  "concept": "music.popular.v17_tf_reggae_unesco",
+  "label": "Le reggae",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le reggae est inscrit au patrimoine culturel immatériel de l'humanité par l'UNESCO.",
+  "explanation": "Depuis 2018, pour sa contribution aux débats sur l'injustice, la paix et l'amour.",
+  "answer": true
+ },
+ {
+  "key": "mus17-353",
+  "concept": "music.popular.v17_tf_daft_punk_fin",
+  "label": "Daft Punk",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le duo Daft Punk s'est séparé en 2021.",
+  "explanation": "Annoncé avec la vidéo « Epilogue », où l'un des robots s'autodétruit dans le désert.",
+  "answer": true
+ },
+ {
+  "key": "mus17-354",
+  "concept": "music.popular.v17_tf_mozart_twinkle",
+  "label": "Ah ! vous dirai-je, maman",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "La comptine « Ah ! vous dirai-je, maman » a la même mélodie que « Twinkle, Twinkle, Little Star ».",
+  "explanation": "C'est aussi celle de l'alphabet anglais. Mozart a écrit douze variations sur ce thème.",
+  "answer": true
+ },
+ {
+  "key": "mus17-355",
+  "concept": "music.popular.v17_nu_beatles_numero1",
+  "label": "Les Beatles",
+  "type": "numeric",
+  "difficulty": 85,
+  "prompt": "Combien de numéros un les Beatles ont-ils placés au classement américain « Billboard Hot 100 » ?",
+  "explanation": "Vingt numéros un, un record toujours inégalé.",
+  "answer": 20,
+  "tolerance": 0
+ },
+ {
+  "key": "mus17-356",
+  "concept": "music.popular.v17_queen_membres",
+  "label": "Queen",
+  "type": "counter",
+  "difficulty": 20,
+  "prompt": "Combien de membres comptait le groupe Queen dans sa formation classique ?",
+  "explanation": "Freddie Mercury, Brian May, Roger Taylor et John Deacon.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1
+ },
+ {
+  "key": "mus17-357",
+  "concept": "music.popular.v17_wo_we_are_champions",
+  "label": "Queen",
+  "type": "word_order",
+  "difficulty": 25,
+  "prompt": "Remets dans l'ordre ce titre de Queen (1977).",
+  "explanation": "Chantée dans tous les stades du monde après les victoires.",
+  "answer": "We Are the Champions",
+  "words": [
+   "We",
+   "Are",
+   "the",
+   "Champions"
+  ]
+ },
+ {
+  "key": "mus17-358",
+  "concept": "music.popular.v17_wo_what_wonderful",
+  "label": "Louis Armstrong",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets dans l'ordre ce titre de Louis Armstrong (1967).",
+  "explanation": "Peu remarquée à sa sortie aux États-Unis, elle est devenue un classique grâce au film « Good Morning, Vietnam » (1987).",
+  "answer": "What a Wonderful World",
+  "words": [
+   "What",
+   "a",
+   "Wonderful",
+   "World"
+  ]
+ },
+ {
+  "key": "mus17-359",
+  "concept": "music.popular.v17_wo_stairway",
+  "label": "Led Zeppelin",
+  "type": "word_order",
+  "difficulty": 45,
+  "prompt": "Remets dans l'ordre ce titre de Led Zeppelin (1971).",
+  "explanation": "L'escalier vers le paradis : une des chansons rock les plus diffusées à la radio américaine.",
+  "answer": "Stairway to Heaven",
+  "words": [
+   "Stairway",
+   "to",
+   "Heaven"
+  ]
+ },
+ {
+  "key": "mus17-360",
+  "concept": "music.popular.v17_films_compositeurs",
+  "label": "Musiques de films",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque film à son compositeur.",
+  "explanation": "Zimmer a aussi signé « Gladiator » et « Interstellar » ; Morricone, plus de 400 musiques de films.",
+  "pairs": [
+   [
+    "Le Roi lion",
+    "Hans Zimmer"
+   ],
+   [
+    "Le Bon, la Brute et le Truand",
+    "Ennio Morricone"
+   ],
+   [
+    "Harry Potter à l'école des sorciers",
+    "John Williams"
+   ],
+   [
+    "Les Parapluies de Cherbourg",
+    "Michel Legrand"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-361",
+  "concept": "music.popular.v17_jaws_deux_notes",
+  "label": "Les Dents de la mer",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "La musique des « Dents de la mer » (1975) repose sur…",
+  "explanation": "John Williams a imaginé ce motif simple pour annoncer le requin, qu'on voit très peu dans le film.",
+  "options": [
+   "Deux notes répétées de plus en plus vite*",
+   "Un chœur d'enfants",
+   "Un solo de guitare électrique",
+   "Une valse"
+  ]
+ },
+ {
+  "key": "mus17-362",
+  "concept": "music.popular.v17_morricone_harmonica",
+  "label": "Il était une fois dans l'Ouest",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel instrument annonce le personnage joué par Charles Bronson dans « Il était une fois dans l'Ouest » ?",
+  "explanation": "Son personnage s'appelle d'ailleurs « Harmonica ». Musique d'Ennio Morricone, 1968.",
+  "options": [
+   "L'harmonica*",
+   "La trompette",
+   "Le violon",
+   "La guimbarde"
+  ]
+ },
+ {
+  "key": "mus17-363",
+  "concept": "music.popular.v17_interstellar_orgue",
+  "label": "Interstellar",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel instrument domine la musique d'« Interstellar », composée par Hans Zimmer ?",
+  "explanation": "Enregistrée sur l'orgue de l'église du Temple, à Londres.",
+  "options": [
+   "L'orgue*",
+   "Le violon",
+   "La guitare",
+   "Le saxophone"
+  ]
+ },
+ {
+  "key": "mus17-364",
+  "concept": "music.popular.v17_amelie_tiersen",
+  "label": "Le Fabuleux Destin d'Amélie Poulain",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui a composé la musique du « Fabuleux Destin d'Amélie Poulain » (2001) ?",
+  "explanation": "Une valse au piano et à l'accordéon devenue le symbole d'un Paris rêvé.",
+  "options": [
+   "Yann Tiersen*",
+   "Alexandre Desplat",
+   "Éric Serra",
+   "Vladimir Cosma"
+  ]
+ },
+ {
+  "key": "mus17-365",
+  "concept": "music.popular.v17_desplat_oscars",
+  "label": "Alexandre Desplat",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel compositeur français a remporté deux Oscars, pour « The Grand Budapest Hotel » et « La Forme de l'eau » ?",
+  "explanation": "Il a aussi signé la musique des deux derniers « Harry Potter ».",
+  "options": [
+   "Alexandre Desplat*",
+   "Michel Legrand",
+   "Maurice Jarre",
+   "Yann Tiersen"
+  ]
+ },
+ {
+  "key": "mus17-366",
+  "concept": "music.popular.v17_jarre_lawrence",
+  "label": "Maurice Jarre",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le compositeur Maurice Jarre a gagné trois Oscars, dont un pour…",
+  "explanation": "Il est le père de Jean-Michel Jarre, pionnier de la musique électronique.",
+  "options": [
+   "Lawrence d'Arabie*",
+   "Le Parrain",
+   "Star Wars",
+   "Titanic"
+  ]
+ },
+ {
+  "key": "mus17-367",
+  "concept": "music.popular.v17_jean_michel_jarre",
+  "label": "Jean-Michel Jarre",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel album de Jean-Michel Jarre (1976) a popularisé la musique électronique dans le monde ?",
+  "explanation": "Enregistré dans sa cuisine avec des synthétiseurs. Il a vendu des millions d'exemplaires.",
+  "options": [
+   "Oxygène*",
+   "Équinoxe",
+   "Zoolook",
+   "Rendez-vous"
+  ]
+ },
+ {
+  "key": "mus17-368",
+  "concept": "music.popular.v17_cosma_grand_blond",
+  "label": "Vladimir Cosma",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Vladimir Cosma a composé la musique de quel film, avec sa flûte de Pan célèbre ?",
+  "explanation": "La flûte de Pan est jouée par le Roumain Gheorghe Zamfir.",
+  "options": [
+   "Le Grand Blond avec une chaussure noire*",
+   "Les Bronzés",
+   "La Grande Vadrouille",
+   "Le Dîner de cons"
+  ]
+ },
+ {
+  "key": "mus17-369",
+  "concept": "music.popular.v17_kosma_feuilles",
+  "label": "Joseph Kosma",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qui a composé la musique des « Feuilles mortes », sur un poème de Prévert ?",
+  "explanation": "Pour le film « Les Portes de la nuit » (1946) de Marcel Carné.",
+  "options": [
+   "Joseph Kosma*",
+   "Michel Legrand",
+   "Charles Trenet",
+   "Georges Brassens"
+  ]
+ },
+ {
+  "key": "mus17-370",
+  "concept": "music.popular.v17_mario_compositeur",
+  "label": "Super Mario",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Qui a composé la célèbre musique de « Super Mario Bros. » (1985) ?",
+  "explanation": "Il a aussi composé les musiques de « The Legend of Zelda ». Miyamoto est le créateur des jeux.",
+  "options": [
+   "Koji Kondo*",
+   "Shigeru Miyamoto",
+   "Nobuo Uematsu",
+   "Hans Zimmer"
+  ]
+ },
+ {
+  "key": "mus17-371",
+  "concept": "music.popular.v17_tetris_russe",
+  "label": "Tetris",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "La musique de « Tetris » sur Game Boy reprend…",
+  "explanation": "« Korobeïniki », une chanson du XIXe siècle sur des colporteurs. Le jeu a été inventé en URSS.",
+  "options": [
+   "Une chanson populaire russe*",
+   "Une symphonie de Mozart",
+   "Un tube disco",
+   "L'hymne japonais"
+  ]
+ },
+ {
+  "key": "mus17-372",
+  "concept": "music.popular.v17_jeux_video_concerts",
+  "label": "Jeux vidéo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Les musiques de quelle série de jeux de rôle japonais sont jouées en concert symphonique dans le monde entier ?",
+  "explanation": "Composées par Nobuo Uematsu. Les concerts « Distant Worlds » ont fait le tour du monde.",
+  "options": [
+   "Final Fantasy*",
+   "Pac-Man",
+   "Tetris",
+   "Pong"
+  ]
+ },
+ {
+  "key": "mus17-373",
+  "concept": "music.popular.v17_tf_starwars_williams",
+  "label": "Star Wars",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "C'est John Williams qui a composé la musique d'« Indiana Jones » et de « Jurassic Park ».",
+  "explanation": "Et aussi « E.T. », « Les Dents de la mer », « Superman » et les premiers « Harry Potter ».",
+  "answer": true
+ },
+ {
+  "key": "mus17-374",
+  "concept": "music.popular.v17_tf_zimmer_gladiator",
+  "label": "Hans Zimmer",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Hans Zimmer est un compositeur allemand.",
+  "explanation": "Né à Francfort en 1957, il vit à Los Angeles. Il a composé plus de 150 musiques de films.",
+  "answer": true
+ },
+ {
+  "key": "mus17-375",
+  "concept": "music.popular.v17_tl_star_wars_musique",
+  "label": "Star Wars",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année est sorti le premier « Star Wars », et sa musique culte ?",
+  "explanation": "La bande originale de John Williams est l'une des plus vendues de l'histoire.",
+  "answer": 1977,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2010
+ },
+ {
+  "key": "mus17-376",
+  "concept": "music.popular.v17_cats_lloyd",
+  "label": "Comédies musicales",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel compositeur britannique a écrit « Cats » et « Le Fantôme de l'Opéra » ?",
+  "explanation": "« Le Fantôme de l'Opéra » est le spectacle resté le plus longtemps à l'affiche à Broadway, de 1988 à 2023.",
+  "options": [
+   "Andrew Lloyd Webber*",
+   "Elton John",
+   "Tim Rice",
+   "Stephen Sondheim"
+  ]
+ },
+ {
+  "key": "mus17-377",
+  "concept": "music.popular.v17_roi_lion_elton",
+  "label": "Le Roi lion",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel chanteur a composé les chansons du « Roi lion » de Disney (1994) ?",
+  "explanation": "Sur des paroles de Tim Rice, dont « L'Histoire de la vie » et « Hakuna Matata ».",
+  "options": [
+   "Elton John*",
+   "Phil Collins",
+   "Sting",
+   "Paul McCartney"
+  ]
+ },
+ {
+  "key": "mus17-378",
+  "concept": "music.popular.v17_tarzan_collins",
+  "label": "Tarzan",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel batteur et chanteur a écrit les chansons du « Tarzan » de Disney (1999) ?",
+  "explanation": "Il les a même enregistrées en plusieurs langues, dont le français.",
+  "options": [
+   "Phil Collins*",
+   "Elton John",
+   "Sting",
+   "Peter Gabriel"
+  ]
+ },
+ {
+  "key": "mus17-379",
+  "concept": "music.popular.v17_reine_neiges",
+  "label": "La Reine des neiges",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Quelle chanson de « La Reine des neiges » (2013) a été un phénomène mondial ?",
+  "explanation": "« Let It Go » en anglais, traduite dans plus de 40 langues.",
+  "options": [
+   "Libérée, délivrée*",
+   "Je voudrais un bonhomme de neige",
+   "Le renne est mieux que l'homme",
+   "Pour la première fois depuis longtemps"
+  ]
+ },
+ {
+  "key": "mus17-380",
+  "concept": "music.popular.v17_hamilton",
+  "label": "Hamilton",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "La comédie musicale « Hamilton » (2015) raconte la vie d'un père fondateur des États-Unis… en…",
+  "explanation": "Écrite par Lin-Manuel Miranda, elle a remporté onze Tony Awards.",
+  "options": [
+   "Rap et hip-hop*",
+   "Opéra classique",
+   "Country",
+   "Disco"
+  ]
+ },
+ {
+  "key": "mus17-381",
+  "concept": "music.popular.v17_mamma_mia",
+  "label": "Mamma Mia!",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "La comédie musicale « Mamma Mia! » est construite sur les chansons de…",
+  "explanation": "Adaptée au cinéma en 2008, avec Meryl Streep.",
+  "options": [
+   "ABBA*",
+   "Queen",
+   "Les Beatles",
+   "Madonna"
+  ]
+ },
+ {
+  "key": "mus17-382",
+  "concept": "music.popular.v17_mozart_opera_rock",
+  "label": "Mozart, l'opéra rock",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle comédie musicale française de 2009 contient le tube « L'Assasymphonie » ?",
+  "explanation": "Mise en scène par Olivier Dahan, elle a fait connaître Mikelangelo Loconte et Florent Mothe.",
+  "options": [
+   "Mozart, l'opéra rock*",
+   "1789, les Amants de la Bastille",
+   "Le Roi Soleil",
+   "Les Dix Commandements"
+  ]
+ },
+ {
+  "key": "mus17-383",
+  "concept": "music.popular.v17_roi_soleil_comedie",
+  "label": "Le Roi Soleil",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel monarque est le héros d'une comédie musicale française à succès de 2005 ?",
+  "explanation": "« Le Roi Soleil », avec Emmanuel Moire et le tube « Être à la hauteur ».",
+  "options": [
+   "Louis XIV*",
+   "Napoléon",
+   "Henri IV",
+   "François Ier"
+  ]
+ },
+ {
+  "key": "mus17-384",
+  "concept": "music.popular.v17_comedies_ordre",
+  "label": "Comédies musicales",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces comédies musicales françaises de la plus ancienne à la plus récente.",
+  "explanation": "1978, 1998, 2005 et 2009.",
+  "items": [
+   "Starmania",
+   "Notre-Dame de Paris",
+   "Le Roi Soleil",
+   "Mozart, l'opéra rock"
+  ]
+ },
+ {
+  "key": "mus17-385",
+  "concept": "music.popular.v17_euro_france_victoires",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de fois la France a-t-elle gagné l'Eurovision ?",
+  "explanation": "En 1958, 1960, 1962, 1969 et 1977. Aucune victoire depuis Marie Myriam.",
+  "options": [
+   "5 fois*",
+   "1 fois",
+   "3 fois",
+   "10 fois"
+  ]
+ },
+ {
+  "key": "mus17-386",
+  "concept": "music.popular.v17_euro_record_irlande",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quels pays détiennent le record de victoires à l'Eurovision, avec 7 chacun ?",
+  "explanation": "L'Irlande a même gagné trois années de suite, de 1992 à 1994. La Suède a égalé ce record en 2023.",
+  "options": [
+   "L'Irlande et la Suède*",
+   "La France et le Royaume-Uni",
+   "L'Italie et l'Allemagne",
+   "La Norvège et Israël"
+  ]
+ },
+ {
+  "key": "mus17-387",
+  "concept": "music.popular.v17_euro_lordi",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel groupe finlandais de hard rock, déguisé en monstres, a remporté l'Eurovision 2006 ?",
+  "explanation": "Avec « Hard Rock Hallelujah ». Une des victoires les plus surprenantes du concours.",
+  "options": [
+   "Lordi*",
+   "Nightwish",
+   "HIM",
+   "The Rasmus"
+  ]
+ },
+ {
+  "key": "mus17-388",
+  "concept": "music.popular.v17_euro_maneskin",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel groupe de rock italien a gagné l'Eurovision 2021, avant un succès mondial ?",
+  "explanation": "Avec « Zitti e buoni ». Leur reprise de « Beggin' » a ensuite fait le tour du monde.",
+  "options": [
+   "Måneskin*",
+   "Il Volo",
+   "Le Vibrazioni",
+   "Pinguini Tattici Nucleari"
+  ]
+ },
+ {
+  "key": "mus17-389",
+  "concept": "music.popular.v17_euro_big5",
+  "label": "Eurovision",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi la France est-elle directement qualifiée pour la finale de l'Eurovision ?",
+  "explanation": "Le « Big Five » (France, Allemagne, Italie, Espagne, Royaume-Uni) et le pays organisateur sont qualifiés d'office.",
+  "options": [
+   "Elle fait partie des plus gros financeurs du concours*",
+   "Elle a créé le concours",
+   "Elle a gagné le plus de fois",
+   "Par tirage au sort"
+  ]
+ },
+ {
+  "key": "mus17-390",
+  "concept": "music.popular.v17_tl_euro_premier",
+  "label": "Eurovision",
+  "type": "timeline",
+  "difficulty": 65,
+  "prompt": "En quelle année a eu lieu le premier concours de l'Eurovision, à Lugano ?",
+  "explanation": "Sept pays seulement y participaient. La Suisse a gagné avec Lys Assia.",
+  "answer": 1956,
+  "tolerance": 3,
+  "min": 1930,
+  "max": 2000
+ },
+ {
+  "key": "mus17-391",
+  "concept": "music.popular.v17_tf_euro_anglais",
+  "label": "Eurovision",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "À l'Eurovision, chaque pays a toujours été obligé de chanter dans sa propre langue.",
+  "explanation": "La règle a changé plusieurs fois. Depuis 1999, chaque pays chante dans la langue de son choix.",
+  "answer": false
+ },
+ {
+  "key": "mus17-392",
+  "concept": "music.popular.v17_daft_punk_casques",
+  "label": "Daft Punk",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Les deux membres de Daft Punk se sont rencontrés…",
+  "explanation": "Thomas Bangalter et Guy-Manuel de Homem-Christo, au lycée Carnot. Leur premier groupe s'appelait Darlin'.",
+  "options": [
+   "Au lycée, à Paris*",
+   "Dans un studio de Los Angeles",
+   "À l'armée",
+   "Dans une émission de télé"
+  ]
+ },
+ {
+  "key": "mus17-393",
+  "concept": "music.popular.v17_daft_punk_nom",
+  "label": "Daft Punk",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "D'où vient le nom « Daft Punk » ?",
+  "explanation": "Un journaliste anglais avait qualifié leur musique de « punk débile ». Ils ont gardé l'insulte comme nom.",
+  "options": [
+   "D'une critique qui traitait leur premier groupe de « daft punky thrash »*",
+   "D'un film",
+   "D'un jeu vidéo",
+   "De leur chien"
+  ]
+ },
+ {
+  "key": "mus17-394",
+  "concept": "music.popular.v17_guetta_titanium",
+  "label": "David Guetta",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avec quelle chanteuse australienne David Guetta a-t-il sorti « Titanium » (2011) ?",
+  "explanation": "Sia l'avait d'abord écrite pour une autre chanteuse.",
+  "options": [
+   "Sia*",
+   "Kylie Minogue",
+   "Rihanna",
+   "Dua Lipa"
+  ]
+ },
+ {
+  "key": "mus17-395",
+  "concept": "music.popular.v17_french_touch",
+  "label": "La French Touch",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment a-t-on appelé la vague de musique électronique française des années 1990 (Daft Punk, Air, Cassius) ?",
+  "explanation": "Une house filtrée et funky, qui a fait danser le monde entier.",
+  "options": [
+   "La French Touch*",
+   "La Nouvelle Vague",
+   "Le Paris Sound",
+   "La Techno Française"
+  ]
+ },
+ {
+  "key": "mus17-396",
+  "concept": "music.popular.v17_dj_platines",
+  "label": "Le DJ",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Comment s'appellent les tourne-disques sur lesquels mixe un DJ ?",
+  "explanation": "Le « scratch » consiste à faire tourner le disque à la main, en avant et en arrière.",
+  "options": [
+   "Les platines*",
+   "Les consoles",
+   "Les vinyles",
+   "Les enceintes"
+  ]
+ },
+ {
+  "key": "mus17-397",
+  "concept": "music.popular.v17_blackpink",
+  "label": "La K-pop",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de membres compte le groupe de K-pop Blackpink ?",
+  "explanation": "Jisoo, Jennie, Rosé et Lisa. BTS, lui, en compte sept.",
+  "options": [
+   "4*",
+   "7",
+   "5",
+   "9"
+  ]
+ },
+ {
+  "key": "mus17-398",
+  "concept": "music.popular.v17_kpop_pays",
+  "label": "La K-pop",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "De quel pays vient la « K-pop » ?",
+  "explanation": "Le K veut dire « Korean ». En japonais, on parle de J-pop.",
+  "options": [
+   "La Corée du Sud*",
+   "Le Japon",
+   "La Chine",
+   "La Thaïlande"
+  ]
+ },
+ {
+  "key": "mus17-399",
+  "concept": "music.popular.v17_clara_luciani",
+  "label": "Pop française",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle chanteuse a sorti « La grenade » (2018) et « Le reste » (2021) ?",
+  "explanation": "Ancienne choriste du groupe La Femme, elle a gagné plusieurs Victoires de la musique.",
+  "options": [
+   "Clara Luciani*",
+   "Juliette Armanet",
+   "Pomme",
+   "Angèle"
+  ]
+ },
+ {
+  "key": "mus17-400",
+  "concept": "music.popular.v17_vianney_guitare",
+  "label": "Pop française",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel chanteur, souvent seul avec sa guitare, a sorti « Je te déteste » et « Pas là » ?",
+  "explanation": "Il fabrique lui-même ses guitares. Il a été coach de « The Voice ».",
+  "options": [
+   "Vianney*",
+   "Kendji Girac",
+   "Slimane",
+   "Amir"
+  ]
+ },
+ {
+  "key": "mus17-401",
+  "concept": "music.popular.v17_kendji",
+  "label": "Pop française",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel chanteur gitan a gagné « The Voice » en 2014 et chanté « Color Gitano » ?",
+  "explanation": "Issu de la communauté gitane, il est né à Périgueux en 1996.",
+  "options": [
+   "Kendji Girac*",
+   "Vianney",
+   "Slimane",
+   "Claudio Capéo"
+  ]
+ },
+ {
+  "key": "mus17-402",
+  "concept": "music.popular.v17_gims_maitre",
+  "label": "Gims",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel était l'ancien nom de scène du chanteur Gims ?",
+  "explanation": "Il a retiré « Maître » de son nom en 2018.",
+  "options": [
+   "Maître Gims*",
+   "Gims Master",
+   "Big Gims",
+   "Gims le Roi"
+  ]
+ },
+ {
+  "key": "mus17-403",
+  "concept": "music.popular.v17_frere_jacques_canon",
+  "label": "Frère Jacques",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Frère Jacques » peut se chanter en canon. Qu'est-ce que cela veut dire ?",
+  "explanation": "Chaque groupe commence quand le précédent arrive à la deuxième phrase.",
+  "options": [
+   "Plusieurs voix chantent la même mélodie en décalé*",
+   "On chante très fort",
+   "On chante à l'envers",
+   "On chante avec des instruments"
+  ]
+ },
+ {
+  "key": "mus17-404",
+  "concept": "music.popular.v17_au_clair_lune_ami",
+  "label": "Au clair de la lune",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Dans « Au clair de la lune », à qui le narrateur demande-t-il de lui prêter sa plume ?",
+  "explanation": "« Au clair de la lune, mon ami Pierrot, prête-moi ta plume pour écrire un mot. »",
+  "options": [
+   "Son ami Pierrot*",
+   "Sa voisine",
+   "Le meunier",
+   "Arlequin"
+  ]
+ },
+ {
+  "key": "mus17-405",
+  "concept": "music.popular.v17_wo_au_clair",
+  "label": "Comptine",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets dans l'ordre le début de cette comptine.",
+  "explanation": "Un enregistrement de cette chanson, réalisé en 1860 par le Français Scott de Martinville, est le plus ancien enregistrement de voix connu.",
+  "answer": "Au clair de la lune, mon ami Pierrot",
+  "words": [
+   "Au",
+   "clair",
+   "de",
+   "la",
+   "lune,",
+   "mon",
+   "ami",
+   "Pierrot"
+  ]
+ },
+ {
+  "key": "mus17-406",
+  "concept": "music.popular.v17_tf_au_clair_enregistrement",
+  "label": "Au clair de la lune",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Le plus ancien enregistrement connu d'une voix humaine est un extrait d'« Au clair de la lune », réalisé en 1860.",
+  "explanation": "Par Édouard-Léon Scott de Martinville, avec son « phonautographe ». On n'a pu l'écouter qu'en 2008, grâce à l'informatique.",
+  "answer": true
+ },
+ {
+  "key": "mus17-407",
+  "concept": "music.popular.v17_wo_frere_jacques",
+  "label": "Comptine",
+  "type": "word_order",
+  "difficulty": 10,
+  "prompt": "Remets dans l'ordre le début de cette comptine.",
+  "explanation": "On la chante aussi en anglais (« Are you sleeping, Brother John ? ») et en dizaines d'autres langues.",
+  "answer": "Frère Jacques, dormez-vous ?",
+  "words": [
+   "Frère",
+   "Jacques,",
+   "dormez-vous",
+   "?"
+  ]
+ },
+ {
+  "key": "mus17-408",
+  "concept": "music.popular.v17_joyeux_anniversaire",
+  "label": "Joyeux anniversaire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "La chanson « Joyeux anniversaire » vient d'une chanson américaine de 1893 destinée…",
+  "explanation": "« Good Morning to All », des sœurs Hill. Elle a longtemps été protégée par des droits d'auteur, jusqu'en 2016.",
+  "options": [
+   "À saluer les élèves le matin à l'école*",
+   "À un président",
+   "À un mariage",
+   "À Noël"
+  ]
+ },
+ {
+  "key": "mus17-409",
+  "concept": "music.popular.v17_vive_le_vent",
+  "label": "Vive le vent",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "« Vive le vent » est l'adaptation française de quelle chanson américaine ?",
+  "explanation": "« Jingle Bells » (1857) ne parle pas de Noël : elle raconte une course en traîneau dans la neige.",
+  "options": [
+   "Jingle Bells*",
+   "White Christmas",
+   "Silent Night",
+   "Let It Snow"
+  ]
+ },
+ {
+  "key": "mus17-410",
+  "concept": "music.popular.v17_douce_nuit",
+  "label": "Douce nuit",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quel pays a été créé le chant de Noël « Douce nuit » (« Stille Nacht »), en 1818 ?",
+  "explanation": "Dans le petit village d'Oberndorf, près de Salzbourg, accompagné à la guitare car l'orgue était en panne, selon la légende.",
+  "options": [
+   "L'Autriche*",
+   "L'Allemagne",
+   "La Suisse",
+   "La France"
+  ]
+ },
+ {
+  "key": "mus17-411",
+  "concept": "music.popular.v17_hymne_chant_partisans",
+  "label": "Le Chant des partisans",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Le Chant des partisans » était l'hymne de…",
+  "explanation": "Écrit à Londres en 1943 par Joseph Kessel et Maurice Druon, sur une musique d'Anna Marly.",
+  "options": [
+   "La Résistance française*",
+   "La Révolution française",
+   "La Commune de Paris",
+   "L'armée de Napoléon"
+  ]
+ },
+ {
+  "key": "mus17-412",
+  "concept": "music.popular.v17_hymnes_pays",
+  "label": "Hymnes nationaux",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque hymne à son pays.",
+  "explanation": "L'hymne britannique change de titre selon que le souverain est un roi ou une reine.",
+  "pairs": [
+   [
+    "God Save the King",
+    "Royaume-Uni"
+   ],
+   [
+    "The Star-Spangled Banner",
+    "États-Unis"
+   ],
+   [
+    "Il Canto degli Italiani",
+    "Italie"
+   ],
+   [
+    "La Brabançonne",
+    "Belgique"
+   ]
+  ]
+ },
+ {
+  "key": "mus17-413",
+  "concept": "music.popular.v17_tf_hymne_espagne",
+  "label": "Hymnes nationaux",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "L'hymne national espagnol n'a pas de paroles officielles.",
+  "explanation": "La « Marcha Real » se joue sans paroles : les sportifs espagnols restent silencieux pendant l'hymne.",
+  "answer": true
+ },
+ {
+  "key": "mus17-414",
+  "concept": "music.instruments.v17_son_vitesse",
+  "label": "Le son",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle est la vitesse du son dans l'air, environ ?",
+  "explanation": "Environ 1 200 km/h. 300 000 km/s, c'est la vitesse de la lumière : c'est pour cela qu'on voit l'éclair avant d'entendre le tonnerre.",
+  "options": [
+   "340 mètres par seconde*",
+   "34 mètres par seconde",
+   "3 400 mètres par seconde",
+   "300 000 kilomètres par seconde"
+  ]
+ },
+ {
+  "key": "mus17-415",
+  "concept": "music.instruments.v17_son_vide",
+  "label": "Le son",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi n'y a-t-il aucun son dans l'espace ?",
+  "explanation": "Le son a besoin d'un milieu (air, eau, solide) pour se propager. Les explosions des films de science-fiction sont donc fausses !",
+  "options": [
+   "Parce qu'il n'y a pas d'air pour transporter les vibrations*",
+   "Parce qu'il fait trop froid",
+   "Parce qu'il fait trop noir",
+   "Parce que les planètes absorbent le bruit"
+  ]
+ },
+ {
+  "key": "mus17-416",
+  "concept": "music.instruments.v17_oreille_humaine",
+  "label": "L'oreille",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Entre quelles fréquences l'oreille humaine entend-elle environ ?",
+  "explanation": "En dessous : les infrasons (éléphants, baleines) ; au-dessus : les ultrasons (chauves-souris, dauphins). On perd les aigus en vieillissant.",
+  "options": [
+   "De 20 à 20 000 hertz*",
+   "De 1 à 1 000 hertz",
+   "De 100 à 100 000 hertz",
+   "De 500 à 5 000 hertz"
+  ]
+ },
+ {
+  "key": "mus17-417",
+  "concept": "music.instruments.v17_decibels",
+  "label": "Le son",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "En quelle unité mesure-t-on l'intensité d'un son ?",
+  "explanation": "Au-delà de 85 décibels, une exposition longue abîme l'oreille. Un concert de rock dépasse souvent 100 décibels.",
+  "options": [
+   "En décibels*",
+   "En hertz",
+   "En watts",
+   "En lux"
+  ]
+ },
+ {
+  "key": "mus17-418",
+  "concept": "music.instruments.v17_concert_db",
+  "label": "Le son",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien de décibels peut atteindre un concert de rock près des enceintes ?",
+  "explanation": "Plus de 100 dB : d'où l'intérêt des bouchons d'oreille. La douleur commence vers 120 dB. Une conversation, c'est environ 60 dB.",
+  "options": [
+   "Plus de 100 décibels*",
+   "Environ 30 décibels",
+   "Environ 60 décibels",
+   "Plus de 500 décibels"
+  ]
+ },
+ {
+  "key": "mus17-419",
+  "concept": "music.instruments.v17_chair_poule",
+  "label": "Musique et corps",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quand une musique donne « la chair de poule », le cerveau libère…",
+  "explanation": "Comme pour la nourriture ou d'autres plaisirs : le cerveau anticipe le passage qu'on aime.",
+  "options": [
+   "De la dopamine, l'hormone du plaisir*",
+   "De l'adrénaline uniquement",
+   "De la mélatonine",
+   "Rien du tout"
+  ]
+ },
+ {
+  "key": "mus17-420",
+  "concept": "music.instruments.v17_oreille_absolue",
+  "label": "L'oreille absolue",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'est-ce que « l'oreille absolue » ?",
+  "explanation": "Moins d'une personne sur dix mille l'aurait. Mozart en était doté.",
+  "options": [
+   "Reconnaître une note sans référence*",
+   "Entendre les ultrasons",
+   "Entendre de très loin",
+   "Ne jamais chanter faux"
+  ]
+ },
+ {
+  "key": "mus17-421",
+  "concept": "music.instruments.v17_shazam",
+  "label": "Reconnaître une chanson",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quelle application permet de reconnaître une chanson en l'écoutant quelques secondes ?",
+  "explanation": "Elle compare une « empreinte » du son à une base de dizaines de millions de morceaux. Apple l'a rachetée en 2018.",
+  "options": [
+   "Shazam*",
+   "Spotify",
+   "SoundCloud",
+   "Deezer"
+  ]
+ },
+ {
+  "key": "mus17-422",
+  "concept": "music.instruments.v17_nu_battements",
+  "label": "Le tempo",
+  "type": "numeric",
+  "difficulty": 70,
+  "prompt": "Un tempo de 120 BPM, c'est combien de battements par seconde ?",
+  "explanation": "120 battements par minute = 2 par seconde. C'est le tempo de beaucoup de chansons pop et de la marche militaire.",
+  "answer": 2,
+  "tolerance": 0
+ },
+ {
+  "key": "mus17-423",
+  "concept": "music.instruments.v17_le_tempo",
+  "label": "Tempo",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Mot italien pour la vitesse d'un morceau.",
+  "explanation": "Il se mesure en battements par minute, avec un métronome.",
+  "word": "TEMPO",
+  "display": "Tempo"
+ },
+ {
+  "key": "mus17-424",
+  "concept": "music.instruments.v17_le_decibel",
+  "label": "Décibel",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Unité de mesure de l'intensité du son.",
+  "explanation": "Nommée en hommage à Alexander Graham Bell, l'inventeur du téléphone.",
+  "word": "DECIBEL",
+  "display": "Décibel"
+ },
+ {
+  "key": "mus17-425",
+  "concept": "music.popular.v17_le_platines",
+  "label": "Platines",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Les tourne-disques d'un DJ.",
+  "explanation": "Les plus célèbres, les Technics SL-1200, sont produites depuis 1972.",
+  "word": "PLATINES",
+  "display": "Platines"
+ },
+ {
+  "key": "mus17-426",
+  "concept": "music.popular.v17_le_eurovision",
+  "label": "Eurovision",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Le grand concours européen de la chanson.",
+  "explanation": "Plus de 150 millions de téléspectateurs chaque année.",
+  "word": "EUROVISION",
+  "display": "Eurovision"
+ },
+ {
+  "key": "mus17-427",
+  "concept": "music.popular.v17_le_morricone",
+  "label": "Morricone",
+  "type": "letters",
+  "difficulty": 65,
+  "prompt": "Compositeur italien du « Bon, la Brute et le Truand ».",
+  "explanation": "Ennio Morricone (1928-2020), Oscar d'honneur en 2007, puis Oscar de la meilleure musique en 2016.",
+  "word": "MORRICONE",
+  "display": "Morricone"
+ },
+ {
+  "key": "mus17-428",
+  "concept": "music.popular.v17_le_zimmer",
+  "label": "Zimmer",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Compositeur allemand du « Roi lion » et de « Gladiator ».",
+  "explanation": "Hans Zimmer a reçu l'Oscar pour « Le Roi lion » (1995) et pour « Dune » (2022).",
+  "word": "ZIMMER",
+  "display": "Zimmer"
+ },
+ {
+  "key": "mus17-429",
+  "concept": "music.classical.v17_tf_mozart_francais",
+  "label": "Mozart",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Mozart était français.",
+  "explanation": "Il était autrichien, né à Salzbourg en 1756.",
+  "answer": false
+ },
+ {
+  "key": "mus17-430",
+  "concept": "music.classical.v17_tf_beethoven_aveugle",
+  "label": "Beethoven",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Beethoven est devenu aveugle à la fin de sa vie.",
+  "explanation": "Il est devenu sourd, pas aveugle. Il a pourtant continué à composer.",
+  "answer": false
+ },
+ {
+  "key": "mus17-431",
+  "concept": "music.instruments.v17_tf_violon_vent",
+  "label": "Le violon",
+  "type": "true_false",
+  "difficulty": 10,
+  "prompt": "Le violon est un instrument à vent.",
+  "explanation": "C'est un instrument à cordes, qu'on frotte avec un archet.",
+  "answer": false
+ },
+ {
+  "key": "mus17-432",
+  "concept": "music.instruments.v17_tf_piano_cordes_non",
+  "label": "Le piano",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Il n'y a aucune corde dans un piano.",
+  "explanation": "Il y en a plus de 200, frappées par de petits marteaux recouverts de feutre.",
+  "answer": false
+ },
+ {
+  "key": "mus17-434",
+  "concept": "music.popular.v17_tf_beatles_americains",
+  "label": "Les Beatles",
+  "type": "true_false",
+  "difficulty": 15,
+  "prompt": "Les Beatles étaient américains.",
+  "explanation": "Ils venaient de Liverpool, en Angleterre.",
+  "answer": false
+ },
+ {
+  "key": "mus17-436",
+  "concept": "music.popular.v17_tf_jazz_paris",
+  "label": "Le jazz",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le jazz est né à Paris.",
+  "explanation": "À La Nouvelle-Orléans, aux États-Unis, au début du XXe siècle. Paris l'a adoré dès les années 1920.",
+  "answer": false
+ },
+ {
+  "key": "mus17-437",
+  "concept": "music.popular.v17_tf_mj_blanc",
+  "label": "Michael Jackson",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Michael Jackson a chanté « Billie Jean ».",
+  "explanation": "Sur l'album « Thriller » (1982). C'est en chantant « Billie Jean » qu'il a dévoilé le moonwalk à la télévision en 1983.",
+  "answer": true
+ },
+ {
+  "key": "mus17-438",
+  "concept": "music.popular.v17_tf_elvis_chanteur_vivant",
+  "label": "Elvis Presley",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Elvis Presley est mort en 1977.",
+  "explanation": "À Graceland, sa maison de Memphis, à 42 ans. Beaucoup de fans ont longtemps refusé d'y croire.",
+  "answer": true
+ },
+ {
+  "key": "mus17-439",
+  "concept": "music.popular.v17_facile_dj",
+  "label": "La fête",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui passe les disques dans une soirée ?",
+  "explanation": "DJ, pour « disc-jockey ».",
+  "options": [
+   "Le DJ*",
+   "Le chef d'orchestre",
+   "Le batteur",
+   "Le choriste"
+  ]
+ },
+ {
+  "key": "mus17-440",
+  "concept": "music.popular.v17_facile_karaoke",
+  "label": "Le karaoké",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "De quel pays vient le karaoké ?",
+  "explanation": "Le mot veut dire « orchestre vide » en japonais : la musique sans la voix.",
+  "options": [
+   "Du Japon*",
+   "Des États-Unis",
+   "De Corée du Sud",
+   "D'Angleterre"
+  ]
+ },
+ {
+  "key": "mus17-442",
+  "concept": "music.instruments.v17_facile_flute_ecole",
+  "label": "La flûte à bec",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Quel instrument beaucoup d'élèves apprennent-ils à l'école ?",
+  "explanation": "Pas chère et facile à transporter, elle est parfaite pour débuter.",
+  "options": [
+   "La flûte à bec*",
+   "Le tuba",
+   "La harpe",
+   "Le basson"
+  ]
+ },
+ {
+  "key": "mus17-443",
+  "concept": "music.instruments.v17_facile_chef",
+  "label": "Le chef d'orchestre",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Que fait le chef d'orchestre ?",
+  "explanation": "Avec sa baguette, il donne le tempo, les départs et les nuances.",
+  "options": [
+   "Il dirige les musiciens*",
+   "Il joue du piano",
+   "Il vend les billets",
+   "Il chante"
+  ]
+ },
+ {
+  "key": "mus17-444",
+  "concept": "music.classical.v17_facile_hymne_joie",
+  "label": "L'Hymne à la joie",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Quel compositeur sourd a écrit l'« Hymne à la joie » ?",
+  "explanation": "Dans sa 9e symphonie (1824).",
+  "options": [
+   "Beethoven*",
+   "Mozart",
+   "Bach",
+   "Vivaldi"
+  ]
+ },
+ {
+  "key": "mus17-445",
+  "concept": "music.instruments.v17_facile_notes_portee",
+  "label": "Les notes",
+  "type": "counter",
+  "difficulty": 15,
+  "prompt": "Combien y a-t-il de notes dans « do, ré, mi, fa, sol, la, si » ?",
+  "explanation": "Sept notes, avant de revenir au do.",
+  "answer": 7,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "mus17-446",
+  "concept": "music.popular.v17_le_rap",
+  "label": "Rap",
+  "type": "letters",
+  "difficulty": 10,
+  "prompt": "Style où l'on parle en rythme sur une musique.",
+  "explanation": "Le rap est né dans le Bronx, à New York, dans les années 1970.",
+  "word": "RAPPEUR",
+  "display": "Rappeur"
+ },
+ {
+  "key": "mus17-447",
+  "concept": "music.instruments.v17_le_piano",
+  "label": "Piano",
+  "type": "letters",
+  "difficulty": 5,
+  "prompt": "Instrument à touches noires et blanches.",
+  "explanation": "Il a 88 touches.",
+  "word": "PIANO",
+  "display": "Piano"
+ }
+]
