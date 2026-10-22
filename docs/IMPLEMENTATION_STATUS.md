@@ -49,6 +49,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Questions « siècle » : 2 au plus par partie dans tous les modes (D-086) | ✅ serveur 0081 en production | `99_familles_modes.sql` |
 | Frise des siècles (D-087) | ✅ serveur 0082 en production · 🟡 app 1.4 (TestFlight) | `99_frise_siecles.sql`, `testCenturyScale` |
 | 150 questions d'histoire sans siècle à deviner (D-088) | ✅ en production (20/10), histoire : 1 010 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
+| 361 questions de français (D-096) | ✅ en production (22/10), français : 1 013 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Après le 5 du jour, on continue à jouer (D-089) | 🟡 app 1.4 | CI (build) |
 | Message de confidentialité réaffiché à la demande d'une pub (D-090) | 🟡 app 1.4 | CI (build) |
 | Podium du jour (D-091) | ✅ serveur 0083 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |
