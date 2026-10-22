@@ -72,7 +72,7 @@
    "prompt":"Le nombre 123 456 est divisible par 3.","answer":true,
    "explanation":"Un nombre est divisible par 3 si la somme de ses chiffres l'est : 1+2+3+4+5+6 = 21, divisible par 3.",
    "takeaway":"Divisible par 3 (ou 9) ⇔ somme des chiffres divisible par 3 (ou 9)."},
-  {"key":"calc-124","concept":"calc.number_logic.roman_numerals","label":"Chiffres romains","type":"mcq","difficulty":45,
+  {"key":"calc-124","status":"disabled","concept":"calc.number_logic.roman_numerals","label":"Chiffres romains","type":"mcq","difficulty":45,
    "prompt":"Comment écrit-on 1 999 en chiffres romains ?","options":["MCMXCIX*","MIM","MDCCCCLXXXXVIIII","MCMIC"],
    "explanation":"1000 = M, 900 = CM, 90 = XC, 9 = IX : MCMXCIX. « MIM » est une abréviation fautive."},
   {"key":"calc-125","concept":"calc.number_logic.gcd","label":"PGCD","type":"numeric","difficulty":55,
