@@ -1,0 +1,4966 @@
+[
+ {
+  "key": "nat23-001",
+  "concept": "nature.animals.v23_hippo_sueur",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi l'hippopotame semble-t-il « transpirer du sang » ?",
+  "explanation": "Ce liquide agit comme une crème solaire et un antibactérien naturels.",
+  "options": [
+   "Sa peau produit un liquide rougeâtre qui la protège du soleil*",
+   "Il saigne à cause des moustiques",
+   "Il se roule dans la terre rouge",
+   "C'est une maladie de la peau"
+  ]
+ },
+ {
+  "key": "nat23-002",
+  "concept": "nature.animals.v23_wombat_cubes",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle est la particularité des crottes du wombat, un marsupial australien ?",
+  "explanation": "Les cubes ne roulent pas : le wombat les dépose sur des pierres pour marquer son territoire.",
+  "options": [
+   "Elles sont en forme de cubes*",
+   "Elles sont bleues",
+   "Elles brillent dans le noir",
+   "Elles sentent la fleur"
+  ]
+ },
+ {
+  "key": "nat23-003",
+  "concept": "nature.animals.v23_pic_langue",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Où le pic range-t-il sa très longue langue ?",
+  "explanation": "Elle amortirait aussi les chocs quand il frappe le bois jusqu'à 20 fois par seconde.",
+  "options": [
+   "Enroulée autour de son crâne*",
+   "Dans une poche sous le cou",
+   "Repliée dans son estomac",
+   "Dans son bec, en accordéon"
+  ]
+ },
+ {
+  "key": "nat23-004",
+  "concept": "nature.animals.v23_chouette_yeux",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi une chouette tourne-t-elle autant la tête ?",
+  "explanation": "Ses yeux, en forme de tubes, ne peuvent pas bouger. Elle compense en tournant la tête sur environ 270°.",
+  "options": [
+   "Ses yeux sont fixes dans leurs orbites*",
+   "Elle a deux cous",
+   "Elle est sourde d'une oreille",
+   "Pour mieux voler"
+  ]
+ },
+ {
+  "key": "nat23-005",
+  "concept": "nature.animals.v23_chat_sucre",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle saveur le chat ne peut-il pas sentir ?",
+  "explanation": "Il lui manque le récepteur du goût sucré. Normal pour un pur carnivore.",
+  "options": [
+   "Le sucré*",
+   "Le salé",
+   "L'amer",
+   "L'acide"
+  ]
+ },
+ {
+  "key": "nat23-006",
+  "concept": "nature.animals.v23_chien_transpire",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Par où le chien transpire-t-il un peu ?",
+  "explanation": "Il se rafraîchit surtout en haletant, la langue pendante.",
+  "options": [
+   "Par les coussinets de ses pattes*",
+   "Par la langue",
+   "Par les oreilles",
+   "Par tout le corps, comme nous"
+  ]
+ },
+ {
+  "key": "nat23-007",
+  "concept": "nature.animals.v23_dauphin_noms",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment les grands dauphins s'appellent-ils entre eux ?",
+  "explanation": "Un dauphin répond quand on imite son « sifflement signature ».",
+  "options": [
+   "Chacun a un sifflement personnel, comme un prénom*",
+   "En se touchant du rostre",
+   "Avec des couleurs",
+   "Ils ne s'appellent jamais"
+  ]
+ },
+ {
+  "key": "nat23-008",
+  "concept": "nature.animals.v23_corbeau_outils",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que sait faire le corbeau de Nouvelle-Calédonie ?",
+  "explanation": "Il taille des brindilles et des feuilles pour déloger les larves dans le bois.",
+  "options": [
+   "Fabriquer des outils, comme des crochets en brindilles*",
+   "Parler plusieurs langues",
+   "Nager sous l'eau",
+   "Compter jusqu'à mille"
+  ]
+ },
+ {
+  "key": "nat23-009",
+  "concept": "nature.animals.v23_abeille_uv",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle « couleur » une abeille voit-elle, contrairement à nous ?",
+  "explanation": "Beaucoup de fleurs ont des motifs ultraviolets qui guident les abeilles vers le nectar. En revanche, l'abeille ne voit pas le rouge.",
+  "options": [
+   "L'ultraviolet*",
+   "L'infrarouge",
+   "Le rouge vif",
+   "Toutes les couleurs comme nous"
+  ]
+ },
+ {
+  "key": "nat23-010",
+  "concept": "nature.animals.v23_moustique_femelle",
+  "label": "Insectes",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Chez les moustiques, qui pique ?",
+  "explanation": "Elles ont besoin des protéines du sang pour leurs œufs. Les mâles se nourrissent de nectar.",
+  "options": [
+   "Seulement les femelles*",
+   "Seulement les mâles",
+   "Les deux",
+   "Seulement les jeunes"
+  ]
+ },
+ {
+  "key": "nat23-011",
+  "concept": "nature.animals.v23_mouche_pattes",
+  "label": "Insectes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Avec quoi la mouche goûte-t-elle d'abord ce sur quoi elle se pose ?",
+  "explanation": "Ses pattes portent des capteurs de goût : d'où son habitude de les frotter pour les nettoyer.",
+  "options": [
+   "Ses pattes*",
+   "Ses antennes",
+   "Ses ailes",
+   "Ses yeux"
+  ]
+ },
+ {
+  "key": "nat23-012",
+  "concept": "nature.animals.v23_grenouille_boit",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment boit une grenouille ?",
+  "explanation": "Sa peau fine laisse passer l'eau… et la pollution, ce qui rend les amphibiens très fragiles.",
+  "options": [
+   "Elle absorbe l'eau par la peau*",
+   "Avec sa langue",
+   "Par les yeux",
+   "Elle ne boit jamais"
+  ]
+ },
+ {
+  "key": "nat23-013",
+  "concept": "nature.animals.v23_escargot_dents",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Combien de dents peut avoir un escargot ?",
+  "explanation": "Minuscules, elles sont alignées sur une sorte de langue râpeuse appelée radula.",
+  "options": [
+   "Des milliers*",
+   "Aucune",
+   "Deux",
+   "Trente-deux"
+  ]
+ },
+ {
+  "key": "nat23-014",
+  "concept": "nature.animals.v23_paresseux_wc",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Environ tous les combien le paresseux descend-il de son arbre pour faire ses besoins ?",
+  "explanation": "Il digère très lentement. C'est le moment où il est le plus exposé aux prédateurs.",
+  "options": [
+   "Une fois par semaine*",
+   "Une fois par heure",
+   "Une fois par an",
+   "Jamais : il les fait en haut"
+  ]
+ },
+ {
+  "key": "nat23-015",
+  "concept": "nature.animals.v23_escargot_hermaphrodite",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Chez l'escargot, qui pond les œufs ?",
+  "explanation": "Il est hermaphrodite. Après l'accouplement, les deux partenaires pondent.",
+  "options": [
+   "Tous les escargots : chacun est à la fois mâle et femelle*",
+   "Seulement les femelles",
+   "Seulement les plus vieux",
+   "Aucun : il est vivipare"
+  ]
+ },
+ {
+  "key": "nat23-016",
+  "concept": "nature.animals.v23_renne_yeux",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle particularité ont les yeux du renne ?",
+  "explanation": "Dorés en été, ils deviennent bleus l'hiver, pour capter mieux la faible lumière arctique.",
+  "options": [
+   "Ils changent de couleur entre l'été et l'hiver*",
+   "Ils brillent en rouge",
+   "Ils voient à 360°",
+   "Ils sont toujours fermés"
+  ]
+ },
+ {
+  "key": "nat23-017",
+  "concept": "nature.animals.v23_ornithorynque_bec",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment l'ornithorynque trouve-t-il ses proies sous l'eau, les yeux fermés ?",
+  "explanation": "Il ferme les yeux, les oreilles et les narines en plongée, et chasse « à l'électricité ».",
+  "options": [
+   "Son bec détecte les petits courants électriques des proies*",
+   "Il les entend",
+   "Il les sent avec ses pattes",
+   "Il les voit en infrarouge"
+  ]
+ },
+ {
+  "key": "nat23-018",
+  "concept": "nature.animals.v23_axolotl_regenere",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel pouvoir étonnant possède l'axolotl, une salamandre du Mexique ?",
+  "explanation": "Il régénère aussi une partie de son cœur, de ses yeux et même de son cerveau.",
+  "options": [
+   "Il peut faire repousser une patte entière*",
+   "Il peut voler",
+   "Il peut vivre sans eau pendant des mois",
+   "Il peut changer de sexe à volonté"
+  ]
+ },
+ {
+  "key": "nat23-019",
+  "concept": "nature.animals.v23_bousier_etoiles",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment certains bousiers se repèrent-ils pour rouler leur boule en ligne droite, la nuit ?",
+  "explanation": "Des chercheurs l'ont prouvé en 2013 en les plaçant dans un planétarium.",
+  "options": [
+   "Grâce à la Voie lactée*",
+   "Grâce à l'odeur",
+   "Grâce au bruit du vent",
+   "Grâce à la chaleur du sol"
+  ]
+ },
+ {
+  "key": "nat23-020",
+  "concept": "nature.animals.v23_zebre_rayures",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Selon les études récentes, à quoi serviraient surtout les rayures du zèbre ?",
+  "explanation": "Les taons et mouches ont du mal à se poser sur des rayures : des chevaux habillés de manteaux rayés sont moins piqués !",
+  "options": [
+   "À éloigner les mouches piqueuses*",
+   "À attirer les femelles",
+   "À se cacher dans l'herbe haute",
+   "À se protéger du froid"
+  ]
+ },
+ {
+  "key": "nat23-021",
+  "concept": "nature.animals.v23_guepard_miaule",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que ne sait pas faire le guépard, contrairement au lion ?",
+  "explanation": "Il miaule, gazouille et ronronne… comme un gros chat.",
+  "options": [
+   "Rugir*",
+   "Courir",
+   "Ronronner",
+   "Grimper"
+  ]
+ },
+ {
+  "key": "nat23-022",
+  "concept": "nature.animals.v23_hyene_famille",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "De quels animaux les hyènes sont-elles le plus proches parents ?",
+  "explanation": "Malgré leur allure de chien, elles appartiennent au même grand groupe que les chats.",
+  "options": [
+   "Des félins et des mangoustes*",
+   "Des chiens et des loups",
+   "Des ours",
+   "Des singes"
+  ]
+ },
+ {
+  "key": "nat23-023",
+  "concept": "nature.animals.v23_okapi_cousin",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "L'okapi, avec ses pattes rayées comme un zèbre, est le cousin de quel animal ?",
+  "explanation": "Il vit dans les forêts du Congo et n'a été décrit par les scientifiques qu'en 1901.",
+  "options": [
+   "La girafe*",
+   "Le zèbre",
+   "Le cheval",
+   "L'antilope"
+  ]
+ },
+ {
+  "key": "nat23-024",
+  "concept": "nature.animals.v23_autruche_oeil",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Chez l'autruche, qu'est-ce qui est plus gros que son cerveau ?",
+  "explanation": "Ses yeux, d'environ 5 cm, sont les plus gros de tous les animaux terrestres.",
+  "options": [
+   "Chacun de ses yeux*",
+   "Son cœur",
+   "Son bec",
+   "Sa langue"
+  ]
+ },
+ {
+  "key": "nat23-025",
+  "concept": "nature.animals.v23_oiseaux_dinosaures",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quels animaux actuels sont les descendants directs des dinosaures ?",
+  "explanation": "Les oiseaux sont des dinosaures à plumes qui ont survécu. Les crocodiles en sont des cousins.",
+  "options": [
+   "Les oiseaux*",
+   "Les crocodiles",
+   "Les lézards",
+   "Les tortues"
+  ]
+ },
+ {
+  "key": "nat23-026",
+  "concept": "nature.animals.v23_moustique_meurtrier",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel animal cause le plus de morts humaines chaque année dans le monde ?",
+  "explanation": "En transmettant le paludisme, la dengue ou d'autres maladies, il cause des centaines de milliers de morts par an.",
+  "options": [
+   "Le moustique*",
+   "Le requin",
+   "Le serpent",
+   "Le crocodile"
+  ]
+ },
+ {
+  "key": "nat23-027",
+  "concept": "nature.animals.v23_martinet_vol",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Combien de temps le martinet noir peut-il rester en vol sans jamais se poser ?",
+  "explanation": "Il mange, boit et dort en vol. Il ne se pose que pour nicher.",
+  "options": [
+   "Environ 10 mois*",
+   "2 jours",
+   "1 semaine",
+   "1 heure"
+  ]
+ },
+ {
+  "key": "nat23-028",
+  "concept": "nature.animals.v23_colibri_coeur",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Combien de fois par minute bat le cœur d'un colibri en plein vol ?",
+  "explanation": "Il doit manger presque sans arrêt pour alimenter ce moteur. La nuit, il ralentit tout pour économiser son énergie.",
+  "options": [
+   "Plus de 1 000 fois*",
+   "60 fois",
+   "200 fois",
+   "10 fois"
+  ]
+ },
+ {
+  "key": "nat23-029",
+  "concept": "nature.animals.v23_elephant_miroir",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Que fait un éléphant devant un miroir, quand on lui a fait une marque sur le front ?",
+  "explanation": "Peu d'animaux réussissent ce « test du miroir » : grands singes, dauphins, éléphants, pies…",
+  "options": [
+   "Il touche la marque : il se reconnaît*",
+   "Il attaque son reflet",
+   "Il ne réagit pas",
+   "Il s'enfuit"
+  ]
+ },
+ {
+  "key": "nat23-030",
+  "concept": "nature.animals.v23_chevre_pupilles",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle forme ont les pupilles des chèvres ?",
+  "explanation": "Elles offrent un champ de vision très large pour repérer les prédateurs.",
+  "options": [
+   "Rectangulaire, à l'horizontale*",
+   "Ronde",
+   "En fente verticale",
+   "En forme de cœur"
+  ]
+ },
+ {
+  "key": "nat23-031",
+  "concept": "nature.animals.v23_lapin_crottes",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Pourquoi le lapin mange-t-il certaines de ses crottes ?",
+  "explanation": "Ces crottes molles, les cæcotrophes, sont très nourrissantes. C'est normal et indispensable.",
+  "options": [
+   "Pour digérer une seconde fois et récupérer des vitamines*",
+   "Parce qu'il a faim",
+   "Pour cacher son odeur",
+   "Par jeu"
+  ]
+ },
+ {
+  "key": "nat23-032",
+  "concept": "nature.animals.v23_castor_dents",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi les dents du castor sont-elles orange ?",
+  "explanation": "Elles poussent toute sa vie : il doit ronger pour les user.",
+  "options": [
+   "Elles contiennent du fer, qui les rend plus solides*",
+   "Il mange des carottes",
+   "C'est la couleur du bois",
+   "Elles sont malades"
+  ]
+ },
+ {
+  "key": "nat23-033",
+  "concept": "nature.animals.v23_ecureuil_oubli",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que se passe-t-il pour les glands et noisettes que l'écureuil oublie ?",
+  "explanation": "L'écureuil est un vrai jardinier des forêts, sans le savoir.",
+  "options": [
+   "Ils peuvent germer et devenir des arbres*",
+   "Ils pourrissent tous",
+   "D'autres écureuils les volent tous",
+   "Ils deviennent des truffes"
+  ]
+ },
+ {
+  "key": "nat23-034",
+  "concept": "nature.animals.v23_effraie_silence",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi la chouette effraie vole-t-elle sans bruit ?",
+  "explanation": "Ses proies ne l'entendent pas arriver. Les ingénieurs s'en inspirent pour les pales d'éoliennes.",
+  "options": [
+   "Ses plumes ont des bords frangés qui étouffent le son*",
+   "Elle bat très peu des ailes",
+   "Elle vole la bouche ouverte",
+   "Elle est très légère"
+  ]
+ },
+ {
+  "key": "nat23-035",
+  "concept": "nature.animals.v23_loup_hurle",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Pourquoi les loups hurlent-ils ?",
+  "explanation": "Le hurlement porte à des kilomètres. Lever la tête aide simplement le son à porter loin.",
+  "options": [
+   "Pour communiquer avec la meute*",
+   "Pour saluer la pleine lune",
+   "Parce qu'ils ont mal",
+   "Pour attirer les proies"
+  ]
+ },
+ {
+  "key": "nat23-036",
+  "concept": "nature.animals.v23_chimpanze_termites",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment les chimpanzés attrapent-ils les termites ?",
+  "explanation": "Jane Goodall l'a observé en 1960 : une découverte qui a changé notre définition de l'humain « fabricant d'outils ».",
+  "options": [
+   "En plongeant une brindille dans la termitière*",
+   "Avec leur langue collante",
+   "En creusant avec les dents",
+   "En soufflant dans la termitière"
+  ]
+ },
+ {
+  "key": "nat23-037",
+  "concept": "nature.animals.v23_truffe_chien",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'a d'unique la truffe de chaque chien ?",
+  "explanation": "Certains pays ont même pensé à identifier les chiens grâce à elle.",
+  "options": [
+   "Ses petits motifs, comme une empreinte digitale*",
+   "Sa couleur",
+   "Sa température",
+   "Son odeur"
+  ]
+ },
+ {
+  "key": "nat23-038",
+  "concept": "nature.animals.v23_panda_temps",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien d'heures par jour un panda géant passe-t-il environ à manger ?",
+  "explanation": "Le bambou est peu nourrissant : il lui en faut des dizaines de kilos par jour.",
+  "options": [
+   "Plus de 12 heures*",
+   "1 heure",
+   "3 heures",
+   "24 heures"
+  ]
+ },
+ {
+  "key": "nat23-039",
+  "concept": "nature.animals.v23_loup_retour",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Par où le loup est-il revenu naturellement en France, en 1992 ?",
+  "explanation": "Il avait disparu de France dans les années 1930. Il est aujourd'hui présent dans une bonne partie du pays.",
+  "options": [
+   "Par l'Italie, dans le Mercantour*",
+   "Par l'Espagne, dans les Pyrénées",
+   "Par la Belgique",
+   "Par la Suisse, dans le Jura"
+  ]
+ },
+ {
+  "key": "nat23-040",
+  "concept": "nature.animals.v23_ours_pyrenees",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Dans quel massif français vivent encore des ours bruns à l'état sauvage ?",
+  "explanation": "Quelques dizaines d'ours, grâce à des réintroductions venues de Slovénie depuis 1996.",
+  "options": [
+   "Les Pyrénées*",
+   "Les Alpes",
+   "Le Massif central",
+   "Les Vosges"
+  ]
+ },
+ {
+  "key": "nat23-041",
+  "concept": "nature.animals.v23_brame_cerf",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À quelle saison entend-on le brame du cerf ?",
+  "explanation": "Fin septembre et début octobre, les mâles crient pour attirer les biches et impressionner les rivaux.",
+  "options": [
+   "En automne*",
+   "Au printemps",
+   "En plein été",
+   "En hiver"
+  ]
+ },
+ {
+  "key": "nat23-042",
+  "concept": "nature.animals.v23_vipere_france",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "En France métropolitaine, quels serpents sont venimeux et dangereux pour l'homme ?",
+  "explanation": "Les couleuvres ne sont pas dangereuses, et l'orvet n'est même pas un serpent : c'est un lézard sans pattes.",
+  "options": [
+   "Les vipères*",
+   "Les couleuvres",
+   "Les orvets",
+   "Tous les serpents"
+  ]
+ },
+ {
+  "key": "nat23-043",
+  "concept": "nature.animals.v23_pipistrelle",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien d'insectes une petite chauve-souris pipistrelle peut-elle manger en une nuit ?",
+  "explanation": "Une alliée précieuse contre les moustiques. Toutes les chauves-souris sont protégées en France.",
+  "options": [
+   "Plusieurs centaines, voire des milliers*",
+   "Un ou deux",
+   "Une dizaine",
+   "Aucun : elle mange des fruits"
+  ]
+ },
+ {
+  "key": "nat23-044",
+  "concept": "nature.animals.v23_salamandre_feu",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Au Moyen Âge, à quoi croyait-on que la salamandre résistait ?",
+  "explanation": "On la voyait sortir des bûches jetées au feu, où elle s'était cachée. François Ier en a fait son emblème.",
+  "options": [
+   "Au feu*",
+   "Au poison",
+   "Au froid",
+   "À la noyade"
+  ]
+ },
+ {
+  "key": "nat23-045",
+  "concept": "nature.animals.v23_libellule_geante",
+  "label": "Insectes",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Il y a 300 millions d'années, quelle envergure atteignaient certaines libellules géantes ?",
+  "explanation": "Meganeura vivait avant les dinosaures, à une époque où l'air était plus riche en oxygène.",
+  "options": [
+   "Environ 70 cm*",
+   "5 cm",
+   "2 mètres",
+   "15 cm"
+  ]
+ },
+ {
+  "key": "nat23-046",
+  "concept": "nature.animals.v23_termitiere",
+  "label": "Insectes",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment les grandes termitières africaines restent-elles fraîches ?",
+  "explanation": "Des architectes s'en sont inspirés pour ventiler des bâtiments sans climatisation.",
+  "options": [
+   "Grâce à un réseau de cheminées qui fait circuler l'air*",
+   "Grâce à l'eau d'une source",
+   "Les termites battent des ailes",
+   "Elles sont toujours à l'ombre"
+  ]
+ },
+ {
+  "key": "nat23-047",
+  "concept": "nature.animals.v23_plus_petit_mammifere",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est l'un des plus petits mammifères du monde, qui pèse moins de 2 grammes ?",
+  "explanation": "Elle vit notamment dans le sud de la France. Le colibri, lui, est un oiseau.",
+  "options": [
+   "La musaraigne étrusque*",
+   "Le hamster nain",
+   "La souris grise",
+   "Le colibri"
+  ]
+ },
+ {
+  "key": "nat23-048",
+  "concept": "nature.animals.v23_plus_gros_insecte",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel insecte africain est l'un des plus lourds du monde, avec près de 100 grammes à l'état de larve ?",
+  "explanation": "Adulte, il mesure environ 11 cm. Le phasme est plus long, mais bien plus léger.",
+  "options": [
+   "Le scarabée goliath*",
+   "Le frelon géant",
+   "Le phasme",
+   "La mante religieuse"
+  ]
+ },
+ {
+  "key": "nat23-049",
+  "concept": "nature.animals.v23_plus_grand_amphibien",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel est le plus grand amphibien du monde, qui peut dépasser 1,5 m ?",
+  "explanation": "Elle est aujourd'hui en danger critique d'extinction.",
+  "options": [
+   "La salamandre géante de Chine*",
+   "La grenouille goliath",
+   "Le crapaud buffle",
+   "L'axolotl"
+  ]
+ },
+ {
+  "key": "nat23-050",
+  "concept": "nature.animals.v23_caribou_migration",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel mammifère terrestre effectue les plus longues migrations, plus de 1 000 km par an ?",
+  "explanation": "Certains troupeaux d'Amérique du Nord parcourent plus de 4 000 km en un an.",
+  "options": [
+   "Le caribou (renne)*",
+   "Le gnou",
+   "L'éléphant",
+   "Le loup"
+  ]
+ },
+ {
+  "key": "nat23-051",
+  "concept": "nature.animals.v23_pa_super_pouvoirs",
+  "label": "Animaux étonnants",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque animal à son talent.",
+  "explanation": "Le caméléon peut regarder devant et derrière en même temps.",
+  "pairs": [
+   [
+    "Axolotl",
+    "Fait repousser ses membres"
+   ],
+   [
+    "Chauve-souris",
+    "Se repère par l'écho"
+   ],
+   [
+    "Caméléon",
+    "Bouge ses yeux séparément"
+   ],
+   [
+    "Martinet",
+    "Dort en volant"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-052",
+  "concept": "nature.animals.v23_pa_records",
+  "label": "Records",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque record à l'animal qui le détient.",
+  "explanation": "La girafe peut dépasser 5 mètres, l'éléphant 6 tonnes.",
+  "pairs": [
+   [
+    "Plus grand animal terrestre",
+    "Éléphant d'Afrique"
+   ],
+   [
+    "Plus grand oiseau",
+    "Autruche"
+   ],
+   [
+    "Plus rapide sur terre",
+    "Guépard"
+   ],
+   [
+    "Plus haut",
+    "Girafe"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-053",
+  "concept": "nature.animals.v23_or_vitesse",
+  "label": "Records",
+  "type": "ordering",
+  "difficulty": 30,
+  "prompt": "Classe ces animaux du plus lent au plus rapide.",
+  "explanation": "Environ 0,05 km/h, 0,5 km/h, 15 km/h en courant, 70 km/h au galop et plus de 100 km/h.",
+  "items": [
+   "Escargot",
+   "Tortue terrestre",
+   "Être humain",
+   "Cheval",
+   "Guépard"
+  ]
+ },
+ {
+  "key": "nat23-054",
+  "concept": "nature.animals.v23_or_gestation",
+  "label": "Records",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces animaux selon la durée de leur gestation, de la plus courte à la plus longue.",
+  "explanation": "Environ 16 jours, 2 mois, 9 mois et près de 22 mois.",
+  "items": [
+   "Hamster",
+   "Chat",
+   "Humain",
+   "Éléphant"
+  ]
+ },
+ {
+  "key": "nat23-055",
+  "concept": "nature.animals.v23_co_piquants",
+  "label": "Faune de France",
+  "type": "counter",
+  "difficulty": 65,
+  "prompt": "Combien de piquants porte environ un hérisson adulte ?",
+  "explanation": "Entre 5 000 et 8 000. Ce sont des poils transformés, qui ne se détachent pas comme ceux du porc-épic.",
+  "answer": 6500,
+  "tolerance": 1500,
+  "min": 1000,
+  "max": 15000,
+  "start": 1000
+ },
+ {
+  "key": "nat23-056",
+  "concept": "nature.animals.v23_co_yeux_abeille",
+  "label": "Insectes",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Combien d'yeux a une abeille ?",
+  "explanation": "Deux gros yeux à facettes, et trois petits yeux simples sur le dessus de la tête.",
+  "answer": 5,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "nat23-057",
+  "concept": "nature.animals.v23_co_coeurs_ver",
+  "label": "Animaux étonnants",
+  "type": "counter",
+  "difficulty": 75,
+  "prompt": "Le ver de terre possède des « cœurs ». Combien de paires en compte-t-on ?",
+  "explanation": "Cinq paires d'arcs qui pompent le sang. Il respire par la peau, qui doit rester humide.",
+  "answer": 5,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "nat23-058",
+  "concept": "nature.animals.v23_co_heures_lion",
+  "label": "Animaux étonnants",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien d'heures par jour un lion dort-il ou se repose-t-il, environ ?",
+  "explanation": "Il chasse surtout la nuit, en dépensant beaucoup d'énergie en peu de temps.",
+  "answer": 20,
+  "tolerance": 2,
+  "min": 4,
+  "max": 24,
+  "start": 4
+ },
+ {
+  "key": "nat23-059",
+  "concept": "nature.animals.v23_ga_insectes_part",
+  "label": "Insectes",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "Quelle part des espèces animales connues sont des insectes ?",
+  "explanation": "Environ un million d'espèces décrites, sur un peu plus d'un million et demi d'espèces animales.",
+  "answer": 70,
+  "tolerance": 15,
+  "unit": "%"
+ },
+ {
+  "key": "nat23-060",
+  "concept": "nature.animals.v23_le_libellule",
+  "label": "Insectes",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Insecte aux quatre ailes transparentes qui chasse au-dessus des étangs.",
+  "explanation": "Elle attrape plus de 9 proies sur 10 qu'elle poursuit : l'un des meilleurs chasseurs du monde.",
+  "word": "LIBELLULE",
+  "display": "Libellule"
+ },
+ {
+  "key": "nat23-061",
+  "concept": "nature.animals.v23_le_chamois",
+  "label": "Faune de France",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Petite chèvre sauvage des montagnes, aux cornes en crochet.",
+  "explanation": "Dans les Pyrénées, on l'appelle l'isard.",
+  "word": "CHAMOIS",
+  "display": "Chamois"
+ },
+ {
+  "key": "nat23-062",
+  "concept": "nature.animals.v23_le_martinet",
+  "label": "Oiseaux",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Oiseau qui passe presque toute sa vie en vol.",
+  "explanation": "Ses pattes sont si courtes qu'il a du mal à redécoller du sol.",
+  "word": "MARTINET",
+  "display": "Martinet"
+ },
+ {
+  "key": "nat23-063",
+  "concept": "nature.animals.v23_le_frelon",
+  "label": "Insectes",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Grosse guêpe dont il existe une espèce asiatique invasive.",
+  "explanation": "Le frelon européen, plus gros, est bien moins agressif qu'on le croit.",
+  "word": "FRELON",
+  "display": "Frelon"
+ },
+ {
+  "key": "nat23-064",
+  "concept": "nature.animals.v23_le_lombric",
+  "label": "Faune de France",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Autre nom du ver de terre.",
+  "explanation": "Charles Darwin lui a consacré son dernier livre, en 1881.",
+  "word": "LOMBRIC",
+  "display": "Lombric"
+ },
+ {
+  "key": "nat23-065",
+  "concept": "nature.animals.v23_tl_loup_retour",
+  "label": "Faune de France",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année le loup a-t-il été observé de retour en France, dans le Mercantour ?",
+  "explanation": "Deux loups venus d'Italie ont été aperçus en novembre 1992.",
+  "answer": 1992,
+  "tolerance": 3,
+  "min": 1950,
+  "max": 2020
+ },
+ {
+  "key": "nat23-066",
+  "concept": "nature.animals.v23_tl_dodo",
+  "label": "Espèces disparues",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "Vers quelle année le dodo, oiseau de l'île Maurice, a-t-il disparu ?",
+  "explanation": "Moins d'un siècle après l'arrivée des marins européens et de leurs animaux.",
+  "answer": 1680,
+  "tolerance": 20,
+  "min": 1500,
+  "max": 1900
+ },
+ {
+  "key": "nat23-067",
+  "concept": "nature.animals.v23_tl_thylacine",
+  "label": "Espèces disparues",
+  "type": "timeline",
+  "difficulty": 85,
+  "prompt": "En quelle année est mort le dernier tigre de Tasmanie connu, dans un zoo ?",
+  "explanation": "Un marsupial carnivore rayé. On a filmé l'un des derniers en 1933.",
+  "answer": 1936,
+  "tolerance": 5,
+  "min": 1850,
+  "max": 2000
+ },
+ {
+  "key": "nat23-068",
+  "concept": "nature.animals.v23_tf_kangourou_recule",
+  "label": "Animaux étonnants",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le kangourou peut facilement avancer à reculons.",
+  "explanation": "Sa grosse queue et ses longues pattes arrière l'en empêchent pratiquement. Il figure sur les armoiries de l'Australie, « qui ne recule pas ».",
+  "answer": false
+ },
+ {
+  "key": "nat23-069",
+  "concept": "nature.animals.v23_tf_ver_coupe",
+  "label": "Faune de France",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Un ver de terre coupé en deux donne deux vers vivants.",
+  "explanation": "La partie avec la tête peut parfois survivre et refaire une queue, mais l'autre moitié meurt.",
+  "answer": false
+ },
+ {
+  "key": "nat23-070",
+  "concept": "nature.animals.v23_tf_crapaud_verrues",
+  "label": "Faune de France",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Toucher un crapaud donne des verrues.",
+  "explanation": "Les verrues viennent d'un virus humain. Mais certains crapauds sécrètent des substances irritantes : mieux vaut se laver les mains.",
+  "answer": false
+ },
+ {
+  "key": "nat23-071",
+  "concept": "nature.animals.v23_tf_ours_poils",
+  "label": "Animaux étonnants",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Les poils de l'ours polaire sont blancs.",
+  "explanation": "Ils sont transparents et creux. Ils diffusent la lumière, ce qui les fait paraître blancs.",
+  "answer": false
+ },
+ {
+  "key": "nat23-072",
+  "concept": "nature.animals.v23_tf_pieuvre_neurones",
+  "label": "Animaux étonnants",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "La majorité des neurones d'une pieuvre se trouvent dans ses bras.",
+  "explanation": "Environ les deux tiers. Ses bras peuvent « réfléchir » en partie tout seuls.",
+  "answer": true
+ },
+ {
+  "key": "nat23-073",
+  "concept": "nature.animals.v23_tf_elephant_souris",
+  "label": "Animaux étonnants",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les éléphants ont une peur bleue des souris.",
+  "explanation": "Une légende. Ils peuvent être surpris par un mouvement brusque, comme n'importe quel animal.",
+  "answer": false
+ },
+ {
+  "key": "nat23-074",
+  "concept": "nature.animals.v23_tf_chats_lait",
+  "label": "Animaux étonnants",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Le lait de vache est bon pour les chats adultes.",
+  "explanation": "La plupart digèrent mal le lactose : le lait peut leur donner la diarrhée. L'eau suffit.",
+  "answer": false
+ },
+ {
+  "key": "nat23-075",
+  "concept": "nature.animals.v23_tf_pie_miroir",
+  "label": "Oiseaux",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "La pie se reconnaît dans un miroir.",
+  "explanation": "C'est l'un des rares oiseaux à réussir le test du miroir, montré en 2008.",
+  "answer": true
+ },
+ {
+  "key": "nat23-076",
+  "concept": "nature.animals.v23_tf_corneille_visages",
+  "label": "Oiseaux",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les corneilles peuvent reconnaître un visage humain et s'en souvenir des années.",
+  "explanation": "Des chercheurs masqués qui les avaient capturées ont été houspillés pendant des années… même par des corneilles nées après.",
+  "answer": true
+ },
+ {
+  "key": "nat23-077",
+  "concept": "nature.animals.v23_tf_hibernation_herisson",
+  "label": "Faune de France",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Le hérisson hiberne pendant l'hiver.",
+  "explanation": "De novembre à mars environ. Son cœur passe de près de 200 à une vingtaine de battements par minute.",
+  "answer": true
+ },
+ {
+  "key": "nat23-078",
+  "concept": "nature.animals.v23_tf_moustique_tigre",
+  "label": "Faune de France",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le moustique tigre est présent dans la plupart des départements français.",
+  "explanation": "Arrivé en 2004 à Menton, il s'est installé dans plus de 70 départements. Il pique surtout le jour.",
+  "answer": true
+ },
+ {
+  "key": "nat23-079",
+  "concept": "nature.animals.v23_tf_dauphin_dort",
+  "label": "Animaux étonnants",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "Les animaux ne rêvent jamais.",
+  "explanation": "Beaucoup de mammifères et d'oiseaux ont un sommeil paradoxal, la phase des rêves. Un chien qui dort agite parfois les pattes.",
+  "answer": false
+ },
+ {
+  "key": "nat23-080",
+  "concept": "nature.plants.v23_armillaire",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel est le plus grand être vivant connu sur Terre, qui s'étend sur près de 10 km² dans l'Oregon ?",
+  "explanation": "Ses filaments courent sous la forêt. Il aurait plusieurs milliers d'années.",
+  "options": [
+   "Un champignon souterrain, l'armillaire*",
+   "Une baleine bleue",
+   "Un séquoia géant",
+   "Un récif de corail"
+  ]
+ },
+ {
+  "key": "nat23-081",
+  "concept": "nature.plants.v23_pando",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qu'est-ce que « Pando », dans l'Utah, aux États-Unis ?",
+  "explanation": "Tous les troncs sont des clones issus du même système de racines. C'est l'un des organismes les plus lourds du monde.",
+  "options": [
+   "Une forêt de 47 000 trembles qui forment en réalité un seul arbre, relié par ses racines*",
+   "Le plus vieux cactus du monde",
+   "Un champ de fleurs géantes",
+   "Un arbre tombé de 100 m"
+  ]
+ },
+ {
+  "key": "nat23-082",
+  "concept": "nature.plants.v23_graine_massada",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel âge avait la graine de palmier dattier qu'on a fait germer en 2005, trouvée à Massada en Israël ?",
+  "explanation": "Le palmier a été surnommé « Mathusalem ». D'autres graines aussi anciennes ont même donné des dattes.",
+  "options": [
+   "Environ 2 000 ans*",
+   "50 ans",
+   "200 ans",
+   "20 000 ans"
+  ]
+ },
+ {
+  "key": "nat23-083",
+  "concept": "nature.plants.v23_clou_tronc",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "On plante un clou dans un tronc à 1 m du sol. Où sera-t-il dans 20 ans ?",
+  "explanation": "Un arbre grandit par le haut, au bout de ses branches. Son tronc s'épaissit, mais ne s'allonge pas.",
+  "options": [
+   "Toujours à 1 m du sol*",
+   "À 3 m du sol",
+   "À 50 cm du sol",
+   "Il sera tombé tout seul"
+  ]
+ },
+ {
+  "key": "nat23-084",
+  "concept": "nature.plants.v23_figuier_guepe",
+  "label": "Plantes et animaux",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel insecte pollinise les figuiers ?",
+  "explanation": "La figue est en fait une fleur retournée vers l'intérieur. Les deux espèces ne peuvent pas vivre l'une sans l'autre.",
+  "options": [
+   "Une minuscule guêpe qui entre dans la figue*",
+   "L'abeille",
+   "Le papillon",
+   "La coccinelle"
+  ]
+ },
+ {
+  "key": "nat23-085",
+  "concept": "nature.plants.v23_ophrys",
+  "label": "Plantes et animaux",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment l'orchidée « ophrys abeille » attire-t-elle les insectes ?",
+  "explanation": "Les mâles tentent de s'accoupler avec la fleur… et repartent couverts de pollen.",
+  "options": [
+   "Sa fleur imite la forme et l'odeur d'une abeille femelle*",
+   "Elle produit beaucoup de nectar",
+   "Elle brille la nuit",
+   "Elle fait du bruit"
+  ]
+ },
+ {
+  "key": "nat23-086",
+  "concept": "nature.plants.v23_acacia_fourmis",
+  "label": "Plantes et animaux",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Que font certaines fourmis qui vivent dans les épines creuses des acacias d'Amérique ?",
+  "explanation": "En échange, l'arbre leur offre un logement et de la nourriture. Une alliance gagnant-gagnant.",
+  "options": [
+   "Elles défendent l'arbre contre les herbivores*",
+   "Elles mangent ses feuilles",
+   "Elles y élèvent des pucerons",
+   "Elles creusent son tronc"
+  ]
+ },
+ {
+  "key": "nat23-087",
+  "concept": "nature.plants.v23_dionee",
+  "label": "Plantes carnivores",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment la dionée attrape-mouche sait-elle qu'une proie est dans son piège ?",
+  "explanation": "Deux contacts rapprochés : ça évite de se fermer pour une goutte de pluie. Le piège se referme en une fraction de seconde.",
+  "options": [
+   "Un insecte doit toucher ses petits poils au moins deux fois*",
+   "Elle le voit",
+   "Elle sent sa chaleur",
+   "Elle se referme toutes les heures"
+  ]
+ },
+ {
+  "key": "nat23-088",
+  "concept": "nature.plants.v23_nepenthes",
+  "label": "Plantes carnivores",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment les népenthès attrapent-ils leurs proies ?",
+  "explanation": "Certains, très grands, attrapent même parfois de petits lézards ou des souris.",
+  "options": [
+   "Avec une urne glissante remplie de liquide digestif*",
+   "Avec des feuilles qui se referment",
+   "Avec des poils collants",
+   "En les aspirant"
+  ]
+ },
+ {
+  "key": "nat23-089",
+  "concept": "nature.plants.v23_drosera",
+  "label": "Plantes carnivores",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le droséra, plante carnivore qui pousse dans les tourbières de France, piège les insectes grâce à…",
+  "explanation": "Les gouttes brillent comme de la rosée, d'où son nom, qui vient du grec « drosos », la rosée.",
+  "options": [
+   "Des gouttelettes collantes au bout de poils*",
+   "Une urne pleine d'eau",
+   "Des mâchoires",
+   "Des épines"
+  ]
+ },
+ {
+  "key": "nat23-090",
+  "concept": "nature.plants.v23_hortensia_couleur",
+  "label": "Fleurs",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quoi dépend la couleur bleue ou rose de certains hortensias ?",
+  "explanation": "En sol acide, la plante absorbe de l'aluminium et devient bleue. En sol calcaire, elle reste rose.",
+  "options": [
+   "De l'acidité du sol*",
+   "De la quantité de soleil",
+   "De la température",
+   "De l'âge de la plante"
+  ]
+ },
+ {
+  "key": "nat23-091",
+  "concept": "nature.plants.v23_tournesol_fleurs",
+  "label": "Fleurs",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce que le cœur d'un tournesol ?",
+  "explanation": "Chacune donne une graine. Elles sont disposées en spirales qui suivent la suite de Fibonacci.",
+  "options": [
+   "Des centaines de petites fleurs serrées*",
+   "Une seule énorme graine",
+   "Une feuille enroulée",
+   "Le fruit de la plante"
+  ]
+ },
+ {
+  "key": "nat23-092",
+  "concept": "nature.plants.v23_paquerette_nuit",
+  "label": "Fleurs",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que fait la pâquerette la nuit ?",
+  "explanation": "En anglais, elle s'appelle « daisy », de « day's eye », l'œil du jour.",
+  "options": [
+   "Elle referme sa fleur*",
+   "Elle devient phosphorescente",
+   "Elle se couche sur le sol",
+   "Rien de particulier"
+  ]
+ },
+ {
+  "key": "nat23-093",
+  "concept": "nature.plants.v23_myosotis_nom",
+  "label": "Fleurs",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le surnom de la petite fleur bleue appelée myosotis ?",
+  "explanation": "Son nom scientifique veut dire « oreille de souris », à cause de ses petites feuilles poilues.",
+  "options": [
+   "Ne-m'oubliez-pas*",
+   "Bouton-d'or",
+   "Gueule-de-loup",
+   "Pied-d'alouette"
+  ]
+ },
+ {
+  "key": "nat23-094",
+  "concept": "nature.plants.v23_muguet_toxique",
+  "label": "Plantes toxiques",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Le muguet, offert le 1er mai, est…",
+  "explanation": "Ses baies rouges et ses feuilles sont dangereuses, notamment pour les enfants et les animaux.",
+  "options": [
+   "Toxique s'il est avalé*",
+   "Comestible en salade",
+   "Utilisé pour faire du thé",
+   "Sans danger pour tout le monde"
+  ]
+ },
+ {
+  "key": "nat23-095",
+  "concept": "nature.plants.v23_tulipomanie",
+  "label": "Fleurs",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Que s'est-il passé aux Pays-Bas en 1637, lors de la « tulipomanie » ?",
+  "explanation": "Certains bulbes rares valaient alors le prix d'une maison. On cite souvent cette bulle comme la première crise financière.",
+  "options": [
+   "Le prix des bulbes de tulipe s'est effondré après une folle spéculation*",
+   "Toutes les tulipes ont gelé",
+   "La tulipe a été interdite",
+   "On a planté la première tulipe d'Europe"
+  ]
+ },
+ {
+  "key": "nat23-096",
+  "concept": "nature.plants.v23_edelweiss",
+  "label": "Fleurs",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Où pousse l'edelweiss, fleur blanche et duveteuse ?",
+  "explanation": "Son duvet la protège du froid et des rayons UV. Elle est protégée dans plusieurs pays.",
+  "options": [
+   "En haute montagne*",
+   "Au bord de la mer",
+   "Dans les marais",
+   "Dans le désert"
+  ]
+ },
+ {
+  "key": "nat23-097",
+  "concept": "nature.plants.v23_platane_ecorce",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel arbre des places et des routes du Midi perd son écorce en grandes plaques ?",
+  "explanation": "Son écorce se renouvelle en tombant, ce qui donne au tronc un aspect de camouflage.",
+  "options": [
+   "Le platane*",
+   "Le chêne",
+   "Le pin",
+   "Le tilleul"
+  ]
+ },
+ {
+  "key": "nat23-098",
+  "concept": "nature.plants.v23_tilleul_tisane",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel arbre utilise-t-on les fleurs séchées pour une tisane qui aide à dormir ?",
+  "explanation": "On le plantait sur les places des villages et devant les églises.",
+  "options": [
+   "Le tilleul*",
+   "Le chêne",
+   "Le marronnier",
+   "Le peuplier"
+  ]
+ },
+ {
+  "key": "nat23-099",
+  "concept": "nature.plants.v23_if_cimetiere",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel arbre très toxique, souvent planté dans les cimetières, peut vivre plus de mille ans ?",
+  "explanation": "Toute la plante est toxique, sauf la chair rouge qui entoure la graine. Son bois servait à fabriquer les arcs.",
+  "options": [
+   "L'if*",
+   "Le cyprès",
+   "Le saule",
+   "Le houx"
+  ]
+ },
+ {
+  "key": "nat23-100",
+  "concept": "nature.plants.v23_buis_rameaux",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quelle plante bénit-on souvent le dimanche des Rameaux, en France ?",
+  "explanation": "On l'utilise aussi pour les bordures de jardins à la française.",
+  "options": [
+   "Le buis*",
+   "Le houx",
+   "Le laurier",
+   "Le gui"
+  ]
+ },
+ {
+  "key": "nat23-101",
+  "concept": "nature.plants.v23_pin_landes",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi a-t-on planté l'immense forêt de pins des Landes, au XIXe siècle ?",
+  "explanation": "C'est aujourd'hui l'une des plus grandes forêts plantées d'Europe. On y récoltait la résine, le « gemmage ».",
+  "options": [
+   "Pour assécher les marais et fixer le sable*",
+   "Pour fabriquer des bateaux",
+   "Pour cacher l'armée",
+   "Pour décorer la côte"
+  ]
+ },
+ {
+  "key": "nat23-102",
+  "concept": "nature.plants.v23_epicea_violon",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel bois utilise-t-on traditionnellement pour la table d'harmonie des violons, et souvent comme sapin de Noël ?",
+  "explanation": "Léger et souple, il fait vibrer le son. Stradivarius choisissait des épicéas de montagne qui avaient poussé lentement.",
+  "options": [
+   "L'épicéa*",
+   "Le chêne",
+   "Le noyer",
+   "Le hêtre"
+  ]
+ },
+ {
+  "key": "nat23-103",
+  "concept": "nature.plants.v23_peuplier_cagettes",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel arbre au bois léger sert souvent à fabriquer les cagettes à fruits et les allumettes ?",
+  "explanation": "Il pousse vite, souvent en rangées au bord des rivières.",
+  "options": [
+   "Le peuplier*",
+   "Le chêne",
+   "Le teck",
+   "L'olivier"
+  ]
+ },
+ {
+  "key": "nat23-104",
+  "concept": "nature.plants.v23_erable_samares",
+  "label": "Graines",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Comment tombent les graines ailées de l'érable ?",
+  "explanation": "On les appelle des samares. En tournant, elles tombent plus lentement et le vent les emporte plus loin.",
+  "options": [
+   "En tournoyant comme des hélicoptères*",
+   "Comme des parachutes",
+   "En roulant",
+   "Elles ne tombent pas, elles éclatent"
+  ]
+ },
+ {
+  "key": "nat23-105",
+  "concept": "nature.plants.v23_coco_flotte",
+  "label": "Graines",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Comment la noix de coco a-t-elle colonisé les plages des îles tropicales ?",
+  "explanation": "Son enveloppe fibreuse la rend légère et étanche, pendant des semaines.",
+  "options": [
+   "Elle flotte et voyage sur la mer*",
+   "Les oiseaux la transportent",
+   "Elle est lancée par le vent",
+   "Les singes la plantent"
+  ]
+ },
+ {
+  "key": "nat23-106",
+  "concept": "nature.plants.v23_tomate_origine",
+  "label": "Origines",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "D'où vient la tomate ?",
+  "explanation": "Rapportée en Europe au XVIe siècle, elle a longtemps été jugée toxique et cultivée comme plante décorative.",
+  "options": [
+   "D'Amérique du Sud*",
+   "D'Italie",
+   "D'Espagne",
+   "D'Inde"
+  ]
+ },
+ {
+  "key": "nat23-107",
+  "concept": "nature.plants.v23_pomme_origine",
+  "label": "Origines",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De quelle région vient la pomme cultivée ?",
+  "explanation": "Des forêts de pommiers sauvages poussent encore dans les montagnes du Kazakhstan. La ville d'Almaty signifie « là où il y a des pommes ».",
+  "options": [
+   "D'Asie centrale, au Kazakhstan*",
+   "De Normandie",
+   "D'Angleterre",
+   "D'Amérique du Nord"
+  ]
+ },
+ {
+  "key": "nat23-108",
+  "concept": "nature.plants.v23_carotte_violette",
+  "label": "Origines",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "De quelle couleur étaient la plupart des carottes avant le XVIIe siècle ?",
+  "explanation": "Les carottes orange ont été sélectionnées aux Pays-Bas. On dit parfois en l'honneur de la maison d'Orange, mais rien ne le prouve.",
+  "options": [
+   "Violettes ou jaunes*",
+   "Vertes",
+   "Bleues",
+   "Toujours orange"
+  ]
+ },
+ {
+  "key": "nat23-109",
+  "concept": "nature.plants.v23_aubergine_origine",
+  "label": "Origines",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel pays vient l'aubergine ?",
+  "explanation": "Cousine de la tomate et de la pomme de terre, elle est arrivée en Europe par les Arabes.",
+  "options": [
+   "L'Inde*",
+   "L'Italie",
+   "Le Mexique",
+   "La Grèce"
+  ]
+ },
+ {
+  "key": "nat23-110",
+  "concept": "nature.plants.v23_haricot_origine",
+  "label": "Origines",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "D'où vient le haricot vert ?",
+  "explanation": "Comme le maïs, la courge et le piment, il fait partie des plantes rapportées des Amériques.",
+  "options": [
+   "D'Amérique*",
+   "D'Afrique",
+   "De Chine",
+   "De France"
+  ]
+ },
+ {
+  "key": "nat23-111",
+  "concept": "nature.plants.v23_orange_origine",
+  "label": "Origines",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De quelle région vient l'orange douce ?",
+  "explanation": "En néerlandais et en allemand du Nord, on l'appelle encore « pomme de Chine » (sinaasappel, Apfelsine).",
+  "options": [
+   "D'Asie, de Chine*",
+   "D'Espagne",
+   "Du Maroc",
+   "De Floride"
+  ]
+ },
+ {
+  "key": "nat23-112",
+  "concept": "nature.plants.v23_cacahuete_legumineuse",
+  "label": "Botanique",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Botaniquement, la cacahuète est…",
+  "explanation": "Elle pousse dans une gousse… enterrée.",
+  "options": [
+   "Une légumineuse, cousine du haricot*",
+   "Une noix",
+   "Une céréale",
+   "Un tubercule"
+  ]
+ },
+ {
+  "key": "nat23-113",
+  "concept": "nature.plants.v23_amande_graine",
+  "label": "Botanique",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "L'amande que l'on mange est…",
+  "explanation": "L'amandier est de la même famille que le pêcher et le cerisier. On mange la graine, cachée dans le noyau.",
+  "options": [
+   "La graine d'un fruit à noyau, cousin de la pêche*",
+   "Le fruit entier de l'amandier",
+   "Une racine",
+   "Une fleur séchée"
+  ]
+ },
+ {
+  "key": "nat23-114",
+  "concept": "nature.plants.v23_avocat_baie",
+  "label": "Botanique",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pour un botaniste, l'avocat est…",
+  "explanation": "Une baie à une seule graine, très grosse. Il vient du Mexique.",
+  "options": [
+   "Une baie*",
+   "Un légume",
+   "Une noix",
+   "Une racine"
+  ]
+ },
+ {
+  "key": "nat23-115",
+  "concept": "nature.plants.v23_grain_mais",
+  "label": "Botanique",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Sur un épi de maïs, chaque grain est…",
+  "explanation": "Les « cheveux » de l'épi sont les longs styles des fleurs : un par grain.",
+  "options": [
+   "Un fruit*",
+   "Une feuille",
+   "Une fleur",
+   "Une racine"
+  ]
+ },
+ {
+  "key": "nat23-116",
+  "concept": "nature.plants.v23_saule_aspirine",
+  "label": "Plantes médicinales",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quel arbre vient la substance à l'origine de l'aspirine ?",
+  "explanation": "Depuis l'Antiquité, on mâchait son écorce contre la fièvre et la douleur. Son nom latin, « salix », a donné l'acide salicylique.",
+  "options": [
+   "Le saule*",
+   "Le chêne",
+   "Le bouleau",
+   "Le pin"
+  ]
+ },
+ {
+  "key": "nat23-117",
+  "concept": "nature.plants.v23_digitale_coeur",
+  "label": "Plantes médicinales",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "La digitale, belle fleur des bois très toxique, a donné un médicament pour…",
+  "explanation": "La digitaline renforce les battements du cœur. À mauvaise dose, elle peut l'arrêter.",
+  "options": [
+   "Le cœur*",
+   "Les yeux",
+   "Les dents",
+   "La peau"
+  ]
+ },
+ {
+  "key": "nat23-118",
+  "concept": "nature.plants.v23_quinquina",
+  "label": "Plantes médicinales",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Contre quelle maladie utilisait-on la quinine, tirée de l'écorce du quinquina ?",
+  "explanation": "C'est aussi elle qui donne son goût amer au Schweppes tonic.",
+  "options": [
+   "Le paludisme*",
+   "La grippe",
+   "La rougeole",
+   "Le diabète"
+  ]
+ },
+ {
+  "key": "nat23-119",
+  "concept": "nature.plants.v23_belladone",
+  "label": "Plantes toxiques",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Pourquoi la belladone, plante très toxique, s'appelle-t-elle « belle dame » ?",
+  "explanation": "Des grandes pupilles étaient jugées séduisantes. Les ophtalmologistes utilisent encore un dérivé, l'atropine.",
+  "options": [
+   "Les femmes s'en mettaient dans les yeux pour dilater leurs pupilles*",
+   "Elle a de très belles fleurs",
+   "Une reine l'adorait",
+   "Elle sent le parfum"
+  ]
+ },
+ {
+  "key": "nat23-120",
+  "concept": "nature.plants.v23_aloe_brulure",
+  "label": "Plantes médicinales",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quoi sert souvent le gel de l'aloe vera ?",
+  "explanation": "Cette plante grasse stocke un gel dans ses feuilles épaisses.",
+  "options": [
+   "À apaiser les coups de soleil et petites brûlures*",
+   "À colorer les cheveux",
+   "À faire du pain",
+   "À éloigner les moustiques"
+  ]
+ },
+ {
+  "key": "nat23-121",
+  "concept": "nature.plants.v23_amanite_phalloide",
+  "label": "Champignons",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel champignon est responsable de la plupart des intoxications mortelles en France ?",
+  "explanation": "Les premiers symptômes n'apparaissent qu'après plusieurs heures, quand le foie est déjà touché.",
+  "options": [
+   "L'amanite phalloïde*",
+   "Le cèpe",
+   "La girolle",
+   "Le champignon de Paris"
+  ]
+ },
+ {
+  "key": "nat23-122",
+  "concept": "nature.plants.v23_truffe_animaux",
+  "label": "Champignons",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quels animaux aide-t-on à trouver les truffes cachées sous terre ?",
+  "explanation": "La truie est attirée par une odeur proche de celle d'une hormone de verrat… mais elle mange souvent la truffe ! On préfère le chien.",
+  "options": [
+   "Les chiens et les cochons*",
+   "Les chats et les lapins",
+   "Les chèvres",
+   "Les poules"
+  ]
+ },
+ {
+  "key": "nat23-123",
+  "concept": "nature.plants.v23_champignon_paris",
+  "label": "Champignons",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Où cultivait-on autrefois le champignon de Paris ?",
+  "explanation": "L'obscurité, l'humidité et la température stable des carrières lui convenaient parfaitement.",
+  "options": [
+   "Dans les anciennes carrières souterraines de la région parisienne*",
+   "Sur les toits de Paris",
+   "Dans la forêt de Fontainebleau",
+   "Dans les jardins du Louvre"
+  ]
+ },
+ {
+  "key": "nat23-124",
+  "concept": "nature.plants.v23_ortie_soupe",
+  "label": "Plantes sauvages",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Que peut-on faire avec de jeunes orties, sans se piquer ?",
+  "explanation": "L'ortie est riche en fer et en protéines. Elle a aussi servi à fabriquer des tissus.",
+  "options": [
+   "Une soupe, car la cuisson détruit les poils piquants*",
+   "Rien : elles sont toxiques",
+   "Du papier",
+   "De la colle"
+  ]
+ },
+ {
+  "key": "nat23-125",
+  "concept": "nature.plants.v23_pa_medicaments",
+  "label": "Plantes médicinales",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque plante à la substance qu'on en a tirée.",
+  "explanation": "Une grande partie des médicaments vient, au départ, de plantes.",
+  "pairs": [
+   [
+    "Saule",
+    "Aspirine"
+   ],
+   [
+    "Pavot",
+    "Morphine"
+   ],
+   [
+    "Quinquina",
+    "Quinine"
+   ],
+   [
+    "Digitale",
+    "Digitaline"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-126",
+  "concept": "nature.plants.v23_pa_origines",
+  "label": "Origines",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque aliment à sa région d'origine.",
+  "explanation": "Beaucoup de nos aliments « bien de chez nous » ont voyagé pendant des siècles.",
+  "pairs": [
+   [
+    "Tomate",
+    "Amérique du Sud"
+   ],
+   [
+    "Aubergine",
+    "Inde"
+   ],
+   [
+    "Pomme",
+    "Asie centrale"
+   ],
+   [
+    "Banane",
+    "Asie du Sud-Est"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-127",
+  "concept": "nature.plants.v23_pa_plantes_carnivores",
+  "label": "Plantes carnivores",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque plante carnivore à son piège.",
+  "explanation": "L'utriculaire aspire sa proie en quelques millièmes de seconde : l'un des pièges les plus rapides du vivant.",
+  "pairs": [
+   [
+    "Dionée",
+    "Mâchoires qui se referment"
+   ],
+   [
+    "Népenthès",
+    "Urne glissante"
+   ],
+   [
+    "Droséra",
+    "Gouttes collantes"
+   ],
+   [
+    "Utriculaire",
+    "Petites outres qui aspirent sous l'eau"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-128",
+  "concept": "nature.plants.v23_or_fruits_taille",
+  "label": "Fruits",
+  "type": "ordering",
+  "difficulty": 15,
+  "prompt": "Classe ces fruits du plus petit au plus gros.",
+  "explanation": "Une pastèque peut peser plus de 10 kg.",
+  "items": [
+   "Myrtille",
+   "Fraise",
+   "Pomme",
+   "Pastèque"
+  ]
+ },
+ {
+  "key": "nat23-129",
+  "concept": "nature.plants.v23_or_arbres_age",
+  "label": "Arbres",
+  "type": "ordering",
+  "difficulty": 60,
+  "prompt": "Classe ces arbres selon l'âge maximal qu'ils peuvent atteindre, du plus court au plus long.",
+  "explanation": "Environ 100 ans pour le bouleau, plus de 1 000 ans pour certains chênes et ifs, près de 5 000 ans pour le pin Bristlecone de Californie.",
+  "items": [
+   "Bouleau",
+   "Chêne",
+   "If",
+   "Pin Bristlecone"
+  ]
+ },
+ {
+  "key": "nat23-130",
+  "concept": "nature.plants.v23_ga_pollinisation",
+  "label": "Plantes et animaux",
+  "type": "gauge",
+  "difficulty": 65,
+  "prompt": "Quelle part des plantes à fleurs a besoin des animaux (insectes, oiseaux…) pour être pollinisée ?",
+  "explanation": "Environ 9 sur 10. Les autres, comme les céréales, sont pollinisées par le vent.",
+  "answer": 87,
+  "tolerance": 10,
+  "unit": "%"
+ },
+ {
+  "key": "nat23-131",
+  "concept": "nature.plants.v23_co_cotyledons",
+  "label": "Botanique",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien de « feuilles » (cotylédons) contient la graine d'un haricot ?",
+  "explanation": "Les deux moitiés du haricot sec sont ses cotylédons, des réserves pour la jeune plante.",
+  "answer": 2,
+  "tolerance": 0,
+  "min": 0,
+  "max": 6,
+  "start": 0
+ },
+ {
+  "key": "nat23-132",
+  "concept": "nature.plants.v23_co_petales_lys",
+  "label": "Fleurs",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien de pétales (et sépales colorés) compte une fleur de lys ?",
+  "explanation": "Trois pétales et trois sépales identiques. Le lys est une plante « monocotylédone », souvent organisée par 3.",
+  "answer": 6,
+  "tolerance": 0,
+  "min": 2,
+  "max": 12,
+  "start": 2
+ },
+ {
+  "key": "nat23-133",
+  "concept": "nature.plants.v23_le_platane",
+  "label": "Arbres",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Arbre des places du Midi, à l'écorce en plaques.",
+  "explanation": "Un champignon venu d'Amérique, le chancre coloré, menace ceux du canal du Midi.",
+  "word": "PLATANE",
+  "display": "Platane"
+ },
+ {
+  "key": "nat23-134",
+  "concept": "nature.plants.v23_le_tilleul",
+  "label": "Arbres",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Arbre dont les fleurs donnent une tisane apaisante.",
+  "explanation": "Ses fleurs sont aussi très appréciées des abeilles.",
+  "word": "TILLEUL",
+  "display": "Tilleul"
+ },
+ {
+  "key": "nat23-135",
+  "concept": "nature.plants.v23_le_hortensia",
+  "label": "Fleurs",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Fleur en grosses boules qui peut être bleue ou rose selon le sol.",
+  "explanation": "Elle aime l'ombre et l'humidité, comme en Bretagne.",
+  "word": "HORTENSIA",
+  "display": "Hortensia"
+ },
+ {
+  "key": "nat23-136",
+  "concept": "nature.plants.v23_le_myosotis",
+  "label": "Fleurs",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Petite fleur bleue surnommée « ne-m'oubliez-pas ».",
+  "explanation": "Elle est un symbole du souvenir dans plusieurs pays.",
+  "word": "MYOSOTIS",
+  "display": "Myosotis"
+ },
+ {
+  "key": "nat23-137",
+  "concept": "nature.plants.v23_le_digitale",
+  "label": "Plantes toxiques",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Fleur en clochettes, très toxique, qui a donné un médicament pour le cœur.",
+  "explanation": "Son nom vient de ses fleurs, dans lesquelles on peut glisser un doigt.",
+  "word": "DIGITALE",
+  "display": "Digitale"
+ },
+ {
+  "key": "nat23-138",
+  "concept": "nature.plants.v23_tl_tulipomanie",
+  "label": "Fleurs",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année a éclaté la bulle de la « tulipomanie » aux Pays-Bas ?",
+  "explanation": "En février 1637, les prix ont chuté d'un coup.",
+  "answer": 1637,
+  "tolerance": 10,
+  "min": 1500,
+  "max": 1800
+ },
+ {
+  "key": "nat23-139",
+  "concept": "nature.plants.v23_tf_plantes_dorment",
+  "label": "Botanique",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Certaines plantes replient leurs feuilles la nuit, comme si elles dormaient.",
+  "explanation": "Le haricot, le trèfle ou l'oxalis le font. On parle de mouvements « nyctinastiques ».",
+  "answer": true
+ },
+ {
+  "key": "nat23-140",
+  "concept": "nature.plants.v23_tf_tomate_toxique",
+  "label": "Origines",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "En Europe, la tomate a longtemps été considérée comme toxique.",
+  "explanation": "Elle est de la même famille que la belladone. Ses feuilles sont d'ailleurs toxiques.",
+  "answer": true
+ },
+ {
+  "key": "nat23-141",
+  "concept": "nature.plants.v23_tf_banane_arbre",
+  "label": "Botanique",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Les bananes poussent la pointe vers le haut.",
+  "explanation": "Elles se tournent vers la lumière en grandissant : les bananes sont « courbées » pour cela.",
+  "answer": true
+ },
+ {
+  "key": "nat23-142",
+  "concept": "nature.plants.v23_tf_cactus_fleurit",
+  "label": "Botanique",
+  "type": "true_false",
+  "difficulty": 25,
+  "prompt": "Les cactus ne font jamais de fleurs.",
+  "explanation": "Beaucoup ont des fleurs magnifiques, parfois pour une seule nuit.",
+  "answer": false
+ },
+ {
+  "key": "nat23-143",
+  "concept": "nature.plants.v23_tf_tournesol_france",
+  "label": "Plantes cultivées",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "La France est l'un des plus grands producteurs de tournesol d'Europe.",
+  "explanation": "Surtout dans le Sud-Ouest. Ses graines donnent de l'huile.",
+  "answer": true
+ },
+ {
+  "key": "nat23-144",
+  "concept": "nature.plants.v23_tf_plantes_musique",
+  "label": "Botanique",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Il est scientifiquement prouvé que la musique classique fait pousser les plantes deux fois plus vite.",
+  "explanation": "Aucune étude sérieuse ne l'a montré. Les plantes réagissent en revanche aux vibrations et au toucher.",
+  "answer": false
+ },
+ {
+  "key": "nat23-145",
+  "concept": "nature.plants.v23_tf_arbres_eau",
+  "label": "Arbres",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Un grand arbre peut puiser plusieurs centaines de litres d'eau par jour.",
+  "explanation": "L'eau monte des racines aux feuilles et s'évapore : c'est la transpiration des plantes.",
+  "answer": true
+ },
+ {
+  "key": "nat23-146",
+  "concept": "nature.plants.v23_tf_gui_noel",
+  "label": "Plantes sauvages",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les boules blanches du gui sont comestibles.",
+  "explanation": "Elles sont toxiques pour l'homme. Les oiseaux, eux, les mangent et sèment les graines sur d'autres arbres.",
+  "answer": false
+ },
+ {
+  "key": "nat23-147",
+  "concept": "nature.plants.v23_tf_fraise_fruit",
+  "label": "Botanique",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "La framboise est formée de dizaines de petits fruits soudés.",
+  "explanation": "Chaque petite boule contient une graine. Comme la mûre, c'est un « fruit composé ».",
+  "answer": true
+ },
+ {
+  "key": "nat23-148",
+  "concept": "nature.plants.v23_tf_bambou_fleur",
+  "label": "Botanique",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Certains bambous ne fleurissent qu'une fois tous les 60 à 120 ans, tous en même temps.",
+  "explanation": "Toutes les plantes d'une même espèce fleurissent ensemble, partout dans le monde, puis meurent.",
+  "answer": true
+ },
+ {
+  "key": "nat23-149",
+  "concept": "nature.plants.v23_tf_lavande_provence",
+  "label": "Plantes cultivées",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "La lavande fleurit en plein hiver.",
+  "explanation": "Elle fleurit en été, de juin à août. On la récolte en juillet.",
+  "answer": false
+ },
+ {
+  "key": "nat23-150",
+  "concept": "nature.plants.v23_tf_feuilles_chenilles",
+  "label": "Plantes et animaux",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Certaines plantes attaquées par des chenilles émettent des odeurs qui attirent les prédateurs de ces chenilles.",
+  "explanation": "Le maïs, par exemple, appelle ainsi à l'aide des guêpes qui pondent dans les chenilles.",
+  "answer": true
+ },
+ {
+  "key": "nat23-151",
+  "concept": "nature.marine.v23_loutres_main",
+  "label": "Animaux marins",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Que font les loutres de mer pour ne pas dériver pendant leur sommeil ?",
+  "explanation": "Un groupe de loutres qui flottent ensemble s'appelle un « radeau ».",
+  "options": [
+   "Elles se tiennent par la patte, ou s'enroulent dans les algues*",
+   "Elles dorment sur la plage",
+   "Elles s'accrochent aux bateaux",
+   "Elles ne dorment jamais"
+  ]
+ },
+ {
+  "key": "nat23-152",
+  "concept": "nature.marine.v23_crevette_pistolet",
+  "label": "Animaux marins",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment la crevette-pistolet assomme-t-elle ses proies ?",
+  "explanation": "L'explosion de la bulle produit un bruit très puissant et un éclair de chaleur intense, l'espace d'un instant.",
+  "options": [
+   "En claquant sa pince si vite qu'elle crée une bulle qui explose*",
+   "Avec du venin",
+   "Avec un jet d'encre",
+   "En les mordant"
+  ]
+ },
+ {
+  "key": "nat23-153",
+  "concept": "nature.marine.v23_cachalot_bruit",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel animal émet les sons les plus puissants du règne animal ?",
+  "explanation": "Ses clics, qui lui servent d'écholocation, dépassent les 230 décibels sous l'eau.",
+  "options": [
+   "Le cachalot*",
+   "L'éléphant",
+   "Le lion",
+   "Le singe hurleur"
+  ]
+ },
+ {
+  "key": "nat23-154",
+  "concept": "nature.marine.v23_cachalot_ambre",
+  "label": "Animaux marins",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle substance, très recherchée en parfumerie, est produite dans l'intestin du cachalot ?",
+  "explanation": "On la trouve parfois échouée sur les plages. Elle peut valoir des dizaines de milliers d'euros le kilo.",
+  "options": [
+   "L'ambre gris*",
+   "Le musc",
+   "La nacre",
+   "Le corail"
+  ]
+ },
+ {
+  "key": "nat23-155",
+  "concept": "nature.marine.v23_baleine_bulles",
+  "label": "Animaux marins",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Comment les baleines à bosse chassent-elles parfois en groupe ?",
+  "explanation": "Les poissons, piégés dans le cercle de bulles, se resserrent. Les baleines remontent alors la gueule ouverte.",
+  "options": [
+   "En soufflant un « filet » de bulles qui encercle les poissons*",
+   "En frappant l'eau avec leur queue pour assommer les poissons",
+   "En chantant pour endormir les poissons",
+   "En ouvrant la bouche au fond de l'eau"
+  ]
+ },
+ {
+  "key": "nat23-156",
+  "concept": "nature.marine.v23_baleine_coeur",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "À peu près de quelle taille est le cœur d'une baleine bleue ?",
+  "explanation": "Il pèse environ 180 kg. On l'entendrait battre à plus de 3 km.",
+  "options": [
+   "Celle d'une petite voiture*",
+   "Celle d'un ballon de foot",
+   "Celle d'une maison",
+   "Celle d'un humain"
+  ]
+ },
+ {
+  "key": "nat23-157",
+  "concept": "nature.marine.v23_requin_electricite",
+  "label": "Requins",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel sens étonnant permet au requin de repérer une proie cachée dans le sable ?",
+  "explanation": "Grâce à de petits pores sur son museau, les ampoules de Lorenzini.",
+  "options": [
+   "Il détecte les petits champs électriques des êtres vivants*",
+   "Il voit à travers le sable",
+   "Il entend les battements de cœur",
+   "Il sent la chaleur"
+  ]
+ },
+ {
+  "key": "nat23-158",
+  "concept": "nature.marine.v23_requin_dents",
+  "label": "Requins",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que se passe-t-il quand un requin perd une dent ?",
+  "explanation": "Ses dents avancent comme sur un tapis roulant. Il peut en user des milliers au cours de sa vie.",
+  "options": [
+   "Une dent de la rangée suivante la remplace*",
+   "Il ne peut plus chasser",
+   "Elle repousse au bout d'un an",
+   "Il change de nourriture"
+  ]
+ },
+ {
+  "key": "nat23-159",
+  "concept": "nature.marine.v23_requin_groenland",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel animal vertébré détient le record de longévité connu, avec peut-être 400 ans ?",
+  "explanation": "Il grandit d'environ 1 cm par an, et n'atteint sa maturité qu'à 150 ans environ.",
+  "options": [
+   "Le requin du Groenland*",
+   "La tortue géante",
+   "La baleine boréale",
+   "L'éléphant"
+  ]
+ },
+ {
+  "key": "nat23-160",
+  "concept": "nature.marine.v23_requin_bouledogue",
+  "label": "Requins",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel requin peut remonter les fleuves et vivre en eau douce ?",
+  "explanation": "On en a vu à des milliers de kilomètres en amont de l'Amazone et du Mississippi.",
+  "options": [
+   "Le requin-bouledogue*",
+   "Le requin blanc",
+   "Le requin-baleine",
+   "Le requin-marteau"
+  ]
+ },
+ {
+  "key": "nat23-161",
+  "concept": "nature.marine.v23_pieuvre_ventouses",
+  "label": "Céphalopodes",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Avec quoi une pieuvre peut-elle goûter ce qu'elle touche ?",
+  "explanation": "Ses ventouses portent des milliers de capteurs chimiques : elle « goûte » en explorant.",
+  "options": [
+   "Ses ventouses*",
+   "Sa peau de tête",
+   "Son encre",
+   "Son bec"
+  ]
+ },
+ {
+  "key": "nat23-162",
+  "concept": "nature.marine.v23_pieuvre_mime",
+  "label": "Céphalopodes",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le talent de la « pieuvre mimétique » d'Indonésie ?",
+  "explanation": "Elle change de forme, de couleur et de façon de nager pour faire peur à ses prédateurs.",
+  "options": [
+   "Elle imite d'autres animaux, comme un serpent de mer ou un poisson venimeux*",
+   "Elle imite les voix",
+   "Elle danse",
+   "Elle construit des abris"
+  ]
+ },
+ {
+  "key": "nat23-163",
+  "concept": "nature.marine.v23_fugu",
+  "label": "Poissons",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi, au Japon, seuls des cuisiniers diplômés peuvent-ils préparer le fugu (poisson-globe) ?",
+  "explanation": "La tétrodotoxine est bien plus toxique que le cyanure. Il n'existe pas d'antidote.",
+  "options": [
+   "Certains de ses organes contiennent un poison mortel*",
+   "Il est très rare",
+   "Il faut le cuire pendant trois jours",
+   "Il est protégé par la loi"
+  ]
+ },
+ {
+  "key": "nat23-164",
+  "concept": "nature.marine.v23_thon_rouge",
+  "label": "Poissons",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle particularité a le thon rouge, contrairement à la plupart des poissons ?",
+  "explanation": "Ses muscles restent chauds, ce qui lui permet de nager vite même en eau froide et de traverser l'Atlantique.",
+  "options": [
+   "Il garde son corps plus chaud que l'eau*",
+   "Il respire de l'air",
+   "Il vit uniquement en eau douce",
+   "Il n'a pas d'écailles"
+  ]
+ },
+ {
+  "key": "nat23-165",
+  "concept": "nature.marine.v23_baudroie",
+  "label": "Profondeurs",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À quoi sert la petite « lanterne » lumineuse au-dessus de la tête de la baudroie des abysses ?",
+  "explanation": "Chez certaines espèces, le mâle, minuscule, se fixe sur la femelle et fusionne avec elle pour la vie.",
+  "options": [
+   "À attirer ses proies dans le noir*",
+   "À éclairer sa route",
+   "À effrayer les requins",
+   "À communiquer avec les dauphins"
+  ]
+ },
+ {
+  "key": "nat23-166",
+  "concept": "nature.marine.v23_eponge_animal",
+  "label": "Invertébrés",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'est-ce qu'une éponge de mer ?",
+  "explanation": "L'un des animaux les plus simples : pas d'organes, pas de muscles, mais il filtre des litres d'eau par jour.",
+  "options": [
+   "Un animal*",
+   "Une plante",
+   "Une algue",
+   "Un champignon"
+  ]
+ },
+ {
+  "key": "nat23-167",
+  "concept": "nature.marine.v23_anemone_animal",
+  "label": "Invertébrés",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'une anémone de mer ?",
+  "explanation": "Ses « pétales » sont des tentacules qui piquent les petites proies.",
+  "options": [
+   "Un animal, cousin des méduses*",
+   "Une fleur sous-marine",
+   "Un champignon",
+   "Un œuf de poisson"
+  ]
+ },
+ {
+  "key": "nat23-168",
+  "concept": "nature.marine.v23_concombre_mer",
+  "label": "Invertébrés",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Comment certains concombres de mer se défendent-ils face à un prédateur ?",
+  "explanation": "Les organes, souvent collants ou toxiques, distraient l'attaquant. Ils repoussent ensuite.",
+  "options": [
+   "Ils expulsent une partie de leurs organes*",
+   "Ils gonflent comme un ballon",
+   "Ils changent de couleur",
+   "Ils mordent"
+  ]
+ },
+ {
+  "key": "nat23-169",
+  "concept": "nature.marine.v23_etoile_estomac",
+  "label": "Invertébrés",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Comment l'étoile de mer mange-t-elle une moule ?",
+  "explanation": "Elle digère la moule à l'intérieur même de sa coquille.",
+  "options": [
+   "Elle entrouvre la coquille et y glisse son estomac retourné*",
+   "Elle la casse sur un rocher",
+   "Elle l'avale entière",
+   "Elle attend qu'elle s'ouvre seule"
+  ]
+ },
+ {
+  "key": "nat23-170",
+  "concept": "nature.marine.v23_homard_sang",
+  "label": "Invertébrés",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Un homard vivant se blesse. Quelle couleur a le liquide qui s'écoule ?",
+  "explanation": "Comme celui de la pieuvre, il contient du cuivre au lieu du fer.",
+  "options": [
+   "Bleu*",
+   "Rouge",
+   "Vert",
+   "Jaune"
+  ]
+ },
+ {
+  "key": "nat23-171",
+  "concept": "nature.marine.v23_crabe_cocotier",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le crabe de cocotier est le plus grand arthropode vivant sur terre. Que sait-il faire ?",
+  "explanation": "Il peut dépasser un mètre d'envergure, pattes comprises, et vit sur les îles de l'océan Indien et du Pacifique.",
+  "options": [
+   "Ouvrir des noix de coco avec ses pinces*",
+   "Voler sur de courtes distances",
+   "Respirer sous l'eau toute sa vie",
+   "Changer de couleur"
+  ]
+ },
+ {
+  "key": "nat23-172",
+  "concept": "nature.marine.v23_physalie",
+  "label": "Méduses",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "La « galère portugaise », souvent prise pour une méduse, est en réalité…",
+  "explanation": "Sa poche flotte comme une voile. Ses filaments peuvent faire plus de 10 m et piquer très douloureusement.",
+  "options": [
+   "Une colonie de petits organismes qui vivent ensemble*",
+   "Un poisson",
+   "Une plante",
+   "Un mollusque"
+  ]
+ },
+ {
+  "key": "nat23-173",
+  "concept": "nature.marine.v23_tortues_sexe",
+  "label": "Tortues",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Chez les tortues marines, qu'est-ce qui décide si un bébé sera mâle ou femelle ?",
+  "explanation": "Un sable chaud donne plutôt des femelles. Le réchauffement climatique menace cet équilibre.",
+  "options": [
+   "La température du sable pendant l'incubation*",
+   "La mère, au moment de pondre",
+   "La lune",
+   "La taille de l'œuf"
+  ]
+ },
+ {
+  "key": "nat23-174",
+  "concept": "nature.marine.v23_requin_pelerin",
+  "label": "Requins",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel grand requin inoffensif, deuxième plus gros poisson du monde, croise au large de la Bretagne ?",
+  "explanation": "Il nage la bouche grande ouverte pour filtrer le plancton.",
+  "options": [
+   "Le requin pèlerin*",
+   "Le requin blanc",
+   "Le requin-tigre",
+   "Le requin-taureau"
+  ]
+ },
+ {
+  "key": "nat23-175",
+  "concept": "nature.marine.v23_phoques_somme",
+  "label": "Mammifères marins",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quels animaux peut-on observer couchés sur les bancs de sable de la baie de Somme ?",
+  "explanation": "Phoques veaux-marins et phoques gris y forment la plus grande colonie de France.",
+  "options": [
+   "Des phoques*",
+   "Des otaries",
+   "Des morses",
+   "Des lions de mer"
+  ]
+ },
+ {
+  "key": "nat23-176",
+  "concept": "nature.marine.v23_mascaret",
+  "label": "Mers et océans",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'est-ce qu'un mascaret ?",
+  "explanation": "On l'observe sur la Dordogne et la Garonne, où des surfeurs le chevauchent sur des kilomètres.",
+  "options": [
+   "Une vague qui remonte un fleuve à marée montante*",
+   "Un poisson de rivière",
+   "Un courant chaud",
+   "Un tourbillon dans l'océan"
+  ]
+ },
+ {
+  "key": "nat23-177",
+  "concept": "nature.marine.v23_mont_saint_michel",
+  "label": "Mers et océans",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Selon l'expression célèbre, à quelle vitesse la marée monte-t-elle autour du Mont-Saint-Michel ?",
+  "explanation": "L'expression, attribuée à Victor Hugo, exagère un peu : la mer peut avancer d'environ 1 m par seconde.",
+  "options": [
+   "À la vitesse d'un cheval au galop*",
+   "À la vitesse d'un escargot",
+   "À la vitesse d'un train",
+   "À la vitesse du son"
+  ]
+ },
+ {
+  "key": "nat23-178",
+  "concept": "nature.marine.v23_eau_mer_gel",
+  "label": "Mers et océans",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À quelle température l'eau de mer gèle-t-elle environ ?",
+  "explanation": "Le sel abaisse la température de congélation. C'est aussi pour ça qu'on sale les routes en hiver.",
+  "options": [
+   "−2 °C*",
+   "0 °C",
+   "−10 °C",
+   "+2 °C"
+  ]
+ },
+ {
+  "key": "nat23-179",
+  "concept": "nature.marine.v23_vague_scelerate",
+  "label": "Mers et océans",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'est-ce qu'une « vague scélérate » ?",
+  "explanation": "Longtemps prises pour des légendes de marins, elles ont été mesurées pour la première fois en 1995, en mer du Nord.",
+  "options": [
+   "Une vague géante et isolée qui surgit sans prévenir*",
+   "Une vague provoquée par un bateau",
+   "Une petite vague dangereuse pour les nageurs",
+   "Une vague de pollution"
+  ]
+ },
+ {
+  "key": "nat23-180",
+  "concept": "nature.marine.v23_nazare",
+  "label": "Mers et océans",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel pays se trouve Nazaré, célèbre pour ses vagues géantes de plus de 25 mètres surfées chaque hiver ?",
+  "explanation": "Un canyon sous-marin concentre la houle juste devant la côte.",
+  "options": [
+   "Le Portugal*",
+   "Hawaï (États-Unis)",
+   "L'Australie",
+   "La France"
+  ]
+ },
+ {
+  "key": "nat23-181",
+  "concept": "nature.marine.v23_sargasses",
+  "label": "Algues",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelles algues brunes s'échouent en masse aux Antilles, dégageant une odeur d'œuf pourri ?",
+  "explanation": "Elles ont donné leur nom à la mer des Sargasses, au milieu de l'Atlantique.",
+  "options": [
+   "Les sargasses*",
+   "Les algues vertes",
+   "Le kelp",
+   "La spiruline"
+  ]
+ },
+ {
+  "key": "nat23-182",
+  "concept": "nature.marine.v23_algues_vertes",
+  "label": "Algues",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi les marées d'algues vertes se multiplient-elles sur certaines plages de Bretagne ?",
+  "explanation": "En pourrissant, ces algues dégagent un gaz toxique, l'hydrogène sulfuré.",
+  "options": [
+   "Les rivières y apportent beaucoup de nitrates issus de l'agriculture*",
+   "L'eau y est trop froide",
+   "Les touristes y jettent des déchets",
+   "Les bateaux les transportent"
+  ]
+ },
+ {
+  "key": "nat23-183",
+  "concept": "nature.marine.v23_septieme_continent",
+  "label": "Mers et océans",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'appelle-t-on le « septième continent » ?",
+  "explanation": "Le plus grand, dans le Pacifique nord, est surtout fait de petits morceaux de plastique, pas d'une île solide.",
+  "options": [
+   "D'immenses zones de déchets plastiques qui flottent dans les océans*",
+   "L'Antarctique",
+   "Une île qui vient d'émerger",
+   "Le fond des océans"
+  ]
+ },
+ {
+  "key": "nat23-184",
+  "concept": "nature.marine.v23_coelacanthe",
+  "label": "Poissons",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quel poisson, qu'on croyait disparu depuis 66 millions d'années, a été pêché vivant en 1938 ?",
+  "explanation": "On l'appelle « fossile vivant ». Ses nageoires charnues ressemblent à des débuts de pattes.",
+  "options": [
+   "Le cœlacanthe*",
+   "Le requin-lutin",
+   "Le poisson-scie",
+   "L'esturgeon"
+  ]
+ },
+ {
+  "key": "nat23-185",
+  "concept": "nature.marine.v23_pa_defenses_marines",
+  "label": "Animaux marins",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque animal à sa façon de chasser.",
+  "explanation": "L'océan regorge de techniques de chasse étonnantes.",
+  "pairs": [
+   [
+    "Baleine à bosse",
+    "Filet de bulles"
+   ],
+   [
+    "Crevette-pistolet",
+    "Claquement de pince"
+   ],
+   [
+    "Baudroie des abysses",
+    "Lanterne lumineuse"
+   ],
+   [
+    "Étoile de mer",
+    "Estomac retourné"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-186",
+  "concept": "nature.marine.v23_pa_records_mer",
+  "label": "Records",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque record à l'animal marin qui le détient.",
+  "explanation": "Le requin-baleine, inoffensif, peut dépasser 12 mètres.",
+  "pairs": [
+   [
+    "Le plus gros animal",
+    "Baleine bleue"
+   ],
+   [
+    "Le plus bruyant",
+    "Cachalot"
+   ],
+   [
+    "Le plus vieux vertébré",
+    "Requin du Groenland"
+   ],
+   [
+    "Le plus gros poisson",
+    "Requin-baleine"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-187",
+  "concept": "nature.marine.v23_or_plongee",
+  "label": "Records",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces plongeurs de celui qui descend le moins profond à celui qui descend le plus profond.",
+  "explanation": "Environ 200 m pour les records humains, 500 m pour le manchot, plus de 2 000 m pour le cachalot, près de 3 000 m pour la baleine de Cuvier.",
+  "items": [
+   "Être humain en apnée",
+   "Manchot empereur",
+   "Cachalot",
+   "Baleine à bec de Cuvier"
+  ]
+ },
+ {
+  "key": "nat23-188",
+  "concept": "nature.marine.v23_or_taille_mer",
+  "label": "Animaux marins",
+  "type": "ordering",
+  "difficulty": 20,
+  "prompt": "Classe ces animaux marins du plus petit au plus grand.",
+  "explanation": "De quelques centimètres à près de 30 mètres.",
+  "items": [
+   "Hippocampe",
+   "Dauphin",
+   "Requin blanc",
+   "Baleine bleue"
+  ]
+ },
+ {
+  "key": "nat23-189",
+  "concept": "nature.marine.v23_co_cachalot_apnee",
+  "label": "Mammifères marins",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien de minutes un cachalot peut-il rester sous l'eau sans respirer, environ ?",
+  "explanation": "Plus d'une heure, parfois jusqu'à 90 minutes, pour chasser le calmar dans les profondeurs.",
+  "answer": 90,
+  "tolerance": 20,
+  "min": 10,
+  "max": 180,
+  "start": 10
+ },
+ {
+  "key": "nat23-190",
+  "concept": "nature.marine.v23_co_manchot_profondeur",
+  "label": "Records",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Jusqu'à quelle profondeur (en mètres) un manchot empereur peut-il plonger ?",
+  "explanation": "Il peut retenir son souffle plus de 20 minutes.",
+  "answer": 500,
+  "tolerance": 100,
+  "min": 50,
+  "max": 1000,
+  "start": 50
+ },
+ {
+  "key": "nat23-191",
+  "concept": "nature.marine.v23_le_oursin",
+  "label": "Invertébrés",
+  "type": "letters",
+  "difficulty": 25,
+  "prompt": "Animal marin couvert de piquants, qu'on évite de piétiner.",
+  "explanation": "Sa bouche, sous le corps, s'appelle la « lanterne d'Aristote ».",
+  "word": "OURSIN",
+  "display": "Oursin"
+ },
+ {
+  "key": "nat23-192",
+  "concept": "nature.marine.v23_le_narval",
+  "label": "Mammifères marins",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Baleine de l'Arctique à la longue dent torsadée.",
+  "explanation": "On vendait autrefois sa dent comme corne de licorne.",
+  "word": "NARVAL",
+  "display": "Narval"
+ },
+ {
+  "key": "nat23-193",
+  "concept": "nature.marine.v23_le_plancton",
+  "label": "Mers et océans",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Ensemble des minuscules êtres vivants qui dérivent dans l'eau.",
+  "explanation": "Du grec « planktos », errant.",
+  "word": "PLANCTON",
+  "display": "Plancton"
+ },
+ {
+  "key": "nat23-194",
+  "concept": "nature.marine.v23_le_lamantin",
+  "label": "Mammifères marins",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Gros mammifère marin herbivore, surnommé « vache de mer ».",
+  "explanation": "Il vit dans les eaux chaudes, notamment en Guyane et aux Antilles.",
+  "word": "LAMANTIN",
+  "display": "Lamantin"
+ },
+ {
+  "key": "nat23-195",
+  "concept": "nature.marine.v23_le_mascaret",
+  "label": "Mers et océans",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Vague qui remonte un fleuve quand la marée monte.",
+  "explanation": "On l'observe sur la Dordogne et la Garonne. Sur la Seine, il était très fort avant les aménagements du fleuve.",
+  "word": "MASCARET",
+  "display": "Mascaret"
+ },
+ {
+  "key": "nat23-196",
+  "concept": "nature.marine.v23_tl_coelacanthe",
+  "label": "Poissons",
+  "type": "timeline",
+  "difficulty": 80,
+  "prompt": "En quelle année a-t-on découvert qu'un cœlacanthe était encore vivant, au large de l'Afrique du Sud ?",
+  "explanation": "Une conservatrice de musée, Marjorie Courtenay-Latimer, l'a repéré dans la pêche d'un chalutier.",
+  "answer": 1938,
+  "tolerance": 5,
+  "min": 1850,
+  "max": 2000
+ },
+ {
+  "key": "nat23-197",
+  "concept": "nature.marine.v23_tl_vague_scelerate",
+  "label": "Mers et océans",
+  "type": "timeline",
+  "difficulty": 85,
+  "prompt": "En quelle année une vague scélérate a-t-elle été mesurée pour la première fois, sur une plateforme pétrolière de mer du Nord ?",
+  "explanation": "La « vague de Draupner » faisait environ 26 m de haut, dans une mer où les autres vagues en faisaient 12.",
+  "answer": 1995,
+  "tolerance": 5,
+  "min": 1950,
+  "max": 2020
+ },
+ {
+  "key": "nat23-198",
+  "concept": "nature.marine.v23_tf_poissons_dorment",
+  "label": "Poissons",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Les poissons dorment.",
+  "explanation": "Ils n'ont pas de paupières, mais ils ont des périodes de repos où ils bougent à peine.",
+  "answer": true
+ },
+ {
+  "key": "nat23-199",
+  "concept": "nature.marine.v23_tf_barriere_espace",
+  "label": "Mers et océans",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "La Grande Barrière de corail est visible depuis l'espace.",
+  "explanation": "Elle s'étend sur plus de 2 300 km. Les astronautes de l'ISS la photographient souvent.",
+  "answer": true
+ },
+ {
+  "key": "nat23-200",
+  "concept": "nature.marine.v23_tf_requin_attaques",
+  "label": "Requins",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "Les requins tuent chaque année plus de 1 000 personnes dans le monde.",
+  "explanation": "En moyenne moins de dix. Les humains, eux, tuent des dizaines de millions de requins par an.",
+  "answer": false
+ },
+ {
+  "key": "nat23-201",
+  "concept": "nature.marine.v23_tf_baleine_langue",
+  "label": "Records",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "La langue d'une baleine bleue peut peser autant qu'un éléphant.",
+  "explanation": "Environ 2,5 à 3 tonnes.",
+  "answer": true
+ },
+ {
+  "key": "nat23-202",
+  "concept": "nature.marine.v23_tf_hippocampe_nage",
+  "label": "Poissons",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "L'hippocampe est l'un des poissons les plus rapides.",
+  "explanation": "C'est l'un des plus lents : il nage à la verticale en agitant une petite nageoire dorsale.",
+  "answer": false
+ },
+ {
+  "key": "nat23-203",
+  "concept": "nature.marine.v23_tf_mer_salee_partout",
+  "label": "Mers et océans",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Toutes les mers ont exactement la même salinité.",
+  "explanation": "La mer Baltique est peu salée, la mer Rouge très salée. L'évaporation et les fleuves font varier la salinité.",
+  "answer": false
+ },
+ {
+  "key": "nat23-204",
+  "concept": "nature.marine.v23_tf_dauphins_aident",
+  "label": "Mammifères marins",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Les dauphins peuvent chasser en équipe avec des pêcheurs.",
+  "explanation": "Au Brésil, à Laguna, des dauphins rabattent les poissons vers les filets depuis des générations.",
+  "answer": true
+ },
+ {
+  "key": "nat23-205",
+  "concept": "nature.marine.v23_tf_meduse_eau",
+  "label": "Méduses",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "On peut se faire piquer par une méduse échouée sur la plage, même morte.",
+  "explanation": "Ses cellules urticantes peuvent rester actives des heures, voire des jours.",
+  "answer": true
+ },
+ {
+  "key": "nat23-206",
+  "concept": "nature.marine.v23_tf_poulpe_intelligent",
+  "label": "Céphalopodes",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Une pieuvre peut s'échapper par un trou à peine plus grand que son bec.",
+  "explanation": "Sans os, seul son bec est dur. Des pieuvres se sont déjà évadées de leur aquarium.",
+  "answer": true
+ },
+ {
+  "key": "nat23-207",
+  "concept": "nature.marine.v23_tf_ocean_explore",
+  "label": "Mers et océans",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Plus d'êtres humains sont allés sur la Lune qu'au fond de la fosse des Mariannes.",
+  "explanation": "Douze personnes ont marché sur la Lune. Depuis 2019, plus d'une vingtaine de personnes ont atteint le fond de la fosse.",
+  "answer": false
+ },
+ {
+  "key": "nat23-208",
+  "concept": "nature.earth.v23_eclair_distance",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Tu comptes 3 secondes entre l'éclair et le tonnerre. À quelle distance environ est tombée la foudre ?",
+  "explanation": "Le son parcourt environ 340 m par seconde : 3 secondes, c'est à peu près 1 km.",
+  "options": [
+   "1 km*",
+   "3 km",
+   "300 m",
+   "10 km"
+  ]
+ },
+ {
+  "key": "nat23-209",
+  "concept": "nature.earth.v23_montagne_froid",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "De combien baisse en moyenne la température quand on monte de 1 000 mètres en montagne ?",
+  "explanation": "L'air se détend en montant et se refroidit. C'est pour cela que les sommets sont enneigés, même l'été.",
+  "options": [
+   "Environ 6 °C*",
+   "Environ 1 °C",
+   "Environ 20 °C",
+   "Elle ne baisse pas"
+  ]
+ },
+ {
+  "key": "nat23-210",
+  "concept": "nature.earth.v23_flocon_branches",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Combien de branches a un flocon de neige typique ?",
+  "explanation": "Cette forme vient de l'organisation des molécules d'eau dans la glace.",
+  "options": [
+   "Six*",
+   "Quatre",
+   "Cinq",
+   "Huit"
+  ]
+ },
+ {
+  "key": "nat23-211",
+  "concept": "nature.earth.v23_nuage_gris",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pourquoi les nuages de pluie paraissent-ils gris foncé ?",
+  "explanation": "Les nuages fins laissent passer et diffusent la lumière : ils paraissent blancs.",
+  "options": [
+   "Ils sont si épais et chargés d'eau que la lumière les traverse mal*",
+   "Ils contiennent de la fumée",
+   "Ils sont plus froids",
+   "Ils reflètent la mer"
+  ]
+ },
+ {
+  "key": "nat23-212",
+  "concept": "nature.earth.v23_record_vent",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quelle est la plus forte rafale de vent jamais mesurée par une station météo, hors tornades, en 1996 en Australie ?",
+  "explanation": "Pendant le cyclone Olivia, sur l'île Barrow. Certaines tornades produisent des vents encore plus forts.",
+  "options": [
+   "Environ 408 km/h*",
+   "Environ 150 km/h",
+   "Environ 250 km/h",
+   "Environ 600 km/h"
+  ]
+ },
+ {
+  "key": "nat23-213",
+  "concept": "nature.earth.v23_tramontane",
+  "label": "Vents de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel vent froid et sec souffle sur le Roussillon et le Languedoc, venant du nord-ouest ?",
+  "explanation": "Son nom vient de l'italien « tramontana », « au-delà des montagnes ».",
+  "options": [
+   "La tramontane*",
+   "Le sirocco",
+   "Le foehn",
+   "L'autan"
+  ]
+ },
+ {
+  "key": "nat23-214",
+  "concept": "nature.earth.v23_sirocco",
+  "label": "Vents",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "D'où souffle le sirocco, vent chaud qui peut apporter du sable jusqu'en France ?",
+  "explanation": "Il colore parfois la neige ou les voitures d'une poussière orangée.",
+  "options": [
+   "Du Sahara*",
+   "Des Alpes",
+   "De l'Atlantique",
+   "De Sibérie"
+  ]
+ },
+ {
+  "key": "nat23-215",
+  "concept": "nature.earth.v23_saffir_simpson",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "L'échelle de Saffir-Simpson classe les ouragans en combien de catégories ?",
+  "explanation": "Un ouragan de catégorie 5 a des vents de plus de 250 km/h.",
+  "options": [
+   "Cinq*",
+   "Trois",
+   "Dix",
+   "Douze"
+  ]
+ },
+ {
+  "key": "nat23-216",
+  "concept": "nature.earth.v23_noms_ouragans",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment choisit-on les noms des ouragans de l'Atlantique ?",
+  "explanation": "Six listes tournent d'année en année. Le nom d'un ouragan très meurtrier est retiré, comme Katrina.",
+  "options": [
+   "Ils suivent des listes préparées à l'avance, par ordre alphabétique*",
+   "C'est le pays le plus touché qui choisit",
+   "Le premier qui l'observe le nomme",
+   "Par tirage au sort"
+  ]
+ },
+ {
+  "key": "nat23-217",
+  "concept": "nature.earth.v23_canicule_2003",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "En quelle année une canicule a-t-elle causé près de 15 000 morts en France ?",
+  "explanation": "Elle a entraîné la création d'un plan canicule et de la « journée de solidarité ».",
+  "options": [
+   "2003*",
+   "1976",
+   "2019",
+   "1990"
+  ]
+ },
+ {
+  "key": "nat23-218",
+  "concept": "nature.earth.v23_record_chaleur_france",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le record de chaleur mesuré en France, en juin 2019 dans l'Hérault ?",
+  "explanation": "À Vérargues, le 28 juin 2019. Le précédent record, de 2003, était de 44,1 °C.",
+  "options": [
+   "46 °C*",
+   "40 °C",
+   "50 °C",
+   "43 °C"
+  ]
+ },
+ {
+  "key": "nat23-219",
+  "concept": "nature.earth.v23_oimiakon",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Dans quel pays se trouve Oïmiakon, l'un des villages habités les plus froids du monde ?",
+  "explanation": "En Sibérie. On y a relevé près de −68 °C. Les élèves ne vont à l'école qu'au-dessus de −52 °C environ.",
+  "options": [
+   "La Russie*",
+   "Le Canada",
+   "La Norvège",
+   "Le Groenland"
+  ]
+ },
+ {
+  "key": "nat23-220",
+  "concept": "nature.earth.v23_soleil_minuit",
+  "label": "Planète",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'appelle-t-on le « soleil de minuit » ?",
+  "explanation": "Au-delà du cercle polaire, en été, le Soleil reste au-dessus de l'horizon même à minuit.",
+  "options": [
+   "Le Soleil qui ne se couche pas en été, près des pôles*",
+   "Une éclipse de Soleil",
+   "La pleine lune très brillante",
+   "Une aurore boréale"
+  ]
+ },
+ {
+  "key": "nat23-221",
+  "concept": "nature.earth.v23_pavin",
+  "label": "Volcans de France",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quand a eu lieu la dernière éruption volcanique en France métropolitaine ?",
+  "explanation": "Le lac Pavin, en Auvergne, occupe le cratère de ce volcan, le plus jeune de France métropolitaine.",
+  "options": [
+   "Il y a environ 7 000 ans, au lac Pavin*",
+   "En 1850, dans le Cantal",
+   "Il y a 1 million d'années",
+   "Il n'y en a jamais eu"
+  ]
+ },
+ {
+  "key": "nat23-222",
+  "concept": "nature.earth.v23_chaine_puys_unesco",
+  "label": "Volcans de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Depuis 2018, que protège l'UNESCO en Auvergne ?",
+  "explanation": "Environ 80 volcans alignés, un exemple spectaculaire de la cassure d'un continent.",
+  "options": [
+   "La chaîne des Puys et la faille de Limagne*",
+   "Le viaduc de Garabit",
+   "Le lac d'Annecy",
+   "Les gorges du Verdon"
+  ]
+ },
+ {
+  "key": "nat23-223",
+  "concept": "nature.earth.v23_alpes_collision",
+  "label": "Géologie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment se sont formées les Alpes ?",
+  "explanation": "La collision continue : les Alpes montent encore d'environ 1 mm par an, mais l'érosion les use presque autant.",
+  "options": [
+   "Par la collision entre la plaque africaine et la plaque européenne*",
+   "Par des éruptions volcaniques",
+   "Par l'érosion d'un plateau",
+   "Par la chute d'une météorite"
+  ]
+ },
+ {
+  "key": "nat23-224",
+  "concept": "nature.earth.v23_orgues_basalte",
+  "label": "Géologie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Comment se forment les « orgues » de basalte, ces colonnes à six côtés comme à la Chaussée des Géants ?",
+  "explanation": "Comme la boue qui se craquelle en séchant, mais en épaisseur.",
+  "options": [
+   "La lave se fissure en refroidissant lentement*",
+   "Des géants les ont taillées",
+   "Le vent les sculpte",
+   "Ce sont des troncs fossilisés"
+  ]
+ },
+ {
+  "key": "nat23-225",
+  "concept": "nature.earth.v23_son_doong",
+  "label": "Géologie",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans quel pays se trouve Son Doong, la plus grande grotte connue au monde ?",
+  "explanation": "Elle abrite sa propre forêt et ses nuages. On pourrait y faire passer un Boeing 747.",
+  "options": [
+   "Le Vietnam*",
+   "Le Mexique",
+   "La France",
+   "La Chine"
+  ]
+ },
+ {
+  "key": "nat23-226",
+  "concept": "nature.earth.v23_padirac",
+  "label": "Géologie",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans quel célèbre gouffre du Lot peut-on visiter une rivière souterraine en barque ?",
+  "explanation": "Il a été exploré pour la première fois en 1889 par Édouard-Alfred Martel, père de la spéléologie.",
+  "options": [
+   "Le gouffre de Padirac*",
+   "L'aven Armand",
+   "La grotte Chauvet",
+   "Le gouffre de la Pierre Saint-Martin"
+  ]
+ },
+ {
+  "key": "nat23-227",
+  "concept": "nature.earth.v23_ambre_fossile",
+  "label": "Géologie",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce que l'ambre ?",
+  "explanation": "Elle a parfois piégé des insectes il y a des dizaines de millions d'années. C'est l'idée de départ de « Jurassic Park ».",
+  "options": [
+   "De la résine d'arbre fossilisée*",
+   "Une pierre volcanique",
+   "Du sable fondu",
+   "Un coquillage"
+  ]
+ },
+ {
+  "key": "nat23-228",
+  "concept": "nature.earth.v23_ammonite",
+  "label": "Fossiles",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Qu'étaient les ammonites, fossiles en forme de spirale très courants ?",
+  "explanation": "Elles ont disparu en même temps que les dinosaures, il y a 66 millions d'années.",
+  "options": [
+   "Des mollusques marins, cousins des pieuvres*",
+   "Des escargots de terre",
+   "Des vers",
+   "Des plantes"
+  ]
+ },
+ {
+  "key": "nat23-229",
+  "concept": "nature.earth.v23_sol_formation",
+  "label": "Géologie",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de temps faut-il environ pour former un centimètre de sol fertile ?",
+  "explanation": "Selon les régions, de 100 à 1 000 ans. D'où l'importance de lutter contre l'érosion des sols.",
+  "options": [
+   "Des siècles*",
+   "Un an",
+   "Dix ans",
+   "Une semaine"
+  ]
+ },
+ {
+  "key": "nat23-230",
+  "concept": "nature.earth.v23_banquise_niveau",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quand la banquise (la glace de mer) fond, que fait le niveau des océans ?",
+  "explanation": "Comme un glaçon qui fond dans un verre. Ce sont les glaciers et les calottes posés sur la terre qui font monter les mers.",
+  "options": [
+   "Il ne monte presque pas, car cette glace flotte déjà*",
+   "Il monte de plusieurs mètres",
+   "Il baisse",
+   "Il monte de 10 cm par jour"
+  ]
+ },
+ {
+  "key": "nat23-231",
+  "concept": "nature.earth.v23_accord_paris",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel objectif l'Accord de Paris, signé en 2015, fixe-t-il ?",
+  "explanation": "Avec l'ambition de viser 1,5 °C par rapport à l'époque préindustrielle.",
+  "options": [
+   "Limiter le réchauffement bien en dessous de 2 °C*",
+   "Arrêter le pétrole en 2020",
+   "Planter un milliard d'arbres",
+   "Interdire les voitures"
+  ]
+ },
+ {
+  "key": "nat23-232",
+  "concept": "nature.earth.v23_giec",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Que fait le GIEC ?",
+  "explanation": "Créé en 1988, il a reçu le prix Nobel de la paix en 2007, avec Al Gore.",
+  "options": [
+   "Il rassemble les connaissances scientifiques sur le climat*",
+   "Il prévoit la météo de demain",
+   "Il gère les parcs naturels",
+   "Il vend des quotas de pêche"
+  ]
+ },
+ {
+  "key": "nat23-233",
+  "concept": "nature.earth.v23_vaches_methane",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Quel gaz à effet de serre les vaches rejettent-elles surtout en digérant ?",
+  "explanation": "Surtout en rotant, pas par l'arrière ! Le méthane réchauffe bien plus que le CO₂, mais disparaît plus vite.",
+  "options": [
+   "Le méthane*",
+   "L'oxygène",
+   "L'azote",
+   "L'hélium"
+  ]
+ },
+ {
+  "key": "nat23-234",
+  "concept": "nature.earth.v23_mer_de_glace",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Comment s'appelle le plus grand glacier de France, près de Chamonix ?",
+  "explanation": "Il a perdu des dizaines de mètres d'épaisseur : il faut désormais descendre de plus en plus de marches pour l'atteindre.",
+  "options": [
+   "La Mer de Glace*",
+   "Le glacier d'Aletsch",
+   "Le Grand Glacier blanc",
+   "La Vallée Blanche"
+  ]
+ },
+ {
+  "key": "nat23-235",
+  "concept": "nature.earth.v23_taiga",
+  "label": "Paysages",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le nom de l'immense forêt de conifères qui couvre le nord de la Russie et du Canada ?",
+  "explanation": "C'est la plus grande forêt du monde. Plus au nord, il fait trop froid pour les arbres : c'est la toundra.",
+  "options": [
+   "La taïga*",
+   "La toundra",
+   "La savane",
+   "La steppe"
+  ]
+ },
+ {
+  "key": "nat23-236",
+  "concept": "nature.earth.v23_toundra",
+  "label": "Paysages",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qu'est-ce que la toundra ?",
+  "explanation": "Son sol reste gelé en profondeur toute l'année : le pergélisol.",
+  "options": [
+   "Une plaine froide sans arbres, couverte de mousses et lichens*",
+   "Une forêt tropicale",
+   "Un désert de sable",
+   "Une montagne volcanique"
+  ]
+ },
+ {
+  "key": "nat23-237",
+  "concept": "nature.earth.v23_amazone_debit",
+  "label": "Fleuves",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel fleuve déverse le plus d'eau dans l'océan ?",
+  "explanation": "Environ un cinquième de toute l'eau douce qui arrive dans les océans. Son eau douce se repère à plus de 100 km au large.",
+  "options": [
+   "L'Amazone*",
+   "Le Nil",
+   "Le Mississippi",
+   "Le Yangzi"
+  ]
+ },
+ {
+  "key": "nat23-238",
+  "concept": "nature.earth.v23_bourget",
+  "label": "Lacs",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quel est le plus grand lac naturel entièrement français ?",
+  "explanation": "Le Léman est plus grand, mais partagé avec la Suisse. Serre-Ponçon est un lac artificiel.",
+  "options": [
+   "Le lac du Bourget*",
+   "Le lac Léman",
+   "Le lac d'Annecy",
+   "Le lac de Serre-Ponçon"
+  ]
+ },
+ {
+  "key": "nat23-239",
+  "concept": "nature.earth.v23_amazonie_bresil",
+  "label": "Forêts",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Dans quel pays se trouve la plus grande partie de la forêt amazonienne ?",
+  "explanation": "Environ 60 %. La France en possède aussi un morceau, en Guyane.",
+  "options": [
+   "Le Brésil*",
+   "Le Pérou",
+   "La Colombie",
+   "Le Venezuela"
+  ]
+ },
+ {
+  "key": "nat23-240",
+  "concept": "nature.earth.v23_recif_sauve",
+  "label": "Climat",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Qu'est-ce qu'une « espèce invasive » ?",
+  "explanation": "Le frelon asiatique, la jussie ou la tortue de Floride en sont des exemples en France.",
+  "options": [
+   "Une espèce introduite qui prolifère et menace les espèces locales*",
+   "Une espèce en voie de disparition",
+   "Une espèce qui vit sous terre",
+   "Une espèce domestiquée"
+  ]
+ },
+ {
+  "key": "nat23-241",
+  "concept": "nature.earth.v23_facile_neige",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "De quoi est faite la neige ?",
+  "explanation": "Elle se forme dans les nuages, quand la vapeur d'eau gèle directement.",
+  "options": [
+   "De petits cristaux de glace*",
+   "De coton",
+   "De sel",
+   "De nuages tombés"
+  ]
+ },
+ {
+  "key": "nat23-242",
+  "concept": "nature.earth.v23_facile_arbres_air",
+  "label": "Forêts",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel gaz les arbres absorbent-ils dans l'air pour grandir ?",
+  "explanation": "Ils stockent le carbone dans leur bois et rejettent de l'oxygène.",
+  "options": [
+   "Le dioxyde de carbone (CO₂)*",
+   "L'oxygène",
+   "L'hélium",
+   "La vapeur"
+  ]
+ },
+ {
+  "key": "nat23-243",
+  "concept": "nature.earth.v23_facile_recycler_verre",
+  "label": "Environnement",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Combien de fois peut-on recycler le verre ?",
+  "explanation": "Une bouteille recyclée redevient une bouteille. Le plastique, lui, se dégrade à chaque recyclage.",
+  "options": [
+   "À l'infini, sans perte de qualité*",
+   "Une seule fois",
+   "Deux fois",
+   "Jamais"
+  ]
+ },
+ {
+  "key": "nat23-244",
+  "concept": "nature.earth.v23_pa_vents",
+  "label": "Vents",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque vent à la région où il souffle.",
+  "explanation": "Le mistral et la tramontane sont des vents froids et secs, le sirocco un vent chaud.",
+  "pairs": [
+   [
+    "Mistral",
+    "Vallée du Rhône et Provence"
+   ],
+   [
+    "Tramontane",
+    "Roussillon"
+   ],
+   [
+    "Sirocco",
+    "Sahara et Méditerranée"
+   ],
+   [
+    "Foehn",
+    "Alpes"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-245",
+  "concept": "nature.earth.v23_pa_paysages",
+  "label": "Paysages",
+  "type": "pairs",
+  "difficulty": 45,
+  "prompt": "Associe chaque paysage à sa description.",
+  "explanation": "Chaque paysage dépend surtout de la température et de la pluie.",
+  "pairs": [
+   [
+    "Taïga",
+    "Forêt de conifères du Grand Nord"
+   ],
+   [
+    "Toundra",
+    "Plaine froide sans arbres"
+   ],
+   [
+    "Savane",
+    "Hautes herbes et quelques arbres"
+   ],
+   [
+    "Mangrove",
+    "Forêt les pieds dans l'eau salée"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-246",
+  "concept": "nature.earth.v23_or_fleuves_europe",
+  "label": "Fleuves",
+  "type": "ordering",
+  "difficulty": 50,
+  "prompt": "Classe ces fleuves du plus long au plus court.",
+  "explanation": "Environ 2 850 km, 1 230 km, 1 010 km et 780 km.",
+  "items": [
+   "Danube",
+   "Rhin",
+   "Loire",
+   "Seine"
+  ]
+ },
+ {
+  "key": "nat23-247",
+  "concept": "nature.earth.v23_or_catastrophes",
+  "label": "Planète",
+  "type": "ordering",
+  "difficulty": 65,
+  "prompt": "Classe ces catastrophes de la plus ancienne à la plus récente.",
+  "explanation": "1755, 1883, 2004 et 2011.",
+  "items": [
+   "Séisme de Lisbonne",
+   "Éruption du Krakatoa",
+   "Tsunami de l'océan Indien",
+   "Séisme et tsunami du Japon (Fukushima)"
+  ]
+ },
+ {
+  "key": "nat23-248",
+  "concept": "nature.earth.v23_ga_forets_monde",
+  "label": "Forêts",
+  "type": "gauge",
+  "difficulty": 60,
+  "prompt": "Quelle part des terres émergées du monde est couverte de forêts ?",
+  "explanation": "Environ 31 %, soit à peu près 4 milliards d'hectares.",
+  "answer": 31,
+  "tolerance": 8,
+  "unit": "%"
+ },
+ {
+  "key": "nat23-249",
+  "concept": "nature.earth.v23_co_volcans_puys",
+  "label": "Volcans de France",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien de volcans compte environ la chaîne des Puys, en Auvergne ?",
+  "explanation": "Environ 80 volcans, dont le puy de Dôme, le plus haut et le plus célèbre.",
+  "answer": 80,
+  "tolerance": 15,
+  "min": 10,
+  "max": 200,
+  "start": 10
+ },
+ {
+  "key": "nat23-250",
+  "concept": "nature.earth.v23_le_taiga",
+  "label": "Paysages",
+  "type": "letters",
+  "difficulty": 50,
+  "prompt": "Immense forêt de conifères du nord de la Russie.",
+  "explanation": "Le tigre de Sibérie y vit encore, à l'est.",
+  "word": "TAIGA",
+  "display": "Taïga"
+ },
+ {
+  "key": "nat23-251",
+  "concept": "nature.earth.v23_le_toundra",
+  "label": "Paysages",
+  "type": "letters",
+  "difficulty": 45,
+  "prompt": "Plaine glacée sans arbres, près du cercle polaire.",
+  "explanation": "Les rennes et les caribous y passent l'été.",
+  "word": "TOUNDRA",
+  "display": "Toundra"
+ },
+ {
+  "key": "nat23-252",
+  "concept": "nature.earth.v23_le_banquise",
+  "label": "Climat",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Glace de mer qui flotte autour des pôles.",
+  "explanation": "Les ours polaires en ont besoin pour chasser les phoques.",
+  "word": "BANQUISE",
+  "display": "Banquise"
+ },
+ {
+  "key": "nat23-253",
+  "concept": "nature.earth.v23_le_sirocco",
+  "label": "Vents",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Vent chaud venu du Sahara.",
+  "explanation": "Il peut faire grimper la température de plusieurs degrés en quelques heures.",
+  "word": "SIROCCO",
+  "display": "Sirocco"
+ },
+ {
+  "key": "nat23-254",
+  "concept": "nature.earth.v23_le_glacier",
+  "label": "Climat",
+  "type": "letters",
+  "difficulty": 20,
+  "prompt": "Grande masse de glace qui glisse lentement dans une vallée.",
+  "explanation": "Il avance de quelques centimètres à plusieurs mètres par jour.",
+  "word": "GLACIER",
+  "display": "Glacier"
+ },
+ {
+  "key": "nat23-255",
+  "concept": "nature.earth.v23_tl_lisbonne",
+  "label": "Planète",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année un séisme suivi d'un tsunami a-t-il détruit Lisbonne ?",
+  "explanation": "Le 1er novembre 1755. Voltaire en a tiré un célèbre poème.",
+  "answer": 1755,
+  "tolerance": 10,
+  "min": 1600,
+  "max": 1900
+ },
+ {
+  "key": "nat23-256",
+  "concept": "nature.earth.v23_tl_tsunami_2004",
+  "label": "Planète",
+  "type": "timeline",
+  "difficulty": 40,
+  "prompt": "En quelle année un tsunami a-t-il frappé les côtes de l'océan Indien, le lendemain de Noël ?",
+  "explanation": "Le 26 décembre 2004, après un séisme au large de Sumatra. Plus de 220 000 morts.",
+  "answer": 2004,
+  "tolerance": 2,
+  "min": 1980,
+  "max": 2020
+ },
+ {
+  "key": "nat23-257",
+  "concept": "nature.earth.v23_tl_accord_paris",
+  "label": "Climat",
+  "type": "timeline",
+  "difficulty": 35,
+  "prompt": "En quelle année a été adopté l'Accord de Paris sur le climat ?",
+  "explanation": "Lors de la COP21, en décembre 2015, par 195 pays.",
+  "answer": 2015,
+  "tolerance": 2,
+  "min": 1990,
+  "max": 2025
+ },
+ {
+  "key": "nat23-258",
+  "concept": "nature.earth.v23_tf_banquise_niveau",
+  "label": "Climat",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "La fonte des glaciers de montagne fait monter le niveau des mers.",
+  "explanation": "Leur eau, posée sur la terre, s'ajoute à l'océan. Ce n'est pas le cas de la banquise, qui flotte déjà.",
+  "answer": true
+ },
+ {
+  "key": "nat23-259",
+  "concept": "nature.earth.v23_tf_neige_silence",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "La neige fraîche étouffe les bruits.",
+  "explanation": "Pleine d'air, elle absorbe les sons, d'où le silence feutré après une chute de neige.",
+  "answer": true
+ },
+ {
+  "key": "nat23-260",
+  "concept": "nature.earth.v23_tf_trou_ozone_rechauffement",
+  "label": "Climat",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Le trou dans la couche d'ozone est la principale cause du réchauffement climatique.",
+  "explanation": "Ce sont deux problèmes différents. Le réchauffement vient surtout des gaz à effet de serre comme le CO₂.",
+  "answer": false
+ },
+ {
+  "key": "nat23-261",
+  "concept": "nature.earth.v23_tf_ozone_repare",
+  "label": "Climat",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le trou de la couche d'ozone est en train de se refermer.",
+  "explanation": "Grâce à l'interdiction des gaz CFC par le protocole de Montréal, en 1987. Il devrait se refermer vers 2066 au-dessus de l'Antarctique.",
+  "answer": true
+ },
+ {
+  "key": "nat23-262",
+  "concept": "nature.earth.v23_tf_meteo_lune",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 35,
+  "prompt": "La Lune change le temps qu'il fait.",
+  "explanation": "Aucune étude sérieuse ne le montre. La Lune agit sur les marées, pas sur la pluie.",
+  "answer": false
+ },
+ {
+  "key": "nat23-263",
+  "concept": "nature.earth.v23_tf_sahara_vert",
+  "label": "Planète",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Le Sahara était vert, avec des lacs et des girafes, il y a environ 8 000 ans.",
+  "explanation": "C'est la période du « Sahara vert ». Des peintures rupestres montrent des girafes et des hippopotames.",
+  "answer": true
+ },
+ {
+  "key": "nat23-264",
+  "concept": "nature.earth.v23_tf_seisme_previsible",
+  "label": "Planète",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "On sait prévoir le jour exact d'un tremblement de terre.",
+  "explanation": "On connaît les zones à risque, mais personne ne sait prédire la date précise d'un séisme.",
+  "answer": false
+ },
+ {
+  "key": "nat23-265",
+  "concept": "nature.earth.v23_tf_foret_poumon",
+  "label": "Forêts",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "La forêt amazonienne produit à elle seule la moitié de l'oxygène que nous respirons.",
+  "explanation": "Elle consomme presque autant d'oxygène qu'elle en produit. La plus grande part vient du plancton des océans.",
+  "answer": false
+ },
+ {
+  "key": "nat23-266",
+  "concept": "nature.earth.v23_tf_france_seismes_outre_mer",
+  "label": "Planète",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Il y a des volcans actifs dans des territoires français.",
+  "explanation": "Le Piton de la Fournaise à La Réunion, la Soufrière en Guadeloupe ou la montagne Pelée en Martinique.",
+  "answer": true
+ },
+ {
+  "key": "nat23-267",
+  "concept": "nature.earth.v23_tf_grele_ete",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "La grêle ne tombe qu'en hiver.",
+  "explanation": "Elle tombe surtout lors des orages de printemps et d'été, quand l'air chaud monte très haut.",
+  "answer": false
+ },
+ {
+  "key": "nat23-268",
+  "concept": "nature.earth.v23_tf_deux_eclairs",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Un même éclair peut se diviser et toucher plusieurs points au sol.",
+  "explanation": "Les éclairs ramifiés touchent parfois plusieurs endroits en même temps.",
+  "answer": true
+ },
+ {
+  "key": "nat23-269",
+  "concept": "nature.earth.v23_tf_verre_sable",
+  "label": "Environnement",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "On fabrique le verre surtout à partir de sable.",
+  "explanation": "Le sable, chauffé à environ 1 500 °C avec d'autres ingrédients, devient du verre.",
+  "answer": true
+ },
+ {
+  "key": "nat23-270",
+  "concept": "nature.animals.v23_qsj_pangolin",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Qui suis-je ? « Je suis le seul mammifère couvert d'écailles. Je me roule en boule pour me protéger, et je mange des fourmis. »",
+  "explanation": "C'est l'un des animaux les plus braconnés au monde, pour ses écailles. Le tatou, lui, a une carapace, pas des écailles séparées.",
+  "options": [
+   "Le pangolin*",
+   "Le tatou",
+   "Le hérisson",
+   "Le fourmilier"
+  ]
+ },
+ {
+  "key": "nat23-271",
+  "concept": "nature.animals.v23_qsj_cheval",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui suis-je ? « Je mange de l'herbe, je peux dormir debout, et on me met des fers aux pieds. »",
+  "explanation": "Les fers protègent ses sabots. Il peut somnoler debout grâce à un système qui « verrouille » ses pattes.",
+  "options": [
+   "Le cheval*",
+   "La vache",
+   "Le mouton",
+   "Le cochon"
+  ]
+ },
+ {
+  "key": "nat23-272",
+  "concept": "nature.animals.v23_qsj_hermine",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui suis-je ? « L'hiver, mon pelage devient tout blanc, sauf le bout de ma queue qui reste noir. Je suis le symbole de la Bretagne. »",
+  "explanation": "Les petites mouchetures noires du drapeau breton représentent les queues d'hermine.",
+  "options": [
+   "L'hermine*",
+   "Le lièvre",
+   "Le renard polaire",
+   "La belette"
+  ]
+ },
+ {
+  "key": "nat23-273",
+  "concept": "nature.animals.v23_qsj_araignee",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Qui suis-je ? « J'ai huit pattes, je tisse une toile et j'y attrape des mouches. »",
+  "explanation": "Sa soie est, à poids égal, plus solide que l'acier.",
+  "options": [
+   "L'araignée*",
+   "La fourmi",
+   "Le scarabée",
+   "La guêpe"
+  ]
+ },
+ {
+  "key": "nat23-274",
+  "concept": "nature.animals.v23_qsj_elan",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Qui suis-je ? « Je suis le plus grand cerf du monde. Mes bois ont la forme de larges pelles, et je vis dans les forêts du Nord. »",
+  "explanation": "Il peut dépasser 2 mètres au garrot. En Amérique, on l'appelle orignal.",
+  "options": [
+   "L'élan*",
+   "Le renne",
+   "Le cerf élaphe",
+   "Le chevreuil"
+  ]
+ },
+ {
+  "key": "nat23-275",
+  "concept": "nature.animals.v23_qsj_tamanoir",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qui suis-je ? « Je n'ai pas de dents. J'avale des milliers de fourmis et de termites chaque jour avec ma langue de 60 cm. »",
+  "explanation": "Il vit en Amérique du Sud et peut sortir sa langue 150 fois par minute.",
+  "options": [
+   "Le tamanoir (fourmilier géant)*",
+   "Le pangolin",
+   "Le caméléon",
+   "Le koala"
+  ]
+ },
+ {
+  "key": "nat23-276",
+  "concept": "nature.marine.v23_qsj_dipneuste",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Qui suis-je ? « Je suis un poisson, mais j'ai des poumons. Quand ma mare s'assèche, je m'enferme dans la boue et j'attends la pluie, parfois des années. »",
+  "explanation": "Ces poissons africains respirent de l'air. Leurs ancêtres sont proches de ceux des premiers animaux terrestres.",
+  "options": [
+   "Le dipneuste (protoptère)*",
+   "Le poisson-chat",
+   "L'anguille",
+   "Le cœlacanthe"
+  ]
+ },
+ {
+  "key": "nat23-277",
+  "concept": "nature.animals.v23_qsj_roussette",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qui suis-je ? « On m'appelle aussi “renard volant”. J'ai des ailes de peau et je mange des fruits. »",
+  "explanation": "C'est une grande chauve-souris. Certaines dépassent 1,5 m d'envergure. On en trouve à La Réunion et à Mayotte.",
+  "options": [
+   "La roussette*",
+   "L'écureuil volant",
+   "Le colugo",
+   "Le martinet"
+  ]
+ },
+ {
+  "key": "nat23-278",
+  "concept": "nature.marine.v23_qsj_poisson_glaces",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Qui suis-je ? « Je vis dans les eaux glacées de l'Antarctique, et mon sang est transparent, sans globules rouges. »",
+  "explanation": "L'eau très froide contient beaucoup d'oxygène : il peut s'en passer, grâce à un gros cœur et un sang abondant.",
+  "options": [
+   "Le poisson des glaces*",
+   "Le requin du Groenland",
+   "Le manchot",
+   "Le krill"
+  ]
+ },
+ {
+  "key": "nat23-279",
+  "concept": "nature.animals.v23_qsj_phasme",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Qui suis-je ? « Je suis un insecte qui ressemble à s'y méprendre à une brindille, pour échapper aux oiseaux. »",
+  "explanation": "Certains phasmes peuvent même pondre sans mâle.",
+  "options": [
+   "Le phasme*",
+   "La mante religieuse",
+   "La sauterelle",
+   "Le criquet"
+  ]
+ },
+ {
+  "key": "nat23-280",
+  "concept": "nature.plants.v23_qsj_reine_nuit",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Qui suis-je ? « Je suis un cactus grimpant. Ma grande fleur blanche et parfumée ne s'ouvre qu'une seule nuit. »",
+  "explanation": "Les amateurs se réunissent parfois toute une nuit pour la voir s'épanouir puis se faner.",
+  "options": [
+   "La reine de la nuit*",
+   "Le figuier de Barbarie",
+   "L'agave",
+   "L'aloès"
+  ]
+ },
+ {
+  "key": "nat23-281",
+  "concept": "nature.plants.v23_qsj_amanite_mouches",
+  "label": "Qui suis-je ?",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Qui suis-je ? « Je suis un champignon rouge à pois blancs, souvent dessiné dans les contes, mais je suis toxique. »",
+  "explanation": "On l'utilisait autrefois, écrasée dans du lait, pour tuer les mouches.",
+  "options": [
+   "L'amanite tue-mouches*",
+   "Le cèpe",
+   "La girolle",
+   "La morille"
+  ]
+ },
+ {
+  "key": "nat23-282",
+  "concept": "nature.animals.v23_roitelet",
+  "label": "Oiseaux de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le plus petit oiseau d'Europe, qui pèse à peine 5 grammes ?",
+  "explanation": "Il porte une petite huppe jaune ou orange, comme une couronne : d'où son nom de « petit roi ».",
+  "options": [
+   "Le roitelet*",
+   "La mésange bleue",
+   "Le moineau",
+   "Le rouge-gorge"
+  ]
+ },
+ {
+  "key": "nat23-283",
+  "concept": "nature.animals.v23_gypaete",
+  "label": "Oiseaux de France",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "De quoi se nourrit surtout le gypaète barbu, grand vautour réintroduit dans les Alpes ?",
+  "explanation": "Ses sucs digestifs dissolvent les os. Son envergure peut approcher 3 mètres.",
+  "options": [
+   "D'os, qu'il casse en les lâchant sur des rochers*",
+   "De poissons",
+   "De fruits",
+   "D'œufs volés"
+  ]
+ },
+ {
+  "key": "nat23-284",
+  "concept": "nature.animals.v23_vautour_tarn",
+  "label": "Oiseaux de France",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans quelles gorges françaises a-t-on réintroduit avec succès le vautour fauve, à partir de 1981 ?",
+  "explanation": "Il avait disparu de la région. Il y en a aujourd'hui plusieurs centaines de couples.",
+  "options": [
+   "Les gorges du Tarn et de la Jonte*",
+   "Les gorges du Verdon",
+   "Les gorges de l'Ardèche",
+   "Les gorges du Doubs"
+  ]
+ },
+ {
+  "key": "nat23-285",
+  "concept": "nature.animals.v23_grues_der",
+  "label": "Oiseaux de France",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quels oiseaux font halte par dizaines de milliers au lac du Der, en Champagne, lors de leur migration ?",
+  "explanation": "Leurs cris trompettants, en vol en forme de V, annoncent l'automne et le printemps.",
+  "options": [
+   "Les grues cendrées*",
+   "Les cigognes",
+   "Les flamants roses",
+   "Les hirondelles"
+  ]
+ },
+ {
+  "key": "nat23-286",
+  "concept": "nature.animals.v23_herisson_menu",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Que mange principalement le hérisson ?",
+  "explanation": "C'est un précieux allié des jardiniers. Contrairement aux dessins, il ne transporte pas de pommes sur ses piquants.",
+  "options": [
+   "Des insectes, des vers et des limaces*",
+   "Des pommes",
+   "Des glands",
+   "Des poissons"
+  ]
+ },
+ {
+  "key": "nat23-287",
+  "concept": "nature.animals.v23_flamant_patte",
+  "label": "Animaux étonnants",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Pourquoi le flamant rose se tient-il souvent sur une seule patte ?",
+  "explanation": "Il tient d'ailleurs plus facilement en équilibre sur une patte que sur deux, même en dormant.",
+  "options": [
+   "Pour perdre moins de chaleur et économiser de l'énergie*",
+   "Parce que l'autre est cassée",
+   "Pour mieux voir",
+   "Pour attirer les femelles"
+  ]
+ },
+ {
+  "key": "nat23-288",
+  "concept": "nature.animals.v23_mouche_vie",
+  "label": "Insectes",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Combien de temps vit une mouche domestique, environ ?",
+  "explanation": "Elle se reproduit très vite : une femelle peut pondre des centaines d'œufs.",
+  "options": [
+   "Un mois*",
+   "Une journée",
+   "Un an",
+   "Dix ans"
+  ]
+ },
+ {
+  "key": "nat23-289",
+  "concept": "nature.animals.v23_sarigue",
+  "label": "Faune de France",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel marsupial vit à l'état sauvage en Guyane française ?",
+  "explanation": "Les marsupiaux existent aussi en Amérique. La sarigue fait semblant d'être morte quand elle a peur.",
+  "options": [
+   "La sarigue (opossum)*",
+   "Le kangourou",
+   "Le koala",
+   "Le wombat"
+  ]
+ },
+ {
+  "key": "nat23-290",
+  "concept": "nature.marine.v23_poisson_perroquet",
+  "label": "Poissons",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Que produit le poisson-perroquet en broutant le corail ?",
+  "explanation": "Il broie le corail et rejette du sable fin. Une partie des plages tropicales vient de lui !",
+  "options": [
+   "Du sable blanc*",
+   "Des perles",
+   "De l'encre",
+   "Des bulles d'air"
+  ]
+ },
+ {
+  "key": "nat23-291",
+  "concept": "nature.marine.v23_moule_filtre",
+  "label": "Invertébrés",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Combien de litres d'eau une moule peut-elle filtrer par jour, environ ?",
+  "explanation": "Elle se nourrit de plancton en filtrant l'eau, qu'elle rend plus claire.",
+  "options": [
+   "Plusieurs dizaines*",
+   "Un demi-litre",
+   "Un millier",
+   "Aucun"
+  ]
+ },
+ {
+  "key": "nat23-292",
+  "concept": "nature.marine.v23_baleine_age",
+  "label": "Mammifères marins",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de temps peut vivre une baleine bleue ?",
+  "explanation": "On estime son âge grâce aux couches de cire qui s'accumulent dans ses oreilles, comme les cernes d'un arbre.",
+  "options": [
+   "Environ 80 à 90 ans*",
+   "Environ 10 ans",
+   "Environ 20 ans",
+   "Plus de 500 ans"
+  ]
+ },
+ {
+  "key": "nat23-293",
+  "concept": "nature.earth.v23_pa_sources",
+  "label": "Fleuves de France",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque fleuve au lieu où il prend sa source.",
+  "explanation": "La Garonne naît en Espagne et le Rhône en Suisse : deux grands fleuves « français » venus de l'étranger.",
+  "pairs": [
+   [
+    "Loire",
+    "Mont Gerbier-de-Jonc, en Ardèche"
+   ],
+   [
+    "Seine",
+    "Plateau de Langres, en Bourgogne"
+   ],
+   [
+    "Garonne",
+    "Val d'Aran, en Espagne"
+   ],
+   [
+    "Rhône",
+    "Un glacier suisse"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-294",
+  "concept": "nature.earth.v23_sancy",
+  "label": "Volcans de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le plus haut sommet du Massif central, un ancien volcan ?",
+  "explanation": "Il culmine à 1 886 m. La Dordogne y prend sa source.",
+  "options": [
+   "Le puy de Sancy*",
+   "Le puy de Dôme",
+   "Le mont Aigoual",
+   "Le Plomb du Cantal"
+  ]
+ },
+ {
+  "key": "nat23-295",
+  "concept": "nature.earth.v23_coucher_rouge",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Pourquoi le ciel devient-il rouge et orange au coucher du soleil ?",
+  "explanation": "Le soir, les rayons arrivent de biais et traversent une épaisseur d'atmosphère bien plus grande.",
+  "options": [
+   "La lumière traverse plus d'air, qui diffuse le bleu et laisse passer le rouge*",
+   "Le Soleil refroidit le soir",
+   "Les nuages s'enflamment",
+   "La Terre reflète la lave"
+  ]
+ },
+ {
+  "key": "nat23-296",
+  "concept": "nature.plants.v23_lin_france",
+  "label": "Plantes cultivées",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "La France est le premier producteur mondial de quelle fibre végétale ?",
+  "explanation": "Surtout en Normandie et dans les Hauts-de-France. Le lin donne des tissus frais et solides.",
+  "options": [
+   "Le lin*",
+   "Le coton",
+   "Le chanvre",
+   "Le jute"
+  ]
+ },
+ {
+  "key": "nat23-297",
+  "concept": "nature.plants.v23_chene_france",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel arbre est le plus répandu dans les forêts françaises ?",
+  "explanation": "Les chênes représentent environ un tiers du volume de bois des forêts françaises.",
+  "options": [
+   "Le chêne*",
+   "Le sapin",
+   "Le bouleau",
+   "Le platane"
+  ]
+ },
+ {
+  "key": "nat23-298",
+  "concept": "nature.animals.v23_facile_laine",
+  "label": "Animaux de la ferme",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quel animal de la ferme nous donne de la laine ?",
+  "explanation": "On le tond une fois par an, au printemps.",
+  "options": [
+   "Le mouton*",
+   "La vache",
+   "Le cochon",
+   "La poule"
+  ]
+ },
+ {
+  "key": "nat23-299",
+  "concept": "nature.animals.v23_facile_lapin_mange",
+  "label": "Animaux",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que mange surtout un lapin ?",
+  "explanation": "Contrairement aux dessins animés, trop de carottes n'est pas bon pour lui : elles sont très sucrées.",
+  "options": [
+   "De l'herbe et du foin*",
+   "De la viande",
+   "Du poisson",
+   "Des insectes"
+  ]
+ },
+ {
+  "key": "nat23-300",
+  "concept": "nature.animals.v23_facile_trompe",
+  "label": "Animaux",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quel animal a une trompe ?",
+  "explanation": "Sa trompe compte des dizaines de milliers de muscles.",
+  "options": [
+   "L'éléphant*",
+   "La girafe",
+   "Le rhinocéros",
+   "L'hippopotame"
+  ]
+ },
+ {
+  "key": "nat23-301",
+  "concept": "nature.animals.v23_facile_poisson_rouge",
+  "label": "Animaux",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Dans quelle eau vit le poisson rouge ?",
+  "explanation": "C'est une carpe domestiquée en Chine il y a plus de mille ans.",
+  "options": [
+   "En eau douce*",
+   "En eau de mer",
+   "Dans l'eau chaude des sources",
+   "Il vit hors de l'eau"
+  ]
+ },
+ {
+  "key": "nat23-302",
+  "concept": "nature.plants.v23_facile_feuilles_automne",
+  "label": "Saisons",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "À quelle saison beaucoup d'arbres perdent-ils leurs feuilles ?",
+  "explanation": "Ils économisent ainsi l'eau et l'énergie pendant l'hiver.",
+  "options": [
+   "En automne*",
+   "Au printemps",
+   "En été",
+   "Ils ne les perdent jamais"
+  ]
+ },
+ {
+  "key": "nat23-303",
+  "concept": "nature.plants.v23_facile_pommier",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quel fruit pousse sur un pommier ?",
+  "explanation": "Il existe des milliers de variétés de pommes.",
+  "options": [
+   "La pomme*",
+   "La poire",
+   "La cerise",
+   "La prune"
+  ]
+ },
+ {
+  "key": "nat23-304",
+  "concept": "nature.animals.v23_facile_oiseau_nid",
+  "label": "Animaux",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Où la plupart des oiseaux pondent-ils leurs œufs ?",
+  "explanation": "Certains, comme le coucou, utilisent le nid des autres.",
+  "options": [
+   "Dans un nid*",
+   "Dans l'eau",
+   "Sous terre",
+   "Dans un terrier de lapin"
+  ]
+ },
+ {
+  "key": "nat23-305",
+  "concept": "nature.marine.v23_facile_baleine_respire",
+  "label": "Vie marine",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Comment la baleine respire-t-elle ?",
+  "explanation": "C'est un mammifère. Le jet qu'on voit est son souffle, chargé de vapeur.",
+  "options": [
+   "Elle remonte à la surface respirer de l'air*",
+   "Avec des branchies, comme les poissons",
+   "Elle ne respire pas",
+   "Par la peau"
+  ]
+ },
+ {
+  "key": "nat23-306",
+  "concept": "nature.marine.v23_facile_crabe",
+  "label": "Vie marine",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Combien de pinces a un crabe ?",
+  "explanation": "Il a dix pattes en tout, dont les deux pinces.",
+  "options": [
+   "Deux*",
+   "Quatre",
+   "Six",
+   "Huit"
+  ]
+ },
+ {
+  "key": "nat23-307",
+  "concept": "nature.earth.v23_facile_glace",
+  "label": "Planète",
+  "type": "mcq",
+  "difficulty": 10,
+  "prompt": "Que devient l'eau quand il fait très froid ?",
+  "explanation": "L'eau pure gèle à 0 °C.",
+  "options": [
+   "De la glace*",
+   "Du sable",
+   "De la vapeur",
+   "Du sel"
+  ]
+ },
+ {
+  "key": "nat23-308",
+  "concept": "nature.earth.v23_facile_ete_chaud",
+  "label": "Saisons",
+  "type": "mcq",
+  "difficulty": 5,
+  "prompt": "Quelle est la saison la plus chaude en France ?",
+  "explanation": "Elle commence vers le 21 juin, au solstice.",
+  "options": [
+   "L'été*",
+   "L'hiver",
+   "L'automne",
+   "Le printemps"
+  ]
+ },
+ {
+  "key": "nat23-309",
+  "concept": "nature.animals.v23_co_pattes_oiseau",
+  "label": "Animaux",
+  "type": "counter",
+  "difficulty": 5,
+  "prompt": "Combien de pattes a un oiseau ?",
+  "explanation": "Deux pattes et deux ailes.",
+  "answer": 2,
+  "tolerance": 0,
+  "min": 0,
+  "max": 8,
+  "start": 0
+ },
+ {
+  "key": "nat23-310",
+  "concept": "nature.animals.v23_pa_habitats",
+  "label": "Animaux",
+  "type": "pairs",
+  "difficulty": 20,
+  "prompt": "Associe chaque animal à l'endroit où il vit.",
+  "explanation": "Chacun est adapté à son milieu : bosses, fourrure épaisse, sabots qui accrochent, queue en pagaie.",
+  "pairs": [
+   [
+    "Dromadaire",
+    "Le désert"
+   ],
+   [
+    "Ours polaire",
+    "La banquise"
+   ],
+   [
+    "Chamois",
+    "La montagne"
+   ],
+   [
+    "Castor",
+    "La rivière"
+   ]
+  ]
+ },
+ {
+  "key": "nat23-311",
+  "concept": "nature.animals.v23_tf_vaches_pluie",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Quand les vaches se couchent, c'est qu'il va pleuvoir.",
+  "explanation": "Elles se couchent surtout pour ruminer et se reposer, quel que soit le temps.",
+  "answer": false
+ },
+ {
+  "key": "nat23-312",
+  "concept": "nature.animals.v23_tf_hirondelles_bas",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 45,
+  "prompt": "Quand les hirondelles volent bas, la pluie arrive souvent.",
+  "explanation": "Avant la pluie, l'air humide fait voler les insectes plus bas, et les hirondelles les suivent.",
+  "answer": true
+ },
+ {
+  "key": "nat23-313",
+  "concept": "nature.animals.v23_tf_raisin_chien",
+  "label": "Animaux domestiques",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le raisin peut être toxique pour les chiens.",
+  "explanation": "Même en petite quantité, il peut abîmer leurs reins. Le chocolat est aussi dangereux pour eux.",
+  "answer": true
+ },
+ {
+  "key": "nat23-314",
+  "concept": "nature.marine.v23_tf_orques_requins",
+  "label": "Mammifères marins",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Des orques chassent et tuent des grands requins blancs.",
+  "explanation": "En Afrique du Sud, un duo d'orques s'est spécialisé dans les requins, dont elles mangent le foie.",
+  "answer": true
+ },
+ {
+  "key": "nat23-315",
+  "concept": "nature.marine.v23_tf_requin_blanc_captivite",
+  "label": "Requins",
+  "type": "true_false",
+  "difficulty": 65,
+  "prompt": "Aucun aquarium n'a réussi à garder longtemps un grand requin blanc.",
+  "explanation": "Le record est d'environ six mois, à Monterey, en Californie. Il a ensuite été relâché.",
+  "answer": true
+ },
+ {
+  "key": "nat23-316",
+  "concept": "nature.animals.v23_tf_chats_noirs",
+  "label": "Idées reçues",
+  "type": "true_false",
+  "difficulty": 20,
+  "prompt": "Les chats noirs portent malheur.",
+  "explanation": "Une simple superstition. Dans certains pays, comme au Japon ou en Écosse, ils portent même bonheur !",
+  "answer": false
+ },
+ {
+  "key": "nat23-317",
+  "concept": "nature.animals.v23_tf_loups_dangereux",
+  "label": "Faune de France",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le loup s'attaque régulièrement aux humains en France.",
+  "explanation": "Il évite l'homme. Il s'attaque en revanche aux troupeaux, ce qui pose des problèmes aux éleveurs.",
+  "answer": false
+ },
+ {
+  "key": "nat23-318",
+  "concept": "nature.plants.v23_tf_champignons_lune",
+  "label": "Champignons",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "On peut reconnaître un champignon comestible à son odeur agréable.",
+  "explanation": "Aucune astuce simple ne marche : l'amanite phalloïde, mortelle, a une odeur et un goût agréables. Seul un expert peut trancher.",
+  "answer": false
+ },
+ {
+  "key": "nat23-319",
+  "concept": "nature.earth.v23_tf_rhone_glacier",
+  "label": "Fleuves de France",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Le Rhône traverse le lac Léman.",
+  "explanation": "Il entre dans le lac à l'est, en Suisse, et en ressort à Genève.",
+  "answer": true
+ },
+ {
+  "key": "nat23-320",
+  "concept": "nature.earth.v23_tf_seine_ocean",
+  "label": "Fleuves de France",
+  "type": "true_false",
+  "difficulty": 30,
+  "prompt": "La Seine se jette dans la Méditerranée.",
+  "explanation": "Elle se jette dans la Manche, au Havre. C'est le Rhône qui rejoint la Méditerranée.",
+  "answer": false
+ },
+ {
+  "key": "nat23-321",
+  "concept": "nature.plants.v23_tf_herbe_plante_fleurs",
+  "label": "Botanique",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les herbes des pelouses sont des plantes à fleurs.",
+  "explanation": "Ce sont des graminées. Leurs petites fleurs, sans pétales colorés, sont pollinisées par le vent.",
+  "answer": true
+ },
+ {
+  "key": "nat23-322",
+  "concept": "nature.earth.v23_tf_meme_heure_lever",
+  "label": "Planète",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "Le Soleil se lève à la même heure toute l'année.",
+  "explanation": "Il se lève plus tôt en été et plus tard en hiver, à cause de l'inclinaison de la Terre.",
+  "answer": false
+ },
+ {
+  "key": "nat23-323",
+  "concept": "nature.animals.v23_abeille_ouvriere_vie",
+  "label": "Insectes",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Combien de temps vit une abeille ouvrière en été ?",
+  "explanation": "Elle s'use à force de butiner. Les abeilles nées en automne, elles, passent l'hiver et vivent plusieurs mois.",
+  "options": [
+   "Environ 5 à 6 semaines*",
+   "Une journée",
+   "Deux ans",
+   "Dix ans"
+  ]
+ },
+ {
+  "key": "nat23-324",
+  "concept": "nature.animals.v23_cochon_sanglier",
+  "label": "Animaux domestiques",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "De quel animal sauvage descend le cochon ?",
+  "explanation": "Il a été domestiqué il y a environ 10 000 ans, au Proche-Orient et en Chine.",
+  "options": [
+   "Du sanglier*",
+   "De l'hippopotame",
+   "Du phacochère",
+   "Du tapir"
+  ]
+ },
+ {
+  "key": "nat23-325",
+  "concept": "nature.animals.v23_vache_aurochs",
+  "label": "Animaux domestiques",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "De quel grand bovin sauvage, aujourd'hui disparu, descendent nos vaches ?",
+  "explanation": "Le dernier aurochs connu est mort en 1627 en Pologne. On en voit sur les parois de la grotte de Lascaux.",
+  "options": [
+   "L'aurochs*",
+   "Le bison",
+   "Le yack",
+   "Le buffle"
+  ]
+ },
+ {
+  "key": "nat23-326",
+  "concept": "nature.animals.v23_chat_egypte",
+  "label": "Animaux domestiques",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Dans quelle civilisation de l'Antiquité le chat était-il vénéré, au point d'être momifié ?",
+  "explanation": "La déesse Bastet avait une tête de chat. Tuer un chat pouvait y être puni de mort.",
+  "options": [
+   "L'Égypte ancienne*",
+   "La Grèce antique",
+   "L'Empire romain",
+   "Les Gaulois"
+  ]
+ },
+ {
+  "key": "nat23-327",
+  "concept": "nature.animals.v23_hamster_vie",
+  "label": "Animaux domestiques",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "Combien de temps vit en général un hamster domestique ?",
+  "explanation": "Il vit surtout la nuit : ne vous étonnez pas de l'entendre tourner dans sa roue à minuit.",
+  "options": [
+   "2 à 3 ans*",
+   "6 mois",
+   "10 ans",
+   "20 ans"
+  ]
+ },
+ {
+  "key": "nat23-328",
+  "concept": "nature.animals.v23_grand_duc",
+  "label": "Oiseaux de France",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le plus grand rapace nocturne d'Europe ?",
+  "explanation": "Son envergure approche 1,80 m. Il peut chasser des renards ou des hérons.",
+  "options": [
+   "Le grand-duc*",
+   "La chouette effraie",
+   "Le hibou moyen-duc",
+   "La chouette hulotte"
+  ]
+ },
+ {
+  "key": "nat23-329",
+  "concept": "nature.animals.v23_boa_etouffe",
+  "label": "Reptiles",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Comment le boa tue-t-il ses proies ?",
+  "explanation": "Il ne les écrase pas : il les empêche de respirer et bloque leur circulation sanguine.",
+  "options": [
+   "En les serrant dans ses anneaux*",
+   "Avec du venin",
+   "En les noyant",
+   "En les mordant au cou"
+  ]
+ },
+ {
+  "key": "nat23-330",
+  "concept": "nature.animals.v23_tf_poisson_rouge_age",
+  "label": "Animaux domestiques",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Un poisson rouge bien soigné peut vivre plus de 20 ans.",
+  "explanation": "Le record dépasse 40 ans. Dans un petit bocal, en revanche, il vit beaucoup moins longtemps.",
+  "answer": true
+ },
+ {
+  "key": "nat23-331",
+  "concept": "nature.plants.v23_papier_bois",
+  "label": "Plantes utiles",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Avec quoi fabrique-t-on surtout le papier aujourd'hui ?",
+  "explanation": "Les fibres du bois sont broyées en pâte. On utilise aussi beaucoup de papier recyclé.",
+  "options": [
+   "Avec du bois*",
+   "Avec du coton",
+   "Avec du riz",
+   "Avec du plastique"
+  ]
+ },
+ {
+  "key": "nat23-332",
+  "concept": "nature.plants.v23_saguaro",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle taille peut atteindre le saguaro, le cactus géant des westerns ?",
+  "explanation": "Il peut vivre plus de 150 ans et ne fait ses premières « branches » qu'après 50 ans environ.",
+  "options": [
+   "Plus de 12 mètres*",
+   "1 mètre",
+   "3 mètres",
+   "50 mètres"
+  ]
+ },
+ {
+  "key": "nat23-333",
+  "concept": "nature.plants.v23_tf_arbres_parlent_odeur",
+  "label": "Arbres",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "Des acacias attaqués par des girafes peuvent prévenir leurs voisins grâce à un gaz.",
+  "explanation": "Ils libèrent de l'éthylène, qui pousse les arbres voisins à rendre leurs feuilles plus amères.",
+  "answer": true
+ },
+ {
+  "key": "nat23-334",
+  "concept": "nature.marine.v23_poisson_lune_oeufs",
+  "label": "Records",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel poisson pond le plus d'œufs, jusqu'à 300 millions d'un coup ?",
+  "explanation": "Ses œufs sont minuscules. Très peu deviendront adultes : il peut alors peser plus de deux tonnes.",
+  "options": [
+   "Le poisson-lune (môle)*",
+   "La morue",
+   "Le hareng",
+   "Le saumon"
+  ]
+ },
+ {
+  "key": "nat23-335",
+  "concept": "nature.marine.v23_co_especes_requins",
+  "label": "Requins",
+  "type": "counter",
+  "difficulty": 70,
+  "prompt": "Combien d'espèces de requins connaît-on environ ?",
+  "explanation": "Plus de 500. La plupart sont petits et sans danger pour l'homme. Le plus petit tient dans la main.",
+  "answer": 500,
+  "tolerance": 100,
+  "min": 50,
+  "max": 1000,
+  "start": 50
+ },
+ {
+  "key": "nat23-336",
+  "concept": "nature.marine.v23_lac_gele_poissons",
+  "label": "Eau douce",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi les poissons d'un lac survivent-ils quand sa surface gèle ?",
+  "explanation": "L'eau est la plus lourde à 4 °C : elle descend au fond. La glace, plus légère, reste en surface.",
+  "options": [
+   "La glace flotte et isole l'eau du fond, qui reste autour de 4 °C*",
+   "Ils hibernent dans la glace",
+   "Ils migrent vers la mer",
+   "L'eau du fond est chauffée par les volcans"
+  ]
+ },
+ {
+  "key": "nat23-337",
+  "concept": "nature.earth.v23_centre_terre",
+  "label": "Planète",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle température règne environ au centre de la Terre ?",
+  "explanation": "Autant qu'à la surface du Soleil. Le noyau interne reste pourtant solide, à cause de l'énorme pression.",
+  "options": [
+   "Plus de 5 000 °C*",
+   "100 °C",
+   "1 000 °C",
+   "−50 °C"
+  ]
+ },
+ {
+  "key": "nat23-338",
+  "concept": "nature.earth.v23_forage_kola",
+  "label": "Planète",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle profondeur a atteint le plus profond forage jamais creusé, en Russie ?",
+  "explanation": "Le forage de Kola, achevé en 1989. Il n'a pas traversé la croûte terrestre, épaisse d'environ 35 km à cet endroit.",
+  "options": [
+   "Environ 12 km*",
+   "Environ 500 m",
+   "Environ 100 km",
+   "Environ 1 000 km"
+  ]
+ },
+ {
+  "key": "nat23-339",
+  "concept": "nature.earth.v23_episode_cevenol",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Qu'appelle-t-on un « épisode cévenol » ?",
+  "explanation": "L'air chaud et humide de la Méditerranée bute sur les montagnes : il peut tomber en un jour l'équivalent de plusieurs mois de pluie.",
+  "options": [
+   "Des pluies très intenses sur le sud des Cévennes, souvent en automne*",
+   "Une période de sécheresse",
+   "Une tempête de neige",
+   "Un vent chaud venu d'Espagne"
+  ]
+ },
+ {
+  "key": "nat23-340",
+  "concept": "nature.earth.v23_crue_centennale",
+  "label": "Planète",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Que veut dire une « crue centennale » ?",
+  "explanation": "Elle peut très bien survenir deux années de suite ! La crue de la Seine de 1910 en est l'exemple à Paris.",
+  "options": [
+   "Une crue qui a, chaque année, une chance sur cent de se produire*",
+   "Une crue qui arrive tous les cent ans pile",
+   "Une crue de cent mètres de haut",
+   "Une crue qui dure cent jours"
+  ]
+ },
+ {
+  "key": "nat23-341",
+  "concept": "nature.earth.v23_vigilance_rouge",
+  "label": "Météo",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Chez Météo-France, quelle couleur de vigilance signale le danger le plus grave ?",
+  "explanation": "Il y a quatre niveaux : vert, jaune, orange et rouge.",
+  "options": [
+   "Rouge*",
+   "Orange",
+   "Jaune",
+   "Violet"
+  ]
+ },
+ {
+  "key": "nat23-342",
+  "concept": "nature.earth.v23_co_vigilance",
+  "label": "Météo",
+  "type": "counter",
+  "difficulty": 30,
+  "prompt": "Combien de couleurs compte la carte de vigilance de Météo-France ?",
+  "explanation": "Vert, jaune, orange et rouge.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 8,
+  "start": 1
+ },
+ {
+  "key": "nat23-343",
+  "concept": "nature.earth.v23_mer_septembre",
+  "label": "Mers",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Pourquoi la mer est-elle souvent plus chaude en septembre qu'en juin ?",
+  "explanation": "L'eau emmagasine la chaleur de l'été et la restitue doucement : c'est l'inertie thermique.",
+  "options": [
+   "L'eau se réchauffe lentement et garde sa chaleur*",
+   "Le Soleil est plus fort en septembre",
+   "Les courants chauds arrivent en septembre",
+   "Il y a moins de vent en septembre"
+  ]
+ },
+ {
+  "key": "nat23-344",
+  "concept": "nature.earth.v23_tf_arc_lune",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Un arc-en-ciel peut apparaître la nuit.",
+  "explanation": "Avec la lumière de la pleine lune. L'arc lunaire paraît blanchâtre, car nos yeux voient mal les couleurs dans le noir.",
+  "answer": true
+ },
+ {
+  "key": "nat23-345",
+  "concept": "nature.earth.v23_tf_neige_positif",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Il peut neiger alors qu'il fait un peu plus de 0 °C au sol.",
+  "explanation": "Les flocons n'ont pas le temps de fondre en traversant une fine couche d'air doux. On voit de la neige jusqu'à 2 ou 3 °C.",
+  "answer": true
+ },
+ {
+  "key": "nat23-346",
+  "concept": "nature.earth.v23_tf_sahara_neige",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Il n'a jamais neigé dans le Sahara.",
+  "explanation": "Il neige parfois en Algérie, près d'Aïn Séfra, aux portes du désert : des photos de dunes enneigées font le tour du monde.",
+  "answer": false
+ },
+ {
+  "key": "nat23-347",
+  "concept": "nature.earth.v23_tf_cyclones_sens",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Les cyclones tournent dans le même sens dans les deux hémisphères.",
+  "explanation": "Ils tournent dans le sens inverse des aiguilles d'une montre au nord, et dans le sens des aiguilles au sud.",
+  "answer": false
+ },
+ {
+  "key": "nat23-348",
+  "concept": "nature.earth.v23_tf_cyclone_equateur",
+  "label": "Météo",
+  "type": "true_false",
+  "difficulty": 75,
+  "prompt": "Un cyclone ne peut presque jamais se former juste sur l'équateur.",
+  "explanation": "L'effet de la rotation de la Terre, qui fait tourner les vents, y est nul.",
+  "answer": true
+ },
+ {
+  "key": "nat23-349",
+  "concept": "nature.earth.v23_bise",
+  "label": "Vents",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Comment appelle-t-on le vent froid et sec qui souffle du nord ou du nord-est, en Suisse et dans l'est de la France ?",
+  "explanation": "Elle souffle surtout l'hiver. « La bise fut venue », dit la fable de La Fontaine.",
+  "options": [
+   "La bise*",
+   "Le zéphyr",
+   "Le sirocco",
+   "Le simoun"
+  ]
+ },
+ {
+  "key": "nat23-350",
+  "concept": "nature.earth.v23_zephyr",
+  "label": "Vents",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Qu'est-ce que le zéphyr, dans la poésie et la mythologie ?",
+  "explanation": "Zéphyr était le dieu grec du vent d'ouest, annonciateur du printemps.",
+  "options": [
+   "Un vent doux et léger*",
+   "Une tempête",
+   "Un vent glacé",
+   "Un tourbillon de sable"
+  ]
+ },
+ {
+  "key": "nat23-351",
+  "concept": "nature.plants.v23_pomme_pin",
+  "label": "Arbres",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "À quoi sert une pomme de pin pour l'arbre ?",
+  "explanation": "Ses écailles s'ouvrent par temps sec pour libérer les graines, et se ferment quand il pleut.",
+  "options": [
+   "À protéger et disperser ses graines*",
+   "À stocker de l'eau",
+   "À attirer les oiseaux",
+   "À faire de la photosynthèse"
+  ]
+ },
+ {
+  "key": "nat23-352",
+  "concept": "nature.plants.v23_tf_pomme_pin_meteo",
+  "label": "Arbres",
+  "type": "true_false",
+  "difficulty": 55,
+  "prompt": "Une pomme de pin s'ouvre plutôt par temps sec et se referme quand il est humide.",
+  "explanation": "C'est un baromètre naturel : les graines s'envolent mieux par temps sec.",
+  "answer": true
+ }
+]

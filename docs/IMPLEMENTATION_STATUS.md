@@ -57,6 +57,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | 355 questions de logique, tous types (D-101) | ✅ en production (22/10), logique : 1 005 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Revue de la logique : 21 QCM, 66 suites variées (D-102) | ✅ en production (22/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | 350 questions de tech, tous types (D-103) | ✅ en production (22/10), tech : 1 003 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
+| 352 questions de nature, tous types (D-104) | ✅ en production (22/10), nature : 1 005 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Après le 5 du jour, on continue à jouer (D-089) | 🟡 app 1.4 | CI (build) |
 | Message de confidentialité réaffiché à la demande d'une pub (D-090) | 🟡 app 1.4 | CI (build) |
 | Podium du jour (D-091) | ✅ serveur 0083 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |
