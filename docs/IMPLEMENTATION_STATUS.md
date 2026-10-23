@@ -62,6 +62,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Calcul : 318 enchaînements d'opérations, chiffres romains réduits à 2 (D-106) | ✅ en production (22/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Pub entre les parties : 5 minutes au moins entre deux (D-107) | 🟡 prochaine version de l'app | CI (build) |
 | Moins de questions déjà vues : 30 jours après une réussite, jamais vues d'abord, une révision par jour et par domaine (D-108) | ✅ en production (23/10), serveur 0086 | `80_algo.sql` |
+| Message de confidentialité relancé en entier (lancement, retour dans l'app, pub) et échecs notés (D-109) | 🟡 prochaine version de l'app | CI (build) |
 | Après le 5 du jour, on continue à jouer (D-089) | 🟡 app 1.4 | CI (build) |
 | Message de confidentialité réaffiché à la demande d'une pub (D-090) | 🟡 app 1.4 | CI (build) |
 | Podium du jour (D-091) | ✅ serveur 0083 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |

@@ -28,6 +28,7 @@ struct CultFiveApp: App {
             Task {
                 await model.refreshDaily()
                 await model.syncPending()
+                await model.retryAdsConsentIfNeeded()
             }
         }
     }

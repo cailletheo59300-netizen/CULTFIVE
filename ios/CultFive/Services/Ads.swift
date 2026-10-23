@@ -161,15 +161,22 @@ final class AdsController {
 
     /// Consentement encore demandé mais jamais donné (message fermé ou qui n'a pas pu s'afficher) : on le réaffiche.
     /// Accepter comme refuser débloque les pubs (personnalisées ou non) ; on démarre alors le SDK.
+    /// Comme au démarrage (et comme une reconnexion, qui débloquait les pubs) : l'état du consentement est d'abord
+    /// redemandé à Google, puis le message affiché s'il est requis. Charger le message seul échouait (D-109).
     func askConsentAgain() async {
+        guard enabled, !started, !starting else { return }
+        starting = true
+        defer { starting = false }
         let consent = UMPConsentInformation.sharedInstance
-        guard enabled, !started, consent.consentStatus == .required else { return }
-        LoadingOverlay.hide()
+        let parameters = UMPRequestParameters()
+        parameters.tagForUnderAgeOfConsent = !adultAudience
         do {
-            guard let root = Self.topViewController else { return }
-            let form = try await UMPConsentForm.load()
-            try await form.present(from: root)
-            consentError = nil
+            try await consent.requestConsentInfoUpdate(with: parameters)
+            LoadingOverlay.hide()
+            if let root = Self.topViewController {
+                try await UMPConsentForm.loadAndPresentIfRequired(from: root)
+                consentError = nil
+            }
         } catch {
             let error = error as NSError
             consentError = "form \(error.domain) \(error.code)"
@@ -178,6 +185,11 @@ final class AdsController {
             MobileAds.shared.start(completionHandler: nil)
             started = true
         }
+    }
+
+    /// Pubs pas démarrées : état du consentement et dernière erreur du message (journal d'usage `ad_fail`).
+    var consentFailure: String {
+        "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)" + (consentError.map { " \($0)" } ?? "")
     }
 
     // MARK: Pubs récompensées
@@ -191,8 +203,7 @@ final class AdsController {
         // demande une pub, plutôt que de répondre « Aucune pub disponible ».
         if !started { await askConsentAgain() }
         guard started else {
-            lastFailure = "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
-                + (consentError.map { " \($0)" } ?? "")
+            lastFailure = consentFailure
             throw Self.unavailable
         }
         let unit = rewardedUnit(for: kind)
@@ -277,7 +288,7 @@ final class AdsController {
         guard Date().timeIntervalSince1970 - lastShown >= Self.minGap else { return false }
         // Due mais impossible : on note pourquoi.
         guard started else {
-            interstitialFailure = "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
+            interstitialFailure = consentFailure
             return false
         }
         // Jamais d'attente entre deux parties : sans pub prête, on n'en montre pas cette fois (elle se charge pour la suivante).

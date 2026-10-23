@@ -330,9 +330,18 @@ final class AppModel {
         if !noAds, !ads.started {
             try? await Task.sleep(for: .seconds(2))
             await ads.askConsentAgain()
+            if !ads.started { track("ad_fail", ["kind": "consent", "reason": String(ads.consentFailure.prefix(80))]) }
         }
         // Les bonus les plus utilisés ont leur pub prête d'avance : elle s'ouvre tout de suite à l'appui.
         if !noAds { ads.preload() }
+    }
+
+    /// Retour dans l'app avec le message de confidentialité toujours sans réponse : on le retente (D-109).
+    func retryAdsConsentIfNeeded() async {
+        guard !noAds, !ads.started else { return }
+        ads.adultAudience = isAdult
+        await ads.askConsentAgain()
+        if !ads.started { track("ad_fail", ["kind": "consent", "reason": String(ads.consentFailure.prefix(80))]) }
     }
 
     /// Majeur d'après la tranche d'âge indiquée (facultative) : sans réponse, on reste prudent.
