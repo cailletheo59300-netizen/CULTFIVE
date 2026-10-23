@@ -35,6 +35,8 @@ final class SurvivalSessionModel {
     private var pending: (given: GivenAnswer?, ms: Int?)?
     /// Passage à la question suivante en cours : un double appui ne doit pas la demander deux fois.
     private var advancing = false
+    /// Partie déjà comptée pour la pub entre les parties : le bilan réapparaît après la pub, il ne doit pas compter deux fois.
+    private var countedRun: UUID?
 
     init(service: GameService, domain: String?, overview: SurvivalOverview?) {
         self.service = service
@@ -151,6 +153,13 @@ final class SurvivalSessionModel {
         }
     }
 
+    /// Vrai une seule fois par partie : à appeler quand le bilan s'affiche.
+    func takeGameCount() -> Bool {
+        guard let runId, countedRun != runId else { return false }
+        countedRun = runId
+        return true
+    }
+
     /// Quitter en cours de partie : elle est close (le score compte, comme une erreur).
     func abandon() async {
         guard let runId, case .question = stage else { return }
@@ -242,7 +251,7 @@ struct SurvivalSessionView: View {
         case .result(let result):
             resultView(result, model: model)
                 .transition(.opacity)
-                .task { app.noteGameFinished() }
+                .task { if model.takeGameCount() { app.noteGameFinished() } }
         }
     }
 
