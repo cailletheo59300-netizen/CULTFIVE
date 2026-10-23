@@ -227,6 +227,9 @@ final class AdsController {
     private static let gamesKey = "ads.gamesSinceInterstitial"
     private static let dayKey = "ads.interstitialDay"
     private static let countKey = "ads.interstitialCount"
+    private static let lastKey = "ads.interstitialLastAt"
+    /// Écart minimum entre deux pubs entre les parties, même si les parties s'enchaînent vite.
+    private static let minGap: TimeInterval = 5 * 60
 
     /// Pub entre les parties chargée d'avance (pendant le bilan) : elle s'affiche sans faire attendre.
     private var interstitialReady: (ad: InterstitialAd, loadedAt: Date)?
@@ -270,6 +273,8 @@ final class AdsController {
         let today = Self.dayString(Date())
         let shownToday = defaults.string(forKey: Self.dayKey) == today ? defaults.integer(forKey: Self.countKey) : 0
         guard defaults.integer(forKey: Self.gamesKey) >= 3, shownToday < 3 else { return false }
+        let lastShown = defaults.double(forKey: Self.lastKey)
+        guard Date().timeIntervalSince1970 - lastShown >= Self.minGap else { return false }
         // Due mais impossible : on note pourquoi.
         guard started else {
             interstitialFailure = "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
@@ -299,6 +304,7 @@ final class AdsController {
         defaults.set(0, forKey: Self.gamesKey)
         defaults.set(today, forKey: Self.dayKey)
         defaults.set(shownToday + 1, forKey: Self.countKey)
+        defaults.set(Date().timeIntervalSince1970, forKey: Self.lastKey)
         return true
     }
 
