@@ -55,6 +55,9 @@ begin
   select i into pos from jsonb_array_elements(pack -> 'questions') with ordinality t(z, i) where z ->> 'concept_id' = q.concept_id;
   perform tst.ok(pos is not null and pos > 1, 'révision glissée dans la partie (position ' || coalesce(pos, 0) || ')');
   perform tst.ok(jsonb_array_length(pack -> 'questions') = 10, 'toujours 10 questions');
+  -- 0086 : une révision par jour et par domaine au plus.
+  pack := public.play_pack('training', 'history', null, 10, true, null);
+  perform tst.ok(not exists (select 1 from jsonb_array_elements(pack -> 'questions') z where z ->> 'concept_id' = q.concept_id), 'une révision par jour et par domaine');
   -- Entraînement libre à difficulté fixe : pas d'injection.
   pack := public.play_pack('training', 'history', null, 10, false, 'beginner');
   perform tst.ok(not exists (select 1 from jsonb_array_elements(pack -> 'questions') z where z ->> 'concept_id' = q.concept_id), 'pas en difficulté fixe');
@@ -64,4 +67,27 @@ begin
   perform tst.ok(cardinality(public._select_error_questions(u, 5)) = 0, 'rien à revoir avant 3 jours');
   perform tst.tick('3 days 1 hour');
   perform tst.ok(cardinality(public._select_error_questions(u, 5)) = 1, 'révision due dans Mes erreurs');
+end $$;
+
+-- 0086 : une notion réussie ne revient pas avant 30 jours, et les notions jamais vues passent d'abord.
+do $$
+declare u uuid := tst.new_user(); pack jsonb; pack2 jsonb; atts jsonb; x jsonb; v_overlap int;
+begin
+  perform tst.clock('2027-05-03 10:00:00+02');
+  perform tst.login(u);
+  pack := public.play_pack('training', 'geography', null, 10, true, null);
+  atts := '[]'::jsonb;
+  for x in select * from jsonb_array_elements(pack -> 'questions') loop
+    atts := atts || jsonb_build_object('client_attempt_id', gen_random_uuid(), 'question_id', x ->> 'id',
+                                       'given', tst.correct_given((x ->> 'id')::uuid), 'response_ms', 4000);
+  end loop;
+  perform public.play_submit((pack ->> 'session_id')::uuid, atts);
+  perform tst.ok((select bool_and(z ->> 'concept_id' <> all (select concept_id from public.user_concepts where user_id = u and seen > 0))
+                  from jsonb_array_elements(public.play_pack('training', 'geography', null, 10, true, null) -> 'questions') z),
+                 'partie suivante : rien de déjà vu');
+  perform tst.tick('20 days');
+  pack2 := public.play_pack('training', 'geography', null, 10, true, null);
+  select count(*) into v_overlap from jsonb_array_elements(pack2 -> 'questions') z
+  where z ->> 'concept_id' in (select e ->> 'concept_id' from jsonb_array_elements(pack -> 'questions') e);
+  perform tst.ok(v_overlap = 0, format('20 jours après : aucune notion réussie ne revient (%s)', v_overlap));
 end $$;
