@@ -256,5 +256,134 @@
         "pct": 33
       }
     ]
+  },
+  {
+    "id": "07-musee",
+    "hook": "moi au musée qui fais semblant de tout comprendre",
+    "glow": "#b8863a",
+    "questions": [
+      {
+        "q": "Quel peintre a réalisé les célèbres affiches du Moulin-Rouge, à Montmartre ?",
+        "choices": [
+          "Claude Monet",
+          "Edgar Degas",
+          "Henri de Toulouse-Lautrec",
+          "Paul Cézanne"
+        ],
+        "a": "Henri de Toulouse-Lautrec",
+        "why": "Il peignait les cabarets, les danseuses de french cancan et la vie de nuit à Paris.",
+        "pct": 13
+      },
+      {
+        "q": "Quel révolutionnaire a été assassiné dans sa baignoire ?",
+        "choices": [
+          "Robespierre",
+          "Marat",
+          "Danton",
+          "Saint-Just"
+        ],
+        "a": "Marat",
+        "why": "Malade de la peau, il travaillait dans son bain. Le peintre David a immortalisé la scène.",
+        "pct": 14
+      },
+      {
+        "q": "Quel héros a tranché la tête de Méduse ?",
+        "choices": [
+          "Thésée",
+          "Achille",
+          "Jason",
+          "Persée"
+        ],
+        "a": "Persée",
+        "why": "Il la regarde dans le reflet de son bouclier pour ne pas être changé en pierre.",
+        "pct": 33
+      }
+    ]
+  },
+  {
+    "id": "08-debats-a-table",
+    "hook": "les 3 questions qui font perdre tous les débats à table",
+    "glow": "#8fa3b8",
+    "questions": [
+      {
+        "q": "Quelle est la plus grande île du monde ?",
+        "choices": [
+          "L'Australie",
+          "Madagascar",
+          "Le Groenland",
+          "La Grande-Bretagne"
+        ],
+        "a": "Le Groenland",
+        "why": "L'Australie compte comme un continent. Le Groenland est quatre fois plus grand que la France.",
+        "pct": 17
+      },
+      {
+        "q": "Quel animal a le plus gros cerveau du monde ?",
+        "choices": [
+          "La baleine bleue",
+          "Le cachalot",
+          "L'éléphant",
+          "L'orque"
+        ],
+        "a": "Le cachalot",
+        "why": "Environ 8 kg. Plus lourd que celui de la baleine bleue, pourtant bien plus grande.",
+        "pct": 17
+      },
+      {
+        "q": "En quelle année le XXIe siècle a-t-il vraiment commencé ?",
+        "choices": [
+          "2000",
+          "1999",
+          "2001",
+          "2010"
+        ],
+        "a": "2001",
+        "why": "Il n'y a pas d'an 0 : le Ier siècle va de l'an 1 à l'an 100. Le XXIe commence donc en 2001.",
+        "pct": 33
+      }
+    ]
+  },
+  {
+    "id": "09-pop-culture",
+    "hook": "moi qui me croyais incollable en pop culture",
+    "glow": "#c9784a",
+    "questions": [
+      {
+        "q": "En quelle année sort « Le Roi lion » de Disney ?",
+        "choices": [
+          "1989",
+          "1994",
+          "1999",
+          "2004"
+        ],
+        "a": "1994",
+        "why": "Avec les chansons d'Elton John. Le plus grand succès de l'animation dessinée à la main de l'époque.",
+        "pct": 17
+      },
+      {
+        "q": "En quelles années la France a-t-elle gagné l'Euro de football ?",
+        "choices": [
+          "1998 et 2018",
+          "1984 et 2016",
+          "1984 et 2000",
+          "2000 et 2006"
+        ],
+        "a": "1984 et 2000",
+        "why": "1984 avec Platini, à domicile. 2000 avec le but en or de Trezeguet contre l'Italie.",
+        "pct": 17
+      },
+      {
+        "q": "Quel est le cuivre le plus grave de l'orchestre ?",
+        "choices": [
+          "Le trombone",
+          "La trompette",
+          "Le cor",
+          "Le tuba"
+        ],
+        "a": "Le tuba",
+        "why": "Déplié, son tube mesure plus de 5 mètres.",
+        "pct": 17
+      }
+    ]
   }
 ]
