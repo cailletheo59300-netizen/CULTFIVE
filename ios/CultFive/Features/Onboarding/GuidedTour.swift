@@ -65,7 +65,7 @@ enum TourID: String, CaseIterable {
                      symbol: "bolt.horizontal.fill"),
                 Step(title: "Les points de la semaine", text: "Victoire +3, égalité +1, défaite 0 : tu ne perds jamais de points. Le classement repart à zéro chaque lundi.",
                      symbol: "chart.bar.fill"),
-                Step(title: "Les récompenses du lundi", text: "Le top 3 gagne de gros lots (carte légendaire, couronne…), le top 15 des coffres et des pochettes, et tout le monde au moins un coffre.",
+                Step(title: "Les récompenses du lundi", text: "Le top 3 gagne de gros lots (carte légendaire, couronne…), le top 15 des coffres et des pochettes, et tout le monde au moins un coffre. Le détail : « Tout voir » dans le classement.",
                      symbol: "gift.fill"),
                 Step(title: "Entre amis", text: "« Contre un ami » : défie un ami en un appui, pour l'honneur. Plus bas : tes amis, l'historique de vos duels et les ligues.",
                      symbol: "person.2.fill"),

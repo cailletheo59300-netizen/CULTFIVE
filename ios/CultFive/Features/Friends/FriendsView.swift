@@ -2,9 +2,9 @@ import SwiftUI
 import CultFiveCore
 
 /// Arène (D-111) : en haut, le duel classé (ma semaine, les boutons « Contre un joueur » / « Contre un ami », le
-/// mini-classement, les récompenses du lundi, mes duels classés). Puis « Entre amis » (D-112) : la rangée de mes amis
-/// (ou la carte d'invitation), ce qui attend le joueur (demandes, duels à jouer), l'historique, ses ligues et le
-/// classement du 5 du jour entre amis. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son
+/// coffre d'Arène, le mini-classement, mes duels classés). Puis « Entre amis » (D-112), épuré : le titre et
+/// « Historique », la rangée de mes amis avec leur 5 du jour (ou la carte d'invitation), ce qui attend le joueur
+/// (demandes, duels à jouer), ses ligues. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son
 /// profil ; les actions globales (ajouter, défier par lien, ligues) dans le bouton « + ».
 struct FriendsView: View {
     enum Route: Hashable {
@@ -29,11 +29,8 @@ struct FriendsView: View {
     @State private var pendingLaunch: DuelLaunch?
     /// Code de ligue à confirmer (saisi ou reçu par lien) : aperçu avant de rejoindre.
     @State private var joinRequest: LeagueJoinRequest?
-    /// Mon 5 du jour (score et temps) pour me placer dans le classement des amis.
-    @State private var myToday: DailyResult?
     @State private var arena: ArenaOverview?
     @State private var showArena = false
-    @State private var showPrizes = false
     @State private var arenaDetail: ArenaDuel?
     /// Récompenses de la semaine passée, pas encore montrées.
     @State private var weekReward: ArenaRewardItem?
@@ -68,21 +65,19 @@ struct FriendsView: View {
                                  onPlay: { Haptics.soft(); showArena = true },
                                  onFriend: { Haptics.soft(); showChallenge = true },
                                  onLeaderboard: { path.append(.arenaLeaderboard) },
-                                 onPrizes: { showPrizes = true },
                                  onDuel: { duel in
                                      if duel.myTurn { showArena = true } else { arenaDetail = duel }
                                  })
 
-                    Text("Entre amis").font(.cfHeadline).padding(.top, Space.s)
-                    if app.isAnonymous {
-                        AccountNudge()
+                    VStack(alignment: .leading, spacing: Space.m) {
+                        friendsTitle
+                        if app.isAnonymous {
+                            AccountNudge()
+                        }
+                        friendsHeader
                     }
-                    friendsHeader
                     toPlay
-                    historyLink
                     leaguesBlock
-                    friendsList
-                    if !(overview?.friends.isEmpty ?? true) { invite }
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -166,7 +161,6 @@ struct FriendsView: View {
         }) {
             ArenaSessionView()
         }
-        .sheet(isPresented: $showPrizes) { ArenaPrizesSheet(prizes: arena?.prizes ?? []) }
         .sheet(item: $arenaDetail) { duel in
             ArenaDuelDetail(duel: duel) {
                 arenaDetail = nil
@@ -238,15 +232,14 @@ struct FriendsView: View {
         async let mine = try? service.leagues()
         async let referralInfo = try? service.referralOverview()
         async let myDuels = try? service.duels()
-        async let today: DailyResult? = app.daily?.state == .done ? (try? service.dailyResult(date: nil)) : nil
         async let arenaData = try? service.arenaOverview()
         if let fresh = await arenaData {
             arena = fresh
+            ArenaSeen.prime(fresh.duels)
             if weekReward == nil, let reward = fresh.reward { weekReward = ArenaRewardItem(reward: reward) }
             app.markArenaSeen(fresh)
         }
         duels = await myDuels ?? []
-        myToday = await today
         overview = await friends
         leagues = await mine ?? []
         referral = await referralInfo
@@ -258,6 +251,12 @@ struct FriendsView: View {
     private var addMenu: some View {
         Menu {
             Button("Ajouter un ami", systemImage: "person.badge.plus") { showSearch = true }
+            if let code = referral?.code ?? app.profile?.referralCode {
+                ShareLink(item: Brand.inviteURL(code: code),
+                          message: Text("Viens me défier sur \(Brand.name) ! 7 questions, 25 s chacune.")) {
+                    Label("Inviter un ami", systemImage: "square.and.arrow.up")
+                }
+            }
             Button("Défier par lien", systemImage: "link") { showLinkDuel = true }
             Divider()
             Button("Créer une ligue", systemImage: "trophy") { showNewLeague = true }
@@ -285,32 +284,27 @@ struct FriendsView: View {
         }
     }
 
-    /// Lien vers l'historique de tous les duels entre amis.
-    @ViewBuilder private var historyLink: some View {
-        if !app.isAnonymous {
-            NavigationLink(value: Route.duelHistory) {
-                HStack(spacing: 12) {
-                    Image(systemName: "clock.arrow.circlepath")
-                        .font(.system(.body, design: .rounded).weight(.bold)).foregroundStyle(Color.brand)
-                        .frame(width: 38, height: 38).background(Color.brand.opacity(0.12), in: Circle())
-                    VStack(alignment: .leading, spacing: 1) {
-                        Text("Historique des duels").font(.system(.callout, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
-                        Text(historyDetail).font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1)
+    /// « Entre amis » et, à droite, le lien discret vers l'historique de tous les duels entre amis.
+    private var friendsTitle: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text("Entre amis").font(.cfHeadline)
+            Spacer()
+            if !app.isAnonymous {
+                NavigationLink(value: Route.duelHistory) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "clock.arrow.circlepath")
+                        Text("Historique")
+                        Image(systemName: "chevron.right").font(.caption2.weight(.heavy))
                     }
-                    Spacer()
-                    Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.inkSoft)
+                    .font(.system(.footnote, design: .rounded).weight(.black))
+                    .foregroundStyle(Color.brand)
+                    .padding(.vertical, 6)
+                    .contentShape(Rectangle())
                 }
-                .popCard(padding: 12, radius: 18)
+                .buttonStyle(.row)
             }
-            .buttonStyle(.row)
         }
-    }
-
-    private var historyDetail: String {
-        let done = duels.filter(\.isFinished)
-        guard !done.isEmpty else { return "Tous tes duels entre amis, avec le score" }
-        let wins = done.filter { $0.winner == "me" }.count
-        return "30 derniers jours : \(wins) victoire\(wins > 1 ? "s" : "") sur \(done.count)"
+        .padding(.top, Space.s)
     }
 
     /// Ce qui attend le joueur. Absent s'il n'y a rien.
@@ -355,67 +349,21 @@ struct FriendsView: View {
         }
     }
 
-    /// Amis classés sur le 5 du jour (D-074) : ceux qui l'ont fait par score puis temps, toi compris ; ceux qui ne
-    /// l'ont pas encore fait en bas, grisés. Un ami se touche : son profil (duel, face-à-face).
-    @ViewBuilder private var friendsList: some View {
-        let friends = overview?.friends ?? []
-        VStack(alignment: .leading, spacing: Space.s) {
-            if !friends.isEmpty {
-                Text("Classement du \(Brand.dailyName) entre amis").labelCaps()
-            }
-            if friends.isEmpty {
-                EmptyView()
-            } else {
-                // Liste simple (pas de podium) : médailles en relief pour 1, 2, 3, temps en petit, trait de cinq.
-                VStack(spacing: 6) {
-                    ForEach(rankedEntries(friends)) { entry in
-                        if let friend = friends.first(where: { $0.id.uuidString == entry.id }) {
-                            NavigationLink(value: Route.friend(friend.id, friend.handle)) {
-                                RankRow(entry: entry, style: .onPaper, showsChevron: true)
-                            }
-                            .buttonStyle(.row)
-                        } else {
-                            RankRow(entry: entry, style: .onPaper)
-                        }
-                    }
-                }
-            }
-            if let outgoing = overview?.outgoing, !outgoing.isEmpty {
-                Text("En attente : " + outgoing.map(\.handle).joined(separator: ", "))
-                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-            }
-        }
-    }
-
-    private func rankedEntries(_ friends: [Friend]) -> [RankEntry] {
-        var played: [RankEntry] = friends.compactMap { friend in
-            guard let today = friend.today, let score = today.score else { return nil }
-            return RankEntry(id: friend.id.uuidString, handle: friend.handle, score: score, totalMs: today.totalMs,
-                             streak: friend.streak, me: false, answers: today.answers)
-        }
-        if let mine = myToday {
-            played.append(RankEntry(id: "moi", handle: "Toi", score: mine.score, totalMs: mine.totalMs, streak: mine.streak,
-                                    me: true, answers: mine.answers.map(\.isCorrect)))
-        }
-        played.sort { (a: RankEntry, b: RankEntry) -> Bool in
-            let scoreA: Int = a.score ?? 0
-            let scoreB: Int = b.score ?? 0
-            if scoreA != scoreB { return scoreA > scoreB }
-            let timeA: Int = a.totalMs ?? Int.max
-            let timeB: Int = b.totalMs ?? Int.max
-            return timeA < timeB
-        }
-        for index in played.indices { played[index].rank = index + 1 }
-        let waiting: [RankEntry] = friends.filter { $0.today?.score == nil }
-            .map { RankEntry(id: $0.id.uuidString, handle: $0.handle, score: nil, totalMs: nil, streak: $0.streak, me: false) }
-        return played + waiting
-    }
-
     @ViewBuilder private var leaguesBlock: some View {
         if leagues.isEmpty {
             Button { showNewLeague = true } label: {
-                EditorialRow(label: "Ligues", value: "Crée une ligue entre amis",
-                             detail: "Un quiz privé chaque jour, un classement, un podium", symbol: "trophy.fill", chevron: true)
+                HStack(spacing: 12) {
+                    Image(systemName: "trophy.fill").font(.system(.callout, design: .rounded).weight(.bold))
+                        .foregroundStyle(Color(hex: 0xE8A400))
+                        .frame(width: 34, height: 34).background(Color.sun.opacity(0.25), in: Circle())
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Crée une ligue entre amis").font(.system(.callout, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                        Text("Un quiz privé chaque jour, un podium").font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.inkSoft)
+                }
+                .popCard(padding: 12, radius: 18)
             }
             .buttonStyle(.row)
         } else {
@@ -431,32 +379,6 @@ struct FriendsView: View {
         }
     }
 
-    @ViewBuilder private var invite: some View {
-        if let code = referral?.code ?? app.profile?.referralCode {
-            VStack(alignment: .leading, spacing: Space.m) {
-                Text("Inviter").labelCaps()
-                Text("Ton ami reçoit 100 \(Brand.currencyPlural) en créant son compte. Toi, 150 quand il termine son premier \(Brand.dailyName), et un bonus à 3, 5 et 10 amis.")
-                    .font(.cfReading)
-                    .fixedSize(horizontal: false, vertical: true)
-                if let referral, referral.qualified > 0 {
-                    Text("\(referral.qualified) ami\(referral.qualified > 1 ? "s" : "") déjà arrivé\(referral.qualified > 1 ? "s" : "") grâce à toi.")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                }
-                ShareLink(item: Brand.inviteURL(code: code),
-                          message: Text("Viens tester ta culture sur \(Brand.name). Et toi, tu sais quoi ?")) {
-                    HStack {
-                        Text("Partager mon lien")
-                        Spacer()
-                        Text(code).font(.system(.callout, design: .monospaced)).opacity(0.7)
-                    }
-                }
-                .buttonStyle(.ink)
-            }
-        }
-    }
-}
-
-/// Un ami dans la liste : pseudo, série, son 5 du jour. Toucher ouvre son profil.
 /// Rappel discret : les fonctions sociales demandent un compte.
 struct AccountNudge: View {
     @State private var showAccount = false

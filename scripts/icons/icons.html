@@ -392,6 +392,41 @@ function arenaMedal(n,color){const g=new THREE.Group();const mat=metal(color,.18
 ICONS.arena_crest=[()=>Object.assign(framed(arenaCrest()),{exposure:.95}),540];
 ICONS.arena_crown=[()=>framed(arenaCrown(),[0,.3,5,0,0,0]),360];
 [[1,0xFFC933],[2,0xDDE3EA],[3,0xD08A4E]].forEach(([n,c])=>{ICONS[`arena_medal_${n}`]=[()=>framed(arenaMedal(n,c)),300];});
+// Arène, boutons (D-112) : épées croisées (contre un joueur) et deux copains (contre un ami).
+function arenaSword(){const g=new THREE.Group();
+  const bs=new THREE.Shape();bs.moveTo(-.12,0);bs.lineTo(-.12,1.5);bs.lineTo(0,1.78);bs.lineTo(.12,1.5);bs.lineTo(.12,0);bs.lineTo(-.12,0);
+  const blade=new THREE.Mesh(extrude(bs,.05,.025),metal(0xD9E2EE,.22));g.add(blade);
+  const fuller=new THREE.Mesh(rbox(.04,1.3,.02,.01),metal(0xAAB4C3,.25));fuller.position.set(0,.78,.045);g.add(fuller);
+  const guard=new THREE.Mesh(rbox(.6,.12,.16,.05),metal(0xFFC933,.16));g.add(guard);
+  [-1,1].forEach(s=>{const b=new THREE.Mesh(new THREE.SphereGeometry(.09,20,14),metal(0xFFC933,.14));b.position.set(s*.31,0,0);g.add(b);});
+  const gem=new THREE.Mesh(new THREE.OctahedronGeometry(.07,0),phys(0xFF4D5E,{emissive:0xE03131,emissiveIntensity:.35,roughness:.08}));gem.position.set(0,0,.11);gem.scale.set(1,1.2,.6);g.add(gem);
+  const grip=new THREE.Mesh(new THREE.CylinderGeometry(.07,.07,.46,20),phys(0x4B2BC9,{roughness:.45}));grip.position.y=-.3;g.add(grip);
+  [-.18,-.3,-.42].forEach(y=>{const r=new THREE.Mesh(new THREE.TorusGeometry(.075,.018,8,24),metal(0xFFC933,.2));r.rotation.x=Math.PI/2;r.position.y=y;g.add(r);});
+  const pommel=new THREE.Mesh(new THREE.SphereGeometry(.12,24,16),metal(0xFFC933,.14));pommel.position.y=-.6;g.add(pommel);
+  g.position.y=-.55;const w=new THREE.Group();w.add(g);return w;}
+function arenaSwords(){const g=new THREE.Group();
+  const burst=new THREE.Mesh(extrude(star(14,1.05,.82),.06,.02),metal(0xFFD95A,.22));burst.position.z=-.3;burst.scale.setScalar(.7);g.add(burst);
+  [-1,1].forEach(s=>{const sw=arenaSword();sw.rotation.z=s*.72;sw.position.z=s*.06;g.add(sw);});
+  g.rotation.set(.1,-.18,0);return g;}
+function buddy(color,dark){const g=new THREE.Group();
+  const body=new THREE.Mesh(new THREE.SphereGeometry(.62,40,28),phys(color,{roughness:.35}));body.scale.set(1,.96,.86);g.add(body);
+  const belly=new THREE.Mesh(new THREE.SphereGeometry(.4,32,20),phys(0xffffff,{roughness:.4}));belly.scale.set(.9,.62,.35);belly.position.set(0,-.32,.44);g.add(belly);
+  [-1,1].forEach(s=>{const e=new THREE.Mesh(new THREE.SphereGeometry(.13,24,16),phys(0xffffff,{roughness:.2}));e.position.set(s*.2,.16,.48);e.scale.set(1,1.15,.6);g.add(e);
+    const p=new THREE.Mesh(new THREE.SphereGeometry(.075,20,14),phys(0x1a0f2e,{roughness:.15}));p.position.set(s*.2+.02,.15,.56);g.add(p);
+    const h=new THREE.Mesh(new THREE.SphereGeometry(.025,12,8),new THREE.MeshBasicMaterial({color:0xffffff}));h.position.set(s*.2+.05,.2,.62);g.add(h);
+    const c=new THREE.Mesh(new THREE.SphereGeometry(.08,16,10),phys(0xFF8FA3,{roughness:.6}));c.position.set(s*.36,-.02,.44);c.scale.set(1,.6,.4);g.add(c);
+    const f=new THREE.Mesh(new THREE.SphereGeometry(.17,20,14),phys(dark,{roughness:.4}));f.position.set(s*.24,-.6,.12);f.scale.set(1,.5,1.2);g.add(f);
+    const a=new THREE.Mesh(new THREE.SphereGeometry(.14,20,14),phys(color,{roughness:.35}));a.position.set(s*.6,-.12,.1);a.scale.set(.7,1,.8);g.add(a);});
+  const smile=new THREE.Mesh(new THREE.TorusGeometry(.085,.026,10,24,Math.PI),phys(0x1a0f2e,{roughness:.3}));smile.rotation.z=Math.PI;smile.position.set(0,.0,.585);smile.scale.set(1,.8,1);g.add(smile);
+  return g;}
+function arenaFriends(){const g=new THREE.Group();
+  const a=buddy(0xFF6FA0,0xC2255C);a.position.set(-.55,-.05,0);a.rotation.y=.35;g.add(a);
+  const b=buddy(0x7B5CFF,0x4B2BC9);b.position.set(.55,-.08,.08);b.rotation.y=-.35;b.scale.setScalar(.96);g.add(b);
+  const hs=new THREE.Shape();hs.moveTo(0,-.3);hs.bezierCurveTo(-.05,-.22,-.36,-.06,-.32,.12);hs.bezierCurveTo(-.28,.3,-.06,.32,0,.16);hs.bezierCurveTo(.06,.32,.28,.3,.32,.12);hs.bezierCurveTo(.36,-.06,.05,-.22,0,-.3);
+  const heart=new THREE.Mesh(extrude(hs,.12,.05),phys(0xF03E5E,{roughness:.2}));heart.position.set(0,.88,.1);heart.scale.setScalar(.85);g.add(heart);
+  g.rotation.x=.08;return g;}
+ICONS.arena_swords=[()=>framed(arenaSwords(),[0,.1,5.4,0,0,0]),360];
+ICONS.arena_friends=[()=>framed(arenaFriends(),[0,.35,5.2,0,.15,0]),360];
 window.renderIcons=(only)=>{const out={};for(const [name,[build,px,frame,rest]] of Object.entries(ICONS)){if(only&&!name.startsWith(only))continue;out[name]=snap(build,px,frame,rest);}return out;};
 </script>
 </body>

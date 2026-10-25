@@ -66,6 +66,37 @@ struct ArenaHandle: View {
     }
 }
 
+/// Icônes 3D des deux boutons de l'Arène (D-112) : épées croisées (contre un joueur), deux copains (contre un ami).
+struct ArenaButtonIcon: View {
+    enum Kind: String { case swords = "arena_swords", friends = "arena_friends" }
+    let kind: Kind
+
+    var body: some View {
+        Image(kind.rawValue).resizable().scaledToFit().accessibilityHidden(true)
+    }
+}
+
+/// Adversaire pas encore connu : une pastille « ? » en pointillés qui respire doucement.
+struct ArenaMystery: View {
+    var size: CGFloat = 64
+    var onInk = true
+    @State private var pulse = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var body: some View {
+        let ink = onInk ? Color.white : Color.inkSoft
+        Circle()
+            .fill(ink.opacity(0.08))
+            .overlay(Circle().strokeBorder(ink.opacity(0.55), style: StrokeStyle(lineWidth: max(2, size * 0.045), dash: [size * 0.1, size * 0.08])))
+            .overlay(Text("?").font(.system(size: size * 0.46, weight: .black, design: .rounded)).foregroundStyle(ink.opacity(0.85)))
+            .frame(width: size, height: size)
+            .scaleEffect(pulse ? 1.04 : 0.97)
+            .animation(reduceMotion ? nil : .easeInOut(duration: 1.1).repeatForever(autoreverses: true), value: pulse)
+            .onAppear { pulse = true }
+            .accessibilityLabel("Adversaire à venir")
+    }
+}
+
 /// Pastille ronde avec l'initiale d'un joueur, à sa couleur (toujours la même pour un même pseudo).
 struct ArenaAvatar: View {
     let handle: String

@@ -360,22 +360,8 @@ private struct ArenaReadyView: View {
         .onAppear { withAnimation(.spring(response: 0.55, dampingFraction: 0.7)) { shown = true } }
     }
 
-    @ViewBuilder private var faceOff: some View {
-        if model.opponent == nil {
-            // Pas encore d'adversaire : on joue, tout simplement.
-            VStack(spacing: 10) {
-                ArenaCrest().frame(width: 130)
-                    .scaleEffect(shown ? 1 : 0.5)
-                ArenaAvatar(handle: me, size: 54, ring: Color.sun, me: true)
-                Text(me).font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
-            }
-            .padding(.top, Space.m)
-        } else {
-            faceOffWithOpponent
-        }
-    }
-
-    private var faceOffWithOpponent: some View {
+    /// Toi contre ton adversaire : celui qui a déjà joué (« bats son score ! »), ou un « ? » : le prochain joueur.
+    private var faceOff: some View {
         HStack(alignment: .center, spacing: 0) {
             player(handle: me, detail: "Toi", me: true)
                 .offset(x: shown ? 0 : -160)
@@ -386,9 +372,18 @@ private struct ArenaReadyView: View {
                 .opacity(shown ? 1 : 0)
                 .frame(width: 70)
             if let opponent = model.opponent {
-                player(handle: opponent.handle, detail: "\(opponent.weekPoints) pts cette semaine", me: false,
+                player(handle: opponent.handle, detail: "a déjà joué · bats son score !", me: false,
                        champion: opponent.champion)
                     .offset(x: shown ? 0 : 160)
+            } else {
+                VStack(spacing: 8) {
+                    ArenaMystery(size: 92)
+                    Text("?").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
+                    Text("Ton adversaire arrive").font(.system(.caption, design: .rounded).weight(.bold))
+                        .foregroundStyle(.white.opacity(0.7)).lineLimit(1).minimumScaleFactor(0.7)
+                }
+                .frame(maxWidth: .infinity)
+                .offset(x: shown ? 0 : 160)
             }
         }
         .padding(.top, Space.l)

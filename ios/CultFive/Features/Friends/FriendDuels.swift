@@ -42,7 +42,8 @@ struct FriendDuelBadge: Equatable {
 
 // MARK: - Rangée « Mes amis »
 
-/// En haut de « Entre amis » : un « + », puis les amis, ceux qui m'attendent d'abord. Toucher ouvre le profil.
+/// En haut de « Entre amis » : un « + », puis les amis (ceux qui m'attendent d'abord) avec leur 5 du jour en petit.
+/// Toucher ouvre le profil.
 struct FriendsStrip: View {
     let friends: [Friend]
     let duels: [Duel]
@@ -108,6 +109,7 @@ struct FriendsStrip: View {
                             Text(friend.handle)
                                 .font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
                                 .lineLimit(1).minimumScaleFactor(0.75)
+                            dailyScore(friend)
                         }
                         .frame(width: 76)
                     }
@@ -120,6 +122,18 @@ struct FriendsStrip: View {
             .padding(.vertical, 2)
         }
         .padding(.horizontal, -Space.gutter)
+    }
+
+    /// Son 5 du jour en petit (« 4/5 »), ou un tiret s'il ne l'a pas encore fait.
+    private func dailyScore(_ friend: Friend) -> some View {
+        let score = friend.today?.score
+        return HStack(spacing: 3) {
+            Image(systemName: "sun.max.fill").font(.system(size: 9, weight: .black))
+            Text(score.map { "\($0)/5" } ?? "–").monospacedDigit()
+        }
+        .font(.system(size: 11, weight: .black, design: .rounded))
+        .foregroundStyle(score == nil ? Color.inkSoft.opacity(0.6) : (score == 5 ? Color(hex: 0xE8A400) : Color.inkSoft))
+        .accessibilityLabel(score.map { "\(Brand.dailyName) : \($0) sur 5" } ?? "\(Brand.dailyName) pas encore joué")
     }
 
     /// Bulle de dialogue au-dessus de l'avatar ; place gardée vide pour aligner la rangée.
@@ -167,7 +181,7 @@ struct InviteFriendsCard: View {
             HStack(alignment: .center, spacing: 0) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Joue contre tes amis").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
-                    Text("Les mêmes questions pour vous deux, chacun quand il veut. Le score de l'autre se découvre à la fin.")
+                    Text("Ton ami reçoit 100 \(Brand.currencyPlural) en arrivant, toi 150 quand il joue son 1er \(Brand.dailyName).")
                         .font(.system(.footnote, design: .rounded).weight(.bold))
                         .foregroundStyle(.white.opacity(0.8))
                         .fixedSize(horizontal: false, vertical: true)

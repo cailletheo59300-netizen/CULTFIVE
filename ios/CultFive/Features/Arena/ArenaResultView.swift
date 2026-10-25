@@ -2,8 +2,8 @@ import SwiftUI
 import CultFiveCore
 
 /// Bilan d'un duel classé : victoire, défaite ou égalité (points, coffres, classement de la semaine). Le score de
-/// l'adversaire ne se découvre qu'ici. Si personne n'a encore joué ce duel : une simple fin de partie (« Bien joué ! »,
-/// son score) ; le résultat arrivera tout seul (notification, « Mes duels »), sans jamais parler d'attente.
+/// l'adversaire ne se découvre qu'ici, avec un petit suspense (« ? » qui se retourne). Si personne n'a encore joué ce
+/// duel : le face-à-face « Toi 5 – ? » et une ligne : un joueur va t'affronter, tu seras prévenu du résultat.
 struct ArenaResultView: View {
     let result: ArenaDuelResult
     let me: String
@@ -11,6 +11,8 @@ struct ArenaResultView: View {
     let onClose: () -> Void
 
     @State private var shown = false
+    /// Score de l'adversaire dévoilé (après un court suspense).
+    @State private var revealed = false
 
     private var duel: ArenaDuel { result.duel }
 
@@ -36,12 +38,15 @@ struct ArenaResultView: View {
                         .scaleEffect(shown ? 1 : 0.6)
                         .opacity(shown ? 1 : 0)
                         .padding(.top, Space.xl)
+                    faceOff
                     if duel.isFinished {
-                        faceOff
                         pointsCard
                         bonuses
                     } else {
-                        myScore
+                        Text("Un joueur va t'affronter : tu seras prévenu du résultat.")
+                            .font(.system(.callout, design: .rounded).weight(.bold))
+                            .foregroundStyle(.white.opacity(0.8))
+                            .multilineTextAlignment(.center)
                     }
                     answersCard
                 }
@@ -63,7 +68,12 @@ struct ArenaResultView: View {
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.62)) { shown = true }
-            if duel.winner == "me" { Haptics.success() }
+            guard duel.isFinished else { return }
+            ArenaSeen.mark(duel.id)
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.55).delay(0.7)) { revealed = true }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+                duel.winner == "me" ? Haptics.success() : Haptics.soft()
+            }
         }
     }
 
@@ -73,29 +83,37 @@ struct ArenaResultView: View {
         HStack(spacing: 0) {
             side(handle: me, me: true, score: duel.me.score, champion: false)
             VStack(spacing: 2) {
-                Text(scoreLine)
-                    .font(.system(size: 44, weight: .black, design: .rounded)).monospacedDigit()
-                    .foregroundStyle(.white)
+                HStack(spacing: 8) {
+                    Text("\(duel.me.score)")
+                    Text("–").foregroundStyle(.white.opacity(0.5))
+                    Text(theirScore)
+                        .foregroundStyle(revealed ? Color.white : Color.sun)
+                        .rotation3DEffect(.degrees(revealed ? 360 : 0), axis: (x: 0, y: 1, z: 0))
+                        .scaleEffect(revealed ? 1 : 0.85)
+                }
+                .font(.system(size: 44, weight: .black, design: .rounded)).monospacedDigit()
+                .foregroundStyle(.white)
                 Text("bonnes réponses").font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.6))
             }
-            .frame(minWidth: 110)
-            if let opponent = duel.opponent {
+            .frame(minWidth: 120)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("\(duel.me.score) à \(duel.opponent?.score.map(String.init) ?? "inconnu")")
+            if let opponent = duel.opponent, duel.isFinished {
                 side(handle: opponent.handle, me: false, score: opponent.score, champion: opponent.champion)
             } else {
                 VStack(spacing: 6) {
-                    Circle().strokeBorder(Color.white.opacity(0.55), style: StrokeStyle(lineWidth: 3, dash: [6, 5]))
-                        .overlay(Text("?").font(.system(size: 28, weight: .black, design: .rounded)).foregroundStyle(.white.opacity(0.8)))
-                        .frame(width: 64, height: 64)
-                    Text("à venir").font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white.opacity(0.75))
+                    ArenaMystery(size: 64)
+                    Text("Ton adversaire").font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white.opacity(0.75))
+                        .lineLimit(1).minimumScaleFactor(0.7)
                 }
                 .frame(maxWidth: .infinity)
             }
         }
     }
 
-    private var scoreLine: String {
-        let theirs = duel.opponent?.score.map(String.init) ?? "?"
-        return "\(duel.me.score) – \(theirs)"
+    private var theirScore: String {
+        guard duel.isFinished, revealed, let score = duel.opponent?.score else { return "?" }
+        return String(score)
     }
 
     private func side(handle: String, me: Bool, score: Int?, champion: Bool) -> some View {
@@ -207,27 +225,6 @@ struct ArenaResultView: View {
         case "streak_chest": return "5 victoires de suite"
         default: return "10 victoires : carte rare ou mieux à l'intérieur"
         }
-    }
-
-    // MARK: Fin de partie (personne n'a encore joué ce duel)
-
-    private var myScore: some View {
-        VStack(spacing: 6) {
-            ArenaAvatar(handle: me, size: 72, ring: Color.sun, me: true)
-            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                Text("\(duel.me.score)")
-                    .font(.system(size: 72, weight: .black, design: .rounded)).monospacedDigit()
-                    .foregroundStyle(.white)
-                Text("/\(duel.total)")
-                    .font(.system(size: 34, weight: .black, design: .rounded)).monospacedDigit()
-                    .foregroundStyle(.white.opacity(0.6))
-            }
-            Text(duel.me.score > 1 ? "bonnes réponses" : "bonne réponse")
-                .font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.7))
-        }
-        .frame(maxWidth: .infinity)
-        .scaleEffect(shown ? 1 : 0.8)
-        .opacity(shown ? 1 : 0)
     }
 
     // MARK: Réponses

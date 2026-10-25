@@ -1,9 +1,9 @@
 import SwiftUI
 import CultFiveCore
 
-/// Haut de l'onglet Arène : la semaine du joueur et les deux boutons (« Contre un joueur » : duel classé ; « Contre un
-/// ami » : D-112), le mini-classement (Monde | Amis), les récompenses de la semaine et « Mes duels ». Le reste de
-/// l'onglet (amis, duels entre amis, ligues) suit en dessous.
+/// Haut de l'onglet Arène : la semaine du joueur, les deux gros boutons (« Contre un joueur » : duel classé ; « Contre
+/// un ami » : D-112) et le coffre d'Arène, le mini-classement (Monde | Amis ; les récompenses sont dans « Tout voir »)
+/// et « Mes duels ». Le reste de l'onglet (amis, duels entre amis, ligues) suit en dessous.
 struct ArenaSection: View {
     @Environment(AppModel.self) private var app
     @Binding var overview: ArenaOverview?
@@ -12,13 +12,13 @@ struct ArenaSection: View {
     let onPlay: () -> Void
     let onFriend: () -> Void
     let onLeaderboard: () -> Void
-    let onPrizes: () -> Void
     let onDuel: (ArenaDuel) -> Void
 
     enum BoardScope: String, CaseIterable { case world = "Monde", friends = "Amis" }
 
     @State private var scope: BoardScope?
     @State private var friendsBoard: ArenaLeaderboard?
+    @State private var showChestInfo = false
 
     private var currentScope: BoardScope { scope ?? (hasFriends ? .friends : .world) }
 
@@ -29,7 +29,6 @@ struct ArenaSection: View {
             }
             hero
             leaderboardTeaser
-            prizesCard
             myDuels
         }
     }
@@ -67,6 +66,17 @@ struct ArenaSection: View {
                             .foregroundStyle(.white)
                             .contentTransition(.numericText())
                         Text("pts").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white.opacity(0.8))
+                        if data.streak > 0 {
+                            HStack(spacing: 3) {
+                                GameIcon.flame.image.frame(width: 18, height: 18)
+                                Text("\(data.streak)").font(.system(.subheadline, design: .rounded).weight(.black)).monospacedDigit()
+                            }
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 8).padding(.vertical, 3)
+                            .background(Color(hex: 0xF76707).opacity(0.35), in: Capsule())
+                            .accessibilityElement(children: .ignore)
+                            .accessibilityLabel("\(data.streak) victoires de suite")
+                        }
                     }
                     Text(rankLine).font(.system(.footnote, design: .rounded).weight(.heavy)).foregroundStyle(Color.sun)
                         .fixedSize(horizontal: false, vertical: true)
@@ -79,71 +89,55 @@ struct ArenaSection: View {
                 Spacer(minLength: 0)
             }
 
-            HStack(spacing: 10) {
-                tile {
-                    HStack(spacing: 8) {
-                        GameIcon.flame.image.frame(width: 26, height: 26).saturation(data.streak > 0 ? 1 : 0)
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(data.streak > 0 ? "\(data.streak) de suite" : "Pas de série")
-                                .font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white)
-                            Text(data.streak >= data.rules.streakFrom ? "+1 pt par victoire" : "dès 3 : +1 pt par victoire")
-                                .font(.system(size: 11, weight: .bold, design: .rounded)).foregroundStyle(.white.opacity(0.65))
-                        }
-                    }
+            HStack(spacing: 12) {
+                Button(action: onPlay) {
+                    ArenaChoiceLabel(title: "Contre un joueur", icon: .swords, dot: data.waiting > 0)
                 }
-                tile {
-                    HStack(spacing: 8) {
-                        ChestView(tier: .gold).frame(width: 30, height: 30)
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Coffre d'Arène \(data.chest.progress)/\(data.chest.goal)")
-                                .font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(.white)
-                                .lineLimit(1).minimumScaleFactor(0.8)
-                            ProgressBarLine(value: Double(data.chest.progress) / Double(max(data.chest.goal, 1)))
-                        }
-                    }
+                .buttonStyle(ArenaChoiceStyle(colors: [Color(hex: 0xFFE066), Color(hex: 0xFFB800)], text: Color(hex: 0x1E1340),
+                                              glow: Color(hex: 0xFFC933), pulses: true))
+                .accessibilityHint("Duel classé : il rapporte des points de la semaine")
+                Button(action: onFriend) {
+                    ArenaChoiceLabel(title: "Contre un ami", icon: .friends, dot: false)
                 }
+                .buttonStyle(ArenaChoiceStyle(colors: [Color(hex: 0xFF7AB6), Color(hex: 0xA34DFF)], text: .white,
+                                              glow: Color(hex: 0xFF5FA2), pulses: false))
+                .accessibilityHint("Défie un ami, pour l'honneur")
             }
 
-            VStack(spacing: 8) {
-                HStack(spacing: 10) {
-                    Button(action: onPlay) {
-                        bigLabel("Contre un joueur", detail: "classé · points", symbol: "globe.europe.africa.fill",
-                                 dot: data.waiting > 0)
-                    }
-                    .buttonStyle(ArenaChoiceStyle(fill: Color.sun, text: Color(hex: 0x1E1340)))
-                    .accessibilityHint(data.waiting > 0 ? "Un adversaire t'attend déjà" : "Duel classé, il rapporte des points")
-                    Button(action: onFriend) {
-                        bigLabel("Contre un ami", detail: "pour l'honneur", symbol: "person.2.fill", dot: false)
-                    }
-                    .buttonStyle(ArenaChoiceStyle(fill: .white.opacity(0.14), text: .white, stroke: .white.opacity(0.22)))
-                    .accessibilityHint("Défie un ami, sans points de la semaine")
-                }
-                Text(subtitle)
-                    .font(.system(.caption, design: .rounded).weight(.bold))
-                    .foregroundStyle(.white.opacity(0.75))
-                    .multilineTextAlignment(.center)
-            }
+            chestButton
         }
         .padding(18)
         .background(ArenaPalette.night, in: RoundedRectangle(cornerRadius: 26, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 26, style: .continuous).strokeBorder(Color.white.opacity(0.08), lineWidth: 1))
         .shadow(color: Color(hex: 0x2A1680).opacity(0.35), radius: 18, y: 10)
+        .sheet(isPresented: $showChestInfo) { ArenaChestInfoSheet(progress: data.chest.progress, goal: data.chest.goal) }
     }
 
-    private func bigLabel(_ title: String, detail: String, symbol: String, dot: Bool) -> some View {
-        VStack(spacing: 4) {
-            Image(systemName: symbol).font(.system(size: 22, weight: .bold))
-                .overlay(alignment: .topTrailing) {
-                    if dot {
-                        Circle().fill(Color.correct).frame(width: 9, height: 9)
-                            .overlay(Circle().stroke(Color.correct.opacity(0.4), lineWidth: 4))
-                            .offset(x: 6, y: -3)
+    /// Coffre d'Arène : la jauge, et en touchant, ce qu'il contient.
+    private var chestButton: some View {
+        Button { showChestInfo = true } label: {
+            HStack(spacing: 12) {
+                ChestView(tier: .gold).frame(width: 46, height: 46)
+                VStack(alignment: .leading, spacing: 5) {
+                    HStack {
+                        Text("Coffre d'Arène").font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white)
+                        Spacer()
+                        Text("\(data.chest.progress)/\(data.chest.goal) victoires")
+                            .font(.system(.caption, design: .rounded).weight(.black)).monospacedDigit().foregroundStyle(Color.sun)
                     }
+                    ProgressBarLine(value: Double(data.chest.progress) / Double(max(data.chest.goal, 1)))
                 }
-            Text(title).font(.system(.callout, design: .rounded).weight(.black)).lineLimit(1).minimumScaleFactor(0.75)
-            Text(detail).font(.system(size: 11, weight: .bold, design: .rounded)).opacity(0.7).lineLimit(1)
+                Image(systemName: "info.circle.fill").font(.title3).foregroundStyle(.white.opacity(0.75))
+            }
+            .padding(.horizontal, 12).padding(.vertical, 10)
+            .background(Color.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .contentShape(Rectangle())
         }
-        .frame(maxWidth: .infinity, minHeight: 84)
+        .buttonStyle(.row)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Coffre d'Arène, \(data.chest.progress) victoires sur \(data.chest.goal)")
+        .accessibilityHint("Voir ce qu'il contient")
+        .accessibilityAddTraits(.isButton)
     }
 
     private var rankLine: String {
@@ -155,19 +149,6 @@ struct ArenaSection: View {
         }
         guard let rank = me.rank else { return "" }
         return "\(ArenaClock.ordinal(rank)) sur \(data.players)"
-    }
-
-    private var subtitle: String {
-        var parts = ["\(data.rules.questions) questions · \(data.rules.seconds) s chacune"]
-        parts.append(data.dailyChest ? "1er duel gagné du jour = coffre d'argent" : "+\(data.rules.win) pts par victoire")
-        return parts.joined(separator: " · ")
-    }
-
-    private func tile<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
-        content()
-            .padding(10)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
     // MARK: Mini-classement
@@ -286,66 +267,6 @@ struct ArenaSection: View {
         .accessibilityElement(children: .combine)
     }
 
-    // MARK: Récompenses
-
-    /// Ce que rapporte la semaine : le 1er en grand, puis ce que vaut ma place actuelle.
-    private var prizesCard: some View {
-        Button(action: onPrizes) {
-            VStack(alignment: .leading, spacing: 12) {
-                HStack {
-                    Text("Récompenses du lundi").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
-                    Spacer()
-                    Text("Détail").font(.system(.footnote, design: .rounded).weight(.black)).foregroundStyle(Color.brand)
-                    Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.brand)
-                }
-                if let first = data.prizes.first {
-                    HStack(alignment: .top, spacing: 12) {
-                        ArenaMedal(rank: 1, size: 46)
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text("Le 1er de la semaine").font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                ArenaPrizeStrip(prize: first, itemSize: 34)
-                            }
-                        }
-                    }
-                }
-                Text(myPrizeLine)
-                    .font(.system(.footnote, design: .rounded).weight(.bold))
-                    .foregroundStyle(Color.inkSoft)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .popCard(padding: 16, radius: 22)
-        }
-        .buttonStyle(.row)
-    }
-
-    private var myPrizeLine: String {
-        let me = data.me
-        if !me.eligible { return "Top 3 : gros lots · top 10 et 15 : coffres et pochettes · tous les joueurs : au moins un coffre en bois. 5 duels dans la semaine pour être classé." }
-        guard let rank = me.rank else { return "" }
-        if rank <= 15 { return "À ta place (\(ArenaClock.ordinal(rank))), tu gagnerais : \(summary(prize(for: rank)))." }
-        return "Entre dans le top 15 pour des coffres d'argent, d'or et des pochettes."
-    }
-
-    private func prize(for rank: Int) -> ArenaPrize? {
-        data.prizes.first { p in
-            guard let from = p.from else { return false }
-            return rank >= from && rank <= (p.to ?? Int.max)
-        }
-    }
-
-    private func summary(_ prize: ArenaPrize?) -> String {
-        guard let prize else { return "un coffre en bois" }
-        var parts: [String] = []
-        if let n = prize.gold, n > 0 { parts.append(n > 1 ? "\(n) coffres en or" : "1 coffre en or") }
-        if let n = prize.silver, n > 0 { parts.append(n > 1 ? "\(n) coffres d'argent" : "1 coffre d'argent") }
-        if let card = prize.card { parts.append(card == "legend" ? "une carte légendaire" : "une carte épique") }
-        if let n = prize.packs, n > 0 { parts.append(n > 1 ? "\(n) pochettes" : "1 pochette") }
-        if let n = prize.seeds, n > 0 { parts.append("\(n) neurones") }
-        if prize.crown == true { parts.append("la couronne") }
-        return parts.isEmpty ? "un coffre en bois" : parts.joined(separator: ", ")
-    }
-
     // MARK: Mes duels
 
     @ViewBuilder private var myDuels: some View {
@@ -355,7 +276,7 @@ struct ArenaSection: View {
                 VStack(spacing: 0) {
                     ForEach(Array(data.duels.prefix(8).enumerated()), id: \.element.id) { index, duel in
                         if index > 0 { Hairline().padding(.leading, 60) }
-                        Button { onDuel(duel) } label: { ArenaDuelRow(duel: duel) }
+                        Button { onDuel(duel) } label: { ArenaDuelRow(duel: duel, isNew: ArenaSeen.isNew(duel)) }
                             .buttonStyle(.row)
                     }
                 }
@@ -368,17 +289,31 @@ struct ArenaSection: View {
 /// Une ligne de « Mes duels » : adversaire, état, score et points.
 struct ArenaDuelRow: View {
     let duel: ArenaDuel
+    /// Résultat arrivé depuis la dernière visite.
+    var isNew = false
 
     var body: some View {
         HStack(spacing: 12) {
             if let opponent = duel.opponent, duel.isFinished {
                 ArenaAvatar(handle: opponent.handle, size: 38)
-            } else {
+            } else if duel.myTurn {
                 ArenaCrest().frame(width: 38, height: 38)
+            } else {
+                ArenaMystery(size: 38, onInk: false)
             }
             VStack(alignment: .leading, spacing: 2) {
-                ArenaHandle(handle: duel.isFinished ? (duel.opponent?.handle ?? "Duel classé") : "Duel classé",
-                            champion: duel.isFinished && (duel.opponent?.champion ?? false))
+                HStack(spacing: 6) {
+                    ArenaHandle(handle: duel.isFinished ? (duel.opponent?.handle ?? "Duel classé")
+                                                        : duel.myTurn ? "Duel classé" : "Adversaire en route",
+                                champion: duel.isFinished && (duel.opponent?.champion ?? false))
+                    if isNew {
+                        Text("Nouveau !")
+                            .font(.system(size: 10, weight: .black, design: .rounded))
+                            .foregroundStyle(Color(hex: 0x1E1340))
+                            .padding(.horizontal, 6).padding(.vertical, 2)
+                            .background(Color.sun, in: Capsule())
+                    }
+                }
                 Text(detail).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(detailColor)
             }
             Spacer()
@@ -397,7 +332,7 @@ struct ArenaDuelRow: View {
         case "opponent": return "Perdu \(duel.me.score) – \(duel.opponent?.score ?? 0)"
         case "draw": return "Égalité \(duel.me.score) – \(duel.opponent?.score ?? 0)"
         default:
-            return "\(duel.me.score)/\(duel.total) · résultat bientôt"
+            return "Toi \(duel.me.score)/\(duel.total) · tu seras prévenu"
         }
     }
 
@@ -424,21 +359,142 @@ struct ArenaDuelRow: View {
     }
 }
 
-/// Gros bouton de choix sous le blason (Contre un joueur / Contre un ami).
+/// Contenu d'un gros bouton de l'Arène : l'icône 3D, le titre.
+private struct ArenaChoiceLabel: View {
+    let title: String
+    let icon: ArenaButtonIcon.Kind
+    let dot: Bool
+
+    var body: some View {
+        VStack(spacing: 4) {
+            ArenaButtonIcon(kind: icon)
+                .frame(width: 70, height: 70)
+                .shadow(color: .black.opacity(0.18), radius: 4, y: 3)
+                .overlay(alignment: .topTrailing) {
+                    if dot {
+                        Circle().fill(Color.correct).frame(width: 12, height: 12)
+                            .overlay(Circle().strokeBorder(.white, lineWidth: 2))
+                            .accessibilityLabel("Un adversaire t'attend")
+                    }
+                }
+            Text(title)
+                .font(.system(.headline, design: .rounded).weight(.black))
+                .lineLimit(1).minimumScaleFactor(0.7)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, 10).padding(.bottom, 12)
+    }
+}
+
+/// Gros bouton de l'Arène : dégradé vif, liseré clair en haut, ombre colorée, s'enfonce quand on appuie ;
+/// « Contre un joueur » respire doucement pour appeler le doigt.
 private struct ArenaChoiceStyle: ButtonStyle {
-    let fill: Color
+    let colors: [Color]
     let text: Color
-    var stroke: Color = .clear
+    let glow: Color
+    let pulses: Bool
 
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundStyle(text)
-            .padding(.horizontal, 8)
-            .background(fill, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(stroke, lineWidth: 1))
-            .scaleEffect(configuration.isPressed ? 0.97 : 1)
-            .opacity(configuration.isPressed ? 0.85 : 1)
-            .animation(Motion.press, value: configuration.isPressed)
-            .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        ChoiceBody(configuration: configuration, colors: colors, text: text, glow: glow, pulses: pulses)
+    }
+
+    private struct ChoiceBody: View {
+        let configuration: ButtonStyleConfiguration
+        let colors: [Color]
+        let text: Color
+        let glow: Color
+        let pulses: Bool
+        @State private var breathe = false
+        @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+        var body: some View {
+            let shape = RoundedRectangle(cornerRadius: 22, style: .continuous)
+            configuration.label
+                .foregroundStyle(text)
+                .background(LinearGradient(colors: colors, startPoint: .top, endPoint: .bottom), in: shape)
+                .overlay(shape.strokeBorder(LinearGradient(colors: [.white.opacity(0.7), .white.opacity(0)], startPoint: .top,
+                                                           endPoint: .center), lineWidth: 1.5))
+                .shadow(color: glow.opacity(configuration.isPressed ? 0.2 : (breathe ? 0.75 : 0.4)),
+                        radius: breathe ? 16 : 10, y: configuration.isPressed ? 2 : 7)
+                .scaleEffect(configuration.isPressed ? 0.95 : (breathe ? 1.02 : 1))
+                .offset(y: configuration.isPressed ? 3 : 0)
+                .animation(Motion.press, value: configuration.isPressed)
+                .contentShape(shape)
+                .onAppear {
+                    guard pulses, !reduceMotion else { return }
+                    withAnimation(.easeInOut(duration: 1.3).repeatForever(autoreverses: true)) { breathe = true }
+                }
+        }
+    }
+}
+
+/// Ce que contient le coffre d'Arène et comment le gagner.
+struct ArenaChestInfoSheet: View {
+    let progress: Int
+    let goal: Int
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        VStack(spacing: Space.l) {
+            ChestView(tier: .gold).frame(width: 130, height: 130).padding(.top, Space.l)
+            VStack(spacing: 6) {
+                Text("Coffre d'Arène").font(.cfDisplay)
+                Text("Gagne \(goal) duels classés : un coffre en or s'ouvre, avec une carte rare ou mieux à l'intérieur.")
+                    .font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            VStack(spacing: 8) {
+                ProgressBarLine(value: Double(progress) / Double(max(goal, 1)), fill: Color.sun, track: Color.hairline)
+                Text(progress >= goal ? "Prêt !" : "Encore \(max(goal - progress, 0)) victoire\(goal - progress > 1 ? "s" : "")")
+                    .font(.system(.headline, design: .rounded).weight(.black))
+            }
+            VStack(alignment: .leading, spacing: 10) {
+                bonus("Ton 1er duel gagné du jour", "coffre d'argent")
+                bonus("5 victoires de suite", "coffre d'argent")
+            }
+            .popCard(padding: 14, radius: 18)
+            Spacer(minLength: 0)
+            Button("Compris") { dismiss() }.buttonStyle(.ink)
+        }
+        .padding(.horizontal, Space.gutter)
+        .padding(.bottom, Space.m)
+        .background(Color.paper)
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
+    }
+
+    private func bonus(_ what: String, _ reward: String) -> some View {
+        HStack(spacing: 10) {
+            ChestView(tier: .silver).frame(width: 30, height: 30)
+            Text(what).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
+            Spacer()
+            Text(reward).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkSoft)
+        }
+    }
+}
+
+/// Résultats de duels classés déjà vus sur cet appareil : un résultat arrivé depuis s'affiche « Nouveau ! ».
+enum ArenaSeen {
+    private static let key = "arena.seenResults"
+    private static let primedKey = "arena.seenPrimed"
+
+    private static var ids: [String] { UserDefaults.standard.stringArray(forKey: key) ?? [] }
+
+    /// Première fois : les résultats déjà là ne sont pas « nouveaux ».
+    static func prime(_ duels: [ArenaDuel]) {
+        guard !UserDefaults.standard.bool(forKey: primedKey) else { return }
+        UserDefaults.standard.set(true, forKey: primedKey)
+        duels.filter(\.isFinished).forEach { mark($0.id) }
+    }
+
+    static func isNew(_ duel: ArenaDuel) -> Bool {
+        duel.isFinished && !ids.contains(duel.id.uuidString)
+    }
+
+    static func mark(_ id: UUID) {
+        var list = ids
+        guard !list.contains(id.uuidString) else { return }
+        list.append(id.uuidString)
+        UserDefaults.standard.set(Array(list.suffix(200)), forKey: key)
     }
 }
