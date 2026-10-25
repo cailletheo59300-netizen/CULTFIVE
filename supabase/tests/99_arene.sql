@@ -38,13 +38,13 @@ begin
   perform tst.ok((rb ->> 'matched')::bool and (rb -> 'duel' ->> 'id')::uuid = v_duel
                  and (rb -> 'duel' -> 'opponent' ->> 'id')::uuid = a, 'B affronte le duel de A');
   q := public.arena_question(v_duel, 1);
-  perform tst.ok((q ->> 'them_ms') is not null and (q ->> 'seconds')::int = 15, 'temps de l''adversaire, sans sa réponse');
+  perform tst.ok((q ->> 'them_ms') is not null and (q ->> 'seconds')::int = 25, 'temps de l''adversaire, sans sa réponse');
   perform tst.ok(not (q ? 'answer'), 'pas de réponse dans la question');
   ans := public.arena_answer(v_duel, 1, tst.correct_given((q ->> 'id')::uuid), 3000);
   perform tst.ok((ans ->> 'is_correct')::bool and (ans -> 'them' ->> 'is_correct')::bool, 'côte à côte : sa réponse après la mienne');
-  -- Trop tard (15 s + 3 s) : faux, même avec la bonne réponse.
+  -- Trop tard (25 s + 3 s) : faux, même avec la bonne réponse.
   q := public.arena_question(v_duel, 2);
-  perform tst.tick('19 seconds');
+  perform tst.tick('29 seconds');
   ans := public.arena_answer(v_duel, 2, tst.correct_given((q ->> 'id')::uuid), 3000);
   perform tst.ok(not (ans ->> 'is_correct')::bool and (ans ->> 'late')::bool, 'chrono dépassé : faux');
   for i in 3 .. 7 loop

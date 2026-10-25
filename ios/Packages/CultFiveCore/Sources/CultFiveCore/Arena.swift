@@ -91,7 +91,7 @@ public struct ArenaDuel: Codable, Hashable, Identifiable, Sendable {
     }
 
     public init(id: UUID = UUID(), status: String = "open", createdAt: Date? = nil, finishedAt: Date? = nil, total: Int = 7,
-                seconds: Int = 15, opponent: Opponent? = nil, me: Side = Side(), myTurn: Bool = true, winner: String? = nil,
+                seconds: Int = 25, opponent: Opponent? = nil, me: Side = Side(), myTurn: Bool = true, winner: String? = nil,
                 result: Outcome? = nil) {
         self.id = id
         self.status = status
@@ -138,17 +138,17 @@ public struct ArenaQuestionResponse: Decodable, Sendable {
         if json["expired"]?.boolValue == true {
             question = nil
             expired = true
-            seconds = 15
+            seconds = 25
             themMs = nil
         } else {
             question = try Question(from: decoder)
             expired = false
-            seconds = json["seconds"]?.doubleValue.map { Int($0) } ?? 15
+            seconds = json["seconds"]?.doubleValue.map { Int($0) } ?? 25
             themMs = json["them_ms"]?.doubleValue.map { Int($0) }
         }
     }
 
-    public init(question: Question?, seconds: Int = 15, themMs: Int? = nil) {
+    public init(question: Question?, seconds: Int = 25, themMs: Int? = nil) {
         self.question = question
         self.expired = question == nil
         self.seconds = seconds
@@ -401,7 +401,7 @@ public struct ArenaOverview: Codable, Hashable, Sendable {
             case streakChest = "streak_chest"
         }
 
-        public init(questions: Int = 7, seconds: Int = 15, win: Int = 3, draw: Int = 1, streakFrom: Int = 3, streakChest: Int = 5) {
+        public init(questions: Int = 7, seconds: Int = 25, win: Int = 3, draw: Int = 1, streakFrom: Int = 3, streakChest: Int = 5) {
             self.questions = questions
             self.seconds = seconds
             self.win = win

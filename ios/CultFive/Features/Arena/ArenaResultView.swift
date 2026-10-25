@@ -1,8 +1,9 @@
 import SwiftUI
 import CultFiveCore
 
-/// Bilan d'un duel classé : victoire, défaite ou égalité (points, coffres, classement de la semaine), ou « Ton duel
-/// est en jeu » quand personne ne l'a encore joué (jamais « en attente de joueurs »).
+/// Bilan d'un duel classé : victoire, défaite ou égalité (points, coffres, classement de la semaine). Le score de
+/// l'adversaire ne se découvre qu'ici. Si personne n'a encore joué ce duel : une simple fin de partie (« Bien joué ! »,
+/// son score) ; le résultat arrivera tout seul (notification, « Mes duels »), sans jamais parler d'attente.
 struct ArenaResultView: View {
     let result: ArenaDuelResult
     let me: String
@@ -18,7 +19,7 @@ struct ArenaResultView: View {
         case "me": return "Victoire"
         case "opponent": return "Défaite"
         case "draw": return "Égalité"
-        default: return duel.opponent == nil ? "Ton duel est en jeu" : "Ton adversaire joue"
+        default: return duel.me.score * 2 >= duel.total ? "Bien joué !" : "Partie terminée"
         }
     }
 
@@ -35,12 +36,12 @@ struct ArenaResultView: View {
                         .scaleEffect(shown ? 1 : 0.6)
                         .opacity(shown ? 1 : 0)
                         .padding(.top, Space.xl)
-                    faceOff
                     if duel.isFinished {
+                        faceOff
                         pointsCard
                         bonuses
                     } else {
-                        waitingCard
+                        myScore
                     }
                     answersCard
                 }
@@ -50,7 +51,7 @@ struct ArenaResultView: View {
             .scrollIndicators(.hidden)
             .safeAreaInset(edge: .bottom) {
                 VStack(spacing: 4) {
-                    Button(action: onNext) { Text(duel.isFinished ? "Duel suivant" : "Lancer un autre duel") }
+                    Button(action: onNext) { Text("Duel suivant") }
                         .buttonStyle(.sun)
                     Button("Retour à l'Arène", action: onClose)
                         .buttonStyle(TextLinkStyle(color: .white))
@@ -208,35 +209,25 @@ struct ArenaResultView: View {
         }
     }
 
-    // MARK: En jeu
+    // MARK: Fin de partie (personne n'a encore joué ce duel)
 
-    private var waitingCard: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            step(1, duel.opponent == nil ? "Ton duel est ouvert à toute l'Arène" : "\(duel.opponent?.handle ?? "Ton adversaire") a pris ton duel")
-            step(2, duel.opponent == nil ? "Le premier joueur qui lance un duel classé tombe sur toi"
-                                         : "Il répond aux mêmes questions en ce moment")
-            step(3, "Tu reçois le résultat et tes points dès qu'il a fini")
-            HStack(spacing: 10) {
-                Image(systemName: "bell.badge.fill").foregroundStyle(Color.sun)
-                Text("On te prévient par notification").font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(.white)
+    private var myScore: some View {
+        VStack(spacing: 6) {
+            ArenaAvatar(handle: me, size: 72, ring: Color.sun, me: true)
+            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                Text("\(duel.me.score)")
+                    .font(.system(size: 72, weight: .black, design: .rounded)).monospacedDigit()
+                    .foregroundStyle(.white)
+                Text("/\(duel.total)")
+                    .font(.system(size: 34, weight: .black, design: .rounded)).monospacedDigit()
+                    .foregroundStyle(.white.opacity(0.6))
             }
-            .padding(.top, 2)
+            Text(duel.me.score > 1 ? "bonnes réponses" : "bonne réponse")
+                .font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.7))
         }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-    }
-
-    private func step(_ n: Int, _ text: String) -> some View {
-        HStack(alignment: .top, spacing: 12) {
-            Text("\(n)")
-                .font(.system(.subheadline, design: .rounded).weight(.black))
-                .foregroundStyle(Color.inkFixed)
-                .frame(width: 26, height: 26)
-                .background(Color.sun, in: Circle())
-            Text(text).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(.white)
-                .fixedSize(horizontal: false, vertical: true)
-        }
+        .frame(maxWidth: .infinity)
+        .scaleEffect(shown ? 1 : 0.8)
+        .opacity(shown ? 1 : 0)
     }
 
     // MARK: Réponses

@@ -282,15 +282,14 @@ struct ArenaDuelRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            if let opponent = duel.opponent {
+            if let opponent = duel.opponent, duel.isFinished {
                 ArenaAvatar(handle: opponent.handle, size: 38)
             } else {
-                Circle().strokeBorder(Color.brand.opacity(0.6), style: StrokeStyle(lineWidth: 2, dash: [4, 4]))
-                    .frame(width: 38, height: 38)
-                    .overlay(Image(systemName: "hourglass").font(.caption.weight(.heavy)).foregroundStyle(Color.brand))
+                ArenaCrest().frame(width: 38, height: 38)
             }
             VStack(alignment: .leading, spacing: 2) {
-                ArenaHandle(handle: duel.opponent?.handle ?? "Duel en jeu", champion: duel.opponent?.champion ?? false)
+                ArenaHandle(handle: duel.isFinished ? (duel.opponent?.handle ?? "Duel classé") : "Duel classé",
+                            champion: duel.isFinished && (duel.opponent?.champion ?? false))
                 Text(detail).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(detailColor)
             }
             Spacer()
@@ -309,8 +308,7 @@ struct ArenaDuelRow: View {
         case "opponent": return "Perdu \(duel.me.score) – \(duel.opponent?.score ?? 0)"
         case "draw": return "Égalité \(duel.me.score) – \(duel.opponent?.score ?? 0)"
         default:
-            return duel.opponent == nil ? "Ton score \(duel.me.score)/\(duel.total) · le prochain joueur t'affronte"
-                                        : "\(duel.opponent?.handle ?? "Ton adversaire") joue en ce moment"
+            return "\(duel.me.score)/\(duel.total) · résultat bientôt"
         }
     }
 

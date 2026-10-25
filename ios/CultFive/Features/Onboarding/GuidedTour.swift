@@ -61,7 +61,7 @@ enum TourID: String, CaseIterable {
             ]
         case .friends:
             return [
-                Step(title: "Le duel classé", text: "Touche « Trouver un adversaire » : tu affrontes un vrai joueur sur 7 questions, 15 s chacune. Jamais d'attente : tu joues tout de suite.",
+                Step(title: "Le duel classé", text: "Touche « Trouver un adversaire » : tu affrontes un vrai joueur sur 7 questions, 25 s chacune. Tu joues tout de suite et tu découvres son score à la fin.",
                      symbol: "bolt.horizontal.fill"),
                 Step(title: "Les points de la semaine", text: "Victoire +3, égalité +1, défaite 0 : tu ne perds jamais de points. Le classement repart à zéro chaque lundi.",
                      symbol: "chart.bar.fill"),

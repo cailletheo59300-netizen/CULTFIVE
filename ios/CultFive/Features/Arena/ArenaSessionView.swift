@@ -1,9 +1,9 @@
 import SwiftUI
 import CultFiveCore
 
-// Duel classé (D-111) : « Trouver un adversaire » prend le plus ancien duel ouvert d'un autre joueur (on l'affronte
-// côte à côte, ses réponses se dévoilent après les nôtres) ; s'il n'y en a pas, on ouvre un duel à l'Arène que le
-// prochain joueur prendra. 7 questions, 15 s chacune, chrono tenu par le serveur. Jamais d'écran d'attente.
+// Duel classé (D-111) : « Trouver un adversaire » prend le plus ancien duel ouvert d'un autre joueur ; s'il n'y en a pas, on ouvre un duel à l'Arène que le
+// prochain joueur prendra. 7 questions, 25 s chacune, chrono tenu par le serveur. Rien de l'adversaire pendant la
+// partie : son score se découvre à la fin. Jamais d'écran d'attente.
 
 @MainActor
 @Observable
@@ -43,7 +43,7 @@ final class ArenaSessionModel {
 
     var duel: ArenaDuel? { match?.duel }
     var total: Int { duel?.total ?? 7 }
-    var seconds: Int { duel?.seconds ?? 15 }
+    var seconds: Int { duel?.seconds ?? 25 }
     var opponent: ArenaDuel.Opponent? { duel?.opponent }
     var myScore: Int { mine.filter { $0 == .correct }.count }
     var theirScore: Int { theirs.filter { $0 == .correct }.count }
@@ -262,7 +262,6 @@ struct ArenaSessionView: View {
                 .transition(.opacity)
                 .task {
                     if model.takeGameCount() { app.noteGameFinished() }
-                    if result.duel.isWaiting { app.askNotificationsAfterSocial() }
                 }
         }
     }
@@ -314,7 +313,7 @@ private struct ArenaSearchingView: View {
                 Text("Recherche d'un adversaire…")
                     .font(.system(.title3, design: .rounded).weight(.black))
                     .foregroundStyle(.white)
-                Text("7 questions mélangées · 15 s chacune")
+                Text("7 questions mélangées · 25 s chacune")
                     .font(.cfFootnote.weight(.bold))
                     .foregroundStyle(.white.opacity(0.7))
                 Spacer()
@@ -346,7 +345,7 @@ private struct ArenaReadyView: View {
                     Spacer()
                     Button(action: onClose) { CloseCircle() }.accessibilityLabel("Fermer")
                 }
-                Text(model.match?.matched == true ? "Adversaire trouvé" : "Duel lancé")
+                Text(model.match?.matched == true ? "Adversaire trouvé" : "Duel classé")
                     .labelCaps(Color.sun)
                 faceOff
                 rules
@@ -361,7 +360,22 @@ private struct ArenaReadyView: View {
         .onAppear { withAnimation(.spring(response: 0.55, dampingFraction: 0.7)) { shown = true } }
     }
 
-    private var faceOff: some View {
+    @ViewBuilder private var faceOff: some View {
+        if model.opponent == nil {
+            // Pas encore d'adversaire : on joue, tout simplement.
+            VStack(spacing: 10) {
+                ArenaCrest().frame(width: 130)
+                    .scaleEffect(shown ? 1 : 0.5)
+                ArenaAvatar(handle: me, size: 54, ring: Color.sun, me: true)
+                Text(me).font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
+            }
+            .padding(.top, Space.m)
+        } else {
+            faceOffWithOpponent
+        }
+    }
+
+    private var faceOffWithOpponent: some View {
         HStack(alignment: .center, spacing: 0) {
             player(handle: me, detail: "Toi", me: true)
                 .offset(x: shown ? 0 : -160)
@@ -375,8 +389,6 @@ private struct ArenaReadyView: View {
                 player(handle: opponent.handle, detail: "\(opponent.weekPoints) pts cette semaine", me: false,
                        champion: opponent.champion)
                     .offset(x: shown ? 0 : 160)
-            } else {
-                mystery.offset(x: shown ? 0 : 160)
             }
         }
         .padding(.top, Space.l)
@@ -396,28 +408,11 @@ private struct ArenaReadyView: View {
         .frame(maxWidth: .infinity)
     }
 
-    /// Pas encore d'adversaire : une place en pointillés.
-    private var mystery: some View {
-        VStack(spacing: 8) {
-            Circle()
-                .strokeBorder(Color.white.opacity(0.55), style: StrokeStyle(lineWidth: 3, dash: [7, 6]))
-                .overlay(Text("?").font(.system(size: 40, weight: .black, design: .rounded)).foregroundStyle(.white.opacity(0.8)))
-                .frame(width: 92, height: 92)
-            Text("Ton adversaire").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
-            Text("le prochain à lancer un duel").font(.system(.caption, design: .rounded).weight(.bold))
-                .foregroundStyle(.white.opacity(0.7)).lineLimit(1).minimumScaleFactor(0.7)
-        }
-        .frame(maxWidth: .infinity)
-    }
-
     private var rules: some View {
         VStack(alignment: .leading, spacing: 12) {
-            if model.match?.matched == true, let opponent = model.opponent {
-                rule("person.fill.checkmark", "\(opponent.handle) a déjà joué ces questions : tu vois ses réponses après les tiennes")
-            } else {
-                rule("bolt.fill", "Tu joues maintenant. Ton duel est ouvert à toute l'Arène : le premier joueur qui lance un duel classé t'affronte")
-            }
-            rule("timer", "\(model.total) questions, \(model.seconds) s chacune")
+            rule("timer", "\(model.total) questions mélangées, \(model.seconds) s chacune")
+            rule("trophy.fill", model.opponent == nil ? "Le plus de bonnes réponses gagne ; à égalité, le plus rapide"
+                                                      : "Tu découvres le score de \(model.opponent?.handle ?? "ton adversaire") à la fin")
             rule("plus.circle.fill", "Victoire +3 pts · égalité +1 · défaite 0, tu ne perds jamais de points")
         }
         .padding(16)
@@ -436,85 +431,43 @@ private struct ArenaReadyView: View {
 
 // MARK: - Piste des scores
 
-/// En haut de chaque question : toi et ton adversaire, score et une case par question (verte, rouge, à jouer).
+/// En haut de chaque question : ta progression (une case par question : juste, faux, à jouer) et ton score.
+/// Rien de l'adversaire pendant la partie : son score se découvre à la fin.
 struct ArenaScoreboard: View {
     let model: ArenaSessionModel
     let me: String
 
     var body: some View {
-        VStack(spacing: 8) {
-            lane(handle: me, score: model.myScore, marks: model.mine, color: ArenaPalette.me, me: true)
-            lane(handle: model.opponent?.handle ?? "Ton adversaire", score: model.opponent == nil ? nil : model.theirScore,
-                 marks: model.theirs, color: ArenaPalette.them, me: false)
-            status
+        HStack(spacing: 10) {
+            ArenaAvatar(handle: me, size: 28, me: true)
+            HStack(spacing: 4) {
+                ForEach(Array(model.mine.enumerated()), id: \.offset) { index, mark in
+                    RoundedRectangle(cornerRadius: 3, style: .continuous)
+                        .fill(fill(mark, current: index == model.position - 1))
+                        .frame(height: 8)
+                }
+            }
+            Text("\(model.myScore)")
+                .font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
+                .foregroundStyle(ArenaPalette.me)
+                .frame(minWidth: 24, alignment: .trailing)
+                .contentTransition(.numericText())
+                .animation(Motion.standard, value: model.myScore)
         }
         .padding(.horizontal, Space.gutter)
         .padding(.top, Space.s)
         .padding(.bottom, 10)
         .background(Color.paperRaised.ignoresSafeArea(edges: .top))
         .overlay(alignment: .bottom) { Rectangle().fill(Color.hairline).frame(height: 1) }
-    }
-
-    private func lane(handle: String, score: Int?, marks: [ArenaSessionModel.Mark], color: Color, me: Bool) -> some View {
-        HStack(spacing: 10) {
-            if me || model.opponent != nil {
-                ArenaAvatar(handle: handle, size: 28, me: me)
-            } else {
-                Circle().strokeBorder(Color.inkSoft.opacity(0.5), style: StrokeStyle(lineWidth: 2, dash: [3, 3]))
-                    .frame(width: 28, height: 28)
-            }
-            Text(me ? "Toi" : handle)
-                .font(.system(.subheadline, design: .rounded).weight(.black))
-                .foregroundStyle(Color.ink).lineLimit(1)
-                .frame(width: 92, alignment: .leading)
-            HStack(spacing: 4) {
-                ForEach(Array(marks.enumerated()), id: \.offset) { index, mark in
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                        .fill(fill(mark, current: index == model.position - 1 && me, color: color))
-                        .frame(height: 8)
-                }
-            }
-            Text(score.map(String.init) ?? "–")
-                .font(.system(.title3, design: .rounded).weight(.black)).monospacedDigit()
-                .foregroundStyle(me ? color : Color.ink)
-                .frame(width: 24, alignment: .trailing)
-                .contentTransition(.numericText())
-                .animation(Motion.standard, value: score)
-        }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(me ? "Toi" : handle) : \(score ?? 0) bonnes réponses")
+        .accessibilityLabel("Question \(model.position) sur \(model.total), \(model.myScore) bonnes réponses")
     }
 
-    private func fill(_ mark: ArenaSessionModel.Mark, current: Bool, color: Color) -> Color {
+    private func fill(_ mark: ArenaSessionModel.Mark, current: Bool) -> Color {
         switch mark {
         case .correct: return .correct
         case .wrong: return .wrong
-        case .pending: return current ? color.opacity(0.55) : Color.hairline
+        case .pending: return current ? ArenaPalette.me.opacity(0.55) : Color.hairline
         }
-    }
-
-    /// Ce que l'adversaire a fait sur cette question : son temps avant, sa réponse après.
-    @ViewBuilder private var status: some View {
-        if let opponent = model.opponent {
-            if let them = model.lastThem {
-                statusLine(them.isCorrect == true ? "\(opponent.handle) avait juste" : "\(opponent.handle) s'était trompé",
-                           ms: them.countedMs, good: them.isCorrect == true)
-            } else if model.phase.isAnswering, let ms = model.themMs {
-                statusLine("\(opponent.handle) a répondu en", ms: ms, good: nil)
-            }
-        }
-    }
-
-    private func statusLine(_ text: String, ms: Int?, good: Bool?) -> some View {
-        HStack(spacing: 6) {
-            Circle().fill(good.map { $0 ? Color.correct : Color.wrong } ?? ArenaPalette.them).frame(width: 7, height: 7)
-            Text(text).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.inkSoft)
-            if let ms {
-                Text(String(format: "%.1f s", Double(ms) / 1000))
-                    .font(.system(.caption, design: .rounded).weight(.black)).monospacedDigit().foregroundStyle(Color.ink)
-            }
-            Spacer()
-        }
-        .transition(.opacity)
     }
 }
