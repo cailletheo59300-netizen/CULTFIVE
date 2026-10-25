@@ -16,7 +16,7 @@ begin
                   where q.id in (select unnest(question_ids) from public.duels where id = did)), 'que de l''histoire');
   perform tst.ok((select count(*) from public.questions q where q.id in (select unnest(question_ids) from public.duels where id = did)
                     and q.difficulty_effective >= 55) >= 8, 'surtout des questions difficiles');
-  perform tst.throws(format('select public.duel_create(%L, 7)', b), 'invalid_count');
+  perform tst.throws(format('select public.duel_create(%L, 6)', b), 'invalid_count');
   perform tst.throws(format('select public.duel_create(%L, 5, null, %L)', b, 'extreme'), 'invalid_difficulty');
 
   -- Tous les domaines cochés = tous les domaines.

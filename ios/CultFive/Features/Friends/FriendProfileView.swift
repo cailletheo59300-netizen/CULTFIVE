@@ -18,6 +18,7 @@ struct FriendProfileView: View {
     @State private var confirmRemove = false
     @State private var confirmBlock = false
     @State private var report: ReportTarget?
+    @State private var creating = false
 
     var body: some View {
         ScrollView {
@@ -25,17 +26,37 @@ struct FriendProfileView: View {
                 header
                 if let profile {
                     todayCard(profile)
-                    Button { showSetup = true } label: {
-                        Label("Défier \(handle)", systemImage: "bolt.fill").frame(maxWidth: .infinity)
+                    VStack(spacing: 6) {
+                        Button { quickDuel() } label: {
+                            HStack(spacing: 8) {
+                                if creating { ProgressView().controlSize(.small).tint(.white) }
+                                Label("Défier \(handle)", systemImage: "bolt.fill")
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.ink)
+                        .disabled(creating)
+                        HStack(spacing: 4) {
+                            Text("7 questions · 25 s")
+                            Text("·")
+                            Button("Plus de réglages") { showSetup = true }.foregroundStyle(Color.brand)
+                        }
+                        .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
                     }
-                    .buttonStyle(.ink)
-                    headToHead(profile)
+                    HeadToHeadCard(me: app.profile?.handle ?? "Toi", friend: handle, h: profile.headToHead)
                     if !profile.duels.isEmpty {
                         VStack(alignment: .leading, spacing: Space.s) {
-                            Text("Derniers duels").labelCaps()
-                            ForEach(profile.duels) { duel in
-                                DuelRow(duel: duel, showsDate: true, onOpen: { activeDuel = DuelLaunch(id: duel.id) })
+                            Text("Nos duels").labelCaps()
+                            VStack(spacing: 0) {
+                                ForEach(Array(profile.duels.enumerated()), id: \.element.id) { index, duel in
+                                    if index > 0 { Hairline().padding(.leading, 12) }
+                                    Button { activeDuel = DuelLaunch(id: duel.id) } label: {
+                                        DuelHistoryRow(duel: duel, showsOpponent: false)
+                                    }
+                                    .buttonStyle(.row)
+                                }
                             }
+                            .popCard(padding: 0, radius: 20)
                         }
                     }
                     if let showcase = profile.showcase, !showcase.isEmpty {
@@ -118,6 +139,22 @@ struct FriendProfileView: View {
         .refreshable { await load() }
     }
 
+    /// Défi en un appui : format par défaut (7 questions, 25 s).
+    private func quickDuel() {
+        creating = true
+        Task {
+            do {
+                let duel = try await app.service.duelCreate(friend: friendId, settings: DuelSettings())
+                Haptics.soft()
+                app.askNotificationsAfterSocial()
+                activeDuel = DuelLaunch(id: duel.id)
+            } catch {
+                app.show(error, "Impossible de lancer le duel.")
+            }
+            creating = false
+        }
+    }
+
     private func load() async {
         do {
             profile = try await app.service.friendProfile(friendId)
@@ -175,57 +212,6 @@ struct FriendProfileView: View {
         .popCard(padding: 14)
         .accessibilityElement(children: .combine)
     }
-
-    @ViewBuilder
-    private func headToHead(_ profile: FriendProfile) -> some View {
-        let h = profile.headToHead
-        VStack(alignment: .leading, spacing: Space.m) {
-            Text("Face-à-face").labelCaps()
-            if h.played == 0 {
-                Text("Pas encore de duel terminé entre vous. Lance le premier !")
-                    .font(.cfCallout).foregroundStyle(Color.inkSoft)
-            } else {
-                HStack(alignment: .center) {
-                    score("Toi", h.wins, highlight: h.wins > h.losses)
-                    Text("–").font(.system(size: 34, weight: .black, design: .rounded)).foregroundStyle(Color.inkSoft)
-                    score(handle, h.losses, highlight: h.losses > h.wins)
-                }
-                .frame(maxWidth: .infinity)
-                VStack(alignment: .leading, spacing: 6) {
-                    line("Duels terminés", "\(h.played)" + (h.draws > 0 ? " dont \(h.draws) égalité\(h.draws > 1 ? "s" : "")" : ""))
-                    if let streak = h.streak, streak.count >= 2 {
-                        line("Série en cours", streak.who == "me" ? "\(streak.count) victoires pour toi"
-                                                                  : "\(streak.count) victoires pour \(handle)")
-                    }
-                    if let mine = h.myRate, let theirs = h.theirRate {
-                        line("Bonnes réponses", "toi \(mine) % · \(handle) \(theirs) %")
-                    }
-                    if let best = h.myBest {
-                        line("Ton record", "\(best.score)/\(best.total)")
-                    }
-                    line("Questions jouées", "\(h.questions)")
-                }
-            }
-        }
-        .popCard(padding: 16)
-    }
-
-    private func score(_ name: String, _ value: Int, highlight: Bool) -> some View {
-        VStack(spacing: 2) {
-            Text("\(value)").numeral(size: 52).foregroundStyle(highlight ? Color.brand : Color.ink)
-            Text(name).font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft).lineLimit(1)
-        }
-        .frame(maxWidth: .infinity)
-    }
-
-    private func line(_ label: String, _ value: String) -> some View {
-        HStack {
-            Text(label).foregroundStyle(Color.inkSoft)
-            Spacer()
-            Text(value).fontWeight(.semibold).foregroundStyle(Color.ink).multilineTextAlignment(.trailing)
-        }
-        .font(.cfCallout)
-    }
 }
 
 /// Réglages d'un duel : nombre de questions, domaines, difficulté.
@@ -233,12 +219,17 @@ struct DuelSetupSheet: View {
     /// Nom affiché (« Duel contre Théo ») ; `friendId` nil : défi par lien.
     let opponentName: String?
     let friendId: UUID?
+    /// Réglages de départ (feuille « Contre un ami »).
+    var initial: DuelSettings? = nil
+    /// Si présent : on choisit seulement le format (bouton « Valider »), sans créer de duel.
+    var onSettings: ((DuelSettings) -> Void)? = nil
     var onCreated: (Duel) -> Void
 
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @State private var settings = DuelSettings()
     @State private var selected: Set<String> = []
+    @State private var started = false
     @State private var busy = false
     @State private var error: String?
 
@@ -246,14 +237,18 @@ struct DuelSetupSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
-                    Text(opponentName.map { "Duel contre \($0)" } ?? "Défi par lien").font(.cfDisplay)
-                    Text("Les mêmes questions pour vous deux, chacun à son rythme pendant 48 h. Sans effet sur l'Elo.")
+                    Text(onSettings != nil ? "Réglages du duel" : opponentName.map { "Duel contre \($0)" } ?? "Défi par lien")
+                        .font(.cfDisplay)
+                    Text("Les mêmes questions pour vous deux, chacun quand il veut pendant 48 h. Sans effet sur l'Elo ni sur les points de la semaine.")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                     option("Nombre de questions") {
                         ForEach(DuelSettings.counts, id: \.self) { n in
                             chip("\(n)", on: settings.count == n) { settings.count = n }
                         }
                     }
+                    Label(settings.count == DuelSettings.quickCount ? "25 s par question, comme à l'Arène." : "Sans chrono : prends ton temps.",
+                          systemImage: settings.count == DuelSettings.quickCount ? "timer" : "hourglass")
+                        .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
                     option("Domaines") {
                         chip("Tous", on: selected.isEmpty) { selected = [] }
                         ForEach(app.domains, id: \.id) { domain in
@@ -279,7 +274,11 @@ struct DuelSetupSheet: View {
                 Button { create() } label: {
                     HStack(spacing: 8) {
                         if busy { ProgressView().controlSize(.small).tint(.white) }
-                        Label("Lancer le duel", systemImage: "bolt.fill")
+                        if onSettings != nil {
+                            Label("Valider", systemImage: "checkmark")
+                        } else {
+                            Label("Lancer le duel", systemImage: "bolt.fill")
+                        }
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -295,6 +294,12 @@ struct DuelSetupSheet: View {
             }
         }
         .presentationDragIndicator(.visible)
+        .onAppear {
+            guard !started, let initial else { return }
+            started = true
+            settings = initial
+            selected = Set(initial.domains)
+        }
     }
 
     private func option<Chips: View>(_ title: String, @ViewBuilder chips: () -> Chips) -> some View {
@@ -324,6 +329,11 @@ struct DuelSetupSheet: View {
         busy = true
         error = nil
         settings.domains = app.domains.map(\.id).filter { selected.contains($0) }
+        if let onSettings {
+            busy = false
+            onSettings(settings)
+            return
+        }
         Task {
             do {
                 let duel = try await app.service.duelCreate(friend: friendId, settings: settings)

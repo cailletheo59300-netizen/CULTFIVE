@@ -25,8 +25,8 @@ begin
   end loop;
   perform tst.ok((v ->> 'finished')::bool, 'A a fini');
   res := public.duel_result(did);
-  perform tst.ok(res ->> 'status' = 'active' and res -> 'opponent' ->> 'score' is not null and (res -> 'opponent' ->> 'answered')::int = 0,
-                 'A voit que B n''a pas joué');
+  perform tst.ok(res ->> 'status' = 'active' and res -> 'opponent' ->> 'score' is null and (res -> 'opponent' ->> 'answered')::int = 0,
+                 'A voit que B n''a pas joué (sans score avant la fin)');
 
   -- C (non joueur) ne voit rien.
   perform tst.login(c);

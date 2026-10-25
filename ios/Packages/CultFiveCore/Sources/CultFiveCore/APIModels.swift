@@ -1201,10 +1201,14 @@ public struct Duel: Codable, Hashable, Identifiable, Sendable {
     /// auto · easy · medium · hard
     public let difficulty: String?
     public let createdAt: String?
+    /// Chrono par question (format 7 questions : 25 s) ; nil = sans chrono (anciens formats).
+    public let seconds: Int?
+    public let finishedAt: String?
 
     enum CodingKeys: String, CodingKey {
-        case id, code, status, opponent, me, winner, total, domains, difficulty
+        case id, code, status, opponent, me, winner, total, domains, difficulty, seconds
         case createdAt = "created_at"
+        case finishedAt = "finished_at"
         case expiresAt = "expires_at"
         case iAmChallenger = "i_am_challenger"
         case myTurn = "my_turn"
@@ -1232,16 +1236,56 @@ public enum DuelDifficulty: String, CaseIterable, Hashable, Sendable {
 
 /// Réglages d'un duel.
 public struct DuelSettings: Hashable, Sendable {
-    public static let counts = [5, 10, 15, 20]
+    public static let counts = [5, 7, 10, 15, 20]
+    /// Format par défaut (D-112) : 7 questions à 25 s, comme l'Arène.
+    public static let quickCount = 7
     public var count: Int
     /// Vide = tous les domaines.
     public var domains: [String]
     public var difficulty: DuelDifficulty
 
-    public init(count: Int = 5, domains: [String] = [], difficulty: DuelDifficulty = .auto) {
+    public init(count: Int = DuelSettings.quickCount, domains: [String] = [], difficulty: DuelDifficulty = .auto) {
         self.count = count
         self.domains = domains
         self.difficulty = difficulty
+    }
+}
+
+/// Historique des duels entre amis terminés (D-112), 30 par page ; le bilan n'est donné qu'en première page.
+public struct DuelHistory: Decodable, Hashable, Sendable {
+    public struct Rival: Decodable, Hashable, Identifiable, Sendable {
+        public let id: UUID
+        public let handle: String
+        public let played: Int
+        public let wins: Int
+        public let losses: Int
+    }
+
+    public struct Summary: Decodable, Hashable, Sendable {
+        public let played: Int
+        public let wins: Int
+        public let losses: Int
+        public let draws: Int
+        public let rivals: [Rival]
+
+        public init(played: Int, wins: Int, losses: Int, draws: Int, rivals: [Rival] = []) {
+            self.played = played
+            self.wins = wins
+            self.losses = losses
+            self.draws = draws
+            self.rivals = rivals
+        }
+    }
+
+    public let duels: [Duel]
+    public let summary: Summary?
+    /// Curseur de la page suivante (nil : plus rien).
+    public let next: String?
+
+    public init(duels: [Duel], summary: Summary? = nil, next: String? = nil) {
+        self.duels = duels
+        self.summary = summary
+        self.next = next
     }
 }
 

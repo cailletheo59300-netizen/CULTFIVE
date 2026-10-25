@@ -197,7 +197,7 @@ public actor SupabaseAPI {
     /// envoyées avec un identifiant que le serveur reconnaît). Délai court : mieux vaut un nouvel essai qu'une attente de 20 s.
     static let retryableFunctions: Set<String> = [
         "achievements_mine", "ad_status", "album_overview", "app_settings", "daily_history", "daily_question", "daily_result",
-        "daily_review", "daily_status", "domain_stats", "duel_question", "duel_result", "duels_mine", "errors_overview",
+        "daily_review", "daily_status", "domain_stats", "duel_question", "duel_result", "duels_history", "duels_mine", "errors_overview",
         "friend_profile", "friends_overview", "handle_available", "league_day_result", "league_question", "league_quiz_question",
         "league_quiz_result", "league_standings", "leagues_mine", "onboarding_pack", "play_pack", "profile_me",
         "progression_overview", "quests_overview", "referral_overview", "search_handles", "season_overview", "shop_overview",

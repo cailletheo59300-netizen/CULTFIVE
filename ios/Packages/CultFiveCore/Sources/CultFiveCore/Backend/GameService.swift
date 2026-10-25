@@ -117,6 +117,8 @@ public protocol GameService: Sendable {
     func duelQuestion(duel: UUID, position: Int) async throws -> DailyQuestionResponse
     func duelAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict
     func duelResult(_ duel: UUID) async throws -> Duel
+    /// Historique des duels entre amis ; `before` : curseur `next` de la page précédente.
+    func duelsHistory(before: String?) async throws -> DuelHistory
     func searchHandles(_ query: String) async throws -> [HandleSearchResult]
     func requestFriend(handle: String) async throws -> FriendRequestResult
     func respondFriend(friendship: UUID, accept: Bool) async throws
@@ -345,7 +347,7 @@ public struct LiveGameService: GameService {
     public func duels() async throws -> [Duel] { try await api.rpc("duels_mine") }
 
     public func duelCreate(friend: UUID?) async throws -> Duel {
-        try await api.rpc("duel_create", ["p_friend": friend.map { .string($0.uuidString) } ?? .null])
+        try await duelCreate(friend: friend, settings: DuelSettings())
     }
 
     public func duelCreate(friend: UUID?, settings: DuelSettings) async throws -> Duel {
@@ -382,6 +384,10 @@ public struct LiveGameService: GameService {
     }
 
     public func duelResult(_ duel: UUID) async throws -> Duel { try await api.rpc("duel_result", ["p_duel": .string(duel.uuidString)]) }
+
+    public func duelsHistory(before: String?) async throws -> DuelHistory {
+        try await api.rpc("duels_history", ["p_before": before.map(JSONValue.string) ?? .null])
+    }
 
     public func searchHandles(_ query: String) async throws -> [HandleSearchResult] {
         try await api.rpc("search_handles", ["p_query": .string(query)])
@@ -758,6 +764,12 @@ public extension GameService {
 
     /// Par défaut (démo) : le duel de base.
     func duelCreate(friend: UUID?, settings: DuelSettings) async throws -> Duel { try await duelCreate(friend: friend) }
+
+    /// Par défaut (démo) : les duels terminés de la liste.
+    func duelsHistory(before: String?) async throws -> DuelHistory {
+        guard before == nil else { return DuelHistory(duels: []) }
+        return DuelHistory(duels: try await duels().filter { $0.isFinished || $0.status == "expired" })
+    }
 
     func duelRematch(_ duel: UUID) async throws -> Duel {
         throw BackendError.server(status: 400, code: "duel_not_found", message: "")

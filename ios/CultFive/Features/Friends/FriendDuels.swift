@@ -1,0 +1,701 @@
+import SwiftUI
+import CultFiveCore
+
+// Jeu entre amis (D-112) : défier un ami en un appui (7 questions, 25 s), la rangée « Mes amis » avec ce qui se passe
+// entre nous, la carte d'invitation quand on n'a pas encore d'amis, et l'historique de tous les duels entre amis.
+// Les duels entre amis ne rapportent pas de points de la semaine : ils se jouent pour l'honneur, et l'historique les garde.
+
+// MARK: - Ce qui se passe avec un ami
+
+/// La bulle au-dessus d'un ami : un défi qui l'attend, ou le score des 30 derniers jours.
+struct FriendDuelBadge: Equatable {
+    enum Tone { case action, ahead, behind, even }
+
+    let text: String
+    let tone: Tone
+
+    var color: Color {
+        switch tone {
+        case .action: return .brand
+        case .ahead: return .correct
+        case .behind: return Color(hex: 0xF76707)
+        case .even: return .inkSoft
+        }
+    }
+
+    /// `duels` : la liste « duels_mine » (30 derniers jours, sans l'Arène).
+    static func make(friend: UUID, duels: [Duel]) -> FriendDuelBadge? {
+        let ours = duels.filter { $0.opponent?.id == friend }
+        if let waiting = ours.first(where: { $0.myTurn }) {
+            if !waiting.iAmChallenger && waiting.me.answered == 0 { return FriendDuelBadge(text: "t'a défié !", tone: .action) }
+            return FriendDuelBadge(text: "à toi de jouer", tone: .action)
+        }
+        let done = ours.filter(\.isFinished)
+        guard !done.isEmpty else { return nil }
+        let wins = done.filter { $0.winner == "me" }.count
+        let losses = done.filter { $0.winner == "opponent" }.count
+        if wins > losses { return FriendDuelBadge(text: "\(wins)–\(losses) pour toi", tone: .ahead) }
+        if losses > wins { return FriendDuelBadge(text: "\(losses)–\(wins) pour lui", tone: .behind) }
+        return FriendDuelBadge(text: "\(wins)–\(losses)", tone: .even)
+    }
+}
+
+// MARK: - Rangée « Mes amis »
+
+/// En haut de « Entre amis » : un « + », puis les amis, ceux qui m'attendent d'abord. Toucher ouvre le profil.
+struct FriendsStrip: View {
+    let friends: [Friend]
+    let duels: [Duel]
+    let onAdd: () -> Void
+    let onFriend: (Friend) -> Void
+
+    private struct Item: Identifiable {
+        let friend: Friend
+        let badge: FriendDuelBadge?
+        var id: UUID { friend.id }
+    }
+
+    private var sorted: [Item] {
+        let items = friends.map { Item(friend: $0, badge: FriendDuelBadge.make(friend: $0.id, duels: duels)) }
+        return items.enumerated().sorted { a, b in
+            let pa = priority(a.element.badge), pb = priority(b.element.badge)
+            return pa != pb ? pa < pb : a.offset < b.offset
+        }
+        .map { $0.element }
+    }
+
+    private func priority(_ badge: FriendDuelBadge?) -> Int {
+        guard let badge else { return 2 }
+        return badge.tone == .action ? 0 : 1
+    }
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(alignment: .top, spacing: 14) {
+                Button(action: onAdd) {
+                    VStack(spacing: 6) {
+                        bubble(nil)
+                        Image(systemName: "plus")
+                            .font(.system(size: 22, weight: .black, design: .rounded))
+                            .foregroundStyle(Color.brand)
+                            .frame(width: 58, height: 58)
+                            .background(Color.brand.opacity(0.1), in: Circle())
+                            .overlay(Circle().strokeBorder(Color.brand.opacity(0.35), style: StrokeStyle(lineWidth: 1.5, dash: [4, 4])))
+                        Text("Ajouter").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.brand)
+                    }
+                    .frame(width: 76)
+                }
+                .buttonStyle(.row)
+                .accessibilityLabel("Ajouter un ami")
+
+                ForEach(sorted) { item in
+                    let friend = item.friend, badge = item.badge
+                    Button { onFriend(friend) } label: {
+                        VStack(spacing: 6) {
+                            bubble(badge)
+                            ArenaAvatar(handle: friend.handle, size: 58, ring: badge?.tone == .action ? Color.brand : nil)
+                                .overlay(alignment: .bottomTrailing) {
+                                    if friend.streak > 0 {
+                                        Text("\(friend.streak)")
+                                            .font(.system(size: 10, weight: .black, design: .rounded)).monospacedDigit()
+                                            .foregroundStyle(.white)
+                                            .padding(.horizontal, 5).frame(minWidth: 20, minHeight: 18)
+                                            .background(Color(hex: 0xF76707), in: Capsule())
+                                            .overlay(Capsule().strokeBorder(Color.paper, lineWidth: 2))
+                                            .accessibilityLabel("Série de \(friend.streak) jours")
+                                    }
+                                }
+                            Text(friend.handle)
+                                .font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
+                                .lineLimit(1).minimumScaleFactor(0.75)
+                        }
+                        .frame(width: 76)
+                    }
+                    .buttonStyle(.row)
+                    .accessibilityElement(children: .combine)
+                    .accessibilityHint(badge?.text ?? "Voir son profil")
+                }
+            }
+            .padding(.horizontal, Space.gutter)
+            .padding(.vertical, 2)
+        }
+        .padding(.horizontal, -Space.gutter)
+    }
+
+    /// Bulle de dialogue au-dessus de l'avatar ; place gardée vide pour aligner la rangée.
+    private func bubble(_ badge: FriendDuelBadge?) -> some View {
+        Text(badge?.text ?? " ")
+            .font(.system(size: 10.5, weight: .black, design: .rounded))
+            .foregroundStyle(badge?.tone == .action ? Color.white : badge?.color ?? .clear)
+            .lineLimit(1).minimumScaleFactor(0.7)
+            .padding(.horizontal, 7).frame(height: 20)
+            .background {
+                if let badge {
+                    Capsule().fill(badge.tone == .action ? badge.color : badge.color.opacity(0.13))
+                        .overlay(alignment: .bottom) {
+                            BubbleTail().fill(badge.tone == .action ? badge.color : badge.color.opacity(0.13))
+                                .frame(width: 8, height: 5).offset(y: 4.5)
+                        }
+                }
+            }
+            .frame(maxWidth: 76)
+    }
+}
+
+/// Petite pointe de bulle.
+private struct BubbleTail: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
+        path.closeSubpath()
+        return path
+    }
+}
+
+// MARK: - Carte « Invite un ami »
+
+/// Quand on n'a pas encore d'amis : une grande carte pour en faire venir (lien d'invitation, pseudo, défi par lien).
+struct InviteFriendsCard: View {
+    let code: String?
+    let onAdd: () -> Void
+    let onLinkDuel: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .center, spacing: 0) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Joue contre tes amis").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
+                    Text("Les mêmes questions pour vous deux, chacun quand il veut. Le score de l'autre se découvre à la fin.")
+                        .font(.system(.footnote, design: .rounded).weight(.bold))
+                        .foregroundStyle(.white.opacity(0.8))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 8)
+                HStack(spacing: -14) {
+                    Leon(color: .sun, pose: .wave).frame(width: 58)
+                    Leon(color: Color(hex: 0xFF8FB1), pose: .curious).frame(width: 58)
+                }
+                .accessibilityHidden(true)
+            }
+            if let code {
+                ShareLink(item: Brand.inviteURL(code: code),
+                          message: Text("Viens me défier sur \(Brand.name) ! 7 questions, 25 s chacune : on verra qui en sait le plus.")) {
+                    Label("Inviter un ami", systemImage: "square.and.arrow.up").frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.sun)
+            }
+            HStack(spacing: 10) {
+                Button(action: onAdd) {
+                    Label("Par pseudo", systemImage: "magnifyingglass").frame(maxWidth: .infinity, minHeight: 44)
+                }
+                .buttonStyle(SmallPillStyle(fill: .white.opacity(0.14), text: .white))
+                Button(action: onLinkDuel) {
+                    Label("Défi par lien", systemImage: "link").frame(maxWidth: .infinity, minHeight: 44)
+                }
+                .buttonStyle(SmallPillStyle(fill: .white.opacity(0.14), text: .white))
+            }
+        }
+        .padding(18)
+        .background(LinearGradient(colors: [Color(hex: 0x5B3BF5), Color(hex: 0x3A1FB8)], startPoint: .topLeading, endPoint: .bottomTrailing),
+                    in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .shadow(color: Color(hex: 0x3A1FB8).opacity(0.3), radius: 14, y: 8)
+    }
+}
+
+// MARK: - Feuille « Contre un ami »
+
+/// Défier un ami en un appui (format par défaut : 7 questions, 25 s), inviter par lien, ajouter un ami,
+/// ou changer le format.
+struct FriendChallengeSheet: View {
+    let friends: [Friend]
+    let duels: [Duel]
+    /// Duel créé : la feuille se ferme, l'écran appelant l'ouvre.
+    let onCreated: (Duel) -> Void
+    let onAddFriend: () -> Void
+
+    @Environment(AppModel.self) private var app
+    @Environment(\.dismiss) private var dismiss
+    @State private var settings = DuelSettings()
+    @State private var busy: UUID?
+    @State private var linkBusy = false
+    @State private var error: String?
+    @State private var showSettings = false
+
+    private let columns = [GridItem(.adaptive(minimum: 78), spacing: 12)]
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: Space.l) {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Contre un ami").font(.cfDisplay)
+                        Text("Touche un ami pour le défier. Pas de points de la semaine : juste l'honneur, et votre historique.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    formatLine
+
+                    if friends.isEmpty {
+                        HStack(spacing: Space.m) {
+                            Leon(color: .brand, pose: .curious).frame(width: 70)
+                            Text("Pas encore d'amis ici. Ajoute-les par leur pseudo, ou envoie un défi par lien à qui tu veux.")
+                                .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    } else {
+                        LazyVGrid(columns: columns, spacing: 16) {
+                            ForEach(friends) { friend in friendTile(friend) }
+                        }
+                    }
+
+                    VStack(spacing: 0) {
+                        actionRow("Inviter par lien", detail: "Joue d'abord, puis envoie le lien : le premier qui l'ouvre affronte ton score.",
+                                  symbol: "link", busy: linkBusy) { create(friend: nil) }
+                        Hairline().padding(.leading, 58)
+                        actionRow("Ajouter un ami", detail: "Recherche par pseudo.", symbol: "person.badge.plus", busy: false) {
+                            dismiss()
+                            onAddFriend()
+                        }
+                    }
+                    .popCard(padding: 0, radius: 20)
+
+                    if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
+                }
+                .padding(Space.gutter)
+            }
+            .background(Color.paper)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { Button("Fermer") { dismiss() } }
+            }
+            .sheet(isPresented: $showSettings) {
+                DuelSetupSheet(opponentName: nil, friendId: nil, initial: settings, onSettings: { chosen in
+                    settings = chosen
+                    showSettings = false
+                }, onCreated: { _ in })
+            }
+        }
+        .presentationDragIndicator(.visible)
+    }
+
+    private var formatLine: some View {
+        HStack(spacing: 12) {
+            Image(systemName: settings.count == DuelSettings.quickCount ? "timer" : "slider.horizontal.3")
+                .font(.system(.body, design: .rounded).weight(.bold)).foregroundStyle(Color.brand)
+                .frame(width: 36, height: 36).background(Color.brand.opacity(0.12), in: Circle())
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Format").labelCaps()
+                Text(formatText).font(.system(.callout, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
+                    .lineLimit(2).fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+            Button("Plus de réglages") { showSettings = true }
+                .font(.system(.footnote, design: .rounded).weight(.black)).foregroundStyle(Color.brand)
+        }
+        .popCard(padding: 12, radius: 18)
+    }
+
+    private var formatText: String {
+        var parts = ["\(settings.count) questions"]
+        parts.append(settings.count == DuelSettings.quickCount ? "25 s chacune" : "sans chrono")
+        if !settings.domains.isEmpty {
+            parts.append(settings.domains.count <= 2 ? settings.domains.map(DomainPalette.fallbackName).joined(separator: ", ")
+                                                     : "\(settings.domains.count) domaines")
+        }
+        if settings.difficulty != .auto { parts.append(settings.difficulty.title.lowercased()) }
+        return parts.joined(separator: " · ")
+    }
+
+    private func friendTile(_ friend: Friend) -> some View {
+        let badge = FriendDuelBadge.make(friend: friend.id, duels: duels)
+        return Button { create(friend: friend.id) } label: {
+            VStack(spacing: 6) {
+                ZStack {
+                    ArenaAvatar(handle: friend.handle, size: 62, ring: badge?.tone == .action ? Color.brand : nil)
+                    if busy == friend.id {
+                        Circle().fill(.black.opacity(0.35)).frame(width: 62, height: 62)
+                        ProgressView().tint(.white)
+                    }
+                }
+                .overlay(alignment: .bottomTrailing) {
+                    Image(systemName: "bolt.fill")
+                        .font(.system(size: 11, weight: .black)).foregroundStyle(Color.inkFixed)
+                        .frame(width: 22, height: 22).background(Color.sun, in: Circle())
+                        .overlay(Circle().strokeBorder(Color.paper, lineWidth: 2))
+                }
+                Text(friend.handle).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
+                    .lineLimit(1).minimumScaleFactor(0.75)
+                Text(badge?.text ?? "Défier").font(.system(size: 10.5, weight: .bold, design: .rounded))
+                    .foregroundStyle(badge?.color ?? Color.inkSoft).lineLimit(1).minimumScaleFactor(0.7)
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.row)
+        .disabled(busy != nil || linkBusy)
+        .accessibilityLabel("Défier \(friend.handle)")
+    }
+
+    private func actionRow(_ title: String, detail: String, symbol: String, busy: Bool, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                Image(systemName: symbol).font(.system(.body, design: .rounded).weight(.bold)).foregroundStyle(Color.brand)
+                    .frame(width: 34, height: 34).background(Color.brand.opacity(0.12), in: Circle())
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title).font(.system(.callout, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                    Text(detail).font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+                if busy { ProgressView() } else {
+                    Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.inkSoft)
+                }
+            }
+            .padding(.horizontal, 12).padding(.vertical, 12)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.row)
+        .disabled(self.busy != nil || linkBusy)
+    }
+
+    private func create(friend: UUID?) {
+        error = nil
+        if let friend { busy = friend } else { linkBusy = true }
+        Task {
+            do {
+                let duel = try await app.service.duelCreate(friend: friend, settings: settings)
+                Haptics.soft()
+                onCreated(duel)
+            } catch {
+                self.error = error.userMessage("Impossible de lancer le duel.")
+            }
+            busy = nil
+            linkBusy = false
+        }
+    }
+}
+
+// MARK: - Face-à-face (profil d'un ami)
+
+/// Bilan entre deux amis : les deux joueurs face à face, le score des victoires, une barre de partage, puis les chiffres.
+struct HeadToHeadCard: View {
+    let me: String
+    let friend: String
+    let h: FriendProfile.HeadToHead
+
+    var body: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Text("Face-à-face").labelCaps()
+                Spacer()
+                if h.played > 0 {
+                    Text("\(h.played) duel\(h.played > 1 ? "s" : "")").font(.system(.caption, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color.inkSoft)
+                }
+            }
+            HStack(alignment: .center, spacing: 0) {
+                player(me, avatarMe: true, wins: h.wins, leads: h.wins > h.losses)
+                VStack(spacing: 2) {
+                    Text("\(h.wins) – \(h.losses)")
+                        .font(.system(size: 34, weight: .black, design: .rounded)).monospacedDigit()
+                        .foregroundStyle(Color.ink)
+                    Text(h.draws > 0 ? "\(h.draws) égalité\(h.draws > 1 ? "s" : "")" : "victoires")
+                        .font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+                }
+                .frame(minWidth: 110)
+                player(friend, avatarMe: false, wins: h.losses, leads: h.losses > h.wins)
+            }
+            if h.played == 0 {
+                Text("Pas encore de duel terminé entre vous. Lance le premier !")
+                    .font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
+            } else {
+                shareBar
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
+                    if let mine = h.myRate, let theirs = h.theirRate {
+                        stat("Bonnes réponses", "\(mine) % · \(theirs) %")
+                    }
+                    if let streak = h.streak, streak.count >= 2 {
+                        stat("Série en cours", streak.who == "me" ? "\(streak.count) pour toi" : "\(streak.count) pour \(friend)")
+                    }
+                    if let best = h.myBest { stat("Ton record", "\(best.score)/\(best.total)") }
+                    stat("Questions jouées", "\(h.questions)")
+                }
+            }
+        }
+        .popCard(padding: 16, radius: 22)
+        .accessibilityElement(children: .combine)
+    }
+
+    private func player(_ handle: String, avatarMe: Bool, wins: Int, leads: Bool) -> some View {
+        VStack(spacing: 6) {
+            ArenaAvatar(handle: handle, size: 54, ring: leads ? ArenaPalette.gold : nil, me: avatarMe)
+                .overlay(alignment: .top) {
+                    if leads { ArenaCrown(size: 22).offset(y: -14) }
+                }
+            Text(avatarMe ? "Toi" : handle).font(.system(.footnote, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                .lineLimit(1).minimumScaleFactor(0.7)
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    /// Part des victoires de chacun (les égalités au milieu, en gris).
+    private var shareBar: some View {
+        GeometryReader { proxy in
+            let total = CGFloat(max(h.played, 1))
+            HStack(spacing: 3) {
+                if h.wins > 0 { Capsule().fill(ArenaPalette.me).frame(width: proxy.size.width * CGFloat(h.wins) / total) }
+                if h.draws > 0 { Capsule().fill(Color.hairline).frame(width: proxy.size.width * CGFloat(h.draws) / total) }
+                if h.losses > 0 { Capsule().fill(ArenaPalette.them) }
+            }
+        }
+        .frame(height: 10)
+        .accessibilityHidden(true)
+    }
+
+    private func stat(_ label: String, _ value: String) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(label).font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+            Text(value).font(.system(.callout, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                .lineLimit(1).minimumScaleFactor(0.7)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(10)
+        .background(Color.paper, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+    }
+}
+
+// MARK: - Historique
+
+/// Une ligne d'historique : l'adversaire, la date et le format, le score, une pastille de résultat.
+struct DuelHistoryRow: View {
+    let duel: Duel
+    /// Dans le profil d'un ami : la date à la place du pseudo.
+    var showsOpponent = true
+
+    var body: some View {
+        HStack(spacing: 12) {
+            ArenaAvatar(handle: duel.opponent?.handle ?? "?", size: 40)
+                .opacity(showsOpponent ? 1 : 0)
+                .frame(width: showsOpponent ? 40 : 0)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(showsOpponent ? (duel.opponent?.handle ?? "Défi par lien") : DuelText.day(duel))
+                    .font(.system(.callout, design: .rounded).weight(.black)).foregroundStyle(Color.ink).lineLimit(1)
+                Text(showsOpponent ? "\(DuelText.day(duel)) · \(DuelText.format(duel))" : DuelText.format(duel))
+                    .font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft).lineLimit(1)
+            }
+            Spacer(minLength: 6)
+            if duel.isFinished {
+                Text("\(duel.me.score) – \(duel.opponent?.score ?? 0)")
+                    .font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit()
+                    .foregroundStyle(Color.ink)
+            }
+            pill
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+    }
+
+    private var pill: some View {
+        let (text, fill, ink): (String, Color, Color) = {
+            switch duel.winner {
+            case "me": return ("Gagné", Color.correct, .white)
+            case "opponent": return ("Perdu", Color.wrong.opacity(0.14), .wrong)
+            case "draw": return ("Égalité", Color.hairline, .inkSoft)
+            default:
+                if duel.myTurn { return ("À jouer", Color.brand, .white) }
+                if duel.status == "expired" { return ("Expiré", Color.hairline, .inkSoft) }
+                return ("En cours", Color.brand.opacity(0.12), .brand)
+            }
+        }()
+        return Text(text)
+            .font(.system(.caption, design: .rounded).weight(.black))
+            .foregroundStyle(ink)
+            .frame(minWidth: 62, minHeight: 26)
+            .background(fill, in: Capsule())
+    }
+}
+
+/// Tous les duels entre amis terminés : le bilan, les adversaires les plus fréquents, puis les duels mois par mois.
+struct DuelHistoryView: View {
+    @Environment(AppModel.self) private var app
+    @State private var duels: [Duel] = []
+    @State private var summary: DuelHistory.Summary?
+    @State private var next: String?
+    @State private var loaded = false
+    @State private var loadingMore = false
+    @State private var error: String?
+    @State private var opened: DuelLaunch?
+    @State private var rematchError: String?
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: Space.l) {
+                Text("Historique").font(.cfDisplay).padding(.top, Space.s)
+                if !loaded {
+                    ProgressView().frame(maxWidth: .infinity).padding(.top, Space.xl)
+                } else if let error, duels.isEmpty {
+                    RetryMessage(text: error) { Task { await load() } }
+                } else if duels.isEmpty {
+                    empty
+                } else {
+                    if let summary = summary ?? localSummary { summaryCard(summary) }
+                    if let rivals = summary?.rivals, !rivals.isEmpty { rivalsBlock(rivals) }
+                    ForEach(months) { month in
+                        VStack(alignment: .leading, spacing: Space.s) {
+                            Text(month.title).labelCaps()
+                            VStack(spacing: 0) {
+                                ForEach(Array(month.duels.enumerated()), id: \.element.id) { index, duel in
+                                    if index > 0 { Hairline().padding(.leading, 64) }
+                                    Button { opened = DuelLaunch(id: duel.id) } label: { DuelHistoryRow(duel: duel) }
+                                        .buttonStyle(.row)
+                                }
+                            }
+                            .popCard(padding: 0, radius: 20)
+                        }
+                    }
+                    if next != nil {
+                        Button { Task { await loadMore() } } label: {
+                            HStack(spacing: 8) {
+                                if loadingMore { ProgressView().controlSize(.small) }
+                                Text("Voir les duels plus anciens")
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(TextLinkStyle())
+                        .disabled(loadingMore)
+                    }
+                }
+            }
+            .padding(.horizontal, Space.gutter)
+            .padding(.bottom, Space.l)
+        }
+        .clearsTabBar()
+        .background(Color.paper)
+        .navigationBarTitleDisplayMode(.inline)
+        .task { if !loaded { await load() } }
+        .refreshable { await load() }
+        .fullScreenCover(item: $opened, onDismiss: { Task { await load() } }) { launch in
+            DuelSessionView(duelId: launch.id)
+        }
+    }
+
+    private func load() async {
+        do {
+            let page = try await app.service.duelsHistory(before: nil)
+            duels = page.duels
+            summary = page.summary
+            next = page.next
+            error = nil
+        } catch {
+            self.error = error.userMessage("Historique indisponible.")
+        }
+        loaded = true
+    }
+
+    private func loadMore() async {
+        guard let cursor = next, !loadingMore else { return }
+        loadingMore = true
+        defer { loadingMore = false }
+        if let page = try? await app.service.duelsHistory(before: cursor) {
+            let known = Set(duels.map(\.id))
+            duels += page.duels.filter { !known.contains($0.id) }
+            next = page.next
+        }
+    }
+
+    /// Bilan calculé sur la liste quand le serveur n'en donne pas (mode démo).
+    private var localSummary: DuelHistory.Summary? {
+        let done = duels.filter(\.isFinished)
+        guard !done.isEmpty else { return nil }
+        return DuelHistory.Summary(played: done.count, wins: done.filter { $0.winner == "me" }.count,
+                                   losses: done.filter { $0.winner == "opponent" }.count,
+                                   draws: done.filter { $0.winner == "draw" }.count)
+    }
+
+    private struct Month: Identifiable {
+        let title: String
+        var duels: [Duel]
+        var id: String { title }
+    }
+
+    private var months: [Month] {
+        var result: [Month] = []
+        for duel in duels {
+            let title = DuelText.month(duel)
+            if let last = result.indices.last, result[last].title == title {
+                result[last].duels.append(duel)
+            } else {
+                result.append(Month(title: title, duels: [duel]))
+            }
+        }
+        return result
+    }
+
+    private var empty: some View {
+        VStack(spacing: Space.m) {
+            Leon(color: .brand, pose: .curious).frame(width: 110)
+            Text("Pas encore de duel terminé").font(.cfTitle3)
+            Text("Défie un ami : chaque duel terminé s'ajoute ici, avec le score et la date.")
+                .font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, Space.l)
+    }
+
+    private func summaryCard(_ s: DuelHistory.Summary) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .firstTextBaseline, spacing: 6) {
+                Text("\(s.played)").font(.system(size: 40, weight: .black, design: .rounded)).monospacedDigit().foregroundStyle(.white)
+                Text("duel\(s.played > 1 ? "s" : "") entre amis").font(.system(.headline, design: .rounded).weight(.black))
+                    .foregroundStyle(.white.opacity(0.8))
+            }
+            HStack(spacing: 10) {
+                tally("Victoires", s.wins, color: Color.sun)
+                tally("Égalités", s.draws, color: .white.opacity(0.85))
+                tally("Défaites", s.losses, color: Color(hex: 0xFF9E7A))
+            }
+            if s.played > 0 {
+                Text("\(Int((Double(s.wins) * 100 / Double(s.played)).rounded())) % de victoires")
+                    .font(.system(.footnote, design: .rounded).weight(.heavy)).foregroundStyle(.white.opacity(0.75))
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(ArenaPalette.night, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+
+    private func tally(_ label: String, _ value: Int, color: Color) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text("\(value)").font(.system(.title2, design: .rounded).weight(.black)).monospacedDigit().foregroundStyle(color)
+            Text(label).font(.system(.caption2, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.65))
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(10)
+        .background(Color.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+
+    private func rivalsBlock(_ rivals: [DuelHistory.Rival]) -> some View {
+        VStack(alignment: .leading, spacing: Space.s) {
+            Text("Tes rivaux").labelCaps()
+            HStack(spacing: 10) {
+                ForEach(rivals) { rival in
+                    VStack(spacing: 6) {
+                        ArenaAvatar(handle: rival.handle, size: 46)
+                        Text(rival.handle).font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                            .lineLimit(1).minimumScaleFactor(0.7)
+                        Text("\(rival.wins) – \(rival.losses)").font(.system(.footnote, design: .rounded).weight(.black)).monospacedDigit()
+                            .foregroundStyle(rival.wins > rival.losses ? Color.correct : rival.wins < rival.losses ? Color(hex: 0xF76707) : .inkSoft)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                    .accessibilityElement(children: .combine)
+                }
+                ForEach(0..<max(0, 3 - rivals.count), id: \.self) { _ in Color.clear.frame(maxWidth: .infinity) }
+            }
+        }
+    }
+}

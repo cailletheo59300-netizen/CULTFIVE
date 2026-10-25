@@ -1,15 +1,17 @@
 import SwiftUI
 import CultFiveCore
 
-/// Arène (D-111) : en haut, le duel classé (ma semaine, le bouton « Trouver un adversaire », le mini-classement, les
-/// récompenses du lundi, mes duels classés). Puis « Entre amis » : ce qui attend le joueur (demandes, duels à jouer),
-/// ses ligues et ses amis en listes simples. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son
+/// Arène (D-111) : en haut, le duel classé (ma semaine, les boutons « Contre un joueur » / « Contre un ami », le
+/// mini-classement, les récompenses du lundi, mes duels classés). Puis « Entre amis » (D-112) : la rangée de mes amis
+/// (ou la carte d'invitation), ce qui attend le joueur (demandes, duels à jouer), l'historique, ses ligues et le
+/// classement du 5 du jour entre amis. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son
 /// profil ; les actions globales (ajouter, défier par lien, ligues) dans le bouton « + ».
 struct FriendsView: View {
     enum Route: Hashable {
         case league(UUID)
         case friend(UUID, String)
         case arenaLeaderboard
+        case duelHistory
     }
 
     @Environment(AppModel.self) private var app
@@ -35,6 +37,9 @@ struct FriendsView: View {
     @State private var arenaDetail: ArenaDuel?
     /// Récompenses de la semaine passée, pas encore montrées.
     @State private var weekReward: ArenaRewardItem?
+    @State private var showChallenge = false
+    /// « Ajouter un ami » touché dans la feuille « Contre un ami » : ouvert une fois la feuille refermée.
+    @State private var searchAfterChallenge = false
 
     /// Duels qui attendent le joueur, ou un adversaire par lien.
     private var waitingDuels: [Duel] {
@@ -52,14 +57,16 @@ struct FriendsView: View {
                             TourButton(id: .friends)
                             addMenu
                         }
-                        Text("Affronte les autres joueurs, monte au classement, gagne des coffres chaque lundi.")
+                        Text("Affronte n'importe qui pour le classement de la semaine, ou défie tes amis.")
                             .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     .padding(.top, Space.l)
 
                     ArenaSection(overview: $arena,
+                                 hasFriends: !(overview?.friends.isEmpty ?? true),
                                  onPlay: { Haptics.soft(); showArena = true },
+                                 onFriend: { Haptics.soft(); showChallenge = true },
                                  onLeaderboard: { path.append(.arenaLeaderboard) },
                                  onPrizes: { showPrizes = true },
                                  onDuel: { duel in
@@ -70,10 +77,12 @@ struct FriendsView: View {
                     if app.isAnonymous {
                         AccountNudge()
                     }
+                    friendsHeader
                     toPlay
+                    historyLink
                     leaguesBlock
                     friendsList
-                    invite
+                    if !(overview?.friends.isEmpty ?? true) { invite }
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -89,11 +98,27 @@ struct FriendsView: View {
                 case .league(let id): LeagueView(leagueId: id)
                 case .friend(let id, let handle): FriendProfileView(friendId: id, handle: handle)
                 case .arenaLeaderboard: ArenaLeaderboardView()
+                case .duelHistory: DuelHistoryView()
                 }
             }
         }
         .sheet(isPresented: $showSearch, onDismiss: { Task { await load() } }) {
             AddFriendSheet()
+        }
+        .sheet(isPresented: $showChallenge, onDismiss: {
+            if let launch = pendingLaunch {
+                pendingLaunch = nil
+                activeDuel = launch
+            } else if searchAfterChallenge {
+                searchAfterChallenge = false
+                showSearch = true
+            }
+        }) {
+            FriendChallengeSheet(friends: overview?.friends ?? [], duels: duels, onCreated: { duel in
+                pendingLaunch = DuelLaunch(id: duel.id)
+                showChallenge = false
+                app.askNotificationsAfterSocial()
+            }, onAddFriend: { searchAfterChallenge = true })
         }
         .sheet(isPresented: $showNewLeague) {
             NewLeagueSheet { standings in
@@ -247,6 +272,47 @@ struct FriendsView: View {
         .accessibilityLabel("Ajouter")
     }
 
+    /// Mes amis en rangée (bulles : défi en attente, score entre nous), ou la grande carte d'invitation.
+    @ViewBuilder private var friendsHeader: some View {
+        if let friends = overview?.friends {
+            if friends.isEmpty {
+                InviteFriendsCard(code: referral?.code ?? app.profile?.referralCode,
+                                  onAdd: { showSearch = true }, onLinkDuel: { showLinkDuel = true })
+            } else {
+                FriendsStrip(friends: friends, duels: duels, onAdd: { showSearch = true },
+                             onFriend: { path.append(.friend($0.id, $0.handle)) })
+            }
+        }
+    }
+
+    /// Lien vers l'historique de tous les duels entre amis.
+    @ViewBuilder private var historyLink: some View {
+        if !app.isAnonymous {
+            NavigationLink(value: Route.duelHistory) {
+                HStack(spacing: 12) {
+                    Image(systemName: "clock.arrow.circlepath")
+                        .font(.system(.body, design: .rounded).weight(.bold)).foregroundStyle(Color.brand)
+                        .frame(width: 38, height: 38).background(Color.brand.opacity(0.12), in: Circle())
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Historique des duels").font(.system(.callout, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                        Text(historyDetail).font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.inkSoft)
+                }
+                .popCard(padding: 12, radius: 18)
+            }
+            .buttonStyle(.row)
+        }
+    }
+
+    private var historyDetail: String {
+        let done = duels.filter(\.isFinished)
+        guard !done.isEmpty else { return "Tous tes duels entre amis, avec le score" }
+        let wins = done.filter { $0.winner == "me" }.count
+        return "30 derniers jours : \(wins) victoire\(wins > 1 ? "s" : "") sur \(done.count)"
+    }
+
     /// Ce qui attend le joueur. Absent s'il n'y a rien.
     @ViewBuilder private var toPlay: some View {
         let incoming = overview?.incoming ?? []
@@ -294,22 +360,11 @@ struct FriendsView: View {
     @ViewBuilder private var friendsList: some View {
         let friends = overview?.friends ?? []
         VStack(alignment: .leading, spacing: Space.s) {
-            HStack(alignment: .firstTextBaseline) {
-                Text("Mes amis").labelCaps()
-                Spacer()
-                if !friends.isEmpty {
-                    Text("Classement du 5 du jour").font(.system(.caption, design: .rounded).weight(.heavy))
-                        .foregroundStyle(Color.inkSoft)
-                }
+            if !friends.isEmpty {
+                Text("Classement du \(Brand.dailyName) entre amis").labelCaps()
             }
             if friends.isEmpty {
-                HStack(alignment: .center, spacing: Space.m) {
-                    Leon(color: .brand, pose: .curious).frame(width: 90)
-                    Text("Ajoute un ami avec le bouton +, puis défie-le en duel. Tu peux aussi défier n'importe qui avec un lien (+ → Défier par lien).")
-                        .font(.cfCallout).foregroundStyle(Color.inkSoft)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .padding(.vertical, Space.s)
+                EmptyView()
             } else {
                 // Liste simple (pas de podium) : médailles en relief pour 1, 2, 3, temps en petit, trait de cinq.
                 VStack(spacing: 6) {

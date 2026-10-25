@@ -4,6 +4,7 @@ import CultFiveCore
 // MARK: - Modèle
 
 /// Partie de duel : comme le 5 du jour (question servie sans réponse, temps officiel serveur), sur la série du duel.
+/// Format 7 questions (D-112) : 25 s par question, chrono tenu par le serveur ; temps écoulé = faux.
 @MainActor
 @Observable
 final class DuelSessionModel {
@@ -24,8 +25,13 @@ final class DuelSessionModel {
     private(set) var results: [Bool] = []
     private(set) var position = 1
     private(set) var isRetrying = false
+    /// Chrono par question (nil : sans chrono).
+    private(set) var seconds: Int?
+    /// Fin du chrono de la question affichée.
+    private(set) var deadline: Date?
     private var lastVerdict: DailyVerdict?
     private var pendingGiven: GivenAnswer?
+    private var hasPending = false
     private var pendingMs: Int?
     private var stopwatch = Stopwatch()
     private let service: GameService
@@ -40,6 +46,7 @@ final class DuelSessionModel {
         do {
             let duel = try await service.duelResult(duelId)
             total = duel.questionCount
+            seconds = duel.seconds
             if duel.myTurn {
                 position = duel.me.answered + 1
                 results = (duel.myAnswers ?? []).map { $0.isCorrect ?? false }
@@ -61,6 +68,7 @@ final class DuelSessionModel {
             guard let q = response.question, !response.expired else { await showResult(); return }
             question = q
             phase = .answering
+            deadline = nil
             stopwatch.reset()
             stage = .question
         } catch {
@@ -68,27 +76,37 @@ final class DuelSessionModel {
         }
     }
 
-    func questionDisplayed() { stopwatch.start() }
+    func questionDisplayed() {
+        stopwatch.start()
+        if let seconds, deadline == nil, phase.isAnswering { deadline = Date().addingTimeInterval(TimeInterval(seconds)) }
+    }
     func pause() { stopwatch.pause() }
     func resume() { if stage == .question && phase.isAnswering { stopwatch.start() } }
 
-    func submit(_ given: GivenAnswer) {
+    func submit(_ given: GivenAnswer) { send(given) }
+
+    /// Temps écoulé : faux.
+    func timeUp() { send(nil) }
+
+    private func send(_ given: GivenAnswer?) {
         guard phase.isAnswering else { return }
         stopwatch.pause()
+        deadline = nil
         let ms = stopwatch.elapsedMilliseconds
         pendingGiven = given
         pendingMs = ms
+        hasPending = true
         phase = .submitting(given)
-        Task { await send(given: given, ms: ms) }
+        Task { await post(given: given, ms: ms) }
     }
 
     func retry() {
-        guard let given = pendingGiven else { return }
+        guard hasPending else { return }
         isRetrying = false
-        Task { await send(given: given, ms: pendingMs) }
+        Task { await post(given: pendingGiven, ms: pendingMs) }
     }
 
-    private func send(given: GivenAnswer, ms: Int?) async {
+    private func post(given: GivenAnswer?, ms: Int?) async {
         do {
             let verdict = try await service.duelAnswer(duel: duelId, position: position, given: given, clientMs: ms)
             guard let reveal = verdict.reveal else { throw BackendError.decoding("verdict incomplet") }
@@ -98,6 +116,7 @@ final class DuelSessionModel {
             if results.count < position { results.append(correct) }
             phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
             pendingGiven = nil
+            hasPending = false
         } catch {
             isRetrying = true
         }
@@ -181,7 +200,11 @@ struct DuelSessionView: View {
                     onDisplayed: { model.questionDisplayed() }
                 ) {
                     HStack(spacing: Space.m) {
-                        Label("Duel", systemImage: "bolt.fill").font(.cfFootnote.weight(.heavy)).foregroundStyle(Color.brand)
+                        if let deadline = model.deadline, let seconds = model.seconds {
+                            TimerRing(deadline: deadline, total: TimeInterval(seconds), color: Color.brand)
+                        } else {
+                            Label("Duel", systemImage: "bolt.fill").font(.cfFootnote.weight(.heavy)).foregroundStyle(Color.brand)
+                        }
                         if model.total <= 12 {
                             ProgressPills(current: model.position, total: model.total, color: DomainPalette.color(question.domainId))
                         } else {
@@ -193,6 +216,12 @@ struct DuelSessionView: View {
                 }
                 .id(question.id)
                 .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
+                .task(id: model.deadline) {
+                    guard let deadline = model.deadline else { return }
+                    try? await Task.sleep(nanoseconds: UInt64(max(0, deadline.timeIntervalSinceNow) * 1_000_000_000))
+                    guard !Task.isCancelled, model.deadline == deadline else { return }
+                    model.timeUp()
+                }
                 .overlay(alignment: .bottom) {
                     if model.isRetrying {
                         VStack(spacing: Space.s) {
@@ -274,7 +303,8 @@ private struct DuelIntroView: View {
                     player(duel.opponent?.handle ?? "?", color: Color(hex: 0xFF8FB1), pose: .curious)
                 }
                 VStack(spacing: 6) {
-                    Text("\(duel.questionCount) questions, les mêmes pour vous deux.")
+                    Text(duel.seconds.map { "\(duel.questionCount) questions, \($0) s chacune, les mêmes pour vous deux." }
+                         ?? "\(duel.questionCount) questions, les mêmes pour vous deux.")
                     Text(DuelText.settings(duel)).foregroundStyle(.white.opacity(0.75))
                     Text("Le meilleur score gagne ; à égalité, le plus rapide.")
                     if let opponent = duel.opponent, opponent.answered == duel.questionCount {
@@ -506,10 +536,11 @@ enum DuelText {
     /// « 10 questions · Histoire, Sciences · Difficile »
     static func settings(_ duel: Duel) -> String {
         var parts = ["\(duel.questionCount) questions"]
+        if let seconds = duel.seconds { parts.append("\(seconds) s") }
         if let domains = duel.domains, !domains.isEmpty {
             parts.append(domains.count <= 2 ? domains.map(DomainPalette.fallbackName).joined(separator: ", ")
                                             : "\(domains.count) domaines")
-        } else {
+        } else if duel.seconds == nil {
             parts.append("tous les domaines")
         }
         if let difficulty = duel.difficulty.flatMap(DuelDifficulty.init(rawValue:)), difficulty != .auto {
@@ -537,5 +568,38 @@ enum DuelText {
     static func date(_ duel: Duel) -> String {
         guard let raw = duel.createdAt, let date = iso.date(from: raw) ?? isoPlain.date(from: raw) else { return "Duel" }
         return output.string(from: date)
+    }
+
+    private static func parse(_ raw: String?) -> Date? {
+        guard let raw else { return nil }
+        return iso.date(from: raw) ?? isoPlain.date(from: raw)
+    }
+
+    private static let monthFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "fr_FR")
+        formatter.setLocalizedDateFormatFromTemplate("MMMMyyyy")
+        return formatter
+    }()
+
+    /// Jour du duel (sa fin, sinon sa création) : « Aujourd'hui », « Hier », « 30 septembre ».
+    static func day(_ duel: Duel) -> String {
+        guard let date = parse(duel.finishedAt) ?? parse(duel.createdAt) else { return "Duel" }
+        let calendar = Calendar.current
+        if calendar.isDateInToday(date) { return "Aujourd'hui" }
+        if calendar.isDateInYesterday(date) { return "Hier" }
+        return output.string(from: date)
+    }
+
+    /// « Octobre 2026 »
+    static func month(_ duel: Duel) -> String {
+        guard let date = parse(duel.finishedAt) ?? parse(duel.createdAt) else { return "Plus ancien" }
+        let text = monthFormat.string(from: date)
+        return text.prefix(1).uppercased() + text.dropFirst()
+    }
+
+    /// Format court : « 7 questions · 25 s », « 10 questions ».
+    static func format(_ duel: Duel) -> String {
+        duel.seconds.map { "\(duel.questionCount) questions · \($0) s" } ?? "\(duel.questionCount) questions"
     }
 }

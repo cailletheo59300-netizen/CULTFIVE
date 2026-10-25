@@ -301,4 +301,15 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertEqual(question.seconds, 15)
         XCTAssertNotNil(question.question)
     }
+
+    func testDuelsHistory() throws {
+        let history: DuelHistory = try fixture("duels_history")
+        XCTAssertEqual(history.duels.count, 1)
+        XCTAssertEqual(history.duels.first?.seconds, 25)
+        XCTAssertEqual(history.duels.first?.winner, "me")
+        XCTAssertNotNil(history.duels.first?.finishedAt)
+        XCTAssertEqual(history.summary?.wins, 1)
+        XCTAssertEqual(history.summary?.rivals.first?.handle, "cloclo")
+        XCTAssertNil(history.next)
+    }
 }
