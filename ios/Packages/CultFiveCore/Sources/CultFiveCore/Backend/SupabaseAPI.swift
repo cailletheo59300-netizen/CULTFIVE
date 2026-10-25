@@ -480,6 +480,8 @@ public actor SupabaseAPI {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         // Cette version sait afficher les nouveaux types de réponses : sans cet en-tête (app 1.0), le serveur sert des questions classiques.
         request.setValue(Self.answerTypesVersion, forHTTPHeaderField: "x-brainlix-types")
+        // Cette version a l'Arène (D-111) : le serveur peut lui proposer les missions d'Arène.
+        request.setValue("1", forHTTPHeaderField: "x-brainlix-arena")
         switch auth {
         case .anonKey:
             request.setValue("Bearer \(config.anonKey)", forHTTPHeaderField: "Authorization")

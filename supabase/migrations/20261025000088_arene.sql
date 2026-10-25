@@ -777,6 +777,11 @@ begin
 end $$;
 
 -- Missions d'Arène : « Joue un duel classé » (jour), « Gagne 3 duels classés » (semaine). Elles mènent à l'Arène.
+-- L'app 1.5 envoie l'en-tête « x-brainlix-arena » : les anciennes versions ne reçoivent pas ces missions.
+create or replace function public._client_arena() returns bool
+language sql stable set search_path = public, pg_temp as $$
+  select coalesce(nullif(current_setting('request.headers', true), '')::jsonb ->> 'x-brainlix-arena', '') >= '1'
+$$;
 
 do $$
 declare v_old text; v_new text;
@@ -800,14 +805,17 @@ begin
   execute v_new;
 
   v_old := pg_get_functiondef('public._quests_ensure(uuid, text, date)'::regprocedure);
-  v_new := replace(replace(v_old,
+  v_new := replace(replace(replace(v_old,
     '        (''answers'', null, 20, ''Réponds à 20 questions'', false),',
     '        (''answers'', null, 20, ''Réponds à 20 questions'', false),
         (''arena_duels'', null, 1, ''Joue un duel classé dans l''''Arène'', false),'),
     '        (''domains_played'', null, 4, ''Joue dans 4 domaines différents'', false),',
     '        (''domains_played'', null, 4, ''Joue dans 4 domaines différents'', false),
-        (''arena_wins'', null, 3, ''Gagne 3 duels classés'', false),');
-  if v_new = v_old or v_new not like '%arena_wins%' or v_new not like '%arena_duels%' then
+        (''arena_wins'', null, 3, ''Gagne 3 duels classés'', false),'),
+    -- Missions d'Arène seulement pour une app qui a l'Arène (1.5 et après).
+    '    select * from pool order by',
+    '    select * from pool where (pool.metric not like ''arena%'' or public._client_arena()) order by');
+  if v_new = v_old or v_new not like '%arena_wins%' or v_new not like '%arena_duels%' or v_new not like '%_client_arena()%' then
     raise exception '0088: _quests_ensure inchangée';
   end if;
   execute v_new;
@@ -817,7 +825,7 @@ revoke execute on function public._arena_rule(text), public._arena_week(timestam
   public._arena_prize(int, bool), public._arena_prizes_table(), public._arena_standings(date), public._arena_champion(),
   public._arena_pick(uuid), public._arena_new(uuid), public._arena_json(public.duels, uuid), public._arena_settle(uuid),
   public._arena_close_mine(uuid), public._arena_close_week(date), public.cron_arena(),
-  public._arena_row(uuid, int, int, int, int, bool, uuid, uuid), public._not_arena(uuid)
+  public._arena_row(uuid, int, int, int, int, bool, uuid, uuid), public._not_arena(uuid), public._client_arena()
   from public, anon, authenticated;
 revoke execute on function public.arena_find(), public.arena_question(uuid, int), public.arena_answer(uuid, int, jsonb, int),
   public.arena_result(uuid), public.arena_overview(), public.arena_leaderboard(text), public.arena_reward_seen(date)

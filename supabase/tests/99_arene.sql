@@ -133,3 +133,25 @@ begin
   perform tst.ok(public._arena_close_week(v_week) = 0, 'versée une seule fois');
   perform tst.ok((public.arena_overview() -> 'champion' ->> 'id')::uuid = w, 'couronne du champion');
 end $$;
+
+-- Missions d'Arène : seulement pour une app qui envoie l'en-tête « x-brainlix-arena » (1.5 et après).
+do $$
+declare u uuid := tst.new_user(); v_start date;
+begin
+  perform tst.clock('2027-07-05 10:00:00+02');
+  perform set_config('request.headers', '{}', false);
+  perform tst.ok(not public._client_arena(), 'ancienne app : pas d''Arène');
+  for i in 1 .. 40 loop
+    v_start := date '2027-07-05' + i * 7;
+    perform public._quests_ensure(u, 'week', v_start);
+  end loop;
+  perform tst.ok(not exists (select 1 from public.user_quests where user_id = u and metric like 'arena%'), 'ancienne app : aucune mission d''Arène');
+  perform set_config('request.headers', '{"x-brainlix-arena": "1"}', false);
+  perform tst.ok(public._client_arena(), 'app 1.5 : Arène');
+  for i in 41 .. 80 loop
+    v_start := date '2027-07-05' + i * 7;
+    perform public._quests_ensure(u, 'week', v_start);
+  end loop;
+  perform tst.ok(exists (select 1 from public.user_quests where user_id = u and metric = 'arena_wins'), 'app 1.5 : missions d''Arène');
+  perform set_config('request.headers', '', false);
+end $$;
