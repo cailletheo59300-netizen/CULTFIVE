@@ -1,9 +1,11 @@
 import SwiftUI
 
-/// Visites guidées : à la première visite d'un écran (5 du jour, Jouer, Album, Pass, Amis), Léon explique en quelques
+/// Visites guidées : à la première visite d'un écran (5 du jour, Jouer, Album, Pass, Arène), Léon explique en quelques
 /// étapes à quoi il sert. On peut passer, et la revoir avec le bouton « ? » de l'écran. Vue une fois par appareil.
 enum TourID: String, CaseIterable {
-    case daily, play, album, pass, friends
+    case daily, play, album, pass
+    /// L'onglet Amis devenu Arène (D-111) : nouvelle visite, même pour ceux qui avaient vu l'ancienne.
+    case friends = "arena"
 
     struct Step {
         let title: String
@@ -59,12 +61,14 @@ enum TourID: String, CaseIterable {
             ]
         case .friends:
             return [
-                Step(title: "Tes amis", text: "Ajoute tes amis avec leur pseudo ou un lien d'invitation.",
-                     symbol: "person.2.fill"),
-                Step(title: "Les duels", text: "Les mêmes questions pour vous deux : le meilleur score gagne.",
+                Step(title: "Le duel classé", text: "Touche « Trouver un adversaire » : tu affrontes un vrai joueur sur 7 questions, 15 s chacune. Jamais d'attente : tu joues tout de suite.",
                      symbol: "bolt.horizontal.fill"),
-                Step(title: "Les ligues", text: "Un classement entre amis : crée une ligue ou rejoins-en une avec son code.",
-                     symbol: "trophy.fill"),
+                Step(title: "Les points de la semaine", text: "Victoire +3, égalité +1, défaite 0 : tu ne perds jamais de points. Le classement repart à zéro chaque lundi.",
+                     symbol: "chart.bar.fill"),
+                Step(title: "Les récompenses du lundi", text: "Le top 3 gagne de gros lots (carte légendaire, couronne…), le top 15 des coffres et des pochettes, et tout le monde au moins un coffre.",
+                     symbol: "gift.fill"),
+                Step(title: "Entre amis", text: "Plus bas : tes amis, les duels entre amis et les ligues, comme avant.",
+                     symbol: "person.2.fill"),
             ]
         }
     }

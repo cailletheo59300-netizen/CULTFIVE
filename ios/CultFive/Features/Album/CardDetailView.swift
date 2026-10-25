@@ -204,7 +204,8 @@ struct CardDetailView: View {
         VStack(alignment: .leading, spacing: Space.m) {
             Text("L'habillage se gagne une fois (pass, événements) et se pose sur n'importe quelle carte. Il ne change ni la rareté ni le jeu.")
                 .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-            dressRow("Cadre", items: Cosmetic.frames + (store.has("cadre.anime") ? [Cosmetic.Item(id: "anime", name: "Cadre animé", icon: "final_payant")] : []),
+            dressRow("Cadre", items: Cosmetic.frames + (store.has("cadre.anime") ? [Cosmetic.Item(id: "anime", name: "Cadre animé", icon: "final_payant")] : [])
+                         + (store.has("cadre.champion") ? [Cosmetic.Item(id: "champion", name: "Champion", icon: Cosmetic.championIcon)] : []),
                      prefix: "cadre", current: state?.frame) { id in store.dress(card) { $0.frame = id } }
             dressRow("Finition", items: Cosmetic.finishes, prefix: "finition", current: state?.finish) { id in store.dress(card) { $0.finish = id } }
             dressRow("Titre de carte", items: Cosmetic.titles, prefix: "titre", current: state?.title) { id in store.dress(card) { $0.title = id } }
@@ -237,7 +238,9 @@ struct CardDetailView: View {
             VStack(spacing: 4) {
                 ZStack(alignment: .topTrailing) {
                     Group {
-                        if let icon {
+                        if icon == Cosmetic.championIcon {
+                            ChampionFrameIcon()
+                        } else if let icon {
                             AlbumImage(kind: .pass, name: icon)
                         } else {
                             Image(systemName: "nosign").font(.title2).foregroundStyle(Color.inkSoft)

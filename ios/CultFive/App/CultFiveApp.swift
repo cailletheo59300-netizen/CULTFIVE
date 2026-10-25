@@ -29,6 +29,7 @@ struct CultFiveApp: App {
                 await model.refreshDaily()
                 await model.syncPending()
                 await model.retryAdsConsentIfNeeded()
+                await model.refreshArenaAlert()
             }
         }
     }

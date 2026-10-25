@@ -285,6 +285,18 @@ struct CardFrame: View {
                 WebCorners(width: width)
             case "anime":
                 AnimatedGoldFrame(width: width)
+            case "champion":
+                // Champion de l'Arène (D-111) : or massif, filet violet, couronne au sommet.
+                shape.strokeBorder(LinearGradient(colors: [Color(hex: 0xFFE680), Color(hex: 0xF2B705), Color(hex: 0xC98A00),
+                                                           Color(hex: 0xFFE680)],
+                                                  startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: width * 0.045)
+                shape.strokeBorder(Color(hex: 0x6A4CFF), lineWidth: width * 0.008).padding(width * 0.042)
+                shape.strokeBorder(Color.white.opacity(0.7), lineWidth: width * 0.004).padding(width * 0.012)
+                Image("arena_crown").resizable().scaledToFit()
+                    .frame(width: width * 0.26)
+                    .shadow(color: .black.opacity(0.25), radius: width * 0.01, y: width * 0.006)
+                    .frame(maxHeight: .infinity, alignment: .top)
+                    .offset(y: -width * 0.07)
             case "flocons":
                 shape.strokeBorder(LinearGradient(colors: [Color(hex: 0xE3F4FF), Color(hex: 0x7FC4F0), Color(hex: 0xE3F4FF)],
                                                   startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: width * 0.04)

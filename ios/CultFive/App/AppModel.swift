@@ -163,6 +163,7 @@ final class AppModel {
                     AppDelegate.pendingToken = nil
                     registerPush(token: token)
                 }
+                Task { await refreshArenaAlert() }
                 await startAds()
             }
         } catch BackendError.notAuthenticated where bootstrapAttempts < 3 {
@@ -617,11 +618,30 @@ final class AppModel {
         case "league":
             tab = .friends
             pendingLeagueId = id
-        case "friends", "friend":
+        case "friends", "friend", "arena", "arena_week":
             tab = .friends
         default:
             break
         }
+    }
+
+    // MARK: Arène
+
+    /// Pastille sur l'onglet Arène : un résultat de duel classé arrivé, ou les récompenses du lundi pas encore vues.
+    var arenaAlert = false
+    private static let arenaSeenKey = "arena.lastSeen"
+
+    /// Relit l'Arène (lancement, retour dans l'app) pour la pastille de l'onglet.
+    func refreshArenaAlert() async {
+        guard phase == .main, tab != .friends, let overview = try? await service.arenaOverview() else { return }
+        let seen = Date(timeIntervalSince1970: UserDefaults.standard.double(forKey: Self.arenaSeenKey))
+        arenaAlert = overview.reward != nil || overview.duels.contains { $0.isFinished && ($0.finishedAt ?? .distantPast) > seen }
+    }
+
+    /// L'onglet Arène est affiché : la pastille disparaît.
+    func markArenaSeen(_ overview: ArenaOverview) {
+        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: Self.arenaSeenKey)
+        arenaAlert = false
     }
 
     /// Proposée après un geste social (duel lancé, ligue rejointe) : être prévenu quand l'autre joue.

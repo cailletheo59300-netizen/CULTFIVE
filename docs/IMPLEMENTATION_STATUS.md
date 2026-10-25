@@ -64,6 +64,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Moins de questions déjà vues : 30 jours après une réussite, jamais vues d'abord, une révision par jour et par domaine (D-108) | ✅ en production (23/10), serveur 0086 | `80_algo.sql` |
 | Message de confidentialité relancé en entier (lancement, retour dans l'app, pub) et échecs notés (D-109) | 🟡 prochaine version de l'app | CI (build) |
 | Pub entre les parties toutes les 5 minutes, tous modes, sans maximum par jour, pas les 12 premières heures (D-110) | 🟡 serveur 0087 en production (25/10) ; app 1.5 | `99_ads.sql`, `ContractDecodingTests` |
+| Arène : duels classés en file commune, points de la semaine, classements, récompenses du lundi ; accueil « Trouver un adversaire / Jouer seul » (D-111) | 🟡 serveur 0088 prêt (à déployer avec la 1.5) ; app 1.5 | `99_arene.sql`, `ContractDecodingTests.testArena` |
 | Après le 5 du jour, on continue à jouer (D-089) | 🟡 app 1.4 | CI (build) |
 | Message de confidentialité réaffiché à la demande d'une pub (D-090) | 🟡 app 1.4 | CI (build) |
 | Podium du jour (D-091) | ✅ serveur 0083 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |

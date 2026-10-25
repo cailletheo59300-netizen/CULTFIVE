@@ -1,0 +1,328 @@
+{
+  "me": {
+    "rank": 1,
+    "wins": 5,
+    "duels": 6,
+    "points": 19,
+    "champion": false,
+    "eligible": true,
+    "min_duels": 5
+  },
+  "top": [
+    {
+      "id": "122a384f-7d85-4f60-a662-045fd6a2c2a7",
+      "me": true,
+      "rank": 1,
+      "wins": 5,
+      "duels": 6,
+      "handle": "lucide_51156",
+      "points": 19,
+      "champion": false,
+      "eligible": true
+    },
+    {
+      "id": "efadf61e-a4f2-498a-9e1a-15a8d324db0e",
+      "me": false,
+      "rank": 2,
+      "wins": 0,
+      "duels": 5,
+      "handle": "alerte_25408",
+      "points": 0,
+      "champion": false,
+      "eligible": true
+    },
+    {
+      "id": "ac861d27-0b14-43e0-95b5-53d0f86fc431",
+      "me": false,
+      "rank": 3,
+      "wins": 0,
+      "duels": 1,
+      "handle": "subtil_77848",
+      "points": 1,
+      "champion": false,
+      "eligible": false
+    }
+  ],
+  "week": "2027-06-07",
+  "chest": {
+    "goal": 10,
+    "progress": 5
+  },
+  "duels": [
+    {
+      "id": "a0ae8fa0-6176-45f8-af74-7b315d0af9bf",
+      "me": {
+        "score": 7,
+        "answered": 7,
+        "total_ms": 2100
+      },
+      "total": 7,
+      "result": {
+        "bonus": [],
+        "points": 1,
+        "streak": 0,
+        "outcome": "draw"
+      },
+      "status": "finished",
+      "winner": "draw",
+      "my_turn": false,
+      "seconds": 15,
+      "opponent": {
+        "id": "ac861d27-0b14-43e0-95b5-53d0f86fc431",
+        "score": 7,
+        "handle": "subtil_77848",
+        "answered": 7,
+        "champion": false,
+        "total_ms": 2100,
+        "week_points": 1
+      },
+      "created_at": "2027-06-07T07:15:50+00:00",
+      "expires_at": "2027-06-07T07:46:25+00:00",
+      "finished_at": "2027-06-07T07:16:55+00:00"
+    },
+    {
+      "id": "57a7dd4f-a98b-4cf5-93f8-3b38030e663c",
+      "me": {
+        "score": 7,
+        "answered": 7,
+        "total_ms": 2100
+      },
+      "total": 7,
+      "result": {
+        "bonus": [
+          "streak_chest"
+        ],
+        "points": 4,
+        "streak": 5,
+        "outcome": "win"
+      },
+      "status": "finished",
+      "winner": "me",
+      "my_turn": false,
+      "seconds": 15,
+      "opponent": {
+        "id": "efadf61e-a4f2-498a-9e1a-15a8d324db0e",
+        "score": 2,
+        "handle": "alerte_25408",
+        "answered": 7,
+        "champion": false,
+        "total_ms": 2100,
+        "week_points": 0
+      },
+      "created_at": "2027-06-07T07:12:40+00:00",
+      "expires_at": "2027-06-07T07:43:15+00:00",
+      "finished_at": "2027-06-07T07:13:45+00:00"
+    },
+    {
+      "id": "85075e35-f5aa-4ddc-a1cb-a3a2dab4bb4c",
+      "me": {
+        "score": 7,
+        "answered": 7,
+        "total_ms": 2100
+      },
+      "total": 7,
+      "result": {
+        "bonus": [],
+        "points": 4,
+        "streak": 4,
+        "outcome": "win"
+      },
+      "status": "finished",
+      "winner": "me",
+      "my_turn": false,
+      "seconds": 15,
+      "opponent": {
+        "id": "efadf61e-a4f2-498a-9e1a-15a8d324db0e",
+        "score": 2,
+        "handle": "alerte_25408",
+        "answered": 7,
+        "champion": false,
+        "total_ms": 2100,
+        "week_points": 0
+      },
+      "created_at": "2027-06-07T07:09:30+00:00",
+      "expires_at": "2027-06-07T07:40:05+00:00",
+      "finished_at": "2027-06-07T07:10:35+00:00"
+    },
+    {
+      "id": "b0d56e44-7306-4d03-b67e-1bbfd31e15aa",
+      "me": {
+        "score": 7,
+        "answered": 7,
+        "total_ms": 2100
+      },
+      "total": 7,
+      "result": {
+        "bonus": [],
+        "points": 4,
+        "streak": 3,
+        "outcome": "win"
+      },
+      "status": "finished",
+      "winner": "me",
+      "my_turn": false,
+      "seconds": 15,
+      "opponent": {
+        "id": "efadf61e-a4f2-498a-9e1a-15a8d324db0e",
+        "score": 2,
+        "handle": "alerte_25408",
+        "answered": 7,
+        "champion": false,
+        "total_ms": 2100,
+        "week_points": 0
+      },
+      "created_at": "2027-06-07T07:06:20+00:00",
+      "expires_at": "2027-06-07T07:36:55+00:00",
+      "finished_at": "2027-06-07T07:07:25+00:00"
+    },
+    {
+      "id": "c7e51d51-c0a8-4105-8792-dcadee574965",
+      "me": {
+        "score": 7,
+        "answered": 7,
+        "total_ms": 2100
+      },
+      "total": 7,
+      "result": {
+        "bonus": [],
+        "points": 3,
+        "streak": 2,
+        "outcome": "win"
+      },
+      "status": "finished",
+      "winner": "me",
+      "my_turn": false,
+      "seconds": 15,
+      "opponent": {
+        "id": "efadf61e-a4f2-498a-9e1a-15a8d324db0e",
+        "score": 2,
+        "handle": "alerte_25408",
+        "answered": 7,
+        "champion": false,
+        "total_ms": 2100,
+        "week_points": 0
+      },
+      "created_at": "2027-06-07T07:03:10+00:00",
+      "expires_at": "2027-06-07T07:33:45+00:00",
+      "finished_at": "2027-06-07T07:04:15+00:00"
+    },
+    {
+      "id": "040c105a-f4f2-4712-b7d9-60236db73ff4",
+      "me": {
+        "score": 7,
+        "answered": 7,
+        "total_ms": 2100
+      },
+      "total": 7,
+      "result": {
+        "bonus": [
+          "daily_chest"
+        ],
+        "points": 3,
+        "streak": 1,
+        "outcome": "win"
+      },
+      "status": "finished",
+      "winner": "me",
+      "my_turn": false,
+      "seconds": 15,
+      "opponent": {
+        "id": "efadf61e-a4f2-498a-9e1a-15a8d324db0e",
+        "score": 2,
+        "handle": "alerte_25408",
+        "answered": 7,
+        "champion": false,
+        "total_ms": 2100,
+        "week_points": 0
+      },
+      "created_at": "2027-06-07T07:00:00+00:00",
+      "expires_at": "2027-06-07T07:30:35+00:00",
+      "finished_at": "2027-06-07T07:01:05+00:00"
+    }
+  ],
+  "rules": {
+    "win": 3,
+    "draw": 1,
+    "seconds": 15,
+    "questions": 7,
+    "streak_from": 3,
+    "streak_chest": 5
+  },
+  "prizes": [
+    {
+      "to": 1,
+      "card": "legend",
+      "from": 1,
+      "gold": 3,
+      "crown": true,
+      "seeds": 500,
+      "trophy": "arena_champion",
+      "cosmetic": "cadre.champion"
+    },
+    {
+      "to": 2,
+      "card": "epic",
+      "from": 2,
+      "gold": 2,
+      "seeds": 300,
+      "trophy": "arena_podium"
+    },
+    {
+      "to": 3,
+      "card": "epic",
+      "from": 3,
+      "gold": 2,
+      "seeds": 200,
+      "trophy": "arena_podium"
+    },
+    {
+      "to": 5,
+      "from": 4,
+      "gold": 1,
+      "packs": 2,
+      "seeds": 100
+    },
+    {
+      "to": 10,
+      "from": 6,
+      "packs": 1,
+      "silver": 1
+    },
+    {
+      "to": 15,
+      "from": 11,
+      "silver": 1
+    },
+    {
+      "to": null,
+      "from": 16,
+      "wood": 1
+    }
+  ],
+  "reward": {
+    "rank": 1,
+    "week": "2027-06-07",
+    "points": 19,
+    "prizes": {
+      "card": "legend",
+      "gold": 3,
+      "crown": true,
+      "seeds": 500,
+      "trophy": "arena_champion",
+      "cosmetic": "cadre.champion",
+      "card_pull": {
+        "card": "french.expressions.les_expressions_animales",
+        "rarity": "legend",
+        "outcome": "new"
+      }
+    },
+    "eligible": true
+  },
+  "streak": 0,
+  "ends_at": "2027-06-13T22:00:00+00:00",
+  "players": 3,
+  "waiting": 0,
+  "champion": null,
+  "wins_total": 5,
+  "daily_chest": true
+}

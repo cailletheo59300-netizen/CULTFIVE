@@ -366,7 +366,7 @@ struct DuelResultView: View {
                     if !duel.isFinished, duel.status != "expired" {
                         VStack(spacing: Space.s) {
                             Text(duel.opponent == nil ? "Envoie le lien : le premier qui l'ouvre devient ton adversaire."
-                                                      : "Tu seras prévenu dans l'onglet Amis quand il aura joué.")
+                                                      : "Tu seras prévenu dans l'onglet Arène quand il aura joué.")
                                 .font(.cfCallout).foregroundStyle(.white.opacity(0.85)).multilineTextAlignment(.center)
                             ShareLink(item: Brand.duelURL(code: duel.code),
                                       message: Text("Je t'ai défié sur \(Brand.name) : j'ai fait \(duel.me.score)/\(duel.questionCount). À toi !")) {

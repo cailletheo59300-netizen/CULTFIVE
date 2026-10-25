@@ -202,9 +202,9 @@ public actor SupabaseAPI {
         "league_quiz_result", "league_standings", "leagues_mine", "onboarding_pack", "play_pack", "profile_me",
         "progression_overview", "quests_overview", "referral_overview", "search_handles", "season_overview", "shop_overview",
         "daily_leaderboard", "domain_leaderboard", "showcase_get", "skills_overview", "survival_overview", "survival_question", "survival_result", "trophies_overview",
-        "weekly_recap",
+        "weekly_recap", "arena_overview", "arena_leaderboard", "arena_question", "arena_result",
         // Réponses dédoublonnées par le serveur (identifiant de tentative, position déjà répondue).
-        "play_submit", "daily_answer", "league_answer", "league_quiz_answer", "duel_answer", "survival_answer", "track_events",
+        "play_submit", "daily_answer", "league_answer", "league_quiz_answer", "duel_answer", "survival_answer", "arena_answer", "track_events",
     ]
 
     /// État du réseau vu par l'app : faux après un échec de connexion, vrai dès qu'une requête aboutit.

@@ -197,7 +197,7 @@ begin
         'id', v_other, 'handle', (select handle from public.profiles where id = v_other),
         'week_points', coalesce((select sum(points) from public.arena_results
                                  where user_id = v_other and week = public._arena_week(public._now())), 0),
-        'champion', v_other = v_champion,
+        'champion', coalesce(v_other = v_champion, false),
         'answered', them.answered,
         'score', case when me.answered = n or d.status = 'finished' then them.score end,
         'total_ms', case when me.answered = n or d.status = 'finished' then them.total_ms end) end,
@@ -586,7 +586,8 @@ create or replace function public._arena_row(p_user uuid, p_rank int, p_points i
                                              p_me uuid, p_champion uuid) returns jsonb
 language sql stable set search_path = public, pg_temp as $$
   select jsonb_build_object('rank', p_rank, 'id', p_user, 'handle', p.handle, 'points', p_points, 'wins', p_wins,
-                            'duels', p_duels, 'eligible', p_eligible, 'me', p_user = p_me, 'champion', p_user = p_champion)
+                            'duels', p_duels, 'eligible', p_eligible, 'me', p_user = p_me,
+                            'champion', coalesce(p_user = p_champion, false))
   from public.profiles p where p.id = p_user
 $$;
 
@@ -622,7 +623,7 @@ begin
     'week', v_week, 'ends_at', public._arena_week_end(v_week),
     'me', jsonb_build_object('points', coalesce(me.points, 0), 'wins', coalesce(me.wins, 0), 'duels', coalesce(me.duels, 0),
                              'rank', me.rank, 'eligible', coalesce(me.eligible, false),
-                             'min_duels', public._arena_rule('min_duels'), 'champion', v_user = v_champion),
+                             'min_duels', public._arena_rule('min_duels'), 'champion', coalesce(v_user = v_champion, false)),
     'players', (select count(*) from public._arena_standings(v_week)),
     'top', v_top,
     'champion', case when v_champion is null then null

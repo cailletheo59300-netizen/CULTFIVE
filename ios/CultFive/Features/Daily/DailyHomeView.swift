@@ -14,6 +14,7 @@ struct DailyHomeView: View {
     /// Défis remplis, fêtés en plein écran (le bandeau reste en haut de l'accueil ensuite).
     @State private var questMoments: [Celebration] = []
     @State private var showBag = false
+    @State private var showArena = false
 
     var body: some View {
         NavigationStack {
@@ -30,11 +31,6 @@ struct DailyHomeView: View {
                     }
                     StreakRescueOffer()
                     rendezVous
-                    // 5 du jour fait : on montre qu'il y a bien plus à jouer (D-089).
-                    if app.daily?.state == .done {
-                        PlayMoreCard { app.tab = .play }
-                            .transition(.opacity)
-                    }
                     ChestsReadyRow()
                     // Le pass, puis les défis (jour, semaine, saison) qui le font monter.
                     SeasonPassBar(store: AlbumStore.shared) {
@@ -93,6 +89,12 @@ struct DailyHomeView: View {
             GameCover(config: config)
         }
         .sheet(isPresented: $showBag) { BagView() }
+        .fullScreenCover(isPresented: $showArena, onDismiss: { Task {
+            await reload()
+            app.openNewChests()
+        } }) {
+            ArenaSessionView()
+        }
         .fullScreenCover(isPresented: Binding(get: { !questMoments.isEmpty }, set: { if !$0 { questMoments = [] } })) {
             CelebrationSequence(items: questMoments) {
                 questMoments = []
@@ -239,7 +241,39 @@ struct DailyHomeView: View {
 
             switch app.daily?.state {
             case .done:
-                Button("Voir mon résultat") { showDaily = true }.buttonStyle(.inverted)
+                // 5 du jour fait (D-111) : le résultat en petit, puis la suite en grand, dans la même carte.
+                Button { showDaily = true } label: {
+                    Label("Voir mon résultat", systemImage: "chevron.right")
+                        .labelStyle(TrailingIconLabelStyle())
+                }
+                .buttonStyle(TextLinkStyle(color: .white))
+                .padding(.top, -Space.s)
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Et maintenant ?").labelCaps(Color.sun)
+                    Button {
+                        Haptics.soft()
+                        showArena = true
+                    } label: {
+                        HStack(spacing: 10) {
+                            ArenaCrest().frame(width: 30, height: 32)
+                            Text("Trouver un adversaire")
+                        }
+                    }
+                    .buttonStyle(.sun)
+                    Button {
+                        Haptics.selection()
+                        app.tab = .play
+                    } label: {
+                        Label("Jouer seul", systemImage: "play.fill")
+                    }
+                    .buttonStyle(.inverted)
+                    Text("Duel classé : 7 questions contre un vrai joueur, +3 pts par victoire")
+                        .font(.system(.caption, design: .rounded).weight(.bold))
+                        .foregroundStyle(.white.opacity(0.75))
+                        .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
+                }
+                .padding(.top, 4)
             case .inProgress:
                 Button("Reprendre") { showDaily = true }.buttonStyle(.sun)
             default:
@@ -349,29 +383,12 @@ struct EditorialRow: View {
     }
 }
 
-/// Après le 5 du jour (D-089) : « Envie d'en faire plus ? » et un gros bouton vers l'onglet Jouer.
-struct PlayMoreCard: View {
-    let onPlay: () -> Void
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: Space.m) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Envie d'en faire plus ?")
-                    .font(.system(.title3, design: .rounded).weight(.black))
-                    .foregroundStyle(Color.ink)
-                Text("Le \(Brand.dailyName) n'est que le début : joue autant que tu veux.")
-                    .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            Button {
-                Haptics.selection()
-                onPlay()
-            } label: {
-                Label("Jouer maintenant", systemImage: "play.fill")
-            }
-            .buttonStyle(.ink)
+/// Libellé avec l'icône après le texte (« Voir mon résultat › »).
+struct TrailingIconLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 4) {
+            configuration.title
+            configuration.icon.font(.caption.weight(.heavy))
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .popCard()
     }
 }

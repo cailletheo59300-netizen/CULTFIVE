@@ -53,6 +53,9 @@ enum Cosmetic {
         let icon: String
     }
 
+    /// Le cadre Champion de l'Arène se dessine (pas d'icône du pass).
+    static let championIcon = "@champion"
+
     static let frames = [
         Item(id: "citrouille", name: "Citrouille", icon: "cadre_citrouille"),
         Item(id: "vitrail", name: "Vitrail", icon: "cadre_vitrail"),

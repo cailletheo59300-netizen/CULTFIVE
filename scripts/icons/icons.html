@@ -359,7 +359,40 @@ ICONS.bag=[bag,192];
 // Médailles de maîtrise d'un domaine (globe en relief).
 [['bronze',0xC77B3A,false],['silver',0xE4EAF2,false],['gold',0xFFC933,false],['diamond',0x9BE7FF,true]].forEach(([id,c,d])=>{ICONS[`medal_${id}`]=[()=>framed(medal({metal:c,diamond:d})),360];});
 ICONS.trophy_cup=[()=>framed(cup()),360];
-window.renderIcons=()=>{const out={};for(const [name,[build,px,frame,rest]] of Object.entries(ICONS)) out[name]=snap(build,px,frame,rest);return out;};
+// Arène (0088) : blason (bouclier violet, laurier d'or, trait de cinq), couronne du champion, médailles 1 à 3.
+function arenaCrest(){const g=new THREE.Group();const gold=metal(0xFFC933,.15);const rim=metal(0xFFC933,.18);
+  const burst=new THREE.Mesh(extrude(star(18,1.2,.94),.06,.02),metal(0xFFD95A,.22));burst.position.z=-.14;burst.rotation.z=Math.PI/18;g.add(burst);
+  g.add(new THREE.Mesh(extrude(shield(1.12),.2,.07),rim));
+  const en=new THREE.Mesh(extrude(shield(.94),.14,.04),phys(0x6A4CFF,{roughness:.2}));en.position.z=.08;g.add(en);
+  const band=new THREE.Mesh(extrude(shield(.8),.04,.015),phys(0x4B2BC9,{roughness:.3}));band.position.z=.15;band.scale.set(1,1,1);g.add(band);
+  const l=laurel(gold);l.position.z=.03;l.scale.setScalar(1.16);g.add(l);
+  const t=tally(5,phys(0xffffff,{roughness:.3}),metal(0xFFD23F,.1));t.position.set(0,.06,.24);t.scale.setScalar(1.25);g.add(t);
+  [-1,1].forEach(s=>{const m=new THREE.Mesh(extrude(star(5,.12,.05),.05,.02),metal(0xFFD23F,.12));m.position.set(s*.42,.52,.2);m.rotation.z=-s*.25;g.add(m);});
+  const rb=ribbonMesh('ARÈNE',0x24127A);rb.position.set(0,-1.02,.32);rb.rotation.x=-.12;g.add(rb);
+  return g;}
+function arenaCrown(){const g=new THREE.Group();const gold=metal(0xFFC933,.14);
+  const s=new THREE.Shape();s.moveTo(-.86,-.3);s.lineTo(-.96,.42);s.lineTo(-.5,.06);s.lineTo(0,.62);s.lineTo(.5,.06);s.lineTo(.96,.42);s.lineTo(.86,-.3);s.lineTo(-.86,-.3);
+  g.add(new THREE.Mesh(extrude(s,.34,.08),gold));
+  const band=new THREE.Mesh(extrude(rrect(1.86,.3,.08),.42,.06),metal(0xF2B705,.2));band.position.y=-.38;g.add(band);
+  const red=phys(0xE03131,{emissive:0xC92A2A,emissiveIntensity:.25,roughness:.08,clearcoat:1});const blue=phys(0x4DABF7,{emissive:0x1C7ED6,emissiveIntensity:.3,roughness:.06,clearcoat:1});
+  [[-.6,blue],[0,red],[.6,blue]].forEach(([x,m])=>{const gm=new THREE.Mesh(new THREE.OctahedronGeometry(.13,0),m);gm.position.set(x,-.38,.27);gm.scale.set(1,1.1,.6);g.add(gm);});
+  [[-.96,.42],[0,.62],[.96,.42]].forEach(([x,y])=>{const b=new THREE.Mesh(new THREE.SphereGeometry(.11,20,14),phys(0xFFF3BF,{roughness:.15,clearcoat:1}));b.position.set(x,y+.06,0);g.add(b);});
+  g.rotation.set(.18,-.22,0);return g;}
+function arenaMedal(n,color){const g=new THREE.Group();const mat=metal(color,.18);
+  const ribbonA=phys(0x6A4CFF,{clearcoat:.3,roughness:.5}),ribbonB=phys(0x4B2BC9,{clearcoat:.3,roughness:.5});
+  const tail=(side,m2)=>{const sh=new THREE.Shape();sh.moveTo(-.18,0);sh.lineTo(.18,0);sh.lineTo(.22,-.66);sh.lineTo(0,-.52);sh.lineTo(-.22,-.66);sh.lineTo(-.18,0);
+    const r=new THREE.Mesh(extrude(sh,.03,.015),m2);r.position.set(side*.24,-.52,-.12);r.rotation.z=side*.34;return r;};
+  g.add(tail(-1,ribbonA));g.add(tail(1,ribbonB));
+  g.add(new THREE.Mesh(extrude(star(24,.8,.74),.14,.05),mat));
+  const inner=new THREE.Mesh(extrude(circle(.6),.06,.03),metal(color,.32));inner.position.z=.09;g.add(inner);
+  const tex=canvasTex(256,256,(c,W,H)=>{c.clearRect(0,0,W,H);c.textAlign='center';c.textBaseline='middle';c.font='900 190px Nunito, Arial Black, sans-serif';
+    c.fillStyle='rgba(0,0,0,.28)';c.fillText(String(n),W/2+5,H/2+14);c.fillStyle=n===1?'#7A4A00':n===2?'#3D4654':'#5C2E0E';c.fillText(String(n),W/2,H/2+8);});
+  const num=new THREE.Mesh(new THREE.PlaneGeometry(.9,.9),new THREE.MeshBasicMaterial({map:tex,transparent:true}));num.position.z=.16;num.renderOrder=2;num.material.depthTest=false;g.add(num);
+  g.position.y=.16;return g;}
+ICONS.arena_crest=[()=>Object.assign(framed(arenaCrest()),{exposure:.95}),540];
+ICONS.arena_crown=[()=>framed(arenaCrown(),[0,.3,5,0,0,0]),360];
+[[1,0xFFC933],[2,0xDDE3EA],[3,0xD08A4E]].forEach(([n,c])=>{ICONS[`arena_medal_${n}`]=[()=>framed(arenaMedal(n,c)),300];});
+window.renderIcons=(only)=>{const out={};for(const [name,[build,px,frame,rest]] of Object.entries(ICONS)){if(only&&!name.startsWith(only))continue;out[name]=snap(build,px,frame,rest);}return out;};
 </script>
 </body>
 </html>

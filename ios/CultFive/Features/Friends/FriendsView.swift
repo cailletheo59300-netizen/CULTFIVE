@@ -1,13 +1,15 @@
 import SwiftUI
 import CultFiveCore
 
-/// Amis : court et clair. En haut, seulement ce qui attend le joueur (demandes, duels à jouer) ; puis ses ligues et ses
-/// amis en listes simples. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son profil ; les
-/// actions globales (ajouter, défier par lien, ligues) dans le bouton « + ».
+/// Arène (D-111) : en haut, le duel classé (ma semaine, le bouton « Trouver un adversaire », le mini-classement, les
+/// récompenses du lundi, mes duels classés). Puis « Entre amis » : ce qui attend le joueur (demandes, duels à jouer),
+/// ses ligues et ses amis en listes simples. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son
+/// profil ; les actions globales (ajouter, défier par lien, ligues) dans le bouton « + ».
 struct FriendsView: View {
     enum Route: Hashable {
         case league(UUID)
         case friend(UUID, String)
+        case arenaLeaderboard
     }
 
     @Environment(AppModel.self) private var app
@@ -27,6 +29,12 @@ struct FriendsView: View {
     @State private var joinRequest: LeagueJoinRequest?
     /// Mon 5 du jour (score et temps) pour me placer dans le classement des amis.
     @State private var myToday: DailyResult?
+    @State private var arena: ArenaOverview?
+    @State private var showArena = false
+    @State private var showPrizes = false
+    @State private var arenaDetail: ArenaDuel?
+    /// Récompenses de la semaine passée, pas encore montrées.
+    @State private var weekReward: ArenaRewardItem?
 
     /// Duels qui attendent le joueur, ou un adversaire par lien.
     private var waitingDuels: [Duel] {
@@ -39,17 +47,26 @@ struct FriendsView: View {
                 VStack(alignment: .leading, spacing: Space.xl) {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(alignment: .firstTextBaseline) {
-                            Text("Amis").font(.cfDisplay)
+                            Text("Arène").font(.cfDisplay)
                             Spacer()
                             TourButton(id: .friends)
                             addMenu
                         }
-                        Text("Défie tes amis en duel : mêmes questions, chacun son tour.")
+                        Text("Affronte les autres joueurs, monte au classement, gagne des coffres chaque lundi.")
                             .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     .padding(.top, Space.l)
 
+                    ArenaSection(overview: $arena,
+                                 onPlay: { Haptics.soft(); showArena = true },
+                                 onLeaderboard: { path.append(.arenaLeaderboard) },
+                                 onPrizes: { showPrizes = true },
+                                 onDuel: { duel in
+                                     if duel.myTurn { showArena = true } else { arenaDetail = duel }
+                                 })
+
+                    Text("Entre amis").font(.cfHeadline).padding(.top, Space.s)
                     if app.isAnonymous {
                         AccountNudge()
                     }
@@ -71,6 +88,7 @@ struct FriendsView: View {
                 switch route {
                 case .league(let id): LeagueView(leagueId: id)
                 case .friend(let id, let handle): FriendProfileView(friendId: id, handle: handle)
+                case .arenaLeaderboard: ArenaLeaderboardView()
                 }
             }
         }
@@ -114,6 +132,37 @@ struct FriendsView: View {
         }
         .fullScreenCover(item: $activeDuel, onDismiss: { Task { await load() } }) { launch in
             DuelSessionView(duelId: launch.id)
+        }
+        .fullScreenCover(isPresented: $showArena, onDismiss: {
+            Task {
+                await load()
+                app.openNewChests()
+            }
+        }) {
+            ArenaSessionView()
+        }
+        .sheet(isPresented: $showPrizes) { ArenaPrizesSheet(prizes: arena?.prizes ?? []) }
+        .sheet(item: $arenaDetail) { duel in
+            ArenaDuelDetail(duel: duel) {
+                arenaDetail = nil
+                Task {
+                    try? await Task.sleep(nanoseconds: 350_000_000)
+                    showArena = true
+                }
+            }
+        }
+        .fullScreenCover(item: $weekReward) { item in
+            let reward = item.reward
+            ArenaWeekRewardView(reward: reward) {
+                weekReward = nil
+                Task {
+                    try? await app.service.arenaRewardSeen(week: reward.week)
+                    await app.refreshProgression()
+                    await AlbumStore.shared.refresh()
+                    app.openNewChests()
+                    await load()
+                }
+            }
         }
         .sheet(item: $joinRequest) { request in
             LeagueJoinSheet(code: request.code) { standings in
@@ -165,6 +214,12 @@ struct FriendsView: View {
         async let referralInfo = try? service.referralOverview()
         async let myDuels = try? service.duels()
         async let today: DailyResult? = app.daily?.state == .done ? (try? service.dailyResult(date: nil)) : nil
+        async let arenaData = try? service.arenaOverview()
+        if let fresh = await arenaData {
+            arena = fresh
+            if weekReward == nil, let reward = fresh.reward { weekReward = ArenaRewardItem(reward: reward) }
+            app.markArenaSeen(fresh)
+        }
         duels = await myDuels ?? []
         myToday = await today
         overview = await friends
@@ -387,5 +442,43 @@ struct SmallPillStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.97 : 1)
             .animation(Motion.press, value: configuration.isPressed)
             .contentShape(Capsule())
+    }
+}
+
+/// Récompense de la semaine à montrer (identifiée par sa semaine).
+private struct ArenaRewardItem: Identifiable {
+    let reward: ArenaWeekReward
+    var id: String { reward.week }
+}
+
+/// Un duel classé touché dans « Mes duels » : son bilan (résultat ou « en jeu »).
+private struct ArenaDuelDetail: View {
+    let duel: ArenaDuel
+    let onNext: () -> Void
+    @Environment(AppModel.self) private var app
+    @Environment(\.dismiss) private var dismiss
+    @State private var result: ArenaDuelResult?
+    @State private var failed = false
+
+    var body: some View {
+        ZStack {
+            if let result {
+                ArenaResultView(result: result, me: app.profile?.handle ?? "Toi", onNext: onNext, onClose: { dismiss() })
+            } else {
+                ArenaPalette.night.ignoresSafeArea()
+                if failed {
+                    VStack(spacing: Space.m) {
+                        Text("Bilan indisponible.").font(.cfHeadline).foregroundStyle(.white)
+                        Button("Fermer") { dismiss() }.buttonStyle(.sun)
+                    }
+                    .padding(Space.gutter)
+                } else {
+                    ProgressView().tint(.white)
+                }
+            }
+        }
+        .task {
+            do { result = try await app.service.arenaResult(duel.id) } catch { failed = true }
+        }
     }
 }

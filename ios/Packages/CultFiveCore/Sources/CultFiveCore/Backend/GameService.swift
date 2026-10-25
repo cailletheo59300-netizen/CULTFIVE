@@ -156,6 +156,16 @@ public protocol GameService: Sendable {
     func leagueAddQuiz(league: UUID) async throws -> LeagueStandings
     func leagueEnd(league: UUID) async throws -> LeagueStandings
 
+    // Arène (0088) : duels classés en file commune.
+    func arenaOverview() async throws -> ArenaOverview
+    /// « Trouver un adversaire » : le plus ancien duel ouvert d'un autre joueur, ou un nouveau duel ouvert à l'Arène.
+    func arenaFind() async throws -> ArenaMatch
+    func arenaQuestion(duel: UUID, position: Int) async throws -> ArenaQuestionResponse
+    func arenaAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> ArenaVerdict
+    func arenaResult(_ duel: UUID) async throws -> ArenaDuelResult
+    func arenaLeaderboard(_ scope: ArenaLeaderboard.Scope) async throws -> ArenaLeaderboard
+    func arenaRewardSeen(week: String) async throws
+
     // Référentiel
     func domains() async throws -> [DomainInfo]
     func subdomains() async throws -> [SubdomainInfo]
@@ -561,6 +571,32 @@ public struct LiveGameService: GameService {
         try await api.rpc("survival_result", ["p_run": .string(run.uuidString)])
     }
 
+    public func arenaOverview() async throws -> ArenaOverview { try await api.rpc("arena_overview") }
+
+    public func arenaFind() async throws -> ArenaMatch { try await api.rpc("arena_find") }
+
+    public func arenaQuestion(duel: UUID, position: Int) async throws -> ArenaQuestionResponse {
+        try await api.rpc("arena_question", ["p_duel": .string(duel.uuidString), "p_position": .number(Double(position))])
+    }
+
+    public func arenaAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> ArenaVerdict {
+        try await api.rpc("arena_answer", ["p_duel": .string(duel.uuidString), "p_position": .number(Double(position)),
+                                           "p_given": given?.json ?? .null,
+                                           "p_client_ms": clientMs.map { .number(Double($0)) } ?? .null])
+    }
+
+    public func arenaResult(_ duel: UUID) async throws -> ArenaDuelResult {
+        try await api.rpc("arena_result", ["p_duel": .string(duel.uuidString)])
+    }
+
+    public func arenaLeaderboard(_ scope: ArenaLeaderboard.Scope) async throws -> ArenaLeaderboard {
+        try await api.rpc("arena_leaderboard", ["p_scope": .string(scope.rawValue)])
+    }
+
+    public func arenaRewardSeen(week: String) async throws {
+        try await api.rpcVoid("arena_reward_seen", ["p_week": .string(week)])
+    }
+
     public func setShowcase(socle: String?, cards: [String]) async throws -> Showcase {
         try await api.rpc("showcase_set", ["p_socle": socle.map { .string($0) } ?? .null,
                                            "p_cards": .array(cards.map { .string($0) })])
@@ -677,6 +713,20 @@ public extension GameService {
     func survivalResult(run: UUID) async throws -> SurvivalResult {
         throw BackendError.server(status: 400, code: "survival_unavailable", message: "")
     }
+    // Arène : en ligne seulement (démo et service indisponible : l'écran reste vide).
+    func arenaOverview() async throws -> ArenaOverview { ArenaOverview() }
+    func arenaFind() async throws -> ArenaMatch { throw BackendError.server(status: 400, code: "arena_unavailable", message: "") }
+    func arenaQuestion(duel: UUID, position: Int) async throws -> ArenaQuestionResponse {
+        throw BackendError.server(status: 400, code: "arena_unavailable", message: "")
+    }
+    func arenaAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> ArenaVerdict {
+        throw BackendError.server(status: 400, code: "arena_unavailable", message: "")
+    }
+    func arenaResult(_ duel: UUID) async throws -> ArenaDuelResult {
+        throw BackendError.server(status: 400, code: "arena_unavailable", message: "")
+    }
+    func arenaLeaderboard(_ scope: ArenaLeaderboard.Scope) async throws -> ArenaLeaderboard { ArenaLeaderboard(scope: scope) }
+    func arenaRewardSeen(week: String) async throws {}
     func setShowcase(socle: String?, cards: [String]) async throws -> Showcase { Showcase(socle: socle) }
     func albumOpenPack(series: String, pay: AlbumPayment, clientId: UUID) async throws -> AlbumOpening {
         throw BackendError.server(status: 400, code: "album_unavailable", message: "")

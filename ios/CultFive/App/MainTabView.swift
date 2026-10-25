@@ -1,7 +1,7 @@
 import SwiftUI
 import CultFiveCore
 
-/// Navigation principale : Jouer · 5 DU JOUR · Amis · Profil. Le 5 du jour est l'objet central.
+/// Navigation principale : Jouer · Album · 5 DU JOUR · Arène · Profil. Le 5 du jour est l'objet central.
 /// Dans les builds de test, l'onglet Album s'ajoute à côté de Jouer (aperçu, collection simulée).
 struct MainTabView: View {
     @Environment(AppModel.self) private var model
@@ -23,7 +23,7 @@ struct MainTabView: View {
             tab(ProfileView(), .profile)
         }
         .overlay(alignment: .bottom) {
-            CultTabBar(selection: $model.tab, daily: model.daily) { model.reselect($0) }
+            CultTabBar(selection: $model.tab, daily: model.daily, arenaAlert: model.arenaAlert) { model.reselect($0) }
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { barHeight = $0 }
         }
         // Réseau coupé : un petit bandeau en haut, les écrans gardent ce qu'ils affichaient.
@@ -58,6 +58,8 @@ struct MainTabView: View {
 struct CultTabBar: View {
     @Binding var selection: AppModel.Tab
     let daily: DailyStatus?
+    /// Pastille rouge sur l'Arène : un résultat de duel ou les récompenses du lundi à voir.
+    var arenaAlert = false
     /// Onglet touché alors qu'il est déjà ouvert : retour à sa page de départ.
     var onReselect: (AppModel.Tab) -> Void = { _ in }
 
@@ -69,7 +71,7 @@ struct CultTabBar: View {
             item(.play, title: "Jouer", symbol: "shuffle", selectedSymbol: "shuffle")
             item(.album, title: "Album", symbol: "books.vertical", selectedSymbol: "books.vertical.fill")
             centerItem
-            item(.friends, title: "Amis", symbol: "person.2", selectedSymbol: "person.2.fill")
+            item(.friends, title: "Arène", symbol: "trophy", selectedSymbol: "trophy.fill", badge: arenaAlert)
             item(.profile, title: "Profil", symbol: "person.crop.circle", selectedSymbol: "person.crop.circle.fill")
         }
         .padding(.horizontal, Space.s)
@@ -87,7 +89,7 @@ struct CultTabBar: View {
         }
     }
 
-    private func item(_ tab: AppModel.Tab, title: String, symbol: String, selectedSymbol: String) -> some View {
+    private func item(_ tab: AppModel.Tab, title: String, symbol: String, selectedSymbol: String, badge: Bool = false) -> some View {
         Button {
             guard selection != tab else { return onReselect(tab) }
             Haptics.selection()
@@ -98,6 +100,14 @@ struct CultTabBar: View {
                     .font(.system(size: 19, weight: .bold, design: .rounded))
                     .frame(height: 24)
                     .symbolEffect(.bounce, value: selection == tab)
+                    .overlay(alignment: .topTrailing) {
+                        if badge && selection != tab {
+                            Circle().fill(Color.wrong).frame(width: 10, height: 10)
+                                .overlay(Circle().stroke(Color.paperRaised, lineWidth: 2))
+                                .offset(x: 6, y: -2)
+                                .accessibilityHidden(true)
+                        }
+                    }
                 Text(title).font(.system(.caption2, design: .rounded).weight(.heavy))
             }
             .foregroundStyle(selection == tab ? Color.brand : Color.inkSoft.opacity(0.8))

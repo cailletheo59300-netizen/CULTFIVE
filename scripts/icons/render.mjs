@@ -16,10 +16,12 @@ page.on('pageerror', (e) => { console.error(e); process.exitCode = 1; });
 if (localThree) await page.route('**/three.min.js', (route) => route.fulfill({ path: localThree }));
 await page.goto('file://' + join(here, 'icons.html'));
 await page.waitForFunction(() => typeof window.renderIcons === 'function' && window.THREE);
-const icons = await page.evaluate(() => window.renderIcons());
+// ONLY=arena_ : ne fabrique que les icônes dont le nom commence ainsi, sans toucher aux autres.
+const only = process.env.ONLY;
+const icons = await page.evaluate((prefix) => window.renderIcons(prefix), only);
 await browser.close();
 
-rmSync(assets, { recursive: true, force: true });
+if (!only) rmSync(assets, { recursive: true, force: true });
 mkdirSync(assets, { recursive: true });
 writeFileSync(join(assets, 'Contents.json'), JSON.stringify({ info: { author: 'xcode', version: 1 }, properties: { 'provides-namespace': false } }, null, 2) + '\n');
 const folder = (path) => {
@@ -32,6 +34,7 @@ for (const [path, url] of Object.entries(icons)) {
   const name = parts.pop();
   if (parts.length) folder(join(assets, ...parts));
   const dir = join(assets, ...parts, `${name}.imageset`);
+  rmSync(dir, { recursive: true, force: true });
   mkdirSync(dir);
   writeFileSync(join(dir, `${name}.png`), Buffer.from(url.split(',')[1], 'base64'));
   writeFileSync(join(dir, 'Contents.json'), JSON.stringify({

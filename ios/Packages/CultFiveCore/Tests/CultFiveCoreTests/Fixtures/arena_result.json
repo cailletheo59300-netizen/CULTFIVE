@@ -1,0 +1,113 @@
+{
+  "id": "a0ae8fa0-6176-45f8-af74-7b315d0af9bf",
+  "me": {
+    "score": 7,
+    "answered": 7,
+    "total_ms": 2100
+  },
+  "week": {
+    "rank": 1,
+    "duels": 6,
+    "points": 19,
+    "eligible": true
+  },
+  "total": 7,
+  "result": {
+    "bonus": [],
+    "points": 1,
+    "streak": 0,
+    "outcome": "draw"
+  },
+  "status": "finished",
+  "winner": "draw",
+  "my_turn": false,
+  "seconds": 15,
+  "opponent": {
+    "id": "ac861d27-0b14-43e0-95b5-53d0f86fc431",
+    "score": 7,
+    "handle": "subtil_77848",
+    "answered": 7,
+    "champion": false,
+    "total_ms": 2100,
+    "week_points": 1
+  },
+  "created_at": "2027-06-07T07:15:50+00:00",
+  "expires_at": "2027-06-07T07:46:25+00:00",
+  "my_answers": [
+    {
+      "position": 1,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 2,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 3,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 4,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 5,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 6,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 7,
+      "counted_ms": 300,
+      "is_correct": true
+    }
+  ],
+  "chest_every": 10,
+  "finished_at": "2027-06-07T07:16:55+00:00",
+  "their_answers": [
+    {
+      "position": 1,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 2,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 3,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 4,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 5,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 6,
+      "counted_ms": 300,
+      "is_correct": true
+    },
+    {
+      "position": 7,
+      "counted_ms": 300,
+      "is_correct": true
+    }
+  ],
+  "chest_progress": 5
+}

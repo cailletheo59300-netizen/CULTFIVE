@@ -269,4 +269,36 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertEqual(board.rows.first?.elo, 1180)
         XCTAssertNil(board.rows.first?.score)
     }
+
+    /// Arène (0088) : réponses réelles du serveur de test (vue d'ensemble, bilan, classement), et une question.
+    func testArena() throws {
+        let overview: ArenaOverview = try fixture("arena_overview")
+        XCTAssertEqual(overview.me.minDuels, 5)
+        XCTAssertFalse(overview.top.isEmpty)
+        XCTAssertEqual(overview.prizes.count, 7)
+        XCTAssertEqual(overview.prizes.first?.card, "legend")
+        XCTAssertEqual(overview.prizes.first?.crown, true)
+        XCTAssertNil(overview.prizes.last?.to)
+        XCTAssertEqual(overview.rules.questions, 7)
+        XCTAssertFalse(overview.duels.isEmpty)
+
+        let result: ArenaDuelResult = try fixture("arena_result")
+        XCTAssertEqual(result.duel.total, 7)
+        XCTAssertEqual(result.myAnswers.count, 7)
+        XCTAssertNotNil(result.duel.result)
+        XCTAssertNotNil(result.week)
+
+        let board: ArenaLeaderboard = try fixture("arena_leaderboard")
+        XCTAssertEqual(board.scope, .week)
+        XCTAssertFalse(board.rows.isEmpty)
+
+        let json = """
+        {"id": "7d1c2f7e-2b43-4b4c-9a51-0d8d7d1b8f10", "type": "true_false", "prompt": "La Lune tourne autour de la Terre.",
+         "domain_id": "science", "subdomain_id": "science.space", "payload": {}, "position": 2, "total": 7, "seconds": 15, "them_ms": 4200}
+        """
+        let question = try SupabaseAPI.decoder.decode(ArenaQuestionResponse.self, from: Data(json.utf8))
+        XCTAssertEqual(question.themMs, 4200)
+        XCTAssertEqual(question.seconds, 15)
+        XCTAssertNotNil(question.question)
+    }
 }

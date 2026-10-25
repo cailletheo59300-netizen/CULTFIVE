@@ -20,8 +20,14 @@ struct RankEntry: Identifiable {
     var elo: Int? = nil
     /// 5 du jour (D-091) : partie d'hier (1) ou d'avant-hier (2), affichée en petit.
     var ago: Int? = nil
+    /// Arène (D-111) : points de la semaine (à la place du score).
+    var points: Int? = nil
+    /// Arène : champion de la semaine passée (couronne à côté du pseudo).
+    var champion = false
+    /// Unité des points (« pts », « victoires »).
+    var unit = "pts"
 
-    var played: Bool { score != nil || elo != nil }
+    var played: Bool { score != nil || elo != nil || points != nil }
     var isPast: Bool { (ago ?? 0) > 0 }
 }
 
@@ -188,10 +194,13 @@ private struct PodiumColumn: View {
             .scaleEffect(shown ? 1 : 0.4)
             .opacity(shown ? 1 : 0)
             .animation(.spring(response: 0.5, dampingFraction: 0.62).delay(delay + 0.15), value: shown)
-            Text(entry.me ? "Toi" : entry.handle)
-                .font(.system(.subheadline, design: .rounded).weight(.black))
-                .foregroundStyle(entry.me ? Color.sun : empty ? style.soft : style.text)
-                .lineLimit(1).minimumScaleFactor(0.7)
+            HStack(spacing: 3) {
+                Text(entry.me ? "Toi" : entry.handle)
+                    .font(.system(.subheadline, design: .rounded).weight(.black))
+                    .foregroundStyle(entry.me ? Color.sun : empty ? style.soft : style.text)
+                    .lineLimit(1).minimumScaleFactor(0.7)
+                if entry.champion { ArenaCrown(size: 15) }
+            }
             if empty {
                 Text("Joue pour la prendre !")
                     .font(.system(.caption2, design: .rounded).weight(.bold))
@@ -204,6 +213,9 @@ private struct PodiumColumn: View {
                     .foregroundStyle(style.text)
             } else if let elo = entry.elo {
                 Text(CoteCULT.format(elo)).font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit()
+                    .foregroundStyle(style.text)
+            } else if let points = entry.points {
+                Text("\(points) \(entry.unit)").font(.system(.headline, design: .rounded).weight(.black)).monospacedDigit()
                     .foregroundStyle(style.text)
             }
             if let answers = entry.answers {
@@ -240,6 +252,7 @@ private struct PodiumColumn: View {
         var parts = ["\(rank)e", entry.me ? "toi" : entry.handle]
         if let score = entry.score { parts.append("\(score) sur 5") }
         if let elo = entry.elo { parts.append("Elo \(elo)") }
+        if let points = entry.points { parts.append("\(points) points") }
         if let totalMs = entry.totalMs { parts.append(DurationFormat.clock(milliseconds: totalMs)) }
         return parts.joined(separator: ", ")
     }
@@ -304,6 +317,7 @@ struct RankRow: View {
                         .font(.system(.callout, design: .rounded).weight(.black))
                         .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
                         .lineLimit(1)
+                    if entry.champion { ArenaCrown(size: 16) }
                 }
                 if let streak = entry.streak, streak > 0 {
                     Label("\(streak)", systemImage: "flame.fill")
@@ -320,6 +334,10 @@ struct RankRow: View {
                             .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
                     } else if let elo = entry.elo {
                         Text(CoteCULT.format(elo))
+                            .font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
+                            .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
+                    } else if let points = entry.points {
+                        Text("\(points) \(entry.unit)")
                             .font(.system(.callout, design: .rounded).weight(.black)).monospacedDigit()
                             .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
                     }

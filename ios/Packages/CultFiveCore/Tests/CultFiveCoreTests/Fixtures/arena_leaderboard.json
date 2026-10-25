@@ -1,0 +1,103 @@
+{
+  "me": {
+    "id": "122a384f-7d85-4f60-a662-045fd6a2c2a7",
+    "me": true,
+    "rank": 1,
+    "wins": 5,
+    "duels": 6,
+    "handle": "lucide_51156",
+    "points": 19,
+    "champion": false,
+    "eligible": true
+  },
+  "rows": [
+    {
+      "id": "122a384f-7d85-4f60-a662-045fd6a2c2a7",
+      "me": true,
+      "rank": 1,
+      "wins": 5,
+      "duels": 6,
+      "handle": "lucide_51156",
+      "points": 19,
+      "champion": false,
+      "eligible": true
+    },
+    {
+      "id": "efadf61e-a4f2-498a-9e1a-15a8d324db0e",
+      "me": false,
+      "rank": 2,
+      "wins": 0,
+      "duels": 5,
+      "handle": "alerte_25408",
+      "points": 0,
+      "champion": false,
+      "eligible": true
+    },
+    {
+      "id": "ac861d27-0b14-43e0-95b5-53d0f86fc431",
+      "me": false,
+      "rank": 3,
+      "wins": 0,
+      "duels": 1,
+      "handle": "subtil_77848",
+      "points": 1,
+      "champion": false,
+      "eligible": false
+    }
+  ],
+  "week": "2027-06-07",
+  "scope": "week",
+  "prizes": [
+    {
+      "to": 1,
+      "card": "legend",
+      "from": 1,
+      "gold": 3,
+      "crown": true,
+      "seeds": 500,
+      "trophy": "arena_champion",
+      "cosmetic": "cadre.champion"
+    },
+    {
+      "to": 2,
+      "card": "epic",
+      "from": 2,
+      "gold": 2,
+      "seeds": 300,
+      "trophy": "arena_podium"
+    },
+    {
+      "to": 3,
+      "card": "epic",
+      "from": 3,
+      "gold": 2,
+      "seeds": 200,
+      "trophy": "arena_podium"
+    },
+    {
+      "to": 5,
+      "from": 4,
+      "gold": 1,
+      "packs": 2,
+      "seeds": 100
+    },
+    {
+      "to": 10,
+      "from": 6,
+      "packs": 1,
+      "silver": 1
+    },
+    {
+      "to": 15,
+      "from": 11,
+      "silver": 1
+    },
+    {
+      "to": null,
+      "from": 16,
+      "wood": 1
+    }
+  ],
+  "ends_at": "2027-06-13T22:00:00+00:00",
+  "min_duels": 5
+}
