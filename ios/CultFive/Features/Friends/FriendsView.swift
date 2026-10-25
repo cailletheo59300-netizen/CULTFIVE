@@ -378,6 +378,7 @@ struct FriendsView: View {
             }
         }
     }
+}
 
 /// Rappel discret : les fonctions sociales demandent un compte.
 struct AccountNudge: View {
