@@ -187,9 +187,9 @@ begin
 
   -- Vitrine.
   t := public.trophies_overview();
-  perform tst.ok(jsonb_array_length(t -> 'exploits') = 26, '26 exploits (14 + 12 nouveaux, 0064)');
+  perform tst.ok(jsonb_array_length(t -> 'exploits') = 29, '29 exploits (14 + 12 nouveaux, 0064 ; 3 de l''Arène, 0088)');
   perform tst.ok(jsonb_array_length(t -> 'mastery') = 0, 'maîtrise vide (0064)');
-  perform tst.ok(jsonb_array_length(public.achievements_mine()) = 26, 'profil : exploits seulement');
+  perform tst.ok(jsonb_array_length(public.achievements_mine()) = 29, 'profil : exploits seulement');
 end $$;
 
 -- Parrainage rééquilibré : paliers en coffres.
