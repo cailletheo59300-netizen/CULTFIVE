@@ -1,13 +1,13 @@
 import SwiftUI
 import CultFiveCore
 
-// Jeu entre amis (D-112) : défier un ami en un appui (7 questions, 25 s), la rangée « Mes amis » avec ce qui se passe
-// entre nous, la carte d'invitation quand on n'a pas encore d'amis, et l'historique de tous les duels entre amis.
+// Jeu entre amis (D-112) : défier un ami en un appui (7 questions, 25 s), ce qui se passe entre nous (étiquette dans
+// le classement des amis), la carte d'invitation quand on n'a pas encore d'amis, et l'historique de tous les duels entre amis.
 // Les duels entre amis ne rapportent pas de points de la semaine : ils se jouent pour l'honneur, et l'historique les garde.
 
 // MARK: - Ce qui se passe avec un ami
 
-/// La bulle au-dessus d'un ami : un défi qui l'attend, ou le score des 30 derniers jours.
+/// L'étiquette d'un ami : un défi qui m'attend, ou le score des 30 derniers jours.
 struct FriendDuelBadge: Equatable {
     enum Tone { case action, ahead, behind, even }
 
@@ -35,136 +35,8 @@ struct FriendDuelBadge: Equatable {
         let wins = done.filter { $0.winner == "me" }.count
         let losses = done.filter { $0.winner == "opponent" }.count
         if wins > losses { return FriendDuelBadge(text: "\(wins)–\(losses) pour toi", tone: .ahead) }
-        if losses > wins { return FriendDuelBadge(text: "\(losses)–\(wins) pour lui", tone: .behind) }
+        if losses > wins { return FriendDuelBadge(text: "\(wins)–\(losses)", tone: .behind) }
         return FriendDuelBadge(text: "\(wins)–\(losses)", tone: .even)
-    }
-}
-
-// MARK: - Rangée « Mes amis »
-
-/// En haut de « Entre amis » : un « + », puis les amis (ceux qui m'attendent d'abord) avec leur 5 du jour en petit.
-/// Toucher ouvre le profil.
-struct FriendsStrip: View {
-    let friends: [Friend]
-    let duels: [Duel]
-    let onAdd: () -> Void
-    let onFriend: (Friend) -> Void
-
-    private struct Item: Identifiable {
-        let friend: Friend
-        let badge: FriendDuelBadge?
-        var id: UUID { friend.id }
-    }
-
-    private var sorted: [Item] {
-        let items = friends.map { Item(friend: $0, badge: FriendDuelBadge.make(friend: $0.id, duels: duels)) }
-        return items.enumerated().sorted { a, b in
-            let pa = priority(a.element.badge), pb = priority(b.element.badge)
-            return pa != pb ? pa < pb : a.offset < b.offset
-        }
-        .map { $0.element }
-    }
-
-    private func priority(_ badge: FriendDuelBadge?) -> Int {
-        guard let badge else { return 2 }
-        return badge.tone == .action ? 0 : 1
-    }
-
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .top, spacing: 14) {
-                Button(action: onAdd) {
-                    VStack(spacing: 6) {
-                        bubble(nil)
-                        Image(systemName: "plus")
-                            .font(.system(size: 22, weight: .black, design: .rounded))
-                            .foregroundStyle(Color.brand)
-                            .frame(width: 58, height: 58)
-                            .background(Color.brand.opacity(0.1), in: Circle())
-                            .overlay(Circle().strokeBorder(Color.brand.opacity(0.35), style: StrokeStyle(lineWidth: 1.5, dash: [4, 4])))
-                        Text("Ajouter").font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.brand)
-                    }
-                    .frame(width: 76)
-                }
-                .buttonStyle(.row)
-                .accessibilityLabel("Ajouter un ami")
-
-                ForEach(sorted) { item in
-                    let friend = item.friend, badge = item.badge
-                    Button { onFriend(friend) } label: {
-                        VStack(spacing: 6) {
-                            bubble(badge)
-                            ArenaAvatar(handle: friend.handle, size: 58, ring: badge?.tone == .action ? Color.brand : nil)
-                                .overlay(alignment: .bottomTrailing) {
-                                    if friend.streak > 0 {
-                                        Text("\(friend.streak)")
-                                            .font(.system(size: 10, weight: .black, design: .rounded)).monospacedDigit()
-                                            .foregroundStyle(.white)
-                                            .padding(.horizontal, 5).frame(minWidth: 20, minHeight: 18)
-                                            .background(Color(hex: 0xF76707), in: Capsule())
-                                            .overlay(Capsule().strokeBorder(Color.paper, lineWidth: 2))
-                                            .accessibilityLabel("Série de \(friend.streak) jours")
-                                    }
-                                }
-                            Text(friend.handle)
-                                .font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
-                                .lineLimit(1).minimumScaleFactor(0.75)
-                            dailyScore(friend)
-                        }
-                        .frame(width: 76)
-                    }
-                    .buttonStyle(.row)
-                    .accessibilityElement(children: .combine)
-                    .accessibilityHint(badge?.text ?? "Voir son profil")
-                }
-            }
-            .padding(.horizontal, Space.gutter)
-            .padding(.vertical, 2)
-        }
-        .padding(.horizontal, -Space.gutter)
-    }
-
-    /// Son 5 du jour en petit (« 4/5 »), ou un tiret s'il ne l'a pas encore fait.
-    private func dailyScore(_ friend: Friend) -> some View {
-        let score = friend.today?.score
-        return HStack(spacing: 3) {
-            Image(systemName: "sun.max.fill").font(.system(size: 9, weight: .black))
-            Text(score.map { "\($0)/5" } ?? "–").monospacedDigit()
-        }
-        .font(.system(size: 11, weight: .black, design: .rounded))
-        .foregroundStyle(score == nil ? Color.inkSoft.opacity(0.6) : (score == 5 ? Color(hex: 0xE8A400) : Color.inkSoft))
-        .accessibilityLabel(score.map { "\(Brand.dailyName) : \($0) sur 5" } ?? "\(Brand.dailyName) pas encore joué")
-    }
-
-    /// Bulle de dialogue au-dessus de l'avatar ; place gardée vide pour aligner la rangée.
-    private func bubble(_ badge: FriendDuelBadge?) -> some View {
-        Text(badge?.text ?? " ")
-            .font(.system(size: 10.5, weight: .black, design: .rounded))
-            .foregroundStyle(badge?.tone == .action ? Color.white : badge?.color ?? .clear)
-            .lineLimit(1).minimumScaleFactor(0.7)
-            .padding(.horizontal, 7).frame(height: 20)
-            .background {
-                if let badge {
-                    Capsule().fill(badge.tone == .action ? badge.color : badge.color.opacity(0.13))
-                        .overlay(alignment: .bottom) {
-                            BubbleTail().fill(badge.tone == .action ? badge.color : badge.color.opacity(0.13))
-                                .frame(width: 8, height: 5).offset(y: 4.5)
-                        }
-                }
-            }
-            .frame(maxWidth: 76)
-    }
-}
-
-/// Petite pointe de bulle.
-private struct BubbleTail: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
-        path.closeSubpath()
-        return path
     }
 }
 

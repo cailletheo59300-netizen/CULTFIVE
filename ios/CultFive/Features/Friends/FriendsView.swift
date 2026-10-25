@@ -2,9 +2,10 @@ import SwiftUI
 import CultFiveCore
 
 /// Arène (D-111) : en haut, le duel classé (ma semaine, les boutons « Contre un joueur » / « Contre un ami », le
-/// coffre d'Arène, le mini-classement, mes duels classés). Puis « Entre amis » (D-112), épuré : le titre et
-/// « Historique », la rangée de mes amis avec leur 5 du jour (ou la carte d'invitation), ce qui attend le joueur
-/// (demandes, duels à jouer), ses ligues. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son
+/// coffre d'Arène, le mini-classement, mes duels classés). Puis « Entre amis » (D-112) : le titre et « Historique »,
+/// « Créer une ligue » (ou mes ligues), ce qui attend le joueur (demandes, duels à jouer), puis le classement du 5 du
+/// jour entre amis (toi compris, avec ce qui se passe entre vous) et « Ajouter un ami » ; sans amis, la carte
+/// d'invitation. Toutes les actions sur un ami (duel, face-à-face, retirer) sont dans son
 /// profil ; les actions globales (ajouter, défier par lien, ligues) dans le bouton « + ».
 struct FriendsView: View {
     enum Route: Hashable {
@@ -34,6 +35,8 @@ struct FriendsView: View {
     @State private var arenaDetail: ArenaDuel?
     /// Récompenses de la semaine passée, pas encore montrées.
     @State private var weekReward: ArenaRewardItem?
+    /// Mon 5 du jour (score et temps) pour me placer dans le classement des amis.
+    @State private var myToday: DailyResult?
     @State private var showChallenge = false
     /// « Ajouter un ami » touché dans la feuille « Contre un ami » : ouvert une fois la feuille refermée.
     @State private var searchAfterChallenge = false
@@ -74,10 +77,10 @@ struct FriendsView: View {
                         if app.isAnonymous {
                             AccountNudge()
                         }
-                        friendsHeader
+                        leaguesBlock
                     }
                     toPlay
-                    leaguesBlock
+                    friendsList
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -233,6 +236,7 @@ struct FriendsView: View {
         async let referralInfo = try? service.referralOverview()
         async let myDuels = try? service.duels()
         async let arenaData = try? service.arenaOverview()
+        async let today: DailyResult? = app.daily?.state == .done ? (try? service.dailyResult(date: nil)) : nil
         if let fresh = await arenaData {
             arena = fresh
             ArenaSeen.prime(fresh.duels)
@@ -240,6 +244,7 @@ struct FriendsView: View {
             app.markArenaSeen(fresh)
         }
         duels = await myDuels ?? []
+        myToday = await today
         overview = await friends
         leagues = await mine ?? []
         referral = await referralInfo
@@ -271,17 +276,86 @@ struct FriendsView: View {
         .accessibilityLabel("Ajouter")
     }
 
-    /// Mes amis en rangée (bulles : défi en attente, score entre nous), ou la grande carte d'invitation.
-    @ViewBuilder private var friendsHeader: some View {
+    /// Classement du 5 du jour entre amis (D-074), toi compris : ceux qui l'ont fait par score puis temps, les autres en
+    /// bas, grisés ; à côté du pseudo, ce qui se passe entre vous (« t'a défié ! », « 3–2 pour toi »). Un ami se touche :
+    /// son profil. Sans amis : la grande carte d'invitation.
+    @ViewBuilder private var friendsList: some View {
         if let friends = overview?.friends {
             if friends.isEmpty {
                 InviteFriendsCard(code: referral?.code ?? app.profile?.referralCode,
                                   onAdd: { showSearch = true }, onLinkDuel: { showLinkDuel = true })
             } else {
-                FriendsStrip(friends: friends, duels: duels, onAdd: { showSearch = true },
-                             onFriend: { path.append(.friend($0.id, $0.handle)) })
+                VStack(alignment: .leading, spacing: Space.s) {
+                    Text("Le \(Brand.dailyName) de tes amis").labelCaps()
+                    VStack(spacing: 6) {
+                        ForEach(rankedEntries(friends)) { entry in
+                            if let friend = friends.first(where: { $0.id.uuidString == entry.id }) {
+                                NavigationLink(value: Route.friend(friend.id, friend.handle)) {
+                                    RankRow(entry: entry, style: .onPaper, showsChevron: true)
+                                }
+                                .buttonStyle(.row)
+                            } else {
+                                RankRow(entry: entry, style: .onPaper)
+                            }
+                        }
+                        Button { showSearch = true } label: {
+                            HStack(spacing: 10) {
+                                Image(systemName: "plus")
+                                    .font(.system(.footnote, design: .rounded).weight(.black))
+                                    .frame(width: 28, height: 28)
+                                    .background(Color.brand.opacity(0.12), in: Circle())
+                                Text("Ajouter un ami").font(.system(.callout, design: .rounded).weight(.black))
+                                Spacer()
+                            }
+                            .foregroundStyle(Color.brand)
+                            .padding(.horizontal, 12)
+                            .frame(minHeight: 50)
+                            .background(RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                .strokeBorder(Color.brand.opacity(0.3), style: StrokeStyle(lineWidth: 1.5, dash: [5, 4])))
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.row)
+                    }
+                    if let outgoing = overview?.outgoing, !outgoing.isEmpty {
+                        Text("En attente : " + outgoing.map(\.handle).joined(separator: ", "))
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                    }
+                }
             }
         }
+    }
+
+    private func rankedEntries(_ friends: [Friend]) -> [RankEntry] {
+        func tagged(_ entry: RankEntry, _ friend: Friend) -> RankEntry {
+            var entry = entry
+            if let badge = FriendDuelBadge.make(friend: friend.id, duels: duels) {
+                entry.tag = badge.text
+                entry.tagColor = badge.color
+                entry.tagFilled = badge.tone == .action
+            }
+            return entry
+        }
+        var played: [RankEntry] = friends.compactMap { friend in
+            guard let today = friend.today, let score = today.score else { return nil }
+            return tagged(RankEntry(id: friend.id.uuidString, handle: friend.handle, score: score, totalMs: today.totalMs,
+                                    streak: friend.streak, me: false, answers: today.answers), friend)
+        }
+        if let mine = myToday {
+            played.append(RankEntry(id: "moi", handle: "Toi", score: mine.score, totalMs: mine.totalMs, streak: mine.streak,
+                                    me: true, answers: mine.answers.map(\.isCorrect)))
+        }
+        played.sort { (a: RankEntry, b: RankEntry) -> Bool in
+            let scoreA: Int = a.score ?? 0
+            let scoreB: Int = b.score ?? 0
+            if scoreA != scoreB { return scoreA > scoreB }
+            let timeA: Int = a.totalMs ?? Int.max
+            let timeB: Int = b.totalMs ?? Int.max
+            return timeA < timeB
+        }
+        for index in played.indices { played[index].rank = index + 1 }
+        let waiting: [RankEntry] = friends.filter { $0.today?.score == nil }
+            .map { tagged(RankEntry(id: $0.id.uuidString, handle: $0.handle, score: nil, totalMs: nil, streak: $0.streak, me: false), $0) }
+        return played + waiting
     }
 
     /// « Entre amis » et, à droite, le lien discret vers l'historique de tous les duels entre amis.

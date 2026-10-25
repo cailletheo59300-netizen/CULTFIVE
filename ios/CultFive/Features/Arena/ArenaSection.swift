@@ -436,7 +436,7 @@ struct ArenaChestInfoSheet: View {
 
     var body: some View {
         VStack(spacing: Space.l) {
-            ChestView(tier: .gold).frame(width: 130, height: 130).padding(.top, Space.l)
+            ChestView(tier: .gold).frame(width: 160, height: 160).padding(.top, Space.xl)
             VStack(spacing: 6) {
                 Text("Coffre d'Arène").font(.cfDisplay)
                 Text("Gagne \(goal) duels classés : un coffre en or s'ouvre, avec une carte rare ou mieux à l'intérieur.")
@@ -459,7 +459,7 @@ struct ArenaChestInfoSheet: View {
         .padding(.horizontal, Space.gutter)
         .padding(.bottom, Space.m)
         .background(Color.paper)
-        .presentationDetents([.medium, .large])
+        .presentationDetents([.large])
         .presentationDragIndicator(.visible)
     }
 

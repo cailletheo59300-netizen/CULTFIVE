@@ -26,6 +26,11 @@ struct RankEntry: Identifiable {
     var champion = false
     /// Unité des points (« pts », « victoires »).
     var unit = "pts"
+    /// Amis (D-112) : petite étiquette à côté du pseudo (« t'a défié ! », « 3–2 pour toi »).
+    var tag: String? = nil
+    var tagColor: Color = .brand
+    /// Étiquette pleine (une action attend) ou douce.
+    var tagFilled = false
 
     var played: Bool { score != nil || elo != nil || points != nil }
     var isPast: Bool { (ago ?? 0) > 0 }
@@ -318,6 +323,15 @@ struct RankRow: View {
                         .foregroundStyle(entry.me ? Color(hex: 0x1E1340) : style.text)
                         .lineLimit(1)
                     if entry.champion { ArenaCrown(size: 16) }
+                    if let tag = entry.tag {
+                        Text(tag)
+                            .font(.system(size: 10.5, weight: .black, design: .rounded))
+                            .foregroundStyle(entry.tagFilled ? Color.white : entry.tagColor)
+                            .lineLimit(1)
+                            .padding(.horizontal, 7).padding(.vertical, 2)
+                            .background(entry.tagFilled ? entry.tagColor : entry.tagColor.opacity(0.13), in: Capsule())
+                            .layoutPriority(-1)
+                    }
                 }
                 if let streak = entry.streak, streak > 0 {
                     Label("\(streak)", systemImage: "flame.fill")
