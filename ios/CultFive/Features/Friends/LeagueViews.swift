@@ -1109,6 +1109,8 @@ struct LeagueQuizView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
     @State private var model: LeagueQuizModel?
+    /// Fin du quiz déjà notée pour la pub entre les parties (les scores réapparaissent après une pub).
+    @State private var countedFinish = false
 
     var body: some View {
         ZStack {
@@ -1179,9 +1181,18 @@ struct LeagueQuizView: View {
             }
         case .finished(let day):
             LeagueDayView(day: day, name: name, onClose: {
-                Task { await app.refreshProfile() }
-                dismiss()
+                Task {
+                    // Quiz fini : la pub entre les parties peut passer en quittant les scores (D-110).
+                    await app.interstitialBetweenGames()
+                    dismiss()
+                    await app.refreshProfile()
+                }
             })
+            .task {
+                guard !countedFinish else { return }
+                countedFinish = true
+                app.noteGameFinished()
+            }
         }
     }
 }

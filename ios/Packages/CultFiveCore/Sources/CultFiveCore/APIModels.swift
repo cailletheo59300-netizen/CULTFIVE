@@ -1946,18 +1946,25 @@ public struct AdStatus: Decodable, Hashable, Sendable {
     /// Série perdue récupérable (sa longueur), sinon nil.
     public var streakRescue: Int?
     public var interstitial: Bool
+    /// Écart minimum entre deux pubs entre les parties, en secondes (D-110).
+    public var interstitialGap: Int
+    /// Pubs entre les parties par jour au plus ; nil : pas de maximum.
+    public var interstitialDailyMax: Int?
     public var admin: Bool
     /// Pass+ actif : plus de pub, les récompenses « bonus » se prennent sans vidéo.
     public var passPlus: Bool
 
     public init(doubleSeeds: Int = 0, boostChest: Int = 0, freeChest: Int = 0, freePack: Int = 0, streakRescue: Int? = nil,
-                interstitial: Bool = false, admin: Bool = false, passPlus: Bool = false) {
+                interstitial: Bool = false, interstitialGap: Int = 300, interstitialDailyMax: Int? = nil,
+                admin: Bool = false, passPlus: Bool = false) {
         self.doubleSeeds = doubleSeeds
         self.boostChest = boostChest
         self.freeChest = freeChest
         self.freePack = freePack
         self.streakRescue = streakRescue
         self.interstitial = interstitial
+        self.interstitialGap = interstitialGap
+        self.interstitialDailyMax = interstitialDailyMax
         self.admin = admin
         self.passPlus = passPlus
     }
@@ -1970,6 +1977,8 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         case freeChest = "free_chest"
         case freePack = "free_pack"
         case streakRescue = "streak_rescue"
+        case interstitialGap = "interstitial_gap_s"
+        case interstitialDailyMax = "interstitial_daily_max"
     }
 
     public init(from decoder: Decoder) throws {
@@ -1980,6 +1989,8 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         freePack = try c.decodeIfPresent(Int.self, forKey: .freePack) ?? 0
         streakRescue = try c.decodeIfPresent(Int.self, forKey: .streakRescue)
         interstitial = try c.decodeIfPresent(Bool.self, forKey: .interstitial) ?? false
+        interstitialGap = try c.decodeIfPresent(Int.self, forKey: .interstitialGap) ?? 300
+        interstitialDailyMax = try c.decodeIfPresent(Int.self, forKey: .interstitialDailyMax)
         admin = try c.decodeIfPresent(Bool.self, forKey: .admin) ?? false
         passPlus = try c.decodeIfPresent(Bool.self, forKey: .passPlus) ?? false
     }

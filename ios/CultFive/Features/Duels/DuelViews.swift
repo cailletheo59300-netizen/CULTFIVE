@@ -135,6 +135,8 @@ struct DuelSessionView: View {
     /// Duel affiché : celui demandé, puis la revanche éventuelle.
     @State private var currentId: UUID?
     @State private var rematchError: String?
+    /// Duel dont la fin est déjà notée pour la pub entre les parties (le bilan réapparaît après une pub).
+    @State private var countedDuel: UUID?
 
     var body: some View {
         ZStack {
@@ -207,13 +209,22 @@ struct DuelSessionView: View {
             DuelResultView(duel: duel, myHandle: app.profile?.handle ?? "Moi", rematchError: rematchError,
                            onRematch: duel.opponent?.id == nil || duel.myTurn || (!duel.isFinished && duel.status != "expired")
                                ? nil : { rematch(duel) },
-                           onClose: { close() })
+                           onClose: { close(afterGame: true) })
+                .task(id: duel.id) {
+                    guard countedDuel != duel.id else { return }
+                    countedDuel = duel.id
+                    app.noteGameFinished()
+                }
         }
     }
 
-    private func close() {
-        Task { await app.refreshProfile() }
-        dismiss()
+    /// `afterGame` : on quitte le bilan, la pub entre les parties peut passer (D-110).
+    private func close(afterGame: Bool = false) {
+        Task {
+            if afterGame { await app.interstitialBetweenGames() }
+            dismiss()
+            await app.refreshProfile()
+        }
     }
 
     /// Revanche : même adversaire, mêmes réglages ; on enchaîne directement.

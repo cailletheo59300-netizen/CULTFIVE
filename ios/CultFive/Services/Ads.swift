@@ -8,9 +8,9 @@ import CultFiveCore
 /// Pubs Google AdMob.
 /// - Pubs récompensées, toujours au choix du joueur : la récompense est donnée par le serveur, après la confirmation
 ///   de Google (vérification côté serveur), jamais par l'app.
-/// - Pub entre les parties : au plus 1 toutes les 3 parties finies et 3 par jour, jamais les 3 premiers jours, jamais
-///   juste après une pub récompensée. Appelée seulement depuis l'écran de fin d'une partie Jouer (donc jamais pendant
-///   le 5 du jour, l'onboarding ou une question).
+/// - Pub entre les parties : à la fin de n'importe quelle partie (Jouer, Survie, 5 du jour, duel, ligue), dès que
+///   5 minutes (réglées par le serveur) sont passées depuis la dernière ; jamais les 12 premières heures, jamais juste
+///   après une pub récompensée, jamais pendant une question ni pendant l'onboarding (D-110).
 /// - Consentement : message RGPD de Google (UMP), puis demande Apple de suivi (ATT), avant tout chargement de pub.
 /// Les builds de test (Xcode, TestFlight) affichent les pubs de test de Google : cliquer ses propres vraies pubs
 /// peut faire suspendre le compte AdMob.
@@ -235,12 +235,19 @@ final class AdsController {
 
     // MARK: Pub entre les parties
 
-    private static let gamesKey = "ads.gamesSinceInterstitial"
     private static let dayKey = "ads.interstitialDay"
     private static let countKey = "ads.interstitialCount"
     private static let lastKey = "ads.interstitialLastAt"
-    /// Écart minimum entre deux pubs entre les parties, même si les parties s'enchaînent vite.
-    private static let minGap: TimeInterval = 5 * 60
+    /// Écart minimum entre deux pubs entre les parties (réglé par le serveur, D-110) : à la fin de n'importe quelle
+    /// partie, une pub passe dès que ce temps s'est écoulé depuis la dernière.
+    var interstitialGap: TimeInterval = 5 * 60
+    /// Pubs entre les parties par jour au plus (réglé par le serveur) ; nil : pas de maximum.
+    var interstitialDailyMax: Int?
+
+    /// Temps écoulé depuis la dernière pub entre les parties.
+    private var sinceLastInterstitial: TimeInterval {
+        Date().timeIntervalSince1970 - defaults.double(forKey: Self.lastKey)
+    }
 
     /// Pub entre les parties chargée d'avance (pendant le bilan) : elle s'affiche sans faire attendre.
     private var interstitialReady: (ad: InterstitialAd, loadedAt: Date)?
@@ -252,7 +259,8 @@ final class AdsController {
 
     /// La pub entre les parties sera due au prochain passage : on la charge pendant que le joueur lit son bilan.
     func preloadInterstitialIfSoon() {
-        guard enabled, started, !interstitialLoading, defaults.integer(forKey: Self.gamesKey) >= 3 else { return }
+        // Chargée un peu avant d'être due, pour être prête à la fin de la partie.
+        guard enabled, started, !interstitialLoading, sinceLastInterstitial >= interstitialGap - 120 else { return }
         if let ready = interstitialReady, Date().timeIntervalSince(ready.loadedAt) < 50 * 60 { return }
         interstitialLoading = true
         let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
@@ -270,22 +278,19 @@ final class AdsController {
         }
     }
 
-    /// Une partie Jouer vient de finir.
+    /// Une partie vient de finir (tous les modes).
     func noteGameFinished() {
-        defaults.set(defaults.integer(forKey: Self.gamesKey) + 1, forKey: Self.gamesKey)
         rewardedSinceLastGame = false
     }
 
-    /// Montre la pub entre les parties si elle est due. `allowed` : autorisation du serveur (pas les 3 premiers jours).
+    /// Montre la pub entre les parties si elle est due. `allowed` : autorisation du serveur (pas les 12 premières heures).
     /// Renvoie `true` si une pub a été montrée.
     func showInterstitialIfDue(allowed: Bool) async -> Bool {
         interstitialFailure = nil
         guard enabled, allowed, !rewardedSinceLastGame else { return false }
         let today = Self.dayString(Date())
         let shownToday = defaults.string(forKey: Self.dayKey) == today ? defaults.integer(forKey: Self.countKey) : 0
-        guard defaults.integer(forKey: Self.gamesKey) >= 3, shownToday < 3 else { return false }
-        let lastShown = defaults.double(forKey: Self.lastKey)
-        guard Date().timeIntervalSince1970 - lastShown >= Self.minGap else { return false }
+        guard sinceLastInterstitial >= interstitialGap, shownToday < (interstitialDailyMax ?? .max) else { return false }
         // Due mais impossible : on note pourquoi.
         guard started else {
             interstitialFailure = consentFailure
@@ -312,7 +317,6 @@ final class AdsController {
             interstitialFailure = "present \(error.domain) \(error.code)"
             return false
         }
-        defaults.set(0, forKey: Self.gamesKey)
         defaults.set(today, forKey: Self.dayKey)
         defaults.set(shownToday + 1, forKey: Self.countKey)
         defaults.set(Date().timeIntervalSince1970, forKey: Self.lastKey)

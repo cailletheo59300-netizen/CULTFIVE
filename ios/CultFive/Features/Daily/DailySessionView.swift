@@ -9,6 +9,8 @@ struct DailySessionView: View {
     @State private var model: DailySessionModel?
     @State private var showReview = false
     @State private var showShare = false
+    /// Fin de partie déjà notée pour la pub entre les parties (le bilan réapparaît après une pub).
+    @State private var countedFinish = false
 
     var body: some View {
         ZStack {
@@ -91,6 +93,11 @@ struct DailySessionView: View {
                             onShare: { showShare = true },
                             onClose: { close() })
                 .transition(.opacity)
+                .task {
+                    guard !countedFinish else { return }
+                    countedFinish = true
+                    app.noteGameFinished()
+                }
                 .sheet(isPresented: $showReview) {
                     DailyReviewView(date: result.date)
                 }
@@ -101,11 +108,15 @@ struct DailySessionView: View {
     }
 
     private func close() {
+        var finished = false
+        if case .finished = model?.stage { finished = true }
         Task {
+            // Le 5 du jour fini compte comme une partie : la pub entre les parties peut passer en le quittant (D-110).
+            if finished { await app.interstitialBetweenGames() }
+            dismiss()
             await app.refreshDaily()
             await app.refreshProfile()
         }
-        dismiss()
     }
 }
 

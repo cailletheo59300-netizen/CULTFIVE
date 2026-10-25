@@ -344,6 +344,15 @@ final class AppModel {
         if !ads.started { track("ad_fail", ["kind": "consent", "reason": String(ads.consentFailure.prefix(80))]) }
     }
 
+    /// Règles de la pub entre les parties envoyées par le serveur (écart, maximum par jour) et public visé.
+    private func applyInterstitialRules() {
+        ads.adultAudience = isAdult
+        if let status = adStatus {
+            ads.interstitialGap = TimeInterval(status.interstitialGap)
+            ads.interstitialDailyMax = status.interstitialDailyMax
+        }
+    }
+
     /// Majeur d'après la tranche d'âge indiquée (facultative) : sans réponse, on reste prudent.
     private var isAdult: Bool {
         guard let range = profile?.ageRange else { return false }
@@ -489,20 +498,24 @@ final class AppModel {
         }
     }
 
-    /// Entre deux parties Jouer (après le bilan) : pub plein écran si elle est due.
-    /// Une partie Jouer vient de finir : si la pub entre les parties approche, elle se charge déjà (bilan à l'écran).
+    /// Une partie vient de finir (tous les modes) : si la pub entre les parties approche, elle se charge déjà (bilan à l'écran).
     func noteGameFinished() {
         ReviewPrompt.noteActiveDay()
         ads.noteGameFinished()
-        if !noAds, adStatus?.interstitial ?? false {
-            ads.adultAudience = isAdult
+        guard !noAds else { return }
+        applyInterstitialRules()
+        if adStatus?.interstitial ?? false {
             ads.preloadInterstitialIfSoon()
+        } else {
+            // Pas encore permise (12 premières heures) : l'app a pu rester ouverte depuis, on relit le serveur.
+            Task { await refreshAdStatus() }
         }
     }
 
+    /// Entre deux parties (après le bilan) : pub plein écran si elle est due.
     func interstitialBetweenGames() async {
         guard !noAds else { return }
-        ads.adultAudience = isAdult
+        applyInterstitialRules()
         if await ads.showInterstitialIfDue(allowed: adStatus?.interstitial ?? false) {
             track("interstitial")
         } else if let reason = ads.interstitialFailure {

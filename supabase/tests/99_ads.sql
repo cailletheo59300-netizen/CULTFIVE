@@ -49,9 +49,13 @@ begin
   st := public.ad_status();
   perform tst.ok((st ->> 'double_seeds')::int = 2 and (st ->> 'free_chest')::int = 0 and (st ->> 'boost_chest')::int = 1, 'statut : restes du jour');
   perform tst.ok(not (st ->> 'interstitial')::bool, 'pas de pub entre les parties le premier jour');
-  perform tst.tick('1 day');
-  perform tst.ok((public.ad_status() ->> 'interstitial')::bool, 'pub entre les parties dès le 2e jour (0066)');
-  perform tst.tick('-1 day');
+  perform tst.tick('11 hours');
+  perform tst.ok(not (public.ad_status() ->> 'interstitial')::bool, 'pas de pub avant 12 h (0087)');
+  perform tst.tick('1 hour');
+  perform tst.ok((public.ad_status() ->> 'interstitial')::bool, 'pub entre les parties après 12 h (0087)');
+  perform tst.ok((public.ad_status() ->> 'interstitial_gap_s')::int = 300 and public.ad_status() -> 'interstitial_daily_max' = 'null'::jsonb,
+                 'toutes les 5 minutes, sans maximum par jour (0087)');
+  perform tst.tick('-12 hours');
   perform tst.tick('3 days');
   perform tst.ok((public.ad_status() ->> 'interstitial')::bool, 'pub entre les parties après le premier jour');
   perform tst.ok((public.ad_status() ->> 'free_chest')::int = 1, 'nouveau jour : coffre offert de nouveau');
