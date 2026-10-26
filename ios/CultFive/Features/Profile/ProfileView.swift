@@ -220,7 +220,7 @@ struct ProfileView: View {
     }
 }
 
-/// Choix de l'avatar (D-113) : 8 animaux, gratuits, un appui suffit.
+/// Choix de l'avatar (D-115) : 8 personnages, gratuits, un appui suffit.
 struct AvatarPickerSheet: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
@@ -249,6 +249,7 @@ struct AvatarPickerSheet: View {
                                         .animation(Motion.bounce, value: on)
                                     Text(animal.name)
                                         .font(.system(.subheadline, design: .rounded).weight(on ? .black : .bold))
+                                        .multilineTextAlignment(.center).lineLimit(2).minimumScaleFactor(0.8)
                                         .foregroundStyle(on ? Color.brand : Color.ink)
                                 }
                                 .frame(maxWidth: .infinity)

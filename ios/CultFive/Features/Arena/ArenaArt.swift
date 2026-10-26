@@ -105,8 +105,8 @@ final class MyAvatar {
     var animal: AnimalAvatar?
 }
 
-/// Avatar d'un joueur (D-113) : son animal en 3D sur un disque de couleur. Sans avatar connu (ancien serveur), un
-/// animal tiré de son pseudo, toujours le même.
+/// Avatar d'un joueur (D-115) : son personnage en 3D sur un disque de couleur. Sans avatar connu (ancien serveur), un
+/// personnage tiré de son pseudo, toujours le même.
 struct ArenaAvatar: View {
     let handle: String
     var size: CGFloat = 44
@@ -123,7 +123,7 @@ struct ArenaAvatar: View {
     }
 }
 
-/// Un animal sur son disque de couleur (aussi utilisé dans le choix de l'avatar).
+/// Un personnage sur son disque de couleur (aussi utilisé dans le choix de l'avatar).
 struct AnimalBadge: View {
     let animal: AnimalAvatar
     var size: CGFloat = 44
@@ -131,14 +131,14 @@ struct AnimalBadge: View {
 
     static func tint(_ animal: AnimalAvatar) -> Color {
         switch animal {
-        case .fox: return Color(hex: 0xFFD6A5)
-        case .panda: return Color(hex: 0xC6E8D6)
-        case .cat: return Color(hex: 0xD6CEFF)
-        case .owl: return Color(hex: 0xFFE2AA)
-        case .frog: return Color(hex: 0xCEECFF)
-        case .rabbit: return Color(hex: 0xFFD6E2)
-        case .bear: return Color(hex: 0xFFE8C8)
-        case .penguin: return Color(hex: 0xC4E0FF)
+        case .vinci: return Color(hex: 0xFFD6A5)
+        case .curie: return Color(hex: 0xC6E8D6)
+        case .newton: return Color(hex: 0xD6CEFF)
+        case .napoleon: return Color(hex: 0xFFE2AA)
+        case .mozart: return Color(hex: 0xCEECFF)
+        case .cleopatra: return Color(hex: 0xFFD6E2)
+        case .shakespeare: return Color(hex: 0xFFE8C8)
+        case .socrates: return Color(hex: 0xC4E0FF)
         }
     }
 
@@ -147,8 +147,7 @@ struct AnimalBadge: View {
             .fill(LinearGradient(colors: [Self.tint(animal).opacity(0.75), Self.tint(animal)], startPoint: .top, endPoint: .bottom))
             .overlay(
                 Image(animal.imageName).resizable().scaledToFit()
-                    .padding(size * 0.04)
-                    .offset(y: size * 0.03)
+                    .offset(y: size * 0.04)
             )
             .clipShape(Circle())
             .overlay(Circle().strokeBorder(ring ?? .clear, lineWidth: max(2, size * 0.06)))

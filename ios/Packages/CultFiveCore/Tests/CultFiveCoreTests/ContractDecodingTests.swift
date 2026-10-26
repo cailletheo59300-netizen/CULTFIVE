@@ -303,8 +303,8 @@ final class ContractDecodingTests: XCTestCase {
     }
 
     func testAnimalAvatar() throws {
-        let json = try SupabaseAPI.decoder.decode(JSONValue.self, from: Data(#"{"color": "chloro", "animal": "owl"}"#.utf8))
-        XCTAssertEqual(AnimalAvatar(json), .owl)
+        let json = try SupabaseAPI.decoder.decode(JSONValue.self, from: Data(#"{"color": "chloro", "animal": "curie"}"#.utf8))
+        XCTAssertEqual(AnimalAvatar(json), .curie)
         XCTAssertNil(AnimalAvatar(JSONValue.null))
         XCTAssertEqual(AnimalAvatar.fallback(for: "theo"), AnimalAvatar.fallback(for: "theo"))
     }
