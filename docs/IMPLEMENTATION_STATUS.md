@@ -67,7 +67,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | Arène : duels classés en file commune, points de la semaine, classements, récompenses du lundi ; accueil « Trouver un adversaire / Jouer seul » (D-111) | 🟡 serveur 0088 (missions d'Arène seulement pour l'app 1.5, en-tête x-brainlix-arena) ; app 1.5 (TestFlight) | `99_arene.sql`, `ContractDecodingTests.testArena` |
 | Jeu entre amis : « Contre un joueur / Contre un ami », duels entre amis 7 × 25 s sans points, rangée d'amis, carte d'invitation, historique, mini-classement Monde / Amis (D-112) | 🟡 serveur 0090 ; app 1.5 (TestFlight à venir) | `99_duels_amis.sql`, `ContractDecodingTests.testDuelsHistory` |
 | Avatars : 8 animaux 3D, un au hasard pour chacun, changeables depuis le profil, affichés dans l'Arène, les amis et les duels (D-113) | 🟡 serveur 0091 en ligne ; app 1.5 (TestFlight) | `99_avatars.sql`, `ContractDecodingTests.testAnimalAvatar` |
-| Duels entre amis : Format Arène / Format libre (chrono au choix), défi supprimable s'il n'est pas commencé, pages embellies, classement Semaine / Amis (D-114) | 🟡 serveur 0092 ; app 1.5 | `99_duels_reglages.sql` |
+| Duels entre amis : Format Arène / Format libre (chrono au choix), défi supprimable s'il n'est pas commencé, pages embellies, classement Semaine / Amis (D-114) | 🟡 serveur 0092 en ligne ; app 1.5 (TestFlight) | `99_duels_reglages.sql` |
 | Après le 5 du jour, on continue à jouer (D-089) | 🟡 app 1.4 | CI (build) |
 | Message de confidentialité réaffiché à la demande d'une pub (D-090) | 🟡 app 1.4 | CI (build) |
 | Podium du jour (D-091) | ✅ serveur 0083 en production · 🟡 app 1.4 | `99_classement_du_jour.sql` |
