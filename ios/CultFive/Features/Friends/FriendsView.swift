@@ -103,7 +103,7 @@ struct FriendsView: View {
         .sheet(isPresented: $showSearch, onDismiss: { Task { await load() } }) {
             AddFriendSheet()
         }
-        .sheet(isPresented: $showChallenge, onDismiss: {
+        .fullScreenCover(isPresented: $showChallenge, onDismiss: {
             if let launch = pendingLaunch {
                 pendingLaunch = nil
                 activeDuel = launch
@@ -299,14 +299,8 @@ struct FriendsView: View {
                             }
                         }
                         Button { showSearch = true } label: {
-                            HStack(spacing: 10) {
-                                Image(systemName: "plus")
-                                    .font(.system(.footnote, design: .rounded).weight(.black))
-                                    .frame(width: 28, height: 28)
-                                    .background(Color.brand.opacity(0.12), in: Circle())
-                                Text("Ajouter un ami").font(.system(.callout, design: .rounded).weight(.black))
-                                Spacer()
-                            }
+                            Text("+ Ajouter un ami").font(.system(.callout, design: .rounded).weight(.black))
+                            .frame(maxWidth: .infinity)
                             .foregroundStyle(Color.brand)
                             .padding(.horizontal, 12)
                             .frame(minHeight: 50)
@@ -338,11 +332,12 @@ struct FriendsView: View {
         var played: [RankEntry] = friends.compactMap { friend in
             guard let today = friend.today, let score = today.score else { return nil }
             return tagged(RankEntry(id: friend.id.uuidString, handle: friend.handle, score: score, totalMs: today.totalMs,
-                                    streak: friend.streak, me: false, answers: today.answers), friend)
+                                    streak: friend.streak, me: false, answers: today.answers, avatar: friend.avatar,
+                                    showsAvatar: true), friend)
         }
         if let mine = myToday {
-            played.append(RankEntry(id: "moi", handle: "Toi", score: mine.score, totalMs: mine.totalMs, streak: mine.streak,
-                                    me: true, answers: mine.answers.map(\.isCorrect)))
+            played.append(RankEntry(id: "moi", handle: app.profile?.handle ?? "Toi", score: mine.score, totalMs: mine.totalMs,
+                                    streak: mine.streak, me: true, answers: mine.answers.map(\.isCorrect), showsAvatar: true))
         }
         played.sort { (a: RankEntry, b: RankEntry) -> Bool in
             let scoreA: Int = a.score ?? 0
@@ -354,7 +349,8 @@ struct FriendsView: View {
         }
         for index in played.indices { played[index].rank = index + 1 }
         let waiting: [RankEntry] = friends.filter { $0.today?.score == nil }
-            .map { tagged(RankEntry(id: $0.id.uuidString, handle: $0.handle, score: nil, totalMs: nil, streak: $0.streak, me: false), $0) }
+            .map { tagged(RankEntry(id: $0.id.uuidString, handle: $0.handle, score: nil, totalMs: nil, streak: $0.streak, me: false,
+                                    avatar: $0.avatar, showsAvatar: true), $0) }
         return played + waiting
     }
 
@@ -365,11 +361,7 @@ struct FriendsView: View {
             Spacer()
             if !app.isAnonymous {
                 NavigationLink(value: Route.duelHistory) {
-                    HStack(spacing: 4) {
-                        Image(systemName: "clock.arrow.circlepath")
-                        Text("Historique")
-                        Image(systemName: "chevron.right").font(.caption2.weight(.heavy))
-                    }
+                    Text("Historique ›")
                     .font(.system(.footnote, design: .rounded).weight(.black))
                     .foregroundStyle(Color.brand)
                     .padding(.vertical, 6)
@@ -426,18 +418,19 @@ struct FriendsView: View {
     @ViewBuilder private var leaguesBlock: some View {
         if leagues.isEmpty {
             Button { showNewLeague = true } label: {
-                HStack(spacing: 12) {
-                    Image(systemName: "trophy.fill").font(.system(.callout, design: .rounded).weight(.bold))
-                        .foregroundStyle(Color(hex: 0xE8A400))
-                        .frame(width: 34, height: 34).background(Color.sun.opacity(0.25), in: Circle())
-                    VStack(alignment: .leading, spacing: 1) {
-                        Text("Crée une ligue entre amis").font(.system(.callout, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                HStack(spacing: 14) {
+                    Image("trophy_cup").resizable().scaledToFit().frame(width: 52, height: 52)
+                        .accessibilityHidden(true)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Ligue entre amis").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
                         Text("Un quiz privé chaque jour, un podium").font(.cfFootnote).foregroundStyle(Color.inkSoft).lineLimit(1)
                     }
                     Spacer()
-                    Image(systemName: "chevron.right").font(.caption.weight(.heavy)).foregroundStyle(Color.inkSoft)
+                    Text("Créer").font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white)
+                        .padding(.horizontal, 14).padding(.vertical, 8)
+                        .background(Color.brand, in: Capsule())
                 }
-                .popCard(padding: 12, radius: 18)
+                .popCard(padding: 12, radius: 20)
             }
             .buttonStyle(.row)
         } else {

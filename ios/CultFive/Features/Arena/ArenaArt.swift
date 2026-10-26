@@ -97,30 +97,60 @@ struct ArenaMystery: View {
     }
 }
 
-/// Pastille ronde avec l'initiale d'un joueur, à sa couleur (toujours la même pour un même pseudo).
+/// Mon avatar, connu partout sans passer par l'environnement (mis à jour avec mon profil).
+@MainActor
+@Observable
+final class MyAvatar {
+    static let shared = MyAvatar()
+    var animal: AnimalAvatar?
+}
+
+/// Avatar d'un joueur (D-113) : son animal en 3D sur un disque de couleur. Sans avatar connu (ancien serveur), un
+/// animal tiré de son pseudo, toujours le même.
 struct ArenaAvatar: View {
     let handle: String
     var size: CGFloat = 44
     var ring: Color? = nil
     var me = false
+    var avatar: JSONValue? = nil
 
-    private static let tints: [UInt32] = [0x2F6BFF, 0xF0588F, 0x0CA678, 0xF76707, 0x1098AD, 0x845EF7, 0xD6336C, 0xE5383B,
-                                          0x5F3DC4, 0x1C7ED6, 0x37B24D]
+    private var animal: AnimalAvatar {
+        AnimalAvatar(avatar) ?? (me ? MyAvatar.shared.animal : nil) ?? .fallback(for: handle)
+    }
 
-    private var tint: Color {
-        if me { return Color.brand }
-        let sum = handle.unicodeScalars.reduce(0) { ($0 &* 31 &+ Int($1.value)) & 0xFFFF }
-        return Color(hex: Self.tints[sum % Self.tints.count])
+    var body: some View {
+        AnimalBadge(animal: animal, size: size, ring: ring)
+    }
+}
+
+/// Un animal sur son disque de couleur (aussi utilisé dans le choix de l'avatar).
+struct AnimalBadge: View {
+    let animal: AnimalAvatar
+    var size: CGFloat = 44
+    var ring: Color? = nil
+
+    static func tint(_ animal: AnimalAvatar) -> Color {
+        switch animal {
+        case .fox: return Color(hex: 0xFFD6A5)
+        case .panda: return Color(hex: 0xC6E8D6)
+        case .cat: return Color(hex: 0xD6CEFF)
+        case .owl: return Color(hex: 0xFFE2AA)
+        case .frog: return Color(hex: 0xCEECFF)
+        case .rabbit: return Color(hex: 0xFFD6E2)
+        case .bear: return Color(hex: 0xFFE8C8)
+        case .penguin: return Color(hex: 0xC4E0FF)
+        }
     }
 
     var body: some View {
         Circle()
-            .fill(LinearGradient(colors: [tint.opacity(0.85), tint], startPoint: .topLeading, endPoint: .bottomTrailing))
+            .fill(LinearGradient(colors: [Self.tint(animal).opacity(0.75), Self.tint(animal)], startPoint: .top, endPoint: .bottom))
             .overlay(
-                Text(String(handle.prefix(1)).uppercased())
-                    .font(.system(size: size * 0.44, weight: .black, design: .rounded))
-                    .foregroundStyle(.white)
+                Image(animal.imageName).resizable().scaledToFit()
+                    .padding(size * 0.04)
+                    .offset(y: size * 0.03)
             )
+            .clipShape(Circle())
             .overlay(Circle().strokeBorder(ring ?? .clear, lineWidth: max(2, size * 0.06)))
             .frame(width: size, height: size)
             .accessibilityHidden(true)
@@ -175,7 +205,8 @@ struct ArenaPrizeStrip: View {
     }
 
     var body: some View {
-        HStack(alignment: .top, spacing: 10) {
+        // Sur plusieurs lignes si besoin : jamais de défilement horizontal.
+        FlowLayout(spacing: 10) {
             ForEach(items) { item in
                 VStack(spacing: 4) {
                     item.image.frame(width: itemSize, height: itemSize)

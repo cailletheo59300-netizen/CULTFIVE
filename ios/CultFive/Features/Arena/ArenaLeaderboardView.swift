@@ -93,7 +93,8 @@ struct ArenaLeaderboardView: View {
         let unit = scope == .all ? "victoires" : "pts"
         func entry(_ row: ArenaRow) -> RankEntry {
             RankEntry(id: row.id.uuidString, rank: row.rank, handle: row.handle, score: nil, totalMs: nil, streak: nil, me: row.me,
-                      points: scope == .all ? row.wins : row.points, champion: row.champion, unit: unit)
+                      points: scope == .all ? row.wins : row.points, champion: row.champion, unit: unit,
+                      avatar: row.avatar, showsAvatar: true)
         }
         var rows = Array(board.rows.prefix(30)).map(entry)
         if let me = board.me, !rows.contains(where: { $0.me }) { rows.append(entry(me)) }
@@ -139,10 +140,9 @@ struct ArenaPrizesList: View {
                 }
             }
             .frame(width: 66)
-            ScrollView(.horizontal, showsIndicators: false) {
-                ArenaPrizeStrip(prize: prize, itemSize: top == 1 ? 44 : 36)
-                    .padding(.vertical, 2)
-            }
+            ArenaPrizeStrip(prize: prize, itemSize: top == 1 ? 44 : 36)
+                .padding(.vertical, 2)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(12)
         .background(top == 1 ? AnyShapeStyle(LinearGradient(colors: [Color(hex: 0xFFF6D6), Color(hex: 0xFFE9A8)],

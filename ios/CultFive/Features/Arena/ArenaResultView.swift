@@ -99,7 +99,7 @@ struct ArenaResultView: View {
             .accessibilityElement(children: .ignore)
             .accessibilityLabel("\(duel.me.score) à \(duel.opponent?.score.map(String.init) ?? "inconnu")")
             if let opponent = duel.opponent, duel.isFinished {
-                side(handle: opponent.handle, me: false, score: opponent.score, champion: opponent.champion)
+                side(handle: opponent.handle, me: false, score: opponent.score, champion: opponent.champion, avatar: opponent.avatar)
             } else {
                 VStack(spacing: 6) {
                     ArenaMystery(size: 64)
@@ -116,10 +116,10 @@ struct ArenaResultView: View {
         return String(score)
     }
 
-    private func side(handle: String, me: Bool, score: Int?, champion: Bool) -> some View {
+    private func side(handle: String, me: Bool, score: Int?, champion: Bool, avatar: JSONValue? = nil) -> some View {
         let won = (duel.winner == "me") == me && duel.winner != nil && duel.winner != "draw"
         return VStack(spacing: 6) {
-            ArenaAvatar(handle: handle, size: 64, ring: won ? Color.sun : .white.opacity(0.6), me: me)
+            ArenaAvatar(handle: handle, size: 64, ring: won ? Color.sun : .white.opacity(0.6), me: me, avatar: avatar)
                 .overlay(alignment: .top) { if champion { ArenaCrown(size: 26).offset(y: -20) } }
             Text(me ? "Toi" : handle).font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white)
                 .lineLimit(1).minimumScaleFactor(0.7)

@@ -119,6 +119,8 @@ public protocol GameService: Sendable {
     func duelResult(_ duel: UUID) async throws -> Duel
     /// Historique des duels entre amis ; `before` : curseur `next` de la page précédente.
     func duelsHistory(before: String?) async throws -> DuelHistory
+    /// Change l'avatar du joueur (D-113), gratuit.
+    func avatarSet(_ animal: AnimalAvatar) async throws
     func searchHandles(_ query: String) async throws -> [HandleSearchResult]
     func requestFriend(handle: String) async throws -> FriendRequestResult
     func respondFriend(friendship: UUID, accept: Bool) async throws
@@ -384,6 +386,10 @@ public struct LiveGameService: GameService {
     }
 
     public func duelResult(_ duel: UUID) async throws -> Duel { try await api.rpc("duel_result", ["p_duel": .string(duel.uuidString)]) }
+
+    public func avatarSet(_ animal: AnimalAvatar) async throws {
+        let _: JSONValue = try await api.rpc("avatar_set", ["p_animal": .string(animal.rawValue)])
+    }
 
     public func duelsHistory(before: String?) async throws -> DuelHistory {
         try await api.rpc("duels_history", ["p_before": before.map(JSONValue.string) ?? .null])
@@ -764,6 +770,9 @@ public extension GameService {
 
     /// Par défaut (démo) : le duel de base.
     func duelCreate(friend: UUID?, settings: DuelSettings) async throws -> Duel { try await duelCreate(friend: friend) }
+
+    /// Par défaut (démo) : rien à enregistrer.
+    func avatarSet(_ animal: AnimalAvatar) async throws {}
 
     /// Par défaut (démo) : les duels terminés de la liste.
     func duelsHistory(before: String?) async throws -> DuelHistory {

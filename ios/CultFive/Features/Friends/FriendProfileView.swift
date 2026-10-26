@@ -43,12 +43,23 @@ struct FriendProfileView: View {
                         }
                         .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
                     }
-                    HeadToHeadCard(me: app.profile?.handle ?? "Toi", friend: handle, h: profile.headToHead)
+                    HeadToHeadCard(me: app.profile?.handle ?? "Toi", friend: handle, friendAvatar: profile.avatar, h: profile.headToHead)
                     if !profile.duels.isEmpty {
                         VStack(alignment: .leading, spacing: Space.s) {
-                            Text("Nos duels").labelCaps()
+                            HStack(alignment: .firstTextBaseline) {
+                                Text("Nos duels").labelCaps()
+                                Spacer()
+                                if profile.duels.count > 5 {
+                                    NavigationLink {
+                                        FriendDuelsPage(handle: handle, duels: profile.duels)
+                                    } label: {
+                                        Text("Voir plus ›").font(.system(.footnote, design: .rounded).weight(.black))
+                                            .foregroundStyle(Color.brand)
+                                    }
+                                }
+                            }
                             VStack(spacing: 0) {
-                                ForEach(Array(profile.duels.enumerated()), id: \.element.id) { index, duel in
+                                ForEach(Array(profile.duels.prefix(5).enumerated()), id: \.element.id) { index, duel in
                                     if index > 0 { Hairline().padding(.leading, 12) }
                                     Button { activeDuel = DuelLaunch(id: duel.id) } label: {
                                         DuelHistoryRow(duel: duel, showsOpponent: false)
@@ -168,7 +179,7 @@ struct FriendProfileView: View {
 
     private var header: some View {
         HStack(alignment: .center, spacing: Space.m) {
-            Leon(color: .brand, pose: .wave).frame(width: 84)
+            ArenaAvatar(handle: handle, size: 76, avatar: profile?.avatar)
             VStack(alignment: .leading, spacing: 4) {
                 Text(handle).font(.cfDisplay).lineLimit(1).minimumScaleFactor(0.6)
                 if let profile {

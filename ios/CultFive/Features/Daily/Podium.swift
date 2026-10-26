@@ -31,6 +31,9 @@ struct RankEntry: Identifiable {
     var tagColor: Color = .brand
     /// Étiquette pleine (une action attend) ou douce.
     var tagFilled = false
+    /// Avatar du joueur (D-113), affiché à côté de la médaille si `showsAvatar`.
+    var avatar: JSONValue? = nil
+    var showsAvatar = false
 
     var played: Bool { score != nil || elo != nil || points != nil }
     var isPast: Bool { (ago ?? 0) > 0 }
@@ -316,6 +319,9 @@ struct RankRow: View {
     var body: some View {
         HStack(spacing: 10) {
             MedalBadge(rank: entry.rank, size: 28, style: style, me: entry.me)
+            if entry.showsAvatar {
+                ArenaAvatar(handle: entry.handle, size: 34, me: entry.me, avatar: entry.avatar)
+            }
             VStack(alignment: .leading, spacing: 1) {
                 HStack(spacing: 6) {
                     Text(entry.me ? "Toi" : entry.handle)

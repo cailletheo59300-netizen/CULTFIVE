@@ -16,6 +16,7 @@ struct ProfileView: View {
     @State private var showTrophies = false
     @State private var showcase: Showcase?
     @State private var editShowcase = false
+    @State private var showAvatars = false
     @State private var path = NavigationPath()
 
     var body: some View {
@@ -63,6 +64,7 @@ struct ProfileView: View {
             NavigationStack { DailyHistoryDetail() }
                 .presentationDetents([.large])
         }
+        .sheet(isPresented: $showAvatars) { AvatarPickerSheet() }
         .sheet(isPresented: $showShare) {
             if let profile = app.profile {
                 ShareSheetView(content: .profile(profile, skills: skills))
@@ -114,6 +116,22 @@ struct ProfileView: View {
 
             HStack(alignment: .bottom, spacing: Space.m) {
                 VStack(alignment: .leading, spacing: Space.xs) {
+                    Button { showAvatars = true } label: {
+                        ArenaAvatar(handle: app.profile?.handle ?? "", size: 72, me: true)
+                            .overlay(alignment: .bottomTrailing) {
+                                Text("Changer")
+                                    .font(.system(size: 10, weight: .black, design: .rounded))
+                                    .foregroundStyle(.white)
+                                    .padding(.horizontal, 7).padding(.vertical, 3)
+                                    .background(Color.brand, in: Capsule())
+                                    .overlay(Capsule().strokeBorder(Color.paper, lineWidth: 2))
+                                    .offset(x: 12, y: 4)
+                            }
+                    }
+                    .buttonStyle(.row)
+                    .accessibilityLabel("Mon avatar")
+                    .accessibilityHint("Changer d'avatar")
+                    .padding(.bottom, Space.xs)
                     Text(app.profile?.handle ?? "…").font(.cfDisplay).lineLimit(1).minimumScaleFactor(0.6)
                     if let profile = app.profile {
                         let level = XPLevel(totalXP: profile.xpTotal)
@@ -199,5 +217,55 @@ struct ProfileView: View {
         .padding(Space.m)
         .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
         .accessibilityElement(children: .combine)
+    }
+}
+
+/// Choix de l'avatar (D-113) : 8 animaux, gratuits, un appui suffit.
+struct AvatarPickerSheet: View {
+    @Environment(AppModel.self) private var app
+    @Environment(\.dismiss) private var dismiss
+    private let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: Space.l) {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Mon avatar").font(.cfDisplay)
+                        Text("Tes amis et tes adversaires le voient dans l'Arène et les classements. Change quand tu veux.")
+                            .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(AnimalAvatar.allCases, id: \.self) { animal in
+                            let on = MyAvatar.shared.animal == animal
+                            Button {
+                                Haptics.selection()
+                                Task { await app.setAvatar(animal) }
+                            } label: {
+                                VStack(spacing: 8) {
+                                    AnimalBadge(animal: animal, size: 92, ring: on ? Color.brand : nil)
+                                        .scaleEffect(on ? 1.04 : 1)
+                                        .animation(Motion.bounce, value: on)
+                                    Text(animal.name)
+                                        .font(.system(.subheadline, design: .rounded).weight(on ? .black : .bold))
+                                        .foregroundStyle(on ? Color.brand : Color.ink)
+                                }
+                                .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.row)
+                            .accessibilityLabel(animal.name)
+                            .accessibilityAddTraits(on ? .isSelected : [])
+                        }
+                    }
+                }
+                .padding(Space.gutter)
+            }
+            .background(Color.paper)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) { Button("OK") { dismiss() } }
+            }
+        }
+        .presentationDetents([.large])
     }
 }

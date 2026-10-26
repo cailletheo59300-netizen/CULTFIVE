@@ -255,6 +255,7 @@ struct ArenaSection: View {
     private func teaserRow(_ row: ArenaRow) -> some View {
         HStack(spacing: 10) {
             ArenaMedal(rank: row.rank, size: 34)
+            ArenaAvatar(handle: row.handle, size: 30, me: row.me, avatar: row.avatar)
             ArenaHandle(handle: row.me ? "Toi" : row.handle, champion: row.champion,
                         color: row.me ? Color(hex: 0x1E1340) : .ink)
             Spacer()
@@ -295,7 +296,7 @@ struct ArenaDuelRow: View {
     var body: some View {
         HStack(spacing: 12) {
             if let opponent = duel.opponent, duel.isFinished {
-                ArenaAvatar(handle: opponent.handle, size: 38)
+                ArenaAvatar(handle: opponent.handle, size: 38, avatar: opponent.avatar)
             } else if duel.myTurn {
                 ArenaCrest().frame(width: 38, height: 38)
             } else {

@@ -377,7 +377,7 @@ struct LeagueJoinSheet: View {
         }
         .padding(Space.gutter)
         .background(Color.paper)
-        .presentationDetents([.medium, .large])
+        .presentationDetents([.large])
         .presentationDragIndicator(.visible)
         .task {
             do { preview = try await app.service.leaguePreview(code: code) } catch {

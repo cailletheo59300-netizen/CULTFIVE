@@ -297,25 +297,15 @@ private struct DuelIntroView: View {
                 Spacer()
                 Text("DUEL").font(.cfLabel).tracking(2).foregroundStyle(Color.sun)
                 HStack(alignment: .center, spacing: Space.m) {
-                    player(myHandle, color: .sun, pose: .wave)
+                    player(myHandle, me: true, avatar: nil)
                     Text("VS").font(.system(size: 34, weight: .black, design: .rounded)).foregroundStyle(.white)
                         .scaleEffect(appeared ? 1 : 0.3)
-                    player(duel.opponent?.handle ?? "?", color: Color(hex: 0xFF8FB1), pose: .curious)
+                    player(duel.opponent?.handle ?? "?", me: false, avatar: duel.opponent?.avatar)
                 }
-                VStack(spacing: 6) {
-                    Text(duel.seconds.map { "\(duel.questionCount) questions, \($0) s chacune, les mêmes pour vous deux." }
-                         ?? "\(duel.questionCount) questions, les mêmes pour vous deux.")
-                    Text(DuelText.settings(duel)).foregroundStyle(.white.opacity(0.75))
-                    Text("Le meilleur score gagne ; à égalité, le plus rapide.")
-                    if let opponent = duel.opponent, opponent.answered == duel.questionCount {
-                        Text("\(opponent.handle ?? "Ton adversaire") a déjà joué : à toi !").foregroundStyle(Color.sun)
-                    } else if duel.opponent == nil {
-                        Text("Personne n'a encore rejoint : joue, puis partage le lien.").foregroundStyle(Color.sun)
-                    }
-                }
-                .font(.system(.callout, design: .rounded).weight(.bold))
-                .foregroundStyle(.white.opacity(0.9))
-                .multilineTextAlignment(.center)
+                Text("Le meilleur score gagne ; à égalité, le plus rapide.")
+                    .font(.system(.callout, design: .rounded).weight(.bold))
+                    .foregroundStyle(.white.opacity(0.9))
+                    .multilineTextAlignment(.center)
                 Spacer()
                 Button(resuming ? "Reprendre" : "Go !", action: onGo).buttonStyle(.sun)
             }
@@ -324,9 +314,14 @@ private struct DuelIntroView: View {
         .onAppear { withAnimation(Motion.bounce.delay(0.1)) { appeared = true } }
     }
 
-    private func player(_ handle: String, color: Color, pose: Leon.Pose) -> some View {
-        VStack(spacing: 6) {
-            Leon(color: color, pose: pose).frame(width: 110)
+    private func player(_ handle: String, me: Bool, avatar: JSONValue?) -> some View {
+        VStack(spacing: 10) {
+            if handle == "?" {
+                ArenaMystery(size: 104)
+            } else {
+                ArenaAvatar(handle: handle, size: 104, ring: me ? Color.sun : .white.opacity(0.85), me: me, avatar: avatar)
+                    .shadow(color: .black.opacity(0.25), radius: 10, y: 6)
+            }
             Text(handle).font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(.white)
                 .lineLimit(1).minimumScaleFactor(0.6)
         }

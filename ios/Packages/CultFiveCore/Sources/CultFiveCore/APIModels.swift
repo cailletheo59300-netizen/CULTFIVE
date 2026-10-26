@@ -1151,9 +1151,11 @@ public struct Duel: Codable, Hashable, Identifiable, Sendable {
         public let answered: Int
         public let score: Int?
         public let totalMs: Int?
+        /// Avatar du joueur (D-113).
+        public let avatar: JSONValue?
 
         enum CodingKeys: String, CodingKey {
-            case id, handle, answered, score
+            case id, handle, answered, score, avatar
             case totalMs = "total_ms"
         }
     }
@@ -1256,6 +1258,7 @@ public struct DuelHistory: Decodable, Hashable, Sendable {
     public struct Rival: Decodable, Hashable, Identifiable, Sendable {
         public let id: UUID
         public let handle: String
+        public let avatar: JSONValue?
         public let played: Int
         public let wins: Int
         public let losses: Int
@@ -1331,11 +1334,13 @@ public struct FriendProfile: Decodable, Hashable, Sendable {
     public let today: FriendToday?
     public let headToHead: HeadToHead
     public let duels: [Duel]
+    /// Avatar de l'ami (D-113).
+    public let avatar: JSONValue?
     /// Vitrine du profil (absente avant la migration 0063).
     public let showcase: Showcase?
 
     enum CodingKeys: String, CodingKey {
-        case id, handle, streak, cote, today, duels, showcase
+        case id, handle, streak, cote, today, duels, showcase, avatar
         case streakBest = "streak_best"
         case xpTotal = "xp_total"
         case cotePlaced = "cote_placed"

@@ -15,15 +15,18 @@ public struct ArenaDuel: Codable, Hashable, Identifiable, Sendable {
         /// Révélé une fois sa propre partie finie.
         public let score: Int?
         public let totalMs: Int?
+        /// Avatar du joueur (D-113 : clé « animal »).
+        public let avatar: JSONValue?
 
         enum CodingKeys: String, CodingKey {
-            case id, handle, champion, answered, score
+            case id, handle, champion, answered, score, avatar
             case weekPoints = "week_points"
             case totalMs = "total_ms"
         }
 
         public init(id: UUID, handle: String, weekPoints: Int = 0, champion: Bool = false, answered: Int = 0,
-                    score: Int? = nil, totalMs: Int? = nil) {
+                    score: Int? = nil, totalMs: Int? = nil, avatar: JSONValue? = nil) {
+            self.avatar = avatar
             self.id = id
             self.handle = handle
             self.weekPoints = weekPoints
@@ -266,9 +269,12 @@ public struct ArenaRow: Codable, Hashable, Identifiable, Sendable {
     public let eligible: Bool
     public let me: Bool
     public let champion: Bool
+    /// Avatar du joueur (D-113).
+    public let avatar: JSONValue?
 
     public init(rank: Int, id: UUID = UUID(), handle: String, points: Int, wins: Int = 0, duels: Int = 0, eligible: Bool = true,
-                me: Bool = false, champion: Bool = false) {
+                me: Bool = false, champion: Bool = false, avatar: JSONValue? = nil) {
+        self.avatar = avatar
         self.rank = rank
         self.id = id
         self.handle = handle
@@ -370,8 +376,10 @@ public struct ArenaOverview: Codable, Hashable, Sendable {
     public struct Champion: Codable, Hashable, Sendable {
         public let id: UUID
         public let handle: String
+        public let avatar: JSONValue?
 
-        public init(id: UUID, handle: String) {
+        public init(id: UUID, handle: String, avatar: JSONValue? = nil) {
+            self.avatar = avatar
             self.id = id
             self.handle = handle
         }

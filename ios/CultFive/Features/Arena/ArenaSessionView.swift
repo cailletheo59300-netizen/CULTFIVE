@@ -360,27 +360,27 @@ private struct ArenaReadyView: View {
         .onAppear { withAnimation(.spring(response: 0.55, dampingFraction: 0.7)) { shown = true } }
     }
 
-    /// Toi contre ton adversaire : celui qui a déjà joué (« bats son score ! »), ou un « ? » : le prochain joueur.
+    /// Toi contre ton adversaire : leurs avatars face à face, le pseudo, une mention courte dessous.
     private var faceOff: some View {
-        HStack(alignment: .center, spacing: 0) {
-            player(handle: me, detail: "Toi", me: true)
+        HStack(alignment: .top, spacing: 0) {
+            player(name: "Toi", detail: me, me: true, avatar: nil)
                 .offset(x: shown ? 0 : -160)
             Text("VS")
-                .font(.system(size: 34, weight: .black, design: .rounded)).italic()
+                .font(.system(size: 30, weight: .black, design: .rounded)).italic()
                 .foregroundStyle(Color.sun)
                 .scaleEffect(shown ? 1 : 2.2)
                 .opacity(shown ? 1 : 0)
-                .frame(width: 70)
+                .frame(width: 64, height: 104)
             if let opponent = model.opponent {
-                player(handle: opponent.handle, detail: "a déjà joué · bats son score !", me: false,
+                player(name: opponent.handle, detail: "a déjà joué", me: false, avatar: opponent.avatar,
                        champion: opponent.champion)
                     .offset(x: shown ? 0 : 160)
             } else {
-                VStack(spacing: 8) {
-                    ArenaMystery(size: 92)
-                    Text("?").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
-                    Text("Ton adversaire arrive").font(.system(.caption, design: .rounded).weight(.bold))
-                        .foregroundStyle(.white.opacity(0.7)).lineLimit(1).minimumScaleFactor(0.7)
+                VStack(spacing: 10) {
+                    ArenaMystery(size: 104)
+                    Text("Adversaire").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
+                    Text("arrive bientôt").font(.system(.subheadline, design: .rounded).weight(.semibold))
+                        .foregroundStyle(.white.opacity(0.65))
                 }
                 .frame(maxWidth: .infinity)
                 .offset(x: shown ? 0 : 160)
@@ -389,38 +389,33 @@ private struct ArenaReadyView: View {
         .padding(.top, Space.l)
     }
 
-    private func player(handle: String, detail: String, me: Bool, champion: Bool = false) -> some View {
-        VStack(spacing: 8) {
-            ArenaAvatar(handle: handle, size: 92, ring: me ? Color.sun : .white, me: me)
+    private func player(name: String, detail: String, me: Bool, avatar: JSONValue?, champion: Bool = false) -> some View {
+        VStack(spacing: 10) {
+            ArenaAvatar(handle: me ? detail : name, size: 104, ring: me ? Color.sun : .white.opacity(0.85), me: me, avatar: avatar)
+                .shadow(color: .black.opacity(0.25), radius: 10, y: 6)
                 .overlay(alignment: .top) {
                     if champion { ArenaCrown(size: 34).offset(y: -26) }
                 }
-            Text(handle).font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
+            Text(name).font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
                 .lineLimit(1).minimumScaleFactor(0.7)
-            Text(detail).font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.7))
+            Text(me ? " " : detail).font(.system(.subheadline, design: .rounded).weight(.semibold))
+                .foregroundStyle(.white.opacity(0.65))
                 .lineLimit(1).minimumScaleFactor(0.7)
         }
         .frame(maxWidth: .infinity)
     }
 
+    /// Deux lignes simples : comment on gagne, ce que ça rapporte.
     private var rules: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            rule("timer", "\(model.total) questions mélangées, \(model.seconds) s chacune")
-            rule("trophy.fill", model.opponent == nil ? "Le plus de bonnes réponses gagne ; à égalité, le plus rapide"
-                                                      : "Tu découvres le score de \(model.opponent?.handle ?? "ton adversaire") à la fin")
-            rule("plus.circle.fill", "Victoire +3 pts · égalité +1 · défaite 0, tu ne perds jamais de points")
+        VStack(spacing: 6) {
+            Text("Le meilleur score gagne ; à égalité, le plus rapide.")
+            Text("Victoire +3 pts · égalité +1 · défaite 0").foregroundStyle(Color.sun)
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-    }
-
-    private func rule(_ symbol: String, _ text: String) -> some View {
-        HStack(alignment: .top, spacing: 12) {
-            Image(systemName: symbol).font(.body.weight(.bold)).foregroundStyle(Color.sun).frame(width: 24)
-            Text(text).font(.system(.callout, design: .rounded).weight(.bold)).foregroundStyle(.white)
-                .fixedSize(horizontal: false, vertical: true)
-        }
+        .font(.system(.subheadline, design: .rounded).weight(.bold))
+        .foregroundStyle(.white.opacity(0.85))
+        .multilineTextAlignment(.center)
+        .frame(maxWidth: .infinity)
+        .padding(.top, Space.m)
     }
 }
 

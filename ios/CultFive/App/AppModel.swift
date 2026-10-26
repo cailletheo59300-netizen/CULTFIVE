@@ -26,7 +26,23 @@ final class AppModel {
 
     func reselect(_ tab: Tab) { reselected[tab, default: 0] += 1 }
     var profile: Profile? {
-        didSet { if useCache, let profile { cache.save(profile, key: "profile") } }
+        didSet {
+            if useCache, let profile { cache.save(profile, key: "profile") }
+            MyAvatar.shared.animal = AnimalAvatar(profile?.avatar)
+        }
+    }
+
+    /// Change mon avatar (D-113) : tout de suite à l'écran, puis enregistré sur le serveur.
+    func setAvatar(_ animal: AnimalAvatar) async {
+        let previous = MyAvatar.shared.animal
+        MyAvatar.shared.animal = animal
+        do {
+            try await service.avatarSet(animal)
+            await refreshProfile()
+        } catch {
+            MyAvatar.shared.animal = previous
+            show(error, "Impossible de changer d'avatar. Réessaie.")
+        }
     }
     var daily: DailyStatus? {
         didSet { if useCache, let daily { cache.save(daily, key: "daily") } }
