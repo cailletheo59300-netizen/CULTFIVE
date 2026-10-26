@@ -66,7 +66,7 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
 
             if question.type == .numeric && phase.isAnswering {
                 NumericKeypad(entry: $entry) {
-                    if let value = entry.value { onSubmit(.number(value)) }
+                    if let value = entry.value { submit(.number(value)) }
                 }
                 .padding(.bottom, Space.s)
             } else if phase.revealed != nil {
@@ -75,7 +75,8 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
                     .padding(.horizontal, Space.gutter)
                     .padding(.vertical, Space.s)
             } else if case .submitting = phase {
-                ProgressView().frame(height: 56).padding(.vertical, Space.s)
+                // Le rond n'apparaît que si la réponse tarde : une réponse rapide ne fait rien clignoter.
+                DelayedSpinner().frame(height: 56).padding(.vertical, Space.s)
             }
         }
         .background(alignment: .top) {
@@ -95,12 +96,18 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
         .animation(Motion.adaptive(Motion.standard, reduceMotion: reduceMotion), value: phase)
     }
 
+    /// Réponse donnée : petite vibration tout de suite, sans attendre le verdict du serveur.
+    private func submit(_ given: GivenAnswer) {
+        Haptics.selection()
+        onSubmit(given)
+    }
+
     @ViewBuilder private var answerArea: some View {
         switch question.type {
         case .mcq:
             // QCM de siècles : la frise (D-087), sauf après un 50/50 (on revient alors aux 2 choix restants).
             if let scale = question.payload.centuryScale, removedOptions.isEmpty {
-                CenturyAnswerView(question: question, scale: scale, phase: phase, onSubmit: onSubmit)
+                CenturyAnswerView(question: question, scale: scale, phase: phase, onSubmit: submit)
             } else {
             if let shape = question.payload.shape {
                 CountryShapeView(shape: shape, color: DomainPalette.color(question.domainId))
@@ -110,39 +117,39 @@ struct QuestionScreen<Trailing: View, Help: View>: View {
                     .padding(.horizontal, Space.gutter)
             }
             ChoiceAnswerView(options: question.payload.options ?? [], phase: phase, removed: removedOptions,
-                             accent: DomainPalette.color(question.domainId), onSubmit: onSubmit)
+                             accent: DomainPalette.color(question.domainId), onSubmit: submit)
             }
         case .trueFalse:
-            TrueFalseAnswerView(phase: phase, onSubmit: onSubmit)
+            TrueFalseAnswerView(phase: phase, onSubmit: submit)
         case .numeric:
             NumericDisplay(entry: displayedEntry, unit: question.payload.unit)
                 .padding(.horizontal, Space.gutter)
         case .ordering:
-            OrderingAnswerView(items: question.payload.items ?? [], phase: phase, onSubmit: onSubmit)
+            OrderingAnswerView(items: question.payload.items ?? [], phase: phase, onSubmit: submit)
         case .pairs:
-            PairsAnswerView(left: question.payload.left ?? [], right: question.payload.right ?? [], phase: phase, onSubmit: onSubmit)
+            PairsAnswerView(left: question.payload.left ?? [], right: question.payload.right ?? [], phase: phase, onSubmit: submit)
         case .mapPick:
             if let region = question.payload.region {
-                MapPickAnswerView(region: region, options: question.payload.options ?? [], phase: phase, onSubmit: onSubmit)
+                MapPickAnswerView(region: region, options: question.payload.options ?? [], phase: phase, onSubmit: submit)
             }
         case .counter:
-            CounterAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+            CounterAnswerView(question: question, phase: phase, onSubmit: submit)
         case .timeline:
-            TimelineAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+            TimelineAnswerView(question: question, phase: phase, onSubmit: submit)
         case .gauge:
-            GaugeAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+            GaugeAnswerView(question: question, phase: phase, onSubmit: submit)
         case .letters:
-            TileOrderAnswerView(question: question, mode: .letters, phase: phase, onSubmit: onSubmit)
+            TileOrderAnswerView(question: question, mode: .letters, phase: phase, onSubmit: submit)
         case .wordOrder:
-            TileOrderAnswerView(question: question, mode: .words, phase: phase, onSubmit: onSubmit)
+            TileOrderAnswerView(question: question, mode: .words, phase: phase, onSubmit: submit)
         case .imageChoice:
-            ImageChoiceAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+            ImageChoiceAnswerView(question: question, phase: phase, onSubmit: submit)
         case .numberTarget:
-            NumberTargetAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+            NumberTargetAnswerView(question: question, phase: phase, onSubmit: submit)
         case .mapPin:
-            MapPinAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+            MapPinAnswerView(question: question, phase: phase, onSubmit: submit)
         case .sort:
-            SortAnswerView(question: question, phase: phase, onSubmit: onSubmit)
+            SortAnswerView(question: question, phase: phase, onSubmit: submit)
         case .unknown:
             Text("Cette question demande une version plus récente de l'app. Mets-la à jour pour y répondre.")
                 .font(.cfReading)

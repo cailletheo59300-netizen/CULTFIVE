@@ -281,3 +281,21 @@ struct SeedIcon: View {
         NeuroneIcon()
     }
 }
+
+/// Rond de chargement qui n'apparaît qu'après un court délai : une attente brève ne fait rien clignoter à l'écran.
+struct DelayedSpinner: View {
+    var tint: Color? = nil
+    var delay: Double = 0.4
+    @State private var visible = false
+
+    var body: some View {
+        ProgressView()
+            .tint(tint)
+            .opacity(visible ? 1 : 0)
+            .animation(.easeIn(duration: 0.2), value: visible)
+            .task {
+                try? await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
+                visible = true
+            }
+    }
+}

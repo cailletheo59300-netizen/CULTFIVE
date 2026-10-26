@@ -43,6 +43,7 @@ begin
   perform tst.login(ghost);
   perform public.track_events('[{"name":"app_open","app_version":"9.9.9 (1)"}]');
   perform tst.login(adm);
+  delete from public.admin_cache;  -- chiffres gardés 10 min (0095) : on force le recalcul
   k2 := public.admin_kpis(30);
   perform tst.ok((k2 -> 'totals' ->> 'players') = (k -> 'totals' ->> 'players')
                  and (k2 -> 'totals' ->> 'guests')::int = (k -> 'totals' ->> 'guests')::int + 1, 'fantôme : invité, pas joueur');
@@ -93,4 +94,19 @@ begin
   perform public.admin_user_unban(u);
   perform tst.login(u);
   perform tst.ok((public.daily_start() ->> 'run_id') is not null, 'accès rendu après débannissement');
+end $$;
+
+-- 0095 : les chiffres de l'admin sont gardés 10 minutes.
+do $$
+declare adm uuid := tst.new_user(); k jsonb;
+begin
+  insert into public.app_admins (user_id) values (adm);
+  perform tst.login(adm);
+  delete from public.admin_cache;
+  k := public.admin_kpis(30);
+  perform tst.ok(exists (select 1 from public.admin_cache where key = 'kpis:30'), 'chiffres gardés');
+  update public.admin_cache set value = '{"cache": true}' where key = 'kpis:30';
+  perform tst.ok(public.admin_kpis(30) ->> 'cache' = 'true', 'servis depuis la mémoire');
+  update public.admin_cache set computed_at = now() - interval '11 minutes' where key = 'kpis:30';
+  perform tst.ok(not (public.admin_kpis(30) ? 'cache'), 'recalculés après 10 minutes');
 end $$;

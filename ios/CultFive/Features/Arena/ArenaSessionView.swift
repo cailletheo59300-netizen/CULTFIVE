@@ -204,7 +204,7 @@ struct ArenaSessionView: View {
             }
             .transition(.opacity)
         case .loading:
-            ZStack { ArenaPalette.night.ignoresSafeArea(); ProgressView().tint(.white) }
+            ZStack { ArenaPalette.night.ignoresSafeArea(); DelayedSpinner(tint: .white) }
         case .failed(let message):
             ZStack {
                 ArenaPalette.night.ignoresSafeArea()

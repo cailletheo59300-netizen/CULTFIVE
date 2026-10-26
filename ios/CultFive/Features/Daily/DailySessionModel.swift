@@ -57,13 +57,14 @@ final class DailySessionModel {
 
     private func load(position: Int) async {
         guard let runId else { return }
-        self.position = position
         do {
             let response = try await service.dailyQuestion(run: runId, position: position)
             if response.expired {
                 await showResult()
                 return
             }
+            // Le numéro change avec la question (pas avant) : l'écran d'attente montre le bon numéro.
+            self.position = position
             question = response.question
             phase = .answering
             stopwatch.reset()

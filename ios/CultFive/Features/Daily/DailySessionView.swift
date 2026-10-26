@@ -45,7 +45,7 @@ struct DailySessionView: View {
     private func content(_ model: DailySessionModel) -> some View {
         switch model.stage {
         case .loading:
-            ProgressView().tint(Color.brand)
+            DelayedSpinner(tint: Color.brand)
         case .failed(let message):
             VStack(alignment: .leading, spacing: Space.l) {
                 Text(message).font(.cfHeadline)
@@ -136,7 +136,7 @@ private struct DailyNextPlaceholder: View {
             Text("Question \(position) sur 5")
                 .font(.cfHeadline)
                 .foregroundStyle(Color.inkSoft)
-            ProgressView().tint(Color.brand)
+            DelayedSpinner(tint: Color.brand)
             Spacer()
         }
         .accessibilityElement(children: .combine)

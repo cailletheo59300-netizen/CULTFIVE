@@ -175,7 +175,7 @@ struct DuelSessionView: View {
     @ViewBuilder private func content(_ model: DuelSessionModel) -> some View {
         switch model.stage {
         case .loading:
-            ProgressView().tint(Color.brand)
+            DelayedSpinner(tint: Color.brand)
         case .failed(let message):
             VStack(alignment: .leading, spacing: Space.l) {
                 Spacer()
