@@ -172,11 +172,18 @@ private struct PodiumColumn: View {
                     .frame(width: avatar, height: avatar)
                     .overlay(Circle().strokeBorder(entry.me ? Color.sun : style.text.opacity(empty ? 0.35 : 0.8),
                                                    style: StrokeStyle(lineWidth: entry.me ? 3 : 2, dash: empty ? [5, 4] : [])))
-                    .overlay(
-                        Text(empty ? "?" : initial)
-                            .font(.system(size: avatar * 0.44, weight: .black, design: .rounded))
-                            .foregroundStyle(empty ? style.soft : Medal.colors(rank)[2])
-                    )
+                    .overlay {
+                        if empty {
+                            Text("?")
+                                .font(.system(size: avatar * 0.44, weight: .black, design: .rounded))
+                                .foregroundStyle(style.soft)
+                        } else {
+                            // Avatar du joueur (D-113) dans un anneau aux couleurs de la médaille.
+                            AnimalBadge(animal: AnimalAvatar(entry.avatar) ?? (entry.me ? MyAvatar.shared.animal : nil)
+                                            ?? .fallback(for: entry.handle),
+                                        size: avatar - 8)
+                        }
+                    }
                     .overlay(Shine(active: shown, delay: delay + 0.5).clipShape(Circle()))
                     .shadow(color: Medal.colors(rank)[1].opacity(0.75), radius: shown ? 16 : 0, y: 3)
                     .background {
@@ -253,7 +260,6 @@ private struct PodiumColumn: View {
         .accessibilityLabel(accessibilityText)
     }
 
-    private var initial: String { String((entry.me ? "Toi" : entry.handle).prefix(1)).uppercased() }
 
     private var accessibilityText: String {
         if empty { return "\(rank)e place libre : joue pour la prendre" }

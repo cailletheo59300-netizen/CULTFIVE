@@ -668,6 +668,7 @@ struct LeagueView: View {
                         .foregroundStyle(row.rank <= 3 && row.points > 0 ? Color.inkFixed : Color.inkSoft)
                         .frame(width: 36, height: 36)
                         .background(medal(row.rank, points: row.points), in: Circle())
+                    ArenaAvatar(handle: row.handle, size: 40, me: row.isMe, avatar: row.avatar)
                     VStack(alignment: .leading, spacing: 2) {
                         HStack(spacing: 4) {
                             Text(row.handle).font(.cfTitle3).fontWeight(row.isMe ? .bold : .semibold)
@@ -894,9 +895,8 @@ extension LeagueView {
                     ForEach([2, 1, 3], id: \.self) { place in
                         if let r = results.first(where: { $0.place == place }) {
                             VStack(spacing: 4) {
-                                Image(systemName: place == 1 ? "trophy.fill" : "medal.fill")
-                                    .font(place == 1 ? .title : .title3)
-                                    .foregroundStyle(medal(place, points: 1))
+                                ArenaAvatar(handle: r.handle, size: place == 1 ? 60 : 48, ring: medal(place, points: 1),
+                                            avatar: r.avatar)
                                 Text(r.handle).font(.system(.footnote, design: .rounded).weight(.heavy))
                                     .lineLimit(1).minimumScaleFactor(0.7)
                                 Text("\(r.points) pts").font(.cfFootnote).foregroundStyle(Color.inkSoft)
@@ -1207,7 +1207,8 @@ struct LeagueDayView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(day.quiz == nil ? "Scores du jour" : "Scores du quiz").labelCaps()
                         ForEach(members) { member in
-                            HStack {
+                            HStack(spacing: 10) {
+                                ArenaAvatar(handle: member.handle, size: 34, me: member.isMe, avatar: member.avatar)
                                 Text(member.handle).font(.cfTitle3).fontWeight(member.isMe ? .bold : .semibold)
                                 Spacer()
                                 if member.answered == 0 {

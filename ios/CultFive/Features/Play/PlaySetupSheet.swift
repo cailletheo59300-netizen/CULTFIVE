@@ -115,7 +115,7 @@ struct PlaySetupSheet: View {
             } content: {
                 LeaderboardBody(entries: board.rows.map { row in
                     RankEntry(id: "\(row.rank)", rank: row.rank, handle: row.handle, score: nil, totalMs: nil, streak: nil,
-                              me: row.me, elo: row.elo)
+                              me: row.me, elo: row.elo, avatar: row.avatar, showsAvatar: true)
                 }, style: .onInk)
                 if board.rank == nil {
                     Text("Joue une partie classée dans ce domaine pour entrer dans le classement.")

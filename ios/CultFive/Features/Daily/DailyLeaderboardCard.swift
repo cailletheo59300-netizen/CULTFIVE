@@ -13,7 +13,7 @@ struct DailyLeaderboardCard: View {
     private var entries: [RankEntry] {
         (board?.rows ?? []).map { row in
             RankEntry(id: "\(row.rank)", rank: row.rank, handle: row.handle, score: row.score, totalMs: row.totalMs,
-                      streak: row.me ? result.streak : nil, me: row.me, ago: row.ago)
+                      streak: row.me ? result.streak : nil, me: row.me, ago: row.ago, avatar: row.avatar, showsAvatar: true)
         }
     }
 
@@ -55,7 +55,8 @@ struct DailyLeaderboardCard: View {
                         .foregroundStyle(.white)
                 }
                 RankRow(entry: RankEntry(id: "moi", rank: board?.rank, handle: "Toi", score: result.score,
-                                         totalMs: result.totalMs, streak: result.streak, me: true), style: .onInk)
+                                         totalMs: result.totalMs, streak: result.streak, me: true, showsAvatar: true),
+                        style: .onInk)
             }
         }
         .animation(.easeInOut(duration: 0.25), value: board == nil)

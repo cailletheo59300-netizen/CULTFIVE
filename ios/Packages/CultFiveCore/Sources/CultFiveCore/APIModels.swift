@@ -959,9 +959,11 @@ public struct LeagueDayResult: Decodable, Hashable, Sendable {
         public let answered: Int
         public let score: Int
         public let totalMs: Int
+        /// Avatar du joueur (D-113).
+        public let avatar: JSONValue?
 
         enum CodingKeys: String, CodingKey {
-            case id, handle, answered, score
+            case id, handle, answered, score, avatar
             case isMe = "is_me"
             case totalMs = "total_ms"
         }
@@ -993,9 +995,11 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
         public let isOwner: Bool?
         /// Ligue ouverte : réponses données (0 : pas encore joué).
         public let answered: Int?
+        /// Avatar du joueur (D-113).
+        public let avatar: JSONValue?
 
         enum CodingKeys: String, CodingKey {
-            case rank, id, handle, points, days, answered
+            case rank, id, handle, points, days, answered, avatar
             case totalMs = "total_ms"
             case isMe = "is_me"
             case isOwner = "is_owner"
@@ -1066,6 +1070,8 @@ public struct LeagueStandings: Codable, Hashable, Sendable {
         public let id: UUID
         public let handle: String
         public let points: Int
+        /// Avatar du joueur (D-113).
+        public let avatar: JSONValue?
     }
 
     public struct Podium: Codable, Hashable, Sendable {
@@ -1372,15 +1378,18 @@ public struct DailyLeaderboard: Codable, Hashable, Sendable {
         /// 5 du jour (D-091) : ancienneté de la partie (0 aujourd'hui, 1 hier, 2 avant-hier).
         public let ago: Int?
         public let me: Bool
+        /// Avatar du joueur (D-113).
+        public let avatar: JSONValue?
         public var id: Int { rank }
 
         enum CodingKeys: String, CodingKey {
-            case rank, handle, score, streak, elo, ago, me
+            case rank, handle, score, streak, elo, ago, me, avatar
             case totalMs = "total_ms"
         }
 
         public init(rank: Int, handle: String, score: Int?, totalMs: Int?, streak: Int?, elo: Int? = nil, ago: Int? = nil,
-                    me: Bool) {
+                    me: Bool, avatar: JSONValue? = nil) {
+            self.avatar = avatar
             self.rank = rank
             self.handle = handle
             self.score = score
