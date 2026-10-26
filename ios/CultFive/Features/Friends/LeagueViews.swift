@@ -169,111 +169,116 @@ struct NewLeagueSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
-                    Text("Nouvelle ligue").font(.cfDisplay)
-                    TextField("Nom de la ligue", text: $draft.name)
-                        .font(.cfTitle3)
-                        .padding(.vertical, Space.s)
-                        .overlay(alignment: .bottom) { Hairline(color: .ink) }
-                    option("Format") {
-                        chip("Ouverte", on: open) { draft.format = "open" }
-                        chip("Quiz du jour", on: !open) { draft.format = "daily" }
+                    HStack(alignment: .center, spacing: 14) {
+                        Image("trophy_cup").resizable().scaledToFit().frame(width: 64, height: 64).accessibilityHidden(true)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Nouvelle ligue").font(.cfDisplay)
+                            Text("Un classement privé entre amis.").font(.cfCallout).foregroundStyle(Color.inkSoft)
+                        }
                     }
-                    Text(open ? "Des quiz identiques pour tous, à jouer quand on veut, sans chrono. Un classement général sur tous les quiz. Sans effet sur l'Elo."
-                              : "Chaque jour, un quiz propre à la ligue, le même pour tous les membres, à faire avant minuit. Indépendant du \(Brand.dailyName) de Brainlix, sans effet sur l'Elo.")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                        .fixedSize(horizontal: false, vertical: true)
-                    option(open ? "Questions par quiz" : "Questions par jour") {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Nom").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                        TextField("Ex. Les cerveaux du bureau", text: $draft.name)
+                            .font(.system(.title3, design: .rounded).weight(.bold))
+                            .padding(.horizontal, 14)
+                            .frame(minHeight: 50)
+                            .background(Color.paper, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    }
+                    .popCard(padding: 16, radius: 22)
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack(spacing: 12) {
+                            BigChoiceCard(title: "Ouverte", lines: ["Quiz à jouer", "quand on veut"], on: open) { draft.format = "open" }
+                            BigChoiceCard(title: "Quiz du jour", lines: ["Un quiz par jour", "avant minuit"], on: !open,
+                                          colors: [Color(hex: 0xFF7AB6), Color(hex: 0xA34DFF)]) { draft.format = "daily" }
+                        }
+                        Text(open ? "Les mêmes quiz pour tous, sans chrono. Un classement sur tous les quiz. Sans effet sur l'Elo."
+                                  : "Chaque jour, un quiz propre à la ligue, le même pour tous, à faire avant minuit. Sans effet sur l'Elo.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    FormSection(title: open ? "Questions par quiz" : "Questions par jour") {
                         ForEach(LeagueSettings.counts, id: \.self) { n in
-                            chip("\(n)", on: draft.settings.questionCount == n) { draft.settings.questionCount = n }
+                            ChoiceChip(title: "\(n)", on: draft.settings.questionCount == n) { draft.settings.questionCount = n }
                         }
                     }
                     if open {
-                        option("Quiz pour commencer") {
+                        FormSection(title: "Quiz pour commencer", detail: "Tu pourras en ajouter ensuite.") {
                             ForEach(LeagueDraft.quizChoices, id: \.self) { n in
-                                chip("\(n)", on: draft.quizzes == n) { draft.quizzes = n }
+                                ChoiceChip(title: "\(n)", on: draft.quizzes == n) { draft.quizzes = n }
                             }
                         }
                     }
-                    option("Domaines") {
-                        chip("Tous", on: selected.isEmpty) { selected = [] }
+                    FormSection(title: "Domaines", detail: selected.isEmpty ? "Un peu de tout." : nil) {
+                        ChoiceChip(title: "Tous", on: selected.isEmpty) { selected = [] }
                         ForEach(app.domains, id: \.id) { domain in
-                            chip(domain.name, on: selected.contains(domain.id)) {
+                            ChoiceChip(title: domain.name, on: selected.contains(domain.id), tint: DomainPalette.color(domain.id)) {
                                 if selected.contains(domain.id) { selected.remove(domain.id) } else { selected.insert(domain.id) }
                             }
                         }
                     }
-                    option("Difficulté") {
+                    FormSection(title: "Difficulté") {
                         ForEach(DuelDifficulty.allCases, id: \.self) { level in
-                            chip(level.title, on: draft.settings.difficulty == level.rawValue) { draft.settings.difficulty = level.rawValue }
+                            ChoiceChip(title: level.title, on: draft.settings.difficulty == level.rawValue) { draft.settings.difficulty = level.rawValue }
                         }
                     }
                     if open {
-                        option("Fin") {
-                            chip("Pas de fin", on: draft.days == nil) { draft.days = nil }
+                        FormSection(title: "Fin") {
+                            ChoiceChip(title: "Pas de fin", on: draft.days == nil) { draft.days = nil }
                             ForEach([7, 14, 30], id: \.self) { n in
-                                chip(n == 30 ? "1 mois" : n == 14 ? "2 semaines" : "1 semaine", on: draft.days == n) { draft.days = n }
+                                ChoiceChip(title: n == 30 ? "1 mois" : n == 14 ? "2 semaines" : "1 semaine", on: draft.days == n) { draft.days = n }
                             }
                         }
                     } else {
-                        option("Durée") {
+                        FormSection(title: "Durée", detail: LeagueText.plannedRange(duration: draft.settings.duration, startToday: draft.startToday)) {
                             ForEach(["1w", "2w", "1m"], id: \.self) { code in
-                                chip(LeagueText.duration(code), on: draft.settings.duration == code) { draft.settings.duration = code }
+                                ChoiceChip(title: LeagueText.duration(code), on: draft.settings.duration == code) { draft.settings.duration = code }
                             }
                         }
-                        option("Début") {
-                            chip("Aujourd'hui", on: draft.startToday) { draft.startToday = true }
-                            chip("Demain", on: !draft.startToday) { draft.startToday = false }
+                        FormSection(title: "Début") {
+                            ChoiceChip(title: "Aujourd'hui", on: draft.startToday) { draft.startToday = true }
+                            ChoiceChip(title: "Demain", on: !draft.startToday) { draft.startToday = false }
                         }
                     }
-                    option("Membres au maximum") {
+                    FormSection(title: "Membres au maximum") {
                         ForEach(LeagueSettings.memberLimits, id: \.self) { n in
-                            chip("\(n)", on: draft.settings.maxMembers == n) { draft.settings.maxMembers = n }
+                            ChoiceChip(title: "\(n)", on: draft.settings.maxMembers == n) { draft.settings.maxMembers = n }
                         }
                     }
-                    if open {
-                        Text("Points : 1 par bonne réponse, sur tous les quiz. À égalité, le premier à avoir fini passe devant. Tu pourras ajouter des quiz et terminer la ligue quand tu veux.")
-                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                            .fixedSize(horizontal: false, vertical: true)
-                    } else {
-                        Label(LeagueText.plannedRange(duration: draft.settings.duration, startToday: draft.startToday), systemImage: "calendar")
-                            .font(.cfCallout.weight(.semibold)).foregroundStyle(Color.ink)
-                        Text("Points : 1 par bonne réponse. À égalité, le plus rapide passe devant. Un jour manqué compte 0.")
-                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    }
-                    Text("À la fin : podium (1er, 2e, 3e) et trophée « Vainqueur de ligue » pour le 1er, dès 3 joueurs.")
+                    Text((open ? "Points : 1 par bonne réponse, sur tous les quiz. À égalité, le premier à avoir fini passe devant."
+                               : "Points : 1 par bonne réponse. À égalité, le plus rapide passe devant. Un jour manqué compte 0.")
+                         + " À la fin : podium et trophée « Vainqueur de ligue » pour le 1er, dès 3 joueurs.")
                         .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                         .fixedSize(horizontal: false, vertical: true)
                     if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
                 }
                 .padding(Space.gutter)
             }
+            .scrollIndicators(.hidden)
             .safeAreaInset(edge: .bottom) {
-                Button("Créer la ligue") { create() }
-                    .buttonStyle(.ink)
-                    .disabled(draft.name.trimmingCharacters(in: .whitespaces).count < 3 || busy)
-                    .padding(.horizontal, Space.gutter)
-                    .padding(.bottom, Space.s)
-                    .background(Color.paper)
+                Button { create() } label: {
+                    HStack(spacing: 8) {
+                        if busy { ProgressView().controlSize(.small).tint(.white) }
+                        Text("Créer la ligue")
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.ink)
+                .disabled(draft.name.trimmingCharacters(in: .whitespaces).count < 3 || busy)
+                .padding(.horizontal, Space.gutter)
+                .padding(.vertical, Space.s)
+                .background(Color.paper)
             }
             .background(Color.paper)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Annuler") { dismiss() } }
             }
         }
+        .presentationDetents([.large])
     }
 
     private var open: Bool { draft.format == "open" }
-
-    private func option<Chips: View>(_ title: String, @ViewBuilder chips: () -> Chips) -> some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            Text(title).labelCaps()
-            FlowLayout(spacing: Space.s) { chips() }
-        }
-    }
-
-    private func chip(_ title: String, on: Bool, action: @escaping () -> Void) -> some View {
-        LeagueChip(title: title, on: on, action: action)
-    }
 
     private func create() {
         busy = true
@@ -289,28 +294,6 @@ struct NewLeagueSheet: View {
             }
             busy = false
         }
-    }
-}
-
-struct LeagueChip: View {
-    let title: String
-    let on: Bool
-    let action: () -> Void
-
-    var body: some View {
-        Button {
-            Haptics.selection()
-            withAnimation(Motion.bounce) { action() }
-        } label: {
-            Text(title)
-                .font(.system(.callout, design: .rounded).weight(.heavy))
-                .foregroundStyle(on ? Color.white : Color.ink)
-                .padding(.horizontal, 16)
-                .frame(minHeight: 42)
-                .background(on ? Color.brand : Color.paperRaised, in: Capsule())
-        }
-        .buttonStyle(.row)
-        .accessibilityAddTraits(on ? .isSelected : [])
     }
 }
 

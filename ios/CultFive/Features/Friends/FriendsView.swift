@@ -84,8 +84,12 @@ struct FriendsView: View {
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
+                // Toujours la largeur exacte de l'écran : rien ne dépasse, la page ne glisse jamais sur le côté.
+                .containerRelativeFrame(.horizontal)
+                .clipped()
             }
             .scrollIndicators(.hidden)
+            .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .clearsTabBar()
             .background(Color.paper)
             .toolbar(.hidden, for: .navigationBar)
@@ -401,7 +405,15 @@ struct FriendsView: View {
                 }
                 ForEach(waitingDuels) { duel in
                     DuelRow(duel: duel, onOpen: { activeDuel = DuelLaunch(id: duel.id) },
-                            onDecline: { Task { try? await app.service.duelDecline(duel.id); await load() } })
+                            onDecline: { Task { try? await app.service.duelDecline(duel.id); await load() } },
+                            onCancel: {
+                                Task {
+                                    do { try await app.service.duelCancel(duel.id) } catch {
+                                        app.show(error, "Ce défi a déjà commencé : il faut le finir.")
+                                    }
+                                    await load()
+                                }
+                            })
                 }
             }
         }

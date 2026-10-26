@@ -26,22 +26,27 @@ struct FriendProfileView: View {
                 header
                 if let profile {
                     todayCard(profile)
-                    VStack(spacing: 6) {
+                    VStack(spacing: 8) {
                         Button { quickDuel() } label: {
                             HStack(spacing: 8) {
                                 if creating { ProgressView().controlSize(.small).tint(.white) }
-                                Label("Défier \(handle)", systemImage: "bolt.fill")
+                                Text("Défier \(handle)")
                             }
                             .frame(maxWidth: .infinity)
                         }
                         .buttonStyle(.ink)
                         .disabled(creating)
-                        HStack(spacing: 4) {
-                            Text("7 questions · 25 s")
-                            Text("·")
-                            Button("Plus de réglages") { showSetup = true }.foregroundStyle(Color.brand)
+                        Button { showSetup = true } label: {
+                            Text("Choisir le format du duel")
+                                .font(.system(.callout, design: .rounded).weight(.black))
+                                .foregroundStyle(Color.brand)
+                                .frame(maxWidth: .infinity, minHeight: 48)
+                                .overlay(Capsule().strokeBorder(Color.brand.opacity(0.35), lineWidth: 1.5))
+                                .contentShape(Capsule())
                         }
-                        .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+                        .buttonStyle(.row)
+                        Text("« Défier » lance le format Arène : 7 questions, 25 s chacune.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
                     }
                     HeadToHeadCard(me: app.profile?.handle ?? "Toi", friend: handle, friendAvatar: profile.avatar, h: profile.headToHead)
                     if !profile.duels.isEmpty {
@@ -225,22 +230,16 @@ struct FriendProfileView: View {
     }
 }
 
-/// Réglages d'un duel : nombre de questions, domaines, difficulté.
+/// Réglages d'un duel (D-114) : Format Arène ou Format libre (questions, chrono, domaines, difficulté), puis on lance.
 struct DuelSetupSheet: View {
     /// Nom affiché (« Duel contre Théo ») ; `friendId` nil : défi par lien.
     let opponentName: String?
     let friendId: UUID?
-    /// Réglages de départ (feuille « Contre un ami »).
-    var initial: DuelSettings? = nil
-    /// Si présent : on choisit seulement le format (bouton « Valider »), sans créer de duel.
-    var onSettings: ((DuelSettings) -> Void)? = nil
     var onCreated: (Duel) -> Void
 
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
-    @State private var settings = DuelSettings()
-    @State private var selected: Set<String> = []
-    @State private var started = false
+    @State private var settings = DuelSettings.arena
     @State private var busy = false
     @State private var error: String?
 
@@ -248,55 +247,32 @@ struct DuelSetupSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
-                    Text(onSettings != nil ? "Réglages du duel" : opponentName.map { "Duel contre \($0)" } ?? "Défi par lien")
-                        .font(.cfDisplay)
-                    Text("Les mêmes questions pour vous deux, chacun quand il veut pendant 48 h. Sans effet sur l'Elo ni sur les points de la semaine.")
-                        .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    option("Nombre de questions") {
-                        ForEach(DuelSettings.counts, id: \.self) { n in
-                            chip("\(n)", on: settings.count == n) { settings.count = n }
-                        }
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(opponentName.map { "Duel contre \($0)" } ?? "Défi par lien").font(.cfDisplay)
+                            .lineLimit(2).minimumScaleFactor(0.7)
+                        Text(friendId == nil ? "Tu joues d'abord, puis tu envoies le lien : le premier qui l'ouvre affronte ton score."
+                                             : "Les mêmes questions pour vous deux, chacun quand il veut pendant 48 h.")
+                            .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
-                    Label(settings.count == DuelSettings.quickCount ? "25 s par question, comme à l'Arène." : "Sans chrono : prends ton temps.",
-                          systemImage: settings.count == DuelSettings.quickCount ? "timer" : "hourglass")
-                        .font(.cfFootnote.weight(.bold)).foregroundStyle(Color.inkSoft)
-                    option("Domaines") {
-                        chip("Tous", on: selected.isEmpty) { selected = [] }
-                        ForEach(app.domains, id: \.id) { domain in
-                            chip(domain.name, on: selected.contains(domain.id)) {
-                                if selected.contains(domain.id) { selected.remove(domain.id) } else { selected.insert(domain.id) }
-                            }
-                        }
-                    }
-                    option("Difficulté") {
-                        ForEach(DuelDifficulty.allCases, id: \.self) { level in
-                            chip(level.title, on: settings.difficulty == level) { settings.difficulty = level }
-                        }
-                    }
-                    if settings.difficulty == .auto {
-                        Text("Auto : calée sur vos deux niveaux, pour un duel serré.")
-                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                    }
+                    DuelFormatPicker(settings: $settings)
                     if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
                 }
                 .padding(Space.gutter)
             }
+            .scrollIndicators(.hidden)
             .safeAreaInset(edge: .bottom) {
                 Button { create() } label: {
                     HStack(spacing: 8) {
                         if busy { ProgressView().controlSize(.small).tint(.white) }
-                        if onSettings != nil {
-                            Label("Valider", systemImage: "checkmark")
-                        } else {
-                            Label("Lancer le duel", systemImage: "bolt.fill")
-                        }
+                        Text("Lancer le duel")
                     }
                     .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.ink)
                 .disabled(busy)
                 .padding(.horizontal, Space.gutter)
-                .padding(.bottom, Space.s)
+                .padding(.vertical, Space.s)
                 .background(Color.paper)
             }
             .background(Color.paper)
@@ -304,50 +280,16 @@ struct DuelSetupSheet: View {
                 ToolbarItem(placement: .cancellationAction) { Button("Annuler") { dismiss() } }
             }
         }
-        .presentationDragIndicator(.visible)
-        .onAppear {
-            guard !started, let initial else { return }
-            started = true
-            settings = initial
-            selected = Set(initial.domains)
-        }
-    }
-
-    private func option<Chips: View>(_ title: String, @ViewBuilder chips: () -> Chips) -> some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            Text(title).labelCaps()
-            FlowLayout(spacing: Space.s) { chips() }
-        }
-    }
-
-    private func chip(_ title: String, on: Bool, action: @escaping () -> Void) -> some View {
-        Button {
-            Haptics.selection()
-            withAnimation(Motion.bounce) { action() }
-        } label: {
-            Text(title)
-                .font(.system(.callout, design: .rounded).weight(.heavy))
-                .foregroundStyle(on ? Color.white : Color.ink)
-                .padding(.horizontal, 16)
-                .frame(minHeight: 42)
-                .background(on ? Color.brand : Color.paperRaised, in: Capsule())
-        }
-        .buttonStyle(.row)
-        .accessibilityAddTraits(on ? .isSelected : [])
+        .presentationDetents([.large])
     }
 
     private func create() {
         busy = true
         error = nil
-        settings.domains = app.domains.map(\.id).filter { selected.contains($0) }
-        if let onSettings {
-            busy = false
-            onSettings(settings)
-            return
-        }
+        let chosen = settings
         Task {
             do {
-                let duel = try await app.service.duelCreate(friend: friendId, settings: settings)
+                let duel = try await app.service.duelCreate(friend: friendId, settings: chosen)
                 Haptics.soft()
                 onCreated(duel)
             } catch {

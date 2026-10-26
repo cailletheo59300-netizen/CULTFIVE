@@ -17,7 +17,6 @@ struct ArenaLeaderboardView: View {
                 Picker("Classement", selection: $scope) {
                     Text("Semaine").tag(ArenaLeaderboard.Scope.week)
                     Text("Amis").tag(ArenaLeaderboard.Scope.friends)
-                    Text("Depuis toujours").tag(ArenaLeaderboard.Scope.all)
                 }
                 .pickerStyle(.segmented)
 
@@ -50,8 +49,11 @@ struct ArenaLeaderboardView: View {
             }
             .padding(.horizontal, Space.gutter)
             .padding(.vertical, Space.l)
+            .containerRelativeFrame(.horizontal)
+            .clipped()
         }
         .scrollIndicators(.hidden)
+        .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
         .clearsTabBar()
         .background(Color.paper)
         .navigationTitle("Classement")
@@ -62,9 +64,7 @@ struct ArenaLeaderboardView: View {
 
     private var header: some View {
         HStack(spacing: 10) {
-            Image(systemName: scope == .all ? "infinity" : "calendar")
-                .font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.brand)
-            Text(scope == .all ? "Classés aux victoires, depuis le début" : "Classés aux points de la semaine")
+            Text("Points de la semaine")
                 .font(.system(.subheadline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
             Spacer()
             if scope != .all, let end = board?.endsAt {

@@ -474,8 +474,17 @@ struct DuelRow: View {
     var showsDate = false
     var onOpen: () -> Void
     var onDecline: () -> Void = {}
+    /// Supprimer un défi que j'ai lancé et que personne n'a commencé (D-114).
+    var onCancel: (() -> Void)? = nil
 
     @State private var confirmDecline = false
+    @State private var confirmCancel = false
+
+    /// Mon défi, sans aucune réponse ni de moi ni de l'autre : on peut le supprimer. Dès une réponse, il faut finir.
+    private var cancellable: Bool {
+        duel.iAmChallenger && ["open", "active"].contains(duel.status) && duel.me.answered == 0
+            && (duel.opponent?.answered ?? 0) == 0
+    }
 
     private var status: (String, Color) {
         switch duel.winner {
@@ -485,6 +494,7 @@ struct DuelRow: View {
         default: break
         }
         if duel.status == "expired" { return ("Expiré", .inkSoft) }
+        if cancellable { return ("Pas encore commencé", .brand) }
         if duel.myTurn { return (duel.me.answered > 0 ? "À finir" : "À toi de jouer", .brand) }
         if duel.opponent == nil { return ("Lien en attente", .inkSoft) }
         return ("En attente de \(duel.opponent?.handle ?? "l'adversaire")", .inkSoft)
@@ -493,11 +503,11 @@ struct DuelRow: View {
     var body: some View {
         Button(action: onOpen) {
             HStack(spacing: 12) {
-                Image(systemName: "bolt.fill")
-                    .font(.system(.body, design: .rounded).weight(.bold))
-                    .foregroundStyle(duel.myTurn ? Color.white : Color.brand)
-                    .frame(width: 42, height: 42)
-                    .background(duel.myTurn ? Color.brand : Color.brand.opacity(0.14), in: Circle())
+                if let opponent = duel.opponent, let handle = opponent.handle {
+                    ArenaAvatar(handle: handle, size: 44, ring: duel.myTurn ? Color.brand : nil, avatar: opponent.avatar)
+                } else {
+                    ArenaMystery(size: 44, onInk: false)
+                }
                 VStack(alignment: .leading, spacing: 2) {
                     Text(showsDate ? DuelText.date(duel) : (duel.opponent?.handle.map { "Contre \($0)" } ?? "Défi par lien"))
                         .font(.cfTitle3).foregroundStyle(Color.ink)
@@ -513,6 +523,13 @@ struct DuelRow: View {
                         .padding(.horizontal, 10).padding(.vertical, 5)
                         .background(Color.paper, in: Capsule())
                         .buttonStyle(.plain)
+                } else if cancellable, onCancel != nil {
+                    Button("Supprimer") { confirmCancel = true }
+                        .font(.system(.caption, design: .rounded).weight(.heavy))
+                        .foregroundStyle(Color.wrong)
+                        .padding(.horizontal, 10).padding(.vertical, 5)
+                        .background(Color.wrong.opacity(0.1), in: Capsule())
+                        .buttonStyle(.plain)
                 }
                 Image(systemName: "chevron.right").font(.callout.weight(.heavy)).foregroundStyle(Color.inkSoft.opacity(0.6))
             }
@@ -522,6 +539,11 @@ struct DuelRow: View {
         .confirmationDialog("Refuser le défi de \(duel.opponent?.handle ?? "ton adversaire") ?",
                             isPresented: $confirmDecline, titleVisibility: .visible) {
             Button("Refuser le défi", role: .destructive, action: onDecline)
+        }
+        .confirmationDialog("Supprimer ce défi ?", isPresented: $confirmCancel, titleVisibility: .visible) {
+            Button("Supprimer le défi", role: .destructive) { onCancel?() }
+        } message: {
+            Text("Personne ne l'a encore commencé : il disparaît chez toi et chez ton ami.")
         }
     }
 }

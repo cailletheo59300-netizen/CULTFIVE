@@ -114,6 +114,8 @@ public protocol GameService: Sendable {
     func friendProfile(_ friend: UUID) async throws -> FriendProfile
     func duelJoin(code: String) async throws -> Duel
     func duelDecline(_ duel: UUID) async throws
+    /// Supprime un défi que personne n'a commencé (D-114).
+    func duelCancel(_ duel: UUID) async throws
     func duelQuestion(duel: UUID, position: Int) async throws -> DailyQuestionResponse
     func duelAnswer(duel: UUID, position: Int, given: GivenAnswer?, clientMs: Int?) async throws -> DailyVerdict
     func duelResult(_ duel: UUID) async throws -> Duel
@@ -358,6 +360,7 @@ public struct LiveGameService: GameService {
             "p_count": .number(Double(settings.count)),
             "p_domains": settings.domains.isEmpty ? .null : .array(settings.domains.map(JSONValue.string)),
             "p_difficulty": .string(settings.difficulty.rawValue),
+            "p_seconds": .number(Double(settings.timer ? DuelSettings.timerSeconds : 0)),
         ])
     }
 
@@ -370,6 +373,10 @@ public struct LiveGameService: GameService {
     }
 
     public func duelJoin(code: String) async throws -> Duel { try await api.rpc("duel_join", ["p_code": .string(code)]) }
+
+    public func duelCancel(_ duel: UUID) async throws {
+        try await api.rpcVoid("duel_cancel", ["p_duel": .string(duel.uuidString)])
+    }
 
     public func duelDecline(_ duel: UUID) async throws {
         try await api.rpcVoid("duel_decline", ["p_duel": .string(duel.uuidString)])
@@ -773,6 +780,9 @@ public extension GameService {
 
     /// Par défaut (démo) : rien à enregistrer.
     func avatarSet(_ animal: AnimalAvatar) async throws {}
+
+    /// Par défaut (démo) : rien à supprimer.
+    func duelCancel(_ duel: UUID) async throws {}
 
     /// Par défaut (démo) : les duels terminés de la liste.
     func duelsHistory(before: String?) async throws -> DuelHistory {

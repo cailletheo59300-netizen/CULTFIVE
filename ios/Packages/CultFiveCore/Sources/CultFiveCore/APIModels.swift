@@ -1241,16 +1241,26 @@ public struct DuelSettings: Hashable, Sendable {
     public static let counts = [5, 7, 10, 15, 20]
     /// Format par défaut (D-112) : 7 questions à 25 s, comme l'Arène.
     public static let quickCount = 7
+    /// Chrono par question quand il est activé.
+    public static let timerSeconds = 25
+    /// « Format Arène » (D-114) : 7 questions, 25 s, tous les domaines, difficulté auto.
+    public static let arena = DuelSettings()
     public var count: Int
     /// Vide = tous les domaines.
     public var domains: [String]
     public var difficulty: DuelDifficulty
+    /// Chrono de 25 s par question (D-114 : au choix dans le format libre).
+    public var timer: Bool
 
-    public init(count: Int = DuelSettings.quickCount, domains: [String] = [], difficulty: DuelDifficulty = .auto) {
+    public init(count: Int = DuelSettings.quickCount, domains: [String] = [], difficulty: DuelDifficulty = .auto,
+                timer: Bool = true) {
         self.count = count
         self.domains = domains
         self.difficulty = difficulty
+        self.timer = timer
     }
+
+    public var isArena: Bool { self == .arena }
 }
 
 /// Historique des duels entre amis terminés (D-112), 30 par page ; le bilan n'est donné qu'en première page.

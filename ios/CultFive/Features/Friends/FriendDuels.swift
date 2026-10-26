@@ -92,8 +92,8 @@ struct InviteFriendsCard: View {
 
 // MARK: - Page « Contre un ami »
 
-/// Page « Contre un ami » (plein écran) : défier un ami en un appui (format de base : 7 questions, 25 s), défier par
-/// lien, ajouter un ami, ou changer les réglages.
+/// Page « Contre un ami » (plein écran, D-114) : 1. le format (Arène ou libre, avec ses réglages), 2. l'ami à défier
+/// (un bouton « Défier » sous chaque avatar), puis « Ajouter un ami par son pseudo » en grand et « Défier par lien ».
 struct FriendChallengeSheet: View {
     let friends: [Friend]
     let duels: [Duel]
@@ -103,117 +103,117 @@ struct FriendChallengeSheet: View {
 
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
-    @State private var settings = DuelSettings()
+    @State private var settings = DuelSettings.arena
     @State private var busy: UUID?
     @State private var linkBusy = false
     @State private var error: String?
-    @State private var showSettings = false
 
-    private let columns = [GridItem(.adaptive(minimum: 84), spacing: 14)]
+    private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: Space.l) {
+                VStack(alignment: .leading, spacing: Space.xl) {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Contre un ami").font(.cfDisplay)
-                        Text("Touche un ami pour le défier. Pas de points de la semaine : juste l'honneur.")
+                        Text("Pas de points de la semaine : juste l'honneur, et votre historique.")
                             .font(.cfCallout).foregroundStyle(Color.inkSoft)
                             .fixedSize(horizontal: false, vertical: true)
                     }
 
-                    formatBlock
-
-                    if friends.isEmpty {
-                        Text("Pas encore d'amis ici. Ajoute-les par leur pseudo, ou envoie un défi par lien à qui tu veux.")
-                            .font(.cfCallout).foregroundStyle(Color.inkSoft)
-                            .fixedSize(horizontal: false, vertical: true)
-                    } else {
-                        LazyVGrid(columns: columns, spacing: 18) {
-                            ForEach(friends) { friend in friendTile(friend) }
-                        }
+                    VStack(alignment: .leading, spacing: 12) {
+                        step(1, "Choisis le format")
+                        DuelFormatPicker(settings: $settings)
                     }
 
-                    VStack(spacing: 10) {
-                        Button { create(friend: nil) } label: {
-                            HStack(spacing: 8) {
-                                if linkBusy { ProgressView().controlSize(.small).tint(.white) }
-                                Text("Défier par lien")
+                    VStack(alignment: .leading, spacing: 12) {
+                        step(2, "Choisis ton ami")
+                        if friends.isEmpty {
+                            Text("Pas encore d'amis ici : ajoute-les par leur pseudo, juste en dessous.")
+                                .font(.cfCallout).foregroundStyle(Color.inkSoft)
+                                .fixedSize(horizontal: false, vertical: true)
+                        } else {
+                            Text("Touche « Défier » : ton ami reçoit le défi tout de suite.")
+                                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            LazyVGrid(columns: columns, spacing: 12) {
+                                ForEach(friends) { friend in friendCard(friend) }
                             }
-                            .frame(maxWidth: .infinity)
                         }
-                        .buttonStyle(.ink)
-                        .disabled(busy != nil || linkBusy)
-                        Text("Tu joues d'abord, puis tu envoies le lien à qui tu veux.")
-                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
-                        Button("Ajouter un ami par son pseudo") {
+                    }
+
+                    VStack(spacing: 12) {
+                        Button {
                             dismiss()
                             onAddFriend()
+                        } label: {
+                            Text("Ajouter un ami par son pseudo").frame(maxWidth: .infinity)
                         }
-                        .buttonStyle(TextLinkStyle())
-                        .padding(.top, 4)
+                        .buttonStyle(.ink)
+                        Button { create(friend: nil) } label: {
+                            HStack(spacing: 8) {
+                                if linkBusy { ProgressView().controlSize(.small) }
+                                Text("Défier par lien")
+                            }
+                            .font(.system(.callout, design: .rounded).weight(.black))
+                            .foregroundStyle(Color.brand)
+                            .frame(maxWidth: .infinity, minHeight: 50)
+                            .overlay(Capsule().strokeBorder(Color.brand.opacity(0.35), lineWidth: 1.5))
+                            .contentShape(Capsule())
+                        }
+                        .buttonStyle(.row)
+                        .disabled(busy != nil || linkBusy)
+                        Text("Avec le lien, tu joues d'abord, puis tu l'envoies à qui tu veux.")
+                            .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                            .multilineTextAlignment(.center)
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(.top, Space.s)
 
                     if let error { Text(error).font(.cfFootnote).foregroundStyle(Color.wrong) }
                 }
                 .padding(Space.gutter)
             }
+            .scrollIndicators(.hidden)
             .background(Color.paper)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Fermer") { dismiss() } }
             }
-            .sheet(isPresented: $showSettings) {
-                DuelSetupSheet(opponentName: nil, friendId: nil, initial: settings, onSettings: { chosen in
-                    settings = chosen
-                    showSettings = false
-                }, onCreated: { _ in })
-            }
         }
     }
 
-    /// « Format de base : 7 questions · 25 s » sur une ligne, et « Changer les réglages » dessous.
-    private var formatBlock: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(formatText)
-                .font(.system(.callout, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
-                .lineLimit(1).minimumScaleFactor(0.7)
-            Button("Changer les réglages") { showSettings = true }
-                .font(.system(.footnote, design: .rounded).weight(.black)).foregroundStyle(Color.brand)
+    private func step(_ number: Int, _ title: String) -> some View {
+        HStack(spacing: 10) {
+            Text("\(number)")
+                .font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white)
+                .frame(width: 26, height: 26)
+                .background(Color.brand, in: Circle())
+            Text(title).font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
         }
-        .popCard(padding: 14, radius: 18)
+        .accessibilityElement(children: .combine)
     }
 
-    private var formatText: String {
-        let isBase = settings == DuelSettings()
-        var parts = ["\(settings.count) questions"]
-        parts.append(settings.count == DuelSettings.quickCount ? "25 s" : "sans chrono")
-        if !settings.domains.isEmpty {
-            parts.append(settings.domains.count <= 2 ? settings.domains.map(DomainPalette.fallbackName).joined(separator: ", ")
-                                                     : "\(settings.domains.count) domaines")
-        }
-        if settings.difficulty != .auto { parts.append(settings.difficulty.title.lowercased()) }
-        return (isBase ? "Format de base : " : "Format : ") + parts.joined(separator: " · ")
-    }
-
-    private func friendTile(_ friend: Friend) -> some View {
+    /// Carte d'un ami : son avatar, son pseudo, et un vrai bouton « Défier ».
+    private func friendCard(_ friend: Friend) -> some View {
         let badge = FriendDuelBadge.make(friend: friend.id, duels: duels)
         return Button { create(friend: friend.id) } label: {
-            VStack(spacing: 6) {
+            VStack(spacing: 8) {
+                ArenaAvatar(handle: friend.handle, size: 62, ring: badge?.tone == .action ? Color.brand : nil, avatar: friend.avatar)
+                Text(friend.handle).font(.system(.subheadline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
+                    .lineLimit(1).minimumScaleFactor(0.7)
                 ZStack {
-                    ArenaAvatar(handle: friend.handle, size: 68, ring: badge?.tone == .action ? Color.brand : nil, avatar: friend.avatar)
                     if busy == friend.id {
-                        Circle().fill(.black.opacity(0.35)).frame(width: 68, height: 68)
                         ProgressView().tint(.white)
+                    } else {
+                        Text("Défier").font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(.white)
                     }
                 }
-                Text(friend.handle).font(.system(.subheadline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
-                    .lineLimit(1).minimumScaleFactor(0.75)
-                Text(badge?.text ?? "Défier").font(.system(.caption, design: .rounded).weight(.bold))
-                    .foregroundStyle(badge?.color ?? Color.brand).lineLimit(1).minimumScaleFactor(0.7)
+                .frame(maxWidth: .infinity, minHeight: 34)
+                .background(Color.brand, in: Capsule())
             }
+            .padding(10)
             .frame(maxWidth: .infinity)
+            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .strokeBorder(badge?.tone == .action ? Color.brand.opacity(0.5) : Color.hairline, lineWidth: 1.5))
         }
         .buttonStyle(.row)
         .disabled(busy != nil || linkBusy)
