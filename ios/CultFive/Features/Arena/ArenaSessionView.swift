@@ -184,6 +184,7 @@ struct ArenaSessionView: View {
         ZStack {
             if let model { content(model) } else { ArenaPalette.night.ignoresSafeArea() }
         }
+        .countsPlayTime()
         .task {
             guard model == nil else { return }
             let session = ArenaSessionModel(service: app.service)

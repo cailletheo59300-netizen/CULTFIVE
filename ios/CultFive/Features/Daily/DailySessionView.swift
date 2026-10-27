@@ -22,6 +22,7 @@ struct DailySessionView: View {
             }
         }
         .animation(Motion.standard, value: model?.advancing)
+        .countsPlayTime()
         .task {
             if model == nil {
                 let session = DailySessionModel(service: app.service)
@@ -108,11 +109,8 @@ struct DailySessionView: View {
     }
 
     private func close() {
-        var finished = false
-        if case .finished = model?.stage { finished = true }
         Task {
-            // Le 5 du jour fini compte comme une partie : la pub entre les parties peut passer en le quittant (D-110).
-            if finished { await app.interstitialBetweenGames() }
+            // Jamais de pub entre les parties après le 5 du jour (D-117) : son temps compte seulement pour la suivante.
             dismiss()
             await app.refreshDaily()
             await app.refreshProfile()

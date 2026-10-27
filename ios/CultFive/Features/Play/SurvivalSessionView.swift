@@ -186,6 +186,7 @@ struct SurvivalSessionView: View {
             Color.paper.ignoresSafeArea()
             if let model { content(model) } else { ProgressView() }
         }
+        .countsPlayTime()
         .task {
             if model == nil {
                 let session = SurvivalSessionModel(service: app.service, domain: domain, overview: overview)

@@ -25,6 +25,7 @@ struct PlaySessionView: View {
                 ProgressView()
             }
         }
+        .countsPlayTime()
         .task(id: config.id) {
             let session = PlaySessionModel(config: config, service: app.service, queue: app.queue, cache: app.cache,
                                            seeds: app.profile?.seeds, tickets: app.progression?.tickets)

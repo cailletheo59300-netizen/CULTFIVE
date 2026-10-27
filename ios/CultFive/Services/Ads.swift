@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SwiftUI
 import AppTrackingTransparency
 import GoogleMobileAds
 import UserMessagingPlatform
@@ -8,9 +9,10 @@ import CultFiveCore
 /// Pubs Google AdMob.
 /// - Pubs récompensées, toujours au choix du joueur : la récompense est donnée par le serveur, après la confirmation
 ///   de Google (vérification côté serveur), jamais par l'app.
-/// - Pub entre les parties : à la fin de n'importe quelle partie (Jouer, Survie, 5 du jour, duel, ligue), dès que
-///   5 minutes (réglées par le serveur) sont passées depuis la dernière ; jamais les 12 premières heures, jamais juste
-///   après une pub récompensée, jamais pendant une question ni pendant l'onboarding (D-110).
+/// - Pub entre les parties : à la fin d'une partie (Jouer, Survie, Arène, duel, ligue ; jamais après le 5 du jour) dès
+///   que 5 minutes de jeu (réglées par le serveur) se sont cumulées depuis la dernière ; le compteur repart à zéro
+///   chaque jour et après chaque pub ; jamais les 12 premières heures, jamais juste après une pub récompensée, jamais
+///   pendant une question ni pendant l'onboarding (D-110, D-117).
 /// - Consentement : message RGPD de Google (UMP), puis demande Apple de suivi (ATT), avant tout chargement de pub.
 /// Les builds de test (Xcode, TestFlight) affichent les pubs de test de Google : cliquer ses propres vraies pubs
 /// peut faire suspendre le compte AdMob.
@@ -237,16 +239,44 @@ final class AdsController {
 
     private static let dayKey = "ads.interstitialDay"
     private static let countKey = "ads.interstitialCount"
-    private static let lastKey = "ads.interstitialLastAt"
-    /// Écart minimum entre deux pubs entre les parties (réglé par le serveur, D-110) : à la fin de n'importe quelle
-    /// partie, une pub passe dès que ce temps s'est écoulé depuis la dernière.
+    private static let playDayKey = "ads.playDay"
+    private static let playSecondsKey = "ads.playSeconds"
+    /// Temps de jeu entre deux pubs entre les parties (réglé par le serveur, D-117) : à la fin d'une partie, une pub
+    /// passe dès que ce temps de jeu s'est cumulé depuis la dernière (ou depuis le début de la journée).
     var interstitialGap: TimeInterval = 5 * 60
     /// Pubs entre les parties par jour au plus (réglé par le serveur) ; nil : pas de maximum.
     var interstitialDailyMax: Int?
 
-    /// Temps écoulé depuis la dernière pub entre les parties.
-    private var sinceLastInterstitial: TimeInterval {
-        Date().timeIntervalSince1970 - defaults.double(forKey: Self.lastKey)
+    /// Début du morceau de partie en cours (écran de partie affiché, app au premier plan) ; nil hors partie.
+    private var playStartedAt: Date?
+
+    /// Un écran de partie s'affiche (ou l'app revient au premier plan pendant une partie) : le temps de jeu compte.
+    func playBegan() {
+        if playStartedAt == nil { playStartedAt = Date() }
+    }
+
+    /// L'écran de partie se ferme (ou l'app passe en arrière-plan) : le temps de jeu ne compte plus.
+    func playEnded() {
+        savePlayTime()
+        playStartedAt = nil
+    }
+
+    /// Ajoute le morceau de partie en cours au temps de jeu du jour (gardé sur l'appareil, remis à zéro chaque jour).
+    private func savePlayTime() {
+        let today = Self.dayString(Date())
+        var seconds = defaults.string(forKey: Self.playDayKey) == today ? defaults.double(forKey: Self.playSecondsKey) : 0
+        if let start = playStartedAt {
+            seconds += max(0, Date().timeIntervalSince(start))
+            playStartedAt = Date()
+        }
+        defaults.set(today, forKey: Self.playDayKey)
+        defaults.set(seconds, forKey: Self.playSecondsKey)
+    }
+
+    /// Temps de jeu depuis la dernière pub entre les parties, aujourd'hui.
+    private var playedSinceLastInterstitial: TimeInterval {
+        savePlayTime()
+        return defaults.double(forKey: Self.playSecondsKey)
     }
 
     /// Pub entre les parties chargée d'avance (pendant le bilan) : elle s'affiche sans faire attendre.
@@ -260,7 +290,7 @@ final class AdsController {
     /// La pub entre les parties sera due au prochain passage : on la charge pendant que le joueur lit son bilan.
     func preloadInterstitialIfSoon() {
         // Chargée un peu avant d'être due, pour être prête à la fin de la partie.
-        guard enabled, started, !interstitialLoading, sinceLastInterstitial >= interstitialGap - 120 else { return }
+        guard enabled, started, !interstitialLoading, playedSinceLastInterstitial >= interstitialGap - 120 else { return }
         if let ready = interstitialReady, Date().timeIntervalSince(ready.loadedAt) < 50 * 60 { return }
         interstitialLoading = true
         let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
@@ -290,7 +320,7 @@ final class AdsController {
         guard enabled, allowed, !rewardedSinceLastGame else { return false }
         let today = Self.dayString(Date())
         let shownToday = defaults.string(forKey: Self.dayKey) == today ? defaults.integer(forKey: Self.countKey) : 0
-        guard sinceLastInterstitial >= interstitialGap, shownToday < (interstitialDailyMax ?? .max) else { return false }
+        guard playedSinceLastInterstitial >= interstitialGap, shownToday < (interstitialDailyMax ?? .max) else { return false }
         // Due mais impossible : on note pourquoi.
         guard started else {
             interstitialFailure = consentFailure
@@ -319,7 +349,8 @@ final class AdsController {
         }
         defaults.set(today, forKey: Self.dayKey)
         defaults.set(shownToday + 1, forKey: Self.countKey)
-        defaults.set(Date().timeIntervalSince1970, forKey: Self.lastKey)
+        defaults.set(0.0, forKey: Self.playSecondsKey)
+        if playStartedAt != nil { playStartedAt = Date() }
         return true
     }
 
@@ -370,4 +401,24 @@ private final class PresentationWaiter: NSObject, FullScreenContentDelegate {
         failure = error
         finish()
     }
+}
+
+/// Écran de partie : son temps à l'écran (app au premier plan) compte comme temps de jeu pour la pub entre les parties.
+private struct CountsPlayTime: ViewModifier {
+    @Environment(AppModel.self) private var app
+    @Environment(\.scenePhase) private var scenePhase
+
+    func body(content: Content) -> some View {
+        content
+            .onAppear { app.ads.playBegan() }
+            .onDisappear { app.ads.playEnded() }
+            .onChange(of: scenePhase) { _, phase in
+                phase == .active ? app.ads.playBegan() : app.ads.playEnded()
+            }
+    }
+}
+
+extension View {
+    /// Compte le temps passé sur cet écran de partie pour la pub entre les parties (D-117).
+    func countsPlayTime() -> some View { modifier(CountsPlayTime()) }
 }

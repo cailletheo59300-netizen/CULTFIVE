@@ -162,6 +162,7 @@ struct DuelSessionView: View {
             Color.paper.ignoresSafeArea()
             if let model { content(model) } else { ProgressView() }
         }
+        .countsPlayTime()
         .task(id: currentId ?? duelId) {
             let session = DuelSessionModel(duelId: currentId ?? duelId, service: app.service)
             model = session

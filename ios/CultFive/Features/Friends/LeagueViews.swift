@@ -1100,6 +1100,7 @@ struct LeagueQuizView: View {
             Color.paper.ignoresSafeArea()
             if let model { content(model) } else { ProgressView() }
         }
+        .countsPlayTime()
         .task {
             guard model == nil else { return }
             let session = LeagueQuizModel(leagueId: leagueId, quiz: quiz, service: app.service)
