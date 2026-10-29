@@ -2019,12 +2019,20 @@ public struct AdStatus: Decodable, Hashable, Sendable {
     /// Pubs entre les parties par jour au plus ; nil : pas de maximum.
     public var interstitialDailyMax: Int?
     public var admin: Bool
-    /// Pass+ actif : plus de pub, les récompenses « bonus » se prennent sans vidéo.
+    /// Pass+ de la saison actif.
     public var passPlus: Bool
+    /// Plus aucune pub (Pass+, « Sans pub pour toujours » ou heures sans pub) : les récompenses « bonus » se prennent
+    /// sans vidéo (D-118). Serveur d'avant la boutique : le Pass+.
+    public var noAds: Bool
+    /// « Sans pub pour toujours » acheté.
+    public var noAdsForever: Bool
+    /// Fin des heures sans pub en cours (packs, bienvenue), sinon nil.
+    public var noAdsUntil: Date?
 
     public init(doubleSeeds: Int = 0, boostChest: Int = 0, freeChest: Int = 0, freePack: Int = 0, streakRescue: Int? = nil,
                 interstitial: Bool = false, interstitialGap: Int = 300, interstitialDailyMax: Int? = nil,
-                admin: Bool = false, passPlus: Bool = false) {
+                admin: Bool = false, passPlus: Bool = false, noAds: Bool? = nil, noAdsForever: Bool = false,
+                noAdsUntil: Date? = nil) {
         self.doubleSeeds = doubleSeeds
         self.boostChest = boostChest
         self.freeChest = freeChest
@@ -2035,11 +2043,17 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         self.interstitialDailyMax = interstitialDailyMax
         self.admin = admin
         self.passPlus = passPlus
+        self.noAds = noAds ?? passPlus
+        self.noAdsForever = noAdsForever
+        self.noAdsUntil = noAdsUntil
     }
 
     enum CodingKeys: String, CodingKey {
         case interstitial, admin
         case passPlus = "pass_plus"
+        case noAds = "no_ads"
+        case noAdsForever = "no_ads_forever"
+        case noAdsUntil = "no_ads_until"
         case doubleSeeds = "double_seeds"
         case boostChest = "boost_chest"
         case freeChest = "free_chest"
@@ -2061,6 +2075,9 @@ public struct AdStatus: Decodable, Hashable, Sendable {
         interstitialDailyMax = try c.decodeIfPresent(Int.self, forKey: .interstitialDailyMax)
         admin = try c.decodeIfPresent(Bool.self, forKey: .admin) ?? false
         passPlus = try c.decodeIfPresent(Bool.self, forKey: .passPlus) ?? false
+        noAds = try c.decodeIfPresent(Bool.self, forKey: .noAds) ?? passPlus
+        noAdsForever = try c.decodeIfPresent(Bool.self, forKey: .noAdsForever) ?? false
+        noAdsUntil = try c.decodeIfPresent(Date.self, forKey: .noAdsUntil)
     }
 }
 

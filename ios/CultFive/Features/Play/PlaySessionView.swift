@@ -885,7 +885,7 @@ private struct CorrectionCard: View {
 
     private var detail: String {
         guard let result = summary.correction else {
-            let lead = app.noAds ? "Avec ton Pass+, rejoue" : "Après une courte pub, rejoue"
+            let lead = app.noAds ? "Sans pub, rejoue" : "Après une courte pub, rejoue"
             return summary.ranked
                 ? "\(lead) les questions ratées : chaque bonne réponse annule l'Elo que l'erreur t'a fait perdre."
                 : "\(lead) les questions ratées pour les retenir."

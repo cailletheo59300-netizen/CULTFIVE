@@ -121,6 +121,10 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertFalse(ads.interstitial)
         XCTAssertEqual(ads.interstitialGap, 300, "pub toutes les 5 minutes (0087)")
         XCTAssertNil(ads.interstitialDailyMax, "pas de maximum par jour (0087)")
+        XCTAssertTrue(ads.noAds, "ancien serveur : le Pass+ vaut plus de pub")
+        let noAds: AdStatus = try fixture("ad_status_no_ads")
+        XCTAssertTrue(noAds.noAds && noAds.noAdsForever && !noAds.passPlus, "sans pub pour toujours, sans Pass+ (0096)")
+        XCTAssertNotNil(noAds.noAdsUntil, "heures sans pub (0096)")
 
         let album: AlbumOverview = try fixture("album_overview_coffrets")
         let coffret = try XCTUnwrap(album.coffrets.first)

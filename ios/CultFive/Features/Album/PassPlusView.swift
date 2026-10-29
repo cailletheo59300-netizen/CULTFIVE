@@ -1,29 +1,41 @@
 import SwiftUI
 import CultFiveCore
 
-/// Écran du Pass+ : d'abord « plus de pub pendant toute la saison », ensuite la piste payante du pass.
+/// Écran du Pass+ (D-118) : une image plutôt que du texte. Au centre, le cadeau du palier 30, entouré des plus beaux
+/// cadeaux de la piste ; trois lignes courtes ; le bouton d'achat ; puis les 30 cadeaux, chacun s'ouvre en grand.
 /// Paiement unique pour la saison en cours (achat consommable, racheté à chaque saison) : rien ne se renouvelle tout seul.
 struct PassPlusView: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @State private var store = AlbumStore.shared
+    @State private var preview: PassPreviewItem?
+    private var shop: ShopStore { app.shop }
+    private var active: Bool { store.passPlusActive }
 
-    private var passPlus: PassPlusStore { app.passPlus }
-    private var active: Bool { app.noAds || store.passPlusActive }
+    /// Piste Pass+ du serveur, sinon l'aperçu de la saison 1.
+    private var rewards: [PassPreviewItem] {
+        if let paid = store.season.passPlus?.rewards, !paid.isEmpty {
+            return paid.map { PassPreviewItem(tier: $0.tier, paid: true, taken: $0.claimed, icon: $0.icon, name: $0.label) }
+        }
+        return PassReward.paid.enumerated().map { PassPreviewItem(tier: $0.offset + 1, paid: true, taken: false, icon: $0.element.icon, name: $0.element.name) }
+    }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Space.l) {
-                hero
-                noAdsCard
-                trackCard
+            VStack(spacing: Space.l) {
+                header
+                PassPlusCollage()
+                highlights
                 buyArea
+                gifts
                 legal
             }
             .padding(.horizontal, Space.gutter)
             .padding(.vertical, Space.m)
+            .containerRelativeFrame(.horizontal)
         }
-        .background(Color.paper.ignoresSafeArea())
+        .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
+        .background(Rectangle().fill(PassPlusFill()).ignoresSafeArea())
         .overlay(alignment: .topTrailing) {
             Button { dismiss() } label: {
                 Image(systemName: "xmark")
@@ -35,29 +47,27 @@ struct PassPlusView: View {
             .accessibilityLabel("Fermer")
             .padding(Space.m)
         }
+        .sheet(item: $preview) { PassRewardPreview(item: $0) }
         .task {
-            await passPlus.loadProduct()
+            await shop.loadProducts()
             await store.refresh()
         }
     }
 
     // MARK: - En-tête
 
-    private var hero: some View {
-        VStack(alignment: .leading, spacing: Space.s) {
-            TrackBadge(paid: true)
-            Text("Pass+")
-                .font(.system(size: 44, weight: .black, design: .rounded))
-                .foregroundStyle(.white)
+    private var header: some View {
+        VStack(spacing: 2) {
+            Text("PASS+")
+                .font(.system(size: 46, weight: .black, design: .rounded))
+                .foregroundStyle(LinearGradient(colors: [Color(hex: 0xFFE680), Color.sun, Color(hex: 0xF2A900)],
+                                                startPoint: .top, endPoint: .bottom))
+                .shadow(color: Color.sun.opacity(0.45), radius: 12)
             Text(seasonLine)
                 .font(.system(.subheadline, design: .rounded).weight(.heavy))
-                .foregroundStyle(Color.sun)
+                .foregroundStyle(.white.opacity(0.8))
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(Space.l)
-        .background(PassPlusFill(), in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: Radius.l, style: .continuous).strokeBorder(CardRarity.legend.border, lineWidth: 2))
-        .shadow(color: Color(hex: 0x2A1490).opacity(0.3), radius: 16, y: 8)
+        .padding(.top, Space.s)
     }
 
     private var seasonLine: String {
@@ -77,50 +87,30 @@ struct PassPlusView: View {
         return output.string(from: date)
     }
 
-    // MARK: - Plus de pub (l'essentiel)
+    // MARK: - Trois lignes
 
-    private var noAdsCard: some View {
-        VStack(alignment: .leading, spacing: Space.m) {
-            HStack(spacing: Space.m) {
-                Image(systemName: "nosign")
-                    .font(.system(size: 30, weight: .black))
-                    .foregroundStyle(Color.brand)
-                    .frame(width: 56, height: 56)
-                    .background(Color.brand.opacity(0.12), in: Circle())
-                    .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Plus aucune pub")
-                        .font(.cfHeadline).foregroundStyle(Color.ink)
-                    Text("Pendant toute la saison")
-                        .font(.cfCallout).foregroundStyle(Color.inkSoft)
-                }
-            }
-            benefit("Plus de pub entre les parties.")
-            benefit("Tous les bonus sans vidéo : pochette gratuite, neurones doublés, coffre offert, coffre boosté, « Corrige tes erreurs », série sauvée.")
+    private var highlights: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            line("gift.fill", "\(rewards.count) cadeaux exclusifs pour ton album")
+            line("nosign", store.season.season.map { "Zéro pub jusqu'au \(Self.day($0.endsOn))" } ?? "Zéro pub toute la saison")
+            line("bolt.fill", "Déjà avancé ? Tes paliers atteints, tout de suite")
         }
-        .popCard(padding: Space.l)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(Space.m)
+        .background(.white.opacity(0.08), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
     }
 
-    // MARK: - Piste du pass
-
-    private var trackCard: some View {
-        VStack(alignment: .leading, spacing: Space.m) {
-            HStack(spacing: Space.s) {
-                Image(systemName: "crown.fill").foregroundStyle(Color(hex: 0xE9B949))
-                Text("Et toute la piste Pass+").font(.cfTitle3).foregroundStyle(Color.ink)
-            }
-            benefit("3 jetons Prestige et 3 coffrets de catégorie (tu choisis le domaine et vois les cartes avant).")
-            benefit("Cadres, finitions, dos de cartes, couvertures, socles, titres, autocollants.")
-            benefit("Au palier 30 : dos Feuille d'or et cadre animé.")
-            benefit("Déjà avancé dans le pass ? Tu récupères d'un coup tous les paliers atteints.")
-        }
-        .popCard(padding: Space.l)
-    }
-
-    private func benefit(_ text: String) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: Space.s) {
-            Image(systemName: "checkmark.circle.fill").foregroundStyle(Color.correct)
-            Text(text).font(.cfBody).foregroundStyle(Color.ink).fixedSize(horizontal: false, vertical: true)
+    private func line(_ symbol: String, _ text: String) -> some View {
+        HStack(spacing: Space.s) {
+            Image(systemName: symbol)
+                .font(.system(size: 15, weight: .black))
+                .foregroundStyle(Color.inkFixed)
+                .frame(width: 30, height: 30)
+                .background(Color.sun, in: Circle())
+            Text(text)
+                .font(.system(.callout, design: .rounded).weight(.heavy))
+                .foregroundStyle(.white)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 
@@ -130,55 +120,143 @@ struct PassPlusView: View {
         VStack(spacing: Space.s) {
             if active {
                 Label("Ton Pass+ est actif", systemImage: "checkmark.seal.fill")
-                    .font(.cfHeadline)
-                    .foregroundStyle(Color.correct)
+                    .font(.system(.headline, design: .rounded).weight(.black))
+                    .foregroundStyle(Color.sun)
                     .frame(maxWidth: .infinity, minHeight: 58)
-                    .background(Color.correct.opacity(0.12), in: Capsule())
             } else if app.passPlusForSale {
-                Button {
+                BuyButton(title: "Activer le Pass+", price: shop.price(.passPlus), busy: shop.purchasing == .passPlus,
+                          enabled: !shop.busy) {
                     Task {
-                        if await passPlus.purchase() {
+                        if await shop.purchase(.passPlus) {
                             Haptics.success()
-                            app.show("Pass+ activé : plus de pub !")
-                            dismiss()
+                            app.show("Pass+ activé !")
                         }
                     }
-                } label: {
-                    HStack(spacing: 8) {
-                        if passPlus.purchasing { ProgressView().controlSize(.small).tint(Color.inkFixed) }
-                        Text(passPlus.price.map { "Activer le Pass+ · \($0)" } ?? "Activer le Pass+")
-                    }
-                    .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.sun)
-                .disabled(passPlus.purchasing)
+                Text("Paiement unique pour la saison")
+                    .font(.system(.caption, design: .rounded).weight(.heavy))
+                    .foregroundStyle(.white.opacity(0.7))
             } else {
                 Text("Le Pass+ n'est pas encore en vente pour cette saison.")
-                    .font(.cfHeadline)
-                    .foregroundStyle(Color.inkSoft)
+                    .font(.system(.headline, design: .rounded).weight(.bold))
+                    .foregroundStyle(.white.opacity(0.8))
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, minHeight: 58)
             }
-            if let error = passPlus.errorMessage {
-                Text(error).font(.cfFootnote).foregroundStyle(Color.wrong).multilineTextAlignment(.center)
+            if let error = shop.errorMessage {
+                Text(error).font(.cfFootnote).foregroundStyle(Color.sun).multilineTextAlignment(.center)
             }
-            Button("Restaurer mes achats") { Task { await passPlus.restore() } }
-                .buttonStyle(.textLink)
-                .disabled(passPlus.purchasing)
         }
     }
 
+    // MARK: - Les cadeaux
+
+    private var gifts: some View {
+        VStack(alignment: .leading, spacing: Space.s) {
+            Text("Les \(rewards.count) cadeaux")
+                .font(.system(.title3, design: .rounded).weight(.black))
+                .foregroundStyle(.white)
+            Text("Touche un cadeau pour le voir en grand.")
+                .font(.system(.footnote, design: .rounded).weight(.bold))
+                .foregroundStyle(.white.opacity(0.7))
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 10) {
+                ForEach(rewards) { item in
+                    Button {
+                        Haptics.selection()
+                        preview = item
+                    } label: {
+                        VStack(spacing: 4) {
+                            AlbumImage(kind: .pass, name: item.icon).frame(width: 58, height: 58)
+                            Text(item.name)
+                                .font(.system(size: 11, weight: .bold, design: .rounded))
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.85)
+                                .frame(maxWidth: .infinity, minHeight: 28, alignment: .top)
+                        }
+                        .padding(8)
+                        .frame(maxWidth: .infinity)
+                        .background(.white.opacity(0.08), in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+                        .overlay(alignment: .topLeading) {
+                            Text("\(item.tier)")
+                                .font(.system(size: 10, weight: .black, design: .rounded)).monospacedDigit()
+                                .foregroundStyle(Color.inkFixed)
+                                .frame(minWidth: 18, minHeight: 18)
+                                .background(Color.sun, in: Circle())
+                                .padding(5)
+                        }
+                    }
+                    .buttonStyle(.row)
+                    .accessibilityLabel("Palier \(item.tier) : \(item.name)")
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
     private var legal: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(spacing: 6) {
+            Button("Restaurer mes achats") { Task { await shop.restore() } }
+                .buttonStyle(.textLink)
+                .tint(Color.sun)
+                .disabled(shop.busy)
             Text("Paiement unique pour la saison en cours, sans abonnement : rien ne se renouvelle tout seul. Le Pass+ est lié à ton compte \(Brand.name).")
-                .font(.cfFootnote).foregroundStyle(Color.inkSoft)
+                .font(.cfFootnote).foregroundStyle(.white.opacity(0.65))
+                .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
             HStack(spacing: Space.m) {
                 Link("Conditions", destination: Brand.termsURL)
                 Link("Confidentialité", destination: Brand.privacyURL)
             }
             .font(.cfFootnote.weight(.bold))
-            .tint(Color.brand)
+            .tint(Color.sun)
         }
+        .frame(maxWidth: .infinity)
+    }
+}
+
+/// L'image du Pass+ : le cadeau du palier 30 au centre, dans un halo doré, et les plus beaux cadeaux autour, qui
+/// flottent. Un macaron « zéro pub » rappelle le bonus de la saison.
+struct PassPlusCollage: View {
+    private static let orbit = ["cadre_vitrail", "dos_domaines", "coffret", "finition_holo",
+                                "jeton", "couv_or", "titre_chasseur", "socle_neon"]
+
+    var body: some View {
+        GeometryReader { proxy in
+            let w = proxy.size.width, h = proxy.size.height
+            let center = CGPoint(x: w / 2, y: h / 2)
+            ZStack {
+                Circle()
+                    .fill(RadialGradient(colors: [Color.sun.opacity(0.55), Color.sun.opacity(0.12), .clear],
+                                         center: .center, startRadius: 6, endRadius: h * 0.55))
+                    .frame(width: h * 1.1, height: h * 1.1)
+                    .position(center)
+                ForEach(Array(Self.orbit.enumerated()), id: \.offset) { index, icon in
+                    let angle = Double(index) / Double(Self.orbit.count) * 2 * .pi - .pi / 2
+                    AlbumImage(kind: .pass, name: icon)
+                        .frame(width: 66, height: 66)
+                        .floating(5, period: 1.8 + Double(index % 3) * 0.35)
+                        .position(x: center.x + cos(angle) * (w / 2 - 40), y: center.y + sin(angle) * (h / 2 - 36))
+                }
+                AlbumImage(kind: .pass, name: "final_payant")
+                    .frame(width: h * 0.52, height: h * 0.52)
+                    .shadow(color: Color.sun.opacity(0.5), radius: 18)
+                    .floating(7, period: 2.6)
+                    .position(center)
+                HStack(spacing: 4) {
+                    Image("shop_noads").resizable().scaledToFit().frame(width: 26, height: 26)
+                    Text("ZÉRO PUB").font(.system(size: 12, weight: .black, design: .rounded)).tracking(0.5)
+                }
+                .foregroundStyle(Color.inkFixed)
+                .padding(.leading, 4).padding(.trailing, 10).padding(.vertical, 3)
+                .background(Color.sun, in: Capsule())
+                .shadow(color: .black.opacity(0.25), radius: 6, y: 3)
+                .position(x: center.x, y: center.y + h * 0.3)
+            }
+        }
+        .frame(height: 320)
+        .accessibilityElement()
+        .accessibilityLabel("Les cadeaux du Pass+ et zéro pub toute la saison")
     }
 }

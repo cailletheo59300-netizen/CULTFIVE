@@ -34,7 +34,7 @@ struct AdOfferCard<Icon: View>: View {
             } label: {
                 HStack(spacing: 8) {
                     if busy { ProgressView().controlSize(.small) }
-                    Label(app.noAds ? "Récupérer avec le Pass+" : button, systemImage: app.adSymbol)
+                    Label(app.noAds ? "Récupérer sans pub" : button, systemImage: app.adSymbol)
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -54,7 +54,7 @@ struct FreeChestOffer: View {
     var body: some View {
         if (app.adStatus?.freeChest ?? 0) > 0 {
             AdOfferCard(icon: { ChestView(tier: .wood) }, title: "Coffre offert",
-                        detail: app.noAds ? "Un coffre en bois par jour, offert par ton Pass+. Il peut monter de rang à l'ouverture !"
+                        detail: app.noAds ? "Un coffre en bois par jour, offert sans pub. Il peut monter de rang à l'ouverture !"
                                           : "Un coffre en bois par jour contre une courte pub. Il peut monter de rang à l'ouverture !",
                         button: "Regarder une pub") {
                 do {
@@ -76,7 +76,7 @@ struct StreakRescueOffer: View {
     var body: some View {
         if let streak = app.adStatus?.streakRescue {
             AdOfferCard(icon: { GameIcon.flameOff.image }, title: "Sauve ta série de \(streak) jours",
-                        detail: app.noAds ? "Tu l'as perdue il y a moins de 48 h. Ton Pass+ la fait repartir, comme si de rien n'était. Une fois par mois."
+                        detail: app.noAds ? "Tu l'as perdue il y a moins de 48 h. Sans pub, elle repart comme si de rien n'était. Une fois par mois."
                                           : "Tu l'as perdue il y a moins de 48 h. Une courte pub et elle repart, comme si de rien n'était. Une fois par mois.",
                         button: "Sauver ma série") {
                 do {
@@ -109,7 +109,7 @@ struct DoubleSeedsButton: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             if let gained {
-                Label("+\(Brand.currency(gained)) \(app.noAds ? "grâce au Pass+" : "grâce à la pub")", systemImage: "checkmark.circle.fill")
+                Label("+\(Brand.currency(gained)) \(app.noAds ? "sans pub" : "grâce à la pub")", systemImage: "checkmark.circle.fill")
                     .font(.cfCallout.weight(.bold))
                     .foregroundStyle(onInk ? Color.sun : Color.correct)
                     .transition(.scale.combined(with: .opacity))
@@ -147,7 +147,7 @@ struct DoubleSeedsButton: View {
     }
 }
 
-/// Petit lien sous une offre de pub : « Plus de pub avec le Pass+ » (seulement s'il est en vente et pas déjà actif).
+/// Petit lien sous une offre de pub : « Retirer les pubs » (ouvre la boutique ; rien si les pubs sont déjà retirées).
 struct PassPlusUpsell: View {
     let origin: String
     var onInk = false
@@ -155,12 +155,12 @@ struct PassPlusUpsell: View {
     @Environment(AppModel.self) private var app
 
     var body: some View {
-        if !app.noAds && app.passPlusForSale {
+        if !app.noAds && app.api != nil {
             Button {
                 Haptics.selection()
-                app.openPassPlus(from: origin)
+                app.openShop(from: origin)
             } label: {
-                Label("Plus de pub avec le Pass+", systemImage: "crown.fill")
+                Label("Retirer les pubs", systemImage: "nosign")
                     .font(.system(.footnote, design: .rounded).weight(.heavy))
                     .foregroundStyle(onInk ? Color.sun : Color.brand)
                     .frame(maxWidth: .infinity, minHeight: 36)

@@ -90,10 +90,16 @@ final class AppModel {
     let ads: AdsController
     /// Récompenses de pub restantes aujourd'hui, série à sauver, pub entre les parties autorisée.
     var adStatus: AdStatus?
-    /// Achat du Pass+ (StoreKit 2).
-    let passPlus = PassPlusStore()
+    /// Achats intégrés : Pass+ et boutique (StoreKit 2).
+    let shop = ShopStore()
     /// Écran du Pass+ à montrer (depuis le pass, une offre de pub, les réglages).
     var showPassPlus = false
+    /// Boutique à montrer (accueil, profil, rappel après une pub).
+    var showShop = false
+    /// Rappel « Marre des pubs ? » après une pub entre les parties (une fois par jour au plus) : en attente tant qu'une
+    /// partie est encore à l'écran, montré dès le retour aux onglets.
+    var pendingNoAdsPrompt = false
+    var showNoAdsPrompt = false
 
     init(service: GameService, api: SupabaseAPI?, queue: OfflineAttemptQueue) {
         self.service = service
@@ -338,7 +344,7 @@ final class AppModel {
 
     /// Consentement (RGPD puis suivi Apple) et démarrage des pubs, après l'onboarding seulement.
     func startAds() async {
-        if api != nil { passPlus.start(app: self) }
+        if api != nil { shop.start(app: self) }
         await refreshAdStatus()
         ads.adultAudience = isAdult
         await ads.start()
@@ -382,12 +388,12 @@ final class AppModel {
 
     // MARK: Pass+
 
-    /// Pass+ actif : plus de pub, les bonus se prennent sans vidéo.
-    var noAds: Bool { adStatus?.passPlus ?? false }
+    /// Plus de pub (Pass+, « Sans pub pour toujours » ou heures sans pub) : les bonus se prennent sans vidéo.
+    var noAds: Bool { adStatus?.noAds ?? false }
     /// Pictogramme des boutons « bonus » : une pub, ou la couronne du Pass+.
     var adSymbol: String { noAds ? "crown.fill" : "play.rectangle.fill" }
     /// Le Pass+ s'achète maintenant (saison en vente, ou build de test).
-    var passPlusForSale: Bool { (AlbumStore.shared.season.passPlus?.onSale ?? false) || passPlus.sandbox }
+    var passPlusForSale: Bool { (AlbumStore.shared.season.passPlus?.onSale ?? false) || shop.sandbox }
 
     /// Ouvre l'écran du Pass+.
     /// Défi touché : on emmène le joueur là où il se fait.
@@ -408,6 +414,37 @@ final class AppModel {
     func openPassPlus(from origin: String) {
         track("pass_view", ["from": origin])
         showPassPlus = true
+    }
+
+    func openShop(from origin: String) {
+        track("shop_view", ["from": origin])
+        showShop = true
+    }
+
+    private static let noAdsPromptKey = "shop.noAdsPromptDay"
+    private static let seasonPromoKey = "shop.seasonPromo"
+    private static let firstSeenKey = "shop.firstSeen"
+
+    /// Après une pub entre les parties : « Marre des pubs ? », une fois par jour au plus (D-118).
+    private func offerNoAdsAfterAd() {
+        let today = Calendar.current.startOfDay(for: Date()).timeIntervalSince1970
+        guard UserDefaults.standard.double(forKey: Self.noAdsPromptKey) != today else { return }
+        UserDefaults.standard.set(today, forKey: Self.noAdsPromptKey)
+        pendingNoAdsPrompt = true
+    }
+
+    /// Une fois par saison, l'écran du Pass+ s'ouvre de lui-même : pas aux tout nouveaux joueurs (2 jours d'abord),
+    /// seulement s'il est en vente et pas déjà pris (D-118).
+    func promoteSeasonIfNeeded() {
+        let defaults = UserDefaults.standard
+        let now = Date().timeIntervalSince1970
+        if defaults.double(forKey: Self.firstSeenKey) == 0 { defaults.set(now, forKey: Self.firstSeenKey) }
+        let store = AlbumStore.shared
+        guard let season = store.season.season, passPlusForSale, !store.passPlusActive, !showShop, !showPassPlus,
+              now - defaults.double(forKey: Self.firstSeenKey) > 2 * 86_400,
+              defaults.integer(forKey: Self.seasonPromoKey) != season.id else { return }
+        defaults.set(season.id, forKey: Self.seasonPromoKey)
+        openPassPlus(from: "season_promo")
     }
 
     /// Après un achat ou une restauration : pubs et pass relus.
@@ -535,6 +572,7 @@ final class AppModel {
         applyInterstitialRules()
         if await ads.showInterstitialIfDue(allowed: adStatus?.interstitial ?? false) {
             track("interstitial")
+            offerNoAdsAfterAd()
         } else if let reason = ads.interstitialFailure {
             track("ad_fail", ["kind": "interstitial", "reason": String(reason.prefix(80))])
         }

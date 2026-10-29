@@ -23,7 +23,8 @@ struct MainTabView: View {
             tab(ProfileView(), .profile)
         }
         .overlay(alignment: .bottom) {
-            CultTabBar(selection: $model.tab, daily: model.daily, arenaAlert: model.arenaAlert) { model.reselect($0) }
+            CultTabBar(selection: $model.tab, daily: model.daily, arenaAlert: model.arenaAlert,
+                       albumAlert: AlbumStore.shared.claimableCount > 0) { model.reselect($0) }
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { barHeight = $0 }
         }
         // Réseau coupé : un petit bandeau en haut, les écrans gardent ce qu'ils affichaient.
@@ -45,7 +46,34 @@ struct MainTabView: View {
             }
         }
         .sheet(isPresented: $model.showPassPlus) { PassPlusView() }
-        .task { await model.refreshProgression() }
+        .fullScreenCover(isPresented: $model.showShop) { ShopView() }
+        .sheet(isPresented: $model.showNoAdsPrompt) { NoAdsPrompt() }
+        // « Marre des pubs ? » attend que la partie soit refermée (rien de présenté au-dessus des onglets).
+        .task(id: model.pendingNoAdsPrompt) {
+            guard model.pendingNoAdsPrompt else { return }
+            for _ in 0..<600 {
+                try? await Task.sleep(for: .seconds(1))
+                guard !Task.isCancelled else { return }
+                if Self.nothingPresented {
+                    model.pendingNoAdsPrompt = false
+                    model.showNoAdsPrompt = true
+                    return
+                }
+            }
+            model.pendingNoAdsPrompt = false
+        }
+        .task {
+            await model.refreshProgression()
+            await AlbumStore.shared.refresh()
+            model.promoteSeasonIfNeeded()
+        }
+    }
+
+    /// Aucun écran présenté au-dessus des onglets (partie, feuille, pub).
+    private static var nothingPresented: Bool {
+        let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+        let window = scenes.flatMap(\.windows).first { $0.isKeyWindow }
+        return window?.rootViewController?.presentedViewController == nil
     }
 
     private func tab(_ content: some View, _ tag: AppModel.Tab) -> some View {
@@ -60,6 +88,8 @@ struct CultTabBar: View {
     let daily: DailyStatus?
     /// Pastille rouge sur l'Arène : un résultat de duel ou les récompenses du lundi à voir.
     var arenaAlert = false
+    /// Pastille rouge sur l'Album : des cadeaux du pass à récupérer (D-118).
+    var albumAlert = false
     /// Onglet touché alors qu'il est déjà ouvert : retour à sa page de départ.
     var onReselect: (AppModel.Tab) -> Void = { _ in }
 
@@ -69,7 +99,7 @@ struct CultTabBar: View {
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
             item(.play, title: "Jouer", symbol: "shuffle", selectedSymbol: "shuffle")
-            item(.album, title: "Album", symbol: "books.vertical", selectedSymbol: "books.vertical.fill")
+            item(.album, title: "Album", symbol: "books.vertical", selectedSymbol: "books.vertical.fill", badge: albumAlert)
             centerItem
             item(.friends, title: "Arène", symbol: "trophy", selectedSymbol: "trophy.fill", badge: arenaAlert)
             item(.profile, title: "Profil", symbol: "person.crop.circle", selectedSymbol: "person.crop.circle.fill")

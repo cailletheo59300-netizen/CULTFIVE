@@ -1,7 +1,7 @@
-// Brainlix — achats du Pass+ (StoreKit 2).
+// Brainlix — achats intégrés : Pass+ et boutique (StoreKit 2).
 // Deux appelants :
 //   · l'app (POST { signedTransaction }, avec le jeton du joueur) juste après un achat ou une restauration ;
-//   · Apple (POST { signedPayload }) : notifications serveur v2, pour retirer un Pass+ remboursé.
+//   · Apple (POST { signedPayload }) : notifications serveur v2, pour retirer un achat remboursé.
 // Tout ce qui est signé par Apple est vérifié (jws.ts) avant d'être cru. Déployée sans vérification JWT (Apple n'en
 // envoie pas) : le joueur est identifié ici à partir de son jeton.
 
@@ -43,7 +43,7 @@ async function handlePurchase(req: Request, signedTransaction: string): Promise<
     console.error("purchase", user, String(error));
     return json({ error: error instanceof Error ? error.message : "invalid" }, 400);
   }
-  const response = await rpc("pass_plus_record", {
+  const response = await rpc("iap_record", {
     p_user: user,
     p_transaction: purchase.transactionId,
     p_original: purchase.originalTransactionId,

@@ -48,6 +48,8 @@ struct SeasonPassView: View {
 
     @Environment(AppModel.self) private var app
     @State private var claimed: PassReward?
+    /// Récompense touchée : aperçu en grand (D-118).
+    @State private var preview: PassPreviewItem?
 
     var body: some View {
         ScrollViewReader { reader in
@@ -76,12 +78,9 @@ struct SeasonPassView: View {
                                 .buttonStyle(.plain)
                             }
                         }
-                        PassTrack(store: store) { reward in
-                            withAnimation(Motion.standard) { claimed = reward }
-                            Task {
-                                try? await Task.sleep(for: .seconds(1.6))
-                                withAnimation(Motion.standard) { if claimed?.id == reward.id { claimed = nil } }
-                            }
+                        PassTrack(store: store) { item in
+                            Haptics.selection()
+                            preview = item
                         }
                     }
                 }
@@ -91,6 +90,15 @@ struct SeasonPassView: View {
         }
         .refreshable { await store.refresh() }
         .task { await store.refresh() }
+        .sheet(item: $preview) { item in
+            PassRewardPreview(item: item) { reward in
+                withAnimation(Motion.standard) { claimed = reward }
+                Task {
+                    try? await Task.sleep(for: .seconds(1.6))
+                    withAnimation(Motion.standard) { if claimed?.id == reward.id { claimed = nil } }
+                }
+            }
+        }
         .clearsTabBar()
         .background(Color.paper.ignoresSafeArea())
         .navigationTitle("Pass de saison")
@@ -217,7 +225,7 @@ struct SeasonPassView: View {
                 Haptics.selection()
                 app.openPassPlus(from: "pass")
             } label: {
-                Text(app.passPlus.price.map { "Activer · \($0)" } ?? "Activer")
+                Text(app.shop.price(.passPlus).map { "Activer · \($0)" } ?? "Activer")
                     .font(.system(.caption, design: .rounded).weight(.black))
                     .foregroundStyle(Color.inkFixed)
                     .padding(.horizontal, 12)
@@ -334,7 +342,8 @@ private struct ChallengesLink: View {
 /// jusqu'au palier atteint, à droite la case Pass+ (violette, liseré doré, cadenas tant qu'il n'est pas activé).
 private struct PassTrack: View {
     let store: AlbumStore
-    var onClaim: (PassReward) -> Void
+    /// Toucher une récompense l'ouvre en grand (on la voit même verrouillée).
+    var onPreview: (PassPreviewItem) -> Void
 
     @Environment(AppModel.self) private var app
 
@@ -403,18 +412,8 @@ private struct PassTrack: View {
         let locked = paid && (!store.passPlusActive || paidRewards == nil)
         let ready = reached && !taken && !locked && !store.busy
         return Button {
-            if locked && app.passPlusForSale {
-                Haptics.selection()
-                app.openPassPlus(from: "pass_tier")
-                return
-            }
-            guard ready else { Haptics.error(); return }
-            Task {
-                if await store.claim(tier: tier, track: paid ? .paid : .free) {
-                    Haptics.success()
-                    onClaim(reward)
-                }
-            }
+            if locked { app.track("pass_view", ["from": "pass_tier"]) }
+            onPreview(PassPreviewItem(tier: tier, paid: paid, taken: taken, icon: reward.icon, name: reward.name))
         } label: {
             HStack(spacing: 6) {
                 ZStack(alignment: .topTrailing) {

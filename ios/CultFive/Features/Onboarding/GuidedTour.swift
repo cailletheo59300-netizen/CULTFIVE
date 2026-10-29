@@ -54,7 +54,7 @@ enum TourID: String, CaseIterable {
             return [
                 Step(title: "Le pass de saison", text: "Tes défis te donnent des points. Chaque palier atteint débloque une récompense.",
                      symbol: "flag.checkered"),
-                Step(title: "Deux pistes", text: "La piste gratuite est pour tout le monde. La piste Pass+ (payante, pour la saison) enlève toutes les pubs et ajoute des récompenses.",
+                Step(title: "Deux pistes", text: "La piste gratuite est pour tout le monde. La piste Pass+ (payante, pour la saison) ajoute 30 cadeaux et enlève les pubs toute la saison. Touche une récompense pour la voir en grand.",
                      symbol: "crown.fill"),
                 Step(title: "Récupérer", text: "Touche un palier atteint pour prendre sa récompense. Après le palier 30, des coffres en plus.",
                      symbol: "gift.fill"),

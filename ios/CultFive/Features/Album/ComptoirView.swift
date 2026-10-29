@@ -215,7 +215,7 @@ struct ComptoirView: View {
             }
             if let free = app.adStatus?.freePack {
                 // Une pochette gratuite par jour contre une pub (vérifiée par le serveur, 0053).
-                ShopButton(title: "Pochette gratuite", price: free == 0 ? "Demain" : app.noAds ? "Pass+" : "1 pub", icon: "ticket_pochette",
+                ShopButton(title: "Pochette gratuite", price: free == 0 ? "Demain" : app.noAds ? "Sans pub" : "1 pub", icon: "ticket_pochette",
                            fill: Color(hex: 0x37B24D), text: .white, enabled: free > 0 && !store.busy) {
                     Task {
                         do {

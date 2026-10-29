@@ -2,18 +2,24 @@ import Foundation
 import StoreKit
 import CultFiveCore
 
-/// Achat du Pass+ (StoreKit 2) : une saison sans pub et la piste payante du pass.
+/// Produits de la boutique (identifiants App Store Connect, D-118).
+enum ShopProduct: String, CaseIterable {
+    /// Pass+ : consommable, 3,99 €, racheté à chaque saison (cadeaux de la piste Pass+ et plus de pub pendant la saison).
+    case passPlus = "app.brainlix.pass"
+    /// Sans pub pour toujours : non consommable, 7,99 €.
+    case noAds = "app.brainlix.noads"
+}
+
+/// Achats intégrés (StoreKit 2) : Pass+ et boutique.
 /// L'app n'active rien elle-même : chaque achat signé par Apple est envoyé au serveur (`iap-verify`), qui le vérifie et
-/// l'enregistre. La transaction n'est terminée (`finish`) qu'une fois le serveur d'accord : en cas d'échec réseau, elle
-/// revient au prochain lancement (`Transaction.unfinished`).
+/// l'enregistre sur le compte Brainlix. La transaction n'est terminée (`finish`) qu'une fois le serveur d'accord : en cas
+/// d'échec réseau, elle revient au prochain lancement (`Transaction.unfinished`).
 @MainActor
 @Observable
-final class PassPlusStore {
-    /// Produit App Store Connect : consommable, 3,99 €, racheté à chaque saison. Le Pass+ vit sur le serveur (compte Brainlix).
-    static let productId = "app.brainlix.pass"
-
-    private(set) var product: Product?
-    private(set) var purchasing = false
+final class ShopStore {
+    private(set) var products: [ShopProduct: Product] = [:]
+    /// Achat en cours (un seul à la fois).
+    private(set) var purchasing: ShopProduct?
     /// Achats de test (TestFlight, examen d'Apple) : le Pass+ s'achète même hors période de vente.
     private(set) var sandbox = false
     var errorMessage: String?
@@ -21,7 +27,9 @@ final class PassPlusStore {
     private weak var app: AppModel?
     private var updates: Task<Void, Never>?
 
-    /// Au lancement (une fois connecté) : produit, environnement, achats en attente ou faits ailleurs.
+    var busy: Bool { purchasing != nil }
+
+    /// Au lancement (une fois connecté) : produits, environnement, achats en attente ou faits ailleurs.
     func start(app: AppModel) {
         guard self.app == nil else { return }
         self.app = app
@@ -31,7 +39,7 @@ final class PassPlusStore {
             }
         }
         Task {
-            await loadProduct()
+            await loadProducts()
             if case .verified(let transaction)? = try? await AppTransaction.shared {
                 sandbox = transaction.environment != .production
             }
@@ -41,37 +49,40 @@ final class PassPlusStore {
         }
     }
 
-    func loadProduct() async {
-        guard product == nil else { return }
-        product = try? await Product.products(for: [Self.productId]).first
+    func loadProducts() async {
+        guard products.count < ShopProduct.allCases.count else { return }
+        let found = (try? await Product.products(for: ShopProduct.allCases.map(\.rawValue))) ?? []
+        for product in found {
+            if let kind = ShopProduct(rawValue: product.id) { products[kind] = product }
+        }
     }
 
     /// Prix affiché par l'App Store (« 3,99 € »).
-    var price: String? { product?.displayPrice }
+    func price(_ kind: ShopProduct) -> String? { products[kind]?.displayPrice }
 
-    /// Achat. Renvoie vrai si le Pass+ est actif à la fin.
-    func purchase() async -> Bool {
+    /// Achat. Renvoie vrai si le produit est actif à la fin.
+    func purchase(_ kind: ShopProduct) async -> Bool {
         errorMessage = nil
-        await loadProduct()
-        guard let product else {
-            errorMessage = "Le Pass+ n'est pas disponible pour l'instant. Réessaie dans un instant."
+        await loadProducts()
+        guard let product = products[kind] else {
+            errorMessage = "Cet achat n'est pas disponible pour l'instant. Réessaie dans un instant."
             return false
         }
         guard let user = app?.profile?.id else {
             errorMessage = BackendError.notAuthenticated.errorDescription
             return false
         }
-        purchasing = true
-        defer { purchasing = false }
+        purchasing = kind
+        defer { purchasing = nil }
         do {
             // L'identifiant du joueur voyage avec l'achat : le serveur ne l'accepte que pour ce compte.
             switch try await product.purchase(options: [.appAccountToken(user)]) {
             case .success(let result):
                 let ok = await handle(result)
-                if ok { app?.track("pass_buy") }
+                if ok { app?.track(kind == .passPlus ? "pass_buy" : "shop_buy", ["product": kind.rawValue]) }
                 return ok
             case .pending:
-                errorMessage = "Achat en attente d'approbation. Le Pass+ s'activera tout seul ensuite."
+                errorMessage = "Achat en attente d'approbation. Il s'activera tout seul ensuite."
                 return false
             case .userCancelled:
                 return false
@@ -84,26 +95,29 @@ final class PassPlusStore {
         }
     }
 
-    /// « Restaurer mes achats » : un achat pas encore validé (réseau coupé) est renvoyé au serveur, puis le Pass+ est relu.
-    /// Le Pass+ est lié au compte Brainlix (consommable) : sur un autre iPhone, il suffit de se connecter au même compte.
+    /// « Restaurer mes achats » : les achats pas encore validés (réseau coupé) et « Sans pub pour toujours » sont renvoyés
+    /// au serveur, puis l'état est relu. Tout est lié au compte Brainlix : sur un autre iPhone, il suffit de se connecter.
     func restore() async {
         errorMessage = nil
-        purchasing = true
-        defer { purchasing = false }
+        purchasing = .noAds
+        defer { purchasing = nil }
         try? await AppStore.sync()
         for await result in Transaction.unfinished {
             await handle(result)
         }
+        for await result in Transaction.currentEntitlements {
+            await handle(result)
+        }
         await app?.refreshPassPlus()
         if app?.noAds != true {
-            errorMessage = "Aucun Pass+ sur ce compte. Ton Pass+ est lié à ton compte \(Brand.name) : connecte-toi au compte avec lequel tu l'as acheté."
+            errorMessage = "Aucun achat sur ce compte. Tes achats sont liés à ton compte \(Brand.name) : connecte-toi au compte avec lequel tu les as faits."
         }
     }
 
     /// Une transaction de l'App Store : envoyée au serveur, puis terminée s'il l'a acceptée (ou refusée pour de bon).
     @discardableResult
     private func handle(_ result: VerificationResult<Transaction>) async -> Bool {
-        guard case .verified(let transaction) = result, transaction.productID == Self.productId, let app else { return false }
+        guard case .verified(let transaction) = result, ShopProduct(rawValue: transaction.productID) != nil, let app else { return false }
         do {
             let verification = try await app.service.passPlusVerify(signedTransaction: result.jwsRepresentation)
             await transaction.finish()

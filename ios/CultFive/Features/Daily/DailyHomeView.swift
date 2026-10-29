@@ -32,6 +32,14 @@ struct DailyHomeView: View {
                     StreakRescueOffer()
                     rendezVous
                     ChestsReadyRow()
+                    // Cadeaux du pass à récupérer : bien en vue (D-118).
+                    if AlbumStore.shared.claimableCount > 0 {
+                        GiftsBanner(count: AlbumStore.shared.claimableCount) {
+                            app.pendingAlbum = .pass
+                            app.tab = .album
+                        }
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                    }
                     // Le pass, puis les défis (jour, semaine, saison) qui le font monter.
                     SeasonPassBar(store: AlbumStore.shared) {
                         app.pendingAlbum = .pass
@@ -51,6 +59,7 @@ struct DailyHomeView: View {
                     })
                     .id("defis")
                     FreeChestOffer()
+                    NoAdsRow()
                 }
                 .padding(.horizontal, Space.gutter)
                 .padding(.bottom, Space.l)
@@ -175,6 +184,19 @@ struct DailyHomeView: View {
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel("Série de \(streak) jour\(streak > 1 ? "s" : "")" + (freezes > 0 ? ", \(freezes) joker\(freezes > 1 ? "s" : "") de série" : ""))
                 .accessibilityHint("Explique la série et les jokers")
+            }
+            if app.api != nil {
+                Button {
+                    Haptics.selection()
+                    app.openShop(from: "home_top")
+                } label: {
+                    Image("shop_gift").resizable().scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .frame(width: 48, height: 40)
+                        .background(Color.paperRaised, in: Capsule())
+                }
+                .buttonStyle(.row)
+                .accessibilityLabel("Boutique")
             }
             let chests = app.progression?.chests.count ?? 0
             Button { showBag = true } label: {

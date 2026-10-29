@@ -161,7 +161,7 @@ public enum BackendError: Error, Equatable, LocalizedError {
         case "otp_expired", "invalid_otp": return "Code invalide ou expiré."
         case "pass_required": return "Réservé au Pass+."
         case "pass_not_on_sale": return "Le Pass+ n'est pas en vente en ce moment."
-        case "wrong_account", "transaction_other_user": return "Cet achat appartient à un autre compte Brainlix. Connecte-toi à ce compte pour retrouver ton Pass+."
+        case "wrong_account", "transaction_other_user": return "Cet achat appartient à un autre compte Brainlix. Connecte-toi à ce compte pour le retrouver."
         case "revoked": return "Cet achat a été remboursé."
         case "coffret_opened": return "Ce coffret est déjà ouvert."
         case "coffret_not_found": return "Coffret introuvable."

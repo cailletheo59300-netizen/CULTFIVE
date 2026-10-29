@@ -204,7 +204,7 @@ struct ChestOpeningView: View {
                     Button { Task { await boost(chest) } } label: {
                         HStack(spacing: 6) {
                             if boosting { ProgressView().controlSize(.mini) } else { Image(systemName: "bolt.fill") }
-                            Text(app.noAds ? "Option : booster (Pass+, sans pub)" : "Option : booster avec 1 pub")
+                            Text(app.noAds ? "Option : booster (sans pub)" : "Option : booster avec 1 pub")
                         }
                         .font(.system(.footnote, design: .rounded).weight(.bold))
                         .foregroundStyle(.white.opacity(0.75))
