@@ -66,6 +66,7 @@ struct WelcomeOfferCard: View {
             VStack(alignment: .leading, spacing: 6) {
                 bullet("nosign", "7 jours sans aucune pub")
                 bullet("sparkles", "2 de chaque objet (10 objets)")
+                bullet("person.crop.circle.badge.checkmark", "L'avatar exclusif Hypatie + son contour")
             }
             BuyButton(title: "Je prends", price: shop.price(.welcome), busy: shop.purchasing == .welcome, enabled: !shop.busy) {
                 Task {
@@ -207,5 +208,46 @@ struct ItemsGuide: View {
                 .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
             }
         }
+    }
+}
+
+/// « Ton look » : avatars premium, contours, titres, Pack Prestige. Un aperçu, puis l'atelier où tout s'essaie.
+struct LookShopCard: View {
+    @Environment(AppModel.self) private var app
+    @State private var showStudio = false
+
+    var body: some View {
+        Button {
+            Haptics.selection()
+            showStudio = true
+        } label: {
+            VStack(alignment: .leading, spacing: Space.m) {
+                HStack(spacing: -12) {
+                    AnimalBadge(animal: .joan, size: 58, decor: .ring(.neon))
+                    AnimalBadge(animal: .hugo, size: 58, decor: .ring(.gold))
+                    AnimalBadge(animal: .galileo, size: 58, decor: .ring(.rainbow))
+                    AnimalBadge(animal: .tut, size: 58, decor: .ring(.prestige))
+                }
+                .padding(.top, Space.s)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Ton look").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                    Text("Avatars premium, contours et titres : tout le monde les voit dans les classements, les duels et l'Arène.")
+                        .font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+                    HStack(spacing: 6) {
+                        PlayerTitleTag(title: .genie)
+                        PlayerTitleTag(title: .legend)
+                    }
+                }
+                Text("Essayer sur mon avatar ›")
+                    .font(.system(.subheadline, design: .rounded).weight(.black))
+                    .foregroundStyle(Color.brand)
+            }
+            .padding(Space.l)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Radius.l, style: .continuous).strokeBorder(Color.hairline, lineWidth: 1.5))
+        }
+        .buttonStyle(.row)
+        .sheet(isPresented: $showStudio) { LookStudio() }
     }
 }

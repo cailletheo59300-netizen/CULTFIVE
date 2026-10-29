@@ -129,6 +129,8 @@ public protocol GameService: Sendable {
     func duelsHistory(before: String?) async throws -> DuelHistory
     /// Change l'avatar du joueur (D-113), gratuit.
     func avatarSet(_ animal: AnimalAvatar) async throws
+    /// Pose (ou retire, avec nil) un contour ou un titre possédé (D-120).
+    func lookSet(kind: String, value: String?) async throws
     func searchHandles(_ query: String) async throws -> [HandleSearchResult]
     func requestFriend(handle: String) async throws -> FriendRequestResult
     func respondFriend(friendship: UUID, accept: Bool) async throws
@@ -412,6 +414,10 @@ public struct LiveGameService: GameService {
 
     public func avatarSet(_ animal: AnimalAvatar) async throws {
         let _: JSONValue = try await api.rpc("avatar_set", ["p_animal": .string(animal.rawValue)])
+    }
+
+    public func lookSet(kind: String, value: String?) async throws {
+        let _: JSONValue = try await api.rpc("look_set", ["p_kind": .string(kind), "p_value": value.map { .string($0) } ?? .null])
     }
 
     public func duelsHistory(before: String?) async throws -> DuelHistory {
@@ -803,6 +809,7 @@ public extension GameService {
 
     /// Par défaut (démo) : rien à enregistrer.
     func avatarSet(_ animal: AnimalAvatar) async throws {}
+    func lookSet(kind: String, value: String?) async throws {}
 
     /// Par défaut (démo) : rien à supprimer.
     func duelCancel(_ duel: UUID) async throws {}

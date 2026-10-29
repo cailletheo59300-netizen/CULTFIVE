@@ -668,7 +668,8 @@ struct LeagueView: View {
                         .foregroundStyle(row.rank <= 3 && row.points > 0 ? Color.inkFixed : Color.inkSoft)
                         .frame(width: 36, height: 36)
                         .background(medal(row.rank, points: row.points), in: Circle())
-                    ArenaAvatar(handle: row.handle, size: 40, me: row.isMe, avatar: row.avatar)
+                    ArenaAvatar(handle: row.handle, size: 40, me: row.isMe, avatar: row.avatar,
+                                rank: row.points > 0 ? row.rank : nil)
                     VStack(alignment: .leading, spacing: 2) {
                         HStack(spacing: 4) {
                             Text(row.handle).font(.cfTitle3).fontWeight(row.isMe ? .bold : .semibold)

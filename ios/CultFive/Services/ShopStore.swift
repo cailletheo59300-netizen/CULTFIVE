@@ -12,8 +12,27 @@ enum ShopProduct: String, CaseIterable {
     case packEssai = "app.brainlix.pack.essai"
     case packJoueur = "app.brainlix.pack.joueur"
     case packBig = "app.brainlix.pack.big"
-    /// Offre de bienvenue (consommable, 7 premiers jours, une fois) : 7 jours sans pub et 2 de chaque objet.
+    /// Offre de bienvenue (consommable, 7 premiers jours, une fois) : 7 jours sans pub, 2 de chaque objet, l'avatar
+    /// Hypatie et le contour Bienvenue.
     case welcome = "app.brainlix.bienvenue"
+    /// Look (non consommables, D-120) : avatars premium (0,99 € l'un, 2,49 € les 4), contours et titres (0,99 €),
+    /// Pack Prestige (4,99 €, contenus exclusifs).
+    case avatarJoan = "app.brainlix.avatar.joan"
+    case avatarHugo = "app.brainlix.avatar.hugo"
+    case avatarGalileo = "app.brainlix.avatar.galileo"
+    case avatarDarwin = "app.brainlix.avatar.darwin"
+    case avatars = "app.brainlix.avatars"
+    case ringNeon = "app.brainlix.ring.neon"
+    case ringGold = "app.brainlix.ring.gold"
+    case ringRainbow = "app.brainlix.ring.rainbow"
+    case titleErudit = "app.brainlix.title.erudit"
+    case titleEncyclo = "app.brainlix.title.encyclo"
+    case titleGenie = "app.brainlix.title.genie"
+    case prestige = "app.brainlix.prestige"
+
+    static func avatar(_ animal: AnimalAvatar) -> ShopProduct? { ShopProduct(rawValue: "app.brainlix.avatar.\(animal.rawValue)") }
+    static func ring(_ ring: AvatarRing) -> ShopProduct? { ShopProduct(rawValue: "app.brainlix.ring.\(ring.rawValue)") }
+    static func title(_ title: PlayerTitle) -> ShopProduct? { ShopProduct(rawValue: "app.brainlix.title.\(title.rawValue)") }
 }
 
 /// Achats intégrés (StoreKit 2) : Pass+ et boutique.

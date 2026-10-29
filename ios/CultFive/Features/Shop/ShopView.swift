@@ -86,6 +86,7 @@ struct ShopView: View {
                         WelcomeOfferCard(until: until)
                     }
                     NoAdsHero()
+                    LookShopCard()
                     PacksSection()
                     passCard
                     ItemsGuide()

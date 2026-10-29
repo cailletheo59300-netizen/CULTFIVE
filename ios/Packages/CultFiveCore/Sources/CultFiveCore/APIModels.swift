@@ -558,9 +558,11 @@ public struct BoutiqueOverview: Codable, Hashable, Sendable {
     public var noAdsUntil: Date?
     /// Fin de l'offre de bienvenue (7 premiers jours, si elle n'est pas prise), sinon nil.
     public var welcomeUntil: Date?
+    /// Look possédé (D-120) : « avatar.joan », « ring.neon », « title.genie »… (nil : serveur d'avant).
+    public var looks: [String]?
 
     enum CodingKeys: String, CodingKey {
-        case items
+        case items, looks
         case noAds = "no_ads"
         case noAdsForever = "no_ads_forever"
         case noAdsUntil = "no_ads_until"

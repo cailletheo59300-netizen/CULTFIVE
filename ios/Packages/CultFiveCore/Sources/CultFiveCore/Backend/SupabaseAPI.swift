@@ -166,6 +166,7 @@ public enum BackendError: Error, Equatable, LocalizedError {
         case "coffret_opened": return "Ce coffret est déjà ouvert."
         case "coffret_not_found": return "Coffret introuvable."
         case "no_item": return "Tu n'as plus cet objet."
+        case "look_not_owned", "invalid_avatar": return "Tu ne possèdes pas encore ce look : il est à la boutique."
         case "bet_alone": return "Le Pari ×3 se joue seul."
         case "already_started": return "La partie a déjà commencé : les objets se posent avant."
         default: return nil

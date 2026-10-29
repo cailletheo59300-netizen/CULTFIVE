@@ -103,6 +103,9 @@ struct ArenaMystery: View {
 final class MyAvatar {
     static let shared = MyAvatar()
     var animal: AnimalAvatar?
+    /// Contour et titre posés (D-120).
+    var ring: AvatarRing?
+    var title: PlayerTitle?
 }
 
 /// Avatar d'un joueur (D-115) : son personnage en 3D sur un disque de couleur. Sans avatar connu (ancien serveur), un
@@ -113,13 +116,21 @@ struct ArenaAvatar: View {
     var ring: Color? = nil
     var me = false
     var avatar: JSONValue? = nil
+    /// Rang dans un classement (D-120) : couronne du 1er, contours des 2e et 3e, flamme du top 10 (gagnés, jamais achetés).
+    var rank: Int? = nil
 
     private var animal: AnimalAvatar {
         AnimalAvatar(avatar) ?? (me ? MyAvatar.shared.animal : nil) ?? .fallback(for: handle)
     }
 
+    private var decor: AvatarDecor {
+        if let rank, (1...10).contains(rank) { return .rank(rank) }
+        if let contour = AvatarRing(avatar) ?? (me ? MyAvatar.shared.ring : nil) { return .ring(contour) }
+        return .none
+    }
+
     var body: some View {
-        AnimalBadge(animal: animal, size: size, ring: ring)
+        AnimalBadge(animal: animal, size: size, ring: ring, decor: ring == nil ? decor : .none)
     }
 }
 
@@ -128,6 +139,8 @@ struct AnimalBadge: View {
     let animal: AnimalAvatar
     var size: CGFloat = 44
     var ring: Color? = nil
+    /// Contour acheté ou décoration de classement (D-120).
+    var decor: AvatarDecor = .none
 
     static func tint(_ animal: AnimalAvatar) -> Color {
         switch animal {
@@ -139,6 +152,13 @@ struct AnimalBadge: View {
         case .cleopatra: return Color(hex: 0xFFD6E2)
         case .shakespeare: return Color(hex: 0xFFE8C8)
         case .socrates: return Color(hex: 0xC4E0FF)
+        case .joan: return Color(hex: 0xC9D8FF)
+        case .hugo: return Color(hex: 0xE4DCFF)
+        case .galileo: return Color(hex: 0xFFE0B8)
+        case .darwin: return Color(hex: 0xCFF0C8)
+        case .hypatia: return Color(hex: 0xBFEFE8)
+        case .tut: return Color(hex: 0x2A1E6E)
+        case .athena: return Color(hex: 0xFFE7A0)
         }
     }
 
@@ -151,6 +171,7 @@ struct AnimalBadge: View {
             )
             .clipShape(Circle())
             .overlay(Circle().strokeBorder(ring ?? .clear, lineWidth: max(2, size * 0.06)))
+            .overlay(ContourRing(decor: decor, size: size))
             .frame(width: size, height: size)
             .accessibilityHidden(true)
     }

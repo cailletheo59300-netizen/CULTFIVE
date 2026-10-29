@@ -701,7 +701,144 @@ function pSocrates(){const g=new THREE.Group();const gr=0xC6C3BC,hm=hairMat(gr,.
   // couronne de laurier
   const l=laurel(phys(0x3B8E3B,{roughness:.4}));l.rotation.x=-1.38;l.scale.set(.95,.95,2.2);l.position.set(0,.66,-.08);g.add(l);
   return g;}
-const PEOPLE={vinci:pVinci,curie:pCurie,newton:pNewton,napoleon:pNapoleon,mozart:pMozart,cleopatra:pCleopatra,shakespeare:pShakespeare,socrates:pSocrates};
+// Avatars premium (D-120) : même style, plus de détails dorés ; exclusifs bienvenue et Prestige.
+function pJoan(){const g=new THREE.Group();const hc=0x5A3A22,hm=hairMat(hc,.6);const steel=metal(0xC9D2DC,.18);
+  g.add(bust(0xBFC8D2,{metalness:.9,roughness:.2}));
+  // gorgerin et épaulières d'armure, fleur de lys dorée
+  const gor=new THREE.Mesh(new THREE.CylinderGeometry(.5,.62,.35,40),steel);gor.position.y=-1.2;g.add(gor);
+  [-1,1].forEach(s=>{const sp=ball(.5,steel,new THREE.Vector3(s*.92,-1.62,0),[1.05,.32,.78]);sp.rotation.z=-s*.3;g.add(sp);
+    for(let k=0;k<3;k++){const r=new THREE.Mesh(new THREE.TorusGeometry(.5-k*.08,.025,8,40,Math.PI),metal(0xFFC933,.2));r.position.set(s*.92,-1.58-k*.06,0);r.rotation.set(Math.PI/2,0,s>0?0:Math.PI);r.scale.set(1,.75,1);g.add(r);}});
+  const lys=new THREE.Group();const gold=metal(0xFFC933,.15);
+  lys.add(ball(.08,gold,new THREE.Vector3(0,.05,0),[.7,1.6,.5]));[-1,1].forEach(s=>{const p=ball(.07,gold,new THREE.Vector3(s*.1,0,0),[.6,1.3,.5]);p.rotation.z=s*.7;lys.add(p);});
+  lys.add(new THREE.Mesh(rbox(.24,.05,.05,.02),gold).translateY(-.08));lys.position.set(0,-1.75,.62);g.add(lys);
+  g.add(face(SKIN,{brow:hc,nose:'small',mouth:'smile',lips:0xB0584A,iris:0x4a6a8a}));
+  // coupe au bol courte
+  g.add(ball(1.03,hm,new THREE.Vector3(0,.3,-.1),[.98,.92,.94]));
+  const fr=new THREE.Mesh(new THREE.CylinderGeometry(.86,.95,.36,48,1,false,-Math.PI*.45,Math.PI*.9),hm);fr.position.set(0,.62,-.02);g.add(fr);
+  [-1,1].forEach(s=>{const side=new THREE.Mesh(rbox(.26,.7,.6,.12),hm);side.position.set(s*.85,.05,-.05);g.add(side);});
+  // étendard
+  const pole=new THREE.Mesh(new THREE.CylinderGeometry(.035,.035,3.2,10),phys(0x6B4226));pole.position.set(1.35,-.4,-.2);g.add(pole);
+  g.add(ball(.08,gold,new THREE.Vector3(1.35,1.22,-.2)));
+  const flagTex=canvasTex(256,192,(c,W,H)=>{c.fillStyle='#F4F1E8';c.fillRect(0,0,W,H);c.fillStyle='#1C3FA8';c.font='bold 120px serif';c.textAlign='center';c.textBaseline='middle';c.fillText('⚜',W/2,H/2+8);});
+  const flag=new THREE.Mesh(new THREE.PlaneGeometry(.9,.65,8,4),new THREE.MeshStandardMaterial({map:flagTex,side:THREE.DoubleSide,roughness:.7}));
+  const pos=flag.geometry.attributes.position;for(let i=0;i<pos.count;i++){const x=pos.getX(i);pos.setZ(i,Math.sin((x+.45)*5)*.06);}flag.geometry.computeVertexNormals();
+  flag.position.set(1.82,.9,-.2);g.add(flag);
+  return g;}
+function pHugo(){const g=new THREE.Group();const w=0xF2F0EA,hm=hairMat(w,.7);
+  g.add(bust(0x1C1C24));
+  // col blanc, lavallière noire
+  [-1,1].forEach(s=>{const c=new THREE.Mesh(new THREE.ConeGeometry(.2,.38,3),phys(0xFFFFFF));c.rotation.z=s*Math.PI/2;c.position.set(s*.2,-1.2,.42);c.scale.z=.3;g.add(c);});
+  [-1,1].forEach(s=>{const b=ball(.13,phys(0x0E0E12,{roughness:.4}),new THREE.Vector3(s*.13,-1.32,.52),[1.4,.8,.5]);b.rotation.z=s*.3;g.add(b);});
+  g.add(face(SKIN,{brow:w,browW:.3,browTilt:.18,nose:'mid',mouth:'stern',iris:0x4a5a6a}));
+  // cheveux blancs courts, front haut
+  g.add(ball(.98,hm,new THREE.Vector3(0,.2,-.32),[.97,.92,.8]));
+  [-1,1].forEach(s=>{for(let i=0;i<3;i++)g.add(tube([[s*.6,.75-i*.05,-.05-i*.15],[s*.9,.35,-.05-i*.15],[s*.92,-.05,-.05-i*.12]],.11,hm,.5));});
+  // barbe blanche courte et fournie
+  g.add(ball(.66,hm,new THREE.Vector3(0,-.62,.32),[1.08,.95,.7]));
+  for(let row=0;row<3;row++)for(let i=-3;i<=3;i++){if(row==2&&Math.abs(i)>2)continue;
+    g.add(ball(.13,hm,new THREE.Vector3(i*.16,-.45-row*.2,.68-Math.abs(i)*.05-row*.05)));}
+  [-1,1].forEach(s=>g.add(tube([[0,-.26,.88],[s*.2,-.3,.86],[s*.34,-.42,.78]],.06,hm,.4)));
+  // livre ouvert doré
+  const book=new THREE.Group();[-1,1].forEach(s=>{const pg=new THREE.Mesh(rbox(.42,.55,.05,.02),phys(0xFFF8E6));pg.position.x=s*.21;pg.rotation.y=-s*.35;book.add(pg);
+    const cov=new THREE.Mesh(rbox(.45,.58,.03,.02),phys(0x8C1C2B));cov.position.set(s*.22,0,-.04);cov.rotation.y=-s*.35;book.add(cov);});
+  book.position.set(1.15,-1.6,.75);book.rotation.set(-.5,-.3,.15);g.add(book);
+  return g;}
+function pGalileo(){const g=new THREE.Group();const gr=0xA8A29A,hm=hairMat(gr,.7);
+  g.add(bust(0x2A2018));
+  // col de dentelle blanche plat
+  const col=new THREE.Mesh(new THREE.CylinderGeometry(.9,.95,.06,48),phys(0xF6F2E8,{roughness:.6}));col.position.y=-1.18;col.scale.z=.7;g.add(col);
+  for(let i=0;i<18;i++){const a=i/18*Math.PI*2;g.add(ball(.07,phys(0xF6F2E8),new THREE.Vector3(Math.cos(a)*.92,-1.2,Math.sin(a)*.64)));}
+  g.add(face(SKIN,{brow:gr,browW:.28,browTilt:.15,nose:'long',mouth:'stern',iris:0x4a3a2a}));
+  // front dégarni, cheveux et barbe en pointe
+  g.add(ball(.95,hm,new THREE.Vector3(0,.1,-.4),[.97,.88,.7]));
+  [-1,1].forEach(s=>{for(let i=0;i<3;i++)g.add(tube([[s*.75,.5-i*.05,-.1-i*.15],[s*.92,.1,-.1-i*.15],[s*.88,-.3,-.05-i*.1]],.1,hm,.4));});
+  g.add(ball(.6,hm,new THREE.Vector3(0,-.6,.3),[1.05,.9,.65]));
+  const beard=new THREE.Mesh(new THREE.ConeGeometry(.38,.75,24),hm);beard.rotation.x=Math.PI;beard.position.set(0,-1.05,.55);beard.scale.z=.6;g.add(beard);
+  [-1,1].forEach(s=>g.add(tube([[0,-.27,.88],[s*.2,-.3,.86],[s*.34,-.45,.78]],.05,hm,.4)));
+  // lunette en laiton
+  const tel=new THREE.Group();const brass=metal(0xD9A441,.18);
+  tel.add(new THREE.Mesh(new THREE.CylinderGeometry(.13,.17,1.6,24),phys(0x6B3A1E,{roughness:.4})));
+  [.75,.3,-.3,-.75].forEach(y=>{const r=new THREE.Mesh(new THREE.CylinderGeometry(.19,.19,.08,24),brass);r.position.y=y;tel.add(r);});
+  const lens=new THREE.Mesh(new THREE.CylinderGeometry(.15,.15,.02,24),new THREE.MeshStandardMaterial({color:0xBFE9FF,roughness:.05,metalness:.2}));lens.position.y=.8;tel.add(lens);
+  tel.position.set(1.2,-.9,.4);tel.rotation.set(.3,0,-.7);g.add(tel);
+  return g;}
+function pDarwin(){const g=new THREE.Group();const w=0xF0EEE8,hm=hairMat(w,.75);
+  g.add(bust(0x3A3026));
+  [-1,1].forEach(s=>{const c=new THREE.Mesh(new THREE.ConeGeometry(.2,.38,3),phys(0xFFFFFF));c.rotation.z=s*Math.PI/2;c.position.set(s*.2,-1.2,.42);c.scale.z=.3;g.add(c);});
+  g.add(face(SKIN,{brow:w,browW:.34,browTilt:-.1,nose:'big',mouth:'stern',iris:0x4a5a6a}));
+  // crâne dégarni, sourcils broussailleux, très grande barbe blanche
+  [-1,1].forEach(s=>{const b=ball(.13,hm,onHead(s*.3,.34,.05),[1.6,.7,.7]);g.add(b);});
+  g.add(ball(.9,hm,new THREE.Vector3(0,-.1,-.5),[.95,.75,.6]));
+  g.add(ball(.78,hm,new THREE.Vector3(0,-.9,.35),[1.12,1.3,.68]));
+  for(let i=-5;i<=5;i++){const x=i*.11;g.add(tube([[x*1.4,-.35,.68-Math.abs(i)*.03],[x*1.3+(i%2)*.06,-.95,.74],[x*1.0-(i%2)*.06,-1.5,.66],[x*.6,-1.95,.52]],.13,hm,.6));}
+  [-1,1].forEach(s=>g.add(tube([[0,-.26,.88],[s*.22,-.3,.86],[s*.4,-.48,.78]],.07,hm,.4)));
+  // pinson des Galápagos sur l'épaule
+  const bird=new THREE.Group();const fe=phys(0x8A5A2B,{roughness:.5});
+  bird.add(ball(.26,fe,null,[1.2,.95,.9]));bird.add(ball(.17,fe,new THREE.Vector3(.27,.15,0)));
+  const beak=new THREE.Mesh(new THREE.ConeGeometry(.07,.16,12),phys(0xE0A030));beak.rotation.z=-Math.PI/2;beak.position.set(.46,.13,0);bird.add(beak);
+  bird.add(ball(.035,phys(0x111111),new THREE.Vector3(.36,.2,.12)));
+  const tail=new THREE.Mesh(rbox(.3,.08,.16,.04),phys(0x5A3A1E));tail.position.set(-.33,-.02,0);tail.rotation.z=.4;bird.add(tail);
+  bird.position.set(1.0,-1.25,.35);bird.rotation.y=-.5;g.add(bird);
+  return g;}
+function pHypatia(){const g=new THREE.Group();const hc=0x2E1E14,hm=hairMat(hc,.55);
+  g.add(bust(0xF4F0E6,{neck:SKIN}));
+  // chiton drapé, fibule dorée
+  g.add(tube([[-1.1,-1.6,.2],[-.3,-1.25,.6],[.5,-1.6,.6],[1.1,-2.0,.3]],.1,phys(0xE6DFCF,{roughness:.6})));
+  g.add(ball(.09,metal(0xFFC933,.15),new THREE.Vector3(-.7,-1.42,.48)));
+  g.add(face(SKIN,{brow:hc,nose:'small',mouth:'smile',lips:0xB0584A,iris:0x4a3a2a,lashes:true}));
+  // cheveux ondulés relevés, bandeau doré, chignon
+  g.add(ball(1.02,hm,new THREE.Vector3(0,.3,-.14),[.98,.9,.92]));
+  [-1,1].forEach(s=>{for(let i=0;i<4;i++)g.add(tube([[s*.1,.86-i*.03,.36-i*.12],[s*.55,.76,.36-i*.13],[s*.86,.4,.08-i*.12],[s*.82,.05,-.18-i*.1]],.09,hm,.4));});
+  const bun=ball(.42,hm,new THREE.Vector3(0,.95,-.6));g.add(bun);
+  const band=new THREE.Mesh(new THREE.TorusGeometry(.98,.05,12,64,Math.PI*1.1),metal(0xFFC933,.15));band.rotation.set(-1.25,0,-Math.PI*.05);band.position.set(0,.72,-.1);g.add(band);
+  // astrolabe doré
+  const ast=new THREE.Group();const gold=metal(0xFFC933,.15);
+  ast.add(new THREE.Mesh(new THREE.TorusGeometry(.42,.05,12,48),gold));
+  ast.add(new THREE.Mesh(new THREE.TorusGeometry(.3,.025,8,40),gold));
+  [0,Math.PI/2].forEach(a=>{const bar=new THREE.Mesh(rbox(.8,.03,.03,.01),gold);bar.rotation.z=a;ast.add(bar);});
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(.08,.025,8,20),gold);ring.position.y=.5;ast.add(ring);
+  ast.position.set(1.15,-1.1,.6);ast.rotation.set(-.2,-.4,.1);g.add(ast);
+  return g;}
+function pTut(){const g=new THREE.Group();const gold=metal(0xFFC933,.13);const lapis=phys(0x1D3FA0,{roughness:.2});
+  g.add(bust(0xE8C66A,{metalness:.8,roughness:.25,neck:SKIN_DARK}));
+  // grand collier rayé or et lapis
+  [[.62,true],[.72,false],[.82,true],[.92,false],[1.02,true]].forEach(([r,isG])=>{const t=new THREE.Mesh(new THREE.TorusGeometry(r,.055,10,48,Math.PI),isG?gold:lapis);t.rotation.z=Math.PI;t.rotation.x=-.95;t.position.set(0,-1.12,.12);g.add(t);});
+  g.add(face(SKIN_DARK,{brow:0x0c0c0c,browW:.3,browTilt:.02,nose:'small',mouth:'stern',lips:0x7a3a2a,kohl:true,iris:0x2a1a0a}));
+  // némès rayé or et bleu
+  const nemTex=canvasTex(512,512,(c,W,H)=>{for(let i=0;i<16;i++){c.fillStyle=i%2?'#1D3FA0':'#F5C842';c.fillRect(0,i*H/16,W,H/16);}});
+  const nm=new THREE.MeshStandardMaterial({map:nemTex,roughness:.25,metalness:.55});
+  const cap=ball(1.08,nm,new THREE.Vector3(0,.32,-.12),[1.0,.95,.95]);g.add(cap);
+  [-1,1].forEach(s=>{const lap=new THREE.Mesh(rbox(.55,1.6,.28,.12),nm);lap.position.set(s*1.0,-.55,.15);lap.rotation.z=s*.12;g.add(lap);});
+  const brow=new THREE.Mesh(new THREE.TorusGeometry(.95,.07,12,64,Math.PI*1.15),gold);brow.rotation.set(-1.32,0,-Math.PI*.075);brow.position.set(0,.66,-.06);g.add(brow);
+  // cobra et vautour
+  g.add(tube([[-.08,.72,.86],[-.08,.95,.92],[-.06,1.1,.86]],.06,gold,.2));g.add(ball(.09,gold,new THREE.Vector3(-.06,1.13,.9),[1.3,.8,.6]));
+  g.add(ball(.09,gold,new THREE.Vector3(.12,.84,.92),[1,1,.7]));
+  // barbe postiche tressée
+  const beard=new THREE.Mesh(new THREE.CylinderGeometry(.09,.12,.6,16),lapis);beard.position.set(0,-.98,.62);beard.rotation.x=.25;g.add(beard);
+  for(let i=0;i<4;i++){const r=new THREE.Mesh(new THREE.TorusGeometry(.11,.025,8,20),gold);r.rotation.x=Math.PI/2+.25;r.position.set(0,-.78-i*.13,.66-i*.03);g.add(r);}
+  return g;}
+function pAthena(){const g=new THREE.Group();const hc=0x4A2E1A,hm=hairMat(hc,.55);const gold=metal(0xFFC933,.14);
+  g.add(bust(0xF1ECE0));
+  // égide dorée en écailles et Méduse stylisée
+  for(let row=0;row<2;row++)for(let i=-4;i<=4;i++){const sc=ball(.12,gold,new THREE.Vector3(i*.2,-1.3-row*.18,.48-Math.abs(i)*.04),[1,.8,.35]);g.add(sc);}
+  g.add(ball(.14,phys(0x2F9E44,{roughness:.3}),new THREE.Vector3(0,-1.55,.62)));
+  g.add(face(SKIN,{brow:hc,nose:'small',mouth:'smile',lips:0xA8423E,iris:0x6a8a9a,lashes:true}));
+  // longs cheveux sous le casque
+  for(const s of [-1,1])for(let i=0;i<4;i++)g.add(tube([[s*(.7+i*.05),.3,-.1-i*.12],[s*(.92+i*.03),-.3,-.1-i*.12],[s*(.9+i*.05),-1.0,-.1-i*.1],[s*(.8+i*.06),-1.5,-.2-i*.08]],.13,hm,.5));
+  // casque corinthien doré relevé, haut cimier rouge
+  const helm=ball(1.06,gold,new THREE.Vector3(0,.66,-.14),[1.0,.62,.98]);g.add(helm);
+  const visor=new THREE.Mesh(rbox(1.15,.26,.3,.1),gold);visor.position.set(0,1.0,.55);visor.rotation.x=-.9;g.add(visor);
+  [-1,1].forEach(s=>{const eye=new THREE.Mesh(rbox(.3,.08,.05,.03),phys(0x1a1208));eye.position.set(s*.25,1.04,.66);eye.rotation.x=-.9;g.add(eye);});
+  const crestBase=new THREE.Mesh(rbox(.16,.22,1.5,.07),gold);crestBase.position.set(0,1.32,-.15);g.add(crestBase);
+  for(let i=0;i<16;i++){const t=i/15;const f=ball(.22,phys(0xD62828,{roughness:.55}),new THREE.Vector3(0,1.6+Math.sin(t*Math.PI)*.45,.7-t*1.75),[.42,1.4,.62]);g.add(f);}
+  // chouette dorée
+  const owl=new THREE.Group();owl.add(ball(.24,gold,null,[1,1.15,.9]));
+  [-1,1].forEach(s=>{owl.add(ball(.08,phys(0xFFFFFF),new THREE.Vector3(s*.09,.08,.18)));owl.add(ball(.04,phys(0x111111),new THREE.Vector3(s*.09,.08,.24)));
+    const ear=new THREE.Mesh(new THREE.ConeGeometry(.05,.14,8),gold);ear.position.set(s*.13,.27,0);owl.add(ear);});
+  owl.position.set(1.1,-1.35,.5);g.add(owl);
+  return g;}
+const PEOPLE={vinci:pVinci,curie:pCurie,newton:pNewton,napoleon:pNapoleon,mozart:pMozart,cleopatra:pCleopatra,shakespeare:pShakespeare,socrates:pSocrates,
+  joan:pJoan,hugo:pHugo,galileo:pGalileo,darwin:pDarwin,hypatia:pHypatia,tut:pTut,athena:pAthena};
 Object.entries(PEOPLE).forEach(([id,f])=>{ICONS[`Avatars/avatar_${id}`]=[()=>{const g=f();g.rotation.set(.04,-.16,0);return Object.assign(framed(g,[0,.05,7,0,-.35,0]),{exposure:.95});},360];});
 window.renderIcons=(only)=>{const out={};for(const [name,[build,px,frame,rest]] of Object.entries(ICONS)){if(only&&!name.startsWith(only))continue;out[name]=snap(build,px,frame,rest);}return out;};
 </script>

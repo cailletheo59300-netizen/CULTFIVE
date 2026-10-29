@@ -255,7 +255,7 @@ struct ArenaSection: View {
     private func teaserRow(_ row: ArenaRow) -> some View {
         HStack(spacing: 10) {
             ArenaMedal(rank: row.rank, size: 34)
-            ArenaAvatar(handle: row.handle, size: 30, me: row.me, avatar: row.avatar)
+            ArenaAvatar(handle: row.handle, size: 30, me: row.me, avatar: row.avatar, rank: row.rank)
             ArenaHandle(handle: row.me ? "Toi" : row.handle, champion: row.champion,
                         color: row.me ? Color(hex: 0x1E1340) : .ink)
             Spacer()

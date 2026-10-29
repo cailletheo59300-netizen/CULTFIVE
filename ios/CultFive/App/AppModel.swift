@@ -29,6 +29,23 @@ final class AppModel {
         didSet {
             if useCache, let profile { cache.save(profile, key: "profile") }
             MyAvatar.shared.animal = AnimalAvatar(profile?.avatar)
+            MyAvatar.shared.ring = AvatarRing(profile?.avatar)
+            MyAvatar.shared.title = PlayerTitle(profile?.avatar)
+        }
+    }
+
+    /// Pose (ou retire) un contour ou un titre possédé (D-120) : tout de suite à l'écran, puis enregistré.
+    func setLook(kind: String, value: String?) async {
+        let ring = MyAvatar.shared.ring, title = MyAvatar.shared.title
+        if kind == "ring" { MyAvatar.shared.ring = value.flatMap(AvatarRing.init(rawValue:)) }
+        if kind == "title" { MyAvatar.shared.title = value.flatMap(PlayerTitle.init(rawValue:)) }
+        do {
+            try await service.lookSet(kind: kind, value: value)
+            await refreshProfile()
+        } catch {
+            MyAvatar.shared.ring = ring
+            MyAvatar.shared.title = title
+            show(error, "Impossible de changer ton look. Réessaie.")
         }
     }
 

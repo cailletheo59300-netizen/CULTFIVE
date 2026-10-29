@@ -326,7 +326,8 @@ struct RankRow: View {
         HStack(spacing: 10) {
             MedalBadge(rank: entry.rank, size: 28, style: style, me: entry.me)
             if entry.showsAvatar {
-                ArenaAvatar(handle: entry.handle, size: 34, me: entry.me, avatar: entry.avatar)
+                ArenaAvatar(handle: entry.handle, size: 34, me: entry.me, avatar: entry.avatar,
+                            rank: entry.played ? entry.rank : nil)
             }
             VStack(alignment: .leading, spacing: 1) {
                 HStack(spacing: 6) {
@@ -344,6 +345,9 @@ struct RankRow: View {
                             .background(entry.tagFilled ? entry.tagColor : entry.tagColor.opacity(0.13), in: Capsule())
                             .layoutPriority(-1)
                     }
+                }
+                if entry.showsAvatar, let title = PlayerTitle.of(entry.avatar, me: entry.me) {
+                    PlayerTitleTag(title: title, compact: true)
                 }
                 if let streak = entry.streak, streak > 0 {
                     Label("\(streak)", systemImage: "flame.fill")

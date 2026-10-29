@@ -64,7 +64,7 @@ struct ProfileView: View {
             NavigationStack { DailyHistoryDetail() }
                 .presentationDetents([.large])
         }
-        .sheet(isPresented: $showAvatars) { AvatarPickerSheet() }
+        .sheet(isPresented: $showAvatars) { LookStudio() }
         .sheet(isPresented: $showShare) {
             if let profile = app.profile {
                 ShareSheetView(content: .profile(profile, skills: skills))
@@ -130,9 +130,10 @@ struct ProfileView: View {
                     }
                     .buttonStyle(.row)
                     .accessibilityLabel("Mon avatar")
-                    .accessibilityHint("Changer d'avatar")
+                    .accessibilityHint("Changer d'avatar, de contour ou de titre")
                     .padding(.bottom, Space.xs)
                     Text(app.profile?.handle ?? "…").font(.cfDisplay).lineLimit(1).minimumScaleFactor(0.6)
+                    if let title = MyAvatar.shared.title { PlayerTitleTag(title: title) }
                     if let profile = app.profile {
                         let level = XPLevel(totalXP: profile.xpTotal)
                         Text("Niveau \(level.level) · \(profile.xpTotal) XP").font(.cfFootnote).foregroundStyle(Color.inkSoft)
@@ -220,53 +221,3 @@ struct ProfileView: View {
     }
 }
 
-/// Choix de l'avatar (D-115) : 8 personnages, gratuits, un appui suffit.
-struct AvatarPickerSheet: View {
-    @Environment(AppModel.self) private var app
-    @Environment(\.dismiss) private var dismiss
-    private let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
-
-    var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: Space.l) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("Mon avatar").font(.cfDisplay)
-                        Text("Tes amis et tes adversaires le voient dans l'Arène et les classements. Change quand tu veux.")
-                            .font(.cfCallout).foregroundStyle(Color.inkSoft)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(AnimalAvatar.allCases, id: \.self) { animal in
-                            let on = MyAvatar.shared.animal == animal
-                            Button {
-                                Haptics.selection()
-                                Task { await app.setAvatar(animal) }
-                            } label: {
-                                VStack(spacing: 8) {
-                                    AnimalBadge(animal: animal, size: 92, ring: on ? Color.brand : nil)
-                                        .scaleEffect(on ? 1.04 : 1)
-                                        .animation(Motion.bounce, value: on)
-                                    Text(animal.name)
-                                        .font(.system(.subheadline, design: .rounded).weight(on ? .black : .bold))
-                                        .multilineTextAlignment(.center).lineLimit(2).minimumScaleFactor(0.8)
-                                        .foregroundStyle(on ? Color.brand : Color.ink)
-                                }
-                                .frame(maxWidth: .infinity)
-                            }
-                            .buttonStyle(.row)
-                            .accessibilityLabel(animal.name)
-                            .accessibilityAddTraits(on ? .isSelected : [])
-                        }
-                    }
-                }
-                .padding(Space.gutter)
-            }
-            .background(Color.paper)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) { Button("OK") { dismiss() } }
-            }
-        }
-        .presentationDetents([.large])
-    }
-}

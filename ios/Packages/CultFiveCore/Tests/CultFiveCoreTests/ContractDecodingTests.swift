@@ -317,6 +317,12 @@ final class ContractDecodingTests: XCTestCase {
         XCTAssertEqual(AnimalAvatar(json), .curie)
         XCTAssertNil(AnimalAvatar(JSONValue.null))
         XCTAssertEqual(AnimalAvatar.fallback(for: "theo"), AnimalAvatar.fallback(for: "theo"))
+        XCTAssertTrue(AnimalAvatar.fallback(for: "theo").isFree, "jamais un avatar premium par défaut")
+        let look = try SupabaseAPI.decoder.decode(JSONValue.self, from: Data(#"{"animal": "tut", "ring": "prestige", "title": "legend"}"#.utf8))
+        XCTAssertEqual(AnimalAvatar(look), .tut)
+        XCTAssertEqual(AvatarRing(look), .prestige)
+        XCTAssertEqual(PlayerTitle(look), .legend)
+        XCTAssertNil(AvatarRing(json))
     }
 
     func testDuelsHistory() throws {
