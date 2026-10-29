@@ -221,42 +221,60 @@ struct PassPlusView: View {
 struct PassPlusCollage: View {
     private static let orbit = ["cadre_vitrail", "dos_domaines", "coffret", "finition_holo",
                                 "jeton", "couv_or", "titre_chasseur", "socle_neon"]
+    private static let height: CGFloat = 320
 
     var body: some View {
         GeometryReader { proxy in
-            let w = proxy.size.width, h = proxy.size.height
-            let center = CGPoint(x: w / 2, y: h / 2)
             ZStack {
-                Circle()
-                    .fill(RadialGradient(colors: [Color.sun.opacity(0.55), Color.sun.opacity(0.12), .clear],
-                                         center: .center, startRadius: 6, endRadius: h * 0.55))
-                    .frame(width: h * 1.1, height: h * 1.1)
-                    .position(center)
-                ForEach(Array(Self.orbit.enumerated()), id: \.offset) { index, icon in
-                    let angle = Double(index) / Double(Self.orbit.count) * 2 * .pi - .pi / 2
-                    AlbumImage(kind: .pass, name: icon)
-                        .frame(width: 66, height: 66)
-                        .floating(5, period: 1.8 + Double(index % 3) * 0.35)
-                        .position(x: center.x + cos(angle) * (w / 2 - 40), y: center.y + sin(angle) * (h / 2 - 36))
+                halo
+                ForEach(0..<Self.orbit.count, id: \.self) { index in
+                    orbitIcon(index, size: proxy.size)
                 }
-                AlbumImage(kind: .pass, name: "final_payant")
-                    .frame(width: h * 0.52, height: h * 0.52)
-                    .shadow(color: Color.sun.opacity(0.5), radius: 18)
-                    .floating(7, period: 2.6)
-                    .position(center)
-                HStack(spacing: 4) {
-                    Image("shop_noads").resizable().scaledToFit().frame(width: 26, height: 26)
-                    Text("ZÉRO PUB").font(.system(size: 12, weight: .black, design: .rounded)).tracking(0.5)
-                }
-                .foregroundStyle(Color.inkFixed)
-                .padding(.leading, 4).padding(.trailing, 10).padding(.vertical, 3)
-                .background(Color.sun, in: Capsule())
-                .shadow(color: .black.opacity(0.25), radius: 6, y: 3)
-                .position(x: center.x, y: center.y + h * 0.3)
+                centerpiece
+                noAdsBadge.offset(y: Self.height * 0.3)
             }
+            .frame(width: proxy.size.width, height: proxy.size.height)
         }
-        .frame(height: 320)
+        .frame(height: Self.height)
         .accessibilityElement()
         .accessibilityLabel("Les cadeaux du Pass+ et zéro pub toute la saison")
+    }
+
+    private var halo: some View {
+        Circle()
+            .fill(RadialGradient(colors: [Color.sun.opacity(0.55), Color.sun.opacity(0.12), .clear],
+                                 center: .center, startRadius: 6, endRadius: Self.height * 0.55))
+            .frame(width: Self.height * 1.1, height: Self.height * 1.1)
+    }
+
+    private func orbitIcon(_ index: Int, size: CGSize) -> some View {
+        let angle = Double(index) / Double(Self.orbit.count) * 2 * .pi - .pi / 2
+        let x = cos(angle) * (size.width / 2 - 40)
+        let y = sin(angle) * (size.height / 2 - 36)
+        let period = 1.8 + Double(index % 3) * 0.35
+        return AlbumImage(kind: .pass, name: Self.orbit[index])
+            .frame(width: 66, height: 66)
+            .floating(5, period: period)
+            .offset(x: x, y: y)
+    }
+
+    private var centerpiece: some View {
+        AlbumImage(kind: .pass, name: "final_payant")
+            .frame(width: Self.height * 0.52, height: Self.height * 0.52)
+            .shadow(color: Color.sun.opacity(0.5), radius: 18)
+            .floating(7, period: 2.6)
+    }
+
+    private var noAdsBadge: some View {
+        HStack(spacing: 4) {
+            Image("shop_noads").resizable().scaledToFit().frame(width: 26, height: 26)
+            Text("ZÉRO PUB").font(.system(size: 12, weight: .black, design: .rounded)).tracking(0.5)
+        }
+        .foregroundStyle(Color.inkFixed)
+        .padding(.leading, 4)
+        .padding(.trailing, 10)
+        .padding(.vertical, 3)
+        .background(Color.sun, in: Capsule())
+        .shadow(color: .black.opacity(0.25), radius: 6, y: 3)
     }
 }
