@@ -82,8 +82,13 @@ struct ShopView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
+                    if let until = app.boutique?.welcomeUntil, until > Date() {
+                        WelcomeOfferCard(until: until)
+                    }
                     NoAdsHero()
+                    PacksSection()
                     passCard
+                    ItemsGuide()
                     footer
                 }
                 .padding(.horizontal, Space.gutter)
@@ -107,6 +112,7 @@ struct ShopView: View {
         .sheet(isPresented: $showPassPlus) { PassPlusView() }
         .task {
             await shop.loadProducts()
+            await app.refreshBoutique()
             await store.refresh()
         }
     }
@@ -174,6 +180,11 @@ struct NoAdsHero: View {
     @Environment(AppModel.self) private var app
     private var shop: ShopStore { app.shop }
     private var owned: Bool { app.adStatus?.noAdsForever ?? false }
+    /// Heures sans pub en cours (packs, bienvenue) : « 5 h 12 min ».
+    private var hoursLeft: String? {
+        guard let until = app.adStatus?.noAdsUntil, until > Date() else { return nil }
+        return String(WelcomeOfferCard.remaining(until.timeIntervalSinceNow).dropFirst(7))
+    }
 
     var body: some View {
         VStack(spacing: Space.m) {
@@ -208,7 +219,7 @@ struct NoAdsHero: View {
                         }
                     }
                 }
-                Text("Paiement unique")
+                Text(hoursLeft.map { "Paiement unique · sans pub encore \($0)" } ?? "Paiement unique")
                     .font(.system(.caption, design: .rounded).weight(.heavy))
                     .foregroundStyle(.white.opacity(0.7))
             }

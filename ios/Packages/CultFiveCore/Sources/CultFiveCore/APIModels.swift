@@ -90,9 +90,12 @@ public struct DailyVerdict: Codable, Hashable, Sendable {
     public let explanation: String?
     public let takeaway: String?
     public let source: String?
+    /// Survie : le Bouclier de survie a pardonné cette erreur (serveur 0097).
+    public let lifelineUsed: Bool?
 
     enum CodingKeys: String, CodingKey {
         case position, duplicate, finished, expired, answer, explanation, takeaway, source
+        case lifelineUsed = "lifeline_used"
         case isCorrect = "is_correct"
         case countedMs = "counted_ms"
         case errorTransition = "error_transition"
@@ -516,10 +519,74 @@ public struct PlaySubmitResult: Codable, Hashable, Sendable {
     public let ratings: [RatingChange]?
     /// Carte commune gagnée en fin de partie classée (serveur 0045), une au plus.
     public let albumCard: AlbumPull?
+    /// Objets utilisés sur la partie et leur effet (serveur 0097).
+    public let boosts: GameBoosts?
 
     enum CodingKeys: String, CodingKey {
-        case recorded, correct, xp, seeds, corrected, results, achievements, balance, points, ratings
+        case recorded, correct, xp, seeds, corrected, results, achievements, balance, points, ratings, boosts
         case albumCard = "album_card"
+    }
+}
+
+/// Effet des objets d'une partie classée (D-119).
+public struct GameBoosts: Codable, Hashable, Sendable {
+    public let items: [String]
+    /// Pari ×3 : gagné (80 % de bonnes réponses ou plus) ; nil sans pari.
+    public let betWon: Bool?
+    /// Elo gagné (ou perdu) en plus grâce aux objets ; nil sur un renvoi.
+    public let eloExtra: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case items
+        case betWon = "bet_won"
+        case eloExtra = "elo_extra"
+    }
+
+    public init(items: [String], betWon: Bool? = nil, eloExtra: Int? = nil) {
+        self.items = items
+        self.betWon = betWon
+        self.eloExtra = eloExtra
+    }
+}
+
+/// Boutique en argent réel (D-118, D-119) : objets, sans pub, offre de bienvenue.
+public struct BoutiqueOverview: Codable, Hashable, Sendable {
+    /// Stock d'objets : energy, shield, bet, lifeline, hourglass.
+    public var items: [String: Int]
+    public var noAds: Bool
+    public var noAdsForever: Bool
+    public var noAdsUntil: Date?
+    /// Fin de l'offre de bienvenue (7 premiers jours, si elle n'est pas prise), sinon nil.
+    public var welcomeUntil: Date?
+
+    enum CodingKeys: String, CodingKey {
+        case items
+        case noAds = "no_ads"
+        case noAdsForever = "no_ads_forever"
+        case noAdsUntil = "no_ads_until"
+        case welcomeUntil = "welcome_until"
+    }
+
+    public init(items: [String: Int] = [:], noAds: Bool = false, noAdsForever: Bool = false, noAdsUntil: Date? = nil,
+                welcomeUntil: Date? = nil) {
+        self.items = items
+        self.noAds = noAds
+        self.noAdsForever = noAdsForever
+        self.noAdsUntil = noAdsUntil
+        self.welcomeUntil = welcomeUntil
+    }
+}
+
+/// Objets posés sur une partie (stock à jour ; secondes par question pour la Survie).
+public struct BoostUse: Codable, Hashable, Sendable {
+    public let boosts: [String]
+    public let stock: [String: Int]
+    public let seconds: Int?
+
+    public init(boosts: [String], stock: [String: Int], seconds: Int? = nil) {
+        self.boosts = boosts
+        self.stock = stock
+        self.seconds = seconds
     }
 }
 
@@ -1612,10 +1679,13 @@ public struct ChestContents: Codable, Hashable, Sendable {
     public let packTickets: Int?
     public let card: AlbumPull?
     public let prestigeToken: Bool?
+    /// Objet d'avant-partie trouvé dans le coffre (serveur 0097), rarement.
+    public let boost: String?
 
     public init(tier: ChestTier, seeds: Int, tickets: Tickets, joker: Bool, item: ChestItem?, balance: Int?,
                 finalTier: ChestTier? = nil, upgrades: Int? = nil, bonusItem: ChestItem? = nil,
-                packTickets: Int? = nil, card: AlbumPull? = nil, prestigeToken: Bool? = nil) {
+                packTickets: Int? = nil, card: AlbumPull? = nil, prestigeToken: Bool? = nil, boost: String? = nil) {
+        self.boost = boost
         self.packTickets = packTickets
         self.card = card
         self.prestigeToken = prestigeToken
@@ -1640,6 +1710,7 @@ public struct ChestContents: Codable, Hashable, Sendable {
         case packTickets = "pack_tickets"
         case card
         case prestigeToken = "prestige_token"
+        case boost
     }
 }
 

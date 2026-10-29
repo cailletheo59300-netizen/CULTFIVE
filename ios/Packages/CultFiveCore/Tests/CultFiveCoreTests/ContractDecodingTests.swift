@@ -125,6 +125,12 @@ final class ContractDecodingTests: XCTestCase {
         let noAds: AdStatus = try fixture("ad_status_no_ads")
         XCTAssertTrue(noAds.noAds && noAds.noAdsForever && !noAds.passPlus, "sans pub pour toujours, sans Pass+ (0096)")
         XCTAssertNotNil(noAds.noAdsUntil, "heures sans pub (0096)")
+        let boutique: BoutiqueOverview = try fixture("boutique_overview")
+        XCTAssertEqual(boutique.items["hourglass"], 9, "stock d'objets (0097)")
+        XCTAssertNotNil(boutique.welcomeUntil, "offre de bienvenue (0097)")
+        let boosts = try SupabaseAPI.decoder.decode(GameBoosts.self, from: Data(#"{"items":["bet"],"bet_won":true,"elo_extra":42}"#.utf8))
+        XCTAssertEqual(boosts.eloExtra, 42)
+        XCTAssertEqual(boosts.betWon, true)
 
         let album: AlbumOverview = try fixture("album_overview_coffrets")
         let coffret = try XCTUnwrap(album.coffrets.first)

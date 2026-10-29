@@ -26,6 +26,8 @@ final class SurvivalSessionModel {
     private(set) var deadline: Date?
     private(set) var isRetrying = false
     private(set) var finished = false
+    /// Le Bouclier de survie vient de pardonner une erreur (D-119).
+    private(set) var lifelineSaved = false
 
     private let service: GameService
     /// nil : tous domaines.
@@ -52,20 +54,35 @@ final class SurvivalSessionModel {
         seconds = overview.seconds
     }
 
-    func start() async {
+    /// Nouvelle partie, avec les objets choisis (Bouclier de survie, Sablier). Renvoie le stock à jour s'ils ont été posés.
+    @discardableResult
+    func start(items: [String] = []) async -> BoostUse? {
         stage = .loading
         score = 0
         position = 0
         finished = false
+        lifelineSaved = false
+        var used: BoostUse?
         do {
             let start = try await service.survivalStart(domain: domain)
             runId = start.runId
             record = start.record
             seconds = start.seconds
+            if !items.isEmpty {
+                // Objets refusés (plus de stock) : la partie se joue sans.
+                used = try? await service.survivalBoost(run: start.runId, items: items)
+                if let boosted = used?.seconds { seconds = boosted }
+            }
             await load()
         } catch {
             stage = .failed(error.userMessage ?? "Impossible de lancer la partie. Réessaie.")
         }
+        return used
+    }
+
+    /// Retour à l'écran d'intro (pour choisir ses objets avant de rejouer).
+    func backToIntro() {
+        stage = .intro
     }
 
     private func load() async {
@@ -121,6 +138,7 @@ final class SurvivalSessionModel {
             Feedback.answer(correct)
             if correct { score += 1 }
             finished = verdict.finished ?? !correct
+            lifelineSaved = verdict.lifelineUsed == true
             phase = .revealed(given: given, isCorrect: correct, reveal: reveal)
             pending = nil
         } catch let error as BackendError where Self.closedCodes.contains(error.code ?? "") {
@@ -178,6 +196,8 @@ struct SurvivalSessionView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.requestReview) private var requestReview
     @State private var model: SurvivalSessionModel?
+    /// Objets choisis avant la partie (D-119).
+    @State private var items: Set<GameItem> = []
 
     private static let flame = Color(hex: 0xFF6B2C)
 
@@ -230,6 +250,21 @@ struct SurvivalSessionView: View {
                     }
                 }
                 .id(question.id)
+                .overlay(alignment: .top) {
+                    if model.lifelineSaved, !model.phase.isAnswering {
+                        HStack(spacing: Space.s) {
+                            Image(GameItem.lifeline.image).resizable().scaledToFit().frame(width: 30, height: 30)
+                            Text("Bouclier de survie : tu continues !")
+                                .font(.system(.subheadline, design: .rounded).weight(.black))
+                                .foregroundStyle(Color.inkFixed)
+                        }
+                        .padding(.horizontal, 14).padding(.vertical, 8)
+                        .background(Color.sun, in: Capsule())
+                        .shadow(color: .black.opacity(0.15), radius: 8, y: 4)
+                        .padding(.top, 70)
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                    }
+                }
                 .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
                 .task(id: model.deadline) {
                     guard let deadline = model.deadline else { return }
@@ -285,8 +320,24 @@ struct SurvivalSessionView: View {
                     .foregroundStyle(Self.flame)
             }
             Spacer()
-            Button("C'est parti !") { Task { await model.start() } }
-                .buttonStyle(.sun)
+            if app.api != nil {
+                ItemsStrip(items: GameItem.survival, selection: $items, onColor: Color.ink)
+                    .padding(Space.m)
+                    .background(Self.flame.opacity(0.12), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+            }
+            Button(items.isEmpty ? "C'est parti !" : "C'est parti avec \(items.count) objet\(items.count > 1 ? "s" : "")") {
+                let chosen = items.map(\.rawValue)
+                items = []
+                Task {
+                    if let used = await model.start(items: chosen) {
+                        app.updateStock(used.stock)
+                        app.track("boost_use", ["items": used.boosts.joined(separator: ",")])
+                    } else if !chosen.isEmpty {
+                        await app.refreshBoutique()
+                    }
+                }
+            }
+            .buttonStyle(.sun)
         }
         .padding(Space.gutter)
     }
@@ -323,7 +374,7 @@ struct SurvivalSessionView: View {
                 }
             }
             Spacer()
-            Button("Rejouer") { leave { await model.start() } }
+            Button("Rejouer") { leave { model.backToIntro() } }
                 .buttonStyle(.sun)
             Button("Terminer") { leave { dismiss() } }
                 .buttonStyle(.textLink)

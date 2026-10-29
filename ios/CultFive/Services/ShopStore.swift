@@ -8,6 +8,12 @@ enum ShopProduct: String, CaseIterable {
     case passPlus = "app.brainlix.pass"
     /// Sans pub pour toujours : non consommable, 7,99 €.
     case noAds = "app.brainlix.noads"
+    /// Packs d'objets (consommables, D-119) : 1, 3 ou 8 de chaque objet et 1 h, 6 h ou 24 h sans pub.
+    case packEssai = "app.brainlix.pack.essai"
+    case packJoueur = "app.brainlix.pack.joueur"
+    case packBig = "app.brainlix.pack.big"
+    /// Offre de bienvenue (consommable, 7 premiers jours, une fois) : 7 jours sans pub et 2 de chaque objet.
+    case welcome = "app.brainlix.welcome"
 }
 
 /// Achats intégrés (StoreKit 2) : Pass+ et boutique.

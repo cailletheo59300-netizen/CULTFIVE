@@ -96,6 +96,10 @@ final class AppModel {
     var showPassPlus = false
     /// Boutique à montrer (accueil, profil, rappel après une pub).
     var showShop = false
+    /// Boutique en argent réel : objets, sans pub, offre de bienvenue (D-119).
+    var boutique: BoutiqueOverview?
+    /// Stock d'objets (energy, shield, bet, lifeline, hourglass).
+    var boostStock: [String: Int] { boutique?.items ?? [:] }
     /// Rappel « Marre des pubs ? » après une pub entre les parties (une fois par jour au plus) : en attente tant qu'une
     /// partie est encore à l'écran, montré dès le retour aux onglets.
     var pendingNoAdsPrompt = false
@@ -416,6 +420,17 @@ final class AppModel {
         showPassPlus = true
     }
 
+    func refreshBoutique() async {
+        guard api != nil, let fresh = try? await service.boutiqueOverview() else { return }
+        boutique = fresh
+    }
+
+    /// Stock renvoyé par le serveur après avoir posé des objets.
+    func updateStock(_ stock: [String: Int]) {
+        if boutique == nil { boutique = BoutiqueOverview() }
+        boutique?.items = stock
+    }
+
     func openShop(from origin: String) {
         track("shop_view", ["from": origin])
         showShop = true
@@ -450,6 +465,7 @@ final class AppModel {
     /// Après un achat ou une restauration : pubs et pass relus.
     func refreshPassPlus() async {
         await refreshAdStatus()
+        await refreshBoutique()
         await AlbumStore.shared.refresh()
     }
 

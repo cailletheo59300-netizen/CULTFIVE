@@ -58,7 +58,8 @@ struct PlaySessionView: View {
             .padding(Space.gutter)
         case .intro:
             PlayIntroView(config: config, domainName: config.domain.map { app.domainName($0) },
-                          count: model.questions.count, onGo: { model.play() }, onClose: { close() })
+                          count: model.questions.count, sessionId: model.isOffline ? nil : model.sessionId,
+                          onGo: { model.play() }, onClose: { close() })
                 .transition(.opacity)
         case .playing:
             if let question = model.current {
@@ -413,6 +414,7 @@ struct PlaySummaryView: View {
                         ForEach(summary.ratings, id: \.domainId) { r in
                             RatingChangeRow(change: r, domainName: app.domainName(r.domainId))
                         }
+                        if let boosts = summary.boosts { BoostsOutcome(boosts: boosts) }
                         if let r = summary.ratings.first(where: { !$0.placed }) {
                             let left = max(CoteCULT.placementAnswers - r.answered, 1)
                             Text("Encore \(left) question\(left > 1 ? "s" : "") classée\(left > 1 ? "s" : "") en \(app.domainName(r.domainId)) pour confirmer ton Elo.")
@@ -554,6 +556,8 @@ struct PlayIntroView: View {
     let config: PlayConfig
     let domainName: String?
     let count: Int
+    /// Partie du serveur (pas la partie de secours hors ligne) : les objets peuvent s'y poser.
+    var sessionId: UUID? = nil
     var onGo: () -> Void
     var onClose: () -> Void
 
@@ -562,6 +566,13 @@ struct PlayIntroView: View {
     @State private var appeared = false
     @State private var skill: SkillSummary?
     @State private var countdown: Int?
+    /// Objets choisis pour la partie (D-119).
+    @State private var items: Set<GameItem> = []
+    @State private var boosting = false
+    @State private var boostError: String?
+
+    /// Objets proposés : parties qui comptent pour l'Elo, en ligne.
+    private var offersItems: Bool { config.countsForElo && sessionId != nil && app.api != nil }
 
     private var color: Color { config.domain.map(DomainPalette.color) ?? .brand }
     private var onColor: Color { config.domain.map(DomainPalette.onColor) ?? .white }
@@ -591,11 +602,26 @@ struct PlayIntroView: View {
                 Spacer(minLength: Space.l)
                 facts
                     .padding(.bottom, Space.l)
+                if offersItems {
+                    ItemsStrip(items: GameItem.ranked, selection: $items, onColor: onColor)
+                        .padding(.bottom, Space.m)
+                        .opacity(appeared ? 1 : 0)
+                }
+                if let boostError {
+                    Text(boostError)
+                        .font(.system(.footnote, design: .rounded).weight(.bold))
+                        .foregroundStyle(onColor)
+                        .padding(.bottom, Space.s)
+                }
                 Button(action: go) {
-                    Text("Go").frame(maxWidth: .infinity)
+                    HStack(spacing: Space.s) {
+                        if boosting { ProgressView().tint(buttonText) }
+                        Text(items.isEmpty ? "Go" : "Go avec \(items.count) objet\(items.count > 1 ? "s" : "")")
+                    }
+                    .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(InkButtonStyle(fill: .white, text: buttonText, arrow: true))
-                .disabled(countdown != nil)
+                .disabled(countdown != nil || boosting)
             }
             .padding(Space.gutter)
             .opacity(appeared ? (countdown == nil ? 1 : 0.15) : 0)
@@ -735,7 +761,27 @@ struct PlayIntroView: View {
     // MARK: Lancement
 
     private func go() {
-        guard countdown == nil else { return }
+        guard countdown == nil, !boosting else { return }
+        guard !items.isEmpty, let sessionId else { return countdownThenGo() }
+        boosting = true
+        boostError = nil
+        Task {
+            do {
+                let used = try await app.service.playBoost(session: sessionId, items: items.map(\.rawValue))
+                app.updateStock(used.stock)
+                app.track("boost_use", ["items": used.boosts.joined(separator: ",")])
+                boosting = false
+                countdownThenGo()
+            } catch {
+                boosting = false
+                boostError = error.userMessage("Impossible d'activer tes objets. Réessaie, ou joue sans.")
+                await app.refreshBoutique()
+                items = items.filter { (app.boostStock[$0.rawValue] ?? 0) > 0 }
+            }
+        }
+    }
+
+    private func countdownThenGo() {
         guard !reduceMotion else { Haptics.soft(); onGo(); return }
         Task { @MainActor in
             for n in stride(from: 3, through: 1, by: -1) {

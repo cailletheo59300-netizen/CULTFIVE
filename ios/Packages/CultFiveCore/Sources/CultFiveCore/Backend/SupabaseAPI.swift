@@ -165,6 +165,9 @@ public enum BackendError: Error, Equatable, LocalizedError {
         case "revoked": return "Cet achat a été remboursé."
         case "coffret_opened": return "Ce coffret est déjà ouvert."
         case "coffret_not_found": return "Coffret introuvable."
+        case "no_item": return "Tu n'as plus cet objet."
+        case "bet_alone": return "Le Pari ×3 se joue seul."
+        case "already_started": return "La partie a déjà commencé : les objets se posent avant."
         default: return nil
         }
     }
@@ -200,7 +203,7 @@ public actor SupabaseAPI {
         "daily_review", "daily_status", "domain_stats", "duel_question", "duel_result", "duels_history", "duels_mine", "errors_overview",
         "friend_profile", "friends_overview", "handle_available", "league_day_result", "league_question", "league_quiz_question",
         "league_quiz_result", "league_standings", "leagues_mine", "onboarding_pack", "play_pack", "profile_me",
-        "progression_overview", "quests_overview", "referral_overview", "search_handles", "season_overview", "shop_overview",
+        "progression_overview", "quests_overview", "referral_overview", "search_handles", "season_overview", "shop_overview", "boutique_overview",
         "daily_leaderboard", "domain_leaderboard", "showcase_get", "skills_overview", "survival_overview", "survival_question", "survival_result", "trophies_overview",
         "weekly_recap", "arena_overview", "arena_leaderboard", "arena_question", "arena_result",
         // Réponses dédoublonnées par le serveur (identifiant de tentative, position déjà répondue).

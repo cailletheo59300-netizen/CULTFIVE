@@ -452,6 +452,56 @@ function shopGift(){const g=new THREE.Group();
   const knot=new THREE.Mesh(new THREE.SphereGeometry(.15,24,16),gold);knot.position.set(0,.68,0);knot.scale.set(1,.8,1);g.add(knot);
   g.rotation.set(.32,-.55,0);return g;}
 ICONS.shop_gift=[()=>framed(shopGift(),[0,.5,5.4,0,.1,0]),360];
+// Objets avant la partie (D-119) : ronds 3D bien lisibles.
+function itemLabel(text,color,w,h){const tex=canvasTex(512,256,(c,W,H)=>{c.clearRect(0,0,W,H);c.textAlign='center';c.textBaseline='middle';
+    let size=200;c.font=`900 ${size}px Nunito, Arial Black, sans-serif`;while(c.measureText(text).width>W*.9&&size>40){size-=6;c.font=`900 ${size}px Nunito, Arial Black, sans-serif`;}
+    c.fillStyle='rgba(0,0,0,.28)';c.fillText(text,W/2+5,H/2+12);c.fillStyle=color;c.fillText(text,W/2,H/2+6);});
+  const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({map:tex,transparent:true}));m.renderOrder=3;return m;}
+function boltShape(k){const p=new THREE.Shape();p.moveTo(.12*k,.62*k);p.lineTo(-.34*k,-.06*k);p.lineTo(-.02*k,-.06*k);p.lineTo(-.14*k,-.62*k);p.lineTo(.34*k,.1*k);p.lineTo(.02*k,.1*k);p.lineTo(.12*k,.62*k);return p;}
+function shieldShape(k){const p=new THREE.Shape();p.moveTo(0,.8*k);p.bezierCurveTo(.32*k,.72*k,.58*k,.66*k,.74*k,.62*k);p.bezierCurveTo(.76*k,.08*k,.52*k,-.52*k,0,-.86*k);p.bezierCurveTo(-.52*k,-.52*k,-.76*k,.08*k,-.74*k,.62*k);p.bezierCurveTo(-.58*k,.66*k,-.32*k,.72*k,0,.8*k);return p;}
+function heartShape(k){const p=new THREE.Shape();p.moveTo(0,-.42*k);p.bezierCurveTo(-.08*k,-.3*k,-.5*k,-.06*k,-.44*k,.2*k);p.bezierCurveTo(-.38*k,.46*k,-.08*k,.46*k,0,.22*k);p.bezierCurveTo(.08*k,.46*k,.38*k,.46*k,.44*k,.2*k);p.bezierCurveTo(.5*k,-.06*k,.08*k,-.3*k,0,-.42*k);return p;}
+function itemEnergy(){const g=new THREE.Group();
+  const prof=[];const R=.52,H=1.5;[[0,-H/2],[R*.86,-H/2],[R,-H/2+.1],[R,H/2-.16],[R*.8,H/2-.02],[R*.78,H/2],[0,H/2]].forEach(([x,y])=>prof.push(new THREE.Vector2(Math.max(x,.001),y)));
+  const can=new THREE.Mesh(new THREE.LatheGeometry(prof,48),new THREE.MeshStandardMaterial({color:0x6A2CFF,roughness:.22,metalness:.35}));g.add(can);
+  [H/2-.26,-H/2+.2].forEach(y=>{const b=new THREE.Mesh(new THREE.CylinderGeometry(R+.005,R+.005,.07,48,1,true),metal(0xC6FF3D,.25));b.position.y=y;g.add(b);});
+  const top=new THREE.Mesh(new THREE.CylinderGeometry(R*.78,R*.78,.04,40),metal(0xDCE3EC,.2));top.position.y=H/2;g.add(top);
+  const tab=new THREE.Mesh(rbox(.26,.14,.03,.06),metal(0xC0C8D4,.2));tab.position.set(0,H/2+.03,.12);tab.rotation.x=-Math.PI/2;g.add(tab);
+  const bolt=new THREE.Mesh(extrude(boltShape(.72),.08,.03),phys(0xC6FF3D,{emissive:0x9BE000,emissiveIntensity:.35,roughness:.25}));bolt.position.set(0,.2,R+.02);g.add(bolt);
+  const l=itemLabel('×2','#FFFFFF',1.0,.5);l.position.set(0,-.4,R+.06);g.add(l);
+  g.rotation.set(.12,-.25,-.1);return g;}
+function itemShield(){const g=new THREE.Group();
+  g.add(new THREE.Mesh(extrude(shieldShape(1.05),.2,.08),metal(0xD9E4F2,.15)));
+  const inner=new THREE.Mesh(extrude(shieldShape(.86),.16,.05),phys(0x1C7ED6,{roughness:.22}));inner.position.z=.08;g.add(inner);
+  const l=itemLabel('ELO','#FFFFFF',1.1,.55);l.position.set(0,.05,.24);g.add(l);
+  const band=new THREE.Mesh(rbox(1.0,.12,.06,.05),metal(0xFFC933,.15));band.position.set(0,-.36,.2);g.add(band);
+  g.rotation.set(.1,-.3,0);return g;}
+function itemBet(){const g=new THREE.Group();
+  const chip=new THREE.Mesh(new THREE.CylinderGeometry(.95,.95,.22,64),phys(0xE03131,{roughness:.3}));chip.rotation.x=Math.PI/2;g.add(chip);
+  for(let i=0;i<8;i++){const a=i/8*Math.PI*2;const m=new THREE.Mesh(rbox(.22,.3,.24,.05),phys(0xffffff,{roughness:.3}));m.position.set(Math.cos(a)*.84,Math.sin(a)*.84,0);m.rotation.z=a+Math.PI/2;g.add(m);}
+  const face=new THREE.Mesh(new THREE.CylinderGeometry(.66,.66,.24,64),metal(0xFFC933,.18));face.rotation.x=Math.PI/2;face.position.z=.01;g.add(face);
+  const l=itemLabel('×3','#7A1D1D',1.5,.75);l.position.set(0,.02,.14);g.add(l);
+  g.rotation.set(.35,-.35,0);return g;}
+function itemLifeline(){const g=new THREE.Group();
+  g.add(new THREE.Mesh(extrude(shieldShape(1.05),.2,.08),metal(0xFFC933,.16)));
+  const inner=new THREE.Mesh(extrude(shieldShape(.86),.16,.05),phys(0xFF6B2C,{roughness:.22}));inner.position.z=.08;g.add(inner);
+  const h=new THREE.Mesh(extrude(heartShape(1.15),.16,.06),phys(0xFFFFFF,{roughness:.2}));h.position.set(0,.02,.22);g.add(h);
+  g.rotation.set(.1,-.3,0);return g;}
+function itemHourglass(){const g=new THREE.Group();const wood=phys(0x8B5A2B,{roughness:.45});const gold=metal(0xFFC933,.16);
+  [.78,-.78].forEach(y=>{const d=new THREE.Mesh(new THREE.CylinderGeometry(.62,.62,.14,40),wood);d.position.y=y;g.add(d);
+    const r=new THREE.Mesh(new THREE.TorusGeometry(.62,.03,8,48),gold);r.rotation.x=Math.PI/2;r.position.y=y+(y>0?-.07:.07);g.add(r);});
+  [[.48,0],[-.48,0],[0,.48],[0,-.48]].forEach(([x,z])=>{const p=new THREE.Mesh(new THREE.CylinderGeometry(.05,.05,1.5,12),wood);p.position.set(x,0,z);g.add(p);});
+  const prof=[];for(let i=0;i<=24;i++){const t=i/24;const y=-.7+1.4*t;const r=.08+.34*Math.pow(Math.abs(y)/.7,1.2);prof.push(new THREE.Vector2(r,y));}
+  const glass=new THREE.Mesh(new THREE.LatheGeometry(prof,40),new THREE.MeshStandardMaterial({color:0xBFE9FF,roughness:.05,metalness:0,transparent:true,opacity:.35}));g.add(glass);
+  const sand=phys(0xFFC14D,{roughness:.6});
+  const s1=new THREE.Mesh(new THREE.ConeGeometry(.36,.36,32),sand);s1.position.y=-.52;g.add(s1);
+  const s2=new THREE.Mesh(new THREE.ConeGeometry(.24,.24,32),sand);s2.rotation.x=Math.PI;s2.position.y=.2;g.add(s2);
+  const stream=new THREE.Mesh(new THREE.CylinderGeometry(.02,.02,.5,8),sand);stream.position.y=-.1;g.add(stream);
+  g.rotation.set(.15,-.3,.12);return g;}
+ICONS['Items/item_energy']=[()=>framed(itemEnergy(),[0,.2,5,0,.1,0]),360];
+ICONS['Items/item_shield']=[()=>framed(itemShield(),[0,.1,4.6,0,0,0]),360];
+ICONS['Items/item_bet']=[()=>framed(itemBet(),[0,.1,4.6,0,0,0]),360];
+ICONS['Items/item_lifeline']=[()=>framed(itemLifeline(),[0,.1,4.6,0,0,0]),360];
+ICONS['Items/item_hourglass']=[()=>framed(itemHourglass(),[0,.2,5,0,0,0]),360];
 ICONS.shop_noads=[()=>framed(shopNoAds(),[0,.1,5.6,0,0,0]),600];
 ICONS.arena_swords=[()=>framed(arenaSwords(),[0,.1,5.4,0,0,0]),360];
 ICONS.arena_friends=[()=>framed(arenaFriends(),[0,.35,5.2,0,.15,0]),360];

@@ -31,6 +31,12 @@ public protocol GameService: Sendable {
     func correctionSubmit(session: UUID, answers: [(UUID, GivenAnswer?)]) async throws -> CorrectionResult
     /// Pubs récompensées : état du jour, vérification avant la pub, récompense après (vérifiée par le serveur).
     func adStatus() async throws -> AdStatus
+    /// Boutique en argent réel : objets, sans pub, offre de bienvenue (D-119).
+    func boutiqueOverview() async throws -> BoutiqueOverview
+    /// Objets posés sur une partie classée, avant la première réponse.
+    func playBoost(session: UUID, items: [String]) async throws -> BoostUse
+    /// Objets posés sur une Survie, avant la première question.
+    func survivalBoost(run: UUID, items: [String]) async throws -> BoostUse
     func adCan(_ kind: AdKind, ref: String?) async throws
     func adClaim(_ kind: AdKind, ref: String?, test: Bool) async throws -> AdReward
 
@@ -238,6 +244,16 @@ public struct LiveGameService: GameService {
     public func correctionStart(session: UUID, test: Bool) async throws -> CorrectionStart {
         try await api.rpc("play_correction_start", ["p_session": .string(session.uuidString), "p_via": .string("ad"),
                                                      "p_test": .bool(test)])
+    }
+
+    public func boutiqueOverview() async throws -> BoutiqueOverview { try await api.rpc("boutique_overview") }
+
+    public func playBoost(session: UUID, items: [String]) async throws -> BoostUse {
+        try await api.rpc("play_boost", ["p_session": .string(session.uuidString), "p_items": .array(items.map { .string($0) })])
+    }
+
+    public func survivalBoost(run: UUID, items: [String]) async throws -> BoostUse {
+        try await api.rpc("survival_boost", ["p_run": .string(run.uuidString), "p_items": .array(items.map { .string($0) })])
     }
 
     public func adStatus() async throws -> AdStatus {
@@ -774,6 +790,13 @@ public extension GameService {
     }
 
     func adStatus() async throws -> AdStatus { AdStatus() }
+    func boutiqueOverview() async throws -> BoutiqueOverview { BoutiqueOverview() }
+    func playBoost(session: UUID, items: [String]) async throws -> BoostUse {
+        throw BackendError.server(status: 400, code: "no_item", message: "")
+    }
+    func survivalBoost(run: UUID, items: [String]) async throws -> BoostUse {
+        throw BackendError.server(status: 400, code: "no_item", message: "")
+    }
 
     /// Par défaut (démo) : le duel de base.
     func duelCreate(friend: UUID?, settings: DuelSettings) async throws -> Duel { try await duelCreate(friend: friend) }

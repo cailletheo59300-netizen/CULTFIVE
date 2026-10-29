@@ -92,6 +92,8 @@ final class PlaySessionModel {
         var ratings: [PlaySubmitResult.RatingChange] = []
         /// Carte commune gagnée pour l'album (partie classée synchronisée).
         var albumCard: Pull?
+        /// Objets utilisés et leur effet (D-119).
+        var boosts: GameBoosts?
 
         /// Réponses de la partie par domaine (pour savoir si l'Elo vient d'être confirmé).
         var answeredByDomain: [String: Int] = [:]
@@ -139,7 +141,7 @@ final class PlaySessionModel {
     private let service: GameService
     private let queue: OfflineAttemptQueue
     private let cache: DiskCache
-    private var sessionId: UUID?
+    private(set) var sessionId: UUID?
     private var attempts: [PlayAttempt] = []
     private var stopwatch = Stopwatch()
     private var usedOfflinePack = false
@@ -373,6 +375,7 @@ final class PlaySessionModel {
             if let serverPoints = result.points { summary.points = serverPoints }
             summary.ratings = config.countsForElo ? (result.ratings ?? []) : []
             summary.albumCard = result.albumCard.flatMap(Pull.init)
+            summary.boosts = result.boosts
             summary.correctionAvailable = !summary.missed.isEmpty && !usedOfflinePack && config.mode != .errors
             seedsBalance = result.balance
         } catch {
