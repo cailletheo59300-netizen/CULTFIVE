@@ -42,8 +42,19 @@ begin
   perform tst.ok(a ->> 'animal' = 'tut' and a ->> 'ring' = 'prestige' and a ->> 'title' = 'legend', 'Prestige : avatar, contour, titre');
   perform public.avatar_set('hypatia');
   o := public.boutique_overview();
-  perform tst.ok(o -> 'looks' ? 'avatar.hypatia' and o -> 'looks' ? 'ring.welcome' and jsonb_array_length(o -> 'looks') = 12,
+  perform tst.ok(o -> 'looks' ? 'avatar.hypatia' and o -> 'looks' ? 'ring.welcome' and jsonb_array_length(o -> 'looks') = 16,
                  format('looks possédés (%s)', jsonb_array_length(o -> 'looks')));
   -- Un classement envoie le look avec l'avatar.
   perform tst.ok((select avatar ->> 'ring' from public.profiles where id = u) = 'prestige', 'look dans profiles.avatar');
+end $$;
+
+-- Pack Prestige seul : tout le look.
+do $$
+declare u uuid := tst.new_user(); o jsonb;
+begin
+  perform tst.login(u);
+  perform public.iap_record(u, 'tx-look-prestige-2', 'tx-look-prestige-2', 'app.brainlix.prestige', 'Production', public._now());
+  o := public.boutique_overview();
+  perform tst.ok(jsonb_array_length(o -> 'looks') = 14 and o -> 'looks' ? 'avatar.joan' and o -> 'looks' ? 'ring.rainbow'
+                 and o -> 'looks' ? 'title.genie' and o -> 'looks' ? 'title.legend', 'Prestige : tout le look et les exclusifs');
 end $$;

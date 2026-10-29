@@ -359,7 +359,7 @@ struct LookStudio: View {
                     AnimalBadge(animal: .athena, size: 70, decor: .ring(.prestige))
                 }
                 Text("Pack Prestige").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
-                Text("Exclusif : Toutânkhamon et Athéna, le contour Prestige animé et le titre « Légende ». Introuvables ailleurs.")
+                Text("Tout le look : les 4 avatars premium, les 3 contours et les 3 titres. En plus, des exclusifs introuvables ailleurs : Toutânkhamon, Athéna, le contour Prestige animé et le titre « Légende ».")
                     .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.85))
                     .fixedSize(horizontal: false, vertical: true)
                 PlayerTitleTag(title: .legend)

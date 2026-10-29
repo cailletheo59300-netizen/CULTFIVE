@@ -4,7 +4,8 @@
 -- personnages de départ restent gratuits pour tous.
 --   Avatars premium (0,99 € l'un, 2,49 € les 4) : Jeanne d'Arc, Victor Hugo, Galilée, Darwin.
 --   Contours (0,99 €) : néon, or, arc-en-ciel animé. Titres (0,99 €) : Érudit, Encyclopédie vivante, Génie.
---   Pack Prestige (4,99 €), contenus exclusifs : Toutânkhamon, Athéna, contour Prestige animé, titre « Légende ».
+--   Pack Prestige (4,99 €) : tout le look (les 4 avatars premium, les 3 contours, les 3 titres) et des exclusifs
+--   (Toutânkhamon, Athéna, contour Prestige animé, titre « Légende ») (propriétaire, 29/10).
 --   Offre de bienvenue : en plus, l'avatar Hypatie et le contour Bienvenue (exclusifs).
 -- Les décorations gagnées au classement (couronne du 1er, contours 2e, 3e, top 10) se dessinent dans l'app selon le
 -- rang : elles ne s'achètent jamais.
@@ -39,7 +40,10 @@ language sql immutable set search_path = public, pg_temp as $$
     when 'app.brainlix.title.erudit' then array['title.erudit']
     when 'app.brainlix.title.encyclo' then array['title.encyclo']
     when 'app.brainlix.title.genie' then array['title.genie']
-    when 'app.brainlix.prestige' then array['avatar.tut', 'avatar.athena', 'ring.prestige', 'title.legend']
+    when 'app.brainlix.prestige' then array['avatar.joan', 'avatar.hugo', 'avatar.galileo', 'avatar.darwin',
+                                            'ring.neon', 'ring.gold', 'ring.rainbow',
+                                            'title.erudit', 'title.encyclo', 'title.genie',
+                                            'avatar.tut', 'avatar.athena', 'ring.prestige', 'title.legend']
     when 'app.brainlix.bienvenue' then array['avatar.hypatia', 'ring.welcome']
     else '{}'::text[]
   end
