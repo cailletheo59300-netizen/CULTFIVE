@@ -135,8 +135,10 @@ struct PlayerTitleTag: View {
 
 extension PlayerTitle {
     /// Titre d'un avatar reçu du serveur, ou le mien.
+    @MainActor
     static func of(_ avatar: JSONValue?, me: Bool) -> PlayerTitle? {
-        PlayerTitle(avatar) ?? (me ? MyAvatar.shared.title : nil)
+        if let title = PlayerTitle(avatar) { return title }
+        return me ? MyAvatar.shared.title : nil
     }
 }
 
