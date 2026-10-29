@@ -69,8 +69,37 @@ struct FloatingArt: View {
     }
 }
 
-/// La Boutique, en plein écran.
+/// Rubriques de la boutique : un bouton qui y mène ouvre la boutique directement dessus (D-118).
+enum ShopFocus: String, CaseIterable, Identifiable {
+    case noAds, packs, look, pass, items
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .noAds: return "Sans pub"
+        case .packs: return "Packs"
+        case .look: return "Look"
+        case .pass: return "Pass+"
+        case .items: return "Objets"
+        }
+    }
+
+    var image: String {
+        switch self {
+        case .noAds: return "shop_noads"
+        case .packs: return "item_energy"
+        case .look: return "avatar_joan"
+        case .pass: return "shop_gift"
+        case .items: return "item_bet"
+        }
+    }
+}
+
+/// La Boutique, en plein écran : un grand en-tête, des raccourcis vers chaque rubrique, puis les rubriques.
 struct ShopView: View {
+    /// Rubrique à montrer en arrivant (« Obtenir » avant une partie → les packs).
+    var focus: ShopFocus? = nil
+
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @State private var store = AlbumStore.shared
@@ -79,77 +108,141 @@ struct ShopView: View {
     private var shop: ShopStore { app.shop }
 
     var body: some View {
-        NavigationStack {
+        ScrollViewReader { reader in
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
+                    header
+                    shortcuts(reader)
                     if let until = app.boutique?.welcomeUntil, until > Date() {
                         WelcomeOfferCard(until: until)
                     }
-                    NoAdsHero()
-                    LookShopCard()
-                    PacksSection()
-                    passCard
-                    ItemsGuide()
+                    NoAdsHero().id(ShopFocus.noAds)
+                    PacksSection().id(ShopFocus.packs)
+                    LookShopCard().id(ShopFocus.look)
+                    passCard.id(ShopFocus.pass)
+                    ItemsGuide().id(ShopFocus.items)
                     footer
                 }
                 .padding(.horizontal, Space.gutter)
-                .padding(.vertical, Space.m)
+                .padding(.bottom, Space.l)
                 .containerRelativeFrame(.horizontal)
             }
             .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .background(Color.paper.ignoresSafeArea())
-            .navigationTitle("Boutique")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button { dismiss() } label: {
-                        Image(systemName: "xmark").font(.system(size: 14, weight: .black)).foregroundStyle(Color.ink)
-                            .frame(width: 34, height: 34).background(Color.paperRaised, in: Circle())
-                    }
-                    .accessibilityLabel("Fermer")
+            .task {
+                if let focus {
+                    try? await Task.sleep(for: .milliseconds(350))
+                    withAnimation(Motion.standard) { reader.scrollTo(focus, anchor: .top) }
                 }
             }
         }
+        .overlay(alignment: .topTrailing) {
+            Button { dismiss() } label: {
+                Image(systemName: "xmark").font(.system(size: 14, weight: .black)).foregroundStyle(.white)
+                    .frame(width: 36, height: 36).background(.black.opacity(0.25), in: Circle())
+            }
+            .accessibilityLabel("Fermer")
+            .padding(.trailing, Space.gutter + 10)
+            .padding(.top, Space.s + 10)
+        }
         .sheet(isPresented: $showPassPlus) { PassPlusView() }
         .task {
-            await shop.loadProducts()
+            await shop.loadProducts(force: true)
             await app.refreshBoutique()
             await store.refresh()
+        }
+    }
+
+    // MARK: - En-tête
+
+    private var header: some View {
+        HStack(alignment: .center, spacing: Space.m) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("BOUTIQUE")
+                    .font(.system(size: 40, weight: .black, design: .rounded))
+                    .tracking(1)
+                    .foregroundStyle(.white)
+                    .lineLimit(1).minimumScaleFactor(0.7)
+                Text("Sans pub, objets, look")
+                    .font(.system(.headline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color.sun)
+                    .lineLimit(1).minimumScaleFactor(0.8)
+            }
+            Spacer(minLength: 0)
+            FloatingArt(name: "shop_gift", amplitude: 5).frame(width: 96, height: 96)
+        }
+        .padding(.horizontal, Space.l)
+        .padding(.top, 44)
+        .padding(.bottom, Space.l)
+        .frame(maxWidth: .infinity)
+        .background(
+            LinearGradient(colors: [Color(hex: 0xFF7AB6), Color(hex: 0x7B5CFF), Color(hex: 0x3A1FB8)],
+                           startPoint: .topLeading, endPoint: .bottomTrailing),
+            in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+        .shadow(color: Color(hex: 0x3A1FB8).opacity(0.3), radius: 14, y: 6)
+        .padding(.top, Space.s)
+    }
+
+    /// Raccourcis : une pastille par rubrique, qui fait défiler jusqu'à elle.
+    private func shortcuts(_ reader: ScrollViewProxy) -> some View {
+        HStack(spacing: 8) {
+            ForEach(ShopFocus.allCases) { section in
+                Button {
+                    Haptics.selection()
+                    withAnimation(Motion.standard) { reader.scrollTo(section, anchor: .top) }
+                } label: {
+                    VStack(spacing: 4) {
+                        Image(section.image).resizable().scaledToFit().frame(width: 36, height: 36)
+                        Text(section.title)
+                            .font(.system(size: 12, weight: .black, design: .rounded))
+                            .foregroundStyle(Color.ink)
+                            .lineLimit(1).minimumScaleFactor(0.7)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                    .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(Color.hairline, lineWidth: 1.5))
+                }
+                .buttonStyle(.row)
+            }
         }
     }
 
     // MARK: - Pass+
 
     private var passCard: some View {
-        Button {
-            Haptics.selection()
-            app.track("pass_view", ["from": "shop"])
-            showPassPlus = true
-        } label: {
-            HStack(spacing: Space.m) {
-                ZStack {
-                    Circle().fill(.white.opacity(0.12)).frame(width: 96, height: 96)
-                    AlbumImage(kind: .pass, name: "final_payant").frame(width: 84, height: 84)
+        VStack(alignment: .leading, spacing: Space.s) {
+            ShopSectionTitle(title: "Pass+ de la saison", image: "shop_gift")
+            Button {
+                Haptics.selection()
+                app.track("pass_view", ["from": "shop"])
+                showPassPlus = true
+            } label: {
+                HStack(spacing: Space.m) {
+                    AlbumImage(kind: .pass, name: "final_payant").frame(width: 92, height: 92)
+                        .floating(4, period: 2.4)
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(store.season.season?.name ?? "Pass+")
+                            .font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
+                            .lineLimit(1).minimumScaleFactor(0.8)
+                        Label("30 cadeaux pour ton album", systemImage: "gift.fill")
+                        Label("Zéro pub toute la saison", systemImage: "nosign")
+                        Text(store.passPlusActive ? "Actif ✓" : "Voir les cadeaux ›")
+                            .font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.sun)
+                    }
+                    .font(.system(.footnote, design: .rounded).weight(.heavy))
+                    .foregroundStyle(.white.opacity(0.9))
+                    .lineLimit(1).minimumScaleFactor(0.8)
+                    Spacer(minLength: 0)
                 }
-                VStack(alignment: .leading, spacing: 6) {
-                    TrackBadge(paid: true)
-                    Text(store.season.season.map { "Pass+ · \($0.name)" } ?? "Pass+")
-                        .font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
-                    Text("30 cadeaux pour ton album, et zéro pub toute la saison.")
-                        .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.85))
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(store.passPlusActive ? "Actif ✓" : "Voir les cadeaux ›")
-                        .font(.system(.footnote, design: .rounded).weight(.black)).foregroundStyle(Color.sun)
-                }
-                Spacer(minLength: 0)
+                .padding(Space.m)
+                .background(PassPlusFill(), in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: Radius.l, style: .continuous).strokeBorder(CardRarity.legend.border, lineWidth: 2))
+                .shadow(color: Color(hex: 0x2A1490).opacity(0.3), radius: 14, y: 6)
             }
-            .padding(Space.m)
-            .background(PassPlusFill(), in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: Radius.l, style: .continuous).strokeBorder(CardRarity.legend.border, lineWidth: 2))
-            .shadow(color: Color(hex: 0x2A1490).opacity(0.3), radius: 14, y: 6)
+            .buttonStyle(.row)
+            .accessibilityHint("Ouvre le Pass+")
         }
-        .buttonStyle(.row)
-        .accessibilityHint("Ouvre le Pass+")
     }
 
     // MARK: - Bas de page
@@ -173,6 +266,31 @@ struct ShopView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.top, Space.s)
+    }
+}
+
+/// Titre d'une rubrique de la boutique : une icône 3D et un titre en gras, sur une ligne.
+struct ShopSectionTitle: View {
+    let title: String
+    let image: String
+    var subtitle: String? = nil
+
+    var body: some View {
+        HStack(spacing: Space.s) {
+            Image(image).resizable().scaledToFit().frame(width: 34, height: 34)
+            VStack(alignment: .leading, spacing: 0) {
+                Text(title)
+                    .font(.system(.title2, design: .rounded).weight(.black))
+                    .foregroundStyle(Color.ink)
+                    .lineLimit(1).minimumScaleFactor(0.7)
+                if let subtitle {
+                    Text(subtitle)
+                        .font(.system(.footnote, design: .rounded).weight(.bold))
+                        .foregroundStyle(Color.inkSoft)
+                        .lineLimit(1).minimumScaleFactor(0.7)
+                }
+            }
+        }
     }
 }
 
@@ -245,7 +363,7 @@ struct NoAdsRow: View {
         if app.api != nil, !app.noAds {
             Button {
                 Haptics.selection()
-                app.openShop(from: "home")
+                app.openShop(from: "home", focus: .noAds)
             } label: {
                 HStack(spacing: Space.m) {
                     Image("shop_noads").resizable().scaledToFit().frame(width: 46, height: 46)
@@ -314,7 +432,7 @@ struct NoAdsPrompt: View {
                 .font(.cfCallout).foregroundStyle(Color.inkSoft).multilineTextAlignment(.center)
             BuyButton(title: "Voir l'offre") {
                 dismiss()
-                app.openShop(from: "after_ad")
+                app.openShop(from: "after_ad", focus: .noAds)
             }
             Button("Plus tard") { dismiss() }
                 .buttonStyle(.textLink)

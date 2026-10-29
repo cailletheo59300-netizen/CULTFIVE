@@ -46,7 +46,7 @@ struct MainTabView: View {
             }
         }
         .sheet(isPresented: $model.showPassPlus) { PassPlusView() }
-        .fullScreenCover(isPresented: $model.showShop) { ShopView() }
+        .fullScreenCover(isPresented: $model.showShop) { ShopView(focus: model.shopFocus) }
         .sheet(isPresented: $model.showNoAdsPrompt) { NoAdsPrompt() }
         // « Marre des pubs ? » attend que la partie soit refermée (rien de présenté au-dessus des onglets).
         .task(id: model.pendingNoAdsPrompt) {

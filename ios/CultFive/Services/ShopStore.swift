@@ -74,8 +74,9 @@ final class ShopStore {
         }
     }
 
-    func loadProducts() async {
-        guard products.count < ShopProduct.allCases.count else { return }
+    /// Produits et prix de l'App Store. `force` : relus (prix changé dans App Store Connect pendant que l'app tournait).
+    func loadProducts(force: Bool = false) async {
+        guard force || products.count < ShopProduct.allCases.count else { return }
         let found = (try? await Product.products(for: ShopProduct.allCases.map(\.rawValue))) ?? []
         for product in found {
             if let kind = ShopProduct(rawValue: product.id) { products[kind] = product }

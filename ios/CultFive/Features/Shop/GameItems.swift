@@ -113,7 +113,7 @@ struct ItemsStrip: View {
             }
         }
         .task { await app.refreshBoutique() }
-        .fullScreenCover(isPresented: $showShop, onDismiss: { Task { await app.refreshBoutique() } }) { ShopView() }
+        .fullScreenCover(isPresented: $showShop, onDismiss: { Task { await app.refreshBoutique() } }) { ShopView(focus: .packs) }
     }
 }
 

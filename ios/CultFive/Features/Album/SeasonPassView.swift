@@ -87,9 +87,15 @@ struct SeasonPassView: View {
                 .padding(.horizontal, Space.gutter)
                 .padding(.vertical, Space.m)
             }
+            // Des cadeaux attendent : le pass s'ouvre sur le premier à récupérer.
+            .task {
+                await store.refresh()
+                guard let tier = firstClaimable else { return }
+                try? await Task.sleep(for: .milliseconds(300))
+                withAnimation(Motion.standard) { reader.scrollTo(tier, anchor: .center) }
+            }
         }
         .refreshable { await store.refresh() }
-        .task { await store.refresh() }
         .sheet(item: $preview) { item in
             PassRewardPreview(item: item) { reward in
                 withAnimation(Motion.standard) { claimed = reward }
@@ -114,6 +120,13 @@ struct SeasonPassView: View {
                     .transition(.move(edge: .top).combined(with: .opacity))
             }
         }
+    }
+
+    /// Premier palier dont un cadeau (gratuit, ou Pass+ s'il est actif) attend d'être récupéré.
+    private var firstClaimable: Int? {
+        let free = store.season.rewards.filter { !$0.claimed && $0.tier <= store.tier }.map(\.tier)
+        let paid = store.passPlusActive ? (store.season.passPlus?.rewards.filter { !$0.claimed && $0.tier <= store.tier }.map(\.tier) ?? []) : []
+        return (free + paid).min()
     }
 
     // MARK: - En-tête

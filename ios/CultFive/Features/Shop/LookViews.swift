@@ -144,98 +144,162 @@ extension PlayerTitle {
 
 // MARK: - Mon look
 
-/// « Mon look » : un aperçu de ton avatar dans un classement, puis les personnages, contours et titres. Ce que tu
-/// possèdes se pose d'un appui ; le reste s'essaie dans l'aperçu et s'achète en dessous (D-120).
+/// « Mon look » : ton avatar en grand tel que les autres le verront, trois rubriques (Personnage, Contour, Titre),
+/// des cartes à toucher. Ce que tu possèdes se pose d'un appui ; le reste s'essaie, et une barre en bas propose de
+/// l'acheter (D-120).
 struct LookStudio: View {
-    enum Tab: String, CaseIterable { case avatars = "Personnages", rings = "Contours", titles = "Titres" }
+    enum Tab: String, CaseIterable { case avatars = "Personnage", rings = "Contour", titles = "Titre" }
+
+    var startTab: Tab = .avatars
 
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
     @State private var tab: Tab = .avatars
-    /// Essai en cours (pas encore posé) : on voit comment ça rend.
-    @State private var tryAnimal: AnimalAvatar?
-    @State private var tryRing: AvatarRing??
-    @State private var tryTitle: PlayerTitle??
+    /// Essai en cours (pas encore à toi) : on voit comment ça rend.
+    @State private var trial: Trial?
     @State private var busy = false
+
+    enum Trial: Equatable {
+        case animal(AnimalAvatar), ring(AvatarRing), title(PlayerTitle)
+    }
 
     private var shop: ShopStore { app.shop }
     private var owned: Set<String> { Set(app.boutique?.looks ?? []) }
     private var handle: String { app.profile?.handle ?? "Toi" }
 
-    private var shownAnimal: AnimalAvatar { tryAnimal ?? MyAvatar.shared.animal ?? .fallback(for: handle) }
-    private var shownRing: AvatarRing? { tryRing ?? MyAvatar.shared.ring }
-    private var shownTitle: PlayerTitle? { tryTitle ?? MyAvatar.shared.title }
+    private var shownAnimal: AnimalAvatar {
+        if case .animal(let a) = trial { return a }
+        return MyAvatar.shared.animal ?? .fallback(for: handle)
+    }
+    private var shownRing: AvatarRing? {
+        if case .ring(let r) = trial { return r }
+        return MyAvatar.shared.ring
+    }
+    private var shownTitle: PlayerTitle? {
+        if case .title(let t) = trial { return t }
+        return MyAvatar.shared.title
+    }
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: Space.l) {
-                    preview
-                    Picker("Rubrique", selection: $tab) {
-                        ForEach(Tab.allCases, id: \.self) { Text($0.rawValue).tag($0) }
-                    }
-                    .pickerStyle(.segmented)
-                    switch tab {
-                    case .avatars: avatars
-                    case .rings: rings
-                    case .titles: titles
-                    }
-                    prestigeCard
-                    if let error = shop.errorMessage {
-                        Text(error).font(.cfFootnote).foregroundStyle(Color.wrong)
-                    }
+        ScrollView {
+            VStack(alignment: .leading, spacing: Space.l) {
+                preview
+                tabs
+                switch tab {
+                case .avatars: avatars
+                case .rings: rings
+                case .titles: titles
                 }
-                .padding(Space.gutter)
-                .containerRelativeFrame(.horizontal)
+                prestigeCard
+                if let error = shop.errorMessage {
+                    Text(error).font(.cfFootnote).foregroundStyle(Color.wrong)
+                }
             }
-            .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
-            .background(Color.paper)
-            .navigationTitle("Mon look")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("OK") { dismiss() } } }
+            .padding(Space.gutter)
+            .padding(.bottom, trial == nil ? 0 : 90)
+            .containerRelativeFrame(.horizontal)
         }
+        .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
+        .background(Color.paper.ignoresSafeArea())
+        .overlay(alignment: .bottom) { trialBar }
+        .overlay(alignment: .topTrailing) {
+            Button { dismiss() } label: {
+                Image(systemName: "xmark").font(.system(size: 14, weight: .black)).foregroundStyle(.white)
+                    .frame(width: 34, height: 34).background(.black.opacity(0.25), in: Circle())
+            }
+            .accessibilityLabel("Fermer")
+            .padding(Space.gutter + 8)
+        }
+        .presentationDetents([.large])
+        .onAppear { tab = startTab }
         .task {
-            await shop.loadProducts()
+            await shop.loadProducts(force: true)
             await app.refreshBoutique()
         }
     }
 
     // MARK: Aperçu
 
-    /// Ton avatar tel que les autres le verront : en tête d'un classement et dans une ligne ordinaire.
+    /// Ton avatar en grand, puis en tête d'un classement et dans une ligne ordinaire.
     private var preview: some View {
         VStack(spacing: Space.m) {
-            HStack(spacing: Space.l) {
-                VStack(spacing: 6) {
-                    AnimalBadge(animal: shownAnimal, size: 92, decor: shownRing.map { .ring($0) } ?? .none)
-                    Text(handle).font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
-                    if let title = shownTitle { PlayerTitleTag(title: title) }
-                }
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Au classement").font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(.white.opacity(0.7))
-                    previewRow(rank: 1)
-                    previewRow(rank: 14)
-                }
+            Text("MON LOOK")
+                .font(.system(.title, design: .rounded).weight(.black)).tracking(1)
+                .foregroundStyle(.white)
+            AnimalBadge(animal: shownAnimal, size: 120, decor: shownRing.map { .ring($0) } ?? .none)
+                .animation(Motion.bounce, value: shownAnimal)
+            VStack(spacing: 6) {
+                Text(handle).font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white).lineLimit(1)
+                if let title = shownTitle { PlayerTitleTag(title: title) }
             }
-            if tryAnimal != nil || tryRing != nil || tryTitle != nil {
-                Text("Essai : touche « Mettre » ou achète-le pour le garder.")
-                    .font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(Color.sun)
+            HStack(spacing: Space.s) {
+                previewRow(rank: 1)
+                previewRow(rank: 14)
             }
+            Text("Choisis ton personnage, ton contour et ton titre")
+                .font(.system(.footnote, design: .rounded).weight(.heavy))
+                .foregroundStyle(.white.opacity(0.8))
+                .lineLimit(1).minimumScaleFactor(0.7)
         }
         .padding(Space.m)
+        .padding(.top, Space.s)
         .frame(maxWidth: .infinity)
         .background(Color.popGradient, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
     }
 
     private func previewRow(rank: Int) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 6) {
             Text("\(rank)").font(.system(.caption, design: .rounded).weight(.black)).monospacedDigit()
-                .foregroundStyle(.white.opacity(0.8)).frame(width: 20)
-            AnimalBadge(animal: shownAnimal, size: 34, decor: rank <= 10 ? .rank(rank) : (shownRing.map { .ring($0) } ?? .none))
-            VStack(alignment: .leading, spacing: 2) {
-                Text(handle).font(.system(.caption, design: .rounded).weight(.heavy)).foregroundStyle(.white).lineLimit(1)
+                .foregroundStyle(.white.opacity(0.8))
+            AnimalBadge(animal: shownAnimal, size: 30, decor: rank <= 10 ? .rank(rank) : (shownRing.map { .ring($0) } ?? .none))
+            VStack(alignment: .leading, spacing: 1) {
+                Text(handle).font(.system(size: 11, weight: .heavy, design: .rounded)).foregroundStyle(.white).lineLimit(1)
                 if let title = shownTitle { PlayerTitleTag(title: title, compact: true) }
             }
+            Spacer(minLength: 0)
+        }
+        .padding(8)
+        .frame(maxWidth: .infinity)
+        .background(.white.opacity(0.12), in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+    }
+
+    // MARK: Rubriques
+
+    /// Trois grandes rubriques illustrées.
+    private var tabs: some View {
+        HStack(spacing: 10) {
+            ForEach(Tab.allCases, id: \.self) { item in
+                let on = tab == item
+                Button {
+                    Haptics.selection()
+                    withAnimation(Motion.standard) { tab = item }
+                } label: {
+                    VStack(spacing: 6) {
+                        tabArt(item).frame(height: 50)
+                        Text(item.rawValue)
+                            .font(.system(.subheadline, design: .rounded).weight(.black))
+                            .foregroundStyle(on ? .white : Color.ink)
+                            .lineLimit(1).minimumScaleFactor(0.8)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+                    .background(on ? AnyShapeStyle(Color.brand) : AnyShapeStyle(Color.paperRaised),
+                                in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous)
+                        .strokeBorder(on ? Color.clear : Color.hairline, lineWidth: 1.5))
+                    .scaleEffect(on ? 1.03 : 1)
+                }
+                .buttonStyle(.row)
+                .accessibilityAddTraits(on ? .isSelected : [])
+            }
+        }
+    }
+
+    @ViewBuilder private func tabArt(_ item: Tab) -> some View {
+        switch item {
+        case .avatars: AnimalBadge(animal: .galileo, size: 46)
+        case .rings: AnimalBadge(animal: shownAnimal, size: 46, decor: .ring(.rainbow))
+        case .titles: PlayerTitleTag(title: .genie).padding(.top, 12)
         }
     }
 
@@ -243,54 +307,86 @@ struct LookStudio: View {
 
     private var avatars: some View {
         VStack(alignment: .leading, spacing: Space.m) {
-            grid(AnimalAvatar.free, owned: { _ in true })
+            sectionTitle("Gratuits")
+            avatarGrid(AnimalAvatar.free)
             HStack {
-                Text("Premium").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                sectionTitle("Premium")
                 Spacer()
                 if !AnimalAvatar.premium.allSatisfy({ owned.contains("avatar.\($0.rawValue)") }) {
-                    buyChip("Les 4 · \(shop.price(.avatars) ?? "…")", product: .avatars)
+                    HStack(spacing: 6) {
+                        Text("Les 4").font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                        PricePill(product: .avatars) { buy(.avatars) }
+                    }
                 }
             }
-            grid(AnimalAvatar.premium, owned: { owned.contains("avatar.\($0.rawValue)") })
+            avatarGrid(AnimalAvatar.premium)
             let exclusives = AnimalAvatar.exclusive.filter { owned.contains("avatar.\($0.rawValue)") }
             if !exclusives.isEmpty {
-                Text("Exclusifs").font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
-                grid(exclusives, owned: { _ in true })
+                sectionTitle("Exclusifs")
+                avatarGrid(exclusives)
             }
         }
     }
 
-    private func grid(_ list: [AnimalAvatar], owned: @escaping (AnimalAvatar) -> Bool) -> some View {
-        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 4), spacing: 14) {
+    private func avatarGrid(_ list: [AnimalAvatar]) -> some View {
+        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 10) {
             ForEach(list, id: \.self) { animal in
-                let has = owned(animal)
-                let on = MyAvatar.shared.animal == animal
-                Button {
-                    Haptics.selection()
-                    if has {
-                        tryAnimal = nil
-                        Task { await app.setAvatar(animal) }
-                    } else {
-                        withAnimation(Motion.bounce) { tryAnimal = animal }
-                    }
-                } label: {
-                    VStack(spacing: 4) {
-                        AnimalBadge(animal: animal, size: 64, ring: on ? Color.brand : (tryAnimal == animal ? Color.sun : nil))
-                            .overlay(alignment: .topTrailing) {
-                                if !has { Image(systemName: "lock.fill").font(.system(size: 10, weight: .black)).foregroundStyle(Color.inkFixed)
-                                    .padding(4).background(Color.sun, in: Circle()) }
-                            }
-                        Text(animal.name).font(.system(size: 11, weight: on ? .black : .bold, design: .rounded))
-                            .foregroundStyle(on ? Color.brand : Color.ink).lineLimit(2).multilineTextAlignment(.center).minimumScaleFactor(0.8)
-                        if !has, let product = ShopProduct.avatar(animal) {
-                            buyChip(shop.price(product) ?? "…", product: product, small: true)
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.row)
-                .accessibilityLabel(animal.name + (has ? "" : ", à acheter"))
+                avatarCard(animal)
             }
+        }
+    }
+
+    private func avatarCard(_ animal: AnimalAvatar) -> some View {
+        let has = animal.isFree || owned.contains("avatar.\(animal.rawValue)")
+        let on = MyAvatar.shared.animal == animal
+        let trying = trial == .animal(animal)
+        return Button {
+            Haptics.selection()
+            if has {
+                trial = nil
+                Task { await app.setAvatar(animal) }
+            } else {
+                withAnimation(Motion.bounce) { trial = .animal(animal) }
+            }
+        } label: {
+            VStack(spacing: 6) {
+                AnimalBadge(animal: animal, size: 76)
+                Text(animal.name)
+                    .font(.system(size: 12, weight: .black, design: .rounded))
+                    .foregroundStyle(Color.ink)
+                    .lineLimit(1).minimumScaleFactor(0.6)
+                status(has: has, on: on, product: ShopProduct.avatar(animal))
+            }
+            .padding(.vertical, 10).padding(.horizontal, 6)
+            .frame(maxWidth: .infinity)
+            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous)
+                .strokeBorder(on ? Color.brand : trying ? Color.sun : Color.hairline, lineWidth: on || trying ? 3 : 1.5))
+        }
+        .buttonStyle(.row)
+        .accessibilityLabel(animal.name + (has ? "" : ", à acheter"))
+    }
+
+    /// Sous une carte : « Porté », « Mettre », ou le prix.
+    @ViewBuilder private func status(has: Bool, on: Bool, product: ShopProduct?) -> some View {
+        if on {
+            Label("Porté", systemImage: "checkmark.circle.fill")
+                .font(.system(size: 12, weight: .black, design: .rounded)).foregroundStyle(Color.correct)
+                .lineLimit(1)
+        } else if has {
+            Text("Mettre")
+                .font(.system(size: 12, weight: .black, design: .rounded)).foregroundStyle(Color.brand)
+                .lineLimit(1)
+        } else {
+            HStack(spacing: 3) {
+                Image(systemName: "lock.fill").font(.system(size: 9, weight: .black))
+                Text(product.flatMap { shop.price($0) } ?? "Essayer")
+                    .font(.system(size: 12, weight: .black, design: .rounded)).monospacedDigit()
+                    .lineLimit(1)
+            }
+            .foregroundStyle(Color.inkFixed)
+            .padding(.horizontal, 8).padding(.vertical, 3)
+            .background(Color.sun, in: Capsule())
         }
     }
 
@@ -298,112 +394,220 @@ struct LookStudio: View {
 
     private var rings: some View {
         let list = AvatarRing.forSale + AvatarRing.allCases.filter { !AvatarRing.forSale.contains($0) && owned.contains("ring.\($0.rawValue)") }
-        return VStack(spacing: 10) {
-            lookRow(name: "Aucun", has: true, on: MyAvatar.shared.ring == nil, art: AnyView(AnimalBadge(animal: shownAnimal, size: 48)),
-                    product: nil, onTry: { tryRing = .some(nil) }, onWear: { wear(kind: "ring", value: nil) })
-            ForEach(list, id: \.self) { ring in
-                lookRow(name: "Contour \(ring.name)", has: owned.contains("ring.\(ring.rawValue)"), on: MyAvatar.shared.ring == ring,
-                        art: AnyView(AnimalBadge(animal: shownAnimal, size: 48, decor: .ring(ring))),
-                        product: ShopProduct.ring(ring), onTry: { tryRing = .some(ring) },
-                        onWear: { wear(kind: "ring", value: ring.rawValue) })
+        return VStack(alignment: .leading, spacing: Space.m) {
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
+                lookCard(name: "Aucun", has: true, on: MyAvatar.shared.ring == nil, trying: false, product: nil,
+                         art: AnyView(AnimalBadge(animal: shownAnimal, size: 64))) { wear(kind: "ring", value: nil) }
+                ForEach(list, id: \.self) { ring in
+                    lookCard(name: ring.name, has: owned.contains("ring.\(ring.rawValue)"), on: MyAvatar.shared.ring == ring,
+                             trying: trial == .ring(ring), product: ShopProduct.ring(ring),
+                             art: AnyView(AnimalBadge(animal: shownAnimal, size: 64, decor: .ring(ring)))) {
+                        if owned.contains("ring.\(ring.rawValue)") { wear(kind: "ring", value: ring.rawValue) }
+                        else { withAnimation(Motion.bounce) { trial = .ring(ring) } }
+                    }
+                }
             }
-            Text("Au classement, le 1er, le 2e, le 3e et le top 10 gagnent leur propre décoration : couronne, argent, bronze, flamme.")
-                .font(.cfFootnote).foregroundStyle(Color.inkSoft).fixedSize(horizontal: false, vertical: true)
+            earnedRanks
+        }
+    }
+
+    /// Les décorations qui se gagnent au classement (jamais à vendre).
+    private var earnedRanks: some View {
+        VStack(alignment: .leading, spacing: Space.s) {
+            sectionTitle("À gagner au classement")
+            HStack(spacing: 0) {
+                ForEach([1, 2, 3, 7], id: \.self) { rank in
+                    VStack(spacing: 6) {
+                        AnimalBadge(animal: shownAnimal, size: 54, decor: .rank(rank))
+                            .padding(.top, rank == 1 ? 18 : 0)
+                        Text(rank == 7 ? "Top 10" : "\(rank)\(rank == 1 ? "er" : "e")")
+                            .font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(Color.ink)
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+            }
+            .padding(.vertical, Space.s)
+            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
         }
     }
 
     private var titles: some View {
         let list = PlayerTitle.forSale + PlayerTitle.allCases.filter { !PlayerTitle.forSale.contains($0) && owned.contains("title.\($0.rawValue)") }
-        return VStack(spacing: 10) {
-            lookRow(name: "Aucun", has: true, on: MyAvatar.shared.title == nil, art: AnyView(Image(systemName: "textformat").font(.title2).foregroundStyle(Color.inkSoft)),
-                    product: nil, onTry: { tryTitle = .some(nil) }, onWear: { wear(kind: "title", value: nil) })
+        return LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
+            lookCard(name: "Aucun", has: true, on: MyAvatar.shared.title == nil, trying: false, product: nil,
+                     art: AnyView(Text(handle).font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.ink))) {
+                wear(kind: "title", value: nil)
+            }
             ForEach(list, id: \.self) { title in
-                lookRow(name: title.text, has: owned.contains("title.\(title.rawValue)"), on: MyAvatar.shared.title == title,
-                        art: AnyView(PlayerTitleTag(title: title)), product: ShopProduct.title(title),
-                        onTry: { tryTitle = .some(title) }, onWear: { wear(kind: "title", value: title.rawValue) })
+                lookCard(name: title.text, has: owned.contains("title.\(title.rawValue)"), on: MyAvatar.shared.title == title,
+                         trying: trial == .title(title), product: ShopProduct.title(title),
+                         art: AnyView(VStack(spacing: 4) {
+                             Text(handle).font(.system(.subheadline, design: .rounded).weight(.black)).foregroundStyle(Color.ink).lineLimit(1)
+                             PlayerTitleTag(title: title)
+                         })) {
+                    if owned.contains("title.\(title.rawValue)") { wear(kind: "title", value: title.rawValue) }
+                    else { withAnimation(Motion.bounce) { trial = .title(title) } }
+                }
             }
         }
     }
 
-    private func lookRow(name: String, has: Bool, on: Bool, art: AnyView, product: ShopProduct?,
-                         onTry: @escaping () -> Void, onWear: @escaping () -> Void) -> some View {
-        HStack(spacing: Space.m) {
-            art.frame(width: 110, height: 52)
-            Text(name).font(.system(.subheadline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
-            Spacer(minLength: 4)
-            if on {
-                Label("Porté", systemImage: "checkmark").font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(Color.correct)
-            } else if has {
-                Button("Mettre") { Haptics.selection(); onWear() }
-                    .font(.system(.caption, design: .rounded).weight(.black))
-                    .buttonStyle(.borderedProminent).tint(Color.brand)
-                    .disabled(busy)
-            } else if let product {
-                Button("Essayer") { Haptics.selection(); withAnimation(Motion.bounce) { onTry() } }
-                    .font(.system(.caption, design: .rounded).weight(.black))
-                    .buttonStyle(.bordered).tint(Color.brand)
-                buyChip(shop.price(product) ?? "…", product: product)
+    private func lookCard(name: String, has: Bool, on: Bool, trying: Bool, product: ShopProduct?, art: AnyView,
+                          action: @escaping () -> Void) -> some View {
+        Button {
+            Haptics.selection()
+            action()
+        } label: {
+            VStack(spacing: 8) {
+                art.frame(height: 74)
+                Text(name)
+                    .font(.system(.subheadline, design: .rounded).weight(.black))
+                    .foregroundStyle(Color.ink)
+                    .lineLimit(1).minimumScaleFactor(0.6)
+                status(has: has, on: on, product: product)
             }
+            .padding(10)
+            .frame(maxWidth: .infinity)
+            .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous)
+                .strokeBorder(on ? Color.brand : trying ? Color.sun : Color.hairline, lineWidth: on || trying ? 3 : 1.5))
         }
-        .padding(10)
-        .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+        .buttonStyle(.row)
+        .disabled(busy)
+    }
+
+    private func sectionTitle(_ text: String) -> some View {
+        Text(text).font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(Color.ink).lineLimit(1)
+    }
+
+    // MARK: Barre d'essai
+
+    /// En bas pendant un essai : ce que tu essaies, et « Acheter ».
+    @ViewBuilder private var trialBar: some View {
+        if let trial, let product = product(for: trial) {
+            HStack(spacing: Space.m) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Tu essaies").font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(.white.opacity(0.7))
+                    Text(name(of: trial)).font(.system(.headline, design: .rounded).weight(.black)).foregroundStyle(.white)
+                        .lineLimit(1).minimumScaleFactor(0.7)
+                }
+                Spacer(minLength: 4)
+                Button("Annuler") { withAnimation(Motion.standard) { self.trial = nil } }
+                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(.white.opacity(0.85))
+                PricePill(product: product, big: true) { buy(product) }
+            }
+            .padding(.horizontal, Space.m).padding(.vertical, 12)
+            .background(Color.ink, in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+            .shadow(color: .black.opacity(0.25), radius: 14, y: 6)
+            .padding(.horizontal, Space.gutter)
+            .padding(.bottom, Space.s)
+            .transition(.move(edge: .bottom).combined(with: .opacity))
+        }
+    }
+
+    private func product(for trial: Trial) -> ShopProduct? {
+        switch trial {
+        case .animal(let a): return ShopProduct.avatar(a)
+        case .ring(let r): return ShopProduct.ring(r)
+        case .title(let t): return ShopProduct.title(t)
+        }
+    }
+
+    private func name(of trial: Trial) -> String {
+        switch trial {
+        case .animal(let a): return a.name
+        case .ring(let r): return "Contour \(r.name)"
+        case .title(let t): return "Titre « \(t.text) »"
+        }
     }
 
     // MARK: Prestige
 
+    /// Le Pack Prestige montré en images : tout ce qu'il contient.
     @ViewBuilder private var prestigeCard: some View {
         if !owned.contains("ring.prestige") {
             VStack(alignment: .leading, spacing: Space.m) {
-                HStack(spacing: -14) {
-                    AnimalBadge(animal: .tut, size: 70, decor: .ring(.prestige))
-                    AnimalBadge(animal: .athena, size: 70, decor: .ring(.prestige))
+                HStack {
+                    Text("PACK PRESTIGE")
+                        .font(.system(.title2, design: .rounded).weight(.black)).tracking(0.5)
+                        .foregroundStyle(LinearGradient(colors: [Color(hex: 0xFFF3B0), Color.sun], startPoint: .top, endPoint: .bottom))
+                        .lineLimit(1).minimumScaleFactor(0.7)
+                    Spacer()
+                    Text("TOUT INCLUS")
+                        .font(.system(size: 10, weight: .black, design: .rounded)).tracking(0.5)
+                        .foregroundStyle(Color.inkFixed)
+                        .padding(.horizontal, 8).padding(.vertical, 3)
+                        .background(Color.sun, in: Capsule())
                 }
-                Text("Pack Prestige").font(.system(.title3, design: .rounded).weight(.black)).foregroundStyle(.white)
-                Text("Tout le look : les 4 avatars premium, les 3 contours et les 3 titres. En plus, des exclusifs introuvables ailleurs : Toutânkhamon, Athéna, le contour Prestige animé et le titre « Légende ».")
-                    .font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.85))
-                    .fixedSize(horizontal: false, vertical: true)
-                PlayerTitleTag(title: .legend)
-                BuyButton(title: "Le Pack Prestige", price: shop.price(.prestige), busy: shop.purchasing == .prestige, enabled: !shop.busy) {
+                prestigeRow("6 personnages") {
+                    ForEach(AnimalAvatar.premium + [.tut, .athena], id: \.self) { animal in
+                        AnimalBadge(animal: animal, size: 44, decor: animal == .tut || animal == .athena ? .ring(.prestige) : .none)
+                    }
+                }
+                prestigeRow("4 contours") {
+                    ForEach(AvatarRing.forSale + [.prestige], id: \.self) { ring in
+                        AnimalBadge(animal: shownAnimal, size: 44, decor: .ring(ring))
+                    }
+                }
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("4 titres").font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(.white.opacity(0.75))
+                    FlowLayout(spacing: 6) {
+                        ForEach(PlayerTitle.forSale + [.legend], id: \.self) { PlayerTitleTag(title: $0) }
+                    }
+                }
+                BuyButton(title: "Tout débloquer", price: shop.price(.prestige), busy: shop.purchasing == .prestige, enabled: !shop.busy) {
                     buy(.prestige)
                 }
+                Text("Toutânkhamon, Athéna, le contour Prestige et le titre « Légende » sont introuvables ailleurs.")
+                    .font(.system(.caption, design: .rounded).weight(.bold)).foregroundStyle(.white.opacity(0.7))
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(Space.l)
             .background(PassPlusFill(), in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: Radius.l, style: .continuous).strokeBorder(Color(hex: 0xFFC933), lineWidth: 2))
+            .shadow(color: Color(hex: 0x2A1490).opacity(0.35), radius: 16, y: 8)
+        }
+    }
+
+    private func prestigeRow<Content: View>(_ label: String, @ViewBuilder content: () -> Content) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(label).font(.system(.caption, design: .rounded).weight(.black)).foregroundStyle(.white.opacity(0.75))
+            HStack(spacing: 6) { content() }
+                .padding(.top, 2)
         }
     }
 
     // MARK: Actions
-
-    private func buyChip(_ text: String, product: ShopProduct, small: Bool = false) -> some View {
-        Button { buy(product) } label: {
-            Group {
-                if shop.purchasing == product { ProgressView().controlSize(.mini).tint(Color.inkFixed) } else { Text(text) }
-            }
-            .font(.system(size: small ? 11 : 13, weight: .black, design: .rounded))
-            .foregroundStyle(Color.inkFixed)
-            .padding(.horizontal, small ? 8 : 12).padding(.vertical, small ? 3 : 6)
-            .background(Color.sun, in: Capsule())
-        }
-        .buttonStyle(.row)
-        .disabled(shop.busy)
-    }
 
     private func buy(_ product: ShopProduct) {
         Task {
             if await shop.purchase(product) {
                 Haptics.success()
                 await app.refreshBoutique()
-                app.show("C'est à toi ! Touche « Mettre » pour le porter.")
+                // Ce qui était à l'essai (et vient d'être acheté) est posé tout de suite.
+                let bought: Trial? = trial.flatMap { tried in
+                    if self.product(for: tried) == product || product == .prestige { return tried }
+                    if product == .avatars, case .animal(let a) = tried, AnimalAvatar.premium.contains(a) { return tried }
+                    return nil
+                }
+                switch bought {
+                case .animal(let a): await app.setAvatar(a)
+                case .ring(let r): await app.setLook(kind: "ring", value: r.rawValue)
+                case .title(let t): await app.setLook(kind: "title", value: t.rawValue)
+                case nil: break
+                }
+                trial = nil
+                app.show("C'est à toi !")
             }
         }
     }
 
     private func wear(kind: String, value: String?) {
         busy = true
+        trial = nil
         Task {
             await app.setLook(kind: kind, value: value)
-            if kind == "ring" { tryRing = nil } else { tryTitle = nil }
             busy = false
         }
     }

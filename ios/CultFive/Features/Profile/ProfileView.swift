@@ -119,8 +119,9 @@ struct ProfileView: View {
                     Button { showAvatars = true } label: {
                         ArenaAvatar(handle: app.profile?.handle ?? "", size: 72, me: true)
                             .overlay(alignment: .bottomTrailing) {
-                                Text("Changer")
+                                Label("Mon look", systemImage: "paintbrush.pointed.fill")
                                     .font(.system(size: 10, weight: .black, design: .rounded))
+                                    .lineLimit(1).fixedSize()
                                     .foregroundStyle(.white)
                                     .padding(.horizontal, 7).padding(.vertical, 3)
                                     .background(Color.brand, in: Capsule())

@@ -448,8 +448,12 @@ final class AppModel {
         boutique?.items = stock
     }
 
-    func openShop(from origin: String) {
+    /// Rubrique de la boutique à montrer en l'ouvrant.
+    var shopFocus: ShopFocus?
+
+    func openShop(from origin: String, focus: ShopFocus? = nil) {
         track("shop_view", ["from": origin])
+        shopFocus = focus
         showShop = true
     }
 

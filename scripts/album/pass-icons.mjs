@@ -20,7 +20,8 @@ await p.addStyleTag({ url: 'https://fonts.googleapis.com/css2?family=Nunito:wght
   p.addStyleTag({ content: `@font-face{font-family:Nunito;font-weight:200 1000;src:url(file://${resolve(here, '../app-store/fonts/nunito-latin.woff2')}) format('woff2');}` }));
 await p.evaluate(async () => { try { await document.fonts.load('900 100px Nunito'); } catch (e) {} await document.fonts.ready; });
 const only = process.argv[3];
-const icons = await p.evaluate((only) => window.renderPass(256, only), only);
+const size = Number(process.env.SIZE || 256);  // SIZE=600 : icônes en haute définition pour l'app
+const icons = await p.evaluate(([only, size]) => window.renderPass(size, only), [only, size]);
 for (const [k, url] of Object.entries(icons)) writeFileSync(join(out, k + '.png'), Buffer.from(url.split(',')[1], 'base64'));
 if (!only) for (const c of ['chest_wood', 'chest_silver', 'chest_gold', 'chest_savant'])
   copyFileSync(resolve(here, `../../ios/CultFive/Resources/Assets.xcassets/Icons/${c}.imageset/${c}.png`), join(out, c + '.png'));

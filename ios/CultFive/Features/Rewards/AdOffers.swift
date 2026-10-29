@@ -158,7 +158,7 @@ struct PassPlusUpsell: View {
         if !app.noAds && app.api != nil {
             Button {
                 Haptics.selection()
-                app.openShop(from: origin)
+                app.openShop(from: origin, focus: .noAds)
             } label: {
                 Label("Retirer les pubs", systemImage: "nosign")
                     .font(.system(.footnote, design: .rounded).weight(.heavy))
