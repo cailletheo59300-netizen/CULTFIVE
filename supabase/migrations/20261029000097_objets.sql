@@ -10,6 +10,8 @@
 -- Un objet se pose après le tirage de la partie et avant la première réponse ; il est retiré du stock à ce moment.
 -- On en reçoit 1 de chaque au départ, rarement dans les coffres, et dans les packs de la boutique (heures sans pub en
 -- plus) et l'offre de bienvenue (7 premiers jours, une seule fois).
+-- Packs : Essai 1 de chaque + 1 h ; Joueur 2 Boissons, 2 Boucliers d'Elo, 1 de chaque autre + 6 h ; Big Pack 3 de
+-- chaque + 24 h ; bienvenue 2 de chaque + 7 jours.
 
 alter table public.items drop constraint items_kind_check;
 alter table public.items add constraint items_kind_check check (kind in ('cosmetic', 'ticket', 'boost'));
@@ -251,14 +253,18 @@ insert into public.shop_products (id, kind, label) values
   ('app.brainlix.welcome', 'consumable', 'Offre de bienvenue')
 on conflict (id) do nothing;
 
--- Contenu d'un produit : objets de chaque sorte et heures sans pub.
+-- Contenu d'un produit : nombre de chaque objet et heures sans pub (propriétaire, 29/10).
 create or replace function public._shop_contents(p_product text) returns jsonb
 language sql immutable set search_path = public, pg_temp as $$
   select case p_product
-    when 'app.brainlix.pack.essai' then '{"each": 1, "no_ads_hours": 1}'
-    when 'app.brainlix.pack.joueur' then '{"each": 3, "no_ads_hours": 6}'
-    when 'app.brainlix.pack.big' then '{"each": 8, "no_ads_hours": 24}'
-    when 'app.brainlix.welcome' then '{"each": 2, "no_ads_hours": 168}'
+    when 'app.brainlix.pack.essai' then
+      '{"items": {"energy": 1, "shield": 1, "bet": 1, "lifeline": 1, "hourglass": 1}, "no_ads_hours": 1}'
+    when 'app.brainlix.pack.joueur' then
+      '{"items": {"energy": 2, "shield": 2, "bet": 1, "lifeline": 1, "hourglass": 1}, "no_ads_hours": 6}'
+    when 'app.brainlix.pack.big' then
+      '{"items": {"energy": 3, "shield": 3, "bet": 3, "lifeline": 3, "hourglass": 3}, "no_ads_hours": 24}'
+    when 'app.brainlix.welcome' then
+      '{"items": {"energy": 2, "shield": 2, "bet": 2, "lifeline": 2, "hourglass": 2}, "no_ads_hours": 168}'
   end::jsonb
 $$;
 
@@ -271,8 +277,8 @@ declare
 begin
   if v is null then return; end if;
   perform public._starter_items(p_user);
-  foreach v_item in array array['energy', 'shield', 'bet', 'lifeline', 'hourglass'] loop
-    perform public._give_item(p_user, v_item, (v ->> 'each')::int);
+  for v_item in select jsonb_object_keys(v -> 'items') loop
+    perform public._give_item(p_user, v_item, (v -> 'items' ->> v_item)::int);
   end loop;
   update public.profiles
      set no_ads_until = greatest(coalesce(no_ads_until, public._now()), public._now()) + make_interval(hours => (v ->> 'no_ads_hours')::int)

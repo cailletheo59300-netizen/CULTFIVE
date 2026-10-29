@@ -89,7 +89,10 @@ begin
   perform tst.ok((public.boutique_overview() -> 'items' ->> 'hourglass')::int = 1, 'renvoi : livré une seule fois');
   perform public.iap_record(u, 'tx-objets-big', 'tx-objets-big', 'app.brainlix.pack.big', 'Production', public._now());
   o := public.boutique_overview();
-  perform tst.ok((o -> 'items' ->> 'hourglass')::int = 9, 'Big Pack : 8 de plus');
+  perform tst.ok((o -> 'items' ->> 'hourglass')::int = 4, 'Big Pack : 3 de plus');
+  perform public.iap_record(u, 'tx-objets-joueur', 'tx-objets-joueur', 'app.brainlix.pack.joueur', 'Production', public._now());
+  o := public.boutique_overview();
+  perform tst.ok((o -> 'items' ->> 'hourglass')::int = 5 and (o -> 'items' ->> 'shield')::int >= 6, 'Pack Joueur : 2 boucliers d''Elo, 1 sablier');
   perform tst.ok((o ->> 'no_ads_until')::timestamptz > public._now() + interval '24 hours', 'heures sans pub cumulées');
   perform public.iap_record(u, 'tx-objets-welcome', 'tx-objets-welcome', 'app.brainlix.welcome', 'Production', public._now());
   o := public.boutique_overview();

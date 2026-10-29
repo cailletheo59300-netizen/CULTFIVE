@@ -7,15 +7,17 @@ import CultFiveCore
 struct ShopPack: Identifiable {
     let product: ShopProduct
     let title: String
-    let each: Int
+    /// Ce que contient le pack, en une ligne.
+    let contents: String
     let hours: String
     var best = false
     var id: String { product.rawValue }
 
     static let all: [ShopPack] = [
-        ShopPack(product: .packEssai, title: "Pack Essai", each: 1, hours: "1 h sans pub"),
-        ShopPack(product: .packJoueur, title: "Pack Joueur", each: 3, hours: "6 h sans pub"),
-        ShopPack(product: .packBig, title: "Big Pack", each: 8, hours: "24 h sans pub", best: true),
+        ShopPack(product: .packEssai, title: "Pack Essai", contents: "1 de chaque objet", hours: "1 h sans pub"),
+        ShopPack(product: .packJoueur, title: "Pack Joueur", contents: "2 Boissons, 2 Boucliers d'Elo, 1 de chaque autre",
+                 hours: "6 h sans pub"),
+        ShopPack(product: .packBig, title: "Big Pack", contents: "3 de chaque objet", hours: "24 h sans pub", best: true),
     ]
 }
 
@@ -133,7 +135,8 @@ struct PacksSection: View {
                             .background(Color(hex: 0xE03131), in: Capsule())
                     }
                 }
-                Text("\(pack.each) de chaque objet").font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+                Text(pack.contents).font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(Color.inkSoft)
+                    .fixedSize(horizontal: false, vertical: true)
                 Text("+ \(pack.hours)").font(.system(.footnote, design: .rounded).weight(.bold)).foregroundStyle(Color.brand)
             }
             Spacer(minLength: 0)
