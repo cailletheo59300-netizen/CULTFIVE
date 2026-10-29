@@ -94,7 +94,7 @@ begin
   o := public.boutique_overview();
   perform tst.ok((o -> 'items' ->> 'hourglass')::int = 5 and (o -> 'items' ->> 'shield')::int >= 6, 'Pack Joueur : 2 boucliers d''Elo, 1 sablier');
   perform tst.ok((o ->> 'no_ads_until')::timestamptz > public._now() + interval '24 hours', 'heures sans pub cumulées');
-  perform public.iap_record(u, 'tx-objets-welcome', 'tx-objets-welcome', 'app.brainlix.welcome', 'Production', public._now());
+  perform public.iap_record(u, 'tx-objets-welcome', 'tx-objets-welcome', 'app.brainlix.bienvenue', 'Production', public._now());
   o := public.boutique_overview();
   perform tst.ok(o ->> 'welcome_until' is null, 'bienvenue : plus proposée une fois prise');
   perform tst.ok((o ->> 'no_ads_until')::timestamptz > public._now() + interval '7 days', 'bienvenue : 7 jours sans pub');

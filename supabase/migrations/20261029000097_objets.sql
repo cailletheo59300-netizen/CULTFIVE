@@ -250,7 +250,7 @@ insert into public.shop_products (id, kind, label) values
   ('app.brainlix.pack.essai', 'consumable', 'Pack Essai'),
   ('app.brainlix.pack.joueur', 'consumable', 'Pack Joueur'),
   ('app.brainlix.pack.big', 'consumable', 'Big Pack'),
-  ('app.brainlix.welcome', 'consumable', 'Offre de bienvenue')
+  ('app.brainlix.bienvenue', 'consumable', 'Offre de bienvenue')
 on conflict (id) do nothing;
 
 -- Contenu d'un produit : nombre de chaque objet et heures sans pub (propriétaire, 29/10).
@@ -263,7 +263,7 @@ language sql immutable set search_path = public, pg_temp as $$
       '{"items": {"energy": 2, "shield": 2, "bet": 1, "lifeline": 1, "hourglass": 1}, "no_ads_hours": 6}'
     when 'app.brainlix.pack.big' then
       '{"items": {"energy": 3, "shield": 3, "bet": 3, "lifeline": 3, "hourglass": 3}, "no_ads_hours": 24}'
-    when 'app.brainlix.welcome' then
+    when 'app.brainlix.bienvenue' then
       '{"items": {"energy": 2, "shield": 2, "bet": 2, "lifeline": 2, "hourglass": 2}, "no_ads_hours": 168}'
   end::jsonb
 $$;
@@ -310,7 +310,7 @@ begin
     'no_ads_forever', public._no_ads_forever(v_user),
     'no_ads_until', case when p.no_ads_until > public._now() then p.no_ads_until end,
     'welcome_until', case when v_welcome_ends > public._now()
-                           and not exists (select 1 from public.purchases where user_id = v_user and product_id = 'app.brainlix.welcome')
+                           and not exists (select 1 from public.purchases where user_id = v_user and product_id = 'app.brainlix.bienvenue')
                           then v_welcome_ends end);
 end $$;
 

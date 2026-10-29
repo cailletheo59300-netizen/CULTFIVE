@@ -13,7 +13,7 @@ enum ShopProduct: String, CaseIterable {
     case packJoueur = "app.brainlix.pack.joueur"
     case packBig = "app.brainlix.pack.big"
     /// Offre de bienvenue (consommable, 7 premiers jours, une fois) : 7 jours sans pub et 2 de chaque objet.
-    case welcome = "app.brainlix.welcome"
+    case welcome = "app.brainlix.bienvenue"
 }
 
 /// Achats intégrés (StoreKit 2) : Pass+ et boutique.
