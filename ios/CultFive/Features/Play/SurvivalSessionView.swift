@@ -294,37 +294,61 @@ struct SurvivalSessionView: View {
     // MARK: Écrans
 
     private func intro(_ model: SurvivalSessionModel) -> some View {
-        VStack(spacing: Space.l) {
-            HStack {
-                Spacer()
-                Button { dismiss() } label: { CloseCircle() }.accessibilityLabel("Fermer")
+        ScrollView {
+            VStack(spacing: Space.l) {
+                // En-tête : l'emblème « une seule vie », le nom du mode, le domaine.
+                VStack(spacing: Space.s) {
+                    FloatingArt(name: "surv_emblem", amplitude: 5).frame(width: 170, height: 170)
+                    Text("SURVIE")
+                        .font(.system(size: 44, weight: .black, design: .rounded)).tracking(2)
+                        .foregroundStyle(.white)
+                    Text("Une seule vie. Jusqu'où iras-tu ?")
+                        .font(.system(.headline, design: .rounded).weight(.heavy))
+                        .foregroundStyle(.white.opacity(0.85))
+                        .lineLimit(1).minimumScaleFactor(0.7)
+                    if let domain {
+                        DomainTag(domainId: domain, name: app.domainName(domain))
+                    }
+                }
+                .padding(.vertical, Space.l)
+                .frame(maxWidth: .infinity)
+                .background(LinearGradient(colors: [Color(hex: 0xFF8A3D), Color(hex: 0xE5172F), Color(hex: 0x6A1B5E)],
+                                           startPoint: .topLeading, endPoint: .bottomTrailing),
+                            in: RoundedRectangle(cornerRadius: Radius.l, style: .continuous))
+                .shadow(color: Color(hex: 0xE5172F).opacity(0.3), radius: 16, y: 8)
+
+                // Les trois règles, en images.
+                HStack(spacing: 10) {
+                    ruleCard("surv_broken", "1 erreur", "et c'est fini")
+                    ruleCard("surv_watch", "\(model.seconds) s", "par question")
+                    ruleCard("surv_stairs", "De + en +", "difficile")
+                }
+
+                if model.record > 0 {
+                    HStack(spacing: Space.s) {
+                        Image("trophy_cup").resizable().scaledToFit().frame(width: 40, height: 40)
+                        Text("Ton record")
+                            .font(.system(.headline, design: .rounded).weight(.heavy)).foregroundStyle(Color.ink)
+                        Spacer()
+                        Text("\(model.record)")
+                            .font(.system(.title, design: .rounded).weight(.black)).monospacedDigit()
+                            .foregroundStyle(Self.flame)
+                    }
+                    .padding(.horizontal, Space.m).padding(.vertical, 10)
+                    .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                }
+
+                if app.api != nil {
+                    ItemsStrip(items: GameItem.survival, selection: $items, onColor: Color.ink)
+                        .padding(Space.m)
+                        .background(Self.flame.opacity(0.1), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+                }
             }
-            Spacer()
-            Image(systemName: "flame.fill")
-                .font(.system(size: 64, weight: .black))
-                .foregroundStyle(Self.flame)
-                .frame(width: 120, height: 120)
-                .background(Self.flame.opacity(0.14), in: Circle())
-            Text("Survie").font(.cfDisplay)
-            if let domain {
-                DomainTag(domainId: domain, name: app.domainName(domain))
-            }
-            VStack(alignment: .leading, spacing: 12) {
-                rule("xmark.octagon.fill", "Une erreur et c'est fini")
-                rule("timer", "\(model.seconds) s par question")
-                rule("arrow.up.right", "De plus en plus dur")
-            }
-            if model.record > 0 {
-                Text("Ton record : \(model.record)")
-                    .font(.system(.headline, design: .rounded).weight(.black))
-                    .foregroundStyle(Self.flame)
-            }
-            Spacer()
-            if app.api != nil {
-                ItemsStrip(items: GameItem.survival, selection: $items, onColor: Color.ink)
-                    .padding(Space.m)
-                    .background(Self.flame.opacity(0.12), in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
-            }
+            .padding(Space.gutter)
+            .padding(.top, 44)
+        }
+        .scrollIndicators(.hidden)
+        .safeAreaInset(edge: .bottom) {
             Button(items.isEmpty ? "C'est parti !" : "C'est parti avec \(items.count) objet\(items.count > 1 ? "s" : "")") {
                 let chosen = items.map(\.rawValue)
                 items = []
@@ -338,15 +362,35 @@ struct SurvivalSessionView: View {
                 }
             }
             .buttonStyle(.sun)
+            .padding(.horizontal, Space.gutter)
+            .padding(.bottom, Space.s)
+            .background(Color.paper)
         }
-        .padding(Space.gutter)
+        .overlay(alignment: .topTrailing) {
+            Button { dismiss() } label: { CloseCircle() }
+                .accessibilityLabel("Fermer")
+                .padding(.trailing, Space.gutter)
+        }
     }
 
-    private func rule(_ symbol: String, _ text: String) -> some View {
-        HStack(spacing: 12) {
-            Image(systemName: symbol).font(.body.weight(.bold)).foregroundStyle(Self.flame).frame(width: 26)
-            Text(text).font(.system(.body, design: .rounded).weight(.bold)).foregroundStyle(Color.ink)
+    /// Une règle : son icône 3D, deux mots en gros, deux en petit.
+    private func ruleCard(_ image: String, _ title: String, _ detail: String) -> some View {
+        VStack(spacing: 4) {
+            Image(image).resizable().scaledToFit().frame(width: 58, height: 58)
+            Text(title)
+                .font(.system(.headline, design: .rounded).weight(.black))
+                .foregroundStyle(Color.ink)
+                .lineLimit(1).minimumScaleFactor(0.7)
+            Text(detail)
+                .font(.system(.caption, design: .rounded).weight(.bold))
+                .foregroundStyle(Color.inkSoft)
+                .lineLimit(1).minimumScaleFactor(0.7)
         }
+        .padding(.vertical, 12).padding(.horizontal, 6)
+        .frame(maxWidth: .infinity)
+        .background(Color.paperRaised, in: RoundedRectangle(cornerRadius: Radius.m, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: Radius.m, style: .continuous).strokeBorder(Color.hairline, lineWidth: 1.5))
+        .accessibilityElement(children: .combine)
     }
 
     private func resultView(_ result: SurvivalResult, model: SurvivalSessionModel) -> some View {
@@ -359,7 +403,7 @@ struct SurvivalSessionView: View {
                     .padding(.horizontal, 10).padding(.vertical, 5)
                     .background(Color.sun, in: Capsule())
             }
-            Image(systemName: "flame.fill").font(.system(size: 44, weight: .black)).foregroundStyle(Self.flame)
+            Image("surv_emblem").resizable().scaledToFit().frame(width: 96, height: 96)
             Text("\(result.score)")
                 .font(.system(size: 88, weight: .black, design: .rounded)).monospacedDigit()
                 .foregroundStyle(Color.ink)

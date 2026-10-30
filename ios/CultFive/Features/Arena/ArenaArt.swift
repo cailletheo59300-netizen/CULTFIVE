@@ -165,11 +165,24 @@ struct AnimalBadge: View {
     var body: some View {
         Circle()
             .fill(LinearGradient(colors: [Self.tint(animal).opacity(0.75), Self.tint(animal)], startPoint: .top, endPoint: .bottom))
+            .overlay {
+                // Premium et exclusifs (D-121) : un halo doré derrière le personnage.
+                if !animal.isFree {
+                    RadialGradient(colors: [Color(hex: 0xFFE680).opacity(0.55), .clear], center: .init(x: 0.5, y: 0.35),
+                                   startRadius: 0, endRadius: size * 0.55)
+                }
+            }
             .overlay(
                 Image(animal.imageName).resizable().scaledToFit()
                     .offset(y: size * 0.04)
             )
             .clipShape(Circle())
+            .overlay {
+                if !animal.isFree, ring == nil, decor == .none {
+                    Circle().strokeBorder(AngularGradient(colors: ContourRing.gold + [ContourRing.gold[0]], center: .center),
+                                          lineWidth: max(1.5, size * 0.04))
+                }
+            }
             .overlay(Circle().strokeBorder(ring ?? .clear, lineWidth: max(2, size * 0.06)))
             .overlay(ContourRing(decor: decor, size: size))
             .frame(width: size, height: size)
