@@ -59,7 +59,7 @@ _Dernière mise à jour : 2026-10-15 (1.1 publiée le 15/10 ; serveur en product
 | 350 questions de tech, tous types (D-103) | ✅ en production (22/10), tech : 1 003 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | 352 questions de nature, tous types (D-104) | ✅ en production (22/10), nature : 1 005 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | 349 questions de sciences, tous types (D-105) | ✅ en production (22/10), sciences : 1 003 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
-| 200 questions de français, QCM aux mauvaises réponses crédibles, peu de vrai/faux (D-123) | 🟡 prêtes, en attente de mise en production ; français : 1 213 | `scripts/build-seed.mjs` (contrôles), tests SQL |
+| 200 questions de français, QCM aux mauvaises réponses crédibles, peu de vrai/faux (D-123) | ✅ en production (30/10), français : 1 213 publiées | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Calcul : 318 enchaînements d'opérations, chiffres romains réduits à 2 (D-106) | ✅ en production (22/10) | `scripts/build-seed.mjs` (contrôles), tests SQL |
 | Pub entre les parties : 5 minutes au moins entre deux (D-107) | 🟡 prochaine version de l'app | CI (build) |
 | Moins de questions déjà vues : 30 jours après une réussite, jamais vues d'abord, une révision par jour et par domaine (D-108) | ✅ en production (23/10), serveur 0086 | `80_algo.sql` |
