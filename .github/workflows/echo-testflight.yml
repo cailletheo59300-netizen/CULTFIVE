@@ -1,0 +1,141 @@
+name: Écho TestFlight
+
+# Construit Écho en version Release, le signe et l'envoie sur App Store Connect (même clé API que Brainlix).
+# Déclenchement manuel uniquement : onglet Actions → Écho TestFlight → Run workflow.
+# Prérequis : l'app Écho (identifiant app.brainlix.echo) créée dans App Store Connect (voir echo/README.md).
+# Secrets du dépôt : ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 (clé App Store Connect API, contenu du fichier .p8).
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: echo-testflight
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    name: Écho : build Release + envoi TestFlight
+    runs-on: macos-15
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      # Numéro de build unique et croissant (App Store Connect refuse deux fois le même).
+      BUILD_NUMBER: ${{ github.run_number }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Secrets présents
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          missing=""
+          [ -n "$ASC_KEY_ID" ] || missing="$missing ASC_KEY_ID"
+          [ -n "$ASC_ISSUER_ID" ] || missing="$missing ASC_ISSUER_ID"
+          [ -n "$ASC_KEY_P8" ] || missing="$missing ASC_KEY_P8"
+          if [ -n "$missing" ]; then echo "::error::Secrets manquants :$missing"; exit 1; fi
+          mkdir -p "$RUNNER_TEMP/asc"
+          printf '%s\n' "$ASC_KEY_P8" > "$RUNNER_TEMP/asc/AuthKey.p8"
+          echo "ASC_KEY_PATH=$RUNNER_TEMP/asc/AuthKey.p8" >> "$GITHUB_ENV"
+
+      - name: Xcode le plus récent
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | grep -v beta | sort -V | tail -1)
+          sudo xcode-select -s "$XCODE"
+          xcodebuild -version
+
+      # Chaque build part d'une machine vierge : Xcode y crée un certificat de développement jetable (« Created via API »).
+      # Apple en limite le nombre ; on supprime ces certificats-là avant d'en créer un nouveau. Jamais les certificats
+      # de distribution (publication), jamais les certificats de développement créés à la main.
+      - name: Nettoyage des certificats de développement jetables
+        run: |
+          pip3 install --quiet --break-system-packages pyjwt cryptography || pip3 install --quiet pyjwt cryptography
+          python3 - <<'PY' || echo "::warning::Nettoyage des certificats impossible (le build continue)."
+          import json, os, time, urllib.request, jwt
+          key = open(os.environ["ASC_KEY_PATH"]).read()
+          token = jwt.encode({"iss": os.environ["ASC_ISSUER_ID"], "iat": int(time.time()), "exp": int(time.time()) + 600,
+                              "aud": "appstoreconnect-v1"}, key, algorithm="ES256",
+                             headers={"kid": os.environ["ASC_KEY_ID"], "typ": "JWT"})
+          def call(method, url):
+              req = urllib.request.Request(url, method=method, headers={"Authorization": f"Bearer {token}"})
+              with urllib.request.urlopen(req) as r:
+                  body = r.read()
+                  return json.loads(body) if body else None
+          certs = call("GET", "https://api.appstoreconnect.apple.com/v1/certificates?limit=200")["data"]
+          removed = 0
+          for c in certs:
+              a = c["attributes"]
+              kind = a.get("certificateType", "")
+              label = f"{a.get('name', '')} {a.get('displayName', '')}"
+              if kind in ("DEVELOPMENT", "IOS_DEVELOPMENT") and "Created via API" in label:
+                  call("DELETE", f"https://api.appstoreconnect.apple.com/v1/certificates/{c['id']}")
+                  removed += 1
+          print(f"Certificats de développement jetables supprimés : {removed} (sur {len(certs)} certificats)")
+          PY
+
+      - name: XcodeGen
+        run: |
+          brew install xcodegen
+          cd echo && xcodegen generate
+
+      - name: Archive (signature automatique)
+        run: |
+          status=0
+          xcodebuild archive \
+            -project echo/Echo.xcodeproj \
+            -scheme Echo \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath "$RUNNER_TEMP/Echo.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER" > archive.log 2>&1 || status=$?
+          grep -E "error:|warning: .*(sign|profile|entitlement)|ARCHIVE (SUCCEEDED|FAILED)" archive.log | tail -60
+          exit $status
+
+      - name: Contrôles de l'archive
+        run: |
+          APP="$RUNNER_TEMP/Echo.xcarchive/Products/Applications/Echo.app"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" -c "Print :CFBundleDisplayName" \
+            -c "Print :CFBundleShortVersionString" -c "Print :CFBundleVersion" "$APP/Info.plist"
+          test -f "$APP/PrivacyInfo.xcprivacy" || { echo "::error::PrivacyInfo.xcprivacy absent de l'app"; exit 1; }
+          grep -q "3940256099942544~" "$APP/Info.plist" && echo "::warning::Identifiant AdMob de test : remplacer ADMOB_APP_ID (echo/Config/App.xcconfig) avant la publication." || true
+          codesign -d --entitlements - "$APP" 2>/dev/null | grep -E "applesignin|associated-domains|team-identifier" || true
+
+      - name: Export et envoi sur App Store Connect
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>teamID</key><string>BM85BF2WVQ</string>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+            <key>uploadSymbols</key><true/>
+          </dict>
+          </plist>
+          PLIST
+          status=0
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/Echo.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" > export.log 2>&1 || status=$?
+          grep -E "error|Upload|upload|EXPORT (SUCCEEDED|FAILED)|Progress" export.log | tail -60
+          exit $status
+
+      - name: Journaux
+        if: failure()
+        run: |
+          [ -f archive.log ] && grep -E "error" -B2 -A4 archive.log | head -150 || true
+          [ -f export.log ] && tail -80 export.log || true
+
+      - name: Nettoyage de la clé
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc"

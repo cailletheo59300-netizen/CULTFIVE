@@ -3,7 +3,10 @@ name: CI
 on:
   push:
     branches: [main, "claude/**"]
+    # Écho a sa propre CI (echo-ci.yml) : ses changements seuls ne relancent pas celle de Brainlix.
+    paths-ignore: ["echo/**", ".github/workflows/echo-*.yml", "site/echo/**"]
   pull_request:
+    paths-ignore: ["echo/**", ".github/workflows/echo-*.yml", "site/echo/**"]
 
 concurrency:
   group: ci-${{ github.ref }}

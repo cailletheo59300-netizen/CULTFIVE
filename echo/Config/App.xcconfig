@@ -1,0 +1,7 @@
+// Configuration d'Écho. Rien de secret ici : tout est public par nature.
+APP_DISPLAY_NAME = Écho
+TEAM_ID = BM85BF2WVQ
+// Identifiant AdMob de l'app (« ca-app-pub-…~… »). En attendant la création de l'app dans AdMob : identifiant de
+// test de Google. À remplacer avant la publication (voir echo/README.md, étape AdMob), avec les blocs d'annonces
+// de Echo/Services/AdConfig.swift.
+ADMOB_APP_ID = ca-app-pub-3940256099942544~1458002511
