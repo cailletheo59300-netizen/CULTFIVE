@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   upload:
-    name: Écho : build Release + envoi TestFlight
+    name: "Écho : build Release + envoi TestFlight"
     runs-on: macos-15
     env:
       ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
