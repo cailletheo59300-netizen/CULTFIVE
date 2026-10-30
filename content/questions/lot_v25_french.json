@@ -1,0 +1,3038 @@
+[
+ {
+  "key": "fra25-001",
+  "concept": "french.vocabulary.v25_kermesse",
+  "label": "Origine de « kermesse »",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le mot « kermesse » vient du néerlandais. À l'origine, c'était…",
+  "explanation": "« Kerkmisse » : la messe (misse) de l'église (kerk), célébrée pour la fête du saint patron, avec foire et jeux autour.",
+  "options": [
+   "La messe de l'église du village*",
+   "Une foire aux bestiaux",
+   "Un concours de tir à l'arc",
+   "Une danse de printemps"
+  ]
+ },
+ {
+  "key": "fra25-002",
+  "concept": "french.vocabulary.v25_fiacre",
+  "label": "Origine de « fiacre »",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Les voitures de louage de Paris ont pris le nom de « fiacres » à cause…",
+  "explanation": "Au XVIIe siècle, les premières voitures à louer stationnaient rue Saint-Antoine devant l'hôtel Saint-Fiacre, dont l'enseigne montrait le saint.",
+  "options": [
+   "D'une auberge à l'enseigne de saint Fiacre*",
+   "D'un cocher nommé Fiacre",
+   "Du bruit des roues sur les pavés",
+   "D'un loueur italien, Fiacrini"
+  ]
+ },
+ {
+  "key": "fra25-003",
+  "concept": "french.vocabulary.v25_praline",
+  "label": "Origine de « praline »",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Les pralines doivent leur nom…",
+  "explanation": "Au maréchal du Plessis-Praslin : son cuisinier aurait eu l'idée d'enrober des amandes de sucre cuit au XVIIe siècle.",
+  "options": [
+   "À un maréchal de Louis XIII*",
+   "À une ville de Belgique",
+   "À un pâtissier lyonnais",
+   "À une religieuse confiseuse"
+  ]
+ },
+ {
+  "key": "fra25-004",
+  "concept": "french.vocabulary.v25_bechamel",
+  "label": "Origine de « béchamel »",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "La sauce béchamel porte le nom…",
+  "explanation": "Louis de Béchameil, financier et maître d'hôtel de Louis XIV. Il n'a sans doute jamais cuisiné la sauce lui-même.",
+  "options": [
+   "D'un maître d'hôtel de Louis XIV*",
+   "D'un chef italien de Catherine de Médicis",
+   "D'un village normand",
+   "D'une marque de farine"
+  ]
+ },
+ {
+  "key": "fra25-005",
+  "concept": "french.vocabulary.v25_pantalon",
+  "label": "Origine de « pantalon »",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Le « pantalon » doit son nom…",
+  "explanation": "Pantalone, vieux marchand vénitien de la commedia dell'arte, portait une culotte longue qui a pris son nom.",
+  "options": [
+   "À un personnage de théâtre italien*",
+   "À un tailleur anglais",
+   "À un général de Napoléon",
+   "À une ville de Perse"
+  ]
+ },
+ {
+  "key": "fra25-006",
+  "concept": "french.vocabulary.v25_dinde",
+  "label": "Origine de « dinde »",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "« Dinde » vient de « poule d'Inde ». En réalité, l'oiseau venait…",
+  "explanation": "Les « Indes occidentales », c'était l'Amérique. Les Anglais, eux, l'appellent « turkey », comme s'il venait de Turquie !",
+  "options": [
+   "D'Amérique*",
+   "D'Inde",
+   "De Turquie",
+   "D'Afrique du Nord"
+  ]
+ },
+ {
+  "key": "fra25-007",
+  "concept": "french.vocabulary.v25_topinambour",
+  "label": "Origine de « topinambour »",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le topinambour porte le nom…",
+  "explanation": "Des Tupinambas, peuple du Brésil : des membres de ce peuple furent montrés à Paris au moment où le légume arrivait d'Amérique du Nord.",
+  "options": [
+   "D'un peuple du Brésil*",
+   "D'un botaniste portugais",
+   "D'une ville du Pérou",
+   "D'un dieu aztèque"
+  ]
+ },
+ {
+  "key": "fra25-008",
+  "concept": "french.vocabulary.v25_vandalisme",
+  "label": "Le mot « vandalisme »",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui a inventé le mot « vandalisme », en 1794 ?",
+  "explanation": "L'abbé Grégoire, révolutionnaire, dénonçait la destruction des œuvres d'art. Hugo a plus tard écrit « Guerre aux démolisseurs ».",
+  "options": [
+   "L'abbé Grégoire*",
+   "Voltaire",
+   "Victor Hugo",
+   "Robespierre"
+  ]
+ },
+ {
+  "key": "fra25-009",
+  "concept": "french.vocabulary.v25_robinet",
+  "label": "Origine de « robinet »",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Robinet » vient de « Robin », surnom populaire…",
+  "explanation": "Les premiers robinets des fontaines avaient souvent une tête de mouton, que l'on appelait familièrement « Robin ».",
+  "options": [
+   "Du mouton*",
+   "Du renard",
+   "De l'âne",
+   "Du chien"
+  ]
+ },
+ {
+  "key": "fra25-010",
+  "concept": "french.vocabulary.v25_goupil",
+  "label": "Le renard avant Renart",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Avant le succès du « Roman de Renart », comment appelait-on le renard ?",
+  "explanation": "Renart était le prénom du héros. Le roman a eu tant de succès au Moyen Âge que « renard » a remplacé « goupil ».",
+  "options": [
+   "Le goupil*",
+   "Le fennec",
+   "Le loubard",
+   "Le matou"
+  ]
+ },
+ {
+  "key": "fra25-011",
+  "concept": "french.vocabulary.v25_informatique",
+  "label": "Naissance de « informatique »",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le mot « informatique » est né en France en…",
+  "explanation": "Philippe Dreyfus l'a créé en 1962 avec « information » et « automatique ». L'Académie l'adopte en 1967.",
+  "options": [
+   "1962*",
+   "1946",
+   "1975",
+   "1984"
+  ]
+ },
+ {
+  "key": "fra25-012",
+  "concept": "french.vocabulary.v25_bikini",
+  "label": "Origine de « bikini »",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Le maillot « bikini » (1946) doit son nom…",
+  "explanation": "L'atoll de Bikini venait de servir aux essais nucléaires américains : son créateur voulait un maillot « explosif ».",
+  "options": [
+   "À un atoll du Pacifique*",
+   "À une plage du Brésil",
+   "À une danseuse de cabaret",
+   "À une marque italienne"
+  ]
+ },
+ {
+  "key": "fra25-013",
+  "concept": "french.vocabulary.v25_chandail",
+  "label": "Origine de « chandail »",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Le « chandail » doit son nom…",
+  "explanation": "Les vendeurs d'ail des Halles de Paris portaient ce gros tricot : « marchand d'ail » est devenu « chandail ».",
+  "options": [
+   "Aux marchands d'ail des Halles*",
+   "À un tricoteur nommé Chandail",
+   "À la ville de Chantilly",
+   "Aux chandelles des mineurs"
+  ]
+ },
+ {
+  "key": "fra25-014",
+  "concept": "french.vocabulary.v25_cordon_bleu",
+  "label": "Origine de « cordon-bleu »",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "À l'origine, le « cordon bleu » était…",
+  "explanation": "Le ruban bleu de l'ordre du Saint-Esprit, le plus prestigieux de l'Ancien Régime. L'expression a glissé vers les bons cuisiniers.",
+  "options": [
+   "Le ruban d'un ordre de chevaliers*",
+   "Le tablier des cuisiniers du roi",
+   "La ceinture des moines cuisiniers",
+   "Un prix de cuisine"
+  ]
+ },
+ {
+  "key": "fra25-015",
+  "concept": "french.vocabulary.v25_calendes",
+  "label": "Aux calendes grecques",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Pourquoi « aux calendes grecques » veut-il dire « jamais » ?",
+  "explanation": "Les calendes, premier jour du mois, n'existaient que dans le calendrier romain. Payer aux calendes grecques, c'est ne jamais payer.",
+  "options": [
+   "Les Grecs n'avaient pas de calendes*",
+   "Les Grecs fêtaient les calendes tous les cent ans",
+   "Les calendes étaient interdites en Grèce",
+   "Le calendrier grec s'arrêtait en décembre"
+  ]
+ },
+ {
+  "key": "fra25-016",
+  "concept": "french.vocabulary.v25_index",
+  "label": "Mettre à l'index",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Mettre à l'index » vient…",
+  "explanation": "L'Index, créé au XVIe siècle, listait les livres que les catholiques ne devaient pas lire. Il a été supprimé en 1966.",
+  "options": [
+   "De la liste des livres interdits par l'Église*",
+   "Du doigt qui désigne un coupable",
+   "D'un registre de police",
+   "De l'index à la fin des livres"
+  ]
+ },
+ {
+  "key": "fra25-017",
+  "concept": "french.vocabulary.v25_chamade",
+  "label": "Battre la chamade",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "À l'origine, « la chamade » était…",
+  "explanation": "Les assiégés battaient la chamade pour annoncer qu'ils voulaient parlementer. Aujourd'hui, c'est le cœur qui la bat.",
+  "options": [
+   "Un roulement de tambour pour se rendre*",
+   "Une danse provençale",
+   "Le galop d'un cheval",
+   "Une cloche d'alarme"
+  ]
+ },
+ {
+  "key": "fra25-018",
+  "concept": "french.vocabulary.v25_artaban",
+  "label": "Fier comme Artaban",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Qui est Artaban, dans « fier comme Artaban » ?",
+  "explanation": "Un personnage très orgueilleux de « Cléopâtre », long roman de La Calprenède, un immense succès à l'époque.",
+  "options": [
+   "Un héros de roman du XVIIe siècle*",
+   "Un mousquetaire d'Alexandre Dumas",
+   "Un chevalier de la Table ronde",
+   "Un général de Napoléon"
+  ]
+ },
+ {
+  "key": "fra25-019",
+  "concept": "french.vocabulary.v25_chandelle_jeu",
+  "label": "Le jeu et la chandelle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Le jeu n'en vaut pas la chandelle » : d'où vient l'expression ?",
+  "explanation": "Les joueurs laissaient de l'argent pour la chandelle. Si les gains étaient maigres, ils ne couvraient même pas l'éclairage.",
+  "options": [
+   "Des joueurs qui payaient la bougie qui les éclairait*",
+   "Des moines qui jouaient la nuit",
+   "D'un jeu de cartes nommé la chandelle",
+   "Des fêtes de la Chandeleur"
+  ]
+ },
+ {
+  "key": "fra25-020",
+  "concept": "french.vocabulary.v25_oui",
+  "label": "Origine de « oui »",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Le mot « oui » vient…",
+  "explanation": "« Hoc ille » a donné « oïl », d'où la « langue d'oïl » du Nord, face à la « langue d'oc » du Sud, où l'on disait « oc ».",
+  "options": [
+   "Du latin « hoc ille », « c'est cela »*",
+   "Du latin « ita », « ainsi »",
+   "Du germanique « ja »",
+   "Du grec « ouk »"
+  ]
+ },
+ {
+  "key": "fra25-021",
+  "concept": "french.vocabulary.v25_handicap",
+  "label": "Origine de « handicap »",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Handicap » vient de l'anglais « hand in cap ». C'était à l'origine…",
+  "explanation": "On mettait la main dans un chapeau pour équilibrer un échange d'objets. Le mot est passé aux courses, puis au sens actuel.",
+  "options": [
+   "Un jeu d'échange avec des mises dans un chapeau*",
+   "Un salut militaire",
+   "Une règle du cricket",
+   "Une course de chevaux boiteux"
+  ]
+ },
+ {
+  "key": "fra25-022",
+  "concept": "french.vocabulary.v25_malaria",
+  "label": "Origine de « malaria »",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Malaria » vient de l'italien « mal aria ». Que veut dire ce nom ?",
+  "explanation": "On croyait la maladie due à l'air vicié des marais. On sait depuis 1880 qu'un parasite, transmis par le moustique, la cause.",
+  "options": [
+   "Le mauvais air*",
+   "La mauvaise eau",
+   "Le mal du marais",
+   "La fièvre du soir"
+  ]
+ },
+ {
+  "key": "fra25-023",
+  "concept": "french.vocabulary.v25_hugo_editeur",
+  "label": "Le plus court échange",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "On raconte que Victor Hugo écrivit à son éditeur « ? » pour savoir comment se vendaient « Les Misérables ». La réponse ?",
+  "explanation": "Un point d'exclamation : le livre se vendait très bien. C'est l'une des correspondances les plus courtes qu'on cite.",
+  "options": [
+   "« ! »*",
+   "« … »",
+   "« ? »",
+   "« Oui »"
+  ]
+ },
+ {
+  "key": "fra25-024",
+  "concept": "french.vocabulary.v25_pantoufler",
+  "label": "Pantoufler",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Un haut fonctionnaire qui « pantoufle »…",
+  "explanation": "C'est un mot d'abord employé à l'École polytechnique : la « pantoufle » est la somme qu'on rembourse en partant tôt dans le privé.",
+  "options": [
+   "Quitte l'État pour le privé*",
+   "Reste chez lui en chaussons",
+   "Ne fait plus grand-chose au bureau",
+   "Part à la retraite"
+  ]
+ },
+ {
+  "key": "fra25-025",
+  "concept": "french.vocabulary.v25_mithridatiser",
+  "label": "Mithridatiser",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Se « mithridatiser », c'est…",
+  "explanation": "Le roi Mithridate VI aurait pris chaque jour un peu de poison pour ne pas être empoisonné.",
+  "options": [
+   "S'habituer à un poison par petites doses*",
+   "Se déguiser en roi",
+   "Se nourrir de plantes",
+   "Parler plusieurs langues"
+  ]
+ },
+ {
+  "key": "fra25-026",
+  "concept": "french.vocabulary.v25_thaumaturge",
+  "label": "Thaumaturge",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Un « thaumaturge » est…",
+  "explanation": "Du grec « thauma », la merveille. Les rois de France passaient pour guérir les écrouelles en les touchant.",
+  "options": [
+   "Quelqu'un qui fait des miracles*",
+   "Un spécialiste des tremblements de terre",
+   "Un fabricant de théières",
+   "Un médecin des yeux"
+  ]
+ },
+ {
+  "key": "fra25-027",
+  "concept": "french.vocabulary.v25_palimpseste",
+  "label": "Palimpseste",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Un « palimpseste » est…",
+  "explanation": "Le parchemin coûtait cher : on effaçait un texte pour en écrire un autre. On y retrouve parfois des œuvres antiques perdues.",
+  "options": [
+   "Un parchemin gratté puis réécrit*",
+   "Un poème qu'on peut lire à l'envers",
+   "Un très vieux dictionnaire",
+   "Une tablette de cire"
+  ]
+ },
+ {
+  "key": "fra25-028",
+  "concept": "french.vocabulary.v25_ergoter",
+  "label": "Ergoter",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Ergoter », c'est…",
+  "explanation": "Du latin « ergo », « donc », le mot préféré des raisonneurs.",
+  "options": [
+   "Chicaner sur des détails*",
+   "Travailler sans relâche",
+   "Se vanter",
+   "Marcher de long en large"
+  ]
+ },
+ {
+  "key": "fra25-029",
+  "concept": "french.vocabulary.v25_escarcelle",
+  "label": "Escarcelle",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Au Moyen Âge, que mettait-on dans son « escarcelle » ?",
+  "explanation": "C'était une grande bourse pendue à la ceinture. On dit encore « remplir son escarcelle ».",
+  "options": [
+   "Son argent*",
+   "Ses flèches",
+   "Son vin",
+   "Ses lettres"
+  ]
+ },
+ {
+  "key": "fra25-030",
+  "concept": "french.vocabulary.v25_cuistre",
+  "label": "Cuistre",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Un « cuistre » est…",
+  "explanation": "Au départ, valet de collège. Le mot désigne aujourd'hui celui qui étale un savoir mal digéré.",
+  "options": [
+   "Un pédant qui étale son savoir*",
+   "Un cuisinier maladroit",
+   "Un domestique paresseux",
+   "Un vieux soldat"
+  ]
+ },
+ {
+  "key": "fra25-031",
+  "concept": "french.vocabulary.v25_godiche",
+  "label": "Godiche",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Une personne « godiche » est…",
+  "explanation": "Mot familier, comme son cousin « godichon » : on le dit de quelqu'un de gauche et naïf.",
+  "options": [
+   "Maladroite et un peu niaise*",
+   "Très gourmande",
+   "Coquette",
+   "Bavarde"
+  ]
+ },
+ {
+  "key": "fra25-032",
+  "concept": "french.vocabulary.v25_petrichor",
+  "label": "Pétrichor",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Le « pétrichor », c'est…",
+  "explanation": "Mot créé en 1964 par deux chercheurs australiens, du grec « petra » (pierre) et « ikhôr » (le sang des dieux).",
+  "options": [
+   "L'odeur de la pluie sur la terre sèche*",
+   "La couleur du ciel avant l'orage",
+   "Le bruit de la grêle",
+   "La première neige de l'année"
+  ]
+ },
+ {
+  "key": "fra25-033",
+  "concept": "french.vocabulary.v25_acouphene",
+  "label": "Acouphène",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un « acouphène », c'est…",
+  "explanation": "Sifflement ou bourdonnement perçu dans l'oreille, souvent après un bruit trop fort, comme un concert.",
+  "options": [
+   "Un bruit qu'on entend sans qu'il existe*",
+   "Une peur des grands espaces",
+   "Une perte de l'odorat",
+   "Un trouble du sommeil"
+  ]
+ },
+ {
+  "key": "fra25-034",
+  "concept": "french.vocabulary.v25_epistolaire",
+  "label": "Épistolaire",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Une relation « épistolaire » se fait…",
+  "explanation": "Du latin « epistola », la lettre. « Les Liaisons dangereuses » est un roman épistolaire.",
+  "options": [
+   "Par lettres*",
+   "Par téléphone",
+   "En cachette",
+   "À distance d'un mètre"
+  ]
+ },
+ {
+  "key": "fra25-035",
+  "concept": "french.vocabulary.v25_rasibus",
+  "label": "Rasibus",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "« La balle est passée rasibus » veut dire qu'elle est passée…",
+  "explanation": "Mot familier fait sur « ras » avec une terminaison à la latine, pour faire savant.",
+  "options": [
+   "Au ras, de très près*",
+   "Très haut",
+   "Très vite",
+   "Derrière lui"
+  ]
+ },
+ {
+  "key": "fra25-036",
+  "concept": "french.vocabulary.v25_ripaille",
+  "label": "Ripaille",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Faire ripaille », c'est…",
+  "explanation": "Ripailler, c'est festoyer en mangeant et en buvant beaucoup.",
+  "options": [
+   "Faire un grand repas joyeux*",
+   "Faire une sieste",
+   "Partir en voyage",
+   "Se disputer bruyamment"
+  ]
+ },
+ {
+  "key": "fra25-037",
+  "concept": "french.vocabulary.v25_gros_jean",
+  "label": "Gros-Jean comme devant",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Être « Gros-Jean comme devant », c'est…",
+  "explanation": "La Fontaine termine ainsi « La Laitière et le Pot au lait » : après ses rêves, on se retrouve aussi pauvre qu'avant.",
+  "options": [
+   "Se retrouver déçu, comme au départ*",
+   "Avoir pris du poids",
+   "Être le premier de la file",
+   "Être tout fier"
+  ]
+ },
+ {
+  "key": "fra25-038",
+  "concept": "french.vocabulary.v25_pince_sans_rire",
+  "label": "Pince-sans-rire",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Un « pince-sans-rire » est quelqu'un…",
+  "explanation": "Il plaisante l'air de rien, sans sourire : c'est tout l'art de l'humour pince-sans-rire.",
+  "options": [
+   "Qui fait de l'humour en restant sérieux*",
+   "Qui ne rit jamais",
+   "Qui se moque méchamment",
+   "Qui rit pour un rien"
+  ]
+ },
+ {
+  "key": "fra25-039",
+  "concept": "french.vocabulary.v25_saint_glinglin",
+  "label": "La Saint-Glinglin",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Il te rendra ton livre « à la Saint-Glinglin ». C'est-à-dire…",
+  "explanation": "Il n'y a pas de saint Glinglin au calendrier : la date n'arrivera donc jamais.",
+  "options": [
+   "Jamais*",
+   "À la fin de l'été",
+   "Le jour de la Toussaint",
+   "Le 1er avril"
+  ]
+ },
+ {
+  "key": "fra25-040",
+  "concept": "french.vocabulary.v25_abbe_gregoire",
+  "label": "La langue en 1794",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "En 1794, l'abbé Grégoire mène une enquête sur les langues de France. Quelle part des Français parlait alors correctement le français ?",
+  "explanation": "Il estime à 3 millions sur 28 ceux qui le parlent bien. Les autres parlent breton, occitan, alsacien, basque, picard…",
+  "options": [
+   "Environ 1 sur 9*",
+   "Environ 1 sur 2",
+   "Presque tous",
+   "Environ 3 sur 4"
+  ]
+ },
+ {
+  "key": "fra25-041",
+  "concept": "french.vocabulary.v25_meteque",
+  "label": "Origine de « métèque »",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Dans la Grèce antique, un « métèque » était…",
+  "explanation": "Le mot grec voulait dire « qui habite avec ». Il n'avait rien d'insultant ; il l'est devenu en français.",
+  "options": [
+   "Un étranger installé dans la cité*",
+   "Un esclave affranchi",
+   "Un marchand ambulant",
+   "Un soldat payé"
+  ]
+ },
+ {
+  "key": "fra25-042",
+  "concept": "french.vocabulary.v25_tohu_mcq",
+  "label": "Origine de « tohu-bohu »",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Tohu-bohu » vient de l'hébreu de la Bible. Il décrit…",
+  "explanation": "« Tohou wa bohou » : la Terre « informe et vide » du premier verset de la Genèse.",
+  "options": [
+   "Le chaos avant la Création*",
+   "La chute des murs de Jéricho",
+   "Le bruit de l'arche de Noé",
+   "La tour de Babel"
+  ]
+ },
+ {
+  "key": "fra25-043",
+  "concept": "french.vocabulary.v25_fete_noms",
+  "label": "Le suffixe -ier",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Dans les noms de métiers, à quoi correspond le suffixe « -ier » de « chapelier », « pâtissier » ou « serrurier » ?",
+  "explanation": "Le chapelier fait des chapeaux, le pâtissier des pâtisseries, le serrurier des serrures. Le suffixe vient du latin « -arius ».",
+  "options": [
+   "Celui qui fabrique ou vend*",
+   "Celui qui répare",
+   "Le lieu où l'on travaille",
+   "L'outil utilisé"
+  ]
+ },
+ {
+  "key": "fra25-044",
+  "concept": "french.vocabulary.v25_hapax_tik",
+  "label": "Les canuts",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel mot désignait à Lyon l'ouvrier de la soie ?",
+  "explanation": "Les canuts tissaient la soie à la Croix-Rousse. Le gone est le gamin lyonnais, la traboule un passage entre deux rues.",
+  "options": [
+   "Canut*",
+   "Gone",
+   "Bouchon",
+   "Traboule"
+  ]
+ },
+ {
+  "key": "fra25-045",
+  "concept": "french.vocabulary.v25_metiers_anciens_q",
+  "label": "Métier ancien",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Que faisait un « rémouleur » ?",
+  "explanation": "Il passait dans les rues avec sa meule pour aiguiser couteaux et ciseaux.",
+  "options": [
+   "Il aiguisait les couteaux*",
+   "Il réparait les moulins",
+   "Il ramait sur les péniches",
+   "Il moulait les bougies"
+  ]
+ },
+ {
+  "key": "fra25-046",
+  "concept": "french.vocabulary.v25_mancie",
+  "label": "Les arts divinatoires",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque mot à ce qu'il interroge pour prédire l'avenir.",
+  "explanation": "« Mancie » vient du grec « divination ». Kheir, la main ; oneiros, le rêve ; nekros, le mort.",
+  "pairs": [
+   [
+    "Chiromancie",
+    "Les lignes de la main"
+   ],
+   [
+    "Cartomancie",
+    "Les cartes"
+   ],
+   [
+    "Oniromancie",
+    "Les rêves"
+   ],
+   [
+    "Nécromancie",
+    "Les morts"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-047",
+  "concept": "french.vocabulary.v25_langues_lointaines",
+  "label": "Des mots du bout du monde",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque mot à la langue d'où il vient.",
+  "explanation": "Le shampooing est passé par l'anglais ; le hamac par l'espagnol. L'avatar est une incarnation d'un dieu hindou.",
+  "pairs": [
+   [
+    "Paréo",
+    "Le tahitien"
+   ],
+   [
+    "Shampooing",
+    "Le hindi"
+   ],
+   [
+    "Hamac",
+    "Le taïno (Caraïbes)"
+   ],
+   [
+    "Avatar",
+    "Le sanskrit"
+   ],
+   [
+    "Toboggan",
+    "L'algonquin (Canada)"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-048",
+  "concept": "french.vocabulary.v25_couleurs_rares",
+  "label": "Couleurs rares",
+  "type": "pairs",
+  "difficulty": 80,
+  "prompt": "Associe chaque mot à sa couleur.",
+  "explanation": "« Glauque » veut d'abord dire vert-bleu, comme la mer ; le sens « sinistre » est venu plus tard.",
+  "pairs": [
+   [
+    "Zinzolin",
+    "Violet rougeâtre"
+   ],
+   [
+    "Glauque",
+    "Vert tirant sur le bleu"
+   ],
+   [
+    "Nacarat",
+    "Rouge orangé"
+   ],
+   [
+    "Céladon",
+    "Vert pâle"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-049",
+  "concept": "french.vocabulary.v25_mesures_anciennes",
+  "label": "Mesures d'autrefois",
+  "type": "pairs",
+  "difficulty": 70,
+  "prompt": "Associe chaque ancienne mesure à sa longueur approximative.",
+  "explanation": "Les « Bottes de sept lieues » faisaient donc près de 30 km à chaque pas ! Le mètre a remplacé ces mesures à la Révolution.",
+  "pairs": [
+   [
+    "Une lieue",
+    "Environ 4 km"
+   ],
+   [
+    "Une toise",
+    "Environ 2 m"
+   ],
+   [
+    "Un pied",
+    "Environ 32 cm"
+   ],
+   [
+    "Un pouce",
+    "Environ 2,7 cm"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-050",
+  "concept": "french.vocabulary.v25_metiers_oublies",
+  "label": "Métiers oubliés",
+  "type": "pairs",
+  "difficulty": 60,
+  "prompt": "Associe chaque métier à ce qu'il faisait.",
+  "explanation": "Le tonnelier existe toujours, pour les vins. Le bourrelier travaillait le cuir pour les chevaux.",
+  "pairs": [
+   [
+    "Tonnelier",
+    "Fabriquer des tonneaux"
+   ],
+   [
+    "Bourrelier",
+    "Fabriquer des harnais"
+   ],
+   [
+    "Rétameur",
+    "Recouvrir d'étain les casseroles"
+   ],
+   [
+    "Allumeur de réverbères",
+    "Éclairer les rues le soir"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-051",
+  "concept": "french.vocabulary.v25_collectifs",
+  "label": "Groupes d'animaux",
+  "type": "pairs",
+  "difficulty": 40,
+  "prompt": "Associe chaque mot au groupe d'animaux qu'il désigne.",
+  "explanation": "Et l'on parle aussi d'une nuée d'oiseaux, d'un troupeau de moutons ou d'une colonie de fourmis.",
+  "pairs": [
+   [
+    "Un essaim",
+    "Des abeilles"
+   ],
+   [
+    "Une harde",
+    "Des cerfs"
+   ],
+   [
+    "Une meute",
+    "Des chiens de chasse"
+   ],
+   [
+    "Un banc",
+    "Des poissons"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-052",
+  "concept": "french.vocabulary.v25_antonomases",
+  "label": "Des héros devenus des mots",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque mot à son sens.",
+  "explanation": "Don Juan vient du théâtre, Gavroche des « Misérables », Égérie d'une nymphe conseillère d'un roi romain, Mécène d'un ami d'Auguste.",
+  "pairs": [
+   [
+    "Un don Juan",
+    "Un grand séducteur"
+   ],
+   [
+    "Un gavroche",
+    "Un gamin de Paris débrouillard"
+   ],
+   [
+    "Une égérie",
+    "Une femme qui inspire un artiste"
+   ],
+   [
+    "Un mécène",
+    "Un protecteur des arts"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-053",
+  "concept": "french.vocabulary.v25_regional",
+  "label": "Mots de nos régions",
+  "type": "pairs",
+  "difficulty": 55,
+  "prompt": "Associe chaque mot régional à son sens.",
+  "explanation": "« Il y a dégun », il n'y a personne ; « c'est gavé bien », c'est très bien.",
+  "pairs": [
+   [
+    "Dégun (Marseille)",
+    "Personne"
+   ],
+   [
+    "Wassingue (Nord)",
+    "Serpillière"
+   ],
+   [
+    "Gavé (Bordeaux)",
+    "Très, beaucoup"
+   ],
+   [
+    "Fada (Provence)",
+    "Fou"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-054",
+  "concept": "french.vocabulary.v25_registres",
+  "label": "Familier ou courant",
+  "type": "pairs",
+  "difficulty": 30,
+  "prompt": "Associe chaque mot familier à son équivalent courant.",
+  "explanation": "« Se pieuter », c'est se coucher. « La flotte » peut aussi être la pluie.",
+  "pairs": [
+   [
+    "Un pieu",
+    "Un lit"
+   ],
+   [
+    "La flotte",
+    "L'eau"
+   ],
+   [
+    "Une bécane",
+    "Un vélo ou une moto"
+   ],
+   [
+    "Des godasses",
+    "Des chaussures"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-055",
+  "concept": "french.vocabulary.v25_abreviations_latines",
+  "label": "Abréviations latines",
+  "type": "pairs",
+  "difficulty": 65,
+  "prompt": "Associe chaque abréviation à son sens.",
+  "explanation": "Confer, ibidem, et alii, opere citato : du latin dans toutes les notes de bas de page.",
+  "pairs": [
+   [
+    "Cf.",
+    "Se reporter à"
+   ],
+   [
+    "Ibid.",
+    "Au même endroit"
+   ],
+   [
+    "Et al.",
+    "Et d'autres"
+   ],
+   [
+    "Op. cit.",
+    "Dans l'ouvrage cité"
+   ]
+  ]
+ },
+ {
+  "key": "fra25-056",
+  "concept": "french.vocabulary.v25_escogriffe",
+  "label": "Escogriffe",
+  "type": "letters",
+  "difficulty": 75,
+  "prompt": "Homme grand et dégingandé, à l'allure un peu inquiétante.",
+  "explanation": "« Un grand escogriffe » : le mot est familier et presque toujours précédé de « grand ».",
+  "word": "ESCOGRIFFE",
+  "display": "Escogriffe"
+ },
+ {
+  "key": "fra25-057",
+  "concept": "french.vocabulary.v25_capharnaum",
+  "label": "Capharnaüm",
+  "type": "letters",
+  "difficulty": 60,
+  "prompt": "Lieu où tout est entassé en désordre, du nom d'une ville de Galilée.",
+  "explanation": "La foule se pressait à Capharnaüm pour voir Jésus : le nom est devenu synonyme de grand bazar.",
+  "word": "CAPHARNAUM",
+  "display": "Capharnaüm"
+ },
+ {
+  "key": "fra25-058",
+  "concept": "french.vocabulary.v25_hurluberlu",
+  "label": "Hurluberlu",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Personne farfelue, qui agit sans réfléchir.",
+  "explanation": "Un mot qui sonne comme ce qu'il dit, attesté depuis le XVIe siècle.",
+  "word": "HURLUBERLU",
+  "display": "Hurluberlu"
+ },
+ {
+  "key": "fra25-059",
+  "concept": "french.vocabulary.v25_charabia",
+  "label": "Charabia",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Langage incompréhensible, galimatias.",
+  "explanation": "Le mot viendrait du parler des Auvergnats de Paris, à moins qu'il ne vienne de l'espagnol « algarabía », la langue arabe.",
+  "word": "CHARABIA",
+  "display": "Charabia"
+ },
+ {
+  "key": "fra25-060",
+  "concept": "french.vocabulary.v25_zozoter",
+  "label": "Zozoter",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Prononcer « z » à la place de « j » ou « s » : « ze zuis » pour « je suis ».",
+  "explanation": "On dit aussi « zézayer ». Le mot imite le défaut qu'il décrit.",
+  "word": "ZOZOTER",
+  "display": "Zozoter"
+ },
+ {
+  "key": "fra25-061",
+  "concept": "french.vocabulary.v25_calembour",
+  "label": "Calembour",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Jeu de mots qui joue sur deux sens d'un même son : « Qu'est-ce qui est jaune et qui attend ? Jonathan. »",
+  "explanation": "Les almanachs Vermot en sont remplis depuis 1886.",
+  "word": "CALEMBOUR",
+  "display": "Calembour"
+ },
+ {
+  "key": "fra25-062",
+  "concept": "french.vocabulary.v25_virelangue",
+  "label": "Virelangue",
+  "type": "letters",
+  "difficulty": 65,
+  "prompt": "Phrase difficile à prononcer vite, comme « Les chaussettes de l'archiduchesse… ».",
+  "explanation": "Le mot fait tourner (virer) la langue. Autre classique : « Un chasseur sachant chasser… ».",
+  "word": "VIRELANGUE",
+  "display": "Virelangue"
+ },
+ {
+  "key": "fra25-063",
+  "concept": "french.vocabulary.v25_barbarisme",
+  "label": "Barbarisme",
+  "type": "letters",
+  "difficulty": 70,
+  "prompt": "Faute qui déforme un mot, comme « aréoport » ou « vous disez ».",
+  "explanation": "Pour les Grecs, le barbare est celui qui parle mal leur langue. Le solécisme, lui, est une faute de construction.",
+  "word": "BARBARISME",
+  "display": "Barbarisme"
+ },
+ {
+  "key": "fra25-064",
+  "concept": "french.vocabulary.v25_esbroufe",
+  "label": "Esbroufe",
+  "type": "letters",
+  "difficulty": 65,
+  "prompt": "Manière de faire grande impression avec beaucoup d'aplomb… et peu de fond.",
+  "explanation": "Du provençal « esbroufa », s'ébrouer. « Faire de l'esbroufe », c'est bluffer.",
+  "word": "ESBROUFE",
+  "display": "Esbroufe"
+ },
+ {
+  "key": "fra25-065",
+  "concept": "french.vocabulary.v25_pataques",
+  "label": "Pataquès",
+  "type": "letters",
+  "difficulty": 75,
+  "prompt": "Faute de liaison comme « il va-t-à Paris » ; par extension, gros malentendu.",
+  "explanation": "D'une anecdote : « Ce n'est point-z-à moi. – Est-ce à vous ? – Je ne sais pas-t-à qui est-ce ! » Pat-à-qu'est-ce.",
+  "word": "PATAQUES",
+  "display": "Pataquès"
+ },
+ {
+  "key": "fra25-066",
+  "concept": "french.vocabulary.v25_abecedaire",
+  "label": "Abécédaire",
+  "type": "letters",
+  "difficulty": 40,
+  "prompt": "Livre pour apprendre l'alphabet aux enfants.",
+  "explanation": "Il est formé sur les quatre premières lettres : A, B, C, D.",
+  "word": "ABECEDAIRE",
+  "display": "Abécédaire"
+ },
+ {
+  "key": "fra25-067",
+  "concept": "french.vocabulary.v25_neologisme",
+  "label": "Néologisme",
+  "type": "letters",
+  "difficulty": 55,
+  "prompt": "Mot nouveau, comme « divulgâcher » ou « courriel » à leur création.",
+  "explanation": "Du grec « neos », nouveau, et « logos », le mot. Son contraire est l'archaïsme.",
+  "word": "NEOLOGISME",
+  "display": "Néologisme"
+ },
+ {
+  "key": "fra25-068",
+  "concept": "french.vocabulary.v25_boustifaille",
+  "label": "Boustifaille",
+  "type": "letters",
+  "difficulty": 35,
+  "prompt": "Mot familier pour la nourriture, en grande quantité.",
+  "explanation": "On dit aussi « la bouffe ». « Boustifailler », c'est manger beaucoup.",
+  "word": "BOUSTIFAILLE",
+  "display": "Boustifaille"
+ },
+ {
+  "key": "fra25-069",
+  "concept": "french.vocabulary.v25_magouille",
+  "label": "Magouille",
+  "type": "letters",
+  "difficulty": 30,
+  "prompt": "Manœuvre louche, petite tricherie entre amis.",
+  "explanation": "Un mot récent, apparu au XXe siècle, vite adopté pour parler de politique.",
+  "word": "MAGOUILLE",
+  "display": "Magouille"
+ },
+ {
+  "key": "fra25-070",
+  "concept": "french.vocabulary.v25_mirliton",
+  "label": "Mirliton",
+  "type": "letters",
+  "difficulty": 70,
+  "prompt": "Petite flûte en roseau ; des vers « de… » sont de très mauvais vers.",
+  "explanation": "On écrivait de petits poèmes sur les bandes de papier qui entouraient ces flûtes vendues dans les foires.",
+  "word": "MIRLITON",
+  "display": "Mirliton"
+ },
+ {
+  "key": "fra25-071",
+  "concept": "french.synonyms.v25_goguenard",
+  "label": "Goguenard",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Un air « goguenard » est un air…",
+  "explanation": "De la « gogue », la plaisanterie, en vieux français. On le retrouve dans « à gogo ».",
+  "options": [
+   "Moqueur*",
+   "Grognon",
+   "Endormi",
+   "Effrayé"
+  ]
+ },
+ {
+  "key": "fra25-072",
+  "concept": "french.synonyms.v25_cacochyme",
+  "label": "Cacochyme",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Un vieillard « cacochyme » est…",
+  "explanation": "Du grec « kakos », mauvais, et « khumos », humeur : on croyait la santé réglée par les humeurs du corps.",
+  "options": [
+   "De santé fragile*",
+   "Très grincheux",
+   "Très riche",
+   "Très bavard"
+  ]
+ },
+ {
+  "key": "fra25-073",
+  "concept": "french.synonyms.v25_prosaique",
+  "label": "Prosaïque",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Un esprit « prosaïque » est…",
+  "explanation": "Ce qui est de la prose, et non de la poésie : ordinaire, sans idéal.",
+  "options": [
+   "Terre à terre*",
+   "Rêveur",
+   "Rancunier",
+   "Bavard"
+  ]
+ },
+ {
+  "key": "fra25-074",
+  "concept": "french.synonyms.v25_pingre",
+  "label": "Pingre",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "Quel mot veut dire la même chose que « pingre » ?",
+  "explanation": "Le pingre compte ses sous. On dit aussi radin ou grippe-sou.",
+  "options": [
+   "Avare*",
+   "Grincheux",
+   "Peureux",
+   "Maladroit"
+  ]
+ },
+ {
+  "key": "fra25-075",
+  "concept": "french.synonyms.v25_ceans",
+  "label": "Céans",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "« Le maître de céans » est le maître…",
+  "explanation": "« Céans » est un vieil adverbe pour « ici, dedans ». Molière l'emploie souvent.",
+  "options": [
+   "De la maison où l'on se trouve*",
+   "De la cérémonie",
+   "Des chiens de chasse",
+   "D'une école de sciences"
+  ]
+ },
+ {
+  "key": "fra25-076",
+  "concept": "french.synonyms.v25_derechef",
+  "label": "Derechef",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "« Il recommença derechef » : « derechef » veut dire…",
+  "explanation": "Rien à voir avec un chef : « de rechef », à nouveau. La phrase est d'ailleurs un pléonasme.",
+  "options": [
+   "De nouveau*",
+   "Aussitôt",
+   "Sur ordre du chef",
+   "Avec énergie"
+  ]
+ },
+ {
+  "key": "fra25-077",
+  "concept": "french.synonyms.v25_nonobstant",
+  "label": "Nonobstant",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Nonobstant la pluie, ils sortirent. » « Nonobstant » veut dire…",
+  "explanation": "Mot du langage juridique : ce qui ne fait pas obstacle.",
+  "options": [
+   "Malgré*",
+   "À cause de",
+   "Avant",
+   "Sous"
+  ]
+ },
+ {
+  "key": "fra25-078",
+  "concept": "french.synonyms.v25_moult",
+  "label": "Moult",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Après moult efforts » : « moult » veut dire…",
+  "explanation": "Du latin « multum ». Le t ne se prononce généralement pas.",
+  "options": [
+   "Beaucoup de*",
+   "Très peu de",
+   "D'anciens",
+   "De vains"
+  ]
+ },
+ {
+  "key": "fra25-079",
+  "concept": "french.synonyms.v25_naguere",
+  "label": "Naguère",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Au sens strict, « naguère » veut dire…",
+  "explanation": "« Il n'y a guère » : il y a peu. On le confond souvent avec « jadis », qui renvoie à un passé lointain.",
+  "options": [
+   "Il y a peu de temps*",
+   "Il y a très longtemps",
+   "Jamais",
+   "Bientôt"
+  ]
+ },
+ {
+  "key": "fra25-080",
+  "concept": "french.synonyms.v25_iteratif",
+  "label": "Itératif",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Une demande « itérative » est…",
+  "explanation": "Du latin « iterum », de nouveau. En informatique, un calcul itératif se répète en boucle.",
+  "options": [
+   "Répétée*",
+   "Urgente",
+   "Écrite",
+   "Polie"
+  ]
+ },
+ {
+  "key": "fra25-081",
+  "concept": "french.synonyms.v25_saugrenu",
+  "label": "Saugrenu",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Une idée « saugrenue » est…",
+  "explanation": "Le mot viendrait de « sel grenu », du gros sel : une idée qui pique, inattendue.",
+  "options": [
+   "Bizarre et un peu ridicule*",
+   "Géniale",
+   "Méchante",
+   "Ancienne"
+  ]
+ },
+ {
+  "key": "fra25-082",
+  "concept": "french.synonyms.v25_faconde",
+  "label": "Faconde",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Un homme qui a de la « faconde » a…",
+  "explanation": "Du latin « facundia », l'éloquence. Le mot est souvent un peu moqueur : il parle beaucoup.",
+  "options": [
+   "Une grande facilité à parler*",
+   "Beaucoup d'enfants",
+   "Une grande force",
+   "Un caractère fourbe"
+  ]
+ },
+ {
+  "key": "fra25-083",
+  "concept": "french.synonyms.v25_ire",
+  "label": "Ire",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Dans la langue ancienne, « l'ire » du roi, c'est…",
+  "explanation": "Du latin « ira ». On le retrouve dans « irascible » et « irrité ».",
+  "options": [
+   "Sa colère*",
+   "Son héritier",
+   "Sa couronne",
+   "Sa garde"
+  ]
+ },
+ {
+  "key": "fra25-084",
+  "concept": "french.synonyms.v25_tergiverser",
+  "label": "Tergiverser",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quel est le synonyme le plus proche de « tergiverser » ?",
+  "explanation": "Du latin « tergum », le dos : tourner le dos, faire des détours pour ne pas décider.",
+  "options": [
+   "Hésiter*",
+   "Insulter",
+   "Résumer",
+   "Exagérer"
+  ]
+ },
+ {
+  "key": "fra25-085",
+  "concept": "french.synonyms.v25_allochtone",
+  "label": "Contraire d'autochtone",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Quel est le contraire d'« autochtone » ?",
+  "explanation": "Autochtone : né du sol même. Allochtone : venu d'ailleurs. Aborigène et indigène sont des synonymes.",
+  "options": [
+   "Allochtone*",
+   "Aborigène",
+   "Indigène",
+   "Endémique"
+  ]
+ },
+ {
+  "key": "fra25-086",
+  "concept": "french.synonyms.v25_nadir",
+  "label": "Contraire de zénith",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quel est le contraire du « zénith » ?",
+  "explanation": "Le zénith est le point juste au-dessus de nous, le nadir juste en dessous. Les deux mots viennent de l'arabe.",
+  "options": [
+   "Le nadir*",
+   "L'apogée",
+   "Le périgée",
+   "L'horizon"
+  ]
+ },
+ {
+  "key": "fra25-087",
+  "concept": "french.synonyms.v25_endogene",
+  "label": "Contraire d'exogène",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quel est le contraire d'« exogène » ?",
+  "explanation": "Exogène : qui vient de l'extérieur. Endogène : qui naît de l'intérieur.",
+  "options": [
+   "Endogène*",
+   "Homogène",
+   "Hétérogène",
+   "Allogène"
+  ]
+ },
+ {
+  "key": "fra25-088",
+  "concept": "french.synonyms.v25_misandre",
+  "label": "Misandre",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Une personne qui déteste les hommes (de sexe masculin) est…",
+  "explanation": "Le misogyne déteste les femmes, le misanthrope l'humanité entière, le misandre les hommes.",
+  "options": [
+   "Misandre*",
+   "Misanthrope",
+   "Misogyne",
+   "Androgyne"
+  ]
+ },
+ {
+  "key": "fra25-089",
+  "concept": "french.synonyms.v25_cadet",
+  "label": "Contraire de cadet",
+  "type": "mcq",
+  "difficulty": 15,
+  "prompt": "Quel est le contraire de « cadet » ?",
+  "explanation": "Le benjamin est le plus jeune ; le puîné, celui né après un autre : ce sont deux sortes de cadets.",
+  "options": [
+   "Aîné*",
+   "Benjamin",
+   "Jumeau",
+   "Puîné"
+  ]
+ },
+ {
+  "key": "fra25-090",
+  "concept": "french.synonyms.v25_veridique",
+  "label": "Contraire de véridique",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quel est le contraire de « véridique » ?",
+  "explanation": "Véridique : conforme à la vérité. Un récit vraisemblable peut sembler vrai sans l'être.",
+  "options": [
+   "Mensonger*",
+   "Vraisemblable",
+   "Authentique",
+   "Vérifiable"
+  ]
+ },
+ {
+  "key": "fra25-091",
+  "concept": "french.synonyms.v25_sincere",
+  "label": "Contraire de sincère",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Lequel de ces mots est le contraire de « sincère » ?",
+  "explanation": "L'hypocrite, au théâtre grec, était l'acteur : celui qui joue un rôle.",
+  "options": [
+   "Hypocrite*",
+   "Timide",
+   "Généreux",
+   "Naïf"
+  ]
+ },
+ {
+  "key": "fra25-092",
+  "concept": "french.synonyms.v25_gracile",
+  "label": "Gracile",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Une silhouette « gracile » est…",
+  "explanation": "Du latin « gracilis », mince. À ne pas confondre avec « gracieux ».",
+  "options": [
+   "Mince et fragile*",
+   "Pleine de grâce divine",
+   "Joyeuse",
+   "Rapide"
+  ]
+ },
+ {
+  "key": "fra25-093",
+  "concept": "french.synonyms.v25_irascible",
+  "label": "Irascible",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Une personne « irascible »…",
+  "explanation": "Comme « l'ire », il vient du latin « ira », la colère.",
+  "options": [
+   "Se met facilement en colère*",
+   "Ne se trompe jamais",
+   "Ne sait pas lire",
+   "Rit tout le temps"
+  ]
+ },
+ {
+  "key": "fra25-094",
+  "concept": "french.synonyms.v25_obtus",
+  "label": "Esprit obtus",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Un esprit « obtus » est…",
+  "explanation": "Un angle obtus est émoussé, pas pointu : un esprit obtus manque de finesse.",
+  "options": [
+   "Borné, lent à comprendre*",
+   "Très vif",
+   "Rusé",
+   "Ouvert"
+  ]
+ },
+ {
+  "key": "fra25-095",
+  "concept": "french.expressions.v25_chocolat",
+  "label": "Être chocolat",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "« Être chocolat », c'est…",
+  "explanation": "Vient sans doute du clown Chocolat, toujours dupé par son partenaire Footit au début du XXe siècle.",
+  "options": [
+   "Être privé de ce qu'on espérait*",
+   "Être très gourmand",
+   "Être bien bronzé",
+   "Être en retard"
+  ]
+ },
+ {
+  "key": "fra25-096",
+  "concept": "french.expressions.v25_rubis",
+  "label": "Payer rubis sur l'ongle",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Payer rubis sur l'ongle », c'est payer…",
+  "explanation": "On vidait son verre sur l'ongle : la dernière goutte, le « rubis », montrait qu'il ne restait rien.",
+  "options": [
+   "Tout, et tout de suite*",
+   "Avec des bijoux",
+   "En plusieurs fois",
+   "Plus que le prix"
+  ]
+ },
+ {
+  "key": "fra25-097",
+  "concept": "french.expressions.v25_arme_gauche",
+  "label": "Passer l'arme à gauche",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Passer l'arme à gauche », c'est…",
+  "explanation": "Une expression familière, peut-être tirée du maniement d'armes des soldats.",
+  "options": [
+   "Mourir*",
+   "Trahir son camp",
+   "Se rendre",
+   "Changer d'avis"
+  ]
+ },
+ {
+  "key": "fra25-098",
+  "concept": "french.expressions.v25_haro",
+  "label": "Crier haro sur le baudet",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Crier haro sur le baudet », c'est…",
+  "explanation": "Dans « Les Animaux malades de la peste » de La Fontaine, tous accusent l'âne, le plus faible, pour une simple bouchée d'herbe.",
+  "options": [
+   "Accuser quelqu'un avec tout le monde*",
+   "Encourager un perdant",
+   "Fouetter un âne",
+   "Annoncer une bonne nouvelle"
+  ]
+ },
+ {
+  "key": "fra25-099",
+  "concept": "french.expressions.v25_pied_grue",
+  "label": "Faire le pied de grue",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Faire le pied de grue », c'est…",
+  "explanation": "Comme la grue, l'oiseau, qui reste immobile sur une patte.",
+  "options": [
+   "Attendre longtemps debout*",
+   "Marcher sur la pointe des pieds",
+   "Danser maladroitement",
+   "Se tenir en équilibre"
+  ]
+ },
+ {
+  "key": "fra25-100",
+  "concept": "french.expressions.v25_benedictin",
+  "label": "Un travail de bénédictin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Un travail de bénédictin » est un travail…",
+  "explanation": "Les moines bénédictins étaient réputés pour leurs travaux d'érudition patients, comme copier des manuscrits.",
+  "options": [
+   "Long et minutieux*",
+   "Fait en silence",
+   "Mal payé",
+   "Fait à plusieurs"
+  ]
+ },
+ {
+  "key": "fra25-101",
+  "concept": "french.expressions.v25_collet_monte",
+  "label": "Collet monté",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Une personne « collet monté » est…",
+  "explanation": "Le collet monté était un col rigide, très droit, à la mode au XVIe siècle : on se tenait raide.",
+  "options": [
+   "Très stricte sur les convenances*",
+   "Toujours bien coiffée",
+   "Très frileuse",
+   "Prétentieuse et riche"
+  ]
+ },
+ {
+  "key": "fra25-102",
+  "concept": "french.expressions.v25_boulets_rouges",
+  "label": "Tirer à boulets rouges",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "« Tirer à boulets rouges sur quelqu'un », c'est…",
+  "explanation": "On chauffait les boulets de canon au rouge pour mettre le feu aux navires ennemis.",
+  "options": [
+   "L'attaquer violemment*",
+   "Lui faire honte en public",
+   "Le menacer sans agir",
+   "Le défendre avec ardeur"
+  ]
+ },
+ {
+  "key": "fra25-103",
+  "concept": "french.expressions.v25_grec",
+  "label": "C'est du chinois",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Pour dire « c'est du chinois », un Anglais dit : « C'est du… »",
+  "explanation": "« It's all Greek to me. » Chaque langue a son idiome incompréhensible : l'hébreu, le chinois, l'espagnol…",
+  "options": [
+   "Grec*",
+   "Chinois",
+   "Français",
+   "Latin"
+  ]
+ },
+ {
+  "key": "fra25-104",
+  "concept": "french.expressions.v25_french_leave",
+  "label": "À l'anglaise ?",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Quand un Anglais part sans dire au revoir, il ne part pas « à l'anglaise », mais…",
+  "explanation": "« To take French leave ». Chacun accuse son voisin de l'impolitesse.",
+  "options": [
+   "À la française*",
+   "À l'écossaise",
+   "À l'irlandaise",
+   "À la hollandaise"
+  ]
+ },
+ {
+  "key": "fra25-105",
+  "concept": "french.expressions.v25_pigs_fly",
+  "label": "Quand les poules auront des dents",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "L'équivalent anglais de « quand les poules auront des dents » parle de…",
+  "explanation": "« When pigs fly. » Les Allemands, eux, attendent que « Pâques et la Pentecôte tombent le même jour ».",
+  "options": [
+   "Cochons qui volent*",
+   "Vaches qui chantent",
+   "Poissons qui marchent",
+   "Chats qui aboient"
+  ]
+ },
+ {
+  "key": "fra25-106",
+  "concept": "french.expressions.v25_grenouille",
+  "label": "Une grenouille dans la gorge",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Un Anglais enroué n'a pas un chat dans la gorge, mais…",
+  "explanation": "« A frog in the throat. » Le chat français viendrait d'un jeu de mots avec « maton », le lait caillé.",
+  "options": [
+   "Une grenouille*",
+   "Un oiseau",
+   "Une souris",
+   "Un poisson"
+  ]
+ },
+ {
+  "key": "fra25-107",
+  "concept": "french.expressions.v25_melon",
+  "label": "Avoir le melon",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Avoir le melon », c'est…",
+  "explanation": "La tête a tellement enflé d'orgueil qu'elle ressemble à un melon. On dit aussi « avoir la grosse tête ».",
+  "options": [
+   "Être prétentieux*",
+   "Avoir mal à la tête",
+   "Avoir chaud",
+   "Avoir faim"
+  ]
+ },
+ {
+  "key": "fra25-108",
+  "concept": "french.expressions.v25_sur_la_paille",
+  "label": "Être sur la paille",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Être sur la paille », c'est…",
+  "explanation": "Celui qui n'a plus rien n'a que de la paille pour se coucher.",
+  "options": [
+   "Être ruiné*",
+   "Être à la campagne",
+   "Dormir tard",
+   "Être en prison"
+  ]
+ },
+ {
+  "key": "fra25-109",
+  "concept": "french.expressions.v25_dent_contre",
+  "label": "Avoir une dent contre",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Avoir une dent contre quelqu'un », c'est…",
+  "explanation": "On garde une rancune, une « dent », comme on garderait une envie de mordre.",
+  "options": [
+   "Lui en vouloir*",
+   "Vouloir le mordre",
+   "Le trouver drôle",
+   "Lui devoir de l'argent"
+  ]
+ },
+ {
+  "key": "fra25-110",
+  "concept": "french.expressions.v25_fine_bouche",
+  "label": "Faire la fine bouche",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« Faire la fine bouche », c'est…",
+  "explanation": "On fait mine de ne pas apprécier ce qu'on nous offre, comme un gourmet difficile.",
+  "options": [
+   "Faire le difficile*",
+   "Manger proprement",
+   "Parler avec élégance",
+   "Garder un secret"
+  ]
+ },
+ {
+  "key": "fra25-111",
+  "concept": "french.expressions.v25_monnaie_piece",
+  "label": "Rendre la monnaie de sa pièce",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Rendre à quelqu'un la monnaie de sa pièce », c'est…",
+  "explanation": "On lui retourne exactement ce qu'il a donné… en mauvais procédé.",
+  "options": [
+   "Lui rendre le mal qu'il a fait*",
+   "Le rembourser",
+   "Lui faire un cadeau",
+   "Le remercier"
+  ]
+ },
+ {
+  "key": "fra25-112",
+  "concept": "french.expressions.v25_sous_cape",
+  "label": "Rire sous cape",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "« Rire sous cape », c'est…",
+  "explanation": "On se cachait le visage dans le col de sa cape pour ne pas montrer qu'on riait.",
+  "options": [
+   "Rire en cachette*",
+   "Rire très fort",
+   "Rire de soi-même",
+   "Se forcer à rire"
+  ]
+ },
+ {
+  "key": "fra25-113",
+  "concept": "french.expressions.v25_petits_plats",
+  "label": "Les petits plats dans les grands",
+  "type": "mcq",
+  "difficulty": 35,
+  "prompt": "« Mettre les petits plats dans les grands », c'est…",
+  "explanation": "On sort tout le service, jusqu'aux grands plats de présentation, pour faire honneur aux invités.",
+  "options": [
+   "Recevoir ses invités avec beaucoup de soin*",
+   "Ranger sa vaisselle",
+   "Manger très peu",
+   "Faire des économies"
+  ]
+ },
+ {
+  "key": "fra25-114",
+  "concept": "french.expressions.v25_dents_fond",
+  "label": "Les dents du fond",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Avoir « les dents du fond qui baignent », c'est…",
+  "explanation": "Expression familière : on est rempli jusqu'aux dents du fond.",
+  "options": [
+   "Avoir trop mangé ou trop bu*",
+   "Avoir une rage de dents",
+   "Avoir peur de l'eau",
+   "Avoir la bouche pâteuse"
+  ]
+ },
+ {
+  "key": "fra25-115",
+  "concept": "french.expressions.v25_carreau",
+  "label": "Se tenir à carreau",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "« Se tenir à carreau », c'est…",
+  "explanation": "L'origine est discutée : peut-être le carreau des cartes, la couleur la mieux « protégée » par ses quatre pointes.",
+  "options": [
+   "Rester prudent, sur ses gardes*",
+   "Rester à la fenêtre",
+   "Ne pas sortir de chez soi",
+   "Bien s'habiller"
+  ]
+ },
+ {
+  "key": "fra25-116",
+  "concept": "french.expressions.v25_du_chien",
+  "label": "Avoir du chien",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Une personne qui « a du chien »…",
+  "explanation": "Expression familière du XIXe siècle pour une personne au charme piquant.",
+  "options": [
+   "A du charme, de l'allure*",
+   "Est très fidèle",
+   "A mauvais caractère",
+   "Est très sportive"
+  ]
+ },
+ {
+  "key": "fra25-117",
+  "concept": "french.expressions.v25_mer_a_boire",
+  "label": "Ce n'est pas la mer à boire",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Ce n'est pas la mer à boire » veut dire…",
+  "explanation": "Boire la mer serait impossible : la tâche, elle, est faisable.",
+  "options": [
+   "Ce n'est pas si difficile*",
+   "Ce n'est pas buvable",
+   "Ce n'est pas loin",
+   "Ce n'est pas le moment"
+  ]
+ },
+ {
+  "key": "fra25-118",
+  "concept": "french.expressions.v25_pieds_mains",
+  "label": "Faire des pieds et des mains",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Faire des pieds et des mains », c'est…",
+  "explanation": "On s'y met de tout son corps, sans ménager ses efforts.",
+  "options": [
+   "Tout faire pour obtenir quelque chose*",
+   "Faire de la gymnastique",
+   "Parler avec les mains",
+   "Être très maladroit"
+  ]
+ },
+ {
+  "key": "fra25-119",
+  "concept": "french.expressions.v25_trente_et_un",
+  "label": "Sur son trente-et-un",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Se mettre sur son trente-et-un », c'est…",
+  "explanation": "L'origine reste discutée : peut-être le « trentain », un drap de luxe.",
+  "options": [
+   "S'habiller très élégamment*",
+   "Se coucher tard",
+   "Fêter la fin du mois",
+   "Arriver en retard"
+  ]
+ },
+ {
+  "key": "fra25-120",
+  "concept": "french.expressions.v25_epingles",
+  "label": "Tiré à quatre épingles",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "Une personne « tirée à quatre épingles » est…",
+  "explanation": "Le tissu est si bien tendu qu'on le dirait fixé aux quatre coins par des épingles.",
+  "options": [
+   "Habillée avec un soin extrême*",
+   "Très nerveuse",
+   "Mal coiffée",
+   "Couverte de bijoux"
+  ]
+ },
+ {
+  "key": "fra25-121",
+  "concept": "french.expressions.v25_papier_musique",
+  "label": "Réglé comme du papier à musique",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "Une personne « réglée comme du papier à musique » est…",
+  "explanation": "Le papier à musique est réglé : ses portées sont tracées avec une parfaite régularité.",
+  "options": [
+   "Très régulière dans ses habitudes*",
+   "Très douée pour le chant",
+   "Très bruyante",
+   "Très bien payée"
+  ]
+ },
+ {
+  "key": "fra25-122",
+  "concept": "french.expressions.v25_ecole_buissonniere",
+  "label": "L'école buissonnière",
+  "type": "mcq",
+  "difficulty": 20,
+  "prompt": "« Faire l'école buissonnière », c'est…",
+  "explanation": "Au XVIe siècle, des écoles clandestines se tenaient dans la campagne, à l'abri des buissons.",
+  "options": [
+   "Ne pas aller en classe pour se promener*",
+   "Faire classe en plein air",
+   "Apprendre la botanique",
+   "Redoubler"
+  ]
+ },
+ {
+  "key": "fra25-123",
+  "concept": "french.expressions.v25_rester_marbre",
+  "label": "Rester de marbre",
+  "type": "mcq",
+  "difficulty": 25,
+  "prompt": "« Rester de marbre », c'est…",
+  "explanation": "Comme une statue de marbre, impassible.",
+  "options": [
+   "Ne montrer aucune émotion*",
+   "Rester immobile pour une photo",
+   "Rester très longtemps",
+   "Avoir froid"
+  ]
+ },
+ {
+  "key": "fra25-124",
+  "concept": "french.expressions.v25_impossible",
+  "label": "À l'impossible…",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "explanation": "Personne ne peut être obligé de faire ce qui est impossible. C'était déjà un principe du droit romain.",
+  "answer": "À l'impossible nul n'est tenu",
+  "words": [
+   "À",
+   "l'impossible",
+   "nul",
+   "n'est",
+   "tenu"
+  ]
+ },
+ {
+  "key": "fra25-125",
+  "concept": "french.expressions.v25_avoir_du_nez",
+  "label": "Avoir du nez",
+  "type": "mcq",
+  "difficulty": 30,
+  "prompt": "« Avoir du nez », c'est…",
+  "explanation": "Comme le chien qui flaire la bonne piste. On dit aussi « avoir le nez creux ».",
+  "options": [
+   "Avoir de l'intuition*",
+   "Être curieux",
+   "Être enrhumé",
+   "Être prétentieux"
+  ]
+ },
+ {
+  "key": "fra25-126",
+  "concept": "french.expressions.v25_fontaine",
+  "label": "Fontaine",
+  "type": "word_order",
+  "difficulty": 55,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "explanation": "Ne jurons pas qu'on n'aura jamais besoin de quelque chose ou de quelqu'un.",
+  "answer": "Il ne faut pas dire fontaine, je ne boirai pas de ton eau",
+  "words": [
+   "Il",
+   "ne",
+   "faut",
+   "pas",
+   "dire",
+   "fontaine,",
+   "je",
+   "ne",
+   "boirai",
+   "pas",
+   "de",
+   "ton",
+   "eau"
+  ]
+ },
+ {
+  "key": "fra25-127",
+  "concept": "french.expressions.v25_larron",
+  "label": "L'occasion fait le larron",
+  "type": "word_order",
+  "difficulty": 40,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "explanation": "Le larron, c'est le voleur : une occasion facile peut pousser quelqu'un d'honnête à mal faire.",
+  "answer": "L'occasion fait le larron",
+  "words": [
+   "L'occasion",
+   "fait",
+   "le",
+   "larron"
+  ]
+ },
+ {
+  "key": "fra25-128",
+  "concept": "french.expressions.v25_boileau",
+  "label": "Boileau",
+  "type": "word_order",
+  "difficulty": 65,
+  "prompt": "Remets dans l'ordre ce vers de Boileau sur l'art d'écrire.",
+  "explanation": "La suite : « Et les mots pour le dire arrivent aisément. » (« L'Art poétique », 1674)",
+  "answer": "Ce que l'on conçoit bien s'énonce clairement",
+  "words": [
+   "Ce",
+   "que",
+   "l'on",
+   "conçoit",
+   "bien",
+   "s'énonce",
+   "clairement"
+  ]
+ },
+ {
+  "key": "fra25-129",
+  "concept": "french.expressions.v25_brille",
+  "label": "Tout ce qui brille",
+  "type": "word_order",
+  "difficulty": 30,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "explanation": "Les apparences sont trompeuses : ce qui a l'air précieux ne l'est pas toujours.",
+  "answer": "Tout ce qui brille n'est pas or",
+  "words": [
+   "Tout",
+   "ce",
+   "qui",
+   "brille",
+   "n'est",
+   "pas",
+   "or"
+  ]
+ },
+ {
+  "key": "fra25-130",
+  "concept": "french.expressions.v25_fortune",
+  "label": "Contre mauvaise fortune",
+  "type": "word_order",
+  "difficulty": 45,
+  "prompt": "Remets cette expression dans l'ordre.",
+  "explanation": "Garder le moral quand les choses tournent mal.",
+  "answer": "Faire contre mauvaise fortune bon cœur",
+  "words": [
+   "Faire",
+   "contre",
+   "mauvaise",
+   "fortune",
+   "bon",
+   "cœur"
+  ]
+ },
+ {
+  "key": "fra25-131",
+  "concept": "french.expressions.v25_ressemble",
+  "label": "Qui se ressemble",
+  "type": "word_order",
+  "difficulty": 20,
+  "prompt": "Remets ce proverbe dans l'ordre.",
+  "explanation": "Les gens qui ont les mêmes goûts se retrouvent ensemble.",
+  "answer": "Qui se ressemble s'assemble",
+  "words": [
+   "Qui",
+   "se",
+   "ressemble",
+   "s'assemble"
+  ]
+ },
+ {
+  "key": "fra25-132",
+  "concept": "french.grammar.v25_plein_prep",
+  "label": "Plein les poches",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Dans « Il a de l'argent plein les poches », quelle est la nature de « plein » ?",
+  "explanation": "Placé devant le nom avec son article, « plein » devient une préposition invariable : « des billes plein les poches ».",
+  "options": [
+   "Préposition*",
+   "Adjectif",
+   "Adverbe",
+   "Nom"
+  ]
+ },
+ {
+  "key": "fra25-133",
+  "concept": "french.grammar.v25_possible",
+  "label": "Le moins d'erreurs possible",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle phrase est correcte ?",
+  "explanation": "Après « le moins », « le plus », « possible » reste invariable : on sous-entend « qu'il est possible ».",
+  "options": [
+   "Fais le moins d'erreurs possible.*",
+   "Fais le moins d'erreurs possibles.",
+   "Fais le moins d'erreur possibles."
+  ]
+ },
+ {
+  "key": "fra25-134",
+  "concept": "french.grammar.v25_roses",
+  "label": "Des robes roses",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Quelle orthographe est correcte ?",
+  "explanation": "Les noms devenus couleurs restent invariables (marron, orange), sauf six exceptions qui s'accordent : rose, mauve, pourpre, fauve, écarlate, incarnat.",
+  "options": [
+   "Des robes roses*",
+   "Des robes rose",
+   "Des robe roses"
+  ]
+ },
+ {
+  "key": "fra25-135",
+  "concept": "french.grammar.v25_chatain_clair",
+  "label": "Châtain clair",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Elle a les cheveux…",
+  "explanation": "Un adjectif de couleur composé (châtain clair, bleu foncé, vert pomme) reste invariable.",
+  "options": [
+   "Châtain clair*",
+   "Châtains clairs",
+   "Châtains clair",
+   "Châtain clairs"
+  ]
+ },
+ {
+  "key": "fra25-136",
+  "concept": "french.grammar.v25_entendue_chanter",
+  "label": "Entendue chanter",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quelle phrase est correcte ?",
+  "explanation": "C'est la chanteuse qui chante : le COD fait l'action de l'infinitif, le participe s'accorde. Mais : « la chanson que j'ai entendu chanter ».",
+  "options": [
+   "La chanteuse que j'ai entendue chanter*",
+   "La chanteuse que j'ai entendu chanter",
+   "La chanteuse que j'ai entendus chanter",
+   "La chanteuse que j'ai entendues chanter"
+  ]
+ },
+ {
+  "key": "fra25-137",
+  "concept": "french.grammar.v25_funerailles",
+  "label": "Toujours au pluriel",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Lequel de ces mots n'existe qu'au pluriel ?",
+  "explanation": "Un ciseau sert au sculpteur, une lunette à l'astronome, et un poste peut être en vacance. Funérailles, lui, n'a pas de singulier.",
+  "options": [
+   "Funérailles*",
+   "Ciseaux",
+   "Lunettes",
+   "Vacances"
+  ]
+ },
+ {
+  "key": "fra25-138",
+  "concept": "french.grammar.v25_bonshommes",
+  "label": "Pluriel de bonhomme",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Quel est le pluriel de « bonhomme » ?",
+  "explanation": "Le mot était « bon homme » : les deux parties prennent la marque du pluriel, comme dans « messieurs » ou « mesdames ».",
+  "options": [
+   "Des bonshommes*",
+   "Des bonhommes",
+   "Des bonshomme",
+   "Des bons-hommes"
+  ]
+ },
+ {
+  "key": "fra25-139",
+  "concept": "french.grammar.v25_oeils",
+  "label": "Pluriel d'œil-de-bœuf",
+  "type": "mcq",
+  "difficulty": 85,
+  "prompt": "Quel est le pluriel de « œil-de-bœuf », la petite fenêtre ronde ?",
+  "explanation": "Dans les noms composés, « œil » fait « œils » : des œils-de-bœuf, des œils-de-perdrix (sortes de cors au pied).",
+  "options": [
+   "Des œils-de-bœuf*",
+   "Des yeux-de-bœuf",
+   "Des yeux-de-bœufs",
+   "Des œils-de-bœufs"
+  ]
+ },
+ {
+  "key": "fra25-140",
+  "concept": "french.grammar.v25_ail_s",
+  "label": "Les mots en -ail",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "Lequel de ces mots en -ail fait son pluriel en -s ?",
+  "explanation": "Des détails, comme des chandails et des éventails. Mais des coraux, des émaux, des soupiraux.",
+  "options": [
+   "Détail*",
+   "Corail",
+   "Émail",
+   "Soupirail"
+  ]
+ },
+ {
+  "key": "fra25-141",
+  "concept": "french.grammar.v25_epitaphe",
+  "label": "Le genre d'épitaphe",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Lequel de ces mots est féminin ?",
+  "explanation": "Une épitaphe, l'inscription sur une tombe. Mais un hémisphère, un planisphère et un astérisque.",
+  "options": [
+   "Épitaphe*",
+   "Hémisphère",
+   "Planisphère",
+   "Astérisque"
+  ]
+ },
+ {
+  "key": "fra25-142",
+  "concept": "french.grammar.v25_armistice",
+  "label": "Le genre d'armistice",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Lequel de ces mots est masculin ?",
+  "explanation": "Un armistice, comme le 11 novembre. Mais une écritoire, une échappatoire, une épithète.",
+  "options": [
+   "Armistice*",
+   "Écritoire",
+   "Échappatoire",
+   "Épithète"
+  ]
+ },
+ {
+  "key": "fra25-143",
+  "concept": "french.grammar.v25_acquierent",
+  "label": "Présent d'acquérir",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Présent d'« acquérir » : « Ils ___ de l'expérience. »",
+  "explanation": "J'acquiers, nous acquérons, ils acquièrent : accent grave quand la syllabe se prononce « è ».",
+  "options": [
+   "Acquièrent*",
+   "Acquérent",
+   "Acquièrrent",
+   "Acquérissent"
+  ]
+ },
+ {
+  "key": "fra25-144",
+  "concept": "french.grammar.v25_aie",
+  "label": "Impératif d'avoir",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« ___ confiance en toi ! »",
+  "explanation": "À l'impératif, « avoir » fait « aie » : aie, ayons, ayez. Comme les verbes en -er, sans s.",
+  "options": [
+   "Aie*",
+   "Aies",
+   "Ait",
+   "Ai"
+  ]
+ },
+ {
+  "key": "fra25-145",
+  "concept": "french.grammar.v25_croyions",
+  "label": "Subjonctif de croire",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« Il faut que nous ___ en nos chances. »",
+  "explanation": "Au subjonctif présent, « nous » prend -ions : que nous croyions. Le y de « croyons » s'ajoute au i de la terminaison.",
+  "options": [
+   "Croyions*",
+   "Croyons",
+   "Croiions",
+   "Crussions"
+  ]
+ },
+ {
+  "key": "fra25-146",
+  "concept": "french.grammar.v25_moulent",
+  "label": "Présent de moudre",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Présent de « moudre » : « Ils ___ le café. »",
+  "explanation": "Je mouds, il moud, nous moulons, ils moulent. Le l réapparaît au pluriel.",
+  "options": [
+   "Moulent*",
+   "Moudent",
+   "Mouent",
+   "Moudrent"
+  ]
+ },
+ {
+  "key": "fra25-147",
+  "concept": "french.grammar.v25_bout",
+  "label": "Présent de bouillir",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Présent de « bouillir » : « L'eau ___. »",
+  "explanation": "Je bous, tu bous, il bout ; nous bouillons. « Bouillit » est le passé simple.",
+  "options": [
+   "Bout*",
+   "Bouille",
+   "Bouillit",
+   "Bouit"
+  ]
+ },
+ {
+  "key": "fra25-148",
+  "concept": "french.grammar.v25_mourut",
+  "label": "Passé simple de mourir",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "Passé simple : « Le roi ___ en 1715. »",
+  "explanation": "Louis XIV mourut le 1er septembre 1715. « Mourra » est le futur, « mourait » l'imparfait.",
+  "options": [
+   "Mourut*",
+   "Mourit",
+   "Mourra",
+   "Mourait"
+  ]
+ },
+ {
+  "key": "fra25-149",
+  "concept": "french.grammar.v25_haissons",
+  "label": "Présent de haïr",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "Présent de « haïr » : « Nous ___ l'injustice. »",
+  "explanation": "Haïr se conjugue comme finir, avec un tréma : nous haïssons. Seuls je, tu, il hais perdent le tréma.",
+  "options": [
+   "Haïssons*",
+   "Haïons",
+   "Haïsons",
+   "Hayons"
+  ]
+ },
+ {
+  "key": "fra25-150",
+  "concept": "french.grammar.v25_clos",
+  "label": "Participe de clore",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« L'affaire est ___. »",
+  "explanation": "Le participe passé de « clore » est « clos », « close ». On dit aussi « à huis clos ».",
+  "options": [
+   "Close*",
+   "Closée",
+   "Clore",
+   "Clôse"
+  ]
+ },
+ {
+  "key": "fra25-151",
+  "concept": "french.grammar.v25_sache",
+  "label": "Impératif de savoir",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« ___ que je serai toujours là pour toi. »",
+  "explanation": "À l'impératif, « savoir » fait « sache, sachons, sachez », comme le subjonctif mais sans s.",
+  "options": [
+   "Sache*",
+   "Sais",
+   "Saches",
+   "Sachant"
+  ]
+ },
+ {
+  "key": "fra25-152",
+  "concept": "french.grammar.v25_assieds",
+  "label": "S'asseoir",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "« Je m'assois » et « je m'assieds » : lesquelles sont correctes ?",
+  "explanation": "Asseoir a deux conjugaisons, toutes deux correctes : je m'assieds, nous nous asseyons ; je m'assois, nous nous assoyons.",
+  "options": [
+   "Les deux*",
+   "Seulement « je m'assieds »",
+   "Seulement « je m'assois »",
+   "Aucune"
+  ]
+ },
+ {
+  "key": "fra25-153",
+  "concept": "french.grammar.v25_nature_que",
+  "label": "Que exclamatif",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Dans « Que tu es grand ! », quelle est la nature de « que » ?",
+  "explanation": "Il porte sur l'adjectif « grand » et exprime l'intensité : c'est un adverbe, comme « comme » dans « Comme tu es grand ! ».",
+  "options": [
+   "Adverbe exclamatif*",
+   "Pronom relatif",
+   "Conjonction de subordination",
+   "Pronom interrogatif"
+  ]
+ },
+ {
+  "key": "fra25-154",
+  "concept": "french.grammar.v25_voix_passive_q",
+  "label": "Le complément d'agent",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Dans « Le gâteau a été dévoré par les enfants », « par les enfants » est…",
+  "explanation": "À la voix passive, celui qui fait l'action est le complément d'agent. À l'actif : les enfants ont dévoré le gâteau.",
+  "options": [
+   "Complément d'agent*",
+   "Complément d'objet indirect",
+   "Complément circonstanciel de moyen",
+   "Sujet réel"
+  ]
+ },
+ {
+  "key": "fra25-155",
+  "concept": "french.grammar.v25_ce_dont",
+  "label": "Ce dont",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "« C'est ___ j'ai besoin. »",
+  "explanation": "On a besoin DE quelque chose : il faut « dont », qui remplace un complément introduit par « de ».",
+  "options": [
+   "Ce dont*",
+   "Ce que",
+   "Ce qu'",
+   "Ce qui"
+  ]
+ },
+ {
+  "key": "fra25-156",
+  "concept": "french.grammar.v25_ci_joint",
+  "label": "Ci-joint",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "En tête de phrase, on écrit…",
+  "explanation": "Placé en tête de phrase ou devant un nom sans article, « ci-joint » est invariable. Mais : « la facture ci-jointe ».",
+  "options": [
+   "Ci-joint la facture.*",
+   "Ci-jointe la facture.",
+   "Ci-joints la facture.",
+   "Ci joint la facture."
+  ]
+ },
+ {
+  "key": "fra25-157",
+  "concept": "french.grammar.v25_sont_mis",
+  "label": "Elles se sont tues",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« Les invitées se sont ___ quand il est entré. »",
+  "explanation": "« Se taire » est toujours pronominal : le participe s'accorde avec le sujet. Elles se sont tues. « Tuées » vient de « tuer » !",
+  "options": [
+   "Tues*",
+   "Tu",
+   "Tus",
+   "Tuées"
+  ]
+ },
+ {
+  "key": "fra25-158",
+  "concept": "french.spelling.v25_exauces",
+  "label": "Exaucer ou exhausser",
+  "type": "mcq",
+  "difficulty": 50,
+  "prompt": "« Ses vœux ont été ___. »",
+  "explanation": "Exaucer : satisfaire une prière. Exhausser : rendre plus haut, comme on exhausse un mur.",
+  "options": [
+   "Exaucés*",
+   "Exhaussés",
+   "Exocés",
+   "Exaussés"
+  ]
+ },
+ {
+  "key": "fra25-159",
+  "concept": "french.spelling.v25_infester",
+  "label": "Infester ou infecter",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Les moustiques ___ la région. »",
+  "explanation": "Infester : envahir en grand nombre. Infecter : contaminer, comme une plaie infectée.",
+  "options": [
+   "Infestent*",
+   "Infectent",
+   "Infèstent",
+   "Enfestent"
+  ]
+ },
+ {
+  "key": "fra25-160",
+  "concept": "french.spelling.v25_collusion",
+  "label": "Collusion ou collision",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "« La ___ entre le maire et l'entrepreneur a été prouvée. »",
+  "explanation": "La collusion est une entente secrète. La collision, un choc entre deux véhicules.",
+  "options": [
+   "Collusion*",
+   "Collision",
+   "Colusion",
+   "Collation"
+  ]
+ },
+ {
+  "key": "fra25-161",
+  "concept": "french.spelling.v25_acception",
+  "label": "Acception ou acceptation",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "« Le mot est pris dans toutes ses ___. »",
+  "explanation": "Une acception est un sens d'un mot. L'acceptation, c'est le fait d'accepter.",
+  "options": [
+   "Acceptions*",
+   "Acceptations",
+   "Accepssions",
+   "Exceptions"
+  ]
+ },
+ {
+  "key": "fra25-162",
+  "concept": "french.spelling.v25_recouvrer",
+  "label": "Recouvrer ou recouvrir",
+  "type": "mcq",
+  "difficulty": 60,
+  "prompt": "« Après l'opération, il a ___ la vue. »",
+  "explanation": "Recouvrer : retrouver ce qu'on avait perdu. Recouvrir : couvrir de nouveau. On recouvre la santé, on recouvre un fauteuil.",
+  "options": [
+   "Recouvré*",
+   "Recouvert",
+   "Recouvri",
+   "Recouvrit"
+  ]
+ },
+ {
+  "key": "fra25-163",
+  "concept": "french.spelling.v25_inclinaison",
+  "label": "Inclinaison ou inclination",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "« L'___ de la tour de Pise inquiète les ingénieurs. »",
+  "explanation": "L'inclinaison est la pente d'un objet. L'inclination est un penchant du cœur : « avoir de l'inclination pour quelqu'un ».",
+  "options": [
+   "Inclinaison*",
+   "Inclination",
+   "Inclinaision",
+   "Enclinaison"
+  ]
+ },
+ {
+  "key": "fra25-164",
+  "concept": "french.spelling.v25_bonne_chere",
+  "label": "Faire bonne chère",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Bien manger, c'est « faire bonne ___ ».",
+  "explanation": "La « chère » désignait le visage, puis l'accueil, puis le repas. Rien à voir avec la chair, la viande.",
+  "options": [
+   "Chère*",
+   "Chair",
+   "Chaire",
+   "Cher"
+  ]
+ },
+ {
+  "key": "fra25-165",
+  "concept": "french.spelling.v25_seing",
+  "label": "Sous seing privé",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "Un contrat signé entre particuliers, sans notaire, est un acte « sous ___ privé ».",
+  "explanation": "Le seing est la signature, du latin « signum ». On le retrouve dans « blanc-seing ».",
+  "options": [
+   "Seing*",
+   "Sein",
+   "Saint",
+   "Ceint"
+  ]
+ },
+ {
+  "key": "fra25-166",
+  "concept": "french.spelling.v25_taon",
+  "label": "Le taon",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "« Aïe ! Un ___ m'a piqué. »",
+  "explanation": "Le taon, grosse mouche qui pique le bétail, se prononce « tan ». Le o ne s'entend pas.",
+  "options": [
+   "Taon*",
+   "Temps",
+   "Tant",
+   "Tan"
+  ]
+ },
+ {
+  "key": "fra25-167",
+  "concept": "french.spelling.v25_dessein",
+  "label": "Dessein ou dessin",
+  "type": "mcq",
+  "difficulty": 55,
+  "prompt": "« Il l'a fait dans le ___ de nuire. »",
+  "explanation": "Le dessein est une intention. Le dessin se fait au crayon. « À dessein » veut dire exprès.",
+  "options": [
+   "Dessein*",
+   "Dessin",
+   "Desein",
+   "Dessain"
+  ]
+ },
+ {
+  "key": "fra25-168",
+  "concept": "french.spelling.v25_fonts",
+  "label": "Les fonts baptismaux",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "On baptise les enfants sur les « ___ baptismaux ».",
+  "explanation": "Les fonts sont le bassin d'eau baptismale, du latin « fons », la source. Ils n'ont rien d'un fond.",
+  "options": [
+   "Fonts*",
+   "Fonds",
+   "Fond",
+   "Fons"
+  ]
+ },
+ {
+  "key": "fra25-169",
+  "concept": "french.spelling.v25_martyre",
+  "label": "Martyr ou martyre",
+  "type": "mcq",
+  "difficulty": 80,
+  "prompt": "« Pendant ce voyage, il a souffert le ___. »",
+  "explanation": "Le martyre est la souffrance ; le martyr, la personne qui la subit. Un martyr souffre le martyre.",
+  "options": [
+   "Martyre*",
+   "Martyr",
+   "Martir",
+   "Martire"
+  ]
+ },
+ {
+  "key": "fra25-170",
+  "concept": "french.spelling.v25_cuissot",
+  "label": "Cuissot ou cuisseau",
+  "type": "mcq",
+  "difficulty": 90,
+  "prompt": "Au menu de chasse : un ___ de chevreuil.",
+  "explanation": "Pour le gibier, on écrit « cuissot » ; pour le veau, « cuisseau ». Une subtilité de cuisinier !",
+  "options": [
+   "Cuissot*",
+   "Cuisseau",
+   "Cuisot",
+   "Cuiseau"
+  ]
+ },
+ {
+  "key": "fra25-171",
+  "concept": "french.spelling.v25_ballade",
+  "label": "Balade ou ballade",
+  "type": "mcq",
+  "difficulty": 45,
+  "prompt": "Chopin a composé quatre ___ pour piano.",
+  "explanation": "La ballade (deux l) est un poème ou une pièce de musique. La balade (un l) est une promenade.",
+  "options": [
+   "Ballades*",
+   "Balades",
+   "Ballads",
+   "Baladdes"
+  ]
+ },
+ {
+  "key": "fra25-172",
+  "concept": "french.spelling.v25_hemorragie",
+  "label": "Hémorragie",
+  "type": "mcq",
+  "difficulty": 70,
+  "prompt": "Quelle orthographe est correcte ?",
+  "explanation": "Deux r, pas de h après. Mais « hémorroïde » s'écrit aussi avec deux r.",
+  "options": [
+   "Hémorragie*",
+   "Hémorrhagie",
+   "Hémoragie",
+   "Hémmoragie"
+  ]
+ },
+ {
+  "key": "fra25-173",
+  "concept": "french.spelling.v25_echalote",
+  "label": "Échalote",
+  "type": "mcq",
+  "difficulty": 65,
+  "prompt": "Quelle orthographe est correcte ?",
+  "explanation": "Un seul l, un seul t : échalote. Comme « culotte » prend deux t, le piège est tentant.",
+  "options": [
+   "Échalote*",
+   "Échalotte",
+   "Échallote",
+   "Échalottes"
+  ]
+ },
+ {
+  "key": "fra25-174",
+  "concept": "french.spelling.v25_langage",
+  "label": "Langage",
+  "type": "mcq",
+  "difficulty": 40,
+  "prompt": "Quelle orthographe est correcte ?",
+  "explanation": "En français : langage, sans u. « Language » est l'orthographe anglaise.",
+  "options": [
+   "Langage*",
+   "Language",
+   "Langague",
+   "Languaje"
+  ]
+ },
+ {
+  "key": "fra25-175",
+  "concept": "french.spelling.v25_resonance",
+  "label": "Résonance",
+  "type": "mcq",
+  "difficulty": 75,
+  "prompt": "Quelle orthographe est correcte ?",
+  "explanation": "Résonner prend deux n, mais résonance un seul. Même piège avec « consonne » et « consonance ».",
+  "options": [
+   "Résonance*",
+   "Résonnance",
+   "Raisonance",
+   "Résonnence"
+  ]
+ },
+ {
+  "key": "fra25-176",
+  "concept": "french.grammar.v25_h_heros",
+  "label": "Le h de héros",
+  "type": "true_false",
+  "difficulty": 50,
+  "prompt": "Le h de « héros » est muet : on dit « les-z-héros ».",
+  "explanation": "Il est aspiré : « les / héros », sans liaison, ce qui évite d'entendre « les zéros ». Mais on dit bien « l'héroïne ».",
+  "answer": false
+ },
+ {
+  "key": "fra25-177",
+  "concept": "french.vocabulary.v25_w",
+  "label": "La lettre W",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le W fait partie de l'alphabet français depuis le Moyen Âge.",
+  "explanation": "Longtemps vu comme une lettre étrangère, il n'a été pleinement admis dans l'alphabet français qu'au XXe siècle.",
+  "answer": false
+ },
+ {
+  "key": "fra25-178",
+  "concept": "french.vocabulary.v25_academiciennes",
+  "label": "L'Académie au féminin",
+  "type": "true_false",
+  "difficulty": 40,
+  "prompt": "L'Académie française compte aujourd'hui plus de femmes que d'hommes.",
+  "explanation": "Loin de là : la première femme élue, Marguerite Yourcenar, n'est entrée qu'en 1980, et les femmes y restent très minoritaires.",
+  "answer": false
+ },
+ {
+  "key": "fra25-179",
+  "concept": "french.vocabulary.v25_aujourdhui",
+  "label": "Aujourd'hui",
+  "type": "true_false",
+  "difficulty": 60,
+  "prompt": "Le mot « aujourd'hui » contient deux fois l'idée de « jour ».",
+  "explanation": "« Hui » vient du latin « hodie », « ce jour ». « Au jour d'hui » voulait donc dire « au jour de ce jour ».",
+  "answer": true
+ },
+ {
+  "key": "fra25-180",
+  "concept": "french.vocabulary.v25_ennui",
+  "label": "Ennui et haine",
+  "type": "true_false",
+  "difficulty": 80,
+  "prompt": "Le mot « ennui » a une origine commune avec le mot latin qui veut dire « haine ».",
+  "explanation": "Du latin « in odio esse », être un objet de haine. L'ennui était à l'origine un tourment violent.",
+  "answer": true
+ },
+ {
+  "key": "fra25-181",
+  "concept": "french.vocabulary.v25_zero_chiffre",
+  "label": "Zéro et chiffre",
+  "type": "true_false",
+  "difficulty": 70,
+  "prompt": "« Zéro » et « chiffre » viennent du même mot arabe.",
+  "explanation": "« Sifr », le vide, est devenu « zefiro » puis « zéro » en passant par l'italien, et « cifra » puis « chiffre » par le latin.",
+  "answer": true
+ },
+ {
+  "key": "fra25-182",
+  "concept": "french.vocabulary.v25_strasbourg",
+  "label": "Les Serments de Strasbourg",
+  "type": "timeline",
+  "difficulty": 80,
+  "prompt": "En quelle année les Serments de Strasbourg, premier texte connu en ancien français, ont-ils été prononcés ?",
+  "explanation": "En 842, deux petits-fils de Charlemagne s'allient et jurent chacun dans la langue des troupes de l'autre.",
+  "answer": 842,
+  "min": 500,
+  "max": 1300,
+  "tolerance": 40
+ },
+ {
+  "key": "fra25-183",
+  "concept": "french.vocabulary.v25_villers",
+  "label": "L'ordonnance de Villers-Cotterêts",
+  "type": "timeline",
+  "difficulty": 60,
+  "prompt": "En quelle année François Ier impose-t-il le français dans les actes officiels, à la place du latin ?",
+  "explanation": "Par l'ordonnance de Villers-Cotterêts (1539), toujours en vigueur : c'est le plus ancien texte encore appliqué en France.",
+  "answer": 1539,
+  "min": 1300,
+  "max": 1800,
+  "tolerance": 15
+ },
+ {
+  "key": "fra25-184",
+  "concept": "french.vocabulary.v25_dico_academie",
+  "label": "Le premier dictionnaire de l'Académie",
+  "type": "timeline",
+  "difficulty": 75,
+  "prompt": "En quelle année paraît la première édition du Dictionnaire de l'Académie française ?",
+  "explanation": "En 1694, près de 60 ans après la création de l'Académie par Richelieu en 1635.",
+  "answer": 1694,
+  "min": 1500,
+  "max": 1900,
+  "tolerance": 15
+ },
+ {
+  "key": "fra25-185",
+  "concept": "french.grammar.v25_bescherelle",
+  "label": "Le Bescherelle",
+  "type": "timeline",
+  "difficulty": 80,
+  "prompt": "En quelle année les frères Bescherelle publient-ils leur premier manuel de conjugaison ?",
+  "explanation": "En 1842. Leur nom est devenu synonyme de livre de conjugaison.",
+  "answer": 1842,
+  "min": 1700,
+  "max": 2000,
+  "tolerance": 15
+ },
+ {
+  "key": "fra25-186",
+  "concept": "french.vocabulary.v25_petit_larousse",
+  "label": "Le Petit Larousse",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année paraît le premier « Petit Larousse illustré » ?",
+  "explanation": "En 1905, avec sa devise « Je sème à tout vent » et sa semeuse qui souffle sur un pissenlit.",
+  "answer": 1905,
+  "min": 1800,
+  "max": 2000,
+  "tolerance": 10
+ },
+ {
+  "key": "fra25-187",
+  "concept": "french.vocabulary.v25_toubon",
+  "label": "La loi Toubon",
+  "type": "timeline",
+  "difficulty": 70,
+  "prompt": "En quelle année est votée la loi Toubon, qui impose le français dans la publicité, le travail ou les services ?",
+  "explanation": "En 1994. Elle porte le nom du ministre de la Culture Jacques Toubon, surnommé « Jacques All Good » par ses adversaires.",
+  "answer": 1994,
+  "min": 1950,
+  "max": 2020,
+  "tolerance": 4
+ },
+ {
+  "key": "fra25-188",
+  "concept": "french.vocabulary.v25_freq_e",
+  "label": "La lettre e",
+  "type": "gauge",
+  "difficulty": 60,
+  "prompt": "Dans un texte en français, quelle part des lettres sont des « e » ?",
+  "explanation": "Environ 15 %, de loin la lettre la plus fréquente, devant a, s, i et t. Georges Perec a écrit tout un roman sans elle.",
+  "answer": 15,
+  "tolerance": 4,
+  "unit": "%"
+ },
+ {
+  "key": "fra25-189",
+  "concept": "french.vocabulary.v25_afrique",
+  "label": "Les francophones d'Afrique",
+  "type": "gauge",
+  "difficulty": 70,
+  "prompt": "Quelle part des personnes qui parlent français chaque jour vivent en Afrique ?",
+  "explanation": "Environ 62 %, selon l'Organisation internationale de la francophonie (2022). Kinshasa est la plus grande ville francophone du monde.",
+  "answer": 62,
+  "tolerance": 10,
+  "unit": "%",
+  "source": "OIF, La langue française dans le monde, 2022"
+ },
+ {
+  "key": "fra25-190",
+  "concept": "french.vocabulary.v25_monde",
+  "label": "Les francophones du monde",
+  "type": "gauge",
+  "difficulty": 60,
+  "prompt": "Quelle part de la population mondiale parle français ?",
+  "explanation": "Environ 4 % : 321 millions de personnes en 2022, selon l'Organisation internationale de la francophonie.",
+  "answer": 4,
+  "tolerance": 2,
+  "unit": "%",
+  "source": "OIF, La langue française dans le monde, 2022"
+ },
+ {
+  "key": "fra25-191",
+  "concept": "french.grammar.v25_temps_subjonctif",
+  "label": "Les temps du subjonctif",
+  "type": "counter",
+  "difficulty": 65,
+  "prompt": "Combien de temps compte le mode subjonctif ?",
+  "explanation": "Quatre : présent, passé, imparfait et plus-que-parfait. Les deux derniers ne s'emploient presque plus qu'à l'écrit soutenu.",
+  "answer": 4,
+  "tolerance": 0,
+  "min": 1,
+  "max": 10,
+  "start": 1
+ },
+ {
+  "key": "fra25-192",
+  "concept": "french.vocabulary.v25_immortels",
+  "label": "Les Immortels",
+  "type": "counter",
+  "difficulty": 30,
+  "prompt": "Combien de membres compte l'Académie française au complet ?",
+  "explanation": "Quarante fauteuils, numérotés. Les membres sont surnommés « les Immortels », d'après la devise « À l'immortalité ».",
+  "answer": 40,
+  "tolerance": 0,
+  "min": 10,
+  "max": 80,
+  "start": 10
+ },
+ {
+  "key": "fra25-193",
+  "concept": "french.vocabulary.v25_editions",
+  "label": "Les éditions du dictionnaire",
+  "type": "counter",
+  "difficulty": 85,
+  "prompt": "Combien d'éditions complètes du Dictionnaire de l'Académie française ont paru depuis 1694 ?",
+  "explanation": "Neuf : la 9e, commencée en 1986, s'est achevée en 2024. Elle compte plus de 53 000 mots.",
+  "answer": 9,
+  "tolerance": 0,
+  "min": 1,
+  "max": 15,
+  "start": 1
+ },
+ {
+  "key": "fra25-194",
+  "concept": "french.spelling.v25_dessaisissement",
+  "label": "Les s de dessaisissement",
+  "type": "counter",
+  "difficulty": 55,
+  "prompt": "Combien de lettres « s » compte le mot « dessaisissement » ?",
+  "explanation": "D-e-SS-a-i-S-i-SS-e-m-e-n-t : cinq s.",
+  "answer": 5,
+  "tolerance": 0,
+  "min": 0,
+  "max": 10,
+  "start": 0
+ },
+ {
+  "key": "fra25-195",
+  "concept": "french.spelling.v25_heterogeneite",
+  "label": "Les accents d'hétérogénéité",
+  "type": "counter",
+  "difficulty": 50,
+  "prompt": "Combien d'accents porte le mot « hétérogénéité » ?",
+  "explanation": "H-é-t-é-r-o-g-é-n-é-i-t-é : cinq accents aigus.",
+  "answer": 5,
+  "tolerance": 0,
+  "min": 0,
+  "max": 10,
+  "start": 0
+ },
+ {
+  "key": "fra25-196",
+  "concept": "french.vocabulary.v25_oeuvres",
+  "label": "Du Roland au Petit Prince",
+  "type": "ordering",
+  "difficulty": 45,
+  "prompt": "Classe ces œuvres de la plus ancienne à la plus récente.",
+  "explanation": "Vers 1100, 1534, 1668, 1862 et 1943.",
+  "items": [
+   "La Chanson de Roland",
+   "Gargantua",
+   "Les Fables de La Fontaine",
+   "Les Misérables",
+   "Le Petit Prince"
+  ]
+ },
+ {
+  "key": "fra25-197",
+  "concept": "french.vocabulary.v25_periodes",
+  "label": "Mensuel, trimestriel…",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces rythmes du plus fréquent au plus rare.",
+  "explanation": "Tous les mois, tous les deux mois, tous les trois mois, tous les six mois, tous les deux ans.",
+  "items": [
+   "Mensuel",
+   "Bimestriel",
+   "Trimestriel",
+   "Semestriel",
+   "Bisannuel"
+  ]
+ },
+ {
+  "key": "fra25-198",
+  "concept": "french.vocabulary.v25_noces",
+  "label": "Les anniversaires de mariage",
+  "type": "ordering",
+  "difficulty": 55,
+  "prompt": "Classe ces noces de la plus courte à la plus longue durée de mariage.",
+  "explanation": "1 an, 2 ans, 10 ans, 25 ans et 50 ans de mariage. Les noces de diamant fêtent les 60 ans.",
+  "items": [
+   "Noces de coton",
+   "Noces de cuir",
+   "Noces d'étain",
+   "Noces d'argent",
+   "Noces d'or"
+  ]
+ },
+ {
+  "key": "fra25-199",
+  "concept": "french.vocabulary.v25_grands_nombres",
+  "label": "Billion et billiard",
+  "type": "ordering",
+  "difficulty": 70,
+  "prompt": "Classe ces nombres du plus petit au plus grand.",
+  "explanation": "En français, un billion vaut mille milliards et un billiard mille billions. Attention : le « billion » anglais vaut un milliard.",
+  "items": [
+   "Un million",
+   "Un milliard",
+   "Un billion",
+   "Un billiard"
+  ]
+ },
+ {
+  "key": "fra25-200",
+  "concept": "french.vocabulary.v25_bouteilles",
+  "label": "Les bouteilles de champagne",
+  "type": "ordering",
+  "difficulty": 75,
+  "prompt": "Classe ces bouteilles de champagne de la plus petite à la plus grande.",
+  "explanation": "1,5 litre, 3 litres, 6 litres et 15 litres. Sauf le magnum, elles portent des noms de rois ou de patriarches de la Bible.",
+  "items": [
+   "Magnum",
+   "Jéroboam",
+   "Mathusalem",
+   "Nabuchodonosor"
+  ]
+ }
+]
