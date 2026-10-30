@@ -406,23 +406,44 @@ struct RankGap: View {
     }
 }
 
+/// Séparation « TA PLACE » entre le podium et ta ligne : on comprend qu'on ne voit que le top 3 et soi.
+struct YourPlaceDivider: View {
+    var style: RankStyle = .onInk
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Rectangle().fill(style.soft.opacity(0.35)).frame(height: 1)
+            Text("TA PLACE")
+                .font(.system(size: 11, weight: .black, design: .rounded)).tracking(1.2)
+                .foregroundStyle(style.soft)
+                .fixedSize()
+            Rectangle().fill(style.soft.opacity(0.35)).frame(height: 1)
+        }
+        .padding(.vertical, 2)
+        .accessibilityHidden(true)
+    }
+}
+
 /// Classement complet : podium animé, puis « ··· », toi et tes voisins (lignes qui glissent après le podium).
+/// `podiumAndMe` (5 du jour) : seulement le top 3, puis « TA PLACE » et ta ligne, sans voisins.
 struct LeaderboardBody: View {
     let entries: [RankEntry]
     var style: RankStyle = .onInk
+    var podiumAndMe = false
 
     @State private var rowsShown = false
 
     var body: some View {
         let podium = entries.filter { ($0.rank ?? 99) <= 3 }
-        let others = entries.filter { ($0.rank ?? 0) > 3 }
+        let others = entries.filter { ($0.rank ?? 0) > 3 && (!podiumAndMe || $0.me) }
         VStack(spacing: 10) {
             if !podium.isEmpty { PodiumView(entries: podium, style: style) }
             if !others.isEmpty {
                 VStack(spacing: 6) {
+                    if podiumAndMe { YourPlaceDivider(style: style) }
                     ForEach(Array(others.enumerated()), id: \.element.id) { index, entry in
                         let previous = index == 0 ? 3 : (others[index - 1].rank ?? 0)
-                        if (entry.rank ?? 0) - previous > 1 { RankGap(style: style) }
+                        if !podiumAndMe, (entry.rank ?? 0) - previous > 1 { RankGap(style: style) }
                         RankRow(entry: entry, style: style)
                             .scaleEffect(entry.me && rowsShown ? 1.0 : (entry.me ? 0.9 : 1))
                             .offset(x: rowsShown ? 0 : 40)

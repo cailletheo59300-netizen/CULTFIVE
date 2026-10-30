@@ -2,7 +2,7 @@ import SwiftUI
 import CultFiveCore
 
 /// Classement en grande carte nuit (D-073, D-079, D-080) : les vrais joueurs qui ont fait un 5 du jour ces 3 derniers
-/// jours, chacun avec son dernier. Podium animé pour le top 3, puis « ··· », toi et tes voisins ; confettis si tu es
+/// jours, chacun avec son dernier. Podium animé pour le top 3, puis « TA PLACE » et ta ligne ; confettis si tu es
 /// sur le podium ; seul classé : « 1er pour l'instant ». Pas encore chargé : podium fantôme.
 struct DailyLeaderboardCard: View {
     let result: DailyResult
@@ -45,7 +45,7 @@ struct DailyLeaderboardCard: View {
             }
         } content: {
             if showsBoard {
-                LeaderboardBody(entries: entries, style: .onInk)
+                LeaderboardBody(entries: entries, style: .onInk, podiumAndMe: true)
             } else if board == nil && !loaded {
                 LeaderboardSkeleton()
             } else {

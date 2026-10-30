@@ -247,8 +247,14 @@ struct ItemsGuide: View {
                 .lineLimit(1).minimumScaleFactor(0.7)
             Text(item.effect)
                 .font(.system(.footnote, design: .rounded).weight(.heavy))
-                .foregroundStyle(item.tint)
+                .foregroundStyle(item.risk == nil ? item.tint : Color(hex: 0x2F9E44))
                 .lineLimit(1).minimumScaleFactor(0.7)
+            if let risk = item.risk {
+                Text(risk)
+                    .font(.system(.caption, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Color(hex: 0xE03131))
+                    .lineLimit(1).minimumScaleFactor(0.7)
+            }
             Text(GameItem.survival.contains(item) ? "SURVIE" : "PARTIES CLASSÉES")
                 .font(.system(size: 9, weight: .black, design: .rounded)).tracking(0.5)
                 .foregroundStyle(Color.inkSoft)

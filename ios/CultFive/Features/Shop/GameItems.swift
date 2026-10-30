@@ -22,11 +22,14 @@ enum GameItem: String, CaseIterable, Identifiable {
         switch self {
         case .energy: return "Elo gagné ×2"
         case .shield: return "Aucune perte d'Elo"
-        case .bet: return "8/10 : Elo ×3"
+        case .bet: return "Dès 8/10 : Elo ×3"
         case .lifeline: return "1 erreur pardonnée"
         case .hourglass: return "+10 s par question"
         }
     }
+
+    /// Le revers, s'il y en a un (Pari ×3), affiché en rouge sous l'effet.
+    var risk: String? { self == .bet ? "Sinon : perte ×2" : nil }
 
     /// L'effet en entier (aperçu et boutique).
     var detail: String {
@@ -152,10 +155,20 @@ private struct ItemCell: View {
                     .multilineTextAlignment(.center)
                     .lineLimit(2).minimumScaleFactor(0.85)
                 Text(item.effect)
-                    .font(.system(size: 11, weight: .bold, design: .rounded))
-                    .foregroundStyle(onColor.opacity(0.8))
+                    .font(.system(size: 11, weight: .heavy, design: .rounded))
+                    .foregroundStyle(item.risk == nil ? onColor.opacity(0.85) : Color(hex: 0x2F9E44))
+                    .padding(.horizontal, item.risk == nil ? 0 : 5)
+                    .background(item.risk == nil ? Color.clear : Color.white.opacity(0.9), in: Capsule())
                     .multilineTextAlignment(.center)
-                    .lineLimit(2).minimumScaleFactor(0.85)
+                    .lineLimit(1).minimumScaleFactor(0.7)
+                if let risk = item.risk {
+                    Text(risk)
+                        .font(.system(size: 11, weight: .heavy, design: .rounded))
+                        .foregroundStyle(Color(hex: 0xE03131))
+                        .padding(.horizontal, 5)
+                        .background(Color.white.opacity(0.9), in: Capsule())
+                        .lineLimit(1).minimumScaleFactor(0.7)
+                }
                 Text(on ? "Activé ✓" : count > 0 ? "Utiliser" : "Obtenir")
                     .font(.system(size: 12, weight: .black, design: .rounded))
                     .foregroundStyle(on ? Color.inkFixed : count > 0 ? item.tint : onColor.opacity(0.8))

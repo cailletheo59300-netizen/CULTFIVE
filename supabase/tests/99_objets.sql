@@ -99,3 +99,13 @@ begin
   perform tst.ok(o ->> 'welcome_until' is null, 'bienvenue : plus proposée une fois prise');
   perform tst.ok((o ->> 'no_ads_until')::timestamptz > public._now() + interval '7 days', 'bienvenue : 7 jours sans pub');
 end $$;
+
+-- 0099 : comptes existants servis d'office, une seule fois.
+do $$
+declare u uuid := tst.new_user();
+begin
+  perform tst.ok((select starter_items_at from public.profiles where id = u) is null, 'nouveau compte : pas encore servi');
+  perform public._starter_items(u);
+  perform public._starter_items(u);
+  perform tst.ok((select qty from public.user_items where user_id = u and item_id = 'hourglass') = 1, 'une seule fois');
+end $$;

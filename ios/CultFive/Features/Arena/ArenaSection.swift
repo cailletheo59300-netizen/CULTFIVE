@@ -20,7 +20,7 @@ struct ArenaSection: View {
     @State private var friendsBoard: ArenaLeaderboard?
     @State private var showChestInfo = false
 
-    private var currentScope: BoardScope { scope ?? (hasFriends ? .friends : .world) }
+    private var currentScope: BoardScope { scope ?? .world }
 
     var body: some View {
         VStack(alignment: .leading, spacing: Space.l) {
