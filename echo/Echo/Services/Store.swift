@@ -45,7 +45,15 @@ final class StoreController {
     }
 
     /// Prix affiché par l'App Store (« 3,99 € »), dans la devise du joueur.
-    func price(_ kind: StoreProduct) -> String? { products[kind]?.displayPrice }
+    func price(_ kind: StoreProduct) -> String? {
+        products[kind]?.displayPrice ?? (AppModel.capture != nil ? Self.referencePrices[kind] : nil)
+    }
+
+    /// Prix conseillés (France), affichés seulement en mode capture : le simulateur n'a pas accès à l'App Store.
+    private static let referencePrices: [StoreProduct: String] = [
+        .noAds: "3,99 €", .starter: "4,99 €", .trailFire: "1,99 €", .trailGalaxy: "1,99 €", .decorSynthwave: "1,99 €",
+        .coinsSmall: "0,99 €", .coinsMedium: "2,99 €", .coinsLarge: "9,99 €",
+    ]
 
     /// Achat. Renvoie vrai s'il a abouti.
     @discardableResult

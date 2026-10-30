@@ -27,7 +27,29 @@ final class AppModel {
     private static let profileKey = "echo.profile"
     private static let pacingKey = "echo.adPacing"
 
+    /// Captures d'écran (workflow « Écho Captures », builds Debug seulement) : `-capture offers|trails|decors` ouvre la
+    /// boutique sur cet onglet, avec un profil d'exemple, sans Game Center ni pubs. Toujours `nil` en Release.
+    static let capture: String? = {
+        #if DEBUG
+        let arguments = ProcessInfo.processInfo.arguments
+        if let index = arguments.firstIndex(of: "-capture"), index + 1 < arguments.count { return arguments[index + 1] }
+        #endif
+        return nil
+    }()
+
     init() {
+        if Self.capture != nil {
+            var demo = Profile()
+            demo.coins = 1250
+            demo.ownedSkins.formUnion(["trail.mint", "trail.coral", "decor.ocean"])
+            demo.equippedTrail = "trail.coral"
+            demo.gamesPlayed = 12
+            demo.tutorialDone = true
+            profile = demo
+            adPacing = AdPacing()
+            store.start(app: self)
+            return
+        }
         let decoder = JSONDecoder()
         profile = UserDefaults.standard.data(forKey: Self.profileKey).flatMap { try? decoder.decode(Profile.self, from: $0) } ?? Profile()
         adPacing = UserDefaults.standard.data(forKey: Self.pacingKey).flatMap { try? decoder.decode(AdPacing.self, from: $0) } ?? AdPacing()
@@ -53,6 +75,7 @@ final class AppModel {
     }
 
     private func save() {
+        guard Self.capture == nil else { return }
         let encoder = JSONEncoder()
         if let data = try? encoder.encode(profile) { defaults.set(data, forKey: Self.profileKey) }
         if let data = try? encoder.encode(adPacing) { defaults.set(data, forKey: Self.pacingKey) }

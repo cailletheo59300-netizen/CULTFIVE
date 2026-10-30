@@ -6,13 +6,23 @@ import EchoCore
 struct ShopView: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
-    @State private var tab: Tab = .trails
+    @State private var tab: Tab = Tab.capture ?? .trails
 
     enum Tab: String, CaseIterable, Identifiable {
         case trails = "Traînées"
         case decors = "Décors"
         case offers = "Offres"
         var id: String { rawValue }
+
+        /// Onglet demandé par le mode capture (`-capture offers|trails|decors`).
+        static var capture: Tab? {
+            switch AppModel.capture {
+            case "offers": .offers
+            case "trails": .trails
+            case "decors": .decors
+            default: nil
+            }
+        }
     }
 
     var body: some View {

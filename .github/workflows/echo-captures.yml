@@ -1,0 +1,81 @@
+name: Écho Captures
+
+# Captures de la boutique d'Écho (iPhone 6,9 pouces, 1320 × 2868), pour les achats intégrés dans App Store Connect.
+# Lance l'app (build Debug, mode capture) dans le simulateur et enregistre les images dans echo/docs/captures.
+# À la demande du propriétaire seulement : Actions → Écho Captures → Run workflow (ou modification de ce fichier).
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: [".github/workflows/echo-captures.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: echo-captures-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  captures:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode le plus récent
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | grep -v beta | sort -V | tail -1)
+          sudo xcode-select -s "$XCODE"
+      - name: Build (simulateur, Debug)
+        run: |
+          brew install xcodegen
+          cd echo && xcodegen generate
+          xcodebuild build -project Echo.xcodeproj -scheme Echo -configuration Debug \
+            -sdk iphonesimulator -derivedDataPath build CODE_SIGNING_ALLOWED=NO > build.log 2>&1 \
+            || (grep -E "error:" -A3 build.log | head -80; exit 1)
+      - name: Simulateur
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          devices = json.load(sys.stdin)["devices"]
+          for runtime in sorted((k for k in devices if "iOS" in k), reverse=True):
+              for name in ("iPhone 17 Pro Max", "iPhone 16 Pro Max", "iPhone 16 Plus", "iPhone 15 Pro Max"):
+                  for d in devices[runtime]:
+                      if d["name"] == name:
+                          print(d["udid"]); raise SystemExit
+          ')
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularBars 4 --wifiBars 3
+          xcrun simctl ui "$UDID" appearance dark
+          xcrun simctl install "$UDID" echo/build/Build/Products/Debug-iphonesimulator/Echo.app
+      - name: Captures
+        env:
+          UDID: ${{ steps.sim.outputs.udid }}
+        run: |
+          dir=echo/docs/captures
+          rm -rf "$dir"; mkdir -p "$dir"
+          i=1
+          for tab in offers trails decors; do
+            xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.echo -capture "$tab" \
+              -AppleLanguages "(fr)" -AppleLocale fr_FR > /dev/null
+            sleep 9
+            xcrun simctl io "$UDID" screenshot "$dir/0$i-boutique-$tab.png" > /dev/null
+            echo "✓ $tab"; i=$((i+1))
+          done
+          sips -g pixelWidth -g pixelHeight "$dir/01-boutique-offers.png"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: echo-captures
+          path: echo/docs/captures
+          retention-days: 30
+      - name: Enregistrer les captures
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add echo/docs/captures
+          git diff --cached --quiet && exit 0
+          git commit -m "Écho : captures de la boutique [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

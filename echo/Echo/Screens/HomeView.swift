@@ -55,6 +55,7 @@ struct HomeView: View {
             if busy { LoadingVeil() }
         }
         .sheet(isPresented: $showShop) { ShopView() }
+        .onAppear { if AppModel.capture != nil { showShop = true } }
         .sheet(isPresented: $showSettings) { SettingsView() }
     }
 
