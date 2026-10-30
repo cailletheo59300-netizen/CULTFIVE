@@ -64,6 +64,7 @@ struct MainTabView: View {
         }
         .task {
             await model.refreshProgression()
+            await model.refreshBoutique()
             await AlbumStore.shared.refresh()
             model.promoteSeasonIfNeeded()
         }
