@@ -4,17 +4,17 @@ import AppTrackingTransparency
 import GoogleMobileAds
 import UserMessagingPlatform
 
-/// Blocs d'annonces AdMob d'Écho. Vides tant que l'app n'est pas créée dans AdMob : les pubs de test de Google
-/// s'affichent alors. Pour les remplir, voir `echo/README.md` (étape AdMob). Ce ne sont pas des secrets.
+/// Blocs d'annonces AdMob d'Écho (app « Echo » dans AdMob). Ce ne sont pas des secrets. Xcode et TestFlight
+/// affichent quand même les pubs de test de Google (voir `testAds`).
 enum AdConfig {
     /// Pub récompensée « Continuer ».
-    static let rewardedContinue = ""
+    static let rewardedContinue = "ca-app-pub-1190519561086839/7704746453"
     /// Pub récompensée « Pièces ×2 ».
-    static let rewardedDouble = ""
+    static let rewardedDouble = "ca-app-pub-1190519561086839/1000184419"
     /// Pub récompensée « Un essai de plus » au défi du jour.
-    static let rewardedDaily = ""
+    static let rewardedDaily = "ca-app-pub-1190519561086839/3518536549"
     /// Pub entre les parties.
-    static let interstitial = ""
+    static let interstitial = "ca-app-pub-1190519561086839/3110895329"
 
     static let testRewarded = "ca-app-pub-3940256099942544/1712485313"
     static let testInterstitial = "ca-app-pub-3940256099942544/4411468910"

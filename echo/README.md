@@ -67,9 +67,9 @@ Chaque achat a besoin d'une capture d'écran pour l'examen d'Apple (la boutique 
 - Créer 4 blocs d'annonces :
   - 3 récompensés : « Continuer », « Pièces x2 », « Défi : essai en plus » ;
   - 1 interstitiel : « Entre les parties ».
-- Copier l'identifiant de l'app (`ca-app-pub-…~…`) dans `Config/App.xcconfig` (`ADMOB_APP_ID`), et les 4 identifiants de blocs (`ca-app-pub-…/…`) dans `Echo/Services/Ads.swift` (`AdConfig`). Ce ne sont pas des secrets.
+- ✅ Fait : app « Echo » créée dans AdMob, identifiant dans `Config/App.xcconfig` (`ADMOB_APP_ID`), 4 blocs dans `Echo/Services/Ads.swift` (`AdConfig`).
 - `app-ads.txt` : rien à faire. Celui de brainlix.site couvre déjà ce compte AdMob. Il faut seulement indiquer `https://brainlix.site` comme site du développeur dans la fiche App Store d'Écho.
-- Tant que ces identifiants ne sont pas remplis, l'app affiche les pubs de test de Google. Xcode et TestFlight les affichent toujours.
+- Xcode et TestFlight affichent toujours les pubs de test de Google : les vraies pubs ne passent que dans la version de l'App Store.
 
 ### 5. Fiche App Store
 - URL d'assistance : `https://brainlix.site/echo/support`.
