@@ -18,6 +18,7 @@ final class GameSession: Identifiable {
     private(set) var round = 1
     private(set) var score = 0
     private(set) var phase: GamePhase = .ready
+    private(set) var multiplier = 1
     private(set) var toast: Toast?
     var paused = false {
         didSet { scene.running = !paused }
@@ -45,7 +46,7 @@ final class GameSession: Identifiable {
         self.day = day
         let engine = GameEngine(seed: seed, mode: mode)
         self.engine = engine
-        scene = GameScene(engine: engine, theme: app.theme, sensitivity: app.profile.sensitivity)
+        scene = GameScene(engine: engine, theme: app.theme, controlSetting: app.profile.controlSetting)
         scene.onFrame = { [weak self] events in self?.frame(events) }
     }
 
@@ -66,6 +67,8 @@ final class GameSession: Identifiable {
         case .playing:
             if tutorial && round == 1 && engine.tick < 240 { return "Attrape les orbes, l'un après l'autre." }
             if tutorial && round == 2 && engine.tick < 120 { return "Les fantômes s'allument après un court instant." }
+            if tutorial && round == 3 && engine.tick < 150 { return "Frôle un fantôme sans le toucher :\nton multiplicateur monte !" }
+            if tutorial && round == 5 && engine.tick < 150 { return "Un fantôme qui pâlit vit sa dernière manche." }
             return nil
         case .transition, .dead:
             return nil
@@ -78,6 +81,7 @@ final class GameSession: Identifiable {
         if round != engine.round { round = engine.round }
         if score != engine.score { score = engine.score }
         if phase != engine.phase { phase = engine.phase }
+        if multiplier != engine.multiplier { multiplier = engine.multiplier }
         guard !events.isEmpty, let app else { return }
         for event in events {
             switch event {
@@ -90,10 +94,12 @@ final class GameSession: Identifiable {
                 app.sound.play(.roundClear)
                 app.haptics.success()
                 show("+\(bonus)", Theme.gold)
-            case .nearMiss:
+            case .nearMiss(_, let multiplier):
                 app.sound.play(.nearMiss)
                 app.haptics.medium()
-                show("Frôlé ! +\(engine.tuning.nearMissPoints)", Theme.accent)
+                show("Frôlé ! ×\(multiplier)", Theme.accent)
+            case .multiplierLost:
+                show("Multiplicateur perdu", Theme.secondary)
             case .died:
                 app.sound.play(.death)
                 app.haptics.error()

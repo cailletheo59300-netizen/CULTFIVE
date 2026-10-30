@@ -9,16 +9,19 @@ Tous les chiffres du jeu sont dans **un seul fichier** : `echo/Packages/EchoCore
 ## Une partie
 1. **Le départ** : le point est au centre et rien ne bouge. La manche commence au premier geste du doigt.
 2. **Le geste** : le point suit le *mouvement* du doigt, pas sa position. On peut donc jouer n'importe où sur l'écran, et le doigt ne cache jamais le point.
-   - Le réglage « Sensibilité » (125 % par défaut) multiplie le mouvement.
-   - Le point avance de 38 unités au plus par image : un grand coup de doigt ne le téléporte pas.
-3. **Les orbes** : 3 par manche, l'un après l'autre. L'orbe à attraper brille. Le suivant est un cercle discret, pour qu'on puisse prévoir son trajet.
+   - **Sans retard** : le geste est appliqué tout de suite. Le point ne continue jamais à glisser après le doigt.
+   - **Accélération douce**, comme une souris : doigt lent, le point suit exactement ; doigt rapide, il va jusqu'à 1,5 à 2,4 fois plus loin.
+   - Le réglage « Précis ↔ Rapide » (au milieu par défaut) choisit la force de cette accélération. Les Réglages ont une zone d'essai.
+   - Un coup de doigt extrême est raccourci (120 unités par image au plus) : le point ne se téléporte pas.
+3. **Les orbes** : 3 par manche, 4 à partir de la manche 10, 5 à partir de la manche 18, l'un après l'autre. L'orbe à attraper brille. Le suivant est un cercle discret, pour qu'on puisse prévoir son trajet.
 4. **Fin de manche** : une courte pause (0,75 s), puis le point revient au centre. Le trajet que tu viens de faire devient un fantôme.
 5. **Les fantômes** :
    - Ils rejouent la manche enregistrée, image par image, en partant du centre en même temps que toi.
    - Pendant les 0,75 premières secondes, ils sont transparents et inoffensifs, le temps de quitter le centre.
    - Quand leur enregistrement est fini, ils repartent en arrière, puis en avant… (aller-retour) : ils ne disparaissent jamais. Attendre dans un coin ne sert donc à rien.
    - Seul le **point** du fantôme tue, pas sa traînée. La zone de contact est réduite à 75 % : un frôlement visuel ne tue pas.
-   - À partir de la manche 8, ils rejouent un peu plus vite (+6 % par manche, ×1,5 au maximum).
+   - **Les échos s'effacent** : un fantôme vit 4 manches. Pendant sa dernière manche, il pâlit et clignote doucement, puis il disparaît. Il y a donc au plus 4 fantômes à l'écran : un bon joueur peut aller très loin.
+   - À partir de la manche 5, ils rejouent un peu plus vite (+5 % par manche, ×1,8 au maximum).
 6. **Fin de partie** : toucher un fantôme.
 
 ## Les points
@@ -28,6 +31,8 @@ Tous les chiffres du jeu sont dans **un seul fichier** : `echo/Packages/EchoCore
 | Manche finie | 20 |
 | Rapidité | jusqu'à 30 (1 point par 0,2 s gagnée sous 6 s) |
 | Frôler un fantôme sans le toucher | 5 |
+
+**Le multiplicateur** : chaque frôlement le fait monter (×2, ×3… ×5 au plus). Il multiplie les orbes et la fin de manche. Une manche finie sans aucun frôlement le remet à ×1. Il s'affiche sous le score.
 
 Les **pièces** d'une partie valent le score divisé par 8 (une partie moyenne en rapporte environ 25). Elles sont doublées avec la pub « Pièces ×2 ».
 
@@ -96,13 +101,20 @@ Les valeurs à tester en premier sur TestFlight, toutes dans `Tuning.swift` :
 | Si… | Changer… |
 |---|---|
 | Le jeu est trop dur au début | `ghostArmTicks` (plus grand = fantômes inoffensifs plus longtemps), `hitboxFactor` (plus petit = contact plus tolérant) |
-| Les parties sont trop longues | `speedUpFromRound` (plus petit = accélération plus tôt), `orbsPerRound` |
-| Le point est trop lent ou trop rapide | `maxStepPerTick`, ou la sensibilité par défaut dans `Profile.swift` |
+| Les parties sont trop longues | `ghostLifetime` (plus grand = plus de fantômes à l'écran), `speedUpFromRound`, `speedUpPerRound`, `extraOrbRounds` |
+| Les parties sont trop courtes | `ghostLifetime` plus petit, `maxGhostRate` plus petit |
+| Le point est trop lent ou trop rapide | `pointerGain` (accélération), `slowFingerSpeed` / `fastFingerSpeed`, ou `controlSetting` par défaut dans `Profile.swift` |
+| Le multiplicateur monte trop vite | `maxMultiplier`, `nearMissMargin` (plus petit = frôlement plus exigeant) |
 | Les orbes sont trop proches ou trop loin | `orbMinSpacing`, `orbMinFromCenter` |
 
 ⚠️ Changer un réglage change aussi le défi du jour : il faut le faire avant la sortie, ou accepter que deux versions de l'app n'aient pas tout à fait le même défi le jour de la mise à jour.
 
+## L'écran de fin
+Il s'affiche vite (0,35 s après l'explosion). En mode classique, toucher n'importe où en dehors de la carte relance une partie, après 0,9 s, pour qu'un doigt encore posé ne relance pas par erreur.
+
 ## Ce qui n'est pas encore là (prévu plus tard)
+- Orbe Gomme (rare, efface le fantôme le plus ancien).
+- Niveau du joueur avec récompenses, record affiché pendant la partie.
 - Missions quotidiennes (« Frôle 10 fantômes »…).
 - Pass mensuel.
 - Pub récompensée « Essayer une apparence ».

@@ -33,8 +33,10 @@ public struct Profile: Codable, Equatable, Sendable {
     // Réglages
     public var soundOn = true
     public var hapticsOn = true
-    /// Sensibilité du doigt : 1 = le point bouge autant que le doigt.
+    /// Ancien réglage de sensibilité (version 1.0), plus utilisé : gardé pour lire les anciennes sauvegardes.
     public var sensitivity = 1.25
+    /// Réglage du doigt, de 0 (« Précis ») à 1 (« Rapide ») : voir `Tuning.pointerGain`.
+    public var controlSetting = 0.5
     public var tutorialDone = false
 
     public init(now: Date = Date()) {
@@ -139,7 +141,7 @@ public struct Profile: Codable, Equatable, Sendable {
     private enum CodingKeys: String, CodingKey {
         case coins, bestScore, bestRound, gamesPlayed, firstLaunch, ownedSkins, equippedTrail, equippedDecor, noAds,
              creditedTransactions, lastDailyDay, streak, bestStreak, dailyDay, dailyAttemptsUsed, dailyExtraAttempts,
-             dailyBest, soundOn, hapticsOn, sensitivity, tutorialDone
+             dailyBest, soundOn, hapticsOn, sensitivity, controlSetting, tutorialDone
     }
 
     public init(from decoder: Decoder) throws {
@@ -165,6 +167,7 @@ public struct Profile: Codable, Equatable, Sendable {
         soundOn = try c.decodeIfPresent(Bool.self, forKey: .soundOn) ?? base.soundOn
         hapticsOn = try c.decodeIfPresent(Bool.self, forKey: .hapticsOn) ?? base.hapticsOn
         sensitivity = try c.decodeIfPresent(Double.self, forKey: .sensitivity) ?? base.sensitivity
+        controlSetting = try c.decodeIfPresent(Double.self, forKey: .controlSetting) ?? base.controlSetting
         tutorialDone = try c.decodeIfPresent(Bool.self, forKey: .tutorialDone) ?? base.tutorialDone
     }
 }

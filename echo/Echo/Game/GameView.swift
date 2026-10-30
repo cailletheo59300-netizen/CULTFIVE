@@ -26,6 +26,31 @@ struct GameView: View {
         }
     }
 
+    /// Multiplicateur (×2 à ×5), de plus en plus chaud.
+    private struct MultiplierBadge: View {
+        let value: Int
+
+        private var color: Color {
+            switch value {
+            case ..<3: Theme.accent
+            case 3: Theme.gold
+            case 4: .orange
+            default: Theme.ghost
+            }
+        }
+
+        var body: some View {
+            Text("×\(value)")
+                .font(Theme.title(20 + CGFloat(value) * 2))
+                .foregroundStyle(color)
+                .shadow(color: color.opacity(0.9), radius: 8 + CGFloat(value) * 2)
+                .opacity(value > 1 ? 1 : 0)
+                .scaleEffect(value > 1 ? 1 : 0.4)
+                .animation(.spring(duration: 0.3, bounce: 0.5), value: value)
+                .frame(height: 30)
+        }
+    }
+
     private var hud: some View {
         VStack(spacing: 0) {
             HStack(alignment: .top) {
@@ -52,6 +77,7 @@ struct GameView: View {
                         .foregroundStyle(Theme.text)
                         .contentTransition(.numericText())
                         .animation(.snappy, value: session.score)
+                    MultiplierBadge(value: session.multiplier)
                 }
                 .allowsHitTesting(false)
                 Spacer()
@@ -129,10 +155,19 @@ private struct GameOverOverlay: View {
     @Environment(AppModel.self) private var app
     let session: GameSession
     @State private var appeared = false
+    /// « Toucher l'écran pour rejouer » n'est actif qu'après un court instant : le doigt encore posé au moment de la
+    /// mort ne relance pas une partie par erreur.
+    @State private var tapToReplay = false
 
     var body: some View {
         ZStack {
-            Color.black.opacity(appeared ? 0.62 : 0).ignoresSafeArea()
+            Color.black.opacity(appeared ? 0.62 : 0)
+                .ignoresSafeArea()
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    guard tapToReplay, session.mode == .classic, !session.busy else { return }
+                    replayClassic()
+                }
             VStack(spacing: 16) {
                 header
                 stats
@@ -144,11 +179,32 @@ private struct GameOverOverlay: View {
             .padding(20)
             .scaleEffect(appeared ? 1 : 0.85)
             .opacity(appeared ? 1 : 0)
+
+            if session.mode == .classic {
+                VStack {
+                    Spacer()
+                    Text("Touche l'écran pour rejouer")
+                        .font(Theme.body(15))
+                        .foregroundStyle(Theme.secondary)
+                        .opacity(tapToReplay ? 1 : 0)
+                        .padding(.bottom, 24)
+                }
+                .allowsHitTesting(false)
+            }
         }
         .onAppear {
-            // Laisse l'explosion se voir avant d'afficher le bilan.
-            withAnimation(.spring(duration: 0.4).delay(0.55)) { appeared = true }
+            // Laisse l'explosion se voir un court instant avant d'afficher le bilan.
+            withAnimation(.spring(duration: 0.35).delay(0.35)) { appeared = true }
+            Task {
+                try? await Task.sleep(for: .seconds(0.9))
+                withAnimation(.easeIn(duration: 0.3)) { tapToReplay = true }
+            }
         }
+    }
+
+    private func replayClassic() {
+        session.finalize()
+        Task { await app.leaveGame { app.startClassic() } }
     }
 
     private var header: some View {
@@ -183,7 +239,7 @@ private struct GameOverOverlay: View {
     private var stats: some View {
         HStack(spacing: 10) {
             stat("\(session.result.roundsCleared)", "manches")
-            stat("\(session.result.nearMisses)", "frôlés")
+            stat("×\(session.result.bestMultiplier)", "multi max")
             stat("+\(session.coinsEarned)", "pièces", color: Theme.gold)
         }
         .overlay(alignment: .bottom) {
@@ -244,11 +300,8 @@ private struct GameOverOverlay: View {
     @ViewBuilder
     private var replayButton: some View {
         if session.mode == .classic {
-            Button("Rejouer") {
-                session.finalize()
-                Task { await app.leaveGame { app.startClassic() } }
-            }
-            .buttonStyle(GlowButtonStyle())
+            Button("Rejouer") { replayClassic() }
+                .buttonStyle(GlowButtonStyle())
         } else if app.profile.dailyAttemptsLeft(day: app.today) > 0 {
             Button("Réessayer") {
                 session.finalize()

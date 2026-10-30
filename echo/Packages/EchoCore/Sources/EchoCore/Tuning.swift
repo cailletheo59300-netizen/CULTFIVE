@@ -21,14 +21,27 @@ public struct Tuning: Sendable {
 
     // MARK: Déplacement
 
-    /// Déplacement maximal du point par image. Au-delà, le reste du geste est gardé pour les images suivantes.
-    public var maxStepPerTick = 38.0
-    /// Geste en attente au maximum : un très grand coup de doigt ne téléporte pas le point.
-    public var maxPendingInput = 260.0
+    /// Déplacement maximal du point par image. Le geste est appliqué tout de suite, sans retard : seul un coup de doigt
+    /// extrême est raccourci (le surplus est perdu, jamais gardé pour plus tard, sinon le point « glisse » après le doigt).
+    public var maxStepPerTick = 120.0
+    /// Geste reçu entre deux images, au maximum.
+    public var maxPendingInput = 120.0
+
+    // MARK: Accélération du doigt (comme une souris d'ordinateur)
+
+    /// Vitesse du doigt (unités d'arène par seconde) en dessous de laquelle le point suit exactement le geste…
+    public var slowFingerSpeed = 400.0
+    /// … et au-dessus de laquelle l'accélération est au maximum.
+    public var fastFingerSpeed = 2500.0
 
     // MARK: Manches
 
+    /// Orbes par manche au départ ; un de plus aux manches `extraOrbRounds`.
     public var orbsPerRound = 3
+    public var extraOrbRounds = [10, 18]
+    /// Un fantôme vit `ghostLifetime` manches, puis s'efface (il pâlit pendant sa dernière manche).
+    /// Il y a donc au plus `ghostLifetime` fantômes à l'écran : bien jouer permet d'aller loin.
+    public var ghostLifetime = 4
     /// Délai pendant lequel les fantômes, au départ de chaque manche, sont transparents et inoffensifs (0,75 s).
     public var ghostArmTicks = 45
     /// Pause entre deux manches (0,75 s).
@@ -36,10 +49,10 @@ public struct Tuning: Sendable {
     /// Enregistrement d'une manche au maximum (30 s) : au-delà, le fantôme rejoue ces 30 s en aller-retour.
     public var maxRecordingTicks = 1800
     /// À partir de cette manche, les fantômes rejouent un peu plus vite à chaque manche…
-    public var speedUpFromRound = 8
-    public var speedUpPerRound = 0.06
-    /// … jusqu'à cette vitesse au plus (×1,5).
-    public var maxGhostRate = 1.5
+    public var speedUpFromRound = 5
+    public var speedUpPerRound = 0.05
+    /// … jusqu'à cette vitesse au plus (×1,8).
+    public var maxGhostRate = 1.8
 
     // MARK: Orbes
 
@@ -61,6 +74,9 @@ public struct Tuning: Sendable {
     public var nearMissPoints = 5
     /// Distance au-delà du contact où un passage compte comme frôlement.
     public var nearMissMargin = 34.0
+    /// Multiplicateur : +1 à chaque frôlement (×5 au plus), appliqué aux orbes et à la fin de manche. Il retombe à ×1
+    /// quand une manche se termine sans frôlement.
+    public var maxMultiplier = 5
 
     public init() {}
 
@@ -78,6 +94,24 @@ public struct Tuning: Sendable {
     public func ghostRate(round: Int) -> Double {
         guard round >= speedUpFromRound else { return 1 }
         return min(maxGhostRate, 1 + Double(round - speedUpFromRound + 1) * speedUpPerRound)
+    }
+
+    /// Orbes à attraper pendant la manche `round`.
+    public func orbCount(round: Int) -> Int {
+        orbsPerRound + extraOrbRounds.filter { round >= $0 }.count
+    }
+
+    /// Accélération du doigt : un geste de `distance` unités fait à `speed` unités par seconde déplace le point de
+    /// `distance × gain`. `setting` va de 0 (« Précis ») à 1 (« Rapide »).
+    /// Doigt lent : gain de base (1 à 1,3) ; doigt rapide : jusqu'à 1,5 à 2,4 fois le geste.
+    public func pointerGain(speed: Double, setting: Double) -> Double {
+        let s = max(0, min(1, setting))
+        let base = 1.0 + 0.3 * s
+        let boost = 1.5 + 0.35 * s
+        let t = max(0, min(1, (speed - slowFingerSpeed) / (fastFingerSpeed - slowFingerSpeed)))
+        // Courbe douce (pas de cassure quand le doigt accélère).
+        let smooth = t * t * (3 - 2 * t)
+        return base * (1 + (boost - 1) * smooth)
     }
 
     /// Bonus de rapidité pour une manche finie en `ticks` images.

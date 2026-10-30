@@ -8,7 +8,8 @@ import EchoCore
 final class GameScene: SKScene {
     let engine: GameEngine
     private let theme: GameTheme
-    private let sensitivity: Double
+    /// Réglage du doigt, de 0 (« Précis ») à 1 (« Rapide »).
+    private let controlSetting: Double
     /// Appelé après chaque image avec les événements de la logique (sons, HUD).
     var onFrame: (([GameEvent]) -> Void)?
     /// Faux pendant la pause : la logique ne tourne plus, les gestes sont ignorés.
@@ -20,6 +21,7 @@ final class GameScene: SKScene {
     private var accumulator: TimeInterval = 0
     private var trackedTouch: UITouch?
     private var lastTouchPoint: CGPoint?
+    private var lastTouchTime: TimeInterval = 0
 
     // Nœuds
     private let player = SKNode()
@@ -36,10 +38,10 @@ final class GameScene: SKScene {
     private static let topInset: CGFloat = 96
     private static let bottomInset: CGFloat = 28
 
-    init(engine: GameEngine, theme: GameTheme, sensitivity: Double) {
+    init(engine: GameEngine, theme: GameTheme, controlSetting: Double) {
         self.engine = engine
         self.theme = theme
-        self.sensitivity = sensitivity
+        self.controlSetting = controlSetting
         super.init(size: CGSize(width: 390, height: 844))
         scaleMode = .resizeFill
         backgroundColor = .clear
@@ -130,20 +132,26 @@ final class GameScene: SKScene {
     // MARK: Gestes
 
     // Le point suit le mouvement du doigt (et non sa position) : le doigt ne cache jamais le point, et on peut jouer
-    // n'importe où sur l'écran.
+    // n'importe où sur l'écran. Accélération douce : doigt lent = précis, doigt rapide = le point va plus loin.
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard trackedTouch == nil, let touch = touches.first else { return }
         trackedTouch = touch
         lastTouchPoint = touch.location(in: arena)
+        lastTouchTime = touch.timestamp
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = trackedTouch, touches.contains(touch), let last = lastTouchPoint else { return }
         let point = touch.location(in: arena)
+        let delta = Vec2(Double(point.x - last.x), Double(point.y - last.y))
+        // Vitesse du doigt en unités d'arène par seconde (intervalle borné : 120 Hz au plus, 0,1 s au moins).
+        let interval = min(0.1, max(1.0 / 240, touch.timestamp - lastTouchTime))
         lastTouchPoint = point
+        lastTouchTime = touch.timestamp
         guard running else { return }
-        engine.addInput(Vec2(Double(point.x - last.x), Double(point.y - last.y)) * sensitivity)
+        let gain = engine.tuning.pointerGain(speed: delta.length / interval, setting: controlSetting)
+        engine.addInput(delta * gain)
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -233,7 +241,7 @@ final class GameScene: SKScene {
     private func renderGhosts() {
         let alive = Set(engine.ghosts.map(\.round))
         for (round, node) in ghostNodes where !alive.contains(round) {
-            node.removeFromParent()
+            node.fadeOutAndRemove()
             ghostNodes[round] = nil
         }
         // Avant le premier geste, les fantômes attendent au centre, à peine visibles.
@@ -241,13 +249,15 @@ final class GameScene: SKScene {
         let armed = engine.ghostsArmed && !waiting
         for ghost in engine.ghosts {
             let node = ghostNodes[ghost.round] ?? makeGhostNode(ghost.round)
+            // Dernière manche du fantôme : il pâlit et clignote doucement avant de s'effacer.
+            let fade: CGFloat = engine.isFading(ghost) ? 0.45 + 0.15 * CGFloat(sin(CACurrentMediaTime() * 6)) : 1
             node.head.position = point(engine.position(of: ghost))
-            node.head.alpha = waiting ? 0.25 : (armed ? 1 : 0.4)
+            node.head.alpha = (waiting ? 0.25 : (armed ? 1 : 0.4)) * fade
             for (i, dot) in node.trail.enumerated() {
                 let back = (Self.ghostTrailLength - i) * 2
                 let k = CGFloat(i + 1) / CGFloat(Self.ghostTrailLength)
                 dot.position = point(engine.position(of: ghost, atTick: max(0, engine.tick - back)))
-                dot.alpha = waiting ? 0 : (armed ? 0.55 : 0.2) * k
+                dot.alpha = waiting ? 0 : (armed ? 0.55 : 0.2) * k * fade
                 dot.setScale(0.3 + 0.7 * k)
             }
         }
@@ -287,13 +297,13 @@ final class GameScene: SKScene {
             switch event {
             case .orbCollected:
                 burstRing(at: player.position, color: theme.orbColor)
-            case .nearMiss:
-                burstRing(at: player.position, color: theme.playerColor, radius: 70)
+            case .nearMiss(_, let multiplier):
+                burstRing(at: player.position, color: theme.playerColor, radius: 60 + CGFloat(multiplier) * 10)
             case .roundCleared:
                 flashBorder()
             case .died:
                 explode()
-            case .roundStarted:
+            case .roundStarted, .multiplierLost:
                 break
             }
         }
@@ -349,9 +359,11 @@ private struct GhostNode {
     let head: SKNode
     let trail: [SKSpriteNode]
 
-    func removeFromParent() {
-        head.removeFromParent()
-        trail.forEach { $0.removeFromParent() }
+    /// Le fantôme s'efface (fin de vie ou « Continuer ») : fondu puis retrait.
+    func fadeOutAndRemove() {
+        let vanish = SKAction.sequence([.group([.fadeOut(withDuration: 0.5), .scale(to: 1.6, duration: 0.5)]), .removeFromParent()])
+        head.run(vanish)
+        trail.forEach { $0.run(.sequence([.fadeOut(withDuration: 0.3), .removeFromParent()])) }
     }
 }
 

@@ -8,7 +8,7 @@ public enum OrbPlan {
         let margin = tuning.orbMargin
         var orbs: [Vec2] = []
         var previous = tuning.center
-        for index in 0..<tuning.orbsPerRound {
+        for index in 0..<tuning.orbCount(round: round) {
             let minimum = index == 0 ? tuning.orbMinFromCenter : tuning.orbMinSpacing
             var candidate = previous
             // Jusqu'à 40 essais pour respecter l'écart ; sinon on garde le plus éloigné trouvé.

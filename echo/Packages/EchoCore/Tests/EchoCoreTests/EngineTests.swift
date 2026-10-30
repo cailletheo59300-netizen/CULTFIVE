@@ -67,11 +67,51 @@ final class EngineTests: XCTestCase {
         XCTAssertEqual(engine.player.y, r, accuracy: 0.001)
     }
 
-    func testMovementIsCappedPerTick() {
+    func testMovementIsCappedPerTickAndNeverLags() {
         let engine = GameEngine(seed: 3, mode: .classic)
         engine.addInput(Vec2(1000, 0))
         engine.step()
-        XCTAssertEqual(engine.player.x - Tuning.standard.center.x, Tuning.standard.maxStepPerTick, accuracy: 0.001)
+        let moved = engine.player.x - Tuning.standard.center.x
+        XCTAssertEqual(moved, Tuning.standard.maxStepPerTick, accuracy: 0.001)
+        // Le surplus n'est pas gardé : sans nouveau geste, le point ne bouge plus (pas de « glissade »).
+        engine.step()
+        XCTAssertEqual(engine.player.x - Tuning.standard.center.x, moved, accuracy: 0.001)
+    }
+
+    func testSmallGestureAppliedImmediately() {
+        let engine = GameEngine(seed: 3, mode: .classic)
+        engine.addInput(Vec2(10, 0))
+        engine.addInput(Vec2(15, 0))
+        engine.step()
+        XCTAssertEqual(engine.player.x - Tuning.standard.center.x, 25, accuracy: 0.001)
+    }
+
+    func testGhostsFadeAfterLifetime() {
+        let tuning = Tuning.standard
+        let engine = GameEngine(seed: 21, mode: .classic)
+        let corner = Vec2(25, 25)
+        engine.ghosts = [Ghost(round: -3, path: [corner, corner]), Ghost(round: 0, path: [corner, corner])]
+        XCTAssertTrue(engine.isFading(engine.ghosts[0]), "dernière manche du fantôme : il pâlit")
+        XCTAssertFalse(engine.isFading(engine.ghosts[1]))
+        playRound(engine)
+        XCTAssertFalse(engine.isDead)
+        for _ in 0..<tuning.transitionTicks { engine.step() }
+        XCTAssertEqual(engine.round, 2)
+        XCTAssertEqual(engine.ghosts.map(\.round), [0, 1], "le fantôme trop ancien s'est effacé")
+    }
+
+    func testMultiplierBoostsPointsThenDropsWithoutNearMiss() {
+        let engine = GameEngine(seed: 42, mode: .classic)
+        engine.multiplier = 3
+        let events = playRound(engine)
+        XCTAssertEqual(engine.orbsCollected, 3)
+        guard case .roundCleared(_, let bonus)? = events.first(where: { if case .roundCleared = $0 { return true } else { return false } }) else {
+            return XCTFail("manche finie attendue")
+        }
+        XCTAssertEqual(bonus % 3, 0, "fin de manche multipliée")
+        XCTAssertEqual(engine.score, 3 * 10 * 3 + bonus)
+        XCTAssertEqual(engine.multiplier, 1, "manche sans frôlement : retour à ×1")
+        XCTAssertTrue(events.contains(.multiplierLost))
     }
 
     func testGhostKillsOnlyOnceArmed() {
@@ -121,7 +161,9 @@ final class EngineTests: XCTestCase {
         }
         XCTAssertFalse(engine.isDead)
         XCTAssertEqual(engine.nearMisses, 1)
-        XCTAssertTrue(events.contains(.nearMiss(ghostRound: 1)))
+        XCTAssertTrue(events.contains(.nearMiss(ghostRound: 1, multiplier: 2)))
+        XCTAssertEqual(engine.multiplier, 2)
+        XCTAssertEqual(engine.result.bestMultiplier, 2)
     }
 
     func testContinueRemovesKillerGhostAndReplaysRound() {
@@ -208,6 +250,27 @@ final class GhostTests: XCTestCase {
         XCTAssertGreaterThan(tuning.ghostRate(round: tuning.speedUpFromRound), 1)
         XCTAssertEqual(tuning.ghostRate(round: 100), tuning.maxGhostRate)
     }
+
+    func testOrbCountGrows() {
+        let tuning = Tuning.standard
+        XCTAssertEqual(tuning.orbCount(round: 1), 3)
+        XCTAssertEqual(tuning.orbCount(round: 10), 4)
+        XCTAssertEqual(tuning.orbCount(round: 18), 5)
+        XCTAssertEqual(OrbPlan.orbs(seed: 1, round: 12).count, 4)
+    }
+
+    func testPointerGain() {
+        let tuning = Tuning.standard
+        for setting in [0.0, 0.5, 1.0] {
+            let slow = tuning.pointerGain(speed: 100, setting: setting)
+            let medium = tuning.pointerGain(speed: 1400, setting: setting)
+            let fast = tuning.pointerGain(speed: 5000, setting: setting)
+            XCTAssertLessThan(slow, medium)
+            XCTAssertLessThan(medium, fast)
+        }
+        XCTAssertEqual(tuning.pointerGain(speed: 0, setting: 0), 1, accuracy: 0.0001, "Précis, doigt lent : le point suit exactement")
+        XCTAssertLessThan(tuning.pointerGain(speed: 5000, setting: 0), tuning.pointerGain(speed: 5000, setting: 1))
+    }
 }
 
 final class OrbPlanTests: XCTestCase {
@@ -216,7 +279,7 @@ final class OrbPlanTests: XCTestCase {
         for round in 1...30 {
             let a = OrbPlan.orbs(seed: 77, round: round)
             XCTAssertEqual(a, OrbPlan.orbs(seed: 77, round: round))
-            XCTAssertEqual(a.count, tuning.orbsPerRound)
+            XCTAssertEqual(a.count, tuning.orbCount(round: round))
             for orb in a {
                 XCTAssertTrue((tuning.orbMargin...(tuning.arena.x - tuning.orbMargin)).contains(orb.x))
                 XCTAssertTrue((tuning.orbMargin...(tuning.arena.y - tuning.orbMargin)).contains(orb.y))

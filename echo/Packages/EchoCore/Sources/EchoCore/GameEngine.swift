@@ -25,7 +25,10 @@ public enum GameEvent: Equatable, Sendable {
     case roundStarted(round: Int)
     case orbCollected(index: Int)
     case roundCleared(round: Int, bonus: Int)
-    case nearMiss(ghostRound: Int)
+    /// Frôlement ; `multiplier` est le multiplicateur après ce frôlement.
+    case nearMiss(ghostRound: Int, multiplier: Int)
+    /// Le multiplicateur retombe à ×1 (manche finie sans frôlement).
+    case multiplierLost
     case died(ghostRound: Int)
 }
 
@@ -38,6 +41,7 @@ public struct GameResult: Equatable, Sendable {
     public var orbs: Int
     public var seconds: Double
     public var continuesUsed: Int
+    public var bestMultiplier = 1
 }
 
 /// Le moteur du jeu. Il ne connaît ni l'écran ni le temps réel : l'app lui donne les gestes du doigt (`addInput`) et
@@ -66,6 +70,10 @@ public final class GameEngine {
     public private(set) var nearMisses = 0
     public private(set) var orbsCollected = 0
     public private(set) var continuesUsed = 0
+    /// Multiplicateur en cours (×1 à ×5) et meilleur atteint dans la partie.
+    public internal(set) var multiplier = 1
+    public private(set) var bestMultiplier = 1
+    private var nearMissesThisRound = 0
     /// Images jouées sur toute la partie (durée).
     public private(set) var totalTicks = 0
 
@@ -74,7 +82,7 @@ public final class GameEngine {
     /// Fantômes actuellement tout près du joueur : un frôlement compte quand ils s'éloignent sans l'avoir touché.
     private var closeGhosts: Set<Int> = []
     /// Valeurs au début de la manche : « Continuer » rejoue la manche sans compter deux fois ses points.
-    private var roundStart = (score: 0, nearMisses: 0, orbs: 0)
+    private var roundStart = (score: 0, nearMisses: 0, orbs: 0, multiplier: 1)
 
     public init(seed: UInt64, mode: GameMode, tuning: Tuning = .standard) {
         self.seed = seed
@@ -92,6 +100,9 @@ public final class GameEngine {
     /// Les fantômes peuvent-ils tuer à cette image ?
     public var ghostsArmed: Bool { tick >= tuning.ghostArmTicks }
     public var ghostRate: Double { tuning.ghostRate(round: round) }
+
+    /// Le fantôme vit sa dernière manche : il pâlit et disparaîtra à la suivante.
+    public func isFading(_ ghost: Ghost) -> Bool { round - ghost.round >= tuning.ghostLifetime }
     public var roundsCleared: Int { round - 1 }
     /// « Continuer » possible : partie classique, une seule fois.
     public var canContinue: Bool { isDead && mode == .classic && continuesUsed == 0 }
@@ -102,7 +113,8 @@ public final class GameEngine {
 
     public var result: GameResult {
         GameResult(mode: mode, score: score, roundsCleared: roundsCleared, nearMisses: nearMisses, orbs: orbsCollected,
-                   seconds: Double(totalTicks) / Double(tuning.ticksPerSecond), continuesUsed: continuesUsed)
+                   seconds: Double(totalTicks) / Double(tuning.ticksPerSecond), continuesUsed: continuesUsed,
+                   bestMultiplier: bestMultiplier)
     }
 
     // MARK: Commandes
@@ -151,6 +163,7 @@ public final class GameEngine {
         score = roundStart.score
         nearMisses = roundStart.nearMisses
         orbsCollected = roundStart.orbs
+        multiplier = roundStart.multiplier
         beginRound()
         return true
     }
@@ -163,9 +176,12 @@ public final class GameEngine {
         recording = [player]
         pendingInput = .zero
         closeGhosts = []
+        nearMissesThisRound = 0
+        // Les échos s'effacent : au-delà de `ghostLifetime` manches, le fantôme disparaît.
+        ghosts.removeAll { round - $0.round > tuning.ghostLifetime }
         orbs = OrbPlan.orbs(seed: seed, round: round, tuning: tuning)
         orbIndex = 0
-        roundStart = (score, nearMisses, orbsCollected)
+        roundStart = (score, nearMisses, orbsCollected, multiplier)
         phase = .ready
     }
 
@@ -173,9 +189,9 @@ public final class GameEngine {
         tick += 1
         totalTicks += 1
 
-        // 1. Le joueur se déplace (au plus `maxStepPerTick`), sans sortir de l'arène.
+        // 1. Le joueur se déplace tout de suite de tout le geste reçu (au plus `maxStepPerTick`), sans sortir de l'arène.
         let move = pendingInput.limited(to: tuning.maxStepPerTick)
-        pendingInput -= move
+        pendingInput = .zero
         let from = player
         let r = tuning.playerRadius
         player = Vec2(min(max(player.x + move.x, r), tuning.arena.x - r),
@@ -195,8 +211,11 @@ public final class GameEngine {
                     closeGhosts.insert(ghost.round)
                 } else if closeGhosts.remove(ghost.round) != nil {
                     nearMisses += 1
+                    nearMissesThisRound += 1
+                    multiplier = min(tuning.maxMultiplier, multiplier + 1)
+                    bestMultiplier = max(bestMultiplier, multiplier)
                     score += tuning.nearMissPoints
-                    events.append(.nearMiss(ghostRound: ghost.round))
+                    events.append(.nearMiss(ghostRound: ghost.round, multiplier: multiplier))
                 }
             }
         }
@@ -207,14 +226,18 @@ public final class GameEngine {
         events.append(.orbCollected(index: orbIndex))
         orbIndex += 1
         orbsCollected += 1
-        score += tuning.orbPoints
+        score += tuning.orbPoints * multiplier
         if orbIndex >= orbs.count { clearRound(&events) }
     }
 
     private func clearRound(_ events: inout [GameEvent]) {
-        let bonus = tuning.roundPoints + tuning.speedBonus(ticks: tick)
+        let bonus = (tuning.roundPoints + tuning.speedBonus(ticks: tick)) * multiplier
         score += bonus
         events.append(.roundCleared(round: round, bonus: bonus))
+        if nearMissesThisRound == 0 && multiplier > 1 {
+            multiplier = 1
+            events.append(.multiplierLost)
+        }
         ghosts.append(Ghost(round: round, path: recording))
         round += 1
         phase = .transition(remainingTicks: tuning.transitionTicks)
