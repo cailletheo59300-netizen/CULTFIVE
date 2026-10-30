@@ -768,7 +768,7 @@ struct PlayIntroView: View {
         Task {
             do {
                 let used = try await app.service.playBoost(session: sessionId, items: items.map(\.rawValue))
-                app.updateStock(used.stock)
+                app.updateBoosts(used)
                 app.track("boost_use", ["items": used.boosts.joined(separator: ",")])
                 boosting = false
                 countdownThenGo()

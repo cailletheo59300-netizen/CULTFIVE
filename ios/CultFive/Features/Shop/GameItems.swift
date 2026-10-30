@@ -20,8 +20,8 @@ enum GameItem: String, CaseIterable, Identifiable {
     /// L'effet, en quelques mots.
     var effect: String {
         switch self {
-        case .energy: return "Elo gagné ×2"
-        case .shield: return "Aucune perte d'Elo"
+        case .energy: return "Elo ×2 · 30 min"
+        case .shield: return "0 perte · 3 parties"
         case .bet: return "Dès 8/10 : Elo ×3"
         case .lifeline: return "1 erreur pardonnée"
         case .hourglass: return "+10 s par question"
@@ -34,8 +34,8 @@ enum GameItem: String, CaseIterable, Identifiable {
     /// L'effet en entier (aperçu et boutique).
     var detail: String {
         switch self {
-        case .energy: return "Tout l'Elo que tu gagnes dans la partie compte double. Les pertes restent normales."
-        case .shield: return "Tu ne perds pas d'Elo sur la partie, même si elle se passe mal."
+        case .energy: return "Pendant 30 minutes, tout l'Elo que tu gagnes en partie classée compte double. Les pertes restent normales."
+        case .shield: return "Tes 3 prochaines parties classées ne te font perdre aucun Elo, même si elles se passent mal."
         case .bet: return "8 bonnes réponses sur 10 ou plus : ton Elo gagné compte triple. Sinon : aucun gain, et une perte doublée. Se joue seul."
         case .lifeline: return "Ta première mauvaise réponse en Survie ne compte pas : tu continues."
         case .hourglass: return "10 secondes de plus pour chaque question de ta Survie."
@@ -102,7 +102,7 @@ struct ItemsStrip: View {
             HStack(alignment: .top, spacing: 10) {
                 ForEach(items) { item in
                     ItemCell(item: item, count: app.boostStock[item.rawValue] ?? 0, on: selection.contains(item),
-                             onColor: onColor) {
+                             onColor: onColor, running: running(item)) {
                         if (app.boostStock[item.rawValue] ?? 0) > 0 {
                             Haptics.selection()
                             withAnimation(Motion.bounce) { GameItem.toggle(item, in: &selection) }
@@ -120,13 +120,38 @@ struct ItemsStrip: View {
     }
 }
 
+extension ItemsStrip {
+    /// Ce qui court déjà (D-122) : « 24 min » pour la Boisson, « 2 parties » pour le Bouclier.
+    func running(_ item: GameItem) -> String? {
+        switch item {
+        case .energy:
+            guard let until = app.energyUntil else { return nil }
+            return "\(max(1, Int(until.timeIntervalSinceNow / 60))) min"
+        case .shield:
+            let games = app.shieldGames
+            return games > 0 ? "\(games) partie\(games > 1 ? "s" : "")" : nil
+        default:
+            return nil
+        }
+    }
+}
+
 /// Un objet dans son rond : l'icône 3D, le nombre possédé, le nom, l'effet, et « Utiliser » ou « Activé ».
+/// Une Boisson ou un Bouclier déjà en cours le dit (« Actif · 24 min ») ; en poser un autre ajoute du temps.
 private struct ItemCell: View {
     let item: GameItem
     let count: Int
     let on: Bool
     let onColor: Color
+    var running: String? = nil
     let action: () -> Void
+
+    /// Libellé du bouton sous l'objet.
+    private var label: String {
+        if on { return running == nil ? "Activé ✓" : (item == .energy ? "+30 min ✓" : "+3 parties ✓") }
+        if let running { return "Actif · \(running)" }
+        return count > 0 ? "Utiliser" : "Obtenir"
+    }
 
     var body: some View {
         Button(action: action) {
@@ -169,11 +194,13 @@ private struct ItemCell: View {
                         .background(Color.white.opacity(0.9), in: Capsule())
                         .lineLimit(1).minimumScaleFactor(0.7)
                 }
-                Text(on ? "Activé ✓" : count > 0 ? "Utiliser" : "Obtenir")
+                Text(label)
                     .font(.system(size: 12, weight: .black, design: .rounded))
-                    .foregroundStyle(on ? Color.inkFixed : count > 0 ? item.tint : onColor.opacity(0.8))
+                    .foregroundStyle(on ? Color.inkFixed : running != nil ? .white : count > 0 ? item.tint : onColor.opacity(0.8))
+                    .lineLimit(1).minimumScaleFactor(0.7)
                     .padding(.horizontal, 10).padding(.vertical, 4)
-                    .background(on ? Color.sun : count > 0 ? Color.white : Color.white.opacity(0.18), in: Capsule())
+                    .background(on ? Color.sun : running != nil ? Color.correct : count > 0 ? Color.white : Color.white.opacity(0.18),
+                                in: Capsule())
             }
             .frame(maxWidth: .infinity)
         }
@@ -214,6 +241,43 @@ struct BoostsOutcome: View {
         }
         .padding(10)
         .background(Color.sun.opacity(0.18), in: RoundedRectangle(cornerRadius: Radius.s, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+}
+
+/// Sur l'accueil, tant qu'une Boisson ou un Bouclier court : « ⚡ Elo ×2 · 24 min », « 🛡️ Bouclier · 2 parties ».
+struct ActiveBoostsBar: View {
+    @Environment(AppModel.self) private var app
+
+    var body: some View {
+        TimelineView(.periodic(from: .now, by: 30)) { _ in
+            let energy = app.energyUntil
+            let shield = app.shieldGames
+            if energy != nil || shield > 0 {
+                HStack(spacing: 8) {
+                    if let energy {
+                        chip(.energy, "Elo ×2 · \(max(1, Int(energy.timeIntervalSinceNow / 60))) min")
+                    }
+                    if shield > 0 {
+                        chip(.shield, "Bouclier · \(shield) partie\(shield > 1 ? "s" : "")")
+                    }
+                    Spacer(minLength: 0)
+                }
+            }
+        }
+    }
+
+    private func chip(_ item: GameItem, _ text: String) -> some View {
+        HStack(spacing: 5) {
+            Image(item.image).resizable().scaledToFit().frame(width: 24, height: 24)
+            Text(text)
+                .font(.system(.footnote, design: .rounded).weight(.black))
+                .foregroundStyle(.white)
+                .lineLimit(1).minimumScaleFactor(0.8)
+        }
+        .padding(.leading, 5).padding(.trailing, 11).padding(.vertical, 4)
+        .background(item.tint, in: Capsule())
+        .shadow(color: item.tint.opacity(0.35), radius: 6, y: 3)
         .accessibilityElement(children: .combine)
     }
 }

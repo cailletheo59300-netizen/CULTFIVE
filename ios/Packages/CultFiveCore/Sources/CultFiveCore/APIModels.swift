@@ -560,9 +560,15 @@ public struct BoutiqueOverview: Codable, Hashable, Sendable {
     public var welcomeUntil: Date?
     /// Look possédé (D-120) : « avatar.joan », « ring.neon », « title.genie »… (nil : serveur d'avant).
     public var looks: [String]?
+    /// Boisson énergisante en cours jusqu'à (D-122), sinon nil.
+    public var energyUntil: Date?
+    /// Parties classées encore protégées par le Bouclier d'Elo (D-122).
+    public var shieldGames: Int?
 
     enum CodingKeys: String, CodingKey {
         case items, looks
+        case energyUntil = "energy_until"
+        case shieldGames = "shield_games"
         case noAds = "no_ads"
         case noAdsForever = "no_ads_forever"
         case noAdsUntil = "no_ads_until"
@@ -584,6 +590,15 @@ public struct BoostUse: Codable, Hashable, Sendable {
     public let boosts: [String]
     public let stock: [String: Int]
     public let seconds: Int?
+    /// Boisson et Bouclier en cours après la pose (D-122).
+    public var energyUntil: Date?
+    public var shieldGames: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case boosts, stock, seconds
+        case energyUntil = "energy_until"
+        case shieldGames = "shield_games"
+    }
 
     public init(boosts: [String], stock: [String: Int], seconds: Int? = nil) {
         self.boosts = boosts

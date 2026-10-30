@@ -109,3 +109,34 @@ begin
   perform public._starter_items(u);
   perform tst.ok((select qty from public.user_items where user_id = u and item_id = 'hourglass') = 1, 'une seule fois');
 end $$;
+
+-- 0100 : Boisson 30 minutes, Bouclier 3 parties, Pari seul.
+do $$
+declare u uuid := tst.new_user(); r jsonb; o jsonb;
+begin
+  perform tst.clock('2026-11-20 10:00:00+01');
+  perform tst.login(u);
+  for i in 1 .. 3 loop perform pg_temp.ranked_game(true); end loop;
+  r := pg_temp.ranked_game(true, array['energy']);
+  perform tst.ok(r -> 'boosts' -> 'items' ? 'energy' and (r -> 'boosts' ->> 'energy_until') is not null, 'boisson activée');
+  perform tst.tick('10 minutes');
+  r := pg_temp.ranked_game(true);
+  perform tst.ok(r -> 'boosts' -> 'items' ? 'energy' and (r -> 'boosts' ->> 'elo_extra')::int > 0, 'boisson encore active 10 min après, sans rien poser');
+  perform tst.tick('25 minutes');
+  r := pg_temp.ranked_game(true);
+  perform tst.ok(r -> 'boosts' is null or r -> 'boosts' = 'null'::jsonb, 'boisson finie après 30 min');
+
+  r := pg_temp.ranked_game(false, array['shield']);
+  o := public.boutique_overview();
+  perform tst.ok((o ->> 'shield_games')::int = 2, 'bouclier : encore 2 parties');
+  r := pg_temp.ranked_game(false);
+  perform tst.ok(r -> 'boosts' -> 'items' ? 'shield' and (r -> 'ratings' -> 0 ->> 'cote_after')::int >= (r -> 'ratings' -> 0 ->> 'cote_before')::int,
+                 'bouclier sur la partie suivante');
+  perform public._give_item(u, 'bet', 1);
+  r := pg_temp.ranked_game(false, array['bet']);
+  perform tst.ok(not (r -> 'boosts' -> 'items' ? 'shield') and (public.boutique_overview() ->> 'shield_games')::int = 1,
+                 'pari : le bouclier ne joue pas et n''est pas usé');
+  perform public._give_item(u, 'shield', 1);
+  perform pg_temp.ranked_game(true, array['shield']);
+  perform tst.ok((public.boutique_overview() ->> 'shield_games')::int = 3, 'un 2e bouclier ajoute 3 parties');
+end $$;

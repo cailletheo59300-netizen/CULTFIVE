@@ -448,6 +448,18 @@ final class AppModel {
         boutique?.items = stock
     }
 
+    /// Objets posés : stock, Boisson et Bouclier en cours (D-122).
+    func updateBoosts(_ used: BoostUse) {
+        updateStock(used.stock)
+        if let until = used.energyUntil { boutique?.energyUntil = until }
+        if let games = used.shieldGames { boutique?.shieldGames = games }
+    }
+
+    /// Boisson énergisante en cours (fin), sinon nil.
+    var energyUntil: Date? { boutique?.energyUntil.flatMap { $0 > Date() ? $0 : nil } }
+    /// Parties classées encore protégées par le Bouclier d'Elo.
+    var shieldGames: Int { boutique?.shieldGames ?? 0 }
+
     /// Rubrique de la boutique à montrer en l'ouvrant.
     var shopFocus: ShopFocus?
 

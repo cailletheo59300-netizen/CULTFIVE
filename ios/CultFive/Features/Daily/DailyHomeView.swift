@@ -23,6 +23,7 @@ struct DailyHomeView: View {
                 VStack(alignment: .leading, spacing: Space.l) {
                     topLine
                         .id("haut")
+                    ActiveBoostsBar()
                     LeonSays(text: leonLine, color: .brand, pose: app.daily?.state == .done ? .proud : .wave,
                              curl: min(1, 0.2 + Double(app.profile?.streak ?? 0) * 0.08), size: 92)
                     if !rewards.isEmpty {
@@ -129,6 +130,7 @@ struct DailyHomeView: View {
         await app.refreshDaily()
         await app.refreshProfile()
         await app.refreshAdStatus()
+        await app.refreshBoutique()
         if let fresh = try? await app.service.quests() {
             quests = fresh
             if app.api != nil { app.cache.save(fresh, key: "quests") }
