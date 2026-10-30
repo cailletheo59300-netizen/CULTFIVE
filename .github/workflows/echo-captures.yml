@@ -3,6 +3,7 @@ name: Écho Captures
 # Captures de la boutique d'Écho (iPhone 6,9 pouces, 1320 × 2868), pour les achats intégrés dans App Store Connect.
 # Lance l'app (build Debug, mode capture) dans le simulateur et enregistre les images dans echo/docs/captures.
 # À la demande du propriétaire seulement : Actions → Écho Captures → Run workflow (ou modification de ce fichier).
+# Pages : Offres, Traînées (défilée jusqu'aux traînées payantes), Décors.
 on:
   workflow_dispatch:
   push:

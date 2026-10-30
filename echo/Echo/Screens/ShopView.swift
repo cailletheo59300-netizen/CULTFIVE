@@ -29,6 +29,7 @@ struct ShopView: View {
         NavigationStack {
             ZStack {
                 app.theme.background.ignoresSafeArea()
+                ScrollViewReader { scroll in
                 ScrollView {
                     VStack(spacing: 16) {
                         Picker("Rayon", selection: $tab) {
@@ -51,6 +52,11 @@ struct ShopView: View {
                     }
                     .padding(20)
                 }
+                .onAppear {
+                    // Captures : les traînées payantes (Feu, Galaxie) doivent être visibles.
+                    if tab == .trails, AppModel.capture != nil { scroll.scrollTo("trail.galaxy", anchor: .bottom) }
+                }
+                }
                 if app.store.busy { LoadingVeil() }
             }
             .navigationTitle("Boutique")
@@ -58,6 +64,7 @@ struct ShopView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Chip(icon: "circle.hexagongrid.fill", text: "\(app.profile.coins)")
+                        .fixedSize()
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("OK") { dismiss() }.font(Theme.body(17, .bold))
@@ -69,7 +76,7 @@ struct ShopView: View {
 
     private func grid(_ skins: [Skin]) -> some View {
         LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
-            ForEach(skins) { SkinCard(skin: $0) }
+            ForEach(skins) { SkinCard(skin: $0).id($0.id) }
         }
     }
 }
