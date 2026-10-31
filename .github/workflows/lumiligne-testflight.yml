@@ -6,6 +6,11 @@ name: Lumiligne TestFlight
 # Secrets du dépôt : ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 (clé App Store Connect API, contenu du fichier .p8).
 on:
   workflow_dispatch:
+  # Demande d'envoi depuis la branche de travail : modifier lumiligne/testflight-request.txt (seulement sur le « go »
+  # du propriétaire). Sert aussi à faire connaître ce workflow à GitHub (il n'est pas sur la branche principale).
+  push:
+    branches: ["claude/**"]
+    paths: ["lumiligne/testflight-request.txt"]
 
 concurrency:
   group: lumiligne-testflight
