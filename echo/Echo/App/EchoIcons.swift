@@ -30,7 +30,7 @@ struct EchoWaves: Shape {
         let origin = CGPoint(x: rect.minX + rect.width * 0.18, y: rect.midY)
         path.addEllipse(in: CGRect(x: origin.x - rect.width * 0.08, y: origin.y - rect.width * 0.08,
                                    width: rect.width * 0.16, height: rect.width * 0.16))
-        let start = -48.0 * Double.pi / 180
+        let start: CGFloat = -48 * .pi / 180
         for radius in [rect.width * 0.45, rect.width * 0.8] {
             // Départ de l'onde, sans trait depuis le point central.
             path.move(to: CGPoint(x: origin.x + radius * cos(start), y: origin.y + radius * sin(start)))
