@@ -244,10 +244,10 @@ def build() -> Image.Image:
     img = phone(img, "partie-night-neon", x(0) + W / 2, 760, 840, -3, CYAN)
 
     img = caption(img, x(1), None, "Chaque manche,", "un fantôme de plus", PINK)
-    img = phone(img, "partie-ocean-bubbles", x(1) + W / 2, 760, 840, 3, PINK)
+    img = phone(img, "partie-ink-sakura", x(1) + W / 2, 760, 840, 3, PINK)
 
     img = caption(img, x(2), None, "Frôle-les pour", "exploser ton score", GOLD)
-    img = phone(img, "partie-ink-sakura", x(2) + W / 2, 760, 840, -3, GOLD)
+    img = phone(img, "partie-ocean-bubbles", x(2) + W / 2, 760, 840, -3, GOLD)
     img = sticker(img, "×5", (x(2) + 1080, 1060), GOLD, 210, -12)
 
     img = caption(img, x(3), None, "Des traînées", "de folie", ORANGE)
