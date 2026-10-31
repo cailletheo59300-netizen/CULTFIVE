@@ -615,6 +615,13 @@ final class AppModel {
         }
     }
 
+    /// Début d'une partie : la pub entre les parties se charge déjà si elle sera due à la fin (D-124).
+    func preloadInterstitial() {
+        guard !noAds, adStatus?.interstitial ?? false else { return }
+        applyInterstitialRules()
+        ads.preloadInterstitialIfSoon()
+    }
+
     /// Entre deux parties (après le bilan) : pub plein écran si elle est due.
     func interstitialBetweenGames() async {
         guard !noAds else { return }

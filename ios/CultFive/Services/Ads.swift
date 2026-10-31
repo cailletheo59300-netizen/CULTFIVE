@@ -77,10 +77,13 @@ final class AdsController {
         parameters.tagForUnderAgeOfConsent = !adultAudience
         do {
             try await consent.requestConsentInfoUpdate(with: parameters)
-            // Le voile « Chargement… » est une fenêtre au-dessus de tout : il cacherait le message de Google.
-            LoadingOverlay.hide()
-            if let root = Self.topViewController {
-                try await UMPConsentForm.loadAndPresentIfRequired(from: root)
+            // Mineurs : Google ne leur montre jamais le message (il échouait, erreur 8) ; pas de formulaire (D-124).
+            if adultAudience {
+                // Le voile « Chargement… » est une fenêtre au-dessus de tout : il cacherait le message de Google.
+                LoadingOverlay.hide()
+                if let root = Self.topViewController {
+                    try await UMPConsentForm.loadAndPresentIfRequired(from: root)
+                }
             }
             consentError = nil
         } catch {
@@ -92,7 +95,14 @@ final class AdsController {
         if adultAudience, ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
             _ = await ATTrackingManager.requestTrackingAuthorization()
         }
-        guard consent.canRequestAds else { return }
+        startIfAllowed()
+    }
+
+    /// Démarre le SDK si les pubs sont permises : consentement donné ou refusé (pubs limitées chez Google), ou joueur
+    /// mineur (Google ne lui demande pas son consentement et applique les pubs limitées, sans suivi ; D-124).
+    private func startIfAllowed() {
+        guard !started, UMPConsentInformation.sharedInstance.canRequestAds || !adultAudience else { return }
+        applyAudience()
         MobileAds.shared.start(completionHandler: nil)
         started = true
     }
@@ -152,10 +162,7 @@ final class AdsController {
     func presentPrivacyOptions() async {
         guard let root = Self.topViewController else { return }
         try? await UMPConsentForm.presentPrivacyOptionsForm(from: root)
-        if !started, UMPConsentInformation.sharedInstance.canRequestAds {
-            MobileAds.shared.start(completionHandler: nil)
-            started = true
-        }
+        startIfAllowed()
     }
 
     /// Dernier échec d'affichage du message de confidentialité (journal d'usage `ad_fail`).
@@ -174,24 +181,24 @@ final class AdsController {
         parameters.tagForUnderAgeOfConsent = !adultAudience
         do {
             try await consent.requestConsentInfoUpdate(with: parameters)
-            LoadingOverlay.hide()
-            if let root = Self.topViewController {
-                try await UMPConsentForm.loadAndPresentIfRequired(from: root)
-                consentError = nil
+            if adultAudience {
+                LoadingOverlay.hide()
+                if let root = Self.topViewController {
+                    try await UMPConsentForm.loadAndPresentIfRequired(from: root)
+                    consentError = nil
+                }
             }
         } catch {
             let error = error as NSError
             consentError = "form \(error.domain) \(error.code)"
         }
-        if consent.canRequestAds {
-            MobileAds.shared.start(completionHandler: nil)
-            started = true
-        }
+        startIfAllowed()
     }
 
     /// Pubs pas démarrées : état du consentement et dernière erreur du message (journal d'usage `ad_fail`).
     var consentFailure: String {
-        "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)" + (consentError.map { " \($0)" } ?? "")
+        "not_started consent \(UMPConsentInformation.sharedInstance.consentStatus.rawValue)"
+            + (adultAudience ? "" : " minor") + (starting ? " starting" : "") + (consentError.map { " \($0)" } ?? "")
     }
 
     // MARK: Pubs récompensées
@@ -287,10 +294,10 @@ final class AdsController {
     /// Pourquoi la pub entre les parties, due, ne s'est pas affichée (journal d'usage `ad_fail`) ; nil si rien à signaler.
     private(set) var interstitialFailure: String?
 
-    /// La pub entre les parties sera due au prochain passage : on la charge pendant que le joueur lit son bilan.
+    /// La pub entre les parties sera due bientôt : on la charge dès le début de la partie (et de nouveau au bilan si
+    /// besoin), pour qu'elle soit prête à la fin. Chargée au bilan seulement, elle arrivait souvent trop tard (D-124).
     func preloadInterstitialIfSoon() {
-        // Chargée un peu avant d'être due, pour être prête à la fin de la partie.
-        guard enabled, started, !interstitialLoading, playedSinceLastInterstitial >= interstitialGap - 120 else { return }
+        guard enabled, started, !interstitialLoading, playedSinceLastInterstitial >= interstitialGap - 300 else { return }
         if let ready = interstitialReady, Date().timeIntervalSince(ready.loadedAt) < 50 * 60 { return }
         interstitialLoading = true
         let unit = testAds ? Self.testInterstitialUnit : Self.interstitialUnit
@@ -321,6 +328,11 @@ final class AdsController {
         let today = Self.dayString(Date())
         let shownToday = defaults.string(forKey: Self.dayKey) == today ? defaults.integer(forKey: Self.countKey) : 0
         guard playedSinceLastInterstitial >= interstitialGap, shownToday < (interstitialDailyMax ?? .max) else { return false }
+        // Consentement répondu depuis (ou joueur mineur) : on démarre maintenant ; la pub se charge pour la suivante.
+        if !started, !starting {
+            startIfAllowed()
+            if started { preloadInterstitialIfSoon() }
+        }
         // Due mais impossible : on note pourquoi.
         guard started else {
             interstitialFailure = consentFailure
@@ -410,7 +422,10 @@ private struct CountsPlayTime: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .onAppear { app.ads.playBegan() }
+            .onAppear {
+                app.ads.playBegan()
+                app.preloadInterstitial()
+            }
             .onDisappear { app.ads.playEnded() }
             .onChange(of: scenePhase) { _, phase in
                 phase == .active ? app.ads.playBegan() : app.ads.playEnded()
