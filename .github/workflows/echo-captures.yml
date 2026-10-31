@@ -71,12 +71,12 @@ jobs:
           sleep 8
           xcrun simctl io "$UDID" screenshot "$dir/0$i-accueil.png" > /dev/null
           echo "✓ accueil"; i=$((i+1))
-          for combo in night:neon ocean:bubbles forest:fire synthwave:galaxy ink:sakura; do
+          for combo in night:neon ocean:bubbles forest:fire synthwave:galaxy ink:sakura night:comet ocean:electric synthwave:neon forest:sakura night:fire; do
             decor="${combo%%:*}"; trail="${combo##*:}"
             xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.echo -capture "play:decor.$decor:trail.$trail" \
               -AppleLanguages "(fr)" -AppleLocale fr_FR > /dev/null
-            sleep 16
-            xcrun simctl io "$UDID" screenshot "$dir/$(printf '%02d' $i)-partie-$decor.png" > /dev/null
+            sleep 18
+            xcrun simctl io "$UDID" screenshot "$dir/$(printf '%02d' $i)-partie-$decor-$trail.png" > /dev/null
             echo "✓ $decor"; i=$((i+1))
           done
           sips -g pixelWidth -g pixelHeight "$dir/01-boutique-offers.png"
