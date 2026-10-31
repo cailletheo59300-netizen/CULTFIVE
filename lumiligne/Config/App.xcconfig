@@ -1,0 +1,7 @@
+// Configuration de Lumiligne. Rien de secret ici : tout est public par nature.
+APP_DISPLAY_NAME = Lumiligne
+TEAM_ID = BM85BF2WVQ
+// Identifiant AdMob de l'app (public). En attendant l'app « Lumiligne » dans AdMob : identifiant de test de Google
+// (pubs de test uniquement). À remplacer avant la sortie (voir README.md). Les blocs d'annonces sont dans
+// Lumiligne/Services/Ads.swift (AdConfig).
+ADMOB_APP_ID = ca-app-pub-3940256099942544~1458002511
