@@ -23,3 +23,5 @@ android/.kotlin/
 android/local.properties
 android/*.jks
 android/*.keystore
+# Python
+__pycache__/
