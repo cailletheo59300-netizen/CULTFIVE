@@ -30,7 +30,7 @@ final class GameSession: Identifiable {
     private var runningSince: Date?
     private weak var app: AppModel?
 
-    init(app: AppModel, kind: PuzzleKind, grid: Grid, saved: SavedGrid?) {
+    init(app: AppModel, kind: PuzzleKind, grid: LumiCore.Grid, saved: SavedGrid?) {
         self.app = app
         self.kind = kind
         let marks = saved?.marks.compactMap { Mark(rawValue: $0) }

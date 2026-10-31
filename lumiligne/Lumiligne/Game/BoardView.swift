@@ -72,7 +72,7 @@ struct BoardView: View {
 
 /// Fond : couleurs des zones, traits fins entre les cases, traits épais entre les zones, numéros et symboles.
 private struct ZoneLayer: View {
-    let layout: Layout
+    let layout: LumiCore.Layout
     let resolved: [Bool]
     let palette: Palette
     let showSymbols: Bool
@@ -129,7 +129,7 @@ private struct ZoneLayer: View {
 
 /// Éclat d'une zone quand elle reçoit sa gemme.
 private struct FlashLayer: View {
-    let layout: Layout
+    let layout: LumiCore.Layout
     let zone: Int?
     let token: Int
     @State private var opacity = 0.0
