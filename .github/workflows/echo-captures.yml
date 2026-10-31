@@ -1,9 +1,9 @@
 name: Écho Captures
 
-# Captures de la boutique d'Écho (iPhone 6,9 pouces, 1320 × 2868), pour les achats intégrés dans App Store Connect.
+# Captures d'Écho (iPhone 6,9 pouces, 1320 × 2868) : boutique (achats intégrés dans App Store Connect) et parties.
 # Lance l'app (build Debug, mode capture) dans le simulateur et enregistre les images dans echo/docs/captures.
 # À la demande du propriétaire seulement : Actions → Écho Captures → Run workflow (ou modification de ce fichier).
-# Pages : Offres, Traînées (défilée jusqu'aux traînées payantes), Décors.
+# Pages : Offres, Traînées (défilée jusqu'aux traînées payantes), Décors, puis une partie par décor.
 on:
   workflow_dispatch:
   push:
@@ -64,6 +64,15 @@ jobs:
             sleep 9
             xcrun simctl io "$UDID" screenshot "$dir/0$i-boutique-$tab.png" > /dev/null
             echo "✓ $tab"; i=$((i+1))
+          done
+          # Parties jouées par le pilote automatique, une par décor (avec une traînée qui le met en valeur).
+          for combo in night:fire ocean:bubbles forest:sakura ink:classic synthwave:galaxy; do
+            decor="${combo%%:*}"; trail="${combo##*:}"
+            xcrun simctl launch --terminate-running-process "$UDID" app.brainlix.echo -capture "play:decor.$decor:trail.$trail" \
+              -AppleLanguages "(fr)" -AppleLocale fr_FR > /dev/null
+            sleep 14
+            xcrun simctl io "$UDID" screenshot "$dir/0$i-partie-$decor.png" > /dev/null
+            echo "✓ $decor"; i=$((i+1))
           done
           sips -g pixelWidth -g pixelHeight "$dir/01-boutique-offers.png"
       - uses: actions/upload-artifact@v4

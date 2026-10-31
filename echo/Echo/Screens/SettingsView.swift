@@ -13,7 +13,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                app.theme.background.ignoresSafeArea()
+                app.theme.menuBackground.ignoresSafeArea()
                 ScrollView {
                     VStack(spacing: 16) {
                         controlCard
@@ -240,7 +240,7 @@ struct RulesView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                app.theme.background.ignoresSafeArea()
+                app.theme.menuBackground.ignoresSafeArea()
                 ScrollView {
                     VStack(spacing: 12) {
                         ForEach(rules, id: \.1) { icon, text in

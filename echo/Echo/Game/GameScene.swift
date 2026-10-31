@@ -4,7 +4,8 @@ import EchoCore
 
 /// Dessine la partie avec SpriteKit et transmet les gestes du doigt au moteur.
 /// La logique avance par pas fixes de 1/60 s (même sur un écran 120 Hz) : les fantômes rejouent exactement la manche.
-/// L'arène (1000 × 1600 unités) est centrée et mise à l'échelle de l'écran, sans déformation.
+/// L'arène (1000 × 1600 unités) est centrée et mise à l'échelle de l'écran, sans déformation. Le décor animé remplit
+/// tout l'écran derrière elle.
 final class GameScene: SKScene {
     let engine: GameEngine
     private let theme: GameTheme
@@ -17,22 +18,24 @@ final class GameScene: SKScene {
 
     private let arena = SKNode()
     private let effects = SKNode()
+    private var decor: DecorLayer?
     private var lastTime: TimeInterval?
     private var accumulator: TimeInterval = 0
+
+    // Doigt
     private var trackedTouch: UITouch?
     private var lastTouchPoint: CGPoint?
     private var lastTouchTime: TimeInterval = 0
+    /// Vitesse du doigt lissée (unités d'arène par seconde) : l'accélération reste stable d'un geste à l'autre.
+    private var smoothedSpeed: Double = 0
 
     // Nœuds
-    private let player = SKNode()
-    private var playerTrail: [SKSpriteNode] = []
-    private var trailHistory: [Vec2] = []
+    private let trail: TrailRenderer
     private var ghostNodes: [Int: GhostNode] = [:]
     private let orb = SKNode()
     private let nextOrb = SKShapeNode(circleOfRadius: 40)
     private var lastPhase: GamePhase = .ready
 
-    private static let trailLength = 16
     private static let ghostTrailLength = 9
     /// Place gardée en haut de l'écran pour le score (points SwiftUI).
     private static let topInset: CGFloat = 96
@@ -42,6 +45,7 @@ final class GameScene: SKScene {
         self.engine = engine
         self.theme = theme
         self.controlSetting = controlSetting
+        trail = TrailRenderer(skin: theme.trail, theme: theme, radius: engine.tuning.playerRadius)
         super.init(size: CGSize(width: 390, height: 844))
         scaleMode = .resizeFill
         backgroundColor = .clear
@@ -63,21 +67,23 @@ final class GameScene: SKScene {
 
     override func didChangeSize(_ oldSize: CGSize) {
         super.didChangeSize(oldSize)
+        guard arena.parent != nil else { return }
         layoutArena()
     }
 
     private func buildArena() {
         let size = engine.tuning.arena
         let border = SKShapeNode(rect: CGRect(x: 0, y: 0, width: size.x, height: size.y), cornerRadius: 48)
-        border.strokeColor = theme.borderColor.withAlphaComponent(0.8)
+        border.strokeColor = theme.borderColor.withAlphaComponent(0.85)
         border.lineWidth = 5
-        border.fillColor = UIColor.white.withAlphaComponent(0.02)
+        // Voile léger sous l'arène : le décor reste visible mais ne gêne pas la lecture.
+        border.fillColor = theme.isLight ? UIColor.white.withAlphaComponent(0.25) : UIColor.black.withAlphaComponent(0.22)
         border.zPosition = 0
         arena.addChild(border)
 
         // Orbe à attraper : halo + cœur qui pulse. Orbe suivant : simple cercle discret.
-        let halo = sprite(Textures.glow, size: 230, color: theme.orbColor, alpha: 0.55)
-        halo.blendMode = .add
+        let halo = sprite(Textures.glow, size: 230, color: theme.orbColor, alpha: theme.isLight ? 0.3 : 0.55)
+        halo.blendMode = theme.glowBlend
         let core = sprite(Textures.disc, size: 2 * engine.tuning.orbRadius, color: theme.orbColor, alpha: 1)
         orb.addChild(halo)
         orb.addChild(core)
@@ -85,32 +91,19 @@ final class GameScene: SKScene {
         orb.run(.repeatForever(.sequence([.scale(to: 1.12, duration: 0.45), .scale(to: 0.94, duration: 0.45)])))
         arena.addChild(orb)
 
-        nextOrb.strokeColor = theme.orbColor.withAlphaComponent(0.35)
+        nextOrb.strokeColor = theme.orbColor.withAlphaComponent(0.4)
         nextOrb.lineWidth = 5
         nextOrb.zPosition = 9
         arena.addChild(nextOrb)
 
-        // Joueur : traînée, halo, cœur.
-        for _ in 0..<Self.trailLength {
-            let dot = sprite(Textures.glow, size: 60, color: theme.playerColor, alpha: 0)
-            dot.blendMode = .add
-            dot.zPosition = 20
-            arena.addChild(dot)
-            playerTrail.append(dot)
-        }
-        let playerHalo = sprite(Textures.glow, size: 150, color: theme.playerColor, alpha: 0.6)
-        playerHalo.blendMode = .add
-        let playerCore = sprite(Textures.disc, size: 2 * engine.tuning.playerRadius, color: .white, alpha: 1)
-        player.addChild(playerHalo)
-        player.addChild(playerCore)
-        player.zPosition = 30
-        arena.addChild(player)
+        trail.node.zPosition = 20
+        arena.addChild(trail.node)
 
         effects.zPosition = 40
         arena.addChild(effects)
     }
 
-    /// Centre l'arène sous le score et l'agrandit au maximum sans la déformer.
+    /// Centre l'arène sous le score et l'agrandit au maximum sans la déformer ; redessine le décor à la taille de l'écran.
     private func layoutArena() {
         let size = engine.tuning.arena
         let available = CGSize(width: self.size.width - 24, height: self.size.height - Self.topInset - Self.bottomInset)
@@ -119,6 +112,11 @@ final class GameScene: SKScene {
         arena.setScale(scale)
         arena.position = CGPoint(x: (self.size.width - size.x * scale) / 2,
                                  y: Self.bottomInset + (available.height - size.y * scale) / 2)
+        decor?.removeFromParent()
+        let layer = DecorLayer(decor: theme.decor, size: self.size)
+        layer.zPosition = -10
+        addChild(layer)
+        decor = layer
     }
 
     private func sprite(_ texture: SKTexture, size: CGFloat, color: UIColor, alpha: CGFloat) -> SKSpriteNode {
@@ -139,18 +137,28 @@ final class GameScene: SKScene {
         trackedTouch = touch
         lastTouchPoint = touch.location(in: arena)
         lastTouchTime = touch.timestamp
+        smoothedSpeed = 0
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = trackedTouch, touches.contains(touch), let last = lastTouchPoint else { return }
-        let point = touch.location(in: arena)
+        guard let touch = trackedTouch, touches.contains(touch) else { return }
+        // Tous les points captés par l'écran depuis la dernière fois (jusqu'à 240 par seconde), pas seulement le dernier.
+        let samples = event?.coalescedTouches(for: touch) ?? [touch]
+        for sample in samples { move(to: sample.location(in: arena), at: sample.timestamp) }
+    }
+
+    private func move(to point: CGPoint, at time: TimeInterval) {
+        guard let last = lastTouchPoint else { return }
         let delta = Vec2(Double(point.x - last.x), Double(point.y - last.y))
-        // Vitesse du doigt en unités d'arène par seconde (intervalle borné : 120 Hz au plus, 0,1 s au moins).
-        let interval = min(0.1, max(1.0 / 240, touch.timestamp - lastTouchTime))
+        let interval = min(0.1, max(1.0 / 480, time - lastTouchTime))
         lastTouchPoint = point
-        lastTouchTime = touch.timestamp
+        lastTouchTime = time
+        // Vitesse lissée sur ~40 ms : une mesure isolée qui « saute » ne change pas brusquement l'accélération.
+        let instant = delta.length / interval
+        let blend = 1 - exp(-interval / 0.04)
+        smoothedSpeed += (instant - smoothedSpeed) * blend
         guard running else { return }
-        let gain = engine.tuning.pointerGain(speed: delta.length / interval, setting: controlSetting)
+        let gain = engine.tuning.pointerGain(speed: smoothedSpeed, setting: controlSetting)
         engine.addInput(delta * gain)
     }
 
@@ -168,11 +176,13 @@ final class GameScene: SKScene {
     // MARK: Boucle
 
     override func update(_ currentTime: TimeInterval) {
+        let dt = CGFloat(min(currentTime - (lastTime ?? currentTime), 0.1))
         defer { lastTime = currentTime }
         var events: [GameEvent] = []
-        if running, let last = lastTime {
+        if AppModel.captureAutopilot, running { autopilot() }
+        if running, lastTime != nil {
             // Au plus 0,1 s rattrapée d'un coup (retour d'arrière-plan, ralentissement).
-            accumulator += min(currentTime - last, 0.1)
+            accumulator += Double(dt)
             let step = 1.0 / Double(engine.tuning.ticksPerSecond)
             while accumulator >= step {
                 events += engine.step()
@@ -180,48 +190,40 @@ final class GameScene: SKScene {
             }
         }
         handle(events)
-        render(time: currentTime)
+        render(time: currentTime, dt: dt)
         onFrame?(events)
+    }
+
+    /// Captures : va vers l'orbe en contournant grossièrement les fantômes.
+    private func autopilot() {
+        guard let orb = engine.currentOrb else { return }
+        var direction = orb - engine.player
+        for ghost in engine.ghosts where !engine.isFading(ghost) {
+            let away = engine.player - engine.position(of: ghost)
+            let distance = max(1, away.length)
+            if distance < 160 { direction += away * (160 / distance) }
+        }
+        engine.addInput(direction.limited(to: 14))
     }
 
     /// Après « Continuer » : la manche repart du centre.
     func restartAfterContinue() {
-        player.alpha = 1
-        player.setScale(1)
-        trailHistory = []
+        trail.reset()
         accumulator = 0
     }
 
     // MARK: Dessin
 
-    private func render(time: TimeInterval) {
+    private func render(time: TimeInterval, dt: CGFloat) {
         if engine.phase != lastPhase {
-            if engine.phase == .ready { trailHistory = [] }
+            if engine.phase == .ready { trail.reset() }
             lastPhase = engine.phase
         }
         let dead = engine.isDead
+        decor?.update(time: time, dt: dt)
+        // Le point est dessiné avec le geste déjà reçu : il paraît collé au doigt.
+        trail.update(position: point(engine.displayPlayer), time: time, dt: dt, visible: !dead)
 
-        // Joueur et sa traînée.
-        player.position = point(engine.player)
-        if !dead, trailHistory.last != engine.player {
-            trailHistory.append(engine.player)
-            if trailHistory.count > Self.trailLength { trailHistory.removeFirst() }
-        }
-        for (i, dot) in playerTrail.enumerated() {
-            // i = 0 : le bout de la traînée ; le dernier : juste derrière le point.
-            let historyIndex = trailHistory.count - Self.trailLength + i
-            guard historyIndex >= 0, !dead else {
-                dot.alpha = 0
-                continue
-            }
-            let k = CGFloat(i + 1) / CGFloat(Self.trailLength)
-            dot.position = point(trailHistory[historyIndex])
-            dot.alpha = 0.75 * k
-            dot.setScale(0.35 + 0.65 * k)
-            dot.color = theme.trailColor(at: Double(1 - k), time: time)
-        }
-
-        // Orbes.
         if let current = engine.currentOrb, !dead {
             orb.isHidden = false
             orb.position = point(current)
@@ -269,16 +271,15 @@ final class GameScene: SKScene {
 
     private func makeGhostNode(_ round: Int) -> GhostNode {
         let head = SKNode()
-        let halo = sprite(Textures.glow, size: 120, color: theme.ghostColor, alpha: 0.6)
-        halo.blendMode = .add
+        let halo = sprite(Textures.glow, size: 120, color: theme.ghostColor, alpha: theme.isLight ? 0.25 : 0.6)
+        halo.blendMode = theme.glowBlend
         let core = sprite(Textures.disc, size: 2 * engine.tuning.ghostRadius, color: theme.ghostColor, alpha: 0.95)
         head.addChild(halo)
         head.addChild(core)
-        // Anneau blanc pointillé : signe qu'un fantôme pâle peut être absorbé.
+        // Anneau pointillé : signe qu'un fantôme pâle peut être absorbé.
         let prey = SKShapeNode(circleOfRadius: engine.tuning.ghostRadius + 14)
-        let dashes = prey.path.map { $0.copy(dashingWithPhase: 0, lengths: [10, 8]) }
-        prey.path = dashes
-        prey.strokeColor = .white
+        prey.path = prey.path.map { $0.copy(dashingWithPhase: 0, lengths: [10, 8]) }
+        prey.strokeColor = theme.isLight ? UIColor(hex: "#1C1A17") : .white
         prey.lineWidth = 4
         prey.isHidden = true
         prey.run(.repeatForever(.rotate(byAngle: .pi, duration: 1.5)))
@@ -288,14 +289,11 @@ final class GameScene: SKScene {
         var trail: [SKSpriteNode] = []
         for _ in 0..<Self.ghostTrailLength {
             let dot = sprite(Textures.glow, size: 50, color: theme.ghostColor, alpha: 0)
-            dot.blendMode = .add
+            dot.blendMode = theme.glowBlend
             dot.zPosition = 14
             arena.addChild(dot)
             trail.append(dot)
         }
-        // Apparition : le nouveau fantôme grossit depuis le centre.
-        head.setScale(0.1)
-        head.run(.scale(to: 1, duration: 0.35))
         let node = GhostNode(head: head, trail: trail, prey: prey)
         ghostNodes[round] = node
         return node
@@ -309,9 +307,9 @@ final class GameScene: SKScene {
         for event in events {
             switch event {
             case .orbCollected:
-                burstRing(at: player.position, color: theme.orbColor)
+                burstRing(at: trail.head.position, color: theme.orbColor)
             case .nearMiss(_, let multiplier):
-                burstRing(at: player.position, color: theme.playerColor, radius: 60 + CGFloat(multiplier) * 10)
+                burstRing(at: trail.head.position, color: theme.playerColor, radius: 60 + CGFloat(multiplier) * 10)
             case .roundCleared:
                 flashBorder()
             case .died:
@@ -328,7 +326,7 @@ final class GameScene: SKScene {
         let ring = SKShapeNode(circleOfRadius: radius)
         ring.strokeColor = color
         ring.lineWidth = 6
-        ring.glowWidth = 4
+        ring.glowWidth = theme.isLight ? 0 : 4
         ring.position = position
         effects.addChild(ring)
         ring.run(.sequence([.group([.scale(to: 2.6, duration: 0.35), .fadeOut(withDuration: 0.35)]), .removeFromParent()]))
@@ -339,12 +337,12 @@ final class GameScene: SKScene {
         let ring = SKShapeNode(circleOfRadius: 140)
         ring.strokeColor = theme.ghostColor
         ring.lineWidth = 8
-        ring.glowWidth = 6
-        ring.position = player.position
+        ring.glowWidth = theme.isLight ? 0 : 6
+        ring.position = trail.head.position
         effects.addChild(ring)
         ring.run(.sequence([.group([.scale(to: 0.15, duration: 0.25), .fadeAlpha(to: 0.2, duration: 0.25)]), .removeFromParent()]))
-        player.run(.sequence([.scale(to: 1.5, duration: 0.12), .scale(to: 1, duration: 0.18)]))
-        burstRing(at: player.position, color: theme.orbColor, radius: 40)
+        trail.head.run(.sequence([.scale(to: 1.5, duration: 0.12), .scale(to: 1, duration: 0.18)]))
+        burstRing(at: trail.head.position, color: theme.orbColor, radius: 40)
     }
 
     private func flashBorder() {
@@ -352,17 +350,17 @@ final class GameScene: SKScene {
         let flash = SKShapeNode(rect: CGRect(x: 0, y: 0, width: size.x, height: size.y), cornerRadius: 48)
         flash.strokeColor = theme.orbColor
         flash.lineWidth = 10
-        flash.glowWidth = 8
+        flash.glowWidth = theme.isLight ? 0 : 8
         effects.addChild(flash)
         flash.run(.sequence([.fadeOut(withDuration: 0.5), .removeFromParent()]))
     }
 
     private func explode() {
-        let origin = player.position
+        let origin = trail.head.position
         for i in 0..<18 {
             let angle = CGFloat(i) / 18 * 2 * .pi
             let dot = sprite(Textures.glow, size: 46, color: i.isMultiple(of: 2) ? theme.playerColor : theme.ghostColor, alpha: 1)
-            dot.blendMode = .add
+            dot.blendMode = theme.glowBlend
             dot.position = origin
             effects.addChild(dot)
             let distance = CGFloat.random(in: 120...260)
@@ -370,7 +368,8 @@ final class GameScene: SKScene {
             move.timingMode = .easeOut
             dot.run(.sequence([.group([move, .fadeOut(withDuration: 0.6), .scale(to: 0.2, duration: 0.6)]), .removeFromParent()]))
         }
-        player.run(.group([.scale(to: 2.2, duration: 0.25), .fadeOut(withDuration: 0.25)]))
+        trail.head.run(.group([.scale(to: 2.2, duration: 0.25), .fadeOut(withDuration: 0.25)]))
+        trail.clearParticles()
         // L'arène tremble un court instant.
         let base = arena.position
         var steps: [SKAction] = (0..<6).map { i in
@@ -378,8 +377,7 @@ final class GameScene: SKScene {
                           duration: 0.035)
         }
         steps.append(SKAction.move(to: base, duration: 0.035))
-        let shake = SKAction.sequence(steps)
-        arena.run(shake)
+        arena.run(SKAction.sequence(steps))
     }
 }
 
@@ -388,33 +386,10 @@ private struct GhostNode {
     let trail: [SKSpriteNode]
     let prey: SKShapeNode
 
-    /// Le fantôme s'efface (fin de vie ou « Continuer ») : fondu puis retrait.
+    /// Le fantôme s'efface (fin de vie, absorption ou « Continuer ») : fondu puis retrait.
     func fadeOutAndRemove() {
         let vanish = SKAction.sequence([.group([.fadeOut(withDuration: 0.5), .scale(to: 1.6, duration: 0.5)]), .removeFromParent()])
         head.run(vanish)
         trail.forEach { $0.run(.sequence([.fadeOut(withDuration: 0.3), .removeFromParent()])) }
-    }
-}
-
-/// Textures dessinées une fois au lancement (aucune image à produire à la main).
-enum Textures {
-    /// Halo : blanc au centre, transparent au bord (teinté par la couleur du sprite).
-    static let glow: SKTexture = make(size: 128) { context, rect in
-        let colors = [UIColor.white.cgColor, UIColor.white.withAlphaComponent(0.35).cgColor, UIColor.white.withAlphaComponent(0).cgColor]
-        let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colors as CFArray, locations: [0, 0.35, 1])!
-        let center = CGPoint(x: rect.midX, y: rect.midY)
-        context.drawRadialGradient(gradient, startCenter: center, startRadius: 0, endCenter: center, endRadius: rect.width / 2, options: [])
-    }
-
-    /// Disque plein aux bords doux.
-    static let disc: SKTexture = make(size: 128) { context, rect in
-        context.setFillColor(UIColor.white.cgColor)
-        context.fillEllipse(in: rect.insetBy(dx: 2, dy: 2))
-    }
-
-    private static func make(size: CGFloat, draw: (CGContext, CGRect) -> Void) -> SKTexture {
-        let rect = CGRect(x: 0, y: 0, width: size, height: size)
-        let image = UIGraphicsImageRenderer(size: rect.size).image { draw($0.cgContext, rect) }
-        return SKTexture(image: image)
     }
 }

@@ -65,26 +65,34 @@ Ces règles sont dans `AdPacing.swift`. Le consentement (RGPD puis demande de su
 ## La boutique
 Tout s'achète directement, sans hasard.
 
-**Traînées** (le point du joueur) :
-| Nom | Prix |
-|---|---|
-| Écho | gratuit |
-| Menthe | 200 pièces |
-| Corail | 300 pièces |
-| Or | 500 pièces |
-| Glace | 700 pièces |
-| Arc-en-ciel | 1 200 pièces |
-| Feu | 1,99 € |
-| Galaxie | 1,99 € |
+**Traînées** (le point du joueur), toutes dessinées par le code (`Echo/Game/TrailRenderer.swift`) :
+| Nom | Prix | Effet |
+|---|---|---|
+| Écho | gratuit | points cyan |
+| Menthe | 200 pièces | points verts |
+| Corail | 300 pièces | dégradé corail |
+| Néon | 400 pièces | ruban lumineux continu, couleurs qui alternent |
+| Or | 500 pièces | dégradé doré |
+| Comète | 600 pièces | longue queue qui s'étire, poussière scintillante |
+| Glace | 700 pièces | dégradé blanc-bleu |
+| Bulles | 800 pièces | bulles qui flottent et éclatent |
+| Pixel | 800 pièces | carrés rétro aux couleurs franches, sur une grille |
+| Sakura | 1 000 pièces | pétales roses qui tombent en tournant |
+| Arc-en-ciel | 1 200 pièces | couleurs qui tournent |
+| Électrique | 1 200 pièces | éclairs en zigzag et étincelles |
+| Lave | 1 400 pièces | gouttes qui tombent et refroidissent en noir |
+| Toxique | 1 500 pièces | gouttes d'acide et vapeurs vertes |
+| **Feu** | 1,99 € | boule de feu, flammes qui montent, braises qui s'envolent |
+| **Galaxie** | 1,99 € | étoile qui tourne, étoiles scintillantes et poussière de nébuleuse |
 
-**Décors** (fond, fantômes, orbes) :
-| Nom | Prix |
-|---|---|
-| Nuit | gratuit |
-| Océan | 400 pièces |
-| Forêt | 600 pièces |
-| Encre | 900 pièces |
-| Synthwave | 1,99 € |
+**Décors**, animés et dessinés par le code (`Echo/Game/DecorLayer.swift`) :
+| Nom | Prix | Ce qu'on voit |
+|---|---|---|
+| Nuit | gratuit | ciel étoilé qui scintille, lune, nébuleuses, étoiles filantes |
+| Océan | 400 pièces | rayons de lumière qui ondulent, bulles qui montent, poissons lumineux, plancton |
+| Forêt | 600 pièces | feuillages en silhouette sur les bords, brume, lucioles |
+| Encre | 900 pièces | papier crème, éclaboussures et coup de pinceau ; le seul décor clair (textes et fantômes sombres) |
+| **Synthwave** | 1,99 € | soleil couchant rayé, montagnes néon, grille en perspective qui défile |
 
 **Offres** :
 | Offre | Prix conseillé |

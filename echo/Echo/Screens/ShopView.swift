@@ -1,8 +1,9 @@
 import SwiftUI
+import SpriteKit
 import EchoCore
 
 /// Boutique : traînées et décors (en pièces ou en euros), offres (Sans pub, Pack de départ, pièces).
-/// Tout s'achète directement, sans hasard.
+/// Tout s'achète directement, sans hasard. Chaque apparence montre son aperçu animé réel (mêmes effets qu'en partie).
 struct ShopView: View {
     @Environment(AppModel.self) private var app
     @Environment(\.dismiss) private var dismiss
@@ -28,34 +29,34 @@ struct ShopView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                app.theme.background.ignoresSafeArea()
+                app.theme.menuBackground.ignoresSafeArea()
                 ScrollViewReader { scroll in
-                ScrollView {
-                    VStack(spacing: 16) {
-                        Picker("Rayon", selection: $tab) {
-                            ForEach(Tab.allCases) { Text($0.rawValue).tag($0) }
-                        }
-                        .pickerStyle(.segmented)
+                    ScrollView {
+                        VStack(spacing: 16) {
+                            Picker("Rayon", selection: $tab) {
+                                ForEach(Tab.allCases) { Text($0.rawValue).tag($0) }
+                            }
+                            .pickerStyle(.segmented)
 
-                        switch tab {
-                        case .trails: grid(Catalog.trails)
-                        case .decors: grid(Catalog.decors)
-                        case .offers: OffersList()
-                        }
+                            switch tab {
+                            case .trails: grid(Catalog.trails)
+                            case .decors: grid(Catalog.decors)
+                            case .offers: OffersList()
+                            }
 
-                        if let message = app.store.message {
-                            Text(message)
-                                .font(Theme.body(14))
-                                .foregroundStyle(Theme.secondary)
-                                .multilineTextAlignment(.center)
+                            if let message = app.store.message {
+                                Text(message)
+                                    .font(Theme.body(14))
+                                    .foregroundStyle(Theme.secondary)
+                                    .multilineTextAlignment(.center)
+                            }
                         }
+                        .padding(20)
                     }
-                    .padding(20)
-                }
-                .onAppear {
-                    // Captures : les traînées payantes (Feu, Galaxie) doivent être visibles.
-                    if tab == .trails, AppModel.capture != nil { scroll.scrollTo("trail.galaxy", anchor: .bottom) }
-                }
+                    .onAppear {
+                        // Captures : les traînées payantes (Feu, Galaxie) doivent être visibles.
+                        if tab == .trails, AppModel.capture != nil { scroll.scrollTo("trail.galaxy", anchor: .bottom) }
+                    }
                 }
                 if app.store.busy { LoadingVeil() }
             }
@@ -63,7 +64,7 @@ struct ShopView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Chip(icon: "circle.hexagongrid.fill", text: "\(app.profile.coins)")
+                    Chip(text: "\(app.profile.coins)") { CoinIcon(size: 20) }
                         .fixedSize()
                 }
                 ToolbarItem(placement: .topBarTrailing) {
@@ -81,7 +82,7 @@ struct ShopView: View {
     }
 }
 
-/// Une apparence : aperçu, nom, et bouton (équipée, équiper, prix).
+/// Une apparence : aperçu animé, nom, et bouton (équipée, équiper, prix).
 private struct SkinCard: View {
     @Environment(AppModel.self) private var app
     let skin: Skin
@@ -90,12 +91,25 @@ private struct SkinCard: View {
     private var equipped: Bool {
         skin.kind == .trail ? app.profile.equippedTrail == skin.id : app.profile.equippedDecor == skin.id
     }
+    private var premium: Bool { if case .store = skin.price { true } else { false } }
 
     var body: some View {
         VStack(spacing: 10) {
-            SkinPreview(skin: skin, theme: app.theme)
-                .frame(height: 110)
+            SkinPreview(skin: skin)
+                .frame(height: 112)
                 .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .overlay(alignment: .topTrailing) {
+                    if premium {
+                        Text("PREMIUM")
+                            .font(Theme.body(10, .heavy))
+                            .tracking(1)
+                            .foregroundStyle(.black)
+                            .padding(.horizontal, 7)
+                            .padding(.vertical, 3)
+                            .background(Capsule().fill(LinearGradient(colors: [Theme.gold, Theme.ghost], startPoint: .leading, endPoint: .trailing)))
+                            .padding(6)
+                    }
+                }
             Text(skin.name)
                 .font(Theme.body(16, .bold))
                 .foregroundStyle(Theme.text)
@@ -104,15 +118,15 @@ private struct SkinCard: View {
         .padding(12)
         .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(Theme.card))
         .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous)
-            .stroke(equipped ? Theme.accent : Theme.stroke, lineWidth: equipped ? 2 : 1))
+            .stroke(equipped ? Theme.accent : (premium ? Theme.ghost.opacity(0.6) : Theme.stroke), lineWidth: equipped || premium ? 2 : 1))
     }
 
     @ViewBuilder
     private var action: some View {
         if equipped {
-            label("Équipée", icon: "checkmark", color: Theme.accent, filled: false)
+            label("Équipée", systemIcon: "checkmark", color: Theme.accent, filled: false)
         } else if owned {
-            Button { app.equip(skin) } label: { label("Équiper", icon: nil, color: Theme.accent, filled: true) }
+            Button { app.equip(skin) } label: { label("Équiper", color: Theme.accent, filled: true) }
         } else {
             switch skin.price {
             case .free:
@@ -121,7 +135,7 @@ private struct SkinCard: View {
                 Button {
                     if !app.buyWithCoins(skin) { app.haptics.error() }
                 } label: {
-                    label("\(price)", icon: "circle.hexagongrid.fill", color: Theme.gold, filled: app.profile.coins >= price)
+                    label("\(price)", coin: true, color: Theme.gold, filled: app.profile.coins >= price)
                 }
                 .opacity(app.profile.coins >= price ? 1 : 0.55)
             case .store(let product):
@@ -133,15 +147,16 @@ private struct SkinCard: View {
                         }
                     }
                 } label: {
-                    label(app.store.price(product) ?? "…", icon: nil, color: Theme.ghost, filled: true)
+                    label(app.store.price(product) ?? "…", color: Theme.ghost, filled: true)
                 }
             }
         }
     }
 
-    private func label(_ text: String, icon: String?, color: Color, filled: Bool) -> some View {
+    private func label(_ text: String, systemIcon: String? = nil, coin: Bool = false, color: Color, filled: Bool) -> some View {
         HStack(spacing: 5) {
-            if let icon { Image(systemName: icon) }
+            if let systemIcon { Image(systemName: systemIcon) }
+            if coin { CoinIcon(size: 17) }
             Text(text).monospacedDigit()
         }
         .font(Theme.body(15, .bold))
@@ -152,68 +167,63 @@ private struct SkinCard: View {
     }
 }
 
-/// Aperçu dessiné d'une apparence : une traînée en vague sur le fond du décor.
+/// Aperçu animé réel d'une apparence (scène SpriteKit : vrai décor, vraie traînée).
+/// Une traînée s'affiche sur le décor équipé ; un décor avec la traînée équipée.
 struct SkinPreview: View {
+    @Environment(AppModel.self) private var app
     let skin: Skin
-    let theme: GameTheme
+    @State private var scene: PreviewScene?
+
+    private var theme: GameTheme {
+        skin.kind == .trail ? GameTheme(trail: skin, decor: app.theme.decor) : GameTheme(trail: app.theme.trail, decor: skin)
+    }
 
     var body: some View {
-        let preview = skin.kind == .trail ? GameTheme(trail: skin, decor: theme.decor) : GameTheme(trail: theme.trail, decor: skin)
-        TimelineView(.animation(minimumInterval: 1 / 30)) { context in
-            Canvas { canvas, size in
-                let t = context.date.timeIntervalSinceReferenceDate
-                canvas.fill(Path(CGRect(origin: .zero, size: size)),
-                            with: .linearGradient(Gradient(colors: [preview.backgroundTop, preview.backgroundBottom]),
-                                                  startPoint: .zero, endPoint: CGPoint(x: 0, y: size.height)))
-                let count = 18
-                for i in 0..<count {
-                    let k = Double(i + 1) / Double(count)
-                    let x = size.width * (0.1 + 0.75 * k)
-                    let y = size.height * (0.5 + 0.28 * sin(k * 5 + t * 2))
-                    let r = 2 + 7 * k
-                    let color = Color(uiColor: preview.trailColor(at: 1 - k, time: t))
-                    canvas.fill(Path(ellipseIn: CGRect(x: x - r, y: y - r, width: 2 * r, height: 2 * r)), with: .color(color.opacity(k)))
-                }
-                let head = CGPoint(x: size.width * 0.85, y: size.height * (0.5 + 0.28 * sin(5 + t * 2)))
-                canvas.fill(Path(ellipseIn: CGRect(x: head.x - 9, y: head.y - 9, width: 18, height: 18)), with: .color(.white))
-                if skin.kind == .decor {
-                    let ghost = CGPoint(x: size.width * 0.3, y: size.height * 0.3)
-                    canvas.fill(Path(ellipseIn: CGRect(x: ghost.x - 8, y: ghost.y - 8, width: 16, height: 16)),
-                                with: .color(Color(uiColor: preview.ghostColor)))
-                    let orb = CGPoint(x: size.width * 0.45, y: size.height * 0.78)
-                    canvas.fill(Path(ellipseIn: CGRect(x: orb.x - 10, y: orb.y - 10, width: 20, height: 20)),
-                                with: .color(Color(uiColor: preview.orbColor)))
-                }
+        ZStack {
+            theme.background
+            if let scene {
+                SpriteView(scene: scene, preferredFramesPerSecond: 30, options: [.allowsTransparency])
             }
+        }
+        .onAppear {
+            if scene == nil { scene = PreviewScene(theme: theme) }
         }
     }
 }
 
-/// Offres en euros.
+/// Offres en euros : Pack de départ (mis en avant), Sans pub, pièces.
 private struct OffersList: View {
     @Environment(AppModel.self) private var app
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 14) {
             if !app.profile.noAds {
-                offer(.starter, title: "Pack de départ", detail: "Sans pub + Feu, Galaxie et Synthwave", icon: "gift.fill",
-                      highlight: true)
-                offer(.noAds, title: "Sans pub", detail: "Plus aucune pub entre les parties. Pour toujours.",
-                      icon: "nosign")
+                StarterCard()
+                noAdsCard
             } else {
-                Label("Sans pub : activé. Merci !", systemImage: "checkmark.seal.fill")
-                    .font(Theme.body(16, .bold))
-                    .foregroundStyle(Theme.accent)
-                    .frame(maxWidth: .infinity)
-                    .padding(16)
-                    .background(RoundedRectangle(cornerRadius: 18).fill(Theme.card))
+                HStack(spacing: 12) {
+                    NoAdsIcon(size: 36)
+                    Text("Sans pub : activé. Merci !")
+                        .font(Theme.body(16, .bold))
+                        .foregroundStyle(Theme.text)
+                    Spacer()
+                }
+                .padding(16)
+                .background(RoundedRectangle(cornerRadius: 18).fill(Theme.card))
             }
-            offer(.coinsSmall, title: "\(StoreProduct.coinsSmall.coins) pièces", detail: "Petit coup de pouce",
-                  icon: "circle.hexagongrid.fill")
-            offer(.coinsMedium, title: "\(StoreProduct.coinsMedium.coins) pièces", detail: "Le plus choisi",
-                  icon: "circle.hexagongrid.fill")
-            offer(.coinsLarge, title: "\(StoreProduct.coinsLarge.coins) pièces", detail: "Toute la boutique ou presque",
-                  icon: "circle.hexagongrid.fill")
+
+            Text("PIÈCES")
+                .font(Theme.body(14, .heavy))
+                .tracking(1.5)
+                .foregroundStyle(Theme.gold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 4)
+            HStack(spacing: 10) {
+                coinCard(.coinsSmall, level: 1, bonus: nil)
+                coinCard(.coinsMedium, level: 2, bonus: "+10 %")
+                coinCard(.coinsLarge, level: 3, bonus: "+32 %")
+            }
+
             Button("Restaurer les achats") {
                 Task { await app.store.restore() }
             }
@@ -223,34 +233,152 @@ private struct OffersList: View {
         }
     }
 
-    private func offer(_ product: StoreProduct, title: String, detail: String, icon: String, highlight: Bool = false) -> some View {
+    private var noAdsCard: some View {
         Button {
-            Task {
-                if await app.store.purchase(product) { app.haptics.success() }
-            }
+            Task { if await app.store.purchase(.noAds) { app.haptics.success() } }
         } label: {
             HStack(spacing: 14) {
-                Image(systemName: icon)
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(highlight ? Theme.ghost : Theme.gold)
-                    .frame(width: 34)
+                NoAdsIcon(size: 46)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(title).font(Theme.body(17, .bold)).foregroundStyle(Theme.text)
-                    Text(detail).font(Theme.body(13, .medium)).foregroundStyle(Theme.secondary)
+                    Text("Sans pub").font(Theme.body(18, .bold)).foregroundStyle(Theme.text)
+                    Text("Plus aucune pub entre les parties. Pour toujours.")
+                        .font(Theme.body(13, .medium))
+                        .foregroundStyle(Theme.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                Spacer()
-                Text(app.store.price(product) ?? "…")
-                    .font(Theme.body(16, .bold))
-                    .foregroundStyle(.black)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 8)
-                    .background(Capsule().fill(highlight ? Theme.ghost : Theme.gold))
+                Spacer(minLength: 4)
+                priceTag(app.store.price(.noAds), color: Theme.ghost)
             }
             .padding(16)
-            .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(highlight ? Theme.ghost.opacity(0.12) : Theme.card))
-            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .stroke(highlight ? Theme.ghost.opacity(0.6) : Theme.stroke, lineWidth: highlight ? 1.5 : 1))
+            .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Theme.card))
+            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Theme.stroke, lineWidth: 1))
         }
         .buttonStyle(.plain)
+    }
+
+    private func coinCard(_ product: StoreProduct, level: Int, bonus: String?) -> some View {
+        Button {
+            Task { if await app.store.purchase(product) { app.haptics.success() } }
+        } label: {
+            VStack(spacing: 8) {
+                CoinStack(level: level, size: 22)
+                    .frame(height: 56)
+                Text(product.coins.formatted())
+                    .font(Theme.title(20))
+                    .monospacedDigit()
+                    .foregroundStyle(Theme.text)
+                    .minimumScaleFactor(0.7)
+                    .lineLimit(1)
+                Text("pièces").font(Theme.body(12, .medium)).foregroundStyle(Theme.secondary)
+                priceTag(app.store.price(product), color: Theme.gold)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 14)
+            .padding(.horizontal, 6)
+            .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(Theme.card))
+            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(bonus != nil ? Theme.gold.opacity(0.6) : Theme.stroke, lineWidth: bonus != nil ? 1.5 : 1))
+            .overlay(alignment: .top) {
+                if let bonus {
+                    Text(bonus)
+                        .font(Theme.body(12, .heavy))
+                        .foregroundStyle(.black)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 3)
+                        .background(Capsule().fill(Theme.gold))
+                        .offset(y: -10)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func priceTag(_ price: String?, color: Color) -> some View {
+        Text(price ?? "…")
+            .font(Theme.body(15, .bold))
+            .foregroundStyle(.black)
+            .lineLimit(1)
+            .minimumScaleFactor(0.8)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 7)
+            .background(Capsule().fill(color))
+    }
+}
+
+/// Carte du Pack de départ : bordure animée, aperçus réels des 3 apparences premium, prix barré.
+private struct StarterCard: View {
+    @Environment(AppModel.self) private var app
+
+    var body: some View {
+        Button {
+            Task { if await app.store.purchase(.starter) { app.haptics.success() } }
+        } label: {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(alignment: .top) {
+                    GiftIcon(size: 48)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Pack de départ").font(Theme.title(22)).foregroundStyle(Theme.text)
+                        Text("Sans pub + 3 apparences premium").font(Theme.body(13, .medium)).foregroundStyle(Theme.secondary)
+                    }
+                    Spacer(minLength: 0)
+                    Text("−50 %")
+                        .font(Theme.body(14, .heavy))
+                        .foregroundStyle(.black)
+                        .padding(.horizontal, 9)
+                        .padding(.vertical, 5)
+                        .background(Capsule().fill(Theme.gold))
+                }
+                HStack(spacing: 8) {
+                    preview("trail.fire")
+                    preview("trail.galaxy")
+                    preview("decor.synthwave")
+                }
+                HStack {
+                    Label("Plus aucune pub entre les parties", systemImage: "checkmark.circle.fill")
+                        .font(Theme.body(13, .semibold))
+                        .foregroundStyle(Theme.text)
+                    Spacer()
+                    Text(app.store.price(.starter) ?? "…")
+                        .font(Theme.body(18, .heavy))
+                        .foregroundStyle(.black)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 9)
+                        .background(Capsule().fill(Theme.ghost))
+                        .shadow(color: Theme.ghost.opacity(0.6), radius: 10)
+                }
+            }
+            .padding(16)
+            .background(RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(LinearGradient(colors: [Color(hex: "#3A0E3C"), Color(hex: "#1A0B2E")], startPoint: .topLeading, endPoint: .bottomTrailing)))
+            .overlay(AnimatedBorder(cornerRadius: 22))
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func preview(_ id: String) -> some View {
+        VStack(spacing: 4) {
+            if let skin = Catalog.skin(id) {
+                SkinPreview(skin: skin)
+                    .frame(height: 70)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                Text(skin.name).font(Theme.body(12, .bold)).foregroundStyle(Theme.text)
+            }
+        }
+        .frame(maxWidth: .infinity)
+    }
+}
+
+/// Bordure lumineuse qui tourne autour d'une carte mise en avant.
+private struct AnimatedBorder: View {
+    let cornerRadius: CGFloat
+
+    var body: some View {
+        TimelineView(.animation(minimumInterval: 1 / 30)) { context in
+            let angle = context.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 4) / 4 * 360
+            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                .strokeBorder(AngularGradient(colors: [Theme.ghost, Theme.gold, Theme.accent, Theme.ghost],
+                                              center: .center, angle: .degrees(angle)), lineWidth: 2.5)
+        }
+        .allowsHitTesting(false)
     }
 }

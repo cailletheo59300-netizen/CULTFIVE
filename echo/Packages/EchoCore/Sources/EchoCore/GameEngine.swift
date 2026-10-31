@@ -98,6 +98,16 @@ public final class GameEngine {
     // MARK: Lecture
 
     public var currentOrb: Vec2? { orbIndex < orbs.count ? orbs[orbIndex] : nil }
+
+    /// Position à afficher : la dernière position calculée plus le geste déjà reçu et pas encore appliqué.
+    /// Le point paraît ainsi collé au doigt, sans attendre la prochaine image de logique (les collisions, elles,
+    /// restent calculées image par image).
+    public var displayPlayer: Vec2 {
+        guard phase == .playing else { return player }
+        let move = pendingInput.limited(to: tuning.maxStepPerTick)
+        let r = tuning.playerRadius
+        return Vec2(min(max(player.x + move.x, r), tuning.arena.x - r), min(max(player.y + move.y, r), tuning.arena.y - r))
+    }
     public var nextOrb: Vec2? { orbIndex + 1 < orbs.count ? orbs[orbIndex + 1] : nil }
     public var isDead: Bool { if case .dead = phase { return true } else { return false } }
     /// Les fantômes peuvent-ils tuer à cette image ?

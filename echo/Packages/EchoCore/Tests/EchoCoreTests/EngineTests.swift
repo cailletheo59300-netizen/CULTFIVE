@@ -78,6 +78,16 @@ final class EngineTests: XCTestCase {
         XCTAssertEqual(engine.player.x - Tuning.standard.center.x, moved, accuracy: 0.001)
     }
 
+    func testDisplayShowsGestureBeforeNextTick() {
+        let engine = GameEngine(seed: 3, mode: .classic)
+        engine.addInput(Vec2(10, 0))
+        engine.step()
+        engine.addInput(Vec2(7, 0))
+        XCTAssertEqual(engine.displayPlayer.x - engine.player.x, 7, accuracy: 0.001)
+        engine.step()
+        XCTAssertEqual(engine.displayPlayer, engine.player)
+    }
+
     func testSmallGestureAppliedImmediately() {
         let engine = GameEngine(seed: 3, mode: .classic)
         engine.addInput(Vec2(10, 0))

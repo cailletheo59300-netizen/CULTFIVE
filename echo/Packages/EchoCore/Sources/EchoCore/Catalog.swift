@@ -52,16 +52,39 @@ public struct Skin: Identifiable, Equatable, Sendable {
         case store(StoreProduct)
     }
 
-    /// Façon de dessiner une traînée.
+    /// Façon de dessiner une apparence (effets dessinés par l'app, sans image).
     public enum Style: String, Sendable {
+        // Traînées
         /// Une seule couleur.
         case solid
         /// Les couleurs défilent le long de la traînée.
         case gradient
         /// Toutes les couleurs de l'arc-en-ciel, qui tournent.
         case rainbow
-        /// Couleurs qui scintillent (feu, galaxie).
+        /// Couleurs qui scintillent.
         case flicker
+        /// Flammes qui montent et braises (premium).
+        case fire
+        /// Poussière d'étoiles qui scintille (premium).
+        case galaxy
+        /// Ruban lumineux continu.
+        case neon
+        /// Longue queue qui s'étire.
+        case comet
+        /// Bulles qui flottent et éclatent.
+        case bubbles
+        /// Carrés rétro.
+        case pixel
+        /// Pétales qui tombent en tournant.
+        case sakura
+        /// Petits éclairs qui crépitent.
+        case electric
+        /// Gouttes qui refroidissent.
+        case lava
+        /// Gouttes d'acide qui coulent.
+        case toxic
+        // Décors
+        case night, ocean, forest, ink, synthwave
     }
 
     public let id: String
@@ -92,26 +115,37 @@ public enum Catalog {
         Skin(id: "trail.classic", kind: .trail, name: "Écho", price: .free, colors: ["#4DF0FF", "#4DF0FF"]),
         Skin(id: "trail.mint", kind: .trail, name: "Menthe", price: .coins(200), colors: ["#7CFFB2", "#3DDC97"]),
         Skin(id: "trail.coral", kind: .trail, name: "Corail", price: .coins(300), colors: ["#FF8A7A", "#FF5E78"], style: .gradient),
+        Skin(id: "trail.neon", kind: .trail, name: "Néon", price: .coins(400), colors: ["#FF3DF2", "#3DE8FF"], style: .neon),
         Skin(id: "trail.gold", kind: .trail, name: "Or", price: .coins(500), colors: ["#FFE07A", "#FFB23D"], style: .gradient),
+        Skin(id: "trail.comet", kind: .trail, name: "Comète", price: .coins(600), colors: ["#FFFFFF", "#9FE7FF", "#4D7CFF"], style: .comet),
         Skin(id: "trail.ice", kind: .trail, name: "Glace", price: .coins(700), colors: ["#FFFFFF", "#9ADFFF", "#5AA8FF"], style: .gradient),
+        Skin(id: "trail.bubbles", kind: .trail, name: "Bulles", price: .coins(800), colors: ["#E6FBFF", "#7FE3FF", "#3FA9F5"], style: .bubbles),
+        Skin(id: "trail.pixel", kind: .trail, name: "Pixel", price: .coins(800),
+             colors: ["#FF4D4D", "#FFD93D", "#4DFF88", "#4DA6FF", "#C04DFF"], style: .pixel),
+        Skin(id: "trail.sakura", kind: .trail, name: "Sakura", price: .coins(1000), colors: ["#FFF0F6", "#FFB7D5", "#FF7AAE"], style: .sakura),
         Skin(id: "trail.rainbow", kind: .trail, name: "Arc-en-ciel", price: .coins(1200), colors: ["#FFFFFF"], style: .rainbow),
+        Skin(id: "trail.electric", kind: .trail, name: "Électrique", price: .coins(1200),
+             colors: ["#FFFFFF", "#B5F1FF", "#5AC8FF"], style: .electric),
+        Skin(id: "trail.lava", kind: .trail, name: "Lave", price: .coins(1400),
+             colors: ["#FFF1A8", "#FF9A1F", "#E8360E", "#5A1206"], style: .lava),
+        Skin(id: "trail.toxic", kind: .trail, name: "Toxique", price: .coins(1500), colors: ["#F2FFB0", "#A8FF3D", "#2FA81A"], style: .toxic),
         Skin(id: "trail.fire", kind: .trail, name: "Feu", price: .store(.trailFire),
-             colors: ["#FFF3B0", "#FFC93D", "#FF7A1A", "#FF3D2E"], style: .flicker),
+             colors: ["#FFF6C8", "#FFD23D", "#FF7A1A", "#E8230E"], style: .fire),
         Skin(id: "trail.galaxy", kind: .trail, name: "Galaxie", price: .store(.trailGalaxy),
-             colors: ["#FFFFFF", "#B98CFF", "#6B5CFF", "#FF6BD6"], style: .flicker),
+             colors: ["#FFFFFF", "#C9A6FF", "#7B5CFF", "#FF6BD6"], style: .galaxy),
     ]
 
     public static let decors: [Skin] = [
         Skin(id: "decor.night", kind: .decor, name: "Nuit", price: .free,
-             colors: ["#0B1026", "#05060F", "#FF4D9A", "#FFD84D", "#2A3466"]),
+             colors: ["#0B1030", "#03040C", "#FF4D9A", "#FFD84D", "#2A3466"], style: .night),
         Skin(id: "decor.ocean", kind: .decor, name: "Océan", price: .coins(400),
-             colors: ["#04283A", "#020E1A", "#FF8F6B", "#7CFFE4", "#145A73"]),
+             colors: ["#0A4A6E", "#01101F", "#FF8F6B", "#7CFFE4", "#1D6F8C"], style: .ocean),
         Skin(id: "decor.forest", kind: .decor, name: "Forêt", price: .coins(600),
-             colors: ["#0C2418", "#040D08", "#FF6B6B", "#E8FF7A", "#1F4D33"]),
+             colors: ["#123A26", "#030B06", "#FF6B6B", "#E8FF7A", "#2C6644"], style: .forest),
         Skin(id: "decor.ink", kind: .decor, name: "Encre", price: .coins(900),
-             colors: ["#1A1A1A", "#000000", "#FFFFFF", "#FF3B3B", "#3A3A3A"]),
+             colors: ["#F6EEDC", "#E4D5BA", "#1C1A17", "#D7263D", "#B9A27E"], style: .ink),
         Skin(id: "decor.synthwave", kind: .decor, name: "Synthwave", price: .store(.decorSynthwave),
-             colors: ["#2B0B3F", "#0D0221", "#00F0FF", "#FF2E97", "#7B2CBF"]),
+             colors: ["#2B0B4F", "#0D0221", "#00F0FF", "#FFE45C", "#FF2E97"], style: .synthwave),
     ]
 
     public static var all: [Skin] { trails + decors }

@@ -27,8 +27,13 @@ final class AppModel {
     private static let profileKey = "echo.profile"
     private static let pacingKey = "echo.adPacing"
 
-    /// Captures d'écran (workflow « Écho Captures », builds Debug seulement) : `-capture offers|trails|decors` ouvre la
-    /// boutique sur cet onglet, avec un profil d'exemple, sans Game Center ni pubs. Toujours `nil` en Release.
+    /// Captures d'écran (workflow « Écho Captures », builds Debug seulement), avec un profil d'exemple, sans Game Center
+    /// ni pubs. Toujours `nil` en Release.
+    /// - `-capture offers|trails|decors` : boutique ouverte sur cet onglet ;
+    /// - `-capture play:<décor>:<traînée>` : partie jouée par un pilote automatique avec ces apparences.
+    /// Mode capture « partie » : un pilote automatique joue.
+    static var captureAutopilot: Bool { capture?.hasPrefix("play:") == true }
+
     static let capture: String? = {
         #if DEBUG
         let arguments = ProcessInfo.processInfo.arguments
@@ -45,9 +50,16 @@ final class AppModel {
             demo.equippedTrail = "trail.coral"
             demo.gamesPlayed = 12
             demo.tutorialDone = true
+            let parts = (Self.capture ?? "").split(separator: ":").map(String.init)
+            if parts.count == 3, parts[0] == "play" {
+                demo.ownedSkins.formUnion([parts[1], parts[2]])
+                demo.equippedDecor = parts[1]
+                demo.equippedTrail = parts[2]
+            }
             profile = demo
             adPacing = AdPacing()
             store.start(app: self)
+            if parts.first == "play" { startClassic() }
             return
         }
         let decoder = JSONDecoder()
@@ -119,10 +131,10 @@ final class AppModel {
         save()
         gameCenter.submit(score: result.score, mode: result.mode)
         // Première partie finie : c'est le moment de demander le consentement aux pubs (pas au tout premier lancement).
-        Task {
+        if Self.capture == nil { Task {
             await ads.start()
             ads.preload()
-        }
+        } }
         return GameSummary(coins: coins, newRecord: record, streakReward: streakReward)
     }
 

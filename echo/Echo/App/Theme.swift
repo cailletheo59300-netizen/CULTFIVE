@@ -1,4 +1,5 @@
 import SwiftUI
+import SpriteKit
 import UIKit
 import EchoCore
 
@@ -41,6 +42,18 @@ struct GameTheme {
         LinearGradient(colors: [backgroundTop, backgroundBottom], startPoint: .top, endPoint: .bottom)
     }
 
+    /// Décor clair (Encre) : textes sombres, halos dessinés sans « lumière ajoutée » (invisible sur fond clair).
+    var isLight: Bool { decor.style == .ink }
+    var glowBlend: SKBlendMode { isLight ? .alpha : .add }
+    /// Couleur du score et des textes en partie.
+    var hudText: Color { isLight ? Color(hex: "#1C1A17") : .white }
+    var hudSecondary: Color { isLight ? Color(hex: "#1C1A17").opacity(0.6) : Color.white.opacity(0.62) }
+
+    /// Fond des menus (accueil, boutique, réglages) : le décor équipé s'il est sombre, sinon la nuit.
+    var menuBackground: LinearGradient {
+        isLight ? GameTheme(trail: trail, decor: Catalog.decor(Catalog.defaultDecor)).background : background
+    }
+
     /// Couleur du point du joueur.
     var playerColor: UIColor { UIColor(hex: trail.colors[0]) }
 
@@ -50,14 +63,20 @@ struct GameTheme {
         switch trail.style {
         case .solid:
             return colors.last ?? .white
-        case .gradient:
-            return UIColor.interpolate(colors, at: index)
         case .rainbow:
             let hue = (index * 0.6 + time * 0.35).truncatingRemainder(dividingBy: 1)
             return UIColor(hue: hue, saturation: 0.75, brightness: 1, alpha: 1)
-        case .flicker:
+        case .flicker, .fire, .galaxy, .electric:
             let wobble = 0.5 + 0.5 * sin(time * 18 + index * 9)
             return UIColor.interpolate(colors, at: min(1, index * 0.8 + wobble * 0.25))
+        case .pixel:
+            // Couleurs rétro franches qui défilent.
+            let step = Int((index * 10 + time * 6).rounded(.down))
+            return colors[((step % colors.count) + colors.count) % colors.count]
+        case .neon:
+            return UIColor.interpolate(colors, at: 0.5 + 0.5 * sin(time * 2 + index * 4))
+        case .gradient, .comet, .bubbles, .sakura, .lava, .toxic, .night, .ocean, .forest, .ink, .synthwave:
+            return UIColor.interpolate(colors, at: index)
         }
     }
 }
@@ -113,15 +132,14 @@ struct GlowButtonStyle: ButtonStyle {
     }
 }
 
-/// Petite pastille (pièces, série).
-struct Chip: View {
-    let icon: String
+/// Petite pastille (pièces, série) avec son icône dessinée.
+struct Chip<Icon: View>: View {
     let text: String
-    var color: Color = Theme.gold
+    @ViewBuilder var icon: Icon
 
     var body: some View {
         HStack(spacing: 6) {
-            Image(systemName: icon).foregroundStyle(color)
+            icon
             Text(text).font(Theme.body(16, .bold)).monospacedDigit().foregroundStyle(Theme.text)
         }
         .padding(.horizontal, 12)

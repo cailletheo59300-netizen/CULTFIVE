@@ -10,7 +10,7 @@ struct HomeView: View {
 
     var body: some View {
         ZStack {
-            app.theme.background.ignoresSafeArea()
+            app.theme.menuBackground.ignoresSafeArea()
             EchoBackdrop(theme: app.theme)
                 .ignoresSafeArea()
                 .opacity(0.55)
@@ -37,14 +37,20 @@ struct HomeView: View {
                             app.haptics.tap()
                             showShop = true
                         } label: {
-                            Label("Boutique", systemImage: "sparkles")
+                            HStack(spacing: 8) {
+                                BagIcon(size: 22)
+                                Text("Boutique")
+                            }
                         }
                         .buttonStyle(GlowButtonStyle(color: Theme.gold, filled: false))
                         Button {
                             app.haptics.tap()
                             app.gameCenter.showLeaderboards()
                         } label: {
-                            Label("Classements", systemImage: "trophy.fill")
+                            HStack(spacing: 8) {
+                                TrophyIcon(size: 22)
+                                Text("Classements")
+                            }
                         }
                         .buttonStyle(GlowButtonStyle(color: Theme.accent, filled: false))
                     }
@@ -55,16 +61,16 @@ struct HomeView: View {
             if busy { LoadingVeil() }
         }
         .sheet(isPresented: $showShop) { ShopView() }
-        .onAppear { if AppModel.capture != nil { showShop = true } }
+        .onAppear { if let capture = AppModel.capture, ["offers", "trails", "decors"].contains(capture) { showShop = true } }
         .sheet(isPresented: $showSettings) { SettingsView() }
     }
 
     private var topBar: some View {
         HStack(spacing: 10) {
-            Chip(icon: "circle.hexagongrid.fill", text: "\(app.profile.coins)")
+            Chip(text: "\(app.profile.coins)") { CoinIcon(size: 20) }
             let streak = app.profile.currentStreak(today: app.today)
             if streak > 0 {
-                Chip(icon: "flame.fill", text: "\(streak)", color: .orange)
+                Chip(text: "\(streak)") { FlameIcon(size: 20) }
             }
             Spacer()
             Button {
@@ -127,9 +133,7 @@ private struct DailyCard: View {
             }
         } label: {
             HStack(spacing: 14) {
-                Image(systemName: "calendar")
-                    .font(.system(size: 26, weight: .bold))
-                    .foregroundStyle(Theme.ghost)
+                CalendarIcon(day: Int(day.suffix(2)) ?? 1, size: 40)
                 VStack(alignment: .leading, spacing: 3) {
                     Text("Défi du jour")
                         .font(Theme.body(18, .bold))
