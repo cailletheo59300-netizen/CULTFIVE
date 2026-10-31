@@ -112,7 +112,7 @@ final class TrailRenderer {
         case .fire:
             core.color = UIColor(hex: "#FFF6C8")
             halo.color = UIColor(hex: "#FF7A1A")
-            halo.size = CGSize(width: radius * 9, height: radius * 9)
+            halo.size = CGSize(width: radius * 5.5, height: radius * 5.5)
         case .galaxy:
             let star = SKSpriteNode(texture: Textures.star, size: CGSize(width: radius * 5, height: radius * 5))
             star.color = UIColor(hex: "#E9DCFF")
@@ -209,7 +209,10 @@ final class TrailRenderer {
                 dot.alpha = 0.9 * k
                 dot.setScale(0.5 + 0.5 * k)
                 dot.zRotation += 0.04
-            case .fire, .galaxy, .lava:
+            case .fire:
+                dot.alpha = 0.65 * k
+                dot.setScale(0.25 + 0.55 * k + 0.08 * CGFloat(sin(time * 20 + Double(i) * 1.3)))
+            case .galaxy, .lava:
                 dot.alpha = 0.8 * k
                 dot.setScale(0.3 + 0.75 * k + 0.12 * CGFloat(sin(time * 20 + Double(i) * 1.3)))
             default:
@@ -248,7 +251,7 @@ final class TrailRenderer {
         let r = radius
         /// Particules par unité parcourue, et par seconde à l'arrêt.
         let (perUnit, perSecond): (CGFloat, CGFloat) = switch style {
-        case .fire: (0.08, 18)
+        case .fire: (0.06, 12)
         case .galaxy: (0.08, 10)
         case .bubbles: (0.035, 2)
         case .sakura: (0.04, 3)
@@ -274,8 +277,8 @@ final class TrailRenderer {
                 if Int.random(in: 0..<4) == 0 {
                     // Braise : petit point orange qui s'envole loin et scintille.
                     spec.texture = Textures.disc
-                    spec.size = .random(in: r * 0.25...r * 0.45)
-                    spec.velocity = CGVector(dx: .random(in: -r * 5...r * 5), dy: .random(in: r * 4...r * 11))
+                    spec.size = .random(in: r * 0.2...r * 0.35)
+                    spec.velocity = CGVector(dx: .random(in: -r * 3...r * 3), dy: .random(in: r * 3...r * 7))
                     spec.life = .random(in: 0.8...1.4)
                     spec.color = UIColor(hex: "#FFC23D")
                     spec.endColor = UIColor(hex: "#E8230E")
@@ -284,10 +287,10 @@ final class TrailRenderer {
                 } else {
                     // Flamme : monte, rétrécit, passe du jaune au rouge.
                     spec.texture = Textures.flame
-                    spec.size = .random(in: r * 1.8...r * 3)
-                    spec.stretch = 1.35
-                    spec.velocity = CGVector(dx: .random(in: -r * 1.2...r * 1.2), dy: .random(in: r * 5...r * 9))
-                    spec.life = .random(in: 0.4...0.65)
+                    spec.size = .random(in: r * 0.9...r * 1.6)
+                    spec.stretch = 1.25
+                    spec.velocity = CGVector(dx: .random(in: -r * 0.8...r * 0.8), dy: .random(in: r * 3...r * 5.5))
+                    spec.life = .random(in: 0.3...0.5)
                     spec.color = UIColor(hex: "#FFB43D")
                     spec.endColor = UIColor(hex: "#B5160A")
                     spec.endScale = 0.15
