@@ -231,7 +231,7 @@ struct RulesView: View {
         ("circle.circle.fill", "Attrape les orbes dorés, l'un après l'autre. Le cercle discret montre le suivant."),
         ("figure.walk.motion", "À la manche suivante, ton fantôme rejoue exactement ta manche précédente. Puis 2 fantômes, puis 3…"),
         ("xmark.octagon.fill", "Touche un fantôme et c'est fini. Ils s'allument un court instant après le départ."),
-        ("sparkles", "Les échos s'effacent : un fantôme vit 4 manches. Quand il pâlit, c'est sa dernière."),
+        ("sparkles", "Les échos s'effacent : un fantôme vit 3 manches. Pendant sa dernière, il pâlit et devient inoffensif : fonce dessus pour l'absorber (bonus et multiplicateur)."),
         ("flame.fill", "Frôle les fantômes sans les toucher : ton multiplicateur monte jusqu'à ×5. Une manche sans frôlement le remet à ×1."),
         ("bolt.fill", "Plus tu vas loin, plus les fantômes sont rapides et plus il y a d'orbes."),
         ("calendar", "Défi du jour : les mêmes orbes pour tout le monde. 1 essai par jour (+2 avec une pub). Joue chaque jour pour ta série."),

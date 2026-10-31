@@ -90,7 +90,7 @@ final class EngineTests: XCTestCase {
         let tuning = Tuning.standard
         let engine = GameEngine(seed: 21, mode: .classic)
         let corner = Vec2(25, 25)
-        engine.ghosts = [Ghost(round: -3, path: [corner, corner]), Ghost(round: 0, path: [corner, corner])]
+        engine.ghosts = [Ghost(round: -2, path: [corner, corner]), Ghost(round: 0, path: [corner, corner])]
         XCTAssertTrue(engine.isFading(engine.ghosts[0]), "dernière manche du fantôme : il pâlit")
         XCTAssertFalse(engine.isFading(engine.ghosts[1]))
         playRound(engine)
@@ -98,6 +98,27 @@ final class EngineTests: XCTestCase {
         for _ in 0..<tuning.transitionTicks { engine.step() }
         XCTAssertEqual(engine.round, 2)
         XCTAssertEqual(engine.ghosts.map(\.round), [0, 1], "le fantôme trop ancien s'est effacé")
+    }
+
+    func testFadingGhostIsHarmlessAndCanBeAbsorbed() {
+        let tuning = Tuning.standard
+        let engine = GameEngine(seed: 5, mode: .classic)
+        // Fantôme de la manche -2 pendant la manche 1 : sa dernière manche, il est pâle.
+        let spot = tuning.center + Vec2(0, 200)
+        engine.ghosts = [Ghost(round: -2, path: [spot, spot])]
+        XCTAssertTrue(engine.isFading(engine.ghosts[0]))
+        engine.addInput(Vec2(1, 0))
+        for _ in 0..<(tuning.ghostArmTicks + 2) { engine.step() }
+        var events: [GameEvent] = []
+        for _ in 0..<12 {
+            engine.addInput(Vec2(0, 20))
+            events += engine.step()
+        }
+        XCTAssertFalse(engine.isDead, "un fantôme pâle ne tue pas")
+        XCTAssertTrue(engine.ghosts.isEmpty, "il a été absorbé")
+        XCTAssertEqual(engine.ghostsAbsorbed, 1)
+        XCTAssertEqual(engine.multiplier, 2)
+        XCTAssertTrue(events.contains(.ghostAbsorbed(ghostRound: -2, points: tuning.absorbPoints, multiplier: 2)))
     }
 
     func testMultiplierBoostsPointsThenDropsWithoutNearMiss() {
@@ -254,8 +275,9 @@ final class GhostTests: XCTestCase {
     func testOrbCountGrows() {
         let tuning = Tuning.standard
         XCTAssertEqual(tuning.orbCount(round: 1), 3)
-        XCTAssertEqual(tuning.orbCount(round: 10), 4)
-        XCTAssertEqual(tuning.orbCount(round: 18), 5)
+        XCTAssertEqual(tuning.orbCount(round: 11), 3)
+        XCTAssertEqual(tuning.orbCount(round: 12), 4)
+        XCTAssertEqual(tuning.orbCount(round: 20), 5)
         XCTAssertEqual(OrbPlan.orbs(seed: 1, round: 12).count, 4)
     }
 

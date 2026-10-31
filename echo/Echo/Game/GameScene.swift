@@ -249,10 +249,14 @@ final class GameScene: SKScene {
         let armed = engine.ghostsArmed && !waiting
         for ghost in engine.ghosts {
             let node = ghostNodes[ghost.round] ?? makeGhostNode(ghost.round)
-            // Dernière manche du fantôme : il pâlit et clignote doucement avant de s'effacer.
-            let fade: CGFloat = engine.isFading(ghost) ? 0.45 + 0.15 * CGFloat(sin(CACurrentMediaTime() * 6)) : 1
+            // Dernière manche du fantôme : il pâlit et palpite. Il est inoffensif et peut être absorbé.
+            let fading = engine.isFading(ghost)
+            let pulse = CGFloat(sin(CACurrentMediaTime() * 7))
+            let fade: CGFloat = fading ? 0.5 + 0.15 * pulse : 1
             node.head.position = point(engine.position(of: ghost))
             node.head.alpha = (waiting ? 0.25 : (armed ? 1 : 0.4)) * fade
+            node.head.setScale(fading ? 1.05 + 0.1 * pulse : 1)
+            node.prey.isHidden = !fading || waiting
             for (i, dot) in node.trail.enumerated() {
                 let back = (Self.ghostTrailLength - i) * 2
                 let k = CGFloat(i + 1) / CGFloat(Self.ghostTrailLength)
@@ -270,6 +274,15 @@ final class GameScene: SKScene {
         let core = sprite(Textures.disc, size: 2 * engine.tuning.ghostRadius, color: theme.ghostColor, alpha: 0.95)
         head.addChild(halo)
         head.addChild(core)
+        // Anneau blanc pointillé : signe qu'un fantôme pâle peut être absorbé.
+        let prey = SKShapeNode(circleOfRadius: engine.tuning.ghostRadius + 14)
+        let dashes = prey.path.map { $0.copy(dashingWithPhase: 0, lengths: [10, 8]) }
+        prey.path = dashes
+        prey.strokeColor = .white
+        prey.lineWidth = 4
+        prey.isHidden = true
+        prey.run(.repeatForever(.rotate(byAngle: .pi, duration: 1.5)))
+        head.addChild(prey)
         head.zPosition = 15
         arena.addChild(head)
         var trail: [SKSpriteNode] = []
@@ -283,7 +296,7 @@ final class GameScene: SKScene {
         // Apparition : le nouveau fantôme grossit depuis le centre.
         head.setScale(0.1)
         head.run(.scale(to: 1, duration: 0.35))
-        let node = GhostNode(head: head, trail: trail)
+        let node = GhostNode(head: head, trail: trail, prey: prey)
         ghostNodes[round] = node
         return node
     }
@@ -303,6 +316,8 @@ final class GameScene: SKScene {
                 flashBorder()
             case .died:
                 explode()
+            case .ghostAbsorbed:
+                absorbEffect()
             case .roundStarted, .multiplierLost:
                 break
             }
@@ -317,6 +332,19 @@ final class GameScene: SKScene {
         ring.position = position
         effects.addChild(ring)
         ring.run(.sequence([.group([.scale(to: 2.6, duration: 0.35), .fadeOut(withDuration: 0.35)]), .removeFromParent()]))
+    }
+
+    /// Absorption : un anneau se referme sur le joueur, qui grossit un instant.
+    private func absorbEffect() {
+        let ring = SKShapeNode(circleOfRadius: 140)
+        ring.strokeColor = theme.ghostColor
+        ring.lineWidth = 8
+        ring.glowWidth = 6
+        ring.position = player.position
+        effects.addChild(ring)
+        ring.run(.sequence([.group([.scale(to: 0.15, duration: 0.25), .fadeAlpha(to: 0.2, duration: 0.25)]), .removeFromParent()]))
+        player.run(.sequence([.scale(to: 1.5, duration: 0.12), .scale(to: 1, duration: 0.18)]))
+        burstRing(at: player.position, color: theme.orbColor, radius: 40)
     }
 
     private func flashBorder() {
@@ -358,6 +386,7 @@ final class GameScene: SKScene {
 private struct GhostNode {
     let head: SKNode
     let trail: [SKSpriteNode]
+    let prey: SKShapeNode
 
     /// Le fantôme s'efface (fin de vie ou « Continuer ») : fondu puis retrait.
     func fadeOutAndRemove() {

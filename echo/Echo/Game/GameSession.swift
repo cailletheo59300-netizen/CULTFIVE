@@ -68,7 +68,7 @@ final class GameSession: Identifiable {
             if tutorial && round == 1 && engine.tick < 240 { return "Attrape les orbes, l'un après l'autre." }
             if tutorial && round == 2 && engine.tick < 120 { return "Les fantômes s'allument après un court instant." }
             if tutorial && round == 3 && engine.tick < 150 { return "Frôle un fantôme sans le toucher :\nton multiplicateur monte !" }
-            if tutorial && round == 5 && engine.tick < 150 { return "Un fantôme qui pâlit vit sa dernière manche." }
+            if tutorial && round == 4 && engine.tick < 180 { return "Un fantôme pâle est inoffensif :\nfonce dessus pour l'absorber !" }
             return nil
         case .transition, .dead:
             return nil
@@ -98,6 +98,10 @@ final class GameSession: Identifiable {
                 app.sound.play(.nearMiss)
                 app.haptics.medium()
                 show("Frôlé ! ×\(multiplier)", Theme.accent)
+            case .ghostAbsorbed(_, let points, let multiplier):
+                app.sound.play(.absorb)
+                app.haptics.success()
+                show("Écho absorbé ! +\(points) · ×\(multiplier)", Theme.gold)
             case .multiplierLost:
                 show("Multiplicateur perdu", Theme.secondary)
             case .died:

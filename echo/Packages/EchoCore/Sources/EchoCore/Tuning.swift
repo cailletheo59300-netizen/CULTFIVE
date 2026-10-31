@@ -38,10 +38,10 @@ public struct Tuning: Sendable {
 
     /// Orbes par manche au départ ; un de plus aux manches `extraOrbRounds`.
     public var orbsPerRound = 3
-    public var extraOrbRounds = [10, 18]
-    /// Un fantôme vit `ghostLifetime` manches, puis s'efface (il pâlit pendant sa dernière manche).
-    /// Il y a donc au plus `ghostLifetime` fantômes à l'écran : bien jouer permet d'aller loin.
-    public var ghostLifetime = 4
+    public var extraOrbRounds = [12, 20]
+    /// Un fantôme vit `ghostLifetime` manches, puis s'efface. Pendant sa dernière manche, il pâlit : il devient
+    /// inoffensif et peut être absorbé (bonus). Il y a donc au plus 2 fantômes dangereux + 1 pâle à l'écran.
+    public var ghostLifetime = 3
     /// Délai pendant lequel les fantômes, au départ de chaque manche, sont transparents et inoffensifs (0,75 s).
     public var ghostArmTicks = 45
     /// Pause entre deux manches (0,75 s).
@@ -49,10 +49,10 @@ public struct Tuning: Sendable {
     /// Enregistrement d'une manche au maximum (30 s) : au-delà, le fantôme rejoue ces 30 s en aller-retour.
     public var maxRecordingTicks = 1800
     /// À partir de cette manche, les fantômes rejouent un peu plus vite à chaque manche…
-    public var speedUpFromRound = 5
-    public var speedUpPerRound = 0.05
-    /// … jusqu'à cette vitesse au plus (×1,8).
-    public var maxGhostRate = 1.8
+    public var speedUpFromRound = 7
+    public var speedUpPerRound = 0.04
+    /// … jusqu'à cette vitesse au plus (×1,6).
+    public var maxGhostRate = 1.6
 
     // MARK: Orbes
 
@@ -72,6 +72,8 @@ public struct Tuning: Sendable {
     public var speedBonusStepTicks = 12
     /// Frôler un fantôme sans le toucher.
     public var nearMissPoints = 5
+    /// Absorber un fantôme pâle (multiplié, puis le multiplicateur monte de 1).
+    public var absorbPoints = 25
     /// Distance au-delà du contact où un passage compte comme frôlement.
     public var nearMissMargin = 34.0
     /// Multiplicateur : +1 à chaque frôlement (×5 au plus), appliqué aux orbes et à la fin de manche. Il retombe à ×1

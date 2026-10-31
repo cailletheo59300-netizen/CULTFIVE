@@ -13,15 +13,16 @@ Tous les chiffres du jeu sont dans **un seul fichier** : `echo/Packages/EchoCore
    - **Accélération douce**, comme une souris : doigt lent, le point suit exactement ; doigt rapide, il va jusqu'à 1,5 à 2,4 fois plus loin.
    - Le réglage « Précis ↔ Rapide » (au milieu par défaut) choisit la force de cette accélération. Les Réglages ont une zone d'essai.
    - Un coup de doigt extrême est raccourci (120 unités par image au plus) : le point ne se téléporte pas.
-3. **Les orbes** : 3 par manche, 4 à partir de la manche 10, 5 à partir de la manche 18, l'un après l'autre. L'orbe à attraper brille. Le suivant est un cercle discret, pour qu'on puisse prévoir son trajet.
+3. **Les orbes** : 3 par manche, 4 à partir de la manche 12, 5 à partir de la manche 20, l'un après l'autre. L'orbe à attraper brille. Le suivant est un cercle discret, pour qu'on puisse prévoir son trajet.
 4. **Fin de manche** : une courte pause (0,75 s), puis le point revient au centre. Le trajet que tu viens de faire devient un fantôme.
 5. **Les fantômes** :
    - Ils rejouent la manche enregistrée, image par image, en partant du centre en même temps que toi.
    - Pendant les 0,75 premières secondes, ils sont transparents et inoffensifs, le temps de quitter le centre.
    - Quand leur enregistrement est fini, ils repartent en arrière, puis en avant… (aller-retour) : ils ne disparaissent jamais. Attendre dans un coin ne sert donc à rien.
    - Seul le **point** du fantôme tue, pas sa traînée. La zone de contact est réduite à 75 % : un frôlement visuel ne tue pas.
-   - **Les échos s'effacent** : un fantôme vit 4 manches. Pendant sa dernière manche, il pâlit et clignote doucement, puis il disparaît. Il y a donc au plus 4 fantômes à l'écran : un bon joueur peut aller très loin.
-   - À partir de la manche 5, ils rejouent un peu plus vite (+5 % par manche, ×1,8 au maximum).
+   - **Les échos s'effacent** : un fantôme vit 3 manches, puis il disparaît. Il y a donc au plus 2 fantômes dangereux à l'écran, plus 1 pâle : un bon joueur peut aller très loin.
+   - **Les échos pâles se mangent** : pendant sa dernière manche, le fantôme pâlit, palpite et porte un anneau blanc pointillé. Il est alors **inoffensif** : fonce dessus pour l'absorber (25 points × multiplicateur, puis le multiplicateur monte de 1).
+   - À partir de la manche 7, ils rejouent un peu plus vite (+4 % par manche, ×1,6 au maximum).
 6. **Fin de partie** : toucher un fantôme.
 
 ## Les points
@@ -31,8 +32,9 @@ Tous les chiffres du jeu sont dans **un seul fichier** : `echo/Packages/EchoCore
 | Manche finie | 20 |
 | Rapidité | jusqu'à 30 (1 point par 0,2 s gagnée sous 6 s) |
 | Frôler un fantôme sans le toucher | 5 |
+| Absorber un fantôme pâle | 25 × multiplicateur |
 
-**Le multiplicateur** : chaque frôlement le fait monter (×2, ×3… ×5 au plus). Il multiplie les orbes et la fin de manche. Une manche finie sans aucun frôlement le remet à ×1. Il s'affiche sous le score.
+**Le multiplicateur** : chaque frôlement ou absorption le fait monter (×2, ×3… ×5 au plus). Il multiplie les orbes et la fin de manche. Une manche finie sans aucun frôlement le remet à ×1. Il s'affiche sous le score.
 
 Les **pièces** d'une partie valent le score divisé par 8 (une partie moyenne en rapporte environ 25). Elles sont doublées avec la pub « Pièces ×2 ».
 
@@ -113,6 +115,7 @@ Les valeurs à tester en premier sur TestFlight, toutes dans `Tuning.swift` :
 Il s'affiche vite (0,35 s après l'explosion). En mode classique, toucher n'importe où en dehors de la carte relance une partie, après 0,9 s, pour qu'un doigt encore posé ne relance pas par erreur.
 
 ## Ce qui n'est pas encore là (prévu plus tard)
+- Atouts à choisir toutes les 3 manches (bouclier, écho lent, aimant…).
 - Orbe Gomme (rare, efface le fantôme le plus ancien).
 - Niveau du joueur avec récompenses, record affiché pendant la partie.
 - Missions quotidiennes (« Frôle 10 fantômes »…).

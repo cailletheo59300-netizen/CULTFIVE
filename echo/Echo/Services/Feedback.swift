@@ -25,6 +25,8 @@ final class SoundPlayer {
         case orb(Int)
         case roundClear
         case nearMiss
+        /// Fantôme pâle absorbé : glissando grave vers l'aigu.
+        case absorb
         case death
     }
 
@@ -79,6 +81,8 @@ final class SoundPlayer {
             made = tone([(523, 523, 0.08), (659, 659, 0.08), (784, 784, 0.08), (1046, 1046, 0.18)], volume: 0.45)
         case .nearMiss:
             made = tone([(1400, 2200, 0.09)], volume: 0.3)
+        case .absorb:
+            made = tone([(220, 880, 0.16), (880, 1320, 0.1)], volume: 0.5)
         case .death:
             made = tone([(330, 70, 0.45)], volume: 0.6, noise: 0.35)
         }

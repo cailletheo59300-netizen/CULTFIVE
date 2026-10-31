@@ -27,6 +27,8 @@ public enum GameEvent: Equatable, Sendable {
     case roundCleared(round: Int, bonus: Int)
     /// Frôlement ; `multiplier` est le multiplicateur après ce frôlement.
     case nearMiss(ghostRound: Int, multiplier: Int)
+    /// Fantôme pâle absorbé ; `points` gagnés, `multiplier` après l'absorption.
+    case ghostAbsorbed(ghostRound: Int, points: Int, multiplier: Int)
     /// Le multiplicateur retombe à ×1 (manche finie sans frôlement).
     case multiplierLost
     case died(ghostRound: Int)
@@ -69,6 +71,7 @@ public final class GameEngine {
     public private(set) var score = 0
     public private(set) var nearMisses = 0
     public private(set) var orbsCollected = 0
+    public private(set) var ghostsAbsorbed = 0
     public private(set) var continuesUsed = 0
     /// Multiplicateur en cours (×1 à ×5) et meilleur atteint dans la partie.
     public internal(set) var multiplier = 1
@@ -101,7 +104,7 @@ public final class GameEngine {
     public var ghostsArmed: Bool { tick >= tuning.ghostArmTicks }
     public var ghostRate: Double { tuning.ghostRate(round: round) }
 
-    /// Le fantôme vit sa dernière manche : il pâlit et disparaîtra à la suivante.
+    /// Le fantôme vit sa dernière manche : il pâlit, devient inoffensif et peut être absorbé.
     public func isFading(_ ghost: Ghost) -> Bool { round - ghost.round >= tuning.ghostLifetime }
     public var roundsCleared: Int { round - 1 }
     /// « Continuer » possible : partie classique, une seule fois.
@@ -198,10 +201,14 @@ public final class GameEngine {
                       min(max(player.y + move.y, r), tuning.arena.y - r))
         if recording.count <= tuning.maxRecordingTicks { recording.append(player) }
 
-        // 2. Fantômes : contact (fin de partie) ou frôlement (bonus).
+        // 2. Fantômes : contact (fin de partie), frôlement (bonus), ou absorption d'un fantôme pâle.
         if ghostsArmed {
             for ghost in ghosts {
                 let distance = Geometry.distance(from: position(of: ghost), toSegment: from, player)
+                if isFading(ghost) {
+                    if distance < tuning.playerRadius + tuning.ghostRadius { absorb(ghost, &events) }
+                    continue
+                }
                 if distance < tuning.hitDistance {
                     phase = .dead(ghostRound: ghost.round)
                     events.append(.died(ghostRound: ghost.round))
@@ -228,6 +235,19 @@ public final class GameEngine {
         orbsCollected += 1
         score += tuning.orbPoints * multiplier
         if orbIndex >= orbs.count { clearRound(&events) }
+    }
+
+    private func absorb(_ ghost: Ghost, _ events: inout [GameEvent]) {
+        ghosts.removeAll { $0.round == ghost.round }
+        closeGhosts.remove(ghost.round)
+        let points = tuning.absorbPoints * multiplier
+        score += points
+        ghostsAbsorbed += 1
+        // Une absorption compte comme un frôlement : le multiplicateur monte et ne retombera pas à la fin de la manche.
+        nearMissesThisRound += 1
+        multiplier = min(tuning.maxMultiplier, multiplier + 1)
+        bestMultiplier = max(bestMultiplier, multiplier)
+        events.append(.ghostAbsorbed(ghostRound: ghost.round, points: points, multiplier: multiplier))
     }
 
     private func clearRound(_ events: inout [GameEvent]) {
