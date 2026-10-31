@@ -30,6 +30,7 @@ final class AppModel {
     /// Captures d'écran (workflow « Écho Captures », builds Debug seulement), avec un profil d'exemple, sans Game Center
     /// ni pubs. Toujours `nil` en Release.
     /// - `-capture offers|trails|decors` : boutique ouverte sur cet onglet ;
+    /// - `-capture home` : accueil (record, série) ;
     /// - `-capture play:<décor>:<traînée>` : partie jouée par un pilote automatique avec ces apparences.
     /// Mode capture « partie » : un pilote automatique joue.
     static var captureAutopilot: Bool { capture?.hasPrefix("play:") == true }
@@ -50,6 +51,10 @@ final class AppModel {
             demo.equippedTrail = "trail.coral"
             demo.gamesPlayed = 12
             demo.tutorialDone = true
+            demo.bestScore = 2340
+            demo.bestRound = 14
+            demo.streak = 12
+            demo.lastDailyDay = DayKey.today()
             let parts = (Self.capture ?? "").split(separator: ":").map(String.init)
             if parts.count == 3, parts[0] == "play" {
                 demo.ownedSkins.formUnion([parts[1], parts[2]])
