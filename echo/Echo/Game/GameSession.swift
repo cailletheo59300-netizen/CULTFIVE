@@ -44,7 +44,10 @@ final class GameSession: Identifiable {
         self.app = app
         self.mode = mode
         self.day = day
-        let engine = GameEngine(seed: seed, mode: mode)
+        // Captures « partie » : le pilote automatique ne meurt pas (contact impossible), pour bien montrer le décor.
+        var tuning = Tuning.standard
+        if AppModel.captureAutopilot { tuning.hitboxFactor = 0 }
+        let engine = GameEngine(seed: seed, mode: mode, tuning: tuning)
         self.engine = engine
         scene = GameScene(engine: engine, theme: app.theme, controlSetting: app.profile.controlSetting)
         scene.onFrame = { [weak self] events in self?.frame(events) }

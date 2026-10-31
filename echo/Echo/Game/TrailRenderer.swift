@@ -227,7 +227,7 @@ final class TrailRenderer {
     private func animateHead(time: TimeInterval) {
         switch style {
         case .fire:
-            halo.alpha = 0.55 + 0.25 * CGFloat(sin(time * 23)) * CGFloat(sin(time * 7))
+            halo.alpha = 0.4 + 0.2 * CGFloat(sin(time * 23)) * CGFloat(sin(time * 7))
             halo.setScale(1 + 0.12 * CGFloat(sin(time * 17)))
         case .electric:
             halo.alpha = CGFloat.random(in: 0.35...0.85)
@@ -248,7 +248,7 @@ final class TrailRenderer {
         let r = radius
         /// Particules par unité parcourue, et par seconde à l'arrêt.
         let (perUnit, perSecond): (CGFloat, CGFloat) = switch style {
-        case .fire: (0.10, 26)
+        case .fire: (0.08, 18)
         case .galaxy: (0.08, 10)
         case .bubbles: (0.035, 2)
         case .sakura: (0.04, 3)
@@ -288,10 +288,10 @@ final class TrailRenderer {
                     spec.stretch = 1.35
                     spec.velocity = CGVector(dx: .random(in: -r * 1.2...r * 1.2), dy: .random(in: r * 5...r * 9))
                     spec.life = .random(in: 0.4...0.65)
-                    spec.color = UIColor(hex: "#FFE27A")
-                    spec.endColor = UIColor(hex: "#C41A0A")
+                    spec.color = UIColor(hex: "#FFB43D")
+                    spec.endColor = UIColor(hex: "#B5160A")
                     spec.endScale = 0.15
-                    spec.alpha = 0.9
+                    spec.alpha = 0.55
                 }
             case .galaxy:
                 if Bool.random() {

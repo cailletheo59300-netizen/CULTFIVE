@@ -17,7 +17,7 @@ final class PreviewScene: SKScene {
 
     init(theme: GameTheme) {
         self.theme = theme
-        trail = TrailRenderer(skin: theme.trail, theme: theme, radius: 22)
+        trail = TrailRenderer(skin: theme.trail, theme: theme, radius: 28)
         super.init(size: CGSize(width: 170, height: 110))
         scaleMode = .resizeFill
         backgroundColor = .clear
