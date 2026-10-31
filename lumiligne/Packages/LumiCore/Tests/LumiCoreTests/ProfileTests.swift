@@ -106,8 +106,13 @@ final class ProfileTests: XCTestCase {
         XCTAssertEqual(profile.hints, 7)
         XCTAssertTrue(profile.autoCrosses)
         XCTAssertEqual(profile.theme, Catalog.defaultTheme)
-        let data = try JSONEncoder().encode(profile)
-        XCTAssertEqual(try JSONDecoder().decode(Profile.self, from: data), profile)
+        var saved = profile
+        saved.save(SavedGrid(key: "level-13", marks: [0, 1, 2], elapsed: 12.5, hintsUsed: 1))
+        saved.ownedThemes = ["theme.neon"]
+        let again = try JSONDecoder().decode(Profile.self, from: JSONEncoder().encode(saved))
+        XCTAssertEqual(again.levelsDone, 12)
+        XCTAssertEqual(again.saved, saved.saved)
+        XCTAssertEqual(again.ownedThemes, ["theme.neon"])
     }
 
     func testAdPacing() {
